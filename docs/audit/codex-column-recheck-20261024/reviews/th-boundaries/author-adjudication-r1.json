@@ -1,0 +1,75 @@
+{
+  "role": "author-adjudication",
+  "author": "/root/revise_th (AI editorial author)",
+  "scope": "Five independent-reviewer boundary questions; not approval or an independent verdict",
+  "entries": [
+    {
+      "article": 704,
+      "source_sha256": "141a09903d5dbb0d709a88de9952591955277211e0b92b5822512206157bef7b",
+      "paragraph_1based": 5,
+      "decision": "agree_with_independent_reviewer_split",
+      "reason": "The opening clause completes the observation that work or study dates may differ. The next independent subject, การวางแผนยื่น, states the resulting action. The original joined slice followed the causal relation marked by จึง, but that relationship does not require a single sentence. I agree to a boundary before การวางแผนยื่น.",
+      "text": "วันเริ่มงานหรือวันเปิดเทอมอาจไม่ตรงกับวันเริ่มนับกำหนดขอ ARC การวางแผนยื่นจึงต้องอาศัยวันเข้าเมือง วันที่ออกวีซ่า ประเภทวีซ่า และวันสิ้นสุดระยะอยู่ในเอกสารจริง ผู้ที่ยังเลือกเหตุผลการพำนักไม่ได้ดูรายละเอียดได้ที่วีซ่าสำหรับงาน การเรียน และครอบครัว",
+      "sentences": [
+        "วันเริ่มงานหรือวันเปิดเทอมอาจไม่ตรงกับวันเริ่มนับกำหนดขอ ARC",
+        "การวางแผนยื่นจึงต้องอาศัยวันเข้าเมือง วันที่ออกวีซ่า ประเภทวีซ่า และวันสิ้นสุดระยะอยู่ในเอกสารจริง",
+        "ผู้ที่ยังเลือกเหตุผลการพำนักไม่ได้ดูรายละเอียดได้ที่วีซ่าสำหรับงาน การเรียน และครอบครัว"
+      ]
+    },
+    {
+      "article": 706,
+      "source_sha256": "587aafb44969ffe17ce8c81c7b41796caf85ef3a59beb64a11f781454042a035",
+      "paragraph_1based": 1,
+      "decision": "agree_with_independent_reviewer_split",
+      "reason": "The Article 31 address-notification rule is complete at วันที่ย้าย. กำหนดเดียวกันนี้ introduces a separate statement applying that deadline to workplace changes. Agree to split; no condition is severed.",
+      "text": "ย้ายบ้านแล้วต้องแจ้งที่อยู่ใหม่ แม้บัตร ARC ยังเหลืออายุอีกหลายเดือน มาตรา 31 แห่งกฎหมายคนเข้าเมือง ให้แจ้ง NIA ภายใน 30 วันนับจากวันถัดจากวันที่ย้าย กำหนดเดียวกันนี้ใช้กับการเปลี่ยนสถานที่ทำงานด้วย",
+      "sentences": [
+        "ย้ายบ้านแล้วต้องแจ้งที่อยู่ใหม่ แม้บัตร ARC ยังเหลืออายุอีกหลายเดือน",
+        "มาตรา 31 แห่งกฎหมายคนเข้าเมือง ให้แจ้ง NIA ภายใน 30 วันนับจากวันถัดจากวันที่ย้าย",
+        "กำหนดเดียวกันนี้ใช้กับการเปลี่ยนสถานที่ทำงานด้วย"
+      ]
+    },
+    {
+      "article": 706,
+      "source_sha256": "587aafb44969ffe17ce8c81c7b41796caf85ef3a59beb64a11f781454042a035",
+      "paragraph_1based": 4,
+      "decision": "agree_with_independent_reviewer_split",
+      "reason": "The requirement to consider current status is complete at สถานะใหม่. การใช้หลักฐานเดิม is a new nominal subject explaining why former-status evidence is inaccurate. Agree to separate sentences.",
+      "text": "รายละเอียดเอกสารแรงงานอยู่ในNIA 0926 ส่วนเอกสารนักศึกษาอยู่ในNIA 0929 เมื่อจบการศึกษาหรือสิ้นสุดการจ้างแล้ว ต้องพิจารณาสิทธิพำนักต่อหรือการเปลี่ยนเหตุผลตามสถานะใหม่ การใช้หลักฐานเดิมเสมือนยังเรียนหรือทำงานอยู่จะไม่สะท้อนข้อเท็จจริงของคำขอ",
+      "sentences": [
+        "รายละเอียดเอกสารแรงงานอยู่ในNIA 0926 ส่วนเอกสารนักศึกษาอยู่ในNIA 0929",
+        "เมื่อจบการศึกษาหรือสิ้นสุดการจ้างแล้ว ต้องพิจารณาสิทธิพำนักต่อหรือการเปลี่ยนเหตุผลตามสถานะใหม่",
+        "การใช้หลักฐานเดิมเสมือนยังเรียนหรือทำงานอยู่จะไม่สะท้อนข้อเท็จจริงของคำขอ"
+      ]
+    },
+    {
+      "article": 706,
+      "source_sha256": "587aafb44969ffe17ce8c81c7b41796caf85ef3a59beb64a11f781454042a035",
+      "paragraph_1based": 7,
+      "decision": "agree_with_independent_reviewer_split",
+      "reason": "The scope statement about this labor guidance is complete at ระบบแรงงาน. นักศึกษาและผู้ประกอบวิชาชีพ starts a new subject and separate proposition. Agree to separate sentences.",
+      "text": "แรงงานข้ามชาติมีช่องทางต่ออายุสองแบบตามคำแนะนำภาษาไทยของกรมพัฒนากำลังแรงงาน (WDA) คือให้นายจ้างหรือบริษัทจัดหางานช่วยยื่นออนไลน์ หรือให้นายจ้างหรือแรงงานยื่นที่ศูนย์บริการ NIA ในท้องที่ คำแนะนำนี้ใช้กับระบบแรงงาน นักศึกษาและผู้ประกอบวิชาชีพใช้ขั้นตอนของประเภทตน",
+      "sentences": [
+        "แรงงานข้ามชาติมีช่องทางต่ออายุสองแบบตามคำแนะนำภาษาไทยของกรมพัฒนากำลังแรงงาน (WDA) คือให้นายจ้างหรือบริษัทจัดหางานช่วยยื่นออนไลน์ หรือให้นายจ้างหรือแรงงานยื่นที่ศูนย์บริการ NIA ในท้องที่",
+        "คำแนะนำนี้ใช้กับระบบแรงงาน",
+        "นักศึกษาและผู้ประกอบวิชาชีพใช้ขั้นตอนของประเภทตน"
+      ]
+    },
+    {
+      "article": 706,
+      "source_sha256": "587aafb44969ffe17ce8c81c7b41796caf85ef3a59beb64a11f781454042a035",
+      "paragraph_1based": 9,
+      "decision": "agree_with_independent_reviewer_split",
+      "reason": "The reader can ask for current application status without the later condition concerning delay or non-return of a card. หากผู้ดำเนินการ starts a distinct remedy condition, so agree to a separate sentence.",
+      "text": "ระบบแรงงานออนไลน์ระบุเวลาพิจารณาห้าวันทำการเมื่อไม่ต้องส่งเอกสารเพิ่ม ส่วนการยื่นที่ศูนย์บริการระบุสิบวันทำการ ยังต้องเผื่อเวลารับบัตรด้วย เมื่อใกล้วันเดินทาง ควรสอบถามว่าคำขออยู่ขั้นใด หากผู้ดำเนินการล่าช้าหรือไม่คืนบัตร คำแนะนำ WDA ข้างต้นมีช่องทางช่วยเหลือแรงงาน",
+      "sentences": [
+        "ระบบแรงงานออนไลน์ระบุเวลาพิจารณาห้าวันทำการเมื่อไม่ต้องส่งเอกสารเพิ่ม ส่วนการยื่นที่ศูนย์บริการระบุสิบวันทำการ",
+        "ยังต้องเผื่อเวลารับบัตรด้วย",
+        "เมื่อใกล้วันเดินทาง ควรสอบถามว่าคำขออยู่ขั้นใด",
+        "หากผู้ดำเนินการล่าช้าหรือไม่คืนบัตร คำแนะนำ WDA ข้างต้นมีช่องทางช่วยเหลือแรงงาน"
+      ]
+    }
+  ],
+  "unresolved_requested_boundaries": [],
+  "measurement_note": "No score or threshold is used to justify these boundary decisions. These decisions do not approve unasked paragraph boundaries."
+}

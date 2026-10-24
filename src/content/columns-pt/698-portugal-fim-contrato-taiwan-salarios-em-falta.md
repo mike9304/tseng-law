@@ -47,7 +47,7 @@ Guarde apenas documentação a que tenha acesso legítimo e que seja pertinente 
 
 ## Descontos no acerto de contas
 
-Quando o contrato termina nos termos da Lei das Normas Laborais, o [artigo 9 do seu regulamento de execução](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=9) exige que o empregador liquide imediatamente os salários ao trabalhador. A data da cessação merece, portanto, registo próprio.
+Quando o contrato termina nos termos da Lei das Normas Laborais, o [artigo 9 do seu regulamento de execução](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=9) exige que o empregador liquide imediatamente os salários ao trabalhador. Registe a data da cessação.
 
 Houve uma penalização deduzida ao salário? Peça o fundamento e o cálculo. O [artigo 26 da Lei das Normas Laborais](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=26) proíbe a retenção antecipada de salários a título de cláusula penal ou indemnização. A norma não decide, por si só, todas as pretensões que um empregador possa apresentar.
 

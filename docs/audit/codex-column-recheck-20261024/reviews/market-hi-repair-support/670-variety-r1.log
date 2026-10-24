@@ -1,0 +1,6 @@
+$ python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md
+/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md [hi] sentences=53 mean=17.4 cv=0.387 short=0.057 run3=0.059 opener_rep=0.071 cite_end=0.0 cite_para=0.643 contrast=0 caveat=0 q=3
+  FAIL len_cv=0.387 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences
+  FAIL short_share=0.057 (limit >= 0.08): need at least ~1 in 12 sentences that is very short
+
+exit=1

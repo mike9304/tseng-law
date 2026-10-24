@@ -1,0 +1,952 @@
+[
+  {
+    "url": "https://cybercrime.gov.in/",
+    "key": "25978a012739f9",
+    "fetched_utc": "2026-10-24T07:02:56.201157+00:00",
+    "curl_exit": 28,
+    "http_status": "000",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": "curl: (28) Connection timed out after 40006 milliseconds\ncurl: (28) Connection timed out after 40002 milliseconds\n"
+  },
+  {
+    "url": "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39983afcf0199a7d950f5673e",
+    "key": "0abbc3e6cd0637",
+    "fetched_utc": "2026-10-24T07:01:35.808330+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 93591,
+    "sha256": "d3367e261757bba3efd3bd57d59762574be4e7b26164d80b389d6ec03d86f876",
+    "stderr": ""
+  },
+  {
+    "url": "https://fw.wda.gov.tw/wda-employer/home/lazypg/index",
+    "key": "ee9725def98d50",
+    "fetched_utc": "2026-10-24T07:01:35.726897+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 27392,
+    "sha256": "505461416c5ed945d5c2a8a43ed1ae3311210f64e9813dca2e790181fb1a4e2b",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.fsc.gov.tw/LawContent.aspx?id=FL039015",
+    "key": "caaaa0b89b1b18",
+    "fetched_utc": "2026-10-24T07:01:35.670810+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 58439,
+    "sha256": "a8eee0a4196cba6973a84ba2a52260427f1d4bd287de3ec30fc14c4f3ecae1ce",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007",
+    "key": "B0000007-LawAll",
+    "fetched_utc": "2026-10-24T07:01:38.147723+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 72573,
+    "sha256": "9d93d869894b35b045a8e24840d99938f203edffc082fc67c3df79f284f7ff18",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380131",
+    "key": "G0380131-LawAll",
+    "fetched_utc": "2026-10-24T07:01:37.956848+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 84235,
+    "sha256": "f06bcd4331694aa0c0b9f8aab89b4a1d3afb293918cb134fac03475317428fd2",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030005",
+    "key": "N0030005-LawAll",
+    "fetched_utc": "2026-10-24T07:01:36.912611+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 56845,
+    "sha256": "a91d06aca29a562ce5895348ca1c44c5e98a068b8f042880788897712435f3a3",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001",
+    "key": "B0000001-LawHistory",
+    "fetched_utc": "2026-10-24T07:01:38.028752+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 63475,
+    "sha256": "3a92b8151658c5bd9adb605eee8dae291c0c12c1f8f60ee78a9f7525e6028d66",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=127",
+    "key": "B0000001-127",
+    "fetched_utc": "2026-10-24T07:01:36.525693+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 45460,
+    "sha256": "2767b6b28d365f92d290986f126ab9598d57aaed4c89bf3587cce9d6a42ae9d1",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=128",
+    "key": "B0000001-128",
+    "fetched_utc": "2026-10-24T07:01:38.273257+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44707,
+    "sha256": "5e7e512dbcf1f3656386db0640f8c85e317913e8ddd1d2b6644d7e174138924d",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=129",
+    "key": "B0000001-129",
+    "fetched_utc": "2026-10-24T07:01:39.054487+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 45258,
+    "sha256": "21b06ec8aff70513e9e89cd4bf0f15d0d921b8d2f34653dd639e74d7b145cba6",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=130",
+    "key": "B0000001-130",
+    "fetched_utc": "2026-10-24T07:01:38.988375+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44474,
+    "sha256": "7cbb5ff23ebfdd56448dd40b6d00ddf27ac55bbd133ba1c99cb6e0524e16b8d4",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=197",
+    "key": "B0000001-197",
+    "fetched_utc": "2026-10-24T07:01:39.069154+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 45018,
+    "sha256": "c7cd15d427cb7cc8d46911d2627e6eab7f63e6f1e929959a20c6ce93f3f8f4ef",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=227",
+    "key": "B0000001-227",
+    "fetched_utc": "2026-10-24T07:01:38.828343+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44470,
+    "sha256": "6c97035258c6125bfdd0df01b4c94a4dc206ac0b0293a9d394fdf3e4d79ed9eb",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=258",
+    "key": "B0000001-258",
+    "fetched_utc": "2026-10-24T07:01:39.210568+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44691,
+    "sha256": "ef77e32c2cd228465168eaf329a8cb2177cec90b53bb78ab38f4aa4f7defecda",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=309",
+    "key": "B0000001-309",
+    "fetched_utc": "2026-10-24T07:01:39.559862+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44892,
+    "sha256": "e9818424f214d52a7fd40f805b9f807cc2407fa64d6d26283a99e6dc62b53089",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=310",
+    "key": "B0000001-310",
+    "fetched_utc": "2026-10-24T07:01:39.659811+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 45108,
+    "sha256": "d872c7c071713f39e62e0b7ee425014cb24ed9abe5aa8964c533dcbd63a5a324",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=354",
+    "key": "B0000001-354",
+    "fetched_utc": "2026-10-24T07:01:39.847094+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44794,
+    "sha256": "2c9d61f8e6ec9091c35c0d81923800f334531d95eeb0dfe261891861de34ca00",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=356",
+    "key": "B0000001-356",
+    "fetched_utc": "2026-10-24T07:01:39.876119+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44883,
+    "sha256": "f6fc2c25a2fbac1bebb10b63a39ac65bb282e303af97eb2f30170d11215c22d7",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=357",
+    "key": "B0000001-357",
+    "fetched_utc": "2026-10-24T07:01:40.125882+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44279,
+    "sha256": "0f5e219ab54bbc713380fe4b7b15f12e2eb65566e7dd1aa651e0174bb8a7ec47",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=358",
+    "key": "B0000001-358",
+    "fetched_utc": "2026-10-24T07:01:40.236070+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44858,
+    "sha256": "aac640a6402126fa220f6b8111a7222865816803f8d588a03aa78df9f416244b",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=359",
+    "key": "B0000001-359",
+    "fetched_utc": "2026-10-24T07:01:40.904700+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44818,
+    "sha256": "d5ff34898536b57bd0f960cb8bd4d644d510c4e09193ada97b8dd9211e8c288a",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=360",
+    "key": "B0000001-360",
+    "fetched_utc": "2026-10-24T07:01:41.058269+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44576,
+    "sha256": "1f89cbdf4f79e4d71e68f90395036b3497d232fa41990ea5e690d5da335e04bb",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=361",
+    "key": "B0000001-361",
+    "fetched_utc": "2026-10-24T07:01:40.929198+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44434,
+    "sha256": "a42f273cb8fdbc4982627f4fcd038c477d76c9549a185313a9496f0ca7ff8ce5",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=364",
+    "key": "B0000001-364",
+    "fetched_utc": "2026-10-24T07:01:40.946435+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44464,
+    "sha256": "20b05be4c366a0355cd270450a4925327443200842aca137e3e80c875fed910a",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=365",
+    "key": "B0000001-365",
+    "fetched_utc": "2026-10-24T07:01:41.010201+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44755,
+    "sha256": "b5303f5db0a03845c45c70aff9e551864fe2a596332bfdb7b341488881818beb",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=432",
+    "key": "B0000001-432",
+    "fetched_utc": "2026-10-24T07:01:41.962754+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44758,
+    "sha256": "3d0b09e5265752b73dbbfe7002ee503572460f693da978bbbdcb84f95a72a9c7",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=450",
+    "key": "B0000001-450",
+    "fetched_utc": "2026-10-24T07:01:42.044588+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44931,
+    "sha256": "94ca041b158ba1f0c066562fb2fc47c70176394a9960cf5a7aa288d3b857a3b5",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=486",
+    "key": "B0000001-486",
+    "fetched_utc": "2026-10-24T07:01:41.974064+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44549,
+    "sha256": "79147d8fc237371a799b749f6663030b3c2d97b95a08130600cc8750b73c79c9",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+    "key": "B0000007-20",
+    "fetched_utc": "2026-10-24T07:01:42.087661+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43760,
+    "sha256": "324ef30fdc308f2363b7001dfe07ddd15f8ac82ada0ef3c477a00b72b79cf383",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508",
+    "key": "B0010001-508",
+    "fetched_utc": "2026-10-24T07:01:42.093711+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43908,
+    "sha256": "3261ca32cc7c9c2fa165adf4c318f275ae4511fbf67150e34b3144cd729e3974",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509",
+    "key": "B0010001-509",
+    "fetched_utc": "2026-10-24T07:01:42.973722+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43522,
+    "sha256": "d042c0c725cc28b842da99b32a9339e50c331e1b7c074a23ec35d6b2fe406cc4",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511",
+    "key": "B0010001-511",
+    "fetched_utc": "2026-10-24T07:01:42.975106+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43902,
+    "sha256": "8a9aef01f6050cd206cdf73970140df4b2e414cc66d515f77a2cb1c2185ae060",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=515",
+    "key": "B0010001-515",
+    "fetched_utc": "2026-10-24T07:01:43.005730+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43952,
+    "sha256": "dd6376be146cf8f2ec3979bf5d405592928f43eb06e044a1b6ef4dc173dddbdb",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516",
+    "key": "B0010001-516",
+    "fetched_utc": "2026-10-24T07:01:43.113282+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43907,
+    "sha256": "fa3281e1baa785d8f5fa1af80b85d63964658e5aa3e2e99302773a41becb6ffb",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=519",
+    "key": "B0010001-519",
+    "fetched_utc": "2026-10-24T07:01:43.235273+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43692,
+    "sha256": "1fbfce6196d3d2d9ad05d2ba7d16bb38977ccf231371207ce592a4d2eb0bafe8",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=521",
+    "key": "B0010001-521",
+    "fetched_utc": "2026-10-24T07:01:43.938160+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43607,
+    "sha256": "f99a26bb5b82089ab5ffb7161f7287f1ba221a64f858043c741f7daf405155cf",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=523",
+    "key": "B0010001-523",
+    "fetched_utc": "2026-10-24T07:01:44.741277+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43767,
+    "sha256": "f2f4cc177f1a19c7bd5657c99c3bb525cb8f8e0004b009f396860a651160f1d3",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=526",
+    "key": "B0010001-526",
+    "fetched_utc": "2026-10-24T07:01:43.751744+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43930,
+    "sha256": "08b5143c77056f30628ac2dc5c42a40d7a794c696134d9304bb542b0eb7ef260",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=70",
+    "key": "B0010001-70",
+    "fetched_utc": "2026-10-24T07:01:43.889016+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44016,
+    "sha256": "6ae7c9bedfd587a728c3b282ac237364f10ffbdade7963b3536a9ce650550ff7",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=13",
+    "key": "C0000001-13",
+    "fetched_utc": "2026-10-24T07:01:43.877886+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43839,
+    "sha256": "2172e1a54c5c3b4939f90d49e173628a51c3401718a811e9091a9177055c64b1",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=30",
+    "key": "C0000001-30",
+    "fetched_utc": "2026-10-24T07:01:44.421013+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43565,
+    "sha256": "12f74f350264eb24c365aa3fe11c449f4a417bf74dd54326b1a067c332d3ecfb",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=339",
+    "key": "C0000001-339",
+    "fetched_utc": "2026-10-24T07:01:45.015460+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43966,
+    "sha256": "4fa00ee3c39e54412aadb2ff7e8d957adc3baff9851fd0a9d16dd9397fa336b2",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2",
+    "key": "C0010001-100-2",
+    "fetched_utc": "2026-10-24T07:01:45.173216+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43693,
+    "sha256": "2d0b739637a9de29cce424d5d9bbd56ccebc23ca6b786b4e7093864ea015cbd2",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=236-1",
+    "key": "C0010001-236-1",
+    "fetched_utc": "2026-10-24T07:01:45.017661+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43664,
+    "sha256": "3c890e6e7fa42fd4f89bef4ebab2940f8ad2cab7de7fcd99f9c0f47a56c0f29a",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=237",
+    "key": "C0010001-237",
+    "fetched_utc": "2026-10-24T07:01:45.173459+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43817,
+    "sha256": "3ff51b47481f2270ee8219e1d21c0a675abdc32d8a3b11f71a5ef3bfe65c530b",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=242",
+    "key": "C0010001-242",
+    "fetched_utc": "2026-10-24T07:01:45.792914+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44356,
+    "sha256": "25523472b9aa10147a913f87c268b482935fd249e9d8dd39ee8f068d687bd91b",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=41",
+    "key": "C0010001-41",
+    "fetched_utc": "2026-10-24T07:01:46.894260+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44372,
+    "sha256": "79b4a103dd95c97b372745a9e7b1c77aa51ace934f53975090f0ce7f297b52b9",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=43-1",
+    "key": "C0010001-43-1",
+    "fetched_utc": "2026-10-24T07:01:46.022489+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43969,
+    "sha256": "5468078b0ad8b4e85dbdb6fa4c9e41bbb267afde3b1abf58b605fa7b39262d7c",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=71-1",
+    "key": "C0010001-71-1",
+    "fetched_utc": "2026-10-24T07:01:47.184483+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44014,
+    "sha256": "2b84101b8edf15a6b0f1db621a96024daf8ef28cc1ac0f8883028aefcf9fe600",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95",
+    "key": "C0010001-95",
+    "fetched_utc": "2026-10-24T07:01:46.263968+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44099,
+    "sha256": "433438ae84f58fb139a19f88d814c15eb03efd995fc5457425d6a9744f0834c0",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=99",
+    "key": "C0010001-99",
+    "fetched_utc": "2026-10-24T07:01:46.830977+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43455,
+    "sha256": "fbcbe7881133426372594c4965357eaf8c8d251218ba4036ddd4481ed2c770a3",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=12",
+    "key": "D0060125-12",
+    "fetched_utc": "2026-10-24T07:01:46.674446+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43743,
+    "sha256": "9528685c5662caa61204fda24fca93a9c0cdf20b1c809802c36e98ca8509e296",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=16",
+    "key": "D0060125-16",
+    "fetched_utc": "2026-10-24T07:01:47.317003+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43360,
+    "sha256": "7084a796517d8024aaf684a5d4edca8d86bdf355bf197e6216b2b7dc52aca52a",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=4",
+    "key": "D0060125-4",
+    "fetched_utc": "2026-10-24T07:01:47.352891+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43640,
+    "sha256": "a1497fff099ca40abcb7907c5e1607d9af48d40470b8ec1a549af7d5eb73e1b9",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=7",
+    "key": "D0060125-7",
+    "fetched_utc": "2026-10-24T07:01:47.874444+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43497,
+    "sha256": "d900ff9bf6872b5bae0a2928ac47a9c9e3b49a90e18504a445377e6b501b95a2",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380131&flno=22",
+    "key": "G0380131-22",
+    "fetched_utc": "2026-10-24T07:01:47.924853+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 45422,
+    "sha256": "d29befa00732ee7252b8920b5c178e662653d9791e7e542394355b710938e4d8",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=10",
+    "key": "J0080028-10",
+    "fetched_utc": "2026-10-24T07:01:48.168586+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44076,
+    "sha256": "44fac6270b1f4a5913c6a7e7892036aabc7991083d9a996847cc77a02669fa97",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=2",
+    "key": "J0080028-2",
+    "fetched_utc": "2026-10-24T07:01:48.040159+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43644,
+    "sha256": "65e153b95f6e1263a22431c833e1cc3d096822bc93999c71e7f57dd32a6d537c",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=23",
+    "key": "N0020007-23",
+    "fetched_utc": "2026-10-24T07:01:48.038867+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43336,
+    "sha256": "6562a3c6e221e9eb2190d876610fed13b5a1e88cc687e534608a10f6356af48d",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=9",
+    "key": "N0020007-9",
+    "fetched_utc": "2026-10-24T07:01:48.812519+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44150,
+    "sha256": "88708931656e4191053eb6ba3ca9461e989a0fbd3474d1d493b2df8c3212b8c6",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=14",
+    "key": "N0030001-14",
+    "fetched_utc": "2026-10-24T07:01:48.719951+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44909,
+    "sha256": "46f18e1efd8f8cd959509a96a45c46b6fca4f660940db773a4e1ae4a91bb0a56",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=15-1",
+    "key": "N0030001-15-1",
+    "fetched_utc": "2026-10-24T07:01:49.225295+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44364,
+    "sha256": "3b16de40a53337364f63890996458b4a13d6d00ae607b1798eff8d68d57e1ea0",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=2",
+    "key": "N0030001-2",
+    "fetched_utc": "2026-10-24T07:01:49.044457+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 45116,
+    "sha256": "56ce7a26424aeff2e46ffe5753a49eeb0fc89bd78ebdadfcc7a1d8946b506da8",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=22",
+    "key": "N0030001-22",
+    "fetched_utc": "2026-10-24T07:01:49.150072+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43793,
+    "sha256": "11df06414eaf33673ced51e98aa6b23d037d76ce4c07f8d31b2627b43066fbda",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=23",
+    "key": "N0030001-23",
+    "fetched_utc": "2026-10-24T07:01:49.459305+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43763,
+    "sha256": "5b3f82541a0041fcb97f2dc29687c8e73f460641d0d01f2bb66e69557a983568",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=26",
+    "key": "N0030001-26",
+    "fetched_utc": "2026-10-24T07:01:49.705222+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43449,
+    "sha256": "6d7d5bbd81d20348c3852b78e237f18d49a5c2d1040bfb91b02534a9e46fe7eb",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=27",
+    "key": "N0030001-27",
+    "fetched_utc": "2026-10-24T07:01:49.746750+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43455,
+    "sha256": "45ca7ced32533c1380265ac8e07ba620d39d07b8edb18ce0c6886e0c0ad4dab7",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28",
+    "key": "N0030001-28",
+    "fetched_utc": "2026-10-24T07:01:49.813957+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 45640,
+    "sha256": "f9a96ebadf552490c3462b1e7a1bd3b44d19c9c877a66dbbf070b0eebe29abce",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=3",
+    "key": "N0030001-3",
+    "fetched_utc": "2026-10-24T07:01:49.877154+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44497,
+    "sha256": "06f8a910c926147143a1606196b651e39c57c4d67358bce8825052d1e63329ef",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=59",
+    "key": "N0030001-59",
+    "fetched_utc": "2026-10-24T07:01:50.355455+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 45043,
+    "sha256": "5580489487f6d979a74e405e596138a9ccf63cc4bcd281100a30bbca4cb4ae5f",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=60",
+    "key": "N0030001-60",
+    "fetched_utc": "2026-10-24T07:01:50.577116+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43485,
+    "sha256": "ad682cb04918f5014aa32aeca37c0786099a620314857f2fd9e3b7bcd3f61046",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=61",
+    "key": "N0030001-61",
+    "fetched_utc": "2026-10-24T07:01:50.496713+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44188,
+    "sha256": "ac5bcf9e41bd1bc6f8cc967a9a4f8177b7ea8c6075017c3e05ce06875f0c28ab",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=9-1",
+    "key": "N0030001-9-1",
+    "fetched_utc": "2026-10-24T07:01:50.506186+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44123,
+    "sha256": "47f1ffb4ed8010fb3f4d31b43c1d39347d2ccbd30cad104befa4894ec83ce1b6",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=7-1",
+    "key": "N0030002-7-1",
+    "fetched_utc": "2026-10-24T07:01:50.606869+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43726,
+    "sha256": "9c789f5dfa684d7e663e36ee9c176c20db5268c7bd69dcdcb696e8317a5c36a9",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=7-2",
+    "key": "N0030002-7-2",
+    "fetched_utc": "2026-10-24T07:01:52.327353+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44264,
+    "sha256": "c035bb1709801fff89c86d330af0474485b4ece77547dea4585c00678028f98e",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=7-3",
+    "key": "N0030002-7-3",
+    "fetched_utc": "2026-10-24T07:01:51.790933+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44287,
+    "sha256": "f31053c88d14345484e0d4033b74244c13eef8cf7379fa35f31abd26353b2614",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=36",
+    "key": "N0050031-36",
+    "fetched_utc": "2026-10-24T07:01:51.786717+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44331,
+    "sha256": "8cb5127872a44f5ce5e885019a7adb8991952c7ae03bab6c988256f8c7343c78",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=37",
+    "key": "N0050031-37",
+    "fetched_utc": "2026-10-24T07:01:52.939225+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43330,
+    "sha256": "a5d451773d2b337d235886fc37bd68c9d91bba7b21bf2c6e2535bcab3d8b9ee8",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=6",
+    "key": "N0050031-6",
+    "fetched_utc": "2026-10-24T07:01:52.178245+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44324,
+    "sha256": "6691395ef29fcdffa983fa7d6a0137d5d0910cc009178b20307876c62613ea85",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=90",
+    "key": "N0050031-90",
+    "fetched_utc": "2026-10-24T07:01:53.508949+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44317,
+    "sha256": "658bb04befb58bb73c5e51b1318d3ea19c9dc402bad6ef544b45078765e53835",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=91",
+    "key": "N0050031-91",
+    "fetched_utc": "2026-10-24T07:01:52.823696+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43354,
+    "sha256": "35906fa630dc5a11309cd9b5b74dd2f709b83fbcecc037a19cb6e08d72bced2e",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=40",
+    "key": "N0090001-40",
+    "fetched_utc": "2026-10-24T07:01:52.909344+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 46572,
+    "sha256": "4c84a977db6005d31d5debc80713c4de0646f7539aba07e7d8c65af8bcadae21",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=57",
+    "key": "N0090001-57",
+    "fetched_utc": "2026-10-24T07:01:52.976307+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44483,
+    "sha256": "09b25b8f675507f549e51c4ac9bdd1e591ec37977fc2f78afc7fac45f7380463",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=59",
+    "key": "N0090001-59",
+    "fetched_utc": "2026-10-24T07:01:53.754960+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44300,
+    "sha256": "7b8dfeb9b8f67c9af858f803f145b21360670aed6f37d1a9581f7af6c1e57364",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090027&flno=2",
+    "key": "N0090027-2",
+    "fetched_utc": "2026-10-24T07:01:54.033350+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 44614,
+    "sha256": "3ab5b004a038f4dea25ba7034a08da309ea26a0b32503792e8d7aa1bd539815a",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090027&flno=66",
+    "key": "N0090027-66",
+    "fetched_utc": "2026-10-24T07:01:53.733387+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 45183,
+    "sha256": "eed0d8b919cabb6135bb5be08688b645e26487c7d60445b19d6f6e12ca93fa68",
+    "stderr": ""
+  },
+  {
+    "url": "https://tm2.npa.gov.tw/NM105-505ClientRWD2/TM01A01Q_01.jsp",
+    "key": "10aafe76007fde",
+    "fetched_utc": "2026-10-24T07:01:53.377853+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 34791,
+    "sha256": "20f11132cffadb4ff0bb94ce48e205bc4c35dc43ef4e5aff8a85773aaa419371",
+    "stderr": ""
+  },
+  {
+    "url": "https://www.bli.gov.tw/0007239.html",
+    "key": "ef4b6437976a49",
+    "fetched_utc": "2026-10-24T07:01:55.727622+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 323003,
+    "sha256": "7cb8050a6e4bec45df2392415ddf7aec4920cac75cbc7f90097421627dd975ef",
+    "stderr": ""
+  },
+  {
+    "url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=b76b7228-650c-4e33-a1d4-650a8ec0bc72",
+    "key": "4a74cc147234e4",
+    "fetched_utc": "2026-10-24T07:01:57.146692+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 81136,
+    "sha256": "4c7aca476cebe1618401283f014e8a1087ed3299713fe338d54b21f3a1902999",
+    "stderr": ""
+  },
+  {
+    "url": "https://www.mol.gov.tw/1607/28162/28166/28180/28182/28188/29020/",
+    "key": "058d998722040c",
+    "fetched_utc": "2026-10-24T07:01:56.386869+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 89984,
+    "sha256": "a90a5f81e3bcf0f5fdcc6959f882cc65eeef40011c48f8da93d23d1c55853234",
+    "stderr": ""
+  },
+  {
+    "url": "https://www.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129",
+    "key": "ec36f456d94c5c",
+    "fetched_utc": "2026-10-24T07:01:58.958920+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 91726,
+    "sha256": "681249b06362988cf67b1bc1ba0b36450c2624a0f5684f455393e9ff0fb12194",
+    "stderr": ""
+  },
+  {
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2298336&lang=2&reg=48",
+    "key": "8775e08b074b6f",
+    "fetched_utc": "2026-10-24T07:01:54.612267+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 137844,
+    "sha256": "3ed2c50100943ea60f70018c9eb68f27c6e03e665a636ede7807c9743973958c",
+    "stderr": ""
+  },
+  {
+    "url": "https://tseng-law.com/en/contact",
+    "key": "151d45d958c156",
+    "fetched_utc": "2026-10-24T07:01:56.552247+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 112156,
+    "sha256": "5157a695d4a5884d245355c1b2fbe919b3314e8845376981f9f4d888d8399838",
+    "stderr": ""
+  },
+  {
+    "url": "https://tseng-law.com/en/lawyers",
+    "key": "5e0efc8daf60c0",
+    "fetched_utc": "2026-10-24T07:01:57.429828+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 116827,
+    "sha256": "bbb9fdb3d4a78e65a7c04cb8e5ba9dc510fa2c181e9bac19e347b212fe32ee8a",
+    "stderr": ""
+  }
+]

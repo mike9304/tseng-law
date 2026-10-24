@@ -1,7 +1,7 @@
 ---
-title: "Primeiro ARC em Taiwan: prazo, documentos e apresentação do pedido"
+title: "Pedir o primeiro ARC em Taiwan: prazo, documentos e emissão"
 seoTitle: "Primeiro ARC em Taiwan: como apresentar o pedido"
-summary: "O primeiro ARC exige um fundamento de residência, documentos adequados e o canal certo da NIA. Veja como contar o prazo, apresentar o pedido e levantar o cartão."
+summary: "A entrada com visto de residente dá início ao prazo do primeiro ARC. Os documentos e o local do pedido dependem do trabalho, dos estudos ou da relação familiar que justificam a residência."
 published: "2026-10-24"
 lastmod: "2026-10-24"
 date_display: "24 de outubro de 2026"
@@ -16,70 +16,65 @@ tags:
 audience:
   - "pt"
 author: "legal-ai-assistant"
+featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
+featured_image_alt: "Caderneta de viagem sem inscrições, pasta de documentos e cartão liso sobre uma secretária."
+featured_image_caption: "Imagem ilustrativa; os objetos não representam documentos de identificação ou formulários oficiais."
 faq:
   - q: "Quando começa o prazo para pedir o primeiro ARC após entrar com visto de residente?"
-    a: "O prazo é de 30 dias, contado a partir do dia seguinte à entrada em Taiwan. Esta regra pressupõe entrada com autorização de residência; não atribui a qualquer visitante o direito de mudar para residente."
+    a: "São 30 dias a contar do dia seguinte à entrada em Taiwan com visto de residente. Quem entrou como visitante ou sem visto precisa de cumprir os requisitos de uma das vias que admitem o pedido de residência nessa situação."
   - q: "Todos os requerentes têm de apresentar certificado de registo criminal e exame médico?"
-    a: "A lista depende do fundamento e da via de residência. Quem entrou com visto de residente e quem pede residência diretamente após uma entrada como visitante podem ter exigências diferentes. Deve usar-se a lista da NIA correspondente ao pedido."
+    a: "Não existe uma lista única. A NIA distingue o pedido de quem já entrou com visto de residente dos pedidos apresentados após entrada como visitante ou sem visto, e prevê requisitos e dispensas por categoria."
   - q: "O comprovativo de submissão online é o meu ARC?"
-    a: "Não. É necessário acompanhar a decisão, responder a pedidos de documentos, pagar quando o sistema o indicar e obter o título autorizado. As instruções de emissão eletrónica ou levantamento do cartão dependem do procedimento utilizado."
+    a: "O comprovativo regista a apresentação do pedido. Seguem-se a análise, eventuais pedidos de documentos e, após aprovação, o pagamento e a emissão do título. O procedimento utilizado determina se recebe um título eletrónico ou levanta um cartão."
 ---
 
-Quem entra em Taiwan com visto de residente tem de pedir o certificado de residência para estrangeiros, conhecido por ARC, no prazo de 30 dias, contado a partir do dia seguinte à entrada. A obrigação consta do [artigo 22.º da Lei de Imigração](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22). Um documento válido que já integre a função de ARC, como um título com as quatro autorizações reunidas, pode dispensar um pedido separado.
+Quem entra em Taiwan com visto de residente tem de pedir o certificado de residência para estrangeiros, conhecido por ARC, nos 30 dias estabelecidos pelo [artigo 22.º da Lei de Imigração](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22). O prazo começa no dia seguinte à entrada. Um título válido que reúna quatro autorizações e já inclua a função de ARC pode dispensar um pedido separado.
 
-Entrou sem visto ou com visto de visitante? Antes de preencher o formulário, é necessário identificar uma disposição que permita pedir residência nessa situação. A [NIA distingue vias para profissionais e determinados estudantes ou familiares](https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news); a língua portuguesa e a mera intenção de ficar não determinam a elegibilidade. Os [percursos de trabalho, estudo e família](/pt/columns/taiwan-visa-residence-work-study-family) ajudam a localizar a hipótese aplicável.
+E quem entrou sem visto ou com visto de visitante? O pedido só é possível quando existe uma disposição que o permita nessa situação. A [Agência Nacional de Imigração (NIA) prevê vias para profissionais e determinados estudantes ou familiares](https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news), com requisitos próprios. Os [percursos de trabalho, estudo e família](/pt/columns/taiwan-visa-residence-work-study-family) explicam quais são essas categorias.
 
-Se obteve um visto de residente já em Taiwan, por mudança do visto anterior, a [BOCA conta os 30 dias desde a data de emissão desse visto](https://www.boca.gov.tw/fp-398-723-7b71f-1.html). Esse procedimento não substitui as vias legais em que o pedido de residência é apresentado diretamente à NIA.
+Se o visto de residente foi emitido já em Taiwan, por mudança do visto anterior, a data relevante é outra: a [BOCA conta os 30 dias desde a emissão do visto](https://www.boca.gov.tw/fp-398-723-7b71f-1.html). Continuam a existir vias legais de pedido direto à NIA, sem passar por essa mudança de visto.
 
-## A lista de documentos depende da entrada e do motivo
+## Documentos que demonstram o motivo da residência
 
-Para quem entrou com visto de residente, o [guia 0902 da Agência Nacional de Imigração (NIA)](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) pede requerimento, fotografia, passaporte e visto, comprovativos do motivo de residência e da morada atual. Convém preparar os originais e cópias legíveis. Um contrato de arrendamento pode servir de comprovativo de morada.
+Para quem entrou com visto de residente, o [guia 0902 da NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) pede requerimento, fotografia, passaporte e visto, além de prova da morada atual e do motivo da residência. O contrato de arrendamento pode comprovar a morada. Convém preparar originais e cópias legíveis.
 
-O documento que prova o motivo varia:
+A prova do motivo varia conforme o pedido:
 
 - Trabalho: autorização aplicável e declaração da entidade empregadora emitida no último mês.
 - Estudos: carta de admissão ou comprovativo recente de matrícula, conforme a fase do curso.
 - Família: prova do vínculo e documentos de identificação ou residência do familiar que fundamenta o pedido.
 
-No primeiro pedido como cônjuge de cidadão taiwanês com registo de agregado familiar em Taiwan, a NIA exige prova do casamento registado em Taiwan e a presença do cônjuge taiwanês. A primeira autorização tem o limite de um ano. Estas condições não descrevem todos os familiares de estrangeiros residentes. Constam do mesmo guia e do [artigo 12.º do regulamento de residência](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129).
+Há condições específicas para o primeiro pedido como cônjuge de cidadão taiwanês que reside em Taiwan e aí tem registo de agregado familiar. O casamento tem de estar registado em Taiwan, e o cônjuge taiwanês deve estar presente. A primeira autorização fica limitada a um ano. São condições dessa categoria, previstas no mesmo guia e no [artigo 12.º do regulamento de residência](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129); não abrangem indistintamente os familiares de estrangeiros residentes.
 
-Exames médicos e registo criminal merecem uma verificação própria. O [guia 0915 para pedidos após entrada como visitante ou com isenção de visto](https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news) distingue requisitos e dispensas segundo a categoria. Não se deve copiar a lista de outro requerente, mesmo que ambos peçam um ARC.
+Quanto a exames médicos e certificado de registo criminal, a exigência depende da categoria e da forma de entrada. O [guia 0915, para pedidos após entrada como visitante ou com isenção de visto](https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news), indica os requisitos e as dispensas.
 
-## Certidões estrangeiras e tradução
+## Uma certidão emitida em português
 
-Uma certidão em português precisa de ser preparada para a entidade taiwanesa que a vai receber. O guia 0902 exige autenticação dos documentos produzidos no estrangeiro pelas representações competentes de Taiwan e prevê que a NIA peça tradução chinesa autenticada ou reconhecida nos termos indicados no guia. A nacionalidade do titular e o país que emitiu o documento podem ser diferentes.
+Os documentos produzidos no estrangeiro estão sujeitos à autenticação pelas representações competentes de Taiwan, nos termos do guia 0902. A NIA pode também exigir tradução chinesa autenticada ou reconhecida segundo as modalidades previstas nesse guia. A nacionalidade do titular pode ser diferente do país que emitiu a certidão.
 
-Antes de pagar uma tradução, identifique a certidão concreta, o país emissor e a finalidade. Depois confirme a sequência de autenticação com a representação competente, localizada através da [lista de circunscrições consulares da BOCA](https://www.boca.gov.tw/lp-206-2.html). Esta verificação evita traduzir um documento que terá de ser novamente emitido ou autenticado.
+Na [lista de circunscrições consulares da BOCA](https://www.boca.gov.tw/lp-206-2.html) encontra-se a representação responsável. Antes de encomendar a tradução, essa representação pode esclarecer a sequência de autenticação para o documento concreto, tendo em conta o país emissor e a finalidade em Taiwan. Assim, a tradução é preparada a partir da versão que poderá efetivamente instruir o pedido.
 
-## O canal de apresentação
+## Onde apresentar e como acompanhar o pedido
 
-Os sistemas online têm categorias distintas. A orientação 0915 encaminha os profissionais e familiares elegíveis para o sistema respetivo, os estudantes para o sistema de estudantes e os pedidos baseados num familiar taiwanês para o serviço da NIA da morada atual. Na página oficial, siga a ligação do procedimento aplicável.
+O canal depende da categoria. A orientação 0915 encaminha profissionais e familiares elegíveis para o respetivo sistema online, estudantes para o portal estudantil e pedidos baseados num familiar taiwanês para o serviço da NIA da morada atual. Cada página oficial contém a ligação ao procedimento correspondente.
 
-O [guia 0929 dos estudantes](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) contém a ligação ao portal e as regras dos ficheiros: imagens a cores, legíveis, até 512 KB por ficheiro, nos formatos aí aceites. O requerente deve ter à mão o passaporte, o visto apropriado, a prova de admissão ou matrícula e a morada. Há documentos adicionais para pedidos baseados num visto de visitante.
+Para estudantes, o [guia 0929](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) indica o portal e os formatos aceites. As imagens devem ser a cores e legíveis. O limite é de 512 KB por ficheiro. Além do passaporte, do visto apropriado, da prova de admissão ou matrícula e da morada, a entrada com visto de visitante exige documentos adicionais.
 
-Já os trabalhadores abrangidos pelo regime de trabalhadores migrantes utilizam o [procedimento 0926](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/). A categoria laboral, a autorização e os documentos da entidade empregadora devem corresponder ao pedido. O portal dos profissionais não serve para todos os empregos.
+Os trabalhadores abrangidos pelo regime de trabalhadores migrantes seguem o [procedimento 0926](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/), com a autorização e os documentos da entidade empregadora adequados à sua categoria. O portal dos profissionais não abrange todos os empregos.
 
-Na preparação prática, a sequência é simples:
+O nome deve coincidir com o passaporte. Depois de enviado o pedido ou entregue no balcão, o número do processo permite acompanhar as notificações e responder a pedidos de elementos em falta. Uma cópia de tudo o que foi entregue facilita a resposta se a NIA pedir esclarecimentos sobre um documento. O recibo de pagamento também deve ficar junto do processo.
 
-1. Confirme a categoria, a data relevante e o serviço competente.
-2. Reúna os documentos exigidos nessa categoria e confira a grafia do nome com o passaporte.
-3. Apresente o pedido no portal indicado ou no balcão competente e guarde o número do processo.
-4. Acompanhe as notificações e entregue eventuais elementos em falta.
-5. Siga as instruções de pagamento e de emissão ou levantamento; guarde também o recibo.
+No portal dos estudantes, a aprovação inicia um prazo de cinco dias úteis para pagar. Após o pagamento, o título eletrónico autorizado pode ser descarregado e impresso. Quando seja emitido cartão com chip, o guia prevê o levantamento três dias úteis depois do pagamento, no serviço escolhido no pedido, mediante apresentação do recibo online impresso. A decisão e as instruções do processo identificam o título a obter.
 
-Guarde uma cópia do processo completo. Será útil se a NIA pedir esclarecimentos sobre um documento já entregue.
+## Quanto custa e quando fica pronto
 
-No procedimento online dos estudantes, o pagamento deve ser feito nos cinco dias úteis contados desde a aprovação. Depois, o título eletrónico autorizado pode ser descarregado e impresso. Para o cartão com chip, o guia prevê levantamento três dias úteis após o pagamento, no serviço escolhido no pedido, com o recibo online impresso. Confirme qual dos títulos foi autorizado.
+Pela [tabela legal de taxas](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135), paga-se, em regra, NT$ 1 000 por ano de validade do ARC; um período inferior a um ano paga a taxa anual completa. Está previsto um acréscimo de NT$ 2 200 para pedidos após entrada sem visto ou com visto de visitante. As reduções atribuídas a estudantes com estatuto de *overseas compatriot* dependem desse estatuto, sem se estenderem automaticamente aos restantes estudantes internacionais.
 
-## Taxa, decisão e cartão
+Cabe à NIA determinar a duração com base no fundamento e nos documentos do pedido. No regime geral do artigo 22.º, o limite é de três anos, contados a partir do dia seguinte à autorização, sem prejuízo dos regimes especiais. O pagamento de várias anuidades não permite escolher outro prazo de residência.
 
-A [tabela legal de taxas](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135) fixa, em regra, NT$ 1 000 por ano de validade do ARC. Um período inferior a um ano paga a taxa de um ano. Os pedidos apresentados após entrada sem visto ou com visto de visitante têm um acréscimo previsto de NT$ 2 200; as reduções para estudantes com estatuto de *overseas compatriot* não se aplicam automaticamente a todos os estudantes internacionais.
+Segundo o guia 0902, a análise demora dez dias úteis, excluindo devoluções, apresentação de documentos complementares e entrevista. A entrega dos elementos em falta reinicia a contagem. Para estudantes, são cinco dias úteis. Estes prazos não garantem uma data de entrega, pelo que não asseguram a receção do cartão antes de um voo já marcado.
 
-Pagar vários anos não permite escolher livremente a duração. O artigo 22.º fixa o limite geral de três anos, contado a partir do dia seguinte à autorização, sem afastar regimes especiais. A NIA aprecia o fundamento e os documentos do pedido.
-
-Segundo o guia 0902, o tratamento demora dez dias úteis, excluindo devoluções, documentos complementares e entrevista. Após a entrega dos elementos em falta, o prazo de análise recomeça. O guia dos estudantes indica um prazo próprio de cinco dias úteis. Nenhum destes números deve ser tratado como garantia de entrega antes de um voo.
-
-Quando receber o título, compare nome, número de passaporte, morada e validade com o pedido. O [artigo 43.º da Lei dos Serviços de Emprego](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43) sujeita o trabalho de estrangeiros a autorização, salvo exceções legais: a emissão do ARC, por si só, não resolve essa questão. Registe também a data de expiração e consulte as regras de [renovação, alterações e reentrada](/pt/columns/taiwan-arc-renewal-changes-reentry) antes da próxima mudança ou viagem.
+Na receção do título, eventuais diferenças no nome, número do passaporte, morada ou validade devem ser identificadas por comparação com o pedido. A validade servirá também de referência para a [renovação, as alterações e a reentrada](/pt/columns/taiwan-arc-renewal-changes-reentry). Para começar a trabalhar, continua a ser necessária a autorização prevista no [artigo 43.º da Lei dos Serviços de Emprego](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43), salvo exceção legal; ter recebido o ARC não supre essa exigência.
 
 ## Fontes oficiais
 

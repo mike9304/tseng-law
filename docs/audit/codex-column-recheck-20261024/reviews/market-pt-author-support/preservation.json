@@ -1,0 +1,65 @@
+{
+  "checked_at": "2026-10-24T06:59:17.628019+00:00",
+  "files": [
+    {
+      "file": "src/content/columns-pt/694-portugal-exportador-acordo-prestacoes-taiwan.md",
+      "before_sha256": "62dd6d3e3e38a388f49be4d259e44abd4d87badd9261e8afd708cffb3567f2f0",
+      "after_sha256": "3d658de92c0b0ff74e6bcbd3da0ab2d16decf6c994693276b62970982449ebe7",
+      "metadata_except_allowed_lastmod_and_faq_question_preserved": true,
+      "ordered_urls_preserved": true,
+      "image_sha256_preserved": true,
+      "source_changed": true
+    },
+    {
+      "file": "src/content/columns-pt/695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md",
+      "before_sha256": "dd47581c4629eced1a254eab84cebbe1dc2f2a0da5c5d36c761f9cc308f8f78a",
+      "after_sha256": "05fb0d2b5305c02e5292dbb1fa3d39951dd7c18c8da2b74dc59a51c4aeaa9e22",
+      "metadata_except_allowed_lastmod_and_faq_question_preserved": true,
+      "ordered_urls_preserved": true,
+      "image_sha256_preserved": true,
+      "source_changed": true
+    },
+    {
+      "file": "src/content/columns-pt/696-portugal-sentenca-arbitral-bens-taiwan.md",
+      "before_sha256": "e495bd598c2c2615e6532b56530f9f708e752dd65503cceba207567b7e8e1aac",
+      "after_sha256": "96ee165f4ac3392ba2dc487b584489b9acfaa875c1ce263b26d32d671cdd97bc",
+      "metadata_except_allowed_lastmod_and_faq_question_preserved": true,
+      "ordered_urls_preserved": true,
+      "image_sha256_preserved": true,
+      "source_changed": true
+    },
+    {
+      "file": "src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md",
+      "before_sha256": "7c78571e6b959be709d66f8bed61e621670b7a8320e9e0af928db327c7932a0b",
+      "after_sha256": "ebbaff65263b49401cd07d3cc5abe439d2ee5a778010795df52f718e2cb717f0",
+      "metadata_except_allowed_lastmod_and_faq_question_preserved": true,
+      "ordered_urls_preserved": true,
+      "image_sha256_preserved": true,
+      "source_changed": true
+    },
+    {
+      "file": "src/content/columns-pt/698-portugal-fim-contrato-taiwan-salarios-em-falta.md",
+      "before_sha256": "80ebc4b50ebfc0d4d0e62373c2d0ec5b9989091726430d9538f48b6b33e6b549",
+      "after_sha256": "80ebc4b50ebfc0d4d0e62373c2d0ec5b9989091726430d9538f48b6b33e6b549",
+      "metadata_except_allowed_lastmod_and_faq_question_preserved": true,
+      "ordered_urls_preserved": true,
+      "image_sha256_preserved": true,
+      "source_changed": false
+    }
+  ],
+  "git_diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--check",
+      "--",
+      "src/content/columns-pt/694-portugal-exportador-acordo-prestacoes-taiwan.md",
+      "src/content/columns-pt/695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md",
+      "src/content/columns-pt/696-portugal-sentenca-arbitral-bens-taiwan.md",
+      "src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

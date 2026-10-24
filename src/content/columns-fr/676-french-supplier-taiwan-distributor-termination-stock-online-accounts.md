@@ -1,9 +1,9 @@
 ---
 title: "Fin d'une distribution à Taïwan : le sort du stock et des comptes de vente en ligne"
 seoTitle: "Taïwan : fin de distribution et stocks"
-summary: "Une marque française qui change de distributeur à Taïwan doit traiter le préavis, le stock restant et les comptes numériques dans des documents distincts et cohérents."
+summary: "Une marque française qui change de distributeur à Taïwan doit régler le préavis, le sort du stock et le transfert des comptes numériques."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 octobre 2026"
 read_time: "5 min de lecture"
 categories: ["Informations juridiques sur Taïwan"]
@@ -41,7 +41,7 @@ Qui a payé les cartons encore en entrepôt ? Le relevé doit séparer les march
 
 Dans une vente relevant du droit taïwanais, [l'article 254](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=254) permet au créancier, en cas de retard d'exécution, de fixer un délai raisonnable pour s'exécuter puis de résoudre le contrat si ce délai expire sans exécution. Lorsqu'une vente est valablement résolue, [l'article 259](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=259) organise les restitutions, sous réserve d'autres dispositions légales ou contractuelles. La fin du contrat de distribution ne résout pas, à elle seule, chaque vente antérieure.
 
-Un accord de sortie peut fixer les lots repris et leur prix. Le transport doit aussi être attribué. Le contrôle à réception et le traitement des défauts demandent leurs propres modalités. Pour les lots conservés, l'accord peut organiser une période d'écoulement et la prise en charge du service après-vente. Les réserves doivent être écrites.
+Un accord de sortie peut fixer les lots repris et leur prix. Il peut également préciser qui organise le transport et en supporte le coût. Les modalités de contrôle à réception et de traitement des défauts peuvent y être définies, tandis que, pour les lots conservés, les parties peuvent convenir d'une période d'écoulement et de la prise en charge du service après-vente.
 
 Même après la rupture, le stock peut rester revendable. [L'article 36, alinéa 2, de la loi sur les marques](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=36) prévoit l'épuisement du droit pour les produits mis en circulation sur le marché national ou étranger par le titulaire ou avec son consentement. Il réserve notamment l'altération, la détérioration, la transformation non autorisée et d'autres motifs légitimes. L'état des produits et leur origine doivent donc être documentés.
 

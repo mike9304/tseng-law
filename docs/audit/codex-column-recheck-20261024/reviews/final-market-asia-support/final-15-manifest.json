@@ -1,0 +1,307 @@
+[
+  {
+    "file": "src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md",
+    "sha256": "ad0a3eccf0fbbc4d5e7a2d78e8e3bd5d753e12305a77060417927c55a7d8c265",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md",
+      "--lang",
+      "th",
+      "--sentences",
+      "/Users/son7/tseng-market-columns-20261023/repo/docs/audit/variety-segments/ad0a3eccf0fbbc4d5e7a2d78e8e3bd5d753e12305a77060417927c55a7d8c265.json"
+    ],
+    "exit": 0,
+    "map_sha256": "9c90bcbaf54b463696df927f31242291160e9275111c584f3ca46dd7255397c3",
+    "time_utc": "2026-10-24T07:07:33.930424+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T06:47:19.263463+00:00",
+    "lastmod": "\"2026-10-23\""
+  },
+  {
+    "file": "src/content/columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md",
+    "sha256": "e208d9f93a575cee0543a33f945596216d971218239a2c88303f43c3fe981d24",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md",
+      "--lang",
+      "th",
+      "--sentences",
+      "/Users/son7/tseng-market-columns-20261023/repo/docs/audit/variety-segments/e208d9f93a575cee0543a33f945596216d971218239a2c88303f43c3fe981d24.json"
+    ],
+    "exit": 0,
+    "map_sha256": "19752f5ab2c0f1f41564805daedc6930ea24e983a9bac48841c3ed07029596f3",
+    "time_utc": "2026-10-24T07:07:34.164815+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T06:47:19.263551+00:00",
+    "lastmod": "\"2026-10-23\""
+  },
+  {
+    "file": "src/content/columns-th/661-thai-worker-taiwan-bank-account-police-notice.md",
+    "sha256": "7acb2c805316c660a4733fb4a83fbb444c3c610b41e87dc1602fd46797d3228d",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/661-thai-worker-taiwan-bank-account-police-notice.md",
+      "--lang",
+      "th",
+      "--sentences",
+      "/Users/son7/tseng-market-columns-20261023/repo/docs/audit/variety-segments/7acb2c805316c660a4733fb4a83fbb444c3c610b41e87dc1602fd46797d3228d.json"
+    ],
+    "exit": 0,
+    "map_sha256": "d7d4df159421d8cea3288607a3ad3a7897808e9cc34236acc035d1a8cadd953b",
+    "time_utc": "2026-10-24T07:07:34.351378+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T06:19:54.123702+00:00",
+    "lastmod": "\"2026-10-23\""
+  },
+  {
+    "file": "src/content/columns-th/662-thai-return-home-taiwan-traffic-injury-records.md",
+    "sha256": "674ed1f49df35519df68c050be33f651b302765cc042095ee7f54b91eada3e6c",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/662-thai-return-home-taiwan-traffic-injury-records.md",
+      "--lang",
+      "th",
+      "--sentences",
+      "/Users/son7/tseng-market-columns-20261023/repo/docs/audit/variety-segments/674ed1f49df35519df68c050be33f651b302765cc042095ee7f54b91eada3e6c.json"
+    ],
+    "exit": 0,
+    "map_sha256": "68878d86d6ac16a018b72c087419a955ed8c297d7fe73d5eff4bb8966b428f20",
+    "time_utc": "2026-10-24T07:07:34.542929+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T06:47:19.263615+00:00",
+    "lastmod": "\"2026-10-23\""
+  },
+  {
+    "file": "src/content/columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md",
+    "sha256": "b6892d81d73a179535f1aacce4672e53a615cfb8beb0f8c44b40111f025fec7b",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md",
+      "--lang",
+      "th",
+      "--sentences",
+      "/Users/son7/tseng-market-columns-20261023/repo/docs/audit/variety-segments/b6892d81d73a179535f1aacce4672e53a615cfb8beb0f8c44b40111f025fec7b.json"
+    ],
+    "exit": 0,
+    "map_sha256": "d186e29909cfd19eeb304b07096f9def5bae4fddc3368a62c4e407efb123d2e9",
+    "time_utc": "2026-10-24T07:07:34.797269+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T06:47:19.263784+00:00",
+    "lastmod": "\"2026-10-23\""
+  },
+  {
+    "file": "src/content/columns-id/664-indonesian-home-caregiver-unpaid-wages-taiwan.md",
+    "sha256": "0df3ccf6a3f2ecbe7ec13ba26632bdec046cdbc54b562c01916ea29be1becba3",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-id/664-indonesian-home-caregiver-unpaid-wages-taiwan.md",
+      "--lang",
+      "id"
+    ],
+    "exit": 0,
+    "map_sha256": null,
+    "time_utc": "2026-10-24T07:07:34.947750+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T06:19:54.044705+00:00",
+    "lastmod": "\"2026-10-23\""
+  },
+  {
+    "file": "src/content/columns-id/665-indonesian-worker-passport-broker-dispute-taiwan.md",
+    "sha256": "4d19c4da1bd422009f2bb794f27b25da1c1c8d52bce8884e6da58e6d023c23ff",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-id/665-indonesian-worker-passport-broker-dispute-taiwan.md",
+      "--lang",
+      "id"
+    ],
+    "exit": 0,
+    "map_sha256": null,
+    "time_utc": "2026-10-24T07:07:35.093037+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T06:55:15.083635+00:00",
+    "lastmod": "\"2026-10-24\""
+  },
+  {
+    "file": "src/content/columns-id/666-indonesian-worker-bank-account-cash-job-police-taiwan.md",
+    "sha256": "1dc2f41c0b69574a9fe64696db98192ebfb1edf5d1471ee2a956f92b42740c26",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-id/666-indonesian-worker-bank-account-cash-job-police-taiwan.md",
+      "--lang",
+      "id"
+    ],
+    "exit": 0,
+    "map_sha256": null,
+    "time_utc": "2026-10-24T07:07:35.242425+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T06:19:54.045037+00:00",
+    "lastmod": "\"2026-10-23\""
+  },
+  {
+    "file": "src/content/columns-id/667-indonesian-factory-worker-injury-evidence-compensation-taiwan.md",
+    "sha256": "932021416ab740639d9694170c2b6e7e1f8bd128dd3fda884b5510ddd0bef80b",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-id/667-indonesian-factory-worker-injury-evidence-compensation-taiwan.md",
+      "--lang",
+      "id"
+    ],
+    "exit": 0,
+    "map_sha256": null,
+    "time_utc": "2026-10-24T07:07:35.396203+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T06:55:15.083977+00:00",
+    "lastmod": "\"2026-10-24\""
+  },
+  {
+    "file": "src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+    "sha256": "28ce6c33da7a45f1ae6c156729ae4028904dbe25b91b9a8eeb0d7c0c0976135d",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+      "--lang",
+      "id"
+    ],
+    "exit": 0,
+    "map_sha256": null,
+    "time_utc": "2026-10-24T07:07:35.557072+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T06:55:15.084275+00:00",
+    "lastmod": "\"2026-10-24\""
+  },
+  {
+    "file": "src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md",
+    "sha256": "4927aec900e7c823a9ae452f8704b7b5056e21b3eb135e5d4d8dcab038507d2e",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 0,
+    "time_utc": "2026-10-24T07:11:56.416542+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T06:47:19.264169+00:00",
+    "lastmod": "\"2026-10-23\""
+  },
+  {
+    "file": "src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+    "sha256": "a8322aa20cc87e436e5aee929441d44c4cdffa04bbf32370b0df381259c87be3",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 0,
+    "time_utc": "2026-10-24T07:11:56.506191+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T07:08:29.819469+00:00",
+    "lastmod": "\"2026-10-24\""
+  },
+  {
+    "file": "src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+    "sha256": "c9f7d8a3a90a1d533ebfaa5ad6f7b6ff0f23ad7430396de3a9532555f403712f",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 0,
+    "time_utc": "2026-10-24T07:11:56.593910+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T07:04:25.101834+00:00",
+    "lastmod": "\"2026-10-24\""
+  },
+  {
+    "file": "src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+    "sha256": "44c8534add421222c5fa56d250f94b41820bcfb4d58e51d5d0395a33eed2b6f0",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 0,
+    "time_utc": "2026-10-24T07:11:56.672259+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T07:04:25.106153+00:00",
+    "lastmod": "\"2026-10-24\""
+  },
+  {
+    "file": "src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+    "sha256": "af4d8bc235868b1bbef96be13b69383ea932d27e1ee1122e50b5258910f09acd",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 0,
+    "time_utc": "2026-10-24T07:11:56.757105+00:00",
+    "locale_report_has_sha": true,
+    "final_sha_same": true,
+    "mtime_utc": "2026-10-24T07:04:25.115115+00:00",
+    "lastmod": "\"2026-10-24\""
+  }
+]

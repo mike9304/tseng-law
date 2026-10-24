@@ -45,7 +45,7 @@ Dopo la rinuncia, la stessa norma impone di informare per iscritto chi diviene c
 
 ## Il limite ai debiti non elimina la gestione dell’eredità
 
-Per una successione recente soggetta alle regole taiwanesi attuali, l’[articolo 1148](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1148) limita in via generale il pagamento dei debiti del defunto al patrimonio ricevuto per successione. Il mancato deposito della rinuncia non comporta quindi, da solo, responsabilità illimitata. Eventuali garanzie o obblighi assunti personalmente dall’erede richiedono un esame proprio.
+Per una successione recente soggetta alle regole taiwanesi attuali, l’[articolo 1148](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1148) limita in via generale il pagamento dei debiti del defunto al patrimonio ricevuto per successione. Il mancato deposito della rinuncia non comporta quindi, da solo, responsabilità illimitata; eventuali garanzie o obblighi assunti personalmente dall’erede richiedono un esame proprio.
 
 Chi resta erede deve considerare l’inventario: l’[articolo 1156](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1156) prevede la presentazione al tribunale entro tre mesi dalla conoscenza della chiamata. Per questo inventario il giudice può concedere una proroga su richiesta, se necessaria. È una previsione distinta dal termine per rinunciare.
 
@@ -61,7 +61,7 @@ No. La verifica taiwanese parte generalmente dalla cittadinanza del defunto, con
 
 ### I tre mesi partono dalla prima richiesta di un creditore?
 
-Non necessariamente: conta la conoscenza della propria chiamata, quando si applica l’articolo 1174.
+Non necessariamente. Conta la conoscenza della propria chiamata, quando si applica l’articolo 1174.
 
 ### Mancare il termine rende illimitati tutti i debiti?
 

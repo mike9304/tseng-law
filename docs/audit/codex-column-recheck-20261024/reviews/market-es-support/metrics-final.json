@@ -1,0 +1,87 @@
+[
+  {
+    "file": "src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md",
+    "sha256": "ab828b82d7d405cea84bc4d3a22284635dd6e35d41f0afce7d1ab539e2bab4c2",
+    "code": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md [es] sentences=43 mean=16.1 cv=0.455 short=0.14 run3=0.073 opener_rep=0.214 cite_end=0.023 cite_para=0.5 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "preserved_metadata": {
+      "published": true,
+      "date_display": true,
+      "author": true,
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "audience": true
+    },
+    "ordered_links_unchanged": true,
+    "body_changed_since_prose_PASS": false
+  },
+  {
+    "file": "src/content/columns-es/690-spain-buyer-taiwan-defective-goods-notice.md",
+    "sha256": "bfdc21bb7fc7b62399e70aedac972c8b4ba5419acab77f5390b66eea48a5cbd7",
+    "code": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-es/690-spain-buyer-taiwan-defective-goods-notice.md [es] sentences=41 mean=17.5 cv=0.507 short=0.146 run3=0.051 opener_rep=0.214 cite_end=0.0 cite_para=0.429 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "preserved_metadata": {
+      "published": true,
+      "date_display": true,
+      "author": true,
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "audience": true
+    },
+    "ordered_links_unchanged": true,
+    "body_changed_since_prose_PASS": false
+  },
+  {
+    "file": "src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md",
+    "sha256": "1c253183afe74a8e00fbfd4e610a36d8c598df8ab280a301921756d3021e2180",
+    "code": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md [es] sentences=33 mean=17.2 cv=0.458 short=0.152 run3=0.0 opener_rep=0.125 cite_end=0.0 cite_para=0.438 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "preserved_metadata": {
+      "published": true,
+      "date_display": true,
+      "author": true,
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "audience": true
+    },
+    "ordered_links_unchanged": true,
+    "body_changed_since_prose_PASS": false
+  },
+  {
+    "file": "src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md",
+    "sha256": "609a29d8402adcc1d4dab19ab17e4e413eec7e2bb35844619233522fa45cc002",
+    "code": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md [es] sentences=44 mean=16.0 cv=0.46 short=0.227 run3=0.024 opener_rep=0.2 cite_end=0.0 cite_para=0.467 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "preserved_metadata": {
+      "published": true,
+      "date_display": true,
+      "author": true,
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "audience": true
+    },
+    "ordered_links_unchanged": true,
+    "body_changed_since_prose_PASS": false
+  },
+  {
+    "file": "src/content/columns-es/693-spain-resident-taiwan-divorce-property.md",
+    "sha256": "30c854d8221caac8630209ae1e60f710d054faf72118bccd2f2177aee27ad637",
+    "code": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-es/693-spain-resident-taiwan-divorce-property.md [es] sentences=42 mean=18.1 cv=0.46 short=0.119 run3=0.075 opener_rep=0.188 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "preserved_metadata": {
+      "published": true,
+      "date_display": true,
+      "author": true,
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "audience": true
+    },
+    "ordered_links_unchanged": true,
+    "body_changed_since_prose_PASS": false
+  }
+]

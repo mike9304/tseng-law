@@ -1,0 +1,37 @@
+[
+  {
+    "id": 669,
+    "source": "src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md",
+    "sha256": "4927aec900e7c823a9ae452f8704b7b5056e21b3eb135e5d4d8dcab038507d2e",
+    "exit": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md [hi] sentences=47 mean=15.1 cv=0.46 short=0.255 run3=0.022 opener_rep=0.077 cite_end=0.021 cite_para=0.615 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+  },
+  {
+    "id": 670,
+    "source": "src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+    "sha256": "028c425102e697c18662235dbb8060fd96c1cd0dd8e999ad96187374a30ace71",
+    "exit": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md [hi] sentences=57 mean=16.1 cv=0.457 short=0.158 run3=0.055 opener_rep=0.071 cite_end=0.0 cite_para=0.643 contrast=0 caveat=0 q=3\n  OK — no variety limit violated\n"
+  },
+  {
+    "id": 671,
+    "source": "src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+    "sha256": "18986fc58c3bbb5e22fe11ea80ce0f92db3fa418fc08ab3dd37f98d1f3442c0e",
+    "exit": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md [hi] sentences=52 mean=15.1 cv=0.475 short=0.269 run3=0.04 opener_rep=0.214 cite_end=0.019 cite_para=0.571 contrast=1 caveat=1 q=2\n  OK — no variety limit violated\n"
+  },
+  {
+    "id": 672,
+    "source": "src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+    "sha256": "4e89e5af0aa9c66c49fd022040d67d198ea60815528005b9c20298ce6b6f5ab2",
+    "exit": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md [hi] sentences=57 mean=14.9 cv=0.476 short=0.211 run3=0.055 opener_rep=0.067 cite_end=0.0 cite_para=0.467 contrast=0 caveat=0 q=4\n  OK — no variety limit violated\n"
+  },
+  {
+    "id": 673,
+    "source": "src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+    "sha256": "7a07b0d5f128948a29625d2cfe674a79c4efed689e07c8245159ff28948bd44a",
+    "exit": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md [hi] sentences=51 mean=15.9 cv=0.464 short=0.196 run3=0.082 opener_rep=0.071 cite_end=0.0 cite_para=0.286 contrast=0 caveat=1 q=1\n  OK — no variety limit violated\n"
+  }
+]

@@ -1,0 +1,1126 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "1a77c176071583b91ab45a6762410fffe3221690d1c3a72d3eb45c6c41705dd1"
+  },
+  {
+    "path": "checks/baseline.json",
+    "sha256": "bf0e876d764482488e6e3dd62727c5b3c842e38a25291778773bcf3c9281c40b"
+  },
+  {
+    "path": "checks/content-audit.json",
+    "sha256": "bd3be31eca73b21b6d1a23442e55b8d3041243fabdd97a09b75d37f30655a182"
+  },
+  {
+    "path": "checks/final-review-integrity.json",
+    "sha256": "3d10776e5cda0f8074bffa59f8cd85a2978c7755526154572e32a12d39b6f518"
+  },
+  {
+    "path": "checks/images.json",
+    "sha256": "951e863614c55f45eb527883a82329ac6badb0d9e9ae5b4b37bfc01616bfdfec"
+  },
+  {
+    "path": "checks/market-images.json",
+    "sha256": "1680141a8d3641c96fc6390a63ca0bc993cf210c8e085e51f945c467605cf1ad"
+  },
+  {
+    "path": "checks/market25-integrated.json",
+    "sha256": "79458fe281551808829abe57a5b6890df6b813b06fb3c75b3d901c4779387175"
+  },
+  {
+    "path": "checks/revision-preservation.json",
+    "sha256": "3e3e14ea97adc6793c1a2f996dd537da3f25c8ab3a598870e9692c41c4b8730f"
+  },
+  {
+    "path": "checks/tests-final.log",
+    "sha256": "04746b6e59dcad4bf62c32a3bffa68f4ed61217da0f8cf312d2e3d38099eab7b"
+  },
+  {
+    "path": "checks/tests-post-repair.log",
+    "sha256": "d01274a9369a98bd092583f0f0ea063593408ebeb534f8ab22377798e528c1ca"
+  },
+  {
+    "path": "held/704-th-fallback-scope.json",
+    "sha256": "b115df7ba10bec24ffeacc0208dfb949286362f018641e2414cebd17b312e123"
+  },
+  {
+    "path": "held/704-th-rewrite-r3-not-published.md",
+    "sha256": "02b683edd2ca82768aa766fbcf299529d943eaa9f1646f1e72bf1a57b564f7d7"
+  },
+  {
+    "path": "images/market-prompts.json",
+    "sha256": "a4426c0fddbad230bec141ffe18631a1d90d2dd831eaeb178cd245bf036ec797"
+  },
+  {
+    "path": "images/prompts.json",
+    "sha256": "deb57f2b956576e64a711a3aea0ad6d81715f29b537fa06fc7d82809b575de09"
+  },
+  {
+    "path": "research/source-refresh-access.json",
+    "sha256": "d1b0731816fcf2428defe11c26da916f8bc95534dcfadb39c719c6d47b6da591"
+  },
+  {
+    "path": "research/source-refresh.md",
+    "sha256": "a33d5bd1439879bc7461755c3b6793f4942ec161454032dcb8cde1c4d52a6983"
+  },
+  {
+    "path": "research/today-publication-inventory.json",
+    "sha256": "d2e028557e23becc7cefbe562a0d66300f7b8890ceca4c1af4d139fa84dbbde4"
+  },
+  {
+    "path": "research/today-publication-inventory.md",
+    "sha256": "ee8bb2835f42f38284c5c2c03d4b392c80185bea2b08241549f244970e2a7cdb"
+  },
+  {
+    "path": "reviews/ar-author.md",
+    "sha256": "78f70307698c00c131d1f14ba882fa81077f23ff790c980de4b46a374be2aee4"
+  },
+  {
+    "path": "reviews/ar-independent.md",
+    "sha256": "3ec21bae9ed637614c6efa06a764d961462f39839bb3f98be611959f1575a26f"
+  },
+  {
+    "path": "reviews/de-author.md",
+    "sha256": "28fad3abe27fc047e51feaae6a3b7f4e5a338f45ad860aaed296e171965b64fd"
+  },
+  {
+    "path": "reviews/de-independent.md",
+    "sha256": "49a374247726aba515c1abb03313d1d3ffd90e4f4d022c45307cadd3b0e93a4b"
+  },
+  {
+    "path": "reviews/en-author.md",
+    "sha256": "058464faf7a07a2098b8be49372006006b57dcc0817a8a938b4a9060e8da3e3f"
+  },
+  {
+    "path": "reviews/en-independent.md",
+    "sha256": "9238177d8f05fa3bad931b4473c6a23471761fa8d260bf71003b29d56d11b56b"
+  },
+  {
+    "path": "reviews/es-author.md",
+    "sha256": "77e3efdce345d93e7b90d4df19bcd8befa6ed381047c6c359eede63e7f7ab757"
+  },
+  {
+    "path": "reviews/es-independent.md",
+    "sha256": "5e4610ae276d59517a533f808cc5f7555902abf22825f76c08de2d11456eb71f"
+  },
+  {
+    "path": "reviews/final-asia-ar.md",
+    "sha256": "b80061d5d3a3771e35aae074ae541200349f78f9b368627b578f880fe88cb3d1"
+  },
+  {
+    "path": "reviews/final-core.md",
+    "sha256": "6581de82c5d839e1777bf7d12643c9d9bcac15b81d22b917067eef5bac193fac"
+  },
+  {
+    "path": "reviews/final-europe.md",
+    "sha256": "56fda96898ae6f915cd22eac740689eb2ef1dd0877d60412a8f08c3722a5aad8"
+  },
+  {
+    "path": "reviews/final-market-asia-support/659-variety.txt",
+    "sha256": "2a87bf5aabc8b462397a36b03e86f1045349358038e6421b1f024bd8e67e664d"
+  },
+  {
+    "path": "reviews/final-market-asia-support/660-variety.txt",
+    "sha256": "96764fb1e66f0bf255beb6b666c97fba5ea3045e851c2707e50751de8547fa4c"
+  },
+  {
+    "path": "reviews/final-market-asia-support/661-variety.txt",
+    "sha256": "c8408ee891ed31d6d68e61df70aa7a491ac783614af820e69ee1ca9617ddfad7"
+  },
+  {
+    "path": "reviews/final-market-asia-support/662-variety.txt",
+    "sha256": "e1c2649dac6f5eb442af0a10fefb0d25a2fb3677732e2690339d11dfc0adca3e"
+  },
+  {
+    "path": "reviews/final-market-asia-support/663-variety.txt",
+    "sha256": "7a5e286589ef8f9f564d27c700048732c2c5689e075e038b7daab97f504861f2"
+  },
+  {
+    "path": "reviews/final-market-asia-support/664-variety.txt",
+    "sha256": "6369bc0eca53f290099a9a499c7d329295451eac53f12e69f60ed0c20bfccb48"
+  },
+  {
+    "path": "reviews/final-market-asia-support/665-variety.txt",
+    "sha256": "c5beef351f7fc6b853b47e77eceeb191282b7d3420d3393e9a874c557807ddda"
+  },
+  {
+    "path": "reviews/final-market-asia-support/666-variety.txt",
+    "sha256": "7861f91f724fdb088d8dfaf5e459b6624e62151b5dc3e040d6c8f3f2150df21b"
+  },
+  {
+    "path": "reviews/final-market-asia-support/667-variety.txt",
+    "sha256": "dbc72ba1ff79364f03dd2aba48cacbe81c5c12b2de070252d17434f1f32b1d76"
+  },
+  {
+    "path": "reviews/final-market-asia-support/668-variety.txt",
+    "sha256": "6f45d05e79e69ea2dd1d50195cc00cb6207fb6a610d8800f2b3b1e247f5f26b7"
+  },
+  {
+    "path": "reviews/final-market-asia-support/669-variety.txt",
+    "sha256": "a4c1bc1be1c2fd57273dfaefc6e2eda0ea406bd3ecfe595cdf61bcb8c2b35235"
+  },
+  {
+    "path": "reviews/final-market-asia-support/670-variety.txt",
+    "sha256": "8b4efbaa18156b1d4c7ad548ed4b0228294d3a3829ebda6b2f71314c0364801a"
+  },
+  {
+    "path": "reviews/final-market-asia-support/671-variety.txt",
+    "sha256": "aface92c7c085a8d64fcb7ffe6386f3940c9fea0dc761d6c9295fccc36166b02"
+  },
+  {
+    "path": "reviews/final-market-asia-support/672-variety.txt",
+    "sha256": "5a8d51a3a7c45d60b8c4caf7f3ce532a1aafc67f4b8975a2f658dfa7ca6854e3"
+  },
+  {
+    "path": "reviews/final-market-asia-support/673-variety.txt",
+    "sha256": "2c8051c77591c1e23a7de9845d8e60c456cc009deba85b37ca0758d2e0ea0c0e"
+  },
+  {
+    "path": "reviews/final-market-asia-support/final-15-manifest.json",
+    "sha256": "be68fe0d5d3b87896f7f23d6366a071679f6e004e8ed32aea2340460276918a7"
+  },
+  {
+    "path": "reviews/final-market-asia-support/hi-final-checks.json",
+    "sha256": "12faa09cc85a1a2df9eafcd4075c07bb9ac3d49a8d76bce548de4744926bcd92"
+  },
+  {
+    "path": "reviews/final-market-asia-support/images.json",
+    "sha256": "bfa74c200beb1ccc183c8f45507a1426dd9477d92ca992a69847d906a79471ca"
+  },
+  {
+    "path": "reviews/final-market-asia-support/source-access-supplement.json",
+    "sha256": "5aa02775ab4a6a250310be26e568d11e7488467db407d801976b8cb04ba777c1"
+  },
+  {
+    "path": "reviews/final-market-asia-support/source-access.json",
+    "sha256": "c83533b3b375d035b76433a0afae6dfea13c1109cfc32939c1cb5b6ccbaf13e5"
+  },
+  {
+    "path": "reviews/final-market-asia-support/th-id-final-checks.json",
+    "sha256": "a61bcb9eece2fbd3ad2a08431c84c352ede4aa158699fe862337a24f08683bd1"
+  },
+  {
+    "path": "reviews/final-market-asia-support/thai-source-map-binding.json",
+    "sha256": "7a3d9ead409f9d14277ee833e95747389afa94cf0a270798d1f7152632d56344"
+  },
+  {
+    "path": "reviews/final-market-asia.md",
+    "sha256": "f39bba48ff0356912f262b5c7b1c8bb5d67e54b01050e70ede10b4d72aa007f5"
+  },
+  {
+    "path": "reviews/final-market-crossborder-support/contact-fetch.json",
+    "sha256": "9da7b408390f3d80c2968bd9ce7ca778af1cd06819f223a1b0a49df83a89aa80"
+  },
+  {
+    "path": "reviews/final-market-crossborder-support/final-versions.json",
+    "sha256": "1a855f36b1a45d1ef3a0255ae1d5701a8aec011de4da40e8519867915f7adf57"
+  },
+  {
+    "path": "reviews/final-market-crossborder-support/images.json",
+    "sha256": "621a2dfcd2913a56490d0da2cbeac80d7ae5d25f774a3c887cbd687d64bc18b8"
+  },
+  {
+    "path": "reviews/final-market-crossborder-support/official-source-reads.json",
+    "sha256": "52cee707e1996445eadf978c6035692a97ecb9374d5d38c28098f71ff7a4617c"
+  },
+  {
+    "path": "reviews/final-market-crossborder-support/review-inputs.json",
+    "sha256": "4b62e30dc31787752bd9e97cef41ce03c799151d0201491903bda5d4faf02097"
+  },
+  {
+    "path": "reviews/final-market-crossborder.md",
+    "sha256": "bfc252bef2e8151a4ec53a2fe5f6db4526a200daecf728da926c4ad486d5aa05"
+  },
+  {
+    "path": "reviews/final-market-europe-support/674-variety.txt",
+    "sha256": "6db0db8ba54bf89bf9d931cfba07ee24baf234e85e43ffbe5a58eab74249f70a"
+  },
+  {
+    "path": "reviews/final-market-europe-support/675-variety.txt",
+    "sha256": "782c8b2ecbb170cbcb5c2f3b42676a8eaf826a683f8e68d24b8ff1b8c1100d25"
+  },
+  {
+    "path": "reviews/final-market-europe-support/676-variety.txt",
+    "sha256": "2f1a84f48a5d9e18836df93737efc363333cd9e1029cdb6673106828dffdb909"
+  },
+  {
+    "path": "reviews/final-market-europe-support/677-variety.txt",
+    "sha256": "22b53bdf213c6a50a5dd0cc77b4beee7e18981364a964012384a682744d1764f"
+  },
+  {
+    "path": "reviews/final-market-europe-support/678-variety.txt",
+    "sha256": "d247355a3ca99b3067507eeca0982c80c4a82f1b138d5aff8e31b95e20d92cdb"
+  },
+  {
+    "path": "reviews/final-market-europe-support/679-variety.txt",
+    "sha256": "2b9bc65e7ce7030c5d5cb05562a931a3b74d93a0b1a7caa4a513e1b999422cf8"
+  },
+  {
+    "path": "reviews/final-market-europe-support/680-variety.txt",
+    "sha256": "be1c9c6cf7b9701e1dedbd403eadc1560f205344781c87c9789f14a01dabe8d2"
+  },
+  {
+    "path": "reviews/final-market-europe-support/681-variety.txt",
+    "sha256": "dca579a4d795572c3cb147fdc434475815d8bae8d1c8b3678874080f30927d49"
+  },
+  {
+    "path": "reviews/final-market-europe-support/682-variety.txt",
+    "sha256": "a98421a6bdca2a2a23b0b7263200e01bf0ecbab15307f9efa27b9e0efb34b9e7"
+  },
+  {
+    "path": "reviews/final-market-europe-support/683-variety.txt",
+    "sha256": "28317b7c63b8b35e42b19d04e99901fbadc51d73337d699e5b3671e9db5c3363"
+  },
+  {
+    "path": "reviews/final-market-europe-support/684-variety.txt",
+    "sha256": "3838a5397d659f44d9752a03b857c29aac0bba64147e95532ae47908f1db7b5a"
+  },
+  {
+    "path": "reviews/final-market-europe-support/685-variety.txt",
+    "sha256": "ebe599d98c4b5cdd8e15de1c186ea43d002ca5233964dbe3ce5bee6f7709e35f"
+  },
+  {
+    "path": "reviews/final-market-europe-support/686-variety.txt",
+    "sha256": "a2430157cd4f12ba17d6ab8a6ff812bded960b9bae89b77a05ac07d099e617bf"
+  },
+  {
+    "path": "reviews/final-market-europe-support/687-variety.txt",
+    "sha256": "ae0c2f471c54cfff465ce1f31edd9e39bf882b1acb2b1549969f5d369147e189"
+  },
+  {
+    "path": "reviews/final-market-europe-support/688-variety.txt",
+    "sha256": "7eebbe702d2d9732b84e7a0d714ce30a8695aa9bdd5a3c796e53a624db76d4ce"
+  },
+  {
+    "path": "reviews/final-market-europe-support/article-snapshot.json",
+    "sha256": "e8cd70333bcf005c8ed3fca642d49636e77c1dc7cdf6b692b12267b6727f2c65"
+  },
+  {
+    "path": "reviews/final-market-europe-support/comparators.json",
+    "sha256": "61654eb588ef6590db236e1105d003999c452d655d039e1e94c1e12c644c440e"
+  },
+  {
+    "path": "reviews/final-market-europe-support/extra-live-access.json",
+    "sha256": "98bd802cad38ef9f863bf6afafb54b349ec9a1509f4ccacd071ce7d04248f25c"
+  },
+  {
+    "path": "reviews/final-market-europe-support/final-snapshot.json",
+    "sha256": "39e6fedcdfcd1b829fc3e164e632c1edfa803abc540d0e828ab1e47af6d2e415"
+  },
+  {
+    "path": "reviews/final-market-europe-support/official-live.json",
+    "sha256": "4265c502177d46d17340b209dfc13edacd76e4d2add7e0a94e29c399b0539cca"
+  },
+  {
+    "path": "reviews/final-market-europe.md",
+    "sha256": "d49456319c662b6f614db2fe3c2de0d3df71dc5baf961f83a942dd598d68461f"
+  },
+  {
+    "path": "reviews/fr-author.md",
+    "sha256": "63503dbee68396fd9e27dfbba99d8d27fac796342a697c58929422f3b00d382f"
+  },
+  {
+    "path": "reviews/fr-independent.md",
+    "sha256": "9ae9baea8a42cf6d917a457de841be5636e32955a4a61b860ee72437b311f87f"
+  },
+  {
+    "path": "reviews/hi-author.md",
+    "sha256": "e305bd6ad37b1884a0704359555829bfa125b6f3727c241571ffe133639d855b"
+  },
+  {
+    "path": "reviews/hi-independent.md",
+    "sha256": "0932a2348e418c90ff1441e9831fdac0579a7255658cf4b3b4ca10c2e3871f91"
+  },
+  {
+    "path": "reviews/id-author.md",
+    "sha256": "9e2cab44d608db1e65408489c9200641afe2c0e22fb56bf40cb3550349b6d85b"
+  },
+  {
+    "path": "reviews/id-independent.md",
+    "sha256": "ceaa3ea09b238179069d086c3abc0fb066ec3324d65b5d838d1935df4863b162"
+  },
+  {
+    "path": "reviews/it-author.md",
+    "sha256": "80607aa3f20f050a29faa9d0f2446d37e4aa50511ad00b958d0a269fd87089df"
+  },
+  {
+    "path": "reviews/it-independent.md",
+    "sha256": "5acdb6521c33e84dcc9c12e648ef804d3b5f964a4d4135170ef952e93e8d4a29"
+  },
+  {
+    "path": "reviews/ja-author.md",
+    "sha256": "8d5fdb0d79d74fa55cc10541ca6f753b45cc40241fdf6bc04810c9faa3aa62ef"
+  },
+  {
+    "path": "reviews/ja-independent.md",
+    "sha256": "516dc186b4c3b18ad02e8de235898f8a25e968c1ef3a0385343fcd2cc764f52b"
+  },
+  {
+    "path": "reviews/ko-author.md",
+    "sha256": "dbcd6d75fac8603ca1b92c135bb8c7b74525e73f447272599c8b65bdb46217a1"
+  },
+  {
+    "path": "reviews/ko-independent.md",
+    "sha256": "5789dcc73fae2649e18ec8bcfee772830f9fb16625e73288d98d5ff255370423"
+  },
+  {
+    "path": "reviews/market-ar-independent.md",
+    "sha256": "ff5e7351e118250b4c9ac0385be69ba1ed8b518eee2fc3087c6846082f0183e4"
+  },
+  {
+    "path": "reviews/market-ar-repair.md",
+    "sha256": "cd0040aae3ae2b314769fbb07855376051d2ec0fcbccfa5c8681347c5cdd4a6c"
+  },
+  {
+    "path": "reviews/market-de-independent.md",
+    "sha256": "7deed4634a5312f5b272bbc8b482cdb847ef8ed606d08e2e46e2df5881436a5d"
+  },
+  {
+    "path": "reviews/market-de-repair-support/679-variety-r1-current.txt",
+    "sha256": "2b9bc65e7ce7030c5d5cb05562a931a3b74d93a0b1a7caa4a513e1b999422cf8"
+  },
+  {
+    "path": "reviews/market-de-repair-support/679-variety-r1.txt",
+    "sha256": "2b9bc65e7ce7030c5d5cb05562a931a3b74d93a0b1a7caa4a513e1b999422cf8"
+  },
+  {
+    "path": "reviews/market-de-repair-support/680-variety-r1-current.txt",
+    "sha256": "be1c9c6cf7b9701e1dedbd403eadc1560f205344781c87c9789f14a01dabe8d2"
+  },
+  {
+    "path": "reviews/market-de-repair-support/680-variety-r1.txt",
+    "sha256": "be1c9c6cf7b9701e1dedbd403eadc1560f205344781c87c9789f14a01dabe8d2"
+  },
+  {
+    "path": "reviews/market-de-repair-support/681-variety-r1-current.txt",
+    "sha256": "46ee754fa55cb21ac03c573cbb9c41264258f0821ebdba819f3e13c7a36ac12c"
+  },
+  {
+    "path": "reviews/market-de-repair-support/681-variety-r1-flow.txt",
+    "sha256": "280fd89900818d95b92844c9362e6427526032efbb5b9c53c7bfc7547920fd29"
+  },
+  {
+    "path": "reviews/market-de-repair-support/681-variety-r1.txt",
+    "sha256": "b120650eb2ac18b5f81b2e75a77884367e1688a292c734149d3c891524803d47"
+  },
+  {
+    "path": "reviews/market-de-repair-support/681-variety-r2.txt",
+    "sha256": "dca579a4d795572c3cb147fdc434475815d8bae8d1c8b3678874080f30927d49"
+  },
+  {
+    "path": "reviews/market-de-repair-support/682-variety-r1-current.txt",
+    "sha256": "a98421a6bdca2a2a23b0b7263200e01bf0ecbab15307f9efa27b9e0efb34b9e7"
+  },
+  {
+    "path": "reviews/market-de-repair-support/682-variety-r1-flow.txt",
+    "sha256": "9cc80c84ed676b0870228462c78a49dfc711188a12ffd49d75f3bee19f58fe2c"
+  },
+  {
+    "path": "reviews/market-de-repair-support/682-variety-r1.txt",
+    "sha256": "996d1320f1f1ac158885af5ac670b510ed5df1381ac32265e2b43f437b44df00"
+  },
+  {
+    "path": "reviews/market-de-repair-support/683-variety-r1-current.txt",
+    "sha256": "28317b7c63b8b35e42b19d04e99901fbadc51d73337d699e5b3671e9db5c3363"
+  },
+  {
+    "path": "reviews/market-de-repair-support/683-variety-r1-flow.txt",
+    "sha256": "8e56474f1ab21200721e16b94db76e726ab8baa9d5989658e756efe3b30362aa"
+  },
+  {
+    "path": "reviews/market-de-repair-support/683-variety-r1.txt",
+    "sha256": "7afddad88022d51de56608193aac33bf5edb05ce0b682401d3609d737e21b724"
+  },
+  {
+    "path": "reviews/market-de-repair-support/preservation-final.json",
+    "sha256": "de868a0d70db6b977b3d32bce92973775be3a7013cb82200a9728ffa1a1175e0"
+  },
+  {
+    "path": "reviews/market-de-repair-support/preservation-r1.json",
+    "sha256": "bb1c1c755b4ec593ff78870b85e05dff2e3bf2af53d32cc6cf8a73f71bc4f86e"
+  },
+  {
+    "path": "reviews/market-de-repair.md",
+    "sha256": "79ed8f1670844b70f9528e5681074c37fcf013ea6fb8b70aeb45a38840b348c6"
+  },
+  {
+    "path": "reviews/market-de-support/679-variety-r0.txt",
+    "sha256": "2b9bc65e7ce7030c5d5cb05562a931a3b74d93a0b1a7caa4a513e1b999422cf8"
+  },
+  {
+    "path": "reviews/market-de-support/679-variety-r1-independent.txt",
+    "sha256": "2b9bc65e7ce7030c5d5cb05562a931a3b74d93a0b1a7caa4a513e1b999422cf8"
+  },
+  {
+    "path": "reviews/market-de-support/680-variety-r0.txt",
+    "sha256": "be1c9c6cf7b9701e1dedbd403eadc1560f205344781c87c9789f14a01dabe8d2"
+  },
+  {
+    "path": "reviews/market-de-support/680-variety-r1-independent.txt",
+    "sha256": "be1c9c6cf7b9701e1dedbd403eadc1560f205344781c87c9789f14a01dabe8d2"
+  },
+  {
+    "path": "reviews/market-de-support/681-variety-r0.txt",
+    "sha256": "616a161d7763c2ccd82f36002b63ba38cdc6e489a2bfc63eca6f23b2c5f6084b"
+  },
+  {
+    "path": "reviews/market-de-support/681-variety-r1-independent.txt",
+    "sha256": "dca579a4d795572c3cb147fdc434475815d8bae8d1c8b3678874080f30927d49"
+  },
+  {
+    "path": "reviews/market-de-support/682-variety-r0.txt",
+    "sha256": "5fa4e117d6e290b41491399deed9319ad588bf87fdf2ab60b52c7a2e6e1b62cd"
+  },
+  {
+    "path": "reviews/market-de-support/682-variety-r1-independent.txt",
+    "sha256": "a98421a6bdca2a2a23b0b7263200e01bf0ecbab15307f9efa27b9e0efb34b9e7"
+  },
+  {
+    "path": "reviews/market-de-support/683-variety-r0.txt",
+    "sha256": "384f0ecd58f058c943d2ba522bd7cea27d3c7b1954a1b0e40cae6cc93253b762"
+  },
+  {
+    "path": "reviews/market-de-support/683-variety-r1-independent.txt",
+    "sha256": "28317b7c63b8b35e42b19d04e99901fbadc51d73337d699e5b3671e9db5c3363"
+  },
+  {
+    "path": "reviews/market-de-support/baseline.json",
+    "sha256": "64f17662a8c3560f9729d84238710b1344d707c963ad2c8b9f7aa423ee3d6781"
+  },
+  {
+    "path": "reviews/market-de-support/image-review.json",
+    "sha256": "ad6f69c86033b7a18eb0174e9740ff2e2c7d1902577844c06f32397759d2f1a5"
+  },
+  {
+    "path": "reviews/market-de-support/r1-681.json",
+    "sha256": "e842ab21dbc38878e1c6659a9a43d1a6837e546cc08f8c0e856dba03dcf5e3da"
+  },
+  {
+    "path": "reviews/market-de-support/r1-four-pass.json",
+    "sha256": "eb788e4dd475d687a0ab0e4131fadab0bed69168f860d838de27935da7aafdc0"
+  },
+  {
+    "path": "reviews/market-es-author-repair.md",
+    "sha256": "9174a7367174f763b728288cf633ed8c087230c84fc3d593371d5e7ebfef59fa"
+  },
+  {
+    "path": "reviews/market-es-independent.md",
+    "sha256": "5cf445154454974f2a885475b9acfd4c1ce6f9f5d6de338facce3c0c987c3c1d"
+  },
+  {
+    "path": "reviews/market-es-support/images.json",
+    "sha256": "a8bab68aec6ba2f2e6441c1fbaaa7fa06b52b8f3970fbe960e8be0e4b27ceac2"
+  },
+  {
+    "path": "reviews/market-es-support/metrics-final.json",
+    "sha256": "78cf1b29c1e1cb1f1d56bf9f52ea481e0e0c07c03c21ca43d86f70e3137ff85b"
+  },
+  {
+    "path": "reviews/market-es-support/metrics-r1.json",
+    "sha256": "1f0263b43412c465b7b84d43c72b53998eb93b0f64921a1cef5bd4505c9487b7"
+  },
+  {
+    "path": "reviews/market-es-support/metrics.json",
+    "sha256": "34aaab054ec385deec1da01f97de5d95f631b9887e485961e171dfee851ab0fc"
+  },
+  {
+    "path": "reviews/market-es-support/r0-source-link-check.json",
+    "sha256": "3749ade7cbcf20cba5c32d893925269e7bbba54847905f84ef1cfbfad39b4030"
+  },
+  {
+    "path": "reviews/market-es-support/versions-r0.json",
+    "sha256": "ac40c062fdb105e8bc713f5bbde7419486d340cac08bad5e115132646ee363a3"
+  },
+  {
+    "path": "reviews/market-fr-independent.md",
+    "sha256": "60f701f212b474210cbcf17c76c44909c00208a91969d8be20d110583ccfe2ee"
+  },
+  {
+    "path": "reviews/market-fr-repair.md",
+    "sha256": "9a37dc7b814d243f28995f5943c5db0eaffa30eb83659122c7f33e02692df50d"
+  },
+  {
+    "path": "reviews/market-fr-support/674-variety.log",
+    "sha256": "6db0db8ba54bf89bf9d931cfba07ee24baf234e85e43ffbe5a58eab74249f70a"
+  },
+  {
+    "path": "reviews/market-fr-support/675-recheck-variety.log",
+    "sha256": "782c8b2ecbb170cbcb5c2f3b42676a8eaf826a683f8e68d24b8ff1b8c1100d25"
+  },
+  {
+    "path": "reviews/market-fr-support/675-variety.log",
+    "sha256": "730502e050cf0aa3e42a4a290e89e170e82950ad04bf3372f6136f96db968d21"
+  },
+  {
+    "path": "reviews/market-fr-support/676-recheck-variety.log",
+    "sha256": "2f1a84f48a5d9e18836df93737efc363333cd9e1029cdb6673106828dffdb909"
+  },
+  {
+    "path": "reviews/market-fr-support/676-variety.log",
+    "sha256": "829d6e2b3e48a8f5d0fd023617812840bd6a910acc7e4bf5754b115c45115342"
+  },
+  {
+    "path": "reviews/market-fr-support/677-variety.log",
+    "sha256": "22b53bdf213c6a50a5dd0cc77b4beee7e18981364a964012384a682744d1764f"
+  },
+  {
+    "path": "reviews/market-fr-support/678-variety.log",
+    "sha256": "d247355a3ca99b3067507eeca0982c80c4a82f1b138d5aff8e31b95e20d92cdb"
+  },
+  {
+    "path": "reviews/market-fr-support/final-hashes.json",
+    "sha256": "e0c54f4c1cb52ba5c9ea7c7e492f29266875c63576570df21f2fc10e73d26453"
+  },
+  {
+    "path": "reviews/market-fr-support/images.json",
+    "sha256": "ad1739cd8dbf6d39b9da0af2873beafd958a09a2961d4d4635d869e8d0c47ee4"
+  },
+  {
+    "path": "reviews/market-fr-support/initial-checks.json",
+    "sha256": "52a866404ab772551f91c8b682c346c813e0b2aa95b7e49eddd5dbab87dc707c"
+  },
+  {
+    "path": "reviews/market-hi-independent.md",
+    "sha256": "e1c0d8d4c4931375024bcac7389172664bbac6462f7fe95a7b5547456a38c42c"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/670-variety-before-last-concision.log",
+    "sha256": "fe1579e7ec0c8b0f65bcb1407520539db93ddf47f32f5a89dacee52ea8912991"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/670-variety-current.log",
+    "sha256": "5eb957f63b1c3f8716666f1a644b63d750524262ae4542c9e0231b0b45521cb7"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/670-variety-r1.log",
+    "sha256": "5ba6c106daf0b7975e015c4c5b8300486846e7ca3d28c901fd8aca1d52e3f26f"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/670-variety-r2.log",
+    "sha256": "1800f258fd12419ab018b87cae0509e9d0db9709d2fa50a17178a95f64f56d26"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/670-variety-r3.log",
+    "sha256": "8cb719fcc3b5a054a24a4c4121120b3a3d68f01cccfd5c4514022cf2740cc1df"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/671-variety-current.log",
+    "sha256": "d183bee7254ef4c496349cddf918de85b84777879c5c3c8d987fd3321bffb55e"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/671-variety-r1.log",
+    "sha256": "73c8aa79b3dd54740ba8a0d7f1d81284ba1c264e80c9da3688548409d8709962"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/671-variety-r2.log",
+    "sha256": "d7b4484b0e5148d9daedc4b57b48d2160a83da73c03f68f32582ed6c7272d797"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/671-variety-r3.log",
+    "sha256": "d183bee7254ef4c496349cddf918de85b84777879c5c3c8d987fd3321bffb55e"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/672-variety-current.log",
+    "sha256": "7f82b4d465e1018684eb4150d39170b45d2a042ca653ba74d57b5682246d6031"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/672-variety-r1.log",
+    "sha256": "14d4e99eec75fe520c8c71549b1c11190d51bc1f9252c05abf8f07975898bdee"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/672-variety-r2.log",
+    "sha256": "14d4e99eec75fe520c8c71549b1c11190d51bc1f9252c05abf8f07975898bdee"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/672-variety-r3.log",
+    "sha256": "7f82b4d465e1018684eb4150d39170b45d2a042ca653ba74d57b5682246d6031"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/673-variety-current.log",
+    "sha256": "35c1f0459bfcf63e4b0a48583fffc185fe76dc5e7c0dbeb256dff5dd2f6921e7"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/673-variety-r1.log",
+    "sha256": "918222ee8674eff9b30d505399bf5eb916190e6176cd63f7b99e42d92c06d0b4"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/673-variety-r2.log",
+    "sha256": "1d4cb879dee3415c6d0bb7ce5da445d4c024e7f321d607e81a6939e415ef0e4f"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/673-variety-r3.log",
+    "sha256": "35c1f0459bfcf63e4b0a48583fffc185fe76dc5e7c0dbeb256dff5dd2f6921e7"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/before.json",
+    "sha256": "3842009f2380c8890f4a7f4d0e33f09b182bfee9cca3061a989c1d6223f78a97"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/checks-current.json",
+    "sha256": "b2ac9e0c7c938b0d41e6198a6b2e10ffb71248dec3567a64ac64d94c53b20a37"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/checks-r1.json",
+    "sha256": "296517c7ea71418778af5cf17d4789ae8b7f646995ce2499ce84e815c35ebab7"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/checks-r2.json",
+    "sha256": "d20d08a3e1bb15fa630eb125d0f6e278ada18c6d6cc1251816745e4119f3e3fc"
+  },
+  {
+    "path": "reviews/market-hi-repair-support/checks-r3.json",
+    "sha256": "8b76576b124ce301f63a00442af11ae8a334a077d928b82fea697485d0cbe2d7"
+  },
+  {
+    "path": "reviews/market-hi-repair.md",
+    "sha256": "1c3bebdd901c6707442996db74cd43d48e47749e4ac5a1fc915e16787701298f"
+  },
+  {
+    "path": "reviews/market-hi-support/669-variety-final.txt",
+    "sha256": "a4c1bc1be1c2fd57273dfaefc6e2eda0ea406bd3ecfe595cdf61bcb8c2b35235"
+  },
+  {
+    "path": "reviews/market-hi-support/669-variety.txt",
+    "sha256": "a4c1bc1be1c2fd57273dfaefc6e2eda0ea406bd3ecfe595cdf61bcb8c2b35235"
+  },
+  {
+    "path": "reviews/market-hi-support/670-variety-final.txt",
+    "sha256": "8b4efbaa18156b1d4c7ad548ed4b0228294d3a3829ebda6b2f71314c0364801a"
+  },
+  {
+    "path": "reviews/market-hi-support/670-variety.txt",
+    "sha256": "9b4970dad8a686d8eab724e092ab8f33f738101cc1d0018cb799dcad4d8c286f"
+  },
+  {
+    "path": "reviews/market-hi-support/671-variety-final.txt",
+    "sha256": "aface92c7c085a8d64fcb7ffe6386f3940c9fea0dc761d6c9295fccc36166b02"
+  },
+  {
+    "path": "reviews/market-hi-support/671-variety.txt",
+    "sha256": "9b2fd9aed1bac07ed33b37ceaf07a20c899117eb7b854fa2fc01b0e74400ce1a"
+  },
+  {
+    "path": "reviews/market-hi-support/672-variety-final.txt",
+    "sha256": "5a8d51a3a7c45d60b8c4caf7f3ce532a1aafc67f4b8975a2f658dfa7ca6854e3"
+  },
+  {
+    "path": "reviews/market-hi-support/672-variety.txt",
+    "sha256": "e8367b3b5417370b78b2e9a91d0c5d68112a2f61ba9bab8a47ce0c979d321080"
+  },
+  {
+    "path": "reviews/market-hi-support/673-variety-final.txt",
+    "sha256": "2c8051c77591c1e23a7de9845d8e60c456cc009deba85b37ca0758d2e0ea0c0e"
+  },
+  {
+    "path": "reviews/market-hi-support/673-variety.txt",
+    "sha256": "41d7c0076868ffc81e46f3e1872a8141f93219c8ba26e43c94f942b5050b6a35"
+  },
+  {
+    "path": "reviews/market-hi-support/checks-final.json",
+    "sha256": "1789b601cb421e87c0a4b096e0fb3d3806f0816439cb1a5caea86db14c8618f9"
+  },
+  {
+    "path": "reviews/market-hi-support/checks-initial.json",
+    "sha256": "fa84d4bd358149bbfeb3bdcb0c4b84acd344ce3593c32727ed45ab3781e24255"
+  },
+  {
+    "path": "reviews/market-hi-support/images.json",
+    "sha256": "d3431d9e33470fed72fd4c9a0cd8a7fb1e12d82c7bcc55325b3fd590edceec44"
+  },
+  {
+    "path": "reviews/market-id-independent.md",
+    "sha256": "728ab7323abcf510d433ed32190e2d0804c0c1ac97d141261287e05a456c023d"
+  },
+  {
+    "path": "reviews/market-id-logs/664-indonesian-home-caregiver-unpaid-wages-taiwan.final-variety.txt",
+    "sha256": "6369bc0eca53f290099a9a499c7d329295451eac53f12e69f60ed0c20bfccb48"
+  },
+  {
+    "path": "reviews/market-id-logs/664-indonesian-home-caregiver-unpaid-wages-taiwan.variety.txt",
+    "sha256": "6369bc0eca53f290099a9a499c7d329295451eac53f12e69f60ed0c20bfccb48"
+  },
+  {
+    "path": "reviews/market-id-logs/665-indonesian-worker-passport-broker-dispute-taiwan.final-variety.txt",
+    "sha256": "c5beef351f7fc6b853b47e77eceeb191282b7d3420d3393e9a874c557807ddda"
+  },
+  {
+    "path": "reviews/market-id-logs/665-indonesian-worker-passport-broker-dispute-taiwan.variety.txt",
+    "sha256": "7bed5d7907d895680e39f4aabd9cdd34257fdc962fa4f59451ddbeeb348006a2"
+  },
+  {
+    "path": "reviews/market-id-logs/666-indonesian-worker-bank-account-cash-job-police-taiwan.final-variety.txt",
+    "sha256": "7861f91f724fdb088d8dfaf5e459b6624e62151b5dc3e040d6c8f3f2150df21b"
+  },
+  {
+    "path": "reviews/market-id-logs/666-indonesian-worker-bank-account-cash-job-police-taiwan.variety.txt",
+    "sha256": "7861f91f724fdb088d8dfaf5e459b6624e62151b5dc3e040d6c8f3f2150df21b"
+  },
+  {
+    "path": "reviews/market-id-logs/667-indonesian-factory-worker-injury-evidence-compensation-taiwan.final-variety.txt",
+    "sha256": "dbc72ba1ff79364f03dd2aba48cacbe81c5c12b2de070252d17434f1f32b1d76"
+  },
+  {
+    "path": "reviews/market-id-logs/667-indonesian-factory-worker-injury-evidence-compensation-taiwan.variety.txt",
+    "sha256": "8824372e1d41147db4314990413de4e400a55502c575e8b1b39e99ea9021c49c"
+  },
+  {
+    "path": "reviews/market-id-logs/668-indonesian-buyer-taiwan-machinery-defect-notice.final-variety.txt",
+    "sha256": "6f45d05e79e69ea2dd1d50195cc00cb6207fb6a610d8800f2b3b1e247f5f26b7"
+  },
+  {
+    "path": "reviews/market-id-logs/668-indonesian-buyer-taiwan-machinery-defect-notice.variety.txt",
+    "sha256": "cd842ab6abe6e1b82a562354b31735a5b12c454747fe3a0876a132832b3502f1"
+  },
+  {
+    "path": "reviews/market-id-logs/images-and-preservation.json",
+    "sha256": "8fea4fe34666061a25dc3bf12fa89d3a15e14a7209607856f38c579c175527a3"
+  },
+  {
+    "path": "reviews/market-id-logs/manifest-final.json",
+    "sha256": "4886651c7282fdc7ab0b41980780e338c075e9570f40d098f49e66a60d5ad27b"
+  },
+  {
+    "path": "reviews/market-id-logs/manifest-initial.json",
+    "sha256": "a2079ad4ad7bd412265fa0de12237b7456f841f3cad9631102d0a585b4c99257"
+  },
+  {
+    "path": "reviews/market-id-repair-logs/665.variety.txt",
+    "sha256": "53196b6bf14d833269955948c02aba22af739e04608311e7b526b0776cb7a3e1"
+  },
+  {
+    "path": "reviews/market-id-repair-logs/667.variety.txt",
+    "sha256": "7188b5278eeef574d03e3c545663f6ba9c4fa08c263dd8d1d7d34d20e89f1ec1"
+  },
+  {
+    "path": "reviews/market-id-repair-logs/668.variety.txt",
+    "sha256": "3bbeb774b262a7d73f18cf5777625945f9728eb7a4b5cd0f172a74e164383cfe"
+  },
+  {
+    "path": "reviews/market-id-repair-logs/before.json",
+    "sha256": "3331d1c130eef4727e81c0c1c9793f402191be6b87d3bb79f2101457d7039e83"
+  },
+  {
+    "path": "reviews/market-id-repair-logs/manifest.json",
+    "sha256": "c70b33c37d45a244bb2098fd2048294f673168ad6e86e7e262ec1db0a0339191"
+  },
+  {
+    "path": "reviews/market-id-repair.md",
+    "sha256": "7c5c4cd6ee4d7ae74b0332d0cc556c8f9068e0bffe1730239e505a3b7b4db121"
+  },
+  {
+    "path": "reviews/market-it-independent.md",
+    "sha256": "4f652f1f922a813257558e73008452471daa8d105129e60906035add82e0c1f7"
+  },
+  {
+    "path": "reviews/market-it-repair.md",
+    "sha256": "3d5880f80270cf4c31b45f738df90a5640b72837011cb4b30cab5d5dc15e73ab"
+  },
+  {
+    "path": "reviews/market-it-support/684-italian-exporter-taiwan-unpaid-installation-balance.variety.txt",
+    "sha256": "3838a5397d659f44d9752a03b857c29aac0bba64147e95532ae47908f1db7b5a"
+  },
+  {
+    "path": "reviews/market-it-support/685-italian-brand-taiwan-distributor-trademark-registration.variety.txt",
+    "sha256": "ebe599d98c4b5cdd8e15de1c186ea43d002ca5233964dbe3ce5bee6f7709e35f"
+  },
+  {
+    "path": "reviews/market-it-support/686-taiwan-oem-molds-design-files-handover.variety.txt",
+    "sha256": "ea25a9e384ca6ae33cf0707ba809a659b17a100647017e51b4dcf5c6be73d52f"
+  },
+  {
+    "path": "reviews/market-it-support/687-italy-resident-heir-taiwan-inheritance-renunciation-debts.variety.txt",
+    "sha256": "ae0c2f471c54cfff465ce1f31edd9e39bf882b1acb2b1549969f5d369147e189"
+  },
+  {
+    "path": "reviews/market-it-support/688-italian-business-visitor-taiwan-summons-interpreter-defense.variety.txt",
+    "sha256": "ce46d2a3634f8d78346d29c402a3ee07dfaaf1bf49701a739b8627f208a8649b"
+  },
+  {
+    "path": "reviews/market-it-support/contact-readback.json",
+    "sha256": "2d47037f9c1a7f86d455ce2739b7e8f012861b3e1f340234bcd5d5b8e9451523"
+  },
+  {
+    "path": "reviews/market-it-support/images.json",
+    "sha256": "23d8b8db3782d62ad1a5a5531e745bb77130e8ef154467311cb5d9510ca4ba2b"
+  },
+  {
+    "path": "reviews/market-it-support/recheck-r2.json",
+    "sha256": "1de7dd466fdefec7f2c10a16d20f85b58a3ac4a4c71cd5678712e126daa40213"
+  },
+  {
+    "path": "reviews/market-it-support/source-preservation-r1.json",
+    "sha256": "dcc62f19b759187f280b316970db2cbea9c942fa920f05d7661e82dc5be86757"
+  },
+  {
+    "path": "reviews/market-it-support/variety-r1.json",
+    "sha256": "4f5f1fd44738eecfdae061470873ababb7e9933bc15843c95f2d25c27a59c635"
+  },
+  {
+    "path": "reviews/market-pt-author-repair.md",
+    "sha256": "96570a049e61a960717479b10e461107f1a867d57157d9ca2af7a20e90afd0e2"
+  },
+  {
+    "path": "reviews/market-pt-author-support/baseline.json",
+    "sha256": "6c886baf90bee9c73b2eece6d5ffd0aeb813e88129f4a97f8afcc2c83bf16677"
+  },
+  {
+    "path": "reviews/market-pt-author-support/preservation.json",
+    "sha256": "9ab2d8f2afe1e1aed38f1d7b7bf91106b4d7e68faedd97f7f930f9a9e7507dca"
+  },
+  {
+    "path": "reviews/market-pt-author-support/variety-final.json",
+    "sha256": "d9e3cdd5780700095048aac175183eaff76e9ef815eaa7dc20bce888edd534a2"
+  },
+  {
+    "path": "reviews/market-pt-author-support/variety-first-pass.json",
+    "sha256": "ee0000d8dc03cc215e18c82f9dcdfdf2d21cdab363125df4aceec0262aef194f"
+  },
+  {
+    "path": "reviews/market-pt-independent.md",
+    "sha256": "964613b7dd175b7bbfc59ba733af98ebfbab6afb2f3d7ae789843aed9311399e"
+  },
+  {
+    "path": "reviews/market-pt-support/fetch.json",
+    "sha256": "5d5d0564ea453ed1cc420de56cadfa6e2c3f75d6eb2496e5a9b2097aea185b11"
+  },
+  {
+    "path": "reviews/market-pt-support/final-preservation.json",
+    "sha256": "ba792089eacf7855fc173454f9bad7f3e375f8264221fa13f3b330f4b76851e6"
+  },
+  {
+    "path": "reviews/market-pt-support/public-diff-r1.json",
+    "sha256": "75ba06df42685ca5caa9d34df80ee9849d1a4ab410ac4ebe3b277dd851b6690d"
+  },
+  {
+    "path": "reviews/market-th-independent.md",
+    "sha256": "9e35ec523a71de8cdb96ba64f86301a48190f211a2f0517c3aa1ddcc321c5ad7"
+  },
+  {
+    "path": "reviews/market-th-logs/659-variety.log",
+    "sha256": "7e155e96b0e6400d98eec1ca36a7b0d3781974a6a3d6db064d2fb8b99abad9b0"
+  },
+  {
+    "path": "reviews/market-th-logs/660-variety.log",
+    "sha256": "a6b759556131a09a5749b2470a5e48871427ae8b651e16d1e2b541e1014797a2"
+  },
+  {
+    "path": "reviews/market-th-logs/661-variety.log",
+    "sha256": "bf3cd59a3a4fb09db88aeae7162359b7597bb4dde1a51103117093e6686bb521"
+  },
+  {
+    "path": "reviews/market-th-logs/662-variety.log",
+    "sha256": "bf40af9505e782d43b2f295655ac9e801a87304ca95daf3eb21818ca85e10a98"
+  },
+  {
+    "path": "reviews/market-th-logs/663-variety.log",
+    "sha256": "9275870b41de03cf23567be8fbea3feedf7de0758966c205ea7a8462cfc0b63f"
+  },
+  {
+    "path": "reviews/market-th-logs/integrity.json",
+    "sha256": "39124e2c5344106c2f6872217e070b4c1f10149f76724e63a3d733087401703b"
+  },
+  {
+    "path": "reviews/pt-author.md",
+    "sha256": "d5d89259992aabcb8f45b165c7b8ef3c2341300a852e01d6312c3fe3173da865"
+  },
+  {
+    "path": "reviews/pt-independent.md",
+    "sha256": "bd0836c92c566995b263e6ae0c29714f2ebf5c301ce59abb1d86c69bddc25293"
+  },
+  {
+    "path": "reviews/th-author.md",
+    "sha256": "2a9bb1724295eae4a5bba276940c07bf2390f4c902b0685396d15fce66c563db"
+  },
+  {
+    "path": "reviews/th-boundaries/704-draft.sentences.json",
+    "sha256": "d94b71c5f5c1b947d0c953be3db09d6d61d9e3f3f7a80c94256213c630bbd259"
+  },
+  {
+    "path": "reviews/th-boundaries/704-independent-r1.sentences.json",
+    "sha256": "51142a44c44d02a82e37b65cc626fc1503e3a79304d4f8b0c4208cb7fcdb24d3"
+  },
+  {
+    "path": "reviews/th-boundaries/704-independent-r2.sentences.json",
+    "sha256": "eb1bbff93504870b65688e0bd7eabd1c9791b710249f1ca1e7a019d40f019f4d"
+  },
+  {
+    "path": "reviews/th-boundaries/704-independent-r3.sentences.json",
+    "sha256": "824730062ce1cba202808ad6108b337d289c51ba26702996338b896fe351d898"
+  },
+  {
+    "path": "reviews/th-boundaries/705-draft.sentences.json",
+    "sha256": "76663bda1542965eb7bba2eec2b642e25adc5f69e35a51e08940b059e8ba32de"
+  },
+  {
+    "path": "reviews/th-boundaries/705-independent-r1.sentences.json",
+    "sha256": "edba2fecde10611f8588037c6ce14693702674c0e5bb4ca684be2ead5271d6ae"
+  },
+  {
+    "path": "reviews/th-boundaries/705-independent-r2.sentences.json",
+    "sha256": "b2a60edc85a39c86b0acedaac6f6a3bf266a8f427545f0fbed76820a838e4fb7"
+  },
+  {
+    "path": "reviews/th-boundaries/706-draft.sentences.json",
+    "sha256": "67a68d1f1cca29b69522abda4115ef4726a00d339ca9d6a9fbc749cbbf271169"
+  },
+  {
+    "path": "reviews/th-boundaries/706-independent-r1.sentences.json",
+    "sha256": "966731cb7d2cb77ede0165739296f9225cf5b2e1b6728986ec2c269c6b6d8264"
+  },
+  {
+    "path": "reviews/th-boundaries/706-independent-r2.sentences.json",
+    "sha256": "fb0436f35ad908a69ab4407852f94e4925b8a360714b029f7f9c72cb6a32c86a"
+  },
+  {
+    "path": "reviews/th-boundaries/author-adjudication-r1-addendum.json",
+    "sha256": "ac5d3477bfcba5b7a4caa14b77bf2f99d28569c1899cb62eaacc9c02af5a0593"
+  },
+  {
+    "path": "reviews/th-boundaries/author-adjudication-r1-addendum.md",
+    "sha256": "67fa30bd1cf715addc94ca24eb544e35b6dcd30116c79090a1fe7eabf4c18b66"
+  },
+  {
+    "path": "reviews/th-boundaries/author-adjudication-r1.json",
+    "sha256": "fa080def75ef92ca44f36d28405cc1d241a2328cf3b5c3c18ad606570f950496"
+  },
+  {
+    "path": "reviews/th-boundaries/author-adjudication-r1.md",
+    "sha256": "fd7097f54e3941f741c0c0b6d4de3a07e0b24f789aa9498aeb332c9f6b86da16"
+  },
+  {
+    "path": "reviews/th-boundaries/author-diagnostics.json",
+    "sha256": "cd84898ddadd51cc766dfc6b0ef3909e004de82dd8a81d5194004e741f45d1af"
+  },
+  {
+    "path": "reviews/th-boundaries/author-report-r1.snapshot.md",
+    "sha256": "05c1ee39f64b6f412ae5ceda650b0f049353f14ecdca5f61170c9b200fefbb07"
+  },
+  {
+    "path": "reviews/th-boundaries/author-report-r2.snapshot.md",
+    "sha256": "b9347150f1bb2f70df72522322e463741c17dd1824af8b1edab604f9e1a9dea1"
+  },
+  {
+    "path": "reviews/th-boundaries/author-report-r3.snapshot.md",
+    "sha256": "13e48ce6b7292e1e6c3ff10a5c217630aa672c2c758bb30656a8f0c57d3276c9"
+  },
+  {
+    "path": "reviews/th-boundaries/fallback/680b7c2e7e9d8653f15c8b0e8ec46392ca122c270a73dbd1a952eea3bb3b18f0.json",
+    "sha256": "dddf160f2568c5bb89efdd3bb480f332e9a56129ce2afd1cfb538dfe5e1bb5e9"
+  },
+  {
+    "path": "reviews/th-boundaries/fallback/704-fallback.sentences.json",
+    "sha256": "fed3b8ef0a11aa3b8d73f98a3df389f51b103289f74884c347bb34b7e05afd01"
+  },
+  {
+    "path": "reviews/th-boundaries/fallback/arc-20261024-th-approval.json",
+    "sha256": "67657e2ff79d44d0701ced514670151e8b3d94ca8285c728a7a34acb401371f6"
+  },
+  {
+    "path": "reviews/th-boundaries/fallback/arc-20261024-th-boundaries-author.md",
+    "sha256": "d43fda9aceec042c24de7350e320bf12c43588aaf718332a3c18f0c0d690f3ff"
+  },
+  {
+    "path": "reviews/th-boundaries/fallback/arc-20261024-th-boundaries-review.md",
+    "sha256": "f986ce79e0b5579942e5adb911145c7b18167725e8007f699403229237604e7f"
+  },
+  {
+    "path": "reviews/th-boundaries/fallback/independent-approval.json",
+    "sha256": "9b81ae3d5dd65b7680973c3d5a0cfb9d64ff26daeac9a6a7e564e619a1e817bb"
+  },
+  {
+    "path": "reviews/th-boundaries/fallback/independent-boundary-review.md",
+    "sha256": "27dee14ff2df37d9337efde7746054f71afa5e56f7c860d226670f5b039e0ac9"
+  },
+  {
+    "path": "reviews/th-boundaries/fallback/independent-cli.json",
+    "sha256": "21a50e0bdaa35cb0501dcafa9b68a787e968426c879cad0d27d97b9a0f42c00c"
+  },
+  {
+    "path": "reviews/th-boundaries/fallback/independent-preservation.json",
+    "sha256": "f82475cd905f86367c8764c5d150582f0cb3a872a434d9fc152ebcf94c99c663"
+  },
+  {
+    "path": "reviews/th-boundaries/fallback/independent-scope-verification.json",
+    "sha256": "f1702502b20cf943296e0116723ad5122ff7c5b1aedafa7e009339f377a5caee"
+  },
+  {
+    "path": "reviews/th-boundaries/fallback/root-fallback-scope.snapshot.json",
+    "sha256": "bef7083d420ab24eed0444a964f3165b2da4993ac07356db0de6da1105894bb4"
+  },
+  {
+    "path": "reviews/th-boundaries/independent-approval-r1.json",
+    "sha256": "d05e4ef9c693c386dc8e797711d4172d31631c4394922430ee01b04fb089275c"
+  },
+  {
+    "path": "reviews/th-boundaries/independent-approval-r2.json",
+    "sha256": "e665d9e1f263dd965ae729046cb15fb179eb0391aa03331311f21e1487d709d2"
+  },
+  {
+    "path": "reviews/th-boundaries/independent-approval-r3.json",
+    "sha256": "278cb3b368886bee5e3be54dc9c647db9e889b3df2a53b8a1126acd4434274be"
+  },
+  {
+    "path": "reviews/th-boundaries/independent-boundary-review-r1.md",
+    "sha256": "20c323bfecbb7aaafec6c4b1d249c6fe52be8c43a350a427c4d8cc8ff8df64f5"
+  },
+  {
+    "path": "reviews/th-boundaries/independent-boundary-review-r2.md",
+    "sha256": "1ae630b69905dc47ea46539223cc9b30c5faf2055d4716e465baddc0771a35f3"
+  },
+  {
+    "path": "reviews/th-boundaries/independent-boundary-review-r3.md",
+    "sha256": "447da717ae88dbb350a204c112087344cc46fe3ccc9eb1ec28cb9c3dbbb7a767"
+  },
+  {
+    "path": "reviews/th-boundaries/independent-cli-r1.json",
+    "sha256": "aaf2d942ef5a42fc56d641abaeb0ffcd0b72b46fb2337b41dc0939cca1bee193"
+  },
+  {
+    "path": "reviews/th-boundaries/independent-cli-r2.json",
+    "sha256": "4b552a2aea066c8ad036731609455371035aa3cbf76a497c352748cbbf10b548"
+  },
+  {
+    "path": "reviews/th-boundaries/independent-cli-r3.json",
+    "sha256": "e48be6626356468f76cca2a52d3cfc22830d06a70b7b9c4b17db00551e200aaa"
+  },
+  {
+    "path": "reviews/th-boundaries/independent-editorial-r1.snapshot.md",
+    "sha256": "2dfd4036247232b7f5b84695a977f07ea0daab3636a212e10e7cf735067011a0"
+  },
+  {
+    "path": "reviews/th-boundaries/independent-preservation-final.json",
+    "sha256": "02d8e913ad3fdcd48736981ca2c9ddcd406f2b916509a0469422ed933fa1e3b8"
+  },
+  {
+    "path": "reviews/th-boundaries/independent-preservation.json",
+    "sha256": "751a6b6d950e27795afc244740c3723257911fd93f7ef7c144a0ad8e457b0162"
+  },
+  {
+    "path": "reviews/th-boundaries/independent-unapproved-cli.json",
+    "sha256": "d6ceb4a6492c6c26f58565ee0b9c225758c558de0b0c15c4ef3f9be32b8e24ef"
+  },
+  {
+    "path": "reviews/th-independent-fallback.md",
+    "sha256": "b47a35525b3f9bef75aae144909c7044a970ce0141ad8e799a930c147d1df5a1"
+  },
+  {
+    "path": "reviews/th-independent.md",
+    "sha256": "2718c326f49c03906d06152f368943c6932123016274252d08e0c60083d0d26c"
+  },
+  {
+    "path": "reviews/vi-author.md",
+    "sha256": "90ec771421f8ee12509a77f680728c3909fbcda30593930a725f58681eab448b"
+  },
+  {
+    "path": "reviews/vi-independent.md",
+    "sha256": "7fa20763f9e7c965ab0242f5459270c89a560714ee3ead0d6a99ea278535a3d2"
+  },
+  {
+    "path": "reviews/zh-hant-author.md",
+    "sha256": "f995e6e3a6eb6849ac70a6246757066d0a428d7c907004454d4ac7bb50aa17d4"
+  },
+  {
+    "path": "reviews/zh-hant-independent.md",
+    "sha256": "fe46dd0c11b9793e74997946ce01a4d4b5242fe25b1180ea55ad6b72cbea3c66"
+  }
+]

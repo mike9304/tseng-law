@@ -1,0 +1,5 @@
+$ python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-id/667-indonesian-factory-worker-injury-evidence-compensation-taiwan.md --lang id
+/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-id/667-indonesian-factory-worker-injury-evidence-compensation-taiwan.md [id] sentences=51 mean=14.0 cv=0.506 short=0.216 run3=0.041 opener_rep=0.062 cite_end=0.0 cite_para=0.438 contrast=0 caveat=1 q=1
+  OK — no variety limit violated
+
+exit_code=0

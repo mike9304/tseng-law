@@ -3,7 +3,7 @@ title: "Gemeinsame Entwicklung in Taiwan: Wer darf CAD-Daten weitergeben und wei
 seoTitle: "Taiwan: CAD-Daten und gemeinsame Entwicklung"
 summary: "Deutsche Entwicklungspartner brauchen klare Rechte an bestehenden und neuen Konstruktionen. Geheimnisschutz, gemeinsame Ergebnisse und CAD-Nutzung verlangen eigene Vereinbarungen."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23. Oktober 2026"
 read_time: "6 Minuten Lesezeit"
 categories: ["Rechtliche Informationen zu Taiwan"]
@@ -12,13 +12,16 @@ tags: ["trade-secrets", "intellectual-property", "joint-development"]
 audience: ["de"]
 targetMarket: "Germany"
 author: "legal-ai-assistant"
+featured_image: "/images/columns/682-market-review-20261024.webp"
+featured_image_alt: "Laptop mit einer technischen Explosionszeichnung, Metallbauteil, Papierzeichnungen und USB-Stick auf einem Schreibtisch."
+featured_image_caption: "Die Zeichnungen veranschaulichen den Austausch von Konstruktionsdaten und zeigen keine echten Projektunterlagen."
 faq:
   - q: "Reicht eine Geheimhaltungsvereinbarung für den gesetzlichen Schutz aller CAD-Dateien?"
     a: "Nein. Artikel 2 des taiwanesischen Geschäftsgeheimnisgesetzes verlangt kumulativ fehlende allgemeine Bekanntheit in den einschlägigen Fachkreisen, wirtschaftlichen Wert aufgrund der Geheimhaltung und angemessene Geheimhaltungsmaßnahmen. Die Vereinbarung ist ein möglicher Teil dieser Maßnahmen; der konkrete Informationsbestand und die tatsächliche Handhabung bleiben zu prüfen."
   - q: "Wem gehört ein gemeinsam entwickeltes Geschäftsgeheimnis?"
     a: "Artikel 5 richtet die Anteile nach dem Vertrag; ohne Vereinbarung werden gleiche Anteile vermutet. Für Nutzung und Verfügung verlangt Artikel 6 mangels anderer Vereinbarung die Zustimmung aller Mitberechtigten, die nicht ohne berechtigten Grund verweigert werden darf. Eine gemeinsame Entwicklung sollte deshalb konkrete Nutzungsregeln erhalten."
   - q: "Dürfen bezahlte CAD-Dateien an einen neuen Fertiger gehen?"
-    a: "Das ergibt sich nicht allein aus der Zahlung. Neben der Herausgabe der Dateien sind Geschäftsgeheimnisrechte, Urheberrechte und die vereinbarten Nutzungsbefugnisse zu prüfen. Artikel 37 des taiwanesischen Urheberrechtsgesetzes behandelt unklar geregelte Lizenzteile als nicht eingeräumt; eine einfache Lizenz darf ohne Zustimmung nicht weiterlizenziert werden."
+    a: "Das ergibt sich nicht allein aus der Zahlung. Neben der Herausgabe der Dateien sind Geschäftsgeheimnisrechte, Urheberrechte und die vereinbarten Nutzungsbefugnisse zu prüfen. Artikel 37 des taiwanesischen Urheberrechtsgesetzes vermutet bei unklar geregelten Lizenzteilen, dass sie nicht eingeräumt sind; eine einfache Lizenz darf ohne Zustimmung nicht weiterlizenziert werden."
 ---
 
 Drei Voraussetzungen müssen Informationen erfüllen, damit das taiwanesische Geschäftsgeheimnisgesetz sie schützt: Sie sind den einschlägigen Fachkreisen nicht allgemein bekannt, haben gerade wegen ihrer Geheimhaltung tatsächlichen oder möglichen wirtschaftlichen Wert, und der Inhaber hat angemessene Geheimhaltungsmaßnahmen getroffen. Diese Bedingungen gelten gemeinsam. Eine Beschriftung als „confidential“ beantwortet die Prüfung nach [Artikel 2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=2) noch nicht.
@@ -49,9 +52,9 @@ Die Geheimhaltungsmaßnahmen lassen sich am tatsächlichen Datenfluss prüfen. W
 
 Unterlieferanten gehören in die Planung. Eine Zustimmung zu deren Einsatz sollte klären, welche Daten sie erhalten, für welchen Auftrag sie sie verwenden dürfen und welche Weitergabe untersagt ist. Nach [Artikel 7 des Geschäftsgeheimnisgesetzes](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028) folgt die Lizenz der Vereinbarung; eine Weiterlizenzierung verlangt die Zustimmung des Inhabers. Der Beitrag über [Taiwan-Geschäftsstrukturen](/de/columns/taiwan-semiconductor-market-entry) hilft, Vertragspartner und ausführende Gesellschaften auseinanderzuhalten.
 
-Ein Zugriffsprotokoll beweist nicht für sich allein einen Missbrauch. Es sollte mit dem erlaubten Zweck, den betroffenen Versionen und der weiteren Verwendung abgeglichen werden. [Artikel 10](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=10) erfasst verschiedene unrechtmäßige Formen des Erwerbs, der Nutzung und Offenlegung; [Artikel 11](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=11) eröffnet Ansprüche auf Beseitigung und bei drohender Verletzung auf Verhinderung. Ob diese Voraussetzungen vorliegen, verlangt konkrete Tatsachen.
+Das Zugriffsprotokoll allein belegt noch keinen Missbrauch. Es sollte mit dem erlaubten Zweck, den betroffenen Versionen und der weiteren Verwendung abgeglichen werden. [Artikel 10](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=10) erfasst verschiedene unrechtmäßige Formen des Erwerbs, der Nutzung und Offenlegung; [Artikel 11](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=11) eröffnet Ansprüche auf Beseitigung und bei drohender Verletzung auf Verhinderung.
 
-Zum Projektende sollten Zugriffssperren, Rückgabe und vertraglich geschuldete Löschung mit der notwendigen Beweissicherung abgestimmt werden. Protokolle bleiben nachvollziehbar. Eine erste [Anfrage zu Taiwan-Entwicklungsrechten](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) kann Partnernamen, Datenart und Anlass nennen; zunächst sind die tatsächliche Beratung auf Englisch, Chinesisch, Japanisch oder Koreanisch und ein sicherer Übermittlungsweg zu vereinbaren. Die vertraulichen CAD-Dateien gehören noch nicht in diese Nachricht.
+Zum Projektende sollten die Partner Zugriffssperren, Rückgabe, vertraglich geschuldete Löschung und die notwendige Beweissicherung aufeinander abstimmen. Eine erste [Anfrage zu Taiwan-Entwicklungsrechten](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) kann Partnernamen, Datenart und Anlass nennen; zunächst sind die tatsächliche Beratung auf Englisch, Chinesisch, Japanisch oder Koreanisch und ein sicherer Übermittlungsweg zu vereinbaren. Die vertraulichen CAD-Dateien gehören noch nicht in diese Nachricht.
 
 ## Verwendete amtliche Texte
 

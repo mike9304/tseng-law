@@ -3,7 +3,7 @@ title: "Stampi e disegni commissionati a Taiwan: che cosa può ricevere il nuovo
 seoTitle: "Stampi e file di progetto: cambio OEM a Taiwan"
 summary: "Cambiare produttore dopo una commessa a Taiwan: proprietà degli stampi, consegna dei file modificabili e diritti d’uso dei disegni richiedono prove distinte."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 ottobre 2026"
 read_time: "5 min di lettura"
 categories: ["Forniture e proprietà intellettuale"]
@@ -31,17 +31,17 @@ Nel fascicolo della commessa conviene distinguere stampi, prototipi, disegni, fi
 
 Una clausola che promette «documentazione tecnica» va confrontata con il preventivo e con gli allegati accettati. Il fascicolo dovrebbe mostrare se erano inclusi i file sorgente, le versioni aggiornate, i riferimenti ai materiali e le istruzioni necessarie alla produzione. Anche il verbale di approvazione del prototipo può contenere riserve ancora irrisolte.
 
-Nome, versione e formato del file delimitano la richiesta. Il responsabile tecnico può aggiungere la funzione prevista e indicare il materiale già ricevuto. Non serve copiare l’intero archivio. L’elenco consente di separare una consegna incompleta da una richiesta nuova, mai compresa nel prezzo.
+La richiesta identifica nome, versione e formato. Il responsabile tecnico può indicare anche la funzione prevista e il materiale già ricevuto, così da distinguere una consegna incompleta da ciò che non era compreso nel prezzo.
 
 ## Disegno commissionato e autorizzazione al riuso
 
-Se il materiale è protetto e si applica il diritto taiwanese, l’[articolo 12 della legge sul diritto d’autore](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=12) disciplina le opere commissionate fuori dall’ipotesi del lavoro dipendente. Di regola l’autore è chi realizza l’opera, salvo accordo che attribuisca questa posizione al committente. Quando l’autore resta l’esecutore, i diritti patrimoniali seguono l’accordo; in mancanza di accordo restano all’esecutore, mentre il committente può utilizzare l’opera.
+Se il materiale è protetto e si applica il diritto taiwanese, l’[articolo 12 della legge sul diritto d’autore](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=12) disciplina le opere commissionate fuori dall’ipotesi del lavoro dipendente. Di regola l’autore è chi realizza l’opera, salvo accordo che attribuisca questa posizione al committente; se l’autore resta l’esecutore, i diritti patrimoniali seguono l’accordo. In mancanza di accordo, restano all’esecutore. Quando i diritti patrimoniali spettano all’esecutore, il committente può utilizzare l’opera.
 
 Quale uso comprende quella facoltà? Prima di affidare i materiali a un altro stabilimento, vanno esaminati scopo della commessa, contenuto del contratto e modalità della nuova produzione. Il pagamento, da solo, non documenta una cessione generale dei diritti.
 
-Per le licenze, l’[articolo 37](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=37) rimette all’accordo territorio, durata, contenuto e modalità di utilizzo; la parte incerta si presume non autorizzata. Il titolare di una licenza non esclusiva, inoltre, non può concedere a terzi i diritti ricevuti senza il consenso del titolare. La possibilità di far usare o modificare i file al nuovo produttore va quindi precisata, insieme ai componenti di terzi eventualmente incorporati.
+Per le licenze, l’[articolo 37](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=37) rimette all’accordo territorio, durata, contenuto e modalità di utilizzo. La parte incerta si presume non autorizzata. Il titolare di una licenza non esclusiva, inoltre, non può concedere a terzi i diritti ricevuti senza il consenso del titolare. La possibilità di far usare o modificare i file al nuovo produttore va quindi precisata, insieme ai componenti di terzi eventualmente incorporati.
 
-La tutela d’autore riguarda l’espressione dell’opera; idee, procedimenti e metodi operativi in quanto tali sono esclusi dall’[articolo 10-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=10-1). Per un disegno funzionale va quindi individuata l’espressione protetta.
+È l’espressione dell’opera a ricevere la tutela d’autore. Idee, procedimenti e metodi operativi in quanto tali sono esclusi dall’[articolo 10-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=10-1). In un disegno funzionale va quindi individuata l’espressione protetta.
 
 ## Lo stampo rimasto nello stabilimento
 
@@ -49,17 +49,17 @@ Per i diritti reali sugli stampi situati a Taiwan rileva la legge del luogo del 
 
 L’[articolo 761 del Codice civile](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=761) collega normalmente il trasferimento dei diritti sui beni mobili alla consegna, ammettendo anche forme sostitutive. Le parti possono, per esempio, concordare che lo stampo rimanga presso il cedente mentre l’acquirente ne acquista il possesso indiretto. Occorrono perciò accordo e storia del possesso, oltre alla prova del pagamento.
 
-Il proprietario può chiedere la restituzione contro chi possiede senza titolo, secondo l’[articolo 767](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=767). Il fornitore invoca fatture insolute? Occorre allora verificare la ritenzione, con i requisiti e le esclusioni degli [articoli 928](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=928) e [929](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=929). Nei rapporti commerciali, il collegamento può estendersi oltre la sola fattura dello stampo. È un punto da risolvere prima del ritiro.
+Il proprietario può chiedere la restituzione contro chi possiede senza titolo, secondo l’[articolo 767](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=767). Il fornitore invoca fatture insolute? Occorre allora verificare la ritenzione, con i requisiti e le esclusioni degli [articoli 928](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=928) e [929](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=929). Nei rapporti commerciali possono rilevare altri crediti.
 
 ## Un verbale di passaggio per materiali e diritti
 
-L’accordo operativo dovrebbe elencare matricole, parti intercambiabili, stato delle attrezzature, file e versioni, accessori, imballaggio e luogo di ritiro. Un documento distinto può precisare i diritti d’uso ancora da chiarire. Se esiste il rischio concreto di perdere prove, l’[articolo 368 del Codice di procedura civile](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=368) consente di valutare una richiesta giudiziale di conservazione delle prove nei casi previsti. Non attribuisce da solo il diritto a prelevare gli stampi.
+L’accordo operativo dovrebbe elencare matricole, parti intercambiabili, stato delle attrezzature, file e versioni, accessori, imballaggio e luogo di ritiro, mentre un documento distinto può precisare i diritti d’uso ancora da chiarire. Se esiste il rischio concreto di perdere prove, l’[articolo 368 del Codice di procedura civile](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=368) consente di valutare una richiesta giudiziale di conservazione delle prove nei casi previsti. Non attribuisce da solo il diritto a prelevare gli stampi.
 
 ## Domande frequenti
 
 ### Il progetto pagato appartiene interamente al committente?
 
-Vanno verificati oggetto protetto, rapporti con il creatore e accordi sui diritti. Il pagamento non risolve tutto.
+Non automaticamente. Vanno verificati l’oggetto protetto, i rapporti con il creatore e gli accordi sui diritti.
 
 ### Il nuovo OEM può modificare i file?
 

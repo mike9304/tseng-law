@@ -1,0 +1,112 @@
+[
+  {
+    "id": 669,
+    "source": "src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md",
+    "sha256": "4927aec900e7c823a9ae452f8704b7b5056e21b3eb135e5d4d8dcab038507d2e",
+    "cli_exit": 0,
+    "cli_output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md [hi] sentences=47 mean=15.1 cv=0.46 short=0.255 run3=0.022 opener_rep=0.077 cite_end=0.021 cite_para=0.615 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "urls_sequence_preserved": true,
+    "body_numeric_tokens_preserved": true,
+    "metadata_preservation": {
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "published": true,
+      "date_display": true,
+      "author": true,
+      "featured_image": true,
+      "featured_image_alt": true,
+      "featured_image_caption": true
+    },
+    "lastmod": "lastmod: \"2026-10-23\"",
+    "bold_absent": true
+  },
+  {
+    "id": 670,
+    "source": "src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+    "sha256": "a8322aa20cc87e436e5aee929441d44c4cdffa04bbf32370b0df381259c87be3",
+    "cli_exit": 0,
+    "cli_output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md [hi] sentences=53 mean=17.1 cv=0.454 short=0.151 run3=0.059 opener_rep=0.071 cite_end=0.0 cite_para=0.643 contrast=0 caveat=0 q=3\n  OK — no variety limit violated\n",
+    "urls_sequence_preserved": true,
+    "body_numeric_tokens_preserved": true,
+    "metadata_preservation": {
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "published": true,
+      "date_display": true,
+      "author": true,
+      "featured_image": true,
+      "featured_image_alt": true,
+      "featured_image_caption": true
+    },
+    "lastmod": "lastmod: \"2026-10-24\"",
+    "bold_absent": true
+  },
+  {
+    "id": 671,
+    "source": "src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+    "sha256": "c9f7d8a3a90a1d533ebfaa5ad6f7b6ff0f23ad7430396de3a9532555f403712f",
+    "cli_exit": 0,
+    "cli_output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md [hi] sentences=48 mean=15.9 cv=0.451 short=0.25 run3=0.043 opener_rep=0.214 cite_end=0.021 cite_para=0.571 contrast=1 caveat=1 q=1\n  OK — no variety limit violated\n",
+    "urls_sequence_preserved": true,
+    "body_numeric_tokens_preserved": true,
+    "metadata_preservation": {
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "published": true,
+      "date_display": true,
+      "author": true,
+      "featured_image": true,
+      "featured_image_alt": true,
+      "featured_image_caption": true
+    },
+    "lastmod": "lastmod: \"2026-10-24\"",
+    "bold_absent": true
+  },
+  {
+    "id": 672,
+    "source": "src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+    "sha256": "44c8534add421222c5fa56d250f94b41820bcfb4d58e51d5d0395a33eed2b6f0",
+    "cli_exit": 0,
+    "cli_output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md [hi] sentences=54 mean=15.2 cv=0.502 short=0.204 run3=0.058 opener_rep=0.067 cite_end=0.0 cite_para=0.467 contrast=0 caveat=0 q=4\n  OK — no variety limit violated\n",
+    "urls_sequence_preserved": true,
+    "body_numeric_tokens_preserved": true,
+    "metadata_preservation": {
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "published": true,
+      "date_display": true,
+      "author": true,
+      "featured_image": true,
+      "featured_image_alt": true,
+      "featured_image_caption": true
+    },
+    "lastmod": "lastmod: \"2026-10-24\"",
+    "bold_absent": true
+  },
+  {
+    "id": 673,
+    "source": "src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+    "sha256": "af4d8bc235868b1bbef96be13b69383ea932d27e1ee1122e50b5258910f09acd",
+    "cli_exit": 0,
+    "cli_output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md [hi] sentences=47 mean=16.3 cv=0.451 short=0.17 run3=0.089 opener_rep=0.077 cite_end=0.0 cite_para=0.308 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "urls_sequence_preserved": true,
+    "body_numeric_tokens_preserved": true,
+    "metadata_preservation": {
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "published": true,
+      "date_display": true,
+      "author": true,
+      "featured_image": true,
+      "featured_image_alt": true,
+      "featured_image_caption": true
+    },
+    "lastmod": "lastmod: \"2026-10-24\"",
+    "bold_absent": true
+  }
+]

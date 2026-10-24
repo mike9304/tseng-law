@@ -33,7 +33,7 @@ La tutela richiesta a Taiwan segue la legge del luogo di protezione, in base all
 
 Prima di accusare il distributore di un deposito abusivo, vanno letti anche allegati, procure e messaggi di autorizzazione. L’incarico di presentare una domanda per conto del produttore, l’autorizzazione a usare il segno e il consenso alla registrazione a nome del distributore possono avere contenuti diversi. Conta il testo effettivamente concordato.
 
-Una tabella con le versioni del contratto evita di citare una clausola introdotta dopo il deposito. Anche la società italiana interessata va identificata con precisione: il marchio può appartenere alla capogruppo mentre vendite e distribuzione fanno capo a un’altra impresa.
+Una tabella con le versioni del contratto evita di citare una clausola introdotta dopo il deposito. Va identificata anche la società italiana interessata. Il marchio può appartenere alla capogruppo, mentre vendite e distribuzione fanno capo a un’altra impresa.
 
 ## Uso anteriore, conoscenza e intento di imitazione
 

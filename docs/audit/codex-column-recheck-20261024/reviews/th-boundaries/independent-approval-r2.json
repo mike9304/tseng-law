@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "locale": "th",
+  "status": "approved",
+  "reviewer": "/root/review_rev2_th (independent AI Thai editor)",
+  "scope": "sentence boundaries only",
+  "entries": [
+    {
+      "source_sha256": "8f304a311a2ff9a1451faf0b934ab08259de4bb10ec7e4756396df25d28478fc",
+      "paragraphs_sha256": "495dc867ced5aa9ad7d213e04d2d9eba8738d290ca01d349fbd5ccbc3a224b6b",
+      "method": "independent_review_with_author_boundary_adjudication",
+      "unresolved_boundaries": []
+    },
+    {
+      "source_sha256": "abe1ccf7fe19227dc0f4ac69b632f5f0f67be5932f2d44adbfa022491350b7de",
+      "paragraphs_sha256": "fb315acfc77bc380d70e72d94532f1a96ea70efb82beed2ee1684e308fe906b1",
+      "method": "independent_review_with_author_boundary_adjudication",
+      "unresolved_boundaries": []
+    },
+    {
+      "source_sha256": "844b1b15985d3e7f82c9e8c8824d67215b7edeec7b33726da5c1e608f433f50b",
+      "paragraphs_sha256": "cff7250db76f58c7ffa15ec86ed2005f7617da592ea60a7ea19d4c44ec098dc8",
+      "method": "independent_review_with_author_boundary_adjudication",
+      "unresolved_boundaries": []
+    }
+  ],
+  "evidence": [
+    {
+      "role": "independent-review",
+      "path": "independent-boundary-review-r2.md",
+      "sha256": "1ae630b69905dc47ea46539223cc9b30c5faf2055d4716e465baddc0771a35f3"
+    },
+    {
+      "role": "author-adjudication",
+      "path": "author-report-r2.snapshot.md",
+      "sha256": "b9347150f1bb2f70df72522322e463741c17dd1824af8b1edab604f9e1a9dea1"
+    },
+    {
+      "role": "prior-independent-review",
+      "path": "independent-boundary-review-r1.md",
+      "sha256": "20c323bfecbb7aaafec6c4b1d249c6fe52be8c43a350a427c4d8cc8ff8df64f5"
+    },
+    {
+      "role": "prior-author-adjudication",
+      "path": "author-adjudication-r1.md",
+      "sha256": "fd7097f54e3941f741c0c0b6d4de3a07e0b24f789aa9498aeb332c9f6b86da16"
+    },
+    {
+      "role": "prior-author-adjudication-addendum",
+      "path": "author-adjudication-r1-addendum.md",
+      "sha256": "67fa30bd1cf715addc94ca24eb544e35b6dcd30116c79090a1fe7eabf4c18b66"
+    }
+  ]
+}

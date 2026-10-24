@@ -3,7 +3,7 @@ title: "Mesin dari Taiwan bermasalah di pabrik Indonesia: pemberitahuan cacat da
 seoTitle: "Mesin Taiwan cacat: pemberitahuan dan tuntutan"
 summary: "Pembeli mesin di Indonesia perlu membedakan laporan teknis, pemberitahuan cacat kepada penjual Taiwan, dan pelaksanaan hak. Kontrak serta bukti uji menentukan langkah."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 Oktober 2026"
 read_time: "5 menit baca"
 categories: ["Informasi hukum Taiwan"]
@@ -33,19 +33,19 @@ Kapasitas produksi yang dijanjikan perlu dibaca bersama syarat pengujiannya. Jen
 
 Menurut [Pasal 354](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=354), penjual menjamin barang bebas dari cacat yang menghilangkan atau mengurangi nilai, kegunaan biasa, atau kegunaan yang disepakati pada saat risiko beralih. Penurunan nilai atau kegunaan yang tidak berarti tidak dianggap sebagai cacat menurut ayat pertama. Ayat kedua secara tersendiri mewajibkan barang memiliki kualitas yang dijamin penjual pada saat risiko beralih. Kerusakan yang baru terlihat setelah pemasangan tetap memerlukan bukti asal dan waktunya.
 
-Siapa yang sebenarnya menjadi penjual dalam kontrak? Pabrik pembuat, perusahaan dagang Taiwan, dan distributor Indonesia dapat mempunyai peran berbeda. Cocokkan badan hukum pada pesanan, faktur, dan kontrak; kirim pemberitahuan kepada pihak yang tepat. Untuk latar perbedaan badan usaha dan saluran penjualan, lihat [anak perusahaan, cabang, dan agen dalam transaksi Taiwan](/id/columns/taiwan-semiconductor-market-entry).
+Siapa yang sebenarnya menjadi penjual dalam kontrak? Pabrik pembuat, perusahaan dagang Taiwan, dan distributor Indonesia dapat mempunyai peran berbeda. Cocokkan badan hukum pada pesanan, faktur, dan kontrak. Kirim pemberitahuan kepada pihak yang tepat. Untuk latar perbedaan badan usaha dan saluran penjualan, lihat [anak perusahaan, cabang, dan agen dalam transaksi Taiwan](/id/columns/taiwan-semiconductor-market-entry).
 
 ## Temuan awal dapat diberitahukan sebelum penyebab akhirnya pasti
 
-[Pasal 356](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=356) mewajibkan pembeli segera memeriksa barang dengan prosedur lazim sesuai sifatnya, kemudian segera memberi tahu penjual jika menemukan cacat yang menjadi tanggung jawabnya. Kelalaian memberi tahu dapat dianggap sebagai penerimaan barang. Cacat yang tidak dapat ditemukan melalui pemeriksaan biasa tetap harus diberitahukan segera setelah diketahui.
+[Pasal 356](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=356) mewajibkan pembeli segera memeriksa barang dengan prosedur lazim sesuai sifatnya, kemudian segera memberi tahu penjual jika menemukan cacat yang menjadi tanggung jawabnya. Jika pembeli lalai memberi tahu, barang dianggap telah diterima, kecuali cacat itu tidak dapat ditemukan melalui pemeriksaan biasa. Cacat yang tidak dapat ditemukan melalui pemeriksaan biasa tetap harus diberitahukan segera setelah diketahui.
 
-Sampaikan nomor mesin, pesanan, tanggal penerimaan dan penemuan, gejala, serta hasil uji yang sudah ada. Bedakan pengamatan dari dugaan: hasil pengukuran dapat dilaporkan meskipun penyebab kegagalan belum dipastikan. Ikuti metode dan penerima pemberitahuan dalam kontrak, lalu simpan pesan terkirim, lampiran, serta bukti penerimaannya.
+Sampaikan nomor mesin, pesanan, tanggal penerimaan dan penemuan, gejala, serta hasil uji yang sudah ada. Bedakan pengamatan dari dugaan. Hasil pengukuran dapat dilaporkan meskipun penyebab kegagalan belum dipastikan. Ikuti metode dan penerima pemberitahuan dalam kontrak, lalu simpan pesan terkirim, lampiran, serta bukti penerimaannya.
 
 Undang-undang itu tidak memberikan satu tenggat pemeriksaan yang sama bagi semua mesin. Jika penjual sengaja menyembunyikan cacat, [Pasal 357](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=357) mengecualikan penerapan Pasal 356. Kesengajaan tersebut membutuhkan bukti. Perbedaan pendapat teknisi saja belum membuktikannya.
 
 ## Perbaikan darurat dan keadaan mesin sebelum dibongkar
 
-Dokumentasikan nomor seri, kondisi pengiriman, pengaturan, catatan kesalahan sistem, dan bagian yang diganti. Simpan komponen lama bila aman serta catat siapa yang membongkar dan menguji. Jika operasi harus dihentikan demi keselamatan, jangan menunda langkah keselamatan untuk mempertahankan kondisi sampel; rekam alasan dan perubahan yang diperlukan.
+Dokumentasikan nomor seri, kondisi pengiriman, pengaturan, catatan kesalahan sistem, dan bagian yang diganti. Simpan komponen lama bila aman serta catat siapa yang membongkar dan menguji. Jika operasi harus dihentikan demi keselamatan, jangan menunda langkah keselamatan untuk mempertahankan kondisi sampel. Rekam alasan dan perubahan yang diperlukan.
 
 Ada kewajiban khusus ketika barang dikirim dari tempat lain, pembeli menolak menerimanya karena cacat, dan penjual tidak mempunyai wakil di tempat penerimaan. [Pasal 358](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=358) mewajibkan penyimpanan sementara dan pembuktian cacat dengan cara yang patut tanpa penundaan; bila tidak, timbul praduga bahwa barang tidak cacat ketika diterima. Aturan penjualan barang mudah rusak dalam pasal tersebut bukan izin umum untuk membuang mesin industri.
 
@@ -59,7 +59,7 @@ Batas Pasal 365 adalah enam bulan sejak pemberitahuan menurut Pasal 356 atau lim
 
 Pembatalan dilaksanakan dengan pernyataan kepada pihak lain menurut [Pasal 258](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=258). Penjual juga dapat menetapkan waktu yang patut untuk memilih pembatalan berdasarkan [Pasal 361](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=361); tidak melaksanakannya dalam waktu itu menghilangkan hak pembatalan. Jangan menganggap pembicaraan perbaikan selalu mempertahankan seluruh hak.
 
-Untuk [pemeriksaan sengketa pemasok Taiwan](/id/contact) melalui [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), pesan awal cukup memuat nama para pihak untuk pemeriksaan konflik, hubungan transaksi dengan Taiwan, tanggal penting, dan hasil yang diminta. Spesifikasi rahasia dikirim setelah pengaturan dokumen disepakati. Konsultasi berlangsung dalam bahasa Inggris, Mandarin, Jepang, atau Korea; kebutuhan bahasa Indonesia perlu dikonfirmasikan. Sebelum teknisi mengganti komponen berikutnya, pastikan catatan kondisi awal dan pemberitahuan kepada penjual dapat ditemukan kembali.
+Untuk [pemeriksaan sengketa pemasok Taiwan](/id/contact) melalui [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), pesan awal cukup memuat nama para pihak untuk pemeriksaan konflik, hubungan transaksi dengan Taiwan, tanggal penting, dan hasil yang diminta. Spesifikasi rahasia dikirim setelah pengaturan dokumen disepakati. Konsultasi berlangsung dalam bahasa Inggris, Mandarin, Jepang, atau Korea. Kebutuhan bahasa Indonesia perlu dikonfirmasikan. Sebelum teknisi mengganti komponen berikutnya, pastikan catatan kondisi awal dan pemberitahuan kepada penjual dapat ditemukan kembali.
 
 ## Referensi dan ruang lingkup
 

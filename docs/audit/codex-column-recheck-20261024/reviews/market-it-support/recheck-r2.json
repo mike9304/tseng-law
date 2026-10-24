@@ -1,0 +1,62 @@
+[
+  {
+    "file": "src/content/columns-it/684-italian-exporter-taiwan-unpaid-installation-balance.md",
+    "sha256": "daa13fc07060a428caa602bb3aed9713797e5eae650a9ccf31d785ea237e7755",
+    "exit": 0,
+    "result": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-it/684-italian-exporter-taiwan-unpaid-installation-balance.md [it] sentences=43 mean=16.3 cv=0.462 short=0.116 run3=0.0 opener_rep=0.25 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "removed_urls": [],
+    "metadata": {
+      "published": "\"2026-10-23\"",
+      "lastmod": "\"2026-10-23\"",
+      "date_display": "\"23 ottobre 2026\""
+    }
+  },
+  {
+    "file": "src/content/columns-it/685-italian-brand-taiwan-distributor-trademark-registration.md",
+    "sha256": "5bbd27208c8afe566ad63c4b1417ae9b40718736a44f5192336f9fd800518b3c",
+    "exit": 0,
+    "result": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-it/685-italian-brand-taiwan-distributor-trademark-registration.md [it] sentences=45 mean=15.3 cv=0.454 short=0.2 run3=0.0 opener_rep=0.25 cite_end=0.0 cite_para=0.438 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "removed_urls": [],
+    "metadata": {
+      "published": "\"2026-10-23\"",
+      "lastmod": "\"2026-10-23\"",
+      "date_display": "\"23 ottobre 2026\""
+    }
+  },
+  {
+    "file": "src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md",
+    "sha256": "4a6134359ae66e9dd30dfa1b6774cdc64579427868224774012b05997f7353b6",
+    "exit": 0,
+    "result": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md [it] sentences=44 mean=16.1 cv=0.462 short=0.182 run3=0.071 opener_rep=0.25 cite_end=0.0 cite_para=0.438 contrast=0 caveat=0 q=3\n  OK — no variety limit violated\n",
+    "removed_urls": [],
+    "metadata": {
+      "published": "\"2026-10-23\"",
+      "lastmod": "\"2026-10-24\"",
+      "date_display": "\"23 ottobre 2026\""
+    }
+  },
+  {
+    "file": "src/content/columns-it/687-italy-resident-heir-taiwan-inheritance-renunciation-debts.md",
+    "sha256": "75a4733d9ec89446b122bebebcc63281e89312cf83bc94a3aba45289d6bbeca2",
+    "exit": 0,
+    "result": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-it/687-italy-resident-heir-taiwan-inheritance-renunciation-debts.md [it] sentences=43 mean=16.7 cv=0.451 short=0.14 run3=0.049 opener_rep=0.188 cite_end=0.0 cite_para=0.688 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "removed_urls": [],
+    "metadata": {
+      "published": "\"2026-10-23\"",
+      "lastmod": "\"2026-10-23\"",
+      "date_display": "\"23 ottobre 2026\""
+    }
+  },
+  {
+    "file": "src/content/columns-it/688-italian-business-visitor-taiwan-summons-interpreter-defense.md",
+    "sha256": "b0c866e001db2cf49f9011dd173d9b428359d86a68718ae195913f860d1029a3",
+    "exit": 0,
+    "result": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-it/688-italian-business-visitor-taiwan-summons-interpreter-defense.md [it] sentences=50 mean=15.6 cv=0.454 short=0.2 run3=0.042 opener_rep=0.176 cite_end=0.0 cite_para=0.529 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+    "removed_urls": [],
+    "metadata": {
+      "published": "\"2026-10-23\"",
+      "lastmod": "\"2026-10-24\"",
+      "date_display": "\"23 ottobre 2026\""
+    }
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 679,
+    "path": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md",
+    "sha256": "d35adcb99b877247eb47456411a26c32593259d5a5f471d1d5b14eb28a404e1e",
+    "exit": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md [de] sentences=47 mean=14.5 cv=0.467 short=0.213 run3=0.133 opener_rep=0.214 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=5\n  OK — no variety limit violated\n"
+  },
+  {
+    "id": 680,
+    "path": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-de/680-taiwan-bauteile-maengelruege-pruefmuster.md",
+    "sha256": "d2bdc27e7417193dee9b69f52b1ef4549a980e928dcb93785d0a6e2fbdb2a320",
+    "exit": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-de/680-taiwan-bauteile-maengelruege-pruefmuster.md [de] sentences=52 mean=13.5 cv=0.474 short=0.154 run3=0.04 opener_rep=0.286 cite_end=0.0 cite_para=0.571 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "id": 681,
+    "path": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md",
+    "sha256": "815d56e84af1b3be19e8664b2ade58a944dd324e485307b81a9f37835b6570b1",
+    "exit": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md [de] sentences=52 mean=13.8 cv=0.465 short=0.269 run3=0.04 opener_rep=0.143 cite_end=0.0 cite_para=0.571 contrast=0 caveat=0 q=3\n  OK — no variety limit violated\n"
+  },
+  {
+    "id": 682,
+    "path": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-de/682-taiwan-gemeinsame-entwicklung-cad-geschaeftsgeheimnisse.md",
+    "sha256": "2a737101b06cd4e4f2e680bb17cc3af83f574f98c5cb03dd8f265f1a5e4c6a97",
+    "exit": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-de/682-taiwan-gemeinsame-entwicklung-cad-geschaeftsgeheimnisse.md [de] sentences=46 mean=15.4 cv=0.476 short=0.13 run3=0.068 opener_rep=0.077 cite_end=0.0 cite_para=0.692 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+  },
+  {
+    "id": 683,
+    "path": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md",
+    "sha256": "831104310c9b384912d338a3ec96db91f3d925abf77538f9462c42b0367e85ac",
+    "exit": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md [de] sentences=53 mean=13.9 cv=0.457 short=0.189 run3=0.0 opener_rep=0.188 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  }
+]

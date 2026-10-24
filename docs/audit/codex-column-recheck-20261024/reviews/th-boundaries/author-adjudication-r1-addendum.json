@@ -1,0 +1,88 @@
+{
+  "role": "author-adjudication",
+  "author": "/root/revise_th (AI editorial author)",
+  "scope": "Six additional independent-reviewer boundary questions, not independent approval",
+  "entries": [
+    {
+      "article": 704,
+      "source_sha256": "141a09903d5dbb0d709a88de9952591955277211e0b92b5822512206157bef7b",
+      "paragraph_1based": 17,
+      "decision": "agree_with_independent_reviewer_split",
+      "reason": "The statutory ceiling statement is complete at เป็นกฎทั่วไป. การจ่ายค่าธรรมเนียม begins a new nominal subject concerning payment and the consequence for card duration. Agree to split.",
+      "text": "NIA อนุญาตอายุบัตรตามเหตุผลการพำนักและเอกสารของผู้ยื่น เพดานสามปีตามมาตรา 22 เป็นกฎทั่วไป การจ่ายค่าธรรมเนียมเพิ่มจึงไม่ได้ทำให้ผู้ยื่นเลือกอายุบัตรสามปีได้ทุกราย",
+      "sentences": [
+        "NIA อนุญาตอายุบัตรตามเหตุผลการพำนักและเอกสารของผู้ยื่น",
+        "เพดานสามปีตามมาตรา 22 เป็นกฎทั่วไป",
+        "การจ่ายค่าธรรมเนียมเพิ่มจึงไม่ได้ทำให้ผู้ยื่นเลือกอายุบัตรสามปีได้ทุกราย"
+      ]
+    },
+    {
+      "article": 704,
+      "source_sha256": "141a09903d5dbb0d709a88de9952591955277211e0b92b5822512206157bef7b",
+      "paragraph_1based": 19,
+      "decision": "agree_with_independent_reviewer_split",
+      "reason": "The provision attribution is complete at วางหลักนี้ไว้. นักศึกษาและผู้ติดตาม is the subject of a distinct practical consequence. Agree to split the existing paragraph; the later requested prose repair will remove the metacommentary altogether and require a new map.",
+      "text": "สิทธิทำงานต้องมีใบอนุญาตหรือข้อยกเว้นตามกฎหมาย มาตรา 43 แห่งกฎหมายบริการจัดหางาน วางหลักนี้ไว้ นักศึกษาและผู้ติดตามจึงยังเริ่มงานโดยอาศัยเพียง ARC ไม่ได้",
+      "sentences": [
+        "สิทธิทำงานต้องมีใบอนุญาตหรือข้อยกเว้นตามกฎหมาย",
+        "มาตรา 43 แห่งกฎหมายบริการจัดหางาน วางหลักนี้ไว้",
+        "นักศึกษาและผู้ติดตามจึงยังเริ่มงานโดยอาศัยเพียง ARC ไม่ได้"
+      ]
+    },
+    {
+      "article": 705,
+      "source_sha256": "d4ac78d3ec10dc00d41e4227db88562736b690136c9f6f462f323c791b8a1aa6",
+      "paragraph_1based": 2,
+      "decision": "agree_with_independent_reviewer_split",
+      "reason": "The classification of application documents is complete at คำขอคนละประเภท. การเตรียมเอกสาร begins a separate assertion about preparation. Agree to split the existing paragraph; I also agree that the latter generic assertion can be deleted in the prose repair.",
+      "text": "การเลือกวีซ่าจึงต้องดูทั้งสัญชาติ หนังสือเดินทาง วิธีเข้าเมือง และเหตุผลที่จะอยู่ต่อ หนังสือตอบรับเรียน สัญญาจ้าง หรือทะเบียนสมรสใช้ประกอบคำขอคนละประเภท การเตรียมเอกสารให้ตรงตั้งแต่ก่อนเดินทางจะทำให้ทราบว่ายื่นขอพำนักในไต้หวันได้ด้วยเงื่อนไขใด",
+      "sentences": [
+        "การเลือกวีซ่าจึงต้องดูทั้งสัญชาติ หนังสือเดินทาง วิธีเข้าเมือง และเหตุผลที่จะอยู่ต่อ",
+        "หนังสือตอบรับเรียน สัญญาจ้าง หรือทะเบียนสมรสใช้ประกอบคำขอคนละประเภท",
+        "การเตรียมเอกสารให้ตรงตั้งแต่ก่อนเดินทางจะทำให้ทราบว่ายื่นขอพำนักในไต้หวันได้ด้วยเงื่อนไขใด"
+      ]
+    },
+    {
+      "article": 705,
+      "source_sha256": "d4ac78d3ec10dc00d41e4227db88562736b690136c9f6f462f323c791b8a1aa6",
+      "paragraph_1based": 8,
+      "decision": "agree_with_independent_reviewer_split",
+      "reason": "The family-entitlement consideration is complete at ตามสถานะแรงงานด้วย. ข้อยกเว้นเรื่องผู้ติดตาม is a separate subject explaining the NIA exclusion. Agree to split without changing its conditional legal scope.",
+      "text": "แรงงานในภาคการผลิต งานดูแล หรือประเภทงานที่อยู่ในระบบแรงงานข้ามชาติต้องใช้หนังสืออนุญาตของกระทรวงแรงงานและวีซ่าที่ตรงกับการจ้าง NIA 0926 ระบุระบบยื่นออนไลน์และเอกสารสำหรับแรงงานกลุ่มนี้ สิทธิของสมาชิกครอบครัวก็ต้องพิจารณาตามสถานะแรงงานด้วย ข้อยกเว้นเรื่องผู้ติดตามใน NIA 0915 ไม่ได้ให้ใช้เกณฑ์ครอบครัวของผู้ประกอบวิชาชีพแทนโดยอัตโนมัติ",
+      "sentences": [
+        "แรงงานในภาคการผลิต งานดูแล หรือประเภทงานที่อยู่ในระบบแรงงานข้ามชาติต้องใช้หนังสืออนุญาตของกระทรวงแรงงานและวีซ่าที่ตรงกับการจ้าง",
+        "NIA 0926 ระบุระบบยื่นออนไลน์และเอกสารสำหรับแรงงานกลุ่มนี้",
+        "สิทธิของสมาชิกครอบครัวก็ต้องพิจารณาตามสถานะแรงงานด้วย",
+        "ข้อยกเว้นเรื่องผู้ติดตามใน NIA 0915 ไม่ได้ให้ใช้เกณฑ์ครอบครัวของผู้ประกอบวิชาชีพแทนโดยอัตโนมัติ"
+      ]
+    },
+    {
+      "article": 705,
+      "source_sha256": "d4ac78d3ec10dc00d41e4227db88562736b690136c9f6f462f323c791b8a1aa6",
+      "paragraph_1based": 14,
+      "decision": "agree_with_independent_reviewer_split",
+      "reason": "The instruction to extend the authorized stay ends at วีซ่าที่ถืออยู่. การจ่ายค่าเรียนต่อ is a new subject stating that tuition does not extend immigration permission. Agree to separate sentences.",
+      "text": "ระหว่างเรียนยังต้องรักษาสถานะเข้าเมือง หากระยะอยู่จะสิ้นสุดก่อนครบเงื่อนไขขอพำนัก ผู้เรียนต้องดำเนินการต่อระยะอยู่ตามสิทธิของวีซ่าที่ถืออยู่ การจ่ายค่าเรียนต่อไม่ได้ขยายระยะอยู่ให้เอง",
+      "sentences": [
+        "ระหว่างเรียนยังต้องรักษาสถานะเข้าเมือง",
+        "หากระยะอยู่จะสิ้นสุดก่อนครบเงื่อนไขขอพำนัก ผู้เรียนต้องดำเนินการต่อระยะอยู่ตามสิทธิของวีซ่าที่ถืออยู่",
+        "การจ่ายค่าเรียนต่อไม่ได้ขยายระยะอยู่ให้เอง"
+      ]
+    },
+    {
+      "article": 705,
+      "source_sha256": "d4ac78d3ec10dc00d41e4227db88562736b690136c9f6f462f323c791b8a1aa6",
+      "paragraph_1based": 18,
+      "decision": "agree_with_independent_reviewer_split",
+      "reason": "The eligibility requirement is complete at Gold Card ทางการ. การมีข้อเสนอจ้างงาน starts a distinct proposition about the insufficiency of an offer alone. Agree to separate sentences.",
+      "text": "Employment Gold Card ตามมาตรา 9 รวมใบอนุญาตทำงาน Resident Visa บัตร ARC และใบอนุญาตกลับเข้าเมืองไว้ในเอกสารเดียว ผู้สมัครต้องผ่านคุณสมบัติของสาขาที่กำหนดในเว็บไซต์ Gold Card ทางการ การมีข้อเสนอจ้างงานอย่างเดียวไม่ได้ทำให้ผ่านเกณฑ์",
+      "sentences": [
+        "Employment Gold Card ตามมาตรา 9 รวมใบอนุญาตทำงาน Resident Visa บัตร ARC และใบอนุญาตกลับเข้าเมืองไว้ในเอกสารเดียว",
+        "ผู้สมัครต้องผ่านคุณสมบัติของสาขาที่กำหนดในเว็บไซต์ Gold Card ทางการ",
+        "การมีข้อเสนอจ้างงานอย่างเดียวไม่ได้ทำให้ผ่านเกณฑ์"
+      ]
+    }
+  ],
+  "unresolved_requested_boundaries": [],
+  "measurement_note": "Decisions are linguistic and do not use style scores. Prose remains frozen."
+}

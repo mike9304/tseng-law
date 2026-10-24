@@ -1,0 +1,21 @@
+{
+  "tool": "image_gen__imagegen",
+  "review": "Root inspected all three generated images: distinct topic objects; no text, faces, logos, flags or official document replicas. Shared Taipei setting and palette. WebP export changes only file encoding.",
+  "assets": [
+    {
+      "key": "first",
+      "prompt": "Use case: illustration-story. Asset: landscape 16:9 editorial cover illustration for a Taiwan residence-permit application article on a law firm's website. Make one sophisticated, tactile gouache and colored-pencil still life on warm ivory paper. A plain dark blue passport-like travel booklet without any lettering or emblem, a partly open paper document folder with blank sheets, a small completely unmarked ivory card, and a simple pen sit on a real wooden application desk. In the softly abstract background, a restrained Taipei urban window view with tropical foliage. The theme is calmly preparing a first residence application. Thoughtful asymmetric composition, natural perspective, subtle paper grain, precise object edges, muted indigo, warm grey, olive, and one terracotta accent; daylight and gentle shadows. Objects large enough to read in a website thumbnail; editorial illustration, not UI. No people, hands, faces, readable text, logos, flags, seals, stamps, realistic identity-card design, numbers, QR codes, watermark, title or border. This is a single composed illustration, not a diagram, collage, or template. Opaque background.",
+      "original": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-0df2780c-9bdc-4c41-9f71-3ce2640f40f9.png"
+    },
+    {
+      "key": "paths",
+      "prompt": "Use case: illustration-story. Asset: landscape 16:9 editorial cover illustration for a Taiwan work/study/family residence-paths article. A sophisticated tactile gouache and colored-pencil still life on warm ivory paper: one shared wooden table with a closed slim laptop toward the left, a small stack of plain unlabeled books toward the center, and two simple ceramic mugs toward the right. In the foreground is an unmarked navy passport-like booklet, tying the three ordinary reasons for living abroad together. A soft abstract Taipei neighborhood and leafy window in the background. All objects belong to one believable scene; no boxed panels or arrows. Muted indigo, warm greys, olive and a touch of terracotta; restrained law-journal editorial aesthetic, natural daylight, asymmetry and breathing room. No people, hands, text, words, numerals, brand logos, flags, emblems, official document replicas, title, borders, watermark, infographic or neon gradients. Opaque background.",
+      "original": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-15b943cf-4064-481e-ab87-a5ec02d3b65f.png"
+    },
+    {
+      "key": "renewal",
+      "prompt": "Use case: illustration-story. Asset: landscape 16:9 editorial cover illustration for an article about renewing a Taiwan residence card, recording an address change, and planning return travel. Sophisticated tactile gouache and colored-pencil still life on warm ivory paper. An open blank planning notebook with a simple ribbon bookmark rests on a wooden desk beside a plain navy travel booklet, a small wholly unmarked ivory card, a pair of ordinary house keys and a closed travel bag partially in frame. A softly abstract Taiwanese city window and leafy plant in background. Convey everyday preparation and continuity, no drama. Natural perspective, detailed paper texture, muted indigo and warm grey with olive and a small terracotta accent, quiet daylight, appealing asymmetrical composition. Objects large and distinct for a web thumbnail, editorial illustration not a diagram. No people, hands, faces, calendar numerals, text, readable documents, identity-card designs, logos, flags, emblems, stamps, QR codes, watermark, headings or border. Opaque background.",
+      "original": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-3eb8f9e0-3000-44f2-b830-7d475196eb3d.png"
+    }
+  ]
+}

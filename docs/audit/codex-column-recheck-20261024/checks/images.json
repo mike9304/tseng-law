@@ -1,0 +1,35 @@
+[
+  {
+    "key": "first",
+    "file": "public/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+    "format": "webp",
+    "width": 1672,
+    "height": 941,
+    "channels": 3,
+    "premultiplied": false,
+    "size": 379140,
+    "sha256": "e33f7f381d597a9ae5b3693d7c4f887a29d7420b1b4ae3c98db664a06dceae31"
+  },
+  {
+    "key": "paths",
+    "file": "public/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+    "format": "webp",
+    "width": 1672,
+    "height": 941,
+    "channels": 3,
+    "premultiplied": false,
+    "size": 385502,
+    "sha256": "0f9d9a4041f5978119b71a6c89ba1a9b01e2643871143163a4bc4d8f792a7e84"
+  },
+  {
+    "key": "renewal",
+    "file": "public/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+    "format": "webp",
+    "width": 1672,
+    "height": 941,
+    "channels": 3,
+    "premultiplied": false,
+    "size": 284390,
+    "sha256": "9933406b2c0c64af337aaf443c6c5e1ed4afb94e9ed7ab5a5e3635a2b940f16f"
+  }
+]

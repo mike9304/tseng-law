@@ -3,12 +3,15 @@ title: "Regresar a España con salarios pendientes en Taiwán: nóminas, jornada
 seoTitle: "Salarios pendientes en Taiwán tras volver a España"
 summary: "Las nóminas, los registros de jornada y la identificación del empleador permiten preparar desde España una reclamación de salarios por el trabajo realizado en Taiwán."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 de octubre de 2026"
 read_time: "5 min de lectura"
 categories: ["Información jurídica de Taiwán"]
 topic: "labor"
 tags: ["salarios-impagados", "regreso-a-espana", "horas-extraordinarias", "prueba-laboral"]
+featured_image: "/images/columns/692-market-review-20261024.webp"
+featured_image_alt: "Maleta abierta junto a una mesa con una carpeta, una calculadora, un cuaderno y llaves."
+featured_image_caption: "Escena ilustrativa de la preparación de documentos antes de regresar a España."
 faq:
   - q: "¿Regresar a España cambia por sí solo el tribunal ante el que reclamar?"
     a: "No determina por sí solo la competencia. En Taiwán, el artículo 6 de la Ley de Procedimiento Laboral contempla, cuando demanda el trabajador, los lugares del domicilio, residencia, establecimiento principal u oficina principal del demandado o el lugar donde se prestó el trabajo. Debe comprobarse cuál corresponde al asunto."
@@ -34,7 +37,7 @@ El [artículo 22 de la Ley de Normas Laborales](https://law.moj.gov.tw/LawClass/
 
 ## Las horas necesitan una fecha y una tarea
 
-En una reclamación de horas extraordinarias interesan los registros de entrada y salida, las órdenes de trabajo, las solicitudes o autorizaciones y los mensajes sobre entregas urgentes. Un calendario reconstruido después puede ordenar la información, pero conviene señalar qué anotaciones tienen respaldo contemporáneo. La memoria por sí sola deja lagunas.
+En una reclamación de horas extraordinarias interesan los registros de entrada y salida, las órdenes de trabajo, las solicitudes o autorizaciones y los mensajes sobre entregas urgentes. Un calendario reconstruido después puede ordenar la información, pero conviene señalar qué anotaciones tienen respaldo contemporáneo. Depender solo de la memoria deja lagunas.
 
 La empresa debe conservar durante cinco años los registros de jornada y detallar la asistencia diaria hasta el minuto. No puede rechazar la solicitud del trabajador de una copia, conforme al [artículo 30 de la Ley de Normas Laborales](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=30). Resulta útil guardar también la petición y la respuesta recibida.
 
@@ -50,7 +53,7 @@ Desde España también conviene concretar la representación, el canal para reci
 
 ## Cada vencimiento conserva su fecha
 
-Las prestaciones periódicas comprendidas en el [artículo 126 del Código Civil](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126), como el salario periódico, prescriben a los cinco años. El [artículo 128](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=128) sitúa el inicio cuando la pretensión puede ejercitarse. El regreso no reinicia el cómputo. Otros conceptos necesitan su propia calificación.
+Las prestaciones periódicas comprendidas en el [artículo 126 del Código Civil](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=126), como el salario periódico, prescriben a los cinco años. El [artículo 128](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=128) sitúa el inicio cuando la pretensión puede ejercitarse. Regresar a España no reinicia el cómputo. Otros conceptos necesitan su propia calificación.
 
 Sobre la posible indemnización al terminar la relación, puede consultarse [la salida voluntaria y la indemnización laboral](/es/columns/taiwan-voluntary-resignation-severance).
 

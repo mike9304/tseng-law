@@ -1,7 +1,7 @@
 ---
-title: "Primo ARC a Taiwan: domanda, documenti e ritiro"
+title: "La prima domanda di ARC a Taiwan: scadenze, documenti e ritiro"
 seoTitle: "Primo ARC a Taiwan: come presentare la domanda"
-summary: "Dopo l’ingresso a Taiwan, la domanda di ARC richiede documenti e un canale adatti al motivo del soggiorno. Termini, costi e passaggi per lavoro, studio e famiglia."
+summary: "Quando presentare la prima domanda di ARC dopo l’ingresso a Taiwan, quali documenti allegare e come scegliere il portale o lo sportello competente."
 published: "2026-10-24"
 lastmod: "2026-10-24"
 date_display: "24 ottobre 2026"
@@ -16,65 +16,70 @@ tags:
 audience:
   - "it"
 author: "legal-ai-assistant"
+featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
+featured_image_alt: "Un libretto da viaggio senza scritte, una cartellina e una piccola tessera su una scrivania."
+featured_image_caption: "Immagine illustrativa: il libretto e la tessera non sono documenti ufficiali e non si riferiscono a una domanda reale."
 faq:
   - q: "Il visto di residenza sostituisce la domanda di ARC?"
-    a: "Chi entra a Taiwan con un visto di residenza deve normalmente richiedere l’ARC entro 30 giorni, contando dal giorno successivo all’ingresso. Esistono eccezioni per documenti già comprensivi della funzione ARC, come la Gold Card."
+    a: "Di regola occorre presentare anche la domanda di ARC, entro 30 giorni dal giorno successivo all’ingresso con il visto di residenza. Sono esclusi i titoli che già svolgono la funzione di ARC, come una Gold Card valida."
   - q: "Posso usare la stessa fotografia preparata per il visto?"
-    a: "La guida NIA per l’ARC richiede una foto a colori scattata negli ultimi due anni, conforme alle specifiche indicate. Il visto BOCA richiede invece foto degli ultimi sei mesi: una foto già disponibile va confrontata con i requisiti della procedura scelta."
+    a: "Può essere utilizzata se rispetta le specifiche NIA: per l’ARC ordinario serve una foto a colori scattata negli ultimi due anni. Per il visto BOCA il limite è di sei mesi. La stessa foto deve quindi soddisfare i requisiti di ciascuna domanda."
   - q: "Per lo studente basta la lettera di ammissione?"
-    a: "La lettera può documentare l’ammissione, ma non esaurisce la domanda. Servono anche i documenti di ingresso e identità, la prova dell’indirizzo e gli altri allegati previsti. Chi è già iscritto presenta il documento di iscrizione richiesto; per il mandarino valgono condizioni ulteriori."
+    a: "La lettera documenta l’ammissione. Alla domanda vanno allegati anche i documenti di identità e ingresso, la prova dell’indirizzo e gli altri documenti richiesti. Dopo l’iscrizione serve il relativo certificato; i corsi di mandarino hanno ulteriori condizioni."
 ---
 
-Trenta giorni: chi entra a Taiwan con un visto di residenza deve normalmente richiedere l’Alien Resident Certificate, o ARC, entro questo termine, contando dal giorno successivo all’ingresso. L’obbligo viene dall’[articolo 22 della legge sull’immigrazione](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22). Il termine riguarda quel preciso ingresso con residenza autorizzata; non attribuisce a ogni visitatore il diritto di ottenere una carta.
+La domanda di ARC, l’Alien Resident Certificate, va presentata di regola entro 30 giorni dall’ingresso a Taiwan con un visto di residenza. Il conteggio parte dal giorno successivo all’arrivo. Questo obbligo, previsto dall’[articolo 22 della legge sull’immigrazione](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22), riguarda chi entra con quel visto; per un visitatore, la possibilità di chiedere la residenza dipende dai requisiti del percorso scelto.
 
-Per chi ottiene a Taiwan un visto di residenza in sostituzione del titolo usato all’ingresso, [BOCA fissa 30 giorni dalla data di rilascio](https://www.boca.gov.tw/fp-398-723-7b71f-1.html) per chiedere l’ARC. Esistono anche domande dirette alla NIA, l’Agenzia nazionale per l’immigrazione, tra cui quella dei professionisti che soddisfano l’[articolo 16 della legge sui professionisti stranieri](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16). Chi ha già un titolo valido comprensivo della funzione ARC, come la Gold Card, rientra nell’eccezione dell’articolo 22.
+Se il visto di residenza viene rilasciato quando si è già a Taiwan, in sostituzione del titolo usato all’ingresso, i [30 giorni decorrono dalla data di rilascio](https://www.boca.gov.tw/fp-398-723-7b71f-1.html). Chi possiede già un titolo valido che svolge anche la funzione di ARC, come la Gold Card, rientra invece nell’eccezione dell’articolo 22.
 
-## Il fascicolo parte dal motivo del soggiorno
+## I documenti per lavoro, studio e famiglia
 
-Nel percorso con visto di residenza, la [guida generale NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) richiede il modulo, passaporto e visto, una fotografia conforme e documenti che dimostrino il motivo della domanda. Vanno preparati gli originali e le copie richieste. Serve inoltre una prova dell’indirizzo attuale, per esempio il contratto di locazione o la documentazione prevista per chi abita presso il proprietario.
+Per chi ha un visto di residenza, la [guida NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) richiede modulo, passaporto, visto, fotografia e documenti sul motivo del soggiorno. Occorrono gli originali e le copie indicate. Si aggiunge una prova dell’indirizzo attuale: per esempio, il contratto di locazione oppure la documentazione prevista per chi abita presso il proprietario.
 
-Gli allegati cambiano con la posizione del richiedente:
+Gli allegati relativi al soggiorno cambiano a seconda della domanda:
 
-- Per un impiego soggetto a permesso, occorrono l’autorizzazione pertinente e il certificato di impiego rilasciato nell’ultimo mese.
-- Per lo studio, si usa la lettera di ammissione oppure il certificato di iscrizione previsto dalla fase del corso. Il [sistema studenti NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) distingue anche chi entra con un visto di visita per studio e richiede gli allegati aggiuntivi corrispondenti.
-- Per motivi familiari, occorrono la prova del rapporto e i documenti relativi alla persona raggiunta. Il coniuge di un cittadino taiwanese residente con registrazione anagrafica deve documentare il matrimonio registrato a Taiwan.
+- Per un impiego soggetto a permesso servono l’autorizzazione pertinente e un certificato di impiego rilasciato nell’ultimo mese.
+- Lo studente presenta la lettera di ammissione o il certificato di iscrizione, secondo la fase del corso. Il [sistema studenti NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) prevede ulteriori allegati per chi è entrato con un visto di visita per studio.
+- La domanda per motivi familiari richiede la prova del rapporto e i documenti della persona raggiunta. Per il coniuge di un cittadino taiwanese residente con registrazione anagrafica, occorre dimostrare che il matrimonio è stato registrato a Taiwan.
 
-Un documento può essere formalmente valido ma riferirsi alla situazione precedente. Prima di inviarlo, è utile confrontare nome, numero di passaporto, scuola o datore di lavoro e indirizzo con i dati della domanda. Le date devono essere leggibili.
+Un certificato relativo al precedente impiego o al vecchio indirizzo può non descrivere più la situazione dichiarata nella domanda. Nel preparare gli allegati, nome, numero di passaporto, scuola, datore di lavoro e indirizzo vanno confrontati con i dati inseriti nel modulo. Anche le date dei documenti devono risultare leggibili.
 
-## Fotografie e documenti rilasciati all’estero
+## Fotografie, traduzioni e certificati italiani
 
-Una fotografia per l’ARC ordinario deve essere stata scattata negli ultimi due anni e rispettare le specifiche NIA. Il [visto di residenza BOCA](https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html) richiede invece fotografie degli ultimi sei mesi. BOCA, l’Ufficio degli affari consolari del Ministero degli Affari esteri, gestisce la fase del visto; NIA gestisce la residenza e la carta.
+La fotografia per l’ARC ordinario deve risalire agli ultimi due anni e rispettare le specifiche NIA. Le fotografie per il [visto di residenza BOCA](https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html) devono invece essere state scattate negli ultimi sei mesi. Le due domande fanno capo a uffici diversi: BOCA, l’Ufficio degli affari consolari del Ministero degli Affari esteri, si occupa del visto; la NIA, Agenzia nazionale per l’immigrazione, della residenza e della carta.
 
-Sui certificati esteri possono servire autenticazione e traduzione. La guida NIA indica l’autenticazione della rappresentanza taiwanese competente e consente di richiedere una traduzione cinese verificata o autenticata nelle forme previste. Per gli studenti, le [istruzioni dedicate](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) specificano il trattamento delle traduzioni cinesi. Non basta quindi presumere che una traduzione accettata dall’università sia sufficiente per ogni pratica.
+I certificati esteri possono richiedere autenticazione e traduzione. La guida NIA indica l’autenticazione presso la rappresentanza taiwanese competente e prevede che possa essere richiesta una traduzione cinese verificata o autenticata nelle forme ammesse. Per gli studenti, le [istruzioni dedicate](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) precisano i requisiti delle traduzioni cinesi: l’accettazione di una traduzione da parte dell’università non ne garantisce l’idoneità per la pratica di residenza.
 
-Chi prepara documenti in Italia può trovare i contatti competenti nell’[elenco BOCA delle rappresentanze all’estero](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html). Il paese che ha emesso il certificato conta: parlare italiano o abitare in Italia non rende italiano un documento rilasciato altrove. Prima di pagare una traduzione, conviene indicare all’ufficio il tipo di certificato, il paese di emissione e la pratica per cui sarà usato.
+L’[elenco BOCA delle rappresentanze all’estero](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html) permette di individuare l’ufficio cui chiedere le formalità per un certificato rilasciato in Italia. Conta il paese di emissione del documento. Un certificato rilasciato altrove può dunque seguire un altro percorso, anche se il richiedente vive in Italia o parla italiano. Prima di commissionare la traduzione, l’ufficio deve conoscere il tipo di certificato, dove è stato emesso e per quale domanda verrà utilizzato.
 
-## Online o allo sportello
+## Il portale o lo sportello competente
 
-Quale portale corrisponde al proprio caso? NIA pubblica percorsi distinti:
+Si può inviare tutto online? La NIA offre portali diversi, ciascuno riservato alle categorie indicate nelle relative istruzioni.
 
-| Situazione | Punto di accesso ufficiale |
+| Domanda | Accesso ufficiale |
 |---|---|
-| Studente di un corso ammesso o studente di mandarino che soddisfa le condizioni | [Portale studenti](https://coa.immigration.gov.tw/coa-frontend/student/entry): selezionare «Foreign students and Overseas Chinese students» |
-| Professionista o familiare compreso nei requisiti del programma online | [Portale professionisti e familiari](https://coa.immigration.gov.tw/coa-frontend/foreign-white-collar) e [istruzioni](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/) |
-| Lavoratore migrante soggetto alla procedura specifica | [Portale dedicato](https://coa.immigration.gov.tw/coa-frontend/foreign-labor) e [istruzioni](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/) |
-| Domanda allo sportello, compreso il ricongiungimento con cittadino taiwanese | Centro di servizio NIA competente per l’indirizzo attuale, secondo la [guida generale](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) |
+| Studente di un corso ammesso o di mandarino che soddisfa le condizioni | [Portale studenti](https://coa.immigration.gov.tw/coa-frontend/student/entry), alla voce «Foreign students and Overseas Chinese students» |
+| Professionista o familiare ammesso alla procedura online | [Portale professionisti e familiari](https://coa.immigration.gov.tw/coa-frontend/foreign-white-collar) e [istruzioni](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/) |
+| Lavoratore migrante soggetto alla procedura specifica | [Portale lavoratori migranti](https://coa.immigration.gov.tw/coa-frontend/foreign-labor) e [istruzioni](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/) |
+| Domanda allo sportello, compreso il ricongiungimento con un cittadino taiwanese | Centro di servizio NIA competente per l’indirizzo attuale, secondo la [guida generale](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) |
 
-Lo studente può registrare un account personale. Il portale per lavoratori migranti distingue invece gli accessi di intermediari, imprese, strutture e datori familiari; esclude i lavoratori tecnici di livello intermedio, rinviandoli allo sportello NIA. Per ogni invio vanno conservati allegati, numero della pratica e notifiche.
+Gli studenti possono aprire un account personale. Il portale per lavoratori migranti prevede accessi per intermediari, imprese, strutture e datori di lavoro familiari; i lavoratori tecnici di livello intermedio ne sono esclusi e devono rivolgersi allo sportello NIA. Dopo l’invio, occorre conservare gli allegati, il numero della pratica e le notifiche ricevute.
 
-Alla prima domanda come coniuge di cittadino taiwanese, la [guida NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) prevede la presenza del coniuge taiwanese; la prima carta ha durata di un anno. Questa regola non descrive tutte le domande familiari.
+Alla prima domanda come coniuge di un cittadino taiwanese, la [guida NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) richiede che sia presente anche il coniuge taiwanese. La prima carta dura un anno. Si tratta della regola per questa categoria, non per ogni domanda familiare.
 
-## Spese, integrazioni e consegna della carta
+Alcuni richiedenti possono rivolgersi direttamente alla NIA senza passare prima dal rilascio di un visto di residenza. È il caso, tra gli altri, dei professionisti che soddisfano l’[articolo 16 della legge sui professionisti stranieri](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16). La procedura dipende quindi anche dal titolo usato per entrare a Taiwan.
 
-Secondo il [tariffario ordinario](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135), l’ARC costa NT$1.000 per ogni anno di validità; anche una frazione di anno costa un’annualità. Per la domanda dopo un ingresso senza visto o con visto di visita è prevista una maggiorazione di NT$2.200. Le riduzioni per lo specifico status di studente d’origine cinese d’oltremare non spettano automaticamente a tutti gli studenti internazionali.
+## Quanto costa e quando si ritira l’ARC
 
-La durata concessa dipende dal motivo e dalle condizioni della residenza. La regola generale dell’articolo 22 fissa un massimo di tre anni; pagare più annualità non crea un diritto a una carta più lunga. Gli eventuali regimi speciali vanno verificati separatamente.
+Il [tariffario ordinario](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135) prevede NT$1.000 per ogni anno di validità; una frazione di anno viene conteggiata come un’annualità intera. La domanda presentata dopo un ingresso senza visto o con visto di visita comporta una maggiorazione di NT$2.200. Le riduzioni previste per lo status specifico di studente d’origine cinese d’oltremare non si applicano a tutti gli studenti internazionali.
 
-[NIA indica dieci giorni lavorativi](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) per la procedura generale, escludendo restituzioni, integrazioni e colloqui. La [procedura studenti](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) indica cinque giorni lavorativi. Sono tempi di trattazione, non una data di consegna garantita. Se arriva una richiesta di integrazione, occorre rispettare il termine indicato e conservare la prova dell’invio; la guida generale precisa che il conteggio della verifica riparte dopo l’integrazione.
+A stabilire la durata è l’autorità. Nell’ambito della regola generale dell’articolo 22, il massimo è di tre anni, in funzione del motivo e delle condizioni della residenza; eventuali regimi speciali seguono le proprie disposizioni. Il pagamento di più annualità non dà diritto a una carta di durata maggiore.
 
-Ottenuta l’approvazione, gli studenti devono pagare entro cinque giorni lavorativi, secondo la [guida NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news). Per ritirare la carta con chip, si stampa la ricevuta online e ci si presenta al centro scelto nella domanda tre giorni lavorativi dopo il pagamento. Questo intervallo non è il tempo totale della pratica. Gli altri percorsi seguono le proprie istruzioni di consegna. Al ritiro si controllano dati e scadenza; un errore va segnalato subito.
+Per la procedura generale, [NIA indica dieci giorni lavorativi](https://www.immigration.gov.tw/5475/5478/141465/141808/141970), escludendo restituzioni, integrazioni e colloqui. La [procedura studenti](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) ne indica cinque. Questi tempi riguardano l’esame della domanda e non garantiscono una data di consegna. Una richiesta di integrazione va soddisfatta entro il termine indicato, conservando la prova dell’invio; per la procedura generale, il conteggio del tempo di esame riparte dopo l’integrazione.
 
-L’ARC documenta la residenza. Per lavorare occorre verificare il permesso o l’esenzione applicabile, come stabilisce l’[Employment Service Act](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001). La [scelta del percorso per lavoro, studio e famiglia](/it/columns/taiwan-visa-residence-work-study-family) e la [guida a rinnovo e variazioni](/it/columns/taiwan-arc-renewal-changes-reentry) affrontano rispettivamente la preparazione del soggiorno e i cambiamenti successivi. Dopo il ritiro, si annota la scadenza effettivamente riportata sul titolo rilasciato.
+Lo studente deve pagare entro cinque giorni lavorativi dall’approvazione, secondo la [guida NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news); tre giorni lavorativi dopo il pagamento è possibile presentarsi al centro scelto con la ricevuta online stampata e ritirare la carta con chip. Gli altri percorsi hanno proprie istruzioni di consegna.
+
+Al ritiro, dati personali e scadenza riportati sulla carta vanno controllati e gli errori segnalati subito. L’ARC documenta la residenza; il lavoro richiede anche il permesso o l’esenzione applicabile ai sensi dell’[Employment Service Act](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001). L’articolo sui [percorsi per lavoro, studio e famiglia](/it/columns/taiwan-visa-residence-work-study-family) spiega questo passaggio; quello su [rinnovo e variazioni](/it/columns/taiwan-arc-renewal-changes-reentry) riguarda la gestione del titolo dopo il rilascio. Per il prossimo rinnovo conta la scadenza effettivamente indicata sull’ARC ricevuto.
 
 ## Fonti ufficiali
 

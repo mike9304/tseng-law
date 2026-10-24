@@ -1,0 +1,270 @@
+{
+  "researchDate": "2026-10-24",
+  "recordedAt": "2026-10-24T06:28:50Z",
+  "purpose": "Read-only official-source refresh for ARC columns 704–706",
+  "scopeLimit": "Tool access metadata, not a copy of source text or a full 42-language legal review",
+  "batches": [
+    {
+      "batch": "source_batch_history",
+      "observations": [
+        "Internal Error ()",
+        "citeturn663view0 [wordlim: 200] Source: open({\"ref_id\":\"https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295\",\"lineno\":null}); Total lines: 1",
+        "Internal Error ()",
+        "citeturn663view1 [wordlim: 200] Source: open({\"ref_id\":\"https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0080132\",\"lineno\":null}); Total lines: 1",
+        "Internal Error ()",
+        "citeturn663view2 [wordlim: 200] Source: open({\"ref_id\":\"https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0080129\",\"lineno\":null}); Total lines: 1",
+        "外國專業人才延攬及僱用法-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030295)",
+        "citeturn663view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030295\",\"lineno\":null}); Total lines: 416"
+      ]
+    },
+    {
+      "batch": "source_batch_nia",
+      "observations": [
+        "National Immigration Agency, R.O.C. (Taiwan) - 0902 Guidelines for Foreign National Applying for Residency, Extension of Residency, or Change in Residency Status (https://www.immigration.gov.tw/5475/5478/141465/141808/141970)",
+        "citeturn664view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.immigration.gov.tw/5475/5478/141465/141808/141970\",\"lineno\":null}); Total lines: 194",
+        "移民署中文網-外國人及香港澳門居民線上申請創業家簽證與居留證及延期居留或變更登記送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/)",
+        "citeturn664view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/\",\"lineno\":null}); Total lines: 354",
+        "移民署中文網-外國或香港澳門特定專業人才線上申請就業金卡及延期或變更登記送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/)",
+        "citeturn664view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/\",\"lineno\":null}); Total lines: 437",
+        "National Immigration Agency, R.O.C. (Taiwan) - 0929 Guidelines for Online Application for Residence, Extension of Residence, and Registration of Changes for Foreign Students and Overseas Compatriot Students (https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news)",
+        "citeturn664view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news\",\"lineno\":null}); Total lines: 158"
+      ]
+    },
+    {
+      "batch": "source_batch_nia_find",
+      "observations": [
+        "National Immigration Agency, R.O.C. (Taiwan) - 0902 Guidelines for Foreign National Applying for Residency, Extension of Residency, or Change in Residency Status (https://www.immigration.gov.tw/5475/5478/141465/141808/141970)",
+        "citeturn665view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn664view0\",\"pattern\":\"one (1) year\"}); Total lines: 194",
+        "National Immigration Agency, R.O.C. (Taiwan) - 0902 Guidelines for Foreign National Applying for Residency, Extension of Residency, or Change in Residency Status (https://www.immigration.gov.tw/5475/5478/141465/141808/141970)",
+        "citeturn665view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn664view0\",\"pattern\":\"10\"}); Total lines: 194",
+        "移民署中文網-外國人及香港澳門居民線上申請創業家簽證與居留證及延期居留或變更登記送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/)",
+        "citeturn665view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn664view1\",\"pattern\":\"四個月\"}); Total lines: 354",
+        "No matching text found for \"四個月\"--------------------------------------------------------------------------------",
+        "移民署中文網-外國人及香港澳門居民線上申請創業家簽證與居留證及延期居留或變更登記送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/)",
+        "citeturn665view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn664view1\",\"pattern\":\"三個月\"}); Total lines: 354",
+        "No matching text found for \"三個月\"--------------------------------------------------------------------------------",
+        "移民署中文網-外國或香港澳門特定專業人才線上申請就業金卡及延期或變更登記送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/)",
+        "citeturn665view4 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn664view2\",\"pattern\":\"四個月\"}); Total lines: 437",
+        "No matching text found for \"四個月\"--------------------------------------------------------------------------------",
+        "National Immigration Agency, R.O.C. (Taiwan) - 0929 Guidelines for Online Application for Residence, Extension of Residence, and Registration of Changes for Foreign Students and Overseas Compatriot Students (https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news)",
+        "citeturn665view5 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn664view3\",\"pattern\":\"six (6) months\"}); Total lines: 158",
+        "National Immigration Agency, R.O.C. (Taiwan) - 0929 Guidelines for Online Application for Residence, Extension of Residence, and Registration of Changes for Foreign Students and Overseas Compatriot Students (https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news)",
+        "citeturn665view6 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn664view3\",\"pattern\":\"two (2) years\"}); Total lines: 158"
+      ]
+    },
+    {
+      "batch": "source_batch_history_success",
+      "observations": [
+        "外國專業人才延攬及僱用法 沿革-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=A0030295)",
+        "citeturn667view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"turn666view0\",\"lineno\":30}); Total lines: 126",
+        "入出國及移民法 沿革-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0080132)",
+        "citeturn667view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: click({\"ref_id\":\"turn666view2\",\"id\":16}); Total lines: 150"
+      ]
+    },
+    {
+      "batch": "source_nia_time",
+      "observations": [
+        "移民署中文網-外國人及香港澳門居民線上申請創業家簽證與居留證及延期居留或變更登記送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/)",
+        "citeturn668view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn664view1\",\"pattern\":\"4個月\"}); Total lines: 354",
+        "No matching text found for \"4個月\"--------------------------------------------------------------------------------",
+        "移民署中文網-外國人及香港澳門居民線上申請創業家簽證與居留證及延期居留或變更登記送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/)",
+        "citeturn668view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn664view1\",\"pattern\":\"3個月\"}); Total lines: 354",
+        "No matching text found for \"3個月\"--------------------------------------------------------------------------------",
+        "移民署中文網-外國或香港澳門特定專業人才線上申請就業金卡及延期或變更登記送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/)",
+        "citeturn668view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn664view2\",\"pattern\":\"4個月\"}); Total lines: 437",
+        "No matching text found for \"4個月\"--------------------------------------------------------------------------------",
+        "National Immigration Agency, R.O.C. (Taiwan) - 0929 Guidelines for Online Application for Residence, Extension of Residence, and Registration of Changes for Foreign Students and Overseas Compatriot Students (https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news)",
+        "citeturn668view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn664view3\",\"pattern\":\"(3) Extension\"}); Total lines: 158",
+        "No matching text found for \"(3) Extension\""
+      ]
+    },
+    {
+      "batch": "source_batch_precision",
+      "observations": [
+        "National Immigration Agency, R.O.C. (Taiwan) - 0929 Guidelines for Online Application for Residence, Extension of Residence, and Registration of Changes for Foreign Students and Overseas Compatriot Students (https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news)",
+        "citeturn669view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"turn664view3\",\"lineno\":75}); Total lines: 158",
+        "Internal Error ()",
+        "citeturn669view1 [wordlim: 200] Source: open({\"ref_id\":\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=12\",\"lineno\":null}); Total lines: 1",
+        "入出國及移民法§23-1-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=23-1&pcode=D0080132)",
+        "citeturn669view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1\",\"lineno\":null}); Total lines: 124",
+        "移民署中文網-外國人及香港澳門居民線上申請創業家簽證與居留證及延期居留或變更登記送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/)",
+        "citeturn669view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn664view1\",\"pattern\":\"屆滿前\"}); Total lines: 354",
+        "No matching text found for \"屆滿前\"--------------------------------------------------------------------------------",
+        "移民署中文網-外國或香港澳門特定專業人才線上申請就業金卡及延期或變更登記送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/)",
+        "citeturn669view4 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn664view2\",\"pattern\":\"屆滿前\"}); Total lines: 437",
+        "No matching text found for \"屆滿前\""
+      ]
+    },
+    {
+      "batch": "source_nia_4mo_direct",
+      "observations": [
+        "移民署中文網-外國人及香港澳門居民線上申請創業家簽證與居留證及延期居留或變更登記送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/)",
+        "citeturn670view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"turn664view1\",\"lineno\":230}); Total lines: 354",
+        "L234: 三、申請居留證及延期相關問題，請洽本署各地服務站。(https://www.immigration.gov.tw/5385/5388/7181/7184/7193/)",
+        "移民署中文網-外國或香港澳門特定專業人才線上申請就業金卡及延期或變更登記送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/)",
+        "citeturn670view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"turn664view2\",\"lineno\":280}); Total lines: 437"
+      ]
+    },
+    {
+      "batch": "source_boca_student",
+      "observations": [
+        "Bureau of Consular Affairs, Ministry of Foreign Affairs, Republic of China(Taiwan)-Resident Visas for Foreign Students(Full-time PhD, Master’s, Bachelor’s program, or senior high school Students and below) (https://www.boca.gov.tw/cp-166-283-c4da3-2.html)",
+        "citeturn672view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.boca.gov.tw/cp-166-283-c4da3-2.html\",\"lineno\":null}); Total lines: 149",
+        "Bureau of Consular Affairs, Ministry of Foreign Affairs, Republic of China(Taiwan)-Resident Visas for Studying Mandarin Chinese (https://www.boca.gov.tw/fp-166-285-041cb-2.html)",
+        "citeturn672view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.boca.gov.tw/fp-166-285-041cb-2.html\",\"lineno\":null}); Total lines: 99"
+      ]
+    },
+    {
+      "batch": "source_immigration_routes",
+      "observations": [
+        "入出國及移民法§23-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=23&pcode=D0080132)",
+        "citeturn671view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23\",\"lineno\":null}); Total lines: 146",
+        "National Immigration Agency, R.O.C. (Taiwan) - 0915 Guidelines for Residency Applications for Foreign Nationals Holding a Visitor Visa or Entering the Republic of China through Visa Exemption (https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news)",
+        "citeturn671view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news\",\"lineno\":null}); Total lines: 220"
+      ]
+    },
+    {
+      "batch": "source_boca_mandarin_nomad",
+      "observations": [
+        "Bureau of Consular Affairs, Ministry of Foreign Affairs, Republic of China(Taiwan)-Visitor Visa for Studying Chinese (https://www.boca.gov.tw/fp-158-260-9690c-2.html)",
+        "citeturn673view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.boca.gov.tw/fp-158-260-9690c-2.html\",\"lineno\":null}); Total lines: 80",
+        "Bureau of Consular Affairs, Ministry of Foreign Affairs, Republic of China(Taiwan)-Digital nomad visitor visa (https://www.boca.gov.tw/cp-158-7718-c0382-2.html)",
+        "citeturn673view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.boca.gov.tw/cp-158-7718-c0382-2.html\",\"lineno\":null}); Total lines: 145"
+      ]
+    },
+    {
+      "batch": "source_fee_0",
+      "observations": [
+        "移民署中文網-外國人申請居留及延期居留或變更居留原因送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/)",
+        "citeturn674view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/\",\"lineno\":null}); Total lines: 329"
+      ]
+    },
+    {
+      "batch": "source_fee_1",
+      "observations": [
+        "移民署中文網-外國人持停留簽證或以免簽證方式入國申請居留送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181946/)",
+        "citeturn675search0 [wordlim: 200] Published: 9 months ago; Crawled: today;     (二)申請人為經許可在臺以「應聘專業工作、在臺投資或外國公司負責人」居留外國人之依親眷屬，或為持有有效就業金卡者之依親眷屬，且皆為免簽證適用國家(不包含免簽證試辦國家)人士者，免附。 ...     (一)申請人為經許可在臺依本法第二十三條第一項第四款至第八款（即應聘專業工作、在臺投資、外國公司負責人、依前三款規定，經核准居留或永久居留者，其年滿十八歲因身心障礙無法自理生活之子女或經僑務主管機關核轉各級主管教育行政機關分發之自行國就學僑生）申請者，免附。 ... 二、以免簽證方式或持停留簽證入國申請者，加收新臺幣二千二百元。",
+        "外國護照簽證收費標準-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=E0030011)",
+        "citeturn675search1 [wordlim: 200] Published: 19.1 years ago; Crawled: today; 三、單次入境居留簽證，在國內申請者，每件新臺幣二千二百元；在國外申請者，每件美金六十六元。 ... 但有國庫法施行細則第二十二條第一項各款所定情形之一者，得免掣發。",
+        "就業 PASS 卡及創業家簽證規費收費標準 (https://ws.moi.gov.tw/Download.ashx?n=MTA3MDIwMS3moLjlrprniYgt5bCx5qWt6YeR5Y2h5pS26LK75qiZ5rqW57i96Kqq5piOK%2BWwjeeFp%2BihqC5wZGY%3D&u=LzAwMS9VcGxvYWQvT2xkRmlsZS9BY3RfZmlsZS8xMDcwMjAxLeaguOWumueJiC3lsLHmpa3ph5HljaHmlLbosrvmqJnmupbnuL3oqqrmmI4r5bCN54Wn6KGoLnBkZg%3D%3D)",
+        "citeturn675search12 [wordlim: 200] Published: 8.7 years ago; Crawled: 5 months ago; 一、就業金卡分別以持美國護照者、持美國以外國家護照者及香港或澳門居民等三種身分收費，前二者另依照未入國申請及已入國申請兩種方式收費。 ... （二）以免簽證、持停留期限未滿六十日簽證或持停留期限六十日以上，經簽證機關加註限制不准延期或其他限制簽證入國後申請單次居留簽證者，每件加收簽證改辦費新臺幣八百元；未入國申請者，則無需收取簽證改辦費。",
+        "Table, Content (https://www.immigration.gov.tw/media/52318/%E6%96%B0%E4%BD%8F%E6%B0%91%E5%85%A5%E5%9C%8B%E5%89%8D%E8%BC%94%E5%B0%8E%E6%89%8B%E5%86%8A-%E4%B8%AD%E8%8B%B1%E9%99%84%E9%8C%84.pdf)",
+        "citeturn675search13 [wordlim: 200] Published: 6.8 years ago; 至內政部戶政司全球資訊網https://www.ris.gov.tw/app/portal/187 查詢）︒(2) 護照︑居留簽證正︑影本1 份(正本驗畢歸 ... 期新臺幣3, 000 元，另加收停留簽證改辦居留證費用新臺幣2,200 元︒ ... cite以上二至四項文件倘係國外作成者，須先經我國駐外館處驗證，並附中文或英文譯本︒ cite已持停留簽證入境者，倘在臺已逾停留期限應即離境，不得申請在臺改辦居留簽證︒ --------------------------------------------------------------------------------",
+        "(Microsoft Word - \\302k\\244\\306\\254y\\265{_9812\\245\\273\\251\\322\\252\\251\\245\\273_.doc) (https://webws.miaoli.gov.tw/Download.ashx?n=MjAxMjExMTkwODE4MjAzODUzMjkwMDgucGRm&u=LzAwMS9VcGxvYWQvNDI0L3JlbGZpbGUvOTg0Ny82Mzc0MS84MWVlZTk2MC1hNmU1LTQwNDYtYTY3OC02YTE1NjlhYzU2MmMucGRm)",
+        "citeturn675search14 [wordlim: 200] Published: 4 months ago; cite以上二至四項文件倘係國外作成者，須先經我國駐外館處驗證，並附中文或英文譯本。 cite已持停留簽證入境者，倘在臺已逾停留期限應即離境，不得申請在臺改辦居留簽證。 ... 館處申請居留簽證；申請人倘已 ... 7)證件費：1 年效期新臺幣1,000 元，3 年期新臺幣3,000 元，另加收新臺幣2,200 元。",
+        "外國籍人士與國人結婚申請歸化中華民國國籍暨戶籍登記流程表  中文版 (https://servicestation.immigration.gov.tw/media/117113/%E5%A4%96%E5%9C%8B%E7%B1%8D%E4%BA%BA%E5%A3%AB%E8%88%87%E5%9C%8B%E4%BA%BA%E7%B5%90%E5%A9%9A%E7%94%B3%E8%AB%8B%E6%AD%B8%E5%8C%96%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%9C%8B%E7%B1%8D%E6%9A%A8%E6%88%B6%E7%B1%8D%E7%99%BB%E8%A8%98%E6%B5%81%E7%A8%8B%E8%A1%A8.pdf)",
+        "citeturn675search15 [wordlim: 200] Published: 2.3 years ago; 申請人倘已持依親事由停留簽證入境，請向外交部領事事務局（含外交部中部、雲嘉南、南部、東部辦事處）申請改發居留簽證。 ... 七、居留簽證費用請參閱外交部領事事務局網站 https://www.boca.gov.tw/cp-76-32-4a369-1.html（持美國護照者適用相對應處理費）。 ... 7)證件費：1 年期新臺幣 1,000 元，3 年期新臺幣 3,000 元，另加收停留簽證改辦居留證費用新臺幣 2,200 元。 ... 二、已向原屬國申請喪失原有國籍之相關證明文件，如向原屬國申請喪失原有國籍填寫之申請書影本、原屬國政府已收件證明或收據等，為外文者應檢附中文譯本。",
+        "<4D6963726F736F667420576F7264202D20A57EB074C26BA4C6A4CEA4E1C479B56EB04FAC79B57BAAED5F393831323331AED6A977AAA95F2E646F63> (https://servicestation.immigration.gov.tw/media/1554/%E5%A4%96%E7%B1%8D%E9%85%8D%E5%81%B6%E6%B5%81%E7%A8%8B%E5%9C%96_%E4%B8%AD%E6%96%87%E7%89%88-chinese.pdf)",
+        "citeturn675search16 [wordlim: 200] Crawled: 5 months ago; 申請人倘在國外，請直接向駐外館處申請居留簽證；申請人倘已持停留簽證入境，請向外交部領事事務局（含外交部中部、南部、東部辦事處）申請改發居留簽證。※申請人持停留期限60日以上，且未加註「不得延期」(NO EXTENSION)或不得改辦居留之停留簽證入境，符合依親事由者，可逕向內政部入出國及移民署各地服務站申請外僑居留證，無須至外交部領事事務局或外交部中部、南部、東部辦事處申辦居留簽證。 ... 7)證件費：1年效期新臺幣1,000元，3年期新臺幣3,000元，另加收新臺幣2,200元。",
+        "臺中市政府民 (https://www.hcentral.taichung.gov.tw/media/324578/310301636171.pdf)",
+        "citeturn675search17 [wordlim: 200] Published: last year; cite以上二至四項文件倘係國外作成者，須先經我國駐外館處驗證，並附中文或英文譯本。 cite已持停留簽證入境者，倘在臺已逾停留期限應即離境，不得申請在臺改辦居留簽證。 ... 2）護照、居留簽證正、影本1 份（正本驗畢歸還）。（ ... 元，另加收新臺幣2,200 元。",
+        "Insurance, VISA, Part time job - International Admissions Center - 明新科技大學Admission Service Division (https://admin.must.edu.tw/view/content.aspx?UnitID=1227&id=11628&tp=content)",
+        "citeturn675search2 [wordlim: 200] Crawled: 3 weeks ago; 使用免簽證或落地簽證方式入境，或以非就學簽證目的持有停留簽證來台者，不得已就學為由要求轉換居留簽證或申請延長停留期限 ... 在台申請停留簽證改辦居留簽證，另加收特別手續費新台幣800元（美金24元）",
+        "外籍配偶在臺生活相關資訊簡冊 － 移居臺灣零距離（中文版） (https://www.immigration-ebook.com/ebook/zh/149/)",
+        "citeturn675search3 [wordlim: 200] Crawled: 3 months ago; 申請居留簽證 申請人倘在國外，請直接向駐外 館處申請居留簽證，申請人倘已 持依親事由停留簽證入境，請向 外交部領事事務局（含外交部 中部、雲嘉南、南部、東部辦 事處）申請改發居留簽證。 ... 〖以上二至四項文件倘係國外作成者，須先經我國駐外館處驗證，並附中文或英文譯本。〗 ... 7)證件費：1 年效期新臺幣1,000 元，3 年 期新臺幣3,000元，另加收停留簽證改辦居留證費用新臺幣2,200 元。",
+        "境外學生 (https://oia.nkust.edu.tw/unit-8-1.html)",
+        "citeturn675search4 [wordlim: 200] Crawled: last month; 二、申請流程：由申請人檢具前述文件向本國、永久居留地、或所屬之中華民國駐外使領館提出簽證申請。 ... 另獲准在台改換簽證者，加收特別手續費800元(美金24元)。 ... 在台居留外僑在國內轉換居留目的為就學，限原居留目的消失前已在學者。",
+        "惜福人力集團 | 專業仲介 移工優質親切服務 (https://xifu.com.tw/qa)",
+        "citeturn675search5 [wordlim: 200] Crawled: today; 雇主如逾期未繳保險費，勞工保險局將自逾期之日起，每逾1日加徵應繳保險費的0.2%滯納金，最多加徵至應繳保險費的20%。 ... 如遇移工因核發之聘僱許可函或護照短於申請時所選擇之居留效期，以致有多收費用之情況，請申請人主動洽移工居住地之移民署服務站辦理退費。 ... 電話諮詢服務時間：週一至週五08:30-17:30，或將系統操作畫面截圖以郵件方式至客服信箱 CSservice@immigration.gov.tw，客服人員將儘快提供協助。 ... (2) 若移工簽證已領取超過3個工作天仍無法線上辦理聘僱許可，請雇主或委任仲介將移工護照、簽證頁及聯絡資訊E-mail至移工機場服務站信箱(fwservice@wda.gov.tw)，並致電通知移工機場服務站 (03) 398-9002，移工機場服務站工作人員將協助洽外交部領事事務局確認移工簽證資料。 ... (2)雇主或仲介公司申請居留證完成後，可至移工一站式服務網查詢居留證是否已受理完成。",
+        "入出國及移民許可證件規費收費標準-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135)",
+        "citeturn675search6 [wordlim: 200] Crawled: today; 但以免簽證或持停留簽證入國申請者，加收新臺幣二千二百元。 ... 前項第二款證件居留期間之延期，每件每一年效期收費新臺幣一千元。 ... 已提出申請，再要求速件處理，依前項規定收費；已申請速件處理，再要求提前製發者，應補足前項所定費額之差額。",
+        "國立政治大學國際合作事務處Office of International Cooperation, National Chengchi University (https://oic.nccu.edu.tw/Post/352)",
+        "citeturn675search7 [wordlim: 200] Crawled: last week; 入學前已在台灣者之注意事項 ... 如果是持「停留簽證（僅限就學目的）」入境，再加收 2,200 元，所以第一年總共需繳 3,200 元。 ... 內政部移民署鼓勵外國學生多加利用學生線上申辦系統，以網路代替馬路，不出門即可完成申辦居留證手續，外國學生線上申辦居留證項目有初次辦理、延期及異動登記(護照或地址)等多樣內容，並設有中、英文版本，一天24小時及例假日皆可線上申辦，作業期間從原本10日縮短為5日，方便又迅速。",
+        "內政部全球資訊網-中文網-常見問答 (https://www.moi.gov.tw/News_toggle3.aspx?PageSize=30&n=174&page=49&sms=9015)",
+        "citeturn675search8 [wordlim: 200] Crawled: today; 可以，外籍移工的居留證辦理方式如下： 一、私立就業服務機構（仲介業者）應使用工商憑證以網際網路至內政部移民署 （以下簡稱移民署）「外籍移工線上申辦系統」（以下簡稱線上系統，網址：https://coa.immigration.gov.tw/coa-frontend/foreignlabor）代為申請，登入後可自行新增及維護子帳號。 ... （一） 申請時應備文件：申請表1份、護照或外僑居留簽證正、影本各1份（正本驗畢後發還） （二） 費用：新台幣100元。",
+        "閱讀文章 - 精華區 VISA - 批踢踢實業坊 (https://www.ptt.cc/man/VISA/DFF2/D31B/M.1117612581.A.E49.html)",
+        "citeturn675search9 [wordlim: 200] Crawled: 4 months ago; 居留簽證（單次入境）規費為新台幣二千二百元（折合美金六十六元）多次為 三千元 。 ... 上述規定以落地簽證或免簽證方式入境者以及外籍勞工均 不適用。",
+        "港澳生出入境、居留證辦理須知 (https://rd.nttu.edu.tw/p/404-1007-97821.php?Lang=zh-tw)",
+        "citeturn675search10 [wordlim: 200] Published: last year; Crawled: 2 days ago; 在學之學生持停留簽證入境後申請改辦就學事由居留簽證，須另繳驗交在學證明、已註冊證明及在校成績單。 ... 於國內申請者，須加影印最近一次之簽證頁及入境章頁。 ...     居留入出境證申請案件及居留入出境證延期申請案件，經移民署審查核准後並完成線上繳費(資料錯誤或異動更正無須繳費)，港澳生申請人將收到系統自動寄發之居留入出境證IC卡待製證通知之電子郵件，即可再行登入系統後操作「下載專區」中「收據下載」功能，以取得電子收據檔案。",
+        "出國、居留與國外送件要辦哪些文件？護照、居留證與證明分流|政府喵 (https://govmeow.com.tw/articles/overseas-residency-document-router/)",
+        "citeturn675search11 [wordlim: 200] Published: 4 weeks ago; Crawled: 3 weeks ago; 在臺有戶籍成年人、護照已逾期或效期不足1年且未遺失、資料不變更者，可用自然人憑證線上申換；須本人領照 ...   * 選錯送件須知：持居留簽證、停留簽證或免簽入國者的申請路徑不同"
+      ]
+    },
+    {
+      "batch": "source_travel",
+      "observations": [
+        "Internal Error ()",
+        "citeturn678view0 [wordlim: 200] Source: open({\"ref_id\":\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34\",\"lineno\":null}); Total lines: 1",
+        "移民署中文網-有關外國人於國內及海外居留證將屆或遺失，可由本人或受委託人透過線上申辦系統申請，或請國內受委託人臨櫃申請延期或補發居留證。 (https://www.immigration.gov.tw/5385/7229/7232/368785/)",
+        "citeturn678view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.immigration.gov.tw/5385/7229/7232/368785/\",\"lineno\":null}); Total lines: 223",
+        "Taiwan Immigrants' Global News Network- (https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN)",
+        "citeturn678view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN\",\"lineno\":null}); Total lines: 208",
+        "Internal Error ()",
+        "citeturn678view3 [wordlim: 200] Source: open({\"ref_id\":\"https://www.immigration.gov.tw/5382/5385/12162/12197/414977/\",\"lineno\":null}); Total lines: 1"
+      ]
+    },
+    {
+      "batch": "source_work",
+      "observations": [
+        "就業服務法§48-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=48&pcode=N0090001)",
+        "citeturn676view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=48\",\"lineno\":null}); Total lines: 134",
+        "就業服務法§43-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=43&pcode=N0090001)",
+        "citeturn676view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43\",\"lineno\":null}); Total lines: 117",
+        "Employment Service Act - Article Content - Laws & Regulations Database of The Republic of China (Taiwan) (https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001)",
+        "citeturn676view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001\",\"lineno\":null}); Total lines: 548"
+      ]
+    },
+    {
+      "batch": "source_nia_prof",
+      "observations": [
+        "移民署中文網-試辦外國專業人才及其親屬線上申請居留或延期居留及變更居留原因送件須知 (https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/)",
+        "citeturn677view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/\",\"lineno\":null}); Total lines: 263",
+        "移民署中文網-外籍移工線上申請居留及延期居留或異動登記送件須知 (https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/)",
+        "citeturn677view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/\",\"lineno\":null}); Total lines: 276"
+      ]
+    },
+    {
+      "batch": "source_boundary",
+      "observations": [
+        "移民署中文網-持有效居留證（ARC）或永久居留證（APRC）之外籍人士入境時護照效期若不滿6個月，是否可以入境？ (https://www.immigration.gov.tw/5385/12162/12197/414977/)",
+        "citeturn679view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://www.immigration.gov.tw/5385/12162/12197/414977/\",\"lineno\":null}); Total lines: 213",
+        "Internal Error ()",
+        "citeturn679view1 [wordlim: 200] Source: open({\"ref_id\":\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=12&pcode=A0030295\",\"lineno\":null}); Total lines: 1",
+        "入出國及移民法-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080132)",
+        "citeturn679view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn666view2\",\"pattern\":\"第 34 條\"}); Total lines: 1483",
+        "外國人停留居留及永久居留辦法-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129)",
+        "citeturn679view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn660view1\",\"pattern\":\"第 20 條\"}); Total lines: 379",
+        "移民署中文網-試辦外國專業人才及其親屬線上申請居留或延期居留及變更居留原因送件須知 (https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/)",
+        "citeturn679view4 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn677view0\",\"pattern\":\"出國\"}); Total lines: 263",
+        "No matching text found for \"出國\"--------------------------------------------------------------------------------",
+        "Taiwan Immigrants' Global News Network- (https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN)",
+        "citeturn679view5 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn678view2\",\"pattern\":\"Q2.\"}); Total lines: 208"
+      ]
+    },
+    {
+      "batch": "source_travel_detail",
+      "observations": [
+        "移民署中文網-試辦外國專業人才及其親屬線上申請居留或延期居留及變更居留原因送件須知 (https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/)",
+        "citeturn680view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"turn677view0\",\"lineno\":139}); Total lines: 263",
+        "移民署中文網-持有效居留證（ARC）或永久居留證（APRC）之外籍人士入境時護照效期若不滿6個月，是否可以入境？ (https://www.immigration.gov.tw/5385/12162/12197/414977/)",
+        "citeturn680view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"turn679view0\",\"lineno\":106}); Total lines: 213",
+        "移民署中文網-有關外國人於國內及海外居留證將屆或遺失，可由本人或受委託人透過線上申辦系統申請，或請國內受委託人臨櫃申請延期或補發居留證。 (https://www.immigration.gov.tw/5385/7229/7232/368785/)",
+        "citeturn680view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"turn678view1\",\"lineno\":109}); Total lines: 223",
+        "移民署中文網-外國人申請居留及延期居留或變更居留原因送件須知 (https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/)",
+        "citeturn680view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"turn674view0\",\"lineno\":190}); Total lines: 329",
+        "外國專業人才延攬及僱用法§12-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=12&pcode=A0030295)",
+        "citeturn680view4 [wordlim: 200] Crawled: last week; Content type: text/html; Source: click({\"ref_id\":\"turn663view3\",\"id\":28}); Total lines: 115",
+        "入出國及移民法§34-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=34&pcode=D0080132)",
+        "citeturn680view5 [wordlim: 200] Crawled: today; Content type: text/html; Source: click({\"ref_id\":\"turn666view2\",\"id\":54}); Total lines: 115"
+      ]
+    },
+    {
+      "batch": "source_employment_detail",
+      "observations": [
+        "Employment Service Act - Article Content - Laws & Regulations Database of The Republic of China (Taiwan) (https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001)",
+        "citeturn681view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn676view2\",\"pattern\":\"Article 50\"}); Total lines: 548",
+        "Employment Service Act - Article Content - Laws & Regulations Database of The Republic of China (Taiwan) (https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001)",
+        "citeturn681view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn676view2\",\"pattern\":\"Article 53\"}); Total lines: 548"
+      ]
+    },
+    {
+      "batch": "source_firm",
+      "observations": [
+        "Contact & Inquiry | Hovering Law (https://tseng-law.com/en/contact)",
+        "citeturn684view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://tseng-law.com/en/contact\",\"lineno\":null}); Total lines: 245",
+        "Wei Tseng Taiwan Attorney Profile | Hovering Law (https://tseng-law.com/en/lawyers/wei-tseng)",
+        "citeturn684view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({\"ref_id\":\"https://tseng-law.com/en/lawyers/wei-tseng\",\"lineno\":null}); Total lines: 212"
+      ]
+    }
+  ]
+}

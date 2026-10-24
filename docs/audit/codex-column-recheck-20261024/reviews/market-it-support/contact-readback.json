@@ -1,0 +1,8 @@
+{
+  "url": "https://tseng-law.com/it/contact",
+  "date": "2026-10-24",
+  "http": 200,
+  "has_email": true,
+  "has_english": true,
+  "method": "curl with per-process DoH IP, TLS verification enabled"
+}

@@ -1,0 +1,5 @@
+$ python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md --lang id
+/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md [id] sentences=58 mean=13.6 cv=0.463 short=0.259 run3=0.036 opener_rep=0.0 cite_end=0.0 cite_para=0.667 contrast=0 caveat=0 q=2
+  OK — no variety limit violated
+
+exit_code=0

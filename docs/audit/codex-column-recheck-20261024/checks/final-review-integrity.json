@@ -1,0 +1,619 @@
+{
+  "verified_at": "2026-10-24T07:16:43.930693+00:00",
+  "articles": [
+    {
+      "path": "src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md",
+      "sha256": "ad0a3eccf0fbbc4d5e7a2d78e8e3bd5d753e12305a77060417927c55a7d8c265",
+      "locale_review": "market-th-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md",
+      "sha256": "e208d9f93a575cee0543a33f945596216d971218239a2c88303f43c3fe981d24",
+      "locale_review": "market-th-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-th/661-thai-worker-taiwan-bank-account-police-notice.md",
+      "sha256": "7acb2c805316c660a4733fb4a83fbb444c3c610b41e87dc1602fd46797d3228d",
+      "locale_review": "market-th-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-th/662-thai-return-home-taiwan-traffic-injury-records.md",
+      "sha256": "674ed1f49df35519df68c050be33f651b302765cc042095ee7f54b91eada3e6c",
+      "locale_review": "market-th-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md",
+      "sha256": "b6892d81d73a179535f1aacce4672e53a615cfb8beb0f8c44b40111f025fec7b",
+      "locale_review": "market-th-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-id/664-indonesian-home-caregiver-unpaid-wages-taiwan.md",
+      "sha256": "0df3ccf6a3f2ecbe7ec13ba26632bdec046cdbc54b562c01916ea29be1becba3",
+      "locale_review": "market-id-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-id/665-indonesian-worker-passport-broker-dispute-taiwan.md",
+      "sha256": "4d19c4da1bd422009f2bb794f27b25da1c1c8d52bce8884e6da58e6d023c23ff",
+      "locale_review": "market-id-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-id/666-indonesian-worker-bank-account-cash-job-police-taiwan.md",
+      "sha256": "1dc2f41c0b69574a9fe64696db98192ebfb1edf5d1471ee2a956f92b42740c26",
+      "locale_review": "market-id-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-id/667-indonesian-factory-worker-injury-evidence-compensation-taiwan.md",
+      "sha256": "932021416ab740639d9694170c2b6e7e1f8bd128dd3fda884b5510ddd0bef80b",
+      "locale_review": "market-id-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+      "sha256": "28ce6c33da7a45f1ae6c156729ae4028904dbe25b91b9a8eeb0d7c0c0976135d",
+      "locale_review": "market-id-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md",
+      "sha256": "4927aec900e7c823a9ae452f8704b7b5056e21b3eb135e5d4d8dcab038507d2e",
+      "locale_review": "market-hi-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+      "sha256": "a8322aa20cc87e436e5aee929441d44c4cdffa04bbf32370b0df381259c87be3",
+      "locale_review": "market-hi-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+      "sha256": "c9f7d8a3a90a1d533ebfaa5ad6f7b6ff0f23ad7430396de3a9532555f403712f",
+      "locale_review": "market-hi-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+      "sha256": "44c8534add421222c5fa56d250f94b41820bcfb4d58e51d5d0395a33eed2b6f0",
+      "locale_review": "market-hi-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+      "sha256": "af4d8bc235868b1bbef96be13b69383ea932d27e1ee1122e50b5258910f09acd",
+      "locale_review": "market-hi-independent.md",
+      "final_review": "final-market-asia.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-fr/674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.md",
+      "sha256": "486d6287e084b1d6f00a1f7edd1e1916d1f40168100f579bc5d7d41f525fce91",
+      "locale_review": "market-fr-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-fr/675-french-brand-taiwan-trademark-registered-distributor.md",
+      "sha256": "b44d351c2fee81d00853eec14f7ddb2ad94a1b547dbba642507dba591ee38ea8",
+      "locale_review": "market-fr-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-fr/676-french-supplier-taiwan-distributor-termination-stock-online-accounts.md",
+      "sha256": "368fbef4c72b6b6acb971b91590564a96122c05cafeb9469d419f48666dd2b44",
+      "locale_review": "market-fr-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-fr/677-france-resident-heir-taiwan-bank-property-documents.md",
+      "sha256": "65b90e6d09f334eab77ebc2b0ef35f4413ed7fdea3d68532a5ee77898cfa6ab4",
+      "locale_review": "market-fr-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-fr/678-french-employee-taiwan-unpaid-wages-employer-closure.md",
+      "sha256": "1f0c59422c5af35c2203aec5c24df026bd38d4f5852bb96fe8917c67189a385a",
+      "locale_review": "market-fr-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md",
+      "sha256": "98a3c701d7fe864cd5d42fa07cc0a8c62e11d75cbcd579036495e87b1d9a7d8a",
+      "locale_review": "market-de-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-de/680-taiwan-bauteile-maengelruege-pruefmuster.md",
+      "sha256": "df6d39bb3536fed756ec32aead6bcc06ec486eac2a67fe2260ba1fcfcaaaef32",
+      "locale_review": "market-de-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md",
+      "sha256": "a470726770f1c6a50237585f2b3f07b2fa0f1942bd945c34da5df73a96a93dc0",
+      "locale_review": "market-de-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-de/682-taiwan-gemeinsame-entwicklung-cad-geschaeftsgeheimnisse.md",
+      "sha256": "298350abc01516a8c13cdd7d8d8ee150dd4a51549fef38a19fca8046b1ce953e",
+      "locale_review": "market-de-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md",
+      "sha256": "905cd5443c9a04b33db26e7ce2466f34e51590886c2e99e8d483eecf31a4b5a5",
+      "locale_review": "market-de-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-it/684-italian-exporter-taiwan-unpaid-installation-balance.md",
+      "sha256": "daa13fc07060a428caa602bb3aed9713797e5eae650a9ccf31d785ea237e7755",
+      "locale_review": "market-it-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-it/685-italian-brand-taiwan-distributor-trademark-registration.md",
+      "sha256": "5bbd27208c8afe566ad63c4b1417ae9b40718736a44f5192336f9fd800518b3c",
+      "locale_review": "market-it-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md",
+      "sha256": "4a6134359ae66e9dd30dfa1b6774cdc64579427868224774012b05997f7353b6",
+      "locale_review": "market-it-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-it/687-italy-resident-heir-taiwan-inheritance-renunciation-debts.md",
+      "sha256": "75a4733d9ec89446b122bebebcc63281e89312cf83bc94a3aba45289d6bbeca2",
+      "locale_review": "market-it-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-it/688-italian-business-visitor-taiwan-summons-interpreter-defense.md",
+      "sha256": "b0c866e001db2cf49f9011dd173d9b428359d86a68718ae195913f860d1029a3",
+      "locale_review": "market-it-independent.md",
+      "final_review": "final-market-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md",
+      "sha256": "ab828b82d7d405cea84bc4d3a22284635dd6e35d41f0afce7d1ab539e2bab4c2",
+      "locale_review": "market-es-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-es/690-spain-buyer-taiwan-defective-goods-notice.md",
+      "sha256": "bfdc21bb7fc7b62399e70aedac972c8b4ba5419acab77f5390b66eea48a5cbd7",
+      "locale_review": "market-es-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md",
+      "sha256": "1c253183afe74a8e00fbfd4e610a36d8c598df8ab280a301921756d3021e2180",
+      "locale_review": "market-es-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md",
+      "sha256": "609a29d8402adcc1d4dab19ab17e4e413eec7e2bb35844619233522fa45cc002",
+      "locale_review": "market-es-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-es/693-spain-resident-taiwan-divorce-property.md",
+      "sha256": "30c854d8221caac8630209ae1e60f710d054faf72118bccd2f2177aee27ad637",
+      "locale_review": "market-es-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-pt/694-portugal-exportador-acordo-prestacoes-taiwan.md",
+      "sha256": "3d658de92c0b0ff74e6bcbd3da0ab2d16decf6c994693276b62970982449ebe7",
+      "locale_review": "market-pt-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-pt/695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md",
+      "sha256": "05fb0d2b5305c02e5292dbb1fa3d39951dd7c18c8da2b74dc59a51c4aeaa9e22",
+      "locale_review": "market-pt-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-pt/696-portugal-sentenca-arbitral-bens-taiwan.md",
+      "sha256": "96ee165f4ac3392ba2dc487b584489b9acfaa875c1ce263b26d32d671cdd97bc",
+      "locale_review": "market-pt-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md",
+      "sha256": "ebbaff65263b49401cd07d3cc5abe439d2ee5a778010795df52f718e2cb717f0",
+      "locale_review": "market-pt-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-pt/698-portugal-fim-contrato-taiwan-salarios-em-falta.md",
+      "sha256": "80ebc4b50ebfc0d4d0e62373c2d0ec5b9989091726430d9538f48b6b33e6b549",
+      "locale_review": "market-pt-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-ar/699-uae-importer-taiwan-supplier-advance-refund.md",
+      "sha256": "1c6d5764d793ddeb9b6d3cb4af7d3bce88b227eb9881380a90e25cd8cc9059ac",
+      "locale_review": "market-ar-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-ar/700-saudi-arbitral-award-taiwan-assets.md",
+      "sha256": "83f59b9e7226cb0fe1179e61ed7e21da2ca883b4ae72e6345080a6cb183671ec",
+      "locale_review": "market-ar-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-ar/701-uae-court-judgment-taiwan-enforcement.md",
+      "sha256": "60ceafe3ad1a8501fbf4e0fb280aedf08d3342b8cb15450035e011497f1465f5",
+      "locale_review": "market-ar-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-ar/702-overseas-heir-taiwan-estate-nationality-documents.md",
+      "sha256": "ef2194e02154f5e4abb76df92e183ddd0a31f2a6777da032c705e422865a34de",
+      "locale_review": "market-ar-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-ar/703-uae-resident-taiwan-counsel-arabic-documents.md",
+      "sha256": "17a3d3093807398e25fe590ba983a90c956a0e63ca5f69479793204ff2a1ec3f",
+      "locale_review": "market-ar-independent.md",
+      "final_review": "final-market-crossborder.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns/704-taiwan-arc-first-application.md",
+      "sha256": "691453dd960c859e717780de0b9abe6869bdfb955739dddc778091b4181d157a",
+      "locale_review": "ko-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "d253dada2233f2b65fafd1805ea1318620a767739af5e9eed5ac218e46223c2d",
+      "locale_review": "ko-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "6b5f3272e8c2579f205d0aaf27b64e8928f17088d3356faa4955c2ea47db56b5",
+      "locale_review": "ko-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-en/704-taiwan-arc-first-application.md",
+      "sha256": "0ee40e85d0ee26200f1f935c548c75f2b9f9e861580180374aa8dcf7e50c7825",
+      "locale_review": "en-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "56a8c7f3ec581ff3b61d743a4037d51aace42270203d2f8d7e0411018bb3db0d",
+      "locale_review": "en-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "85733e93c255d27eedb8e1c62750cafcc5ca8242c038f71bba44d2d76bb040b9",
+      "locale_review": "en-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-ja/704-taiwan-arc-first-application.md",
+      "sha256": "d17b21c9f769d191f6be4908a5c53383fc2432539e134973295830233deace12",
+      "locale_review": "ja-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-ja/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "5f55c4c169670c13a77e22cea55799827c734e0e77c9310cfe73292d8609f6bc",
+      "locale_review": "ja-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-ja/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "e4e2938ac4cd9a4fcec677ac4313f5983569bede7031ed1875bf615a326fd7e6",
+      "locale_review": "ja-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-vi/704-taiwan-arc-first-application.md",
+      "sha256": "c2a770a94543f816412e57adcbcab845ac710fae6f92bc7a18efbf3d7a6a42dc",
+      "locale_review": "vi-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-vi/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "c8343caf2547e7bb613cd6944a768af2429044dfd73f613548cab14a6db196e3",
+      "locale_review": "vi-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-vi/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "3cbd594e3fd51162c694f6509ee22fed69e73de4870ac3667d27abedfafac83e",
+      "locale_review": "vi-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-zh/704-taiwan-arc-first-application.md",
+      "sha256": "6d0d65d51ccf9540482ffc1415d2f5fde6f94ddb1f7937616383cfd0f7dd84b2",
+      "locale_review": "zh-hant-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "e340cf83d1c1aa9a0586cd5a82ab213535771cdd44f21935164a671d2b65b886",
+      "locale_review": "zh-hant-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "c4dac93399307ffdbc940cdc53e013129e84c762db1e9524cdd501fbb3fd4c77",
+      "locale_review": "zh-hant-independent.md",
+      "final_review": "final-core.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-th/704-taiwan-arc-first-application.md",
+      "sha256": "674844f1ddfeb2322fee8ab41cf43ba990a5b8e6bbbec9be63c14ca558a12afa",
+      "locale_review": "th-independent-fallback.md",
+      "final_review": "final-asia-ar.md",
+      "scope": "image and eligibility clarification only; full rewrite held"
+    },
+    {
+      "path": "src/content/columns-th/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "abe1ccf7fe19227dc0f4ac69b632f5f0f67be5932f2d44adbfa022491350b7de",
+      "locale_review": "th-independent.md",
+      "final_review": "final-asia-ar.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "844b1b15985d3e7f82c9e8c8824d67215b7edeec7b33726da5c1e608f433f50b",
+      "locale_review": "th-independent.md",
+      "final_review": "final-asia-ar.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-id/704-taiwan-arc-first-application.md",
+      "sha256": "1e15ac9b7c6587ee871127b755965888190a8967e115ec2952c74985877876ed",
+      "locale_review": "id-independent.md",
+      "final_review": "final-asia-ar.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-id/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "546994640fcc235126d66fb351445ca1e1bb321adb9a031903fa42c8383261a4",
+      "locale_review": "id-independent.md",
+      "final_review": "final-asia-ar.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-id/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "244898da1b702265829c784099076031322ff99bde99325f940365325b63537c",
+      "locale_review": "id-independent.md",
+      "final_review": "final-asia-ar.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-hi/704-taiwan-arc-first-application.md",
+      "sha256": "6a17e788f35639e42a6d37cc02aae592422dc81ab1df6b54e9b8deeacedabe01",
+      "locale_review": "hi-independent.md",
+      "final_review": "final-asia-ar.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-hi/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "955f9855c3eb48753a41e480788d5cd72d641eb7ac2c5ba3971f4667af145f52",
+      "locale_review": "hi-independent.md",
+      "final_review": "final-asia-ar.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-hi/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "190de9e4ae9b984959b0346b85579c698b3952c0f1aa3d8abdd180e4db609fae",
+      "locale_review": "hi-independent.md",
+      "final_review": "final-asia-ar.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-fr/704-taiwan-arc-first-application.md",
+      "sha256": "b49070326631172e5070ac517ec55337477df215e934471ee18e7c8f0cbec2f6",
+      "locale_review": "fr-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-fr/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "587e33801e22ff99739529783870ab21bb3eb6c172d31330a815cf09bf10ea71",
+      "locale_review": "fr-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-fr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "5dde9953d4868917c3cc3dcc9cf9a45376115a714f4de99486a3324b71d8deec",
+      "locale_review": "fr-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-de/704-taiwan-arc-first-application.md",
+      "sha256": "f5f81f2892f68ae5e74091218a69b1ab2995029dc000012bf4ca4cf631040002",
+      "locale_review": "de-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-de/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "b84f614896b1f0fb3081c03a9b982f2de8593e6009929754317c0ae37eaf5a88",
+      "locale_review": "de-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-de/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "271fbcd37587453c4710d60ec6389d4f73391e9304f2131cc57cec155689cb9d",
+      "locale_review": "de-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-it/704-taiwan-arc-first-application.md",
+      "sha256": "38d394cf0834d7313a4e65d60c6068727448c84391fcd154cf17498d1b58d40b",
+      "locale_review": "it-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-it/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "9eb7250a9ef513785aab13f7e590d498635786ad8c43dae7cb7dc3385c5189e1",
+      "locale_review": "it-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-it/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "e0600c580dd6cad72a7de6a08ca8c640228224623e4d03c73895bdc81d037055",
+      "locale_review": "it-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-es/704-taiwan-arc-first-application.md",
+      "sha256": "8de94ac57ae2c2538ab3d0ccd9b7f0deb15a02c7db2c567d18fa652c9e8543bc",
+      "locale_review": "es-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-es/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "b1b36203c0a9ad4efe2841b90f778c6f37e056ab5679f4ab00710f54101bb125",
+      "locale_review": "es-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-es/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d9bd9558b9ee3126bcb5987701852a1e9ae92eb9a3a1de987faf741de1c021b9",
+      "locale_review": "es-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-pt/704-taiwan-arc-first-application.md",
+      "sha256": "f58697c6f17840eb5c6c8409b109c3d76c80447056d245cfd25741f5e52c0851",
+      "locale_review": "pt-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-pt/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "223fc2cab54af3d13a8d687d46ae12d37ef6ce3beb0f3b26322e42ff761f66aa",
+      "locale_review": "pt-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-pt/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "88ebef7d3469e19adb2e2a492bdd95f7fb33c41860d9517042864b67a2214b57",
+      "locale_review": "pt-independent.md",
+      "final_review": "final-europe.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-ar/704-taiwan-arc-first-application.md",
+      "sha256": "bedb127646dbfeb26a7795813ac6a38e3a122c597131695e0e4e72ad2b2278cb",
+      "locale_review": "ar-independent.md",
+      "final_review": "final-asia-ar.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-ar/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "2f160a48653b9a00f7e4000110267a8ff027a8bb4cea4307dd6136f55726429c",
+      "locale_review": "ar-independent.md",
+      "final_review": "final-asia-ar.md",
+      "scope": "approved current manuscript"
+    },
+    {
+      "path": "src/content/columns-ar/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "49e16d952600fc712b69c3681253652208758b9576e855df16e56737bb96fab2",
+      "locale_review": "ar-independent.md",
+      "final_review": "final-asia-ar.md",
+      "scope": "approved current manuscript"
+    }
+  ],
+  "counts": {
+    "exact_hash_in_locale_and_final_reports": 87,
+    "limited_minimum_change": 1
+  },
+  "note": "All six final reports and the TH704 limited-scope addendum were read for final PASS; hash matching alone does not establish prose quality."
+}

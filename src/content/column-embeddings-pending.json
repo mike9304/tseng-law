@@ -2481,6 +2481,42 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-hospital-death-autopsy-request-complaint-medical-mediation"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-arc-first-application"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-visa-residence-work-study-family"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-arc-renewal-changes-reentry"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-arc-first-application"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-visa-residence-work-study-family"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-arc-renewal-changes-reentry"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-arc-first-application"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-visa-residence-work-study-family"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-arc-renewal-changes-reentry"
     }
   ]
 }

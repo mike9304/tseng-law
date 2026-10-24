@@ -1,0 +1,93 @@
+[
+  {
+    "file": "france-legalisation.pdf",
+    "url": "https://www.diplomatie.gouv.fr/files/files/leg-tableau-recap-du-droit-conventionnel-11-09-26.pdf",
+    "bytes": 582187,
+    "sha256": "a1d80e65c861703ec50a3fd268237e765bd9cbfe37869c43833bba7376dd7689",
+    "checked_at": "2026-10-24T07:02:09.953031+00:00"
+  },
+  {
+    "file": "german-zpo328.html",
+    "url": "https://www.gesetze-im-internet.de/zpo/__328.html",
+    "bytes": 5171,
+    "sha256": "60b6818fb0601fb80c02a19c630cc6acfc8d3386be699d29cb3dd1d38fb15cce",
+    "checked_at": "2026-10-24T07:01:59.333061+00:00"
+  },
+  {
+    "file": "contact-fr.html",
+    "url": "https://tseng-law.com/fr/contact",
+    "bytes": 102535,
+    "sha256": "5bc7a9791ad1b959f34da564494b2559f3dac6e7474bf17adb8f7e0e1ee3b638",
+    "checked_at": "2026-10-24T07:01:57.969448+00:00"
+  },
+  {
+    "file": "contact-de.html",
+    "url": "https://tseng-law.com/de/contact",
+    "bytes": 100240,
+    "sha256": "3641e98cd317145f6cbd346d90c4db45cbeca30db92c43056895ca7691ebc1d7",
+    "checked_at": "2026-10-24T07:01:57.858117+00:00"
+  },
+  {
+    "file": "contact-it.html",
+    "url": "https://tseng-law.com/it/contact",
+    "bytes": 100792,
+    "sha256": "04ae161899946c7ad0e239a99bb23fa62f3a72d080027404db08985fd9ea8c74",
+    "checked_at": "2026-10-24T07:01:58.452062+00:00"
+  },
+  {
+    "file": "B0000001-history.html",
+    "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001",
+    "bytes": 63475,
+    "sha256": "1ca83eae7045a4ceb83f6a2e74e43760e8196bccdcfb8df4cc5df45a287639a9",
+    "checked_at": "2026-10-24T07:01:59.264136+00:00"
+  },
+  {
+    "file": "B0010001-history.html",
+    "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0010001",
+    "bytes": 55894,
+    "sha256": "10ca46ef05800d05b3abaf079d789403df7cd774f025e6579367852180acff17",
+    "checked_at": "2026-10-24T07:01:59.417390+00:00"
+  },
+  {
+    "file": "B0010004-history.html",
+    "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0010004",
+    "bytes": 42362,
+    "sha256": "4473b5ddbf1c828e3c3b4ba92bd4b69671b4a2561f7439a4ed7c64a7ba36d841",
+    "checked_at": "2026-10-24T07:02:00.308481+00:00"
+  },
+  {
+    "file": "J0070001-history.html",
+    "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070001",
+    "bytes": 47207,
+    "sha256": "6301c646f69934041eb4b00cda0e274bb0cf4ebb2bcfae2dc8076cc88e665596",
+    "checked_at": "2026-10-24T07:02:00.430832+00:00"
+  },
+  {
+    "file": "J0070017-history.html",
+    "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070017",
+    "bytes": 50452,
+    "sha256": "0092785bd20ffa4d24c7f42bed64506d87c6db3e932833195563495e49673623",
+    "checked_at": "2026-10-24T07:02:00.556005+00:00"
+  },
+  {
+    "file": "I0050021-history.html",
+    "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=I0050021",
+    "bytes": 41406,
+    "sha256": "5b797cb714f06f6d1211e0099fa4db808dc70c2b51767171b717b9050ae0c5d8",
+    "checked_at": "2026-10-24T07:02:01.418024+00:00"
+  },
+  {
+    "file": "N0030005-history.html",
+    "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0030005",
+    "bytes": 41836,
+    "sha256": "b33d1bbf86fc062597f96781c2827ad63c46656cec7ba68776feb1c1f7ad458d",
+    "checked_at": "2026-10-24T07:02:01.673797+00:00"
+  },
+  {
+    "file": "C0010001-history.html",
+    "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=C0010001",
+    "bytes": 71081,
+    "sha256": "40203f9038327054985e8af093db3211c73032bcdd50b9ce3c41696a57cb59eb",
+    "checked_at": "2026-10-24T07:02:02.237543+00:00"
+  }
+]

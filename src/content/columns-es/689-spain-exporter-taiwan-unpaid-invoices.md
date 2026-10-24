@@ -3,12 +3,15 @@ title: "Facturas impagadas de un cliente taiwanés: decisiones para una exportad
 seoTitle: "Cobrar facturas de un cliente en Taiwán"
 summary: "Una exportadora española necesita identificar al deudor, conservar la prueba de la entrega y comprobar la ley aplicable antes de elegir entre requerimiento, orden de pago y demanda en Taiwán."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 de octubre de 2026"
 read_time: "5 min de lectura"
 categories: ["Información jurídica de Taiwán"]
 topic: "litigation"
 tags: ["impago", "exportadores-espanoles", "reclamacion-de-cantidad", "orden-de-pago"]
+featured_image: "/images/columns/689-market-review-20261024.webp"
+featured_image_alt: "Carpeta con documentos, calendario y paquete sobre una mesa con vistas a un puerto."
+featured_image_caption: "Ilustración de documentos y mercancías para preparar una reclamación comercial."
 faq:
   - q: "¿Se aplica siempre el plazo taiwanés de dos años a una factura española?"
     a: "No. Primero debe determinarse la ley aplicable. Si rige el derecho de Taiwán y se trata del precio de mercancías suministradas por un comerciante o fabricante, el artículo 127.8 del Código Civil establece dos años desde que la pretensión puede ejercitarse. Otras deudas pueden seguir reglas diferentes."
@@ -36,7 +39,7 @@ El saldo también debe poder reconstruirse. Precio, moneda pactada, abonos, devo
 
 Para el precio de mercancías suministradas por comerciantes o fabricantes, el [artículo 127.8 del Código Civil](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=127) fija una prescripción de dos años. El cómputo empieza cuando la pretensión puede ejercitarse, según el [artículo 128](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=128). Por eso hace falta identificar el vencimiento de cada factura. No todas vencen juntas.
 
-Un requerimiento interrumpe la prescripción, pero el [artículo 130](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=130) considera que esa interrupción no ocurrió si no se demanda dentro de los seis meses siguientes. El [artículo 129](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=129) equipara a la demanda ciertas actuaciones, como solicitar una orden de pago o mediación, y contempla separadamente el reconocimiento de la deuda. Las fechas y el contenido de las respuestas del comprador importan tanto como el último recordatorio enviado.
+Un requerimiento interrumpe la prescripción. El [artículo 130](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=130) considera que esa interrupción no ocurrió si no se demanda dentro de los seis meses siguientes. El [artículo 129](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=129) equipara a la demanda ciertas actuaciones, como solicitar una orden de pago o mediación. También contempla separadamente el reconocimiento de la deuda. Las fechas y el contenido de las respuestas del comprador importan tanto como el último recordatorio enviado.
 
 ## La orden de pago depende también de la notificación
 
@@ -48,7 +51,7 @@ Tras la notificación, el deudor dispone de veinte días para oponerse sin expre
 
 ## Cuando preocupa que desaparezcan los bienes
 
-¿Hay datos concretos de que el cobro futuro será imposible o muy difícil? Ese riesgo es la condición del embargo preventivo del [artículo 523](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=523). Deben justificarse inicialmente tanto el crédito como el motivo de la medida; el tribunal puede exigir caución conforme al [artículo 526](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=526). Un impago exige investigar esa posibilidad, pero no demuestra por sí solo todos sus requisitos.
+¿Hay datos concretos de que el cobro futuro será imposible o muy difícil? Ese riesgo es la condición del embargo preventivo del [artículo 523](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=523). Deben justificarse inicialmente tanto el crédito como el motivo de la medida; el tribunal puede exigir caución conforme al [artículo 526](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=526). El impago, por sí solo, no acredita el riesgo exigido por el artículo 523.
 
 Si el contrato añade una penalización, su importe plantea una cuestión distinta, tratada en [la reducción de cláusulas penales en Taiwán](/es/columns/taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments).
 

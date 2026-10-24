@@ -1,0 +1,35 @@
+[
+  {
+    "id": "665",
+    "path": "src/content/columns-id/665-indonesian-worker-passport-broker-dispute-taiwan.md",
+    "sha256": "4d19c4da1bd422009f2bb794f27b25da1c1c8d52bce8884e6da58e6d023c23ff",
+    "variety_exit": 0,
+    "variety_output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-id/665-indonesian-worker-passport-broker-dispute-taiwan.md [id] sentences=46 mean=14.4 cv=0.455 short=0.174 run3=0.068 opener_rep=0.071 cite_end=0.0 cite_para=0.214 contrast=0 caveat=0 q=2\n  OK — no variety limit violated",
+    "log": "/Users/son7/tseng-arc-revision-20261024/work/reviews/market-id-repair-logs/665.variety.txt",
+    "urls_identical": true,
+    "body_numeric_tokens_identical": true,
+    "only_metadata_change_is_lastmod": true
+  },
+  {
+    "id": "667",
+    "path": "src/content/columns-id/667-indonesian-factory-worker-injury-evidence-compensation-taiwan.md",
+    "sha256": "932021416ab740639d9694170c2b6e7e1f8bd128dd3fda884b5510ddd0bef80b",
+    "variety_exit": 0,
+    "variety_output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-id/667-indonesian-factory-worker-injury-evidence-compensation-taiwan.md [id] sentences=51 mean=14.0 cv=0.506 short=0.216 run3=0.041 opener_rep=0.062 cite_end=0.0 cite_para=0.438 contrast=0 caveat=1 q=1\n  OK — no variety limit violated",
+    "log": "/Users/son7/tseng-arc-revision-20261024/work/reviews/market-id-repair-logs/667.variety.txt",
+    "urls_identical": true,
+    "body_numeric_tokens_identical": true,
+    "only_metadata_change_is_lastmod": true
+  },
+  {
+    "id": "668",
+    "path": "src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+    "sha256": "28ce6c33da7a45f1ae6c156729ae4028904dbe25b91b9a8eeb0d7c0c0976135d",
+    "variety_exit": 0,
+    "variety_output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md [id] sentences=58 mean=13.6 cv=0.463 short=0.259 run3=0.036 opener_rep=0.0 cite_end=0.0 cite_para=0.667 contrast=0 caveat=0 q=2\n  OK — no variety limit violated",
+    "log": "/Users/son7/tseng-arc-revision-20261024/work/reviews/market-id-repair-logs/668.variety.txt",
+    "urls_identical": true,
+    "body_numeric_tokens_identical": true,
+    "only_metadata_change_is_lastmod": true
+  }
+]

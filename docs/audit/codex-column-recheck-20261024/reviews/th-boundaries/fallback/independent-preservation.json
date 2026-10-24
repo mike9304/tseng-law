@@ -1,0 +1,16 @@
+{
+  "baseline_unique_url_count": 16,
+  "candidate_unique_url_count": 16,
+  "lost_urls": [],
+  "added_urls": [],
+  "lost_arabic_numeral_tokens": [],
+  "added_arabic_numeral_tokens": [
+    "20261024"
+  ],
+  "git_diff_check": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "body_difference": "Exactly one residence-condition insertion; all existing Thai-written numbers and remaining body bytes preserved."
+}

@@ -1,7 +1,7 @@
 ---
-title: "Vivir en Taiwán por trabajo, estudios o familia: qué vía de residencia corresponde"
+title: "Residencia en Taiwán por trabajo, estudios o familia: qué permite cada vía"
 seoTitle: "Visados de Taiwán: trabajo, estudios y familia"
-summary: "El empleo previsto, el tipo de estudios y la situación del familiar en Taiwán determinan la vía de residencia. La nacionalidad y la forma de entrada también cuentan."
+summary: "Una oferta de empleo, una matrícula y un vínculo familiar tienen requisitos de residencia diferentes en Taiwán. La forma de entrada determina si la solicitud puede presentarse dentro del país."
 published: "2026-10-24"
 lastmod: "2026-10-24"
 date_display: "24 de octubre de 2026"
@@ -12,66 +12,71 @@ topic: "visa"
 tags: ["visados", "trabajo", "estudios", "familia", "residencia"]
 audience: ["es"]
 author: "legal-ai-assistant"
+featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
+featured_image_alt: "Un portátil cerrado, varios libros y dos tazas en tres conjuntos, acompañados de un cuadernillo de viaje sin inscripciones."
+featured_image_caption: "Ilustración sobre trabajo, estudios y vida familiar; los objetos no representan documentos oficiales ni una solicitud real."
 faq:
   - q: "¿Puedo entrar como turista y decidir después qué residencia pedir?"
-    a: "La posibilidad de solicitar residencia dentro de Taiwán depende del motivo, la categoría del solicitante y su entrada. Ciertos profesionales autorizados y sus familiares tienen una vía directa ante la NIA. Las vías ordinarias de estudios contienen restricciones para quien entró sin visado o con un visado de otro propósito."
+    a: "Solo si se cumplen los requisitos de una vía que admita la solicitud desde Taiwán. Determinados profesionales autorizados y sus familiares pueden acudir directamente a la NIA. Para los estudios, las vías ordinarias restringen esa posibilidad cuando se entró sin visado o con un visado de otro propósito."
   - q: "¿Estar casado con una persona taiwanesa da derecho inmediato a trabajar?"
-    a: "El artículo 48 de la Ley de Servicios de Empleo exime de permiso a quien está casado con una persona taiwanesa con registro de hogar en Taiwán y tiene residencia autorizada. El matrimonio por sí solo no cumple ambas condiciones, y esa excepción no se aplica por el mero hecho de estar casado con cualquier residente extranjero."
+    a: "La exención del artículo 48 de la Ley de Servicios de Empleo exige que el cónyuge taiwanés tenga registro de hogar en Taiwán y que la persona extranjera ya cuente con residencia autorizada. Casarse no basta. Quien está casado con un residente extranjero debe atender a las reglas de su propia categoría."
   - q: "¿Una matrícula de mandarín basta para solicitar el ARC?"
-    a: "La vía correspondiente exige haber completado cuatro meses en un centro universitario reconocido y continuar inscrito durante al menos tres meses más. También deben cumplirse las condiciones del visado de entrada, la carga lectiva y la asistencia. La admisión al centro no garantiza la residencia."
+    a: "Además de la matrícula, esta vía exige haber completado cuatro meses en un centro de enseñanza adscrito a una universidad reconocida y continuar inscrito durante al menos tres meses más. Se aplican también los requisitos de visado de entrada, horas de clase y asistencia; la admisión no garantiza la residencia."
 ---
 
-¿El familiar con quien se va a reunir en Taiwán es una persona taiwanesa con registro de hogar, o un extranjero que reside allí por trabajo? El [artículo 23 de la Ley de Inmigración](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23) regula varios vínculos familiares, mientras que el [artículo 16 de la ley de profesionales extranjeros](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16) contempla una vía directa para determinados profesionales y sus familiares.
+¿Puedo solicitar residencia si entro sin visado? El [artículo 16 de la ley de profesionales extranjeros](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16) permite hacerlo a determinados profesionales y sus familiares, si cumplen sus requisitos. Las vías ordinarias de estudios, en cambio, imponen restricciones según el visado con el que se entró.
 
-Antes de pedir certificados, conviene identificar el documento de residencia del familiar y el fundamento de su autorización. Un matrimonio acreditado en España o en otro país prueba el vínculo; la categoría migratoria del familiar determina qué solicitud puede sostener. También cuenta cómo entra en Taiwán la persona que lo acompaña.
+El visado se tramita ante BOCA o una oficina taiwanesa en el exterior; la Agencia Nacional de Inmigración, NIA, resuelve las solicitudes de residencia y expide el ARC. Para estancias previstas de más de seis meses por trabajo, estudios o familia, entre otros supuestos, existe el [visado de residente](https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html). Algunas categorías permiten solicitar directamente la residencia a la NIA desde Taiwán, sin obtener antes un nuevo visado.
 
-## La visita corta se decide por el pasaporte
+## Visitar Taiwán con un pasaporte español
 
-Hablar español o vivir en España no determina la exención de visado. BOCA incluye a los nacionales españoles entre quienes pueden acceder a una estancia sin visado de hasta 90 días, con las condiciones de pasaporte, billete de salida y admisión que recoge su [lista oficial de exenciones](https://www.boca.gov.tw/cp-149-4486-7785a-2.html). Cada nacionalidad se comprueba en esa lista; los países latinoamericanos no forman una categoría única.
+BOCA incluye a los nacionales españoles entre quienes pueden acceder a una estancia sin visado de hasta 90 días, siempre que cumplan las condiciones sobre pasaporte, billete de salida y admisión de su [lista oficial de exenciones](https://www.boca.gov.tw/cp-149-4486-7785a-2.html). Se atiende a la nacionalidad del pasaporte: vivir en España o hablar español no da acceso al mismo régimen, y los países latinoamericanos no forman una categoría única.
 
-Para una visita a familiares, una reunión comercial o unas vacaciones, puede bastar la estancia autorizada que corresponda. Cuando la actividad exige un permiso específico, la exención de visado no elimina ese requisito. Así lo advierte BOCA en la misma página.
+Una visita familiar, una reunión comercial o unas vacaciones pueden caber en la estancia autorizada que corresponda. Si la actividad requiere un permiso específico, también hay que obtenerlo. BOCA mantiene esa exigencia aun cuando la entrada esté exenta de visado.
 
-El [visado de residente](https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html) se dirige, entre otros supuestos, a estancias previstas de más de seis meses por familia, estudios o empleo. BOCA y las oficinas taiwanesas en el exterior tramitan los visados; la Agencia Nacional de Inmigración, NIA, decide las solicitudes de residencia y expide el ARC. Algunas categorías pueden acudir directamente a la NIA desde Taiwán, sin pasar antes por un nuevo visado de residente.
+## Trabajo: el permiso que solicita el empleador
 
-## El familiar en Taiwán aporta una base concreta
+Conforme al [artículo 43 de la Ley de Servicios de Empleo](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43), la regla general es que el empleador solicite el permiso de trabajo, sin perjuicio de las excepciones legales.
 
-Cuando el cónyuge es taiwanés, vive en Taiwán y tiene allí registro de hogar, una de las vías internas del artículo 23 exige haber entrado con un visado que autorice al menos 60 días y que no lleve las restricciones señaladas por la ley. Quien todavía está fuera debe revisar la solicitud de visado familiar con la oficina taiwanesa competente. No basta con presentar el certificado de matrimonio en la frontera.
+Los profesionales extranjeros y profesionales especializados comprendidos en el artículo 16 pueden acudir directamente a la NIA si han entrado sin visado o con visado de visitante. Deben estar autorizados, o exentos de autorización, para ejercer el trabajo profesional. El ARC se expide tras aprobarse la residencia; una oferta cuyo permiso laboral sigue pendiente no cumple ese requisito.
 
-En la solicitud de ARC por ese vínculo, la NIA pide prueba del matrimonio registrado en Taiwán. Su [guía de residencia](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) exige además la presencia del cónyuge taiwanés en la primera solicitud. Para preparar documentos españoles, puede consultarse la explicación específica sobre [legalización para Taiwán](/es/columns/taiwan-spanish-document-legalization-taipei-office).
+Según el puesto y el permiso, corresponde un sistema de solicitud distinto: la NIA mantiene un [procedimiento específico](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/) para trabajadores del régimen de contratación de mano de obra extranjera, separado del portal de profesionales.
 
-Si quien reside en Taiwán es un profesional extranjero comprendido en el artículo 16, el cónyuge, los hijos menores y los hijos adultos que no pueden valerse por sí mismos debido a una discapacidad física o mental disponen de la vía allí prevista. El profesional debe tener aprobada la residencia o residencia permanente. Sus familiares deben haber entrado sin visado o con visado de visitante. Los padres y los hijos adultos sin esa condición no entran en esa enumeración.
+## Estudios universitarios y cursos de mandarín
 
-Otras familias se examinan conforme a su categoría. El artículo 23 contiene exclusiones para ciertos residentes, entre ellos trabajadores de determinadas categorías de contratación de mano de obra extranjera. Tener un ARC no convierte a toda persona en reagrupante bajo las mismas reglas.
+Para estudios a tiempo completo, BOCA indica que el visado de residente se solicita ante una oficina taiwanesa en el exterior. Quien ya entró con visado de visitante para estudiar como estudiante extranjero puede solicitar la residencia ante la NIA. La [guía de BOCA para estudiantes](https://www.boca.gov.tw/cp-166-283-c4da3-2.html) excluye de esa vía ordinaria la entrada sin visado, con visado a la llegada o con un visado de visitante de otro propósito.
 
-También varía el derecho a trabajar. El [artículo 48 de la Ley de Servicios de Empleo](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=48) exime de permiso al cónyuge extranjero de una persona taiwanesa con registro de hogar en Taiwán cuando ya tiene residencia autorizada. Esa excepción exige las dos condiciones.
+Entre los documentos exigidos figuran la admisión, la acreditación de estudios previos, recursos económicos y el certificado médico que corresponda; los títulos en español requieren la traducción y la autenticación previstas en la guía. Una beca puede acreditar los recursos, aunque la decisión sobre la residencia sigue correspondiendo a la autoridad migratoria.
 
-## Del empleo ofrecido a la autorización de trabajo
+En los cursos de mandarín, el [visado de visitante para estudiar chino](https://www.boca.gov.tw/fp-158-260-9690c-2.html) se prepara antes del viaje. Según la [guía de residencia por mandarín](https://www.boca.gov.tw/fp-166-285-041cb-2.html), para pasar a residencia hay que haber completado cuatro meses en un centro adscrito a una institución universitaria reconocida, continuar matriculado durante al menos tres meses más y cursar quince horas semanales de clase como mínimo, de lunes a viernes.
 
-Una carta de contratación sirve para preparar el expediente. El trabajo solo puede comenzar con la autorización o exención que corresponda. El [artículo 43 de la Ley de Servicios de Empleo](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43) establece la regla general del permiso solicitado por el empleador, sin perjuicio de las excepciones legales.
+Las ausencias, incluidos los permisos, no pueden superar una cuarta parte del total de horas, por lo que el expediente incorpora los registros de asistencia. Pagar un curso largo después de entrar como visitante sin el propósito adecuado puede dejar cerrada esta vía.
 
-Los profesionales extranjeros y profesionales especializados que reúnen los requisitos del artículo 16 pueden solicitar directamente la residencia ante la NIA si entraron sin visado o con visado de visitante y están autorizados, o exentos de autorización, para ejercer el trabajo profesional. La tarjeta llega tras la aprobación. Una oferta de empleo todavía pendiente de permiso no cumple esa condición.
+El trabajo durante los estudios requiere su autorización. Para los estudiantes comprendidos en el [artículo 50 de la Ley de Servicios de Empleo](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=50), rige un máximo ordinario de veinte horas semanales, salvo en las vacaciones de invierno y verano. Respetar ese máximo no sustituye el permiso.
 
-Por su parte, los trabajadores sujetos al régimen de contratación de mano de obra extranjera siguen el [procedimiento específico de la NIA](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/). El puesto y el permiso determinan la categoría; no se elige el sistema de profesionales porque el formulario parezca más sencillo.
+## Residencia por matrimonio o por otro vínculo familiar
 
-## Una carrera universitaria y un curso de mandarín
+Para la residencia familiar, importan tanto el parentesco como la situación de la persona que vive en Taiwán. Un certificado de matrimonio expedido en España o en otro país acredita el vínculo; el documento de residencia del familiar permite identificar qué vía puede utilizarse.
 
-Para estudios a tiempo completo, BOCA indica la solicitud de visado de residente ante una oficina taiwanesa en el exterior. Quien entra con visado de visitante destinado a estudios como estudiante extranjero puede solicitar la residencia ante la NIA. La [guía de BOCA para estudiantes](https://www.boca.gov.tw/cp-166-283-c4da3-2.html) excluye de esa vía ordinaria a quienes entraron sin visado, con visado a la llegada o con un visado de visitante de otro propósito.
+Si el cónyuge es taiwanés, reside en Taiwán y tiene allí registro de hogar, el [artículo 23 de la Ley de Inmigración](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23) ofrece una vía interna. Exige haber entrado con un visado que autorice al menos 60 días y que no lleve las restricciones señaladas por la ley. Para quien prepara la solicitud desde el extranjero, la oficina taiwanesa competente indica los requisitos del visado familiar. Presentar el certificado de matrimonio en la frontera no basta.
 
-Entre los documentos figuran la admisión, los estudios previos, recursos económicos y el certificado médico exigible. Los títulos en español requieren la traducción y autenticación indicadas en esa guía. La beca puede acreditar recursos; la decisión migratoria la toma la autoridad competente.
+La NIA pide prueba del matrimonio registrado en Taiwán y, según su [guía de residencia](https://www.immigration.gov.tw/5475/5478/141465/141808/141970), el cónyuge taiwanés debe acompañar al solicitante en la primera solicitud de ARC. La explicación sobre [legalización de documentos españoles para Taiwán](/es/columns/taiwan-spanish-document-legalization-taipei-office) detalla cómo preparar los documentos emitidos en España.
 
-Aprender mandarín tiene su propio recorrido. El [visado de visitante para estudiar chino](https://www.boca.gov.tw/fp-158-260-9690c-2.html) se prepara antes de viajar. Para pasar a residencia se exige haber completado cuatro meses en un centro de enseñanza adscrito a una institución universitaria reconocida y continuar matriculado durante al menos tres meses.
+Conforme al artículo 16, pueden solicitar la residencia directamente ante la NIA los familiares de un profesional extranjero que ejerce trabajo profesional en Taiwán o de un profesional extranjero especializado, siempre que el profesional tenga residencia o residencia permanente ya aprobada por la NIA.
 
-Además, la [guía de residencia por mandarín](https://www.boca.gov.tw/fp-166-285-041cb-2.html) pide al menos quince horas semanales de clase de lunes a viernes y limita las ausencias, incluidos los permisos, a una cuarta parte de las horas. La asistencia cuenta. Entrar como visitante sin el propósito adecuado puede impedir esta vía, aunque después se pague un curso largo.
+Pueden acogerse el cónyuge, los hijos menores y los hijos adultos que no pueden valerse por sí mismos debido a una discapacidad física o mental, siempre que hayan entrado sin visado o con visado de visitante. El ARC se expide una vez aprobada su residencia. Los padres quedan fuera de esta enumeración, al igual que los hijos adultos que no reúnen esa condición.
 
-Durante los estudios, trabajar requiere comprobar su autorización. Para los estudiantes comprendidos en el [artículo 50 de la Ley de Servicios de Empleo](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=50), el límite ordinario es de veinte horas semanales, salvo las vacaciones de invierno y verano. Ese límite no sustituye al permiso.
+En las demás familias se aplica el régimen de su categoría, pues el artículo 23 contiene exclusiones para ciertos residentes, entre ellos trabajadores de determinadas categorías de contratación de mano de obra extranjera. La mera posesión de un ARC no permite reagrupar familiares en todos los casos.
 
-## Gold Card y emprendimiento
+Respecto del trabajo, el [artículo 48 de la Ley de Servicios de Empleo](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=48) exime de permiso al cónyuge extranjero de una persona taiwanesa con registro de hogar en Taiwán, siempre que ya tenga residencia autorizada.
 
-La Employment Gold Card reúne permiso de trabajo, visado de residente, ARC y permiso de reentrada para quienes cumplen su categoría profesional. Su base es el [artículo 9 de la ley de profesionales extranjeros](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=9); el [portal oficial Gold Card](https://goldcard.nat.gov.tw/en/about/) permite consultar las especialidades y empezar la solicitud.
+## Gold Card y residencia para emprendedores
 
-Existe también una [vía para emprendedores](https://www.boca.gov.tw/cp-166-277-41131-2.html), que comienza con una solicitud electrónica y una revisión de elegibilidad. Abrir una sociedad no equivale a obtener esa autorización.
+La Employment Gold Card integra cuatro permisos: trabajo, visado de residente, ARC y reentrada. Se concede a quienes cumplen los requisitos de su categoría profesional, conforme al [artículo 9 de la ley de profesionales extranjeros](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=9). El [portal oficial Gold Card](https://goldcard.nat.gov.tw/en/about/) reúne las especialidades y permite iniciar la solicitud.
 
-Antes de fijar el viaje, deberían estar identificados el pasaporte utilizado, la actividad prevista y el documento que acredita la base de residencia: permiso laboral, admisión o vínculo familiar con la situación migratoria de quien vive en Taiwán. Una duda sobre cualquiera de esos datos puede cambiar el formulario que corresponde presentar.
+También existe una [vía para emprendedores](https://www.boca.gov.tw/cp-166-277-41131-2.html). Se inicia con una solicitud electrónica y una evaluación de los requisitos; constituir una sociedad no concede esa autorización por sí solo.
+
+Antes de fijar el viaje, el documento disponible —permiso laboral, admisión o prueba del vínculo familiar— debe corresponder a una vía compatible con el pasaporte y la forma de entrada prevista. En una solicitud familiar, también hará falta conocer la situación migratoria de la persona que ya vive en Taiwán.
 
 ## Fuentes oficiales y continuación de la serie
 

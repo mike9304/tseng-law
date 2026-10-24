@@ -1,0 +1,70 @@
+[
+  {
+    "id": 679,
+    "path": "src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md",
+    "sha256": "98a3c701d7fe864cd5d42fa07cc0a8c62e11d75cbcd579036495e87b1d9a7d8a",
+    "exit": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md [de] sentences=47 mean=14.5 cv=0.467 short=0.213 run3=0.133 opener_rep=0.214 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=5\n  OK — no variety limit violated\n",
+    "missingOriginalURLs": [],
+    "metadata": [
+      "published: \"2026-10-23\"",
+      "lastmod: \"2026-10-24\"",
+      "date_display: \"23. Oktober 2026\"",
+      "author: \"legal-ai-assistant\"",
+      "featured_image: \"/images/columns/679-market-review-20261024.webp\"",
+      "featured_image_alt: \"Fräsmaschine mit eingespanntem Werkstück, Messschieber und geöffnetem Ordner in einer Werkstatt.\"",
+      "featured_image_caption: \"Illustration einer Maschinenprüfung; die Unterlagen sind keine tatsächlichen Prüfprotokolle.\""
+    ]
+  },
+  {
+    "id": 680,
+    "path": "src/content/columns-de/680-taiwan-bauteile-maengelruege-pruefmuster.md",
+    "sha256": "df6d39bb3536fed756ec32aead6bcc06ec486eac2a67fe2260ba1fcfcaaaef32",
+    "exit": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-de/680-taiwan-bauteile-maengelruege-pruefmuster.md [de] sentences=52 mean=13.5 cv=0.474 short=0.154 run3=0.04 opener_rep=0.286 cite_end=0.0 cite_para=0.571 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "missingOriginalURLs": [],
+    "metadata": [
+      "published: \"2026-10-23\"",
+      "lastmod: \"2026-10-24\"",
+      "date_display: \"23. Oktober 2026\"",
+      "author: \"legal-ai-assistant\"",
+      "featured_image: \"/images/columns/680-market-review-20261024.webp\"",
+      "featured_image_alt: \"Metallbauteile mit beschädigten Kanten, einzeln verpackte Prüfmuster, Lupe und Messschieber auf einem Arbeitstisch.\"",
+      "featured_image_caption: \"Symbolische Darstellung von Prüfmustern und ihrer Aufbewahrung; die Abbildung dokumentiert keinen konkreten Mangel.\""
+    ]
+  },
+  {
+    "id": 682,
+    "path": "src/content/columns-de/682-taiwan-gemeinsame-entwicklung-cad-geschaeftsgeheimnisse.md",
+    "sha256": "298350abc01516a8c13cdd7d8d8ee150dd4a51549fef38a19fca8046b1ce953e",
+    "exit": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-de/682-taiwan-gemeinsame-entwicklung-cad-geschaeftsgeheimnisse.md [de] sentences=44 mean=15.8 cv=0.453 short=0.114 run3=0.071 opener_rep=0.077 cite_end=0.0 cite_para=0.692 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "missingOriginalURLs": [],
+    "metadata": [
+      "published: \"2026-10-23\"",
+      "lastmod: \"2026-10-24\"",
+      "date_display: \"23. Oktober 2026\"",
+      "author: \"legal-ai-assistant\"",
+      "featured_image: \"/images/columns/682-market-review-20261024.webp\"",
+      "featured_image_alt: \"Laptop mit einer technischen Explosionszeichnung, Metallbauteil, Papierzeichnungen und USB-Stick auf einem Schreibtisch.\"",
+      "featured_image_caption: \"Die Zeichnungen veranschaulichen den Austausch von Konstruktionsdaten und zeigen keine echten Projektunterlagen.\""
+    ]
+  },
+  {
+    "id": 683,
+    "path": "src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md",
+    "sha256": "905cd5443c9a04b33db26e7ce2466f34e51590886c2e99e8d483eecf31a4b5a5",
+    "exit": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md [de] sentences=50 mean=14.1 cv=0.454 short=0.2 run3=0.0 opener_rep=0.2 cite_end=0.0 cite_para=0.533 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "missingOriginalURLs": [],
+    "metadata": [
+      "published: \"2026-10-23\"",
+      "lastmod: \"2026-10-24\"",
+      "date_display: \"23. Oktober 2026\"",
+      "author: \"legal-ai-assistant\"",
+      "featured_image: \"/images/columns/683-market-review-20261024.webp\"",
+      "featured_image_alt: \"Aktenmappen, unbeschriftete Blätter und das Modell eines Bürogebäudes vor einer Stadtansicht von Taipeh.\"",
+      "featured_image_caption: \"Symbolbild zu Verfahrensunterlagen und Vermögen in Taiwan; das Gebäudemodell steht für kein bestimmtes Vollstreckungsobjekt.\""
+    ]
+  }
+]

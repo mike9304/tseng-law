@@ -1,0 +1,47 @@
+[
+  {
+    "article": 704,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/704-taiwan-arc-first-application.md",
+      "--sentences",
+      "/Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/704-draft.sentences.json"
+    ],
+    "source_sha256": "141a09903d5dbb0d709a88de9952591955277211e0b92b5822512206157bef7b",
+    "exit": 2,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/704-taiwan-arc-first-application.md: ERROR measurement unavailable: missing or unresolved Thai sentence review: /Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/704-draft.sentences.json\n",
+    "stderr": ""
+  },
+  {
+    "article": 705,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/705-taiwan-visa-residence-work-study-family.md",
+      "--sentences",
+      "/Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/705-draft.sentences.json"
+    ],
+    "source_sha256": "d4ac78d3ec10dc00d41e4227db88562736b690136c9f6f462f323c791b8a1aa6",
+    "exit": 2,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/705-taiwan-visa-residence-work-study-family.md: ERROR measurement unavailable: missing or unresolved Thai sentence review: /Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/705-draft.sentences.json\n",
+    "stderr": ""
+  },
+  {
+    "article": 706,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md",
+      "--sentences",
+      "/Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/706-draft.sentences.json"
+    ],
+    "source_sha256": "587aafb44969ffe17ce8c81c7b41796caf85ef3a59beb64a11f781454042a035",
+    "exit": 2,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md: ERROR measurement unavailable: missing or unresolved Thai sentence review: /Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/706-draft.sentences.json\n",
+    "stderr": ""
+  }
+]

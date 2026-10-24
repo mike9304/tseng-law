@@ -1,0 +1,32 @@
+[
+  {
+    "file": "src/content/columns-es/690-spain-buyer-taiwan-defective-goods-notice.md",
+    "sha256": "69001fba822ae1a024f2ca31acca1a03cec7035ee2ca9dd524a1719a581097a5",
+    "code": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-es/690-spain-buyer-taiwan-defective-goods-notice.md [es] sentences=41 mean=17.5 cv=0.507 short=0.146 run3=0.051 opener_rep=0.214 cite_end=0.0 cite_para=0.429 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "file": "src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md",
+    "sha256": "be53be3e8b7392d4458c11f6c92bb5bcae610ec19b2061d419623068083cee63",
+    "code": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md [es] sentences=36 mean=16.8 cv=0.454 short=0.139 run3=0.0 opener_rep=0.125 cite_end=0.0 cite_para=0.438 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "file": "src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md",
+    "sha256": "001bc0cfc01c5bf6b4c6f1862f5be54af9de7d5fc559db52872c8768fa5477ba",
+    "code": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md [es] sentences=44 mean=16.0 cv=0.46 short=0.227 run3=0.024 opener_rep=0.2 cite_end=0.0 cite_para=0.467 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "file": "src/content/columns-es/693-spain-resident-taiwan-divorce-property.md",
+    "sha256": "62031b16e250abc879625423246ffe2db85dc2f0fdde56c093a324da73fa9e52",
+    "code": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-es/693-spain-resident-taiwan-divorce-property.md [es] sentences=43 mean=18.0 cv=0.457 short=0.116 run3=0.073 opener_rep=0.188 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+  },
+  {
+    "file": "src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md",
+    "sha256": "e46f893b80e7287cb95c5eb4f819f4ef632eaa8633774bb12ea2ac0bcfe0036d",
+    "code": 0,
+    "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md [es] sentences=43 mean=16.1 cv=0.454 short=0.14 run3=0.073 opener_rep=0.214 cite_end=0.023 cite_para=0.5 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  }
+]

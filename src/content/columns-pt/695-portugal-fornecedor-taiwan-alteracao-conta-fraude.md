@@ -3,7 +3,7 @@ title: "O fornecedor de Taiwan mudou a conta por email: a fatura ficou paga?"
 seoTitle: "Fornecedor de Taiwan e fraude na transferência"
 summary: "Depois de pagar para uma conta alterada por email, uma empresa portuguesa precisa de preservar a prova, avisar o banco e esclarecer se o fornecedor recebeu validamente."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 de outubro de 2026"
 read_time: "5 min de leitura"
 categories: ["Litígios comerciais em Taiwan"]
@@ -25,7 +25,7 @@ faq:
 
 Quando o fornecedor reclama uma fatura que a contabilidade em Portugal considera paga, o comprovativo de transferência deve ser confrontado com as instruções recebidas. Se houve uma alteração de conta por email, é preciso reconstruir quem a comunicou e quem recebeu o dinheiro.
 
-A [Polícia Judiciária descreveu este mecanismo em transações empresariais internacionais](https://www.policiajudiciaria.pt/burla-e-falsidade-informatica-em-transacoes-empresariais-transnacionais/): mensagens que aparentam vir do fornecedor desviam pagamentos para contas diferentes. Esse alerta não estabelece quem suporta o prejuízo num contrato com uma empresa de Taiwan. Serve para reconhecer a situação e preservar a informação necessária à análise.
+A [Polícia Judiciária descreveu este mecanismo em transações empresariais internacionais](https://www.policiajudiciaria.pt/burla-e-falsidade-informatica-em-transacoes-empresariais-transnacionais/): mensagens que aparentam vir do fornecedor desviam pagamentos para contas diferentes. Esse alerta não estabelece quem suporta o prejuízo num contrato com uma empresa de Taiwan.
 
 ## O banco em Portugal precisa da operação exata
 

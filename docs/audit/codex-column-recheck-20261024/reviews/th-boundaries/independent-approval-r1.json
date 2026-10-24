@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "locale": "th",
+  "status": "approved",
+  "scope": "sentence boundaries only; article editorial review is separate",
+  "reviewer": "/root/review_rev2_th (independent AI Thai editor)",
+  "entries": [
+    {
+      "source_sha256": "141a09903d5dbb0d709a88de9952591955277211e0b92b5822512206157bef7b",
+      "paragraphs_sha256": "ed5b20464167d2576a5120915de7f50d29efdde33ad744648cf7027575fb0fed",
+      "method": "independent_review_with_author_boundary_adjudication",
+      "unresolved_boundaries": []
+    },
+    {
+      "source_sha256": "d4ac78d3ec10dc00d41e4227db88562736b690136c9f6f462f323c791b8a1aa6",
+      "paragraphs_sha256": "7acd77c312d013b7f6a9ca54849ddeadf12f8f2079dc55bb4c834fb02389c618",
+      "method": "independent_review_with_author_boundary_adjudication",
+      "unresolved_boundaries": []
+    },
+    {
+      "source_sha256": "587aafb44969ffe17ce8c81c7b41796caf85ef3a59beb64a11f781454042a035",
+      "paragraphs_sha256": "aac963fadf1ea52def4080ca292328d2d3573936d5122f99f95bc6e1963e62aa",
+      "method": "independent_review_with_author_boundary_adjudication",
+      "unresolved_boundaries": []
+    }
+  ],
+  "evidence": [
+    {
+      "role": "independent-review",
+      "path": "independent-boundary-review-r1.md",
+      "sha256": "20c323bfecbb7aaafec6c4b1d249c6fe52be8c43a350a427c4d8cc8ff8df64f5"
+    },
+    {
+      "role": "author-adjudication",
+      "path": "author-adjudication-r1.md",
+      "sha256": "fd7097f54e3941f741c0c0b6d4de3a07e0b24f789aa9498aeb332c9f6b86da16"
+    },
+    {
+      "role": "author-adjudication-addendum",
+      "path": "author-adjudication-r1-addendum.md",
+      "sha256": "67fa30bd1cf715addc94ca24eb544e35b6dcd30116c79090a1fe7eabf4c18b66"
+    },
+    {
+      "role": "author-adjudication-data",
+      "path": "author-adjudication-r1.json",
+      "sha256": "fa080def75ef92ca44f36d28405cc1d241a2328cf3b5c3c18ad606570f950496"
+    },
+    {
+      "role": "author-adjudication-addendum-data",
+      "path": "author-adjudication-r1-addendum.json",
+      "sha256": "ac5d3477bfcba5b7a4caa14b77bf2f99d28569c1899cb62eaacc9c02af5a0593"
+    },
+    {
+      "role": "author-report",
+      "path": "author-report-r1.snapshot.md",
+      "sha256": "05c1ee39f64b6f412ae5ceda650b0f049353f14ecdca5f61170c9b200fefbb07"
+    }
+  ]
+}

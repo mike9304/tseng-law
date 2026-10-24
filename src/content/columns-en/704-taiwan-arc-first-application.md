@@ -1,7 +1,6 @@
 ---
-title: "Your First Taiwan ARC: When to Apply, What to Submit and How to Collect It"
-seoTitle: "Your First Taiwan ARC: Application Steps"
-summary: "Apply for your first Taiwan ARC through the correct route: check the filing deadline, prepare purpose-specific documents, pay the fee and collect your card."
+title: "Applying for Your First Taiwan ARC"
+summary: "For your first Taiwan ARC, the filing deadline and required documents depend on how you entered and why you are staying. Application channels also vary."
 published: "2026-10-24"
 lastmod: "2026-10-24"
 date_display: "October 24, 2026"
@@ -11,70 +10,71 @@ topic: "visa"
 tags: ["taiwan-arc", "first-arc-application", "resident-visa", "nia", "foreign-residents"]
 audience: ["en"]
 author: "legal-ai-assistant"
+featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
+featured_image_alt: "A plain travel booklet, document folder and small blank card on an application desk"
+featured_image_caption: "Illustration; the booklet and card are not real identity documents."
 faq:
   - q: "When does the deadline for my first ARC start?"
-    a: "If you enter Taiwan with a resident visa and receive residence permission, apply within 30 days counted from the day after entry. BOCA's guidance gives a different trigger for a resident visa issued after arrival: 30 days from visa issuance. Direct residence applications by visitors follow their own eligibility and filing rules."
-  - q: "What is the standard ARC application fee?"
-    a: "The standard fee is NT$1,000 per year of approved validity, with a period under one year charged as one year. An application after visa-exempt or visitor-visa entry carries an additional NT$2,200 under the fee rules. Specific reductions or exemptions may apply."
-  - q: "Does receiving an ARC mean I can start any job?"
-    a: "No. Work authorization depends on your employment category, permit or applicable exemption. Check whether the proposed employer and work are covered before starting; the ARC alone does not establish unrestricted work rights."
+    a: "For entry with a resident visa and residence permission, the 30-day period starts the day after arrival. If the resident visa is issued after you arrive, BOCA's guidance counts 30 days from its issuance. Visitors applying directly for residence must meet the eligibility and filing rules for their category."
+  - q: "How much does a first ARC cost?"
+    a: "The standard charge is NT$1,000 for each year of approved validity; a period under one year is charged as one year. Applications after visa-exempt or visitor-visa entry carry an additional NT$2,200 under the fee rules. Specified reductions and exemptions may apply."
+  - q: "Can I start work once I receive an ARC?"
+    a: "Only if the actual job and employer are covered by the permit or exemption that applies to you. An ARC records residence permission; it does not by itself establish unrestricted work rights."
 ---
 
-Thirty days, counted from the day after entry, is the first ARC filing deadline for a foreign national admitted to Taiwan with residence permission. The rule applies to the resident-visa route under [Immigration Act Article 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22). The National Immigration Agency (NIA) issues the Alien Resident Certificate, or ARC, as evidence of approved residence.
+Thirty days is the filing period for your first Alien Resident Certificate (ARC) if you enter Taiwan on a resident visa and receive residence permission. Count from the day after arrival. [Immigration Act Article 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) requires the application to the National Immigration Agency (NIA), which issues the card as evidence of approved residence.
 
-A visitor applying for residence must first qualify for a permitted change of status; the first-card deadline gives visitors no general right to convert. Someone who already holds a valid combined document incorporating ARC functions, such as an Employment Gold Card, falls within the separate-card exception in [Article 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22).
+Visitors have a different starting point: they must qualify for a permitted change to residence before they can apply. Holding a valid combined document with ARC functions, such as an Employment Gold Card, removes the need for a separate card under the exception in [Article 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22).
 
-## 1. Establish the filing route and its deadline
+## Which date starts the application period?
 
-Keep your passport, entry record, visa and any residence approval together. These identify which event starts your clock.
+Your visa and entry record determine the deadline. Someone who receives a resident visa while already in Taiwan uses a different starting date from someone who arrives with one.
 
-| Your position | Application step |
+| Entry and visa status | When to apply |
 |---|---|
-| Entered with a resident visa | Apply for the ARC within 30 days counted from the next day after entry. |
-| Received a resident visa after arriving in Taiwan | BOCA's guidance calls for the ARC application within 30 days from the resident visa's issuance date. |
-| Entered visa-exempt or with a visitor visa | Confirm a qualifying residence route and its filing requirements before your permitted stay expires. |
+| Entered with a resident visa | Within 30 days counted from the day after entry. |
+| Received a resident visa after arriving in Taiwan | Within 30 days from the resident visa's issuance date, under BOCA's guidance. |
+| Entered visa-exempt or with a visitor visa | Before the permitted stay expires, subject to the eligibility and filing rules for the residence category. |
 
-The first two rows follow [NIA's residence guide](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) and [BOCA's resident-visa guidance](https://www.boca.gov.tw/cp-166-276-48430-2.html). For the third, [Article 16 of the Act for the Recruitment and Employment of Foreign Professionals](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) permits qualifying professionals with work authorization or an applicable exemption to apply directly to NIA. That route has specific eligibility conditions. Our [work, study and family route comparison](/en/columns/taiwan-visa-residence-work-study-family) explains where the paths divide.
+[NIA's residence guide](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) and [BOCA's resident-visa guidance](https://www.boca.gov.tw/cp-166-276-48430-2.html) explain the first two situations. For eligible professionals, [Article 16 of the Act for the Recruitment and Employment of Foreign Professionals](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) permits a direct NIA residence application after visitor-visa or visa-exempt entry, with work authorization or an applicable exemption. Eligibility is specific to that route; the [work, study and family comparison](/en/columns/taiwan-visa-residence-work-study-family) explains the conditions for other applicants.
 
-## 2. Assemble the documents for your residence purpose
+## Documents that establish your residence basis
 
-For an ARC application based on a resident visa, [NIA's checklist](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) asks for an application form, photograph, passport and resident visa, purpose-specific evidence, and proof of your current address. Bring the required originals and copies. A lease is one accepted form of address evidence.
+An application based on a resident visa needs the form, photograph, passport and resident visa, evidence of the reason for residence, and proof of your current address, according to [NIA's checklist](https://www.immigration.gov.tw/5475/5478/141465/141808/141970). Bring the required originals and copies. A lease is one accepted address document.
 
-Purpose-specific documents carry the application:
+The supporting evidence depends on why you are staying:
 
-- Employment: the relevant work approval and a certificate of employment issued within the preceding month, or evidence for the applicable exemption.
-- Degree study: an admission letter before registration, or recent enrollment evidence after registration.
-- Family residence: marriage or birth records establishing the relationship, together with the sponsoring family member's identity or residence documents.
+- Employment: the relevant work approval and a certificate of employment issued within the preceding month, or evidence of the applicable exemption.
+- Degree study: an admission letter before registration, or recent enrollment evidence once registered.
+- Family residence: marriage or birth records proving the relationship, together with the sponsoring family member's identity or residence documents.
 
-For a first application based on marriage to a Taiwan national with household registration, NIA requires the Taiwan spouse to attend. Proof of the marriage's registration in Taiwan is needed. The first spouse-based card has one-year validity under the [NIA guide](https://www.immigration.gov.tw/5475/5478/141465/141808/141970); further family-specific issues appear in [residence through a Taiwan spouse](/en/columns/taiwan-foreign-spouse-residence).
+For a first application through marriage to a Taiwan national with household registration, the Taiwan spouse must attend. NIA also requires proof that the marriage is registered in Taiwan and gives the first spouse-based card one-year validity. These requirements appear in the [NIA guide](https://www.immigration.gov.tw/5475/5478/141465/141808/141970); the [Taiwan-spouse residence article](/en/columns/taiwan-foreign-spouse-residence) covers the family documents in more detail.
 
-Overseas certificates need advance attention. NIA's guide requires authentication of overseas documents and allows it to request a verified or notarized Chinese translation. Check the procedure with the [Taiwan overseas mission](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html) responsible for the document's place of issue. A police certificate or health examination may belong to your particular visa or residence route; neither is a universal addition to every first-card checklist.
+Certificates issued abroad may take longer to prepare than the application form. NIA requires authentication of overseas documents and may ask for a Chinese translation verified or notarized in the prescribed manner. The [Taiwan overseas mission responsible for the place of issue](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html) can explain the authentication procedure. Police certificates and health examinations depend on the particular visa or residence category; they are not required in every first-card application.
 
-## 3. Use the application channel for your category
+## Where the application goes
 
-Where do you submit the file? NIA separates general residence, professional workers and their dependents, students, and migrant workers in its [official residence application directory](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/). Select the current guide matching your status, then use its designated online system or service center.
+NIA's [residence application directory](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/) separates general residence applications from those for professionals and their dependents, students, and migrant workers. Each category has a designated online system or service-center procedure. Using the professional-worker system is appropriate only if your employment category belongs there.
 
-Students have a [dedicated online procedure](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news). The professional-worker system should not be treated as the filing channel for every foreign employee. For the ordinary in-person route, contact the NIA service center covering your current address; NIA specifically directs Taiwan-spouse applications there in its [residence guide](https://www.immigration.gov.tw/5475/5478/141465/141808/141970).
+Students use a [dedicated online procedure](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news). For the ordinary in-person application, the relevant NIA service center is the one covering your current address; NIA specifically directs Taiwan-spouse applications there in its [residence guide](https://www.immigration.gov.tw/5475/5478/141465/141808/141970).
 
-Save the submission record. Keep a copy of every uploaded document and any request for further evidence, so that you can identify what remains outstanding.
+Keep the submission record and uploaded documents. If NIA requests further evidence, retaining the request with the original file makes it clear which documents still need to be supplied.
 
-## 4. Pay the applicable fee and respond to requests
+## Fees, processing and collection
 
-Standard ARC fees are NT$1,000 for each year of approved validity. A shorter period is charged as one year. Applications following visa-exempt or visitor-visa entry carry an additional NT$2,200 under [Article 3 of the immigration permit fee standards](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135). The overseas compatriot student reduction is tied to that specific status; it does not apply to all international students.
+Standard ARC fees are NT$1,000 for each year of approved validity, with a period under one year charged as a full year. [Article 3 of the immigration permit fee standards](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135) adds NT$2,200 for applications following visa-exempt or visitor-visa entry. Its reduction for overseas compatriot students applies to that status, not to international students generally.
 
-Paying for more years does not establish eligibility for them. The ordinary statutory maximum is three years, while qualifying specialist professionals have a separate maximum under their legislation ([Immigration Act Article 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22); [Foreign Professionals Act Article 8](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295)). NIA decides the permitted term under the relevant route.
+NIA decides the approved term. The ordinary statutory maximum is three years, while qualifying specialist professionals have a separate maximum under their legislation ([Immigration Act Article 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22); [Foreign Professionals Act Article 8](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295)). Paying a higher fee cannot establish eligibility for a longer period.
 
-Ten working days is the processing time stated in the [general NIA guide](https://www.immigration.gov.tw/5475/5478/141465/141808/141970), excluding document return, supplementation and interviews. The processing period restarts after supplementation. Other online categories have their own schedules, so leave time for corrections before making travel commitments.
+For general applications, [NIA gives a processing time of ten working days](https://www.immigration.gov.tw/5475/5478/141465/141808/141970), excluding document return, requests for additional documents and interviews. The processing period starts again after the additional documents are submitted. Online categories have their own schedules, which may affect travel plans while the application is pending.
 
-## 5. Collect the card and check the result
+Under the [student online procedure](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news), payment is due within five working days from approval. A student collecting a smart-chip ARC must print the online payment receipt and take it to the selected NIA service center three working days after payment. That timetable applies to this student procedure; other applicants should follow the method and identification requirements in their approval or collection notice.
 
-Under the [student online procedure](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news), payment is due within five working days from approval. For a smart-chip ARC, print the online payment receipt and collect the card at the selected NIA service center three working days after payment. That collection timetable is specific to this procedure.
+Check the issued card against your application. The name, passport details, address and residence expiry date should match the approved particulars; keep the receipt and decision with your immigration records.
 
-Follow your approval or collection notice for the collection method and required identification. Check the name, passport details, address and residence expiry date on the issued card against your application. Keep the receipt and decision with your immigration records.
+An ARC alone does not authorize every job. Before starting work, the relevant permit or exemption must cover the actual employment under [Employment Service Act Articles 43 and 48](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001). Once you have the card, its expiry date and any later changes to your address or employment determine the next filings; travel may also require attention to re-entry permission. Those situations are covered in the [renewal and changes guide](/en/columns/taiwan-arc-renewal-changes-reentry).
 
-Before starting work, identify the permit or exemption covering the actual job. [Employment Service Act Articles 43 and 48](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) set the general authorization framework and exemptions; possession of an ARC alone does not settle the question. Put the card's expiry date in your calendar and use the [renewal and changes guide](/en/columns/taiwan-arc-renewal-changes-reentry) when your address, employment or travel plans change.
-
-Checked October 24, 2026. This is procedural information for foreign nationals under Taiwan's immigration system. Mainland China residents, Hong Kong and Macau residents, and ROC nationals without household registration have separate frameworks; an individual application requires its own eligibility assessment.
+Sources checked October 24, 2026. This procedural guide concerns foreign nationals and does not determine individual eligibility. Mainland China residents, Hong Kong and Macau residents, and ROC nationals without household registration follow separate frameworks.
 
 ## Official sources
 

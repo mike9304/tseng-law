@@ -1,7 +1,7 @@
 ---
-title: "Die erste ARC in Taiwan: Antrag, Unterlagen und Abholung"
-seoTitle: "Erste ARC in Taiwan: Antrag und Unterlagen"
-summary: "Nach der Einreise mit einem Resident Visa läuft die ARC-Antragsfrist. Welche Unterlagen Beschäftigte, Studierende und Angehörige benötigen und welcher Antragsweg passt."
+title: "ARC in Taiwan beantragen: Frist, Unterlagen und erste Karte"
+seoTitle: "Erste ARC in Taiwan: Frist und Antrag"
+summary: "Nach der Einreise mit Aufenthaltsgenehmigung bleiben 30 Tage für den ARC-Antrag. Benötigte Unterlagen, Online-Anträge und Abholung für Beschäftigte, Studierende und Angehörige."
 published: "2026-10-24"
 lastmod: "2026-10-24"
 date_display: "24. Oktober 2026"
@@ -15,73 +15,75 @@ tags:
   - "Aufenthaltsantrag"
 audience: ["de"]
 author: "legal-ai-assistant"
+featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
+featured_image_alt: "Schlichtes Reisebüchlein, Dokumentenmappe und unbeschriftete Karte auf einem Schreibtisch."
+featured_image_caption: "Symbolbild zur Antragstellung; die Gegenstände zeigen keine echten Ausweise oder amtlichen Formulare."
 faq:
-  - q: "Erledigt die vom Arbeitgeber beantragte Arbeitserlaubnis auch meinen ARC-Antrag?"
-    a: "Nein. Die Arbeitserlaubnis kann den Aufenthaltsgrund belegen; den Antrag auf Aufenthalt und ARC bearbeitet die National Immigration Agency. Bei einer Employment Gold Card sind mehrere Genehmigungen bereits in einem Dokument verbunden."
-  - q: "Kann ich die erste ARC online beantragen?"
-    a: "Das hängt von Ihrer Kategorie ab. Für berechtigte ausländische Fachkräfte und ihre Angehörigen sowie für Studierende bestehen eigene NIA-Systeme. Wer erstmals aufgrund der Ehe mit einer taiwanesischen Person mit Haushaltsregistrierung beantragt, wendet sich an die zuständige NIA-Servicestelle; der taiwanesische Ehepartner muss dabei anwesend sein."
-  - q: "Benötige ich für jeden ARC-Antrag ein Gesundheitszeugnis?"
-    a: "Die Anforderungen richten sich nach dem Aufenthaltsgrund und dem bisherigen Einreisestatus. Beispielsweise verlangt die studentische NIA-Anleitung bei einem Antrag nach Einreise mit einem Besuchsvisum ein Gesundheitszeugnis aus den letzten drei Monaten. Daraus folgt keine einheitliche Pflicht für sämtliche ARC-Anträge."
+  - q: "Beantragt mein Arbeitgeber mit der Arbeitserlaubnis zugleich meine ARC?"
+    a: "Die Arbeitserlaubnis und der ARC-Antrag sind getrennte Verfahren. Mit der Arbeitserlaubnis lässt sich der Aufenthaltsgrund belegen; über Aufenthalt und ARC entscheidet die National Immigration Agency. Bei einer Employment Gold Card sind diese Genehmigungen bereits in einem Dokument verbunden."
+  - q: "Wo kann ich die erste ARC online beantragen?"
+    a: "Die NIA bietet eigene Portale für berechtigte ausländische Fachkräfte und ihre Angehörigen sowie für Studierende. Der erste Antrag aufgrund der Ehe mit einer in Taiwan lebenden taiwanesischen Person mit Haushaltsregistrierung wird dagegen bei der zuständigen NIA-Servicestelle gestellt. Der taiwanesische Ehepartner muss anwesend sein."
+  - q: "Gehört ein Gesundheitszeugnis immer zu den ARC-Unterlagen?"
+    a: "Das hängt vom Aufenthaltsgrund und vom bisherigen Einreisestatus ab. Im studentischen Verfahren verlangt die NIA bei einem Antrag nach Einreise mit Besuchsvisum beispielsweise ein höchstens drei Monate altes Gesundheitszeugnis. Diese Anforderung gilt nicht pauschal für jeden ARC-Antrag."
 ---
 
-30 Tage beträgt nach [Artikel 22 des Einwanderungsgesetzes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) die Frist für den ARC-Antrag nach einer Einreise mit erteilter Aufenthaltsgenehmigung. Sie beginnt [am Tag nach der Einreise](https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html).
+30 Tage bleiben nach [Artikel 22 des Einwanderungsgesetzes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) für den ARC-Antrag, wenn die Einreise nach Taiwan mit erteilter Aufenthaltsgenehmigung erfolgt. Die Frist beginnt [am Tag nach der Einreise](https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html).
 
-Das Alien Resident Certificate, kurz ARC, dokumentiert den genehmigten Aufenthalt. Eine bereits erteilte Beschäftigungserlaubnis ersetzt diesen Antrag nicht: Für die Arbeitserlaubnis gelten die [Beschäftigungsvorschriften](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001), für Aufenthalt und Karte ist die National Immigration Agency (NIA) zuständig. Wer bereits ein gültiges Dokument mit ARC-Funktion besitzt, etwa eine Employment Gold Card, fällt unter die Ausnahme in Artikel 22.
+Das Alien Resident Certificate, kurz ARC, ist der Nachweis des genehmigten Aufenthalts und wird von der National Immigration Agency (NIA) ausgestellt. Eine Arbeitserlaubnis ersetzt den ARC-Antrag nicht; sie unterliegt den [Beschäftigungsvorschriften](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001). Wer bereits ein gültiges Dokument mit ARC-Funktion besitzt, etwa eine Employment Gold Card, fällt unter die Ausnahme in Artikel 22.
 
-## Der Einreisestatus bestimmt den Antrag
+## Vom Einreisevermerk zum Aufenthaltsantrag
 
-Aus dem Reisepass sollte zunächst hervorgehen, ob ein Resident Visa, ein Visitor Visa oder eine visumfreie Einreise vorliegt. Daneben gehören Einreisedatum und genehmigte Aufenthaltsdauer in die Unterlagenmappe. Ein deutsches Aufenthaltsdokument erklärt den taiwanesischen Status nicht.
+Für den Antrag braucht die NIA Ihren Einreisestatus: Resident Visa, Visitor Visa oder visumfreie Einreise. Hinzu kommen das Einreisedatum und die genehmigte Aufenthaltsdauer. Diese Angaben ergeben sich aus den taiwanesischen Einreiseunterlagen, unabhängig von einem deutschen Aufenthaltstitel.
 
-Für bestimmte ausländische Fachkräfte besteht ein direkter Weg zur NIA: Wer als „foreign professional“ oder „foreign specialist professional“ unter das taiwanesische Fachkräftegesetz fällt, visumfrei oder mit Besuchsvisum eingereist ist und die betreffende qualifizierte Arbeit erlaubt ausüben darf, kann unmittelbar Aufenthalt beantragen. Die genaue Grundlage ist [Artikel 16 des Fachkräftegesetzes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16). Andere Personen benötigen den für ihren Zweck vorgesehenen Weg. Die 30-Tage-Frist schafft keinen allgemeinen Anspruch, einen Besuch in einen längerfristigen Aufenthalt umzuwandeln.
+Bestimmte ausländische Fachkräfte dürfen nach visumfreier Einreise oder Einreise mit Visitor Visa unmittelbar bei der NIA Aufenthalt beantragen. Nach [Artikel 16 des Fachkräftegesetzes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16) müssen sie zur Gruppe der „foreign professionals“ oder „foreign specialist professionals“ gehören und die betreffende qualifizierte Arbeit erlaubt ausüben dürfen. Für andere Personen richtet sich der Antrag nach ihrem jeweiligen Aufenthaltszweck. Die 30-Tage-Frist eröffnet keinen allgemeinen Wechsel vom Besuch zum längerfristigen Aufenthalt.
 
-Bei direkten Aufenthaltsanträgen ist außerdem die konkrete Einreiseart zu prüfen. Die [NIA-Anleitung 0915](https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news) nennt Einschränkungen etwa für probeweise Visumbefreiung, eine bedingte Online-Reisegenehmigung (TAC), Working-Holiday-Visa und bestimmte Visavermerke. Besondere gesetzliche Ausnahmen bleiben vorbehalten.
+Bei direkten Aufenthaltsanträgen nennt die [NIA-Anleitung 0915](https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news) unter anderem Einschränkungen für die probeweise Visumbefreiung, die bedingte Online-Reisegenehmigung (TAC), Working-Holiday-Visa und bestimmte Visavermerke. Gesetzliche Sonderregelungen können Ausnahmen vorsehen.
 
-Wer den Einreiseweg noch festlegt, findet die Unterschiede im Beitrag zu [Arbeit, Studium und Familienaufenthalt](/de/columns/taiwan-visa-residence-work-study-family). Wird nach der Einreise in Taiwan ein Resident Visa erteilt, ist dessen Ausstellungsdatum entscheidend: Nach der [BOCA-Auskunft zum inländischen Visumwechsel](https://www.boca.gov.tw/fp-398-723-7b71f-1.html) muss die ARC innerhalb von 30 Tagen ab Ausstellung beantragt werden.
+Wird das Resident Visa erst nach der Einreise in Taiwan erteilt, gilt ein anderer Fristbeginn: Nach der [BOCA-Auskunft zum Visumwechsel in Taiwan](https://www.boca.gov.tw/fp-398-723-7b71f-1.html) ist die ARC innerhalb von 30 Tagen ab Ausstellung des Visums zu beantragen. Wer seine Einreise noch vorbereitet, findet die Voraussetzungen der einzelnen Wege im Beitrag zu [Arbeit, Studium und Familienaufenthalt](/de/columns/taiwan-visa-residence-work-study-family).
 
-## Unterlagen für die erste Karte
+## Die Unterlagen richten sich nach dem Aufenthaltsgrund
 
-Zum gewöhnlichen Antrag nach Einreise mit Resident Visa gehören nach der [NIA-Anleitung 0902](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) das Antragsformular, ein geeignetes Farbfoto, Reisepass und Resident Visa sowie Nachweise des Aufenthaltsgrundes und der aktuellen Wohnadresse. Originale und Kopien sind nach der jeweiligen Vorgabe vorzulegen. Ein Mietvertrag kann als Adressnachweis dienen.
+Zum gewöhnlichen Antrag nach Einreise mit Resident Visa gehören laut [NIA-Anleitung 0902](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) das Antragsformular, ein geeignetes Farbfoto, Reisepass und Resident Visa. Dazu kommen Nachweise des Aufenthaltsgrundes und der aktuellen Wohnadresse, etwa ein Mietvertrag. Die jeweilige Anleitung bestimmt, welche Originale und Kopien vorzulegen sind.
 
-Welche Unterlage den Aufenthaltsgrund belegt, zeigt dieselbe Anleitung:
+Je nach Aufenthaltsgrund nennt die NIA folgende zusätzliche Unterlagen:
 
-| Aufenthaltsgrund | Typische zusätzliche Nachweise |
+| Aufenthaltsgrund | Zusätzliche Nachweise |
 |---|---|
-| Beschäftigung | Einschlägiger behördlicher Beschäftigungsbescheid und eine höchstens einen Monat alte Beschäftigungsbestätigung; bei gesetzlichen Ausnahmen gilt der dafür vorgesehene Nachweis. |
-| Hochschulstudium | Zulassung vor der Einschreibung oder eine höchstens einen Monat alte Studienbescheinigung nach der Einschreibung. |
-| Familienaufenthalt | Heirats- oder Geburtsurkunde und passende Identitäts- beziehungsweise Aufenthaltsnachweise der Bezugsperson. |
-| Ehe mit einer taiwanesischen Person mit Haushaltsregistrierung | Zusätzlich Nachweis der in Taiwan registrierten Ehe, etwa aus dem Haushaltsregister. |
+| Beschäftigung | Einschlägiger behördlicher Beschäftigungsbescheid und eine höchstens einen Monat alte Beschäftigungsbestätigung; bei gesetzlichen Ausnahmen der dafür vorgesehene Nachweis. |
+| Hochschulstudium | Vor der Einschreibung die Zulassung, danach eine höchstens einen Monat alte Studienbescheinigung. |
+| Familienaufenthalt | Heirats- oder Geburtsurkunde und die erforderlichen Identitäts- beziehungsweise Aufenthaltsnachweise der Bezugsperson. |
+| Ehe mit einer in Taiwan lebenden taiwanesischen Person mit Haushaltsregistrierung | Zusätzlich ein Nachweis der in Taiwan registrierten Ehe, etwa aus dem Haushaltsregister. |
 
-Beim Foto nennt die NIA einen Aufnahmezeitraum von höchstens zwei Jahren. Die BOCA verlangt für das Resident Visa dagegen Fotos aus den letzten sechs Monaten. Das sind Anforderungen verschiedener Verfahrensschritte. Ein für die Karte ausreichend aktuelles Foto erfüllt deshalb nicht zwangsläufig auch die [Visumsvorgaben](https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html).
+Für das ARC-Foto erlaubt die NIA Aufnahmen aus den letzten zwei Jahren. Beim Resident Visa verlangt die [BOCA](https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html) dagegen Fotos aus den letzten sechs Monaten. Wer beide Anträge vorbereitet, muss deshalb die jeweils kürzere Vorgabe für den Visumantrag einhalten.
 
-Braucht die NIA noch eine Übersetzung? Bei ausländischen Urkunden ist die Beglaubigung durch die zuständige taiwanesische Auslandsvertretung zu beachten; nach der allgemeinen Anleitung kann die NIA eine entsprechend bestätigte chinesische Übersetzung verlangen. Für Studierende beschreibt die [besondere Online-Anleitung](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) strengere Vorgaben zu Übersetzung und Beglaubigung. Maßgeblich ist die Liste für den eigenen Antrag. Herkunftsland der Urkunde und zuständige Vertretung sollten deshalb vor der Beauftragung einer Übersetzung feststehen; die [BOCA führt die Auslandsvertretungen nach Ländern auf](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html).
+Müssen ausländische Urkunden ins Chinesische übersetzt werden? Nach der allgemeinen NIA-Anleitung kann eine entsprechend bestätigte chinesische Übersetzung verlangt werden; außerdem sind die Vorgaben zur Beglaubigung durch die zuständige taiwanesische Auslandsvertretung zu beachten. Die [studentische Online-Anleitung](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) enthält strengere Anforderungen. Vor einem Übersetzungsauftrag sollten daher das Herkunftsland der Urkunde, die zuständige Vertretung und deren Anforderungen feststehen. Das [BOCA-Verzeichnis](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html) führt die Vertretungen nach Ländern auf.
 
-## Servicestelle oder Online-System
+## Für Studierende und Fachkräfte gibt es eigene Portale
 
-Eine erste ARC aufgrund der Ehe mit einer taiwanesischen Person wird bei der NIA-Servicestelle am aktuellen Wohnort beantragt. Nach [Anleitung 0902](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) muss der taiwanesische Ehepartner anwesend sein; die erste Karte wird für ein Jahr ausgestellt.
+Berechtigte Fachkräfte und ihre Angehörigen nutzen das [NIA-Fachkräfteportal](https://coa.immigration.gov.tw/coa-frontend/foreign-white-collar). Nach visumfreier Einreise oder Einreise mit Visitor Visa muss der Online-Antrag laut [Verfahrensanleitung](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/) mindestens 15 Tage vor Ablauf der erlaubten Besuchsdauer gestellt werden. Bleibt weniger Zeit, ist die Servicestelle zuständig. Dieser Zugang steht nur den erfassten Kategorien offen, nicht sämtlichen ausländischen Beschäftigten.
 
-Berechtigte Fachkräfte und ihre Angehörigen können sich im [NIA-Fachkräfteportal](https://coa.immigration.gov.tw/coa-frontend/foreign-white-collar) registrieren. Die [zugehörige Anleitung](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/) verlangt bei diesem Online-Weg nach visumfreier Einreise oder Einreise mit Visitor Visa einen Antrag mindestens 15 Tage vor Ablauf der erlaubten Besuchsdauer. Bleibt weniger Zeit, verweist sie an die Servicestelle. Das Portal ist keine allgemeine Anlaufstelle für sämtliche ausländischen Beschäftigten.
+Studierende stellen ihren Antrag im [NIA-Studentenportal](https://coa.immigration.gov.tw/coa-frontend/student/entry). Nach der Registrierung wählen sie den Antrag aus und laden die Unterlagen als lesbare Farbdateien hoch. [Anleitung 0929](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) nennt unter anderem PDF, JPG und PNG und begrenzt die Dateigröße auf 512 KB. Fordert die NIA weitere Unterlagen an, werden diese nach den Angaben der Mitteilung im laufenden Verfahren ergänzt. Die Schule stellt die Studienbescheinigung aus; die NIA entscheidet über den Aufenthalt.
 
-Studierende verwenden das [NIA-Studentenportal](https://coa.immigration.gov.tw/coa-frontend/student/entry) nach [Anleitung 0929](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news). Die Schule kann die passende Studienbescheinigung ausstellen; die Entscheidung über den Aufenthalt trifft die NIA.
+Beim ersten Antrag aufgrund der Ehe mit [einer in Taiwan lebenden taiwanesischen Person mit Haushaltsregistrierung](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129) führt der Weg zur NIA-Servicestelle am aktuellen Wohnort. Der taiwanesische Ehepartner muss anwesend sein. Für diese erste Karte sieht [Anleitung 0902](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) eine Gültigkeit von einem Jahr vor.
 
-Im Studentenverfahren registrieren Sie ein Konto, wählen den passenden Antrag und laden die erforderlichen Unterlagen als lesbare Farbdateien hoch. Die Anleitung begrenzt die Dateigröße auf 512 KB und nennt unter anderem PDF, JPG und PNG. Bei einer Nachforderung werden die fehlenden Unterlagen im laufenden Verfahren ergänzt. Die konkrete Mitteilung bestimmt, was nachzureichen ist.
+## Was die Karte kostet und wann sie vorliegt
 
-## Gebühren, Prüfung und Abholung
+Eine gewöhnliche ARC kostet nach [Artikel 3 der Gebührenordnung](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135) 1.000 NT$ je Gültigkeitsjahr. Angefangene Jahre werden voll berechnet. Erfolgt der Aufenthaltsantrag nach visumfreier Einreise oder Einreise mit Besuchsvisum, kommen 2.200 NT$ hinzu. Die Ermäßigung für „overseas compatriot students“ ist an diesen besonderen Status gebunden und gilt nicht für alle internationalen Studierenden.
 
-Die [Gebührenordnung, Artikel 3](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135), sieht für eine gewöhnliche ARC 1.000 NT$ je Gültigkeitsjahr vor. Auch ein Zeitraum unter einem Jahr wird als Jahr berechnet. Bei einem Aufenthaltsantrag nach visumfreier Einreise oder Einreise mit Besuchsvisum kommen nach dieser Vorschrift 2.200 NT$ hinzu. Ermäßigungen für den besonderen Status „overseas compatriot student“ gelten nicht automatisch für alle internationalen Studierenden.
+Die NIA legt die Gültigkeitsdauer anhand der Rechtsgrundlage und der Nachweise fest. [Artikel 22 des Einwanderungsgesetzes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) sieht allgemein einen Höchstrahmen von drei Jahren vor; für besondere Kategorien gelten eigene Regeln. Eine längere Laufzeit lässt sich also nicht durch eine entsprechend höhere Gebührenzahlung wählen.
 
-Über die Gültigkeitsdauer entscheidet die Behörde anhand der Rechtsgrundlage und der Nachweise. Der allgemeine gesetzliche Höchstrahmen beträgt drei Jahre; besondere Kategorien unterliegen eigenen Regeln. Eine höhere Gebührenzahlung verschafft keine frei wählbare längere Aufenthaltserlaubnis. [Artikel 22 des Einwanderungsgesetzes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22)
+Im allgemeinen Verfahren nennt [NIA 0902](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) zehn Arbeitstage Bearbeitungszeit. Zeiten für Nachreichungen, Rücksendung und persönliche Befragung zählen nicht mit; nach einer Ergänzung beginnt die Prüfung erneut. Im studentischen Online-Verfahren sind es nach [NIA 0929](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) fünf Arbeitstage. Diese Angaben garantieren keinen bestimmten Reisetermin.
 
-Im allgemeinen Verfahren nennt die NIA zehn Arbeitstage, ohne Zeiten für Nachreichungen, Rücksendung und persönliche Befragung. Nach Ergänzung beginnt die Prüfung erneut. Die studentische Online-Anleitung nennt fünf Arbeitstage. Das sind Verfahrensangaben, keine Zusage für einen bestimmten Reisetermin. [NIA 0902](https://www.immigration.gov.tw/5475/5478/141465/141808/141970), [NIA 0929](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news)
+Nach der Bewilligung im Studentenportal bleiben fünf Arbeitstage zur Zahlung. Wer eine Chipkarte erhält, lädt den Zahlungsbeleg herunter, druckt ihn aus und holt die Karte laut [NIA 0929](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) drei Arbeitstage nach Zahlung bei der im Antrag gewählten Servicestelle ab. Eine elektronische ARC mit höchstens sechs Monaten Gültigkeit wird nach Zahlung heruntergeladen. Andere Verfahren haben eigene Abholhinweise.
 
-Nach Bewilligung im Studentenportal ist die Gebühr innerhalb von fünf Arbeitstagen zu bezahlen. Für die Chipkarte wird der Zahlungsbeleg heruntergeladen und ausgedruckt; die Abholung erfolgt laut [NIA 0929](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) drei Arbeitstage nach Zahlung an der im Antrag gewählten Servicestelle. Eine elektronische ARC mit höchstens sechs Monaten Gültigkeit wird nach Zahlung heruntergeladen. Bei anderen Verfahren gelten die dortigen Abholhinweise.
+Bei der Abholung lassen sich Name, Passnummer, Wohnadresse und Ablaufdatum direkt mit den Antragsunterlagen abgleichen. Das Ablaufdatum wird später für die [Verlängerung](/de/columns/taiwan-arc-renewal-changes-reentry) gebraucht; Änderungen etwa der Wohnadresse können schon vorher eine eigene Meldefrist auslösen.
 
-Zur Abholung gehören auch einige Minuten für den Datenabgleich: Name, Passnummer, Wohnadresse und Ablaufdatum lassen sich direkt mit den eingereichten Unterlagen vergleichen. Anschließend gehört das Ablaufdatum in den Kalender. Die nächste Frist betrifft die [Verlängerung und spätere Änderungen](/de/columns/taiwan-arc-renewal-changes-reentry).
-
-Stand der Quellenprüfung: 24. Oktober 2026. Die Darstellung betrifft ausländische Staatsangehörige nach taiwanesischem Einwanderungsrecht; für Personen aus Festlandchina, Hongkong oder Macau sowie taiwanesische Staatsangehörige ohne Haushaltsregistrierung gelten gesonderte Regelungen. Sie ersetzt keine Prüfung des konkreten Einreisestatus.
+Quellenstand: 24. Oktober 2026. Diese allgemeinen Informationen betreffen ausländische Staatsangehörige nach taiwanesischem Einwanderungsrecht. Für Festlandchina, Hongkong, Macau und taiwanesische Staatsangehörige ohne Haushaltsregistrierung gelten gesonderte Regelungen; der konkrete Einreisestatus bleibt für den Antrag maßgeblich.
 
 ## Amtliche Quellen
 
 - [Einwanderungsgesetz, Artikel 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22)
+- [Aufenthaltsverordnung, Artikel 12 Absatz 1 Nummer 4](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129)
 - [Fachkräftegesetz, Artikel 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16)
 - [Employment Service Act, insbesondere Artikel 43 und 48](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001)
 - [BOCA: Resident Visa](https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html)

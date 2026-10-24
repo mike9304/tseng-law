@@ -1,0 +1,131 @@
+{
+  "source_commit": "f4ed7150d6b204293f51d8443f2ae0a9957fc1c5",
+  "applied_content_paths": [
+    {
+      "path": "src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md",
+      "before_sha256": "4bd0a8728c8dee891c50d9f1ea4b094b3473e00aca02ce8a1c38ffd580f8c454",
+      "after_sha256": "ad0a3eccf0fbbc4d5e7a2d78e8e3bd5d753e12305a77060417927c55a7d8c265"
+    },
+    {
+      "path": "src/content/columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md",
+      "before_sha256": "d172ea56f21d63cfe8ccfac3cf359f91f8a61074490751572525808e0c1aed2d",
+      "after_sha256": "e208d9f93a575cee0543a33f945596216d971218239a2c88303f43c3fe981d24"
+    },
+    {
+      "path": "src/content/columns-th/662-thai-return-home-taiwan-traffic-injury-records.md",
+      "before_sha256": "3401b05e82b5c643eee95e0e1b68aa20bdbcc03fbdf4ac6b753ed8ad535d3998",
+      "after_sha256": "674ed1f49df35519df68c050be33f651b302765cc042095ee7f54b91eada3e6c"
+    },
+    {
+      "path": "src/content/columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md",
+      "before_sha256": "16f9a9e2a05faca9d2e2a1879344661fa3b3faf235f0540edfa13ad2403c3e77",
+      "after_sha256": "b6892d81d73a179535f1aacce4672e53a615cfb8beb0f8c44b40111f025fec7b"
+    },
+    {
+      "path": "src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+      "before_sha256": "73cd670bde83eb90f3d282eea4496505b97f9bbca5b47c73dab940c6204a2018",
+      "after_sha256": "a4e211f02700ccfbcb5995a33b696af4fbc5e1df2102bed666f01706313275d0"
+    },
+    {
+      "path": "src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md",
+      "before_sha256": "0982417534e2e25830e311e4510f9bb594a0f509bff80cf82572db97e185d63f",
+      "after_sha256": "4927aec900e7c823a9ae452f8704b7b5056e21b3eb135e5d4d8dcab038507d2e"
+    },
+    {
+      "path": "src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+      "before_sha256": "128e52e87248c9f69384ef259497edcf615a15e7276f15b1a541ee2be03c086c",
+      "after_sha256": "028c425102e697c18662235dbb8060fd96c1cd0dd8e999ad96187374a30ace71"
+    },
+    {
+      "path": "src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+      "before_sha256": "91b65d34dd613c38bd36b0fdee5f256ce5cb80264c9bd558bd3f19d836d57cf9",
+      "after_sha256": "18986fc58c3bbb5e22fe11ea80ce0f92db3fa418fc08ab3dd37f98d1f3442c0e"
+    },
+    {
+      "path": "src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+      "before_sha256": "f0056a6d267465fc94f53d4b71fd82c1a9df21c0423387a1819f8f6b6f99784b",
+      "after_sha256": "4e89e5af0aa9c66c49fd022040d67d198ea60815528005b9c20298ce6b6f5ab2"
+    },
+    {
+      "path": "src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+      "before_sha256": "e31af5e8b7d41a77ab50b8bce8defa9a2a296fa0c1a33ebdfd327e33668a454f",
+      "after_sha256": "7a07b0d5f128948a29625d2cfe674a79c4efed689e07c8245159ff28948bd44a"
+    },
+    {
+      "path": "src/content/columns-fr/674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.md",
+      "before_sha256": "9ada523b45a4b17884dff295c272de7ad62fd8813447924d7487795b3d0cc720",
+      "after_sha256": "486d6287e084b1d6f00a1f7edd1e1916d1f40168100f579bc5d7d41f525fce91"
+    },
+    {
+      "path": "src/content/columns-fr/678-french-employee-taiwan-unpaid-wages-employer-closure.md",
+      "before_sha256": "781364dd39b4afce3d3b5691f59df8c7f3e42433cdd05d1412532468dc4e979c",
+      "after_sha256": "1f0c59422c5af35c2203aec5c24df026bd38d4f5852bb96fe8917c67189a385a"
+    },
+    {
+      "path": "src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md",
+      "before_sha256": "6c5e4d4c89c3f90c3dba75f348b18d7e52a48c1d0c7a53f3b9ac4c1ed7e96b02",
+      "after_sha256": "d35adcb99b877247eb47456411a26c32593259d5a5f471d1d5b14eb28a404e1e"
+    },
+    {
+      "path": "src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md",
+      "before_sha256": "87333454f3d491ead7a68eb0ec7b181ffa553c937b29d2050ac842ef5fd4a10c",
+      "after_sha256": "815d56e84af1b3be19e8664b2ade58a944dd324e485307b81a9f37835b6570b1"
+    },
+    {
+      "path": "src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md",
+      "before_sha256": "39f6552b79d04807a001bce627864efa494e43cc013913b472e2438dcc1a54e2",
+      "after_sha256": "831104310c9b384912d338a3ec96db91f3d925abf77538f9462c42b0367e85ac"
+    },
+    {
+      "path": "src/content/columns-it/685-italian-brand-taiwan-distributor-trademark-registration.md",
+      "before_sha256": "67ea5334072e57b2f108a0a9bcdb321fe2addac66e09d0201ec1c7f5b4774803",
+      "after_sha256": "5bbd27208c8afe566ad63c4b1417ae9b40718736a44f5192336f9fd800518b3c"
+    },
+    {
+      "path": "src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md",
+      "before_sha256": "12d3b081729a09db928f844839854b2281f638abd5c3facf6d1bc21196c53535",
+      "after_sha256": "1610512cf140b0f1dfc662e07e0c4b9fcdf853954870fbc587b7ec311d2957dc"
+    },
+    {
+      "path": "src/content/columns-it/687-italy-resident-heir-taiwan-inheritance-renunciation-debts.md",
+      "before_sha256": "833acd7876a5e41863621928bcfed170590e6ed2fb49916166074e58236e6f73",
+      "after_sha256": "75a4733d9ec89446b122bebebcc63281e89312cf83bc94a3aba45289d6bbeca2"
+    },
+    {
+      "path": "src/content/columns-it/688-italian-business-visitor-taiwan-summons-interpreter-defense.md",
+      "before_sha256": "02bfcc511a2eb3f62534e231d72ee46229d925b05a654a8a59c23eb4f8927aef",
+      "after_sha256": "b8151fd32065919b6ef9bd23feec236187bba6eae8fc440c89820af29659c82d"
+    },
+    {
+      "path": "src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md",
+      "before_sha256": "bcee79faa0ba153eb153ae64997f3433988235bfeecc5166916a3a2c6285d5a4",
+      "after_sha256": "e46f893b80e7287cb95c5eb4f819f4ef632eaa8633774bb12ea2ac0bcfe0036d"
+    },
+    {
+      "path": "src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md",
+      "before_sha256": "415d039d1ca7a2c1436bf5ef1c7023ed2e46df3cc3ff1e73f0d655789eafcf07",
+      "after_sha256": "be53be3e8b7392d4458c11f6c92bb5bcae610ec19b2061d419623068083cee63"
+    },
+    {
+      "path": "src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md",
+      "before_sha256": "a668300e4fa2a60df774c735aa10e8de550112ec98e84b4db1b31ea1fbcc0b1b",
+      "after_sha256": "001bc0cfc01c5bf6b4c6f1862f5be54af9de7d5fc559db52872c8768fa5477ba"
+    },
+    {
+      "path": "src/content/columns-es/693-spain-resident-taiwan-divorce-property.md",
+      "before_sha256": "490509a4df6a019885a31f72ce28d67226a21bb4a152562f75c3a94ffa71c9d7",
+      "after_sha256": "62031b16e250abc879625423246ffe2db85dc2f0fdde56c093a324da73fa9e52"
+    },
+    {
+      "path": "src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md",
+      "before_sha256": "748c2617ba06689b7d83c9db9bbaf07c5db621f6d1b7b6c288ee1526b78450be",
+      "after_sha256": "7c78571e6b959be709d66f8bed61e621670b7a8320e9e0af928db327c7932a0b"
+    },
+    {
+      "path": "src/content/columns-pt/698-portugal-fim-contrato-taiwan-salarios-em-falta.md",
+      "before_sha256": "06120ce9774c4ee9717384fdbe47f8ab9b214b90c388eec1bb4339f3f1844145",
+      "after_sha256": "80ebc4b50ebfc0d4d0e62373c2d0ec5b9989091726430d9538f48b6b33e6b549"
+    }
+  ],
+  "note": "Verified previously reviewed, unpublished manuscript-only corrections. Further independent review follows. No old audit, build, or untracked changes copied."
+}

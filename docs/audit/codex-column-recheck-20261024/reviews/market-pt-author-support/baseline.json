@@ -1,0 +1,32 @@
+[
+  {
+    "file": "src/content/columns-pt/694-portugal-exportador-acordo-prestacoes-taiwan.md",
+    "sha256": "62dd6d3e3e38a388f49be4d259e44abd4d87badd9261e8afd708cffb3567f2f0",
+    "image": "/images/columns/editorial-20261003-b04/taiwan-unpaid-invoice-settlement-release-korean.png",
+    "image_sha256": "583778392ca2de359c18532a7e6ec367c48202fbe05292c0695cbf668c4c9f81"
+  },
+  {
+    "file": "src/content/columns-pt/695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md",
+    "sha256": "dd47581c4629eced1a254eab84cebbe1dc2f2a0da5c5d36c761f9cc308f8f78a",
+    "image": "/images/columns/fraud-20261003/taiwan-supplier-bank-account-change-bec.png",
+    "image_sha256": "24468029d4f12cbc80b79b8290a743e9115f9299ea8f07274caa233c7b180e50"
+  },
+  {
+    "file": "src/content/columns-pt/696-portugal-sentenca-arbitral-bens-taiwan.md",
+    "sha256": "e495bd598c2c2615e6532b56530f9f708e752dd65503cceba207567b7e8e1aac",
+    "image": "/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp",
+    "image_sha256": "d6fb4dcbb7019d9a0d8c45eb9ef5ee61fa3f81c25b73da275289e43ed0b59fbf"
+  },
+  {
+    "file": "src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md",
+    "sha256": "7c78571e6b959be709d66f8bed61e621670b7a8320e9e0af928db327c7932a0b",
+    "image": "/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+    "image_sha256": "1252a6bc4811ddfe96f16eceac5c05b75dd26e57eb6a9a2456df85a6c79495af"
+  },
+  {
+    "file": "src/content/columns-pt/698-portugal-fim-contrato-taiwan-salarios-em-falta.md",
+    "sha256": "80ebc4b50ebfc0d4d0e62373c2d0ec5b9989091726430d9538f48b6b33e6b549",
+    "image": "/images/blog/606-taiwan-unpaid-wages-insolvent-employer-payment-fund/featured-01.webp",
+    "image_sha256": "797ef5319e02226059265ccc46b9c4e1ad1b3ef13e72200653a1d1e24513b5d6"
+  }
+]

@@ -3,7 +3,7 @@ title: "Maschine nach Taiwan geliefert, Schlussrate offen: Was FAT und SAT beleg
 seoTitle: "Taiwan: FAT, SAT und offene Schlusszahlung"
 summary: "Ein bestandener FAT löst die Schlusszahlung nicht immer aus. Deutsche Maschinenlieferanten brauchen den vereinbarten Zahlungsmeilenstein und belastbare Prüfprotokolle."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23. Oktober 2026"
 read_time: "6 Minuten Lesezeit"
 categories: ["Rechtliche Informationen zu Taiwan"]
@@ -12,6 +12,9 @@ tags: ["supply-contracts", "machinery", "payment-disputes"]
 audience: ["de"]
 targetMarket: "Germany"
 author: "legal-ai-assistant"
+featured_image: "/images/columns/679-market-review-20261024.webp"
+featured_image_alt: "Fräsmaschine mit eingespanntem Werkstück, Messschieber und geöffnetem Ordner in einer Werkstatt."
+featured_image_caption: "Illustration einer Maschinenprüfung; die Unterlagen sind keine tatsächlichen Prüfprotokolle."
 faq:
   - q: "Wird die Schlussrate mit bestandenem FAT automatisch fällig?"
     a: "Das hängt vom vereinbarten Zahlungsmeilenstein ab. Ein FAT beim Hersteller, die Lieferung und ein SAT am Standort des Kunden können unterschiedliche Voraussetzungen haben. Bei Anwendung taiwanesischen Werkvertragsrechts ist Artikel 505 des Zivilgesetzbuchs der gesetzliche Ausgangspunkt; eine vereinbarte Zahlungsregel muss gesondert ausgelegt werden."
@@ -27,7 +30,7 @@ Für einen deutschen Maschinenlieferanten beginnt die Forderungsprüfung deshalb
 
 ## Abnahmebegriffe brauchen einen Vertragsinhalt
 
-Bezeichnet „acceptance“ den erfolgreichen Probelauf, eine Freigabe zur Verschiffung oder die endgültige Bestätigung der Gesamtleistung? Die Begriffe FAT und SAT allein legen das nicht fest. Zusammen gehören die Bestellung, einbezogene Lieferbedingungen, technische Spezifikation, Prüfpläne und spätere Änderungsvereinbarungen. Ihre Rangfolge kann darüber entscheiden, ob ein nachträglich verlangter Dauerlauf schon zum ursprünglichen Leistungsumfang gehörte.
+Bezeichnet „acceptance“ den erfolgreichen Probelauf, eine Freigabe zur Verschiffung oder die endgültige Bestätigung der Gesamtleistung? Die Begriffe FAT und SAT allein legen das nicht fest. Zusammen zu lesen sind die Bestellung, einbezogene Lieferbedingungen, technische Spezifikation, Prüfpläne und spätere Änderungsvereinbarungen; ihre Rangfolge kann darüber entscheiden, ob ein nachträglich verlangter Dauerlauf schon zum ursprünglichen Leistungsumfang gehörte.
 
 Taiwanesisches Recht gilt nicht schon deshalb, weil die Anlage dort steht. [Artikel 20 des taiwanesischen Gesetzes über das auf Zivilsachen mit Auslandsbezug anwendbare Recht](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20) knüpft vertragliche Schuldverhältnisse an die Rechtswahl der Parteien an; ohne wirksame ausdrückliche Wahl kommt es auf die engste Verbindung an. Zuständigkeit und eine mögliche Schiedsklausel sind zusätzlich zu prüfen.
 
@@ -39,11 +42,11 @@ Für einen Werkvertrag sieht [Artikel 505](https://law.moj.gov.tw/LawClass/LawSi
 
 Eine offene Mängelliste verlangt eine genauere Trennung. Fehlt die geschuldete Leistung, ist sie mangelhaft, oder wünscht der Kunde eine zusätzliche Funktion? Diese Einordnung beeinflusst die Zahlungsforderung. Nach [Artikel 264](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=264) kann bei gegenseitigen vertraglichen Verpflichtungen die eigene Leistung bis zur Gegenleistung verweigert werden, sofern keine Vorleistungspflicht besteht. Bei bereits erbrachter Teilleistung darf die Verweigerung nach den Umständen nicht gegen Treu und Glauben verstoßen. Weder ein offener Restpunkt noch der Hinweis auf eine laufende Produktion entscheidet diese Frage allein.
 
-Bei mangelhafter Werkleistung kann der Besteller nach [Artikel 493](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=493) eine angemessene Frist zur Beseitigung setzen. Bleibt sie erfolglos, sieht die Vorschrift Selbstbeseitigung und Erstattung notwendiger Kosten vor. Bei übermäßig hohen Beseitigungskosten darf der Unternehmer die Beseitigung verweigern; die genannte Selbstbeseitigungsregel gilt dann nicht. Eine Aufforderung zur Nacharbeit sollte deshalb mit Datum, Fehlerbild und verlangtem Umfang in die rechtliche Prüfung gelangen.
+Bei mangelhafter Werkleistung kann der Besteller nach [Artikel 493](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=493) eine angemessene Frist zur Beseitigung setzen. Bleibt sie erfolglos, sieht die Vorschrift Selbstbeseitigung und Erstattung notwendiger Kosten vor. Bei übermäßig hohen Beseitigungskosten darf der Unternehmer die Beseitigung verweigern. Die genannte Selbstbeseitigungsregel gilt dann nicht. Eine Aufforderung zur Nacharbeit sollte deshalb mit Datum, Fehlerbild und verlangtem Umfang in die rechtliche Prüfung gelangen.
 
 ## Prüfbedingungen und Änderungen sichtbar machen
 
-War die Maschine testbereit? Für die Beantwortung braucht es mehr als das Feld „bestanden“ oder „nicht bestanden“. Prüfprotokolle sollten erkennen lassen, welche Softwareversion, Werkstücke, Toleranzen und Betriebsbedingungen verwendet wurden. Fehlende Medienversorgung oder ein anderes Eingangsmaterial gehören mit Zeitpunkt und Herkunft der Information in die Dokumentation. Wer dafür verantwortlich war, ergibt sich erst aus der vereinbarten Aufgabenverteilung.
+War die Maschine testbereit? Für die Beantwortung braucht es mehr als das Feld „bestanden“ oder „nicht bestanden“: Prüfprotokolle sollten erkennen lassen, welche Softwareversion, Werkstücke, Toleranzen und Betriebsbedingungen verwendet wurden. Fehlende Medienversorgung oder ein anderes Eingangsmaterial gehören mit Zeitpunkt und Herkunft der Information in die Dokumentation. Wer dafür verantwortlich war, ergibt sich erst aus der vereinbarten Aufgabenverteilung.
 
 Prüfunterlagen und Zahlungsnachweise lassen sich den einzelnen Streitpunkten zuordnen:
 

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "670",
+    "sha256": "32fcef997307d958350ca366f4cf421e7352efd79120c0dab43d777dcd46ccf2",
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md [hi] sentences=54 mean=17.1 cv=0.427 short=0.13 run3=0.077 opener_rep=0.071 cite_end=0.0 cite_para=0.643 contrast=0 caveat=0 q=3\n  FAIL len_cv=0.427 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n"
+  },
+  {
+    "id": "671",
+    "sha256": "c481d6f214f6895fc190040bdb3b136b7d6b5f93ab7f32fe75e17de2cc277869",
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md [hi] sentences=48 mean=15.9 cv=0.443 short=0.229 run3=0.043 opener_rep=0.214 cite_end=0.021 cite_para=0.571 contrast=1 caveat=1 q=1\n  FAIL len_cv=0.443 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n"
+  },
+  {
+    "id": "672",
+    "sha256": "5ccf53715c1e9028e10026866b399d59dd7b48e9441eace028b9eb746d8a7692",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md [hi] sentences=54 mean=15.1 cv=0.477 short=0.204 run3=0.058 opener_rep=0.067 cite_end=0.0 cite_para=0.467 contrast=0 caveat=0 q=4\n  OK — no variety limit violated\n"
+  },
+  {
+    "id": "673",
+    "sha256": "8ab651e95f3eba903c4b4d3dcf4bc2dc6da6188c64583b77aeb0518e89d7c2cf",
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md [hi] sentences=47 mean=16.4 cv=0.444 short=0.17 run3=0.089 opener_rep=0.077 cite_end=0.0 cite_para=0.308 contrast=0 caveat=0 q=1\n  FAIL len_cv=0.444 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n"
+  }
+]

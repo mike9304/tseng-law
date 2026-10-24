@@ -41,7 +41,7 @@ Le fonds intervient en cas de fermeture, liquidation ou déclaration de faillite
 
 Pour une fermeture, [l'article 8 du règlement du fonds](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030005) demande une pièce de l'autorité compétente constatant la radiation ou une autre situation reconnue de cessation d'activité. La disparition du site internet ou l'absence de réponse du responsable ne constitue pas cette pièce. Ces faits peuvent être conservés et signalés à l'autorité chargée de vérifier la situation.
 
-L'employeur doit aussi avoir cotisé au fonds ; une régularisation ultérieure des cotisations impayées peut permettre la demande, selon l'article 7 du même règlement. Le dossier doit donc vérifier cette participation. Une carte d'assurance du salarié ne répond pas, à elle seule, à toutes les conditions du fonds.
+L'employeur doit aussi avoir cotisé au fonds. Une régularisation ultérieure des cotisations impayées peut permettre la demande, selon l'article 7 du même règlement. Le dossier doit donc vérifier cette participation. Une carte d'assurance du salarié ne répond pas, à elle seule, à toutes les conditions du fonds.
 
 ## Les plafonds et la preuve de la créance
 
@@ -51,7 +51,7 @@ Demander une avance ne fixe pas automatiquement tout ce que l'employeur doit. Ch
 
 Si le responsable ne peut pas confirmer la dette, la [notice du Bureau](https://www.bli.gov.tw/0007239.html) admet notamment une ordonnance de paiement ou un jugement civil accompagné de son certificat de caractère définitif et de la copie de la demande initiale. Elle prévoit aussi d'autres pièces selon la procédure suivie. La fermeture et la dette demandent donc deux preuves distinctes.
 
-En liquidation ou en faillite, l'article 9 du [règlement](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030005) exige en outre la preuve de la déclaration de créance auprès du liquidateur ou de l'administrateur de faillite. Selon l'article 10, les salariés d'un même employeur présentent en principe une demande commune, sauf circonstances particulières. Le calendrier doit être coordonné avec les autres demandeurs.
+En liquidation ou en faillite, l'article 9 du [règlement](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030005) exige en outre la preuve de la déclaration de créance auprès du liquidateur ou de l'administrateur de faillite. Selon l'article 10, les salariés d'un même employeur présentent en principe une demande commune, sauf circonstances particulières. Les demandeurs doivent coordonner leur calendrier.
 
 ## Un retour en France demande une organisation du dossier
 

@@ -1,0 +1,77 @@
+[
+  {
+    "file": "src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md",
+    "sha256": "4927aec900e7c823a9ae452f8704b7b5056e21b3eb135e5d4d8dcab038507d2e",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 0,
+    "time_utc": "2026-10-24T07:11:56.416542+00:00"
+  },
+  {
+    "file": "src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+    "sha256": "a8322aa20cc87e436e5aee929441d44c4cdffa04bbf32370b0df381259c87be3",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 0,
+    "time_utc": "2026-10-24T07:11:56.506191+00:00"
+  },
+  {
+    "file": "src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+    "sha256": "c9f7d8a3a90a1d533ebfaa5ad6f7b6ff0f23ad7430396de3a9532555f403712f",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 0,
+    "time_utc": "2026-10-24T07:11:56.593910+00:00"
+  },
+  {
+    "file": "src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+    "sha256": "44c8534add421222c5fa56d250f94b41820bcfb4d58e51d5d0395a33eed2b6f0",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 0,
+    "time_utc": "2026-10-24T07:11:56.672259+00:00"
+  },
+  {
+    "file": "src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+    "sha256": "af4d8bc235868b1bbef96be13b69383ea932d27e1ee1122e50b5258910f09acd",
+    "stable": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 0,
+    "time_utc": "2026-10-24T07:11:56.757105+00:00"
+  }
+]

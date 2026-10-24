@@ -3,7 +3,7 @@ title: "Marque française déposée par le distributeur à Taïwan : les dates e
 seoTitle: "Taïwan : marque au nom du distributeur"
 summary: "Quand un distributeur enregistre une marque à Taïwan, l'exportateur doit vérifier le titulaire, la publication et ses preuves d'usage antérieur avant de choisir le recours."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 octobre 2026"
 read_time: "5 min de lecture"
 categories: ["Informations juridiques sur Taïwan"]
@@ -33,11 +33,11 @@ Qui apparaît comme titulaire sur l'enregistrement taïwanais : la société fra
 
 Un contrat de distribution peut établir la relation et la connaissance. Il reste à documenter l'usage antérieur et l'intention d'imitation. Les anciens catalogues, factures de ventes, emballages datés, campagnes commerciales et envois d'échantillons gagnent à être classés avant et après la date de dépôt litigieuse. Un fichier récemment exporté du site internet ne prouve pas, à lui seul, ce qui était visible plusieurs années auparavant.
 
-Le nom chinois appelle une recherche distincte. Les messages sur son choix méritent une lecture complète. Autorisaient-ils une traduction commerciale, une demande au nom du fabricant ou un enregistrement au nom du distributeur ? L'accord donné à une maquette peut avoir une portée plus limitée que celle d'une autorisation de dépôt. Tout dépend du texte et du contexte. Le seul mot « approuvé » ne fixe pas l'étendue du consentement.
+Le nom chinois appelle une recherche distincte. Les échanges méritent une relecture complète. Autorisaient-ils une traduction commerciale, une demande au nom du fabricant ou un enregistrement au nom du distributeur ? L'accord donné à une maquette peut avoir une portée plus limitée que celle d'une autorisation de dépôt. « Approuvé » ne suffit pas à délimiter le consentement.
 
 ## Trois mois pour l'opposition, un autre délai pour l'invalidation
 
-Dans les trois mois suivant la publication de l'enregistrement, toute personne peut présenter une opposition pour les motifs énumérés par [l'article 48](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=48), dont ceux de l'article 30. Le délai part de la publication. La date de découverte du dépôt ne le décale pas. Les discussions commerciales doivent tenir compte de cette échéance.
+Dans les trois mois suivant la publication de l'enregistrement, toute personne peut présenter une opposition pour les motifs énumérés par [l'article 48](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=48), dont ceux de l'article 30. La date de découverte du dépôt ne le décale pas. Les discussions commerciales doivent tenir compte de cette échéance.
 
 Une personne ayant un intérêt peut demander l'invalidation de l'enregistrement dans les conditions de [l'article 57](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=57). Pour le motif tiré de la connaissance et de l'imitation d'une marque antérieure, l'article 30, alinéa 1, point 12, [l'article 58](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=58) ferme cette voie une fois cinq ans écoulés après la publication.
 
@@ -53,7 +53,7 @@ Pour les cosmétiques, la marque s'ajoute aux responsabilités liées à [l'impo
 
 ## Les premières pièces utiles à une analyse taïwanaise
 
-Une entreprise sans domicile ni établissement à Taïwan doit recourir à un mandataire qualifié pour les procédures de marque, selon [l'article 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=6). Le dossier préparatoire peut contenir une chronologie courte, les titres connus, le contrat de distribution et une sélection de preuves datées. Les originaux restent conservés.
+Une entreprise sans domicile ni établissement à Taïwan doit recourir à un mandataire qualifié pour les procédures de marque, selon [l'article 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=6). Le dossier préparatoire peut contenir une chronologie courte, les titres connus, le contrat de distribution et une sélection de preuves datées. L'entreprise conserve les originaux.
 
 Pour organiser un premier échange, la [page de contact](/fr/contact) renvoie à [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) : nom du distributeur, numéro public d'enregistrement et échéance identifiée permettent de situer la demande sans transmettre immédiatement les pièces confidentielles. Les consultations ont lieu en anglais, chinois, japonais ou coréen ; la communication doit être convenue au préalable. Cette présentation générale ne préjuge pas de l'issue d'un recours. Avant toute discussion sur le prix d'une cession, la date de publication et le nom exact du titulaire doivent être fixés.
 

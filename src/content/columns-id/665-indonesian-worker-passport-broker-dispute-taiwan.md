@@ -3,7 +3,7 @@ title: "Paspor ditahan agen di Taiwan: pengembalian dokumen dan sengketa biaya"
 seoTitle: "Paspor ditahan agen Taiwan: meminta kembali"
 summary: "Pekerja Indonesia di Taiwan dapat meminta kembali paspor dan ARC. Bedakan penitipan sementara, penahanan tanpa persetujuan, tagihan agen, dan izin pindah majikan."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 Oktober 2026"
 read_time: "5 menit baca"
 categories: ["Informasi hukum Taiwan"]
@@ -40,7 +40,7 @@ Permintaan pengembalian sebaiknya menyebut dokumen yang dimaksud dengan jelas: p
 
 Pisahkan daftar dokumen yang diminta kembali dari daftar pembayaran yang disengketakan. Untuk tagihan, kumpulkan perjanjian jasa, rincian biaya, kuitansi, bukti transfer, serta identitas penerima. Bedakan uang yang dibayar di Indonesia dari biaya jasa agen Taiwan. Nama dagang yang mirip belum membuktikan bahwa keduanya badan hukum yang sama.
 
-Pasal 40 juga mengatur larangan pemungutan biaya di luar standar yang ditetapkan atau keuntungan tidak patut. Karena itu, label “denda pindah”, “jaminan”, atau “biaya administrasi” perlu diuji terhadap isi perjanjian dan aturan yang sesuai. Artikel ini tidak menetapkan satu tarif untuk seluruh jenis pembayaran. Biaya yang sah pada satu tahap belum menjawab apakah tagihan lain diperbolehkan.
+Pasal 40 juga mengatur larangan pemungutan biaya di luar standar yang ditetapkan atau keuntungan tidak patut. Karena itu, label “denda pindah”, “jaminan”, atau “biaya administrasi” perlu diuji terhadap isi perjanjian dan aturan yang sesuai.
 
 Masih ada utang yang diperselisihkan? Penjelasan tentang utang itu perlu dicatat, tetapi larangan menahan dokumen tetap dinilai menurut ketentuan di atas. Jangan menyetujui kuitansi pelunasan, pengakuan utang baru, atau pelepasan tuntutan hanya karena judulnya disebut “formulir pengambilan paspor”. Baca seluruh halaman dan minta penjelasan dalam bahasa yang dipahami.
 

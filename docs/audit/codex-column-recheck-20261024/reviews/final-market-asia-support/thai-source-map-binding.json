@@ -1,0 +1,47 @@
+[
+  {
+    "article_sha256": "ad0a3eccf0fbbc4d5e7a2d78e8e3bd5d753e12305a77060417927c55a7d8c265",
+    "map_sha256": "9c90bcbaf54b463696df927f31242291160e9275111c584f3ca46dd7255397c3",
+    "source_sha_match": true,
+    "unresolved_boundaries": [],
+    "approval_path": "/Users/son7/tseng-market-columns-20261023/repo/docs/audit/variety-segments/reviews/final-20261024/final/boundary-approval.json",
+    "approval_sha256": "9f27b8569af9aad705996786409075b06db7da71c68f650f861261d64b472629",
+    "approval_sha_match": true
+  },
+  {
+    "article_sha256": "e208d9f93a575cee0543a33f945596216d971218239a2c88303f43c3fe981d24",
+    "map_sha256": "19752f5ab2c0f1f41564805daedc6930ea24e983a9bac48841c3ed07029596f3",
+    "source_sha_match": true,
+    "unresolved_boundaries": [],
+    "approval_path": "/Users/son7/tseng-market-columns-20261023/repo/docs/audit/variety-segments/reviews/repair-20261024/boundary-approval.json",
+    "approval_sha256": "c65efc6a58ab27b28dec671ea6b6e827a205feaf6dc87995fcc01f703d495f06",
+    "approval_sha_match": true
+  },
+  {
+    "article_sha256": "7acb2c805316c660a4733fb4a83fbb444c3c610b41e87dc1602fd46797d3228d",
+    "map_sha256": "d7d4df159421d8cea3288607a3ad3a7897808e9cc34236acc035d1a8cadd953b",
+    "source_sha_match": true,
+    "unresolved_boundaries": [],
+    "approval_path": "/Users/son7/tseng-market-columns-20261023/repo/docs/audit/variety-segments/reviews/original-20261024/thai-boundary-approval.json",
+    "approval_sha256": "aacda48dac273d8659d5e87a918e46b50f4fd8ccca7de81e330abb037d508c84",
+    "approval_sha_match": true
+  },
+  {
+    "article_sha256": "674ed1f49df35519df68c050be33f651b302765cc042095ee7f54b91eada3e6c",
+    "map_sha256": "68878d86d6ac16a018b72c087419a955ed8c297d7fe73d5eff4bb8966b428f20",
+    "source_sha_match": true,
+    "unresolved_boundaries": [],
+    "approval_path": "/Users/son7/tseng-market-columns-20261023/repo/docs/audit/variety-segments/reviews/final-20261024/final/boundary-approval.json",
+    "approval_sha256": "9f27b8569af9aad705996786409075b06db7da71c68f650f861261d64b472629",
+    "approval_sha_match": true
+  },
+  {
+    "article_sha256": "b6892d81d73a179535f1aacce4672e53a615cfb8beb0f8c44b40111f025fec7b",
+    "map_sha256": "d186e29909cfd19eeb304b07096f9def5bae4fddc3368a62c4e407efb123d2e9",
+    "source_sha_match": true,
+    "unresolved_boundaries": [],
+    "approval_path": "/Users/son7/tseng-market-columns-20261023/repo/docs/audit/variety-segments/reviews/final-20261024/final/boundary-approval.json",
+    "approval_sha256": "9f27b8569af9aad705996786409075b06db7da71c68f650f861261d64b472629",
+    "approval_sha_match": true
+  }
+]

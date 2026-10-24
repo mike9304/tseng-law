@@ -1,7 +1,7 @@
 ---
-title: "Trabalhar, estudar ou reunir a família em Taiwan: escolher o percurso de residência"
+title: "Residência em Taiwan por trabalho, estudos ou reagrupamento familiar"
 seoTitle: "Vistos de Taiwan para trabalho, estudos e família"
-summary: "Compare os percursos de trabalho, estudos superiores, mandarim e reagrupamento familiar em Taiwan. A finalidade da estadia e o passaporte determinam o que deve preparar."
+summary: "Uma oferta de emprego, a admissão numa universidade ou um vínculo familiar levam a pedidos diferentes. A forma de entrada em Taiwan também condiciona o acesso à residência."
 published: "2026-10-24"
 lastmod: "2026-10-24"
 date_display: "24 de outubro de 2026"
@@ -17,60 +17,61 @@ tags:
 audience:
   - "pt"
 author: "legal-ai-assistant"
+featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
+featured_image_alt: "Computador portátil fechado, livros e duas chávenas em três conjuntos, acompanhados por uma caderneta de viagem sem inscrições."
+featured_image_caption: "Composição ilustrativa sobre trabalho, estudos e vida familiar, sem documentos de um pedido real."
 faq:
   - q: "Uma bolsa ou carta de admissão garante residência em Taiwan?"
-    a: "Não. São elementos que podem instruir o pedido, mas a entrada e a residência dependem do percurso aplicável e da decisão das autoridades. Um curso conducente a grau académico e um curso de mandarim têm condições diferentes."
-  - q: "Quem fala português beneficia da isenção de visto prevista para Portugal?"
-    a: "A elegibilidade depende da nacionalidade e do documento de viagem, além das restantes condições. A referência a Portugal na lista da BOCA não abrange automaticamente titulares de passaportes brasileiros ou de outros países de língua portuguesa."
+    a: "A bolsa e a admissão podem integrar os documentos do pedido. A autorização depende, porém, das condições da via utilizada e da decisão das autoridades. Os cursos que conferem grau académico e os cursos de mandarim seguem requisitos diferentes."
+  - q: "A isenção de visto para Portugal também vale para um passaporte brasileiro?"
+    a: "A isenção prevista para Portugal não se estende a um passaporte brasileiro. A BOCA define as condições de entrada segundo a nacionalidade e o tipo de documento de viagem. O mesmo critério vale para os restantes países de língua portuguesa."
   - q: "O cônjuge de um estrangeiro com ARC pode sempre acompanhá-lo como residente?"
-    a: "É necessário verificar o estatuto do familiar residente e os requisitos do pedido. A via direta prevista para certos profissionais abrange categorias de familiares definidas na lei; não se estende a qualquer familiar de qualquer titular de ARC."
+    a: "Na via do artigo 16.º, o familiar em Taiwan deve ser um profissional estrangeiro que exerce trabalho profissional em Taiwan ou um profissional estrangeiro especializado. Em ambos os casos, a NIA deve já ter autorizado a sua residência ou residência permanente. A via abrange o cônjuge e os filhos definidos na lei; outros casos exigem um fundamento e um procedimento adequados."
 ---
 
-Entrar em Taiwan sem visto não confere, por si só, o direito de aí residir ou trabalhar. A [isenção de visto descrita pela BOCA](https://www.boca.gov.tw/cp-149-4486-7785a-2.html) autoriza uma visita limitada; certas categorias podem depois pedir residência, desde que cumpram os requisitos legais próprios.
+É possível pedir residência depois de entrar em Taiwan sem visto? Algumas categorias permitem fazê-lo, mas dependem de requisitos próprios. A [isenção de visto publicada pela BOCA](https://www.boca.gov.tw/cp-149-4486-7785a-2.html) autoriza uma visita de duração limitada e não concede, por si só, residência ou autorização de trabalho.
 
-Para cidadãos portugueses com passaporte elegível, a lista atual prevê visitas até 90 dias, sujeitas às condições publicadas, incluindo validade do passaporte de pelo menos seis meses à entrada e bilhete de regresso ou de continuação da viagem. Titulares de passaportes brasileiros ou de outros países de língua portuguesa devem consultar a entrada correspondente ao seu documento, sem transpor o regime de Portugal.
+Com um passaporte português elegível, a lista atual prevê visitas até 90 dias. Entre as condições estão uma validade do passaporte de pelo menos seis meses à entrada e um bilhete de regresso ou de continuação da viagem. Os passaportes brasileiros e os de outros países de língua portuguesa seguem as regras aplicáveis à respetiva nacionalidade e ao tipo de documento de viagem.
 
-## Uma proposta de emprego: quem pede a autorização?
+## Emprego: da autorização de trabalho ao ARC
 
-O [artigo 43.º da Lei dos Serviços de Emprego](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43) estabelece a regra de autorização para o trabalho de estrangeiros, com exceções legais. Por isso, a entidade empregadora deve identificar a categoria do posto, a autorização necessária e quem apresenta o pedido. Uma proposta ou um contrato ainda não demonstra que o trabalho está autorizado.
+Proposta e contrato não comprovam autorização de trabalho. O [artigo 43.º da Lei dos Serviços de Emprego](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43) exige autorização para o trabalho de estrangeiros, salvo exceção legal. A entidade empregadora deve identificar a categoria das funções, a autorização necessária e quem apresenta o pedido.
 
-No regime dos profissionais estrangeiros, o [artigo 16.º da lei sobre recrutamento e emprego de profissionais estrangeiros](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16) permite uma via direta perante a Agência Nacional de Imigração (NIA). Abrange profissionais e profissionais especializados elegíveis que tenham entrado sem visto ou com visto de visitante e estejam autorizados, ou legalmente dispensados de autorização, para exercer trabalho profissional. A NIA emite o ARC se aprovar a residência.
+Profissionais estrangeiros e profissionais estrangeiros especializados elegíveis podem pedir residência diretamente à Agência Nacional de Imigração (NIA), ao abrigo do [artigo 16.º da lei sobre recrutamento e emprego de profissionais estrangeiros](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16). Esta via abrange quem entrou sem visto ou com visto de visitante e tem autorização, ou dispensa legal, para exercer trabalho profissional. Após aprovação da residência, a NIA emite o ARC.
 
-Esta disposição entrou em vigor em 1 de janeiro de 2026, conforme o [histórico oficial da lei](https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295). A categoria legal do trabalho é decisiva. Os trabalhadores abrangidos pelo regime de trabalhadores migrantes têm [procedimento próprio na NIA](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/); não devem usar a via dos profissionais apenas por terem um empregador em Taiwan.
+Desde 1 de janeiro de 2026 vigora esta disposição, conforme o [histórico oficial da lei](https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295). Quem pertence ao regime de trabalhadores migrantes segue a [via própria da NIA](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/); a existência de um empregador em Taiwan não permite recorrer, só por si, à via dos profissionais.
 
-A pergunta útil para os recursos humanos é concreta: qual é a autorização que cobre as funções que vou desempenhar e em que data começa a produzir efeitos? Peça uma cópia da decisão aplicável. Depois confirme o percurso de residência.
+Uma cópia da decisão de autorização permite saber que funções estão cobertas e a partir de quando podem ser exercidas. São esses dados, obtidos junto da entidade empregadora ou dos recursos humanos, que permitem preparar o pedido de residência e organizar a data de início do trabalho.
 
-## Ensino superior e mandarim exigem preparações diferentes
+## Estudos superiores e cursos de mandarim
 
-Para uma licenciatura, mestrado ou doutoramento a tempo inteiro, a [BOCA prevê o pedido de visto de residente junto da representação de Taiwan](https://www.boca.gov.tw/cp-166-283-c4da3-2.html). Entre os documentos estão a admissão, habilitações e registos escolares, meios financeiros e certificado médico nos termos da lista. O formulário de visto é preenchido online, impresso e assinado; preencher o formulário não conclui o pedido.
+Nos cursos de licenciatura, mestrado ou doutoramento a tempo inteiro, a [BOCA prevê o pedido de visto de residente junto da representação de Taiwan](https://www.boca.gov.tw/cp-166-283-c4da3-2.html). A lista inclui admissão, habilitações e registos escolares, prova de meios financeiros e certificado médico nos termos exigidos. O formulário é preenchido online. Depois de impresso e assinado, deve acompanhar o pedido apresentado à representação de Taiwan.
 
-Quem entrou com visto de visitante especificamente para os estudos abrangidos pode ter acesso ao pedido direto de residência na NIA, se cumprir o [artigo 23.º, n.º 4, da Lei de Imigração](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23). A BOCA exclui da via estudantil ordinária indicada na sua página quem entrou sem visto, com visto à chegada ou com visto de visitante para outro fim. A forma de entrada deve, portanto, ser esclarecida antes de viajar.
+Quem entrou com visto de visitante especificamente para os estudos abrangidos pode pedir residência diretamente à NIA se reunir as condições do [artigo 23.º, n.º 4, da Lei de Imigração](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23). Na via estudantil ordinária descrita nessa página, a BOCA exclui a entrada sem visto, com visto à chegada ou com visto de visitante para outro fim. A admissão na universidade deve, por isso, ser acompanhada da preparação do visto apropriado antes da viagem.
 
-Um curso de mandarim tem outro calendário. A [orientação oficial para residência por aprendizagem de mandarim](https://www.boca.gov.tw/fp-166-285-041cb-2.html) exige quatro meses de estudos já concluídos num centro elegível associado a uma instituição de ensino superior e inscrição para continuar durante, pelo menos, mais três meses. Exige ainda um mínimo de quinze horas de aulas semanais, de segunda a sexta-feira. As faltas, incluindo ausências autorizadas, não podem ultrapassar um quarto das horas de aulas.
+Nos cursos de mandarim, a [orientação da BOCA](https://www.boca.gov.tw/fp-166-285-041cb-2.html) exige quatro meses de estudos já concluídos num centro elegível associado a uma instituição de ensino superior. É também necessária inscrição para continuar por, pelo menos, mais três meses.
 
-É a frequência efetiva que conta. A simples reserva de um curso futuro não satisfaz esses requisitos. Para este percurso, a BOCA exige a entrada com visto de visitante para estudar mandarim e exclui a conversão baseada numa entrada sem visto, com visto à chegada ou para outra finalidade.
+São exigidas pelo menos quinze horas semanais, de segunda a sexta-feira. As faltas, incluindo as ausências autorizadas, não podem ultrapassar um quarto das horas de aulas. Uma reserva para um curso futuro não cumpre estes requisitos de frequência.
 
-Durante os estudos, um emprego em tempo parcial exige verificação laboral própria. A regra geral de autorização mantém-se; o [artigo 50.º da Lei dos Serviços de Emprego](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=50) limita a vinte horas semanais o trabalho dos estudantes abrangidos, fora das férias de verão e inverno. Um ARC de estudante não basta para começar a trabalhar.
+Neste percurso, a entrada tem de ocorrer com visto de visitante destinado ao estudo de mandarim. A BOCA exclui a conversão após entrada sem visto, com visto à chegada ou para outra finalidade.
 
-## O estatuto do familiar em Taiwan muda o pedido
+Um emprego durante os estudos exige autorização de trabalho, nos termos da regra geral. O ARC de estudante não a substitui. Para os estudantes abrangidos pelo [artigo 50.º da Lei dos Serviços de Emprego](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=50), o limite é de vinte horas por semana, fora das férias de verão e inverno.
 
-No reagrupamento com um cônjuge taiwanês, importa saber se este reside em Taiwan e tem aí registo de agregado familiar. O artigo 23.º prevê uma via interna para categorias definidas de familiares que tenham entrado com visto de visitante de pelo menos sessenta dias, sem as anotações restritivas referidas na lei. Essa regra não constitui uma autorização geral de conversão após entrada sem visto.
+## Residência para acompanhar um familiar
 
-Depois de aprovada a residência ou residência permanente de um profissional estrangeiro elegível, o artigo 16.º prevê uma via direta na NIA para os familiares definidos que tenham entrado sem visto ou com visto de visitante. Abrange o cônjuge, filhos menores e filhos adultos incapazes de cuidar de si devido a deficiência física ou mental. Outros parentes precisam de um fundamento próprio.
+No caso de casamento com cidadão taiwanês, interessa saber se o cônjuge reside em Taiwan e aí tem registo de agregado familiar. O artigo 23.º admite o pedido em Taiwan para categorias definidas de familiares que tenham entrado com visto de visitante de pelo menos sessenta dias, sem as anotações restritivas previstas na lei. Não é uma autorização geral de conversão após entrada sem visto.
 
-Também o acesso ao trabalho varia. O [artigo 48.º da Lei dos Serviços de Emprego](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=48) dispensa de autorização os estrangeiros casados com cidadão taiwanês com registo de agregado familiar em Taiwan e que tenham residência autorizada. Não é uma dispensa atribuída a todos os titulares de ARC familiar.
+A via direta do artigo 16.º abrange a família de um profissional estrangeiro que exerce trabalho profissional em Taiwan ou de um profissional estrangeiro especializado, desde que, em qualquer dos casos, a NIA já tenha autorizado a residência ou a residência permanente do profissional. Os familiares abrangidos podem ter entrado sem visto ou com visto de visitante. São o cônjuge, os filhos menores e os filhos adultos incapazes de cuidar de si devido a deficiência física ou mental. Outros parentes precisam de um fundamento próprio.
 
-## Gold Card e projeto empresarial
+A relação familiar também pode ter efeitos laborais. Pelo [artigo 48.º da Lei dos Serviços de Emprego](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=48), está dispensado de autorização de trabalho o estrangeiro casado com cidadão taiwanês que tenha registo de agregado familiar em Taiwan, desde que o estrangeiro tenha residência autorizada. A dispensa exige essa situação; não se aplica a todos os titulares de ARC familiar.
 
-Profissionais que cumpram os critérios específicos podem pedir o [Employment Gold Card](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=9), que reúne autorização de trabalho, visto de residente, ARC e autorização de reentrada. A validade legal vai de um a três anos. Há igualmente uma [via para empreendedores divulgada pela BOCA](https://www.boca.gov.tw/lp-154-2.html), com avaliação de elegibilidade própria.
+## Gold Card e residência para empreendedores
 
-Quem pondera estas opções deve começar pelos requisitos oficiais. Constituir uma sociedade ou dar um nome empresarial ao projeto não substitui a apreciação do fundamento de residência.
+O [Employment Gold Card](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=9) reúne autorização de trabalho, visto de residente, ARC e autorização de reentrada. A validade vai de um a três anos. Destina-se a profissionais que cumpram os critérios específicos de elegibilidade.
 
-## Do percurso escolhido ao pedido
+Empreendedores dispõem de uma [via própria na BOCA](https://www.boca.gov.tw/lp-154-2.html), sujeita à avaliação de elegibilidade. A constituição de uma sociedade não assegura a residência, nem a designação do projeto como empresarial substitui os requisitos oficiais do pedido.
 
-Reúna numa nota a nacionalidade e o passaporte que vai usar, o país onde está, as atividades previstas e os documentos já aprovados. Acrescente o tipo de curso, a autorização laboral ou a relação familiar que sustenta o plano. Estes dados permitem escolher a lista documental certa e esclarecer o que ainda falta antes da viagem.
-
-O passo seguinte é o [primeiro pedido de ARC](/pt/columns/taiwan-arc-first-application). Se já reside em Taiwan e vai mudar de atividade, consulte as regras de [alteração do fundamento e renovação](/pt/columns/taiwan-arc-renewal-changes-reentry) antes de contar apenas com a data impressa no cartão.
+Na preparação do [primeiro ARC](/pt/columns/taiwan-arc-first-application), os documentos devem demonstrar a via escolhida: a autorização laboral, o tipo de curso e a admissão, ou a relação familiar e o estatuto de quem reside em Taiwan. O passaporte utilizado, o país onde o requerente se encontra, as atividades previstas e as decisões já obtidas completam a informação necessária para escolher a lista documental. Quem já reside em Taiwan e vai mudar de atividade tem ainda de tratar da [alteração do fundamento e da renovação](/pt/columns/taiwan-arc-renewal-changes-reentry); a data impressa no cartão não resolve essa mudança.
 
 ## Fontes oficiais
 

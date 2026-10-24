@@ -1,0 +1,32 @@
+[
+  {
+    "article": 684,
+    "path": "public/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+    "sha256": "918e0c6be06873086b5e8a5f32931045ee5a51e004c3074cad20f044fc9a4aa7",
+    "visual_review": "PASS: observed subject matches the current localized alt/caption"
+  },
+  {
+    "article": 685,
+    "path": "public/images/blog/265-taiwan-distributor-registered-japanese-brand-trademark/featured-01.webp",
+    "sha256": "0ce315b94a9ad4df67eb94a790868ed179e5b944c4d8f2a2ecc746de1107fe15",
+    "visual_review": "PASS: observed subject matches the current localized alt/caption"
+  },
+  {
+    "article": 686,
+    "path": "public/images/blog/gap-columns-20261010/505-taiwan-supplier-return-molds-test-fixtures.webp",
+    "sha256": "eb85ddd893fea4e6208c6c53bb4c428e3e6b583a6706ec55671cd14e98bce446",
+    "visual_review": "PASS: observed subject matches the current localized alt/caption"
+  },
+  {
+    "article": 687,
+    "path": "public/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp",
+    "sha256": "02fcc509d646e989fe3f533ecceef6ce5637b7542e04e1cb354d436a3d3dd01f",
+    "visual_review": "PASS: observed subject matches the current localized alt/caption"
+  },
+  {
+    "article": 688,
+    "path": "public/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+    "sha256": "69803c14e93f0d387d557e4317342a580e47b4a3788e85c0a95e53ecc200ffe6",
+    "visual_review": "PASS: observed subject matches the current localized alt/caption"
+  }
+]

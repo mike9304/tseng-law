@@ -1,0 +1,112 @@
+[
+  {
+    "id": 679,
+    "file": "public/images/columns/679-market-review-20261024.webp",
+    "format": "webp",
+    "width": 1672,
+    "height": 941,
+    "channels": 3,
+    "premultiplied": false,
+    "size": 210098,
+    "sha256": "a7ef2151b3cfefaed25a00d6b30477752a94b1b86ab1a5ae15e9513c645c6baf"
+  },
+  {
+    "id": 680,
+    "file": "public/images/columns/680-market-review-20261024.webp",
+    "format": "webp",
+    "width": 1672,
+    "height": 941,
+    "channels": 3,
+    "premultiplied": false,
+    "size": 267198,
+    "sha256": "fc3c1ef927c63cc750b27f1ffda7b7b568ac629a94e16bbcd0bb803a4341ea92"
+  },
+  {
+    "id": 681,
+    "file": "public/images/columns/681-market-review-20261024.webp",
+    "format": "webp",
+    "width": 1672,
+    "height": 941,
+    "channels": 3,
+    "premultiplied": false,
+    "size": 254292,
+    "sha256": "cab5e2dcdd503cab5a21834f364d1d8143d4d2d720420826200b772b046207c3"
+  },
+  {
+    "id": 682,
+    "file": "public/images/columns/682-market-review-20261024.webp",
+    "format": "webp",
+    "width": 1672,
+    "height": 941,
+    "channels": 3,
+    "premultiplied": false,
+    "size": 253012,
+    "sha256": "177a623104791746a06688fff3fb39be950b4265eac6cf61ec2ccf79e0fd8300"
+  },
+  {
+    "id": 683,
+    "file": "public/images/columns/683-market-review-20261024.webp",
+    "format": "webp",
+    "width": 1672,
+    "height": 941,
+    "channels": 3,
+    "premultiplied": false,
+    "size": 259694,
+    "sha256": "f4762f745c4ef68f8f8c56ac221758a55efccf05320782ddfcb659b022261325"
+  },
+  {
+    "id": 689,
+    "file": "public/images/columns/689-market-review-20261024.webp",
+    "format": "webp",
+    "width": 1672,
+    "height": 941,
+    "channels": 3,
+    "premultiplied": false,
+    "size": 246290,
+    "sha256": "00bfd3de4c37aa3e2a2483c8a7b1041efafbfefc65666c9da0968a7111cc307d"
+  },
+  {
+    "id": 690,
+    "file": "public/images/columns/690-market-review-20261024.webp",
+    "format": "webp",
+    "width": 1672,
+    "height": 941,
+    "channels": 3,
+    "premultiplied": false,
+    "size": 227728,
+    "sha256": "2163131be070675c072c7f5c0becb4122fd87e83c6752c30edcb060cf1f45fc0"
+  },
+  {
+    "id": 691,
+    "file": "public/images/columns/691-market-review-20261024.webp",
+    "format": "webp",
+    "width": 1672,
+    "height": 941,
+    "channels": 3,
+    "premultiplied": false,
+    "size": 217774,
+    "sha256": "cff87a6458afd90ced0f320c8f6834c5cc23fcdc72c3b3fcff2ec3176d6f5256"
+  },
+  {
+    "id": 692,
+    "file": "public/images/columns/692-market-review-20261024.webp",
+    "format": "webp",
+    "width": 1672,
+    "height": 941,
+    "channels": 3,
+    "premultiplied": false,
+    "size": 275502,
+    "sha256": "d241151cdec8631048ffc8f24a0a851cd06ed8a520ce27a7ac109f1c0093c700"
+  },
+  {
+    "id": 693,
+    "file": "public/images/columns/693-market-review-20261024.webp",
+    "format": "webp",
+    "width": 1672,
+    "height": 941,
+    "channels": 3,
+    "premultiplied": false,
+    "size": 212934,
+    "sha256": "417f649bd7f9fdf50674712442db1779367a7a4a67139f687540d95653fdacb6"
+  }
+]

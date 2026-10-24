@@ -1,0 +1,20 @@
+
+ RUN  v3.2.6 /Users/son7/tseng-arc-revision-20261024/repo
+
+··········································································································································································································································································································································································································································································································································································································································································································································································································stderr | src/lib/__tests__/column-no-public-authors.test.tsx > all public columns omit author attribution (2026-10-20) > fr guidance home cards have no attribution
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at img
+    at div
+    at figure
+    at IntlHeroPlate (/Users/son7/tseng-arc-revision-20261024/repo/src/components/intl-design/IntlHeroPlate.tsx:8:26)
+    at section
+    at GuidanceHero (/Users/son7/tseng-arc-revision-20261024/repo/src/components/GuidanceHomeBody.tsx:101:25)
+    at div
+    at GuidanceHomeBody (/Users/son7/tseng-arc-revision-20261024/repo/src/components/GuidanceHomeBody.tsx:753:3)
+
+········
+
+ Test Files  10 passed (10)
+      Tests  786 passed (786)
+   Start at  16:04:13
+   Duration  82.95s (transform 7.84s, setup 62ms, collect 12.06s, tests 125.43s, environment 2ms, prepare 868ms)

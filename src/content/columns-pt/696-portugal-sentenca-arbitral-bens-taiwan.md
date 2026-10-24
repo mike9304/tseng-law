@@ -3,7 +3,7 @@ title: "Sentença arbitral obtida no estrangeiro: como chegar aos bens do devedo
 seoTitle: "Reconhecer uma sentença arbitral em Taiwan"
 summary: "Uma empresa portuguesa com uma sentença arbitral favorável precisa de preparar o reconhecimento em Taiwan, incluindo documentos, tradução e possíveis fundamentos de oposição."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 de outubro de 2026"
 read_time: "5 min de leitura"
 categories: ["Arbitragem e execução em Taiwan"]
@@ -47,7 +47,7 @@ O [artigo 49](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020001&flno
 
 Por isso, a referência à Convenção de Nova Iorque num contrato não substitui a análise exigida pela lei taiwanesa. Também a sede portuguesa do credor não demonstra reciprocidade. Se a arbitragem decorreu noutro país, essa ligação precisa de ser identificada desde o início. A reciprocidade com Portugal requer uma análise fundamentada no processo concreto.
 
-Quanto à oposição da contraparte, o [artigo 50](https://mojlaw.moj.gov.tw/ENG/LawContentE.aspx?LSID=FL010105&media=print) prevê vinte dias após a receção da notificação do pedido. Os fundamentos incluem vícios da convenção, falhas de notificação ou defesa, excesso do objeto, irregularidade do tribunal ou procedimento e falta de força vinculativa, anulação ou suspensão da sentença. Se a parte da sentença que excede a convenção puder ser separada sem afetar o restante, esse excesso não impõe, por si só, a recusa do reconhecimento da parte restante. A data da notificação inicia esse prazo.
+Quanto à oposição, a contraparte tem vinte dias. O prazo previsto no [artigo 50](https://mojlaw.moj.gov.tw/ENG/LawContentE.aspx?LSID=FL010105&media=print) conta-se desde a receção da notificação do pedido. Os fundamentos incluem vícios da convenção, falhas de notificação ou defesa, excesso do objeto, irregularidade do tribunal ou procedimento e falta de força vinculativa, anulação ou suspensão da sentença. Se a parte da sentença que excede a convenção puder ser separada sem afetar o restante, esse excesso não impõe, por si só, a recusa do reconhecimento da parte restante.
 
 ## Notificações e bens são dois conjuntos de prova
 

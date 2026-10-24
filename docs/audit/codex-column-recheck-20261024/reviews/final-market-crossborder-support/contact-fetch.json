@@ -1,0 +1,29 @@
+[
+  {
+    "locale": "es",
+    "url": "https://tseng-law.com/es/contact",
+    "code": "200",
+    "exit": 0,
+    "error": "",
+    "bytes": 101893,
+    "checked": "2026-10-24T07:05:06.773472+00:00"
+  },
+  {
+    "locale": "pt",
+    "url": "https://tseng-law.com/pt/contact",
+    "code": "200",
+    "exit": 0,
+    "error": "",
+    "bytes": 101013,
+    "checked": "2026-10-24T07:05:06.354136+00:00"
+  },
+  {
+    "locale": "ar",
+    "url": "https://tseng-law.com/ar/contact",
+    "code": "200",
+    "exit": 0,
+    "error": "",
+    "bytes": 114231,
+    "checked": "2026-10-24T07:05:06.366296+00:00"
+  }
+]

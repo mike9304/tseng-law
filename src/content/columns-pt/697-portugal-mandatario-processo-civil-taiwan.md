@@ -3,7 +3,7 @@ title: "Constituir mandatário em Taiwan a partir de Portugal: poderes, notifica
 seoTitle: "Mandato judicial em Taiwan a partir de Portugal"
 summary: "Uma procuração para um processo em Taiwan exige escolhas sobre acordos, recursos e recebimento de valores. Como preparar o mandato e acompanhar notificações desde Portugal."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 de outubro de 2026"
 read_time: "5 min de leitura"
 categories: ["Processo civil em Taiwan"]
@@ -25,7 +25,7 @@ faq:
 
 Pode o advogado aceitar um acordo sem voltar a contactar a empresa em Portugal? A resposta começa nos poderes conferidos: o [artigo 70 do Código de Processo Civil de Taiwan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=70) exige autorização especial para transigir e para vários outros atos que podem alterar o destino do processo. A procuração merece uma leitura própria, além do acordo de honorários.
 
-Para quem permanece em Portugal, a preparação deve resolver também quem recebe as notificações e quem toma decisões dentro dos prazos. Um mandato amplo pode facilitar determinados atos, mas a sua extensão deve corresponder às instruções efetivamente dadas. O nome da contraparte e o objeto do litígio precisam de estar claros antes da assinatura.
+Para quem permanece em Portugal, a preparação deve resolver também quem recebe as notificações e quem toma decisões dentro dos prazos. O nome da contraparte e o objeto do litígio precisam de estar claros antes da assinatura.
 
 ## Quem pode atuar no tribunal
 
@@ -43,7 +43,7 @@ Essa exceção não significa que toda a procuração de primeira instância exi
 
 Entre os atos sujeitos a poderes especiais pelo artigo 70 encontram-se a renúncia, a aceitação do pedido, a desistência, a transação, a reconvenção, os recursos, a revisão e a designação de outro mandatário. A norma estende a exigência aos atos de execução e ao recebimento do objeto em litígio. Eventuais restrições devem constar da procuração ou do registo processual.
 
-Que decisão ficará reservada ao cliente? Pode ser necessário distinguir a negociação de uma proposta da autorização para a aceitar, ou a condução da execução da receção de valores. São escolhas a discutir antes de conferir os poderes. Limites comunicados informalmente devem ser compatibilizados com o instrumento apresentado ao tribunal.
+Que decisão ficará reservada ao cliente? Pode ser necessário distinguir a negociação de uma proposta da autorização para a aceitar, ou a condução da execução da receção de valores. Discuta estas escolhas antes de conferir os poderes. Limites comunicados informalmente devem ser compatibilizados com o instrumento apresentado ao tribunal.
 
 ## A notificação chega a Taiwan, a decisão está em Portugal
 

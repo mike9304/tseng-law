@@ -1,7 +1,7 @@
 ---
-title: "Rinnovare l’ARC a Taiwan: studio, lavoro, nuovi dati e reingresso"
+title: "ARC in scadenza o dati cambiati: rinnovo e reingresso a Taiwan"
 seoTitle: "ARC a Taiwan: rinnovo, variazioni e reingresso"
-summary: "Scadenza, trasloco, fine degli studi, nuovo impiego o passaporto: quando serve rinnovare l’ARC e quando occorre una modifica, anche prima di un viaggio all’estero."
+summary: "Un trasloco, la fine degli studi o un nuovo impiego possono richiedere una pratica prima della scadenza dell’ARC. Termini di rinnovo, variazioni e viaggi durante l’esame della domanda."
 published: "2026-10-24"
 lastmod: "2026-10-24"
 date_display: "24 ottobre 2026"
@@ -16,62 +16,67 @@ tags:
 audience:
   - "it"
 author: "legal-ai-assistant"
+featured_image: "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp"
+featured_image_alt: "Un’agenda senza scritte, un libretto da viaggio, una piccola tessera e chiavi di casa."
+featured_image_caption: "Composizione illustrativa per rinnovi e cambi di indirizzo; non raffigura documenti ufficiali o una pratica personale."
 faq:
   - q: "Posso aspettare il rinnovo per comunicare un trasloco?"
-    a: "No. Il cambio di indirizzo ha un termine proprio: 30 giorni dal giorno successivo al cambiamento. La finestra di rinnovo dell’ARC non sospende questo obbligo."
+    a: "Il nuovo indirizzo va comunicato entro 30 giorni, contando dal giorno successivo al cambiamento. L’obbligo resta anche se il rinnovo dell’ARC è ancora lontano."
   - q: "Dopo la laurea l’ARC per studio resta valido fino alla data stampata?"
-    a: "La conclusione degli studi richiede una verifica del motivo di residenza e dell’eventuale percorso successivo. Non si deve presumere di poter restare solo perché sulla carta figura una data futura: la NIA indica la richiesta di un diverso titolo o proroga, se ammessi, oppure gli adempimenti per la partenza."
+    a: "La data sulla carta non garantisce da sola la prosecuzione del soggiorno. Dopo la laurea, lo studente di un corso regolare che non chiede una proroga per un’altra finalità ammessa deve restituire l’ARC e completare le formalità di partenza previste dalla NIA."
   - q: "Ho smarrito l’ARC all’estero: basta una fotografia per rientrare?"
-    a: "Una fotografia non dimostra da sola che siano soddisfatte le condizioni di reingresso. Prima di partire per Taiwan occorre verificare con NIA e rappresentanza taiwanese competente il documento necessario e la procedura applicabile."
+    a: "La fotografia non è sufficiente. Prima della partenza per Taiwan occorre chiarire con NIA e rappresentanza taiwanese competente il documento utilizzabile per il rientro e la procedura di sostituzione applicabile."
 ---
 
-Si può restare fino alla data stampata sull’ARC se il lavoro o il motivo familiare della residenza è venuto meno? La sola scadenza futura non basta: l’[articolo 31 della legge sull’immigrazione](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31) prevede la revoca del permesso e l’annullamento della carta quando viene meno il motivo della residenza, salvo le ipotesi di prosecuzione previste dalla legge.
+La fine dell’impiego o del rapporto familiare su cui si basa la residenza può incidere sul diritto di restare a Taiwan prima della scadenza stampata sull’ARC. Quando viene meno il motivo della residenza, l’[articolo 31 della legge sull’immigrazione](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31) prevede la revoca del permesso e l’annullamento della carta, salvo le ipotesi in cui la legge consente di proseguire il soggiorno.
 
-Per preparare la pratica servono le date esatte: scadenza dell’ARC, fine dell’impiego o degli studi, trasloco ed eventuale viaggio.
+Tra queste ipotesi figurano determinate situazioni familiari, controversie di lavoro in corso e infortuni professionali ancora in trattamento. Occorre dimostrarne le condizioni. La sola cessazione di un rapporto di lavoro, per esempio, non prova l’esistenza di una controversia che soddisfi l’articolo 31.
 
-## Rinnovo quando il motivo del soggiorno continua
+## Il rinnovo ordinario si apre tre mesi prima della scadenza
 
-La proroga ordinaria dell’ARC si chiede nei tre mesi che precedono la scadenza, secondo l’[articolo 9 del regolamento sulla permanenza e residenza degli stranieri](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129). Non è un termine comune a tutti i titoli. Per esempio, le [istruzioni per imprenditori](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/) prevedono quattro mesi per la proroga fondata sull’attività esistente; il distinto percorso dopo la cessazione dell’attività mantiene una finestra di tre mesi.
+Quando il motivo del soggiorno continua, la proroga ordinaria dell’ARC si chiede nei tre mesi precedenti la scadenza, secondo l’[articolo 9 del regolamento sulla permanenza e residenza degli stranieri](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129). Alcune categorie hanno finestre diverse. Per gli imprenditori, le [istruzioni NIA](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/) prevedono quattro mesi per la proroga fondata sull’attività esistente, mentre il percorso successivo alla cessazione dell’attività mantiene la finestra di tre mesi.
 
-Oltre a domanda, passaporto, ARC e fotografia, occorre documentare il motivo della proroga. Per lo studente, la [guida NIA dedicata](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) richiede il certificato di iscrizione emesso nell’ultimo mese. Chi studia mandarino presenta anche la frequenza dell’ultimo periodo: la proroga segue la durata documentata, fino a sei mesi, e il totale di permanenza e residenza non supera, in linea di principio, due anni.
+Alla domanda si allegano passaporto, ARC, fotografia e prova che il motivo della residenza continua. La [guida generale NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) distingue i documenti per ciascuna categoria:
 
-Il lavoratore documenta la continuità del motivo di residenza con l’autorizzazione pertinente e il certificato di impiego richiesto. Per la famiglia servono le prove del rapporto e della posizione della persona raggiunta. La [guida generale NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) distingue gli allegati delle diverse categorie e richiede la prova dell’indirizzo se è cambiato.
+- Il lavoratore presenta l’autorizzazione pertinente e il certificato di impiego richiesto.
+- Per il ricongiungimento servono le prove del rapporto familiare e dello status della persona raggiunta.
+- Lo studente presenta il certificato di iscrizione rilasciato nell’ultimo mese, come specifica la [procedura studenti](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news).
 
-Il rinnovo ordinario costa NT$1.000 per anno di validità, con una frazione di anno conteggiata come un’annualità, secondo il [tariffario](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135). L’autorità decide la durata. Va controllata sulla nuova carta.
+Se l’indirizzo è cambiato, va aggiunta la prova della nuova abitazione. Chi studia mandarino deve inoltre documentare la frequenza dell’ultimo periodo: la proroga segue la durata attestata, fino a sei mesi. Il totale di permanenza e residenza non supera, in linea di principio, due anni.
 
-## Trasloco e nuovo posto di lavoro
+Secondo il [tariffario](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135), il costo ordinario è di NT$1.000 per ogni anno di validità. Anche una frazione di anno costa un’annualità. La durata viene decisa dall’autorità. Al ritiro, la scadenza da annotare è quella della nuova carta.
 
-Entro 30 giorni, contando dal giorno successivo al cambiamento, lo straniero residente deve comunicare alla NIA il nuovo indirizzo di residenza o il nuovo luogo di impiego. Lo stabilisce l’[articolo 31](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31). Per un trasloco, il documento da preparare è la prova della nuova abitazione, per esempio il contratto di locazione.
+## Un trasloco ha una scadenza propria
 
-Cambiare datore di lavoro può richiedere anche un nuovo permesso di lavoro. Per gli impieghi soggetti a tale autorizzazione, l’[articolo 53 dell’Employment Service Act](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) disciplina la richiesta del nuovo datore e le eccezioni. La comunicazione alla NIA non autorizza da sola a iniziare il nuovo impiego.
+Il nuovo indirizzo di residenza o il nuovo luogo di impiego deve essere comunicato alla NIA entro 30 giorni dal giorno successivo al cambiamento, ai sensi dell’[articolo 31](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31). Per il trasloco occorre la prova della nuova abitazione, per esempio il contratto di locazione. Non si attende il rinnovo dell’ARC.
 
-Prima della data di inizio, conviene confrontare il precedente permesso, la cessazione del rapporto e il nuovo provvedimento. Le date dei contratti non sostituiscono quelle delle autorizzazioni. Per i lavoratori migranti soggetti al regime specifico, anche il trasferimento di datore o mansioni segue limiti propri.
+Cambiare datore di lavoro può richiedere un nuovo permesso prima di iniziare il nuovo impiego. Per le attività soggette ad autorizzazione, l’[articolo 53 dell’Employment Service Act](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) disciplina la domanda del nuovo datore e le eccezioni. La comunicazione alla NIA, da sola, non autorizza l’inizio del lavoro.
 
-## Laurea, cessazione dell’impiego e cambiamento familiare
+Dal precedente permesso, dalla cessazione del rapporto e dal nuovo provvedimento si ricostruisce il periodo autorizzato; le date dei contratti non sostituiscono quelle delle autorizzazioni. Per i lavoratori migranti soggetti al regime specifico restano i limiti propri al trasferimento di datore o mansioni.
 
-Quando cambia il motivo della residenza, l’[articolo 23-1 della legge sull’immigrazione](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1) individua chi può rivolgersi alla NIA, mentre l’[articolo 7 del regolamento](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129) stabilisce il termine. Sono 30 giorni dalla data del fatto. Qui il conteggio non parte dal giorno successivo, come per il trasloco.
+## Dopo la laurea o quando cambia il motivo del soggiorno
 
-Se la variazione non rientra nelle ipotesi dell’articolo 23-1, lo stesso articolo 7 prevede la richiesta di un nuovo visto di residenza a BOCA o a una sua sede. Il termine è di 15 giorni dal fatto. Segue la domanda alla NIA. Prima di applicare questo percorso occorre accertare la categoria concreta e le eventuali regole speciali. Un cambio di motivo non è disponibile per ogni situazione.
+Si può chiedere una residenza per un motivo diverso? L’[articolo 23-1 della legge sull’immigrazione](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1) individua le categorie che possono rivolgersi alla NIA; l’[articolo 7 del regolamento](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129) fissa il termine in 30 giorni. Si conta dalla data del fatto. Per il cambio di indirizzo, invece, il conteggio parte dal giorno successivo.
 
-Dopo il conseguimento del titolo, la NIA richiede agli studenti dei corsi regolari che non presentano domanda di proroga per un’altra finalità ammessa di restituire l’ARC e completare le formalità di partenza. Chi desidera cercare lavoro può verificare la procedura prevista per il proprio titolo e status nella [guida generale](https://www.immigration.gov.tw/5475/5478/141465/141808/141970). La laurea non prolunga automaticamente la residenza.
+Per una variazione che non rientra nell’articolo 23-1, lo stesso articolo 7 prevede la richiesta di un nuovo visto di residenza a BOCA o a una sua sede. Va presentata entro 15 giorni dal fatto. Segue la domanda alla NIA, secondo la categoria e le eventuali regole speciali: non ogni cambiamento permette di ottenere la residenza per un nuovo motivo.
 
-L’[articolo 31](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31) contempla inoltre casi specifici in cui può essere autorizzata la prosecuzione, tra cui determinate situazioni familiari, controversie di lavoro in corso e infortuni professionali ancora in trattamento. Le condizioni vanno dimostrate. Per esempio, il solo fatto che sia cessato il rapporto con il datore non prova l’esistenza di una controversia che soddisfi la norma.
+Dopo il conseguimento del titolo, lo studente di un corso regolare che non chiede una proroga per un’altra finalità ammessa deve restituire l’ARC e completare le formalità di partenza indicate dalla NIA. Per cercare lavoro, la [guida generale](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) descrive il percorso da valutare in base al titolo ottenuto e allo status dello studente. La laurea non prolunga automaticamente la residenza.
 
-## Nuovo passaporto, carta smarrita o danneggiata
+## Dati del passaporto e sostituzione della carta
 
-Un nuovo numero di passaporto, un nuovo nome o altri dati personali modificati richiedono l’aggiornamento delle informazioni di residenza presso la NIA, come chiarisce la sua [guida per i nuovi residenti](https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN). Il sistema studenti indica espressamente il nuovo passaporto tra i documenti della variazione. Prima del viaggio conviene completare l’aggiornamento.
+Il cambio di nome, numero di passaporto o altri dati personali richiede l’aggiornamento delle informazioni di residenza presso la NIA, secondo la [guida per i nuovi residenti](https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN). Tra gli allegati, il sistema studenti indica espressamente il nuovo passaporto. Completare l’aggiornamento prima di un viaggio permette di presentare documenti con dati coerenti.
 
-In caso di smarrimento o danneggiamento dell’ARC, la [procedura NIA di sostituzione](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) richiede gli allegati pertinenti: carta danneggiata, dichiarazione di perdita o denuncia, secondo il caso. Il costo della sostituzione per perdita o danno è di NT$500. Per aggiornamenti di altra natura, il costo va verificato in relazione alla variazione richiesta.
+Un ARC smarrito o danneggiato richiede una domanda di sostituzione. La [procedura NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) richiede, secondo il caso, la carta danneggiata, la dichiarazione di perdita o la denuncia, insieme agli altri allegati pertinenti. Il costo è di NT$500. Questa tariffa riguarda perdita o danno; per altri aggiornamenti, il costo dipende dalla variazione richiesta.
 
-In caso di smarrimento all’estero, un [avviso NIA](https://www.immigration.gov.tw/5385/7229/7232/368785/) prevede la domanda online o allo sportello tramite una persona incaricata a Taiwan. L’autenticazione dei documenti cambia secondo il canale e l’account utilizzato; alcune vecchie carte dei lavoratori migranti seguono una procedura distinta. Prima del ritorno vanno confermati con NIA e rappresentanza competente il documento necessario e le condizioni di reingresso. Una copia della carta non basta.
+Se lo smarrimento avviene all’estero, l’[avviso NIA](https://www.immigration.gov.tw/5385/7229/7232/368785/) prevede la domanda online o la presentazione allo sportello tramite una persona incaricata a Taiwan. Le forme di autenticazione cambiano in base al canale e all’account utilizzato; alcune vecchie carte dei lavoratori migranti seguono una procedura distinta. Prima del ritorno occorre chiarire con NIA e rappresentanza taiwanese competente il documento necessario e le condizioni di reingresso. Una copia della carta non basta.
 
-## Partenza mentre la pratica è in corso
+## Un viaggio durante il rinnovo può chiudere la pratica
 
-L’[articolo 34 della legge sull’immigrazione](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080132) richiede al residente il permesso di reingresso prima dell’uscita, con una distinta eccezione per la residenza permanente. Sull’ARC vanno controllati la validità e l’indicazione del permesso di reingresso multiplo; la NIA richiama tale indicazione anche nelle [condizioni e-Gate](https://www.immigration.gov.tw/5385/7445/7889/7892/50764). La registrazione al varco automatico non risolve eventuali problemi del titolo di residenza.
+Prima di uscire da Taiwan, il residente deve ottenere il permesso di reingresso previsto dall’[articolo 34 della legge sull’immigrazione](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080132), salvo la distinta eccezione applicabile alla residenza permanente. Sull’ARC occorre leggere sia la validità sia l’indicazione del permesso di reingresso multiplo, richiamata anche nelle [condizioni e-Gate](https://www.immigration.gov.tw/5385/7445/7889/7892/50764). L’iscrizione al varco automatico non risolve eventuali problemi del titolo di residenza.
 
-Le [istruzioni online per professionisti e familiari](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/) prevedono la chiusura della pratica se il richiedente lascia Taiwan durante l’esame. La procedura studenti prevede una conseguenza analoga per chi domanda l’ARC dopo un ingresso con visto di visita. Non si può quindi dedurre dalla sola ricevuta che un viaggio sia compatibile con la domanda pendente.
+Per professionisti e familiari, le [istruzioni online](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/) prevedono la chiusura della pratica se il richiedente lascia Taiwan durante l’esame. La procedura studenti dispone una conseguenza analoga per chi chiede l’ARC dopo un ingresso con visto di visita. Dalla sola ricevuta non si può quindi dedurre che sia possibile partire e proseguire la pratica al ritorno.
 
-Se la scadenza è già trascorsa, occorre rivolgersi subito alla NIA per la procedura applicabile. Le possibilità previste dalla legge per alcuni ritardi non costituiscono una proroga automatica. Per un nuovo motivo di soggiorno è disponibile la [guida alle diverse vie di residenza](/it/columns/taiwan-visa-residence-work-study-family); per una nuova domanda, quella al [primo ARC](/it/columns/taiwan-arc-first-application). Prima della partenza, devono essere chiari il titolo utilizzabile al ritorno e l’effetto dell’uscita sulla pratica ancora aperta.
+Chi ha già superato la scadenza deve rivolgersi subito alla NIA: le possibilità previste dalla legge per alcuni ritardi non producono una proroga automatica. Per cambiare motivo di soggiorno sono disponibili le [diverse vie di residenza](/it/columns/taiwan-visa-residence-work-study-family); per presentare una nuova domanda, la procedura del [primo ARC](/it/columns/taiwan-arc-first-application). Prima di un viaggio, servono una conferma del titolo utilizzabile al ritorno e una risposta sull’effetto dell’uscita sulla domanda ancora in esame.
 
 ## Fonti ufficiali
 

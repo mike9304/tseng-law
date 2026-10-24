@@ -1,0 +1,2 @@
+/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-it/687-italy-resident-heir-taiwan-inheritance-renunciation-debts.md [it] sentences=43 mean=16.7 cv=0.451 short=0.14 run3=0.049 opener_rep=0.188 cite_end=0.0 cite_para=0.688 contrast=1 caveat=0 q=1
+  OK — no variety limit violated

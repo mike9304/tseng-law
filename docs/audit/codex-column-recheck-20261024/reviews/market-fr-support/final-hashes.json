@@ -1,0 +1,32 @@
+[
+  {
+    "id": "674",
+    "file": "src/content/columns-fr/674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.md",
+    "sha256": "486d6287e084b1d6f00a1f7edd1e1916d1f40168100f579bc5d7d41f525fce91",
+    "decision": "PASS"
+  },
+  {
+    "id": "675",
+    "file": "src/content/columns-fr/675-french-brand-taiwan-trademark-registered-distributor.md",
+    "sha256": "b44d351c2fee81d00853eec14f7ddb2ad94a1b547dbba642507dba591ee38ea8",
+    "decision": "PASS"
+  },
+  {
+    "id": "676",
+    "file": "src/content/columns-fr/676-french-supplier-taiwan-distributor-termination-stock-online-accounts.md",
+    "sha256": "368fbef4c72b6b6acb971b91590564a96122c05cafeb9469d419f48666dd2b44",
+    "decision": "PASS"
+  },
+  {
+    "id": "677",
+    "file": "src/content/columns-fr/677-france-resident-heir-taiwan-bank-property-documents.md",
+    "sha256": "65b90e6d09f334eab77ebc2b0ef35f4413ed7fdea3d68532a5ee77898cfa6ab4",
+    "decision": "PASS"
+  },
+  {
+    "id": "678",
+    "file": "src/content/columns-fr/678-french-employee-taiwan-unpaid-wages-employer-closure.md",
+    "sha256": "1f0c59422c5af35c2203aec5c24df026bd38d4f5852bb96fe8917c67189a385a",
+    "decision": "PASS"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": 679,
+    "path": "src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md",
+    "sha256": "98a3c701d7fe864cd5d42fa07cc0a8c62e11d75cbcd579036495e87b1d9a7d8a",
+    "urls_original": 10,
+    "urls_missing": [],
+    "urls_added": [],
+    "preserved_fields": {
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "published": true,
+      "date_display": true,
+      "author": true
+    },
+    "body_unchanged": true,
+    "body_numeric_tokens_preserved": true,
+    "lastmod": "2026-10-24",
+    "image_sha256": "a7ef2151b3cfefaed25a00d6b30477752a94b1b86ab1a5ae15e9513c645c6baf"
+  },
+  {
+    "id": 680,
+    "path": "src/content/columns-de/680-taiwan-bauteile-maengelruege-pruefmuster.md",
+    "sha256": "df6d39bb3536fed756ec32aead6bcc06ec486eac2a67fe2260ba1fcfcaaaef32",
+    "urls_original": 14,
+    "urls_missing": [],
+    "urls_added": [],
+    "preserved_fields": {
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "published": true,
+      "date_display": true,
+      "author": true
+    },
+    "body_unchanged": true,
+    "body_numeric_tokens_preserved": true,
+    "lastmod": "2026-10-24",
+    "image_sha256": "fc3c1ef927c63cc750b27f1ffda7b7b568ac629a94e16bbcd0bb803a4341ea92"
+  },
+  {
+    "id": 681,
+    "path": "src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md",
+    "sha256": "a470726770f1c6a50237585f2b3f07b2fa0f1942bd945c34da5df73a96a93dc0",
+    "urls_original": 16,
+    "urls_missing": [],
+    "urls_added": [],
+    "preserved_fields": {
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "published": true,
+      "date_display": true,
+      "author": true
+    },
+    "body_unchanged": false,
+    "body_numeric_tokens_preserved": true,
+    "lastmod": "2026-10-24",
+    "image_sha256": "cab5e2dcdd503cab5a21834f364d1d8143d4d2d720420826200b772b046207c3"
+  },
+  {
+    "id": 682,
+    "path": "src/content/columns-de/682-taiwan-gemeinsame-entwicklung-cad-geschaeftsgeheimnisse.md",
+    "sha256": "298350abc01516a8c13cdd7d8d8ee150dd4a51549fef38a19fca8046b1ce953e",
+    "urls_original": 13,
+    "urls_missing": [],
+    "urls_added": [],
+    "preserved_fields": {
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "published": true,
+      "date_display": true,
+      "author": true
+    },
+    "body_unchanged": false,
+    "body_numeric_tokens_preserved": true,
+    "lastmod": "2026-10-24",
+    "image_sha256": "177a623104791746a06688fff3fb39be950b4265eac6cf61ec2ccf79e0fd8300"
+  },
+  {
+    "id": 683,
+    "path": "src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md",
+    "sha256": "905cd5443c9a04b33db26e7ce2466f34e51590886c2e99e8d483eecf31a4b5a5",
+    "urls_original": 12,
+    "urls_missing": [],
+    "urls_added": [],
+    "preserved_fields": {
+      "title": true,
+      "seoTitle": true,
+      "summary": true,
+      "published": true,
+      "date_display": true,
+      "author": true
+    },
+    "body_unchanged": false,
+    "body_numeric_tokens_preserved": true,
+    "lastmod": "2026-10-24",
+    "image_sha256": "f4762f745c4ef68f8f8c56ac221758a55efccf05320782ddfcb659b022261325"
+  }
+]

@@ -3,7 +3,7 @@ title: "Cedera saat bekerja di pabrik Taiwan: bukti untuk kompensasi dan asurans
 seoTitle: "Cedera kerja di pabrik Taiwan: bukti dan hak"
 summary: "Pekerja pabrik Indonesia di Taiwan perlu menyimpan bukti kecelakaan, pengobatan, dan gaji. Bedakan kompensasi majikan, manfaat asuransi, serta tuntutan ganti rugi."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 Oktober 2026"
 read_time: "5 menit baca"
 categories: ["Informasi hukum Taiwan"]
@@ -49,7 +49,7 @@ Setelah perawatan selesai, disabilitas yang ditetapkan melalui diagnosis rumah s
 
 Minta konfirmasi status kepesertaan dan keputusan manfaat dari Biro Asuransi Tenaga Kerja, bukan hanya penjelasan lisan perusahaan. Simpan surat permohonan, bukti penerimaan, serta keputusan yang terbit. Jumlah gaji yang dilaporkan untuk asuransi juga perlu dibandingkan dengan bukti penghasilan.
 
-Cakupan ini tidak boleh disalin begitu saja untuk semua pekerjaan. Menurut [penjelasan Kementerian Ketenagakerjaan](https://www.mol.gov.tw/1607/28162/28166/28180/28182/28188/29020/), pengasuh rumah tangga tidak tercakup Undang-Undang Standar Ketenagakerjaan. Namun, cakupan wajib asuransi menurut Pasal 6 dapat tetap berlaku pada majikannya. Pengecualian satu undang-undang belum menjawab seluruh hak pekerja.
+Menurut [penjelasan Kementerian Ketenagakerjaan](https://www.mol.gov.tw/1607/28162/28166/28180/28182/28188/29020/), pengasuh rumah tangga tidak tercakup Undang-Undang Standar Ketenagakerjaan. Namun, cakupan wajib asuransi menurut Pasal 6 dapat tetap berlaku pada majikannya.
 
 ## Nilai penyelesaian perlu dirinci
 

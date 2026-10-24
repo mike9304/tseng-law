@@ -1,0 +1,9 @@
+
+ RUN  v3.2.6 /Users/son7/tseng-arc-revision-20261024/repo
+
+·············································
+
+ Test Files  2 passed (2)
+      Tests  45 passed (45)
+   Start at  16:13:06
+   Duration  835ms (transform 87ms, setup 9ms, collect 189ms, tests 599ms, environment 0ms, prepare 94ms)

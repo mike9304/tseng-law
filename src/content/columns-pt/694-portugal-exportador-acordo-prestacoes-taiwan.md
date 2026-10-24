@@ -3,7 +3,7 @@ title: "Cliente em Taiwan pede prestações: quando se extingue o crédito do ex
 seoTitle: "Acordo de pagamento com cliente em Taiwan"
 summary: "Num acordo sujeito ao direito de Taiwan, a renúncia ao saldo pode produzir efeitos antes da última prestação. Como ligar o pagamento às faturas e aos direitos preservados."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 de outubro de 2026"
 read_time: "5 min de leitura"
 categories: ["Litígios comerciais em Taiwan"]
@@ -19,7 +19,7 @@ faq:
     a: "Não automaticamente. É necessário ler os direitos que foram renunciados, as condições dessa renúncia e as consequências do incumprimento previstas no acordo."
   - q: "Um acordo assinado permite penhorar imediatamente bens em Taiwan?"
     a: "Um simples acordo privado não constitui, por si só, título executivo. A execução exige um título admitido pela lei taiwanesa e o preenchimento das condições para a iniciar."
-  - q: "O cliente taiwanês torna obrigatório aplicar direito de Taiwan ao acordo?"
+  - q: "O facto de o cliente estar em Taiwan obriga a aplicar o direito taiwanês ao acordo?"
     a: "Não. A lei aplicável depende das regras de conflitos e do que as partes tenham validamente escolhido. A competência do tribunal também necessita de análise própria."
 ---
 
@@ -39,7 +39,7 @@ Quem é o devedor? O nome comercial numa troca de mensagens pode não coincidir 
 
 O [artigo 99 do Código Civil](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=99) permite que os efeitos de um ato fiquem dependentes de uma condição suspensiva; preserva também o que as partes especificamente convencionarem sobre o momento desses efeitos. Essa condição tem de resultar do acordo.
 
-É diferente subordinar a renúncia ao recebimento integral ou subordinar todo o acordo a esse recebimento. Na segunda hipótese, também se pode pôr em causa o momento em que nasce a própria obrigação de pagar. A redação deve acompanhar a solução negociada.
+É diferente subordinar a renúncia ao recebimento integral ou subordinar todo o acordo a esse recebimento. Na segunda hipótese, também se pode pôr em causa o momento em que nasce a própria obrigação de pagar.
 
 Um exportador que aceite três prestações pode querer manter a renúncia suspensa até ao recebimento da última, ou libertar uma parcela do crédito após cada pagamento. São opções de negociação, não fórmulas legais obrigatórias. Convém ainda definir a moeda, a repartição das despesas bancárias e o montante que deverá chegar à conta em Portugal. Uma ordem de transferência não prova necessariamente esse recebimento.
 

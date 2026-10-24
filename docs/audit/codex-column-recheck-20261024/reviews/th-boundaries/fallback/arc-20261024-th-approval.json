@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "locale": "th",
+  "status": "approved",
+  "reviewer": "/root/review_th",
+  "entries": [
+    {
+      "source_sha256": "680b7c2e7e9d8653f15c8b0e8ec46392ca122c270a73dbd1a952eea3bb3b18f0",
+      "method": "independent_review_with_author_boundary_adjudication",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "bc5e151ffd1adda83dc31154544e42ddf411721d8e4baf050841da5119dc4ff9"
+    },
+    {
+      "source_sha256": "69424f50ab80a33091f3a485a154ab41b7c2c90069b148fa041a53e23e79c017",
+      "method": "independent_review_with_author_boundary_adjudication",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "247a17d20239b65b27615ddc844b7154733d84a8b4851eaa4d83fa6acf615e97"
+    },
+    {
+      "source_sha256": "7544dfe49600005b2583e27e625c13458e829a3f1e7daebb55470b4964108915",
+      "method": "independent_review_with_author_boundary_adjudication",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "869ef790ff3be655b2f0860e9b494fc33dadb7b723a6e92aab9184204e5d4ea3"
+    }
+  ],
+  "evidence": [
+    {
+      "role": "independent-review",
+      "path": "arc-20261024-th-boundaries-review.md",
+      "sha256": "f986ce79e0b5579942e5adb911145c7b18167725e8007f699403229237604e7f"
+    },
+    {
+      "role": "author-adjudication",
+      "path": "arc-20261024-th-boundaries-author.md",
+      "sha256": "d43fda9aceec042c24de7350e320bf12c43588aaf718332a3c18f0c0d690f3ff"
+    }
+  ]
+}

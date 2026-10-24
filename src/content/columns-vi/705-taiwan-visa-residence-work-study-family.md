@@ -1,7 +1,7 @@
 ---
-title: "Sang Đài Loan làm việc, học hay đoàn tụ: chọn đường xin cư trú trước khi đi"
+title: "Thị thực Đài Loan cho người đi làm, du học và đoàn tụ gia đình"
 seoTitle: "Visa Đài Loan cho việc làm, du học và gia đình"
-summary: "Thư tuyển dụng, giấy nhập học và giấy kết hôn dẫn đến các thủ tục cư trú khác nhau. Cần xác định diện công việc, chương trình học, người thân và giấy tờ nhập cảnh trước."
+summary: "Có thể xin cư trú sau khi đến Đài Loan hay phải xin thị thực từ nước ngoài? Điều kiện phụ thuộc công việc, chương trình học, tư cách của người thân và diện nhập cảnh."
 published: "2026-10-24"
 lastmod: "2026-10-24"
 date_display: "24 tháng 10 năm 2026"
@@ -11,64 +11,73 @@ topic: "visa"
 tags: ["visa Đài Loan", "du học Đài Loan", "cư trú theo hôn nhân", "giấy phép làm việc"]
 audience: ["vi"]
 author: "legal-ai-assistant"
+featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
+featured_image_alt: "Máy tính xách tay đóng nắp, sách và hai chiếc cốc được xếp thành ba nhóm, bên cạnh một cuốn sổ bìa trơn."
+featured_image_caption: "Ảnh minh họa cho công việc, học tập và gia đình; không thể hiện hồ sơ xin thị thực thật."
 faq:
-  - q: "Có thư mời làm việc thì sang bằng diện du lịch rồi đổi ARC được không?"
-    a: "Thư mời chưa đủ để kết luận. Diện chuyên gia nước ngoài có đường xin cư trú trực tiếp theo Điều 16 khi đáp ứng tư cách và giấy phép làm công việc chuyên môn hoặc căn cứ miễn phép. Điều kiện này không áp dụng chung cho mọi công việc, hộ chiếu hay chương trình nhập cảnh."
-  - q: "Đăng ký khóa tiếng Hoa là xin ARC ngay được không?"
-    a: "Không. Đường cư trú để học tiếng Hoa yêu cầu nhập cảnh theo diện phù hợp, đã học đủ bốn tháng tại cơ sở đủ điều kiện và đăng ký tiếp ít nhất ba tháng, cùng điều kiện về giờ học, chuyên cần và hồ sơ."
-  - q: "Vợ hoặc chồng có ARC thì tôi luôn được xin cư trú đoàn tụ không?"
-    a: "Phải xem căn cứ cư trú của người thân, quan hệ và cách bạn nhập cảnh. Đường dành cho thân nhân chuyên gia có phạm vi cụ thể; Điều 23 còn loại trừ một số trường hợp người bảo trợ là lao động di trú. Không thể chỉ nhìn việc người thân đang có thẻ ARC."
+  - q: "Có thư mời làm việc thì có thể sang du lịch rồi xin ARC không?"
+    a: "Thư mời làm việc chưa đủ. Điều 16 cho phép chuyên gia nước ngoài thuộc nhóm luật định xin cư trú trực tiếp khi đã được phép hoặc được miễn phép làm công việc chuyên môn và đáp ứng điều kiện nhập cảnh. Các công việc, hộ chiếu và chương trình nhập cảnh khác có thể không thuộc đường này."
+  - q: "Vừa đăng ký học tiếng Hoa đã xin ARC được chưa?"
+    a: "Người xin cư trú theo diện học tiếng Hoa phải nhập cảnh đúng diện, học đủ bốn tháng tại cơ sở đủ điều kiện và đăng ký tiếp ít nhất ba tháng. Hồ sơ còn phải đáp ứng yêu cầu về giờ học, chuyên cần và giấy tờ; giấy nhận vào học tự nó chưa đủ."
+  - q: "Vợ hoặc chồng đã có ARC thì tôi có được cư trú đoàn tụ không?"
+    a: "Còn tùy căn cứ cư trú của người thân, quan hệ gia đình và diện nhập cảnh của bạn. Thân nhân chuyên gia có quy định riêng, còn Điều 23 loại trừ một số trường hợp người bảo trợ thuộc nhóm lao động di trú. Cần biết người thân được cấp ARC theo diện nào mới xác định được thủ tục."
 ---
 
-Thư nhận việc, giấy nhập học hoặc giấy kết hôn đã đủ để ở lại Đài Loan chưa? Mỗi giấy chứng minh một mục đích, còn việc cho phép nhập cảnh và cư trú vẫn cần xét đúng diện. Với việc làm, [Điều 43 Luật Dịch vụ việc làm](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43) còn đặt yêu cầu về giấy phép, trừ các trường hợp luật quy định khác.
+Có thể sang trước, xin cư trú sau? Một số diện cho phép nộp ngay tại Sở Di dân (NIA) sau khi nhập cảnh, nếu đáp ứng đủ điều kiện. Một số trường hợp phải xin thị thực trước khi nhập cảnh. Thư tuyển dụng, giấy nhập học hay giấy kết hôn là chứng cứ cho mục đích cư trú, chưa phải giấy cho phép ở lại.
 
-Hồ sơ nên ghi rõ quốc tịch, loại hộ chiếu, mục đích đến Đài Loan và công việc hoặc chương trình học dự kiến. Điều kiện miễn thị thực phụ thuộc giấy tờ và chương trình nhập cảnh thực tế; việc sử dụng tiếng Việt không xác định điều kiện đó. Trước khi đặt vé, cần biết mình sẽ xin thị thực ở nước ngoài hay có căn cứ xin cư trú trực tiếp tại NIA sau khi nhập cảnh.
+Quốc tịch, loại hộ chiếu và chương trình nhập cảnh quyết định bạn có được miễn thị thực hay không. Trước khi đặt vé, hồ sơ dự kiến cần thể hiện công việc, chương trình học hoặc quan hệ gia đình để xác định nơi nộp và loại thị thực phù hợp.
 
-## Thị thực lưu trú và thị thực cư trú dẫn đến những bước khác nhau
+## Xin thị thực ở nước ngoài hay xin cư trú tại NIA?
 
-BOCA, tức Cục Lãnh sự thuộc Bộ Ngoại giao Đài Loan, [hướng dẫn thị thực cư trú](https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html) cho các mục đích như làm việc, học tập và đoàn tụ khi dự kiến ở trên sáu tháng. Người nhập cảnh bằng thị thực cư trú tiếp tục làm thủ tục ARC tại Sở Di dân, NIA. [Bài về lần đầu xin ARC](/vi/columns/taiwan-arc-first-application) trình bày bộ hồ sơ và mốc nộp.
+[BOCA, Cục Lãnh sự Đài Loan](https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html), hướng dẫn thị thực cư trú cho người dự kiến ở trên sáu tháng vì công việc, học tập hoặc đoàn tụ. Sau khi nhập cảnh bằng thị thực này, người được phép cư trú nộp hồ sơ ARC tại NIA. [Hướng dẫn xin ARC lần đầu](/vi/columns/taiwan-arc-first-application) trình bày thời hạn và giấy tờ.
 
-Một số trường hợp đủ điều kiện có thể xin cư trú trực tiếp tại NIA từ tình trạng lưu trú hiện có. Đây là bước xét điều kiện, không phải thao tác đổi tên visa. Mục đích ghi trên thị thực, ghi chú hạn chế, căn cứ làm việc hoặc học tập đều có thể ảnh hưởng đến đường nộp hồ sơ.
+Với người đang ở Đài Loan bằng thị thực lưu trú hoặc miễn thị thực, khả năng xin cư trú trực tiếp phụ thuộc điều kiện của từng diện. Mục đích ghi trên thị thực, ghi chú hạn chế và căn cứ làm việc hoặc học tập đều phải phù hợp. Việc được vào Đài Loan không tự tạo quyền chuyển sang cư trú.
 
-Theo [hướng dẫn NIA 0915](https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news), người nhập cảnh bằng giấy chấp thuận nhập cảnh theo hệ thống Travel Authorization Certificate (TAC) hoặc theo chương trình miễn thị thực thí điểm không được nộp theo đường này, trừ khi có quy định riêng. Cần xác nhận đúng chương trình nhập cảnh với NIA trước khi dựa vào Điều 16 để dự tính ở lại.
+[Hướng dẫn NIA 0915](https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news) loại trừ người nhập cảnh bằng Travel Authorization Certificate (TAC) và chương trình miễn thị thực thí điểm khỏi thủ tục này, trừ quy định riêng. Người dự định dựa vào Điều 16 dưới đây nên xác nhận với NIA chương trình đã dùng để nhập cảnh, nhất là khi giấy chấp thuận được cấp qua mạng.
 
-## Làm công việc chuyên môn và đi theo diện lao động di trú
+## Công việc chuyên môn và lao động di trú
 
-Đối với chuyên gia nước ngoài, [Điều 16 Luật Tuyển dụng và sử dụng chuyên gia nước ngoài](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16) áp dụng cho diện 外國專業人才 và nhóm chuyên gia có chuyên môn đặc biệt theo luật, 外國特定專業人才. Người thuộc các diện này, nhập cảnh bằng thị thực lưu trú hoặc miễn thị thực, có thể xin cư trú trực tiếp tại NIA khi đã được phép hoặc thuộc diện miễn phép làm công việc chuyên môn. ARC được cấp sau khi được chấp thuận.
+Người nước ngoài phải có giấy phép làm việc theo [Điều 43 Luật Dịch vụ việc làm](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43), trừ ngoại lệ do luật quy định. Thư mời làm việc chưa đủ. Khi trao đổi với bên tuyển dụng, bạn cần biết giấy phép dành cho loại công việc nào, tên chủ thuê, vị trí và thời hạn được phép.
 
-Thư mời chưa đủ. Giấy phép phải đúng loại công việc. Người tuyển dụng cần xác định văn bản cho phép tương ứng; người lao động cần biết tên chủ thuê, vị trí và thời hạn được phép. Chức vụ chưa quyết định diện xin phép. Cần đối chiếu công việc thực tế với điều kiện của diện chuyên gia.
+[Điều 16 Luật Tuyển dụng và sử dụng chuyên gia nước ngoài](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16) áp dụng cho hai nhóm: chuyên gia nước ngoài (外國專業人才) và chuyên gia có chuyên môn đặc biệt (外國特定專業人才). Người thuộc nhóm luật định, nhập cảnh bằng thị thực lưu trú hoặc miễn thị thực, được xin cư trú trực tiếp tại NIA khi đã được phép hoặc được miễn phép làm công việc chuyên môn. NIA cấp ARC sau khi chấp thuận.
 
-Lao động di trú theo diện tuyển dụng để làm việc tại nhà máy, chăm sóc gia đình hoặc công việc thuộc nhóm tương ứng phải theo thủ tục dành cho nhóm của mình. [Hướng dẫn NIA dành cho lao động di trú](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/) yêu cầu đối chiếu thị thực cư trú và văn bản của Bộ Lao động. Đường chuyên gia tại Điều 16 không thể áp dụng chung cho mọi lao động nước ngoài.
+Chức danh trên thư tuyển dụng không quyết định tư cách chuyên gia. Công việc thực tế phải đáp ứng điều kiện của nhóm xin phép, và bên tuyển dụng cần cung cấp văn bản cho phép tương ứng. Vì vậy, trước lời đề nghị sang Đài Loan rồi mới tìm cách xin phép, người lao động nên yêu cầu xác định diện tuyển dụng và bản sao giấy tờ đang có.
 
-Nếu chủ thuê hoặc môi giới đề nghị bạn “sang trước rồi tính”, hãy yêu cầu tên diện xin phép và bản sao văn bản đang có. Một lời hứa tìm việc sau khi đến chưa xác định được căn cứ cư trú. Trường hợp phát sinh việc giữ hộ chiếu, [quyền yêu cầu trả lại giấy tờ](/vi/columns/taiwan-employer-broker-passport-arc-return) cần được xử lý riêng với thủ tục xin thẻ.
+Lao động di trú làm tại nhà máy, chăm sóc gia đình hoặc làm công việc thuộc nhóm tương ứng sử dụng [hồ sơ riêng của NIA](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/), gồm thị thực cư trú và văn bản của Bộ Lao động. Điều 16 về chuyên gia không áp dụng chung cho mọi lao động nước ngoài.
 
-## Học lấy bằng và học tiếng Hoa
+Lời hứa tìm việc sau khi đến chưa xác lập căn cứ cư trú. Nếu chủ thuê hoặc môi giới giữ hộ chiếu, [việc yêu cầu trả lại giấy tờ](/vi/columns/taiwan-employer-broker-passport-arc-return) cần được xử lý cùng lúc, tách khỏi hồ sơ xin thẻ.
 
-[Hướng dẫn BOCA dành cho sinh viên chương trình chính quy](https://www.boca.gov.tw/cp-166-283-c4da3-2.html) nêu đường xin thị thực cư trú tại cơ quan đại diện Đài Loan ở nước ngoài. Người đã nhập cảnh bằng thị thực lưu trú ghi đúng mục đích du học có thể xin cư trú tại NIA theo điều kiện áp dụng. BOCA cũng nêu hạn chế đối với việc dùng nhập cảnh miễn thị thực, thị thực tại cửa khẩu hoặc thị thực cho mục đích khác để chuyển sang đường du học thông thường này.
+## Chương trình lấy bằng và khóa tiếng Hoa
 
-Loại chương trình học quyết định hồ sơ. Với khóa tiếng Hoa, cần xem [thị thực lưu trú để học tiếng Hoa](https://www.boca.gov.tw/fp-158-260-9690c-2.html) trước khi sang. Hướng dẫn này không cho chuyển tại Đài Loan sang mục đích học tiếng Hoa từ các diện nhập cảnh hoặc cư trú khác mà trang liệt kê. Giấy nhận vào trung tâm chưa bảo đảm được cấp thị thực.
+Sinh viên theo chương trình chính quy có thể xin thị thực cư trú tại cơ quan đại diện Đài Loan ở nước ngoài theo [hướng dẫn BOCA](https://www.boca.gov.tw/cp-166-283-c4da3-2.html). Người đã nhập cảnh bằng thị thực lưu trú ghi đúng mục đích du học có thể xin cư trú tại NIA nếu đáp ứng điều kiện áp dụng. Hướng dẫn cũng hạn chế việc chuyển sang diện du học thông thường từ nhập cảnh miễn thị thực, thị thực tại cửa khẩu hoặc thị thực có mục đích khác.
 
-Đường xin cư trú cho người học tiếng Hoa có điều kiện thời gian riêng. [BOCA yêu cầu](https://www.boca.gov.tw/fp-166-285-041cb-2.html) đã học đủ bốn tháng tại trung tâm trực thuộc trường đại học đủ điều kiện và đăng ký học tiếp ít nhất ba tháng. Người học phải có ít nhất 15 giờ lên lớp mỗi tuần, trong các ngày từ thứ Hai đến thứ Sáu. Tổng giờ vắng, kể cả nghỉ có phép, không được vượt một phần tư số giờ học.
+Khóa tiếng Hoa có quy định riêng. Người dự định theo học cần xin [thị thực lưu trú để học tiếng Hoa](https://www.boca.gov.tw/fp-158-260-9690c-2.html) trước khi sang. BOCA không cho chuyển tại Đài Loan sang mục đích học tiếng Hoa từ các diện nhập cảnh hoặc cư trú mà hướng dẫn này liệt kê; giấy nhận vào trung tâm chưa bảo đảm được cấp thị thực.
 
-Giấy xác nhận học tập và bảng chuyên cần phải thể hiện đúng thời gian thực học. Ngày đóng tiền không thay ngày thực học. [Hướng dẫn sinh viên của NIA](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/362168/) liệt kê giấy tờ cho từng đường xin cư trú, gồm yêu cầu khám sức khỏe trong những trường hợp dùng thị thực lưu trú để nộp.
+Để [xin cư trú sau thời gian học tiếng Hoa](https://www.boca.gov.tw/fp-166-285-041cb-2.html), người học phải đáp ứng các điều kiện sau:
 
-## Đoàn tụ với công dân Đài Loan hoặc người nước ngoài
+- Đã học đủ bốn tháng tại trung tâm trực thuộc trường đại học đủ điều kiện và đăng ký tiếp ít nhất ba tháng.
+- Có ít nhất 15 giờ lên lớp mỗi tuần, từ thứ Hai đến thứ Sáu.
+- Tổng số giờ vắng, gồm cả nghỉ có phép, không vượt một phần tư số giờ học.
 
-Người thân ở Đài Loan đang cư trú theo căn cứ nào? [Điều 23 Luật Xuất nhập cảnh và Di dân](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23) có đường xin cư trú cho một số người nhập cảnh bằng thị thực cho lưu trú từ 60 ngày trở lên và không có ghi chú hạn chế thuộc trường hợp luật nêu. Một căn cứ là vợ hoặc chồng đang sống tại Đài Loan và có hộ tịch ở đây. Điều này không biến mọi hình thức nhập cảnh thành đường chuyển cư trú theo hôn nhân.
+Thời gian thực học là căn cứ. Giấy xác nhận học tập và bảng chuyên cần phải thể hiện thời gian đó; ngày đóng học phí không thay thế ngày bắt đầu học. [Hướng dẫn sinh viên của NIA](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/362168/) còn quy định giấy tờ theo từng cách xin cư trú, gồm giấy khám sức khỏe trong những trường hợp nộp từ thị thực lưu trú.
 
-Đối với vợ hoặc chồng của công dân Đài Loan có hộ tịch, [hướng dẫn hồ sơ NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) yêu cầu chứng minh hôn nhân đã đăng ký tại Đài Loan. Giấy kết hôn cấp ở nước ngoài, bản dịch và việc xác thực cần đáp ứng đúng yêu cầu nơi nhận. Ngày kết hôn có hiệu lực, ngày đăng ký và ngày cấp giấy có thể là các ngày khác nhau; khi cung cấp hồ sơ, giữ nguyên từng mốc ghi trên giấy tờ.
+## Đoàn tụ phụ thuộc tư cách của người thân tại Đài Loan
 
-Thân nhân của người làm công việc chuyên môn có đường riêng tại khoản 2 Điều 16. Khi người bảo trợ thuộc nhóm luật định đã được phép cư trú hoặc thường trú, vợ hoặc chồng, con chưa thành niên và con đã thành niên không thể tự chăm sóc do khuyết tật thể chất hoặc tinh thần có thể thuộc diện xin trực tiếp tại NIA nếu nhập cảnh bằng thị thực lưu trú hoặc miễn thị thực. Không mở rộng nhóm này thành mọi người thân của mọi người đang có ARC.
+[Điều 23 Luật Xuất nhập cảnh và Di dân](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23) cho một số người giữ thị thực lưu trú từ 60 ngày trở lên xin cư trú nếu không có ghi chú hạn chế thuộc trường hợp luật nêu. Trong đó có diện vợ chồng. Người bảo trợ ở diện này phải đang sống tại Đài Loan và có hộ tịch ở đây. Điều kiện về thị thực vẫn áp dụng; hôn nhân không mở thủ tục này cho mọi hình thức nhập cảnh.
 
-Riêng Điều 23 có ngoại lệ loại trừ việc xin theo một số người bảo trợ là lao động thuộc các nhóm được luật chỉ rõ. Vì thế, việc một người đang làm tại nhà máy có ARC không tự cho biết vợ hoặc chồng của họ có đường đoàn tụ nào. Cần đưa giấy phép lao động và căn cứ cư trú của người bảo trợ cho NIA đối chiếu.
+Với người kết hôn cùng công dân Đài Loan có hộ tịch, [hướng dẫn NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) yêu cầu chứng minh hôn nhân đã đăng ký tại Đài Loan. Giấy kết hôn nước ngoài, bản dịch và việc xác thực phải đáp ứng yêu cầu nơi tiếp nhận. Hồ sơ phải ghi đúng ngày hôn nhân có hiệu lực, ngày đăng ký và ngày cấp giấy như trên tài liệu gốc. Các ngày này có thể khác nhau.
 
-Quyền làm việc theo hôn nhân cũng có điều kiện cụ thể. [Khoản 1 Điều 48 Luật Dịch vụ việc làm](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=48) miễn yêu cầu xin giấy phép tuyển dụng cho người nước ngoài kết hôn với công dân Đài Loan có hộ tịch trong lãnh thổ và đã được phép cư trú. Không áp dụng nguyên ngoại lệ này cho người chỉ đang thăm vợ hoặc chồng, hay cho mọi thân nhân của người nước ngoài.
+Thân nhân chuyên gia có thủ tục tại khoản 2 Điều 16. Người bảo trợ phải là chuyên gia nước ngoài đang làm công việc chuyên môn tại Đài Loan, hoặc chuyên gia nước ngoài có chuyên môn đặc biệt. Cả hai nhóm đều phải được NIA cho phép cư trú hoặc thường trú trước đó. Phạm vi thân nhân gồm vợ hoặc chồng, con chưa thành niên và con đã thành niên không thể tự chăm sóc do khuyết tật thể chất hoặc tinh thần; họ có thể xin trực tiếp tại NIA khi nhập cảnh bằng thị thực lưu trú hoặc miễn thị thực. Quy định này không bao gồm mọi thân nhân của mọi người có ARC.
 
-## Gold Card và hồ sơ khởi nghiệp
+Riêng Điều 23 loại trừ một số trường hợp người bảo trợ là lao động thuộc các nhóm luật chỉ rõ. Với người đang làm tại nhà máy, giấy phép lao động và căn cứ được cấp ARC sẽ giúp NIA xác định vợ hoặc chồng có thể xin đoàn tụ theo diện nào. Thẻ ARC tự nó chưa trả lời được điều này.
 
-[Employment Gold Card](https://goldcard.nat.gov.tw/en/about/) là giấy tờ tích hợp bốn chức năng cho người đạt điều kiện chuyên môn của chương trình. Người có dự án kinh doanh có thể xem [đường dành cho người khởi nghiệp của BOCA](https://www.boca.gov.tw/lp-154-2.html) và hướng dẫn được liên kết tại đó. Việc có ý định mở công ty chưa tự chứng minh đủ điều kiện cho một trong hai chương trình.
+Quyền làm việc cũng tùy diện cư trú. [Khoản 1 Điều 48 Luật Dịch vụ việc làm](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=48) miễn yêu cầu xin giấy phép tuyển dụng cho người nước ngoài đã được phép cư trú và kết hôn với công dân Đài Loan có hộ tịch trong lãnh thổ. Ngoại lệ này không áp dụng chỉ vì đang thăm vợ hoặc chồng, hay chỉ vì là thân nhân của một người nước ngoài.
 
-Trước buổi trao đổi với trường, chủ thuê hoặc cơ quan nhận hồ sơ, nên chuẩn bị một trang ghi quốc tịch, giấy tờ nhập cảnh dự kiến, công việc hoặc chương trình học, quan hệ gia đình và ngày muốn đến. Nếu đã có ARC và mục đích nay thay đổi, xem [thủ tục đổi căn cứ cư trú](/vi/columns/taiwan-arc-renewal-changes-reentry). Hồ sơ cần giải thích được vì sao bạn xin ở lại theo đúng diện đã chọn.
+## Gold Card và diện khởi nghiệp
+
+[Employment Gold Card](https://goldcard.nat.gov.tw/en/about/) tích hợp bốn chức năng trong một thẻ. Người xin phải đủ điều kiện chuyên môn. Nếu có dự án kinh doanh, [hướng dẫn khởi nghiệp của BOCA](https://www.boca.gov.tw/lp-154-2.html) dẫn đến các điều kiện và hồ sơ tương ứng. Ý định mở công ty tự nó chưa đủ để được cấp Gold Card hoặc được nhận theo diện khởi nghiệp.
+
+Khi hỏi trường, chủ thuê hay cơ quan nhận hồ sơ, bạn nên cung cấp quốc tịch, giấy tờ dự định dùng để nhập cảnh, công việc hoặc chương trình học, quan hệ gia đình và ngày muốn đến. Người đã có ARC nhưng thay đổi mục đích sẽ cần [thủ tục đổi căn cứ cư trú](/vi/columns/taiwan-arc-renewal-changes-reentry). Loại thị thực dùng cho chuyến đi phải phù hợp với chính công việc, khóa học hoặc quan hệ gia đình được chứng minh trong hồ sơ.
 
 ## Nguồn chính thức
 

@@ -1,0 +1,62 @@
+[
+  {
+    "article": "664-indonesian-home-caregiver-unpaid-wages-taiwan.md",
+    "source_sha256": "0df3ccf6a3f2ecbe7ec13ba26632bdec046cdbc54b562c01916ea29be1becba3",
+    "original_urls": 6,
+    "current_urls": 6,
+    "missing_urls": [],
+    "added_urls": [],
+    "image": "/images/blog/ISSUE-20261021-04-caregiver-transfer-consent/featured-01.webp",
+    "image_sha256": "f91abd7205fe59d477db330390a5b0fafc60fcea4c7f0acdbe9581697955779d",
+    "image_bytes": 60864,
+    "visually_opened": true
+  },
+  {
+    "article": "665-indonesian-worker-passport-broker-dispute-taiwan.md",
+    "source_sha256": "4cc7e579386fa75545b26b03b6d4a694082ee14b89a5d6896b32b69c58a051d2",
+    "original_urls": 5,
+    "current_urls": 5,
+    "missing_urls": [],
+    "added_urls": [],
+    "image": "/images/columns/20261002/vi-passport-arc-return.webp",
+    "image_sha256": "9a2680299bcb25b3aa6e3181363f7d1c751444ffaf5efdf9e029a33db6fc0bad",
+    "image_bytes": 115864,
+    "visually_opened": true
+  },
+  {
+    "article": "666-indonesian-worker-bank-account-cash-job-police-taiwan.md",
+    "source_sha256": "1dc2f41c0b69574a9fe64696db98192ebfb1edf5d1471ee2a956f92b42740c26",
+    "original_urls": 11,
+    "current_urls": 11,
+    "missing_urls": [],
+    "added_urls": [],
+    "image": "/images/blog/038-taiwan-bank-account-lending-fraud-money-laundering/featured-01.webp",
+    "image_sha256": "1d06bd5a03d6aa0295859a6116f91952887bbd2b1acbdcdca3dfef98bbf2dbab",
+    "image_bytes": 25386,
+    "visually_opened": true
+  },
+  {
+    "article": "667-indonesian-factory-worker-injury-evidence-compensation-taiwan.md",
+    "source_sha256": "ab6d157e543d01a68ca6ec8c6f8c026664aab19db10ad6c22319161849b062b5",
+    "original_urls": 10,
+    "current_urls": 10,
+    "missing_urls": [],
+    "added_urls": [],
+    "image": "/images/blog/039-taiwan-migrant-worker-occupational-injury-compensation/featured-01.webp",
+    "image_sha256": "48f26189939af3d94dd527a83938a00b0afb452254cfabe340f9e887419aca09",
+    "image_bytes": 43480,
+    "visually_opened": true
+  },
+  {
+    "article": "668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+    "source_sha256": "a4e211f02700ccfbcb5995a33b696af4fbc5e1df2102bed666f01706313275d0",
+    "original_urls": 13,
+    "current_urls": 13,
+    "missing_urls": [],
+    "added_urls": [],
+    "image": "/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp",
+    "image_sha256": "2e94445745c56720e779170cfcc3f6d6ecbdaa663a4bbbbc163fd98b5acbbe6c",
+    "image_bytes": 80048,
+    "visually_opened": true
+  }
+]

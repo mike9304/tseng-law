@@ -1,0 +1,158 @@
+[
+  {
+    "article": 704,
+    "path": "src/content/columns-th/704-taiwan-arc-first-application.md",
+    "baseline_sha256": "680b7c2e7e9d8653f15c8b0e8ec46392ca122c270a73dbd1a952eea3bb3b18f0",
+    "current_sha256": "02b683edd2ca82768aa766fbcf299529d943eaa9f1646f1e72bf1a57b564f7d7",
+    "baseline_urls": [
+      "/th/columns/taiwan-arc-renewal-changes-reentry",
+      "/th/columns/taiwan-visa-residence-work-study-family",
+      "https://coa.immigration.gov.tw/coa-frontend/foreign-labor",
+      "https://coa.immigration.gov.tw/coa-frontend/foreign-white-collar",
+      "https://coa.immigration.gov.tw/coa-frontend/student/entry",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43",
+      "https://www.boca.gov.tw/fp-398-723-7b71f-1.html",
+      "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+      "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/362168/",
+      "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/",
+      "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+      "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+      "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news"
+    ],
+    "current_urls": [
+      "/th/columns/taiwan-arc-renewal-changes-reentry",
+      "/th/columns/taiwan-visa-residence-work-study-family",
+      "https://coa.immigration.gov.tw/coa-frontend/foreign-labor",
+      "https://coa.immigration.gov.tw/coa-frontend/foreign-white-collar",
+      "https://coa.immigration.gov.tw/coa-frontend/student/entry",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43",
+      "https://www.boca.gov.tw/fp-398-723-7b71f-1.html",
+      "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+      "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/362168/",
+      "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/",
+      "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+      "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+      "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news"
+    ],
+    "lost_urls": [],
+    "added_urls": [],
+    "lost_numeral_tokens": [
+      "4"
+    ],
+    "added_numeral_tokens": [
+      "20261024"
+    ],
+    "substantive_scope_corrections": [
+      "Taiwanese spouse current residence added"
+    ],
+    "numeral_method": "Arabic digit/optional thousands-separator token sets; punctuation excluded. Thai-written values reviewed manually."
+  },
+  {
+    "article": 705,
+    "path": "src/content/columns-th/705-taiwan-visa-residence-work-study-family.md",
+    "baseline_sha256": "1b452257ab7572246ad8fbd37fa1f25bb1b97cfda236396562a650ba21ee9024",
+    "current_sha256": "abe1ccf7fe19227dc0f4ac69b632f5f0f67be5932f2d44adbfa022491350b7de",
+    "baseline_urls": [
+      "/th/columns/marrying-taiwanese-national-registration-checklist",
+      "/th/columns/taiwan-arc-first-application",
+      "/th/columns/taiwan-arc-renewal-changes-reentry",
+      "https://goldcard.nat.gov.tw/en/about/",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=9",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=48",
+      "https://www.boca.gov.tw/cp-149-4486-7785a-2.html",
+      "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+      "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+      "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+      "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+      "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+      "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news"
+    ],
+    "current_urls": [
+      "/th/columns/marrying-taiwanese-national-registration-checklist",
+      "/th/columns/taiwan-arc-first-application",
+      "/th/columns/taiwan-arc-renewal-changes-reentry",
+      "https://goldcard.nat.gov.tw/en/about/",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=9",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=48",
+      "https://www.boca.gov.tw/cp-149-4486-7785a-2.html",
+      "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+      "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+      "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+      "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+      "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+      "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news"
+    ],
+    "lost_urls": [],
+    "added_urls": [],
+    "lost_numeral_tokens": [],
+    "added_numeral_tokens": [
+      "20261024"
+    ],
+    "substantive_scope_corrections": [
+      "Article 16(2) sponsor and family-entry conditions made explicit; FAQ employment requirement made conditional on desire to work"
+    ],
+    "numeral_method": "Arabic digit/optional thousands-separator token sets; punctuation excluded. Thai-written values reviewed manually."
+  },
+  {
+    "article": 706,
+    "path": "src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md",
+    "baseline_sha256": "6c5d2ec5032ac5f404abc180bd1875275a64ba6bcf28fae4f732767b37017800",
+    "current_sha256": "844b1b15985d3e7f82c9e8c8824d67215b7edeec7b33726da5c1e608f433f50b",
+    "baseline_urls": [
+      "/th/columns/taiwan-arc-first-application",
+      "/th/columns/taiwan-visa-residence-work-study-family",
+      "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb38d75b733018d7821eb450592",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43",
+      "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+      "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+      "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/362168/",
+      "https://www.immigration.gov.tw/5385/7229/7232/368785/",
+      "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+      "https://www.immigration.gov.tw/5385/7445/7889/7892/50764",
+      "https://www.immigration.gov.tw/5475/5478/141465/141808/141970"
+    ],
+    "current_urls": [
+      "/th/columns/taiwan-arc-first-application",
+      "/th/columns/taiwan-visa-residence-work-study-family",
+      "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb38d75b733018d7821eb450592",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43",
+      "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+      "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+      "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/362168/",
+      "https://www.immigration.gov.tw/5385/7229/7232/368785/",
+      "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+      "https://www.immigration.gov.tw/5385/7445/7889/7892/50764",
+      "https://www.immigration.gov.tw/5475/5478/141465/141808/141970"
+    ],
+    "lost_urls": [],
+    "added_urls": [],
+    "lost_numeral_tokens": [],
+    "added_numeral_tokens": [
+      "20261024"
+    ],
+    "substantive_scope_corrections": [],
+    "numeral_method": "Arabic digit/optional thousands-separator token sets; punctuation excluded. Thai-written values reviewed manually."
+  }
+]

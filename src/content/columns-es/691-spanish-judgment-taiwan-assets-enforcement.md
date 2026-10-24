@@ -3,12 +3,15 @@ title: "Una sentencia española y bienes en Taiwán: el paso judicial que falta 
 seoTitle: "Ejecutar una sentencia española en Taiwán"
 summary: "Una sentencia civil firme española necesita una sentencia taiwanesa que autorice su ejecución. La notificación al demandado, la competencia y la reciprocidad requieren revisión."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 de octubre de 2026"
 read_time: "5 min de lectura"
 categories: ["Información jurídica de Taiwán"]
 topic: "litigation"
 tags: ["sentencia-espanola", "ejecucion", "bienes-en-taiwan", "reconocimiento"]
+featured_image: "/images/columns/691-market-review-20261024.webp"
+featured_image_alt: "Carpetas, hojas y una maqueta de un edificio sobre un escritorio, con Taipéi al fondo."
+featured_image_caption: "Ilustración del expediente y los bienes que se revisan para ejecutar una sentencia extranjera."
 faq:
   - q: "¿Basta el certificado europeo para ejecutar en Taiwán?"
     a: "No. El régimen europeo citado regula relaciones entre Estados miembros. Para una sentencia extranjera firme, Taiwán exige que no concurra una causa de denegación del artículo 402 y que un tribunal taiwanés autorice la ejecución mediante sentencia."
@@ -33,7 +36,7 @@ Según el [artículo 402 del Código de Procedimiento Civil](https://law.moj.gov
 - Contenido de la sentencia o procedimiento contrario al orden público o a las buenas costumbres de Taiwán.
 - Falta de reconocimiento recíproco.
 
-Respecto de España, la reciprocidad requiere una comprobación específica. Este artículo no afirma que esté acreditada para cualquier sentencia española. Tampoco permite deducir el resultado del procedimiento a partir de que la resolución sea europea.
+Respecto de España, la reciprocidad requiere una comprobación específica.
 
 Una copia del fallo sin antecedentes procesales deja abiertas cuestiones como la notificación y la competencia del tribunal español.
 
@@ -43,7 +46,7 @@ Una copia del fallo sin antecedentes procesales deja abiertas cuestiones como la
 
 En la preparación del expediente conviene separar el domicilio utilizado, la fecha del intento, el resultado y el documento que certifica cada actuación. También deben localizarse las resoluciones que autorizaron una forma particular de notificación. Una fecha dudosa debe quedar señalada.
 
-Si la demanda española todavía no se ha presentado, la localización prevista de los bienes justifica coordinar la notificación antes de practicarla. Corregir el expediente cuando ya existe una sentencia puede plantear una dificultad distinta. La decisión sobre el procedimiento español corresponde a quien esté habilitado para asesorar allí.
+Si la demanda española todavía no se ha presentado, la localización prevista de los bienes justifica coordinar la notificación antes de practicarla. La decisión sobre el procedimiento español corresponde a quien esté habilitado para asesorar allí.
 
 ## Firmeza, identidad y cantidades pendientes
 
@@ -56,7 +59,7 @@ Para preparar la revisión, resultan útiles cuatro grupos documentales:
 3. Identificación de las sociedades o personas condenadas, incluidas las denominaciones chinas disponibles.
 4. Liquidación separada de principal, intereses y costas, con los pagos ya recibidos y la moneda de cada concepto.
 
-Una filial taiwanesa puede tener un nombre parecido al de la entidad condenada. Esa semejanza merece comprobación documental antes de considerar su cuenta bancaria como objetivo de cobro. También conviene anotar si la información patrimonial es reciente o procede de una factura antigua.
+Una filial taiwanesa puede tener un nombre parecido al de la entidad condenada; esa semejanza merece comprobación documental antes de considerar su cuenta bancaria como objetivo de cobro. También conviene anotar si la información patrimonial es reciente o procede de una factura antigua.
 
 Los requisitos de autenticación y traducción deben concretarse para el expediente que se presentará. La [columna sobre documentos españoles destinados a Taiwán](/es/columns/taiwan-spanish-document-legalization-taipei-office) aborda la cadena documental; legalizar una firma no decide el reconocimiento de la sentencia.
 

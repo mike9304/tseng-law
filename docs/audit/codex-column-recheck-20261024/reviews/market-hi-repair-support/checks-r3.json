@@ -1,0 +1,46 @@
+[
+  {
+    "id": "670",
+    "path": "src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+    "sha256": "028c425102e697c18662235dbb8060fd96c1cd0dd8e999ad96187374a30ace71",
+    "after_sha256": "4e5fd05793ecd22792af992ad19505b9c5fd14172f945044d1ce58f5fbb86930",
+    "exit": 1,
+    "frontmatter_only_authorized_changes": true,
+    "url_sequence_preserved": true,
+    "body_numeric_tokens_preserved": true,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md [hi] sentences=53 mean=17.1 cv=0.444 short=0.132 run3=0.059 opener_rep=0.071 cite_end=0.0 cite_para=0.643 contrast=0 caveat=0 q=3\n  FAIL len_cv=0.444 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n"
+  },
+  {
+    "id": "671",
+    "path": "src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+    "sha256": "18986fc58c3bbb5e22fe11ea80ce0f92db3fa418fc08ab3dd37f98d1f3442c0e",
+    "after_sha256": "c9f7d8a3a90a1d533ebfaa5ad6f7b6ff0f23ad7430396de3a9532555f403712f",
+    "exit": 0,
+    "frontmatter_only_authorized_changes": true,
+    "url_sequence_preserved": true,
+    "body_numeric_tokens_preserved": true,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md [hi] sentences=48 mean=15.9 cv=0.451 short=0.25 run3=0.043 opener_rep=0.214 cite_end=0.021 cite_para=0.571 contrast=1 caveat=1 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "id": "672",
+    "path": "src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+    "sha256": "4e89e5af0aa9c66c49fd022040d67d198ea60815528005b9c20298ce6b6f5ab2",
+    "after_sha256": "44c8534add421222c5fa56d250f94b41820bcfb4d58e51d5d0395a33eed2b6f0",
+    "exit": 0,
+    "frontmatter_only_authorized_changes": true,
+    "url_sequence_preserved": true,
+    "body_numeric_tokens_preserved": true,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md [hi] sentences=54 mean=15.2 cv=0.502 short=0.204 run3=0.058 opener_rep=0.067 cite_end=0.0 cite_para=0.467 contrast=0 caveat=0 q=4\n  OK — no variety limit violated\n"
+  },
+  {
+    "id": "673",
+    "path": "src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+    "sha256": "7a07b0d5f128948a29625d2cfe674a79c4efed689e07c8245159ff28948bd44a",
+    "after_sha256": "af4d8bc235868b1bbef96be13b69383ea932d27e1ee1122e50b5258910f09acd",
+    "exit": 0,
+    "frontmatter_only_authorized_changes": true,
+    "url_sequence_preserved": true,
+    "body_numeric_tokens_preserved": true,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md [hi] sentences=47 mean=16.3 cv=0.451 short=0.17 run3=0.089 opener_rep=0.077 cite_end=0.0 cite_para=0.308 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  }
+]

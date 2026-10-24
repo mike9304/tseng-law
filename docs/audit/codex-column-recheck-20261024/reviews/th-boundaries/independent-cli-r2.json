@@ -1,0 +1,50 @@
+[
+  {
+    "article": 704,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/704-taiwan-arc-first-application.md",
+      "--sentences",
+      "/Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/704-independent-r2.sentences.json"
+    ],
+    "source_sha256": "8f304a311a2ff9a1451faf0b934ab08259de4bb10ec7e4756396df25d28478fc",
+    "map_sha256": "eb1bbff93504870b65688e0bd7eabd1c9791b710249f1ca1e7a019d40f019f4d",
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/704-taiwan-arc-first-application.md [th] sentences=48 mean=20.5 cv=0.432 short=0.125 run3=0.0 opener_rep=0.1 cite_end=0.0 cite_para=0.25 contrast=1 caveat=0 q=1\n  FAIL len_cv=0.432 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+    "stderr": ""
+  },
+  {
+    "article": 705,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/705-taiwan-visa-residence-work-study-family.md",
+      "--sentences",
+      "/Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/705-independent-r2.sentences.json"
+    ],
+    "source_sha256": "abe1ccf7fe19227dc0f4ac69b632f5f0f67be5932f2d44adbfa022491350b7de",
+    "map_sha256": "b2a60edc85a39c86b0acedaac6f6a3bf266a8f427545f0fbed76820a838e4fb7",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/705-taiwan-visa-residence-work-study-family.md [th] sentences=56 mean=22.1 cv=0.468 short=0.089 run3=0.019 opener_rep=0.19 cite_end=0.0 cite_para=0.333 contrast=2 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "article": 706,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md",
+      "--sentences",
+      "/Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/706-independent-r2.sentences.json"
+    ],
+    "source_sha256": "844b1b15985d3e7f82c9e8c8824d67215b7edeec7b33726da5c1e608f433f50b",
+    "map_sha256": "fb0436f35ad908a69ab4407852f94e4925b8a360714b029f7f9c72cb6a32c86a",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md [th] sentences=59 mean=21.9 cv=0.46 short=0.102 run3=0.07 opener_rep=0.13 cite_end=0.0 cite_para=0.391 contrast=3 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "stderr": ""
+  }
+]

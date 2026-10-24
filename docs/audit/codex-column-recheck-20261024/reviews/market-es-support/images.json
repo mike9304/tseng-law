@@ -1,0 +1,47 @@
+[
+  {
+    "id": 689,
+    "path": "public/images/columns/689-market-review-20261024.webp",
+    "sha256": "00bfd3de4c37aa3e2a2483c8a7b1041efafbfefc65666c9da0968a7111cc307d",
+    "bytes": 246290,
+    "visual_inspection": "view_image by independent reviewer, 2026-10-24",
+    "observed_subject": "Shipping box, papers, pen and blank calendar beside cargo harbour.",
+    "result": "PASS: matches article; no identifiable people, flags, readable personal information, official document facsimile or misleading real-case claim observed"
+  },
+  {
+    "id": 690,
+    "path": "public/images/columns/690-market-review-20261024.webp",
+    "sha256": "2163131be070675c072c7f5c0becb4122fd87e83c6752c30edcb060cf1f45fc0",
+    "bytes": 227728,
+    "visual_inspection": "view_image by independent reviewer, 2026-10-24",
+    "observed_subject": "One cracked ceramic cup, other cups and open shipping packaging; camera and unmarked tags.",
+    "result": "PASS: matches article; no identifiable people, flags, readable personal information, official document facsimile or misleading real-case claim observed"
+  },
+  {
+    "id": 691,
+    "path": "public/images/columns/691-market-review-20261024.webp",
+    "sha256": "cff87a6458afd90ced0f320c8f6834c5cc23fcdc72c3b3fcff2ec3176d6f5256",
+    "bytes": 217774,
+    "visual_inspection": "view_image by independent reviewer, 2026-10-24",
+    "observed_subject": "Document folders, blank papers and building model with Taipei skyline.",
+    "result": "PASS: matches article; no identifiable people, flags, readable personal information, official document facsimile or misleading real-case claim observed"
+  },
+  {
+    "id": 692,
+    "path": "public/images/columns/692-market-review-20261024.webp",
+    "sha256": "d241151cdec8631048ffc8f24a0a851cd06ed8a520ce27a7ac109f1c0093c700",
+    "bytes": 275502,
+    "visual_inspection": "view_image by independent reviewer, 2026-10-24",
+    "observed_subject": "Open packed suitcase, document file, notebook, calculator and keys with Taipei skyline.",
+    "result": "PASS: matches article; no identifiable people, flags, readable personal information, official document facsimile or misleading real-case claim observed"
+  },
+  {
+    "id": 693,
+    "path": "public/images/columns/693-market-review-20261024.webp",
+    "sha256": "417f649bd7f9fdf50674712442db1779367a7a4a67139f687540d95653fdacb6",
+    "bytes": 212934,
+    "visual_inspection": "view_image by independent reviewer, 2026-10-24",
+    "observed_subject": "Two coloured folders, floor plan, keys and notebook on table; two empty chairs and Taipei skyline.",
+    "result": "PASS: matches article; no identifiable people, flags, readable personal information, official document facsimile or misleading real-case claim observed"
+  }
+]

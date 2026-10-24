@@ -3,12 +3,15 @@ title: "Mercancía taiwanesa defectuosa en un almacén español: el aviso al ven
 seoTitle: "Defectos en mercancías compradas a Taiwán"
 summary: "Una empresa española que recibe mercancía defectuosa de Taiwán necesita documentar el lote, avisar al vendedor y distinguir la notificación del ejercicio de sus derechos."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 de octubre de 2026"
 read_time: "5 min de lectura"
 categories: ["Información jurídica de Taiwán"]
 topic: "litigation"
 tags: ["compraventa-internacional", "defectos", "importadores-espanoles", "prueba"]
+featured_image: "/images/columns/690-market-review-20261024.webp"
+featured_image_alt: "Dos vasos de cerámica, uno agrietado, junto a su embalaje, una cámara y etiquetas sin escribir."
+featured_image_caption: "Escena ilustrativa de la documentación de daños en un lote recibido."
 faq:
   - q: "¿Puedo esperar al informe completo del laboratorio para comunicar el defecto?"
     a: "Si rige el Código Civil taiwanés, el comprador debe examinar la mercancía con prontitud según su naturaleza y avisar inmediatamente al descubrir un defecto cubierto por la garantía del vendedor. Puede comunicar lo ya detectado y completar después la prueba; esperar al informe no suspende por sí solo esa obligación."

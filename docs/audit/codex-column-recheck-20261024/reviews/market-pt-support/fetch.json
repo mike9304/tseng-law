@@ -1,0 +1,30 @@
+[
+  {
+    "key": "pj",
+    "url": "https://www.policiajudiciaria.pt/burla-e-falsidade-informatica-em-transacoes-empresariais-transnacionais/",
+    "http": "000",
+    "exit": 60,
+    "sha256": null
+  },
+  {
+    "key": "bportugal",
+    "url": "https://clientebancario.bportugal.pt/pt-pt/taxonomy/term/361",
+    "http": "403",
+    "exit": 0,
+    "sha256": "b71323880f4b23dbfe5df53b0c46ee9ae995440b08ca55037daf21f6c6734630"
+  },
+  {
+    "key": "judicial",
+    "url": "https://www.judicial.gov.tw/tw/cp-1303-2602-67cd3-1.html",
+    "http": "000",
+    "exit": 28,
+    "sha256": null
+  },
+  {
+    "key": "contact",
+    "url": "https://tseng-law.com/pt/contact",
+    "http": "200",
+    "exit": 0,
+    "sha256": "0488778c7f4f2c0b90425090c13191a7e1184f834b39d615bb50a8a57a68bd9e"
+  }
+]

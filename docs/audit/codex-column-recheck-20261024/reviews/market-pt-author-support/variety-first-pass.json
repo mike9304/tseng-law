@@ -1,0 +1,46 @@
+[
+  {
+    "file": "694-portugal-exportador-acordo-prestacoes-taiwan.md",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "9aad08",
+      "wall_time_seconds": 0.000006917,
+      "exit_code": 0,
+      "original_token_count": 70,
+      "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-pt/694-portugal-exportador-acordo-prestacoes-taiwan.md [pt] sentences=40 mean=18.7 cv=0.454 short=0.125 run3=0.0 opener_rep=0.2 cite_end=0.0 cite_para=0.4 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+    }
+  },
+  {
+    "file": "695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "9fb69d",
+      "wall_time_seconds": 0.000007041,
+      "exit_code": 0,
+      "original_token_count": 72,
+      "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-pt/695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md [pt] sentences=35 mean=19.5 cv=0.487 short=0.114 run3=0.091 opener_rep=0.2 cite_end=0.0 cite_para=0.067 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n"
+    }
+  },
+  {
+    "file": "696-portugal-sentenca-arbitral-bens-taiwan.md",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "256de0",
+      "wall_time_seconds": 0.000017292,
+      "exit_code": 1,
+      "original_token_count": 92,
+      "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-pt/696-portugal-sentenca-arbitral-bens-taiwan.md [pt] sentences=39 mean=18.2 cv=0.46 short=0.103 run3=0.081 opener_rep=0.286 cite_end=0.0 cite_para=0.286 contrast=0 caveat=0 q=2\n  FAIL top_opener_n=3 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n"
+    }
+  },
+  {
+    "file": "697-portugal-mandatario-processo-civil-taiwan.md",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "ed7486",
+      "wall_time_seconds": 0.000004833,
+      "exit_code": 0,
+      "original_token_count": 70,
+      "output": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md [pt] sentences=42 mean=17.3 cv=0.48 short=0.095 run3=0.0 opener_rep=0.067 cite_end=0.0 cite_para=0.4 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+    }
+  }
+]

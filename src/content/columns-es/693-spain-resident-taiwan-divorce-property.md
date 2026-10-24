@@ -3,12 +3,15 @@ title: "Separación desde España y patrimonio en Taiwán: el divorcio y los bie
 seoTitle: "Divorcio desde España con bienes en Taiwán"
 summary: "La nacionalidad, el domicilio y los pactos matrimoniales pueden determinar leyes distintas para el divorcio y el régimen patrimonial al plantear el asunto en Taiwán."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-24"
 date_display: "23 de octubre de 2026"
 read_time: "5 min de lectura"
 categories: ["Información jurídica de Taiwán"]
 topic: "family"
 tags: ["divorcio-internacional", "espana-taiwan", "patrimonio-matrimonial", "inmuebles"]
+featured_image: "/images/columns/693-market-review-20261024.webp"
+featured_image_alt: "Carpetas, un plano de vivienda y llaves sobre una mesa con dos sillas vacías y vistas a Taipéi."
+featured_image_caption: "Ilustración de documentos y bienes relacionados con una separación."
 faq:
   - q: "¿Vivir en España hace que un tribunal taiwanés aplique siempre derecho español al divorcio?"
     a: "No. El artículo 50 de la ley taiwanesa sobre conflictos de leyes atiende, al acordarse el divorcio o presentarse la demanda, a la nacionalidad común; a falta de ella, al domicilio común; y, si tampoco existe, a la conexión más estrecha con el matrimonio. La competencia judicial se revisa por separado."
@@ -38,7 +41,7 @@ Para el régimen económico, el [artículo 48](https://law.moj.gov.tw/LawClass/L
 
 Por eso conviene localizar capitulaciones, pactos y modificaciones, aunque se firmaran muchos años antes. ¿El documento elige una ley, distribuye bienes concretos o hace ambas cosas? La versión completa permite distinguirlo. Una traducción del título del documento deja abierta la cuestión principal.
 
-Si parte del asesoramiento corresponde al derecho español, deberá intervenir un profesional habilitado para ese ámbito. La existencia de esta página en español no acredita que el despacho taiwanés ejerza en España.
+Si parte del asesoramiento corresponde al derecho español, deberá intervenir un profesional habilitado para ese ámbito.
 
 ## La vivienda tiene su propio expediente
 
@@ -52,7 +55,7 @@ También cuentan las fechas. Un inventario puede distinguir bienes anteriores al
 
 Si resulta aplicable el régimen legal taiwanés, el [artículo 1030-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1030-1) parte, al extinguirse ese régimen, del patrimonio posterior al matrimonio que subsiste para cada cónyuge, descontadas las deudas contraídas durante este. La diferencia residual se distribuye por mitad, con exclusión de lo adquirido por herencia o gratuitamente y de las indemnizaciones por daño moral.
 
-El tribunal puede ajustar o excluir el reparto si resulta injusto. La ley exige considerar, entre otros factores, el trabajo doméstico, los cuidados, la cooperación familiar, la convivencia y separación, el momento de las adquisiciones y la capacidad económica de ambos. La titularidad registral no responde por sí sola a todas esas preguntas.
+El tribunal puede ajustar o excluir el reparto si resulta injusto. La ley exige considerar, entre otros factores, el trabajo doméstico, los cuidados, la cooperación familiar, la convivencia y separación, el momento de las adquisiciones y la capacidad económica de ambos. Por sí sola, la titularidad registral no responde a todas esas preguntas.
 
 La reclamación se extingue tras dos años sin ejercicio desde que su titular conoce la diferencia residual; también cuando pasan cinco años desde que terminó el régimen legal. Son dos referencias temporales distintas. Reunir documentos no sustituye el ejercicio oportuno del derecho.
 

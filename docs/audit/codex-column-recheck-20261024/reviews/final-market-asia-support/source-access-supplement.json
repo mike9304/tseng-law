@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0090027",
+    "key": "N0090027-LawHistory",
+    "fetched_utc": "2026-10-24T07:05:47.720427+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 67942,
+    "sha256": "2349189b85209646af32f9d36a042237f93342d2711723ff18523080b17c828a",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090027&flno=73",
+    "key": "N0090027-73",
+    "fetched_utc": "2026-10-24T07:05:47.170190+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43747,
+    "sha256": "6b153b8f02d29ce069a5e9cc1dd4d9e9ede2f4f563ac9f85acf47261beadbc54",
+    "stderr": ""
+  },
+  {
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380131&flno=31",
+    "key": "G0380131-31",
+    "fetched_utc": "2026-10-24T07:05:47.484458+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "bytes": 43462,
+    "sha256": "aa547e8f92b933d77b96670bf40d25697f983e69a81d60412d77313a02673c6f",
+    "stderr": ""
+  }
+]

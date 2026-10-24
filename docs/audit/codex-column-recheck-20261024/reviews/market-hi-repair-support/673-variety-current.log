@@ -1,0 +1,5 @@
+$ python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md
+/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md [hi] sentences=47 mean=16.3 cv=0.451 short=0.17 run3=0.089 opener_rep=0.077 cite_end=0.0 cite_para=0.308 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+
+exit=0

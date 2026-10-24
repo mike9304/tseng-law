@@ -1,0 +1,48 @@
+[
+  {
+    "article": 704,
+    "path": "src/content/columns-th/704-taiwan-arc-first-application.md",
+    "sha256": "141a09903d5dbb0d709a88de9952591955277211e0b92b5822512206157bef7b",
+    "original_sha256": "680b7c2e7e9d8653f15c8b0e8ec46392ca122c270a73dbd1a952eea3bb3b18f0",
+    "original_url_count": 16,
+    "new_url_count": 16,
+    "removed_urls": [],
+    "added_urls": [],
+    "removed_numeral_tokens": [
+      "1",
+      "2",
+      "4"
+    ],
+    "added_numeral_tokens": [
+      "20261024"
+    ]
+  },
+  {
+    "article": 705,
+    "path": "src/content/columns-th/705-taiwan-visa-residence-work-study-family.md",
+    "sha256": "d4ac78d3ec10dc00d41e4227db88562736b690136c9f6f462f323c791b8a1aa6",
+    "original_sha256": "1b452257ab7572246ad8fbd37fa1f25bb1b97cfda236396562a650ba21ee9024",
+    "original_url_count": 16,
+    "new_url_count": 16,
+    "removed_urls": [],
+    "added_urls": [],
+    "removed_numeral_tokens": [],
+    "added_numeral_tokens": [
+      "20261024"
+    ]
+  },
+  {
+    "article": 706,
+    "path": "src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md",
+    "sha256": "587aafb44969ffe17ce8c81c7b41796caf85ef3a59beb64a11f781454042a035",
+    "original_sha256": "6c5d2ec5032ac5f404abc180bd1875275a64ba6bcf28fae4f732767b37017800",
+    "original_url_count": 16,
+    "new_url_count": 16,
+    "removed_urls": [],
+    "added_urls": [],
+    "removed_numeral_tokens": [],
+    "added_numeral_tokens": [
+      "20261024"
+    ]
+  }
+]

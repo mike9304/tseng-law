@@ -1,0 +1,262 @@
+[
+  {
+    "article": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/704-taiwan-arc-first-application.md",
+    "source_sha256": "02b683edd2ca82768aa766fbcf299529d943eaa9f1646f1e72bf1a57b564f7d7",
+    "status": "author_diagnostic_only_NOT_independent_PASS",
+    "metrics_provisional": {
+      "lang": "th",
+      "sentences": 47,
+      "paras": 20,
+      "heads": 5,
+      "list_items": 9,
+      "mean_len": 21.0,
+      "len_cv": 0.434,
+      "short_share": 0.128,
+      "long_share": 0.128,
+      "para_cv": 0.333,
+      "even_run3": 0.0,
+      "top_end": "นั้น",
+      "top_end_share": 0.106,
+      "ja_desu": 0,
+      "ja_da": 0,
+      "top_opener": "วัน",
+      "top_opener_n": 2,
+      "opener_rep": 0.05,
+      "consec_same_start": 2,
+      "cite_para_share": 0.25,
+      "cite_end_share": 0.0,
+      "contrast": 1,
+      "caveat": 0,
+      "questions": 1,
+      "num_per100": 1.93,
+      "hypo_open": false,
+      "q_open": false,
+      "formula_close": false,
+      "first": "ชาวต่างชาติที่ได้รับอนุญาตให้พำนักเมื่อเข้าไต้หวันต้องยื่นขอบัตร ARC ภายใน 30 วัน ตามมาตรา",
+      "last": "วันที่รับบัตรควรตรวจชื่อ เลขหนังสือเดินทาง และวันหมดอายุ พร้อมเก็บสำเนาบัตร เอกสารอนุญาต และหลักฐานรับเรื่องไว้ด้วยกัน ว",
+      "length_unit": "orthographic_words",
+      "short_threshold": 8,
+      "long_threshold": 32,
+      "sentence_boundary_method": "UNAPPROVED_author_draft_slices_diagnostic_only",
+      "word_segmenter": {
+        "node": "25.9.0",
+        "icu": "78.3",
+        "unicode": "17.0"
+      }
+    },
+    "short_sentences_provisional": [
+      {
+        "units": 8,
+        "sentence": "เริ่มนับวันถัดจากวันเข้าเมือง"
+      },
+      {
+        "units": 6,
+        "sentence": "บัตรครั้งแรกมีอายุหนึ่งปี"
+      },
+      {
+        "units": 7,
+        "sentence": "เอกสารไทยต้องแปลและรับรองอย่างไร?"
+      },
+      {
+        "units": 7,
+        "sentence": "บันทึกร่างแล้วต้องส่งคำขอด้วย"
+      },
+      {
+        "units": 8,
+        "sentence": "ระยะไม่ถึงปีก็คิดหนึ่งปี"
+      },
+      {
+        "units": 8,
+        "sentence": "เพดานทั่วไปคือสามปีตามมาตรา 22"
+      }
+    ],
+    "unresolved": [
+      "Independent Thai boundary approval required before measured CLI verdict"
+    ],
+    "cli": {
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/704-taiwan-arc-first-application.md",
+        "--sentences",
+        "/Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/704-draft.sentences.json"
+      ],
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/704-taiwan-arc-first-application.md: ERROR measurement unavailable: missing or unresolved Thai sentence review: /Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/704-draft.sentences.json\n",
+      "stderr": ""
+    }
+  },
+  {
+    "article": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/705-taiwan-visa-residence-work-study-family.md",
+    "source_sha256": "abe1ccf7fe19227dc0f4ac69b632f5f0f67be5932f2d44adbfa022491350b7de",
+    "status": "author_diagnostic_only_NOT_independent_PASS",
+    "metrics_provisional": {
+      "lang": "th",
+      "sentences": 56,
+      "paras": 21,
+      "heads": 6,
+      "list_items": 3,
+      "mean_len": 22.1,
+      "len_cv": 0.468,
+      "short_share": 0.089,
+      "long_share": 0.179,
+      "para_cv": 0.278,
+      "even_run3": 0.019,
+      "top_end": "เมือง",
+      "top_end_share": 0.054,
+      "ja_desu": 0,
+      "ja_da": 0,
+      "top_opener": "มี",
+      "top_opener_n": 2,
+      "opener_rep": 0.19,
+      "consec_same_start": 1,
+      "cite_para_share": 0.333,
+      "cite_end_share": 0.0,
+      "contrast": 2,
+      "caveat": 0,
+      "questions": 2,
+      "num_per100": 1.21,
+      "hypo_open": false,
+      "q_open": true,
+      "formula_close": false,
+      "first": "มีมหาวิทยาลัยรับเข้าเรียนหรือมีนายจ้างตอบรับแล้ว ใช้ฟรีวีซ่าเข้าไต้หวันก่อนได้หรือไม่?",
+      "last": "เมื่อมีหนังสืออนุญาตทำงาน หนังสือตอบรับที่ระบุหลักสูตร หรือหลักฐานความสัมพันธ์สำหรับเส้นทางที่เลือกแล้ว จึงเตรียมคำขอ AR",
+      "length_unit": "orthographic_words",
+      "short_threshold": 8,
+      "long_threshold": 32,
+      "sentence_boundary_method": "UNAPPROVED_author_draft_slices_diagnostic_only",
+      "word_segmenter": {
+        "node": "25.9.0",
+        "icu": "78.3",
+        "unicode": "17.0"
+      }
+    },
+    "short_sentences_provisional": [
+      {
+        "units": 5,
+        "sentence": "ยกเว้นหนังสือเดินทางทูตและราชการ"
+      },
+      {
+        "units": 6,
+        "sentence": "สิทธินี้ไม่ใช่ใบอนุญาตทำงาน"
+      },
+      {
+        "units": 6,
+        "sentence": "หนังสือเสนองานไม่ใช่ใบอนุญาต"
+      },
+      {
+        "units": 8,
+        "sentence": "ระหว่างเรียนยังต้องรักษาสถานะเข้าเมือง"
+      },
+      {
+        "units": 7,
+        "sentence": "สิทธินี้ไม่ครอบคลุมญาติทุกคน"
+      }
+    ],
+    "unresolved": [
+      "Independent Thai boundary approval required before measured CLI verdict"
+    ],
+    "cli": {
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/705-taiwan-visa-residence-work-study-family.md",
+        "--sentences",
+        "/Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/705-draft.sentences.json"
+      ],
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/705-taiwan-visa-residence-work-study-family.md: ERROR measurement unavailable: missing or unresolved Thai sentence review: /Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/705-draft.sentences.json\n",
+      "stderr": ""
+    }
+  },
+  {
+    "article": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md",
+    "source_sha256": "844b1b15985d3e7f82c9e8c8824d67215b7edeec7b33726da5c1e608f433f50b",
+    "status": "author_diagnostic_only_NOT_independent_PASS",
+    "metrics_provisional": {
+      "lang": "th",
+      "sentences": 59,
+      "paras": 23,
+      "heads": 6,
+      "list_items": 0,
+      "mean_len": 21.9,
+      "len_cv": 0.46,
+      "short_share": 0.102,
+      "long_share": 0.169,
+      "para_cv": 0.255,
+      "even_run3": 0.07,
+      "top_end": "ใหม่",
+      "top_end_share": 0.068,
+      "ja_desu": 0,
+      "ja_da": 0,
+      "top_opener": "เมื่อ",
+      "top_opener_n": 2,
+      "opener_rep": 0.13,
+      "consec_same_start": 0,
+      "cite_para_share": 0.391,
+      "cite_end_share": 0.0,
+      "contrast": 3,
+      "caveat": 0,
+      "questions": 2,
+      "num_per100": 2.09,
+      "hypo_open": false,
+      "q_open": false,
+      "formula_close": false,
+      "first": "ย้ายบ้านแล้วต้องแจ้งที่อยู่ใหม่ แม้บัตร ARC ยังเหลืออายุอีกหลายเดือน",
+      "last": "ก่อนกลับไทย ควรเทียบวันสิ้นสุดสิทธิพำนักกับวันกลับเข้าไต้หวัน และเตรียมเอกสารเดินทางให้ตรงกับสถานะปัจจุบัน ผู้ที่เปลี่ยน",
+      "length_unit": "orthographic_words",
+      "short_threshold": 8,
+      "long_threshold": 32,
+      "sentence_boundary_method": "UNAPPROVED_author_draft_slices_diagnostic_only",
+      "word_segmenter": {
+        "node": "25.9.0",
+        "icu": "78.3",
+        "unicode": "17.0"
+      }
+    },
+    "short_sentences_provisional": [
+      {
+        "units": 7,
+        "sentence": "คำแนะนำนี้ใช้กับระบบแรงงาน"
+      },
+      {
+        "units": 5,
+        "sentence": "ส่งคำขอแล้วหรือยัง?"
+      },
+      {
+        "units": 7,
+        "sentence": "ยังต้องเผื่อเวลารับบัตรด้วย"
+      },
+      {
+        "units": 7,
+        "sentence": "เริ่มนับตั้งแต่วันที่เกิดเหตุ"
+      },
+      {
+        "units": 8,
+        "sentence": "บัตรหายในไต้หวันต้องขอออกใหม่"
+      },
+      {
+        "units": 8,
+        "sentence": "บัตรหายในไทยก็ขอใหม่ได้"
+      }
+    ],
+    "unresolved": [
+      "Independent Thai boundary approval required before measured CLI verdict"
+    ],
+    "cli": {
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md",
+        "--sentences",
+        "/Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/706-draft.sentences.json"
+      ],
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md: ERROR measurement unavailable: missing or unresolved Thai sentence review: /Users/son7/tseng-arc-revision-20261024/work/reviews/th-boundaries/706-draft.sentences.json\n",
+      "stderr": ""
+    }
+  }
+]

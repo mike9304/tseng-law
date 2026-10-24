@@ -1,0 +1,54 @@
+[
+  {
+    "file": "src/content/columns-pt/694-portugal-exportador-acordo-prestacoes-taiwan.md",
+    "sha256": "3d658de92c0b0ff74e6bcbd3da0ab2d16decf6c994693276b62970982449ebe7",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-pt/694-portugal-exportador-acordo-prestacoes-taiwan.md"
+    ],
+    "exit_code": 0,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-pt/694-portugal-exportador-acordo-prestacoes-taiwan.md [pt] sentences=40 mean=18.7 cv=0.454 short=0.125 run3=0.0 opener_rep=0.2 cite_end=0.0 cite_para=0.4 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "file": "src/content/columns-pt/695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md",
+    "sha256": "05fb0d2b5305c02e5292dbb1fa3d39951dd7c18c8da2b74dc59a51c4aeaa9e22",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-pt/695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md"
+    ],
+    "exit_code": 0,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-pt/695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md [pt] sentences=35 mean=19.5 cv=0.487 short=0.114 run3=0.091 opener_rep=0.2 cite_end=0.0 cite_para=0.067 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "file": "src/content/columns-pt/696-portugal-sentenca-arbitral-bens-taiwan.md",
+    "sha256": "96ee165f4ac3392ba2dc487b584489b9acfaa875c1ce263b26d32d671cdd97bc",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-pt/696-portugal-sentenca-arbitral-bens-taiwan.md"
+    ],
+    "exit_code": 0,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-pt/696-portugal-sentenca-arbitral-bens-taiwan.md [pt] sentences=39 mean=18.2 cv=0.46 short=0.103 run3=0.081 opener_rep=0.214 cite_end=0.0 cite_para=0.286 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "file": "src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md",
+    "sha256": "ebbaff65263b49401cd07d3cc5abe439d2ee5a778010795df52f718e2cb717f0",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md"
+    ],
+    "exit_code": 0,
+    "stdout": "/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md [pt] sentences=42 mean=17.3 cv=0.48 short=0.095 run3=0.0 opener_rep=0.067 cite_end=0.0 cite_para=0.4 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "stderr": ""
+  }
+]

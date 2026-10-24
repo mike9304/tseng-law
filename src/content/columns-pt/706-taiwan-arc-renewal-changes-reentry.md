@@ -1,7 +1,7 @@
 ---
-title: "ARC em Taiwan: renovação, mudança de morada ou emprego e reentrada"
+title: "O ARC continua válido? Renovação, mudanças e viagens para fora de Taiwan"
 seoTitle: "Renovar o ARC em Taiwan e comunicar alterações"
-summary: "Saiba quando pedir a renovação do ARC e como tratar mudanças de morada, emprego, fundamento de residência ou passaporte, perda do cartão e viagens ao estrangeiro."
+summary: "A renovação, a mudança de morada e a alteração do motivo da residência têm prazos próprios. Uma viagem durante o pedido também pode afetar a reentrada ou o processo em curso."
 published: "2026-10-24"
 lastmod: "2026-10-24"
 date_display: "24 de outubro de 2026"
@@ -16,69 +16,76 @@ tags:
 audience:
   - "pt"
 author: "legal-ai-assistant"
+featured_image: "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp"
+featured_image_alt: "Agenda em branco, caderneta de viagem sem inscrições, cartão liso e chaves de casa sobre uma mesa."
+featured_image_caption: "Imagem ilustrativa sobre renovação e mudança de morada; o cartão não é um documento de identificação real."
 faq:
   - q: "Posso comunicar a nova morada apenas quando renovar o ARC?"
-    a: "A mudança de morada deve ser comunicada à NIA no prazo de 30 dias, contado a partir do dia seguinte à mudança. Esse prazo aplica-se mesmo que a renovação do cartão ainda esteja distante."
+    a: "A comunicação tem de ser feita à NIA em 30 dias, contados a partir do dia seguinte à mudança. A data de renovação do ARC não altera esse prazo."
   - q: "Um contrato renovado prolonga automaticamente o ARC?"
-    a: "Não. É necessário verificar a autorização laboral aplicável e apresentar o pedido de prorrogação da residência à NIA dentro da janela legal. A validade do contrato, da autorização de trabalho e do ARC deve ser conferida separadamente."
+    a: "A renovação do contrato não prolonga a residência. É preciso que a autorização de trabalho aplicável cubra a atividade e que o pedido de prorrogação seja apresentado à NIA no prazo previsto. O contrato, a autorização de trabalho e o ARC podem ter datas diferentes."
   - q: "Posso viajar apenas com o recibo de renovação do ARC?"
-    a: "O recibo não demonstra, por si só, que dispõe dos documentos necessários para reentrar. Antes da saída, confirme com a NIA a validade da residência, a autorização de reentrada e o documento que terá de apresentar no regresso."
+    a: "O recibo, por si só, não comprova todos os requisitos de reentrada. Antes da partida, consulte a NIA sobre o documento que permite o regresso no seu caso, tendo em conta a validade da residência e da autorização de reentrada."
 ---
 
-Quando desaparece o fundamento da residência, a regra é a NIA revogar a autorização e cancelar o ARC, mesmo que o cartão ainda mostre uma data futura. O [artigo 31.º da Lei de Imigração](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31) prevê exceções sujeitas a condições, incluindo determinadas situações de viuvez, divórcio, filhos menores, litígio laboral ou acidente de trabalho.
+Quando deixa de existir o motivo da residência, a regra é a NIA revogar a autorização e cancelar o ARC, mesmo que o cartão indique uma data futura. O [artigo 31.º da Lei de Imigração](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31) admite exceções sob determinadas condições, incluindo situações de viuvez, divórcio, filhos menores, litígio laboral ou acidente de trabalho.
 
-Coloque lado a lado o ARC, o passaporte, a autorização de trabalho ou os documentos de estudo ou família e a data da alteração. Acrescente qualquer notificação recebida da NIA. O contrato, a autorização laboral e o cartão podem ter datas diferentes; é preciso saber qual delas condiciona o pedido seguinte.
+Se o motivo se mantém, a renovação geral pode ser pedida nos três meses anteriores ao fim da residência autorizada, nos termos do [artigo 9.º do regulamento de residência](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129). O pedido deve entrar antes do termo. A regra geral não concede um período adicional depois da expiração.
 
-## A janela de renovação começa antes da expiração
+## Renovação com o mesmo fundamento
 
-Na renovação geral do ARC, o [artigo 9.º do regulamento de residência](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129) prevê o pedido nos três meses anteriores ao fim da residência autorizada. O pedido deve ser apresentado antes de esta terminar. Não conte com um período adicional depois da data de expiração.
+O [guia 0902 da NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) prevê requerimento, passaporte, ARC, fotografia e prova atualizada do motivo da residência. Conforme a categoria, podem ser necessários a autorização e uma declaração recente da entidade empregadora, documentos escolares ou prova da relação familiar. Sem mudança de morada, o guia dispensa nova prova do endereço na renovação.
 
-Os regimes especiais têm calendários próprios. A [renovação do Gold Card](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/) pode ser pedida nos quatro meses anteriores ao termo. Para [empreendedores](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/), o guia distingue a renovação baseada no negócio em Taiwan, com janela de quatro meses, da prorrogação após o seu desaparecimento, com janela de três meses.
+As datas do contrato, da autorização de trabalho e do ARC podem divergir. A leitura conjunta desses documentos, dos comprovativos de estudos ou família e de eventuais notificações da NIA permite identificar o que ainda suporta o pedido e até quando. Quando houve uma mudança, a data em que ocorreu também faz parte dessa análise.
 
-Se o fundamento se mantém, o processo inclui requerimento, passaporte, ARC, fotografia e prova atualizada desse fundamento. O [guia 0902 da NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) identifica os comprovativos por categoria: por exemplo, autorização e declaração recente da entidade empregadora, documentos escolares ou prova da relação familiar. Se a morada não mudou, o guia dispensa nova prova de morada para a renovação.
+O calendário dos regimes especiais é diferente. A [renovação do Gold Card](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/) pode ser pedida nos quatro meses anteriores ao termo. Para [empreendedores](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/), o guia prevê quatro meses quando o pedido continua baseado no negócio em Taiwan e três meses para a prorrogação após deixar de existir esse fundamento.
 
-Os estudantes utilizam o [procedimento online próprio](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news). Para mandarim, a renovação depende da assiduidade recente e da duração comprovada dos estudos, com um máximo de seis meses por prorrogação. O guia estabelece, em princípio, dois anos como limite total de permanência e residência nesse percurso.
+## Durante os estudos e depois da conclusão
 
-Quem conclui um programa de ensino formal em Taiwan pode pedir, antes de a residência expirar, a prorrogação prevista no [artigo 11.º do regulamento](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129). A simples conclusão de um curso de mandarim não dá acesso a esta via. Se o pedido for aprovado, a residência é prorrogada por um ano a contar do dia seguinte ao termo anterior. Pode ser pedida uma nova prorrogação antes de esse período terminar, até ao máximo total de dois anos. Quanto ao trabalho, o [artigo 12.º da lei sobre profissionais estrangeiros](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) dispensa de autorização quem obteve em Taiwan um grau de *associate degree* ou superior e está no período de prorrogação aprovado pela NIA como recém-diplomado.
+Os estudantes têm um [procedimento online próprio](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news). Nos cursos de mandarim, a renovação depende da assiduidade recente e da duração comprovada dos estudos. Cada prorrogação pode abranger até seis meses. O limite total de permanência e residência nesse percurso é, em princípio, de dois anos.
 
-## Morada e local de trabalho: um prazo próprio
+Quem conclui um programa de ensino formal em Taiwan pode pedir, antes da expiração da residência, a prorrogação prevista no [artigo 11.º do regulamento](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129). Concluir um curso de mandarim não basta.
 
-A alteração de morada ou do local de trabalho deve ser registada na NIA em 30 dias, contados a partir do dia seguinte à ocorrência, segundo o artigo 31.º. Esta obrigação existe mesmo com um ARC válido por muitos meses.
+Com a aprovação, a residência prolonga-se por um ano a partir do dia seguinte ao termo anterior. Antes do fim desse período pode ser pedida nova prorrogação, até ao máximo total de dois anos. Durante a prorrogação aprovada pela NIA como recém-diplomado, quem obteve em Taiwan um grau de *associate degree* ou superior beneficia da dispensa de autorização de trabalho do [artigo 12.º da lei sobre profissionais estrangeiros](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295).
 
-Para a nova morada, reúna prova do local onde efetivamente reside, como o contrato de arrendamento. No caso de mudança laboral, confirme que autorização cobre a nova atividade. O [artigo 43.º da Lei dos Serviços de Emprego](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43) mantém a exigência de autorização, salvo exceção legal; comunicar uma alteração à NIA não autoriza automaticamente o trabalho para outra entidade.
+## Trinta dias para comunicar morada ou local de trabalho
 
-Qual foi o dia efetivo da mudança? Guarde o documento que o demonstra. A data em que se recordou de atualizar o cartão não substitui a data do facto que inicia o prazo.
+A mudança de morada ou do local de trabalho tem de ser registada na NIA no prazo de 30 dias, contado a partir do dia seguinte à ocorrência, segundo o artigo 31.º. O prazo corre mesmo quando faltam muitos meses para renovar o ARC.
 
-## Mudar o fundamento da residência
+Conta a data efetiva da mudança. Um contrato de arrendamento pode comprovar a nova morada, e os documentos que registam a alteração permitem determinar o início do prazo.
 
-Passar de estudos para emprego ou de trabalho para residência familiar exige verificar uma categoria nova. O [artigo 23.º-1 da Lei de Imigração](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1) define os casos de alteração perante a NIA. O [artigo 7.º do regulamento](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129) estabelece os procedimentos e os respetivos prazos.
+Na mudança de emprego, é também necessária uma autorização que cubra a nova atividade, salvo exceção legal. O [artigo 43.º da Lei dos Serviços de Emprego](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43) mantém essa exigência. Comunicar a alteração à NIA não autoriza automaticamente o trabalho para outra entidade.
 
-| Situação prevista no regulamento | Momento e entidade |
+## Passar de estudos para trabalho ou mudar para residência familiar
+
+Uma mudança do motivo da residência exige enquadramento na nova categoria. O [artigo 23.º-1 da Lei de Imigração](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1) define os casos de alteração perante a NIA, e o [artigo 7.º do regulamento](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129) estabelece os procedimentos e prazos.
+
+| Situação prevista no regulamento | Pedido e início da contagem |
 |---|---|
 | Novo fundamento abrangido pelo artigo 23.º-1, n.º 1 | Pedido à NIA em 30 dias, contados desde a data do facto |
 | Novo fundamento fora das categorias desse número | Novo pedido de visto de residente à BOCA ou aos seus serviços em 15 dias, contados desde a data do facto, seguido do procedimento na NIA |
 
-Aqui, a contagem começa na data do facto. Na mudança de morada ou local de trabalho, começa no dia seguinte. Antes de escolher uma das linhas, confirme se a alteração concreta e a categoria de residência estão abrangidas; nenhuma delas cria elegibilidade para um fundamento que a lei não admite.
+Nestes casos, a contagem começa na própria data do facto. Para a mudança de morada ou local de trabalho, começa no dia seguinte. A escolha do procedimento depende de a alteração concreta e a categoria estarem abrangidas pela lei; a tabela não cria um novo fundamento de residência.
 
-Reúna os documentos que provam tanto a mudança como o novo fundamento. A NIA volta a apreciar a duração da residência. Se os documentos ou a aprovação não puderem ficar concluídos antes do termo aplicável, esclareça imediatamente com a entidade competente a obrigação de saída; a apresentação do pedido não deve ser tratada como prolongamento automático.
+Documentos que provem a mudança e o novo fundamento têm de integrar o processo, para que a NIA possa voltar a apreciar a duração da residência. A apresentação não prolonga automaticamente a autorização existente. Se os documentos ou a decisão não puderem ficar concluídos antes do termo aplicável, a obrigação de saída deve ser esclarecida de imediato com a entidade competente.
 
-## Novo passaporte ou perda do cartão
+## Passaporte novo e substituição de um ARC perdido
 
-Um novo passaporte pode alterar o número ou outros dados registados. A [NIA exige a atualização desses dados de residência](https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN). Peça as instruções para o seu processo e apresente o passaporte atualizado; não aplique automaticamente a este caso o prazo previsto para mudança de morada.
+Com um novo passaporte, pode mudar o número ou outros dados registados. Nessa situação, a [NIA exige a atualização dos dados de residência](https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN), mediante apresentação do passaporte atualizado e segundo as instruções do processo. O prazo da mudança de morada não se aplica automaticamente à atualização do passaporte.
 
-Em caso de perda do ARC em Taiwan, a lista de substituição inclui requerimento, fotografia, passaporte e declaração de perda ou documento policial, conforme o caso. Um cartão danificado deve ser apresentado. A [taxa legal de substituição por perda ou dano é de NT$ 500](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135). As taxas de outras alterações devem ser confirmadas pela natureza do ato.
+Para substituir um ARC perdido em Taiwan, a lista inclui requerimento, fotografia, passaporte e declaração de perda ou documento policial, conforme o caso. Um cartão danificado deve acompanhar o pedido. A [taxa de substituição por perda ou dano é de NT$ 500](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135); o valor de outras alterações depende do ato solicitado.
 
-Perdeu o cartão no estrangeiro? A [NIA prevê pedidos online ou através de representante em Taiwan](https://www.immigration.gov.tw/5385/7229/7232/368785/), com exigências de autenticação que variam conforme a via e a conta utilizada. Certos cartões antigos de trabalhadores migrantes seguem um procedimento separado. Antes do embarque, confirme com a NIA e a representação competente o documento necessário para regressar; uma fotografia do cartão não é autorização de reentrada.
+E se o cartão se perder no estrangeiro? A [NIA admite pedidos online ou através de representante em Taiwan](https://www.immigration.gov.tw/5385/7229/7232/368785/). As exigências de autenticação variam com a via escolhida e a conta utilizada, e certos cartões antigos de trabalhadores migrantes seguem um procedimento separado. Uma fotografia do cartão não autoriza a reentrada. Antes de embarcar, o titular precisa de saber, junto da NIA e da representação competente, qual o documento que permite regressar.
 
-## Saída e regresso com um processo pendente
+## Viajar enquanto o pedido está em análise
 
-O [artigo 34.º da Lei de Imigração](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080132) exige autorização de reentrada obtida antes da saída para quem pretenda regressar durante a residência; a residência permanente tem uma exceção própria. Confira a autorização associada ao ARC e a respetiva validade para a data do regresso. O recibo de renovação não é prova suficiente de todos esses requisitos.
+Para regressar durante o período de residência, o [artigo 34.º da Lei de Imigração](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080132) exige autorização de reentrada obtida antes da saída. A residência permanente tem uma exceção própria. É necessário que a autorização associada ao ARC seja válida para a data do regresso; o recibo de renovação não comprova, por si só, todos esses requisitos.
 
-Há ainda efeitos no processo em curso. O guia dos estudantes estabelece que, num pedido de ARC apresentado após entrada com visto de visitante, sair durante a análise leva ao encerramento desse pedido. Esta regra é específica desse percurso; a consequência de viajar durante outro procedimento deve ser confirmada na NIA antes da partida.
+A saída também pode afetar o processo pendente. No procedimento dos estudantes, quando o ARC foi pedido após entrada com visto de visitante, sair de Taiwan durante a análise leva ao encerramento desse pedido. A consequência noutro procedimento depende das regras que lhe são aplicáveis e deve ser esclarecida na NIA antes da partida.
 
-Se o ARC já expirou, contacte de imediato a NIA. A possibilidade limitada de novo pedido prevista no artigo 31.º para certos atrasos depende de condições e de sanção; não constitui uma prorrogação concedida a todos. Leve a data de expiração, o comprovativo do fundamento atual e qualquer notificação recebida.
+Se o ARC já expirou, o contacto com a NIA deve ser imediato. A possibilidade limitada de novo pedido para certos atrasos, prevista no artigo 31.º, está sujeita a condições e a sanção; não corresponde a uma prorrogação geral. Para tratar a situação, convém reunir a data de expiração, o comprovativo do motivo atual da residência e as notificações recebidas.
 
-Para escolher um novo fundamento, consulte os [percursos de trabalho, estudo e família](/pt/columns/taiwan-visa-residence-work-study-family). Os documentos de base estão reunidos no [primeiro pedido de ARC](/pt/columns/taiwan-arc-first-application).
+Os [percursos de trabalho, estudo e família](/pt/columns/taiwan-visa-residence-work-study-family) descrevem os possíveis fundamentos de residência; o [primeiro pedido de ARC](/pt/columns/taiwan-arc-first-application) reúne os documentos de base.
 
 ## Fontes oficiais
 

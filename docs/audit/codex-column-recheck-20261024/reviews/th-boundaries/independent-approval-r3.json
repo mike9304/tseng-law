@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "locale": "th",
+  "status": "approved",
+  "reviewer": "/root/review_rev2_th (independent AI Thai editor)",
+  "scope": "sentence boundaries only",
+  "entries": [
+    {
+      "source_sha256": "02b683edd2ca82768aa766fbcf299529d943eaa9f1646f1e72bf1a57b564f7d7",
+      "paragraphs_sha256": "8924d038bfad5948905c5c65b634295211504a7997e3db76a5a43794c4cfd54e",
+      "method": "independent_review_with_author_boundary_adjudication",
+      "unresolved_boundaries": []
+    }
+  ],
+  "evidence": [
+    {
+      "role": "independent-review",
+      "path": "independent-boundary-review-r3.md",
+      "sha256": "447da717ae88dbb350a204c112087344cc46fe3ccc9eb1ec28cb9c3dbbb7a767"
+    },
+    {
+      "role": "author-adjudication",
+      "path": "author-report-r3.snapshot.md",
+      "sha256": "13e48ce6b7292e1e6c3ff10a5c217630aa672c2c758bb30656a8f0c57d3276c9"
+    },
+    {
+      "role": "prior-independent-review",
+      "path": "independent-boundary-review-r2.md",
+      "sha256": "1ae630b69905dc47ea46539223cc9b30c5faf2055d4716e465baddc0771a35f3"
+    },
+    {
+      "role": "prior-author-adjudication",
+      "path": "author-adjudication-r1.md",
+      "sha256": "fd7097f54e3941f741c0c0b6d4de3a07e0b24f789aa9498aeb332c9f6b86da16"
+    },
+    {
+      "role": "prior-author-adjudication-addendum",
+      "path": "author-adjudication-r1-addendum.md",
+      "sha256": "67fa30bd1cf715addc94ca24eb544e35b6dcd30116c79090a1fe7eabf4c18b66"
+    }
+  ]
+}

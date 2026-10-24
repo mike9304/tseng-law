@@ -1,0 +1,5 @@
+python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md --lang th --sentences /Users/son7/tseng-market-columns-20261023/repo/docs/audit/variety-segments/ad0a3eccf0fbbc4d5e7a2d78e8e3bd5d753e12305a77060417927c55a7d8c265.json
+/Users/son7/tseng-arc-revision-20261024/repo/src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md [th] sentences=50 mean=20.0 cv=0.453 short=0.14 run3=0.146 opener_rep=0.133 cite_end=0.0 cite_para=0.533 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+
+exit=0

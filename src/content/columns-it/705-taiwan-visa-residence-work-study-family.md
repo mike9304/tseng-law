@@ -1,7 +1,7 @@
 ---
-title: "Studiare, lavorare o raggiungere la famiglia a Taiwan: quale percorso di soggiorno"
+title: "Visti per Taiwan: studio, lavoro e ricongiungimento familiare"
 seoTitle: "Taiwan: visti per studio, lavoro e famiglia"
-summary: "Un corso universitario, il mandarino, un impiego o il ricongiungimento richiedono percorsi diversi. Come collegare il progetto a Taiwan al visto e alla residenza."
+summary: "Il visto con cui si entra a Taiwan può incidere sulla successiva domanda di residenza. Le condizioni per università, mandarino, lavoro e ricongiungimento familiare."
 published: "2026-10-24"
 lastmod: "2026-10-24"
 date_display: "24 ottobre 2026"
@@ -17,60 +17,75 @@ tags:
 audience:
   - "it"
 author: "legal-ai-assistant"
+featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
+featured_image_alt: "Un portatile chiuso, libri e due tazze in tre composizioni, accanto a un libretto da viaggio senza scritte."
+featured_image_caption: "Immagine illustrativa di lavoro, studio e vita familiare; non mostra documenti ufficiali o una domanda reale."
 faq:
   - q: "L’iscrizione a un corso di mandarino dà subito diritto all’ARC?"
-    a: "No. La via ordinaria richiede un ingresso con il visto appropriato e, per la residenza, quattro mesi di studio completati in un centro qualificato e un’ulteriore iscrizione di almeno tre mesi, oltre agli altri requisiti di frequenza e documentazione."
+    a: "Per la via ordinaria occorrono il visto di ingresso appropriato, quattro mesi di studio già completati in un centro qualificato e un’ulteriore iscrizione di almeno tre mesi. Si aggiungono i requisiti di frequenza e gli altri documenti richiesti."
   - q: "Con un ARC per studio posso accettare un lavoro?"
-    a: "L’ARC per studio non sostituisce il permesso di lavoro. Gli studenti ammessi al lavoro seguono la relativa procedura; per quelli cui si applica l’articolo 50 dell’Employment Service Act, fuori dalle vacanze estive e invernali vale il limite di 20 ore settimanali."
+    a: "Serve il permesso di lavoro previsto per gli studenti ammessi a lavorare. Per le categorie dell’articolo 50 dell’Employment Service Act, il limite è di 20 ore settimanali, fuori dalle vacanze estive e invernali."
   - q: "Costituire una società basta per ottenere la residenza?"
-    a: "La registrazione societaria non attribuisce automaticamente una residenza personale. Occorre soddisfare una base specifica, per esempio un percorso di impiego, investimento o imprenditoria, e ottenere le autorizzazioni richieste."
+    a: "La registrazione della società non attribuisce automaticamente la residenza al socio. La domanda personale deve soddisfare i requisiti di un percorso ammesso, come lavoro, investimento o imprenditoria, e ottenere le relative autorizzazioni."
 ---
 
-Una lettera di ammissione a un’università taiwanese consente di preparare la domanda di visto per studio, ma l’ingresso scelto può condizionare la successiva residenza. BOCA, l’Ufficio degli affari consolari, distingue il [visto per un corso regolare](https://www.boca.gov.tw/cp-166-283-c4da3-2.html) dal [visto di visita per studiare mandarino](https://www.boca.gov.tw/fp-158-260-9690c-2.html).
+Si può chiedere l’ARC dopo l’ingresso senza visto? Per alcuni professionisti e familiari, l’[articolo 16 della legge sui professionisti stranieri](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16) lo consente alle condizioni previste. La possibilità non si estende a ogni attività o rapporto familiare: dipende dalla cittadinanza indicata sul passaporto, dal titolo usato all’ingresso e dal motivo del soggiorno.
 
-Per alcune categorie professionali, l’[articolo 16 della legge sui professionisti stranieri](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16) ammette una domanda diretta alla NIA anche dopo l’ingresso senza visto; questa possibilità non si estende a ogni attività o rapporto familiare. La cittadinanza del passaporto, il titolo usato all’ingresso e il progetto concreto devono essere valutati insieme.
+Per lo studio, BOCA distingue il [visto per un corso universitario regolare](https://www.boca.gov.tw/cp-166-283-c4da3-2.html) dal [visto di visita per il mandarino](https://www.boca.gov.tw/fp-158-260-9690c-2.html): la lettera di ammissione permette di preparare la domanda per il percorso corrispondente. Un diverso ingresso può precludere la conversione ordinaria.
 
-## Visita breve e residenza: documenti con funzioni diverse
+## Visto, ARC e permesso di lavoro
 
-Nel percorso ordinario, il [visto di residenza](https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html) è rilasciato per finalità ammesse quali lavoro, studio e famiglia. BOCA richiede documenti che provino il motivo dichiarato. La NIA decide invece le domande di residenza e rilascia l’ARC, la carta che documenta lo status ottenuto.
+BOCA, l’Ufficio degli affari consolari, rilascia il [visto di residenza](https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html) sulla base dei documenti che provano una finalità ammessa, come studio, lavoro o famiglia. La NIA, Agenzia nazionale per l’immigrazione, decide sulla domanda di residenza e rilascia l’ARC che la documenta.
 
-L’esenzione dal visto dipende dalle condizioni previste per il passaporto e il tipo di ingresso. Non equivale a un’autorizzazione generale a lavorare. Gli [articoli 43 e 48 dell’Employment Service Act](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) regolano il permesso di lavoro e le relative esenzioni. Anche un incarico chiamato «trasferta» richiede una verifica delle attività che si svolgeranno realmente a Taiwan.
+L’ingresso in esenzione dal visto dipende dal passaporto e dalle condizioni previste per quel tipo di ingresso; per svolgere un’attività lavorativa occorre il permesso o una delle esenzioni degli [articoli 43 e 48 dell’Employment Service Act](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001). Anche quando il viaggio è chiamato «trasferta», la necessità di autorizzazione dipende dalle attività effettivamente svolte a Taiwan.
 
-## Un impiego professionale o un lavoro soggetto al regime migrante
+## Studiare all’università o in un centro di mandarino
 
-Nell’assunzione ordinaria di un professionista straniero, il datore di lavoro presenta la domanda di autorizzazione quando richiesta. Un’offerta non è un permesso. Prima del viaggio, il lavoratore dovrebbe ottenere copia del provvedimento pertinente e controllare mansioni, datore di lavoro e durata autorizzata.
+Chi si trova all’estero può chiedere il visto di residenza per un corso regolare a tempo pieno. La domanda va alla rappresentanza taiwanese competente. Tra gli allegati richiesti dalla [guida BOCA per studenti](https://www.boca.gov.tw/cp-166-283-c4da3-2.html) figurano:
 
-Quando ricorrono i requisiti della legge dedicata, il professionista o professionista specializzato entrato senza visto o con visto di visita può chiedere la residenza direttamente alla NIA, purché abbia l’autorizzazione al lavoro professionale o ne sia esente. L’[articolo 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16) subordina il rilascio dell’ARC all’approvazione della domanda. La sola laurea non basta.
+- la lettera di ammissione;
+- i documenti scolastici: per diplomi e certificati degli esami in lingua diversa dal cinese o dall’inglese, servono la traduzione e l’autenticazione indicate;
+- la prova delle risorse economiche;
+- il certificato sanitario nelle forme prescritte.
 
-I lavoratori migranti delle categorie soggette alla procedura specifica seguono invece le [istruzioni NIA dedicate](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/). Autorizzazioni, documentazione e regole sui familiari vanno verificate per quella categoria; il portale per professionisti non è un canale generale per chiunque abbia un contratto.
+Con il visto di visita specifico per studio, una domanda diretta alla NIA è ammessa alle condizioni dell’[articolo 23, quarto comma](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23). Dalla conversione ordinaria per studenti descritta nella propria guida, BOCA esclude invece gli ingressi senza visto, con visto all’arrivo o per un altro motivo. Per questo, alla scuola va comunicato anche il titolo con cui si intende entrare, prima di organizzare il viaggio.
 
-## Un corso di laurea e un corso di lingua
+Il [visto di visita per il mandarino](https://www.boca.gov.tw/fp-158-260-9690c-2.html) va richiesto prima della partenza se si intende seguire il percorso ordinario verso la residenza. La residenza richiede quattro mesi di studio completati. Il centro deve essere affiliato a un’università riconosciuta e occorre un’ulteriore iscrizione di almeno tre mesi: la sola iscrizione iniziale, quindi, non dà subito accesso all’ARC.
 
-Per un corso regolare a tempo pieno, il richiedente che si trova all’estero può presentare la domanda di visto di residenza alla rappresentanza taiwanese competente. La [guida BOCA per studenti](https://www.boca.gov.tw/cp-166-283-c4da3-2.html) elenca, tra gli allegati, ammissione, documenti scolastici, risorse economiche e certificato sanitario nelle forme prescritte. Per diplomi e certificati degli esami in lingua diversa dal cinese o dall’inglese, indica la traduzione e l’autenticazione richieste.
+La [guida BOCA per la residenza](https://www.boca.gov.tw/fp-166-285-041cb-2.html) richiede almeno 15 ore di lezione settimanali, dal lunedì al venerdì. Le assenze non possono superare un quarto delle ore complessive. Anche i permessi contano come assenze.
 
-È possibile presentare una domanda diretta alla NIA anche con il visto di visita specifico per studio, se sono soddisfatte le condizioni dell’[articolo 23, quarto comma](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23). BOCA esclude dalla procedura ordinaria di conversione per studenti descritta nella sua guida l’ingresso senza visto, con visto all’arrivo o per un diverso motivo. La scuola deve quindi conoscere anche il titolo con cui si intende entrare.
+Durante gli studi si può lavorare? Serve il permesso previsto per gli studenti ammessi a lavorare; l’ARC per studio non lo sostituisce. Per le categorie dell’[articolo 50 dell’Employment Service Act](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001), il limite è di 20 ore settimanali. Fanno eccezione le vacanze estive e invernali.
 
-Un corso di mandarino richiede il [visto di visita appropriato](https://www.boca.gov.tw/fp-158-260-9690c-2.html), da preparare prima del viaggio se si intende seguire questo percorso verso la residenza. Servono quattro mesi di studio già completati. Il centro deve essere affiliato a un’università riconosciuta e occorre un’ulteriore iscrizione di almeno tre mesi. La [guida BOCA](https://www.boca.gov.tw/fp-166-285-041cb-2.html) richiede inoltre almeno 15 ore di lezione settimanali dal lunedì al venerdì; le assenze, compresi i permessi, non devono superare un quarto delle ore complessive.
+## L’assunzione e la domanda del professionista
 
-Si può finanziare il soggiorno con un lavoro durante gli studi? Occorre il permesso di lavoro previsto. Per le categorie dell’[articolo 50 dell’Employment Service Act](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001), fuori dalle vacanze invernali ed estive il limite è di 20 ore settimanali. L’ARC per studio, da solo, non autorizza l’impiego.
+Per l’assunzione ordinaria di un professionista straniero, quando il permesso è richiesto spetta al datore presentare la domanda; la lettera di offerta non sostituisce questa autorizzazione. Al lavoratore serve una copia del provvedimento. Prima del viaggio, dovrebbe confrontare mansioni, datore e durata autorizzata con l’impiego previsto.
 
-## Raggiungere un coniuge o un genitore
+Il professionista straniero o professionista straniero specializzato può chiedere la residenza direttamente alla NIA dopo un ingresso senza visto o con visto di visita, alle condizioni dell’[articolo 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16). Servono l’autorizzazione al lavoro professionale o un’esenzione e l’approvazione della domanda: il solo possesso della laurea non soddisfa queste condizioni.
 
-Nel ricongiungimento conta lo status della persona già a Taiwan. Per il coniuge di un cittadino taiwanese residente con registrazione anagrafica, la NIA richiede la prova del matrimonio registrato a Taiwan. Un matrimonio celebrato all’estero può quindi comportare adempimenti documentali prima della [domanda familiare](https://www.immigration.gov.tw/5475/5478/141465/141808/141970).
+Ai lavoratori migranti delle categorie soggette al regime specifico è riservata una [procedura NIA](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/) per le domande e i rinnovi dell’ARC, con i relativi documenti. Autorizzazioni al lavoro e possibilità di ricongiungimento richiedono un esame della categoria concreta; avere un contratto non consente, di per sé, di usare il portale riservato ai professionisti.
 
-L’[articolo 23](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23) comprende una via per chi entra con un visto che consente almeno 60 giorni e non reca le annotazioni restrittive indicate dalla legge. Restano necessari i requisiti familiari della disposizione. Essere sposati con un cittadino taiwanese non trasforma qualunque ingresso senza visto in questa procedura.
+## Il ricongiungimento dipende dallo status del familiare
 
-Una famiglia che raggiunge un professionista straniero può rientrare nella domanda diretta dell’[articolo 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16) dopo ingresso senza visto o con visto di visita. Il professionista deve avere già ottenuto la residenza o la residenza permanente. Sono compresi il coniuge, i figli minorenni e i figli maggiorenni non autosufficienti a causa di disabilità fisica o psichica. Genitori, altri parenti e figli maggiorenni senza tale condizione richiedono una verifica diversa.
+Nel ricongiungimento con un coniuge taiwanese residente con registrazione anagrafica, il matrimonio deve risultare registrato a Taiwan. Se il matrimonio è stato celebrato all’estero, i documenti possono richiedere ulteriori formalità prima della [domanda familiare alla NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/141970).
 
-E il lavoro del familiare? Per il coniuge straniero di un cittadino taiwanese con registrazione anagrafica, l’[articolo 48 dell’Employment Service Act](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) prevede l’esenzione una volta ottenuta la residenza. L’esenzione riguarda quella specifica posizione familiare.
+Una delle vie previste dall’[articolo 23](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23) riguarda chi entra con un visto che consente almeno 60 giorni e non contiene le annotazioni restrittive indicate dalla legge. Occorre inoltre soddisfare i requisiti familiari della disposizione. Il matrimonio con un cittadino taiwanese, da solo, non consente di utilizzare questa procedura dopo qualsiasi ingresso senza visto.
 
-## Gold Card e imprenditoria
+Dopo un ingresso senza visto o con visto di visita, l’[articolo 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16) consente ai familiari ammessi di chiedere direttamente la residenza alla NIA. La persona da raggiungere deve essere un professionista straniero che svolge lavoro professionale a Taiwan oppure un professionista straniero specializzato; in entrambi i casi deve avere già ottenuto dalla NIA l’autorizzazione alla residenza o alla residenza permanente. Sono ammessi il coniuge, i figli minorenni e i figli maggiorenni non autosufficienti a causa di disabilità fisica o psichica; la carta viene rilasciata dopo l’approvazione della domanda. Per genitori, altri parenti e figli maggiorenni privi di questa condizione occorre esaminare un eventuale diverso percorso.
 
-La [Taiwan Employment Gold Card](https://goldcard.nat.gov.tw/en/about/) riunisce permesso di lavoro aperto, visto di residenza, ARC e permesso di reingresso. Le qualifiche sono soggette a verifica. La domanda è individuale: non occorre avere già un datore di lavoro.
+Quanto al lavoro, l’[articolo 48 dell’Employment Service Act](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) esenta dal permesso il coniuge straniero di un cittadino taiwanese con registrazione anagrafica, una volta ottenuta la residenza.
 
-Il [percorso NIA per imprenditori](https://www.immigration.gov.tw/5475/5478/141465/141469/367189/cp_news) ha una domanda e criteri propri. La costituzione di una società non sostituisce l’esame della posizione personale; la [guida alla struttura di un’impresa a Taiwan](/it/columns/taiwan-semiconductor-market-entry) affronta il diverso problema organizzativo.
+## La domanda individuale di Gold Card e quella per imprenditori
 
-Prima di fissare la partenza, conviene riunire il passaporto che sarà usato, il documento dell’università o del datore di lavoro, oppure le prove familiari, e la data prevista per l’inizio dell’attività. Il passaggio successivo è la [prima domanda di ARC](/it/columns/taiwan-arc-first-application); chi possiede già la carta trova le variazioni nella [guida al rinnovo](/it/columns/taiwan-arc-renewal-changes-reentry). Per lo studente, la prima verifica concreta è che il visto previsto corrisponda esattamente al corso ammesso.
+La [Taiwan Employment Gold Card](https://goldcard.nat.gov.tw/en/about/) può essere richiesta individualmente, senza avere già un datore di lavoro, ma il rilascio dipende dall’accertamento delle qualifiche richieste. Riunisce quattro funzioni:
+
+- permesso di lavoro aperto;
+- visto di residenza;
+- ARC;
+- permesso di reingresso.
+
+Nel [percorso NIA per imprenditori](https://www.immigration.gov.tw/5475/5478/141465/141469/367189/cp_news), la domanda di residenza è soggetta a criteri propri, da soddisfare anche quando la società è già stata costituita; la registrazione societaria non attribuisce automaticamente alla persona il diritto di risiedere a Taiwan. Per le scelte organizzative dell’impresa è disponibile la [guida alla struttura di un’attività a Taiwan](/it/columns/taiwan-semiconductor-market-entry).
+
+Una volta individuato il percorso ammesso, la [prima domanda di ARC](/it/columns/taiwan-arc-first-application) richiede i documenti del soggiorno; chi ha già la carta può leggere le regole su [rinnovo e variazioni](/it/columns/taiwan-arc-renewal-changes-reentry). Prima della partenza, passaporto, documenti della scuola o del datore di lavoro, eventuali prove familiari e data di inizio dell’attività permettono di definire la domanda da presentare. Per un corso di studi, il visto previsto deve corrispondere proprio al corso ammesso.
 
 ## Fonti ufficiali
 

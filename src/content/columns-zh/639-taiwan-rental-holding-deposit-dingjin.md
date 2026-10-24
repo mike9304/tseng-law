@@ -11,7 +11,7 @@ categories:
 topic: "litigation"
 featured_image: "../images/639-taiwan-rental-holding-deposit-dingjin/featured-01.webp"
 featured_image_alt: "午後陽光照進空屋，桌上放著一串鑰匙、信封和一張尚未簽名的白紙。"
-featured_image_caption: "虛構情境，並非實際租賃物件或當事人的照片。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "房東說家人要用、不租了，只退還定金，我還能請求什麼？"
     a: "如果雙方沒有另外約定，而且租約沒簽成是可歸責於房東的事由，可以請求加倍返還定金。臺灣臺北地方法院113年度簡上字第219號判決把民法第249條第3款類推適用於簽約前交付的定金，扣除房東已退還的88,000元後，判命房東再給付88,000元。房東主張的「不論可否歸責都只退還原額」特約，因為沒有舉證而不被採信。"

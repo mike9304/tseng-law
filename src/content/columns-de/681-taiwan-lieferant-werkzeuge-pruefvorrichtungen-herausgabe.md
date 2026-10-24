@@ -14,7 +14,7 @@ targetMarket: "Germany"
 author: "legal-ai-assistant"
 featured_image: "/images/columns/681-market-review-20261024.webp"
 featured_image_alt: "Metallformen und Prüfvorrichtung mit leeren Anhängern, Holzkiste und Verpackungspapier in einem Lagerregal."
-featured_image_caption: "Illustration zur Vorbereitung einer Werkzeugübergabe; keine Aufnahme eines tatsächlichen Lieferantenlagers."
+featured_image_caption: "Fiktive Szene"
 faq:
   - q: "Beweist die bezahlte Werkzeugrechnung unser Eigentum?"
     a: "Sie belegt die Zahlung, entscheidet aber nicht allein über den Eigentumserwerb. Vertragsinhalt und Besitzübertragung sind mitzulesen. Artikel 761 des taiwanesischen Zivilgesetzbuchs sieht neben der Übergabe bestimmte Ersatzformen vor, etwa eine Vereinbarung über mittelbaren Besitz oder die Abtretung eines Herausgabeanspruchs gegen einen Dritten."

@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["magyar munkavállalók", "working holiday", "munkavállalási engedély", "biztosítás"]
 featured_image: "/images/blog/644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel/featured-01.webp"
 featured_image_alt: "Egy bőrönd és egy összehajtott irattartó boríték egy repülőtéri indulási ellenőrzőpult előtt."
-featured_image_caption: "Szemléltető kép; nem valós ügyet, személyt vagy dokumentumot ábrázol."
+featured_image_caption: "Kitalált jelenet"
 faq:
   - q: "Vállalhatok hat hónapos munkát ugyanannál a tajvani cégnél?"
     a: "A magyar working holiday program keretében nem: az ideiglenes munkavégzés ugyanannál a munkáltatónál legfeljebb három hónapig tarthat. Hosszabb munkaviszonyhoz más megfelelő engedélyezési út szükséges; a program vízumát Tajvanon nem lehet más célú vízumra cserélni."

@@ -18,7 +18,7 @@ audience:
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp"
 featured_image_alt: "Un’agenda senza scritte, un libretto da viaggio, una piccola tessera e chiavi di casa."
-featured_image_caption: "Composizione illustrativa per rinnovi e cambi di indirizzo; non raffigura documenti ufficiali o una pratica personale."
+featured_image_caption: "Scena immaginaria"
 faq:
   - q: "Posso aspettare il rinnovo per comunicare un trasloco?"
     a: "Il nuovo indirizzo va comunicato entro 30 giorni, contando dal giorno successivo al cambiamento. L’obbligo resta anche se il rinnovo dell’ARC è ancora lontano."

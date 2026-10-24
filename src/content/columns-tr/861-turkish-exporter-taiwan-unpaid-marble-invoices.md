@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["ihracat alacağı", "Türk ihracatçılar", "ödenmeyen fatura", "ödeme emri"]
 featured_image: "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
 featured_image_alt: "Meşe masa üzerindeki açık renk ahşap tepside boş krem rengi bir kâğıt ve kapağı kapalı koyu renk dolma kalem; yanındaki pencereden küçük teknelerin bulunduğu sakin bir liman görünüyor."
-featured_image_caption: "Temsili görsel; gerçek bir olayı, kişiyi veya belgeyi göstermemektedir."
+featured_image_caption: "Kurgusal sahne"
 faq:
   - q: "Tayvanlı alıcıdan bütün ticari alacaklar iki yılda zamanaşımına mı uğrar?"
     a: "Hayır. Önce alacağa uygulanacak hukuk belirlenir. Tayvan hukuku uygulanan satışta, tacir veya üreticinin sağladığı malın bedeli için Medeni Kanun madde 127 bent 8 iki yıl öngörür. Süre, talep hakkının kullanılabildiği anda başlar; her fatura için vade ayrıca incelenir."

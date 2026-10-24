@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["Latvijas ceļotāji", "traumas", "atlīdzība", "traffic-accidents", "traffic-evidence"]
 featured_image: "/images/blog/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 featured_image_alt: "Ceļa apgaismojums un ceļmalas barjera saulrietā."
-featured_image_caption: "Ilustratīvs attēls; tajā nav redzama īsta lieta, persona vai dokuments."
+featured_image_caption: "Izdomāta aina"
 faq:
   - q: "Vai policijas sākotnējo analīzi izsniedz 30. dienā pēc negadījuma?"
     a: "NPA norāda, ka to var pieprasīt pēc 30 dienām. Tas ir pieteikšanās laiks, nevis garantēta izsniegšanas diena. Negadījuma vietas plānu un fotogrāfijas var pieprasīt pēc septiņām dienām."

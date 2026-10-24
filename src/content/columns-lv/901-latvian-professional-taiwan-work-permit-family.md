@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["Latvijas pilsoņi", "darba atļauja", "uzturēšanās", "ģimene", "Gold Card"]
 featured_image: "/images/columns/20261002/vi-passport-arc-return.webp"
 featured_image_alt: "Roka pie pases bez redzama teksta, tukša karte un mape uz galda."
-featured_image_caption: "Ilustratīvs attēls; tajā nav redzama īsta lieta, persona vai dokuments."
+featured_image_caption: "Izdomāta aina"
 faq:
   - q: "Vai Latvijas pilsonis drīkst strādāt bezvīzu uzturēšanās laikā?"
     a: "Bezvīzu ieceļošana pati par sevi nedod darba tiesības. Pirms darba sākuma vajadzīga attiecīgā darba atļauja vai piemērojams likuma izņēmums. Latvijas pilsoņiem paredzētā uzturēšanās līdz 90 dienām ir ieceļošanas režīms ar saviem nosacījumiem."

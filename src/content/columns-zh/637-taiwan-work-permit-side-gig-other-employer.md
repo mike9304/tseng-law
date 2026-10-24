@@ -11,7 +11,7 @@ categories:
 topic: "visa"
 featured_image: "../images/637-taiwan-work-permit-side-gig-other-employer/featured-01.webp"
 featured_image_alt: "夜晚的小房間，門上掛著工作襯衫，地上放著素面外送背包，桌上有座鐘和倒扣的手機。"
-featured_image_caption: "虛構情境，並非實際勞工或公司的照片。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "沒拿錢，只是幫朋友表演一次，也算工作嗎？"
     a: "臺北高等行政法院111年度訴字第1020號判決參酌勞動部函釋：有勞務之提供或工作之事實，即令無償，亦屬工作。法院認定那位老師的演出屬於就業服務法第73條第1款「為申請許可以外之雇主工作」，不因他事後有無從樂團代收的8,000元中取得報酬而受影響；同條規定，有此情事者廢止其聘僱許可。"

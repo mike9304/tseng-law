@@ -11,7 +11,7 @@ categories:
 topic: "family"
 featured_image: "../images/640-taiwan-spouse-debt-family-living-expenses-joint-liability/featured-01.webp"
 featured_image_alt: "Two mugs, a stack of envelopes, a closed calculator and a child's crayon drawings on a kitchen table under evening lamplight."
-featured_image_caption: "A fictional scene. It does not show any real family or party."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "My Taiwanese husband borrowed money from a friend, and the friend now wants me to repay it. Do I have to?"
     a: "Under Article 1023, paragraph 1 of Taiwan's Civil Code, each spouse is responsible for his or her own debts. If the debt arose from family living expenses, Article 1003-1, paragraph 2 makes both spouses jointly and severally liable. In a 2025 first-instance ruling, the Keelung District Court dismissed the claims against an ex-wife because the lender could not prove the loans were spent on the household. The answer turns on what the money paid for and what can be proved."

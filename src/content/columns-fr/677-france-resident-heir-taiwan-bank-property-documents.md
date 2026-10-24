@@ -11,7 +11,7 @@ topic: "inheritance"
 tags: ["succession à Taïwan", "héritiers en France", "procuration", "comptes bancaires", "immobilier"]
 featured_image: "/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp"
 featured_image_alt: "Un dossier bleu fermé, une enveloppe, un carnet vert et un stylo sur un bureau en bois."
-featured_image_caption: "Illustration fictive de préparation documentaire, sans pièce d'identité ni dossier successoral réel."
+featured_image_caption: "Scène fictive"
 faq:
   - q: "Ma résidence en France signifie-t-elle que le droit français régit toute la succession ?"
     a: "La résidence de l'héritier ne suffit pas. Le point de départ de l'article 58 de la loi taïwanaise de droit international privé est la loi nationale du défunt au décès, avec une réserve pour les héritiers taïwanais sur les biens situés à Taïwan. Les droits réels immobiliers suivent la loi du lieu du bien."

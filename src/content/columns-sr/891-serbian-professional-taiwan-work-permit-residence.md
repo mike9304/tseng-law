@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["državljani Srbije", "radna dozvola", "boravak", "Gold Card"]
 featured_image: "/images/blog/352-hiring-in-taiwan-without-local-entity-eor-pe-work-permits/featured-01.webp"
 featured_image_alt: "Zatvoren tamni laptop, tačkasta keramička šolja i mala paprat u saksiji od terakote na svetlom drvenom stolu pored prozora iza kojeg se vide krovovi sa crepom."
-featured_image_caption: "Ilustracija; ne prikazuje stvarni slučaj, osobu ili dokument."
+featured_image_caption: "Izmišljeni prizor"
 faq:
   - q: "Da li sa srpskim pasošem mogu da uđem bez vize i počnem da radim?"
     a: "Srbija nije na objavljenom spisku državljanstava za bezvizni ulazak. Ponuda za posao ne zamenjuje radnu dozvolu: osim kada postoji zakonski izuzetak, potrebna je dozvola koju poslodavac zatraži i dobije. Vizu i osnov boravka treba proveriti posebno."

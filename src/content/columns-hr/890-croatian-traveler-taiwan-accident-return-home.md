@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["prometna-nesreća", "hrvatski-putnici", "traffic-accidents", "traffic-evidence", "criminal-litigation"]
 featured_image: "/images/blog/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 featured_image_alt: "Cestovna rasvjeta i zaštitna ograda uz cestu pri zalasku sunca."
-featured_image_caption: "Ilustracija; ne prikazuje stvarni slučaj, osobu ni dokument."
+featured_image_caption: "Izmišljena scena"
 faq:
   - q: "Mogu li sve policijske isprave dobiti prije leta za Hrvatsku?"
     a: "To ovisi o datumu nesreće i vrsti isprave. Prema NPA-i, skica mjesta i fotografije mogu se zatražiti nakon sedam dana, a preliminarna analiza nakon trideset dana od nesreće. To su početci mogućnosti podnošenja zahtjeva, a ne zajamčeni datumi izdavanja."

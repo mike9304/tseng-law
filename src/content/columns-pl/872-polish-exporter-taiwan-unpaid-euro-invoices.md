@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["polski eksport", "niezapłacone faktury", "nakaz zapłaty", "przedawnienie"]
 featured_image: "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
 featured_image_alt: "Jasna drewniana tacka na dębowym biurku mieści pustą kremową kartkę i zamknięte ciemne pióro wieczne, obok okna z widokiem na spokojny port z małymi łodziami."
-featured_image_caption: "Ilustracja poglądowa; nie przedstawia rzeczywistej sprawy, osoby ani dokumentu."
+featured_image_caption: "Scena fikcyjna"
 faq:
   - q: "Czy każda faktura polskiego dostawcy przedawnia się na Tajwanie po dwóch latach?"
     a: "Nie. Najpierw trzeba ustalić prawo właściwe. Gdy roszczenie podlega prawu tajwańskiemu i dotyczy ceny towarów dostarczonych przez kupca, producenta lub rzemieślnika, art. 127 pkt 8 przewiduje dwa lata. Termin biegnie od chwili, gdy roszczenia można dochodzić."

@@ -11,7 +11,7 @@ categories:
 topic: "litigation"
 featured_image: "../images/638-taiwan-account-provider-scam-victim-civil-damages/featured-01.webp"
 featured_image_alt: "해 질 녘 창가 책상 위에 놓인 무지 카드와 덮인 수첩, 화면을 엎어 둔 휴대폰."
-featured_image_caption: "가상의 장면입니다. 실제 계좌나 사건 당사자를 찍은 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "검찰에서 불기소 처분을 받았으면 피해자의 민사 청구도 끝난 것 아닌가요?"
     a: "그렇다고 단정할 수 없습니다. 대만 민법 [제184조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184) 제1항 앞부분은 고의 또는 과실로 타인의 권리를 불법하게 침해한 사람에게 손해배상 책임을 지웁니다. 신베이지방법원 항소부는 [2025년 5월 20일 판결](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDV%2c113%2c%e7%b0%a1%e4%b8%8a%2c499%2c20250520%2c1)에서, 불기소의 근거가 된 대화 기록은 고의가 없었다는 것만 보여 줄 뿐 과실까지 없다는 근거는 되지 않는다며 계좌 명의인에게 10만 대만달러와 이자를 배상하게 했습니다. 불기소 뒤 민사에서도 책임이 부정된 [판결](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TNHV%2c112%2c%e9%87%91%e7%b0%a1%e6%98%93%2c108%2c20240529%2c2)이 있으니, 결론은 사건마다 사실관계에 따라 갈립니다."

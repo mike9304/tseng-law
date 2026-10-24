@@ -14,7 +14,7 @@ targetMarket: "Germany"
 author: "legal-ai-assistant"
 featured_image: "/images/columns/683-market-review-20261024.webp"
 featured_image_alt: "Aktenmappen, unbeschriftete Blätter und das Modell eines Bürogebäudes vor einer Stadtansicht von Taipeh."
-featured_image_caption: "Symbolbild zu Verfahrensunterlagen und Vermögen in Taiwan; das Gebäudemodell steht für kein bestimmtes Vollstreckungsobjekt."
+featured_image_caption: "Fiktive Szene"
 faq:
   - q: "Kann ein deutsches Urteil unmittelbar bei der taiwanesischen Vollstreckungsstelle eingereicht werden?"
     a: "Für die Zwangsvollstreckung aus einem ausländischen rechtskräftigen Urteil verlangt Artikel 4-1 des taiwanesischen Zwangsvollstreckungsgesetzes ein taiwanesisches Urteil, das die Vollstreckung zulässt. Außerdem darf keiner der Versagungsgründe nach Artikel 402 der taiwanesischen Zivilprozessordnung vorliegen."

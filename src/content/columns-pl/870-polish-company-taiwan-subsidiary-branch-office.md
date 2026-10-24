@@ -11,7 +11,7 @@ topic: "company"
 tags: ["polskie firmy", "spółka zależna", "oddział", "inwestycje"]
 featured_image: "/images/blog/singapore-20261010/investment-1600x900.webp"
 featured_image_alt: "Teczki z dokumentami, kalkulator i długopis na biurku z widokiem na panoramę miasta; ilustracja."
-featured_image_caption: "Ilustracja poglądowa; nie przedstawia rzeczywistej sprawy, osoby ani dokumentu."
+featured_image_caption: "Scena fikcyjna"
 faq:
   - q: "Czy polska firma może mieć jednoosobową spółkę zależną na Tajwanie?"
     a: "Tajwańska spółka z ograniczoną odpowiedzialnością może mieć jednego wspólnika. Polska osoba prawna mieści się w pojęciu zagranicznego inwestora. Trzeba jednak uzyskać wymaganą zgodę inwestycyjną i sprawdzić ograniczenia dotyczące planowanej działalności."

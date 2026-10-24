@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["izvoznici iz Srbije", "neplaćene fakture", "smrznuto voće", "platni nalog"]
 featured_image: "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
 featured_image_alt: "Svetla drvena tacna na hrastovom stolu drži prazan krem papir i zatvoreno tamno nalivpero, pored prozora sa pogledom na mirnu luku sa malim čamcima."
-featured_image_caption: "Ilustracija; ne prikazuje stvarni slučaj, osobu ili dokument."
+featured_image_caption: "Izmišljeni prizor"
 faq:
   - q: "Da li za svaku fakturu srpskog izvoznika važi tajvanski rok od dve godine?"
     a: "Ne. Zastarelost prati pravo merodavno za potraživanje. Ako se primenjuje tajvansko pravo, član 127 tačka 8 propisuje dve godine za cenu robe koju isporučuju trgovci, proizvođači i zanatlije. Rok teče od trenutka kada se potraživanje može ostvarivati."

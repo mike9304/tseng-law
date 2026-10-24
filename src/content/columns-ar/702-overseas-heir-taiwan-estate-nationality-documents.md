@@ -11,7 +11,7 @@ topic: "inheritance"
 tags: ["international-inheritance", "estate-documents", "overseas-heirs"]
 featured_image: "/images/016-taiwan-inheritance-custody-analysis/featured-generic.webp"
 featured_image_alt: "ملف مغلق وقلم ومجسّمان خشبيان فوق رسم لعلاقات أسرية، مع أفق تايبيه خلف النافذة."
-featured_image_caption: "مشهد توضيحي متخيّل؛ الرسم والمجسّمان لا يمثلان أسرة أو وثائق تركة حقيقية."
+featured_image_caption: "مشهد متخيَّل"
 faq:
   - q: "هل تطبّق حصص الميراث التايوانية لأن المال موجود في تايوان؟"
     a: "الأصل في المادة 58 هو قانون جنسية المتوفى وقت الوفاة، مع حكم خاص يحمي حق المواطن التايواني الذي يكون وارثًا وفق القانون التايواني في التركة الموجودة في تايوان. وتحتاج الحقوق العقارية إلى فحص مستقل."

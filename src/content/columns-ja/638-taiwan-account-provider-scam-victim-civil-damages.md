@@ -11,7 +11,7 @@ categories:
 topic: "litigation"
 featured_image: "../images/638-taiwan-account-provider-scam-victim-civil-damages/featured-01.webp"
 featured_image_alt: "夕暮れの窓辺の机に、無地のカードと閉じた手帳、画面を伏せたスマートフォン。"
-featured_image_caption: "架空の情景です。実在の口座や事件の当事者を撮影したものではありません。"
+featured_image_caption: "架空の情景"
 faq:
   - q: "検察で不起訴になれば、被害者からの民事請求も認められないのですか？"
     a: "そうとは限りません。台湾の民法[第184条](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184)第1項前段は、故意または過失によって他人の権利を不法に侵害した者に損害賠償責任を負わせています。新北地方法院の控訴審（地方法院の第二審）は[2025年5月20日の判決](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDV%2c113%2c%e7%b0%a1%e4%b8%8a%2c499%2c20250520%2c1)で、不起訴の根拠となった会話記録は故意がなかったことを示すにとどまり、過失がなかったことの証明にはならないとして、名義人に10万台湾ドルと利息の支払いを命じました。不起訴のあと民事でも責任が否定された[判決](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TNHV%2c112%2c%e9%87%91%e7%b0%a1%e6%98%93%2c108%2c20240529%2c2)もあり、結論は事案ごとの事実関係によって分かれます。"

@@ -11,7 +11,7 @@ topic: "inheritance"
 tags: ["两岸继承", "继承表示", "遗产管理人", "台湾遗产"]
 featured_image: "/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp"
 featured_image_alt: "木质书桌上有一个合上的蓝色文件夹、一个信封、一本绿色笔记本和一支笔。"
-featured_image_caption: "示意图，不对应真实案件、人物或文件。"
+featured_image_caption: "虚构情境"
 faq:
   - q: "大陆居民继承台湾地区亲人的遗产，有期限吗？"
     a: "有。依《台湾地区与大陆地区人民关系条例》第66条第1项，应在继承开始起三年内，以书面向被继承人住所地的法院表示继承，逾期视为放弃。继承从被继承人死亡时开始，条文没有为晚得知消息的继承人另设起点。"

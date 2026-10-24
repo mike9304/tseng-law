@@ -11,7 +11,7 @@ topic: "criminal"
 tags: ["criminal-litigation", "državljani Srbije", "policijski poziv", "tumač", "pravo na odbranu"]
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "Prazan sto i dve stolice pored prozora."
-featured_image_caption: "Ilustracija; ne prikazuje stvarni slučaj, osobu ili dokument."
+featured_image_caption: "Izmišljeni prizor"
 faq:
   - q: "Da li kao svedok mogu da odbijem svaki odgovor?"
     a: "Svedok nema isto opšte pravo na ćutanje kao osumnjičeni. Može odbiti iskaz koji bi njega ili lice u odnosima određenim zakonom mogao izložiti krivičnom gonjenju ili kažnjavanju. Za odbijanje i ocenu njegovog osnova postoje posebna procesna pravila."

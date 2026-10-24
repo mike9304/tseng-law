@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["slovenskí exportéri", "nezaplatené faktúry", "platobný rozkaz", "premlčanie"]
 featured_image: "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
 featured_image_alt: "Svetlá drevená tácka na dubovom stole s prázdnym krémovým listom a zatvoreným tmavým plniacim perom pri okne s výhľadom na pokojný prístav s malými loďami."
-featured_image_caption: "Ilustračný obrázok; nezobrazuje skutočný prípad, osobu ani dokument."
+featured_image_caption: "Vymyslená scéna"
 faq:
   - q: "Platí na každú slovenskú faktúru dvojročné premlčanie?"
     a: "Nie. Premlčanie sa spravuje právom rozhodným pre príslušný vzťah. Ak platí taiwanské právo, článok 127 bod 8 občianskeho zákonníka stanovuje dva roky pre cenu tovaru a výrobkov dodaných obchodníkmi, výrobcami alebo remeselníkmi. Lehota začína, keď možno nárok uplatniť."

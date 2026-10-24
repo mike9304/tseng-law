@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["pelajar Malaysia", "kerja sambilan", "permit kerja", "僑生"]
 featured_image: "/images/blog/637-taiwan-work-permit-side-gig-other-employer/featured-01.webp"
 featured_image_alt: "Sebuah bilik kecil pada waktu malam dengan baju kerja tergantung pada pintu, beg galas penghantaran biasa di lantai, serta jam dan telefon yang menghadap ke bawah di atas meja."
-featured_image_caption: "Imej ilustrasi; ia tidak menunjukkan kes, orang atau dokumen sebenar."
+featured_image_caption: "Adegan rekaan"
 faq:
   - q: "Adakah kad kediaman (ARC) pelajar membenarkan saya bekerja sambilan di Taiwan?"
     a: "Tidak. ARC menunjukkan hak tinggal. Perkara 43 Akta Perkhidmatan Pekerjaan melarang warga asing bekerja tanpa permit kecuali akta itu menyatakan sebaliknya. Perkara 50 membuka laluan khas untuk pelajar, dan perkara 54 Peraturan Majikan Mengambil Warga Asing menetapkan permit paling lama setahun dan masa kerja paling lama 20 jam seminggu di luar cuti musim sejuk dan musim panas."

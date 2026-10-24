@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["power-of-attorney", "foreign-documents", "civil-litigation"]
 featured_image: "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
 featured_image_alt: "قلم وورقة خالية داخل صينية على طاولة خشبية أمام نافذة."
-featured_image_caption: "مشهد متخيّل للتوضيح؛ الورقة ليست نموذج وكالة صالحًا للاستعمال."
+featured_image_caption: "مشهد متخيَّل"
 faq:
   - q: "هل تخوّل الوكالة العامة المحامي إبرام الصلح وقبض المبلغ؟"
     a: "تستلزم المادة 70 تفويضًا خاصًا لبعض التصرفات، ومنها الصلح وأعمال التنفيذ وتسلم محل النزاع. يجب تحديد الصلاحيات المطلوبة والقيود في الوكالة المناسبة للقضية."

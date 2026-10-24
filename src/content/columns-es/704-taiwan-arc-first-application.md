@@ -14,7 +14,7 @@ audience: ["es"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
 featured_image_alt: "Un cuadernillo sin inscripciones, una carpeta de documentos y una tarjeta lisa sobre una mesa de trámites."
-featured_image_caption: "Ilustración de una mesa de trámites; no muestra documentos oficiales ni una solicitud real."
+featured_image_caption: "Escena ficticia"
 faq:
   - q: "¿El visado de residente sustituye al ARC?"
     a: "Al entrar con autorización de residencia, hay que solicitar el ARC dentro de los 30 días contados desde el día siguiente a la entrada. Queda exento quien ya tiene un documento válido que incorpora esa función, como una tarjeta integrada de cuatro permisos."

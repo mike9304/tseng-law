@@ -14,7 +14,7 @@ audience: ["fr"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
 featured_image_alt: "Un livret de voyage uni, une chemise à documents et une petite carte vierge sur un bureau."
-featured_image_caption: "Composition illustrative ; les objets ne sont ni une carte d’identité ni un dossier de demande réels."
+featured_image_caption: "Scène fictive"
 faq:
   - q: "Le visa de résident dans mon passeport remplace-t-il l’ARC ?"
     a: "Non. Si l’entrée avec ce visa s’accompagne de l’autorisation de résidence, la demande d’ARC doit parvenir à la NIA dans les trente jours à compter du lendemain de l’arrivée. La loi prévoit une exception pour les titres qui intègrent déjà l’ARC, comme une Employment Gold Card valide."

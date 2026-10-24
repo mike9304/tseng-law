@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["Latvijas eksportētāji", "neapmaksāti rēķini", "kokmateriāli", "parādu piedziņa"]
 featured_image: "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
 featured_image_alt: "Gaiša koka paplāte uz ozolkoka galda ar tukšu krēmkrāsas lapu un aizvērtu tumšu tintes pildspalvu pie loga, aiz kura redzama klusa osta ar mazām laivām."
-featured_image_caption: "Ilustratīvs attēls; tajā nav redzama īsta lieta, persona vai dokuments."
+featured_image_caption: "Izdomāta aina"
 faq:
   - q: "Vai Latvijas eksportētāja rēķinam vienmēr piemēro divu gadu noilgumu?"
     a: "Nē. Vispirms jānosaka prasījumam piemērojamās tiesības. Ja piemēro Taivānas tiesības, Civillikuma 127. panta 8. punkts paredz divu gadu noilgumu tirgotāja vai ražotāja piegādāto preču cenas prasījumam. Termiņš sākas, kad prasījumu var īstenot."

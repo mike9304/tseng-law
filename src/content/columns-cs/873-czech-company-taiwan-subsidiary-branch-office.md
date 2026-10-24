@@ -11,7 +11,7 @@ topic: "company"
 tags: ["české firmy", "založení společnosti", "zahraniční investice", "dvojí zdanění"]
 featured_image: "/images/blog/singapore-20261010/investment-1600x900.webp"
 featured_image_alt: "Složky s dokumenty, kalkulačka a pero na stole s výhledem na panorama města; ilustrace."
-featured_image_caption: "Ilustrační obrázek; nezobrazuje skutečný případ, osobu ani dokument."
+featured_image_caption: "Smyšlená scéna"
 faq:
   - q: "Může být česká společnost jediným společníkem tchajwanské firmy?"
     a: "Tchajwanská společnost s ručením omezeným může mít jediného společníka. Český investor musí samostatně vyřešit schválení zahraniční investice a případná omezení zvoleného oboru."

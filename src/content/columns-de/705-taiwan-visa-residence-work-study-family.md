@@ -19,7 +19,7 @@ audience: ["de"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
 featured_image_alt: "Drei Anordnungen mit geschlossenem Laptop, Büchern und zwei Tassen sowie einem schlichten Reisebüchlein."
-featured_image_caption: "Symbolbild für Arbeit, Studium und Familienleben; es zeigt keine echten Reisedokumente oder Anträge."
+featured_image_caption: "Fiktive Szene"
 faq:
   - q: "Darf ich auf einer Geschäftsreise in Taiwan auch Installationsarbeiten ausführen?"
     a: "Das hängt von der Tätigkeit und der dafür geltenden Erlaubnis oder gesetzlichen Ausnahme ab. Die Buchung als Geschäftsreise sagt darüber nichts aus. Arbeitgeber und Beschäftigte müssen vor dem Einsatz sowohl die Arbeitsberechtigung als auch die Einreise- und Aufenthaltsbedingungen klären."

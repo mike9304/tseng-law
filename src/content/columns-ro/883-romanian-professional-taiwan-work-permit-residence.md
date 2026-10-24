@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["cetățeni români", "permis de muncă", "rezidență", "familie", "Gold Card"]
 featured_image: "/images/blog/352-hiring-in-taiwan-without-local-entity-eor-pe-work-permits/featured-01.webp"
 featured_image_alt: "Un laptop închis, de culoare închisă, o ceașcă ceramică pestriță și o ferigă mică într-un ghiveci de teracotă, pe un birou din lemn deschis, lângă o fereastră spre acoperișuri cu țiglă."
-featured_image_caption: "Imagine ilustrativă; nu prezintă un caz, o persoană sau un document real."
+featured_image_caption: "Scenă fictivă"
 faq:
   - q: "Pot începe munca după intrarea în Taiwan fără viză?"
     a: "Scutirea de viză nu autorizează munca. Pentru angajarea obișnuită, trebuie obținut permisul cerut pentru activitatea respectivă, dacă nu se aplică o excepție legală. Oferta semnată nu înlocuiește aprobarea."

@@ -876,7 +876,7 @@ export const MEDIA_WIDGET_PRESETS: MediaWidgetPreset[] = [
     width: 560,
     height: 315,
     content: {
-      url: '/videos/builder-background.mp4',
+      url: '/videos/en-after-rain-loop.mp4',
       thumbnail: MEDIA_IMAGE_A,
       autoplay: true,
       loop: true,

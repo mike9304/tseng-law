@@ -11,7 +11,7 @@ topic: "inheritance"
 tags: ["magyar örökösök", "hagyaték", "örökség visszautasítása", "határidők"]
 featured_image: "/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp"
 featured_image_alt: "Egy zárt kék mappa, boríték, zöld jegyzetfüzet és toll egy fa íróasztalon."
-featured_image_caption: "Szemléltető kép; nem valós ügyet, személyt vagy dokumentumot ábrázol."
+featured_image_caption: "Kitalált jelenet"
 faq:
   - q: "Magyarországon élek. Ettől magyar jog vonatkozik a hagyatékra?"
     a: "Önmagában nem. A tajvani nemzetközi magánjog főszabályként az elhunyt halálkori állampolgársága szerinti jogból indul ki. Többes állampolgárság, más jogra utalás és a tajvani örökösök javára szóló kivétel is számíthat."

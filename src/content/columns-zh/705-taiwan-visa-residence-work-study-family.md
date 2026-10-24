@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
 featured_image_alt: "素面旅行證件冊旁，分別擺著闔上的筆電、書本與兩個杯子"
-featured_image_caption: "工作、就學與家庭生活的示意擺設，未呈現真實證件或申請案件。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "拿到台灣公司的聘書，可以免簽來台後辦居留嗎？"
     a: "還要具備相應的工作與入境資格。外國專業人才或外國特定專業人才，以免簽或停留簽證入境，經許可或免經許可在台從事專業工作者，可依專業人才法第16條直接申請居留。試辦免簽、東南亞國家人民來臺先行上網查核（TAC）等入境方式另有限制，法令例外也須個別判斷；一般移工適用另一套程序。"

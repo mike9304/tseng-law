@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["Nederland", "werkvakantie", "werkvergunning", "zorgverzekering", "belasting"]
 featured_image: "/images/blog/644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel/featured-01.webp"
 featured_image_alt: "Een koffer en een gevouwen documentenvelop voor een controlebalie bij het vertrek op een luchthaven."
-featured_image_caption: "Illustratieve afbeelding; deze toont geen echte zaak, persoon of document."
+featured_image_caption: "Fictieve scène"
 faq:
   - q: "Moet mijn werkgever naast het werkvakantievisum een werkvergunning aanvragen?"
     a: "Het visum geldt op grond van artikel 4 van de regeling voor de tewerkstelling van buitenlanders zelf als werkvergunning, voor maximaal één jaar. De voorwaarden van het Nederlandse programma blijven gelden, waaronder het verbod op werk van permanente aard."

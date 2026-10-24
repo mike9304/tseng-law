@@ -11,7 +11,7 @@ topic: "company"
 tags: ["marques françaises", "distributeur taïwanais", "dépôt de marque", "propriété intellectuelle"]
 featured_image: "/images/blog/265-taiwan-distributor-registered-japanese-brand-trademark/featured-01.webp"
 featured_image_alt: "Des bocaux et des boîtes portant des étiquettes vierges sur une étagère en bois."
-featured_image_caption: "Illustration fictive : aucun produit ni signe d'une marque réelle n'est représenté."
+featured_image_caption: "Scène fictive"
 faq:
   - q: "Le contrat de distribution suffit-il à faire annuler la marque ?"
     a: "Il peut prouver que le distributeur connaissait la marque. Le motif prévu par l'article 30, alinéa 1, point 12, exige aussi notamment un usage antérieur, un signe et des produits ou services identiques ou similaires, ainsi qu'une intention d'imitation. Le consentement donné au dépôt doit également être examiné."

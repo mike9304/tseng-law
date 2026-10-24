@@ -20,7 +20,7 @@ faq:
     a: "通常は処分が届いた翌日から30日以内で、原処分機関か訴願受理機関が書面を受け取った日が基準です。訴願や行政訴訟を起こしただけでは執行は止まりません。"
 audience: ["ja"]
 author: "legal-ai-assistant"
-featured_image_caption: "架空の場面"
+featured_image_caption: "架空の情景"
 ---
 
 # 台湾を出国しても続く入国制限――観光滞在中の仕事や宣伝活動

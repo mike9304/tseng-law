@@ -13,7 +13,7 @@ audience: ["it"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp"
 featured_image_alt: "Una cartellina blu, una busta chiusa, un libretto verde e una penna su una scrivania."
-featured_image_caption: "Scena immaginaria; non mostra documenti personali o una successione reale."
+featured_image_caption: "Scena immaginaria"
 faq:
   - q: "Abitare in Italia rende applicabile la legge italiana?"
     a: "Non per questo solo fatto. La regola taiwanese richiama generalmente la legge nazionale del defunto al momento della morte, con eccezioni e ulteriori regole per cittadinanze multiple e rinvio."

@@ -13,7 +13,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp"
 featured_image_alt: "A blank planning notebook, plain travel booklet, small card and house keys on a desk"
-featured_image_caption: "Illustration; the booklet and card do not depict real travel or residence documents."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "How early can I renew my ARC?"
     a: "The general extension window opens three months before authorized residence expires. Gold Card renewal and qualifying entrepreneur ARC extensions for a continuing Taiwan business have separate four-month windows. These are advance filing periods, not grace periods after expiry."

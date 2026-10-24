@@ -11,7 +11,7 @@ topic: "company"
 tags: ["Lietuvos įmonės", "įmonės steigimas", "lazeriai", "užsienio investicijos"]
 featured_image: "/images/blog/singapore-20261010/investment-1600x900.webp"
 featured_image_alt: "Dokumentų aplankai, skaičiuotuvas ir rašiklis ant stalo, už kurio matyti miesto panorama; iliustracija."
-featured_image_caption: "Iliustracija; joje nepavaizduotas tikras atvejis, asmuo ar dokumentas."
+featured_image_caption: "Išgalvota scena"
 faq:
   - q: "Ar atstovybė gali Taivane parduoti įrangą ir teikti mokamą priežiūrą?"
     a: "Atstovybė nėra skirta komercinei veiklai Taivane. Kai vietoje planuojama parduoti ar teikti mokamas paslaugas, reikia įvertinti dukterinės bendrovės arba filialo formą ir veiklai taikomus leidimus."

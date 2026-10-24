@@ -11,7 +11,7 @@ topic: "labor"
 tags: ["Nederland", "personeel", "EOR", "vaste inrichting"]
 featured_image: "/images/blog/352-hiring-in-taiwan-without-local-entity-eor-pe-work-permits/featured-01.webp"
 featured_image_alt: "Een gesloten donkere laptop, een gespikkelde keramische kop en een kleine varen in een terracotta pot op een licht houten bureau bij een raam met pannendaken buiten."
-featured_image_caption: "Illustratieve afbeelding; deze toont geen echte zaak, persoon of document."
+featured_image_caption: "Fictieve scène"
 faq:
   - q: "Mag ons Nederlandse bedrijf de kandidaat eerst zelf interviewen?"
     a: "Bij een arbeidsuitzendconstructie mag de inlener de specifieke werknemer niet interviewen of aanwijzen voordat de uitlener diens arbeidsovereenkomst heeft gesloten. Bij overtreding en daadwerkelijke inzet kan de werknemer binnen negentig dagen na de start schriftelijk een rechtstreeks contract verlangen."

@@ -11,7 +11,7 @@ topic: "labor"
 tags: ["migranteng manggagawa", "overtime", "kaltas sa sahod", "broker fee"]
 featured_image: "/images/blog/606-taiwan-unpaid-wages-insolvent-employer-payment-fund/featured-01.webp"
 featured_image_alt: "Isang makinang panahi at nakatuping tela sa mesa sa isang walang taong workroom."
-featured_image_caption: "Larawang pang-ilustrasyon lamang; hindi nito ipinapakita ang tunay na kaso, tao o dokumento."
+featured_image_caption: "Kathang-isip na eksena"
 faq:
   - q: "Puwede bang Chinese lang ang payslip na ibinibigay sa akin?"
     a: "Para sa mga manggagawang saklaw ng category 2, kasama ang factory work sa ilalim ng Artikulo 46 ng Employment Service Act, hinihingi ng Artikulo 66 ng Regulations on the Permission and Administration of the Employment of Foreign Workers na nakalimbag ang payslip sa Chinese at sa sariling wika ng manggagawa. Dapat nakalista rito ang aktuwal na natanggap, ang mga bahagi ng sahod at ang mga kaltas, at limang taong itinatabi ito ng employer. Kung Chinese lang ang ibinigay sa iyo, ihain ang tanong na iyon sa employer at sa awtoridad."

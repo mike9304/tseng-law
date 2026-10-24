@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["hrvatski-državljani", "radna-dozvola", "boravak", "Gold-Card"]
 featured_image: "/images/blog/352-hiring-in-taiwan-without-local-entity-eor-pe-work-permits/featured-01.webp"
 featured_image_alt: "Zatvoreno tamno prijenosno računalo, pjegava keramička šalica i mala paprat u posudi od terakote na svijetlom drvenom stolu uz prozor, s krovovima prekrivenima crjepovima u pozadini."
-featured_image_caption: "Ilustracija; ne prikazuje stvarni slučaj, osobu ni dokument."
+featured_image_caption: "Izmišljena scena"
 faq:
   - q: "Smijem li početi raditi tijekom bezviznog boravka?"
     a: "Samo ako za konkretan rad već postoji odgovarajuća dozvola ili primjenjivo zakonsko izuzeće. Hrvatska pripada skupini za posjet do 90 dana uz uvjete BOCA-e; ta mogućnost ulaska sama po sebi ne daje pravo na rad. Potpisana ponuda nije zamjena za odobrenje."

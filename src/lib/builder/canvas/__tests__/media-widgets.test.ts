@@ -54,7 +54,7 @@ describe('M12 media widget schema', () => {
           locked: false,
           visible: true,
           content: {
-            url: '/videos/intro.mp4',
+            url: '/videos/en-after-rain-loop.mp4',
             autoplay: true,
             loop: true,
             muted: true,

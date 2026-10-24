@@ -11,7 +11,7 @@ categories:
 topic: "litigation"
 featured_image: "../images/639-taiwan-rental-holding-deposit-dingjin/featured-01.webp"
 featured_image_alt: "오후 햇살이 드는 빈 원룸 탁자 위에 놓인 열쇠 꾸러미와 봉투, 서명 전의 빈 종이."
-featured_image_caption: "가상의 장면입니다. 실제 임대 매물이나 당사자를 찍은 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "집주인이 가족이 쓰게 됐다며 계약을 접고 定金만 돌려줬습니다. 더 받을 수 있나요?"
     a: "당사자 사이에 따로 정한 것이 없고 계약을 맺지 못한 것이 집주인 쪽에 책임 있는 사유 때문이라면 두 배를 청구할 수 있습니다. 타이베이지방법원 113년도 簡上字 제219호 판결은 계약서 작성 전에 낸 定金에 민법 제249조 제3호를 유추 적용해, 집주인이 이미 돌려준 NT$88,000을 빼고 NT$88,000을 더 지급하라고 했습니다. 집주인이 주장한 '누구 책임이든 받은 돈만 돌려준다'는 특약은 증명되지 않았습니다."

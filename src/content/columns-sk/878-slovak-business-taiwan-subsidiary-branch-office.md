@@ -11,7 +11,7 @@ topic: "company"
 tags: ["slovenské firmy", "dcérska spoločnosť", "pobočka", "zahraničná investícia"]
 featured_image: "/images/blog/singapore-20261010/investment-1600x900.webp"
 featured_image_alt: "Zakladače na dokumenty, kalkulačka a pero na stole s výhľadom na panorámu mesta; ilustrácia."
-featured_image_caption: "Ilustračný obrázok; nezobrazuje skutočný prípad, osobu ani dokument."
+featured_image_caption: "Vymyslená scéna"
 faq:
   - q: "Môže zastupiteľská kancelária predávať tovar a fakturovať servis?"
     a: "Zastupiteľská kancelária slúži na právne a kontaktné úkony, nie na miestnu obchodnú prevádzku. Pri plánovanom predaji alebo platenom servise treba posúdiť pobočku či dcérsku spoločnosť a potrebné odvetvové povolenia."

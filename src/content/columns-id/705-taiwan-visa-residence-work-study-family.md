@@ -14,7 +14,7 @@ audience: ["id"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
 featured_image_alt: "Laptop tertutup, susunan buku, dan dua cangkir dalam tiga kelompok dengan buku perjalanan polos."
-featured_image_caption: "Ilustrasi kerja, studi, dan kehidupan keluarga; bukan dokumen atau pengajuan visa seseorang."
+featured_image_caption: "Adegan fiksi"
 faq:
   - q: "Apakah pemegang paspor Indonesia bisa langsung masuk Taiwan tanpa visa?"
     a: "Paspor Indonesia saja tidak memberikan fasilitas itu. WNI yang memenuhi syarat dapat mengajukan Travel Authorization Certificate melalui sistem NIA. TAC merupakan fasilitas kunjungan dan tidak menggantikan izin bekerja atau izin tinggal untuk studi maupun keluarga."

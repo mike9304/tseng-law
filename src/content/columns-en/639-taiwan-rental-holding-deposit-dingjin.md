@@ -11,7 +11,7 @@ categories:
 topic: "litigation"
 featured_image: "../images/639-taiwan-rental-holding-deposit-dingjin/featured-01.webp"
 featured_image_alt: "A set of keys, a plain envelope and a blank unsigned sheet on a table in an empty apartment in afternoon light."
-featured_image_caption: "A fictional scene. It does not show any real rental property or party."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "My landlord pulled out because a relative needs the place and refunded my deposit. Can I claim more?"
     a: "If nothing different was agreed and the lease failed for a reason attributable to the landlord, you can claim double the deposit. In judgment 113 Jian-Shang No. 219, the Taipei District Court applied Article 249, item 3, of the Civil Code by analogy to a deposit paid before signing and ordered the landlord to pay NT$88,000 more after the NT$88,000 already refunded. The landlord's claimed refund-only side agreement was not proven."

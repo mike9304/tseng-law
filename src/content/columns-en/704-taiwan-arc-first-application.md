@@ -12,7 +12,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
 featured_image_alt: "A plain travel booklet, document folder and small blank card on an application desk"
-featured_image_caption: "Illustration; the booklet and card are not real identity documents."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "When does the deadline for my first ARC start?"
     a: "For entry with a resident visa and residence permission, the 30-day period starts the day after arrival. If the resident visa is issued after you arrive, BOCA's guidance counts 30 days from its issuance. Visitors applying directly for residence must meet the eligibility and filing rules for their category."

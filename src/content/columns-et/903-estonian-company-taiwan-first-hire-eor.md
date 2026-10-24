@@ -11,7 +11,7 @@ topic: "labor"
 tags: ["Eesti ettevõtted", "töötaja palkamine", "renditöö", "maksukohustus"]
 featured_image: "/images/blog/352-hiring-in-taiwan-without-local-entity-eor-pe-work-permits/featured-01.webp"
 featured_image_alt: "Suletud tume sülearvuti, täpiline keraamiline tass ja väike sõnajalg terrakotapotis heledal puitlaual akna kõrval, mille taga paistavad kivikatused."
-featured_image_caption: "Illustreeriv pilt; sellel ei ole kujutatud tegelikku juhtumit, inimest ega dokumenti."
+featured_image_caption: "Väljamõeldud stseen"
 faq:
   - q: "Kas konsultandilepingu sõlmimine välistab töösuhte?"
     a: "Ei. Taiwani tööstandardite seaduse artikkel 2 seob töölepingu alluvussuhtega. Hinnata tuleb tegelikku töökorraldust, sealhulgas juhiste andmist, tööaja määramist ja kontrolli. Lepingu nimetus üksi tulemust ei määra."

@@ -14,7 +14,7 @@ audience: ["id"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp"
 featured_image_alt: "Buku agenda kosong, buku perjalanan, kartu polos, dan kunci rumah di atas meja."
-featured_image_caption: "Ilustrasi perubahan data dan rencana perjalanan; kartu serta buku bukan dokumen resmi."
+featured_image_caption: "Adegan fiksi"
 faq:
   - q: "Kapan perpanjangan ARC bisa diajukan?"
     a: "Pada prosedur umum, permohonan diajukan dalam tiga bulan sebelum masa izin tinggal berakhir dan harus masuk sebelum kedaluwarsa. Gold Card dan izin pengusaha mengikuti ketentuan khususnya. Perpanjangan juga memerlukan bukti bahwa dasar tinggal masih berlaku."

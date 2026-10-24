@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["professionals catalanoparlants", "permís de treball", "residència", "Gold Card"]
 featured_image: "/images/blog/352-hiring-in-taiwan-without-local-entity-eor-pe-work-permits/featured-01.webp"
 featured_image_alt: "Un ordinador portàtil fosc tancat, una tassa de ceràmica clapejada i una petita falguera en un test de terracota sobre un escriptori de fusta clara, al costat d’una finestra amb teulades a l’exterior."
-featured_image_caption: "Imatge il·lustrativa; no representa cap cas, persona ni document reals."
+featured_image_caption: "Escena fictícia"
 faq:
   - q: "Puc començar a treballar després d’entrar sense visat?"
     a: "L’exempció de visat no substitueix el permís de treball. Cal tenir l’autorització que cobreixi la feina o una exempció legal aplicable abans de començar."

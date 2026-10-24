@@ -11,7 +11,7 @@ categories:
 topic: "family"
 featured_image: "../images/640-taiwan-spouse-debt-family-living-expenses-joint-liability/featured-01.webp"
 featured_image_alt: "夕方の明かりの下、食卓にマグカップ二つと封筒の束、伏せた電卓、子どものクレヨン画。"
-featured_image_caption: "架空の情景です。実在の家庭や当事者を撮影したものではありません。"
+featured_image_caption: "架空の情景"
 faq:
   - q: "台湾人の夫が知人から借りたお金を、私にも返すよう求められています。払う必要がありますか？"
     a: "台湾の民法第1023条第1項により、夫婦はそれぞれ自分の債務を弁済するのが原則です。その借金が家庭生活費から生じたものであれば、第1003条の1第2項により夫婦が連帯して責任を負います。基隆地方法院の2025年の第一審判決では、貸した人がお金が生活費に使われたことを証明できず、元妻への請求は棄却されました。結論は、お金の使い道と、それが証明できるかどうかで変わります。"

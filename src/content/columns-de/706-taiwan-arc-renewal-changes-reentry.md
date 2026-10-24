@@ -18,7 +18,7 @@ audience: ["de"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp"
 featured_image_alt: "Unbeschriebenes Planungsheft, Reisebüchlein, schlichte Karte und Hausschlüssel auf einem Tisch."
-featured_image_caption: "Symbolbild zu Verlängerung und Reiseplanung; abgebildet sind keine echten Ausweise oder persönlichen Unterlagen."
+featured_image_caption: "Fiktive Szene"
 faq:
   - q: "Kann ich meine neue Adresse erst bei der ARC-Verlängerung melden?"
     a: "Ein Umzug hat eine eigene Meldefrist. Wohnadresse und Arbeitsstätte müssen innerhalb von 30 Tagen nach einer Änderung bei der NIA aktualisiert werden, gerechnet ab dem Tag nach der Änderung. Wer die Meldung mit der Verlängerung verbindet, muss diese Frist trotzdem einhalten."

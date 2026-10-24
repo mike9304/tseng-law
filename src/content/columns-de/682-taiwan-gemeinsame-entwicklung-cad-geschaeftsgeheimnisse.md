@@ -14,7 +14,7 @@ targetMarket: "Germany"
 author: "legal-ai-assistant"
 featured_image: "/images/columns/682-market-review-20261024.webp"
 featured_image_alt: "Laptop mit einer technischen Explosionszeichnung, Metallbauteil, Papierzeichnungen und USB-Stick auf einem Schreibtisch."
-featured_image_caption: "Die Zeichnungen veranschaulichen den Austausch von Konstruktionsdaten und zeigen keine echten Projektunterlagen."
+featured_image_caption: "Fiktive Szene"
 faq:
   - q: "Reicht eine Geheimhaltungsvereinbarung für den gesetzlichen Schutz aller CAD-Dateien?"
     a: "Nein. Artikel 2 des taiwanesischen Geschäftsgeheimnisgesetzes verlangt kumulativ fehlende allgemeine Bekanntheit in den einschlägigen Fachkreisen, wirtschaftlichen Wert aufgrund der Geheimhaltung und angemessene Geheimhaltungsmaßnahmen. Die Vereinbarung ist ein möglicher Teil dieser Maßnahmen; der konkrete Informationsbestand und die tatsächliche Handhabung bleiben zu prüfen."

@@ -14,7 +14,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
 featured_image_alt: "취업·유학·가족생활을 나타내는 닫힌 노트북, 책, 두 개의 머그잔과 무지 여행 수첩"
-featured_image_caption: "대만에서의 취업·유학·가족생활을 표현한 삽화입니다. 실제 비자나 신청 서류는 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "채용 제안을 받으면 무비자로 입국해 바로 일을 시작해도 되나요?"
     a: "채용 제안만으로 일을 시작할 수는 없습니다. 외국전문인재 유치·고용법 제16조의 전문인재·특정전문인재는 전문 업무 허가를 받았거나 허가 면제 대상일 때 무비자·방문비자 입국 후 직접 거류를 신청할 수 있습니다. 입국 방식별 제외 조건과 별도 규정의 예외가 있으며, 실제로 맡을 업무도 취업허가나 면제 범위 안에 있어야 합니다."

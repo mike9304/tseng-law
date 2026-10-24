@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["Slovenci na Tajvanu", "delovno dovoljenje", "ARC", "Gold Card"]
 featured_image: "/images/blog/352-hiring-in-taiwan-without-local-entity-eor-pe-work-permits/featured-01.webp"
 featured_image_alt: "Zaprt temen prenosnik, pikčasta keramična skodelica in majhna praprot v lončku iz terakote na svetli leseni mizi ob oknu s pogledom na opečnate strehe."
-featured_image_caption: "Ponazoritvena slika; ne prikazuje resničnega primera, osebe ali dokumenta."
+featured_image_caption: "Izmišljen prizor"
 faq:
   - q: "Ali lahko s slovenskim potnim listom začnem delati med brezvizumskim obiskom?"
     a: "Brezvizumski vstop sam ne dovoljuje dela. Po splošnem pravilu 43. člena zakona o zaposlitvenih storitvah mora delodajalec pridobiti dovoljenje, razen če velja zakonska izjema ali druga ustrezna podlaga. Podpis pogodbe ali vložitev prošnje še ne pomeni odobritve."

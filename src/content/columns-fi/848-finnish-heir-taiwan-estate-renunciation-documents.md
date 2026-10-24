@@ -11,7 +11,7 @@ topic: "inheritance"
 tags: ["perintö Taiwanissa", "perillinen Suomessa", "perinnöstä luopuminen", "valtakirja"]
 featured_image: "/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp"
 featured_image_alt: "Suljettu sininen kansio, kirjekuori, vihreä muistikirja ja kynä puupöydällä."
-featured_image_caption: "Havainnekuva; se ei esitä todellista tapausta, henkilöä tai asiakirjaa."
+featured_image_caption: "Kuvitteellinen kohtaus"
 faq:
   - q: "Ratkaiseeko Suomessa asuminen, mitä perintölakia Taiwanissa sovelletaan?"
     a: "Ei yksin. Taiwanin lainvalintasäännön lähtökohta on vainajan kansalaisuus kuolinhetkellä. Lisäksi on otettava huomioon useat kansalaisuudet, mahdollinen viittaus toiseen lakiin ja Taiwanin kansalaisten erityissuoja Taiwanissa olevaan jäämistöön. Suomen oikeuden arvio tarvitsee paikallisen asiantuntijan."

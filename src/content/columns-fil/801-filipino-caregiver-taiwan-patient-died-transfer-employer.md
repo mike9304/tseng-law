@@ -11,7 +11,7 @@ topic: "labor"
 tags: ["migranteng manggagawa", "household caregiver", "paglipat ng employer"]
 featured_image: "/images/blog/ISSUE-20261021-04-caregiver-transfer-consent/featured-01.webp"
 featured_image_alt: "Isang armchair sa sala, may folder ng mga dokumento sa mesang nasa gilid."
-featured_image_caption: "Larawang pang-ilustrasyon lamang; hindi nito ipinapakita ang tunay na kaso, tao o dokumento."
+featured_image_caption: "Kathang-isip na eksena"
 faq:
   - q: "Namatay ang inaalagaan ko. Kailangan ko bang umuwi agad sa Pilipinas?"
     a: "Hindi awtomatiko. Ang pagkamatay ng taong inaalagaan ay isa sa mga dahilan sa Artikulo 59 ng Employment Service Act para makalipat ng employer ang caregiver, basta aprubado ng Ministry of Labor. Mula sa araw pagkatapos mairehistro ang paglipat sa sistema, 60 araw ang hawak ng public employment service para ayusin ito, at isang beses lang itong madadagdagan ng 60 araw sa espesyal na kalagayan. Kung hindi ka nakalipat sa takdang panahon, o hindi ka sumipot nang walang makatwirang dahilan sa coordination meeting, aabisuhan ang dating employer na ayusin at tiyakin ang pag-alis mo sa loob ng 14 araw mula sa araw pagkatapos ng meeting, maliban kung may espesyal na kalagayang inaprubahan ng Ministry of Labor."

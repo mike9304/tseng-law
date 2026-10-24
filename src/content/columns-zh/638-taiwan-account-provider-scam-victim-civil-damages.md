@@ -11,7 +11,7 @@ categories:
 topic: "litigation"
 featured_image: "../images/638-taiwan-account-provider-scam-victim-civil-damages/featured-01.webp"
 featured_image_alt: "黃昏窗邊的桌上，放著一張素面卡片、闔上的本子和倒扣的手機。"
-featured_image_caption: "虛構情境，並非實際帳戶或案件當事人的照片。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "檢察官已經給我不起訴處分，被害人的民事求償是不是就不成立了？"
     a: "不一定。民法[第184條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184)第1項前段規定，因故意或過失不法侵害他人權利者，負損害賠償責任。新北地方法院合議庭[2025年5月20日的簡易事件二審判決](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDV%2c113%2c%e7%b0%a1%e4%b8%8a%2c499%2c20250520%2c1)指出，不起訴所依據的對話紀錄只能證明帳戶持有人沒有故意，無從據此認定沒有過失，判命持有人賠償10萬元及利息。也有[判決](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TNHV%2c112%2c%e9%87%91%e7%b0%a1%e6%98%93%2c108%2c20240529%2c2)在不起訴之後，民事上同樣認定持有人不必負責，結果要看個案事實。"

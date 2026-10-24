@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["international-trade", "contract-disputes", "debt-recovery"]
 featured_image: "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
 featured_image_alt: "ورقة خالية وقلم في صينية خشبية على مكتب بجوار نافذة تطل على قوارب."
-featured_image_caption: "مشهد توضيحي متخيّل؛ لا يعرض عقدًا أو مستندًا من نزاع فعلي."
+featured_image_caption: "مشهد متخيَّل"
 faq:
   - q: "هل عدم التسليم يتيح استرداد الدفعة فورًا؟"
     a: "ليس في كل حالة. يجب تحديد القانون واجب التطبيق وسبب المطالبة. إذا انطبق القانون التايواني، فقد يلزم إعذار المورّد ومنحه مهلة معقولة قبل الفسخ، ثم تحديد أثر الفسخ في المبالغ المدفوعة."

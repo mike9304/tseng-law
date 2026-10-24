@@ -13,7 +13,7 @@ audience: ["pt"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/606-taiwan-unpaid-wages-insolvent-employer-payment-fund/featured-01.webp"
 featured_image_alt: "Máquina de costura e tecidos dobrados sobre uma mesa, com cadeiras vazias junto de uma janela."
-featured_image_caption: "Ilustração de um espaço de trabalho fictício; não retrata uma empresa ou conflito laboral real."
+featured_image_caption: "Cena fictícia"
 faq:
   - q: "Um prémio ou subsídio nunca conta como salário em Taiwan?"
     a: "A designação não decide. A Lei das Normas Laborais considera a remuneração pelo trabalho e inclui determinadas prestações regulares, independentemente do nome. O fundamento e as condições do pagamento têm de ser examinados."

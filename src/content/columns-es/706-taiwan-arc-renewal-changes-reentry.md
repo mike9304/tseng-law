@@ -14,7 +14,7 @@ audience: ["es"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp"
 featured_image_alt: "Una agenda en blanco, un cuadernillo de viaje, una tarjeta lisa y unas llaves sobre una mesa."
-featured_image_caption: "Ilustración sobre cambios de domicilio y viajes; la tarjeta y el cuadernillo no son documentos oficiales."
+featured_image_caption: "Escena ficticia"
 faq:
   - q: "¿Puedo comunicar la mudanza al renovar el ARC dentro de unos meses?"
     a: "La mudanza debe comunicarse a la NIA dentro de los 30 días contados desde el día siguiente al cambio. Aunque falten meses para renovar el ARC, sigue vigente ese plazo de registro."

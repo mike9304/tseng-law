@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["sentencia-espanola", "ejecucion", "bienes-en-taiwan", "reconocimiento"]
 featured_image: "/images/columns/691-market-review-20261024.webp"
 featured_image_alt: "Carpetas, hojas y una maqueta de un edificio sobre un escritorio, con Taipéi al fondo."
-featured_image_caption: "Ilustración del expediente y los bienes que se revisan para ejecutar una sentencia extranjera."
+featured_image_caption: "Escena ficticia"
 faq:
   - q: "¿Basta el certificado europeo para ejecutar en Taiwán?"
     a: "No. El régimen europeo citado regula relaciones entre Estados miembros. Para una sentencia extranjera firme, Taiwán exige que no concurra una causa de denegación del artículo 402 y que un tribunal taiwanés autorice la ejecución mediante sentencia."

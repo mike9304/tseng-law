@@ -13,7 +13,7 @@ audience: ["vi"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp"
 featured_image_alt: "Sổ kế hoạch chưa ghi nội dung, cuốn sổ giống hộ chiếu, tấm thẻ trơn và chìa khóa nhà đặt trên bàn."
-featured_image_caption: "Ảnh minh họa việc sắp xếp giấy tờ; không phải thẻ cư trú hay hồ sơ cá nhân thật."
+featured_image_caption: "Cảnh hư cấu"
 faq:
   - q: "Tôi có thể chờ ARC hết hạn rồi mới gia hạn không?"
     a: "Hồ sơ gia hạn thông thường phải nộp trong khoảng ba tháng trước khi hết hạn cư trú; một số chương trình có thời điểm nhận riêng. Nếu đã quá hạn, cần liên hệ NIA ngay. Cơ chế xử lý một số trường hợp quá hạn dưới 30 ngày không phải thời gian được phép ở thêm."

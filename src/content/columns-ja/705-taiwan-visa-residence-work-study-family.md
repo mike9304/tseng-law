@@ -14,7 +14,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
 featured_image_alt: "仕事を表す閉じたノートパソコン、学習用の本、家族の暮らしを表す二つのマグカップと無地の旅券風の冊子"
-featured_image_caption: "就職・留学・家族との暮らしを表したイメージです。実際の申請資料ではありません。"
+featured_image_caption: "架空の情景"
 faq:
   - q: "大学の入学許可があれば、ビザ免除で入国して学生のARCを申請できますか。"
     a: "BOCAの通常の留学手続では、ビザ免除、到着査証、留学以外の目的の停留査証で入国した人は、留学を理由に台湾内で居留査証へ変更したり滞在を延長したりできません。入学許可を受け取ったら、出発前に学校と台湾の在外館処へ、留学目的の居留査証または停留査証で進める手続を尋ねます。"

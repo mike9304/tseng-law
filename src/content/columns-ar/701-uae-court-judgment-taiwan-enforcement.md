@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["foreign-judgments", "civil-litigation", "debt-recovery"]
 featured_image: "/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp"
 featured_image_alt: "أعمدة حجرية وساحة خالية في إضاءة هادئة."
-featured_image_caption: "صورة توضيحية لمشهد متخيّل، وليست صورة لمحكمة إماراتية أو تايوانية."
+featured_image_caption: "مشهد متخيَّل"
 faq:
   - q: "هل يكفي أن يكون الحكم نهائيًا في الإمارات لتنفيذه في تايوان؟"
     a: "النهائية لازمة لكنها لا تكفي. تُفحص أسباب عدم الاعتراف الواردة في المادة 402 من قانون الإجراءات المدنية، ويلزم حكم من محكمة تايوانية يسمح بالتنفيذ بموجب المادة 4-1 من قانون التنفيذ الجبري."

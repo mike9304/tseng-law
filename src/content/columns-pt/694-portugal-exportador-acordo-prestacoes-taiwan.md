@@ -13,7 +13,7 @@ audience: ["pt"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/editorial-20261003-b04/taiwan-unpaid-invoice-settlement-release-korean.png"
 featured_image_alt: "Duas pessoas analisam folhas sem texto legível numa mesa, com caixas ao fundo."
-featured_image_caption: "Ilustração de uma situação fictícia; não representa clientes nem documentos de um processo."
+featured_image_caption: "Cena fictícia"
 faq:
   - q: "O incumprimento de uma prestação faz renascer toda a dívida inicial?"
     a: "Não automaticamente. É necessário ler os direitos que foram renunciados, as condições dessa renúncia e as consequências do incumprimento previstas no acordo."

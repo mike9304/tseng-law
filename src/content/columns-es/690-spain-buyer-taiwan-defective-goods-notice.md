@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["compraventa-internacional", "defectos", "importadores-espanoles", "prueba"]
 featured_image: "/images/columns/690-market-review-20261024.webp"
 featured_image_alt: "Dos vasos de cerámica, uno agrietado, junto a su embalaje, una cámara y etiquetas sin escribir."
-featured_image_caption: "Escena ilustrativa de la documentación de daños en un lote recibido."
+featured_image_caption: "Escena ficticia"
 faq:
   - q: "¿Puedo esperar al informe completo del laboratorio para comunicar el defecto?"
     a: "Si rige el Código Civil taiwanés, el comprador debe examinar la mercancía con prontitud según su naturaleza y avisar inmediatamente al descubrir un defecto cubierto por la garantía del vendedor. Puede comunicar lo ya detectado y completar después la prueba; esperar al informe no suspende por sí solo esa obligación."

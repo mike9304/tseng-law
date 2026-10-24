@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["český kupující", "vadný stroj", "oznámení vady", "důkazy"]
 featured_image: "/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp"
 featured_image_alt: "Vzorky kovových součástí, samostatný referenční díl a posuvné měřítko rozložené na kontrolním stole."
-featured_image_caption: "Ilustrační obrázek; nezobrazuje skutečný případ, osobu ani dokument."
+featured_image_caption: "Smyšlená scéna"
 faq:
   - q: "Může český kupující čekat s oznámením vady na konečný posudek?"
     a: "Řídí-li se koupě tchajwanským právem, článek 356 vyžaduje rychlou prohlídku odpovídající povaze věci a okamžité oznámení zjištěné vady, za kterou prodávající odpovídá. Neznámou příčinu lze výslovně ponechat otevřenou."

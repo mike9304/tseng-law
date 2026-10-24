@@ -14,7 +14,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp"
 featured_image_alt: "펼친 무지 일정 수첩 옆에 놓인 여행 수첩, 작은 카드와 집 열쇠"
-featured_image_caption: "거류 갱신과 이사·출국 준비를 표현한 삽화입니다. 실제 신분증이나 개인의 신청 자료는 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "이사한 주소는 ARC를 갱신할 때 바꿔도 되나요?"
     a: "이사한 다음 날부터 30일 안에 변경등록을 신청해야 합니다. ARC 갱신일까지 기다릴 수는 없습니다. 입출국및이민법 제31조 제6항에 따른 기한이며, 새 임대차계약서 등 실제 거주지를 증명할 자료를 준비합니다."

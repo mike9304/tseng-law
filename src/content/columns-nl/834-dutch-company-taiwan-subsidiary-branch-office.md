@@ -11,7 +11,7 @@ topic: "company"
 tags: ["Nederland", "bedrijfsoprichting", "dochteronderneming", "filiaal"]
 featured_image: "/images/blog/singapore-20261010/investment-1600x900.webp"
 featured_image_alt: "Documentmappen, een rekenmachine en een pen op een bureau met uitzicht op een stedelijke skyline, als illustratie."
-featured_image_caption: "Illustratieve afbeelding; deze toont geen echte zaak, persoon of document."
+featured_image_caption: "Fictieve scène"
 faq:
   - q: "Kan een Nederlandse onderneming de enige aandeelhouder zijn?"
     a: "De Taiwanese limited company kan één aandeelhouder hebben. Buitenlandse rechtspersonen vallen onder de regels voor buitenlandse investeringen. De investeringsgoedkeuring en eventuele sectorbeperkingen moeten afzonderlijk worden beoordeeld."

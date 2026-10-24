@@ -19,7 +19,7 @@ audience:
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
 featured_image_alt: "Computador portátil fechado, livros e duas chávenas em três conjuntos, acompanhados por uma caderneta de viagem sem inscrições."
-featured_image_caption: "Composição ilustrativa sobre trabalho, estudos e vida familiar, sem documentos de um pedido real."
+featured_image_caption: "Cena fictícia"
 faq:
   - q: "Uma bolsa ou carta de admissão garante residência em Taiwan?"
     a: "A bolsa e a admissão podem integrar os documentos do pedido. A autorização depende, porém, das condições da via utilizada e da decisão das autoridades. Os cursos que conferem grau académico e os cursos de mandarim seguem requisitos diferentes."

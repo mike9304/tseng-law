@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["norske eksportører", "sjømateksport", "ubetalte fakturaer", "betalingspålegg"]
 featured_image: "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
 featured_image_alt: "Et lyst trebrett på et skrivebord i eik inneholder et blankt kremfarget ark og en lukket mørk fyllepenn, ved et vindu mot en stille havn med små båter."
-featured_image_caption: "Illustrasjonsbilde; det viser ingen virkelig sak, person eller dokument."
+featured_image_caption: "Oppdiktet scene"
 faq:
   - q: "Har en norsk eksportør alltid to år på å kreve betaling i Taiwan?"
     a: "Nei. Foreldelsen følger loven som gjelder for kravet. Hvis taiwansk rett gjelder, har krav på betaling for varer levert av blant annet handelsmenn og produsenter en frist på to år fra kravet kan gjøres gjeldende. Hver fakturas forfall må vurderes."

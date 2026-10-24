@@ -13,7 +13,7 @@ audience: ["pt"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/fraud-20261003/taiwan-supplier-bank-account-change-bec.png"
 featured_image_alt: "Pessoa ao telefone diante de um computador e de duas folhas com campos de uma fatura."
-featured_image_caption: "Ilustração de uma situação fictícia; as folhas não constituem prova de uma transação."
+featured_image_caption: "Cena fictícia"
 faq:
   - q: "O comprovativo bancário basta para demonstrar que paguei ao fornecedor?"
     a: "Demonstra a operação registada, mas pode não demonstrar que o credor, ou alguém autorizado, recebeu o pagamento. Se vigorar o direito de Taiwan, os artigos 309 e 310 do Código Civil exigem uma análise adicional."

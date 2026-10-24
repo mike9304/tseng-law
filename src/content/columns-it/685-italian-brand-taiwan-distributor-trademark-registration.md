@@ -13,7 +13,7 @@ audience: ["it"]
 author: "legal-ai-assistant"
 featured_image: "../images/265-taiwan-distributor-registered-japanese-brand-trademark/featured-01.webp"
 featured_image_alt: "Barattoli e scatole con etichette bianche su uno scaffale di legno."
-featured_image_caption: "Scena immaginaria; non raffigura un marchio o una controversia reale."
+featured_image_caption: "Scena immaginaria"
 faq:
   - q: "Il marchio italiano protegge automaticamente anche a Taiwan?"
     a: "La tutela a Taiwan segue il diritto taiwanese. La registrazione in Italia non sostituisce quella prevista dalla legge taiwanese, anche se i documenti italiani possono contribuire a provare diritti e uso anteriori."

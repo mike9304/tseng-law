@@ -13,7 +13,7 @@ audience: ["it"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp"
 featured_image_alt: "Un tavolo, due sedie e un bicchiere in una stanza vuota accanto a una finestra."
-featured_image_caption: "Scena immaginaria; non raffigura una persona convocata o documenti di un procedimento reale."
+featured_image_caption: "Scena immaginaria"
 faq:
   - q: "Essere convocato come testimone significa essere indagato?"
     a: "No. Occorre leggere la qualifica indicata nell’atto e chiarirla con l’autorità. I diritti dell’indagato e le regole del testimone sono distinti, anche se la posizione può richiedere una nuova verifica durante il procedimento."

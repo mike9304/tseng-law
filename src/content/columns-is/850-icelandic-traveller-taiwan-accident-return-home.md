@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["umferðarslys", "Íslendingar", "líkamstjón", "traffic-accidents", "traffic-evidence"]
 featured_image: "/images/blog/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 featured_image_alt: "Vegaljós og vegrið við sólsetur."
-featured_image_caption: "Skýringarmynd; hún sýnir ekki raunverulegt mál, manneskju eða skjal."
+featured_image_caption: "Skálduð mynd"
 faq:
   - q: "Verður frummat lögreglu tilbúið fyrir heimflugið?"
     a: "Ekki endilega. Óska má eftir vettvangsteikningu og ljósmyndum þegar sjö dagar eru liðnir frá slysinu og frummati þegar 30 dagar eru liðnir. Þetta eru tímamörk fyrir beiðnir, ekki loforð um afhendingu sama dag. Umboðsmaður þarf heimild til að sækja gögnin."

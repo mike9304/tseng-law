@@ -11,7 +11,7 @@ categories:
 topic: "visa"
 featured_image: "../images/637-taiwan-work-permit-side-gig-other-employer/featured-01.webp"
 featured_image_alt: "A small room at night with a work shirt on the door, a plain delivery backpack on the floor, and a clock and face-down phone on the desk."
-featured_image_caption: "A fictional scene. It does not show any real worker or company."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "I was not paid for the gig. Can it still count as work?"
     a: "In the 2023 Taipei High Administrative Court case it did. The court accepted the Ministry of Labor's interpretations that employment turns on whether labor was provided and that work is not judged by the form of the contract or by pay, so even unpaid work counts. It held that the teacher's show was work for an employer other than the one in the permit under Article 73, item 1 of the Employment Service Act, whether or not the teacher received any of the band's NT$8,000."

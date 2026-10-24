@@ -14,7 +14,7 @@ targetMarket: "Germany"
 author: "legal-ai-assistant"
 featured_image: "/images/columns/680-market-review-20261024.webp"
 featured_image_alt: "Metallbauteile mit beschädigten Kanten, einzeln verpackte Prüfmuster, Lupe und Messschieber auf einem Arbeitstisch."
-featured_image_caption: "Symbolische Darstellung von Prüfmustern und ihrer Aufbewahrung; die Abbildung dokumentiert keinen konkreten Mangel."
+featured_image_caption: "Fiktive Szene"
 faq:
   - q: "Kann die Mängelanzeige auf den abschließenden 8D-Bericht warten?"
     a: "Darauf sollte sich ein Käufer nicht verlassen. Bei einem taiwanesischem Kaufrecht unterliegenden Vertrag verlangt Artikel 356 eine zügige, der Sache angemessene Untersuchung und die sofortige Mitteilung festgestellter gewährleistungspflichtiger Mängel. Auch später entdeckte, bei gewöhnlicher Prüfung nicht erkennbare Mängel sind sofort anzuzeigen."

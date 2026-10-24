@@ -13,7 +13,7 @@ audience: ["vi"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
 featured_image_alt: "Cuốn sổ bìa trơn giống hộ chiếu, bìa hồ sơ giấy và tấm thẻ nhỏ trên bàn làm thủ tục."
-featured_image_caption: "Ảnh minh họa; các vật dụng không phải giấy tờ tùy thân hay hồ sơ thật."
+featured_image_caption: "Cảnh hư cấu"
 faq:
   - q: "Hạn xin ARC tính từ ngày nhập cảnh hay ngày bắt đầu đi làm?"
     a: "Người nhập cảnh bằng thị thực cư trú và được cho phép cư trú phải nộp trong 30 ngày, tính từ ngày kế tiếp ngày nhập cảnh. Ngày nhận việc hoặc ngày môi giới giao hồ sơ không làm thay đổi hạn này. Nếu chuyển từ diện lưu trú khác, thời hạn phụ thuộc thủ tục chuyển diện."

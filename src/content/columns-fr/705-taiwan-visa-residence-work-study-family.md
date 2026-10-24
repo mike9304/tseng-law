@@ -14,7 +14,7 @@ audience: ["fr"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
 featured_image_alt: "Un ordinateur fermé, des livres et deux tasses disposés en trois ensembles autour d’un livret de voyage uni."
-featured_image_caption: "Composition illustrative évoquant le travail, les études et la vie familiale ; aucun document officiel n’est représenté."
+featured_image_caption: "Scène fictive"
 faq:
   - q: "Une inscription en cours de mandarin permet-elle d’obtenir immédiatement une ARC ?"
     a: "Une inscription seule ne suffit pas. La demande de résidence pour le mandarin suppose notamment une entrée avec le visa de visiteur approprié, quatre mois d’études accomplis dans un centre universitaire reconnu et une inscription pour au moins trois mois supplémentaires. Il faut aussi fournir les justificatifs d’assiduité et les autres pièces demandées."

@@ -11,7 +11,7 @@ topic: "family"
 tags: ["divorci", "Catalunya i Taiwan", "fills", "residència familiar"]
 featured_image: "/images/blog/020-taiwanese-spouse-divorce-from-abroad/featured-01.webp"
 featured_image_alt: "Una llibreta blau fosc amb un sobre de color crema sobre un escriptori, un ordinador portàtil amb la pantalla en blanc i llums de ciutat desenfocades rere la finestra al capvespre."
-featured_image_caption: "Imatge il·lustrativa; no representa cap cas, persona ni document reals."
+featured_image_caption: "Escena fictícia"
 faq:
   - q: "L’acord signat ja em divorcia a Taiwan?"
     a: "Quan s’aplica el dret taiwanès al divorci de mutu acord, cal un document escrit, la signatura d’almenys dos testimonis i la inscripció al registre familiar. Aquest divorci produeix efecte amb la inscripció."

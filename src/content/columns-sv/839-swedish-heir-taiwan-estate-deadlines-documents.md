@@ -11,7 +11,7 @@ topic: "inheritance"
 tags: ["arvingar i Sverige", "arv i Taiwan", "arvsavstående", "fullmakt"]
 featured_image: "/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp"
 featured_image_alt: "En stängd blå mapp, ett kuvert, en grön anteckningsbok och en penna på ett träskrivbord."
-featured_image_caption: "Illustrationsbild; den visar inget verkligt fall, ingen verklig person eller handling."
+featured_image_caption: "Fiktiv scen"
 faq:
   - q: "Gäller svensk arvsrätt eftersom jag bor i Sverige?"
     a: "Inte enbart därför. Taiwans lagvalsregel utgår från den avlidnes nationella lag vid dödsfallet. Den innehåller också ett särskilt förbehåll för taiwanesiska medborgare som är arvsberättigade enligt taiwanesisk lag beträffande tillgångar i Taiwan."

@@ -11,7 +11,7 @@ topic: "company"
 tags: ["marques catalanes", "distribució", "registre de marques", "nom xinès"]
 featured_image: "/images/blog/353-terminating-taiwan-distributor-us-exporter/featured-01.webp"
 featured_image_alt: "Un moll de càrrega d’un magatzem amb una porta metàl·lica enrotllable mig oberta a un carrer buit i lluminós, i caixes de cartró sense marques apilades sobre palets al costat d’una paret."
-featured_image_caption: "Imatge il·lustrativa; no representa cap cas, persona ni document reals."
+featured_image_caption: "Escena fictícia"
 faq:
   - q: "El distribuïdor ha de ser titular de la marca per presentar la sol·licitud?"
     a: "La representació i la titularitat són funcions diferents. La sol·licitud identifica el sol·licitant; una empresa sense domicili ni establiment a Taiwan ha de nomenar un representant que compleixi els requisits legals, però això no exigeix posar la marca a nom del distribuïdor."

@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp"
 featured_image_alt: "空白行事筆記本旁擺著素面旅行證件冊、空白卡片與住家鑰匙"
-featured_image_caption: "居留異動與行程安排示意圖，冊子與卡片均非真實證件。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "ARC還有半年才到期，搬家可以等延期時一起改嗎？"
     a: "搬家或服務處所變更後，須從事實發生次日起30日內向移民署辦理變更登記，不能等到延期時才改。一般延期的申請期間，則是原居留期限屆滿前3個月內。"

@@ -11,7 +11,7 @@ topic: "company"
 tags: ["Türk ithalatçılar", "ayıplı makine", "ayıp bildirimi", "satış sözleşmesi"]
 featured_image: "/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp"
 featured_image_alt: "Bir kontrol masasında metal parça numuneleri, ayrı bir referans parça ve kumpas."
-featured_image_caption: "Temsili görsel; gerçek bir olayı, kişiyi veya belgeyi göstermemektedir."
+featured_image_caption: "Kurgusal sahne"
 faq:
   - q: "Tayvanlı satıcıya bildirim için son teknik raporu bekleyebilir miyiz?"
     a: "Tayvan satış hukuku uygulanıyorsa alınan mal, niteliğine uygun olağan usulle süratle incelenmeli ve satıcının sorumlu olduğu ayıp derhâl bildirilmelidir. Son raporun beklenmesi bu yükümlülüğü kendiliğinden ertelemez. İlk bildirim gözlenen sorunu açıklayabilir; henüz bilinmeyen neden kesinmiş gibi yazılmamalıdır."

@@ -11,7 +11,7 @@ topic: "labor"
 tags: ["salariés français", "salaires impayés", "fermeture d'entreprise", "fonds d'avance", "droit du travail taïwanais"]
 featured_image: "/images/blog/606-taiwan-unpaid-wages-insolvent-employer-payment-fund/featured-01.webp"
 featured_image_alt: "Une machine à coudre, du tissu plié et des chaises vides dans un atelier éclairé par une fenêtre."
-featured_image_caption: "Atelier fictif illustrant une interruption d'activité, sans lien avec un employeur ou un salarié réel."
+featured_image_caption: "Scène fictive"
 faq:
   - q: "Un salarié français peut-il demander une avance au fonds taïwanais ?"
     a: "Oui, s'il remplit les conditions applicables. Le Bureau de l'assurance du travail indique que les salariés étrangers remplissant les critères suivent les mêmes conditions et procédures que les salariés taïwanais. Il faut notamment vérifier le statut de salarié, la situation de l'employeur et sa participation au fonds."

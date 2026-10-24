@@ -13,7 +13,7 @@ audience: ["zh-hant"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
 featured_image_alt: "申請文件桌上的素面旅行證件冊、紙製文件夾與空白卡片"
-featured_image_caption: "申請文件準備示意圖，畫面中的冊子與卡片並非真實證件。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "拿到居留簽證後，還要另外辦ARC嗎？"
     a: "通常要。持居留簽證入境並取得居留許可者，須在入境次日起30日內申請；在台改獲居留簽證者，依領務局說明，從簽發日起30日內申請。已持有就業金卡等包含ARC功能的有效證件，則免另行申請。"

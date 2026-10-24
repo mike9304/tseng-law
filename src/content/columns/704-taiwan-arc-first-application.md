@@ -14,7 +14,7 @@ audience: ["ko"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
 featured_image_alt: "신청 서류를 준비하는 책상 위의 무지 여권 수첩, 서류철과 작은 카드"
-featured_image_caption: "ARC 신청 준비를 표현한 삽화입니다. 실제 신분증이나 신청 서류는 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "한국에서 거류비자를 받아 입국했습니다. ARC는 언제까지 신청하나요?"
     a: "거류비자로 입국해 거류 허가를 받았다면 입국 다음 날부터 30일 안에 이민서에 신청해야 합니다. 유효한 취업금카드처럼 ARC 기능이 포함된 증명을 이미 가졌다면 별도로 신청하지 않는 예외가 있습니다. 이 30일 규정이 무비자 방문자 모두에게 거류 전환을 허용하는 것은 아닙니다."

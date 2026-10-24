@@ -14,7 +14,7 @@ audience: ["id"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
 featured_image_alt: "Buku kecil menyerupai paspor, map dokumen, dan kartu polos di meja pengajuan."
-featured_image_caption: "Ilustrasi persiapan pengajuan; dokumen dan kartu bukan dokumen resmi atau milik pemohon tertentu."
+featured_image_caption: "Adegan fiksi"
 faq:
   - q: "Tanggal mana yang dipakai untuk menghitung batas pengajuan ARC pertama?"
     a: "Untuk orang yang masuk dengan izin tinggal dan masih wajib mengurus ARC tersendiri, batasnya 30 hari mulai hari setelah kedatangan. Jika resident visa diperoleh melalui perubahan visa di Taiwan, BOCA menghitung 30 hari sejak penerbitan visa itu. Pemegang dokumen yang masih berlaku dan sudah berfungsi sebagai ARC, seperti Employment Gold Card, tidak perlu mengajukan kartu terpisah. Batas waktu ini berlaku sesuai jalur izin tinggal, bukan hak beralih ke ARC bagi semua pengunjung."

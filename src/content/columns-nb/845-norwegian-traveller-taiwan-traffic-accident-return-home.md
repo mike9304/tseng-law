@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["norske reisende", "personskade", "traffic-accidents", "traffic-compensation", "criminal-litigation"]
 featured_image: "/images/blog/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 featured_image_alt: "Veilys og et rekkverk langs veien ved solnedgang."
-featured_image_caption: "Illustrasjonsbilde; det viser ingen virkelig sak, person eller dokument."
+featured_image_caption: "Oppdiktet scene"
 faq:
   - q: "Må jeg bli i Taiwan til politiets foreløpige ulykkesanalyse er klar?"
     a: "At analysen først kan begjæres etter tretti dager, er ikke i seg selv et krav om å bli. Avklar dokumentmottak og eventuelle innkallinger før reisen. Selv om en representant fremmer en strafferettslig klage, kan politi eller påtalemyndighet kreve personlig oppmøte når det anses nødvendig."

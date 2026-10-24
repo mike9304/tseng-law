@@ -11,7 +11,7 @@ categories:
 topic: "family"
 featured_image: "../images/640-taiwan-spouse-debt-family-living-expenses-joint-liability/featured-01.webp"
 featured_image_alt: "저녁 조명 아래 식탁에 놓인 머그잔 두 개, 봉투 묶음, 덮어 둔 계산기와 아이의 크레용 그림."
-featured_image_caption: "가상의 장면입니다. 실제 가정이나 당사자를 찍은 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "대만인 남편이 지인에게 빌린 돈을 저에게도 갚으라고 합니다. 갚아야 하나요?"
     a: "대만 민법 제1023조 제1항에 따라 부부는 각자 자기 채무를 갚는 것이 원칙입니다. 그 빚이 가정생활비용 때문에 생긴 것이라면 제1003조의1 제2항에 따라 부부가 연대책임을 집니다. 기륭지방법원의 2025년 1심 판결에서는 빌려준 사람이 그 돈이 생활비로 쓰였다는 사실을 증명하지 못해 전 부인에 대한 청구가 기각됐습니다. 결론은 돈이 어디에 쓰였는지, 그리고 그것이 증명되는지에 따라 달라집니다."

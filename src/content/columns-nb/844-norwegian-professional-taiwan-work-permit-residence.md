@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["norske fagfolk", "arbeidstillatelse", "oppholdskort", "medfølgende familie"]
 featured_image: "/images/columns/20261002/vi-passport-arc-return.webp"
 featured_image_alt: "En hånd ved et pass uten synlig tekst, et blankt kort og en mappe på et bord."
-featured_image_caption: "Illustrasjonsbilde; det viser ingen virkelig sak, person eller dokument."
+featured_image_caption: "Oppdiktet scene"
 faq:
   - q: "Kan jeg begynne å jobbe etter visumfri innreise med norsk pass?"
     a: "Visumfri innreise gir ikke i seg selv arbeidstillatelse. Etter hovedregelen må arbeidsgiveren ha innhentet tillatelse før arbeidet begynner. Et gyldig Employment Gold Card eller et relevant lovunntak kan gi et annet grunnlag."

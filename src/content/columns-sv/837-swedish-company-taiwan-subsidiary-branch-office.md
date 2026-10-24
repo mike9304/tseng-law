@@ -11,7 +11,7 @@ topic: "company"
 tags: ["svenska företag", "bolagsbildning", "filial", "utländsk investering"]
 featured_image: "/images/blog/singapore-20261010/investment-1600x900.webp"
 featured_image_alt: "Dokumentmappar, en miniräknare och en penna på ett skrivbord med utsikt över stadens silhuett, som illustration."
-featured_image_caption: "Illustrationsbild; den visar inget verkligt fall, ingen verklig person eller handling."
+featured_image_caption: "Fiktiv scen"
 faq:
   - q: "Kan det svenska bolaget vara ensam ägare till ett taiwanesiskt bolag?"
     a: "Bolagslagen tillåter en ägare i bolagsformen 有限公司. Utländskt ägande måste samtidigt prövas enligt tillämpliga investeringsregler; bestämmelsen om en ägare ersätter inte investeringsgodkännandet."

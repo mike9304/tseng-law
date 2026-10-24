@@ -20,7 +20,7 @@ faq:
     a: "汽車運輸業管理規則第91条は、多元化計程車の事業者に各運行の車両番号、予約・乗降時刻、経路、料金等の営業資料を少なくとも2年間保存するよう求めています。すべてのアプリへの一律の規定ではありません。"
 audience: ["ja"]
 author: "legal-ai-assistant"
-featured_image_caption: "架空の場面"
+featured_image_caption: "架空の情景"
 ---
 
 # 台湾で呼んだ車の事故、アプリ名の先にある契約相手

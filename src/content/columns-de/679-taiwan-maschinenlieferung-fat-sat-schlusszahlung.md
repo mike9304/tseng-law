@@ -14,7 +14,7 @@ targetMarket: "Germany"
 author: "legal-ai-assistant"
 featured_image: "/images/columns/679-market-review-20261024.webp"
 featured_image_alt: "Fräsmaschine mit eingespanntem Werkstück, Messschieber und geöffnetem Ordner in einer Werkstatt."
-featured_image_caption: "Illustration einer Maschinenprüfung; die Unterlagen sind keine tatsächlichen Prüfprotokolle."
+featured_image_caption: "Fiktive Szene"
 faq:
   - q: "Wird die Schlussrate mit bestandenem FAT automatisch fällig?"
     a: "Das hängt vom vereinbarten Zahlungsmeilenstein ab. Ein FAT beim Hersteller, die Lieferung und ein SAT am Standort des Kunden können unterschiedliche Voraussetzungen haben. Bei Anwendung taiwanesischen Werkvertragsrechts ist Artikel 505 des Zivilgesetzbuchs der gesetzliche Ausgangspunkt; eine vereinbarte Zahlungsregel muss gesondert ausgelegt werden."

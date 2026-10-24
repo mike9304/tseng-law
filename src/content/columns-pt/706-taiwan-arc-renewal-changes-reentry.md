@@ -18,7 +18,7 @@ audience:
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp"
 featured_image_alt: "Agenda em branco, caderneta de viagem sem inscrições, cartão liso e chaves de casa sobre uma mesa."
-featured_image_caption: "Imagem ilustrativa sobre renovação e mudança de morada; o cartão não é um documento de identificação real."
+featured_image_caption: "Cena fictícia"
 faq:
   - q: "Posso comunicar a nova morada apenas quando renovar o ARC?"
     a: "A comunicação tem de ser feita à NIA em 30 dias, contados a partir do dia seguinte à mudança. A data de renovação do ARC não altera esse prazo."

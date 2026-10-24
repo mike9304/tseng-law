@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["svenska medborgare", "arbetstillstånd", "uppehållstillstånd", "Gold Card"]
 featured_image: "/images/blog/352-hiring-in-taiwan-without-local-entity-eor-pe-work-permits/featured-01.webp"
 featured_image_alt: "En stängd mörk bärbar dator, en spräcklig keramikkopp och en liten ormbunke i terrakottakruka på ett ljust träskrivbord vid ett fönster med tegeltak utanför."
-featured_image_caption: "Illustrationsbild; den visar inget verkligt fall, ingen verklig person eller handling."
+featured_image_caption: "Fiktiv scen"
 faq:
   - q: "Får jag arbeta under mina 90 viseringsfria dagar?"
     a: "Viseringsfriheten ger inte i sig rätt att arbeta. Det aktuella arbetet måste omfattas av ett beviljat arbetstillstånd eller ett tillämpligt undantag. Vistelsetiden räknas från dagen efter inresan."

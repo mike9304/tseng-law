@@ -14,7 +14,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
 featured_image_alt: "申請用の机に置かれた無地の旅券風の冊子、書類フォルダー、小さなカード"
-featured_image_caption: "申請の準備を表したイメージです。実際の旅券・居留証・申請書類ではありません。"
+featured_image_caption: "架空の情景"
 faq:
   - q: "居留査証で入国したら、ARCはいつまでに申請しますか。"
     a: "原則として入国の翌日から30日以内です。勤務開始日や入学式の日は起算点になりません。就業ゴールドカードなど、ARCの機能を含む有効な証件をすでに持っている場合は、別のARCを申請しなくてよい例外があります。"

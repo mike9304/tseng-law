@@ -11,7 +11,7 @@ topic: "company"
 tags: ["Lietuvos gamintojai", "prekių ženklai", "platintojai", "intelektinė nuosavybė"]
 featured_image: "/images/columns/air-20261011/531-taiwan-semiconductor-outsourced-testing-supplier-liability.webp"
 featured_image_alt: "Dėklas su elektroniniais komponentais, bandymo zondas ir uždarytas aplankas ant tuščio laboratorijos darbastalio."
-featured_image_caption: "Iliustracija; joje nepavaizduotas tikras atvejis, asmuo ar dokumentas."
+featured_image_caption: "Išgalvota scena"
 faq:
   - q: "Ar Lietuvos gamintojas privalo registruoti ženklą Taivano platintojo vardu?"
     a: "Ne. Užsienio juridinis asmuo, ketinantis vykdyti paraiškoje nurodytų prekių ar paslaugų veiklą, gali būti pareiškėjas. Neturint buveinės ar veiklos vietos Taivane, procedūrai reikia kvalifikuoto vietos atstovo; tai savaime nereiškia, kad ženklo savininku turi tapti platintojas."

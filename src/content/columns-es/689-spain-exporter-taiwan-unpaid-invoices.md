@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["impago", "exportadores-espanoles", "reclamacion-de-cantidad", "orden-de-pago"]
 featured_image: "/images/columns/689-market-review-20261024.webp"
 featured_image_alt: "Carpeta con documentos, calendario y paquete sobre una mesa con vistas a un puerto."
-featured_image_caption: "Ilustración de documentos y mercancías para preparar una reclamación comercial."
+featured_image_caption: "Escena ficticia"
 faq:
   - q: "¿Se aplica siempre el plazo taiwanés de dos años a una factura española?"
     a: "No. Primero debe determinarse la ley aplicable. Si rige el derecho de Taiwán y se trata del precio de mercancías suministradas por un comerciante o fabricante, el artículo 127.8 del Código Civil establece dos años desde que la pretensión puede ejercitarse. Otras deudas pueden seguir reglas diferentes."

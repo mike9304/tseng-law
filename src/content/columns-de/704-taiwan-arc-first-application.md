@@ -17,7 +17,7 @@ audience: ["de"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
 featured_image_alt: "Schlichtes Reisebüchlein, Dokumentenmappe und unbeschriftete Karte auf einem Schreibtisch."
-featured_image_caption: "Symbolbild zur Antragstellung; die Gegenstände zeigen keine echten Ausweise oder amtlichen Formulare."
+featured_image_caption: "Fiktive Szene"
 faq:
   - q: "Beantragt mein Arbeitgeber mit der Arbeitserlaubnis zugleich meine ARC?"
     a: "Die Arbeitserlaubnis und der ARC-Antrag sind getrennte Verfahren. Mit der Arbeitserlaubnis lässt sich der Aufenthaltsgrund belegen; über Aufenthalt und ARC entscheidet die National Immigration Agency. Bei einer Employment Gold Card sind diese Genehmigungen bereits in einem Dokument verbunden."

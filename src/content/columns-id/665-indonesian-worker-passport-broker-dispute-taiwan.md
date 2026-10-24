@@ -13,7 +13,7 @@ audience: ["id"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/20261002/vi-passport-arc-return.webp"
 featured_image_alt: "Tangan di dekat paspor tanpa tulisan, kartu kosong, dan map di meja."
-featured_image_caption: "Adegan rekaan untuk menggambarkan pengurusan dokumen; bukan dokumen atau peristiwa seorang pekerja."
+featured_image_caption: "Adegan fiksi"
 social_image: "/images/columns/20261002/vi-passport-arc-return.jpg"
 faq:
   - q: "Saya pernah setuju agen membawa paspor untuk mengurus ARC. Apakah paspor boleh terus disimpan?"

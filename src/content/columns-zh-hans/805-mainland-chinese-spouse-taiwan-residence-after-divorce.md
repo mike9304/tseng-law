@@ -11,7 +11,7 @@ topic: "family"
 tags: ["大陆配偶", "依亲居留", "离婚", "长期居留"]
 featured_image: "/images/columns/20261002/vi-passport-arc-return.webp"
 featured_image_alt: "一只手靠近一本看不到文字的护照，桌上还有一张空白卡片和一个文件夹。"
-featured_image_caption: "示意图，不对应真实案件、人物或文件。"
+featured_image_caption: "虚构情境"
 faq:
   - q: "和台湾配偶离婚后，大陆配偶的依亲居留许可会怎样？"
     a: "原则上，依亲居留的原因消失，不予许可，已许可的撤销或废止（许可办法第14条第2项第1款）。但书列有五种不撤销的情形，包括离婚后对在台湾地区设有户籍的未成年亲生子女有扶养事实、行使负担权利义务或会面交往。"

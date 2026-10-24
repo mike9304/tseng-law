@@ -14,7 +14,7 @@ audience: ["fr"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp"
 featured_image_alt: "Un carnet ouvert sans inscriptions, un livret de voyage uni, une petite carte vierge et des clés de maison."
-featured_image_caption: "Composition illustrative ; elle ne montre ni un titre de séjour ni les documents d’une personne réelle."
+featured_image_caption: "Scène fictive"
 faq:
   - q: "Puis-je attendre le renouvellement pour déclarer mon déménagement ?"
     a: "Non. Vous devez déclarer la nouvelle adresse à la NIA dans les trente jours à compter du lendemain du déménagement, même si l’ARC reste valable longtemps. La demande doit être accompagnée du justificatif d’adresse prévu pour votre situation."

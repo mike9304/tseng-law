@@ -11,7 +11,7 @@ categories:
 topic: "family"
 featured_image: "../images/640-taiwan-spouse-debt-family-living-expenses-joint-liability/featured-01.webp"
 featured_image_alt: "傍晚燈光下的餐桌，擺著兩個馬克杯、一疊信封、闔上的計算機和孩子的蠟筆畫。"
-featured_image_caption: "虛構情境，並非實際家庭或當事人的照片。"
+featured_image_caption: "虛構情境"
 faq:
   - q: "先生向朋友借錢，朋友現在要我一起還，我一定要還嗎？"
     a: "依民法第1023條第1項，夫妻原則上各自清償自己的債務。這筆債如果是因家庭生活費用所生，依第1003條之1第2項由夫妻負連帶責任。基隆地方法院2025年的第一審判決中，出借人無法證明借款用於家庭生活費用，對前妻的請求被駁回。結果取決於錢的用途，以及能不能證明。"

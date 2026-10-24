@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["判决认可", "仲裁裁决", "两岸人民关系条例", "强制执行"]
 featured_image: "/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp"
 featured_image_alt: "清晨的光线下，一座空无一人的浅色石灰岩柱廊，一排朴素的石柱在铺面露台上投下长长的影子。"
-featured_image_caption: "示意图，不对应真实案件、人物或文件。"
+featured_image_caption: "虚构情境"
 faq:
   - q: "大陆法院的生效判决，可以直接在台湾强制执行吗？"
     a: "按条例，要先向台湾法院声请裁定认可：在大陆地区作成的民事确定裁判、民事仲裁判断，不违背台湾地区公共秩序或善良风俗的，得声请法院裁定认可；经认可、以给付为内容的，得作为执行名义（两岸人民关系条例第74条第1项、第2项）。"

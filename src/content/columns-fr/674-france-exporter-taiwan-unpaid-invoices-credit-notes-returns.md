@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["exportateurs français", "factures impayées", "distribution", "avoirs", "recouvrement"]
 featured_image: "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
 featured_image_alt: "Une feuille vierge et un stylo dans un plateau en bois, devant une fenêtre donnant sur un port."
-featured_image_caption: "Illustration fictive, sans document commercial ni litige réel représenté."
+featured_image_caption: "Scène fictive"
 faq:
   - q: "Un distributeur peut-il déduire tous les retours qu'il annonce ?"
     a: "Le contrat, les conditions du retour et les preuves déterminent ce qui peut être déduit. Si le droit taïwanais s'applique, la compensation suppose notamment des dettes réciproques de même nature et toutes deux exigibles, sous réserve des exclusions de l'article 334 du Code civil. Une demande d'avoir doit donc être rapprochée des marchandises et de son fondement."

@@ -11,7 +11,7 @@ categories:
 topic: "visa"
 featured_image: "../images/637-taiwan-work-permit-side-gig-other-employer/featured-01.webp"
 featured_image_alt: "밤의 작은 방, 문에 걸린 작업용 셔츠와 바닥의 무지 배달 가방, 책상 위 탁상시계와 엎어 둔 휴대폰."
-featured_image_caption: "가상의 장면입니다. 실제 근로자나 회사를 찍은 사진이 아닙니다."
+featured_image_caption: "가상의 장면"
 faq:
   - q: "보수를 받지 않고 친구 가게에서 한 번 공연했을 뿐인데도 문제가 되나요?"
     a: "2023년 타이베이고등행정법원 판결은 노무를 제공한 사실이 있으면 무상이라도 일로 본다는 노동부 해석을 받아들였습니다. 그리고 강사가 밴드 몫 8,000대만달러에서 무엇을 받았는지와 관계없이 그 공연이 취업서비스법 제73조 제1호의 '허가를 신청한 고용주 외의 고용주를 위한 일'에 해당한다고 판단했습니다. 같은 조는 이런 경우 고용허가를 취소(廢止)한다고 정합니다."

@@ -11,7 +11,7 @@ topic: "family"
 tags: ["divorcio-internacional", "espana-taiwan", "patrimonio-matrimonial", "inmuebles"]
 featured_image: "/images/columns/693-market-review-20261024.webp"
 featured_image_alt: "Carpetas, un plano de vivienda y llaves sobre una mesa con dos sillas vacías y vistas a Taipéi."
-featured_image_caption: "Ilustración de documentos y bienes relacionados con una separación."
+featured_image_caption: "Escena ficticia"
 faq:
   - q: "¿Vivir en España hace que un tribunal taiwanés aplique siempre derecho español al divorcio?"
     a: "No. El artículo 50 de la ley taiwanesa sobre conflictos de leyes atiende, al acordarse el divorcio o presentarse la demanda, a la nacionalidad común; a falta de ella, al domicilio común; y, si tampoco existe, a la conexión más estrecha con el matrimonio. La competencia judicial se revisa por separado."

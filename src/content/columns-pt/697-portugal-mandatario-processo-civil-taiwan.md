@@ -13,7 +13,7 @@ audience: ["pt"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp"
 featured_image_alt: "Envelope fechado, pequenos discos metálicos e candeeiro sobre uma mesa de madeira."
-featured_image_caption: "Ilustração de objetos fictícios, sem documentos de clientes ou de um processo real."
+featured_image_caption: "Cena fictícia"
 faq:
   - q: "Um familiar em Taiwan pode representar-me automaticamente no tribunal?"
     a: "Não. O artigo 68 do Código de Processo Civil prevê representação por advogado, admitindo um representante não advogado com autorização do juiz. O parentesco não substitui essa autorização."

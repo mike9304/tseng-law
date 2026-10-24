@@ -25,8 +25,8 @@ describe('media widgets localization', () => {
     expect(localizedAudioTitle(AUDIO_LEGACY_DEFAULTS.title, copy.audio.fallbackTitle)).toBe('音訊軌');
     expect(copy.video.backgroundBadge).toBe('背景影片');
     expect(copy.video.inspector.modes.box).toBe('影片框');
-    expect(copy.video.inspector.urlPlaceholder).toBe('/videos/intro.mp4 或 https://youtu.be/...');
-    expect(copy.video.inspector.posterPlaceholder).toBe('/images/video-poster.jpg');
+    expect(copy.video.inspector.urlPlaceholder).toBe('/videos/en-after-rain-loop.mp4 或 https://youtu.be/...');
+    expect(copy.video.inspector.posterPlaceholder).toBe('/images/blog/004-taiwan-employment-contract-guide/featured-01.jpg');
     expect(copy.lottie.fallbackLabel).toBe('Lottie 動畫');
     expect(copy.lottie.inspector.urlPlaceholder).toBe('https://lottie.host/embed/<id>/<hash>.lottie');
     expect(copy.lottie.inspector.emptyHint.spaceAfterSource).toBe(true);
@@ -113,7 +113,7 @@ describe('media widgets localization', () => {
     const node = {
       kind: 'video',
       content: {
-        url: '/videos/intro.mp4',
+        url: '/videos/en-after-rain-loop.mp4',
         autoplay: false,
         loop: false,
         muted: true,
@@ -133,12 +133,12 @@ describe('media widgets localization', () => {
     expect(inspectorHtml).toContain('影片框');
     expect(inspectorHtml).toContain('背景影片');
     expect(inspectorHtml).toContain('封面 / 縮圖');
-    expect(inspectorHtml).toContain('placeholder="/videos/intro.mp4 或 https://youtu.be/..."');
-    expect(inspectorHtml).toContain('placeholder="/images/video-poster.jpg"');
+    expect(inspectorHtml).toContain('placeholder="/videos/en-after-rain-loop.mp4 或 https://youtu.be/..."');
+    expect(inspectorHtml).toContain('placeholder="/images/blog/004-taiwan-employment-contract-guide/featured-01.jpg"');
     expect(inspectorHtml).toContain('循環播放');
     expect(inspectorHtml).toContain('靜音');
     expect(inspectorHtml).toContain('顯示控制列');
-    expect(inspectorHtml).not.toContain('/videos/intro.mp4 or https://youtu.be/...');
+    expect(inspectorHtml).not.toContain('/videos/en-after-rain-loop.mp4 or https://youtu.be/...');
   });
 
   it('keeps the video inspector on CSS-module chrome', () => {

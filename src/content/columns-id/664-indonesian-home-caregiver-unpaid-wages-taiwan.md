@@ -13,7 +13,7 @@ audience: ["id"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/ISSUE-20261021-04-caregiver-transfer-consent/featured-01.webp"
 featured_image_alt: "Kursi di ruang keluarga dengan map dokumen di meja samping."
-featured_image_caption: "Ilustrasi suasana rumah rekaan; bukan rumah majikan atau bukti perkara tertentu."
+featured_image_caption: "Adegan fiksi"
 faq:
   - q: "Apakah pengasuh yang tinggal di rumah majikan mendapat perhitungan lembur seperti pekerja pabrik?"
     a: "Tidak otomatis. Pekerjaan pengasuh dalam rumah tangga tidak termasuk cakupan Undang-Undang Standar Ketenagakerjaan Taiwan. Nilai gaji dan pembayaran untuk pekerjaan tambahan perlu diperiksa berdasarkan kontrak, KUH Perdata, serta aturan pekerja asing yang berlaku."

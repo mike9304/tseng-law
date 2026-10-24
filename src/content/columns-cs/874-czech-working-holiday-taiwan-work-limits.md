@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["working holiday", "čeští občané", "pracovní oprávnění", "zdravotní pojištění"]
 featured_image: "/images/blog/644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel/featured-01.webp"
 featured_image_alt: "Kufr a přeložená obálka na dokumenty před přepážkou výstupní kontroly na letišti."
-featured_image_caption: "Ilustrační obrázek; nezobrazuje skutečný případ, osobu ani dokument."
+featured_image_caption: "Smyšlená scéna"
 faq:
   - q: "Do kolika let může český občan požádat o working holiday?"
     a: "Podle českých podmínek BOCA musí být žadateli při podání žádosti 18 až 26 let včetně. Splnit musí i ostatní podmínky programu; samotný věk nárok na vízum nezaručuje."

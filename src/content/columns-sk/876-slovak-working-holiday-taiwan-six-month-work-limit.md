@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["Slováci", "pracovné prázdniny", "vízum", "poistenie"]
 featured_image: "/images/blog/644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel/featured-01.webp"
 featured_image_alt: "Kufor a zložená obálka na dokumenty pred letiskovou priehradkou odletovej kontroly."
-featured_image_caption: "Ilustračný obrázok; nezobrazuje skutočný prípad, osobu ani dokument."
+featured_image_caption: "Vymyslená scéna"
 faq:
   - q: "Môžem počas ročného working holiday pracovať celý rok?"
     a: "Nie. Pre občanov Slovenska platí najviac šesť mesiacov dočasného zamestnania celkovo. Zmena zamestnávateľa tento limit neobnoví. Samotný pobyt môže pri splnení podmienok trvať najviac rok od prvého vstupu."

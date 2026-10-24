@@ -11,7 +11,7 @@ categories:
 topic: "litigation"
 featured_image: "../images/638-taiwan-account-provider-scam-victim-civil-damages/featured-01.webp"
 featured_image_alt: "A blank card, a closed booklet and a face-down smartphone on a desk by a window at dusk."
-featured_image_caption: "A fictional scene. It does not show any real account or anyone involved in a case."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Prosecutors decided not to charge me. Does that end the victim's civil claim?"
     a: "Not necessarily. Under the first sentence of [Article 184](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184), paragraph 1 of Taiwan's Civil Code, a person who unlawfully infringes another's rights through intent or negligence is liable for the damage. In a [judgment of May 20, 2025](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDV%2c113%2c%e7%b0%a1%e4%b8%8a%2c499%2c20250520%2c1), the appeal panel of the New Taipei District Court held that the chat records behind a non-prosecution decision showed only that the account holder had no intent, not that the holder was free of negligence, and ordered the holder to pay NT$100,000 plus interest. In [Tainan](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TNHV%2c112%2c%e9%87%91%e7%b0%a1%e6%98%93%2c108%2c20240529%2c2) and [Taipei](https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDV%2c114%2c%e7%b0%a1%e4%b8%8a%2c137%2c20250702%2c2), account providers whom prosecutors had declined to charge were also found not liable in the civil case. The outcome depends on the facts of each case."

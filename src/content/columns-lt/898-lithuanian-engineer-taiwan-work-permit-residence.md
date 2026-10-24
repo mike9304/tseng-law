@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["Lietuvos piliečiai", "leidimas dirbti", "leidimas gyventi", "Auksinė kortelė"]
 featured_image: "/images/blog/352-hiring-in-taiwan-without-local-entity-eor-pe-work-permits/featured-01.webp"
 featured_image_alt: "Uždarytas tamsus nešiojamasis kompiuteris, taškuotas keraminis puodelis ir mažas papartis terakotos vazone ant šviesaus medinio stalo prie lango, už kurio matyti čerpių stogai."
-featured_image_caption: "Iliustracija; joje nepavaizduotas tikras atvejis, asmuo ar dokumentas."
+featured_image_caption: "Išgalvota scena"
 faq:
   - q: "Ar Lietuvos pilietis gali pradėti dirbti atvykęs be vizos?"
     a: "Bevizis atvykimas savaime nesuteikia teisės dirbti. Prieš pradedant darbą reikia tam darbui tinkamo leidimo arba taikytinos įstatyminės išimties. Lietuvai taikomas buvimas iki 90 dienų yra atvykimo, o ne darbo leidimas."

@@ -11,7 +11,7 @@ topic: "company"
 tags: ["danske-virksomheder", "selskabsstiftelse", "filial", "havvind"]
 featured_image: "/images/blog/singapore-20261010/investment-1600x900.webp"
 featured_image_alt: "Dokumentmapper, en lommeregner og en pen på et skrivebord med udsigt over byens skyline, vist som illustration."
-featured_image_caption: "Illustrationsbillede; det viser ikke en virkelig sag, person eller et virkeligt dokument."
+featured_image_caption: "Fiktiv scene"
 faq:
   - q: "Kan det danske selskab eje hele et taiwansk datterselskab?"
     a: "En taiwansk limited company, 有限公司, kan have én ejer. Den danske investering kræver den relevante godkendelse, og begrænsninger for den konkrete branche skal undersøges. Selskabets registrering giver ikke i sig selv medarbejderne arbejdstilladelse."

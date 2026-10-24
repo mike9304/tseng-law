@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["cetățeni români", "despăgubiri", "traffic-accidents", "traffic-evidence", "criminal-litigation"]
 featured_image: "/images/blog/003-taiwan-traffic-accident-procedure/featured-01.jpg"
 featured_image_alt: "Lumini stradale și o barieră de la marginea drumului, la apus."
-featured_image_caption: "Imagine ilustrativă; nu prezintă un caz, o persoană sau un document real."
+featured_image_caption: "Scenă fictivă"
 faq:
   - q: "Pot cere imediat toate documentele poliției?"
     a: "Nu. Potrivit NPA, schema și fotografiile locului accidentului pot fi solicitate după șapte zile, iar analiza preliminară după treizeci de zile. Acestea sunt momente de la care se poate depune cererea, nu date garantate de eliberare."

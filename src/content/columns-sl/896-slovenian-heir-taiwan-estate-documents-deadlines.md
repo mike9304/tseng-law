@@ -11,7 +11,7 @@ topic: "inheritance"
 tags: ["dediči v Sloveniji", "zapuščina na Tajvanu", "odpoved dediščini", "pooblastilo"]
 featured_image: "/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp"
 featured_image_alt: "Zaprta modra mapa, ovojnica, zelen zvezek in pisalo na leseni mizi."
-featured_image_caption: "Ponazoritvena slika; ne prikazuje resničnega primera, osebe ali dokumenta."
+featured_image_caption: "Izmišljen prizor"
 faq:
   - q: "Ali se zaradi mojega prebivališča v Sloveniji uporablja slovensko dedno pravo?"
     a: "Prebivališče dediča tega samo ne določa. Tajvansko pravilo iz 58. člena izhaja iz prava državljanstva pokojnika ob smrti, z varovalom za tajvanske državljane, ki so dediči po tajvanskem pravu, glede premoženja na Tajvanu. Več državljanstev in napotitve na drugo pravo zahtevajo dodatno presojo."

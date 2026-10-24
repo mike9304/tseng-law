@@ -11,7 +11,7 @@ topic: "company"
 tags: ["distribution à Taïwan", "fournisseurs français", "résiliation", "stocks", "commerce en ligne"]
 featured_image: "/images/blog/353-terminating-taiwan-distributor-us-exporter/featured-01.webp"
 featured_image_alt: "Des cartons sur palettes dans un entrepôt vide, près d'un rideau métallique entrouvert."
-featured_image_caption: "Entrepôt fictif illustrant un stock de marchandises ; aucune entreprise réelle n'est représentée."
+featured_image_caption: "Scène fictive"
 faq:
   - q: "Faut-il toujours donner trois mois de préavis au distributeur ?"
     a: "Le préavis de trois mois de l'article 561 du Code civil vise l'agent commercial au sens de l'article 558 lorsque le contrat n'a pas de terme fixé. Il ne s'applique pas automatiquement au partenaire qui achète et revend pour son propre compte. La qualification, la loi applicable et le contrat doivent être vérifiés."

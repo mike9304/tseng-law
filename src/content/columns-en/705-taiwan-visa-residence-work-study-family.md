@@ -13,7 +13,7 @@ audience: ["en"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
 featured_image_alt: "A closed laptop, books and two mugs arranged beside a plain travel booklet"
-featured_image_caption: "Illustration of work, study and family life; no actual visa or application is shown."
+featured_image_caption: "Fictional scene"
 faq:
   - q: "Can I apply for residence after entering Taiwan visa-exempt?"
     a: "Article 16 of the Foreign Professionals Act allows qualifying professionals with work authorization or an exemption, and certain family members, to apply directly to NIA. Eligibility also depends on the entry arrangement used. Ordinary degree-study and Mandarin-study routes have different entry requirements."

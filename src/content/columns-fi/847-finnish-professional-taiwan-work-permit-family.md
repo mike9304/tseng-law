@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["työlupa", "suomalaiset Taiwanissa", "Gold Card", "oleskelulupa", "perheen muutto"]
 featured_image: "/images/blog/352-hiring-in-taiwan-without-local-entity-eor-pe-work-permits/featured-01.webp"
 featured_image_alt: "Suljettu tumma kannettava tietokone, pilkullinen keraaminen kuppi ja pieni saniainen terrakottaruukussa vaalealla puupöydällä ikkunan vieressä. Ulkona näkyy tiilikattoja."
-featured_image_caption: "Havainnekuva; se ei esitä todellista tapausta, henkilöä tai asiakirjaa."
+featured_image_caption: "Kuvitteellinen kohtaus"
 faq:
   - q: "Voinko aloittaa työn Suomen passin 90 päivän viisumivapaudella?"
     a: "Viisumivapaus ei yksin oikeuta työntekoon. Suomen kansalaisen enintään 90 päivän vierailu edellyttää myös maahantuloehtojen täyttymistä. Työtä varten tarvitaan soveltuva lupa tai lakisääteinen poikkeus."

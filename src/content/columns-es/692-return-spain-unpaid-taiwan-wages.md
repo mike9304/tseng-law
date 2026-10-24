@@ -11,7 +11,7 @@ topic: "labor"
 tags: ["salarios-impagados", "regreso-a-espana", "horas-extraordinarias", "prueba-laboral"]
 featured_image: "/images/columns/692-market-review-20261024.webp"
 featured_image_alt: "Maleta abierta junto a una mesa con una carpeta, una calculadora, un cuaderno y llaves."
-featured_image_caption: "Escena ilustrativa de la preparación de documentos antes de regresar a España."
+featured_image_caption: "Escena ficticia"
 faq:
   - q: "¿Regresar a España cambia por sí solo el tribunal ante el que reclamar?"
     a: "No determina por sí solo la competencia. En Taiwán, el artículo 6 de la Ley de Procedimiento Laboral contempla, cuando demanda el trabajador, los lugares del domicilio, residencia, establecimiento principal u oficina principal del demandado o el lugar donde se prestó el trabajo. Debe comprobarse cuál corresponde al asunto."

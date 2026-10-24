@@ -14,7 +14,7 @@ audience: ["es"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
 featured_image_alt: "Un portátil cerrado, varios libros y dos tazas en tres conjuntos, acompañados de un cuadernillo de viaje sin inscripciones."
-featured_image_caption: "Ilustración sobre trabajo, estudios y vida familiar; los objetos no representan documentos oficiales ni una solicitud real."
+featured_image_caption: "Escena ficticia"
 faq:
   - q: "¿Puedo entrar como turista y decidir después qué residencia pedir?"
     a: "Solo si se cumplen los requisitos de una vía que admita la solicitud desde Taiwán. Determinados profesionales autorizados y sus familiares pueden acudir directamente a la NIA. Para los estudios, las vías ordinarias restringen esa posibilidad cuando se entró sin visado o con un visado de otro propósito."

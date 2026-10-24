@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["danske-ingeniører", "arbejdstilladelse", "opholdskort", "familie"]
 featured_image: "/images/blog/352-hiring-in-taiwan-without-local-entity-eor-pe-work-permits/featured-01.webp"
 featured_image_alt: "En lukket mørk bærbar computer, en plettet keramikkop og en lille bregne i en terrakottakrukke på et lyst træbord ved et vindue med tegltage udenfor."
-featured_image_caption: "Illustrationsbillede; det viser ikke en virkelig sag, person eller et virkeligt dokument."
+featured_image_caption: "Fiktiv scene"
 faq:
   - q: "Må en dansk ingeniør arbejde under et visumfrit ophold?"
     a: "De op til 90 visumfri dage giver ikke i sig selv ret til arbejde. Jobbet skal være dækket af den relevante arbejdstilladelse eller en gældende undtagelse. Opgaverne og den konkrete ansættelse eller udsendelse skal vurderes før arbejdsstart."

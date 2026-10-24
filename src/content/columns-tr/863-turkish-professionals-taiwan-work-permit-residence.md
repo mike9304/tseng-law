@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["Türk vatandaşları", "çalışma izni", "oturma izni", "Gold Card", "aile ikameti"]
 featured_image: "/images/blog/352-hiring-in-taiwan-without-local-entity-eor-pe-work-permits/featured-01.webp"
 featured_image_alt: "Pencere yanındaki açık renk ahşap masada kapalı koyu renk dizüstü bilgisayar, benekli seramik fincan ve pişmiş toprak saksıda küçük eğrelti otu; dışarıda kiremit çatılar görünüyor."
-featured_image_caption: "Temsili görsel; gerçek bir olayı, kişiyi veya belgeyi göstermemektedir."
+featured_image_caption: "Kurgusal sahne"
 faq:
   - q: "Türkiye pasaportuyla alınan e-vize Tayvan’da çalışmaya yeter mi?"
     a: "Hayır. E-vize uygunluğu tek başına çalışma yetkisi sağlamaz. İşe başlamadan önce çalışma izni veya ilgili kanuni muafiyet bulunmalıdır. BOCA, Türkiye için e-vize uygunluğunu umuma mahsus ve hususi pasaportlarla sınırlar; uzun süreli çalışma için uygun giriş ve ikamet yolu ayrıca belirlenmelidir."

@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-compensation", "motosikal"]
 featured_image: "/images/blog/611-taiwan-scooter-outer-lane-left-turn-dashcam/featured-01.webp"
 featured_image_alt: "Pandangan bergaya kamera papan pemuka yang rekaan: sebuah skuter berwarna hijau kebiruan bergerak di hadapan dan ke kanan di sebuah persimpangan biasa."
-featured_image_caption: "Imej ilustrasi; ia tidak menunjukkan kes, orang atau dokumen sebenar."
+featured_image_caption: "Adegan rekaan"
 faq:
   - q: "Adakah lesen Malaysia sah untuk menunggang skuter sewaan di Taiwan?"
     a: "Artikel ini tidak dapat mengesahkannya. Perkara 55-1 Peraturan Keselamatan Jalan Raya membenarkan lesen asing digunakan atas dasar kesalingan, dan perkara 55 ayat 1 butir 3 membenarkan permit memandu antarabangsa daripada negara kesalingan digunakan sehingga 30 hari tanpa pengesahan. Senarai kesalingan diterbitkan Biro Lebuh Raya dan tidak dapat dibuka semasa semakan, jadi semaknya sebelum menunggang. Perkara 21 ayat 1 Akta Pengurusan Lalu Lintas mengenakan denda NT$18,000 hingga NT$36,000 ke atas penunggang motosikal tanpa lesen."

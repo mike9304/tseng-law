@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["arbitration", "foreign-awards", "debt-recovery"]
 featured_image: "/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp"
 featured_image_alt: "رواق حجري خالٍ تتتابع أعمدته وظلالها في ضوء الصباح."
-featured_image_caption: "مشهد معماري متخيّل للتوضيح؛ ليس مقر محكمة أو هيئة تحكيم معنية بالمقال."
+featured_image_caption: "مشهد متخيَّل"
 faq:
   - q: "هل يُنفّذ حكم التحكيم السعودي مباشرة لدى بنك في تايوان؟"
     a: "يلزم طلب الاعتراف أمام القضاء التايواني وفق قانون التحكيم. وبعد الاعتراف يمكن أن يصبح الحكم سندًا للتنفيذ، ثم تُتخذ إجراءات التنفيذ على أموال المدين."

@@ -13,7 +13,7 @@ audience: ["vi"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
 featured_image_alt: "Máy tính xách tay đóng nắp, sách và hai chiếc cốc được xếp thành ba nhóm, bên cạnh một cuốn sổ bìa trơn."
-featured_image_caption: "Ảnh minh họa cho công việc, học tập và gia đình; không thể hiện hồ sơ xin thị thực thật."
+featured_image_caption: "Cảnh hư cấu"
 faq:
   - q: "Có thư mời làm việc thì có thể sang du lịch rồi xin ARC không?"
     a: "Thư mời làm việc chưa đủ. Điều 16 cho phép chuyên gia nước ngoài thuộc nhóm luật định xin cư trú trực tiếp khi đã được phép hoặc được miễn phép làm công việc chuyên môn và đáp ứng điều kiện nhập cảnh. Các công việc, hộ chiếu và chương trình nhập cảnh khác có thể không thuộc đường này."

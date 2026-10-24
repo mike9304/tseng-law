@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["Eesti tarnijad", "tasumata arved", "tarkvara", "maksekäsk", "aegumine"]
 featured_image: "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
 featured_image_alt: "Tammepuidust laual olev hele puidust kandik hoiab tühja kreemikat lehte ja suletud tumedat sulepead; kõrval asuvast aknast avaneb vaade vaiksele väikeste paatidega sadamale."
-featured_image_caption: "Illustreeriv pilt; sellel ei ole kujutatud tegelikku juhtumit, inimest ega dokumenti."
+featured_image_caption: "Väljamõeldud stseen"
 faq:
   - q: "Kas kõigi tehnoloogiaarve ridade aegumistähtaeg on kaks aastat?"
     a: "Ei saa eeldada, et kõigile ridadele kehtib sama tähtaeg. Esmalt määratakse kohaldatav õigus. Taiwani õiguse kohaldumisel näeb tsiviilseadustiku artikli 127 punkt 8 kauba hinna nõuetele ette kaks aastat ning punkt 7 hõlmab ka teatud töövõtutasusid. Tarkvaralitsentsi, teenuse ja kauba õiguslikku liiki tuleb eraldi hinnata."

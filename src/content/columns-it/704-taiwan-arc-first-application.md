@@ -18,7 +18,7 @@ audience:
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
 featured_image_alt: "Un libretto da viaggio senza scritte, una cartellina e una piccola tessera su una scrivania."
-featured_image_caption: "Immagine illustrativa: il libretto e la tessera non sono documenti ufficiali e non si riferiscono a una domanda reale."
+featured_image_caption: "Scena immaginaria"
 faq:
   - q: "Il visto di residenza sostituisce la domanda di ARC?"
     a: "Di regola occorre presentare anche la domanda di ARC, entro 30 giorni dal giorno successivo all’ingresso con il visto di residenza. Sono esclusi i titoli che già svolgono la funzione di ARC, come una Gold Card valida."

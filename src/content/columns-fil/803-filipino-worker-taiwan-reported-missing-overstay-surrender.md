@@ -11,7 +11,7 @@ topic: "labor"
 tags: ["migranteng manggagawa", "overstay", "deportation", "pagsuko"]
 featured_image: "/images/blog/644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel/featured-01.webp"
 featured_image_alt: "Isang maleta at nakatiklop na sobre ng dokumento sa harap ng inspection counter ng pag-alis sa paliparan."
-featured_image_caption: "Larawang pang-ilustrasyon lamang; hindi nito ipinapakita ang tunay na kaso, tao o dokumento."
+featured_image_caption: "Kathang-isip na eksena"
 faq:
   - q: "Ini-report akong nawawala ng employer pero hindi iyon totoo. May magagawa ba ako?"
     a: "Oo. Ayon sa Artikulo 56, talata 2 ng Employment Service Act, puwedeng magreklamo sa local labor authority ang manggagawang inulat nang hindi totoo na tatlong magkakasunod na araw siyang lumiban nang walang makatwirang dahilan at nawalan ng ugnayan. Kapag napatunayang hindi totoo ang ulat, dapat bawiin ng central authority ang pagbawi sa permit at ang utos na umalis. Itago ang mga mensahe, petsa at patunay kung nasaan ka at kung bakit hindi ka nakapasok."

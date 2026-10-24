@@ -13,7 +13,7 @@ audience: ["it"]
 author: "legal-ai-assistant"
 featured_image: "../images/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
 featured_image_alt: "Un foglio e una penna su una scrivania, con un porto sullo sfondo."
-featured_image_caption: "Scena immaginaria illustrativa; non rappresenta documenti o imprese coinvolti in una controversia."
+featured_image_caption: "Scena immaginaria"
 faq:
   - q: "La fattura basta per recuperare il saldo?"
     a: "Occorre ricostruire anche il contratto, la scadenza e l’adempimento delle condizioni di pagamento. Se il saldo dipende dal collaudo, servono i verbali e gli scambi sulle contestazioni."

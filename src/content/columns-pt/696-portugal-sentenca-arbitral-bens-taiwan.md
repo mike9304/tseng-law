@@ -13,7 +13,7 @@ audience: ["pt"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp"
 featured_image_alt: "Colunata de pedra clara junto de um terraço vazio, iluminada por luz baixa."
-featured_image_caption: "Ilustração de uma construção fictícia; não identifica um tribunal ou instituição arbitral."
+featured_image_caption: "Cena fictícia"
 faq:
   - q: "Uma sentença arbitral portuguesa permite executar diretamente em Taiwan?"
     a: "Uma sentença arbitral estrangeira necessita de reconhecimento pelo tribunal taiwanês para produzir o efeito previsto no artigo 47 da Lei de Arbitragem e servir de título executivo."

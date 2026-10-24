@@ -11,7 +11,7 @@ topic: "company"
 tags: ["jakelijasopimus", "suomalaisyritykset", "varasto", "sopimuksen päättäminen"]
 featured_image: "/images/blog/353-terminating-taiwan-distributor-us-exporter/featured-01.webp"
 featured_image_alt: "Varaston lastauslaituri, jonka puoliksi nostettu metallinen rullaovi avautuu valoisalle, tyhjälle kadulle. Yhden seinän vieressä on tavallisia pahvilaatikoita kuormalavoilla."
-featured_image_caption: "Havainnekuva; se ei esitä todellista tapausta, henkilöä tai asiakirjaa."
+featured_image_caption: "Kuvitteellinen kohtaus"
 faq:
   - q: "Riittääkö Taiwanin jakelijalle kolmen kuukauden ilmoitusaika?"
     a: "Siviililain 561 artiklan kolmen kuukauden aika koskee 558 artiklan mukaista kauppaedustusta, jonka kestoa ei ole määrätty. Sitä ei voi automaattisesti soveltaa omaan lukuunsa ostavaan jälleenmyyjään. Ensin ratkaistaan sovellettava laki, suhteen luonne ja sopimusehdot."

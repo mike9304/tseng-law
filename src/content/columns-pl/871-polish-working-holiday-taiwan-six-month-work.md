@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["Working Holiday", "polscy obywatele", "praca tymczasowa", "ubezpieczenie"]
 featured_image: "/images/blog/644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel/featured-01.webp"
 featured_image_alt: "Walizka i złożona koperta na dokumenty przed stanowiskiem kontroli odlotów na lotnisku."
-featured_image_caption: "Ilustracja poglądowa; nie przedstawia rzeczywistej sprawy, osoby ani dokumentu."
+featured_image_caption: "Scena fikcyjna"
 faq:
   - q: "Czy obywatel Polski może pracować przez cały roczny pobyt?"
     a: "Polskie warunki programu przewidują pracę tymczasową nieprzekraczającą sześciu miesięcy. Maksymalny pobyt do roku nie oznacza prawa do pracy przez rok ani nowego limitu pracy przy każdej zmianie pracodawcy."

@@ -11,7 +11,7 @@ topic: "company"
 tags: ["hrvatski-kupci", "nedostaci-strojeva", "dokazi", "kupoprodaja"]
 featured_image: "/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp"
 featured_image_alt: "Uzorci metalnih dijelova, zaseban referentni dio i pomično mjerilo na stolu za pregled."
-featured_image_caption: "Ilustracija; ne prikazuje stvarni slučaj, osobu ni dokument."
+featured_image_caption: "Izmišljena scena"
 faq:
   - q: "Može li obavijest prodavatelju čekati konačni nalaz servisa?"
     a: "Ako se primjenjuju tajvanska pravila o kupoprodaji, robu treba pregledati bez odgađanja, uobičajenim postupkom primjerenim njezinoj prirodi, i odmah prijaviti nedostatak za koji prodavatelj odgovara. To vrijedi i za skriveni nedostatak kad se naknadno otkrije. U prvoj obavijesti mogu se opisati utvrđene činjenice i navesti što još nije poznato."

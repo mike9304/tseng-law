@@ -13,7 +13,7 @@ audience: ["it"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/gap-columns-20261010/505-taiwan-supplier-return-molds-test-fixtures.webp"
 featured_image_alt: "Uno stampo metallico e un’attrezzatura di prova su un banco di imballaggio industriale."
-featured_image_caption: "Illustrazione di una scena immaginaria; le attrezzature non appartengono a un caso reale."
+featured_image_caption: "Scena immaginaria"
 faq:
   - q: "Aver pagato il progetto trasferisce tutti i diritti sui disegni?"
     a: "Non automaticamente. Quando si applica l’articolo 12 della legge taiwanese sul diritto d’autore, i diritti sull’opera commissionata dipendono dagli accordi e dalle regole suppletive. Va inoltre verificato se il materiale sia protetto."

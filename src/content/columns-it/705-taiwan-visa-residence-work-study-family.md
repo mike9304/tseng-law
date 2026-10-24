@@ -19,7 +19,7 @@ audience:
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
 featured_image_alt: "Un portatile chiuso, libri e due tazze in tre composizioni, accanto a un libretto da viaggio senza scritte."
-featured_image_caption: "Immagine illustrativa di lavoro, studio e vita familiare; non mostra documenti ufficiali o una domanda reale."
+featured_image_caption: "Scena immaginaria"
 faq:
   - q: "L’iscrizione a un corso di mandarino dà subito diritto all’ARC?"
     a: "Per la via ordinaria occorrono il visto di ingresso appropriato, quattro mesi di studio già completati in un centro qualificato e un’ulteriore iscrizione di almeno tre mesi. Si aggiungono i requisiti di frequenza e gli altri documenti richiesti."

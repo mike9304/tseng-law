@@ -11,7 +11,7 @@ topic: "company"
 tags: ["slovenski dobavitelji", "distributerji", "odpoved pogodbe", "zaloge"]
 featured_image: "/images/blog/353-terminating-taiwan-distributor-us-exporter/featured-01.webp"
 featured_image_alt: "Nakladalna rampa skladišča z napol dvignjenimi kovinskimi rolo vrati proti svetli prazni ulici in navadnimi kartonskimi škatlami na paletah ob steni."
-featured_image_caption: "Ponazoritvena slika; ne prikazuje resničnega primera, osebe ali dokumenta."
+featured_image_caption: "Izmišljen prizor"
 faq:
   - q: "Ali mora slovenski dobavitelj vedno dati tri mesece odpovednega roka?"
     a: "Ne. Če se uporablja tajvansko pravo, trimesečni rok iz 561. člena civilnega zakonika velja za trgovskega zastopnika po 558. členu, kadar razmerje ni časovno omejeno. Ni splošen rok za vsakogar, ki kupuje blago in ga prodaja naprej. Preveriti je treba dejansko razmerje, pogodbo in morebitno izjemo."

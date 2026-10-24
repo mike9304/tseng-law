@@ -13,7 +13,7 @@ audience: ["id"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/038-taiwan-bank-account-lending-fraud-money-laundering/featured-01.webp"
 featured_image_alt: "Tangan di atas meja dekat kartu polos dan telepon genggam."
-featured_image_caption: "Ilustrasi rekaan tentang penyerahan kartu dan akses rekening; bukan barang bukti suatu perkara."
+featured_image_caption: "Adegan fiksi"
 faq:
   - q: "Saya hanya meminjamkan satu rekening tanpa dibayar. Apakah pasti bebas perkara pidana?"
     a: "Tidak dapat dipastikan demikian. Pasal 22 memuat pengecualian dan tingkatan penanganan tersendiri. Dugaan membantu penipuan atau pencucian uang tetap dapat diperiksa berdasarkan tindakan, pengetahuan, serta bukti, meskipun tidak menerima imbalan."

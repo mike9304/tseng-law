@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["exportatori români", "facturi neplătite", "prescripție", "ordin de plată"]
 featured_image: "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
 featured_image_alt: "O tavă din lemn deschis, pe un birou de stejar, conține o foaie crem nescrisă și un stilou închis, de culoare închisă, lângă o fereastră spre un port liniștit cu bărci mici."
-featured_image_caption: "Imagine ilustrativă; nu prezintă un caz, o persoană sau un document real."
+featured_image_caption: "Scenă fictivă"
 faq:
   - q: "Orice factură a unui exportator român se prescrie în doi ani?"
     a: "Nu. Prescripția urmează legea aplicabilă creanței. Dacă se aplică dreptul taiwanez, prețul mărfurilor furnizate de comercianți sau producători intră sub termenul de doi ani din articolul 127 punctul 8, calculat de când creanța poate fi exercitată."

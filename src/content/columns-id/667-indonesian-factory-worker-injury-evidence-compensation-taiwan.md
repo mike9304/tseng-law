@@ -13,7 +13,7 @@ audience: ["id"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/039-taiwan-migrant-worker-occupational-injury-compensation/featured-01.webp"
 featured_image_alt: "Helm kerja, sarung tangan, dan kotak logam tertutup di meja kayu."
-featured_image_caption: "Ilustrasi perlengkapan kerja; bukan dokumentasi lokasi kecelakaan atau peralatan seorang pekerja."
+featured_image_caption: "Adegan fiksi"
 faq:
   - q: "Majikan belum mendaftarkan asuransi kecelakaan kerja. Apakah saya langsung kehilangan manfaat?"
     a: "Tidak otomatis. Untuk pekerja yang memenuhi cakupan wajib Pasal 6, Pasal 36 mengatur pembayaran manfaat oleh penyelenggara asuransi lalu penagihan kepada pihak pemberi kerja. Cakupan, kejadian, dan syarat manfaat tetap diperiksa."

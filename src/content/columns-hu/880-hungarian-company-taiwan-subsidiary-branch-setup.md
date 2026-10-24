@@ -11,7 +11,7 @@ topic: "company"
 tags: ["magyar vállalkozások", "leányvállalat", "fióktelep", "külföldi befektetés"]
 featured_image: "/images/blog/singapore-20261010/investment-1600x900.webp"
 featured_image_alt: "Irattartó mappák, számológép és toll egy városi panorámára néző íróasztalon, illusztrációként."
-featured_image_caption: "Szemléltető kép; nem valós ügyet, személyt vagy dokumentumot ábrázol."
+featured_image_caption: "Kitalált jelenet"
 faq:
   - q: "Lehet a magyar vállalkozás a tajvani társaság egyetlen tagja?"
     a: "A tajvani korlátolt felelősségű társaság egy vagy több taggal működhet. A külföldi befektetőre vonatkozó engedélyezést, a választott tevékenység feltételeit és a társaság irányítását ettől még rendezni kell."

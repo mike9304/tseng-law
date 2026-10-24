@@ -18,7 +18,7 @@ audience:
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
 featured_image_alt: "Caderneta de viagem sem inscrições, pasta de documentos e cartão liso sobre uma secretária."
-featured_image_caption: "Imagem ilustrativa; os objetos não representam documentos de identificação ou formulários oficiais."
+featured_image_caption: "Cena fictícia"
 faq:
   - q: "Quando começa o prazo para pedir o primeiro ARC após entrar com visto de residente?"
     a: "São 30 dias a contar do dia seguinte à entrada em Taiwan com visto de residente. Quem entrou como visitante ou sem visto precisa de cumprir os requisitos de uma das vias que admitem o pedido de residência nessa situação."

@@ -11,7 +11,7 @@ topic: "company"
 tags: ["jenama Malaysia", "anak syarikat", "cawangan syarikat asing", "pelaburan asing", "perjanjian cukai"]
 featured_image: "/images/blog/singapore-20261010/investment-1600x900.webp"
 featured_image_alt: "Folder dokumen, kalkulator dan pen di atas meja yang menghadap ufuk sebuah bandar (ilustrasi)."
-featured_image_caption: "Imej ilustrasi; ia tidak menunjukkan kes, orang atau dokumen sebenar."
+featured_image_caption: "Adegan rekaan"
 faq:
   - q: "Jika syarikat Malaysia membuka cawangan di Taiwan, siapa yang menanggung hutang kedai?"
     a: "Syarikat Malaysia itu sendiri. Cawangan tidak mempunyai personaliti undang-undang berasingan, manakala anak syarikat ialah syarikat Taiwan yang berasingan. Pada syarikat berhad (有限公司), pemegang saham pada asasnya bertanggungjawab setakat modal yang disumbangkan. Jika pemegang saham menyalahgunakan status badan korporat sehingga syarikat menanggung hutang tertentu yang jelas sukar dilunaskan, dan keadaan itu serius serta perlu, dia mesti melunaskan hutang itu menurut perkara 99 ayat 2 Akta Syarikat."

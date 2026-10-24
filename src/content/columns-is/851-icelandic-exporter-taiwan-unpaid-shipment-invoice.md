@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["útflutningur", "Ísland", "ógreiddir reikningar", "fyrning"]
 featured_image: "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
 featured_image_alt: "Ljós viðarbakki á eikarskrifborði geymir autt kremlitað blað og lokaðan dökkan lindarpenna, við glugga sem snýr að kyrrlátri höfn með litlum bátum."
-featured_image_caption: "Skýringarmynd; hún sýnir ekki raunverulegt mál, manneskju eða skjal."
+featured_image_caption: "Skálduð mynd"
 faq:
   - q: "Fyrnist sérhver ógreiddur reikningur á tveimur árum?"
     a: "Nei. Fyrst þarf að kanna hvaða lög gilda um samninginn og fyrningu. Ef taívönsk lög eiga við getur 8. tölul. 127. gr. borgaralaganna sett tveggja ára frest á kröfu seljanda um kaupverð sem fellur undir ákvæðið. Fresturinn byrjar þegar unnt er að krefjast greiðslu, samkvæmt 128. gr."

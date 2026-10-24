@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["Eesti kodanikud", "tööluba", "elamisluba", "Gold Card", "pere"]
 featured_image: "/images/columns/20261002/vi-passport-arc-return.webp"
 featured_image_alt: "Käsi nähtava tekstita passi lähedal, tühi kaart ja kaust laual."
-featured_image_caption: "Illustreeriv pilt; sellel ei ole kujutatud tegelikku juhtumit, inimest ega dokumenti."
+featured_image_caption: "Väljamõeldud stseen"
 faq:
   - q: "Kas Eesti passiga võib viisavaba külastuse ajal tööle asuda?"
     a: "Viisavaba sisenemine ei anna iseenesest tööluba. Eesti kodanik on BOCA nimekirjas kuni 90-päevaseks külastuseks, kuid töötamiseks tuleb enne kindlaks teha kehtiv tööluba või kohaldatav erand."

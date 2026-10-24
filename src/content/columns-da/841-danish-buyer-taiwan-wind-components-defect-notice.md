@@ -11,7 +11,7 @@ topic: "litigation"
 tags: ["danske-købere", "leverandørfejl", "havvind", "reklamation"]
 featured_image: "/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp"
 featured_image_alt: "Prøver af metalkomponenter, en separat referencedel og en skydelære på et inspektionsbord."
-featured_image_caption: "Illustrationsbillede; det viser ikke en virkelig sag, person eller et virkeligt dokument."
+featured_image_caption: "Fiktiv scene"
 faq:
   - q: "Kan vi vente med reklamationen, til laboratoriet har fundet årsagen?"
     a: "Ved køb under taiwansk ret skal køberen undersøge varerne hurtigt efter deres art og den sædvanlige fremgangsmåde og straks underrette sælgeren om opdagede mangler, som sælgeren hæfter for. Beskriv det konstaterede og angiv, hvad der endnu er uafklaret."

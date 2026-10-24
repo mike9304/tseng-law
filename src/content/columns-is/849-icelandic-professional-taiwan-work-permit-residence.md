@@ -11,7 +11,7 @@ topic: "visa"
 tags: ["Íslendingar", "atvinnuleyfi", "dvalarleyfi", "fjölskylda"]
 featured_image: "/images/columns/20261002/vi-passport-arc-return.webp"
 featured_image_alt: "Hönd við vegabréf án sýnilegs texta, autt kort og mappa á borði."
-featured_image_caption: "Skýringarmynd; hún sýnir ekki raunverulegt mál, manneskju eða skjal."
+featured_image_caption: "Skálduð mynd"
 faq:
   - q: "Má ég hefja störf eftir komu án vegabréfsáritunar?"
     a: "Ekki á grundvelli komunnar einnar. Almenna reglan krefst atvinnuleyfis sem vinnuveitandi sækir um, nema sérstök heimild eða undanþága eigi við. Heimild til allt að 90 daga heimsóknar með íslensku vegabréfi leysir ekki þetta skilyrði af hólmi."

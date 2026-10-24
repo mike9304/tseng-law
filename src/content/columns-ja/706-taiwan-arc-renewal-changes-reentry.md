@@ -14,7 +14,7 @@ audience: ["ja"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp"
 featured_image_alt: "予定を書き込む前のノート、無地の旅券風の冊子、小さなカード、家の鍵を並べた机"
-featured_image_caption: "更新や引っ越し、渡航の準備を表したイメージです。実際の居留証や申請者の持ち物ではありません。"
+featured_image_caption: "架空の情景"
 faq:
   - q: "ARCの更新は、いつから申請できますか。"
     a: "通常の居留延長は、満了前3か月以内に申請します。この3か月は、満了後の猶予を意味しません。一般のARCでは、旅券・ARC・写真・現在の居留目的を示す書類などを準備します。就業ゴールドカードや起業家の制度には別の申請案内があるため、所持する証件に対応した時期に手続を進めます。"

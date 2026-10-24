@@ -13,7 +13,7 @@ audience: ["id"]
 author: "legal-ai-assistant"
 featured_image: "/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp"
 featured_image_alt: "Komponen logam di dua baki dengan jangka sorong di meja pemeriksaan."
-featured_image_caption: "Adegan pemeriksaan komponen rekaan; bukan mesin, sampel, atau hasil uji dalam sengketa tertentu."
+featured_image_caption: "Adegan fiksi"
 faq:
   - q: "Apakah kontrak dengan penjual Taiwan pasti tunduk pada hukum Taiwan?"
     a: "Tidak. Pilihan hukum para pihak dan aturan penentuan hukum yang berlaku perlu diperiksa. Pembahasan cacat barang ini berlaku untuk jual beli yang tunduk pada hukum Taiwan; proyek desain dan pemasangan dapat memerlukan klasifikasi berbeda."

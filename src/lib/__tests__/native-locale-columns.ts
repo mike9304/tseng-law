@@ -966,6 +966,22 @@ export const ARC_VISA_COLUMN_FILES_20261024: Partial<Record<string, readonly str
   ar: ARC_VISA_FILES_20261024,
 };
 
+/** Native audience columns published 2026-10-24. */
+export const COUNTRY_COLUMN_FILES_20261024 = {
+  ja: [
+    '711-taiwan-franchise-disclosure-japanese-restaurant-retail-chains.md', // ja-gap-20261024
+    '712-taiwan-joint-venture-shareholders-agreement-deadlock-japanese.md', // ja-gap-20261024
+    '713-japan-arbitral-award-recognition-enforcement-taiwan.md', // ja-gap-20261024
+    '714-taiwan-government-procurement-japanese-companies-gpa-bid.md', // ja-gap-20261024
+    '715-taiwan-cartel-investigation-fines-leniency-japanese-subsidiaries.md', // ja-gap-20261024
+    '716-taiwan-overtime-pay-responsibility-system-japanese-managers.md', // ja-gap-20261024
+    '717-taiwan-shtc-export-control-entity-list-japanese-subsidiaries.md', // ja-gap-20261024
+    '718-taiwan-customer-reorganization-bankruptcy-japanese-supplier-claims.md', // ja-gap-20261024
+    '719-taiwan-promissory-note-security-court-ruling-enforcement-japanese.md', // ja-gap-20261024
+    '720-taiwan-supplement-health-food-advertising-rules-japanese-brands.md', // ja-gap-20261024
+  ],
+} as const;
+
 /** Registered locale-specific batches through 2026-10-24, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
@@ -991,6 +1007,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((COUNTRY_COLUMN_FILES_20261022 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261023 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...(ARC_VISA_COLUMN_FILES_20261024[locale] ?? []),
+    ...((COUNTRY_COLUMN_FILES_20261024 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261014 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261015 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261021 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1021,7 +1038,10 @@ export function expertiseSlugsFor(locale: string): string[] {
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
-  const day20261024 = ARC_VISA_COLUMN_FILES_20261024[locale] ?? [];
+  const day20261024: readonly string[] = [
+    ...(ARC_VISA_COLUMN_FILES_20261024[locale] ?? []),
+    ...((COUNTRY_COLUMN_FILES_20261024 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+  ];
   const day20261023: readonly string[] =
     (COUNTRY_COLUMN_FILES_20261023 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261022: readonly string[] = [
@@ -1098,6 +1118,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 /** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-24). */
 export function archiveLeadPublicationDate(slug: string): string {
   if (ARC_VISA_FILES_20261024.map(slugOf).includes(slug)) return '2026-10-24';
+  if (Object.values(COUNTRY_COLUMN_FILES_20261024).flat().map(slugOf).includes(slug)) return '2026-10-24';
   if (Object.values(COUNTRY_COLUMN_FILES_20261023).flat().map(slugOf).includes(slug)) return '2026-10-23';
   const day20261022 = [...Object.values(COUNTRY_COLUMN_FILES_20261022), ...Object.values(taxAccountingFilesPublishedOn('2026-10-22')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf);
   if (day20261022.includes(slug)) return '2026-10-22';
@@ -1180,6 +1201,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(COUNTRY_COLUMN_FILES_20261022),
     ...Object.values(COUNTRY_COLUMN_FILES_20261023),
     ARC_VISA_FILES_20261024,
+    ...Object.values(COUNTRY_COLUMN_FILES_20261024),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261014),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261015),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021),

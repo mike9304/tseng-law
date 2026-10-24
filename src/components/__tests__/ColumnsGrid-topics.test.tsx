@@ -15,7 +15,7 @@ vi.mock('next/image', () => ({
 import ColumnsGrid, { type ColumnListItem } from '@/components/ColumnsGrid';
 import { getAllColumnPosts } from '@/lib/columns';
 import { toColumnListItems } from '@/lib/column-list-items';
-import { COUNTRY_COLUMN_FILES_20261023 } from '@/lib/__tests__/native-locale-columns';
+import { COUNTRY_COLUMN_FILES_20261023, COUNTRY_COLUMN_FILES_20261024 } from '@/lib/__tests__/native-locale-columns';
 
 function post(slug: string, topic: ColumnListItem['topic'], category: ColumnListItem['category'] = 'legal'): ColumnListItem {
   return {
@@ -58,6 +58,19 @@ describe('ColumnsGrid topic grouping', () => {
       }
     },
   );
+
+  it('finds each 2026-10-24 Japanese column by its title', () => {
+    const items = toColumnListItems(getAllColumnPosts('ja'));
+    for (const file of COUNTRY_COLUMN_FILES_20261024.ja) {
+      const slug = file.replace(/^\d+-/, '').replace(/\.md$/, '');
+      const article = items.find((item) => item.slug === slug);
+      expect(article, `ja/${slug}`).toBeDefined();
+      nav.params = new URLSearchParams({ q: article!.title });
+      const filtered = renderToStaticMarkup(<ColumnsGrid locale="ja" posts={items} />);
+      expect(filtered, `ja/${slug}`).toContain(`href="/ja/columns/${slug}"`);
+      expect(filtered).toContain('data-columns-visible-count="1"');
+    }
+  });
 
   it('limits the opening recommendations to three without losing the remaining topic links', () => {
     nav.params = new URLSearchParams();

@@ -12,6 +12,7 @@ export function mapColumnPostsToHomeInsights(posts: readonly ColumnPost[]) {
       readTime: post.readTime,
       categoryLabel: post.categoryLabel,
       featuredImage: post.featuredImage,
+      featuredImageAlt: post.featuredImageAlt,
       summary: post.summary,
       topic: post.topic,
       publicationDate: post.publicationDate,

@@ -2517,6 +2517,78 @@
     {
       "locale": "en",
       "slug": "taiwan-arc-renewal-changes-reentry"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-visitor-commercial-activity-deportation-entry-ban"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-visitor-commercial-activity-deportation-entry-ban"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-visitor-commercial-activity-deportation-entry-ban"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-overseas-surrogacy-child-parentage-spouse-adoption-registration"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-overseas-surrogacy-child-parentage-spouse-adoption-registration"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-overseas-surrogacy-child-parentage-spouse-adoption-registration"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-ride-hailing-platform-dispatch-license-accident-liability"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-ride-hailing-platform-dispatch-license-accident-liability"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-ride-hailing-platform-dispatch-license-accident-liability"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-departure-income-tax-agent-article-72"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-departure-income-tax-agent-article-72"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-departure-income-tax-agent-article-72"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-foreign-company-cyber-incident-personal-data-scope"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-foreign-company-cyber-incident-personal-data-scope"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-foreign-company-cyber-incident-personal-data-scope"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-strike-employer-damages-retaliation-mediation-arbitration"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-strike-employer-damages-retaliation-mediation-arbitration"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-strike-employer-damages-retaliation-mediation-arbitration"
     }
   ]
 }

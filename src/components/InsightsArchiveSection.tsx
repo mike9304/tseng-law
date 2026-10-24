@@ -32,6 +32,7 @@ interface ArchivePost {
   readTime: string;
   categoryLabel: string;
   featuredImage: string;
+  featuredImageAlt?: string;
   summary: string;
   topic?: ColumnTopic;
   publicationDate?: string;
@@ -268,7 +269,7 @@ export default function InsightsArchiveSection({
             <div className="insights-featured-media">
               <InsightsPostImage
                 src={featured.featuredImage}
-                alt={featured.title}
+                alt={featured.featuredImageAlt || featured.title}
                 width={920}
                 height={540}
                 surfaceKey={homeInsightsImageSurfaceIds[0]}
@@ -333,7 +334,7 @@ export default function InsightsArchiveSection({
                   <div className="insights-list-thumb">
                     <InsightsPostImage
                       src={post.featuredImage}
-                      alt={post.title}
+                      alt={post.featuredImageAlt || post.title}
                       width={240}
                       height={160}
                       surfaceKey={homeInsightsImageSurfaceIds[index + 1]}

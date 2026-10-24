@@ -897,6 +897,12 @@ export const COUNTRY_COLUMN_FILES_20261023 = {
     '691-spanish-judgment-taiwan-assets-enforcement.md', // nine-market-20261023
     '692-return-spain-unpaid-taiwan-wages.md', // nine-market-20261023
     '693-spain-resident-taiwan-divorce-property.md', // nine-market-20261023
+    '662-taiwan-departure-income-tax-agent-article-72.md', // ship-20261023-G4
+    '659-taiwan-visitor-commercial-activity-deportation-entry-ban.md', // ship-20261023-G1
+    '660-taiwan-overseas-surrogacy-child-parentage-spouse-adoption-registration.md', // ship-20261023-G2
+    '661-taiwan-ride-hailing-platform-dispatch-license-accident-liability.md', // ship-20261023-G3
+    '663-taiwan-foreign-company-cyber-incident-personal-data-scope.md', // ship-20261023-G5
+    '664-taiwan-strike-employer-damages-retaliation-mediation-arbitration.md', // ship-20261023-G6
   ],
   fr: [
     '674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.md', // nine-market-20261023
@@ -939,6 +945,34 @@ export const COUNTRY_COLUMN_FILES_20261023 = {
     '661-thai-worker-taiwan-bank-account-police-notice.md', // nine-market-20261023
     '662-thai-return-home-taiwan-traffic-injury-records.md', // nine-market-20261023
     '663-thai-supplier-taiwan-buyer-unpaid-invoice.md', // nine-market-20261023
+  ],
+  'ko': [
+    '659-taiwan-visitor-commercial-activity-deportation-entry-ban.md', // ship-20261023-G1
+    '660-taiwan-overseas-surrogacy-child-parentage-spouse-adoption-registration.md', // ship-20261023-G2
+    '661-taiwan-ride-hailing-platform-dispatch-license-accident-liability.md', // ship-20261023-G3
+    '663-taiwan-foreign-company-cyber-incident-personal-data-scope.md', // ship-20261023-G5
+    '664-taiwan-strike-employer-damages-retaliation-mediation-arbitration.md', // ship-20261023-G6
+  ],
+  'zh-hant': [
+    '659-taiwan-visitor-commercial-activity-deportation-entry-ban.md', // ship-20261023-G1
+    '660-taiwan-overseas-surrogacy-child-parentage-spouse-adoption-registration.md', // ship-20261023-G2
+    '661-taiwan-ride-hailing-platform-dispatch-license-accident-liability.md', // ship-20261023-G3
+    '663-taiwan-foreign-company-cyber-incident-personal-data-scope.md', // ship-20261023-G5
+    '664-taiwan-strike-employer-damages-retaliation-mediation-arbitration.md', // ship-20261023-G6
+  ],
+  'ja': [
+    '659-taiwan-visitor-commercial-activity-deportation-entry-ban.md', // ship-20261023-G1
+    '660-taiwan-overseas-surrogacy-child-parentage-spouse-adoption-registration.md', // ship-20261023-G2
+    '661-taiwan-ride-hailing-platform-dispatch-license-accident-liability.md', // ship-20261023-G3
+    '663-taiwan-foreign-company-cyber-incident-personal-data-scope.md', // ship-20261023-G5
+    '664-taiwan-strike-employer-damages-retaliation-mediation-arbitration.md', // ship-20261023-G6
+  ],
+  'en': [
+    '659-taiwan-visitor-commercial-activity-deportation-entry-ban.md', // ship-20261023-G1
+    '660-taiwan-overseas-surrogacy-child-parentage-spouse-adoption-registration.md', // ship-20261023-G2
+    '661-taiwan-ride-hailing-platform-dispatch-license-accident-liability.md', // ship-20261023-G3
+    '663-taiwan-foreign-company-cyber-incident-personal-data-scope.md', // ship-20261023-G5
+    '664-taiwan-strike-employer-damages-retaliation-mediation-arbitration.md', // ship-20261023-G6
   ],
 } as const;
 
@@ -1217,8 +1251,10 @@ export function archiveLeadSlugsFor(locale: string): string[] {
     ...(ARC_VISA_COLUMN_FILES_20261024[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261024 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ];
-  const day20261023: readonly string[] =
-    (COUNTRY_COLUMN_FILES_20261023 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
+  const day20261023: readonly string[] = [
+    ...((COUNTRY_COLUMN_FILES_20261023 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...(taxAccountingFilesPublishedOn('2026-10-23')[locale] ?? []),
+  ];
   const day20261022: readonly string[] = [
     ...((COUNTRY_COLUMN_FILES_20261022 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...(taxAccountingFilesPublishedOn('2026-10-22')[locale] ?? []),

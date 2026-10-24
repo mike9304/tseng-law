@@ -281,7 +281,7 @@ function GuidanceColumnArchive({
             <div className="insights-featured-media">
               <Image
                 src={resolveInsightsImageSrc(featured.featuredImage)}
-                alt={featured.title}
+                alt={featured.featuredImageAlt || featured.title}
                 width={920}
                 height={540}
               />
@@ -312,7 +312,7 @@ function GuidanceColumnArchive({
                   <div className="insights-list-thumb">
                     <Image
                       src={resolveInsightsImageSrc(post.featuredImage)}
-                      alt={post.title}
+                      alt={post.featuredImageAlt || post.title}
                       width={240}
                       height={160}
                     />

@@ -5,6 +5,7 @@
  */
 export const TAX_ACCOUNTING_COLUMN_FILES = {
   ko: [
+    '662-taiwan-departure-income-tax-agent-article-72.md', // ship-20261023-G4
     '646-taiwan-mixed-technology-contract-source-contribution-evidence.md',
     '645-taiwan-company-missed-cpa-audit-moea-filing-director-fines.md',
     '553-taiwan-korean-parent-service-fees-evidence.md',
@@ -35,6 +36,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
   ] as string[],
   ja: [
+    '662-taiwan-departure-income-tax-agent-article-72.md', // ship-20261023-G4
     '646-taiwan-mixed-technology-contract-source-contribution-evidence.md',
     '645-taiwan-company-missed-cpa-audit-moea-filing-director-fines.md',
     '554-taiwan-dividend-japanese-parent-tax-records.md',
@@ -65,6 +67,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
   ] as string[],
   en: [
+    '662-taiwan-departure-income-tax-agent-article-72.md', // ship-20261023-G4
     '646-taiwan-mixed-technology-contract-source-contribution-evidence.md',
     '645-taiwan-company-missed-cpa-audit-moea-filing-director-fines.md',
     '555-taiwan-company-records-us-form-5471.md',
@@ -97,6 +100,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '385-taiwan-cfc-rules-vietnamese-subsidiary-incentives.md',
   ] as string[],
   'zh-hant': [
+    '662-taiwan-departure-income-tax-agent-article-72.md', // ship-20261023-G4
     '646-taiwan-mixed-technology-contract-source-contribution-evidence.md',
     '645-taiwan-company-missed-cpa-audit-moea-filing-director-fines.md',
     '301-taiwan-subsidiary-corporate-income-tax-calendar.md',
@@ -130,6 +134,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
 
 /** Board columns published after 2026-10-06, by file-number prefix; every other board file is 2026-10-06. */
 const LATER_PUBLICATION_DATES: Readonly<Record<string, string>> = {
+  '662': '2026-10-23',
   '646': '2026-10-22',
   '645': '2026-10-22',
   '553': '2026-10-14',

@@ -14,7 +14,6 @@ import ZhHantHeroMedia from '@/components/zh-hant-home/ZhHantHeroMedia';
 import ZhHantHeroTrust from '@/components/zh-hant-home/ZhHantHeroTrust';
 import ZhHantPracticeFocus from '@/components/zh-hant-home/ZhHantPracticeFocus';
 import ZhHantMonoIcon, { ZH_PRACTICE_ICON } from '@/components/zh-hant-icons/ZhHantMonoIcon';
-import { ZH_HANT_FEATURED_COLUMN_SLUGS } from '@/data/zh-hant-column-curation';
 import { ZH_HANT_DOMESTIC_SERVICE_ORDER, ZH_HANT_SERVICE_SCENARIOS } from '@/components/zh-hant-home/zh-hant-service-scenarios';
 import { BuilderSurfaceProvider } from '@/lib/builder/surface-context';
 import type { FAQItem } from '@/data/faq-content';
@@ -90,7 +89,7 @@ export default function ZhHantHomeBody({ posts, faqItems, heroOverrides = {}, at
         renderIcon={(index) => <ZhHantMonoIcon name={ZH_PRACTICE_ICON[index] ?? 'company'} size={48} />}
       />
       <ZhHantPracticeFocus />
-      <InsightsArchiveSection locale="zh-hant" posts={posts} presentation="editorial" pinnedSlugs={ZH_HANT_FEATURED_COLUMN_SLUGS} />
+      <InsightsArchiveSection locale="zh-hant" posts={posts} presentation="editorial" />
       <ZhHantEngagement />
       <BuilderSurfaceProvider nodeId="home-attorney" mode="published" overrides={attorneyIntro === undefined ? {} : { 'intro-primary': attorneyIntro }} selectedSurfaceKey={null}>
         <HomeAttorneySplit locale="zh-hant" presentation="editorial" />

@@ -4,6 +4,7 @@ import DecorativeAutoplayVideo from '@/components/DecorativeAutoplayVideo';
 import { DECORATIVE_VIDEO_CONTROL_LABELS } from '@/components/decorative-video-controls';
 import { ARCHIVE_INTRO_COPY } from '@/lib/insights/archive-copy';
 import { JA_PINNED_COLUMN_SLUGS } from '@/components/ja-design/ja-arrangement';
+import { getColumnPublicationDate } from '@/lib/column-post';
 import { JA_KOU_NEW, JA_KOU_REUSED } from './ja-copy';
 import { KOU } from './ja-kou-media';
 import JaChevron from './JaChevron';
@@ -14,25 +15,21 @@ import { JaPhrases } from './JaPhrases';
 import k from './JaKou.module.css';
 import r from './JaRead.module.css';
 
-type ReadPost = JaGlyphPost & { date: string };
+type ReadPost = JaGlyphPost & { date: string; publicationDate?: string; columnNumber?: number };
 
-const dateValue = (post: ReadPost) => {
-  const parts = (post.date || post.dateDisplay).match(/(\d{4})\D+(\d{1,2})\D+(\d{1,2})/);
-  return parts ? Date.UTC(Number(parts[1]), Number(parts[2]) - 1, Number(parts[3])) : Number.NEGATIVE_INFINITY;
-};
-
-/** The six cornerstone columns (pinned order), then the six newest others (CONCEPT-V2 §5 C5, D5). */
+/** Latest six publications first, then the remaining cornerstone columns. */
 export function selectJaGalleryPosts(posts: readonly ReadPost[]): ReadPost[] {
   const bySlug = new Map(posts.map((post) => [post.slug, post] as const));
   const pinned = JA_PINNED_COLUMN_SLUGS.map((slug) => bySlug.get(slug)).filter((post): post is ReadPost => Boolean(post));
-  const pinnedSlugs = new Set(pinned.map((post) => post.slug));
   const newest = posts
     .map((post, index) => ({ post, index }))
-    .filter(({ post }) => !pinnedSlugs.has(post.slug))
-    .sort((a, b) => dateValue(b.post) - dateValue(a.post) || a.index - b.index)
+    .sort((a, b) => getColumnPublicationDate(b.post).localeCompare(getColumnPublicationDate(a.post))
+      || (b.post.columnNumber ?? 0) - (a.post.columnNumber ?? 0)
+      || a.index - b.index)
     .slice(0, 6)
     .map(({ post }) => post);
-  return [...pinned, ...newest];
+  const newestSlugs = new Set(newest.map((post) => post.slug));
+  return [...newest, ...pinned.filter((post) => !newestSlugs.has(post.slug))];
 }
 
 /**

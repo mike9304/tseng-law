@@ -16,7 +16,7 @@ import { isAiAuthoredColumn } from '@/lib/ai-authored-columns';
 
 /** Pieces may land separately after review; validate every batch file present. */
 const ALLOWED_NUMBERS: Partial<Record<IssueBoardLocale, number[]>> = {
-  ko: [1],
+  ko: [1, 19],
   ja: [2, 3, 9, 10],
   'zh-hant': [],
   en: [6, 7, 11, 12],

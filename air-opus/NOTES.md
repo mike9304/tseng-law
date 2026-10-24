@@ -405,3 +405,4 @@
 - 10-25 06:35 KST 대기: ref 재정렬(6b96205). Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.
 - 10-25 06:44 KST 대기: ref 재정렬(d0f878b). Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.
 - 10-25 06:55 KST 대기: ref 재정렬(fd04f73). Air push 06:19 이후 밀림(NOTES만). Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.
+- 10-25 07:04 KST 대기: Air push 06:19 이후 밀림 — 재정렬 백그라운드 실행. Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.

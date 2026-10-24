@@ -31,15 +31,15 @@ Para um profissional português que termina um emprego em Taiwan, a primeira tar
 
 O [artigo 2 da Lei das Normas Laborais](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=2) define salário pela remuneração do trabalho, incluindo prestações regulares abrangidas pela norma, qualquer que seja a designação. A mesma disposição associa o contrato de trabalho a uma relação de subordinação. Chamar «prestador» a alguém ou «prémio» a um pagamento não encerra a discussão.
 
-Uma quantia mensal ligada ao trabalho e um reembolso de bilhetes contra comprovativos não devem ser somados sem explicação. No primeiro caso, interessa a obrigação de remunerar; no segundo, o acordo sobre despesas e os documentos da deslocação. Para um prémio, reúna o plano aplicável, os objetivos, os resultados comunicados e as condições de atribuição ou pagamento. Não se presume que todos os prémios sejam salariais ou devidos.
+Uma quantia mensal ligada ao trabalho e um reembolso de bilhetes contra comprovativos não devem ser somados sem explicação. No primeiro caso, interessa a obrigação de remunerar; no segundo, o acordo sobre despesas e os documentos da deslocação. Se se tratar de um prémio, convém reunir o plano aplicável, os objetivos, os resultados comunicados e as condições de atribuição ou pagamento. Não se presume que todos os prémios sejam salariais ou devidos.
 
 Em litígios salariais, o [artigo 37 da Lei dos Litígios Laborais](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=37) estabelece uma presunção quando se prova que o trabalhador recebeu do empregador uma prestação em razão da relação laboral. Presume-se então a natureza remuneratória. A presunção tem esse pressuposto probatório e admite discussão; não demonstra automaticamente o direito a um prémio que nunca foi pago.
 
 ## Recibos e horários antes de perder acesso
 
-Nos termos do artigo 23, o empregador deve fornecer os elementos de cálculo das rubricas e conservar os registos salariais durante cinco anos. Compare-os com os valores creditados na conta. Perante um total líquido divergente, identifique os descontos antes de fazer uma simples subtração ao salário bruto.
+Nos termos do artigo 23, o empregador deve fornecer os elementos de cálculo das rubricas e conservar os registos salariais durante cinco anos. Esses elementos podem ser confrontados com os valores creditados na conta. Se o líquido não bater certo, importa identificar cada desconto em vez de o subtrair simplesmente ao salário bruto.
 
-Quanto às horas, o [artigo 30](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=30) exige registos de assiduidade conservados durante cinco anos, com indicação diária até ao minuto. A cópia pedida pelo trabalhador não pode ser recusada. Identifique o período relevante no pedido.
+Quanto às horas, o [artigo 30](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=30) exige registos de assiduidade conservados durante cinco anos, com indicação diária até ao minuto. A cópia pedida pelo trabalhador não pode ser recusada. O pedido deve indicar o período relevante.
 
 Ficar ligado ao sistema depois do horário prova trabalho suplementar? O [artigo 38 da Lei dos Litígios Laborais](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=38) presume que o tempo inscrito no registo de assiduidade corresponde a funções exercidas com consentimento do empregador. Essa presunção não transforma qualquer ligação informática num crédito automaticamente calculado. Escalas, instruções e tarefas realizadas ajudam a esclarecer os períodos discutidos.
 
@@ -47,9 +47,9 @@ Guarde apenas documentação a que tenha acesso legítimo e que seja pertinente 
 
 ## Descontos no acerto de contas
 
-Quando o contrato termina nos termos da Lei das Normas Laborais, o [artigo 9 do seu regulamento de execução](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=9) exige que o empregador liquide imediatamente os salários ao trabalhador. Registe a data da cessação.
+Quando o contrato termina nos termos da Lei das Normas Laborais, o [artigo 9 do seu regulamento de execução](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=9) exige que o empregador liquide imediatamente os salários ao trabalhador. A data da cessação deve, por isso, ficar registada.
 
-Houve uma penalização deduzida ao salário? Peça o fundamento e o cálculo. O [artigo 26 da Lei das Normas Laborais](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=26) proíbe a retenção antecipada de salários a título de cláusula penal ou indemnização. A norma não decide, por si só, todas as pretensões que um empregador possa apresentar.
+Houve uma penalização deduzida ao salário? Há que pedir o fundamento e o cálculo. O [artigo 26 da Lei das Normas Laborais](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=26) proíbe a retenção antecipada de salários a título de cláusula penal ou indemnização. A norma não decide, por si só, todas as pretensões que um empregador possa apresentar.
 
 Uma alegação de despesas de formação exige ainda examinar o acordo e as condições legais. O [artigo sobre período mínimo de trabalho](/pt/columns/taiwan-mandatory-employment-period) trata desse tema. Quanto à eventual [indemnização por despedimento](/pt/columns/taiwan-labor-severance-law), o cálculo deve ficar separado dos salários já vencidos.
 
@@ -59,7 +59,7 @@ Segundo o [artigo 126 do Código Civil](https://law.moj.gov.tw/LawClass/LawSingl
 
 Em regra, a [Lei dos Litígios Laborais, artigo 16](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=16), exige mediação judicial laboral antes da ação, com as exceções previstas na própria norma. Uma ação diretamente apresentada nos casos abrangidos é tratada como pedido de mediação. A escolha da via deve considerar os prazos concretos e os documentos disponíveis.
 
-Para uma [consulta sobre salários em Taiwan](/pt/contact), envie a wei@hoveringlaw.com.tw um resumo não confidencial, o nome do empregador e as datas de vencimento conhecidas; confirme a comunicação em inglês, chinês, coreano ou japonês antes de enviar recibos, extratos ou documentos pessoais.
+Para uma [consulta sobre salários em Taiwan](/pt/contact), pode enviar para wei@hoveringlaw.com.tw um resumo não confidencial, o nome do empregador e as datas de vencimento conhecidas. As consultas decorrem em inglês, chinês, coreano ou japonês, e a forma de comunicação deve ser confirmada antes de enviar recibos, extratos ou documentos pessoais.
 
 No mapa final, cada rubrica deve ter uma base, um período, uma data de vencimento e uma indicação do que já foi recebido.
 

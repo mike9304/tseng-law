@@ -35,13 +35,13 @@ Le contrat identifie l'employeur et la rémunération. Bulletins, virements et r
 
 Que signifie le document proposé au départ ? Une quittance, une transaction et une démission ne produisent pas les mêmes effets. Lorsqu'un employeur ne verse pas la rémunération conformément au contrat, [l'article 14, alinéa 1, point 5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=14) permet au salarié de rompre sans préavis. Ce fondement mérite d'être examiné avant de signer une démission ordinaire. La [présentation de l'indemnité de rupture à Taïwan](/fr/columns/taiwan-labor-severance-law) traite du calcul, qui dépend du régime et des périodes d'ancienneté concernés.
 
-## Une activité suspendue et une fermeture constatée
+## Activité suspendue ou fermeture constatée
 
 Le fonds intervient en cas de fermeture, liquidation ou déclaration de faillite, après une demande de paiement demeurée infructueuse. Une entreprise encore en activité ou simplement à l'arrêt avec possibilité de reprise ne remplit pas cette condition. Le [portail officiel taïwanais](https://www.gov.tw/News_Content_26_869668) oriente alors les salariés vers l'autorité locale du travail pour faire traiter le différend salarial.
 
 Pour une fermeture, [l'article 8 du règlement du fonds](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030005) demande une pièce de l'autorité compétente constatant la radiation ou une autre situation reconnue de cessation d'activité. La disparition du site internet ou l'absence de réponse du responsable ne constitue pas cette pièce. Ces faits peuvent être conservés et signalés à l'autorité chargée de vérifier la situation.
 
-L'employeur doit aussi avoir cotisé au fonds. Une régularisation ultérieure des cotisations impayées peut permettre la demande, selon l'article 7 du même règlement. Le dossier doit donc vérifier cette participation. Une carte d'assurance du salarié ne répond pas, à elle seule, à toutes les conditions du fonds.
+L'employeur doit aussi avoir cotisé au fonds. Une régularisation ultérieure des cotisations impayées peut permettre la demande, selon l'article 7 du même règlement. Cette participation doit donc être vérifiée. Une carte d'assurance du salarié ne répond pas, à elle seule, à toutes les conditions du fonds.
 
 ## Les plafonds et la preuve de la créance
 
@@ -53,11 +53,11 @@ Si le responsable ne peut pas confirmer la dette, la [notice du Bureau](https://
 
 En liquidation ou en faillite, l'article 9 du [règlement](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030005) exige en outre la preuve de la déclaration de créance auprès du liquidateur ou de l'administrateur de faillite. Selon l'article 10, les salariés d'un même employeur présentent en principe une demande commune, sauf circonstances particulières. Les demandeurs doivent coordonner leur calendrier.
 
-## Un retour en France demande une organisation du dossier
+## Organiser le dossier avant de rentrer en France
 
 Les coordonnées de réception des notifications, les pouvoirs du représentant et les documents encore manquants devraient être fixés avant le départ. L'article 15 du [règlement du fonds](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030005) prévoit le versement sur un compte étranger désigné par le salarié, avec prise en charge des frais étrangers de transfert dans les conditions du texte. Cette possibilité de paiement ne dispense pas de satisfaire les conditions d'attribution.
 
-Une [demande de contact](/fr/contact) à [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) peut préciser, sans pièces sensibles, le nom de l'employeur, les mois impayés et l'existence d'une notification de fermeture. Les consultations se tiennent en anglais, chinois, japonais ou coréen ; les modalités linguistiques sont à convenir avant l'examen des documents. Cette information générale ne détermine pas une créance individuelle. Le tableau de paie et la preuve datée de cessation d'activité restent les deux points de départ du dossier.
+Une [demande de contact](/fr/contact) à [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) peut préciser, sans pièces sensibles, le nom de l'employeur, les mois impayés et l'existence d'une notification de fermeture. Les consultations se tiennent en anglais, chinois, japonais ou coréen ; la langue se règle avant l'examen des documents. Cette information générale ne détermine pas une créance individuelle. Le tableau de paie et la preuve datée de cessation d'activité restent les deux points de départ du dossier.
 
 ## Sources
 

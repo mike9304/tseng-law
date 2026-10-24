@@ -47,7 +47,7 @@ Per ricostruire questi fatti sono utili cataloghi datati, fatture associate ai p
 
 L’[articolo 57](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=57) consente ai soggetti interessati di chiedere l’invalidazione per i motivi previsti. Per il motivo fondato sul deposito imitativo del distributore, l’[articolo 58](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=58) pone il limite di cinque anni dalla pubblicazione della registrazione.
 
-Anche un deposito in malafede può restare soggetto al limite quinquennale. L’eccezione del secondo comma riguarda soltanto i motivi ai numeri 9 e 11 dell’articolo 30, tra cui quello relativo ai marchi notori, e richiede i relativi presupposti. La notorietà richiede prove proprie. Cambiare l’etichetta della contestazione al distributore non basta.
+Anche un deposito in malafede può restare soggetto al limite quinquennale. L’eccezione del secondo comma riguarda soltanto i motivi ai numeri 9 e 11 dell’articolo 30, tra cui quello relativo ai marchi notori, e richiede i relativi presupposti. La notorietà richiede prove proprie. Non basta riproporre la stessa contestazione sotto un’altra etichetta.
 
 Se le parti negoziano una cessione, il documento dovrebbe identificare ogni registrazione, i prodotti e servizi interessati, il prezzo eventualmente concordato e chi presenta gli atti. In base all’[articolo 42 della legge sui marchi](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=42), un trasferimento non registrato non è opponibile ai terzi. La chiusura del rapporto commerciale richiede inoltre accordi su scorte, siti e materiali promozionali; questi elementi non vanno confusi con il trasferimento del diritto.
 
@@ -69,7 +69,7 @@ No. I tre mesi decorrono dalla pubblicazione della registrazione.
 
 Occorre verificare separatamente il titolo sul marchio e gli atti necessari a trasferirlo o contestarlo.
 
-Il rapporto tra distributore e presenza locale è trattato anche nell’articolo sull’[ingresso commerciale a Taiwan](/it/columns/taiwan-semiconductor-market-entry). Per una prima richiesta ai [contatti dello studio](/it/contact) o a wei@hoveringlaw.com.tw bastano nome della controparte, numero della pratica, data di pubblicazione e una sintesi non riservata. Le lingue di consulenza sono inglese, cinese, giapponese e coreano; la comunicazione per chi usa soltanto l’italiano va concordata. Prima di proseguire la trattativa, il calendario deve riportare il termine riferito a ciascuna registrazione.
+Il rapporto tra distributore e presenza locale è trattato anche nell’articolo sull’[ingresso commerciale a Taiwan](/it/columns/taiwan-semiconductor-market-entry). Per una prima richiesta ai [contatti dello studio](/it/contact) o a wei@hoveringlaw.com.tw bastano nome della controparte, numero della pratica, data di pubblicazione e una sintesi non riservata. Le lingue di consulenza sono inglese, cinese, giapponese e coreano; la comunicazione per chi usa soltanto l’italiano va concordata. Prima di proseguire la trattativa, conviene segnare in calendario il termine di ciascuna registrazione.
 
 ## Fonti ufficiali
 

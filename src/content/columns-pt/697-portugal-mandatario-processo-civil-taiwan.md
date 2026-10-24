@@ -43,19 +43,19 @@ Essa exceção não significa que toda a procuração de primeira instância exi
 
 Entre os atos sujeitos a poderes especiais pelo artigo 70 encontram-se a renúncia, a aceitação do pedido, a desistência, a transação, a reconvenção, os recursos, a revisão e a designação de outro mandatário. A norma estende a exigência aos atos de execução e ao recebimento do objeto em litígio. Eventuais restrições devem constar da procuração ou do registo processual.
 
-Que decisão ficará reservada ao cliente? Pode ser necessário distinguir a negociação de uma proposta da autorização para a aceitar, ou a condução da execução da receção de valores. Discuta estas escolhas antes de conferir os poderes. Limites comunicados informalmente devem ser compatibilizados com o instrumento apresentado ao tribunal.
+Que decisão ficará reservada ao cliente? Pode ser necessário distinguir a negociação de uma proposta da autorização para a aceitar, ou a condução da execução da receção de valores. Estas escolhas devem ser discutidas antes de conferir os poderes. Limites comunicados informalmente devem ser compatibilizados com o instrumento apresentado ao tribunal.
 
 ## A notificação chega a Taiwan, a decisão está em Portugal
 
-Quando os poderes de receber notificações não estejam limitados, o [artigo 132](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=132) determina que a notificação seja feita ao mandatário. O juiz pode, quando necessário, ordenar a notificação à própria parte. A circulação interna do documento entre Taiwan e Portugal precisa, por isso, de um responsável e de um canal acordado.
+Quando os poderes de receber notificações não estejam limitados, o [artigo 132](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=132) determina que a notificação seja feita ao mandatário. O juiz pode, quando necessário, ordenar que a notificação seja feita também à própria parte. A circulação interna do documento entre Taiwan e Portugal precisa, por isso, de um responsável e de um canal acordado.
 
-Registe a data da notificação processual. Não use apenas a data em que alguém abriu o email de encaminhamento em Portugal. Para uma empresa, é útil prever quem substitui o responsável durante férias ou deslocações e quem pode aprovar uma resposta urgente.
+Conta a data da notificação processual, não a data em que alguém abriu em Portugal o email de encaminhamento. Para uma empresa, é útil prever quem substitui o responsável durante férias ou deslocações e quem pode aprovar uma resposta urgente.
 
 Ter mandatário também não assegura que todo o processo decorra sem comparência pessoal. O [artigo 203](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=203) permite ao tribunal ordenar a presença da parte ou do seu representante legal para esclarecer o litígio. A mesma disposição permite exigir traduções de documentos estrangeiros. Eventuais alternativas à presença devem ser tratadas no processo concreto.
 
 ## Um conjunto documental que possa ser conferido
 
-Conserve o documento português juntamente com a tradução e atribua-lhes a mesma referência. Nomes, datas, anexos e assinaturas devem ser localizáveis sem reconstruir toda a correspondência. Se a peça recebida do tribunal contiver um prazo, envie-a integralmente pelo canal definido, incluindo a informação sobre a sua receção.
+O documento português e a respetiva tradução devem ficar juntos, com a mesma referência. Nomes, datas, anexos e assinaturas devem ser localizáveis sem reconstruir toda a correspondência. Se a peça recebida do tribunal contiver um prazo, deve seguir na íntegra pelo canal definido, com a indicação de quando foi recebida.
 
 Para iniciar uma [consulta sobre representação](/pt/contact), escreva a wei@hoveringlaw.com.tw com um resumo não confidencial, a contraparte, o tribunal e o prazo conhecido; as consultas decorrem em inglês, chinês, coreano ou japonês, e as condições de comunicação devem ser confirmadas antes de enviar documentação reservada. O primeiro email não equivale à aceitação de um mandato.
 

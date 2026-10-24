@@ -31,13 +31,13 @@ Una traduzione sommaria con la sola parola «convocazione» perde proprio questa
 
 L’[articolo 99](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=99) prescrive l’interprete quando la persona interrogata non comprende la lingua; disciplina anche le difficoltà uditive o linguistiche e, quando necessario, l’uso della forma scritta. La disposizione si applica, con riserva delle norme speciali, anche alle altre persone interrogate o sentite.
 
-Per un visitatore italiano, conviene indicare tempestivamente quale lingua comprende davvero per una deposizione dettagliata: usare l’inglese nelle riunioni commerciali non dimostra di capire termini penali o domande tecniche. La segnalazione preventiva facilita l’organizzazione dell’interprete. Non è una condizione che crea il diritto.
+Per un visitatore italiano, conviene indicare tempestivamente quale lingua comprende davvero per una deposizione dettagliata: usare l’inglese nelle riunioni commerciali non dimostra di capire termini penali o domande tecniche. La segnalazione preventiva facilita l’organizzazione dell’interprete. Il diritto, però, non dipende da essa.
 
 Durante l’audizione, un errore su una data, una somma o il soggetto che ha autorizzato un pagamento va segnalato subito. È ragionevole chiedere che la domanda venga ripetuta e che una formulazione non compresa sia chiarita. Il verbale deve poter essere confrontato con ciò che si è effettivamente dichiarato.
 
 ## Per l’indagato: silenzio, difensore e prove favorevoli
 
-La contestazione deve essere comunicata prima dell’interrogatorio. L’[articolo 95](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95) richiede inoltre di informare la persona della facoltà di non rispondere, della possibilità di nominare un difensore e di chiedere l’acquisizione di prove favorevoli. L’accesso al sistema taiwanese di assistenza legale (法律扶助) richiede invece i requisiti previsti dalla norma. La cittadinanza straniera, da sola, non dimostra l’accesso automatico al beneficio.
+La contestazione deve essere comunicata prima dell’interrogatorio. L’[articolo 95](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95) richiede inoltre di informare la persona della facoltà di non rispondere, della possibilità di nominare un difensore e di chiedere l’acquisizione di prove favorevoli. L’accesso al sistema taiwanese di assistenza legale (法律扶助) richiede invece i requisiti previsti dalla norma. La cittadinanza straniera, da sola, non basta per accedervi.
 
 Chi è indagato dalla polizia giudiziaria può già nominare un difensore, secondo l’[articolo 27](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=27); a queste audizioni l’[articolo 100-2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=100-2) estende le disposizioni del capitolo sull’interrogatorio. Il momento per chiarire l’assistenza può quindi precedere l’incontro con il pubblico ministero.
 
@@ -55,7 +55,7 @@ Preparare i documenti serve a distinguere ciò che si è visto da ciò che è st
 
 L’indagato regolarmente convocato che non compare senza giustificato motivo può essere accompagnato coattivamente, secondo l’[articolo 75](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=75). Per il testimone regolarmente convocato dal pubblico ministero o dal giudice che non compare senza giustificato motivo, l’[articolo 178](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=178) consente al tribunale di applicare una sanzione fino a 30.000 dollari taiwanesi e permette l’accompagnamento coattivo. La notifica della polizia a un testimone segue invece l’[articolo 196-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=196-1), che non richiama queste conseguenze dell’articolo 178. Va quindi identificato il tipo di atto ricevuto.
 
-Un volo già acquistato va comunicato tempestivamente, con richiesta di istruzioni e conferma dell’eventuale nuova data. Le questioni relative alla partenza richiedono inoltre la verifica di eventuali provvedimenti specifici. Non si ricavano dal solo titolo della convocazione.
+Un volo già acquistato va comunicato tempestivamente, con richiesta di istruzioni e conferma dell’eventuale nuova data. Se è in dubbio la partenza stessa, va verificato se esistano provvedimenti specifici nei propri confronti. Il solo titolo della convocazione non basta a saperlo.
 
 ## Domande frequenti
 

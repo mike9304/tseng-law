@@ -29,11 +29,11 @@ Estas reglas parten de una relación laboral sujeta a las normas taiwanesas que 
 
 ## La nómina y el ingreso bancario cuentan cosas distintas
 
-Una tabla por periodos puede reunir salario pactado, cantidad abonada, fecha de pago y diferencia reclamada. El contrato permite comprobar lo pactado. Las horas extraordinarias, las comisiones y los gastos reembolsables merecen líneas separadas. «Finiquito» no explica cada partida.
+Una tabla por periodos puede reunir salario pactado, cantidad abonada, fecha de pago y diferencia reclamada. El contrato permite comprobar lo pactado. Las horas extraordinarias, las comisiones y los gastos reembolsables merecen líneas separadas. Un papel titulado «finiquito» no desglosa por sí solo cada partida.
 
 El [artículo 22 de la Ley de Normas Laborales](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=22) establece el pago íntegro y directo al trabajador, con las excepciones legales o pactadas que contempla. El [artículo 23](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=23) exige entregar el detalle del cálculo salarial y conservar el registro de salarios durante cinco años. La transferencia permite contrastar lo cobrado.
 
-¿La empresa llama «gratificación» a una cantidad pagada regularmente? El nombre no resuelve toda la controversia. En una disputa salarial, el [artículo 37 de la Ley de Procedimiento Laboral](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=37) presume que una prestación es remuneración del trabajo cuando se acredita que se recibió del empleador por la relación laboral. Aún debe justificarse el importe reclamado.
+¿La empresa llama «gratificación» a una cantidad pagada regularmente? El nombre no resuelve toda la controversia. En una disputa salarial, el [artículo 37 de la Ley de Procedimiento Laboral](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=37) presume que una prestación es remuneración del trabajo cuando se acredita que se recibió del empleador por la relación laboral. El importe reclamado sigue necesitando prueba.
 
 ## Las horas necesitan una fecha y una tarea
 
@@ -57,7 +57,7 @@ Las prestaciones periódicas comprendidas en el [artículo 126 del Código Civil
 
 Sobre la posible indemnización al terminar la relación, puede consultarse [la salida voluntaria y la indemnización laboral](/es/columns/taiwan-voluntary-resignation-severance).
 
-Para una primera [consulta](/es/contact), [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) permite acordar antes la comunicación en inglés, chino, japonés o coreano. Basta un resumen no sensible, el empleador para comprobar conflictos, el vínculo con Taiwán y las fechas de vencimiento; no es necesario enviar inicialmente identificaciones ni extractos completos. El mensaje no crea un encargo. La nómina más antigua pendiente y su fecha de pago prevista merecen quedar al principio de la carpeta.
+Una primera [consulta](/es/contact) puede hacerse por correo a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); se atiende en inglés, chino, japonés o coreano, y el idioma se acuerda antes. Basta un resumen sin datos sensibles, el nombre del empleador para comprobar conflictos, el vínculo con Taiwán y las fechas de vencimiento; al principio no hace falta enviar documentos de identidad ni extractos completos. El mensaje no crea un encargo. La nómina pendiente más antigua, con la fecha en que debía pagarse, va al principio de la carpeta.
 
 Información general sobre salarios y procedimiento taiwanés; la clasificación del trabajo y de cada cantidad requiere revisar los documentos.
 

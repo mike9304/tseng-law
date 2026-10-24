@@ -1,5 +1,5 @@
 ---
-title: "Separación desde España y patrimonio en Taiwán: el divorcio y los bienes requieren preguntas distintas"
+title: "Divorcio desde España y patrimonio en Taiwán: la ley del divorcio y la de los bienes pueden no coincidir"
 seoTitle: "Divorcio desde España con bienes en Taiwán"
 summary: "La nacionalidad, el domicilio y los pactos matrimoniales pueden determinar leyes distintas para el divorcio y el régimen patrimonial al plantear el asunto en Taiwán."
 published: "2026-10-23"
@@ -23,7 +23,7 @@ audience: ["es"]
 author: "legal-ai-assistant"
 ---
 
-¿Qué ley utiliza un tribunal taiwanés para liquidar el patrimonio de un matrimonio cuando un cónyuge vive en España? Para responder necesita conocer las nacionalidades, los domicilios y los pactos matrimoniales de ambos.
+¿Qué ley utiliza un tribunal taiwanés para liquidar el patrimonio de un matrimonio cuando un cónyuge vive en España? Para responder, el tribunal necesita conocer las nacionalidades, los domicilios y los pactos matrimoniales de ambos.
 
 Una cronología breve ayuda a situarlos: nacionalidades de ambos, fecha del matrimonio, domicilios durante la convivencia, separación y procedimientos ya iniciados. Conviene adjuntar a esa cronología una lista de documentos disponibles, sin concluir por adelantado que residir en España convierte todo el conflicto en un asunto de derecho español.
 
@@ -47,7 +47,7 @@ Si parte del asesoramiento corresponde al derecho español, deberá intervenir u
 
 Los derechos reales se someten, como regla, a la ley del lugar donde se encuentra el bien, según el [artículo 38](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=38). Para un inmueble taiwanés, el [artículo 758 del Código Civil](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=758) exige inscripción para que produzcan efecto la adquisición, constitución, pérdida o modificación de derechos reales mediante negocio jurídico, que además debe constar por escrito.
 
-Junto a la información registral conviene reunir el contrato de adquisición, la hipoteca y los justificantes de financiación. Una transferencia desde una cuenta española merece conservarse con su concepto y las comunicaciones que la acompañaron. La anotación «para la casa» puede dejar sin explicar si se planteó como préstamo, aportación o regalo.
+Junto a la información registral conviene reunir el contrato de adquisición, la hipoteca y los justificantes de financiación. Si hubo transferencias desde una cuenta española, conviene guardarlas con su concepto y los mensajes que las acompañaron. La anotación «para la casa» puede dejar sin explicar si se planteó como préstamo, aportación o regalo.
 
 También cuentan las fechas. Un inventario puede distinguir bienes anteriores al matrimonio, adquisiciones posteriores, herencias, donaciones y deudas, indicando para cada partida qué documento existe. Los importes estimados deben identificarse como estimaciones, especialmente si hay dos monedas o valoraciones antiguas.
 
@@ -59,7 +59,7 @@ El tribunal puede ajustar o excluir el reparto si resulta injusto. La ley exige 
 
 La reclamación se extingue tras dos años sin ejercicio desde que su titular conoce la diferencia residual; también cuando pasan cinco años desde que terminó el régimen legal. Son dos referencias temporales distintas. Reunir documentos no sustituye el ejercicio oportuno del derecho.
 
-Para delimitar el asunto taiwanés, la [página de contacto](/es/contact) remite a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Primero debe acordarse la comunicación, disponible para consultas en inglés, chino, japonés o coreano; basta inicialmente un resumen no sensible, la identidad de la contraparte para comprobar conflictos, el vínculo con Taiwán y los plazos conocidos. El correo no crea un encargo. La primera carpeta puede contener la cronología de domicilios y la referencia de cada bien, sin remitir todavía el archivo familiar completo.
+Para delimitar la parte taiwanesa del asunto, la [página de contacto](/es/contact) remite a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Las consultas se atienden en inglés, chino, japonés o coreano, y el idioma se acuerda antes; al principio basta un resumen sin datos sensibles, la identidad de la contraparte para comprobar conflictos, el vínculo con Taiwán y los plazos conocidos. El correo no crea un encargo. La primera carpeta puede contener la cronología de domicilios y la referencia de cada bien, sin remitir todavía el archivo familiar completo.
 
 Información general desde la perspectiva del derecho taiwanés; la ley aplicable, la competencia y los efectos de resoluciones extranjeras dependen del caso.
 

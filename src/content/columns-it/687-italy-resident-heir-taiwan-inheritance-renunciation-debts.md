@@ -67,7 +67,7 @@ Non necessariamente. Conta la conoscenza della propria chiamata, quando si appli
 
 Non automaticamente, ma restano obblighi di gestione e casi che possono superare o far perdere il limite di responsabilità.
 
-Per il quadro familiare generale si può leggere l’articolo su [successione e tutela dei minori a Taiwan](/it/columns/taiwan-inheritance-custody-analysis). Una richiesta attraverso i [contatti dello studio](/it/contact) o a wei@hoveringlaw.com.tw può indicare cittadinanza del defunto, domicilio, data del decesso, collegamento con Taiwan e termine da verificare. I documenti personali saranno richiesti attraverso modalità concordate. La consulenza è in inglese, cinese, giapponese e coreano; l’italiano richiede una verifica delle modalità di comunicazione. Nel frattempo, va conservato il messaggio che documenta quando si è appresa la propria chiamata.
+Per il quadro familiare generale si può leggere l’articolo su [successione e tutela dei minori a Taiwan](/it/columns/taiwan-inheritance-custody-analysis). Una richiesta attraverso i [contatti dello studio](/it/contact) o a wei@hoveringlaw.com.tw può indicare cittadinanza del defunto, domicilio, data del decesso, collegamento con Taiwan e termine da verificare. I documenti personali saranno richiesti attraverso modalità concordate. La consulenza è in inglese, cinese, giapponese e coreano; chi scrive in italiano dovrà prima concordare come comunicare. Nel frattempo, va conservato il messaggio che documenta quando si è appresa la propria chiamata.
 
 ## Fonti ufficiali
 

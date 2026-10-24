@@ -28,7 +28,7 @@ Ein unterschriebenes Protokoll des Factory Acceptance Tests (FAT) belegt zunäch
 
 Für einen deutschen Maschinenlieferanten beginnt die Forderungsprüfung deshalb mit einer Zuordnung: Welche Gesellschaft schuldet welchen Betrag, und welches Ereignis soll die Zahlung auslösen? Ein lokaler Integrator kann die Inbetriebnahme begleiten, ohne selbst Käufer zu sein. Auch eine Unterschrift des Bedienpersonals beantwortet noch nicht, welche rechtsgeschäftlichen Erklärungen diese Person abgeben durfte.
 
-## Abnahmebegriffe brauchen einen Vertragsinhalt
+## Was „Abnahme“ im Vertrag heißt
 
 Bezeichnet „acceptance“ den erfolgreichen Probelauf, eine Freigabe zur Verschiffung oder die endgültige Bestätigung der Gesamtleistung? Die Begriffe FAT und SAT allein legen das nicht fest. Zusammen zu lesen sind die Bestellung, einbezogene Lieferbedingungen, technische Spezifikation, Prüfpläne und spätere Änderungsvereinbarungen; ihre Rangfolge kann darüber entscheiden, ob ein nachträglich verlangter Dauerlauf schon zum ursprünglichen Leistungsumfang gehörte.
 
@@ -42,11 +42,11 @@ Für einen Werkvertrag sieht [Artikel 505](https://law.moj.gov.tw/LawClass/LawSi
 
 Eine offene Mängelliste verlangt eine genauere Trennung. Fehlt die geschuldete Leistung, ist sie mangelhaft, oder wünscht der Kunde eine zusätzliche Funktion? Diese Einordnung beeinflusst die Zahlungsforderung. Nach [Artikel 264](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=264) kann bei gegenseitigen vertraglichen Verpflichtungen die eigene Leistung bis zur Gegenleistung verweigert werden, sofern keine Vorleistungspflicht besteht. Bei bereits erbrachter Teilleistung darf die Verweigerung nach den Umständen nicht gegen Treu und Glauben verstoßen. Weder ein offener Restpunkt noch der Hinweis auf eine laufende Produktion entscheidet diese Frage allein.
 
-Bei mangelhafter Werkleistung kann der Besteller nach [Artikel 493](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=493) eine angemessene Frist zur Beseitigung setzen. Bleibt sie erfolglos, sieht die Vorschrift Selbstbeseitigung und Erstattung notwendiger Kosten vor. Bei übermäßig hohen Beseitigungskosten darf der Unternehmer die Beseitigung verweigern. Die genannte Selbstbeseitigungsregel gilt dann nicht. Eine Aufforderung zur Nacharbeit sollte deshalb mit Datum, Fehlerbild und verlangtem Umfang in die rechtliche Prüfung gelangen.
+Bei mangelhafter Werkleistung kann der Besteller nach [Artikel 493](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=493) eine angemessene Frist zur Beseitigung setzen. Bleibt sie erfolglos, sieht die Vorschrift Selbstbeseitigung und Erstattung notwendiger Kosten vor. Bei übermäßig hohen Beseitigungskosten darf der Unternehmer die Beseitigung verweigern. Die genannte Selbstbeseitigungsregel gilt dann nicht. Für die rechtliche Prüfung zählt deshalb, wann die Nacharbeit verlangt wurde, welches Fehlerbild der Kunde beschrieben hat und welchen Umfang er fordert.
 
 ## Prüfbedingungen und Änderungen sichtbar machen
 
-War die Maschine testbereit? Für die Beantwortung braucht es mehr als das Feld „bestanden“ oder „nicht bestanden“: Prüfprotokolle sollten erkennen lassen, welche Softwareversion, Werkstücke, Toleranzen und Betriebsbedingungen verwendet wurden. Fehlende Medienversorgung oder ein anderes Eingangsmaterial gehören mit Zeitpunkt und Herkunft der Information in die Dokumentation. Wer dafür verantwortlich war, ergibt sich erst aus der vereinbarten Aufgabenverteilung.
+War die Maschine testbereit? Ein angekreuztes „bestanden“ oder „nicht bestanden“ reicht als Antwort nicht. Aus dem Prüfprotokoll sollte hervorgehen, welche Softwareversion, Werkstücke, Toleranzen und Betriebsbedingungen verwendet wurden. Fehlende Medienversorgung oder ein anderes Eingangsmaterial gehören mit Zeitpunkt und Herkunft der Information in die Dokumentation. Wer dafür verantwortlich war, ergibt sich erst aus der vereinbarten Aufgabenverteilung.
 
 Prüfunterlagen und Zahlungsnachweise lassen sich den einzelnen Streitpunkten zuordnen:
 
@@ -66,7 +66,7 @@ Bei einem weiteren SAT-Termin lassen sich Prüfbedingungen, Zuständigkeiten und
 
 Die Abgrenzung zwischen deutscher Zentrale, taiwanesischer Tochter und lokalem Vertreter erläutert der Beitrag zum [Markteintritt von Halbleiterzulieferern](/de/columns/taiwan-semiconductor-market-entry). Sie hilft auch dabei, Zahlungsversprechen der richtigen Gesellschaft zuzuordnen.
 
-Eine erste [Anfrage zu einem Taiwan-Vertragsstreit](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) kann Vertragspartner, offenen Meilenstein und nächsten Prüftermin nennen; bitte zunächst die tatsächliche Verständigung auf Englisch, Chinesisch, Japanisch oder Koreanisch abstimmen. Vertrauliche Anlagen folgen nach Vereinbarung des Übermittlungswegs. Für die Vorbereitung bleibt die konkrete Frage: Welcher noch offene Test soll welchen Betrag freigeben?
+Eine erste [Anfrage zu einem Taiwan-Vertragsstreit](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) kann Vertragspartner, offenen Meilenstein und nächsten Prüftermin nennen. Beraten wird auf Englisch, Chinesisch, Japanisch oder Koreanisch; welche Sprache passt, lässt sich vorab klären. Vertrauliche Anlagen folgen, sobald der Übermittlungsweg vereinbart ist. Für die Vorbereitung bleibt die konkrete Frage: Welcher noch offene Test soll welchen Betrag freigeben?
 
 ## Amtliche Quellen und Stand
 

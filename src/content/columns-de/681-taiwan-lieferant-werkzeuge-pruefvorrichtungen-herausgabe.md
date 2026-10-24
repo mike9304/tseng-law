@@ -26,7 +26,7 @@ faq:
 
 Zahler, Vertragspartner und Verwahrer können bei einem Produktionswechsel von einem taiwanesischen Lieferanten zu einem anderen Werk drei verschiedene Unternehmen sein.
 
-Die deutsche Einkaufsabteilung sollte deshalb je Gegenstand Seriennummer, Standort und letzte bestätigte Zuordnung zusammentragen. Einsätze, Ersatzformen und Prüfvorrichtungen sind einzeln aufzuführen. Eine pauschale Angabe wie „alle vom Kunden bezahlten Werkzeuge“ lässt offen, ob auch später gefertigte Ersatzteile und beim Unterlieferanten gelagerte Gegenstände erfasst sind.
+Hilfreich ist eine Liste, die für jeden Gegenstand Seriennummer, Standort und letzte bestätigte Zuordnung festhält, und zwar auch für Einsätze, Ersatzformen und Prüfvorrichtungen. Eine pauschale Angabe wie „alle vom Kunden bezahlten Werkzeuge“ lässt offen, ob auch später gefertigte Ersatzteile und beim Unterlieferanten gelagerte Gegenstände erfasst sind.
 
 ## Was wurde mit dem Werkzeugbetrag erworben?
 
@@ -38,7 +38,7 @@ Wo stand das Werkzeug beim behaupteten Erwerb? [Artikel 38 des taiwanesischen Ko
 
 ## Rückgabeanspruch und laufende Produktion
 
-Eigentum allein erlaubt keinen Zutritt zur Fabrik. Nach [Artikel 767](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=767) kann der Eigentümer die Sache von einem unberechtigten Besitzer zurückverlangen. Dazu gehört die Prüfung, ob ein bestehender Produktions- oder Verwahrungsvertrag dem Besitzer noch ein Recht zum Besitz gibt. Eine vertragliche Rückgabepflicht ist mit ihrem Auslöser, Empfänger und vereinbarten Termin gesondert zu erfassen.
+Eigentum allein erlaubt keinen Zutritt zur Fabrik. Nach [Artikel 767](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=767) kann der Eigentümer die Sache von einem unberechtigten Besitzer zurückverlangen. Gibt ein laufender Produktions- oder Verwahrungsvertrag dem Lieferanten noch ein Recht zum Besitz, fehlt es daran. Enthält der Vertrag eine eigene Rückgabepflicht, kommt es auf deren Auslöser, Empfänger und Termin an.
 
 Letzter Lieferabruf und Abholtermin sollten aufeinander abgestimmt werden; soll der bisherige Hersteller noch Ersatzteile liefern, braucht es eine Vereinbarung darüber, welche Werkzeuge bis wann dort bleiben. Verspricht nur der Hauptlieferant die Herausgabe, obwohl ein Unterlieferant die Form hält, ist dessen tatsächliche Mitwirkung noch zu klären. Eine bestätigte Inventarliste kann diese Lücke sichtbar machen.
 
@@ -56,9 +56,9 @@ Bei Zeitdruck kommt eine Sicherheit als Verhandlungsgegenstand in Betracht. [Art
 
 Eine Freigabe sollte Gegenstände, Zustand, Demontage, Verpackung, Abholort und Unterzeichner des Übergabeprotokolls benennen. Fotos vor dem Verpacken und ein unterschriebenes Verzeichnis verbinden die rechtliche Freigabe mit der tatsächlichen Sendung. Für Schäden oder Fehlteile muss später nachvollziehbar sein, wann die Verantwortung wechselte.
 
-Kalibrierdaten, Steuerungssoftware und Zeichnungen werden separat erfasst. Bei urheberrechtlich geschützten Dateien richtet sich die Nutzungslizenz nach der Vereinbarung; für unklar geregelte Teile wird nach [Artikel 37 des Urheberrechtsgesetzes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=37) vermutet, dass sie nicht lizenziert sind. Die körperliche Form und die erforderlichen Dateien können somit verschiedenen Berechtigungen unterliegen. Wer zugleich eigene Transportleistungen in Taiwan aufbauen will, findet die gesonderten Fragen im Beitrag zum [Logistikgeschäft in Taiwan](/de/columns/taiwan-logistics-business-setup).
+Kalibrierdaten, Steuerungssoftware und Zeichnungen sind eine eigene Frage. Bei urheberrechtlich geschützten Dateien richtet sich die Nutzungslizenz nach der Vereinbarung; für unklar geregelte Teile wird nach [Artikel 37 des Urheberrechtsgesetzes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=37) vermutet, dass sie nicht lizenziert sind. Die körperliche Form und die erforderlichen Dateien können somit verschiedenen Berechtigungen unterliegen. Wer zugleich eigene Transportleistungen in Taiwan aufbauen will, findet die gesonderten Fragen im Beitrag zum [Logistikgeschäft in Taiwan](/de/columns/taiwan-logistics-business-setup).
 
-Bei einer ersten [Anfrage zur Werkzeugherausgabe](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) genügen Vertragspartner, Verwahrer, grober Werkzeugumfang und gewünschter Wechseltermin; eine Beratung auf Englisch, Chinesisch, Japanisch oder Koreanisch sowie die Übermittlung vertraulicher Unterlagen werden vorab abgestimmt. Für die nächste Verhandlung sollte jede Position erkennen lassen, wer ihre Freigabe zusagt und wer sie am Abholtag übergeben kann.
+Bei einer ersten [Anfrage zur Werkzeugherausgabe](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) genügen Vertragspartner, Verwahrer, grober Werkzeugumfang und gewünschter Wechseltermin. Die Beratungssprache (Englisch, Chinesisch, Japanisch oder Koreanisch) und der Weg für vertrauliche Unterlagen werden vorab abgestimmt. Für die nächste Verhandlung sollte jede Position erkennen lassen, wer ihre Freigabe zusagt und wer sie am Abholtag übergeben kann.
 
 ## Rechtsquellen
 

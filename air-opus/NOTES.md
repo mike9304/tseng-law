@@ -414,3 +414,5 @@
 - 10-25 08:04 KST 대기: 원격 HEAD=Air 07:59 커밋. Studio 새 변화 없음, Astra 채택 판정 대기.
 - 10-25 08:14 KST 대기: ref 재정렬(10ecc7b), Air 08:04 push 확인. Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.
 - 10-25 08:24 KST 대기: ref 재정렬(ffb4538), Air 08:14 push 확인. Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.
+- 10-25 08:35 KST 대기: ref 재정렬(9aebce4), Air 08:24 push 확인. Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.
+- 10-25 08:44 KST 대기: ref 재정렬(8470679). Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.

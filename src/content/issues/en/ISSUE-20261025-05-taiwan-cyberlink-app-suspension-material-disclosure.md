@@ -1,6 +1,6 @@
 ---
 title: "CyberLink’s suspended Apple downloads: when disclosure is due"
-seoTitle: "CyberLink Apple downloads suspension: Taiwan disclosure rules"
+seoTitle: "CyberLink Apple download suspension: Taiwan disclosure rules"
 summary: "CyberLink was still assessing the impact of suspended Apple downloads. Taiwan’s material-event reporting deadline turns on the event, with additional timing rules for TWSE-listed companies."
 published: "2026-10-25"
 lastmod: "2026-10-25"
@@ -28,7 +28,7 @@ author: "legal-ai-assistant"
 
 CyberLink said on October 24 that downloads of some products on Apple’s platform had stopped because they did not meet certain Apple requirements. The Taiwan software company had appealed and was still assessing the impact on its operations and finances, according to [CNA](https://www.cna.com.tw/news/afe/202610240065.aspx). For overseas investors following a Taiwan issuer, the timing matters: an operational event can be known before its financial consequences are fully measured.
 
-CNA also reported that products on Windows, Android and the web were unaffected. The announcement concerns some downloads on Apple’s platform, rather than a companywide halt in sales.
+The company said the affected sales accounted for about 14.69% of its 2025 revenue, while it continued to assess the actual financial and business effect. CNA also reported that products on Windows, Android and the web were unaffected. The announcement concerns some downloads on Apple’s platform, rather than a companywide halt in sales.
 
 ## The event starts the statutory timetable
 
@@ -40,9 +40,9 @@ Waiting for a settled revenue forecast and deciding whether a reportable event h
 
 ## TWSE rules add a separate timetable
 
-CyberLink is listed on the Taiwan Stock Exchange, as its [official company profile](https://www.twse.com.tw/pdf/ch/5203_ch.pdf) confirms. The exchange’s material-information procedures therefore matter alongside the statute. Two days is not a universal allowance to wait.
+CyberLink is listed on the Taiwan Stock Exchange, as its [official company profile](https://www.twse.com.tw/pdf/ch/5203_ch.pdf) confirms. The exchange’s material-information procedures therefore matter alongside the statute. The statute’s two-day period is not a general grace period.
 
-For most events covered by Article 4 of those procedures, [TWSE Article 6](https://twse-regulation.twse.com.tw/TW/law/DOC01.aspx?FLCODE=FL007111&FLNO=6) requires disclosure by two hours before trading begins on the next business day after the event. If the company issues a press release sooner, the filing must be simultaneous. Special categories, including trading-suspension announcements, have their own timing; certain media reports also require an immediate explanation, within two hours of discovery. These times follow Taiwan time.
+For most events covered by Article 4 of those procedures, [TWSE Article 6](https://twse-regulation.twse.com.tw/TW/law/DOC01.aspx?FLCODE=FL007111&FLNO=6) requires disclosure by two hours before trading begins on the next business day after the event. If the company issues a press release sooner, the filing must be simultaneous. Special categories, including trading-suspension announcements, have their own timing; certain media reports also require an immediate explanation, within two hours of discovery. Those deadlines run on Taiwan time.
 
 An overseas communications team may therefore need the exchange filing ready when it releases a statement. A headquarters time zone does not reset the Taiwan timetable. Article 6’s general filing rule also calls for Chinese and English submissions at the same time. Which deadline applies depends on the event category and sequence, including any earlier public statement.
 

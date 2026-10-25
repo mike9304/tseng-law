@@ -1,0 +1,919 @@
+{
+  "buildInfo": {
+    "commit": "5a2931d5afb21ace98b52a7ade1dc0db07d19c5a",
+    "builtAt": "2026-10-25T18:04:14.324Z"
+  },
+  "count": 182,
+  "screenshots": [
+    {
+      "file": "checks/browser-screenshots/desktop-ar-915-body.png",
+      "sha256": "c546866d02b42dabb009f398ad344c834d49ec13146e763da9e121f831a6a09a",
+      "bytes": 588448
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ar-915-hero.png",
+      "sha256": "c546866d02b42dabb009f398ad344c834d49ec13146e763da9e121f831a6a09a",
+      "bytes": 588448
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ar-915-rtl-table.png",
+      "sha256": "f00f9d42a2c94ed91c23d5ff9d782c11a9bef24a868546818633997db308bb16",
+      "bytes": 307285
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ar-916-body.png",
+      "sha256": "7b52eb1540f84fd3ffb2f38d473c7761736ab2db6e1c520841c5aaae23a267ff",
+      "bytes": 675963
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ar-916-hero.png",
+      "sha256": "7b52eb1540f84fd3ffb2f38d473c7761736ab2db6e1c520841c5aaae23a267ff",
+      "bytes": 675963
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ar-918-body.png",
+      "sha256": "74cde65feb920bd7f9b3d3cd2f8a3a118e0ec6d877634b91cc870589a157dab2",
+      "bytes": 538433
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ar-918-hero.png",
+      "sha256": "74cde65feb920bd7f9b3d3cd2f8a3a118e0ec6d877634b91cc870589a157dab2",
+      "bytes": 538433
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ar-919-body.png",
+      "sha256": "b4c29e332c58bd58c9249a9f3f72f5a5d27460943392784d0b3c61134362c145",
+      "bytes": 563507
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ar-919-hero.png",
+      "sha256": "b4c29e332c58bd58c9249a9f3f72f5a5d27460943392784d0b3c61134362c145",
+      "bytes": 563507
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ar-920-body.png",
+      "sha256": "4c65134ce3856e5e7a43b24799d68c9fdadc4fc44c2ba55b12e2244f211b7ad3",
+      "bytes": 608749
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ar-920-hero.png",
+      "sha256": "4c65134ce3856e5e7a43b24799d68c9fdadc4fc44c2ba55b12e2244f211b7ad3",
+      "bytes": 608749
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ar-921-body.png",
+      "sha256": "ea95af8665ec787bae3f6e5f8754c242663c421bea7c71db574cb373d645328c",
+      "bytes": 565152
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ar-921-hero.png",
+      "sha256": "ea95af8665ec787bae3f6e5f8754c242663c421bea7c71db574cb373d645328c",
+      "bytes": 565152
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ar-921-rtl-table.png",
+      "sha256": "b0616a6e32ef23f6953ac4151b834aa98af023d19cb38fcd1a8710243b47c396",
+      "bytes": 330469
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-de-915-body.png",
+      "sha256": "adccb65f262632134b68de35e98e6dd5d224f141259118fad171a8dd17339809",
+      "bytes": 631944
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-de-915-hero.png",
+      "sha256": "b50c7575aae9e6cc4dada9081ac2d406ffdfb736d476db47d4354f8c184c0c0c",
+      "bytes": 694208
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-de-916-body.png",
+      "sha256": "1504db22f2c53a269a593434acf0fddd34adbb203ec967108e96344f25c2c8bd",
+      "bytes": 899715
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-de-916-hero.png",
+      "sha256": "00c9b70f4d325ce1de6bd2c03d44359dea4c302f7332ddcfc86ea99f77594e31",
+      "bytes": 865302
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-de-918-body.png",
+      "sha256": "4122e59a7bd486395e71413e94cb72e09cf69742f6e801a021158cb762c79914",
+      "bytes": 560830
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-de-918-hero.png",
+      "sha256": "285a3f0fb10ca06099ddefa6a2c4898603fa19c0a3593c8c6f63e46173cd37cb",
+      "bytes": 518270
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-de-919-body.png",
+      "sha256": "27e523d3ca2eaff12322a7070956053b4e94340dede229072033579719726ca0",
+      "bytes": 602631
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-de-919-hero.png",
+      "sha256": "a0f3a67180978e1761eed86f4008b9378260c52394bfad3d13cab374f4b0c914",
+      "bytes": 481263
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-de-920-body.png",
+      "sha256": "e2616895215efec7954b0d83536f4e3156e82cd3c757ed94afa79f32c0adf552",
+      "bytes": 666593
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-de-920-hero.png",
+      "sha256": "66e883607c5879a8f1a4d19306265b13cb26628af35afb55668168e230e68e25",
+      "bytes": 697500
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-de-921-body.png",
+      "sha256": "5d9c2b4e849d2d73c1cad6cabc7a0ae048756678506a1e2bd0395d7310377afa",
+      "bytes": 674093
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-de-921-hero.png",
+      "sha256": "b3c0c6ec19c9f7133270c09aa7d8ea03fa4c54f8a9aa76b0c5e8a9c866f73abe",
+      "bytes": 627823
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-hi-915-body.png",
+      "sha256": "8da838be975b6f923381de6cd06a037f7d64e0d8985dbf43bdff3580936d8511",
+      "bytes": 578886
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-hi-915-hero.png",
+      "sha256": "8da838be975b6f923381de6cd06a037f7d64e0d8985dbf43bdff3580936d8511",
+      "bytes": 578886
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-hi-916-body.png",
+      "sha256": "95b316cbc03ebb3d667a12824935f5415481d4cd8fdf967b387fe0fc387b2a01",
+      "bytes": 658036
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-hi-916-hero.png",
+      "sha256": "95b316cbc03ebb3d667a12824935f5415481d4cd8fdf967b387fe0fc387b2a01",
+      "bytes": 658036
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-hi-918-body.png",
+      "sha256": "0c6bd8e838cd90fd835011eb041d005b4cbf46d9ecf60488a9ebb754a36979d0",
+      "bytes": 526795
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-hi-918-hero.png",
+      "sha256": "0c6bd8e838cd90fd835011eb041d005b4cbf46d9ecf60488a9ebb754a36979d0",
+      "bytes": 526795
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-hi-919-body.png",
+      "sha256": "f4fe8905b71bd2519b8d998a9c3ce9b939177d1cc32bb860dc4af64eb2ec9f4e",
+      "bytes": 553370
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-hi-919-hero.png",
+      "sha256": "f4fe8905b71bd2519b8d998a9c3ce9b939177d1cc32bb860dc4af64eb2ec9f4e",
+      "bytes": 553370
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-hi-920-body.png",
+      "sha256": "a7018817d5316c0cd902823650b467bbd1b93c5cb5f2c9b3dc3f77d0cf85f53c",
+      "bytes": 592632
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-hi-920-hero.png",
+      "sha256": "a7018817d5316c0cd902823650b467bbd1b93c5cb5f2c9b3dc3f77d0cf85f53c",
+      "bytes": 592632
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-hi-921-body.png",
+      "sha256": "4d01a48525c015787995467686c25afb27312ef157bd5249727457e3aaaac659",
+      "bytes": 547416
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-hi-921-hero.png",
+      "sha256": "4d01a48525c015787995467686c25afb27312ef157bd5249727457e3aaaac659",
+      "bytes": 547416
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-home-navigation.png",
+      "sha256": "e6bb942852797b5cf4814573d0bd444456915760832a05178d6dd4697e59c169",
+      "bytes": 438990
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-it-915-body.png",
+      "sha256": "ab79196303dda5418a3372e837c18b58302d628f87713da271bbb88b29b6638e",
+      "bytes": 611297
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-it-915-hero.png",
+      "sha256": "62f425d9fcb91e16695058407f605549ae3cb7443817fe4e1b9973fc63650579",
+      "bytes": 764453
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-it-916-body.png",
+      "sha256": "95cb3c6154f56b3713700ed6067c9b2747e063c92210842136bc4aa7e55fcc7b",
+      "bytes": 932865
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-it-916-hero.png",
+      "sha256": "0bb3006599344aef9d1b5ec031f0f8945a6157ce508805bfd5d0bdc457f3ddfe",
+      "bytes": 859416
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-it-918-body.png",
+      "sha256": "686771f57fc0f2487e49fc9a069b9d7b14bca45d6f700862fd6c43e905ba844e",
+      "bytes": 571983
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-it-918-hero.png",
+      "sha256": "8867f602c9f88c419b49012e8374a350b0b676469ef368e5ef0ba405d005c4e2",
+      "bytes": 575892
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-it-919-body.png",
+      "sha256": "686e633354f118c9f7aedfe96c0cb876f512967347a6562414a72fe409067edb",
+      "bytes": 637428
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-it-919-hero.png",
+      "sha256": "f6519e9180183bc536ce1308f338d5eb721b0ab0eea81f5046547d3cb0969a1b",
+      "bytes": 532880
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-it-920-body.png",
+      "sha256": "4651167793a64bfdd4edc1fa9186392be82adead91c4880eac0e8234abd00d31",
+      "bytes": 665872
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-it-920-hero.png",
+      "sha256": "d71d87e1697726a3a41a42f63f1f82e46df5614374e29f4885e9f85c997a5b4b",
+      "bytes": 750995
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-it-921-body.png",
+      "sha256": "69b65ecf3adbf4809953b4a3794f63768e1fb03d5510c5c60b9fdf14fb8aa251",
+      "bytes": 641433
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-it-921-hero.png",
+      "sha256": "94755d85832efdaf6dc9d0a9f5d250a33b51d583666f98cbd608ee5275c448ad",
+      "bytes": 699826
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ko051-navigation.png",
+      "sha256": "ca192bd932598e67496ee2ce58246c6d63e29741c1855bb77936c8eec8ac896c",
+      "bytes": 445405
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ms-915-body.png",
+      "sha256": "ad9e22f3644e8c61139e2b50a2f72dac9c775c695623da61cb494877bc56f321",
+      "bytes": 572692
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ms-915-hero.png",
+      "sha256": "ad9e22f3644e8c61139e2b50a2f72dac9c775c695623da61cb494877bc56f321",
+      "bytes": 572692
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ms-916-body.png",
+      "sha256": "7f02b27ffd87706366914865e4c7fbd074fd58b1c83595e29844155d2d9a7c3d",
+      "bytes": 721173
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ms-916-hero.png",
+      "sha256": "7f02b27ffd87706366914865e4c7fbd074fd58b1c83595e29844155d2d9a7c3d",
+      "bytes": 721173
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ms-918-body.png",
+      "sha256": "1f57ae461b6d8c24bd6c6494d876c49dbcb067d309c75517f2b143f1dcf813a1",
+      "bytes": 590756
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ms-918-hero.png",
+      "sha256": "1f57ae461b6d8c24bd6c6494d876c49dbcb067d309c75517f2b143f1dcf813a1",
+      "bytes": 590756
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ms-919-body.png",
+      "sha256": "797414e42a58d90e5ff14c74ffd7ba977a35ba0ee3e91d38ae96d260114d6a10",
+      "bytes": 592239
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ms-919-hero.png",
+      "sha256": "797414e42a58d90e5ff14c74ffd7ba977a35ba0ee3e91d38ae96d260114d6a10",
+      "bytes": 592239
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ms-920-body.png",
+      "sha256": "bf9512f19695234e46d7ccf92854b8b837e2a8e4bef0ccbb4300230c9fba2a45",
+      "bytes": 639331
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ms-920-hero.png",
+      "sha256": "bf9512f19695234e46d7ccf92854b8b837e2a8e4bef0ccbb4300230c9fba2a45",
+      "bytes": 639331
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ms-921-body.png",
+      "sha256": "e4229885ec563cda84751778d8a19c3040e06b0ff6a19ec65006b6c5acce3284",
+      "bytes": 566756
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ms-921-hero.png",
+      "sha256": "e4229885ec563cda84751778d8a19c3040e06b0ff6a19ec65006b6c5acce3284",
+      "bytes": 566756
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-pt-915-body.png",
+      "sha256": "89c1470078ba3c36d29e978cd6f54310eb4397779e772877bd2ed443a68bd4b7",
+      "bytes": 651129
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-pt-915-hero.png",
+      "sha256": "214e4904fc320e3d66d3ecc5192b8845ce46f7a9c02d57be05eb030b63e9f527",
+      "bytes": 698154
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-pt-916-body.png",
+      "sha256": "661597806a8dde8bb327e5c6442b5c60c85ecaf99c668843fc733aab452ed3d9",
+      "bytes": 900459
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-pt-916-hero.png",
+      "sha256": "1d249f1b27d4c76c87d8d31016bc2231909ad012717ca132377d49c3ebe06da3",
+      "bytes": 865892
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-pt-918-body.png",
+      "sha256": "315d332885cb2d60e00c66718e141a898f720b9190145b143313344f572928f5",
+      "bytes": 556718
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-pt-918-hero.png",
+      "sha256": "674df5a9baa71302d40056255959ef5f5ae9c82387f39729c24823653608668e",
+      "bytes": 581487
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-pt-919-body.png",
+      "sha256": "d37ae9e77d2afda3848cc123f54b7af1670a1ea9dc47028123c8783db457adb6",
+      "bytes": 625612
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-pt-919-hero.png",
+      "sha256": "889409db68fe766694acb1000f1f52e17a9f48d50ed0a55491cfc509fa3852f6",
+      "bytes": 537519
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-pt-920-body.png",
+      "sha256": "9c749ac828253b176cbfbb911020de0a6d590a39ee20672c56b0df46834ca89c",
+      "bytes": 679096
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-pt-920-hero.png",
+      "sha256": "484eb1693d5f2c652869a3e162a39ed21dac9cd481f67b3b6ba6b6bf28e320d5",
+      "bytes": 759414
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-pt-921-body.png",
+      "sha256": "a1523d0cb6d3051d7d219b3e81d16a98f714323a671637dcfbf804641c4cfab3",
+      "bytes": 663588
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-pt-921-hero.png",
+      "sha256": "fd2d32049cc867756c461a7a70c1ef58c395b208b2c299f8cc396bdff7a8f5e4",
+      "bytes": 702926
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ru-915-body.png",
+      "sha256": "73eb0e947c381e2da43c86054716a2b18253ce1ab5f596aac423c3f726a0cb7f",
+      "bytes": 621336
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ru-915-hero.png",
+      "sha256": "22f3bd30512635e25dee7614ac07af798e15477443ded2f9abb2c3fa89300a5a",
+      "bytes": 697458
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ru-916-body.png",
+      "sha256": "e504629837778dd2767695f1c86b6352ec74b7349c466eac95a0a746d338c78b",
+      "bytes": 908616
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ru-916-hero.png",
+      "sha256": "e6092024695d2ca9c8241fd2d5f37ef138338fc0a6baadde60a5bc6ee1b25c3a",
+      "bytes": 772637
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ru-918-body.png",
+      "sha256": "6f23f51df3db4eb86a3794a07c200544bd70f04a6dbe0e45dc2028dc0ac23349",
+      "bytes": 555902
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ru-918-hero.png",
+      "sha256": "95b10a5ea17fd0edada4f66ad5131d6fb30c9e3a5bce3cb8920774c6d78e1747",
+      "bytes": 519750
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ru-919-body.png",
+      "sha256": "add2a04e8ae05c3a89608213ce5e89fac8f0bc7a2c16a9bd216508c26677c4a0",
+      "bytes": 633493
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ru-919-hero.png",
+      "sha256": "0bc339673b793596c646649539ba792e6657c7e414e7fe2d4aa9183c52165ee1",
+      "bytes": 534044
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ru-920-body.png",
+      "sha256": "f4d95001d25af689d13ac1c3c1d7fb009e956d4a556bfb3ab3be84bc01a0e8e1",
+      "bytes": 659586
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ru-920-hero.png",
+      "sha256": "429c97bf3458e5762a33dd1b3629994e8ea851ac34a40fd042c076f606c076a9",
+      "bytes": 694854
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ru-921-body.png",
+      "sha256": "ac267325fbf8bb74ff8ea86c00629343d645fec7cd27613dd423cf5c28be7872",
+      "bytes": 655551
+    },
+    {
+      "file": "checks/browser-screenshots/desktop-ru-921-hero.png",
+      "sha256": "7188e713b2e975db76e0413f879d4fd66140e8500ced6078295c9e4dbae09056",
+      "bytes": 627977
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ar-915-body.png",
+      "sha256": "14a68368f6238fabea19639a1c3769bc9b959f13d1b0ca186777fc407d43aebe",
+      "bytes": 211148
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ar-915-hero.png",
+      "sha256": "14a68368f6238fabea19639a1c3769bc9b959f13d1b0ca186777fc407d43aebe",
+      "bytes": 211148
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ar-915-rtl-table.png",
+      "sha256": "c7b5b3b7af0c0625bc711bb9657a737f70e89096f2b065c9a8d3f137ea97daca",
+      "bytes": 85912
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ar-916-body.png",
+      "sha256": "c62b266252635841425e7ee26d4ccf17817bb95de55a0d00f94d5a9ca176478f",
+      "bytes": 233397
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ar-916-hero.png",
+      "sha256": "c62b266252635841425e7ee26d4ccf17817bb95de55a0d00f94d5a9ca176478f",
+      "bytes": 233397
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ar-918-body.png",
+      "sha256": "a6dccf3e579b208953f5076c70a8493443fcf9545a42d6cc55da763973417542",
+      "bytes": 203333
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ar-918-hero.png",
+      "sha256": "a6dccf3e579b208953f5076c70a8493443fcf9545a42d6cc55da763973417542",
+      "bytes": 203333
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ar-919-body.png",
+      "sha256": "35bf10fda7ede248e7dc91c9292c4a3a83863a8ea6242d056695ff2993b7b1d3",
+      "bytes": 198505
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ar-919-hero.png",
+      "sha256": "35bf10fda7ede248e7dc91c9292c4a3a83863a8ea6242d056695ff2993b7b1d3",
+      "bytes": 198505
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ar-920-body.png",
+      "sha256": "5570af6eb7aa2ea94c01ca2d6e65e668c7424db0b01dcc96da524798ed84cc4a",
+      "bytes": 201435
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ar-920-hero.png",
+      "sha256": "5570af6eb7aa2ea94c01ca2d6e65e668c7424db0b01dcc96da524798ed84cc4a",
+      "bytes": 201435
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ar-921-body.png",
+      "sha256": "07a666659d6e64e3f6f6c8bfa910b50ee626489deeedb434f77a6283cefef8c5",
+      "bytes": 203454
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ar-921-hero.png",
+      "sha256": "07a666659d6e64e3f6f6c8bfa910b50ee626489deeedb434f77a6283cefef8c5",
+      "bytes": 203454
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ar-921-rtl-table.png",
+      "sha256": "5134af9ff4a7530148c69e274ffd11ac80787e53e6166d88a9f1f46361df5cc8",
+      "bytes": 97652
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-de-915-body.png",
+      "sha256": "7364ab71a076f48090029113b86e8b6239b912f0b58313afc37e2a9df078b2f1",
+      "bytes": 205834
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-de-915-hero.png",
+      "sha256": "06bc15189a928cabe9bb8b617c2768f48b6ba149a73cfdf149a2b8641f5d1f6b",
+      "bytes": 191242
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-de-916-body.png",
+      "sha256": "8fd69bb02c78fe543b44ac175da1abb64266c5a29f45ec19a2625f9a6db9fd9b",
+      "bytes": 236995
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-de-916-hero.png",
+      "sha256": "36ad974468880698599b71e9c640d6d65f5e9247dacc480fc5b1c287f923218a",
+      "bytes": 217265
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-de-918-body.png",
+      "sha256": "c52a62e4403f10b58abb85a0e0af2cddd64597d486da344ef6378f1da56de346",
+      "bytes": 180442
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-de-918-hero.png",
+      "sha256": "4af0450200943874331769f580091d758a1ed11951bf00a2b79a36393ef793ee",
+      "bytes": 167948
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-de-919-body.png",
+      "sha256": "10969333354c91fda92979f4cdd4835e34040ab024d9eaf47759ec47fd06820d",
+      "bytes": 181455
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-de-919-hero.png",
+      "sha256": "8d205fcc734d70dede7e703addcdaf7569c14f6d3b1d5c834635bc88fff0b807",
+      "bytes": 169934
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-de-920-body.png",
+      "sha256": "6d219b23329caff458d6372a58f141a5e73e953a452ab73c174a751ec95ca5cc",
+      "bytes": 197460
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-de-920-hero.png",
+      "sha256": "cb8385ebacb7c44576458f5d57913e9c382bb34ff2d05a20dec0c09cbb827d86",
+      "bytes": 182588
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-de-921-body.png",
+      "sha256": "98104a220acfb1b834eac1bdb6de88e4683615321175a25ac931b468fe263f64",
+      "bytes": 198034
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-de-921-hero.png",
+      "sha256": "4a0b701c0c97adeb21d9f4f1f0049d23bf0ce2aef7a8d033ab77f39cc3f3f840",
+      "bytes": 188060
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-he-706-body.png",
+      "sha256": "fae2fc0c5e6f479f0baeb59512ebd7f3fc1604c3a296ce84eb1e314489c550c4",
+      "bytes": 195299
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-he-706-hero.png",
+      "sha256": "fae2fc0c5e6f479f0baeb59512ebd7f3fc1604c3a296ce84eb1e314489c550c4",
+      "bytes": 195299
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-he-706-rtl-identifier.png",
+      "sha256": "587e09afea7dc2cbc3ecb1d0f7fd7765aacbcb386b19ef29dc532c6745c9ad7f",
+      "bytes": 96808
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-he-706-rtl-table.png",
+      "sha256": "67238eabe998e358f8da5586eebb2c484c4a32ccd756697980317140dbef0774",
+      "bytes": 76647
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-hi-915-body.png",
+      "sha256": "e89bf5a2b4a3952dab675403f12a002eb8efbbc755baf5c15bb10dbd45d9313c",
+      "bytes": 199791
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-hi-915-hero.png",
+      "sha256": "e89bf5a2b4a3952dab675403f12a002eb8efbbc755baf5c15bb10dbd45d9313c",
+      "bytes": 199791
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-hi-916-body.png",
+      "sha256": "3d8defdc046cecb2ec8d73464518243ac177f5a82c81477c4155548d82d317f6",
+      "bytes": 222942
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-hi-916-hero.png",
+      "sha256": "3d8defdc046cecb2ec8d73464518243ac177f5a82c81477c4155548d82d317f6",
+      "bytes": 222942
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-hi-918-body.png",
+      "sha256": "08df8349ce8db26abea448d609d3fb7c12df7407c9273aee1a63876fe3bc2dff",
+      "bytes": 196191
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-hi-918-hero.png",
+      "sha256": "08df8349ce8db26abea448d609d3fb7c12df7407c9273aee1a63876fe3bc2dff",
+      "bytes": 196191
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-hi-919-body.png",
+      "sha256": "6fadd83d4d1851117c4a6cf8724b8f4a3bf4f55a3f5ab295e700e0303aa2d64c",
+      "bytes": 192925
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-hi-919-hero.png",
+      "sha256": "6fadd83d4d1851117c4a6cf8724b8f4a3bf4f55a3f5ab295e700e0303aa2d64c",
+      "bytes": 192925
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-hi-920-body.png",
+      "sha256": "151617e8babd45b0c654e8817d248a4e58e6949416ac3b5c71489daabf649d8d",
+      "bytes": 194633
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-hi-920-hero.png",
+      "sha256": "151617e8babd45b0c654e8817d248a4e58e6949416ac3b5c71489daabf649d8d",
+      "bytes": 194633
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-hi-921-body.png",
+      "sha256": "690e4c65e1d2bc9d82289231c4336beefd9ecc33ec1c4bbbed4502ea6a34b407",
+      "bytes": 198583
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-hi-921-hero.png",
+      "sha256": "690e4c65e1d2bc9d82289231c4336beefd9ecc33ec1c4bbbed4502ea6a34b407",
+      "bytes": 198583
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-home-navigation.png",
+      "sha256": "e4afd554d9060b048766b1a482bcae4f512c2cf6e890d1f2a420a66bbe0d3a35",
+      "bytes": 173598
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-it-915-body.png",
+      "sha256": "cfba0817b914cf4d0a36efabdb08b6f60e45eaac093bf2055616870ffff077dc",
+      "bytes": 204833
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-it-915-hero.png",
+      "sha256": "21c79d9933c541a752e91e2a8aade64bb9954beb146427e02cd4a347e6af0c79",
+      "bytes": 188446
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-it-916-body.png",
+      "sha256": "7df11a615eaaded5fbd9e6b74741fa4a99909255a4855070cdb4b982725b151d",
+      "bytes": 236022
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-it-916-hero.png",
+      "sha256": "da3d74457b4e1ad999d0e3e5722a21d77d670d08c79aa444f39743de67884058",
+      "bytes": 219711
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-it-918-body.png",
+      "sha256": "78b0f8356ff85522bab97f4bc4f01eb9d6f45a4c2cbe4691161cdcdee06c1322",
+      "bytes": 178906
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-it-918-hero.png",
+      "sha256": "7314415f8f83b307f99918e5933f06e8d8bc967788fa57a73f4e946c412f8cf0",
+      "bytes": 168344
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-it-919-body.png",
+      "sha256": "6ddd2f36f2f7e6b4819ea125d5b5636f58a66bbeb4e7d9578791898736c69a01",
+      "bytes": 179952
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-it-919-hero.png",
+      "sha256": "5b141bb9b61b1644bae1f27943e719674e27c75d4d93d806cf0ce9821f2a26c9",
+      "bytes": 164345
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-it-920-body.png",
+      "sha256": "f804b7bdf578a9c036b6ea42c326e6eadab6c22f4d0428aa13d02a1ec14dc5a2",
+      "bytes": 191033
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-it-920-hero.png",
+      "sha256": "cf9c3230b47205539e54e087e91e9d535721656592dc3fba84f82cd44fe90d0a",
+      "bytes": 184292
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-it-921-body.png",
+      "sha256": "16c69ee467f04f2f8d6bddb694d04a1dc5e612b204aaafea4fe7acb84832c5bc",
+      "bytes": 196724
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-it-921-hero.png",
+      "sha256": "1bc57eb14505e9abb25c9ec305f628c47eddc96b0ebd3fe316834017ebd5993a",
+      "bytes": 189608
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ko051-navigation.png",
+      "sha256": "c8735012e667bf3641cebac5f99fa0832a1fa341769b81ecfd700ab10c947090",
+      "bytes": 166917
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ms-915-body.png",
+      "sha256": "b193baf544469b96b889b8d886038866e4b9d3707eaab130dc3725292e3982ca",
+      "bytes": 201023
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ms-915-hero.png",
+      "sha256": "2983fc45caac56574739820808680ad1b7039293254ed76542c96dcd6cc858fd",
+      "bytes": 203206
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ms-916-body.png",
+      "sha256": "a16c5a3ad27e4e2ca6a666f712019f37f9f3d0b75672a01829cd595c9cdc3a74",
+      "bytes": 223123
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ms-916-hero.png",
+      "sha256": "dc4dd080dae40fb6fdbfc7cd683f6f303878ca66c091a6f0111d819e63f5eea5",
+      "bytes": 237356
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ms-918-body.png",
+      "sha256": "a5a8508332aa676a78b982f918a5aa561ce616223756c2529dd166c63c0c794e",
+      "bytes": 181667
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ms-918-hero.png",
+      "sha256": "8938c10ca864512373be1600095439bb6cba4f8584d613835aa81765d246ec81",
+      "bytes": 196168
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ms-919-body.png",
+      "sha256": "8aababfec10c6b7280f1774438c254ecfcbb5a5e35f230f49174b30a96e62b5e",
+      "bytes": 183404
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ms-919-hero.png",
+      "sha256": "2a6f8314bec98be3e8c174c2a63c563dc73614c304c0c9af54941d317954ab4e",
+      "bytes": 198943
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ms-920-body.png",
+      "sha256": "4c1be83b04680b836fe91ad7aaff855ba86b117626e4f374f3c2ad3ce40b2b44",
+      "bytes": 194254
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ms-920-hero.png",
+      "sha256": "4ec01a19c0fb3f90359855951f275f34b9c8a8af0b7dad5b73bb1c1daceb097c",
+      "bytes": 202450
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ms-921-body.png",
+      "sha256": "7b6ecdc80ae8862c24715240cd2d242ade48843787d8b5344f469104e449eec6",
+      "bytes": 200548
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ms-921-hero.png",
+      "sha256": "146d67ea3b8a424e67d70b2aab630367cec97622927e4008bafb43939abcc9f2",
+      "bytes": 202201
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-pt-915-body.png",
+      "sha256": "ef5478592857a819eb35a63747fdfdba3d8d50e1023ee530243ce08db76d2c06",
+      "bytes": 206462
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-pt-915-hero.png",
+      "sha256": "4b621cbdcc0d08e88c64f0bea7a2dc232a7bed58d4b576ce9ea550c808c5a71f",
+      "bytes": 192606
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-pt-916-body.png",
+      "sha256": "e733f050bef7b32369585b634d9d94443b3dcbaa36293e0527f6c3e39297ffd1",
+      "bytes": 239308
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-pt-916-hero.png",
+      "sha256": "8ba6f8e4b1fea636c6d9f68308792e45085eb0e14f1ab51a466ae27e8b1bfb16",
+      "bytes": 222725
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-pt-918-body.png",
+      "sha256": "83c8bc8e364c2bb55bbae73d3cbc46cd5229c2686889d989938dc9a70294a4d1",
+      "bytes": 183777
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-pt-918-hero.png",
+      "sha256": "dfdf7bc1959668cc1fbccec6ab6c8b6e4240ba9c0982f7938a09830d870a6ba1",
+      "bytes": 170446
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-pt-919-body.png",
+      "sha256": "7fbab8988e2cbdab8bde41b2b66f8979c23a12083bd586978be3a8bf171064e7",
+      "bytes": 179661
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-pt-919-hero.png",
+      "sha256": "e2152af143019467ee01f09e42d35c075166fee6a41836a384fbb49e4848c4ec",
+      "bytes": 166405
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-pt-920-body.png",
+      "sha256": "25d81cd72826dda425a8f455817127ad821f67f9992508208b523610e93da17b",
+      "bytes": 199573
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-pt-920-hero.png",
+      "sha256": "0a68ba0a7d1af9e78a46c74cad8b94dd6d184dd5408fcb5898ae050297ddba0d",
+      "bytes": 188296
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-pt-921-body.png",
+      "sha256": "707ad0e2163a904ee382fc2be2428f8d40f735ee5e1d371996810c58c98547a2",
+      "bytes": 198798
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-pt-921-hero.png",
+      "sha256": "424f0891d2cae834f20931134e437308b484e9cfcb6af7cb3616f9c26a3773e8",
+      "bytes": 190453
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ru-915-body.png",
+      "sha256": "eea22d3e3b3bedd621601f54ce1d31fb25677023e59a24cea561cd6c84a513d4",
+      "bytes": 206347
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ru-915-hero.png",
+      "sha256": "0b16fd507288ad4b96bf88021be2035848a30bb45c9797371c8b38715759c52f",
+      "bytes": 189496
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ru-916-body.png",
+      "sha256": "c011982eb4de5ae6b6f726638bf6bfc17819d9279f5e2e15f28793cb1ab78732",
+      "bytes": 238736
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ru-916-hero.png",
+      "sha256": "0a4ee80c0601a88543bad463887f090edc7a8f7fe33fd0bf936e3af822804145",
+      "bytes": 221309
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ru-918-body.png",
+      "sha256": "8e39eeebc320452bba20d68f7225f6fbb8edc3728f3d6c7bebc9c2f270a8d5cb",
+      "bytes": 187419
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ru-918-hero.png",
+      "sha256": "18eb61c23586bcfcc9a9782d52756767f5b8437bf9e02682859a7607ded05051",
+      "bytes": 171873
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ru-919-body.png",
+      "sha256": "74815982c0951b0c51780b1a53098c5e2e103346a39b99ea112b1c9a7d1cd798",
+      "bytes": 190418
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ru-919-hero.png",
+      "sha256": "e961832e8092f7f701f4ab538a99101d842c66deeb819502826a1857c2a6b162",
+      "bytes": 172041
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ru-920-body.png",
+      "sha256": "024f684b0b4b63a710a8dda0833796b9ecc4eb5110a4d34ed0d7beadf155b8dd",
+      "bytes": 200508
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ru-920-hero.png",
+      "sha256": "d76645b9b3a830a08ea7989f33543b0f5c268ec0a96e9c8276ad18a1f2095009",
+      "bytes": 188780
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ru-921-body.png",
+      "sha256": "65f0f2ff7b398a162b2b882473e7985ebc9512b8284b4479cdcc1260cdfcdde0",
+      "bytes": 198620
+    },
+    {
+      "file": "checks/browser-screenshots/mobile-ru-921-hero.png",
+      "sha256": "565eb954fed1db4f16e172717dab60fff08ab981dfca62c2c805fe1bb18fa1d7",
+      "bytes": 189564
+    },
+    {
+      "file": "checks/browser-screenshots/slow-home-navigation.png",
+      "sha256": "e4afd554d9060b048766b1a482bcae4f512c2cf6e890d1f2a420a66bbe0d3a35",
+      "bytes": 173598
+    },
+    {
+      "file": "checks/browser-screenshots/slow-ko051-navigation.png",
+      "sha256": "c8735012e667bf3641cebac5f99fa0832a1fa341769b81ecfd700ab10c947090",
+      "bytes": 166917
+    }
+  ]
+}

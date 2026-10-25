@@ -1,0 +1,26 @@
+[
+  {
+    "script": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/verification/static-cases48.mjs",
+    "scriptSHA256": "f7f4541ae509afecc18e4c8b3575098d3d1779bcf9539b2956b760b028fe8510",
+    "command": [
+      "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+      "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/verification/static-cases48.mjs"
+    ],
+    "startedAt": "2026-10-25T18:05:36.782011+00:00",
+    "endedAt": "2026-10-25T18:05:37.175672+00:00",
+    "exitCode": 0,
+    "logSHA256": "aba557184b13430ceb4815c1da9edc15840535675ff932d8caebd6addec7925e"
+  },
+  {
+    "script": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/verification/static-arc147-regression.mjs",
+    "scriptSHA256": "de90a635233048b89966858699a9e3a01a458b9056c39d02e62ec14a4e75336f",
+    "command": [
+      "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+      "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/verification/static-arc147-regression.mjs"
+    ],
+    "startedAt": "2026-10-25T18:05:37.175724+00:00",
+    "endedAt": "2026-10-25T18:05:38.097265+00:00",
+    "exitCode": 0,
+    "logSHA256": "6bb37baed93848aeb5b098b33a469e07857ebc17dc21a70c606279a441a453b7"
+  }
+]

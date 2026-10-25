@@ -1,0 +1,321 @@
+{
+  "at": "2026-10-26T03:22:07.793620+09:00",
+  "contentCommit": "5a2931d5afb21ace98b52a7ade1dc0db07d19c5a",
+  "status": "ROOT_LOCAL_RELEASE_REVIEW_PASS_PUBLIC_PENDING",
+  "sourceManuscriptsVerified": 42,
+  "canonicalSourcesVerified": 6,
+  "summarySHA256": "2de13ab682ca7df42629630dfb21e21ab5cbfe95f05ba58cbcb8b89d924d6274",
+  "reportSHA256": "fd74f93ddad9ac35bcf6caf7f5c5fb8687fe03e295c0d092008c599eb37592a7",
+  "qaEvidenceFilesHashVerified": 221,
+  "read": [
+    "REPORT.md full",
+    "final-verification-summary.json full"
+  ],
+  "visuallyOpened": [
+    "mobile-ar-918-body.png",
+    "mobile-de-915-body.png",
+    "mobile-he-706-rtl-table.png"
+  ],
+  "visualFindings": "Actual B6 captures: Arabic title/body and case date legible without clipping in captured view; German root-authored915 title/body/image/caption legible; HE706 RTL table and four 23-1 identifiers remain legible with identifiers LTR on one line. Chinese case suffix wraps between source characters in AR body but is not clipped. Existing English table-scroll helper remains a template limitation. This observation is bounded to captured views.",
+  "evidence": [
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/browser-adaptation.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/checks/browser-adaptation.json",
+      "sha256": "c81e5aaae7a1a8efbbce6b18be6bbdd5a13dd54ac24ab3c7aeb48bf02d01281e",
+      "bytes": 644
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/run-full-build.py",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/checks/run-full-build.py",
+      "sha256": "49ae1e511da3d10d22ba7cefec895596cf5f5bc18b302cb54ebe39fe5d03b329",
+      "bytes": 2914
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/static-build-release26-command.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/checks/static-build-release26-command.json",
+      "sha256": "a0f68c5c6ffc228cd93e85501e3b79e76cada4c6d07f8bf5f660358b97787657",
+      "bytes": 1284828
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/static-build-release26-media.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/checks/static-build-release26-media.json",
+      "sha256": "9bb73eae98f60a412c714d80d9e7b1fb861bc0e89e237d13074fce0be7d38a09",
+      "bytes": 544799
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/static-build-release26-report.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/checks/static-build-release26-report.json",
+      "sha256": "88c00f1dd71f6849fbea41ed4d82688a4743700b64c618392fbba631fb0a77fb",
+      "bytes": 3439
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/static-build-release26-server.log",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/checks/static-build-release26-server.log",
+      "sha256": "36be298cc5884448cf67f0827f3f421d4c45a7539b02818f349c548929e58612",
+      "bytes": 143
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/static-build-release26.log",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/checks/static-build-release26.log",
+      "sha256": "b1b1ccad33ff6b85378e0d4d2b89073b0cda580f4950b9b074e6eb95847ff671",
+      "bytes": 85839
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/REPORT.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/REPORT.md",
+      "sha256": "fd74f93ddad9ac35bcf6caf7f5c5fb8687fe03e295c0d092008c599eb37592a7",
+      "bytes": 4513
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-case-results.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-case-results.json",
+      "sha256": "e1f8a91b4a1e2515adc3beae9ffe4e655ce451508806e83589cbd82d11fc784e",
+      "bytes": 2212829
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-he706-command.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-he706-command.json",
+      "sha256": "b9a1b51adf0fb530b48d9bf960cfff791464ac21cdc00ad74cd154e71540d0c0",
+      "bytes": 682
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-he706-results.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-he706-results.json",
+      "sha256": "653562f4d8cc90477e0981675ac4f5f3c8533fd232e1c4dd3d509d23ece389d6",
+      "bytes": 675018
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-he706.log",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-he706.log",
+      "sha256": "49ad07f71ca21afbac21efbd6e016914f2a9f1c25ff67926729d53e99b5d53a7",
+      "bytes": 98
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-pack-report.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-pack-report.json",
+      "sha256": "f93bd35ea1c51d0e558ebc9b725f0fe6c11ff5e787797dda0009737df2e95ba6",
+      "bytes": 1397740
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-primary104-command.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-primary104-command.json",
+      "sha256": "628ccd51868a119b7c33a8567108c15e24db376093bf9c7f3b35c1d2f4ded858",
+      "bytes": 545
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-primary104.log",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-primary104.log",
+      "sha256": "a2a83e856dca0686f22f920936a4e4f1b23a165afa641ab3767bf2f792ced658",
+      "bytes": 6782
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-ar-915-body.png",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-screenshots/mobile-ar-915-body.png",
+      "sha256": "14a68368f6238fabea19639a1c3769bc9b959f13d1b0ca186777fc407d43aebe",
+      "bytes": 211148
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-ar-918-body.png",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-screenshots/mobile-ar-918-body.png",
+      "sha256": "a6dccf3e579b208953f5076c70a8493443fcf9545a42d6cc55da763973417542",
+      "bytes": 203333
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-ar-921-body.png",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-screenshots/mobile-ar-921-body.png",
+      "sha256": "07a666659d6e64e3f6f6c8bfa910b50ee626489deeedb434f77a6283cefef8c5",
+      "bytes": 203454
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-de-915-body.png",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-screenshots/mobile-de-915-body.png",
+      "sha256": "7364ab71a076f48090029113b86e8b6239b912f0b58313afc37e2a9df078b2f1",
+      "bytes": 205834
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-de-918-body.png",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-screenshots/mobile-de-918-body.png",
+      "sha256": "c52a62e4403f10b58abb85a0e0af2cddd64597d486da344ef6378f1da56de346",
+      "bytes": 180442
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-he-706-rtl-table.png",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-screenshots/mobile-he-706-rtl-table.png",
+      "sha256": "67238eabe998e358f8da5586eebb2c484c4a32ccd756697980317140dbef0774",
+      "bytes": 76647
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-hi-916-body.png",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-screenshots/mobile-hi-916-body.png",
+      "sha256": "3d8defdc046cecb2ec8d73464518243ac177f5a82c81477c4155548d82d317f6",
+      "bytes": 222942
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-ru-919-body.png",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/browser-screenshots/mobile-ru-919-body.png",
+      "sha256": "74815982c0951b0c51780b1a53098c5e2e103346a39b99ea112b1c9a7d1cd798",
+      "bytes": 190418
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/final-source-proof.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/final-source-proof.json",
+      "sha256": "8d9d5863b941a1e3cc38de9ca2b0aff3a03213def502a68d279a0fb98dcb3d0e",
+      "bytes": 1121
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/final-verification-summary.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/final-verification-summary.json",
+      "sha256": "2de13ab682ca7df42629630dfb21e21ab5cbfe95f05ba58cbcb8b89d924d6274",
+      "bytes": 5966
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/pack-command.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/pack-command.json",
+      "sha256": "74bba93956f84879d8300df6bc9df4b2a18956ed7d7814a8ca501cd490f0e3e2",
+      "bytes": 569
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/pack-config-verify.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/pack-config-verify.json",
+      "sha256": "3d48dbf8c55a2d009564dffef1c79261329d5eed46211d24032a09a857b39948",
+      "bytes": 3289
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/pack-config-verify.log",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/pack-config-verify.log",
+      "sha256": "5a5d871cfd8dbdebce2dabe3c9134daaadf7e0a52b856884c44591fb70820755",
+      "bytes": 212
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/pack-verification-commands.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/pack-verification-commands.json",
+      "sha256": "4af20cdac47dece374911e78c8cac3b7870962128c6ee1a30d378729a9f9459a",
+      "bytes": 907
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/pack-verify.log",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/pack-verify.log",
+      "sha256": "44f8f932a31d8e1e79c3f271604e5afb735a271fbdf9c3892279e9b8b1b77d55",
+      "bytes": 1203
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/pack.log",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/pack.log",
+      "sha256": "e564858cf7a5fb00c6f8f91730fd025a3c1e963d6c500401ae0d55181721efa9",
+      "bytes": 608
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/qa-output-manifest.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/qa-output-manifest.json",
+      "sha256": "7b47d11a4714d1cd6a693e141d9eb84cbd87417892eda060a9c88eb16b6441a7",
+      "bytes": 43152
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/screenshot-manifest.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/screenshot-manifest.json",
+      "sha256": "a73e5b71092c3577fc279191c4b6a13675327c78cd52785b350858d755677913",
+      "bytes": 34158
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/snapshot-after.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/snapshot-after.json",
+      "sha256": "e326111f23ea6bea53ccf0d3fb51fcaa053fed1b945c396a3dbb3b9cadcd8058",
+      "bytes": 1529788
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/snapshot-before.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/snapshot-before.json",
+      "sha256": "40e416b9e5caa75ea32870a0fe425e132d62aee237f4843dbdf0f49eeb19bea3",
+      "bytes": 1529587
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/static-arc147-regression.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/static-arc147-regression.json",
+      "sha256": "d601cff4c18793ff043440cd2eedc649f39d0b44568da35f56488ae933dd8e1e",
+      "bytes": 260052
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/static-arc147-regression.log",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/static-arc147-regression.log",
+      "sha256": "6bb37baed93848aeb5b098b33a469e07857ebc17dc21a70c606279a441a453b7",
+      "bytes": 147
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/static-cases48.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/static-cases48.json",
+      "sha256": "4fe4ad6ce9f3847ca181d3655a3cd5cf234f6254799e4074434cf09440a91e64",
+      "bytes": 92777
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/static-cases48.log",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/static-cases48.log",
+      "sha256": "aba557184b13430ceb4815c1da9edc15840535675ff932d8caebd6addec7925e",
+      "bytes": 145
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/static-verification-commands.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/static-verification-commands.json",
+      "sha256": "50513155eb2e5797dfbb2149626af9ef8e71b3388ec4873472c8e8b2a41ce32d",
+      "bytes": 1237
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/visual-review.json",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/visual-review.json",
+      "sha256": "de1d0aacfe5f700e7e3d6df92e480faf092c4dabe72b5f9e8e09021cf3509f54",
+      "bytes": 3877
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/verification/browser-cases.mjs",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/verification/browser-cases.mjs",
+      "sha256": "e74145c016e7e23d21621fe0d1477788dbe46170ae3d71766238b09263a73582",
+      "bytes": 32587
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/verification/pack-config-verify.mjs",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/verification/pack-config-verify.mjs",
+      "sha256": "26027d2d85a2393fa6d99335a12e7533a41e4ab06cbd3a508ba47d7542fc625b",
+      "bytes": 3104
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/verification/pack-verify.mjs",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/verification/pack-verify.mjs",
+      "sha256": "9d29fa880dd2a6e0adad5268c88a48695e962d5777c46d37f35d10fbe6c1eb19",
+      "bytes": 2927
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/verification/run-browser.py",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/verification/run-browser.py",
+      "sha256": "4e4e84e723cdf91fb74afe3310cb2f9a726ed52f40a1c6ba57a9e376caae0b39",
+      "bytes": 1563
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/verification/snapshot.py",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/verification/snapshot.py",
+      "sha256": "6f226276a5a31641ae4a5fc7a213b39e6cef4a36290ebc1d86449b42cf7eaaee",
+      "bytes": 3127
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/verification/static-arc147-regression.mjs",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/verification/static-arc147-regression.mjs",
+      "sha256": "de90a635233048b89966858699a9e3a01a458b9056c39d02e62ec14a4e75336f",
+      "bytes": 12018
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/verification/static-cases48.mjs",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/verification/static-cases48.mjs",
+      "sha256": "f7f4541ae509afecc18e4c8b3575098d3d1779bcf9539b2956b760b028fe8510",
+      "bytes": 12454
+    }
+  ],
+  "packExpandedBytes": 169249294,
+  "headroomBytes": 99186162,
+  "publicationVerified": false,
+  "publicLastObservedCommit": "3b4ea7900664b618746f7b5ce959515e124eefe8",
+  "publicLastObservedAt": "2026-10-26T02:57:12+09:00",
+  "notes": [
+    "Local fallback build, not Air production CMS mirror parity.",
+    "Root did not rerun unchanged full build or browser suites.",
+    "49×286 capacity remains unproven; isolated candidate implementation is separate.",
+    "No public observation or push performed in this receipt."
+  ]
+}

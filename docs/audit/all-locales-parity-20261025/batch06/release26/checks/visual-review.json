@@ -1,0 +1,71 @@
+{
+  "at": "2026-10-25T18:10:03.357007+00:00",
+  "buildInfo": {
+    "commit": "5a2931d5afb21ace98b52a7ade1dc0db07d19c5a",
+    "builtAt": "2026-10-25T18:04:14.324Z"
+  },
+  "method": "Actual fresh PNG captures opened with view_image after this artifact browser run; no DOM/CSS/bidi injection or image edit.",
+  "reviewed": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-ar-915-body.png",
+      "sha256": "14a68368f6238fabea19639a1c3769bc9b959f13d1b0ca186777fc407d43aebe",
+      "bytes": 211148
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-ar-918-body.png",
+      "sha256": "a6dccf3e579b208953f5076c70a8493443fcf9545a42d6cc55da763973417542",
+      "bytes": 203333
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-ar-921-body.png",
+      "sha256": "07a666659d6e64e3f6f6c8bfa910b50ee626489deeedb434f77a6283cefef8c5",
+      "bytes": 203454
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/desktop-ar-920-body.png",
+      "sha256": "4c65134ce3856e5e7a43b24799d68c9fdadc4fc44c2ba55b12e2244f211b7ad3",
+      "bytes": 608749
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-de-920-body.png",
+      "sha256": "6d219b23329caff458d6372a58f141a5e73e953a452ab73c174a751ec95ca5cc",
+      "bytes": 197460
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-it-918-body.png",
+      "sha256": "78b0f8356ff85522bab97f4bc4f01eb9d6f45a4c2cbe4691161cdcdee06c1322",
+      "bytes": 178906
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-pt-915-body.png",
+      "sha256": "ef5478592857a819eb35a63747fdfdba3d8d50e1023ee530243ce08db76d2c06",
+      "bytes": 206462
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-hi-916-body.png",
+      "sha256": "3d8defdc046cecb2ec8d73464518243ac177f5a82c81477c4155548d82d317f6",
+      "bytes": 222942
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-ms-921-body.png",
+      "sha256": "7b6ecdc80ae8862c24715240cd2d242ade48843787d8b5344f469104e449eec6",
+      "bytes": 200548
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-ru-919-body.png",
+      "sha256": "74815982c0951b0c51780b1a53098c5e2e103346a39b99ea112b1c9a7d1cd798",
+      "bytes": 190418
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-he-706-rtl-table.png",
+      "sha256": "67238eabe998e358f8da5586eebb2c484c4a32ccd756697980317140dbef0774",
+      "bytes": 76647
+    }
+  ],
+  "observations": [
+    "Arabic mobile915/918/921 and desktop920 display joined RTL script, readable numeric runs and CJK docket glyphs, with no observed overlapping body text or missing-glyph boxes.",
+    "DE/IT/PT/HI/MS/RU representative mobile captures retain the source image, local caption, publication date and readable script; no visible body overlap or horizontal clipping in the inspected captures.",
+    "Actual HE706 mobile390 table retains right-to-left column order. Both table occurrences of23-1 remain one numeric identifier per line; all four page occurrences also pass measured geometry."
+  ],
+  "limitations": "Visual rendering check by the agent, not native-human language or lawyer approval; only these11 representative captures were manually opened."
+}

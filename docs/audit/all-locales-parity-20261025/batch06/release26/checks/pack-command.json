@@ -1,0 +1,14 @@
+{
+  "startedAt": "2026-10-25T18:05:51.409026+00:00",
+  "command": [
+    "node",
+    "scripts/static-site/sites-pack.mjs",
+    "--out=out-all-locales-batch06-release26",
+    "--dist=/Users/son7/tseng-all-language-columns-20261025/batch06/release26/pack"
+  ],
+  "cwd": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "packerSHA256": "c983e275e92ef2aff523f6307069ca54121fc79400e9c247fa02f7c1b73d85e7",
+  "workerTemplateSHA256": "1d822b535ea1011a27fd037cfb2f9cef9245aacb0cc541b26d926c55923998b9",
+  "exitCode": 0,
+  "endedAt": "2026-10-25T18:05:57.655006+00:00"
+}

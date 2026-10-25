@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-25T18:10:03.441932+00:00",
+  "expectedContentCommit": "5a2931d5afb21ace98b52a7ade1dc0db07d19c5a",
+  "currentHEAD": "5a2931d5afb21ace98b52a7ade1dc0db07d19c5a",
+  "artifactBuildInfo": {
+    "commit": "5a2931d5afb21ace98b52a7ade1dc0db07d19c5a",
+    "builtAt": "2026-10-25T18:04:14.324Z"
+  },
+  "gitStatus": "",
+  "rootPrebuildReceiptSHA256": "fac370957e1e5b3a6f6010cfbf00cb46299861dbef0a01c213790b17e6f93e9c",
+  "selected42FrozenSHAUnchanged": true,
+  "canonical6SHAUnchanged": true,
+  "allSourceMarkdownCount": 2292,
+  "allSourceMarkdownUnchanged": true,
+  "trackedSourceAndScriptsCount": 6990,
+  "trackedSourceAndScriptsUnchanged": true,
+  "sourceTreeSHA256": "8e4568e3ba7527ca2a6552cca57630b4dcaca8188270a2907baa45d1e81051eb",
+  "artifactFiles": 5427,
+  "artifactBytes": 474441162,
+  "artifactTreeSHA256": "320d3a1e1245ebdce0457d9fb1e55fbc926bab71f3abe97fb42db2412366da8e",
+  "artifactUnchangedAcrossAllQA": true,
+  "sameCommitAllReports": true,
+  "priorArtifacts": "Not operated on. Existing B3/B4/B5 results remain preserved; no redundant full hash sweep claimed.",
+  "commitPushDeployActions": []
+}

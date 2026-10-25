@@ -1,0 +1,19 @@
+{
+  "atUTC": "2026-10-25T18:22:56.654894+00:00",
+  "rawLogWhitespace": "Initial git diff --cached --check exited2 on four unchanged raw static-build log lines (space before tab and carriage-return progress output). Original log bytes intentionally retained.",
+  "nonRawCommand": [
+    "git",
+    "diff",
+    "--cached",
+    "--check",
+    "--",
+    ".",
+    ":(exclude)docs/audit/all-locales-parity-20261025/batch06/checks/static-build-release26.log"
+  ],
+  "exitCode": 0,
+  "stdout": "",
+  "stderr": "",
+  "stagedOnlyAudit": true,
+  "stagedFilesBeforeReceipt": 50,
+  "scope": "No runtime or manuscript changes in this audit-only commit."
+}

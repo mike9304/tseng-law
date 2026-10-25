@@ -1,0 +1,155 @@
+{
+  "at": "2026-10-25T18:10:03.442139+00:00",
+  "status": "LOCAL_FINAL_ARTIFACT_VERIFIED",
+  "contentCommit": "5a2931d5afb21ace98b52a7ade1dc0db07d19c5a",
+  "artifact": "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch06-release26",
+  "buildInfo": {
+    "commit": "5a2931d5afb21ace98b52a7ade1dc0db07d19c5a",
+    "builtAt": "2026-10-25T18:04:14.324Z"
+  },
+  "build": {
+    "exitCode": 0,
+    "html": 3058,
+    "files": 5427,
+    "bytes": 474441162,
+    "crawl": 2866,
+    "sitemapPresent": 2861,
+    "sitemapExpected": 2861,
+    "brokenReferences": 0,
+    "oversize": 0,
+    "missing": 0,
+    "flightErrors": 0,
+    "mediaFiles": 2146,
+    "referencedMedia": 1334,
+    "missingLocalMedia": 0,
+    "dataMode": "local fallback; --data intentionally omitted, not Air production CMS mirror parity"
+  },
+  "browser": {
+    "total": 104,
+    "passed": 104,
+    "failed": 0,
+    "fatal": false
+  },
+  "separateHE706": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "fatal": false
+  },
+  "caseStatic": {
+    "total": 48,
+    "passed": 48,
+    "failed": 0,
+    "bodySegments": 1150
+  },
+  "arcRegressionStatic": {
+    "total": 147,
+    "passed": 147,
+    "failed": 0,
+    "bodySegments": 6553
+  },
+  "rtl": {
+    "arabicRows": 14,
+    "arabicNumericIdentifierMeasurements": 260,
+    "heRows": 1,
+    "heNumericIdentifierMeasurements": 93,
+    "he231Count": 4,
+    "allMeasurementsVisibleSingleLineLTR": true
+  },
+  "runtime": {
+    "pageErrors": 0,
+    "consoleErrors": 0,
+    "failedRequests": 0,
+    "rscRequests": 0,
+    "expectedNoJavaScriptPreloadCSPBlocks": 7,
+    "freshDocumentLanguageSwitches": 85
+  },
+  "package": {
+    "expandedBytes": 169249294,
+    "expandedMiB": 161.40870475769043,
+    "limitBytes": 268435456,
+    "headroomBytes": 99186162,
+    "headroomMiB": 94.59129524230957,
+    "gzipHtmlRoundTrips": 3058,
+    "unchangedAssets": 2366,
+    "verificationFailures": 0,
+    "packedWorkerSha256": "84711e76427f7a5ae35a8be8e2c872adfba9b7291f76566eac99ffe4836d74ff"
+  },
+  "screenshots": {
+    "captured": 182,
+    "manuallyOpened": 11,
+    "heMobileTable": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-screenshots/mobile-he-706-rtl-table.png",
+    "heMobileTableSHA256": "67238eabe998e358f8da5586eebb2c484c4a32ccd756697980317140dbef0774"
+  },
+  "sourceAndArtifactUnchanged": true,
+  "Rclean": true,
+  "firstRunFailures": 0,
+  "evidence": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-case-results.json",
+      "sha256": "e1f8a91b4a1e2515adc3beae9ffe4e655ce451508806e83589cbd82d11fc784e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-he706-results.json",
+      "sha256": "653562f4d8cc90477e0981675ac4f5f3c8533fd232e1c4dd3d509d23ece389d6"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/static-cases48.json",
+      "sha256": "4fe4ad6ce9f3847ca181d3655a3cd5cf234f6254799e4074434cf09440a91e64"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/static-arc147-regression.json",
+      "sha256": "d601cff4c18793ff043440cd2eedc649f39d0b44568da35f56488ae933dd8e1e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/browser-pack-report.json",
+      "sha256": "f93bd35ea1c51d0e558ebc9b725f0fe6c11ff5e787797dda0009737df2e95ba6"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/pack-config-verify.json",
+      "sha256": "3d48dbf8c55a2d009564dffef1c79261329d5eed46211d24032a09a857b39948"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/final-source-proof.json",
+      "sha256": "8d9d5863b941a1e3cc38de9ca2b0aff3a03213def502a68d279a0fb98dcb3d0e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/visual-review.json",
+      "sha256": "de1d0aacfe5f700e7e3d6df92e480faf092c4dabe72b5f9e8e09021cf3509f54"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/screenshot-manifest.json",
+      "sha256": "a73e5b71092c3577fc279191c4b6a13675327c78cd52785b350858d755677913"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/snapshot-before.json",
+      "sha256": "40e416b9e5caa75ea32870a0fe425e132d62aee237f4843dbdf0f49eeb19bea3"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/snapshot-after.json",
+      "sha256": "e326111f23ea6bea53ccf0d3fb51fcaa053fed1b945c396a3dbb3b9cadcd8058"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/static-build-release26-command.json",
+      "sha256": "a0f68c5c6ffc228cd93e85501e3b79e76cada4c6d07f8bf5f660358b97787657"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/static-build-release26.log",
+      "sha256": "b1b1ccad33ff6b85378e0d4d2b89073b0cda580f4950b9b074e6eb95847ff671"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/static-build-release26-report.json",
+      "sha256": "88c00f1dd71f6849fbea41ed4d82688a4743700b64c618392fbba631fb0a77fb"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/static-build-release26-media.json",
+      "sha256": "9bb73eae98f60a412c714d80d9e7b1fb861bc0e89e237d13074fce0be7d38a09"
+    }
+  ],
+  "limits": [
+    "Local fallback build, not Air production CMS-mirror parity.",
+    "No B6 push, deployment or fresh public-site verification performed. Last root observation at02:57KST still served B2.",
+    "No human-native or lawyer approval; author and independent meaning reviews remain separate.",
+    "The256MiB measurement is this artifact only, not proof that49×286 articles will fit."
+  ]
+}

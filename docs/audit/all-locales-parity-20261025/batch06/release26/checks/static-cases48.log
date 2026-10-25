@@ -1,0 +1,10 @@
+{
+  "summary": {
+    "total": 48,
+    "passed": 48,
+    "failed": 0,
+    "bodySegments": 1150
+  },
+  "inputsUnchanged": true,
+  "failures": []
+}

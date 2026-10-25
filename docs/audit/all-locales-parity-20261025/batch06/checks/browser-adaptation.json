@@ -1,0 +1,10 @@
+{
+  "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/verification/browser-arc.mjs",
+  "sourceSHA256": "eeb033d331db11e5d2a5fb5e3ba9d50dd1d4bfa41b469c07981844eac64fecc9",
+  "target": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/verification/browser-cases.mjs",
+  "targetSHA256": "e74145c016e7e23d21621fe0d1477788dbe46170ae3d71766238b09263a73582",
+  "primaryCases": 104,
+  "separateHE706": 1,
+  "fontAndMenuReadinessPreserved": true,
+  "scope": "Exact case8 clusters; rotated slow/no-JS topics; HE706 uses a separately loaded DE706 destination. No assertion suppression or production changes."
+}

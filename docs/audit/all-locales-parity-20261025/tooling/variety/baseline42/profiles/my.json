@@ -1,0 +1,37 @@
+{
+  "review_status": "AI neutral contract; coordinating review and installation pending",
+  "join_hyphens": false,
+  "canonical_abbreviations": true,
+  "question_pattern": "[?؟]\\s*[\"”’»›“״)]*$",
+  "length_unit": "icu_dictionary_wordlike_units",
+  "short_threshold": 8,
+  "long_threshold": 32,
+  "provenance": "METHOD-BATCH04.md; frozen tests/fixtures-batch04.json and separate MY neutral fixtures",
+  "abbreviations": [
+    "Dr",
+    "Prof",
+    "Mr",
+    "Ms",
+    "Art",
+    "No",
+    "p",
+    "pp",
+    "e.g",
+    "i.e"
+  ],
+  "terminal_abbreviations": [],
+  "register": "Modern Burmese in Unicode Myanmar; ICU wordlike unit",
+  "source_heading_pattern": "^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:ကိုးကားချက်များ|ကိုးကားရင်းမြစ်များ|ရင်းမြစ်များ|တရားဝင်ရင်းမြစ်များ)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$",
+  "additional_sentence_terminators": "။",
+  "unspaced_sentence_terminators": "။",
+  "quote_attribution_pattern": "^(?:ဟု|လို့)",
+  "citation_pattern": "ပုဒ်မ\\s*\\d+",
+  "contrast_patterns": [
+    "မဟုတ်ဘဲ"
+  ],
+  "caveat_pattern": "^[\\s“”\"\\x27«»״(\\[]*(?:သို့သော်|သို့ရာတွင်|သို့ပေမယ့်)",
+  "hypo_pattern": "^[\\s“”\"\\x27«»״(\\[]*(?:ဥပမာ|ယူဆကြည့်ပါ)",
+  "formula_close_pattern": "ယေဘုယျ\\s*အချက်အလက်|အထွေထွေ\\s*အချက်အလက်",
+  "locale": "my",
+  "directory": "columns-my"
+}

@@ -1,0 +1,237 @@
+{
+  "at": "2026-10-25T15:21:38.851Z",
+  "scope": "Current manuscript metadata, links and format audit; exact URL differences remain for manual source-equivalence review; not legal or production approval",
+  "files": [
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "sha256": "15dff7bda161ff794256f51c006331a5963ba6a1197f26e37712ce5f602de8a9",
+      "bytes": 16777,
+      "metadata": {
+        "title": "تائیوان میں پہلا ARC: درخواست کی تاریخ اور رہائش کا ثبوت",
+        "seoTitle": "تائیوان کا پہلا ARC: مدت، کاغذات اور فیس",
+        "summary": "پہلے ARC کے تیس دن رہائشی ویزا پر داخلے کے اگلے دن سے، یا تائیوان میں اس ویزا کے اجرا کے دن سے، گنے جاتے ہیں۔ ملازمت، تعلیم اور خاندان کے کاغذات اور درخواست کے طریقے الگ ہیں۔",
+        "published": "2026-10-25",
+        "lastmod": "2026-10-25",
+        "date_display": "25 اکتوبر 2026",
+        "read_time": "7 منٹ",
+        "categories": [
+          "تائیوان قانونی معلومات"
+        ],
+        "topic": "visa",
+        "tags": [
+          "پہلا ARC",
+          "رہائشی ویزا",
+          "رہائش کی درخواست",
+          "NIA",
+          "تائیوان"
+        ],
+        "audience": [
+          "ur"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "featured_image_alt": "میز پر بغیر تحریر کا سادہ سفری کتابچہ، کاغذات کی فائل اور ایک چھوٹا خالی کارڈ",
+        "featured_image_caption": "فرضی منظر",
+        "faq": [
+          {
+            "q": "پہلے ARC کی درخواست کے تیس دن کب سے گنے جاتے ہیں؟",
+            "a": "رہائشی ویزا پر داخلے اور رہائش کی اجازت کی صورت میں مدت داخلے کے اگلے دن سے شروع ہوتی ہے۔ اگر رہائشی ویزا تائیوان پہنچنے کے بعد جاری ہو تو BOCA کی رہنمائی تیس دن اس ویزا کی تاریخِ اجرا سے شمار کرتی ہے۔ ویزا چھوٹ یا وزٹر ویزا کے بعد براہِ راست درخواست میں متعلقہ زمرے کی اہلیت اور مدت پوری کرنا ہوتی ہے۔"
+          },
+          {
+            "q": "پہلے ARC کی فیس کتنی ہے؟",
+            "a": "عام فیس منظور شدہ مدت کے ہر سال کے لیے 1,000 نیو تائیوان ڈالر ہے؛ ایک سال سے کم مدت پر بھی پورے سال کی فیس لگتی ہے۔ ویزا چھوٹ یا وزٹر ویزا پر داخلے کے بعد متعلقہ درخواستوں پر 2,200 نیو تائیوان ڈالر اضافی ہیں۔ قواعد کے مطابق مخصوص رعایتیں اور استثنا بھی ہو سکتے ہیں۔"
+          },
+          {
+            "q": "کیا ARC ملتے ہی کام شروع کیا جا سکتا ہے؟",
+            "a": "اسی وقت جب قابلِ اطلاق ورک پرمٹ یا قانونی استثنا اصل کام اور آجر کو شامل کرتا ہو۔ ARC رہائش کی منظوری کا ثبوت ہے، ہر ملازمت کرنے کی غیر محدود اجازت نہیں۔"
+          }
+        ]
+      },
+      "sourceHeading": "## سرکاری ماخذ",
+      "missingENUrls": [],
+      "bodyUrlsMissingFromSources": [],
+      "officialUrls": 12,
+      "internalLinks": [
+        {
+          "label": "کام، تعلیم اور خاندان کے لیے رہائش",
+          "url": "/ur/columns/taiwan-visa-residence-work-study-family",
+          "exists": true
+        },
+        {
+          "label": "تائیوانی شریکِ حیات کے ساتھ رہائش کے مضمون میں، انگریزی میں",
+          "url": "/en/columns/taiwan-foreign-spouse-residence",
+          "exists": true
+        },
+        {
+          "label": "ARC کی توسیع اور تبدیلی کی رہنمائی",
+          "url": "/ur/columns/taiwan-arc-renewal-changes-reentry",
+          "exists": true
+        }
+      ],
+      "imageMatchesEN": true,
+      "imageExists": true,
+      "manualBidi": 0,
+      "bodyH1": false,
+      "bold": false,
+      "htmlWrappers": false,
+      "errors": [],
+      "manualSourceEquivalence": []
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "e07a6b499b2e0fd53cfc38234eb9e1f20fa3f9566ef2b102ffad32433e56c58e",
+      "bytes": 17626,
+      "metadata": {
+        "title": "تائیوان میں کام، تعلیم اور خاندان کے ساتھ رہائش",
+        "seoTitle": "تائیوان کا ویزا اور رہائش: کام، تعلیم اور خاندان",
+        "summary": "تائیوان میں رہائش کا راستہ کام یا تعلیم کی نوعیت، اہلِ خانہ کی قانونی حیثیت اور داخلے کے طریقے سے طے ہوتا ہے۔ ہر وزٹ رہائش میں تبدیل نہیں ہو سکتا۔",
+        "published": "2026-10-25",
+        "lastmod": "2026-10-25",
+        "date_display": "25 اکتوبر 2026",
+        "read_time": "7 منٹ",
+        "categories": [
+          "تائیوان قانونی معلومات"
+        ],
+        "topic": "visa",
+        "tags": [
+          "تائیوان کا ویزا",
+          "ملازمت",
+          "تعلیمی رہائش",
+          "مینڈرن",
+          "خاندانی رہائش"
+        ],
+        "audience": [
+          "ur"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "featured_image_alt": "بند لیپ ٹاپ، کتابیں اور دو کپ، ساتھ بغیر تحریر کا سادہ سفری کتابچہ",
+        "featured_image_caption": "فرضی منظر",
+        "faq": [
+          {
+            "q": "کیا ویزا چھوٹ پر داخلے کے بعد تائیوان میں رہائش کی درخواست دی جا سکتی ہے؟",
+            "a": "غیر ملکی پیشہ ور افراد کے قانون کی دفعہ 16 اہل پیشہ ور افراد کو کام کی اجازت یا قابلِ اطلاق استثنا کے ساتھ، اور مقررہ اہلِ خانہ کو متعلقہ شرائط کے تحت، براہِ راست NIA میں درخواست کا راستہ دیتی ہے۔ داخلے کا مخصوص طریقہ بھی قابلِ قبول ہونا چاہیے۔ کل وقتی ڈگری اور مینڈرن کے عام تعلیمی راستوں میں داخلے اور ویزا کی دوسری شرائط ہیں۔"
+          },
+          {
+            "q": "مینڈرن کی تعلیم کے لیے ARC مانگنے سے پہلے کتنا پڑھنا ہوتا ہے؟",
+            "a": "تعلیم کے مقصد کا مناسب وزٹر ویزا، منظور شدہ اعلیٰ تعلیمی ادارے کے تسلیم شدہ زبان مرکز میں چار ماہ کی مکمل تعلیم اور کم از کم مزید تین ماہ کی رجسٹریشن درکار ہے۔ تدریسی اوقات، حاضری اور کاغذات کی شرائط بھی پوری ہوں۔ صرف داخلہ لینا کافی نہیں۔"
+          },
+          {
+            "q": "کیا ہر ARC رکھنے والا اپنے شریکِ حیات کے لیے رہائش کی بنیاد بن سکتا ہے؟",
+            "a": "نہیں۔ تائیوان میں موجود اہلِ خانہ کی قومیت اور رہائشی قسم، رشتہ اور درخواست گزار کے داخلے کی حیثیت دیکھی جاتی ہے۔ غیر ملکی پیشہ ور کے خاندان اور تائیوانی شہری کے شریکِ حیات کے قواعد الگ ہیں، اور بعض زمروں کو قانون خارج کرتا ہے۔"
+          }
+        ]
+      },
+      "sourceHeading": "## سرکاری ماخذ",
+      "missingENUrls": [],
+      "bodyUrlsMissingFromSources": [],
+      "officialUrls": 15,
+      "internalLinks": [
+        {
+          "label": "تائیوانی شریکِ حیات کے ساتھ رہائش، انگریزی میں",
+          "url": "/en/columns/taiwan-foreign-spouse-residence",
+          "exists": true
+        },
+        {
+          "label": "گولڈ کارڈ کی انگریزی رہنمائی",
+          "url": "/en/columns/taiwan-employment-gold-card",
+          "exists": true
+        },
+        {
+          "label": "توسیع یا بنیاد بدلنے کا طریقہ",
+          "url": "/ur/columns/taiwan-arc-renewal-changes-reentry",
+          "exists": true
+        },
+        {
+          "label": "پہلے ARC کی درخواست",
+          "url": "/ur/columns/taiwan-arc-first-application",
+          "exists": true
+        }
+      ],
+      "imageMatchesEN": true,
+      "imageExists": true,
+      "manualBidi": 0,
+      "bodyH1": false,
+      "bold": false,
+      "htmlWrappers": false,
+      "errors": [],
+      "manualSourceEquivalence": []
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "8ae69f8dc40663efcaa078d8d88484b4af4517f9ac83deaae189ddca182bbb02",
+      "bytes": 20893,
+      "metadata": {
+        "title": "ARC کی توسیع، پتہ بدلنے کی اطلاع اور تائیوان واپسی",
+        "seoTitle": "تائیوان کا ARC: توسیع، تبدیلی اور دوبارہ داخلہ",
+        "summary": "ملازمت یا رہائش کی وجہ ختم ہونے اور پتہ بدلنے سے ARC کی آخری تاریخ سے پہلے کارروائی درکار ہو سکتی ہے۔ سفر میں واپسی کی تاریخ کو پورا کرنے والی دستاویز الگ سوال ہے۔",
+        "published": "2026-10-25",
+        "lastmod": "2026-10-25",
+        "date_display": "25 اکتوبر 2026",
+        "read_time": "8 منٹ",
+        "categories": [
+          "تائیوان قانونی معلومات"
+        ],
+        "topic": "visa",
+        "tags": [
+          "ARC کی توسیع",
+          "پتے کی تبدیلی",
+          "رہائشی بنیاد",
+          "دوبارہ داخلہ",
+          "گم شدہ ARC"
+        ],
+        "audience": [
+          "ur"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "featured_image_alt": "میز پر خالی منصوبہ بندی کی ڈائری، سادہ سفری کتابچہ، چھوٹا کارڈ اور گھر کی چابیاں",
+        "featured_image_caption": "فرضی منظر",
+        "faq": [
+          {
+            "q": "ARC میں توسیع کی درخواست کتنی پہلے دی جا سکتی ہے؟",
+            "a": "عام درخواست منظور شدہ رہائش ختم ہونے سے پہلے کے تین ماہ کے دوران دی جاتی ہے۔ Gold Card کی تجدید اور تائیوان میں کاروبار جاری رکھنے والے اہل کاروباری شخص کے ARC کی متعلقہ توسیع کے لیے چار ماہ کے الگ عرصے ہیں۔ یہ درخواست دینے کے وقت ہیں، میعاد ختم ہونے کے بعد قیام کی مہلت نہیں۔"
+          },
+          {
+            "q": "نیا پتہ یا کام کی جگہ کب NIA کو بتانی ہوتی ہے؟",
+            "a": "تبدیلی کے اگلے دن سے تیس دن کے اندر NIA میں اندراج لازم ہے۔ نئے آجر کے لیے کام کی الگ اجازت اور نئی رہائشی بنیاد کے لیے الگ درخواست درکار ہو سکتی ہے۔ پتہ یا کام کی جگہ بدلنے کا اندراج ان کارروائیوں کو مکمل نہیں کرتا۔"
+          },
+          {
+            "q": "کیا توسیع کی درخواست کی رسید سے تائیوان واپس آ سکتا ہوں؟",
+            "a": "رسید کو ضروری سفری یا دوبارہ داخلے کی دستاویز کا متبادل نہ سمجھیں۔ اگر روانگی تک نیا کارڈ تیار نہ ہو تو NIA سے پہلے طے کرنا ہوتا ہے کہ واپسی کے لیے کون سی دستاویز درکار ہے۔ پاسپورٹ، رہائشی حیثیت اور متعلقہ داخلے کی اجازت منصوبہ بند سفر کو پورا کریں۔"
+          }
+        ]
+      },
+      "sourceHeading": "## سرکاری ماخذ",
+      "missingENUrls": [],
+      "bodyUrlsMissingFromSources": [],
+      "officialUrls": 15,
+      "internalLinks": [
+        {
+          "label": "پہلے ARC کی رہنمائی",
+          "url": "/ur/columns/taiwan-arc-first-application",
+          "exists": true
+        },
+        {
+          "label": "کام، تعلیم اور خاندان کے تقابل",
+          "url": "/ur/columns/taiwan-visa-residence-work-study-family",
+          "exists": true
+        },
+        {
+          "label": "APRC کی تفصیل، انگریزی میں",
+          "url": "/en/columns/taiwan-permanent-residence-aprc",
+          "exists": true
+        }
+      ],
+      "imageMatchesEN": true,
+      "imageExists": true,
+      "manualBidi": 0,
+      "bodyH1": false,
+      "bold": false,
+      "htmlWrappers": false,
+      "errors": [],
+      "manualSourceEquivalence": []
+    }
+  ],
+  "errors": []
+}

@@ -2,11 +2,11 @@
 title: "充電器裝在自己的車位，為何仍被判拆除？社區管線的同意問題"
 summary: "高雄高分院的一件判決，爭點落在充電設備占用的牆面、天花板及共用電箱。法院依共用部分規定與社區規約，維持拆除、回復原狀的結果。車位使用權、施工安全與共用部分的同意程序，簽安裝契約前都要分別確認。"
 published: "2026-10-25"
-lastmod: "2026-10-25"
+lastmod: "2026-10-26"
 date_display: "2026年10月25日"
 read_time: "約5分鐘閱讀"
 categories: ["不動產", "台灣判決"]
-topic: "civil"
+topic: "litigation"
 tags: ["電動車", "充電設備", "公寓大廈", "共用部分", "區分所有權人會議"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"

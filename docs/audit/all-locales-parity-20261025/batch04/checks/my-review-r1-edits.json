@@ -1,0 +1,37 @@
+{
+  "atUTC": "2026-10-25T15:06:55.368254+00:00",
+  "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/704-taiwan-arc-first-application.md",
+  "beforeSHA256": "78fa3dd0df32d99d320f666734ba0f2934810e541a5e8c4461452c72c05c5517",
+  "afterSHA256": "3026447712218a6fd3ed591022c0741e125f8f5bbc55bc5771caf5e57fb31acf",
+  "edits": [
+    {
+      "id": "M01",
+      "before": "သက်တမ်းခြောက်လနှင့်အောက် အီလက်ထရောနစ် ARC ကို ငွေပေးပြီးနောက် ဒေါင်းလုဒ်လုပ်၍ ပုံနှိပ်နိုင်သည်။",
+      "after": "သက်တမ်းခြောက်လနှင့်အောက် အီလက်ထရောနစ် ARC ကို ငွေပေးပြီးနောက် ဒေါင်းလုဒ်လုပ်၍ ပုံနှိပ်ရသည်။",
+      "reason": "Preserve NIA student electronic-ARC download-and-print obligation after payment; same <=6-month scope."
+    },
+    {
+      "id": "O1-school",
+      "before": " ကျောင်းမအပ်ရသေးသူက ဝင်ခွင့်စာကို တင်သည်။",
+      "after": "\n\nကျောင်းမအပ်ရသေးသူက ဝင်ခွင့်စာကို တင်သည်။",
+      "reason": "Separate school documents from employment documents; no word change."
+    },
+    {
+      "id": "O1-family",
+      "before": " မိသားစုအတွက်မူ ဆွေမျိုးတော်စပ်မှု",
+      "after": "\n\nမိသားစုအတွက်မူ ဆွေမျိုးတော်စပ်မှု",
+      "reason": "Separate family documents from school documents; no word change."
+    }
+  ],
+  "exactInverseToR1": true,
+  "unchangedFiles": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "73afefd437d7de469391d5895568bc9cbe6171ad5202cb1dca22bce76ccc3e32"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "468eab59315953585d659936cdde771c6323b8b05a7225818163dbcfa40fa02f"
+    }
+  ]
+}

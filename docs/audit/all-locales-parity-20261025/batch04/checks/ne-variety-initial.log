@@ -1,0 +1,5 @@
+usage: variety_metrics.py [-h]
+                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi,ru,ms,fil,tr,nl,zh-hans,sv,da,nb,fi,pl,cs,ro,uk,bg,ca,el,hr,hu,is,sk}]
+                          [--out OUT] [--sentences SENTENCES]
+                          {check,corpus} path [path ...]
+variety_metrics.py: error: argument --lang: invalid choice: 'ne' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk')

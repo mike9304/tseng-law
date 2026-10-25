@@ -22,6 +22,8 @@ PROFILE_DIR = Path(__file__).with_name('profiles')
 SHORT_WORDS = 8
 LONG_WORDS = 32
 _THAI_WORDS = {}
+_MYANMAR_WORDS = {}
+_KHMER_WORDS = {}
 
 
 class MeasurementError(ValueError):
@@ -66,7 +68,8 @@ def _letter_number(char):
     return bool(char) and unicodedata.category(char)[0] in ('L', 'N')
 
 
-def lexical_words(text, join_hyphens=False, join_catalan_ela_geminada=False):
+def lexical_words(text, join_hyphens=False, join_catalan_ela_geminada=False,
+                  hebrew_internal_quotes=False):
     """Count orthographic lexical units, preserving Unicode marks and digits.
 
 Internal apostrophes stay within words. Decimal/group separators between digits
@@ -88,6 +91,11 @@ orthographic compounds. This is not a claim about morphemes or semantic load.
                 i += 1
             elif char in ('\u200c', '\u200d') and after:
                 i += 1
+            elif hebrew_internal_quotes and char in ('׳', "'") and '\u0590' <= before <= '\u05ff':
+                # A final geresh can mark an abbreviation; preserve it too.
+                i += 1
+            elif hebrew_internal_quotes and char in ('״', '"') and '\u0590' <= before <= '\u05ff' and '\u0590' <= after <= '\u05ff':
+                i += 1
             elif char in ("'", '’', 'ʼ') and _letter_number(after):
                 i += 1
             elif join_hyphens and char in ('-', '‐', '‑') and _letter_number(after) and not (before.isdecimal() and after.isdecimal()):
@@ -103,6 +111,10 @@ orthographic compounds. This is not a claim about morphemes or semantic load.
 
 
 def prepare_words(texts, lang):
+    if lang == 'my':
+        return prepare_myanmar_words(texts)
+    if lang == 'km':
+        return prepare_khmer_words(texts)
     if lang != 'th':
         return
     missing = list(dict.fromkeys(t for t in texts if t not in _THAI_WORDS))
@@ -134,14 +146,106 @@ process.stdout.write(JSON.stringify({tokens, node: process.versions.node, icu: p
         raise MeasurementError(f'Thai dictionary segmentation unavailable: {error}') from error
 
 
+def prepare_myanmar_words(texts):
+    """Explicit ICU wordlike units, never Burmese whitespace/Thai fallback."""
+    missing = list(dict.fromkeys(t for t in texts if t not in _MYANMAR_WORDS))
+    if not missing:
+        return
+    executable = shutil.which('node')
+    if not executable:
+        raise MeasurementError('Burmese dictionary segmentation requires installed Node with Myanmar ICU support')
+    script = r"""
+const fs = require('node:fs');
+if (!Intl.Segmenter.supportedLocalesOf(['my']).length) throw Error('Burmese ICU unavailable');
+const segmenter = new Intl.Segmenter('my', {granularity: 'word'});
+if (segmenter.resolvedOptions().locale !== 'my') throw Error('Burmese ICU locale fallback');
+// Myanmar whitespace separates phrases. Narrow NBSP is otherwise an ICU
+// in-token connector: split phrases first, then dictionary-segment each one.
+const words = text => text.split(/\p{White_Space}+/u).flatMap(part =>
+  [...segmenter.segment(part)].filter(x => x.isWordLike).map(x => x.segment));
+if (JSON.stringify(words('စာအုပ်ခဲတံ')) !== JSON.stringify(['စာအုပ်', 'ခဲတံ']))
+  throw Error('Burmese dictionary capability probe differs; re-audit runtime');
+const input = JSON.parse(fs.readFileSync(0, 'utf8'));
+process.stdout.write(JSON.stringify({tokens: input.map(words), locale: 'my',
+  whitespace: 'Unicode_White_Space_phrase_chunks',
+  node: process.versions.node, icu: process.versions.icu, unicode: process.versions.unicode}));
+"""
+    try:
+        run = subprocess.run([executable, '-e', script], input=json.dumps(missing),
+                             capture_output=True, text=True, timeout=30, check=True)
+        output = json.loads(run.stdout)
+        if output['locale'] != 'my' or len(output['tokens']) != len(missing):
+            raise ValueError('Burmese locale or token result count mismatch')
+        if not all(isinstance(tokens, list) and all(isinstance(t, str) and t for t in tokens)
+                   for tokens in output['tokens']):
+            raise ValueError('invalid Burmese token result')
+        engine = {key: output[key] for key in ('locale', 'node', 'icu', 'unicode', 'whitespace')}
+        if not all(isinstance(value, str) and value for value in engine.values()):
+            raise ValueError('missing Burmese runtime metadata')
+        _MYANMAR_WORDS.update(zip(missing, output['tokens']))
+        prepare_myanmar_words.engine = engine
+    except (OSError, ValueError, TypeError, KeyError, subprocess.SubprocessError) as error:
+        raise MeasurementError(f'Burmese dictionary segmentation unavailable: {error}') from error
+
+
+def prepare_khmer_words(texts):
+    """Explicit Khmer ICU dictionary units; no whitespace or other locale fallback."""
+    missing = list(dict.fromkeys(t for t in texts if t not in _KHMER_WORDS))
+    if not missing:
+        return
+    executable = shutil.which('node')
+    if not executable:
+        raise MeasurementError('Khmer dictionary segmentation requires installed Node with Khmer ICU support')
+    script = r"""
+const fs = require('node:fs');
+if (!Intl.Segmenter.supportedLocalesOf(['km']).length) throw Error('Khmer ICU unavailable');
+const segmenter = new Intl.Segmenter('km', {granularity: 'word'});
+if (segmenter.resolvedOptions().locale !== 'km') throw Error('Khmer ICU locale fallback');
+// Khmer spaces delimit phrases, not words. Keep phrase whitespace variants
+// equivalent; dictionary-segment the unspaced text inside each phrase.
+const words = text => text.split(/\p{White_Space}+/u).flatMap(part =>
+  [...segmenter.segment(part)].filter(x => x.isWordLike).map(x => x.segment));
+if (JSON.stringify(words('សៀវភៅខ្មៅ')) !== JSON.stringify(['សៀវភៅ', 'ខ្មៅ']))
+  throw Error('Khmer dictionary capability probe differs; re-audit runtime');
+const input = JSON.parse(fs.readFileSync(0, 'utf8'));
+process.stdout.write(JSON.stringify({tokens: input.map(words), locale: 'km',
+  whitespace: 'Unicode_White_Space_phrase_chunks',
+  node: process.versions.node, icu: process.versions.icu, unicode: process.versions.unicode}));
+"""
+    try:
+        run = subprocess.run([executable, '-e', script], input=json.dumps(missing),
+                             capture_output=True, text=True, timeout=30, check=True)
+        output = json.loads(run.stdout)
+        if output['locale'] != 'km' or len(output['tokens']) != len(missing):
+            raise ValueError('Khmer locale or token result count mismatch')
+        if not all(isinstance(tokens, list) and all(isinstance(t, str) and t for t in tokens)
+                   for tokens in output['tokens']):
+            raise ValueError('invalid Khmer token result')
+        engine = {key: output[key] for key in ('locale', 'node', 'icu', 'unicode', 'whitespace')}
+        if not all(isinstance(value, str) and value for value in engine.values()):
+            raise ValueError('missing Khmer runtime metadata')
+        _KHMER_WORDS.update(zip(missing, output['tokens']))
+        prepare_khmer_words.engine = engine
+    except (OSError, ValueError, TypeError, KeyError, subprocess.SubprocessError) as error:
+        raise MeasurementError(f'Khmer dictionary segmentation unavailable: {error}') from error
+
+
 def words(text, lang):
     if lang == 'zh-hans':
         return expansion.characters(text)
     if lang == 'th':
         prepare_words([text], lang)
         return _THAI_WORDS[text]
+    if lang == 'my':
+        prepare_myanmar_words([text])
+        return _MYANMAR_WORDS[text]
+    if lang == 'km':
+        prepare_khmer_words([text])
+        return _KHMER_WORDS[text]
     data = profile(lang)
-    return lexical_words(text, data.get('join_hyphens', False), data.get('join_catalan_ela_geminada', False))
+    return lexical_words(text, data.get('join_hyphens', False),
+                         data.get('join_catalan_ela_geminada', False),
+                         data.get('hebrew_internal_quotes', False))
 
 
 def normalized(text):

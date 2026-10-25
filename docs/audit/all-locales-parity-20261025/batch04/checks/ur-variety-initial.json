@@ -1,0 +1,35 @@
+{
+  "command": [
+    "python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/704-taiwan-arc-first-application.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/705-taiwan-visa-residence-work-study-family.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/706-taiwan-arc-renewal-changes-reentry.md",
+    "--lang",
+    "ur"
+  ],
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi,ru,ms,fil,tr,nl,zh-hans,sv,da,nb,fi,pl,cs,ro,uk,bg,ca,el,hr,hu,is,sk}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'ur' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk')\n",
+  "input": {
+    "at": "2026-10-25T14:32:15.275106+00:00",
+    "files": [
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/704-taiwan-arc-first-application.md",
+        "sha256": "80f21c6bda5001b87c3ecdef911c053f379f0f100f5777c00366f3296144a022",
+        "bytes": 16782
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/705-taiwan-visa-residence-work-study-family.md",
+        "sha256": "19c96cb154c2c790d660381e1ee5b2d91ea99d1cccd0e68e2f7298b5fdacc75d",
+        "bytes": 17695
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/706-taiwan-arc-renewal-changes-reentry.md",
+        "sha256": "42690ca6ee045e1090e8b75e89803ed6eb3213bd9a0adfd7ab561dde838b2026",
+        "bytes": 20690
+      }
+    ]
+  }
+}

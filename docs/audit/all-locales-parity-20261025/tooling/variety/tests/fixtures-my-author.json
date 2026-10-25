@@ -1,0 +1,110 @@
+{
+  "purpose": "Independent neutral Burmese sentence-boundary fixtures. No ARC target text or target scores supplied.",
+  "expectationsBeforeMeasurement": true,
+  "sources": [
+    "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-16/",
+    "https://www.unicode.org/faq/myanmar.html",
+    "https://unicode-org.github.io/icu/userguide/boundaryanalysis/#dictionary-based-breakiterator"
+  ],
+  "limitations": "Author-created examples, not human native-speaker validation. Spaces mark phrases; neither whitespace pieces, code points, grapheme clusters nor observed ICU word-like units are asserted to equal linguistic words. No zero-width characters added to target prose for metrics.",
+  "fixtures": [
+    {
+      "id": "library",
+      "text": "စာကြည့်တိုက်ကို မနက် ၉ နာရီတွင် ဖွင့်သည်။ ညနေ ၅ နာရီတွင် ပိတ်သည်။",
+      "expectedSentences": 2,
+      "note": "Myanmar full stops; native digits remain attached to their numeric expressions.",
+      "expectedSentenceTexts": [
+        "စာကြည့်တိုက်ကို မနက် ၉ နာရီတွင် ဖွင့်သည်။",
+        "ညနေ ၅ နာရီတွင် ပိတ်သည်။"
+      ]
+    },
+    {
+      "id": "library-no-space-after-stop",
+      "text": "စာကြည့်တိုက်ကို မနက် ၉ နာရီတွင် ဖွင့်သည်။ညနေ ၅ နာရီတွင် ပိတ်သည်။",
+      "expectedSentences": 2,
+      "note": "Do not require ASCII whitespace after U+104B.",
+      "expectedSentenceTexts": [
+        "စာကြည့်တိုက်ကို မနက် ၉ နာရီတွင် ဖွင့်သည်။",
+        "ညနေ ၅ နာရီတွင် ပိတ်သည်။"
+      ]
+    },
+    {
+      "id": "school-list-comma",
+      "text": "စာအုပ်၊ ခဲတံနှင့် မှတ်စုစာအုပ်ကို စားပွဲပေါ်တင်ထားသည်။",
+      "expectedSentences": 1,
+      "note": "U+104A is not a full-stop boundary.",
+      "expectedSentenceTexts": [
+        "စာအုပ်၊ ခဲတံနှင့် မှတ်စုစာအုပ်ကို စားပွဲပေါ်တင်ထားသည်။"
+      ]
+    },
+    {
+      "id": "train-time",
+      "text": "ရထားသည် မနက် 9:30 တွင် ထွက်သည်။ ခရီးသည်များ စင်္ကြံပေါ်တွင် စောင့်နေကြသည်။",
+      "expectedSentences": 2,
+      "note": "The time colon does not terminate a sentence.",
+      "expectedSentenceTexts": [
+        "ရထားသည် မနက် 9:30 တွင် ထွက်သည်။",
+        "ခရီးသည်များ စင်္ကြံပေါ်တွင် စောင့်နေကြသည်။"
+      ]
+    },
+    {
+      "id": "route-decimal-latin",
+      "text": "ခရီးအကွာအဝေးမှာ 3.5 ကီလိုမီတာ ဖြစ်သည်။ လမ်းသည် ဖြောင့်သည်။",
+      "expectedSentences": 2,
+      "note": "Do not split the decimal point.",
+      "expectedSentenceTexts": [
+        "ခရီးအကွာအဝေးမှာ 3.5 ကီလိုမီတာ ဖြစ်သည်။",
+        "လမ်းသည် ဖြောင့်သည်။"
+      ]
+    },
+    {
+      "id": "route-decimal-myanmar",
+      "text": "ခရီးအကွာအဝေးမှာ ၃.၅ ကီလိုမီတာ ဖြစ်သည်။ လမ်းသည် ဖြောင့်သည်။",
+      "expectedSentences": 2,
+      "note": "The same decimal boundary expectation for Myanmar digits.",
+      "expectedSentenceTexts": [
+        "ခရီးအကွာအဝေးမှာ ၃.၅ ကီလိုမီတာ ဖြစ်သည်။",
+        "လမ်းသည် ဖြောင့်သည်။"
+      ]
+    },
+    {
+      "id": "school-name-abbreviation",
+      "text": "Dr. Smith သည် ကျောင်းသို့ ရောက်လာသည်။ ကလေးများကို စာဖတ်ပြသည်။",
+      "expectedSentences": 2,
+      "note": "Dr. is an embedded Latin title abbreviation, not a sentence by itself.",
+      "expectedSentenceTexts": [
+        "Dr. Smith သည် ကျောင်းသို့ ရောက်လာသည်။",
+        "ကလေးများကို စာဖတ်ပြသည်။"
+      ]
+    },
+    {
+      "id": "phrase-spaces",
+      "text": "ကလေးများ စာကြည့်တိုက်ထဲတွင် စာအုပ်ဖတ်နေကြသည်။",
+      "expectedSentences": 1,
+      "note": "Phrase spaces are not sentence or reliable word boundaries.",
+      "expectedSentenceTexts": [
+        "ကလေးများ စာကြည့်တိုက်ထဲတွင် စာအုပ်ဖတ်နေကြသည်။"
+      ]
+    },
+    {
+      "id": "two-short-sentences",
+      "text": "မိုးရွာသည်။ ရထားရပ်သည်။",
+      "expectedSentences": 2,
+      "note": "Short genuine clauses remain two sentences; do not require minimum token length.",
+      "expectedSentenceTexts": [
+        "မိုးရွာသည်။",
+        "ရထားရပ်သည်။"
+      ]
+    },
+    {
+      "id": "school-attributed-quotation",
+      "text": "ဆရာမက “စာအုပ်ကို ဖတ်ပါ။” ဟု ပြောသည်။ ကျောင်းသားများ စာအုပ်ဖွင့်ကြသည်။",
+      "expectedSentences": 2,
+      "expectedSentenceTexts": [
+        "ဆရာမက “စာအုပ်ကို ဖတ်ပါ။” ဟု ပြောသည်။",
+        "ကျောင်းသားများ စာအုပ်ဖွင့်ကြသည်။"
+      ],
+      "note": "A complete attributed quotation plus reporting clause is the intended prose unit here. Do not create a dangling ဟု ပြောသည်။ fragment. This is a specified fixture expectation, not a claim that every nested quotation has one universal linguistic segmentation."
+    }
+  ]
+}

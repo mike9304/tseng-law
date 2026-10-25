@@ -1,0 +1,32 @@
+{
+  "time": "2026-10-25T14:31:47.314Z",
+  "results": [
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "sha": "4e2f74355eaec26405178065d09452f2fd02a260714892353af65081e8810aca",
+      "errors": [],
+      "official": 11,
+      "internals": 3,
+      "faq": 3,
+      "words": 883
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "sha": "1ad9acf0fabab8205e1373bf0b61b07a14340b937b337bee964bdb1ff2bcb7da",
+      "errors": [],
+      "official": 15,
+      "internals": 4,
+      "faq": 3,
+      "words": 915
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "sha": "552df6fa172d5bd42d9580c707915cde58aa4c0c8df640c0869f7049d3abc28e",
+      "errors": [],
+      "official": 16,
+      "internals": 3,
+      "faq": 3,
+      "words": 1148
+    }
+  ]
+}

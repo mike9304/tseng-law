@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-25T14:46:46.076957+00:00",
+  "command": [
+    "python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/704-taiwan-arc-first-application.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/705-taiwan-visa-residence-work-study-family.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/706-taiwan-arc-renewal-changes-reentry.md",
+    "--lang",
+    "ur"
+  ],
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi,ru,ms,fil,tr,nl,zh-hans,sv,da,nb,fi,pl,cs,ro,uk,bg,ca,el,hr,hu,is,sk}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'ur' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk')\n",
+  "inputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/704-taiwan-arc-first-application.md",
+      "sha256": "3ff0808e003c6feb99fbdb5efdd97823ac4b5b31f544578042b0fa754af958b0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "e07a6b499b2e0fd53cfc38234eb9e1f20fa3f9566ef2b102ffad32433e56c58e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "8ae69f8dc40663efcaa078d8d88484b4af4517f9ac83deaae189ddca182bbb02"
+    }
+  ]
+}

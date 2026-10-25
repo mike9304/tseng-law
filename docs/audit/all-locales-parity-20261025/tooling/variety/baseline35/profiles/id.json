@@ -1,0 +1,176 @@
+{
+  "locale": "id",
+  "directory": "columns-id",
+  "join_hyphens": true,
+  "source_heading_pattern": "(?i:^#{1,6}[ \\t]+(?:[0-9]+[.)][ \\t]+)?(?:Sumber(?:[ \\t]+resmi|[ \\t]+dan[ \\t]+batas[ \\t]+pembahasan)?|Rujukan|Referensi(?:[ \\t]+dan[ \\t]+ruang[ \\t]+lingkup)?|Dasar[ \\t]+hukum|Daftar[ \\t]+pustaka)[ \\t:：]*#*[ \\t]*$)",
+  "abbreviations": [
+    "Dr",
+    "dr",
+    "Prof",
+    "Sdr",
+    "Sdri",
+    "No",
+    "hlm",
+    "hal",
+    "dsb",
+    "dll",
+    "dst",
+    "s.d",
+    "a.n",
+    "u.p",
+    "d.a"
+  ],
+  "contrast_patterns": [
+    "(?i:\\bbukan\\b[^.!?\\n]*?\\b(?:melainkan|tetapi)\\b)",
+    "(?i:\\btidak\\b[^.!?\\n]*?\\bmelainkan\\b)",
+    "(?i:\\balih-alih\\b)",
+    "(?i:\\bberbeda\\s+dari\\b)",
+    "(?i:\\b(?:hal|perkara)\\s+(?:yang\\s+)?berbeda\\b)"
+  ],
+  "caveat_pattern": "(?i:^[ \\t“\"‘\\'(\\[]*(?:Namun|Akan[ \\t]+tetapi|Meski[ \\t]+demikian|Meskipun[ \\t]+demikian|Walaupun[ \\t]+demikian|Kendati[ \\t]+demikian)\\b)",
+  "hypo_pattern": "(?i:^[ \\t“\"‘\\'(\\[]*(?:Misalkan|Misalnya|Bayangkan|Anggaplah|Sebuah[ \\t]+(?:contoh|situasi)[ \\t]+hipotetis|Contoh[ \\t]+hipotetis)\\b)",
+  "formula_close_pattern": "(?i:\\b(?:Artikel|Tulisan)[ \\t]+ini[ \\t]+(?:hanya[ \\t]+)?(?:memberikan[ \\t]+|berisi[ \\t]+)?informasi[ \\t]+umum\\b|\\bfirma[ \\t]+kami[ \\t]+dapat[ \\t]+membantu\\b)",
+  "sentence_fixtures": [
+    {
+      "text": "Berkas sudah siap. Salinannya ada di meja.",
+      "sentences": [
+        "Berkas sudah siap.",
+        "Salinannya ada di meja."
+      ]
+    },
+    {
+      "text": "Apakah daftar ini lengkap? Ya, semua judul sudah tercatat!",
+      "sentences": [
+        "Apakah daftar ini lengkap?",
+        "Ya, semua judul sudah tercatat!"
+      ]
+    },
+    {
+      "text": "Dr. Mira memeriksa hlm. 2 s.d. 4. Catatan No. 5 ada di map biru.",
+      "sentences": [
+        "Dr. Mira memeriksa hlm. 2 s.d. 4.",
+        "Catatan No. 5 ada di map biru."
+      ]
+    },
+    {
+      "text": "Ukuran kertas itu 2,5 cm. Angka 1.250 tercetak di bawahnya.",
+      "sentences": [
+        "Ukuran kertas itu 2,5 cm.",
+        "Angka 1.250 tercetak di bawahnya."
+      ]
+    },
+    {
+      "text": "Paket itu berisi map, label, dsb. Petugas mencatat isinya.",
+      "sentences": [
+        "Paket itu berisi map, label, dsb.",
+        "Petugas mencatat isinya."
+      ]
+    },
+    {
+      "text": "“Berkas sudah siap.” Salinannya ada di meja.",
+      "sentences": [
+        "“Berkas sudah siap.”",
+        "Salinannya ada di meja."
+      ]
+    }
+  ],
+  "word_fixtures": [
+    {
+      "text": "Berkas itu sudah siap.",
+      "tokens": [
+        "Berkas",
+        "itu",
+        "sudah",
+        "siap"
+      ]
+    },
+    {
+      "text": "Buku-buku itu ditempatkan di masing-masing rak.",
+      "tokens": [
+        "Buku-buku",
+        "itu",
+        "ditempatkan",
+        "di",
+        "masing-masing",
+        "rak"
+      ]
+    },
+    {
+      "text": "Berkasnya ditandatangani olehnya di meja.",
+      "tokens": [
+        "Berkasnya",
+        "ditandatangani",
+        "olehnya",
+        "di",
+        "meja"
+      ]
+    },
+    {
+      "text": "Ukuran 2,5 cm; jumlah 1.250.",
+      "tokens": [
+        "Ukuran",
+        "2,5",
+        "cm",
+        "jumlah",
+        "1.250"
+      ]
+    },
+    {
+      "text": "Arsip—salinan—tersimpan.",
+      "tokens": [
+        "Arsip",
+        "salinan",
+        "tersimpan"
+      ]
+    }
+  ],
+  "body_fixtures": [
+    {
+      "text": "Berkas sudah siap. Daftarnya lengkap.\n\n## Sumber resmi\n- Buku contoh, versi 1.0.\n",
+      "sentences": [
+        "Berkas sudah siap.",
+        "Daftarnya lengkap."
+      ]
+    },
+    {
+      "text": "Salinannya ada di meja.\n\n## Referensi dan ruang lingkup\nBuku contoh untuk latihan.\n",
+      "sentences": [
+        "Salinannya ada di meja."
+      ]
+    },
+    {
+      "text": "Daftar ini lengkap.\n\n## 10. Sumber Resmi\nBuku contoh.\n",
+      "sentences": [
+        "Daftar ini lengkap."
+      ]
+    },
+    {
+      "text": "Berkas contoh sudah siap. Daftarnya tersimpan.\n\n## Dasar hukum\nDaftar dokumen contoh.\n- Catatan A.\n- Catatan B.\n",
+      "sentences": [
+        "Berkas contoh sudah siap.",
+        "Daftarnya tersimpan."
+      ]
+    },
+    {
+      "text": "Judul “Dasar hukum” tertulis pada map. Salinannya ada di meja.\n",
+      "sentences": [
+        "Judul “Dasar hukum” tertulis pada map.",
+        "Salinannya ada di meja."
+      ]
+    },
+    {
+      "text": "## Pembahasan dasar hukum\n\nBerkas tetap di meja. Salinannya lengkap.\n",
+      "sentences": [
+        "Berkas tetap di meja.",
+        "Salinannya lengkap."
+      ]
+    },
+    {
+      "text": "## Dasar hukum dalam contoh\n\nCatatan ada di map. Daftarnya pendek.\n",
+      "sentences": [
+        "Catatan ada di map.",
+        "Daftarnya pendek."
+      ]
+    }
+  ]
+}

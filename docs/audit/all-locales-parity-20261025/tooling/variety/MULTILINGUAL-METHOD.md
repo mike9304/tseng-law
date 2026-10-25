@@ -1,3 +1,5 @@
+Current candidate coverage: 42 explicit locales. Historical audits below retain their original counts. The final Batch04 section defines he/bn/ur/fa/my/ta/ne, including Burmese dictionary-unit limits. Root review/install is pending.
+
 # Additional-language measurement contract
 
 The original ko/ja/en/zh-hant calculations and HARD limits are preserved. A
@@ -415,3 +417,168 @@ bytes change. The isolated IS audit records pre-fix failures, the capitalized
 title counterexample failure after a first profile-only change, full tests,
 fixed code hashes and paired same-input impacts. Native/legal approval and
 publication readiness remain separate.
+
+
+# Seven explicit script profiles: he, bn, ur, fa, my, ta, ne
+
+This is a task-local candidate for 42 locales. Root alone installs it. No target
+manuscript, title, summary, FAQ or target score in these seven locales was read
+to design it. Existing 35-locale corpus bytes may be replayed for regression.
+Those raw Markdown counts are not professional-column or publication counts.
+
+## Contract fixed before implementation
+
+All original HARD limits, score weights and 8/32 short/long cutoffs remain.
+They are inherited editorial heuristics, not empirically calibrated readability
+limits, equivalent semantic loads, or national grammar rules. A numerical
+result is not a native-language, legal or editorial approval. Unsupported
+locale, insufficient new-locale text and missing required backend return 2;
+there is no Korean, English, Hindi, Arabic or Thai locale fallback.
+
+| Locale | Unit | Sentence and abbreviation convention |
+| --- | --- | --- |
+| he | Written lexical units; prefixes/clitics attached; maqaf splits; Hebrew/ASCII geresh and internal gershayim retained | `. ! ?`; Hebrew quote closer U+05F4; selected reporting verbs join a quoted utterance to its attribution. Hebrew abbreviations generally use quotes, not a period. Embedded Latin abbreviations are a finite list. |
+| bn | Space/orthography-based lexical units retaining combining signs and digits; hyphens split | `. ! ?` and danda/double danda; native danda needs no following space; selected `ড.`/`মো.` and Latin abbreviations. |
+| ur | Space/orthography-based lexical units, vowel marks and internal joining controls retained | `. ! ?` plus U+06D4/U+061F; native stops need no following space. Recognize closing U+201C as well as common alternatives. Finite embedded Latin abbreviations. |
+| fa | Space/orthography-based lexical units; internal ZWNJ/ZWJ stay within a written form | `. ! ?` plus U+061F; question mark may precede the next sentence without a space. Finite Latin/native page and chronology abbreviations. |
+| my | Within Unicode-space-delimited phrase chunks, Node `Intl.Segmenter('my', {granularity:'word'})` tokens with `isWordLike`, identified as `icu_dictionary_wordlike_units` | U+104B and `. ! ?`; U+104A and phrase spaces never alone terminate a sentence. U+104B needs no following space. Finite Latin abbreviations; a following `ဟု`/`လို့` can join a quoted utterance with its reporting clause. |
+| ta | Space/orthography-based lexical units retaining vowel signs/pulli; hyphens split | `. ! ?`; danda/double danda also accepted for quoted/traditional forms. Finite honorific/page/chronology abbreviations; selected quoted `என்று` attribution. |
+| ne | Space/orthography-based lexical units retaining vowel signs and native digits; hyphens split | `. ! ?` and danda/double danda; finite `डा.`/`प्रा.`/`रु.`/`सं.`/chronology abbreviations; selected `भनेर`/`भनी` attribution. |
+
+These scripts have no native uppercase/lowercase distinction. No broad rule
+infers a new sentence or continuation from native letter case. Selected
+abbreviations remain protected before native text. A Latin sentence-final
+abbreviation before caseless text can remain ambiguous and must be inspected.
+Unlisted initials/abbreviations, embedded poetry, multiple nested quotations,
+unpunctuated prose and romanized-language prose are not fully parsed.
+
+Decimal dots between Unicode digits stay inside numbers. Colon/semicolon,
+Arabic comma/semicolon and Myanmar U+104A are not full stops. Numeric ordinal
+suffixes stay as written; unlike the HR/HU/IS dotted-ordinal convention, these
+profiles do not protect an arbitrary dot after a number. ASCII numbered lists
+remain outside prose under the existing Markdown scope; native inline list
+labels are not silently removed. Unicode spaces separate orthographic units,
+while MY dictionary segmentation determines wordlike units within phrases.
+
+For new profiles only, URL matching stops at native hard terminators so a bare
+URL immediately followed by danda/Urdu/Myanmar punctuation does not consume
+the next sentence. Markdown destinations are excluded while visible labels and
+surrounding punctuation remain. Original bytes and returned sentence slices
+are preserved; NFC is only for comparison. Unicode-space and NFC/NFD fixtures
+exercise the actual preprocessor and splitter, not a parallel mock parser.
+
+Each locale has its own anchored source-only heading alternatives, citation
+labels, caveat/hypothetical openers, general-information closing signals and
+selected contrast formulas. Source headings with substantive modifiers remain
+body headings. Contrast pairs stay within a sentence; ordinary negation and
+additive “not only” patterns are negative controls. These are finite surface
+signals, not a complete discourse parser. A zero does not prove absence of a
+contrast, and a formula signal is not an instruction to remove useful advice.
+
+## Burmese measurement boundary
+
+The runtime verified here is `/Users/son7/.nvm/versions/node/v24.14.1/bin/node`,
+Node 24.14.1 / ICU 78.2 / Unicode 17.0. Runtime version and resolved `my` locale
+are reported in metrics, along with `Unicode_White_Space_phrase_chunks`.
+Missing Node, missing ICU support, an execution error
+or invalid backend result makes measurement unavailable. A separate cache
+keeps MY from changing Thai's existing word cache or review-map requirements.
+No whitespace, character, syllable or Thai fallback is allowed.
+
+The first implementation's raw ICU call failed four fixed Unicode-space
+assertions: ICU78.2 treated U+202F as an internal connector and joined complete
+written words or numbers. The general correction splits input at Unicode
+`White_Space` into phrases before calling the same MY dictionary inside each
+phrase. The number of phrase chunks is never the unit count. Original text
+and token spellings are preserved. `MY-WHITESPACE-DECISION.json` and the initial
+method copy retain this post-RED clarification; expected arrays and all
+thresholds were unchanged. This explicit tailoring differs from raw ICU.
+
+ICU wordlike units are reproducible backend units, not linguistic gold words.
+The separately authored neutral observation splits `စင်္ကြံ` as `စ`, `င်္`,
+`ကြံ`, and may split compounds or inflection differently from human analysis.
+Those limitations remain visible; do not patch individual words, adjust
+thresholds or insert spaces/zero-width characters into an article to improve
+its score. Runtime upgrades can change segmentation and require a new audit.
+The checker does not validate or convert Zawgyi; only Unicode Myanmar input
+is in scope. Literary U+104F or unpunctuated sentence endings remain ambiguous.
+
+ICU's sentence iterator is deliberately not the sentence contract: in the
+neutral examples it split U+104A, `Dr.` and quoted attributions incorrectly.
+The manually fixed literal sentence arrays determine those cases. A quoted
+utterance and reporting clause are one prose unit only in the finite tested
+contexts; this is not a universal rule for embedded speech.
+
+## Evidence and reference status
+
+The own neutral expectations were frozen before any production edit. Hebrew
+sentence/token examples retain the separate market-task neutral profile and
+independent-method review, not its older code. That review is not approval of
+this new implementation. `fixtures-my-author.json` is a separately authored
+ten-example neutral set; its manual sentence expectations precede that author's
+ICU observation. It is not human-native review. Target text was not supplied.
+
+- [Unicode 17 UAX #29](https://www.unicode.org/reports/tr29/tr29-47.html): word
+  tailoring, Hebrew quote/geresh conventions and the need for script-specific
+  segmentation. This implementation does not claim full UAX conformance.
+- [Unicode 17 chapter 12](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-12/),
+  §§12.1.4, 12.2 and 12.6: danda/double danda, Indic combining signs and native
+  digits. The double danda is traditionally a verse boundary; accepting it as
+  a measurement delimiter does not equate poetry with prose.
+- [Unicode 17 chapter 16](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-16/),
+  §16.3.1: Myanmar spaces delimit phrases rather than words; canonical ordering
+  can vary. This rules out treating whitespace pieces as Burmese words.
+- [ICU boundary analysis](https://unicode-org.github.io/icu/userguide/boundaryanalysis/#dictionary-based-breakiterator):
+  dictionary support includes Burmese. It supports the backend choice, not the
+  8/32 thresholds or an assertion that every word boundary is correct.
+- [Unicode chapter 9](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-9/)
+  and [W3C Arabic/Persian layout draft](https://www.w3.org/TR/alreq/),
+  §§4.3.4, 5.2 and 6.1: joining controls, written-word separation and numeric
+  separators. The W3C source is a draft, not an endorsed national grammar.
+- W3C-linked author research by Richard Ishida, directly consulted for
+  [Bengali punctuation](https://r12a.github.io/scripts/beng/bn.html#phrase),
+  [Urdu punctuation/quotes](https://r12a.github.io/scripts/arab/ur.html#phrase),
+  [Tamil punctuation](https://r12a.github.io/scripts/taml/ta.html#phrase), and
+  [Burmese phrase/sentence signs](https://r12a.github.io/scripts/mymr/my.html#phrase).
+  These are descriptive primary orthography notes, not national standards.
+  Selected abbreviations and rhetorical lexicons are AI tailoring and require
+  actual-extraction review; these sources do not prescribe our regular expressions.
+
+National/institutional materials were also sought: the Bangladesh government
+punctuation PDF timed out; the Singapore MOE Tamil syllabus was robot-blocked;
+the Tamil Virtual Academy PDF exceeded the web tool size limit; the Nepal Law
+Commission drafting chapter timed out. Their search excerpts were not treated
+as a fresh full-document read or as sole evidence. The prior Hebrew Academy
+access failure is preserved in the inherited method. No unavailable authority
+is represented as having approved these profiles.
+
+
+# Batch05 measurement contract (fixed before implementation)
+
+The 42-locale baseline is the exact B4 candidate manifest a48da1a2c3b62ffbb9254eaa1db1c4c6bd041707e0f7fe9f93103945753239fd. At copy time its independent root review was pending. This document is an engineering contract, not native-language or legal approval. New km/mn/sr/sl/lt/lv/et target manuscripts and their scores have not been read. Existing Serbian public script statistics exclude ARC704–706 and contain Latin letters with no Cyrillic letters in the three sampled bodies.
+
+## Units, thresholds, boundaries
+
+The six space-based profiles use Unicode orthographic units: letters/numbers with combining marks; internal apostrophes and decimal separators remain attached as in the baseline. Hyphens split units in these seven new profiles. This is a declared counting convention, not a universal linguistic word definition. NFC/NFD and ordinary/NBSP/narrow-NBSP spacing are neutral fixtures. Serbian accepts Latin and Cyrillic spellings through explicit arrays; it does not transliterate opener keys. Mongolian covers modern Cyrillic prose, not traditional vertical Mongolian-script segmentation.
+
+All new profiles retain 8/32 short/long unit thresholds, and existing score/HARD logic is unchanged. Those numbers are inherited heuristic cutoffs, not validated readability norms or cross-language comparable word lengths. No manuscript score informed profile selection.
+
+Khmer uses Node24 Intl.Segmenter('km', {granularity:'word'}) isWordLike units, separately labeled `icu_dictionary_wordlike_units`. Unicode White_Space divides phrase chunks; ICU then finds dictionary units inside each chunk. U+200B break hints remain in input. Raw ICU joins narrow NBSP across words, so phrase chunking applies consistently to every Unicode whitespace variant, following the already fixed Burmese method. ICU's repetition-mark unit and colon-separated time parts are exposed, not relabeled ordinary words. The neutral capability probe is សៀវភៅខ្មៅ → [សៀវភៅ, ខ្មៅ]. Missing backend, locale fallback, failed probe, bad output or absent metadata gives exit2. Record Node/ICU/Unicode versions; dictionary compounds, proper names and spellings remain heuristic. No syllable/grapheme/space fallback is allowed.
+
+Khmer ។ closes punctuation-delimited sentences, ៕ closes a section, and both may be unspaced. ៖ and ៗ are not sentence stops. The combining mark U+17CE is not treated as a standalone boundary. Space-only sentence divisions are not inferred. ។ល។ and ។បេ។ are literal multi-character abbreviations; at a paragraph end the last mark may close it, and before comma/colon/semicolon or a separate explicit stop the sequence is protected. With following lexical prose and no such disambiguation, measurement is unavailable (exit2) rather than guessing caseless sentence boundaries. The discouraged character ៘ is preserved and not treated as a stop. Finite quote-attribution prefixes cover only listed report structures; nested quotations remain review work.
+
+SR/LV/ET Arabic ordinals and SL Arabic/Roman ordinals may continue before a completely lowercase token on the same line. Actual uppercase and mixed-case next sentences stay separate. A lowercase brand or lowercase sentence start is ambiguous; capitalized titles after ordinals need manual review. Numeric dates and Roman-month contexts have finite neutral coverage. Mongolian numeric section decimals and suffix ordinals retain their original characters. Markdown numbered lists are excluded from prose by the pre-existing scope contract.
+
+Abbreviations are finite, locale-specific lists. New profiles explicitly support flexible Unicode spacing within listed compound abbreviations. Selected terminal abbreviations retain the shared end mark before uppercase/new paragraph; prepositive vs postpositive page/article abbreviations use numeric-prefix conditions. Unknown abbreviations, acronyms that look like sentence starts, initials and exceptional names are not generally solved. Source headings match full recognized titles only; substantive headings do not terminate analysis. Rhetoric patterns distinguish ordinary negation/additive 'not only' from replacement in neutral cases; these finite signals are not semantic judgments.
+
+## Sources consulted and precise status
+
+- Khmer: [Unicode17 §16.4](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-16/) specifies that whitespace separates clauses or name parts, describes U+200B, and discourages the single BEYYAL character in favor of spelled sequences. [ICU boundary analysis](https://unicode-org.github.io/icu/userguide/boundaryanalysis/#dictionary-based-breakiterator) describes dictionary support. [Richard Ishida's Khmer notes](https://r12a.github.io/scripts/khmr/km.html#phrase) describe punctuation, repetition and dictionary limitations; they are the author's technical synthesis, not an official national orthography decree. Neutral ICU observations are runtime evidence, not gold-standard words.
+- Mongolian: [National Council's Cyrillic spelling rules, §51–55](https://nclp.mn/uploaded/docs/20170410053854_iT021bZyDoNF4KQwu1GPNYzBL.pdf) were directly opened: sentence periods, numeric enumerators, initials and reported questions. These rules do not prescribe the present tokenizer.
+- Serbian: [university teaching material by Prof. Aleksandra Kostić Tmušić](https://uf-pz.net/wp-content/uploads/2020/05/VASP-2-Pravopis-srpskog-jezika-11.5.2020..pdf) describes Arabic ordinal dots, normally undotted Roman ordinals and numeric dates. This is university-authored instruction, not a newly enacted national standard. Latin/Cyrillic pattern pairs are AI authored.
+- Slovenian: [Slovenski pravopis rules §250–255](https://www.fran.si/134/slovenski-pravopis/datoteke/Pravopis_Pravila.pdf) cover abbreviation dots, Arabic/Roman ordinals and internal numeric dots; the PDF text extraction has encoding defects. The [ePravopis pika entry](https://www.fran.si/135/epravopis-slovenski-pravopis/4415690/pika?All=net&Query=net&View=1) is explicitly draft/non-normative pending adoption, and is only corroborating guidance.
+- Lithuanian: [Court language advice](https://www.apeliacinis.lt/ar-gali-atskirose-eilutese-likti-t.-y.-buti-nesujungti-jungiamuoju-tarpu-skaitmenys-ir-zodziai-pvz.-straipsnis-dalis-punktas/1496) distinguishes abbreviations, acronyms and nonbreaking spaces. Previously separately reviewed neutral LT fixtures/profile are reused selectively; their earlier candidate code is not copied over current42. Page/time/article endings get additional neutral positive/negative tests.
+- Latvian: [Latvian Language Agency numeric-dot guidance](https://www.valodaskonsultacijas.lv/en/questions/824.pdf) distinguishes cardinal/Arabic ordinal/Roman numbering. Its [abbreviation advice](https://www.valodaskonsultacijas.lv/lv/search?page=6&search%5Bq%5D=Sa%C4%ABsin%C4%81jumi&search%5Bquestions%5D=1) recommends a nonbreaking space inside u. c. and a shared final abbreviation/sentence dot. The direct consultation page was read, not only search snippets.
+- Estonian: [EKI number writing](https://teatmik.eki.ee/teatmik/arvukirjutus/) covers dotted Arabic and normally undotted Roman ordinals and dates. [EKI abbreviation guidance](https://teatmik.eki.ee/teatmik/luhendamine/) notes native abbreviations normally have no final dot; finite dotted variants recognized by the checker are not recommendations to add dots. A genuine sentence-final dot after an undotted abbreviation remains a sentence stop.
+
+The fixtures are AI-written school/library/stationery examples with literal expected arrays fixed before production edits. The Lithuanian reused expectations retain their separate source provenance. No human native reviewer approved these examples. Actual manuscript syntax may reveal new defects; new fixes require neutral evidence and same-input regression, not score fitting.

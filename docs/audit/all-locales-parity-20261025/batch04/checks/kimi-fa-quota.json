@@ -1,0 +1,10 @@
+{
+  "modelAlias": "kimi-code/k3.1-pro",
+  "task": "TASK-FA.md",
+  "exitCode": 1,
+  "status": "provider quota 429; no FA manuscript produced",
+  "stderrSHA256": "87327a3d34262df4fb5965b30d44fafed849ce61066dc50e82e92c90b7f62bbb",
+  "stderr": "error: failed to run prompt: provider.api_error: 429 You've reached your 5-hour usage limit. Your quota will reset when the current 5-hour window ends. To continue now, purchase extra usage or upgrade your plan: https://www.kimi.com/membership/subscription?tab=quota\nSee log: /Users/son7/.kimi-code/logs/kimi-code.log\n",
+  "outputFiles": [],
+  "action": "Primary /root authored batch04 FA directly. No upgrade, alternate credential or automatic retry."
+}

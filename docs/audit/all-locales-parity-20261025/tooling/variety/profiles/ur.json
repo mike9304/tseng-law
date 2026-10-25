@@ -1,0 +1,39 @@
+{
+  "review_status": "AI neutral contract; coordinating review and installation pending",
+  "join_hyphens": false,
+  "canonical_abbreviations": true,
+  "question_pattern": "[?؟]\\s*[\"”’»›“״)]*$",
+  "length_unit": "orthographic_words",
+  "short_threshold": 8,
+  "long_threshold": 32,
+  "provenance": "METHOD-BATCH04.md; frozen tests/fixtures-batch04.json and separate MY neutral fixtures",
+  "abbreviations": [
+    "Dr",
+    "Prof",
+    "Mr",
+    "Ms",
+    "Art",
+    "No",
+    "p",
+    "pp",
+    "e.g",
+    "i.e"
+  ],
+  "terminal_abbreviations": [],
+  "register": "Standard Urdu in Unicode Arabic script",
+  "source_heading_pattern": "^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:ماخذ|ذرائع|حوالہ\\s+جات|سرکاری\\s+ذرائع)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$",
+  "additional_sentence_terminators": "۔؟",
+  "unspaced_sentence_terminators": "۔؟",
+  "additional_closing_quotes": "“",
+  "quote_attribution_pattern": "^(?:(?:اس|انہوں)\\s+نے\\s+)?(?:کہا|پوچھا)(?=$|\\s|[,،:;.!?।॥۔؟])",
+  "citation_pattern": "(?:دفعہ|دفعات|آرٹیکل)\\s*\\d+",
+  "contrast_patterns": [
+    "(?:^|(?<=[.!?۔؟\\n]))\\s*(?![^.!?۔؟\\n]{0,220}(?:صرف))[^.!?۔؟\\n]{0,220}(?:نہیں|نہ)\\s*[,،]?\\s*(?:بلکہ)",
+    "کے\\s+بجائے"
+  ],
+  "caveat_pattern": "^[\\s“”\"\\x27«»״(\\[]*(?:تاہم|لیکن|البتہ)(?=$|\\s|[,،:;.!?।॥۔؟])",
+  "hypo_pattern": "^[\\s“”\"\\x27«»״(\\[]*(?:فرض\\s+کریں|مثال\\s+کے\\s+طور\\s+پر)(?=$|\\s|[,،:;.!?।॥۔؟])",
+  "formula_close_pattern": "عمومی\\s+معلومات|ہر\\s+معاملہ\\s+مختلف",
+  "locale": "ur",
+  "directory": "columns-ur"
+}

@@ -1,0 +1,9 @@
+timestampUTC=2026-10-25T15:16:39.815511+00:00
+command=["python3", "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py", "check", "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/704-taiwan-arc-first-application.md", "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/705-taiwan-visa-residence-work-study-family.md", "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/706-taiwan-arc-renewal-changes-reentry.md", "--lang", "bn"]
+exit_code=0
+/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/704-taiwan-arc-first-application.md [bn] sentences=65 mean=13.1 cv=0.456 short=0.2 run3=0.048 opener_rep=0.211 cite_end=0.0 cite_para=0.368 contrast=0 caveat=0 q=0
+  OK — no variety limit violated
+/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/705-taiwan-visa-residence-work-study-family.md [bn] sentences=75 mean=13.7 cv=0.457 short=0.187 run3=0.11 opener_rep=0.043 cite_end=0.0 cite_para=0.522 contrast=0 caveat=2 q=2
+  OK — no variety limit violated
+/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/706-taiwan-arc-renewal-changes-reentry.md [bn] sentences=88 mean=13.7 cv=0.45 short=0.205 run3=0.093 opener_rep=0.038 cite_end=0.0 cite_para=0.423 contrast=0 caveat=0 q=2
+  OK — no variety limit violated

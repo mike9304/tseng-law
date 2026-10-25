@@ -1,0 +1,43 @@
+{
+  "review_status": "AI neutral contract; coordinating review and installation pending",
+  "join_hyphens": false,
+  "canonical_abbreviations": true,
+  "question_pattern": "[?؟]\\s*[\"”’»›“״)]*$",
+  "length_unit": "orthographic_words",
+  "short_threshold": 8,
+  "long_threshold": 32,
+  "provenance": "METHOD-BATCH04.md; frozen tests/fixtures-batch04.json and separate MY neutral fixtures",
+  "abbreviations": [
+    "Dr",
+    "Prof",
+    "Mr",
+    "Ms",
+    "Art",
+    "No",
+    "p",
+    "pp",
+    "e.g",
+    "i.e",
+    "ص",
+    "صص",
+    "ج",
+    "ق.م",
+    "هـ.ش"
+  ],
+  "terminal_abbreviations": [],
+  "register": "Modern Persian, written units retaining ZWNJ",
+  "source_heading_pattern": "^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:منابع(?:\\s+رسمی)?|مآخذ)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$",
+  "additional_sentence_terminators": "؟",
+  "unspaced_sentence_terminators": "؟",
+  "quote_attribution_pattern": "^(?:پرسید|گفت|پاسخ\\s+داد)(?=$|\\s|[,،:;.!?।॥۔؟])",
+  "citation_pattern": "ماده(?:ٔ|\\u200cی)?\\s*\\d+",
+  "contrast_patterns": [
+    "(?:^|(?<=[.!?؟\\n]))\\s*(?![^.!?؟\\n]{0,220}(?:فقط|تنها))[^.!?؟\\n]{0,220}(?:نیست|نه)\\s*[,،]?\\s*(?:بلکه)",
+    "به[\\s\\u200c]+جای"
+  ],
+  "caveat_pattern": "^[\\s“”\"\\x27«»״(\\[]*(?:با\\s+این\\s+حال|اما|بااین\\u200cحال)(?=$|\\s|[,،:;.!?।॥۔؟])",
+  "hypo_pattern": "^[\\s“”\"\\x27«»״(\\[]*(?:فرض\\s+کنید|برای\\s+مثال)(?=$|\\s|[,،:;.!?।॥۔؟])",
+  "formula_close_pattern": "اطلاعات\\s+(?:عمومی|کلی)|هر\\s+پرونده\\s+متفاوت",
+  "locale": "fa",
+  "directory": "columns-fa"
+}

@@ -1,0 +1,16 @@
+{
+  "locale": "uk",
+  "directory": "columns-uk",
+  "review_status": "AI-authored neutral contract; coordinating review pending",
+  "register": "Standard Ukrainian; separate from Russian",
+  "join_hyphens": true,
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:офіційні\\s+)?джерела(?:\\s+та\\s+дата\\s+перевірки)?\\s*:?\\s*$)",
+  "abbreviations": ["проф", "доц", "ст", "стор", "п", "пп", "ч", "абз", "розд", "м", "вул", "обл", "р", "рр", "ім", "напр", "див", "пор", "т. ін", "т.ін", "т. д", "т.д", "ін"],
+  "terminal_abbreviations": ["т. ін", "т.ін", "т. д", "т.д", "ін"],
+  "context_terminal_abbreviations": {"р": "\\d{4}\\s*$", "рр": "\\d{4}\\s*$"},
+  "contrast_patterns": ["(?i:\\bне\\b[^.!?\\n]{0,180}\\bа\\b)", "(?i:\\bзамість\\b)", "(?i:\\bна\\s+відміну\\s+від\\b)"],
+  "caveat_pattern": "(?i:^\\s*[”\"(«»„“]*(?:однак|проте|утім|втім)\\b)",
+  "hypo_pattern": "(?i:^\\s*[”\"(«»„“]*(?:припустімо\\s*,?\\s+що|уявімо)\\b)",
+  "formula_close_pattern": "(?i:ця\\s+стаття\\s+(?:містить|надає)\\s+загальну\\s+інформацію|наша\\s+фірма\\s+може\\s+допомогти)",
+  "citation_pattern": "(?i:\\b(?:стаття|статті|ст\\.|пункт|п\\.)\\s*\\d+)"
+}

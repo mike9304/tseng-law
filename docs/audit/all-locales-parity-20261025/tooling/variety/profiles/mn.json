@@ -1,0 +1,38 @@
+{
+  "review_status": "AI neutral contract; root independent review/install pending",
+  "provenance": "METHOD-BATCH05.md; tests/fixtures-batch05.json fixed before production edits",
+  "join_hyphens": false,
+  "canonical_abbreviations": true,
+  "flexible_abbreviation_spaces": true,
+  "length_unit": "orthographic_words",
+  "short_threshold": 8,
+  "long_threshold": 32,
+  "question_pattern": "[?？؟]\\s*[\"”’»›“)]*$",
+  "terminal_abbreviations": [
+    "г.м",
+    "г. м"
+  ],
+  "register": "Modern Cyrillic Mongolian; not traditional vertical script",
+  "abbreviations": [
+    "Dr",
+    "Prof",
+    "Mr",
+    "Ms",
+    "e.g",
+    "i.e",
+    "ж",
+    "г.м",
+    "г. м",
+    "гэх мэт"
+  ],
+  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:Эх\\s+сурвалж(?:ууд)?|Албан\\s+ёсны\\s+эх\\s+сурвалж(?:ууд)?)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
+  "contrast_patterns": [
+    "(?i:(?:^|(?<=[.!?\\n]))\\s*(?![^.!?\\n;]{0,220}(?:\\bзөвхөн\\b))[^.!?\\n;]{0,220}(?:\\bбиш\\b)[^.!?\\n;]{0,120}(?:\\bхарин\\b))"
+  ],
+  "caveat_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Гэсэн\\s+хэдий\\s+ч|Гэвч|Гэхдээ)\\b)",
+  "hypo_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Жишээ\\s+нь|Төсөөлье)\\b)",
+  "formula_close_pattern": "(?i:ерөнхий\\s+мэдээлэл)",
+  "citation_pattern": "(?i:\\d+\\s*(?:дугаар|дүгээр)\\s+зүйл(?:д|ийн)?|зүйл\\s*\\d+)",
+  "locale": "mn",
+  "directory": "columns-mn"
+}

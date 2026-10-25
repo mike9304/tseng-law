@@ -1,0 +1,47 @@
+[
+  {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/704-taiwan-arc-first-application.md",
+    "sha256": "1de203f18d90ce6a68b2898be2980df48035448215c7ba90bd05b55da6d7c39b",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/704-taiwan-arc-first-application.md",
+      "--lang",
+      "fa"
+    ],
+    "exitCode": 2,
+    "stdout": "",
+    "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi,ru,ms,fil,tr,nl,zh-hans,sv,da,nb,fi,pl,cs,ro,uk,bg,ca,el,hr,hu,is,sk}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'fa' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk')\n"
+  },
+  {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md",
+    "sha256": "5d391fbbdfd0abfab8dbd2a1a076c04fb8a7d737ee3fa9c544711c23f24507f7",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md",
+      "--lang",
+      "fa"
+    ],
+    "exitCode": 2,
+    "stdout": "",
+    "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi,ru,ms,fil,tr,nl,zh-hans,sv,da,nb,fi,pl,cs,ro,uk,bg,ca,el,hr,hu,is,sk}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'fa' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk')\n"
+  },
+  {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+    "sha256": "f81c3b62a3d1255d3b427c1356bd687c52c2be4c819880a8fa8a9c08056475d6",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+      "--lang",
+      "fa"
+    ],
+    "exitCode": 2,
+    "stdout": "",
+    "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi,ru,ms,fil,tr,nl,zh-hans,sv,da,nb,fi,pl,cs,ro,uk,bg,ca,el,hr,hu,is,sk}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'fa' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk')\n"
+  }
+]

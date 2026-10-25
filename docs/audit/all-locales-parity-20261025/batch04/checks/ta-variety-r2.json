@@ -1,0 +1,30 @@
+{
+  "createdAt": "2026-10-25T15:03:34.791520+00:00",
+  "command": [
+    "python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ta/704-taiwan-arc-first-application.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ta/705-taiwan-visa-residence-work-study-family.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ta/706-taiwan-arc-renewal-changes-reentry.md",
+    "--lang",
+    "ta"
+  ],
+  "exitCode": 0,
+  "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ta/704-taiwan-arc-first-application.md [ta] sentences=71 mean=11.3 cv=0.478 short=0.352 run3=0.029 opener_rep=0.05 cite_end=0.0 cite_para=0.35 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ta/705-taiwan-visa-residence-work-study-family.md [ta] sentences=73 mean=12.0 cv=0.45 short=0.315 run3=0.028 opener_rep=0.045 cite_end=0.0 cite_para=0.455 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ta/706-taiwan-arc-renewal-changes-reentry.md [ta] sentences=92 mean=11.4 cv=0.483 short=0.37 run3=0.033 opener_rep=0.154 cite_end=0.0 cite_para=0.462 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+  "stderr": "",
+  "files": [
+    {
+      "file": "src/content/columns-ta/704-taiwan-arc-first-application.md",
+      "sha256": "a5ae34b980cf3098eafe1bf608fe3d19778fb6a398dbb844c9262b8004f2bb16"
+    },
+    {
+      "file": "src/content/columns-ta/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "1ad9acf0fabab8205e1373bf0b61b07a14340b937b337bee964bdb1ff2bcb7da"
+    },
+    {
+      "file": "src/content/columns-ta/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "a1d3c5176ade7ed841cd5aeee4e588352adf5566d8e90501ebbbe3af02b1e3a2"
+    }
+  ]
+}

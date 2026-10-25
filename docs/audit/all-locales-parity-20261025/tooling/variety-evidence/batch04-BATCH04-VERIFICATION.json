@@ -1,0 +1,718 @@
+{
+  "recorded_at": "2026-10-25T14:55:58.705206+00:00",
+  "status": "candidate ready for coordinating root review; not installed by author",
+  "scope": "explicit he bn ur fa my ta ne profiles; 35 to 42",
+  "new_target_manuscript_reads": 0,
+  "target_scores_used_for_design": false,
+  "native_or_legal_approval": false,
+  "shared_or_repo_modified_by_this_agent": false,
+  "source_installation_record": "BASELINE35-INSTALLATION.json",
+  "source_installation_sha256": "8ad6bdb8a09b3ef7da9c5f0bfcaf809b5ff476b8fa817aa15f3030e30db2ef71",
+  "runtime": {
+    "python": "3.12.0 (main, Apr 10 2026, 23:34:05) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "executable": "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+    "unicode_data": "15.0.0",
+    "node_path": "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+    "node": "24.14.1",
+    "icu": "78.2",
+    "node_unicode": "17.0"
+  },
+  "production_file_count": 43,
+  "changed_prior_production_files": [
+    "variety_metrics.py",
+    "variety_multilingual.py",
+    "variety_expansion.py",
+    "MULTILINGUAL-METHOD.md"
+  ],
+  "new_production_files": [
+    "profiles/he.json",
+    "profiles/bn.json",
+    "profiles/ur.json",
+    "profiles/fa.json",
+    "profiles/my.json",
+    "profiles/ta.json",
+    "profiles/ne.json"
+  ],
+  "production_files": [
+    {
+      "path": "variety_metrics.py",
+      "sha256": "98056d054aadf197d953bbde78cfb4498dded0e11ca5bc724c61286184feb3ad",
+      "baseline_sha256": "69ceb7202a6e716ba1666ec08f4757daea8bc43289448dcffa8446c830ecd6fb",
+      "change": "changed"
+    },
+    {
+      "path": "variety_multilingual.py",
+      "sha256": "31568d10e2a00e01f6e1f4144344779e8939754c852fc3aeb7dc06a99bbd243e",
+      "baseline_sha256": "042037e93c6a78459d1e7ea85b9b6bdb0b8aa1038ca9dc0f54c8239e76d4d6d1",
+      "change": "changed"
+    },
+    {
+      "path": "variety_expansion.py",
+      "sha256": "fa68140644c1cb8753fcfcfff081ab76a36d0b8db1f7175cd00afa62da359832",
+      "baseline_sha256": "8fdef830a5e9fea25e956a09426e22cd600450c7996083e385e11517502ad17c",
+      "change": "changed"
+    },
+    {
+      "path": "build-rewrite-queue.py",
+      "sha256": "510cc4881b562713699a0f208df96e1ecc5d01ca66f0add49e876c95c3a9ce59",
+      "baseline_sha256": "510cc4881b562713699a0f208df96e1ecc5d01ca66f0add49e876c95c3a9ce59",
+      "change": "unchanged"
+    },
+    {
+      "path": "MULTILINGUAL-METHOD.md",
+      "sha256": "bdf4208a8f4225ffebdb546cea53ad3b521add40192eac25a11d6c0c8cffcc37",
+      "baseline_sha256": "baf8b077303994ad1d1e5b57c4665c405643c696fca3296826e8e981f8788424",
+      "change": "changed"
+    },
+    {
+      "path": "profiles/ar.json",
+      "sha256": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+      "baseline_sha256": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/de.json",
+      "sha256": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+      "baseline_sha256": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/es.json",
+      "sha256": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+      "baseline_sha256": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/fil.json",
+      "sha256": "9daca5d186170f2025c576fbba8b65594732ef36f7cfb9a6bee719e091585e76",
+      "baseline_sha256": "9daca5d186170f2025c576fbba8b65594732ef36f7cfb9a6bee719e091585e76",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/fr.json",
+      "sha256": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+      "baseline_sha256": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/hi.json",
+      "sha256": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+      "baseline_sha256": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/id.json",
+      "sha256": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+      "baseline_sha256": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/it.json",
+      "sha256": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+      "baseline_sha256": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/ms.json",
+      "sha256": "88abb26243707cd9601ad80695494c1f951077a0d0f49a681d3ae639c9f60d00",
+      "baseline_sha256": "88abb26243707cd9601ad80695494c1f951077a0d0f49a681d3ae639c9f60d00",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/nl.json",
+      "sha256": "cedc9c648dded5d3619305c5f1fc1aa2d961ce34590bf85bcf21c468661db274",
+      "baseline_sha256": "cedc9c648dded5d3619305c5f1fc1aa2d961ce34590bf85bcf21c468661db274",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/pt.json",
+      "sha256": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+      "baseline_sha256": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/ru.json",
+      "sha256": "189438971f5e3572b48e5e9afe8a88ec7c25e5a3aeab5a637f44e9591b666206",
+      "baseline_sha256": "189438971f5e3572b48e5e9afe8a88ec7c25e5a3aeab5a637f44e9591b666206",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/sv.json",
+      "sha256": "66703b741178befbfc04395ba29a4dddb42254772700c906d7bd233a1834680e",
+      "baseline_sha256": "66703b741178befbfc04395ba29a4dddb42254772700c906d7bd233a1834680e",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/th.json",
+      "sha256": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+      "baseline_sha256": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/tr.json",
+      "sha256": "1f44c794464be7750a83629be356d11b45ef9a4d174b3a7b13ef5478163c2bbc",
+      "baseline_sha256": "1f44c794464be7750a83629be356d11b45ef9a4d174b3a7b13ef5478163c2bbc",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/vi.json",
+      "sha256": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+      "baseline_sha256": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/zh-hans.json",
+      "sha256": "8ca5f5f884c3a1d2144ed5ce55b09b806088b5b0b66b4cf883067255fe153543",
+      "baseline_sha256": "8ca5f5f884c3a1d2144ed5ce55b09b806088b5b0b66b4cf883067255fe153543",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/da.json",
+      "sha256": "d97cb6ecf083d3a000d9e68c9aca35be606afcc262cf676723f9fc06ba3352df",
+      "baseline_sha256": "d97cb6ecf083d3a000d9e68c9aca35be606afcc262cf676723f9fc06ba3352df",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/nb.json",
+      "sha256": "d354bc18f20fe062ec564e90cf5a654b70038e91f1ca9047499a0acd16b8faa4",
+      "baseline_sha256": "d354bc18f20fe062ec564e90cf5a654b70038e91f1ca9047499a0acd16b8faa4",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/fi.json",
+      "sha256": "87535d428aaf9613187c52adc3c387e365f419f423f693128fd77e08646b2629",
+      "baseline_sha256": "87535d428aaf9613187c52adc3c387e365f419f423f693128fd77e08646b2629",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/pl.json",
+      "sha256": "00b4d91b84026bda2a8f76f963302865311f3ca3600fbd1d1a4267a7ff7dd0fa",
+      "baseline_sha256": "00b4d91b84026bda2a8f76f963302865311f3ca3600fbd1d1a4267a7ff7dd0fa",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/cs.json",
+      "sha256": "317385e4979f05808aad1a20af7793167550acf89ce2a8a303d7eab8d23f9e99",
+      "baseline_sha256": "317385e4979f05808aad1a20af7793167550acf89ce2a8a303d7eab8d23f9e99",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/ro.json",
+      "sha256": "1fe2c5bb725e55a8aa38fcaafc0f52fc43d729c54fa9dfaaab5a6aafddee1474",
+      "baseline_sha256": "1fe2c5bb725e55a8aa38fcaafc0f52fc43d729c54fa9dfaaab5a6aafddee1474",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/uk.json",
+      "sha256": "ed9e8025126b82dfd0385cf76bb8694efe731bcf0e63a7fb58d3c8ee520d6081",
+      "baseline_sha256": "ed9e8025126b82dfd0385cf76bb8694efe731bcf0e63a7fb58d3c8ee520d6081",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/bg.json",
+      "sha256": "3462bfb1ef3eb72956a2b28b2dfdd9f3179d5c60472753e2ead4ccc3e6f1a442",
+      "baseline_sha256": "3462bfb1ef3eb72956a2b28b2dfdd9f3179d5c60472753e2ead4ccc3e6f1a442",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/ca.json",
+      "sha256": "ff8b9474d63ab895cfcd4669fe3cf799045c03801107a1ded976c8e9b4b40822",
+      "baseline_sha256": "ff8b9474d63ab895cfcd4669fe3cf799045c03801107a1ded976c8e9b4b40822",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/el.json",
+      "sha256": "436a1dfae99477561e3acd7ca08b8f2fce6851bebaffe066acb1408de37f6d30",
+      "baseline_sha256": "436a1dfae99477561e3acd7ca08b8f2fce6851bebaffe066acb1408de37f6d30",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/hr.json",
+      "sha256": "d139e9980abbcfc79177de7d87b0269d2e837f990e08691ba93fee35894cde71",
+      "baseline_sha256": "d139e9980abbcfc79177de7d87b0269d2e837f990e08691ba93fee35894cde71",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/hu.json",
+      "sha256": "cef85b13e94e3fd08f23d3aa4fba80ab51c116adf3c7d30cb8e4e59d00b1279b",
+      "baseline_sha256": "cef85b13e94e3fd08f23d3aa4fba80ab51c116adf3c7d30cb8e4e59d00b1279b",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/is.json",
+      "sha256": "d0594d70cbdca74a6d5a701665bb1c680f73d36fe8d90e2910f4923db4e00796",
+      "baseline_sha256": "d0594d70cbdca74a6d5a701665bb1c680f73d36fe8d90e2910f4923db4e00796",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/sk.json",
+      "sha256": "bdaceac0a3767ca53432736996a1d70f04af43d7bb1fef941b6b08cc746bb04a",
+      "baseline_sha256": "bdaceac0a3767ca53432736996a1d70f04af43d7bb1fef941b6b08cc746bb04a",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/he.json",
+      "sha256": "b1a18b7d290c158ac485ed18bc1a70f5db36c3a395439b3403394435d25b7615",
+      "baseline_sha256": null,
+      "change": "added"
+    },
+    {
+      "path": "profiles/bn.json",
+      "sha256": "972bc2c11024f7eb8de6bc833671b98eea4ad7cbfa332671760ba114bb6bf506",
+      "baseline_sha256": null,
+      "change": "added"
+    },
+    {
+      "path": "profiles/ur.json",
+      "sha256": "e0b0d8fb72a8f6b594d51c3a37101fade000a6eb6a69161036f80da2c6076397",
+      "baseline_sha256": null,
+      "change": "added"
+    },
+    {
+      "path": "profiles/fa.json",
+      "sha256": "d6be43d513d3fc6d3202e97022bbc094820e7ab87e950e711a00bb251757d82f",
+      "baseline_sha256": null,
+      "change": "added"
+    },
+    {
+      "path": "profiles/my.json",
+      "sha256": "82288e1fa3ad75d4ed185b6a6275cc9b02f56bfdd4f67150430a05107172426b",
+      "baseline_sha256": null,
+      "change": "added"
+    },
+    {
+      "path": "profiles/ta.json",
+      "sha256": "5b9d203fa8409458d08690a810c509f7993d1d835f070aee68e9915b02329d92",
+      "baseline_sha256": null,
+      "change": "added"
+    },
+    {
+      "path": "profiles/ne.json",
+      "sha256": "f5aaba570b8c67d7aabb100857f39402a8c5e2c4c49da3273d3de47009d59c3b",
+      "baseline_sha256": null,
+      "change": "added"
+    }
+  ],
+  "tests": {
+    "baseline_methods": 44,
+    "initial_red_failures": 51,
+    "profiles_only_red_failures": 116,
+    "profiles_only_red_errors": 1,
+    "raw_icu_unicode_space_failures": 4,
+    "all_green_methods": 56,
+    "all_green_exit": 0,
+    "actual_cli_invocations": 34,
+    "all_expected_cli_exits": true,
+    "wrong_explicit_repo_exit": 2
+  },
+  "regression": {
+    "frozen_repo_head": "47ad0c93b3235fd8a5d7af41511f75014931e7e2",
+    "compared": 1781,
+    "measured": 1750,
+    "unavailable": 31,
+    "by_locale": {
+      "ko": 211,
+      "ja": 224,
+      "en": 212,
+      "zh-hant": 290,
+      "th": 31,
+      "id": 33,
+      "hi": 28,
+      "fr": 31,
+      "de": 26,
+      "it": 26,
+      "es": 46,
+      "pt": 28,
+      "ar": 28,
+      "vi": 45,
+      "ru": 24,
+      "ms": 24,
+      "fil": 31,
+      "tr": 24,
+      "nl": 26,
+      "zh-hans": 29,
+      "sv": 24,
+      "da": 24,
+      "nb": 24,
+      "fi": 24,
+      "pl": 26,
+      "cs": 26,
+      "ro": 24,
+      "uk": 24,
+      "bg": 24,
+      "ca": 24,
+      "el": 24,
+      "hr": 24,
+      "hu": 24,
+      "is": 24,
+      "sk": 24
+    },
+    "metrics_score_hard_differences": [],
+    "boundary_differences": [],
+    "unit_differences": [],
+    "score_hard_ast_unchanged": true,
+    "source_input_drift": [],
+    "integrity_failures": [],
+    "ok": true
+  },
+  "input_delta_from_previous_is_audit": {
+    "previous_manifest_sha256": "f70c580636f80fcdbd037e3b7e35d580b407de086cfd1389dc34a019cf353a57",
+    "previous_raw_files": 1760,
+    "current_frozen_raw_files": 1781,
+    "added": [
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/704-taiwan-arc-first-application.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/705-taiwan-visa-residence-work-study-family.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/706-taiwan-arc-renewal-changes-reentry.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/704-taiwan-arc-first-application.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/705-taiwan-visa-residence-work-study-family.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/706-taiwan-arc-renewal-changes-reentry.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-el/704-taiwan-arc-first-application.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-el/705-taiwan-visa-residence-work-study-family.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-el/706-taiwan-arc-renewal-changes-reentry.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hr/704-taiwan-arc-first-application.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hr/705-taiwan-visa-residence-work-study-family.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hr/706-taiwan-arc-renewal-changes-reentry.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hu/704-taiwan-arc-first-application.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hu/705-taiwan-visa-residence-work-study-family.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hu/706-taiwan-arc-renewal-changes-reentry.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-is/704-taiwan-arc-first-application.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-is/705-taiwan-visa-residence-work-study-family.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-is/706-taiwan-arc-renewal-changes-reentry.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sk/704-taiwan-arc-first-application.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sk/705-taiwan-visa-residence-work-study-family.md",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sk/706-taiwan-arc-renewal-changes-reentry.md"
+    ],
+    "removed": [],
+    "changed": [],
+    "interpretation": "Input additions/edits, not checker regression; paired comparisons above use identical frozen bytes."
+  },
+  "count_scope": "all Markdown files selected by checker directories, not substantive professional column or publication counts",
+  "neutral_expectations_changed": false,
+  "my_method_clarification": "MY-WHITESPACE-DECISION.json; Unicode whitespace phrase chunks before ICU within-chunk segmentation; no threshold changes",
+  "candidate_freeze_sha256": "365fc815765850f46e064bf5dd3b82843274ed422359674faa8b0f35cc07e18f",
+  "evidence_files": [
+    {
+      "path": "BATCH04-REPORT.md",
+      "sha256": "6c35489a3eeed35508512aa740437e0ac768705df4c83fa499c59f49ddbcb657"
+    },
+    {
+      "path": "BATCH04-DELTA.patch",
+      "sha256": "2e63ac7ce1abeab20843c6cdc1317257ca1f93ec22d2e56f95298728239bb8db"
+    },
+    {
+      "path": "METHOD-BATCH04.md",
+      "sha256": "7737c64137ea8064c64da2d07c86e992a9168be6025939309dc6dc4663a5ac4e"
+    },
+    {
+      "path": "METHOD-BATCH04-initial.md",
+      "sha256": "395828d58453e449939b7701a3b7e070faf45cb62cded09f3f40b35fe369f3b2"
+    },
+    {
+      "path": "MY-WHITESPACE-DECISION.json",
+      "sha256": "f1cea646d3650da7133999ee7ab5c64311e4c275e2c3f0a5efd4eaff9e755596"
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "94dd1c65f2d9613290341451a71fa4a0a9162ff74b0cfc9326a334a82b109625"
+    },
+    {
+      "path": "BASELINE35-INSTALLATION.json",
+      "sha256": "8ad6bdb8a09b3ef7da9c5f0bfcaf809b5ff476b8fa817aa15f3030e30db2ef71"
+    },
+    {
+      "path": "BASELINE35-INPUTS.json",
+      "sha256": "4778c6950bee468c0b57df70dd01970a597da7e4e9b344c9c3f910529c6cedc9"
+    },
+    {
+      "path": "BATCH04-FIXTURES-FROZEN.json",
+      "sha256": "6b31c882a2567c67b63c3680665e8473f11546de184e155316401ca09d5e9ef9"
+    },
+    {
+      "path": "CANDIDATE-FROZEN.json",
+      "sha256": "365fc815765850f46e064bf5dd3b82843274ed422359674faa8b0f35cc07e18f"
+    },
+    {
+      "path": "CLI-NEUTRAL-INPUTS-FROZEN.json",
+      "sha256": "decb1652f06e41842243ebdad6379eb0e93e0b3871cdcf78afc517cb51068ba0"
+    },
+    {
+      "path": "REFERENCE-PROVENANCE.json",
+      "sha256": "77ff2f43328ce470b0c81e93e2dad964abf2c6b280271f85f0a75488c52de52f"
+    },
+    {
+      "path": "END-INTEGRITY.json",
+      "sha256": "038e26ea509fcb50e5ae4866236e2a7b0403b2b7848a2b00a8c27b55d4d35d73"
+    },
+    {
+      "path": "baseline35-tests.txt",
+      "sha256": "fc36c9c1a42ea05cac32ce1853211b22e25d71da3dec7a8102947fa7823d5334"
+    },
+    {
+      "path": "batch04-red-support.txt",
+      "sha256": "eb407112bdd3e946e0ba670f5699c20650e0e105757d5f2c0bafe0c7810f4119"
+    },
+    {
+      "path": "batch04-red-boundaries.txt",
+      "sha256": "abcaa1d0cb87b15765e03c27a7fb500eab3434a7847e2795c3c6286987d014e6"
+    },
+    {
+      "path": "batch04-green-attempt.txt",
+      "sha256": "1a9e07efe7051e00f497a0e9ba7daee554d514204b97056276bb75826548e9f4"
+    },
+    {
+      "path": "batch04-green-with-warning.txt",
+      "sha256": "c5dcf0ccdcf17f7619c0909f7b92e42c297829223cb9ab9a3c56f7ea26f018be"
+    },
+    {
+      "path": "batch04-green.txt",
+      "sha256": "a88578cc100aa52a8aeca9c39b73a789a03d5731a6d7b4ad7e7d4f3435d52d4e"
+    },
+    {
+      "path": "batch04-regression.json",
+      "sha256": "47bed864a4f3724593bf02be2a79e1dd14728c3cba87487e2b340bedadcc2a8e"
+    },
+    {
+      "path": "batch04-regression.log",
+      "sha256": "a83fa0f8ed242fbc65b7929c914b0ea8a2a6f7f382bec5bc5a74cf53201014fc"
+    },
+    {
+      "path": "batch04-cli.json",
+      "sha256": "52391c226a76e5d4526658e0187b0fdfd192bfc873ae83fec5fa87c704c9b2f1"
+    },
+    {
+      "path": "batch04-cli.log",
+      "sha256": "4a0d4e874365a5e127a8b6c4a424b40583735f0be0813a7958e3799ae85be7ef"
+    },
+    {
+      "path": "regression-wrong-root.txt",
+      "sha256": "b583b1c22efa3a5a6b09a6453d0c628a314f1bfac9004484afd682c977c88147"
+    },
+    {
+      "path": "tests/baseline_support.py",
+      "sha256": "60aaae9db36d73fb324052c0be6f595448184d5db7ced8158246a99764502b60"
+    },
+    {
+      "path": "tests/build_batch04_fixtures.py",
+      "sha256": "49067e430128de48becde45cc75411b057f658e814435014e91450894c899ad8"
+    },
+    {
+      "path": "tests/build_batch04_profiles.py",
+      "sha256": "cc083f746eb4e19fd0eb87adbff79ea0e3e0c82f14a62a34fccd5c08062c237c"
+    },
+    {
+      "path": "tests/compare_existing.py",
+      "sha256": "fd0a54e51ab9f6ec6de50924096eab5b7a6d5425aa3f45c5debee8f7daf9bb06"
+    },
+    {
+      "path": "tests/compare_is_fix.py",
+      "sha256": "5f9a8a71b9eab3e779c88f0ab09cbcd45fbc3cca06712c7716c88a4f5f102308"
+    },
+    {
+      "path": "tests/compare_ordinal_fix.py",
+      "sha256": "5c57de9589e7a3016b9dbc7bfbb2744c210bb7788e7f668ac2cf9fff3064b929"
+    },
+    {
+      "path": "tests/compare_thirty_five.py",
+      "sha256": "6d82efdd533deee891106c4b8ec9c2ae833cf06dd2a0166f7c51f87045c598d9"
+    },
+    {
+      "path": "tests/compare_twenty_eight.py",
+      "sha256": "41d6d6480e1f6fec1619244f3ce2351e4c12415caf9c06527dc21485423ab204"
+    },
+    {
+      "path": "tests/compare_twenty_one.py",
+      "sha256": "a955aca0cab5e2fb2a080b2b9c733f77aa6d97511d39a3dc7870711e378f0ebb"
+    },
+    {
+      "path": "tests/fixtures-batch03-edges.json",
+      "sha256": "120909a3b6554187ab81d1fd9ec58efa30e84ab2fdb46700c9afccebef210a97"
+    },
+    {
+      "path": "tests/fixtures-batch03-initial.json",
+      "sha256": "59eb73722491603bea43665ea79e27e18c9393c5bcf1285c83a4a0efe9996f6a"
+    },
+    {
+      "path": "tests/fixtures-batch03.json",
+      "sha256": "ebc0ce93719d6885105f0d0bccea931ee04c487ced7abb085b08ba7f36f8b37f"
+    },
+    {
+      "path": "tests/fixtures-batch04.json",
+      "sha256": "be57b7a529fd4e8b91764d0316df4c734dfb631cf2ad4de5ff11d0024a9c63fb"
+    },
+    {
+      "path": "tests/fixtures-is-fix.json",
+      "sha256": "ebea636e89e985aa47be1aaad307ad9838eeff4c075af700dfd54755ce9a0d41"
+    },
+    {
+      "path": "tests/fixtures-my-author.json",
+      "sha256": "128aead2c27905d56b488ef5edfa174a6de5069c8b9e810574ee84a9fdb0b78f"
+    },
+    {
+      "path": "tests/fixtures-next-seven.json",
+      "sha256": "69bbf1aadd2d88466763006b9873fa6b3b5165e6306e73f73bc8398a42749dfd"
+    },
+    {
+      "path": "tests/fixtures-ordinal-fix.json",
+      "sha256": "faaf3a84f774c9f167cb0eb8fa96801edf3c0222f0484311ea33b99514e0a9e8"
+    },
+    {
+      "path": "tests/fixtures-six.json",
+      "sha256": "719c18c62cdf5a8cfcc6852ed78d6c74e3cf5befcae61cdfce858f9930b95c56"
+    },
+    {
+      "path": "tests/fixtures-sv.json",
+      "sha256": "3d62be6552a1af60c43e08b02ec43310d622135e9d4b2eb334c16f3c7b263e6c"
+    },
+    {
+      "path": "tests/generated-batch04/short.bn.md",
+      "sha256": "45e1eec1d55540fdaeecc488d80eb162f4c89aec24b904d9f3fc4eb70d5340d3"
+    },
+    {
+      "path": "tests/generated-batch04/short.fa.md",
+      "sha256": "996b534288a74dc8b5202642f91bf21e8486fd23bbbe5135c93bf639ff81f7b7"
+    },
+    {
+      "path": "tests/generated-batch04/short.he.md",
+      "sha256": "7649f01509cb732f033de795b4e23408601b52cbd8b71db154be6155594a72c5"
+    },
+    {
+      "path": "tests/generated-batch04/short.my.md",
+      "sha256": "8eca6cfb1d1eb6c2674ad949b28e07fe09d73473edefd7b73c266b40ec9a3514"
+    },
+    {
+      "path": "tests/generated-batch04/short.ne.md",
+      "sha256": "7e2041826c130c99e552528459a896a4226e29a4bb5549e27328fe57680fd905"
+    },
+    {
+      "path": "tests/generated-batch04/short.ta.md",
+      "sha256": "17d1e0d075564d5af63523eae6fed13c778d02de05addb37b4942b04252bf122"
+    },
+    {
+      "path": "tests/generated-batch04/short.ur.md",
+      "sha256": "e3f177d7e8f64cd69135df6894f2bb6028b7d40c0eba063ad65fdb7f37d3d174"
+    },
+    {
+      "path": "tests/generated-batch04/uniform.bn.md",
+      "sha256": "5bdf213801beffb7357870c1a63894fca2e41b5d5a4fbf70514df8afd116f549"
+    },
+    {
+      "path": "tests/generated-batch04/uniform.fa.md",
+      "sha256": "32d79bba77ac818d420e83889d136a16971a8f44969f9edcffb0f7bfd845ecbe"
+    },
+    {
+      "path": "tests/generated-batch04/uniform.he.md",
+      "sha256": "822e71312e0289dba6791a83b8f6cae6c7b495f7f36c358e14e1e1801edc5b75"
+    },
+    {
+      "path": "tests/generated-batch04/uniform.my.md",
+      "sha256": "4922f64c3d359237c35a1e61c7ea8f8d5abfeb1204de2f3fda1a111f8da24cc2"
+    },
+    {
+      "path": "tests/generated-batch04/uniform.ne.md",
+      "sha256": "d8c1c04fdfd5f903ad1921fbb4ddce5d7289d3af175520a9690ef1d3aca92c35"
+    },
+    {
+      "path": "tests/generated-batch04/uniform.ta.md",
+      "sha256": "11ab8b07db77edf9d29562b60886652463fb7aefe00563605685f40af9aeee70"
+    },
+    {
+      "path": "tests/generated-batch04/uniform.ur.md",
+      "sha256": "f5d7c356a02c3b1545e6db426a0729419de1fe5e973c5b143c3d9a938c02d19b"
+    },
+    {
+      "path": "tests/generated-batch04/varied.bn.md",
+      "sha256": "7477aefe034bd16a08234e68fc7654244d766d3f199f9d08d49fa278fb52404b"
+    },
+    {
+      "path": "tests/generated-batch04/varied.fa.md",
+      "sha256": "134523f89361f275fad1488df5d3ebeaea4302910c00e72ce7d24e20723088bc"
+    },
+    {
+      "path": "tests/generated-batch04/varied.he.md",
+      "sha256": "b0bfa92006486f872f33253d45751d150918b7bfbc69cb6275d7f7983db75d60"
+    },
+    {
+      "path": "tests/generated-batch04/varied.my.md",
+      "sha256": "d084b2f87a38bc55aade77114c953facef73052aef8ec07ea3925648f922ffdc"
+    },
+    {
+      "path": "tests/generated-batch04/varied.ne.md",
+      "sha256": "28770b6a16217923e171c3ae5eeebf454c56177befb0c5775d88126be126d7ab"
+    },
+    {
+      "path": "tests/generated-batch04/varied.ta.md",
+      "sha256": "5fe224c5fca0dde94a335c836b9668b7334cd80ee2217d13ab6d2d87af40fa19"
+    },
+    {
+      "path": "tests/generated-batch04/varied.ur.md",
+      "sha256": "de6c155e02c3e59e2f5b253cfee6d91d50b475b18cc73d7e4bac48602e2362e0"
+    },
+    {
+      "path": "tests/test_baseline_contracts.py",
+      "sha256": "36207802092684eea4bda54ad7716348f6f57abe7254fe8b5ceddc53e1136b3e"
+    },
+    {
+      "path": "tests/test_batch03.py",
+      "sha256": "8cd5460852d1a9d55b9a2fa6582edb1d0ff2e1700476b431f9408b082f338229"
+    },
+    {
+      "path": "tests/test_batch03_catalan_ordinal.py",
+      "sha256": "0684afccee431794c1b892b39490e528de06f72052e807c3d883d44753277da0"
+    },
+    {
+      "path": "tests/test_batch03_edges.py",
+      "sha256": "3fbcd2f44d7594267a79a38474abb7e30b1c363c16b02b2e29e8a164b5b54a06"
+    },
+    {
+      "path": "tests/test_batch04.py",
+      "sha256": "cec2adc961127937944a708753e4406df1dbbc44fa8697ed474492f538eb4ea5"
+    },
+    {
+      "path": "tests/test_is_fix.py",
+      "sha256": "d9680f11337c156f6d1dc5cd87f07eb19d73c2a9c6cbb56178e4fdd286fc59f7"
+    },
+    {
+      "path": "tests/test_next_seven.py",
+      "sha256": "e9baf27c102b94a43a95babed0192ba94eda524a7d3de184d60fb7f2103914a1"
+    },
+    {
+      "path": "tests/test_ordinal_fix.py",
+      "sha256": "6918af72a8985147825358089ba1560ededdd9231f38a9679719f95fbed7d515"
+    },
+    {
+      "path": "tests/test_ordinal_fix_initial.txt",
+      "sha256": "644e48c47e8ea238b1baa891f119574afb32f0732f4e082e6c916cfb0652d691"
+    },
+    {
+      "path": "tests/test_six_locales.py",
+      "sha256": "0100abb08a52c49cfbf90dd0d790a2e4a5569bdd81ba6d8831dc2a75941136ef"
+    },
+    {
+      "path": "tests/verify_batch04_cli.py",
+      "sha256": "9e9839e5006a21c96dad824405a09b7713775df835194a4da435d9663f293869"
+    },
+    {
+      "path": "research/he-prior-neutral-profile.json",
+      "sha256": "ae6d8b60d6546a0adc9813cb16d4a11de8d7158a0fb93b45a11712bf49662983"
+    },
+    {
+      "path": "research/he-prior-neutral-review.md",
+      "sha256": "6552e467e27c46b5b269e9ec56eaf3789442364a8e81a876e70fb1b3ec08776f"
+    },
+    {
+      "path": "research/my-neutral-icu-observation.json",
+      "sha256": "30b17f57ff835f6d1c16c3d7be522e0ddcee9b8c9bbcaaa5f22e565acdf0823f"
+    },
+    {
+      "path": "research/my-neutral-orthography.json",
+      "sha256": "128aead2c27905d56b488ef5edfa174a6de5069c8b9e810574ee84a9fdb0b78f"
+    }
+  ],
+  "limitations": [
+    "8/32 and HARD are uncalibrated operational heuristics, not cross-language readability equivalence",
+    "MY ICU wordlike units can split natural words/compounds; raw ICU Unicode-space behavior is explicitly tailored and documented",
+    "Finite abbreviation/quote/source/rhetorical patterns need actual extraction review",
+    "National sources that failed access were not claimed as fully read",
+    "No manuscript, native-speaker, lawyer, installation or publication approval"
+  ]
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sentence-variety / monotony metrics for thirty-five tseng-law column locales.
+"""Sentence-variety / monotony metrics for forty-two tseng-law column locales.
 
   variety_metrics.py check FILE [--lang LOCALE] [--sentences REVIEWED_MAP]
   variety_metrics.py corpus DIR [--out DIR2]
@@ -74,7 +74,7 @@ def unlink(p):
 
 ABBR = re.compile(r'\b(art|arts|No|Nos|e\.g|i\.e|U\.S|Mr|Ms|Dr|para|paras|Inc|Ltd|Co|vs|cf|p|pp|St)\.$', re.I)
 def sentences(p, lang, sentence_map=None):
-    p = multilingual.expansion.visible_text(p, multilingual.profile(lang).get('additional_sentence_terminators', '')) if lang in multilingual.expansion.LANGUAGES else unlink(p)
+    p = multilingual.expansion.visible_text(p, multilingual.profile(lang).get('additional_sentence_terminators', ''), multilingual.profile(lang).get('unspaced_sentence_terminators', '')) if lang in multilingual.expansion.LANGUAGES else unlink(p)
     if lang in multilingual.LANGUAGES:
         return multilingual.split_sentences(p, lang, sentence_map)
     if lang == 'en':
@@ -94,7 +94,7 @@ def slen(s, lang):
     return len(re.sub(r'\s', '', re.sub(r'\([^)]*\)|（[^）]*）', '', s)))  # drop parenthetical citations from length
 
 def opener(p, lang):
-    s = (multilingual.expansion.visible_text(p, multilingual.profile(lang).get('additional_sentence_terminators', '')) if lang in multilingual.expansion.LANGUAGES else unlink(p)).strip()
+    s = (multilingual.expansion.visible_text(p, multilingual.profile(lang).get('additional_sentence_terminators', ''), multilingual.profile(lang).get('unspaced_sentence_terminators', '')) if lang in multilingual.expansion.LANGUAGES else unlink(p)).strip()
     if lang in multilingual.expansion.LANGUAGES:
         return multilingual.expansion.opener(s, lang, multilingual.profile(lang), multilingual.words(s, lang))
     if lang in multilingual.LANGUAGES:
@@ -141,7 +141,7 @@ def metrics(text, lang, sentence_map=None):
     opc = collections.Counter(ops)
     ends = collections.Counter(ending(s, lang) for s in S)
     body = '\n'.join(paras)
-    plain = multilingual.expansion.visible_text(body, multilingual.profile(lang).get('additional_sentence_terminators', '')) if lang in multilingual.expansion.LANGUAGES else unlink(body)
+    plain = multilingual.expansion.visible_text(body, multilingual.profile(lang).get('additional_sentence_terminators', ''), multilingual.profile(lang).get('unspaced_sentence_terminators', '')) if lang in multilingual.expansion.LANGUAGES else unlink(body)
     cite_pattern = CITE
     if extended:
         cite_pattern = re.compile(CITE.pattern + r'|(?:§|art[íi]culos?|articol[oi]|artigos?|Artikel|Pasal|धारा|अनुच्छेद|المادة|المواد|มาตรา)\s*\d+', re.I)
@@ -205,6 +205,10 @@ def metrics(text, lang, sentence_map=None):
             m['length_unit'] = 'orthographic_syllabic_units'
         if lang == 'th':
             m['word_segmenter'] = getattr(multilingual.prepare_words, 'engine', {})
+        if lang == 'my':
+            m['word_segmenter'] = getattr(multilingual.prepare_myanmar_words, 'engine', {})
+        if lang == 'km':
+            m['word_segmenter'] = getattr(multilingual.prepare_khmer_words, 'engine', {})
     return m
 
 def score(m, med):

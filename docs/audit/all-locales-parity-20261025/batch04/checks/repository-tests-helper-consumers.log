@@ -1,0 +1,54 @@
+
+> sejong-law@0.1.0 test:unit
+> vitest run src/lib/builder/canvas/__tests__/home-insights-publication-order.test.ts src/lib/builder/__tests__/columns-blob-audience-backfill.test.ts src/lib/builder/__tests__/columns-backend.test.ts src/lib/__tests__/column-category-parity.test.ts src/lib/__tests__/columns-ja-content.test.ts src/lib/__tests__/columns-en-content.test.ts src/lib/__tests__/expertise-columns-20260930.test.ts src/components/__tests__/home-latest-columns.test.tsx src/lib/__tests__/native-locale-columns-20260929.test.ts src/lib/__tests__/columns-zh-content.test.ts src/components/__tests__/ColumnsGrid-topics.test.tsx src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx src/lib/__tests__/column-summary-frontmatter.test.ts src/lib/__tests__/domestic-zh-columns-20261001.test.ts --maxWorkers=1 --testTimeout=30000
+
+
+ RUN  v3.2.6 /Users/son7/Projects/tseng-law-all-locales-20261025
+
+stderr | src/components/__tests__/home-latest-columns.test.tsx > home columns lead with the latest publication batch > ko shows its newest columns before older curated picks
+Warning: Received `true` for a non-boolean attribute `inert`.
+
+If you want to write it to the DOM, pass a string instead: inert="true" or inert={value.toString()}.
+    at nav
+    at KoMobileCta (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/ko-home/KoMobileCta.tsx:12:75)
+    at div
+    at KoHomeBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/KoHomeBody.tsx:24:23)
+    at LegacyHomePageBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/(legacy)/home-legacy.tsx:87:3)
+
+stderr | src/components/__tests__/home-latest-columns.test.tsx > home columns lead with the latest publication batch > es shows its newest columns before older curated picks
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at img
+    at div
+    at figure
+    at IntlHeroPlate (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/intl-design/IntlHeroPlate.tsx:8:26)
+    at section
+    at GuidanceHero (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:101:25)
+    at div
+    at GuidanceHomeBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:753:3)
+
+ ✓ |unit| src/components/__tests__/home-latest-columns.test.tsx (6 tests) 7095ms
+   ✓ home columns lead with the latest publication batch > ko shows its newest columns before older curated picks  1498ms
+   ✓ home columns lead with the latest publication batch > zh-hant shows its newest columns before older curated picks  2407ms
+   ✓ home columns lead with the latest publication batch > ja shows its newest columns before older curated picks  1644ms
+   ✓ home columns lead with the latest publication batch > en shows its newest columns before older curated picks  1522ms
+ ✓ |unit| src/lib/__tests__/native-locale-columns-20260929.test.ts (37 tests) 1466ms
+ ✓ |unit| src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx (12 tests) 1107ms
+   ✓ audience frontmatter recommendations > leads each locale with its own-audience columns newest first, then shared, from its own files only  612ms
+ ✓ |unit| src/lib/__tests__/expertise-columns-20260930.test.ts (37 tests) 986ms
+ ✓ |unit| src/lib/builder/__tests__/columns-backend.test.ts (12 tests) 842ms
+ ✓ |unit| src/lib/__tests__/domestic-zh-columns-20261001.test.ts (13 tests) 623ms
+ ✓ |unit| src/lib/__tests__/columns-ja-content.test.ts (7 tests) 426ms
+   ✓ Japanese full column corpus + site locale > preserves FAQ count for known sources  327ms
+ ✓ |unit| src/lib/__tests__/column-category-parity.test.ts (49 tests) 420ms
+ ✓ |unit| src/lib/builder/__tests__/columns-blob-audience-backfill.test.ts (3 tests) 341ms
+ ✓ |unit| src/lib/__tests__/column-summary-frontmatter.test.ts (8 tests) 245ms
+ ✓ |unit| src/lib/__tests__/columns-en-content.test.ts (7 tests) 233ms
+ ✓ |unit| src/components/__tests__/ColumnsGrid-topics.test.tsx (15 tests) 147ms
+ ✓ |unit| src/lib/builder/canvas/__tests__/home-insights-publication-order.test.ts (6 tests) 142ms
+ ✓ |unit| src/lib/__tests__/columns-zh-content.test.ts (5 tests) 140ms
+
+ Test Files  14 passed (14)
+      Tests  217 passed (217)
+   Start at  01:10:24
+   Duration  16.67s (transform 762ms, setup 12ms, collect 1.48s, tests 14.21s, environment 1ms, prepare 300ms)
+

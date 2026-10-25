@@ -1,0 +1,72 @@
+{
+  "recorded_at": "2026-10-25T15:22:31.523182+00:00",
+  "citation_correction": {
+    "reason": "Own test confused cite_para_share (any article reference in paragraph) with cite_end_share (parenthesized sentence-final reference). Seven failures were incorrect test expectations; existing scoring semantics must stay unchanged. Added both direct=0 and parenthesized=1 controls, keeping original fixture text.",
+    "before_test": "tests/test_batch05-before-citation-contract.py.txt",
+    "failure_log": "batch05-first-implementation.txt"
+  },
+  "inherited_negative_probes": {
+    "reason": "et,lt,sl intentionally gain support in B5; replace only unsupported codes, originals in baseline42-tests unchanged.",
+    "files": [
+      {
+        "path": "tests/test_next_seven.py",
+        "old_sha256": "e9baf27c102b94a43a95babed0192ba94eda524a7d3de184d60fb7f2103914a1",
+        "new_sha256": "f230801709788baf541139fc73d3c66f68ba31af09695964860bf26704aaf8a3",
+        "replacements": [
+          [
+            "'--lang', 'et'",
+            "'--lang', 'xx'"
+          ]
+        ]
+      },
+      {
+        "path": "tests/test_batch03.py",
+        "old_sha256": "8cd5460852d1a9d55b9a2fa6582edb1d0ff2e1700476b431f9408b082f338229",
+        "new_sha256": "0d1dfa609a0cc76fc9a0763435d60ae8c1ef3262b886927bacab0d242052cf7a",
+        "replacements": [
+          [
+            "'--lang', 'sl'",
+            "'--lang', 'xx'"
+          ]
+        ]
+      },
+      {
+        "path": "tests/test_batch04.py",
+        "old_sha256": "cec2adc961127937944a708753e4406df1dbbc44fa8697ed474492f538eb4ea5",
+        "new_sha256": "abfa872dd3f3792a08e6c831e0ba7741c7df47b18b85c7da97685ed0e7cb7a2c",
+        "replacements": [
+          [
+            "'--lang', 'et'",
+            "'--lang', 'und'"
+          ],
+          [
+            "'--lang', 'lt'",
+            "'--lang', 'nn'"
+          ]
+        ]
+      },
+      {
+        "path": "tests/verify_batch04_cli.py",
+        "old_sha256": "9e9839e5006a21c96dad824405a09b7713775df835194a4da435d9663f293869",
+        "new_sha256": "017589795ca02c85cf192fb4e71b4b5bde921ab4243bcb8f187d9f2c2c97243e",
+        "replacements": [
+          [
+            "'--lang', 'et'",
+            "'--lang', 'und'"
+          ],
+          [
+            "'--lang', 'lt'",
+            "'--lang', 'nn'"
+          ]
+        ]
+      }
+    ]
+  },
+  "preserved_test_versions": {
+    "initial_support_test": "tests/test_batch05-initial-support.py.txt",
+    "initial_hash": "f7daec7eb077cd736aca05edcfb1c0e82fdba2a4188827ed8a5396cf39916b82",
+    "restoration": "Exact pre-author-method text reconstructed from preserved before-citation version by removing the later author test method; SHA matches original NEUTRAL-FROZEN record.",
+    "author_added_before_citation": "tests/test_batch05-before-citation-contract.py.txt",
+    "author_added_hash": "a8074e25f5ae55aeb0b93d3acf0bc249a591cfe4ee9e11f8f45c86da1feca44e"
+  }
+}

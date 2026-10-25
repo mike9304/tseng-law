@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-10-26T00:35:29.207304+09:00",
+  "command": "git push origin HEAD:main",
+  "commit": "3b5ea95061d61a6b9a0e94eb61438be843fdd63c",
+  "previous_main": "3b4ea7900664b618746f7b5ce959515e124eefe8",
+  "first_attempt": {
+    "exit": 128,
+    "stderr": "fatal: unable to access 'https://github.com/mike9304/tseng-law.git/': Could not resolve host: github.com"
+  },
+  "authorized_retry": {
+    "exit": 0,
+    "output": "To https://github.com/mike9304/tseng-law.git\n   3b4ea7900..3b5ea9506  HEAD -> main"
+  },
+  "route": "main → MacBook Air automatic build → existing Sites",
+  "public_status": "pending; push success does not prove live deployment",
+  "audit_only_delta": "3b4cc3f4793e1b3593c9621cc8733019a8078e5d..3b5ea95061d61a6b9a0e94eb61438be843fdd63c changes only docs/audit; source/build-script equivalence verified before commit"
+}

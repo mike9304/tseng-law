@@ -1,0 +1,47 @@
+{
+  "createdAt": "2026-10-25T14:38:23.821399+00:00",
+  "status": "MANUAL_AUTHOR_REVIEW_COMPLETE; BN_PROFILE_PENDING; INDEPENDENT_REVIEW_PENDING",
+  "publicationDate": "2026-10-25",
+  "input_hash_changes": [],
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/704-taiwan-arc-first-application.md",
+      "sha256": "889792a93ea42f1cf13401d05f78914a8b6660dbe76ea49ffb9fbfd5e2acd93a",
+      "bytes": 23699,
+      "body_whitespace_tokens": 1097,
+      "faq_count": 3,
+      "source_urls_missing_from_en": [],
+      "body_urls_missing_in_tail": [],
+      "decorative_bold": false,
+      "body_h1": false,
+      "manual_bidi_controls": false
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "9ddd5925463a886359d349c609c4dfea0c3d79800a07198ba3bb1e0b4f8f6a66",
+      "bytes": 25979,
+      "body_whitespace_tokens": 1129,
+      "faq_count": 3,
+      "source_urls_missing_from_en": [],
+      "body_urls_missing_in_tail": [],
+      "decorative_bold": false,
+      "body_h1": false,
+      "manual_bidi_controls": false
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "9cbf32fb1ca8b77e5022cb6bf132468ff660769b283e803855e9f5100d112ff2",
+      "bytes": 30159,
+      "body_whitespace_tokens": 1412,
+      "faq_count": 3,
+      "source_urls_missing_from_en": [],
+      "body_urls_missing_in_tail": [],
+      "decorative_bold": false,
+      "body_h1": false,
+      "manual_bidi_controls": false
+    }
+  ],
+  "shared_checker_sha256": "69ceb7202a6e716ba1666ec08f4757daea8bc43289448dcffa8446c830ecd6fb",
+  "variety_status": "UNSUPPORTED_EXIT_2_RECORDED_IN_bn-variety-initial.log",
+  "manual_boundary_method": "Not a variety pass; actual supported BN profile still required."
+}

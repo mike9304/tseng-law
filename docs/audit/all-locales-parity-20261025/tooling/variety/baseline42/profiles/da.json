@@ -1,0 +1,18 @@
+{
+  "locale": "da",
+  "directory": "columns-da",
+  "review_status": "AI-authored neutral contract; coordinating review pending",
+  "register": "Standard Danish",
+  "join_hyphens": true,
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:officielle\\s+)?kilder(?:\\s+og\\s+kontroldato)?\\s*:?\\s*$)",
+  "abbreviations": ["dr", "prof", "art", "stk", "nr", "kap", "s", "pkt", "kl", "kr", "ca", "jf", "f.eks", "bl.a", "dvs", "osv", "etc", "m.fl", "m.m"],
+  "terminal_abbreviations": ["osv", "etc", "m.fl", "m.m"],
+  "context_terminal_abbreviations": {"kr": "\\d\\s*$"},
+  "ordinal_followers": "januar|februar|marts|april|maj|juni|juli|august|september|oktober|november|december|sal|kapitel|punkt|klasse|årsmøde",
+  "additional_closing_quotes": "«",
+  "contrast_patterns": ["(?i:\\bikke\\b[^.!?\\n]{0,180}\\b(?:men|derimod)\\b)", "(?i:\\bi\\s+stedet\\s+for\\b)", "(?i:\\btil\\s+forskel\\s+fra\\b)", "(?i:\\bikke\\s+det\\s+samme\\b)"],
+  "caveat_pattern": "(?i:^\\s*[”\"(«»„“]*(?:dog|alligevel|imidlertid)\\b)",
+  "hypo_pattern": "(?i:^\\s*[”\"(«»„“]*(?:antag\\s*,?\\s+at|forestil\\s+dig)\\b)",
+  "formula_close_pattern": "(?i:denne\\s+artikel\\s+(?:giver|indeholder)\\s+generel\\s+information|vores\\s+firma\\s+kan\\s+hjælpe)",
+  "citation_pattern": "(?i:(?:\\b(?:artikel|artikler|art\\.)\\s*|§\\s*)\\d+)"
+}

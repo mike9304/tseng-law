@@ -1,0 +1,48 @@
+{
+  "atUTC": "2026-10-25T15:17:23.503703+00:00",
+  "records": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/704-taiwan-arc-first-application.md",
+      "beforeSHA256": "0383e3bc42e256bd95b3f0e5e8d8a9e611b78cd766fc2c67c733047345fc5ab1",
+      "afterSHA256": "c51dafda1a55c98227987ffd49ac7d07e97bf8af72a5aacbc58e4b447e31af13",
+      "exactInverseToBefore": true,
+      "edits": [
+        {
+          "id": "704-S01",
+          "offset": 4864,
+          "before": "ကျောင်းမအပ်ရသေးသူက ဝင်ခွင့်စာကို တင်သည်။ ကျောင်းအပ်ပြီးသူအတွက် NIA က နောက်ဆုံးတစ်လအတွင်း ကျောင်းတက်ကြောင်း အထောက်အထားကို ဖော်ပြထားပြီး၊ လက်ရှိစာသင်ကာလ ကျောင်းအပ်အထောက်အထား သို့မဟုတ် ကျောင်းသားကတ်လည်း ထိုစာရင်းတွင် ပါသည်။",
+          "after": "ကျောင်းမအပ်ရသေးသူက ဝင်ခွင့်စာကို တင်ရပြီး၊ ကျောင်းအပ်ပြီးသူအတွက် NIA က နောက်ဆုံးတစ်လအတွင်း ကျောင်းတက်ကြောင်း အထောက်အထားကို ဖော်ပြထားပြီး၊ လက်ရှိစာသင်ကာလ ကျောင်းအပ်အထောက်အထား သို့မဟုတ် ကျောင်းသားကတ်လည်း ထိုစာရင်းတွင် ပါသည်။",
+          "reason": "Compare the not-yet-enrolled and enrolled document paths in one sentence. Keep recent one-month attendance proof and current-term enrollment proof OR student card; no document is made cumulatively compulsory.",
+          "beforeSHA256": "0383e3bc42e256bd95b3f0e5e8d8a9e611b78cd766fc2c67c733047345fc5ab1",
+          "afterSHA256": "c51dafda1a55c98227987ffd49ac7d07e97bf8af72a5aacbc58e4b447e31af13"
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/705-taiwan-visa-residence-work-study-family.md",
+      "beforeSHA256": "ff402ce83ca45badee2fab9702843839eeb080944f47cc3da9560bcb64d26b35",
+      "afterSHA256": "76cfdb0575683caf42e693e6fbbdcb29e9d4018308927e9fc53463d6523dffe9",
+      "exactInverseToBefore": true,
+      "edits": [
+        {
+          "id": "705-S01",
+          "offset": 6288,
+          "before": "ဝင်ခွင့်စာအပြင် ပညာရေးမှတ်တမ်း၊ ငွေကြေးအထောက်အထားနှင့် ကျန်းမာရေးလက်မှတ်တို့ကို လျှောက်လွှာအမျိုးအစားအလိုက် တောင်းနိုင်သည်။ ပြည်ပစာရွက်များကို မည်သို့အတည်ပြုရမည်ကို သက်ဆိုင်ရာစာရင်းအတိုင်း ဆောင်ရွက်ရသည်။",
+          "after": "ဝင်ခွင့်စာအပြင် ပညာရေးမှတ်တမ်း၊ ငွေကြေးအထောက်အထားနှင့် ကျန်းမာရေးလက်မှတ်တို့ကို လျှောက်လွှာအမျိုးအစားအလိုက် တောင်းနိုင်ပြီး၊ ပြည်ပစာရွက်များကို မည်သို့အတည်ပြုရမည်ကို သက်ဆိုင်ရာစာရင်းအတိုင်း ဆောင်ရွက်ရသည်။",
+          "reason": "Tie the category-specific supporting documents to their overseas authentication checklist; preserve every document and the conditional scope.",
+          "beforeSHA256": "ff402ce83ca45badee2fab9702843839eeb080944f47cc3da9560bcb64d26b35",
+          "afterSHA256": "3f1902be84091b784368a7be7509d35f666739c1ead02f67e8580f5ed6422c3b"
+        },
+        {
+          "id": "705-S02",
+          "offset": 6879,
+          "before": "[BOCA တရုတ်ဘာသာသင် နေထိုင်ခွင့်လမ်းညွှန်](https://www.boca.gov.tw/fp-166-285-041cb-2.html) က တနင်္လာမှ သောကြာအတွင်း တစ်ပတ် အနည်းဆုံး 15 နာရီသင်ရန် သတ်မှတ်သည်။ ခွင့်ယူချိန်အပါအဝင် ပျက်ကွက်ချိန်သည် စုစုပေါင်းသင်ချိန်၏ လေးပုံတစ်ပုံထက် မကျော်ရ။",
+          "after": "[BOCA တရုတ်ဘာသာသင် နေထိုင်ခွင့်လမ်းညွှန်](https://www.boca.gov.tw/fp-166-285-041cb-2.html) က တနင်္လာမှ သောကြာအတွင်း တစ်ပတ် အနည်းဆုံး 15 နာရီသင်ရန် သတ်မှတ်ပြီး၊ ခွင့်ယူချိန်အပါအဝင် ပျက်ကွက်ချိန်သည် စုစုပေါင်းသင်ချိန်၏ လေးပုံတစ်ပုံထက် မကျော်ရ။",
+          "reason": "Present classroom hours and permitted absences as connected attendance conditions; preserve Monday-Friday, >=15 weekly hours, leave included and <=one-quarter absences.",
+          "beforeSHA256": "3f1902be84091b784368a7be7509d35f666739c1ead02f67e8580f5ed6422c3b",
+          "afterSHA256": "76cfdb0575683caf42e693e6fbbdcb29e9d4018308927e9fc53463d6523dffe9"
+        }
+      ]
+    }
+  ]
+}

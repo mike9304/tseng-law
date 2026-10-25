@@ -1,0 +1,10 @@
+COMMAND ['python3', '/Users/son7/tseng-lanes-shared/variety/variety_metrics.py', 'check', '/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/704-taiwan-arc-first-application.md', '/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/705-taiwan-visa-residence-work-study-family.md', '/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/706-taiwan-arc-renewal-changes-reentry.md', '--lang', 'bn']
+EXIT 2
+STDOUT
+
+STDERR
+usage: variety_metrics.py [-h]
+                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi,ru,ms,fil,tr,nl,zh-hans,sv,da,nb,fi,pl,cs,ro,uk,bg,ca,el,hr,hu,is,sk}]
+                          [--out OUT] [--sentences SENTENCES]
+                          {check,corpus} path [path ...]
+variety_metrics.py: error: argument --lang: invalid choice: 'bn' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk')

@@ -1,0 +1,27 @@
+ ❯ |unit| src/lib/__tests__/divorce-columns-20260927.test.ts (10 tests | 2 failed) 1107ms
+   ✓ native divorce columns September 2026 > loads three dated, independently authored articles with FAQ and contact in ko 148ms
+   ✓ native divorce columns September 2026 > loads three dated, independently authored articles with FAQ and contact in ja 126ms
+   ✓ native divorce columns September 2026 > loads three dated, independently authored articles with FAQ and contact in en 148ms
+   ✓ native divorce columns September 2026 > loads three dated, independently authored articles with FAQ and contact in vi 47ms
+   ✓ native divorce columns September 2026 > loads three dated, independently authored articles with FAQ and contact in id 25ms
+   ✓ native divorce columns September 2026 > loads three dated, independently authored articles with FAQ and contact in th 32ms
+   × native divorce columns September 2026 > loads three dated, independently authored articles with FAQ and contact in fil 9ms
+     → expected [ …(3) ] to deeply equal [ …(3) ]
+   ✓ native divorce columns September 2026 > loads three dated, independently authored articles with FAQ and contact in zh-hant 133ms
+   × native divorce columns September 2026 > loads three dated, independently authored articles with FAQ and contact in zh-hans 5ms
+     → expected [ …(3) ] to deeply equal [ …(3) ]
+   ✓ native divorce columns September 2026 > includes exactly the nine authored locales in sitemap alternates for each new article  434ms
+
+ ❯ |unit| src/lib/__tests__/family-columns-20260927.test.ts (10 tests | 2 failed) 1004ms
+   ✓ native marriage and birth columns September 2026 > loads two dated, independently authored articles with FAQ and contact in ko 118ms
+   ✓ native marriage and birth columns September 2026 > loads two dated, independently authored articles with FAQ and contact in ja 98ms
+   ✓ native marriage and birth columns September 2026 > loads two dated, independently authored articles with FAQ and contact in en 121ms
+   ✓ native marriage and birth columns September 2026 > loads two dated, independently authored articles with FAQ and contact in vi 38ms
+   ✓ native marriage and birth columns September 2026 > loads two dated, independently authored articles with FAQ and contact in id 20ms
+   ✓ native marriage and birth columns September 2026 > loads two dated, independently authored articles with FAQ and contact in th 27ms
+   × native marriage and birth columns September 2026 > loads two dated, independently authored articles with FAQ and contact in fil 11ms
+     → expected [ …(2) ] to deeply equal [ …(2) ]
+   ✓ native marriage and birth columns September 2026 > loads two dated, independently authored articles with FAQ and contact in zh-hant 107ms
+   × native marriage and birth columns September 2026 > loads two dated, independently authored articles with FAQ and contact in zh-hans 5ms
+     → expected [ …(2) ] to deeply equal [ …(2) ]
+   ✓ native marriage and birth columns September 2026 > includes exactly the nine authored locales in sitemap alternates for each new article  458ms

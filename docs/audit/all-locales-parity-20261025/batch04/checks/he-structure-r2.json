@@ -1,0 +1,251 @@
+{
+  "at": "2026-10-25T15:21:38.833Z",
+  "scope": "Current manuscript metadata, links and format audit; exact URL differences remain for manual source-equivalence review; not legal or production approval",
+  "files": [
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "sha256": "eb401cf43480269123d91795de21fd48de22e353aac438b1755ceddfd175220f",
+      "bytes": 16715,
+      "metadata": {
+        "title": "בקשת ARC ראשונה בטייוואן: מועדים, מסמכים וקבלת הכרטיס",
+        "seoTitle": "ARC ראשונה בטייוואן: מועד הבקשה, המסמכים והאגרה",
+        "summary": "מי שנכנס לטייוואן עם ויזת תושב וקיבל היתר תושבות חייב לבקש ARC בתוך 30 יום ממחרת הכניסה. מועד אחר חל על ויזה שהונפקה בטייוואן, וכניסה בפטור מויזה אינה מקנה זכות כללית להמיר שהות לתושבות.",
+        "published": "2026-10-25",
+        "lastmod": "2026-10-25",
+        "date_display": "25 באוקטובר 2026",
+        "read_time": "8 דקות קריאה",
+        "categories": [
+          "מידע משפטי על טייוואן"
+        ],
+        "topic": "visa",
+        "tags": [
+          "ARC בטייוואן",
+          "בקשה ראשונה",
+          "ויזת תושב",
+          "NIA",
+          "תושבות זרים"
+        ],
+        "audience": [
+          "he"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "featured_image_alt": "חוברת נסיעות חלקה, תיקיית מסמכים וכרטיס קטן ריק על שולחן להכנת בקשה",
+        "featured_image_caption": "סצנה בדיונית",
+        "faq": [
+          {
+            "q": "מתי מתחיל המועד לבקשת ARC ראשונה?",
+            "a": "בכניסה עם ויזת תושב והיתר תושבות, תקופת 30 הימים מתחילה למחרת ההגעה. אם ויזת התושב הונפקה לאחר ההגעה, הנחיית BOCA סופרת 30 יום ממועד הנפקתה. מבקר המבקש תושבות ישירות חייב לעמוד בזכאות ובכללי ההגשה של הקטגוריה שלו."
+          },
+          {
+            "q": "האם כל מבקש חייב להציג בדיקת בריאות ותעודת יושר?",
+            "a": "לא. הצורך ושלב ההגשה תלויים בדרך הכניסה ובעילת התושבות. למי שנכנס עם ויזת תושב רלוונטית הנחיית NIA 0902; לבקשה ישירה לאחר כניסה בפטור מויזה או עם ויזת מבקר רלוונטית הנחיית 0915, לרבות פטורים נפרדים לפי קטגוריה ומסמך."
+          },
+          {
+            "q": "כמה עולה ARC ראשונה?",
+            "a": "האגרה הרגילה היא NT$1,000 לכל שנת תוקף שאושרה, וגם תקופה קצרה משנה מחויבת כשנה. בבקשות המתאימות לאחר כניסה בפטור מויזה או עם ויזת מבקר מתווספים NT$2,200. קיימות ההטבות והפטורים המפורטים בחוק, אך הם אינם חלים על כל הסטודנטים הזרים."
+          }
+        ]
+      },
+      "sourceHeading": "## מקורות רשמיים",
+      "missingENUrls": [],
+      "bodyUrlsMissingFromSources": [],
+      "officialUrls": 15,
+      "internalLinks": [
+        {
+          "label": "עבודה, לימודים ומשפחה",
+          "url": "/he/columns/taiwan-visa-residence-work-study-family",
+          "exists": true
+        },
+        {
+          "label": "חידוש, שינויים וכניסה חוזרת",
+          "url": "/he/columns/taiwan-arc-renewal-changes-reentry",
+          "exists": true
+        }
+      ],
+      "imageMatchesEN": true,
+      "imageExists": true,
+      "manualBidi": 0,
+      "bodyH1": false,
+      "bold": false,
+      "htmlWrappers": false,
+      "errors": [],
+      "manualSourceEquivalence": []
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "7010616bdd946044f7791e17987ddef10ca5c95b093f42004e7ed4febbf5455c",
+      "bytes": 16638,
+      "metadata": {
+        "title": "מעבר לטייוואן לעבודה, לימודים או משפחה: הוויזה והתושבות",
+        "seoTitle": "תושבות בטייוואן לצורך עבודה, לימודים ומשפחה",
+        "summary": "הזכאות לתושבות בטייוואן תלויה בפעילות המתוכננת, במזמין ובדרך הכניסה. מסלול ישיר אפשרי לבעלי מקצוע מוסמכים, אך לימודי תואר ומנדרין מטילים תנאי ויזה אחרים, וגם תושבות משפחתית מוגבלת לקשר ולמעמד המוגדרים בחוק.",
+        "published": "2026-10-25",
+        "lastmod": "2026-10-25",
+        "date_display": "25 באוקטובר 2026",
+        "read_time": "9 דקות קריאה",
+        "categories": [
+          "מידע משפטי על טייוואן"
+        ],
+        "topic": "visa",
+        "tags": [
+          "ויזה לטייוואן",
+          "תושבות עבודה",
+          "תושבות סטודנט",
+          "לימודי מנדרין",
+          "תושבות משפחה"
+        ],
+        "audience": [
+          "he"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "featured_image_alt": "מחשב נייד סגור, ספרים ושני ספלים לצד חוברת נסיעות חלקה",
+        "featured_image_caption": "סצנה בדיונית",
+        "faq": [
+          {
+            "q": "האם אפשר לבקש תושבות לאחר כניסה לטייוואן בפטור מויזה?",
+            "a": "סעיף 16 לחוק בעלי המקצוע מתיר לבעלי מקצוע זכאים עם היתר עבודה או פטור, ולבני משפחה מסוימים, לפנות ישירות ל-NIA. הזכאות תלויה גם בהסדר הכניסה שנעשה בו שימוש. למסלולי לימודי תואר ומנדרין הרגילים דרישות כניסה שונות."
+          },
+          {
+            "q": "כמה זמן לומדים מנדרין לפני בקשת ARC?",
+            "a": "המסלול לתושבות דורש ויזת מבקר מתאימה ללימודים, ארבעה חודשים שהושלמו במרכז שפה מוכר המסונף לאוניברסיטה, והרשמה לשלושה חודשים נוספים לפחות. גם שעות הלימוד, הנוכחות והמסמכים התומכים הם חלק מהתנאים. הרשמה לבדה אינה מספיקה."
+          },
+          {
+            "q": "האם כל בעל ARC יכול לתמוך בבקשת התושבות של בן זוגו?",
+            "a": "לא. הלאום והקטגוריה של המזמין, קשר המשפחה ומעמד הכניסה של המבקש משפיעים על הזכאות. הכללים למשפחת בעל מקצוע זר שונים מאלה לבן זוג של אזרח טייוואני, והחוק מחריג מזמינים מסוימים."
+          }
+        ]
+      },
+      "sourceHeading": "## מקורות רשמיים",
+      "missingENUrls": [],
+      "bodyUrlsMissingFromSources": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=A0030295",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=43&pcode=N0090001",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=48&pcode=N0090001",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=9&pcode=A0030295"
+      ],
+      "officialUrls": 23,
+      "internalLinks": [
+        {
+          "label": "מדריך בקשת ARC ראשונה",
+          "url": "/he/columns/taiwan-arc-first-application",
+          "exists": true
+        },
+        {
+          "label": "כללי החידוש והשינויים",
+          "url": "/he/columns/taiwan-arc-renewal-changes-reentry",
+          "exists": true
+        }
+      ],
+      "imageMatchesEN": true,
+      "imageExists": true,
+      "manualBidi": 0,
+      "bodyH1": false,
+      "bold": false,
+      "htmlWrappers": false,
+      "errors": [],
+      "manualSourceEquivalence": [
+        {
+          "bodyUrl": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=16&pcode=A0030295",
+          "endListEntry": "- [חוק לגיוס ולהעסקת בעלי מקצוע זרים](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295), סעיפים 4, 5, 9, 14, 15 ו-16; [היסטוריית חקיקה](https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295).",
+          "assessment": "Same MOJ law pcode and explicitly listed article; single-article body link versus whole-law end-list link, manually read."
+        },
+        {
+          "bodyUrl": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=43&pcode=N0090001",
+          "endListEntry": "- [חוק שירות התעסוקה](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001), סעיפים 43, 46, 48 ו-50: קטגוריות עבודה, היתרים, פטורים ועבודת סטודנטים.",
+          "assessment": "Same MOJ law pcode and explicitly listed article; single-article body link versus whole-law end-list link, manually read."
+        },
+        {
+          "bodyUrl": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=48&pcode=N0090001",
+          "endListEntry": "- [חוק שירות התעסוקה](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001), סעיפים 43, 46, 48 ו-50: קטגוריות עבודה, היתרים, פטורים ועבודת סטודנטים.",
+          "assessment": "Same MOJ law pcode and explicitly listed article; single-article body link versus whole-law end-list link, manually read."
+        },
+        {
+          "bodyUrl": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=9&pcode=A0030295",
+          "endListEntry": "- [חוק לגיוס ולהעסקת בעלי מקצוע זרים](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295), סעיפים 4, 5, 9, 14, 15 ו-16; [היסטוריית חקיקה](https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295).",
+          "assessment": "Same MOJ law pcode and explicitly listed article; single-article body link versus whole-law end-list link, manually read."
+        }
+      ]
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "c1430580439966e7c85e23d110e1f152c09db2752d6b0276cab2581843dddea7",
+      "bytes": 20618,
+      "metadata": {
+        "title": "חידוש ARC בטייוואן, שינוי פרטים וכניסה חוזרת",
+        "seoTitle": "חידוש ARC בטייוואן, שינויים וכניסה חוזרת",
+        "summary": "מעבר דירה או שינוי מקום עבודה מחייב הגשת בקשה לרישום השינוי בתוך 30 יום ממחרת השינוי, ואילו חידוש תושבות רגיל מוגש במהלך שלושת החודשים שלפני התפוגה. סיום העסקה או סיום קשר משפחתי עשוי לשנות את זכות התושבות, ולנסיעה נדרש היתר כניסה חוזרת בתוקף.",
+        "published": "2026-10-25",
+        "lastmod": "2026-10-25",
+        "date_display": "25 באוקטובר 2026",
+        "read_time": "10 דקות קריאה",
+        "categories": [
+          "מידע משפטי על טייוואן"
+        ],
+        "topic": "visa",
+        "tags": [
+          "חידוש ARC",
+          "שינוי כתובת",
+          "מעמד תושבות",
+          "כניסה חוזרת",
+          "אובדן ARC"
+        ],
+        "audience": [
+          "he"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "featured_image_alt": "יומן תכנון ריק, חוברת נסיעות חלקה, כרטיס קטן ומפתחות בית על שולחן",
+        "featured_image_caption": "סצנה בדיונית",
+        "faq": [
+          {
+            "q": "כמה זמן מראש אפשר לחדש ARC?",
+            "a": "חלון ההארכה הרגיל נפתח שלושה חודשים לפני תום התושבות המאושרת. לחידוש Gold Card ולהארכת ARC של יזם זכאי עם עסק בטייוואן שנמשך קיימים חלונות נפרדים של ארבעה חודשים. אלה תקופות להגשה מוקדמת, לא תקופות חסד לאחר התפוגה."
+          },
+          {
+            "q": "מתי מדווחים על מעבר דירה או שינוי מקום עבודה?",
+            "a": "יש להגיש ל-NIA בקשה לרישום השינוי בתוך 30 יום ממחרת השינוי. מעסיק חדש עשוי לדרוש גם היתר עבודה, ושינוי עילת התושבות עשוי לדרוש בקשה נפרדת. עדכון הכתובת או מקום העבודה אינו משלים את ההליכים האחרים."
+          },
+          {
+            "q": "אפשר לחזור לטייוואן עם קבלה על בקשת חידוש ARC?",
+            "a": "קבלה אינה מחליפה היתר כניסה חוזרת או מסמכי נסיעה נדרשים. לפני היציאה יש לברר עם NIA איזה מסמך מכסה את החזרה אם הכרטיס המחודש טרם הונפק. הדרכון, מעמד התושבות והיתר הכניסה החוזרת חייבים לכסות את הנסיעה."
+          }
+        ]
+      },
+      "sourceHeading": "## מקורות רשמיים",
+      "missingENUrls": [],
+      "bodyUrlsMissingFromSources": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=12&pcode=A0030295"
+      ],
+      "officialUrls": 17,
+      "internalLinks": [
+        {
+          "label": "שלבי ARC ראשונה",
+          "url": "/he/columns/taiwan-arc-first-application",
+          "exists": true
+        },
+        {
+          "label": "עבודה, לימודים ומשפחה",
+          "url": "/he/columns/taiwan-visa-residence-work-study-family",
+          "exists": true
+        }
+      ],
+      "imageMatchesEN": true,
+      "imageExists": true,
+      "manualBidi": 0,
+      "bodyH1": false,
+      "bold": false,
+      "htmlWrappers": false,
+      "errors": [],
+      "manualSourceEquivalence": [
+        {
+          "bodyUrl": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=12&pcode=A0030295",
+          "endListEntry": "- [חוק לגיוס ולהעסקת בעלי מקצוע זרים](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295), סעיפים 12 ו-17: פטור מוגדר לבוגרים והארכות תושבות זכאות.",
+          "assessment": "Same MOJ law pcode and explicitly listed article; single-article body link versus whole-law end-list link, manually read."
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

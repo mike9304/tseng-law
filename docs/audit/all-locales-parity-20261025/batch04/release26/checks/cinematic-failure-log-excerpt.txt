@@ -1,0 +1,75 @@
+ ❯ |unit| src/components/__tests__/cinematic-opening.test.tsx (73 tests | 1 failed) 32ms
+   ✓ cinematic opening client-route gate > includes the exact homepage pathname /ko 2ms
+   ✓ cinematic opening client-route gate > includes the exact homepage pathname /ko/ 0ms
+   ✓ cinematic opening client-route gate > includes the exact homepage pathname /zh-hant 0ms
+   ✓ cinematic opening client-route gate > includes the exact homepage pathname /zh-hant/ 0ms
+   ✓ cinematic opening client-route gate > includes the exact homepage pathname /en 0ms
+   ✓ cinematic opening client-route gate > includes the exact homepage pathname /en/ 0ms
+   ✓ cinematic opening client-route gate > includes the exact homepage pathname /ja 0ms
+   ✓ cinematic opening client-route gate > includes the exact homepage pathname /ja/ 0ms
+   ✓ cinematic opening client-route gate > opens the guidance homepage /vi on its own hero 0ms
+   ✓ cinematic opening client-route gate > opens the guidance homepage /vi/ on its own hero 0ms
+   ✓ cinematic opening client-route gate > excludes the non-home pathname /ko/about 0ms
+   ✓ cinematic opening client-route gate > excludes the non-home pathname /zh-hant/builder-preview 0ms
+   ✓ cinematic opening client-route gate > excludes the non-home pathname /en/admin-builder 0ms
+   ✓ cinematic opening client-route gate > excludes the non-home pathname /ja/columns 0ms
+   ✓ cinematic opening client-route gate > excludes the non-home pathname /ko// 0ms
+   ✓ cinematic opening client-route gate > excludes the non-home pathname / 0ms
+   ✓ cinematic opening client-route gate > excludes the non-home pathname /ko?campaign=opening 0ms
+   ✓ cinematic opening client-route gate > excludes the non-home pathname /ko/#main 0ms
+   ✓ cinematic opening client-route gate > excludes the non-home pathname null 0ms
+   ✓ cinematic opening client-route gate > maps a guidance rewrite to the public homepage path and renders it like the browser path, without the gate 1ms
+   ✓ cinematic opening client-route gate > opens every home on its own hero (no gate), the guidance languages included 0ms
+   ✓ cinematic opening client-route gate > re-evaluates home → subpage → home instead of caching the first layout path 0ms
+   ✓ cinematic opening client-route gate > mounts the event popup on every route now that no home plays the opening 0ms
+   × cinematic opening layout integration > uses a pathname-aware client boundary and keeps footer outside suppression 5ms
+     → expected 'import type { ReactNode } from \'reac…' not to contain 'headers } from \'next/headers\''
+   ✓ cinematic opening content and semantics > renders all required ko copy without adding an h1 3ms
+   ✓ cinematic opening content and semantics > renders all required zh-hant copy without adding an h1 1ms
+   ✓ cinematic opening content and semantics > renders all required en copy without adding an h1 0ms
+   ✓ cinematic opening content and semantics > renders all required ja copy without adding an h1 0ms
+   ✓ cinematic opening content and semantics > uses a real anchor with an exact scroll handoff 0ms
+   ✓ cinematic opening content and semantics > exposes a real locale contact link under the brand without intercepting it 0ms
+   ✓ cinematic opening content and semantics > keeps the opening server render poster-only so the seal can win LCP 0ms
+   ✓ cinematic opening content and semantics > lands on the rendered hero top instead of the padded main sentinel 0ms
+   ✓ cinematic opening content and semantics > requires positive intersection area instead of a boundary-only intersection 0ms
+   ✓ cinematic opening content and semantics > uses the responsive Taiwan Central Mountain Range flight asset contract 1ms
+   ✓ cinematic opening content and semantics > prioritizes the opening seal with its real intrinsic aspect ratio 0ms
+   ✓ cinematic opening content and semantics > no longer preloads the opening seal (no main-locale home plays the opening) and never prioritizes the hidden header seal 0ms
+   ✓ cinematic opening content and semantics > keeps the long opening subtitle inside narrow mobile viewports 1ms
+   ✓ cinematic opening content and semantics > keeps the city opening bright while using high-contrast light branding 2ms
+   ✓ cinematic opening content and semantics > crops the encoded top-edge strip without moving the fullscreen section 1ms
+   ✓ cinematic opening single-action handoff > transitions on the first positive wheel input without treating upward input as forward 0ms
+   ✓ cinematic opening single-action handoff > normalizes line and page wheel units before applying the threshold 0ms
+   ✓ cinematic opening single-action handoff > uses an immediate handoff without persisting the fallback anchor hash 1ms
+   ✓ cinematic opening single-action handoff > captures only while the fullscreen opening is visible at the viewport top 0ms
+   ✓ cinematic opening single-action handoff > accepts the forward keyboard action "ArrowDown" 0ms
+   ✓ cinematic opening single-action handoff > accepts the forward keyboard action "PageDown" 0ms
+   ✓ cinematic opening single-action handoff > accepts the forward keyboard action " " 0ms
+   ✓ cinematic opening single-action handoff > accepts the forward keyboard action "Spacebar" 0ms
+   ✓ cinematic opening single-action handoff > does not capture upward or modified keyboard input: { key: 'ArrowUp' } 0ms
+   ✓ cinematic opening single-action handoff > does not capture upward or modified keyboard input: { key: 'PageUp' } 0ms
+   ✓ cinematic opening single-action handoff > does not capture upward or modified keyboard input: { key: 'Home' } 0ms
+   ✓ cinematic opening single-action handoff > does not capture upward or modified keyboard input: { key: 'End' } 0ms
+   ✓ cinematic opening single-action handoff > does not capture upward or modified keyboard input: { key: ' ', shiftKey: true } 0ms
+   ✓ cinematic opening single-action handoff > does not capture upward or modified keyboard input: { key: 'ArrowDown', ctrlKey: true } 0ms
+   ✓ cinematic opening single-action handoff > does not capture upward or modified keyboard input: { key: 'End', metaKey: true } 0ms
+   ✓ cinematic opening single-action handoff > mounts and unmounts all input listeners and pending gesture timers 0ms
+   ✓ cinematic opening single-action handoff > absorbs only the triggering wheel gesture, then permits an intentional follow-up 0ms
+   ✓ cinematic opening single-action handoff > does not intercept End even while the opening is active 0ms
+   ✓ cinematic opening single-action handoff > does not capture opening input while a form control is focused 0ms
+   ✓ WI-11 cinematic opening once per session > plays on the first visit and reads the completed state once the marker exists 0ms
+   ✓ WI-11 cinematic opening once per session > forces the opening with ?intro=1 and only with that value 0ms
+   ✓ WI-11 cinematic opening once per session > treats unavailable or throwing storage as a first visit and never throws 0ms
+   ✓ WI-11 cinematic opening once per session > server-renders the pre-hydration gate before the opening markup 0ms
+   ✓ WI-11 cinematic opening once per session > pre-hydration gate flips the site and html flags only for a returning visitor 1ms
+   ✓ WI-11 cinematic opening once per session > mounts the opening on a first visit and completes it from the skip button 4ms
+   ✓ WI-11 cinematic opening once per session > renders the completed state immediately on a second mount in the same session 0ms
+   ✓ WI-11 cinematic opening once per session > replays the opening for ?intro=1 even when the session marker exists 0ms
+   ✓ WI-11 cinematic opening once per session > decides the start state before paint and moves focus to the skip control on mount 0ms
+   ✓ WI-11 cinematic opening skip control and accessibility tree > renders a localized, focusable ko skip button with a 44px target 0ms
+   ✓ WI-11 cinematic opening skip control and accessibility tree > renders a localized, focusable zh-hant skip button with a 44px target 0ms
+   ✓ WI-11 cinematic opening skip control and accessibility tree > renders a localized, focusable en skip button with a 44px target 0ms
+   ✓ WI-11 cinematic opening skip control and accessibility tree > renders a localized, focusable ja skip button with a 44px target 0ms
+   ✓ WI-11 cinematic opening skip control and accessibility tree > keeps the skip button inside the keyboard handoff instead of treating it as a form control 0ms
+   ✓ WI-11 cinematic opening skip control and accessibility tree > never removes the header, skip-link host or main from the accessibility tree 1ms

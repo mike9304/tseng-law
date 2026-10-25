@@ -1,0 +1,1026 @@
+{
+  "at": "2026-10-25T16:00:25.430947+00:00",
+  "baselineCommit": "3b5ea95061d61a6b9a0e94eb61438be843fdd63c",
+  "scope": "Read-only source/text comparison; no tests or app loader executed; root owns final whole-suite status",
+  "filesCompared": 111,
+  "policyFiles": 16,
+  "fixedSeptemberFiles": 45,
+  "failingLocalePathSets": {
+    "fil": {
+      "fileCount": 31,
+      "baselineAndCurrentPathSetsEqual": true
+    },
+    "zh-hans": {
+      "fileCount": 29,
+      "baselineAndCurrentPathSetsEqual": true
+    }
+  },
+  "rows": [
+    {
+      "file": "src/content/columns-en/019-taiwanese-spouse-divorce-agreement-registration.md",
+      "sha256": "19a4d43a6960edaba776709bb2d7ae5124a1ac146ffac90bf58abf17d0e50990",
+      "baselineSha256": "19a4d43a6960edaba776709bb2d7ae5124a1ac146ffac90bf58abf17d0e50990",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-en/020-taiwanese-spouse-divorce-from-abroad.md",
+      "sha256": "ecbb3c43cbfb780258d04ca1c321723b7be14d4e92fa44556fbecf22d26b9df7",
+      "baselineSha256": "ecbb3c43cbfb780258d04ca1c321723b7be14d4e92fa44556fbecf22d26b9df7",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-en/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+      "sha256": "c70828286397159b797a03dcc8086f0ba343011d37988e68c5c124bd30cd555a",
+      "baselineSha256": "c70828286397159b797a03dcc8086f0ba343011d37988e68c5c124bd30cd555a",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-en/022-marrying-taiwanese-national-registration-checklist.md",
+      "sha256": "5e16e910f035e6d677103fb7e01ec747e5a1c0105c4b2be084d085bf0cbf26a8",
+      "baselineSha256": "5e16e910f035e6d677103fb7e01ec747e5a1c0105c4b2be084d085bf0cbf26a8",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-en/023-baby-taiwan-nationality-birth-registration.md",
+      "sha256": "7cff9d0e04ec2da3f7e7092755d269674a4a41fe5ab0136c8b16642b68b19366",
+      "baselineSha256": "7cff9d0e04ec2da3f7e7092755d269674a4a41fe5ab0136c8b16642b68b19366",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-fil/001-taiwan-company-establishment-basics.md",
+      "sha256": "5a64876ecf598e802dcb64fb1fa57db751131e71d741fe263d67a965ada6eafc",
+      "baselineSha256": "5a64876ecf598e802dcb64fb1fa57db751131e71d741fe263d67a965ada6eafc",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/002-withdraw-capital-taiwan-company.md",
+      "sha256": "8b7fc75ac3e00112ce4baa40e4b8c31d146e8987686ef79a754e8c7cd045138e",
+      "baselineSha256": "8b7fc75ac3e00112ce4baa40e4b8c31d146e8987686ef79a754e8c7cd045138e",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/003-taiwan-traffic-accident-procedure.md",
+      "sha256": "4ef84a46c2ad36840c09e42bc516a2836fca2da9c99bf1f67b6f74434a3243cc",
+      "baselineSha256": "4ef84a46c2ad36840c09e42bc516a2836fca2da9c99bf1f67b6f74434a3243cc",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/004-taiwan-company-subsidiary-vs-branch.md",
+      "sha256": "648f78a946e053f808c5347a97e29c0b7b807914d1379e08cd600d60cc6ce6be",
+      "baselineSha256": "648f78a946e053f808c5347a97e29c0b7b807914d1379e08cd600d60cc6ce6be",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/005-taiwan-company-establishment-advanced-2.md",
+      "sha256": "d62a1f501466525daea01fb4a8525bcfb46c9c08c521211955299da604d83bbf",
+      "baselineSha256": "d62a1f501466525daea01fb4a8525bcfb46c9c08c521211955299da604d83bbf",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/006-taiwan-massage-history-law.md",
+      "sha256": "ddc9c75d0530ffb579d8d1a62e5fb1ae93d319e6b4f6961ca185218c659f569a",
+      "baselineSha256": "ddc9c75d0530ffb579d8d1a62e5fb1ae93d319e6b4f6961ca185218c659f569a",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/007-taiwan-divorce-lawsuit-qna.md",
+      "sha256": "bd7552d2bf92c2bd4bec0e09f2016611ff5549cb62444e934b2759e7859f737f",
+      "baselineSha256": "bd7552d2bf92c2bd4bec0e09f2016611ff5549cb62444e934b2759e7859f737f",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/008-taiwan-labor-severance-law.md",
+      "sha256": "0bd619887037d43659211f7184620a7f559ceca54cb7b13990b3a6be729c3fa1",
+      "baselineSha256": "0bd619887037d43659211f7184620a7f559ceca54cb7b13990b3a6be729c3fa1",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/009-taiwan-voluntary-resignation-severance.md",
+      "sha256": "8ac1c36f39aad290f04a487d6744e4c316c096a2b898c70cf148e4ba9597682c",
+      "baselineSha256": "8ac1c36f39aad290f04a487d6744e4c316c096a2b898c70cf148e4ba9597682c",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/010-taiwan-gym-injury-lawsuit.md",
+      "sha256": "b1c18151102782b6a343cd2202c691d7bcd944d73e9d5a2a0f057305c5be81d8",
+      "baselineSha256": "b1c18151102782b6a343cd2202c691d7bcd944d73e9d5a2a0f057305c5be81d8",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md",
+      "sha256": "e3e5a5222de72483ad1a7f77949ff86b7660101c3f173e55708dcbb1805fa2d9",
+      "baselineSha256": "e3e5a5222de72483ad1a7f77949ff86b7660101c3f173e55708dcbb1805fa2d9",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/012-taiwan-overtaking-accident-liability.md",
+      "sha256": "034dd2ca32d74b15e68ccfddec4d41e0dbe58025b8875d13dfcbd35098d02b08",
+      "baselineSha256": "034dd2ca32d74b15e68ccfddec4d41e0dbe58025b8875d13dfcbd35098d02b08",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/013-taiwan-company-establishment-advanced-1.md",
+      "sha256": "304472bf6df291e7649a9f539162cf089e19895f8c3466cbfd2a2e5bff7efe45",
+      "baselineSha256": "304472bf6df291e7649a9f539162cf089e19895f8c3466cbfd2a2e5bff7efe45",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/014-taiwan-mandatory-employment-period.md",
+      "sha256": "0122c4e706b61f3d8c419278de847ed8970e43f97c3f90df180e6f2be11917b4",
+      "baselineSha256": "0122c4e706b61f3d8c419278de847ed8970e43f97c3f90df180e6f2be11917b4",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/015-taiwan-company-setup-pitch-location.md",
+      "sha256": "d7e5f1001ffe519cd5c12770c0c38bdf5f9f3f43c53917066f6443f57adcb69b",
+      "baselineSha256": "d7e5f1001ffe519cd5c12770c0c38bdf5f9f3f43c53917066f6443f57adcb69b",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/016-taiwan-inheritance-custody-analysis.md",
+      "sha256": "d905459f17cae43b4e3c39fdd8dba005b9ced29fa5e91d5264448dec26f91868",
+      "baselineSha256": "d905459f17cae43b4e3c39fdd8dba005b9ced29fa5e91d5264448dec26f91868",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/017-taiwan-logistics-business-setup.md",
+      "sha256": "7a37f68fc4d5fe8bd9104f7cf059a53bd499f4e11ba54a792edfd8749d6bc706",
+      "baselineSha256": "7a37f68fc4d5fe8bd9104f7cf059a53bd499f4e11ba54a792edfd8749d6bc706",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/018-taiwan-semiconductor-market-entry.md",
+      "sha256": "54c71584b74adfe143a9624a2ef6e5f589facdbf8bf45a5176cf9d20b33ab99d",
+      "baselineSha256": "54c71584b74adfe143a9624a2ef6e5f589facdbf8bf45a5176cf9d20b33ab99d",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/019-taiwanese-spouse-divorce-agreement-registration.md",
+      "sha256": "f0feaa43cc094942c011c8fd593e4d3e24f0d33005823322ce33bc6adeae9a8d",
+      "baselineSha256": "f0feaa43cc094942c011c8fd593e4d3e24f0d33005823322ce33bc6adeae9a8d",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/020-taiwanese-spouse-divorce-from-abroad.md",
+      "sha256": "987910a18ab451d8c5babed2471102fb1030fb1c56efac0517147e00c95bb2ef",
+      "baselineSha256": "987910a18ab451d8c5babed2471102fb1030fb1c56efac0517147e00c95bb2ef",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+      "sha256": "bbc41671ae51baae13f9b3b4e0cd6dac6b6e43cd395e7ab9ff7b8a6b82109680",
+      "baselineSha256": "bbc41671ae51baae13f9b3b4e0cd6dac6b6e43cd395e7ab9ff7b8a6b82109680",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/022-marrying-taiwanese-national-registration-checklist.md",
+      "sha256": "3dedfb7e9601faf56e8e185fb950023475072e4beaed91af814ac5424a613d23",
+      "baselineSha256": "3dedfb7e9601faf56e8e185fb950023475072e4beaed91af814ac5424a613d23",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/023-baby-taiwan-nationality-birth-registration.md",
+      "sha256": "01f362d9066de6360d7bf6c05e93fdd6ab3dee92f49b56f1ec70769fc80b6ea6",
+      "baselineSha256": "01f362d9066de6360d7bf6c05e93fdd6ab3dee92f49b56f1ec70769fc80b6ea6",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/704-taiwan-arc-first-application.md",
+      "sha256": "bb7ff2f040c525204e62d406cb52df6d43a6a1f8d61916f4c415b97a42134438",
+      "baselineSha256": "bb7ff2f040c525204e62d406cb52df6d43a6a1f8d61916f4c415b97a42134438",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "b3d5a3132b260ef14653bab7ea8e40ce303817b76365d22d29c2df62fc93e70e",
+      "baselineSha256": "b3d5a3132b260ef14653bab7ea8e40ce303817b76365d22d29c2df62fc93e70e",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "8efd98ba2187a676ad7965d9b5d9281897522599b54f4795ba29fa621426ffae",
+      "baselineSha256": "8efd98ba2187a676ad7965d9b5d9281897522599b54f4795ba29fa621426ffae",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/801-filipino-caregiver-taiwan-patient-died-transfer-employer.md",
+      "sha256": "22e499add2a3dfb997bf0eb969de7a2bf97936aefe99eaa229dfdd3ba7a22041",
+      "baselineSha256": "22e499add2a3dfb997bf0eb969de7a2bf97936aefe99eaa229dfdd3ba7a22041",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/802-filipino-factory-worker-taiwan-overtime-deductions-broker-fee.md",
+      "sha256": "520395bdf43829af113529fd9f8797ab671803350c191d6176a94b9d3da60cd2",
+      "baselineSha256": "520395bdf43829af113529fd9f8797ab671803350c191d6176a94b9d3da60cd2",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/803-filipino-worker-taiwan-reported-missing-overstay-surrender.md",
+      "sha256": "9f96f2238af74f3d96887d6d7516a9515e3a1a42d6875e34a6edca199259db44",
+      "baselineSha256": "9f96f2238af74f3d96887d6d7516a9515e3a1a42d6875e34a6edca199259db44",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+      "sha256": "633126ec40c4f821c37e30b2610aeb2598a7c7fcc3617033960719ae2cf1bfc5",
+      "baselineSha256": "633126ec40c4f821c37e30b2610aeb2598a7c7fcc3617033960719ae2cf1bfc5",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+      "sha256": "535d60328cbcbf44ff21363a0a47a506858c8d38a4203dc5037bbe82b145d2b9",
+      "baselineSha256": "535d60328cbcbf44ff21363a0a47a506858c8d38a4203dc5037bbe82b145d2b9",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-id/019-taiwanese-spouse-divorce-agreement-registration.md",
+      "sha256": "ac06fb997fda65430f32182d9ae2a99fc7dd40868306339025686945fa1bbea6",
+      "baselineSha256": "ac06fb997fda65430f32182d9ae2a99fc7dd40868306339025686945fa1bbea6",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-id/020-taiwanese-spouse-divorce-from-abroad.md",
+      "sha256": "9f84e56055e24e01a5109b7031699c95d740b0369019fb4498eae1ce20e5746a",
+      "baselineSha256": "9f84e56055e24e01a5109b7031699c95d740b0369019fb4498eae1ce20e5746a",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-id/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+      "sha256": "e7759fd6600d75a7ed4e079c923cc5c113798d66cece4a4ba1dea43862a0b3eb",
+      "baselineSha256": "e7759fd6600d75a7ed4e079c923cc5c113798d66cece4a4ba1dea43862a0b3eb",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-id/022-marrying-taiwanese-national-registration-checklist.md",
+      "sha256": "cf808ea4e53ef908b7ec3cd6e9d6528edd3a2af21689567017ee81220567254a",
+      "baselineSha256": "cf808ea4e53ef908b7ec3cd6e9d6528edd3a2af21689567017ee81220567254a",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-id/023-baby-taiwan-nationality-birth-registration.md",
+      "sha256": "56f62d149ec598a229570b82100c2139ebf51a4579f9b1aebf57bef01f00ca43",
+      "baselineSha256": "56f62d149ec598a229570b82100c2139ebf51a4579f9b1aebf57bef01f00ca43",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-ja/019-taiwanese-spouse-divorce-agreement-registration.md",
+      "sha256": "e6648c8ee783b894b7d0b821e77783c184da1c0b9f761809f0bf514bc638d365",
+      "baselineSha256": "e6648c8ee783b894b7d0b821e77783c184da1c0b9f761809f0bf514bc638d365",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-ja/020-taiwanese-spouse-divorce-from-abroad.md",
+      "sha256": "f3562ffdf974f10f220de54004e17f8e458f362e329d2c8706bf1ecdbb010314",
+      "baselineSha256": "f3562ffdf974f10f220de54004e17f8e458f362e329d2c8706bf1ecdbb010314",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-ja/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+      "sha256": "3493b500daa1051d8c73f549624a3dc5fa8bb0bcec36b132c36dec127e5e6e08",
+      "baselineSha256": "3493b500daa1051d8c73f549624a3dc5fa8bb0bcec36b132c36dec127e5e6e08",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-ja/022-marrying-taiwanese-national-registration-checklist.md",
+      "sha256": "f005be28bcc473b24802862543911afc7ecf79144fac0cf58f1cfcd01aacb581",
+      "baselineSha256": "f005be28bcc473b24802862543911afc7ecf79144fac0cf58f1cfcd01aacb581",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-ja/023-baby-taiwan-nationality-birth-registration.md",
+      "sha256": "1ccca812163a2a89feed15f8759490ad3bd8243bc70062cd6d334ae2b02f26de",
+      "baselineSha256": "1ccca812163a2a89feed15f8759490ad3bd8243bc70062cd6d334ae2b02f26de",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-th/019-taiwanese-spouse-divorce-agreement-registration.md",
+      "sha256": "7721231c317eea9541031e8c0688819aa3476bddf1c3eaee0cfeddd4aca11100",
+      "baselineSha256": "7721231c317eea9541031e8c0688819aa3476bddf1c3eaee0cfeddd4aca11100",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-th/020-taiwanese-spouse-divorce-from-abroad.md",
+      "sha256": "d4a41adf2e9b190ca72a6bd59b7899d80c49585ca9b6c7a64df8715d2d66b4ba",
+      "baselineSha256": "d4a41adf2e9b190ca72a6bd59b7899d80c49585ca9b6c7a64df8715d2d66b4ba",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-th/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+      "sha256": "a1c4703f57d721bcfac09fccd12a2bb3926053a48619fd77beb15fc2b34ced6d",
+      "baselineSha256": "a1c4703f57d721bcfac09fccd12a2bb3926053a48619fd77beb15fc2b34ced6d",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-th/022-marrying-taiwanese-national-registration-checklist.md",
+      "sha256": "68a1598687531bb9b11358f13ff4b94d5a98c12a44508b70034e0f4b4d8618e4",
+      "baselineSha256": "68a1598687531bb9b11358f13ff4b94d5a98c12a44508b70034e0f4b4d8618e4",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-th/023-baby-taiwan-nationality-birth-registration.md",
+      "sha256": "37ca13409ec9c7a884d859b6886626dfb92543a6ee78b6754f19d81905ed8071",
+      "baselineSha256": "37ca13409ec9c7a884d859b6886626dfb92543a6ee78b6754f19d81905ed8071",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-vi/019-taiwanese-spouse-divorce-agreement-registration.md",
+      "sha256": "5a59130f0ed0ca20f9234a6fd82f4220630a30e463f26e586d110385015694c4",
+      "baselineSha256": "5a59130f0ed0ca20f9234a6fd82f4220630a30e463f26e586d110385015694c4",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-vi/020-taiwanese-spouse-divorce-from-abroad.md",
+      "sha256": "d26001712b09ddf1511380b666b99e66725184a3d7391708b3eeb9e71fd66b61",
+      "baselineSha256": "d26001712b09ddf1511380b666b99e66725184a3d7391708b3eeb9e71fd66b61",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-vi/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+      "sha256": "353437b73b2bb6f722d2dbe2cb54e1ddc1ac8ce5edc0180fd4bff3231b1dc782",
+      "baselineSha256": "353437b73b2bb6f722d2dbe2cb54e1ddc1ac8ce5edc0180fd4bff3231b1dc782",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-vi/022-marrying-taiwanese-national-registration-checklist.md",
+      "sha256": "79c5bd9deb069ca9aa7a15d4cca5e33d719c3b21a49d1f834359020a80c58ca3",
+      "baselineSha256": "79c5bd9deb069ca9aa7a15d4cca5e33d719c3b21a49d1f834359020a80c58ca3",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-vi/023-baby-taiwan-nationality-birth-registration.md",
+      "sha256": "3eb7c4184655214a1d7453dbb82e0aa70a592d48674bebf7bd34d79ce586238e",
+      "baselineSha256": "3eb7c4184655214a1d7453dbb82e0aa70a592d48674bebf7bd34d79ce586238e",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-zh-hans/001-taiwan-company-establishment-basics.md",
+      "sha256": "a56c571d5f12e9204ec88a3f4e78488bed8d299e2bc1f6700adeeb9393fd0774",
+      "baselineSha256": "a56c571d5f12e9204ec88a3f4e78488bed8d299e2bc1f6700adeeb9393fd0774",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/002-withdraw-capital-taiwan-company.md",
+      "sha256": "b05461449d39149b4a02a85c20312d17fee8cff4b2e0d3f765f43b381deaa991",
+      "baselineSha256": "b05461449d39149b4a02a85c20312d17fee8cff4b2e0d3f765f43b381deaa991",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/003-taiwan-traffic-accident-procedure.md",
+      "sha256": "e9349e6758ce3dce4d2961fe6cf181b5bdc47447240ed71fdd67f2bae48156dd",
+      "baselineSha256": "e9349e6758ce3dce4d2961fe6cf181b5bdc47447240ed71fdd67f2bae48156dd",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/004-taiwan-company-subsidiary-vs-branch.md",
+      "sha256": "fb31badf2609284618939f5e3d6e77a599bf15268b29263a4cd98e7f06ab0789",
+      "baselineSha256": "fb31badf2609284618939f5e3d6e77a599bf15268b29263a4cd98e7f06ab0789",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/005-taiwan-company-establishment-advanced-2.md",
+      "sha256": "d77c986fecd1d10c8adb99f43e9d97b7dee3e11ec6b6526f677e9377afd1beac",
+      "baselineSha256": "d77c986fecd1d10c8adb99f43e9d97b7dee3e11ec6b6526f677e9377afd1beac",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/006-taiwan-massage-history-law.md",
+      "sha256": "3422eb9195d9abab1f1b900be74673e188be77f49335e07a5463116b66bdd6ec",
+      "baselineSha256": "3422eb9195d9abab1f1b900be74673e188be77f49335e07a5463116b66bdd6ec",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/007-taiwan-divorce-lawsuit-qna.md",
+      "sha256": "20e7fb96807db6952d3c4837b2574b1bdbc05ad1fb4a9a4f76075ef58f3379f9",
+      "baselineSha256": "20e7fb96807db6952d3c4837b2574b1bdbc05ad1fb4a9a4f76075ef58f3379f9",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/008-taiwan-labor-severance-law.md",
+      "sha256": "e27d8e33344c37f90586378f79063b736062a80016dad6003b32ed6b53561ded",
+      "baselineSha256": "e27d8e33344c37f90586378f79063b736062a80016dad6003b32ed6b53561ded",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/009-taiwan-voluntary-resignation-severance.md",
+      "sha256": "23eb62136907d1d28d7922543befb0675c863c4861789f5dd2e0a6245d5d8a81",
+      "baselineSha256": "23eb62136907d1d28d7922543befb0675c863c4861789f5dd2e0a6245d5d8a81",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/010-taiwan-gym-injury-lawsuit.md",
+      "sha256": "5054d2c2fb8745997cc1966198976b0cf508ed2fc503498b9184bb7dc3ca365c",
+      "baselineSha256": "5054d2c2fb8745997cc1966198976b0cf508ed2fc503498b9184bb7dc3ca365c",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md",
+      "sha256": "309cbb385f26039b2714d1531ac5b7afeb6c9b52ff6b0ac6defb173fd5806958",
+      "baselineSha256": "309cbb385f26039b2714d1531ac5b7afeb6c9b52ff6b0ac6defb173fd5806958",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/012-taiwan-overtaking-accident-liability.md",
+      "sha256": "793c698efb993c9652afc3706c2d221cb05e70057d6d4d8c719a620825fa9dd9",
+      "baselineSha256": "793c698efb993c9652afc3706c2d221cb05e70057d6d4d8c719a620825fa9dd9",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/013-taiwan-company-establishment-advanced-1.md",
+      "sha256": "f2f84a4511cdcc2039bd260bd4c180fb2c9e163047b22d542c07d19077b4bc6a",
+      "baselineSha256": "f2f84a4511cdcc2039bd260bd4c180fb2c9e163047b22d542c07d19077b4bc6a",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/014-taiwan-mandatory-employment-period.md",
+      "sha256": "cff7a40c371247624b2f9d4baed3029ce4a23a7f8165d7faa020c2ec5ce2f8d7",
+      "baselineSha256": "cff7a40c371247624b2f9d4baed3029ce4a23a7f8165d7faa020c2ec5ce2f8d7",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/015-taiwan-company-setup-pitch-location.md",
+      "sha256": "24a65a860025b0a446f33077e822698daee3d3600d2703b7eb56081f7fe053ca",
+      "baselineSha256": "24a65a860025b0a446f33077e822698daee3d3600d2703b7eb56081f7fe053ca",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/016-taiwan-inheritance-custody-analysis.md",
+      "sha256": "40a0e3c8fffa88356b456962b102502b635c6306ee312da561d0338b361729ec",
+      "baselineSha256": "40a0e3c8fffa88356b456962b102502b635c6306ee312da561d0338b361729ec",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/017-taiwan-logistics-business-setup.md",
+      "sha256": "7c2c0a82e05b1e2fdc6eb4798909d97e5794733a385af2ef82d19e7205c26f46",
+      "baselineSha256": "7c2c0a82e05b1e2fdc6eb4798909d97e5794733a385af2ef82d19e7205c26f46",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/018-taiwan-semiconductor-market-entry.md",
+      "sha256": "2c114c7c16960d2d7e71e1b29c4ae2827f161be47393320354e6a64c3632e4fc",
+      "baselineSha256": "2c114c7c16960d2d7e71e1b29c4ae2827f161be47393320354e6a64c3632e4fc",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/019-taiwanese-spouse-divorce-agreement-registration.md",
+      "sha256": "9e7d391fce9a1e0f1de64ccb42a389ff49cd1b04d05af3ab4cb787dae17780e5",
+      "baselineSha256": "9e7d391fce9a1e0f1de64ccb42a389ff49cd1b04d05af3ab4cb787dae17780e5",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/020-taiwanese-spouse-divorce-from-abroad.md",
+      "sha256": "025da4cbf8da457c541482bb763032999c97a7c1fa6608b30aa224d8381554ae",
+      "baselineSha256": "025da4cbf8da457c541482bb763032999c97a7c1fa6608b30aa224d8381554ae",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+      "sha256": "2896bbda24fdfdf014b6f6e260e621ac0a6bfe868530817341ec225c4b415429",
+      "baselineSha256": "2896bbda24fdfdf014b6f6e260e621ac0a6bfe868530817341ec225c4b415429",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/022-marrying-taiwanese-national-registration-checklist.md",
+      "sha256": "fe73c9bf70d4fc4576375bb19bb33e86cda06a124fcfb3941c06a8ff1beeb17b",
+      "baselineSha256": "fe73c9bf70d4fc4576375bb19bb33e86cda06a124fcfb3941c06a8ff1beeb17b",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/023-baby-taiwan-nationality-birth-registration.md",
+      "sha256": "7dd5ed3f7db0a05723e4ce85edfcd44fd8b5346eb0f9f20121b01c18019b6bbc",
+      "baselineSha256": "7dd5ed3f7db0a05723e4ce85edfcd44fd8b5346eb0f9f20121b01c18019b6bbc",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/704-taiwan-arc-first-application.md",
+      "sha256": "bc621dfb4edc8838994318847fa914dc48e2f33512d5406aa1c2d8c06384b7f0",
+      "baselineSha256": "bc621dfb4edc8838994318847fa914dc48e2f33512d5406aa1c2d8c06384b7f0",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "59b439ddf643b0c46b36672a5844bcb0aee8f5f1b155e263fac762959da4ccf2",
+      "baselineSha256": "59b439ddf643b0c46b36672a5844bcb0aee8f5f1b155e263fac762959da4ccf2",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "fe7738b6f822c3b1dc28508e43fb4df3c073fcdc8be6a5f70cadf98cce7d2d19",
+      "baselineSha256": "fe7738b6f822c3b1dc28508e43fb4df3c073fcdc8be6a5f70cadf98cce7d2d19",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/804-mainland-chinese-heirs-taiwan-estate-cap-deadline.md",
+      "sha256": "0e30878b8061cdb57a46b2a473a499b8d5feb45fdfdb57930733a973b3b91d1c",
+      "baselineSha256": "0e30878b8061cdb57a46b2a473a499b8d5feb45fdfdb57930733a973b3b91d1c",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/805-mainland-chinese-spouse-taiwan-residence-after-divorce.md",
+      "sha256": "487de0f6b3370a7408dbdbdf8397e057f162095a07e5d8f857c3768a0fece651",
+      "baselineSha256": "487de0f6b3370a7408dbdbdf8397e057f162095a07e5d8f857c3768a0fece651",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh-hans/806-mainland-chinese-judgment-arbitral-award-taiwan-recognition.md",
+      "sha256": "302d7f3170c4eb74df8fd680737dbd444a68480a3dce9bcbf42b49964ee95861",
+      "baselineSha256": "302d7f3170c4eb74df8fd680737dbd444a68480a3dce9bcbf42b49964ee95861",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": true
+    },
+    {
+      "file": "src/content/columns-zh/019-taiwanese-spouse-divorce-agreement-registration.md",
+      "sha256": "2fab7e2fdd3f176da3b5e972d49b289972615adc49e0b36906eb91db2caee9e5",
+      "baselineSha256": "2fab7e2fdd3f176da3b5e972d49b289972615adc49e0b36906eb91db2caee9e5",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-zh/020-taiwanese-spouse-divorce-from-abroad.md",
+      "sha256": "da0856f91760357f42f7203c60fa8dbfd1e5645e90aeb978cce616f25f492ea6",
+      "baselineSha256": "da0856f91760357f42f7203c60fa8dbfd1e5645e90aeb978cce616f25f492ea6",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-zh/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+      "sha256": "147bf1c4e9c606f18ac7159ceec5a009e27b7590810e9d5fc2f6e55eb4a8416c",
+      "baselineSha256": "147bf1c4e9c606f18ac7159ceec5a009e27b7590810e9d5fc2f6e55eb4a8416c",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-zh/022-marrying-taiwanese-national-registration-checklist.md",
+      "sha256": "8ac79738cb203993fc462d29c1156c7add7ed67c8bdea5b3c49fa6e9736f1f1c",
+      "baselineSha256": "8ac79738cb203993fc462d29c1156c7add7ed67c8bdea5b3c49fa6e9736f1f1c",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns-zh/023-baby-taiwan-nationality-birth-registration.md",
+      "sha256": "5c13ea10212beaf09f547443e03912526b8cecafc74886453635b2d82bc32d9a",
+      "baselineSha256": "5c13ea10212beaf09f547443e03912526b8cecafc74886453635b2d82bc32d9a",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns/019-taiwanese-spouse-divorce-agreement-registration.md",
+      "sha256": "f5c59fdcf46abad385406881faad6c62b10ff33f720543641ed44d670ea0fd0a",
+      "baselineSha256": "f5c59fdcf46abad385406881faad6c62b10ff33f720543641ed44d670ea0fd0a",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns/020-taiwanese-spouse-divorce-from-abroad.md",
+      "sha256": "dcf30a86175174d68db8fafd60df76aa588f5d33bb3ce1f542cf9abaa95d8b2d",
+      "baselineSha256": "dcf30a86175174d68db8fafd60df76aa588f5d33bb3ce1f542cf9abaa95d8b2d",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+      "sha256": "5a0a94370f892d6fcbd1db455bed5cf5d99c19c3c8b49cdd9dd610f565d6fbc7",
+      "baselineSha256": "5a0a94370f892d6fcbd1db455bed5cf5d99c19c3c8b49cdd9dd610f565d6fbc7",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns/022-marrying-taiwanese-national-registration-checklist.md",
+      "sha256": "65b5ca3d7a6e6342bce0ba18dad368777c01859a3a71a389966d7d96945348fa",
+      "baselineSha256": "65b5ca3d7a6e6342bce0ba18dad368777c01859a3a71a389966d7d96945348fa",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/content/columns/023-baby-taiwan-nationality-birth-registration.md",
+      "sha256": "ac75a3e6f5455fd0f8d1379dac9fc2ca0eda76e9551ec532744ee29d253098a1",
+      "baselineSha256": "ac75a3e6f5455fd0f8d1379dac9fc2ca0eda76e9551ec532744ee29d253098a1",
+      "byteEqual": true,
+      "policy": false,
+      "fixedSeptemberArticle": true,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/__tests__/ai-semiconductor-column-files.ts",
+      "sha256": "05832f9849020c3f665faed0d526fbc795ed382bb947527b4911e7d644202515",
+      "baselineSha256": "05832f9849020c3f665faed0d526fbc795ed382bb947527b4911e7d644202515",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/__tests__/air-column-files.ts",
+      "sha256": "34fa55a300602cc660b40a993d153d68635d910dc839c8ad7580a2a1453f0ad5",
+      "baselineSha256": "34fa55a300602cc660b40a993d153d68635d910dc839c8ad7580a2a1453f0ad5",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/__tests__/criminal-coverage-column-files.ts",
+      "sha256": "9f0489e25a8915ec4a610e03fcd76ea5927f17a1cc9551906ea253f7d17175c5",
+      "baselineSha256": "9f0489e25a8915ec4a610e03fcd76ea5927f17a1cc9551906ea253f7d17175c5",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/__tests__/divorce-columns-20260927.test.ts",
+      "sha256": "338b07045bd25c805b3595f331b96f54c11c9f4b2d255863b3bc11c599089764",
+      "baselineSha256": "338b07045bd25c805b3595f331b96f54c11c9f4b2d255863b3bc11c599089764",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/__tests__/family-columns-20260927.test.ts",
+      "sha256": "6884353b9d19dc9d91cf9b8c015b71c5ce05c2aa7ebcbbbeaa3c3613fb9e7d78",
+      "baselineSha256": "6884353b9d19dc9d91cf9b8c015b71c5ce05c2aa7ebcbbbeaa3c3613fb9e7d78",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/__tests__/gap-column-files.ts",
+      "sha256": "70d6e4ad5dee95f83d21e386f15a45a78e7bbb354ed22c0b7ceb7e8884627260",
+      "baselineSha256": "70d6e4ad5dee95f83d21e386f15a45a78e7bbb354ed22c0b7ceb7e8884627260",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/__tests__/native-locale-columns.ts",
+      "sha256": "8f146c3802c97f7d20d90dfad63dc670eccead91465953651a561e78d91ba5e4",
+      "baselineSha256": "8f146c3802c97f7d20d90dfad63dc670eccead91465953651a561e78d91ba5e4",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/__tests__/next-topic-column-files.ts",
+      "sha256": "03de3afad9434353d7bf8eeaaa65504939d8a47c30bba8c83ebd914fa009424f",
+      "baselineSha256": "03de3afad9434353d7bf8eeaaa65504939d8a47c30bba8c83ebd914fa009424f",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/__tests__/singapore-column-files.ts",
+      "sha256": "3d2bd0c837d18eaab4381ffc8a0b671e18607dee189e06f9db0ff72baca81191",
+      "baselineSha256": "3d2bd0c837d18eaab4381ffc8a0b671e18607dee189e06f9db0ff72baca81191",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/__tests__/tax-accounting-column-files.ts",
+      "sha256": "a47c4475e3aee992219b727e3a0310439ef29bcc456c86427505e3cc59c94323",
+      "baselineSha256": "a47c4475e3aee992219b727e3a0310439ef29bcc456c86427505e3cc59c94323",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/column-attribution.ts",
+      "sha256": "8111ea9feabcdc98f13485014da51d39c9aebd084cbb6a1e52d923624bb6dcc3",
+      "baselineSha256": "8111ea9feabcdc98f13485014da51d39c9aebd084cbb6a1e52d923624bb6dcc3",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/column-audience.ts",
+      "sha256": "a1cb781f1a787366199995b0312b0fa1556d850e0637eb5ea66cd2174680b760",
+      "baselineSha256": "a1cb781f1a787366199995b0312b0fa1556d850e0637eb5ea66cd2174680b760",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/column-locales.ts",
+      "sha256": "26d8fe8de7a9703aa7b0d279f32938e84190d5199ce0c4ddee84e89bb934b535",
+      "baselineSha256": "26d8fe8de7a9703aa7b0d279f32938e84190d5199ce0c4ddee84e89bb934b535",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/column-post.ts",
+      "sha256": "ad2f7ebba1006a6737945ce327412352006fd393256aec099b7da3c1c3b2bcf4",
+      "baselineSha256": "ad2f7ebba1006a6737945ce327412352006fd393256aec099b7da3c1c3b2bcf4",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/columns.ts",
+      "sha256": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+      "baselineSha256": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    },
+    {
+      "file": "src/lib/public-guidance.ts",
+      "sha256": "c00a193d0dd583145e544a2cc505efad75a4379f5c334a811655a689d6df8d85",
+      "baselineSha256": "c00a193d0dd583145e544a2cc505efad75a4379f5c334a811655a689d6df8d85",
+      "byteEqual": true,
+      "policy": true,
+      "fixedSeptemberArticle": false,
+      "failingLocaleFullCorpus": false
+    }
+  ],
+  "allEqualAtStartAndEnd": true,
+  "failureIsArchiveOffsetAssertion": true,
+  "arcRegistryOmitsFilAndZhHans": true,
+  "b4LocalesDisjointFromNineArchiveCases": true,
+  "sitemapCaseReadsAllLocalesBeforeSlugFilter": true,
+  "sitemapCasesObservedPass": true,
+  "logExcerptSha256": "a40aa8d8974a6d47b6b7013b50f9b56c17ff17d3a0c4ae047b208010e76dfac4"
+}

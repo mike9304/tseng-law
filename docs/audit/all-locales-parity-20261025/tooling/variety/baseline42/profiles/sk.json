@@ -1,0 +1,63 @@
+{
+  "review_status": "AI-authored neutral contract; root review/install pending",
+  "join_hyphens": true,
+  "canonical_abbreviations": true,
+  "question_pattern": "[?？؟]\\s*[\\\"”’»›“«)]*$",
+  "provenance": "MULTILINGUAL-METHOD.md (batch03); audit tests/fixtures-batch03.json frozen before profile implementation",
+  "register": "Standard Slovak",
+  "abbreviations": [
+    "Ing",
+    "Mgr",
+    "Dr",
+    "MUDr",
+    "PhDr",
+    "JUDr",
+    "PhD",
+    "CSc",
+    "doc",
+    "prof",
+    "napr",
+    "resp",
+    "t.j",
+    "t. j",
+    "tzv",
+    "atď",
+    "apod",
+    "a pod",
+    "č",
+    "čl",
+    "ods",
+    "písm",
+    "str",
+    "s",
+    "r",
+    "hod",
+    "Z.z",
+    "Z. z"
+  ],
+  "terminal_abbreviations": [
+    "atď",
+    "apod",
+    "a pod",
+    "Z.z",
+    "Z. z"
+  ],
+  "context_terminal_abbreviations": {
+    "r": "\\d{4}\\s*$"
+  },
+  "ordinal_followers": "poschodie|poschodí|kapitola|kapitolu|kapitoly|trieda|triede|ročník|odsek|odseku|článok|bod|januára|februára|marca|apríla|mája|júna|júla|augusta|septembra|októbra|novembra|decembra",
+  "ordinal_pattern": "(?<!\\w)(?:[IVXLCDM]+\\.(?=\\s+(?:kapitola|kapitolu|kapitoly|zjazd|storočie|storočia)\\b)|\\d+\\.(?=\\s*§))",
+  "additional_closing_quotes": "“",
+  "contrast_patterns": [
+    "(?i:\\bnie\\b[^.!?\\n;;]{0,180}\\b(?:ale|lež)\\b)",
+    "(?i:\\bna\\s+rozdiel\\s+od\\b)",
+    "(?i:\\bnamiesto\\s+toho\\b)"
+  ],
+  "caveat_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:napriek\\s+tomu|avšak|predsa)\\b)",
+  "hypo_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:predpokladajme\\s*,?\\s*že|predstavme\\s+si\\s*,?\\s*že)\\b)",
+  "formula_close_pattern": "(?i:tento\\s+článok\\s+(?:poskytuje|obsahuje)\\s+všeobecné\\s+informácie|naša\\s+kancelária\\s+vám\\s+môže\\s+pomôcť)",
+  "citation_pattern": "(?i:\\b(?:článok|článku|čl\\.)\\s*\\d+)",
+  "locale": "sk",
+  "directory": "columns-sk",
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:zdroje|oficiálne\\s+zdroje|literatúra)\\s*:?\\s*$)"
+}

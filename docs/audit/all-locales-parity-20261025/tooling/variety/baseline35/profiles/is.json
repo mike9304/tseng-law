@@ -1,0 +1,53 @@
+{
+  "review_status": "AI-authored neutral contract; root review/install pending",
+  "join_hyphens": true,
+  "canonical_abbreviations": true,
+  "question_pattern": "[?？؟]\\s*[\\\"”’»›“«)]*$",
+  "provenance": "MULTILINGUAL-METHOD.md (batch03); audit tests/fixtures-batch03.json frozen before profile implementation",
+  "register": "Standard Icelandic",
+  "abbreviations": [
+    "dr",
+    "próf",
+    "nr",
+    "gr",
+    "mgr",
+    "bls",
+    "t.d",
+    "þ.e",
+    "o.fl",
+    "o.s.frv",
+    "m.a",
+    "u.þ.b",
+    "kl",
+    "kr",
+    "ehf",
+    "hf"
+  ],
+  "terminal_abbreviations": [
+    "o.fl",
+    "o.s.frv",
+    "kr",
+    "ehf",
+    "hf",
+    "gr"
+  ],
+  "ordinal_followers": "kafli|kafla|gr|mgr|bekk|bekkur|blaðsíðu|hæð|janúar|febrúar|mars|apríl|maí|júní|júlí|ágúst|september|október|nóvember|desember",
+  "ordinal_pattern": "(?<!\\w)[IVXLCDM]+\\.(?=\\s+(?:kafli|kafla|öld|aldar)\\b)",
+  "additional_closing_quotes": "“",
+  "contrast_patterns": [
+    "(?i:\\bekki\\b[^.!?\\n;;]{0,180}\\bheldur\\b)",
+    "(?i:\\bólíkt\\b)",
+    "(?i:\\bí\\s+stað\\s+þess\\b)"
+  ],
+  "caveat_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:hins\\s+vegar|þó|engu\\s+að\\s+síður)\\b)",
+  "hypo_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:gerum\\s+ráð\\s+fyrir\\s+að|ímyndum\\s+okkur\\s+að)\\b)",
+  "formula_close_pattern": "(?i:þessi\\s+grein\\s+veitir\\s+almennar\\s+upplýsingar|skrifstofan\\s+okkar\\s+getur\\s+aðstoðað)",
+  "citation_pattern": "(?i:\\b\\d+\\.\\s*gr\\.|\\b(?:grein|gr\\.)\\s*\\d+)",
+  "locale": "is",
+  "directory": "columns-is",
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:heimildir|opinberar\\s+heimildir|tilvísanir)\\s*:?\\s*$)",
+  "dotted_ordinal_lowercase_continuation": true,
+  "nonterminal_abbreviation_followers": {
+    "gr": "[^\\W\\d_][\\w\\u0300-\\u036f]*[-‐‑]reglnanna(?![\\w\\u0300-\\u036f])"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "review_status": "AI-authored neutral contract; root review/install pending",
+  "join_hyphens": true,
+  "canonical_abbreviations": true,
+  "question_pattern": "[?？؟]\\s*[\\\"”’»›“«)]*$",
+  "provenance": "MULTILINGUAL-METHOD.md (batch03); audit tests/fixtures-batch03.json frozen before profile implementation",
+  "register": "Standard Catalan",
+  "abbreviations": [
+    "Sr",
+    "Sra",
+    "Dr",
+    "Dra",
+    "prof",
+    "art",
+    "arts",
+    "pàg",
+    "pàgs",
+    "p",
+    "núm",
+    "núms",
+    "ap",
+    "av",
+    "c",
+    "p.ex",
+    "p. ex",
+    "etc",
+    "aprox",
+    "cf"
+  ],
+  "terminal_abbreviations": [
+    "etc"
+  ],
+  "join_catalan_ela_geminada": true,
+  "ordinal_pattern": "(?<!\\w)\\d+(?:rs|es|ns|ts|r|a|n|t|è)\\.(?=\\s+(?:pis|planta|capítol|article|apartat|paràgraf|edició|congrés|jornades)(?![\\w\\u0300-\\u036f]))",
+  "contrast_patterns": [
+    "(?i:\\bno\\b[^.!?\\n;;]{0,180}\\bsinó\\b)",
+    "(?i:\\ba\\s+diferència\\s+de\\b)",
+    "(?i:\\ben\\s+lloc\\s+de\\b)"
+  ],
+  "caveat_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:tanmateix|però|no\\s+obstant\\s+això)\\b)",
+  "hypo_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:suposem\\s+que|imaginem\\s+que)\\b)",
+  "formula_close_pattern": "(?i:aquest\\s+article\\s+(?:ofereix|proporciona|conté)\\s+informació\\s+general|el\\s+nostre\\s+despatx\\s+us\\s+pot\\s+ajudar)",
+  "citation_pattern": "(?i:\\b(?:article|articles|art\\.)\\s*\\d+)",
+  "locale": "ca",
+  "directory": "columns-ca",
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:fonts(?:\\s+oficials)?|referències(?:\\s+oficials)?|bibliografia)\\s*:?\\s*$)"
+}

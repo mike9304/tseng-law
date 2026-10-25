@@ -1,0 +1,219 @@
+{
+  "fixtureSHA256": "ab0d73204d2faf63c254995d88cef7925a6099b5eeb950775dd62c1ebd2dee59",
+  "runtime": {
+    "node": "v24.14.1",
+    "icu": "78.2",
+    "unicode": "17.0"
+  },
+  "measurement": "ICU observation only; not a natural-word gold standard",
+  "results": [
+    {
+      "id": "library",
+      "text": "စာကြည့်တိုက်ကို မနက် ၉ နာရီတွင် ဖွင့်သည်။ ညနေ ၅ နာရီတွင် ပိတ်သည်။",
+      "expectedSentences": 2,
+      "note": "Myanmar full stops; native digits remain attached to their numeric expressions.",
+      "sentences": [
+        "စာကြည့်တိုက်ကို မနက် ၉ နာရီတွင် ဖွင့်သည်။ ",
+        "ညနေ ၅ နာရီတွင် ပိတ်သည်။"
+      ],
+      "wordLikeUnits": [
+        "စာကြည့်တိုက်",
+        "ကို",
+        "မနက်",
+        "၉",
+        "နာရီ",
+        "တွင်",
+        "ဖွင့်သည်",
+        "ညနေ",
+        "၅",
+        "နာရီ",
+        "တွင်",
+        "ပိတ်သည်"
+      ]
+    },
+    {
+      "id": "library-no-space-after-stop",
+      "text": "စာကြည့်တိုက်ကို မနက် ၉ နာရီတွင် ဖွင့်သည်။ညနေ ၅ နာရီတွင် ပိတ်သည်။",
+      "expectedSentences": 2,
+      "note": "Do not require ASCII whitespace after U+104B.",
+      "sentences": [
+        "စာကြည့်တိုက်ကို မနက် ၉ နာရီတွင် ဖွင့်သည်။",
+        "ညနေ ၅ နာရီတွင် ပိတ်သည်။"
+      ],
+      "wordLikeUnits": [
+        "စာကြည့်တိုက်",
+        "ကို",
+        "မနက်",
+        "၉",
+        "နာရီ",
+        "တွင်",
+        "ဖွင့်သည်",
+        "ညနေ",
+        "၅",
+        "နာရီ",
+        "တွင်",
+        "ပိတ်သည်"
+      ]
+    },
+    {
+      "id": "school-list-comma",
+      "text": "စာအုပ်၊ ခဲတံနှင့် မှတ်စုစာအုပ်ကို စားပွဲပေါ်တင်ထားသည်။",
+      "expectedSentences": 1,
+      "note": "U+104A is not a full-stop boundary.",
+      "sentences": [
+        "စာအုပ်၊ ",
+        "ခဲတံနှင့် မှတ်စုစာအုပ်ကို စားပွဲပေါ်တင်ထားသည်။"
+      ],
+      "wordLikeUnits": [
+        "စာအုပ်",
+        "ခဲတံ",
+        "နှင့်",
+        "မှတ်စုစာ",
+        "အုပ်",
+        "ကို",
+        "စားပွဲ",
+        "ပေါ်",
+        "တင်",
+        "ထားသည်"
+      ]
+    },
+    {
+      "id": "train-time",
+      "text": "ရထားသည် မနက် 9:30 တွင် ထွက်သည်။ ခရီးသည်များ စင်္ကြံပေါ်တွင် စောင့်နေကြသည်။",
+      "expectedSentences": 2,
+      "note": "The time colon does not terminate a sentence.",
+      "sentences": [
+        "ရထားသည် မနက် 9:30 တွင် ထွက်သည်။ ",
+        "ခရီးသည်များ စင်္ကြံပေါ်တွင် စောင့်နေကြသည်။"
+      ],
+      "wordLikeUnits": [
+        "ရထား",
+        "သည်",
+        "မနက်",
+        "9",
+        "30",
+        "တွင်",
+        "ထွက်",
+        "သည်",
+        "ခရီးသည်",
+        "များ",
+        "စ",
+        "င်္",
+        "ကြံ",
+        "ပေါ်",
+        "တွင်",
+        "စောင့်",
+        "နေ",
+        "ကြ",
+        "သည်"
+      ]
+    },
+    {
+      "id": "route-decimal-latin",
+      "text": "ခရီးအကွာအဝေးမှာ 3.5 ကီလိုမီတာ ဖြစ်သည်။ လမ်းသည် ဖြောင့်သည်။",
+      "expectedSentences": 2,
+      "note": "Do not split the decimal point.",
+      "sentences": [
+        "ခရီးအကွာအဝေးမှာ 3.5 ကီလိုမီတာ ဖြစ်သည်။ ",
+        "လမ်းသည် ဖြောင့်သည်။"
+      ],
+      "wordLikeUnits": [
+        "ခရီး",
+        "အကွာ",
+        "အဝေး",
+        "မှာ",
+        "3.5",
+        "ကီလိုမီတာ",
+        "ဖြစ်သည်",
+        "လမ်း",
+        "သည်",
+        "ဖြောင့်သည်"
+      ]
+    },
+    {
+      "id": "route-decimal-myanmar",
+      "text": "ခရီးအကွာအဝေးမှာ ၃.၅ ကီလိုမီတာ ဖြစ်သည်။ လမ်းသည် ဖြောင့်သည်။",
+      "expectedSentences": 2,
+      "note": "The same decimal boundary expectation for Myanmar digits.",
+      "sentences": [
+        "ခရီးအကွာအဝေးမှာ ၃.၅ ကီလိုမီတာ ဖြစ်သည်။ ",
+        "လမ်းသည် ဖြောင့်သည်။"
+      ],
+      "wordLikeUnits": [
+        "ခရီး",
+        "အကွာ",
+        "အဝေး",
+        "မှာ",
+        "၃.၅",
+        "ကီလိုမီတာ",
+        "ဖြစ်သည်",
+        "လမ်း",
+        "သည်",
+        "ဖြောင့်သည်"
+      ]
+    },
+    {
+      "id": "school-name-abbreviation",
+      "text": "Dr. Smith သည် ကျောင်းသို့ ရောက်လာသည်။ ကလေးများကို စာဖတ်ပြသည်။",
+      "expectedSentences": 2,
+      "note": "Dr. is an embedded Latin title abbreviation, not a sentence by itself.",
+      "sentences": [
+        "Dr. ",
+        "Smith သည် ကျောင်းသို့ ရောက်လာသည်။ ",
+        "ကလေးများကို စာဖတ်ပြသည်။"
+      ],
+      "wordLikeUnits": [
+        "Dr",
+        "Smith",
+        "သည်",
+        "ကျောင်း",
+        "သို့",
+        "ရောက်လာ",
+        "သည်",
+        "ကလေး",
+        "များ",
+        "ကို",
+        "စာ",
+        "ဖတ်",
+        "ပြသည်"
+      ]
+    },
+    {
+      "id": "phrase-spaces",
+      "text": "ကလေးများ စာကြည့်တိုက်ထဲတွင် စာအုပ်ဖတ်နေကြသည်။",
+      "expectedSentences": 1,
+      "note": "Phrase spaces are not sentence or reliable word boundaries.",
+      "sentences": [
+        "ကလေးများ စာကြည့်တိုက်ထဲတွင် စာအုပ်ဖတ်နေကြသည်။"
+      ],
+      "wordLikeUnits": [
+        "ကလေး",
+        "များ",
+        "စာကြည့်တိုက်",
+        "ထဲ",
+        "တွင်",
+        "စာအုပ်",
+        "ဖတ်",
+        "နေ",
+        "ကြ",
+        "သည်"
+      ]
+    },
+    {
+      "id": "two-short-sentences",
+      "text": "မိုးရွာသည်။ ရထားရပ်သည်။",
+      "expectedSentences": 2,
+      "note": "Short genuine clauses remain two sentences; do not require minimum token length.",
+      "sentences": [
+        "မိုးရွာသည်။ ",
+        "ရထားရပ်သည်။"
+      ],
+      "wordLikeUnits": [
+        "မိုးရွာသည်",
+        "ရထား",
+        "ရပ်",
+        "သည်"
+      ]
+    }
+  ]
+}

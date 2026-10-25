@@ -1,0 +1,77 @@
+{
+  "at": "2026-10-25T15:12:46.493Z",
+  "scope": "isolated Markdown RTL preview; not the rendered release site",
+  "network": "HTTP(S) requests aborted",
+  "profile": "new temporary profile; no user profile access",
+  "inputs": [
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "sha256": "eb401cf43480269123d91795de21fd48de22e353aac438b1755ceddfd175220f"
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "7010616bdd946044f7791e17987ddef10ca5c95b093f42004e7ed4febbf5455c"
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "c1430580439966e7c85e23d110e1f152c09db2752d6b0276cab2581843dddea7"
+    }
+  ],
+  "executablePath": "/Users/son7/Library/Caches/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-mac-arm64/chrome-headless-shell",
+  "results": [
+    {
+      "article": "704",
+      "kind": "desktop",
+      "dir": "rtl",
+      "lang": "he",
+      "viewportWidth": 1200,
+      "scrollWidth": 1200,
+      "heading": "בקשת ARC ראשונה בטייוואן: מועדים, מסמכים וקבלת הכרטיס"
+    },
+    {
+      "article": "705",
+      "kind": "desktop",
+      "dir": "rtl",
+      "lang": "he",
+      "viewportWidth": 1200,
+      "scrollWidth": 1200,
+      "heading": "מעבר לטייוואן לעבודה, לימודים או משפחה: הוויזה והתושבות"
+    },
+    {
+      "article": "706",
+      "kind": "desktop",
+      "dir": "rtl",
+      "lang": "he",
+      "viewportWidth": 1200,
+      "scrollWidth": 1200,
+      "heading": "חידוש ARC בטייוואן, שינוי פרטים וכניסה חוזרת"
+    },
+    {
+      "article": "704",
+      "kind": "mobile",
+      "dir": "rtl",
+      "lang": "he",
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "heading": "בקשת ARC ראשונה בטייוואן: מועדים, מסמכים וקבלת הכרטיס"
+    },
+    {
+      "article": "705",
+      "kind": "mobile",
+      "dir": "rtl",
+      "lang": "he",
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "heading": "מעבר לטייוואן לעבודה, לימודים או משפחה: הוויזה והתושבות"
+    },
+    {
+      "article": "706",
+      "kind": "mobile",
+      "dir": "rtl",
+      "lang": "he",
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "heading": "חידוש ARC בטייוואן, שינוי פרטים וכניסה חוזרת"
+    }
+  ]
+}

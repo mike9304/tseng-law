@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {auditBatch} from '/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/content-audit.mjs';
+const repoRoot='/Users/son7/Projects/tseng-law-all-locales-20261025';
+const checks='/Users/son7/tseng-all-language-columns-20261025/batch04/checks';
+const files=JSON.parse(fs.readFileSync(path.join(checks,'fa-audit-inputs.json'),'utf8'));
+const sourceMap=Object.fromEntries(files.map(file=>['fa:'+path.basename(file).replace(/^\d+-/,'').replace(/\.md$/,''),path.join(repoRoot,'src/content/columns-en',path.basename(file))]));
+const result=await auditBatch({repoRoot,contentRoot:path.join(checks,'fa-content-overlay'),files,sourceMap,sourceLocale:'en',publicationDate:'2026-10-25'});
+fs.writeFileSync(path.join(checks,'fa-content-audit.json'),JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify({selected:result.selectedFiles,errors:result.errors,semanticStatus:result.semanticStatus,findings:result.files.filter(f=>f.errors.length).map(f=>({file:f.file,errors:f.errors}))}));
+if(result.errors)process.exitCode=1;

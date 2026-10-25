@@ -2,11 +2,11 @@
 title: "遊戲帳號還有金幣，終止契約為何仍拿不到退款？"
 summary: "一名玩家以帳號內剩餘金幣請求退費，基隆地院認定該案金幣是對局用籌碼，與未使用付費點數不同。現行規範仍保障終止契約後的未使用點數退費；判斷可退多少，要串起儲值、兌換及遊戲使用紀錄，不能只看畫面餘額。"
 published: "2026-10-25"
-lastmod: "2026-10-25"
+lastmod: "2026-10-26"
 date_display: "2026年10月25日"
 read_time: "約5分鐘閱讀"
 categories: ["消費爭議", "台灣判決"]
-topic: "civil"
+topic: "litigation"
 tags: ["線上遊戲", "退費", "遊戲金幣", "儲值點數", "消費契約"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"

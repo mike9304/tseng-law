@@ -1,0 +1,11 @@
+{
+  "atUTC": "2026-10-25T15:17:48.483854+00:00",
+  "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/705-taiwan-visa-residence-work-study-family.md",
+  "beforeSHA256": "76cfdb0575683caf42e693e6fbbdcb29e9d4018308927e9fc53463d6523dffe9",
+  "afterSHA256": "84ff6f5265a571d1ff25ae627d8c816c397b3ada9057082f28d30b64b21b09be",
+  "id": "705-T01",
+  "before": "[NIA 0915 လမ်းညွှန်](https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news) တွင် စမ်းသပ်ဗီဇာကင်းလွတ်ခွင့်၊ ဆိုက်ရောက်ဗီဇာ၊ အရှေ့တောင်အာရှနိုင်ငံအချို့အတွက် အွန်လိုင်းခရီးသွားခွင့်၊ APEC စီးပွားရေးခရီးသွားကတ်နှင့် အလုပ်လုပ်ရင်း အားလပ်ရက်အစီအစဉ်တို့ကို ချန်လှပ်ထားသည်။ အခြားသက်ဆိုင်ရာဥပဒေက ချွင်းချက်ခွင့်ပြုလျှင် ထိုစည်းမျဉ်းကို သုံးနိုင်သည်။",
+  "after": "[NIA 0915 လမ်းညွှန်](https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news) တွင် စမ်းသပ်ဗီဇာကင်းလွတ်ခွင့်၊ ဆိုက်ရောက်ဗီဇာ၊ အရှေ့တောင်အာရှနိုင်ငံအချို့အတွက် အွန်လိုင်းခရီးသွားခွင့်၊ APEC စီးပွားရေးခရီးသွားကတ်နှင့် အလုပ်လုပ်ရင်း အားလပ်ရက်အစီအစဉ်တို့ကို ချန်လှပ်ထားသော်လည်း အခြားသက်ဆိုင်ရာဥပဒေက ချွင်းချက်ခွင့်ပြုလျှင် ထိုစည်းမျဉ်းကို သုံးနိုင်သည်။",
+  "reason": "Connect the listed excluded entry schemes directly to the existing other-law exception, so the exclusions are not read as an unconditional ban. Every scheme, exception condition and source URL is retained.",
+  "exactInverseToBefore": true
+}

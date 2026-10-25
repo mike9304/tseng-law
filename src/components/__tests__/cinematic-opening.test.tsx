@@ -324,7 +324,8 @@ describe('cinematic opening layout integration', () => {
     );
 
     expect(layoutSource).toContain('<CinematicRouteShell');
-    expect(layoutSource).not.toContain("headers } from 'next/headers'");
+    // The layout also reads request headers for the static column-language index.
+    // Cinematic route selection belongs to the pathname-aware client shell below.
     expect(shellSource).toContain('usePathname()');
     expect(shellSource).toContain('data-cinematic-chrome="header"');
     expect(shellSource).toContain('data-cinematic-chrome="quick-contact"');

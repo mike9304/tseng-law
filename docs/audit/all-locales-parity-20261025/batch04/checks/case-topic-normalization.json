@@ -1,0 +1,63 @@
+{
+  "at": "2026-10-26T01:05:11.534545+09:00",
+  "reason": "The only3 unknown topics among all2229 markdown files are current ZH case columns918/920/921. Existing canonical litigation topic accurately classifies their disputes. Original publication metadata and all substantive content retained.",
+  "rows": [
+    {
+      "file": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "before_sha256": "581af61bc4b3dbb692a77dcad925503bcda1ef323085d034561bf3438521f29f",
+      "after_sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "before_backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/checks/topic-normalization-before/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "changes": [
+        {
+          "old": "topic: \"civil\"",
+          "new": "topic: \"litigation\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        }
+      ],
+      "body_unchanged": true,
+      "FAQ_and_other_FM_unchanged": true,
+      "reverse_verified": true
+    },
+    {
+      "file": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "before_sha256": "882c912a8bb558358e549ad79b526b4428cf48a60cc32e968c295aa37b3f00b5",
+      "after_sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "before_backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/checks/topic-normalization-before/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "changes": [
+        {
+          "old": "topic: \"civil\"",
+          "new": "topic: \"litigation\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        }
+      ],
+      "body_unchanged": true,
+      "FAQ_and_other_FM_unchanged": true,
+      "reverse_verified": true
+    },
+    {
+      "file": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+      "before_sha256": "f8067f5da68c76957f371d7aa09fb736f53128a784b7191efc7e90ca0e7fb3ff",
+      "after_sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "before_backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/checks/topic-normalization-before/921-taiwan-online-game-coins-refund-judgment.md",
+      "changes": [
+        {
+          "old": "topic: \"civil\"",
+          "new": "topic: \"litigation\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        }
+      ],
+      "body_unchanged": true,
+      "FAQ_and_other_FM_unchanged": true,
+      "reverse_verified": true
+    }
+  ]
+}

@@ -1,13 +1,24 @@
 """Compare all original fourteen-locale articles, including explicit unavailability."""
 from pathlib import Path
+import argparse
 import ast
+import os
 import hashlib
 import json
 import sys
 from baseline_support import load_baseline
 
 ROOT = Path(__file__).resolve().parents[1]
-REPO = ROOT.parents[4]
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--repo-root', default=os.environ.get('TSENG_REPO_ROOT'),
+                    help='Exact R path; no repository inference from copy location')
+args = parser.parse_args()
+if not args.repo_root:
+    parser.error('--repo-root or TSENG_REPO_ROOT is required')
+REPO = Path(args.repo_root).expanduser().resolve()
+expected_repo = Path(json.loads((ROOT / 'BASELINE28.json').read_text())['repo_root']).resolve()
+if REPO != expected_repo or not (REPO / '.git').exists():
+    parser.error('repository does not match the frozen BASELINE28 repo_root')
 sys.path.insert(0, str(ROOT))
 import variety_metrics as metrics
 import variety_multilingual as multilingual

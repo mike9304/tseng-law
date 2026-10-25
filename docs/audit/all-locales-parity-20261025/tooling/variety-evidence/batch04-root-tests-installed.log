@@ -1,0 +1,35 @@
+E................E...................................
+======================================================================
+ERROR: test_baseline_contracts (unittest.loader._FailedTest.test_baseline_contracts)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_baseline_contracts
+Traceback (most recent call last):
+  File "/Users/son7/.pyenv/versions/3.12.0/lib/python3.12/unittest/loader.py", line 382, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/son7/.pyenv/versions/3.12.0/lib/python3.12/unittest/loader.py", line 325, in _get_module_from_name
+    __import__(name)
+  File "/Users/son7/tseng-lanes-shared/variety/tests/test_baseline_contracts.py", line 12, in <module>
+    from baseline_support import load_baseline
+ModuleNotFoundError: No module named 'baseline_support'
+
+
+======================================================================
+ERROR: test_every_old_profile_and_score_hard_ast_remain_identical (test_batch04.BatchFourTests.test_every_old_profile_and_score_hard_ast_remain_identical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-lanes-shared/variety/tests/test_batch04.py", line 188, in test_every_old_profile_and_score_hard_ast_remain_identical
+    baseline = json.loads((ROOT / 'BASELINE35-INSTALLATION.json').read_text())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/son7/.pyenv/versions/3.12.0/lib/python3.12/pathlib.py", line 1028, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/son7/.pyenv/versions/3.12.0/lib/python3.12/pathlib.py", line 1014, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/son7/tseng-lanes-shared/variety/BASELINE35-INSTALLATION.json'
+
+----------------------------------------------------------------------
+Ran 53 tests in 1.964s
+
+FAILED (errors=2)

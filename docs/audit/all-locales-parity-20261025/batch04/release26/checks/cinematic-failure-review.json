@@ -1,0 +1,67 @@
+{
+  "at": "2026-10-25T15:54:35.182953+00:00",
+  "baselineCommit": "3b5ea95061d61a6b9a0e94eb61438be843fdd63c",
+  "currentHead": "3b5ea95061d61a6b9a0e94eb61438be843fdd63c",
+  "scope": "Read-only source comparison and live-root-log excerpt. No test rerun; no app/test edit. Root owns overall unit-run exit.",
+  "rows": [
+    {
+      "file": "src/app/[locale]/layout.tsx",
+      "baselineSha256": "2062a9982bb7a38cbdd2660fd407300e6ea30b744894214a18fe0791139f698a",
+      "currentSha256": "2062a9982bb7a38cbdd2660fd407300e6ea30b744894214a18fe0791139f698a",
+      "byteEqual": true
+    },
+    {
+      "file": "src/components/__tests__/cinematic-opening.test.tsx",
+      "baselineSha256": "bfa672efd329fd32b180d9643ed7527d06cb17e27ea4d6c2e12e8836efe93d5b",
+      "currentSha256": "bfa672efd329fd32b180d9643ed7527d06cb17e27ea4d6c2e12e8836efe93d5b",
+      "byteEqual": true
+    },
+    {
+      "file": "src/components/CinematicRouteShell.tsx",
+      "baselineSha256": "df1977e285667df04250172de3bc06d19e589b733b839aa5a34d32533ea941e0",
+      "currentSha256": "df1977e285667df04250172de3bc06d19e589b733b839aa5a34d32533ea941e0",
+      "byteEqual": true
+    },
+    {
+      "file": "src/components/CinematicOpening.tsx",
+      "baselineSha256": "e7103fc83e80513f3eab05e91ebf029e9ab97b1f8c0b40c31745f63ad80e8fbd",
+      "currentSha256": "e7103fc83e80513f3eab05e91ebf029e9ab97b1f8c0b40c31745f63ad80e8fbd",
+      "byteEqual": true
+    },
+    {
+      "file": "src/components/CinematicOpening.module.css",
+      "baselineSha256": "5e727a2b248fe2506d574b13290900c03bfd50a059faeee466a7dd13500111fd",
+      "currentSha256": "5e727a2b248fe2506d574b13290900c03bfd50a059faeee466a7dd13500111fd",
+      "byteEqual": true
+    },
+    {
+      "file": "src/app/layout.tsx",
+      "baselineSha256": "077ec5fbc9619d1781473647aa9bcc9c626562c4117554ecc0f9d8c93bb170b8",
+      "currentSha256": "077ec5fbc9619d1781473647aa9bcc9c626562c4117554ecc0f9d8c93bb170b8",
+      "byteEqual": true
+    },
+    {
+      "file": "src/lib/column-language-links.ts",
+      "baselineSha256": "33acd15dd6d28dbd124c423552ab3a51633d3af559f504b46706e1186f29b8ad",
+      "currentSha256": "33acd15dd6d28dbd124c423552ab3a51633d3af559f504b46706e1186f29b8ad",
+      "byteEqual": true
+    },
+    {
+      "file": "src/lib/column-list-items.ts",
+      "baselineSha256": "2dc379238c6643b0d47771070a4c63c923ef65f219054b67f28e659fef417e35",
+      "currentSha256": "2dc379238c6643b0d47771070a4c63c923ef65f219054b67f28e659fef417e35",
+      "byteEqual": true
+    },
+    {
+      "file": "src/lib/columns.ts",
+      "baselineSha256": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+      "currentSha256": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+      "byteEqual": true
+    }
+  ],
+  "baselineAndCurrentContainForbiddenImport": true,
+  "assertionIsStaticSourceTextNotManuscriptDependent": true,
+  "shellStillUsesPathname": true,
+  "logExcerptSha256": "65127e8e120741ce18839ab0c34fb1db4351142b77ce374fb106a9afafc84fda",
+  "failureName": "cinematic opening layout integration > uses a pathname-aware client boundary and keeps footer outside suppression"
+}

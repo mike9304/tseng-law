@@ -1,0 +1,10 @@
+Initial independent date-change-proof.py execution, before metadata/content comparisons:
+Command: python3 /Users/son7/tseng-all-language-columns-20261025/batch04/release26/verification/date-change-proof.py
+Exit code: 1
+
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch04/release26/verification/date-change-proof.py", line 22, in <module>
+    assert inputs[str(manifest_path)] == '30b1ce64d193723052e52c113e9978a7ebc9730b2ae6cd853310ed2d78bdd8d1'
+AssertionError
+
+The root agent concurrently announced HE706's two official Article34 query-order normalizations and the resulting final-manifest update. The fixed old manifest guard correctly stopped this run before any manuscript comparison or evidence conclusion. No manuscript, backup, review or R file was modified by this checker. Final verification must explicitly prove both the date-only intermediate stage and the separate URL normalization rather than silently adopting the new manifest.

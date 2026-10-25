@@ -1,0 +1,52 @@
+{
+  "at": "2026-10-25T15:06:51.889088+00:00",
+  "checkerSHA256": "98056d054aadf197d953bbde78cfb4498dded0e11ca5bc724c61286184feb3ad",
+  "profileSHA256": "d6be43d513d3fc6d3202e97022bbc094820e7ab87e950e711a00bb251757d82f",
+  "runs": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/704-taiwan-arc-first-application.md",
+      "sha256": "e9a4bb64e0b71c1ab0967d9390811fbdef00a6f8189ca74bdc9eac8647a5d0a3",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/704-taiwan-arc-first-application.md",
+        "--lang",
+        "fa"
+      ],
+      "exitCode": 1,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/704-taiwan-arc-first-application.md [fa] sentences=57 mean=15.8 cv=0.493 short=0.211 run3=0.036 opener_rep=0.143 cite_end=0.0 cite_para=0.286 contrast=1 caveat=0 q=0\n  FAIL top_opener_n=3 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "5d391fbbdfd0abfab8dbd2a1a076c04fb8a7d737ee3fa9c544711c23f24507f7",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md",
+        "--lang",
+        "fa"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md [fa] sentences=62 mean=16.3 cv=0.521 short=0.113 run3=0.0 opener_rep=0.1 cite_end=0.0 cite_para=0.45 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4e23c5162d245a912bc6147ae3f50e05a1b066729e50631168b1968698797e21",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "fa"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md [fa] sentences=72 mean=16.8 cv=0.481 short=0.181 run3=0.014 opener_rep=0.292 cite_end=0.014 cite_para=0.5 contrast=1 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": ""
+    }
+  ]
+}

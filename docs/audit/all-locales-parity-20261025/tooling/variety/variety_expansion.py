@@ -6,7 +6,7 @@ of independent native review. Neutral expectations live separately in tests/.
 import re
 import unicodedata
 
-LANGUAGES = ('ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk')
+LANGUAGES = ('ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne', 'km', 'mn', 'sr', 'sl', 'lt', 'lv', 'et')
 URL = re.compile(r'https?://[^\s<>\[\]()“”«»「」『』。，！？]+')
 
 
@@ -21,7 +21,16 @@ def comparison_key(text, lang):
     return text.casefold()
 
 
-def visible_text(text, additional_terminal_punctuation=''):
+def url_pattern(unspaced_terminators=''):
+    if not unspaced_terminators:
+        return URL
+    # Native hard stops can directly precede the next sentence. ASCII URL
+    # query punctuation remains valid, as in the unchanged original pattern.
+    return re.compile(r'https?://[^\s<>\[\]()“”«»「」『』。，！？'
+                      + re.escape(unspaced_terminators) + r']+')
+
+
+def visible_text(text, additional_terminal_punctuation='', unspaced_terminators=''):
     """Remove destinations without swallowing the surrounding sentence end."""
     text = re.sub(r'!\[[^\]]*\]\([^)]*\)', '', text)
     text = re.sub(r'\[([^\]]+)\]\([^)]*\)', r'\1', text)
@@ -29,7 +38,7 @@ def visible_text(text, additional_terminal_punctuation=''):
         value = match.group()
         core = value.rstrip('.,;:!?' + additional_terminal_punctuation)
         return value[len(core):]
-    text = URL.sub(omit_url, text)
+    text = url_pattern(unspaced_terminators).sub(omit_url, text)
     return re.sub(r'[*_`]', '', text)
 
 
@@ -66,7 +75,20 @@ def split_sentences(text, lang, data):
         value = match.group()
         core = value.rstrip('.,;:!?' + data.get('additional_sentence_terminators', ''))
         return re.sub(r'[.!?]', marker, core) + value[len(core):]
-    protected = URL.sub(protect_url, protected)
+    protected = url_pattern(data.get('unspaced_sentence_terminators', '')).sub(protect_url, protected)
+
+    for abbreviation in data.get('native_abbreviation_sequences', []):
+        def protect_native(match):
+            remaining = protected[match.end():].lstrip()
+            token = match.group()
+            stops = data.get('additional_sentence_terminators', '')
+            masked = ''.join(marker if c in stops else c for c in token)
+            if not remaining:
+                return masked[:-1] + token[-1]
+            if remaining[0] in ',;:៖.!?' + stops:
+                return masked
+            raise SegmentationError('Khmer native abbreviation followed by prose has an ambiguous sentence boundary; reviewed segmentation required')
+        protected = re.sub(re.escape(abbreviation), protect_native, protected)
 
     followers = data.get('ordinal_followers')
     if followers:
@@ -84,7 +106,8 @@ def split_sentences(text, lang, data):
         # HR/HU ordinal dots can precede adjectives, inflected nouns and
         # conjunctions. Keep real uppercase/mixed-case next sentences and
         # never infer continuation across a newline. This is not syntax parsing.
-        expression = r'(?<![\w\u0300-\u036f])(?:\d+|[IVXLCDM]+)\.(?=[^\S\r\n]+([^\W\d_][\w\u0300-\u036f]*))'
+        numeral = r'\d+' if data.get('dotted_ordinal_arabic_only') else r'(?:\d+|[IVXLCDM]+)'
+        expression = r'(?<![\w\u0300-\u036f])' + numeral + r'\.(?=[^\S\r\n]+([^\W\d_][\w\u0300-\u036f]*))'
         protected = re.sub(expression, lambda match: match.group()[:-1] + marker
                            if match.group(1).islower() else match.group(), protected)
     terminal = {re.sub(r'\s+', '', value).casefold().rstrip('.')
@@ -94,6 +117,8 @@ def split_sentences(text, lang, data):
         literal = re.escape(abbreviation.rstrip('.'))
         if data.get('canonical_abbreviations'):
             literal = '(?:' + literal + '|' + re.escape(unicodedata.normalize('NFD', abbreviation.rstrip('.'))) + ')'
+        if data.get('flexible_abbreviation_spaces'):
+            literal = literal.replace(r'\ ', r'[^\S\r\n]+')
         expression = re.compile(r'(?<!\w)' + literal + r'\.', re.I)
         def protect(match):
             token = match.group()
@@ -130,7 +155,11 @@ def split_sentences(text, lang, data):
         boundary = re.compile(r'[。！？!?]+' + close_sequence + r'\s*|[.]+' + close_sequence + r'(?:\s+|$)')
     else:
         terminators = re.escape('.!?' + data.get('additional_sentence_terminators', ''))
-        boundary = re.compile('[' + terminators + ']+' + close_sequence + r'(?:\s+|$)')
+        expression = '[' + terminators + ']+' + close_sequence + r'(?:\s+|$)'
+        unspaced = data.get('unspaced_sentence_terminators', '')
+        if unspaced:
+            expression = '[' + re.escape(unspaced) + ']+' + close_sequence + r'\s*|' + expression
+        boundary = re.compile(expression)
     result = []
     start = 0
     for match in boundary.finditer(protected):
@@ -139,6 +168,9 @@ def split_sentences(text, lang, data):
         if delimiter[-1:] in ('\"', '”', '’', '»', '›', '」', '』') + tuple(additional_closing):
             attribution = remaining.lstrip(' \t–—-')
             if attribution[:1].islower():
+                continue
+            reporting = data.get('quote_attribution_pattern')
+            if reporting and re.match(reporting, unicodedata.normalize('NFC', attribution)):
                 continue
         part = text[start:match.end()].strip()
         if part:

@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-25T15:10:53.910738+00:00",
+  "command": [
+    "python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/704-taiwan-arc-first-application.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/705-taiwan-visa-residence-work-study-family.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/706-taiwan-arc-renewal-changes-reentry.md",
+    "--lang",
+    "ur",
+    "--out",
+    "/Users/son7/tseng-all-language-columns-20261025/batch04/checks/ur-metrics-final.json"
+  ],
+  "exit_code": 1,
+  "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/704-taiwan-arc-first-application.md [ur] sentences=60 mean=18.8 cv=0.449 short=0.1 run3=0.017 opener_rep=0.053 cite_end=0.0 cite_para=0.316 contrast=0 caveat=1 q=0\n  FAIL len_cv=0.449 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n  WARN 60% of sentences end in 'ہے' — vary endings within the register\n/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/705-taiwan-visa-residence-work-study-family.md [ur] sentences=74 mean=17.7 cv=0.499 short=0.135 run3=0.042 opener_rep=0.043 cite_end=0.0 cite_para=0.478 contrast=0 caveat=0 q=1\n  WARN 53% of sentences end in 'ہے' — vary endings within the register\n/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/706-taiwan-arc-renewal-changes-reentry.md [ur] sentences=85 mean=18.2 cv=0.481 short=0.129 run3=0.036 opener_rep=0.0 cite_end=0.012 cite_para=0.481 contrast=0 caveat=0 q=0\n  WARN 61% of sentences end in 'ہے' — vary endings within the register\n",
+  "stderr": "",
+  "inputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/704-taiwan-arc-first-application.md",
+      "sha256": "22589d738cdeef53f2d0c4b9b4b675c89f9b178d4c4b98e9a1787401e3961565"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "e07a6b499b2e0fd53cfc38234eb9e1f20fa3f9566ef2b102ffad32433e56c58e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ur/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "8ae69f8dc40663efcaa078d8d88484b4af4517f9ac83deaae189ddca182bbb02"
+    }
+  ]
+}

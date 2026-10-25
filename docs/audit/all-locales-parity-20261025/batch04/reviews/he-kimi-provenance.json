@@ -1,0 +1,27 @@
+{
+  "model": "kimi-code/k3.1-pro",
+  "cliVersion": "2.3.1",
+  "session": "session_6c1f760e-89d0-4aa6-a5eb-b7d45887e411",
+  "runExitCode": 0,
+  "inputManifestSha256": "50618882d83894e85796c6eb810f6ecbc5588c525e18d1d8ae26ff4e3a0ac82c",
+  "runLog": "/Users/son7/tseng-all-language-columns-20261025/kimi-work/run-he.jsonl",
+  "runLogSha256": "7cea21ebbf6ae9152606f540a84f9249403b889d92c8aa1763d2d7d73ddab277",
+  "files": [
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/kimi-work/output-he/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-he/704-taiwan-arc-first-application.md",
+      "sha256": "2e6bf567428158b5d51673238435c91ef86d042798c97cb2272422eb5e57e8da"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/kimi-work/output-he/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-he/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "c2441add8f3bf2307bf09e9b9715ff89501f5a35b2fbe808de3b4cdbaa3dbbb3"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/kimi-work/output-he/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-he/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "c4e554de5781a1a25f3276d2eb91be99a6e0ed04a7cf0f5d55b2fe0004d5b385"
+    }
+  ],
+  "status": "Kimi output copied unchanged; independent review and exact-locale measurement pending; not published"
+}

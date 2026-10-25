@@ -1,0 +1,27 @@
+{
+  "atUTC": "2026-10-25T14:44:51.868918+00:00",
+  "note": "An initial naive global inverse assertion rejected pre-existing correctly spelled words; offsets from each verified before-state were then used. Every forward and reverse state hash now matches. Manuscripts were not changed by this check.",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/704-taiwan-arc-first-application.md",
+      "currentSHA256": "78fa3dd0df32d99d320f666734ba0f2934810e541a5e8c4461452c72c05c5517",
+      "restoredInitialSHA256": "e184bb9da9fde65a1f75bccd1d6937491a3cd7b85047b4937b0de896205466b8",
+      "initialSHA256": "e184bb9da9fde65a1f75bccd1d6937491a3cd7b85047b4937b0de896205466b8",
+      "exactForwardAndInverse": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/705-taiwan-visa-residence-work-study-family.md",
+      "currentSHA256": "73afefd437d7de469391d5895568bc9cbe6171ad5202cb1dca22bce76ccc3e32",
+      "restoredInitialSHA256": "972151b01726ff2103b48bb732937be63d0b030fc5d777a23a2d5f9a7659fa3b",
+      "initialSHA256": "972151b01726ff2103b48bb732937be63d0b030fc5d777a23a2d5f9a7659fa3b",
+      "exactForwardAndInverse": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/706-taiwan-arc-renewal-changes-reentry.md",
+      "currentSHA256": "468eab59315953585d659936cdde771c6323b8b05a7225818163dbcfa40fa02f",
+      "restoredInitialSHA256": "5afce5292594ae711cd19e8efcf1b9f04345febd038e367b9e942f0e570b82d9",
+      "initialSHA256": "5afce5292594ae711cd19e8efcf1b9f04345febd038e367b9e942f0e570b82d9",
+      "exactForwardAndInverse": true
+    }
+  ]
+}

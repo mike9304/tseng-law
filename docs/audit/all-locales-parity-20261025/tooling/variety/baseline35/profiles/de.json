@@ -1,0 +1,131 @@
+{
+  "locale": "de",
+  "directory": "columns-de",
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:Amtliche\\s+Quellen(?:\\s+und\\s+Stand)?|Rechtsquellen|Quellenstand|Quellen|Verwendete\\s+amtliche\\s+Texte|Amtliche\\s+Grundlagen)\\s*:?\\s*$)",
+  "abbreviations": [
+    "Art",
+    "Abs",
+    "Nr",
+    "Rn",
+    "S",
+    "Buchst",
+    "lit",
+    "ff",
+    "Az",
+    "Urt",
+    "vgl",
+    "ggf",
+    "bzw",
+    "Dr",
+    "Prof",
+    "z. B",
+    "z.B",
+    "d. h",
+    "d.h",
+    "u. a",
+    "u.a",
+    "i. V. m",
+    "i.V.m",
+    "a. D",
+    "a.D",
+    "usw",
+    "usf",
+    "etc"
+  ],
+  "contrast_patterns": [
+    "(?i:\\bnicht\\b[^.!?\\n]{0,160}\\bsondern\\b)",
+    "(?i:\\banstatt\\b)",
+    "(?i:\\bim\\s+Gegensatz\\s+zu\\b)",
+    "(?i:\\betwas\\s+anderes\\b)"
+  ],
+  "caveat_pattern": "(?i:^\\s*[„“«\\\"(]*\\s*(?:allerdings|jedoch|dennoch|gleichwohl|vorbehaltlich)\\b)",
+  "hypo_pattern": "(?i:^\\s*[„“«\\\"(]*\\s*(?:angenommen\\b|nehmen\\s+wir\\s+an\\b|stellen\\s+wir\\s+uns\\s+vor\\b|ein\\s+hypothetischer\\s+Fall\\b|ein\\s+fiktives\\s+Beispiel\\b))",
+  "formula_close_pattern": "(?i:\\b(?:dieser\\s+(?:Beitrag|Artikel)\\s+(?:dient\\s+(?:nur\\s+)?der\\s+allgemeinen\\s+Information|enthält\\s+(?:nur\\s+)?allgemeine\\s+Informationen)|jeder\\s+Einzelfall\\s+ist\\s+anders|unsere\\s+Kanzlei\\s+kann\\s+Ihnen\\s+helfen)\\b)",
+  "sentence_fixtures": [
+    {
+      "text": "Im fiktiven Vermerk steht Art. 7 Abs. 2 Nr. 3. Ömer legt die Kopie ab.",
+      "sentences": [
+        "Im fiktiven Vermerk steht Art. 7 Abs. 2 Nr. 3.",
+        "Ömer legt die Kopie ab."
+      ]
+    },
+    {
+      "text": "Die fiktive Liste nennt 1.234,50 € und 2,5 Einheiten. Über der Summe steht ein Stern.",
+      "sentences": [
+        "Die fiktive Liste nennt 1.234,50 € und 2,5 Einheiten.",
+        "Über der Summe steht ein Stern."
+      ]
+    },
+    {
+      "text": "„Die Kopie ist vollständig.“ Änne schließt den Ordner. überarbeitet am Montag.",
+      "sentences": [
+        "„Die Kopie ist vollständig.“",
+        "Änne schließt den Ordner.",
+        "überarbeitet am Montag."
+      ]
+    },
+    {
+      "text": "Dr. Özdemir notiert z. B. einen Umschlag und eine Mappe. Die Ablage bleibt offen.",
+      "sentences": [
+        "Dr. Özdemir notiert z. B. einen Umschlag und eine Mappe.",
+        "Die Ablage bleibt offen."
+      ]
+    },
+    {
+      "text": "Die fiktive Liste nennt Kopien, Umschläge usw. Eine Mappe fehlt.",
+      "sentences": [
+        "Die fiktive Liste nennt Kopien, Umschläge usw.",
+        "Eine Mappe fehlt."
+      ]
+    },
+    {
+      "text": "Am 3. Mai liegt O’Neills Kopie im Posteingang. Ist das die Erstfassung? Ja.",
+      "sentences": [
+        "Am 3. Mai liegt O’Neills Kopie im Posteingang.",
+        "Ist das die Erstfassung?",
+        "Ja."
+      ]
+    }
+  ],
+  "word_fixtures": [
+    {
+      "text": "Die Grundstücksübertragungsunterlagen liegen hier.",
+      "tokens": [
+        "Die",
+        "Grundstücksübertragungsunterlagen",
+        "liegen",
+        "hier"
+      ]
+    },
+    {
+      "text": "O’Neills E-Mail nennt 1.234,50 €.",
+      "tokens": [
+        "O’Neills",
+        "E",
+        "Mail",
+        "nennt",
+        "1.234,50"
+      ]
+    },
+    {
+      "text": "Klaus’ Kopie liegt im 3. Fach.",
+      "tokens": [
+        "Klaus",
+        "Kopie",
+        "liegt",
+        "im",
+        "3",
+        "Fach"
+      ]
+    },
+    {
+      "text": "Änne prüft fünf Blätter.",
+      "tokens": [
+        "Änne",
+        "prüft",
+        "fünf",
+        "Blätter"
+      ]
+    }
+  ]
+}

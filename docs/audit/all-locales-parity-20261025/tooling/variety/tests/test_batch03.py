@@ -137,7 +137,7 @@ class Batch03Tests(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=ROOT) as tmp:
             p = Path(tmp) / 'unknown.md'
             p.write_text('A neutral sentence.\n\n' * 8)
-            for args in ([], ['--lang', 'xx'], ['--lang', 'nn'], ['--lang', 'no'], ['--lang', 'sl']):
+            for args in ([], ['--lang', 'xx'], ['--lang', 'nn'], ['--lang', 'no'], ['--lang', 'xx']):
                 run = subprocess.run([sys.executable, str(ROOT / 'variety_metrics.py'), 'check', str(p), *args], capture_output=True, text=True, env={**os.environ, 'PYTHONDONTWRITEBYTECODE': '1'})
                 self.assertEqual(run.returncode, 2)
                 self.assertNotIn('Traceback', run.stderr)

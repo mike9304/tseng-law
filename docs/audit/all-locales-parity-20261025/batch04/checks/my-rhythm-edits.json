@@ -1,0 +1,164 @@
+{
+  "atUTC": "2026-10-25T15:16:06.269948+00:00",
+  "records": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/704-taiwan-arc-first-application.md",
+      "beforeSHA256": "3026447712218a6fd3ed591022c0741e125f8f5bbc55bc5771caf5e57fb31acf",
+      "afterSHA256": "0383e3bc42e256bd95b3f0e5e8d8a9e611b78cd766fc2c67c733047345fc5ab1",
+      "exactInverseToBefore": true,
+      "edits": [
+        {
+          "id": "704-R01",
+          "offset": 2568,
+          "before": "သက်ဆိုင်ရာလမ်းကြောင်းအတွက် အရည်အချင်း အရင်ပြည့်မီရသည်။",
+          "after": "အရည်အချင်း ပြည့်မီရမည်။",
+          "reason": "Remove a repeated route qualifier after the sentence denying a general visitor conversion right; eligibility remains mandatory.",
+          "beforeSHA256": "3026447712218a6fd3ed591022c0741e125f8f5bbc55bc5771caf5e57fb31acf",
+          "afterSHA256": "a04b50d5edd9f7372e9b93a961e1f365ef1114cea4cb3380f14e39b3d2c5cc1f"
+        },
+        {
+          "id": "704-R02",
+          "offset": 5284,
+          "before": "အိမ်ငှားစာချုပ်သည် အသုံးပြုနိုင်သည့် သက်သေတစ်မျိုးဖြစ်သည်။",
+          "after": "အိမ်ငှားစာချုပ်လည်း သုံးနိုင်သည်။",
+          "reason": "State the lease as one usable address proof directly; the adjacent actual-address requirement and host alternative remain.",
+          "beforeSHA256": "a04b50d5edd9f7372e9b93a961e1f365ef1114cea4cb3380f14e39b3d2c5cc1f",
+          "afterSHA256": "c9b95d771332dd19a7d4dc132f0e3821aacb83827375b255eaa8409c8759c4cd"
+        },
+        {
+          "id": "704-R03",
+          "offset": 7754,
+          "before": "သုံးလသည် 15 ရက်ကို အစားထိုးသောကာလ ဖြစ်သည်။",
+          "after": "15 ရက်ကို ထပ်မပေါင်းပါ။",
+          "reason": "After the qualifying overseas-document three-month rule, state directly that 15 days are not added; same replacement duration.",
+          "beforeSHA256": "c9b95d771332dd19a7d4dc132f0e3821aacb83827375b255eaa8409c8759c4cd",
+          "afterSHA256": "9652909ecbc92eb3090116ac15a60af0daba361c88194bf3eb71554b9773f728"
+        },
+        {
+          "id": "704-R04",
+          "offset": 9345,
+          "before": "အထွေထွေစိစစ်ချိန်ကို [NIA က ရုံးဖွင့်ရက် 10 ရက်](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) ဟု ဖော်ပြထားပြီး စာရွက်ပြန်ပို့ခြင်း၊ ဖြည့်စွက်ခြင်းနှင့် တွေ့ဆုံမေးမြန်းခြင်းအတွက် ကြာချိန်ကို မထည့်တွက်ပါ။ ဖြည့်စွက်ပြီးလျှင် စိစစ်ချိန်ကို ပြန်စတွက်သည်။",
+          "after": "အထွေထွေစိစစ်ချိန်ကို [NIA က ရုံးဖွင့်ရက် 10 ရက်](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) ဟု ဖော်ပြထားပြီး စာရွက်ပြန်ပို့ခြင်း၊ ဖြည့်စွက်ခြင်းနှင့် တွေ့ဆုံမေးမြန်းခြင်းအတွက် ကြာချိန်ကို မထည့်တွက်ဘဲ၊ ဖြည့်စွက်ပြီးလျှင် စိစစ်ချိန်ကို ပြန်စတွက်သည်။",
+          "reason": "Connect excluded processing intervals with the restart after supplementation in one procedural sentence; preserve 10 working days and every exclusion.",
+          "beforeSHA256": "9652909ecbc92eb3090116ac15a60af0daba361c88194bf3eb71554b9773f728",
+          "afterSHA256": "0383e3bc42e256bd95b3f0e5e8d8a9e611b78cd766fc2c67c733047345fc5ab1"
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/705-taiwan-visa-residence-work-study-family.md",
+      "beforeSHA256": "73afefd437d7de469391d5895568bc9cbe6171ad5202cb1dca22bce76ccc3e32",
+      "afterSHA256": "ff402ce83ca45badee2fab9702843839eeb080944f47cc3da9560bcb64d26b35",
+      "exactInverseToBefore": true,
+      "edits": [
+        {
+          "id": "705-R01",
+          "offset": 4041,
+          "before": "နိုင်ငံခြားပညာရှင်ကို ပုံမှန်ငှားရမ်းရာတွင် အလုပ်ရှင်က အလုပ်လုပ်ခွင့်ပြုချက် လျှောက်ရသည်။ ဥပဒေပါ ချွင်းချက်များနှင့် သက်ဆိုင်ရာအာဏာပိုင်တို့ကို အလုပ်အမျိုးအစားအလိုက် သတ်မှတ်ထားကြောင်း [ပညာရှင်ဥပဒေ ပုဒ်မ 4 နှင့် 5](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) တွင် ဖတ်နိုင်သည်။ လက်မှတ်ထိုးထားသော ကမ်းလှမ်းစာက အလုပ်လုပ်ခွင့်ကို အစားမထိုးပါ။",
+          "after": "ပုံမှန်နိုင်ငံခြားပညာရှင်ငှားရမ်းမှုတွင် အလုပ်ရှင်က အလုပ်လုပ်ခွင့်ပြုချက် လျှောက်ရပြီး၊ ဥပဒေပါ ချွင်းချက်နှင့် တာဝန်ရှိအာဏာပိုင်မှာ [ပညာရှင်ဥပဒေ ပုဒ်မ 4 နှင့် 5](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) အရ အလုပ်အမျိုးအစားပေါ် မူတည်သည်။ ကမ်းလှမ်းစာဖြင့် မလုံလောက်ပါ။",
+          "reason": "Make the employer filing rule and its category-specific exceptions one sentence, followed by the concrete insufficiency of an offer letter. No permit exception is removed; changes repeated foreign-professional paragraph opener.",
+          "beforeSHA256": "73afefd437d7de469391d5895568bc9cbe6171ad5202cb1dca22bce76ccc3e32",
+          "afterSHA256": "879de087c638f29ee2f25ca1b9a48102981bb4cadfd1bff6e3050ed28a616639"
+        },
+        {
+          "id": "705-R02",
+          "offset": 4578,
+          "before": "NIA က နေထိုင်ခွင့် အတည်ပြုပြီးမှ ARC ရသည်။",
+          "after": "NIA ခွင့်ပြုမှ ARC ရသည်။",
+          "reason": "The preceding sentence expressly names direct residence application; shorten the consequent NIA approval requirement without replacing it with employment approval.",
+          "beforeSHA256": "879de087c638f29ee2f25ca1b9a48102981bb4cadfd1bff6e3050ed28a616639",
+          "afterSHA256": "2b8d039a0f385fbee3d2c551dcc9926d7a5ab14bc43e96833b3b42c8227ef7e0"
+        },
+        {
+          "id": "705-R03",
+          "offset": 9474,
+          "before": "အိမ်ထောင်ဖက် အလုပ်လုပ်မည့်အခါလည်း ကိုယ်ပိုင်အခြေအနေကို ပြန်ကြည့်ရသည်။",
+          "after": "အိမ်ထောင်ဖက်က အလုပ်လုပ်မည်လား။",
+          "reason": "Use the actual reader decision to introduce the unchanged spouse work-permit exemption/direct-application distinctions.",
+          "beforeSHA256": "2b8d039a0f385fbee3d2c551dcc9926d7a5ab14bc43e96833b3b42c8227ef7e0",
+          "afterSHA256": "793f8bff28ead09f9e25169d65dcb18ccbaa4c5425e24e3da6bd65049fd6b521"
+        },
+        {
+          "id": "705-R04",
+          "offset": 10166,
+          "before": "[Employment Gold Card](https://goldcard.nat.gov.tw/en/) သည် အလုပ်လုပ်ခွင့်ပြုချက်၊ နေထိုင်ခွင့်ဗီဇာ၊ ARC နှင့် ပြန်ဝင်ခွင့်ကို ပေါင်းစပ်ပေးသည်။ လျှောက်ထားသူက အစီအစဉ်၏ ပညာရှင်အရည်အချင်းကို ပြည့်မီရပြီး [အင်္ဂလိပ်ဘာသာ Gold Card ဆောင်းပါး](/en/columns/taiwan-employment-gold-card) တွင် လျှောက်နည်း ရှိသည်။",
+          "after": "[Employment Gold Card](https://goldcard.nat.gov.tw/en/) သည် အလုပ်လုပ်ခွင့်ပြုချက်၊ နေထိုင်ခွင့်ဗီဇာ၊ ARC နှင့် ပြန်ဝင်ခွင့်ကို ပေါင်းစပ်ပေးပြီး၊ လျှောက်ထားသူက အစီအစဉ်၏ ပညာရှင်အရည်အချင်းကို ပြည့်မီရသည်။ လျှောက်နည်းကို [အင်္ဂလိပ်ဘာသာ Gold Card ဆောင်းပါး](/en/columns/taiwan-employment-gold-card) တွင် ဖတ်နိုင်သည်။",
+          "reason": "Connect the four functions to the applicant qualification, then leave the explicitly English guidance link as a separate reading instruction; preserve all four functions and eligibility.",
+          "beforeSHA256": "793f8bff28ead09f9e25169d65dcb18ccbaa4c5425e24e3da6bd65049fd6b521",
+          "afterSHA256": "ff402ce83ca45badee2fab9702843839eeb080944f47cc3da9560bcb64d26b35"
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/706-taiwan-arc-renewal-changes-reentry.md",
+      "beforeSHA256": "468eab59315953585d659936cdde771c6323b8b05a7225818163dbcfa40fa02f",
+      "afterSHA256": "91308d203bfb716ee574c3e16c1b1da27e1a6b3ae6113671a036155ed931888a",
+      "exactInverseToBefore": true,
+      "edits": [
+        {
+          "id": "706-R01",
+          "offset": 5996,
+          "before": "ပိုကြေးပေး၍ သက်တမ်းကို ရွေးဝယ်၍ မရပါ။",
+          "after": "သက်တမ်းကို ဝယ်ယူ၍ မရပါ။",
+          "reason": "Compress the consequence after the fee and category-dependent duration rules; paying a higher fee still cannot buy a chosen residence duration.",
+          "beforeSHA256": "468eab59315953585d659936cdde771c6323b8b05a7225818163dbcfa40fa02f",
+          "afterSHA256": "93f1ba9528e9f6344235b51c3a36550ec2e70fa92b43b7fa4f2f388f757451e7"
+        },
+        {
+          "id": "706-R02",
+          "offset": 7673,
+          "before": "ကတ်ရှိပြီးသားဆိုခြင်းက အကြောင်းရင်းအသစ် မည်သည့်အမျိုးအစားကိုမဆို အလိုအလျောက်ပြောင်းခွင့် မပေးပါ။",
+          "after": "အလိုအလျောက် ပြောင်းခွင့်မရှိပါ။",
+          "reason": "The preceding sentence retains graduation, termination, family change and qualifying Article 23-1 grounds; remove repeated card-holder framing from the no-automatic-change consequence.",
+          "beforeSHA256": "93f1ba9528e9f6344235b51c3a36550ec2e70fa92b43b7fa4f2f388f757451e7",
+          "afterSHA256": "97e9c34e37a05f2dabbc06fed4c74b477fe71ac92416be23b3af33ec64694ec0"
+        },
+        {
+          "id": "706-R03",
+          "offset": 11127,
+          "before": "ကတ်အသစ်ပြန်ထုတ်ခြင်းက နေထိုင်ခွင့်သက်တမ်းကို မတိုးပေးပါ။",
+          "after": "သက်တမ်းကတော့ မတိုးပါ။",
+          "reason": "Within the lost/damaged ARC replacement paragraph, retain the direct consequence that replacement does not extend validity.",
+          "beforeSHA256": "97e9c34e37a05f2dabbc06fed4c74b477fe71ac92416be23b3af33ec64694ec0",
+          "afterSHA256": "ddbdf4e550c4230221330f18e43cd48486266c6dc5180981ad43b8fed67aca9d"
+        },
+        {
+          "id": "706-R04",
+          "offset": 11523,
+          "before": "[ဝင်ထွက်နှင့်ရွှေ့ပြောင်းမှုဥပဒေ ပုဒ်မ 34](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34) ပါ ပုံမှန်ပြန်ဝင်ခွင့်ကို မထွက်ခွာမီ ရယူထားရသည်။ [နေထိုင်ခွင့်စည်းမျဉ်း ပုဒ်မ 20](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129) အရ ထိုခွင့်သည် ARC သက်တမ်းထက် မကျော်နိုင်ဘဲ ARC ပယ်ဖျက်လျှင် ပြန်ဝင်ခွင့်ပါ ပယ်ဖျက်သည်။",
+          "after": "[ဝင်ထွက်နှင့်ရွှေ့ပြောင်းမှုဥပဒေ ပုဒ်မ 34](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34) ပါ ပုံမှန်ပြန်ဝင်ခွင့်ကို မထွက်ခွာမီ ရယူထားရပြီး၊ [နေထိုင်ခွင့်စည်းမျဉ်း ပုဒ်မ 20](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129) အရ ထိုခွင့်သည် ARC သက်တမ်းထက် မကျော်နိုင်ဘဲ ARC ပယ်ဖျက်လျှင် ပြန်ဝင်ခွင့်ပါ ပယ်ဖျက်သည်။",
+          "reason": "Keep the ordinary re-entry permission and its ARC-dependent validity/cancellation in one linked sentence; unchanged separate valid-passport/APRC exception.",
+          "beforeSHA256": "ddbdf4e550c4230221330f18e43cd48486266c6dc5180981ad43b8fed67aca9d",
+          "afterSHA256": "51d736495dd28f6a5d92347f764fc714f427d7763b6ec11f49150c55131ea6fc"
+        },
+        {
+          "id": "706-R05",
+          "offset": 1385,
+          "before": "အိမ် သို့မဟုတ် အလုပ်လုပ်ရာနေရာ ပြောင်းလျှင် ဘယ်အချိန်အတွင်း မှတ်ပုံတင်ရသနည်း။",
+          "after": "အိမ် သို့မဟုတ် အလုပ်လုပ်ရာနေရာ ပြောင်းလျှင် ဘယ်အချိန်အတွင်း မှတ်ပုံတင်ရန် လျှောက်ရသနည်း။",
+          "reason": "Clarify the FAQ question is about applying for change registration, not NIA completing its processing.",
+          "beforeSHA256": "51d736495dd28f6a5d92347f764fc714f427d7763b6ec11f49150c55131ea6fc",
+          "afterSHA256": "72ed5e9c9427940b57a40686ddbd16f167beb1e28de298eff2a34f9604324e0b"
+        },
+        {
+          "id": "706-R06",
+          "offset": 1483,
+          "before": "ပြောင်းလဲသည့်နေ့နောက်တစ်ရက်မှ ရက် 30 အတွင်း NIA တွင် ပြောင်းလဲမှုမှတ်ပုံတင်ရသည်။",
+          "after": "ပြောင်းလဲသည့်နေ့နောက်တစ်ရက်မှ ရက် 30 အတွင်း NIA တွင် ပြောင်းလဲမှုမှတ်ပုံတင်ရန် လျှောက်ထားရသည်။",
+          "reason": "Preserve next-day 30-day clock and specify applicant filing duty in FAQ answer.",
+          "beforeSHA256": "72ed5e9c9427940b57a40686ddbd16f167beb1e28de298eff2a34f9604324e0b",
+          "afterSHA256": "f358aa95f6b35e6c149f397e7d1dab2ab3036748c7890feb80691cfc9d334b83"
+        },
+        {
+          "id": "706-R07",
+          "offset": 3289,
+          "before": "ပြောင်းသည့်နေ့နောက်တစ်ရက်မှ ရက် 30 အတွင်း NIA မှတ်ပုံတင်ရန်။",
+          "after": "ပြောင်းသည့်နေ့နောက်တစ်ရက်မှ ရက် 30 အတွင်း NIA သို့ ပြောင်းလဲမှုမှတ်ပုံတင်ရန် လျှောက်ထားရန်။",
+          "reason": "Same applicant filing clarification in the deadline table; clock unchanged.",
+          "beforeSHA256": "f358aa95f6b35e6c149f397e7d1dab2ab3036748c7890feb80691cfc9d334b83",
+          "afterSHA256": "91308d203bfb716ee574c3e16c1b1da27e1a6b3ae6113671a036155ed931888a"
+        }
+      ]
+    }
+  ]
+}

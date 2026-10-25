@@ -1,0 +1,80 @@
+{
+  "author": "/root",
+  "kind": "primary direct authorship, not Kimi output",
+  "at": "2026-10-25T14:51:47.231869+00:00",
+  "sources": [
+    {
+      "locale": "en",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+      "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f"
+    },
+    {
+      "locale": "en",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304"
+    },
+    {
+      "locale": "en",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71"
+    },
+    {
+      "locale": "ko",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/704-taiwan-arc-first-application.md",
+      "sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1"
+    },
+    {
+      "locale": "ko",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a"
+    },
+    {
+      "locale": "ko",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc"
+    },
+    {
+      "locale": "zh",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/704-taiwan-arc-first-application.md",
+      "sha256": "0c00bc06bf3c3c1860a95af4dbcea9eaab981300860916856295e8b947244468"
+    },
+    {
+      "locale": "zh",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "290a50047632ad830ea98c524ffef6ed91c2b4c8d555a1844689824c3ffea7a3"
+    },
+    {
+      "locale": "zh",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4d70e78b9a197f4a2b81d25d61b6fa862ee849a6392d5fd905e90bcf781e721c"
+    }
+  ],
+  "recentRead": [
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/828-iranian-professional-taiwan-work-permit-visa-arc.md",
+      "sha256": "b5acda8f0ca39c32efc0a173cd5f776effd3133af57bfd161e4a4ff6a22d250b"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/829-iranian-buyer-taiwan-supplier-export-control-permit.md",
+      "sha256": "c6ba594f12f01332cd3d9379fa246b01411fb2a34257f3bd6903120b68446b79"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/830-iranian-spouse-marry-taiwanese-national-registration.md",
+      "sha256": "56cb7746038bf95d06a647a9f681d47ccac10b222b84e1b36edc8f23e97396fe"
+    }
+  ],
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/704-taiwan-arc-first-application.md",
+      "sha256": "1de203f18d90ce6a68b2898be2980df48035448215c7ba90bd05b55da6d7c39b"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "5d391fbbdfd0abfab8dbd2a1a076c04fb8a7d737ee3fa9c544711c23f24507f7"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "f81c3b62a3d1255d3b427c1356bd687c52c2be4c819880a8fa8a9c08056475d6"
+    }
+  ]
+}

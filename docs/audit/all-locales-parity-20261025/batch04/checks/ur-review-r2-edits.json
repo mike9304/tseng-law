@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-25T15:11:52.006533+00:00",
+  "file": "704-taiwan-arc-first-application.md",
+  "beforeSha256": "3ff0808e003c6feb99fbdb5efdd97823ac4b5b31f544578042b0fa754af958b0",
+  "afterSha256": "15dff7bda161ff794256f51c006331a5963ba6a1197f26e37712ce5f602de8a9",
+  "entries": [
+    {
+      "before": "پہلے ARC کے لیے تیس دن کا حساب داخلے یا تائیوان میں رہائشی ویزا جاری ہونے سے شروع ہو سکتا ہے۔",
+      "after": "پہلے ARC کے تیس دن رہائشی ویزا پر داخلے کے اگلے دن سے، یا تائیوان میں اس ویزا کے اجرا کے دن سے، گنے جاتے ہیں۔",
+      "reason": "Independent S01: explicit distinct starting days in summary."
+    },
+    {
+      "before": "رہائشی ویزا تائیوان پہنچنے کے بعد جاری ہو تو پہلے ARC کی درخواست کے 30 دن ویزا کی تاریخِ اجرا سے گنے جاتے ہیں۔ یہ [قونصلی امور کے بیورو، BOCA، کی ہدایت](https://www.boca.gov.tw/fp-398-723-7b71f-1.html) ہے۔",
+      "after": "رہائشی ویزا تائیوان پہنچنے کے بعد جاری ہو تو [قونصلی امور کے بیورو، BOCA، کی ہدایت](https://www.boca.gov.tw/fp-398-723-7b71f-1.html) کے مطابق پہلے ARC کی درخواست کے 30 دن ویزا کی تاریخِ اجرا سے گنے جاتے ہیں۔",
+      "reason": "Integrate official attribution into actual issuance-date rule; entry-next-day sentence and official URL preserved."
+    },
+    {
+      "before": "قومی ہجرت ایجنسی (NIA) غیر ملکی کا رہائشی سرٹیفکیٹ، Alien Resident Certificate یا ARC، جاری کرتی ہے۔ [ہجرت قانون کی دفعہ 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) اس کی درخواست لازم کرتی ہے۔",
+      "after": "غیر ملکی کا رہائشی سرٹیفکیٹ، Alien Resident Certificate یا ARC، قومی ہجرت ایجنسی (NIA) جاری کرتی ہے، اور [ہجرت قانون کی دفعہ 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) اس ادارے کو درخواست دینا لازم کرتی ہے۔",
+      "reason": "Link the certificate definition and issuing agency to the filing obligation in one coherent explanation; duty and article22 URL preserved, combined-document exception follows unchanged."
+    },
+    {
+      "before": "مطلوبہ اصل کاغذات اور نقول ساتھ پیش کیے جاتے ہیں۔",
+      "after": "اصل کاغذات اور نقول درکار ہیں۔",
+      "reason": "State directly that original documents and copies are required, replacing the passive presentation phrase; both document forms remain mandatory and return after verification follows unchanged."
+    },
+    {
+      "before": "فیصلہ اور رسید رہائشی ریکارڈ کے ساتھ محفوظ رہیں۔",
+      "after": "فیصلہ اور رسید رہائشی فائل میں رکھیں۔",
+      "reason": "Direct practical recordkeeping instruction instead of an optative passive ending; decision, receipt and residence-file context retained, not a new legal duty."
+    }
+  ]
+}

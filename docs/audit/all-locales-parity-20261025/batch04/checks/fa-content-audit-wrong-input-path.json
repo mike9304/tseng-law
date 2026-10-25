@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-25T14:51:47.570Z",
+  "repoRoot": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "selectedFiles": 3,
+  "automatedStatus": "FAIL",
+  "semanticStatus": "REVIEW_REQUIRED",
+  "publicationReady": false,
+  "errors": 3,
+  "reviewItems": 0,
+  "policy": {
+    "minBodyLettersAndNumbers": 500,
+    "minUniqueParagraphLettersAndNumbers": 350,
+    "sourceLocale": "en",
+    "publicationDate": "2026-10-25",
+    "legacyPolicy": "Unselected files supply existence/duplicate context only; no content changes or audience changes are made.",
+    "sourceApproval": "The operator must select an accepted source; existence/hash is not evidence of legal approval."
+  },
+  "runtimeContractHashes": {
+    "src/lib/column-audience.ts": "a1cb781f1a787366199995b0312b0fa1556d850e0637eb5ea66cd2174680b760",
+    "src/data/market-column-curation.ts": "c42e22feed6e49e5f4915a48ad18a49d9b874c024824ddf53a74fd5ede8a8b94",
+    "src/lib/column-attribution.ts": "8111ea9feabcdc98f13485014da51d39c9aebd084cbb6a1e52d923624bb6dcc3",
+    "src/lib/columns.ts": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+    "src/lib/column-locales.ts": "26d8fe8de7a9703aa7b0d279f32938e84190d5199ce0c4ddee84e89bb934b535",
+    "src/lib/public-guidance.ts": "c00a193d0dd583145e544a2cc505efad75a4379f5c334a811655a689d6df8d85",
+    "src/lib/column-topics.ts": "3fb8e18ae18777481cb8a07c158ea1b6435cdab98da0ea4701a1b98bf3ba435a"
+  },
+  "inventory": {
+    "counts": {
+      "ko": 211,
+      "zh-hant": 290,
+      "en": 212,
+      "ja": 224,
+      "vi": 45,
+      "id": 33,
+      "th": 31,
+      "fil": 31,
+      "ar": 28,
+      "de": 26,
+      "es": 46,
+      "fr": 31,
+      "pt": 28,
+      "zh-hans": 29,
+      "ms": 24,
+      "ru": 24,
+      "tr": 24,
+      "it": 26,
+      "nl": 26,
+      "pl": 26,
+      "hi": 28,
+      "sv": 24,
+      "da": 24,
+      "nb": 24,
+      "fi": 24,
+      "cs": 26,
+      "hu": 24,
+      "ro": 24,
+      "uk": 24,
+      "el": 24,
+      "he": 23,
+      "bn": 21,
+      "ur": 21,
+      "fa": 24,
+      "my": 21,
+      "ta": 21,
+      "ne": 21,
+      "km": 21,
+      "mn": 21,
+      "sk": 24,
+      "bg": 24,
+      "hr": 24,
+      "sr": 21,
+      "sl": 21,
+      "lt": 23,
+      "lv": 21,
+      "et": 21,
+      "ca": 24,
+      "is": 24
+    },
+    "duplicateKeys": []
+  },
+  "files": [
+    {
+      "file": "../../tseng-all-language-columns-20261025/batch04/src/content/columns-fa/704-taiwan-arc-first-application.md",
+      "locale": null,
+      "slug": null,
+      "errors": [
+        {
+          "code": "unsupported-content-path",
+          "message": "Selected file is not in a registered professional-column directory"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "file": "../../tseng-all-language-columns-20261025/batch04/src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md",
+      "locale": null,
+      "slug": null,
+      "errors": [
+        {
+          "code": "unsupported-content-path",
+          "message": "Selected file is not in a registered professional-column directory"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "file": "../../tseng-all-language-columns-20261025/batch04/src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+      "locale": null,
+      "slug": null,
+      "errors": [
+        {
+          "code": "unsupported-content-path",
+          "message": "Selected file is not in a registered professional-column directory"
+        }
+      ],
+      "reviews": []
+    }
+  ]
+}

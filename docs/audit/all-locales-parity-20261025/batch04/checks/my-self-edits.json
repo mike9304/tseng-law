@@ -1,0 +1,105 @@
+{
+  "atUTC": "2026-10-25T14:41:09.369217+00:00",
+  "edits": [
+    {
+      "id": "M01",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/704-taiwan-arc-first-application.md",
+      "before": "စလျှောက်ရမည့်ရက်ကို ဝင်ရောက်သည့်နေ့နှင့် တစ်ရက်ခွာ၍ ရေတွက်သည်။ ",
+      "after": "",
+      "occurrences": 1,
+      "reason": "Opening repeats the same next-day counting fact without adding a reader action. Remove the duplicate, preserving the preceding 30-day rule and statute link.",
+      "meaningPreserved": true,
+      "beforeSHA256": "e184bb9da9fde65a1f75bccd1d6937491a3cd7b85047b4937b0de896205466b8",
+      "afterSHA256": "76742967f6a60fd9cdc1107616359ecfd3fefa49d093394da635410a79d16c3e",
+      "matchOffsetsBefore": [
+        2253
+      ]
+    },
+    {
+      "id": "M02",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/704-taiwan-arc-first-application.md",
+      "before": "[ဝင်ထွက်နှင့်ရွှေ့ပြောင်းမှုဥပဒေ ပုဒ်မ 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) အတွင်းမှ မည်မျှခွင့်ပြုမည်ကို NIA က ဆုံးဖြတ်သည်။",
+      "after": "[ဝင်ထွက်နှင့်ရွှေ့ပြောင်းမှုဥပဒေ ပုဒ်မ 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) ပါ ကန့်သတ်ချက်အတွင်း မည်မျှခွင့်ပြုမည်ကို NIA က ဆုံးဖြတ်သည်။",
+      "occurrences": 1,
+      "reason": "Replace a literal within-Article construction with within-the-statutory-limit; the maximum and NIA discretion remain.",
+      "meaningPreserved": true,
+      "beforeSHA256": "76742967f6a60fd9cdc1107616359ecfd3fefa49d093394da635410a79d16c3e",
+      "afterSHA256": "ebfe0ec878be06c71068fa8389f6c49ce0895c7c275ac04127f3e1b9afb90e81",
+      "matchOffsetsBefore": [
+        8488
+      ]
+    },
+    {
+      "id": "M03",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/704-taiwan-arc-first-application.md",
+      "before": "မိသားစုဝင်၏ နေထိုင်ခွင့်ကို သီးခြားအတည်ပြုရသည်။",
+      "after": "မိသားစုဝင်အတွက်လည်း မိမိ၏ နေထိုင်ခွင့်ကို NIA က အတည်ပြုသည့်နေ့နောက်တစ်ရက်မှ စတွက်သည်။",
+      "occurrences": 1,
+      "reason": "Clarify that the family member uses their own NIA residence approval date, rather than borrowing the professional’s approval date. Article 8 approval means residence approval, not employment permission.",
+      "meaningPreserved": true,
+      "beforeSHA256": "ebfe0ec878be06c71068fa8389f6c49ce0895c7c275ac04127f3e1b9afb90e81",
+      "afterSHA256": "78fa3dd0df32d99d320f666734ba0f2934810e541a5e8c4461452c72c05c5517",
+      "matchOffsetsBefore": [
+        9264
+      ]
+    },
+    {
+      "id": "M04",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/705-taiwan-visa-residence-work-study-family.md",
+      "before": "နိုင်ငံခြားပညာရှင်ဥပဒေ ပုဒ်မ 16 အရ သက်ဆိုင်ရာ အလုပ်လုပ်ခွင့် သို့မဟုတ် ကင်းလွတ်ခွင့်ရှိသော အရည်အချင်းပြည့်မီသည့် ပညာရှင်များနှင့် သတ်မှတ်မိသားစုဝင်များက NIA သို့ တိုက်ရိုက်လျှောက်နိုင်သည်။",
+      "after": "နိုင်ငံခြားပညာရှင်ဥပဒေ ပုဒ်မ 16 အရ သက်ဆိုင်ရာ အလုပ်လုပ်ခွင့် သို့မဟုတ် ကင်းလွတ်ခွင့်ရှိသော အရည်အချင်းပြည့်မီသည့် ပညာရှင်က NIA သို့ တိုက်ရိုက်လျှောက်နိုင်သည်။ သတ်မှတ်မိသားစုဝင်အတွက်လည်း ဆွေမျိုးဆက်နွယ်မှုနှင့် ပညာရှင်၏ နေထိုင်ခွင့်အမျိုးအစားဆိုင်ရာ သီးခြားသတ်မှတ်ချက်များအရ တိုက်ရိုက်လမ်းကြောင်း ရှိသည်။",
+      "occurrences": 1,
+      "reason": "FAQ modifier could attach the employment permit condition to family members. Separate the professional and dependent routes; retain limited-family qualification and their own entry conditions in the following sentence and body.",
+      "meaningPreserved": true,
+      "beforeSHA256": "972151b01726ff2103b48bb732937be63d0b030fc5d777a23a2d5f9a7659fa3b",
+      "afterSHA256": "cb8b3529d4e72f3fb6e3feea955151ad39f5a087905f9111840d4f27b9089a2d",
+      "matchOffsetsBefore": [
+        1081
+      ]
+    },
+    {
+      "id": "M05",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/705-taiwan-visa-residence-work-study-family.md",
+      "before": "ခြွင်းချက်",
+      "after": "ချွင်းချက်",
+      "occurrences": 1,
+      "reason": "Correct Burmese spelling of exception without changing the exception itself.",
+      "meaningPreserved": true,
+      "beforeSHA256": "cb8b3529d4e72f3fb6e3feea955151ad39f5a087905f9111840d4f27b9089a2d",
+      "afterSHA256": "73afefd437d7de469391d5895568bc9cbe6171ad5202cb1dca22bce76ccc3e32",
+      "matchOffsetsBefore": [
+        5242
+      ]
+    },
+    {
+      "id": "M06",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/706-taiwan-arc-renewal-changes-reentry.md",
+      "before": "ခြွင်းချက်",
+      "after": "ချွင်းချက်",
+      "occurrences": 3,
+      "reason": "Correct Burmese spelling of exception at three occurrences; preserve all conditions and URLs.",
+      "meaningPreserved": true,
+      "beforeSHA256": "5afce5292594ae711cd19e8efcf1b9f04345febd038e367b9e942f0e570b82d9",
+      "afterSHA256": "587ea80e5e0c7def710681c6919b817ea22ee70cea8515bccf82e6fcda54cffe",
+      "matchOffsetsBefore": [
+        2512,
+        12176,
+        13606
+      ]
+    },
+    {
+      "id": "M07",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/706-taiwan-arc-renewal-changes-reentry.md",
+      "before": "မိသားစုမှီခိုနေထိုင်ခွင့်၏ အခြေခံဖြစ်သူ ကွယ်လွန်ခြင်း၊ ထိုင်ဝမ်တွင် နေထိုင်ပြီး အိမ်ထောင်စုစာရင်းရှိသော ထိုင်ဝမ်အိမ်ထောင်ဖက်နှင့် အိမ်တွင်းအကြမ်းဖက်မှုကြောင့် ကွာရှင်းကာ နိုင်ငံခြားသားလျှောက်ထားသူက နောက်အိမ်ထောင်မပြုရသေးခြင်းတို့ ပါဝင်သည်။ နောက်အိမ်ထောင်မပြုရသေးရမည့်သူမှာ နိုင်ငံခြားသားလျှောက်ထားသူ ဖြစ်သည်။ ကွာရှင်းခဲ့သော ထိုင်ဝမ်အိမ်ထောင်ဖက်၏ နေထိုင်မှုနှင့် အိမ်ထောင်စုစာရင်း သတ်မှတ်ချက်ကိုလည်း ထိန်းထားရသည်။",
+      "after": "မိသားစုမှီခိုနေထိုင်ခွင့်၏ အခြေခံဖြစ်သူ ကွယ်လွန်ခြင်းမှာ ထိုအခြေအနေတစ်ခု ဖြစ်သည်။ အိမ်တွင်းအကြမ်းဖက်မှုကြောင့် ကွာရှင်းထားသော နိုင်ငံခြားသားအိမ်ထောင်ဖက်က နောက်အိမ်ထောင်မပြုရသေးလျှင်လည်း အကျုံးဝင်နိုင်သည်။ ထိုကွာရှင်းမှုလမ်းကြောင်းတွင် ယခင်ထိုင်ဝမ်အိမ်ထောင်ဖက်သည် ထိုင်ဝမ်၌ နေထိုင်ပြီး အိမ်ထောင်စုစာရင်း ရှိရသည်။",
+      "occurrences": 1,
+      "reason": "Replace a long list plus two repetitive interpretive sentences with three linked sentences. Death is distinct; the foreign applicant must not have remarried; former Taiwanese spouse must reside in Taiwan and have household registration. No judicial-divorce-only condition is introduced.",
+      "meaningPreserved": true,
+      "beforeSHA256": "587ea80e5e0c7def710681c6919b817ea22ee70cea8515bccf82e6fcda54cffe",
+      "afterSHA256": "468eab59315953585d659936cdde771c6323b8b05a7225818163dbcfa40fa02f",
+      "matchOffsetsBefore": [
+        7917
+      ]
+    }
+  ]
+}

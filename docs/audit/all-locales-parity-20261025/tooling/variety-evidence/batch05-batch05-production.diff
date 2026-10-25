@@ -1,0 +1,582 @@
+--- baseline42/variety_metrics.py
++++ candidate49/variety_metrics.py
+@@ -207,6 +207,8 @@
+             m['word_segmenter'] = getattr(multilingual.prepare_words, 'engine', {})
+         if lang == 'my':
+             m['word_segmenter'] = getattr(multilingual.prepare_myanmar_words, 'engine', {})
++        if lang == 'km':
++            m['word_segmenter'] = getattr(multilingual.prepare_khmer_words, 'engine', {})
+     return m
+ 
+ def score(m, med):
+--- baseline42/variety_multilingual.py
++++ candidate49/variety_multilingual.py
+@@ -23,6 +23,7 @@
+ LONG_WORDS = 32
+ _THAI_WORDS = {}
+ _MYANMAR_WORDS = {}
++_KHMER_WORDS = {}
+ 
+ 
+ class MeasurementError(ValueError):
+@@ -112,6 +113,8 @@
+ def prepare_words(texts, lang):
+     if lang == 'my':
+         return prepare_myanmar_words(texts)
++    if lang == 'km':
++        return prepare_khmer_words(texts)
+     if lang != 'th':
+         return
+     missing = list(dict.fromkeys(t for t in texts if t not in _THAI_WORDS))
+@@ -185,6 +188,48 @@
+         raise MeasurementError(f'Burmese dictionary segmentation unavailable: {error}') from error
+ 
+ 
++def prepare_khmer_words(texts):
++    """Explicit Khmer ICU dictionary units; no whitespace or other locale fallback."""
++    missing = list(dict.fromkeys(t for t in texts if t not in _KHMER_WORDS))
++    if not missing:
++        return
++    executable = shutil.which('node')
++    if not executable:
++        raise MeasurementError('Khmer dictionary segmentation requires installed Node with Khmer ICU support')
++    script = r"""
++const fs = require('node:fs');
++if (!Intl.Segmenter.supportedLocalesOf(['km']).length) throw Error('Khmer ICU unavailable');
++const segmenter = new Intl.Segmenter('km', {granularity: 'word'});
++if (segmenter.resolvedOptions().locale !== 'km') throw Error('Khmer ICU locale fallback');
++// Khmer spaces delimit phrases, not words. Keep phrase whitespace variants
++// equivalent; dictionary-segment the unspaced text inside each phrase.
++const words = text => text.split(/\p{White_Space}+/u).flatMap(part =>
++  [...segmenter.segment(part)].filter(x => x.isWordLike).map(x => x.segment));
++if (JSON.stringify(words('សៀវភៅខ្មៅ')) !== JSON.stringify(['សៀវភៅ', 'ខ្មៅ']))
++  throw Error('Khmer dictionary capability probe differs; re-audit runtime');
++const input = JSON.parse(fs.readFileSync(0, 'utf8'));
++process.stdout.write(JSON.stringify({tokens: input.map(words), locale: 'km',
++  whitespace: 'Unicode_White_Space_phrase_chunks',
++  node: process.versions.node, icu: process.versions.icu, unicode: process.versions.unicode}));
++"""
++    try:
++        run = subprocess.run([executable, '-e', script], input=json.dumps(missing),
++                             capture_output=True, text=True, timeout=30, check=True)
++        output = json.loads(run.stdout)
++        if output['locale'] != 'km' or len(output['tokens']) != len(missing):
++            raise ValueError('Khmer locale or token result count mismatch')
++        if not all(isinstance(tokens, list) and all(isinstance(t, str) and t for t in tokens)
++                   for tokens in output['tokens']):
++            raise ValueError('invalid Khmer token result')
++        engine = {key: output[key] for key in ('locale', 'node', 'icu', 'unicode', 'whitespace')}
++        if not all(isinstance(value, str) and value for value in engine.values()):
++            raise ValueError('missing Khmer runtime metadata')
++        _KHMER_WORDS.update(zip(missing, output['tokens']))
++        prepare_khmer_words.engine = engine
++    except (OSError, ValueError, TypeError, KeyError, subprocess.SubprocessError) as error:
++        raise MeasurementError(f'Khmer dictionary segmentation unavailable: {error}') from error
++
++
+ def words(text, lang):
+     if lang == 'zh-hans':
+         return expansion.characters(text)
+@@ -194,6 +239,9 @@
+     if lang == 'my':
+         prepare_myanmar_words([text])
+         return _MYANMAR_WORDS[text]
++    if lang == 'km':
++        prepare_khmer_words([text])
++        return _KHMER_WORDS[text]
+     data = profile(lang)
+     return lexical_words(text, data.get('join_hyphens', False),
+                          data.get('join_catalan_ela_geminada', False),
+--- baseline42/variety_expansion.py
++++ candidate49/variety_expansion.py
+@@ -6,7 +6,7 @@
+ import re
+ import unicodedata
+ 
+-LANGUAGES = ('ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne')
++LANGUAGES = ('ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne', 'km', 'mn', 'sr', 'sl', 'lt', 'lv', 'et')
+ URL = re.compile(r'https?://[^\s<>\[\]()“”«»「」『』。，！？]+')
+ 
+ 
+@@ -77,6 +77,19 @@
+         return re.sub(r'[.!?]', marker, core) + value[len(core):]
+     protected = url_pattern(data.get('unspaced_sentence_terminators', '')).sub(protect_url, protected)
+ 
++    for abbreviation in data.get('native_abbreviation_sequences', []):
++        def protect_native(match):
++            remaining = protected[match.end():].lstrip()
++            token = match.group()
++            stops = data.get('additional_sentence_terminators', '')
++            masked = ''.join(marker if c in stops else c for c in token)
++            if not remaining:
++                return masked[:-1] + token[-1]
++            if remaining[0] in ',;:៖.!?' + stops:
++                return masked
++            raise SegmentationError('Khmer native abbreviation followed by prose has an ambiguous sentence boundary; reviewed segmentation required')
++        protected = re.sub(re.escape(abbreviation), protect_native, protected)
++
+     followers = data.get('ordinal_followers')
+     if followers:
+         end_word = r'\b'
+@@ -93,7 +106,8 @@
+         # HR/HU ordinal dots can precede adjectives, inflected nouns and
+         # conjunctions. Keep real uppercase/mixed-case next sentences and
+         # never infer continuation across a newline. This is not syntax parsing.
+-        expression = r'(?<![\w\u0300-\u036f])(?:\d+|[IVXLCDM]+)\.(?=[^\S\r\n]+([^\W\d_][\w\u0300-\u036f]*))'
++        numeral = r'\d+' if data.get('dotted_ordinal_arabic_only') else r'(?:\d+|[IVXLCDM]+)'
++        expression = r'(?<![\w\u0300-\u036f])' + numeral + r'\.(?=[^\S\r\n]+([^\W\d_][\w\u0300-\u036f]*))'
+         protected = re.sub(expression, lambda match: match.group()[:-1] + marker
+                            if match.group(1).islower() else match.group(), protected)
+     terminal = {re.sub(r'\s+', '', value).casefold().rstrip('.')
+@@ -103,6 +117,8 @@
+         literal = re.escape(abbreviation.rstrip('.'))
+         if data.get('canonical_abbreviations'):
+             literal = '(?:' + literal + '|' + re.escape(unicodedata.normalize('NFD', abbreviation.rstrip('.'))) + ')'
++        if data.get('flexible_abbreviation_spaces'):
++            literal = literal.replace(r'\ ', r'[^\S\r\n]+')
+         expression = re.compile(r'(?<!\w)' + literal + r'\.', re.I)
+         def protect(match):
+             token = match.group()
+--- baseline42/MULTILINGUAL-METHOD.md
++++ candidate49/MULTILINGUAL-METHOD.md
+@@ -551,3 +551,34 @@
+ as a fresh full-document read or as sole evidence. The prior Hebrew Academy
+ access failure is preserved in the inherited method. No unavailable authority
+ is represented as having approved these profiles.
++
++
++# Batch05 measurement contract (fixed before implementation)
++
++The 42-locale baseline is the exact B4 candidate manifest a48da1a2c3b62ffbb9254eaa1db1c4c6bd041707e0f7fe9f93103945753239fd. At copy time its independent root review was pending. This document is an engineering contract, not native-language or legal approval. New km/mn/sr/sl/lt/lv/et target manuscripts and their scores have not been read. Existing Serbian public script statistics exclude ARC704–706 and contain Latin letters with no Cyrillic letters in the three sampled bodies.
++
++## Units, thresholds, boundaries
++
++The six space-based profiles use Unicode orthographic units: letters/numbers with combining marks; internal apostrophes and decimal separators remain attached as in the baseline. Hyphens split units in these seven new profiles. This is a declared counting convention, not a universal linguistic word definition. NFC/NFD and ordinary/NBSP/narrow-NBSP spacing are neutral fixtures. Serbian accepts Latin and Cyrillic spellings through explicit arrays; it does not transliterate opener keys. Mongolian covers modern Cyrillic prose, not traditional vertical Mongolian-script segmentation.
++
++All new profiles retain 8/32 short/long unit thresholds, and existing score/HARD logic is unchanged. Those numbers are inherited heuristic cutoffs, not validated readability norms or cross-language comparable word lengths. No manuscript score informed profile selection.
++
++Khmer uses Node24 Intl.Segmenter('km', {granularity:'word'}) isWordLike units, separately labeled `icu_dictionary_wordlike_units`. Unicode White_Space divides phrase chunks; ICU then finds dictionary units inside each chunk. U+200B break hints remain in input. Raw ICU joins narrow NBSP across words, so phrase chunking applies consistently to every Unicode whitespace variant, following the already fixed Burmese method. ICU's repetition-mark unit and colon-separated time parts are exposed, not relabeled ordinary words. The neutral capability probe is សៀវភៅខ្មៅ → [សៀវភៅ, ខ្មៅ]. Missing backend, locale fallback, failed probe, bad output or absent metadata gives exit2. Record Node/ICU/Unicode versions; dictionary compounds, proper names and spellings remain heuristic. No syllable/grapheme/space fallback is allowed.
++
++Khmer ។ closes punctuation-delimited sentences, ៕ closes a section, and both may be unspaced. ៖ and ៗ are not sentence stops. The combining mark U+17CE is not treated as a standalone boundary. Space-only sentence divisions are not inferred. ។ល។ and ។បេ។ are literal multi-character abbreviations; at a paragraph end the last mark may close it, and before comma/colon/semicolon or a separate explicit stop the sequence is protected. With following lexical prose and no such disambiguation, measurement is unavailable (exit2) rather than guessing caseless sentence boundaries. The discouraged character ៘ is preserved and not treated as a stop. Finite quote-attribution prefixes cover only listed report structures; nested quotations remain review work.
++
++SR/LV/ET Arabic ordinals and SL Arabic/Roman ordinals may continue before a completely lowercase token on the same line. Actual uppercase and mixed-case next sentences stay separate. A lowercase brand or lowercase sentence start is ambiguous; capitalized titles after ordinals need manual review. Numeric dates and Roman-month contexts have finite neutral coverage. Mongolian numeric section decimals and suffix ordinals retain their original characters. Markdown numbered lists are excluded from prose by the pre-existing scope contract.
++
++Abbreviations are finite, locale-specific lists. New profiles explicitly support flexible Unicode spacing within listed compound abbreviations. Selected terminal abbreviations retain the shared end mark before uppercase/new paragraph; prepositive vs postpositive page/article abbreviations use numeric-prefix conditions. Unknown abbreviations, acronyms that look like sentence starts, initials and exceptional names are not generally solved. Source headings match full recognized titles only; substantive headings do not terminate analysis. Rhetoric patterns distinguish ordinary negation/additive 'not only' from replacement in neutral cases; these finite signals are not semantic judgments.
++
++## Sources consulted and precise status
++
++- Khmer: [Unicode17 §16.4](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-16/) specifies that whitespace separates clauses or name parts, describes U+200B, and discourages the single BEYYAL character in favor of spelled sequences. [ICU boundary analysis](https://unicode-org.github.io/icu/userguide/boundaryanalysis/#dictionary-based-breakiterator) describes dictionary support. [Richard Ishida's Khmer notes](https://r12a.github.io/scripts/khmr/km.html#phrase) describe punctuation, repetition and dictionary limitations; they are the author's technical synthesis, not an official national orthography decree. Neutral ICU observations are runtime evidence, not gold-standard words.
++- Mongolian: [National Council's Cyrillic spelling rules, §51–55](https://nclp.mn/uploaded/docs/20170410053854_iT021bZyDoNF4KQwu1GPNYzBL.pdf) were directly opened: sentence periods, numeric enumerators, initials and reported questions. These rules do not prescribe the present tokenizer.
++- Serbian: [university teaching material by Prof. Aleksandra Kostić Tmušić](https://uf-pz.net/wp-content/uploads/2020/05/VASP-2-Pravopis-srpskog-jezika-11.5.2020..pdf) describes Arabic ordinal dots, normally undotted Roman ordinals and numeric dates. This is university-authored instruction, not a newly enacted national standard. Latin/Cyrillic pattern pairs are AI authored.
++- Slovenian: [Slovenski pravopis rules §250–255](https://www.fran.si/134/slovenski-pravopis/datoteke/Pravopis_Pravila.pdf) cover abbreviation dots, Arabic/Roman ordinals and internal numeric dots; the PDF text extraction has encoding defects. The [ePravopis pika entry](https://www.fran.si/135/epravopis-slovenski-pravopis/4415690/pika?All=net&Query=net&View=1) is explicitly draft/non-normative pending adoption, and is only corroborating guidance.
++- Lithuanian: [Court language advice](https://www.apeliacinis.lt/ar-gali-atskirose-eilutese-likti-t.-y.-buti-nesujungti-jungiamuoju-tarpu-skaitmenys-ir-zodziai-pvz.-straipsnis-dalis-punktas/1496) distinguishes abbreviations, acronyms and nonbreaking spaces. Previously separately reviewed neutral LT fixtures/profile are reused selectively; their earlier candidate code is not copied over current42. Page/time/article endings get additional neutral positive/negative tests.
++- Latvian: [Latvian Language Agency numeric-dot guidance](https://www.valodaskonsultacijas.lv/en/questions/824.pdf) distinguishes cardinal/Arabic ordinal/Roman numbering. Its [abbreviation advice](https://www.valodaskonsultacijas.lv/lv/search?page=6&search%5Bq%5D=Sa%C4%ABsin%C4%81jumi&search%5Bquestions%5D=1) recommends a nonbreaking space inside u. c. and a shared final abbreviation/sentence dot. The direct consultation page was read, not only search snippets.
++- Estonian: [EKI number writing](https://teatmik.eki.ee/teatmik/arvukirjutus/) covers dotted Arabic and normally undotted Roman ordinals and dates. [EKI abbreviation guidance](https://teatmik.eki.ee/teatmik/luhendamine/) notes native abbreviations normally have no final dot; finite dotted variants recognized by the checker are not recommendations to add dots. A genuine sentence-final dot after an undotted abbreviation remains a sentence stop.
++
++The fixtures are AI-written school/library/stationery examples with literal expected arrays fixed before production edits. The Lithuanian reused expectations retain their separate source provenance. No human native reviewer approved these examples. Actual manuscript syntax may reveal new defects; new fixes require neutral evidence and same-input regression, not score fitting.
+--- baseline42/profiles/km.json
++++ candidate49/profiles/km.json
+@@ -0,0 +1,42 @@
++{
++  "review_status": "AI neutral contract; root independent review/install pending",
++  "provenance": "METHOD-BATCH05.md; tests/fixtures-batch05.json fixed before production edits",
++  "join_hyphens": false,
++  "canonical_abbreviations": true,
++  "flexible_abbreviation_spaces": true,
++  "length_unit": "icu_dictionary_wordlike_units",
++  "short_threshold": 8,
++  "long_threshold": 32,
++  "question_pattern": "[?？؟]\\s*[\"”’»›“)]*$",
++  "terminal_abbreviations": [],
++  "register": "Modern Khmer; ICU dictionary wordlike units",
++  "abbreviations": [
++    "Dr",
++    "Prof",
++    "Mr",
++    "Ms",
++    "Art",
++    "No",
++    "p",
++    "pp",
++    "e.g",
++    "i.e"
++  ],
++  "additional_sentence_terminators": "។៕",
++  "unspaced_sentence_terminators": "។៕",
++  "native_abbreviation_sequences": [
++    "។ល។",
++    "។បេ។"
++  ],
++  "quote_attribution_pattern": "^(?:គាត់បាននិយាយ|គាត់និយាយ|គ្រូបាននិយាយ|គ្រូនិយាយ)",
++  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:ប្រភព|ប្រភពផ្លូវការ|ឯកសារយោង)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
++  "citation_pattern": "មាត្រា\\s*\\d+",
++  "contrast_patterns": [
++    "(?i:(?:^|(?<=[.!?។៕\\n]))\\s*(?![^.!?។៕\\n;]{0,220}(?:មិនត្រឹមតែ))[^.!?។៕\\n;]{0,220}(?:មិនមែន)[^.!?។៕\\n;]{0,120}(?:ប៉ុន្តែ))"
++  ],
++  "caveat_pattern": "^[\\s“”„\"\\x27«»(\\[]*(?:ទោះយ៉ាងណា|ប៉ុន្តែ)",
++  "hypo_pattern": "^[\\s“”„\"\\x27«»(\\[]*(?:ឧបមាថា|សន្មតថា)",
++  "formula_close_pattern": "ព័ត៌មានទូទៅ",
++  "locale": "km",
++  "directory": "columns-km"
++}
+--- baseline42/profiles/mn.json
++++ candidate49/profiles/mn.json
+@@ -0,0 +1,38 @@
++{
++  "review_status": "AI neutral contract; root independent review/install pending",
++  "provenance": "METHOD-BATCH05.md; tests/fixtures-batch05.json fixed before production edits",
++  "join_hyphens": false,
++  "canonical_abbreviations": true,
++  "flexible_abbreviation_spaces": true,
++  "length_unit": "orthographic_words",
++  "short_threshold": 8,
++  "long_threshold": 32,
++  "question_pattern": "[?？؟]\\s*[\"”’»›“)]*$",
++  "terminal_abbreviations": [
++    "г.м",
++    "г. м"
++  ],
++  "register": "Modern Cyrillic Mongolian; not traditional vertical script",
++  "abbreviations": [
++    "Dr",
++    "Prof",
++    "Mr",
++    "Ms",
++    "e.g",
++    "i.e",
++    "ж",
++    "г.м",
++    "г. м",
++    "гэх мэт"
++  ],
++  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:Эх\\s+сурвалж(?:ууд)?|Албан\\s+ёсны\\s+эх\\s+сурвалж(?:ууд)?)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
++  "contrast_patterns": [
++    "(?i:(?:^|(?<=[.!?\\n]))\\s*(?![^.!?\\n;]{0,220}(?:\\bзөвхөн\\b))[^.!?\\n;]{0,220}(?:\\bбиш\\b)[^.!?\\n;]{0,120}(?:\\bхарин\\b))"
++  ],
++  "caveat_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Гэсэн\\s+хэдий\\s+ч|Гэвч|Гэхдээ)\\b)",
++  "hypo_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Жишээ\\s+нь|Төсөөлье)\\b)",
++  "formula_close_pattern": "(?i:ерөнхий\\s+мэдээлэл)",
++  "citation_pattern": "(?i:\\d+\\s*(?:дугаар|дүгээр)\\s+зүйл(?:д|ийн)?|зүйл\\s*\\d+)",
++  "locale": "mn",
++  "directory": "columns-mn"
++}
+--- baseline42/profiles/sr.json
++++ candidate49/profiles/sr.json
+@@ -0,0 +1,66 @@
++{
++  "review_status": "AI neutral contract; root independent review/install pending",
++  "provenance": "METHOD-BATCH05.md; tests/fixtures-batch05.json fixed before production edits",
++  "join_hyphens": false,
++  "canonical_abbreviations": true,
++  "flexible_abbreviation_spaces": true,
++  "length_unit": "orthographic_words",
++  "short_threshold": 8,
++  "long_threshold": 32,
++  "question_pattern": "[?？؟]\\s*[\"”’»›“)]*$",
++  "terminal_abbreviations": [
++    "itd",
++    "sl",
++    "god",
++    "итд",
++    "сл",
++    "год"
++  ],
++  "register": "Serbian Latin and Cyrillic, explicit spellings without transliteration",
++  "abbreviations": [
++    "prof",
++    "doc",
++    "dr",
++    "mr",
++    "npr",
++    "tj",
++    "itd",
++    "sl",
++    "br",
++    "čl",
++    "st",
++    "str",
++    "god",
++    "проф",
++    "доц",
++    "др",
++    "мр",
++    "нпр",
++    "тј",
++    "итд",
++    "сл",
++    "бр",
++    "чл",
++    "ст",
++    "стр",
++    "год"
++  ],
++  "context_terminal_abbreviations": {
++    "str": "\\d+[\\ue000.]?\\s*$",
++    "стр": "\\d+[\\ue000.]?\\s*$"
++  },
++  "dotted_ordinal_lowercase_continuation": true,
++  "dotted_ordinal_arabic_only": true,
++  "ordinal_pattern": "(?<!\\w)\\d{1,2}[.\\ue000]\\s+\\d{1,2}\\.(?=\\s+\\d{4})|(?<!\\w)\\d{1,2}\\.(?=\\s+[IVX]+\\s+\\d{4})",
++  "additional_closing_quotes": "“",
++  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:Izvori|Zvanični\\s+izvori|Službeni\\s+izvori|Извори|Званични\\s+извори|Службени\\s+извори)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
++  "contrast_patterns": [
++    "(?i:(?:^|(?<=[.!?\\n]))\\s*(?![^.!?\\n;]{0,220}(?:\\b(?:samo|само)\\b))[^.!?\\n;]{0,220}(?:\\b(?:nije|није)\\b)[^.!?\\n;]{0,120}(?:\\b(?:nego|već|него|већ)\\b))"
++  ],
++  "caveat_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Međutim|Ipak|Међутим|Ипак)\\b)",
++  "hypo_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Pretpostavimo|Zamislimo|Претпоставимо|Замислимо)\\b)",
++  "formula_close_pattern": "(?i:opšte\\s+informacije|опште\\s+информације)",
++  "citation_pattern": "(?i:\\b(?:član(?:u|a|om)?|čl\\.|члан(?:у|а|ом)?|чл\\.)\\s*\\d+)",
++  "locale": "sr",
++  "directory": "columns-sr"
++}
+--- baseline42/profiles/sl.json
++++ candidate49/profiles/sl.json
+@@ -0,0 +1,58 @@
++{
++  "review_status": "AI neutral contract; root independent review/install pending",
++  "provenance": "METHOD-BATCH05.md; tests/fixtures-batch05.json fixed before production edits",
++  "join_hyphens": false,
++  "canonical_abbreviations": true,
++  "flexible_abbreviation_spaces": true,
++  "length_unit": "orthographic_words",
++  "short_threshold": 8,
++  "long_threshold": 32,
++  "question_pattern": "[?？؟]\\s*[\"”’»›“)]*$",
++  "terminal_abbreviations": [
++    "itd",
++    "ipd",
++    "d.o.o",
++    "d. o. o"
++  ],
++  "register": "Standard Slovenian",
++  "abbreviations": [
++    "dr",
++    "prof",
++    "mag",
++    "doc",
++    "npr",
++    "tj",
++    "t.j",
++    "t. j",
++    "itd",
++    "ipd",
++    "oz",
++    "prim",
++    "gl",
++    "št",
++    "čl",
++    "odst",
++    "str",
++    "t.i",
++    "t. i",
++    "d.o.o",
++    "d. o. o"
++  ],
++  "context_terminal_abbreviations": {
++    "čl": "\\d+[\\ue000.]?\\s*$",
++    "str": "\\d+[\\ue000.]?\\s*$"
++  },
++  "dotted_ordinal_lowercase_continuation": true,
++  "ordinal_pattern": "(?<!\\w)\\d{1,2}[.\\ue000]\\s+(?:\\d{1,2}|[IVX]+)\\.(?=\\s+\\d{4})",
++  "additional_closing_quotes": "“«",
++  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:Viri|Uradni\\s+viri|Literatura)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
++  "contrast_patterns": [
++    "(?i:(?:^|(?<=[.!?\\n]))\\s*(?![^.!?\\n;]{0,220}(?:\\b(?:samo|le)\\b))[^.!?\\n;]{0,220}(?:\\bni\\b)[^.!?\\n;]{0,120}(?:\\b(?:temveč|ampak)\\b))"
++  ],
++  "caveat_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Vendar|Kljub\\s+temu|Toda)\\b)",
++  "hypo_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Predpostavimo|Zamislimo\\s+si)\\b)",
++  "formula_close_pattern": "(?i:splošne\\s+informacije)",
++  "citation_pattern": "(?i:\\b\\d+\\.\\s*člen(?:u|a|om)?|\\bčlen(?:u|a|om)?\\s*\\d+)",
++  "locale": "sl",
++  "directory": "columns-sl"
++}
+--- baseline42/profiles/lt.json
++++ candidate49/profiles/lt.json
+@@ -0,0 +1,62 @@
++{
++  "review_status": "AI neutral contract; root independent review/install pending",
++  "provenance": "METHOD-BATCH05.md; tests/fixtures-batch05.json fixed before production edits",
++  "join_hyphens": false,
++  "canonical_abbreviations": true,
++  "flexible_abbreviation_spaces": true,
++  "length_unit": "orthographic_words",
++  "short_threshold": 8,
++  "long_threshold": 32,
++  "question_pattern": "[?？؟]\\s*[\"”’»›“)]*$",
++  "terminal_abbreviations": [
++    "t. t",
++    "t.t",
++    "kt",
++    "pan",
++    "m",
++    "d",
++    "val"
++  ],
++  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:[0-9]+[.)][^\\S\\r\\n]+)?(?:Šaltiniai|Oficialūs\\s+šaltiniai|Naudoti\\s+šaltiniai|Informacijos\\s+šaltiniai)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
++  "abbreviations": [
++    "str",
++    "d",
++    "p",
++    "Nr",
++    "pvz",
++    "t. y",
++    "t.y",
++    "t. t",
++    "t.t",
++    "ir kt",
++    "kt",
++    "pan",
++    "m",
++    "mėn",
++    "g",
++    "pr",
++    "žr",
++    "plg",
++    "dr",
++    "prof",
++    "doc",
++    "val",
++    "el"
++  ],
++  "contrast_patterns": [
++    "(?i:\\bne\\b(?!\\s+tik\\b)[^.!?\\n]{0,160}\\b(?:o|bet)\\b)",
++    "(?i:\\bvietoj\\b)",
++    "(?i:\\bskiriasi\\s+nuo\\b)"
++  ],
++  "caveat_pattern": "(?i:^[\\s„“\"‘\\x27(\\[]*(?:Tačiau|Vis\\s+dėlto|Visgi|Nepaisant\\s+to)\\b)",
++  "hypo_pattern": "(?i:^[\\s„“\"‘\\x27(\\[]*(?:Tarkime|Įsivaizduokime|Įsivaizduokite|Hipotetinis\\s+pavyzdys)\\b)",
++  "formula_close_pattern": "(?i:\\b(?:bendra\\s+informacija|bendro\\s+pobūdžio\\s+informacija|Kiekvienas\\s+atvejis\\s+yra\\s+skirtingas|Mūsų\\s+kontora\\s+gali\\s+jums\\s+padėti|el\\.\\s*paštu)\\b)",
++  "register": "Standard Lithuanian; independently researched neutral arrays reused",
++  "additional_closing_quotes": "“",
++  "context_terminal_abbreviations": {
++    "str": "\\d+\\s*$"
++  },
++  "citation_pattern": "(?i:\\b(?:(?:straipsn(?:is|io|į|iai|ius|yje)|str\\.?)\\s*\\d+|\\d+\\s*(?:straipsn(?:is|io|į|iai|ius|yje)|str\\.?)))",
++  "locale": "lt",
++  "directory": "columns-lt"
++}
+--- baseline42/profiles/lv.json
++++ candidate49/profiles/lv.json
+@@ -0,0 +1,62 @@
++{
++  "review_status": "AI neutral contract; root independent review/install pending",
++  "provenance": "METHOD-BATCH05.md; tests/fixtures-batch05.json fixed before production edits",
++  "join_hyphens": false,
++  "canonical_abbreviations": true,
++  "flexible_abbreviation_spaces": true,
++  "length_unit": "orthographic_words",
++  "short_threshold": 8,
++  "long_threshold": 32,
++  "question_pattern": "[?？؟]\\s*[\"”’»›“)]*$",
++  "terminal_abbreviations": [
++    "u.c",
++    "u. c",
++    "u.tml",
++    "u. tml",
++    "utt",
++    "g"
++  ],
++  "register": "Standard Latvian",
++  "abbreviations": [
++    "Dr",
++    "prof",
++    "doc",
++    "piem",
++    "t.i",
++    "t. i",
++    "t.sk",
++    "t. sk",
++    "u.c",
++    "u. c",
++    "u.tml",
++    "u. tml",
++    "utt",
++    "Nr",
++    "nr",
++    "lpp",
++    "lp",
++    "g",
++    "plkst",
++    "sk",
++    "sal",
++    "att",
++    "tab"
++  ],
++  "context_terminal_abbreviations": {
++    "lpp": "\\d+[\\ue000.]?\\s*$",
++    "lp": "\\d+[\\ue000.]?\\s*$"
++  },
++  "dotted_ordinal_lowercase_continuation": true,
++  "dotted_ordinal_arabic_only": true,
++  "additional_closing_quotes": "“",
++  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:Avoti|Oficiālie\\s+avoti|Izmantotie\\s+avoti)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
++  "contrast_patterns": [
++    "(?i:(?:^|(?<=[.!?\\n]))\\s*(?![^.!?\\n;]{0,220}(?:\\b(?:tikai|vienīgi)\\b))[^.!?\\n;]{0,220}(?:\\bnav\\b)[^.!?\\n;]{0,120}(?:\\bbet\\b))"
++  ],
++  "caveat_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Tomēr|Taču|Neraugoties\\s+uz\\s+to)\\b)",
++  "hypo_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Pieņemsim|Iedomāsimies)\\b)",
++  "formula_close_pattern": "(?i:vispārīga\\s+informācija)",
++  "citation_pattern": "(?i:\\b\\d+\\.\\s*pant(?:s|a|ā|u)|\\bpant(?:s|a|ā|u)\\s*\\d+)",
++  "locale": "lv",
++  "directory": "columns-lv"
++}
+--- baseline42/profiles/et.json
++++ candidate49/profiles/et.json
+@@ -0,0 +1,57 @@
++{
++  "review_status": "AI neutral contract; root independent review/install pending",
++  "provenance": "METHOD-BATCH05.md; tests/fixtures-batch05.json fixed before production edits",
++  "join_hyphens": false,
++  "canonical_abbreviations": true,
++  "flexible_abbreviation_spaces": true,
++  "length_unit": "orthographic_words",
++  "short_threshold": 8,
++  "long_threshold": 32,
++  "question_pattern": "[?？؟]\\s*[\"”’»›“)]*$",
++  "terminal_abbreviations": [
++    "jne",
++    "jms",
++    "jm"
++  ],
++  "register": "Standard Estonian; native abbreviations normally undotted",
++  "abbreviations": [
++    "dr",
++    "prof",
++    "hr",
++    "pr",
++    "nt",
++    "s.t",
++    "s. t",
++    "s.o",
++    "s. o",
++    "k.a",
++    "k. a",
++    "v.a",
++    "v. a",
++    "jne",
++    "jms",
++    "jm",
++    "nr",
++    "lk",
++    "lg",
++    "p",
++    "a"
++  ],
++  "context_terminal_abbreviations": {
++    "a": "\\d{4}\\s*$"
++  },
++  "dotted_ordinal_lowercase_continuation": true,
++  "dotted_ordinal_arabic_only": true,
++  "ordinal_pattern": "(?<!\\w)\\d{1,2}\\.(?=\\s+[IVX]+\\s+\\d{4})",
++  "additional_closing_quotes": "“",
++  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:Allikad|Ametlikud\\s+allikad|Kasutatud\\s+allikad)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
++  "contrast_patterns": [
++    "(?i:(?:^|(?<=[.!?\\n]))\\s*(?![^.!?\\n;]{0,220}(?:\\b(?:ainult|üksnes)\\b))[^.!?\\n;]{0,220}(?:\\b(?:ei\\s+ole|pole|mitte)\\b)[^.!?\\n;]{0,120}(?:\\bvaid\\b))"
++  ],
++  "caveat_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Siiski|Kuid|Sellest\\s+hoolimata)\\b)",
++  "hypo_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Oletame|Kujutame\\s+ette)\\b)",
++  "formula_close_pattern": "(?i:üldine\\s+teave|üldine\\s+info)",
++  "citation_pattern": "(?i:\\b(?:artik(?:kel|li|lis)|paragrahv(?:i|is)?|§)\\s*\\d+|\\d+\\.\\s*artik(?:kel|li|lis))",
++  "locale": "et",
++  "directory": "columns-et"
++}

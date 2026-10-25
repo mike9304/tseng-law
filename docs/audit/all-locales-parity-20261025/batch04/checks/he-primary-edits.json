@@ -1,0 +1,206 @@
+{
+  "at": "2026-10-25T15:04:39.864254+00:00",
+  "editor": "Codex column_existing_drafts",
+  "scope": "B4 HE only; Kimi originals/author/provenance and R unchanged",
+  "entries": [
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "finding": "M06/S02",
+      "before": "בעל Employment Gold Card בתוקף או מסמך משולב אחר הכולל פונקציות ARC אינו נדרש לכרטיס נפרד. זהו הפטור.",
+      "after": "בעל Employment Gold Card בתוקף או מסמך משולב אחר הכולל את תפקידי ה-ARC אינו נדרש לכרטיס נפרד.",
+      "reason": "Remove empty repeated assertion and replace technical borrowing; valid combined-document exemption unchanged."
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "finding": "M03/M05",
+      "before": "אישור העבודה הרלוונטי ותעודת העסקה שהונפקה במהלך החודש הקודם; המפטור מהיתר מציג ראיות לפטור החל.",
+      "after": "אישור העבודה הרלוונטי ותעודת העסקה שהונפקה במהלך החודש האחרון; מי שפטור מהיתר מציג ראיות לפטור החל.",
+      "reason": "Rolling recent month instead of prior calendar month; correct exemption typo."
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "finding": "M03",
+      "before": "מכתב קבלה לפני הרישום, או אישור לימודים עדכני ורישום לסמסטר לאחר הרישום.",
+      "after": "מכתב קבלה לפני הרישום; לאחר הרישום, אישור לימודים שהונפק בחודש האחרון, לפי רשימת NIA.",
+      "reason": "Pre-enrollment admission vs recent post-enrollment proof; accurate concise description without cumulative semester proof."
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "finding": "M04/F24",
+      "before": "ב-NIA 0902 מופיע מועד כללי של 15 יום ממחרת הודעת ההשלמה, וכאשר יש לבקש מסמך מחו\"ל — תקופה נפרדת של שלושה חודשים; יש לפעול לפי ההודעה שקיבלת בפועל.",
+      "after": "לפי [הנוסח הסיני של הנחיית NIA 0902](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/), המועד הרגיל להשלמה הוא 15 ימים קלנדריים ממחרת ההודעה. כאשר את המסמך החסר צריך לבקש מחו״ל, מסין היבשתית, מהונג קונג או ממקאו, תקופת ההשלמה היא שלושה חודשים. בקשה שלא הושלמה כנדרש במועד תידחה.",
+      "reason": "Chinese next-day source; 15 calendar days, document-origin alternative three months and incomplete-by-deadline rejection. Not applicant location or additive time."
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "finding": "M04",
+      "before": "- NIA: [0902 — תושבות, הארכה ושינויים]",
+      "after": "- [NIA 0902 בסינית](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/): המועד להשלמת מסמכים והשלכות אי-השלמה.\n- NIA: [0902 — תושבות, הארכה ושינויים]",
+      "reason": "Same added official source in end list; English source retained."
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "finding": "E01/F09",
+      "before": "ההנחה לסטודנטים בני חו\"ל במעמד 僑生 חלה על מעמד זה, ולא על כל הסטודנטים הבינלאומיים.",
+      "after": "לסטודנטים המוכרים במעמד 僑生 ניתנת הנחה של 50% באגרות ARC הרלוונטיות. ההנחה אינה חלה על כל הסטודנטים הבינלאומיים.",
+      "reason": "Source-supported half fee only for recognized overseas compatriot student status and relevant ARC fees."
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "finding": "E02/F12",
+      "before": "בהליך הסטודנטים המקוון, הבדיקה מצוינת כחמישה ימי עבודה, בלא הזמן המוחרג להשלמות.",
+      "after": "בהליך הסטודנטים המקוון, הבדיקה מצוינת כחמישה ימי עבודה, בלא הזמן המוחרג להשלמות. לאחר השלמת המסמכים הבדיקה מתחילה מחדש.",
+      "reason": "Student-specific processing restart is substantive, not short filler."
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "finding": "E03/F11",
+      "before": "ARC אלקטרונית בתוקף של עד שישה חודשים מורדת ומודפסת לאחר התשלום.",
+      "after": "לאחר התשלום יש להוריד ולהדפיס את ה-ARC האלקטרונית, שתוקפה עד שישה חודשים.",
+      "reason": "Explicit mandatory download and print after payment; six-month maximum retained."
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "finding": "M05",
+      "before": "אלה שלבים נפרדים, והם אינם חלים על כל פוני.",
+      "after": "הוראות אלה חלות על הליך הסטודנטים.",
+      "reason": "Fix broken noun and redundant phrase with correct student scope."
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "finding": "M05",
+      "before": "בפעילות המתוכנת",
+      "after": "בפעילות המתוכננת",
+      "reason": "Planned-activity spelling correction in summary."
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "finding": "M05",
+      "before": "ושתי ספלים",
+      "after": "ושני ספלים",
+      "reason": "Masculine numeral agreement for two cups."
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "finding": "M06",
+      "before": "היא הכתובת לדרישות ולהליכי המסמכים הספציפיים ללאום; שפת הקורא אינה קובעת את אזרחותו.",
+      "after": "היא הכתובת לדרישות ולהליכי המסמכים הספציפיים ללאום.",
+      "reason": "Remove editorial instruction; actual nationality/passport eligibility remains."
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "finding": "M01",
+      "before": "כאשר Foreign Professional העוסק בעבודה מקצועית בטייוואן או Foreign Specialist Professional קיבל היתר או פטור מתאים, סעיף 16 מתיר בקשת תושבות ישירה לאחר כניסה בפטור מויזה או עם ויזת מבקר.",
+      "after": "כאשר Foreign Professional או Foreign Specialist Professional קיבל היתר לעבודה מקצועית בטייוואן או חל עליו פטור מתאים, סעיף 16 מתיר לו לבקש תושבות ישירות מ-NIA לאחר כניסה בפטור מוויזה או בוויזת מבקר.",
+      "reason": "Restore both professional classes authorization OR exemption for professional work; remove already-working restriction from own-application route. Subsequent NIA approval retained."
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "finding": "M06",
+      "before": "הדרך הזאת מוגבלת. [NIA 0915]",
+      "after": "[NIA 0915]",
+      "reason": "Remove empty preview; specific exclusions and other-law exception remain."
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "finding": "S01",
+      "before": "הקטגוריה באישור העבודה — לא העובדה שקיימת עבודה בטייוואן — מזהה איזה הליך להשתמש בו.",
+      "after": "הקטגוריה באישור העבודה קובעת באיזה הליך יש להשתמש.",
+      "reason": "Natural subject and verb; work category still determines route."
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "finding": "E04/style",
+      "before": "ההיעדרויות, כולל חופשה, אינן רשאיות לעלות על רבע משעות הלימוד.",
+      "after": "משך ההיעדרות, כולל חופשה, אינו יכול לעלות על רבע משעות הלימוד.",
+      "reason": "Duration as subject; absence including leave maximum one-quarter preserved."
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "finding": "M05/rhythm",
+      "before": "לסטודנט הזכאי תחת סעיף 50 חל תקרה שבועית של 20 שעות, למעט במהלך חופשות הקיץ והחורף — לא בכל יום חג.",
+      "after": "על הסטודנטים שסעיף 50 חל עליהם חלה מגבלה של 20 שעות עבודה בשבוע. חופשות הקיץ והחורף מוחרגות ממגבלת השעות.",
+      "reason": "Correct gender/syntax, preserve weekly20 and summer/winter exception in two substantive sentences."
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "finding": "M04",
+      "before": "בעלי מקצוע מיוחדים העומדים בקריטריונים עשויים לזכות ב-[Employment Gold Card](https://goldcard.nat.gov.tw/en/about/).",
+      "after": "בעלי מקצוע מיוחדים העומדים בקריטריונים עשויים לזכות ב-[Employment Gold Card](https://goldcard.nat.gov.tw/en/).",
+      "reason": "Restore exact EN official Gold Card root in body and sources."
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "finding": "M04",
+      "before": "- [Employment Gold Card — מידע רשמי](https://goldcard.nat.gov.tw/en/about/).",
+      "after": "- [Employment Gold Card — מידע רשמי](https://goldcard.nat.gov.tw/en/).",
+      "reason": "Restore exact EN official Gold Card root in body and sources."
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "finding": "M02/summary",
+      "before": "מעבר דירה או שינוי מקום עבודה מחייב רישום בתוך 30 יום ממחרת השינוי,",
+      "after": "מעבר דירה או שינוי מקום עבודה מחייב הגשת בקשה לרישום השינוי בתוך 30 יום ממחרת השינוי,",
+      "reason": "Filing duty, not agency completion; next-day30 retained."
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "finding": "M05",
+      "before": "סיום העסקה או מערכת יחסים עשויה לשנות",
+      "after": "סיום העסקה או סיום קשר משפחתי עשוי לשנות",
+      "reason": "Masculine agreement and family relationship as residence ground."
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "finding": "M02",
+      "before": "יש להשלים את הרישום אצל NIA בתוך 30 יום ממחרת השינוי.",
+      "after": "יש להגיש ל-NIA בקשה לרישום השינוי בתוך 30 יום ממחרת השינוי.",
+      "reason": "Applicant must file within deadline; not complete agency registration."
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "finding": "M05",
+      "before": "אפשרת הארכה נוספת אחת, עד סכום כולל של שנה.",
+      "after": "אפשר לבקש הארכה נוספת אחת, עד לתקופה כוללת של שנה.",
+      "reason": "One additional request may be made; total one-year duration, no automatic extension."
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "finding": "E05/M06",
+      "before": "פחות מ-30 יום ועילת התושבות המקורית נמשכת. שני התנאים נדרשים.",
+      "after": "פחות מ-30 יום ועילת התושבות המקורית נמשכת.",
+      "reason": "Remove redundant assertion; explicit less-than30 AND ground continues plus prior penalty remain."
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "finding": "E06/rhythm",
+      "before": "בבקשה המבוססת על ויזת תושב יש לכלול טופס, תצלום שצולם בשנתיים האחרונות, דרכון וויזת תושב, ראיות לעילת התושבות והוכחה לכתובת המגורים הנוכחית. כך מפרטות [תקנות השהות, התושבות והתושבות הקבועה של זרים, סעיף 5](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129) ו[רשימת המסמכים של NIA 0902](https://www.immigration.gov.tw/5475/5478/141465/141808/141970).",
+      "after": "לפי [תקנות השהות, התושבות והתושבות הקבועה של זרים, סעיף 5](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129) ו[רשימת המסמכים של NIA 0902](https://www.immigration.gov.tw/5475/5478/141465/141808/141970), לבקשה המבוססת על ויזת תושב מצרפים טופס, תצלום שצולם בשנתיים האחרונות, דרכון וויזת תושב, ראיות לעילת התושבות והוכחה לכתובת המגורים הנוכחית.",
+      "reason": "Attach actual legal sources directly to document requirements instead of a separate same-length source-only sentence; requirements, 2-year photo, source URLs unchanged."
+    }
+  ],
+  "outputs": [
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "beforeSha256": "2e6bf567428158b5d51673238435c91ef86d042798c97cb2272422eb5e57e8da",
+      "afterSha256": "eb401cf43480269123d91795de21fd48de22e353aac438b1755ceddfd175220f",
+      "diff": "checks/he-primary-704.diff"
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "beforeSha256": "c2441add8f3bf2307bf09e9b9715ff89501f5a35b2fbe808de3b4cdbaa3dbbb3",
+      "afterSha256": "7010616bdd946044f7791e17987ddef10ca5c95b093f42004e7ed4febbf5455c",
+      "diff": "checks/he-primary-705.diff"
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "beforeSha256": "c4e554de5781a1a25f3276d2eb91be99a6e0ed04a7cf0f5d55b2fe0004d5b385",
+      "afterSha256": "c1430580439966e7c85e23d110e1f152c09db2752d6b0276cab2581843dddea7",
+      "diff": "checks/he-primary-706.diff"
+    }
+  ],
+  "originalKimiAuthorSha256": "1052c0d5bb24ed518b98b7d1264d4302918e849911249e14b484e5f479640596",
+  "publicationMetadata": "2026-10-25 retained pending root coordination; source verification24 unchanged",
+  "afterRhythmAt": "2026-10-25T15:08:30.608964+00:00",
+  "rhythmInputSha256": "b1a2f7a21bfa52b672d72b9fe563547d5e36310108e8c2e4387733e8bd62a9dc"
+}

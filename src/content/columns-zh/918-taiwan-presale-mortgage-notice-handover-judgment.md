@@ -2,11 +2,11 @@
 title: "辦貸款、進場裝修，仍未完成交屋：預售屋遲延案"
 summary: "建商寄出辦貸款的信，是否已完成通知交屋？臺中高分院從信函內容、水電接通、驗收及交屋文件判斷，未採建商抗辯。判決中的四個月來自個別契約；現行應記載事項列的是六個月，買方須依自己的契約與履約紀錄核對。"
 published: "2026-10-25"
-lastmod: "2026-10-25"
+lastmod: "2026-10-26"
 date_display: "2026年10月25日"
 read_time: "約5分鐘閱讀"
 categories: ["不動產", "台灣判決"]
-topic: "civil"
+topic: "litigation"
 tags: ["預售屋", "交屋通知", "房屋貸款", "遲延交屋", "契約爭議"]
 audience: ["zh-hant"]
 author: "legal-ai-assistant"

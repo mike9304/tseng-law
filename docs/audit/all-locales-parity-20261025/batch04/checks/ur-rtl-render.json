@@ -1,0 +1,77 @@
+{
+  "at": "2026-10-25T15:12:51.209Z",
+  "scope": "isolated Markdown RTL preview; not the rendered release site",
+  "network": "HTTP(S) requests aborted",
+  "profile": "new temporary profile; no user profile access",
+  "inputs": [
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "sha256": "15dff7bda161ff794256f51c006331a5963ba6a1197f26e37712ce5f602de8a9"
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "e07a6b499b2e0fd53cfc38234eb9e1f20fa3f9566ef2b102ffad32433e56c58e"
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "8ae69f8dc40663efcaa078d8d88484b4af4517f9ac83deaae189ddca182bbb02"
+    }
+  ],
+  "executablePath": "/Users/son7/Library/Caches/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-mac-arm64/chrome-headless-shell",
+  "results": [
+    {
+      "article": "704",
+      "kind": "desktop",
+      "dir": "rtl",
+      "lang": "ur",
+      "viewportWidth": 1200,
+      "scrollWidth": 1200,
+      "heading": "تائیوان میں پہلا ARC: درخواست کی تاریخ اور رہائش کا ثبوت"
+    },
+    {
+      "article": "705",
+      "kind": "desktop",
+      "dir": "rtl",
+      "lang": "ur",
+      "viewportWidth": 1200,
+      "scrollWidth": 1200,
+      "heading": "تائیوان میں کام، تعلیم اور خاندان کے ساتھ رہائش"
+    },
+    {
+      "article": "706",
+      "kind": "desktop",
+      "dir": "rtl",
+      "lang": "ur",
+      "viewportWidth": 1200,
+      "scrollWidth": 1200,
+      "heading": "ARC کی توسیع، پتہ بدلنے کی اطلاع اور تائیوان واپسی"
+    },
+    {
+      "article": "704",
+      "kind": "mobile",
+      "dir": "rtl",
+      "lang": "ur",
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "heading": "تائیوان میں پہلا ARC: درخواست کی تاریخ اور رہائش کا ثبوت"
+    },
+    {
+      "article": "705",
+      "kind": "mobile",
+      "dir": "rtl",
+      "lang": "ur",
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "heading": "تائیوان میں کام، تعلیم اور خاندان کے ساتھ رہائش"
+    },
+    {
+      "article": "706",
+      "kind": "mobile",
+      "dir": "rtl",
+      "lang": "ur",
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "heading": "ARC کی توسیع، پتہ بدلنے کی اطلاع اور تائیوان واپسی"
+    }
+  ]
+}

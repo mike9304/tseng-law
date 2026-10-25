@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-26T00:50:03.080055+09:00",
+  "file": "src/content/columns-he/706-taiwan-arc-renewal-changes-reentry.md",
+  "before_sha256": "31299ddbd5d1c594ec5ac6198f7a5893013022b1ee86a156e0237e5bf598194a",
+  "after_sha256": "d405faa17ee7ce3fd11adaf843be8b0c7a9bb6ef474d33244b1e4ee945d2f802",
+  "old": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=34&pcode=D0080132",
+  "new": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+  "occurrences": 2,
+  "parsed_query_equal": true,
+  "all_other_text_unchanged": true,
+  "reverse_exact": true,
+  "reason": "Retain canonical approved source URL byte-for-byte; original HE URL query ordering was semantically equivalent, but strict source preservation check reported it. No checker change."
+}

@@ -1,0 +1,57 @@
+{
+  "review_status": "AI neutral contract; root independent review/install pending",
+  "provenance": "METHOD-BATCH05.md; tests/fixtures-batch05.json fixed before production edits",
+  "join_hyphens": false,
+  "canonical_abbreviations": true,
+  "flexible_abbreviation_spaces": true,
+  "length_unit": "orthographic_words",
+  "short_threshold": 8,
+  "long_threshold": 32,
+  "question_pattern": "[?？؟]\\s*[\"”’»›“)]*$",
+  "terminal_abbreviations": [
+    "jne",
+    "jms",
+    "jm"
+  ],
+  "register": "Standard Estonian; native abbreviations normally undotted",
+  "abbreviations": [
+    "dr",
+    "prof",
+    "hr",
+    "pr",
+    "nt",
+    "s.t",
+    "s. t",
+    "s.o",
+    "s. o",
+    "k.a",
+    "k. a",
+    "v.a",
+    "v. a",
+    "jne",
+    "jms",
+    "jm",
+    "nr",
+    "lk",
+    "lg",
+    "p",
+    "a"
+  ],
+  "context_terminal_abbreviations": {
+    "a": "\\d{4}\\s*$"
+  },
+  "dotted_ordinal_lowercase_continuation": true,
+  "dotted_ordinal_arabic_only": true,
+  "ordinal_pattern": "(?<!\\w)\\d{1,2}\\.(?=\\s+[IVX]+\\s+\\d{4})",
+  "additional_closing_quotes": "“",
+  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:Allikad|Ametlikud\\s+allikad|Kasutatud\\s+allikad)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
+  "contrast_patterns": [
+    "(?i:(?:^|(?<=[.!?\\n]))\\s*(?![^.!?\\n;]{0,220}(?:\\b(?:ainult|üksnes)\\b))[^.!?\\n;]{0,220}(?:\\b(?:ei\\s+ole|pole|mitte)\\b)[^.!?\\n;]{0,120}(?:\\bvaid\\b))"
+  ],
+  "caveat_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Siiski|Kuid|Sellest\\s+hoolimata)\\b)",
+  "hypo_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Oletame|Kujutame\\s+ette)\\b)",
+  "formula_close_pattern": "(?i:üldine\\s+teave|üldine\\s+info)",
+  "citation_pattern": "(?i:\\b(?:artik(?:kel|li|lis)|paragrahv(?:i|is)?|§)\\s*\\d+|\\d+\\.\\s*artik(?:kel|li|lis))",
+  "locale": "et",
+  "directory": "columns-et"
+}

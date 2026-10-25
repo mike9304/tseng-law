@@ -1,0 +1,86 @@
+{
+  "atUTC": "2026-10-25T14:42:00.223Z",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/704-taiwan-arc-first-application.md",
+      "sha256": "78fa3dd0df32d99d320f666734ba0f2934810e541a5e8c4461452c72c05c5517"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "73afefd437d7de469391d5895568bc9cbe6171ad5202cb1dca22bce76ccc3e32"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-my/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "468eab59315953585d659936cdde771c6323b8b05a7225818163dbcfa40fa02f"
+    }
+  ],
+  "sources": [
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/704-taiwan-arc-first-application.md",
+      "sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+      "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/704-taiwan-arc-first-application.md",
+      "sha256": "0c00bc06bf3c3c1860a95af4dbcea9eaab981300860916856295e8b947244468"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "290a50047632ad830ea98c524ffef6ed91c2b4c8d555a1844689824c3ffea7a3"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4d70e78b9a197f4a2b81d25d61b6fa862ee849a6392d5fd905e90bcf781e721c"
+    }
+  ],
+  "recent": [
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/812-myanmar-spouse-taiwanese-marriage-interview-registration-visa.md",
+      "date": "2026-10-24",
+      "prefix": 812,
+      "title": "ထိုင်ဝမ်နိုင်ငံသားနှင့် လက်ထပ်မည့် မြန်မာ: အင်တာဗျူးအစီအစဉ်",
+      "sha256": "4339f18e3d5a4773ff3e53d6f12854d46769217078055840be0e84db3497387b"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/811-myanmar-resident-taiwan-bank-account-lending-police-warning.md",
+      "date": "2026-10-24",
+      "prefix": 811,
+      "title": "ထိုင်ဝမ်တွင် ဘဏ်အကောင့်ငှားခြင်း: သတိပေးစာနှင့် ပြစ်မှုကြား မျဉ်း",
+      "sha256": "b8685f51f264240f8a100803be0a1ef85a0ec07e0b4f87f0b797222d87430900"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/810-myanmar-student-taiwan-part-time-work-permit-graduation.md",
+      "date": "2026-10-24",
+      "prefix": 810,
+      "title": "ထိုင်ဝမ်ရှိ မြန်မာကျောင်းသား၏ အချိန်ပိုင်းအလုပ်နှင့် ခွင့်ပြုချက်",
+      "sha256": "21d8d1f9d892ed415ece6b756fb0876efc5886c0c4ecb2a5ac23f20d03a2337d"
+    }
+  ],
+  "facts": {
+    "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/research/arc-source-facts.md",
+    "sha256": "4776f60010172120e0812d8d552123aeb5c7cc0b467cb5306ca031a1e17c2145"
+  },
+  "tool": {
+    "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/content-audit.mjs",
+    "sha256": "eea579eedf007e403209d59f2089b7f2d1e465c03294df9bad5f50c24b4a8b03"
+  }
+}

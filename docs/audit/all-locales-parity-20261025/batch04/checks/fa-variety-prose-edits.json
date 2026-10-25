@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-25T15:09:50.596784+00:00",
+  "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/704-taiwan-arc-first-application.md",
+  "beforeSHA256": "e9a4bb64e0b71c1ab0967d9390811fbdef00a6f8189ca74bdc9eac8647a5d0a3",
+  "afterSHA256": "19ff8e7f6ac668c9aba8de35e19209d6d1fc0162b5ffc74ed9818690e812491e",
+  "reason": "Actual shared42 first-check failure; NE fragmented medium-length conditions rewritten as connected conditional explanations; FA repetitive paragraph opener reordered without legal change. No punctuation-only edit, threshold or segmentation change.",
+  "edits": [
+    {
+      "before": "برای درخواست عمومی، زمان اعلامی رسیدگی ده روز کاری است؛",
+      "after": "زمان اعلامی رسیدگی به درخواست عمومی ده روز کاری است؛"
+    }
+  ],
+  "diff": "--- before/fa/704-taiwan-arc-first-application.md\n+++ after/fa/704-taiwan-arc-first-application.md\n@@ -65,7 +65,7 @@\n \n ## نقص مدارک و زمان رسیدگی\n \n-برای درخواست عمومی، زمان اعلامی رسیدگی ده روز کاری است؛ زمان بازگرداندن یا تکمیل مدارک و مصاحبه در آن حساب نمی‌شود. پس از تکمیل مدارک، دورهٔ رسیدگی دوباره محاسبه می‌شود. این زمان‌بندی وعدهٔ صدور کارت در روز معین نیست.\n+زمان اعلامی رسیدگی به درخواست عمومی ده روز کاری است؛ زمان بازگرداندن یا تکمیل مدارک و مصاحبه در آن حساب نمی‌شود. پس از تکمیل مدارک، دورهٔ رسیدگی دوباره محاسبه می‌شود. این زمان‌بندی وعدهٔ صدور کارت در روز معین نیست.\n \n متن چینیِ [راهنمای عمومی 0902](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/) مهلت تکمیل را 15 روز تقویمی از فردای ابلاغ می‌داند. اگر مدرک ناقص یا ناسازگار باید از خارج، سرزمین اصلی چین، هنگ‌کنگ یا ماکائو درخواست شود، مهلت تکمیل سه ماه است. سه ماه به آن پانزده روز اضافه نمی‌شود. تکمیل‌نکردن یا تکمیل ناقص در مهلت مقرر به رد درخواست می‌انجامد؛ خودِ حضور متقاضی در خارج، شرط استفاده از مهلت سه‌ماهه نیست.\n \n"
+}

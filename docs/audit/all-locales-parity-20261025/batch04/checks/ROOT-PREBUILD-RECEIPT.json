@@ -1,0 +1,63 @@
+{
+  "at": "2026-10-26T01:20:49.002215+09:00",
+  "status": "content ready for static build, not public deployment",
+  "new_articles": 21,
+  "locales": [
+    "he",
+    "bn",
+    "ur",
+    "fa",
+    "my",
+    "ta",
+    "ne"
+  ],
+  "structure_errors": 0,
+  "shared49_failures": 0,
+  "whole_unit_initial": {
+    "exit_code": 1,
+    "suites": 1449,
+    "suites_failed": 4,
+    "tests": 15849,
+    "passed": 15828,
+    "failed": 6,
+    "skipped": 14,
+    "todo": 1
+  },
+  "affected_tests_after_fixes": {
+    "suites": 28,
+    "passed": 820,
+    "failed": 0
+  },
+  "repository_variety_tests_passed": 66,
+  "runtime_code_changes": 0,
+  "evidence": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/checks/release26-manifest.json",
+      "sha256": "a2f28d027520d79de726c107f146ad8cd05e2ef8c36aaa6d1cc56debb5f2a27a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/checks/release26-content-audit.json",
+      "sha256": "bb30b8af7f70eff9e60b812b4e68c536774a9fab3322ee3cca3c80de49c64e32"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/checks/release26-variety49.json",
+      "sha256": "6dce18f19983331ea5c7fd46cc5ffef64991ca2b39aadd930935c4616415219c"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/checks/repository-tests-full-initial.log",
+      "sha256": "1a0074929b78e8994aeeff944d96936eb83b874679149745bcf6d5e5fd091a04"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/checks/repository-tests-targeted-release26.log",
+      "sha256": "6edba0c01d80e4f1b95c0401bbe91a44a477a1847b768691d89b9b22b88f9976"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/checks/repository-tests-helper-consumers.log",
+      "sha256": "b5c9d0b3cb45a38799132fc6620e53812ba118eb3ad3aa90ce4e8f7d28c9eefd"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/release26/checks/test-contract-maintenance-review.md",
+      "sha256": "aadcf0303ede0f04cba2570e79cbc163e791d49ccc7763f6ea99671f75cc85fc"
+    }
+  ]
+}

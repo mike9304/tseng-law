@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-26 00:27:40 KST",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/704-taiwan-arc-first-application.md",
+      "sha256": "aff6f713a8777c487cc8e93b4d94af6b4e7c31620e71f662e0121aad9b2d1d5e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "422be21102c3ca5026d12b27235efbb389d538b43f510eaa9067fe9e7de3eec3"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "9632066984317dde87330996651839e7dd2564ee13b9d507b581f6b3e2ddb685"
+    }
+  ],
+  "authorReportSHA256": "9972b3928112cd53d45d5502067cd90fb014d84edff299817b7775341c3cb245",
+  "independentR3SHA256": "6ac27c9c07a2ab49102e23a639b439986f6511815587437fcc3b99f0024ad141",
+  "status": "AUTHOR_AND_INDEPENDENT_MEANING_CLOSED_SHARED_FAIL_0_ROOT_INTEGRATION_PENDING"
+}

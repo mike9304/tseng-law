@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-26T00:48:38.168761+09:00",
+  "production_files_copied": 50,
+  "test_support_files_copied": 156,
+  "shared_installation_receipt_sha256": "c9340b9ced8aafd9c392a6aaebbad4f17a9cf558f68616db08747c4a542b7a39",
+  "local_full_evidence": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety",
+  "copy_verified": true,
+  "scope": "shared49 mirrored during B4 integration; new seven B5 profiles are independently prepared and already installed, B4 seven profiles unchanged; no application or threshold change"
+}

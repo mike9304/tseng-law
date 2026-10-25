@@ -1,0 +1,1177 @@
+{
+  "km": {
+    "sentences": [
+      [
+        "សៀវភៅនៅលើតុ។ ប៊ិចនៅក្នុងប្រអប់។",
+        [
+          "សៀវភៅនៅលើតុ។",
+          "ប៊ិចនៅក្នុងប្រអប់។"
+        ]
+      ],
+      [
+        "សិស្សអានសៀវភៅ៕ គ្រូបិទទ្វារ។",
+        [
+          "សិស្សអានសៀវភៅ៕",
+          "គ្រូបិទទ្វារ។"
+        ]
+      ],
+      [
+        "មានសម្ភារៈ៖ សៀវភៅ ប៊ិច និងក្រដាស។ ប្រអប់នៅលើតុ។",
+        [
+          "មានសម្ភារៈ៖ សៀវភៅ ប៊ិច និងក្រដាស។",
+          "ប្រអប់នៅលើតុ។"
+        ]
+      ],
+      [
+        "សៀវភៅថ្មីៗនៅលើតុ។ សិស្សចូលបន្ទប់។",
+        [
+          "សៀវភៅថ្មីៗនៅលើតុ។",
+          "សិស្សចូលបន្ទប់។"
+        ]
+      ],
+      [
+        "គ្រូមកនៅម៉ោង 9:30។ ការបង្រៀនចាប់ផ្តើម។",
+        [
+          "គ្រូមកនៅម៉ោង 9:30។",
+          "ការបង្រៀនចាប់ផ្តើម។"
+        ]
+      ],
+      [
+        "តម្លៃគឺ ៣,៥ ដុល្លារ។ សិស្សកត់ត្រា។",
+        [
+          "តម្លៃគឺ ៣,៥ ដុល្លារ។",
+          "សិស្សកត់ត្រា។"
+        ]
+      ],
+      [
+        "លេខគឺ 3.5។ តារាងនៅលើក្តារ។",
+        [
+          "លេខគឺ 3.5។",
+          "តារាងនៅលើក្តារ។"
+        ]
+      ],
+      [
+        "Dr. Smith អានសៀវភៅ។ គ្រូសរសេរលើក្តារ។",
+        [
+          "Dr. Smith អានសៀវភៅ។",
+          "គ្រូសរសេរលើក្តារ។"
+        ]
+      ],
+      [
+        "សៀវភៅ ប៊ិច ។ល។",
+        [
+          "សៀវភៅ ប៊ិច ។ល។"
+        ]
+      ],
+      [
+        "សៀវភៅ ប៊ិច ។ល។, ទាំងអស់នៅលើតុ។ ប្រអប់ទទេ។",
+        [
+          "សៀវភៅ ប៊ិច ។ល។, ទាំងអស់នៅលើតុ។",
+          "ប្រអប់ទទេ។"
+        ]
+      ],
+      [
+        "សៀវភៅ ប៊ិច ៘ នៅលើតុ។ ប្រអប់ទទេ។",
+        [
+          "សៀវភៅ ប៊ិច ៘ នៅលើតុ។",
+          "ប្រអប់ទទេ។"
+        ]
+      ],
+      [
+        "«សូមអានសៀវភៅ!» គាត់បាននិយាយ។ សិស្សបើកសៀវភៅ។",
+        [
+          "«សូមអានសៀវភៅ!» គាត់បាននិយាយ។",
+          "សិស្សបើកសៀវភៅ។"
+        ]
+      ],
+      [
+        "«សូមអានសៀវភៅ!» សិស្សបើកសៀវភៅ។",
+        [
+          "«សូមអានសៀវភៅ!»",
+          "សិស្សបើកសៀវភៅ។"
+        ]
+      ],
+      [
+        "សៀវភៅនៅលើតុ។ប៊ិចនៅក្នុងប្រអប់។",
+        [
+          "សៀវភៅនៅលើតុ។",
+          "ប៊ិចនៅក្នុងប្រអប់។"
+        ]
+      ]
+    ],
+    "words": [
+      [
+        "សៀវភៅ ខ្មៅ ១២",
+        [
+          "សៀវភៅ",
+          "ខ្មៅ",
+          "១២"
+        ]
+      ],
+      [
+        "សៀវភៅខ្មៅ",
+        [
+          "សៀវភៅ",
+          "ខ្មៅ"
+        ]
+      ],
+      [
+        "សៀវភៅ​ខ្មៅ",
+        [
+          "សៀវភៅ",
+          "ខ្មៅ"
+        ]
+      ],
+      [
+        "សៀវភៅប៊ិច ៣,៥ 9:30",
+        [
+          "សៀវភៅ",
+          "ប៊ិច",
+          "៣,៥",
+          "9",
+          "30"
+        ]
+      ],
+      [
+        "សៀវភៅៗ",
+        [
+          "សៀវភៅ",
+          "ៗ"
+        ]
+      ]
+    ],
+    "sources": [
+      "## ប្រភព",
+      "### ប្រភពផ្លូវការ:"
+    ],
+    "not_sources": [
+      "## ប្រភពនៃការយល់ច្រឡំ",
+      "ប្រភព"
+    ],
+    "contrast": [
+      [
+        "នេះមិនមែនជាប៊ិចទេ ប៉ុន្តែជាខ្មៅដៃ។",
+        1
+      ],
+      [
+        "នេះមិនមែនជាប៊ិចទេ។",
+        0
+      ],
+      [
+        "នេះមិនត្រឹមតែជាប៊ិចទេ ប៉ុន្តែជាឧបករណ៍គូរផងដែរ។",
+        0
+      ],
+      [
+        "នេះមិនមែនជាប៊ិចទេ។ ប៉ុន្តែមានសៀវភៅ។",
+        0
+      ]
+    ],
+    "caveat": "ទោះយ៉ាងណា ប្រអប់បើក។",
+    "hypothetical": "ឧបមាថា ប្រអប់មានពណ៌ក្រហម។",
+    "formula": "នេះជាព័ត៌មានទូទៅ។",
+    "citation": "អត្ថបទយោងមាត្រា 7។",
+    "url": [
+      "អាសយដ្ឋាន https://example.test/a?x=1។ប្រអប់បើក។",
+      [
+        "អាសយដ្ឋាន ។",
+        "ប្រអប់បើក។"
+      ]
+    ],
+    "unavailable": [
+      "សៀវភៅ ប៊ិច ។ល។ សិស្សអាន។",
+      "សៀវភៅ ។បេ។ នៅលើតុ។"
+    ]
+  },
+  "mn": {
+    "sentences": [
+      [
+        "Ном ширээн дээр байна. Хайрцаг нээлттэй байна.",
+        [
+          "Ном ширээн дээр байна.",
+          "Хайрцаг нээлттэй байна."
+        ]
+      ],
+      [
+        "Багш Д. Баттай уулзав. Хичээл эхлэв.",
+        [
+          "Багш Д. Баттай уулзав.",
+          "Хичээл эхлэв."
+        ]
+      ],
+      [
+        "Д.Бат ном уншив. Сурагч бичив.",
+        [
+          "Д.Бат ном уншив.",
+          "Сурагч бичив."
+        ]
+      ],
+      [
+        "Жишээ нь 3.5 гэсэн тоо байна. Дараа нь 7 гарна.",
+        [
+          "Жишээ нь 3.5 гэсэн тоо байна.",
+          "Дараа нь 7 гарна."
+        ]
+      ],
+      [
+        "Сургалт 9:30 цагт эхэлнэ. Хаалга нээгдэв.",
+        [
+          "Сургалт 9:30 цагт эхэлнэ.",
+          "Хаалга нээгдэв."
+        ]
+      ],
+      [
+        "Сурагч 2-р бүлгийг уншив. Дараагийн бүлэг урт.",
+        [
+          "Сурагч 2-р бүлгийг уншив.",
+          "Дараагийн бүлэг урт."
+        ]
+      ],
+      [
+        "Дүрмийн 7.2 дахь хэсгийг уншив. Дасгал эхэллээ.",
+        [
+          "Дүрмийн 7.2 дахь хэсгийг уншив.",
+          "Дасгал эхэллээ."
+        ]
+      ],
+      [
+        "«Номоо унш!» гэж багш хэлэв. Сурагч номоо нээв.",
+        [
+          "«Номоо унш!» гэж багш хэлэв.",
+          "Сурагч номоо нээв."
+        ]
+      ],
+      [
+        "«Номоо унш!» Сурагч номоо нээв.",
+        [
+          "«Номоо унш!»",
+          "Сурагч номоо нээв."
+        ]
+      ],
+      [
+        "Тооны хариу 12. Дараагийн бодлого урт.",
+        [
+          "Тооны хариу 12.",
+          "Дараагийн бодлого урт."
+        ]
+      ]
+    ],
+    "words": [
+      [
+        "Өрөө ном 3.5 2-р",
+        [
+          "Өрөө",
+          "ном",
+          "3.5",
+          "2",
+          "р"
+        ]
+      ],
+      [
+        "Багшийн үйл ажиллагаа",
+        [
+          "Багшийн",
+          "үйл",
+          "ажиллагаа"
+        ]
+      ]
+    ],
+    "sources": [
+      "## Эх сурвалж",
+      "### Албан ёсны эх сурвалжууд:"
+    ],
+    "not_sources": [
+      "## Эх сурвалжийг хэрхэн унших вэ",
+      "Эх сурвалж"
+    ],
+    "contrast": [
+      [
+        "Энэ нь ном биш, харин дэвтэр юм.",
+        1
+      ],
+      [
+        "Энэ нь ном биш.",
+        0
+      ],
+      [
+        "Энэ нь зөвхөн ном биш, харин зурагтай ном юм.",
+        0
+      ],
+      [
+        "Энэ нь ном биш. Харин өрөө нээлттэй.",
+        0
+      ]
+    ],
+    "caveat": "Гэсэн хэдий ч хайрцаг нээлттэй.",
+    "hypothetical": "Жишээ нь хайрцаг улаан байна.",
+    "formula": "Энэ бол ерөнхий мэдээлэл.",
+    "citation": "Тайлбар 7 дугаар зүйлд байна.",
+    "url": [
+      "Хаяг https://example.test/a?x=1. Хайрцаг нээлттэй.",
+      [
+        "Хаяг .",
+        "Хайрцаг нээлттэй."
+      ]
+    ]
+  },
+  "sr": {
+    "sentences": [
+      [
+        "Knjiga je na stolu. Kutija je otvorena.",
+        [
+          "Knjiga je na stolu.",
+          "Kutija je otvorena."
+        ]
+      ],
+      [
+        "Књига је на столу. Кутија је отворена.",
+        [
+          "Књига је на столу.",
+          "Кутија је отворена."
+        ]
+      ],
+      [
+        "Dr Marković čita knjigu. Učenik piše.",
+        [
+          "Dr Marković čita knjigu.",
+          "Učenik piše."
+        ]
+      ],
+      [
+        "Prof. J. Petrović dolazi. Čas počinje.",
+        [
+          "Prof. J. Petrović dolazi.",
+          "Čas počinje."
+        ]
+      ],
+      [
+        "Проф. Ј. Петровић долази. Час почиње.",
+        [
+          "Проф. Ј. Петровић долази.",
+          "Час почиње."
+        ]
+      ],
+      [
+        "Na 2. i 5. polici stoje knjige. Vrata su zatvorena.",
+        [
+          "Na 2. i 5. polici stoje knjige.",
+          "Vrata su zatvorena."
+        ]
+      ],
+      [
+        "У 2. и 5. реду су столице. Врата су затворена.",
+        [
+          "У 2. и 5. реду су столице.",
+          "Врата су затворена."
+        ]
+      ],
+      [
+        "Pravila iz člana 7 važe danas. Proverite str. 9.",
+        [
+          "Pravila iz člana 7 važe danas.",
+          "Proverite str. 9."
+        ]
+      ],
+      [
+        "Čitamo II poglavlje. Zatim sledi III poglavlje.",
+        [
+          "Čitamo II poglavlje.",
+          "Zatim sledi III poglavlje."
+        ]
+      ],
+      [
+        "Datum je 3. 6. 2019. i upisan je u svesku. Rukopis je jasan.",
+        [
+          "Datum je 3. 6. 2019. i upisan je u svesku.",
+          "Rukopis je jasan."
+        ]
+      ],
+      [
+        "Godina je 2019. Sutra nastavljamo.",
+        [
+          "Godina je 2019.",
+          "Sutra nastavljamo."
+        ]
+      ],
+      [
+        "Broj je 12. iPhone je na stolu.",
+        [
+          "Broj je 12.",
+          "iPhone je na stolu."
+        ]
+      ],
+      [
+        "Tu su knjige, sveske itd. Polica je puna.",
+        [
+          "Tu su knjige, sveske itd.",
+          "Polica je puna."
+        ]
+      ],
+      [
+        "Ту су књиге, свеске итд. Полица је пуна.",
+        [
+          "Ту су књиге, свеске итд.",
+          "Полица је пуна."
+        ]
+      ],
+      [
+        "„Čitaj!“, rekla je učiteljica. Učenik je otvorio knjigu.",
+        [
+          "„Čitaj!“, rekla je učiteljica.",
+          "Učenik je otvorio knjigu."
+        ]
+      ],
+      [
+        "„Čitaj!“ Učenik je otvorio knjigu.",
+        [
+          "„Čitaj!“",
+          "Učenik je otvorio knjigu."
+        ]
+      ]
+    ],
+    "words": [
+      [
+        "Četiri žute knjige 3,5",
+        [
+          "Četiri",
+          "žute",
+          "knjige",
+          "3,5"
+        ]
+      ],
+      [
+        "Четири жуте књиге 3,5",
+        [
+          "Четири",
+          "жуте",
+          "књиге",
+          "3,5"
+        ]
+      ],
+      [
+        "srpsko-engleski",
+        [
+          "srpsko",
+          "engleski"
+        ]
+      ]
+    ],
+    "sources": [
+      "## Izvori",
+      "### Zvanični izvori:",
+      "## Извори",
+      "## Званични извори"
+    ],
+    "not_sources": [
+      "## Izvori nesporazuma",
+      "Izvori",
+      "## Извори забуне"
+    ],
+    "contrast": [
+      [
+        "To nije knjiga, nego sveska.",
+        1
+      ],
+      [
+        "То није књига, већ свеска.",
+        1
+      ],
+      [
+        "To nije knjiga.",
+        0
+      ],
+      [
+        "To nije samo knjiga, nego i slika.",
+        0
+      ],
+      [
+        "То није само књига, већ и слика.",
+        0
+      ],
+      [
+        "To nije knjiga. Nego ovde počinje novo.",
+        0
+      ]
+    ],
+    "caveat": "Međutim, kutija je otvorena.",
+    "hypothetical": "Pretpostavimo da je kutija crvena.",
+    "formula": "Ovo su opšte informacije.",
+    "citation": "Pravilo je u članu 7.",
+    "url": [
+      "Adresa https://example.test/a?x=1. Kutija je otvorena.",
+      [
+        "Adresa .",
+        "Kutija je otvorena."
+      ]
+    ]
+  },
+  "sl": {
+    "sentences": [
+      [
+        "Knjiga je na mizi. Škatla je odprta.",
+        [
+          "Knjiga je na mizi.",
+          "Škatla je odprta."
+        ]
+      ],
+      [
+        "Dr. Novak bere knjigo. Učenec piše.",
+        [
+          "Dr. Novak bere knjigo.",
+          "Učenec piše."
+        ]
+      ],
+      [
+        "Na 2. in 5. polici so knjige. Vrata so zaprta.",
+        [
+          "Na 2. in 5. polici so knjige.",
+          "Vrata so zaprta."
+        ]
+      ],
+      [
+        "V II. in IV. poglavju so slike. Dodatek je kratek.",
+        [
+          "V II. in IV. poglavju so slike.",
+          "Dodatek je kratek."
+        ]
+      ],
+      [
+        "Bral je 2. popravljeno izdajo. Zgodba je kratka.",
+        [
+          "Bral je 2. popravljeno izdajo.",
+          "Zgodba je kratka."
+        ]
+      ],
+      [
+        "Prišli so 3. 6. 2019. leta. Zapis je jasen.",
+        [
+          "Prišli so 3. 6. 2019. leta.",
+          "Zapis je jasen."
+        ]
+      ],
+      [
+        "Prišli so 3. VI. 2019. Naslednji dan so odšli.",
+        [
+          "Prišli so 3. VI. 2019.",
+          "Naslednji dan so odšli."
+        ]
+      ],
+      [
+        "Rezultat je 12. Naslednja naloga je daljša.",
+        [
+          "Rezultat je 12.",
+          "Naslednja naloga je daljša."
+        ]
+      ],
+      [
+        "Rezultat je 12. iPhone je na mizi.",
+        [
+          "Rezultat je 12.",
+          "iPhone je na mizi."
+        ]
+      ],
+      [
+        "Na mizi so knjige, zvezki itd. Polica je prazna.",
+        [
+          "Na mizi so knjige, zvezki itd.",
+          "Polica je prazna."
+        ]
+      ],
+      [
+        "Podatek je na str. 9. Poglejte sliko.",
+        [
+          "Podatek je na str. 9.",
+          "Poglejte sliko."
+        ]
+      ],
+      [
+        "»Beri!« je rekla učiteljica. Učenec je odprl knjigo.",
+        [
+          "»Beri!« je rekla učiteljica.",
+          "Učenec je odprl knjigo."
+        ]
+      ],
+      [
+        "»Beri!« Učenec je odprl knjigo.",
+        [
+          "»Beri!«",
+          "Učenec je odprl knjigo."
+        ]
+      ]
+    ],
+    "words": [
+      [
+        "Črna škatla 3,5 e-pošta",
+        [
+          "Črna",
+          "škatla",
+          "3,5",
+          "e",
+          "pošta"
+        ]
+      ]
+    ],
+    "sources": [
+      "## Viri",
+      "### Uradni viri:"
+    ],
+    "not_sources": [
+      "## Viri nesporazumov",
+      "Viri"
+    ],
+    "contrast": [
+      [
+        "To ni knjiga, temveč zvezek.",
+        1
+      ],
+      [
+        "To ni knjiga.",
+        0
+      ],
+      [
+        "To ni samo knjiga, temveč tudi slika.",
+        0
+      ],
+      [
+        "To ni knjiga. Temveč tukaj začnemo.",
+        0
+      ]
+    ],
+    "caveat": "Vendar je škatla odprta.",
+    "hypothetical": "Predpostavimo, da je škatla rdeča.",
+    "formula": "To so splošne informacije.",
+    "citation": "Pravilo je v 7. členu.",
+    "url": [
+      "Naslov https://example.test/a?x=1. Škatla je odprta.",
+      [
+        "Naslov .",
+        "Škatla je odprta."
+      ]
+    ]
+  },
+  "lt": {
+    "sentences": [
+      [
+        "Vokas guli ant stalo. Dėžė atidaryta.",
+        [
+          "Vokas guli ant stalo.",
+          "Dėžė atidaryta."
+        ]
+      ],
+      [
+        "Kur pieštukas? Čia!",
+        [
+          "Kur pieštukas?",
+          "Čia!"
+        ]
+      ],
+      [
+        "Dr. Jonaitis skaito lapą. Prof. Žukienė uždaro dėžę.",
+        [
+          "Dr. Jonaitis skaito lapą.",
+          "Prof. Žukienė uždaro dėžę."
+        ]
+      ],
+      [
+        "Piešinys yra p. 7. Išgalvotoje etiketėje nurodytas str. 3.",
+        [
+          "Piešinys yra p. 7.",
+          "Išgalvotoje etiketėje nurodytas str. 3."
+        ]
+      ],
+      [
+        "Lape įrašyta 1 250,50 Eur. Parašo nėra.",
+        [
+          "Lape įrašyta 1 250,50 Eur.",
+          "Parašo nėra."
+        ]
+      ],
+      [
+        "Dėžėje yra lapų, pieštukų ir t. t. Žirklės guli šalia.",
+        [
+          "Dėžėje yra lapų, pieštukų ir t. t.",
+          "Žirklės guli šalia."
+        ]
+      ],
+      [
+        "Tai kopija, t. y. antras egzempliorius. Originalas lieka čia.",
+        [
+          "Tai kopija, t. y. antras egzempliorius.",
+          "Originalas lieka čia."
+        ]
+      ],
+      [
+        "Raštelis parašytas 2026 m. Popierius baltas.",
+        [
+          "Raštelis parašytas 2026 m.",
+          "Popierius baltas."
+        ]
+      ],
+      [
+        "Data yra 2026 m. spalio 5 d. Tekstas įskaitomas.",
+        [
+          "Data yra 2026 m. spalio 5 d.",
+          "Tekstas įskaitomas."
+        ]
+      ],
+      [
+        "„Kur lapas?“ paklausė Ona. Jonas parodė į stalą.",
+        [
+          "„Kur lapas?“ paklausė Ona.",
+          "Jonas parodė į stalą."
+        ]
+      ],
+      [
+        "„Kopija paruošta.“ Ona uždarė dėžę.",
+        [
+          "„Kopija paruošta.“",
+          "Ona uždarė dėžę."
+        ]
+      ],
+      [
+        "Vokas guli ant stalo. Dėžė atidaryta.",
+        [
+          "Vokas guli ant stalo.",
+          "Dėžė atidaryta."
+        ]
+      ],
+      [
+        "Pamoka prasideda 9 val. Mokytoja atidaro duris.",
+        [
+          "Pamoka prasideda 9 val.",
+          "Mokytoja atidaro duris."
+        ]
+      ],
+      [
+        "Žr. str. 7. Mokytoja skaito.",
+        [
+          "Žr. str. 7.",
+          "Mokytoja skaito."
+        ]
+      ],
+      [
+        "Nuoroda į 7 str. Mokytoja skaito.",
+        [
+          "Nuoroda į 7 str.",
+          "Mokytoja skaito."
+        ]
+      ]
+    ],
+    "words": [
+      [
+        "Žalias vokas guli čia.",
+        [
+          "Žalias",
+          "vokas",
+          "guli",
+          "čia"
+        ]
+      ],
+      [
+        "Lietuvos–Taivano tekstas; 3-5 lapai.",
+        [
+          "Lietuvos",
+          "Taivano",
+          "tekstas",
+          "3",
+          "5",
+          "lapai"
+        ]
+      ],
+      [
+        "1 250,50 Eur; 25%.",
+        [
+          "1",
+          "250,50",
+          "Eur",
+          "25"
+        ]
+      ],
+      [
+        "O’Neill skaito PDF.",
+        [
+          "O’Neill",
+          "skaito",
+          "PDF"
+        ]
+      ],
+      [
+        "Str. 3, p. 7, A4.",
+        [
+          "Str",
+          "3",
+          "p",
+          "7",
+          "A4"
+        ]
+      ],
+      [
+        "Ąžuolas, ėriukas ir ūdra.",
+        [
+          "Ąžuolas",
+          "ėriukas",
+          "ir",
+          "ūdra"
+        ]
+      ],
+      [
+        "Žalias vokas guli čia.",
+        [
+          "Žalias",
+          "vokas",
+          "guli",
+          "čia"
+        ]
+      ]
+    ],
+    "sources": [
+      "## Šaltiniai",
+      "### Oficialūs šaltiniai:",
+      "## 7. Naudoti šaltiniai",
+      "## INFORMACIJOS ŠALTINIAI ##"
+    ],
+    "not_sources": [
+      "## Finansavimo šaltiniai",
+      "## Reikalavimo teisinis pagrindas",
+      "Šaltiniai",
+      "## Šaltiniai ir analizė"
+    ],
+    "contrast": [
+      [
+        "Tai ne vokas, o dėžė.",
+        1
+      ],
+      [
+        "Čia yra ne tik popierius, bet ir pieštukas.",
+        0
+      ],
+      [
+        "Jis atnešė dėžę vietoj voko.",
+        1
+      ],
+      [
+        "Vokas guli ant stalo.",
+        0
+      ],
+      [
+        "Tai nėra knyga.",
+        0
+      ],
+      [
+        "Tai ne knyga. O čia prasideda naujas sakinys.",
+        0
+      ]
+    ],
+    "caveat": "Tačiau dėžė atvira.",
+    "hypothetical": "Tarkime, dėžė raudona.",
+    "formula": "Tai bendro pobūdžio informacija.",
+    "citation": "Taisyklė nurodyta 7 straipsnyje.",
+    "url": [
+      "Adresas https://example.test/a?x=1. Dėžė atvira.",
+      [
+        "Adresas .",
+        "Dėžė atvira."
+      ]
+    ]
+  },
+  "lv": {
+    "sentences": [
+      [
+        "Grāmata ir uz galda. Kaste ir atvērta.",
+        [
+          "Grāmata ir uz galda.",
+          "Kaste ir atvērta."
+        ]
+      ],
+      [
+        "Dr. Kalniņš lasa grāmatu. Skolēns raksta.",
+        [
+          "Dr. Kalniņš lasa grāmatu.",
+          "Skolēns raksta."
+        ]
+      ],
+      [
+        "2. un 5. plauktā ir grāmatas. Durvis ir aizvērtas.",
+        [
+          "2. un 5. plauktā ir grāmatas.",
+          "Durvis ir aizvērtas."
+        ]
+      ],
+      [
+        "Skolēns lasa II nodaļu. III nodaļa ir īsa.",
+        [
+          "Skolēns lasa II nodaļu.",
+          "III nodaļa ir īsa."
+        ]
+      ],
+      [
+        "Datums ir 3. jūnijs. Nākamā diena ir brīva.",
+        [
+          "Datums ir 3. jūnijs.",
+          "Nākamā diena ir brīva."
+        ]
+      ],
+      [
+        "Sanāksme ir 03.06.2019. plkst. 9.30. Durvis ir atvērtas.",
+        [
+          "Sanāksme ir 03.06.2019. plkst. 9.30.",
+          "Durvis ir atvērtas."
+        ]
+      ],
+      [
+        "Rezultāts ir 12. Nākamais uzdevums ir garš.",
+        [
+          "Rezultāts ir 12.",
+          "Nākamais uzdevums ir garš."
+        ]
+      ],
+      [
+        "Rezultāts ir 12. iPhone ir uz galda.",
+        [
+          "Rezultāts ir 12.",
+          "iPhone ir uz galda."
+        ]
+      ],
+      [
+        "Tur ir grāmatas, burtnīcas u. c. Plaukts ir pilns.",
+        [
+          "Tur ir grāmatas, burtnīcas u. c.",
+          "Plaukts ir pilns."
+        ]
+      ],
+      [
+        "Tur ir grāmatas utt. Plaukts ir pilns.",
+        [
+          "Tur ir grāmatas utt.",
+          "Plaukts ir pilns."
+        ]
+      ],
+      [
+        "Teksts ir 9. lpp. Attēls ir nākamajā lapā.",
+        [
+          "Teksts ir 9. lpp.",
+          "Attēls ir nākamajā lapā."
+        ]
+      ],
+      [
+        "Skatiet lpp. 9. Tur ir attēls.",
+        [
+          "Skatiet lpp. 9.",
+          "Tur ir attēls."
+        ]
+      ],
+      [
+        "„Lasi!” sacīja skolotāja. Skolēns atvēra grāmatu.",
+        [
+          "„Lasi!” sacīja skolotāja.",
+          "Skolēns atvēra grāmatu."
+        ]
+      ],
+      [
+        "„Lasi!” Skolēns atvēra grāmatu.",
+        [
+          "„Lasi!”",
+          "Skolēns atvēra grāmatu."
+        ]
+      ]
+    ],
+    "words": [
+      [
+        "Četras zaļas grāmatas 3,5",
+        [
+          "Četras",
+          "zaļas",
+          "grāmatas",
+          "3,5"
+        ]
+      ],
+      [
+        "e-pasts",
+        [
+          "e",
+          "pasts"
+        ]
+      ]
+    ],
+    "sources": [
+      "## Avoti",
+      "### Oficiālie avoti:"
+    ],
+    "not_sources": [
+      "## Avoti un to nozīme",
+      "Avoti"
+    ],
+    "contrast": [
+      [
+        "Tā nav grāmata, bet burtnīca.",
+        1
+      ],
+      [
+        "Tā nav grāmata.",
+        0
+      ],
+      [
+        "Tā nav tikai grāmata, bet arī attēls.",
+        0
+      ],
+      [
+        "Tā nav grāmata. Bet šeit ir galds.",
+        0
+      ]
+    ],
+    "caveat": "Tomēr kaste ir atvērta.",
+    "hypothetical": "Pieņemsim, ka kaste ir sarkana.",
+    "formula": "Tā ir vispārīga informācija.",
+    "citation": "Noteikums ir 7. pantā.",
+    "url": [
+      "Adrese https://example.test/a?x=1. Kaste ir atvērta.",
+      [
+        "Adrese .",
+        "Kaste ir atvērta."
+      ]
+    ]
+  },
+  "et": {
+    "sentences": [
+      [
+        "Raamat on laual. Kast on lahti.",
+        [
+          "Raamat on laual.",
+          "Kast on lahti."
+        ]
+      ],
+      [
+        "Dr Tamm loeb raamatut. Õpilane kirjutab.",
+        [
+          "Dr Tamm loeb raamatut.",
+          "Õpilane kirjutab."
+        ]
+      ],
+      [
+        "2. ja 5. riiulil on raamatud. Uks on kinni.",
+        [
+          "2. ja 5. riiulil on raamatud.",
+          "Uks on kinni."
+        ]
+      ],
+      [
+        "II peatükk on lühike. III peatükk on pikem.",
+        [
+          "II peatükk on lühike.",
+          "III peatükk on pikem."
+        ]
+      ],
+      [
+        "Koosolek on 3. juunil. Järgmine päev on vaba.",
+        [
+          "Koosolek on 3. juunil.",
+          "Järgmine päev on vaba."
+        ]
+      ],
+      [
+        "Koosolek on 3. VI 2019. Järgmisel päeval on kool kinni.",
+        [
+          "Koosolek on 3. VI 2019.",
+          "Järgmisel päeval on kool kinni."
+        ]
+      ],
+      [
+        "Kuupäev on 03.06.2019. Kirje on selge.",
+        [
+          "Kuupäev on 03.06.2019.",
+          "Kirje on selge."
+        ]
+      ],
+      [
+        "Tulemus on 12. Järgmine ülesanne on pikem.",
+        [
+          "Tulemus on 12.",
+          "Järgmine ülesanne on pikem."
+        ]
+      ],
+      [
+        "Tulemus on 12. iPhone on laual.",
+        [
+          "Tulemus on 12.",
+          "iPhone on laual."
+        ]
+      ],
+      [
+        "Laual on raamatud, vihikud jne. Riiul on täis.",
+        [
+          "Laual on raamatud, vihikud jne.",
+          "Riiul on täis."
+        ]
+      ],
+      [
+        "Kehtib erand, s.t. teine reegel. Loe lk 9.",
+        [
+          "Kehtib erand, s.t. teine reegel.",
+          "Loe lk 9."
+        ]
+      ],
+      [
+        "„Loe!” ütles õpetaja. Õpilane avas raamatu.",
+        [
+          "„Loe!” ütles õpetaja.",
+          "Õpilane avas raamatu."
+        ]
+      ],
+      [
+        "„Loe!” Õpilane avas raamatu.",
+        [
+          "„Loe!”",
+          "Õpilane avas raamatu."
+        ]
+      ]
+    ],
+    "words": [
+      [
+        "Õpilane loeb 3,5 e-kirja",
+        [
+          "Õpilane",
+          "loeb",
+          "3,5",
+          "e",
+          "kirja"
+        ]
+      ]
+    ],
+    "sources": [
+      "## Allikad",
+      "### Ametlikud allikad:"
+    ],
+    "not_sources": [
+      "## Allikate kasutamine",
+      "Allikad"
+    ],
+    "contrast": [
+      [
+        "See ei ole raamat, vaid vihik.",
+        1
+      ],
+      [
+        "See ei ole raamat.",
+        0
+      ],
+      [
+        "See ei ole ainult raamat, vaid ka pilt.",
+        0
+      ],
+      [
+        "See ei ole raamat. Vaid siin algab uus lause.",
+        0
+      ]
+    ],
+    "caveat": "Siiski on kast lahti.",
+    "hypothetical": "Oletame, et kast on punane.",
+    "formula": "See on üldine teave.",
+    "citation": "Reegel on artiklis 7.",
+    "url": [
+      "Aadress https://example.test/a?x=1. Kast on lahti.",
+      [
+        "Aadress .",
+        "Kast on lahti."
+      ]
+    ]
+  }
+}

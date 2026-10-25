@@ -1,0 +1,26 @@
+{
+  "createdAt": "2026-10-25T14:29:18.697805+00:00",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/704-taiwan-arc-first-application.md",
+      "sha256": "75b446ec78f95c2f0dec08ba6eb8e8bf5a2d5c593f827d696f878a0c721d3d5e",
+      "bytes": 23761,
+      "body_whitespace_tokens": 1000,
+      "faq_count": 3
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "ae1837231126ca3db23a9b2cd88ebc3631f18cdbe5e96127545f3c9417377438",
+      "bytes": 25866,
+      "body_whitespace_tokens": 1036,
+      "faq_count": 3
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-bn/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1ba39d3a8ce71efd72790595bd2cfe4708de257baff69ddd25edea95d058361f",
+      "bytes": 29964,
+      "body_whitespace_tokens": 1289,
+      "faq_count": 3
+    }
+  ]
+}

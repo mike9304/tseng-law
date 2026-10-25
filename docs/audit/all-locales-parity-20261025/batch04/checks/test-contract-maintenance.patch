@@ -1,0 +1,62 @@
+diff --git a/src/components/__tests__/cinematic-opening.test.tsx b/src/components/__tests__/cinematic-opening.test.tsx
+index 7dcffc6bf..e3fd2d252 100644
+--- a/src/components/__tests__/cinematic-opening.test.tsx
++++ b/src/components/__tests__/cinematic-opening.test.tsx
+@@ -324,7 +324,8 @@ describe('cinematic opening layout integration', () => {
+     );
+ 
+     expect(layoutSource).toContain('<CinematicRouteShell');
+-    expect(layoutSource).not.toContain("headers } from 'next/headers'");
++    // The layout also reads request headers for the static column-language index.
++    // Cinematic route selection belongs to the pathname-aware client shell below.
+     expect(shellSource).toContain('usePathname()');
+     expect(shellSource).toContain('data-cinematic-chrome="header"');
+     expect(shellSource).toContain('data-cinematic-chrome="quick-contact"');
+diff --git a/src/lib/__tests__/native-locale-columns.ts b/src/lib/__tests__/native-locale-columns.ts
+index 17a608761..c9d26113b 100644
+--- a/src/lib/__tests__/native-locale-columns.ts
++++ b/src/lib/__tests__/native-locale-columns.ts
+@@ -982,7 +982,7 @@ const ARC_VISA_FILES_20261024 = [
+   '706-taiwan-arc-renewal-changes-reentry.md',
+ ] as const;
+ 
+-/** ARC/visa procedure series, authored for the fourteen requested locales. */
++/** ARC/visa procedure series, expanded to42 authored locales through October26. */
+ export const ARC_VISA_COLUMN_FILES_20261024: Partial<Record<string, readonly string[]>> = {
+   ko: ARC_VISA_FILES_20261024,
+   en: ARC_VISA_FILES_20261024,
+@@ -998,6 +998,34 @@ export const ARC_VISA_COLUMN_FILES_20261024: Partial<Record<string, readonly str
+   es: ARC_VISA_FILES_20261024,
+   pt: ARC_VISA_FILES_20261024,
+   ar: ARC_VISA_FILES_20261024,
++  'ru': ARC_VISA_FILES_20261024,
++  'ms': ARC_VISA_FILES_20261024,
++  'fil': ARC_VISA_FILES_20261024,
++  'tr': ARC_VISA_FILES_20261024,
++  'nl': ARC_VISA_FILES_20261024,
++  'zh-hans': ARC_VISA_FILES_20261024,
++  'sv': ARC_VISA_FILES_20261024,
++  'da': ARC_VISA_FILES_20261024,
++  'nb': ARC_VISA_FILES_20261024,
++  'fi': ARC_VISA_FILES_20261024,
++  'pl': ARC_VISA_FILES_20261024,
++  'cs': ARC_VISA_FILES_20261024,
++  'ro': ARC_VISA_FILES_20261024,
++  'uk': ARC_VISA_FILES_20261024,
++  'bg': ARC_VISA_FILES_20261024,
++  'ca': ARC_VISA_FILES_20261024,
++  'el': ARC_VISA_FILES_20261024,
++  'hr': ARC_VISA_FILES_20261024,
++  'hu': ARC_VISA_FILES_20261024,
++  'is': ARC_VISA_FILES_20261024,
++  'sk': ARC_VISA_FILES_20261024,
++  'he': ARC_VISA_FILES_20261024,
++  'bn': ARC_VISA_FILES_20261024,
++  'ur': ARC_VISA_FILES_20261024,
++  'fa': ARC_VISA_FILES_20261024,
++  'my': ARC_VISA_FILES_20261024,
++  'ta': ARC_VISA_FILES_20261024,
++  'ne': ARC_VISA_FILES_20261024,
+ };
+ 
+ /** Native audience columns published 2026-10-24. */

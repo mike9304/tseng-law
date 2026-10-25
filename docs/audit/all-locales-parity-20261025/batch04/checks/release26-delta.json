@@ -1,0 +1,532 @@
+{
+  "at": "2026-10-26T00:47:47.320255+09:00",
+  "scope": "21 first-publication metadata dates only; full body, FAQ, remaining metadata, sources and prior review content unchanged",
+  "source_verification_dates": "2026-10-24 and 2026-10-25 retained; no new refresh claimed",
+  "rows": [
+    {
+      "locale": "bn",
+      "file": "src/content/columns-bn/704-taiwan-arc-first-application.md",
+      "before_sha256": "aff6f713a8777c487cc8e93b4d94af6b4e7c31620e71f662e0121aad9b2d1d5e",
+      "after_sha256": "3bb9fb746cfd2d8bed5e2ef160ecdecf81a959d1d2b55464604a708d8e0782c5",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/bn-independent-r3.md",
+      "review_sha256": "6ac27c9c07a2ab49102e23a639b439986f6511815587437fcc3b99f0024ad141",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-bn/704-taiwan-arc-first-application.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 অক্টোবর 2026\"",
+          "new": "date_display: \"26 অক্টোবর 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "bn",
+      "file": "src/content/columns-bn/705-taiwan-visa-residence-work-study-family.md",
+      "before_sha256": "422be21102c3ca5026d12b27235efbb389d538b43f510eaa9067fe9e7de3eec3",
+      "after_sha256": "a97cacf663e16351a351cdce9fb7d4013ebf2b98ceb16ca559f4ac3ad9d4d2cd",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/bn-independent-r3.md",
+      "review_sha256": "6ac27c9c07a2ab49102e23a639b439986f6511815587437fcc3b99f0024ad141",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-bn/705-taiwan-visa-residence-work-study-family.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 অক্টোবর 2026\"",
+          "new": "date_display: \"26 অক্টোবর 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "bn",
+      "file": "src/content/columns-bn/706-taiwan-arc-renewal-changes-reentry.md",
+      "before_sha256": "9632066984317dde87330996651839e7dd2564ee13b9d507b581f6b3e2ddb685",
+      "after_sha256": "4250564b6c98cbcf7a1ae3778b13c817f416c8991cf5ad3fbbb3dfebbfd0e6dc",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/bn-independent-r3.md",
+      "review_sha256": "6ac27c9c07a2ab49102e23a639b439986f6511815587437fcc3b99f0024ad141",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-bn/706-taiwan-arc-renewal-changes-reentry.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 অক্টোবর 2026\"",
+          "new": "date_display: \"26 অক্টোবর 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "fa",
+      "file": "src/content/columns-fa/704-taiwan-arc-first-application.md",
+      "before_sha256": "19ff8e7f6ac668c9aba8de35e19209d6d1fc0162b5ffc74ed9818690e812491e",
+      "after_sha256": "fe975485d8a8fed7bd467c42860c4d29ad575a2d2a981ce3d3fc7e63113509a3",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/fa-independent.md",
+      "review_sha256": "3e7fec464e2316e47ffb94b45480e2bcbc8579774f11b025c6ebfb7d91f6759b",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-fa/704-taiwan-arc-first-application.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 اکتبر 2026\"",
+          "new": "date_display: \"26 اکتبر 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "fa",
+      "file": "src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md",
+      "before_sha256": "5d391fbbdfd0abfab8dbd2a1a076c04fb8a7d737ee3fa9c544711c23f24507f7",
+      "after_sha256": "1c96fab7471e92a166705ec25385ef99980df2237fcc676d294c24efc4c424ab",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/fa-independent.md",
+      "review_sha256": "3e7fec464e2316e47ffb94b45480e2bcbc8579774f11b025c6ebfb7d91f6759b",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-fa/705-taiwan-visa-residence-work-study-family.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 اکتبر 2026\"",
+          "new": "date_display: \"26 اکتبر 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "fa",
+      "file": "src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+      "before_sha256": "4e23c5162d245a912bc6147ae3f50e05a1b066729e50631168b1968698797e21",
+      "after_sha256": "d5e9636efd65707cd86b0e0c24aa700e2d0b1948d6749302e96cd5d81dc9fa77",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/fa-independent.md",
+      "review_sha256": "3e7fec464e2316e47ffb94b45480e2bcbc8579774f11b025c6ebfb7d91f6759b",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 اکتبر 2026\"",
+          "new": "date_display: \"26 اکتبر 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "he",
+      "file": "src/content/columns-he/704-taiwan-arc-first-application.md",
+      "before_sha256": "eb401cf43480269123d91795de21fd48de22e353aac438b1755ceddfd175220f",
+      "after_sha256": "053b4e004dab8579821b95552b731804a6feab7d317c77b1c5a55611c40e16fe",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/he-independent.md",
+      "review_sha256": "fc2e63869edbd1fc993edd507b254719439c59d8cac2a9450558b72b5147b7d8",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-he/704-taiwan-arc-first-application.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 באוקטובר 2026\"",
+          "new": "date_display: \"26 באוקטובר 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "he",
+      "file": "src/content/columns-he/705-taiwan-visa-residence-work-study-family.md",
+      "before_sha256": "7010616bdd946044f7791e17987ddef10ca5c95b093f42004e7ed4febbf5455c",
+      "after_sha256": "2a9e5b3a802d105b582fd1a579d0a3b8fa8f1b825954c4c56cbfdfe263c08caf",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/he-independent.md",
+      "review_sha256": "fc2e63869edbd1fc993edd507b254719439c59d8cac2a9450558b72b5147b7d8",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-he/705-taiwan-visa-residence-work-study-family.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 באוקטובר 2026\"",
+          "new": "date_display: \"26 באוקטובר 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "he",
+      "file": "src/content/columns-he/706-taiwan-arc-renewal-changes-reentry.md",
+      "before_sha256": "c1430580439966e7c85e23d110e1f152c09db2752d6b0276cab2581843dddea7",
+      "after_sha256": "31299ddbd5d1c594ec5ac6198f7a5893013022b1ee86a156e0237e5bf598194a",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/he-independent.md",
+      "review_sha256": "fc2e63869edbd1fc993edd507b254719439c59d8cac2a9450558b72b5147b7d8",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-he/706-taiwan-arc-renewal-changes-reentry.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 באוקטובר 2026\"",
+          "new": "date_display: \"26 באוקטובר 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "my",
+      "file": "src/content/columns-my/704-taiwan-arc-first-application.md",
+      "before_sha256": "c51dafda1a55c98227987ffd49ac7d07e97bf8af72a5aacbc58e4b447e31af13",
+      "after_sha256": "5dc05c7e2d82c50be381d779bf6c4273e216e4e1564f485ffff7ae2f6131c579",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/my-independent.md",
+      "review_sha256": "7eb4abba708d99b5c90b61026bb47a863b692d11fb4f6537ab2af25383d56e56",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-my/704-taiwan-arc-first-application.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"2026 ခုနှစ် အောက်တိုဘာ 25 ရက်\"",
+          "new": "date_display: \"2026 ခုနှစ် အောက်တိုဘာ 26 ရက်\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "my",
+      "file": "src/content/columns-my/705-taiwan-visa-residence-work-study-family.md",
+      "before_sha256": "84ff6f5265a571d1ff25ae627d8c816c397b3ada9057082f28d30b64b21b09be",
+      "after_sha256": "567f73364f69d7c2a1b9fba5f92c612a0cb71d952b2454870fdc8f46a0afb6ec",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/my-independent.md",
+      "review_sha256": "7eb4abba708d99b5c90b61026bb47a863b692d11fb4f6537ab2af25383d56e56",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-my/705-taiwan-visa-residence-work-study-family.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"2026 ခုနှစ် အောက်တိုဘာ 25 ရက်\"",
+          "new": "date_display: \"2026 ခုနှစ် အောက်တိုဘာ 26 ရက်\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "my",
+      "file": "src/content/columns-my/706-taiwan-arc-renewal-changes-reentry.md",
+      "before_sha256": "91308d203bfb716ee574c3e16c1b1da27e1a6b3ae6113671a036155ed931888a",
+      "after_sha256": "62197d327d34f575c00853a07609d9aa6b42b6419decb066bc38545e83f40fb4",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/my-independent.md",
+      "review_sha256": "7eb4abba708d99b5c90b61026bb47a863b692d11fb4f6537ab2af25383d56e56",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-my/706-taiwan-arc-renewal-changes-reentry.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"2026 ခုနှစ် အောက်တိုဘာ 25 ရက်\"",
+          "new": "date_display: \"2026 ခုနှစ် အောက်တိုဘာ 26 ရက်\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "ne",
+      "file": "src/content/columns-ne/704-taiwan-arc-first-application.md",
+      "before_sha256": "21b4819e26d6390871a01e085f3785a102e811feaef93b2f41a7f51a67e18781",
+      "after_sha256": "c54085fe51c726aba838c6f4c16935daa1df73a5a80e834ac5a6ed8c077bdfce",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/ne-independent.md",
+      "review_sha256": "c994970ab1f90ceb599c2220588971cdba9f0b02796df0dabcbbf055af9cea60",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-ne/704-taiwan-arc-first-application.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 अक्टोबर 2026\"",
+          "new": "date_display: \"26 अक्टोबर 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "ne",
+      "file": "src/content/columns-ne/705-taiwan-visa-residence-work-study-family.md",
+      "before_sha256": "468bd0d9c56cc8b139a035cb5b8b5259d9aca88b005c82ecaf090955c509427b",
+      "after_sha256": "6910f76946692f0d808e29ccbacd31617e0608e533382697d710c511ddf46b84",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/ne-independent.md",
+      "review_sha256": "c994970ab1f90ceb599c2220588971cdba9f0b02796df0dabcbbf055af9cea60",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-ne/705-taiwan-visa-residence-work-study-family.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 अक्टोबर 2026\"",
+          "new": "date_display: \"26 अक्टोबर 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "ne",
+      "file": "src/content/columns-ne/706-taiwan-arc-renewal-changes-reentry.md",
+      "before_sha256": "6c53bca6c629daaa8f962de00f75a44d9299e2101384b743572dad237bbd79d5",
+      "after_sha256": "baba14a7e65ff20941900607496fa4bf3e447ade70915cb1bc289bfa81f2f2ce",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/ne-independent.md",
+      "review_sha256": "c994970ab1f90ceb599c2220588971cdba9f0b02796df0dabcbbf055af9cea60",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-ne/706-taiwan-arc-renewal-changes-reentry.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 अक्टोबर 2026\"",
+          "new": "date_display: \"26 अक्टोबर 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "ta",
+      "file": "src/content/columns-ta/704-taiwan-arc-first-application.md",
+      "before_sha256": "a5ae34b980cf3098eafe1bf608fe3d19778fb6a398dbb844c9262b8004f2bb16",
+      "after_sha256": "43281f25b19a64781a4780aaea55de66faf9188507141e04566e20ef064a51c9",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/ta-independent.md",
+      "review_sha256": "5a305850c1837d384210ddc94e57fa4830d9d6c27bec37958fd222cf18d2cc22",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-ta/704-taiwan-arc-first-application.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 அக்டோபர் 2026\"",
+          "new": "date_display: \"26 அக்டோபர் 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "ta",
+      "file": "src/content/columns-ta/705-taiwan-visa-residence-work-study-family.md",
+      "before_sha256": "1ad9acf0fabab8205e1373bf0b61b07a14340b937b337bee964bdb1ff2bcb7da",
+      "after_sha256": "ee53660f0cab0a61b271d739f9f9b2d8b0a2f9d95601d2987a78c4b67c8f5758",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/ta-independent.md",
+      "review_sha256": "5a305850c1837d384210ddc94e57fa4830d9d6c27bec37958fd222cf18d2cc22",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-ta/705-taiwan-visa-residence-work-study-family.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 அக்டோபர் 2026\"",
+          "new": "date_display: \"26 அக்டோபர் 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "ta",
+      "file": "src/content/columns-ta/706-taiwan-arc-renewal-changes-reentry.md",
+      "before_sha256": "a1d3c5176ade7ed841cd5aeee4e588352adf5566d8e90501ebbbe3af02b1e3a2",
+      "after_sha256": "e56fb228bfbba836b2ad8e50879b4ca14c46ea6453feb6405dbe069983c4fe33",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/ta-independent.md",
+      "review_sha256": "5a305850c1837d384210ddc94e57fa4830d9d6c27bec37958fd222cf18d2cc22",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-ta/706-taiwan-arc-renewal-changes-reentry.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 அக்டோபர் 2026\"",
+          "new": "date_display: \"26 அக்டோபர் 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "ur",
+      "file": "src/content/columns-ur/704-taiwan-arc-first-application.md",
+      "before_sha256": "15dff7bda161ff794256f51c006331a5963ba6a1197f26e37712ce5f602de8a9",
+      "after_sha256": "6e92ef71f4728e0194d91c50fb4caa2e2abd191b2bed781deb73453854a5d8e3",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/ur-independent.md",
+      "review_sha256": "b99f156ff40357b559f735881cc806cad0cb5048f79efea92beb87395c41a453",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-ur/704-taiwan-arc-first-application.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 اکتوبر 2026\"",
+          "new": "date_display: \"26 اکتوبر 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "ur",
+      "file": "src/content/columns-ur/705-taiwan-visa-residence-work-study-family.md",
+      "before_sha256": "e07a6b499b2e0fd53cfc38234eb9e1f20fa3f9566ef2b102ffad32433e56c58e",
+      "after_sha256": "02a1b2eb83419a9864cfd86cf1ced163ac619cd25922c27e73f978de3b82857c",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/ur-independent.md",
+      "review_sha256": "b99f156ff40357b559f735881cc806cad0cb5048f79efea92beb87395c41a453",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-ur/705-taiwan-visa-residence-work-study-family.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 اکتوبر 2026\"",
+          "new": "date_display: \"26 اکتوبر 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    },
+    {
+      "locale": "ur",
+      "file": "src/content/columns-ur/706-taiwan-arc-renewal-changes-reentry.md",
+      "before_sha256": "8ae69f8dc40663efcaa078d8d88484b4af4517f9ac83deaae189ddca182bbb02",
+      "after_sha256": "51899903b1df3c9dd1a2b94b5e8cbf97cbdc7189e9db35a6624318ab5feb599a",
+      "review_file": "/Users/son7/tseng-all-language-columns-20261025/batch04/reviews/ur-independent.md",
+      "review_sha256": "b99f156ff40357b559f735881cc806cad0cb5048f79efea92beb87395c41a453",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch04/pre-release26/columns-ur/706-taiwan-arc-renewal-changes-reentry.md",
+      "changes": [
+        {
+          "old": "published: \"2026-10-25\"",
+          "new": "published: \"2026-10-26\""
+        },
+        {
+          "old": "lastmod: \"2026-10-25\"",
+          "new": "lastmod: \"2026-10-26\""
+        },
+        {
+          "old": "date_display: \"25 اکتوبر 2026\"",
+          "new": "date_display: \"26 اکتوبر 2026\""
+        }
+      ],
+      "body_unchanged": true,
+      "exact_reverse_verified": true
+    }
+  ]
+}

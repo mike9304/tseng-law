@@ -1,0 +1,75 @@
+{
+  "author": "primary Codex /root",
+  "date": "2026-10-25",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ne/704-taiwan-arc-first-application.md",
+      "sha256": "efd01b6e14fad99e398ace977609e47f91f24b6d7d8243f44f6c277556305e89"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ne/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "a40004b682e473d111f162ef5398fd3e74b6c8e47c88a18d786d97805032fc71"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-ne/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "9b6be04ab109a8a970353812ece44ec779b26d9ca2cee0da21dec9c1434bab4f"
+    }
+  ],
+  "sources": [
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+      "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/704-taiwan-arc-first-application.md",
+      "sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/704-taiwan-arc-first-application.md",
+      "sha256": "0c00bc06bf3c3c1860a95af4dbcea9eaab981300860916856295e8b947244468"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "290a50047632ad830ea98c524ffef6ed91c2b4c8d555a1844689824c3ffea7a3"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4d70e78b9a197f4a2b81d25d61b6fa862ee849a6392d5fd905e90bcf781e721c"
+    }
+  ],
+  "recentComparators": [
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ne/819-nepali-student-taiwan-part-time-work-permit-20-hours.md",
+      "sha256": "8d98b8caef429854991f6f88547e59dc1d6aea15a5f8ea5f9de5341a69e76977"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ne/820-nepali-graduate-taiwan-stay-work-after-degree-points.md",
+      "sha256": "46e57e862019aaa414b589ba804751c240f63c4297aaab8f453509ca345d25c7"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ne/821-nepali-student-taiwan-bank-account-easy-job-police.md",
+      "sha256": "98dcc5c7b7d9ad189d7b42fdef21393151c01c70de0ea533284632613fafc50d"
+    }
+  ],
+  "machineCheck": {
+    "exitCode": 2,
+    "status": "unsupported, not PASS",
+    "log": "/Users/son7/tseng-all-language-columns-20261025/batch04/checks/ne-variety-initial.log"
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "at": "2026-10-26T00:49:04.576421+09:00",
+  "checker_sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+  "runs": [
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/704-taiwan-arc-first-application.md",
+      "locale": "bn",
+      "sha256": "3bb9fb746cfd2d8bed5e2ef160ecdecf81a959d1d2b55464604a708d8e0782c5",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/704-taiwan-arc-first-application.md",
+        "--lang",
+        "bn"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/704-taiwan-arc-first-application.md [bn] sentences=65 mean=13.1 cv=0.456 short=0.2 run3=0.048 opener_rep=0.211 cite_end=0.0 cite_para=0.368 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/705-taiwan-visa-residence-work-study-family.md",
+      "locale": "bn",
+      "sha256": "a97cacf663e16351a351cdce9fb7d4013ebf2b98ceb16ca559f4ac3ad9d4d2cd",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/705-taiwan-visa-residence-work-study-family.md",
+        "--lang",
+        "bn"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/705-taiwan-visa-residence-work-study-family.md [bn] sentences=75 mean=13.7 cv=0.457 short=0.187 run3=0.11 opener_rep=0.043 cite_end=0.0 cite_para=0.522 contrast=0 caveat=2 q=2\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/706-taiwan-arc-renewal-changes-reentry.md",
+      "locale": "bn",
+      "sha256": "4250564b6c98cbcf7a1ae3778b13c817f416c8991cf5ad3fbbb3dfebbfd0e6dc",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "bn"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/706-taiwan-arc-renewal-changes-reentry.md [bn] sentences=88 mean=13.7 cv=0.453 short=0.205 run3=0.093 opener_rep=0.038 cite_end=0.0 cite_para=0.423 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/704-taiwan-arc-first-application.md",
+      "locale": "fa",
+      "sha256": "fe975485d8a8fed7bd467c42860c4d29ad575a2d2a981ce3d3fc7e63113509a3",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/704-taiwan-arc-first-application.md",
+        "--lang",
+        "fa"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/704-taiwan-arc-first-application.md [fa] sentences=57 mean=15.8 cv=0.493 short=0.211 run3=0.036 opener_rep=0.095 cite_end=0.0 cite_para=0.286 contrast=1 caveat=0 q=0\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md",
+      "locale": "fa",
+      "sha256": "1c96fab7471e92a166705ec25385ef99980df2237fcc676d294c24efc4c424ab",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md",
+        "--lang",
+        "fa"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md [fa] sentences=62 mean=16.3 cv=0.521 short=0.113 run3=0.0 opener_rep=0.1 cite_end=0.0 cite_para=0.45 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+      "locale": "fa",
+      "sha256": "d5e9636efd65707cd86b0e0c24aa700e2d0b1948d6749302e96cd5d81dc9fa77",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "fa"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md [fa] sentences=72 mean=16.8 cv=0.481 short=0.181 run3=0.014 opener_rep=0.292 cite_end=0.014 cite_para=0.5 contrast=1 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he/704-taiwan-arc-first-application.md",
+      "locale": "he",
+      "sha256": "053b4e004dab8579821b95552b731804a6feab7d317c77b1c5a55611c40e16fe",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he/704-taiwan-arc-first-application.md",
+        "--lang",
+        "he"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he/704-taiwan-arc-first-application.md [he] sentences=67 mean=12.5 cv=0.466 short=0.239 run3=0.108 opener_rep=0.0 cite_end=0.0 cite_para=0.368 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he/705-taiwan-visa-residence-work-study-family.md",
+      "locale": "he",
+      "sha256": "2a9e5b3a802d105b582fd1a579d0a3b8fa8f1b825954c4c56cbfdfe263c08caf",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he/705-taiwan-visa-residence-work-study-family.md",
+        "--lang",
+        "he"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he/705-taiwan-visa-residence-work-study-family.md [he] sentences=67 mean=13.7 cv=0.493 short=0.224 run3=0.062 opener_rep=0.0 cite_end=0.0 cite_para=0.524 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he/706-taiwan-arc-renewal-changes-reentry.md",
+      "locale": "he",
+      "sha256": "31299ddbd5d1c594ec5ac6198f7a5893013022b1ee86a156e0237e5bf598194a",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "he"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he/706-taiwan-arc-renewal-changes-reentry.md [he] sentences=89 mean=13.9 cv=0.475 short=0.236 run3=0.069 opener_rep=0.111 cite_end=0.0 cite_para=0.519 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/704-taiwan-arc-first-application.md",
+      "locale": "my",
+      "sha256": "5dc05c7e2d82c50be381d779bf6c4273e216e4e1564f485ffff7ae2f6131c579",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/704-taiwan-arc-first-application.md",
+        "--lang",
+        "my"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/704-taiwan-arc-first-application.md [my] sentences=65 mean=21.1 cv=0.453 short=0.108 run3=0.032 opener_rep=0.238 cite_end=0.0 cite_para=0.381 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/705-taiwan-visa-residence-work-study-family.md",
+      "locale": "my",
+      "sha256": "567f73364f69d7c2a1b9fba5f92c612a0cb71d952b2454870fdc8f46a0afb6ec",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/705-taiwan-visa-residence-work-study-family.md",
+        "--lang",
+        "my"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/705-taiwan-visa-residence-work-study-family.md [my] sentences=66 mean=21.3 cv=0.45 short=0.091 run3=0.031 opener_rep=0.095 cite_end=0.0 cite_para=0.476 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/706-taiwan-arc-renewal-changes-reentry.md",
+      "locale": "my",
+      "sha256": "62197d327d34f575c00853a07609d9aa6b42b6419decb066bc38545e83f40fb4",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "my"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/706-taiwan-arc-renewal-changes-reentry.md [my] sentences=86 mean=19.7 cv=0.458 short=0.093 run3=0.012 opener_rep=0.12 cite_end=0.0 cite_para=0.48 contrast=1 caveat=0 q=0\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ne/704-taiwan-arc-first-application.md",
+      "locale": "ne",
+      "sha256": "c54085fe51c726aba838c6f4c16935daa1df73a5a80e834ac5a6ed8c077bdfce",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ne/704-taiwan-arc-first-application.md",
+        "--lang",
+        "ne"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ne/704-taiwan-arc-first-application.md [ne] sentences=63 mean=12.4 cv=0.5 short=0.333 run3=0.082 opener_rep=0.05 cite_end=0.0 cite_para=0.4 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ne/705-taiwan-visa-residence-work-study-family.md",
+      "locale": "ne",
+      "sha256": "6910f76946692f0d808e29ccbacd31617e0608e533382697d710c511ddf46b84",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ne/705-taiwan-visa-residence-work-study-family.md",
+        "--lang",
+        "ne"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ne/705-taiwan-visa-residence-work-study-family.md [ne] sentences=75 mean=12.9 cv=0.457 short=0.267 run3=0.055 opener_rep=0.0 cite_end=0.0 cite_para=0.522 contrast=0 caveat=1 q=0\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ne/706-taiwan-arc-renewal-changes-reentry.md",
+      "locale": "ne",
+      "sha256": "baba14a7e65ff20941900607496fa4bf3e447ade70915cb1bc289bfa81f2f2ce",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ne/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "ne"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ne/706-taiwan-arc-renewal-changes-reentry.md [ne] sentences=84 mean=13 cv=0.482 short=0.226 run3=0.037 opener_rep=0.08 cite_end=0.0 cite_para=0.48 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ta/704-taiwan-arc-first-application.md",
+      "locale": "ta",
+      "sha256": "43281f25b19a64781a4780aaea55de66faf9188507141e04566e20ef064a51c9",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ta/704-taiwan-arc-first-application.md",
+        "--lang",
+        "ta"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ta/704-taiwan-arc-first-application.md [ta] sentences=71 mean=11.3 cv=0.478 short=0.352 run3=0.029 opener_rep=0.05 cite_end=0.0 cite_para=0.35 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ta/705-taiwan-visa-residence-work-study-family.md",
+      "locale": "ta",
+      "sha256": "ee53660f0cab0a61b271d739f9f9b2d8b0a2f9d95601d2987a78c4b67c8f5758",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ta/705-taiwan-visa-residence-work-study-family.md",
+        "--lang",
+        "ta"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ta/705-taiwan-visa-residence-work-study-family.md [ta] sentences=73 mean=12.0 cv=0.45 short=0.315 run3=0.028 opener_rep=0.045 cite_end=0.0 cite_para=0.455 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ta/706-taiwan-arc-renewal-changes-reentry.md",
+      "locale": "ta",
+      "sha256": "e56fb228bfbba836b2ad8e50879b4ca14c46ea6453feb6405dbe069983c4fe33",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ta/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "ta"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ta/706-taiwan-arc-renewal-changes-reentry.md [ta] sentences=92 mean=11.4 cv=0.483 short=0.37 run3=0.033 opener_rep=0.154 cite_end=0.0 cite_para=0.462 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ur/704-taiwan-arc-first-application.md",
+      "locale": "ur",
+      "sha256": "6e92ef71f4728e0194d91c50fb4caa2e2abd191b2bed781deb73453854a5d8e3",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ur/704-taiwan-arc-first-application.md",
+        "--lang",
+        "ur"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ur/704-taiwan-arc-first-application.md [ur] sentences=60 mean=18.8 cv=0.452 short=0.117 run3=0.017 opener_rep=0.053 cite_end=0.0 cite_para=0.316 contrast=0 caveat=1 q=0\n  WARN 60% of sentences end in 'ہے' — vary endings within the register\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ur/705-taiwan-visa-residence-work-study-family.md",
+      "locale": "ur",
+      "sha256": "02a1b2eb83419a9864cfd86cf1ced163ac619cd25922c27e73f978de3b82857c",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ur/705-taiwan-visa-residence-work-study-family.md",
+        "--lang",
+        "ur"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ur/705-taiwan-visa-residence-work-study-family.md [ur] sentences=74 mean=17.7 cv=0.499 short=0.135 run3=0.042 opener_rep=0.043 cite_end=0.0 cite_para=0.478 contrast=0 caveat=0 q=1\n  WARN 53% of sentences end in 'ہے' — vary endings within the register\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ur/706-taiwan-arc-renewal-changes-reentry.md",
+      "locale": "ur",
+      "sha256": "51899903b1df3c9dd1a2b94b5e8cbf97cbdc7189e9db35a6624318ab5feb599a",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ur/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "ur"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ur/706-taiwan-arc-renewal-changes-reentry.md [ur] sentences=85 mean=18.2 cv=0.481 short=0.129 run3=0.036 opener_rep=0.0 cite_end=0.012 cite_para=0.481 contrast=0 caveat=0 q=0\n  WARN 61% of sentences end in 'ہے' — vary endings within the register\n",
+      "stderr": ""
+    }
+  ]
+}

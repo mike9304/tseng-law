@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-25T14:55:10.674782+00:00",
+  "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+  "beforeSHA256": "f81c3b62a3d1255d3b427c1356bd687c52c2be4c819880a8fa8a9c08056475d6",
+  "afterSHA256": "35d4b4ba779f27ce7fa08986de0bc19acc7077532bb14a8bb0d46288b3bd25b2",
+  "problem": "پس از جابه‌جایی، مدرک نشانی جدید و درخواست ثبت آن نزد اداره مهاجرت باید در مهلت سی‌روزه فراهم شود.",
+  "reason": "فراهم شود can mean preparation only; source requires application to NIA within the period.",
+  "replacement": "پس از جابه‌جایی، درخواست ثبت تغییر همراه مدرک نشانی جدید باید در مهلت سی‌روزه به اداره مهاجرت ارائه شود.",
+  "meaningPreserved": "Same move/address scope, evidence and 30-day period; application verb restored, not issuance deadline.",
+  "diff": "--- before/706\n+++ after/706\n@@ -54,7 +54,7 @@\n \n ## خانهٔ تازه، کارفرمای تازه\n \n-پس از جابه‌جایی، مدرک نشانی جدید و درخواست ثبت آن نزد اداره مهاجرت باید در مهلت سی‌روزه فراهم شود. تغییر اطلاعات در بانک یا دانشگاه، ثبت مهاجرتیِ [ماده 31](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31) را انجام نمی‌دهد. رسید تاریخ‌دار را نگه دارید.\n+پس از جابه‌جایی، درخواست ثبت تغییر همراه مدرک نشانی جدید باید در مهلت سی‌روزه به اداره مهاجرت ارائه شود. تغییر اطلاعات در بانک یا دانشگاه، ثبت مهاجرتیِ [ماده 31](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31) را انجام نمی‌دهد. رسید تاریخ‌دار را نگه دارید.\n \n برای عوض‌کردن کارفرما یا افزودن شغل، [ماده 53 قانون خدمات اشتغال](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) به دستهٔ کارگر توجه می‌کند. شرط ارائهٔ مدرک پایان رابطهٔ کاری در انتقالِ مشمول این ماده را نباید به هر شغل اضافی تعمیم داد. کار تازه باید پیش از شروع، مجوز یا معافیت لازم را داشته باشد؛ ثبت محل کار در اداره مهاجرت خودِ آن مجوز نیست.\n \n"
+}

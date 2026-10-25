@@ -1,0 +1,49 @@
+{
+  "contentCommit": "fd744f544ca092379785e5b2962ae5fc930efe37",
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/checks/browser-REPORT.md",
+      "sha256": "c6f2143adab2800d20be9d36277fe9ebf440f30c8b258a5220739f1cbef95d31",
+      "bytes": 9147
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/checks/browser-arc-results.json",
+      "sha256": "f2ad0415d851e13569d6c5f596644bb0c81f69966ac0fc87c7397aaedc0abdb5",
+      "bytes": 1256296
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/checks/browser-pack-report.json",
+      "sha256": "ceae9145175385880d385015f11f127e17c73c3ccd2b2d0cf5275ecad1b890b8",
+      "bytes": 1363462
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/checks/browser-snapshot-before.json",
+      "sha256": "fae656ba245862b89978c08d4a8d03e66895895142c69aab9ce6ff906c82d896",
+      "bytes": 1018863
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/checks/browser-snapshot-after.json",
+      "sha256": "e5133fd6d6f774255848048169c99bae6d576132824d9810745fe214844860e9",
+      "bytes": 1018972
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/checks/integrated-content-audit.json",
+      "sha256": "b36aca326546a37dc37fcd2c0c4801059151f841d21826f2c7074dab6e2a0991",
+      "bytes": 2253668
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/verification/browser-arc.mjs",
+      "sha256": "77b4fcff72828b971425aba3d4ea5eeca8dde20a740a3fdc1e2eac022a2fc4c6",
+      "bytes": 24847
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/verification/snapshot.py",
+      "sha256": "ad6160472dd31e8eff6e11ba34b135eb56c7547c8cb7d18e76be08c7b5e3a661",
+      "bytes": 2163
+    }
+  ],
+  "rootVisualInspection": [
+    "checks/browser-screenshots/mobile-uk-704-body.png",
+    "checks/browser-screenshots/mobile-nb-705-body.png"
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "startedAt": "2026-10-25T13:44:55.720Z",
+  "finishedAt": "2026-10-25T13:46:10.362Z",
+  "summary": {
+    "total": 62,
+    "passed": 62,
+    "failed": 0,
+    "fatal": false
+  },
+  "buildInfo": {
+    "commit": "fd744f544ca092379785e5b2962ae5fc930efe37",
+    "builtAt": "2026-10-25T13:31:07.138Z"
+  },
+  "browser": {
+    "engine": "Chromium",
+    "version": "156.0.8078.4",
+    "playwright": "1.59.1",
+    "executablePath": "/Users/son7/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+    "headless": true,
+    "isolatedTemporaryProfiles": true
+  },
+  "modes": {
+    "desktop": 23,
+    "mobile": 23,
+    "slow": 9,
+    "nojs": 7
+  },
+  "manuscripts": 21,
+  "bodySegmentComparisons": 2540,
+  "missingBodySegments": 0,
+  "faqComparisons": 168,
+  "imageDecoded": 56,
+  "horizontalOverflow": 0,
+  "pageErrors": 0,
+  "consoleErrors": 0,
+  "failedArticleRequests": 0,
+  "expectedNojsScriptBlocks": 7,
+  "rscRequests": 0,
+  "documentLanguageSwitches": 42,
+  "slowHydration": [
+    {
+      "locale": "da",
+      "chunkBytes": 1024,
+      "delayMs": 12,
+      "hydration": {
+        "firstBodyAt": 236.89999985694885,
+        "bodySeen": true,
+        "bodyDisappearances": 0,
+        "bodyNodeReplacements": 0
+      }
+    },
+    {
+      "locale": "nb",
+      "chunkBytes": 1024,
+      "delayMs": 12,
+      "hydration": {
+        "firstBodyAt": 234.40000009536743,
+        "bodySeen": true,
+        "bodyDisappearances": 0,
+        "bodyNodeReplacements": 0
+      }
+    },
+    {
+      "locale": "fi",
+      "chunkBytes": 1024,
+      "delayMs": 12,
+      "hydration": {
+        "firstBodyAt": 245.90000009536743,
+        "bodySeen": true,
+        "bodyDisappearances": 0,
+        "bodyNodeReplacements": 0
+      }
+    },
+    {
+      "locale": "pl",
+      "chunkBytes": 1024,
+      "delayMs": 12,
+      "hydration": {
+        "firstBodyAt": 244.39999985694885,
+        "bodySeen": true,
+        "bodyDisappearances": 0,
+        "bodyNodeReplacements": 0
+      }
+    },
+    {
+      "locale": "cs",
+      "chunkBytes": 1024,
+      "delayMs": 12,
+      "hydration": {
+        "firstBodyAt": 243.60000014305115,
+        "bodySeen": true,
+        "bodyDisappearances": 0,
+        "bodyNodeReplacements": 0
+      }
+    },
+    {
+      "locale": "ro",
+      "chunkBytes": 1024,
+      "delayMs": 12,
+      "hydration": {
+        "firstBodyAt": 250.09999990463257,
+        "bodySeen": true,
+        "bodyDisappearances": 0,
+        "bodyNodeReplacements": 0
+      }
+    },
+    {
+      "locale": "uk",
+      "chunkBytes": 1024,
+      "delayMs": 12,
+      "hydration": {
+        "firstBodyAt": 275.89999985694885,
+        "bodySeen": true,
+        "bodyDisappearances": 0,
+        "bodyNodeReplacements": 0
+      }
+    }
+  ],
+  "navigation": [
+    {
+      "mode": "desktop",
+      "path": "/en",
+      "languages": 49,
+      "pass": true
+    },
+    {
+      "mode": "desktop",
+      "path": "/ko/columns/taiwan-left-turn-vs-straight-motorcycle",
+      "languages": 3,
+      "pass": true
+    },
+    {
+      "mode": "mobile",
+      "path": "/en",
+      "languages": 49,
+      "pass": true
+    },
+    {
+      "mode": "mobile",
+      "path": "/ko/columns/taiwan-left-turn-vs-straight-motorcycle",
+      "languages": 3,
+      "pass": true
+    },
+    {
+      "mode": "slow",
+      "path": "/en",
+      "languages": 49,
+      "pass": true
+    },
+    {
+      "mode": "slow",
+      "path": "/ko/columns/taiwan-left-turn-vs-straight-motorcycle",
+      "languages": 3,
+      "pass": true
+    }
+  ],
+  "screenshots": 90,
+  "hashes": {
+    "verification/browser-arc.mjs": "77b4fcff72828b971425aba3d4ea5eeca8dde20a740a3fdc1e2eac022a2fc4c6",
+    "verification/snapshot.py": "ad6160472dd31e8eff6e11ba34b135eb56c7547c8cb7d18e76be08c7b5e3a661",
+    "checks/browser-arc-results.json": "f2ad0415d851e13569d6c5f596644bb0c81f69966ac0fc87c7397aaedc0abdb5",
+    "checks/browser-pack-report.json": "ceae9145175385880d385015f11f127e17c73c3ccd2b2d0cf5275ecad1b890b8"
+  },
+  "sourceBodySegments": 957
+}

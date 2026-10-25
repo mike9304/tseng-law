@@ -423,3 +423,5 @@
 - 10-25 09:34 KST 대기: ref 재정렬(bc52789), Air 09:25 push 확인. Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.
 - 10-25 09:44 KST 대기: ref 재정렬(e4e4ab5), Air 09:35 push 확인. Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.
 - 10-25 09:54 KST 대기: ref 재정렬(fc567e0), Air 09:45 push 확인. Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.
+- 10-25 10:05 KST 대기: ref 재정렬(dcfd0ac), Air 09:55 push 확인. Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.
+- 10-25 10:15 KST 대기: ref 재정렬(e729425). 10:05 sync는 push 줄 없음(09:58 Studio 커밋 뒤 얕은 fetch 거부로 보임) → 재정렬 후 다음 회차 감시. Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.

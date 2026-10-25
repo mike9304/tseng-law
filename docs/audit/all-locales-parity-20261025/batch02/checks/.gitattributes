@@ -6,3 +6,4 @@ language-links-retry.log -whitespace
 static-build.log -whitespace
 integration-tests-rebased.log -whitespace
 caption-test.log -whitespace
+static-build-final.log -whitespace

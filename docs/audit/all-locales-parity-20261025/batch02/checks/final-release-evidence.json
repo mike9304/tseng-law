@@ -1,0 +1,41 @@
+{
+  "verifiedContentCommit": "eb3a5fbefdd5bc626c4c7a90abf63fbf821a6093",
+  "rootVisualInspection": "/Users/son7/tseng-all-language-columns-20261025/batch02/rebased/checks/browser-screenshots/mobile-nb-705-body.png",
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/rebased/checks/browser-REPORT.md",
+      "sha256": "de5ac4b1a252318e4b99580bb2b5750de05eddd2d6aeb6643269ab20c7b13328",
+      "bytes": 9522
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/rebased/checks/browser-arc-results.json",
+      "sha256": "972c87d97d7db4ab47c4605f115d18bb25400c24da48d0f00852a686593cb9a5",
+      "bytes": 1257170
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/rebased/checks/browser-pack-report.json",
+      "sha256": "8287981439a68f581f3669bf1e4e841b7dc9ddbfb87ec7ef6f27891fc3c5c2a3",
+      "bytes": 1370188
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/rebased/checks/browser-snapshot-before.json",
+      "sha256": "2a944f93f6b04851d2f1fcf69df421a721f42a5342dd79c2ca56f0a52c20b91b",
+      "bytes": 1482903
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/rebased/checks/browser-snapshot-after.json",
+      "sha256": "b991406cb52a88b3c0afb199fd238aecedd6ddf15230a630f88f1a5240f0a01b",
+      "bytes": 1483063
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/rebased/checks/additional-24-basic.json",
+      "sha256": "388a1a6109d4427e179aed417bb19505bd9c5fb712a29983a0ea3afe0330f634",
+      "bytes": 32180
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/rebased/checks/additional-24-browser-images.json",
+      "sha256": "6213fd605799365ee0a20bf2c62b06d62384cd8e8aae2e3b4b05c0c11aa7d56d",
+      "bytes": 24054
+    }
+  ]
+}

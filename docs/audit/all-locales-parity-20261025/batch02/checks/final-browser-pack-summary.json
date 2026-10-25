@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-25T14:17:28.317Z",
+  "node": "v24.14.1",
+  "zlib": "1.3.1-e00f703",
+  "buildInfo": {
+    "commit": "eb3a5fbefdd5bc626c4c7a90abf63fbf821a6093",
+    "builtAt": "2026-10-25T14:12:19.711Z"
+  },
+  "sourceArtifact": "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch02-final",
+  "packedArtifact": "/Users/son7/tseng-all-language-columns-20261025/batch02/rebased/site-pack",
+  "pages": 2953,
+  "pageBytes": 371789757,
+  "pageGzipBytes": 78319865,
+  "assets": 2366,
+  "assetBytes": 87321344,
+  "expandedBytes": 165667172,
+  "limitBytes": 268435456,
+  "headroomBytes": 102768284,
+  "expandedMiB": 157.99252700805664,
+  "headroomMiB": 98.00747299194336,
+  "packedFileCount": 5323,
+  "gzipHtmlRoundTrips": 2953,
+  "unchangedAssets": 2366,
+  "verificationFailures": 0,
+  "failures": [],
+  "headersEqual": true,
+  "packerSha256": "c983e275e92ef2aff523f6307069ca54121fc79400e9c247fa02f7c1b73d85e7",
+  "workerTemplateSha256": "1d822b535ea1011a27fd037cfb2f9cef9245aacb0cc541b26d926c55923998b9",
+  "packedWorkerSha256": "84711e76427f7a5ae35a8be8e2c872adfba9b7291f76566eac99ffe4836d74ff",
+  "wranglerSha256": "5b4cb5e98934bf6b8df0273cb93eed501b3dfe4eadcab2ad075b61e90e85dbe3",
+  "rawReportSha256": "8287981439a68f581f3669bf1e4e841b7dc9ddbfb87ec7ef6f27891fc3c5c2a3"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "path": "src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+    "sha256": "75aca1f1bbce526d813c25ff639cb2439a864a9a03507f79583e34d646044196",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+      "--lang",
+      "id"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md [id] sentences=57 mean=14.2 cv=0.456 short=0.193 run3=0.036 opener_rep=0.0 cite_end=0.0 cite_para=0.667 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md",
+    "sha256": "a43603c866fef8fccbd517f8906d4211a0adea0acfc8f3e2c4010ffa14a2b096",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md",
+      "--lang",
+      "es"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md [es] sentences=33 mean=17.6 cv=0.47 short=0.152 run3=0.0 opener_rep=0.125 cite_end=0.0 cite_para=0.438 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md",
+    "sha256": "b5019f49da8eef11ba689cb1c6f1efcccdb172575dc259712ca09949fbb8fb65",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md",
+      "--lang",
+      "es"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md [es] sentences=44 mean=16.4 cv=0.463 short=0.205 run3=0.024 opener_rep=0.2 cite_end=0.0 cite_para=0.467 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "stderr": ""
+  }
+]

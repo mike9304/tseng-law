@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "overall_verdict": "PASS",
+  "status": "PASS",
+  "review_date": "2026-10-25",
+  "reviewed_at": "2026-10-25T12:25:15.938633+00:00",
+  "reviewer": "/root/final_ko_case_trends",
+  "role": "Independent AI final editorial and legal-evidence reviewer",
+  "reviewer_is_author": false,
+  "reviewer_is_locale_reviewer": false,
+  "review_is_human": false,
+  "publication_authority": false,
+  "publication_performed": false,
+  "repair_passes": 1,
+  "articles": [
+    {
+      "id": "906",
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/906-korean-publisher-exclusive-license-taiwan-complaint.md",
+      "relative_path": "src/content/columns/906-korean-publisher-exclusive-license-taiwan-complaint.md",
+      "sha256": "2d6e08cf1030b60f715ef3026f0c27d462a421c240811f3b6a0ec84c0bb7b074",
+      "mtime": "2026-10-25T12:15:41.437Z",
+      "reviewed_at": "2026-10-25T12:25:15.938633+00:00",
+      "verdict": "PASS",
+      "status": "PASS",
+      "whole_final_article_read": true,
+      "variety_exit_code": 0,
+      "variety_fail_count": 0,
+      "locale": {
+        "reviewer": "/root/review_ko_case_trends",
+        "verdict": "PASS",
+        "sha256": "2d6e08cf1030b60f715ef3026f0c27d462a421c240811f3b6a0ec84c0bb7b074",
+        "matches_final_sha256": true,
+        "record": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-final.json",
+        "record_sha256": "b427c3855388384e20d82969449caa8cb1781ea4d19bdf49c5d556ca7fe50197",
+        "report": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-final.md",
+        "report_sha256": "b3091e3d548f96f8e5677e9fdb7fa5c63486509b29537b575d5fc91cd210c718"
+      },
+      "asset": {
+        "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/906-case-trends-20261025.webp",
+        "bytes": 168546,
+        "sha256": "0c4e4598ca2c72c261b4b1352712d6c21e1921064daf71ee59b758d8a915b093",
+        "same_as_visually_reviewed": true,
+        "actual_webp": true
+      }
+    },
+    {
+      "id": "907",
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/907-korean-brand-parallel-import-store-signs-taiwan.md",
+      "relative_path": "src/content/columns/907-korean-brand-parallel-import-store-signs-taiwan.md",
+      "sha256": "46951a4b957b195451b86fe8148f0a104524beb1fc408511ace5cb218c48c8bc",
+      "mtime": "2026-10-25T12:17:20.567Z",
+      "reviewed_at": "2026-10-25T12:25:15.938633+00:00",
+      "verdict": "PASS",
+      "status": "PASS",
+      "whole_final_article_read": true,
+      "variety_exit_code": 0,
+      "variety_fail_count": 0,
+      "locale": {
+        "reviewer": "/root/review_ko_case_trends",
+        "verdict": "PASS",
+        "sha256": "46951a4b957b195451b86fe8148f0a104524beb1fc408511ace5cb218c48c8bc",
+        "matches_final_sha256": true,
+        "record": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-final.json",
+        "record_sha256": "b427c3855388384e20d82969449caa8cb1781ea4d19bdf49c5d556ca7fe50197",
+        "report": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-final.md",
+        "report_sha256": "b3091e3d548f96f8e5677e9fdb7fa5c63486509b29537b575d5fc91cd210c718"
+      },
+      "asset": {
+        "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/907-case-trends-20261025.webp",
+        "bytes": 196210,
+        "sha256": "1b9512e62f4c0f27e10c3a86f3cf020b3a4a787e0a00b4177cdcd5d9bb22a338",
+        "same_as_visually_reviewed": true,
+        "actual_webp": true
+      }
+    },
+    {
+      "id": "908",
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/908-korean-team-taiwan-after-hours-messages-overtime.md",
+      "relative_path": "src/content/columns/908-korean-team-taiwan-after-hours-messages-overtime.md",
+      "sha256": "e6e4a02f355c9150bab26339f5a42f3385937882c4f1699e5ea25f75425654cf",
+      "mtime": "2026-10-25T12:11:51.389Z",
+      "reviewed_at": "2026-10-25T12:25:15.938633+00:00",
+      "verdict": "PASS",
+      "status": "PASS",
+      "whole_final_article_read": true,
+      "variety_exit_code": 0,
+      "variety_fail_count": 0,
+      "locale": {
+        "reviewer": "/root/review_ko_case_trends",
+        "verdict": "PASS",
+        "sha256": "e6e4a02f355c9150bab26339f5a42f3385937882c4f1699e5ea25f75425654cf",
+        "matches_final_sha256": true,
+        "record": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-final.json",
+        "record_sha256": "b427c3855388384e20d82969449caa8cb1781ea4d19bdf49c5d556ca7fe50197",
+        "report": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-final.md",
+        "report_sha256": "b3091e3d548f96f8e5677e9fdb7fa5c63486509b29537b575d5fc91cd210c718"
+      },
+      "asset": {
+        "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/908-case-trends-20261025.webp",
+        "bytes": 97920,
+        "sha256": "af46717e0b3da9c1aa25c7575e103a67b66317195c333b4398e441ae3befb392",
+        "same_as_visually_reviewed": true,
+        "actual_webp": true
+      }
+    },
+    {
+      "id": "909",
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/909-korean-traveler-taiwan-refund-claim-deadline.md",
+      "relative_path": "src/content/columns/909-korean-traveler-taiwan-refund-claim-deadline.md",
+      "sha256": "a07b7e007c256f059801a6077e7dee33607f1b047d787bdaf2a0b4f10e63cffc",
+      "mtime": "2026-10-25T12:14:56.513Z",
+      "reviewed_at": "2026-10-25T12:25:15.938633+00:00",
+      "verdict": "PASS",
+      "status": "PASS",
+      "whole_final_article_read": true,
+      "variety_exit_code": 0,
+      "variety_fail_count": 0,
+      "locale": {
+        "reviewer": "/root/review_ko_case_trends",
+        "verdict": "PASS",
+        "sha256": "a07b7e007c256f059801a6077e7dee33607f1b047d787bdaf2a0b4f10e63cffc",
+        "matches_final_sha256": true,
+        "record": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-final.json",
+        "record_sha256": "b427c3855388384e20d82969449caa8cb1781ea4d19bdf49c5d556ca7fe50197",
+        "report": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-final.md",
+        "report_sha256": "b3091e3d548f96f8e5677e9fdb7fa5c63486509b29537b575d5fc91cd210c718"
+      },
+      "asset": {
+        "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/909-case-trends-20261025.webp",
+        "bytes": 143468,
+        "sha256": "e17c318142deaac700fdea9bc48bd19d1821ff5191b8b19d87364d42078fbf14",
+        "same_as_visually_reviewed": true,
+        "actual_webp": true
+      }
+    }
+  ],
+  "resolved_material_findings": [
+    {
+      "id": "907-A",
+      "file": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/907-korean-brand-parallel-import-store-signs-taiwan.md",
+      "line": 40,
+      "status": "RESOLVED",
+      "original_report": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-final-r1.md",
+      "final_sentence": "현행 상표법 제36조 제1항 제2호는 상품·서비스의 사용 목적을 설명하면서 다른 사람의 상품·서비스를 가리킬 필요가 있는 경우, 거래 관행에 맞는 정직한 상표 사용을 허용합니다.",
+      "source": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=36",
+      "meaning_change": "Substantive restoration of omitted statutory qualification; case outcome unchanged. Confusion-risk exclusion retained."
+    },
+    {
+      "id": "908-A",
+      "file": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/908-korean-team-taiwan-after-hours-messages-overtime.md",
+      "line": 42,
+      "status": "RESOLVED",
+      "original_report": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-final-r1.md",
+      "final_sentence": "증언에는 인사 담당자가 그런 표시를 요구하거나 암시했다는 내용이 있었습니다. 다만 법원은 노사가 실제 의사와 다른 내용을 표시하기로 합의했다거나 서명을 강요했다는 점까지 입증됐다고 보지는 않았습니다.",
+      "source": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C114%2C%E5%8B%9E%E4%B8%8A%E6%98%93%2C13%2C20260422%2C1",
+      "retained_primary_source": "/Users/son7/tseng-case-trends-20261025/work/research/ko-snapshots/J3-official-web.txt",
+      "official_line": 56,
+      "meaning_change": "Substantive correction of evidence attribution; testimony existence and court proof finding separated, dismissal outcome and employee protections unchanged."
+    }
+  ],
+  "unresolved_material_findings": [],
+  "optional_style_findings": [],
+  "first_two_paragraph_deletion_review": "PASS; final first two paragraphs read sentence by sentence and as whole openings; each retains concrete reader decision, legal scope, evidence or procedural stage. 909 split preserves first-instance status and unverified finality.",
+  "section_5_review": "PASS; final actual CLI 4/4 exit0/FAIL0 plus manual information contribution, opening variety, paragraph starts, legal qualifications and distinct endings. Formal Korean ending WARN 90–93% disclosed and accepted within register.",
+  "comparators": [
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/704-taiwan-arc-first-application.md",
+      "published": "2026-10-24",
+      "sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1"
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "published": "2026-10-24",
+      "sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a"
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "published": "2026-10-24",
+      "sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc"
+    }
+  ],
+  "comparator_scope": "Independently read first two paragraphs, headings and closing body paragraphs of 704–706 dated2026-10-24. New case-led topics and endings differ; existing comparator legal rules are not certified by this review.",
+  "firm_check": {
+    "services_url": "https://tseng-law.com/ko/services",
+    "contact_url": "https://tseng-law.com/ko/contact",
+    "verified_email": "wei@hoveringlaw.com.tw",
+    "checked_on": "2026-10-25",
+    "result": "Taiwan services and minimal initial inquiry path consistent; no invented representation, foreign licensure, client victory or guarantee."
+  },
+  "evidence": {
+    "final_checks": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-final-checks.json",
+    "live_official_sources": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-final-live-evidence.json",
+    "additional_history": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-final-history-extra.json",
+    "r1": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-final-r1.md",
+    "locale_final": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-final.json",
+    "locale_final_report": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-final.md"
+  },
+  "evidence_limits": [
+    "Fresh fetches of all four FJUD URLs timed out. Same-day retained official tool text was independently read; no substitute author summary was treated as a judgment.",
+    "J1/J3 retained official judgments were read in full. J2 verified passages cover the order and relevant exhaustion, signage, nominative-use and operator-liability reasoning, but missing official ranges 248–298, 429–464, 552–609 and 635–716 were not reviewed.",
+    "J4 retained official order and substantive reasons through line 46 were reviewed; lines 47–89 were not reviewed. Later appeal/finality of J2/J4 is unverified and explicitly bounded in the articles.",
+    "MOJ current provisions and commencement histories were independently opened on 2026-10-25; pages displayed compilation cutoff 2026-10-16. Uncommenced and unrelated amendments were distinguished from operative law.",
+    "Cross-locale whole-manuscript duplication and production build/deployment/public visual or hydration QA are outside this assigned review. No publication or guaranteed legal accuracy is claimed."
+  ],
+  "next_step": "Parent may use this exact-SHA editorial result in its authorized publication workflow; this reviewer did not publish."
+}

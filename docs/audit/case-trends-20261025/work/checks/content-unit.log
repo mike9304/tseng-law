@@ -1,0 +1,41 @@
+
+> sejong-law@0.1.0 test:unit
+> vitest run src/lib/__tests__/columns-en-content.test.ts src/lib/__tests__/columns-ja-content.test.ts src/lib/__tests__/columns-zh-content.test.ts src/lib/__tests__/columns-new-four-locales.test.ts src/lib/__tests__/column-category-parity.test.ts src/lib/__tests__/expertise-columns-20260930.test.ts src/lib/__tests__/native-locale-columns-20260929.test.ts src/lib/__tests__/column-embeddings-content-sync.test.ts src/lib/__tests__/column-pending-text-search.test.ts src/lib/__tests__/column-emphasis.test.ts src/lib/__tests__/column-image-caption-label.test.ts src/lib/__tests__/column-image-descriptions.test.ts src/lib/__tests__/column-summary-frontmatter.test.ts src/lib/__tests__/column-seo-title-frontmatter.test.ts src/lib/__tests__/columns-publication-date.test.ts src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx src/lib/__tests__/column-attribution.test.ts src/lib/__tests__/columns-faq.test.ts src/lib/__tests__/column-no-public-authors.test.tsx --testTimeout=30000
+
+
+ RUN  v3.2.6 /Users/son7/tseng-case-trends-20261025/repo
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 19 ⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit| src/lib/__tests__/column-attribution.test.ts [ src/lib/__tests__/column-attribution.test.ts ]
+ FAIL  |unit| src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx [ src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx ]
+ FAIL  |unit| src/lib/__tests__/column-category-parity.test.ts [ src/lib/__tests__/column-category-parity.test.ts ]
+ FAIL  |unit| src/lib/__tests__/column-embeddings-content-sync.test.ts [ src/lib/__tests__/column-embeddings-content-sync.test.ts ]
+ FAIL  |unit| src/lib/__tests__/column-emphasis.test.ts [ src/lib/__tests__/column-emphasis.test.ts ]
+ FAIL  |unit| src/lib/__tests__/column-image-caption-label.test.ts [ src/lib/__tests__/column-image-caption-label.test.ts ]
+ FAIL  |unit| src/lib/__tests__/column-image-descriptions.test.ts [ src/lib/__tests__/column-image-descriptions.test.ts ]
+ FAIL  |unit| src/lib/__tests__/column-no-public-authors.test.tsx [ src/lib/__tests__/column-no-public-authors.test.tsx ]
+ FAIL  |unit| src/lib/__tests__/column-pending-text-search.test.ts [ src/lib/__tests__/column-pending-text-search.test.ts ]
+ FAIL  |unit| src/lib/__tests__/column-seo-title-frontmatter.test.ts [ src/lib/__tests__/column-seo-title-frontmatter.test.ts ]
+ FAIL  |unit| src/lib/__tests__/column-summary-frontmatter.test.ts [ src/lib/__tests__/column-summary-frontmatter.test.ts ]
+ FAIL  |unit| src/lib/__tests__/columns-en-content.test.ts [ src/lib/__tests__/columns-en-content.test.ts ]
+ FAIL  |unit| src/lib/__tests__/columns-faq.test.ts [ src/lib/__tests__/columns-faq.test.ts ]
+ FAIL  |unit| src/lib/__tests__/columns-ja-content.test.ts [ src/lib/__tests__/columns-ja-content.test.ts ]
+ FAIL  |unit| src/lib/__tests__/columns-new-four-locales.test.ts [ src/lib/__tests__/columns-new-four-locales.test.ts ]
+ FAIL  |unit| src/lib/__tests__/columns-publication-date.test.ts [ src/lib/__tests__/columns-publication-date.test.ts ]
+ FAIL  |unit| src/lib/__tests__/columns-zh-content.test.ts [ src/lib/__tests__/columns-zh-content.test.ts ]
+ FAIL  |unit| src/lib/__tests__/expertise-columns-20260930.test.ts [ src/lib/__tests__/expertise-columns-20260930.test.ts ]
+ FAIL  |unit| src/lib/__tests__/native-locale-columns-20260929.test.ts [ src/lib/__tests__/native-locale-columns-20260929.test.ts ]
+Error: Cannot find module '/Users/son7/tseng-case-trends-20261025/repo/tests/setup.ts'
+Caused by: Error: Failed to load url /Users/son7/tseng-case-trends-20261025/repo/tests/setup.ts (resolved id: /Users/son7/tseng-case-trends-20261025/repo/tests/setup.ts). Does the file exist?
+ ❯ loadAndTransform ../../Projects/tseng-law-deploy/node_modules/vite/dist/node/chunks/config.js:22663:33
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/19]⎯
+
+
+ Test Files  19 failed (19)
+      Tests  no tests
+   Start at  21:04:27
+   Duration  760ms (transform 10ms, setup 0ms, collect 0ms, tests 0ms, environment 1ms, prepare 472ms)
+

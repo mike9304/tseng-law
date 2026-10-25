@@ -3,7 +3,7 @@ title: "Una sentencia española y bienes en Taiwán: el paso judicial que falta 
 seoTitle: "Ejecutar una sentencia española en Taiwán"
 summary: "Una sentencia civil firme española necesita una sentencia taiwanesa que autorice su ejecución. La notificación al demandado, la competencia y la reciprocidad requieren revisión."
 published: "2026-10-23"
-lastmod: "2026-10-24"
+lastmod: "2026-10-25"
 date_display: "23 de octubre de 2026"
 read_time: "5 min de lectura"
 categories: ["Información jurídica de Taiwán"]
@@ -69,7 +69,7 @@ La demanda para obtener permiso de ejecución se presenta ante el tribunal del d
 
 Ante un riesgo concreto de frustración del cobro puede valorarse un embargo preventivo. Los [artículos 523](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=523) y [526](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=526) exigen riesgo de imposibilidad o grave dificultad de ejecución y justificación inicial del crédito y de ese riesgo; el tribunal puede exigir caución. La existencia de una sentencia no elimina ese examen.
 
-La [consulta sobre el asunto taiwanés](/es/contact) puede empezar con un correo a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); se atiende en inglés, chino, japonés o coreano, y el idioma se acuerda antes. Para comprobar conflictos y alcance basta un resumen sin datos sensibles con la contraparte, el vínculo con Taiwán y cualquier plazo; al principio no hace falta adjuntar originales ni datos bancarios completos. Un correo no formaliza el encargo. El documento pendiente puede ser tan concreto como la constancia de notificación inicial o de firmeza.
+Puede iniciar la [consulta sobre el asunto taiwanés](/es/contact) escribiendo a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); se atiende en inglés, chino, japonés o coreano, y el idioma se acuerda antes. Para comprobar conflictos y alcance basta un resumen sin datos sensibles con la contraparte, el vínculo con Taiwán y cualquier plazo; al principio no hace falta adjuntar originales ni datos bancarios completos. Un correo no formaliza el encargo. El documento pendiente puede ser tan concreto como la constancia de notificación inicial o de firmeza.
 
 Información general sobre ejecución en Taiwán; no determina el reconocimiento de una resolución concreta ni sustituye el asesoramiento sobre el proceso español.
 

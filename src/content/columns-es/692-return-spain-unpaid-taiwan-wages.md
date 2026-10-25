@@ -3,7 +3,7 @@ title: "Regresar a España con salarios pendientes en Taiwán: nóminas, jornada
 seoTitle: "Salarios pendientes en Taiwán tras volver a España"
 summary: "Las nóminas, los registros de jornada y la identificación del empleador permiten preparar desde España una reclamación de salarios por el trabajo realizado en Taiwán."
 published: "2026-10-23"
-lastmod: "2026-10-24"
+lastmod: "2026-10-25"
 date_display: "23 de octubre de 2026"
 read_time: "5 min de lectura"
 categories: ["Información jurídica de Taiwán"]
@@ -57,7 +57,7 @@ Las prestaciones periódicas comprendidas en el [artículo 126 del Código Civil
 
 Sobre la posible indemnización al terminar la relación, puede consultarse [la salida voluntaria y la indemnización laboral](/es/columns/taiwan-voluntary-resignation-severance).
 
-Una primera [consulta](/es/contact) puede hacerse por correo a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); se atiende en inglés, chino, japonés o coreano, y el idioma se acuerda antes. Basta un resumen sin datos sensibles, el nombre del empleador para comprobar conflictos, el vínculo con Taiwán y las fechas de vencimiento; al principio no hace falta enviar documentos de identidad ni extractos completos. El mensaje no crea un encargo. La nómina pendiente más antigua, con la fecha en que debía pagarse, va al principio de la carpeta.
+Para una primera [consulta](/es/contact), puede escribir a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); se atiende en inglés, chino, japonés o coreano, y el idioma se acuerda antes. Basta un resumen sin datos sensibles, el nombre del empleador para comprobar conflictos, el vínculo con Taiwán y las fechas de vencimiento; al principio no hace falta enviar documentos de identidad ni extractos completos. El mensaje no crea un encargo. La nómina pendiente más antigua, con la fecha en que debía pagarse, va al principio de la carpeta.
 
 Información general sobre salarios y procedimiento taiwanés; la clasificación del trabajo y de cada cantidad requiere revisar los documentos.
 

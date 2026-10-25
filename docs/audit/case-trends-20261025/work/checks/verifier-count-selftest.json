@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "103 matching complete entries",
+      "passed": true,
+      "accepted": 103
+    },
+    {
+      "name": "wrong expected count rejected",
+      "passed": true,
+      "rejection": "Inventory must contain exactly 102 distinct Codex routes."
+    },
+    {
+      "name": "duplicate route rejected",
+      "passed": true,
+      "rejection": "Inventory must contain exactly 103 distinct Codex routes."
+    },
+    {
+      "name": "missing body rejected",
+      "passed": true,
+      "rejection": "Source body manifest must cover exactly the inventory 103 paths."
+    },
+    {
+      "name": "stale source SHA rejected",
+      "passed": true,
+      "rejection": "Stale/missing source-body SHA or route: src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md"
+    }
+  ],
+  "passed": true
+}

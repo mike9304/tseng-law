@@ -1,0 +1,66 @@
+[
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/906-korean-publisher-exclusive-license-taiwan-complaint.md",
+    "sha256": "35d4b2df428f4f4f0da8d585a37aa144ccfa0dcca702b424f5b43f2b000ffd3c",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/906-korean-publisher-exclusive-license-taiwan-complaint.md",
+      "--lang",
+      "ko"
+    ],
+    "exit_code": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/906-korean-publisher-exclusive-license-taiwan-complaint.md [ko] sentences=37 mean=42.2 cv=0.461 short=0.162 run3=0.029 opener_rep=0.083 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=1\n  WARN 92% of sentences end in '니다.' — vary endings within the register\n",
+    "stderr": "",
+    "bold_found": false
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/907-korean-brand-parallel-import-store-signs-taiwan.md",
+    "sha256": "0c1d918a30ab2c0b5818a7e1ffa00b26c9c9bab81faf576f4a1fbf6e31385071",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/907-korean-brand-parallel-import-store-signs-taiwan.md",
+      "--lang",
+      "ko"
+    ],
+    "exit_code": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/907-korean-brand-parallel-import-store-signs-taiwan.md [ko] sentences=47 mean=36.9 cv=0.467 short=0.128 run3=0.044 opener_rep=0.0 cite_end=0.0 cite_para=0.4 contrast=0 caveat=1 q=1\n  WARN 92% of sentences end in '니다.' — vary endings within the register\n",
+    "stderr": "",
+    "bold_found": false
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/908-korean-team-taiwan-after-hours-messages-overtime.md",
+    "sha256": "d2eb7dfbaecd1b040366d11258cf39139efbc0af78d46b730caa5ddb3d249093",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/908-korean-team-taiwan-after-hours-messages-overtime.md",
+      "--lang",
+      "ko"
+    ],
+    "exit_code": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/908-korean-team-taiwan-after-hours-messages-overtime.md [ko] sentences=49 mean=36.0 cv=0.459 short=0.102 run3=0.064 opener_rep=0.133 cite_end=0.0 cite_para=0.467 contrast=0 caveat=2 q=1\n  WARN 90% of sentences end in '니다.' — vary endings within the register\n",
+    "stderr": "",
+    "bold_found": false
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/909-korean-traveler-taiwan-refund-claim-deadline.md",
+    "sha256": "302c0ac9ee8e5b65a01cc01cd3208251320613539fad09ece814dc1e6b9ccb4a",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/909-korean-traveler-taiwan-refund-claim-deadline.md",
+      "--lang",
+      "ko"
+    ],
+    "exit_code": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/909-korean-traveler-taiwan-refund-claim-deadline.md [ko] sentences=42 mean=36.5 cv=0.457 short=0.143 run3=0.0 opener_rep=0.071 cite_end=0.024 cite_para=0.429 contrast=0 caveat=0 q=1\n  WARN 90% of sentences end in '니다.' — vary endings within the register\n",
+    "stderr": "",
+    "bold_found": false
+  }
+]

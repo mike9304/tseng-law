@@ -1,0 +1,26 @@
+[
+  {
+    "old_line": 16,
+    "new_line": 16,
+    "before": "featured_image_caption: \"Scena immaginaria; non raffigura una persona convocata o documenti di un procedimento reale.\"",
+    "after": "featured_image_caption: \"Scena immaginaria\""
+  },
+  {
+    "old_line": 34,
+    "new_line": 34,
+    "before": "Per un visitatore italiano, conviene indicare tempestivamente quale lingua comprende davvero per una deposizione dettagliata: usare l’inglese nelle riunioni commerciali non dimostra di capire termini penali o domande tecniche. La segnalazione preventiva facilita l’organizzazione dell’interprete. Non è una condizione che crea il diritto.",
+    "after": "Per un visitatore italiano, conviene indicare tempestivamente quale lingua comprende davvero per una deposizione dettagliata: usare l’inglese nelle riunioni commerciali non dimostra di capire termini penali o domande tecniche. La segnalazione preventiva facilita l’organizzazione dell’interprete. Il diritto, però, non dipende da essa."
+  },
+  {
+    "old_line": 40,
+    "new_line": 40,
+    "before": "La contestazione deve essere comunicata prima dell’interrogatorio. L’[articolo 95](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95) richiede inoltre di informare la persona della facoltà di non rispondere, della possibilità di nominare un difensore e di chiedere l’acquisizione di prove favorevoli. L’accesso al sistema taiwanese di assistenza legale (法律扶助) richiede invece i requisiti previsti dalla norma. La cittadinanza straniera, da sola, non dimostra l’accesso automatico al beneficio.",
+    "after": "La contestazione deve essere comunicata prima dell’interrogatorio. L’[articolo 95](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=95) richiede inoltre di informare la persona della facoltà di non rispondere, della possibilità di nominare un difensore e di chiedere l’acquisizione di prove favorevoli. L’accesso al sistema taiwanese di assistenza legale (法律扶助) richiede invece i requisiti previsti dalla norma. La cittadinanza straniera, da sola, non basta per accedervi."
+  },
+  {
+    "old_line": 58,
+    "new_line": 58,
+    "before": "Un volo già acquistato va comunicato tempestivamente, con richiesta di istruzioni e conferma dell’eventuale nuova data. Le questioni relative alla partenza richiedono inoltre la verifica di eventuali provvedimenti specifici. Non si ricavano dal solo titolo della convocazione.",
+    "after": "Un volo già acquistato va comunicato tempestivamente, con richiesta di istruzioni e conferma dell’eventuale nuova data. Se è in dubbio la partenza stessa, va verificato se esistano provvedimenti specifici nei propri confronti. Il solo titolo della convocazione non basta a saperlo."
+  }
+]

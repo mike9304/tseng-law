@@ -1,0 +1,32 @@
+[
+  {
+    "old_line": 14,
+    "new_line": 14,
+    "before": "featured_image_caption: \"Atelier fictif illustrant une interruption d'activité, sans lien avec un employeur ou un salarié réel.\"",
+    "after": "featured_image_caption: \"Scène fictive\""
+  },
+  {
+    "old_line": 38,
+    "new_line": 38,
+    "before": "## Une activité suspendue et une fermeture constatée",
+    "after": "## Activité suspendue ou fermeture constatée"
+  },
+  {
+    "old_line": 44,
+    "new_line": 44,
+    "before": "L'employeur doit aussi avoir cotisé au fonds. Une régularisation ultérieure des cotisations impayées peut permettre la demande, selon l'article 7 du même règlement. Le dossier doit donc vérifier cette participation. Une carte d'assurance du salarié ne répond pas, à elle seule, à toutes les conditions du fonds.",
+    "after": "L'employeur doit aussi avoir cotisé au fonds. Une régularisation ultérieure des cotisations impayées peut permettre la demande, selon l'article 7 du même règlement. Cette participation doit donc être vérifiée. Une carte d'assurance du salarié ne répond pas, à elle seule, à toutes les conditions du fonds."
+  },
+  {
+    "old_line": 56,
+    "new_line": 56,
+    "before": "## Un retour en France demande une organisation du dossier",
+    "after": "## Organiser le dossier avant de rentrer en France"
+  },
+  {
+    "old_line": 60,
+    "new_line": 60,
+    "before": "Une [demande de contact](/fr/contact) à [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) peut préciser, sans pièces sensibles, le nom de l'employeur, les mois impayés et l'existence d'une notification de fermeture. Les consultations se tiennent en anglais, chinois, japonais ou coréen ; les modalités linguistiques sont à convenir avant l'examen des documents. Cette information générale ne détermine pas une créance individuelle. Le tableau de paie et la preuve datée de cessation d'activité restent les deux points de départ du dossier.",
+    "after": "Une [demande de contact](/fr/contact) à [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) peut préciser, sans pièces sensibles, le nom de l'employeur, les mois impayés et l'existence d'une notification de fermeture. Les consultations se tiennent en anglais, chinois, japonais ou coréen ; la langue se règle avant l'examen des documents. Cette information générale ne détermine pas une créance individuelle. Le tableau de paie et la preuve datée de cessation d'activité restent les deux points de départ du dossier."
+  }
+]

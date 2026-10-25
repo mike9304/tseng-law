@@ -1,0 +1,4 @@
+COMMAND ['python3', '/Users/son7/tseng-lanes-shared/variety/variety_metrics.py', 'check', '/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-it/685-italian-brand-taiwan-distributor-trademark-registration.md', '--lang', 'it']
+EXIT 0
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-it/685-italian-brand-taiwan-distributor-trademark-registration.md [it] sentences=45 mean=15.3 cv=0.453 short=0.178 run3=0.0 opener_rep=0.25 cite_end=0.0 cite_para=0.438 contrast=0 caveat=0 q=1
+  OK — no variety limit violated

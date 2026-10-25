@@ -1,0 +1,38 @@
+--- src/content/columns-fr/674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.md @ a188e620
++++ src/content/columns-fr/674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.md @ reviewed working tree
+@@ -11,7 +11,7 @@
+ tags: ["exportateurs français", "factures impayées", "distribution", "avoirs", "recouvrement"]
+ featured_image: "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp"
+ featured_image_alt: "Une feuille vierge et un stylo dans un plateau en bois, devant une fenêtre donnant sur un port."
+-featured_image_caption: "Illustration fictive, sans document commercial ni litige réel représenté."
++featured_image_caption: "Scène fictive"
+ faq:
+   - q: "Un distributeur peut-il déduire tous les retours qu'il annonce ?"
+     a: "Le contrat, les conditions du retour et les preuves déterminent ce qui peut être déduit. Si le droit taïwanais s'applique, la compensation suppose notamment des dettes réciproques de même nature et toutes deux exigibles, sous réserve des exclusions de l'article 334 du Code civil. Une demande d'avoir doit donc être rapprochée des marchandises et de son fondement."
+@@ -31,7 +31,7 @@
+ 
+ Un tableau par facture devrait rapprocher le montant et la devise, l'échéance, les paiements reçus, les avoirs effectivement émis et les déductions demandées. Pour chaque retour, les références de lot, l'autorisation de retour, les quantités expédiées et la réception à l'entrepôt permettent de reconstituer le mouvement. Une simple demande commerciale peut ainsi être distinguée d'un retour accepté ou d'une réclamation pour défaut.
+ 
+-Qu'a précisément accepté l'exportateur ? Les échanges peuvent viser un geste commercial, une remise conditionnelle ou une prise en charge de produits endommagés. Le courriel complet, ses pièces jointes et les conditions de l'accord comptent davantage qu'une capture isolée. Les deux parties doivent aussi pouvoir comprendre si le montant proposé clôt toute la relation ou seulement certaines factures.
++Qu'a précisément accepté l'exportateur ? Les échanges peuvent viser un geste commercial, une remise conditionnelle ou une prise en charge de produits endommagés. Le courriel complet, ses pièces jointes et les conditions de l'accord comptent davantage qu'une capture isolée. Encore faut-il que les deux parties sachent si le montant proposé solde toute la relation ou seulement certaines factures.
+ 
+ Lorsque le droit taïwanais s'applique, [l'article 334 du Code civil](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=334) permet en principe la compensation de dettes réciproques de même nature, toutes deux exigibles. Il réserve les dettes dont la nature exclut la compensation et les accords qui l'interdisent. [L'article 335](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=335) exige une déclaration adressée à l'autre partie. Le montant, le fondement et l'exigibilité de la créance opposée par le distributeur doivent donc être examinés avant d'accepter son calcul.
+ 
+@@ -43,7 +43,7 @@
+ 
+ ## Ordonnance de paiement ou débat sur les marchandises
+ 
+-Pour une somme déterminée, la procédure taïwanaise de paiement, 支付命令, peut être envisagée sous [l'article 508 du Code de procédure civile](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508). Le créancier doit exposer les faits. Il doit aussi étayer sa demande, y compris sa propre exécution lorsqu'une contre-prestation est due ([article 511](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511)). Les bons de livraison deviennent alors décisifs.
++Pour une somme déterminée, la procédure taïwanaise de paiement, 支付命令, peut être envisagée sur le fondement de [l'article 508 du Code de procédure civile](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508). Le créancier doit exposer les faits. Il doit aussi étayer sa demande, y compris sa propre exécution lorsqu'une contre-prestation est due ([article 511](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511)). Les bons de livraison deviennent alors décisifs.
+ 
+ Après signification, le débiteur dispose de vingt jours pour former opposition, sans devoir la motiver ([article 516](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516)). L'affaire se poursuit comme action ou médiation dans la mesure contestée ([article 519](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=519)). Sans opposition valable dans le délai, l'ordonnance constitue un titre exécutoire ; le débiteur conserve néanmoins la possibilité d'engager une action contestant l'existence de la créance ([article 521](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=521)).
+ 
+@@ -53,7 +53,7 @@
+ 
+ Le recouvrement concerne ici l'acheteur identifié au contrat. Si une reprise d'entreprise est annoncée, la distinction entre [rachat de parts et achat d'actifs](/fr/columns/taiwan-business-takeover-shares-or-assets-foreign-buyer) évite de réclamer indistinctement le paiement au nouveau partenaire.
+ 
+-Pour une première orientation côté taïwanais, la [page de contact](/fr/contact) indique le canal de demande : [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Un résumé non sensible, le nom du distributeur pour la vérification des conflits et les échéances proches suffisent au premier échange. Les consultations se déroulent en anglais, chinois, japonais ou coréen ; les modalités linguistiques et la transmission sécurisée des pièces sont à convenir avant l'envoi du dossier. Ces informations générales ne remplacent pas l'analyse du contrat. La pièce de départ reste le décompte qui relie chaque retenue à un accord ou à une marchandise précise.
++Pour un premier avis sur le volet taïwanais, la [page de contact](/fr/contact) renvoie à l'adresse [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Au premier échange, un résumé sans données sensibles, le nom du distributeur pour la vérification des conflits d'intérêts et les échéances proches suffisent. Les consultations se déroulent en anglais, chinois, japonais ou coréen ; la langue et la transmission sécurisée des pièces se règlent avant l'envoi du dossier. Ces informations générales ne remplacent pas l'analyse du contrat. La pièce de départ reste le décompte qui relie chaque retenue à un accord ou à une marchandise précise.
+ 
+ ## Sources
+ 

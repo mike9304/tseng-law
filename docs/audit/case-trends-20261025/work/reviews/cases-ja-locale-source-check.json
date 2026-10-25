@@ -1,0 +1,141 @@
+{
+  "reviewer": "/root/review_ja_case_trends",
+  "review_date": "2026-10-25",
+  "official_reopened": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=2",
+      "claim": "Wage and average-wage definitions; article910 does not infer all expense reimbursements are wages.",
+      "read": "operative text"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=37",
+      "claim": "Rebuttable presumption for payment received from employer on an employment basis.",
+      "read": "operative text"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=29",
+      "claim": "Conditional year-end profit bonus/distribution provision; no fixed one-month guarantee.",
+      "read": "operative text"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=101",
+      "claim": "Improper prevention of condition fulfillment; used to cross-check910 qualification.",
+      "read": "operative text; pending code provisions166-1/1223 unrelated"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=98",
+      "claim": "True-intent contract interpretation.",
+      "read": "operative text"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=148",
+      "claim": "Good faith in rights and obligations.",
+      "read": "operative text"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=558",
+      "claim": "Statutory agent classification in principal's name.",
+      "read": "operative text"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=562",
+      "claim": "Same-business prohibition subject to principal permission, only for specified statutory actors.",
+      "read": "operative text"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=511",
+      "claim": "Ordering party's pre-completion termination and resulting contractor loss.",
+      "read": "operative text"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=597",
+      "claim": "Depositor's right to request return despite agreed return time.",
+      "read": "operative text"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+      "claim": "Choice of law and closest connection if valid express choice absent.",
+      "read": "operative text"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=36",
+      "claim": "International exhaustion and product alteration/damage/other legitimate-cause exception.",
+      "read": "operative text"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070001",
+      "claim": "2023amendment effective2024-05-01;2022amendments68/70/95–97 still pending.",
+      "read": "current history"
+    },
+    {
+      "url": "https://www.tipo.gov.tw/wSite/public/Attachment/0/f1745565087773.pdf",
+      "claim": "113台上882 facts, appeal dismissal and reproduced reasoning; J5 restores consumer-confusion and normative-knowledge nuance.",
+      "read": "all118extractedlines,5pages; reproduction rather than original complete court judgment"
+    },
+    {
+      "url": "https://www.jetro.go.jp/biznews/2026/10/ca0de82fe031927c.html",
+      "claim": "JETRO2026-10-06 next-year-wage deliberation context; draft does not announce new effective wage amounts.",
+      "read": "fullarticle"
+    },
+    {
+      "url": "https://www.koryu.or.jp/news/offer/?dispmid=4263&itemid=4901",
+      "claim": "2026-04-27 selected exhibitors forMEDICALTAIWAN; no inference of completed sales contracts.",
+      "read": "mainannouncementatlines982–991"
+    },
+    {
+      "url": "https://www.jetro.go.jp/world/reports/2026/01/b1847c5a62547dbc.html",
+      "claim": "2026-04-21 TaiwanEMS supply-chain report announcement and Japan-Taiwan complementarity.",
+      "read": "landingabstract; notall36reportpages"
+    },
+    {
+      "url": "https://www.jetro.go.jp/biznews/2026/10/6d578e5b5949d738.html",
+      "claim": "2026-10-02 report of permanent Japanese confectionery shop afterpopup; no connection to cited litigation.",
+      "read": "fullarticle"
+    },
+    {
+      "url": "https://tseng-law.com/ja/services",
+      "claim": "Taiwan employment,civilcontract andIP service fit.",
+      "read": "livepage"
+    },
+    {
+      "url": "https://tseng-law.com/ja/contact",
+      "claim": "Japanese consultation language, wei@hoveringlaw.com.tw, brief initial contact excluding sensitive information.",
+      "read": "livepage"
+    }
+  ],
+  "court_retrieval_limits": {
+    "direct_attempts": "C1,C2,C3 officialURL and later saved-reference attempts timedout; not newly retrieved bythisreviewer.",
+    "local_evidence_read": [
+      "work/research/ja-case-web-reads.json",
+      "work/research/ja-author-indexed-court-text.json",
+      "work/research/ja-author-evidence.md",
+      "work/research/ja-research.md",
+      "work/research/ja-sources.json"
+    ],
+    "extent": "SavedC1courtparagraphs50–58 + extensiveindexedofficialtext through dispositive reasoning; savedC2order/proceduraltext + indexednoncompetecontractanalysis; savedC3paragraphs74–79 + researcher's scoped evidencenotes. Also read final reviewer's cases-ja-final-source-captures.json responses ja-final-case-index and ja-final-case-index3: indexed official C3 text covers call testimony, correction email, subsequent oral assent, court's evaluation, refusal to apply511 convenience termination, subcontractor locations and conditional quantity agreement. No false full-original reread claim.",
+    "followup_finality": "Final reviewer found official indexed full short order 臺北115司他277,2026-06-08; locale reviewer read that saved text in cases-ja-final-source-captures.json ja-final-case-index4. It states114勞訴257 partly favorable/adverse judgment became final. Author asked to attribute this fact to the later order, not assert independent certificate/appeal-chain verification."
+  },
+  "images": {
+    "ids": [
+      910,
+      911,
+      912,
+      913
+    ],
+    "method": "view_image each actualWebP",
+    "result": "alt/captionmatches; illustrativecaption; no readable case documents/logos/flags"
+  },
+  "mandatory_docs": {
+    "read": [
+      "repo/AGENTS.md editorial sections",
+      "repo/docs/columns/EDITORIAL-VOICE.md",
+      "COLUMN-VOICE-RULE.md",
+      "SENTENCE-VARIETY-RULE.md",
+      "LESSONS.md",
+      "tseng-law-editorial/SKILL.md",
+      "tseng-law-editorial/references/review-criteria.md",
+      "work/EDITORIAL-BRIEF.md"
+    ],
+    "alias_limit": "~/agent-library/knowledge/editorial-voice.md absent; current repository copy read."
+  }
+}

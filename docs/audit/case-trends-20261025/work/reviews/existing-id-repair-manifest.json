@@ -1,0 +1,54 @@
+{
+  "file": "src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+  "base_commit": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+  "before_sha256": "a93789bd548ad3eec8923fc57ba384194b4f0a45d488b4a1f361e386ff11d709",
+  "after_sha256": "75aca1f1bbce526d813c25ff639cb2439a864a9a03507f79583e34d646044196",
+  "repair_passes": 2,
+  "variety": {
+    "before": {
+      "cv": 0.442,
+      "exit": 1
+    },
+    "pass1": {
+      "cv": 0.446,
+      "exit": 1
+    },
+    "final": {
+      "sentences": 57,
+      "cv": 0.456,
+      "short": 0.193,
+      "run3": 0.036,
+      "opener_rep": 0.0,
+      "cite_end": 0.0,
+      "contrast": 0,
+      "questions": 2,
+      "exit": 0,
+      "fail": 0
+    }
+  },
+  "preservation": {
+    "all_markdown_urls_same_order": true,
+    "url_occurrences": 28,
+    "body_numbers_same_order": true,
+    "body_number_tokens": 77,
+    "frontmatter_identical_except_lastmod": true,
+    "faq_unchanged": true,
+    "image_fields_unchanged": true,
+    "headings_unchanged": true,
+    "legal_propositions_changed": false,
+    "worded_periods_unchanged": true,
+    "no_bold": true
+  },
+  "official_refresh": {
+    "date": "2026-10-25",
+    "scope": "Civil Code 356 and 365 only; no full legal re-audit claimed",
+    "urls": [
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=356",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=365"
+    ],
+    "compilation_cutoff_shown": "2026-10-16",
+    "not_effective_notice": "166-1 and 1223; neither applies to these two provisions"
+  },
+  "independent_review": "Requested from /root/recheck_market_changes on final SHA; pending at report creation",
+  "published": false
+}

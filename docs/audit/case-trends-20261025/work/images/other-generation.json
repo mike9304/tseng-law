@@ -1,0 +1,272 @@
+{
+  "engine": "native imagegen",
+  "scenes": [
+    {
+      "id": 906,
+      "scene": "In a small contemporary publishing studio, several beautifully bound books with completely blank covers lie beside an open manuscript proof consisting only of abstract gray lines and a plain licensing folder. A printing press is gently out of focus in the background. Close editorial view, warm paper textures. No people. About exclusive book publishing permissions and their documentary proof."
+    },
+    {
+      "id": 907,
+      "scene": "An attractive but completely unbranded small apparel pop-up inside a modern Taiwan department store: simple clothing rack, folded garments, and a plain blank shop fascia with absolutely no lettering or symbols. View from outside the shop, natural ambient light, no people. About the distinction between selling genuine goods and presenting a store as an authorized brand outlet."
+    },
+    {
+      "id": 908,
+      "scene": "A quiet office desk after sunset, laptop with a dim abstract dark screen and a phone showing just a few blank notification rectangles, a closed notebook and a half-finished glass of water. Window reveals a soft Taiwanese city evening. No people or readable clocks. About evidence of work messages sent after office hours; realistic restrained editorial photograph."
+    },
+    {
+      "id": 909,
+      "scene": "A small travel-planning still life at home: a compact suitcase beside a table, a plain unbranded passport-sized booklet with no emblem, blank travel papers held by a paperclip, and an opened envelope. Daylight and slight everyday imperfection. No people, no text. About retaining travel payment and cancellation records for a refund dispute."
+    },
+    {
+      "id": 914,
+      "scene": "A contemporary corporate meeting room table with two differently colored unmarked company folders, a modest laptop with a blank neutral screen, and a single plain share-certificate-shaped sheet with only abstract ruled lines. Large window with a distant Taiwan business district. Editorial photography of cross-border executive compensation and determining which company promised a share bonus; no people."
+    },
+    {
+      "id": 915,
+      "scene": "A civil infrastructure project office: a well-used hard hat and a rolled site plan with no readable text rest beside two separate thick unmarked claim binders, with a small precise bridge model near the window. Natural overcast daylight, construction site softly out of focus. No people. About keeping a public-works mediation claim aligned with a later arbitration claim."
+    },
+    {
+      "id": 916,
+      "scene": "A quiet retired electronics factory exterior in Taiwan, intact older industrial buildings and a small patch of exposed soil in foreground. A clean sealed transparent sampling jar and field notebook with no readable text sit on a low portable table, suggesting environmental due diligence, not an accident scene. No smoke, no victims, no people, no corporate signs. Documentary-like editorial photograph with muted daylight."
+    },
+    {
+      "id": 917,
+      "scene": "A contemporary film distribution office still life: one empty metal film reel beside an unmarked dark media-drive case and two separate plain contract folders, a small projector out of focus behind them. Natural window light and realistic textures. No movie imagery, no people, no logos or text. About identifying the actual corporate contracting party in a film licensing and loan dispute."
+    },
+    {
+      "id": 918,
+      "scene": "Inside a bright newly completed ordinary Taiwan apartment with light tile floors: an unopened key envelope, a few plain mortgage-paper folders and a sealed cardboard moving box sit on a simple temporary table near the doorway. Clean unfinished move-in feeling, city buildings outside, no people. About the difference between being asked to arrange a mortgage and receiving a handover notice."
+    },
+    {
+      "id": 919,
+      "scene": "An ordinary Taiwan office meeting room seen from the doorway, with three separate chairs around a small table and a closed unmarked evidence folder in the center. Soft natural daylight, neutral workplace atmosphere, no people and no dramatic accusations. Editorial scene about giving employees a fair opportunity to respond during a workplace investigation."
+    },
+    {
+      "id": 920,
+      "scene": "A realistic clean Taiwan apartment-building underground parking bay with a compact unbranded electric vehicle connected to a neatly wall-mounted home charging unit. Visible orderly cable conduit follows a concrete column and ceiling, showing the common-area installation path. No license plate characters, no people, no logos, no writing. Editorial photograph, practical everyday lighting, not a luxury car advertisement."
+    },
+    {
+      "id": 921,
+      "scene": "A quiet home gaming corner: an unbranded game controller beside a laptop with a softly glowing abstract geometric game screen, no characters or recognizable game artwork. A few plain round colored tokens and a closed payment-record notebook sit nearby, suggesting paid game credits versus in-game coins. No people, no text, warm evening desk lighting, natural editorial photography."
+    }
+  ],
+  "files": [
+    {
+      "id": 906,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-baeefe1d-b048-49f9-93cb-7867e5359907.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/906-case-trends-20261025.webp",
+      "bytes": 168546,
+      "sha256": "0c4e4598ca2c72c261b4b1352712d6c21e1921064daf71ee59b758d8a915b093",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    },
+    {
+      "id": 907,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-c759c941-5a69-4055-ad5d-01a87ea8a0bd.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/907-case-trends-20261025.webp",
+      "bytes": 196210,
+      "sha256": "1b9512e62f4c0f27e10c3a86f3cf020b3a4a787e0a00b4177cdcd5d9bb22a338",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    },
+    {
+      "id": 908,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-ad4ecef6-d9f0-4e62-b23d-6b98584da664.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/908-case-trends-20261025.webp",
+      "bytes": 97920,
+      "sha256": "af46717e0b3da9c1aa25c7575e103a67b66317195c333b4398e441ae3befb392",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    },
+    {
+      "id": 909,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-0f4e6534-f786-4cbd-8b2f-c6ba269316d3.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/909-case-trends-20261025.webp",
+      "bytes": 143468,
+      "sha256": "e17c318142deaac700fdea9bc48bd19d1821ff5191b8b19d87364d42078fbf14",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    },
+    {
+      "id": 914,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-730a36e0-a839-453e-ac10-d322421984b5.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/914-case-trends-20261025.webp",
+      "bytes": 133216,
+      "sha256": "880ba33632ea6869218acad0b20ff99a12f4d1bcef7b5e102cff67e5042071da",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    },
+    {
+      "id": 915,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-9d383b05-00a0-4257-8950-142e14e056f3.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/915-case-trends-20261025.webp",
+      "bytes": 157754,
+      "sha256": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-490ca56b-76d4-44d6-87ff-82e65eae1e0d.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/916-case-trends-20261025.webp",
+      "bytes": 299298,
+      "sha256": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    },
+    {
+      "id": 917,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-96e0d5f9-b0ee-4a42-a4ad-32bf22ffa3e0.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/917-case-trends-20261025.webp",
+      "bytes": 120252,
+      "sha256": "8d2545e82baa9d2853fda1f6eaaee75881170ca4b41abfe8a3392a8bffb49199",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    },
+    {
+      "id": 918,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-6561926d-0597-4084-baa4-f23b7b350077.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/918-case-trends-20261025.webp",
+      "bytes": 103074,
+      "sha256": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    },
+    {
+      "id": 919,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-d0fa60c0-6c81-4074-978c-5ab40ff306e9.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/919-case-trends-20261025.webp",
+      "bytes": 146756,
+      "sha256": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    },
+    {
+      "id": 920,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-fbb38a5b-61c9-467f-bd29-12493f52ad29.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/920-case-trends-20261025.webp",
+      "bytes": 183782,
+      "sha256": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-68b381b8-5e58-4c26-8289-526644b6af39.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/921-case-trends-20261025.webp",
+      "bytes": 122822,
+      "sha256": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    }
+  ],
+  "root_visual_check": "All twelve images directly inspected in tool output. Subject matches assigned case theme, no readable material captions, personal case identifiers, logos or dramatic fabricated court evidence. Fictional scene label mandatory."
+}

@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-25T12:09:54.276366+00:00",
+  "typecheck": {
+    "command": "npm run typecheck",
+    "exit_code": 0,
+    "log": "work/checks/typecheck.log"
+  },
+  "unit": {
+    "scope": "19 existing content integration suites; 954 distinct tests",
+    "initial_run": "work/checks/content-unit.log",
+    "initial_failure": "sparse checkout omitted tests/setup.ts; no tests executed",
+    "second_run": "work/checks/content-unit-r2.log",
+    "second_result": "930 passed,24 failed:20 missing older sparse assets and4 unregistered new publication dates",
+    "repair": "Added tracked old asset directories to sparse checkout; registered dates906–921 without weakening assertions",
+    "targeted_run": "work/checks/content-unit-r3-targeted.log",
+    "targeted_result": "3 suites,86 tests PASS,including all24 failed assertions",
+    "effective_result": "All954 selected distinct content assertions pass across final successful runs",
+    "frozen_run": "work/checks/content-unit-final.log",
+    "frozen_result": "19 suites,954 tests PASS after all author repairs"
+  },
+  "verifier_count_adaptation": "work/checks/verifier-count-selftest.json:5/5 accepted/rejection tests PASS",
+  "browser": {
+    "performed": false,
+    "reason": "Selected Chrome API rejected navigation because admin-enforced policy could not be verified. No bypass or alternate UI mechanism attempted. HTTP verification is separately scoped."
+  },
+  "publication": "Not yet deployed at this check"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "old_line": 17,
+    "new_line": 17,
+    "before": "featured_image_caption: \"Symbolbild zu Verfahrensunterlagen und Vermögen in Taiwan; das Gebäudemodell steht für kein bestimmtes Vollstreckungsobjekt.\"",
+    "after": "featured_image_caption: \"Fiktive Szene\""
+  },
+  {
+    "old_line": 29,
+    "new_line": 29,
+    "before": "Für einen deutschen Lieferanten sind deshalb zwei Unterlagenpakete vorzubereiten: die Akte des deutschen Verfahrens und konkrete Hinweise auf Vermögen des verurteilten Schuldners in Taiwan. Ein Konzernlogo oder die Adresse eines verbundenen Unternehmens verbindet beides noch nicht. Schuldner und Vermögensinhaber müssen genau identifiziert werden.",
+    "after": "Ein deutscher Lieferant braucht deshalb zwei Unterlagenpakete: die Akte des deutschen Verfahrens und konkrete Hinweise auf Vermögen des verurteilten Schuldners in Taiwan. Ein Konzernlogo oder die Adresse eines verbundenen Unternehmens verbindet beides noch nicht. Schuldner und Vermögensinhaber müssen genau identifiziert werden."
+  },
+  {
+    "old_line": 37,
+    "new_line": 37,
+    "before": "Die taiwanesische Prüfung folgt den eigenen gesetzlichen Voraussetzungen. Eine Behandlung wie bei der grenzüberschreitenden Vollstreckung innerhalb der EU darf für Taiwan nicht vorausgesetzt werden; maßgeblich bleibt Artikel 4-1. Für einen Schiedsspruch ist wiederum das dafür vorgesehene Verfahren zu prüfen. Die Bezeichnung des Dokuments sollte daher gleich am Anfang feststehen.",
+    "after": "Die taiwanesische Prüfung folgt den eigenen gesetzlichen Voraussetzungen. Die vereinfachte Vollstreckung, wie sie innerhalb der EU üblich ist, lässt sich auf Taiwan nicht übertragen; maßgeblich bleibt Artikel 4-1. Für einen Schiedsspruch gilt wiederum ein eigenes Verfahren. Deshalb sollte gleich zu Beginn feststehen, um welche Art von Titel es sich handelt."
+  },
+  {
+    "old_line": 56,
+    "new_line": 56,
+    "before": "Jedes Anerkennungsthema erhält in der Arbeitsübersicht seine Fundstelle. Der Vertrag und eine Gerichtsstandsvereinbarung können etwa die Zuständigkeitsfrage betreffen; die Zustellungsurkunde beantwortet eine andere Frage. Fehlende Dokumente sollten gezielt beim deutschen Gericht oder der bisherigen Vertretung beschafft werden. Welche beglaubigten Ausfertigungen, chinesischen Übersetzungen und Bestätigungen ausländischer Unterlagen benötigt werden, sollte anschließend mit der Rechtsvertretung für das Verfahren in Taiwan abgestimmt werden.",
+    "after": "Für jedes Anerkennungshindernis sollte feststehen, welches Dokument es belegt. Der Vertrag und eine Gerichtsstandsvereinbarung können etwa die Zuständigkeitsfrage betreffen; die Zustellungsurkunde beantwortet eine andere Frage. Fehlende Dokumente sollten gezielt beim deutschen Gericht oder der bisherigen Vertretung beschafft werden. Welche beglaubigten Ausfertigungen, chinesischen Übersetzungen und Bestätigungen ausländischer Unterlagen benötigt werden, sollte anschließend mit der Rechtsvertretung für das Verfahren in Taiwan abgestimmt werden."
+  },
+  {
+    "old_line": 70,
+    "new_line": 70,
+    "before": "Eine erste [Anfrage zur Vollstreckung in Taiwan](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) kann Gericht, Entscheidungsdatum, Schuldnernamen, Taiwan-Vermögensbezug und anstehende Fristen nennen; die Kommunikation auf Englisch, Chinesisch, Japanisch oder Koreanisch ist zunächst abzustimmen. Vollständige Akten und vertrauliche Vermögensangaben folgen nach Absprache. Für die nächste Aktenanforderung lässt sich konkret prüfen, ob der Nachweis fehlt, wann und wie das deutsche Verfahren dem Beklagten eröffnet wurde.",
+    "after": "Eine erste [Anfrage zur Vollstreckung in Taiwan](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) kann Gericht, Entscheidungsdatum, Schuldnernamen, Taiwan-Vermögensbezug und anstehende Fristen nennen. Beraten wird auf Englisch, Chinesisch, Japanisch oder Koreanisch; die Sprache wird vorab abgestimmt. Vollständige Akten und vertrauliche Vermögensangaben folgen nach Absprache. Vor der nächsten Aktenanforderung steht eine konkrete Frage: Ist belegt, wann und wie dem Beklagten das deutsche Verfahren eröffnet wurde?"
+  }
+]

@@ -1,0 +1,209 @@
+{
+  "reviewer": "/root/final_ko_case_trends",
+  "checked_on": "2026-10-25",
+  "repair_pass": 1,
+  "articles": [
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/906-korean-publisher-exclusive-license-taiwan-complaint.md",
+      "relative_path": "src/content/columns/906-korean-publisher-exclusive-license-taiwan-complaint.md",
+      "sha256": "2d6e08cf1030b60f715ef3026f0c27d462a421c240811f3b6a0ec84c0bb7b074",
+      "expected_author_freeze_sha256": "2d6e08cf1030b60f715ef3026f0c27d462a421c240811f3b6a0ec84c0bb7b074",
+      "freeze_match": true,
+      "mtime": "2026-10-25T12:15:41.437Z",
+      "verified_at": "2026-10-25T12:19:21.490Z",
+      "unchanged_during_check": true,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/906-korean-publisher-exclusive-license-taiwan-complaint.md",
+        "--lang",
+        "ko"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/906-korean-publisher-exclusive-license-taiwan-complaint.md [ko] sentences=33 mean=44.4 cv=0.458 short=0.152 run3=0.0 opener_rep=0.083 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=1\n  WARN 91% of sentences end in '니다.' — vary endings within the register\n",
+      "stderr": "",
+      "metadata": {
+        "author": "legal-ai-assistant",
+        "audience": [
+          "ko"
+        ],
+        "published": "2026-10-25",
+        "lastmod": "2026-10-25",
+        "faq_count": 3,
+        "featured_image": "/images/columns/906-case-trends-20261025.webp",
+        "alt": "인쇄기 앞 책상에 놓인 무지 표지의 책과 펼친 책, 갈색 서류봉투",
+        "caption": "가상의 장면",
+        "no_bold": true,
+        "mailto_count": 1,
+        "inline_official_urls": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=37",
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSM%2C112%2C%E5%8F%B0%E4%B8%8A%2C2369%2C20230713%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=36",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=28",
+          "https://welcon.kocca.kr/en/info/business/1957981"
+        ],
+        "inline_urls_missing_from_closing": []
+      },
+      "asset": {
+        "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/906-case-trends-20261025.webp",
+        "bytes": 168546,
+        "sha256": "0c4e4598ca2c72c261b4b1352712d6c21e1921064daf71ee59b758d8a915b093",
+        "same_as_visually_reviewed": true,
+        "actual_webp": true
+      }
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/907-korean-brand-parallel-import-store-signs-taiwan.md",
+      "relative_path": "src/content/columns/907-korean-brand-parallel-import-store-signs-taiwan.md",
+      "sha256": "46951a4b957b195451b86fe8148f0a104524beb1fc408511ace5cb218c48c8bc",
+      "expected_author_freeze_sha256": "46951a4b957b195451b86fe8148f0a104524beb1fc408511ace5cb218c48c8bc",
+      "freeze_match": true,
+      "mtime": "2026-10-25T12:17:20.567Z",
+      "verified_at": "2026-10-25T12:19:21.491Z",
+      "unchanged_during_check": true,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/907-korean-brand-parallel-import-store-signs-taiwan.md",
+        "--lang",
+        "ko"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/907-korean-brand-parallel-import-store-signs-taiwan.md [ko] sentences=45 mean=38.1 cv=0.465 short=0.133 run3=0.047 opener_rep=0.0 cite_end=0.0 cite_para=0.4 contrast=0 caveat=1 q=0\n  WARN 93% of sentences end in '니다.' — vary endings within the register\n",
+      "stderr": "",
+      "metadata": {
+        "author": "legal-ai-assistant",
+        "audience": [
+          "ko"
+        ],
+        "published": "2026-10-25",
+        "lastmod": "2026-10-25",
+        "faq_count": 3,
+        "featured_image": "/images/columns/907-case-trends-20261025.webp",
+        "alt": "글자 없는 간판 아래 의류 행거와 나무 진열대가 놓인 매장",
+        "caption": "가상의 장면",
+        "no_bold": true,
+        "mailto_count": 1,
+        "inline_official_urls": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=IPCV%2C114%2C%E6%B0%91%E5%95%86%E4%B8%8A%2C11%2C20260514%2C1",
+          "https://www.kotra.or.kr/upload/2026/06/18/BM202606180000099826_0.pdf",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=36",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=5",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070001"
+        ],
+        "inline_urls_missing_from_closing": []
+      },
+      "asset": {
+        "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/907-case-trends-20261025.webp",
+        "bytes": 196210,
+        "sha256": "1b9512e62f4c0f27e10c3a86f3cf020b3a4a787e0a00b4177cdcd5d9bb22a338",
+        "same_as_visually_reviewed": true,
+        "actual_webp": true
+      }
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/908-korean-team-taiwan-after-hours-messages-overtime.md",
+      "relative_path": "src/content/columns/908-korean-team-taiwan-after-hours-messages-overtime.md",
+      "sha256": "e6e4a02f355c9150bab26339f5a42f3385937882c4f1699e5ea25f75425654cf",
+      "expected_author_freeze_sha256": "e6e4a02f355c9150bab26339f5a42f3385937882c4f1699e5ea25f75425654cf",
+      "freeze_match": true,
+      "mtime": "2026-10-25T12:11:51.389Z",
+      "verified_at": "2026-10-25T12:19:21.490Z",
+      "unchanged_during_check": true,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/908-korean-team-taiwan-after-hours-messages-overtime.md",
+        "--lang",
+        "ko"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/908-korean-team-taiwan-after-hours-messages-overtime.md [ko] sentences=49 mean=36.5 cv=0.453 short=0.102 run3=0.021 opener_rep=0.133 cite_end=0.0 cite_para=0.467 contrast=0 caveat=2 q=1\n  WARN 90% of sentences end in '니다.' — vary endings within the register\n",
+      "stderr": "",
+      "metadata": {
+        "author": "legal-ai-assistant",
+        "audience": [
+          "ko"
+        ],
+        "published": "2026-10-25",
+        "lastmod": "2026-10-25",
+        "faq_count": 3,
+        "featured_image": "/images/columns/908-case-trends-20261025.webp",
+        "alt": "해 질 녘 도시를 배경으로 노트북, 알림 화면의 휴대전화와 닫힌 노트가 놓인 책상",
+        "caption": "가상의 장면",
+        "no_bold": true,
+        "mailto_count": 1,
+        "inline_official_urls": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C114%2C%E5%8B%9E%E4%B8%8A%E6%98%93%2C13%2C20260422%2C1",
+          "https://www.worldjob.or.kr/advnc/epmtLink.do?joCrtfcNo=E20260629006&joCrtfcDsp=1&joCrtfcDspSn=1&menuId=1000002033",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=38",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=33",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=24",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=30"
+        ],
+        "inline_urls_missing_from_closing": []
+      },
+      "asset": {
+        "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/908-case-trends-20261025.webp",
+        "bytes": 97920,
+        "sha256": "af46717e0b3da9c1aa25c7575e103a67b66317195c333b4398e441ae3befb392",
+        "same_as_visually_reviewed": true,
+        "actual_webp": true
+      }
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/909-korean-traveler-taiwan-refund-claim-deadline.md",
+      "relative_path": "src/content/columns/909-korean-traveler-taiwan-refund-claim-deadline.md",
+      "sha256": "a07b7e007c256f059801a6077e7dee33607f1b047d787bdaf2a0b4f10e63cffc",
+      "expected_author_freeze_sha256": "a07b7e007c256f059801a6077e7dee33607f1b047d787bdaf2a0b4f10e63cffc",
+      "freeze_match": true,
+      "mtime": "2026-10-25T12:14:56.513Z",
+      "verified_at": "2026-10-25T12:19:21.491Z",
+      "unchanged_during_check": true,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/909-korean-traveler-taiwan-refund-claim-deadline.md",
+        "--lang",
+        "ko"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/909-korean-traveler-taiwan-refund-claim-deadline.md [ko] sentences=39 mean=38.1 cv=0.46 short=0.103 run3=0.0 opener_rep=0.071 cite_end=0.026 cite_para=0.429 contrast=0 caveat=0 q=1\n  WARN 90% of sentences end in '니다.' — vary endings within the register\n",
+      "stderr": "",
+      "metadata": {
+        "author": "legal-ai-assistant",
+        "audience": [
+          "ko"
+        ],
+        "published": "2026-10-25",
+        "lastmod": "2026-10-25",
+        "faq_count": 3,
+        "featured_image": "/images/columns/909-case-trends-20261025.webp",
+        "alt": "여행 가방 옆 테이블에 놓인 붉은 표지 수첩과 서류봉투, 글자 없는 종이",
+        "caption": "가상의 장면",
+        "no_bold": true,
+        "mailto_count": 1,
+        "inline_official_urls": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=514-12",
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPEV%2C114%2C%E5%8C%97%E5%B0%8F%2C5039%2C20260206%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=144",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=130",
+          "https://admin.taiwan.net.tw/News/NewsTravel?a=35&id=36518",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=514-1"
+        ],
+        "inline_urls_missing_from_closing": []
+      },
+      "asset": {
+        "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/909-case-trends-20261025.webp",
+        "bytes": 143468,
+        "sha256": "e17c318142deaac700fdea9bc48bd19d1821ff5191b8b19d87364d42078fbf14",
+        "same_as_visually_reviewed": true,
+        "actual_webp": true
+      }
+    }
+  ]
+}

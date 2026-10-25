@@ -1,0 +1,16 @@
+Internal Error ()
+citeturn1208view0 [wordlim: 200] Source: open({"ref_id":"https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693","lineno":null}); Total lines: 1
+L0: Failed to fetch https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693: (400) Timeout fetching
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn1208view1 [wordlim: 200] Source: open({"ref_id":"https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523","lineno":null}); Total lines: 1
+L0: Failed to fetch https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523: (400) Timeout fetching
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn1208view2 [wordlim: 200] Source: open({"ref_id":"https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV%2C112%2C%E9%87%8D%E5%8B%9E%E4%B8%8A%2C14%2C20251230%2C1","lineno":null}); Total lines: 1
+L0: Failed to fetch https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV%2C112%2C%E9%87%8D%E5%8B%9E%E4%B8%8A%2C14%2C20251230%2C1: (400) Timeout fetching
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn1208view3 [wordlim: 200] Source: open({"ref_id":"https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV%2C113%2C%E9%87%8D%E4%B8%8A%E6%9B%B4%E4%B8%89%2C14%2C20250325%2C1","lineno":null}); Total lines: 1
+L0: Failed to fetch https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV%2C113%2C%E9%87%8D%E4%B8%8A%E6%9B%B4%E4%B8%89%2C14%2C20250325%2C1: (400) Timeout fetching
+

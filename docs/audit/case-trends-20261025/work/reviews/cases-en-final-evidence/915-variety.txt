@@ -1,0 +1,2 @@
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md [en] sentences=39 mean=15.5 cv=0.48 short=0.179 run3=0.027 opener_rep=0.077 cite_end=0.0 cite_para=0.231 contrast=0 caveat=0 q=1
+  OK — no variety limit violated

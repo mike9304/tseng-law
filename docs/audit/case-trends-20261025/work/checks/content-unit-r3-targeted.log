@@ -1,0 +1,16 @@
+
+> sejong-law@0.1.0 test:unit
+> vitest run src/lib/__tests__/columns-publication-date.test.ts src/lib/__tests__/expertise-columns-20260930.test.ts src/lib/__tests__/native-locale-columns-20260929.test.ts --testTimeout=30000
+
+
+ RUN  v3.2.6 /Users/son7/tseng-case-trends-20261025/repo
+
+ ✓ |unit| src/lib/__tests__/expertise-columns-20260930.test.ts (37 tests) 1170ms
+ ✓ |unit| src/lib/__tests__/native-locale-columns-20260929.test.ts (37 tests) 1583ms
+ ✓ |unit| src/lib/__tests__/columns-publication-date.test.ts (12 tests) 639ms
+
+ Test Files  3 passed (3)
+      Tests  86 passed (86)
+   Start at  21:06:33
+   Duration  2.12s (transform 95ms, setup 10ms, collect 224ms, tests 3.39s, environment 0ms, prepare 89ms)
+

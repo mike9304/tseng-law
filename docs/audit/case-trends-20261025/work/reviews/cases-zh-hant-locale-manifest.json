@@ -1,0 +1,184 @@
+{
+  "status": "PASS",
+  "locale": "zh-hant",
+  "review_date": "2026-10-25",
+  "scope": "Independent whole-text locale review of frozen manuscripts; no manuscript edits or publication",
+  "reviewer": "/root/review_zh_case_trends",
+  "human_review_claim": false,
+  "source_limitations": [
+    "919 court press-release official body from same-run captured OPEN; no full-judgment or finality claim",
+    "920 court original reasoning from recovered same-run official OPEN; no finality claim",
+    "918 P3 direct reviewer OPEN timed out; full narrow claim verified against researcher same-run official OPEN and final-review independent official search body"
+  ],
+  "evidence": [
+    "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-zh-hant-locale-summary.md",
+    "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-zh-hant-locale-variety.json",
+    "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-zh-hant-locale-source-evidence.json",
+    "/Users/son7/tseng-case-trends-20261025/work/research/zh-hant-presale-audit-primary-recovered.md",
+    "/Users/son7/tseng-case-trends-20261025/work/research/zh-hant-ev-primary-recovered.md"
+  ],
+  "articles": [
+    {
+      "id": 918,
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "581af61bc4b3dbb692a77dcad925503bcda1ef323085d034561bf3438521f29f",
+      "status": "PASS",
+      "reviewer": "/root/review_zh_case_trends",
+      "independent_of_author": true,
+      "report": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-zh-hant-locale-918-r1.md",
+      "report_sha256": "2b073a591905881bbe249b4d99642728fcaa741c65fc846611a172c2fbe2ce6a",
+      "repair_passes": 0,
+      "variety": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+          "--lang",
+          "zh-hant"
+        ],
+        "exit_code": 0,
+        "fail_count": 0,
+        "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md [zh-hant] sentences=30 mean=37.6 cv=0.487 short=0.133 run3=0.071 opener_rep=0.083 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+      },
+      "opening_deletion_test": "PASS; sentence-specific evidence in report",
+      "three_recent_same_locale_comparators": [
+        704,
+        705,
+        706
+      ],
+      "comparator_dates": "2026-10-24",
+      "rule_5": "PASS; evidence in report",
+      "image": {
+        "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/918-case-trends-20261025.webp",
+        "sha256": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+        "visually_inspected": true,
+        "alt_matches_visible_content": true,
+        "caption": "虛構情境"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "id": 919,
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "status": "PASS",
+      "reviewer": "/root/review_zh_case_trends",
+      "independent_of_author": true,
+      "report": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-zh-hant-locale-919-r1.md",
+      "report_sha256": "22f3ee4cbb0199532d55faaed069dff6bc3b103d1e290a3fd2620da652aae3c5",
+      "repair_passes": 0,
+      "variety": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+          "--lang",
+          "zh-hant"
+        ],
+        "exit_code": 0,
+        "fail_count": 0,
+        "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [zh-hant] sentences=31 mean=34.8 cv=0.459 short=0.129 run3=0.0 opener_rep=0.091 cite_end=0.0 cite_para=0.182 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n"
+      },
+      "opening_deletion_test": "PASS; sentence-specific evidence in report",
+      "three_recent_same_locale_comparators": [
+        704,
+        705,
+        706
+      ],
+      "comparator_dates": "2026-10-24",
+      "rule_5": "PASS; evidence in report",
+      "image": {
+        "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/919-case-trends-20261025.webp",
+        "sha256": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+        "visually_inspected": true,
+        "alt_matches_visible_content": true,
+        "caption": "虛構情境"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "id": 920,
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "882c912a8bb558358e549ad79b526b4428cf48a60cc32e968c295aa37b3f00b5",
+      "status": "PASS",
+      "reviewer": "/root/review_zh_case_trends",
+      "independent_of_author": true,
+      "report": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-zh-hant-locale-920-r2.md",
+      "report_sha256": "be70ddc32e3a1a207ee91d653512b692679c67f440dd410ecae8b1977dccf59a",
+      "repair_passes": 1,
+      "variety": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "--lang",
+          "zh-hant"
+        ],
+        "exit_code": 0,
+        "fail_count": 0,
+        "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md [zh-hant] sentences=29 mean=38.9 cv=0.57 short=0.103 run3=0.037 opener_rep=0.0 cite_end=0.0 cite_para=0.364 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+      },
+      "opening_deletion_test": "PASS; sentence-specific evidence in report",
+      "three_recent_same_locale_comparators": [
+        704,
+        705,
+        706
+      ],
+      "comparator_dates": "2026-10-24",
+      "rule_5": "PASS; evidence in report",
+      "image": {
+        "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/920-case-trends-20261025.webp",
+        "sha256": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+        "visually_inspected": true,
+        "alt_matches_visible_content": true,
+        "caption": "虛構情境"
+      },
+      "unresolved_issues": []
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "f8067f5da68c76957f371d7aa09fb736f53128a784b7191efc7e90ca0e7fb3ff",
+      "status": "PASS",
+      "reviewer": "/root/review_zh_case_trends",
+      "independent_of_author": true,
+      "report": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-zh-hant-locale-921-r1.md",
+      "report_sha256": "667b111628e9eec808079843572fc8539ef23b047f4fd5f49c737ea1f762c85b",
+      "repair_passes": 0,
+      "variety": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+          "--lang",
+          "zh-hant"
+        ],
+        "exit_code": 0,
+        "fail_count": 0,
+        "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md [zh-hant] sentences=33 mean=33.6 cv=0.472 short=0.152 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n"
+      },
+      "opening_deletion_test": "PASS; sentence-specific evidence in report",
+      "three_recent_same_locale_comparators": [
+        704,
+        705,
+        706
+      ],
+      "comparator_dates": "2026-10-24",
+      "rule_5": "PASS; evidence in report",
+      "image": {
+        "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/921-case-trends-20261025.webp",
+        "sha256": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933",
+        "visually_inspected": true,
+        "alt_matches_visible_content": true,
+        "caption": "虛構情境"
+      },
+      "unresolved_issues": []
+    }
+  ],
+  "unresolved_issues": [],
+  "next_step": "Independent final legal review and root integration at these exact hashes; re-review any later edits"
+}

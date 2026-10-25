@@ -1,0 +1,32 @@
+[
+  {
+    "old_line": 17,
+    "new_line": 17,
+    "before": "featured_image_caption: \"Illustration einer Maschinenprüfung; die Unterlagen sind keine tatsächlichen Prüfprotokolle.\"",
+    "after": "featured_image_caption: \"Fiktive Szene\""
+  },
+  {
+    "old_line": 31,
+    "new_line": 31,
+    "before": "## Abnahmebegriffe brauchen einen Vertragsinhalt",
+    "after": "## Was „Abnahme“ im Vertrag heißt"
+  },
+  {
+    "old_line": 45,
+    "new_line": 45,
+    "before": "Bei mangelhafter Werkleistung kann der Besteller nach [Artikel 493](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=493) eine angemessene Frist zur Beseitigung setzen. Bleibt sie erfolglos, sieht die Vorschrift Selbstbeseitigung und Erstattung notwendiger Kosten vor. Bei übermäßig hohen Beseitigungskosten darf der Unternehmer die Beseitigung verweigern. Die genannte Selbstbeseitigungsregel gilt dann nicht. Eine Aufforderung zur Nacharbeit sollte deshalb mit Datum, Fehlerbild und verlangtem Umfang in die rechtliche Prüfung gelangen.",
+    "after": "Bei mangelhafter Werkleistung kann der Besteller nach [Artikel 493](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=493) eine angemessene Frist zur Beseitigung setzen. Bleibt sie erfolglos, sieht die Vorschrift Selbstbeseitigung und Erstattung notwendiger Kosten vor. Bei übermäßig hohen Beseitigungskosten darf der Unternehmer die Beseitigung verweigern. Die genannte Selbstbeseitigungsregel gilt dann nicht. Für die rechtliche Prüfung zählt deshalb, wann die Nacharbeit verlangt wurde, welches Fehlerbild der Kunde beschrieben hat und welchen Umfang er fordert."
+  },
+  {
+    "old_line": 49,
+    "new_line": 49,
+    "before": "War die Maschine testbereit? Für die Beantwortung braucht es mehr als das Feld „bestanden“ oder „nicht bestanden“: Prüfprotokolle sollten erkennen lassen, welche Softwareversion, Werkstücke, Toleranzen und Betriebsbedingungen verwendet wurden. Fehlende Medienversorgung oder ein anderes Eingangsmaterial gehören mit Zeitpunkt und Herkunft der Information in die Dokumentation. Wer dafür verantwortlich war, ergibt sich erst aus der vereinbarten Aufgabenverteilung.",
+    "after": "War die Maschine testbereit? Ein angekreuztes „bestanden“ oder „nicht bestanden“ reicht als Antwort nicht. Aus dem Prüfprotokoll sollte hervorgehen, welche Softwareversion, Werkstücke, Toleranzen und Betriebsbedingungen verwendet wurden. Fehlende Medienversorgung oder ein anderes Eingangsmaterial gehören mit Zeitpunkt und Herkunft der Information in die Dokumentation. Wer dafür verantwortlich war, ergibt sich erst aus der vereinbarten Aufgabenverteilung."
+  },
+  {
+    "old_line": 69,
+    "new_line": 69,
+    "before": "Eine erste [Anfrage zu einem Taiwan-Vertragsstreit](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) kann Vertragspartner, offenen Meilenstein und nächsten Prüftermin nennen; bitte zunächst die tatsächliche Verständigung auf Englisch, Chinesisch, Japanisch oder Koreanisch abstimmen. Vertrauliche Anlagen folgen nach Vereinbarung des Übermittlungswegs. Für die Vorbereitung bleibt die konkrete Frage: Welcher noch offene Test soll welchen Betrag freigeben?",
+    "after": "Eine erste [Anfrage zu einem Taiwan-Vertragsstreit](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) kann Vertragspartner, offenen Meilenstein und nächsten Prüftermin nennen. Beraten wird auf Englisch, Chinesisch, Japanisch oder Koreanisch; welche Sprache passt, lässt sich vorab klären. Vertrauliche Anlagen folgen, sobald der Übermittlungsweg vereinbart ist. Für die Vorbereitung bleibt die konkrete Frage: Welcher noch offene Test soll welchen Betrag freigeben?"
+  }
+]

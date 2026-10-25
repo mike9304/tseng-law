@@ -1,0 +1,11 @@
+--- initial
++++ repaired
+@@ -42,7 +42,7 @@
+ 
+ [Government Procurement Act Article 85-1](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) allows contract-performance disputes to be taken to the Complaint Review Board for Government Procurement for mediation. A public entity cannot refuse a supplier's mediation application. For construction works and technical services, the board must offer a mediation recommendation or proposal; if mediation fails because the entity disagrees with it, the entity cannot refuse the supplier's referral to arbitration.
+ 
+-Statutory consent has those limits. In the hospital case, the court found neither an agreed arbitration clause nor the facts needed for statutory consent. It identified [Arbitration Act Article 40(1)(2)](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001), which addresses an arbitration agreement that was not concluded, was invalid or had ceased to be effective, as the relevant annulment ground.
++Statutory consent has those limits. In the hospital case, the court found neither an agreed arbitration clause nor the facts needed for statutory consent. The court identified the absence of an arbitration agreement under [Arbitration Act Article 40(1)(2)](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001) as the ground for annulment.
+ 
+ Contract classification comes first. Today's Article 85-1 covers construction works and technical services; that does not place every equipment purchase or other public-sector contract within this particular route. A separate arbitration clause may already govern.
+ 

@@ -1,0 +1,48 @@
+diff --git a/src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md b/src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md
+index 5a3a9ebd..b6ac77db 100644
+--- a/src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md
++++ b/src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md
+@@ -12,9 +12,9 @@ tags: ["OEM", "stampi", "diritti sui disegni", "imprese italiane"]
+ audience: ["it"]
+ author: "legal-ai-assistant"
+ featured_image: "/images/blog/gap-columns-20261010/505-taiwan-supplier-return-molds-test-fixtures.webp"
+ featured_image_alt: "Uno stampo metallico e un’attrezzatura di prova su un banco di imballaggio industriale."
+-featured_image_caption: "Illustrazione di una scena immaginaria; le attrezzature non appartengono a un caso reale."
++featured_image_caption: "Scena immaginaria"
+ faq:
+   - q: "Aver pagato il progetto trasferisce tutti i diritti sui disegni?"
+     a: "Non automaticamente. Quando si applica l’articolo 12 della legge taiwanese sul diritto d’autore, i diritti sull’opera commissionata dipendono dagli accordi e dalle regole suppletive. Va inoltre verificato se il materiale sia protetto."
+   - q: "Il nuovo produttore può modificare i file ricevuti?"
+@@ -30,9 +30,9 @@ Nel fascicolo della commessa conviene distinguere stampi, prototipi, disegni, fi
+ ## Il formato del file può decidere se la consegna è utilizzabile
+ 
+ Una clausola che promette «documentazione tecnica» va confrontata con il preventivo e con gli allegati accettati. Il fascicolo dovrebbe mostrare se erano inclusi i file sorgente, le versioni aggiornate, i riferimenti ai materiali e le istruzioni necessarie alla produzione. Anche il verbale di approvazione del prototipo può contenere riserve ancora irrisolte.
+ 
+-La richiesta identifica nome, versione e formato. Il responsabile tecnico può indicare anche la funzione prevista e il materiale già ricevuto, così da distinguere una consegna incompleta da ciò che non era compreso nel prezzo.
++Nella richiesta conviene indicare nome, versione e formato di ogni file. Il responsabile tecnico può indicare anche la funzione prevista e il materiale già ricevuto, così da distinguere una consegna incompleta da ciò che non era compreso nel prezzo.
+ 
+ ## Disegno commissionato e autorizzazione al riuso
+ 
+ Se il materiale è protetto e si applica il diritto taiwanese, l’[articolo 12 della legge sul diritto d’autore](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=12) disciplina le opere commissionate fuori dall’ipotesi del lavoro dipendente. Di regola l’autore è chi realizza l’opera, salvo accordo che attribuisca questa posizione al committente; se l’autore resta l’esecutore, i diritti patrimoniali seguono l’accordo. In mancanza di accordo, restano all’esecutore. Quando i diritti patrimoniali spettano all’esecutore, il committente può utilizzare l’opera.
+@@ -46,9 +46,9 @@ Per le licenze, l’[articolo 37](https://law.moj.gov.tw/LawClass/LawSingle.aspx
+ ## Lo stampo rimasto nello stabilimento
+ 
+ Per i diritti reali sugli stampi situati a Taiwan rileva la legge del luogo del bene, con le precisazioni sugli spostamenti contenute nell’[articolo 38 della legge sul diritto internazionale privato](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=38). La legge del contratto richiede una verifica distinta ai sensi dell’[articolo 20](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20).
+ 
+-L’[articolo 761 del Codice civile](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=761) collega normalmente il trasferimento dei diritti sui beni mobili alla consegna, ammettendo anche forme sostitutive. Le parti possono, per esempio, concordare che lo stampo rimanga presso il cedente mentre l’acquirente ne acquista il possesso indiretto. Occorrono perciò accordo e storia del possesso, oltre alla prova del pagamento.
++L’[articolo 761 del Codice civile](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=761) collega normalmente il trasferimento dei diritti sui beni mobili alla consegna, ammettendo anche forme sostitutive. Le parti possono, per esempio, concordare che lo stampo rimanga presso il cedente mentre l’acquirente ne acquista il possesso indiretto. Servono perciò l’accordo e la storia del possesso, non solo la prova del pagamento.
+ 
+ Il proprietario può chiedere la restituzione contro chi possiede senza titolo, secondo l’[articolo 767](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=767). Il fornitore invoca fatture insolute? Occorre allora verificare la ritenzione, con i requisiti e le esclusioni degli [articoli 928](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=928) e [929](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=929). Nei rapporti commerciali possono rilevare altri crediti.
+ 
+ ## Un verbale di passaggio per materiali e diritti
+@@ -68,9 +68,9 @@ Solo dopo aver chiarito il titolo o l’autorizzazione pertinenti, comprese le o
+ ### Uno stampo pagato può essere trattenuto?
+ 
+ La risposta dipende dal titolo di possesso e dagli eventuali presupposti di ritenzione; serve anche la situazione dei crediti commerciali.
+ 
+-L’articolo sull’[organizzazione delle attività a Taiwan](/it/columns/taiwan-semiconductor-market-entry) offre il contesto operativo. Per una valutazione, i [contatti dello studio](/it/contact) e wei@hoveringlaw.com.tw ricevono una sintesi non riservata con controparte, materiali mancanti e data prevista del trasferimento. La consulenza si svolge in inglese, cinese, giapponese o coreano; chi comunica soltanto in italiano deve concordare una modalità praticabile. I disegni completi possono attendere le istruzioni per l’invio: inizialmente basta un inventario che identifichi ciò che manca.
++L’articolo sull’[organizzazione delle attività a Taiwan](/it/columns/taiwan-semiconductor-market-entry) offre il contesto operativo. Per una valutazione si può inviare, tramite i [contatti dello studio](/it/contact) o a wei@hoveringlaw.com.tw, una sintesi non riservata con controparte, materiali mancanti e data prevista del trasferimento. La consulenza si svolge in inglese, cinese, giapponese o coreano; chi comunica soltanto in italiano dovrà concordare prima come procedere. I disegni completi possono attendere le istruzioni per l’invio: inizialmente basta un inventario che identifichi ciò che manca.
+ 
+ ## Fonti ufficiali
+ 
+ Disposizioni consultate il 23 ottobre 2026:

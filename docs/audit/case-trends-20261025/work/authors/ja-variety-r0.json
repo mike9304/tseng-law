@@ -1,0 +1,69 @@
+{
+  "checked_on": "2026-10-25",
+  "records": [
+    {
+      "id": "910",
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/910-japanese-expat-allowances-bonuses-taiwan-judgment.md",
+      "sha256": "ade9d3b0d0314d0d322443db6c9755dc468bb154d4805f4d4cec8a213547d3c6",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/910-japanese-expat-allowances-bonuses-taiwan-judgment.md",
+        "--lang",
+        "ja"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/910-japanese-expat-allowances-bonuses-taiwan-judgment.md [ja] sentences=65 mean=40.2 cv=0.469 short=0.185 run3=0.048 opener_rep=0.1 cite_end=0.0 cite_para=0.2 contrast=0 caveat=1 q=0\n  WARN 98% of sentences end in 'desu-masu' — vary endings within the register\n",
+      "stderr": ""
+    },
+    {
+      "id": "911",
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/911-japan-taiwan-distributor-competing-products-judgment.md",
+      "sha256": "7451842b47eae7e5b9c12a2278be241c07bbc7e1e0a547ba3ec61861e5165428",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/911-japan-taiwan-distributor-competing-products-judgment.md",
+        "--lang",
+        "ja"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/911-japan-taiwan-distributor-competing-products-judgment.md [ja] sentences=62 mean=39.7 cv=0.456 short=0.177 run3=0.017 opener_rep=0.15 cite_end=0.0 cite_para=0.2 contrast=1 caveat=1 q=0\n  WARN 90% of sentences end in 'desu-masu' — vary endings within the register\n",
+      "stderr": ""
+    },
+    {
+      "id": "912",
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/912-taiwan-oem-mold-return-inventory-claim-japan.md",
+      "sha256": "9fc285451831132efe491c9a45849e5b45f466d51241f5495422aefac9503dfd",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/912-taiwan-oem-mold-return-inventory-claim-japan.md",
+        "--lang",
+        "ja"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/912-taiwan-oem-mold-return-inventory-claim-japan.md [ja] sentences=64 mean=40.9 cv=0.453 short=0.172 run3=0.097 opener_rep=0.095 cite_end=0.016 cite_para=0.238 contrast=2 caveat=4 q=0\n  WARN 98% of sentences end in 'desu-masu' — vary endings within the register\n",
+      "stderr": ""
+    },
+    {
+      "id": "913",
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/913-japanese-genuine-goods-taiwan-trademark-exhaustion.md",
+      "sha256": "af7eeeac7b3dbc906e25d1877a2cbad9f887bf00a0e5602ed24b2ed55909ff76",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/913-japanese-genuine-goods-taiwan-trademark-exhaustion.md",
+        "--lang",
+        "ja"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/913-japanese-genuine-goods-taiwan-trademark-exhaustion.md [ja] sentences=61 mean=43.5 cv=0.465 short=0.082 run3=0.068 opener_rep=0.091 cite_end=0.0 cite_para=0.091 contrast=3 caveat=0 q=0\n  WARN 95% of sentences end in 'desu-masu' — vary endings within the register\n",
+      "stderr": ""
+    }
+  ]
+}

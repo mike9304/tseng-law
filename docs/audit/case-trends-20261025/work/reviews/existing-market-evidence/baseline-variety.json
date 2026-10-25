@@ -1,0 +1,97 @@
+[
+  {
+    "path": "src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/668-indonesian-buyer-taiwan-machinery-defect-notice.baseline.md [id] sentences=58 mean=13.6 cv=0.463 short=0.259 run3=0.036 opener_rep=0.0 cite_end=0.0 cite_para=0.667 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/669-indian-supplier-unpaid-taiwan-invoice.baseline.md [hi] sentences=47 mean=15.1 cv=0.46 short=0.255 run3=0.022 opener_rep=0.077 cite_end=0.021 cite_para=0.615 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/670-indian-buyer-taiwan-machinery-defect-notice.baseline.md [hi] sentences=53 mean=17.1 cv=0.454 short=0.151 run3=0.059 opener_rep=0.071 cite_end=0.0 cite_para=0.643 contrast=0 caveat=0 q=3\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/671-indian-engineer-taiwan-noncompete-compensation.baseline.md [hi] sentences=48 mean=15.9 cv=0.451 short=0.25 run3=0.043 opener_rep=0.214 cite_end=0.021 cite_para=0.571 contrast=1 caveat=1 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/672-indian-resident-taiwan-rental-deposit-handover.baseline.md [hi] sentences=54 mean=15.2 cv=0.502 short=0.204 run3=0.058 opener_rep=0.067 cite_end=0.0 cite_para=0.467 contrast=0 caveat=0 q=4\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/673-indian-importer-taiwan-supplier-bank-change-fraud.baseline.md [hi] sentences=47 mean=16.3 cv=0.451 short=0.17 run3=0.089 opener_rep=0.077 cite_end=0.0 cite_para=0.308 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-fr/674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.baseline.md [fr] sentences=42 mean=17.7 cv=0.454 short=0.19 run3=0.025 opener_rep=0.167 cite_end=0.167 cite_para=0.583 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-fr/678-french-employee-taiwan-unpaid-wages-employer-closure.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/678-french-employee-taiwan-unpaid-wages-employer-closure.baseline.md [fr] sentences=48 mean=17.3 cv=0.455 short=0.125 run3=0.043 opener_rep=0.143 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.baseline.md [de] sentences=47 mean=14.5 cv=0.467 short=0.213 run3=0.133 opener_rep=0.214 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=5\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.baseline.md [de] sentences=48 mean=14.6 cv=0.45 short=0.229 run3=0.043 opener_rep=0.143 cite_end=0.0 cite_para=0.571 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.baseline.md [de] sentences=50 mean=14.1 cv=0.454 short=0.2 run3=0.0 opener_rep=0.2 cite_end=0.0 cite_para=0.533 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-it/685-italian-brand-taiwan-distributor-trademark-registration.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/685-italian-brand-taiwan-distributor-trademark-registration.baseline.md [it] sentences=45 mean=15.3 cv=0.454 short=0.2 run3=0.0 opener_rep=0.25 cite_end=0.0 cite_para=0.438 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/686-taiwan-oem-molds-design-files-handover.baseline.md [it] sentences=44 mean=16.1 cv=0.462 short=0.182 run3=0.071 opener_rep=0.25 cite_end=0.0 cite_para=0.438 contrast=0 caveat=0 q=3\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-it/687-italy-resident-heir-taiwan-inheritance-renunciation-debts.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/687-italy-resident-heir-taiwan-inheritance-renunciation-debts.baseline.md [it] sentences=43 mean=16.7 cv=0.451 short=0.14 run3=0.049 opener_rep=0.188 cite_end=0.0 cite_para=0.688 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-it/688-italian-business-visitor-taiwan-summons-interpreter-defense.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/688-italian-business-visitor-taiwan-summons-interpreter-defense.baseline.md [it] sentences=50 mean=15.6 cv=0.454 short=0.2 run3=0.042 opener_rep=0.176 cite_end=0.0 cite_para=0.529 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/689-spain-exporter-taiwan-unpaid-invoices.baseline.md [es] sentences=43 mean=16.1 cv=0.455 short=0.14 run3=0.073 opener_rep=0.214 cite_end=0.023 cite_para=0.5 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/691-spanish-judgment-taiwan-assets-enforcement.baseline.md [es] sentences=33 mean=17.2 cv=0.458 short=0.152 run3=0.0 opener_rep=0.125 cite_end=0.0 cite_para=0.438 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/692-return-spain-unpaid-taiwan-wages.baseline.md [es] sentences=44 mean=16.0 cv=0.46 short=0.227 run3=0.024 opener_rep=0.2 cite_end=0.0 cite_para=0.467 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+  },
+  {
+    "path": "src/content/columns-es/693-spain-resident-taiwan-divorce-property.md",
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/693-spain-resident-taiwan-divorce-property.baseline.md [es] sentences=42 mean=18.1 cv=0.46 short=0.119 run3=0.075 opener_rep=0.188 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+  }
+]

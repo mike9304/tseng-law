@@ -1,0 +1,362 @@
+# Web tool text capture; retrieved 2026-10-25. This is not a raw HTML or PDF capture.
+
+Noncompete Rule | Federal Trade Commission (https://www.ftc.gov/legal-library/browse/rules/noncompete-rule)
+citeturn996view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.ftc.gov/legal-library/browse/rules/noncompete-rule","lineno":null}); Total lines: 211
+L0: 【0†iframe†www.googletagmanager.com】 【1†Skip to main content】
+L1: 
+L2: Tags:
+L3: 
+L4:   * 【2†Competition】
+L5:   * 【3†Nonmerger】
+L6:   * 【4†Unfair Methods of Competition】
+L7:   * 【5†Section 5】
+L8: 
+L9: Rule Summary
+L10: 
+L11: The Noncompete Rule is not in effect and it is not enforceable. On August 20, 2024, a district court issued an order stopping the FTC from enforcing the rule. The FTC appealed that decision on October 18, 2024. On September 5, 2025, the FTC took steps to dismiss its appeal in the Fifth Circuit.
+L12:   * Under the final 【6†Noncompete Rule†www.federalregister.gov】, the FTC adopts a comprehensive ban on new noncompetes with all workers, including senior executives.
+L13:     * The final rule provides that it is an unfair method of competition—and therefore a violation of Section 5—for employers to enter into noncompetes with workers.
+L14:   * For existing noncompetes, the final rule adopts a different approach for senior executives than for other workers. For senior executives, existing noncompetes can remain in force. Existing noncompetes with workers other than senior executives are not enforceable after the effective date.
+L15: ## Final Rule
+L16: ## [Button: § 910.1 Definitions. ]
+L17: 
+L18: As used in this part:
+L19: 
+L20: Business entity means a partnership, corporation, association, limited liability company, or other legal entity, or a division or subsidiary thereof.
+L21: 
+L22: Employment means work for a person.
+L23: 
+L24: Non-compete clause means:
+L25: 
+L26: (1) A term or condition of employment that prohibits a worker from, penalizes a worker for, or functions to prevent a worker from:
+L27: (i) seeking or accepting work in the United States with a different person where such work would begin after the conclusion of the employment that includes the term or condition; or
+L28: 
+L29: (ii) operating a business in the United States after the conclusion of the employment that includes the term or condition.
+L30: 
+L31: (2) For the purposes of this part 910, term or condition of employment includes, but is not limited to, a contractual term or workplace policy, whether written or oral.
+L32: Officer means a president, vice president, secretary, treasurer or principal financial officer, comptroller or principal accounting officer, and any natural person routinely performing corresponding functions with respect to any business entity whether incorporated or unincorporated.
+L33: 
+L34: Person means any natural person, partnership, corporation, association, or other legal entity within the Commission’s jurisdiction, including any person acting under color or authority of State law.
+L35: Policy-making authority means final authority to make policy decisions that control significant aspects of a business entity or common enterprise and does not include authority limited to advising or exerting influence over such policy decisions or having final authority to make policy decisions for only a subsidiary of or affiliate of a common enterprise.
+L36: Policy-making position means a business entity’s president, chief executive officer or the equivalent, any other officer of a business entity who has policy-making authority, or any other natural person who has policy-making authority for the business entity similar to an officer with policy-making authority.
+L37: An officer of a subsidiary or affiliate of a business entity that is part of a common enterprise who has policy-making authority for the common enterprise may be deemed to have a policy-making position for purposes of this paragraph. A natural person who does not have policy-making authority over a common enterprise may not be deemed to have a policy-making position even if the person has policy-making authority over a subsidiary or affiliate of a business entity that is part of the common enterprise.
+L38: Preceding year means a person’s choice among the following time periods: the most recent 52-week year, the most recent calendar year, the most recent fiscal year, or the most recent anniversary of hire year.
+L39: 
+L40: Senior executive means a worker who:
+L41: 
+L42: (1) Was in a policy-making position; and
+L43: 
+L44: (2) Received from a person for the employment:
+L45: 
+L46: (i) Total annual compensation of at least $151,164 in the preceding year; or
+L47: (ii) Total compensation of at least $151,164 when annualized if the worker was employed during only part of the preceding year; or
+L48: 
+L49: (iii) Total compensation of at least $151,164 when annualized in the preceding year prior to the worker’s departure if the worker departed from employment prior to the preceding year and the worker is subject to a non-compete clause.
+L50: Total annual compensation is based on the worker’s earnings over the preceding year. Total annual compensation may include salary, commissions, nondiscretionary bonuses and other nondiscretionary compensation earned during that 52-week period.
+L51: Total annual compensation does not include board, lodging and other facilities as defined in 29 CFR 541.606, and does not include payments for medical insurance, payments for life insurance, contributions to retirement plans and the cost of other similar fringe benefits.
+L52: Worker means a natural person who works or who previously worked, whether paid or unpaid, without regard to the worker’s title or the worker’s status under any other State or Federal laws, including, but not limited to, whether the worker is an employee, independent contractor, extern, intern, volunteer, apprentice, or a sole proprietor who provides a service to a person.
+L53: The term worker includes a natural person who works for a franchisee or franchisor, but does not include a franchisee in the context of a franchisee-franchisor relationship.
+L54: ## [Button: § 910.2 Unfair methods of competition. ]
+L55: 
+L56: (a) Unfair methods of competition—(1) Workers other than senior executives. With respect to a worker other than a senior executive, it is an unfair method of competition for a person:
+L57: 
+L58: (i) To enter into or attempt to enter into a non-compete clause;
+L59: 
+L60: (ii) To enforce or attempt to enforce a non-compete clause; or
+L61: 
+L62: (iii) To represent that the worker is subject to a non-compete clause.
+L63: (2) Senior executives. With respect to a senior executive, it is an unfair method of competition for a person:
+L64: 
+L65: (i) To enter into or attempt to enter into a non-compete clause;
+L66: 
+L67: (ii) To enforce or attempt to enforce a non-compete clause entered into after the effective date; or
+L68: 
+L69: (iii) To represent that the senior executive is subject to a non-compete clause, where the non-compete clause was entered into after the effective date.
+L70: (b) Notice requirement for existing non-compete clauses—(1) Notice required. For each existing non-compete clause that it is an unfair method of competition to enforce or attempt to enforce under paragraph (a)(1)(ii) of this section, the person who entered into the non-compete clause with the worker must provide clear and conspicuous notice to the worker by the effective date that the worker’s non-compete clause will not be, and cannot legally be, enforced against the worker.
+L71: (2) Form of notice. The notice to the worker required by paragraph (b)(1) of this section must:
+L72: 
+L73: (i) Identify the person who entered into the non-compete clause with the worker;
+L74: 
+L75: (ii) Be on paper delivered by hand to the worker, or by mail at the worker’s last known personal street address, or by email at an email address belonging to the worker, including the worker’s current work email address or last known personal email address, or by text message at a mobile telephone number belonging to the worker.
+L76: (3) Exception. If a person that is required to provide notice under paragraph (b)(1) of this section has no record of a street address, email address, or mobile telephone number, such person is exempt from the notice requirement in paragraph (b)(1) of this section with respect to such worker.
+L77: (4) Model language. For purposes of paragraph (b)(1) of this section, the following model language constitutes notice to the worker that the worker’s non-compete clause cannot legally be enforced and will not be enforced against the worker.
+L78: 
+L79: Figure 1 to paragraph (b)(4)—Model Language
+L80: 
+L81: 【7†Image】
+L82: 
+L83: (5) Safe harbor. A person complies with the requirement in paragraph (b)(1) of this section if the person provides notice to a worker pursuant to paragraph (b)(4) of this section.
+L84: (6) Optional notice in additional languages. In addition to providing the notice required in paragraph (b)(1) of this section in English, a person is permitted to provide such notice in a language (or in languages) other than English or to include internet links to translations in additional languages. If providing optional notice under this paragraph (b)(6), a person may use any Commission-provided translation of the model language in paragraph (b)(4) of this section.
+L85: ## [Button: § 910.3 Exceptions. ]
+L86: 
+L87: (a) Bona fide sales of business. The requirements of this part 910 shall not apply to a non-compete clause that is entered into by a person pursuant to a bona fide sale of a business entity, of the person’s ownership interest in a business entity, or of all or substantially all of a business entity’s operating assets.
+L88: (b) Existing causes of action. The requirements of this part 910 do not apply where a cause of action related to a non-compete clause accrued prior to the effective date.
+L89: 
+L90: (c) Good faith. It is not an unfair method of competition to enforce or attempt to enforce a non-compete clause or to make representations about a non-compete clause where a person has a good-faith basis to believe that this part 910 is inapplicable.
+L91: ## [Button: § 910.4 Relation to State laws and preservation of State authority and private rights of action. ]
+L92: (a) This part 910 will not be construed to annul, or exempt any person from complying with any State statute, regulation, order, or interpretation applicable to a non-compete clause, including, but not limited to, State antitrust and consumer protection laws and State common law, except that this part 910 supersedes such laws to the extent, and only to the extent, that such laws would otherwise permit or authorize a person to engage in conduct that is an unfair method of competition under § 910.2(a) or conflict with the notice requirement in § 910.2(b).
+L93: (b) Except with respect to laws superseded under paragraph (a) of this section, no provision of this part 910 shall be construed as altering, limiting, or affecting the authority of a State attorney general or any other regulatory or enforcement agency or entity or the rights of a person to bring a claim or regulatory action arising under any State statute, regulation, order, or interpretation, including, but not limited to, State antitrust and consumer protection laws and State common law.
+L94: ## [Button: § 910.5 Severability. ]
+L95: If any provision of this part 910 is held to be invalid or unenforceable by its terms, or as applied to any person or circumstance, or stayed pending further agency action, the provision shall be construed so as to continue to give the maximum effect to the provision permitted by law and such invalidity shall not affect the application of the provision to other persons or circumstances or the validity or application of other provisions.
+L96: If any provision or application of this part is held to be invalid or unenforceable, the provision or application shall be severable from this part 910 and shall not affect the remainder thereof.
+L97: ## [Button: § 910.6 Effective date. ]
+L98: 
+L99: This part 910 is effective 120 days after date of publication of the final rule.
+L100: 
+L101: PART 915—[Reserved]
+L102: 
+L103: Authority: 15 U.S.C. 45 and 46(g).
+L104: 
+L105: The comment period closed on April 19, 2023.
+L106: 
+L107: 【8†View Comments†www.regulations.gov】
+L108: 
+L109: 【6†Text of Rule†www.federalregister.gov】
+L110: 
+L111: File
+L112: 
+L113: 【9†Non-compete Clause Rule】 (139.71 MB)
+L114: 
+L115:   * [Button: Federal Register Notices]
+L116: 
+L117:   * [Button: Press Releases]
+L118: 
+L119:   * [Button: Public Events]
+L120: 
+L121:   * [Button: Record Documents]
+L122: 
+L123: May 29, 2024
+L124: 【10†Certified Index of the Administrative Record】
+L125: 
+L126: 【11†Administrative Record Volume 1 (Pages 1-735)】
+L127: 
+L128: 【12†Administrative Record Volume 2 (Pages 736-1447)】
+L129: 
+L130: 【13†Administrative Record Volume 3 (Pages 1448-2165)】
+L131: 
+L132: 【14†Administrative Record Volume 4 (Pages 2166-3125)】
+L133: 
+L134: 【15†Administrative Record Volume 5 (Pages 3126-3220)】
+L135: 
+L136: 【16†Administrative Record Volume 6 (Pages 3221-3587)】
+L137: 
+L138: April 6, 2024
+L139: 
+L140: 【17†Ex Parte Communication between Anonymous and Commissioners Khan, Slaughter, and…】
+L141: 
+L142: April 1, 2024
+L143: 【18†Ex Parte Communication: Email from C. Hicks to Commissioners (Apr. 1, 2024)】
+L144: 
+L145: March 19, 2024
+L146: 
+L147: 【19†Ex Parte Communication: Email from B. Beloso to L. Khan (Mar. 19, 2024)】
+L148: 
+L149: February 13, 2024
+L150: 
+L151: 【20†Ex Parte Communication: Email from Michael Morichelli to L. Khan (Feb. 13, 2024)】
+L152: 
+L153: August 25, 2023
+L154: 
+L155: 【21†Ex Parte Communication from Don Phan (August 25, 2023)】
+L156: 
+L157: May 4, 2023
+L158: 
+L159: 【22†Summary of Ex Parte Communication: Anti-Monopoly Summit Panel (May 4, 2023)】
+L160: 
+L161: April 19, 2023
+L162: 【23†Ex Parte Communication: Email from FTCCommenter4 to L. Khan, R. Slaughter, A. B…】
+L163: 
+L164: April 13, 2023
+L165: 
+L166: 【24†Summary of Ex Parte Communication: Small Business Majority Listening Session (…】
+L167: 
+L168: March 6, 2023
+L169: 
+L170: 【25†Ex Parte Communication: Email from K. Miller to E. Wilkins (Mar. 6, 2023)】
+L171: 
+L172: March 2, 2023
+L173: 
+L174: 【26†Summary of Ex Parte Communication: Harvard Law School (Mar. 2, 2023)】
+L175: 
+L176: March 1, 2023
+L177: 
+L178: 【27†Summary of Ex Parte Communication: Economic Policy Institute Webinar (Mar. 1, 2…】
+L179: 
+L180: February 22, 2023
+L181: 【28†Ex Parte Communication: Email from K. Miller to E. Wilkins, J. Howard (Feb. 22,…】
+L182: 
+L183: February 6, 2023
+L184: 
+L185: 【29†Ex Parte Communication: Email from E. Beaver to P. Kaplan, E. Wilkins, et al. (…】
+L186: 
+L187: January 30, 2023
+L188: 
+L189: 【30†Ex Parte Communication: Email from G. Carlino to E. Wilkins (Jan. 30, 2023)】
+L190: 
+L191: January 23, 2023
+L192: 
+L193: 【31†Ex Parte Communication: Email from S. Simanek to L. Khan (Jan. 23, 2023)】
+L194: 
+L195: January 17, 2023
+L196: 
+L197: 【32†Summary of Ex Parte Communication: Firewall Podcast (Jan. 17, 2023)】
+L198: 
+L199: January 13, 2023
+L200: 【33†Summary of Ex Parte Communication: Slate Podcast (Jan. 13, 2023)】
+L201: 
+L202: January 13, 2023
+L203: 
+L204: 【34†Summary of Ex Parte Communication: Power at Work Interview of E. Wilkins (Jan. …】
+L205: 
+L206: January 11, 2023
+L207: 
+L208: 【35†Summary of Ex Parte Communication: Capitol Forum Interview of E. Wilkins (Jan. …】
+L209: 
+L210: 【36†Return to top】
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn996view1 [wordlim: 200] Source: open({"ref_id":"https://www.ftc.gov/news-events/news/speeches/remarks-chairman-andrew-n-ferguson-ftc-workshop-noncompete-agreements","lineno":null}); Total lines: 1
+L0: Failed to fetch https://www.ftc.gov/news-events/news/speeches/remarks-chairman-andrew-n-ferguson-ftc-workshop-noncompete-agreements: (400) Timeout fetching
+--------------------------------------------------------------------------------
+Taiwan | United States Trade Representative (https://ustr.gov/countries-regions/china/taiwan)
+citeturn996view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://ustr.gov/countries-regions/china/taiwan","lineno":null}); Total lines: 54
+L0: 【0†iframe†www.googletagmanager.com】
+L1: # Taiwan
+L2: 
+L3:   * ### China, Mongolia & Taiwan
+L4:     *     *     *     *     * The 【1†first agreement】 under the U.S.-Taiwan Initiative on 21st Century Trade was signed on June 1, 2023, and entered into force on December 10, 2024. Pursuant to section 6(d) of the United States-Taiwan Initiative on 21st-Century Trade First Agreement Implementation Act (Act), the U.S. Trade Representative submitted to Congress a report on Taiwan’s implementation of the first agreement. Pursuant to section 6(d)(3) of the Act, the report is available 【2†here】.
+L5: Taiwan Trade Summary
+L6: 
+L7: U.S. goods and services (exports plus imports) trade with Taiwan totaled an estimated $283.6 billion in 2025, up 52.9 percent ($98.1 billion) from 2024.
+L8: U.S. goods trade (exports plus imports) with Taiwan totaled an estimated $256.1 billion in 2025. U.S. goods exports to Taiwan in 2025 were $54.8 billion, up 28.9 percent ($12.3 billion) from 2024. U.S. goods imports from Taiwan totaled $201.4 billion in 2025, up 73.2 percent ($85.1 billion) from 2024. The U.S. goods trade deficit with Taiwan was $146.6 billion in 2025, a 98.7 percent increase ($72.8 billion) over 2024.
+L9: U.S. services trade (exports plus imports) with Taiwan totaled an estimated $27.5 billion in 2025. U.S. services exports to Taiwan in 2025 were $14.9 billion, up 8.6 percent ($1.2 billion) from 2024. U.S. services imports from Taiwan in 2025 were $12.6 billion, down 3.4 percent ($438.0 million) from 2024. The U.S. services trade surplus with Taiwan was $2.3 billion in 2025, a 248.5 percent increase ($1.6 billion) over 2024.
+L10: 
+L11: 
+L12: Stay in the Know
+L13: Get direct updates from USTR in your inbox.
+L14: [Input: Email Address]
+L15: 
+L16: [Button: SUBSCRIBE]
+L17: 
+L18: [Input]
+L19: 
+L20:   * 600 17th Street NW
+L21:   * Washington, DC 20508
+L22: 
+L23: 【3†News】
+L24: 
+L25:   * 【4†Press Releases】
+L26:   * 【5†Reports and Publications】
+L27:   * 【6†Fact Sheets】
+L28:   * 【7†Speeches and Remarks】
+L29:   * 【8†Blog and Op-Eds】
+L30: 
+L31: 【9†Initiatives】
+L32: 
+L33:   * 【10†Presidential Tariff Actions】
+L34:   * 【11†USMCA】
+L35:   * 【12†WTO】
+L36:   * 【13†Free Trade Agreements】
+L37: 
+L38: 【14†About】
+L39:   * 【15†Organization】
+L40:   * 【16†Leadership】
+L41:   * 【17†Policy Offices】
+L42:   * 【18†Advisory Committees】
+L43:   * 【19†Archives】
+L44:   * 【20†Careers】
+L45:   * 【21†Internship】
+L46: 
+L47: 【9†Legal】
+L48: 
+L49:   * 【22†USTR.gov/open】
+L50:   * 【23†Privacy & Legal】
+L51:   * 【24†Notices】
+L52:   * 【25†FOIA & Privacy Act】
+L53:   * 【26†Attorney Jobs†ustr.theresumator.com】
+--------------------------------------------------------------------------------
+Fact Sheet on U.S.-Taiwan Agreement on Reciprocal Trade | United States Trade Representative (https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade)
+citeturn996view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade","lineno":null}); Total lines: 82
+L0: 【0†iframe†www.googletagmanager.com】
+L1: # Fact Sheet on U.S.-Taiwan Agreement on Reciprocal Trade
+L2: 
+L3:   * ### February
+L4: 
+L5:     * 【1†Fact Sheet: The United States and North Macedonia Reach a Framework for Agreement on Reciprocal Trade】
+L6:     *     * 【2†Fact Sheet: The United States and Bangladesh Reach an Agreement on Reciprocal Trade】
+L7: ACHIEVING RECIPROCAL TRADE: Today, the United States and Taiwan, under the auspices of the American Institute in Taiwan (“AIT”) and the Taipei Economic and Cultural Representative Office in the United States (“TECRO”), have reached an Agreement on Reciprocal Trade that will strengthen the economic and trade relationship between the United States of America and Taiwan and provide mutual benefit to both territories, while also facilitating significant expansion and growth to U.S.
+L8: manufacturing through substantial tariff reductions, removal of non-tariff barriers, investments, and procurement in key sectors and products.  The Agreement on Reciprocal Trade is a testament to the importance of the U.S.-Taiwan relationship and reflects both sides’ ambition to increase bilateral investment and commercial opportunities, deepen their high-tech strategic partnership, ensure supply chain resilience, and jointly promote stability and prosperity.
+L9: GROUNDBREAKING TERMS: Key terms of the Agreement on Reciprocal Trade include:
+L10:   * Breaking Down Tariff Barriers for U.S. Industrial and Agricultural Exports: The Taiwan side will eliminate or reduce 99 percent of tariff barriers.  The Taiwan side will provide preferential market access for U.S. industrial exports, including autos and auto parts, chemicals, seafood, machinery, health products, electrical products, metals, and minerals.  It will also provide preferential market access for U.S.
+L11: agricultural exports, including horticultural products, wheat, beef and beef products, dairy products, pork and pork products, lamb and sheep meat, tree nuts, dog and cat food, ketchup, and peanuts.
+L12:   * Breaking Down Non-Tariff Barriers for U.S. Industrial Exports: The Taiwan side has committed to resolve longstanding non-tariff barriers affecting U.S. exports of motor vehicles, medical devices, and pharmaceuticals.  For U.S. vehicles, Taiwan will remove quantitative restrictions and accept U.S. vehicles built to U.S. Federal Motor Vehicle Safety Standards, and emissions standards without additional requirements to enter Taiwan. Taiwan will also accept U.S.
+L13: FDA marketing authorizations for medical devices and pharmaceuticals manufactured in the United States without additional requirements for entry into Taiwan’s market. Taiwan will also ensure transparency and fairness regarding reimbursement and listing of medical devices and pharmaceuticals under its health care system.
+L14:   * Breaking Down Non-Tariff Barriers for U.S. Agricultural Exports: The Taiwan side has committed to resolve and prevent non-tariff barriers to U.S. agricultural exports, including beef, pork, poultry, and processing potatoes.  It will also work with the U.S. side to complete the regulatory process to allow bison meat into Taiwan.
+L15:   * Geographical Indications (GIs) and Market Access: The Taiwan side has committed to groundbreaking provisions that will preserve current and future U.S. market access for U.S. cheese and meat producers who rely on the use of common names.  This includes ensuring that market access will not be restricted due to the mere use of certain cheese and meat terms.  The Taiwan side has also committed to robust standards for transparency and fairness regarding the protection of GIs and to ensure that U.S.
+L16: products can continue using terms that have been unfairly protected as GIs.
+L17:   * Protecting and Enforcing Intellectual Property: The Taiwan side has made commitments that will benefit American innovators and creators by enhancing intellectual property protection and prioritizing enforcement against intellectual property theft.  This includes aligning with the standards in key international intellectual property treaties.
+L18:   * Improving Labor Standards: The two sides recognize the importance of protecting internationally recognized labor rights.  The Taiwan side will prohibit the importation of goods produced with forced labor, and improve protection of labor rights on commercial fishing vessels, address the charging of recruitment fees in certain sectors, prohibit retention of workers’ identity documents, and strengthen enforcement of labor laws.
+L19:  The two sides will continue to advance additional changes to enhance protection of workers’ rights to freedom of association and collective bargaining in Taiwan.
+L20:   * Strengthening Environmental Protections: The Taiwan side has committed to continue to adopt and maintain high levels of environmental protection and to effectively enforce its environmental laws, including by taking measures to promote a more resource efficient economy as well as to address illegal logging, fisheries subsidies, illegal fishing, and illegal wildlife trade.
+L21:   * Confronting Public Enterprises and Subsidies: The Taiwan side has committed to refrain from providing non-commercial assistance or otherwise subsidizing its good-producing public enterprises, except where the actions fulfil a legitimate public services objective, benefit small businesses, or protect its essential security interest.
+L22:   * Advancing Trade Facilitation and Good Regulatory Practices: The two sides share common values and are committed to similar approaches to good regulatory practices, customs and trade facilitation, standards and technical regulations, and services and digital trade.
+L23:   * Facilitating Mutually Beneficial Investment: The two sides intend to create the best possible environment to promote and facilitate cross-border investments.  The U.S. side will, as appropriate, consider supporting investment financing in critical sectors in Taiwan in collaboration with U.S. private sector partners, consistent with applicable law.
+L24:  The two sides also take note of the Memorandum of Understanding signed by AIT and TECRO on January 15, 2026, in which the Taiwan side promises to work with the United States to establish industrial parks and industry clusters that will help the United States substantially increase its domestic production capacity in key high-tech sectors.
+L25:  The MOU contemplates that Taiwan companies will significantly increase their investments in the semiconductors supply chain, electronics manufacturing services (including AI applications), energy, and other sectors in the United States, with financial support from the Taiwan side.  The MOU also confirms that the U.S.
+L26: side will provide Taiwan preferential treatment with regard to tariffs and other remedial measures in the Section 232 investigation of semiconductors and semiconductor manufacturing equipment, taking into account Taiwan’s economic and national security alignment and high-tech strategic partnership with the United States, as well as in certain other Section 232 investigations.  A link to the Fact Sheet describing the MOU can be found here.
+L27:   * Promoting Supply Chain Resilience: The two sides are committed to strengthening cooperation toward their shared goal of enhancing supply chain resilience and will continue to work to finalize commitments on combatting duty evasion.
+L28:   * Strengthening Economic Security Alignment: The two sides have committed to strengthen economic and national security cooperation to enhance supply chain resilience.  These efforts will include ensuring that international procurement obligations benefit only those countries that have taken on the same commitments.
+L29:   * Increasing Purchases of U.S. Products: The two sides commit to cooperate on ensuring secure, reliable, and diversified sources of supply.  The Taiwan side plans to facilitate a long-term increase in its purchases of important U.S.
+L30: goods, including $44.4 billion worth of liquefied natural gas and crude oil, $15.2 billion worth of civil aircraft and engines, and $25.2 billion worth of power equipment, power grids, materials, generators, storage facilities, marine equipment, steel-making equipment, and other equipment from 2025 through 2029.
+L31: THE PROSPEROUS PATH FORWARD:  In advance of the Agreement on Reciprocal Trade entering into force, the two sides will undertake domestic formalities, which will include the Taiwan side submitting the Agreement on Reciprocal Trade to its legislature for review.
+L32:   * Given the Taiwan side’s commitment to take significant steps to advance a stronger and more reciprocal trade relationship, the U.S. side has committed to reduce its tariffs on originating goods from Taiwan.  It will apply the higher of either the U.S. Most Favored Nation (MFN) tariff rate or a tariff rate of 15 percent, comprised of the MFN tariff and a reciprocal tariff within the meaning of Executive Order 14257 of April 2, 2025, as amended.
+L33:   * The U.S. side has also identified certain products from the goods contained in the “Potential Tariff Adjustments for Aligned Partners” Annex to Executive Order 14346 of September 5, 2025 (Modifying the Scope of Reciprocal Tariffs and Establishing Procedures for Implementing Trade and Security Agreements), as amended, that will not be subject to a reciprocal tariff.
+L34:   * Two-way trade in goods and services with Taiwan amounted to more than $185 billion in 2024.
+L35: LIBERATING AMERICA FROM UNFAIR TRADE PRACTICES: Since Day One, President Trump challenged the assumption that American workers and businesses must tolerate unfair trade practices that have disadvantaged them for decades and contributed to our historic trade deficit.
+L36:   * On April 2, President Trump declared a national emergency in response to the unprecedented threat caused to the United States by the large and persistent trade deficit caused by a lack of reciprocity in our bilateral trade relationships, disparate tariff rates and non-tariff barriers, and U.S. trading partners’ economic policies that suppress domestic wages and consumption.
+L37:   * President Trump continues to help U.S. farmers, ranchers, fishermen, small businesses, and manufacturers to increase U.S. exports to and expand business opportunities with our trading partners.
+L38:   * Today’s announcement provides a tangible path forward with Taiwan that underscores the President’s dedication to bringing balanced, reciprocal trade with an important trading partner.
+L39: Stay in the Know
+L40: Get direct updates from USTR in your inbox.
+L41: 
+L42: [Input: Email Address]
+L43: 
+L44: [Button: SUBSCRIBE]
+L45: 
+L46: [Input]
+L47: 
+L48:   * 600 17th Street NW
+L49:   * Washington, DC 20508
+L50: 
+L51: 【3†News】
+L52: 
+L53:   * 【4†Press Releases】
+L54:   * 【5†Reports and Publications】
+L55:   * 【6†Fact Sheets】
+L56:   * 【7†Speeches and Remarks】
+L57:   * 【8†Blog and Op-Eds】
+L58: 
+L59: 【9†Initiatives】
+L60: 
+L61:   * 【10†Presidential Tariff Actions】
+L62:   * 【11†USMCA】
+L63:   * 【12†WTO】
+L64:   * 【13†Free Trade Agreements】
+L65: 
+L66: 【14†About】
+L67:   * 【15†Organization】
+L68:   * 【16†Leadership】
+L69:   * 【17†Policy Offices】
+L70:   * 【18†Advisory Committees】
+L71:   * 【19†Archives】
+L72:   * 【20†Careers】
+L73:   * 【21†Internship】
+L74: 
+L75: 【9†Legal】
+L76: 
+L77:   * 【22†USTR.gov/open】
+L78:   * 【23†Privacy & Legal】
+L79:   * 【24†Notices】
+L80:   * 【25†FOIA & Privacy Act】
+L81:   * 【26†Attorney Jobs†ustr.theresumator.com】
+

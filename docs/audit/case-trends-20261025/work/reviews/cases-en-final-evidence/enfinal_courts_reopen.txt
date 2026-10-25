@@ -1,0 +1,8 @@
+Internal Error ()
+citeturn1239view0 [wordlim: 200] Source: open({"ref_id":"turn1237search0","lineno":0}); Total lines: 1
+L0: Failed to fetch https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523: (400) Timeout fetching
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn1239view1 [wordlim: 200] Source: open({"ref_id":"https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693","lineno":0}); Total lines: 1
+L0: Failed to fetch https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693: (400) Timeout fetching
+

@@ -1,0 +1,236 @@
+{
+  "observed_at": "2026-10-25T12:06:02.326326+00:00",
+  "records": [
+    {
+      "path": "src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md",
+      "sha256": "bf9c2a83e90e20c0562c60e7bf7e3eb0edcc946a8330111c102a174adf5187d2",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md",
+      "sha256": "7f46f3f35fc82125bc63e6165dec82174ee2f04593e8e0ec28584e81196d4a9c",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-th/662-thai-return-home-taiwan-traffic-injury-records.md",
+      "sha256": "3461f6e65f9126641cbd0fb876211624105de0584bd3430b04fd68a9837186ce",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md",
+      "sha256": "15bc3d175d9f5ddf9c6221682d126aaa0d9ace360029d4d6006c4c452ee18d0f",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+      "sha256": "75aca1f1bbce526d813c25ff639cb2439a864a9a03507f79583e34d646044196",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md",
+      "sha256": "81a291e8a6e4fe627ef088aaef1db7cff07ff9728d893b6a51f4f993cd3704a3",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+      "sha256": "b85718d854d5b9887aed2613a01585c8f72d6f23fae977d21c2feff4cd3dcb57",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+      "sha256": "78493ba69c70c82430a04196f7ee58c0f9ee7356b394e13e3f0c9485aacdda11",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+      "sha256": "3973fb9f67f20198b09f191293062e701ef8430913a06b4d6403911bb38e10ee",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+      "sha256": "7568b307e743bb799e899a9b3a11f32de846c8b0fa00d271755989066c8c98c9",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-fr/674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.md",
+      "sha256": "660a144dfd1e111ad482ae397d9f0e3ae149e965866f1d399ae6637aac44378a",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-fr/678-french-employee-taiwan-unpaid-wages-employer-closure.md",
+      "sha256": "917fbdcdc1d6696f55cb2936b34d425b759660deb0863854a93663453fea4fc8",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md",
+      "sha256": "8479b85121a74268424ebfa465618ff8758f86bce50d69f3ed65c0988938f725",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md",
+      "sha256": "3b362929c31af4d05abce635f63ebd73244af7482b04ffe6f06e7eec91ab7eeb",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md",
+      "sha256": "0812b7a97e8364a17674920fb69e927d95d7d7cfabb9b5b01b9fbcbb2055e993",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-it/685-italian-brand-taiwan-distributor-trademark-registration.md",
+      "sha256": "17ad264265124366a2704e8410f96aedff40238f252c4913ca5e40531f487de4",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md",
+      "sha256": "5c8df70a9a4733c5f12a49286c3c0fdfa80cff88684b38c34ccae6ed3051483d",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-it/687-italy-resident-heir-taiwan-inheritance-renunciation-debts.md",
+      "sha256": "336e3fe25e17a09df632d6c0c34989bd2b135702941c469f7798db76c2bd9b0d",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-it/688-italian-business-visitor-taiwan-summons-interpreter-defense.md",
+      "sha256": "bd42e4931c1656e93eea6bf694873500dca6afa34d6b44d69df96822dcb4e209",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md",
+      "sha256": "49e43adef77aab80f131baa2311c58af69b3ca07dcc3ce3ccd0b1e1b99c546d1",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md",
+      "sha256": "a43603c866fef8fccbd517f8906d4211a0adea0acfc8f3e2c4010ffa14a2b096",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md",
+      "sha256": "b5019f49da8eef11ba689cb1c6f1efcccdb172575dc259712ca09949fbb8fb65",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    },
+    {
+      "path": "src/content/columns-es/693-spain-resident-taiwan-divorce-property.md",
+      "sha256": "dd296d71681b98872e72e5696f9ccf8ff2c3cafbce49d8dc561d323844a22d86",
+      "metadata_except_lastmod_equal_to_initial": true,
+      "ordered_body_urls_equal_to_initial": true,
+      "ordered_body_arabic_digits_equal_to_initial": true,
+      "internal_author_retained": true,
+      "no_body_bold": true,
+      "matches_independently_passed_sha": true
+    }
+  ],
+  "bold_check_method": "Paired delimiters after unlinking; __328.html is a URL, not bold."
+}

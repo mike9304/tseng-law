@@ -1,0 +1,274 @@
+# Web tool text capture; retrieved 2026-10-25. This is not a raw HTML or PDF capture.
+
+Internal Error ()
+citeturn1124view0 [wordlim: 200] Source: open({"ref_id":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001","lineno":null}); Total lines: 1
+L0: Failed to fetch https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001: (400) Timeout fetching
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn1124view1 [wordlim: 200] Source: open({"ref_id":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001","lineno":null}); Total lines: 1
+L0: Failed to fetch https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010001: (400) Timeout fetching
+--------------------------------------------------------------------------------
+Company Act - Article Content - Laws & Regulations Database of The Republic of China (Taiwan) (https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=J0080001)
+citeturn1124view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=J0080001","lineno":null}); Total lines: 2681
+L0: [Input]
+L1: 
+L2: [Input] [Input] [Input]
+L3: 
+L4: No support javascript script language
+L5: 
+L6: 【0†Goto Main Content】
+L7: 
+L8: [Input: Search] [Input]
+L9: 
+L10: 【1†:::】
+L11: 
+L12: Select Folders：
+L13: 
+L14:   * [Input: Enter folder name] [Button: Save]
+L15: 
+L16: Save Add New Folder 【2†Manage Folders】
+L17: ## Article Content
+L18: 
+L19: Title：  | 【3†Company Act】 【4†CH】
+L20: Amended Date：  | 2025-12-26
+L21: Category：  | Ministry of Economic Affairs（經濟部）
+L22: 
+L23:   * 【3†Article Content】
+L24:   * 【5†Chapter】
+L25:   * 【6†Article Search】
+L26:   * 【7†Content Search】
+L27:   * 【8†Legislative History】
+L28: 
+L29: CHAPTER I GENERAL PROVISIONS
+L30: 
+L31: Article 1
+L32: The term "company" as used in this Act denotes a corporate juristic person organized and incorporated in accordance with this Act for the purpose of profit making.
+L33: When conducting its business, every company shall comply with the laws and regulations as well as business ethics and may take actions which will promote public interests in order to fulfill its social responsibilities.
+L34: 
+L35: Article 2
+L36: I.Companies are of four classes as set forth in the following:
+L37: 1.Unlimited Company: which term denotes a company organized by two or more shareholders who bear unlimited joint and several liabilities for discharge of the obligations of the company.
+L38: 2.Limited Company: which term denotes a company organized by one or more shareholders, with each shareholder being liable for the company in an amount limited to the amount contributed by him.
+L39: 3.Unlimited Company with Limited Liability Shareholders: which term denotes a company organized by one or more shareholders of unlimited liability and one or more shareholders of limited liability; among them the shareholder(s) with unlimited liability shall bear unlimited joint liability for the obligations of the company, while each of the shareholders with limited liability shall be held liable for the obligations of the company only in respect of the amount of capital contributed by him.
+L40: 4.Company Limited by Shares: which term denotes a company organized by two or more or one government or corporate shareholder, with the total capital of the company being divided into shares and each shareholder being liable for the company in an amount equal to the total value of shares subscribed by him.
+L41: II.The name of a company shall indicate the class to which it belongs.
+L42: Article 3
+L43: 
+L44: I.The domicile of a company is the location of its head office.
+L45: II.The term "head office" as used in this Act denotes the principal office first established according to law to take charge of affairs of the entire organization; the term "branch office" denotes branch unit subject to the control of the head office.
+L46: 
+L47: Article 4
+L48: The term "foreign company" as used in this Act denotes a company, for the purpose of profit making, organized and incorporated in accordance with the laws of a foreign country.
+L49: A foreign company, within the limits prescribed by laws and regulations, is entitled with the same legal capacity as a R.O.C. company.
+L50: 
+L51: Article 5
+L52: I.The term "Competent authority" as used in this Act shall denote the Ministry of Economics Affairs where the central government is concerned; or the Bureau of Reconstruction where a municipal government under the jurisdiction of the Executive Yuan is concerned.
+L53: II.The central competent authority may authorize its subordinate authority (authorities) or mandate or appoint other government authority (authorities) to handle the matter(s) set forth in this Act.
+L54: 
+L55: Article 6
+L56: No company may be incorporated unless it has registered with the central competent authority.
+L57: 
+L58: Article 7
+L59: I. The capital amount of a company applying for registration of incorporation shall be audited by an independent certified public accountant; such company shall attach an auditing certificate from an independent certified public accountant when applying for registration of incorporation or within 30 days after the registration of incorporation.
+L60: II. The capital amount of a company applying for alteration of the registered capital amount shall first be audited by an independent certified public accountant.
+L61: III. Regulations governing the process set forth in the two preceding paragraphs shall be prescribed by the central competent authority.
+L62: Article 8
+L63: The term "responsible persons" of a company as used in this Act denotes shareholders conducting the business or representing the company in case of an unlimited company or unlimited company with limited liability shareholders; directors of the company in case of a limited company or a company limited by shares.
+L64: The managerial officer, liquidator or temporary manager of a company, the promoter, supervisor, inspector, reorganizer or reorganization supervisor of a company limited by shares acting within the scope of their duties, are also responsible persons of a company.
+L65: A non-director of a company who de facto conducts business of a director or de facto controls over the management of the personnel, financial or business operation of the company and de facto instructs a director to conduct business shall be liable for the civil, criminal and administrative liabilities as a director in this Act, provided, however, that such liabilities shall not apply to an instruction of the government to the director appointed by the government for the purposes of economic development, promotion of social stability, or other circumstances which can promote public interests.
+L66: Article 9
+L67: Where the share prices (or the capital stock) receivable by a company have not been actually paid up by its shareholders, but are declared as having paid up in its incorporation application, or where the share prices have been paid up by its shareholders but are subsequently refunded to its shareholders or withdrawn by such shareholders with the permission of the company after having completed the procedures for company incorporation, the responsible persons shall each be punished with imprisonment for a term of not more than five years, detention, or in lieu thereof or in addition thereto a fine in an amount of not less than NT$ 500,000 but not more than NT$ 2,500,0000.
+L68: Under any of the circumstances set forth in the preceding Paragraph, the responsible persons shall be liable, jointly and severally with such shareholders, for the damages to be sustained by the company or the third party or parties there-from.
+L69: Upon conviction of the punishment set out in Paragraph I hereinabove, the central competent authority shall cancel or nullify the original registration of that company, provided, however, that the provision set out in this Paragraph shall not apply in case the unlawful act has been rectified by the company before the judgment becomes final.
+L70: After the responsible persons, agents, employees or other personnel have been convicted the crime of Offenses of Forging Instruments or Seals in the Chapter of the Criminal Code in filing an application for registration of its company incorporation or other company alterations, the central competent authority shall, ex officio or upon an application filed by an interested party, cancel or nullify such registration of the said company.
+L71: Article 10
+L72: Under either of the following circumstances, the competent authority may, ex officio or upon an application filed by an interested party, order the dissolution of a company:
+L73: 1. Where the company fails to commence its business operation after elapse of six months from the date of its company incorporation registration, unless it has made an extension registration; or
+L74: 2. Where, after commencing its business operation, the company has discontinued, at its own discretion, its business operation for a period over six months, unless it has made the business discontinuation registration.
+L75: 3. Where a final judgment has adjudicated to prohibit the company from using its company name, the company fails to make a name change registration after elapse of six months from the final judgment, and fails to make a name change registration after the competent authority has ordered the company to do so within a given time limit.
+L76: 4. Where the company fails to attach the auditing certificate from an independent certified public accountant within the time period prescribed in Paragraph 1 of Article 7, provided, however, that this shall not apply, if the company has attached such auditing certificate before the competent authority orders a dissolution of the company.
+L77: Article 11
+L78: I.In the event of an apparent difficulty in the operation of a company or serious damage thereto, the court may, upon an application from its shareholders and after having solicited the opinions of the competent authority and the central authority in charge of the relevant end enterprises and having received a defence from the company, make a ruling for the dissolution of the company.
+--------------------------------------------------------------------------------
+Government Procurement Act - Article Content - Laws & Regulations Database of The Republic of China (Taiwan) (https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057)
+citeturn1124view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"turn1123view0","pattern":"Article 85-1"}); Total lines: 719
+L271: The scope, percentage, and implementing regulations for the preference prescribed in the preceding paragraph shall be prescribed by the responsible entity together with the relevant competent entities, provided that no preference shall be given except for policies of employment or industrial development, and there shall be no percentage exceeding 3 percent or period of preference exceeding five years.
+L272: Chapter III Award of Contracts
+L273: 
+L274: Article 45
+L275: 
+L276: Unless otherwise provided for in laws or regulations, an entity shall open tenders in public at the time and place specified in the tender documentation for an open tendering procedure or selective tendering procedure.
+L277: 
+L278: Article 46
+L279: Unless otherwise provided for in this Act, an entity shall set a government estimate for a procurement. The government estimate shall be itemized based upon the drawings, specifications, and contract requirements by taking into account the costs, market prices, and past award records of government entities, and be approved by the head of the entity or the personnel authorized by the head.
+L280: The time for setting the government estimate referred to in the preceding paragraph shall be determined according to the following:
+L281: 1. in the case of open tendering procedures, prior to the opening of tenders.
+L282: 2. in the case of selective tendering procedures, prior to the opening of tenders for the step next to the qualification review.
+L283: 3. in the case of limited tendering procedures, prior to the conducting of price negotiation with one single supplier or price comparison among two or more suppliers.
+L284: Article 47
+L285: Under the following circumstances, an entity may conduct a procurement without setting a government estimate; provided, however, that the reasons of not setting a government estimate and the terms and principles of awarding the contract shall both be provided in the tender documentation:
+L286: 1. where there are actual difficulties in setting a government estimate for the procurement;
+L287: 2. where the contract is to be awarded to the most advantageous tender; or
+L288: 3. for small procurement.
+L289: For procurement under subparagraphs 1 and 2 of the preceding paragraph, a tenderer may be required to enumerate in its tender the content of its price offer in details.
+L290: The amount of small procurement shall be set, at the central government level, by the responsible entity, and at the local government level, by the municipal or county (city) governments; provided that the said amount shall not exceed one tenth of the threshold for publication. Where a local government does not set the amount, the amount set by the central government shall govern.
+L291: Article 48
+L292: In conducting a procurement pursuant to this Act, an entity shall open the tenders and award the contract in accordance with the timeframe set forth in the tender documentation where there are three or more qualified suppliers submitting their tenders, except for any of the following circumstances under which tenders may not be opened or awarded:
+L293: 1. where the content of tender documentation is amended or supplemented;
+L294: 2. where illegal or improper activities that may impair the fairness of the procurement are found;
+L295: 3. where the opening of tenders is postponed according to Article 82 hereof;
+L296: 4. where the procurement procedure is suspended according to Article 84 hereof;
+L297: 5. where the entity corrects its breach of laws and regulations as required by Article 85 hereof;
+L298: 6. where there is an emergency;
+L299: 7. where the plan for procurement is changed or cancelled; or
+L300: 8. for any other special circumstances as determined by the responsible entity.
+L301: Where the opening of tenders cannot be proceeded due to less than three tenders, a second tendering shall be arranged and the time-limit for such tendering may be shortened, and the three tenders requirement as provided in the preceding paragraph shall not apply for the second tendering.
+L302: Article 49
+L303: 
+L304: For a procurement of a value not reaching the threshold for publication but is not less than one tenth of the threshold, offers or proposals in writing shall be obtained openly from at least three suppliers, except for the circumstances specified in each subparagraph of paragraph 1 of Article 22.
+L305: 
+L306: Article 50
+L307: In case that any of the following circumstances occurs to a tenderer, an entity shall not open the tender of such tenderer when such circumstance is found before tender opening, nor shall award the contract to such tenderer when such circumstance is found after tender opening:
+L308: 1. The tendering does not comply with the requirements of the tender documentation;
+L309: 2. The content of the tender is inconsistent with the requirements of the tender documentation;
+L310: 3. The tenderer borrows or assumes any other’s name or certificate to tender;
+L311: 4. The tenderer uses untrue documents to tender;
+L312: 5. The contents of the tender documents submitted by different tenderers show a substantial and unusual connection;
+L313: 6. The tenderer is prohibited from participating in tendering or being awarded of any contract pursuant to paragraph1 of Article 103 hereof; or
+L314: 7. The tenderer is engaged in any other activities in breach of laws or regulations which impair the fairness of the procurement.
+L315: When any of the circumstances referred to in paragraph 1 occurs to the winning tenderer before the award of contract but is found after award or signing of the contract, the entity shall revoke the award, terminate or rescind the contract, and may claim for damages against such tenderer except where the revocation of the award or the termination or rescission of the contract is against public interests, and is approved by the superior entity.
+L316: Where the situation of not opening or not awarding a contract as referred to in paragraph 1 causes the procurement procedures unable to continue, the entity may declare that the procurement is nullified.
+L317: Article 51
+L318: 
+L319: An entity shall review the tenders submitted in accordance with the requirements set forth in the tender documentation. In case of any ambiguity as to its content, the entity may request the tenderer to clarify.
+L320: The entity shall notify each tenderer of the outcome of the review referred to in the preceding paragraph and provide reasons for disqualified tenderers.
+L321: 
+L322: Article 52
+L323: The award of contract conducted by an entity shall follow one of the following principles and the principle adopted shall be specified in the tender documentation:
+L324: 1. where a government estimate is set for the procurement, a tenderer whose tender meets the requirements set forth in the tender documentation and is the lowest tender within the government estimate shall be the winning tenderer;
+L325: 2. where no government estimate is set for the procurement, a tenderer whose tender not only meets the requirements set forth in the tender documentation with a reasonable price, but also is the lowest tender within the budget amount shall be the winning tenderer;
+L326: 3. the tenderer whose tender meets the requirements set forth in the tender documentation and is the most advantageous one shall be the winning tenderer; or
+L327: 4. to adopt multiple award. An entity may prescribe in the tender documentation that contracts may be awarded to different tenderers by different items or different quantities, but the spirit of competition as to the lowest price or the most advantageous tender shall be respected.
+L328: Where the value of a procurement reaching the threshold for publication, and the subject of procurement is professional service, technical service, information service, social welfare services, or cultural and creative services, the award procedures of the most advantageous tender without setting a government estimate shall be applied in principle.
+L329: Tenderers need not be notified to be present upon the award of contract, whereas they shall be notified of the outcome.
+L330: Article 53
+L331: Where the lowest tender which meets the requirements set forth in the tender documentation exceeds the government estimate, the entity may request the tenderer to reduce the price once. If the reduced price still exceeds the government estimate, the entity may request all tenderers whose tenders meet the requirements set forth in the tender documentation to reduce their prices and then make a comparison. Such price reduction and comparison shall not be more than three times.
+L332: If, after following the procedure set forth in the preceding paragraph, the lowest tender still exceeds the government estimate but not over the budget amount, and the entity needs to award the contract for emergency, then the award of contract shall be approved by the person who has approved the government estimate or the authorized personnel of such person, and the value of the winning award shall not exceed the government estimate by more than eight percent provided however that the award of contract shall in addition be approved by the superior entity in advance for cases where the value of procurement reaches the threshold for supervision and the value of the award exceeds the government estimate by more than four percent.
+L333: Article 54
+L334: Where an award is conducted in accordance with subparagraph 2 of paragraph 1 of Article 52, and the lowest tender which meets the requirements set forth in the tender documentation exceeds the budget amount or an amount recommended by a committee, the entity may request the tenderer to reduce the price once.
+L335: If the reduced price still exceeds such amount, the entity may request all tenderers whose tenders meet the requirements set forth in the tender documentation to reduce their prices and then make a comparison. Such price reduction and comparison may be limited to certain times which shall not be more than three times. If, after following the procedure set forth in the foregoing, the lowest tender still exceeds either of the said amounts, the tendering procedure shall be nullified.
+L458: The complaining supplier shall prepare a written complaint including the following particulars and affix its signature or seal thereon:
+L459: 1. the name, address and telephone number of the complaining supplier and the name, gender, birth date, and domicile or residence of the responsible person;
+L460: 2. the entity which handled the protest;
+L461: 3. the facts and reasons of the complaint;
+L462: 4. evidence; and
+L463: 5. year, month and day of the written complaint.
+L464: The complaint may be filed by an agent on behalf of the complainant, and the agent shall submit a power of attorney indicating the name, gender, birth date, occupation, telephone number and domicile or residence of the agent.
+L465: The provision of Article 70 of the Code of Civil Procedures shall apply mutatis mutandis to the situation referred to in the preceding paragraph.
+L466: Article 78
+L467: When filing a complaint, the supplier shall also provide a copy of the complaint to the entity. The entity shall present its response in writing to the competent CRBGP within ten days from the date following the date of receipt of such copy.
+L468: The CRBGP shall complete its review within forty days from the date following the date of receipt of the complaint, and shall notify the supplier and the entity of its decision in writing. If necessary, the foregoing period may be extended for another forty days.
+L469: Article 79
+L470: 
+L471: A complaint shall not be accepted if it is filed beyond the statutory period or is not in conformity with the statutory procedures or format. However, if the aforementioned errors can be corrected, the complainant shall be allowed to make the correction within a specified time-limit. Failure to make the correction within the time-limit shall render the complaint unacceptable.
+L472: 
+L473: Article 80
+L474: The review of a complaint with respect to a procurement may be conducted only with files.
+L475: The CRBGP may, ex officio or upon request, inform a complaining supplier or an entity to present their opinions orally at a place designated by the CRBGP.
+L476: In conducting a review, the CRBGP may entrust government authorities, schools, associations, or persons that have professional knowledge and experience to provide examination services, and may also call the relevant persons for explanations or request the entity or the supplier to provide relevant documents and materials.
+L477: The CRBGP may collect from the supplier review fees, examination fees, and other necessary expenses before conducting a review. The schedules of such fees and expenses and the methods of payment shall be prescribed by the responsible entity.
+L478: The regulations for the review of complaints shall be prescribed by the responsible entity and promulgated after approval of the Executive Yuan.
+L479: Article 81
+L480: 
+L481: A supplier may withdraw its complaint at any time before the service of a review decision. Once a complaint is withdrawn, the complainant is barred from submitting another complaint in respect of the same matter.
+L482: 
+L483: Article 82
+L484: A review decision prepared by the CRBGP shall be in writing, contain the facts and reasons, and indicate whether the procurement was conducted by the procuring entity in a manner that is in breach of Acts and Regulations. Where there is a breach, the CRBGP may recommend the procuring entity ways to proceed.
+L485: The CRBGP may, before completion of review, notify the procuring entity to suspend the procuring procedures, if necessary.
+L486: The CRBGP shall take the public interest, the interest of the relevant suppliers, and other relevant circumstances into account when making a recommendation or notification under the preceding two paragraphs.
+L487: Article 83
+L488: 
+L489: A review decision shall be deemed as a decision of administrative appeal.
+L490: 
+L491: Article 84
+L492: Where a procuring entity deems that a protest or complaint filed by a supplier is justifiable after reviewing the causes related thereto, the procuring entity shall nullify or change the initial result or suspend the procurement procedures, except for emergencies or public interest, or where the causes of complaint or protest are not likely to affect the procurement.
+L493: The procuring entity shall promptly notify the competent CRBGP of any outcome arising from the action it takes according to the preceding paragraph in response to a complaint.
+L494: Article 85
+L495: Where a review decision specifies that the procuring entity is in breach of Laws and Regulations, the procuring entity shall proceed with a lawful alternative within twenty days from the date following the date of receipt of the review decision. In the event that the procuring entity fails to proceed within the period, the supplier may file a complaint with the CRBGP within fifteen days from the date following the date of the expiry of the period.
+L496: When the CRBGP makes recommendation in its decision to the procuring entity on the way of handling the matter in question, and the procuring entity declined to follow such recommendation, the procuring entity shall, within 15 days from the date following the date of receipt of the decision, report it to the superior entity for approval.
+L497: If approved, the superior entity shall, within 15 days from the date following the date of receipt of such report, provide a written explanation with reasons to the CRBGP and the supplier.
+L498: Where a review decision specifies that the procuring entity is in breach of Laws and Regulations, the supplier may request the procuring entity to reimburse the necessary expenses incurred by the supplier for the preparation of tender and the filing of protest and complaint.
+L499: Article 85-1
+L500: In the event that the entity and the supplier failed to reach an agreement over the dispute in relation to the performance of the contract in question, any of the following means may be used to resolve the dispute:
+L501: 1. apply to CRBGP for mediation.
+L502: 2. refer to an arbitration institution for arbitration.
+L503: In the event that the application for mediation referred to in the preceding paragraph is made by the supplier, the entity may not object to such application. CRBGP shall offer suggestions or proposals for mediations of construction works and technical services.
+L504: In the event that the unsuccessful mediation of construction works and technical services due to the entity does not agree with proposal or resolution for mediation proposed by CRBGP, the entity may not object to the arbitration filed by the supplier.
+L505: The provisions of mediation of the Code of Civil Procedures shall apply mutatis mutandis to the procedure and effect of the mediation by CRBGP, unless otherwise provided in this Act.
+L506: Regulations governing the mediation of disputes shall be prescribed by the responsible entity, and promulgated after approval of the Executive Yuan.
+L507: Article 85-2
+L508: 
+L509: Payment shall be made for mediation fee, examination fees and other necessary fees on application for mediation. The schedule of fees, method of payment and the amount to be borne shall be prescribed by the responsible entity.
+L510: 
+L511: Article 85-3
+L512: The result of mediation shall either come into force upon consensus of the parties, or fail to come into force if there is no consensus.
+L513: During the mediation process, a mediator may, by his/her authority, propose a written resolution recommendation in the name of the CRBGP. If the entity does not agree with such recommendation, it shall report to its superior entity for approval before providing its written explanation to the CRBGP and the supplier in question.
+L514: 
+L515: Article 85-4
+L516: In the course of mediating the dispute over the performance of the contract in question, if the parties failed but very close to reach a consensus, the CRBGP shall propose a mediation proposal by its authority by taking into consideration all circumstances, consulting with the mediator, finding a balance over the interests of the parties, and not departing from the scope of the parties’ main points.
+L517: The parties or interested parties which participate in the mediation may, as regards the proposed proposal mentioned in the preceding paragraph, raise an objection to the CRBGP, within 10 days from the date following the date of receipt of such proposal.
+L518: The mediation shall be deemed unsuccessful if objection has been raised during the period mentioned in the preceding paragraph, and shall be deemed successful if no objection has been raised during such period.
+L519: Where an entity raises its objection in accordance with the preceding paragraph, the provisions set out in paragraph 2 of Article 85.3 shall apply mutatis mutandis.
+L520: Article 86
+L521: In order to handle the complaints filed by suppliers for procurement at the levels of central government and local government, and the disputes arising from the performance of contract between the procurement entities and the suppliers, CRBGPs established by the responsible entity and the municipal and the county (city) governments at each level respectively shall consist seven to thirty five members selected from persons impartial and of professional knowledge in legal or procurement affairs and appointed by the responsible entity or the municipal or county (city) governments.
+L522: Three of such members may be high-ranking officials of the responsible entity or the municipal or county (city) governments provided that the number of such officials may not exceed one-fifth of the total number of members
+L523: The CRBGP shall perform its official duties impartially. The regulations governing the organization of CRBGP shall be prescribed by the responsible entity and promulgated after approval of Executive Yuan.
+L524: Chapter VII Penal Provisions
+L525: 
+L526: Article 87
+L527: A person who commits violence or threat, administers drugs, or applies hypnosis with the intent to cause a supplier not to tender or to tender contrary to its real intention, or cause the winning tenderer to forego the award or to assign or subcontract after award shall be punished with imprisonment for not less than one year but not more than seven years; in addition thereto, a fine of not more than three million New Taiwan Dollars may be imposed.
+L528: If death results from the offense specified in the preceding paragraph, the offender shall be punished with life imprisonment or imprisonment for not less than seven years; if aggravated injury results, the offender shall be punished with imprisonment for not less than three years but not more than ten years; in addition thereto, a fine of not more than three million New Taiwan Dollars may be imposed.
+L529: A person who commits fraud or uses any other illegal means to make the supplier unable to tender or cause the opening of tenders to have an incorrect result shall be punished with imprisonment for not more than five years; in addition thereto, a fine of not more than one million New Taiwan Dollars may be imposed.
+L530: A person who causes the supplier not to tender or not to proceed with price competition by means of contract, agreement or other forms of meeting of minds, with the intent to adversely affect the price of award or to gain illegal benefits, shall be punished with imprisonment for not less than six months but not more than five years; in addition thereto, a fine of not more than one million New Taiwan Dollars may be imposed.
+L531: A person who borrows or assumes any other’s name or certificate to tender, with the intent to adversely affect the result of procurement or to gain illegal benefits, shall be punished with imprisonment for not more than three years; in addition thereto, a fine of not more than one million New Taiwan Dollars may be imposed. The foregoing shall also apply to the cases of a person who allows any other person to borrow or assume his name of certificate to tender.
+L532: An attempt to commit an offense specified in paragraphs 1, 3 or 4 is punishable.
+L533: Article 88
+L534: A personnel of a supplier who is entrusted by an entity to conduct planning, design, review, monitoring, project management, or procurement but imposes unlawful restrictions or review on the technologies, technical methodology, materials, equipment, or specifications with the intent to gain personal illegal benefits and thereby obtains benefits, shall be punished with imprisonment for not less than one year but not more than seven years; in addition thereto, a fine of not more than three million New Taiwan Dollars may be imposed.
+L535: In addition, the foregoing personnel who imposes unlawful restrictions or review on the qualifications of suppliers or sub-suppliers with the intent to gain personal illegal benefits and thereby obtains benefits, shall be subject to the same punishment.
+L536: An attempt to commit an offense specified in the preceding paragraph is punishable.
+L537: Article 89
+L538: The personnel of a supplier who is entrusted by an entity to conduct planning, design, project management, or procurement but discloses or delivers confidential documents, drawings, information, things, or any other data related to the procurement with the intent to gain personal illegal benefits and thereby obtains benefits, shall be punished with imprisonment for not more than five years or short-term imprisonment; in lieu thereof or in addition thereto, a fine of not more than one million New Taiwan Dollars may be imposed.
+L539: An attempt to commit an offense specified in the preceding paragraph is punishable.
+L540: Article 90
+L541: A person who commits violence or threat with the intent to cause the personnel of an entity who is engaged in planning, design, handling, or supervision of a procurement, or the personnel of a supplier who is entrusted by an entity either to provide services of planning, design, or project management of a procurement or to conduct its procurement, not to decide on matters with respect to the procurement or to decide on such matters contrary to his/her own mind, shall be punished with imprisonment for not less than one year but not more than seven years; in addition thereto, a fine of not more than three million New Taiwan Dollars may be imposed.
+L542: If death results from the offense specified in the preceding paragraph, the offender shall be punished with life imprisonment or imprisonment for not less than seven years; if aggravate injury results, the offender shall be punished with imprisonment for not less than three years but not more than ten years; in addition thereto, a fine of not more than three million New Taiwan Dollars may be imposed.
+L543: An attempt to commit an offense specified in paragraph 1 is punishable.
+L544: Article 91
+L545: A person who commits violence or threat with the intent to cause the personnel of an entity who is engaged in planning, design, handling, or supervision of a procurement, or the personnel of a supplier who is entrusted by an entity either to provide services of planning, design, or project management of a procurement or to conduct its procurement, to disclose or deliver the confidential documents, drawings, information, things, or any other data related to the procurement, shall be punished with imprisonment for not more than five years; in addition thereto, a fine of not more than one million New Taiwan Dollars may be imposed.
+L546: If death results from the offense specified in the preceding paragraph, the offender shall be punished with life imprisonment or imprisonment for not less than seven years; if aggravated injury results, the offender shall be punished with imprisonment for not less than three years but not more than ten years; in addition thereto, a fine of not more than three million New Taiwan Dollars may be imposed respectively.
+L547: An attempt to commit an offense specified in paragraph 1 is punishable.
+L548: Article 92
+L549: 
+L550: Where a representative, agent, employee, or any other staff of a supplier who, in performing his/her duty, commits an offense specified in this Act, the wrongdoer shall be subject to the punishment prescribed in the relevant Articles; in addition thereto, the supplier shall also be subject to the fine prescribed therein.
+L551: 
+L552: Chapter VIII Supplementary Provisions
+L553: 
+L554: Article 93
+L555: An entity may execute an inter-entity supply contract with a supplier for the supply of property or services that are commonly needed by entities.
+L556: The regulations for a procurement of an inter-entity supply contract, the matters specified in the tender documentation and contract, applicable entities, and the related matters shall be prescribed by the responsible entity.
+L557: 
+L558: Article 93-1
+L559: An entity may conduct a procurement electronically, and the electronic data thus provided shall be deemed as formal written document which may be waived.
+L560: The regulations of operation for electronic procurement specified in the preceding paragraph covering invitation to tender, receipt of tender documentation, submission of tender, opening of tender, award of contract, and receipt and expenditure of fees shall be prescribed by the responsible entity.
+L561: 
+L562: Article 94
+L563: An entity conducting an evaluation shall establish an evaluation committee in which there shall be not less than five members and at least one third of the members shall be experts and scholars. A recommended roster of experts and scholars shall be prepared jointly by the responsible entity, the Ministry of Education, the Ministry of Examination, and other relevant entities.
+L564: The experts and scholars referred to in the preceding paragraph shall not be incumbent staff members of any government agency.
+L565: The regulations governing the organization of and the regulations for review by the evaluation committee shall be prescribed by the responsible entity.
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn1124view4 [wordlim: 200] Source: find({"ref_id":"turn1123view2","pattern":"Article 222"}); Total lines: 1
+No matching text found for "Article 222"--------------------------------------------------------------------------------
+Internal Error ()
+citeturn1124view5 [wordlim: 200] Source: find({"ref_id":"turn1123view2","pattern":"Article 279"}); Total lines: 1
+No matching text found for "Article 279"

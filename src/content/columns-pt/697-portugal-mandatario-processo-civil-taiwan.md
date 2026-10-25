@@ -3,7 +3,7 @@ title: "Constituir mandatário em Taiwan a partir de Portugal: poderes, notifica
 seoTitle: "Mandato judicial em Taiwan a partir de Portugal"
 summary: "Uma procuração para um processo em Taiwan exige escolhas sobre acordos, recursos e recebimento de valores. Como preparar o mandato e acompanhar notificações desde Portugal."
 published: "2026-10-23"
-lastmod: "2026-10-24"
+lastmod: "2026-10-25"
 date_display: "23 de outubro de 2026"
 read_time: "5 min de leitura"
 categories: ["Processo civil em Taiwan"]
@@ -43,13 +43,13 @@ Essa exceção não significa que toda a procuração de primeira instância exi
 
 Entre os atos sujeitos a poderes especiais pelo artigo 70 encontram-se a renúncia, a aceitação do pedido, a desistência, a transação, a reconvenção, os recursos, a revisão e a designação de outro mandatário. A norma estende a exigência aos atos de execução e ao recebimento do objeto em litígio. Eventuais restrições devem constar da procuração ou do registo processual.
 
-Que decisão ficará reservada ao cliente? Pode ser necessário distinguir a negociação de uma proposta da autorização para a aceitar, ou a condução da execução da receção de valores. Estas escolhas devem ser discutidas antes de conferir os poderes. Limites comunicados informalmente devem ser compatibilizados com o instrumento apresentado ao tribunal.
+Que decisão ficará reservada ao cliente? Pode ser necessário distinguir a negociação de uma proposta da autorização para a aceitar, ou a condução da execução da receção de valores. Discuta esses limites antes de conferir poderes. O instrumento apresentado ao tribunal deve refletir também os limites comunicados informalmente.
 
 ## A notificação chega a Taiwan, a decisão está em Portugal
 
-Quando os poderes de receber notificações não estejam limitados, o [artigo 132](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=132) determina que a notificação seja feita ao mandatário. O juiz pode, quando necessário, ordenar que a notificação seja feita também à própria parte. A circulação interna do documento entre Taiwan e Portugal precisa, por isso, de um responsável e de um canal acordado.
+Quando os poderes de receber notificações não estejam limitados, o [artigo 132](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=132) determina que a notificação seja feita ao mandatário. O juiz pode, quando necessário, ordenar a notificação à própria parte. A circulação interna do documento entre Taiwan e Portugal precisa, por isso, de um responsável e de um canal acordado.
 
-Conta a data da notificação processual, não a data em que alguém abriu em Portugal o email de encaminhamento. Para uma empresa, é útil prever quem substitui o responsável durante férias ou deslocações e quem pode aprovar uma resposta urgente.
+Registe a data da notificação processual. A data em que alguém abre o email de encaminhamento em Portugal não a substitui. Para uma empresa, é útil prever quem substitui o responsável durante férias ou deslocações e quem pode aprovar uma resposta urgente.
 
 Ter mandatário também não assegura que todo o processo decorra sem comparência pessoal. O [artigo 203](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=203) permite ao tribunal ordenar a presença da parte ou do seu representante legal para esclarecer o litígio. A mesma disposição permite exigir traduções de documentos estrangeiros. Eventuais alternativas à presença devem ser tratadas no processo concreto.
 

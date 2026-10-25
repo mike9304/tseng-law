@@ -1,0 +1,2 @@
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/906-korean-publisher-exclusive-license-taiwan-complaint.md [ko] sentences=37 mean=42.2 cv=0.461 short=0.162 run3=0.029 opener_rep=0.083 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=1
+  WARN 92% of sentences end in '니다.' — vary endings within the register

@@ -1,0 +1,3424 @@
+{
+  "checkedAt": "2026-10-25T11:36:31.634584+00:00",
+  "summary": {
+    "mode": "live",
+    "articles": 87,
+    "articlePass": 87,
+    "bodyBlocks": 2788,
+    "externalSourceLinks": 2079,
+    "images": 35,
+    "imagePass": 35,
+    "indexPages": 14,
+    "indexDirectLinks": 86,
+    "sitemapPresent": 87,
+    "errors": 0,
+    "warnings": 1,
+    "publicationVerified": true,
+    "localVerified": false
+  },
+  "inputs": {
+    "inventorySha256": "d2e028557e23becc7cefbe562a0d66300f7b8890ceca4c1af4d139fa84dbbde4",
+    "bodyManifestSha256": "f2c53cf0004ee0af27bb746db568aafabf6bad94bf611885ac18e9e0e521c47d",
+    "verifierSha256": "8964d8486818fa9432dfc2567e0e3521555f9d89ab1bb8c0663628532b96faab"
+  },
+  "expectedCommit": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+  "buildBefore": {
+    "commit": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+    "builtAt": "2026-10-25T02:45:26.159Z"
+  },
+  "buildAfter": {
+    "commit": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+    "builtAt": "2026-10-25T02:45:26.159Z"
+  },
+  "records": [
+    {
+      "route": "/th/columns/thai-worker-taiwan-payslip-deductions-unpaid-salary",
+      "path": "src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md",
+      "sourceSha256": "7c3cfe13a5fc7fab736fce58f58429081931788138ce56d06f16f4f7851a6a51",
+      "htmlSha256": "e5283e5a7a149f94825e4ae4528845f8faef0a60d1490c697d67a8eb20955463",
+      "bodyBlocks": 28,
+      "bodyLinks": 19,
+      "externalSourceLinks": 16,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/air-20261011/536-inventory-loss-wage-prededuction-taiwan.webp",
+      "expectedImagePath": "/images/columns/air-20261011/536-inventory-loss-wage-prededuction-taiwan.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/th/columns/thai-worker-taiwan-payslip-deductions-unpaid-salary",
+        "error": "",
+        "sha256": "e5283e5a7a149f94825e4ae4528845f8faef0a60d1490c697d67a8eb20955463"
+      }
+    },
+    {
+      "route": "/th/columns/thai-worker-taiwan-factory-closure-wage-fund",
+      "path": "src/content/columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md",
+      "sourceSha256": "0c492a23e33a50c51ba5033e3b375dd74069a8b8d59f8135ab1e118f9d271aa3",
+      "htmlSha256": "ad91b3107ed5b4a7f71bc519059e6ad34f838bbd3a6d0fd82dcb2a85061d89d1",
+      "bodyBlocks": 29,
+      "bodyLinks": 16,
+      "externalSourceLinks": 13,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/606-taiwan-unpaid-wages-insolvent-employer-payment-fund/featured-01.webp",
+      "expectedImagePath": "/images/blog/606-taiwan-unpaid-wages-insolvent-employer-payment-fund/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/th/columns/thai-worker-taiwan-factory-closure-wage-fund",
+        "error": "",
+        "sha256": "ad91b3107ed5b4a7f71bc519059e6ad34f838bbd3a6d0fd82dcb2a85061d89d1"
+      }
+    },
+    {
+      "route": "/th/columns/thai-worker-taiwan-bank-account-police-notice",
+      "path": "src/content/columns-th/661-thai-worker-taiwan-bank-account-police-notice.md",
+      "sourceSha256": "76149f32515ae1379e33d1dbe7983df5955e06e94573fb17b6e7d37cc63ca425",
+      "htmlSha256": "3aa6694eae857ccf5be95eee52b4d3dd1f09eda53673f2b5ea5e1177b49b3fe1",
+      "bodyBlocks": 31,
+      "bodyLinks": 14,
+      "externalSourceLinks": 11,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/038-taiwan-bank-account-lending-fraud-money-laundering/featured-01.webp",
+      "expectedImagePath": "/images/blog/038-taiwan-bank-account-lending-fraud-money-laundering/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/th/columns/thai-worker-taiwan-bank-account-police-notice",
+        "error": "",
+        "sha256": "3aa6694eae857ccf5be95eee52b4d3dd1f09eda53673f2b5ea5e1177b49b3fe1"
+      }
+    },
+    {
+      "route": "/th/columns/thai-return-home-taiwan-traffic-injury-records",
+      "path": "src/content/columns-th/662-thai-return-home-taiwan-traffic-injury-records.md",
+      "sourceSha256": "88f014c8e00251efff5435f77c02a4914bbccee7aca397976ed192d6e0aaaff2",
+      "htmlSha256": "0c10ebc8d5bd914fe73574682be58f9b3c3bbb2b5e624b643601b8074817bbcb",
+      "bodyBlocks": 31,
+      "bodyLinks": 15,
+      "externalSourceLinks": 12,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/003-taiwan-traffic-accident-procedure/featured-01.jpg",
+      "expectedImagePath": "/images/blog/003-taiwan-traffic-accident-procedure/featured-01.jpg",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/th/columns/thai-return-home-taiwan-traffic-injury-records",
+        "error": "",
+        "sha256": "0c10ebc8d5bd914fe73574682be58f9b3c3bbb2b5e624b643601b8074817bbcb"
+      }
+    },
+    {
+      "route": "/th/columns/thai-supplier-taiwan-buyer-unpaid-invoice",
+      "path": "src/content/columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md",
+      "sourceSha256": "e12e07cd8ac507e5789a78200f9be0f2f58770fd473ebce2d923adc1d9a40336",
+      "htmlSha256": "463386ce2c829377fa8d44a3544cfda1ccabc7f16225e3f30c6f44656c1671ae",
+      "bodyBlocks": 27,
+      "bodyLinks": 29,
+      "externalSourceLinks": 26,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+      "expectedImagePath": "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/th/columns/thai-supplier-taiwan-buyer-unpaid-invoice",
+        "error": "",
+        "sha256": "463386ce2c829377fa8d44a3544cfda1ccabc7f16225e3f30c6f44656c1671ae"
+      }
+    },
+    {
+      "route": "/id/columns/indonesian-home-caregiver-unpaid-wages-taiwan",
+      "path": "src/content/columns-id/664-indonesian-home-caregiver-unpaid-wages-taiwan.md",
+      "sourceSha256": "d6599f6a7bc43c131b501f2f7e4cbac3d4e63dac32292acdc79d65893f66374e",
+      "htmlSha256": "7e485e57d508b9e788209731c3df764d417cab0ae4cf249390dddda6c6123bf7",
+      "bodyBlocks": 25,
+      "bodyLinks": 15,
+      "externalSourceLinks": 12,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/ISSUE-20261021-04-caregiver-transfer-consent/featured-01.webp",
+      "expectedImagePath": "/images/blog/ISSUE-20261021-04-caregiver-transfer-consent/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/id/columns/indonesian-home-caregiver-unpaid-wages-taiwan",
+        "error": "",
+        "sha256": "7e485e57d508b9e788209731c3df764d417cab0ae4cf249390dddda6c6123bf7"
+      }
+    },
+    {
+      "route": "/id/columns/indonesian-worker-passport-broker-dispute-taiwan",
+      "path": "src/content/columns-id/665-indonesian-worker-passport-broker-dispute-taiwan.md",
+      "sourceSha256": "ad992fa38728e5a4eb5612697b52f35d2bd0b901deb43964c6e51f1945cc3d3e",
+      "htmlSha256": "e7586deb956facbc2e7d984748eb81d40f19cbdbd0f3b6238dc0f7d8eae33316",
+      "bodyBlocks": 23,
+      "bodyLinks": 13,
+      "externalSourceLinks": 10,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/20261002/vi-passport-arc-return.webp",
+      "expectedImagePath": "/images/columns/20261002/vi-passport-arc-return.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/id/columns/indonesian-worker-passport-broker-dispute-taiwan",
+        "error": "",
+        "sha256": "e7586deb956facbc2e7d984748eb81d40f19cbdbd0f3b6238dc0f7d8eae33316"
+      }
+    },
+    {
+      "route": "/id/columns/indonesian-worker-bank-account-cash-job-police-taiwan",
+      "path": "src/content/columns-id/666-indonesian-worker-bank-account-cash-job-police-taiwan.md",
+      "sourceSha256": "65f8b2ade7420f25816b8eba3c7e9a1a76bfd79ab5d73491aea07ff0a68f54a2",
+      "htmlSha256": "74666307356380c6f6dc7ef1c088d9ad712564382cb765fe0635459c41427ab0",
+      "bodyBlocks": 25,
+      "bodyLinks": 25,
+      "externalSourceLinks": 22,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/038-taiwan-bank-account-lending-fraud-money-laundering/featured-01.webp",
+      "expectedImagePath": "/images/blog/038-taiwan-bank-account-lending-fraud-money-laundering/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/id/columns/indonesian-worker-bank-account-cash-job-police-taiwan",
+        "error": "",
+        "sha256": "74666307356380c6f6dc7ef1c088d9ad712564382cb765fe0635459c41427ab0"
+      }
+    },
+    {
+      "route": "/id/columns/indonesian-factory-worker-injury-evidence-compensation-taiwan",
+      "path": "src/content/columns-id/667-indonesian-factory-worker-injury-evidence-compensation-taiwan.md",
+      "sourceSha256": "33d420710e833608c7c52c17c9b128bfe895feef0a0f3aa641f254b0aa354644",
+      "htmlSha256": "4926151f16b57425d4fdae7cc141aa32e69d925da0a47a8f3a7d9aee91d10991",
+      "bodyBlocks": 25,
+      "bodyLinks": 23,
+      "externalSourceLinks": 20,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/039-taiwan-migrant-worker-occupational-injury-compensation/featured-01.webp",
+      "expectedImagePath": "/images/blog/039-taiwan-migrant-worker-occupational-injury-compensation/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/id/columns/indonesian-factory-worker-injury-evidence-compensation-taiwan",
+        "error": "",
+        "sha256": "4926151f16b57425d4fdae7cc141aa32e69d925da0a47a8f3a7d9aee91d10991"
+      }
+    },
+    {
+      "route": "/id/columns/indonesian-buyer-taiwan-machinery-defect-notice",
+      "path": "src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+      "sourceSha256": "a93789bd548ad3eec8923fc57ba384194b4f0a45d488b4a1f361e386ff11d709",
+      "htmlSha256": "6a528d8a93438902bc26a49004014efafd311855733c05d92b400979a7d86d10",
+      "bodyBlocks": 25,
+      "bodyLinks": 28,
+      "externalSourceLinks": 25,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp",
+      "expectedImagePath": "/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/id/columns/indonesian-buyer-taiwan-machinery-defect-notice",
+        "error": "",
+        "sha256": "6a528d8a93438902bc26a49004014efafd311855733c05d92b400979a7d86d10"
+      }
+    },
+    {
+      "route": "/hi/columns/indian-supplier-unpaid-taiwan-invoice",
+      "path": "src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md",
+      "sourceSha256": "2aedb05871c6f5c5d561e33786740a54e179932a6aaba9fb7dce9822e0efa48e",
+      "htmlSha256": "b8dd554ecb14a71395319b9f73d8784652acd7d73f44e2b0dd0ee6264fd543ac",
+      "bodyBlocks": 23,
+      "bodyLinks": 33,
+      "externalSourceLinks": 30,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/518-recovering-unpaid-invoices-from-taiwan-customers/featured-01.webp",
+      "expectedImagePath": "/images/blog/518-recovering-unpaid-invoices-from-taiwan-customers/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/hi/columns/indian-supplier-unpaid-taiwan-invoice",
+        "error": "",
+        "sha256": "b8dd554ecb14a71395319b9f73d8784652acd7d73f44e2b0dd0ee6264fd543ac"
+      }
+    },
+    {
+      "route": "/hi/columns/indian-buyer-taiwan-machinery-defect-notice",
+      "path": "src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+      "sourceSha256": "06a92c0a8939a853b7131b8f30e5797f29c2b61563852c858002dbf11e0f667d",
+      "htmlSha256": "39bb67d015dc59db6b7b77a86938958b4e07e21af1084ef66e883843506e12e1",
+      "bodyBlocks": 22,
+      "bodyLinks": 25,
+      "externalSourceLinks": 22,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp",
+      "expectedImagePath": "/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/hi/columns/indian-buyer-taiwan-machinery-defect-notice",
+        "error": "",
+        "sha256": "39bb67d015dc59db6b7b77a86938958b4e07e21af1084ef66e883843506e12e1"
+      }
+    },
+    {
+      "route": "/hi/columns/indian-engineer-taiwan-noncompete-compensation",
+      "path": "src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+      "sourceSha256": "78493ba69c70c82430a04196f7ee58c0f9ee7356b394e13e3f0c9485aacdda11",
+      "htmlSha256": "5d5cc70f9266b6fc74831c7e0a3b5bf0b49618a6589dd89ec5bdde03740106d0",
+      "bodyBlocks": 24,
+      "bodyLinks": 20,
+      "externalSourceLinks": 17,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/20261004/ja-noncompete-hero-1600x900.webp",
+      "expectedImagePath": "/images/columns/20261004/ja-noncompete-hero-1600x900.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/hi/columns/indian-engineer-taiwan-noncompete-compensation",
+        "error": "",
+        "sha256": "5d5cc70f9266b6fc74831c7e0a3b5bf0b49618a6589dd89ec5bdde03740106d0"
+      }
+    },
+    {
+      "route": "/hi/columns/indian-resident-taiwan-rental-deposit-handover",
+      "path": "src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+      "sourceSha256": "e11b8bc0b1bef8ebd64907e0e9226823953ee1d0d544dcc281b126617f1d93f6",
+      "htmlSha256": "f30a0fc3df7a1d14a697320f7243e563f7f66d3b9f77fc872acad37bbadbd622",
+      "bodyBlocks": 24,
+      "bodyLinks": 15,
+      "externalSourceLinks": 12,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/065-taiwan-rental-deposit-foreign-tenant/featured-01.webp",
+      "expectedImagePath": "/images/blog/065-taiwan-rental-deposit-foreign-tenant/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/hi/columns/indian-resident-taiwan-rental-deposit-handover",
+        "error": "",
+        "sha256": "f30a0fc3df7a1d14a697320f7243e563f7f66d3b9f77fc872acad37bbadbd622"
+      }
+    },
+    {
+      "route": "/hi/columns/indian-importer-taiwan-supplier-bank-change-fraud",
+      "path": "src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+      "sourceSha256": "40bf733c1bd926171ecd716e2b91246a34828e6dd9b8c77dad37344a264f0b37",
+      "htmlSha256": "c67adc3fc91f46985e611ba71e99db047578a9d6bf64cec79362573131fac9db",
+      "bodyBlocks": 28,
+      "bodyLinks": 17,
+      "externalSourceLinks": 14,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/fraud-20261003/taiwan-supplier-bank-account-change-bec.png",
+      "expectedImagePath": "/images/columns/fraud-20261003/taiwan-supplier-bank-account-change-bec.png",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/hi/columns/indian-importer-taiwan-supplier-bank-change-fraud",
+        "error": "",
+        "sha256": "c67adc3fc91f46985e611ba71e99db047578a9d6bf64cec79362573131fac9db"
+      }
+    },
+    {
+      "route": "/fr/columns/france-exporter-taiwan-unpaid-invoices-credit-notes-returns",
+      "path": "src/content/columns-fr/674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.md",
+      "sourceSha256": "660a144dfd1e111ad482ae397d9f0e3ae149e965866f1d399ae6637aac44378a",
+      "htmlSha256": "7ec614312ec668871b9d6fa150e941246b4dac1e43f76be0f72a2e0d18d2cfea",
+      "bodyBlocks": 21,
+      "bodyLinks": 33,
+      "externalSourceLinks": 30,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+      "expectedImagePath": "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/fr/columns/france-exporter-taiwan-unpaid-invoices-credit-notes-returns",
+        "error": "",
+        "sha256": "7ec614312ec668871b9d6fa150e941246b4dac1e43f76be0f72a2e0d18d2cfea"
+      }
+    },
+    {
+      "route": "/fr/columns/french-brand-taiwan-trademark-registered-distributor",
+      "path": "src/content/columns-fr/675-french-brand-taiwan-trademark-registered-distributor.md",
+      "sourceSha256": "c5276a70604500bb08620d759fc81dda733e59f806a5b65c32cf2385d81b2171",
+      "htmlSha256": "9a17cfbb4a85a2eaeb85ec1170a781c9c94838827609e42ec16f7c0369ec680f",
+      "bodyBlocks": 24,
+      "bodyLinks": 19,
+      "externalSourceLinks": 16,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/265-taiwan-distributor-registered-japanese-brand-trademark/featured-01.webp",
+      "expectedImagePath": "/images/blog/265-taiwan-distributor-registered-japanese-brand-trademark/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/fr/columns/french-brand-taiwan-trademark-registered-distributor",
+        "error": "",
+        "sha256": "9a17cfbb4a85a2eaeb85ec1170a781c9c94838827609e42ec16f7c0369ec680f"
+      }
+    },
+    {
+      "route": "/fr/columns/french-supplier-taiwan-distributor-termination-stock-online-accounts",
+      "path": "src/content/columns-fr/676-french-supplier-taiwan-distributor-termination-stock-online-accounts.md",
+      "sourceSha256": "965f57dccc870db7edc845d6dfdb0901d508d2900283587d5ac58adb241ab319",
+      "htmlSha256": "795e85d72c0cf7b168f0c20b4f6e4554e4b66275ec303861907ec31dc3d9a232",
+      "bodyBlocks": 22,
+      "bodyLinks": 19,
+      "externalSourceLinks": 16,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/353-terminating-taiwan-distributor-us-exporter/featured-01.webp",
+      "expectedImagePath": "/images/blog/353-terminating-taiwan-distributor-us-exporter/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/fr/columns/french-supplier-taiwan-distributor-termination-stock-online-accounts",
+        "error": "",
+        "sha256": "795e85d72c0cf7b168f0c20b4f6e4554e4b66275ec303861907ec31dc3d9a232"
+      }
+    },
+    {
+      "route": "/fr/columns/france-resident-heir-taiwan-bank-property-documents",
+      "path": "src/content/columns-fr/677-france-resident-heir-taiwan-bank-property-documents.md",
+      "sourceSha256": "2354cd6048d7ae1c49720d5724a6f922e5df0db74dc8f6f5ac316e380c23fa66",
+      "htmlSha256": "bef55d09364c5f73d6a5fffbc72f4bafe60ecacdc239ddf26f1cccd922b84ff5",
+      "bodyBlocks": 25,
+      "bodyLinks": 23,
+      "externalSourceLinks": 20,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp",
+      "expectedImagePath": "/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/fr/columns/france-resident-heir-taiwan-bank-property-documents",
+        "error": "",
+        "sha256": "bef55d09364c5f73d6a5fffbc72f4bafe60ecacdc239ddf26f1cccd922b84ff5"
+      }
+    },
+    {
+      "route": "/fr/columns/french-employee-taiwan-unpaid-wages-employer-closure",
+      "path": "src/content/columns-fr/678-french-employee-taiwan-unpaid-wages-employer-closure.md",
+      "sourceSha256": "917fbdcdc1d6696f55cb2936b34d425b759660deb0863854a93663453fea4fc8",
+      "htmlSha256": "757ec223e4da3d62913fe438e38248a2588890ea60822e717ef617a815c013d5",
+      "bodyBlocks": 24,
+      "bodyLinks": 20,
+      "externalSourceLinks": 17,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/606-taiwan-unpaid-wages-insolvent-employer-payment-fund/featured-01.webp",
+      "expectedImagePath": "/images/blog/606-taiwan-unpaid-wages-insolvent-employer-payment-fund/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/fr/columns/french-employee-taiwan-unpaid-wages-employer-closure",
+        "error": "",
+        "sha256": "757ec223e4da3d62913fe438e38248a2588890ea60822e717ef617a815c013d5"
+      }
+    },
+    {
+      "route": "/de/columns/taiwan-maschinenlieferung-fat-sat-schlusszahlung",
+      "path": "src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md",
+      "sourceSha256": "14a2b26871b37dc263fe02107bdaf956104f5d636ef01ef3b19809b8f957e763",
+      "htmlSha256": "7908d4d472c14fd546b9cf27eb06d1fb54c3a6bd0c29a5a30568dd5fd0ff5849",
+      "bodyBlocks": 22,
+      "bodyLinks": 11,
+      "externalSourceLinks": 8,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/679-market-review-20261024.webp",
+      "expectedImagePath": "/images/columns/679-market-review-20261024.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/de/columns/taiwan-maschinenlieferung-fat-sat-schlusszahlung",
+        "error": "",
+        "sha256": "7908d4d472c14fd546b9cf27eb06d1fb54c3a6bd0c29a5a30568dd5fd0ff5849"
+      }
+    },
+    {
+      "route": "/de/columns/taiwan-bauteile-maengelruege-pruefmuster",
+      "path": "src/content/columns-de/680-taiwan-bauteile-maengelruege-pruefmuster.md",
+      "sourceSha256": "aec06d4fd31c96d0897536b93887b977f2b4796732497e0892ea44d1541354f7",
+      "htmlSha256": "3715993ebbc590fc14029716c98a3e50f718c1cbda05e504140e6678d6693e31",
+      "bodyBlocks": 20,
+      "bodyLinks": 15,
+      "externalSourceLinks": 12,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/680-market-review-20261024.webp",
+      "expectedImagePath": "/images/columns/680-market-review-20261024.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/de/columns/taiwan-bauteile-maengelruege-pruefmuster",
+        "error": "",
+        "sha256": "3715993ebbc590fc14029716c98a3e50f718c1cbda05e504140e6678d6693e31"
+      }
+    },
+    {
+      "route": "/de/columns/taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe",
+      "path": "src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md",
+      "sourceSha256": "44c842535b02a324c936740a93269b021aefd8c42301b8bdeaf3677550da888c",
+      "htmlSha256": "d0dfa1cb77290171045f5707525787b472af79b13b22b5a3142c6eb5c5697661",
+      "bodyBlocks": 21,
+      "bodyLinks": 17,
+      "externalSourceLinks": 14,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/681-market-review-20261024.webp",
+      "expectedImagePath": "/images/columns/681-market-review-20261024.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/de/columns/taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe",
+        "error": "",
+        "sha256": "d0dfa1cb77290171045f5707525787b472af79b13b22b5a3142c6eb5c5697661"
+      }
+    },
+    {
+      "route": "/de/columns/taiwan-gemeinsame-entwicklung-cad-geschaeftsgeheimnisse",
+      "path": "src/content/columns-de/682-taiwan-gemeinsame-entwicklung-cad-geschaeftsgeheimnisse.md",
+      "sourceSha256": "88603c449e6e5656fcd4b542da645088d2189553e30ffffae5cbc016502225e7",
+      "htmlSha256": "5ea45289c3007b91bd89dbee0b5607e953b47d36f479876e37e3d049502f1733",
+      "bodyBlocks": 19,
+      "bodyLinks": 18,
+      "externalSourceLinks": 15,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/682-market-review-20261024.webp",
+      "expectedImagePath": "/images/columns/682-market-review-20261024.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/de/columns/taiwan-gemeinsame-entwicklung-cad-geschaeftsgeheimnisse",
+        "error": "",
+        "sha256": "5ea45289c3007b91bd89dbee0b5607e953b47d36f479876e37e3d049502f1733"
+      }
+    },
+    {
+      "route": "/de/columns/deutsches-urteil-vermoegen-taiwan-vollstreckung",
+      "path": "src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md",
+      "sourceSha256": "6295a415327948e02af62c68e1942273ba22f169fb811a9e2415992b35bff151",
+      "htmlSha256": "03d844104c1bbe8e0adac803cd1ddb19474eda85055dc8d5b8087bddd4b1e5f6",
+      "bodyBlocks": 27,
+      "bodyLinks": 16,
+      "externalSourceLinks": 13,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/683-market-review-20261024.webp",
+      "expectedImagePath": "/images/columns/683-market-review-20261024.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/de/columns/deutsches-urteil-vermoegen-taiwan-vollstreckung",
+        "error": "",
+        "sha256": "03d844104c1bbe8e0adac803cd1ddb19474eda85055dc8d5b8087bddd4b1e5f6"
+      }
+    },
+    {
+      "route": "/it/columns/italian-exporter-taiwan-unpaid-installation-balance",
+      "path": "src/content/columns-it/684-italian-exporter-taiwan-unpaid-installation-balance.md",
+      "sourceSha256": "e6e97a8a4cb948138026584b51d6589da67e92b7a8df1c7183dc5212ced775ce",
+      "htmlSha256": "24d909d706e06f1b895cd22c456159a6451d2a13819abb4c531a7c492063881d",
+      "bodyBlocks": 34,
+      "bodyLinks": 29,
+      "externalSourceLinks": 26,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+      "expectedImagePath": "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/it/columns/italian-exporter-taiwan-unpaid-installation-balance",
+        "error": "",
+        "sha256": "24d909d706e06f1b895cd22c456159a6451d2a13819abb4c531a7c492063881d"
+      }
+    },
+    {
+      "route": "/it/columns/italian-brand-taiwan-distributor-trademark-registration",
+      "path": "src/content/columns-it/685-italian-brand-taiwan-distributor-trademark-registration.md",
+      "sourceSha256": "17ad264265124366a2704e8410f96aedff40238f252c4913ca5e40531f487de4",
+      "htmlSha256": "07224644449c00d885b77622c1095761069a957ae1ef08b5ffb562ae320993f9",
+      "bodyBlocks": 29,
+      "bodyLinks": 21,
+      "externalSourceLinks": 18,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/265-taiwan-distributor-registered-japanese-brand-trademark/featured-01.webp",
+      "expectedImagePath": "/images/blog/265-taiwan-distributor-registered-japanese-brand-trademark/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/it/columns/italian-brand-taiwan-distributor-trademark-registration",
+        "error": "",
+        "sha256": "07224644449c00d885b77622c1095761069a957ae1ef08b5ffb562ae320993f9"
+      }
+    },
+    {
+      "route": "/it/columns/taiwan-oem-molds-design-files-handover",
+      "path": "src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md",
+      "sourceSha256": "5c8df70a9a4733c5f12a49286c3c0fdfa80cff88684b38c34ccae6ed3051483d",
+      "htmlSha256": "e5fad3729df405678b85a29e29d637bd01fdd7c5abf02436953e07ef79d617a2",
+      "bodyBlocks": 31,
+      "bodyLinks": 23,
+      "externalSourceLinks": 20,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/gap-columns-20261010/505-taiwan-supplier-return-molds-test-fixtures.webp",
+      "expectedImagePath": "/images/blog/gap-columns-20261010/505-taiwan-supplier-return-molds-test-fixtures.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/it/columns/taiwan-oem-molds-design-files-handover",
+        "error": "",
+        "sha256": "e5fad3729df405678b85a29e29d637bd01fdd7c5abf02436953e07ef79d617a2"
+      }
+    },
+    {
+      "route": "/it/columns/italy-resident-heir-taiwan-inheritance-renunciation-debts",
+      "path": "src/content/columns-it/687-italy-resident-heir-taiwan-inheritance-renunciation-debts.md",
+      "sourceSha256": "336e3fe25e17a09df632d6c0c34989bd2b135702941c469f7798db76c2bd9b0d",
+      "htmlSha256": "3832e95ef4e665b4ac90a52d28adfe30bc6db8a2681c45d3beb67e6695f3da69",
+      "bodyBlocks": 29,
+      "bodyLinks": 25,
+      "externalSourceLinks": 22,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp",
+      "expectedImagePath": "/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/it/columns/italy-resident-heir-taiwan-inheritance-renunciation-debts",
+        "error": "",
+        "sha256": "3832e95ef4e665b4ac90a52d28adfe30bc6db8a2681c45d3beb67e6695f3da69"
+      }
+    },
+    {
+      "route": "/it/columns/italian-business-visitor-taiwan-summons-interpreter-defense",
+      "path": "src/content/columns-it/688-italian-business-visitor-taiwan-summons-interpreter-defense.md",
+      "sourceSha256": "bd42e4931c1656e93eea6bf694873500dca6afa34d6b44d69df96822dcb4e209",
+      "htmlSha256": "cecbbf36b656b0265d8e1be033edab1586fdd5805d62defe0d769fc952848eca",
+      "bodyBlocks": 31,
+      "bodyLinks": 27,
+      "externalSourceLinks": 24,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+      "expectedImagePath": "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/it/columns/italian-business-visitor-taiwan-summons-interpreter-defense",
+        "error": "",
+        "sha256": "cecbbf36b656b0265d8e1be033edab1586fdd5805d62defe0d769fc952848eca"
+      }
+    },
+    {
+      "route": "/es/columns/spain-exporter-taiwan-unpaid-invoices",
+      "path": "src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md",
+      "sourceSha256": "49e43adef77aab80f131baa2311c58af69b3ca07dcc3ce3ccd0b1e1b99c546d1",
+      "htmlSha256": "6e5ef258f1a0a105ae7b273b15f5641923477c8ccb299b982e88622e0b240380",
+      "bodyBlocks": 23,
+      "bodyLinks": 31,
+      "externalSourceLinks": 28,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/689-market-review-20261024.webp",
+      "expectedImagePath": "/images/columns/689-market-review-20261024.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/es/columns/spain-exporter-taiwan-unpaid-invoices",
+        "error": "",
+        "sha256": "6e5ef258f1a0a105ae7b273b15f5641923477c8ccb299b982e88622e0b240380"
+      }
+    },
+    {
+      "route": "/es/columns/spain-buyer-taiwan-defective-goods-notice",
+      "path": "src/content/columns-es/690-spain-buyer-taiwan-defective-goods-notice.md",
+      "sourceSha256": "c3af39c6d0a57bfae3fd7404192bbc300a6f292c5a0f0cdaea6d9cecb3d751b5",
+      "htmlSha256": "674fb7cf068370bfce862e7b59a741e421a511366e4579fa79c1d6fa2c193996",
+      "bodyBlocks": 22,
+      "bodyLinks": 17,
+      "externalSourceLinks": 14,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/690-market-review-20261024.webp",
+      "expectedImagePath": "/images/columns/690-market-review-20261024.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/es/columns/spain-buyer-taiwan-defective-goods-notice",
+        "error": "",
+        "sha256": "674fb7cf068370bfce862e7b59a741e421a511366e4579fa79c1d6fa2c193996"
+      }
+    },
+    {
+      "route": "/es/columns/spanish-judgment-taiwan-assets-enforcement",
+      "path": "src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md",
+      "sourceSha256": "00cbca16a04f4f010325cfdab709e9fdf8060a3573783cdb49df29aff04e2129",
+      "htmlSha256": "59d65f11dabead13057c14689c594b8c8929a28f0e5edf4dda41956ad8709681",
+      "bodyBlocks": 33,
+      "bodyLinks": 13,
+      "externalSourceLinks": 10,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/691-market-review-20261024.webp",
+      "expectedImagePath": "/images/columns/691-market-review-20261024.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/es/columns/spanish-judgment-taiwan-assets-enforcement",
+        "error": "",
+        "sha256": "59d65f11dabead13057c14689c594b8c8929a28f0e5edf4dda41956ad8709681"
+      }
+    },
+    {
+      "route": "/es/columns/return-spain-unpaid-taiwan-wages",
+      "path": "src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md",
+      "sourceSha256": "dce7864d575ac514a051a48e499c12262551ded1686b6047d798bfb01427c1be",
+      "htmlSha256": "f6decafd484cd1401703d0cb9f8b09ebe5532c60abbde18302173fbe1650aaa0",
+      "bodyBlocks": 24,
+      "bodyLinks": 23,
+      "externalSourceLinks": 20,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/692-market-review-20261024.webp",
+      "expectedImagePath": "/images/columns/692-market-review-20261024.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/es/columns/return-spain-unpaid-taiwan-wages",
+        "error": "",
+        "sha256": "f6decafd484cd1401703d0cb9f8b09ebe5532c60abbde18302173fbe1650aaa0"
+      }
+    },
+    {
+      "route": "/es/columns/spain-resident-taiwan-divorce-property",
+      "path": "src/content/columns-es/693-spain-resident-taiwan-divorce-property.md",
+      "sourceSha256": "dd296d71681b98872e72e5696f9ccf8ff2c3cafbce49d8dc561d323844a22d86",
+      "htmlSha256": "c92343d9048fe2df7baff671aeed67a845667112094c55c2ed20e14ca0082f65",
+      "bodyBlocks": 24,
+      "bodyLinks": 13,
+      "externalSourceLinks": 10,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/693-market-review-20261024.webp",
+      "expectedImagePath": "/images/columns/693-market-review-20261024.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/es/columns/spain-resident-taiwan-divorce-property",
+        "error": "",
+        "sha256": "c92343d9048fe2df7baff671aeed67a845667112094c55c2ed20e14ca0082f65"
+      }
+    },
+    {
+      "route": "/pt/columns/portugal-exportador-acordo-prestacoes-taiwan",
+      "path": "src/content/columns-pt/694-portugal-exportador-acordo-prestacoes-taiwan.md",
+      "sourceSha256": "07d82a4c57890867dad2e3c03da869e2522dbe1657495f685c71283bc856236b",
+      "htmlSha256": "2979ea4e605e08aabbf28a294294b9452d0bf954aeafe6966a655deace5dc1b4",
+      "bodyBlocks": 26,
+      "bodyLinks": 15,
+      "externalSourceLinks": 12,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/editorial-20261003-b04/taiwan-unpaid-invoice-settlement-release-korean.png",
+      "expectedImagePath": "/images/columns/editorial-20261003-b04/taiwan-unpaid-invoice-settlement-release-korean.png",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/pt/columns/portugal-exportador-acordo-prestacoes-taiwan",
+        "error": "",
+        "sha256": "2979ea4e605e08aabbf28a294294b9452d0bf954aeafe6966a655deace5dc1b4"
+      }
+    },
+    {
+      "route": "/pt/columns/portugal-fornecedor-taiwan-alteracao-conta-fraude",
+      "path": "src/content/columns-pt/695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md",
+      "sourceSha256": "b1475749d7fda41c0f630328d0d6b9cb5e3d5b3435c0140fb8c69944fc5f61f3",
+      "htmlSha256": "8bd1abcdff282985696b05841f394d8ec300abaa4b9b75a2f53b054f4886dec4",
+      "bodyBlocks": 29,
+      "bodyLinks": 11,
+      "externalSourceLinks": 8,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/fraud-20261003/taiwan-supplier-bank-account-change-bec.png",
+      "expectedImagePath": "/images/columns/fraud-20261003/taiwan-supplier-bank-account-change-bec.png",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/pt/columns/portugal-fornecedor-taiwan-alteracao-conta-fraude",
+        "error": "",
+        "sha256": "8bd1abcdff282985696b05841f394d8ec300abaa4b9b75a2f53b054f4886dec4"
+      }
+    },
+    {
+      "route": "/pt/columns/portugal-sentenca-arbitral-bens-taiwan",
+      "path": "src/content/columns-pt/696-portugal-sentenca-arbitral-bens-taiwan.md",
+      "sourceSha256": "fd748c24bcfc701812039bcb1f59c3a745c4b8354d6fe4f3796fef737b808011",
+      "htmlSha256": "9c770c8ae5dd17c8b037d56457028dedc55014361000ef8de4deb8b2cf12ce14",
+      "bodyBlocks": 25,
+      "bodyLinks": 10,
+      "externalSourceLinks": 7,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp",
+      "expectedImagePath": "/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/pt/columns/portugal-sentenca-arbitral-bens-taiwan",
+        "error": "",
+        "sha256": "9c770c8ae5dd17c8b037d56457028dedc55014361000ef8de4deb8b2cf12ce14"
+      }
+    },
+    {
+      "route": "/pt/columns/portugal-mandatario-processo-civil-taiwan",
+      "path": "src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md",
+      "sourceSha256": "5413c3f5b967adf73725ec3b58b12dfdb76b5ca43f301394e91929c6c5f56a0a",
+      "htmlSha256": "b35089f62dac2c3281544dba70f82bbca9870e1b1e7d4290725a2fb44f05dcd1",
+      "bodyBlocks": 27,
+      "bodyLinks": 13,
+      "externalSourceLinks": 10,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+      "expectedImagePath": "/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/pt/columns/portugal-mandatario-processo-civil-taiwan",
+        "error": "",
+        "sha256": "b35089f62dac2c3281544dba70f82bbca9870e1b1e7d4290725a2fb44f05dcd1"
+      }
+    },
+    {
+      "route": "/pt/columns/portugal-fim-contrato-taiwan-salarios-em-falta",
+      "path": "src/content/columns-pt/698-portugal-fim-contrato-taiwan-salarios-em-falta.md",
+      "sourceSha256": "bd4b5411b57b562a3ed338feab0fad9141bd2dae5a329a87d2c71fa7c7ffc56a",
+      "htmlSha256": "cbced259b42f1950ad7951cd2b292c04d7009b6e376b3ceb7a51bc26d01fd670",
+      "bodyBlocks": 27,
+      "bodyLinks": 24,
+      "externalSourceLinks": 20,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/606-taiwan-unpaid-wages-insolvent-employer-payment-fund/featured-01.webp",
+      "expectedImagePath": "/images/blog/606-taiwan-unpaid-wages-insolvent-employer-payment-fund/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/pt/columns/portugal-fim-contrato-taiwan-salarios-em-falta",
+        "error": "",
+        "sha256": "cbced259b42f1950ad7951cd2b292c04d7009b6e376b3ceb7a51bc26d01fd670"
+      }
+    },
+    {
+      "route": "/ar/columns/uae-importer-taiwan-supplier-advance-refund",
+      "path": "src/content/columns-ar/699-uae-importer-taiwan-supplier-advance-refund.md",
+      "sourceSha256": "7d3fddf6ecf792489b13f3dc8a0d703f03771d6c6bb01eb9a911dbbfce06feba",
+      "htmlSha256": "1b87da340a80cfb11b88f4897595bcf2ad2b93aa59f0dc92023843350c1aad52",
+      "bodyBlocks": 29,
+      "bodyLinks": 13,
+      "externalSourceLinks": 10,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+      "expectedImagePath": "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ar/columns/uae-importer-taiwan-supplier-advance-refund",
+        "error": "",
+        "sha256": "1b87da340a80cfb11b88f4897595bcf2ad2b93aa59f0dc92023843350c1aad52"
+      }
+    },
+    {
+      "route": "/ar/columns/saudi-arbitral-award-taiwan-assets",
+      "path": "src/content/columns-ar/700-saudi-arbitral-award-taiwan-assets.md",
+      "sourceSha256": "d4108bcdfc05d0801905fd6926af787e5c20162dace320e1190b986811346bc2",
+      "htmlSha256": "a548ada19126f00006751717a90b73e20408ae9f60dc046153abbaaf5397724f",
+      "bodyBlocks": 29,
+      "bodyLinks": 11,
+      "externalSourceLinks": 8,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp",
+      "expectedImagePath": "/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ar/columns/saudi-arbitral-award-taiwan-assets",
+        "error": "",
+        "sha256": "a548ada19126f00006751717a90b73e20408ae9f60dc046153abbaaf5397724f"
+      }
+    },
+    {
+      "route": "/ar/columns/uae-court-judgment-taiwan-enforcement",
+      "path": "src/content/columns-ar/701-uae-court-judgment-taiwan-enforcement.md",
+      "sourceSha256": "d48f7a847d9b7c4d152f052cad444957bc44b1dca7155bd4944b3163aff22f43",
+      "htmlSha256": "7fba52bf676babfcff6e5e5739f85f0eb0bf8f8bbd157a48082afaf5e8d2c5bf",
+      "bodyBlocks": 27,
+      "bodyLinks": 7,
+      "externalSourceLinks": 4,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp",
+      "expectedImagePath": "/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ar/columns/uae-court-judgment-taiwan-enforcement",
+        "error": "",
+        "sha256": "7fba52bf676babfcff6e5e5739f85f0eb0bf8f8bbd157a48082afaf5e8d2c5bf"
+      }
+    },
+    {
+      "route": "/ar/columns/overseas-heir-taiwan-estate-nationality-documents",
+      "path": "src/content/columns-ar/702-overseas-heir-taiwan-estate-nationality-documents.md",
+      "sourceSha256": "e7324c67044312342cf4ba003fefe47dac9b5e74ced55456f492734cb135b932",
+      "htmlSha256": "abd0f2d3ea6ffa0a3a85b2e96174452749fc7799380a857935237333dd7ccac3",
+      "bodyBlocks": 31,
+      "bodyLinks": 14,
+      "externalSourceLinks": 11,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/016-taiwan-inheritance-custody-analysis/featured-generic.webp",
+      "expectedImagePath": "/images/016-taiwan-inheritance-custody-analysis/featured-generic.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ar/columns/overseas-heir-taiwan-estate-nationality-documents",
+        "error": "",
+        "sha256": "abd0f2d3ea6ffa0a3a85b2e96174452749fc7799380a857935237333dd7ccac3"
+      }
+    },
+    {
+      "route": "/ar/columns/uae-resident-taiwan-counsel-arabic-documents",
+      "path": "src/content/columns-ar/703-uae-resident-taiwan-counsel-arabic-documents.md",
+      "sourceSha256": "cb839571891f6f5cc7b7453553efb67470ab30ae3d3b359a753d16f544cd9de5",
+      "htmlSha256": "55486d5e0c2d3cbab131f2417d38a77ada2aaa155e6213442ae32e3086098e43",
+      "bodyBlocks": 36,
+      "bodyLinks": 17,
+      "externalSourceLinks": 14,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+      "expectedImagePath": "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ar/columns/uae-resident-taiwan-counsel-arabic-documents",
+        "error": "",
+        "sha256": "55486d5e0c2d3cbab131f2417d38a77ada2aaa155e6213442ae32e3086098e43"
+      }
+    },
+    {
+      "route": "/ko/columns/taiwan-arc-first-application",
+      "path": "src/content/columns/704-taiwan-arc-first-application.md",
+      "sourceSha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1",
+      "htmlSha256": "c908f757fa17a4a1e6fccf1ba394a1c22cfb961be4dc8f223e13b6575295d545",
+      "bodyBlocks": 42,
+      "bodyLinks": 36,
+      "externalSourceLinks": 34,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ko/columns/taiwan-arc-first-application",
+        "error": "",
+        "sha256": "c908f757fa17a4a1e6fccf1ba394a1c22cfb961be4dc8f223e13b6575295d545"
+      }
+    },
+    {
+      "route": "/ko/columns/taiwan-visa-residence-work-study-family",
+      "path": "src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a",
+      "htmlSha256": "5ae1c7c381ee5cfe77b9a0bf8d56556ecad54db8467cd5e9ac8d780981930a7d",
+      "bodyBlocks": 34,
+      "bodyLinks": 39,
+      "externalSourceLinks": 35,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ko/columns/taiwan-visa-residence-work-study-family",
+        "error": "",
+        "sha256": "5ae1c7c381ee5cfe77b9a0bf8d56556ecad54db8467cd5e9ac8d780981930a7d"
+      }
+    },
+    {
+      "route": "/ko/columns/taiwan-arc-renewal-changes-reentry",
+      "path": "src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc",
+      "htmlSha256": "df02a3c6890db68305e765e328081d73da2352dd7be9e8c69c4bc55d62b6b2c5",
+      "bodyBlocks": 42,
+      "bodyLinks": 44,
+      "externalSourceLinks": 41,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ko/columns/taiwan-arc-renewal-changes-reentry",
+        "error": "",
+        "sha256": "df02a3c6890db68305e765e328081d73da2352dd7be9e8c69c4bc55d62b6b2c5"
+      }
+    },
+    {
+      "route": "/en/columns/taiwan-arc-first-application",
+      "path": "src/content/columns-en/704-taiwan-arc-first-application.md",
+      "sourceSha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f",
+      "htmlSha256": "a4fef2c70d55494e31f250bd1e706a6c8f7cd8682f351ac4888332dc5119ac51",
+      "bodyBlocks": 36,
+      "bodyLinks": 29,
+      "externalSourceLinks": 26,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/en/columns/taiwan-arc-first-application",
+        "error": "",
+        "sha256": "a4fef2c70d55494e31f250bd1e706a6c8f7cd8682f351ac4888332dc5119ac51"
+      }
+    },
+    {
+      "route": "/en/columns/taiwan-visa-residence-work-study-family",
+      "path": "src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304",
+      "htmlSha256": "8e05bf76a24808e1395f0c57ce59f4582ee7f9317e0037c5a6c3c9f3ef88d71c",
+      "bodyBlocks": 35,
+      "bodyLinks": 42,
+      "externalSourceLinks": 38,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/en/columns/taiwan-visa-residence-work-study-family",
+        "error": "",
+        "sha256": "8e05bf76a24808e1395f0c57ce59f4582ee7f9317e0037c5a6c3c9f3ef88d71c"
+      }
+    },
+    {
+      "route": "/en/columns/taiwan-arc-renewal-changes-reentry",
+      "path": "src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71",
+      "htmlSha256": "dbbbd45fe5d30ca6d4eedc702c6ae6a01a0648d4d725a6d7f8d45be613d4590e",
+      "bodyBlocks": 40,
+      "bodyLinks": 39,
+      "externalSourceLinks": 35,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/en/columns/taiwan-arc-renewal-changes-reentry",
+        "error": "",
+        "sha256": "dbbbd45fe5d30ca6d4eedc702c6ae6a01a0648d4d725a6d7f8d45be613d4590e"
+      }
+    },
+    {
+      "route": "/ja/columns/taiwan-arc-first-application",
+      "path": "src/content/columns-ja/704-taiwan-arc-first-application.md",
+      "sourceSha256": "b7bb06673c3ea5802ab425b8121ddee47af31120ec7ac0a2acf3618bfa8c8b70",
+      "htmlSha256": "b89130e395fbf9d96402ebf8241ea98479f6a0a92cd533ab2a15b2d0dfd49c01",
+      "bodyBlocks": 39,
+      "bodyLinks": 33,
+      "externalSourceLinks": 31,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ja/columns/taiwan-arc-first-application",
+        "error": "",
+        "sha256": "b89130e395fbf9d96402ebf8241ea98479f6a0a92cd533ab2a15b2d0dfd49c01"
+      }
+    },
+    {
+      "route": "/ja/columns/taiwan-visa-residence-work-study-family",
+      "path": "src/content/columns-ja/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSha256": "27e370a2b42dcb27618f4d155656730a43183c30150b6e4dbce0776f228fd0b6",
+      "htmlSha256": "5d51e72d730da47acf02f5e292a452ce7af4aed120056acfc03031cebe62de4d",
+      "bodyBlocks": 35,
+      "bodyLinks": 34,
+      "externalSourceLinks": 32,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ja/columns/taiwan-visa-residence-work-study-family",
+        "error": "",
+        "sha256": "5d51e72d730da47acf02f5e292a452ce7af4aed120056acfc03031cebe62de4d"
+      }
+    },
+    {
+      "route": "/ja/columns/taiwan-arc-renewal-changes-reentry",
+      "path": "src/content/columns-ja/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSha256": "9f4f5f18da7d2e844260075fe2dda906bf1b28a049699f690cf41c489c30f8fe",
+      "htmlSha256": "fa62dd79a0bd6f423797598a11d7c10db27a5a1ad8d3f10951872c0552e68f03",
+      "bodyBlocks": 41,
+      "bodyLinks": 38,
+      "externalSourceLinks": 36,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ja/columns/taiwan-arc-renewal-changes-reentry",
+        "error": "",
+        "sha256": "fa62dd79a0bd6f423797598a11d7c10db27a5a1ad8d3f10951872c0552e68f03"
+      }
+    },
+    {
+      "route": "/vi/columns/taiwan-arc-first-application",
+      "path": "src/content/columns-vi/704-taiwan-arc-first-application.md",
+      "sourceSha256": "61b01a8bf30e4d997fd70bab01128859ced94e39ff59da4356a0eddee9485bd5",
+      "htmlSha256": "e1a1d87ef698bae7adfa6567ddf58935573476a4fe68b0ea0fbe7c7658bc2864",
+      "bodyBlocks": 38,
+      "bodyLinks": 29,
+      "externalSourceLinks": 26,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/vi/columns/taiwan-arc-first-application",
+        "error": "",
+        "sha256": "e1a1d87ef698bae7adfa6567ddf58935573476a4fe68b0ea0fbe7c7658bc2864"
+      }
+    },
+    {
+      "route": "/vi/columns/taiwan-visa-residence-work-study-family",
+      "path": "src/content/columns-vi/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSha256": "1d7177dde3e0375593d14c441a3a527c74d6e9a2836340a69a805b9e0f3b092d",
+      "htmlSha256": "feb348007d36dc0f4e955f7f2ae8aadd4d9327749b74f5fa14d40042701f4b05",
+      "bodyBlocks": 37,
+      "bodyLinks": 31,
+      "externalSourceLinks": 28,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/vi/columns/taiwan-visa-residence-work-study-family",
+        "error": "",
+        "sha256": "feb348007d36dc0f4e955f7f2ae8aadd4d9327749b74f5fa14d40042701f4b05"
+      }
+    },
+    {
+      "route": "/vi/columns/taiwan-arc-renewal-changes-reentry",
+      "path": "src/content/columns-vi/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSha256": "08574be203883e7945b11f2e55206a69f56033dd608430745cf368d889b774ea",
+      "htmlSha256": "c21a821abc3bc6e0c5b8a344987189f78d7444ea4d068262272f845d9cd75daf",
+      "bodyBlocks": 38,
+      "bodyLinks": 39,
+      "externalSourceLinks": 35,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/vi/columns/taiwan-arc-renewal-changes-reentry",
+        "error": "",
+        "sha256": "c21a821abc3bc6e0c5b8a344987189f78d7444ea4d068262272f845d9cd75daf"
+      }
+    },
+    {
+      "route": "/zh-hant/columns/taiwan-arc-first-application",
+      "path": "src/content/columns-zh/704-taiwan-arc-first-application.md",
+      "sourceSha256": "0c00bc06bf3c3c1860a95af4dbcea9eaab981300860916856295e8b947244468",
+      "htmlSha256": "3218cc9b667855a6bdb6feebcae926875277353b6acd62fb614ff19991573387",
+      "bodyBlocks": 38,
+      "bodyLinks": 27,
+      "externalSourceLinks": 25,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/zh-hant/columns/taiwan-arc-first-application",
+        "error": "",
+        "sha256": "3218cc9b667855a6bdb6feebcae926875277353b6acd62fb614ff19991573387"
+      }
+    },
+    {
+      "route": "/zh-hant/columns/taiwan-visa-residence-work-study-family",
+      "path": "src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSha256": "290a50047632ad830ea98c524ffef6ed91c2b4c8d555a1844689824c3ffea7a3",
+      "htmlSha256": "81b6bd057c8eee6ed5b05c547ba63613ed7e48b1c3b1bfe9aa0f641ec9c3d733",
+      "bodyBlocks": 34,
+      "bodyLinks": 41,
+      "externalSourceLinks": 38,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/zh-hant/columns/taiwan-visa-residence-work-study-family",
+        "error": "",
+        "sha256": "81b6bd057c8eee6ed5b05c547ba63613ed7e48b1c3b1bfe9aa0f641ec9c3d733"
+      }
+    },
+    {
+      "route": "/zh-hant/columns/taiwan-arc-renewal-changes-reentry",
+      "path": "src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSha256": "4d70e78b9a197f4a2b81d25d61b6fa862ee849a6392d5fd905e90bcf781e721c",
+      "htmlSha256": "441ee28ea198c369f3dff2f0674bb300fe324dcc9b834da2a01c2199cffddc9d",
+      "bodyBlocks": 42,
+      "bodyLinks": 43,
+      "externalSourceLinks": 40,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/zh-hant/columns/taiwan-arc-renewal-changes-reentry",
+        "error": "",
+        "sha256": "441ee28ea198c369f3dff2f0674bb300fe324dcc9b834da2a01c2199cffddc9d"
+      }
+    },
+    {
+      "route": "/th/columns/taiwan-arc-first-application",
+      "path": "src/content/columns-th/704-taiwan-arc-first-application.md",
+      "sourceSha256": "f4ab018ecbdd93c7cea7f67cb0559f575e7ddf45f884bf046ec21c35c76e1829",
+      "htmlSha256": "7aadb6a586c3e93435e382d8671f69769e08b6f8c4be791d5d11231a122c2014",
+      "bodyBlocks": 44,
+      "bodyLinks": 35,
+      "externalSourceLinks": 33,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/th/columns/taiwan-arc-first-application",
+        "error": "",
+        "sha256": "7aadb6a586c3e93435e382d8671f69769e08b6f8c4be791d5d11231a122c2014"
+      }
+    },
+    {
+      "route": "/th/columns/taiwan-visa-residence-work-study-family",
+      "path": "src/content/columns-th/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSha256": "9443904b8750edfef5742c0bcccc984a1bc5ea883c2a016dbccff7233a10454b",
+      "htmlSha256": "00e619d78001a8e6e092d393b1a76a776813ddcc3f20c9cb50d7fd18d816cf00",
+      "bodyBlocks": 43,
+      "bodyLinks": 31,
+      "externalSourceLinks": 28,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/th/columns/taiwan-visa-residence-work-study-family",
+        "error": "",
+        "sha256": "00e619d78001a8e6e092d393b1a76a776813ddcc3f20c9cb50d7fd18d816cf00"
+      }
+    },
+    {
+      "route": "/th/columns/taiwan-arc-renewal-changes-reentry",
+      "path": "src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSha256": "03d0a97e50d4375236152c7701db93ae283f72f910ce94a617a51e5808e65c0b",
+      "htmlSha256": "bae3aadf9faed1fdaa498ec4e61c0322e797fca280498f8cb6bb1c96049f63a6",
+      "bodyBlocks": 43,
+      "bodyLinks": 32,
+      "externalSourceLinks": 30,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/th/columns/taiwan-arc-renewal-changes-reentry",
+        "error": "",
+        "sha256": "bae3aadf9faed1fdaa498ec4e61c0322e797fca280498f8cb6bb1c96049f63a6"
+      }
+    },
+    {
+      "route": "/id/columns/taiwan-arc-first-application",
+      "path": "src/content/columns-id/704-taiwan-arc-first-application.md",
+      "sourceSha256": "0f6eb5fa439f2fd28d3a4d71837cbe94ee8cc0dc17cb53eff6e064d05a69f8e4",
+      "htmlSha256": "ef65fc6832990af5cdff381f0089c4aac1920c4f04a7f2421b11b886bc110e18",
+      "bodyBlocks": 31,
+      "bodyLinks": 41,
+      "externalSourceLinks": 38,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/id/columns/taiwan-arc-first-application",
+        "error": "",
+        "sha256": "ef65fc6832990af5cdff381f0089c4aac1920c4f04a7f2421b11b886bc110e18"
+      }
+    },
+    {
+      "route": "/id/columns/taiwan-visa-residence-work-study-family",
+      "path": "src/content/columns-id/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSha256": "f5403aaf015974377db2c7fa123bf85f372d94ca3e95ed65772b01d8a6173a80",
+      "htmlSha256": "2a706379d3fd1a08b6e14024861d80737d382b6b68fc287f5c4fca35f5fde4b7",
+      "bodyBlocks": 31,
+      "bodyLinks": 40,
+      "externalSourceLinks": 37,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/id/columns/taiwan-visa-residence-work-study-family",
+        "error": "",
+        "sha256": "2a706379d3fd1a08b6e14024861d80737d382b6b68fc287f5c4fca35f5fde4b7"
+      }
+    },
+    {
+      "route": "/id/columns/taiwan-arc-renewal-changes-reentry",
+      "path": "src/content/columns-id/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSha256": "97f52339f99267e005a32b322178804a1438bc038e611b0ca4891cf8d87e03d6",
+      "htmlSha256": "d0ecd5fad091a31ac9c1f567c7ebfbe2b459a86b5c45230f24bed2ab3767f272",
+      "bodyBlocks": 35,
+      "bodyLinks": 33,
+      "externalSourceLinks": 31,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/id/columns/taiwan-arc-renewal-changes-reentry",
+        "error": "",
+        "sha256": "d0ecd5fad091a31ac9c1f567c7ebfbe2b459a86b5c45230f24bed2ab3767f272"
+      }
+    },
+    {
+      "route": "/hi/columns/taiwan-arc-first-application",
+      "path": "src/content/columns-hi/704-taiwan-arc-first-application.md",
+      "sourceSha256": "e9c117570460078783e5f344943bcaebdb76db72fc8a94b150068ca45a58a77d",
+      "htmlSha256": "301f54b1d7a5f63f5ec687a518c6568c76a9817148aeacb0db6c54e6f9422905",
+      "bodyBlocks": 36,
+      "bodyLinks": 34,
+      "externalSourceLinks": 32,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/hi/columns/taiwan-arc-first-application",
+        "error": "",
+        "sha256": "301f54b1d7a5f63f5ec687a518c6568c76a9817148aeacb0db6c54e6f9422905"
+      }
+    },
+    {
+      "route": "/hi/columns/taiwan-visa-residence-work-study-family",
+      "path": "src/content/columns-hi/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSha256": "282eeaee9aabf69a8eafea04af003bd6bf84732a10b9e7d4e4aef152d0addb8d",
+      "htmlSha256": "8cda40016dc3ba8231aa46259f8b0d488c40b532e9b9f2dff24c781db1b0f9f1",
+      "bodyBlocks": 42,
+      "bodyLinks": 38,
+      "externalSourceLinks": 35,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/hi/columns/taiwan-visa-residence-work-study-family",
+        "error": "",
+        "sha256": "8cda40016dc3ba8231aa46259f8b0d488c40b532e9b9f2dff24c781db1b0f9f1"
+      }
+    },
+    {
+      "route": "/hi/columns/taiwan-arc-renewal-changes-reentry",
+      "path": "src/content/columns-hi/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSha256": "32e0945e62394a3c8d5998492e86d632eb30cff9b34ffabcb87a9543235b6a91",
+      "htmlSha256": "8af96a1ba1514d7b1797a8591b0a42b71d357e00534f481fcb1ac8a65ffaa7c8",
+      "bodyBlocks": 44,
+      "bodyLinks": 42,
+      "externalSourceLinks": 40,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/hi/columns/taiwan-arc-renewal-changes-reentry",
+        "error": "",
+        "sha256": "8af96a1ba1514d7b1797a8591b0a42b71d357e00534f481fcb1ac8a65ffaa7c8"
+      }
+    },
+    {
+      "route": "/fr/columns/taiwan-arc-first-application",
+      "path": "src/content/columns-fr/704-taiwan-arc-first-application.md",
+      "sourceSha256": "b15d77af3ae7d7fa8ec3a39af881833f537ad2cf72351d54dc1ab2b7251e9896",
+      "htmlSha256": "6473c1eea97b5391cdd58fcdd43a7b589e7a65c9530a47d75720ce7776078a8e",
+      "bodyBlocks": 39,
+      "bodyLinks": 30,
+      "externalSourceLinks": 28,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/fr/columns/taiwan-arc-first-application",
+        "error": "",
+        "sha256": "6473c1eea97b5391cdd58fcdd43a7b589e7a65c9530a47d75720ce7776078a8e"
+      }
+    },
+    {
+      "route": "/fr/columns/taiwan-visa-residence-work-study-family",
+      "path": "src/content/columns-fr/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSha256": "b194fad64058a6ef06afd15e8b07da3d1b9175dfdb8ffeb8746606ed53b3ec60",
+      "htmlSha256": "3db5d45cc22d30f166a938cc29f5f9b728a4421e4ed1e33fb2acf7868b26fff5",
+      "bodyBlocks": 33,
+      "bodyLinks": 37,
+      "externalSourceLinks": 34,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/fr/columns/taiwan-visa-residence-work-study-family",
+        "error": "",
+        "sha256": "3db5d45cc22d30f166a938cc29f5f9b728a4421e4ed1e33fb2acf7868b26fff5"
+      }
+    },
+    {
+      "route": "/fr/columns/taiwan-arc-renewal-changes-reentry",
+      "path": "src/content/columns-fr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSha256": "a8b9da8fccc6d312e5830fb463e52d4a8316e72d189b85d30af7f3b8fbb73243",
+      "htmlSha256": "70848009e36c95b38381c0ecd9b07a56341010c9ef9771d56da5913e5f6106dd",
+      "bodyBlocks": 43,
+      "bodyLinks": 43,
+      "externalSourceLinks": 41,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/fr/columns/taiwan-arc-renewal-changes-reentry",
+        "error": "",
+        "sha256": "70848009e36c95b38381c0ecd9b07a56341010c9ef9771d56da5913e5f6106dd"
+      }
+    },
+    {
+      "route": "/de/columns/taiwan-arc-first-application",
+      "path": "src/content/columns-de/704-taiwan-arc-first-application.md",
+      "sourceSha256": "07b02d98ad6c6e6679d32bb8315391c678fa23bc7eb0c485ba9bf9dc6440a306",
+      "htmlSha256": "9ac62c99210213432de1ec7b9d5676bcbb14e6caffcab84ed9ff2656f1d87caf",
+      "bodyBlocks": 39,
+      "bodyLinks": 37,
+      "externalSourceLinks": 35,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/de/columns/taiwan-arc-first-application",
+        "error": "",
+        "sha256": "9ac62c99210213432de1ec7b9d5676bcbb14e6caffcab84ed9ff2656f1d87caf"
+      }
+    },
+    {
+      "route": "/de/columns/taiwan-visa-residence-work-study-family",
+      "path": "src/content/columns-de/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSha256": "038cbed98651ea9aa67796a82e4a83d449c843542fe96fbabbaeb0848f693265",
+      "htmlSha256": "539dc55497645bdf9efdd218ab3cc3b287e6ea4d6aea90d6d8eee02901687c64",
+      "bodyBlocks": 40,
+      "bodyLinks": 37,
+      "externalSourceLinks": 34,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/de/columns/taiwan-visa-residence-work-study-family",
+        "error": "",
+        "sha256": "539dc55497645bdf9efdd218ab3cc3b287e6ea4d6aea90d6d8eee02901687c64"
+      }
+    },
+    {
+      "route": "/de/columns/taiwan-arc-renewal-changes-reentry",
+      "path": "src/content/columns-de/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSha256": "7dc7053950479519253179c3fa4c03069a7c8c3f8d7c42b0c43d7c61e9587a2b",
+      "htmlSha256": "690a856cb835b9a16a5da1ca1becb1bb02bad5c2d8931a0f8c2d619470af4e93",
+      "bodyBlocks": 41,
+      "bodyLinks": 38,
+      "externalSourceLinks": 36,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/de/columns/taiwan-arc-renewal-changes-reentry",
+        "error": "",
+        "sha256": "690a856cb835b9a16a5da1ca1becb1bb02bad5c2d8931a0f8c2d619470af4e93"
+      }
+    },
+    {
+      "route": "/it/columns/taiwan-arc-first-application",
+      "path": "src/content/columns-it/704-taiwan-arc-first-application.md",
+      "sourceSha256": "ff49591c9d161b0143992f7c4f4a490baaa027ee84d00f61ea0e178fa567d092",
+      "htmlSha256": "ddbc87eac2509fbf74052fa7f26cc96b474aecfb7901ff5d4909da2ed3d72359",
+      "bodyBlocks": 37,
+      "bodyLinks": 36,
+      "externalSourceLinks": 34,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/it/columns/taiwan-arc-first-application",
+        "error": "",
+        "sha256": "ddbc87eac2509fbf74052fa7f26cc96b474aecfb7901ff5d4909da2ed3d72359"
+      }
+    },
+    {
+      "route": "/it/columns/taiwan-visa-residence-work-study-family",
+      "path": "src/content/columns-it/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSha256": "785ab58116dffcd557112b47517ff7efab0e19101e84e90e0ac678a003f9ba31",
+      "htmlSha256": "35f4ec2914a67a67a789b844290c33e329c1cdc36af1a482cd433e122a47159a",
+      "bodyBlocks": 41,
+      "bodyLinks": 32,
+      "externalSourceLinks": 29,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/it/columns/taiwan-visa-residence-work-study-family",
+        "error": "",
+        "sha256": "35f4ec2914a67a67a789b844290c33e329c1cdc36af1a482cd433e122a47159a"
+      }
+    },
+    {
+      "route": "/it/columns/taiwan-arc-renewal-changes-reentry",
+      "path": "src/content/columns-it/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSha256": "0d106a8c5122f4fb97f5c4fab30ae766bd9262323e68460c5da001273781d0b3",
+      "htmlSha256": "597bac2e643c2bd419afe4c64d85f19686ffad7708706badeece3aceca094d9f",
+      "bodyBlocks": 36,
+      "bodyLinks": 32,
+      "externalSourceLinks": 30,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/it/columns/taiwan-arc-renewal-changes-reentry",
+        "error": "",
+        "sha256": "597bac2e643c2bd419afe4c64d85f19686ffad7708706badeece3aceca094d9f"
+      }
+    },
+    {
+      "route": "/es/columns/taiwan-arc-first-application",
+      "path": "src/content/columns-es/704-taiwan-arc-first-application.md",
+      "sourceSha256": "f2723eedf735414413c04515279ab4bcf80beb291477bd2662c6d28ba5bc54a5",
+      "htmlSha256": "9a80e0b177a078f8b798aefb8f476958a8938b59cf7589d4be0982b0fb1c537b",
+      "bodyBlocks": 39,
+      "bodyLinks": 32,
+      "externalSourceLinks": 29,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/es/columns/taiwan-arc-first-application",
+        "error": "",
+        "sha256": "9a80e0b177a078f8b798aefb8f476958a8938b59cf7589d4be0982b0fb1c537b"
+      }
+    },
+    {
+      "route": "/es/columns/taiwan-visa-residence-work-study-family",
+      "path": "src/content/columns-es/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSha256": "d48d1bce4587347d61ed90f73ba5995772f8bb358f37b4cdb0e3b771c8a21bc5",
+      "htmlSha256": "6ab08905bdab649d3b4613332e3889045897d41780e05b9ee4bf1030f06ebdfe",
+      "bodyBlocks": 35,
+      "bodyLinks": 33,
+      "externalSourceLinks": 30,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/es/columns/taiwan-visa-residence-work-study-family",
+        "error": "",
+        "sha256": "6ab08905bdab649d3b4613332e3889045897d41780e05b9ee4bf1030f06ebdfe"
+      }
+    },
+    {
+      "route": "/es/columns/taiwan-arc-renewal-changes-reentry",
+      "path": "src/content/columns-es/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSha256": "2b2135ac4907f2080582a2ad903f08f4b5cb29dd64b89622fdc81922e7096182",
+      "htmlSha256": "cc272ed939dd5e119f1bcfb2e2602f3ee74b6862ef23f683434dcfdef61dea70",
+      "bodyBlocks": 34,
+      "bodyLinks": 31,
+      "externalSourceLinks": 29,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/es/columns/taiwan-arc-renewal-changes-reentry",
+        "error": "",
+        "sha256": "cc272ed939dd5e119f1bcfb2e2602f3ee74b6862ef23f683434dcfdef61dea70"
+      }
+    },
+    {
+      "route": "/pt/columns/taiwan-arc-first-application",
+      "path": "src/content/columns-pt/704-taiwan-arc-first-application.md",
+      "sourceSha256": "8aa828c67ccc8c9ffed1946592e0660bd03e36d4bce4744835a31f7672fa702d",
+      "htmlSha256": "53e3fda57e7101aceaabd9959e6d9524b6c998f850decd53ad9864bfbdefd34c",
+      "bodyBlocks": 37,
+      "bodyLinks": 23,
+      "externalSourceLinks": 21,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/pt/columns/taiwan-arc-first-application",
+        "error": "",
+        "sha256": "53e3fda57e7101aceaabd9959e6d9524b6c998f850decd53ad9864bfbdefd34c"
+      }
+    },
+    {
+      "route": "/pt/columns/taiwan-visa-residence-work-study-family",
+      "path": "src/content/columns-pt/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSha256": "8935d8bab66031ecfd5c6b01db002fecc8d78e22713365c52214adaaa594c359",
+      "htmlSha256": "ae85c837b16cd0fbba4bfe8cc7fd41ba53d706e14eb2657f3a4cd794e8976b6a",
+      "bodyBlocks": 32,
+      "bodyLinks": 26,
+      "externalSourceLinks": 24,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/pt/columns/taiwan-visa-residence-work-study-family",
+        "error": "",
+        "sha256": "ae85c837b16cd0fbba4bfe8cc7fd41ba53d706e14eb2657f3a4cd794e8976b6a"
+      }
+    },
+    {
+      "route": "/pt/columns/taiwan-arc-renewal-changes-reentry",
+      "path": "src/content/columns-pt/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSha256": "6cd3d32cdbe24fa0a74f506cf17198f925d9780e769ad4ac3bf6331212d056f3",
+      "htmlSha256": "1a8e23ee389a207128b9f0bbedc4f23bc7384b1a4c024fb0db915228d94588dd",
+      "bodyBlocks": 43,
+      "bodyLinks": 30,
+      "externalSourceLinks": 28,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/pt/columns/taiwan-arc-renewal-changes-reentry",
+        "error": "",
+        "sha256": "1a8e23ee389a207128b9f0bbedc4f23bc7384b1a4c024fb0db915228d94588dd"
+      }
+    },
+    {
+      "route": "/ar/columns/taiwan-arc-first-application",
+      "path": "src/content/columns-ar/704-taiwan-arc-first-application.md",
+      "sourceSha256": "a64f7b405783b22383a7df3e87e76a21d41307a920c6f1b9a8ee67da484ab81d",
+      "htmlSha256": "882d22a3773c008a0a42fb4a71567bae66b3ba4df63b23e4e7bf5c9a3c608ade",
+      "bodyBlocks": 40,
+      "bodyLinks": 33,
+      "externalSourceLinks": 30,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ar/columns/taiwan-arc-first-application",
+        "error": "",
+        "sha256": "882d22a3773c008a0a42fb4a71567bae66b3ba4df63b23e4e7bf5c9a3c608ade"
+      }
+    },
+    {
+      "route": "/ar/columns/taiwan-visa-residence-work-study-family",
+      "path": "src/content/columns-ar/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSha256": "66ebe0430f90227014ed2a37420220090b889a53e87728adfecfaf6e2d6f01eb",
+      "htmlSha256": "d4968c720ea2e477782b7282d8a0d88c679241983e6b5f35d8473cd16875f6a3",
+      "bodyBlocks": 39,
+      "bodyLinks": 35,
+      "externalSourceLinks": 32,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": true,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ar/columns/taiwan-visa-residence-work-study-family",
+        "error": "",
+        "sha256": "d4968c720ea2e477782b7282d8a0d88c679241983e6b5f35d8473cd16875f6a3"
+      }
+    },
+    {
+      "route": "/ar/columns/taiwan-arc-renewal-changes-reentry",
+      "path": "src/content/columns-ar/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSha256": "253c199800eac1461ab48026679388c9d46c37939e0872cf84d5e53d4908572a",
+      "htmlSha256": "6e2b482750accac44da80d0896bc9a77eb73631d97f27612a8d17d415b21bb21",
+      "bodyBlocks": 39,
+      "bodyLinks": 35,
+      "externalSourceLinks": 32,
+      "primaryContainers": 1,
+      "recommendationSectionsExcluded": 1,
+      "primaryTextExact": false,
+      "faqPairs": 3,
+      "heroUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedImagePath": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "errors": [],
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ar/columns/taiwan-arc-renewal-changes-reentry",
+        "error": "",
+        "sha256": "6e2b482750accac44da80d0896bc9a77eb73631d97f27612a8d17d415b21bb21"
+      }
+    }
+  ],
+  "images": [
+    {
+      "url": "https://media.tseng-law.com/images/columns/air-20261011/536-inventory-loss-wage-prededuction-taiwan.webp",
+      "path": "/images/columns/air-20261011/536-inventory-loss-wage-prededuction-taiwan.webp",
+      "expectedSha256": "ffe8b32a67292d18342b826a9d24d9076e70ffdc6539e7d46cffee4c8ddc1da4",
+      "expectedBytes": 110596,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/air-20261011/536-inventory-loss-wage-prededuction-taiwan.webp",
+        "error": "",
+        "sha256": "ffe8b32a67292d18342b826a9d24d9076e70ffdc6539e7d46cffee4c8ddc1da4"
+      },
+      "actualBytes": 110596,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/606-taiwan-unpaid-wages-insolvent-employer-payment-fund/featured-01.webp",
+      "path": "/images/blog/606-taiwan-unpaid-wages-insolvent-employer-payment-fund/featured-01.webp",
+      "expectedSha256": "797ef5319e02226059265ccc46b9c4e1ad1b3ef13e72200653a1d1e24513b5d6",
+      "expectedBytes": 31582,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/606-taiwan-unpaid-wages-insolvent-employer-payment-fund/featured-01.webp",
+        "error": "",
+        "sha256": "797ef5319e02226059265ccc46b9c4e1ad1b3ef13e72200653a1d1e24513b5d6"
+      },
+      "actualBytes": 31582,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/038-taiwan-bank-account-lending-fraud-money-laundering/featured-01.webp",
+      "path": "/images/blog/038-taiwan-bank-account-lending-fraud-money-laundering/featured-01.webp",
+      "expectedSha256": "1d06bd5a03d6aa0295859a6116f91952887bbd2b1acbdcdca3dfef98bbf2dbab",
+      "expectedBytes": 25386,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/038-taiwan-bank-account-lending-fraud-money-laundering/featured-01.webp",
+        "error": "",
+        "sha256": "1d06bd5a03d6aa0295859a6116f91952887bbd2b1acbdcdca3dfef98bbf2dbab"
+      },
+      "actualBytes": 25386,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/003-taiwan-traffic-accident-procedure/featured-01.jpg",
+      "path": "/images/blog/003-taiwan-traffic-accident-procedure/featured-01.jpg",
+      "expectedSha256": "baec471f4549d9483cf53f01b50781b26e897d2c1a304ff688f32793c1070de8",
+      "expectedBytes": 91363,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/jpeg",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/003-taiwan-traffic-accident-procedure/featured-01.jpg",
+        "error": "",
+        "sha256": "baec471f4549d9483cf53f01b50781b26e897d2c1a304ff688f32793c1070de8"
+      },
+      "actualBytes": 91363,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+      "path": "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+      "expectedSha256": "918e0c6be06873086b5e8a5f32931045ee5a51e004c3074cad20f044fc9a4aa7",
+      "expectedBytes": 33974,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+        "error": "",
+        "sha256": "918e0c6be06873086b5e8a5f32931045ee5a51e004c3074cad20f044fc9a4aa7"
+      },
+      "actualBytes": 33974,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/ISSUE-20261021-04-caregiver-transfer-consent/featured-01.webp",
+      "path": "/images/blog/ISSUE-20261021-04-caregiver-transfer-consent/featured-01.webp",
+      "expectedSha256": "f91abd7205fe59d477db330390a5b0fafc60fcea4c7f0acdbe9581697955779d",
+      "expectedBytes": 60864,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/ISSUE-20261021-04-caregiver-transfer-consent/featured-01.webp",
+        "error": "",
+        "sha256": "f91abd7205fe59d477db330390a5b0fafc60fcea4c7f0acdbe9581697955779d"
+      },
+      "actualBytes": 60864,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/20261002/vi-passport-arc-return.webp",
+      "path": "/images/columns/20261002/vi-passport-arc-return.webp",
+      "expectedSha256": "9a2680299bcb25b3aa6e3181363f7d1c751444ffaf5efdf9e029a33db6fc0bad",
+      "expectedBytes": 115864,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/20261002/vi-passport-arc-return.webp",
+        "error": "",
+        "sha256": "9a2680299bcb25b3aa6e3181363f7d1c751444ffaf5efdf9e029a33db6fc0bad"
+      },
+      "actualBytes": 115864,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/039-taiwan-migrant-worker-occupational-injury-compensation/featured-01.webp",
+      "path": "/images/blog/039-taiwan-migrant-worker-occupational-injury-compensation/featured-01.webp",
+      "expectedSha256": "48f26189939af3d94dd527a83938a00b0afb452254cfabe340f9e887419aca09",
+      "expectedBytes": 43480,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/039-taiwan-migrant-worker-occupational-injury-compensation/featured-01.webp",
+        "error": "",
+        "sha256": "48f26189939af3d94dd527a83938a00b0afb452254cfabe340f9e887419aca09"
+      },
+      "actualBytes": 43480,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp",
+      "path": "/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp",
+      "expectedSha256": "2e94445745c56720e779170cfcc3f6d6ecbdaa663a4bbbbc163fd98b5acbbe6c",
+      "expectedBytes": 80048,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/gap-columns-20261010/506-taiwan-defective-shipment-inspection-notice.webp",
+        "error": "",
+        "sha256": "2e94445745c56720e779170cfcc3f6d6ecbdaa663a4bbbbc163fd98b5acbbe6c"
+      },
+      "actualBytes": 80048,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/518-recovering-unpaid-invoices-from-taiwan-customers/featured-01.webp",
+      "path": "/images/blog/518-recovering-unpaid-invoices-from-taiwan-customers/featured-01.webp",
+      "expectedSha256": "9061ab2a6235832a0b92022c1fe9f363aae76cc490307a320e6a0a47843bcee6",
+      "expectedBytes": 23350,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/518-recovering-unpaid-invoices-from-taiwan-customers/featured-01.webp",
+        "error": "",
+        "sha256": "9061ab2a6235832a0b92022c1fe9f363aae76cc490307a320e6a0a47843bcee6"
+      },
+      "actualBytes": 23350,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/20261004/ja-noncompete-hero-1600x900.webp",
+      "path": "/images/columns/20261004/ja-noncompete-hero-1600x900.webp",
+      "expectedSha256": "20ef8dedd9cded3d2c334a8d812bac7487fd17fa76297975743eb4971d3f5147",
+      "expectedBytes": 144068,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/20261004/ja-noncompete-hero-1600x900.webp",
+        "error": "",
+        "sha256": "20ef8dedd9cded3d2c334a8d812bac7487fd17fa76297975743eb4971d3f5147"
+      },
+      "actualBytes": 144068,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/065-taiwan-rental-deposit-foreign-tenant/featured-01.webp",
+      "path": "/images/blog/065-taiwan-rental-deposit-foreign-tenant/featured-01.webp",
+      "expectedSha256": "b6c431edabda12420f9d877679736b8d5ceee54807d17a6804d472341d0ace57",
+      "expectedBytes": 58964,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/065-taiwan-rental-deposit-foreign-tenant/featured-01.webp",
+        "error": "",
+        "sha256": "b6c431edabda12420f9d877679736b8d5ceee54807d17a6804d472341d0ace57"
+      },
+      "actualBytes": 58964,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/fraud-20261003/taiwan-supplier-bank-account-change-bec.png",
+      "path": "/images/columns/fraud-20261003/taiwan-supplier-bank-account-change-bec.png",
+      "expectedSha256": "24468029d4f12cbc80b79b8290a743e9115f9299ea8f07274caa233c7b180e50",
+      "expectedBytes": 1723929,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/png",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/fraud-20261003/taiwan-supplier-bank-account-change-bec.png",
+        "error": "",
+        "sha256": "24468029d4f12cbc80b79b8290a743e9115f9299ea8f07274caa233c7b180e50"
+      },
+      "actualBytes": 1723929,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/265-taiwan-distributor-registered-japanese-brand-trademark/featured-01.webp",
+      "path": "/images/blog/265-taiwan-distributor-registered-japanese-brand-trademark/featured-01.webp",
+      "expectedSha256": "0ce315b94a9ad4df67eb94a790868ed179e5b944c4d8f2a2ecc746de1107fe15",
+      "expectedBytes": 40236,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/265-taiwan-distributor-registered-japanese-brand-trademark/featured-01.webp",
+        "error": "",
+        "sha256": "0ce315b94a9ad4df67eb94a790868ed179e5b944c4d8f2a2ecc746de1107fe15"
+      },
+      "actualBytes": 40236,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/353-terminating-taiwan-distributor-us-exporter/featured-01.webp",
+      "path": "/images/blog/353-terminating-taiwan-distributor-us-exporter/featured-01.webp",
+      "expectedSha256": "e2e2e1b2f9500d2656ae38fd10faa8bf6f12cf9e9ca30852459e55a25c363b5e",
+      "expectedBytes": 53962,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/353-terminating-taiwan-distributor-us-exporter/featured-01.webp",
+        "error": "",
+        "sha256": "e2e2e1b2f9500d2656ae38fd10faa8bf6f12cf9e9ca30852459e55a25c363b5e"
+      },
+      "actualBytes": 53962,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp",
+      "path": "/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp",
+      "expectedSha256": "02fcc509d646e989fe3f533ecceef6ce5637b7542e04e1cb354d436a3d3dd01f",
+      "expectedBytes": 169576,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/20261003/us-inheritance-document-preparation-1600x900.webp",
+        "error": "",
+        "sha256": "02fcc509d646e989fe3f533ecceef6ce5637b7542e04e1cb354d436a3d3dd01f"
+      },
+      "actualBytes": 169576,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/679-market-review-20261024.webp",
+      "path": "/images/columns/679-market-review-20261024.webp",
+      "expectedSha256": "a7ef2151b3cfefaed25a00d6b30477752a94b1b86ab1a5ae15e9513c645c6baf",
+      "expectedBytes": 210098,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/679-market-review-20261024.webp",
+        "error": "",
+        "sha256": "a7ef2151b3cfefaed25a00d6b30477752a94b1b86ab1a5ae15e9513c645c6baf"
+      },
+      "actualBytes": 210098,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/680-market-review-20261024.webp",
+      "path": "/images/columns/680-market-review-20261024.webp",
+      "expectedSha256": "fc3c1ef927c63cc750b27f1ffda7b7b568ac629a94e16bbcd0bb803a4341ea92",
+      "expectedBytes": 267198,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/680-market-review-20261024.webp",
+        "error": "",
+        "sha256": "fc3c1ef927c63cc750b27f1ffda7b7b568ac629a94e16bbcd0bb803a4341ea92"
+      },
+      "actualBytes": 267198,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/681-market-review-20261024.webp",
+      "path": "/images/columns/681-market-review-20261024.webp",
+      "expectedSha256": "cab5e2dcdd503cab5a21834f364d1d8143d4d2d720420826200b772b046207c3",
+      "expectedBytes": 254292,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/681-market-review-20261024.webp",
+        "error": "",
+        "sha256": "cab5e2dcdd503cab5a21834f364d1d8143d4d2d720420826200b772b046207c3"
+      },
+      "actualBytes": 254292,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/682-market-review-20261024.webp",
+      "path": "/images/columns/682-market-review-20261024.webp",
+      "expectedSha256": "177a623104791746a06688fff3fb39be950b4265eac6cf61ec2ccf79e0fd8300",
+      "expectedBytes": 253012,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/682-market-review-20261024.webp",
+        "error": "",
+        "sha256": "177a623104791746a06688fff3fb39be950b4265eac6cf61ec2ccf79e0fd8300"
+      },
+      "actualBytes": 253012,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/683-market-review-20261024.webp",
+      "path": "/images/columns/683-market-review-20261024.webp",
+      "expectedSha256": "f4762f745c4ef68f8f8c56ac221758a55efccf05320782ddfcb659b022261325",
+      "expectedBytes": 259694,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/683-market-review-20261024.webp",
+        "error": "",
+        "sha256": "f4762f745c4ef68f8f8c56ac221758a55efccf05320782ddfcb659b022261325"
+      },
+      "actualBytes": 259694,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/gap-columns-20261010/505-taiwan-supplier-return-molds-test-fixtures.webp",
+      "path": "/images/blog/gap-columns-20261010/505-taiwan-supplier-return-molds-test-fixtures.webp",
+      "expectedSha256": "eb85ddd893fea4e6208c6c53bb4c428e3e6b583a6706ec55671cd14e98bce446",
+      "expectedBytes": 125644,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/gap-columns-20261010/505-taiwan-supplier-return-molds-test-fixtures.webp",
+        "error": "",
+        "sha256": "eb85ddd893fea4e6208c6c53bb4c428e3e6b583a6706ec55671cd14e98bce446"
+      },
+      "actualBytes": 125644,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+      "path": "/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+      "expectedSha256": "69803c14e93f0d387d557e4317342a580e47b4a3788e85c0a95e53ecc200ffe6",
+      "expectedBytes": 20416,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/033-taiwan-police-questioning-foreigner-rights/featured-01.webp",
+        "error": "",
+        "sha256": "69803c14e93f0d387d557e4317342a580e47b4a3788e85c0a95e53ecc200ffe6"
+      },
+      "actualBytes": 20416,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/689-market-review-20261024.webp",
+      "path": "/images/columns/689-market-review-20261024.webp",
+      "expectedSha256": "00bfd3de4c37aa3e2a2483c8a7b1041efafbfefc65666c9da0968a7111cc307d",
+      "expectedBytes": 246290,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/689-market-review-20261024.webp",
+        "error": "",
+        "sha256": "00bfd3de4c37aa3e2a2483c8a7b1041efafbfefc65666c9da0968a7111cc307d"
+      },
+      "actualBytes": 246290,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/690-market-review-20261024.webp",
+      "path": "/images/columns/690-market-review-20261024.webp",
+      "expectedSha256": "2163131be070675c072c7f5c0becb4122fd87e83c6752c30edcb060cf1f45fc0",
+      "expectedBytes": 227728,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/690-market-review-20261024.webp",
+        "error": "",
+        "sha256": "2163131be070675c072c7f5c0becb4122fd87e83c6752c30edcb060cf1f45fc0"
+      },
+      "actualBytes": 227728,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/691-market-review-20261024.webp",
+      "path": "/images/columns/691-market-review-20261024.webp",
+      "expectedSha256": "cff87a6458afd90ced0f320c8f6834c5cc23fcdc72c3b3fcff2ec3176d6f5256",
+      "expectedBytes": 217774,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/691-market-review-20261024.webp",
+        "error": "",
+        "sha256": "cff87a6458afd90ced0f320c8f6834c5cc23fcdc72c3b3fcff2ec3176d6f5256"
+      },
+      "actualBytes": 217774,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/692-market-review-20261024.webp",
+      "path": "/images/columns/692-market-review-20261024.webp",
+      "expectedSha256": "d241151cdec8631048ffc8f24a0a851cd06ed8a520ce27a7ac109f1c0093c700",
+      "expectedBytes": 275502,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/692-market-review-20261024.webp",
+        "error": "",
+        "sha256": "d241151cdec8631048ffc8f24a0a851cd06ed8a520ce27a7ac109f1c0093c700"
+      },
+      "actualBytes": 275502,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/693-market-review-20261024.webp",
+      "path": "/images/columns/693-market-review-20261024.webp",
+      "expectedSha256": "417f649bd7f9fdf50674712442db1779367a7a4a67139f687540d95653fdacb6",
+      "expectedBytes": 212934,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/693-market-review-20261024.webp",
+        "error": "",
+        "sha256": "417f649bd7f9fdf50674712442db1779367a7a4a67139f687540d95653fdacb6"
+      },
+      "actualBytes": 212934,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/editorial-20261003-b04/taiwan-unpaid-invoice-settlement-release-korean.png",
+      "path": "/images/columns/editorial-20261003-b04/taiwan-unpaid-invoice-settlement-release-korean.png",
+      "expectedSha256": "583778392ca2de359c18532a7e6ec367c48202fbe05292c0695cbf668c4c9f81",
+      "expectedBytes": 1746023,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/png",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/editorial-20261003-b04/taiwan-unpaid-invoice-settlement-release-korean.png",
+        "error": "",
+        "sha256": "583778392ca2de359c18532a7e6ec367c48202fbe05292c0695cbf668c4c9f81"
+      },
+      "actualBytes": 1746023,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp",
+      "path": "/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp",
+      "expectedSha256": "d6fb4dcbb7019d9a0d8c45eb9ef5ee61fa3f81c25b73da275289e43ed0b59fbf",
+      "expectedBytes": 43398,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp",
+        "error": "",
+        "sha256": "d6fb4dcbb7019d9a0d8c45eb9ef5ee61fa3f81c25b73da275289e43ed0b59fbf"
+      },
+      "actualBytes": 43398,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+      "path": "/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+      "expectedSha256": "1252a6bc4811ddfe96f16eceac5c05b75dd26e57eb6a9a2456df85a6c79495af",
+      "expectedBytes": 40640,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+        "error": "",
+        "sha256": "1252a6bc4811ddfe96f16eceac5c05b75dd26e57eb6a9a2456df85a6c79495af"
+      },
+      "actualBytes": 40640,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/016-taiwan-inheritance-custody-analysis/featured-generic.webp",
+      "path": "/images/016-taiwan-inheritance-custody-analysis/featured-generic.webp",
+      "expectedSha256": "cf562f705d45932276ae046b3267b62ca8dc37bcc45c52a2f268d26a607fa3a1",
+      "expectedBytes": 81032,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/016-taiwan-inheritance-custody-analysis/featured-generic.webp",
+        "error": "",
+        "sha256": "cf562f705d45932276ae046b3267b62ca8dc37bcc45c52a2f268d26a607fa3a1"
+      },
+      "actualBytes": 81032,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "path": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "expectedSha256": "e33f7f381d597a9ae5b3693d7c4f887a29d7420b1b4ae3c98db664a06dceae31",
+      "expectedBytes": 379140,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "error": "",
+        "sha256": "e33f7f381d597a9ae5b3693d7c4f887a29d7420b1b4ae3c98db664a06dceae31"
+      },
+      "actualBytes": 379140,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "path": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "expectedSha256": "0f9d9a4041f5978119b71a6c89ba1a9b01e2643871143163a4bc4d8f792a7e84",
+      "expectedBytes": 385502,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "error": "",
+        "sha256": "0f9d9a4041f5978119b71a6c89ba1a9b01e2643871143163a4bc4d8f792a7e84"
+      },
+      "actualBytes": 385502,
+      "sha256Matches": true,
+      "errors": []
+    },
+    {
+      "url": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "path": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "expectedSha256": "9933406b2c0c64af337aaf443c6c5e1ed4afb94e9ed7ab5a5e3635a2b940f16f",
+      "expectedBytes": 284390,
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "image/webp",
+        "effectiveUrl": "https://media.tseng-law.com/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "error": "",
+        "sha256": "9933406b2c0c64af337aaf443c6c5e1ed4afb94e9ed7ab5a5e3635a2b940f16f"
+      },
+      "actualBytes": 284390,
+      "sha256Matches": true,
+      "errors": []
+    }
+  ],
+  "indexes": [
+    {
+      "locale": "ar",
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ar/columns",
+        "error": "",
+        "sha256": "b627ae34f3d7e50e9930959c47aa7f0052968b688f3ebfc5cb3fc59a5e5f0eab"
+      },
+      "articles": [
+        {
+          "route": "/ar/columns/uae-importer-taiwan-supplier-advance-refund",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/ar/columns/saudi-arbitral-award-taiwan-assets",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/ar/columns/uae-court-judgment-taiwan-enforcement",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/ar/columns/overseas-heir-taiwan-estate-nationality-documents",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/ar/columns/uae-resident-taiwan-counsel-arabic-documents",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/ar/columns/taiwan-arc-first-application",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/ar/columns/taiwan-visa-residence-work-study-family",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/ar/columns/taiwan-arc-renewal-changes-reentry",
+          "discovery": "direct_anchor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "de",
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/de/columns",
+        "error": "",
+        "sha256": "444050d5201a57fdeb7ca561c67120f057f05d92822c122f7a5c57fa9a30d134"
+      },
+      "articles": [
+        {
+          "route": "/de/columns/taiwan-maschinenlieferung-fat-sat-schlusszahlung",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/de/columns/taiwan-bauteile-maengelruege-pruefmuster",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/de/columns/taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/de/columns/taiwan-gemeinsame-entwicklung-cad-geschaeftsgeheimnisse",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/de/columns/deutsches-urteil-vermoegen-taiwan-vollstreckung",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/de/columns/taiwan-arc-first-application",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/de/columns/taiwan-visa-residence-work-study-family",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/de/columns/taiwan-arc-renewal-changes-reentry",
+          "discovery": "direct_anchor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/en/columns",
+        "error": "",
+        "sha256": "12a7c858d9cd40786db42474406f8e617f905ba63ca3f47d6c8d5d5646224641"
+      },
+      "articles": [
+        {
+          "route": "/en/columns/taiwan-arc-first-application",
+          "discovery": "serialized_slug_only"
+        },
+        {
+          "route": "/en/columns/taiwan-visa-residence-work-study-family",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/en/columns/taiwan-arc-renewal-changes-reentry",
+          "discovery": "direct_anchor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "es",
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/es/columns",
+        "error": "",
+        "sha256": "baf5e53e9c848bb5ab1fac52c916cb1c902d8d858d6f28da1646689623a074dd"
+      },
+      "articles": [
+        {
+          "route": "/es/columns/spain-exporter-taiwan-unpaid-invoices",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/es/columns/spain-buyer-taiwan-defective-goods-notice",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/es/columns/spanish-judgment-taiwan-assets-enforcement",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/es/columns/return-spain-unpaid-taiwan-wages",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/es/columns/spain-resident-taiwan-divorce-property",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/es/columns/taiwan-arc-first-application",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/es/columns/taiwan-visa-residence-work-study-family",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/es/columns/taiwan-arc-renewal-changes-reentry",
+          "discovery": "direct_anchor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "fr",
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/fr/columns",
+        "error": "",
+        "sha256": "35360df9f7400357ebe36b9008caf348febd4c71bb66788459ee8863077747af"
+      },
+      "articles": [
+        {
+          "route": "/fr/columns/france-exporter-taiwan-unpaid-invoices-credit-notes-returns",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/fr/columns/french-brand-taiwan-trademark-registered-distributor",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/fr/columns/french-supplier-taiwan-distributor-termination-stock-online-accounts",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/fr/columns/france-resident-heir-taiwan-bank-property-documents",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/fr/columns/french-employee-taiwan-unpaid-wages-employer-closure",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/fr/columns/taiwan-arc-first-application",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/fr/columns/taiwan-visa-residence-work-study-family",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/fr/columns/taiwan-arc-renewal-changes-reentry",
+          "discovery": "direct_anchor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "hi",
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/hi/columns",
+        "error": "",
+        "sha256": "80d525a54309707ba1f78f1a3b0bb500248922da7392952085e5ab065c834062"
+      },
+      "articles": [
+        {
+          "route": "/hi/columns/indian-supplier-unpaid-taiwan-invoice",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/hi/columns/indian-buyer-taiwan-machinery-defect-notice",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/hi/columns/indian-engineer-taiwan-noncompete-compensation",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/hi/columns/indian-resident-taiwan-rental-deposit-handover",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/hi/columns/indian-importer-taiwan-supplier-bank-change-fraud",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/hi/columns/taiwan-arc-first-application",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/hi/columns/taiwan-visa-residence-work-study-family",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/hi/columns/taiwan-arc-renewal-changes-reentry",
+          "discovery": "direct_anchor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "id",
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/id/columns",
+        "error": "",
+        "sha256": "4569fa795523fb1d9448f92ed5845df731b99958589872a6168cfa3083813647"
+      },
+      "articles": [
+        {
+          "route": "/id/columns/indonesian-home-caregiver-unpaid-wages-taiwan",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/id/columns/indonesian-worker-passport-broker-dispute-taiwan",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/id/columns/indonesian-worker-bank-account-cash-job-police-taiwan",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/id/columns/indonesian-factory-worker-injury-evidence-compensation-taiwan",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/id/columns/indonesian-buyer-taiwan-machinery-defect-notice",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/id/columns/taiwan-arc-first-application",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/id/columns/taiwan-visa-residence-work-study-family",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/id/columns/taiwan-arc-renewal-changes-reentry",
+          "discovery": "direct_anchor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "it",
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/it/columns",
+        "error": "",
+        "sha256": "d808a6fdb5d31778ec06013d50f26ae0d6df21efd307bf88466046a1a6db19bb"
+      },
+      "articles": [
+        {
+          "route": "/it/columns/italian-exporter-taiwan-unpaid-installation-balance",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/it/columns/italian-brand-taiwan-distributor-trademark-registration",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/it/columns/taiwan-oem-molds-design-files-handover",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/it/columns/italy-resident-heir-taiwan-inheritance-renunciation-debts",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/it/columns/italian-business-visitor-taiwan-summons-interpreter-defense",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/it/columns/taiwan-arc-first-application",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/it/columns/taiwan-visa-residence-work-study-family",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/it/columns/taiwan-arc-renewal-changes-reentry",
+          "discovery": "direct_anchor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "ja",
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ja/columns",
+        "error": "",
+        "sha256": "8be270afa3e67ff1abc3b417908b6636bfead222dd9535a9ffe42a53e5b558ac"
+      },
+      "articles": [
+        {
+          "route": "/ja/columns/taiwan-arc-first-application",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/ja/columns/taiwan-visa-residence-work-study-family",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/ja/columns/taiwan-arc-renewal-changes-reentry",
+          "discovery": "direct_anchor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "ko",
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/ko/columns",
+        "error": "",
+        "sha256": "09fc1ea25345264d2bc25a334314f80de342390a9510fbb71aca6dffe90217b3"
+      },
+      "articles": [
+        {
+          "route": "/ko/columns/taiwan-arc-first-application",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/ko/columns/taiwan-visa-residence-work-study-family",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/ko/columns/taiwan-arc-renewal-changes-reentry",
+          "discovery": "direct_anchor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "pt",
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/pt/columns",
+        "error": "",
+        "sha256": "f4a10c71dc42f4e33b49f832f8355c7497b81722df8121b7d86d9933acdc8a7e"
+      },
+      "articles": [
+        {
+          "route": "/pt/columns/portugal-exportador-acordo-prestacoes-taiwan",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/pt/columns/portugal-fornecedor-taiwan-alteracao-conta-fraude",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/pt/columns/portugal-sentenca-arbitral-bens-taiwan",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/pt/columns/portugal-mandatario-processo-civil-taiwan",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/pt/columns/portugal-fim-contrato-taiwan-salarios-em-falta",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/pt/columns/taiwan-arc-first-application",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/pt/columns/taiwan-visa-residence-work-study-family",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/pt/columns/taiwan-arc-renewal-changes-reentry",
+          "discovery": "direct_anchor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "th",
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/th/columns",
+        "error": "",
+        "sha256": "496b8378acc2b0b34de72fe84c7c065f190cb163729bc7c53b40d9777b912b59"
+      },
+      "articles": [
+        {
+          "route": "/th/columns/thai-worker-taiwan-payslip-deductions-unpaid-salary",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/th/columns/thai-worker-taiwan-factory-closure-wage-fund",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/th/columns/thai-worker-taiwan-bank-account-police-notice",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/th/columns/thai-return-home-taiwan-traffic-injury-records",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/th/columns/thai-supplier-taiwan-buyer-unpaid-invoice",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/th/columns/taiwan-arc-first-application",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/th/columns/taiwan-visa-residence-work-study-family",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/th/columns/taiwan-arc-renewal-changes-reentry",
+          "discovery": "direct_anchor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "vi",
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/vi/columns",
+        "error": "",
+        "sha256": "414087e830ec169376e50c8401c2c7dbe993d3d6a7b8d2fbe6900ef0789e4c47"
+      },
+      "articles": [
+        {
+          "route": "/vi/columns/taiwan-arc-first-application",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/vi/columns/taiwan-visa-residence-work-study-family",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/vi/columns/taiwan-arc-renewal-changes-reentry",
+          "discovery": "direct_anchor"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "zh-hant",
+      "read": {
+        "ok": true,
+        "status": "200",
+        "exit": 0,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveUrl": "https://tseng-law.com/zh-hant/columns",
+        "error": "",
+        "sha256": "6f436e738e3b149a02c6724a013712af0c2759dfc5f932ca65f0f842f877a31f"
+      },
+      "articles": [
+        {
+          "route": "/zh-hant/columns/taiwan-arc-first-application",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/zh-hant/columns/taiwan-visa-residence-work-study-family",
+          "discovery": "direct_anchor"
+        },
+        {
+          "route": "/zh-hant/columns/taiwan-arc-renewal-changes-reentry",
+          "discovery": "direct_anchor"
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "sitemap": {
+    "read": {
+      "ok": true,
+      "status": "200",
+      "exit": 0,
+      "contentType": "text/xml",
+      "effectiveUrl": "https://tseng-law.com/sitemap.xml",
+      "error": "",
+      "sha256": "07cb5d958c58b4231946579d3d7b2351bcf2fd9a3b4da729c623799302cf118f"
+    },
+    "present": 87,
+    "missing": []
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "field": "indexDiscovery",
+      "route": "/en/columns/taiwan-arc-first-application",
+      "discovery": "serialized_slug_only"
+    }
+  ],
+  "scope": "87 current source SHA/metadata, ordered primary markdown blocks and links, visible/JSON-LD FAQ, hero attributes and bytes, sitemap and index evidence. Recommendations excluded. No visual/hydration/interaction verification. Local files do not establish public image HTTP availability."
+}

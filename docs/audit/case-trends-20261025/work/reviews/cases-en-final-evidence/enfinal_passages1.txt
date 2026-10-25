@@ -1,0 +1,273 @@
+Government Procurement Act - Article Content - Laws & Regulations Database of The Republic of China (Taiwan) (https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057)
+citeturn1217view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"turn1210view0","pattern":"Article 85-1"}); Total lines: 719
+L292: In conducting a procurement pursuant to this Act, an entity shall open the tenders and award the contract in accordance with the timeframe set forth in the tender documentation where there are three or more qualified suppliers submitting their tenders, except for any of the following circumstances under which tenders may not be opened or awarded:
+L293: 1. where the content of tender documentation is amended or supplemented;
+L294: 2. where illegal or improper activities that may impair the fairness of the procurement are found;
+L295: 3. where the opening of tenders is postponed according to Article 82 hereof;
+L296: 4. where the procurement procedure is suspended according to Article 84 hereof;
+L297: 5. where the entity corrects its breach of laws and regulations as required by Article 85 hereof;
+L298: 6. where there is an emergency;
+L299: 7. where the plan for procurement is changed or cancelled; or
+L300: 8. for any other special circumstances as determined by the responsible entity.
+L301: Where the opening of tenders cannot be proceeded due to less than three tenders, a second tendering shall be arranged and the time-limit for such tendering may be shortened, and the three tenders requirement as provided in the preceding paragraph shall not apply for the second tendering.
+L302: Article 49
+L303: 
+L304: For a procurement of a value not reaching the threshold for publication but is not less than one tenth of the threshold, offers or proposals in writing shall be obtained openly from at least three suppliers, except for the circumstances specified in each subparagraph of paragraph 1 of Article 22.
+L305: 
+L306: Article 50
+L307: In case that any of the following circumstances occurs to a tenderer, an entity shall not open the tender of such tenderer when such circumstance is found before tender opening, nor shall award the contract to such tenderer when such circumstance is found after tender opening:
+L308: 1. The tendering does not comply with the requirements of the tender documentation;
+L309: 2. The content of the tender is inconsistent with the requirements of the tender documentation;
+L310: 3. The tenderer borrows or assumes any other’s name or certificate to tender;
+L311: 4. The tenderer uses untrue documents to tender;
+L312: 5. The contents of the tender documents submitted by different tenderers show a substantial and unusual connection;
+L313: 6. The tenderer is prohibited from participating in tendering or being awarded of any contract pursuant to paragraph1 of Article 103 hereof; or
+L479: Article 81
+L480: 
+L481: A supplier may withdraw its complaint at any time before the service of a review decision. Once a complaint is withdrawn, the complainant is barred from submitting another complaint in respect of the same matter.
+L482: 
+L483: Article 82
+L484: A review decision prepared by the CRBGP shall be in writing, contain the facts and reasons, and indicate whether the procurement was conducted by the procuring entity in a manner that is in breach of Acts and Regulations. Where there is a breach, the CRBGP may recommend the procuring entity ways to proceed.
+L485: The CRBGP may, before completion of review, notify the procuring entity to suspend the procuring procedures, if necessary.
+L486: The CRBGP shall take the public interest, the interest of the relevant suppliers, and other relevant circumstances into account when making a recommendation or notification under the preceding two paragraphs.
+L487: Article 83
+L488: 
+L489: A review decision shall be deemed as a decision of administrative appeal.
+L490: 
+L491: Article 84
+L492: Where a procuring entity deems that a protest or complaint filed by a supplier is justifiable after reviewing the causes related thereto, the procuring entity shall nullify or change the initial result or suspend the procurement procedures, except for emergencies or public interest, or where the causes of complaint or protest are not likely to affect the procurement.
+L493: The procuring entity shall promptly notify the competent CRBGP of any outcome arising from the action it takes according to the preceding paragraph in response to a complaint.
+L494: Article 85
+L495: Where a review decision specifies that the procuring entity is in breach of Laws and Regulations, the procuring entity shall proceed with a lawful alternative within twenty days from the date following the date of receipt of the review decision. In the event that the procuring entity fails to proceed within the period, the supplier may file a complaint with the CRBGP within fifteen days from the date following the date of the expiry of the period.
+L496: When the CRBGP makes recommendation in its decision to the procuring entity on the way of handling the matter in question, and the procuring entity declined to follow such recommendation, the procuring entity shall, within 15 days from the date following the date of receipt of the decision, report it to the superior entity for approval.
+L497: If approved, the superior entity shall, within 15 days from the date following the date of receipt of such report, provide a written explanation with reasons to the CRBGP and the supplier.
+L498: Where a review decision specifies that the procuring entity is in breach of Laws and Regulations, the supplier may request the procuring entity to reimburse the necessary expenses incurred by the supplier for the preparation of tender and the filing of protest and complaint.
+L499: Article 85-1
+L500: In the event that the entity and the supplier failed to reach an agreement over the dispute in relation to the performance of the contract in question, any of the following means may be used to resolve the dispute:
+L501: 1. apply to CRBGP for mediation.
+L502: 2. refer to an arbitration institution for arbitration.
+L503: In the event that the application for mediation referred to in the preceding paragraph is made by the supplier, the entity may not object to such application. CRBGP shall offer suggestions or proposals for mediations of construction works and technical services.
+L504: In the event that the unsuccessful mediation of construction works and technical services due to the entity does not agree with proposal or resolution for mediation proposed by CRBGP, the entity may not object to the arbitration filed by the supplier.
+L505: The provisions of mediation of the Code of Civil Procedures shall apply mutatis mutandis to the procedure and effect of the mediation by CRBGP, unless otherwise provided in this Act.
+L506: Regulations governing the mediation of disputes shall be prescribed by the responsible entity, and promulgated after approval of the Executive Yuan.
+L507: Article 85-2
+L508: 
+L509: Payment shall be made for mediation fee, examination fees and other necessary fees on application for mediation. The schedule of fees, method of payment and the amount to be borne shall be prescribed by the responsible entity.
+L510: 
+L511: Article 85-3
+L512: The result of mediation shall either come into force upon consensus of the parties, or fail to come into force if there is no consensus.
+L513: During the mediation process, a mediator may, by his/her authority, propose a written resolution recommendation in the name of the CRBGP. If the entity does not agree with such recommendation, it shall report to its superior entity for approval before providing its written explanation to the CRBGP and the supplier in question.
+L514: 
+L515: Article 85-4
+L516: In the course of mediating the dispute over the performance of the contract in question, if the parties failed but very close to reach a consensus, the CRBGP shall propose a mediation proposal by its authority by taking into consideration all circumstances, consulting with the mediator, finding a balance over the interests of the parties, and not departing from the scope of the parties’ main points.
+L517: The parties or interested parties which participate in the mediation may, as regards the proposed proposal mentioned in the preceding paragraph, raise an objection to the CRBGP, within 10 days from the date following the date of receipt of such proposal.
+L518: The mediation shall be deemed unsuccessful if objection has been raised during the period mentioned in the preceding paragraph, and shall be deemed successful if no objection has been raised during such period.
+L519: Where an entity raises its objection in accordance with the preceding paragraph, the provisions set out in paragraph 2 of Article 85.3 shall apply mutatis mutandis.
+L520: Article 86
+L521: In order to handle the complaints filed by suppliers for procurement at the levels of central government and local government, and the disputes arising from the performance of contract between the procurement entities and the suppliers, CRBGPs established by the responsible entity and the municipal and the county (city) governments at each level respectively shall consist seven to thirty five members selected from persons impartial and of professional knowledge in legal or procurement affairs and appointed by the responsible entity or the municipal or county (city) governments.
+L522: Three of such members may be high-ranking officials of the responsible entity or the municipal or county (city) governments provided that the number of such officials may not exceed one-fifth of the total number of members
+L523: The CRBGP shall perform its official duties impartially. The regulations governing the organization of CRBGP shall be prescribed by the responsible entity and promulgated after approval of Executive Yuan.
+L524: Chapter VII Penal Provisions
+L525: 
+L526: Article 87
+L527: A person who commits violence or threat, administers drugs, or applies hypnosis with the intent to cause a supplier not to tender or to tender contrary to its real intention, or cause the winning tenderer to forego the award or to assign or subcontract after award shall be punished with imprisonment for not less than one year but not more than seven years; in addition thereto, a fine of not more than three million New Taiwan Dollars may be imposed.
+L528: If death results from the offense specified in the preceding paragraph, the offender shall be punished with life imprisonment or imprisonment for not less than seven years; if aggravated injury results, the offender shall be punished with imprisonment for not less than three years but not more than ten years; in addition thereto, a fine of not more than three million New Taiwan Dollars may be imposed.
+L529: A person who commits fraud or uses any other illegal means to make the supplier unable to tender or cause the opening of tenders to have an incorrect result shall be punished with imprisonment for not more than five years; in addition thereto, a fine of not more than one million New Taiwan Dollars may be imposed.
+L530: A person who causes the supplier not to tender or not to proceed with price competition by means of contract, agreement or other forms of meeting of minds, with the intent to adversely affect the price of award or to gain illegal benefits, shall be punished with imprisonment for not less than six months but not more than five years; in addition thereto, a fine of not more than one million New Taiwan Dollars may be imposed.
+L531: A person who borrows or assumes any other’s name or certificate to tender, with the intent to adversely affect the result of procurement or to gain illegal benefits, shall be punished with imprisonment for not more than three years; in addition thereto, a fine of not more than one million New Taiwan Dollars may be imposed. The foregoing shall also apply to the cases of a person who allows any other person to borrow or assume his name of certificate to tender.
+L532: An attempt to commit an offense specified in paragraphs 1, 3 or 4 is punishable.
+L533: Article 88
+L534: A personnel of a supplier who is entrusted by an entity to conduct planning, design, review, monitoring, project management, or procurement but imposes unlawful restrictions or review on the technologies, technical methodology, materials, equipment, or specifications with the intent to gain personal illegal benefits and thereby obtains benefits, shall be punished with imprisonment for not less than one year but not more than seven years; in addition thereto, a fine of not more than three million New Taiwan Dollars may be imposed.
+L535: In addition, the foregoing personnel who imposes unlawful restrictions or review on the qualifications of suppliers or sub-suppliers with the intent to gain personal illegal benefits and thereby obtains benefits, shall be subject to the same punishment.
+--------------------------------------------------------------------------------
+The Arbitration Law of ROC - Article Content - Laws & Regulations Database of The Republic of China (Taiwan) (https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001)
+citeturn1217view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"turn1210view1","pattern":"Article 40"}); Total lines: 377
+L228: 1.Payment of a specified sum of money or a certain amount of fungible goods or valuable securities;
+L229: 2.Delivery of a specified movable property.
+L230: The provision of the preceding paragraph is binding not only on the parties but also on the following persons with respect to the arbitration:
+L231: 1.Successors of the parties after the commencement of the arbitration, or those who have taken possession of the contested property for a party or its successors.
+L232: 2.Any entity on whose behalf a party enters into an arbitration proceeding; the successors of said entity after the commencement of arbitration; and those who have taken possession of the contested property for said entity or its successors.
+L233: Article 38
+L234: The court shall dismiss a petition for an enforcement under any of the following circumstances:
+L235: 1.The arbitral award concerns a dispute that is unrelated to the subject matter of the arbitration agreement or exceeds the scope of the arbitration agreement, unless the affected portion of the award may be severed and such severance does not affect the remainder of the award.
+L236: 2.The reasons for the arbitral award were not stated, unless such omission was rectified by the arbitral tribunal.
+L237: 3.The arbitral award requires a party to perform an act prohibited by law.
+L238: Article 39
+L239: If a party to an arbitration agreement petition the court for a provisional attachment or injunction pursuant to the provisional remedy proceedings under the Code of Civil Procedure, but has not yet submitted the dispute to arbitration, the court granting the provisional attachment or injunction shall, upon request of the opposing party, order the applicant to submit the dispute to arbitration within a specified period.
+L240: However, in the event that the applicant is also entitled to initiate litigation, the court may also order the party to file a lawsuit.
+L241: If the applicant of the provisional remedy proceedings fails to submit the dispute to arbitration or initiate litigation within the specified period prescribed in the preceding paragraph, the court may, upon request of the opposing party, revoke the ruling on provisional attachment or injunction.
+L242: CHAPTER V: Motion to Set Aside an Arbitral Award
+L243: 
+L244: Article 40
+L245: A party may file a motion to set aside an arbitral award under any of the following circumstances:
+L246: 1.Any of the circumstances set forth in Article 38 apply.
+L247: 2.The arbitration agreement was not formed, is invalid, or had not taken effect or had become ineffective at the time the arbitral tribunal concluded its hearings.
+L248: 3.The arbitral tribunal failed to allow the parties to present their arguments before concluding its hearings, or a party was not duly represented in the arbitration proceedings.
+L249: 4.The composition of the arbitral tribunal or the arbitration proceedings violated the arbitration agreement or the law.
+L250: 5.An arbitrator violated the disclosure obligations prescribed in Paragraph 2 of Article 15 and is biased, or participated in the arbitration despite being subject to a challenge, unless the challenge was dismissed pursuant to this Law.
+L251: 6.An arbitrator participating in the arbitration committed a criminal offense in relation to the arbitration by breaching their duties.
+L252: 7.A party or its representative committed a criminal offense in relation to the arbitration.
+L253: 8.The evidence or interpretation upon which the arbitration award relies, was forged, altered, or is otherwise fraudulent.
+L254: 9.If a judgment of a criminal or civil matter, or an administrative ruling upon which the arbitration award relies, has been reversed or materially altered by a final judgment or administrative ruling.
+L255: The circumstances described in subparagraphs 6 to 8 of the preceding paragraph shall be limited to cases where a guilty verdict has been rendered and finalized, or where criminal proceedings cannot be commenced or continued for reasons other than insufficient evidence.
+L256: The circumstances described in subparagraph 4 regarding violations of the arbitration agreement, as well as subparagraphs 5 to 9, shall be limited to cases where such violations are sufficient to affect the outcome of the arbitral award.
+L257: Article 41
+L258: A motion to set aside an arbitral award may be filed with the district court at the seat of arbitration.
+L259: A motion to set aside shall be filed with the court within a peremptory thirty-day period from the date the award is rendered or served.
+L260: However, if any of the grounds mentioned in subparagraphs 6 to 9 of the first paragraph of the preceding Article exist, and if it is indicated that the party’s failure to file a motion to set aside the award within the prescribed period was not due to its own fault, then the thirty-day period shall commence from the date the party becomes aware of the grounds for setting aside.
+L261: In any case, a motion to set aside an arbitral award shall be time-barred after five years from the date on which the arbitral award was rendered.
+L262: Article 42
+L263: 
+L264: In the event that a party files a motion to set aside an arbitral award, the court may, upon the party’s request, order a stay of enforcement of the arbitral award, provided that the applicant furnishes appropriate and definite security.
+L265: If the court sets aside an arbitral award, it shall, by its authority, simultaneously revoke any enforcement order issued in connection with the award.
+L266: 
+L267: Article 43
+L268: Once an arbitral award has been set aside by a final judgment of a court, a party may initiate litigation concerning the dispute unless the parties have agreed otherwise.
+L269: 
+L270: CHAPTER VI: Settlement and Mediation
+L271: 
+L272: Article 44
+L273: The parties to an arbitration may reach a settlement before the arbitral award is rendered. If the parties reach a settlement before the conclusion of the arbitration, the arbitrator shall issue a settlement agreement reflecting the agreed terms.
+L274: A settlement agreement under the preceding paragraph shall have the same force and effect as that of an arbitral award. However, the settlement agreement shall only be enforced upon the court’s approval of an enforcement application and issuance of an enforcement order.
+--------------------------------------------------------------------------------
+Fact Sheet on U.S.-Taiwan Agreement on Reciprocal Trade | United States Trade Representative (https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade)
+citeturn1217view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"turn1210view3","pattern":"investment"}); Total lines: 82
+L7: ACHIEVING RECIPROCAL TRADE: Today, the United States and Taiwan, under the auspices of the American Institute in Taiwan (“AIT”) and the Taipei Economic and Cultural Representative Office in the United States (“TECRO”), have reached an Agreement on Reciprocal Trade that will strengthen the economic and trade relationship between the United States of America and Taiwan and provide mutual benefit to both territories, while also facilitating significant expansion and growth to U.S.
+L8: manufacturing through substantial tariff reductions, removal of non-tariff barriers, investments, and procurement in key sectors and products.  The Agreement on Reciprocal Trade is a testament to the importance of the U.S.-Taiwan relationship and reflects both sides’ ambition to increase bilateral investment and commercial opportunities, deepen their high-tech strategic partnership, ensure supply chain resilience, and jointly promote stability and prosperity.
+L9: GROUNDBREAKING TERMS: Key terms of the Agreement on Reciprocal Trade include:
+L10:   * Breaking Down Tariff Barriers for U.S. Industrial and Agricultural Exports: The Taiwan side will eliminate or reduce 99 percent of tariff barriers.  The Taiwan side will provide preferential market access for U.S. industrial exports, including autos and auto parts, chemicals, seafood, machinery, health products, electrical products, metals, and minerals.  It will also provide preferential market access for U.S.
+L11: agricultural exports, including horticultural products, wheat, beef and beef products, dairy products, pork and pork products, lamb and sheep meat, tree nuts, dog and cat food, ketchup, and peanuts.
+L12:   * Breaking Down Non-Tariff Barriers for U.S. Industrial Exports: The Taiwan side has committed to resolve longstanding non-tariff barriers affecting U.S. exports of motor vehicles, medical devices, and pharmaceuticals.  For U.S. vehicles, Taiwan will remove quantitative restrictions and accept U.S. vehicles built to U.S. Federal Motor Vehicle Safety Standards, and emissions standards without additional requirements to enter Taiwan. Taiwan will also accept U.S.
+L13: FDA marketing authorizations for medical devices and pharmaceuticals manufactured in the United States without additional requirements for entry into Taiwan’s market. Taiwan will also ensure transparency and fairness regarding reimbursement and listing of medical devices and pharmaceuticals under its health care system.
+L14:   * Breaking Down Non-Tariff Barriers for U.S. Agricultural Exports: The Taiwan side has committed to resolve and prevent non-tariff barriers to U.S. agricultural exports, including beef, pork, poultry, and processing potatoes.  It will also work with the U.S. side to complete the regulatory process to allow bison meat into Taiwan.
+L15:   * Geographical Indications (GIs) and Market Access: The Taiwan side has committed to groundbreaking provisions that will preserve current and future U.S. market access for U.S. cheese and meat producers who rely on the use of common names.  This includes ensuring that market access will not be restricted due to the mere use of certain cheese and meat terms.  The Taiwan side has also committed to robust standards for transparency and fairness regarding the protection of GIs and to ensure that U.S.
+L16: products can continue using terms that have been unfairly protected as GIs.
+L17:   * Protecting and Enforcing Intellectual Property: The Taiwan side has made commitments that will benefit American innovators and creators by enhancing intellectual property protection and prioritizing enforcement against intellectual property theft.  This includes aligning with the standards in key international intellectual property treaties.
+L18:   * Improving Labor Standards: The two sides recognize the importance of protecting internationally recognized labor rights.  The Taiwan side will prohibit the importation of goods produced with forced labor, and improve protection of labor rights on commercial fishing vessels, address the charging of recruitment fees in certain sectors, prohibit retention of workers’ identity documents, and strengthen enforcement of labor laws.
+L19:  The two sides will continue to advance additional changes to enhance protection of workers’ rights to freedom of association and collective bargaining in Taiwan.
+L20:   * Strengthening Environmental Protections: The Taiwan side has committed to continue to adopt and maintain high levels of environmental protection and to effectively enforce its environmental laws, including by taking measures to promote a more resource efficient economy as well as to address illegal logging, fisheries subsidies, illegal fishing, and illegal wildlife trade.
+L21:   * Confronting Public Enterprises and Subsidies: The Taiwan side has committed to refrain from providing non-commercial assistance or otherwise subsidizing its good-producing public enterprises, except where the actions fulfil a legitimate public services objective, benefit small businesses, or protect its essential security interest.
+L22:   * Advancing Trade Facilitation and Good Regulatory Practices: The two sides share common values and are committed to similar approaches to good regulatory practices, customs and trade facilitation, standards and technical regulations, and services and digital trade.
+L23:   * Facilitating Mutually Beneficial Investment: The two sides intend to create the best possible environment to promote and facilitate cross-border investments.  The U.S. side will, as appropriate, consider supporting investment financing in critical sectors in Taiwan in collaboration with U.S. private sector partners, consistent with applicable law.
+L24:  The two sides also take note of the Memorandum of Understanding signed by AIT and TECRO on January 15, 2026, in which the Taiwan side promises to work with the United States to establish industrial parks and industry clusters that will help the United States substantially increase its domestic production capacity in key high-tech sectors.
+L25:  The MOU contemplates that Taiwan companies will significantly increase their investments in the semiconductors supply chain, electronics manufacturing services (including AI applications), energy, and other sectors in the United States, with financial support from the Taiwan side.  The MOU also confirms that the U.S.
+L26: side will provide Taiwan preferential treatment with regard to tariffs and other remedial measures in the Section 232 investigation of semiconductors and semiconductor manufacturing equipment, taking into account Taiwan’s economic and national security alignment and high-tech strategic partnership with the United States, as well as in certain other Section 232 investigations.  A link to the Fact Sheet describing the MOU can be found here.
+L27:   * Promoting Supply Chain Resilience: The two sides are committed to strengthening cooperation toward their shared goal of enhancing supply chain resilience and will continue to work to finalize commitments on combatting duty evasion.
+L28:   * Strengthening Economic Security Alignment: The two sides have committed to strengthen economic and national security cooperation to enhance supply chain resilience.  These efforts will include ensuring that international procurement obligations benefit only those countries that have taken on the same commitments.
+L29:   * Increasing Purchases of U.S. Products: The two sides commit to cooperate on ensuring secure, reliable, and diversified sources of supply.  The Taiwan side plans to facilitate a long-term increase in its purchases of important U.S.
+L30: goods, including $44.4 billion worth of liquefied natural gas and crude oil, $15.2 billion worth of civil aircraft and engines, and $25.2 billion worth of power equipment, power grids, materials, generators, storage facilities, marine equipment, steel-making equipment, and other equipment from 2025 through 2029.
+L31: THE PROSPEROUS PATH FORWARD:  In advance of the Agreement on Reciprocal Trade entering into force, the two sides will undertake domestic formalities, which will include the Taiwan side submitting the Agreement on Reciprocal Trade to its legislature for review.
+L32:   * Given the Taiwan side’s commitment to take significant steps to advance a stronger and more reciprocal trade relationship, the U.S. side has committed to reduce its tariffs on originating goods from Taiwan.  It will apply the higher of either the U.S. Most Favored Nation (MFN) tariff rate or a tariff rate of 15 percent, comprised of the MFN tariff and a reciprocal tariff within the meaning of Executive Order 14257 of April 2, 2025, as amended.
+L33:   * The U.S. side has also identified certain products from the goods contained in the “Potential Tariff Adjustments for Aligned Partners” Annex to Executive Order 14346 of September 5, 2025 (Modifying the Scope of Reciprocal Tariffs and Establishing Procedures for Implementing Trade and Security Agreements), as amended, that will not be subject to a reciprocal tariff.
+L34:   * Two-way trade in goods and services with Taiwan amounted to more than $185 billion in 2024.
+--------------------------------------------------------------------------------
+TAICCA 文化內容策進院 (https://en.taicca.tw/news/detail/222)
+citeturn1217view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"turn1210view5","pattern":"November"}); Total lines: 104
+L0:   * 【0†Grants & Investment】
+L1: 
+L2: 【1†Grants】 【2†Investment】
+L3: 
+L4:   * 【3†Fairs & Events】
+L5: 
+L6: 【4†Fairs】 【5†Events】
+L7: 
+L8: TCCF
+L9: 
+L10:   * 【6†Business Matching】
+L11: 
+L12: Taiwan Pavilion
+L13: 
+L14: Taiwan Comic City
+L15: 
+L16: 【7†Book to Screen】
+L17: 
+L18: Taiwan Content Island
+L19: 
+L20: Taiwan Beats
+L21: 
+L22: IP Meetup
+L23: 
+L24: Culture x Tech Database
+L25: 
+L26: Taiwan Digital Asset Library
+L27: 
+L28: 【8†Fellowship】
+L29: 
+L30:   * 【9†Industry Insights】
+L31: 
+L32: 【10†Reports】
+L33: 
+L34:   * 【11†News】
+L35: 
+L36:   * 【12†About】
+L37: 
+L38: [Input: keyword]
+L39: 
+L40: 【13†繁中†taicca.tw】
+L41: 
+L42:   *   *   * 5/34
+L43:   *   *   *   *   *   *   *   *   *   *   * # TCCF MARKET to bring together the global content industry Spotlight Screenings target international buyers to propel Taiwan content onto the world stage
+L44: 
+L45: September 22, 2026
+L46: The highly anticipated 2026 Taiwan Creative Content Fest (TCCF) is set to take place this November. At the heart of industry transactions is TCCF MARKET, which this year will bring together 107 exhibitors from seven countries—Taiwan, South Korea, Thailand, Japan, Singapore, France, and the Philippines. Focusing on rights transactions for international film and television content and promising IPs, the event continues to serve as a key platform connecting Taiwan with the global content industry.
+L47: In particular, the number of exhibitors in IP categories such as publishing, comics, and characters has increased by 13% from last year. This reflects the continued development of global IPs with established fan bases into screen adaptations and diverse licensing opportunities, an increasingly prominent focus in MARKET exhibitors’ strategies.
+L48: 
+L49: 
+L50: 【14†Image†taicca.tw】
+L51: TAICCA Chairperson Sue WANG said that MARKET has always served as TCCF’s central hub for connecting the global film and television industry with Taiwan’s wealth of original content. This year’s inaugural Spotlight Screenings offer international buyers and industry partners an early opportunity to experience the quality of the finished works firsthand ahead of the business meetings, with the aim of further facilitating meaningful cross-border transactions and collaborations.
+L52: She expressed hope that TCCF would not just be an industry event, but also a steadfast partner supporting Taiwan’s cultural content industry as it moves forward. By bringing together different fields and technologies, TCCF hopes to continue creating diverse opportunities for international cooperation and help Taiwan establish an indispensable strategic position in the global film and television production chain.
+L53: The biggest new initiative at this year’s MARKET is TCCF’s first collaboration with Vieshow Cinemas at Mitsui Shopping Park LaLaport Nangang to host the Spotlight Screenings, offering international buyers, overseas media, and other key industry professionals an exclusive preview of two selected high-profile titles, with the aim of boosting overseas sales opportunities and rights transactions for Taiwanese film and television content.
+L54: On November 7, the first screening will feature April, which follows a migrant family caregiver working in a Hakka community in Pingtung, Taiwan, who upon returning home faces estrangement and challenges within her own family and embarks on a journey to mend fractured relationships.
+L55: Starring LIU Kuan-ting, Angel AQUINO, Esther HUANG, Kaiser CHUANG, YU Tzu-yu , and SHIH Ming-shuai, the film was selected for the 2025 Tokyo International Film Festival and received multiple nominations at the 2026 Taipei Film Awards, including Best Actress.
+L56: 
+L57: 
+L58: The second screening, on November 8, will feature the series See You At 11pm, a fantasy romance spanning Taiwan and Singapore that transcends the realms of the living and the dead. Co-produced by Taiwan’s Three-Giant Production and Singapore’s Mediacorp, the series stars Taiwanese actors LIU Hsiu-fu, Chloe XIANG, WU Nien-hsuan, Peter HO, Kimi HSIA, and Morni CHANG, as well as Singaporean actors Mark Kok Huang LEE , Gavin TEO Chong Ze, and Hong Ling.
+L59: A total of 38 international companies and organizations will participate in TCCF MARKET this year, including many first-time exhibitors spanning television, animation, distribution, and other sectors.
+L60: These include Nippon TV, Japan’s first commercial television broadcaster; GMA Network, one of the Philippines’ largest commercial television networks; French children’s animation companies Madgic Distribution and Zephyr Animation; BASH, developer of the South Korean healing character IP WASHZ; and Thailand’s Chada Entertainment, founded by Taiwan-based veteran producer Shee Heng KUEK.
+L61: 
+L62: 
+L63: 【15†Image†taicca.tw】
+L64: Several South Korean local government agencies and organizations, including Bucheon City, Gwangju Information & Content Agency (GICON), and Daegu Digital Innovation Promotion Agency (DIP), will also lead exhibitors to TCCF MARKET for the first time.
+L65: Thailand, meanwhile, will set up a national pavilion jointly organized by the Creative Economy Agency (CEA), Thai Animation and Computer Graphics Association (TACGA), and first-time exhibitor Thai Association of Boys Love Content (TBLC).The Korea Creative Content Agency (KOCCA), returning for its third consecutive year, will be bringing animation IP company Sunwoo & Company and JTBC subsidiary SLL Joongang for the first time, alongside returnees KBS Media and SBS subsidiary Studio S.
+L66: Other returning exhibitors include Singapore’s Mediacorp and Japan's TV Tokyo.
+L67: On the domestic front, 69 Taiwanese exhibitors will participate this year, spanning a diverse range of sectors including television, animation, publishing, gaming, and content marketing. These include Sanlih E-Television, Videoland, the Chinese Animation and Comic Publishers Association (CCPA), and channels under the Taiwan Broadcasting System such as Public Television Service and Hakka TV.
+L68: First-time exhibitors include STR Network, Joint Journey Creative, So-net Entertainment Taiwan, Gamania, and Hope Content Marketing, reflecting the breadth of Taiwan’s content industry ecosystem.
+L69: 
+L70: 
+L71: TCCF MARKET will continue to focus on five major aspects—Copyright Transaction Zone, Production Resource Zone, Animation & Visual Technologies Zone, National Pavilions, and Industry Press Conferences—bringing together production, distribution, and investment professionals across sectors such as television, animation, gaming, and publishing to promote IP adaptation and international collaboration.
+L72: The 2026 TCCF will take place from November 6 to 9 at Taipei Nangang Exhibition Center, Hall 2, 7F. For the full list of exhibitors, detailed information on TCCF MARKET events, and how to register for matchmaking activities, please stay tuned to the TCCF official website and social media channels.
+L73: 
+L74: Prev
+L75: 
+L76: 【11†Back to list】
+L77: 
+L78: Next
+L79:   * 【0†Grants & Investment】 【1†Grants】 【2†Investment】
+L80:   * 【3†Fairs & Events】 【4†Fairs】 【5†Events】 TCCF
+L81:   * 【6†Business Matching】 Taiwan Pavilion Taiwan Comic City 【7†Book to Screen】 Taiwan Content Island Taiwan Beats IP Meetup Culture x Tech Database Taiwan Digital Asset Library 【8†Fellowship】
+L82:   * 【9†Industry Insights】 【10†Reports】
+L83:   * 【11†News】
+L84:   * 【12†About】
+L85: 
+L86: TEL
+L87: 
+L88: +886 2-2745-8186
+L89: 
+L90: FAX
+L91: 
+L92: +886 2-2749-2436
+L93: 
+L94: Southern Center
+L95: 
+L96: +886 7-551-8186
+L97: 5F, No. 158, Sec 3, Minsheng E. Rd., Songshan Dist.,Taipei City 105402, Taiwan
+L98: Rm. 206, 2F., No. 105, Bixin St., Yancheng Dist., Kaohsiung City 803004, Taiwan (TAICCA's Southern Center)
+L99: 
+L100: 【16†[email protected]】
+L101: ###### Copyright © 2024 TAICCA (Taiwan Creative Content Agency). All rights reserved. |
+L102: 
+L103: 【17†Privacy Policy】
+--------------------------------------------------------------------------------
+公司法 沿革-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0080001)
+citeturn1217view4 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"turn1204view3","pattern":"一百零二"}); Total lines: 203
+No matching text found for "一百零二"

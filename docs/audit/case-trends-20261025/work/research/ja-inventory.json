@@ -1,0 +1,882 @@
+[
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/001-taiwan-company-establishment-basics.md",
+    "title": "\"台湾での会社設立の基礎：子会社・支店・代表者事務所、手続と就業許可\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/002-withdraw-capital-taiwan-company.md",
+    "title": "\"台湾会社を終了する際、資本金と会社財産はどのように処理すべきでしょうか？\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/003-taiwan-traffic-accident-procedure.md",
+    "title": "\"台湾交通事故対応Q&A：現場対応・過失・示談・損害賠償\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/004-taiwan-company-subsidiary-vs-branch.md",
+    "title": "\"台湾子会社と台湾支店の違い：責任、税金、利益の送金、撤退\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/005-taiwan-company-establishment-advanced-2.md",
+    "title": "\"台湾会社の資本金はどう送るか：準備口座、投資審査の核定期限、正式口座への切替え\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/006-taiwan-massage-history-law.md",
+    "title": "\"台湾マッサージの歴史と法律情報\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/007-taiwan-divorce-lawsuit-qna.md",
+    "title": "\"台湾の離婚手続Q&A：調停・訴訟・財産分与・子ども\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/008-taiwan-labor-severance-law.md",
+    "title": "\"台湾の資遣費：会社都合・懲戒解雇・自己都合で何が変わるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/009-taiwan-voluntary-resignation-severance.md",
+    "title": "\"自己都合でも資遣費が出る六つの場合と30日の期限\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/010-taiwan-gym-injury-lawsuit.md",
+    "title": "\"台湾のジム事故損害賠償：一審事例・期限・証拠・賠償項目\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md",
+    "title": "\"台湾化粧品市場への進出：輸入主体の選択、製品登録、PIFの作成・保存と広告規制\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/012-taiwan-overtaking-accident-liability.md",
+    "title": "\"台湾の追い越し事故、責任はどう判断されるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/013-taiwan-company-establishment-advanced-1.md",
+    "title": "\"台湾会社設立の投資審査と登記住所：住所が決まる前に申請できるか、居留証なしで口座を開けるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/014-taiwan-mandatory-employment-period.md",
+    "title": "\"台湾の最低勤務期間条項：効力・研修費・違約金の判断基準\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/015-taiwan-company-setup-pitch-location.md",
+    "title": "\"台北市の営業場所事前照会：その住所でその業種を営めるかを、賃貸借契約の前に確かめる\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/016-taiwan-inheritance-custody-analysis.md",
+    "title": "\"台湾の相続と親権：遺された家族のための法律ガイド\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/017-taiwan-logistics-business-setup.md",
+    "title": "\"台湾の物流事業と「汽車貨運業」許可：新設・買収・委託\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/018-taiwan-semiconductor-market-entry.md",
+    "title": "\"半導体部品企業が台湾市場に進出するとき：現地子会社・支店・代理店のどれを検討すべきか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/019-taiwanese-spouse-divorce-agreement-registration.md",
+    "title": "\"台湾人配偶者との協議離婚：署名の前に整理したい書面と登録の段取り\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/020-taiwanese-spouse-divorce-from-abroad.md",
+    "title": "\"日本に住みながら台湾人配偶者との離婚を考える方へ：最初の相談で整理すること\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+    "title": "\"台湾人配偶者との離婚後、子どもと日本で暮らす計画：住まい・面会・費用の整理\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/022-marrying-taiwanese-national-registration-checklist.md",
+    "title": "\"台湾人との結婚手続き：日本と台湾の届出、証明書、居留を整理する\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/023-baby-taiwan-nationality-birth-registration.md",
+    "title": "\"日台の赤ちゃんの国籍と出生登録：国籍留保・台湾戸籍・旅券の確認点\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/024-taiwan-income-tax-residency.md",
+    "title": "\"年の途中で台湾に来た・帰るときの所得税：居住者判定と申告\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/025-taiwan-estate-tax-foreign-decedent.md",
+    "title": "\"海外に住んでいた人が台湾の財産を残したとき、遺産税はどこまでか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/026-foreign-heir-taiwan-succession-law-land.md",
+    "title": "\"外国人が台湾の不動産を相続するとき：どの国の法律が適用され、土地はどう登記するか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/027-taiwan-employment-gold-card.md",
+    "title": "\"台湾の就業ゴールドカード：本人が直接申請できる就労・居留許可\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/028-taiwan-foreign-spouse-residence.md",
+    "title": "\"台湾人と結婚した外国人配偶者の居留：居留証の取得から離婚・死別後まで\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/029-taiwan-permanent-residence-aprc.md",
+    "title": "\"台湾の永住許可（APRC）はいつ申請できるか：一般・配偶者・専門人材ルートの比較\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/030-enforce-foreign-judgment-in-taiwan.md",
+    "title": "\"外国の確定判決で台湾の財産を差し押さえるには\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/031-hire-taiwan-lawyer-from-abroad.md",
+    "title": "\"海外から台湾の弁護士に仕事を頼むとき、先に確認すること\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/035-taiwan-unpaid-invoice-debt-collection.md",
+    "title": "\"台湾の取引先が売掛金を払わない：支払命令・仮差押え・強制執行の進め方\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/036-taiwan-subsidiary-responsible-person-liability.md",
+    "title": "\"台湾子会社の董事長・経理人になったら：駐在員の個人責任と帰任時の変更登記\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/037-taiwan-subsidiary-employee-dismissal.md",
+    "title": "\"台湾子会社で従業員を解雇するには：勞動基準法の事由・資遣費・資遣通報・大量解僱の手順\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/047-foreigner-buy-sell-taiwan-real-estate-tax.md",
+    "title": "\"台湾のマンションを買う――外国人の購入条件と所有・売却の税金\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/048-taiwan-stocks-direct-investment-tax.md",
+    "title": "\"台湾株の税金――日台民間租税取決めとNISA\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/050-taiwan-accident-police-records.md",
+    "title": "\"台湾の交通事故、警察資料の申請と帰国前の備え\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/054-taiwan-foreign-employer-labor-dispute-strike.md",
+    "title": "\"台湾子会社の賃金交渉とストライキ投票\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/055-taiwan-company-dissolution-liquidation.md",
+    "title": "\"台湾子会社の解散登記後、残余財産を送金できるまで\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/058-taiwan-online-consumer-dispute-foreigners.md",
+    "title": "\"台湾の通販トラブルと消費者相談の窓口\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/066-taiwan-fx-remittance-declaration.md",
+    "title": "\"台湾での外貨両替・送金申告：新台湾ドル50万元相当から\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/067-taiwan-company-responsible-person-liability.md",
+    "title": "\"台湾の会社負責人：会社に対する責任と第三者への連帯責任\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/071-taiwan-entry-japan-heated-tobacco-vapes-duty-free.md",
+    "title": "\"日本で買った加熱式たばこは台湾の「免税200本」の対象か\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/096-taiwan-protection-order-japanese-spouse.md",
+    "title": "\"台湾で配偶者からDVを受けた日本人の保護令と相談先\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/099-taiwan-road-rage-freeway-cut-in-sentence-reduced.md",
+    "title": "\"林口インターのあおり運転、タクシーも車線を譲らなかった事情が高等法院の量刑を変えた\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/109-taiwan-road-rage-baseball-bat-fracture-damages.md",
+    "title": "\"基隆の交通トラブルで同乗者が振るった野球バット、有期徒刑7か月と約208万台湾元の賠償\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/111-tsmc-kumamoto-jasm-taiwan-outbound-investment-rules.md",
+    "title": "\"JASM熊本第2工場を台湾の対外投資制度から読む\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/115-japan-kyogi-rikon-recognition-taiwan.md",
+    "title": "\"日本で協議離婚した後、台湾の戸籍に離婚を反映するには\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/117-japanese-materials-supplier-taiwan-nda-trade-secrets.md",
+    "title": "\"台湾の半導体顧客との材料開発契約――NDA、改良発明、技術の共有\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/122-taiwan-road-rage-reversing-into-tailgater-no-self-defense.md",
+    "title": "\"後ろの車のクラクションに急停止とバックで応じた運転者に、台湾の裁判所は正当防衛を認めなかった\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/135-japanese-equipment-maker-engineers-taiwan-work-permit.md",
+    "title": "\"日本の装置メーカーの技術者が台湾の客先で働くときの就労許可：履約人員の30日・90日の区分と申請人\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/141-taiwan-rental-deposit-before-viewing-fraud.md",
+    "title": "\"台湾の賃貸で「内見前に保証金を」と言われたら\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/158-taiwan-hotel-booking-extra-payment-phishing.md",
+    "title": "\"台湾の宿を予約した後、「追加決済」のリンクが届いたら\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/165-taiwan-issued-card-unauthorized-charge-dispute-japanese.md",
+    "title": "\"台湾発行のカードに身に覚えのない請求：銀行への連絡と異議申立て\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/169-taiwan-semiconductor-labor-union-collective-bargaining-japanese-subsidiary.md",
+    "title": "\"台湾の日系半導体子会社と労組交渉――対案の60日と本社決裁\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/178-taiwan-hotel-luggage-loss-custody-japanese.md",
+    "title": "\"台湾のホテルに預けた荷物がない：紛失の通知とホテルの責任\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/185-taiwan-hotel-typhoon-cancellation-refund-japanese.md",
+    "title": "\"台風で台湾の宿に行けないとき：予約の取消しと返金の条件\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/188-taiwan-road-rage-started-did-not-matter-driver-blocked.md",
+    "title": "\"6分走った先でも、同じ車に道をふさがれた\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/191-taiwan-road-rage-driver-stopped-route-66s-fast-lane.md",
+    "title": "\"パッシングのあと、台66線の追越車線がふさがれた\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/193-taiwan-science-park-entry-japanese-semiconductor-companies.md",
+    "title": "\"台湾の科学園区への入居――日系半導体企業の事業審査と用地・保税\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/194-taiwan-road-rage-freeway-chase-own-dashcam-too.md",
+    "title": "\"151キロの表示と、白い車のドラレコ\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/201-taiwan-road-rage-52-seconds-subtracted-case.md",
+    "title": "\"バイクを塞いだ1分54秒、台湾の裁判所が差し引いた52秒\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/202-taiwan-post-employment-non-compete-compensation-japanese.md",
+    "title": "\"台湾で退職後の転職を制限されたら：競業避止条項と補償の確認点\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/204-taiwan-road-rage-two-second-stop-taipei-not-enough.md",
+    "title": "\"車道で止まった理由が分けた、台湾の急ブレーキ処分\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/208-taiwan-ip-commercial-court-semiconductor-patent-judgments.md",
+    "title": "\"台湾の半導体特許訴訟――侵害認定と賠償額は別に決まる\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/212-japan-taiwan-tax-agreement-semiconductor-expatriates.md",
+    "title": "\"台湾で働く半導体技術者の税務――日台民間租税取決めの183日とPE\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/218-japanese-resident-taiwan-account-lending-crime.md",
+    "title": "\"台湾で口座を貸した日本人の刑事責任と、帰国・居留への影響\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/220-taiwan-semiconductor-chemicals-environment-permits-japanese.md",
+    "title": "\"台湾へ送る評価サンプルは「少量だから対象外」か――半導体材料と化学物質登録\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/225-japanese-victim-fraud-complaint-taiwan-account.md",
+    "title": "\"日本から台湾の口座へ送金した後、台湾で告訴できるのか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/227-taiwan-origin-declaration-us-bound-exports-japanese-trading-companies.md",
+    "title": "\"台湾から米国へ出す半導体部材の原産地声明書――「YT」と書ける加工、書けない加工\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/230-taiwan-inheritance-registration-deadline-unregistered-land.md",
+    "title": "\"台湾の親名義のままの土地・家屋：相続登記を先延ばしにすると何が起こるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/231-taiwan-estate-tax-2026-amendment-gifts-before-death.md",
+    "title": "\"台湾の遺産税2026年：免税額と控除額、死亡前2年以内の贈与分は誰が納めるのか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/232-taiwan-intestate-succession-order-shares-representation.md",
+    "title": "\"台湾で遺言なく亡くなったとき、誰がどれだけ相続するか：順位・配偶者の取り分・代襲相続\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/233-taiwan-parent-debt-renunciation-heir-in-japan.md",
+    "title": "\"台湾の親が残した借金と日本に住む子の相続放棄：3か月の期間と代表処の認証\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/234-us-living-trust-will-taiwan-property.md",
+    "title": "\"米国の遺言とリビング・トラストは、台湾のマンションと預金に及ぶのか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/239-taiwan-renewable-obligation-new-plants-energy-act-bill-japanese-makers.md",
+    "title": "\"台湾で第2工場を建てる日系メーカーの電力義務――再エネ10％と、2026年9月施行の自家発電・蓄電の設置義務\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/242-child-abduction-taiwan-non-hague-japan.md",
+    "title": "\"ハーグ条約が使えない台湾へ子どもが連れて行かれたとき、家事法庭でできること\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/248-japanese-subsidiary-taiwan-invoice-fraud-recovery.md",
+    "title": "\"偽の振込先変更メールで送金した台湾子会社に、銀行と警察ができること\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/249-korean-national-dies-in-taiwan-inheritance-estate-tax.md",
+    "title": "\"韓国籍の人が台湾で亡くなったときの相続：準拠法は韓国法、遺産税は台湾にある財産だけ\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/250-taiwan-stalking-harassment-act-written-warning-protection-order.md",
+    "title": "\"台湾でつきまといに遭ったとき：警察の書面告誡、裁判所の保護令、6か月の告訴期間\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/251-taiwan-small-claims-simplified-civil-procedure.md",
+    "title": "\"台湾で10万元以下の未払い金を訴えるとき：少額手続の費用、調停、控訴の制限\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/252-taiwan-workplace-sexual-harassment-employer-obligations.md",
+    "title": "\"台湾子会社でセクハラの申告を受けたら：会社がとるべき措置と、社員が行政に直接申し立てられる場合\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/253-taiwan-maternity-paternity-parental-leave-2026.md",
+    "title": "\"台湾の産休・育休と外国人従業員：2026年の1日単位の育児休業と、手当を受けられる人\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/254-taiwan-apartment-management-committee-fees-rules.md",
+    "title": "\"台湾のマンションの管理委員会（管委會）と規約：管理費の滞納、階下への水漏れ、短期貸し\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/255-taiwan-copyright-employee-freelancer-work-ownership.md",
+    "title": "\"台湾で従業員やフリーランスが作ったソフトウェア・デザインの著作権は誰のものか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/256-taiwan-vat-foreign-digital-services-registration.md",
+    "title": "\"台湾の個人にアプリ・ゲーム・サブスクを販売する日本企業と営業税：税籍登記の基準は年60万台湾元\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/257-taiwan-naturalization-keep-original-nationality.md",
+    "title": "\"台湾に帰化すると日本国籍はどうなるか：原国籍の喪失証明と高級専門人材の例外\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/258-taiwan-dui-reach-beyond-drivers-seat.md",
+    "title": "\"台湾の飲酒運転――罰金を払っても、帰国できるとは限らない\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/259-taken-taiwan-police-station-first-24-hours-not-release.md",
+    "title": "\"台湾で逮捕された後の24時間は、釈放の約束ではない\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/260-foreigners-buying-property-in-taiwan.md",
+    "title": "\"外国人が台湾で不動産を買うとき：国籍、転売制限、法人名義\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/261-japanese-arrested-questioned-in-taiwan-interpreter-lawyer-detention.md",
+    "title": "\"台湾で日本人が警察の取調べや逮捕を受けたら：通訳、弁護人、24時間の壁、帰国の制限\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/262-taiwan-drunk-driving-thresholds-criminal-code-185-3-license-return-home.md",
+    "title": "\"台湾の飲酒運転：呼気0.15と0.25の線、刑法185条の3、免許と帰国\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/263-japanese-will-effect-on-taiwan-real-estate-and-deposits.md",
+    "title": "\"日本で作った遺言は台湾のマンションと預金に効くのか：方式の準拠法と、台湾での遺言の開示と執行\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/264-taiwan-certified-letter-cunzheng-xinhan-vs-japanese-naiyo-shomei.md",
+    "title": "\"台湾の「存證信函」：日本の内容証明に似ていて、同じではない書面の出し方と効力\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/265-taiwan-distributor-registered-japanese-brand-trademark.md",
+    "title": "\"台湾の代理店が日本ブランドの商標を先に登録していたら：異議3か月・評定5年・不使用取消し\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/266-taiwan-rental-deposit-refund-two-months.md",
+    "title": "\"台湾の賃貸で押金が返ってこない：家賃2か月分の上限と退去時の精算\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/267-japan-taiwan-couple-marital-property-governing-law.md",
+    "title": "\"日台夫婦の財産はどちらの法律で決まるか：法定財産制と剰余財産の分配\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/268-taiwan-labor-dispute-mediation-bureau-vs-court.md",
+    "title": "\"台湾の労働紛争、労働局の調解と裁判所の労働調解はどう違うか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/269-taiwan-medical-dispute-records-mediation-damages.md",
+    "title": "\"台湾の病院で治療後に損害が出たとき：カルテ開示・調解前置・賠償\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/270-taiwan-company-setup-costs-japanese.md",
+    "title": "\"台湾で会社を設立する費用：登記の規費、資本金、就業許可、初年度に固定でかかるもの\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/271-taiwan-traffic-accident-compensation-items-japanese.md",
+    "title": "\"台湾の交通事故で請求できる賠償：強制保険の給付と、民法で相手に請求する治療費・休業損害・慰謝料\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/272-taiwan-warning-account-frozen-japanese.md",
+    "title": "\"台湾の銀行口座が「警示帳戶」になったとき：誰が止めたのか、いつ解けるのか、日本からの送金はどうなるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/273-taiwan-national-security-act-core-technology-japanese-employers.md",
+    "title": "\"台湾の国家安全法と「国家核心関鍵技術」：台湾人技術者を採る日系企業が、TSMC資料流出事件の判決から読むべきこと\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/275-taiwan-divorce-property-damages-support.md",
+    "title": "\"台湾の離婚と不動産の名義・夫婦残余財産差額分配・損害賠償・離婚後の扶養\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/301-taiwan-subsidiary-corporate-income-tax-calendar.md",
+    "title": "\"台湾子会社の法人税は5月申告・9月暫繳――3月決算の親会社と事業年度をそろえるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/302-taiwan-dividend-withholding-foreign-parent-tax-agreement-rates.md",
+    "title": "\"台湾子会社の配当にかかる台湾の源泉税：原則21％、日台民間租税取決めなら上限10％\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/303-taiwan-withholding-tax-payments-to-foreign-companies.md",
+    "title": "\"台湾子会社が日本の親会社に払うロイヤルティー・役務提供料・利息と台湾の源泉徴収\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/304-taiwan-transfer-pricing-documentation-thresholds.md",
+    "title": "\"台湾子会社の移転価格文書：ローカルファイル・マスターファイル・国別報告書の基準額と期限\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/305-taiwan-cpa-audit-tax-certification-bookkeeping.md",
+    "title": "\"台湾子会社の財務諸表監査と法人税の会計師査核簽証：二つの「1億台湾元」と帳簿のルール\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/307-taiwan-divorce-children-custody-support-visitation.md",
+    "title": "\"台湾の離婚と子ども：親権・養育費・面会交流・国境を越える転居\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/310-japanese-engineer-hired-by-taiwan-subsidiary-work-permit.md",
+    "title": "\"台湾子会社が日本人技術者を雇うときの就労許可：資格・報酬下限・雇用主要件・3年の許可期間と2025年改正\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/321-taiwan-business-tax-vat-e-invoice-foreign-subsidiary.md",
+    "title": "\"台湾子会社の営業税と統一発票：税率5％、奇数月15日の申告、電子発票の2日・7日\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/322-taiwan-payroll-foreign-employees-withholding-social-insurance.md",
+    "title": "\"台湾子会社の日本人出向者と現地採用者の給与：源泉徴収と労工保険・全民健康保険\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/323-taiwan-branch-tax-head-office-expense-allocation.md",
+    "title": "\"台湾支店の税務：日本の本店の管理費を経費にする条件と、利益を本店に送るとき\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/324-taiwan-industrial-innovation-act-rd-investment-tax-credits.md",
+    "title": "\"台湾子会社の研究開発・設備投資と税額控除：産業創新条例の15％・5％・25％\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/325-taiwan-representative-office-tax-what-it-may-do.md",
+    "title": "\"台湾の代表者事務所にできることと税務：売上がなくても源泉徴収と帳簿は残ります\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/341-taiwan-tax-audit-reexamination-appeal-deadlines.md",
+    "title": "\"台湾子会社の税務調査と追徴の核定に不服があるとき：復査30日・訴願30日・行政訴訟2か月\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/342-selling-shares-taiwan-company-securities-transaction-tax-agreements.md",
+    "title": "\"台湾子会社の株式を売却するときの台湾の税金：証券取引税0.3％と、譲渡益に課税される二つの場合\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/343-closing-taiwan-subsidiary-branch-liquidation-tax-filings.md",
+    "title": "\"台湾子会社・支店を閉じるときの税務申告：決算45日、営業税15日、清算30日\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/344-taiwan-stamp-tax-contracts-receipts-foreign-companies.md",
+    "title": "\"台湾の印花税：子会社の契約書・領収書にかかる税率と、電子契約・海外署名の扱い\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/345-taiwan-tax-agreement-mutual-agreement-procedure-double-taxation-relief.md",
+    "title": "\"日本の移転価格課税で台湾子会社と二重課税になったら：日台民間租税取決め第24条の相互協議\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/346-taiwan-distributor-agreement-termination-japanese-brand.md",
+    "title": "\"台湾の販売代理店との契約をやめるとき：予告期間・在庫・顧客の引継ぎと存證信函\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/347-taiwan-counterfeit-japanese-brand-customs-criminal-civil.md",
+    "title": "\"台湾で日本ブランドの模倣品が出回ったら：税関への登録、刑事告訴、民事請求の使い分け\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/348-taiwan-cross-border-ecommerce-consumer-protection-japanese-sellers.md",
+    "title": "\"越境ECで台湾の消費者に売るとき：7日間の無条件解約、定型化契約の必須記載、中国語表示\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/349-japanese-company-acquiring-taiwan-company-investment-review-merger-filing.md",
+    "title": "\"日本企業が台湾企業を買収するとき：経済部投資審議司の許可、公平交易委員会への結合申報、株式譲渡の順序\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/350-taiwan-cannabis-cbd-penalties-japanese-travellers.md",
+    "title": "\"大麻・CBD製品を台湾に持ち込むと何が起きるか：毒品危害防制条例の刑罰と、日本人旅行者が知っておくこと\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/371-taiwan-equipment-installation-project-tax-permanent-establishment.md",
+    "title": "\"台湾の工場に装置を納め、据付けまで請け負うときの台湾の税金――装置代金と据付費、6か月の工事PE\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/372-taiwan-related-party-loan-interest-thin-capitalization.md",
+    "title": "\"日本の親会社からの親子ローンと台湾子会社の支払利息：負債資本比率3対1と源泉徴収\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/373-taiwan-stock-options-rsu-foreign-parent-employee-tax.md",
+    "title": "\"日本の親会社の株式報酬と台湾の所得税：ストックオプションは行使した年に課税、RS・RSUには財政部の解釈が見当たらない\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/374-taiwan-unpaid-tax-exit-ban-responsible-person-liability.md",
+    "title": "\"台湾子会社の税金滞納と日本人董事長の出国制限：基準額200万台湾元と脱税の刑事責任\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/375-global-minimum-tax-pillar-two-taiwan-subsidiary.md",
+    "title": "\"台湾子会社とグローバル・ミニマム課税：国別実効税率15％を計算するのは日本の親会社です\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/381-taiwan-import-duty-business-tax-commodity-tax-foreign-supplier.md",
+    "title": "\"台湾向けの輸出品が通関で負担する税金：関税、営業税5％、貨物税、推廣貿易服務費0.04％\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/382-taiwan-customs-valuation-related-party-imports-transfer-pricing.md",
+    "title": "\"日本の親会社から台湾子会社への輸入と関税の課税価格：特殊関係の審査と年度末の移転価格調整\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/383-taiwan-free-trade-zone-bonded-factory-science-park-tax.md",
+    "title": "\"台湾の自由貿易港区・保税倉庫・科学園区と税金：再輸出貨物の関税・営業税と、2019年以降の所得税免除の条件\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md",
+    "title": "\"台湾向けにアプリ・ゲーム・広告を販売する日本企業と台湾の所得税：源泉徴収20％と5月の申告\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/401-taiwan-criminal-witness-summons-refuse-testimony.md",
+    "title": "\"台湾の刑事事件で証人として呼ばれたら――出頭と証言拒絶\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/402-taiwan-criminal-settlement-withdraw-complaint.md",
+    "title": "\"台湾の刑事事件で示談するとき、告訴を取り消す時期\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/403-taiwan-non-prosecution-reconsideration-deadline.md",
+    "title": "\"台湾で不起訴処分の通知を受けたら――告訴人の再議申立て\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/404-taiwan-seized-phone-property-return.md",
+    "title": "\"台湾で押収された携帯電話を、事件終結前に返してもらうには\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/429-taiwan-assault-damages-attached-civil-action-japanese.md",
+    "title": "\"台湾でけがをさせられた後の治療費と休業損害――刑事附帯民事の使い方\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/430-taiwan-assault-injury-threat-complaint-japanese.md",
+    "title": "\"台湾で殴られた、殴ったと言われた――傷害の告訴と証拠\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/431-taiwan-criminal-judgment-appeal-japanese.md",
+    "title": "\"台湾の刑事判決が届いたら、上訴の20日と提出先を確かめる\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/432-taiwan-deferred-prosecution-suspended-sentence-fine-japanese.md",
+    "title": "\"緩起訴、緩刑、易科罰金――台湾の処分書にある条件と支払い\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/433-taiwan-detained-family-visits-lawyer-japanese.md",
+    "title": "\"台湾で勾留された家族との面会、手紙、弁護士への連絡\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/434-taiwan-search-warrant-consent-home-office-japanese.md",
+    "title": "\"台湾の自宅や会社に捜索が入ったとき、捜索票と同意を確かめる\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/435-taiwan-sexual-assault-medical-reporting-japanese.md",
+    "title": "\"台湾で性被害に遭ったとき、受診・証拠保全・相談をどう進めるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/436-taiwan-shoplifting-found-property-japanese.md",
+    "title": "\"台湾で万引きを疑われたら――会計漏れと落とし物の持ち帰り\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/495-taiwan-ai-poc-additional-testing-commercial-order-japanese.md",
+    "title": "\"台湾向けAI実証実験、「もう一度試したい」の費用は誰が負担するか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/496-taiwan-semiconductor-equipment-order-cancellation-costs-japanese.md",
+    "title": "\"台湾向け半導体装置の注文取消し――専用部材の費用はどこまで請求できるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/508-taiwan-equipment-acceptance-unpaid-balance-japanese.md",
+    "title": "\"台湾の工場で装置は動いているのに、検収が終わらない\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/509-taiwan-customer-data-japan-crm-transfer-japanese.md",
+    "title": "\"台湾の顧客情報を日本本社のCRMへ移す前に\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/510-taiwan-product-accident-recall-costs-japanese.md",
+    "title": "\"台湾で売った電気ケトルに事故が起きたら――回収と費用の分担\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/516-taiwan-order-invoice-different-company-payment-japanese.md",
+    "title": "\"台湾の取引先から「請求書は別会社へ」と言われたら\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/518-recovering-unpaid-invoices-from-taiwan-customers.md",
+    "title": "\"台湾の取引先から入金がない。催促の次に動くもの\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/519-taiwan-non-prosecution-reconsideration-private-prosecution.md",
+    "title": "\"不起訴処分書の受領から10日：台湾の告訴人の再議と自訴許可\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/520-taiwan-deferred-prosecution-conditions-complainant.md",
+    "title": "\"台湾の緩起訴の条件と、告訴人の再議・取消しの申立て\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/521-taiwan-summons-defendant-witness-warrant-wanted-notice.md",
+    "title": "\"台湾の検察署から呼出状が届いたら：被告か証人かで変わる不出頭の結果\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/522-taiwan-complaint-only-offense-settlement-withdrawal-deadline.md",
+    "title": "\"台湾の傷害で示談した後、告訴はいつまで取り下げられるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/523-taiwan-criminal-appeal-twenty-days-third-instance-barred.md",
+    "title": "\"台湾の刑事判決に不服があるとき：控訴は20日、二審で終わる事件もある\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/524-taiwan-sentence-fine-conversion-probation-deportation-foreigner.md",
+    "title": "\"台湾の刑事判決が確定したあと：罰金への換算、執行猶予、外国人の退去\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/525-taiwan-employment-service-certificate-after-leaving-japanese.md",
+    "title": "\"台湾で退職した後の勤務証明書：会社への請求と記載内容\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/529-taiwan-civil-court-deposit-service-japanese.md",
+    "title": "\"台湾の民事裁判書類が「寄存送達」に：受取日と効力発生日\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/540-taiwan-company-preincorporation-contracts-liability.md",
+    "title": "\"台湾法人の設立前に結ぶ契約、名義と責任はどうなるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/541-taiwan-bookkeeping-provider-records-handover.md",
+    "title": "\"台湾の記帳委託先を替えるとき、帳簿データと原本をどう引き継ぐか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/542-taiwan-civil-evidence-preservation-before-lawsuit.md",
+    "title": "\"台湾で訴訟を起こす前に証拠を保全する申立て\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/543-taiwan-employee-criminal-questioning-company-paid-counsel.md",
+    "title": "\"台湾で従業員が被疑者になったら、会社負担の弁護士は誰を弁護するか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/545-taiwan-investment-japanese-company-documents-authentication.md",
+    "title": "\"日本法人の台湾投資、登記証明書と委任状の認証\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/548-taiwan-civil-japanese-company-litigation-authority.md",
+    "title": "\"日本本社が台湾の訴訟を委任するとき、和解と控訴の権限は誰にあるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/551-taiwan-police-japanese-interpretation-record-corrections.md",
+    "title": "\"台湾の警察調書を日本語通訳で確認するとき、訂正はどこに残るか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/554-taiwan-dividend-japanese-parent-tax-records.md",
+    "title": "\"台湾子会社からの配当、日本本社に届く入金明細と保存書類\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/603-taiwan-sick-leave-half-pay-ten-day-protection.md",
+    "title": "\"台湾の普通傷病假：半額賃金と2026年からの年10日以内の不利益処分制限\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/604-taiwan-tenant-early-lease-termination-notice-penalty.md",
+    "title": "\"台湾の1年賃貸、期限前に出るときの通知と違約金\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/605-taiwan-private-loan-interest-cap-iou-repayment.md",
+    "title": "\"台湾の知人への貸付け：利息の上限、借用書と返還の催告\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/606-taiwan-unpaid-wages-insolvent-employer-payment-fund.md",
+    "title": "\"廃業・清算・破産宣告のあと、未払い賃金はどの順で、基金はどこまで出すか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/607-taiwan-foreign-student-part-time-work-permit-hours.md",
+    "title": "\"台湾の留学生アルバイト：就労許可は本人申請、冬休み・夏休み以外は週20時間\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/608-taiwan-false-financial-report-investor-civil-damages.md",
+    "title": "\"台湾の発行会社による虚偽の財務報告――善意の保有者は誰に賠償を請求できるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/609-taiwan-mistaken-bank-transfer-unjust-enrichment.md",
+    "title": "\"台湾で振込先を間違えた場合の返還範囲\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/610-taiwan-subsidiary-annual-shareholders-meeting-director-term.md",
+    "title": "\"株主が一人の台湾子会社、決算を誰が承認し、董事の任期はいつ終わるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/629-taiwan-notarized-fixed-term-lease-direct-enforcement.md",
+    "title": "\"台湾で期間の定めのある建物賃貸借を公証したら、判決なしに何を執行できるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/630-taiwan-crypto-trading-mandate-accounting.md",
+    "title": "\"知人に任せた暗号資産の売買：台湾民法の委任なら求められる報告と引渡し\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/631-taiwan-property-transfer-claim-provisional-registration.md",
+    "title": "\"台湾の土地を後日移転してもらう約束と、預告登記が守れる範囲\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/632-taiwan-company-liquidation-creditor-claim-notice.md",
+    "title": "\"台湾の取引先の清算公告：3か月以内に申報しなかった売掛金はどうなるか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/633-taiwan-subsidiary-board-video-proxy-written-vote.md",
+    "title": "\"海外にいる董事と台湾子会社の董事会：ビデオでの参加、他の董事による代理、書面での議決\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/634-taiwan-employee-resignation-notice-indefinite-contract.md",
+    "title": "\"台湾の会社を辞めるとき何日前に伝えるか：期間の定めのない労働契約の予告期間\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/635-taiwan-traffic-ticket-other-driver-notice.md",
+    "title": "\"台湾の交通違反通知書が車の持ち主に届いたとき、別の運転者を知らせる期限と書類\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/636-taiwan-related-company-loan-permitted-conditions.md",
+    "title": "\"台湾の会社の資金をグループ会社へ貸せるのはどんなときか：公司法第15条の業務往来と短期融通\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/637-taiwan-work-permit-side-gig-other-employer.md",
+    "title": "\"台湾の就労許可で別の雇用主の仕事を一度だけしたら：許可の取消し、出国命令、申請日前3年の壁\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/638-taiwan-account-provider-scam-victim-civil-damages.md",
+    "title": "\"台湾で渡した口座に詐欺の被害金が入ったら、名義人も賠償しなければならないのか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/639-taiwan-rental-holding-deposit-dingjin.md",
+    "title": "\"台湾の賃貸、契約前に払った定金は返るのか、倍になるのか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/640-taiwan-spouse-debt-family-living-expenses-joint-liability.md",
+    "title": "\"夫の借金は妻も払うのか：台湾民法の「家庭生活費」と連帯責任\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/642-taiwan-small-claims-appeal-from-abroad-deadline-violation-of-law.md",
+    "title": "\"帰国後に届いた台湾の少額訴訟の判決書：理由のない判決と「法令違反」に限られた上訴\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md",
+    "title": "\"台湾子会社に送る本社の指示、出資者と実質的な指揮者の境目\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/644-taiwan-criminal-exit-ban-foreign-defendant-temporary-travel.md",
+    "title": "\"台湾の刑事事件で出国制限中の外国人被告人、一時帰国は認められるか：許可と却下を分けた事情\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/645-taiwan-company-missed-cpa-audit-moea-filing-director-fines.md",
+    "title": "\"休眠中の台湾子会社も会計師監査は必要か：責任者ごとに科される過料と経済部の決算書類チェック\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/646-taiwan-mixed-technology-contract-source-contribution-evidence.md",
+    "title": "\"日本本社への技術料送金、台湾での作業を示す資料はそろっているか\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/647-taiwan-crypto-exchange-account-fraud-control-warning-foreign-residents.md",
+    "title": "\"帰国前に台湾の暗号資産取引所で出金が止まったとき：居留証の抹消、警示、20日と48時間\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/648-taiwan-securities-broker-employee-dispute-sfipc-mediation-foreign-investor.md",
+    "title": "\"台湾の証券会社の営業担当者が口座を勝手に動かしたら：日本人投資家と投保中心の調処\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/649-taiwan-foreign-worker-change-employer-without-consent-separation-document.md",
+    "title": "\"台湾国内で転職する外国人社員：新しい会社の許可申請、服務証明書、退職後の3日\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/650-taiwan-mixed-family-baby-surname-chinese-name-passport-home-registration.md",
+    "title": "\"台湾で生まれた日台夫婦の子：3か月の出生届と国籍留保、戸籍の氏と台湾の姓の約定\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/651-taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments.md",
+    "title": "\"台湾法を準拠法とする契約で違約金を差し引かれたら：日本企業の請求が退けられた2026年の判決と、減額が認められた条件\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/652-taiwan-hospital-death-autopsy-request-complaint-medical-mediation.md",
+    "title": "\"台湾の病院で家族が亡くなったら：火葬や日本への搬送の前に、解剖・相験・告訴で決まること\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/659-taiwan-visitor-commercial-activity-deportation-entry-ban.md",
+    "title": "\"台湾を出国しても続く入国制限――観光滞在中の仕事や宣伝活動\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/660-taiwan-overseas-surrogacy-child-parentage-spouse-adoption-registration.md",
+    "title": "\"海外の代理出産で生まれた子と台湾で暮らすとき、配偶者の養子縁組が問題になる場面\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/661-taiwan-ride-hailing-platform-dispatch-license-accident-liability.md",
+    "title": "\"台湾で呼んだ車の事故、アプリ名の先にある契約相手\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/662-taiwan-departure-income-tax-agent-article-72.md",
+    "title": "\"日本への帰国前、申告代理の承認通知が届いていないとき\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/663-taiwan-foreign-company-cyber-incident-personal-data-scope.md",
+    "title": "\"台湾拠点の資安事故、日本本社と分担する通報実務\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/664-taiwan-strike-employer-damages-retaliation-mediation-arbitration.md",
+    "title": "\"台湾拠点のストライキ後に降格・減給を命じるとき：仲裁中の制限と損害賠償\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/704-taiwan-arc-first-application.md",
+    "title": "\"台湾で初めてARCを申請するときの書類と手続\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/705-taiwan-visa-residence-work-study-family.md",
+    "title": "\"台湾のビザは渡航目的で選ぶ：就職・留学・家族との同居\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/706-taiwan-arc-renewal-changes-reentry.md",
+    "title": "\"ARCの期限が残っていても必要な手続：更新・住所変更・転職・再入国\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/711-taiwan-franchise-disclosure-japanese-restaurant-retail-chains.md",
+    "title": "\"日本の飲食・小売チェーンが台湾で加盟店を募るとき：10日前の情報開示と価格の指定\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/712-taiwan-joint-venture-shareholders-agreement-deadlock-japanese.md",
+    "title": "\"台湾企業との合弁会社で株式の譲渡を縛るには、会社の形から選ぶ\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/713-japan-arbitral-award-recognition-enforcement-taiwan.md",
+    "title": "\"日本の仲裁判断で台湾の財産を差し押さえるには、まず台湾の裁判所の承認が要る\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/714-taiwan-government-procurement-japanese-companies-gpa-bid.md",
+    "title": "\"台湾の政府調達に日本企業が入札するとき、協定の適用は招標公告で確かめる\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/715-taiwan-cartel-investigation-fines-leniency-japanese-subsidiaries.md",
+    "title": "\"業界団体の会合で値上げの話が出たら：台湾公平会のカルテル調査と寛恕政策\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/716-taiwan-overtime-pay-responsibility-system-japanese-managers.md",
+    "title": "\"日系企業の残業代と台湾の「責任制」：課長職でも残業代が生じるとき\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/717-taiwan-shtc-export-control-entity-list-japanese-subsidiaries.md",
+    "title": "\"台湾子会社の輸出と出口實體管理名單：日本向けには許可免除の規定もある\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/718-taiwan-customer-reorganization-bankruptcy-japanese-supplier-claims.md",
+    "title": "\"台湾の取引先が重整・破産に入ったら、売掛金の申報期限は重整で最短10日、破産で最短15日\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/719-taiwan-promissory-note-security-court-ruling-enforcement-japanese.md",
+    "title": "\"台湾の取引先から本票を受け取るとき：本票裁定で訴訟なしに執行できる範囲\""
+  },
+  {
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/720-taiwan-supplement-health-food-advertising-rules-japanese-brands.md",
+    "title": "\"日本のサプリメントを台湾で売るときの広告規制：機能性表示の訳し方と「健康食品」の許可\""
+  }
+]

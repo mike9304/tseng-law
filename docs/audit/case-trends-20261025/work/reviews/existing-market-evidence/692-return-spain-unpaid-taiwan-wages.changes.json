@@ -1,0 +1,26 @@
+[
+  {
+    "old_line": 14,
+    "new_line": 14,
+    "before": "featured_image_caption: \"Escena ilustrativa de la preparación de documentos antes de regresar a España.\"",
+    "after": "featured_image_caption: \"Escena ficticia\""
+  },
+  {
+    "old_line": 32,
+    "new_line": 32,
+    "before": "Una tabla por periodos puede reunir salario pactado, cantidad abonada, fecha de pago y diferencia reclamada. El contrato permite comprobar lo pactado. Las horas extraordinarias, las comisiones y los gastos reembolsables merecen líneas separadas. «Finiquito» no explica cada partida.",
+    "after": "Una tabla por periodos puede reunir salario pactado, cantidad abonada, fecha de pago y diferencia reclamada. El contrato permite comprobar lo pactado. Las horas extraordinarias, las comisiones y los gastos reembolsables merecen líneas separadas. Un papel titulado «finiquito» no desglosa por sí solo cada partida."
+  },
+  {
+    "old_line": 36,
+    "new_line": 36,
+    "before": "¿La empresa llama «gratificación» a una cantidad pagada regularmente? El nombre no resuelve toda la controversia. En una disputa salarial, el [artículo 37 de la Ley de Procedimiento Laboral](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=37) presume que una prestación es remuneración del trabajo cuando se acredita que se recibió del empleador por la relación laboral. Aún debe justificarse el importe reclamado.",
+    "after": "¿La empresa llama «gratificación» a una cantidad pagada regularmente? El nombre no resuelve toda la controversia. En una disputa salarial, el [artículo 37 de la Ley de Procedimiento Laboral](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=37) presume que una prestación es remuneración del trabajo cuando se acredita que se recibió del empleador por la relación laboral. El importe reclamado sigue necesitando prueba."
+  },
+  {
+    "old_line": 60,
+    "new_line": 60,
+    "before": "Para una primera [consulta](/es/contact), [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) permite acordar antes la comunicación en inglés, chino, japonés o coreano. Basta un resumen no sensible, el empleador para comprobar conflictos, el vínculo con Taiwán y las fechas de vencimiento; no es necesario enviar inicialmente identificaciones ni extractos completos. El mensaje no crea un encargo. La nómina más antigua pendiente y su fecha de pago prevista merecen quedar al principio de la carpeta.",
+    "after": "Una primera [consulta](/es/contact) puede hacerse por correo a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); se atiende en inglés, chino, japonés o coreano, y el idioma se acuerda antes. Basta un resumen sin datos sensibles, el nombre del empleador para comprobar conflictos, el vínculo con Taiwán y las fechas de vencimiento; al principio no hace falta enviar documentos de identidad ni extractos completos. El mensaje no crea un encargo. La nómina pendiente más antigua, con la fecha en que debía pagarse, va al principio de la carpeta."
+  }
+]

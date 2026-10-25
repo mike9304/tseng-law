@@ -1,0 +1,5 @@
+COMMAND ['python3', '/Users/son7/tseng-lanes-shared/variety/variety_metrics.py', 'check', '/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md', '--lang', 'hi']
+EXIT 1
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md [hi] sentences=46 mean=17.9 cv=0.387 short=0.109 run3=0.045 opener_rep=0.154 cite_end=0.0 cite_para=0.308 contrast=0 caveat=0 q=1
+  FAIL len_cv=0.387 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences
+  FAIL top_opener_n=3 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)

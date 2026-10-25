@@ -1,0 +1,4 @@
+COMMAND ['python3', '/Users/son7/tseng-lanes-shared/variety/variety_metrics.py', 'check', '/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md', '--lang', 'th', '--sentences', '/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/7c3cfe13a5fc7fab736fce58f58429081931788138ce56d06f16f4f7851a6a51.json']
+EXIT 1
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md [th] sentences=48 mean=20.9 cv=0.431 short=0.125 run3=0.152 opener_rep=0.2 cite_end=0.0 cite_para=0.533 contrast=0 caveat=0 q=1
+  FAIL len_cv=0.431 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences

@@ -1,0 +1,20 @@
+TaDELS Archive (https://itdels.digital.ntu.edu.tw/Item.php?ID=A_0009_0006_0001_0004)
+citeturn1258view0 [wordlim: 200] Crawled: last week; Content type: text/html; Source: open({"ref_id":"https://itdels.digital.ntu.edu.tw/Item.php?ID=A_0009_0006_0001_0004","lineno":null}); Total lines: 17
+L0: [Select][Input][Input]
+L1: 資料編號  | A_0009_0006_0001_0004
+L2: 資料名稱  | 最高法院107年台上字第267號民事判決
+L3: 資料發生時間  | 2018.08.16
+L4: 關鍵字  | RCA工殤; 侵權; 損害賠償; 慰撫金; 工傷; 健康; 訴訟
+L5: 資料取得地點  | 司法院法學資料檢索系統
+L6: 資料取得過程  | 計畫助理收集
+L7: 資料建置時間  | 2020.04
+L8: 論文引用格式  | 〈最高法院107年台上字第267號民事判決 〉，[A_0009_0006_0001_0004]，收錄於臺灣法實證研究資料庫，法律文件資料庫。
+L9: 〈最高法院107年台上字第267號民事判決 〉，[A_0009_0006_0001_0004]，收錄於臺灣法實證研究資料庫，法律文件資料庫。
+L10: 描述  | 2018年最高法院對RCA關懷協會第一波提起訴訟會員作出第三審判決：部分勝訴、部分敗訴。最高法院判決理由認為：「健康有無受侵害，應依醫學予以客觀判斷」導出未罹癌或有特定外顯病徵的C類選定當事人「其健康究竟受有何種損害︖」的質疑，並認原審未具體審認說明所謂「微觀」損害為何，進而廢棄原審此部分裁判，發回高院更審。
+L11: 【0†Image】 [Input][Input]
+L12: 【1†Image】  | 【2†Image】  | 【3†Image】  | 【4†Image】  | 【5†Image】  | 【6†Image】  | 【7†Image】  | 【8†Image】  | 【9†Image】  | 【10†Image】
+L13: 【11†Image】  | 【12†Image】  | 【13†Image】  | 【14†Image】  | 【15†Image】  | 【16†Image】  | 【17†Image】  | 【18†Image】  | 【19†Image】  | 【20†Image】
+L14: [Input] [Input]
+L15: 
+L16: [Input] [Input] [Input]
+

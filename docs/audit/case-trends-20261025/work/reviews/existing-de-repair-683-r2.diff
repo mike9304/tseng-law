@@ -1,0 +1,56 @@
+--- before/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md
++++ candidate/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md
+@@ -3,7 +3,7 @@
+ seoTitle: "Deutsche Urteile in Taiwan vollstrecken"
+ summary: "Ein deutsches Zahlungsurteil eröffnet noch keinen unmittelbaren Zugriff auf Taiwan-Vermögen. Rechtskraft, Zustellung, Anerkennung und ein taiwanesisches Zulassungsurteil sind zu prüfen."
+ published: "2026-10-23"
+-lastmod: "2026-10-24"
++lastmod: "2026-10-25"
+ date_display: "23. Oktober 2026"
+ read_time: "6 Minuten Lesezeit"
+ categories: ["Rechtliche Informationen zu Taiwan"]
+@@ -26,7 +26,7 @@
+ 
+ Ein rechtskräftiges deutsches Zahlungsurteil eröffnet noch keinen unmittelbaren Zugriff auf ein Konto oder Grundstück in Taiwan. Dafür verlangt [Artikel 4-1 des taiwanesischen Zwangsvollstreckungsgesetzes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010004&flno=4-1) ein taiwanesisches Urteil, das die Vollstreckung zulässt. Zusätzlich darf keiner der gesetzlichen Gründe gegen die Anerkennung vorliegen.
+ 
+-Ein deutscher Lieferant braucht deshalb zwei Unterlagenpakete: die Akte des deutschen Verfahrens und konkrete Hinweise auf Vermögen des verurteilten Schuldners in Taiwan. Ein Konzernlogo oder die Adresse eines verbundenen Unternehmens verbindet beides noch nicht. Schuldner und Vermögensinhaber müssen genau identifiziert werden.
++Ein deutscher Lieferant braucht deshalb zwei Unterlagenpakete: die Akte des deutschen Verfahrens und konkrete Hinweise auf Vermögen des verurteilten Schuldners in Taiwan. Dafür genügen weder ein Konzernlogo noch die Adresse eines verbundenen Unternehmens. Schuldner und Vermögensinhaber müssen genau identifiziert werden.
+ 
+ ## Rechtskraft vor Vollstreckungsplanung
+ 
+@@ -34,7 +34,7 @@
+ 
+ Benötigt wird der vollständige Entscheidungstext. Tenor, Parteienbezeichnung, Zinsen und Kosten müssen mit der geltend gemachten Forderung übereinstimmen. Sind bereits Teilzahlungen eingegangen, gehören sie mit Datum und Zuordnung in die Berechnung. Eine eigene Zusammenfassung des Urteils ersetzt dessen Wortlaut nicht.
+ 
+-Die taiwanesische Prüfung folgt den eigenen gesetzlichen Voraussetzungen. Die vereinfachte Vollstreckung, wie sie innerhalb der EU üblich ist, lässt sich auf Taiwan nicht übertragen; maßgeblich bleibt Artikel 4-1. Für einen Schiedsspruch gilt wiederum ein eigenes Verfahren. Deshalb sollte gleich zu Beginn feststehen, um welche Art von Titel es sich handelt.
++In Taiwan richtet sich die Vollstreckung nach Artikel 4-1; eine Behandlung wie bei der grenzüberschreitenden Vollstreckung innerhalb der EU darf nicht vorausgesetzt werden. Für einen Schiedsspruch gilt wiederum ein eigenes Verfahren. Deshalb sollte gleich zu Beginn feststehen, um welche Art von Titel es sich handelt.
+ 
+ ## Die vier Anerkennungshindernisse
+ 
+@@ -45,7 +45,7 @@
+ 3. Inhalt des Urteils oder Verfahren widersprechen Taiwans öffentlicher Ordnung oder den guten Sitten.
+ 4. Es fehlt an gegenseitiger Anerkennung.
+ 
+-Die Zustellungsausnahme verlangt besondere Aufmerksamkeit. Die verfahrenseinleitende Mitteilung oder Anordnung muss rechtzeitig und rechtmäßig im Staat des ausländischen Gerichts zugestellt worden sein oder im Wege der nach taiwanesischem Recht vorgesehenen Rechtshilfe. Ein Versäumnisurteil ist damit nicht automatisch ausgeschlossen. Umgekehrt genügt eine informelle Kenntnis des Schuldners vom Streit nicht als Ersatz für die Prüfung dieser Voraussetzungen.
++Die verfahrenseinleitende Mitteilung oder Anordnung muss rechtzeitig und rechtmäßig im Staat des ausländischen Gerichts zugestellt worden sein oder im Wege der nach taiwanesischem Recht vorgesehenen Rechtshilfe. Ein Versäumnisurteil ist damit nicht automatisch ausgeschlossen. Umgekehrt genügt eine informelle Kenntnis des Schuldners vom Streit nicht als Ersatz für die Prüfung dieser Voraussetzungen.
+ 
+ Gegenseitigkeit ist eine Rechtsfrage. Deutschlands [§ 328 ZPO](https://www.gesetze-im-internet.de/zpo/__328.html) enthält eigene Regeln zur Anerkennung ausländischer Urteile, darunter selbst eine Gegenseitigkeitsklausel. Der Gesetzesvergleich allein garantiert jedoch keine Anerkennung des konkreten deutschen Urteils in Taiwan. Die einschlägige Rechtslage und Rechtsprechung sind für die anstehende Prüfung aufzubereiten. Eine pauschale Länderliste reicht dafür nicht.
+ 
+@@ -53,7 +53,7 @@
+ 
+ Wurde dem Beklagten die Klage zugestellt, hat er einen Vertreter bestellt, oder blieb er vollständig fern? Von diesen Fragen hängt ab, welche Teile der deutschen Gerichtsakte besonders aussagekräftig sind: Neben Urteil und Rechtskraftnachweis kommen die verfahrenseinleitenden Dokumente, Zustellungsnachweise und Unterlagen zur Beteiligung des Beklagten in Betracht.
+ 
+-Für jedes Anerkennungshindernis sollte feststehen, welches Dokument es belegt. Der Vertrag und eine Gerichtsstandsvereinbarung können etwa die Zuständigkeitsfrage betreffen; die Zustellungsurkunde beantwortet eine andere Frage. Fehlende Dokumente sollten gezielt beim deutschen Gericht oder der bisherigen Vertretung beschafft werden. Welche beglaubigten Ausfertigungen, chinesischen Übersetzungen und Bestätigungen ausländischer Unterlagen benötigt werden, sollte anschließend mit der Rechtsvertretung für das Verfahren in Taiwan abgestimmt werden.
++Für jeden Prüfungspunkt sollte feststehen, welche Unterlagen ihn betreffen und ob weitere Nachweise fehlen. Der Vertrag und eine Gerichtsstandsvereinbarung können etwa die Zuständigkeitsfrage betreffen; die Zustellungsurkunde beantwortet eine andere Frage. Fehlende Dokumente sollten gezielt beim deutschen Gericht oder der bisherigen Vertretung beschafft werden. Welche beglaubigten Ausfertigungen, chinesischen Übersetzungen und Bestätigungen ausländischer Unterlagen benötigt werden, sollte anschließend mit der Rechtsvertretung für das Verfahren in Taiwan abgestimmt werden.
+ 
+ ## Vermögen und zuständiges Gericht zusammen betrachten
+ 
+@@ -67,7 +67,7 @@
+ 
+ Nach [Artikel 526](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=526) sind Anspruch und Arrestgrund glaubhaft zu machen. Das Gericht kann eine Sicherheitsleistung verlangen. Die Vorschrift regelt auch die Ergänzung einer unzureichenden Glaubhaftmachung durch Sicherheit. Konkrete Hinweise auf eine bevorstehende Verfügung sollten deshalb mit Datum und Quelle dokumentiert werden, statt nur eine allgemeine Zahlungsbefürchtung vorzutragen.
+ 
+-Eine erste [Anfrage zur Vollstreckung in Taiwan](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) kann Gericht, Entscheidungsdatum, Schuldnernamen, Taiwan-Vermögensbezug und anstehende Fristen nennen. Beraten wird auf Englisch, Chinesisch, Japanisch oder Koreanisch; die Sprache wird vorab abgestimmt. Vollständige Akten und vertrauliche Vermögensangaben folgen nach Absprache. Vor der nächsten Aktenanforderung steht eine konkrete Frage: Ist belegt, wann und wie dem Beklagten das deutsche Verfahren eröffnet wurde?
++Eine erste [Anfrage zur Vollstreckung in Taiwan](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) kann Gericht, Entscheidungsdatum, Schuldnernamen, Taiwan-Vermögensbezug und anstehende Fristen nennen; welche der Beratungssprachen Englisch, Chinesisch, Japanisch oder Koreanisch sich eignet, wird vorab abgestimmt. Vollständige Akten und vertrauliche Vermögensangaben folgen nach Absprache. Ist belegt, wann und wie dem Beklagten das deutsche Verfahren eröffnet wurde?
+ 
+ ## Amtliche Grundlagen
+ 

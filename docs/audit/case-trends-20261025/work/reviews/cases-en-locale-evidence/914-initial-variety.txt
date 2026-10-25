@@ -1,0 +1,4 @@
+COMMAND: python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-case-trends-20261025/repo/src/content/columns-en/914-taiwan-us-executive-share-bonus-payment-promise.md --lang en
+SHA-256: 9dfa500e01d12114412e6cefa1c50d602e4622a3d7a2187fcfeaaf1e1870433e
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-en/914-taiwan-us-executive-share-bonus-payment-promise.md [en] sentences=48 mean=14.8 cv=0.492 short=0.208 run3=0.0 opener_rep=0.214 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=1
+  OK — no variety limit violated

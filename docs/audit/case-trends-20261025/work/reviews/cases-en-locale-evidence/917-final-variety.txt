@@ -1,0 +1,4 @@
+COMMAND: python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-case-trends-20261025/repo/src/content/columns-en/917-taiwan-film-license-corporate-party-us-declaration.md --lang en
+SHA-256: a455cfaa66bc2b6f6f0da057d9360a0fe3868c22cccaa772274e4ad1c64753cc
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-en/917-taiwan-film-license-corporate-party-us-declaration.md [en] sentences=47 mean=16.0 cv=0.461 short=0.234 run3=0.044 opener_rep=0.071 cite_end=0.0 cite_para=0.357 contrast=1 caveat=0 q=1
+  OK — no variety limit violated

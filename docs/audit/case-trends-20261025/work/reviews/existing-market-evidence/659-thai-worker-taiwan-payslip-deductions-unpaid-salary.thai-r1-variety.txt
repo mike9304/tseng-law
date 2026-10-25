@@ -1,0 +1,2 @@
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md [th] sentences=49 mean=20.4 cv=0.452 short=0.143 run3=0.149 opener_rep=0.2 cite_end=0.0 cite_para=0.533 contrast=0 caveat=0 q=1
+  OK — no variety limit violated

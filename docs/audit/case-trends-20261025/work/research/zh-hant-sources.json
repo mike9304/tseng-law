@@ -1,0 +1,746 @@
+{
+  "research_date": "2026-10-25",
+  "locale": "zh-hant",
+  "market": "Taiwan",
+  "base_commit": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+  "provenance_policy": "Official body actually read for every asserted legal proposition; private sites or search-only snippets are discovery leads, never promoted to verified holding. Court explanation/government reproduction labeled distinctly.",
+  "inventory_file": "zh-hant-inventory.json",
+  "brief_file": "zh-hant-research.md",
+  "snapshots_file": "zh-hant-source-captures.json",
+  "sources": [
+    {
+      "id": "P1",
+      "topic": "presale",
+      "kind": "official_government_reproduction_of_full_judgment",
+      "authority": "行政院消費者保護處／臺灣高等法院臺中分院",
+      "title": "消費者保護法判決函釋彙編（廿二）所錄109年度上易字第289號",
+      "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+      "publication_date": "2022-11",
+      "decision_date": "2022-02-09",
+      "jurisdiction": "Taiwan",
+      "court": "臺灣高等法院臺中分院",
+      "docket": "109年度上易字第289號",
+      "location": "PDF zero-based pages184–198; printed pages173–187; judgment tail on PDF page198",
+      "read_status": "full selected judgment read",
+      "outcome": "上訴及追加之訴均駁回；原給付遲延利息部分維持",
+      "finality": "判決末尾明載不得上訴；未發回",
+      "verified_claims": [
+        "2019-02-23信函內容為辦理貸款及與公司聯絡，法院不認為已完成契約交屋通知義務。",
+        "借款、所有權登記、驗收、進場裝修及完成交屋是不同的履約節點。",
+        "2019-08-14進場裝修／清潔並不當然等於完成交屋；2019-11-05貸款撥款、2019-11-28完成交屋相關文件。",
+        "本案交屋通知契約期限為領得使用執照後四個月；不能當作現行應記載事項的通則。"
+      ],
+      "limitations": [
+        "政府再錄全文，非司法網站直接下載；官方彙編前言說明裁判全文再錄。",
+        "PDF有649,350萬元及511,900元萬元的局部排版錯字；上下文及加總是元，稿件可省略金額以免誤植。",
+        "本案結果不代表任何貸款通知無效或買方可停止付款。"
+      ],
+      "numeric_cautions": [
+        "649350 TWD case-specific amount, not萬 or guaranteed outcome",
+        "4 months case contract; current mandatory item15 uses6 months"
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "P2",
+      "topic": "presale",
+      "kind": "effective_mandatory_standard_contract_terms",
+      "authority": "內政部／行政院",
+      "title": "預售屋買賣定型化契約應記載及不得記載事項",
+      "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+      "jurisdiction": "Taiwan",
+      "announcement_date": "2023-06-19",
+      "effective_date": "2023-07-01",
+      "date_scope": "Latest amendment listed in current PDF concerns items20,24-1 and prohibited item5; do not imply item15 was newly created on this date.",
+      "status": "current official published text read, not draft",
+      "location": "PDF p1 amendment history; p5 item13; pp6–7 items14–15",
+      "read_status": "history and relevant operative provisions read",
+      "verified_claims": [
+        "應記載事項第13點：完成約定主附建物設備、領得使用執照、接通水電等後通知驗收；瑕疵記在驗收單並限期修繕。",
+        "第15點：領得使用執照六個月內通知交屋，交屋義務與逾期通知遲延利息另有規定。",
+        "第14點所有權移轉及買方辦理貸款協力義務與第15點通知交屋不同。"
+      ],
+      "limitations": [
+        "PDF metadata title includes old草案950823, but actual current body has enacted amendment history through2023; do not cite metadata as status.",
+        "Apply version appropriate to contract date; avoid retroactive application to2022 judgment."
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "P3",
+      "topic": "presale",
+      "kind": "official_enforcement_release",
+      "authority": "行政院消費者保護處",
+      "title": "公布預售屋契約查核結果，保障消費者購屋權益",
+      "url": "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+      "publication_date": "2025-08-25",
+      "jurisdiction": "Taiwan",
+      "status": "2025 enforcement signal",
+      "read_status": "Official page OPEN body and date read; exact original responses recovered from current-session log.",
+      "verified_claims": [
+        "官方查核列出將對保、撥款時間排除於交屋通知期限計算之外的違規態樣。"
+      ],
+      "limitations": [
+        "This is2025 inspection, not2026 complaint statistics or evidence of rising demand."
+      ],
+      "read_on": "2026-10-25",
+      "recovered_evidence_file": "zh-hant-presale-audit-primary-recovered.md",
+      "location": "turn1090view3 L159–160 for violation; turn1097view1 L133,135–136,138 for title/date/agency/inspection timing.",
+      "provenance": "Own current-session original tool outputs JSONL lines386 and400; primary-recovered supplement preserves exact returned text."
+    },
+    {
+      "id": "P4",
+      "topic": "presale",
+      "kind": "current_official_lending_regulation",
+      "authority": "中央銀行",
+      "title": "中央銀行對金融機構辦理不動產抵押貸款業務規定（2026-09修正）",
+      "url": "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+      "operative_text_url": "https://www.cbc.gov.tw/tw/dl-227611-e262ea5d31724ec696a8e2fa75a94600.html",
+      "announcement_date": "2026-09-17",
+      "effective_date": "2026-09-18",
+      "jurisdiction": "Taiwan",
+      "status": "effective; official text read",
+      "location": "第4點第2款第2目、第10–11點",
+      "read_status": "announcement and operative PDF read",
+      "verified_claims": [
+        "修正後規定對有一戶房貸的自然人特定第二戶購屋貸款上限為買賣金額／鑑價孰低七成。",
+        "金融機構內部規定較嚴者依較嚴規定辦理。"
+      ],
+      "limitations": [
+        "Not a loan approval guarantee; not every borrower/property category has same ratio.",
+        "Use only as2026 financing context; not reason for2022 judgment. Article can omit ratios entirely."
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "B1",
+      "topic": "bullying",
+      "kind": "official_court_judgment_explanation",
+      "authority": "臺北高等行政法院／司法院",
+      "title": "臺北高等行政法院高等行政訴訟庭114年度訴字第869號原告謝宜容與被告勞動部間免職事件新聞稿",
+      "url": "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+      "publication_date": "2026-09-03",
+      "decision_date": "2026-09-03",
+      "jurisdiction": "Taiwan",
+      "court": "臺北高等行政法院高等行政訴訟庭",
+      "docket": "114年度訴字第869號",
+      "status": "official explanation of administrative judgment; not full judgment text",
+      "read_status": "full substantive press release read; later refetch intermittent timeout",
+      "outcome": "復審決定及原處分均撤銷",
+      "finality": "新聞稿明載得上訴；2026-10-25未核實後續上訴結果",
+      "verified_claims": [
+        "上級先決定並對外宣布免職，後續考績審議欠缺實質性。",
+        "處分前未適當給予通知與陳述答辯機會；事後行政救濟陳述不能當然補正此瑕疵。",
+        "調查報告／處分認定含矛盾或調查不足。"
+      ],
+      "limitations": [
+        "Public civil-service administrative case, not direct application of2026 private-employer bullying rules.",
+        "Not finding that no bullying occurred, not criminal acquittal, not proof of reinstatement.",
+        "Do not use worker's death or medical causation as an unverified narrative claim."
+      ],
+      "internal_initial_reference": "turn1026view1; saved raw response zh-case-pass2",
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "B2",
+      "topic": "bullying",
+      "kind": "effective_statute",
+      "authority": "全國法規資料庫／勞動部",
+      "title": "職業安全衛生法",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
+      "history_url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+      "pinpoint_urls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+      ],
+      "jurisdiction": "Taiwan",
+      "promulgation_date": "2025-12-19",
+      "commencement_order_date": "2026-06-09",
+      "effective_date": "2026-07-01",
+      "status": "effective amendments; MOJ database footer compiled through2026-10-16",
+      "location": "第22-1、22-2條；沿革",
+      "read_status": "current operative sections and history read;22-2 refreshed during final check",
+      "verified_claims": [
+        "霸凌定義包括逾越業務必要合理範圍等構成要件；重大情節不以持續發生為必要。",
+        "雇主知悉後須採立即有效的適當措施；申訴調查應客觀、公正、公平，給當事人充分陳述及答辯機會並迴避利益衝突。",
+        "主管機關得就法定重大程序瑕疵要求重新調查，雇主不得拒絕。"
+      ],
+      "limitations": [
+        "Do not apply new law retroactively as the reason B1 was decided.",
+        "Thresholds for investigation team and internal procedures need rules-specific check; no universal employer headcount claim."
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "B3",
+      "topic": "bullying",
+      "kind": "effective_regulation",
+      "authority": "全國法規資料庫／勞動部",
+      "title": "職場霸凌防治措施準則",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060085",
+      "jurisdiction": "Taiwan",
+      "promulgation_date": "2026-06-23",
+      "effective_date": "2026-07-01",
+      "status": "effective; section29 commencement",
+      "location": "第16–18、22、24、28、29條",
+      "read_status": "current full text with targeted provisions read; independent LawHistory URL later inaccessible",
+      "verified_claims": [
+        "第16條規定調查通知內容、陳述答辯、證據保存及避免對質等調查原則。",
+        "第22條重大程序瑕疵類型包括調查小組組成不合法、未給一方陳述答辯機會、迴避違反或重要證據漏未審酌等。",
+        "第24條主管機關對重大瑕疵可要求重新調查。",
+        "第28條過渡規定保留已完成程序效力，第29條明定2026-07-01施行。"
+      ],
+      "numeric_cautions": [
+        "第17條：調查小組成立翌日起2個月，必要時延1個月並通知；協調期間計算另有規定。",
+        "第18條：接獲調查報告1個月內決定，並於10工作日內書面通知理由及救濟方式。",
+        "第22條：申復30日從接獲結果翌日起算；適用規模/小型雇主相關條款須核對，不在稿中普遍化。"
+      ],
+      "limitations": [
+        "Focused article need not recite every deadline.",
+        "Procedures and employer-size provisions vary; do not import public-service discipline automatically."
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "B4",
+      "topic": "bullying",
+      "kind": "official_faq",
+      "authority": "勞動部",
+      "title": "職場霸凌防治新制說明／FAQ",
+      "url": "https://www.mol.gov.tw/1607/28690/86099/94219/94225/",
+      "updated_date": "2026-07-01",
+      "jurisdiction": "Taiwan",
+      "read_status": "official text read",
+      "verified_claims": [
+        "Provides current official implementation context for2026 workplace-bullying regime."
+      ],
+      "limitations": [
+        "Use statute/regulation for exact binding duty; FAQ is guidance."
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "E1",
+      "topic": "ev",
+      "kind": "official_judgment",
+      "authority": "臺灣高等法院高雄分院／司法院裁判書系統",
+      "title": "111年度上字第132號民事判決",
+      "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+      "jurisdiction": "Taiwan",
+      "court": "臺灣高等法院高雄分院",
+      "docket": "111年度上字第132號",
+      "decision_date": "2022-06-22",
+      "lower_court": "臺灣高雄地方法院110年度訴字第1082號，2022-03-02",
+      "read_status": "Official initial open; actual consecutive L32–L53 reasons/conclusion recovered from own current-session original tool output. Initial combined output was globally truncated, so opening formal主文 and tail not preserved. Subsequent normal-TLS and FJUD refetches timed out.",
+      "internal_initial_reference": "turn976view0",
+      "outcome": "上訴駁回；拆除設備、線路及回復原狀的結果維持；非發回",
+      "finality": "Unresolved: appeal instruction at tail and subsequent finality not read. Do not describe as終審／確定判決.",
+      "location": "Original returned L32–L53; substantive reasonsL43–L45, outcomeL47–L49, decision dateL51.",
+      "verified_claims": [
+        "充電設備與電纜設於車位後方牆面、天花板並使用共同配電箱，不能由車位權利直接推出使用這些共用部分的權限。",
+        "法院依第11條認定本案應取得區分所有權人會議同意；規約第15條另要求加裝電線、電管須管委會許可並經電力公司安全檢查。兩種要求不要混寫。",
+        "事後關電、鎖箱或提出交付鑰匙，不能補正欠缺裝設權源。",
+        "法院於L44明確不採第6條第1項第4款的分類；本案拆除請求依第6條第1項第5款、第3項、第11條及規約等成立。"
+      ],
+      "limitations": [
+        "Recovered actual primary text available for independent review; only appeal instruction/finality beyondL53 unresolved. Root capture.json records later normal-TLS failures.",
+        "Do not universalize owners-meeting approval to every installation: scope of work and bylaws matter.",
+        "Do not rely on later drafts as law."
+      ],
+      "read_on": "2026-10-25",
+      "recovered_evidence_file": "zh-hant-ev-primary-recovered.md",
+      "lower_court_metadata_status": "Official search result turn968search4 supplies lower court/date; not independently present in recovered primary body. Omit from article unless needed and separately verified."
+    },
+    {
+      "id": "E2",
+      "topic": "ev",
+      "kind": "effective_statute",
+      "authority": "全國法規資料庫／內政部",
+      "title": "公寓大廈管理條例",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0070118",
+      "history_url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0070118",
+      "pinpoint_urls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11"
+      ],
+      "jurisdiction": "Taiwan",
+      "latest_promulgated_amendment": "2022-05-11",
+      "date_scope": "2022 latest amendment added29-1,49-1; not newly amended6 or11.6/11 text traces to2003 revision; do not attach2022 commencement to those rules as if newly created.",
+      "status": "effective current text",
+      "location": "第6條第1項第4款及第2項、第11條",
+      "read_status": "both operative sections and history read",
+      "verified_claims": [
+        "修繕專有／約定專用部分或設置管線而必須使用共用部分，涉及管理負責人或管委會同意，並應採最少損害方式及修復補償。",
+        "共用部分及相關設施之拆除、重大修繕或改良依第11條須區分所有權人會議決議。"
+      ],
+      "limitations": [
+        "Determine specific work, ownership classification and bylaw before selecting6/11. Neither section alone proves every charger allowed/banned.",
+        "No verified new nationwide charging exception adopted in this research."
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "E3",
+      "topic": "ev",
+      "kind": "local_nonbinding_reference_guidance",
+      "authority": "彰化縣政府",
+      "title": "既有公寓大廈電動車充電設施設置參考指引",
+      "url": "https://www.chcg.gov.tw/DTO/economic/07other/other01_con.aspx?cate_id=7523&data_id=26777&topsn=4103",
+      "pdf_url": "https://www.chcg.gov.tw/DTO/economic/getFile.aspx?did=26777&file=2&file_id=481704&type=2",
+      "jurisdiction": "Taiwan / Changhua",
+      "publication_date": null,
+      "status": "local reference guidance, not new nationwide statute",
+      "read_status": "official page body and guidance PDF read",
+      "verified_claims": [
+        "社區可依實際需求選擇細節並經區分所有權人會議通過納入規約。"
+      ],
+      "limitations": [
+        "Footer網站選單更新日期 is not verified article publication date; do not call it new2026-10 law.",
+        "Do not treat local model guidance as binding to every condominium."
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "E4",
+      "topic": "ev",
+      "kind": "official_local_policy_release",
+      "authority": "高雄市政府工務局",
+      "title": "趁現在升級好厝　高雄厝智慧雲補助開跑",
+      "url": "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE",
+      "publication_date": "2026-05-29",
+      "program_deadline": "2026-09-30",
+      "jurisdiction": "Taiwan / Kaohsiung",
+      "status": "2026 program; stated application window ended before research date",
+      "read_status": "body and publication timestamp read",
+      "verified_claims": [
+        "115年度高雄厝智慧雲補助項目包括公寓大廈公共區域增設電動車充電設施設備的線槽架。",
+        "公報頁正文發布日期為115-05-29，不是網頁全站更新日期。"
+      ],
+      "limitations": [
+        "No call to apply now; no claim program remains open.",
+        "Subsidy does not itself authorize use of common parts. Counts of EV adoption/search demand not measured."
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "E5",
+      "topic": "ev",
+      "kind": "official_judgment_excerpt_public_notice",
+      "authority": "臺灣臺北地方法院新店簡易庭／司法院",
+      "title": "114年度店簡字第1204號判決節本",
+      "url": "https://www.judicial.gov.tw/tw/cp-139-1591807-fc654-1.html",
+      "court": "臺灣臺北地方法院新店簡易庭",
+      "docket": "114年度店簡字第1204號",
+      "decision_date": "2026-07-27",
+      "publication_date": "2026-07-31",
+      "jurisdiction": "Taiwan",
+      "read_status": "complete published excerpt read; excerpt explicitly omits facts/reasons",
+      "outcome": "主文包括拆除充電器及相關線路並回復牆面／通風等原狀",
+      "finality": "First-instance appeal instruction:20days after service; later appeal/finality not verified.",
+      "verified_claims": [
+        "2026 official published order records another community charger removal dispute."
+      ],
+      "limitations": [
+        "Not evidence of why court ordered removal; cannot substitute this excerpt for E1 reasoning.",
+        "No assertion that this case is final or has same facts/legal rationale as E1."
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "G1",
+      "topic": "gaming",
+      "kind": "official_government_reproduction_of_full_judgment",
+      "authority": "行政院消費者保護處／臺灣基隆地方法院",
+      "title": "消費者保護法判決函釋彙編（廿二）所錄109年度消簡上字第1號",
+      "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+      "publication_date": "2022-11",
+      "decision_date": "2021-09-13",
+      "jurisdiction": "Taiwan",
+      "court": "臺灣基隆地方法院",
+      "docket": "109年度消簡上字第1號",
+      "lower_court": "基隆簡易庭109年度基消簡字第1號，2020-09-16",
+      "location": "PDF zero-based pages151–164; printed pages140–153",
+      "read_status": "full selected judgment read, including reasons and tail",
+      "outcome": "玩家上訴駁回",
+      "finality": "判決末尾明載不得上訴；非發回",
+      "verified_claims": [
+        "上訴審請求減縮為243548元，爭議為多個帳號的剩餘遊戲金幣。",
+        "兩造不爭執帳號無剩餘未使用付費點數，爭議餘額是金幣。",
+        "法院區分未使用付費點數與已進入遊戲、具遊戲籌碼功能的金幣，本案金幣不屬終止退費條款的未使用付費點數或遊戲費用。",
+        "契約終止可由玩家另行表示成立，故退款敗訴不等於法院全面確認業者停權合法。"
+      ],
+      "limitations": [
+        "Do not generalize to all digital currency, NFT, virtual goods, payment credits or crypto assets.",
+        "Functional and transactional records matter; no categorical statement all virtual items are nonrefundable."
+      ],
+      "numeric_cautions": [
+        "243548 TWD sought, not awarded",
+        "2021 case; current2023 terms discussed separately"
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "G2",
+      "topic": "gaming",
+      "kind": "effective_mandatory_standard_contract_terms",
+      "authority": "經濟部公告、業務移撥數位發展部／行政院",
+      "title": "網路連線遊戲服務定型化契約應記載及不得記載事項",
+      "url": "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+      "official_index_url": "https://www.ey.gov.tw/Page/2285E9A14973DE75?PS=15&page=2",
+      "jurisdiction": "Taiwan",
+      "announcement_date": "2022-08-10",
+      "effective_date": "2023-01-01",
+      "jurisdiction_transfer_date": "2022-08-27",
+      "status": "current official mandatory terms, distinct from optional contract model",
+      "location": "第4、7、9、18、19點及不得記載事項第6點",
+      "read_status": "full10-page relevant terms read",
+      "verified_claims": [
+        "開始遊戲後7日內可書面解除，對未使用付費購買點數請求退費。",
+        "消費者得隨時通知終止；終止時於扣除必要成本後，30日內退還未使用付費點數或遊戲費用，或依雙方同意方式處理。",
+        "個人遊戲歷程至少保存30日，消費者得依規定申請調閱，7日內提供，費用不得超過200元。",
+        "不能約定爭議僅以業者保存的歷程及電子資料為判斷標準。",
+        "停止營運未依期間公告通知的情形，必要成本扣除及其他合理補償有特別規定。"
+      ],
+      "limitations": [
+        "Do not use general online shopping7-day rules in place of game-specific mandatory terms.",
+        "Do not imply arbitrary percentage deduction is a necessary cost.",
+        "Not retroactive basis of2021 judgment; current reader guidance is separate."
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "G3",
+      "topic": "gaming",
+      "kind": "official_consumer_complaint_statistics",
+      "authority": "行政院消費者保護處",
+      "title": "114年全國消費申訴及調解案件統計資料",
+      "url": "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+      "publication_date": "2026-05-07",
+      "data_period": "2025 calendar year / 民國114年",
+      "jurisdiction": "Taiwan",
+      "read_status": "official statistics release body read",
+      "verified_claims": [
+        "線上遊戲為主要申訴類別第2位，但件數比前一年下降15.51%。",
+        "全部消費申訴及調解案件83442件，較前一年增加7.96%；不得轉述為遊戲案件增加。"
+      ],
+      "limitations": [
+        "Complaint category is not search volume, client intent or willingness to hire a lawyer.",
+        "Counts measure filed complaints/mediation, not total market harm or all dissatisfied users."
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "F1",
+      "topic": "all",
+      "kind": "firm_public_contact_page",
+      "authority": "曾雋崴律師事務所／tseng-law.com",
+      "title": "中文聯絡頁",
+      "url": "https://tseng-law.com/zh-hant/contact",
+      "jurisdiction": "Taiwan",
+      "read_status": "live body read",
+      "verified_claims": [
+        "Contact route and emailwei@hoveringlaw.com.tw.",
+        "Initial overview/contact/deadline requested; avoid sending identification/passport/bank-sensitive details or full originals in ordinary email.",
+        "Taipei in-person or Zoom/Meet consultation; Chinese/English/Japanese/Korean contact support described."
+      ],
+      "limitations": [
+        "No invented foreign offices, foreign-law licenses, represented cases, conversion claims or specialized technical services."
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "F2",
+      "topic": "presale ev gaming",
+      "kind": "firm_public_service_page",
+      "authority": "tseng-law.com",
+      "title": "民事服務",
+      "url": "https://tseng-law.com/zh-hant/services/civil",
+      "read_status": "live body read",
+      "verified_claims": [
+        "Taiwan contract litigation, damages and consumer civil disputes are within described service scope."
+      ],
+      "limitations": [
+        "No EV engineering/game specialist or particular prior-client assertion."
+      ],
+      "read_on": "2026-10-25"
+    },
+    {
+      "id": "F3",
+      "topic": "bullying",
+      "kind": "firm_public_service_page",
+      "authority": "tseng-law.com",
+      "title": "勞動服務",
+      "url": "https://tseng-law.com/zh-hant/services/labor",
+      "read_status": "live body read",
+      "verified_claims": [
+        "Employment contract, dismissal/severance and labor disputes described."
+      ],
+      "limitations": [
+        "Do not claim psychology, forensic investigation, civil-service specialist licensure or representation in B1."
+      ],
+      "read_on": "2026-10-25"
+    }
+  ],
+  "claims": [
+    {
+      "id": "P-claim1",
+      "claim": "本案貸款通知未構成契約要求之交屋通知。",
+      "sources": [
+        "P1"
+      ],
+      "classification": "case holding"
+    },
+    {
+      "id": "P-claim2",
+      "claim": "現行第15點為使用執照後6個月，與本案契約4個月分開。",
+      "sources": [
+        "P1",
+        "P2"
+      ],
+      "classification": "current law / historical contract distinction"
+    },
+    {
+      "id": "P-claim3",
+      "claim": "2026融資規則變動是現在讀者背景，非2022案件原因。",
+      "sources": [
+        "P4"
+      ],
+      "classification": "editorial inference constrained by dates"
+    },
+    {
+      "id": "B-claim1",
+      "claim": "法院撤銷免職等行政決定，程序及調查缺陷是理由；並非證明一切霸凌指控不實。",
+      "sources": [
+        "B1"
+      ],
+      "classification": "official case explanation"
+    },
+    {
+      "id": "B-claim2",
+      "claim": "私人雇主調查須客觀公正、保障答辯並利益迴避；直接法源是現行職安法及準則。",
+      "sources": [
+        "B2",
+        "B3"
+      ],
+      "classification": "current law"
+    },
+    {
+      "id": "B-claim3",
+      "claim": "先決定結果後補程序是私人企業可從公務員案汲取的風險提示。",
+      "sources": [
+        "B1",
+        "B2",
+        "B3"
+      ],
+      "classification": "express inference, not transposed holding"
+    },
+    {
+      "id": "E-claim1",
+      "claim": "本案車位權利不包括任意在共用牆面天花板及箱體裝設的權源。",
+      "sources": [
+        "E1"
+      ],
+      "classification": "case holding within read scope"
+    },
+    {
+      "id": "E-claim2",
+      "claim": "一般管線必要使用同意與共用部分重大改良決議需區別。",
+      "sources": [
+        "E2"
+      ],
+      "classification": "current law"
+    },
+    {
+      "id": "E-claim3",
+      "claim": "2026地方補助顯示共用線槽是實際政策議題；不創設私人裝設權。",
+      "sources": [
+        "E4",
+        "E2"
+      ],
+      "classification": "fact plus legal distinction"
+    },
+    {
+      "id": "G-claim1",
+      "claim": "本案遊戲金幣不等於終止時須退還的未使用付費點數。",
+      "sources": [
+        "G1"
+      ],
+      "classification": "fact-specific holding"
+    },
+    {
+      "id": "G-claim2",
+      "claim": "今日終止退費規則與歷程調閱權可用於確認餘額性質。",
+      "sources": [
+        "G2"
+      ],
+      "classification": "current mandatory terms"
+    },
+    {
+      "id": "G-claim3",
+      "claim": "遊戲仍是主要申訴類別，但2025件數下降，無成長結論。",
+      "sources": [
+        "G3"
+      ],
+      "classification": "official statistic with limitation"
+    }
+  ],
+  "queries": [
+    {
+      "language": "zh-Hant",
+      "query": "site.judicial.gov.tw 預售屋 貸款不足 解除契約 判決",
+      "observed_results": [
+        {
+          "description": "Judgment candidates and legal commentary including114上易521; selected candidate changed because full official body could not be verified.",
+          "url": "https://judgment.judicial.gov.tw/"
+        }
+      ],
+      "limits": "Candidate discovery only; inaccessible official judgment not used as confirmed holding.",
+      "searched_on": "2026-10-25"
+    },
+    {
+      "language": "zh-Hant",
+      "query": "\"貸款\" \"判決\" \"預售屋\" site:cpc.ey.gov.tw",
+      "observed_results": [
+        {
+          "description": "Official judgment compilation22 containing109上易289.",
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C"
+        }
+      ],
+      "limits": "Shows indexed legal material, not query demand.",
+      "searched_on": "2026-10-25"
+    },
+    {
+      "language": "zh-Hant",
+      "query": "2026 預售屋 交屋 貸款 消費 爭議 site:gov.tw",
+      "observed_results": [
+        {
+          "description": "2025 official presale contract inspection and2026 central-bank policy materials.",
+          "url": "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11"
+        },
+        {
+          "description": "Current central-bank mortgage regulation announcement.",
+          "url": "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        }
+      ],
+      "limits": "A2025 release returned in a2026 query is not a2026 event.",
+      "searched_on": "2026-10-25"
+    },
+    {
+      "language": "zh-Hant",
+      "query": "\"職場霸凌\" \"新聞稿\" site:judicial.gov.tw",
+      "observed_results": [
+        {
+          "description": "Official2026-09-03 administrative dismissal judgment press release.",
+          "url": "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html"
+        }
+      ],
+      "limits": "One public case establishes a concrete problem; no measured trend.",
+      "searched_on": "2026-10-25"
+    },
+    {
+      "language": "zh-Hant",
+      "query": "\"職場霸凌\" \"114年度訴字第869號\" 2026 上訴",
+      "observed_results": [
+        {
+          "description": "Official release states appeal permitted; commentary results observed, no later official disposition verified.",
+          "url": "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html"
+        }
+      ],
+      "limits": "No inference of finality from absence of later search result.",
+      "searched_on": "2026-10-25"
+    },
+    {
+      "language": "zh-Hant",
+      "query": "site.judicial.gov.tw 充電樁 管委會 判決",
+      "observed_results": [
+        {
+          "description": "Official111上132 judgment and2026新店114店簡1204 public notice.",
+          "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1"
+        },
+        {
+          "description": "Official excerpt lacks reasons.",
+          "url": "https://www.judicial.gov.tw/tw/cp-139-1591807-fc654-1.html"
+        }
+      ],
+      "limits": "Court outcomes must not be generalized from headings or omitted reasons.",
+      "searched_on": "2026-10-25"
+    },
+    {
+      "language": "zh-Hant",
+      "query": "2026 高雄 社區 充電 線槽 補助",
+      "observed_results": [
+        {
+          "description": "2026-05-29 Kaohsiung public-area cable-tray subsidy program.",
+          "url": "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        }
+      ],
+      "limits": "Policy signal, not open-now eligibility or proof subsidy grants legal usage rights.",
+      "searched_on": "2026-10-25"
+    },
+    {
+      "language": "zh-Hant",
+      "query": "site:gov.tw \"115年\" \"線上遊戲\" \"申訴\"",
+      "observed_results": [
+        {
+          "description": "2026-05-07 nationwide2025 consumer complaint statistics.",
+          "url": "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930"
+        }
+      ],
+      "limits": "Gaming complaints fell; do not borrow overall complaint growth.",
+      "searched_on": "2026-10-25"
+    },
+    {
+      "language": "zh-Hant",
+      "query": "site:moda.gov.tw \"2026\" \"遊戲\" \"消費\"",
+      "observed_results": [
+        {
+          "description": "2026-09-07 digital-consumer education event including gaming and point-card fraud.",
+          "url": "https://moda.gov.tw/ADI/news/events/20576"
+        }
+      ],
+      "limits": "Search discovery only; body not selected/read, no legal proposition relies on it.",
+      "searched_on": "2026-10-25"
+    },
+    {
+      "language": "zh-Hant",
+      "query": "\"網路連線遊戲服務定型化契約\" site:ey.gov.tw",
+      "observed_results": [
+        {
+          "description": "Current mandatory terms effective2023-01-01; distinct optional contract model also returned.",
+          "url": "https://www.ey.gov.tw/File/C27658C15073FF69?A=C"
+        }
+      ],
+      "limits": "Do not confuse mandatory terms with sample contract.",
+      "searched_on": "2026-10-25"
+    },
+    {
+      "language": "zh-Hant",
+      "query": "site:gov.tw \"115年\" \"預購\" \"客製化\"",
+      "observed_results": [
+        {
+          "description": "Official CPC reproduction of三重113重小1584 preorder/customization judgment.",
+          "url": "https://cpc.ey.gov.tw/File/C889F332164E24A4"
+        }
+      ],
+      "limits": "Full official judgment read but topic rejected due to existingzh539 overlap.",
+      "searched_on": "2026-10-25"
+    }
+  ],
+  "market_limits": [
+    "No search-volume, ranking, click, lead, conversion, competitor or private-client data were accessed.",
+    "Limited search results cannot establish total market demand.",
+    "Priority and consultation fit are editorial acquisition hypotheses, not client promises."
+  ],
+  "unresolved": [
+    "E1 appeal instruction/finality not read; do not call final.",
+    "B1 subsequent appeal outcome not verified.",
+    "Some direct judicial URLs timed out; full-read official CPC reproduction and court explanation used where available.",
+    "E3 exact article publication date unresolved; website-menu update is not publication."
+  ],
+  "ownership": "Research only; no column/manuscript/code/metadata edits, ID reservations, commits or deployments.",
+  "snapshots_files": [
+    "zh-hant-source-captures.json",
+    "zh-hant-ev-primary-recovered.md",
+    "zh-hant-presale-audit-primary-recovered.md"
+  ]
+}

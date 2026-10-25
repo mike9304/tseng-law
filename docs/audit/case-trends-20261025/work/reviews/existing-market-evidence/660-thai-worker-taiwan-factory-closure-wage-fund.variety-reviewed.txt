@@ -1,0 +1,5 @@
+COMMAND ['python3', '/Users/son7/tseng-lanes-shared/variety/variety_metrics.py', 'check', '/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md', '--lang', 'th', '--sentences', '/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/0c492a23e33a50c51ba5033e3b375dd74069a8b8d59f8135ab1e118f9d271aa3.json']
+EXIT 1
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md [th] sentences=54 mean=19.7 cv=0.504 short=0.074 run3=0.077 opener_rep=0.111 cite_end=0.0 cite_para=0.389 contrast=4 caveat=0 q=1
+  FAIL short_share=0.074 (limit >= 0.08): need at least ~1 in 12 sentences that is very short
+  FAIL contrast=4 (limit <= 3): contrast template (X is not Y / 不是…而是 / ではなく) used too often — max 1 deliberate, 3 total

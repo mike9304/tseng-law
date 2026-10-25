@@ -3,7 +3,7 @@ title: "O contrato em Taiwan terminou e ficou salário por pagar: prova, rubrica
 seoTitle: "Salários em falta após trabalhar em Taiwan"
 summary: "Ao terminar um emprego em Taiwan, separe salários, prémios e despesas e preserve os registos. O regresso a Portugal exige organizar a reclamação e os prazos taiwaneses."
 published: "2026-10-23"
-lastmod: "2026-10-23"
+lastmod: "2026-10-25"
 date_display: "23 de outubro de 2026"
 read_time: "5 min de leitura"
 categories: ["Direito do trabalho em Taiwan"]
@@ -25,19 +25,19 @@ faq:
 
 Cinco anos é o período de conservação dos registos salariais exigido ao empregador pelo [artigo 23 da Lei das Normas Laborais de Taiwan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=23). Esses documentos permitem conferir o acerto final. Já o prazo para reclamar o crédito depende da prestação e do momento em que pode ser exigida.
 
-Para um profissional português que termina um emprego em Taiwan, a primeira tarefa é identificar o empregador e discriminar o valor reclamado. Salário do último mês, trabalho suplementar, prémio e reembolso de despesas podem exigir fundamentos e provas diferentes. O enquadramento descrito pressupõe uma relação abrangida pela legislação taiwanesa aplicável; contratos de prestação de serviços ou trabalho dividido entre países exigem análise própria.
+A reclamação deve identificar o empregador. Para quem regressa a Portugal, convém discriminar os valores reclamados: salário do último mês, trabalho suplementar, prémio e reembolso de despesas podem exigir fundamentos e provas diferentes. O enquadramento descrito pressupõe uma relação abrangida pela legislação taiwanesa aplicável; contratos de prestação de serviços ou trabalho dividido entre países exigem análise própria.
 
 ## O nome da rubrica não decide o seu tratamento
 
 O [artigo 2 da Lei das Normas Laborais](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=2) define salário pela remuneração do trabalho, incluindo prestações regulares abrangidas pela norma, qualquer que seja a designação. A mesma disposição associa o contrato de trabalho a uma relação de subordinação. Chamar «prestador» a alguém ou «prémio» a um pagamento não encerra a discussão.
 
-Uma quantia mensal ligada ao trabalho e um reembolso de bilhetes contra comprovativos não devem ser somados sem explicação. No primeiro caso, interessa a obrigação de remunerar; no segundo, o acordo sobre despesas e os documentos da deslocação. Se se tratar de um prémio, convém reunir o plano aplicável, os objetivos, os resultados comunicados e as condições de atribuição ou pagamento. Não se presume que todos os prémios sejam salariais ou devidos.
+Uma quantia mensal ligada ao trabalho e um reembolso de bilhetes contra comprovativos exigem explicações distintas: no primeiro caso, a obrigação de remunerar; no segundo, o acordo sobre despesas e os documentos da deslocação. Para o prémio, convém reunir o plano aplicável, os objetivos, os resultados comunicados e as condições de atribuição ou pagamento. Não se presume que todos os prémios sejam salariais ou devidos.
 
 Em litígios salariais, o [artigo 37 da Lei dos Litígios Laborais](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=37) estabelece uma presunção quando se prova que o trabalhador recebeu do empregador uma prestação em razão da relação laboral. Presume-se então a natureza remuneratória. A presunção tem esse pressuposto probatório e admite discussão; não demonstra automaticamente o direito a um prémio que nunca foi pago.
 
 ## Recibos e horários antes de perder acesso
 
-Nos termos do artigo 23, o empregador deve fornecer os elementos de cálculo das rubricas e conservar os registos salariais durante cinco anos. Esses elementos podem ser confrontados com os valores creditados na conta. Se o líquido não bater certo, importa identificar cada desconto em vez de o subtrair simplesmente ao salário bruto.
+Nos termos do artigo 23, o empregador deve fornecer os elementos de cálculo das rubricas e conservar os registos salariais durante cinco anos. O extrato mostra quanto entrou na conta. Para apurar se falta algum valor, é preciso conferir o salário bruto, cada desconto e o montante líquido devido, antes de comparar este último com o depósito bancário.
 
 Quanto às horas, o [artigo 30](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=30) exige registos de assiduidade conservados durante cinco anos, com indicação diária até ao minuto. A cópia pedida pelo trabalhador não pode ser recusada. O pedido deve indicar o período relevante.
 
@@ -47,9 +47,9 @@ Guarde apenas documentação a que tenha acesso legítimo e que seja pertinente 
 
 ## Descontos no acerto de contas
 
-Quando o contrato termina nos termos da Lei das Normas Laborais, o [artigo 9 do seu regulamento de execução](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=9) exige que o empregador liquide imediatamente os salários ao trabalhador. A data da cessação deve, por isso, ficar registada.
+Quando o contrato termina nos termos da Lei das Normas Laborais, o [artigo 9 do seu regulamento de execução](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030002&flno=9) exige que o empregador liquide imediatamente os salários ao trabalhador. Registe a data da cessação.
 
-Houve uma penalização deduzida ao salário? Há que pedir o fundamento e o cálculo. O [artigo 26 da Lei das Normas Laborais](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=26) proíbe a retenção antecipada de salários a título de cláusula penal ou indemnização. A norma não decide, por si só, todas as pretensões que um empregador possa apresentar.
+Houve uma penalização deduzida ao salário? Peça o fundamento e o cálculo. O [artigo 26 da Lei das Normas Laborais](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=26) proíbe a retenção antecipada de salários a título de cláusula penal ou indemnização. A norma não decide, por si só, todas as pretensões que um empregador possa apresentar.
 
 Uma alegação de despesas de formação exige ainda examinar o acordo e as condições legais. O [artigo sobre período mínimo de trabalho](/pt/columns/taiwan-mandatory-employment-period) trata desse tema. Quanto à eventual [indemnização por despedimento](/pt/columns/taiwan-labor-severance-law), o cálculo deve ficar separado dos salários já vencidos.
 

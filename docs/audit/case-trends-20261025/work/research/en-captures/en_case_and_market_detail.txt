@@ -1,0 +1,254 @@
+# Web tool text capture; retrieved 2026-10-25. This is not a raw HTML or PDF capture.
+
+臺灣高等法院 112 年度重勞上字第 14 號民事判決 (https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV%2C112%2C%E9%87%8D%E5%8B%9E%E4%B8%8A%2C14%2C20251230%2C1)
+citeturn1109view0 [wordlim: 200] Crawled: last week; Content type: text/html; Source: open({"ref_id":"turn1096view1","lineno":104}); Redirected to URL: https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV,112,%E9%87%8D%E5%8B%9E%E4%B8%8A,14,20251230,1; Total lines: 189
+L82: 　㈩上訴人護照名稱為「Daniel Capelle」，於系爭契約以「Dan Capelle」名義簽約（見本院卷㈡第161頁、卷㈢第138頁
+L83: 
+L84: 　　筆錄。卷㈡第397頁護照影本）。
+L85: 
+L86: 　關於BVI艾渥公司股權登記爭議，先後有下列刑案：
+L87: 
+L88: 　　⑴黃正恕（曾任被上訴人董事長）對於訴外人即BVI艾渥公司前董事林凡然、傅崇仁（即被上訴人原董事長）告訴詐欺等罪嫌（下稱6832偵案），經臺灣臺北地方檢察署110年度偵字第6832號不起訴，再經臺灣高等檢察署110年度上聲議字第9716號駁回再議確定（見本院卷㈢第187-199
+L89: 
+L90: 　　　、201-208頁處分書）。黃正恕聲請交付審判，經原法院111年度聲判字第10號裁定駁回確定（見本院卷㈡第259-277頁裁定書）。上訴人不爭執前開公文書之形式真正（見本院卷㈠第207頁）。
+L91: 
+L92: 　　⑵上訴人對於林凡然、黃崇仁告訴詐欺等罪嫌（下稱799號偵案），經臺灣臺北地方檢察署111年度偵字第799號不起訴，再由臺灣高等檢察署111年度上聲議字第5227號駁回再議確定（見本院卷㈢第209-214頁、215-223頁處分書)
+L93: 　　　。上訴人不爭執前開公文書之形式真正（見本院卷㈠第207頁)。
+L94: 
+L95: 六、本件爭點為：㈠上訴人得否請求被上訴人賠償股份價值減損
+L96: 
+L97: 　　33萬8310元？㈡上訴人得否請求被上訴人給付離職金或損害賠償12萬元？茲就兩造論點分述如下。
+L98: 
+L99: 七、關於上訴人得否請求被上訴人賠償股份價值減損33萬8310元方面：
+L100: 
+L101: 　　上訴人主張被上訴人就103至105年年終獎金、106至108年績效獎金，即BVI艾渥公司股份共計48萬3300股，均屬遲延給付，且被上訴人造成BVI艾渥公司股份每股淨值下跌0.7元，合計減損33萬8310元。得依民法第231條第1項、第268條之規定請求被上訴人賠償等語（見本院卷㈢第351、391-393頁
+L102: 
+L103: 　　）。為被上訴人所否認。經查：
+L104: 　㈠上訴人主張被上訴人應給付103、104與105年年終獎金分別為BVI艾渥公司股份3萬3300股、5萬股、7萬股，被上訴人不爭執此情（見不爭執事項㈥）；堪認被上訴人負有給付前開年終獎金（BVI艾渥公司股份）之義務。又被上訴人主張年終獎金應分別在前述各年年底發放等語（見本院卷㈢第351頁）；被上訴人則否認前開債務為定期債務（見同卷第411-412頁）。經查，年終獎金係企業主綜合考量營運方針、市場預測、營業績效、投資計畫、資產負債等諸多因素而決定，難以在年底結算完畢並給付；衡諸常情，企業主既需要相當時日始能完成結算，是以其在次年1月底配合農曆春節習俗而核定金額並發放，最符合勞僱雙方需求與社會習俗；參以被上訴人為我國電子公司，依上說明，其核發年終獎金之期限應係次年1月底。被上訴人辯稱前揭年終獎金並非定期債務一節，尚與常情不符，故無可採。
+L105: 　㈡上訴人主張兩造於106年9月間簽署系爭契約，依系爭契約第3條第c項，106、107、108年績效獎金即BVI艾渥公司股份8萬股、10萬股、15萬股，被上訴人應分別在107至109年年底給付等語（見本院卷㈢第350-351、364-366頁）。被上訴人則辯稱績效獎金給付義務人為BVI艾渥公司。經查：
+L106: 
+L107: 　　⑴系爭契約第3條第c項約定：「c.Performance Bonus.Duri
+L108: 　　　ng the Term of Employment,the Executive shall be eligible to receive the stock bonus (the "Performance Bonus") which (a) will be 80,000 ordinary shares (the "Shares") issued by the Holding Company by the end of 2018；(b) will be (i) 100,000 Shares issued by the Holding Company by the end of 2019 if the consolidated net loss of the Holding Coinpany set forth in the Holding Company's audited annual financial statements (the "Net Loss") in 2018 is two million dollars (＄2,000,000) or less, ...(c) will be (i) 150,000 Shares issued by the Holding Company by the end of 2020 if the Net Loss in 2019 is one million dollars ($1,000,000) ...(d) will be (i)150,000 Shares issued by the Holding Company by the end of 2021 if the consolidated net income of the Holding Company set forth in the Holding Company's audited annual financial statements in 2020 reaches the break-even point ....The Executive must be employed at the end of the fiscal year for which such Performance Bonus is issued.〖中譯：c.績效獎金。於工作期間，簽約高管將可以取得本公司的股票紅利（"績效獎金")），為 (a)2018年底控股公司（指BVI艾渥公司）發給80,000股普通股（"股份"）；(b)為(i)如果2018年度的審計年度財務報告控股公司的合併淨虧損為貳佰萬美元（$2,000,000）或以下，控股公司將於2019年底發給100,000股股份；或(ii)如果2018年財務報告淨虧損超過貳佰萬元($2,000,000)但不到叁佰萬元($3,000,000) （以上部份計算公式為：[100,000x{1-[(2018年淨損-2,000,000):999,999]}]時，控股公司則於2019年底以100,000股按比例扣除後發予股份，或(iii)零(0)股，如果2018年淨損超過叁佰萬元（$3,000,000）；(c) (i)如2019年淨損為壹佰萬元($1,000,000)或更少，控股公司將於2020年底發給150,000股股份；或(ii)零(0)股，如果2019年淨損超過壹佰萬元($1,000,000)，以及(d) (i) 如果控股公司2020年審計過年度財務報表中，控股公司合併淨利潤達到盈虧平衡點；則於2021年底總公司發給150,000股股份；或 (ii)零(0)股，如果控股公司2020年的損益未達平衡點。而簽約高管必須工作至會計年度年底績效獎金才會發給〗」（見原審卷㈠第34-35頁，中譯本見同卷第452頁）。依上開條款意旨，每年績效獎金（指一定數額之BVI艾渥公司股票）應由被上訴人在次年度年底以前「發給（issued）」，但是以上訴人當時在職為前提。
+--------------------------------------------------------------------------------
+臺灣高等法院 113 年度重上更三字第 14 號民事判決 (https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV%2C113%2C%E9%87%8D%E4%B8%8A%E6%9B%B4%E4%B8%89%2C14%2C20250325%2C1)
+citeturn1109view1 [wordlim: 200] Crawled: 3 weeks ago; Content type: text/html; Source: open({"ref_id":"turn1096view2","lineno":0}); Redirected to URL: https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV,113,%E9%87%8D%E4%B8%8A%E6%9B%B4%E4%B8%89,14,20250325,1; Total lines: 89
+L0: [Input]
+L1: 
+L2: [Input] [Input] [Input]
+L3: 
+L4: 版面大小 [Select] [Input] [Input]
+L5: 
+L6: 臺灣高等法院民事判決
+L7: 
+L8: 113年度重上更三字第14號
+L9: 
+L10: 上  訴  人  威望國際股份有限公司
+L11: 
+L12: 法定代理人  陳主望
+L13: 
+L14: 訴訟代理人  葉慶元律師
+L15: 
+L16:             卓翊維律師
+L17: 
+L18:             江丞堯律師
+L19: 
+L20: 被上訴人    張心望
+L21: 
+L22: 訴訟代理人  陳彥希律師
+L23: 
+L24:             殷玉龍律師
+L25: 
+L26:             曾大中律師
+L27: 
+L28: 上列當事人間請求返還借款事件，上訴人對於中華民國104年1月30日臺灣臺北地方法院102年度重訴字第409號第一審判決提起上訴，經最高法院第三次發回更審，本院於114年1月7日言詞辯論終結，判決如下：
+L29: 
+L30: 　　主　　　文
+L31: 
+L32: 原判決關於命上訴人給付逾美金貳萬壹仟貳佰元本息，及該部分假執行之宣告，暨訴訟費用之裁判均廢棄。
+L33: 
+L34: 上開廢棄部分，被上訴人在第一審之訴及假執行之聲請均駁回。
+L35: 
+L36: 其餘上訴駁回。
+L37: 
+L38: 第一、二審及發回前第三審訴訟費用由上訴人負擔二十分之一，餘由被上訴人負擔。
+L39: 
+L40: 　　事實及理由
+L41: 一、被上訴人主張：上訴人因資金需求，由其法定代理人陳主望代向伊借款，伊乃於民國98年12月16日、25日，向訴外人即伊父親張聖原調借現金，分別匯款美金（下同）9萬5,500元、30萬元（均含各10元之匯費），合計39萬5,500元（下稱系爭款項）至上訴人所有大眾商業銀行敦化分行帳戶（帳號：000000000000，下稱系爭帳戶），而與上訴人間成立金錢消費借貸關係。如認兩造間無消費借貸合意，上訴人收受系爭款項後，已作為公司經營之用，係無法律上之原因受有利益，致伊受有損害。又伊當時雖擔任上訴人總經理，但並無為上訴人籌措資金之義務，伊因上訴人之資金需求而匯款予上訴人，亦屬無因管理而對張聖原負有債務。爰依消費借貸、民法第179條、第176條第1項及第177條第1項規定，擇一求為命上訴人給付39萬5,500元本息之判決，並願供擔保，請准宣告假執行。原審為被上訴人勝訴之判決，上訴人不服，提起上訴。被上訴人之答辯聲明：上訴駁回。
+L42: 二、上訴人則以：被上訴人偽造不實之外國片商Studio Solutions Group（下稱SSG公司）發票，挪用伊公司款項40萬4,034.81元，被上訴人將系爭款項匯至系爭帳戶，係回補前開挪用之部分金額，伊收受系爭款項，並非基於消費借貸關係，況兩造間就系爭款項之消費借貸「金額」部分並未達成合意；伊收受系爭款項亦非無法律上原因；又被上訴人非為伊管理事務，而負有系爭款項之債務，自亦非屬無因管理。被上訴人另偽造不實之SSG公司發票，將該公司就Miramax Library（下稱米拉梅庫存片）之授權金80萬元提高為150萬元，致訴外人英屬蓋曼群島商威望國際娛樂股份有限公司（下稱英屬威望公司）匯款150萬元予SSG公司，而溢付SSG公司70萬元。另英屬威望公司未取得電影「詭屋」之授權，卻因被上訴人背信之行為而分別於100年8月16日支出授權金2萬8,300元，於101年4月30日支出授權金12萬元、12萬1,000元，再加計依被上訴人於100年5月30日所開立之發票（下稱A發票）支出授權金5萬2,500元，合計額外支出32萬1,800元授權金。英屬威望公司已將該2筆對被上訴人之損害賠償債權讓與伊，伊已通知被上訴人，並為抵銷之意思表示。經抵銷後，被上訴人對伊已無債權存在等語，資為抗辯。上訴聲明：㈠原判決廢棄。㈡被上訴人在第一審之訴及假執行之聲請均駁回。
+--------------------------------------------------------------------------------
+臺灣高等法院 113 年度重上更三字第 14 號民事判決 (https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV%2C113%2C%E9%87%8D%E4%B8%8A%E6%9B%B4%E4%B8%89%2C14%2C20250325%2C1)
+citeturn1109view2 [wordlim: 200] Crawled: 3 weeks ago; Content type: text/html; Source: open({"ref_id":"turn1096view2","lineno":62}); Redirected to URL: https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV,113,%E9%87%8D%E4%B8%8A%E6%9B%B4%E4%B8%89,14,20250325,1; Total lines: 89
+L61: 　　⒈上訴人抗辯英屬威望公司未取得詭屋之授權，然張心望背信分別於100年8月16日支出授權金2萬8,300元，於101年4月30日支出授權金12萬元、12萬1,000元，再加計賠償依A發票所支出之授權金5萬2,500元，合計支出32萬1,800元，應負賠償責任等語。查英屬威望公司未取得「詭屋」之授權，業經本院認定如前，是英屬威望公司無須支付「詭屋」授權金2萬8,300元、12萬元、12萬1,000元（見本院重上卷二第31、39頁），上訴人主張英屬威望公司受有26萬9,300元〖計算式：28,300＋120,000＋121,000〗之損害，並將此部分對被上訴人之損害賠償債權讓與其，其已通知被上訴人，並為抵銷之意思表示等語，自屬有據。另本院認定英屬威望公司未取得詭屋之授權，被上訴人應賠償英屬威望公司此部分之損害為5萬2,500元，英屬威望公司讓與該債權予上訴人，並經上訴人為抵銷之意思表示（見本判決事實及理由欄、四、㈡、⒋），是上訴人再抗辯應扣除A發票所支出之授權金5萬2,500元，即屬重複扣除，並無可取。
+L62: 　　⒉又上訴人事後取得詭屋之播映權（見本院卷二第128頁），或CATCHPLAY+於官網上顯示可觀看詭屋，均與英屬威望公司無涉等節，業經本院認定如前（見本判決事實及理由欄、四、㈡、⒊），英屬威望公司既未自SSG公司取得詭屋之授權，其對被上訴人即有上開損害賠償債權26萬9,300元，其讓與該債權予上訴人，上訴人並為抵銷抗辯，為有理由。
+L63: 
+L64: 　㈣綜上，被上訴人依消費借貸關係請求上訴人返還借款39萬5,500元，為有理由，惟上訴人得以其受讓英屬威望公司之米拉梅庫存片損害賠償債權中之10萬5,000元、英屬威望公司額外支出電影「詭屋」授權金26萬9,300元為抵銷抗辯，則上訴人尚應返還被上訴人借款為2萬1,200元〖計算式：395,500－105,000－269,300元〗。
+L65: 五、綜上所述，被上訴人依消費借貸法律關係規定，請求上訴人給付2萬1,200元，及自支付命令送達翌日即102年2月27日（見司促卷第27頁）起至清償日止，按年息5％週年計算之利息，為有理由，應予准許；逾此範圍之請求，為無理由，應予駁回。原審就超過上開應准許部分，為上訴人敗訴之判決，並為假執行之宣告，尚有未洽，上訴意旨指摘原判決此部分不當，求予廢棄，為有理由，爰由本院將此部分廢棄，並改判如主文第2項所示。至於上開應准許部分，原審判命上訴人如數給付，及命供擔後為准、免假執行之宣告，核無違誤，上訴意旨就此部分指摘原判決不當，聲明廢棄，為無理由，應駁回其上訴。
+L66: 
+L67: 六、本件事證已臻明確，兩造其餘攻擊防禦方法或證據，核與判決結果不生影響，爰不逐一論列，附此敘明。
+L68: 
+L69: 七、據上論結，本件上訴為一部有理由，一部無理由，依民事訴訟法第449條第1項、第450條、第79條，判決如主文。
+L70: 
+L71: 中　　華　　民　　國　　114 　年　　3　　月　　25　　日
+L72: 
+L73: 　　　　　　　　　民事第二十五庭
+L74: 
+L75: 　　　　　　　　　　　審判長法　官　潘進柳
+L76: 
+L77: 　　　　　　　　　　　　　　法　官　林祐宸
+L78: 
+L79: 　　　　　　　　　　　　　　法　官　楊惠如
+L80: 正本係照原本作成。
+L81: 
+L82: 如不服本判決，應於收受送達後20日內向本院提出上訴書狀，其未表明上訴理由者，應於提出上訴後20日內向本院補提理由書狀（均須按他造當事人之人數附繕本），上訴時應提出委任律師或具有律師資格之人之委任狀；委任有律師資格者，另應附具律師資格證書及釋明委任人與受任人有民事訴訟法第466條之1第1項但書或第2項所定關係之釋明文書影本。
+L83: 
+L84: 中　　華　　民　　國　　114 　年　　3 　　月　　25　　日
+L85: 
+L86: 
+L87: 
+L88: 　　　　　　　　　　　　　　書記官　張永中
+--------------------------------------------------------------------------------
+Taiwan Energy Industry (https://www.trade.gov/market-intelligence/taiwan-energy-industry)
+citeturn1109view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn1108view1","lineno":10}); Total lines: 34
+L0: 【0†iframe†www.googletagmanager.com】 【0†iframe†www.googletagmanager.com】
+L1: 
+L2:   * Search ITA [Input: Search website...]
+L3: 
+L4: Search
+L5: 
+L6: Menu
+L7: 
+L8: Market Intelligence
+L9: 
+L10: Equipment and Machinery Environmental Technology Industrial Materials Taiwan Trade Policy and Agreements
+L11: # Taiwan Energy Industry
+L12: 
+L13: Taiwan is entering a period of rapid electricity demand growth, driven by the expansion of artificial intelligence, semiconductor manufacturing, and data centers. In response, Taiwan Power Company (Taipower) is preparing to tender major projects within the next 12–24 months, creating a time-sensitive window for U.S. firms with experience in rapid capacity expansion, grid resilience, and reliable power infrastructure to engage with local utility and industrial stakeholders.
+L14: Taiwan’s annual electricity demand growth is projected to more than double, reaching approximately 2.8% growth through 2033. To support this surge, Taipower expects over 5 gigawatts of new power demand between 2026 and 2030, with a single advanced wafer fab consuming up to 200 megawatts. Securing a reliable electricity supply has become a critical priority for the island’s economic and industrial development.
+L15: The anticipated buildout creates opportunities for U.S. suppliers of gas turbines and power generation equipment, grid modernization and substation technologies, transmission equipment, energy storage systems, data center power and cooling infrastructure, and renewable energy components.  Taipower will tender the Xiehe Combined Cycle Gas Turbine Project, the restart projects for the Kuosheng and Maanshan nuclear power plants, and the Shenao Battery Storage Project by the end of 2026 or in 2027.
+--------------------------------------------------------------------------------
+Taiwan Carbon Fee Regulation (https://www.trade.gov/market-intelligence/taiwan-carbon-fee-regulation)
+citeturn1109view4 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn1108view2","lineno":10}); Total lines: 36
+L0: 【0†iframe†www.googletagmanager.com】 【0†iframe†www.googletagmanager.com】
+L1: 
+L2:   * Search ITA [Input: Search website...]
+L3: 
+L4: Search
+L5: 
+L6: Menu
+L7: 
+L8: Market Intelligence
+L9: 
+L10: Environmental Technology Asia Taiwan Standards, Regulatory, and Technical Requirements Environment and Natural Resources
+L11: # Taiwan Carbon Fee Regulation
+L12: 
+L13: Taiwan’s carbon fee system is creating significant opportunities for U.S. companies offering proven solutions in carbon accounting and monitoring, industrial energy efficiency, emissions reduction, and related environmental technologies. These solutions can help meet the expected demand from Taiwanese manufacturers for lowering operating and compliance costs.
+L14: Entering its first year of implementation in 2026, Taiwan’s carbon fee system requires covered power, gas supply, and manufacturing companies with annual greenhouse-gas emissions of at least 25,000 metric tons of carbon dioxide equivalent (CO₂e) to pay fees based on their previous year’s emissions. The standard fee is approximately $9.30 (NT$300) per metric ton of CO₂e.
+L15: Companies that implement approved voluntary reduction plans and meet designated performance targets may qualify for preferential rates of approximately $3.14 (NT$100) or $1.57 (NT$50) per metric ton.
+L16: With 465 factories in Taiwan subject to carbon fees and total covered emissions of approximately 145 million metric tons of CO₂e, the policy is creating a sizable potential market for emissions management, energy efficiency, and related environmental technologies. The Ministry of Environment has approved voluntary emissions-reduction plans for 402 factories, with preferential carbon fees of $1.57–3.14 per metric ton and estimated reductions of 47.45 million metric tons of CO₂e by 2030.
+--------------------------------------------------------------------------------
+Taiwan - Selling to the Public Sector (https://www.trade.gov/country-commercial-guides/taiwan-selling-public-sector)
+citeturn1109view5 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn1108view0","lineno":20}); Total lines: 110
+L7:   * 【1†Taiwan Country Commercial Guide】
+L8:     * 【2†Doing Business in Taiwan】
+L9:       * 【3†Market Overview】
+L10:       * 【4†Market Challenges】
+L11:       * 【5†Market Opportunities】
+L12:       * 【6†Market Entry Strategy】
+L13:     * 【7†Leading Sectors for US Exports & Investments】
+L14:       * 【8†Agricultural Sectors】
+L15:       * 【9†Biotechnologies】
+L16:       * 【10†Cybersecurity】
+L17:       * 【11†Education and Training Services】
+L18:       * 【12†Highly Automated and Autonomous Systems】
+L19:       * 【13†Quantum Technology】
+L20:       * 【14†Energy Generation and Storage】
+L21:       * 【15†Semiconductors including chip design for AI】
+L22:       * 【16†Space Technologies and Systems】
+L23:       * 【17†Travel and Tourism】
+L24:     * 【18†Customs, Regulations & Standards】
+L25:       * 【19†Trade Barriers】
+L26:       * 【20†Import Tariffs】
+L27:       * 【21†Import Requirements and Documentation】
+L28:       * 【22†Labeling/Marking Requirements】
+L29:       * 【23†U.S. Export Controls】
+L30:       * 【24†Temporary Entry】
+L31:       * 【25†Prohibited & Restricted Imports】
+L32:       * 【26†Customs Regulations】
+L33:       * 【27†Standards for Trade】
+L34:       * 【28†Trade Agreements】
+L35:       * 【29†Licensing Requirements for Professional Services】
+L36:     * 【30†Selling US Products & Services】
+L37:       * 【31†Distribution and Sales Channels】
+L38:       * 【32†eCommerce】
+L39:       * 【33†Selling Factors and Techniques】
+L40:       * 【34†Trade Financing】
+L41:       * 【35†Protecting Intellectual Property】
+L42:       * 【36†Selling to the Public Sector】
+L43:     * 【37†Digital Economy】
+L44:       * 【38†Digital Economy】
+L45:     * 【39†Business Travel】
+L46:       * 【40†Business Travel】
+L47:     * 【41†Investment Climate Statement】
+L48:       * 【42†Investment Climate Statement】
+L49: 【43†Select Country Guide】
+L50: 
+L51: Selling to the Public Sector
+L52: 
+L53: Last published date: 2025-12-10
+L54: ## Selling to the Government
+L55: 
+L56: Taiwan acceded to the World Trade Organization’s (WTO) Government Procurement Agreement (GPA) in July 2009. According to Taiwan’s GPA Agreement, U.S. firms will compete on equal terms with domestic firms when Official tenders exceed the following thresholds:
+L57: 
+L58:   * Central Officials contracts: US$194,000 for goods and services and US$7.5 million for construction services.
+--------------------------------------------------------------------------------
+TAICCA 文化內容策進院 (https://en.taicca.tw/news/detail/222)
+citeturn1109view6 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"https://en.taicca.tw/news/detail/222","lineno":null}); Total lines: 104
+L0:   * 【0†Grants & Investment】
+L1: 
+L2: 【1†Grants】 【2†Investment】
+L3: 
+L4:   * 【3†Fairs & Events】
+L5: 
+L6: 【4†Fairs】 【5†Events】
+L7: 
+L8: TCCF
+L9: 
+L10:   * 【6†Business Matching】
+L11: 
+L12: Taiwan Pavilion
+L13: 
+L14: Taiwan Comic City
+L15: 
+L16: 【7†Book to Screen】
+L17: 
+L18: Taiwan Content Island
+L19: 
+L20: Taiwan Beats
+L21: 
+L22: IP Meetup
+L23: 
+L24: Culture x Tech Database
+L25: 
+L26: Taiwan Digital Asset Library
+L27: 
+L28: 【8†Fellowship】
+L29: 
+L30:   * 【9†Industry Insights】
+L31: 
+L32: 【10†Reports】
+L33: 
+L34:   * 【11†News】
+L35: 
+L36:   * 【12†About】
+L37: 
+L38: [Input: keyword]
+L39: 
+L40: 【13†繁中†taicca.tw】
+L41: 
+L42:   *   *   * 5/34
+L43:   *   *   *   *   *   *   *   *   *   *   * # TCCF MARKET to bring together the global content industry Spotlight Screenings target international buyers to propel Taiwan content onto the world stage
+L44: 
+L45: September 22, 2026
+L46: The highly anticipated 2026 Taiwan Creative Content Fest (TCCF) is set to take place this November. At the heart of industry transactions is TCCF MARKET, which this year will bring together 107 exhibitors from seven countries—Taiwan, South Korea, Thailand, Japan, Singapore, France, and the Philippines. Focusing on rights transactions for international film and television content and promising IPs, the event continues to serve as a key platform connecting Taiwan with the global content industry.
+L47: In particular, the number of exhibitors in IP categories such as publishing, comics, and characters has increased by 13% from last year. This reflects the continued development of global IPs with established fan bases into screen adaptations and diverse licensing opportunities, an increasingly prominent focus in MARKET exhibitors’ strategies.
+

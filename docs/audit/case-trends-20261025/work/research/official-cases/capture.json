@@ -1,0 +1,72 @@
+[
+  {
+    "file": "zh-presale-114-521.html",
+    "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TCHV%2C114%2C%E4%B8%8A%E6%98%93%2C521%2C20260415%2C1",
+    "at": "2026-10-25T11:21:42.209178+00:00",
+    "method": "Studio direct HTTPS; normal TLS certificate validation",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "file": "zh-charging-111-1059.html",
+    "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV%2C111%2C%E4%B8%8A%E6%98%93%2C1059%2C20230927%2C1",
+    "at": "2026-10-25T11:21:42.209512+00:00",
+    "method": "Studio direct HTTPS; normal TLS certificate validation",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "file": "zh-nfc-115-966.html",
+    "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSEV%2C115%2C%E9%9B%84%E7%B0%A1%2C966%2C20260820%2C1",
+    "at": "2026-10-25T11:21:42.209595+00:00",
+    "method": "Studio direct HTTPS; normal TLS certificate validation",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "file": "ko-113-882.html",
+    "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSV%2C113%2C%E5%8F%B0%E4%B8%8A%2C882%2C20240627%2C1",
+    "at": "2026-10-25T11:21:42.209661+00:00",
+    "method": "Studio direct HTTPS; normal TLS certificate validation",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "file": "ko-114-129.html",
+    "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV%2C114%2C%E5%8B%9E%E4%B8%8A%2C129%2C20260526%2C1",
+    "at": "2026-10-25T11:22:17.385221+00:00",
+    "method": "Studio direct HTTPS; normal TLS certificate validation",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "file": "en-noncompete-114-241.html",
+    "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TCDV%2C114%2C%E5%8B%9E%E8%A8%B4%2C241%2C20260828%2C2",
+    "at": "2026-10-25T11:22:17.390439+00:00",
+    "method": "Studio direct HTTPS; normal TLS certificate validation",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "file": "en-noncompete-114-2211.html",
+    "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSV%2C114%2C%E5%8F%B0%E4%B8%8A%2C2211%2C20260416%2C1",
+    "at": "2026-10-25T11:22:17.391593+00:00",
+    "method": "Studio direct HTTPS; normal TLS certificate validation",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "file": "en-judgment-100-42.html",
+    "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSV%2C100%2C%E5%8F%B0%E4%B8%8A%2C42%2C20110113",
+    "at": "2026-10-25T11:22:17.396957+00:00",
+    "method": "Studio direct HTTPS; normal TLS certificate validation",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "file": "ja-molds-111-250.html",
+    "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TCDV%2C111%2C%E7%B0%A1%E4%B8%8A%2C250%2C20240517%2C1",
+    "at": "2026-10-25T11:22:52.411297+00:00",
+    "method": "Studio direct HTTPS; normal TLS certificate validation",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "file": "en-arbitration-110-1563.pdf",
+    "url": "https://tps.judicial.gov.tw/tw/dl-86883-af1050e40dca4f7b8233651a305fca3e.html",
+    "at": "2026-10-25T11:22:52.422048+00:00",
+    "method": "Studio direct HTTPS; normal TLS certificate validation",
+    "error": "<urlopen error timed out>"
+  }
+]

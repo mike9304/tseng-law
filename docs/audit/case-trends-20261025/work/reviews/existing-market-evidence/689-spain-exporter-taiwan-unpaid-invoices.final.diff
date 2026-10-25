@@ -1,0 +1,38 @@
+--- src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md @ a188e620
++++ src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md @ reviewed working tree
+@@ -11,7 +11,7 @@
+ tags: ["impago", "exportadores-espanoles", "reclamacion-de-cantidad", "orden-de-pago"]
+ featured_image: "/images/columns/689-market-review-20261024.webp"
+ featured_image_alt: "Carpeta con documentos, calendario y paquete sobre una mesa con vistas a un puerto."
+-featured_image_caption: "Ilustración de documentos y mercancías para preparar una reclamación comercial."
++featured_image_caption: "Escena ficticia"
+ faq:
+   - q: "¿Se aplica siempre el plazo taiwanés de dos años a una factura española?"
+     a: "No. Primero debe determinarse la ley aplicable. Si rige el derecho de Taiwán y se trata del precio de mercancías suministradas por un comerciante o fabricante, el artículo 127.8 del Código Civil establece dos años desde que la pretensión puede ejercitarse. Otras deudas pueden seguir reglas diferentes."
+@@ -25,7 +25,7 @@
+ 
+ La factura puede llevar una marca comercial distinta del nombre de la sociedad que hizo el pedido. Para una exportadora española que reclama en Taiwán, esa diferencia obliga a cotejar contrato, pedido y destinatario antes de preparar la reclamación.
+ 
+-Según el [artículo 20 de la ley taiwanesa sobre conflictos de leyes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20), las partes pueden elegir la ley del contrato; sin elección expresa válida, rige el derecho con la conexión más estrecha. Tener al comprador en Taiwán no resuelve por sí solo esa cuestión. La prescripción sigue la ley de la relación jurídica, según el [artículo 36](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007); las reglas siguientes presuponen que resulta aplicable el derecho taiwanés.
++Según el [artículo 20 de la ley taiwanesa sobre conflictos de leyes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20), las partes pueden elegir la ley del contrato; sin elección expresa válida, rige el derecho con la conexión más estrecha. Que el comprador esté en Taiwán no zanja por sí solo la cuestión. La prescripción sigue la ley de la relación jurídica, según el [artículo 36](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007); las reglas siguientes presuponen que resulta aplicable el derecho taiwanés.
+ 
+ ## El expediente que sale del departamento de exportación
+ 
+@@ -33,7 +33,7 @@
+ 
+ La entrega necesita su propia prueba: albaranes, documentos de transporte, recepción en almacén y comunicaciones sobre cantidades o incidencias. Si intervino un distribuidor, interesa saber quién compró y quién se limitó a recibir la mercancía. Un grupo puede incluir varias sociedades. Conservar esa distinción evita atribuir una deuda a la sociedad equivocada.
+ 
+-El saldo también debe poder reconstruirse. Precio, moneda pactada, abonos, devoluciones e intereses reclamados se presentan separados, sin convertir euros a dólares taiwaneses mediante un cambio elegido sin explicación. Una objeción sobre calidad requiere conservar tanto la queja del cliente como la respuesta del exportador.
++El saldo también debe poder reconstruirse. Precio, moneda pactada, abonos, devoluciones e intereses reclamados se presentan separados, sin convertir euros a dólares taiwaneses con un tipo de cambio que nadie explica. Si el cliente alegó defectos de calidad, hay que guardar su queja y la respuesta que se le dio.
+ 
+ ## Dos años, cuando el crédito encaja en esa regla
+ 
+@@ -55,7 +55,7 @@
+ 
+ Si el contrato añade una penalización, su importe plantea una cuestión distinta, tratada en [la reducción de cláusulas penales en Taiwán](/es/columns/taiwan-contract-penalty-clause-reduction-civil-code-252-2026-judgments).
+ 
+-Para plantear el asunto en [contacto](/es/contact), puede escribir a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) y acordar primero cómo comunicarse: las consultas se atienden en inglés, chino, japonés o coreano. Basta inicialmente un resumen sin documentación sensible, el nombre de la contraparte para comprobar conflictos, el vínculo con Taiwán y los vencimientos. El correo no formaliza un encargo. El primer dato que conviene recuperar es la fecha exigible de la factura más antigua pendiente.
++Para exponer el caso puede usar la página de [contacto](/es/contact) o escribir a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); las consultas se atienden en inglés, chino, japonés o coreano, así que conviene acordar antes el idioma. Al principio basta un resumen sin documentación sensible, el nombre de la contraparte para comprobar conflictos, el vínculo con Taiwán y los vencimientos. El correo no formaliza un encargo. El primer dato que hay que recuperar es la fecha de vencimiento de la factura pendiente más antigua.
+ 
+ Información general sobre reclamaciones en Taiwán; la ley aplicable y los documentos pueden cambiar la vía adecuada.
+ 

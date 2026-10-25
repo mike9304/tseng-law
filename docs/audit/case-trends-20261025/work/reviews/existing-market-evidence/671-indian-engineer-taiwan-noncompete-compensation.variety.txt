@@ -1,0 +1,4 @@
+COMMAND ['python3', '/Users/son7/tseng-lanes-shared/variety/variety_metrics.py', 'check', '/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md', '--lang', 'hi']
+EXIT 0
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md [hi] sentences=46 mean=17.7 cv=0.47 short=0.174 run3=0.0 opener_rep=0.214 cite_end=0.022 cite_para=0.571 contrast=1 caveat=1 q=1
+  OK — no variety limit violated

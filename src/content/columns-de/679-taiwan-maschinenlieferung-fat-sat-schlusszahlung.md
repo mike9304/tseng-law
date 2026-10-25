@@ -3,7 +3,7 @@ title: "Maschine nach Taiwan geliefert, Schlussrate offen: Was FAT und SAT beleg
 seoTitle: "Taiwan: FAT, SAT und offene Schlusszahlung"
 summary: "Ein bestandener FAT löst die Schlusszahlung nicht immer aus. Deutsche Maschinenlieferanten brauchen den vereinbarten Zahlungsmeilenstein und belastbare Prüfprotokolle."
 published: "2026-10-23"
-lastmod: "2026-10-24"
+lastmod: "2026-10-25"
 date_display: "23. Oktober 2026"
 read_time: "6 Minuten Lesezeit"
 categories: ["Rechtliche Informationen zu Taiwan"]
@@ -46,7 +46,7 @@ Bei mangelhafter Werkleistung kann der Besteller nach [Artikel 493](https://law.
 
 ## Prüfbedingungen und Änderungen sichtbar machen
 
-War die Maschine testbereit? Ein angekreuztes „bestanden“ oder „nicht bestanden“ reicht als Antwort nicht. Aus dem Prüfprotokoll sollte hervorgehen, welche Softwareversion, Werkstücke, Toleranzen und Betriebsbedingungen verwendet wurden. Fehlende Medienversorgung oder ein anderes Eingangsmaterial gehören mit Zeitpunkt und Herkunft der Information in die Dokumentation. Wer dafür verantwortlich war, ergibt sich erst aus der vereinbarten Aufgabenverteilung.
+War die Maschine testbereit? Das Kreuz im Ergebnisfeld genügt dafür nicht. Das Protokoll sollte Softwareversion, Werkstücke, Toleranzen und Betriebsbedingungen nennen; fehlte etwa die Medienversorgung oder wurde anderes Eingangsmaterial verwendet, gehören auch Zeitpunkt und Herkunft dieser Information in die Dokumentation. Wer dafür verantwortlich war, ergibt sich erst aus der vereinbarten Aufgabenverteilung.
 
 Prüfunterlagen und Zahlungsnachweise lassen sich den einzelnen Streitpunkten zuordnen:
 

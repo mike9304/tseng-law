@@ -1,0 +1,4 @@
+COMMAND ['python3', '/Users/son7/tseng-lanes-shared/variety/variety_metrics.py', 'check', '/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md', '--lang', 'id']
+EXIT 1
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md [id] sentences=55 mean=14.8 cv=0.442 short=0.164 run3=0.038 opener_rep=0.0 cite_end=0.0 cite_para=0.667 contrast=0 caveat=0 q=2
+  FAIL len_cv=0.442 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences

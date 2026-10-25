@@ -1,0 +1,174 @@
+{
+  "reviewed_at": "2026-10-25T11:39:55.017652+00:00",
+  "head": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+  "records": [
+    {
+      "path": "src/content/columns-pt/694-portugal-exportador-acordo-prestacoes-taiwan.md",
+      "sha256": "07d82a4c57890867dad2e3c03da869e2522dbe1657495f685c71283bc856236b",
+      "mtime": "2026-10-25T11:14:50.960892+00:00",
+      "body_identical_to_a188e620": true,
+      "source_urls_unchanged": true,
+      "bold_hits": 0,
+      "image_path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/editorial-20261003-b04/taiwan-unpaid-invoice-settlement-release-korean.png",
+      "image_exists": true,
+      "image_sha256": "583778392ca2de359c18532a7e6ec367c48202fbe05292c0695cbf668c4c9f81",
+      "variety_command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/694-portugal-exportador-acordo-prestacoes-taiwan.md",
+        "--lang",
+        "pt"
+      ],
+      "variety_exit": 0,
+      "variety_output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/694-portugal-exportador-acordo-prestacoes-taiwan.md [pt] sentences=40 mean=18.7 cv=0.454 short=0.125 run3=0.0 opener_rep=0.2 cite_end=0.0 cite_para=0.4 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+    },
+    {
+      "path": "src/content/columns-pt/695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md",
+      "sha256": "b1475749d7fda41c0f630328d0d6b9cb5e3d5b3435c0140fb8c69944fc5f61f3",
+      "mtime": "2026-10-25T11:14:50.960966+00:00",
+      "body_identical_to_a188e620": true,
+      "source_urls_unchanged": true,
+      "bold_hits": 0,
+      "image_path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/fraud-20261003/taiwan-supplier-bank-account-change-bec.png",
+      "image_exists": true,
+      "image_sha256": "24468029d4f12cbc80b79b8290a743e9115f9299ea8f07274caa233c7b180e50",
+      "variety_command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md",
+        "--lang",
+        "pt"
+      ],
+      "variety_exit": 0,
+      "variety_output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md [pt] sentences=35 mean=19.5 cv=0.487 short=0.114 run3=0.091 opener_rep=0.2 cite_end=0.0 cite_para=0.067 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n"
+    },
+    {
+      "path": "src/content/columns-pt/696-portugal-sentenca-arbitral-bens-taiwan.md",
+      "sha256": "fd748c24bcfc701812039bcb1f59c3a745c4b8354d6fe4f3796fef737b808011",
+      "mtime": "2026-10-25T11:14:50.961052+00:00",
+      "body_identical_to_a188e620": true,
+      "source_urls_unchanged": true,
+      "bold_hits": 0,
+      "image_path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/blog/351-enforcing-us-arbitral-award-in-taiwan/featured-01.webp",
+      "image_exists": true,
+      "image_sha256": "d6fb4dcbb7019d9a0d8c45eb9ef5ee61fa3f81c25b73da275289e43ed0b59fbf",
+      "variety_command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/696-portugal-sentenca-arbitral-bens-taiwan.md",
+        "--lang",
+        "pt"
+      ],
+      "variety_exit": 0,
+      "variety_output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/696-portugal-sentenca-arbitral-bens-taiwan.md [pt] sentences=39 mean=18.2 cv=0.46 short=0.103 run3=0.081 opener_rep=0.214 cite_end=0.0 cite_para=0.286 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+    },
+    {
+      "path": "src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md",
+      "sha256": "5413c3f5b967adf73725ec3b58b12dfdb76b5ca43f301394e91929c6c5f56a0a",
+      "mtime": "2026-10-25T11:14:50.961279+00:00",
+      "body_identical_to_a188e620": false,
+      "source_urls_unchanged": true,
+      "bold_hits": 0,
+      "image_path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/blog/251-taiwan-small-claims-simplified-civil-procedure/featured-01.webp",
+      "image_exists": true,
+      "image_sha256": "1252a6bc4811ddfe96f16eceac5c05b75dd26e57eb6a9a2456df85a6c79495af",
+      "variety_command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md",
+        "--lang",
+        "pt"
+      ],
+      "variety_exit": 1,
+      "variety_output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md [pt] sentences=41 mean=17.8 cv=0.454 short=0.049 run3=0.026 opener_rep=0.133 cite_end=0.0 cite_para=0.4 contrast=0 caveat=0 q=2\n  FAIL short_share=0.049 (limit >= 0.08): need at least ~1 in 12 sentences that is very short\n"
+    },
+    {
+      "path": "src/content/columns-pt/698-portugal-fim-contrato-taiwan-salarios-em-falta.md",
+      "sha256": "bd4b5411b57b562a3ed338feab0fad9141bd2dae5a329a87d2c71fa7c7ffc56a",
+      "mtime": "2026-10-25T11:14:50.961441+00:00",
+      "body_identical_to_a188e620": false,
+      "source_urls_unchanged": true,
+      "bold_hits": 0,
+      "image_path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/blog/606-taiwan-unpaid-wages-insolvent-employer-payment-fund/featured-01.webp",
+      "image_exists": true,
+      "image_sha256": "797ef5319e02226059265ccc46b9c4e1ad1b3ef13e72200653a1d1e24513b5d6",
+      "variety_command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/698-portugal-fim-contrato-taiwan-salarios-em-falta.md",
+        "--lang",
+        "pt"
+      ],
+      "variety_exit": 1,
+      "variety_output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/698-portugal-fim-contrato-taiwan-salarios-em-falta.md [pt] sentences=47 mean=17.0 cv=0.385 short=0.106 run3=0.067 opener_rep=0.188 cite_end=0.0 cite_para=0.625 contrast=1 caveat=0 q=2\n  FAIL len_cv=0.385 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n"
+    },
+    {
+      "path": "src/content/columns-pt/704-taiwan-arc-first-application.md",
+      "sha256": "8aa828c67ccc8c9ffed1946592e0660bd03e36d4bce4744835a31f7672fa702d",
+      "mtime": "2026-10-25T11:14:50.961505+00:00",
+      "body_identical_to_a188e620": true,
+      "source_urls_unchanged": true,
+      "bold_hits": 0,
+      "image_path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "image_exists": true,
+      "image_sha256": "e33f7f381d597a9ae5b3693d7c4f887a29d7420b1b4ae3c98db664a06dceae31",
+      "variety_command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/704-taiwan-arc-first-application.md",
+        "--lang",
+        "pt"
+      ],
+      "variety_exit": 0,
+      "variety_output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/704-taiwan-arc-first-application.md [pt] sentences=55 mean=16.9 cv=0.459 short=0.182 run3=0.038 opener_rep=0.222 cite_end=0.0 cite_para=0.278 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+    },
+    {
+      "path": "src/content/columns-pt/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "8935d8bab66031ecfd5c6b01db002fecc8d78e22713365c52214adaaa594c359",
+      "mtime": "2026-10-25T11:14:50.961570+00:00",
+      "body_identical_to_a188e620": true,
+      "source_urls_unchanged": true,
+      "bold_hits": 0,
+      "image_path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "image_exists": true,
+      "image_sha256": "0f9d9a4041f5978119b71a6c89ba1a9b01e2643871143163a4bc4d8f792a7e84",
+      "variety_command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/705-taiwan-visa-residence-work-study-family.md",
+        "--lang",
+        "pt"
+      ],
+      "variety_exit": 0,
+      "variety_output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/705-taiwan-visa-residence-work-study-family.md [pt] sentences=51 mean=19.1 cv=0.467 short=0.118 run3=0.061 opener_rep=0.111 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+    },
+    {
+      "path": "src/content/columns-pt/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "6cd3d32cdbe24fa0a74f506cf17198f925d9780e769ad4ac3bf6331212d056f3",
+      "mtime": "2026-10-25T11:14:50.961633+00:00",
+      "body_identical_to_a188e620": true,
+      "source_urls_unchanged": true,
+      "bold_hits": 0,
+      "image_path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "image_exists": true,
+      "image_sha256": "9933406b2c0c64af337aaf443c6c5e1ed4afb94e9ed7ab5a5e3635a2b940f16f",
+      "variety_command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "pt"
+      ],
+      "variety_exit": 0,
+      "variety_output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/706-taiwan-arc-renewal-changes-reentry.md [pt] sentences=59 mean=17.6 cv=0.451 short=0.203 run3=0.035 opener_rep=0.286 cite_end=0.0 cite_para=0.476 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+    }
+  ]
+}

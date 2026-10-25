@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "locale": "th",
+  "status": "approved",
+  "reviewer": "/root/recheck_market_changes (independent AI reviewer, not manuscript author)",
+  "reviewed_at": "2026-10-25T11:46:48.660460+00:00",
+  "entries": [
+    {
+      "source_sha256": "7c3cfe13a5fc7fab736fce58f58429081931788138ce56d06f16f4f7851a6a51",
+      "method": "independent_review",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "e9825660a5d6ac079847d2dd16734f18bce3cec8c9c4c765aaef0e289001e83d"
+    },
+    {
+      "source_sha256": "0c492a23e33a50c51ba5033e3b375dd74069a8b8d59f8135ab1e118f9d271aa3",
+      "method": "independent_review",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "339d023c922a1f46db5e3c51412ed65addbf145128088042b0f4fcdde82f3a83"
+    },
+    {
+      "source_sha256": "88f014c8e00251efff5435f77c02a4914bbccee7aca397976ed192d6e0aaaff2",
+      "method": "independent_review",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "10b147ac35a189f680156c9a4f2b0981d3523c6d563b34b6512e8b5630d39da4"
+    },
+    {
+      "source_sha256": "e12e07cd8ac507e5789a78200f9be0f2f58770fd473ebce2d923adc1d9a40336",
+      "method": "independent_review",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "312ccbaa0bf20db9bdd9b980f77e58fe437ad14cb0fea6c8ea88c4146b2ab86b"
+    }
+  ],
+  "evidence": [
+    {
+      "role": "independent-review",
+      "path": "../existing-market-thai-boundary-review.md",
+      "sha256": "6a9782015d233f70e65fc7dc6da42f09f9ceb63725d81306cdce365955548aea"
+    }
+  ]
+}

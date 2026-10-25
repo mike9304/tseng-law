@@ -1,0 +1,10 @@
+{
+  "mode": "Restore previously independently approved body; not a third style repair",
+  "held": "/Users/son7/tseng-case-trends-20261025/work/reviews/existing-de-repair-683-r2-REJECTED.md",
+  "held_sha256": "ca115b304e91b378b15785da3b439c61bb388ed45b14b550d6a3733ed0767fb7",
+  "source_baseline": "a188e620",
+  "path": "src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md",
+  "body_equals_baseline": true,
+  "frontmatter_equals_candidate": true,
+  "sha256": "0812b7a97e8364a17674920fb69e927d95d7d7cfabb9b5b01b9fbcbb2055e993"
+}

@@ -1,0 +1,347 @@
+[
+  {
+    "path": "src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md",
+    "sha256": "7c3cfe13a5fc7fab736fce58f58429081931788138ce56d06f16f4f7851a6a51",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md",
+      "--lang",
+      "th"
+    ],
+    "exit": 2,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md: ERROR measurement unavailable: Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md",
+    "sha256": "0c492a23e33a50c51ba5033e3b375dd74069a8b8d59f8135ab1e118f9d271aa3",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md",
+      "--lang",
+      "th"
+    ],
+    "exit": 2,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md: ERROR measurement unavailable: Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-th/662-thai-return-home-taiwan-traffic-injury-records.md",
+    "sha256": "88f014c8e00251efff5435f77c02a4914bbccee7aca397976ed192d6e0aaaff2",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/662-thai-return-home-taiwan-traffic-injury-records.md",
+      "--lang",
+      "th"
+    ],
+    "exit": 2,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/662-thai-return-home-taiwan-traffic-injury-records.md: ERROR measurement unavailable: Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md",
+    "sha256": "e12e07cd8ac507e5789a78200f9be0f2f58770fd473ebce2d923adc1d9a40336",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md",
+      "--lang",
+      "th"
+    ],
+    "exit": 2,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md: ERROR measurement unavailable: Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+    "sha256": "a93789bd548ad3eec8923fc57ba384194b4f0a45d488b4a1f361e386ff11d709",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+      "--lang",
+      "id"
+    ],
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md [id] sentences=55 mean=14.8 cv=0.442 short=0.164 run3=0.038 opener_rep=0.0 cite_end=0.0 cite_para=0.667 contrast=0 caveat=0 q=2\n  FAIL len_cv=0.442 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md",
+    "sha256": "2aedb05871c6f5c5d561e33786740a54e179932a6aaba9fb7dce9822e0efa48e",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md [hi] sentences=43 mean=17.7 cv=0.435 short=0.116 run3=0.024 opener_rep=0.077 cite_end=0.023 cite_para=0.615 contrast=0 caveat=0 q=2\n  FAIL len_cv=0.435 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n  WARN 51% of sentences end in 'है' — vary endings within the register\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+    "sha256": "06a92c0a8939a853b7131b8f30e5797f29c2b61563852c858002dbf11e0f667d",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md [hi] sentences=50 mean=19.0 cv=0.354 short=0.04 run3=0.062 opener_rep=0.214 cite_end=0.0 cite_para=0.643 contrast=0 caveat=0 q=3\n  FAIL len_cv=0.354 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n  FAIL short_share=0.04 (limit >= 0.08): need at least ~1 in 12 sentences that is very short\n  FAIL top_opener_n=3 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+    "sha256": "78493ba69c70c82430a04196f7ee58c0f9ee7356b394e13e3f0c9485aacdda11",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md [hi] sentences=46 mean=17.7 cv=0.47 short=0.174 run3=0.0 opener_rep=0.214 cite_end=0.022 cite_para=0.571 contrast=1 caveat=1 q=1\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+    "sha256": "e11b8bc0b1bef8ebd64907e0e9226823953ee1d0d544dcc281b126617f1d93f6",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md [hi] sentences=49 mean=17.5 cv=0.429 short=0.122 run3=0.064 opener_rep=0.067 cite_end=0.0 cite_para=0.467 contrast=0 caveat=0 q=4\n  FAIL len_cv=0.429 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+    "sha256": "40bf733c1bd926171ecd716e2b91246a34828e6dd9b8c77dad37344a264f0b37",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+      "--lang",
+      "hi"
+    ],
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md [hi] sentences=46 mean=17.9 cv=0.387 short=0.109 run3=0.045 opener_rep=0.154 cite_end=0.0 cite_para=0.308 contrast=0 caveat=0 q=1\n  FAIL len_cv=0.387 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n  FAIL top_opener_n=3 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-fr/674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.md",
+    "sha256": "660a144dfd1e111ad482ae397d9f0e3ae149e965866f1d399ae6637aac44378a",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-fr/674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.md",
+      "--lang",
+      "fr"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-fr/674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.md [fr] sentences=42 mean=17.8 cv=0.453 short=0.19 run3=0.025 opener_rep=0.167 cite_end=0.167 cite_para=0.583 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-fr/678-french-employee-taiwan-unpaid-wages-employer-closure.md",
+    "sha256": "917fbdcdc1d6696f55cb2936b34d425b759660deb0863854a93663453fea4fc8",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-fr/678-french-employee-taiwan-unpaid-wages-employer-closure.md",
+      "--lang",
+      "fr"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-fr/678-french-employee-taiwan-unpaid-wages-employer-closure.md [fr] sentences=48 mean=17.3 cv=0.458 short=0.125 run3=0.043 opener_rep=0.143 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md",
+    "sha256": "14a2b26871b37dc263fe02107bdaf956104f5d636ef01ef3b19809b8f957e763",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md",
+      "--lang",
+      "de"
+    ],
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md [de] sentences=49 mean=14.1 cv=0.434 short=0.204 run3=0.128 opener_rep=0.214 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=5\n  FAIL len_cv=0.434 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md",
+    "sha256": "44c842535b02a324c936740a93269b021aefd8c42301b8bdeaf3677550da888c",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md",
+      "--lang",
+      "de"
+    ],
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md [de] sentences=48 mean=14.6 cv=0.402 short=0.208 run3=0.13 opener_rep=0.143 cite_end=0.0 cite_para=0.571 contrast=0 caveat=0 q=1\n  FAIL len_cv=0.402 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md",
+    "sha256": "6295a415327948e02af62c68e1942273ba22f169fb811a9e2415992b35bff151",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md",
+      "--lang",
+      "de"
+    ],
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md [de] sentences=51 mean=13.8 cv=0.416 short=0.196 run3=0.0 opener_rep=0.267 cite_end=0.0 cite_para=0.533 contrast=0 caveat=0 q=2\n  FAIL len_cv=0.416 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n  FAIL consec_same_start=4 (limit <= 2): consecutive sentences start with the same word\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-it/685-italian-brand-taiwan-distributor-trademark-registration.md",
+    "sha256": "17ad264265124366a2704e8410f96aedff40238f252c4913ca5e40531f487de4",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-it/685-italian-brand-taiwan-distributor-trademark-registration.md",
+      "--lang",
+      "it"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-it/685-italian-brand-taiwan-distributor-trademark-registration.md [it] sentences=45 mean=15.3 cv=0.453 short=0.178 run3=0.0 opener_rep=0.25 cite_end=0.0 cite_para=0.438 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md",
+    "sha256": "5c8df70a9a4733c5f12a49286c3c0fdfa80cff88684b38c34ccae6ed3051483d",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md",
+      "--lang",
+      "it"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md [it] sentences=44 mean=16.3 cv=0.458 short=0.159 run3=0.071 opener_rep=0.188 cite_end=0.0 cite_para=0.438 contrast=0 caveat=0 q=3\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-it/687-italy-resident-heir-taiwan-inheritance-renunciation-debts.md",
+    "sha256": "336e3fe25e17a09df632d6c0c34989bd2b135702941c469f7798db76c2bd9b0d",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-it/687-italy-resident-heir-taiwan-inheritance-renunciation-debts.md",
+      "--lang",
+      "it"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-it/687-italy-resident-heir-taiwan-inheritance-renunciation-debts.md [it] sentences=43 mean=16.7 cv=0.45 short=0.14 run3=0.049 opener_rep=0.188 cite_end=0.0 cite_para=0.688 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-it/688-italian-business-visitor-taiwan-summons-interpreter-defense.md",
+    "sha256": "bd42e4931c1656e93eea6bf694873500dca6afa34d6b44d69df96822dcb4e209",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-it/688-italian-business-visitor-taiwan-summons-interpreter-defense.md",
+      "--lang",
+      "it"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-it/688-italian-business-visitor-taiwan-summons-interpreter-defense.md [it] sentences=50 mean=15.7 cv=0.455 short=0.18 run3=0.042 opener_rep=0.176 cite_end=0.0 cite_para=0.529 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md",
+    "sha256": "49e43adef77aab80f131baa2311c58af69b3ca07dcc3ce3ccd0b1e1b99c546d1",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md",
+      "--lang",
+      "es"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md [es] sentences=43 mean=16.4 cv=0.466 short=0.14 run3=0.073 opener_rep=0.214 cite_end=0.023 cite_para=0.5 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md",
+    "sha256": "00cbca16a04f4f010325cfdab709e9fdf8060a3573783cdb49df29aff04e2129",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md",
+      "--lang",
+      "es"
+    ],
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md [es] sentences=33 mean=17.7 cv=0.473 short=0.152 run3=0.0 opener_rep=0.188 cite_end=0.0 cite_para=0.438 contrast=0 caveat=0 q=1\n  FAIL top_opener_n=3 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md",
+    "sha256": "dce7864d575ac514a051a48e499c12262551ded1686b6047d798bfb01427c1be",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md",
+      "--lang",
+      "es"
+    ],
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md [es] sentences=44 mean=16.4 cv=0.464 short=0.205 run3=0.024 opener_rep=0.267 cite_end=0.0 cite_para=0.467 contrast=0 caveat=0 q=1\n  FAIL top_opener_n=3 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n",
+    "stderr": ""
+  },
+  {
+    "path": "src/content/columns-es/693-spain-resident-taiwan-divorce-property.md",
+    "sha256": "dd296d71681b98872e72e5696f9ccf8ff2c3cafbce49d8dc561d323844a22d86",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-es/693-spain-resident-taiwan-divorce-property.md",
+      "--lang",
+      "es"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-es/693-spain-resident-taiwan-divorce-property.md [es] sentences=42 mean=18.3 cv=0.465 short=0.119 run3=0.075 opener_rep=0.188 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "stderr": ""
+  }
+]

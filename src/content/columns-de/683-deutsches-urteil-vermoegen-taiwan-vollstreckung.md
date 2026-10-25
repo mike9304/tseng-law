@@ -3,7 +3,7 @@ title: "Deutsches Urteil, Vermögen in Taiwan: Anerkennung und Vollstreckung vor
 seoTitle: "Deutsche Urteile in Taiwan vollstrecken"
 summary: "Ein deutsches Zahlungsurteil eröffnet noch keinen unmittelbaren Zugriff auf Taiwan-Vermögen. Rechtskraft, Zustellung, Anerkennung und ein taiwanesisches Zulassungsurteil sind zu prüfen."
 published: "2026-10-23"
-lastmod: "2026-10-24"
+lastmod: "2026-10-25"
 date_display: "23. Oktober 2026"
 read_time: "6 Minuten Lesezeit"
 categories: ["Rechtliche Informationen zu Taiwan"]
@@ -26,7 +26,7 @@ faq:
 
 Ein rechtskräftiges deutsches Zahlungsurteil eröffnet noch keinen unmittelbaren Zugriff auf ein Konto oder Grundstück in Taiwan. Dafür verlangt [Artikel 4-1 des taiwanesischen Zwangsvollstreckungsgesetzes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010004&flno=4-1) ein taiwanesisches Urteil, das die Vollstreckung zulässt. Zusätzlich darf keiner der gesetzlichen Gründe gegen die Anerkennung vorliegen.
 
-Ein deutscher Lieferant braucht deshalb zwei Unterlagenpakete: die Akte des deutschen Verfahrens und konkrete Hinweise auf Vermögen des verurteilten Schuldners in Taiwan. Ein Konzernlogo oder die Adresse eines verbundenen Unternehmens verbindet beides noch nicht. Schuldner und Vermögensinhaber müssen genau identifiziert werden.
+Für einen deutschen Lieferanten sind deshalb zwei Unterlagenpakete vorzubereiten: die Akte des deutschen Verfahrens und konkrete Hinweise auf Vermögen des verurteilten Schuldners in Taiwan. Ein Konzernlogo oder die Adresse eines verbundenen Unternehmens verbindet beides noch nicht. Schuldner und Vermögensinhaber müssen genau identifiziert werden.
 
 ## Rechtskraft vor Vollstreckungsplanung
 
@@ -34,7 +34,7 @@ Ein deutscher Lieferant braucht deshalb zwei Unterlagenpakete: die Akte des deut
 
 Benötigt wird der vollständige Entscheidungstext. Tenor, Parteienbezeichnung, Zinsen und Kosten müssen mit der geltend gemachten Forderung übereinstimmen. Sind bereits Teilzahlungen eingegangen, gehören sie mit Datum und Zuordnung in die Berechnung. Eine eigene Zusammenfassung des Urteils ersetzt dessen Wortlaut nicht.
 
-Die taiwanesische Prüfung folgt den eigenen gesetzlichen Voraussetzungen. Die vereinfachte Vollstreckung, wie sie innerhalb der EU üblich ist, lässt sich auf Taiwan nicht übertragen; maßgeblich bleibt Artikel 4-1. Für einen Schiedsspruch gilt wiederum ein eigenes Verfahren. Deshalb sollte gleich zu Beginn feststehen, um welche Art von Titel es sich handelt.
+Die taiwanesische Prüfung folgt den eigenen gesetzlichen Voraussetzungen. Eine Behandlung wie bei der grenzüberschreitenden Vollstreckung innerhalb der EU darf für Taiwan nicht vorausgesetzt werden; maßgeblich bleibt Artikel 4-1. Für einen Schiedsspruch ist wiederum das dafür vorgesehene Verfahren zu prüfen. Die Bezeichnung des Dokuments sollte daher gleich am Anfang feststehen.
 
 ## Die vier Anerkennungshindernisse
 
@@ -53,7 +53,7 @@ Gegenseitigkeit ist eine Rechtsfrage. Deutschlands [§ 328 ZPO](https://www.gese
 
 Wurde dem Beklagten die Klage zugestellt, hat er einen Vertreter bestellt, oder blieb er vollständig fern? Von diesen Fragen hängt ab, welche Teile der deutschen Gerichtsakte besonders aussagekräftig sind: Neben Urteil und Rechtskraftnachweis kommen die verfahrenseinleitenden Dokumente, Zustellungsnachweise und Unterlagen zur Beteiligung des Beklagten in Betracht.
 
-Für jedes Anerkennungshindernis sollte feststehen, welches Dokument es belegt. Der Vertrag und eine Gerichtsstandsvereinbarung können etwa die Zuständigkeitsfrage betreffen; die Zustellungsurkunde beantwortet eine andere Frage. Fehlende Dokumente sollten gezielt beim deutschen Gericht oder der bisherigen Vertretung beschafft werden. Welche beglaubigten Ausfertigungen, chinesischen Übersetzungen und Bestätigungen ausländischer Unterlagen benötigt werden, sollte anschließend mit der Rechtsvertretung für das Verfahren in Taiwan abgestimmt werden.
+Jedes Anerkennungsthema erhält in der Arbeitsübersicht seine Fundstelle. Der Vertrag und eine Gerichtsstandsvereinbarung können etwa die Zuständigkeitsfrage betreffen; die Zustellungsurkunde beantwortet eine andere Frage. Fehlende Dokumente sollten gezielt beim deutschen Gericht oder der bisherigen Vertretung beschafft werden. Welche beglaubigten Ausfertigungen, chinesischen Übersetzungen und Bestätigungen ausländischer Unterlagen benötigt werden, sollte anschließend mit der Rechtsvertretung für das Verfahren in Taiwan abgestimmt werden.
 
 ## Vermögen und zuständiges Gericht zusammen betrachten
 
@@ -67,7 +67,7 @@ Eine vorläufige Sicherung muss gesondert beantragt und begründet werden. [Arti
 
 Nach [Artikel 526](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=526) sind Anspruch und Arrestgrund glaubhaft zu machen. Das Gericht kann eine Sicherheitsleistung verlangen. Die Vorschrift regelt auch die Ergänzung einer unzureichenden Glaubhaftmachung durch Sicherheit. Konkrete Hinweise auf eine bevorstehende Verfügung sollten deshalb mit Datum und Quelle dokumentiert werden, statt nur eine allgemeine Zahlungsbefürchtung vorzutragen.
 
-Eine erste [Anfrage zur Vollstreckung in Taiwan](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) kann Gericht, Entscheidungsdatum, Schuldnernamen, Taiwan-Vermögensbezug und anstehende Fristen nennen. Beraten wird auf Englisch, Chinesisch, Japanisch oder Koreanisch; die Sprache wird vorab abgestimmt. Vollständige Akten und vertrauliche Vermögensangaben folgen nach Absprache. Vor der nächsten Aktenanforderung steht eine konkrete Frage: Ist belegt, wann und wie dem Beklagten das deutsche Verfahren eröffnet wurde?
+Eine erste [Anfrage zur Vollstreckung in Taiwan](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) kann Gericht, Entscheidungsdatum, Schuldnernamen, Taiwan-Vermögensbezug und anstehende Fristen nennen; die Kommunikation auf Englisch, Chinesisch, Japanisch oder Koreanisch ist zunächst abzustimmen. Vollständige Akten und vertrauliche Vermögensangaben folgen nach Absprache. Für die nächste Aktenanforderung lässt sich konkret prüfen, ob der Nachweis fehlt, wann und wie das deutsche Verfahren dem Beklagten eröffnet wurde.
 
 ## Amtliche Grundlagen
 

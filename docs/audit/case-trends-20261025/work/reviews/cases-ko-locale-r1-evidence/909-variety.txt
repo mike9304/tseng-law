@@ -1,0 +1,2 @@
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/909-korean-traveler-taiwan-refund-claim-deadline.md [ko] sentences=42 mean=36.5 cv=0.457 short=0.143 run3=0.0 opener_rep=0.071 cite_end=0.024 cite_para=0.429 contrast=0 caveat=0 q=1
+  WARN 90% of sentences end in '니다.' — vary endings within the register

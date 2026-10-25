@@ -1,0 +1,2 @@
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-en/914-taiwan-us-executive-share-bonus-payment-promise.md [en] sentences=46 mean=14.7 cv=0.499 short=0.217 run3=0.0 opener_rep=0.143 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=1
+  OK — no variety limit violated

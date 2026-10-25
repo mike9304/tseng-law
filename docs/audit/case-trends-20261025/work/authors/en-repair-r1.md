@@ -1,0 +1,13 @@
+# EN independent review repairs, pass 1
+
+Date: 2026-10-25. Author owns implementation only; fresh locale and final reviewers own their decisions. Current manuscript SHA-256 and actual CLI results are in `en-author-checks.json`. All four changed files were checked with the real variety CLI after this repair; all returned exit 0, FAIL 0. No frontmatter or image asset changed.
+
+| Article | Before / concern | Applied repair | Legal meaning |
+|---|---|---|---|
+| 914 | “For businesses planning overseas appointments, this remains a concrete contracting issue.” and the paragraph's closing explanation of why the source was chosen. | Deleted those two editorial meta sentences; retained the dated USTR statement about Taiwanese US investment plans. | Preserved. No assertion of rising compensation disputes remains; no legal condition or date removed. |
+| 915 | General enumeration of Article40(1)(2) omitted agreements that had not taken effect and the relevant hearing-closing time, while sounding exhaustive. | Replaced with “The court identified the absence of an arbitration agreement under [Arbitration Act Article 40(1)(2)](...) as the ground for annulment.” | Substantive accuracy correction, explicitly narrowing the sentence to the ground actually applied. The case result is preserved. Final reviewer verified official court explanation L45 and current MOJ English L244–247. |
+| 916 | “That policy context makes transaction preparation timely.” and the following disclaimer about rising claims/diligence explained the research strategy inside the article. | Deleted both sentences; retained the actual dated USTR investment-policy statement and its applicable-law qualification. | Preserved. No claim of rising acquisitions or environmental disputes is made. |
+| 917 | “Later availability through a different affiliate's platform did not prove that company's earlier acquisition.” had an ambiguous company referent. | “Later availability through a different affiliate's platform did not prove that the offshore company had acquired the rights earlier.” | Preserved and clarified: the offshore claimed licensee remains distinct from the platform affiliate. |
+| 917 | “Taiwan's Creative Content Agency” was not the institution's official name. | “The Taiwan Creative Content Agency.” | No legal change. Official proper name corrected. |
+
+R1 changes do not touch the first two paragraphs, the selected same-locale comparators, substantive case endings, FAQ, source URLs or the verified images. Section 5 remains satisfied: final CV .499/.480/.481/.461; short-sentence ratios .217/.179/.146/.234; no opener-limit or other CLI violation. A fresh independent reviewer must match the repaired hashes before a PASS is attributed to these versions.

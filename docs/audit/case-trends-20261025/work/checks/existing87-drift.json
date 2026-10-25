@@ -1,0 +1,611 @@
+[
+  {
+    "path": "src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md",
+    "route": "/th/columns/thai-worker-taiwan-payslip-deductions-unpaid-salary",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "7c3cfe13a5fc7fab736fce58f58429081931788138ce56d06f16f4f7851a6a51"
+  },
+  {
+    "path": "src/content/columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md",
+    "route": "/th/columns/thai-worker-taiwan-factory-closure-wage-fund",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "0c492a23e33a50c51ba5033e3b375dd74069a8b8d59f8135ab1e118f9d271aa3"
+  },
+  {
+    "path": "src/content/columns-th/661-thai-worker-taiwan-bank-account-police-notice.md",
+    "route": "/th/columns/thai-worker-taiwan-bank-account-police-notice",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "76149f32515ae1379e33d1dbe7983df5955e06e94573fb17b6e7d37cc63ca425"
+  },
+  {
+    "path": "src/content/columns-th/662-thai-return-home-taiwan-traffic-injury-records.md",
+    "route": "/th/columns/thai-return-home-taiwan-traffic-injury-records",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "88f014c8e00251efff5435f77c02a4914bbccee7aca397976ed192d6e0aaaff2"
+  },
+  {
+    "path": "src/content/columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md",
+    "route": "/th/columns/thai-supplier-taiwan-buyer-unpaid-invoice",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "e12e07cd8ac507e5789a78200f9be0f2f58770fd473ebce2d923adc1d9a40336"
+  },
+  {
+    "path": "src/content/columns-th/704-taiwan-arc-first-application.md",
+    "route": "/th/columns/taiwan-arc-first-application",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "f4ab018ecbdd93c7cea7f67cb0559f575e7ddf45f884bf046ec21c35c76e1829"
+  },
+  {
+    "path": "src/content/columns-th/705-taiwan-visa-residence-work-study-family.md",
+    "route": "/th/columns/taiwan-visa-residence-work-study-family",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "9443904b8750edfef5742c0bcccc984a1bc5ea883c2a016dbccff7233a10454b"
+  },
+  {
+    "path": "src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md",
+    "route": "/th/columns/taiwan-arc-renewal-changes-reentry",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "03d0a97e50d4375236152c7701db93ae283f72f910ce94a617a51e5808e65c0b"
+  },
+  {
+    "path": "src/content/columns-id/664-indonesian-home-caregiver-unpaid-wages-taiwan.md",
+    "route": "/id/columns/indonesian-home-caregiver-unpaid-wages-taiwan",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "d6599f6a7bc43c131b501f2f7e4cbac3d4e63dac32292acdc79d65893f66374e"
+  },
+  {
+    "path": "src/content/columns-id/665-indonesian-worker-passport-broker-dispute-taiwan.md",
+    "route": "/id/columns/indonesian-worker-passport-broker-dispute-taiwan",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "ad992fa38728e5a4eb5612697b52f35d2bd0b901deb43964c6e51f1945cc3d3e"
+  },
+  {
+    "path": "src/content/columns-id/666-indonesian-worker-bank-account-cash-job-police-taiwan.md",
+    "route": "/id/columns/indonesian-worker-bank-account-cash-job-police-taiwan",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "65f8b2ade7420f25816b8eba3c7e9a1a76bfd79ab5d73491aea07ff0a68f54a2"
+  },
+  {
+    "path": "src/content/columns-id/667-indonesian-factory-worker-injury-evidence-compensation-taiwan.md",
+    "route": "/id/columns/indonesian-factory-worker-injury-evidence-compensation-taiwan",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "33d420710e833608c7c52c17c9b128bfe895feef0a0f3aa641f254b0aa354644"
+  },
+  {
+    "path": "src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md",
+    "route": "/id/columns/indonesian-buyer-taiwan-machinery-defect-notice",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "a93789bd548ad3eec8923fc57ba384194b4f0a45d488b4a1f361e386ff11d709"
+  },
+  {
+    "path": "src/content/columns-id/704-taiwan-arc-first-application.md",
+    "route": "/id/columns/taiwan-arc-first-application",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "0f6eb5fa439f2fd28d3a4d71837cbe94ee8cc0dc17cb53eff6e064d05a69f8e4"
+  },
+  {
+    "path": "src/content/columns-id/705-taiwan-visa-residence-work-study-family.md",
+    "route": "/id/columns/taiwan-visa-residence-work-study-family",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "f5403aaf015974377db2c7fa123bf85f372d94ca3e95ed65772b01d8a6173a80"
+  },
+  {
+    "path": "src/content/columns-id/706-taiwan-arc-renewal-changes-reentry.md",
+    "route": "/id/columns/taiwan-arc-renewal-changes-reentry",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "97f52339f99267e005a32b322178804a1438bc038e611b0ca4891cf8d87e03d6"
+  },
+  {
+    "path": "src/content/columns-hi/669-indian-supplier-unpaid-taiwan-invoice.md",
+    "route": "/hi/columns/indian-supplier-unpaid-taiwan-invoice",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "2aedb05871c6f5c5d561e33786740a54e179932a6aaba9fb7dce9822e0efa48e"
+  },
+  {
+    "path": "src/content/columns-hi/670-indian-buyer-taiwan-machinery-defect-notice.md",
+    "route": "/hi/columns/indian-buyer-taiwan-machinery-defect-notice",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "06a92c0a8939a853b7131b8f30e5797f29c2b61563852c858002dbf11e0f667d"
+  },
+  {
+    "path": "src/content/columns-hi/671-indian-engineer-taiwan-noncompete-compensation.md",
+    "route": "/hi/columns/indian-engineer-taiwan-noncompete-compensation",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "78493ba69c70c82430a04196f7ee58c0f9ee7356b394e13e3f0c9485aacdda11"
+  },
+  {
+    "path": "src/content/columns-hi/672-indian-resident-taiwan-rental-deposit-handover.md",
+    "route": "/hi/columns/indian-resident-taiwan-rental-deposit-handover",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "e11b8bc0b1bef8ebd64907e0e9226823953ee1d0d544dcc281b126617f1d93f6"
+  },
+  {
+    "path": "src/content/columns-hi/673-indian-importer-taiwan-supplier-bank-change-fraud.md",
+    "route": "/hi/columns/indian-importer-taiwan-supplier-bank-change-fraud",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "40bf733c1bd926171ecd716e2b91246a34828e6dd9b8c77dad37344a264f0b37"
+  },
+  {
+    "path": "src/content/columns-hi/704-taiwan-arc-first-application.md",
+    "route": "/hi/columns/taiwan-arc-first-application",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "e9c117570460078783e5f344943bcaebdb76db72fc8a94b150068ca45a58a77d"
+  },
+  {
+    "path": "src/content/columns-hi/705-taiwan-visa-residence-work-study-family.md",
+    "route": "/hi/columns/taiwan-visa-residence-work-study-family",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "282eeaee9aabf69a8eafea04af003bd6bf84732a10b9e7d4e4aef152d0addb8d"
+  },
+  {
+    "path": "src/content/columns-hi/706-taiwan-arc-renewal-changes-reentry.md",
+    "route": "/hi/columns/taiwan-arc-renewal-changes-reentry",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "32e0945e62394a3c8d5998492e86d632eb30cff9b34ffabcb87a9543235b6a91"
+  },
+  {
+    "path": "src/content/columns-fr/674-france-exporter-taiwan-unpaid-invoices-credit-notes-returns.md",
+    "route": "/fr/columns/france-exporter-taiwan-unpaid-invoices-credit-notes-returns",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "660a144dfd1e111ad482ae397d9f0e3ae149e965866f1d399ae6637aac44378a"
+  },
+  {
+    "path": "src/content/columns-fr/675-french-brand-taiwan-trademark-registered-distributor.md",
+    "route": "/fr/columns/french-brand-taiwan-trademark-registered-distributor",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "c5276a70604500bb08620d759fc81dda733e59f806a5b65c32cf2385d81b2171"
+  },
+  {
+    "path": "src/content/columns-fr/676-french-supplier-taiwan-distributor-termination-stock-online-accounts.md",
+    "route": "/fr/columns/french-supplier-taiwan-distributor-termination-stock-online-accounts",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "965f57dccc870db7edc845d6dfdb0901d508d2900283587d5ac58adb241ab319"
+  },
+  {
+    "path": "src/content/columns-fr/677-france-resident-heir-taiwan-bank-property-documents.md",
+    "route": "/fr/columns/france-resident-heir-taiwan-bank-property-documents",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "2354cd6048d7ae1c49720d5724a6f922e5df0db74dc8f6f5ac316e380c23fa66"
+  },
+  {
+    "path": "src/content/columns-fr/678-french-employee-taiwan-unpaid-wages-employer-closure.md",
+    "route": "/fr/columns/french-employee-taiwan-unpaid-wages-employer-closure",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "917fbdcdc1d6696f55cb2936b34d425b759660deb0863854a93663453fea4fc8"
+  },
+  {
+    "path": "src/content/columns-fr/704-taiwan-arc-first-application.md",
+    "route": "/fr/columns/taiwan-arc-first-application",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "b15d77af3ae7d7fa8ec3a39af881833f537ad2cf72351d54dc1ab2b7251e9896"
+  },
+  {
+    "path": "src/content/columns-fr/705-taiwan-visa-residence-work-study-family.md",
+    "route": "/fr/columns/taiwan-visa-residence-work-study-family",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "b194fad64058a6ef06afd15e8b07da3d1b9175dfdb8ffeb8746606ed53b3ec60"
+  },
+  {
+    "path": "src/content/columns-fr/706-taiwan-arc-renewal-changes-reentry.md",
+    "route": "/fr/columns/taiwan-arc-renewal-changes-reentry",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "a8b9da8fccc6d312e5830fb463e52d4a8316e72d189b85d30af7f3b8fbb73243"
+  },
+  {
+    "path": "src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md",
+    "route": "/de/columns/taiwan-maschinenlieferung-fat-sat-schlusszahlung",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "14a2b26871b37dc263fe02107bdaf956104f5d636ef01ef3b19809b8f957e763"
+  },
+  {
+    "path": "src/content/columns-de/680-taiwan-bauteile-maengelruege-pruefmuster.md",
+    "route": "/de/columns/taiwan-bauteile-maengelruege-pruefmuster",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "aec06d4fd31c96d0897536b93887b977f2b4796732497e0892ea44d1541354f7"
+  },
+  {
+    "path": "src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md",
+    "route": "/de/columns/taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "44c842535b02a324c936740a93269b021aefd8c42301b8bdeaf3677550da888c"
+  },
+  {
+    "path": "src/content/columns-de/682-taiwan-gemeinsame-entwicklung-cad-geschaeftsgeheimnisse.md",
+    "route": "/de/columns/taiwan-gemeinsame-entwicklung-cad-geschaeftsgeheimnisse",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "88603c449e6e5656fcd4b542da645088d2189553e30ffffae5cbc016502225e7"
+  },
+  {
+    "path": "src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md",
+    "route": "/de/columns/deutsches-urteil-vermoegen-taiwan-vollstreckung",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "6295a415327948e02af62c68e1942273ba22f169fb811a9e2415992b35bff151"
+  },
+  {
+    "path": "src/content/columns-de/704-taiwan-arc-first-application.md",
+    "route": "/de/columns/taiwan-arc-first-application",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "07b02d98ad6c6e6679d32bb8315391c678fa23bc7eb0c485ba9bf9dc6440a306"
+  },
+  {
+    "path": "src/content/columns-de/705-taiwan-visa-residence-work-study-family.md",
+    "route": "/de/columns/taiwan-visa-residence-work-study-family",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "038cbed98651ea9aa67796a82e4a83d449c843542fe96fbabbaeb0848f693265"
+  },
+  {
+    "path": "src/content/columns-de/706-taiwan-arc-renewal-changes-reentry.md",
+    "route": "/de/columns/taiwan-arc-renewal-changes-reentry",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "7dc7053950479519253179c3fa4c03069a7c8c3f8d7c42b0c43d7c61e9587a2b"
+  },
+  {
+    "path": "src/content/columns-it/684-italian-exporter-taiwan-unpaid-installation-balance.md",
+    "route": "/it/columns/italian-exporter-taiwan-unpaid-installation-balance",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "e6e97a8a4cb948138026584b51d6589da67e92b7a8df1c7183dc5212ced775ce"
+  },
+  {
+    "path": "src/content/columns-it/685-italian-brand-taiwan-distributor-trademark-registration.md",
+    "route": "/it/columns/italian-brand-taiwan-distributor-trademark-registration",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "17ad264265124366a2704e8410f96aedff40238f252c4913ca5e40531f487de4"
+  },
+  {
+    "path": "src/content/columns-it/686-taiwan-oem-molds-design-files-handover.md",
+    "route": "/it/columns/taiwan-oem-molds-design-files-handover",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "5c8df70a9a4733c5f12a49286c3c0fdfa80cff88684b38c34ccae6ed3051483d"
+  },
+  {
+    "path": "src/content/columns-it/687-italy-resident-heir-taiwan-inheritance-renunciation-debts.md",
+    "route": "/it/columns/italy-resident-heir-taiwan-inheritance-renunciation-debts",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "336e3fe25e17a09df632d6c0c34989bd2b135702941c469f7798db76c2bd9b0d"
+  },
+  {
+    "path": "src/content/columns-it/688-italian-business-visitor-taiwan-summons-interpreter-defense.md",
+    "route": "/it/columns/italian-business-visitor-taiwan-summons-interpreter-defense",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "bd42e4931c1656e93eea6bf694873500dca6afa34d6b44d69df96822dcb4e209"
+  },
+  {
+    "path": "src/content/columns-it/704-taiwan-arc-first-application.md",
+    "route": "/it/columns/taiwan-arc-first-application",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "ff49591c9d161b0143992f7c4f4a490baaa027ee84d00f61ea0e178fa567d092"
+  },
+  {
+    "path": "src/content/columns-it/705-taiwan-visa-residence-work-study-family.md",
+    "route": "/it/columns/taiwan-visa-residence-work-study-family",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "785ab58116dffcd557112b47517ff7efab0e19101e84e90e0ac678a003f9ba31"
+  },
+  {
+    "path": "src/content/columns-it/706-taiwan-arc-renewal-changes-reentry.md",
+    "route": "/it/columns/taiwan-arc-renewal-changes-reentry",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "0d106a8c5122f4fb97f5c4fab30ae766bd9262323e68460c5da001273781d0b3"
+  },
+  {
+    "path": "src/content/columns-es/689-spain-exporter-taiwan-unpaid-invoices.md",
+    "route": "/es/columns/spain-exporter-taiwan-unpaid-invoices",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "49e43adef77aab80f131baa2311c58af69b3ca07dcc3ce3ccd0b1e1b99c546d1"
+  },
+  {
+    "path": "src/content/columns-es/690-spain-buyer-taiwan-defective-goods-notice.md",
+    "route": "/es/columns/spain-buyer-taiwan-defective-goods-notice",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "c3af39c6d0a57bfae3fd7404192bbc300a6f292c5a0f0cdaea6d9cecb3d751b5"
+  },
+  {
+    "path": "src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md",
+    "route": "/es/columns/spanish-judgment-taiwan-assets-enforcement",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "00cbca16a04f4f010325cfdab709e9fdf8060a3573783cdb49df29aff04e2129"
+  },
+  {
+    "path": "src/content/columns-es/692-return-spain-unpaid-taiwan-wages.md",
+    "route": "/es/columns/return-spain-unpaid-taiwan-wages",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "dce7864d575ac514a051a48e499c12262551ded1686b6047d798bfb01427c1be"
+  },
+  {
+    "path": "src/content/columns-es/693-spain-resident-taiwan-divorce-property.md",
+    "route": "/es/columns/spain-resident-taiwan-divorce-property",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "dd296d71681b98872e72e5696f9ccf8ff2c3cafbce49d8dc561d323844a22d86"
+  },
+  {
+    "path": "src/content/columns-es/704-taiwan-arc-first-application.md",
+    "route": "/es/columns/taiwan-arc-first-application",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "f2723eedf735414413c04515279ab4bcf80beb291477bd2662c6d28ba5bc54a5"
+  },
+  {
+    "path": "src/content/columns-es/705-taiwan-visa-residence-work-study-family.md",
+    "route": "/es/columns/taiwan-visa-residence-work-study-family",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "d48d1bce4587347d61ed90f73ba5995772f8bb358f37b4cdb0e3b771c8a21bc5"
+  },
+  {
+    "path": "src/content/columns-es/706-taiwan-arc-renewal-changes-reentry.md",
+    "route": "/es/columns/taiwan-arc-renewal-changes-reentry",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "2b2135ac4907f2080582a2ad903f08f4b5cb29dd64b89622fdc81922e7096182"
+  },
+  {
+    "path": "src/content/columns-pt/694-portugal-exportador-acordo-prestacoes-taiwan.md",
+    "route": "/pt/columns/portugal-exportador-acordo-prestacoes-taiwan",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "07d82a4c57890867dad2e3c03da869e2522dbe1657495f685c71283bc856236b"
+  },
+  {
+    "path": "src/content/columns-pt/695-portugal-fornecedor-taiwan-alteracao-conta-fraude.md",
+    "route": "/pt/columns/portugal-fornecedor-taiwan-alteracao-conta-fraude",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "b1475749d7fda41c0f630328d0d6b9cb5e3d5b3435c0140fb8c69944fc5f61f3"
+  },
+  {
+    "path": "src/content/columns-pt/696-portugal-sentenca-arbitral-bens-taiwan.md",
+    "route": "/pt/columns/portugal-sentenca-arbitral-bens-taiwan",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "fd748c24bcfc701812039bcb1f59c3a745c4b8354d6fe4f3796fef737b808011"
+  },
+  {
+    "path": "src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md",
+    "route": "/pt/columns/portugal-mandatario-processo-civil-taiwan",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "5413c3f5b967adf73725ec3b58b12dfdb76b5ca43f301394e91929c6c5f56a0a"
+  },
+  {
+    "path": "src/content/columns-pt/698-portugal-fim-contrato-taiwan-salarios-em-falta.md",
+    "route": "/pt/columns/portugal-fim-contrato-taiwan-salarios-em-falta",
+    "file_changed": true,
+    "body_changed": true,
+    "sha256": "bd4b5411b57b562a3ed338feab0fad9141bd2dae5a329a87d2c71fa7c7ffc56a"
+  },
+  {
+    "path": "src/content/columns-pt/704-taiwan-arc-first-application.md",
+    "route": "/pt/columns/taiwan-arc-first-application",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "8aa828c67ccc8c9ffed1946592e0660bd03e36d4bce4744835a31f7672fa702d"
+  },
+  {
+    "path": "src/content/columns-pt/705-taiwan-visa-residence-work-study-family.md",
+    "route": "/pt/columns/taiwan-visa-residence-work-study-family",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "8935d8bab66031ecfd5c6b01db002fecc8d78e22713365c52214adaaa594c359"
+  },
+  {
+    "path": "src/content/columns-pt/706-taiwan-arc-renewal-changes-reentry.md",
+    "route": "/pt/columns/taiwan-arc-renewal-changes-reentry",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "6cd3d32cdbe24fa0a74f506cf17198f925d9780e769ad4ac3bf6331212d056f3"
+  },
+  {
+    "path": "src/content/columns-ar/699-uae-importer-taiwan-supplier-advance-refund.md",
+    "route": "/ar/columns/uae-importer-taiwan-supplier-advance-refund",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "7d3fddf6ecf792489b13f3dc8a0d703f03771d6c6bb01eb9a911dbbfce06feba"
+  },
+  {
+    "path": "src/content/columns-ar/700-saudi-arbitral-award-taiwan-assets.md",
+    "route": "/ar/columns/saudi-arbitral-award-taiwan-assets",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "d4108bcdfc05d0801905fd6926af787e5c20162dace320e1190b986811346bc2"
+  },
+  {
+    "path": "src/content/columns-ar/701-uae-court-judgment-taiwan-enforcement.md",
+    "route": "/ar/columns/uae-court-judgment-taiwan-enforcement",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "d48f7a847d9b7c4d152f052cad444957bc44b1dca7155bd4944b3163aff22f43"
+  },
+  {
+    "path": "src/content/columns-ar/702-overseas-heir-taiwan-estate-nationality-documents.md",
+    "route": "/ar/columns/overseas-heir-taiwan-estate-nationality-documents",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "e7324c67044312342cf4ba003fefe47dac9b5e74ced55456f492734cb135b932"
+  },
+  {
+    "path": "src/content/columns-ar/703-uae-resident-taiwan-counsel-arabic-documents.md",
+    "route": "/ar/columns/uae-resident-taiwan-counsel-arabic-documents",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "cb839571891f6f5cc7b7453553efb67470ab30ae3d3b359a753d16f544cd9de5"
+  },
+  {
+    "path": "src/content/columns-ar/704-taiwan-arc-first-application.md",
+    "route": "/ar/columns/taiwan-arc-first-application",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "a64f7b405783b22383a7df3e87e76a21d41307a920c6f1b9a8ee67da484ab81d"
+  },
+  {
+    "path": "src/content/columns-ar/705-taiwan-visa-residence-work-study-family.md",
+    "route": "/ar/columns/taiwan-visa-residence-work-study-family",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "66ebe0430f90227014ed2a37420220090b889a53e87728adfecfaf6e2d6f01eb"
+  },
+  {
+    "path": "src/content/columns-ar/706-taiwan-arc-renewal-changes-reentry.md",
+    "route": "/ar/columns/taiwan-arc-renewal-changes-reentry",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "253c199800eac1461ab48026679388c9d46c37939e0872cf84d5e53d4908572a"
+  },
+  {
+    "path": "src/content/columns/704-taiwan-arc-first-application.md",
+    "route": "/ko/columns/taiwan-arc-first-application",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1"
+  },
+  {
+    "path": "src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+    "route": "/ko/columns/taiwan-visa-residence-work-study-family",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a"
+  },
+  {
+    "path": "src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+    "route": "/ko/columns/taiwan-arc-renewal-changes-reentry",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc"
+  },
+  {
+    "path": "src/content/columns-en/704-taiwan-arc-first-application.md",
+    "route": "/en/columns/taiwan-arc-first-application",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f"
+  },
+  {
+    "path": "src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+    "route": "/en/columns/taiwan-visa-residence-work-study-family",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304"
+  },
+  {
+    "path": "src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+    "route": "/en/columns/taiwan-arc-renewal-changes-reentry",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71"
+  },
+  {
+    "path": "src/content/columns-ja/704-taiwan-arc-first-application.md",
+    "route": "/ja/columns/taiwan-arc-first-application",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "b7bb06673c3ea5802ab425b8121ddee47af31120ec7ac0a2acf3618bfa8c8b70"
+  },
+  {
+    "path": "src/content/columns-ja/705-taiwan-visa-residence-work-study-family.md",
+    "route": "/ja/columns/taiwan-visa-residence-work-study-family",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "27e370a2b42dcb27618f4d155656730a43183c30150b6e4dbce0776f228fd0b6"
+  },
+  {
+    "path": "src/content/columns-ja/706-taiwan-arc-renewal-changes-reentry.md",
+    "route": "/ja/columns/taiwan-arc-renewal-changes-reentry",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "9f4f5f18da7d2e844260075fe2dda906bf1b28a049699f690cf41c489c30f8fe"
+  },
+  {
+    "path": "src/content/columns-vi/704-taiwan-arc-first-application.md",
+    "route": "/vi/columns/taiwan-arc-first-application",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "61b01a8bf30e4d997fd70bab01128859ced94e39ff59da4356a0eddee9485bd5"
+  },
+  {
+    "path": "src/content/columns-vi/705-taiwan-visa-residence-work-study-family.md",
+    "route": "/vi/columns/taiwan-visa-residence-work-study-family",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "1d7177dde3e0375593d14c441a3a527c74d6e9a2836340a69a805b9e0f3b092d"
+  },
+  {
+    "path": "src/content/columns-vi/706-taiwan-arc-renewal-changes-reentry.md",
+    "route": "/vi/columns/taiwan-arc-renewal-changes-reentry",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "08574be203883e7945b11f2e55206a69f56033dd608430745cf368d889b774ea"
+  },
+  {
+    "path": "src/content/columns-zh/704-taiwan-arc-first-application.md",
+    "route": "/zh-hant/columns/taiwan-arc-first-application",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "0c00bc06bf3c3c1860a95af4dbcea9eaab981300860916856295e8b947244468"
+  },
+  {
+    "path": "src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md",
+    "route": "/zh-hant/columns/taiwan-visa-residence-work-study-family",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "290a50047632ad830ea98c524ffef6ed91c2b4c8d555a1844689824c3ffea7a3"
+  },
+  {
+    "path": "src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md",
+    "route": "/zh-hant/columns/taiwan-arc-renewal-changes-reentry",
+    "file_changed": true,
+    "body_changed": false,
+    "sha256": "4d70e78b9a197f4a2b81d25d61b6fa862ee849a6392d5fd905e90bcf781e721c"
+  }
+]

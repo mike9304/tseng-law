@@ -1,0 +1,662 @@
+{
+  "research_date": "2026-10-25",
+  "audience": "English, US-oriented Taiwan transactions and litigation",
+  "baseline": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+  "owner": "/root/research_en_cases",
+  "status": "research ready for drafting; manuscript review/publication owned by parent",
+  "sources": [
+    {
+      "id": "CASE914",
+      "title": "Taiwan High Court 112年度重勞上字第14號, damages",
+      "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV%2C112%2C%E9%87%8D%E5%8B%9E%E4%B8%8A%2C14%2C20251230%2C1",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "official judgment full text",
+      "decision_date": "2025-12-30",
+      "scope": "Facts, reasons VII–IX and disposition read; not underlying evidentiary case file.",
+      "captures": [
+        "en_more_officialopened.txt",
+        "en-stock-final-reasons.txt",
+        "en_final_market_case.txt"
+      ],
+      "finality": "Unconfirmed after this High Court judgment; appeal notice present."
+    },
+    {
+      "id": "CASE915",
+      "title": "Supreme Court 106年度台上字第723號 official court explanation",
+      "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "official court explanation",
+      "decision_date": "2017-07-12",
+      "publication_date": "2017-07-12",
+      "scope": "Official explanation facts/disposition/reasoning read. Underlying full judgment PDF was found but timed out.",
+      "captures": [
+        "en-procurement-original-open.txt"
+      ],
+      "finality": "Court explanation expressly states final; Supreme Court dismissed contractor appeal and maintained annulment.",
+      "access_note": "First successful open captured from this agent's current-session output after repeat URLs timed out."
+    },
+    {
+      "id": "CASE916",
+      "title": "Supreme Court 107年度台上字第267號 RCA official explanation",
+      "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "official court explanation",
+      "decision_date": "2018-08-16",
+      "publication_date": "2018-08-16",
+      "scope": "Official explanation, especially parent control/knowledge/asset transfer and split disposition.",
+      "captures": [
+        "en_open_newcases.txt",
+        "en_case_finalread.txt",
+        "en-stock-final-reasons.txt"
+      ],
+      "finality": "246 claimants' portions remanded; appeals for 262 dismissed. No claim that the entire RCA litigation concluded."
+    },
+    {
+      "id": "CASE917",
+      "title": "Taiwan High Court 113年度重上更三字第14號, loan repayment and assigned film-license damages setoff",
+      "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV%2C113%2C%E9%87%8D%E4%B8%8A%E6%9B%B4%E4%B8%89%2C14%2C20250325%2C1",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "official judgment full text",
+      "decision_date": "2025-03-25",
+      "scope": "Disposition and substantive reasons read; not underlying US case file.",
+      "captures": [
+        "en_more_officialopened.txt",
+        "en_case_and_market_detail.txt",
+        "en_final_market_case.txt"
+      ],
+      "finality": "After third Supreme Court remand; judgment allows appeal; subsequent disposition unconfirmed."
+    },
+    {
+      "id": "CIV216",
+      "title": "Civil Code Article 216",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=216",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "current statute",
+      "provision": "216(1)–(2)",
+      "status": "Effective current provision; latest Civil Code amendment 2026-08-17 concerns pending Article 1223, not this provision.",
+      "captures": [
+        "en_primary_final_supplement.txt"
+      ]
+    },
+    {
+      "id": "CIV231",
+      "title": "Civil Code Article 231",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=231",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "current statute",
+      "provision": "231(1)",
+      "status": "Effective current provision; no commencement deferral flagged for 231.",
+      "captures": [
+        "en_statutes4.txt"
+      ]
+    },
+    {
+      "id": "CIV268",
+      "title": "Civil Code Article 268",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=268",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "current statute",
+      "provision": "268",
+      "status": "Effective current provision; no commencement deferral flagged for 268.",
+      "captures": [
+        "en_statutes4.txt"
+      ]
+    },
+    {
+      "id": "CIVHIST",
+      "title": "Civil Code official amendment history",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "statute history",
+      "last_amended": "2026-08-17",
+      "status": "166-1 commencement separately to be set; 2026-08-17 Article 1223 amendment effective six months after promulgation. Do not call all latest text in force.",
+      "captures": [
+        "en_legal_history.txt"
+      ]
+    },
+    {
+      "id": "CPC222",
+      "title": "Code of Civil Procedure Article 222",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=222",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "current statute",
+      "provision": "222(2)",
+      "status": "Effective; whole Act last amended 2023-11-29, no newer amendment listed in Chinese history read.",
+      "captures": [
+        "en_statutes4.txt"
+      ]
+    },
+    {
+      "id": "CPC279",
+      "title": "Code of Civil Procedure Article 279",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=279",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "current statute",
+      "provision": "279(1)–(3)",
+      "status": "Effective; whole Act amendment 2023-11-29 did not amend 279.",
+      "captures": [
+        "en_statutes4.txt"
+      ]
+    },
+    {
+      "id": "CPCHIST",
+      "title": "Code of Civil Procedure history",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0010001",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "statute history",
+      "last_amended": "2023-11-29",
+      "status": "Latest listed amendment states promulgation-day commencement; distinguish promulgation from legal effectiveness calculated under Central Regulation Standard Act 13 where relevant.",
+      "captures": [
+        "en_legal_history.txt"
+      ]
+    },
+    {
+      "id": "GPA851",
+      "title": "Government Procurement Act Article 85-1",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030057&flno=85-1",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "current statute",
+      "provision": "85-1(1)–(3)",
+      "last_provision_amended": "2016-01-06",
+      "last_act_amended": "2019-05-22",
+      "status": "Effective; construction and technical services included. Current wording is not the same as the 2007 provision litigated.",
+      "captures": [
+        "en_procurement_altcapture.txt"
+      ]
+    },
+    {
+      "id": "GPAALL",
+      "title": "Government Procurement Act English current text",
+      "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "current statute",
+      "provisions": [
+        "17",
+        "85-1",
+        "114"
+      ],
+      "last_amended": "2019-05-22",
+      "status": "Article 114 specifies amendments effective on promulgation date, subject to general legal effectiveness rule. Chinese text controls.",
+      "captures": [
+        "en_statutes1.txt",
+        "en_statutes2.txt",
+        "en_market_dated_details.txt"
+      ]
+    },
+    {
+      "id": "GPAHIST",
+      "title": "Government Procurement Act history",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=A0030057",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "statute history",
+      "provision": "85-1",
+      "promulgations": [
+        "2007-07-04",
+        "2016-01-06"
+      ],
+      "effective_dates": {
+        "historical_2007": "2007-07-06, expressly stated in Supreme Court explanation",
+        "current_2016": "2016-01-08 is calculation from promulgation 2016-01-06 + Article 114 + Central Regulation Standard Act13; label calculation if used, unnecessary in article body"
+      },
+      "captures": [
+        "en_statutes3.txt",
+        "en-procurement-original-open.txt"
+      ]
+    },
+    {
+      "id": "ARB40",
+      "title": "Arbitration Act Article 40",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020001&flno=40",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "current statute",
+      "provision": "40(1)(2)",
+      "status": "Effective; current Chinese text read; whole Act last amended 2015-12-02.",
+      "captures": [
+        "en_primary_final_supplement.txt"
+      ]
+    },
+    {
+      "id": "CO154",
+      "title": "Company Act Article 154",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "current statute",
+      "provision": "154(1)–(2)",
+      "last_provision_amended": "2013-01-30",
+      "status": "Effective. Separate current codified exception; not established as the sole/retroactive basis of the historical RCA reasoning.",
+      "captures": [
+        "en_primary_final_supplement.txt"
+      ]
+    },
+    {
+      "id": "COHIST",
+      "title": "Company Act history",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0080001",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "statute history",
+      "last_amended": "2025-12-26",
+      "status": "154 amended 2013-01-30. Latest 2025 amendment adds387-1 and amends449;387-1 effective six months after promulgation, not a new154 rule.",
+      "captures": [
+        "en_legal_history.txt"
+      ]
+    },
+    {
+      "id": "CENTRAL13",
+      "title": "Central Regulation Standard Act Article 13",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030133&flno=13",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "current statute",
+      "provision": "13",
+      "status": "Current, effective: when a regulation states promulgation/publication-day commencement, legal effectiveness begins on third day counting from promulgation/publication.",
+      "captures": [
+        "en_rca_later_official.txt"
+      ]
+    },
+    {
+      "id": "GPA2016EXPL",
+      "title": "Taipei government procurement explanation of 2016 amendment",
+      "url": "https://webbid.gov.taipei/News_Content.aspx?n=E2B2AA29377E5291&s=81D235D22BB42810&sms=3D3441C288B9F36F",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "official administrative explanation",
+      "status": "Explains extension to technical services. Page headline abbreviates promulgation/commencement as Jan6; use statutory calculation for exact effectiveness, or omit date beyond promulgation.",
+      "captures": [
+        "en_rca_later_official.txt"
+      ]
+    },
+    {
+      "id": "MKTTRADE",
+      "title": "USTR Taiwan country trade data",
+      "url": "https://ustr.gov/countries-regions/china/taiwan",
+      "jurisdiction": "United States",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "official market data",
+      "data_period": "2025",
+      "page_date": "Not stated in retrieved excerpt",
+      "fact": "2025 estimated goods and services trade US$283.6bn; broad bilateral-commerce context.",
+      "limitations": "Not a measurement of legal service demand, executive hires, acquisition counts or dispute frequency.",
+      "captures": [
+        "en_us_trends.txt"
+      ]
+    },
+    {
+      "id": "MKTINVEST",
+      "title": "USTR fact sheet on reciprocal trade agreement",
+      "url": "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade",
+      "jurisdiction": "United States",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "official announcement",
+      "publication_date": "2026-02 (month established by official URL/category; exact day not independently established in the retrieved page)",
+      "event_date": "2026-01-15 AIT–TECRO investment MOU referenced",
+      "fact": "Announcement describes facilitation of two-way investment.",
+      "limitations": "No current tariff claim and no statement that announced reciprocal agreement completed domestic formalities or entered force.",
+      "captures": [
+        "en_us_trends.txt",
+        "en_market_dated_details.txt"
+      ]
+    },
+    {
+      "id": "MKTENERGY",
+      "title": "ITA Taiwan Energy Industry",
+      "url": "https://www.trade.gov/market-intelligence/taiwan-energy-industry",
+      "jurisdiction": "United States",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "official market intelligence",
+      "publication_date": "2026-09-30",
+      "fact": "Forecast energy/grid buildout and late-2026/2027 planned tenders; identifies opportunities for US firms.",
+      "limitations": "Forecast not awarded contract; vendor eligibility and procurement category must be checked separately.",
+      "captures": [
+        "en_case_and_market_detail.txt",
+        "en_final_market_case.txt"
+      ]
+    },
+    {
+      "id": "MKTPUBLIC",
+      "title": "ITA Taiwan Selling to the Public Sector",
+      "url": "https://www.trade.gov/country-commercial-guides/taiwan-selling-public-sector",
+      "jurisdiction": "United States",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "official commercial guide",
+      "publication_date": "2025-12-10",
+      "fact": "US firms can participate in covered procurement under relevant requirements.",
+      "limitations": "Do not reuse approximate guide thresholds as 2026 current amounts or promise eligibility in every tender.",
+      "captures": [
+        "en_case_and_market_detail.txt",
+        "en-market-query-batch-2.txt"
+      ]
+    },
+    {
+      "id": "MKTFILM",
+      "title": "TAICCA TCCF MARKET announcement",
+      "url": "https://en.taicca.tw/news/detail/222",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "official agency event announcement",
+      "publication_date": "2026-09-22",
+      "event_date": "2026-11-06 to 2026-11-09 planned",
+      "fact": "107 exhibitors from seven listed countries; focus on film/TV/IP rights transactions; international-buyer screenings.",
+      "limitations": "US is not among listed exhibitor countries. No established US attendance or buyer demand; planned event, not completed transactions.",
+      "captures": [
+        "en_final_market_case.txt",
+        "en_market_dated_details.txt"
+      ]
+    },
+    {
+      "id": "FIRMSERV",
+      "title": "Firm services in English",
+      "url": "https://tseng-law.com/en/services",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "firm-owned service description",
+      "status": "Checked live in this session; corroborated shared firm-profile.md",
+      "limitations": "Taiwan service scope only; no US/BVI licensure, office, cited-case representation or outcomes inferred.",
+      "captures": []
+    },
+    {
+      "id": "FIRMCONTACT",
+      "title": "Firm English consultation contact",
+      "url": "https://tseng-law.com/en/contact",
+      "jurisdiction": "Taiwan",
+      "retrieved": "2026-10-25",
+      "opened_and_read": true,
+      "type": "firm-owned contact description",
+      "status": "English consultations Taipei/video; wei@hoveringlaw.com.tw verified.",
+      "limitations": "Ordinary initial inquiry; no sensitive original identity/bank document request.",
+      "captures": []
+    }
+  ],
+  "claims": [
+    {
+      "article": 914,
+      "id": "914-party",
+      "claim": "Canadian executive contracted with Taiwan company for US subsidiary CEO role and offshore-share bonus.",
+      "sources": [
+        "CASE914"
+      ],
+      "pinpoint": "Facts/background; reasons VII."
+    },
+    {
+      "article": 914,
+      "id": "914-debtor",
+      "claim": "Taiwan employer owed the performance bonus notwithstanding offshore issuer wording, based on contract interpretation and prior bonus practice.",
+      "sources": [
+        "CASE914"
+      ],
+      "pinpoint": "VII(2), web text L105–126"
+    },
+    {
+      "article": 914,
+      "id": "914-rights",
+      "claim": "On this record beneficial shareholder rights existed before registration; formal registration date alone did not establish blocked exercise or compensable delay loss.",
+      "sources": [
+        "CASE914"
+      ],
+      "pinpoint": "VII(3), L127–143",
+      "limits": "Not a current BVI-law statement."
+    },
+    {
+      "article": 914,
+      "id": "914-loss",
+      "claim": "US$338,310 loss failed: employer's alleged causative acts not proved; low offer not net-value proof; prior access/no sale plan relevant.",
+      "sources": [
+        "CASE914",
+        "CIV216",
+        "CIV231"
+      ],
+      "pinpoint": "VII(4), L145–153"
+    },
+    {
+      "article": 914,
+      "id": "914-exit",
+      "claim": "US$120,000 departure claim failed contractual notice/cure and good-reason conditions.",
+      "sources": [
+        "CASE914"
+      ],
+      "pinpoint": "VIII, L155–166",
+      "limits": "30-day and45-day periods are contract-specific."
+    },
+    {
+      "article": 914,
+      "id": "914-result",
+      "claim": "Appeal and additional claim dismissed, including provisional enforcement request.",
+      "sources": [
+        "CASE914"
+      ],
+      "pinpoint": "Disposition; IX–X,L167–182",
+      "limits": "Subsequent finality unconfirmed."
+    },
+    {
+      "article": 915,
+      "id": "915-facts",
+      "claim": "Money/time/money relief changes; no proposal on returned money claim; NT$44,417,150 award later annulled.",
+      "sources": [
+        "CASE915"
+      ],
+      "pinpoint": "肆三; 伍,L22–24"
+    },
+    {
+      "article": 915,
+      "id": "915-holding",
+      "claim": "Statutory deemed arbitration consent required recommendation/proposal on the concrete performance dispute and mediation failure from entity disagreement.",
+      "sources": [
+        "CASE915",
+        "GPA851"
+      ],
+      "pinpoint": "陸三;柒,L39–46"
+    },
+    {
+      "article": 915,
+      "id": "915-result",
+      "claim": "Supreme Court dismissed contractor appeal, preserving annulment; official explanation says final.",
+      "sources": [
+        "CASE915",
+        "ARB40"
+      ],
+      "pinpoint": "伍,柒,L24,45–46"
+    },
+    {
+      "article": 915,
+      "id": "915-temporal",
+      "claim": "Supreme Court disagreed with lower court's temporal analysis but maintained result.",
+      "sources": [
+        "CASE915"
+      ],
+      "pinpoint": "陸一,L27–32;柒二"
+    },
+    {
+      "article": 915,
+      "id": "915-current",
+      "claim": "Current85-1 includes technical services as well as construction; old case should not be relabeled as technical services.",
+      "sources": [
+        "GPA851",
+        "GPAHIST",
+        "GPA2016EXPL"
+      ],
+      "pinpoint": "85-1(2)"
+    },
+    {
+      "article": 916,
+      "id": "916-pattern",
+      "claim": "Official explanation connects operational control, pollution knowledge from environmental baseline work, failure to inform/remedy and capital reduction/offshore asset transfers.",
+      "sources": [
+        "CASE916"
+      ],
+      "pinpoint": "肆二2,L27–29"
+    },
+    {
+      "article": 916,
+      "id": "916-liability",
+      "claim": "Relevant parent-liability reasoning upheld under veil-piercing principle; 不真正連帶責任 described.",
+      "sources": [
+        "CASE916"
+      ],
+      "pinpoint": "L29 end",
+      "limits": "No automatic parent liability from ownership alone; do not state154(2)sole retroactive basis."
+    },
+    {
+      "article": 916,
+      "id": "916-result",
+      "claim": "246 remanded claimant portions; appeals concerning262 dismissed.",
+      "sources": [
+        "CASE916"
+      ],
+      "pinpoint": "伍,L31–40",
+      "limits": "No overall RCA finality or present compensation total."
+    },
+    {
+      "article": 916,
+      "id": "916-proof",
+      "claim": "Court allowed adjusted causation proof and rejected abusive limitations defense on this extensive exposure/concealment record.",
+      "sources": [
+        "CASE916"
+      ],
+      "pinpoint": "肆二1 and3,L26,30",
+      "limits": "Not universal tort proof/barring of all limitation defenses."
+    },
+    {
+      "article": 916,
+      "id": "916-current",
+      "claim": "Current Company154(2) creates qualified shareholder liability for severe necessary cases of abuse of corporate personality causing specific debt and evident difficulty paying.",
+      "sources": [
+        "CO154",
+        "COHIST"
+      ],
+      "pinpoint": "154(2)",
+      "limits": "Optional separate current-law context, not substitute for explaining2018facts."
+    },
+    {
+      "article": 917,
+      "id": "917-procedure",
+      "claim": "Former GM loan action with assigned licensing damages setoffs after third remand.",
+      "sources": [
+        "CASE917"
+      ],
+      "pinpoint": "Preamble,L28; facts and reasonsIV"
+    },
+    {
+      "article": 917,
+      "id": "917-entity",
+      "claim": "Later platform display/rights in another group company did not prove the offshore contracting entity had obtained the license.",
+      "sources": [
+        "CASE917"
+      ],
+      "pinpoint": "IV(2)(3),IV(3)(2),L57,62"
+    },
+    {
+      "article": 917,
+      "id": "917-admission",
+      "claim": "Earlier admission concerning8titles bound party; cited US declaratory judgment did not prove admission false.",
+      "sources": [
+        "CASE917",
+        "CPC279"
+      ],
+      "pinpoint": "IV(2)(3),L57",
+      "limits": "Not judgment recognition/refusal holding; underlying US court record not independently reviewed."
+    },
+    {
+      "article": 917,
+      "id": "917-estimate",
+      "claim": "Court estimated105000USD for two films after loss proved; Article222(2)does not dispense with proving existence of damage.",
+      "sources": [
+        "CASE917",
+        "CPC222"
+      ],
+      "pinpoint": "IV(2)(4),L58"
+    },
+    {
+      "article": 917,
+      "id": "917-result",
+      "claim": "395500USD less105000USD and269300USD left21200USD plus5%annual interest from2013-02-27.",
+      "sources": [
+        "CASE917"
+      ],
+      "pinpoint": "IV(4),V,L64–65",
+      "limits": "Case-specific result; no need for all figures in final article; finality unconfirmed."
+    }
+  ],
+  "measured_demand": "Unknown. No search volume, rankings, clicks, leads or conversion data available.",
+  "ranking_basis": "Editorial hypothesis: concrete buyer decision, verified distinctive case, current official transaction context, gap versus current EN inventory.",
+  "search_observation_file": "en-search-observations.json",
+  "inventory_file": "en-inventory.json",
+  "primary_unresolved": [
+    {
+      "case": "Taichung114勞訴241,2026-08-28",
+      "status": "Held; official full text not successfully read, despite searchable fragments. Appeal fee ruling discovered."
+    },
+    {
+      "case": "Supreme110台上1563,2022-02-24",
+      "status": "Held; official PDF blocked; CAA institutional secondary summary read but insufficient primary."
+    },
+    {
+      "case": "Supreme100台上42,2011-01-13",
+      "status": "Held; official PDF located but substantive pages not read."
+    },
+    {
+      "case": "Supreme114台上1429,2025-09-24",
+      "status": "Held; official text not read. Do not confuse114台上1578."
+    },
+    {
+      "case": "Supreme112台上2503,2024-05-16",
+      "status": "Not selected; official judgment read, but potentially material sequel114台上2211 not primary-read."
+    },
+    {
+      "case": "Supreme111台上1828 RCA later wave",
+      "url": "https://www.judicial.gov.tw/tw/cp-1888-1200660-d5aa7-1.html",
+      "status": "Official search result found; open timed out; not used to claim a later holding. Supports caution to avoid overall2018finality, pending full source check."
+    }
+  ],
+  "excluded_duplicate": {
+    "case": "TaiwanHighCourt112重上684,2026-04-29",
+    "reason": "Official judgment opened but exact case already discussed by EN651."
+  },
+  "unknowns": [
+    "Actual client demand and conversion.",
+    "Finality or later appeal of CASE914 and CASE917.",
+    "A complete current procedural map of all RCA waves.",
+    "US attendance or buying at planned2026TCCF.",
+    "Whether any individual proposed project falls within GPA85-1 construction/technical-services category."
+  ]
+}

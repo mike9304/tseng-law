@@ -1,0 +1,196 @@
+{
+  "reviewer": "/root/review_ko_case_trends",
+  "reviewer_is_author": false,
+  "date": "2026-10-25",
+  "status": "final_review_complete_PASS; see cases-ko-locale-final.md and final.json",
+  "comparators": [
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/704-taiwan-arc-first-application.md",
+      "sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1",
+      "published": "2026-10-24",
+      "opening": [
+        "거류비자로 대만에 입국해 거류 허가를 받았다면 입국 다음 날부터 30일 안에 외국인 거류증(ARC)을 신청해야 합니다. 신청처는 내정부 이민서입니다. 유효한 취업금카드처럼 ARC 기능이 포함된 증명을 이미 가진 사람은 별도 신청을 하지 않는 예외가 있습니다([입출국및이민법 제22조 제2항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22)).",
+        "대만에 들어온 뒤 거류비자를 새로 받았다면 [외교부 영사사무국(BOCA) 안내](https://www.boca.gov.tw/fp-398-723-7b71f-1.html)에 따라 그 비자의 발급일부터 30일 안에 신청합니다."
+      ],
+      "headings": [
+        "## 여권·사진·주소 증명과 거류 목적 서류",
+        "## 한국에서 발급받는 서류의 인증과 번역",
+        "## 온라인으로 낼 수 있는 신청과 방문해야 하는 신청",
+        "## 수수료를 내면 얼마 동안 거류할 수 있나",
+        "## 심사기간과 카드 수령",
+        "## 공식 자료"
+      ],
+      "ending": [
+        "[0929 학생 온라인 수령 안내](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news)는 승인일부터 5근무일 안에 납부하도록 정합니다. 유효기간 6개월 이하의 전자 ARC는 납부 후 내려받아 인쇄합니다. IC 카드형이면 온라인 납부 영수증을 인쇄해, 납부 완료 3근무일 뒤 신청 때 지정한 이민서 서비스센터에서 수령합니다. 이 납부·수령 일정은 학생 온라인 신청에 적용됩니다.",
+        "ARC를 받았더라도 취업허가 또는 법정 면제의 적용 범위 안에서 일해야 합니다([취업서비스법 제43조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43)). 접수번호, 허가서와 제출 서류 사본을 보관해 두면 다음 연장 신청에서 기존 거류 근거와 제출 내역을 설명할 자료로 쓸 수 있습니다.",
+        "확인일: 2026년 10월 24일. 대만법상 외국인의 일반적인 ARC 신청 안내입니다. 중국대륙·홍콩·마카오 주민과 대만 무호적국민에게는 별도 체계가 적용됩니다."
+      ]
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a",
+      "published": "2026-10-24",
+      "opening": [
+        "대만 회사의 채용 제안을 받았다면 무비자로 먼저 입국해도 될까요? 법률상 외국전문인재·특정전문인재에 해당하고 전문 업무 허가를 받았거나 허가 면제 대상이라면, 무비자·방문비자로 입국한 뒤 이민서에 직접 거류를 신청할 수 있습니다([외국전문인재 유치·고용법 제16조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16)).",
+        "중국어 연수를 계획한다면 출국 전에 어학 목적의 방문비자를 준비해야 합니다. 인정된 교육기관에 등록했더라도 입국 때의 비자 목적이 다르면 어학 거류 전환에 제한이 있습니다([입출국및이민법 제23조 제4항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23), [BOCA 중국어 학습 안내](https://www.boca.gov.tw/fp-158-260-9690c-2.html))."
+      ],
+      "headings": [
+        "## 비자를 받는 곳과 거류를 신청하는 곳",
+        "## 채용 제안과 취업허가",
+        "## 대학 입학허가를 받은 경우",
+        "## 중국어 연수생의 신청 시기",
+        "## 배우자·자녀와 함께 지내기 위한 가족 거류",
+        "## 고용주가 정해지기 전이라면 취업금카드",
+        "## 공식 자료"
+      ],
+      "ending": [
+        "[취업금카드](https://goldcard.nat.gov.tw/en/about/)에는 취업허가·거류비자·ARC·재입국허가 기능이 함께 들어 있습니다. 고용주 없이도 신청 가능합니다. 다만 분야별 자격 심사를 거치며, 신청 분야와 체류의 관계는 [대만 취업금카드 안내](/ko/columns/taiwan-employment-gold-card)에서 다룹니다. 창업을 근거로 체류하려는 사람에게는 이민서 [거류 신청 목록의 0932 창업가 안내](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/)에 따른 자격과 제출 절차가 있습니다.",
+        "입국 자격을 정했다면 [첫 ARC 신청 절차](/ko/columns/taiwan-arc-first-application)에서 서류와 접수처를 준비합니다. 이미 ARC가 있는 사람의 [갱신·정보변경·재입국](/ko/columns/taiwan-arc-renewal-changes-reentry)은 이어지는 별도 절차입니다. 출국 일정을 잡기 전에는 여권과 입국 예정 비자, 취업허가서·입학허가서·가족관계증명 중 자신의 거류 근거가 되는 문서를 접수기관에 제시해 신청할 절차를 정해 둡니다.",
+        "확인일: 2026년 10월 24일. 대만법상 외국인의 일반 체류 경로를 다루며, 개별 신청 자격은 국적·비자 표기·허가 이력에 따라 달라집니다. 중국대륙·홍콩·마카오 주민과 대만 무호적국민에게는 별도 입국 체계가 적용됩니다."
+      ]
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc",
+      "published": "2026-10-24",
+      "opening": [
+        "이사했다면 ARC 만료일과 관계없이 이사 다음 날부터 30일 안에 이민서에 주소 변경등록을 신청해야 합니다. 근무장소 변경에도 같은 기한이 적용됩니다([입출국및이민법 제31조 제6항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31)).",
+        "퇴사나 이혼으로 거류 근거가 사라지면 이민서는 그 사람의 허가를 폐지하고 ARC를 말소하지만, 법에 정한 사정이 있다면 계속 거류를 허가할 수 있습니다([같은 법 제31조 제4항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31)). 카드에 인쇄된 만료일이 남아 있다고 그날까지 체류가 보장되지는 않습니다."
+      ],
+      "headings": [
+        "## 이사·근무장소·고용주가 바뀌었을 때",
+        "## 같은 사유로 거류를 연장하는 경우",
+        "## 졸업·퇴사·이혼으로 거류 사유가 달라졌을 때",
+        "## 여권 갱신과 ARC 분실",
+        "## 갱신 중 한국에 다녀와야 한다면",
+        "## 공식 자료"
+      ],
+      "ending": [
+        "만료일을 이미 넘겼다면 이민서에 지체 없이 처리방법을 문의합니다. [제31조 제3항](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31)의 재신청은 조건이 있는 예외입니다. 통상적인 유예기간으로 생각해 기다려서는 안 됩니다. 문의 때는 카드 만료일, 기존 거류 사유, 이사·퇴사 등 변경이 생긴 날짜를 전달합니다.",
+        "처음 카드를 받는 절차는 [첫 ARC 신청](/ko/columns/taiwan-arc-first-application), 입국 목적에 따른 자격은 [취업·유학·가족 체류](/ko/columns/taiwan-visa-residence-work-study-family)에서 다룹니다. 사유변경에 관한 법률 검토가 필요하다면 [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)로 변경 경위와 남은 기한을 간단히 전달할 수 있습니다. 최초 문의에는 여권번호나 신분서류 사본을 보내지 않아도 됩니다.",
+        "확인일: 2026년 10월 24일. 외국인의 일반 ARC 유지 절차에 관한 정보이며, 개별 사유변경의 허용 여부나 재입국을 확정하는 안내는 아닙니다. 중국대륙·홍콩·마카오 주민과 대만 무호적국민에게는 별도 체계가 적용됩니다."
+      ]
+    }
+  ],
+  "images": [
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/906-case-trends-20261025.webp",
+      "sha256": "0c4e4598ca2c72c261b4b1352712d6c21e1921064daf71ee59b758d8a915b093",
+      "visual_inspected": true,
+      "observation": "무지 표지 책과 인쇄 설비·서류 봉투. 실존 당사자·로고·읽을 수 있는 문구 없음."
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/907-case-trends-20261025.webp",
+      "sha256": "1b9512e62f4c0f27e10c3a86f3cf020b3a4a787e0a00b4177cdcd5d9bb22a338",
+      "visual_inspected": true,
+      "observation": "간판이 빈 의류 매장과 진열대. 상표·회사명·실존 인물 없음."
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/908-case-trends-20261025.webp",
+      "sha256": "af46717e0b3da9c1aa25c7575e103a67b66317195c333b4398e441ae3befb392",
+      "visual_inspected": true,
+      "observation": "해 질 무렵 창가 사무 책상, 노트북·스마트폰·수첩. 스마트폰 표시는 문자 판독 불가."
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/909-case-trends-20261025.webp",
+      "sha256": "e17c318142deaac700fdea9bc48bd19d1821ff5191b8b19d87364d42078fbf14",
+      "visual_inspected": true,
+      "observation": "여행 가방·무지 여행 수첩·종이와 봉투. 실제 계약·항공권 표시나 개인식별정보 없음."
+    }
+  ],
+  "instruction_limit": "~/agent-library/knowledge/editorial-voice.md absent; current repository EDITORIAL-VOICE.md used as authorized local copy.",
+  "independently_opened_official_sources": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=37",
+      "result": "현행 이용허락 범위·불명확 부분 추정·독점 허락의 자기 명의 소송 및 권리자 제한 확인. 미시행 경고는37조와 무관."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=36",
+      "result": "현행 제36조 제1항 제2호와 제2항 확인."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=J0070001",
+      "result": "현행68조의 구법 링크를 클릭한 뒤68·69·70조 직접 확인.2022년68/70개정은 미시행."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070001",
+      "result": "제36조 개정2024-05-01 시행 확인."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=38",
+      "result": "출근기록의 사용자 동의 근로 추정 확인."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=33",
+      "result": "정형화 근로계약의 현저히 불공정한 증거계약 근로자 불구속 확인."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=30",
+      "result": "기록5년 보관·분단위 기록·근로자 사본 요청 거절금지 확인."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=514-12",
+      "result": "여행 종료/종료 예정부터1년, 해당 절 비용/손해배상/대납 상환 범위 확인."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=130",
+      "result": "청구 후6개월 내 제소하지 않으면 청구에 따른 시효 중단 없던 것으로 확인."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=144",
+      "result": "시효 완성 후 채무자 지급 거절권 확인."
+    },
+    {
+      "url": "https://welcon.kocca.kr/en/info/business/1957981",
+      "result": "2026-06-29 공식 콘텐츠 해외진출 보도자료 확인."
+    },
+    {
+      "url": "https://www.kotra.or.kr/upload/2026/06/18/BM202606180000099826_0.pdf",
+      "result": "2026 하반기 대만 백화점/쇼핑몰 한국상품전 계획과 테스트마케팅 확인. 완료 매출자료 아님."
+    },
+    {
+      "url": "https://www.worldjob.or.kr/advnc/epmtLink.do?joCrtfcNo=E20260629006&joCrtfcDsp=1&joCrtfcDspSn=1&menuId=1000002033",
+      "result": "2026-06-30~07-31 실제 대만 Technical Sales/FAE 공고 한국본사 실시간 소통 직무 확인. 근로분쟁 증거 아님."
+    },
+    {
+      "url": "https://admin.taiwan.net.tw/News/NewsTravel?a=35&id=36518",
+      "result": "2026-10-08 재방문자 자유여행 캠페인 등록시장 한국 포함 확인. 실제 입국/환불분쟁 증가 자료 아님."
+    },
+    {
+      "url": "https://tseng-law.com/ko/services",
+      "result": "IP·노동·민사/소비자 분쟁서비스 확인."
+    },
+    {
+      "url": "https://tseng-law.com/ko/contact",
+      "result": "wei@hoveringlaw.com.tw·한국어 상담 가능·초기 민감정보 제외 확인."
+    }
+  ],
+  "court_read_evidence": {
+    "J1": "공식 보관본60줄 전문 확인",
+    "J2": "공식 보관본 주문41–60/핵심121–247/299–340/465–490/610–634 확인. 미열람공백은 연구장부대로 보존. 재열람260 timeout.",
+    "J3": "공식 보관본82줄 전문 확인",
+    "J4": "공식 보관본0–46 본안이유 포함 확인. 말미재열람65 timeout."
+  },
+  "nearby_topic_comparison": [
+    {
+      "id": 255,
+      "published": "2026-10-06",
+      "scope": "직원/프리랜서 창작물의 최초 권리 귀속 중심.906은 한국 출판사의 기존 판권 수출 계약·독점 허락·고소권 적격 중심으로 구별해야 함."
+    },
+    {
+      "id": 91,
+      "published": "2026-10-03",
+      "scope": "총판의 상표 자기명의 선점·등록 취소 경로.907은 진품 판매 매장과 광고의 실제 표시 태양 문제."
+    },
+    {
+      "id": 207,
+      "published": "2026-10-04",
+      "scope": "교대·연장근로 제도 및 원격대응 근로시간.908은 당사자 기록과 판단을 통해 초과근무 입증 문제를 추가해야 함."
+    },
+    {
+      "id": 58,
+      "published": "2026-10-01",
+      "scope": "일반 온라인거래 철회·민원·소액절차.909는 관광계약 특유의1년 시효와청구 후6개월 제소 조건 추가."
+    }
+  ]
+}

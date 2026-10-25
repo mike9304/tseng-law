@@ -1,0 +1,323 @@
+Queries executed 2026-10-25
+[
+  "2026 TAICCA United States film investment TCCF October official",
+  "2026 Taiwan streaming United States licensing site:taicca.tw",
+  "2026 Taiwan film American content investment site:trade.gov",
+  "\"106年度台上字第723號\" \"106年7月\""
+]
+
+Script completed
+Wall time 2.4 seconds
+Output:
+
+司法院公報　第59卷　第10期　2017年10月 (https://www.judicial.gov.tw/tw/communique/dl-4302-efd0d9e996c44e6db9f30999b8ebe050.html)
+citeturn1108search12 [wordlim: 200] Published: 9.0 years ago; Crawled: 9.0 years ago; 106年度台上字第723號106年7月12日
+司法院公報　第59卷　第10期　2017年10月
+
+第478條第2項，判決如主文。
+
+最高法院民事第六庭  
+審判長法官　沈　方　維  
+法官　魏　大　暉  
+法官　周　玫　芳  
+法官　梁　玉　芬  
+法官　詹　文　馨  
+
+最高法院民事判決  
+106年度台上字第723號  
+106年7月12日
+
+(1)裁判要旨：
+
+機關與廠商因履約爭議未能達成協議者，得以向採購申訴審議委員會申請調解、向仲裁機構提付仲裁之方式處理。前揭調解屬廠商申請者，機關不得拒絕。工程及技術服務採購之調解，採購申訴審議委員會應提出調解建議或調解方案，其因機關不同意致調解不成立者，廠商提付仲裁，機關不得拒絕，為修正後政府採購法第85條之1第1、2項所明定。是依系爭新法規定，上訴人即廠商因履約爭議未能與被上訴人即機關達成協議，已依該規定踐行申請調解程序，嗣因機關不同意審議委員會所提出之調解建議或調解方案，致調解不成立而提付仲裁時，機關依法不得拒絕，即以法律規定取代機關之同意仲裁意思，而生擬制合意提付仲裁之效力。是原審認系爭工程之履約爭議，無系爭新法規定之適用，自有可議。且亦難認被上訴人有何信賴事實及利益，而有信賴保護原則之適用。至憲法有關平等權之保障，其內涵非指絕對、機械之形式上平等，而係保障人民在法律上地位之實質平等；立法機關基於憲法之價值體系及立法目的，自得斟酌規範事物性質之差異而為合理之差別對待。政府採購法有關履約爭議之救濟途徑，非僅仲裁一端，修正後第85條之1第2項有關廠商符合
+
+164--------------------------------------------------------------------------------
+最高法院106年度台上字第723號民事判決新聞稿 (司法最新動態) (https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693)
+citeturn1108search0 [wordlim: 200] Published: 9.3 years ago; Crawled: last month;   *  最高法院106年度台上字第723號民事判決新聞稿（106-民 07）[1].pdf ... 一、政府採購法第85條之1第2項於96年7月6日增訂生效的後段（廠商提付仲裁，機關不得拒絕）規定，是否限於在該規定生效後申請調解的案件才有適用？（
+司法最新動態
+
+公 告 日：  | 106.07.12 Image: 分享至 facebook Image: 分享至 twitter Image: 分享至 plurk Image: 分享至 line
+發布單位：  | 最高法院
+標　　題：  | 最高法院106年度台上字第723號民事判決新聞稿
+檔案下載：  | 
+
+  *  最高法院106年度台上字第723號民事判決新聞稿（106-民 07）[1].pdf
+
+# 最高法院106年度台上字第723號民事判決新聞稿
+
+最高法院106年度台上字第723號民事判決新聞稿
+壹、當事人
+一、上訴人（第一審被告，下稱廠商）　金成豐營造股份有限公司
+二、被上訴人（第一審原告，下稱機關）　國立臺灣大學醫學院附設醫院北護分院
+貳、案由
+　　撤銷仲裁判斷事件
+參、審判過程
+一、第一審駁回機關請求撤銷仲裁判斷之訴。機關上訴。
+二、第二審改判：撤銷仲裁判斷。廠商上訴。
+三、本院於民國106年6月30日行言詞辯論。
+肆、本件法律上爭點：
+一、政府採購法第85條之1第2項於96年7月6日增訂生效的後段（廠商提付仲裁，機關不得拒絕）規定，是否限於在該規定生效後申請調解的案件才有適用？（法務部及第二審均認為肯定，即以申請日為判斷新舊法適用的標準；行政院公共工程委員會認為，以機關不同意調解建議或方案函送達審議委員會之日，為判斷標準）
+二、政府採購法第85條之1第2項於96年7月6日增訂生效的後段，僅限制機關在一定條件下，必須接受廠商的提付仲裁而不得起訴，未對廠商為相同限制，是否有違平等原則？
+--------------------------------------------------------------------------------
+TAICCA 文化內容策進院 (https://en.taicca.tw/news/detail/222)
+citeturn1108search1 [wordlim: 200] Published: last month; Crawled: yesterday; At the heart of industry transactions is TCCF MARKET, which this year will bring together 107 exhibitors from seven countries—Taiwan, South Korea, Thailand, Japan, Singapore, France, and the Philippines. ... Starring LIU Kuan-ting, Angel AQUINO, Esther HUANG, Kaiser CHUANG, YU Tzu-yu , and SHIH Ming-shuai, the film was selected for the 2025 Tokyo International Film Festival and received multiple nominations at the 2026 Taipei Film Awards, including Best Actress. ... These include Nippon TV, Japan’s first commercial television broadcaster; GMA Network, one of the Philippines’ largest commercial television networks; French children’s animation companies Madgic Distribution and Zephyr Animation; BASH, developer of the South Korean healing character IP WASHZ; and Thailand’s Chada Entertainment, founded by Taiwan-based veteran producer Shee Heng KUEK. ... These include Sanlih E-Television, Videoland, the Chinese Animation and Comic Publishers Association (CCPA), and channels under the Taiwan Broadcasting System such as Public Television Service and Hakka TV.
+
+  *   *   *   *   *   *   *   *   *   *   * # TCCF MARKET to bring together the global content industry Spotlight Screenings target international buyers to propel Taiwan content onto the world stage
+
+September 22, 2026
+
+The highly anticipated 2026 Taiwan Creative Content Fest (TCCF) is set to take place this November. At the heart of industry transactions is TCCF MARKET, which this year will bring together 107 exhibitors from seven countries—Taiwan, South Korea, Thailand, Japan, Singapore, France, and the Philippines. Focusing on rights transactions for international film and television content and promising IPs, the event continues to serve as a key platform connecting Taiwan with the global content industry. In particular, the number of exhibitors in IP categories such as publishing, comics, and characters has increased by 13% from last year. This reflects the continued development of global IPs with established fan bases into screen adaptations and diverse licensing opportunities, an increasingly prominent focus in MARKET exhibitors’ strategies.
+Other returning exhibitors include Singapore’s Mediacorp and Japan's TV Tokyo.
+
+On the domestic front, 69 Taiwanese exhibitors will participate this year, spanning a diverse range of sectors including television, animation, publishing, gaming, and content marketing. These include Sanlih E-Television, Videoland, the Chinese Animation and Comic Publishers Association (CCPA), and channels under the Taiwan Broadcasting System such as Public Television Service and Hakka TV. First-time exhibitors include STR Network, Joint Journey Creative, So-net Entertainment Taiwan, Gamania, and Hope Content Marketing, reflecting the breadth of Taiwan’s content industry ecosystem.
+
+ 
+
+TCCF MARKET will continue to focus on five major aspects—Copyright Transaction Zone, Production Resource Zone, Animation & Visual Technologies Zone, National Pavilions, and Industry Press Conferences—bringing together production, distribution, and investment professionals across sectors such as television, animation, gaming, and publishing to promote IP adaptation and international collaboration.
+
+The 2026 TCCF will take place from November 6 to 9 at Taipei Nangang Exhibition Center, Hall 2, 7F. For the full list of exhibitors, detailed information on TCCF MARKET events, and how to register for matchmaking activities, please stay tuned to the TCCF official website and social media channels.--------------------------------------------------------------------------------
+TAICCA 文化內容策進院 (https://en.taicca.tw/news/detail/220)
+citeturn1108search2 [wordlim: 200] Published: last month; Crawled: 3 weeks ago; In addition to a significant increase in submissions from international partners such as South Korea, Taiwanese teams also delivered a strong showing, with international co-productions led by or involving Taiwan accounting for more than 60% of selected projects. ... The Taiwan-Japan co-production The Song About Green brings together Japan Academy Film Prize-winning screenwriter MUKAI Kōsuke and acclaimed director YAMASHITA Nobuhiro. ... Moreover, Taxi Driver, adapted from the hit Korean series of the same name, is being reimagined as a Taiwanese vigilante justice story by the directing team behind The Victims’ Game. ... The 2026 Taiwan Creative Content Fest (TCCF) will take place from November 6 to 9 at Taipei Nangang Exhibition Center, Hall 2, 7F.
+
+  *   *   *   *   *   *   *   *   *   *   * # TCCF PITCHING unveils official selections! International co-productions top 60% as Taiwan becomes key Asian co-production hub
+
+September 02, 2026
+
+2026 TCCF PITCHING today (September 2) announced its lineup of selected projects. This year’s selections demonstrate that international co-productions have become a defining trend across the global film and television industry, while also reflecting the results of TAICCA’s efforts to promote international collaboration over the past two years. In addition to a significant increase in submissions from international partners such as South Korea, Taiwanese teams also delivered a strong showing, with international co-productions led by or involving Taiwan accounting for more than 60% of selected projects. This increasingly global landscape of collaboration further underscores Taiwan’s emergence as a key Asian hub for film and television co-productions.
+
+Notably, this year’s selections also showcase the impressive potential of original IPs for cross-media adaptation. The feature film project A Sketch in Scarlet and series project Leaf and Tree originated as acclaimed novels previously selected for TCCF’s Story segment. Now moving beyond the written word into screen development, both have been selected to pitch in this year’s Project segment, demonstrating their strong potential to be transformed into high-quality productions. Their journey from award-winning works of fiction to screen projects not only highlights TCCF’s strength as a core platform for cross-sector collaboration, but also generates considerable market anticipation for their eventual adaptations.
+
+New to TCCF PITCHING this year, each of the four main pitching sessions will offer its own major prize of at least USD 30,000, expanding on the previous structure centered around a single top prize contested across all four sessions. Together, the sponsored awards bring the total prize pool to more than TWD 10 million. Selected teams will also be eligible to apply for up to TWD 3 million in early-stage development support through TAICCA’s Creative Content Development Program, providing a powerful boost to Taiwanese film and television projects seeking access to international funding.
+
+TCCF PITCHING’s Story segment brings together standout works across two categories: Fiction & Non-Fiction and Comics. In the Fiction & Non-Fiction session, author LIU Ka-shiang’s Alpha Scorpii in summer : Tadao Kano’s experience growing up in Taiwan recounts the remarkable life of a naturalist during the Japanese colonial era, while author Kevin CHEN’s latest novel, The Three Witches of Shetou, unfolds against the backdrop of Taiwan’s Changhua County. The Comics session likewise showcases a diverse range of subject matter and international visibility. Op.9 The Swan, a rare example of Taiwanese science fiction exploring the value of life, saw its audio drama adaptation win Bronze at the 2026 New York Festivals Radio Awards. Underdog Reborn, the first webtoon adapted from PILI Puppetry, received an Honorable Mention in the Comics Category of the 2026 Best IP Awards.
+
+ 
+
+Born for the Spotlight director YEN Yi-wen, a jury member for this year’s Story segment, said that each work offers a glimpse into the questions about life that its creator is most eager to explore at this moment. KANO producer HSU Kuo-lun, meanwhile, said he was particularly drawn to adaptation projects, noting that compelling characterization is the key to dramatic tension.
+
+ 
+
+The 2026 Taiwan Creative Content Fest (TCCF) will take place from November 6 to 9 at Taipei Nangang Exhibition Center, Hall 2, 7F. The event aims to help these outstanding projects continue to shine by connecting them with international collaboration opportunities across production, investment, sales, and distribution.
+
+See below for the full list of selected projects.
+
+ImageImage
+
+ 
+
+ImageImageImage
+
+ 
+
+ImageImageImage--------------------------------------------------------------------------------
+TCCF | YOUR BEST PARTNER IN ASIA (https://www.tccf.tw/en/pitching/taicca_schoolshowcase)
+citeturn1108search3 [wordlim: 200] Crawled: 4 days ago; The event will also feature an Award Ceremony for the 7th Cohort of the TAICCA Accelerator, followed by Networking Cocktails to unlock further possibilities for collaboration and investment. ... TAICCA School has partnered with GTist, the top production company behind “Our Blues” (2022) and “Teach You a Lesson” (2026), to launch the IP-to-Series Lab. ... Through our mentorship-based training programs, our support covers diverse sectors including feature film, series, non-fiction, and animation, as well as comic creation and music management.
+
+# TAICCA SCHOOL SHOWCASE
+
+2026.10.05
+
+To precisely connect investors with market resources, TAICCA School will host three major pitching events: "TAICCA ACCELERATOR DEMO DAY," "Serial Bridges Asia: International Series Pitching" and "IP-to-Series Pitching," dedicated to deepening content development capabilities. Together, these events will comprehensively showcase the innovative potential and commercial momentum of Taiwan's cultural content.
+
+### TAICCA ACCELERATOR DEMO DAY
+
+The "TAICCA Accelerator DEMO DAY" invites investors and industry partners from all sectors to discover high-potential startup teams, and to explore the latest trends in business model and scalability of cultural content.
+
+This event will feature pitch presentations from 8 curated teams selected by the accelerator, detailing their business models, fundraising plans, and future growth objectives as they seek investment matchmaking and strategic partnership opportunities. Following the pitch sessions, the "Investment Trends Salon" will bring together industry experts and investors to share market insights and investment observations. --------------------------------------------------------------------------------
+TAICCA 文化內容策進院 (https://taicca.tw/)
+citeturn1108search4 [wordlim: 200] Crawled: today; 01 Oct TCCF FORUM 論壇 11 月強勢引爆！ ... 18 Sep 2026「TAICCA x Unframed Collection 臺灣VR作品發行」公開徵件說明及徵件結果公告 ... ## STORY
+
+14 Oct 文策院釜山影展再創新局！ 臺韓簽署跨國 MOU 布局國際影視市場 「臺灣之夜」匯聚全球影業巨頭與星光陣容
+
+10 Oct 臺灣作品強勢進軍釜山 ACFM！ 文策院率破百部作品與 50 家業者參展 掀起臺灣影視文化新浪潮
+
+08 Oct 臺灣文學站上世界舞台 楊双子獲布克獎後首亮相全球最大書展　臺灣館特展、活動、洽商全面出擊 帶動國際聲量化為產業動能
+
+07 Oct 為內容找資金 為創意找市場！ TTXC INNOVATIONS 文化科技創新市場展 10/13 引爆駁二 文策院領航臺灣文化科技強棒出擊
+
+02 Oct TTXC國際講座！文策院領航文化科技新藍海
+
+01 Oct TCCF FORUM 論壇 11 月強勢引爆！ 跨國巨擘與影視巨頭集結　助攻臺灣搶佔全球內容重構浪潮
+
+20 Oct TAICCA x GOBELINS Paris 國際動畫開發培訓產業講堂〖動畫劇集的前期開發流程 〗
+
+20 Oct Netflix × TAICCA 製作創新峰會
+
+06 Oct 2026「BEAM 臺韓影集共同開發計畫」入選公告
+
+30 Sep 2026 新加坡 ATF「臺灣星光發布會」入選公告
+
+18 Sep 2026「TAICCA x Unframed Collection 臺灣VR作品發行」公開徵件說明及徵件結果公告
+
+14 Sep 「內容開發專案計畫-前期開發支持 臺灣元素說明文件」修訂公告
+
+28 Aug 2026 法蘭克福書展 參展證代購
+
+19 Aug 《2026 文化科技國際合資或合製支持計畫》名單揭曉
+
+05 Aug 2026 韓國釜山 ACFM 亞洲內容暨電影市場展 - Doc Square臺灣紀錄片提案專場 入選名單
+
+05 Aug 2026「BUBBLE 青春愛情電影共同開發計畫」入選公告
+--------------------------------------------------------------------------------
+Présentation PowerPoint (https://www.marchedufilm.com/wp-content/uploads/2026/05/mdf26_spotlight_asia_funds_presentation_online.pdf)
+citeturn1108search13 [wordlim: 200] Published: 5 months ago; INVESTMENTTaiwan Creative Content Agency (TAICCA) ... Eligible formats: Feature film, series, documentary, animation,
+Spotlight Asia
+Roadmap to Co
+-Production 
+with Asia Funding Landscape
+CO - PRODUCTION SUPPORT
+INVESTMENT
+Taiwan Creative Content Agency (TAICCA) 
+Taiwan’s International Co
+- funding Program 2.0 (TICP)
+o
+Annual budget: National Development Fund (NDF)
+o Eligible genres: All genres
+o
+Maximum amount per projet: Up to 49% of the total budget
+o Calls & deadlines: Year round. Evaluation upon receipt of full 
+o
+Eligible territories: All territories
+application, which will be formally accepted only after confirmation 
+that all required documents are complete.
+o Recently invested titles: 
+o
+To be applied by: Companies registered in Taiwan only
+o
+Eligible formats: Feature film, series, documentary, animation, 
+variety show, and digital game
+•
+Dear Stranger (Feature Film, Taiwan / Japan)
+•
+Trinity (Feature Film, Taiwan / Singapore / France)
+•
+Moonglow (Feature Film, Taiwan / Philippines)
+o Success rate: The investment amount and ratio are subject to the 
+resolution of the Investment Committee. (≤ 49% of the total budget) 
+Applications may be denied due to lack of Taiwan elements or fail to 
+comply with regulations--------------------------------------------------------------------------------
+前期開發支持計畫 | TAICCA 文化內容策進院 (https://taicca.tw/funds/support_plan/detail/1)
+citeturn1108search5 [wordlim: 200] Published: 8 months ago; Crawled: 2 weeks ago; 2026-02-03 ... Funding will be counted toward the production investment once the project enters production, with TAICCA holding priority investment rights. ...   * TCCF 提案大會 TCCF PITCHING ... Directors nominated for Best Short Film since 2021 may apply with their next feature project within three years from the year of nomination. ... Projects must include a certain proportion of Taiwanese elements: text adaptation, story concept, creative team, character design, animation art & design, and animation/VFX production.
+
+2026-02-03
+
+## 前期開發支持計畫 Creative Content Development Program Development Fund
+
+### 各類別開發支持上限 Maximum Support by Category
+
+開發類別Category  | 開發支持經費Maximum Development Support
+電影長片、影集Feature Films and Series  | 以新台幣200萬元為上限，且不超過製作總預算5%Up to NT$2 million, not exceeding 5% of the total production budget
+紀錄片、紀錄片系列Documentary (Series)  | 以新台幣200萬元為上限，且不超過製作總預算10%Up to NT$2 million, not exceeding 10% of the total production budget
+動畫長片、動畫短片影集及動畫長片影集Animated Feature Films and Series  | 以新台幣300萬元為上限，且不超過製作總預算15%Up to NT$3 million, not exceeding 15% of the total production budget
+
+### 計畫須知 Program Guidelines
+
+  1. 本計畫支持金額，於專案確定進入製作階段後，將計入專案製作階段之投資款，且本院擁有該專案製作階段之優先投資權。
+
+Funding will be counted toward the production investment once the project enters production, with TAICCA holding priority investment rights.
+--------------------------------------------------------------------------------
+20250212_TAICCA Enforcement Rule on CCDP – Development Fund (https://www.taicca.tw/content/module_download_file/TAICCA%20Enforcement%20Rule%20on%20CCDP%20%E2%80%93%20Development%20Fund.pdf?id=754&type=pdf)
+citeturn1108search14 [wordlim: 200] Published: 4 months ago; application period and funding plan for each year may be adjusted by TAICCA ... execution process shall be announced by TAICCA by posting on its official
+website. 
+ii. 
+TAICCA shall only accept applications enclosing the documents described 
+as follows; TAICCA may engage scholars or experts to assist in the 
+document examination as per actual requirement: 
+1) The proposal (including its exhibits) shall be enclosed, and its applicable 
+form and content shall be separately announced by TAICCA. 
+2) In the event of any omission in the documents provided in the application, 
+the applicant shall be notified to make correction within the time limit 
+designated by TAICCA; such opportunity for correction is generally 
+given only once. If the applicant fails to make correction within the 
+notified time limit, TAICCA may return such application. 
+iii. 
+Upon confirmation by TAICCA, TAICCA shall proceed with the applicant 
+in signing the applicable project agreement under the Program (hereinafter 
+the “Project Agreement”). 
+ 
+ 
+4. Amount of Funding and Installment Procedure  
+i. 
+The cap of the amount and proportion for each project shall be as follows:  
+1) For feature films and TV series: The amount of funding shall not exceed 
+the maximum amount of $2,000,000 New Taiwan Dollars, nor exceed 
+five (5) percent of the total project production budget. 
+2) For documentaries and documentary series: The amount of funding 
+shall not exceed the maximum amount of $2,000,000 New Taiwan 
+Dollars, nor exceed ten (10) percent of the total project production 
+2--------------------------------------------------------------------------------
+Press Releases | California Film Commission (https://filmcafirst.ca.gov/news-notices/press-releases/)
+citeturn1108search6 [wordlim: 200] Published: 6.2 years ago; Crawled: yesterday; For media inquiries, please contact Aram Nadjarian | Mozaic Media & Communications on behalf of California Film Commission | (323) 533-4523 (aram@mozaicmc.com) . ...   * Governor Newsom applauds federal film and TV tax credit bill, answering his call to keep production in America September 24, 2026 - Governor Gavin Newsom applauded today’s announcement of the Motion Picture, Television, and Entertainment Revitalization Act, which would establish a national film and TV production tax credit... ...   * California’s Newly Expanded Film/TV Tax Credit Gains Two More Relocating TV Series October 25, 2021 - Recent legislation to expand California’s Film & TV Tax Credit Program is delivering quickly on one of its core goals by incentivizing more TV series to relocate production here from other states and nations...  * California’s Film & TV Tax Credit Program Welcomes 23 New Film Projects by Diverse Storytellers August 23, 2021 - The California Film Commission today announced that 23 feature films have been selected for the latest round of tax credits under the state’s Film & TV Tax Credit Program....
+--------------------------------------------------------------------------------
+TCCF | YOUR BEST PARTNER IN ASIA (https://www.tccf.tw/en)
+citeturn1108search7 [wordlim: 200] Crawled: last week; TCCF PITCHING unveils official selections! ... TAICCA and Japan’s K2 Pictures team up to foster international co-productions and compelling stories 2025/11/07 # NEWS ... 2025 TCCF MARKET: Call for Exhibitors 2026/06/01 # ANNOUNCEMENT ... Enthusiastic Participation Marks Second Day of TCCF with Forum Discussions and Feature Film Pitching 2024/11/09 # NEWS ... Call for Projects: Over $3 Million Investment for International Audiovisual Contents at TCCF PITCHING 2024 2024/05/10 # NEWS
+--------------------------------------------------------------------------------
+投資成果報告 | TAICCA 文化內容策進院 (https://taicca.tw/public_information/annual_plan/list?type_id=5)
+citeturn1108search8 [wordlim: 200] Crawled: 2 days ago; 2026.07.08
+--------------------------------------------------------------------------------
+Call for Projects: Over $3 Million Investment for… (https://aapnews.aap.com.au/aapreleases/cision20240516AE16157)
+citeturn1108search9 [wordlim: 200] Published: 2.4 years ago; Crawled: last week; The documentary "After the Snowmelt," winner of the "TAICCA X CNC AWARD" in TCCF 2023, has since been selected to multiple international film festivals, including Visions du Réel in Switzerland, Jeonju International Film Festival in South Korea, Trento Film Festival in Italy, and Millennium Docs Against Gravity in Poland, showcasing Taiwan's cultural and content strengths on the global stage. ... To further support the cultural investment environment, that was made favorable following the amendment regarding the Development of the Cultural and Creative Industries Act, TAICCA has collaborated with leading domestic telecommunication and technology companies, including ASUS and ADATA, as well as international creative content companies such as CJ ENM Hong Kong and Warner Bros. ... Please refer to the official website (https://www.tccf.tw/en/home) for the announcement of the call for projects.
+--------------------------------------------------------------------------------
+FONDO
+AUDIOVISIVO
+FVG
+
+eave
+
+FAR EAST
+FILM
+FESTIVA (https://eave.org/eave_documents/TTB_W1_Infobook_2024_1.pdf)
+citeturn1108search15 [wordlim: 200] Published: 7 months ago; 18TAICCAEstablished in 2019 by the Ministry of Culture, the Taiwan Creative Content Agency ... such as film ... ● Investment in Domestic Projects and Companies ... ● Global Marketing and Business DevelopmentABOUT TCCF“Taiwan Creative Content Fest (TCCF)” is a major annual event in the Asian creative ... publishing, comics, and original story concepts.
+--------------------------------------------------------------------------------
+Overseas Copyright Transactions of Taiwan's Movie Industry in 2023 (https://en.taicca.tw/industry_insight/download?id=26)
+citeturn1108search16 [wordlim: 200] Overseas Copyright Transactions of Taiwan's Movie Industry in 2023In 2023, the top markets for Taiwanese movie licensing sales were: Hong Kong (18.84%), Europe (15.94%), International OTT platforms (14.49%), China (11.59%), Japan (10.14%), and the Americas (10.14%)In recent years, the distribution of Taiwanese movies through international streaming platforms has slowed, with the share decreasing to 14.49% in 2023. ... | Korea | 5.80% |
+--------------------------------------------------------------------------------
+Key Data of the Television (https://en.taicca.tw/industry_insight/download?id=23)
+citeturn1108search17 [wordlim: 200] Published: 4 months ago; Distribution of Overseas Licensing for Taiwanese TV Content ... In 2023, Taiwan’s TV channel sector, TV program ... Chinese-speaking audiences, Vietnam has emerged in ... Calculation method: The percentage for each country or region is determined by the number of
+--------------------------------------------------------------------------------
+Taiwan’s International Co-funding Program 2.0 (TICP2.0) | TAICCA 文化內容策進院 (https://en.taicca.tw/grants_investment/detail/5?type_id=2)
+citeturn1108search10 [wordlim: 200] Published: 2.8 years ago; Crawled: last month; To enhance the visibility of Taiwan’s audiovisual and cultural content in international markets, TAICCA has expanded its investment scope to cover a wider range of content types, without restrictions based on artistic or commercial classifications. ...   * Directors or producers nominated at Berlin/Cannes/Venice Film Festivals or Academy Awards ... The determination and calculation of applicable applications will apply to submissions from July 1, 2026 onward.
+--------------------------------------------------------------------------------
+《最高法院民事庭具參考價值裁判彙編01》民國103-106年 (https://6laws.net/6law/law1/%E6%9C%80%E9%AB%98%E6%B3%95%E9%99%A2%E6%B0%91%E4%BA%8B%E5%BA%AD%E5%85%B7%E5%8F%83%E8%80%83%E5%83%B9%E5%80%BC%E8%A3%81%E5%88%A401.htm)
+citeturn1108search11 [wordlim: 200] Crawled: 6 days ago; ## 106-13〖裁判字號〗最高法院106年度台上字第177號〖裁判日期〗民國106年07月06日 ... 　　上列當事人間請求解除董事職務事件，上訴人對於中華民國104年7月1日台灣高等法院第二審判決（103年度上字第696號），提起上訴，本院判決如下： ... 被上訴人林蔚山於民國94至99年間擔任大同公司董事或董事長，為解決個人擔任訴外人通達國際股份有限公司（下稱通達公司）連帶保證人而受銀行追索之財務危機，指示大同公司之子公司尚志資產開發股份有限公司（下稱尚資公司）主計長黃仁宏自94年9月30日起以尚資公司名義借款予通達公司，再於96年初使大同公司之子公司尚志投資股份有限公司（下稱尚投公司）以新台幣（下同）一元併購通達公司，承擔通達公司所有債務。
+--------------------------------------------------------------------------------
+Taiwan Creative Content Agency (https://en.wikipedia.org/wiki/Taiwan_Creative_Content_Agency)
+citeturn1108search18 [wordlim: 200] Crawled: last week; Among the programs TAICCA has overseen is the Taiwan Creative Content Fest (TCCF) and Taiwan International Co-funding Program (TICP), which was launched in January 2021 and paused in 2024. ... In October 2026, TAICCA signed a memorandum of understanding with South Korean producer B.A. ... Participating Taiwanese companies included 1 Production Film Co. and Money Entertainment Investment Co.
+--------------------------------------------------------------------------------
+Taiwan - Selling to the Public Sector (https://www.trade.gov/country-commercial-guides/taiwan-selling-public-sector)
+citeturn1108view0 [wordlim: 200] Crawled: yesterday; Content type: text/html; Source: open({"ref_id":"https://www.trade.gov/country-commercial-guides/taiwan-selling-public-sector","lineno":null}); Total lines: 110
+L0: 【0†iframe†www.googletagmanager.com】 【0†iframe†www.googletagmanager.com】
+L1: 
+L2:   * Search ITA [Input: Search website...]
+L3: 
+L4: Search
+L5: 
+L6: Menu
+--------------------------------------------------------------------------------
+Taiwan Energy Industry (https://www.trade.gov/market-intelligence/taiwan-energy-industry)
+citeturn1108view1 [wordlim: 200] Crawled: 3 days ago; Content type: text/html; Source: open({"ref_id":"https://www.trade.gov/market-intelligence/taiwan-energy-industry","lineno":null}); Total lines: 34
+L0: 【0†iframe†www.googletagmanager.com】 【0†iframe†www.googletagmanager.com】
+L1: 
+L2:   * Search ITA [Input: Search website...]
+L3: 
+L4: Search
+L5: 
+L6: Menu
+L7: 
+L8: Market Intelligence
+L9: 
+L10: Equipment and Machinery Environmental Technology Industrial Materials Taiwan Trade Policy and Agreements
+--------------------------------------------------------------------------------
+Taiwan Carbon Fee Regulation (https://www.trade.gov/market-intelligence/taiwan-carbon-fee-regulation)
+citeturn1108view2 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"https://www.trade.gov/market-intelligence/taiwan-carbon-fee-regulation","lineno":null}); Total lines: 36
+L0: 【0†iframe†www.googletagmanager.com】 【0†iframe†www.googletagmanager.com】
+L1: 
+L2:   * Search ITA [Input: Search website...]
+L3: 
+L4: Search
+L5: 
+L6: Menu
+L7: 
+L8: Market Intelligence
+L9: 
+L10: Environmental Technology Asia Taiwan Standards, Regulatory, and Technical Requirements Environment and Natural Resources

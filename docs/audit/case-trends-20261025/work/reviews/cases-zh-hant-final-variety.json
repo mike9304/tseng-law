@@ -1,0 +1,70 @@
+[
+  {
+    "id": 918,
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "sha256": "581af61bc4b3dbb692a77dcad925503bcda1ef323085d034561bf3438521f29f",
+    "reviewed_at": "2026-10-25T12:03:02.575339+00:00",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "--lang",
+      "zh-hant"
+    ],
+    "exit_code": 0,
+    "output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md [zh-hant] sentences=30 mean=37.6 cv=0.487 short=0.133 run3=0.071 opener_rep=0.083 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "bold_matches": []
+  },
+  {
+    "id": 919,
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+    "reviewed_at": "2026-10-25T12:03:02.617025+00:00",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "--lang",
+      "zh-hant"
+    ],
+    "exit_code": 0,
+    "output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [zh-hant] sentences=31 mean=34.8 cv=0.459 short=0.129 run3=0.0 opener_rep=0.091 cite_end=0.0 cite_para=0.182 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+    "bold_matches": []
+  },
+  {
+    "id": 920,
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "sha256": "882c912a8bb558358e549ad79b526b4428cf48a60cc32e968c295aa37b3f00b5",
+    "reviewed_at": "2026-10-25T12:03:02.659451+00:00",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "--lang",
+      "zh-hant"
+    ],
+    "exit_code": 0,
+    "output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md [zh-hant] sentences=29 mean=38.9 cv=0.57 short=0.103 run3=0.037 opener_rep=0.0 cite_end=0.0 cite_para=0.364 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "bold_matches": []
+  },
+  {
+    "id": 921,
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+    "sha256": "f8067f5da68c76957f371d7aa09fb736f53128a784b7191efc7e90ca0e7fb3ff",
+    "reviewed_at": "2026-10-25T12:03:02.701771+00:00",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+      "--lang",
+      "zh-hant"
+    ],
+    "exit_code": 0,
+    "output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md [zh-hant] sentences=33 mean=33.6 cv=0.472 short=0.152 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "bold_matches": []
+  }
+]

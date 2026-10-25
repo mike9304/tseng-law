@@ -1,0 +1,96 @@
+{
+  "engine": "native imagegen",
+  "scenes": [
+    {
+      "id": 910,
+      "scene": "A carefully composed still life in a modest Taiwan office: unmarked payroll envelopes and loosely layered abstract salary sheets in foreground, a small carry-on suitcase partly visible beside the desk, folded travel jacket, afternoon natural window light. No people. Quiet, thoughtful editorial photography about overseas work allowances versus bonuses."
+    },
+    {
+      "id": 911,
+      "scene": "Inside a clean small Taiwanese wholesale supply storeroom, a shallow wooden shelf holds several plainly colored generic healthcare and disinfectant bottles in distinct shapes, and an unmarked product sample case sits open on a workbench. No patients or clinical procedure. Restrained editorial photograph about a distributor handling several competing product ranges."
+    },
+    {
+      "id": 912,
+      "scene": "A real-looking modest precision molding workshop in Taiwan: a heavy clean steel injection mold with machined cavities stands beside an open padded industrial transport crate, while a few plain cartons of finished components remain on a rack in the softly out-of-focus background. No people. Detailed natural metal textures. Editorial photograph about retrieving tooling while inventory remains."
+    },
+    {
+      "id": 913,
+      "scene": "A natural editorial still life on a distributor's workbench: several pristine generic textile-product cartons with no markings, plain fabric samples, and two neatly separated piles of blank shipping paper with simple color tabs. Soft daylight from a Taiwanese warehouse window. The composition suggests tracking the origin and distribution of genuine goods, without showing any brands or maps."
+    }
+  ],
+  "files": [
+    {
+      "id": 910,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-30787a6f-76c6-4c18-901b-a3433d3d474a.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/910-case-trends-20261025.webp",
+      "bytes": 146816,
+      "sha256": "1111c7b3dcad946fa3f0f17146dc6bacf473d138f03daa93f6d477bb625d044c",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    },
+    {
+      "id": 911,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-a0719698-1f98-4031-9036-775d43d3524a.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/911-case-trends-20261025.webp",
+      "bytes": 155518,
+      "sha256": "812cc83b9016fe85ba9df428f9a78cf1bb61b48994e11b720befb4f7c42d2c76",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    },
+    {
+      "id": 912,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-525a9f59-d2fa-49bd-8e43-ae1e5783ce24.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/912-case-trends-20261025.webp",
+      "bytes": 192556,
+      "sha256": "db1035203b532fd50f7ea8b624cea95076a7279c7ea1bf1bdf40c17cc3407cbf",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    },
+    {
+      "id": 913,
+      "path": "/Users/son7/.codex/generated_images/01a1699a-a134-7831-b9cd-0794dbdce828/exec-7b71b8d6-6b38-428e-b7f4-047c6480cce7.png",
+      "dest": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/913-case-trends-20261025.webp",
+      "bytes": 181676,
+      "sha256": "09d832a82f6efd9332f61c1444367d8051088390eb8fec9b0114475453073213",
+      "info": {
+        "format": "webp",
+        "width": 1536,
+        "height": 1024,
+        "space": "srgb",
+        "channels": 3,
+        "depth": "uchar",
+        "isProgressive": false,
+        "hasProfile": false,
+        "hasAlpha": false
+      }
+    }
+  ],
+  "root_visual_check": "All four generated images inspected directly in tool output. No readable labels, logos, flags or actual case parties. JA911 contains a fictional adult handling blank samples; alt must reflect actual scene."
+}

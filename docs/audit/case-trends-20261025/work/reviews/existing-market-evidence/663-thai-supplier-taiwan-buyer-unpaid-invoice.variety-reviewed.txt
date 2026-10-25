@@ -1,0 +1,4 @@
+COMMAND ['python3', '/Users/son7/tseng-lanes-shared/variety/variety_metrics.py', 'check', '/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md', '--lang', 'th', '--sentences', '/Users/son7/tseng-case-trends-20261025/work/reviews/existing-market-evidence/e12e07cd8ac507e5789a78200f9be0f2f58770fd473ebce2d923adc1d9a40336.json']
+EXIT 1
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md [th] sentences=53 mean=21.0 cv=0.502 short=0.094 run3=0.039 opener_rep=0.176 cite_end=0.0 cite_para=0.588 contrast=4 caveat=0 q=1
+  FAIL contrast=4 (limit <= 3): contrast template (X is not Y / 不是…而是 / ではなく) used too often — max 1 deliberate, 3 total

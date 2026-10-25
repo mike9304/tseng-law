@@ -1,0 +1,26 @@
+[
+  {
+    "old_line": 14,
+    "new_line": 14,
+    "before": "featured_image_caption: \"Illustration fictive, sans document commercial ni litige réel représenté.\"",
+    "after": "featured_image_caption: \"Scène fictive\""
+  },
+  {
+    "old_line": 34,
+    "new_line": 34,
+    "before": "Qu'a précisément accepté l'exportateur ? Les échanges peuvent viser un geste commercial, une remise conditionnelle ou une prise en charge de produits endommagés. Le courriel complet, ses pièces jointes et les conditions de l'accord comptent davantage qu'une capture isolée. Les deux parties doivent aussi pouvoir comprendre si le montant proposé clôt toute la relation ou seulement certaines factures.",
+    "after": "Qu'a précisément accepté l'exportateur ? Les échanges peuvent viser un geste commercial, une remise conditionnelle ou une prise en charge de produits endommagés. Le courriel complet, ses pièces jointes et les conditions de l'accord comptent davantage qu'une capture isolée. Encore faut-il que les deux parties sachent si le montant proposé solde toute la relation ou seulement certaines factures."
+  },
+  {
+    "old_line": 46,
+    "new_line": 46,
+    "before": "Pour une somme déterminée, la procédure taïwanaise de paiement, 支付命令, peut être envisagée sous [l'article 508 du Code de procédure civile](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508). Le créancier doit exposer les faits. Il doit aussi étayer sa demande, y compris sa propre exécution lorsqu'une contre-prestation est due ([article 511](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511)). Les bons de livraison deviennent alors décisifs.",
+    "after": "Pour une somme déterminée, la procédure taïwanaise de paiement, 支付命令, peut être envisagée sur le fondement de [l'article 508 du Code de procédure civile](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508). Le créancier doit exposer les faits. Il doit aussi étayer sa demande, y compris sa propre exécution lorsqu'une contre-prestation est due ([article 511](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511)). Les bons de livraison deviennent alors décisifs."
+  },
+  {
+    "old_line": 56,
+    "new_line": 56,
+    "before": "Pour une première orientation côté taïwanais, la [page de contact](/fr/contact) indique le canal de demande : [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Un résumé non sensible, le nom du distributeur pour la vérification des conflits et les échéances proches suffisent au premier échange. Les consultations se déroulent en anglais, chinois, japonais ou coréen ; les modalités linguistiques et la transmission sécurisée des pièces sont à convenir avant l'envoi du dossier. Ces informations générales ne remplacent pas l'analyse du contrat. La pièce de départ reste le décompte qui relie chaque retenue à un accord ou à une marchandise précise.",
+    "after": "Pour un premier avis sur le volet taïwanais, la [page de contact](/fr/contact) renvoie à l'adresse [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Au premier échange, un résumé sans données sensibles, le nom du distributeur pour la vérification des conflits d'intérêts et les échéances proches suffisent. Les consultations se déroulent en anglais, chinois, japonais ou coréen ; la langue et la transmission sécurisée des pièces se règlent avant l'envoi du dossier. Ces informations générales ne remplacent pas l'analyse du contrat. La pièce de départ reste le décompte qui relie chaque retenue à un accord ou à une marchandise précise."
+  }
+]

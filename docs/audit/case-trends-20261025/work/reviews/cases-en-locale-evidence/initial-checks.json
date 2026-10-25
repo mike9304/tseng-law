@@ -1,0 +1,50 @@
+[
+  {
+    "id": 914,
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-en/914-taiwan-us-executive-share-bonus-payment-promise.md",
+    "sha256": "9dfa500e01d12114412e6cefa1c50d602e4622a3d7a2187fcfeaaf1e1870433e",
+    "exit": 0,
+    "output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-en/914-taiwan-us-executive-share-bonus-payment-promise.md [en] sentences=48 mean=14.8 cv=0.492 short=0.208 run3=0.0 opener_rep=0.214 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "summary_chars": 155,
+    "title_suffix_chars": 66,
+    "seoTitle_chars": 35,
+    "image_exists": true,
+    "image_sha256": "880ba33632ea6869218acad0b20ff99a12f4d1bcef7b5e102cff67e5042071da"
+  },
+  {
+    "id": 915,
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "sha256": "a3827e6fff15839c1cd70fc8f490eea66a22d10c3989169545c4ca32f6188be7",
+    "exit": 0,
+    "output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md [en] sentences=39 mean=15.7 cv=0.492 short=0.179 run3=0.027 opener_rep=0.077 cite_end=0.0 cite_para=0.231 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "summary_chars": 159,
+    "title_suffix_chars": 74,
+    "seoTitle_chars": 34,
+    "image_exists": true,
+    "image_sha256": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95"
+  },
+  {
+    "id": 916,
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "sha256": "bfc294cfac5cf3b1ef5d8fb26491d9abce428e1fe751f7b805f6c1aab698ef5b",
+    "exit": 0,
+    "output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md [en] sentences=43 mean=17.3 cv=0.486 short=0.163 run3=0.024 opener_rep=0.143 cite_end=0.0 cite_para=0.071 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "summary_chars": 156,
+    "title_suffix_chars": 71,
+    "seoTitle_chars": 37,
+    "image_exists": true,
+    "image_sha256": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d"
+  },
+  {
+    "id": 917,
+    "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-en/917-taiwan-film-license-corporate-party-us-declaration.md",
+    "sha256": "17edfa94317c06cde457c65d722edb16cc9f5e33077b2190c0cde93a58ca798c",
+    "exit": 0,
+    "output": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-en/917-taiwan-film-license-corporate-party-us-declaration.md [en] sentences=47 mean=15.9 cv=0.463 short=0.234 run3=0.044 opener_rep=0.0 cite_end=0.0 cite_para=0.357 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "summary_chars": 158,
+    "title_suffix_chars": 72,
+    "seoTitle_chars": 32,
+    "image_exists": true,
+    "image_sha256": "8d2545e82baa9d2853fda1f6eaaee75881170ca4b41abfe8a3392a8bffb49199"
+  }
+]

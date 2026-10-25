@@ -1,0 +1,374 @@
+{
+  "research_date": "2026-10-25",
+  "baseline": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+  "count_en": 208,
+  "nearest_articles": [
+    {
+      "filename": "373-taiwan-stock-options-rsu-foreign-parent-employee-tax.md",
+      "sha256": "dcc82ca51cd95e37fffe0713b384d26019bb5aa8c794d9acb4c73101e784c963",
+      "title": "\"Equity Awards from a US Parent: Taiwan Taxes Options at Exercise and Has No RSU Ruling\"",
+      "published": "\"2026-10-07\"",
+      "headings": [
+        "Equity Awards from a US Parent: Taiwan Taxes Options at Exercise and Has No RSU Ruling",
+        "Options: the spread on the exercise date",
+        "ESPP shares and stock appreciation rights",
+        "RSUs: no published rule",
+        "What the Taiwan subsidiary files",
+        "The employee's own return",
+        "Selling the shares later",
+        "The foreign special professional regime",
+        "Official sources"
+      ],
+      "opening": "# Equity Awards from a US Parent: Taiwan Taxes Options at Exercise and Has No RSU Ruling\n\nYour Taiwan engineers hold options, ESPP shares and RSUs from a Nasdaq-listed parent: does Taiwan tax any of it? For options, yes, in the year they are exercised, and only for the part of the gain tied to days spent in Taiwan. Taiwan's Ministry of Finance (MOF) set that rule in 2005 for options a foreign company grants to staff of its Taiwan subsidiary, branch or office and to employees it posts to Taiwan ([MOF order Tai-Cai-Shui No. 09404527550, May 17, 2005](https://ttc.mof.gov.tw/FB/FB120/144119)).\n\nRSUs are the gap. We searched the MOF's ruling datab"
+    },
+    {
+      "filename": "255-taiwan-copyright-employee-freelancer-work-ownership.md",
+      "sha256": "10b8e2087a739cfc153a7379ad508fa29f7fa0d1dbe6610df60ee603ac3fdf64",
+      "title": "\"Who Owns Code and Designs Made in Taiwan by Employees and Freelancers?\"",
+      "published": "\"2026-10-06\"",
+      "headings": [
+        "Who Owns Code and Designs Made in Taiwan by Employees and Freelancers?",
+        "Paying for the work does not transfer the copyright",
+        "Employees: the company holds the economic rights, the employee is the author",
+        "Assignments and licenses reach only what the contract names",
+        "Moral rights cannot be assigned",
+        "Source code: copyright and trade secrets are separate questions",
+        "No register, so the contract is the proof",
+        "Official sources"
+      ],
+      "opening": "# Who Owns Code and Designs Made in Taiwan by Employees and Freelancers?\n\nSuppose a U.S. software startup pays a developer in Taipei to build its mobile app. The paperwork is a one-page statement of work and a run of paid invoices, and neither mentions intellectual property. Under Taiwan's Copyright Act, the developer is the author of that code and holds the economic rights in it. The startup may use the app. It does not own the copyright.\n\nIf the same developer were on the payroll of the startup's Taiwan subsidiary, the company would hold the economic rights without any clause at all, although the developer would still be the author.\n\n## Pay"
+    },
+    {
+      "filename": "643-taiwan-parent-instructions-director-dissent-supervisor-stop-notice.md",
+      "sha256": "bc4b77ec772dd8b4e96a814975ad99fe33db1276f6e0e936b8730abb8f3a8c28",
+      "title": "\"A Taiwan supervisor's stop notice reaches US head office\"",
+      "published": "\"2026-10-22\"",
+      "headings": [
+        "A Taiwan supervisor's stop notice reaches US head office",
+        "Why a supervisor can intervene in a transaction",
+        "The director who objected has a different record",
+        "Following the instruction back to head office",
+        "When more than one person faces a claim",
+        "Official sources"
+      ],
+      "opening": "# A Taiwan supervisor's stop notice reaches US head office\n\nA notice from a Taiwan subsidiary's “supervisor” may look like an internal escalation to a US head-office team. The title needs care. In a Taiwan company limited by shares that has statutory supervisors, a 監察人 is a statutory oversight officer, distinct from a line manager. A notice seeking to stop a transaction can therefore be an act required by Taiwan's Company Act.\n\nFor the executive who receives it, the immediate question is what conduct the notice identifies and whom it addresses. Copying the parent on a warning and notifying the Taiwan board to stop an unlawful act are differen"
+    },
+    {
+      "filename": "351-enforcing-us-arbitral-award-in-taiwan.md",
+      "sha256": "0f19680ee2327898a8b43e14cdf13d9c7b130cc769d7b555c4b90ee47afb18a4",
+      "title": "\"Enforcing a US Arbitral Award in Taiwan: The Recognition Ruling, Required Documents and Reciprocity\"",
+      "published": "\"2026-10-07\"",
+      "headings": [
+        "Enforcing a US Arbitral Award in Taiwan: The Recognition Ruling, Required Documents and Reciprocity",
+        "A foreign award becomes enforceable by court ruling",
+        "The documents: originals, certified copies and Chinese translations",
+        "The grounds for refusal, and what reciprocity really means",
+        "Why a US judgment is harder than a US award",
+        "Freezing assets while the application is pending",
+        "Drafting for the next contract",
+        "Sources"
+      ],
+      "opening": "# Enforcing a US Arbitral Award in Taiwan: The Recognition Ruling, Required Documents and Reciprocity\n\nA California software company won an AAA arbitration against its former Taiwanese distributor for unpaid license fees. The award is final, the distributor has no assets in the United States, and its bank accounts and office lease are all in Taichung. The company's US counsel checks the New York Convention list, does not find Taiwan, and asks whether the award is worth anything there (a fictional example).\n\nIt is. Taiwan is not a party to the New York Convention, but its Arbitration Act contains its own recognition procedure for foreign award"
+    },
+    {
+      "filename": "499-singapore-arbitration-clause-taiwan-supply-contract.md",
+      "sha256": "5b130c48b8d874077e84119075b567b2bb8774180d5d9fe5fa55fbef707ec4ea",
+      "title": "\"A Singapore Arbitration Clause for a Taiwan Supply Contract\"",
+      "published": "\"2026-10-10\"",
+      "headings": [
+        "Identify the contracting supplier and its assets",
+        "Decide what “Singapore” means in the contract",
+        "Compare the Taiwan routes before choosing a forum",
+        "Allow for a Taiwan application before the award",
+        "Sources and review date"
+      ],
+      "opening": "For a Singapore buyer relying on a supplier's Taiwan assets for recovery, an award made in Singapore becomes a Taiwan enforcement title only after a Taiwan court recognises it under [Article 47 of the Arbitration Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0020001&flno=47).\n\nBefore accepting the clause, identify the company that owes the delivery or refund obligation and the assets it owns. The Taiwan factory named in a quotation may belong to a different group company from the supplier signing the agreement. Do not assume an award against that supplier will reach the factory owner's property merely because both companies use t"
+    },
+    {
+      "filename": "004-taiwan-company-subsidiary-vs-branch.md",
+      "sha256": "14304ca7692f00741356e54f32bfe2a8c6044a2df78f7387017b1e3619845452",
+      "title": "\"Entering the Taiwan Market: Key Differences Between a Subsidiary and a Branch\"",
+      "published": null,
+      "headings": [
+        "Entering the Taiwan Market: Key Differences Between a Subsidiary and a Branch",
+        "1. Legal Personality and Ownership Structure",
+        "2. Tax and Profit Remittances",
+        "3. Debts and Legal Liability",
+        "4. Financing and Listing in Taiwan",
+        "5. Investment Tax Credits",
+        "6. The Taiwan–Korea Income Tax Agreement and Permanent Establishments (PEs)",
+        "7. Choosing a Structure",
+        "8. Conversion and Exit Procedures",
+        "Official Sources",
+        "Related Services"
+      ],
+      "opening": "# Entering the Taiwan Market: Key Differences Between a Subsidiary and a Branch\n\n![Taiwan subsidiary and foreign-company branch comparison](../images/004-taiwan-company-subsidiary-vs-branch/featured-01.jpg)\n\nThe debts of a Taiwan branch are debts of the foreign company behind it. A Taiwan subsidiary’s debts generally stay with the subsidiary. Foreign companies that plan to do business in Taiwan on an ongoing basis often weigh these two forms. Both provide a business presence in Taiwan. They differ as to who is the contracting party, who bears the debts, whether third-party investment is possible, and what procedures apply when profits are tra"
+    },
+    {
+      "filename": "515-taiwan-business-acquisition-engineer-employment.md",
+      "sha256": "128df554306cf2d390c953bed403216c4d90d415eefab04f3eca9e11f1af498b",
+      "title": "\"Buying a Taiwan Business: Who Employs the Engineers After Closing?\"",
+      "published": "\"2026-10-11\"",
+      "headings": [
+        "The company on the employment contract",
+        "Give employees terms they can actually assess",
+        "Prior service has to survive the payroll change",
+        "Employees who do not move need a separate plan",
+        "The closing condition and the employee's commitment"
+      ],
+      "opening": "In a share purchase, the Taiwan company generally remains the engineers' employer. Moving an operating business to a different company can instead require an employment transition, even if the engineers keep their desks and projects. [Ministry of Labor guidance](https://www.mol.gov.tw/1607/28690/2282/2326/2288/82247/).\n\nWhere the retention procedure in [Article 16 of the Business Mergers and Acquisitions Act](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080041&flno=16) applies, the receiving employer must notify the employees designated for retention of their working conditions in writing no later than 30 days before the statutory e"
+    },
+    {
+      "filename": "303-taiwan-withholding-tax-payments-to-foreign-companies.md",
+      "sha256": "abea50f4fbae4da91c7e9abab82eeee334ce646bc95bc9c7aeba4edf258221fe",
+      "title": "\"Paying a US or Vietnamese Parent from Taiwan: Withholding on Royalties, Service Fees and Interest\"",
+      "published": "\"2026-10-06\"",
+      "headings": [
+        "Paying a US or Vietnamese Parent from Taiwan: Withholding on Royalties, Service Fees and Interest",
+        "What makes a payment Taiwan-source",
+        "Domestic rates and the 10-day deadline",
+        "The United States: still no income tax agreement",
+        "Where an agreement applies: Vietnam, Japan and Korea",
+        "Easing gross withholding on service fees",
+        "Business tax and the price itself",
+        "Official sources"
+      ],
+      "opening": "# Paying a US or Vietnamese Parent from Taiwan: Withholding on Royalties, Service Fees and Interest\n\nA common assumption is that money a Taiwan subsidiary sends to its own parent stays inside the group and outside Taiwan tax. Taiwan's Income Tax Act looks at who receives the payment and where the income arises. When the parent has neither a fixed place of business (固定營業場所) nor a business agent (營業代理人) in Taiwan and earns Taiwan-source income, the subsidiary must deduct the tax when it pays ([Income Tax Act, Article 73](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340003&flno=73), paragraph 1; [Article 88](https://law.moj.gov.tw/LawC"
+    },
+    {
+      "filename": "371-taiwan-equipment-installation-project-tax-permanent-establishment.md",
+      "sha256": "c5f3554a7647b62c097578e554d6e3646f30a242a14cc00f494307aa372dfa42",
+      "title": "\"Installing Equipment at a Taiwan Fab: Tax on the Tool, the Installation Fee and a Six-Month Project\"",
+      "published": "\"2026-10-07\"",
+      "headings": [
+        "Installing Equipment at a Taiwan Fab: Tax on the Tool, the Installation Fee and a Six-Month Project",
+        "The tool and the work on site are judged separately",
+        "20% of the fee, or 3% under Article 25",
+        "US vendors have no treaty threshold to count against",
+        "Vietnamese contractors: six months, and no service clause",
+        "Business tax: Customs takes it on the tool, the fab on the service",
+        "Official sources"
+      ],
+      "opening": "# Installing Equipment at a Taiwan Fab: Tax on the Tool, the Installation Fee and a Six-Month Project\n\nA toolmaker in Oregon ships a deposition chamber to a fab in Tainan. The purchase order has four lines: the tool, installation, qualification runs and operator training. Its field engineers expect to spend about seven months on site, and the fab has hired a contractor from Ho Chi Minh City for five months of hook-up work (an invented example). The fab's accounts team asks one question before paying. Which of those lines carries Taiwan tax?\n\n## The tool and the work on site are judged separately\n\nGoods that a foreign company's head office sel"
+    },
+    {
+      "filename": "030-enforce-foreign-judgment-in-taiwan.md",
+      "sha256": "65a8ccba3fb4b49d97b9bd0e924174de106df351a2d9fc71e639cb7b62f9cad1",
+      "title": "\"Enforcing a Foreign Judgment Against Assets in Taiwan\"",
+      "published": null,
+      "headings": [
+        "Enforcing a Foreign Judgment Against Assets in Taiwan",
+        "Does a final foreign judgment take effect in Taiwan?",
+        "What are the four reasons Taiwan may refuse recognition?",
+        "What must happen before Taiwan enforcement begins?",
+        "Which records should I gather before filing?",
+        "What if assets may disappear while the action is pending?",
+        "Official sources"
+      ],
+      "opening": "# Enforcing a Foreign Judgment Against Assets in Taiwan\n\nYou have a final court judgment abroad. The debtor did not pay, but you have found a Taiwan bank account, property or business asset. The question is no longer how to win the original dispute. It is whether that judgment can take effect here and what Taiwan court process permits the civil enforcement department of a Taiwan district court to act on it.\n\nStart with the judgment and the record of the original case. A creditor often needs the original court's proof that the decision is final, and evidence of how the defendant learned about the proceedings. Those documents matter before anyo"
+    },
+    {
+      "filename": "704-taiwan-arc-first-application.md",
+      "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f",
+      "title": "\"Applying for Your First Taiwan ARC\"",
+      "published": "\"2026-10-24\"",
+      "headings": [
+        "Which date starts the application period?",
+        "Documents that establish your residence basis",
+        "Where the application goes",
+        "Fees, processing and collection",
+        "Official sources"
+      ],
+      "opening": "Thirty days is the filing period for your first Alien Resident Certificate (ARC) if you enter Taiwan on a resident visa and receive residence permission. Count from the day after arrival. [Immigration Act Article 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) requires the application to the National Immigration Agency (NIA), which issues the card as evidence of approved residence.\n\nVisitors have a different starting point: they must qualify for a permitted change to residence before they can apply. Holding a valid combined document with ARC functions, such as an Employment Gold Card, removes the need for a separate"
+    },
+    {
+      "filename": "705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304",
+      "title": "\"Moving to Taiwan: Residence for Work, Study and Family\"",
+      "published": "\"2026-10-24\"",
+      "headings": [
+        "Permission for a visit and permission to reside",
+        "An employment offer is the start of the application",
+        "Degree students and Mandarin learners",
+        "Joining a spouse or parent in Taiwan",
+        "Gold Cards, founders and longer visits",
+        "Official sources"
+      ],
+      "opening": "Visa-exempt entry may suit a qualifying professional who intends to apply for residence in Taiwan, but it can rule out the ordinary in-country application for a degree or Mandarin student. [Foreign Professionals Act Article 16](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) permits the professional route; BOCA's [degree-study](https://www.boca.gov.tw/cp-166-283-c4da3-2.html) and [Mandarin-study guidance](https://www.boca.gov.tw/fp-158-260-9690c-2.html) set different entry conditions for students.\n\nNationality and the passport used determine visa eligibility. The [Taiwan overseas mission handling your application](https://www."
+    },
+    {
+      "filename": "706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71",
+      "title": "\"When Your Taiwan ARC Needs Updating: Renewal, Moves and Travel\"",
+      "published": "\"2026-10-24\"",
+      "headings": [
+        "The filing date depends on what changed",
+        "Renewal while the job, course or family basis continues",
+        "A move or a new employer",
+        "When the original reason for residence ends",
+        "Passport updates and replacement cards",
+        "Travel before the new card arrives",
+        "Official sources"
+      ],
+      "opening": "Can you stay until the expiry date printed on your Alien Resident Certificate (ARC) if the job, course or family relationship supporting it ends sooner? [Immigration Act Article 31](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31) requires the National Immigration Agency (NIA) to revoke residence permission and cancel the card when the reason for residence disappears, subject to the statutory grounds on which NIA may approve continued residence.\n\nThe date of that change can trigger an application well before the card expires. Keep the notice recording it. An employment termination notice, graduation record or family-stat"
+    }
+  ],
+  "issues_count": 31,
+  "current_issues": [
+    {
+      "file": "ISSUE-20260930-10-taiwan-strike-vote-employer-profit-sharing.md",
+      "title": "\"Taiwan Union Plans Strike Vote Over Profit Sharing\"",
+      "sha256": "a0c4f6d8787efad87668f45f6e9a5369a4d56bdacce6d4e76076766f976f1540"
+    },
+    {
+      "file": "ISSUE-20260930-11-taiwan-drug-detention-family-abroad.md",
+      "title": "\"A Relative Held in Taiwan on a Drug Allegation\"",
+      "sha256": "1fd199dffb093e0fbad3580cfa8a3fbf11033d878c0f1ca5211599b3a2939ed2"
+    },
+    {
+      "file": "ISSUE-20260930-12-taiwan-court-interpreter-personal-data.md",
+      "title": "\"When a Taiwan Court Hearing Goes Ahead Without an Interpreter\"",
+      "sha256": "9e157b79188e6391bcae9b8d840416956ba3a5f0f707cad407229846803747c2"
+    },
+    {
+      "file": "ISSUE-20261002-07-micron-ceo-margins-taoyuan-strike-vote.md",
+      "title": "\"Micron’s record bonuses and the Taoyuan strike vote: what earnings talk does not change under Taiwan labor law\"",
+      "sha256": "ea48eb463fd7daf4f182ae9759c65e995d92cce6ef03d7255bfda4bc0dc3f1b5"
+    },
+    {
+      "file": "ISSUE-20261002-08-marriage-leave-14-days-foreign-employers.md",
+      "title": "\"Taiwan’s 14-day marriage leave: payroll and subsidy steps for foreign employers\"",
+      "sha256": "83a7483861c7c2ae62bc93ecd7244ac15ace474c4e3c48fd53a284534ee24004"
+    },
+    {
+      "file": "ISSUE-20261002-09-supreme-court-ai-appellate-briefs.md",
+      "title": "\"AI-drafted criminal appeals in Taiwan: the Supreme Court’s first ruling on form and grounds\"",
+      "sha256": "e250c0b4b85e3a4564d9d69241408ef8e4897cdcc26ce26bf2246077b4c47796"
+    },
+    {
+      "file": "ISSUE-20261011-15-taiwan-offshore-wind-supervised-payment-subcontractor.md",
+      "title": "\"Taiwan wind-project payments: who owes the subcontractor when the owner steps in?\"",
+      "sha256": "1b79e647cded596cae64a6ab6b692635e95920802583d1b327222da10329c689"
+    },
+    {
+      "file": "ISSUE-20261013-05-taiwan-server-patent-investigation-contract-costs.md",
+      "title": "\"Taiwan suppliers in a US patent investigation: who pays the defense costs?\"",
+      "sha256": "04d7b1b30afd3c36915847d7092e3469cc9c7266babed3bc8949ca8cdf38391e"
+    },
+    {
+      "file": "ISSUE-20261013-06-taiwan-job-ad-salary-disclosure-proposal.md",
+      "title": "\"Taiwan's pay-disclosure proposal and the job ads employers are posting now\"",
+      "sha256": "9c7bc2a912e622476047f95b8e2ebf10b15c8ee10b20ab1133e4263ebf4cb357"
+    },
+    {
+      "file": "ISSUE-20261014-05-taiwan-foreign-employee-shareholding-trust-opening.md",
+      "title": "\"Taiwan plans to open employee shareholding trusts to foreign staff\"",
+      "sha256": "0877659340bf274ac8f7197abb7d0ffea2514a3918bd15a8c24c40a391ea9bf6"
+    },
+    {
+      "file": "ISSUE-20261014-06-taiwan-financial-agentic-ai-consultation-data-use.md",
+      "title": "\"Taiwan's bank AI consultation: reading an account and acting on it\"",
+      "sha256": "5bdb330ec80184e659c156eb63a205af49bcd8d73b8dc1655b1f7d7fbdf03999"
+    },
+    {
+      "file": "ISSUE-20261014-14-grab-foodpanda-taiwan-merger-review-singapore-platforms.md",
+      "title": "\"Grab–foodpanda in Taiwan: the closing date remains open\"",
+      "sha256": "7e9a3cc61b4f29bd4804ac79e484bba24a1809bf26b9e6adb0c10ffc0495aa4f"
+    },
+    {
+      "file": "ISSUE-20261015-05-taiwan-food-imports-overseas-recall-labeling.md",
+      "title": "\"Nissin noodle recall in Australia: the Taiwan label and local duties\"",
+      "sha256": "7f5443f9791bf2c1fb91677bb40a66c6acea007bb5324960aa94ce6037d33761"
+    },
+    {
+      "file": "ISSUE-20261015-06-taiwan-hiring-public-judgments-criminal-record-data.md",
+      "title": "\"Public Taiwan judgments in a hiring file: criminal-record data has limits\"",
+      "sha256": "6e7ddbe2a9d0a80d5a7080cdde414def9021f209296beacfda89d7aaa6d79504"
+    },
+    {
+      "file": "ISSUE-20261016-05-taiwan-3m-private-placement-share-resale-restrictions.md",
+      "title": "\"3M's proposed Taiwan investment: when private-placement shares can be sold\"",
+      "sha256": "fe4f7653d9953cf4896aabaea7aaa8167e10692ac0f4f38717468c5965a69c60"
+    },
+    {
+      "file": "ISSUE-20261016-06-taiwan-shares-offshore-collateral-pledge-creation.md",
+      "title": "\"Taiwan shares in offshore financing: how the pledge is recorded\"",
+      "sha256": "831323b2cb5a00169c024f7782932d26c18df0e52c6fb9aa51f55620e2fded9f"
+    },
+    {
+      "file": "ISSUE-20261016-09-taiwan-tax-appeal-property-disposal-ban.md",
+      "title": "\"Unpaid Taiwan tax can stall a property transfer even during a challenge\"",
+      "sha256": "d223d51e1c1224ddca65531725d5a1ae267d5721de80f6b1dba45fd45e3fd73f"
+    },
+    {
+      "file": "ISSUE-20261016-15-taiwan-thai-farm-recruitment-work-permit-raid.md",
+      "title": "\"Kaohsiung farm arrests and Taiwan's work-permit rules\"",
+      "sha256": "7e45dcde16b034c3914393ca2fa82a4464c936aeda8273ffb18f2aa28251cf02"
+    },
+    {
+      "file": "ISSUE-20261017-05-taiwan-fund-manager-personal-trades-reporting.md",
+      "title": "\"Taiwan weighs fund-manager trading changes: the current reporting duties\"",
+      "sha256": "55b411e3eccd2548a9f1bd8548f88d9dfba143891760e8fa25e64e85bf01f356"
+    },
+    {
+      "file": "ISSUE-20261017-06-taiwan-techcrunch-demo-patent-grace-period.md",
+      "title": "\"Taiwan startups at TechCrunch: public demos and patent filing dates\"",
+      "sha256": "c6121762070df923219bc7c506eb0227e4f2d4214b28a4a06920f909c6569d9d"
+    },
+    {
+      "file": "ISSUE-20261018-03-taiwan-xiaoliuqiu-sea-turtle-us-tourists-wildlife-act.md",
+      "title": "\"US tourists investigated over touching a sea turtle in Xiaoliuqiu\"",
+      "sha256": "d06b26d60b501d72f270f582fc6080af20e93e9873eae686f1543daf741fbcbf"
+    },
+    {
+      "file": "ISSUE-20261018-10-taiwan-senior-nhi-subsidy-returning-parent-enrollment.md",
+      "title": "\"Taiwan's senior NHI subsidy vote: a returning parent's enrollment date\"",
+      "sha256": "66672bffbf6976d0c8997b4996a9e691888c1096604a0f651748c76b7fcb140d"
+    },
+    {
+      "file": "ISSUE-20261021-03-kaohsiung-fab-contractor-accident.md",
+      "title": "\"Four dead at a Kaohsiung fab site: Taiwan safety duties for owners and contractors\"",
+      "sha256": "d51e8d47692ae3c66e83d60f1ebe451ef4cff29645ca8c1d2ccb5a45bbaa1164"
+    },
+    {
+      "file": "ISSUE-20261022-06-taiwan-blocks-grab-foodpanda-uber-stake.md",
+      "title": "\"Taiwan tells Grab no: a 13.1% stake and a 3.9% vote\"",
+      "sha256": "96a3a0b3b09c0e8790b5b876430221fd346d1ab8242a48b9b07e3be9b697800e"
+    },
+    {
+      "file": "ISSUE-20261022-07-staged-collision-gps-indictment-personal-data.md",
+      "title": "\"Five people indicted over an alleged staged scooter crash in New Taipei\"",
+      "sha256": "0d50d3200bca0d2c58f762d54d0588d1b59b602c88eec52f8960a634d72dea0f"
+    },
+    {
+      "file": "ISSUE-20261022-11-taiwan-invoice-lottery-foreign-residents-prize-claims.md",
+      "title": "\"Penghu receipt fraud investigation: Taiwan lottery claims by foreign residents\"",
+      "sha256": "c874f0b1d59b17e25c97d1108769448556542a9c8a7a8585dc1156d475d97fd0"
+    },
+    {
+      "file": "ISSUE-20261022-12-taiwan-foreign-issuer-independent-director-vacancies.md",
+      "title": "\"Taiwan board vacancies: the 60-day meeting duty and foreign issuers\"",
+      "sha256": "cb5508209092dc20e524cd347769eacae29c95b42cf62dd143716256a39e778d"
+    },
+    {
+      "file": "ISSUE-20261024-05-taiwan-tisa-tax-deduction-proposal-foreign-residents.md",
+      "title": "\"Taiwan’s proposed TISA deduction: where foreign residents stand\"",
+      "sha256": "9740be243e0084896dfe145d7da2b7c7b3af1473a026315e38722f89345251cc"
+    },
+    {
+      "file": "ISSUE-20261024-06-taiwan-typhoon-champi-insurance-notice-payment.md",
+      "title": "\"Typhoon Champi claims: Taiwan’s insurance notice and payment rules\"",
+      "sha256": "360d389ebcc86253d87d42198e2001aae414e09b142b9504f351772a9c85e9d9"
+    },
+    {
+      "file": "ISSUE-20261025-05-taiwan-cyberlink-app-suspension-material-disclosure.md",
+      "title": "\"CyberLink’s suspended Apple downloads: when disclosure is due\"",
+      "sha256": "7cfd3da90d6f746b775bff78b79a408d5263b24771c825e23dbc3adb6a49f007"
+    },
+    {
+      "file": "ISSUE-20261025-06-taiwan-kenting-typhoon-warning-zone-foreign-visitors.md",
+      "title": "\"Kenting’s coastal closure: when entry itself can lead to a fine\"",
+      "sha256": "b30bc8cbb9e26a32ad582525cb449bbd3de58b6cc40f5aeea9679175adc0d518"
+    }
+  ]
+}

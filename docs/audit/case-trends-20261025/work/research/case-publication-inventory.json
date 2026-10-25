@@ -1,0 +1,116 @@
+{
+  "records": [
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns/906-korean-publisher-exclusive-license-taiwan-complaint.md",
+      "route": "/ko/columns/korean-publisher-exclusive-license-taiwan-complaint",
+      "locale": "ko",
+      "id": 906
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns/907-korean-brand-parallel-import-store-signs-taiwan.md",
+      "route": "/ko/columns/korean-brand-parallel-import-store-signs-taiwan",
+      "locale": "ko",
+      "id": 907
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns/908-korean-team-taiwan-after-hours-messages-overtime.md",
+      "route": "/ko/columns/korean-team-taiwan-after-hours-messages-overtime",
+      "locale": "ko",
+      "id": 908
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns/909-korean-traveler-taiwan-refund-claim-deadline.md",
+      "route": "/ko/columns/korean-traveler-taiwan-refund-claim-deadline",
+      "locale": "ko",
+      "id": 909
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns-ja/910-japanese-expat-allowances-bonuses-taiwan-judgment.md",
+      "route": "/ja/columns/japanese-expat-allowances-bonuses-taiwan-judgment",
+      "locale": "ja",
+      "id": 910
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns-ja/911-japan-taiwan-distributor-competing-products-judgment.md",
+      "route": "/ja/columns/japan-taiwan-distributor-competing-products-judgment",
+      "locale": "ja",
+      "id": 911
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns-ja/912-taiwan-oem-mold-return-inventory-claim-japan.md",
+      "route": "/ja/columns/taiwan-oem-mold-return-inventory-claim-japan",
+      "locale": "ja",
+      "id": 912
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns-ja/913-japanese-genuine-goods-taiwan-trademark-exhaustion.md",
+      "route": "/ja/columns/japanese-genuine-goods-taiwan-trademark-exhaustion",
+      "locale": "ja",
+      "id": 913
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns-en/914-taiwan-us-executive-share-bonus-payment-promise.md",
+      "route": "/en/columns/taiwan-us-executive-share-bonus-payment-promise",
+      "locale": "en",
+      "id": 914
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "route": "/en/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+      "locale": "en",
+      "id": 915
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "route": "/en/columns/taiwan-parent-company-pollution-liability-us-investor",
+      "locale": "en",
+      "id": 916
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns-en/917-taiwan-film-license-corporate-party-us-declaration.md",
+      "route": "/en/columns/taiwan-film-license-corporate-party-us-declaration",
+      "locale": "en",
+      "id": 917
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "route": "/zh-hant/columns/taiwan-presale-mortgage-notice-handover-judgment",
+      "locale": "zh-hant",
+      "id": 918
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "route": "/zh-hant/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+      "locale": "zh-hant",
+      "id": 919
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "route": "/zh-hant/columns/taiwan-apartment-ev-charger-common-area-judgment",
+      "locale": "zh-hant",
+      "id": 920
+    },
+    {
+      "included_in_codex_scope": true,
+      "source_path": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+      "route": "/zh-hant/columns/taiwan-online-game-coins-refund-judgment",
+      "locale": "zh-hant",
+      "id": 921
+    }
+  ]
+}

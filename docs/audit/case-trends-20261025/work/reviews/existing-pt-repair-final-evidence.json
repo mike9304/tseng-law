@@ -1,0 +1,51 @@
+{
+  "reviewed_at": "2026-10-25",
+  "records": [
+    {
+      "path": "src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md",
+      "before_sha256": "5413c3f5b967adf73725ec3b58b12dfdb76b5ca43f301394e91929c6c5f56a0a",
+      "sha256": "bc44b8c1b2fc0f7931e0ddf3c8a8b958acae51837c22b30e91a04d4405354fb8",
+      "repair_passes": 1,
+      "frontmatter_except_lastmod_identical": true,
+      "url_sequence_identical": true,
+      "url_count": 12,
+      "body_digits_identical": true,
+      "source_section_identical": true,
+      "faq_identical": true,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md",
+        "--lang",
+        "pt"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/697-portugal-mandatario-processo-civil-taiwan.md [pt] sentences=42 mean=17.3 cv=0.482 short=0.095 run3=0.0 opener_rep=0.133 cite_end=0.0 cite_para=0.4 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "path": "src/content/columns-pt/698-portugal-fim-contrato-taiwan-salarios-em-falta.md",
+      "before_sha256": "bd4b5411b57b562a3ed338feab0fad9141bd2dae5a329a87d2c71fa7c7ffc56a",
+      "sha256": "5eae522ecf7223fb96e7564b70c209dad74dac644b98fc30d06bf8126198a811",
+      "repair_passes": 2,
+      "frontmatter_except_lastmod_identical": true,
+      "url_sequence_identical": true,
+      "url_count": 23,
+      "body_digits_identical": true,
+      "source_section_identical": true,
+      "faq_identical": true,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/698-portugal-fim-contrato-taiwan-salarios-em-falta.md",
+        "--lang",
+        "pt"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-pt/698-portugal-fim-contrato-taiwan-salarios-em-falta.md [pt] sentences=46 mean=17.0 cv=0.455 short=0.174 run3=0.091 opener_rep=0.125 cite_end=0.0 cite_para=0.625 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": ""
+    }
+  ]
+}

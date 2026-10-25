@@ -1191,7 +1191,35 @@ export const COUNTRY_COLUMN_FILES_20261024 = {
   ],
 } as const;
 
-/** Registered locale-specific batches through 2026-10-24, in filename order. */
+/** Four distinct case-led articles for each core market, published 2026-10-25. */
+export const CASE_COLUMN_FILES_20261025 = {
+  'ko': [
+    '906-korean-publisher-exclusive-license-taiwan-complaint.md',
+    '907-korean-brand-parallel-import-store-signs-taiwan.md',
+    '908-korean-team-taiwan-after-hours-messages-overtime.md',
+    '909-korean-traveler-taiwan-refund-claim-deadline.md',
+  ],
+  'ja': [
+    '910-japanese-expat-allowances-bonuses-taiwan-judgment.md',
+    '911-japan-taiwan-distributor-competing-products-judgment.md',
+    '912-taiwan-oem-mold-return-inventory-claim-japan.md',
+    '913-japanese-genuine-goods-taiwan-trademark-exhaustion.md',
+  ],
+  'en': [
+    '914-taiwan-us-executive-share-bonus-payment-promise.md',
+    '915-taiwan-public-contract-mediation-arbitration-same-claim.md',
+    '916-taiwan-parent-company-pollution-liability-us-investor.md',
+    '917-taiwan-film-license-corporate-party-us-declaration.md',
+  ],
+  'zh-hant': [
+    '918-taiwan-presale-mortgage-notice-handover-judgment.md',
+    '919-taiwan-workplace-bullying-investigation-hearing-judgment.md',
+    '920-taiwan-apartment-ev-charger-common-area-judgment.md',
+    '921-taiwan-online-game-coins-refund-judgment.md',
+  ],
+} as const;
+
+/** Registered locale-specific batches through 2026-10-25, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
@@ -1217,6 +1245,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((COUNTRY_COLUMN_FILES_20261023 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...(ARC_VISA_COLUMN_FILES_20261024[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261024 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((CASE_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261014 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261015 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261021 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1242,11 +1271,12 @@ export function expertiseSlugsFor(locale: string): string[] {
 }
 
 /**
- * Archive lead of `locale`, newest first by date through 2026-10-24, with same-day
+ * Archive lead of `locale`, newest first by date through 2026-10-25, with same-day
  * files in source order. Use this for newest-first ordering assertions;
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
+  const day20261025 = (CASE_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261024: readonly string[] = [
     ...(ARC_VISA_COLUMN_FILES_20261024[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261024 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1322,12 +1352,13 @@ export function archiveLeadSlugsFor(locale: string): string[] {
   const newestSlugs = [...newest].sort().map(slugOf);
   const newerSlugs = [...newer].sort().map(slugOf);
   const head = [...day20261023].sort().map(slugOf).concat([...day20261022].sort().map(slugOf), [...day20261021].sort().map(slugOf), [...day20261020].sort().map(slugOf), [...day20261018].sort().map(slugOf), [...day20261016].sort().map(slugOf), [...day20261015].sort().map(slugOf), [...day20261014].sort().map(slugOf), [...day20261013].sort().map(slugOf), [...day20261011].sort().map(slugOf), [...day20261010].sort().map(slugOf), [...day20261009].sort().map(slugOf), [...day20261008].sort().map(slugOf), day20261007Slugs, day20261006Slugs, day20261005Slugs, currentSlugs, latestSlugs, newestSlugs, newerSlugs);
-  const latestHead = [...day20261024].sort().map(slugOf).concat(head);
+  const latestHead = [...day20261025].sort().map(slugOf).concat([...day20261024].sort().map(slugOf), head);
   return [...latestHead, ...expertiseSlugsFor(locale).filter((slug) => !latestHead.includes(slug))];
 }
 
-/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-24). */
+/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-25). */
 export function archiveLeadPublicationDate(slug: string): string {
+  if (Object.values(CASE_COLUMN_FILES_20261025).flat().map(slugOf).includes(slug)) return '2026-10-25';
   if (ARC_VISA_FILES_20261024.map(slugOf).includes(slug)) return '2026-10-24';
   if (Object.values(COUNTRY_COLUMN_FILES_20261024).flat().map(slugOf).includes(slug)) return '2026-10-24';
   if (Object.values(COUNTRY_COLUMN_FILES_20261023).flat().map(slugOf).includes(slug)) return '2026-10-23';
@@ -1413,6 +1444,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(COUNTRY_COLUMN_FILES_20261023),
     ARC_VISA_FILES_20261024,
     ...Object.values(COUNTRY_COLUMN_FILES_20261024),
+    ...Object.values(CASE_COLUMN_FILES_20261025),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261014),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261015),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021),

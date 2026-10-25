@@ -1,0 +1,45 @@
+--- src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md @ a188e620
++++ src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md @ reviewed working tree
+@@ -3,7 +3,7 @@
+ seoTitle: "Taiwan: Werkzeuge und Prüfvorrichtungen zurück"
+ summary: "Bei einem Lieferantenwechsel brauchen deutsche Hersteller mehr als bezahlte Werkzeugrechnungen: Eigentumsnachweise, den tatsächlichen Verwahrer und eine umsetzbare Übergabe."
+ published: "2026-10-23"
+-lastmod: "2026-10-24"
++lastmod: "2026-10-25"
+ date_display: "23. Oktober 2026"
+ read_time: "6 Minuten Lesezeit"
+ categories: ["Rechtliche Informationen zu Taiwan"]
+@@ -14,7 +14,7 @@
+ author: "legal-ai-assistant"
+ featured_image: "/images/columns/681-market-review-20261024.webp"
+ featured_image_alt: "Metallformen und Prüfvorrichtung mit leeren Anhängern, Holzkiste und Verpackungspapier in einem Lagerregal."
+-featured_image_caption: "Illustration zur Vorbereitung einer Werkzeugübergabe; keine Aufnahme eines tatsächlichen Lieferantenlagers."
++featured_image_caption: "Fiktive Szene"
+ faq:
+   - q: "Beweist die bezahlte Werkzeugrechnung unser Eigentum?"
+     a: "Sie belegt die Zahlung, entscheidet aber nicht allein über den Eigentumserwerb. Vertragsinhalt und Besitzübertragung sind mitzulesen. Artikel 761 des taiwanesischen Zivilgesetzbuchs sieht neben der Übergabe bestimmte Ersatzformen vor, etwa eine Vereinbarung über mittelbaren Besitz oder die Abtretung eines Herausgabeanspruchs gegen einen Dritten."
+@@ -32,13 +32,13 @@
+ 
+ Ein Werkzeugkostenbeitrag kann Eigentum finanzieren, Entwicklungsaufwand vergüten oder die exklusive Nutzung während der Lieferbeziehung sichern. Der Vertrag entscheidet über die versprochene Leistung. Dafür sind Bestellung, Werkzeugvereinbarung und die Bestätigung des Lieferanten aussagekräftiger als die interne Bezeichnung im Anlagenverzeichnis des Käufers.
+ 
+-Für bewegliche Sachen verlangt [Artikel 761 des taiwanesischen Zivilgesetzbuchs](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=761) grundsätzlich eine Übergabe zur Übertragung dinglicher Rechte. Bleibt die Sache beim Veräußerer, können die Parteien stattdessen vereinbaren, dass der Erwerber mittelbaren Besitz erhält. Liegt sie bei einem Dritten, kann die Abtretung des Herausgabeanspruchs die Übergabe ersetzen. War der Erwerber bereits Besitzer, wirkt die Einigung unmittelbar. Ob eine dieser Formen erfüllt wurde, muss die Besitzgeschichte zeigen.
++Für bewegliche Sachen verlangt [Artikel 761 des taiwanesischen Zivilgesetzbuchs](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=761) grundsätzlich eine Übergabe zur Übertragung dinglicher Rechte. Bleibt die Sache beim Veräußerer, können die Parteien stattdessen mittelbaren Besitz des Erwerbers vereinbaren; liegt sie bei einem Dritten, kann die Abtretung des Herausgabeanspruchs die Übergabe ersetzen. War der Erwerber bereits Besitzer, wirkt die Einigung unmittelbar. Ob eine dieser Formen erfüllt wurde, muss die Besitzgeschichte zeigen.
+ 
+ Wo stand das Werkzeug beim behaupteten Erwerb? [Artikel 38 des taiwanesischen Kollisionsgesetzes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=38) verweist dingliche Fragen auf das Recht des Belegenheitsorts. Bei einem Ortswechsel kommt es für Erwerb, Verlust oder Änderung auf den Ort an, an dem der maßgebliche Tatbestand abgeschlossen wurde. Eine deutsche Rechtswahl im Liefervertrag beantwortet diese Eigentumsfrage daher nicht ohne Weiteres; vertragliche Schuldverhältnisse folgen der gesonderten Anknüpfung in [Artikel 20](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20).
+ 
+ ## Rückgabeanspruch und laufende Produktion
+ 
+-Eigentum allein erlaubt keinen Zutritt zur Fabrik. Nach [Artikel 767](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=767) kann der Eigentümer die Sache von einem unberechtigten Besitzer zurückverlangen. Dazu gehört die Prüfung, ob ein bestehender Produktions- oder Verwahrungsvertrag dem Besitzer noch ein Recht zum Besitz gibt. Eine vertragliche Rückgabepflicht ist mit ihrem Auslöser, Empfänger und vereinbarten Termin gesondert zu erfassen.
++Eigentum allein erlaubt keinen Zutritt zur Fabrik. Nach [Artikel 767](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=767) kann der Eigentümer die Sache von einem unberechtigten Besitzer zurückverlangen. Gibt ein laufender Produktions- oder Verwahrungsvertrag dem Lieferanten noch ein Recht zum Besitz, fehlt es daran. Enthält der Vertrag eine eigene Rückgabepflicht, kommt es auf deren Auslöser, Empfänger und Termin an.
+ 
+ Letzter Lieferabruf und Abholtermin sollten aufeinander abgestimmt werden; soll der bisherige Hersteller noch Ersatzteile liefern, braucht es eine Vereinbarung darüber, welche Werkzeuge bis wann dort bleiben. Verspricht nur der Hauptlieferant die Herausgabe, obwohl ein Unterlieferant die Form hält, ist dessen tatsächliche Mitwirkung noch zu klären. Eine bestätigte Inventarliste kann diese Lücke sichtbar machen.
+ 
+@@ -58,7 +58,7 @@
+ 
+ Kalibrierdaten, Steuerungssoftware und Zeichnungen werden separat erfasst. Bei urheberrechtlich geschützten Dateien richtet sich die Nutzungslizenz nach der Vereinbarung; für unklar geregelte Teile wird nach [Artikel 37 des Urheberrechtsgesetzes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=37) vermutet, dass sie nicht lizenziert sind. Die körperliche Form und die erforderlichen Dateien können somit verschiedenen Berechtigungen unterliegen. Wer zugleich eigene Transportleistungen in Taiwan aufbauen will, findet die gesonderten Fragen im Beitrag zum [Logistikgeschäft in Taiwan](/de/columns/taiwan-logistics-business-setup).
+ 
+-Bei einer ersten [Anfrage zur Werkzeugherausgabe](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) genügen Vertragspartner, Verwahrer, grober Werkzeugumfang und gewünschter Wechseltermin; eine Beratung auf Englisch, Chinesisch, Japanisch oder Koreanisch sowie die Übermittlung vertraulicher Unterlagen werden vorab abgestimmt. Für die nächste Verhandlung sollte jede Position erkennen lassen, wer ihre Freigabe zusagt und wer sie am Abholtag übergeben kann.
++Bei einer ersten [Anfrage zur Werkzeugherausgabe](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) genügen Vertragspartner, Verwahrer, grober Werkzeugumfang und gewünschter Wechseltermin; die Beratungssprache (Englisch, Chinesisch, Japanisch oder Koreanisch) und der Weg für vertrauliche Unterlagen werden vorab abgestimmt. Für die nächste Verhandlung sollte jede Position erkennen lassen, wer ihre Freigabe zusagt und wer sie am Abholtag übergeben kann.
+ 
+ ## Rechtsquellen
+ 

@@ -1,0 +1,53 @@
+diff --git a/src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md b/src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md
+index a78e90cd..02521844 100644
+--- a/src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md
++++ b/src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md
+@@ -13,9 +13,9 @@ audience: ["de"]
+ targetMarket: "Germany"
+ author: "legal-ai-assistant"
+ featured_image: "/images/columns/679-market-review-20261024.webp"
+ featured_image_alt: "Fräsmaschine mit eingespanntem Werkstück, Messschieber und geöffnetem Ordner in einer Werkstatt."
+-featured_image_caption: "Illustration einer Maschinenprüfung; die Unterlagen sind keine tatsächlichen Prüfprotokolle."
++featured_image_caption: "Fiktive Szene"
+ faq:
+   - q: "Wird die Schlussrate mit bestandenem FAT automatisch fällig?"
+     a: "Das hängt vom vereinbarten Zahlungsmeilenstein ab. Ein FAT beim Hersteller, die Lieferung und ein SAT am Standort des Kunden können unterschiedliche Voraussetzungen haben. Bei Anwendung taiwanesischen Werkvertragsrechts ist Artikel 505 des Zivilgesetzbuchs der gesetzliche Ausgangspunkt; eine vereinbarte Zahlungsregel muss gesondert ausgelegt werden."
+   - q: "Darf der taiwanesische Kunde wegen jedes Restpunkts die gesamte Zahlung verweigern?"
+@@ -27,9 +27,9 @@ faq:
+ Ein unterschriebenes Protokoll des Factory Acceptance Tests (FAT) belegt zunächst die darin dokumentierte Prüfung. Ob damit die Schlussrate fällig wird, richtet sich nach dem vereinbarten Zahlungsmeilenstein. Verlangt der Vertrag zusätzlich einen Site Acceptance Test (SAT) beim taiwanesischen Kunden, bleiben dessen Kriterien und der Ablauf vor Ort entscheidend.
+ 
+ Für einen deutschen Maschinenlieferanten beginnt die Forderungsprüfung deshalb mit einer Zuordnung: Welche Gesellschaft schuldet welchen Betrag, und welches Ereignis soll die Zahlung auslösen? Ein lokaler Integrator kann die Inbetriebnahme begleiten, ohne selbst Käufer zu sein. Auch eine Unterschrift des Bedienpersonals beantwortet noch nicht, welche rechtsgeschäftlichen Erklärungen diese Person abgeben durfte.
+ 
+-## Abnahmebegriffe brauchen einen Vertragsinhalt
++## Was „Abnahme“ im Vertrag heißt
+ 
+ Bezeichnet „acceptance“ den erfolgreichen Probelauf, eine Freigabe zur Verschiffung oder die endgültige Bestätigung der Gesamtleistung? Die Begriffe FAT und SAT allein legen das nicht fest. Zusammen zu lesen sind die Bestellung, einbezogene Lieferbedingungen, technische Spezifikation, Prüfpläne und spätere Änderungsvereinbarungen; ihre Rangfolge kann darüber entscheiden, ob ein nachträglich verlangter Dauerlauf schon zum ursprünglichen Leistungsumfang gehörte.
+ 
+ Taiwanesisches Recht gilt nicht schon deshalb, weil die Anlage dort steht. [Artikel 20 des taiwanesischen Gesetzes über das auf Zivilsachen mit Auslandsbezug anwendbare Recht](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20) knüpft vertragliche Schuldverhältnisse an die Rechtswahl der Parteien an; ohne wirksame ausdrückliche Wahl kommt es auf die engste Verbindung an. Zuständigkeit und eine mögliche Schiedsklausel sind zusätzlich zu prüfen.
+@@ -41,13 +41,13 @@ Gilt taiwanesisches Recht, muss auch der Vertragstyp feststehen. [Artikel 490 de
+ Für einen Werkvertrag sieht [Artikel 505](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=505) die Vergütung bei Übergabe der Arbeit vor; ist keine Übergabe erforderlich, bei Fertigstellung. Werden Teile übergeben und ist die Vergütung nach diesen Teilen festgelegt, ist der jeweilige Teil bei seiner Übergabe zu bezahlen. Daneben ist die konkrete vertragliche Regelung zu lesen. Ein bloßes Rechnungsdatum beweist den vereinbarten Meilenstein nicht.
+ 
+ Eine offene Mängelliste verlangt eine genauere Trennung. Fehlt die geschuldete Leistung, ist sie mangelhaft, oder wünscht der Kunde eine zusätzliche Funktion? Diese Einordnung beeinflusst die Zahlungsforderung. Nach [Artikel 264](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=264) kann bei gegenseitigen vertraglichen Verpflichtungen die eigene Leistung bis zur Gegenleistung verweigert werden, sofern keine Vorleistungspflicht besteht. Bei bereits erbrachter Teilleistung darf die Verweigerung nach den Umständen nicht gegen Treu und Glauben verstoßen. Weder ein offener Restpunkt noch der Hinweis auf eine laufende Produktion entscheidet diese Frage allein.
+ 
+-Bei mangelhafter Werkleistung kann der Besteller nach [Artikel 493](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=493) eine angemessene Frist zur Beseitigung setzen. Bleibt sie erfolglos, sieht die Vorschrift Selbstbeseitigung und Erstattung notwendiger Kosten vor. Bei übermäßig hohen Beseitigungskosten darf der Unternehmer die Beseitigung verweigern. Die genannte Selbstbeseitigungsregel gilt dann nicht. Eine Aufforderung zur Nacharbeit sollte deshalb mit Datum, Fehlerbild und verlangtem Umfang in die rechtliche Prüfung gelangen.
++Bei mangelhafter Werkleistung kann der Besteller nach [Artikel 493](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=493) eine angemessene Frist zur Beseitigung setzen. Bleibt sie erfolglos, sieht die Vorschrift Selbstbeseitigung und Erstattung notwendiger Kosten vor. Bei übermäßig hohen Beseitigungskosten darf der Unternehmer die Beseitigung verweigern. Die genannte Selbstbeseitigungsregel gilt dann nicht. Für die rechtliche Prüfung zählt deshalb, wann die Nacharbeit verlangt wurde, welches Fehlerbild der Kunde beschrieben hat und welchen Umfang er fordert.
+ 
+ ## Prüfbedingungen und Änderungen sichtbar machen
+ 
+-War die Maschine testbereit? Für die Beantwortung braucht es mehr als das Feld „bestanden“ oder „nicht bestanden“: Prüfprotokolle sollten erkennen lassen, welche Softwareversion, Werkstücke, Toleranzen und Betriebsbedingungen verwendet wurden. Fehlende Medienversorgung oder ein anderes Eingangsmaterial gehören mit Zeitpunkt und Herkunft der Information in die Dokumentation. Wer dafür verantwortlich war, ergibt sich erst aus der vereinbarten Aufgabenverteilung.
++War die Maschine testbereit? Ein angekreuztes „bestanden“ oder „nicht bestanden“ reicht als Antwort nicht. Aus dem Prüfprotokoll sollte hervorgehen, welche Softwareversion, Werkstücke, Toleranzen und Betriebsbedingungen verwendet wurden. Fehlende Medienversorgung oder ein anderes Eingangsmaterial gehören mit Zeitpunkt und Herkunft der Information in die Dokumentation. Wer dafür verantwortlich war, ergibt sich erst aus der vereinbarten Aufgabenverteilung.
+ 
+ Prüfunterlagen und Zahlungsnachweise lassen sich den einzelnen Streitpunkten zuordnen:
+ 
+ | Streitpunkt | Aussagekräftige Unterlagen |
+@@ -65,9 +65,9 @@ Originaldateien bleiben erhalten. Eine für Verhandlungen erstellte Übersicht d
+ Bei einem weiteren SAT-Termin lassen sich Prüfbedingungen, Zuständigkeiten und die Behandlung der offenen Schlussrate gemeinsam festhalten. Soll ein Teilbetrag sofort fließen und der Rest nach einem bestimmten Nachtest, braucht jeder Betrag einen erkennbaren Auslöser. Ebenso sollte klar sein, ob die Vereinbarung nur den Ablauf ändert oder bestimmte Ansprüche abschließend erledigt.
+ 
+ Die Abgrenzung zwischen deutscher Zentrale, taiwanesischer Tochter und lokalem Vertreter erläutert der Beitrag zum [Markteintritt von Halbleiterzulieferern](/de/columns/taiwan-semiconductor-market-entry). Sie hilft auch dabei, Zahlungsversprechen der richtigen Gesellschaft zuzuordnen.
+ 
+-Eine erste [Anfrage zu einem Taiwan-Vertragsstreit](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) kann Vertragspartner, offenen Meilenstein und nächsten Prüftermin nennen; bitte zunächst die tatsächliche Verständigung auf Englisch, Chinesisch, Japanisch oder Koreanisch abstimmen. Vertrauliche Anlagen folgen nach Vereinbarung des Übermittlungswegs. Für die Vorbereitung bleibt die konkrete Frage: Welcher noch offene Test soll welchen Betrag freigeben?
++Eine erste [Anfrage zu einem Taiwan-Vertragsstreit](/de/contact) an [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) kann Vertragspartner, offenen Meilenstein und nächsten Prüftermin nennen. Beraten wird auf Englisch, Chinesisch, Japanisch oder Koreanisch; welche Sprache passt, lässt sich vorab klären. Vertrauliche Anlagen folgen, sobald der Übermittlungsweg vereinbart ist. Für die Vorbereitung bleibt die konkrete Frage: Welcher noch offene Test soll welchen Betrag freigeben?
+ 
+ ## Amtliche Quellen und Stand
+ 
+ Geprüft am 23. Oktober 2026: [Zivilgesetzbuch, Artikel 264, 490, 493 und 505](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001), einschließlich [Änderungshistorie](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001), sowie [Kollisionsgesetz, Artikel 20](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20). Die genannten Vorschriften sind in Kraft; der Hinweis der Datenbank auf noch nicht wirksame Änderungen betrifft andere Artikel. Maßgeblich ist der chinesische Gesetzestext.

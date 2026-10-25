@@ -1,0 +1,36 @@
+--- assigned-before
++++ frozen-after
+@@ -3,7 +3,7 @@
+ seoTitle: "Mesin Taiwan cacat: pemberitahuan dan tuntutan"
+ summary: "Pembeli mesin di Indonesia perlu membedakan laporan teknis, pemberitahuan cacat kepada penjual Taiwan, dan pelaksanaan hak. Kontrak serta bukti uji menentukan langkah."
+ published: "2026-10-23"
+-lastmod: "2026-10-24"
++lastmod: "2026-10-25"
+ date_display: "23 Oktober 2026"
+ read_time: "5 menit baca"
+ categories: ["Informasi hukum Taiwan"]
+@@ -23,7 +23,7 @@
+     a: "Tidak selalu. Pemberitahuan cacat dan pernyataan pelaksanaan hak pembatalan mempunyai fungsi berbeda. Pasal 365 menetapkan batas untuk pembatalan dan pengurangan harga; bentuk tuntutan serta tanggalnya perlu ditentukan sebelum batas yang berlaku lewat."
+ ---
+ 
+-[Enam bulan setelah pemberitahuan cacat](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=365) merupakan salah satu batas pelaksanaan hak pembatalan atau pengurangan harga untuk jual beli yang tunduk pada hukum Taiwan. Bagi pembeli mesin di Indonesia, artinya, selama diskusi panjang dengan teknisi pemasok berlangsung, tanggal dan langkah hukum yang sudah diambil tetap perlu dipantau.
++[Enam bulan setelah pemberitahuan cacat](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=365) merupakan salah satu batas pelaksanaan hak pembatalan atau pengurangan harga untuk jual beli yang tunduk pada hukum Taiwan. Selama berdiskusi dengan teknisi pemasok, pembeli mesin di Indonesia tetap perlu memantau tanggal dan langkah hukum yang sudah diambil.
+ 
+ Alamat pemasok di Taiwan belum menentukan hukum kontrak. [Pasal 20 aturan Taiwan tentang hukum perdata lintas negara](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20) mengakui pilihan hukum para pihak dan mengatur penentuan hukum yang paling erat hubungannya bila pilihan tegas tidak ada atau tidak sah. Perlu dilihat pula apakah transaksinya jual beli mesin biasa atau proyek yang mencakup desain, pemasangan, dan hasil kerja tertentu. Analisis berikut berfokus pada jual beli yang tunduk pada hukum Taiwan.
+ 
+@@ -33,13 +33,13 @@
+ 
+ Menurut [Pasal 354](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=354), penjual menjamin barang bebas dari cacat yang menghilangkan atau mengurangi nilai, kegunaan biasa, atau kegunaan yang disepakati pada saat risiko beralih. Penurunan nilai atau kegunaan yang tidak berarti tidak dianggap sebagai cacat menurut ayat pertama. Ayat kedua secara tersendiri mewajibkan barang memiliki kualitas yang dijamin penjual pada saat risiko beralih. Kerusakan yang baru terlihat setelah pemasangan tetap memerlukan bukti asal dan waktunya.
+ 
+-Siapa yang sebenarnya menjadi penjual dalam kontrak? Pabrik pembuat, perusahaan dagang Taiwan, dan distributor Indonesia dapat mempunyai peran berbeda. Nama badan hukum pada pesanan, faktur, dan kontrak perlu dicocokkan, karena pemberitahuan harus sampai kepada pihak yang tepat. Untuk latar perbedaan badan usaha dan saluran penjualan, lihat [anak perusahaan, cabang, dan agen dalam transaksi Taiwan](/id/columns/taiwan-semiconductor-market-entry).
++Siapa yang sebenarnya menjadi penjual dalam kontrak? Pabrik pembuat, perusahaan dagang Taiwan, dan distributor Indonesia dapat mempunyai peran berbeda. Nama badan hukum pada pesanan, faktur, dan kontrak perlu dicocokkan. Pemberitahuan harus sampai kepada pihak yang tepat. Untuk latar perbedaan badan usaha dan saluran penjualan, lihat [anak perusahaan, cabang, dan agen dalam transaksi Taiwan](/id/columns/taiwan-semiconductor-market-entry).
+ 
+ ## Temuan awal dapat diberitahukan sebelum penyebab akhirnya pasti
+ 
+ [Pasal 356](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=356) mewajibkan pembeli segera memeriksa barang dengan prosedur lazim sesuai sifatnya, kemudian segera memberi tahu penjual jika menemukan cacat yang menjadi tanggung jawabnya. Jika pembeli lalai memberi tahu, barang dianggap telah diterima, kecuali cacat itu tidak dapat ditemukan melalui pemeriksaan biasa. Cacat yang tidak dapat ditemukan melalui pemeriksaan biasa tetap harus diberitahukan segera setelah diketahui.
+ 
+-Pemberitahuan awal dapat memuat nomor mesin, nomor pesanan, tanggal penerimaan dan penemuan, gejala, serta hasil uji yang sudah ada, dengan pengamatan dipisahkan dari dugaan. Hasil pengukuran boleh dilaporkan meskipun penyebab kegagalan belum dipastikan. Cara dan alamat pemberitahuan mengikuti kontrak; pesan terkirim, lampiran, dan bukti penerimaannya perlu disimpan.
++Pemberitahuan awal dapat memuat nomor mesin, nomor pesanan, tanggal penerimaan dan penemuan, gejala, serta hasil uji yang sudah ada. Pisahkan hasil pengamatan dari dugaan. Hasil pengukuran boleh dilaporkan meskipun penyebab kegagalan belum dipastikan. Cara dan alamat pemberitahuan mengikuti kontrak; pesan terkirim, lampiran, dan bukti penerimaannya perlu disimpan.
+ 
+ Undang-undang itu tidak memberikan satu tenggat pemeriksaan yang sama bagi semua mesin. Jika penjual sengaja menyembunyikan cacat, [Pasal 357](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=357) mengecualikan penerapan Pasal 356. Kesengajaan tersebut membutuhkan bukti. Perbedaan pendapat teknisi saja belum membuktikannya.
+ 

@@ -1,0 +1,20 @@
+--- src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md @ a188e620
++++ src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md @ reviewed working tree
+@@ -3,7 +3,7 @@
+ seoTitle: "Deutsche Urteile in Taiwan vollstrecken"
+ summary: "Ein deutsches Zahlungsurteil eröffnet noch keinen unmittelbaren Zugriff auf Taiwan-Vermögen. Rechtskraft, Zustellung, Anerkennung und ein taiwanesisches Zulassungsurteil sind zu prüfen."
+ published: "2026-10-23"
+-lastmod: "2026-10-24"
++lastmod: "2026-10-25"
+ date_display: "23. Oktober 2026"
+ read_time: "6 Minuten Lesezeit"
+ categories: ["Rechtliche Informationen zu Taiwan"]
+@@ -14,7 +14,7 @@
+ author: "legal-ai-assistant"
+ featured_image: "/images/columns/683-market-review-20261024.webp"
+ featured_image_alt: "Aktenmappen, unbeschriftete Blätter und das Modell eines Bürogebäudes vor einer Stadtansicht von Taipeh."
+-featured_image_caption: "Symbolbild zu Verfahrensunterlagen und Vermögen in Taiwan; das Gebäudemodell steht für kein bestimmtes Vollstreckungsobjekt."
++featured_image_caption: "Fiktive Szene"
+ faq:
+   - q: "Kann ein deutsches Urteil unmittelbar bei der taiwanesischen Vollstreckungsstelle eingereicht werden?"
+     a: "Für die Zwangsvollstreckung aus einem ausländischen rechtskräftigen Urteil verlangt Artikel 4-1 des taiwanesischen Zwangsvollstreckungsgesetzes ein taiwanesisches Urteil, das die Vollstreckung zulässt. Außerdem darf keiner der Versagungsgründe nach Artikel 402 der taiwanesischen Zivilprozessordnung vorliegen."

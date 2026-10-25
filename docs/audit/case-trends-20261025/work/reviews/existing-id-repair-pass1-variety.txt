@@ -1,0 +1,2 @@
+src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md [id] sentences=56 mean=14.4 cv=0.446 short=0.179 run3=0.037 opener_rep=0.0 cite_end=0.0 cite_para=0.667 contrast=0 caveat=0 q=2
+  FAIL len_cv=0.446 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences

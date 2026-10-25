@@ -1,0 +1,137 @@
+# Web tool text capture; retrieved 2026-10-25. This is not a raw HTML or PDF capture.
+
+臺灣高等法院 112 年度重勞上字第 14 號民事判決 (https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV%2C112%2C%E9%87%8D%E5%8B%9E%E4%B8%8A%2C14%2C20251230%2C1)
+citeturn1131view0 [wordlim: 200] Crawled: last week; Content type: text/html; Source: open({"ref_id":"turn1119view0","lineno":137}); Redirected to URL: https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV,112,%E9%87%8D%E5%8B%9E%E4%B8%8A,14,20251230,1; Total lines: 189
+L133: 　　　、107、108年分別取得BVI艾渥公司股份3萬3300股、5萬股、7萬股、8萬股、15萬股（見原審卷㈠第253-255、27頁電子郵件、第258-260頁譯文）。可知上訴人於109年4月間向BVI艾渥公司登記股東林凡然查詢103至105年年終獎金、106與107年之績效獎金（此2年分別於107、108年發給）；林凡然即在109年4月6日回函說明上述年度分得股份數（107年績效獎金應係10萬股，前述電子郵件所載15萬股係誤載）。則BVI艾渥公司唯一登記股東林凡然，於109年5月間已確認上訴人連續5年（103至107年）所分得BVI艾渥公司股份數，且與林凡然所出具103、104年股權證明書相符（見原審卷㈠第39、31頁）。堪認上訴人於登記為BVI艾渥公司股東前，已為BVI艾渥公司實質股東（最終受益人），得行使BVI公司股份相關權利，其處分上開股份亦無任何阻礙，不因BVI艾渥公司是否將上訴人登記為股東而受影響。再者，108年績效獎金即BVI艾渥公司股份15萬股之發放期限為109年12月31日（見第㈡小段理由），在給付期限屆滿後，直到110年6月10日登記股份以前，僅有約160日之差距，並無實據足以證明上訴人於該期間有無法行使股東權情事。此由上訴人於109年12月9日經由被上訴人原法定代理人傅崇仁回函表示可於2週內完成登記程序，表示不認為其會出售股票（見原審卷㈠第244頁郵件、第248頁譯文）亦可證之。
+L134: 　　⑶被上訴人復稱BVI艾渥公司在104年12月21日、105年12月23日，分別匯付股利1,072.49元、1,578.04元予上訴人；107年減資後，在同年5月17日將減資款項26,130.50元匯予上訴人，可見上訴人為BVI艾渥公司實質股東等語（見本院卷㈢第319頁）；並提出匯款證明3份為證（見原審卷㈠第321-325頁匯款證明）。上訴人固然主張上開零星匯款並非股利、減資款云云（見本院卷㈢第372-377頁）；但是，上訴人無法說明其對BVI艾渥公司有何股權以外債權
+L135: 　　　，其因而受領前述匯款，自以被上訴人之抗辨為可採。至於被上訴人財務主管汪曉萍104年12月22日以電子郵件向上訴人表示：「……3. 12/21 you will received another annual bonus in your Canadian account）（But, I don't know wire transfer amount）〖中譯：3. 12/21在您的加拿大帳戶將收到另一筆年度獎金(但我不知道匯款金額）〗」（見原審卷㈠第441頁、譯文見第483頁），依信件內容，汪曉萍既然不清楚前開104年12月21日匯款金額，足見其對於該筆匯款細節並不瞭解；至於汪曉萍以「獎金」形容該筆款項，應係用詞欠精確所致。是上訴人憑以推論BVI艾渥公司前述匯款並非股利、減資款云云（
+L136: 
+L137: 　　　見本院卷㈢第372-373頁），尚非可採。又799偵案不起訴處分書、臺灣高等檢察署111年度上聲議字第5227號再議處分書就前述匯款性質亦認定為股利、減資款（見本院卷㈢第212、221頁處分書）。亦證上訴人當時雖未登記為BVI艾渥公司股東，已得行使、享受實質股東股權益。
+L138: 　　⑷上訴人固然主張BVI艾渥公司並未提出股東或董事簽署聲
+L139: 
+L140: 　　　明書，也未申報實際股東為最終受益人；被上訴人亦未提出此種格式聲明書，故被上訴人並未給付BVI艾渥公司股份云云（見本院卷㈢第369-371頁）。查謝明穎於6832偵案109年12月8日檢訊時供承：「依照BVI法律，所謂實際股東，在法律上我們稱之為最終受益人，雖然股東只有一位，但依法他們必須申報最終受益人，且需提供一個聲明書，該聲明書是由熊會計師交給董事林凡然或傅崇仁簽署
+L141: 
+L142: 　　　，雖然登記股東只有一位，但依法他們必須申報其他股東為最終受益人（即實際股東），必須由股東或董事去做聲明，只要有聲明實際受益人就沒有問題」等語（見6832偵案之他字卷㈢影印卷第20頁筆錄、本院卷㈡第174頁）。核謝明穎證詞所述聲明書格式與申報作業，應係指登記股東應依實質股東要求而提供股權證明文件，但是證明文件並非實質股東股權之生效要件。茲林凡然已證明被上訴人給付103至107年之年終獎金與績效獎金相對應股份，已如前述，且上訴人並未證明其曾向林凡然索取聲明書遭拒；上訴人執此主張未登記為BVI艾渥公司股東前，並未取得股東權云云；尚非可取。
+L143: 　　⑸從而，被上訴人抗辯被上訴人就取得103至105年年終獎金與106至108年績效獎金（共計BVI艾渥公司股份48萬3300股），於登記為BVI艾渥公司股東前，實質股東股權益並不受影響，仍可全權收益、處分股權，應屬可採。
+L144: 
+L145: 　㈣末按「債務人遲延者，債權人得請求其賠償因遲延而生之損害」、「契約當事人之一方，約定由第三人對於他方為給付者，於第三人不為給付時，應負損害賠償責任」，民法第231條第1項、第268條分別定有明文。經查：
+L146: 
+L147: 　　⑴按民法第二百十六條規定，損害賠償除法律另有規定或契約另有訂定外，應以填補債權人所受損害（積極損害）及所失利益（消極損害）為限。既存利益減少所受之積極損害，須與責任原因事實具有相當因果關係，始足當之。又依通常情形，或依已定之計劃、設備或其他特別情事，可得預期之利益，視為所失利益。該所失利益，固不以現實有此具體利益為限，惟該可得預期之利益，亦非指僅有取得利益之希望或可能為已足，尚須依通常情形，或依已定之計劃、設備或其他特別情事，具有客觀之確定性。股票價格之漲跌，繫於巿場資金、政治、經濟環境、上巿公司之盈虧、預期心理等諸多因素（最高法院95年度台上字第2895號判決意旨參照）。
+L148: 　　⑵上訴人稱被上訴人於105年間主導BVI艾渥公司低價大量發行新股供關係人認購，造成股份價值減損；被上訴人復於109年5月4日主導修改BVI艾渥公司章程，賦予特別股優渥權利，以致普通股價值嚴重貶損云云（見本院卷㈢第382-391頁）。惟查，上訴人並未舉證被上訴人主導BVI艾渥公司發行新股、修改章程，已有不足。再者，BVI艾渥公司股價取決於公司收益、市場波動、預期心理、政經環境等諸多因素，該公司縱於105年發行新股，此與股價減損之間，難謂有相當因果關係。再其次，證人謝明穎於6832偵案109年12月8日檢訊時證稱，BVI艾渥公司與somoa艾渥公司在100年9月22日訂立併購協議，原有普通股股權喪失，只有特別股D股或A-1股存續下來，這是依據當事人間實體法權利義務關係而處理等語云云（見第㈢小段第⑴點），可知BVI艾渥公司在100年併購somoa艾渥公司以後，特別股權益獲得保留。則被上訴人辯稱BVI艾渥公司依100年間併購協議，於109年5月4日修改章程增設特別股股東制度云云（見本院卷㈢第328頁），應非無據。是以被上訴人所給付上訴人108年績效獎金（BVI艾渥公司股份15萬股）
+L149: 　　　，其價值縱使因BVI艾渥公司於109年5月4日修改章程導致股份價值不若以往，此部分價差實非可歸責於被上訴人，併予說明。
+--------------------------------------------------------------------------------
+TAICCA 文化內容策進院 (https://en.taicca.tw/news/detail/222)
+citeturn1131view1 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"turn1109view6","lineno":43}); Total lines: 104
+L0:   * 【0†Grants & Investment】
+L1: 
+L2: 【1†Grants】 【2†Investment】
+L3: 
+L4:   * 【3†Fairs & Events】
+L5: 
+L6: 【4†Fairs】 【5†Events】
+L7: 
+L8: TCCF
+L9: 
+L10:   * 【6†Business Matching】
+L11: 
+L12: Taiwan Pavilion
+L13: 
+L14: Taiwan Comic City
+L15: 
+L16: 【7†Book to Screen】
+L17: 
+L18: Taiwan Content Island
+L19: 
+L20: Taiwan Beats
+L21: 
+L22: IP Meetup
+L23: 
+L24: Culture x Tech Database
+L25: 
+L26: Taiwan Digital Asset Library
+L27: 
+L28: 【8†Fellowship】
+L29: 
+L30:   * 【9†Industry Insights】
+L31: 
+L32: 【10†Reports】
+L33: 
+L34:   * 【11†News】
+L35: 
+L36:   * 【12†About】
+L37: 
+L38: [Input: keyword]
+L39: 
+L40: 【13†繁中†taicca.tw】
+L41: 
+L42:   *   *   * 5/34
+L43:   *   *   *   *   *   *   *   *   *   *   * # TCCF MARKET to bring together the global content industry Spotlight Screenings target international buyers to propel Taiwan content onto the world stage
+L44: 
+L45: September 22, 2026
+L46: The highly anticipated 2026 Taiwan Creative Content Fest (TCCF) is set to take place this November. At the heart of industry transactions is TCCF MARKET, which this year will bring together 107 exhibitors from seven countries—Taiwan, South Korea, Thailand, Japan, Singapore, France, and the Philippines. Focusing on rights transactions for international film and television content and promising IPs, the event continues to serve as a key platform connecting Taiwan with the global content industry.
+L47: In particular, the number of exhibitors in IP categories such as publishing, comics, and characters has increased by 13% from last year. This reflects the continued development of global IPs with established fan bases into screen adaptations and diverse licensing opportunities, an increasingly prominent focus in MARKET exhibitors’ strategies.
+L48: 
+L49: 
+L50: 【14†Image†taicca.tw】
+L51: TAICCA Chairperson Sue WANG said that MARKET has always served as TCCF’s central hub for connecting the global film and television industry with Taiwan’s wealth of original content. This year’s inaugural Spotlight Screenings offer international buyers and industry partners an early opportunity to experience the quality of the finished works firsthand ahead of the business meetings, with the aim of further facilitating meaningful cross-border transactions and collaborations.
+L52: She expressed hope that TCCF would not just be an industry event, but also a steadfast partner supporting Taiwan’s cultural content industry as it moves forward. By bringing together different fields and technologies, TCCF hopes to continue creating diverse opportunities for international cooperation and help Taiwan establish an indispensable strategic position in the global film and television production chain.
+L53: The biggest new initiative at this year’s MARKET is TCCF’s first collaboration with Vieshow Cinemas at Mitsui Shopping Park LaLaport Nangang to host the Spotlight Screenings, offering international buyers, overseas media, and other key industry professionals an exclusive preview of two selected high-profile titles, with the aim of boosting overseas sales opportunities and rights transactions for Taiwanese film and television content.
+--------------------------------------------------------------------------------
+Taiwan Energy Industry (https://www.trade.gov/market-intelligence/taiwan-energy-industry)
+citeturn1131view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn1109view3","lineno":20}); Total lines: 34
+L14: Taiwan’s annual electricity demand growth is projected to more than double, reaching approximately 2.8% growth through 2033. To support this surge, Taipower expects over 5 gigawatts of new power demand between 2026 and 2030, with a single advanced wafer fab consuming up to 200 megawatts. Securing a reliable electricity supply has become a critical priority for the island’s economic and industrial development.
+L15: The anticipated buildout creates opportunities for U.S. suppliers of gas turbines and power generation equipment, grid modernization and substation technologies, transmission equipment, energy storage systems, data center power and cooling infrastructure, and renewable energy components.  Taipower will tender the Xiehe Combined Cycle Gas Turbine Project, the restart projects for the Kuosheng and Maanshan nuclear power plants, and the Shenao Battery Storage Project by the end of 2026 or in 2027.
+L16: On June 18, 2026, Taipower announced that it will invest approximately $170 million (NTD 5 billion) to renovate underground power transmission lines in six metropolitan areas.
+L17: For more information on this and more opportunities in Taiwan’s energy and infrastructure sectors, contact CS Taiwan Commercial Specialist Kenneth Chen at Kenneth.Chen@trade.gov.
+L18: 
+L19: 09/30/2026
+L20: 
+L21: ×
+L22: ## Global Business Navigator Chatbot ^{Beta}
+L23: Welcome to the Global Business Navigator, an artificial intelligence (AI) Chatbot from the International Trade Administration (ITA). This tool, currently in beta version testing, is designed to provide general information on the exporting process and the resources available to assist new and experienced U.S. exporters. The Chatbot, developed using Microsoft’s Azure AI services, is trained on ITA’s export-related content and aims to quickly get users the information they need.
+L24: The Chatbot is intended to make the benefits of exporting more accessible by understanding non-expert language, idiomatic expressions, and foreign languages.
+L25: ### Limitations
+L26: As a beta product, the Chatbot is currently being tested and its responses may occasionally produce inaccurate or incomplete information. The Chatbot is trained to decline out of scope or inappropriate requests. The Chatbot’s knowledge is limited to the public information on the 【1†Export Solutions】 web pages of Trade.gov, which covers a wide range of topics on exporting.
+L27: While it cannot provide responses specific to a company’s product or a specific foreign market, its reference pages will guide you to other relevant government resources and market research. Always double-check the Chatbot’s responses using the provided references or by visiting the 【1†Export Solutions】 web pages on Trade.gov. Do not use its responses as legal or professional advice. Inaccurate advice from the Chatbot would not be a defense to violating any export rules or regulations.
+L28: ### Privacy
+L29: The Chatbot does not collect information about users and does not use the contents of users’ chat history to learn new information. All feedback is anonymous. Please do not enter personally identifiable information (PII), sensitive, or proprietary information into the Chatbot. Your conversations will not be connected to other interactions or accounts with ITA. Conversations with the Chatbot may be reviewed to help ITA improve the tool and address harmful, illegal, or otherwise inappropriate questions.
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn1131view3 [wordlim: 200] Source: open({"ref_id":"turn1076view3","lineno":15}); Total lines: 1
+L0: Failed to fetch https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693: (400) Timeout fetching
+--------------------------------------------------------------------------------
+臺灣高等法院 113 年度重上更三字第 14 號民事判決 (https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV%2C113%2C%E9%87%8D%E4%B8%8A%E6%9B%B4%E4%B8%89%2C14%2C20250325%2C1)
+citeturn1131view4 [wordlim: 200] Crawled: 3 weeks ago; Content type: text/html; Source: open({"ref_id":"turn1117view2","lineno":59}); Redirected to URL: https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV,113,%E9%87%8D%E4%B8%8A%E6%9B%B4%E4%B8%89,14,20250325,1; Total lines: 89
+L57: 　　⒊上訴人抗辯總金額為80萬元之授權契約（下稱A契約）方屬實在，B契約為被上訴人所偽造；其應支付⑴米拉梅庫存片授權金80萬元，也已支付，⑵預付款係被上訴人捏造的項目，⑶其於98年10月16日已經支付The Beaver之授權金12萬5,000元，⑷其雖於102年10月15日經美國法院判決確認取得Great Hope Springs、Seeking A Friend、What to Expect等3部影片之授權，但業經被上訴人另以媒體發展公司名義公開於101年11月9日至102年1月1日上映，其餘7部影片未取得授權，是英屬威望公司溢付70萬元予SSG公司等語（見本院卷二第95頁）。惟查，A契約上僅有SSG公司法定代理人林緯之簽名，並無上訴人法定代理人或代表之簽名（見原審卷一第104頁），已難認A契約已成立，又B契約業經本院認定為有效契約，如前所述，上訴人又始終無法就A契約為真實及B契約係偽造乙節舉證以實其說，是上訴人辯稱A契約方屬實在，尚無可取。次查，被上訴人主張英屬威望公司給付予SSG公司之150萬元包括⑴米拉梅庫存片授權金（80萬元）、⑵預付款（10萬元）、⑶The Beaver授權金（7萬5,000元）、⑷系爭10部影片授權金（52萬5,000元），此乃不利於上訴人之事實，則上訴人於108年2月20日以書狀表示除系爭2部影片外，其餘系爭8部影片均不爭執已取得授權發行（見本院更一卷第213頁），是除系爭2部影片之授權外，其餘不利於上訴人之事實已生自認之效力（民事訴訟法第279條第1項規定參照）；就⑴米拉梅庫存片授權金（80萬元）部分，上訴人自承其應支付，並已支付（見本院卷二第95頁）；而上訴人僅空泛辯稱⑵預付款係被上訴人捏造的項目，⑶其於98年10月16日已經支付The Beaver之授權金12萬5,000元云云，並未證明此部分自認與事實不符，依法不得撤銷自認（民事訴訟法第279條第3項規定參照）；又上訴人所提出之美國法院判決為declaratory judgement（即確認判決、宣告式判決），法官雖判決英屬威望公司與SSG公司之間就經銷授權契約存在隱名代理關係，及代理範圍限於該判決附表A、B所示電影（見本院更一卷二第117-122頁），惟該判決全文並未提及英屬威望公司之證據資料，較似英屬威望公司與SSG公司就確認內容達成共識後，由法官以該判決確認其等共識之判決，是該美國法院判決無法證明上訴人所為之自認與事實不符（民事訴訟法第279條第3項規定參照），上訴人辯稱以該美國法院判決撤銷自認，難以可取，從而，上訴人就英屬威望公司給付予SSG公司之150萬元包含⑴米拉梅庫存片、⑵預付款、⑶The Beaver影片權利金、⑷系爭8部影片之授權乙節，既經自認，此部分事實即無庸證明，本院亦應受拘束。再者，被上訴人迭稱：SSG公司於收到150萬元後，按A發票所載明細抵充英屬威望公司應付之授權金，英屬威望公司並未受有損害等語（見原審卷二第28頁，本院重上卷三第47頁），及被上訴人提出之SSG公司授權英屬威望公司影片清單僅有Great Hope Springs,　Seeking a Friend, What to Expect等3部影片，未見其餘影片之授權（見本院更一卷二第126、130、131、136、138、140頁），可見英屬威望公司支付150萬元予SSG公司後，仍須待SSG公司按A發票所載明細抵充系爭10部影片之授權金後方能取得授權，而被上訴人始終無法證明SSG公司已將系爭2部影片授權予英屬威望公司，是上訴人辯稱英屬威望公司未取得系爭2部影片之授權，溢付SSG公司系爭2部影片之授權金等語，應屬可採。又被上訴人雖主張上訴人取得詭屋之授權云云，並提出CATCHPLAY+官網為證（見本院卷一第331頁）；惟查，上訴人於104年5月間成立子公司Asia Play Inc.、威亞數位娛樂、Asia Play Taiwan台灣威亞數位科技，建立自有國際影音平台CATCHPLAY+（見本院卷一第465-466頁之公司網路資料），是CATCHPLAY+非英屬威望公司所有，則無論上訴人自承取得詭屋之播映權（見本院卷二第128頁），或CATCHPLAY+官網上顯示可觀看詭屋，其等取得詭屋之授權均與英屬威望公司無涉，是上訴人辯稱英屬威望公司未取得詭屋之授權，溢付SSG公司此部分之授權金等語，應為可取。
+L58: 　　⒋上訴人已證明英屬威望公司受有溢付SSG公司系爭2部影片授權金之損害，然無法證明數額，爰依民事訴訟法第222條規定，審酌一切情形，及系爭10部影片之授權金合計為52萬5,000元，認1部影片以5萬2,500元計算，應屬適當。是上訴人主張英屬威望公司受有10萬5,000元〖計算式：52,500元×2〗之損害，其並將此部分對被上訴人之損害賠償債權讓與伊，伊已通知被上訴人，並為抵銷之意思表示等語，洵屬有據。
+L59: 
+L60: 　㈢上訴人得以其受讓英屬威望公司額外支出電影「詭屋」授權金26萬9,300元，抵銷被上訴人之請求：
+L61: 　　⒈上訴人抗辯英屬威望公司未取得詭屋之授權，然張心望背信分別於100年8月16日支出授權金2萬8,300元，於101年4月30日支出授權金12萬元、12萬1,000元，再加計賠償依A發票所支出之授權金5萬2,500元，合計支出32萬1,800元，應負賠償責任等語。查英屬威望公司未取得「詭屋」之授權，業經本院認定如前，是英屬威望公司無須支付「詭屋」授權金2萬8,300元、12萬元、12萬1,000元（見本院重上卷二第31、39頁），上訴人主張英屬威望公司受有26萬9,300元〖計算式：28,300＋120,000＋121,000〗之損害，並將此部分對被上訴人之損害賠償債權讓與其，其已通知被上訴人，並為抵銷之意思表示等語，自屬有據。另本院認定英屬威望公司未取得詭屋之授權，被上訴人應賠償英屬威望公司此部分之損害為5萬2,500元，英屬威望公司讓與該債權予上訴人，並經上訴人為抵銷之意思表示（見本判決事實及理由欄、四、㈡、⒋），是上訴人再抗辯應扣除A發票所支出之授權金5萬2,500元，即屬重複扣除，並無可取。
+L62: 　　⒉又上訴人事後取得詭屋之播映權（見本院卷二第128頁），或CATCHPLAY+於官網上顯示可觀看詭屋，均與英屬威望公司無涉等節，業經本院認定如前（見本判決事實及理由欄、四、㈡、⒊），英屬威望公司既未自SSG公司取得詭屋之授權，其對被上訴人即有上開損害賠償債權26萬9,300元，其讓與該債權予上訴人，上訴人並為抵銷抗辯，為有理由。
+L63: 
+L64: 　㈣綜上，被上訴人依消費借貸關係請求上訴人返還借款39萬5,500元，為有理由，惟上訴人得以其受讓英屬威望公司之米拉梅庫存片損害賠償債權中之10萬5,000元、英屬威望公司額外支出電影「詭屋」授權金26萬9,300元為抵銷抗辯，則上訴人尚應返還被上訴人借款為2萬1,200元〖計算式：395,500－105,000－269,300元〗。
+L65: 五、綜上所述，被上訴人依消費借貸法律關係規定，請求上訴人給付2萬1,200元，及自支付命令送達翌日即102年2月27日（見司促卷第27頁）起至清償日止，按年息5％週年計算之利息，為有理由，應予准許；逾此範圍之請求，為無理由，應予駁回。原審就超過上開應准許部分，為上訴人敗訴之判決，並為假執行之宣告，尚有未洽，上訴意旨指摘原判決此部分不當，求予廢棄，為有理由，爰由本院將此部分廢棄，並改判如主文第2項所示。至於上開應准許部分，原審判命上訴人如數給付，及命供擔後為准、免假執行之宣告，核無違誤，上訴意旨就此部分指摘原判決不當，聲明廢棄，為無理由，應駁回其上訴。
+L66: 
+L67: 六、本件事證已臻明確，兩造其餘攻擊防禦方法或證據，核與判決結果不生影響，爰不逐一論列，附此敘明。
+L68: 
+L69: 七、據上論結，本件上訴為一部有理由，一部無理由，依民事訴訟法第449條第1項、第450條、第79條，判決如主文。
+L70: 
+L71: 中　　華　　民　　國　　114 　年　　3　　月　　25　　日
+L72: 
+L73: 　　　　　　　　　民事第二十五庭
+L74: 
+L75: 　　　　　　　　　　　審判長法　官　潘進柳
+L76: 
+L77: 　　　　　　　　　　　　　　法　官　林祐宸
+L78: 
+L79: 　　　　　　　　　　　　　　法　官　楊惠如
+L80: 正本係照原本作成。
+L81: 
+L82: 如不服本判決，應於收受送達後20日內向本院提出上訴書狀，其未表明上訴理由者，應於提出上訴後20日內向本院補提理由書狀（均須按他造當事人之人數附繕本），上訴時應提出委任律師或具有律師資格之人之委任狀；委任有律師資格者，另應附具律師資格證書及釋明委任人與受任人有民事訴訟法第466條之1第1項但書或第2項所定關係之釋明文書影本。
+L83: 
+L84: 中　　華　　民　　國　　114 　年　　3 　　月　　25　　日
+L85: 
+L86: 
+L87: 
+L88: 　　　　　　　　　　　　　　書記官　張永中
+

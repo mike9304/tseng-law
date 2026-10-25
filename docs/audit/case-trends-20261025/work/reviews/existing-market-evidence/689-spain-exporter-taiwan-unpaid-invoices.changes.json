@@ -1,0 +1,26 @@
+[
+  {
+    "old_line": 14,
+    "new_line": 14,
+    "before": "featured_image_caption: \"Ilustración de documentos y mercancías para preparar una reclamación comercial.\"",
+    "after": "featured_image_caption: \"Escena ficticia\""
+  },
+  {
+    "old_line": 28,
+    "new_line": 28,
+    "before": "Según el [artículo 20 de la ley taiwanesa sobre conflictos de leyes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20), las partes pueden elegir la ley del contrato; sin elección expresa válida, rige el derecho con la conexión más estrecha. Tener al comprador en Taiwán no resuelve por sí solo esa cuestión. La prescripción sigue la ley de la relación jurídica, según el [artículo 36](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007); las reglas siguientes presuponen que resulta aplicable el derecho taiwanés.",
+    "after": "Según el [artículo 20 de la ley taiwanesa sobre conflictos de leyes](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20), las partes pueden elegir la ley del contrato; sin elección expresa válida, rige el derecho con la conexión más estrecha. Que el comprador esté en Taiwán no zanja por sí solo la cuestión. La prescripción sigue la ley de la relación jurídica, según el [artículo 36](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007); las reglas siguientes presuponen que resulta aplicable el derecho taiwanés."
+  },
+  {
+    "old_line": 36,
+    "new_line": 36,
+    "before": "El saldo también debe poder reconstruirse. Precio, moneda pactada, abonos, devoluciones e intereses reclamados se presentan separados, sin convertir euros a dólares taiwaneses mediante un cambio elegido sin explicación. Una objeción sobre calidad requiere conservar tanto la queja del cliente como la respuesta del exportador.",
+    "after": "El saldo también debe poder reconstruirse. Precio, moneda pactada, abonos, devoluciones e intereses reclamados se presentan separados, sin convertir euros a dólares taiwaneses con un tipo de cambio que nadie explica. Si el cliente alegó defectos de calidad, hay que guardar su queja y la respuesta que se le dio."
+  },
+  {
+    "old_line": 58,
+    "new_line": 58,
+    "before": "Para plantear el asunto en [contacto](/es/contact), puede escribir a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) y acordar primero cómo comunicarse: las consultas se atienden en inglés, chino, japonés o coreano. Basta inicialmente un resumen sin documentación sensible, el nombre de la contraparte para comprobar conflictos, el vínculo con Taiwán y los vencimientos. El correo no formaliza un encargo. El primer dato que conviene recuperar es la fecha exigible de la factura más antigua pendiente.",
+    "after": "Para exponer el caso puede usar la página de [contacto](/es/contact) o escribir a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); las consultas se atienden en inglés, chino, japonés o coreano, así que conviene acordar antes el idioma. Al principio basta un resumen sin documentación sensible, el nombre de la contraparte para comprobar conflictos, el vínculo con Taiwán y los vencimientos. El correo no formaliza un encargo. El primer dato que hay que recuperar es la fecha de vencimiento de la factura pendiente más antigua."
+  }
+]

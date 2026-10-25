@@ -1,0 +1,613 @@
+{
+  "research_date": "2026-10-25",
+  "researcher": "research_ko_cases (AI research role)",
+  "repo_head": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+  "scope": "Korean audiences with a concrete Taiwan-law decision; research only, no publication claim",
+  "source_policy": "Official current statutes opened. Court outcomes distinguished from allegations and remand/procedural outcomes. FJUD subsequent retrieval intermittently fails; read coverage below is authoritative. No search-volume or conversion inference.",
+  "sources": [
+    {
+      "id": "J1",
+      "type": "official_judgment",
+      "court": "最高法院",
+      "docket": "112年度台上字第2369號",
+      "branch": "刑事",
+      "date": "2023-07-13",
+      "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSM%2C112%2C%E5%8F%B0%E4%B8%8A%2C2369%2C20230713%2C1",
+      "opened": true,
+      "read_coverage": "Full official judgment, 60 web lines, turn929view0",
+      "outcome": "上訴駁回; third-instance appeals rejected as not satisfying statutory law-error grounds, Criminal Procedure Code 377 and 395 first sentence.",
+      "stage": "Supreme Court criminal third-instance procedural dismissal; underlying second-instance judgment 111年度刑智上更二字第6號 (2023-03-30).",
+      "finality_limit": "Third appeal disposed of. Do not describe Supreme Court as conducting a new full factual trial or endorsing every lower-court statement.",
+      "holdings": [
+        "Section IV explains Copyright Act 37: scope fixed by agreement; unclear scope presumed unlicensed; exclusive licensee can exercise rights and litigate in own name within scope while original rightsholder cannot exercise them within that scope.",
+        "The lower court interpreted the Korean publisher's 2011 Taiwan exclusive distribution agreement together with a 2014 copyright license as granting exclusive copyright permission. Supreme Court found the challenged evidentiary reasoning insufficient to establish a qualifying error of law.",
+        "Different Korean/Chinese document dates were addressed through evidence that a lost Korean original was reproduced in 2018, the 2014 Chinese agreement, Korean notarization and Taipei representative-office authentication. This is a case-specific evidentiary explanation, not a rule that date discrepancies do not matter."
+      ],
+      "limits": [
+        "Distribution exclusivity is not automatically an exclusive copyright license.",
+        "License is not an assignment of copyright ownership.",
+        "No claim about current Korean copyright law, no invented firm involvement."
+      ],
+      "retrieved_on": "2026-10-25",
+      "retained_tool_output": "ko-snapshots/J1-official-open-retained.txt",
+      "snapshot_provenance": "Exact successful web open output recovered from this research session local tool-output log; not a new fetch."
+    },
+    {
+      "id": "J2",
+      "type": "official_judgment",
+      "court": "智慧財產及商業法院",
+      "docket": "114年度民商上字第11號",
+      "branch": "民事",
+      "date": "2026-05-14",
+      "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=IPCV%2C114%2C%E6%B0%91%E5%95%86%E4%B8%8A%2C11%2C20260514%2C1",
+      "opened": true,
+      "read_coverage": "Official primary page 717 lines. Read 0-247, 299-428, 465-551, 610-634 through turn998view0, turn1004view0-3, turn1006view0-4 and turn1022view1. Missing 248-298,429-464,552-609,635-716; repeated re-open timeout. Supplemental official indexed excerpts turn1077search2 and turn1091search1 show appeal notice. Do NOT label full-text read complete.",
+      "outcome": "Brand-owner appeal allowed: lower judgment adverse to owner reversed; injunction extended to outlet operator; reseller/manager ordered to pay an additional TWD1,520,000, outlet/manager TWD2,000,000 and reseller/outlet TWD2,000,000 on overlapping obligations credited against one another. Reseller appeal dismissed.",
+      "stage": "Second instance, appealed from 111年度民商訴字第57號 (2025-04-30); third appeal permitted by notice, whether filed/final result unverified.",
+      "holdings": [
+        "Section VI(1)1: genuine goods sold by or with consent of the same global trademark owner attract international exhaustion, but this does not automatically authorize separate service-source signage and advertising.",
+        "Brand-dominant counter/window/outlet-website displays, less prominent reseller identification/parallel-import wording and presentation as a branded outlet supported infringement findings.",
+        "Nominative fair use must be assessed case by case; honest necessary identification can be lawful. This case does not prohibit every advertisement for genuine goods.",
+        "Outlet operator's advertising control, revenue share, actual awareness and continuation after notices matter; it was not treated merely as a passive landlord."
+      ],
+      "limits": [
+        "Do not state that parallel imports themselves were illegal.",
+        "Do not treat any disclaimer, any own-company sign, or any exact letter size as a guaranteed safe harbor.",
+        "Do not add overlapping damages awards together.",
+        "Conduct occurred 2019-2022; do not conflate it with 2026 judgment or 2024 statutory commencement.",
+        "An internal damages-calculation paragraph shows mismatched arithmetic/numbers. Avoid deriving a formula from it; use disposition only if amount necessary.",
+        "Unopened portions require independent verification before expanding beyond the stated holdings."
+      ],
+      "retrieved_on": "2026-10-25",
+      "retained_tool_output": "ko-snapshots/J2-official-open-retained.txt",
+      "snapshot_provenance": "Exact successful web open output recovered from this research session local tool-output log; not a new fetch."
+    },
+    {
+      "id": "J3",
+      "type": "official_judgment",
+      "court": "臺灣高等法院高雄分院",
+      "docket": "114年度勞上易字第13號",
+      "branch": "民事",
+      "date": "2026-04-22",
+      "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C114%2C%E5%8B%9E%E4%B8%8A%E6%98%93%2C13%2C20260422%2C1",
+      "opened": true,
+      "read_coverage": "Full official judgment, 82 lines. turn1080view2 lines0-56 + turn1080view0 lines57-81. Saved ko-snapshots/J3-official-web.txt.",
+      "outcome": "Employee's partial appeal dismissed; first instance awarded TWD9,467 plus interest, rejected the balance; additional TWD1,090,460 sought on appeal rejected.",
+      "stage": "Appeal from 臺灣橋頭地方法院113年度勞訴字第44號 (2025-05-27). Judgment expressly says 本判決不得上訴.",
+      "finality_limit": "Ordinary appeal unavailable by judgment's own notice; do not claim no extraordinary remedy could ever exist.",
+      "holdings": [
+        "Section III identifies which portions were appealed: holiday pay TWD154,287 and time-barred overtime TWD225,249 were not appealed and were already final.",
+        "Section VI(1): employee signed contemporaneous confirmations marking differences in clock times as non-overtime; allegations of collusion/coercion were not proved on the evidence.",
+        "Section VI(2): court acknowledged Labor Incident Act38 presumption, considered actual approval/confirmation practices and lack of additional positive evidence. Some dates without non-overtime confirmations had already supported an award.",
+        "Section VI(3): the particular after-hours chat extracts were mutual reminders of work matters and did not establish work performed in this case."
+      ],
+      "limits": [
+        "Not every after-hours message is unpaid; not every late clock-out establishes overtime.",
+        "A written application system alone is not a universal defense.",
+        "Do not recommend coercing employees to sign non-overtime confirmations or describe managers as automatically exempt.",
+        "Hotel chef facts are not facts about the Korean AE job posting."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "J4",
+      "type": "official_judgment",
+      "court": "臺灣臺北地方法院臺北簡易庭",
+      "docket": "114年度北小字第5039號",
+      "branch": "小額民事",
+      "date": "2026-02-06",
+      "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPEV%2C114%2C%E5%8C%97%E5%B0%8F%2C5039%2C20260206%2C1",
+      "opened": true,
+      "read_coverage": "Official 90-line page opened, turn971view1 lines0-46 including complete substantive reasons through Civil Code130/144. Last lines47-89 not retrieved on reopen. Official indexed text turn1091search0 confirms claims/facts/reasons; turn1077search1 gives small-claims legal-error appeal notice. Do NOT label full-text read complete.",
+      "outcome": "Traveler's TWD55,150 refund suit dismissed on limitation defense; TWD1,500 costs borne by claimant.",
+      "stage": "Small-claims first instance; ordinary limited appeal route mentioned in official indexed notice; appeal history/finality not verified.",
+      "holdings": [
+        "Tour should have ended 2024-04-02; one-year deadline was 2025-04-02 under Civil Code514-12; suit filed 2025-10-09.",
+        "2024-05-27 complaint/unsuccessful industry-association handling did not preserve interruption: no suit within six months of demand, so Civil Code130 treated that demand-based interruption as absent.",
+        "Defendant raised limitation defense and could refuse performance under144(1)."
+      ],
+      "limits": [
+        "The dispute concerned a Taiwan tour operator's outbound Iceland/Paris package with self-booked flights, not a Korean tourist's Taiwan inbound tour.",
+        "Do not say court validated the operator's 100% cancellation charge; that was an argument, while dismissal rested on time bar.",
+        "One-year rule is for claims in the Civil Code tourism section, not every hotel/airline/platform refund.",
+        "Industry-association 調處 is not interchangeable with statutory court 調解; other procedures may have different effects.",
+        "Six months from a demand is not an automatic universal refund-suit deadline; calculate the underlying one-year period and any effective interruption separately."
+      ],
+      "retrieved_on": "2026-10-25",
+      "retained_tool_output": "ko-snapshots/J4-official-open-retained.txt",
+      "snapshot_provenance": "Exact successful web open output recovered from this research session local tool-output log; not a new fetch."
+    },
+    {
+      "id": "J5",
+      "type": "official_judgment_backup",
+      "court": "臺灣士林地方法院",
+      "docket": "113年度消簡上字第2號",
+      "branch": "民事",
+      "date": "2025-07-15",
+      "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=SLDV%2C113%2C%E6%B6%88%E7%B0%A1%E4%B8%8A%2C2%2C20250715%2C1",
+      "opened": true,
+      "read_coverage": "Full official judgment, 71 lines, turn971view0.",
+      "outcome": "Consumer appeal dismissed; notice expressly 本判決不得上訴.",
+      "holdings": [
+        "Online cruise booking was an invitation/request requiring operator acceptance under disclosed terms; confirmation had not occurred.",
+        "Credit-card authorization hold was cancelled without actual charge; no formed tourism contract on the proven facts.",
+        "Consumer's demand for performance/large punitive damages failed."
+      ],
+      "limits": [
+        "Backup only if parent prefers a fully read official consumer case instead of J4; requires Civil Code153/154 and Consumer Protection55/51 claims separately verified before drafting.",
+        "Do not generalize every confirmation clause as valid or say all consumer duties arise only after formation."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "J0-discarded",
+      "type": "not_primary_anchor",
+      "court": "臺灣橋頭地方法院",
+      "docket": "113年度勞訴字第44號",
+      "date": "2025-05-27",
+      "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=CTDV%2C113%2C%E5%8B%9E%E8%A8%B4%2C44%2C20250527%2C1",
+      "opened": true,
+      "read_coverage": "Official only lines0-47 + official indexed reasoning excerpts. LawPlayer replica opened but not used to certify complete official reading. Superseded as article anchor by full-read J3 appeal.",
+      "why_not_anchor": "Incomplete official fulltext and now known subsequent appeal.",
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "L1",
+      "type": "current_law",
+      "jurisdiction": "Taiwan",
+      "name": "著作權法",
+      "provisions": [
+        "37"
+      ],
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=37",
+      "opened": true,
+      "read_coverage": "Relevant provision in full, turn1040view3 lines42-61.",
+      "status": "Article37 in force. Whole act latest amendment2022-06-15; pending2022-05-04 amendments concern91,91-1,100,117/deletions98,98-1, not37.",
+      "history_url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070017",
+      "history_read": "turn1065view1: last37 amendment2010-02-10; do not call2022 amendment newly effective criminal law.",
+      "claims": [
+        "Unclear licensed scope presumed unlicensed.",
+        "Nonexclusive sublicense requires rightsholder consent.",
+        "Exclusive licensee within scope can act as rightsholder and litigate in own name; rightsholder cannot exercise rights within exclusive scope.",
+        "Paragraphs2-4 do not apply to licenses preceding the2001-11-12 statutory amendment implementation identified in paragraph5."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "L2",
+      "type": "current_law",
+      "jurisdiction": "Taiwan",
+      "name": "著作權法",
+      "provisions": [
+        "36"
+      ],
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=36",
+      "opened": true,
+      "read_coverage": "turn1106view1 lines42-48, full provision.",
+      "status": "In force; unrelated pending criminal amendments noted on page.",
+      "claims": [
+        "Assignment and license are distinct; partial/full assignment and uncertain-scope presumption."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "L3",
+      "type": "current_law",
+      "jurisdiction": "Taiwan",
+      "name": "著作權法",
+      "provisions": [
+        "28"
+      ],
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=28",
+      "opened": true,
+      "read_coverage": "turn1106view2 lines42-44, full provision.",
+      "status": "In force; unrelated pending criminal amendments.",
+      "claims": [
+        "Adaptation/compilation rights are separate rights to address in license drafting; performance exception."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "L4",
+      "type": "current_law",
+      "jurisdiction": "Taiwan",
+      "name": "商標法",
+      "provisions": [
+        "36"
+      ],
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=36",
+      "opened": true,
+      "read_coverage": "turn1040view4 lines42-53, full provision.",
+      "status": "2023-05-24 promulgated36 amendment effective2024-05-01, Executive Yuan order2024-03-29. Enacted and effective.",
+      "history_url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070001",
+      "history_read": "turn1065view0 lines30-53.",
+      "claims": [
+        "Necessary honest nominative use excluded if it causes consumer confusion.",
+        "International exhaustion for goods placed in domestic/foreign market by owner or consent; quality deterioration/damage/unauthorized processing-modification/other proper cause exception."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "L5",
+      "type": "current_law",
+      "jurisdiction": "Taiwan",
+      "name": "商標法",
+      "provisions": [
+        "5"
+      ],
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=5",
+      "opened": true,
+      "read_coverage": "turn1106view0 lines42-54, full provision.",
+      "status": "In force.",
+      "claims": [
+        "Trademark use includes marketing on goods/service materials/advertisements and digital media where recognized as a trademark."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "L6",
+      "type": "in_force_pre_amendment_provisions",
+      "jurisdiction": "Taiwan",
+      "name": "商標法",
+      "provisions": [
+        "68",
+        "69",
+        "70"
+      ],
+      "url": "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=J0070001",
+      "opened": true,
+      "read_coverage": "MOJ current page's actual old-law link clicked turn1106view3; relevant68-70 read turn1107view0/1 lines301-309.",
+      "status": "2022-05-04 amendments to68,70,95-97 not commenced as of researchdate. For68/70 use operative pre-amendment text from linked2016 version. Do not use this old full act for current36.",
+      "claims": [
+        "68 same/similar goods/services and identical/similar marks with required confusion thresholds.",
+        "69 injunction and fault-based damages; knowledge-based limitation rules if needed separately.",
+        "70(1) operative wording includes knowledge of another's famous registered mark and likelihood of dilution."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "L7",
+      "type": "current_law",
+      "jurisdiction": "Taiwan",
+      "name": "勞動事件法",
+      "provisions": [
+        "38"
+      ],
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=38",
+      "opened": true,
+      "read_coverage": "turn1040view2 lines41-43, full provision.",
+      "status": "Enacted2018-12-05; Act effective2020-01-01.38 unchanged by2023 amendment of2/16/25/32 (effective2024-01-08).",
+      "history_url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0010064",
+      "history_read": "turn1065view2 lines46-47.",
+      "claims": [
+        "Recorded attendance time presumed time performing work with employer consent. Presumption, not irrebuttable fact."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "L8",
+      "type": "current_law",
+      "jurisdiction": "Taiwan",
+      "name": "勞動事件法",
+      "provisions": [
+        "33"
+      ],
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=33",
+      "opened": true,
+      "read_coverage": "turn1099view4 lines41-45, full provision.",
+      "status": "In force, original act effective2020-01-01.",
+      "claims": [
+        "Manifestly unfair evidentiary agreements in standard employment terms do not bind worker. Do not treat J3 as approving blanket waivers."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "L9",
+      "type": "current_law",
+      "jurisdiction": "Taiwan",
+      "name": "勞動基準法",
+      "provisions": [
+        "24"
+      ],
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=24",
+      "opened": true,
+      "read_coverage": "turn1099view2 lines41-51, full provision.",
+      "status": "Current operative provision read2026-10-25; no new commencement claim made.",
+      "claims": [
+        "Overtime wage entitlement/statutory premiums when employer extends work; avoid calculating total award from incomplete hours."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "L10",
+      "type": "current_law",
+      "jurisdiction": "Taiwan",
+      "name": "勞動基準法",
+      "provisions": [
+        "30(5)",
+        "30(6)"
+      ],
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=30",
+      "opened": true,
+      "read_coverage": "turn1099view3 lines41-56, full provision.",
+      "status": "Current operative provision read2026-10-25; no new commencement claim made.",
+      "claims": [
+        "Employer must keep attendance records five years, record daily to minute, cannot refuse employee copy request.",
+        "Do not confuse5year record retention with every claim's limitation period."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "L11",
+      "type": "current_law",
+      "jurisdiction": "Taiwan",
+      "name": "民法",
+      "provisions": [
+        "514-1"
+      ],
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=514-1",
+      "opened": true,
+      "read_coverage": "turn1065view5 lines43-47, full provision.",
+      "status": "Current operative provision; whole-code pending166-1 and1223 changes unrelated.",
+      "claims": [
+        "Tourism enterprise definition: paid tourism service arranging itinerary and transport/meals/lodging/guiding/related services."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "L12",
+      "type": "current_law",
+      "jurisdiction": "Taiwan",
+      "name": "民法",
+      "provisions": [
+        "514-12"
+      ],
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=514-12",
+      "opened": true,
+      "read_coverage": "turn1040view5 lines43-45, full provision.",
+      "status": "Current operative provision; unrelated pending166-1 and1223 changes. No new2026 travel limitation amendment claimed.",
+      "claims": [
+        "Tourism-section fee increase/decrease/refund, damages and reimbursement claims: one year from tour ending or when it should end."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "L13",
+      "type": "current_law",
+      "jurisdiction": "Taiwan",
+      "name": "民法",
+      "provisions": [
+        "130"
+      ],
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=130",
+      "opened": true,
+      "read_coverage": "turn1065view3 lines43-45, full provision.",
+      "status": "Current operative provision.",
+      "claims": [
+        "Demand-based interruption treated as absent if suit not filed within six months after demand. Underlying limitation still separately relevant."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "L14",
+      "type": "current_law",
+      "jurisdiction": "Taiwan",
+      "name": "民法",
+      "provisions": [
+        "144"
+      ],
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=144",
+      "opened": true,
+      "read_coverage": "turn1065view4 lines43-47, full provision.",
+      "status": "Current operative provision.",
+      "claims": [
+        "After limitation completed, obligor may refuse performance. Paid performance not reclaimed solely for ignorance of limitation."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "M1",
+      "type": "official_market_report",
+      "publisher": "한국콘텐츠진흥원 WelCon",
+      "date": "2026-06-29",
+      "title": "제작지원 넘어 글로벌 시장으로…2026 코카 온 스크린 성황리 개최",
+      "url": "https://welcon.kocca.kr/en/info/business/1957981",
+      "opened": true,
+      "read_coverage": "turn951view2 main article lines133-178.",
+      "facts": [
+        "TaipeiJune9-11 linked content export meeting discussed OTT distribution, webtoon adaptation, film remake, co-production and IP extension."
+      ],
+      "limits": [
+        "Consultation value is not signed sales revenue.",
+        "Event evidence, not measured law-service demand."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "M2",
+      "type": "official_market_program",
+      "publisher": "한국콘텐츠진흥원 WelCon",
+      "date": "2026-04-13",
+      "date_basis": "Application opening date, not an inferred page publication date.",
+      "title": "2026 K-콘텐츠 대만수출상담회",
+      "url": "https://welcon.kocca.kr/mobile/ko/event/2026-korea-content-week-in-taipei--527",
+      "opened": true,
+      "read_coverage": "turn1075view2 relevant program lines9-83.",
+      "facts": [
+        "June10-11 Taipei planned program targeted Korean character/animation/comics companies owning IP/rights or possessing actual negotiating authority."
+      ],
+      "limits": [
+        "Program announcement alone does not establish every planned meeting occurred; M1 separately reports completed broader event."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "M3",
+      "type": "official_market_program",
+      "publisher": "KOTRA",
+      "date": "2026",
+      "date_basis": "2026 program; hosting path2026/06/18, printed publication date not present.",
+      "title": "2026 대만 오프라인 유통망 한국상품전 연계 테스트마케팅",
+      "url": "https://www.kotra.or.kr/upload/2026/06/18/BM202606180000099826_0.pdf",
+      "opened": true,
+      "read_coverage": "turn951view3 all3PDFpages/84lines.",
+      "facts": [
+        "Korean product testing in Taiwan department stores/malls/events planned for second half of2026; buyer-operated selection and sales, priority lifestyle accessories/miscellaneous products."
+      ],
+      "limits": [
+        "Do not call scheduled venues completed sales results or infer market growth from a support program."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "M4",
+      "type": "official_platform_job_ad",
+      "publisher": "한국산업인력공단 WorldJobPlus/KOTRA job posting",
+      "date": "2026-06-30",
+      "date_basis": "Listed application start; closing2026-07-31.",
+      "title": "대만 사무소 Technical Sales / FAE 채용",
+      "url": "https://www.worldjob.or.kr/advnc/epmtLink.do?joCrtfcNo=E20260629006&joCrtfcDsp=1&joCrtfcDspSn=1&menuId=1000002033",
+      "opened": true,
+      "read_coverage": "turn1075view1 + turn1099view0 lines164-227, relevant ad and platform disclaimer.",
+      "facts": [
+        "Job based in Taiwan included real-time communication with Korean HQ manufacturing/quality/R&D and local customer technical coordination."
+      ],
+      "limits": [
+        "Employer-supplied ad on official platform, not a government finding on employment legality.",
+        "Do not suggest this employer has overtime violations.",
+        "One posting is evidence of reader situation, not hiring growth, total demand or legal-service conversion."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "M5",
+      "type": "official_market_policy_report",
+      "publisher": "交通部觀光署",
+      "date": "2026-10-08",
+      "title": "重遊臺灣·福氣加倍 上線7天吸引近6.3萬人響應",
+      "url": "https://admin.taiwan.net.tw/News/NewsTravel?a=35&id=36518",
+      "opened": true,
+      "read_coverage": "turn985view3 main320-345 + date376.",
+      "facts": [
+        "Repeat independent-visitor campaign launchedOctober1; Korea among five leading registration markets mentioned. Travel campaign coversOctober10,2026 toMarch31,2027 subject to eligibility."
+      ],
+      "limits": [
+        "Campaign registrations are not actual arrivals and not consumer complaint counts.",
+        "No claim of increased travel litigation; relevance to topic is editorial hypothesis."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "F1",
+      "type": "firm_current_services",
+      "url": "https://tseng-law.com/ko/services",
+      "opened": true,
+      "claims": [
+        "Taiwan civil/commercial, labor, IP and related legal services; no claim of Korean bar licensure."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "F2",
+      "type": "firm_current_contact",
+      "url": "https://tseng-law.com/ko/contact",
+      "opened": true,
+      "claims": [
+        "Korean communication supported; verified consultation email wei@hoveringlaw.com.tw."
+      ],
+      "retrieved_on": "2026-10-25"
+    },
+    {
+      "id": "F3",
+      "type": "firm_current_identity",
+      "url": "https://tseng-law.com/ko/about",
+      "opened": true,
+      "claims": [
+        "Taiwan attorney/firm identity; do not attribute cited cases to firm or claim foreign offices."
+      ],
+      "retrieved_on": "2026-10-25"
+    }
+  ],
+  "searches": [
+    {
+      "date": "2026-10-25",
+      "language": "ko",
+      "query": "\"2026\" \"대만수출상담회\" site:kocca.kr",
+      "observed": [
+        "M1",
+        "M2"
+      ],
+      "interpretation": "Current Korean rights-export activity; no volume or total-demand evidence."
+    },
+    {
+      "date": "2026-10-25",
+      "language": "ko",
+      "query": "site:dream.kotra.or.kr \"대만\" \"2026\" \"콘텐츠\"",
+      "observed": [
+        "M1",
+        "M2",
+        "KOTRA Korean consumer/IP-merchandise program"
+      ],
+      "interpretation": "Program-level activity; not law-firm customer acquisition."
+    },
+    {
+      "date": "2026-10-25",
+      "language": "ko",
+      "query": "site:dream.kotra.or.kr \"대만\" \"2026\" \"화장품\"",
+      "observed": [
+        "M3",
+        "2026-10-21 Taiwan cosmetics/PIF webinar announcement"
+      ],
+      "interpretation": "Offline channel/market-access activity; cosmetics compliance is already covered by existing011, so new topic focuses storefront brand presentation."
+    },
+    {
+      "date": "2026-10-25",
+      "language": "ko",
+      "query": "\"2026\" \"대만\" \"채용\" site:worldjob.or.kr",
+      "observed": [
+        "M4"
+      ],
+      "interpretation": "Actual Taiwan work role involving Korean HQ; not employment-growth measurement."
+    },
+    {
+      "date": "2026-10-25",
+      "language": "zh-hant",
+      "query": "\"韓國\" \"115\" \"自由行\" site:admin.taiwan.net.tw \"發布日期\"",
+      "observed": [
+        "M5"
+      ],
+      "interpretation": "Current policy targets independent repeat visitors including Korea; no litigation-volume claim."
+    },
+    {
+      "date": "2026-10-25",
+      "language": "ko",
+      "query": "\"대만 여행\" \"예약 확정\"",
+      "observed_urls": [
+        "https://tour.yanolja.com/tna/products/01dfb4f3-9639-435f-b2d3-cc7814c581b8?endDate=2027-09-04&startDate=2026-09-07",
+        "https://www.thenotetour.com/master/60355"
+      ],
+      "observed": "Korean-language booking pages describe confirmation notices and locally joined/self-ticketed travel products.",
+      "interpretation": "Search-result transaction vocabulary only; private terms not validated as lawful and providers not endorsed."
+    },
+    {
+      "date": "2026-10-25",
+      "language": "ko",
+      "observed": "Broad compound queries produced many off-target Korean/IP/other-country results; turn1101search set. Not used as substantive legal/market support.",
+      "interpretation": "Limited search did not yield robust direct Korean buyer-intent evidence. No assertion of no competitors, low competition, high demand or search growth.",
+      "queries": [
+        "대만 콘텐츠 독점 라이선스 계약 저작권 2026",
+        "대만 병행수입 브랜드 매장 상표 한국 상품전 2026",
+        "대만 초과근무 수당 출퇴근 기록 한국인",
+        "대만 여행 환불 분쟁 소멸시효"
+      ],
+      "batch_note": "Four separate queries submitted together; off-target results not relied on."
+    }
+  ],
+  "global_unknowns": [
+    "Search volumes, rankings, clicks, inquiries and conversion are unmeasured.",
+    "J2 and J4 full official read coverage remains incomplete beyond confirmed substantive portions; root/final reviewer should close gaps if required.",
+    "J2 and J4 later appeal histories unverified.",
+    "No foreign-law license/service assumption."
+  ],
+  "drafting_constraint": "Each topic is a separate Korean-language editorial acquisition hypothesis, not a promise of customers or an instruction to publish unreviewed material."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "th",
+  "status": "approved",
+  "reviewer": "/root/recheck_market_changes (independent AI reviewer, not manuscript author)",
+  "reviewed_at": "2026-10-25T12:03:59.280776+00:00",
+  "entries": [
+    {
+      "source_sha256": "7f46f3f35fc82125bc63e6165dec82174ee2f04593e8e0ec28584e81196d4a9c",
+      "method": "independent_review",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "7c7cc82dc7c9ea1dd70a7e5a3ca6f99ad3c3046eaacad6a309e12fbd155ee336"
+    },
+    {
+      "source_sha256": "3461f6e65f9126641cbd0fb876211624105de0584bd3430b04fd68a9837186ce",
+      "method": "independent_review",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "d0a3a1aa6b4c17886976fb736bcff2243c8df4733ac8ac55c13ba98f1649dcd0"
+    }
+  ],
+  "evidence": [
+    {
+      "role": "independent-review",
+      "path": "../existing-market-thai-r2-boundary-review.md",
+      "sha256": "a44a4ad75ce2160814d5ba67a1960ef129652966e5eb86170a12b65562823eec"
+    }
+  ]
+}

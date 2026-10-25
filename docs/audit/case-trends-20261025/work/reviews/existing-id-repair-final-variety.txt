@@ -1,0 +1,2 @@
+src/content/columns-id/668-indonesian-buyer-taiwan-machinery-defect-notice.md [id] sentences=57 mean=14.2 cv=0.456 short=0.193 run3=0.036 opener_rep=0.0 cite_end=0.0 cite_para=0.667 contrast=0 caveat=0 q=2
+  OK — no variety limit violated

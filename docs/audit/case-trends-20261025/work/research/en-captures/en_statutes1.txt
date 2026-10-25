@@ -1,0 +1,392 @@
+# Web tool text capture; retrieved 2026-10-25. This is not a raw HTML or PDF capture.
+
+Government Procurement Act - Article Content - Laws & Regulations Database of The Republic of China (Taiwan) (https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057)
+citeturn1123view0 [wordlim: 200] Crawled: yesterday; Content type: text/html; Source: open({"ref_id":"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057","lineno":null}); Total lines: 719
+L0: [Input]
+L1: 
+L2: [Input] [Input] [Input]
+L3: 
+L4: No support javascript script language
+L5: 
+L6: 【0†Goto Main Content】
+L7: 
+L8: [Input: Search] [Input]
+L9: 
+L10: 【1†:::】
+L11: 
+L12: Select Folders：
+L13: 
+L14:   * [Input: Enter folder name] [Button: Save]
+L15: 
+L16: Save Add New Folder 【2†Manage Folders】
+L17: ## Article Content
+L18: 
+L19: Title：  | 【3†Government Procurement Act】 【4†CH】
+L20: Amended Date：  | 2019-05-22
+L21: Category：  | Public Construction Commission, Executive Yuan（行政院公共工程委員會）
+L22: 
+L23:   * 【3†Article Content】
+L24:   * 【5†Chapter】
+L25:   * 【6†Article Search】
+L26:   * 【7†Content Search】
+L27:   * 【8†Legislative History】
+L28: 
+L29: Chapter I General Principles
+L30: 
+L31: Article 1
+L32: This Act is enacted to establish a government procurement system that has fair and open procurement procedures, promotes the efficiency and effectiveness of government procurement operation, and ensures the quality of procurement.
+L33: 
+L34: Article 2
+L35: 
+L36: The term "procurement" as used in this Act shall refer to the contracting of construction work, the purchase or lease of property, the mandate or employment of services, etc.
+L37: 
+L38: Article 3
+L39: Procurement conducted by any government agency, public school or government-owned enterprise (hereinafter referred to as the "entity") shall be governed by the provisions of this Act. With regard to the matters not provided for in this Act, other relevant laws shall govern.
+L40: 
+L41: Article 4
+L42: A juridical person or organization which takes a grant from an entity shall conduct a procurement in accordance with this Act and be under supervision by the entity provided that the amount of the grant is not less than half of the procurement value and also reaches the threshold for publication.
+L43: The preceding paragraph is not applicable to the procurement for art or cultural purposes, but the procurement shall be supervised by the entity that provides the grant; and the regulations governing the implementation principles, applicable scope, and supervision and management shall be prescribed by the Ministry of Culture.
+L44: Article 5
+L45: 
+L46: An entity may entrust a juridical person or organization to conduct its procurement.
+L47: The procurement referred to in the preceding paragraph shall be governed by this Act, and the juridical person or organization shall be supervised by the entrusting entity.
+L48: 
+L49: Article 6
+L50: In conducting any procurement, an entity shall observe the principle of protecting public interests, fairness and reasonableness, and shall not accord differential treatment to suppliers without due cause.
+L51: The procurement personnel may base on the consideration of public interest, procurement efficiency or professional judgment to make an appropriate procurement decision, to the extent not contrary to the provisions of this Act.
+L52: Judicial, control or other entities may request the responsible entity to provide assistance, identify service, or professional opinions when conducting investigation, prosecution, trial, impeachment, censure, etc. against a procuring entity or personnel.
+L53: Article 7
+L54: The term "construction work" referred to in this Act means the activities performed above or underneath the ground for building, augmenting, altering, repairing, or dismantling structures and their respective auxiliary equipment/facilities, or reforming natural environment, including architectural, civil, hydraulic, environmental, transportation, mechanical, electrical, and chemical construction works and others as determined by the responsible entity.
+L55: The term "property" referred to in this Act means any and all articles (raw and fresh agricultural or fishery products excepted), materials, equipment, machines, tools, and other personal property, real property, rights, and other properties as determined by the responsible entity.
+L56: The term "service" referred to in this Act means professional services, technical services, information services, research and development, business operation management, maintenance and repair, training, labor and other services as determined by the responsible entity.
+L57: Where the content of a procurement involves construction work, property and service, or any two of them, and it is difficult to categorize the content of the procurement as construction work, property, or service, the one which takes the highest percentage of the budget of procurement shall govern.
+L58: Article 8
+L59: 
+L60: The term "supplier" referred to in this Act means any company, industrial or commercial firm under partnership or sole proprietorship, or any natural person, juridical person, institution or organization that may offer construction work, property or service to the entity.
+L61: 
+L62: Article 9
+L63: The term "responsible entity" referred to in this Act means the Procurement and Public Construction Commission. A Minister without Portfolio shall be assigned concurrently as Chairperson of the Commission.
+L64: The term "superior entity" referred to in this Act means the entity at a level immediately above the procuring entity. If there is no such superior entity, then the procuring entity shall perform the functional duties of the superior entity as provided for in this Act.
+L65: 
+L66: Article 10
+L67: The responsible entity shall be in charge of the following matters with respect to government procurement:
+L68: 1. researching and formulating government procurement policies and system, and promoting and advocating government procurement policies and regulations;
+L69: 2. researching, formulating, amending, and interpreting government procurement laws and regulations;
+L70: 3. reviewing and approving standard procurement contracts;
+L71: 4. collecting, publishing, and compiling statistics of government procurement information;
+L72: 5. training professional government procurement personnel;
+L73: 6. coordinating and supervising all entities in connection with procurement affairs, and assessing procurement performance thereof;
+L74: 7. handling complaints against central government entities in connection with procurement; and
+L75: 8. other matters related to government procurement.
+L76: Article 11
+L77: In order to provide reference information to the entity for drafting the budget and government estimate, a procurement information center shall be established by the responsible entity to compile common business information and classification of equivalent products, and to set up price database for construction works. Other than those that have to be kept confidential, the information shall be provided free of charge for the suppliers.
+L78: Where the budget of a construction procurement reaching a certain amount, the unit prices of construction items offered by the winning tenderer shall be transmitted to the price database referred to in the preceding paragraph after award of contract.
+L79: The regulations covering the certain amount, the data, format, and means of transmission, as well as other matters related thereto of the preceding paragraph, shall be prescribed by the responsible entity.
+L80: Where there is any property and service item that is necessary to set up a price database, the preceding two paragraphs shall apply mutatis mutandis.
+L81: Article 11-1
+L82: In conducting a large procurement of construction, an entity shall, based upon the characteristics of the procurement and actual needs, establish a working and review group to assist in reviewing the needs, expenditure, and strategies of procurement, tender documentations, etc., and provide consultations on matters related to the procurement.
+L83: Except for the procurement referred to in the preceding paragraph, where it is necessary to establish a working and review group at an entity’s discretion basing upon the characteristics of the procurement and actual needs, the preceding paragraph shall apply mutatis mutandis to the procurement.
+L84: The regulations on organization, tasks, evaluation, and the related matters for the working and review group referred to in the preceding two paragraphs, shall be prescribed by the responsible entity.
+L85: Article 12
+L86: For a procurement of a value reaching the threshold for supervision, the entity shall, within a prescribed time-limit, submit relevant documents to its superior entity and request the same to send representative(s) to monitor proceedings conducted by the entity including tender opening, price competition under limited tendering, price negotiation under single tendering, contract awarding, and inspection and acceptance; nevertheless, the superior entity may, based upon the actual needs, prescribe the authorization conditions under which it allows the entity to proceed without its monitoring.
+L87: For a procurement of a value not reaching the threshold for supervision, but the value of contract as awarded or as amended subsequently equals to or exceeds the threshold, the entity shall supplement relevant documents to its superior entity for filing.
+L88: The threshold for supervision shall be prescribed by the responsible entity.
+L89: Article 13
+L90: For a procurement of a value reaching the threshold for publication, proceedings conducted by the entity including tender opening, price competition under limited tendering, price negotiation under single tendering, contract awarding, and inspection and acceptance shall, except for special circumstances, be monitored by its comptroller (accounting) and other relevant units.
+L91: Measures of supervising a procurement of a value not reaching the threshold for publication shall be prescribed by either the responsible entity or the municipal or county (city) governments, depending upon whether the procurement is conducted by a central government or a local government. If no other applicable measures are to be prescribed, the provision of the preceding paragraph shall be followed.
+L92: The threshold for publication, which shall be less than the threshold for supervision, shall be prescribed by the responsible entity by taking the international standards into account.
+L93: The regulations for monitoring referred to in paragraph 1 shall be prescribed jointly by the responsible entity and the Directorate-General of Budget, Accounting and Statistics of the Executive Yuan.
+L94: Article 14
+L95: An entity shall not circumvent this Act by artificially dividing any procurement requirement of a value reaching the threshold for publication.
+L96: Where there is a need to divide a procurement requirement, and such division is approved by the superior entity, the total value of each divided procurement shall apply to each divided one as if undivided, and the regulations for procurement reaching the threshold for publication, or the regulations for procurement reaching the threshold for supervision shall apply as the case may be.
+L97: Article 15
+L98: Former procurement personnel and procurement supervision personnel shall be prohibited from contacting the entity that they previously worked for either for their own sake or on a supplier’s behalf for three years following their resignation for matters related to their former duties within five years prior to their resignation.
+L99: The personnel of a procuring entity shall withdraw themselves from a procurement and all related matters thereof if they or their spouses, relatives by blood or by marriage within two degrees, or family members living together with them have interests involved therein.
+L100: Upon finding that the personnel referred to in the preceding paragraph failed to withdraw themselves for any cause of withdrawal provided for in the preceding paragraph, the head of the entity shall order such personnel to withdraw and reappoint another personnel for replacement.
+L101: Article 16
+L102: 
+L103: Entreating or lobbying is preferred to be in writing or to be recorded.
+L104: The anti-corruption office may inspect the writings or records referred to in the preceding paragraph.
+L105: Entreating or lobbying received shall not be used as reference in the evaluation of tenders.
+L106: 
+L107: Article 17
+L108: The participation of foreign suppliers in the procurement by each entity shall be governed by the requirements set forth in the treaties or agreements to which this nation is a party.
+L109: Except for the situation prescribed in the preceding paragraph, the regulations governing the participation of foreign suppliers in the procurement by each entity shall be prescribed by the responsible entity.
+L110: The responsible entity may restrict or ban suppliers, products or services from a country to participate in the procurement where the country imposes restriction or ban on the suppliers, products or services from this nation by laws or regulations.
+L111: Where an entity conducts a procurement concerning national security, and it is necessary to set restrictions on the qualifications for the domestic or foreign suppliers, the restrictions and the matters related to review shall be prescribed by the responsible entity in consultation with relevant competent entities.
+L112: Chapter II Invitation to Tender
+L113: 
+L114: Article 18
+L115: The tendering procedures for procurement include open tendering procedures, selective tendering procedures, and limited tendering procedures.
+L116: The term "open tendering procedures" referred to in this Act means the procedures under which a public notice is given to invite all interested suppliers to submit their tenders.
+L117: The term "selective tendering procedures" referred to in this Act means the procedures under which a public notice is given to invite all interested suppliers to submit their qualification documents for pre-qualification review basing upon specific qualification requirements and, after such evaluation, the qualified suppliers are invited to tender.
+L118: The term "limited tendering procedures" referred to in this Act means the procedures under which, where no public notice is given, two or more suppliers are invited for price competition, or only one supplier is invited for price negotiation.
+L119: Article 19
+L120: 
+L121: An entity shall apply open tendering procedures to all procurement of a value reaching the threshold for publication, except otherwise provided for in Articles 20 and 22 hereof.
+L122: 
+L123: Article 20
+L124: Under any of the following circumstances, an entity may apply selective tendering procedures to a procurement of a value reaching the threshold for publication:
+L125: 1. where there is a recurring demand;
+L126: 2. where the review of tenders takes a long time;
+L127: 3. where the supplier’s cost for preparation of a tender is high;
+L128: 4. where the qualification requirements for suppliers are complicated; or
+L129: 5. where it is a procurement concerning research and development.
+L130: 
+L131: Article 21
+L132: In order to apply the selective tendering procedures, an entity may conduct qualification review in advance and establish a permanent list of qualified suppliers; provided, however, that the entity shall always allow suppliers to request of qualification review and periodically review and update the permanent list of qualified suppliers.
+L133: Where a supplier not on the permanent list of qualified suppliers requests to participate in a particular procurement, the entity shall review the qualification of such supplier provided that the review does not interfere the tendering procedures and can be completed in time. After reviewing, the entity shall invite such supplier to participate in the procurement provided that the supplier is qualified.
+L134: The permanent list of qualified suppliers adopted for the procurement in connection with recurring demands shall contain at least six suppliers.
+L135: In conducting selective tendering procedures, the entity shall give qualified suppliers an equal opportunity to be invited.
+L136: Article 22
+L137: Under any of the following circumstances, an entity may apply limited tendering procedures to a procurement of a value reaching the threshold for publication :
+L138: 1. where there is no tender in response to an open tender, selective tender, or the open procedures referred to in subparagraphs 9 through 11, or where the tenders submitted have been not in conformity with the requirements in the tender, provided, however, that the requirements of the initial tender are not substantially modified in the contract as awarded;
+L139: 2. where the subject of a procurement is an exclusive right, a sole source product or supply, a work of art, or a secret, which can be supplied only by a particular supplier and no reasonable alternative or substitute exists;
+L140: 3. insofar as is strictly necessary when, for reasons of extreme urgency brought about by events unforeseeable by the entity, the subject of the procurement could not be obtained in time by means of open or selective tendering procedures;
+L141: 4. for additional deliveries by the original supplier which are intended either as follow-up maintenance, or parts and components replacement for existing supplies or installations, or as extension of existing supplies, services, or installations where a change of supplier would not meet the requirements of compatibility or interchangeability with already existing supplies, services, or installations;
+L142: 5. where the subject of a procurement is a prototype or a subject first produced or supplied which is developed in the course of research, experiment, or original development;
+L143: 6.
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn1123view1 [wordlim: 200] Source: open({"ref_id":"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=B0000001","lineno":null}); Total lines: 1
+L0: Failed to fetch https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=B0000001: (400) Timeout fetching
+--------------------------------------------------------------------------------
+Code of Civil Procedure - Article Content - Laws & Regulations Database of The Republic of China (Taiwan) (https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=B0010001)
+citeturn1123view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=B0010001","lineno":null}); Total lines: 3674
+L0: [Input]
+L1: 
+L2: [Input] [Input] [Input]
+L3: 
+L4: No support javascript script language
+L5: 
+L6: 【0†Goto Main Content】
+L7: 
+L8: [Input: Search] [Input]
+L9: 
+L10: 【1†:::】
+L11: 
+L12: Select Folders：
+L13: 
+L14:   * [Input: Enter folder name] [Button: Save]
+L15: 
+L16: Save Add New Folder 【2†Manage Folders】
+L17: ## Article Content
+L18: 
+L19: Title：  | 【3†Code of Civil Procedure】 【4†CH】
+L20: Amended Date：  | 2023-11-29
+L21: Category：  | Judicial Yuan（司法院）
+L22: 
+L23:   * 【3†Article Content】
+L24:   * 【5†Chapter】
+L25:   * 【6†Article Search】
+L26:   * 【7†Content Search】
+L27:   * 【8†Legislative History】
+L28: 
+L29: PART I GENERAL PRINCIPLES
+L30: 
+L31: CHAPTER I THE COURT
+L32: 
+L33: Section 1 Jurisdiction
+L34: 
+L35: Article 1
+L36: A defendant may be sued in the court for the place of the defendant's domicile or, when that court cannot exercise jurisdiction, in the court for the place of defendant's residence. A defendant may also be sued in the court for the place of defendant's residence for a claim arising from transactions or occurrences taking place within the jurisdiction of that court.
+L37: Where a defendant has no place of domicile in the R.O.C., or where the defendant's place of domicile is unknown, then the defendant's place of residence in the R.O.C. shall be deemed to be the defendant's place of domicile. Where the defendant has no place of residence in the R.O.C. and where the defendant's place of residence is unknown, then the defendant's last place of domicile in the R.O.C. shall be deemed to be the defendant's place of domicile.
+L38: Where an R.O.C. citizen is located in a foreign nation and enjoys immunity from the jurisdiction of such foreign nation, and when he/she cannot be sued in a court in accordance with the provisions of the two preceding paragraphs, then the place where the central government is located shall be deemed to be the place of domicile of such citizen.
+L39: Article 2
+L40: A public juridical person may be sued in the court where its principal office is located. A central or local government agency may be sued in the court for the jurisdiction where such office is located.
+L41: A private juridical person or unincorporated association that has the capacity to be a party to an action may be sued in the court for the location of its principal office or principal place of business.
+L42: A foreign juridical person or unincorporated association may be sued in the court for the location of its principal office or principal place of business in the R.O.C.
+L43: Article 3
+L44: In matters relating to proprietary rights, an action may be initiated against a defendant who either does not have a place of domicile in the R.O.C. or whose domicile is unknown, in the court for the location of the defendant's attachable property or the subject matter of the claim.
+L45: Where the defendant's attachable property or the subject matter of a claim is a creditor's right, either the place of the debtor's domicile or the location of the subject matter of a security shall be deemed to be the location of the defendant's attachable property or the subject matter of the claim.
+L46: Article 4
+L47: 
+L48: In matters relating to proprietary rights, an action may be initiated against an apprentice, an employee, or any other sojourners in the court for the sojourning place of such person.
+L49: 
+L50: Article 5
+L51: 
+L52: In matters relating to proprietary rights, an action may be initiated against a soldier or seaman in the court for the location of the principal office or where the warship or ship is registered.
+L53: 
+L54: Article 6
+L55: In matters relating to the business of a person's office or place of business, an action may be initiated against such person in the court for the location of its office or place of business.
+L56: 
+L57: Article 7
+L58: 
+L59: In matters relating to a ship or its voyage, an action may be initiated against the owner or user of the ship in the court for the place of registration of the ship.
+L60: 
+L61: Article 8
+L62: In matters relating to a debt arising from or secured by a ship, an action may be initiated in the court for the location of the ship.
+L63: 
+L64: Article 9
+L65: In matters relating to claims arising from its membership, an action may be initiated by a corporation or any association, or its creditor or member, against a member in the court for the location of the association's principal office or principal place of business.
+L66: The provision of the preceding paragraph shall apply mutatis mutandis to an action initiated by an association or its creditor or member against such association's staff or former member.
+L67: 
+L68: Article 10
+L69: In matters relating to rights in rem, partition, or demarcation of real property, exclusive jurisdiction resides in court for the place where the real property is located.
+L70: In other matters relating to real property, an action may be initiated in the court for the place where the real property is located.
+L71: 
+L72: Article 11
+L73: In matters relating to debts or rights in rem of any real property provided as a security for such debt, an action may be initiated against the same defendant in the court for the place where the real property is located.
+L74: 
+L75: Article 12
+L76: 
+L77: In contract matters, an action may be initiated in the court for the place agreed to by the parties as the place of performance of the contract.
+L78: 
+L79: Article 13
+L80: In matters relating to negotiable instruments, an action may be initiated in the court for the location where the instruments are to be honored.
+L81: 
+L82: Article 14
+L83: 
+L84: In matters relating to claims arising from the management of property, an action may be initiated in the court for the location where the property is to be managed.
+L85: 
+L86: Article 15
+L87: In matters relating to torts, an action may be initiated in the court for the location where the tortious act occurred.
+L88: In matters relating to claims for damages arising from a collision of ships or other accidents at sea, an action may be initiated in the court for the location where the damaged ship first arrived, or where the ship inflicting damages is seized or registered.
+L89: In matters relating to claims for damages arising from the crash of aircraft or other aviation accidents, an action may be initiated in the court for the location where the damaged aircraft first arrived, or where the aircraft inflicting damages is seized.
+L90: Article 16
+L91: 
+L92: In salvage matters, an action may be initiated in the court for the location where the salvage took place, or where the salvaged ship first arrived.
+L93: 
+L94: Article 17
+L95: 
+L96: In registration matters, an action may be initiated in the court for the location where the registration is administered.
+L97: 
+L98: Article 18
+L99: In matters that become effective upon the death of a natural person, an action may be initiated in the court of jurisdiction at the location where the decedent resided at the time of death.
+L100: When the court of jurisdiction, as prescribed in the preceding paragraph, cannot exercise its authority or the occurrences giving rise to the lawsuit took place at the natural person's place of residence, or the natural person was an R.O.C. citizen and either did not have a place of domicile in the R.O.C. or the natural person's place of domicile is unknown at the time of death, then the provision of Article 1 shall apply mutatis mutandis in determining the court of jurisdiction.
+L101: Article 19
+L102: 
+L103: In matters relating to an encumbrance upon an inheritance, an action may be initiated in the court prescribed in the preceding Article, provided that the inheritance is in whole or in part located within the jurisdiction of that court.
+L104: 
+L105: Article 20
+L106: 
+L107: The court for the location of a codefendant's domicile has jurisdiction over all codefendants, except where a court can obtain jurisdiction over the action in accordance with the provisions of Article 4 through Article 19 inclusive.
+L108: 
+L109: Article 21
+L110: When the defendant's domicile, or the locus of real property, or the locus of the tort, or any other loci determinative of the court that has jurisdiction crosses or spreads over the jurisdictional boundaries of several courts, any such court may have jurisdiction over the action.
+L111: 
+L112: Article 22
+L113: 
+L114: When several courts may have jurisdiction over an action, a plaintiff may choose to initiate the action in any one of those courts.
+L115: 
+L116: Article 23
+L117: The immediate superior court shall, on motion or the request of the court in which the action is pending, designate a court to exercise jurisdiction in case of any of the following:
+L118: 1.When the court with jurisdiction cannot exercise jurisdiction due to legal or actual impediments, or when special circumstances suggest that by exercising jurisdiction such court may affect the public order or the fairness of the proceeding;
+L119: 2.When a court with jurisdiction cannot be determined because the jurisdictional boundaries are unascertainable.
+L120: When the immediate superior court cannot exercise such authority, the designation provided in the preceding paragraph shall be made by the court superior to the immediate superior court.
+L121: The motion provided in the first paragraph may be filed in the court in which the action is pending or in its immediate superior court. The motion provided in the preceding paragraph may be filed in the court in which the action is pending or in the court superior to its immediate superior court.
+L122: The ruling designating a court's jurisdiction is not reviewable.
+L123: Article 24
+L124: 
+L125: Parties may, by agreement, designate a court of first instance to exercise jurisdiction, provided that such agreement relates to a particular legal relation.
+L126: The agreement provided in the preceding paragraph shall be evidenced in writing.
+L127: 
+L128: Article 25
+L129: 
+L130: A court obtains jurisdiction over an action where the defendant proceeds orally on the merits without contesting lack of jurisdiction.
+L131: 
+L132: Article 26
+L133: The provisions of the two preceding Articles do not apply to an action that is subject to another court's exclusive jurisdiction in accordance with the provisions of this Code.
+L134: 
+L135: Article 27
+L136: 
+L137: A court's jurisdiction shall be determined according to the standards existing at the time of the initiation of the action.
+L138: 
+L139: Article 28
+L140: A court, upon determining a lack of jurisdiction over the action in whole or in part, will transfer the action to a court with jurisdiction either by ruling on the plaintiff's motion or on its own initiative.
+L141: Before proceeding orally on the merits, a party may move the court to transfer the action to another court with jurisdiction when the court in which the action is pending obtains jurisdiction in accordance with the provision of Article 24 and such agreement is part of a standard contract prepared by the opposing party which is either a juridical person or a merchant, and the contract is manifestly unfair under the circumstances, provided however, that this provision will not apply where both parties are either judicial persons or merchants.
+L142: A ruling denying the motion for transfer is not reviewable.
+L143: Article 29
+L144: 
+L145: When there exist emergent circumstances prior to the transfer of an action, the court shall, either on motion or its own initiative, take necessary measures.
+L146: 
+L147: Article 30
+L148: 
+L149: The transferee court is bound by the transfer ruling when such ruling becomes final and binding.
+L150: The transferee court cannot retransfer the action to another court, except where the action is subject to another court's exclusive jurisdiction.
+L151: 
+L152: Article 31
+L153: An action is deemed to have been initiated ab initio in the transferee court when the transfer ruling becomes final and binding.
+L154: In the case provided in the preceding paragraph, the court clerk shall annex the authenticated copy of the ruling to the dossier and forward it to the transferee court.
+L155: 
+L156: Article 31-1
+L157: 
+L158: (Repealed.)
+L159: 
+L160: Article 31-2
+L161: 
+L162: (Repealed.)
+L163: 
+L164: Article 31-3
+L165: 
+L166: (Repealed.)
+L167: 
+L168: Section 2 Disqualification of Officers of the Court
+L169: 
+L170: Article 32
+L171: Any judge shall voluntarily disqualify himself/herself in the following circumstances:
+L172: 1.When the judge, or the judge's spouse, former spouse, or fianc嶪 is a party to the proceeding;
+L173: 2.When the judge is or was either a blood relative within the eighth degree or a relative by marriage within the fifth degree, to a party to the proceeding;
+L174: 3.When the judge, or the judge's spouse, former spouse, or fianc嶪 is a co-obligee, co-obligor with, or an indemnitor to, a party to the proceeding;
+L175: 4.When the judge is or was the statutory agent of a party to the proceeding, or the head or member of the party's household;
+L176: 5.When the judge is acting or did act as the advocate or assistant of a party to the proceeding;
+L177: 6.When the judge is likely to be a witness or expert witness in the proceeding;
+L178: 7.When the judge participated in making either the prior court decision or the arbitration award regarding the same dispute in the proceeding.
+L179: Article 33
+L180: A party may move for the disqualification of a judge in the following circumstances:
+L181: 1.When the judge does not voluntarily disqualify himself/herself in the circumstances prescribed in the preceding Article;
+L182: 2.When there exist circumstances other than those prescribed in the preceding Article suggesting that the judge may not perform his/her functions impartially.
+L183: A party cannot move for the disqualification of a judge in accordance with the provision of the second subparagraph of this Article after such party has made any motions or statements concerning the action, except where the grounds for disqualification arise or become known thereafter.
+L184: Article 34
+L185: 
+L186: A motion for the disqualification of a judge shall be filed in the court to which such judge is assigned, stating the specific grounds for the motion.
+L187: A preliminary showing of the grounds of the motion and the facts of disqualification provided for in the second paragraph of the preceding Article shall be made within three days of filing the motion.
+L188: The judge for whose disqualification is sought may respond to the motion.
+L189: 
+L190: Article 35
+L191: The ruling on a motion for disqualification shall be made by a panel of judges of the court to which such judge is assigned. When the panel cannot be established due to an insufficient number of qualified judges, the ruling shall be made by the Chief Judge of that court. When the ruling cannot be made by the Chief Judge, it shall then be made by the immediate superior court.
+L192: The judge for whom disqualification is sought cannot participate in any decision concerning the ruling prescribed in the preceding paragraph.
+L193: The judge for whom disqualification is sought shall disqualify himself/herself without the need of a ruling when he/she considers the motion meritorious.
+L194: Article 36
+L195: 
+L196: An interlocutory appeal may be taken from a ruling denying the motion for a judge's disqualification. A ruling granting the disqualification motion is not reviewable.
+L197: 
+L198: Article 37
+L199: The judge shall, upon a motion for disqualification, stay the proceeding prior to a ruling on the motion, except where the motion is filed in violation of either the provisions of the second paragraph of Article 33 or the first or second paragraph of Article 34, or for the manifest purpose of delaying the proceeding.
+L200: Despite a stay in accordance with the provision of the preceding paragraph, necessary measures shall still be taken under emergent circumstances.
+L201: 
+L202: Article 38
+L203: When finding that a judge should have voluntarily disqualified himself/herself, the court or the Chief Judge of the court prescribed in the first paragraph of Article 35 shall make the disqualification ruling on its own initiative.
+L204: A judge may, with the consent of the Chief Judge of the court to which the judge is assigned, disqualify himself/herself under the circumstances provided in the second subparagraph of the first paragraph of Article 33.
+L205: 
+L206: Article 39
+L207: The provisions of this Section shall apply mutatis mutandis to all Judicial Affair Officers, court clerks and interpreters.
+L208: 
+L209: CHAPTER II PARTIES
+L210: 
+L211: Section 1 Capacity to be Parties and Capacity to Litigate
+L212: 
+L213: Article 40
+L214: Any person who has legal capacity has the capacity to be a party.
+L215: A fetus has the capacity to be a party in an action concerning the entitlement of its interests.
+L216: An unincorporated association with a representative or an administrator has the capacity to be a party.
+L217: A central or local government agency has the capacity to be a party.
+L218: 
+L219: Article 41
+L220: Multiple parties, who have common interests and may not qualify to be an unincorporated association provided in the third paragraph of the preceding Article, may appoint one or more persons from themselves to sue or to be sued on behalf of the appointing parties and the appointed parties.
+L221: After the appointment has been made in a pending action in accordance with the provision of the preceding paragraph, all parties who are not appointed shall withdraw from the proceeding.
+L222: The appointed parties provided in the two preceding paragraphs may be substituted, increased in number, or cancelled. Such substitution, increase in number, or cancellation shall not take effect until after a notice of such action is served upon the opposing party.
+L223: Article 42
+L224: 
+L225: The appointment of representative parties, and the substitution, increase in number or cancellation thereof in accordance with the provision of the preceding Article, shall be evidenced in writing.
+L226: 
+L227: Article 43
+L228: 
+L229: When any of the parties who have been appointed in accordance with the provision of Article 41 has lost its capacity to sue due to death or for any other reason, the remaining appointed parties may continue to conduct the litigation for the entire body.
+L230: 
+L231: Article 44
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn1123view3 [wordlim: 200] Source: open({"ref_id":"https://www.commerce.gov/news/fact-sheets/2026/01/fact-sheet-restoring-american-semiconductor-manufacturing-leadership","lineno":null}); Total lines: 1
+L0: Failed to fetch https://www.commerce.gov/news/fact-sheets/2026/01/fact-sheet-restoring-american-semiconductor-manufacturing-leadership: (403) Forbidden
+

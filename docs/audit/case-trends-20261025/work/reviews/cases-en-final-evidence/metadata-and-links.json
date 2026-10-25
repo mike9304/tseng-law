@@ -1,0 +1,54 @@
+[
+  {
+    "id": 914,
+    "author": "legal-ai-assistant",
+    "audience": [
+      "en"
+    ],
+    "summary": 155,
+    "seoTitle": 35,
+    "faq": 3,
+    "image": true,
+    "missing_in_source_list": [],
+    "missing_internal": []
+  },
+  {
+    "id": 915,
+    "author": "legal-ai-assistant",
+    "audience": [
+      "en"
+    ],
+    "summary": 159,
+    "seoTitle": 34,
+    "faq": 2,
+    "image": true,
+    "missing_in_source_list": [],
+    "missing_internal": []
+  },
+  {
+    "id": 916,
+    "author": "legal-ai-assistant",
+    "audience": [
+      "en"
+    ],
+    "summary": 156,
+    "seoTitle": 37,
+    "faq": 3,
+    "image": true,
+    "missing_in_source_list": [],
+    "missing_internal": []
+  },
+  {
+    "id": 917,
+    "author": "legal-ai-assistant",
+    "audience": [
+      "en"
+    ],
+    "summary": 158,
+    "seoTitle": 32,
+    "faq": 3,
+    "image": true,
+    "missing_in_source_list": [],
+    "missing_internal": []
+  }
+]

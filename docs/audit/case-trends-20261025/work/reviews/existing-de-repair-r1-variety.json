@@ -1,0 +1,47 @@
+[
+  {
+    "id": "679",
+    "sha256": "8479b85121a74268424ebfa465618ff8758f86bce50d69f3ed65c0988938f725",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md",
+      "--lang",
+      "de"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-de/679-taiwan-maschinenlieferung-fat-sat-schlusszahlung.md [de] sentences=48 mean=14.3 cv=0.457 short=0.229 run3=0.13 opener_rep=0.214 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=5\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "id": "681",
+    "sha256": "ca6ade63616b4724273ed6a9d82382d65e45b8036eda4d6dfc0348c4ac6ac19d",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md",
+      "--lang",
+      "de"
+    ],
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-de/681-taiwan-lieferant-werkzeuge-pruefvorrichtungen-herausgabe.md [de] sentences=48 mean=14.5 cv=0.423 short=0.229 run3=0.065 opener_rep=0.143 cite_end=0.0 cite_para=0.571 contrast=0 caveat=0 q=1\n  FAIL len_cv=0.423 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+    "stderr": ""
+  },
+  {
+    "id": "683",
+    "sha256": "c550ba27475f0fca566785995e0a1801f8d16d9a2e36141c6afc1d10a111f4ab",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md",
+      "--lang",
+      "de"
+    ],
+    "exit": 1,
+    "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-de/683-deutsches-urteil-vermoegen-taiwan-vollstreckung.md [de] sentences=49 mean=14.1 cv=0.401 short=0.163 run3=0.021 opener_rep=0.2 cite_end=0.0 cite_para=0.533 contrast=0 caveat=0 q=2\n  FAIL len_cv=0.401 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+    "stderr": ""
+  }
+]

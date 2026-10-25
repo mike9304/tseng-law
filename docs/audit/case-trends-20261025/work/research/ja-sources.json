@@ -1,0 +1,731 @@
+{
+  "market": "Japan",
+  "locale": "ja",
+  "research_date": "2026-10-25",
+  "baseline": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+  "inventory_count": 220,
+  "scope": "Researchonly;4rankedcase-ledbriefs;noarticleedits",
+  "sources": [
+    {
+      "id": "C1",
+      "kind": "official_court_judgment",
+      "title": "臺灣臺北地方法院114年度勞訴字第257號",
+      "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPDV%2C114%2C%E5%8B%9E%E8%A8%B4%2C257%2C20260325%2C1",
+      "jurisdiction": "Taiwan",
+      "decision_date": "2026-03-25",
+      "date_note": "Actual judgment date 115年3月25日; do not use clerk certification date 3月26日.",
+      "read_status": "official HTML facts, wage reasoning and disposition read",
+      "passages": "工資性質/海外津貼/績效獎金/年終獎金/在職要件; 主文; footer",
+      "court_stage": "district first instance",
+      "outcome": "Employer must pay NT258,312 with specified interest; remainder dismissed",
+      "finality": "Appeal/finality not verified",
+      "supports": [
+        "Overseas allowance in this factual payment scheme was work remuneration and belongs in average wage",
+        "Profit/assessment-conditioned performance and year-end awards in this case were not wages",
+        "Labor Incident Act37 presumption was rebuttable",
+        "Separate unpaid installment failed on specific continued-employment condition and lawful termination findings"
+      ],
+      "limitations": [
+        "Actual worker was assigned to Beijing; not a Japan case",
+        "No rule that all bonuses are non-wage",
+        "No rule that all foreign travel expense reimbursement is wage",
+        "No prediction of a Japanese expatriate's outcome"
+      ],
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn946view2",
+        "turn999view2"
+      ]
+    },
+    {
+      "id": "C2",
+      "kind": "official_court_judgment",
+      "title": "智慧財產及商業法院113年度民公上字第5號",
+      "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=IPCV%2C113%2C%E6%B0%91%E5%85%AC%E4%B8%8A%2C5%2C20260121%2C1",
+      "jurisdiction": "Taiwan",
+      "decision_date": "2026-01-21",
+      "read_status": "official HTML contract reasoning and disposition read",
+      "passages": "陸(壹)一㈠至㈦ and 二; 主文; especially paragraphs concerning contractual gap and 居間報酬",
+      "court_stage": "second instance, appeal from112民專訴48 (2024-09-11)",
+      "outcome": "Appeal and additional claims dismissed",
+      "finality": "Subsequent appeal/finality not verified",
+      "supports": [
+        "Court would not add a noncompetition promise through abstract loyalty where contractual risk/allocation and freedoms were defined",
+        "Distributor promoted hospital products and received commission; contract label alone did not settle legal analysis"
+      ],
+      "limitations": [
+        "Products were disinfectant medicines, not an adjudication of medical-device market authorization",
+        "Does not invalidate all express noncompetition clauses",
+        "Does not repeal Civil562 statutory agent restriction",
+        "Separate IP and unfair-competition findings cannot be collapsed into permission to copy"
+      ],
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn963view1",
+        "turn999view0",
+        "turn1039view0"
+      ]
+    },
+    {
+      "id": "C3",
+      "kind": "official_court_judgment",
+      "title": "臺灣高等法院臺南分院110年度重上字第55號",
+      "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TNHV%2C110%2C%E9%87%8D%E4%B8%8A%2C55%2C20230629%2C1",
+      "jurisdiction": "Taiwan",
+      "decision_date": "2023-06-29",
+      "read_status": "Official HTML including facts, all relevant reasons, disposition and appeal notice read",
+      "passages": "貳三㈠1–7; 四㈠; 四㈡2–4; 四㈢; 五; footer",
+      "court_stage": "second-instance counterclaim only",
+      "outcome": "Supplier's appeal regarding USD70,020 finished-inventory loss dismissed",
+      "finality": "Supreme112台上2275 surfaced in search, not opened; no finality claim",
+      "supports": [
+        "Express ownership/IP provision and separate mold development/maintenance payment existed",
+        "Mold deposit relationship termination differed from contractual product discontinuation",
+        "Purchase/work mixed agreement classified by actual obligations",
+        "Delay and later agreed cancellation differed from Civil511 convenience termination",
+        "Court did not need to decide limitation defense"
+      ],
+      "limitations": [
+        "Do not say this appeal freshly ordered return of all molds",
+        "Other counterclaim amounts settled2022-11-23",
+        "No automatic ownership merely from paying tooling fees",
+        "No blanket no-inventory-liability rule"
+      ],
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn950view1",
+        "turn999view3",
+        "turn1041view3"
+      ]
+    },
+    {
+      "id": "C4",
+      "kind": "primary_government_reproduction_of_judicial_text",
+      "title": "TIPO 113100101 NEFFUL — 最高法院113年度台上字第882號",
+      "url": "https://www.tipo.gov.tw/wSite/public/Attachment/0/f1745565087773.pdf",
+      "jurisdiction": "Taiwan",
+      "decision_date": "2024-06-27",
+      "date_provenance": "Official Supreme Court indexed compendium metadata (C4m); PDF reproduction does not show judgment date in extracted text",
+      "read_status": "Official government PDF opened and all relevant pp3–5 judgment disposition/reasons read; not full court-host original",
+      "passages": "PDF physical pp3–5 / web pages2–4; 判決主文 and 判決意旨一、二",
+      "court_stage": "Supreme Court merits appeal following IPC112民商上更一2",
+      "outcome": "Appeal dismissed; third-instance costs borne by appellant",
+      "finality": "The reproduced text supports Supreme Court dismissal, not a remand. Do not assert separate certificate of finality or no extraordinary reopening.",
+      "supports": [
+        "Consent under Trademark36(2) need not be express",
+        "Different national registered owners may have common origin and qualifying legal/economic links",
+        "Official websites/company histories/common global trademark strategy helped establish connection and quality-control possibility"
+      ],
+      "limitations": [
+        "This is a TIPO reproduction, not proof the complete court file was read",
+        "Mere common marks or any business relationship do not automatically exhaust rights",
+        "No blanket permission for counterfeit, modified goods or misleading store branding"
+      ],
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn1060view0"
+      ],
+      "editorial_acceptance": "Root accepted sufficiently reproduced official government judicial text with its precise scope preserved on2026-10-25"
+    },
+    {
+      "id": "C4a",
+      "kind": "official_government_case_summary",
+      "title": "TIPO 商標法第36條第2項…同意不以明示為限",
+      "url": "https://www.tipo.gov.tw/tw/tipo1/424-20064.html",
+      "jurisdiction": "Taiwan",
+      "publication_date": "2024-12-04",
+      "updated_date": "2025-05-22",
+      "read_status": "Opened article facts and summary",
+      "passages": "案情說明; 最高法院判決意旨摘要一–三",
+      "supports": [
+        "Context and official identification of113台上882"
+      ],
+      "limitations": [
+        "HTML erroneously says最高行政法院 in one sentence; correct Supreme civil court shown by PDF and docket",
+        "Article update date is not judgment date"
+      ],
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn1015view1"
+      ]
+    },
+    {
+      "id": "C4m",
+      "kind": "official_court_indexed_metadata_only",
+      "title": "最高法院民事庭可供研究之裁判要旨暨裁判全文",
+      "url": "https://tps.judicial.gov.tw/tw/dl-144924-8b2311da485f400391b049be9176ebe3.html",
+      "jurisdiction": "Taiwan",
+      "read_status": "Search result showed court/docket/actual date and first page; direct open timed out",
+      "supports": [
+        "113台上882 decision_date2024-06-27 corroboration only"
+      ],
+      "limitations": [
+        "Do not label complete official court PDF read",
+        "Not the source used to establish full holding"
+      ],
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn1010search12",
+        "turn1113search12"
+      ]
+    },
+    {
+      "id": "M1",
+      "kind": "official_japanese_trade_agency_news",
+      "title": "台湾、2027年1月から月額最低賃金を4.75％引き上げ",
+      "url": "https://www.jetro.go.jp/biznews/2026/10/ca0de82fe031927c.html",
+      "publication_date": "2026-10-06",
+      "read_status": "Opened full article",
+      "supports": [
+        "Current Japanese-language official attention to next-year Taiwan payroll budgeting"
+      ],
+      "limitations": [
+        "JETRO reports committee result; linked MOL page is conditional on Executive Yuan approval",
+        "JETRO says announcement9/29; linked MOL page publication9/24",
+        "Do not use as proof a2027 wage is already operative",
+        "Does not measure bonus-dispute demand"
+      ],
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn1066view1"
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "official_taiwan_labor_ministry_release",
+      "title": "最低工資連11漲!審議會決定自116年1月1日起…",
+      "url": "https://www.mol.gov.tw/1607/1632/1633/99195/",
+      "publication_date": "2026-09-24",
+      "read_status": "Opened body and publication footer",
+      "supports": [
+        "Committee reached a proposed2027 adjustment; release expressly says倘經行政院核定實施"
+      ],
+      "limitations": [
+        "This release does not itself establish later approval/commencement",
+        "No need to mention proposed amounts in bonus article"
+      ],
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn1071view0"
+      ]
+    },
+    {
+      "id": "M3",
+      "kind": "official_japan_taiwan_exchange_association_selection",
+      "title": "令和８年度日台IoT・デジタル産業等協力促進事業 公募結果",
+      "url": "https://www.koryu.or.jp/news/offer/?dispmid=4263&itemid=4901",
+      "publication_date": "2026-04-27",
+      "read_status": "Opened result section lines982–1044",
+      "supports": [
+        "Ten Japanese companies selected for MEDICAL TAIWAN exhibition/business-meeting support"
+      ],
+      "limitations": [
+        "Selection does not prove every company attended or signed distribution contract",
+        "Do not reproduce company product efficacy claims",
+        "Expired recruitment, not current invitation"
+      ],
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn1067view2"
+      ]
+    },
+    {
+      "id": "M4",
+      "kind": "official_japanese_trade_agency_interviews",
+      "title": "JFOODO 台湾の今がわかる！現地食情報レポート2026 健康志向市場の変化",
+      "url": "https://www.jetro.go.jp/ext_images/jfoodo/archive/fm_report/202603_tw.pdf",
+      "publication_date": "2026-03 filename; report marked2026, precise day not shown",
+      "read_status": "PDF opened; first interview/current own-brand importing-channel discussion read",
+      "supports": [
+        "Observed interviewee imports from Japan and other countries while operating own brand across department/supermarket/EC channels"
+      ],
+      "limitations": [
+        "Two company interviews, not representative volume measurement",
+        "Copyright footer2025 is not reliable issue date; use2026report or omitdate",
+        "Do not rely on unverified health/medical claims"
+      ],
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn1011view3"
+      ]
+    },
+    {
+      "id": "M5",
+      "kind": "official_japanese_trade_agency_research_announcement",
+      "title": "変化する通商環境と台湾EMS産業の生産拠点配置およびサプライチェーン移転に関する調査",
+      "url": "https://www.jetro.go.jp/world/reports/2026/01/b1847c5a62547dbc.html",
+      "publication_date": "2026-04-21",
+      "read_status": "Official report landing page and abstract opened; report listed36pages",
+      "supports": [
+        "Official2026 research focuses on Taiwan EMS supply-chain relocation and Japan-Taiwan complementarities"
+      ],
+      "limitations": [
+        "Does not establish growing tooling disputes",
+        "Do not repeat tariff/legal claims in abstract without fresh jurisdiction-specific verification",
+        "Full36page report not relied upon"
+      ],
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn1015view2"
+      ]
+    },
+    {
+      "id": "M6",
+      "kind": "official_japanese_trade_agency_reportage",
+      "title": "秋田の高級菓子メーカーが台湾に海外初店舗を出店",
+      "url": "https://www.jetro.go.jp/biznews/2026/10/6d578e5b5949d738.html",
+      "publication_date": "2026-10-02",
+      "event_date": "2026-09-17",
+      "read_status": "Full official report opened; report records9/24 interview",
+      "supports": [
+        "Actual Japanese brand permanent department-store opening afterFebruary2026popup"
+      ],
+      "limitations": [
+        "One company example; not total demand trend",
+        "No link to cited lawsuit or law firm",
+        "Do not imply parallel-import misconduct by reportedcompany"
+      ],
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn1066view2"
+      ]
+    },
+    {
+      "id": "L1",
+      "kind": "official_current_statute",
+      "title": "勞動基準法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=2",
+      "jurisdiction": "Taiwan",
+      "provision": "2(3),2(4)",
+      "claim": "Wage definition concerns remuneration for work including qualifying recurring bonuses/allowances; average wage definition is separate",
+      "legal_status": "Operative current text read; latest statute amendment2024-07-31. Exact historic start date for each subparagraph not newly established; no historical commencement claim needed.",
+      "read_status": "Opened official MOJ text",
+      "retrieved_on": "2026-10-25",
+      "consolidation_cutoff": "2026-10-16 as shown onMOJpages",
+      "web_refs": [
+        "turn978view1"
+      ]
+    },
+    {
+      "id": "L2",
+      "kind": "official_current_statute",
+      "title": "勞動事件法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010064&flno=37",
+      "jurisdiction": "Taiwan",
+      "provision": "37",
+      "claim": "Employee proof of employer payment based on employment gives rebuttable presumption of work remuneration",
+      "legal_status": "Enacted2018-12-05; commenced2020-01-01 (L4); Article37 not part of2023amendment",
+      "read_status": "Opened official MOJ text",
+      "retrieved_on": "2026-10-25",
+      "consolidation_cutoff": "2026-10-16 as shown onMOJpages",
+      "web_refs": [
+        "turn994view3"
+      ]
+    },
+    {
+      "id": "L3",
+      "kind": "official_current_statute",
+      "title": "勞動基準法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=29",
+      "jurisdiction": "Taiwan",
+      "provision": "29",
+      "claim": "Year-end surplus after specified deductions requires bonus/profit distribution to qualifying all-year faultlessworkers; no fixed statutory1month amount",
+      "legal_status": "Operative current text read; not a2026new amendment",
+      "read_status": "Opened official MOJ text",
+      "retrieved_on": "2026-10-25",
+      "consolidation_cutoff": "2026-10-16 as shown onMOJpages",
+      "web_refs": [
+        "turn1071view2"
+      ]
+    },
+    {
+      "id": "L4",
+      "kind": "official_current_statute",
+      "title": "勞動事件法沿革",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0010064",
+      "jurisdiction": "Taiwan",
+      "provision": "enactment/commencement",
+      "claim": "2018enactment effective2020-01-01;2023-12-15 amendment of2,16,25,32 effective2024-01-08",
+      "legal_status": "Effective; distinguishes promulgation from commencement",
+      "read_status": "Opened official MOJ text",
+      "retrieved_on": "2026-10-25",
+      "consolidation_cutoff": "2026-10-16 as shown onMOJpages",
+      "web_refs": [
+        "turn1071view3"
+      ]
+    },
+    {
+      "id": "L5",
+      "kind": "official_current_statute",
+      "title": "民法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=98",
+      "jurisdiction": "Taiwan",
+      "provision": "98",
+      "claim": "Interpret declarations by true intent, not literal wording alone",
+      "legal_status": "Operative. Code-wide pending166-1 and1223 are unrelated",
+      "read_status": "Opened official MOJ text",
+      "retrieved_on": "2026-10-25",
+      "consolidation_cutoff": "2026-10-16 as shown onMOJpages",
+      "web_refs": [
+        "turn978view3"
+      ]
+    },
+    {
+      "id": "L6",
+      "kind": "official_current_statute",
+      "title": "民法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=148",
+      "jurisdiction": "Taiwan",
+      "provision": "148",
+      "claim": "Rights cannot abuse publicinterest/harm others asprimaryaim; exercise/performance bygoodfaith",
+      "legal_status": "Operative. No implication that goodfaith supplies all absent noncompete terms",
+      "read_status": "Opened official MOJ text",
+      "retrieved_on": "2026-10-25",
+      "consolidation_cutoff": "2026-10-16 as shown onMOJpages",
+      "web_refs": [
+        "turn1030view2"
+      ]
+    },
+    {
+      "id": "L7",
+      "kind": "official_current_statute",
+      "title": "民法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=558",
+      "jurisdiction": "Taiwan",
+      "provision": "558",
+      "claim": "Definition of statutory代辦商 acting inprincipal name within place/area",
+      "legal_status": "Operative; legalclassification matters",
+      "read_status": "Opened official MOJ text",
+      "retrieved_on": "2026-10-25",
+      "consolidation_cutoff": "2026-10-16 as shown onMOJpages",
+      "web_refs": [
+        "turn1039view1"
+      ]
+    },
+    {
+      "id": "L8",
+      "kind": "official_current_statute",
+      "title": "民法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=562",
+      "jurisdiction": "Taiwan",
+      "provision": "562",
+      "claim": "Manager/statutoryagent cannot conduct samekindbusiness withoutprincipal permission or be unlimited partner ofsamekindcompany",
+      "legal_status": "Operative; prevents overgeneralizing C2",
+      "read_status": "Opened official MOJ text",
+      "retrieved_on": "2026-10-25",
+      "consolidation_cutoff": "2026-10-16 as shown onMOJpages",
+      "web_refs": [
+        "turn1039view2"
+      ]
+    },
+    {
+      "id": "L9",
+      "kind": "official_current_statute",
+      "title": "民法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=535",
+      "jurisdiction": "Taiwan",
+      "provision": "535",
+      "claim": "Mandatary instruction/duty ofcare; remunerated mandate uses prudentmanager standard",
+      "legal_status": "Operative; no automatic application to all distribution relations",
+      "read_status": "Opened official MOJ text",
+      "retrieved_on": "2026-10-25",
+      "consolidation_cutoff": "2026-10-16 as shown onMOJpages",
+      "web_refs": [
+        "turn1030view3"
+      ]
+    },
+    {
+      "id": "L10",
+      "kind": "official_current_statute",
+      "title": "涉外民事法律適用法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+      "jurisdiction": "Taiwan",
+      "provision": "20",
+      "claim": "Contractual choiceoflaw; absent validexpresschoice closestconnection and characteristicobligation presumption",
+      "legal_status": "Operative current text read; no rule that Taiwan counterpart automaticallymeansTaiwanlaw",
+      "read_status": "Opened official MOJ text",
+      "retrieved_on": "2026-10-25",
+      "consolidation_cutoff": "2026-10-16 as shown onMOJpages",
+      "web_refs": [
+        "turn1071view1"
+      ]
+    },
+    {
+      "id": "L11",
+      "kind": "official_current_statute",
+      "title": "民法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=511",
+      "jurisdiction": "Taiwan",
+      "provision": "511",
+      "claim": "Orderingparty mayterminateworkbeforecompletion but must compensate resultingcontractorloss",
+      "legal_status": "Operative; C3 found cancellation was not thisconvenience right",
+      "read_status": "Opened official MOJ text",
+      "retrieved_on": "2026-10-25",
+      "consolidation_cutoff": "2026-10-16 as shown onMOJpages",
+      "web_refs": [
+        "turn1030view0"
+      ]
+    },
+    {
+      "id": "L12",
+      "kind": "official_current_statute",
+      "title": "民法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=597",
+      "jurisdiction": "Taiwan",
+      "provision": "597",
+      "claim": "Depositor mayrequestreturn anytime evenagreedreturndeadline",
+      "legal_status": "Operative; no blanket exclusion of other defenses or claims",
+      "read_status": "Opened official MOJ text",
+      "retrieved_on": "2026-10-25",
+      "consolidation_cutoff": "2026-10-16 as shown onMOJpages",
+      "web_refs": [
+        "turn1030view1"
+      ]
+    },
+    {
+      "id": "L13",
+      "kind": "official_current_statute",
+      "title": "商標法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070001&flno=36",
+      "jurisdiction": "Taiwan",
+      "provision": "36(2); current36(1)(2) only if necessary",
+      "claim": "International exhaustion for goods put onmarket byowner/consentingperson; exceptions for alteration,damage,unauthorizedprocessing/modification orotherlegitimatecause",
+      "legal_status": "2023-05-24amendment commenced2024-05-01 perL14; do not confuse judgment's older lawcitation numbering",
+      "read_status": "Opened official MOJ text",
+      "retrieved_on": "2026-10-25",
+      "consolidation_cutoff": "2026-10-16 as shown onMOJpages",
+      "web_refs": [
+        "turn978view2"
+      ]
+    },
+    {
+      "id": "L14",
+      "kind": "official_current_statute",
+      "title": "商標法沿革",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070001",
+      "jurisdiction": "Taiwan",
+      "provision": "2023/2022 amendmentcommencement",
+      "claim": "36amendment effective2024-05-01;2022-05-04amendments68,70,95–97 commencementstillundetermined incurrentMOJstatus",
+      "legal_status": "2022amendments NOT YET EFFECTIVE; don'tcite amendedcriminalstandards ascurrent",
+      "read_status": "Opened official MOJ text",
+      "retrieved_on": "2026-10-25",
+      "consolidation_cutoff": "2026-10-16 as shown onMOJpages",
+      "web_refs": [
+        "turn994view2"
+      ]
+    },
+    {
+      "id": "F1",
+      "kind": "live_firm_service_material",
+      "title": "日本語サービス案内",
+      "url": "https://tseng-law.com/ja/services",
+      "read_status": "Opened live2026-10-25",
+      "supports": [
+        "Taiwan company/investment, civilcontracts/litigation, labor, IPservices"
+      ],
+      "limitations": [
+        "Does not establish Japanese baradmission or Japanese litigation practice"
+      ],
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn928view0"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "live_firm_contact_material",
+      "title": "日本語相談案内",
+      "url": "https://tseng-law.com/ja/contact",
+      "read_status": "Opened live2026-10-25",
+      "supports": [
+        "Japanese consultationlanguage; wei@hoveringlaw.com.tw; initialbrief before sensitive documents"
+      ],
+      "limitations": [
+        "Do notinventoutcome/clients/foreignlicensure; do notcopyunverifiedprices/branchoffices"
+      ],
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn928view1"
+      ]
+    },
+    {
+      "id": "L15",
+      "kind": "official_current_statute",
+      "title": "民法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=101",
+      "jurisdiction": "Taiwan",
+      "provision": "101(1)",
+      "claim": "Party disadvantaged by condition fulfillment that improperly prevents it is treated as if condition fulfilled",
+      "legal_status": "Current operative text; pending166-1 and1223 do not affect101",
+      "read_status": "MOJ text opened",
+      "retrieved_on": "2026-10-25",
+      "web_refs": [
+        "turn1129view0"
+      ]
+    }
+  ],
+  "searches": [
+    {
+      "language": "ja",
+      "query": "台湾 退職 賞与 年終 ボーナス 日本企業 2026",
+      "observed": "Japanese HR/bonus commentary and survey searchresults; no verifiednumericaldemand",
+      "observed_urls": [
+        "https://www.jetro.go.jp/biznews/2026/10/ca0de82fe031927c.html"
+      ],
+      "caveat": "JETRO later opened as primary budgetingcontext, notclaim it rankedfirst for thisquery",
+      "searched_on": "2026-10-25",
+      "not_established": [
+        "Searchvolume",
+        "SearchConsoleclicks",
+        "Leadconversion",
+        "Competitorperformance"
+      ]
+    },
+    {
+      "language": "ja",
+      "query": "台湾 医療機器 日本 2026 市場 販売 代理店",
+      "observed": "ExchangeAssociation MEDICALTAIWAN recruitment/selection pages",
+      "observed_urls": [
+        "https://www.koryu.or.jp/news/offer/?dispmid=4263&itemid=4901",
+        "https://www.koryu.or.jp/news/offer/?dispmid=4263&itemid=4787"
+      ],
+      "caveat": "Only4901openedto verifyselection; no actualtransaction/attendanceinference",
+      "searched_on": "2026-10-25",
+      "not_established": [
+        "Searchvolume",
+        "SearchConsoleclicks",
+        "Leadconversion",
+        "Competitorperformance"
+      ]
+    },
+    {
+      "language": "ja",
+      "query": "台湾 金型 返還 委託 取引 日本",
+      "observed": "General tooling/contract pages; led toTraditionalChinese courtsearch",
+      "observed_urls": [],
+      "caveat": "No numeric demand measurement and no claimthat absenceofresultsprovescontentgap",
+      "searched_on": "2026-10-25",
+      "not_established": [
+        "Searchvolume",
+        "SearchConsoleclicks",
+        "Leadconversion",
+        "Competitorperformance"
+      ]
+    },
+    {
+      "language": "ja",
+      "query": "site.jetro.go.jp \"台湾EMS\" \"2026\" \"4月\"",
+      "observed": "JETRO Taiwanindex identifiesApril2026EMSreport",
+      "observed_urls": [
+        "https://www.jetro.go.jp/world/asia/tw/",
+        "https://www.jetro.go.jp/world/reports/2026/01/b1847c5a62547dbc.html"
+      ],
+      "searched_on": "2026-10-25",
+      "not_established": [
+        "Searchvolume",
+        "SearchConsoleclicks",
+        "Leadconversion",
+        "Competitorperformance"
+      ]
+    },
+    {
+      "language": "ja",
+      "query": "台湾 日本 並行輸入 商標 判決 2025 2026",
+      "observed": "Japanesepractitioner explanations ofparallelimport advertising; officialTaiwancourt/TIPOsources",
+      "observed_urls": [
+        "https://www.tipo.gov.tw/tw/tipo1/424-20064.html"
+      ],
+      "caveat": "Searchpresence doesnotprovecurrentproceduralstatus or highsearchvolume",
+      "searched_on": "2026-10-25",
+      "not_established": [
+        "Searchvolume",
+        "SearchConsoleclicks",
+        "Leadconversion",
+        "Competitorperformance"
+      ]
+    },
+    {
+      "language": "ja",
+      "query": "台湾 2026 9 日本 商品 ブランド 出店",
+      "observed": "JETRO2026-10-02report ofJapaneseconfectionery permanentstore",
+      "observed_urls": [
+        "https://www.jetro.go.jp/biznews/2026/10/6d578e5b5949d738.html"
+      ],
+      "searched_on": "2026-10-25",
+      "not_established": [
+        "Searchvolume",
+        "SearchConsoleclicks",
+        "Leadconversion",
+        "Competitorperformance"
+      ]
+    },
+    {
+      "language": "zh-hant",
+      "query": "site.judicial.gov.tw 113 台上 882 日本 妮芙露",
+      "observed": "Supremeofficialcompendium andTIPO case education; governmentPDFalternativeopened",
+      "observed_urls": [
+        "https://tps.judicial.gov.tw/tw/dl-144924-8b2311da485f400391b049be9176ebe3.html",
+        "https://www.tipo.gov.tw/tw/tipo1/424-20064.html"
+      ],
+      "searched_on": "2026-10-25",
+      "not_established": [
+        "Searchvolume",
+        "SearchConsoleclicks",
+        "Leadconversion",
+        "Competitorperformance"
+      ]
+    },
+    {
+      "language": "zh-hant",
+      "query": "\"113年度台上字第882號\" \"裁判日期\" site:judicial.gov.tw",
+      "observed": "Supremecourtindexedfirstpage records113年06月27日; directdownloadtimeout",
+      "observed_urls": [
+        "https://tps.judicial.gov.tw/tw/dl-144924-8b2311da485f400391b049be9176ebe3.html"
+      ],
+      "caveat": "Metadata corroboration; substantiveholdingfromopenedTIPOPDF",
+      "searched_on": "2026-10-25",
+      "not_established": [
+        "Searchvolume",
+        "SearchConsoleclicks",
+        "Leadconversion",
+        "Competitorperformance"
+      ]
+    },
+    {
+      "language": "zh-hant",
+      "query": "\"113年度民公上字第5號\" \"上訴\" \"115\"",
+      "observed": "Officialjudgmentandsecondarymirror identified2026-01-21decision; noverifiedlaterappealoutcome",
+      "observed_urls": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=IPCV%2C113%2C%E6%B0%91%E5%85%AC%E4%B8%8A%2C5%2C20260121%2C1"
+      ],
+      "searched_on": "2026-10-25",
+      "not_established": [
+        "Searchvolume",
+        "SearchConsoleclicks",
+        "Leadconversion",
+        "Competitorperformance"
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "case": "臺中地院111簡上250",
+      "decision_date": "2024-05-17",
+      "reason": "OfficialPDFindexonly;application/octet-stream/weberrors anddirectTLSfetchtimeouts; notusedasverifiedcase"
+    },
+    {
+      "case": "最高法院112台上2275",
+      "decision_date": "2023-11-15",
+      "reason": "Searchonly; notusedtoassertC3finality"
+    },
+    {
+      "case": "最高法院113台上882",
+      "reason": "Court-hostdirectoriginalfailed; enoughofficialTIPOreproducedjudicialtextread, acceptedbyrootwithscopepreserved; exactdatemetadatafromofficialcourtindex"
+    }
+  ],
+  "facts_vs_inference": {
+    "facts": "Onlytheidentifiedopenedprimarysourcesandcurrentcorpus",
+    "inferences": "Buyertrigger,topicpriority,likelyusefulnessareeditorialjudgments",
+    "unknowns": "Unmeasuredsearchdemand,conversion,potentialclients,andC1-C3finality"
+  }
+}

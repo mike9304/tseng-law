@@ -1,0 +1,26 @@
+[
+  {
+    "old_line": 14,
+    "new_line": 14,
+    "before": "featured_image_caption: \"Ilustración del expediente y los bienes que se revisan para ejecutar una sentencia extranjera.\"",
+    "after": "featured_image_caption: \"Escena ficticia\""
+  },
+  {
+    "old_line": 49,
+    "new_line": 49,
+    "before": "Si la demanda española todavía no se ha presentado, la localización prevista de los bienes justifica coordinar la notificación antes de practicarla. La decisión sobre el procedimiento español corresponde a quien esté habilitado para asesorar allí.",
+    "after": "Si la demanda todavía no se ha presentado en España y ya se sabe que los bienes están en Taiwán, la notificación puede planificarse pensando en este examen. La decisión sobre el procedimiento español corresponde a quien esté habilitado para asesorar allí."
+  },
+  {
+    "old_line": 55,
+    "new_line": 55,
+    "before": "Para preparar la revisión, resultan útiles cuatro grupos documentales:",
+    "after": "La revisión se organiza bien en cuatro bloques de documentos:"
+  },
+  {
+    "old_line": 72,
+    "new_line": 72,
+    "before": "Puede iniciar la [consulta sobre el asunto taiwanés](/es/contact) en [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), acordando primero la comunicación en inglés, chino, japonés o coreano. Para comprobar conflictos y alcance basta un resumen no sensible con la contraparte, el vínculo con Taiwán y cualquier plazo; no hace falta adjuntar inicialmente originales ni datos bancarios completos. Un correo no formaliza el encargo. El documento pendiente puede ser tan concreto como la constancia de notificación inicial o de firmeza.",
+    "after": "La [consulta sobre el asunto taiwanés](/es/contact) puede empezar con un correo a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw); se atiende en inglés, chino, japonés o coreano, y el idioma se acuerda antes. Para comprobar conflictos y alcance basta un resumen sin datos sensibles con la contraparte, el vínculo con Taiwán y cualquier plazo; al principio no hace falta adjuntar originales ni datos bancarios completos. Un correo no formaliza el encargo. El documento pendiente puede ser tan concreto como la constancia de notificación inicial o de firmeza."
+  }
+]

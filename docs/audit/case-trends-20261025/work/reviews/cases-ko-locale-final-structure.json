@@ -1,0 +1,98 @@
+{
+  "image_checks": [
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/906-case-trends-20261025.webp",
+      "sha256": "0c4e4598ca2c72c261b4b1352712d6c21e1921064daf71ee59b758d8a915b093",
+      "same_as_visual_inspection": true
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/907-case-trends-20261025.webp",
+      "sha256": "1b9512e62f4c0f27e10c3a86f3cf020b3a4a787e0a00b4177cdcd5d9bb22a338",
+      "same_as_visual_inspection": true
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/908-case-trends-20261025.webp",
+      "sha256": "af46717e0b3da9c1aa25c7575e103a67b66317195c333b4398e441ae3befb392",
+      "same_as_visual_inspection": true
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/public/images/columns/909-case-trends-20261025.webp",
+      "sha256": "e17c318142deaac700fdea9bc48bd19d1821ff5191b8b19d87364d42078fbf14",
+      "same_as_visual_inspection": true
+    }
+  ],
+  "comparator_checks": [
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/704-taiwan-arc-first-application.md",
+      "sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1",
+      "same_as_read_comparator": true,
+      "published": "2026-10-24"
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a",
+      "same_as_read_comparator": true,
+      "published": "2026-10-24"
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc",
+      "same_as_read_comparator": true,
+      "published": "2026-10-24"
+    }
+  ],
+  "article_checks": [
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/906-korean-publisher-exclusive-license-taiwan-complaint.md",
+      "sha256": "2d6e08cf1030b60f715ef3026f0c27d462a421c240811f3b6a0ec84c0bb7b074",
+      "no_bold": true,
+      "internal_author_preserved": true,
+      "audience_ko": true,
+      "fictional_caption": true,
+      "faq_count": 3,
+      "first_two_paragraphs": [
+        "대만 총판에게 저작권 침해 대응까지 맡기면 한국 본사도 같은 권리를 계속 행사할 수 있을까요? 대만 저작권법상 독점 이용허락으로 정했다면, 허락 범위 안에서는 원권리자도 그 권리를 행사할 수 없습니다. [저작권법 제37조](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=37)는 지역·기간·내용·이용방법을 당사자의 약정에 맡기고, 불명확한 부분은 허락하지 않은 것으로 추정합니다.",
+        "[최고법원 112年度台上字第2369號 판결](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSM%2C112%2C%E5%8F%B0%E4%B8%8A%2C2369%2C20230713%2C1)에 등장하는 한국 출판사와 대만 업체의 총판 계약은 형사 고소의 적법성을 둘러싼 쟁점이 됐습니다. 피고인은 대만 업체가 받은 것은 유통권뿐이므로 저작권 침해를 고소할 권한이 없다고 다퉜습니다."
+      ]
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/907-korean-brand-parallel-import-store-signs-taiwan.md",
+      "sha256": "46951a4b957b195451b86fe8148f0a104524beb1fc408511ace5cb218c48c8bc",
+      "no_bold": true,
+      "internal_author_preserved": true,
+      "audience_ko": true,
+      "fictional_caption": true,
+      "faq_count": 3,
+      "first_two_paragraphs": [
+        "미국 브랜드의 진품을 팔던 대만 매장과 백화점 운영자가 상표 표시 때문에 금지명령과 손해배상 책임을 지게 됐습니다. [지식재산및상업법원 114年度民商上字第11號 판결](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=IPCV%2C114%2C%E6%B0%91%E5%95%86%E4%B8%8A%2C11%2C20260514%2C1)은 상품 자체에는 국제적 권리소진을 인정하면서, 간판과 광고에 별도로 사용한 상표를 문제 삼았습니다.",
+        "[KOTRA의 2026년 오프라인 유통망 지원 공고](https://www.kotra.or.kr/upload/2026/06/18/BM202606180000099826_0.pdf)는 현지 바이어가 운영하는 한국상품전과 백화점·쇼핑몰의 홍보를 예정하고 있습니다. 이 경로로 진출하는 한국 기업에는 공급할 상품과 함께 현지 업체가 제작할 간판·소개 페이지의 승인 범위를 정할 일이 남습니다."
+      ]
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/908-korean-team-taiwan-after-hours-messages-overtime.md",
+      "sha256": "e6e4a02f355c9150bab26339f5a42f3385937882c4f1699e5ea25f75425654cf",
+      "no_bold": true,
+      "internal_author_preserved": true,
+      "audience_ko": true,
+      "fictional_caption": true,
+      "faq_count": 3,
+      "first_two_paragraphs": [
+        "‘초과근무 아님’에 직접 표시하고 서명한 확인서가 퇴사 뒤 수당 청구에서 증거가 됐습니다. 직원에게는 늦은 퇴근 기록과 업무 메시지도 있었습니다. [대만고등법원 가오슝분원 114年度勞上易字第13號 판결](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C114%2C%E5%8B%9E%E4%B8%8A%E6%98%93%2C13%2C20260422%2C1)은 어느 하나만 떼어 보지 않고, 실제 근무 확인 방식과 메시지 내용까지 판단했습니다.",
+        "[2026년 WorldJobPlus의 대만 기술영업 채용 공고](https://www.worldjob.or.kr/advnc/epmtLink.do?joCrtfcNo=E20260629006&joCrtfcDsp=1&joCrtfcDspSn=1&menuId=1000002033)에는 본사의 제조·품질·연구개발 부서와 실시간 소통하는 업무가 명시돼 있습니다. 이런 직무에서 퇴근 뒤 업무를 했다면, 연락 시각과 함께 그때 무엇을 수행했는지가 기록에 남아야 설명이 가능합니다. 해당 공고의 기업에 노동분쟁이 있었다는 뜻은 아닙니다."
+      ]
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/909-korean-traveler-taiwan-refund-claim-deadline.md",
+      "sha256": "a07b7e007c256f059801a6077e7dee33607f1b047d787bdaf2a0b4f10e63cffc",
+      "no_bold": true,
+      "internal_author_preserved": true,
+      "audience_ko": true,
+      "fictional_caption": true,
+      "faq_count": 3,
+      "first_two_paragraphs": [
+        "여행이 끝났거나 끝나기로 한 때부터 1년입니다. 대만 [민법 제514조의12](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=514-12)는 여행계약에 관한 해당 절의 비용 증감·반환, 손해배상과 대납비용 상환 청구에 이 시효를 정합니다. 여행사와 환불 이야기를 계속하고 있다는 사정만으로 기간이 멈췄다고 생각하면 청구를 놓칠 수 있습니다.",
+        "한 여행자는 업계 협회의 분쟁 처리까지 거친 뒤 환불 소송을 냈지만 청구가 기각됐습니다. [타이베이지방법원 114年度北小字第5039號 소액민사판결](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPEV%2C114%2C%E5%8C%97%E5%B0%8F%2C5039%2C20260206%2C1)에서 결론을 가른 것은 환불 비율보다 시효였습니다. 제1심 판결입니다. 2026년 2월 6일 선고 뒤 항소 여부나 확정은 확인되지 않았습니다."
+      ]
+    }
+  ]
+}

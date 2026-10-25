@@ -1,0 +1,32 @@
+[
+  {
+    "old_line": 2,
+    "new_line": 2,
+    "before": "title: \"Separación desde España y patrimonio en Taiwán: el divorcio y los bienes requieren preguntas distintas\"",
+    "after": "title: \"Divorcio desde España y patrimonio en Taiwán: la ley del divorcio y la de los bienes pueden no coincidir\""
+  },
+  {
+    "old_line": 14,
+    "new_line": 14,
+    "before": "featured_image_caption: \"Ilustración de documentos y bienes relacionados con una separación.\"",
+    "after": "featured_image_caption: \"Escena ficticia\""
+  },
+  {
+    "old_line": 26,
+    "new_line": 26,
+    "before": "¿Qué ley utiliza un tribunal taiwanés para liquidar el patrimonio de un matrimonio cuando un cónyuge vive en España? Para responder necesita conocer las nacionalidades, los domicilios y los pactos matrimoniales de ambos.",
+    "after": "¿Qué ley utiliza un tribunal taiwanés para liquidar el patrimonio de un matrimonio cuando un cónyuge vive en España? Para responder, el tribunal necesita conocer las nacionalidades, los domicilios y los pactos matrimoniales de ambos."
+  },
+  {
+    "old_line": 50,
+    "new_line": 50,
+    "before": "Junto a la información registral conviene reunir el contrato de adquisición, la hipoteca y los justificantes de financiación. Una transferencia desde una cuenta española merece conservarse con su concepto y las comunicaciones que la acompañaron. La anotación «para la casa» puede dejar sin explicar si se planteó como préstamo, aportación o regalo.",
+    "after": "Junto a la información registral conviene reunir el contrato de adquisición, la hipoteca y los justificantes de financiación. Si hubo transferencias desde una cuenta española, conviene guardarlas con su concepto y los mensajes que las acompañaron. La anotación «para la casa» puede dejar sin explicar si se planteó como préstamo, aportación o regalo."
+  },
+  {
+    "old_line": 62,
+    "new_line": 62,
+    "before": "Para delimitar el asunto taiwanés, la [página de contacto](/es/contact) remite a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Primero debe acordarse la comunicación, disponible para consultas en inglés, chino, japonés o coreano; basta inicialmente un resumen no sensible, la identidad de la contraparte para comprobar conflictos, el vínculo con Taiwán y los plazos conocidos. El correo no crea un encargo. La primera carpeta puede contener la cronología de domicilios y la referencia de cada bien, sin remitir todavía el archivo familiar completo.",
+    "after": "Para delimitar la parte taiwanesa del asunto, la [página de contacto](/es/contact) remite a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw). Las consultas se atienden en inglés, chino, japonés o coreano, y el idioma se acuerda antes; al principio basta un resumen sin datos sensibles, la identidad de la contraparte para comprobar conflictos, el vínculo con Taiwán y los plazos conocidos. El correo no crea un encargo. La primera carpeta puede contener la cronología de domicilios y la referencia de cada bien, sin remitir todavía el archivo familiar completo."
+  }
+]

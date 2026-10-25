@@ -1,0 +1,26 @@
+[
+  {
+    "old_line": 16,
+    "new_line": 16,
+    "before": "featured_image_caption: \"Illustrazione di una scena immaginaria; le attrezzature non appartengono a un caso reale.\"",
+    "after": "featured_image_caption: \"Scena immaginaria\""
+  },
+  {
+    "old_line": 34,
+    "new_line": 34,
+    "before": "La richiesta identifica nome, versione e formato. Il responsabile tecnico può indicare anche la funzione prevista e il materiale già ricevuto, così da distinguere una consegna incompleta da ciò che non era compreso nel prezzo.",
+    "after": "Nella richiesta conviene indicare nome, versione e formato di ogni file. Il responsabile tecnico può indicare anche la funzione prevista e il materiale già ricevuto, così da distinguere una consegna incompleta da ciò che non era compreso nel prezzo."
+  },
+  {
+    "old_line": 50,
+    "new_line": 50,
+    "before": "L’[articolo 761 del Codice civile](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=761) collega normalmente il trasferimento dei diritti sui beni mobili alla consegna, ammettendo anche forme sostitutive. Le parti possono, per esempio, concordare che lo stampo rimanga presso il cedente mentre l’acquirente ne acquista il possesso indiretto. Occorrono perciò accordo e storia del possesso, oltre alla prova del pagamento.",
+    "after": "L’[articolo 761 del Codice civile](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=761) collega normalmente il trasferimento dei diritti sui beni mobili alla consegna, ammettendo anche forme sostitutive. Le parti possono, per esempio, concordare che lo stampo rimanga presso il cedente mentre l’acquirente ne acquista il possesso indiretto. Servono perciò l’accordo e la storia del possesso, non solo la prova del pagamento."
+  },
+  {
+    "old_line": 72,
+    "new_line": 72,
+    "before": "L’articolo sull’[organizzazione delle attività a Taiwan](/it/columns/taiwan-semiconductor-market-entry) offre il contesto operativo. Per una valutazione, i [contatti dello studio](/it/contact) e wei@hoveringlaw.com.tw ricevono una sintesi non riservata con controparte, materiali mancanti e data prevista del trasferimento. La consulenza si svolge in inglese, cinese, giapponese o coreano; chi comunica soltanto in italiano deve concordare una modalità praticabile. I disegni completi possono attendere le istruzioni per l’invio: inizialmente basta un inventario che identifichi ciò che manca.",
+    "after": "L’articolo sull’[organizzazione delle attività a Taiwan](/it/columns/taiwan-semiconductor-market-entry) offre il contesto operativo. Per una valutazione si può inviare, tramite i [contatti dello studio](/it/contact) o a wei@hoveringlaw.com.tw, una sintesi non riservata con controparte, materiali mancanti e data prevista del trasferimento. La consulenza si svolge in inglese, cinese, giapponese o coreano; chi comunica soltanto in italiano dovrà concordare prima come procedere. I disegni completi possono attendere le istruzioni per l’invio: inizialmente basta un inventario che identifichi ciò che manca."
+  }
+]

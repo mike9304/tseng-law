@@ -1,0 +1,154 @@
+{
+  "reviewer": "/root/final_ja_case_trends",
+  "checked_at": "2026-10-25T12:11:26.395242+00:00",
+  "articles": [
+    {
+      "id": 910,
+      "path": "src/content/columns-ja/910-japanese-expat-allowances-bonuses-taiwan-judgment.md",
+      "absolute_path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/910-japanese-expat-allowances-bonuses-taiwan-judgment.md",
+      "sha256": "f69468d34cca87a34174a82fb848e0b67ba9e949e8850b5772bc5b061a3ca1f3",
+      "mtime_utc": "2026-10-25T12:05:16.747566+00:00",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/910-japanese-expat-allowances-bonuses-taiwan-judgment.md",
+        "--lang",
+        "ja"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/910-japanese-expat-allowances-bonuses-taiwan-judgment.md [ja] sentences=67 mean=39.6 cv=0.457 short=0.179 run3=0.046 opener_rep=0.1 cite_end=0.0 cite_para=0.2 contrast=0 caveat=1 q=0\n  WARN 98% of sentences end in 'desu-masu' — vary endings within the register\n",
+      "stderr": "",
+      "sha_after_check": "f69468d34cca87a34174a82fb848e0b67ba9e949e8850b5772bc5b061a3ca1f3",
+      "bold_markdown_count": 0,
+      "author_values": [
+        "\"legal-ai-assistant\""
+      ],
+      "public_ai_footer_found": false,
+      "human_review_claim_found": false,
+      "mailto_count": 1,
+      "image": {
+        "path": "public/images/columns/910-case-trends-20261025.webp",
+        "sha256": "1111c7b3dcad946fa3f0f17146dc6bacf473d138f03daa93f6d477bb625d044c",
+        "bytes": 146816,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "alt": "封筒と図表のある書類が置かれた机の脇に、スーツケースがあり、窓から街並みが見える情景",
+        "caption": "架空の情景"
+      }
+    },
+    {
+      "id": 911,
+      "path": "src/content/columns-ja/911-japan-taiwan-distributor-competing-products-judgment.md",
+      "absolute_path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/911-japan-taiwan-distributor-competing-products-judgment.md",
+      "sha256": "d547c2590dcfa791e530ed44373ef3b648e6b1c90752cb02de5a807381e2b51e",
+      "mtime_utc": "2026-10-25T12:10:01.346198+00:00",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/911-japan-taiwan-distributor-competing-products-judgment.md",
+        "--lang",
+        "ja"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/911-japan-taiwan-distributor-competing-products-judgment.md [ja] sentences=60 mean=40.9 cv=0.459 short=0.15 run3=0.017 opener_rep=0.2 cite_end=0.0 cite_para=0.2 contrast=1 caveat=1 q=0\n  WARN 90% of sentences end in 'desu-masu' — vary endings within the register\n",
+      "stderr": "",
+      "sha_after_check": "d547c2590dcfa791e530ed44373ef3b648e6b1c90752cb02de5a807381e2b51e",
+      "bold_markdown_count": 0,
+      "author_values": [
+        "\"legal-ai-assistant\""
+      ],
+      "public_ai_footer_found": false,
+      "human_review_claim_found": false,
+      "mailto_count": 1,
+      "image": {
+        "path": "public/images/columns/911-case-trends-20261025.webp",
+        "sha256": "812cc83b9016fe85ba9df428f9a78cf1bb61b48994e11b720befb4f7c42d2c76",
+        "bytes": 155518,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "alt": "無地のボトルを手に取る女性と、さまざまな容器を並べた棚、机に開いたサンプルケース",
+        "caption": "架空の情景"
+      }
+    },
+    {
+      "id": 912,
+      "path": "src/content/columns-ja/912-taiwan-oem-mold-return-inventory-claim-japan.md",
+      "absolute_path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/912-taiwan-oem-mold-return-inventory-claim-japan.md",
+      "sha256": "d6bb453d3f9eacab5e0afba1a944ae782e8131a59f47ab3d53373d282ea400f9",
+      "mtime_utc": "2026-10-25T12:06:39.716822+00:00",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/912-taiwan-oem-mold-return-inventory-claim-japan.md",
+        "--lang",
+        "ja"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/912-taiwan-oem-mold-return-inventory-claim-japan.md [ja] sentences=63 mean=40.9 cv=0.456 short=0.159 run3=0.098 opener_rep=0.143 cite_end=0.016 cite_para=0.238 contrast=2 caveat=4 q=0\n  WARN 97% of sentences end in 'desu-masu' — vary endings within the register\n",
+      "stderr": "",
+      "sha_after_check": "d6bb453d3f9eacab5e0afba1a944ae782e8131a59f47ab3d53373d282ea400f9",
+      "bold_markdown_count": 0,
+      "author_values": [
+        "\"legal-ai-assistant\""
+      ],
+      "public_ai_footer_found": false,
+      "human_review_claim_found": false,
+      "mailto_count": 1,
+      "image": {
+        "path": "public/images/columns/912-case-trends-20261025.webp",
+        "sha256": "db1035203b532fd50f7ea8b624cea95076a7279c7ea1bf1bdf40c17cc3407cbf",
+        "bytes": 192556,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "alt": "工場の作業台に置かれた金属製の金型と、内張りのある空の運送用ケース",
+        "caption": "架空の情景"
+      }
+    },
+    {
+      "id": 913,
+      "path": "src/content/columns-ja/913-japanese-genuine-goods-taiwan-trademark-exhaustion.md",
+      "absolute_path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/913-japanese-genuine-goods-taiwan-trademark-exhaustion.md",
+      "sha256": "a477776e89a9cd0e29cf3b9dde1485ae4607aaf31b9a187a43ebc231eb5e9b1b",
+      "mtime_utc": "2026-10-25T12:01:27.723948+00:00",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/913-japanese-genuine-goods-taiwan-trademark-exhaustion.md",
+        "--lang",
+        "ja"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/913-japanese-genuine-goods-taiwan-trademark-exhaustion.md [ja] sentences=62 mean=43.3 cv=0.452 short=0.081 run3=0.067 opener_rep=0.091 cite_end=0.0 cite_para=0.091 contrast=3 caveat=0 q=0\n  WARN 95% of sentences end in 'desu-masu' — vary endings within the register\n",
+      "stderr": "",
+      "sha_after_check": "a477776e89a9cd0e29cf3b9dde1485ae4607aaf31b9a187a43ebc231eb5e9b1b",
+      "bold_markdown_count": 0,
+      "author_values": [
+        "\"legal-ai-assistant\""
+      ],
+      "public_ai_footer_found": false,
+      "human_review_claim_found": false,
+      "mailto_count": 1,
+      "image": {
+        "path": "public/images/columns/913-case-trends-20261025.webp",
+        "sha256": "09d832a82f6efd9332f61c1444367d8051088390eb8fec9b0114475453073213",
+        "bytes": 181676,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "alt": "無地の段ボール箱、布地の見本、付箋を付けた書類が木製の机に並ぶ情景",
+        "caption": "架空の情景"
+      }
+    }
+  ]
+}

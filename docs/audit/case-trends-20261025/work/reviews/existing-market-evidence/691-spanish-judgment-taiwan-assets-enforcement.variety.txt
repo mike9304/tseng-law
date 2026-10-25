@@ -1,0 +1,4 @@
+COMMAND ['python3', '/Users/son7/tseng-lanes-shared/variety/variety_metrics.py', 'check', '/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md', '--lang', 'es']
+EXIT 1
+/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-es/691-spanish-judgment-taiwan-assets-enforcement.md [es] sentences=33 mean=17.7 cv=0.473 short=0.152 run3=0.0 opener_rep=0.188 cite_end=0.0 cite_para=0.438 contrast=0 caveat=0 q=1
+  FAIL top_opener_n=3 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)

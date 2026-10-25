@@ -1,0 +1,513 @@
+Government Procurement Act - Article Content - Laws & Regulations Database of The Republic of China (Taiwan) (https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057)
+citeturn1210view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057","lineno":null}); Total lines: 719
+L0: [Input]
+L1: 
+L2: [Input] [Input] [Input]
+L3: 
+L4: No support javascript script language
+L5: 
+L6: 【0†Goto Main Content】
+L7: 
+L8: [Input: Search] [Input]
+L9: 
+L10: 【1†:::】
+L11: 
+L12: Select Folders：
+L13: 
+L14:   * [Input: Enter folder name] [Button: Save]
+L15: 
+L16: Save Add New Folder 【2†Manage Folders】
+L17: ## Article Content
+L18: 
+L19: Title：  | 【3†Government Procurement Act】 【4†CH】
+L20: Amended Date：  | 2019-05-22
+L21: Category：  | Public Construction Commission, Executive Yuan（行政院公共工程委員會）
+L22: 
+L23:   * 【3†Article Content】
+L24:   * 【5†Chapter】
+L25:   * 【6†Article Search】
+L26:   * 【7†Content Search】
+L27:   * 【8†Legislative History】
+L28: 
+L29: Chapter I General Principles
+L30: 
+L31: Article 1
+L32: This Act is enacted to establish a government procurement system that has fair and open procurement procedures, promotes the efficiency and effectiveness of government procurement operation, and ensures the quality of procurement.
+L33: 
+L34: Article 2
+L35: 
+L36: The term "procurement" as used in this Act shall refer to the contracting of construction work, the purchase or lease of property, the mandate or employment of services, etc.
+L37: 
+L38: Article 3
+L39: Procurement conducted by any government agency, public school or government-owned enterprise (hereinafter referred to as the "entity") shall be governed by the provisions of this Act. With regard to the matters not provided for in this Act, other relevant laws shall govern.
+L40: 
+L41: Article 4
+L42: A juridical person or organization which takes a grant from an entity shall conduct a procurement in accordance with this Act and be under supervision by the entity provided that the amount of the grant is not less than half of the procurement value and also reaches the threshold for publication.
+L43: The preceding paragraph is not applicable to the procurement for art or cultural purposes, but the procurement shall be supervised by the entity that provides the grant; and the regulations governing the implementation principles, applicable scope, and supervision and management shall be prescribed by the Ministry of Culture.
+L44: Article 5
+L45: 
+L46: An entity may entrust a juridical person or organization to conduct its procurement.
+L47: The procurement referred to in the preceding paragraph shall be governed by this Act, and the juridical person or organization shall be supervised by the entrusting entity.
+L48: 
+L49: Article 6
+--------------------------------------------------------------------------------
+The Arbitration Law of ROC - Article Content - Laws & Regulations Database of The Republic of China (Taiwan) (https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001)
+citeturn1210view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001","lineno":null}); Total lines: 377
+L0: [Input]
+L1: 
+L2: [Input] [Input] [Input]
+L3: 
+L4: No support javascript script language
+L5: 
+L6: 【0†Goto Main Content】
+L7: 
+L8: [Input: Search] [Input]
+L9: 
+L10: 【1†:::】
+L11: 
+L12: Select Folders：
+L13: 
+L14:   * [Input: Enter folder name] [Button: Save]
+L15: 
+L16: Save Add New Folder 【2†Manage Folders】
+L17: ## Article Content
+L18: 
+L19: Title：  | 【3†The Arbitration Law of ROC】 【4†CH】
+L20: Amended Date：  | 2015-12-02
+L21: Category：  | Ministry of Justice（法務部）
+L22: 
+L23:   * 【3†Article Content】
+L24:   * 【5†Chapter】
+L25:   * 【6†Article Search】
+L26:   * 【7†Content Search】
+L27:   * 【8†Legislative History】
+L28: 
+L29: CHAPTER I: Arbitration Agreement
+L30: 
+L31: Article 1
+L32: Parties to a dispute arising at present or in the future may enter into an arbitration agreement designating a single arbitrator or an odd number of arbitrators to constitute an arbitral tribunal to determine the dispute.
+L33: The dispute referred to in the preceding paragraph is limited to those which may be settled in accordance with the law.
+L34: The arbitration agreement shall be in writing.
+L35: Written documents, documentary instruments, correspondence, facsimiles, telegrams or any other similar types of communications between the parties evincing prima facie arbitration agreement shall be deemed to establish an arbitration agreement.
+L36: Article 2
+L37: 
+L38: An arbitration agreement shall not be valid unless it is entered into in respect of a legal relationship and any dispute arising therefrom.
+L39: 
+L40: Article 3
+L41: 
+L42: The validity of an arbitration clause in a contract shall be determined independently from the contract itself. The invalidity, nullification, revocation, rescission, or termination of the contract shall not affect the validity of the arbitration clause.
+L43: 
+L44: Article 4
+L45: If either party fails to comply with the arbitration agreement and instead initiates litigation, the court shall, upon petition by the other party, issue a ruling to stay the legal proceedings and order the plaintiff to submit the dispute to arbitration within a specified period, except where the defendant has already conducted oral arguments on the merits of the case.
+L46: If a plaintiff fails to submit the dispute to arbitration within the specified time period prescribed in the preceding paragraph, the court shall dismiss the lawsuit.
+L47: For litigation provided in Paragraph 1, once the court has issued a ruling to stay the proceedings, the litigation shall be deemed withdrawn upon the rendering of the arbitral award.
+--------------------------------------------------------------------------------
+政府採購法 沿革-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=A0030057)
+citeturn1210view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=A0030057","lineno":null}); Total lines: 138
+L0: [Input]
+L1: 
+L2: [Input] [Input] [Input]
+L3: 
+L4: 您的瀏覽器，不支援javascript script語法，恐影響到網頁的閱讀
+L5: 
+L6: 【0†跳至主要內容】
+L7: 
+L8: #
+L9: 
+L10: 【1†整合查詢】
+L11: 
+L12:   * 【2†整合查詢】
+L13:   * 【2†最新訊息】
+L14:   * 【2†中央法規】
+L15:   * 【2†司法解釋】
+L16:   * 【2†條約協定】
+L17:   * 【2†兩岸協議】
+L18:   * 【2†智慧查找】
+L19: [Input] [Input] [Input]
+L20: 
+L21: [Input: 請輸入關鍵字] [Input] [Input]
+L22: 
+L23: 熱門詞彙：【3†刑法】、【4†職業安全衛生】、【5†憲法】、【6†勞基法】、【7†採購法】
+L24: 
+L25: [Input: 整合查詢] [Input]
+L26: 
+L27: 【8†:::】
+L28: ## 沿革
+L29: 
+L30: 法規名稱：  | 【9†政府採購法】 【10†EN】
+L31: 公布日期：  | 民國 87 年 05 月 27 日
+L32: 修正日期：  | 民國 108 年 05 月 22 日
+L33: 法規類別：  | 行政 ＞ 行政院公共工程委員會 ＞ 通用目
+L34: 
+L35:   * 【9†所有條文】
+L36:   * 【11†編章節】
+L37:   * 【12†條號查詢】
+L38:   * 【13†條文檢索】
+L39:   * 【14†授權子法】
+L40:   * 【15†沿革】
+L41:   * 【16†立法歷程(附帶決議)†www.ly.gov.tw】
+L42:   *   * ※如已配合行政院組織改造，公告變更管轄或停止辦理業務之法規條文，請詳見沿革
+L43: 
+L44: 
+L45: 
+L46: 7.中華民國一百零八年五月二十二日總統華總一義字第 10800049691 號 令修正公布第 4、15、17、22、25、30、31、50、52、59、63、76、85 、93、94、95、101、103 條條文；增訂第 11-1、26-1、70-1 條條文 中華民國一百十二年八月十八日行政院院臺規字第 1121028221 號公告 第 96 條第 3 項所列屬「行政院環境保護署」之權責事項，自一百十 二年八月二十二日起改由「環境部」管轄
+L47: 
+L48: 
+L49: 6.中華民國一百零五年一月六日總統華總一義字第 10400154101 號令修 正公布第 85-1、86 條條文；增訂 73-1 條條文
+L50: 
+L51: 
+L52: 
+L53: 5.中華民國一百年一月二十六日總統華總一義字第 10000015641 號令修 正公布第 11、52、63 條條文 中華民國一百零一年二月三日行政院院臺規字第 1010122318 號公告第 13 條第 4 項所列屬「行政院主計處」之權責事項，自一百零一年二 月六日起改由「行政院主計總處」管轄
+L54: 
+L55: 
+L56: 
+L57: 4.中華民國九十六年七月四日總統華總一義字第 09600085741 號令修正 公布第 85-1 條條文
+L58: 
+L59: 
+L60: 
+L61: 3.中華民國九十一年二月六日總統（91）華總一義字第 09100025610 號 令修正公布第 6、11、13、20、22、24、25、28、30、34、35、37、40 、48、50、66、70、74、75、76、78、83、85～88、95、97、98、101 ～103、114 條條文；並刪除第 69 條條文；並增訂第 85-1～85-4、9 3-1 條條文；並自公布日施行
+L62: 2.中華民國九十年一月十日總統（90）華總一義字第 9000003820 號令修 正公布第 7 條條文
+L63: 
+L64: 
+L65: 
+L66: 1.中華民國八十七年五月二十七日總統（87）華總（一）義字第 8700105 740 號令制定公布全文 114 條；依第 114 條規定：自公布後一年施行
+L67: 
+L68: 【17†:::】
+L69: 
+L70:   * 【18†最新訊息】
+L71:   * 【19†中央法規】
+L72:   * 【20†司法解釋】
+L73:   * 【21†條約協定】
+L74:   * 【22†兩岸協議】
+L75:   * 【23†綜合查詢】
+L76:   * 【24†跨機關檢索】
+L77:   * 法治宣導專區
+L78:     * 【25†智慧查找】
+L79:     * 【26†法律扶助】
+L80:     * 【27†創意教案】
+L81:     * 【28†法律時事漫談†www.moj.gov.tw】
+L82:   * 網站使用說明
+L83:     * 【29†網站使用手冊】
+L84:     * 【30†會員服務介紹】
+L85:     * 【31†網站單元簡介】
+L86:     * 【32†法規資料檢索範圍】
+L87:     * 【33†資料更新頻率說明】
+L88:   * 資訊服務
+L89:     * 【34†全國法規連結圖示】
+L90:     * 【35†全國法規作業要點】
+L91:     * 【36†法規名稱英譯標準表†www.ey.gov.tw】
+L92:   * 【37†相關網站】
+L93: ## 訂閱電子報
+L94: 
+L95: [Input: 請輸入電子郵件信箱]
+L96: 
+L97: [Input]
+L98: 
+L99: [Input]
+L100: 
+L101: [Input]
+L102: 
+L103: 瀏覽人次總計
+L104: 
+L105: 1,650,662,283人
+L106: 
+L107: 本月瀏覽人次
+L108: 
+L109: 16,949,832人
+L110: 
+L111: 目前使用人次
+L112: 
+L113: 1,865人
+L114: 
+L115: 電子報訂閱人數
+L116: 
+L117: 223,145人
+L118:   * 本網站係提供法規之最新動態資訊及資料檢索，並不提供法規及法律諮詢之服務。
+--------------------------------------------------------------------------------
+Fact Sheet on U.S.-Taiwan Agreement on Reciprocal Trade | United States Trade Representative (https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade)
+citeturn1210view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade","lineno":null}); Total lines: 82
+L0: 【0†iframe†www.googletagmanager.com】
+L1: # Fact Sheet on U.S.-Taiwan Agreement on Reciprocal Trade
+L2: 
+L3:   * ### February
+L4: 
+L5:     * 【1†Fact Sheet: The United States and North Macedonia Reach a Framework for Agreement on Reciprocal Trade】
+L6:     *     * 【2†Fact Sheet: The United States and Bangladesh Reach an Agreement on Reciprocal Trade】
+L7: ACHIEVING RECIPROCAL TRADE: Today, the United States and Taiwan, under the auspices of the American Institute in Taiwan (“AIT”) and the Taipei Economic and Cultural Representative Office in the United States (“TECRO”), have reached an Agreement on Reciprocal Trade that will strengthen the economic and trade relationship between the United States of America and Taiwan and provide mutual benefit to both territories, while also facilitating significant expansion and growth to U.S.
+L8: manufacturing through substantial tariff reductions, removal of non-tariff barriers, investments, and procurement in key sectors and products.  The Agreement on Reciprocal Trade is a testament to the importance of the U.S.-Taiwan relationship and reflects both sides’ ambition to increase bilateral investment and commercial opportunities, deepen their high-tech strategic partnership, ensure supply chain resilience, and jointly promote stability and prosperity.
+L9: GROUNDBREAKING TERMS: Key terms of the Agreement on Reciprocal Trade include:
+L10:   * Breaking Down Tariff Barriers for U.S. Industrial and Agricultural Exports: The Taiwan side will eliminate or reduce 99 percent of tariff barriers.  The Taiwan side will provide preferential market access for U.S. industrial exports, including autos and auto parts, chemicals, seafood, machinery, health products, electrical products, metals, and minerals.  It will also provide preferential market access for U.S.
+L11: agricultural exports, including horticultural products, wheat, beef and beef products, dairy products, pork and pork products, lamb and sheep meat, tree nuts, dog and cat food, ketchup, and peanuts.
+L12:   * Breaking Down Non-Tariff Barriers for U.S. Industrial Exports: The Taiwan side has committed to resolve longstanding non-tariff barriers affecting U.S. exports of motor vehicles, medical devices, and pharmaceuticals.  For U.S. vehicles, Taiwan will remove quantitative restrictions and accept U.S. vehicles built to U.S. Federal Motor Vehicle Safety Standards, and emissions standards without additional requirements to enter Taiwan. Taiwan will also accept U.S.
+--------------------------------------------------------------------------------
+Taiwan Energy Industry (https://www.trade.gov/market-intelligence/taiwan-energy-industry)
+citeturn1210view4 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.trade.gov/market-intelligence/taiwan-energy-industry","lineno":null}); Total lines: 34
+L0: 【0†iframe†www.googletagmanager.com】 【0†iframe†www.googletagmanager.com】
+L1: 
+L2:   * Search ITA [Input: Search website...]
+L3: 
+L4: Search
+L5: 
+L6: Menu
+L7: 
+L8: Market Intelligence
+L9: 
+L10: Equipment and Machinery Environmental Technology Industrial Materials Taiwan Trade Policy and Agreements
+L11: # Taiwan Energy Industry
+L12: 
+L13: Taiwan is entering a period of rapid electricity demand growth, driven by the expansion of artificial intelligence, semiconductor manufacturing, and data centers. In response, Taiwan Power Company (Taipower) is preparing to tender major projects within the next 12–24 months, creating a time-sensitive window for U.S. firms with experience in rapid capacity expansion, grid resilience, and reliable power infrastructure to engage with local utility and industrial stakeholders.
+L14: Taiwan’s annual electricity demand growth is projected to more than double, reaching approximately 2.8% growth through 2033. To support this surge, Taipower expects over 5 gigawatts of new power demand between 2026 and 2030, with a single advanced wafer fab consuming up to 200 megawatts. Securing a reliable electricity supply has become a critical priority for the island’s economic and industrial development.
+L15: The anticipated buildout creates opportunities for U.S. suppliers of gas turbines and power generation equipment, grid modernization and substation technologies, transmission equipment, energy storage systems, data center power and cooling infrastructure, and renewable energy components.  Taipower will tender the Xiehe Combined Cycle Gas Turbine Project, the restart projects for the Kuosheng and Maanshan nuclear power plants, and the Shenao Battery Storage Project by the end of 2026 or in 2027.
+L16: On June 18, 2026, Taipower announced that it will invest approximately $170 million (NTD 5 billion) to renovate underground power transmission lines in six metropolitan areas.
+L17: For more information on this and more opportunities in Taiwan’s energy and infrastructure sectors, contact CS Taiwan Commercial Specialist Kenneth Chen at Kenneth.Chen@trade.gov.
+L18: 
+L19: 09/30/2026
+L20: 
+L21: ×
+--------------------------------------------------------------------------------
+TAICCA 文化內容策進院 (https://en.taicca.tw/news/detail/222)
+citeturn1210view5 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://en.taicca.tw/news/detail/222","lineno":null}); Total lines: 104
+L0:   * 【0†Grants & Investment】
+L1: 
+L2: 【1†Grants】 【2†Investment】
+L3: 
+L4:   * 【3†Fairs & Events】
+L5: 
+L6: 【4†Fairs】 【5†Events】
+L7: 
+L8: TCCF
+L9: 
+L10:   * 【6†Business Matching】
+L11: 
+L12: Taiwan Pavilion
+L13: 
+L14: Taiwan Comic City
+L15: 
+L16: 【7†Book to Screen】
+L17: 
+L18: Taiwan Content Island
+L19: 
+L20: Taiwan Beats
+L21: 
+L22: IP Meetup
+L23: 
+L24: Culture x Tech Database
+L25: 
+L26: Taiwan Digital Asset Library
+L27: 
+L28: 【8†Fellowship】
+L29: 
+L30:   * 【9†Industry Insights】
+L31: 
+L32: 【10†Reports】
+L33: 
+L34:   * 【11†News】
+L35: 
+L36:   * 【12†About】
+L37: 
+L38: [Input: keyword]
+L39: 
+L40: 【13†繁中†taicca.tw】
+L41: 
+L42:   *   *   * 5/34
+L43:   *   *   *   *   *   *   *   *   *   *   * # TCCF MARKET to bring together the global content industry Spotlight Screenings target international buyers to propel Taiwan content onto the world stage
+L44: 
+L45: September 22, 2026
+L46: The highly anticipated 2026 Taiwan Creative Content Fest (TCCF) is set to take place this November. At the heart of industry transactions is TCCF MARKET, which this year will bring together 107 exhibitors from seven countries—Taiwan, South Korea, Thailand, Japan, Singapore, France, and the Philippines. Focusing on rights transactions for international film and television content and promising IPs, the event continues to serve as a key platform connecting Taiwan with the global content industry.
+L47: In particular, the number of exhibitors in IP categories such as publishing, comics, and characters has increased by 13% from last year. This reflects the continued development of global IPs with established fan bases into screen adaptations and diverse licensing opportunities, an increasingly prominent focus in MARKET exhibitors’ strategies.
+L48: 
+L49: 
+L50: 【14†Image†taicca.tw】
+L51: TAICCA Chairperson Sue WANG said that MARKET has always served as TCCF’s central hub for connecting the global film and television industry with Taiwan’s wealth of original content. This year’s inaugural Spotlight Screenings offer international buyers and industry partners an early opportunity to experience the quality of the finished works firsthand ahead of the business meetings, with the aim of further facilitating meaningful cross-border transactions and collaborations.
+L52: She expressed hope that TCCF would not just be an industry event, but also a steadfast partner supporting Taiwan’s cultural content industry as it moves forward. By bringing together different fields and technologies, TCCF hopes to continue creating diverse opportunities for international cooperation and help Taiwan establish an indispensable strategic position in the global film and television production chain.
+--------------------------------------------------------------------------------
+Contact & Inquiry | Hovering Law (https://tseng-law.com/en/contact)
+citeturn1210view6 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://tseng-law.com/en/contact","lineno":null}); Total lines: 245
+L0: 【0†Contact】
+L1: 
+L2: English
+L3: 
+L4: Hovering International Law Firm Services Our Team Pricing Insights Traffic accidents Tax & accounting Criminal litigation Videos Locations Email Consultation
+L5: 
+L6: 【1†Hovering International Law Firm】
+L7: 
+L8: Email Consultation (wei@hoveringlaw.com.tw)
+L9: ## Services
+L10: 
+L11: Taiwan investment, company setup, litigation, and related practice areas.
+L12: 
+L13:   * 【2†Investment & Company Setup›】
+L14:   * 【3†Civil Litigation & Damages›】
+L15:   * 【4†Family Litigation›】
+L16:   * 【5†Labor & Employment›】
+L17:   * 【6†Criminal Litigation›】
+L18:   * 【7†IP & Financial Disputes›】
+L19:   * 【8†View All›】
+L20: 
+L21: ## Videos
+L22: 
+L23: Taiwan legal topics on the firm YouTube channel and blog.
+L24: 
+L25:   * 【9†YouTube @weilawyer›†www.youtube.com】
+L26:   * 【10†Naver Blog›†blog.naver.com】
+L27:   * 【11†Videos / Channels›】
+L28: ## About
+L29: 
+L30: Firm overview, the international team, and office locations.
+L31: 
+L32:   * 【12†Firm Overview›】
+L33:   * 【13†Our Team›】
+L34:   * 【14†Office Locations›】
+L35:   * Contact Us› (wei@hoveringlaw.com.tw)
+L36: 
+L37: CONTACT
+L38: # Contact & Inquiry
+L39: 
+L40: View inquiry types, contact channels, and office locations in one place.
+L41: 
+L42: Official consultation email
+L43: 
+L44: wei@hoveringlaw.com.tw
+L45: 
+L46: Email Attorney Tseng for Consultation (wei@hoveringlaw.com.tw)[Button: Copy email address]
+L47: 
+L48: For an initial inquiry, send a brief overview of the issue, the Taiwan connection, any deadline, and how we can reach you. Time zone and how you found us are optional. Please exclude sensitive information.
+L49: Consultations are handled in four languages: English, Chinese, Korean, and Japanese.
+L50: 
+L51: If none of those four languages works for you, choose “Contact method needs to be confirmed”. We will reply to confirm how we can communicate; service in any other language is not guaranteed.
+L52: ## Send your inquiry
+L53: 
+L54: Describe your matter briefly. An attorney reviews what you send before the next step is discussed.
+L55: 
+L56: Send inquiry (wei@hoveringlaw.com.tw)
+L57: 
+L58: wei@hoveringlaw.com.tw
+L59: 
+L60: GUIDE
+L61: 
+L62: ## Before You Contact Us
+L63: 
+L64: Preparing the right materials in advance helps us route your inquiry and structure the consultation more efficiently.
+L65: ### Available channels
+L66: 
+L67:   * You can reach us through email.
+L68:   * We offer in-person meetings in Taipei and video consultations via Zoom or Google Meet.
+L69:   * You can communicate with our firm in English, Chinese, Korean, and Japanese.
+L70: 
+L71: ### Useful materials to prepare
+L72: 
+L73:   * Key documents such as contracts, notices, emails, invoices, or chat records
+L74:   * Party or company details, timeline of events, and current procedural status
+L75:   * Photos, videos, judgments, or filings that help establish the facts
+--------------------------------------------------------------------------------
+업무분야 | 법무법인 호정 (https://tseng-law.com/ko/services)
+citeturn1210view7 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://tseng-law.com/ko/services","lineno":null}); Total lines: 196
+L0: 【0†연락처】【1†오시는 길】
+L1: 
+L2: 한국어
+L3: 
+L4: 법무법인 호정 업무분야 변호사소개 비용안내 호정칼럼 교통사고 세무·회계 형사소송 미디어센터 오시는길 이메일 상담 신청
+L5: 
+L6: 【2†법무법인 호정】
+L7: 
+L8: 이메일 상담 신청 (wei@hoveringlaw.com.tw)
+L9: 
+L10: ## 업무분야
+L11: 
+L12: 대만 투자, 회사 설립, 소송 등 주요 업무 분야를 안내합니다.
+L13: 
+L14:   * 【3†투자·법인설립】
+L15:   * 【4†민사소송·손해배상】
+L16:   * 【5†가사소송】
+L17:   * 【6†노동법·고용분쟁】
+L18:   * 【7†형사소송】
+L19:   * 【8†지적재산·금융분쟁】
+L20:   * 【9†전체 보기】
+L21: 
+L22: ## 미디어센터
+L23: 
+L24: 유튜브와 블로그에서 대만 법률 정보를 확인할 수 있습니다.
+L25: 
+L26:   * 【10†YouTube @weilawyer†www.youtube.com】
+L27:   * 【11†네이버 블로그†blog.naver.com】
+L28:   * 【12†영상/채널 페이지】
+L29: ## 법인소개
+L30: 
+L31: 법인 소개, 변호사, 오시는 길을 안내합니다.
+L32: 
+L33:   * 【13†법인 개요】
+L34:   * 【14†변호사 소개】
+L35:   * 【1†오시는 길】
+L36:   * 문의하기 (wei@hoveringlaw.com.tw)
+L37: 
+L38: SERVICES
+L39: 
+L40: # 업무분야
+L41: 
+L42: 대만 투자, 소송, 자문 전반을 구조화하여 제공합니다.
+L43: 
+L44: 【15†Image†media.tseng-law.com】
+L45: 
+L46: 이메일 상담 신청 ↗ (wei@hoveringlaw.com.tw)【16†증준외 변호사 · 대만 변호사 · 파트너 변호사】
+L47: 
+L48: 【17†투자·법인설립】【18†노동법·고용분쟁】【19†지적재산·금융분쟁】【20†민사소송·손해배상】【21†형사소송】【22†가사소송】
+L49: ## 대만 진출 기업
+L50: 
+L51: 법인 형태 선택부터 투자심의위원회 승인, 업종별 인허가, 상표 선등록 확인까지.
+L52: 
+L53:   * ### 투자·법인설립
+L54: 
+L55: 한국 기업의 대만 진출을 위한 법인 형태 선택(자회사·지사·유한회사)부터 투자심의위원회 승인, 자본금 송금, 은행 계좌 개설, 영업장소 확보까지 전 과정을 지원합니다. 화장품·물류 등 업종별 인허가 요건과 해산·청산을 통한 자본금 회수 절차까지 안내합니다.
+L56: 
+L57:     * 법인 형태 선택
+L58:     * 투자심의위원회 승인
+L59:     * 업종별 인허가
+L60: 【3†자세히 보기】
+L61:   * ### 노동법·고용분쟁
+L62: 
+L63: 대만의 해고, 퇴직금(資遣費), 근로계약 분쟁을 다룹니다. 계약 종료의 법적 근거와 예고·퇴직금·기한을 구분하고, 신제·구제 근속기간별 산정, 근로자 측 계약 종료의 법정 사유, 최소 근무기간 약정의 법정 요건과 합리성, 비용 반환 및 책임 귀속을 구체적인 계약과 증거에 따라 검토합니다.
+L64:     * 해고
+L65:     * 퇴직금
+L66:     * 근로계약 분쟁
+L67: 【6†자세히 보기】
+L68:   * ### 지적재산·금융분쟁
+L69: 
+L70: 상표·특허·저작권 등 지적재산 보호와 금융·투자 관련 분쟁을 대응합니다. 대만 진출 시 상표 선등록 확인, 브랜드 보호 전략, 금융상품·투자계약 분쟁의 사실관계 분석 및 소송을 지원합니다.
+L71: 
+L72:     * 상표
+L73:     * 저작권
+L74:     * 금융·투자 관련 분쟁
+L75: 【8†자세히 보기】
+L76: ## 분쟁과 소송
+L77: 
+L78: 계약 분쟁과 손해배상, 소비자 피해, 형사 절차의 수사 대응.
+L79: 
+L80:   * ### 민사소송·손해배상
+L81: 
+L82: 계약 분쟁, 손해배상, 소비자 피해 등 민사 사건 전반을 대응합니다. 한국 유학생 헬스장 부상 사건에서 1심 승소 판결을 받은 뒤 항소심에서 화해로 종결한 사례가 있으며, 한국어로 한국 의뢰인을 밀착 지원하고 외국인 의뢰인의 대만 소송 절차는 사무소 상담 언어(한국어·중국어·일본어·영어)로 지원합니다.
+L83: 
+L84:     * 계약 분쟁
+L85:     * 손해배상
+L86:     * 소비자 피해
+L87: 【4†자세히 보기】
+L88:   * ### 형사소송
+L89: 
+L90: 대만 형사 절차에서의 수사 대응, 피의자·피해자 대리, 변호인 접견을 수행합니다. 규제 위반에 따른 형사 처벌 리스크(자본금 불법 인출 시 최대 5년 이하 징역, 업종 무허가 영업 등) 사전 점검과 방어 전략을 제공합니다.
+L91: 
+L92:     * 수사 대응
+L93:     * 피의자 대리
+L94:     * 피해자 대리
+L95: 【7†자세히 보기】
+L96: ## 대만의 가족과 생활
+L97: 
+L98: 이혼과 재산분할, 친권, 상속.
+L99: 
+L100:   * ### 가사소송
+L101: 
+L102: 이혼, 재산분할, 친권, 상속 등 가사 사건을 대응합니다. 한국-대만 국제결혼 증가에 따른 협의이혼·조정이혼 절차, 외국인 배우자의 호적 등록 문제, 상속 순위 및 잔여재산 분배 청구까지 전략적으로 지원합니다.
+L103: 
+L104:     * 이혼
+L105:     * 재산분할
+L106:     * 상속
+L107: 【5†자세히 보기】
+

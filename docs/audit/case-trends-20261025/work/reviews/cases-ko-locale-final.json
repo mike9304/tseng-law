@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "review_date": "2026-10-25",
+  "reviewer": "/root/review_ko_case_trends",
+  "reviewer_is_author": false,
+  "review_is_human": false,
+  "scope": "Korean locale independent review; manuscript read-only; not publication",
+  "repair_passes": 1,
+  "articles": [
+    {
+      "id": "906",
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/906-korean-publisher-exclusive-license-taiwan-complaint.md",
+      "sha256": "2d6e08cf1030b60f715ef3026f0c27d462a421c240811f3b6a0ec84c0bb7b074",
+      "status": "PASS",
+      "whole_text_read": true,
+      "variety_exit_code": 0,
+      "variety_fail_count": 0
+    },
+    {
+      "id": "907",
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/907-korean-brand-parallel-import-store-signs-taiwan.md",
+      "sha256": "46951a4b957b195451b86fe8148f0a104524beb1fc408511ace5cb218c48c8bc",
+      "status": "PASS",
+      "whole_text_read": true,
+      "variety_exit_code": 0,
+      "variety_fail_count": 0
+    },
+    {
+      "id": "908",
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/908-korean-team-taiwan-after-hours-messages-overtime.md",
+      "sha256": "e6e4a02f355c9150bab26339f5a42f3385937882c4f1699e5ea25f75425654cf",
+      "status": "PASS",
+      "whole_text_read": true,
+      "variety_exit_code": 0,
+      "variety_fail_count": 0
+    },
+    {
+      "id": "909",
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/909-korean-traveler-taiwan-refund-claim-deadline.md",
+      "sha256": "a07b7e007c256f059801a6077e7dee33607f1b047d787bdaf2a0b4f10e63cffc",
+      "status": "PASS",
+      "whole_text_read": true,
+      "variety_exit_code": 0,
+      "variety_fail_count": 0
+    }
+  ],
+  "report": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-final.md",
+  "r1_report": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-r1.md",
+  "evidence": {
+    "metrics": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-final-metrics.json",
+    "structure": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-final-structure.json",
+    "comparators_images_sources": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-preparation.json",
+    "snapshots": "/Users/son7/tseng-case-trends-20261025/work/reviews/cases-ko-locale-final-evidence"
+  },
+  "first_two_paragraph_deletion_test": "PASS; sentence-level and whole-opening test repeated on final frozen versions; 909 second paragraph split retained with distinct procedural information",
+  "comparators": [
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/704-taiwan-arc-first-application.md",
+      "published": "2026-10-24",
+      "sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1"
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "published": "2026-10-24",
+      "sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a"
+    },
+    {
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "published": "2026-10-24",
+      "sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc"
+    }
+  ],
+  "images_visual_inspected": true,
+  "image_hashes_unchanged": true,
+  "section_5_self_check": "PASS; actual CLI plus manual information-contribution review",
+  "substantive_corrections": [
+    {
+      "id": "907-A",
+      "line": 40,
+      "change": "Restored Trademark Act 36(1)(2) use-purpose condition",
+      "status": "resolved; final legal review explicitly informed"
+    },
+    {
+      "id": "908-A",
+      "line": 42,
+      "change": "Separated witness statements about HR requests/implications from lack of proof of collusive false intent/coercion",
+      "status": "resolved; final legal review explicitly informed"
+    }
+  ],
+  "unresolved_article_findings": [],
+  "source_read_limits": {
+    "J1": "공식 보관본60줄 전문 확인",
+    "J2": "공식 보관본 주문41–60/핵심121–247/299–340/465–490/610–634 확인. 미열람공백은 연구장부대로 보존. 재열람260 timeout.",
+    "J3": "공식 보관본82줄 전문 확인",
+    "J4": "공식 보관본0–46 본안이유 포함 확인. 말미재열람65 timeout."
+  },
+  "current_law_and_firm_sources_reopened": true,
+  "publication_performed": false,
+  "next_step": "Independent final reviewer on identical hashes; parent handles publication."
+}

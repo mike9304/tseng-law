@@ -1,0 +1,70 @@
+{
+  "checked_on": "2026-10-25",
+  "revision": "R1 frozen repair",
+  "records": [
+    {
+      "id": 910,
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/910-japanese-expat-allowances-bonuses-taiwan-judgment.md",
+      "sha256": "f69468d34cca87a34174a82fb848e0b67ba9e949e8850b5772bc5b061a3ca1f3",
+      "bodyCharacters": 4225,
+      "checks": {
+        "date": true,
+        "audience": true,
+        "author": true,
+        "caption": true,
+        "imageExists": true,
+        "faq": true,
+        "title": true,
+        "noBold": true
+      }
+    },
+    {
+      "id": 911,
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/911-japan-taiwan-distributor-competing-products-judgment.md",
+      "sha256": "d547c2590dcfa791e530ed44373ef3b648e6b1c90752cb02de5a807381e2b51e",
+      "bodyCharacters": 3940,
+      "checks": {
+        "date": true,
+        "audience": true,
+        "author": true,
+        "caption": true,
+        "imageExists": true,
+        "faq": true,
+        "title": true,
+        "noBold": true
+      }
+    },
+    {
+      "id": 912,
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/912-taiwan-oem-mold-return-inventory-claim-japan.md",
+      "sha256": "d6bb453d3f9eacab5e0afba1a944ae782e8131a59f47ab3d53373d282ea400f9",
+      "bodyCharacters": 3830,
+      "checks": {
+        "date": true,
+        "audience": true,
+        "author": true,
+        "caption": true,
+        "imageExists": true,
+        "faq": true,
+        "title": true,
+        "noBold": true
+      }
+    },
+    {
+      "id": 913,
+      "path": "/Users/son7/tseng-case-trends-20261025/repo/src/content/columns-ja/913-japanese-genuine-goods-taiwan-trademark-exhaustion.md",
+      "sha256": "a477776e89a9cd0e29cf3b9dde1485ae4607aaf31b9a187a43ebc231eb5e9b1b",
+      "bodyCharacters": 3784,
+      "checks": {
+        "date": true,
+        "audience": true,
+        "author": true,
+        "caption": true,
+        "imageExists": true,
+        "faq": true,
+        "title": true,
+        "noBold": true
+      }
+    }
+  ]
+}

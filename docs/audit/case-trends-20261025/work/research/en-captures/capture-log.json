@@ -1,0 +1,42 @@
+[
+  {
+    "name": "arbitration-110-1563-official.pdf",
+    "url": "https://tps.judicial.gov.tw/tw/dl-86883-af1050e40dca4f7b8233651a305fca3e.html",
+    "transport": "000\t",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exit": 28,
+    "error": "curl: (28) Connection timed out after 45006 milliseconds\n",
+    "retrieved": "2026-10-25"
+  },
+  {
+    "name": "noncompete-114-2211-official.html",
+    "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSV%2C114%2C%E5%8F%B0%E4%B8%8A%2C2211%2C20260416%2C1",
+    "transport": "000\t",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exit": 28,
+    "error": "curl: (28) Connection timed out after 45002 milliseconds\n",
+    "retrieved": "2026-10-25"
+  },
+  {
+    "name": "noncompete-114-241-official.html",
+    "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TCDV%2C114%2C%E5%8B%9E%E8%A8%B4%2C241%2C20260828%2C2",
+    "transport": "000\t",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exit": 28,
+    "error": "curl: (28) Connection timed out after 45006 milliseconds\n",
+    "retrieved": "2026-10-25"
+  },
+  {
+    "name": "judgment-100-42-official.html",
+    "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSV%2C100%2C%E5%8F%B0%E4%B8%8A%2C42%2C20110113",
+    "transport": "000\t",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exit": 28,
+    "error": "curl: (28) Connection timed out after 45004 milliseconds\n",
+    "retrieved": "2026-10-25"
+  }
+]

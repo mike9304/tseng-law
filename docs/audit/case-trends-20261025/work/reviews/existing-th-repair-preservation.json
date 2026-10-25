@@ -1,0 +1,121 @@
+[
+  {
+    "path": "src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md",
+    "baseline_sha256": "7c3cfe13a5fc7fab736fce58f58429081931788138ce56d06f16f4f7851a6a51",
+    "current_sha256": "bf9c2a83e90e20c0562c60e7bf7e3eb0edcc946a8330111c102a174adf5187d2",
+    "checks": {
+      "metadata_except_lastmod_identical": true,
+      "link_target_order_identical": true,
+      "body_digit_order_identical": true,
+      "bold_absent": true
+    },
+    "source_links": [
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090027&flno=66",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090027&flno=2",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=23",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=22",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=26",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=27",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=14",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=59",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090027&flno=2",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090027&flno=66",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=22",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=23",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=26",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=27",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=14",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=59"
+    ]
+  },
+  {
+    "path": "src/content/columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md",
+    "baseline_sha256": "0c492a23e33a50c51ba5033e3b375dd74069a8b8d59f8135ab1e118f9d271aa3",
+    "current_sha256": "7f46f3f35fc82125bc63e6165dec82174ee2f04593e8e0ec28584e81196d4a9c",
+    "checks": {
+      "metadata_except_lastmod_identical": true,
+      "link_target_order_identical": true,
+      "body_digit_order_identical": true,
+      "bold_absent": true
+    },
+    "source_links": [
+      "https://www.bli.gov.tw/0007239.html",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030005",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030005",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030005",
+      "https://www.bli.gov.tw/0007239.html",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030005",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030005",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030005",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=28",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030005",
+      "https://www.bli.gov.tw/0007239.html"
+    ]
+  },
+  {
+    "path": "src/content/columns-th/662-thai-return-home-taiwan-traffic-injury-records.md",
+    "baseline_sha256": "88f014c8e00251efff5435f77c02a4914bbccee7aca397976ed192d6e0aaaff2",
+    "current_sha256": "3461f6e65f9126641cbd0fb876211624105de0584bd3430b04fd68a9837186ce",
+    "checks": {
+      "metadata_except_lastmod_identical": true,
+      "link_target_order_identical": true,
+      "body_digit_order_identical": true,
+      "bold_absent": true
+    },
+    "source_links": [
+      "https://www.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129",
+      "https://tm2.npa.gov.tw/NM105-505ClientRWD2/TM01A01Q_01.jsp",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=70",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=236-1",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=237",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=197",
+      "https://www.npa.gov.tw/ch/app/faq/view?id=2144&module=faq&serno=A1084129",
+      "https://tm2.npa.gov.tw/NM105-505ClientRWD2/TM01A01Q_01.jsp",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=70",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=236-1",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0010001&flno=237",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=197"
+    ]
+  },
+  {
+    "path": "src/content/columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md",
+    "baseline_sha256": "e12e07cd8ac507e5789a78200f9be0f2f58770fd473ebce2d923adc1d9a40336",
+    "current_sha256": "15bc3d175d9f5ddf9c6221682d126aaa0d9ace360029d4d6006c4c452ee18d0f",
+    "checks": {
+      "metadata_except_lastmod_identical": true,
+      "link_target_order_identical": true,
+      "body_digit_order_identical": true,
+      "bold_absent": true
+    },
+    "source_links": [
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=127",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=128",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=129",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=130",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=519",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=521",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=523",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=526",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=127",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=128",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=129",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=130",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=519",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=521",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=523",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=526"
+    ]
+  }
+]

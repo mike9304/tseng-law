@@ -1,0 +1,194 @@
+Queries executed 2026-10-25
+[
+  "site:judicial.gov.tw RCA \"113\" \"判決\" \"新聞稿\"",
+  "site:judicial.gov.tw RCA \"111\" \"台上\"",
+  "政府採購法 第85條之1 105年1月8日 施行",
+  "site:pcc.gov.tw \"105年1月\" \"85條之1\""
+]
+
+Script completed
+Wall time 3.3 seconds
+Output:
+
+司法院全球資訊網-查詢服務-司法新聞查詢-各法院新聞-最高法院111年度台上字第1828號新聞稿(113-民08) (https://www.judicial.gov.tw/tw/cp-1888-1200660-d5aa7-1.html)
+citeturn1171search0 [wordlim: 200] Published: 1.9 years ago; Crawled: 3 weeks ago; ## 最高法院111年度台上字第1828號新聞稿(113-民08) ... 一、本院判決主文： ... 關懷協會經各組選定人選定為當事人，依民法第28條、第184條第1項前段、第2項、第185條、第188條、第194條、第195條第1項、第3項、第487條之1第1項、第227條第1、2項、第227條之1，職業災害勞工保護法第7條，揭穿公司面紗原則，類推適用公司法第369條之4第2項規定，及繼承法律關係，求為命RCA、Vantiva、Thomson等3公司及GE公司不真正連帶賠償25億3680萬元及25億1880萬元各本息之判決。
+
+## 司法新聞查詢
+
+  * 全部新聞
+  * 本院新聞
+  * 各法院新聞
+  * 即時澄清新聞
+  * 重要訊息
+  * 法規資訊
+  * 徵人啟事
+  * 採購資訊
+  * 其他資訊
+
+## 最高法院111年度台上字第1828號新聞稿(113-民08)
+
+Image: 大法庭照片
+
+一、本院判決主文：
+
+原判決關於駁回上訴人RCA、Vantiva、Thomson等3公司及GE 公司對命其不真正連帶給付新臺幣十六億六千七百四十萬元及十六億五千四百四十萬元各本息之上訴，及該訴訟費用部分廢棄，發回臺灣高等法院。
+
+上訴人關懷協會（請求上訴人RCA、Vantiva、Thomson等3公司及GE公司再不真正連帶給付新臺幣八億六千九百四十萬元及八億六千四百四十萬元各本息）之上訴駁回。
+
+二、案情摘要：
+
+關懷協會（第一審原告）主張：RCA公司（第一審被告）於民國59年間設廠，使用及產製過程產生之化學物質並未依法適當處理，任令受僱勞工經各種途徑暴露於高濃度之有害化學物質環境中，致附表一之A組被害人勞工死亡，其配偶及子女即A組選定人承受精神上痛苦；B組選定人罹癌或罹病，C組選定人心理憂懼，身體權或健康權因而受損，RCA公司應負賠償責任，其前後任控制公司Vantiva、Thomson、GE公司（第一審被告）亦應負責。關懷協會經各組選定人選定為當事人，依民法第28條、第184條第1項前段、第2項、第185條、第188條、第194條、第195條第1項、第3項、第487條之1第1項、第227條第1、2項、第227條之1，職業災害勞工保護法第7條，揭穿公司面紗原則，類推適用公司法第369條之4第2項規定，及繼承法律關係，求為命RCA、Vantiva、Thomson等3公司及GE公司不真正連帶賠償25億3680萬元及25億1880萬元各本息之判決。
+
+--------------------------------------------------------------------------------
+中華民國行政院公共工程委員會全球資訊網 - 政府採購法 (https://www.pcc.gov.tw/content/cp.aspx?lang=1&n=2BE68E5656E06EFA)
+citeturn1171search1 [wordlim: 200] Published: 7.4 years ago; Crawled: today; ◎政府採購法第73條之1、第85條之1、第86條條文修正對照表(105年1月6日總統華總一義字第10400154101號令修正公布) (doc)、 (pdf)
+
+## 政府採購法
+
+  * 政府採購法
+
+政府採購法
+
+政府採購法
+
+中華民國87年5月27日
+總統華總一義字第8700105740號令制定公布全文114條
+
+中華民國90年1月10日
+總統華總一義字第9000003820號令修正公布第7條條文
+
+中華民國91年2月6日
+總統華總一義字第09100025610號令修正公布第6條、第11條、第13條、第20條、第22條、第24條、第25條、第28條、第30條、第34條、第35條、第37條、第40條、第48條、第50條、第66條、第70條、第6章章名、第74條至第76條、第78條、第83條、第85條至第88條、第95條、第97條、第98條、第101條至第103條及第114條條文；刪除第69條條文；並增訂第85條之1至第85條之4、第93條之1條文
+
+中華民國96年7月4日
+總統華總一義字第09600085741號令修正公布第85條之1條文
+
+中華民國100年1月26日
+總統華總一義字第10000015641號令修正公布第11條、第52條、第63條條文
+
+中華民國 105 年 1 月 6 日
+總統華總一義字第10400154101號令修正公布第73條之1、第85條之1、第86條條文
+--------------------------------------------------------------------------------
+立法院全球資訊網 -一、政府採購法之沿革及相關規定 (https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=20976&pid=172679)
+citeturn1171search2 [wordlim: 200] Published: 8.2 years ago; Crawled: 3 weeks ago; 修正公布第85條 之1、第86條；增訂第73條之1條文 ... 105年1月6日總統華總一義字第10400154101號令「政府採購法部分條文修正草案」條文於107年4月11日、4月26日及5月10日立法院交通委員會全數審查完竣，尚未提交院會，目前須待朝野協商。 ... 履約驗收作業(廠商交貨、施工、驗收、不符改善、保固及結案)等，係依政府採購法（共114條）、政府採購法施行細則（共113條）、相關子法（共45項）、相關作業規定（共33項）、手冊及範例（共13項）及相關解釋函等辦理，政府採購法相關子法之發布日期及最新修正日期詳附表2-2。
+100年1月26日總統華總一義字第 10000015641號令。
+
+105年1月6日
+
+修正公布第85條 之1、第86條；增訂第73條之1條文
+
+明定政府採購之付款及審核期限；將先調解後仲裁機制擴及技術服務採購；工程及技術服務採購之調解，申訴會應出具調解建議或方案及採購申訴審議委員會之委員人數上限由25人提高為35人。
+
+105年1月6日總統華總一義字第10400154101號令
+
+「政府採購法部分條文修正草案」條文於107年4月11日、4月26日及5月10日立法院交通委員會全數審查完竣，尚未提交院會，目前須待朝野協商。
+
+初審修正第11條 之1、第15條、第30條、第31條、第50條、第52條第59條、第70條之1、第93條、第101條及第103條條文
+
+新增「防賄條款」，廠商違法行賄將被列入公報，公共工程招標拒絕往來3年；及廠商因安全衛生設施或管理未符合職業安全衛生法令，致生重大職業災害，情節重大者，納入公共工程招標停權對象等。
+
+立法院第9屆第5會期關係文書。
+
+※註：1.資料來源，立法院法律全球資訊網，網址：https://glin.ly.gov.tw/web/nationalLegal，本研究彙整。
+
+(二)政府採購法及相關規定
+
+我國政府採購作業程序包括：1.招標前作業(採購金額認定、相關核准作業及擬訂招標文件)；2.招標作業(上網公告、領標、受理投標、處理疑義及異議)；3.開決標作業(底價訂定、開標、審標、評選、減價及決標)；4.履約驗收作業(廠商交貨、施工、驗收、不符改善、保固及結案)等，係依政府採購法（共114條）、政府採購法施行細則（共113條）、相關子法（共45項）、相關作業規定（共33項）、手冊及範例（共13項）及相關解釋函等辦理，政府採購法相關子法之發布日期及最新修正日期詳附表2-2。
+
+--------------------------------------------------------------------------------
+增訂並修正政府採購法條文-公報內容-公報查詢-總統府公報｜中華民國總統府 (https://www.president.gov.tw/Page/294/44539?DTitle=%E4%BF%AE%E6%AD%A3%E6%94%BF%E5%BA%9C%E6%8E%A1%E8%B3%BC%E6%B3%95)
+citeturn1171search3 [wordlim: 200] Published: 10.8 years ago; Crawled: 7 months ago; 中華民國105年1月6日 ... 茲增訂政府採購法第七十三條之一條文；並修正第八十五條之一及第八十六條條文[PDF]，公布之。
+
+## 公報查詢
+
+### Image 公報內容
+
+  *     *     *     *     * 增訂並修正政府採購法條文
+
+#### 公布日期：105年01月06日 號次：第7227號
+
+總統令
+中華民國105年1月6日
+華總一義字第10400154101號
+茲增訂政府採購法第七十三條之一條文；並修正第八十五條之一及第八十六條條文[PDF]，公布之。
+總　　　統　馬英九
+行政院院長　毛治國
+
+總統府公報--------------------------------------------------------------------------------
+政  府  採  購  法  條  文 (https://www.pcc.gov.tw/content/Download.ashx?icon=.pdf&n=MTEy5bm05pS%2F5bqc5o6h6LO85rOV6KaP5pWZ5p2QICjlhagp57ay56uZdjEucGRm&u=LzAwMS9VcGxvYWQvMjk3L2NrZmlsZS82MWVmZjUzZC0yNjIxLTQ1MDgtOTdjNy03MWY0MDg5YTJmODQucGRm)
+citeturn1171search12 [wordlim: 200] Published: 3.6 years ago; <td>一、機關與廠商間關於履約或驗收的爭議，無論發生於本法施行前或後，廠商或機關均可以依本法第85條之1規定申請調解。 ... 本條業經105年1月6日總統華總一義字第10400154101號令修正公布，明定申訴會對於工程及技術服務採購之調解，「應」提出調解建議或調解方案；另「先調解後仲裁」之規定，由工程採購擴大適用於技術服務採購，係考量技術服務常與工程之設計、監造及專案管理事項有關，為儘速處理技術服務案件所衍生之履約爭議，爰增訂技術服務採購適用本項規定。
+<br>三、本條於爭議處理課程講授。</td>
+</tr>
+<tr>
+<td>85之1</td>
+<td>一、機關與廠商間關於履約或驗收的爭議，無論發生於本法施行前或後，廠商或機關均可以依本法第85條之1規定申請調解。另履約爭議機關與廠商也可以依仲裁法規定合意提供仲裁，以解決爭議。<br>二、第2項規定調解屬廠商申請者，機關不得拒絕。故申訴會進行之調解程序乃具有相對之強制性，而與其他法定調解機關（如法院、仲裁機構、鄉鎮市調解委員會）辦理之調解不同。本條業經105年1月6日總統華總一義字第10400154101號令修正公布，明定申訴會對於工程及技術服務採購之調解，「應」提出調解建議或調解方案；另「先調解後仲裁」之規定，由工程採購擴大適用於技術服務採購，係考量技術服務常與工程之設計、監造及專案管理事項有關，為儘速處理技術服務案件所衍生之履約爭議，爰增訂技術服務採購適用本項規定。<br>三、為強化調解制度之公信力及執行力，第3項規定申訴會辦</td>
+</tr>
+</table>
+
+60--------------------------------------------------------------------------------
+行政院公共工程委員會 (https://www.pcc.gov.tw/content/Download.ashx?icon=.pdf&n=MTA15bm05bqm5pa95pS%2F57i%2B5pWI5aCx5ZGK5Y%2BK6KGM5pS%2F6Zmi6KmV5qC45oSP6KaLLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvb2xkL2hvbWUvcGNjYXAvdXBsb2FkL2ZpbGVzL291dGVyL0QyMDA4MDAwMDAyLzEwNeW5tOW6puaWveaUv%2Be4vuaViOWgseWRiuWPiuihjOaUv%2BmZouipleaguOaEj%2Bimiy5wZGY%3D)
+citeturn1171search13 [wordlim: 200] Published: 9.2 years ago; Crawled: 9.2 years ago; （一）明定採購之付款及審核程序，工程技術服務採購之調解比照工程案，應提出調解建議或調解方案等，105年1月6日修正政府採購法第73條之1、第85條之1及第86條。
+
+肆、推動成果具體事項
+
+一、精進政府採購制度，建構優質採購環境：
+（一）明定採購之付款及審核程序，工程技術服務採購之調解比照工程案，應提出調解建議或調解方案等，105年1月6日修正政府採購法第73條之1、第85條之1及第86條。
+（二）105年7月1日修正發布「機關委託資訊服務廠商評選及計費辦法」第12條，規定機關得照評選優勝廠商合理標價議價決標之機制。
+（三）105年共修正「勞務採購契約範本」、「財物採購契約範本」、「工程採購契約範本」、「資訊服務採購契約範本」、「統包工程採購契約範本」、「節能績效保證專案統包工程採購契約範本」、「公共工程技術服務契約範本」、「公共工程專案管理契約範本」及「災害搶險搶修開口契約範本」，供各機關依循。
+（四）為鼓勵機關透過最有利標方式遴選具有優約能力之優質廠商參與重大公共工程，105年9月23日訂定「機關巨額工程採購採最有利標決標作業要點」、「機關採購審查小組設置及作業要點」並函送各機關，搭配巡迴方式輔導各機關以落實推動，計舉辦首長座談會4場次，基層採購人員座談會6場次。--------------------------------------------------------------------------------
+政府採購法
+
+中華民國105年1月6日總統華總一義字第10400154101號令修正公布第85-1、 (https://www.dgpa.gov.tw/uploads/dgpa/files/201801/a8bf1eb7-468a-4905-a6fe-6cf2b1ab9348.pdf)
+citeturn1171search14 [wordlim: 200] Published: 9.0 years ago; 中華民國105年1月6日總統華總一義字第10400154101號令修正公布第85-1、86條條文；增訂73-1條條文 ... 第 3 條　政府機關、公立學校、公營事業（以下簡稱機關）辦理採購，依本法之規定；本法未規定者，適用其他法律之規定。
+--------------------------------------------------------------------------------
+政府採購法增修條文於105年1月6日公布施行，將技術服務採購案納入強制仲裁範圍。 (https://webbid.gov.taipei/News_Content.aspx?n=E2B2AA29377E5291&s=81D235D22BB42810&sms=3D3441C288B9F36F)
+citeturn1171search4 [wordlim: 200] Published: 10.8 years ago; Crawled: last month; ### 政府採購法增修條文於105年1月6日公布施行，將技術服務採購案納入強制仲裁範圍。 ... 二、中華民國105年1月6日總統華總一義字第10400154101號令修正公布政府採購法第85條之1、第86條條文，以及增訂第73條之1條規定，本次修正重點如下：
+--------------------------------------------------------------------------------
+政府採購法-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030057)
+citeturn1171search5 [wordlim: 200] Crawled: today; 一、定期估驗或分階段付款者，機關應於廠商提出估驗或階段完成之證明文件後，十五日內完成審核程序，並於接到廠商提出之請款單據後，十五日內付款。第 85-1 條 ... 採購申訴審議委員會辦理調解之程序及其效力，除本法有特別規定者外，準用民事訴訟法有關調解之規定。
+--------------------------------------------------------------------------------
+Microsoft Word - 10第壹章_1080603_核定__16頁.doc (https://www.pcc.gov.tw/Download.ashx?icon=.pdf&n=MTDnrKzlo7nnq6BfMTA4MDYwM1%2FmoLjlrppfXzE26aCBLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvMjk3L2NrZmlsZS8xZDMwNjI2OC04OTUwLTQ2OTUtOGMwNi02MDk1MWI0ZjVjYTkucGRm)
+citeturn1171search15 [wordlim: 200] Published: 7.4 years ago; 察條例）為各機關辦理採購行政作業的主要依據，至於勞務採購，則僅以 ... 修正第6 章章名）；96 年7 月4 日（修正第85 條之1）；100 年1 月26 日（修正第11 條、第52 條及第63 條）；105 年1 月6 日（增訂第73 條之1、修
+--------------------------------------------------------------------------------
+政府採購法第85 條之1 修正條文對照表 (https://www.pcc.gov.tw/upload/Upload/old/oldupload/upload/article/gplnew960704%281%29.pdf)
+citeturn1171search16 [wordlim: 200] Published: 8 months ago; 政府採購法第85 條之1 修正條文對照表
+--------------------------------------------------------------------------------
+政府採購法-所有條文
+
+2025/2/14 下午4:30
+
+第 105 條  
+1 機關辦理下列採購 (https://vod.ntp.gov.tw/ExamVOD/MAM/ExamVOD/Annex/202602/e93ee5e1-ff1c-4994-aa84-9c83b0187d26.pdf)
+citeturn1171search17 [wordlim: 200] Crawled: 8 months ago; 第 105 條 ... 1 中央及直轄市、縣（市）政府應成立採購稽核小組，稽核監督採購事宜。 ... 2 本法修正條文（包括中華民國九十年一月十日修正公布之第七條）自公布日施行。
+--------------------------------------------------------------------------------
+相關實務見解 (https://web.law.ntpc.gov.tw/Scripts/PrintFLAWDOC02.aspx?RCODE2=B0010006&RNO=85&rtype=H)
+citeturn1171search6 [wordlim: 200] Crawled: last month; 法規名稱：  | 政府採購法 第 85 條 ...     審議判斷指明原採購行為違反法令者，招標機關應自收受審議判斷書之次 ... 民國 108 年 05 月 22 日修正前原條文 回頁首
+--------------------------------------------------------------------------------
+司法院全球資訊網-查詢服務-司法新聞查詢-各法院新聞 (https://www.judicial.gov.tw/tw/lp-1888-1-72-20.html)
+citeturn1171search7 [wordlim: 200] Crawled: 5 days ago; 1423  | 懲戒法院職務法庭上訴審113年度懲上字第2號陳立儒懲戒案件判決說明新聞稿  | 114-01-16  | 懲戒法院 ... 1426  | 111年度重勞上更二字第4號RCA求償事件新聞資料  | 114-01-15  | 臺灣高等法院
+--------------------------------------------------------------------------------
+查閱內容 (https://web.law.ntpc.gov.tw/Scripts/FLAWDOC03.aspx?ecase=%E5%B7%A5%E7%A8%8B%E4%BC%81&ecode=D01300&eno=09700137980&rtype=E)
+citeturn1171search8 [wordlim: 200] Published: 18.5 years ago; Crawled: last month;     因機關不同意致調解不成立者始有政府採購法第 85 條之 1  第 2  項之 ...     說    明：一、復  貴部 97 年 4  月 1  日國備工營字第 0970003639 號函。
+--------------------------------------------------------------------------------
+政府採購法-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=A0030057)
+citeturn1171search9 [wordlim: 200] Crawled: last week; 第 26-1 條 ... 追繳押標金，自不予開標、不予決標、廢標或決標日起逾十五年者，不得行使。 ... 機關辦理政府規劃或核准之交通、能源、環保、旅遊等建設，經目的事業主管機關核准開放廠商投資興建、營運者，其甄選投資廠商之程序，除其他法律另有規定者外，適用本法之規定。 ... 機關依前條通知廠商後，廠商未於規定期限內提出異議或申訴，或經提出申訴結果不予受理或審議結果指明不違反本法或並無不實者，機關應即將廠商名稱及相關情形刊登政府採購公報。 ... 一、有第一百零一條第一項第一款至第五款、第十五款情形或第六款判處有期徒刑者，自刊登之次日起三年。
+--------------------------------------------------------------------------------
+相關實務見解 (https://web.law.ntpc.gov.tw/Scripts/PrintFLAWDOC02.aspx?RCODE2=B0010006&RNO=85-1&rtype=E)
+citeturn1171search10 [wordlim: 200] Crawled: 2 weeks ago;     政府採購法第 85 條之 1  第 2  項經立法院三讀通過後，相關事項規定
+--------------------------------------------------------------------------------
+政府採購法-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawAll.aspx?kw=%E6%94%BF%E5%BA%9C%E6%8E%A1%E8%B3%BC%E6%B3%95&pcode=A0030057)
+citeturn1171search11 [wordlim: 200] Crawled: 6 days ago; 修正日期：  | 民國 108 年 05 月 22 日 ... 政府機關、公立學校、公營事業（以下簡稱機關）辦理採購，依本法之規定；本法未規定者，適用其他法律之規定。 ... 第 8 條 ... 本法中華民國一百零八年四月三十日修正之條文施行前，已依第一百零一條第一項規定通知，但處分尚未確定者，適用修正後之規定。 ... 第 105 條
+--------------------------------------------------------------------------------
+政府採購法 (中華民國) (https://zh.wikipedia.org/wiki/%E6%94%BF%E5%BA%9C%E6%8E%A1%E8%B3%BC%E6%B3%95_%28%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%29)
+citeturn1171search18 [wordlim: 200] Crawled: 4 months ago; 過去中華民國的政府采购制度建構在審計稽察制度之下，各機關營繕工程及購置定製財物業務，係以審計部主管之《審計法》、《審計法施行細則》及《機關營繕工程暨購置定製變賣財物稽察條例》（簡稱「稽察條例」）為各機關辦理採購行政作業的主要依據，至於勞務採購，則僅以行政命令作為各機關辦理之規範。 ... 其後歷經85次與學者、專家、顧問之討論會及說明會，36次審查會議，並經立法院8次聯席審查會及多次黨團協商，終至1998年5月1日完成三讀，李登輝總統於同年5月27日公布施行。 ... *  立法院法律系統：《政府採購法》，民國96年6月8日(非現行條文) （页面存档备份，存于互联网档案馆）
+--------------------------------------------------------------------------------
+海洋委員會海巡署 (https://zh.wikipedia.org/wiki/%E6%B5%B7%E6%B4%8B%E5%A7%94%E5%93%A1%E6%9C%83%E6%B5%B7%E5%B7%A1%E7%BD%B2)
+citeturn1171search19 [wordlim: 200] Crawled: 3 weeks ago; *  行政院105年06月30日院授發社字第1051300821號令：廢止本院105年1月8日院授發社字第1051300010號令有關「海洋委員會組織法」及「海洋委員會海巡署組織法」之施行日期，自即日生效 （页面存档备份，存于互联网档案馆），政府公報資訊網，2015-7-4
+--------------------------------------------------------------------------------
+地方制度法 (https://zh.wikipedia.org/wiki/%E5%9C%B0%E6%96%B9%E5%88%B6%E5%BA%A6%E6%B3%95)
+citeturn1171search20 [wordlim: 200] Crawled: 10 months ago; 2024年8月7日，修正第33條，總統令公布施行。2025年12月3日，修正第33、55至57、61、83之7條，總統令公布施行；除第55條第1、2項及第56條第1、2項規定，自2026年1月1日施行外，其餘修正條文自公布日施行。
+--------------------------------------------------------------------------------
+大專院校教授涉挪用國科會補助款弊案 (https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%B0%88%E9%99%A2%E6%A0%A1%E6%95%99%E6%8E%88%E6%B6%89%E6%8C%AA%E7%94%A8%E5%9C%8B%E7%A7%91%E6%9C%83%E8%A3%9C%E5%8A%A9%E6%AC%BE%E5%BC%8A%E6%A1%88)
+citeturn1171search21 [wordlim: 200] Crawled: 2.1 years ago; 最高法院一○三年度第十三次刑事庭會議決議 （103年8月12日） ... * 雖然立法理由中，又將依政府採購法規定之各公立學校、公營事業之承辦、監辦採購等人員，列為刑法第十條第二項第一款後段之「其他依法令從事於公共事務，而具有法定職務權限者」（授權公務員），然則較諸身分公務員，其性質上既屬次要、補充之規範，解釋上自應從嚴限縮。 ... * 題示從事科學研究計畫之公立大學教授（下稱主持教授），既非總務、會計人員，採購物品，並非其法定職務權限，實際上，其任務主要係在於提出學術研究之成果，政府或公立研究機關（構）對於主持教授，並無上下從屬或監督之對內性關係，人民對於主持教授學術研究之成果，亦毫無直接、實質的依賴性及順從性，遑論照料義務。
+
+{"chunk_id":"8dbdb2","wall_time_seconds":0.000005875,"exit_code":0,"original_token_count":2078,"output":"text(await tools.web__run({search_query:[{q:'Taiwan United States 2026 film licensing streaming market trade.gov'},{q:'Taiwan government procurement US companies 2026 trade.gov'},{q:'Taiwan US investment 2026 environmental due diligence site:trade.gov'},{q:'Taiwan US executives equity compensation 2026 stock bonus'}],response_length:\"long\"}));\ntext(await tools.exec_command({cmd:\"rg -l -i 'film|licens|stock|bonus|procurement|arbitrat|parent|pollut|environment|acquisition' src/content/columns-en | sort\",workdir:\"/Users/son7/tseng-case-trends-20261025/repo\",max_output_tokens:3000}));\n\ntext(await tools.web__run({search_query:[{q:'2026 TAICCA United States film investment TCCF October official'},{q:'2026 Taiwan streaming United States licensing site:taicca.tw'},{q:'2026 Taiwan film American content investment site:trade.gov'},{q:'\"106年度台上字第723號\" \"106年7月\"'}],open:[{ref_id:\"https://www.trade.gov/country-commercial-guides/taiwan-selling-public-sector\"},{ref_id:\"https://www.trade.gov/market-intelligence/taiwan-energy-industry\"},{ref_id:\"https://www.trade.gov/market-intelligence/taiwan-carbon-fee-regulation\"}],response_length:\"long\"}));\n\nconst content = `# English / US-oriented Taiwan case briefs\nResearch date: 2026-10-25. Researcher: AI editorial research role; no claim of licensure, native-speaker identity, private demand data or human review.\nBaseline: origin/main ef3b24e73d84968eea08ea9d58e991ccbbf83fa8. EN inventory: 208 columns. Parent assigned IDs 914–917 on 2026-10-25; this researcher did not reserve IDs or edit manuscripts.\n\n## Editorial decision\nFour independent case articles are ready for drafting within the evidence boundaries below. Ranking is an editorial acquisition hypothesis, not measured demand or expected conversion. Each concerns a buyer decision involving Taiwan: an executive compensation claim, a public contract dispute, acquisition/parent-company exposure, and media licensing proof. Do not turn them into semiconductor/AI trend summaries.\n\n1. 914 — A Taiwan Employer Promised Offshore Shares. What Proves the Loss?\n2. 915 — A Taiwan Public-Works Claim Changed Before Arbitration\n3. 916 — RCA: What Environmental Due Diligence Can Reveal About Parent Liability\n4. 917 — A Film on the Group's Platform Does Not Identify the Licensee\n\nThe author should independently choose natural US business prose. Suggested titles are working options, not mandatory formulas. The 2017 and 2018 judgments must retain their dates; they are older decisions explaining current transactions. Ordinary Taiwan judgments should not be described as binding common-law precedent.\n\n## 914 / rank 1 — Offshore stock bonuses, Taiwan employer, US executive role\n\n### Reader, trigger and search intent\nReader: an executive taking a US subsidiary role under an employment agreement with a Taiwan parent, or the parent company's HR/general counsel team designing that package. Immediate trigger: the bonus is stated in BVI holding-company shares, the shareholder record arrives later, or an exit payment is disputed. Search phrase hypotheses: “Taiwan employer offshore stock bonus damages,” “Taiwan employment agreement US subsidiary stock compensation,” “late stock bonus Taiwan court.”\n\nCurrent context: USTR's current Taiwan country page reports estimated US–Taiwan goods and services trade of US$283.6 billion for 2025. The February 2026 reciprocal-trade fact sheet records a January 15 AIT–TECRO investment MOU intended to support two-way investment. These are broad transaction context, not evidence that executive-compensation disputes are increasing. Do not import the fact sheet's tariff treatment or call the agreement in force without separate current verification.\n- https://ustr.gov/countries-regions/china/taiwan\n- https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade\n\n### Verified case and exact proposition\nTaiwan High Court, 112年度重勞上字第14號, judgment 2025-12-30. Official full judgment read, including reasons VII–IX and disposition:\nhttps://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPHV%2C112%2C%E9%87%8D%E5%8B%9E%E4%B8%8A%2C14%2C20251230%2C1\n\nA Canadian executive contracted with a Taiwan electronics company and was assigned as CEO of its US subsidiary. The compensation included BVI holding-company shares. The court rejected the Taiwan employer's argument that the offshore issuer alone owed the performance bonus: the contract, prior bonus arrangement and consistent reading of “issued” made the Taiwan company responsible. Nevertheless, the executive failed on the damages claim. The record supported beneficial ownership before formal registration; he did not establish inability to exercise the rights, a compensable loss caused by late registration, or that the employer caused the alleged fall in share value. A low purchase offer was not proof of net share value. The appeal and additional claim were dismissed.\n\nDisposition: claim for US$338,310 share-value loss plus US$120,000 contractual departure payment failed. All these figures are USD. The departure provision required contract-specific written notice and opportunity to cure; the court found those conditions unproved before the agreement expired. The case did not establish that offshore shares need no registration under current BVI law. Its account of BVI rights is evidence evaluated in that litigation, not independent foreign-law advice.\n\n### Drafting spine / new reader decision\nStart with the separation between the company owing the bonus and the evidence of loss. Then explain the actual contract and why the Taiwan employer could not shift its promise to the issuer. The important turn is that winning this interpretation did not establish damages. End with the documents needed to evaluate a real claim: signed award terms and employer identity; allocation/beneficial ownership records; dividend/capital-return records; evidence of an attempted sale or blocked right; relevant-date valuation; breach notice and cure correspondence. This is advice to preserve evidence, not a promise of recovery.\nAlternative title: “Offshore Stock Bonuses: Who Owes the Shares, and What Was Lost?”\n\n### Current law and cautions\n- Civil Code Article 231(1), damages caused by delay: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=231\n- Civil Code Article 268, promise of third-party performance: https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=268\nBoth current Chinese provisions were opened/read. Article 268 did not make the share claim succeed: the court identified the Taiwan company as the direct bonus debtor; the separate departure claim also failed its contract conditions.\n- Civil Code Article 216 is discussed in the judgment for actual loss/lost profit. Cite the judgment for its application unless the current provision is separately opened before stating a broader rule.\n- Current Civil Code pages flag pending provisions 166-1 and 1223. Do not state that the entire latest Civil Code amendment is effective. The checked 231 and 268 are not the flagged provisions.\n- The 30-day breach notice and 45-day cure period are th\nconst r=await tools.web__run({search_query:[\n{q:'site:judicial.gov.tw RCA \"113\" \"判決\" \"新聞稿\"'},\n{q:'site:judicial.gov.tw RCA \"111\" \"台上\"'},\n{q:'政府採購法 第85條之1 105年1月8日 施行'},\n{q:'site:pcc.gov.tw \"105年1月\" \"85條之1\"'}\n],response_length:\"long\"});store(\"en_rca_history_proc_date\",r);text(r);\ntext(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\nimport json\\np=Path('/Users/son7/.codex/sessions/2026/10/25/rollout-2026-10-25T20-14-13-01a172c4-a9fd-7fc2-82ff-2f925324cd88.jsonl')\\nphrases=['Taiwan government procurement US companies 2026 trade.gov','Taiwan US executives equity compensation 2026 stock bonus','2026 TAICCA United States film investment TCCF October official','Taiwan US investment 2026 environmental due diligence site:trade.gov','2026 Taiwan streaming United States licensing site:taicca.tw']\\nfor line in p.open():\\n o=json.loads(line); pl=o.get('payload',{}); inp=pl.get('input','')\\n if pl.get('type')=='custom_tool_call' and any(s in inp for s in phrases): print(inp[:6000])\\nPY\",\"max_output_tokens\":2500}));\n\n"}

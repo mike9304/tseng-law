@@ -2589,6 +2589,54 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-strike-employer-damages-retaliation-mediation-arbitration"
+    },
+    {
+      "locale": "ko",
+      "slug": "korean-publisher-exclusive-license-taiwan-complaint"
+    },
+    {
+      "locale": "ko",
+      "slug": "korean-brand-parallel-import-store-signs-taiwan"
+    },
+    {
+      "locale": "ko",
+      "slug": "korean-team-taiwan-after-hours-messages-overtime"
+    },
+    {
+      "locale": "ko",
+      "slug": "korean-traveler-taiwan-refund-claim-deadline"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-us-executive-share-bonus-payment-promise"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-film-license-corporate-party-us-declaration"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-online-game-coins-refund-judgment"
     }
   ]
 }

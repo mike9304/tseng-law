@@ -457,3 +457,4 @@
 - 10-25 15:15 KST 대기: 원격=로컬(2bfde61), Air 15:07 push 확인. Studio 15:05 커밋은 grok NOTES뿐, Astra 채택 판정 대기.
 - 10-25 15:25 KST 대기: 원격=로컬(32be684), Air 15:17 push 확인. 15:05 이후 Studio 커밋 없음, Astra 채택 판정 대기.
 - 10-25 15:35 KST 대기: 원격=로컬(c3c0029), Air 15:27 push 확인. Studio 15:25 커밋은 grok NOTES뿐, Astra 채택 판정 대기.
+- 10-25 15:45 KST 대기: ref 재정렬(f677691), Air 15:37 push 확인(7ffd0e6). Studio 변화 grok NOTES뿐, Astra 채택 판정 대기.

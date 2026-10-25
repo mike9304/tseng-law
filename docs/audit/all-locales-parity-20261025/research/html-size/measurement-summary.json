@@ -1,0 +1,36 @@
+{
+  "sampleCount": 147,
+  "scope": "supplemental locale-balanced detail samples only",
+  "actualGzipMean": 31030.12925170068,
+  "actualGzipTotal": 4561429,
+  "sourceHashesVerified": 157,
+  "roundtripFailures": [],
+  "currentArticleIndex": {
+    "mean": 969.2789115646259,
+    "min": 272,
+    "max": 6490,
+    "multiply14014MiB": 12.954210917154949
+  },
+  "clientFooterExclusiveSubtree": {
+    "mean": 1717.3197278911564,
+    "min": 1083,
+    "max": 2174,
+    "multiply14014MiB": 22.951620737711586
+  },
+  "indexPlusFooterExclusiveSubtree": {
+    "mean": 2411.3537414965986,
+    "min": 1304,
+    "max": 8247,
+    "multiply14014MiB": 32.227240880330406
+  },
+  "parity286Index": {
+    "mean": 5815.965986394558,
+    "min": 5231,
+    "max": 6476,
+    "multiply14014MiB": 77.72917493184408
+  },
+  "faq": {
+    "count": 80,
+    "mean": 100.2
+  }
+}

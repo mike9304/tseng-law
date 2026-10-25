@@ -1,0 +1,620 @@
+test_character_units_are_not_latin_word_units (test_six_locales.SixLocaleTests.test_character_units_are_not_latin_word_units) ... FAIL
+test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) ... 
+  test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) (locale='ru') ... FAIL
+  test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) (locale='ms') ... FAIL
+  test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) (locale='fil') ... FAIL
+  test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) (locale='tr') ... FAIL
+  test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) (locale='nl') ... FAIL
+  test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) (locale='zh-hans') ... FAIL
+test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) ... 
+  test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) (locale='ru') ... FAIL
+  test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) (locale='ms') ... FAIL
+  test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) (locale='fil') ... FAIL
+  test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) (locale='tr') ... FAIL
+  test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) (locale='nl') ... FAIL
+  test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) (locale='zh-hans') ... FAIL
+test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) ... 
+  test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) (locale='ru') ... FAIL
+  test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) (locale='ms') ... FAIL
+  test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) (locale='fil') ... FAIL
+  test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) (locale='tr') ... FAIL
+  test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) (locale='nl') ... FAIL
+  test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) (locale='zh-hans') ... FAIL
+test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) ... 
+  test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) (locale='ru') ... FAIL
+  test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) (locale='ms') ... FAIL
+  test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) (locale='fil') ... FAIL
+  test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) (locale='tr') ... FAIL
+  test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) (locale='nl') ... FAIL
+  test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) (locale='zh-hans') ... FAIL
+test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) ... 
+  test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) (locale='ru') ... FAIL
+  test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) (locale='ms') ... FAIL
+  test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) (locale='fil') ... FAIL
+  test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) (locale='tr') ... FAIL
+  test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) (locale='nl') ... FAIL
+  test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) (locale='zh-hans') ... FAIL
+test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) ... 
+  test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) (locale='ru') ... FAIL
+  test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) (locale='ms') ... FAIL
+  test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) (locale='fil') ... FAIL
+  test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) (locale='tr') ... FAIL
+  test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) (locale='nl') ... FAIL
+  test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) (locale='zh-hans') ... FAIL
+test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) ... 
+  test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) (locale='ru') ... FAIL
+  test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) (locale='ms') ... FAIL
+  test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) (locale='fil') ... FAIL
+  test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) (locale='tr') ... FAIL
+  test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) (locale='nl') ... FAIL
+  test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) (locale='zh-hans') ... FAIL
+test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) ... 
+  test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) (locale='ru') ... FAIL
+  test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) (locale='ms') ... FAIL
+  test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) (locale='fil') ... FAIL
+  test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) (locale='tr') ... FAIL
+  test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) (locale='nl') ... FAIL
+  test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) (locale='zh-hans') ... FAIL
+test_unknown_cli_locale_and_path_fail_closed (test_six_locales.SixLocaleTests.test_unknown_cli_locale_and_path_fail_closed) ... ok
+test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) ... 
+  test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) (locale='ru') ... FAIL
+  test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) (locale='ms') ... FAIL
+  test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) (locale='fil') ... FAIL
+  test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) (locale='tr') ... FAIL
+  test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) (locale='nl') ... FAIL
+  test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) (locale='zh-hans') ... FAIL
+
+======================================================================
+FAIL: test_character_units_are_not_latin_word_units (test_six_locales.SixLocaleTests.test_character_units_are_not_latin_word_units)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 96, in test_character_units_are_not_latin_word_units
+    self.require('zh-hans')
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'zh-hans' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) (locale='ru')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 73, in test_contrasts_do_not_count_ordinary_negation
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ru' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) (locale='ms')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 73, in test_contrasts_do_not_count_ordinary_negation
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ms' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) (locale='fil')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 73, in test_contrasts_do_not_count_ordinary_negation
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'fil' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) (locale='tr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 73, in test_contrasts_do_not_count_ordinary_negation
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'tr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) (locale='nl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 73, in test_contrasts_do_not_count_ordinary_negation
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'nl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) (locale='zh-hans')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 73, in test_contrasts_do_not_count_ordinary_negation
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'zh-hans' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) (locale='ru')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 80, in test_language_signals_and_citations
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ru' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) (locale='ms')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 80, in test_language_signals_and_citations
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ms' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) (locale='fil')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 80, in test_language_signals_and_citations
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'fil' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) (locale='tr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 80, in test_language_signals_and_citations
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'tr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) (locale='nl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 80, in test_language_signals_and_citations
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'nl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) (locale='zh-hans')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 80, in test_language_signals_and_citations
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'zh-hans' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) (locale='ru')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 52, in test_opener_uses_the_language_and_canonical_unicode
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ru' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) (locale='ms')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 52, in test_opener_uses_the_language_and_canonical_unicode
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ms' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) (locale='fil')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 52, in test_opener_uses_the_language_and_canonical_unicode
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'fil' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) (locale='tr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 52, in test_opener_uses_the_language_and_canonical_unicode
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'tr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) (locale='nl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 52, in test_opener_uses_the_language_and_canonical_unicode
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'nl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) (locale='zh-hans')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 52, in test_opener_uses_the_language_and_canonical_unicode
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'zh-hans' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) (locale='ru')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 110, in test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ru' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) (locale='ms')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 110, in test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ms' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) (locale='fil')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 110, in test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'fil' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) (locale='tr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 110, in test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'tr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) (locale='nl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 110, in test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'nl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) (locale='zh-hans')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 110, in test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'zh-hans' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) (locale='ru')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 28, in test_routes_do_not_alias_a_language
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ru' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) (locale='ms')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 28, in test_routes_do_not_alias_a_language
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ms' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) (locale='fil')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 28, in test_routes_do_not_alias_a_language
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'fil' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) (locale='tr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 28, in test_routes_do_not_alias_a_language
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'tr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) (locale='nl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 28, in test_routes_do_not_alias_a_language
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'nl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) (locale='zh-hans')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 28, in test_routes_do_not_alias_a_language
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'zh-hans' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) (locale='ru')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 35, in test_sentence_boundaries_preserve_neutral_prose
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ru' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) (locale='ms')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 35, in test_sentence_boundaries_preserve_neutral_prose
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ms' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) (locale='fil')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 35, in test_sentence_boundaries_preserve_neutral_prose
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'fil' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) (locale='tr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 35, in test_sentence_boundaries_preserve_neutral_prose
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'tr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) (locale='nl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 35, in test_sentence_boundaries_preserve_neutral_prose
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'nl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) (locale='zh-hans')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 35, in test_sentence_boundaries_preserve_neutral_prose
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'zh-hans' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) (locale='ru')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 59, in test_source_tail_is_anchored_not_a_substantive_heading
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ru' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) (locale='ms')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 59, in test_source_tail_is_anchored_not_a_substantive_heading
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ms' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) (locale='fil')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 59, in test_source_tail_is_anchored_not_a_substantive_heading
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'fil' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) (locale='tr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 59, in test_source_tail_is_anchored_not_a_substantive_heading
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'tr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) (locale='nl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 59, in test_source_tail_is_anchored_not_a_substantive_heading
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'nl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) (locale='zh-hans')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 59, in test_source_tail_is_anchored_not_a_substantive_heading
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'zh-hans' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) (locale='ru')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 43, in test_units_preserve_marks_apostrophes_and_numeric_ranges
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ru' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) (locale='ms')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 43, in test_units_preserve_marks_apostrophes_and_numeric_ranges
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ms' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) (locale='fil')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 43, in test_units_preserve_marks_apostrophes_and_numeric_ranges
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'fil' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) (locale='tr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 43, in test_units_preserve_marks_apostrophes_and_numeric_ranges
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'tr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) (locale='nl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 43, in test_units_preserve_marks_apostrophes_and_numeric_ranges
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'nl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) (locale='zh-hans')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 43, in test_units_preserve_marks_apostrophes_and_numeric_ranges
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'zh-hans' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) (locale='ru')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 89, in test_url_removal_retains_the_sentence_boundary
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ru' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) (locale='ms')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 89, in test_url_removal_retains_the_sentence_boundary
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'ms' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) (locale='fil')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 89, in test_url_removal_retains_the_sentence_boundary
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'fil' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) (locale='tr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 89, in test_url_removal_retains_the_sentence_boundary
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'tr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) (locale='nl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 89, in test_url_removal_retains_the_sentence_boundary
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'nl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) (locale='zh-hans')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 89, in test_url_removal_retains_the_sentence_boundary
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 23, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'zh-hans' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi') : requested locale must be explicitly supported
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.084s
+
+FAILED (failures=55)

@@ -1,0 +1,42 @@
+src/content/columns-ru/704-taiwan-arc-first-application.md [ru] sentences=55 mean=13.6 cv=0.479 short=0.273 run3=0.019 opener_rep=0.111 cite_end=0.018 cite_para=0.389 contrast=0 caveat=1 q=1
+  OK — no variety limit violated
+src/content/columns-ru/705-taiwan-visa-residence-work-study-family.md [ru] sentences=65 mean=14.5 cv=0.506 short=0.262 run3=0.0 opener_rep=0.05 cite_end=0.0 cite_para=0.45 contrast=0 caveat=0 q=2
+  OK — no variety limit violated
+src/content/columns-ru/706-taiwan-arc-renewal-changes-reentry.md [ru] sentences=76 mean=13.8 cv=0.462 short=0.237 run3=0.041 opener_rep=0.217 cite_end=0.0 cite_para=0.478 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+src/content/columns-ms/704-taiwan-arc-first-application.md [ms] sentences=65 mean=14.5 cv=0.451 short=0.185 run3=0.0 opener_rep=0.095 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+src/content/columns-ms/705-taiwan-visa-residence-work-study-family.md [ms] sentences=69 mean=15.3 cv=0.588 short=0.217 run3=0.03 opener_rep=0.05 cite_end=0.0 cite_para=0.45 contrast=0 caveat=1 q=1
+  OK — no variety limit violated
+src/content/columns-ms/706-taiwan-arc-renewal-changes-reentry.md [ms] sentences=88 mean=13.7 cv=0.459 short=0.193 run3=0.035 opener_rep=0.08 cite_end=0.0 cite_para=0.48 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+src/content/columns-fil/704-taiwan-arc-first-application.md [fil] sentences=57 mean=17.8 cv=0.476 short=0.105 run3=0.018 opener_rep=0.105 cite_end=0.0 cite_para=0.316 contrast=0 caveat=1 q=0
+  OK — no variety limit violated
+src/content/columns-fil/705-taiwan-visa-residence-work-study-family.md [fil] sentences=67 mean=18.7 cv=0.525 short=0.134 run3=0.046 opener_rep=0.182 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+src/content/columns-fil/706-taiwan-arc-renewal-changes-reentry.md [fil] sentences=84 mean=17.8 cv=0.487 short=0.131 run3=0.098 opener_rep=0.28 cite_end=0.0 cite_para=0.56 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+src/content/columns-tr/704-taiwan-arc-first-application.md [tr] sentences=59 mean=12.9 cv=0.464 short=0.254 run3=0.053 opener_rep=0.053 cite_end=0.0 cite_para=0.211 contrast=0 caveat=0 q=0
+  OK — no variety limit violated
+src/content/columns-tr/705-taiwan-visa-residence-work-study-family.md [tr] sentences=71 mean=13.6 cv=0.58 short=0.31 run3=0.014 opener_rep=0.143 cite_end=0.0 cite_para=0.286 contrast=1 caveat=0 q=1
+  OK — no variety limit violated
+src/content/columns-tr/706-taiwan-arc-renewal-changes-reentry.md [tr] sentences=85 mean=12.1 cv=0.58 short=0.329 run3=0.0 opener_rep=0.083 cite_end=0.0 cite_para=0.417 contrast=1 caveat=0 q=0
+  OK — no variety limit violated
+src/content/columns-nl/704-taiwan-arc-first-application.md [nl] sentences=71 mean=13.4 cv=0.452 short=0.254 run3=0.014 opener_rep=0.182 cite_end=0.0 cite_para=0.273 contrast=0 caveat=0 q=2
+  OK — no variety limit violated
+src/content/columns-nl/705-taiwan-visa-residence-work-study-family.md [nl] sentences=75 mean=15.4 cv=0.463 short=0.16 run3=0.027 opener_rep=0.13 cite_end=0.0 cite_para=0.435 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+src/content/columns-nl/706-taiwan-arc-renewal-changes-reentry.md [nl] sentences=85 mean=14.9 cv=0.482 short=0.2 run3=0.024 opener_rep=0.167 cite_end=0.0 cite_para=0.542 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+src/content/columns-zh-hans/704-taiwan-arc-first-application.md [zh-hans] sentences=51 mean=35.9 cv=0.538 short=0.098 run3=0.061 opener_rep=0.095 cite_end=0.02 cite_para=0.238 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+src/content/columns-zh-hans/705-taiwan-visa-residence-work-study-family.md [zh-hans] sentences=59 mean=38.4 cv=0.52 short=0.102 run3=0.018 opener_rep=0.091 cite_end=0.017 cite_para=0.5 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+src/content/columns-zh-hans/706-taiwan-arc-renewal-changes-reentry.md [zh-hans] sentences=81 mean=34.9 cv=0.596 short=0.086 run3=0.013 opener_rep=0.038 cite_end=0.049 cite_para=0.462 contrast=1 caveat=0 q=2
+  OK — no variety limit violated
+src/content/columns-sv/704-taiwan-arc-first-application.md [sv] sentences=56 mean=13.8 cv=0.478 short=0.268 run3=0.0 opener_rep=0.118 cite_end=0.0 cite_para=0.353 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+src/content/columns-sv/705-taiwan-visa-residence-work-study-family.md [sv] sentences=63 mean=13.6 cv=0.454 short=0.27 run3=0.016 opener_rep=0.158 cite_end=0.0 cite_para=0.474 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+src/content/columns-sv/706-taiwan-arc-renewal-changes-reentry.md [sv] sentences=80 mean=13.1 cv=0.468 short=0.263 run3=0.051 opener_rep=0.083 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=2
+  OK — no variety limit violated

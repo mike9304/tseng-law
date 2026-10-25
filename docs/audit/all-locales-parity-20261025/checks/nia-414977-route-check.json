@@ -1,0 +1,22 @@
+[
+  {
+    "label": "original",
+    "requested": "https://www.immigration.gov.tw/5382/5385/12162/12197/414977/",
+    "effective": "https://www.immigration.gov.tw/5382/5385/12162/12197/414977/",
+    "httpStatus": 200,
+    "bytes": 33551,
+    "sha256": "7d50d645e8226b97fa1b9913af506567a43f9b8a79297f99e87ea358c0cd20c3",
+    "containsArc": true,
+    "containsPassport": true
+  },
+  {
+    "label": "current",
+    "requested": "https://www.immigration.gov.tw/5385/12162/12197/414977/",
+    "effective": "https://www.immigration.gov.tw/5385/12162/12197/414977/",
+    "httpStatus": 200,
+    "bytes": 32731,
+    "sha256": "db49dbe3d58a1e05280dc49c116c9a6560fecca29f3557ab6746b0afca3d93a0",
+    "containsArc": true,
+    "containsPassport": true
+  }
+]

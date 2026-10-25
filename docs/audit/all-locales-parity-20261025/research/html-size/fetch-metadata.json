@@ -1,0 +1,94 @@
+{
+  "measuredAt": "2026-10-25T11:46:08.442397+00:00",
+  "publicBuildBefore": {
+    "commit": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+    "builtAt": "2026-10-25T02:45:26.159Z"
+  },
+  "publicBuildAfter": {
+    "commit": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+    "builtAt": "2026-10-25T02:45:26.159Z"
+  },
+  "buildUnchanged": true,
+  "samples": [
+    {
+      "name": "en-arc",
+      "url": "https://tseng-law.com/en/columns/taiwan-arc-first-application",
+      "finalUrl": "https://tseng-law.com/en/columns/taiwan-arc-first-application",
+      "status": 200,
+      "bytes": 129199,
+      "sha256": "6858dd1ca0d16cda9e8ecd66f6b7c456b9d9a36392ecca4b2b0022d31d2fd428"
+    },
+    {
+      "name": "ko-arc",
+      "url": "https://tseng-law.com/ko/columns/taiwan-arc-first-application",
+      "finalUrl": "https://tseng-law.com/ko/columns/taiwan-arc-first-application",
+      "status": 200,
+      "bytes": 152121,
+      "sha256": "db45585c354d9e75180f4d2bf5e565bd0fbb2ab763432b51370dbf95faad5aa4"
+    },
+    {
+      "name": "zh-hant-arc",
+      "url": "https://tseng-law.com/zh-hant/columns/taiwan-arc-first-application",
+      "finalUrl": "https://tseng-law.com/zh-hant/columns/taiwan-arc-first-application",
+      "status": 200,
+      "bytes": 146942,
+      "sha256": "e450b01c514c345ef404a4c5ea89365c7b5638ba69c9189922d957f19342c404"
+    },
+    {
+      "name": "ja-arc",
+      "url": "https://tseng-law.com/ja/columns/taiwan-arc-first-application",
+      "finalUrl": "https://tseng-law.com/ja/columns/taiwan-arc-first-application",
+      "status": 200,
+      "bytes": 146413,
+      "sha256": "9a171bd30043a88c1f63a4952ef0d3168f3ab1b8a5beb1515985878ee137b2ca"
+    },
+    {
+      "name": "nl-semiconductor",
+      "url": "https://tseng-law.com/nl/columns/taiwan-semiconductor-market-entry",
+      "finalUrl": "https://tseng-law.com/nl/columns/taiwan-semiconductor-market-entry",
+      "status": 200,
+      "bytes": 133332,
+      "sha256": "ea98024e62ad186fa9f64f998991c4bd22bc150f1280b155042136503cae2063"
+    },
+    {
+      "name": "ru-gym",
+      "url": "https://tseng-law.com/ru/columns/taiwan-gym-injury-lawsuit",
+      "finalUrl": "https://tseng-law.com/ru/columns/taiwan-gym-injury-lawsuit",
+      "status": 200,
+      "bytes": 155761,
+      "sha256": "2f89de861f2c9f43673a7e6179df96fd1f47ee35ce61b0f1fc968efe9ad743f3"
+    },
+    {
+      "name": "ta-traffic",
+      "url": "https://tseng-law.com/ta/columns/taiwan-traffic-accident-procedure",
+      "finalUrl": "https://tseng-law.com/ta/columns/taiwan-traffic-accident-procedure",
+      "status": 200,
+      "bytes": 254169,
+      "sha256": "936db6d20b60f227d1eac256c3c2d4f192d3783dcc993c8f492359f021683dfa"
+    },
+    {
+      "name": "zh-hans-judgment",
+      "url": "https://tseng-law.com/zh-hans/columns/mainland-chinese-judgment-arbitral-award-taiwan-recognition",
+      "finalUrl": "https://tseng-law.com/zh-hans/columns/mainland-chinese-judgment-arbitral-award-taiwan-recognition",
+      "status": 200,
+      "bytes": 105883,
+      "sha256": "f65feb9a9f65e466cf37d2dd8729c2eba0e4afb4ce6082d7259fe79683233d4a"
+    },
+    {
+      "name": "en-board",
+      "url": "https://tseng-law.com/en/columns",
+      "finalUrl": "https://tseng-law.com/en/columns",
+      "status": 200,
+      "bytes": 368661,
+      "sha256": "5e37b35a98ab1c536b1bf7c9972a3f582321c56af0cdcea9cafa77d2066b25d9"
+    },
+    {
+      "name": "nl-board",
+      "url": "https://tseng-law.com/nl/columns",
+      "finalUrl": "https://tseng-law.com/nl/columns",
+      "status": 200,
+      "bytes": 124346,
+      "sha256": "c59c256d9dd598a8b85e4aa507dfc271ff0e0fae534825168cb19448ca0d4fce"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "browser": "156.0.8078.4",
+  "rows": [
+    {
+      "javaScriptEnabled": true,
+      "requests": [
+        {
+          "url": "http://127.0.0.1:61724/_next/static/chunks/webpack-c0d0aa129e20ab44.js",
+          "status": 200,
+          "resourceType": "script"
+        }
+      ],
+      "failures": [],
+      "documentStatus": 200,
+      "contentSecurityPolicy": null,
+      "bodyLength": 7823
+    },
+    {
+      "javaScriptEnabled": false,
+      "requests": [],
+      "failures": [
+        {
+          "url": "http://127.0.0.1:61724/_next/static/chunks/webpack-c0d0aa129e20ab44.js",
+          "resourceType": "script",
+          "error": "csp",
+          "directHttpStatus": 200,
+          "directBodyBytes": 6032
+        }
+      ],
+      "documentStatus": 200,
+      "contentSecurityPolicy": null,
+      "bodyLength": 7823
+    }
+  ]
+}

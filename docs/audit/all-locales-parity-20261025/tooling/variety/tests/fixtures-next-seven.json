@@ -1,0 +1,145 @@
+{
+  "provenance": "Fixed before da/nb/fi/pl/cs/ro/uk profile implementation and before reading any new batch manuscript. Hand-authored neutral engineering expectations, not native or legal approval.",
+  "da": {
+    "sentences": [
+      ["Kopien er klar. Mappen er åben! Er listen komplet?", ["Kopien er klar.", "Mappen er åben!", "Er listen komplet?"]],
+      ["Dr. A. Jensen læser art. 2 og stk. 3. Kopien ligger her.", ["Dr. A. Jensen læser art. 2 og stk. 3.", "Kopien ligger her."]],
+      ["Det gælder f.eks. den blå mappe. Den grønne er åben.", ["Det gælder f.eks. den blå mappe.", "Den grønne er åben."]],
+      ["Der er mapper, kuverter osv. Kopien er klar.", ["Der er mapper, kuverter osv.", "Kopien er klar."]],
+      ["Mødet er den 3. maj på 2. sal. Kopien er klar.", ["Mødet er den 3. maj på 2. sal.", "Kopien er klar."]],
+      ["Beløbet er 1.250,50. Næste nummer er 3. Kopien er klar.", ["Beløbet er 1.250,50.", "Næste nummer er 3.", "Kopien er klar."]],
+      ["»Er kopien klar?« spurgte hun. Mappen var åben.", ["»Er kopien klar?« spurgte hun.", "Mappen var åben."]],
+      ["»Kopien er klar.« Mappen er åben.", ["»Kopien er klar.«", "Mappen er åben."]],
+      ["»Mapper osv.« Kopien er klar.", ["»Mapper osv.«", "Kopien er klar."]]
+    ],
+    "words": [["EU-borger sender e-mail i 3–5 dage.", ["EU-borger", "sender", "e-mail", "i", "3", "5", "dage"]], ["A\u030Ase har 1\u00a0250,50 kroner.", ["A\u030Ase", "har", "1", "250,50", "kroner"]]],
+    "openers": [["»Åse har kopien.«", "åse"], ["A\u030Ase har kopien.", "åse"]],
+    "sources": ["## Officielle kilder", "## Kilder og kontroldato"],
+    "not_sources": ["## Kilder til indkomst", "## Retsgrundlag for ansøgningen"],
+    "contrast": [["Det er ikke en kopi, men originalen.", 1], ["En mappe bruges i stedet for en kuvert.", 1], ["Kopien er ikke klar.", 0]],
+    "caveat": "Dog er mappen stadig åben.", "hypothetical": "Antag, at mappen stadig er åben.", "citation": "Kopien findes stadig her (artikel 22).",
+    "formula": "Denne artikel giver generel information.",
+    "url": ["Adressen er https://example.test/a?x=1. Kopien er klar.", ["Adressen er .", "Kopien er klar."]]
+  },
+  "nb": {
+    "sentences": [
+      ["Kopien er klar. Mappen er åpen! Er listen komplett?", ["Kopien er klar.", "Mappen er åpen!", "Er listen komplett?"]],
+      ["Dr. A. Hansen leser art. 2 og nr. 3. Kopien ligger her.", ["Dr. A. Hansen leser art. 2 og nr. 3.", "Kopien ligger her."]],
+      ["Det gjelder f.eks. den blå mappen. Den grønne er åpen.", ["Det gjelder f.eks. den blå mappen.", "Den grønne er åpen."]],
+      ["Det er mapper, konvolutter osv. Kopien er klar.", ["Det er mapper, konvolutter osv.", "Kopien er klar."]],
+      ["Møtet er den 3. mai i 2. etasje. Kopien er klar.", ["Møtet er den 3. mai i 2. etasje.", "Kopien er klar."]],
+      ["Beløpet er 1\u202f250,50. Neste nummer er 3. Kopien er klar.", ["Beløpet er 1\u202f250,50.", "Neste nummer er 3.", "Kopien er klar."]],
+      ["«Er kopien klar?» spurte hun. Mappen var åpen.", ["«Er kopien klar?» spurte hun.", "Mappen var åpen."]],
+      ["«Kopien er klar.» Mappen er åpen.", ["«Kopien er klar.»", "Mappen er åpen."]]
+    ],
+    "words": [["EØS-borger sender e-post i 3-5 dager.", ["EØS-borger", "sender", "e-post", "i", "3", "5", "dager"]], ["A\u030Ase har 1\u202f250,50 kroner.", ["A\u030Ase", "har", "1", "250,50", "kroner"]]],
+    "openers": [["«Åse har kopien.»", "åse"], ["A\u030Ase har kopien.", "åse"]],
+    "sources": ["## Offisielle kilder", "## Kilder og kontrolldato"],
+    "not_sources": ["## Kilder til inntekt", "## Rettslig grunnlag for søknaden"],
+    "contrast": [["Det er ikke en kopi, men originalen.", 1], ["En mappe brukes i stedet for en konvolutt.", 1], ["Kopien er ikke klar.", 0]],
+    "caveat": "Likevel er mappen fortsatt åpen.", "hypothetical": "Anta at mappen fortsatt er åpen.", "citation": "Kopien finnes fortsatt her (artikkel 22).",
+    "formula": "Denne artikkelen gir generell informasjon.",
+    "url": ["Adressen er https://example.test/a?x=1. Kopien er klar.", ["Adressen er .", "Kopien er klar."]]
+  },
+  "fi": {
+    "sentences": [
+      ["Kopio on valmis. Kansio on auki! Onko luettelo täydellinen?", ["Kopio on valmis.", "Kansio on auki!", "Onko luettelo täydellinen?"]],
+      ["Prof. A. Virtanen lukee luvun 2 ja s. 3. Kopio on tässä.", ["Prof. A. Virtanen lukee luvun 2 ja s. 3.", "Kopio on tässä."]],
+      ["Tämä koskee esim. sinistä kansiota. Vihreä on auki.", ["Tämä koskee esim. sinistä kansiota.", "Vihreä on auki."]],
+      ["Luettelossa on kansioita, kuoria jne. Kopio on valmis.", ["Luettelossa on kansioita, kuoria jne.", "Kopio on valmis."]],
+      ["Kokous on 3. toukokuuta ja aiheena on 2. luku. Kopio on valmis.", ["Kokous on 3. toukokuuta ja aiheena on 2. luku.", "Kopio on valmis."]],
+      ["Summa on 1\u00a0250,50. Seuraava numero on 3. Kopio on valmis.", ["Summa on 1\u00a0250,50.", "Seuraava numero on 3.", "Kopio on valmis."]],
+      ["”Onko kopio valmis?” hän kysyi. Kansio oli auki.", ["”Onko kopio valmis?” hän kysyi.", "Kansio oli auki."]],
+      ["”Kopio on valmis.” Kansio on auki.", ["”Kopio on valmis.”", "Kansio on auki."]]
+    ],
+    "words": [["EU-kansalainen käyttää sähköpostia 3–5 päivää.", ["EU-kansalainen", "käyttää", "sähköpostia", "3", "5", "päivää"]], ["A\u0308iti näkee 1\u00a0250,50 euroa.", ["A\u0308iti", "näkee", "1", "250,50", "euroa"]]],
+    "openers": [["”Äiti näkee kopion.”", "äiti"], ["A\u0308iti näkee kopion.", "äiti"]],
+    "sources": ["## Viralliset lähteet", "## Lähteet ja tarkistuspäivä"],
+    "not_sources": ["## Tulon lähteet", "## Hakemuksen oikeusperusta"],
+    "contrast": [["Tämä ei ole kopio vaan alkuperäinen.", 1], ["Toisin kuin kopio, alkuperäinen on tässä.", 1], ["Kopio ei ole valmis.", 0]],
+    "caveat": "Kuitenkin kansio on vielä auki.", "hypothetical": "Oletetaan, että kansio on vielä auki.", "citation": "Kopio on yhä tässä (22 §).",
+    "formula": "Tämä artikkeli antaa yleistä tietoa.",
+    "url": ["Osoite on https://example.test/a?x=1. Kopio on valmis.", ["Osoite on .", "Kopio on valmis."]]
+  },
+  "pl": {
+    "sentences": [
+      ["Kopia jest gotowa. Teczka jest otwarta! Czy lista jest pełna?", ["Kopia jest gotowa.", "Teczka jest otwarta!", "Czy lista jest pełna?"]],
+      ["Prof. A. Nowak czyta art. 2 i ust. 3. Kopia leży tutaj.", ["Prof. A. Nowak czyta art. 2 i ust. 3.", "Kopia leży tutaj."]],
+      ["Dotyczy to np. niebieskiej teczki. Zielona jest otwarta.", ["Dotyczy to np. niebieskiej teczki.", "Zielona jest otwarta."]],
+      ["Są teczki, koperty itd. Kopia jest gotowa.", ["Są teczki, koperty itd.", "Kopia jest gotowa."]],
+      ["Teczka znajduje się na 3. piętrze. Kopia jest gotowa.", ["Teczka znajduje się na 3. piętrze.", "Kopia jest gotowa."]],
+      ["Kwota wynosi 1\u00a0250,50. Następny numer to 3. Kopia jest gotowa.", ["Kwota wynosi 1\u00a0250,50.", "Następny numer to 3.", "Kopia jest gotowa."]],
+      ["„Czy kopia jest gotowa?” zapytała. Teczka była otwarta.", ["„Czy kopia jest gotowa?” zapytała.", "Teczka była otwarta."]],
+      ["„Kopia jest gotowa.” Teczka jest otwarta.", ["„Kopia jest gotowa.”", "Teczka jest otwarta."]]
+    ],
+    "words": [["Polsko-ukraiński dokument ma 3–5 stron.", ["Polsko-ukraiński", "dokument", "ma", "3", "5", "stron"]], ["Z\u0307aneta ma 1\u00a0250,50 złotych.", ["Z\u0307aneta", "ma", "1", "250,50", "złotych"]]],
+    "openers": [["„Żaneta ma kopię.”", "żaneta"], ["Z\u0307aneta ma kopię.", "żaneta"]],
+    "sources": ["## Źródła urzędowe", "## Źródła i data weryfikacji"],
+    "not_sources": ["## Źródła dochodu", "## Podstawa prawna wniosku"],
+    "contrast": [["To nie kopia, lecz oryginał.", 1], ["Teczka zamiast koperty mieści dokumenty.", 1], ["Kopia nie jest gotowa.", 0]],
+    "caveat": "Jednak teczka nadal jest otwarta.", "hypothetical": "Załóżmy, że teczka nadal jest otwarta.", "citation": "Kopia nadal znajduje się tutaj (art. 22).",
+    "formula": "Ten artykuł zawiera ogólne informacje.",
+    "url": ["Adres to https://example.test/a?x=1. Kopia jest gotowa.", ["Adres to .", "Kopia jest gotowa."]]
+  },
+  "cs": {
+    "sentences": [
+      ["Kopie je hotová. Složka je otevřená! Je seznam úplný?", ["Kopie je hotová.", "Složka je otevřená!", "Je seznam úplný?"]],
+      ["Ing. A. Novák čte čl. 2 a odst. 3. Kopie leží zde.", ["Ing. A. Novák čte čl. 2 a odst. 3.", "Kopie leží zde."]],
+      ["Jde např. o modrou složku. Zelená je otevřená.", ["Jde např. o modrou složku.", "Zelená je otevřená."]],
+      ["Jsou tu složky, obálky atd. Kopie je hotová.", ["Jsou tu složky, obálky atd.", "Kopie je hotová."]],
+      ["Schůzka je 3. května a tématem je 2. odstavec. Kopie je hotová.", ["Schůzka je 3. května a tématem je 2. odstavec.", "Kopie je hotová."]],
+      ["Částka je 1\u202f250,50. Další číslo je 3. Kopie je hotová.", ["Částka je 1\u202f250,50.", "Další číslo je 3.", "Kopie je hotová."]],
+      ["„Je kopie hotová?“ zeptala se. Složka byla otevřená.", ["„Je kopie hotová?“ zeptala se.", "Složka byla otevřená."]],
+      ["„Kopie je hotová.“ Složka je otevřená.", ["„Kopie je hotová.“", "Složka je otevřená."]],
+      ["„Složky atd.“ Kopie je hotová.", ["„Složky atd.“", "Kopie je hotová."]]
+    ],
+    "words": [["Česko-ukrajinský dokument má 3–5 stran.", ["Česko-ukrajinský", "dokument", "má", "3", "5", "stran"]], ["C\u030Ceněk má 1\u202f250,50 korun.", ["C\u030Ceněk", "má", "1", "250,50", "korun"]]],
+    "openers": [["„Čeněk má kopii.“", "čeněk"], ["C\u030Ceněk má kopii.", "čeněk"]],
+    "sources": ["## Oficiální zdroje", "## Zdroje a datum ověření"],
+    "not_sources": ["## Zdroje příjmů", "## Právní základ žádosti"],
+    "contrast": [["Není to kopie, nýbrž originál.", 1], ["Na rozdíl od kopie je originál zde.", 1], ["Kopie není hotová.", 0]],
+    "caveat": "Nicméně složka je stále otevřená.", "hypothetical": "Představme si, že složka je stále otevřená.", "citation": "Kopie stále leží zde (čl. 22).",
+    "formula": "Tento článek poskytuje obecné informace.",
+    "url": ["Adresa je https://example.test/a?x=1. Kopie je hotová.", ["Adresa je .", "Kopie je hotová."]]
+  },
+  "ro": {
+    "sentences": [
+      ["Copia este gata. Dosarul este deschis! Lista este completă?", ["Copia este gata.", "Dosarul este deschis!", "Lista este completă?"]],
+      ["Dr. A. Ionescu citește art. 2 și alin. 3. Copia este aici.", ["Dr. A. Ionescu citește art. 2 și alin. 3.", "Copia este aici."]],
+      ["Este vorba de ex. despre dosarul albastru. Cel verde este deschis.", ["Este vorba de ex. despre dosarul albastru.", "Cel verde este deschis."]],
+      ["Sunt dosare, plicuri ș.a.m.d. Copia este gata.", ["Sunt dosare, plicuri ș.a.m.d.", "Copia este gata."]],
+      ["Data este 03.05.2026. Copia se află în al 2-lea dosar.", ["Data este 03.05.2026.", "Copia se află în al 2-lea dosar."]],
+      ["Suma este 1.250,50. Următorul număr este 3. Copia este gata.", ["Suma este 1.250,50.", "Următorul număr este 3.", "Copia este gata."]],
+      ["„Copia este gata?” a întrebat ea. Dosarul era deschis.", ["„Copia este gata?” a întrebat ea.", "Dosarul era deschis."]],
+      ["„Copia este gata.” Dosarul este deschis.", ["„Copia este gata.”", "Dosarul este deschis."]]
+    ],
+    "words": [["S-a trimis un e-mail în 3–5 zile.", ["S-a", "trimis", "un", "e-mail", "în", "3", "5", "zile"]], ["S\u0326tefan are 1\u00a0250,50 lei.", ["S\u0326tefan", "are", "1", "250,50", "lei"]]],
+    "openers": [["„Ștefan are copia.”", "ștefan"], ["S\u0326tefan are copia.", "ștefan"]],
+    "sources": ["## Surse oficiale", "## Surse și data verificării"],
+    "not_sources": ["## Surse de venit", "## Temeiul juridic al cererii"],
+    "contrast": [["Nu este o copie, ci originalul.", 1], ["Un dosar este folosit în loc de un plic.", 1], ["Copia nu este gata.", 0]],
+    "caveat": "Totuși dosarul este încă deschis.", "hypothetical": "Să presupunem că dosarul este încă deschis.", "citation": "Copia se află încă aici (art. 22).",
+    "formula": "Acest articol oferă informații generale.",
+    "url": ["Adresa este https://example.test/a?x=1. Copia este gata.", ["Adresa este .", "Copia este gata."]]
+  },
+  "uk": {
+    "sentences": [
+      ["Копія готова. Папка відкрита! Чи повний список?", ["Копія готова.", "Папка відкрита!", "Чи повний список?"]],
+      ["Проф. І. Коваль читає ст. 2 та п. 3. Копія лежить тут.", ["Проф. І. Коваль читає ст. 2 та п. 3.", "Копія лежить тут."]],
+      ["Папка зберігається в м. Києві. Копія готова.", ["Папка зберігається в м. Києві.", "Копія готова."]],
+      ["Є папки, конверти і т. ін. Копія готова.", ["Є папки, конверти і т. ін.", "Копія готова."]],
+      ["Запис зроблено у 2026 р. Копія готова.", ["Запис зроблено у 2026 р.", "Копія готова."]],
+      ["Сума становить 1\u00a0250,50. Наступний номер — 3. Копія готова.", ["Сума становить 1\u00a0250,50.", "Наступний номер — 3.", "Копія готова."]],
+      ["«Копія готова?» — запитала вона. Папка була відкрита.", ["«Копія готова?» — запитала вона.", "Папка була відкрита."]],
+      ["«Копія готова». Папка відкрита.", ["«Копія готова».", "Папка відкрита."]]
+    ],
+    "words": [["П’ять копій збережено на 3–5 днів.", ["П’ять", "копій", "збережено", "на", "3", "5", "днів"]], ["п'ять пʼять І\u0308жак 1\u00a0250,50", ["п'ять", "пʼять", "І\u0308жак", "1", "250,50"]]],
+    "openers": [["«Їжак біля папки».", "їжак"], ["І\u0308жак біля папки.", "їжак"]],
+    "sources": ["## Офіційні джерела", "## Джерела та дата перевірки"],
+    "not_sources": ["## Джерела доходу", "## Правова підстава заяви"],
+    "contrast": [["Це не копія, а оригінал.", 1], ["Папка використовується замість конверта.", 1], ["Копія не готова.", 0]],
+    "caveat": "Однак папка ще відкрита.", "hypothetical": "Припустімо, що папка ще відкрита.", "citation": "Копія досі лежить тут (ст. 22).",
+    "formula": "Ця стаття містить загальну інформацію.",
+    "url": ["Адреса https://example.test/a?x=1. Копія готова.", ["Адреса .", "Копія готова."]]
+  }
+}

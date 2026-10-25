@@ -1,0 +1,18 @@
+✔ a missing official citation is an error even if a sources heading and other links remain (104.351625ms)
+✔ a nonexistent same-language column link fails against the on-disk full-slug inventory (52.478333ms)
+✔ removing a legal condition cannot become a semantic pass when source URLs and numbers survive (41.314625ms)
+✔ an omitted source FAQ is an error even when the remaining FAQ entries parse (40.163583ms)
+✔ a heading with a changed statutory number is preserved in the required numeric review (40.432917ms)
+✔ a translated category that moves the article to company formation fails its real category identity (38.221708ms)
+✔ changed numeric tokens remain visible review evidence, never zero-filled or silently waived (36.889ms)
+✔ selected new columns without the correct audience fail; unselected legacy columns are not rewritten or gated (34.361375ms)
+✔ duplicate full slugs fail even with different numeric prefixes; equal numbers with different slugs do not collide (35.600667ms)
+✔ malformed YAML is rejected instead of accepting fields found by a regex (28.2175ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 603.596917

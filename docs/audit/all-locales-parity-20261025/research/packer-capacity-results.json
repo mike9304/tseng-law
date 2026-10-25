@@ -1,0 +1,288 @@
+{
+  "runtime": {
+    "node": "24.14.1",
+    "acorn": "8.15.0",
+    "ada": "3.4.2",
+    "amaro": "1.1.7",
+    "ares": "1.34.6",
+    "brotli": "1.2.0",
+    "cldr": "48.0",
+    "icu": "78.2",
+    "llhttp": "9.3.0",
+    "merve": "1.0.0",
+    "modules": "137",
+    "napi": "10",
+    "nbytes": "0.1.1",
+    "ncrypto": "0.0.1",
+    "nghttp2": "1.68.0",
+    "openssl": "3.5.5",
+    "simdjson": "4.2.4",
+    "simdutf": "6.4.0",
+    "sqlite": "3.51.2",
+    "tz": "2025c",
+    "undici": "7.24.4",
+    "unicode": "17.0",
+    "uv": "1.51.0",
+    "uvwasi": "0.0.23",
+    "v8": "13.6.233.17-node.44",
+    "zlib": "1.3.1-e00f703",
+    "zstd": "1.5.7"
+  },
+  "baseline": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+  "inputDirectory": "/private/tmp/tseng-packer-experiment-20261025",
+  "captureManifestSha256": "c0e61611d7bef4902208780db2cc800dbee1c4b3f311d7f589f90d1b34e4cb50",
+  "pageTotals": {
+    "raw": 20886464,
+    "gzip9": 4561429,
+    "br9": 3128547,
+    "br11": 2857748
+  },
+  "dictionaryCases": [
+    {
+      "nominalChunkBytes": 64,
+      "dictionaryEntries": 15145,
+      "dictionaryRaw": 1659066,
+      "dictionaryGzip": 281329,
+      "dictionaryBr9": 181143,
+      "pageGzip": 2306437,
+      "pageBr9": 1749849,
+      "totalGzip": 2587766,
+      "totalBr9": 1930992,
+      "roundTripPages": 147,
+      "projectedProfessionalGzip": 220161656.33333334,
+      "projectedProfessionalBr9": 167000081,
+      "nodeOnlyDecodeTiming": {
+        "warmGzip": {
+          "meanMs": 0.47466101360547003,
+          "p95Ms": 0.7632919999996375
+        },
+        "warmBr": {
+          "meanMs": 0.5278432448980014,
+          "p95Ms": 0.7231249999986176
+        },
+        "coldDictionaryGzipMs": 7.552499999999782,
+        "coldDictionaryBrMs": 10.58087499999965
+      }
+    },
+    {
+      "nominalChunkBytes": 128,
+      "dictionaryEntries": 9937,
+      "dictionaryRaw": 1957472,
+      "dictionaryGzip": 314474,
+      "dictionaryBr9": 167369,
+      "pageGzip": 2342616,
+      "pageBr9": 1772507,
+      "totalGzip": 2657090,
+      "totalBr9": 1939876,
+      "roundTripPages": 147,
+      "projectedProfessionalGzip": 223643866,
+      "projectedProfessionalBr9": 169146369.66666666,
+      "nodeOnlyDecodeTiming": {
+        "warmGzip": {
+          "meanMs": 0.4490139251700966,
+          "p95Ms": 0.723667000000205
+        },
+        "warmBr": {
+          "meanMs": 0.48111393197274194,
+          "p95Ms": 0.703165999999328
+        },
+        "coldDictionaryGzipMs": 9.54462500000227,
+        "coldDictionaryBrMs": 9.193208000000595
+      }
+    },
+    {
+      "nominalChunkBytes": 256,
+      "dictionaryEntries": 6106,
+      "dictionaryRaw": 2183096,
+      "dictionaryGzip": 374781,
+      "dictionaryBr9": 147368,
+      "pageGzip": 2504225,
+      "pageBr9": 1863719,
+      "totalGzip": 2879006,
+      "totalBr9": 2011087,
+      "roundTripPages": 147,
+      "projectedProfessionalGzip": 239110897.66666666,
+      "projectedProfessionalBr9": 177821912.66666666,
+      "nodeOnlyDecodeTiming": {
+        "warmGzip": {
+          "meanMs": 0.4662270340136986,
+          "p95Ms": 0.7514159999991534
+        },
+        "warmBr": {
+          "meanMs": 0.47176900680266404,
+          "p95Ms": 0.6767089999993914
+        },
+        "coldDictionaryGzipMs": 10.247708000002604,
+        "coldDictionaryBrMs": 9.54266600000119
+      }
+    },
+    {
+      "nominalChunkBytes": 512,
+      "dictionaryEntries": 3327,
+      "dictionaryRaw": 2261256,
+      "dictionaryGzip": 385789,
+      "dictionaryBr9": 131901,
+      "pageGzip": 2783688,
+      "pageBr9": 2022574,
+      "totalGzip": 3169477,
+      "totalBr9": 2154475,
+      "roundTripPages": 147,
+      "projectedProfessionalGzip": 265764045,
+      "projectedProfessionalBr9": 192950622.33333334,
+      "nodeOnlyDecodeTiming": {
+        "warmGzip": {
+          "meanMs": 0.4684419183672648,
+          "p95Ms": 0.7313340000000608
+        },
+        "warmBr": {
+          "meanMs": 0.5007177142858573,
+          "p95Ms": 0.6990829999995185
+        },
+        "coldDictionaryGzipMs": 10.245584000000235,
+        "coldDictionaryBrMs": 9.336500000001251
+      }
+    },
+    {
+      "nominalChunkBytes": 1024,
+      "dictionaryEntries": 1099,
+      "dictionaryRaw": 1947838,
+      "dictionaryGzip": 288215,
+      "dictionaryBr9": 104750,
+      "pageGzip": 3498375,
+      "pageBr9": 2392126,
+      "totalGzip": 3786590,
+      "totalBr9": 2496876,
+      "roundTripPages": 147,
+      "projectedProfessionalGzip": 333799965,
+      "projectedProfessionalBr9": 228154095.33333334,
+      "nodeOnlyDecodeTiming": {
+        "warmGzip": {
+          "meanMs": 0.5189988231295068,
+          "p95Ms": 0.7998750000006112
+        },
+        "warmBr": {
+          "meanMs": 0.56155464625856,
+          "p95Ms": 0.7738329999992857
+        },
+        "coldDictionaryGzipMs": 8.43158300000141,
+        "coldDictionaryBrMs": 7.701958999998169
+      }
+    },
+    {
+      "nominalChunkBytes": 2048,
+      "dictionaryEntries": 284,
+      "dictionaryRaw": 1250278,
+      "dictionaryGzip": 129525,
+      "dictionaryBr9": 74212,
+      "pageGzip": 4018904,
+      "pageBr9": 2776463,
+      "totalGzip": 4148429,
+      "totalBr9": 2850675,
+      "roundTripPages": 147,
+      "projectedProfessionalGzip": 383265039.6666667,
+      "projectedProfessionalBr9": 264763684.66666666,
+      "nodeOnlyDecodeTiming": {
+        "warmGzip": {
+          "meanMs": 0.5941952380950776,
+          "p95Ms": 0.8282499999986612
+        },
+        "warmBr": {
+          "meanMs": 0.6067136870747627,
+          "p95Ms": 0.7983339999991586
+        },
+        "coldDictionaryGzipMs": 5.2557919999999285,
+        "coldDictionaryBrMs": 5.244249999999738
+      }
+    },
+    {
+      "nominalChunkBytes": 4096,
+      "dictionaryEntries": 137,
+      "dictionaryRaw": 1005394,
+      "dictionaryGzip": 92391,
+      "dictionaryBr9": 64278,
+      "pageGzip": 4121923,
+      "pageBr9": 2854297,
+      "totalGzip": 4214314,
+      "totalBr9": 2918575,
+      "roundTripPages": 147,
+      "projectedProfessionalGzip": 393049050.3333333,
+      "projectedProfessionalBr9": 272173925.3333334,
+      "nodeOnlyDecodeTiming": {
+        "warmGzip": {
+          "meanMs": 0.6012360952381951,
+          "p95Ms": 0.8365840000005846
+        },
+        "warmBr": {
+          "meanMs": 0.5955580816325088,
+          "p95Ms": 0.8168340000011085
+        },
+        "coldDictionaryGzipMs": 4.264500000001135,
+        "coldDictionaryBrMs": 4.132790999999997
+      }
+    }
+  ],
+  "assetRoots": [
+    "public/fonts",
+    "/Users/son7/Projects/tseng-law-traffic-scenes-20261014/.next-static/static"
+  ],
+  "assets": {
+    ".woff2": {
+      "files": 1667,
+      "raw": 59739760,
+      "gzip9": 59790564,
+      "brotli": 59742633,
+      "brotliQuality": 4
+    },
+    ".md": {
+      "files": 1,
+      "raw": 999,
+      "gzip9": 593,
+      "brotli": 535,
+      "brotliQuality": 9
+    },
+    ".txt": {
+      "files": 30,
+      "raw": 131513,
+      "gzip9": 59124,
+      "brotli": 53380,
+      "brotliQuality": 9
+    },
+    ".css": {
+      "files": 95,
+      "raw": 4304228,
+      "gzip9": 900281,
+      "brotli": 733499,
+      "brotliQuality": 9
+    },
+    ".js": {
+      "files": 553,
+      "raw": 13050475,
+      "gzip9": 3645951,
+      "brotli": 3214999,
+      "brotliQuality": 9
+    }
+  },
+  "sitemap": {
+    "syntheticOnly": true,
+    "urls": 14014,
+    "alternatesPerRow": 50,
+    "singleXml": 96398598,
+    "singleGzip9": 3429713,
+    "perLocaleFiles": 49,
+    "perLocaleMaxXml": 1968834,
+    "perLocaleSumXml": 96405942,
+    "perLocaleSumGzip9": 3456107,
+    "currentXml": 8571028,
+    "currentXmlGzip9": 401328
+  },
+  "heldOutSensitivity": {
+    "trainingPages": 98,
+    "heldOutPages": 49,
+    "dictionaryBr9": 161463,
+    "pageBr9": 840399,
+    "description": "Fixed dictionary from q25/q50; held-out q75 pages, not random. No future dictionary growth credit."
+  },
+  "limitations": "Exploratory samples and synthetic URLs are not a full-target build or deployment. Node timings are not Worker CPU measurements. No hosting settings changed.",
+  "reportSha256": "5d05f0c91dc6b91ffc1f42255d515a29297182d6a447593c6a70b15358437b51",
+  "reproducerSha256": "ff74c7eb8db87aafbfa50f6c23337b589a9c97670948f519b7f8c0f7d2625be2"
+}

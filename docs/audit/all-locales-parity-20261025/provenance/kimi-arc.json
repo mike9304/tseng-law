@@ -1,0 +1,29 @@
+{
+  "modelAlias": "kimi-code/k3.1-pro",
+  "providerModel": "k3.1-pro",
+  "cliVersion": "2.3.1",
+  "processExitCode": 0,
+  "inputManifest": "/Users/son7/tseng-all-language-columns-20261025/kimi-work/input-manifest.json",
+  "inputManifestSha256": "50618882d83894e85796c6eb810f6ecbc5588c525e18d1d8ae26ff4e3a0ac82c",
+  "approval": "User explicitly replied 원문·규칙 전송 승인 to the scoped source/rules packet disclosure request. Same approved inputs used.",
+  "rawRunLog": "/Users/son7/tseng-all-language-columns-20261025/kimi-work/run.jsonl",
+  "rawRunSha256": "6cee9dbbddc99164ec603b999aee79dc92a6456c1f8ecd70c2e30b0775b7fb44",
+  "outputs": [
+    {
+      "output": "/Users/son7/tseng-all-language-columns-20261025/kimi-work/output/704-taiwan-arc-first-application.md",
+      "destination": "src/content/columns-zh-hans/704-taiwan-arc-first-application.md",
+      "sha256": "c64538278d406542c037aa4adfee826b1e64c69dc1e01dbd92e77bd27c8f3e87"
+    },
+    {
+      "output": "/Users/son7/tseng-all-language-columns-20261025/kimi-work/output/705-taiwan-visa-residence-work-study-family.md",
+      "destination": "src/content/columns-zh-hans/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "26b16fed219c9781d23d29251cbb48bcad5e97f972b5e7fa70063590c9828a8a"
+    },
+    {
+      "output": "/Users/son7/tseng-all-language-columns-20261025/kimi-work/output/706-taiwan-arc-renewal-changes-reentry.md",
+      "destination": "src/content/columns-zh-hans/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "2af2fc9a10c10cc7d2d83811542ad0b9ce7e0affb0d0bc16af502dac92071933"
+    }
+  ],
+  "status": "drafts copied for primary review; not publication approval"
+}

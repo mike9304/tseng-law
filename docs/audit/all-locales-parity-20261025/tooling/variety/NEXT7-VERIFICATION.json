@@ -1,0 +1,342 @@
+{
+  "recorded_at": "2026-10-25T21:28:26+09:00",
+  "status": "task-local engineering validation complete; root review and any shared installation pending",
+  "scope": "tooling/variety and tooling/VARIETY-PLAN.md only; no target seven-locale manuscript used for calibration",
+  "new_locales": [
+    "da",
+    "nb",
+    "fi",
+    "pl",
+    "cs",
+    "ro",
+    "uk"
+  ],
+  "supported_locales": [
+    "ko",
+    "ja",
+    "en",
+    "zh-hant",
+    "th",
+    "id",
+    "hi",
+    "fr",
+    "de",
+    "it",
+    "es",
+    "pt",
+    "ar",
+    "vi",
+    "ru",
+    "ms",
+    "fil",
+    "tr",
+    "nl",
+    "zh-hans",
+    "sv",
+    "da",
+    "nb",
+    "fi",
+    "pl",
+    "cs",
+    "ro",
+    "uk"
+  ],
+  "shared_installation_before_expansion": {
+    "installed_at": "20261025-204858",
+    "record_sha256": "9e2ee3bbb9f3bb5b0eb4f0bda19133905c6fe888dd39862f6db7c1fccaea2523",
+    "baseline_frozen_at": "2026-10-25T21:09:59+09:00",
+    "file_count": 22,
+    "all_shared_files_unchanged": true
+  },
+  "runtime": {
+    "python_executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "python_unicode": "16.0.0",
+    "node": {
+      "version": "v24.14.1",
+      "icu": "78.2",
+      "unicode": "17.0"
+    }
+  },
+  "tests": {
+    "command": "PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v",
+    "test_methods": 25,
+    "failures": 0,
+    "errors": 0,
+    "exit_code": 0,
+    "new_fixture_cases": {
+      "sentences": 58,
+      "words": 14,
+      "openers": 14,
+      "sources": 14,
+      "not_sources": 14,
+      "contrast": 21
+    },
+    "other_checks": [
+      "frontmatter and source-tail body extraction",
+      "Markdown and bare URL boundary preservation",
+      "decomposed Unicode heading/openers",
+      "local caveat, hypothetical, citation and formula metrics",
+      "exact 8/32 threshold edges",
+      "actual repeated prose exit 1",
+      "unmeasurable new-locale input exit 2",
+      "unknown path and bg/nn/no/xx CLI exit 2",
+      "all prior 18 methods including original profiles and Thai map rejection"
+    ],
+    "provenance_comment_correction_is_comment_only": true
+  },
+  "regression": {
+    "command": "PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH PYTHONDONTWRITEBYTECODE=1 python3 tests/compare_twenty_one.py",
+    "compared": 1409,
+    "measured": 1378,
+    "unchanged_unavailable": 31,
+    "by_locale": {
+      "ko": 207,
+      "ja": 220,
+      "en": 208,
+      "zh-hant": 286,
+      "th": 31,
+      "id": 31,
+      "hi": 26,
+      "fr": 29,
+      "de": 26,
+      "it": 26,
+      "es": 46,
+      "pt": 26,
+      "ar": 26,
+      "vi": 43,
+      "ru": 24,
+      "ms": 24,
+      "fil": 29,
+      "tr": 24,
+      "nl": 24,
+      "zh-hans": 29,
+      "sv": 24
+    },
+    "same_input_metric_score_differences": 0,
+    "frozen_result_differences_for_unchanged_sources": 0,
+    "source_input_changes": [
+      {
+        "path": "src/content/columns-fil/704-taiwan-arc-first-application.md",
+        "before_sha256": "a2f80999f86b028de7b3210a7ba7296213cd35f3950aacf63c4b01ce4dda1f7a",
+        "current_sha256": "6aced8364c167eb06beca783345171616aa5d9f9d8b4a11d612321628ebe51b7"
+      },
+      {
+        "path": "src/content/columns-fil/706-taiwan-arc-renewal-changes-reentry.md",
+        "before_sha256": "4b270468989f7d0168106a426720a3439f138e77196b26f981f8e9560a613e1e",
+        "current_sha256": "8efd98ba2187a676ad7965d9b5d9281897522599b54f4795ba29fa621426ffae"
+      },
+      {
+        "path": "src/content/columns-tr/704-taiwan-arc-first-application.md",
+        "before_sha256": "03599c5913d61d6820e20db26ebb42b8bd7b7c87ce7455c79ff5cafd7991ded8",
+        "current_sha256": "eae17b5cd8d03c42697698a996d5566d016c04070716da27655cd365be1e0d8a"
+      },
+      {
+        "path": "src/content/columns-tr/705-taiwan-visa-residence-work-study-family.md",
+        "before_sha256": "6477f3d55f8dfe7e04acb0a62888a4ff06b62709414a5846e8b838661150aac5",
+        "current_sha256": "3310f47c1ef54d7e6567af7d5dcbdb49318148fbfee47d71e18746d821f2d2d0"
+      },
+      {
+        "path": "src/content/columns-tr/706-taiwan-arc-renewal-changes-reentry.md",
+        "before_sha256": "9c6a51f45c55680bf0d072fada02772b4f996051e8e28918b9162e9facf94c95",
+        "current_sha256": "cf143d1db6bf28bc9771ec0bf6e5a505b112bcf00779b0b0e901c3cada6901fb"
+      },
+      {
+        "path": "src/content/columns-zh-hans/706-taiwan-arc-renewal-changes-reentry.md",
+        "before_sha256": "ef0f8559d1f6a46debc94f954bdd6bd9471d96a0ee19c9d27f8571f5524290ed",
+        "current_sha256": "fe7738b6f822c3b1dc28508e43fb4df3c073fcdc8be6a5f70cadf98cce7d2d19"
+      }
+    ],
+    "baseline22_integrity": true,
+    "old17_profiles_unchanged": true,
+    "neutral_fixture_integrity": true,
+    "hard_and_score_ast_unchanged": true,
+    "ok": true
+  },
+  "changed_prior_production_files": [
+    "variety_metrics.py",
+    "variety_expansion.py",
+    "MULTILINGUAL-METHOD.md"
+  ],
+  "new_production_files": [
+    "profiles/da.json",
+    "profiles/nb.json",
+    "profiles/fi.json",
+    "profiles/pl.json",
+    "profiles/cs.json",
+    "profiles/ro.json",
+    "profiles/uk.json"
+  ],
+  "production_files": [
+    {
+      "path": "variety_metrics.py",
+      "sha256": "0ff4f2b8d68a71fc16e1e9505c83ebcc22de0b01ad4742d0ad126bf81220f532"
+    },
+    {
+      "path": "variety_multilingual.py",
+      "sha256": "a73c18243d935aa0e54024c4eea3d279572a2b595a549025d71e90fd2613a682"
+    },
+    {
+      "path": "variety_expansion.py",
+      "sha256": "e6e2a37261c6708b924c5393355ea01dd7af957fa7e1a3a1d1b5662f505e8359"
+    },
+    {
+      "path": "build-rewrite-queue.py",
+      "sha256": "510cc4881b562713699a0f208df96e1ecc5d01ca66f0add49e876c95c3a9ce59"
+    },
+    {
+      "path": "MULTILINGUAL-METHOD.md",
+      "sha256": "6c18a9f9c3993ac586cd55b5fd9651e9606fe240b2c0349663191dae392ca82f"
+    },
+    {
+      "path": "profiles/ar.json",
+      "sha256": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b"
+    },
+    {
+      "path": "profiles/de.json",
+      "sha256": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc"
+    },
+    {
+      "path": "profiles/es.json",
+      "sha256": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a"
+    },
+    {
+      "path": "profiles/fil.json",
+      "sha256": "9daca5d186170f2025c576fbba8b65594732ef36f7cfb9a6bee719e091585e76"
+    },
+    {
+      "path": "profiles/fr.json",
+      "sha256": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b"
+    },
+    {
+      "path": "profiles/hi.json",
+      "sha256": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9"
+    },
+    {
+      "path": "profiles/id.json",
+      "sha256": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1"
+    },
+    {
+      "path": "profiles/it.json",
+      "sha256": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35"
+    },
+    {
+      "path": "profiles/ms.json",
+      "sha256": "88abb26243707cd9601ad80695494c1f951077a0d0f49a681d3ae639c9f60d00"
+    },
+    {
+      "path": "profiles/nl.json",
+      "sha256": "cedc9c648dded5d3619305c5f1fc1aa2d961ce34590bf85bcf21c468661db274"
+    },
+    {
+      "path": "profiles/pt.json",
+      "sha256": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9"
+    },
+    {
+      "path": "profiles/ru.json",
+      "sha256": "189438971f5e3572b48e5e9afe8a88ec7c25e5a3aeab5a637f44e9591b666206"
+    },
+    {
+      "path": "profiles/sv.json",
+      "sha256": "66703b741178befbfc04395ba29a4dddb42254772700c906d7bd233a1834680e"
+    },
+    {
+      "path": "profiles/th.json",
+      "sha256": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254"
+    },
+    {
+      "path": "profiles/tr.json",
+      "sha256": "1f44c794464be7750a83629be356d11b45ef9a4d174b3a7b13ef5478163c2bbc"
+    },
+    {
+      "path": "profiles/vi.json",
+      "sha256": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df"
+    },
+    {
+      "path": "profiles/zh-hans.json",
+      "sha256": "8ca5f5f884c3a1d2144ed5ce55b09b806088b5b0b66b4cf883067255fe153543"
+    },
+    {
+      "path": "profiles/da.json",
+      "sha256": "d97cb6ecf083d3a000d9e68c9aca35be606afcc262cf676723f9fc06ba3352df"
+    },
+    {
+      "path": "profiles/nb.json",
+      "sha256": "d354bc18f20fe062ec564e90cf5a654b70038e91f1ca9047499a0acd16b8faa4"
+    },
+    {
+      "path": "profiles/fi.json",
+      "sha256": "87535d428aaf9613187c52adc3c387e365f419f423f693128fd77e08646b2629"
+    },
+    {
+      "path": "profiles/pl.json",
+      "sha256": "00b4d91b84026bda2a8f76f963302865311f3ca3600fbd1d1a4267a7ff7dd0fa"
+    },
+    {
+      "path": "profiles/cs.json",
+      "sha256": "317385e4979f05808aad1a20af7793167550acf89ce2a8a303d7eab8d23f9e99"
+    },
+    {
+      "path": "profiles/ro.json",
+      "sha256": "1fe2c5bb725e55a8aa38fcaafc0f52fc43d729c54fa9dfaaab5a6aafddee1474"
+    },
+    {
+      "path": "profiles/uk.json",
+      "sha256": "ed9e8025126b82dfd0385cf76bb8694efe731bcf0e63a7fb58d3c8ee520d6081"
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": "BASELINE21.json",
+      "sha256": "f6fab101c910f0ba1088769da6f9e0ea081665052522d1debf99394a6d134358"
+    },
+    {
+      "path": "RESTORED-BASELINE.json",
+      "sha256": "775dce5d4324367892569b38da8f77878cf16081d8e4a867b818f815e2631540"
+    },
+    {
+      "path": "NEXT7-FIXTURES-FROZEN.json",
+      "sha256": "95f3a838cfb9a5eb7cf76755df363a9da3c17ef6b12f7a3a9bea5830dbc55d16"
+    },
+    {
+      "path": "tests/fixtures-next-seven.json",
+      "sha256": "69bbf1aadd2d88466763006b9873fa6b3b5165e6306e73f73bc8398a42749dfd"
+    },
+    {
+      "path": "tests/test_next_seven.py",
+      "sha256": "01a361e04b352f7b7ab4a800d863e57bc0edecc028ff356fe38faa3f66ad09dd"
+    },
+    {
+      "path": "tests/compare_twenty_one.py",
+      "sha256": "028df44baf8aab34f4dc37c128f041d08111716a2c00968bf8a90f18b9c4855f"
+    },
+    {
+      "path": "tests-next7-red.txt",
+      "sha256": "3333f05868b376d6ea578f7f080915308e8fce62f1c63b425296ebe98c9c98b1"
+    },
+    {
+      "path": "tests-next7-quotes-red.txt",
+      "sha256": "f0b61a0d6fae032675b8cee51cef9c20cbaa80a74b3e9a95e3fd8419aa2d4776"
+    },
+    {
+      "path": "tests-next7-green.txt",
+      "sha256": "9c1b90ebf8022795b99e20d1efc0a3f79a3a39b38ce42b53929cec781abb5d54"
+    },
+    {
+      "path": "existing21-regression.json",
+      "sha256": "920bd083f501dc2307b19933e690d94e987fcdbd41353c3ffdea16e60a95599e"
+    },
+    {
+      "path": "../VARIETY-PLAN.md",
+      "sha256": "04acee0b3ae21347939d75e0b4f6bf60758694d0c40024e460d4481a7eba3f1d"
+    }
+  ],
+  "limits": [
+    "AI-authored engineering fixtures/profiles; no human-native or legal approval",
+    "8/32 retained operational orthographic thresholds, not cross-language readability calibration",
+    "finite abbreviation and ordinal-following vocabularies; inspect ambiguous extracted sentences",
+    "NFC comparison does not rewrite source bytes; Romanian cedilla variants are distinct",
+    "root controls shared installation; this worker changed no shared production files",
+    "31 Thai articles remain unavailable without approved boundary maps; not counted as measured passes"
+  ]
+}

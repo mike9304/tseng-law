@@ -1,0 +1,163 @@
+test_character_units_are_not_latin_word_units (test_six_locales.SixLocaleTests.test_character_units_are_not_latin_word_units) ... FAIL
+test_check_closes_its_source_without_a_resource_warning (test_six_locales.SixLocaleTests.test_check_closes_its_source_without_a_resource_warning) ... FAIL
+test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) ... 
+  test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) (locale='sv') ... FAIL
+test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) ... 
+  test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) (locale='sv') ... FAIL
+test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) ... 
+  test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) (locale='sv') ... FAIL
+test_raw_url_interior_is_not_a_sentence_boundary (test_six_locales.SixLocaleTests.test_raw_url_interior_is_not_a_sentence_boundary) ... ok
+test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) ... /Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/variety_metrics.py:239: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/tmp224iwklr/fixture.ru.md' mode='r' encoding='utf-8'>
+  text = open(path, encoding='utf-8').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/variety_metrics.py:239: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/tmp224iwklr/fixture.ms.md' mode='r' encoding='utf-8'>
+  text = open(path, encoding='utf-8').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/variety_metrics.py:239: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/tmp224iwklr/fixture.fil.md' mode='r' encoding='utf-8'>
+  text = open(path, encoding='utf-8').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/variety_metrics.py:239: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/tmp224iwklr/fixture.tr.md' mode='r' encoding='utf-8'>
+  text = open(path, encoding='utf-8').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/variety_metrics.py:239: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/tmp224iwklr/fixture.nl.md' mode='r' encoding='utf-8'>
+  text = open(path, encoding='utf-8').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/variety_metrics.py:239: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/tmp224iwklr/fixture.zh-hans.md' mode='r' encoding='utf-8'>
+  text = open(path, encoding='utf-8').read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+
+  test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) (locale='sv') ... FAIL
+test_reserved_marker_is_an_explicit_measurement_error (test_six_locales.SixLocaleTests.test_reserved_marker_is_an_explicit_measurement_error) ... ok
+test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) ... 
+  test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) (locale='sv') ... FAIL
+test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) ... 
+  test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) (locale='sv') ... FAIL
+test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) ... 
+  test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) (locale='sv') ... FAIL
+test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) ... 
+  test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) (locale='sv') ... FAIL
+test_unknown_cli_locale_and_path_fail_closed (test_six_locales.SixLocaleTests.test_unknown_cli_locale_and_path_fail_closed) ... ok
+test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) ... 
+  test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) (locale='sv') ... FAIL
+
+======================================================================
+FAIL: test_character_units_are_not_latin_word_units (test_six_locales.SixLocaleTests.test_character_units_are_not_latin_word_units)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 103, in test_character_units_are_not_latin_word_units
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 25, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'sv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_check_closes_its_source_without_a_resource_warning (test_six_locales.SixLocaleTests.test_check_closes_its_source_without_a_resource_warning)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 139, in test_check_closes_its_source_without_a_resource_warning
+    self.assertEqual([str(item.message) for item in recorded if issubclass(item.category, ResourceWarning)], [])
+AssertionError: Lists differ: ["unclosed file <_io.TextIOWrapper name='/[98 chars]8'>"] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+"unclosed file <_io.TextIOWrapper name='/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/tmpddo2xhk5/fixture.en.md' mode='r' encoding='utf-8'>"
+
++ []
+- ['unclosed file <_io.TextIOWrapper '
+-  "name='/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/tmpddo2xhk5/fixture.en.md' "
+-  "mode='r' encoding='utf-8'>"]
+
+======================================================================
+FAIL: test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) (locale='sv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 75, in test_contrasts_do_not_count_ordinary_negation
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 25, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'sv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) (locale='sv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 82, in test_language_signals_and_citations
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 25, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'sv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) (locale='sv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 54, in test_opener_uses_the_language_and_canonical_unicode
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 25, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'sv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) (locale='sv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 112, in test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 25, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'sv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) (locale='sv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 30, in test_routes_do_not_alias_a_language
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 25, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'sv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) (locale='sv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 37, in test_sentence_boundaries_preserve_neutral_prose
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 25, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'sv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) (locale='sv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 61, in test_source_tail_is_anchored_not_a_substantive_heading
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 25, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'sv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) (locale='sv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 45, in test_units_preserve_marks_apostrophes_and_numeric_ranges
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 25, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'sv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans') : requested locale must be explicitly supported
+
+======================================================================
+FAIL: test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) (locale='sv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 91, in test_url_removal_retains_the_sentence_boundary
+    self.require(lang)
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_six_locales.py", line 25, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'requested locale must be explicitly supported')
+AssertionError: 'sv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans') : requested locale must be explicitly supported
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.118s
+
+FAILED (failures=11)

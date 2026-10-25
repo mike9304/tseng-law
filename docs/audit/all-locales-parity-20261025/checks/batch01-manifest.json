@@ -1,0 +1,138 @@
+{
+  "frozenAt": "2026-10-25T12:26:48.336871+00:00",
+  "baseCommit": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+  "locales": [
+    "ru",
+    "ms",
+    "fil",
+    "tr",
+    "nl",
+    "zh-hans",
+    "sv"
+  ],
+  "articles": [
+    {
+      "path": "src/content/columns-ru/704-taiwan-arc-first-application.md",
+      "sha256": "eb6556aa6226a2d2394a9c4d126246ef142e943a633c1cb1b3ae9a826684e69f"
+    },
+    {
+      "path": "src/content/columns-ru/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "067ccea7c153d2531333702b913001e39f01d200f3202e4fda0be5a0eb387b53"
+    },
+    {
+      "path": "src/content/columns-ru/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "36debf5bfdd7138c98528d06dd8ea85b5724008d791df2d8263ac5f5becc49c9"
+    },
+    {
+      "path": "src/content/columns-ms/704-taiwan-arc-first-application.md",
+      "sha256": "f6b3b37c9ca2eb9a3e8972998c932ee8422372f7ccdabb6382ce6269825c6945"
+    },
+    {
+      "path": "src/content/columns-ms/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "ed821ce519c4fe273addbc34381bcdc5b9ce7c40e0710924a6d0d042d12c877a"
+    },
+    {
+      "path": "src/content/columns-ms/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "a63acbaa0fe59bc7bcffc6a3b537a28222b07c5659bcb44c41be84cff97e8cd1"
+    },
+    {
+      "path": "src/content/columns-fil/704-taiwan-arc-first-application.md",
+      "sha256": "6aced8364c167eb06beca783345171616aa5d9f9d8b4a11d612321628ebe51b7"
+    },
+    {
+      "path": "src/content/columns-fil/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "b3d5a3132b260ef14653bab7ea8e40ce303817b76365d22d29c2df62fc93e70e"
+    },
+    {
+      "path": "src/content/columns-fil/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "8efd98ba2187a676ad7965d9b5d9281897522599b54f4795ba29fa621426ffae"
+    },
+    {
+      "path": "src/content/columns-tr/704-taiwan-arc-first-application.md",
+      "sha256": "eae17b5cd8d03c42697698a996d5566d016c04070716da27655cd365be1e0d8a"
+    },
+    {
+      "path": "src/content/columns-tr/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "3310f47c1ef54d7e6567af7d5dcbdb49318148fbfee47d71e18746d821f2d2d0"
+    },
+    {
+      "path": "src/content/columns-tr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "cf143d1db6bf28bc9771ec0bf6e5a505b112bcf00779b0b0e901c3cada6901fb"
+    },
+    {
+      "path": "src/content/columns-nl/704-taiwan-arc-first-application.md",
+      "sha256": "47cb7de8d15fbbbdffe9d0bb2a0ea27e74a313e051a6ebaf8ba72455c0aab3c6"
+    },
+    {
+      "path": "src/content/columns-nl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "a38063b5a16d9f5b4d44b0a5c1fffdb8b6b3c1de7ca8ab178966a1213135bae7"
+    },
+    {
+      "path": "src/content/columns-nl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "788fcd4f71b5b453c921edb514b48ebe678ca123d9bfac90482b269968b0c37d"
+    },
+    {
+      "path": "src/content/columns-zh-hans/704-taiwan-arc-first-application.md",
+      "sha256": "bc621dfb4edc8838994318847fa914dc48e2f33512d5406aa1c2d8c06384b7f0"
+    },
+    {
+      "path": "src/content/columns-zh-hans/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "59b439ddf643b0c46b36672a5844bcb0aee8f5f1b155e263fac762959da4ccf2"
+    },
+    {
+      "path": "src/content/columns-zh-hans/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "fe7738b6f822c3b1dc28508e43fb4df3c073fcdc8be6a5f70cadf98cce7d2d19"
+    },
+    {
+      "path": "src/content/columns-sv/704-taiwan-arc-first-application.md",
+      "sha256": "367126180229208d662621ab42add0ad7498ba8496abf4f188f76e70d0b3f569"
+    },
+    {
+      "path": "src/content/columns-sv/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "ed8011bbf7d82dc23c5136c026111c3da76f96478344e6fc0835abaa2ca37204"
+    },
+    {
+      "path": "src/content/columns-sv/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "54420eac11065722ae23083e98432813f9ffd50d82491bbbf78d33c8bb7ebe1c"
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/content/columns/704-taiwan-arc-first-application.md",
+      "sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1"
+    },
+    {
+      "path": "src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a"
+    },
+    {
+      "path": "src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc"
+    },
+    {
+      "path": "src/content/columns-en/704-taiwan-arc-first-application.md",
+      "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f"
+    },
+    {
+      "path": "src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304"
+    },
+    {
+      "path": "src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71"
+    },
+    {
+      "path": "src/content/columns-zh/704-taiwan-arc-first-application.md",
+      "sha256": "0c00bc06bf3c3c1860a95af4dbcea9eaab981300860916856295e8b947244468"
+    },
+    {
+      "path": "src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "290a50047632ad830ea98c524ffef6ed91c2b4c8d555a1844689824c3ffea7a3"
+    },
+    {
+      "path": "src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4d70e78b9a197f4a2b81d25d61b6fa862ee849a6392d5fd905e90bcf781e721c"
+    }
+  ],
+  "status": "manuscripts_frozen_for_integration_not_deployed"
+}

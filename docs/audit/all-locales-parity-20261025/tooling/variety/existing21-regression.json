@@ -1,0 +1,481 @@
+{
+  "baseline_manifest_sha256": "f6fab101c910f0ba1088769da6f9e0ea081665052522d1debf99394a6d134358",
+  "compared": 1409,
+  "measured": 1378,
+  "by_locale": {
+    "ko": 207,
+    "ja": 220,
+    "en": 208,
+    "zh-hant": 286,
+    "th": 31,
+    "id": 31,
+    "hi": 26,
+    "fr": 29,
+    "de": 26,
+    "it": 26,
+    "es": 46,
+    "pt": 26,
+    "ar": 26,
+    "vi": 43,
+    "ru": 24,
+    "ms": 24,
+    "fil": 29,
+    "tr": 24,
+    "nl": 24,
+    "zh-hans": 29,
+    "sv": 24
+  },
+  "unavailable": [
+    {
+      "path": "src/content/columns-th/001-taiwan-company-establishment-basics.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/002-withdraw-capital-taiwan-company.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/003-taiwan-traffic-accident-procedure.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/004-taiwan-company-subsidiary-vs-branch.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/005-taiwan-company-establishment-advanced-2.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/006-taiwan-massage-history-law.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/007-taiwan-divorce-lawsuit-qna.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/008-taiwan-labor-severance-law.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/009-taiwan-voluntary-resignation-severance.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/010-taiwan-gym-injury-lawsuit.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/012-taiwan-overtaking-accident-liability.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/013-taiwan-company-establishment-advanced-1.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/014-taiwan-mandatory-employment-period.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/015-taiwan-company-setup-pitch-location.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/016-taiwan-inheritance-custody-analysis.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/017-taiwan-logistics-business-setup.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/018-taiwan-semiconductor-market-entry.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/019-taiwanese-spouse-divorce-agreement-registration.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/020-taiwanese-spouse-divorce-from-abroad.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/022-marrying-taiwanese-national-registration-checklist.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/023-baby-taiwan-nationality-birth-registration.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/661-thai-worker-taiwan-bank-account-police-notice.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/662-thai-return-home-taiwan-traffic-injury-records.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/704-taiwan-arc-first-application.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/705-taiwan-visa-residence-work-study-family.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "path": "src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md",
+      "error_type": "MeasurementError",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    }
+  ],
+  "input_changes": [
+    {
+      "path": "src/content/columns-fil/704-taiwan-arc-first-application.md",
+      "before_sha256": "a2f80999f86b028de7b3210a7ba7296213cd35f3950aacf63c4b01ce4dda1f7a",
+      "current_sha256": "6aced8364c167eb06beca783345171616aa5d9f9d8b4a11d612321628ebe51b7"
+    },
+    {
+      "path": "src/content/columns-fil/706-taiwan-arc-renewal-changes-reentry.md",
+      "before_sha256": "4b270468989f7d0168106a426720a3439f138e77196b26f981f8e9560a613e1e",
+      "current_sha256": "8efd98ba2187a676ad7965d9b5d9281897522599b54f4795ba29fa621426ffae"
+    },
+    {
+      "path": "src/content/columns-tr/704-taiwan-arc-first-application.md",
+      "before_sha256": "03599c5913d61d6820e20db26ebb42b8bd7b7c87ce7455c79ff5cafd7991ded8",
+      "current_sha256": "eae17b5cd8d03c42697698a996d5566d016c04070716da27655cd365be1e0d8a"
+    },
+    {
+      "path": "src/content/columns-tr/705-taiwan-visa-residence-work-study-family.md",
+      "before_sha256": "6477f3d55f8dfe7e04acb0a62888a4ff06b62709414a5846e8b838661150aac5",
+      "current_sha256": "3310f47c1ef54d7e6567af7d5dcbdb49318148fbfee47d71e18746d821f2d2d0"
+    },
+    {
+      "path": "src/content/columns-tr/706-taiwan-arc-renewal-changes-reentry.md",
+      "before_sha256": "9c6a51f45c55680bf0d072fada02772b4f996051e8e28918b9162e9facf94c95",
+      "current_sha256": "cf143d1db6bf28bc9771ec0bf6e5a505b112bcf00779b0b0e901c3cada6901fb"
+    },
+    {
+      "path": "src/content/columns-zh-hans/706-taiwan-arc-renewal-changes-reentry.md",
+      "before_sha256": "ef0f8559d1f6a46debc94f954bdd6bd9471d96a0ee19c9d27f8571f5524290ed",
+      "current_sha256": "fe7738b6f822c3b1dc28508e43fb4df3c073fcdc8be6a5f70cadf98cce7d2d19"
+    }
+  ],
+  "metric_differences": [],
+  "frozen_result_differences": [],
+  "file_integrity": [
+    {
+      "path": "variety_metrics.py",
+      "matches": true
+    },
+    {
+      "path": "variety_multilingual.py",
+      "matches": true
+    },
+    {
+      "path": "variety_expansion.py",
+      "matches": true
+    },
+    {
+      "path": "build-rewrite-queue.py",
+      "matches": true
+    },
+    {
+      "path": "MULTILINGUAL-METHOD.md",
+      "matches": true
+    },
+    {
+      "path": "profiles/ar.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/de.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/es.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/fil.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/fr.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/hi.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/id.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/it.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/ms.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/nl.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/pt.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/ru.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/sv.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/th.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/tr.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/vi.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/zh-hans.json",
+      "matches": true
+    }
+  ],
+  "unchanged_profiles": [
+    {
+      "path": "profiles/ar.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/de.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/es.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/fil.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/fr.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/hi.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/id.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/it.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/ms.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/nl.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/pt.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/ru.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/sv.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/th.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/tr.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/vi.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/zh-hans.json",
+      "matches": true
+    }
+  ],
+  "shared_integrity": [
+    {
+      "path": "variety_metrics.py",
+      "matches": true
+    },
+    {
+      "path": "variety_multilingual.py",
+      "matches": true
+    },
+    {
+      "path": "variety_expansion.py",
+      "matches": true
+    },
+    {
+      "path": "build-rewrite-queue.py",
+      "matches": true
+    },
+    {
+      "path": "MULTILINGUAL-METHOD.md",
+      "matches": true
+    },
+    {
+      "path": "profiles/ar.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/de.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/es.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/fil.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/fr.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/hi.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/id.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/it.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/ms.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/nl.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/pt.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/ru.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/sv.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/th.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/tr.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/vi.json",
+      "matches": true
+    },
+    {
+      "path": "profiles/zh-hans.json",
+      "matches": true
+    }
+  ],
+  "neutral_fixture_integrity": [
+    {
+      "path": "tests/fixtures-next-seven.json",
+      "matches": true
+    },
+    {
+      "path": "tests/test_next_seven.py",
+      "matches": true
+    }
+  ],
+  "hard_and_score_unchanged": true,
+  "ok": true
+}

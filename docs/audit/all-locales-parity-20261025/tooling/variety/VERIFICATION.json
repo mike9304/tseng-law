@@ -1,0 +1,29 @@
+{
+  "verified_at_utc": "2026-10-25T11:38:23.263923+00:00",
+  "test_command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "test_exit": 0,
+  "test_methods": 18,
+  "original_profile_fixture_cases": {
+    "sentence_fixtures": 71,
+    "word_fixtures": 60,
+    "body_fixtures": 30
+  },
+  "python": "3.12.0",
+  "python_unicode": "15.0.0",
+  "node_engine": {
+    "node": "24.14.1",
+    "icu": "78.2",
+    "unicode": "17.0"
+  },
+  "shared_tool_sha256": "87270b130a309ef05076742b7ea542425b51a42363908320d6836756a0d421e0",
+  "shared_installation_changed_by_this_task": false,
+  "scope": "task-local tooling only; no new-article scores used; profiles await coordinating review"
+}

@@ -1,0 +1,132 @@
+{
+  "provenance": "Neutral examples authored for the measurement contract before reading any new-batch article scores. These are AI-authored test expectations, not independent native-speaker approval.",
+  "ru": {
+    "sentences": [
+      ["Копия готова. Папка открыта! Всё на месте?", ["Копия готова.", "Папка открыта!", "Всё на месте?"]],
+      ["В примере указаны ст. 7, ч. 2 и п. 3. Затем идёт подпись.", ["В примере указаны ст. 7, ч. 2 и п. 3.", "Затем идёт подпись."]],
+      ["А. С. Иванов записал 1.250,50. Копия осталась у него.", ["А. С. Иванов записал 1.250,50.", "Копия осталась у него."]],
+      ["Документ составлен в 2025 г. Затем его скопировали. В г. Тайбэй хранится пример.", ["Документ составлен в 2025 г.", "Затем его скопировали.", "В г. Тайбэй хранится пример."]],
+      ["Нужны папки, копии и т. д. Остальное уже готово.", ["Нужны папки, копии и т. д.", "Остальное уже готово."]],
+      ["«Готово!» — сказал он. Папка закрыта.", ["«Готово!» — сказал он.", "Папка закрыта."]]
+    ],
+    "words": [
+      ["Из-за окна видны 1.250,50 и 3-5 папок.", ["Из-за", "окна", "видны", "1.250,50", "и", "3", "5", "папок"]],
+      ["Е\u0308лка и O’Neill.", ["Е\u0308лка", "и", "O’Neill"]]
+    ],
+    "openers": [["«Ёлка стоит здесь.»", "ёлка"], ["Е\u0308лка стоит здесь.", "ёлка"]],
+    "sources": ["## Официальные источники", "## Источники и дата проверки"],
+    "not_sources": ["## Источники дохода", "## Правовые основания заявления"],
+    "contrast": [["Это не копия, а оригинал.", 1], ["Вместо конверта взяли папку.", 1], ["Документ не готов.", 0]],
+    "caveat": "Однако папка осталась открытой.",
+    "hypothetical": "Предположим, папка ещё открыта.",
+    "citation": "Копия остаётся здесь (ст. 22).",
+    "url": ["Адрес https://example.test/a?x=1. Копия готова.", ["Адрес .", "Копия готова."]]
+  },
+  "ms": {
+    "sentences": [
+      ["Salinan sudah siap. Fail masih terbuka! Adakah senarai lengkap?", ["Salinan sudah siap.", "Fail masih terbuka!", "Adakah senarai lengkap?"]],
+      ["Dr. A. Rahman menyemak hlm. 2 hingga 4. Fail No. 5 ada di meja.", ["Dr. A. Rahman menyemak hlm. 2 hingga 4.", "Fail No. 5 ada di meja."]],
+      ["Angkanya ialah 1,250.50. Salinan kedua mencatat 0.5.", ["Angkanya ialah 1,250.50.", "Salinan kedua mencatat 0.5."]],
+      ["Senarai itu menyebut fail, sampul, dll. Satu salinan belum tiba.", ["Senarai itu menyebut fail, sampul, dll.", "Satu salinan belum tiba."]],
+      ["“Sudah siap,” katanya. “Benarkah?” tanyanya lagi. Fail itu ditutup.", ["“Sudah siap,” katanya.", "“Benarkah?” tanyanya lagi.", "Fail itu ditutup."]]
+    ],
+    "words": [
+      ["Kanak-kanak menerima e-mel pada 3-5 hari.", ["Kanak-kanak", "menerima", "e-mel", "pada", "3", "5", "hari"]],
+      ["Nilainya RM1,250.50 dan 0.5 unit.", ["Nilainya", "RM1,250.50", "dan", "0.5", "unit"]]
+    ],
+    "openers": [["“Salinan itu lengkap.”", "salinan"]],
+    "sources": ["## Sumber rasmi", "## Rujukan"],
+    "not_sources": ["## Sumber pendapatan", "## Asas undang-undang bagi permohonan"],
+    "contrast": [["Ini bukan salinan, tetapi dokumen asal.", 1], ["Fail ini berbeza daripada sampul itu.", 1], ["Fail ini tidak lengkap.", 0]],
+    "caveat": "Namun fail itu masih terbuka.",
+    "hypothetical": "Andaikan fail itu belum ditutup.",
+    "citation": "Salinan kekal di sini (Perkara 22).",
+    "url": ["Alamatnya https://example.test/a?x=1. Salinan sudah siap.", ["Alamatnya .", "Salinan sudah siap."]]
+  },
+  "fil": {
+    "sentences": [
+      ["Handa na ang kopya. Bukas pa ang folder! Kumpleto ba ang talaan?", ["Handa na ang kopya.", "Bukas pa ang folder!", "Kumpleto ba ang talaan?"]],
+      ["Sinuri ni Gng. Reyes ang Art. 7 at Sek. 2. Nasa mesa ang Blg. 3.", ["Sinuri ni Gng. Reyes ang Art. 7 at Sek. 2.", "Nasa mesa ang Blg. 3."]],
+      ["May 1,250.50 sa talaan. May isa pang 0.5 sa kopya.", ["May 1,250.50 sa talaan.", "May isa pang 0.5 sa kopya."]],
+      ["May papel, sobre, atbp. Handa na ang kahon.", ["May papel, sobre, atbp.", "Handa na ang kahon."]],
+      ["“Handa na ba?” tanong niya. Bukas pa ang folder.", ["“Handa na ba?” tanong niya.", "Bukas pa ang folder."]]
+    ],
+    "words": [
+      ["Iba't ibang pag-aaral at 3-5 kopya.", ["Iba't", "ibang", "pag-aaral", "at", "3", "5", "kopya"]],
+      ["Ang ₱1,250.50 ay nasa talaan.", ["Ang", "1,250.50", "ay", "nasa", "talaan"]]
+    ],
+    "openers": [["“Kopya ang nasa mesa.”", "kopya"]],
+    "sources": ["## Mga sanggunian", "## Mga opisyal na sanggunian"],
+    "not_sources": ["## Pinagmumulan ng kita", "## Batayang legal ng aplikasyon"],
+    "contrast": [["Hindi ito kopya kundi orihinal.", 1], ["Gumamit ng folder sa halip na sobre.", 1], ["Hindi pa handa ang kopya.", 0]],
+    "caveat": "Gayunman, bukas pa ang folder.",
+    "hypothetical": "Ipagpalagay na bukas pa ang folder.",
+    "citation": "Nananatili rito ang kopya (Artikulo 22).",
+    "url": ["Narito ang https://example.test/a?x=1. Handa na ang kopya.", ["Narito ang .", "Handa na ang kopya."]]
+  },
+  "tr": {
+    "sentences": [
+      ["Kopya hazır. Dosya hâlâ açık! Liste tamam mı?", ["Kopya hazır.", "Dosya hâlâ açık!", "Liste tamam mı?"]],
+      ["Av. A. Yılmaz md. 7 ve f. 2 üzerinde çalıştı. Dosya kapandı.", ["Av. A. Yılmaz md. 7 ve f. 2 üzerinde çalıştı.", "Dosya kapandı."]],
+      ["5. madde örnek metinde yer alır. 3. Mayıs yerine 3 Mayıs yazıldı.", ["5. madde örnek metinde yer alır.", "3. Mayıs yerine 3 Mayıs yazıldı."]],
+      ["Tutar 1.250,50 olarak yazılmış. İkinci satırda 0,5 var.", ["Tutar 1.250,50 olarak yazılmış.", "İkinci satırda 0,5 var."]],
+      ["Dosyada kopya, zarf vb. Belgeler masada duruyor.", ["Dosyada kopya, zarf vb.", "Belgeler masada duruyor."]],
+      ["“Hazır mı?” diye sordu. Kopya masadaydı.", ["“Hazır mı?” diye sordu.", "Kopya masadaydı."]]
+    ],
+    "words": [
+      ["Ankara’nın e-postası 3-5 sayfa içerir.", ["Ankara’nın", "e-postası", "3", "5", "sayfa", "içerir"]],
+      ["I\u0307zin ve 1.250,50 birim.", ["I\u0307zin", "ve", "1.250,50", "birim"]]
+    ],
+    "openers": [["İzin dosyada.", "izin"], ["I\u0307zin dosyada.", "izin"], ["ISLAK kopya burada.", "ıslak"]],
+    "sources": ["## Resmî kaynaklar", "## Kaynaklar ve kontrol tarihi"],
+    "not_sources": ["## Gelir kaynakları", "## Başvurunun hukuki dayanağı"],
+    "contrast": [["Bu bir kopya değil, asıl belgedir.", 1], ["Zarf yerine dosya kullanıldı.", 1], ["Dosya hazır değildir.", 0]],
+    "caveat": "Ancak dosya hâlâ açık.",
+    "hypothetical": "Dosyanın açık olduğunu varsayalım.",
+    "citation": "Kopya burada kalır (madde 22).",
+    "url": ["Adres https://example.test/a?x=1. Kopya hazır.", ["Adres .", "Kopya hazır."]]
+  },
+  "nl": {
+    "sentences": [
+      ["De kopie is klaar. De map staat open! Is de lijst compleet?", ["De kopie is klaar.", "De map staat open!", "Is de lijst compleet?"]],
+      ["Mr. A. de Vries leest art. 7 en nr. 3. De map blijft open.", ["Mr. A. de Vries leest art. 7 en nr. 3.", "De map blijft open."]],
+      ["Het bedrag is 1.250,50. Een tweede regel noemt 0,5.", ["Het bedrag is 1.250,50.", "Een tweede regel noemt 0,5."]],
+      ["Er liggen mappen, kopieën enz. De envelop ontbreekt.", ["Er liggen mappen, kopieën enz.", "De envelop ontbreekt."]],
+      ["Dat geldt o.a. voor de blauwe map. De groene map blijft hier.", ["Dat geldt o.a. voor de blauwe map.", "De groene map blijft hier."]],
+      ["‘Is alles klaar?’ vroeg zij. De map lag op tafel.", ["‘Is alles klaar?’ vroeg zij.", "De map lag op tafel."]]
+    ],
+    "words": [
+      ["Niet-EU-documenten en e-mail voor 3-5 dagen.", ["Niet-EU-documenten", "en", "e-mail", "voor", "3", "5", "dagen"]],
+      ["De coo\u0308peratie betaalt €1.250,50.", ["De", "coo\u0308peratie", "betaalt", "1.250,50"]]
+    ],
+    "openers": [["‘Kopieën liggen hier.’", "kopieën"], ["Kopiee\u0308n liggen hier.", "kopieën"]],
+    "sources": ["## Officiële bronnen", "## Bronnen en controledatum"],
+    "not_sources": ["## Bronnen van inkomen", "## Juridische grondslag van de aanvraag"],
+    "contrast": [["Dit is niet de kopie, maar het origineel.", 1], ["Er ligt een map in plaats van een envelop.", 1], ["De map is niet klaar.", 0]],
+    "caveat": "Echter, de map staat nog open.",
+    "hypothetical": "Stel dat de map nog openstaat.",
+    "citation": "De kopie blijft hier (artikel 22).",
+    "url": ["Het adres is https://example.test/a?x=1. De kopie is klaar.", ["Het adres is .", "De kopie is klaar."]]
+  },
+  "zh-hans": {
+    "sentences": [
+      ["副本已备好。文件夹还开着！清单齐全吗？", ["副本已备好。", "文件夹还开着！", "清单齐全吗？"]],
+      ["金额为1,250.50元。另一行写着0.5。", ["金额为1,250.50元。", "另一行写着0.5。"]],
+      ["“副本已备好。”文件夹仍在桌上。", ["“副本已备好。”", "文件夹仍在桌上。"]],
+      ["请看第7条、第2项。下一页附有副本。", ["请看第7条、第2项。", "下一页附有副本。"]],
+      ["ARC是缩写。Dr. Lin只是示例名字。", ["ARC是缩写。", "Dr. Lin只是示例名字。"]]
+    ],
+    "words": [
+      ["期限是六个月（第18条）。", ["期", "限", "是", "六", "个", "月", "。"]],
+      ["款项为1,200元。", ["款", "项", "为", "1", ",", "2", "0", "0", "元", "。"]]
+    ],
+    "openers": [["“根据清单，副本仍在。”", "根据"], ["这份副本仍在。", "这"], ["申请人保留了副本。", "申请人"]],
+    "sources": ["## 官方来源", "## 资料来源"],
+    "not_sources": ["## 资金来源", "## 法律依据"],
+    "contrast": [["这不是副本，而是原件。", 1], ["这是另一回事。", 1], ["文件尚未备好。", 0]],
+    "caveat": "不过，文件夹仍在桌上。",
+    "hypothetical": "假设文件夹仍然开着。",
+    "citation": "副本仍在这里（第22条）。",
+    "url": ["地址是https://example.test/a?x=1。副本已备好。", ["地址是。", "副本已备好。"]]
+  }
+}

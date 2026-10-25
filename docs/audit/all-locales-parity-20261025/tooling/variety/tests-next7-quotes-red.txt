@@ -1,0 +1,112 @@
+test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) ... 
+  test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (text='»Kopien er klar.« Mappen er åben.', locale='da') ... FAIL
+  test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (text='»Mapper osv.« Kopien er klar.', locale='da') ... FAIL
+  test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (text='„Kopie je hotová.“ Složka je otevřená.', locale='cs') ... FAIL
+  test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (text='„Složky atd.“ Kopie je hotová.', locale='cs') ... FAIL
+test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) ... ok
+test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) ... ok
+test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) ... ok
+test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) ... ok
+test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) ... ok
+test_unsupported_and_nonbokmal_codes_stay_unavailable (test_next_seven.NextSevenTests.test_unsupported_and_nonbokmal_codes_stay_unavailable) ... ok
+
+======================================================================
+FAIL: test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (text='»Kopien er klar.« Mappen er åben.', locale='da')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 42, in test_boundaries_keep_abbreviations_ordinals_and_quotes
+    self.assertEqual(metrics.sentences(text, lang), wanted)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['»Kopien er klar.« Mappen er åben.'] != ['»Kopien er klar.«', 'Mappen er åben.']
+
+First differing element 0:
+'»Kopien er klar.« Mappen er åben.'
+'»Kopien er klar.«'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'Mappen er åben.'
+
+- ['»Kopien er klar.« Mappen er åben.']
+?                    ^
+
++ ['»Kopien er klar.«', 'Mappen er åben.']
+?                    ^^^^
+
+
+======================================================================
+FAIL: test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (text='»Mapper osv.« Kopien er klar.', locale='da')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 42, in test_boundaries_keep_abbreviations_ordinals_and_quotes
+    self.assertEqual(metrics.sentences(text, lang), wanted)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['»Mapper osv.« Kopien er klar.'] != ['»Mapper osv.«', 'Kopien er klar.']
+
+First differing element 0:
+'»Mapper osv.« Kopien er klar.'
+'»Mapper osv.«'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'Kopien er klar.'
+
+- ['»Mapper osv.« Kopien er klar.']
+?                ^
+
++ ['»Mapper osv.«', 'Kopien er klar.']
+?                ^^^^
+
+
+======================================================================
+FAIL: test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (text='„Kopie je hotová.“ Složka je otevřená.', locale='cs')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 42, in test_boundaries_keep_abbreviations_ordinals_and_quotes
+    self.assertEqual(metrics.sentences(text, lang), wanted)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['„Kopie je hotová.“ Složka je otevřená.'] != ['„Kopie je hotová.“', 'Složka je otevřená.']
+
+First differing element 0:
+'„Kopie je hotová.“ Složka je otevřená.'
+'„Kopie je hotová.“'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'Složka je otevřená.'
+
+- ['„Kopie je hotová.“ Složka je otevřená.']
+?                     ^
+
++ ['„Kopie je hotová.“', 'Složka je otevřená.']
+?                     ^^^^
+
+
+======================================================================
+FAIL: test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (text='„Složky atd.“ Kopie je hotová.', locale='cs')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 42, in test_boundaries_keep_abbreviations_ordinals_and_quotes
+    self.assertEqual(metrics.sentences(text, lang), wanted)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['„Složky atd.“ Kopie je hotová.'] != ['„Složky atd.“', 'Kopie je hotová.']
+
+First differing element 0:
+'„Složky atd.“ Kopie je hotová.'
+'„Složky atd.“'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'Kopie je hotová.'
+
+- ['„Složky atd.“ Kopie je hotová.']
+?                ^
+
++ ['„Složky atd.“', 'Kopie je hotová.']
+?                ^^^^
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.294s
+
+FAILED (failures=4)

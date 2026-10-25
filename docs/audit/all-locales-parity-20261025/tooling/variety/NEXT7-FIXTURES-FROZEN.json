@@ -1,0 +1,20 @@
+{
+  "frozen_at": "2026-10-25T21:15:04+09:00",
+  "basis": "neutral fixtures fixed before profile implementation and before reading new batch manuscripts",
+  "files": {
+    "tests/fixtures-next-seven.json": "69bbf1aadd2d88466763006b9873fa6b3b5165e6306e73f73bc8398a42749dfd",
+    "tests/test_next_seven.py": "01a361e04b352f7b7ab4a800d863e57bc0edecc028ff356fe38faa3f66ad09dd"
+  },
+  "preimplementation_revision": {
+    "previous_fixture_sha256": "50cd32fa469d8135dda7041d586ab2e35cec19c0715f52459a7ad0862014a5b0",
+    "reason": "Added two neutral abbreviation-at-quotation-end cases before any production change",
+    "frozen_at": "2026-10-25T21:17:23+09:00"
+  },
+  "provenance_comment_correction": {
+    "recorded_at": "2026-10-25T21:24:24+09:00",
+    "path": "tests/test_next_seven.py",
+    "previous_sha256": "d0f27fa672905cf2cee04ff8f57147337bbf80c5d2c8b969229c10316c4da2f7",
+    "sha256": "01a361e04b352f7b7ab4a800d863e57bc0edecc028ff356fe38faa3f66ad09dd",
+    "reason": "Removed inaccurate human-authored wording from one comment; fixtures and test executable statements unchanged. AI-authored provenance already recorded in the neutral fixture file."
+  }
+}

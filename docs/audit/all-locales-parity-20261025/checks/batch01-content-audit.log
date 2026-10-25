@@ -1,0 +1,44 @@
+AUTO_OK src/content/columns-ru/704-taiwan-arc-first-application.md — 0 errors, 6 required review items
+  REVIEW numeric token differences: 2 source-only / 4 target-only; context in JSON
+AUTO_OK src/content/columns-ru/705-taiwan-visa-residence-work-study-family.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 0 source-only / 0 target-only; context in JSON
+AUTO_OK src/content/columns-ru/706-taiwan-arc-renewal-changes-reentry.md — 0 errors, 6 required review items
+  REVIEW numeric token differences: 1 source-only / 3 target-only; context in JSON
+AUTO_OK src/content/columns-ms/704-taiwan-arc-first-application.md — 0 errors, 7 required review items
+  REVIEW numeric token differences: 1 source-only / 4 target-only; context in JSON
+AUTO_OK src/content/columns-ms/705-taiwan-visa-residence-work-study-family.md — 0 errors, 7 required review items
+  REVIEW numeric token differences: 0 source-only / 0 target-only; context in JSON
+AUTO_OK src/content/columns-ms/706-taiwan-arc-renewal-changes-reentry.md — 0 errors, 8 required review items
+  REVIEW numeric token differences: 0 source-only / 1 target-only; context in JSON
+AUTO_OK src/content/columns-fil/704-taiwan-arc-first-application.md — 0 errors, 7 required review items
+  REVIEW numeric token differences: 1 source-only / 4 target-only; context in JSON
+AUTO_OK src/content/columns-fil/705-taiwan-visa-residence-work-study-family.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 0 source-only / 6 target-only; context in JSON
+AUTO_OK src/content/columns-fil/706-taiwan-arc-renewal-changes-reentry.md — 0 errors, 8 required review items
+  REVIEW numeric token differences: 0 source-only / 4 target-only; context in JSON
+AUTO_OK src/content/columns-tr/704-taiwan-arc-first-application.md — 0 errors, 6 required review items
+  REVIEW numeric token differences: 10 source-only / 3 target-only; context in JSON
+AUTO_OK src/content/columns-tr/705-taiwan-visa-residence-work-study-family.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 9 source-only / 3 target-only; context in JSON
+AUTO_OK src/content/columns-tr/706-taiwan-arc-renewal-changes-reentry.md — 0 errors, 6 required review items
+  REVIEW numeric token differences: 5 source-only / 4 target-only; context in JSON
+AUTO_OK src/content/columns-nl/704-taiwan-arc-first-application.md — 0 errors, 10 required review items
+  REVIEW numeric token differences: 4 source-only / 8 target-only; context in JSON
+AUTO_OK src/content/columns-nl/705-taiwan-visa-residence-work-study-family.md — 0 errors, 7 required review items
+  REVIEW numeric token differences: 1 source-only / 3 target-only; context in JSON
+AUTO_OK src/content/columns-nl/706-taiwan-arc-renewal-changes-reentry.md — 0 errors, 7 required review items
+  REVIEW numeric token differences: 2 source-only / 3 target-only; context in JSON
+AUTO_OK src/content/columns-zh-hans/704-taiwan-arc-first-application.md — 0 errors, 11 required review items
+  REVIEW numeric token differences: 5 source-only / 7 target-only; context in JSON
+AUTO_OK src/content/columns-zh-hans/705-taiwan-visa-residence-work-study-family.md — 0 errors, 12 required review items
+  REVIEW numeric token differences: 2 source-only / 9 target-only; context in JSON
+AUTO_OK src/content/columns-zh-hans/706-taiwan-arc-renewal-changes-reentry.md — 0 errors, 12 required review items
+  REVIEW numeric token differences: 5 source-only / 11 target-only; context in JSON
+AUTO_OK src/content/columns-sv/704-taiwan-arc-first-application.md — 0 errors, 7 required review items
+  REVIEW numeric token differences: 4 source-only / 5 target-only; context in JSON
+AUTO_OK src/content/columns-sv/705-taiwan-visa-residence-work-study-family.md — 0 errors, 7 required review items
+  REVIEW numeric token differences: 2 source-only / 1 target-only; context in JSON
+AUTO_OK src/content/columns-sv/706-taiwan-arc-renewal-changes-reentry.md — 0 errors, 7 required review items
+  REVIEW numeric token differences: 3 source-only / 5 target-only; context in JSON
+Automated: PASS; selected=21; errors=0; semantic=REVIEW_REQUIRED; publicationReady=false
+Review evidence: /Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/checks/batch01-content-audit.json

@@ -1,0 +1,333 @@
+{
+  "startedAt": "2026-10-25T12:37:42.026Z",
+  "rows": [
+    {
+      "kind": "authority",
+      "slug": "taiwan-visa-residence-work-study-family",
+      "requests": [
+        {
+          "url": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "status": 200
+        }
+      ],
+      "image": {
+        "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+        "complete": true,
+        "naturalWidth": 1760,
+        "naturalHeight": 2640,
+        "display": "block",
+        "opacity": "1",
+        "visibility": "visible",
+        "bounds": {
+          "x": 135.5800018310547,
+          "y": 499.12249755859375,
+          "width": 195.83998107910156,
+          "height": 146.8800048828125,
+          "top": 499.12249755859375,
+          "right": 331.41998291015625,
+          "bottom": 646.0025024414062,
+          "left": 135.5800018310547
+        },
+        "parentBounds": {
+          "x": 137.5,
+          "y": 500.5625,
+          "width": 192,
+          "height": 144,
+          "top": 500.5625,
+          "right": 329.5,
+          "bottom": 644.5625,
+          "left": 137.5
+        }
+      },
+      "screenshot": "browser-screenshots/desktop-nl-705-authority-loaded.png"
+    },
+    {
+      "kind": "authority",
+      "slug": "taiwan-company-establishment-advanced-1",
+      "requests": [
+        {
+          "url": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+          "status": 200
+        }
+      ],
+      "image": {
+        "src": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+        "complete": true,
+        "naturalWidth": 1760,
+        "naturalHeight": 2640,
+        "display": "block",
+        "opacity": "1",
+        "visibility": "visible",
+        "bounds": {
+          "x": 135.5800018310547,
+          "y": 500.02874755859375,
+          "width": 195.83998107910156,
+          "height": 146.8800048828125,
+          "top": 500.02874755859375,
+          "right": 331.41998291015625,
+          "bottom": 646.9087524414062,
+          "left": 135.5800018310547
+        },
+        "parentBounds": {
+          "x": 137.5,
+          "y": 501.46875,
+          "width": 192,
+          "height": 144,
+          "top": 501.46875,
+          "right": 329.5,
+          "bottom": 645.46875,
+          "left": 137.5
+        }
+      },
+      "screenshot": "browser-screenshots/desktop-nl-013-authority-loaded.png"
+    },
+    {
+      "kind": "menu",
+      "path": "/zh-hans/columns/taiwan-arc-renewal-changes-reentry",
+      "links": [
+        "/en/columns/taiwan-arc-renewal-changes-reentry",
+        "/ko/columns/taiwan-arc-renewal-changes-reentry",
+        "/zh-hant/columns/taiwan-arc-renewal-changes-reentry",
+        "/ja/columns/taiwan-arc-renewal-changes-reentry",
+        "/vi/columns/taiwan-arc-renewal-changes-reentry",
+        "/id/columns/taiwan-arc-renewal-changes-reentry",
+        "/th/columns/taiwan-arc-renewal-changes-reentry",
+        "/fil/columns/taiwan-arc-renewal-changes-reentry",
+        "/zh-hans/columns/taiwan-arc-renewal-changes-reentry",
+        "/ms/columns/taiwan-arc-renewal-changes-reentry",
+        "/hi/columns/taiwan-arc-renewal-changes-reentry",
+        "/ar/columns/taiwan-arc-renewal-changes-reentry",
+        "/de/columns/taiwan-arc-renewal-changes-reentry",
+        "/es/columns/taiwan-arc-renewal-changes-reentry",
+        "/fr/columns/taiwan-arc-renewal-changes-reentry",
+        "/pt/columns/taiwan-arc-renewal-changes-reentry",
+        "/ru/columns/taiwan-arc-renewal-changes-reentry",
+        "/tr/columns/taiwan-arc-renewal-changes-reentry",
+        "/it/columns/taiwan-arc-renewal-changes-reentry",
+        "/nl/columns/taiwan-arc-renewal-changes-reentry",
+        "/sv/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "screenshot": "browser-screenshots/mobile-zh-hans-706-picker.png",
+      "faq": {
+        "text": "常见问题ARC还有半年才到期，搬家可以等延期时一起改吗？不可以。搬家或服务处所变更后，须从事实发生次日起30天内向移民署办理变更登记，不能等到延期时才改。一般延期的申请期间，则是原居留期限届满前三个月内。换了新护照，ARC的资料也要改吗？护照号码、姓名等资料改变时，要向移民署更新居留资料，申请时备妥新护照及异动证明。护照号码更新不宜直接套用住址变更的30天期限；创业家、金卡等专门须知另有限期时，依各该规定办理。ARC已经过期，但还在原公司工作，怎么办？应立即向移民署办理。逾期居留未满30天、原居留原因仍存在者，法律设有处罚后重新申请的规定；这项规定仍须受处罚，不是正常延期或免罚宽限期，也不保证可以出国后再入境。",
+        "bounds": {
+          "x": 17.59375,
+          "y": 8510.90625,
+          "width": 339.796875,
+          "height": 628.09375,
+          "top": 8510.90625,
+          "right": 357.390625,
+          "bottom": 9139,
+          "left": 17.59375
+        },
+        "scrollY": 0,
+        "bodyHeight": 12974,
+        "ancestors": [
+          {
+            "tag": "SECTION",
+            "className": "column-faq",
+            "visibility": "visible",
+            "opacity": "1",
+            "display": "block"
+          },
+          {
+            "tag": "DIV",
+            "className": "blog-body column-typo--en-body-sans",
+            "visibility": "visible",
+            "opacity": "1",
+            "display": "block"
+          },
+          {
+            "tag": "DIV",
+            "className": "container blog-container",
+            "visibility": "visible",
+            "opacity": "1",
+            "display": "grid"
+          }
+        ]
+      },
+      "faqScreenshot": "browser-screenshots/mobile-zh-hans-706-faq.png"
+    },
+    {
+      "kind": "menu",
+      "path": "/sv/columns/taiwan-arc-first-application",
+      "links": [
+        "/en/columns/taiwan-arc-first-application",
+        "/ko/columns/taiwan-arc-first-application",
+        "/zh-hant/columns/taiwan-arc-first-application",
+        "/ja/columns/taiwan-arc-first-application",
+        "/vi/columns/taiwan-arc-first-application",
+        "/id/columns/taiwan-arc-first-application",
+        "/th/columns/taiwan-arc-first-application",
+        "/fil/columns/taiwan-arc-first-application",
+        "/zh-hans/columns/taiwan-arc-first-application",
+        "/ms/columns/taiwan-arc-first-application",
+        "/hi/columns/taiwan-arc-first-application",
+        "/ar/columns/taiwan-arc-first-application",
+        "/de/columns/taiwan-arc-first-application",
+        "/es/columns/taiwan-arc-first-application",
+        "/fr/columns/taiwan-arc-first-application",
+        "/pt/columns/taiwan-arc-first-application",
+        "/ru/columns/taiwan-arc-first-application",
+        "/tr/columns/taiwan-arc-first-application",
+        "/it/columns/taiwan-arc-first-application",
+        "/nl/columns/taiwan-arc-first-application",
+        "/sv/columns/taiwan-arc-first-application"
+      ],
+      "screenshot": "browser-screenshots/desktop-sv-704-picker.png",
+      "faq": {
+        "text": "FrågorFrån vilken dag räknas fristen för mitt första ARC?Vid inresa med uppehållsvisum och beviljat uppehåll räknas 30 dagar från dagen efter inresan. Utfärdas uppehållsvisumet när du redan är i Taiwan räknar BOCA i stället från utfärdandedagen. En besökare som söker uppehåll direkt hos NIA måste uppfylla den aktuella kategorins villkor och ansökningstider.Vad kostar det första ARC-kortet?Grundavgiften är NT$1 000 per år av beviljad giltighetstid. Även en kortare period än ett år debiteras som ett år. För ansökan efter viseringsfri inresa eller inresa med besöksvisum tillkommer NT$2 200 enligt avgiftsreglerna. Särskilda nedsättningar och undantag kan gälla.Får jag börja arbeta när jag fått kortet?Det faktiska arbetet och arbetsgivaren måste omfattas av det arbetstillstånd eller lagstadgade undantag som gäller för dig. ARC styrker beviljat uppehåll och ger inte i sig obegränsad rätt att arbeta.",
+        "bounds": {
+          "x": 424.5,
+          "y": 6071.5,
+          "width": 612,
+          "height": 728.328125,
+          "top": 6071.5,
+          "right": 1036.5,
+          "bottom": 6799.828125,
+          "left": 424.5
+        },
+        "scrollY": 0,
+        "bodyHeight": 8616,
+        "ancestors": [
+          {
+            "tag": "SECTION",
+            "className": "column-faq",
+            "visibility": "visible",
+            "opacity": "1",
+            "display": "block"
+          },
+          {
+            "tag": "DIV",
+            "className": "blog-body column-typo--en-body-sans",
+            "visibility": "visible",
+            "opacity": "1",
+            "display": "block"
+          },
+          {
+            "tag": "DIV",
+            "className": "container blog-container",
+            "visibility": "visible",
+            "opacity": "1",
+            "display": "grid"
+          }
+        ]
+      },
+      "faqScreenshot": "browser-screenshots/desktop-sv-704-faq.png"
+    },
+    {
+      "kind": "menu",
+      "path": "/en",
+      "links": [
+        "/en",
+        "/ko",
+        "/zh-hant",
+        "/ja",
+        "/vi",
+        "/id",
+        "/th",
+        "/fil",
+        "/zh-hans",
+        "/ms",
+        "/hi",
+        "/bn",
+        "/ur",
+        "/my",
+        "/ta",
+        "/ne",
+        "/km",
+        "/mn",
+        "/ar",
+        "/fa",
+        "/de",
+        "/es",
+        "/fr",
+        "/pt",
+        "/ru",
+        "/tr",
+        "/it",
+        "/nl",
+        "/pl",
+        "/sv",
+        "/da",
+        "/nb",
+        "/fi",
+        "/cs",
+        "/hu",
+        "/ro",
+        "/uk",
+        "/el",
+        "/he",
+        "/sk",
+        "/bg",
+        "/hr",
+        "/sr",
+        "/sl",
+        "/lt",
+        "/lv",
+        "/et",
+        "/ca",
+        "/is"
+      ],
+      "screenshot": "browser-screenshots/desktop-home-picker.png"
+    },
+    {
+      "kind": "menu",
+      "path": "/ko/columns/taiwan-left-turn-vs-straight-motorcycle",
+      "links": [
+        "/en/columns/taiwan-left-turn-vs-straight-motorcycle",
+        "/ko/columns/taiwan-left-turn-vs-straight-motorcycle",
+        "/zh-hant/columns/taiwan-left-turn-vs-straight-motorcycle"
+      ],
+      "screenshot": "browser-screenshots/mobile-ko051-picker.png"
+    }
+  ],
+  "previousPublic": [
+    {
+      "locale": "ms",
+      "url": "https://tseng-law.com/ms/columns/taiwan-overtaking-accident-liability",
+      "sha256": "5d333cb04b0de8e8e8ab940cfb1f1b87ad7c5684ecf24f64656d345d76e89ca0",
+      "englishConsultation": true,
+      "englishAttorney": true,
+      "image": null,
+      "englishTableHint": false
+    },
+    {
+      "locale": "fil",
+      "url": "https://tseng-law.com/fil/columns/taiwan-overtaking-accident-liability",
+      "sha256": "5eb1f3596cd73fda5e2595e0a204938f8297c58ea7ec0847ff4d0c62770badad",
+      "englishConsultation": true,
+      "englishAttorney": true,
+      "image": null,
+      "englishTableHint": false
+    },
+    {
+      "locale": "tr",
+      "url": "https://tseng-law.com/tr/columns/taiwan-company-establishment-advanced-1",
+      "sha256": "3b13bb7c6df33e3f4b0237c19c06e7da3db16dceda6f9a4fbf1fa621c635ac1b",
+      "englishConsultation": true,
+      "englishAttorney": true,
+      "image": null,
+      "englishTableHint": false
+    },
+    {
+      "locale": "zh-hans",
+      "url": "https://tseng-law.com/zh-hans/columns/taiwanese-spouse-divorce-agreement-registration",
+      "sha256": "3cd8eaa63d00211c282058feec5e6a43cdef1176b04d9198450365949ecd501f",
+      "englishConsultation": true,
+      "englishAttorney": true,
+      "image": null,
+      "englishTableHint": false
+    },
+    {
+      "locale": "nl",
+      "url": "https://tseng-law.com/nl/columns/taiwan-company-establishment-advanced-1",
+      "sha256": "5abbbb4f3afa4856c6be1b6824185d69014127862efe5db889813ac7406e0930",
+      "englishConsultation": false,
+      "englishAttorney": false,
+      "image": "https://media.tseng-law.com/images/team/wei-tseng-official.png",
+      "englishTableHint": false
+    }
+  ],
+  "finishedAt": "2026-10-25T12:37:47.585Z"
+}

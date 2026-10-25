@@ -1,0 +1,25 @@
+{
+  "provenance": "Swedish addition requested by coordinating agent after the six-locale implementation. Neutral expectations fixed before any Swedish target article scores; AI-authored, independent review pending.",
+  "sv": {
+    "sentences": [
+      ["Kopian är klar. Mappen är öppen! Är listan komplett?", ["Kopian är klar.", "Mappen är öppen!", "Är listan komplett?"]],
+      ["Dr. A. Åberg läser kap. 2 och s. 3. Mappen ligger kvar.", ["Dr. A. Åberg läser kap. 2 och s. 3.", "Mappen ligger kvar."]],
+      ["Beloppet är 1 250,50. Nästa rad visar 0,5.", ["Beloppet är 1 250,50.", "Nästa rad visar 0,5."]],
+      ["Listan nämner mappar, kuvert m.m. Kopiorna är klara.", ["Listan nämner mappar, kuvert m.m.", "Kopiorna är klara."]],
+      ["Det gäller bl.a. den blå mappen. Den gröna ligger kvar.", ["Det gäller bl.a. den blå mappen.", "Den gröna ligger kvar."]],
+      ["”Är allt klart?” frågade hon. Mappen låg på bordet.", ["”Är allt klart?” frågade hon.", "Mappen låg på bordet."]]
+    ],
+    "words": [
+      ["EU-medborgare skickar e-post inom 3-5 dagar.", ["EU-medborgare", "skickar", "e-post", "inom", "3", "5", "dagar"]],
+      ["A\u030Aberg antecknar 1 250,50 kronor.", ["A\u030Aberg", "antecknar", "1", "250,50", "kronor"]]
+    ],
+    "openers": [["”Åberg behåller kopian.”", "åberg"], ["A\u030Aberg behåller kopian.", "åberg"]],
+    "sources": ["## Officiella källor", "## Källor och kontrolldatum"],
+    "not_sources": ["## Inkomstkällor", "## Rättslig grund för ansökan"],
+    "contrast": [["Det är inte en kopia utan originalet.", 1], ["En mapp används i stället för ett kuvert.", 1], ["Kopian är inte klar.", 0]],
+    "caveat": "Dock är mappen fortfarande öppen.",
+    "hypothetical": "Anta att mappen fortfarande är öppen.",
+    "citation": "Kopian finns kvar här (artikel 22).",
+    "url": ["Adressen är https://example.test/a?x=1. Kopian är klar.", ["Adressen är .", "Kopian är klar."]]
+  }
+}

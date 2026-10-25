@@ -1,0 +1,558 @@
+test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) ... 
+  test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (locale='da') ... FAIL
+  test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (locale='nb') ... FAIL
+  test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (locale='fi') ... FAIL
+  test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (locale='pl') ... FAIL
+  test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (locale='cs') ... FAIL
+  test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (locale='ro') ... FAIL
+  test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (locale='uk') ... FAIL
+test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) ... 
+  test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) (locale='da') ... FAIL
+  test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) (locale='nb') ... FAIL
+  test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) (locale='fi') ... FAIL
+  test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) (locale='pl') ... FAIL
+  test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) (locale='cs') ... FAIL
+  test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) (locale='ro') ... FAIL
+  test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) (locale='uk') ... FAIL
+test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) ... 
+  test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) (locale='da') ... FAIL
+  test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) (locale='nb') ... FAIL
+  test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) (locale='fi') ... FAIL
+  test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) (locale='pl') ... FAIL
+  test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) (locale='cs') ... FAIL
+  test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) (locale='ro') ... FAIL
+  test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) (locale='uk') ... FAIL
+test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) ... 
+  test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) (locale='da') ... FAIL
+  test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) (locale='nb') ... FAIL
+  test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) (locale='fi') ... FAIL
+  test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) (locale='pl') ... FAIL
+  test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) (locale='cs') ... FAIL
+  test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) (locale='ro') ... FAIL
+  test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) (locale='uk') ... FAIL
+test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) ... 
+  test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) (locale='da') ... FAIL
+  test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) (locale='nb') ... FAIL
+  test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) (locale='fi') ... FAIL
+  test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) (locale='pl') ... FAIL
+  test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) (locale='cs') ... FAIL
+  test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) (locale='ro') ... FAIL
+  test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) (locale='uk') ... FAIL
+test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) ... 
+  test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) (locale='da') ... FAIL
+  test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) (locale='nb') ... FAIL
+  test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) (locale='fi') ... FAIL
+  test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) (locale='pl') ... FAIL
+  test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) (locale='cs') ... FAIL
+  test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) (locale='ro') ... FAIL
+  test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) (locale='uk') ... FAIL
+test_unsupported_and_nonbokmal_codes_stay_unavailable (test_next_seven.NextSevenTests.test_unsupported_and_nonbokmal_codes_stay_unavailable) ... ok
+
+======================================================================
+FAIL: test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (locale='da')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 39, in test_boundaries_keep_abbreviations_ordinals_and_quotes
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'da' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (locale='nb')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 39, in test_boundaries_keep_abbreviations_ordinals_and_quotes
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'nb' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (locale='fi')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 39, in test_boundaries_keep_abbreviations_ordinals_and_quotes
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'fi' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (locale='pl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 39, in test_boundaries_keep_abbreviations_ordinals_and_quotes
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'pl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (locale='cs')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 39, in test_boundaries_keep_abbreviations_ordinals_and_quotes
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'cs' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (locale='ro')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 39, in test_boundaries_keep_abbreviations_ordinals_and_quotes
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ro' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_boundaries_keep_abbreviations_ordinals_and_quotes (test_next_seven.NextSevenTests.test_boundaries_keep_abbreviations_ordinals_and_quotes) (locale='uk')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 39, in test_boundaries_keep_abbreviations_ordinals_and_quotes
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'uk' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) (locale='da')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 29, in test_explicit_and_path_routes_never_alias_the_language
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'da' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) (locale='nb')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 29, in test_explicit_and_path_routes_never_alias_the_language
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'nb' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) (locale='fi')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 29, in test_explicit_and_path_routes_never_alias_the_language
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'fi' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) (locale='pl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 29, in test_explicit_and_path_routes_never_alias_the_language
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'pl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) (locale='cs')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 29, in test_explicit_and_path_routes_never_alias_the_language
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'cs' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) (locale='ro')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 29, in test_explicit_and_path_routes_never_alias_the_language
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ro' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_explicit_and_path_routes_never_alias_the_language (test_next_seven.NextSevenTests.test_explicit_and_path_routes_never_alias_the_language) (locale='uk')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 29, in test_explicit_and_path_routes_never_alias_the_language
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'uk' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) (locale='da')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 73, in test_native_script_signals_and_citations
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'da' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) (locale='nb')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 73, in test_native_script_signals_and_citations
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'nb' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) (locale='fi')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 73, in test_native_script_signals_and_citations
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'fi' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) (locale='pl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 73, in test_native_script_signals_and_citations
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'pl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) (locale='cs')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 73, in test_native_script_signals_and_citations
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'cs' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) (locale='ro')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 73, in test_native_script_signals_and_citations
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ro' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_native_script_signals_and_citations (test_next_seven.NextSevenTests.test_native_script_signals_and_citations) (locale='uk')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 73, in test_native_script_signals_and_citations
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'uk' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) (locale='da')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 86, in test_orthographic_threshold_edges_and_real_repetition_fail
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'da' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) (locale='nb')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 86, in test_orthographic_threshold_edges_and_real_repetition_fail
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'nb' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) (locale='fi')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 86, in test_orthographic_threshold_edges_and_real_repetition_fail
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'fi' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) (locale='pl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 86, in test_orthographic_threshold_edges_and_real_repetition_fail
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'pl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) (locale='cs')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 86, in test_orthographic_threshold_edges_and_real_repetition_fail
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'cs' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) (locale='ro')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 86, in test_orthographic_threshold_edges_and_real_repetition_fail
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ro' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_orthographic_threshold_edges_and_real_repetition_fail (test_next_seven.NextSevenTests.test_orthographic_threshold_edges_and_real_repetition_fail) (locale='uk')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 86, in test_orthographic_threshold_edges_and_real_repetition_fail
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'uk' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) (locale='da')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 58, in test_preprocessing_preserves_boundaries_and_substantive_headings
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'da' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) (locale='nb')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 58, in test_preprocessing_preserves_boundaries_and_substantive_headings
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'nb' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) (locale='fi')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 58, in test_preprocessing_preserves_boundaries_and_substantive_headings
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'fi' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) (locale='pl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 58, in test_preprocessing_preserves_boundaries_and_substantive_headings
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'pl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) (locale='cs')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 58, in test_preprocessing_preserves_boundaries_and_substantive_headings
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'cs' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) (locale='ro')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 58, in test_preprocessing_preserves_boundaries_and_substantive_headings
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ro' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_preprocessing_preserves_boundaries_and_substantive_headings (test_next_seven.NextSevenTests.test_preprocessing_preserves_boundaries_and_substantive_headings) (locale='uk')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 58, in test_preprocessing_preserves_boundaries_and_substantive_headings
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'uk' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) (locale='da')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 48, in test_unicode_units_and_canonical_openers
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'da' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) (locale='nb')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 48, in test_unicode_units_and_canonical_openers
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'nb' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) (locale='fi')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 48, in test_unicode_units_and_canonical_openers
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'fi' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) (locale='pl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 48, in test_unicode_units_and_canonical_openers
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'pl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) (locale='cs')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 48, in test_unicode_units_and_canonical_openers
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'cs' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) (locale='ro')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 48, in test_unicode_units_and_canonical_openers
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ro' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+======================================================================
+FAIL: test_unicode_units_and_canonical_openers (test_next_seven.NextSevenTests.test_unicode_units_and_canonical_openers) (locale='uk')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 48, in test_unicode_units_and_canonical_openers
+    self.require(lang)
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_next_seven.py", line 24, in require
+    self.assertIn(lang, metrics.SUPPORTED, 'the actual locale must be explicitly supported')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'uk' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv') : the actual locale must be explicitly supported
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.246s
+
+FAILED (failures=42)

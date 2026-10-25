@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
+import { headers } from 'next/headers';
 import { notFound } from 'next/navigation';
 import { isSiteLocale, type SiteLocale, toBuilderLocale } from '@/lib/locales';
 import { siteContent } from '@/data/site-content';
@@ -115,8 +116,12 @@ export default async function LocaleLayout(
   const publicLocale = resolvePublicLocaleOrNotFound(params.locale);
   // WO-O22 A: read once per render so the client language switchers can link a
   // column article to its published versions and leave out languages without
-  // one. Only this language's columns are sent, not the whole column index.
-  const { index: columnIndex, columnLocales } = publicColumnSwitcherData(publicLocale);
+  // one. StaticLink navigates with ordinary anchors, so a static snapshot only
+  // needs the current article. Persistent nonstatic layouts keep the full index.
+  const switcherOptions = IS_STATIC_SITE
+    ? { staticPathname: (await headers()).get('x-tseng-pathname') }
+    : undefined;
+  const { index: columnIndex, columnLocales } = publicColumnSwitcherData(publicLocale, switcherOptions);
 
   if (isGuidanceLocale4(publicLocale)) {
     // Same chrome as the other four languages: shared header, footer and

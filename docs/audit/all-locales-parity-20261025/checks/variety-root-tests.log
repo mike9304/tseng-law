@@ -1,0 +1,23 @@
+test_every_original_profile_fixture (test_baseline_contracts.BaselineContractTests.test_every_original_profile_fixture) ... ok
+test_invalid_utf8_is_unavailable_without_traceback (test_baseline_contracts.BaselineContractTests.test_invalid_utf8_is_unavailable_without_traceback) ... ok
+test_missing_and_unapproved_thai_boundaries_stay_unavailable (test_baseline_contracts.BaselineContractTests.test_missing_and_unapproved_thai_boundaries_stay_unavailable) ... ok
+test_original_four_samples_keep_metrics_and_scores (test_baseline_contracts.BaselineContractTests.test_original_four_samples_keep_metrics_and_scores) ... ok
+test_character_units_are_not_latin_word_units (test_six_locales.SixLocaleTests.test_character_units_are_not_latin_word_units) ... ok
+test_check_closes_its_source_without_a_resource_warning (test_six_locales.SixLocaleTests.test_check_closes_its_source_without_a_resource_warning) ... ok
+test_contrasts_do_not_count_ordinary_negation (test_six_locales.SixLocaleTests.test_contrasts_do_not_count_ordinary_negation) ... ok
+test_language_signals_and_citations (test_six_locales.SixLocaleTests.test_language_signals_and_citations) ... ok
+test_opener_uses_the_language_and_canonical_unicode (test_six_locales.SixLocaleTests.test_opener_uses_the_language_and_canonical_unicode) ... ok
+test_raw_url_interior_is_not_a_sentence_boundary (test_six_locales.SixLocaleTests.test_raw_url_interior_is_not_a_sentence_boundary) ... ok
+test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass (test_six_locales.SixLocaleTests.test_repeated_neutral_prose_really_fails_and_short_inputs_do_not_pass) ... ok
+test_reserved_marker_is_an_explicit_measurement_error (test_six_locales.SixLocaleTests.test_reserved_marker_is_an_explicit_measurement_error) ... ok
+test_routes_do_not_alias_a_language (test_six_locales.SixLocaleTests.test_routes_do_not_alias_a_language) ... ok
+test_sentence_boundaries_preserve_neutral_prose (test_six_locales.SixLocaleTests.test_sentence_boundaries_preserve_neutral_prose) ... ok
+test_source_tail_is_anchored_not_a_substantive_heading (test_six_locales.SixLocaleTests.test_source_tail_is_anchored_not_a_substantive_heading) ... ok
+test_units_preserve_marks_apostrophes_and_numeric_ranges (test_six_locales.SixLocaleTests.test_units_preserve_marks_apostrophes_and_numeric_ranges) ... ok
+test_unknown_cli_locale_and_path_fail_closed (test_six_locales.SixLocaleTests.test_unknown_cli_locale_and_path_fail_closed) ... ok
+test_url_removal_retains_the_sentence_boundary (test_six_locales.SixLocaleTests.test_url_removal_retains_the_sentence_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.532s
+
+OK

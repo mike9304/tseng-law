@@ -1,0 +1,291 @@
+{
+  "locale": "th",
+  "directory": "columns-th",
+  "source_heading_pattern": "^#{1,6}\\s+(?:แหล่งกฎหมาย(?:และขั้นตอน)?|แหล่งข้อมูลทางการ)\\s*$",
+  "abbreviations": [
+    "พ.ร.บ.",
+    "พ.ร.ก.",
+    "พ.ร.ฎ.",
+    "ป.พ.พ.",
+    "ป.วิ.พ.",
+    "ป.วิ.อ.",
+    "ป.อ.",
+    "พ.ศ.",
+    "ค.ศ.",
+    "ม.ค.",
+    "ก.พ.",
+    "มี.ค.",
+    "เม.ย.",
+    "พ.ค.",
+    "มิ.ย.",
+    "ก.ค.",
+    "ส.ค.",
+    "ก.ย.",
+    "ต.ค.",
+    "พ.ย.",
+    "ธ.ค.",
+    "BLI",
+    "NPA",
+    "ATM"
+  ],
+  "contrast_patterns": [
+    "ไม่ใช่",
+    "ไม่เท่ากับ",
+    "ไม่เหมือนกับ",
+    "(?:แตก)?ต่าง(?:จาก|กัน)",
+    "เป็นคนละ(?:เรื่อง|ประเด็น)"
+  ],
+  "caveat_pattern": "^(?:อย่างไรก็ตาม|อย่างไรก็ดี|ถึงกระนั้น|กระนั้น|ทว่า|แต่(?!ละ|ง|เดิม|แรก))",
+  "hypo_pattern": "^(?:(?:ลอง)?(?:สมมติ|สมมุติ)(?!ฐาน)|ตัวอย่างสมมติ|กรณีสมมติ)",
+  "formula_close_pattern": "(?:บทความ|เนื้อหา|ข้อมูล)นี้(?:ให้|เป็น)(?:ข้อมูล|คำอธิบาย)ทั่วไป|(?:แต่ละกรณี|แต่ละคดี)(?:อาจ)?(?:แตกต่าง|ต่าง)กัน|(?:กรุณา|โปรด)ปรึกษาทนายความ",
+  "sentence_fixtures": [
+    {
+      "text": "เงินยังอยู่ กำหนดคือหกเดือน",
+      "sentences": [
+        "เงินยังอยู่",
+        "กำหนดคือหกเดือน"
+      ]
+    },
+    {
+      "text": "ศาลยังไม่รับคำขอ เราต้องแก้เอกสารก่อน",
+      "sentences": [
+        "ศาลยังไม่รับคำขอ",
+        "เราต้องแก้เอกสารก่อน"
+      ]
+    },
+    {
+      "text": "ถ้าเอกสารครบ เจ้าหน้าที่จะรับคำขอ",
+      "sentences": [
+        "ถ้าเอกสารครบ เจ้าหน้าที่จะรับคำขอ"
+      ]
+    },
+    {
+      "text": "เขาอ่านหนังสืออยู่ แต่ยังอ่านไม่จบ",
+      "sentences": [
+        "เขาอ่านหนังสืออยู่ แต่ยังอ่านไม่จบ"
+      ]
+    },
+    {
+      "text": "เขาถามว่า “ต้องส่งเมื่อไร?” เจ้าหน้าที่ตอบว่า “วันพรุ่งนี้”",
+      "sentences": [
+        "เขาถามว่า “ต้องส่งเมื่อไร?”",
+        "เจ้าหน้าที่ตอบว่า “วันพรุ่งนี้”"
+      ]
+    },
+    {
+      "text": "กำหนดคือวันที่ 5 พ.ย. พ.ศ. 2569 เอกสารยังไม่ครบ",
+      "sentences": [
+        "กำหนดคือวันที่ 5 พ.ย. พ.ศ. 2569",
+        "เอกสารยังไม่ครบ"
+      ]
+    },
+    {
+      "text": "กฎหมายฉบับนี้ใช้คำว่า พ.ร.บ. ในชื่อย่อ โปรดอ่านชื่อเต็มในเอกสาร",
+      "sentences": [
+        "กฎหมายฉบับนี้ใช้คำว่า พ.ร.บ. ในชื่อย่อ",
+        "โปรดอ่านชื่อเต็มในเอกสาร"
+      ]
+    },
+    {
+      "text": "ส่งเอกสารแล้วหรือยัง? ยังไม่ได้ส่ง",
+      "sentences": [
+        "ส่งเอกสารแล้วหรือยัง?",
+        "ยังไม่ได้ส่ง"
+      ]
+    }
+  ],
+  "word_fixtures": [
+    {
+      "text": "เงินยังอยู่",
+      "tokens": [
+        "เงิน",
+        "ยัง",
+        "อยู่"
+      ]
+    },
+    {
+      "text": "เอกสารยังไม่ครบ",
+      "tokens": [
+        "เอกสาร",
+        "ยัง",
+        "ไม่",
+        "ครบ"
+      ]
+    },
+    {
+      "text": "กำหนดคือหกเดือน",
+      "tokens": [
+        "กำหนด",
+        "คือ",
+        "หก",
+        "เดือน"
+      ]
+    },
+    {
+      "text": "ศาลยังไม่รับคำขอ",
+      "tokens": [
+        "ศาล",
+        "ยัง",
+        "ไม่",
+        "รับคำ",
+        "ขอ"
+      ]
+    },
+    {
+      "text": "ต้องยื่นคำขอภายในหกเดือน",
+      "tokens": [
+        "ต้อง",
+        "ยื่น",
+        "คำขอ",
+        "ภายใน",
+        "หก",
+        "เดือน"
+      ]
+    },
+    {
+      "text": "ผู้ยื่นต้องส่งเอกสารให้ครบก่อนวันนัด",
+      "tokens": [
+        "ผู้",
+        "ยื่น",
+        "ต้อง",
+        "ส่ง",
+        "เอกสาร",
+        "ให้",
+        "ครบ",
+        "ก่อน",
+        "วัน",
+        "นัด"
+      ]
+    },
+    {
+      "text": "เจ้าหน้าที่ต้องตรวจชื่อผู้ยื่นและเลขคำขอก่อนรับเอกสาร",
+      "tokens": [
+        "เจ้า",
+        "หน้าที่",
+        "ต้อง",
+        "ตรวจ",
+        "ชื่อ",
+        "ผู้",
+        "ยื่น",
+        "และ",
+        "เลข",
+        "คำขอ",
+        "ก่อน",
+        "รับ",
+        "เอกสาร"
+      ]
+    },
+    {
+      "text": "หากเอกสารยังไม่ครบ ผู้ยื่นควรสอบถามเจ้าหน้าที่ว่าต้องส่งอะไรเพิ่มเติม",
+      "tokens": [
+        "หาก",
+        "เอกสาร",
+        "ยัง",
+        "ไม่",
+        "ครบ",
+        "ผู้",
+        "ยื่น",
+        "ควร",
+        "สอบถาม",
+        "เจ้า",
+        "หน้าที่",
+        "ว่า",
+        "ต้อง",
+        "ส่ง",
+        "อะไร",
+        "เพิ่ม",
+        "เติม"
+      ]
+    },
+    {
+      "text": "พ.ร.บ. พ.ศ. ค.ศ. ม.ค. พ.ย.",
+      "tokens": [
+        "พ.ร.บ",
+        "พ.ศ",
+        "ค.ศ",
+        "ม.ค",
+        "พ.ย"
+      ]
+    },
+    {
+      "text": "มาตรา 22 วรรค 2",
+      "tokens": [
+        "มาตรา",
+        "22",
+        "วรรค",
+        "2"
+      ]
+    }
+  ],
+  "short_definition": {
+    "unit": "ICU Thai word-like segment; include numeric word-like segments; exclude whitespace and punctuation-only segments",
+    "short_max": 8,
+    "status": "defensible conservative operational definition, not statistically corpus-calibrated",
+    "engine": "Node Intl.Segmenter(th, granularity=word), filter isWordLike",
+    "verified_fixture_versions": {
+      "node": "v25.9.0",
+      "icu": "78.3",
+      "unicode": "17.0"
+    },
+    "shared_hard_thresholds": "unchanged: CV >= 0.45; short share >= 0.08; run3 <= 0.30; remaining common HARD rules unchanged",
+    "limitations": "Dictionary segmentation is context-sensitive and may split or join Thai compounds differently from linguistic words. Revalidate fixtures after engine upgrades. No article token counts or outcomes were used."
+  },
+  "sentence_review": {
+    "map": "thai-sentences.json",
+    "status": "reviewed-author-adjudicated",
+    "non_prose_paragraphs": [
+      {
+        "id": "662:P19",
+        "text": "ตรวจสอบเมื่อ 23 ตุลาคม ค.ศ. 2026",
+        "reason": "verification-date label; preserved in map for exact input coverage, exclude from prose metrics"
+      }
+    ],
+    "validation_policy": "Missing or stale source SHA, missing required adjudication binding, or unresolved segmentation must not produce a hard PASS. This frozen, author-adjudicated compound reading is an admissible operational segmentation, not a unique linguistic parse or a numeric PASS.",
+    "adjudicated_boundaries": [
+      {
+        "id": "659:P03",
+        "candidate_start": "ไม่เก็บเฉพาะภาพตัวเลขที่ตัดบริบทออก",
+        "original_uncertainty": "retain with preceding instruction; unpunctuated negative qualification or separate instruction",
+        "decision": "retain_previous_span",
+        "independent_review": "admissible stable authored grouping; not the only possible prosodic reading"
+      },
+      {
+        "id": "659:P10",
+        "candidate_start": "ไม่รวมเป็นตัวเลขแน่นอน",
+        "original_uncertainty": "retain with preceding instruction; negative qualification or separate instruction",
+        "decision": "retain_previous_span",
+        "independent_review": "admissible stable authored grouping; not the only possible prosodic reading"
+      },
+      {
+        "id": "661:P12",
+        "candidate_start": "ไม่ใช้คำอธิบายสิทธิของผู้ต้องสงสัยแทนกฎสำหรับพยานทุกกรณี",
+        "original_uncertainty": "retain with preceding instruction; negative qualification or separate instruction",
+        "decision": "retain_previous_span",
+        "independent_review": "admissible stable authored grouping; not the only possible prosodic reading"
+      },
+      {
+        "id": "662:P04",
+        "candidate_start": "ไม่แก้ต้นฉบับเพื่อทำให้เวลาเหมือนกัน",
+        "original_uncertainty": "retain with preceding instruction; negative qualification or separate instruction",
+        "decision": "retain_previous_span",
+        "independent_review": "admissible stable authored grouping; not the only possible prosodic reading"
+      },
+      {
+        "id": "662:P12",
+        "candidate_start": "ไม่ควรเสียค่าใช้จ่ายทำทุกฉบับก่อนทราบว่าจะใช้ในกระบวนการใด",
+        "original_uncertainty": "retain with preceding instruction; negative qualification or separate instruction",
+        "decision": "retain_previous_span",
+        "independent_review": "admissible stable authored grouping; not the only possible prosodic reading"
+      }
+    ],
+    "ambiguous_paragraphs": [],
+    "author_adjudication": {
+      "report": "th-author-boundaries.md",
+      "sha256": "da1bfc8c73cdf75557ca1dd9bb5b2022b57a0e486e6380adf8a128aff72feaf3",
+      "independent_reviewer_accepted": true,
+      "sentence_map_sha256": "8c2d2802859f62579c702c603a2efcafe8840785809e1913ac33bc59055fa700",
+      "date": "2026-10-24",
+      "scope": "five named negative-tail alternatives only; no manuscript or sentence-map change"
+    }
+  }
+}

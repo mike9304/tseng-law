@@ -337,3 +337,101 @@ describe('client-side navigation', () => {
     }
   });
 });
+
+describe('static snapshot column language data', () => {
+  beforeAll(() => {
+    // Exercise the real file-backed corpus with its normal production parse cache.
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('VITEST', '');
+  });
+  afterAll(() => {
+    vi.unstubAllEnvs();
+  });
+
+  it('sends only the current article while preserving its three real language links', () => {
+    const pathname = `/ko/columns/${COLUMN_051}`;
+    const { index, columnLocales } = publicColumnSwitcherData('ko', { staticPathname: pathname });
+    expect(index.columns).toEqual({ [COLUMN_051]: 0 });
+    expect(index.clusters).toEqual([['ko', 'zh-hant', 'en']]);
+    expect(appFooterHrefs('ko', pathname, index)).toEqual([
+      `/ko/columns/${COLUMN_051}`,
+      `/zh-hant/columns/${COLUMN_051}`,
+      `/en/columns/${COLUMN_051}`,
+    ]);
+    expect(columnLocales).toEqual(PUBLIC_LOCALES_8);
+    expect(columnLocales).toHaveLength(49);
+  });
+
+  it('retains all 49 published links from every locale without carrying other article slugs', () => {
+    const expected = PUBLIC_LOCALES_8.map((locale) => `/${locale}/columns/${ALL_LOCALE_COLUMN}`);
+    for (const locale of PUBLIC_LOCALES_8) {
+      const pathname = `/${locale}/columns/${ALL_LOCALE_COLUMN}`;
+      const { index } = publicColumnSwitcherData(locale, { staticPathname: pathname });
+      expect(Object.keys(index.columns), locale).toEqual([ALL_LOCALE_COLUMN]);
+      expect(index.clusters, locale).toEqual([PUBLIC_LOCALES_8]);
+      expect(appFooterHrefs(locale, pathname, index), locale).toEqual(expected);
+      expect(pickerHrefs(locale, pathname, columnLanguageLinksFromIndex(pathname, index)).sort(), locale)
+        .toEqual([...expected].sort());
+    }
+  });
+
+  it.each(['/ko', '/ko/', '/ko/columns', '/ko/columns/', '/ko/columns/issues', '/ko/search', '/ko/services/civil'])
+  ('omits article mappings on the non-article snapshot %s and keeps all language choices', (pathname) => {
+    const { index, columnLocales } = publicColumnSwitcherData('ko', { staticPathname: pathname });
+    expect(index).toEqual({ locale: 'ko', clusters: [], columns: {} });
+    expect(columnLocales).toEqual(PUBLIC_LOCALES_8);
+    expect(appFooterHrefs('ko', pathname, index)).toHaveLength(49);
+  });
+
+  it('keeps unknown, CMS-only, untranslated and issue articles restricted to their current language', () => {
+    for (const [locale, pathname] of [
+      ['ko', '/ko/columns/missing-column-for-static-scope'],
+      ['ko', '/ko/columns/builder-only-fixture-column'],
+      ['ko', '/ko/columns/constructor'],
+      ['ja', `/ja/columns/${COLUMN_051}`],
+      ['ko', '/ko/columns/issues/issue-only-fixture'],
+    ] as const) {
+      const { index, columnLocales } = publicColumnSwitcherData(locale, { staticPathname: pathname });
+      expect(index, pathname).toEqual({ locale, clusters: [], columns: {} });
+      expect(columnLocales, pathname).toEqual(PUBLIC_LOCALES_8);
+      expect(appFooterHrefs(locale, pathname, index), pathname).toEqual([pathname]);
+    }
+  });
+
+  it('accepts one trailing slash without changing the current article cluster', () => {
+    const { index } = publicColumnSwitcherData('ko', { staticPathname: `/ko/columns/${COLUMN_051}/` });
+    expect(index.columns).toEqual({ [COLUMN_051]: 0 });
+    expect(index.clusters).toEqual([['ko', 'zh-hant', 'en']]);
+  });
+
+  it.each([
+    undefined, null, '', '/', 'ko/columns/taiwan-company-establishment-basics',
+    '/en/columns/taiwan-company-establishment-basics',
+    '/KO/columns/taiwan-company-establishment-basics',
+    '/ko//columns/taiwan-company-establishment-basics',
+    '/ko/columns/taiwan-company-establishment-basics/extra',
+    '/ko/columns/taiwan-company-establishment-basics?topic=company',
+    '/ko/columns/taiwan-company-establishment-basics#section',
+    '/ko/columns/../taiwan-company-establishment-basics',
+    '/ko/columns/taiwan_company_establishment_basics',
+    '/ko/columns/%74aiwan-company-establishment-basics',
+    '/ko/columns/taiwan%2Fcompany', '/ko/columns/%E0%A4%A',
+    '/ko/columns/taiwan%252Fcompany', '/ko/columns/taiwan\\company',
+    '/ko/columns/taiwan\ncompany', 'https://tseng-law.com/ko/columns/test',
+  ])('falls back to the full navigation index for absent or ambiguous pathname %s', (staticPathname) => {
+    const { index } = publicColumnSwitcherData('ko', { staticPathname });
+    expect(Object.keys(index.columns)).toContain(COLUMN_051);
+    expect(Object.keys(index.columns)).toContain(ALL_LOCALE_COLUMN);
+    expect(Object.keys(index.columns).length).toBeGreaterThan(2);
+    expect(appFooterHrefs('ko', `/ko/columns/${COLUMN_051}`, index)).toHaveLength(3);
+    expect(appFooterHrefs('ko', `/ko/columns/${ALL_LOCALE_COLUMN}`, index)).toHaveLength(49);
+  });
+
+  it('keeps the ordinary SPA index complete when no static snapshot option is supplied', () => {
+    const { index } = publicColumnSwitcherData('ko');
+    expect(Object.keys(index.columns)).toContain(COLUMN_051);
+    expect(Object.keys(index.columns)).toContain(ALL_LOCALE_COLUMN);
+    expect(appFooterHrefs('ko', `/ko/columns/${COLUMN_051}`, index)).toHaveLength(3);
+    expect(appFooterHrefs('ko', `/ko/columns/${ALL_LOCALE_COLUMN}`, index)).toHaveLength(49);
+  });
+});

@@ -1,0 +1,62 @@
+{
+  "source_commit": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+  "source_directory": "docs/audit/arc-visas-20261024/tooling/vi/candidate",
+  "files": {
+    "MULTILINGUAL-METHOD.md": {
+      "sha256": "124c841548f4f425b4ba1017729803496dee7ed55e5667b2d3565a816995ae82",
+      "bytes": 8404
+    },
+    "build-rewrite-queue.py": {
+      "sha256": "510cc4881b562713699a0f208df96e1ecc5d01ca66f0add49e876c95c3a9ce59",
+      "bytes": 3086
+    },
+    "profiles/ar.json": {
+      "sha256": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+      "bytes": 10819
+    },
+    "profiles/de.json": {
+      "sha256": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+      "bytes": 3586
+    },
+    "profiles/es.json": {
+      "sha256": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+      "bytes": 3427
+    },
+    "profiles/fr.json": {
+      "sha256": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+      "bytes": 3697
+    },
+    "profiles/hi.json": {
+      "sha256": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+      "bytes": 5871
+    },
+    "profiles/id.json": {
+      "sha256": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+      "bytes": 4790
+    },
+    "profiles/it.json": {
+      "sha256": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+      "bytes": 3396
+    },
+    "profiles/pt.json": {
+      "sha256": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+      "bytes": 3543
+    },
+    "profiles/th.json": {
+      "sha256": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+      "bytes": 11602
+    },
+    "profiles/vi.json": {
+      "sha256": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+      "bytes": 12203
+    },
+    "variety_metrics.py": {
+      "sha256": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38",
+      "bytes": 19991
+    },
+    "variety_multilingual.py": {
+      "sha256": "bb6bb2e8b18496b4422d291c2d273f119e4038e2d20005e6231e85c4c11b8c8b",
+      "bytes": 16702
+    }
+  }
+}

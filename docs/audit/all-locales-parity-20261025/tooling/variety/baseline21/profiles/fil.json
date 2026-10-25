@@ -1,0 +1,14 @@
+{
+  "locale": "fil",
+  "directory": "columns-fil",
+  "review_status": "AI-authored neutral contract; coordinating review pending",
+  "join_hyphens": true,
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:(?:Mga\\s+)?(?:opisyal\\s+na\\s+)?sanggunian(?:\\s+at\\s+petsa\\s+ng\\s+pagberipika)?)\\s*:?\\s*$)",
+  "abbreviations": ["Dr", "G", "Gng", "Bb", "Blg", "Art", "Sek", "hal", "atbp"],
+  "terminal_abbreviations": ["atbp"],
+  "contrast_patterns": ["(?i:\\bhindi\\b[^.!?\\n]{0,180}\\b(?:kundi|bagkus)\\b)", "(?i:\\bsa\\s+halip\\s+na\\b)", "(?i:\\bnaiiba\\s+sa\\b)"],
+  "caveat_pattern": "(?i:^\\s*[“\"(]*(?:gayunman|gayunpaman|subalit|ngunit)\\b)",
+  "hypo_pattern": "(?i:^\\s*[“\"(]*(?:ipagpalagay|halimbawa|isipin)\\b)",
+  "formula_close_pattern": "(?i:ang\\s+artikulong\\s+ito\\s+ay\\s+(?:para\\s+sa\\s+)?pangkalahatang\\s+impormasyon|makatutulong\\s+ang\\s+aming\\s+opisina)",
+  "citation_pattern": "(?i:\\b(?:Artikulo|Seksyon|Art\\.|Sek\\.)\\s*\\d+)"
+}

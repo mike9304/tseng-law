@@ -1,0 +1,4 @@
+# Preserve exact terminal output, including progress CRs and unittest spacing.
+# Manuscripts, implementation and ordinary Markdown retain whitespace checks.
+checks/*.log -whitespace
+tooling/variety/tests-*.txt -whitespace

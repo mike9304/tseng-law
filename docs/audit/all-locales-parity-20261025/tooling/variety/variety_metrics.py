@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sentence-variety / monotony metrics for twenty-eight tseng-law column locales.
+"""Sentence-variety / monotony metrics for thirty-five tseng-law column locales.
 
   variety_metrics.py check FILE [--lang LOCALE] [--sentences REVIEWED_MAP]
   variety_metrics.py corpus DIR [--out DIR2]
@@ -74,7 +74,7 @@ def unlink(p):
 
 ABBR = re.compile(r'\b(art|arts|No|Nos|e\.g|i\.e|U\.S|Mr|Ms|Dr|para|paras|Inc|Ltd|Co|vs|cf|p|pp|St)\.$', re.I)
 def sentences(p, lang, sentence_map=None):
-    p = multilingual.expansion.visible_text(p) if lang in multilingual.expansion.LANGUAGES else unlink(p)
+    p = multilingual.expansion.visible_text(p, multilingual.profile(lang).get('additional_sentence_terminators', '')) if lang in multilingual.expansion.LANGUAGES else unlink(p)
     if lang in multilingual.LANGUAGES:
         return multilingual.split_sentences(p, lang, sentence_map)
     if lang == 'en':
@@ -94,7 +94,7 @@ def slen(s, lang):
     return len(re.sub(r'\s', '', re.sub(r'\([^)]*\)|（[^）]*）', '', s)))  # drop parenthetical citations from length
 
 def opener(p, lang):
-    s = (multilingual.expansion.visible_text(p) if lang in multilingual.expansion.LANGUAGES else unlink(p)).strip()
+    s = (multilingual.expansion.visible_text(p, multilingual.profile(lang).get('additional_sentence_terminators', '')) if lang in multilingual.expansion.LANGUAGES else unlink(p)).strip()
     if lang in multilingual.expansion.LANGUAGES:
         return multilingual.expansion.opener(s, lang, multilingual.profile(lang), multilingual.words(s, lang))
     if lang in multilingual.LANGUAGES:
@@ -141,7 +141,7 @@ def metrics(text, lang, sentence_map=None):
     opc = collections.Counter(ops)
     ends = collections.Counter(ending(s, lang) for s in S)
     body = '\n'.join(paras)
-    plain = multilingual.expansion.visible_text(body) if lang in multilingual.expansion.LANGUAGES else unlink(body)
+    plain = multilingual.expansion.visible_text(body, multilingual.profile(lang).get('additional_sentence_terminators', '')) if lang in multilingual.expansion.LANGUAGES else unlink(body)
     cite_pattern = CITE
     if extended:
         cite_pattern = re.compile(CITE.pattern + r'|(?:§|art[íi]culos?|articol[oi]|artigos?|Artikel|Pasal|धारा|अनुच्छेद|المادة|المواد|มาตรา)\s*\d+', re.I)
@@ -153,7 +153,8 @@ def metrics(text, lang, sentence_map=None):
     cite_paras = sum(1 for p in paras if cite_pattern.search(multilingual.unicodedata.normalize('NFC', p) if normalize_comparisons else p))
     # sentence that closes with a (statute/judgment) parenthesis
     def _ce(x):
-        x = x.rstrip(' .。।॥!?！？؟' if extended else ' .。')
+        tail = ' .。।॥!?！？؟' + language_profile.get('additional_sentence_terminators', '') if extended else ' .。'
+        x = x.rstrip(tail)
         m = re.search(r'[(（]([^()（）]*)[)）]$', x)
         return bool(m and cite_pattern.search(multilingual.unicodedata.normalize('NFC', m.group(1)) if normalize_comparisons else m.group(1)))
     cite_end = sum(1 for s in S if _ce(s))
@@ -161,6 +162,8 @@ def metrics(text, lang, sentence_map=None):
     caveat_pattern = language_profile['caveat_pattern'] if extended else CAVEAT[lang]
     caveat = sum(1 for s in S if re.search(caveat_pattern, multilingual.unicodedata.normalize('NFC', s) if normalize_comparisons else s))
     question_pattern = r'[?？؟]\s*["”」』)]?$' if extended else r'[?？]\s*["”」』)]?$'
+    if extended:
+        question_pattern = language_profile.get('question_pattern', question_pattern)
     q = sum(1 for s in S if re.search(question_pattern, s))
     digits = len(re.findall(r'\d+', plain))
     nchar = len(multilingual.words(plain, lang)) if extended else (len(re.sub(r'\s', '', plain)) if lang != 'en' else len(plain.split()))
@@ -192,7 +195,7 @@ def metrics(text, lang, sentence_map=None):
              contrast=contrast, caveat=caveat, questions=q,
              num_per100=round(100 * digits / max(1, nchar), 2),
              hypo_open=bool(re.search(language_profile['hypo_pattern'] if extended else HYPO[lang], first)) or bool(re.search(language_profile['hypo_pattern'] if extended else HYPO[lang], unlink(paras[0])[:80])),
-             q_open=bool(re.search(r'[?？؟]' if extended else r'[?？]', first)),
+             q_open=bool(re.search(language_profile.get('question_open_pattern', r'[?？؟]') if extended else r'[?？]', first)),
              formula_close=bool(re.search(language_profile['formula_close_pattern'] if extended else FORMULA_CLOSE[lang], last)),
              first=first[:90], last=last[:120])
     if extended:

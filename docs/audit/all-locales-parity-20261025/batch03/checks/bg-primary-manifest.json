@@ -1,0 +1,24 @@
+{
+  "modelAuthor": "kimi-code/k3.1-pro",
+  "editor": "root",
+  "originals": "/Users/son7/tseng-all-language-columns-20261025/kimi-work/output-bg",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-bg/704-taiwan-arc-first-application.md",
+      "sha256": "4b499ba4c8061aff37c82173b62b6ca4c6ddc6d727de56db9ac98b2e8dbb3b30"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-bg/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "230ab8d78911e8d823e1f0bc7583eb110bc6c7097b51f04c146b54f78ac34129"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-bg/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "cc7b8b8e14d9235e83ec69aaaa97a84a2b54931dbbea7e88a8625144db964a62"
+    }
+  ],
+  "diffs": [
+    "bg-primary-704.diff",
+    "bg-primary-705.diff",
+    "bg-primary-706.diff"
+  ]
+}

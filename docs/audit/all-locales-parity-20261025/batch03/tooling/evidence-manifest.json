@@ -1,0 +1,127 @@
+{
+  "installedProductionManifest": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix-is/IS-FIX-VERIFICATION.json",
+  "files": [
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety/NEXT7-VERIFICATION.json",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety/NEXT7-VERIFICATION.json",
+      "sha256": "be3644a323c3e442eba9a0740bf8b8f12866d55e853f04c566aca3a66ec528c4"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety/root-tests.log",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety/root-tests.log",
+      "sha256": "cacd7afc76d869603795dbcc9056999800ed287f255026863489e2c9ca4d63af"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety/BATCH03-VERIFICATION.json",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety/BATCH03-VERIFICATION.json",
+      "sha256": "88f18ae22a2a67394d271a573d2cb19e61a2674e658286dc22689dbb4ddebe15"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety/METHOD-BATCH03.md",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety/METHOD-BATCH03.md",
+      "sha256": "586b86b3f3101004b8dcf2c845c986c67aa7e232b72bdfe963f43e9e64393fc4"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety/BATCH03-REPORT.md",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety/BATCH03-REPORT.md",
+      "sha256": "af8f39c47321a973022288393b5a12d5a8c3bf186b91b3b7713943e4a3511384"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety/BATCH03-DELTA.patch",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety/BATCH03-DELTA.patch",
+      "sha256": "ca035ed830de25a954c53e179acaed2d9757d5cf559b2b6309126ccbb880b4ce"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety/root-installation.json",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety/root-installation.json",
+      "sha256": "45808c222902ea719ec8ffa237c0859bfbbfeb4b81619fb52e42e3f024614d16"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix/ORDINAL-FIX-REPORT.md",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix/ORDINAL-FIX-REPORT.md",
+      "sha256": "6d446c7de28b2582430f9d74c77863543072c3a49ab9f7e2502ec51658c7e984"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix/root-tests.log",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix/root-tests.log",
+      "sha256": "4d9879679a970adee6e13d20dfa95259b64cfe416a417219433fa44ea699de71"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix/ORDINAL-FIX-VERIFICATION.json",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix/ORDINAL-FIX-VERIFICATION.json",
+      "sha256": "d893e1e0751cafc3712308a973ec400f0d068c28e08a4a26958879d9fe855486"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix/METHOD-ORDINAL-FIX.md",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix/METHOD-ORDINAL-FIX.md",
+      "sha256": "71b4514511b4d836f539d854d3cc0f17ff142f47a3c10c32efcc7a9d71bbef59"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix/BATCH03-VERIFICATION.json",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix/BATCH03-VERIFICATION.json",
+      "sha256": "88f18ae22a2a67394d271a573d2cb19e61a2674e658286dc22689dbb4ddebe15"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix/METHOD-BATCH03.md",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix/METHOD-BATCH03.md",
+      "sha256": "586b86b3f3101004b8dcf2c845c986c67aa7e232b72bdfe963f43e9e64393fc4"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix/root-installation.json",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix/root-installation.json",
+      "sha256": "97a8c4d5c29e67b4926e12c77d40041cbf39acc47367d974a8c25cc96b698671"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix/ORDINAL-FIX-DELTA.patch",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix/ORDINAL-FIX-DELTA.patch",
+      "sha256": "ffaccf01275deb65f624f650be5a3008aa7625dc9ec4a437fde145eaa66e56a1"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix-is/root-tests.log",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix-is/root-tests.log",
+      "sha256": "ca9c2e86d529e4f7d40f4fbc49518783e73f39be05f0151b44e86c2a7919ee30"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix-is/IS-FIX-VERIFICATION.json",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix-is/IS-FIX-VERIFICATION.json",
+      "sha256": "88ddc91ebf09fd4d46d7dd0090156a4f2978a909afcfc91c0d53b781fc1422fd"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix-is/METHOD-ORDINAL-FIX.md",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix-is/METHOD-ORDINAL-FIX.md",
+      "sha256": "71b4514511b4d836f539d854d3cc0f17ff142f47a3c10c32efcc7a9d71bbef59"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix-is/IS-FIX-DELTA.patch",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix-is/IS-FIX-DELTA.patch",
+      "sha256": "8ae1e1a235cecf9191a2b4cb5a6f43b26e3d2522670e0918e4ec97ab07f28b3c"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix-is/METHOD-BATCH03.md",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix-is/METHOD-BATCH03.md",
+      "sha256": "586b86b3f3101004b8dcf2c845c986c67aa7e232b72bdfe963f43e9e64393fc4"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix-is/IS-FIX-REPORT.md",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix-is/IS-FIX-REPORT.md",
+      "sha256": "709bc0876a310fa9dc2f621a505bd3d24ecbbc9eed3958f3a469a229c1a4c0e0"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix-is/root-installation.json",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix-is/root-installation.json",
+      "sha256": "ea73b8f4b907cc2f3e464077e881c143f004082e0cd37e272546368d4fbb85f1"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix-is/root-tests-node24.log",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix-is/root-tests-node24.log",
+      "sha256": "e971026f8a3a0ceb0fcc3337578d565ba49da6ee3886e1e0aa52cfdf4c7791cd"
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix-is/METHOD-IS-FIX.md",
+      "copy": "docs/audit/all-locales-parity-20261025/batch03/tooling/variety-fix-is/METHOD-IS-FIX.md",
+      "sha256": "12c7733b54947f3471fca211897a041758ac220a93809b28300a75e98ed99482"
+    }
+  ],
+  "fullDevelopmentArchives": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling",
+  "note": "Full snapshots and pre-fix failures remain in the local development archives; production code and executable neutral test fixtures are mirrored in ../tooling/variety."
+}

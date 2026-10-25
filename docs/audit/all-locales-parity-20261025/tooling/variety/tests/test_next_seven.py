@@ -103,7 +103,7 @@ class NextSevenTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             p = Path(folder) / 'unknown.md'
             p.write_text('Neutral sentence.\n\n' * 8)
-            for args in ([], ['--lang', 'bg'], ['--lang', 'nn'], ['--lang', 'no'], ['--lang', 'xx']):
+            for args in ([], ['--lang', 'et'], ['--lang', 'nn'], ['--lang', 'no'], ['--lang', 'xx']):
                 run = subprocess.run([sys.executable, str(ROOT / 'variety_metrics.py'), 'check', str(p), *args], capture_output=True, text=True, env={**os.environ, 'PYTHONDONTWRITEBYTECODE': '1'})
                 self.assertEqual(run.returncode, 2)
                 self.assertNotIn('Traceback', run.stderr)

@@ -1,0 +1,150 @@
+{
+  "bg": {
+    "sentences": [
+      ["Копието е тук. Вратата е отворена! Кой пристига?", ["Копието е тук.", "Вратата е отворена!", "Кой пристига?"]],
+      ["Д-р И. Петров прочете чл. 2. Копието остана тук.", ["Д-р И. Петров прочете чл. 2.", "Копието остана тук."]],
+      ["Текстът е на стр. 4, т.е. в началото. Копието е тук.", ["Текстът е на стр. 4, т.е. в началото.", "Копието е тук."]],
+      ["Има книги, тетрадки и т.н. После затвориха шкафа.", ["Има книги, тетрадки и т.н.", "После затвориха шкафа."]],
+      ["Това стана през 2026 г. После заваля.", ["Това стана през 2026 г.", "После заваля."]],
+      ["Стаята е за 3. клас. Другата е затворена.", ["Стаята е за 3. клас.", "Другата е затворена."]],
+      ["Тя каза: „Готово е.“ После тръгна.", ["Тя каза: „Готово е.“", "После тръгна."]],
+      ["„Готово ли е?“ попита тя. Вратата остана отворена.", ["„Готово ли е?“ попита тя.", "Вратата остана отворена."]],
+      ["Цената е 12,50 лв. Копието е тук.", ["Цената е 12,50 лв.", "Копието е тук."]]
+    ],
+    "words": [["по-дълъг текст 12,50 1 000 1 000", ["по-дълъг", "текст", "12,50", "1", "000", "1", "000"]], ["3–5 дни\tкопие", ["3", "5", "дни", "копие"]]],
+    "openers": [["„Копието е тук.“", "копието"], ["Йордан чете.", "йордан"]],
+    "sources": ["## Източници", "### Официални източници", "## 2. Използвани източници:"],
+    "not_sources": ["## Източници на доходи", "## Проверка на източниците"],
+    "contrast": [["Не копието, а оригиналът е тук.", 1], ["За разлика от копието, оригиналът е тук.", 1], ["Копието не е тук.", 0], ["Копието не е тук. А оригиналът е готов.", 0]],
+    "caveat": "Обаче копието е тук.", "hypothetical": "Да предположим, че копието е тук.", "citation": "Копието е тук (чл. 2).", "formula": "Тази статия предоставя обща информация.",
+    "url": ["Адресът е https://example.test/a?x=1. Копието е тук.", ["Адресът е .", "Копието е тук."]]
+  },
+  "ca": {
+    "sentences": [
+      ["La còpia és aquí. La porta és oberta! Qui arriba?", ["La còpia és aquí.", "La porta és oberta!", "Qui arriba?"]],
+      ["La Dra. M. Serra llegeix l'art. 2. La còpia queda aquí.", ["La Dra. M. Serra llegeix l'art. 2.", "La còpia queda aquí."]],
+      ["Llegim la pàg. 4, p. ex., al matí. Després tanquem el llibre.", ["Llegim la pàg. 4, p. ex., al matí.", "Després tanquem el llibre."]],
+      ["Hi ha llibres, carpetes, etc. Després tanquem l'armari.", ["Hi ha llibres, carpetes, etc.", "Després tanquem l'armari."]],
+      ["El 2n. pis és obert. La porta és aquí.", ["El 2n. pis és obert.", "La porta és aquí."]],
+      ["El 5è. capítol és curt. El següent és llarg.", ["El 5è. capítol és curt.", "El següent és llarg."]],
+      ["El 2n. Congrés comença avui. La sala és oberta.", ["El 2n. Congrés comença avui.", "La sala és oberta."]],
+      ["Va acabar 1r. Després va marxar.", ["Va acabar 1r.", "Després va marxar."]],
+      ["Va dir: «Ja és aquí.» Després va sortir.", ["Va dir: «Ja és aquí.»", "Després va sortir."]],
+      ["«Ja és aquí?» preguntà ella. La porta era oberta.", ["«Ja és aquí?» preguntà ella.", "La porta era oberta."]],
+      ["El preu és 1.234,50 euros. La còpia és aquí.", ["El preu és 1.234,50 euros.", "La còpia és aquí."]]
+    ],
+    "words": [["L’alumnat del col·legi pot llegir-lo avui.", ["L’alumnat", "del", "col·legi", "pot", "llegir-lo", "avui"]], ["COĿLEGI col·laborar 1.234,50 1 000 3–5", ["COĿLEGI", "col·laborar", "1.234,50", "1", "000", "3", "5"]], ["a·b l·x l·l L·L", ["a", "b", "l", "x", "l·l", "L·L"]]],
+    "openers": [["«L’alumnat arriba.»", "l’alumnat"], ["Àngels llegeix.", "àngels"]],
+    "sources": ["## Fonts", "### Fonts oficials", "## Referències:"],
+    "not_sources": ["## Fonts d'ingressos", "## Com comprovar les fonts"],
+    "contrast": [["No és una còpia, sinó l'original.", 1], ["A diferència de la còpia, l'original és aquí.", 1], ["No hi ha cap còpia.", 0], ["No hi ha còpia. Però la porta és oberta.", 0]],
+    "caveat": "Tanmateix, la còpia és aquí.", "hypothetical": "Suposem que la còpia és aquí.", "citation": "La còpia és aquí (art. 2).", "formula": "Aquest article ofereix informació general.",
+    "url": ["L'adreça és https://example.test/a?x=1. La còpia és aquí.", ["L'adreça és .", "La còpia és aquí."]]
+  },
+  "el": {
+    "sentences": [
+      ["Το αντίγραφο είναι εδώ. Η πόρτα είναι ανοιχτή! Ποιος έρχεται;", ["Το αντίγραφο είναι εδώ.", "Η πόρτα είναι ανοιχτή!", "Ποιος έρχεται;"]],
+      ["Ο κ. Ν. Πέτρου διαβάζει το άρθ. 2. Το αντίγραφο μένει εδώ.", ["Ο κ. Ν. Πέτρου διαβάζει το άρθ. 2.", "Το αντίγραφο μένει εδώ."]],
+      ["Διαβάζει π.χ. τη σελ. 4 κάθε πρωί. Μετά κλείνει το βιβλίο.", ["Διαβάζει π.χ. τη σελ. 4 κάθε πρωί.", "Μετά κλείνει το βιβλίο."]],
+      ["Υπάρχουν βιβλία, τετράδια κ.λπ. Μετά κλείνουν το ντουλάπι.", ["Υπάρχουν βιβλία, τετράδια κ.λπ.", "Μετά κλείνουν το ντουλάπι."]],
+      ["Ποιος έρχεται; Η πόρτα είναι ανοιχτή.", ["Ποιος έρχεται;", "Η πόρτα είναι ανοιχτή."]],
+      ["Το χαρτί είναι εδώ· το βιβλίο είναι εκεί. Μετά φεύγουν.", ["Το χαρτί είναι εδώ· το βιβλίο είναι εκεί.", "Μετά φεύγουν."]],
+      ["Το χαρτί είναι εδώ· το βιβλίο είναι εκεί. Μετά φεύγουν.", ["Το χαρτί είναι εδώ· το βιβλίο είναι εκεί.", "Μετά φεύγουν."]],
+      ["Είπε: «Έφτασε.» Μετά έφυγε.", ["Είπε: «Έφτασε.»", "Μετά έφυγε."]],
+      ["«Έφτασε;» ρώτησε εκείνη. Η πόρτα ήταν ανοιχτή.", ["«Έφτασε;» ρώτησε εκείνη.", "Η πόρτα ήταν ανοιχτή."]],
+      ["Η τιμή είναι 1.234,50 ευρώ. Το αντίγραφο είναι εδώ.", ["Η τιμή είναι 1.234,50 ευρώ.", "Το αντίγραφο είναι εδώ."]]
+    ],
+    "words": [["γι’ αυτό προς την έξοδο", ["γι", "αυτό", "προς", "την", "έξοδο"]], ["κείμενο·βιβλίο 1.234,50 1 000 3–5", ["κείμενο", "βιβλίο", "1.234,50", "1", "000", "3", "5"]]],
+    "openers": [["«Όμως είναι εδώ.»", "όμως"], ["Κόσμος υπάρχει.", "κόσμοσ"]],
+    "sources": ["## Πηγές", "### Επίσημες πηγές", "## Βιβλιογραφία:"],
+    "not_sources": ["## Πηγές εισοδήματος", "## Έλεγχος των πηγών"],
+    "contrast": [["Δεν είναι αντίγραφο, αλλά πρωτότυπο.", 1], ["Σε αντίθεση με το αντίγραφο, το πρωτότυπο είναι εδώ.", 1], ["Το αντίγραφο δεν είναι εδώ.", 0], ["Δεν είναι εδώ; Αλλά η πόρτα είναι ανοιχτή.", 0], ["Δεν είναι εδώ; Αλλά η πόρτα είναι ανοιχτή.", 0]],
+    "caveat": "Ωστόσο, το αντίγραφο είναι εδώ.", "hypothetical": "Ας υποθέσουμε ότι το αντίγραφο είναι εδώ.", "citation": "Το αντίγραφο είναι εδώ (άρθρο 2).", "formula": "Το άρθρο αυτό παρέχει γενικές πληροφορίες.",
+    "url": ["Η διεύθυνση είναι https://example.test/a?x=1. Το αντίγραφο είναι εδώ.", ["Η διεύθυνση είναι .", "Το αντίγραφο είναι εδώ."]],
+    "questions": ["Ποιος έρχεται;", "Ποιος έρχεται;", "«Ποιος έρχεται;»", "«Ποιος έρχεται;»"]
+  },
+  "hr": {
+    "sentences": [
+      ["Kopija je ovdje. Vrata su otvorena! Tko dolazi?", ["Kopija je ovdje.", "Vrata su otvorena!", "Tko dolazi?"]],
+      ["Dr. I. Kovač čita čl. 2. Kopija ostaje ovdje.", ["Dr. I. Kovač čita čl. 2.", "Kopija ostaje ovdje."]],
+      ["Čita npr. str. 4 svako jutro. Zatim zatvara knjigu.", ["Čita npr. str. 4 svako jutro.", "Zatim zatvara knjigu."]],
+      ["Tu su knjige, mape itd. Zatim zatvaraju ormar.", ["Tu su knjige, mape itd.", "Zatim zatvaraju ormar."]],
+      ["Soba je na 3. katu. Druga je zatvorena.", ["Soba je na 3. katu.", "Druga je zatvorena."]],
+      ["Čitamo IV. poglavlje danas. Knjiga je otvorena.", ["Čitamo IV. poglavlje danas.", "Knjiga je otvorena."]],
+      ["Došao je 3. listopada 2026. godine. Zatim je otišao.", ["Došao je 3. listopada 2026. godine.", "Zatim je otišao."]],
+      ["Rekla je: „Gotovo je.“ Zatim je otišla.", ["Rekla je: „Gotovo je.“", "Zatim je otišla."]],
+      ["„Je li gotovo?“ pitala je. Vrata su ostala otvorena.", ["„Je li gotovo?“ pitala je.", "Vrata su ostala otvorena."]],
+      ["Cijena je 1.234,50 eura. Kopija je ovdje.", ["Cijena je 1.234,50 eura.", "Kopija je ovdje."]]
+    ],
+    "words": [["hrvatsko-engleski tekst 12,50 1 000", ["hrvatsko-engleski", "tekst", "12,50", "1", "000"]], ["čitanje\t3–5 stranica", ["čitanje", "3", "5", "stranica"]]],
+    "openers": [["„Članak je ovdje.“", "članak"], ["Đuro čita.", "đuro"]],
+    "sources": ["## Izvori", "### Službeni izvori", "## Literatura:"],
+    "not_sources": ["## Izvori prihoda", "## Provjera izvora"],
+    "contrast": [["Nije kopija, nego izvornik.", 1], ["Za razliku od kopije, izvornik je ovdje.", 1], ["Kopija nije ovdje.", 0], ["Kopija nije ovdje. Ali vrata su otvorena.", 0]],
+    "caveat": "Međutim, kopija je ovdje.", "hypothetical": "Pretpostavimo da je kopija ovdje.", "citation": "Kopija je ovdje (čl. 2).", "formula": "Ovaj članak pruža opće informacije.",
+    "url": ["Adresa je https://example.test/a?x=1. Kopija je ovdje.", ["Adresa je .", "Kopija je ovdje."]]
+  },
+  "hu": {
+    "sentences": [
+      ["A másolat itt van. Az ajtó nyitva van! Ki érkezik?", ["A másolat itt van.", "Az ajtó nyitva van!", "Ki érkezik?"]],
+      ["Dr. K. Anna olvassa a 2. fejezetet. A könyv itt marad.", ["Dr. K. Anna olvassa a 2. fejezetet.", "A könyv itt marad."]],
+      ["Elolvassa pl. a rövid részt. Utána becsukja a könyvet.", ["Elolvassa pl. a rövid részt.", "Utána becsukja a könyvet."]],
+      ["Vannak könyvek, füzetek stb. Utána bezárják a szekrényt.", ["Vannak könyvek, füzetek stb.", "Utána bezárják a szekrényt."]],
+      ["A IX. kerületben van. Az ajtó nyitva marad.", ["A IX. kerületben van.", "Az ajtó nyitva marad."]],
+      ["A 2026. október 25. napján érkezett levél itt van. Utána elmentünk.", ["A 2026. október 25. napján érkezett levél itt van.", "Utána elmentünk."]],
+      ["A szám 25. Ez már másik mondat.", ["A szám 25.", "Ez már másik mondat."]],
+      ["Azt mondta: „Kész van.” Utána elment.", ["Azt mondta: „Kész van.”", "Utána elment."]],
+      ["„Kész van?” kérdezte. Az ajtó nyitva maradt.", ["„Kész van?” kérdezte.", "Az ajtó nyitva maradt."]],
+      ["Az ár 1.234,50 forint. A másolat itt van.", ["Az ár 1.234,50 forint.", "A másolat itt van."]]
+    ],
+    "words": [["magyar-angol szöveg 12,50 1 000", ["magyar-angol", "szöveg", "12,50", "1", "000"]], ["tűz\t3–5 oldal", ["tűz", "3", "5", "oldal"]]],
+    "openers": [["„Árvíz volt.”", "árvíz"], ["Ő olvas.", "ő"]],
+    "sources": ["## Források", "### Hivatalos források", "## Hivatkozások:"],
+    "not_sources": ["## A források ellenőrzése", "## Források és bevételek"],
+    "contrast": [["Nem másolat, hanem eredeti.", 1], ["A másolattal ellentétben az eredeti itt van.", 1], ["A másolat nincs itt.", 0], ["Nem jött el. Hanem valaki más érkezett.", 0]],
+    "caveat": "Azonban a másolat itt van.", "hypothetical": "Tegyük fel, hogy a másolat itt van.", "citation": "A másolat itt van (2. §).", "formula": "Ez a cikk általános tájékoztatást nyújt.",
+    "url": ["A cím https://example.test/a?x=1. A másolat itt van.", ["A cím .", "A másolat itt van."]]
+  },
+  "is": {
+    "sentences": [
+      ["Afritið er hér. Dyrnar eru opnar! Hver kemur?", ["Afritið er hér.", "Dyrnar eru opnar!", "Hver kemur?"]],
+      ["Dr. J. Jónsson les gr. 2. Afritið verður hér.", ["Dr. J. Jónsson les gr. 2.", "Afritið verður hér."]],
+      ["Hún les t.d. bls. 4 á morgnana. Síðan lokar hún bókinni.", ["Hún les t.d. bls. 4 á morgnana.", "Síðan lokar hún bókinni."]],
+      ["Þarna eru bækur, möppur o.fl. Síðan loka þau skápnum.", ["Þarna eru bækur, möppur o.fl.", "Síðan loka þau skápnum."]],
+      ["Við lesum 3. kafla í dag. Bókin er opin.", ["Við lesum 3. kafla í dag.", "Bókin er opin."]],
+      ["Þetta er úr VIII. kafla. Bókin er opin.", ["Þetta er úr VIII. kafla.", "Bókin er opin."]],
+      ["Hann kom 3. október 2026 kl. 14.30. Síðan fór hann.", ["Hann kom 3. október 2026 kl. 14.30.", "Síðan fór hann."]],
+      ["Hún sagði: „Þetta er tilbúið.“ Síðan fór hún.", ["Hún sagði: „Þetta er tilbúið.“", "Síðan fór hún."]],
+      ["„Er þetta tilbúið?“ spurði hún. Dyrnar voru opnar.", ["„Er þetta tilbúið?“ spurði hún.", "Dyrnar voru opnar."]],
+      ["Verðið er 1.234 kr. Afritið er hér.", ["Verðið er 1.234 kr.", "Afritið er hér."]]
+    ],
+    "words": [["Norður-Ísland þýðing 12,50 1 000", ["Norður-Ísland", "þýðing", "12,50", "1", "000"]], ["bók\t3–5 síður", ["bók", "3", "5", "síður"]]],
+    "openers": [["„Þetta er hér.“", "þetta"], ["Árni les.", "árni"]],
+    "sources": ["## Heimildir", "### Opinberar heimildir", "## Tilvísanir:"],
+    "not_sources": ["## Heimildir til vinnu", "## Athugun heimilda"],
+    "contrast": [["Þetta er ekki afrit heldur frumrit.", 1], ["Ólíkt afritinu er frumritið hér.", 1], ["Afritið er ekki hér.", 0], ["Það er ekki hér. Heldur áfram á morgun.", 0]],
+    "caveat": "Hins vegar er afritið hér.", "hypothetical": "Gerum ráð fyrir að afritið sé hér.", "citation": "Afritið er hér (2. gr.).", "formula": "Þessi grein veitir almennar upplýsingar.",
+    "url": ["Slóðin er https://example.test/a?x=1. Afritið er hér.", ["Slóðin er .", "Afritið er hér."]]
+  },
+  "sk": {
+    "sentences": [
+      ["Kópia je tu. Dvere sú otvorené! Kto prichádza?", ["Kópia je tu.", "Dvere sú otvorené!", "Kto prichádza?"]],
+      ["Ing. J. Kováč číta čl. 2. Kópia zostáva tu.", ["Ing. J. Kováč číta čl. 2.", "Kópia zostáva tu."]],
+      ["Číta napr. str. 4 každé ráno. Potom zatvorí knihu.", ["Číta napr. str. 4 každé ráno.", "Potom zatvorí knihu."]],
+      ["Sú tu knihy, zošity atď. Potom zatvoria skriňu.", ["Sú tu knihy, zošity atď.", "Potom zatvoria skriňu."]],
+      ["Izba je na 3. poschodí. Druhá je zatvorená.", ["Izba je na 3. poschodí.", "Druhá je zatvorená."]],
+      ["Čítame IV. kapitolu dnes. Kniha je otvorená.", ["Čítame IV. kapitolu dnes.", "Kniha je otvorená."]],
+      ["Prišiel 3. októbra 2026. Potom odišiel.", ["Prišiel 3. októbra 2026.", "Potom odišiel."]],
+      ["Povedala: „Je to hotové.“ Potom odišla.", ["Povedala: „Je to hotové.“", "Potom odišla."]],
+      ["„Je to hotové?“ spýtala sa. Dvere zostali otvorené.", ["„Je to hotové?“ spýtala sa.", "Dvere zostali otvorené."]],
+      ["Cena je 1.234,50 eura. Kópia je tu.", ["Cena je 1.234,50 eura.", "Kópia je tu."]]
+    ],
+    "words": [["slovensko-český text 12,50 1 000", ["slovensko-český", "text", "12,50", "1", "000"]], ["čítanie\t3–5 strán", ["čítanie", "3", "5", "strán"]]],
+    "openers": [["„Článok je tu.“", "článok"], ["Ľudovít číta.", "ľudovít"]],
+    "sources": ["## Zdroje", "### Oficiálne zdroje", "## Literatúra:"],
+    "not_sources": ["## Zdroje príjmov", "## Overenie zdrojov"],
+    "contrast": [["Nie je to kópia, ale originál.", 1], ["Na rozdiel od kópie je originál tu.", 1], ["Kópia tu nie je.", 0], ["Kópia tu nie je. Ale dvere sú otvorené.", 0]],
+    "caveat": "Napriek tomu je kópia tu.", "hypothetical": "Predpokladajme, že kópia je tu.", "citation": "Kópia je tu (čl. 2).", "formula": "Tento článok poskytuje všeobecné informácie.",
+    "url": ["Adresa je https://example.test/a?x=1. Kópia je tu.", ["Adresa je .", "Kópia je tu."]]
+  }
+}

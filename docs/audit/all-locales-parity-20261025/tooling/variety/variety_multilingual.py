@@ -66,7 +66,7 @@ def _letter_number(char):
     return bool(char) and unicodedata.category(char)[0] in ('L', 'N')
 
 
-def lexical_words(text, join_hyphens=False):
+def lexical_words(text, join_hyphens=False, join_catalan_ela_geminada=False):
     """Count orthographic lexical units, preserving Unicode marks and digits.
 
 Internal apostrophes stay within words. Decimal/group separators between digits
@@ -91,6 +91,8 @@ orthographic compounds. This is not a claim about morphemes or semantic load.
             elif char in ("'", '’', 'ʼ') and _letter_number(after):
                 i += 1
             elif join_hyphens and char in ('-', '‐', '‑') and _letter_number(after) and not (before.isdecimal() and after.isdecimal()):
+                i += 1
+            elif join_catalan_ela_geminada and char == '·' and before.casefold() == 'l' and after.casefold() == 'l':
                 i += 1
             elif char in ('.', ',', '٫', '٬') and before.isdecimal() and after.isdecimal():
                 i += 1
@@ -138,7 +140,8 @@ def words(text, lang):
     if lang == 'th':
         prepare_words([text], lang)
         return _THAI_WORDS[text]
-    return lexical_words(text, profile(lang).get('join_hyphens', False))
+    data = profile(lang)
+    return lexical_words(text, data.get('join_hyphens', False), data.get('join_catalan_ela_geminada', False))
 
 
 def normalized(text):

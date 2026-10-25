@@ -1,0 +1,33 @@
+{
+  "inventory": {
+    "professional": 2079,
+    "issues": 125,
+    "boardVisibleLocal": 1812,
+    "distinctProfessionalSlugs": 668,
+    "coreUnion": 475,
+    "coreCommon": 135,
+    "allLocaleCommon": 18,
+    "countDeficitTo286": 11939,
+    "visibleDeficitTo286": 12206,
+    "other45MissingCoreCommon": 5126
+  },
+  "validation": {
+    "valid": true,
+    "parseErrors": [],
+    "duplicateSlugs": [],
+    "emptyBodies": [],
+    "missingTitles": []
+  },
+  "rawInventory": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch03/checks/integrated-inventory.json",
+    "sha256": "5601f77cea83460c51cc053a7df421e9a81141d752e4066ebc0a559d4bc5d4a9"
+  },
+  "rawContentAudit": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch03/checks/integrated-content-audit.json",
+    "sha256": "6a48524f06b69acbe9d34c9e2068ad8e0459e39a97b8db677a91e3635a277356",
+    "selected": 21,
+    "errors": 0,
+    "semanticStatus": "REVIEW_REQUIRED"
+  },
+  "note": "File-backed local inventory, not current public deployment or CMS mirror proof."
+}

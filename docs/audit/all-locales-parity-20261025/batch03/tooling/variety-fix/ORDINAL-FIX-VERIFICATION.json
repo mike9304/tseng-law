@@ -1,0 +1,433 @@
+{
+  "recorded_at": "2026-10-25T14:00:00.609194+00:00",
+  "status": "candidate frozen; root review and shared installation pending",
+  "scope": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety-fix",
+  "reported_target_fragments_seen_before_fix": true,
+  "target_scores_used_for_rule_selection": false,
+  "code_frozen_before_article_impact": true,
+  "native_or_legal_approval": false,
+  "shared_installed_by_this_agent": false,
+  "baseline_receipt_path": "/Users/son7/tseng-all-language-columns-20261025/batch03/tooling/variety/root-installation.json",
+  "baseline_receipt_sha256": "45808c222902ea719ec8ffa237c0859bfbbfeb4b81619fb52e42e3f024614d16",
+  "runtime": {
+    "python": "3.12.0",
+    "unicode_data": "15.0.0",
+    "executable": "/Users/son7/.pyenv/versions/3.12.0/bin/python3"
+  },
+  "tests": {
+    "baseline_methods": 39,
+    "baseline_exit": 0,
+    "new_red_methods": 3,
+    "new_red_assertion_failures": 116,
+    "new_red_exit": 1,
+    "all_green_methods": 42,
+    "all_green_exit": 0,
+    "actual_staged_cli_invocations": 12,
+    "actual_cli_agrees": true
+  },
+  "old28": {
+    "compared": 1572,
+    "measured": 1541,
+    "unavailable": 31,
+    "differences": [],
+    "frozen_result_differences": []
+  },
+  "impact": {
+    "release35": {
+      "compared": 1740,
+      "measured": 1709,
+      "unavailable": 31,
+      "by_locale": {
+        "ko": 211,
+        "ja": 224,
+        "en": 212,
+        "zh-hant": 290,
+        "th": 31,
+        "id": 31,
+        "hi": 26,
+        "fr": 29,
+        "de": 26,
+        "it": 26,
+        "es": 46,
+        "pt": 26,
+        "ar": 26,
+        "vi": 43,
+        "ru": 24,
+        "ms": 24,
+        "fil": 29,
+        "tr": 24,
+        "nl": 24,
+        "zh-hans": 29,
+        "sv": 24,
+        "da": 24,
+        "nb": 24,
+        "fi": 24,
+        "pl": 24,
+        "cs": 24,
+        "ro": 24,
+        "uk": 24,
+        "bg": 21,
+        "ca": 21,
+        "el": 21,
+        "hr": 21,
+        "hu": 21,
+        "is": 21,
+        "sk": 21
+      },
+      "changed_by_locale": {
+        "hr": 20,
+        "hu": 20
+      },
+      "changed_boundary_blocks": 212,
+      "removed_boundaries": 291,
+      "hard_exit_transitions": {
+        "1->1": 27,
+        "0->0": 10,
+        "0->1": 3
+      }
+    },
+    "staged_batch03": {
+      "compared": 18,
+      "measured": 18,
+      "unavailable": 0,
+      "by_locale": {
+        "bg": 3,
+        "ca": 3,
+        "el": 3,
+        "hr": 3,
+        "hu": 3,
+        "is": 3
+      },
+      "changed_by_locale": {
+        "hr": 3,
+        "hu": 3
+      },
+      "changed_boundary_blocks": 57,
+      "removed_boundaries": 70,
+      "hard_exit_transitions": {
+        "0->0": 3,
+        "0->1": 3
+      }
+    }
+  },
+  "impact_count_scope": "raw checker input files, not professional/visible/publication counts",
+  "score_hard_unchanged": true,
+  "text_and_unit_arrays_preserved": true,
+  "unexpected_locale_differences": [],
+  "source_edits_during_run": [],
+  "integrity_failures": [],
+  "production_file_count": 36,
+  "changed_prior_production_files": [
+    "variety_expansion.py",
+    "MULTILINGUAL-METHOD.md",
+    "profiles/hr.json",
+    "profiles/hu.json"
+  ],
+  "production_files": [
+    {
+      "path": "variety_metrics.py",
+      "sha256": "69ceb7202a6e716ba1666ec08f4757daea8bc43289448dcffa8446c830ecd6fb",
+      "baseline_sha256": "69ceb7202a6e716ba1666ec08f4757daea8bc43289448dcffa8446c830ecd6fb",
+      "change": "unchanged"
+    },
+    {
+      "path": "variety_multilingual.py",
+      "sha256": "042037e93c6a78459d1e7ea85b9b6bdb0b8aa1038ca9dc0f54c8239e76d4d6d1",
+      "baseline_sha256": "042037e93c6a78459d1e7ea85b9b6bdb0b8aa1038ca9dc0f54c8239e76d4d6d1",
+      "change": "unchanged"
+    },
+    {
+      "path": "variety_expansion.py",
+      "sha256": "f52177c31d0d0d161d78f5b578ede8e6213dc090b116d6ca7dfaf2115e1c49f9",
+      "baseline_sha256": "b78d8303aa128e61eff3ff715b8fc35f57b7928d374603256970ce2fa7bd007f",
+      "change": "changed"
+    },
+    {
+      "path": "build-rewrite-queue.py",
+      "sha256": "510cc4881b562713699a0f208df96e1ecc5d01ca66f0add49e876c95c3a9ce59",
+      "baseline_sha256": "510cc4881b562713699a0f208df96e1ecc5d01ca66f0add49e876c95c3a9ce59",
+      "change": "unchanged"
+    },
+    {
+      "path": "MULTILINGUAL-METHOD.md",
+      "sha256": "fa63a5376c65c7ac5e44606b501bff70ca5959f6b8507110eb0820d05c6cd905",
+      "baseline_sha256": "be886e7f863e674648c1cf738f9282d5f3bf588c970a9aed1ac793eb8e57a10a",
+      "change": "changed"
+    },
+    {
+      "path": "profiles/ar.json",
+      "sha256": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+      "baseline_sha256": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/de.json",
+      "sha256": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+      "baseline_sha256": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/es.json",
+      "sha256": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+      "baseline_sha256": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/fil.json",
+      "sha256": "9daca5d186170f2025c576fbba8b65594732ef36f7cfb9a6bee719e091585e76",
+      "baseline_sha256": "9daca5d186170f2025c576fbba8b65594732ef36f7cfb9a6bee719e091585e76",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/fr.json",
+      "sha256": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+      "baseline_sha256": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/hi.json",
+      "sha256": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+      "baseline_sha256": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/id.json",
+      "sha256": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+      "baseline_sha256": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/it.json",
+      "sha256": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+      "baseline_sha256": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/ms.json",
+      "sha256": "88abb26243707cd9601ad80695494c1f951077a0d0f49a681d3ae639c9f60d00",
+      "baseline_sha256": "88abb26243707cd9601ad80695494c1f951077a0d0f49a681d3ae639c9f60d00",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/nl.json",
+      "sha256": "cedc9c648dded5d3619305c5f1fc1aa2d961ce34590bf85bcf21c468661db274",
+      "baseline_sha256": "cedc9c648dded5d3619305c5f1fc1aa2d961ce34590bf85bcf21c468661db274",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/pt.json",
+      "sha256": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+      "baseline_sha256": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/ru.json",
+      "sha256": "189438971f5e3572b48e5e9afe8a88ec7c25e5a3aeab5a637f44e9591b666206",
+      "baseline_sha256": "189438971f5e3572b48e5e9afe8a88ec7c25e5a3aeab5a637f44e9591b666206",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/sv.json",
+      "sha256": "66703b741178befbfc04395ba29a4dddb42254772700c906d7bd233a1834680e",
+      "baseline_sha256": "66703b741178befbfc04395ba29a4dddb42254772700c906d7bd233a1834680e",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/th.json",
+      "sha256": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+      "baseline_sha256": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/tr.json",
+      "sha256": "1f44c794464be7750a83629be356d11b45ef9a4d174b3a7b13ef5478163c2bbc",
+      "baseline_sha256": "1f44c794464be7750a83629be356d11b45ef9a4d174b3a7b13ef5478163c2bbc",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/vi.json",
+      "sha256": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+      "baseline_sha256": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/zh-hans.json",
+      "sha256": "8ca5f5f884c3a1d2144ed5ce55b09b806088b5b0b66b4cf883067255fe153543",
+      "baseline_sha256": "8ca5f5f884c3a1d2144ed5ce55b09b806088b5b0b66b4cf883067255fe153543",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/da.json",
+      "sha256": "d97cb6ecf083d3a000d9e68c9aca35be606afcc262cf676723f9fc06ba3352df",
+      "baseline_sha256": "d97cb6ecf083d3a000d9e68c9aca35be606afcc262cf676723f9fc06ba3352df",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/nb.json",
+      "sha256": "d354bc18f20fe062ec564e90cf5a654b70038e91f1ca9047499a0acd16b8faa4",
+      "baseline_sha256": "d354bc18f20fe062ec564e90cf5a654b70038e91f1ca9047499a0acd16b8faa4",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/fi.json",
+      "sha256": "87535d428aaf9613187c52adc3c387e365f419f423f693128fd77e08646b2629",
+      "baseline_sha256": "87535d428aaf9613187c52adc3c387e365f419f423f693128fd77e08646b2629",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/pl.json",
+      "sha256": "00b4d91b84026bda2a8f76f963302865311f3ca3600fbd1d1a4267a7ff7dd0fa",
+      "baseline_sha256": "00b4d91b84026bda2a8f76f963302865311f3ca3600fbd1d1a4267a7ff7dd0fa",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/cs.json",
+      "sha256": "317385e4979f05808aad1a20af7793167550acf89ce2a8a303d7eab8d23f9e99",
+      "baseline_sha256": "317385e4979f05808aad1a20af7793167550acf89ce2a8a303d7eab8d23f9e99",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/ro.json",
+      "sha256": "1fe2c5bb725e55a8aa38fcaafc0f52fc43d729c54fa9dfaaab5a6aafddee1474",
+      "baseline_sha256": "1fe2c5bb725e55a8aa38fcaafc0f52fc43d729c54fa9dfaaab5a6aafddee1474",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/uk.json",
+      "sha256": "ed9e8025126b82dfd0385cf76bb8694efe731bcf0e63a7fb58d3c8ee520d6081",
+      "baseline_sha256": "ed9e8025126b82dfd0385cf76bb8694efe731bcf0e63a7fb58d3c8ee520d6081",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/bg.json",
+      "sha256": "3462bfb1ef3eb72956a2b28b2dfdd9f3179d5c60472753e2ead4ccc3e6f1a442",
+      "baseline_sha256": "3462bfb1ef3eb72956a2b28b2dfdd9f3179d5c60472753e2ead4ccc3e6f1a442",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/ca.json",
+      "sha256": "ff8b9474d63ab895cfcd4669fe3cf799045c03801107a1ded976c8e9b4b40822",
+      "baseline_sha256": "ff8b9474d63ab895cfcd4669fe3cf799045c03801107a1ded976c8e9b4b40822",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/el.json",
+      "sha256": "436a1dfae99477561e3acd7ca08b8f2fce6851bebaffe066acb1408de37f6d30",
+      "baseline_sha256": "436a1dfae99477561e3acd7ca08b8f2fce6851bebaffe066acb1408de37f6d30",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/hr.json",
+      "sha256": "d139e9980abbcfc79177de7d87b0269d2e837f990e08691ba93fee35894cde71",
+      "baseline_sha256": "de6b002e2dba71bc3a9f397d4e52904b9f63962dbdacdf606cf8a21cdead5ec4",
+      "change": "changed"
+    },
+    {
+      "path": "profiles/hu.json",
+      "sha256": "cef85b13e94e3fd08f23d3aa4fba80ab51c116adf3c7d30cb8e4e59d00b1279b",
+      "baseline_sha256": "e47f2ddab3e4a328a412714d12804972c68d1dacfa0bbffa57b8d437abb3329c",
+      "change": "changed"
+    },
+    {
+      "path": "profiles/is.json",
+      "sha256": "fbd3b0eea7a5518eda61a6a83e7afd325a7c7b5e467708e99210a21c7088ee05",
+      "baseline_sha256": "fbd3b0eea7a5518eda61a6a83e7afd325a7c7b5e467708e99210a21c7088ee05",
+      "change": "unchanged"
+    },
+    {
+      "path": "profiles/sk.json",
+      "sha256": "bdaceac0a3767ca53432736996a1d70f04af43d7bb1fef941b6b08cc746bb04a",
+      "baseline_sha256": "bdaceac0a3767ca53432736996a1d70f04af43d7bb1fef941b6b08cc746bb04a",
+      "change": "unchanged"
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": "ORDINAL-FIX-REPORT.md",
+      "sha256": "6d446c7de28b2582430f9d74c77863543072c3a49ab9f7e2502ec51658c7e984"
+    },
+    {
+      "path": "ORDINAL-FIX-DELTA.patch",
+      "sha256": "ffaccf01275deb65f624f650be5a3008aa7625dc9ec4a437fde145eaa66e56a1"
+    },
+    {
+      "path": "METHOD-ORDINAL-FIX.md",
+      "sha256": "71b4514511b4d836f539d854d3cc0f17ff142f47a3c10c32efcc7a9d71bbef59"
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "9918c1bdd7ab33c1a43b77bf8e618b515cd797da31e5b75d0ab3397e7ec1ea5d"
+    },
+    {
+      "path": "BASELINE35-INSTALLATION.json",
+      "sha256": "34eecd0e0fd882227f6dd96a67ec83992dbc8c6482d395c60265abfa8d0c77e1"
+    },
+    {
+      "path": "FIX-CANDIDATE-FROZEN.json",
+      "sha256": "ef818d534b4e070dcfdd1261be07532a4cff2cf174d2afe7725622f0dfb72feb"
+    },
+    {
+      "path": "ORDINAL-FIXTURE-FREEZE.json",
+      "sha256": "f078843ef88a3712d7d8ee9aad0167e64f7542f8cc4c671db415832f5e9771cf"
+    },
+    {
+      "path": "IMPACT-INPUTS-FROZEN.json",
+      "sha256": "2eeea2561beb07998aeab8b2d882443bd26e436ec43e31812809fe8021c85ccd"
+    },
+    {
+      "path": "POST-FREEZE-EXPOSURE.json",
+      "sha256": "b29ae6ee4262c0479e91cadb60a5e0fe122088bb4aa67e2afbb8f8e5f8d3299e"
+    },
+    {
+      "path": "diagnosis-baseline.json",
+      "sha256": "87c0b8946d7a12bc7a9131675595ef8f2f72e7ca61a49d5b0c24e8d67c67e4aa"
+    },
+    {
+      "path": "baseline35-tests.txt",
+      "sha256": "863c82153b82b2e8ac7f149c0f34b4a2a0fe565cb81760d9bf50e70850d805f7"
+    },
+    {
+      "path": "ordinal-fix-red.txt",
+      "sha256": "4f36a1b62e954bec0f8e2e76ca9a3f742a0a337de2a17a8d231e97565dbd5ad0"
+    },
+    {
+      "path": "ordinal-fix-green.txt",
+      "sha256": "dfa73403bbf68aab630d6a810eab6bb2591e8b41cc0d502a35c2d443c60bc3cf"
+    },
+    {
+      "path": "ordinal-fix-impact.json",
+      "sha256": "f8c22eb42258942617e0c300bcf08b238a887071d503d68567b96a5959b33425"
+    },
+    {
+      "path": "ordinal-fix-impact.log",
+      "sha256": "896ca9e5b9544c868441d993323748654955efc62efccd81827ab00eb9ba8f31"
+    },
+    {
+      "path": "ordinal-fix-path-cli.json",
+      "sha256": "3328cf18a87fc18264ca763fa43a0b0845ca454682eb45251b9b49058d3116ab"
+    },
+    {
+      "path": "tests/fixtures-ordinal-fix.json",
+      "sha256": "faaf3a84f774c9f167cb0eb8fa96801edf3c0222f0484311ea33b99514e0a9e8"
+    },
+    {
+      "path": "tests/test_ordinal_fix.py",
+      "sha256": "6918af72a8985147825358089ba1560ededdd9231f38a9679719f95fbed7d515"
+    },
+    {
+      "path": "tests/test_ordinal_fix_initial.txt",
+      "sha256": "644e48c47e8ea238b1baa891f119574afb32f0732f4e082e6c916cfb0652d691"
+    },
+    {
+      "path": "tests/compare_ordinal_fix.py",
+      "sha256": "5c57de9589e7a3016b9dbc7bfbb2744c210bb7788e7f668ac2cf9fff3064b929"
+    }
+  ],
+  "limitations": [
+    "HR/HU contextual orthographic heuristic, not general parsing or empirical readability calibration.",
+    "Ambiguous lowercase brands, genitive document sentence openings and unlisted contexts remain possible.",
+    "Same-byte HU staged outputs now fail; no target or threshold was altered to obtain PASS.",
+    "Thai unavailable outcomes remain unavailable; staged SK was excluded.",
+    "Root performs the separate review and installation."
+  ]
+}

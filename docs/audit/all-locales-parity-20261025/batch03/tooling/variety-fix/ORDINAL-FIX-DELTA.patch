@@ -1,0 +1,85 @@
+--- installed35/variety_expansion.py
++++ candidate/variety_expansion.py
+@@ -80,6 +80,13 @@
+         variants = (ordinal, unicodedata.normalize('NFD', ordinal)) if data.get('canonical_abbreviations') else (ordinal,)
+         for expression in dict.fromkeys(variants):
+             protected = re.sub(expression, lambda match: match.group().replace('.', marker), protected, flags=re.I)
++    if data.get('dotted_ordinal_lowercase_continuation'):
++        # HR/HU ordinal dots can precede adjectives, inflected nouns and
++        # conjunctions. Keep real uppercase/mixed-case next sentences and
++        # never infer continuation across a newline. This is not syntax parsing.
++        expression = r'(?<![\w\u0300-\u036f])(?:\d+|[IVXLCDM]+)\.(?=[^\S\r\n]+([^\W\d_][\w\u0300-\u036f]*))'
++        protected = re.sub(expression, lambda match: match.group()[:-1] + marker
++                           if match.group(1).islower() else match.group(), protected)
+     terminal = {re.sub(r'\s+', '', value).casefold().rstrip('.')
+                 for value in data.get('terminal_abbreviations', [])}
+     contextual = data.get('context_terminal_abbreviations', {})
+--- installed35/MULTILINGUAL-METHOD.md
++++ candidate/MULTILINGUAL-METHOD.md
+@@ -354,3 +354,37 @@
+ proof that every existing article is measurable. The 14 unsupported codes
+ remain bn, et, fa, he, km, lt, lv, mn, my, ne, sl, sr, ta and ur. They retain
+ exit 2; no fallback or unsupported-language PASS is introduced.
++
++
++## HR/HU ordinal correction after boundary review (2026-10-25)
++
++Reported target fragments exposed an oversegmentation defect after the initial
++35-locale package was installed. That later exposure is disclosed; it does not
++retroactively change the earlier package's no-target-reading record. The fix
++was specified using newly supplied neutral HR/HU examples and the official
++Croatian period rules and Hungarian AkH. §§267/292. No article or threshold was
++edited and no target score selected a boundary rule.
++
++Only HR/HU opt into `dotted_ordinal_lowercase_continuation`: a dotted Arabic or
++uppercase Roman numeral stays internal before a whole lowercase word after
++horizontal Unicode whitespace. This covers inflected nouns, adjectives,
++coordinated ordinals and continuing dates. It leaves uppercase or mixed-case
++next words and newline boundaries unchanged. HR additionally recognizes a
++finite reference noun (selected forms of article, paragraph, point, chapter or
++rule), followed by an ordinal/ordinal list and a capitalized genitive document
++kind: Zakona, Priručnika, Pravilnika, Statuta, Ustava, Uredbe or Pravila. A
++nominative document noun beginning a new sentence is not protected by that
++new pattern. Returned spelling, whitespace within slices and word units are
++preserved; the score, HARD limits and all other locale flags are unchanged.
++
++These are contextual orthographic heuristics, not a parser. A lowercase brand
++at a sentence start, unusual casing, a genitive document phrase beginning a
++fresh sentence, unlisted title types and ambiguous Roman strings still need
++human inspection. A matching title context may be ambiguous; no claim is made
++that every reference or sentence boundary is settled. Selected genuine
++endings, uppercase conjunctions, mixed-case names, Unicode forms and actual
++Markdown preprocessing are tested separately from the positive examples.
++
++The task audit's `METHOD-ORDINAL-FIX.md`, `ORDINAL-FIXTURE-FREEZE.json`, and
++`ORDINAL-FIX-VERIFICATION.json` contain provenance, chronology, exact file SHA
++values and same-input impacts. Tests passing is not native/legal approval.
+--- installed35/profiles/hr.json
++++ candidate/profiles/hr.json
+@@ -37,7 +37,7 @@
+     "g": "\\d{4}\\s*$"
+   },
+   "ordinal_followers": "kat|katu|razred|razreda|poglavlje|poglavlja|članak|stavak|godine|siječnja|veljače|ožujka|travnja|svibnja|lipnja|srpnja|kolovoza|rujna|listopada|studenoga|prosinca",
+-  "ordinal_pattern": "(?<!\\w)[IVXLCDM]+\\.(?=\\s+(?:poglavlje|poglavlja|razred|stoljeće|stoljeća)\\b)",
++  "ordinal_pattern": "(?:(?<!\\w)[IVXLCDM]+\\.(?=\\s+(?:poglavlje|poglavlja|razred|stoljeće|stoljeća)\\b)|(?<![\\w\\u0300-\\u036f])(?:član(?:ak|ka|ku|kom|ci|aka|cima)|stav(?:ak|ka|ku|kom|ci|aka|cima)|točk(?:a|e|i|u|om|ama)|poglavlj(?:e|a|u|em|ima)|pravil(?:o|a|u|om|ima))[^\\S\\r\\n]+(?:\\d+|(?-i:[IVXLCDM]+))\\.(?:(?:[^\\S\\r\\n]+(?:i|ili)[^\\S\\r\\n]+|,[^\\S\\r\\n]*)(?:\\d+|(?-i:[IVXLCDM]+))\\.)*(?=[^\\S\\r\\n]+(?-i:Zakona|Priručnika|Pravilnika|Statuta|Ustava|Uredbe|Pravila)\\b))",
+   "additional_closing_quotes": "“",
+   "contrast_patterns": [
+     "(?i:\\b(?:ne|nije|nisu)\\b[^.!?\\n;;]{0,180}\\b(?:nego|već)\\b)",
+@@ -50,5 +50,6 @@
+   "citation_pattern": "(?i:\\b(?:članak|članka|čl\\.)\\s*\\d+)",
+   "locale": "hr",
+   "directory": "columns-hr",
+-  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:izvori|službeni\\s+izvori|literatura)\\s*:?\\s*$)"
++  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:izvori|službeni\\s+izvori|literatura)\\s*:?\\s*$)",
++  "dotted_ordinal_lowercase_continuation": true
+ }
+--- installed35/profiles/hu.json
++++ candidate/profiles/hu.json
+@@ -49,5 +49,6 @@
+   "citation_pattern": "(?i:\\b\\d+\\.\\s*(?:§|cikk\\b)|§\\s*\\d+)",
+   "locale": "hu",
+   "directory": "columns-hu",
+-  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:források|hivatalos\\s+források|hivatkozások|irodalomjegyzék)\\s*:?\\s*$)"
++  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:források|hivatalos\\s+források|hivatkozások|irodalomjegyzék)\\s*:?\\s*$)",
++  "dotted_ordinal_lowercase_continuation": true
+ }

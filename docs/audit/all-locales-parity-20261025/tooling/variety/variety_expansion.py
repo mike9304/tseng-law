@@ -6,7 +6,7 @@ of independent native review. Neutral expectations live separately in tests/.
 import re
 import unicodedata
 
-LANGUAGES = ('ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk')
+LANGUAGES = ('ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk')
 URL = re.compile(r'https?://[^\s<>\[\]()“”«»「」『』。，！？]+')
 
 
@@ -21,13 +21,13 @@ def comparison_key(text, lang):
     return text.casefold()
 
 
-def visible_text(text):
+def visible_text(text, additional_terminal_punctuation=''):
     """Remove destinations without swallowing the surrounding sentence end."""
     text = re.sub(r'!\[[^\]]*\]\([^)]*\)', '', text)
     text = re.sub(r'\[([^\]]+)\]\([^)]*\)', r'\1', text)
     def omit_url(match):
         value = match.group()
-        core = value.rstrip('.,;:!?')
+        core = value.rstrip('.,;:!?' + additional_terminal_punctuation)
         return value[len(core):]
     text = URL.sub(omit_url, text)
     return re.sub(r'[*_`]', '', text)
@@ -64,25 +64,52 @@ def split_sentences(text, lang, data):
 
     def protect_url(match):
         value = match.group()
-        core = value.rstrip('.,;:!?')
+        core = value.rstrip('.,;:!?' + data.get('additional_sentence_terminators', ''))
         return re.sub(r'[.!?]', marker, core) + value[len(core):]
     protected = URL.sub(protect_url, protected)
 
     followers = data.get('ordinal_followers')
     if followers:
-        protected = re.sub(r'(?<=\d)\.(?=\s+(?:' + followers + r')\b)', marker, protected, flags=re.I)
+        end_word = r'\b'
+        if data.get('canonical_abbreviations'):
+            followers = '(?:' + followers + '|' + unicodedata.normalize('NFD', followers) + ')'
+            end_word = r'(?![\w\u0300-\u036f])'
+        protected = re.sub(r'(?<=\d)\.(?=\s+(?:' + followers + ')' + end_word + ')', marker, protected, flags=re.I)
+    ordinal = data.get('ordinal_pattern')
+    if ordinal:
+        variants = (ordinal, unicodedata.normalize('NFD', ordinal)) if data.get('canonical_abbreviations') else (ordinal,)
+        for expression in dict.fromkeys(variants):
+            protected = re.sub(expression, lambda match: match.group().replace('.', marker), protected, flags=re.I)
+    if data.get('dotted_ordinal_lowercase_continuation'):
+        # HR/HU ordinal dots can precede adjectives, inflected nouns and
+        # conjunctions. Keep real uppercase/mixed-case next sentences and
+        # never infer continuation across a newline. This is not syntax parsing.
+        expression = r'(?<![\w\u0300-\u036f])(?:\d+|[IVXLCDM]+)\.(?=[^\S\r\n]+([^\W\d_][\w\u0300-\u036f]*))'
+        protected = re.sub(expression, lambda match: match.group()[:-1] + marker
+                           if match.group(1).islower() else match.group(), protected)
     terminal = {re.sub(r'\s+', '', value).casefold().rstrip('.')
                 for value in data.get('terminal_abbreviations', [])}
     contextual = data.get('context_terminal_abbreviations', {})
     for abbreviation in sorted(data['abbreviations'], key=len, reverse=True):
-        expression = re.compile(r'(?<!\w)' + re.escape(abbreviation.rstrip('.')) + r'\.', re.I)
+        literal = re.escape(abbreviation.rstrip('.'))
+        if data.get('canonical_abbreviations'):
+            literal = '(?:' + literal + '|' + re.escape(unicodedata.normalize('NFD', abbreviation.rstrip('.'))) + ')'
+        expression = re.compile(r'(?<!\w)' + literal + r'\.', re.I)
         def protect(match):
             token = match.group()
             key = re.sub(r'\s+', '', abbreviation).casefold().rstrip('.')
-            remaining = protected[match.end():].lstrip(' \t\r\n”’»\"\')]}' + additional_closing)
+            remaining = protected[match.end():]
+            leading_quotes = '”’»\"\')]}' + additional_closing
+            if data.get('canonical_abbreviations'):
+                remaining = re.sub(r'^[\s' + re.escape(leading_quotes) + ']+', '', remaining)
+            else:
+                remaining = remaining.lstrip(' \t\r\n' + leading_quotes)
             can_end = key in terminal
             if key in contextual:
                 can_end = bool(re.search(contextual[key], protected[:match.start()]))
+            follower = data.get('nonterminal_abbreviation_followers', {}).get(key)
+            if follower and re.match(follower, unicodedata.normalize('NFC', remaining)):
+                can_end = False
             if can_end and (not remaining or remaining[0].isupper()):
                 # A shorter abbreviation must not remask the last dot of a
                 # terminal compound (Russian т. д. contains standalone д.).
@@ -102,7 +129,8 @@ def split_sentences(text, lang, data):
     if lang == 'zh-hans':
         boundary = re.compile(r'[。！？!?]+' + close_sequence + r'\s*|[.]+' + close_sequence + r'(?:\s+|$)')
     else:
-        boundary = re.compile(r'[.!?]+' + close_sequence + r'(?:\s+|$)')
+        terminators = re.escape('.!?' + data.get('additional_sentence_terminators', ''))
+        boundary = re.compile('[' + terminators + ']+' + close_sequence + r'(?:\s+|$)')
     result = []
     start = 0
     for match in boundary.finditer(protected):

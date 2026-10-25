@@ -1,0 +1,3 @@
+# Preserve exact unified diffs and raw terminal logs.
+*.diff -whitespace
+*.log -whitespace

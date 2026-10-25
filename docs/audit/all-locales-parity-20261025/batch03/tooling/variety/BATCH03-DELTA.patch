@@ -1,0 +1,722 @@
+--- baseline28/variety_metrics.py
++++ candidate/variety_metrics.py
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""Sentence-variety / monotony metrics for twenty-eight tseng-law column locales.
++"""Sentence-variety / monotony metrics for thirty-five tseng-law column locales.
+ 
+   variety_metrics.py check FILE [--lang LOCALE] [--sentences REVIEWED_MAP]
+   variety_metrics.py corpus DIR [--out DIR2]
+@@ -74,7 +74,7 @@
+ 
+ ABBR = re.compile(r'\b(art|arts|No|Nos|e\.g|i\.e|U\.S|Mr|Ms|Dr|para|paras|Inc|Ltd|Co|vs|cf|p|pp|St)\.$', re.I)
+ def sentences(p, lang, sentence_map=None):
+-    p = multilingual.expansion.visible_text(p) if lang in multilingual.expansion.LANGUAGES else unlink(p)
++    p = multilingual.expansion.visible_text(p, multilingual.profile(lang).get('additional_sentence_terminators', '')) if lang in multilingual.expansion.LANGUAGES else unlink(p)
+     if lang in multilingual.LANGUAGES:
+         return multilingual.split_sentences(p, lang, sentence_map)
+     if lang == 'en':
+@@ -94,7 +94,7 @@
+     return len(re.sub(r'\s', '', re.sub(r'\([^)]*\)|（[^）]*）', '', s)))  # drop parenthetical citations from length
+ 
+ def opener(p, lang):
+-    s = (multilingual.expansion.visible_text(p) if lang in multilingual.expansion.LANGUAGES else unlink(p)).strip()
++    s = (multilingual.expansion.visible_text(p, multilingual.profile(lang).get('additional_sentence_terminators', '')) if lang in multilingual.expansion.LANGUAGES else unlink(p)).strip()
+     if lang in multilingual.expansion.LANGUAGES:
+         return multilingual.expansion.opener(s, lang, multilingual.profile(lang), multilingual.words(s, lang))
+     if lang in multilingual.LANGUAGES:
+@@ -141,7 +141,7 @@
+     opc = collections.Counter(ops)
+     ends = collections.Counter(ending(s, lang) for s in S)
+     body = '\n'.join(paras)
+-    plain = multilingual.expansion.visible_text(body) if lang in multilingual.expansion.LANGUAGES else unlink(body)
++    plain = multilingual.expansion.visible_text(body, multilingual.profile(lang).get('additional_sentence_terminators', '')) if lang in multilingual.expansion.LANGUAGES else unlink(body)
+     cite_pattern = CITE
+     if extended:
+         cite_pattern = re.compile(CITE.pattern + r'|(?:§|art[íi]culos?|articol[oi]|artigos?|Artikel|Pasal|धारा|अनुच्छेद|المادة|المواد|มาตรา)\s*\d+', re.I)
+@@ -153,7 +153,8 @@
+     cite_paras = sum(1 for p in paras if cite_pattern.search(multilingual.unicodedata.normalize('NFC', p) if normalize_comparisons else p))
+     # sentence that closes with a (statute/judgment) parenthesis
+     def _ce(x):
+-        x = x.rstrip(' .。।॥!?！？؟' if extended else ' .。')
++        tail = ' .。।॥!?！？؟' + language_profile.get('additional_sentence_terminators', '') if extended else ' .。'
++        x = x.rstrip(tail)
+         m = re.search(r'[(（]([^()（）]*)[)）]$', x)
+         return bool(m and cite_pattern.search(multilingual.unicodedata.normalize('NFC', m.group(1)) if normalize_comparisons else m.group(1)))
+     cite_end = sum(1 for s in S if _ce(s))
+@@ -161,6 +162,8 @@
+     caveat_pattern = language_profile['caveat_pattern'] if extended else CAVEAT[lang]
+     caveat = sum(1 for s in S if re.search(caveat_pattern, multilingual.unicodedata.normalize('NFC', s) if normalize_comparisons else s))
+     question_pattern = r'[?？؟]\s*["”」』)]?$' if extended else r'[?？]\s*["”」』)]?$'
++    if extended:
++        question_pattern = language_profile.get('question_pattern', question_pattern)
+     q = sum(1 for s in S if re.search(question_pattern, s))
+     digits = len(re.findall(r'\d+', plain))
+     nchar = len(multilingual.words(plain, lang)) if extended else (len(re.sub(r'\s', '', plain)) if lang != 'en' else len(plain.split()))
+@@ -192,7 +195,7 @@
+              contrast=contrast, caveat=caveat, questions=q,
+              num_per100=round(100 * digits / max(1, nchar), 2),
+              hypo_open=bool(re.search(language_profile['hypo_pattern'] if extended else HYPO[lang], first)) or bool(re.search(language_profile['hypo_pattern'] if extended else HYPO[lang], unlink(paras[0])[:80])),
+-             q_open=bool(re.search(r'[?？؟]' if extended else r'[?？]', first)),
++             q_open=bool(re.search(language_profile.get('question_open_pattern', r'[?？؟]') if extended else r'[?？]', first)),
+              formula_close=bool(re.search(language_profile['formula_close_pattern'] if extended else FORMULA_CLOSE[lang], last)),
+              first=first[:90], last=last[:120])
+     if extended:
+--- baseline28/variety_multilingual.py
++++ candidate/variety_multilingual.py
+@@ -66,7 +66,7 @@
+     return bool(char) and unicodedata.category(char)[0] in ('L', 'N')
+ 
+ 
+-def lexical_words(text, join_hyphens=False):
++def lexical_words(text, join_hyphens=False, join_catalan_ela_geminada=False):
+     """Count orthographic lexical units, preserving Unicode marks and digits.
+ 
+ Internal apostrophes stay within words. Decimal/group separators between digits
+@@ -91,6 +91,8 @@
+             elif char in ("'", '’', 'ʼ') and _letter_number(after):
+                 i += 1
+             elif join_hyphens and char in ('-', '‐', '‑') and _letter_number(after) and not (before.isdecimal() and after.isdecimal()):
++                i += 1
++            elif join_catalan_ela_geminada and char == '·' and before.casefold() == 'l' and after.casefold() == 'l':
+                 i += 1
+             elif char in ('.', ',', '٫', '٬') and before.isdecimal() and after.isdecimal():
+                 i += 1
+@@ -138,7 +140,8 @@
+     if lang == 'th':
+         prepare_words([text], lang)
+         return _THAI_WORDS[text]
+-    return lexical_words(text, profile(lang).get('join_hyphens', False))
++    data = profile(lang)
++    return lexical_words(text, data.get('join_hyphens', False), data.get('join_catalan_ela_geminada', False))
+ 
+ 
+ def normalized(text):
+--- baseline28/variety_expansion.py
++++ candidate/variety_expansion.py
+@@ -6,7 +6,7 @@
+ import re
+ import unicodedata
+ 
+-LANGUAGES = ('ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk')
++LANGUAGES = ('ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk')
+ URL = re.compile(r'https?://[^\s<>\[\]()“”«»「」『』。，！？]+')
+ 
+ 
+@@ -21,13 +21,13 @@
+     return text.casefold()
+ 
+ 
+-def visible_text(text):
++def visible_text(text, additional_terminal_punctuation=''):
+     """Remove destinations without swallowing the surrounding sentence end."""
+     text = re.sub(r'!\[[^\]]*\]\([^)]*\)', '', text)
+     text = re.sub(r'\[([^\]]+)\]\([^)]*\)', r'\1', text)
+     def omit_url(match):
+         value = match.group()
+-        core = value.rstrip('.,;:!?')
++        core = value.rstrip('.,;:!?' + additional_terminal_punctuation)
+         return value[len(core):]
+     text = URL.sub(omit_url, text)
+     return re.sub(r'[*_`]', '', text)
+@@ -64,22 +64,39 @@
+ 
+     def protect_url(match):
+         value = match.group()
+-        core = value.rstrip('.,;:!?')
++        core = value.rstrip('.,;:!?' + data.get('additional_sentence_terminators', ''))
+         return re.sub(r'[.!?]', marker, core) + value[len(core):]
+     protected = URL.sub(protect_url, protected)
+ 
+     followers = data.get('ordinal_followers')
+     if followers:
+-        protected = re.sub(r'(?<=\d)\.(?=\s+(?:' + followers + r')\b)', marker, protected, flags=re.I)
++        end_word = r'\b'
++        if data.get('canonical_abbreviations'):
++            followers = '(?:' + followers + '|' + unicodedata.normalize('NFD', followers) + ')'
++            end_word = r'(?![\w\u0300-\u036f])'
++        protected = re.sub(r'(?<=\d)\.(?=\s+(?:' + followers + ')' + end_word + ')', marker, protected, flags=re.I)
++    ordinal = data.get('ordinal_pattern')
++    if ordinal:
++        variants = (ordinal, unicodedata.normalize('NFD', ordinal)) if data.get('canonical_abbreviations') else (ordinal,)
++        for expression in dict.fromkeys(variants):
++            protected = re.sub(expression, lambda match: match.group().replace('.', marker), protected, flags=re.I)
+     terminal = {re.sub(r'\s+', '', value).casefold().rstrip('.')
+                 for value in data.get('terminal_abbreviations', [])}
+     contextual = data.get('context_terminal_abbreviations', {})
+     for abbreviation in sorted(data['abbreviations'], key=len, reverse=True):
+-        expression = re.compile(r'(?<!\w)' + re.escape(abbreviation.rstrip('.')) + r'\.', re.I)
++        literal = re.escape(abbreviation.rstrip('.'))
++        if data.get('canonical_abbreviations'):
++            literal = '(?:' + literal + '|' + re.escape(unicodedata.normalize('NFD', abbreviation.rstrip('.'))) + ')'
++        expression = re.compile(r'(?<!\w)' + literal + r'\.', re.I)
+         def protect(match):
+             token = match.group()
+             key = re.sub(r'\s+', '', abbreviation).casefold().rstrip('.')
+-            remaining = protected[match.end():].lstrip(' \t\r\n”’»\"\')]}' + additional_closing)
++            remaining = protected[match.end():]
++            leading_quotes = '”’»\"\')]}' + additional_closing
++            if data.get('canonical_abbreviations'):
++                remaining = re.sub(r'^[\s' + re.escape(leading_quotes) + ']+', '', remaining)
++            else:
++                remaining = remaining.lstrip(' \t\r\n' + leading_quotes)
+             can_end = key in terminal
+             if key in contextual:
+                 can_end = bool(re.search(contextual[key], protected[:match.start()]))
+@@ -102,7 +119,8 @@
+     if lang == 'zh-hans':
+         boundary = re.compile(r'[。！？!?]+' + close_sequence + r'\s*|[.]+' + close_sequence + r'(?:\s+|$)')
+     else:
+-        boundary = re.compile(r'[.!?]+' + close_sequence + r'(?:\s+|$)')
++        terminators = re.escape('.!?' + data.get('additional_sentence_terminators', ''))
++        boundary = re.compile('[' + terminators + ']+' + close_sequence + r'(?:\s+|$)')
+     result = []
+     start = 0
+     for match in boundary.finditer(protected):
+--- baseline28/MULTILINGUAL-METHOD.md
++++ candidate/MULTILINGUAL-METHOD.md
+@@ -269,6 +269,88 @@
+ return exit 2 for these additions. They never fall back to Korean or English.
+ Legacy four-locale short-input skips retain their old compatibility behavior;
+ a skip is not a measured PASS. Thai still needs its reviewed, hash-bound maps
+-and uses the unchanged dictionary-word contract. Of the 49 public locales, the
+-remaining unsupported 21 are bn, bg, ca, el, et, fa, he, hr, hu, is, km, lt, lv,
++and uses the unchanged dictionary-word contract. At that 28-locale stage, of the 49 public locales, the
++remaining unsupported 21 were bn, bg, ca, el, et, fa, he, hr, hu, is, km, lt, lv,
+ mn, my, ne, sk, sl, sr, ta and ur.
++
++
++## Batch03 expansion (2026-10-25): bg/ca/el/hr/hu/is/sk
++
++The root-installed 28-locale version was matched exactly against all 29 receipt
++files in both R and shared before copying. `RESTORED-BASELINE28.json` records
++that provenance; `baseline28/` and `BASELINE28.json` retain immutable engine and
++current-input baselines in the task audit. This section is self-contained in
++the installed method file; the separate `METHOD-BATCH03.md` is the frozen
++pre-implementation audit contract.
++
++Contract recorded before profiles or new target-article measurements, 2026-10-25 KST. AI-authored engineering fixtures; root review and shared installation are separate. Orthographic references justify particular punctuation/word handling, not editorial thresholds or native/legal approval.
++
++### Primary references read and their bounded use
++
++| Locale | Primary reference and observation | Measurement decision |
++|---|---|---|
++| bg | Bulgarian Academy of Sciences Institute for Bulgarian Language: [abbreviation-final dots](https://ibl.bas.bg/ezikovispravki/vaprosi/pri-skrashcheniya-min-dfn-9), [spacing and quotation marks](https://ibl.bas.bg/pishi_pravilno/po-intervalite-posreshtat-po-zapetaite-izprashtat/). One dot can serve both abbreviation and sentence; the described closing quote is U+201C. | Listed title/reference abbreviations do not end a sentence; listed terminal forms and a year-conditioned `г.` can. Add `“` as closing quote. Whitespace separates orthographic tokens. |
++| ca | IEC [preparation of originals, §§1.6–1.9](https://criteria.iec.cat/wp-content/uploads/2014/07/1-1-3_Preparaci%C3%B3-dels-originals_Any-davant_011.pdf) covers abbreviation dots, ela geminada, typographic apostrophe and numeric separators. Generalitat [ordinal abbreviations](https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&document=abrevia.pdf&method=criterislinguistics&pagina=31&titol=Sigles.+Apostrofaci%C3%B3) was available as an indexed primary-source excerpt; direct open returned a cache miss. | `l·l` stays within a word, but arbitrary `a·b` does not. Apostrophe/hyphen compounds use the existing orthographic policy. Bounded ordinal contexts cover `2n. pis`, `5è. capítol`, `2n. Congrés`; a terminal `1r.` still ends a sentence. |
++| el | Centre for the Greek Language [Triantafyllidis grammar](https://www.greek-language.gr/greekLang/files/document/modern_greek/grammatiki.triantafyllidi.pdf), indexed punctuation section: Greek questions end with `;`. The primary [dictionary entry](https://www.greek-language.gr/greekLang/modern_greek/tools/lexica/triantafyllides/search.html?lq=%CE%B5%CF%81%CF%89%CF%84%CE%B7%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CF%8C) corroborates this in the search excerpt; direct dictionary access returned 403 and PDF text extraction was empty. [Unicode Greek/Coptic names](https://unicode.org/Public/18.0.0/charts/nameslist/0370/) identifies U+037E and U+0387. | `;` and U+037E are Greek terminators/question signs; raised U+00B7/U+0387 dots are not full stops. Apply only to el. The same contract must reach question counts, question opening and citation-tail detection. |
++| hr | Institute of Croatian Language [abbreviations](https://pravopis.hr/pravilo/kratice/49/) and [period](https://pravopis.hr/pravilo/tocka/55/) explicitly describe dots after abbreviations and Arabic/Roman ordinals. | Listed abbreviations and bounded ordinal followers preserve interior dots. `itd.` may end a sentence; a cardinal or year at a real sentence end must still split. Closing `“` is supported alongside existing forms. |
++| hu | Hungarian research-institute [AkH. 12](https://helyesiras.mta.hu/helyesiras/default/akh12), §§267 and 290–294, covers abbreviation/ordinal dots and number/date presentation. | Protect listed abbreviations, bounded Arabic/Roman ordinal and date contexts. Comma/period within digits is one numeric unit; spaced groups remain separate units. This does not parse Hungarian morphology. |
++| is | Árni Magnússon Institute [Ritreglur](https://ritreglur.arnastofnun.is/), §§22 and 28, describes ordinal/abbreviation dots, grouped numbers/time and `„…“` quotes. A final abbreviation/ordinal does not gain a second full stop. | Explicit abbreviations and terminal currency/enumeration forms, bounded Arabic/Roman ordinal contexts, and U+201C closing quote. Neither compound richness nor inflection receives an invented weight. |
++| sk | Ľudovít Štúr Institute [PSP 2013 description](https://www.juls.savba.sk/psp_2013.html) identifies the unchanged fourth edition; its accessible [text PDF](https://www.juls.savba.sk/ediela/psp2000/psp.pdf), punctuation §2.1, describes abbreviation and Arabic/Roman ordinal dots. | Listed abbreviations and bounded ordinal contexts; `atď.` can finish a sentence. Preserve accents and closing `“`. The PDF is labeled third edition 2000, not misrepresented as a new 2026 rule. |
++
++No missing web content has been represented as fully read. The sources describe writing conventions; profiles are a finite AI-authored selection of common signals and neutral fixtures, not a complete implementation of the reference grammars. Source headings, contrasts, caveats and formula signals are separately authored editorial heuristics, not official classifications.
++
++### Units, boundaries and exclusions
++
++All seven count Unicode orthographic units using letter/number starts, attached combining marks, existing internal apostrophes and opted-in hyphens. Digit ranges use separate endpoints. Internal decimal/group punctuation is retained; normal, nonbreaking and narrow nonbreaking spaces all separate units, so `1 000` is two units while `1.000` is one. These are transparent conventions, not equivalent linguistic or semantic lengths.
++
++Catalan ela geminada protection is limited to U+00B7 between two `l`/`L` letters. Precomposed `ŀ`/`Ŀ` are already letters. A middle dot between arbitrary letters stays a separator. Greek raised dots remain separators and do not inherit this Catalan option.
++
++The 8-word short / 32-word long edges, CV 0.45, all HARD conditions and the score function remain inherited. No reference establishes those numbers, and no new target manuscript was read to choose them. A measured exit 0 means only no implemented HARD condition failed. A low score does not certify readability, legal preservation or human-language quality.
++
++Sentence slicing preserves the original bytes' Unicode spelling (decoded text), including decomposed accents. New optional abbreviation/ordinal patterns match NFC and NFD spellings without normalizing away slice offsets. Quote endings remain attached, and the existing lower-case reporting-clause heuristic keeps a quoted question with its attribution. This is not a syntactic quotation parser; proper-name reporting clauses, unusual abbreviations, arbitrary Roman numbers, ellipsis ambiguity and unspecified ordinal followers can still need review.
++
++Abbreviation terminal decisions use the existing next-uppercase/end heuristic. A following proper name can be ambiguous; titles are not indiscriminately made terminal. Ordinal protection is bounded by listed followers rather than a rule that swallows every number plus full stop. The same limits apply to calendar and law-number prose. New Greek terminators use opt-in fields only; other locales retain their former semicolon behavior.
++
++Markdown link destinations are omitted while link labels and following punctuation are retained. Headings, tables, bullets, frontmatter/FAQ and recognized source tails are excluded from prose metrics by the existing contract. Source-heading patterns are anchored; each has positive and substantive-heading negative fixtures. A required source heading outside the enumerated wording needs explicit review, not a silent fuzzy match. §5 manual review must still cover excluded content and the substantive ending before structural tails.
++
++Comparison keys use NFC plus casefold, including Greek final sigma. They are orthographic first-token keys, not lemmatization. Casefold equates case variants only; grammatical inflection can evade repetition detection. Explicit contrast templates do not count every `not` equivalent and must not match across a full stop, question, or newline. Greek question punctuation is also a regex boundary. Caveat and formula detections are partial signal counts.
++
++### Neutral fixture and failure contract
++
++`tests/fixtures-batch03.json` contains literal expected slices/tokens/signals authored before profiles. Library/room/book examples and abstract numbered references do not assert Taiwanese law and do not come from the new articles. NFC/NFD variants and Unicode-space tests derive only from those fixed literals, never from the implementation's own expected-value function.
++
++Tests cover explicit locale and path dispatch, abbreviation titles/terminal forms, ordinal positive and real sentence-end negative, quote attribution, URLs, source-tail positive/negative, ordinary negation and explicit contrast, 8/9/31/32 edges, actual repetitive input failure, insufficient input, reserved markers, missing profile and unsupported CLI paths/codes. Unknown support is exit 2; no Korean/English fallback. A measured repetitive sample must remain exit 1.
++
++The unchanged 28-locale contract is frozen against 1,572 current R files at HEAD `5e2d0f5df8c75eb4aca8304b7d9f5110ac422f90`: 1,541 measured and 31 Thai files unavailable for lack of approved boundary maps. That unavailable status is part of the baseline, not PASS. Historical BASELINE21 has 22 changed input files; their hashes are recorded independently from engine comparisons. Identical current frozen input bytes, not an old article paired with a new article, are used for regression.
++
++### Implementation and verification notes
++
++Three engine files gain opt-in profile handling: Greek sentence/question and
++URL-tail punctuation; Catalan internal `l·l`; Unicode-canonical abbreviation
++and finite ordinal matching. The new profiles opt into Unicode whitespace
++after terminal abbreviations. Existing profiles have none of these new flags;
++their bytes and the score/HARD definitions remain unchanged. No universal
++syntax or morphology parser is introduced.
++
++The neutral-test chronology records initial unsupported-locale failures, then
++feature failures with profiles present. Later neutral edge tests were fixed
++before their fixes: nonbreaking spaces after final abbreviations, U+037E after
++a bare URL, and an NFD Catalan ordinal follower ending in an accent. The only
++changed initial literal expectation was Greek final sigma in an opener key:
++`όμως` must casefold to `όμωσ` under the declared comparison contract. Its
++original fixture bytes, reason and both hashes are retained; no sentence
++expectation or manuscript score was changed to obtain a pass.
++
++`tests/compare_twenty_eight.py` requires explicit `--repo-root R` or
++`TSENG_REPO_ROOT=R`, and rejects a mismatching repository. It measures the same
++frozen bytes through both implementations and records current/historical
++source edits separately. The installation package includes 36 production
++files; task evidence, snapshots and test files stay in the audit directory.
++`BATCH03-VERIFICATION.json` and `BATCH03-REPORT.md` bind final results and SHA
++values after verification. Shared installation remains a root decision.
++
++With these seven explicit profiles, 35 of 49 locale codes are routed. Thai
++remains conditionally measurable with approved maps; route support is not
++proof that every existing article is measurable. The 14 unsupported codes
++remain bn, et, fa, he, km, lt, lv, mn, my, ne, sl, sr, ta and ur. They retain
++exit 2; no fallback or unsupported-language PASS is introduced.
+--- /dev/null
++++ candidate/profiles/bg.json
+@@ -0,0 +1,54 @@
++{
++  "review_status": "AI-authored neutral contract; root review/install pending",
++  "join_hyphens": true,
++  "canonical_abbreviations": true,
++  "question_pattern": "[?？؟]\\s*[\\\"”’»›“«)]*$",
++  "provenance": "MULTILINGUAL-METHOD.md (batch03); audit tests/fixtures-batch03.json frozen before profile implementation",
++  "register": "Standard Bulgarian",
++  "abbreviations": [
++    "проф",
++    "доц",
++    "акад",
++    "чл",
++    "ал",
++    "т",
++    "стр",
++    "бр",
++    "г",
++    "гр",
++    "ул",
++    "напр",
++    "т.е",
++    "т. е",
++    "т.н",
++    "т. н",
++    "др",
++    "лв",
++    "млн",
++    "ч",
++    "мин"
++  ],
++  "terminal_abbreviations": [
++    "т.н",
++    "т. н",
++    "др",
++    "лв"
++  ],
++  "context_terminal_abbreviations": {
++    "г": "\\d{4}\\s*$"
++  },
++  "ordinal_followers": "клас|класове|етаж|глава|точка|януари|февруари|март|април|май|юни|юли|август|септември|октомври|ноември|декември",
++  "additional_closing_quotes": "“",
++  "contrast_patterns": [
++    "(?i:\\bне\\b[^.!?\\n;;]{0,180}\\b(?:а|но)\\b)",
++    "(?i:\\bза\\s+разлика\\s+от\\b)",
++    "(?i:\\bвместо\\s+това\\b)"
++  ],
++  "caveat_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:обаче|въпреки\\s+това|все\\s+пак)\\b)",
++  "hypo_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:да\\s+предположим\\s*,?\\s*че|представете\\s+си)\\b)",
++  "formula_close_pattern": "(?i:тази\\s+статия\\s+(?:предоставя|съдържа)\\s+обща\\s+информация|нашата\\s+кантора\\s+може\\s+да\\s+помогне)",
++  "citation_pattern": "(?i:\\b(?:член|чл\\.)\\s*\\d+)",
++  "locale": "bg",
++  "directory": "columns-bg",
++  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:източници|официални\\s+източници|използвани\\s+източници)\\s*:?\\s*$)"
++}
+--- /dev/null
++++ candidate/profiles/ca.json
+@@ -0,0 +1,47 @@
++{
++  "review_status": "AI-authored neutral contract; root review/install pending",
++  "join_hyphens": true,
++  "canonical_abbreviations": true,
++  "question_pattern": "[?？؟]\\s*[\\\"”’»›“«)]*$",
++  "provenance": "MULTILINGUAL-METHOD.md (batch03); audit tests/fixtures-batch03.json frozen before profile implementation",
++  "register": "Standard Catalan",
++  "abbreviations": [
++    "Sr",
++    "Sra",
++    "Dr",
++    "Dra",
++    "prof",
++    "art",
++    "arts",
++    "pàg",
++    "pàgs",
++    "p",
++    "núm",
++    "núms",
++    "ap",
++    "av",
++    "c",
++    "p.ex",
++    "p. ex",
++    "etc",
++    "aprox",
++    "cf"
++  ],
++  "terminal_abbreviations": [
++    "etc"
++  ],
++  "join_catalan_ela_geminada": true,
++  "ordinal_pattern": "(?<!\\w)\\d+(?:rs|es|ns|ts|r|a|n|t|è)\\.(?=\\s+(?:pis|planta|capítol|article|apartat|paràgraf|edició|congrés|jornades)(?![\\w\\u0300-\\u036f]))",
++  "contrast_patterns": [
++    "(?i:\\bno\\b[^.!?\\n;;]{0,180}\\bsinó\\b)",
++    "(?i:\\ba\\s+diferència\\s+de\\b)",
++    "(?i:\\ben\\s+lloc\\s+de\\b)"
++  ],
++  "caveat_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:tanmateix|però|no\\s+obstant\\s+això)\\b)",
++  "hypo_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:suposem\\s+que|imaginem\\s+que)\\b)",
++  "formula_close_pattern": "(?i:aquest\\s+article\\s+(?:ofereix|proporciona|conté)\\s+informació\\s+general|el\\s+nostre\\s+despatx\\s+us\\s+pot\\s+ajudar)",
++  "citation_pattern": "(?i:\\b(?:article|articles|art\\.)\\s*\\d+)",
++  "locale": "ca",
++  "directory": "columns-ca",
++  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:fonts(?:\\s+oficials)?|referències(?:\\s+oficials)?|bibliografia)\\s*:?\\s*$)"
++}
+--- /dev/null
++++ candidate/profiles/el.json
+@@ -0,0 +1,46 @@
++{
++  "review_status": "AI-authored neutral contract; root review/install pending",
++  "join_hyphens": true,
++  "canonical_abbreviations": true,
++  "question_pattern": "[?？;;]\\s*[\\\"”’»›)]*$",
++  "provenance": "MULTILINGUAL-METHOD.md (batch03); audit tests/fixtures-batch03.json frozen before profile implementation",
++  "register": "Standard Modern Greek",
++  "abbreviations": [
++    "κ",
++    "κα",
++    "δρ",
++    "καθ",
++    "αρ",
++    "άρθ",
++    "παρ",
++    "σελ",
++    "π.χ",
++    "π. χ",
++    "κ.λπ",
++    "κτλ",
++    "κ.ά",
++    "π.μ",
++    "μ.μ"
++  ],
++  "terminal_abbreviations": [
++    "κ.λπ",
++    "κτλ",
++    "κ.ά",
++    "π.μ",
++    "μ.μ"
++  ],
++  "additional_sentence_terminators": ";;",
++  "question_open_pattern": "[?？;;]",
++  "contrast_patterns": [
++    "(?i:\\b(?:δεν|όχι)\\b[^.!?\\n;;]{0,180}\\bαλλά\\b)",
++    "(?i:\\bσε\\s+αντίθεση\\s+με\\b)",
++    "(?i:\\bαντί\\s+για\\b)"
++  ],
++  "caveat_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:ωστόσο|όμως|παρ[’\\x27]\\s*όλα\\s*αυτά)\\b)",
++  "hypo_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:ας\\s+υποθέσουμε\\s+ότι|φανταστείτε\\s+ότι)\\b)",
++  "formula_close_pattern": "(?i:(?:το\\s+άρθρο\\s+αυτό|αυτό\\s+το\\s+άρθρο)\\s+παρέχει\\s+γενικές\\s+πληροφορίες|το\\s+γραφείο\\s+μας\\s+μπορεί\\s+να\\s+βοηθήσει)",
++  "citation_pattern": "(?i:\\b(?:άρθρο|άρθρα|άρθ\\.)\\s*\\d+)",
++  "locale": "el",
++  "directory": "columns-el",
++  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:πηγές|επίσημες\\s+πηγές|βιβλιογραφία)\\s*:?\\s*$)"
++}
+--- /dev/null
++++ candidate/profiles/hr.json
+@@ -0,0 +1,54 @@
++{
++  "review_status": "AI-authored neutral contract; root review/install pending",
++  "join_hyphens": true,
++  "canonical_abbreviations": true,
++  "question_pattern": "[?？؟]\\s*[\\\"”’»›“«)]*$",
++  "provenance": "MULTILINGUAL-METHOD.md (batch03); audit tests/fixtures-batch03.json frozen before profile implementation",
++  "register": "Standard Croatian",
++  "abbreviations": [
++    "dr",
++    "prof",
++    "doc",
++    "mr",
++    "sc",
++    "dipl",
++    "ing",
++    "npr",
++    "tj",
++    "tzv",
++    "itd",
++    "itsl",
++    "i sl",
++    "br",
++    "čl",
++    "st",
++    "str",
++    "god",
++    "g",
++    "usp"
++  ],
++  "terminal_abbreviations": [
++    "itd",
++    "itsl",
++    "i sl",
++    "god"
++  ],
++  "context_terminal_abbreviations": {
++    "g": "\\d{4}\\s*$"
++  },
++  "ordinal_followers": "kat|katu|razred|razreda|poglavlje|poglavlja|članak|stavak|godine|siječnja|veljače|ožujka|travnja|svibnja|lipnja|srpnja|kolovoza|rujna|listopada|studenoga|prosinca",
++  "ordinal_pattern": "(?<!\\w)[IVXLCDM]+\\.(?=\\s+(?:poglavlje|poglavlja|razred|stoljeće|stoljeća)\\b)",
++  "additional_closing_quotes": "“",
++  "contrast_patterns": [
++    "(?i:\\b(?:ne|nije|nisu)\\b[^.!?\\n;;]{0,180}\\b(?:nego|već)\\b)",
++    "(?i:\\bza\\s+razliku\\s+od\\b)",
++    "(?i:\\bumjesto\\s+toga\\b)"
++  ],
++  "caveat_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:međutim|ipak|unatoč\\s+tome)\\b)",
++  "hypo_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:pretpostavimo\\s+da|zamislimo\\s+da)\\b)",
++  "formula_close_pattern": "(?i:ovaj\\s+članak\\s+(?:pruža|sadrži)\\s+opće\\s+informacije|naš\\s+ured\\s+vam\\s+može\\s+pomoći)",
++  "citation_pattern": "(?i:\\b(?:članak|članka|čl\\.)\\s*\\d+)",
++  "locale": "hr",
++  "directory": "columns-hr",
++  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:izvori|službeni\\s+izvori|literatura)\\s*:?\\s*$)"
++}
+--- /dev/null
++++ candidate/profiles/hu.json
+@@ -0,0 +1,53 @@
++{
++  "review_status": "AI-authored neutral contract; root review/install pending",
++  "join_hyphens": true,
++  "canonical_abbreviations": true,
++  "question_pattern": "[?？؟]\\s*[\\\"”’»›“«)]*$",
++  "provenance": "MULTILINGUAL-METHOD.md (batch03); audit tests/fixtures-batch03.json frozen before profile implementation",
++  "register": "Standard Hungarian",
++  "abbreviations": [
++    "dr",
++    "prof",
++    "ifj",
++    "id",
++    "özv",
++    "pl",
++    "stb",
++    "kb",
++    "ill",
++    "vö",
++    "ún",
++    "sz",
++    "u",
++    "ker",
++    "old",
++    "jan",
++    "febr",
++    "márc",
++    "ápr",
++    "jún",
++    "júl",
++    "aug",
++    "szept",
++    "okt",
++    "nov",
++    "dec"
++  ],
++  "terminal_abbreviations": [
++    "stb"
++  ],
++  "ordinal_followers": "fejezet|fejezetet|bekezdés|bekezdése|cikk|pont|emelet|kerület|kerületben|évi|nap|napján|január|február|március|április|május|június|július|augusztus|szeptember|október|november|december",
++  "ordinal_pattern": "(?<!\\w)(?:[IVXLCDM]+\\.(?=\\s+(?:kerület|kerületben|fejezet|fejezetet|pont)\\b)|\\d+\\.(?=\\s*§))",
++  "contrast_patterns": [
++    "(?i:\\bnem\\b[^.!?\\n;;]{0,180}\\bhanem\\b)",
++    "(?i:\\bellentétben\\b)",
++    "(?i:\\behelyett\\b)"
++  ],
++  "caveat_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:azonban|ugyanakkor|mindazonáltal)\\b)",
++  "hypo_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:tegyük\\s+fel\\s*,?\\s*hogy|képzeljük\\s+el\\s*,?\\s*hogy)\\b)",
++  "formula_close_pattern": "(?i:ez\\s+a\\s+cikk\\s+általános\\s+tájékoztatást\\s+nyújt|irodánk\\s+segíthet)",
++  "citation_pattern": "(?i:\\b\\d+\\.\\s*(?:§|cikk\\b)|§\\s*\\d+)",
++  "locale": "hu",
++  "directory": "columns-hu",
++  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:források|hivatalos\\s+források|hivatkozások|irodalomjegyzék)\\s*:?\\s*$)"
++}
+--- /dev/null
++++ candidate/profiles/is.json
+@@ -0,0 +1,48 @@
++{
++  "review_status": "AI-authored neutral contract; root review/install pending",
++  "join_hyphens": true,
++  "canonical_abbreviations": true,
++  "question_pattern": "[?？؟]\\s*[\\\"”’»›“«)]*$",
++  "provenance": "MULTILINGUAL-METHOD.md (batch03); audit tests/fixtures-batch03.json frozen before profile implementation",
++  "register": "Standard Icelandic",
++  "abbreviations": [
++    "dr",
++    "próf",
++    "nr",
++    "gr",
++    "mgr",
++    "bls",
++    "t.d",
++    "þ.e",
++    "o.fl",
++    "o.s.frv",
++    "m.a",
++    "u.þ.b",
++    "kl",
++    "kr",
++    "ehf",
++    "hf"
++  ],
++  "terminal_abbreviations": [
++    "o.fl",
++    "o.s.frv",
++    "kr",
++    "ehf",
++    "hf"
++  ],
++  "ordinal_followers": "kafli|kafla|gr|mgr|bekk|bekkur|blaðsíðu|hæð|janúar|febrúar|mars|apríl|maí|júní|júlí|ágúst|september|október|nóvember|desember",
++  "ordinal_pattern": "(?<!\\w)[IVXLCDM]+\\.(?=\\s+(?:kafli|kafla|öld|aldar)\\b)",
++  "additional_closing_quotes": "“",
++  "contrast_patterns": [
++    "(?i:\\bekki\\b[^.!?\\n;;]{0,180}\\bheldur\\b)",
++    "(?i:\\bólíkt\\b)",
++    "(?i:\\bí\\s+stað\\s+þess\\b)"
++  ],
++  "caveat_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:hins\\s+vegar|þó|engu\\s+að\\s+síður)\\b)",
++  "hypo_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:gerum\\s+ráð\\s+fyrir\\s+að|ímyndum\\s+okkur\\s+að)\\b)",
++  "formula_close_pattern": "(?i:þessi\\s+grein\\s+veitir\\s+almennar\\s+upplýsingar|skrifstofan\\s+okkar\\s+getur\\s+aðstoðað)",
++  "citation_pattern": "(?i:\\b\\d+\\.\\s*gr\\.|\\b(?:grein|gr\\.)\\s*\\d+)",
++  "locale": "is",
++  "directory": "columns-is",
++  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:heimildir|opinberar\\s+heimildir|tilvísanir)\\s*:?\\s*$)"
++}
+--- /dev/null
++++ candidate/profiles/sk.json
+@@ -0,0 +1,63 @@
++{
++  "review_status": "AI-authored neutral contract; root review/install pending",
++  "join_hyphens": true,
++  "canonical_abbreviations": true,
++  "question_pattern": "[?？؟]\\s*[\\\"”’»›“«)]*$",
++  "provenance": "MULTILINGUAL-METHOD.md (batch03); audit tests/fixtures-batch03.json frozen before profile implementation",
++  "register": "Standard Slovak",
++  "abbreviations": [
++    "Ing",
++    "Mgr",
++    "Dr",
++    "MUDr",
++    "PhDr",
++    "JUDr",
++    "PhD",
++    "CSc",
++    "doc",
++    "prof",
++    "napr",
++    "resp",
++    "t.j",
++    "t. j",
++    "tzv",
++    "atď",
++    "apod",
++    "a pod",
++    "č",
++    "čl",
++    "ods",
++    "písm",
++    "str",
++    "s",
++    "r",
++    "hod",
++    "Z.z",
++    "Z. z"
++  ],
++  "terminal_abbreviations": [
++    "atď",
++    "apod",
++    "a pod",
++    "Z.z",
++    "Z. z"
++  ],
++  "context_terminal_abbreviations": {
++    "r": "\\d{4}\\s*$"
++  },
++  "ordinal_followers": "poschodie|poschodí|kapitola|kapitolu|kapitoly|trieda|triede|ročník|odsek|odseku|článok|bod|januára|februára|marca|apríla|mája|júna|júla|augusta|septembra|októbra|novembra|decembra",
++  "ordinal_pattern": "(?<!\\w)(?:[IVXLCDM]+\\.(?=\\s+(?:kapitola|kapitolu|kapitoly|zjazd|storočie|storočia)\\b)|\\d+\\.(?=\\s*§))",
++  "additional_closing_quotes": "“",
++  "contrast_patterns": [
++    "(?i:\\bnie\\b[^.!?\\n;;]{0,180}\\b(?:ale|lež)\\b)",
++    "(?i:\\bna\\s+rozdiel\\s+od\\b)",
++    "(?i:\\bnamiesto\\s+toho\\b)"
++  ],
++  "caveat_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:napriek\\s+tomu|avšak|predsa)\\b)",
++  "hypo_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:predpokladajme\\s*,?\\s*že|predstavme\\s+si\\s*,?\\s*že)\\b)",
++  "formula_close_pattern": "(?i:tento\\s+článok\\s+(?:poskytuje|obsahuje)\\s+všeobecné\\s+informácie|naša\\s+kancelária\\s+vám\\s+môže\\s+pomôcť)",
++  "citation_pattern": "(?i:\\b(?:článok|článku|čl\\.)\\s*\\d+)",
++  "locale": "sk",
++  "directory": "columns-sk",
++  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:zdroje|oficiálne\\s+zdroje|literatúra)\\s*:?\\s*$)"
++}
+--- restored/tests/compare_existing.py
++++ candidate/tests/compare_existing.py
+@@ -1,13 +1,24 @@
+ """Compare all original fourteen-locale articles, including explicit unavailability."""
+ from pathlib import Path
++import argparse
+ import ast
++import os
+ import hashlib
+ import json
+ import sys
+ from baseline_support import load_baseline
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+-REPO = ROOT.parents[4]
++parser = argparse.ArgumentParser(description=__doc__)
++parser.add_argument('--repo-root', default=os.environ.get('TSENG_REPO_ROOT'),
++                    help='Exact R path; no repository inference from copy location')
++args = parser.parse_args()
++if not args.repo_root:
++    parser.error('--repo-root or TSENG_REPO_ROOT is required')
++REPO = Path(args.repo_root).expanduser().resolve()
++expected_repo = Path(json.loads((ROOT / 'BASELINE28.json').read_text())['repo_root']).resolve()
++if REPO != expected_repo or not (REPO / '.git').exists():
++    parser.error('repository does not match the frozen BASELINE28 repo_root')
+ sys.path.insert(0, str(ROOT))
+ import variety_metrics as metrics
+ import variety_multilingual as multilingual
+--- restored/tests/compare_twenty_one.py
++++ candidate/tests/compare_twenty_one.py
+@@ -5,14 +5,25 @@
+ the engine. The same current bytes are also measured with both implementations.
+ """
+ from pathlib import Path
++import argparse
+ import ast
++import os
+ import hashlib
+ import importlib.util
+ import json
+ import sys
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+-REPO = ROOT.parents[4]
++parser = argparse.ArgumentParser(description=__doc__)
++parser.add_argument('--repo-root', default=os.environ.get('TSENG_REPO_ROOT'),
++                    help='Exact R path; no repository inference from copy location')
++args = parser.parse_args()
++if not args.repo_root:
++    parser.error('--repo-root or TSENG_REPO_ROOT is required')
++REPO = Path(args.repo_root).expanduser().resolve()
++expected_repo = Path(json.loads((ROOT / 'BASELINE28.json').read_text())['repo_root']).resolve()
++if REPO != expected_repo or not (REPO / '.git').exists():
++    parser.error('repository does not match the frozen BASELINE28 repo_root')
+ sys.path.insert(0, str(ROOT))
+ import variety_metrics as current
+ import variety_multilingual as companion
+--- restored/tests/test_next_seven.py
++++ candidate/tests/test_next_seven.py
+@@ -103,7 +103,7 @@
+         with tempfile.TemporaryDirectory() as folder:
+             p = Path(folder) / 'unknown.md'
+             p.write_text('Neutral sentence.\n\n' * 8)
+-            for args in ([], ['--lang', 'bg'], ['--lang', 'nn'], ['--lang', 'no'], ['--lang', 'xx']):
++            for args in ([], ['--lang', 'et'], ['--lang', 'nn'], ['--lang', 'no'], ['--lang', 'xx']):
+                 run = subprocess.run([sys.executable, str(ROOT / 'variety_metrics.py'), 'check', str(p), *args], capture_output=True, text=True, env={**os.environ, 'PYTHONDONTWRITEBYTECODE': '1'})
+                 self.assertEqual(run.returncode, 2)
+                 self.assertNotIn('Traceback', run.stderr)

@@ -1,0 +1,68 @@
+--- installed35-hrhu/variety_expansion.py
++++ candidate/variety_expansion.py
+@@ -107,6 +107,9 @@
+             can_end = key in terminal
+             if key in contextual:
+                 can_end = bool(re.search(contextual[key], protected[:match.start()]))
++            follower = data.get('nonterminal_abbreviation_followers', {}).get(key)
++            if follower and re.match(follower, unicodedata.normalize('NFC', remaining)):
++                can_end = False
+             if can_end and (not remaining or remaining[0].isupper()):
+                 # A shorter abbreviation must not remask the last dot of a
+                 # terminal compound (Russian т. д. contains standalone д.).
+--- installed35-hrhu/MULTILINGUAL-METHOD.md
++++ candidate/MULTILINGUAL-METHOD.md
+@@ -388,3 +388,30 @@
+ The task audit's `METHOD-ORDINAL-FIX.md`, `ORDINAL-FIXTURE-FREEZE.json`, and
+ `ORDINAL-FIX-VERIFICATION.json` contain provenance, chronology, exact file SHA
+ values and same-input impacts. Tests passing is not native/legal approval.
++
++
++## Icelandic ordinal and final `gr.` correction (2026-10-25)
++
++A follow-up after the installed HR/HU correction addresses IS reference chains
++and real sentence endings after `gr.`. Reported manuscript fragments were seen,
++but the rule was fixed using independent neutral literals and official
++Ritreglur §§1.2.1, 22.2–22.6 and 26.1.1 before target impact scores. IS opts into
++the existing lowercase dotted-ordinal continuation branch and declares `gr`
++a possible terminal abbreviation.
++
++A new optional `nonterminal_abbreviation_followers` mapping prevents a declared
++abbreviation from being terminal in a finite following context. IS uses it
++only for `gr` followed by a hyphenated letter-prefix document compound ending
++in the genitive `reglnanna`. The prefix is unrestricted by literal name; a
++nominative `reglurnar` starting a new sentence does not match. Matching uses
++NFC comparison text without rewriting original slices. Other profiles leave
++this mapping unset. Quotes, semicolons, dates, times, amounts and true ordinal
++endings retain their tested contracts.
++
++This remains a finite heuristic: unlisted names and ambiguous title phrases
++need manual boundary review. It does not parse Icelandic syntax or certify
++all abbreviations. No word units, score, HARD limits, thresholds or manuscript
++bytes change. The isolated IS audit records pre-fix failures, the capitalized
++title counterexample failure after a first profile-only change, full tests,
++fixed code hashes and paired same-input impacts. Native/legal approval and
++publication readiness remain separate.
+--- installed35-hrhu/profiles/is.json
++++ candidate/profiles/is.json
+@@ -28,7 +28,8 @@
+     "o.s.frv",
+     "kr",
+     "ehf",
+-    "hf"
++    "hf",
++    "gr"
+   ],
+   "ordinal_followers": "kafli|kafla|gr|mgr|bekk|bekkur|blaðsíðu|hæð|janúar|febrúar|mars|apríl|maí|júní|júlí|ágúst|september|október|nóvember|desember",
+   "ordinal_pattern": "(?<!\\w)[IVXLCDM]+\\.(?=\\s+(?:kafli|kafla|öld|aldar)\\b)",
+@@ -44,5 +45,9 @@
+   "citation_pattern": "(?i:\\b\\d+\\.\\s*gr\\.|\\b(?:grein|gr\\.)\\s*\\d+)",
+   "locale": "is",
+   "directory": "columns-is",
+-  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:heimildir|opinberar\\s+heimildir|tilvísanir)\\s*:?\\s*$)"
++  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:heimildir|opinberar\\s+heimildir|tilvísanir)\\s*:?\\s*$)",
++  "dotted_ordinal_lowercase_continuation": true,
++  "nonterminal_abbreviation_followers": {
++    "gr": "[^\\W\\d_][\\w\\u0300-\\u036f]*[-‐‑]reglnanna(?![\\w\\u0300-\\u036f])"
++  }
+ }

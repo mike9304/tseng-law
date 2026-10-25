@@ -1,0 +1,56 @@
+"""Neutral literals supplied before the HR/HU ordinal fix, including real ends."""
+from pathlib import Path
+import json
+import sys
+import unicodedata
+import unittest
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+import variety_metrics as metrics
+import variety_multilingual as multilingual
+
+CASES = json.loads((ROOT / 'tests/fixtures-ordinal-fix.json').read_text())
+
+
+class OrdinalFixTests(unittest.TestCase):
+    def test_neutral_continuations_keep_literal_sentence_slices(self):
+        for lang, cases in CASES.items():
+            for case in cases:
+                if case['kind'] != 'positive':
+                    continue
+                for form in ('NFC', 'NFD'):
+                    for space in (' ', '\u00a0', '\u202f'):
+                        with self.subTest(locale=lang, text=case['text'], form=form, space=repr(space)):
+                            text = unicodedata.normalize(form, case['text'].replace(' ', space))
+                            wanted = [unicodedata.normalize(form, s.replace(' ', space)) for s in case['sentences']]
+                            self.assertEqual(multilingual.split_sentences(text, lang), wanted)
+                            self.assertEqual(metrics.sentences(text, lang), wanted)
+                            self.assertEqual(''.join(text.split()), ''.join(''.join(wanted).split()))
+
+    def test_real_numeric_ordinal_year_and_uppercase_conjunction_ends_stay_split(self):
+        for lang, cases in CASES.items():
+            for case in cases:
+                if case['kind'] != 'negative':
+                    continue
+                with self.subTest(locale=lang, text=case['text']):
+                    self.assertEqual(multilingual.split_sentences(case['text'], lang), case['sentences'])
+                    self.assertEqual(metrics.sentences(case['text'], lang), case['sentences'])
+
+    def test_actual_body_pipeline_keeps_markup_and_sentence_count(self):
+        for lang, cases in CASES.items():
+            selected = cases[:3]
+            prose = [case['text'] for case in selected]
+            first = selected[0]['sentences'][0]
+            prose[0] = '[' + first + '](https://example.test/reference) ' + selected[0]['sentences'][1]
+            text = '---\ntitle: Neutral example\n---\n\n' + '\n\n'.join(prose)
+            with self.subTest(locale=lang):
+                measured = metrics.metrics(text, lang)
+                self.assertEqual(measured['sentences'], 6)
+                self.assertEqual(measured['paragraphs'], 3)
+                expected_words = sum(len(multilingual.words(s, lang)) for case in selected for s in case['sentences'])
+                self.assertEqual(measured['mean_len'], round(expected_words / 6, 2))
+
+
+if __name__ == '__main__':
+    unittest.main()

@@ -269,6 +269,149 @@ Unknown locales and paths, missing profiles, and inputs too short to measure
 return exit 2 for these additions. They never fall back to Korean or English.
 Legacy four-locale short-input skips retain their old compatibility behavior;
 a skip is not a measured PASS. Thai still needs its reviewed, hash-bound maps
-and uses the unchanged dictionary-word contract. Of the 49 public locales, the
-remaining unsupported 21 are bn, bg, ca, el, et, fa, he, hr, hu, is, km, lt, lv,
+and uses the unchanged dictionary-word contract. At that 28-locale stage, of the 49 public locales, the
+remaining unsupported 21 were bn, bg, ca, el, et, fa, he, hr, hu, is, km, lt, lv,
 mn, my, ne, sk, sl, sr, ta and ur.
+
+
+## Batch03 expansion (2026-10-25): bg/ca/el/hr/hu/is/sk
+
+The root-installed 28-locale version was matched exactly against all 29 receipt
+files in both R and shared before copying. `RESTORED-BASELINE28.json` records
+that provenance; `baseline28/` and `BASELINE28.json` retain immutable engine and
+current-input baselines in the task audit. This section is self-contained in
+the installed method file; the separate `METHOD-BATCH03.md` is the frozen
+pre-implementation audit contract.
+
+Contract recorded before profiles or new target-article measurements, 2026-10-25 KST. AI-authored engineering fixtures; root review and shared installation are separate. Orthographic references justify particular punctuation/word handling, not editorial thresholds or native/legal approval.
+
+### Primary references read and their bounded use
+
+| Locale | Primary reference and observation | Measurement decision |
+|---|---|---|
+| bg | Bulgarian Academy of Sciences Institute for Bulgarian Language: [abbreviation-final dots](https://ibl.bas.bg/ezikovispravki/vaprosi/pri-skrashcheniya-min-dfn-9), [spacing and quotation marks](https://ibl.bas.bg/pishi_pravilno/po-intervalite-posreshtat-po-zapetaite-izprashtat/). One dot can serve both abbreviation and sentence; the described closing quote is U+201C. | Listed title/reference abbreviations do not end a sentence; listed terminal forms and a year-conditioned `г.` can. Add `“` as closing quote. Whitespace separates orthographic tokens. |
+| ca | IEC [preparation of originals, §§1.6–1.9](https://criteria.iec.cat/wp-content/uploads/2014/07/1-1-3_Preparaci%C3%B3-dels-originals_Any-davant_011.pdf) covers abbreviation dots, ela geminada, typographic apostrophe and numeric separators. Generalitat [ordinal abbreviations](https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&document=abrevia.pdf&method=criterislinguistics&pagina=31&titol=Sigles.+Apostrofaci%C3%B3) was available as an indexed primary-source excerpt; direct open returned a cache miss. | `l·l` stays within a word, but arbitrary `a·b` does not. Apostrophe/hyphen compounds use the existing orthographic policy. Bounded ordinal contexts cover `2n. pis`, `5è. capítol`, `2n. Congrés`; a terminal `1r.` still ends a sentence. |
+| el | Centre for the Greek Language [Triantafyllidis grammar](https://www.greek-language.gr/greekLang/files/document/modern_greek/grammatiki.triantafyllidi.pdf), indexed punctuation section: Greek questions end with `;`. The primary [dictionary entry](https://www.greek-language.gr/greekLang/modern_greek/tools/lexica/triantafyllides/search.html?lq=%CE%B5%CF%81%CF%89%CF%84%CE%B7%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CF%8C) corroborates this in the search excerpt; direct dictionary access returned 403 and PDF text extraction was empty. [Unicode Greek/Coptic names](https://unicode.org/Public/18.0.0/charts/nameslist/0370/) identifies U+037E and U+0387. | `;` and U+037E are Greek terminators/question signs; raised U+00B7/U+0387 dots are not full stops. Apply only to el. The same contract must reach question counts, question opening and citation-tail detection. |
+| hr | Institute of Croatian Language [abbreviations](https://pravopis.hr/pravilo/kratice/49/) and [period](https://pravopis.hr/pravilo/tocka/55/) explicitly describe dots after abbreviations and Arabic/Roman ordinals. | Listed abbreviations and bounded ordinal followers preserve interior dots. `itd.` may end a sentence; a cardinal or year at a real sentence end must still split. Closing `“` is supported alongside existing forms. |
+| hu | Hungarian research-institute [AkH. 12](https://helyesiras.mta.hu/helyesiras/default/akh12), §§267 and 290–294, covers abbreviation/ordinal dots and number/date presentation. | Protect listed abbreviations, bounded Arabic/Roman ordinal and date contexts. Comma/period within digits is one numeric unit; spaced groups remain separate units. This does not parse Hungarian morphology. |
+| is | Árni Magnússon Institute [Ritreglur](https://ritreglur.arnastofnun.is/), §§22 and 28, describes ordinal/abbreviation dots, grouped numbers/time and `„…“` quotes. A final abbreviation/ordinal does not gain a second full stop. | Explicit abbreviations and terminal currency/enumeration forms, bounded Arabic/Roman ordinal contexts, and U+201C closing quote. Neither compound richness nor inflection receives an invented weight. |
+| sk | Ľudovít Štúr Institute [PSP 2013 description](https://www.juls.savba.sk/psp_2013.html) identifies the unchanged fourth edition; its accessible [text PDF](https://www.juls.savba.sk/ediela/psp2000/psp.pdf), punctuation §2.1, describes abbreviation and Arabic/Roman ordinal dots. | Listed abbreviations and bounded ordinal contexts; `atď.` can finish a sentence. Preserve accents and closing `“`. The PDF is labeled third edition 2000, not misrepresented as a new 2026 rule. |
+
+No missing web content has been represented as fully read. The sources describe writing conventions; profiles are a finite AI-authored selection of common signals and neutral fixtures, not a complete implementation of the reference grammars. Source headings, contrasts, caveats and formula signals are separately authored editorial heuristics, not official classifications.
+
+### Units, boundaries and exclusions
+
+All seven count Unicode orthographic units using letter/number starts, attached combining marks, existing internal apostrophes and opted-in hyphens. Digit ranges use separate endpoints. Internal decimal/group punctuation is retained; normal, nonbreaking and narrow nonbreaking spaces all separate units, so `1 000` is two units while `1.000` is one. These are transparent conventions, not equivalent linguistic or semantic lengths.
+
+Catalan ela geminada protection is limited to U+00B7 between two `l`/`L` letters. Precomposed `ŀ`/`Ŀ` are already letters. A middle dot between arbitrary letters stays a separator. Greek raised dots remain separators and do not inherit this Catalan option.
+
+The 8-word short / 32-word long edges, CV 0.45, all HARD conditions and the score function remain inherited. No reference establishes those numbers, and no new target manuscript was read to choose them. A measured exit 0 means only no implemented HARD condition failed. A low score does not certify readability, legal preservation or human-language quality.
+
+Sentence slicing preserves the original bytes' Unicode spelling (decoded text), including decomposed accents. New optional abbreviation/ordinal patterns match NFC and NFD spellings without normalizing away slice offsets. Quote endings remain attached, and the existing lower-case reporting-clause heuristic keeps a quoted question with its attribution. This is not a syntactic quotation parser; proper-name reporting clauses, unusual abbreviations, arbitrary Roman numbers, ellipsis ambiguity and unspecified ordinal followers can still need review.
+
+Abbreviation terminal decisions use the existing next-uppercase/end heuristic. A following proper name can be ambiguous; titles are not indiscriminately made terminal. Ordinal protection is bounded by listed followers rather than a rule that swallows every number plus full stop. The same limits apply to calendar and law-number prose. New Greek terminators use opt-in fields only; other locales retain their former semicolon behavior.
+
+Markdown link destinations are omitted while link labels and following punctuation are retained. Headings, tables, bullets, frontmatter/FAQ and recognized source tails are excluded from prose metrics by the existing contract. Source-heading patterns are anchored; each has positive and substantive-heading negative fixtures. A required source heading outside the enumerated wording needs explicit review, not a silent fuzzy match. §5 manual review must still cover excluded content and the substantive ending before structural tails.
+
+Comparison keys use NFC plus casefold, including Greek final sigma. They are orthographic first-token keys, not lemmatization. Casefold equates case variants only; grammatical inflection can evade repetition detection. Explicit contrast templates do not count every `not` equivalent and must not match across a full stop, question, or newline. Greek question punctuation is also a regex boundary. Caveat and formula detections are partial signal counts.
+
+### Neutral fixture and failure contract
+
+`tests/fixtures-batch03.json` contains literal expected slices/tokens/signals authored before profiles. Library/room/book examples and abstract numbered references do not assert Taiwanese law and do not come from the new articles. NFC/NFD variants and Unicode-space tests derive only from those fixed literals, never from the implementation's own expected-value function.
+
+Tests cover explicit locale and path dispatch, abbreviation titles/terminal forms, ordinal positive and real sentence-end negative, quote attribution, URLs, source-tail positive/negative, ordinary negation and explicit contrast, 8/9/31/32 edges, actual repetitive input failure, insufficient input, reserved markers, missing profile and unsupported CLI paths/codes. Unknown support is exit 2; no Korean/English fallback. A measured repetitive sample must remain exit 1.
+
+The unchanged 28-locale contract is frozen against 1,572 current R files at HEAD `5e2d0f5df8c75eb4aca8304b7d9f5110ac422f90`: 1,541 measured and 31 Thai files unavailable for lack of approved boundary maps. That unavailable status is part of the baseline, not PASS. Historical BASELINE21 has 22 changed input files; their hashes are recorded independently from engine comparisons. Identical current frozen input bytes, not an old article paired with a new article, are used for regression.
+
+### Implementation and verification notes
+
+Three engine files gain opt-in profile handling: Greek sentence/question and
+URL-tail punctuation; Catalan internal `l·l`; Unicode-canonical abbreviation
+and finite ordinal matching. The new profiles opt into Unicode whitespace
+after terminal abbreviations. Existing profiles have none of these new flags;
+their bytes and the score/HARD definitions remain unchanged. No universal
+syntax or morphology parser is introduced.
+
+The neutral-test chronology records initial unsupported-locale failures, then
+feature failures with profiles present. Later neutral edge tests were fixed
+before their fixes: nonbreaking spaces after final abbreviations, U+037E after
+a bare URL, and an NFD Catalan ordinal follower ending in an accent. The only
+changed initial literal expectation was Greek final sigma in an opener key:
+`όμως` must casefold to `όμωσ` under the declared comparison contract. Its
+original fixture bytes, reason and both hashes are retained; no sentence
+expectation or manuscript score was changed to obtain a pass.
+
+`tests/compare_twenty_eight.py` requires explicit `--repo-root R` or
+`TSENG_REPO_ROOT=R`, and rejects a mismatching repository. It measures the same
+frozen bytes through both implementations and records current/historical
+source edits separately. The installation package includes 36 production
+files; task evidence, snapshots and test files stay in the audit directory.
+`BATCH03-VERIFICATION.json` and `BATCH03-REPORT.md` bind final results and SHA
+values after verification. Shared installation remains a root decision.
+
+With these seven explicit profiles, 35 of 49 locale codes are routed. Thai
+remains conditionally measurable with approved maps; route support is not
+proof that every existing article is measurable. The 14 unsupported codes
+remain bn, et, fa, he, km, lt, lv, mn, my, ne, sl, sr, ta and ur. They retain
+exit 2; no fallback or unsupported-language PASS is introduced.
+
+
+## HR/HU ordinal correction after boundary review (2026-10-25)
+
+Reported target fragments exposed an oversegmentation defect after the initial
+35-locale package was installed. That later exposure is disclosed; it does not
+retroactively change the earlier package's no-target-reading record. The fix
+was specified using newly supplied neutral HR/HU examples and the official
+Croatian period rules and Hungarian AkH. §§267/292. No article or threshold was
+edited and no target score selected a boundary rule.
+
+Only HR/HU opt into `dotted_ordinal_lowercase_continuation`: a dotted Arabic or
+uppercase Roman numeral stays internal before a whole lowercase word after
+horizontal Unicode whitespace. This covers inflected nouns, adjectives,
+coordinated ordinals and continuing dates. It leaves uppercase or mixed-case
+next words and newline boundaries unchanged. HR additionally recognizes a
+finite reference noun (selected forms of article, paragraph, point, chapter or
+rule), followed by an ordinal/ordinal list and a capitalized genitive document
+kind: Zakona, Priručnika, Pravilnika, Statuta, Ustava, Uredbe or Pravila. A
+nominative document noun beginning a new sentence is not protected by that
+new pattern. Returned spelling, whitespace within slices and word units are
+preserved; the score, HARD limits and all other locale flags are unchanged.
+
+These are contextual orthographic heuristics, not a parser. A lowercase brand
+at a sentence start, unusual casing, a genitive document phrase beginning a
+fresh sentence, unlisted title types and ambiguous Roman strings still need
+human inspection. A matching title context may be ambiguous; no claim is made
+that every reference or sentence boundary is settled. Selected genuine
+endings, uppercase conjunctions, mixed-case names, Unicode forms and actual
+Markdown preprocessing are tested separately from the positive examples.
+
+The task audit's `METHOD-ORDINAL-FIX.md`, `ORDINAL-FIXTURE-FREEZE.json`, and
+`ORDINAL-FIX-VERIFICATION.json` contain provenance, chronology, exact file SHA
+values and same-input impacts. Tests passing is not native/legal approval.
+
+
+## Icelandic ordinal and final `gr.` correction (2026-10-25)
+
+A follow-up after the installed HR/HU correction addresses IS reference chains
+and real sentence endings after `gr.`. Reported manuscript fragments were seen,
+but the rule was fixed using independent neutral literals and official
+Ritreglur §§1.2.1, 22.2–22.6 and 26.1.1 before target impact scores. IS opts into
+the existing lowercase dotted-ordinal continuation branch and declares `gr`
+a possible terminal abbreviation.
+
+A new optional `nonterminal_abbreviation_followers` mapping prevents a declared
+abbreviation from being terminal in a finite following context. IS uses it
+only for `gr` followed by a hyphenated letter-prefix document compound ending
+in the genitive `reglnanna`. The prefix is unrestricted by literal name; a
+nominative `reglurnar` starting a new sentence does not match. Matching uses
+NFC comparison text without rewriting original slices. Other profiles leave
+this mapping unset. Quotes, semicolons, dates, times, amounts and true ordinal
+endings retain their tested contracts.
+
+This remains a finite heuristic: unlisted names and ambiguous title phrases
+need manual boundary review. It does not parse Icelandic syntax or certify
+all abbreviations. No word units, score, HARD limits, thresholds or manuscript
+bytes change. The isolated IS audit records pre-fix failures, the capitalized
+title counterexample failure after a first profile-only change, full tests,
+fixed code hashes and paired same-input impacts. Native/legal approval and
+publication readiness remain separate.

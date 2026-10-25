@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-10-25T13:19:12.139Z",
+  "selectedFiles": 21,
+  "automatedStatus": "PASS",
+  "semanticStatus": "REVIEW_REQUIRED",
+  "publicationReady": false,
+  "errors": 0,
+  "reviewItems": 191,
+  "runtimeContractHashes": {
+    "src/lib/column-audience.ts": "a1cb781f1a787366199995b0312b0fa1556d850e0637eb5ea66cd2174680b760",
+    "src/data/market-column-curation.ts": "c42e22feed6e49e5f4915a48ad18a49d9b874c024824ddf53a74fd5ede8a8b94",
+    "src/lib/column-attribution.ts": "8111ea9feabcdc98f13485014da51d39c9aebd084cbb6a1e52d923624bb6dcc3",
+    "src/lib/columns.ts": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+    "src/lib/column-locales.ts": "26d8fe8de7a9703aa7b0d279f32938e84190d5199ce0c4ddee84e89bb934b535",
+    "src/lib/public-guidance.ts": "c00a193d0dd583145e544a2cc505efad75a4379f5c334a811655a689d6df8d85",
+    "src/lib/column-topics.ts": "3fb8e18ae18777481cb8a07c158ea1b6435cdab98da0ea4701a1b98bf3ba435a"
+  },
+  "fullReport": "/Users/son7/tseng-all-language-columns-20261025/batch02/checks/batch02-content-audit.json",
+  "fullReportSha256": "00981171e73ba00ea84289a568d4c052b91f5a095f542191194b038e4c448dd2",
+  "editorialDecision": "reviews/batch02-primary.md"
+}

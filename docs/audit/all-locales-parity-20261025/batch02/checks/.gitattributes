@@ -1,0 +1,2 @@
+# Preserve unified-diff context lines, including the space on empty context lines.
+*.diff -whitespace

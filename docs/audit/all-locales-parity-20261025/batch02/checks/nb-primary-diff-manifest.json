@@ -1,0 +1,20 @@
+[
+  {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch02/src/content/columns-nb/704-taiwan-arc-first-application.md",
+    "kimiOriginalSha256": "e5fabde50a16dd23558043c58302a1f84734dbf01df0673bc557dd069a8f7fb2",
+    "primaryEditedSha256": "43eae981b3999cf13b943e69d789dcea616ba7519bbcaa97b7b9aa8dffcf5251",
+    "diff": "/Users/son7/tseng-all-language-columns-20261025/batch02/checks/704-taiwan-arc-first-application-nb-primary.diff"
+  },
+  {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch02/src/content/columns-nb/705-taiwan-visa-residence-work-study-family.md",
+    "kimiOriginalSha256": "18b87e92d2717657968e5d2dddfc7c39f457c54c1d2a70a9b0dabfce6e695369",
+    "primaryEditedSha256": "12e38bdc71537107ea3667130075331efbc1c4f375ea424fa97a2f0309161571",
+    "diff": "/Users/son7/tseng-all-language-columns-20261025/batch02/checks/705-taiwan-visa-residence-work-study-family-nb-primary.diff"
+  },
+  {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch02/src/content/columns-nb/706-taiwan-arc-renewal-changes-reentry.md",
+    "kimiOriginalSha256": "e54089f212709b52ac806babe4e5f7abe7e8ef1b59791c840735ebf06c39a07e",
+    "primaryEditedSha256": "fadba2c1f345db167feb99eae18e6f509d9fe419feb71bd13cf1af65d5d4bf03",
+    "diff": "/Users/son7/tseng-all-language-columns-20261025/batch02/checks/706-taiwan-arc-renewal-changes-reentry-nb-primary.diff"
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "publicCommit": "5e2d0f5df8c75eb4aca8304b7d9f5110ac422f90",
+  "firstRun": {
+    "total": 53,
+    "passed": 46,
+    "failed": 7,
+    "fatal": false
+  },
+  "secondRun": {
+    "total": 7,
+    "passed": 5,
+    "failed": 2,
+    "fatal": false
+  },
+  "thirdRun": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "fatal": false
+  },
+  "finalUniqueCases": 53,
+  "finalPassed": 53,
+  "firstStartedAt": "2026-10-25T13:16:06.011Z",
+  "lastFinishedAt": "2026-10-25T13:23:48.718Z",
+  "rawReports": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/live-batch01/browser/results.json",
+      "sha256": "773448d4146482a6b873cf348a836ae78ba3cb217764ec18f9acd733a6fd1506"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/live-batch01/browser/results-r2.json",
+      "sha256": "b946b28855ce76ceaaf73330ab965f2e51c9ea065d8c0f06c4c518ac66a737f3"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/live-batch01/browser/results-r3.json",
+      "sha256": "15dd6a68e959b14a47b69a66a564d815253670ec2357e303c47a9a2d60e26a58"
+    }
+  ],
+  "diagnosis": "Initial seven failures were font ERR_ABORTED during tested full-document navigation. Waited for article fonts before navigation; five passed. Instrumented remaining two showed aborts during language-switch from newly opened menu. Waiting for menu font requests before clicking resolved both, with no ignored failures and no production code change. All original failing reports retained.",
+  "visualInspection": [
+    "desktop-sv-704-hero.png",
+    "mobile-zh-hans-704-body.png",
+    "desktop-zh-hans-706-body.png"
+  ],
+  "limitations": "Representative screenshots visually inspected; all21 desktop/mobile DOM and decoded hero checks; 7 no-JS and 4 navigation checks. Existing English sidebar template remains."
+}

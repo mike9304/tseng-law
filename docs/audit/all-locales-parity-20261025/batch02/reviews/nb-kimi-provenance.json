@@ -1,0 +1,23 @@
+{
+  "modelAlias": "kimi-code/k3.1-pro",
+  "exitCode": 0,
+  "scope": "same 20 user-approved input files; no additional private documents",
+  "inputManifestSha256": "50618882d83894e85796c6eb810f6ecbc5588c525e18d1d8ae26ff4e3a0ac82c",
+  "taskSha256": "cad06dea22a126920444175dd659a0032bd3addd9be5b37698600af2ed0df8bb",
+  "runSha256": "d32f3ddbcef322bd2bffbd03e477e81fd4fd3b891dfeaaa6ff7ca0d32f47a713",
+  "outputs": [
+    {
+      "file": "src/content/columns-nb/704-taiwan-arc-first-application.md",
+      "originalSha256": "e5fabde50a16dd23558043c58302a1f84734dbf01df0673bc557dd069a8f7fb2"
+    },
+    {
+      "file": "src/content/columns-nb/705-taiwan-visa-residence-work-study-family.md",
+      "originalSha256": "18b87e92d2717657968e5d2dddfc7c39f457c54c1d2a70a9b0dabfce6e695369"
+    },
+    {
+      "file": "src/content/columns-nb/706-taiwan-arc-renewal-changes-reentry.md",
+      "originalSha256": "e54089f212709b52ac806babe4e5f7abe7e8ef1b59791c840735ebf06c39a07e"
+    }
+  ],
+  "status": "drafts copied for independent and primary review; not deployed"
+}

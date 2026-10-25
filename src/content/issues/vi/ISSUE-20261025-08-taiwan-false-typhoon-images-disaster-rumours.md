@@ -26,9 +26,9 @@ author: "legal-ai-assistant"
 
 # Ảnh giả trong bão Champi: chia sẻ lại có thể dẫn đến trách nhiệm gì?
 
-Sáu người liên quan đến ảnh giả về biển hiệu một cửa hàng đồ ăn nhanh bị đổ trong bão Champi đã được cảnh sát Đài Trung mời đến làm việc, theo [CNA ngày 24/10/2026](https://www.cna.com.tw/news/asoc/202610240047.aspx). Ảnh do AI tạo.
+Sáu người liên quan đến ảnh giả về biển hiệu một cửa hàng đồ ăn nhanh bị đổ trong bão Champi đã được cảnh sát Đài Trung mời đến làm việc, theo [CNA ngày 24/10/2026](https://www.cna.com.tw/news/asoc/202610240047.aspx). Bản tin gọi đây là vụ tin giả liên quan đến trí tuệ nhân tạo.
 
-Theo bản tin, cảnh sát xử lý từng người theo mức độ liên quan, chuyển hồ sơ hoặc xử phạt theo các luật khác nhau. Bản tin không nêu bản án. Với người Việt gửi tin bão cho gia đình hoặc nhóm cộng đồng, hành vi cần xem xét là thông tin đã được truyền đi thế nào và người gửi biết gì.
+Theo bản tin, cảnh sát xử lý từng người theo mức độ nặng nhẹ của hành vi, chuyển hồ sơ hoặc xử phạt theo các luật khác nhau. Bản tin không nêu bản án. Với người Việt gửi tin bão cho gia đình hoặc nhóm cộng đồng, hành vi cần xem xét là thông tin đã được truyền đi thế nào và người gửi biết gì.
 
 ## Thông tin sai phải đủ khả năng gây thiệt hại
 
@@ -40,15 +40,15 @@ Không cần chờ có người bị thương. Cụm từ “đủ khả năng g
 
 ## Cố ý vẫn là một điều kiện
 
-[Điều 12 Bộ luật Hình sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=12) quy định hành vi vô ý chỉ bị xử phạt hình sự khi có quy định riêng. Khoản 3 Điều 53 không đặt ra một tội do vô ý. Vì vậy, không thể chỉ thấy bài đăng sai rồi kết luận mọi người chia sẻ đều phạm tội.
+[Điều 12 Bộ luật Hình sự](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=12) quy định hành vi vô ý chỉ bị xử phạt hình sự khi có quy định riêng. Khoản 3 Điều 53 không đặt ra một tội do vô ý. Thông tin sai chưa đủ để kết tội. Không thể từ đó kết luận rằng tất cả những người đã chia sẻ đều phạm tội.
 
 Theo [Điều 13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=13), cố ý gồm biết và mong muốn sự việc cấu thành tội phạm xảy ra. Trường hợp thấy trước và chấp nhận sự việc đó cũng được xem là cố ý.
 
-Người chia sẻ đã đọc nội dung gì? Họ nhận ảnh từ đâu, thêm chú thích nào và có được báo rằng ảnh giả trước lúc tiếp tục phát tán không? Tin nhắn và thời điểm đăng có thể giúp làm rõ nhận thức của người đó. Quốc tịch hoặc ngôn ngữ của nhóm nhận tin không tự trả lời các câu hỏi này.
+Người chia sẻ đã đọc nội dung gì? Họ nhận ảnh từ đâu, thêm chú thích nào và có được ai báo rằng đó là ảnh giả trước khi tiếp tục chuyển đi không? Tin nhắn và thời điểm đăng có thể giúp làm rõ nhận thức của người đó. Quốc tịch hoặc ngôn ngữ của nhóm nhận tin không tự trả lời các câu hỏi này.
 
 ## Bài đăng gốc và bản được chuyển tiếp
 
-Một ảnh chụp màn hình có thể không còn chú thích đi kèm bản gốc. Khi người gửi thêm địa điểm, thời gian hoặc nói đó là cảnh đang xảy ra, phần chữ ấy cũng nằm trong nội dung cần đối chiếu. Việc dùng AI không thay cho việc chứng minh các điều kiện của Điều 53.
+Một ảnh chụp màn hình có thể không còn chú thích đi kèm bản gốc. Khi người gửi thêm địa điểm, thời gian hoặc nói đó là cảnh đang xảy ra, phần chữ ấy cũng nằm trong nội dung cần đối chiếu. Việc bức ảnh có nguồn gốc từ công cụ AI không thay cho việc chứng minh các điều kiện của Điều 53.
 
 Thông tin về nơi đăng, người nhận và diễn biến trao đổi giúp phân biệt người tạo ảnh với người tiếp tục truyền ảnh. Sự phân biệt này không tự miễn trách nhiệm cho người chuyển tiếp; luật xét hành vi phát tán cùng yếu tố cố ý và khả năng gây thiệt hại đã nêu.
 

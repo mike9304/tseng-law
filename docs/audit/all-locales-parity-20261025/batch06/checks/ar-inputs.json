@@ -1,0 +1,95 @@
+{
+  "recorded_at": "2026-10-26T01:36:26.448198+09:00",
+  "author": "/root/column_inventory",
+  "locale": "ar",
+  "inputs_read_in_full": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/BRIEF.md",
+      "sha256": "f6c2579b6255705ece341a356d3a4d527ca74a869916785d51edb9c0f05ee1a8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/README.md",
+      "sha256": "a25bbd8007e62b6d6fc71f3b937652e589a65257d1c0e667cb36cf6005bb5b6d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/authoring-contract-draft.md",
+      "sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/six-source-facts.md",
+      "sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-register.md",
+      "sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-freeze.json",
+      "sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/bundle-manifest.json",
+      "sha256": "d56dfa2dd03c0e93c5f3576ee119c508f07daf24eb7412123aadc42e49bf3192"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/AGENTS.md",
+      "sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3"
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+      "sha256": "24332b5c2d46a686ed3f4635bd16d418631d2cd6d1403d0c4d7ac82b355fa431"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md",
+      "sha256": "91a77cfc009bd425c4c1244832494e272284441bf06f0bfae013583ff8b328ce"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ar/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "253c199800eac1461ab48026679388c9d46c37939e0872cf84d5e53d4908572a"
+    }
+  ],
+  "missing_home_rule": "/Users/son7/agent-library/knowledge/editorial-voice.md (repository full copy used)",
+  "source_scope": "Current frozen canonical6 and research bundle; retained Oct25 court responses distinguished from fresh Oct26 current-law/policy research. No assertion of a fresh full court read by this author.",
+  "ownership": "AR6, reviews/ar-author.md, checks/ar-* only",
+  "target_publication": "2026-10-26"
+}

@@ -1,0 +1,131 @@
+{
+  "at": "2026-10-25T17:24:58.933961+00:00",
+  "lang": "pt",
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "0e3c9f74b6c48427841020e5381528ce8a7406702352a45a254bbfd403ba4dca",
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/920-taiwan-apartment-ev-charger-common-area-judgment.md [pt] sentences=41 mean=18.1 cv=0.459 short=0.171 run3=0.026 opener_rep=0.083 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "pt",
+        "sentences": 41,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 4,
+        "mean_len": 18.1,
+        "len_cv": 0.459,
+        "short_share": 0.171,
+        "long_share": 0.073,
+        "para_cv": 0.176,
+        "even_run3": 0.026,
+        "top_end": "morador",
+        "top_end_share": 0.073,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "o",
+        "top_opener_n": 2,
+        "opener_rep": 0.083,
+        "consec_same_start": 1,
+        "cite_para_share": 0.333,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.02,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "O direito de usar um lugar de estacionamento abrange também a parede, o teto e o quadro el",
+        "last": "Legislação e aviso municipal revistos em 26 de outubro de 2026. A exposição do caso utiliza os fundamentos da decisão co",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "boundary_before_count": 41,
+      "boundary_after_count": 41,
+      "changed_paragraphs": [
+        {
+          "paragraph": 6,
+          "before": [
+            "Já o ponto quatro do mesmo parágrafo trata de certas instalações de tubagens e cabos em partes exclusivas, com utilização das áreas comuns quando necessária.",
+            "O tribunal rejeitou o argumento de que a obra em discussão se enquadrava nessa hipótese.",
+            "A localização efetiva e as regras daquele edifício sustentam os fundamentos dos pontos cinco e seis da decisão.",
+            "Retirá-los da análise transformaria um caso concreto numa regra de votação para qualquer carregador."
+          ],
+          "after": [
+            "Já o ponto quatro do parágrafo um do artigo 6 trata de certas instalações de tubagens e cabos em partes exclusivas, com utilização das áreas comuns quando necessária.",
+            "O tribunal rejeitou o argumento de que a obra em discussão se enquadrava nessa hipótese.",
+            "A localização efetiva e as regras daquele edifício sustentam os fundamentos dos pontos cinco e seis da decisão.",
+            "Retirá-los da análise transformaria um caso concreto numa regra de votação para qualquer carregador."
+          ]
+        }
+      ],
+      "all_other_paragraph_arrays_identical": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "f2ceea36aaef83170ffbba9be26b26107330e34e6c3f6585ef1f005922f2948c",
+      "exit": 1,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/921-taiwan-online-game-coins-refund-judgment.md [pt] sentences=41 mean=18.4 cv=0.449 short=0.146 run3=0.026 opener_rep=0.143 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  FAIL len_cv=0.449 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "pt",
+        "sentences": 41,
+        "paras": 14,
+        "heads": 4,
+        "list_items": 4,
+        "mean_len": 18.4,
+        "len_cv": 0.449,
+        "short_share": 0.146,
+        "long_share": 0.073,
+        "para_cv": 0.244,
+        "even_run3": 0.026,
+        "top_end": "jogo",
+        "top_end_share": 0.049,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "o",
+        "top_opener_n": 2,
+        "opener_rep": 0.143,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.79,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "NT$243.548 foi o valor que um jogador atribuiu às moedas restantes na sua conta e pediu à ",
+        "last": "Normas atuais e fontes oficiais consultadas em 26 de outubro de 2026. O processo de 2021 diz respeito a um jogo específi",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "boundary_before_count": 41,
+      "boundary_after_count": 41,
+      "changed_paragraphs": [
+        {
+          "paragraph": 1,
+          "before": [
+            "NT$243.548 foi o valor que um jogador atribuiu às moedas restantes na sua conta e pediu à empresa.",
+            "Não recebeu esse reembolso.",
+            "Embora o ecrã mostrasse um saldo, já não existiam pontos pagos por utilizar, facto que ambas as partes aceitavam no processo reproduzido na coletânea oficial de proteção do consumidor, páginas impressas 140 a 153."
+          ],
+          "after": [
+            "NT$243.548 foi o valor que um jogador atribuiu às moedas restantes na sua conta e pediu à empresa.",
+            "O tribunal não acolheu esse pedido de reembolso.",
+            "Embora o ecrã mostrasse um saldo, já não existiam pontos pagos por utilizar, facto que ambas as partes aceitavam no processo reproduzido na coletânea oficial de proteção do consumidor, páginas impressas 140 a 153."
+          ]
+        }
+      ],
+      "all_other_paragraph_arrays_identical": true
+    }
+  ],
+  "unchanged_four_not_rerun": true
+}

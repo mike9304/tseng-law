@@ -1,0 +1,148 @@
+{
+  "frozen_at": "2026-10-26T01:06:55.080090+09:00",
+  "scope": "Six canonical sources only. Research and writing-contract preparation; no article authoring or deployment.",
+  "canonical_rows": [
+    {
+      "canonical_path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "current_sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "approved_sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "normalized_metadata_only": false,
+      "reverse_to_approved_verified": true,
+      "current_snapshot": "canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "approved_snapshot": "canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.approved-20261025.md",
+      "prior_review_record": {
+        "included_in_codex_scope": true,
+        "source_path": "src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "route": "/zh-hant/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "locale": "zh-hant",
+        "id": 919,
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+        "final_verdict": "PASS",
+        "final_report": "work/reviews/cases-zh-hant-final.json",
+        "final_report_sha256": "1292392c57681cc8d40893dd229ebd9b23c702c2fcdadf2f454f825e7fa00576"
+      }
+    },
+    {
+      "canonical_path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+      "current_sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "approved_sha256": "f8067f5da68c76957f371d7aa09fb736f53128a784b7191efc7e90ca0e7fb3ff",
+      "normalized_metadata_only": true,
+      "reverse_to_approved_verified": true,
+      "current_snapshot": "canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "approved_snapshot": "canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.approved-20261025.md",
+      "prior_review_record": {
+        "included_in_codex_scope": true,
+        "source_path": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+        "route": "/zh-hant/columns/taiwan-online-game-coins-refund-judgment",
+        "locale": "zh-hant",
+        "id": 921,
+        "sha256": "f8067f5da68c76957f371d7aa09fb736f53128a784b7191efc7e90ca0e7fb3ff",
+        "final_verdict": "PASS",
+        "final_report": "work/reviews/cases-zh-hant-final.json",
+        "final_report_sha256": "1292392c57681cc8d40893dd229ebd9b23c702c2fcdadf2f454f825e7fa00576"
+      }
+    },
+    {
+      "canonical_path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "current_sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "approved_sha256": "882c912a8bb558358e549ad79b526b4428cf48a60cc32e968c295aa37b3f00b5",
+      "normalized_metadata_only": true,
+      "reverse_to_approved_verified": true,
+      "current_snapshot": "canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "approved_snapshot": "canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.approved-20261025.md",
+      "prior_review_record": {
+        "included_in_codex_scope": true,
+        "source_path": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "route": "/zh-hant/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "locale": "zh-hant",
+        "id": 920,
+        "sha256": "882c912a8bb558358e549ad79b526b4428cf48a60cc32e968c295aa37b3f00b5",
+        "final_verdict": "PASS",
+        "final_report": "work/reviews/cases-zh-hant-final.json",
+        "final_report_sha256": "1292392c57681cc8d40893dd229ebd9b23c702c2fcdadf2f454f825e7fa00576"
+      }
+    },
+    {
+      "canonical_path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "current_sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "approved_sha256": "581af61bc4b3dbb692a77dcad925503bcda1ef323085d034561bf3438521f29f",
+      "normalized_metadata_only": true,
+      "reverse_to_approved_verified": true,
+      "current_snapshot": "canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "approved_snapshot": "canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.approved-20261025.md",
+      "prior_review_record": {
+        "included_in_codex_scope": true,
+        "source_path": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "route": "/zh-hant/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "locale": "zh-hant",
+        "id": 918,
+        "sha256": "581af61bc4b3dbb692a77dcad925503bcda1ef323085d034561bf3438521f29f",
+        "final_verdict": "PASS",
+        "final_report": "work/reviews/cases-zh-hant-final.json",
+        "final_report_sha256": "1292392c57681cc8d40893dd229ebd9b23c702c2fcdadf2f454f825e7fa00576"
+      }
+    },
+    {
+      "canonical_path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "current_sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "approved_sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "normalized_metadata_only": false,
+      "reverse_to_approved_verified": true,
+      "current_snapshot": "canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "approved_snapshot": "canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.approved-20261025.md",
+      "prior_review_record": {
+        "included_in_codex_scope": true,
+        "source_path": "src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "route": "/en/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "locale": "en",
+        "id": 915,
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+        "final_verdict": "PASS",
+        "final_report": "work/reviews/cases-en-final.json",
+        "final_report_sha256": "cbc3ecc3ea5bf871fbb6ed4f47a6f2a02fed90a3c65ed10864baba3c1efeccc9"
+      }
+    },
+    {
+      "canonical_path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "current_sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "approved_sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "normalized_metadata_only": false,
+      "reverse_to_approved_verified": true,
+      "current_snapshot": "canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "approved_snapshot": "canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.approved-20261025.md",
+      "prior_review_record": {
+        "included_in_codex_scope": true,
+        "source_path": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "route": "/en/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "locale": "en",
+        "id": 916,
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+        "final_verdict": "PASS",
+        "final_report": "work/reviews/cases-en-final.json",
+        "final_report_sha256": "cbc3ecc3ea5bf871fbb6ed4f47a6f2a02fed90a3c65ed10864baba3c1efeccc9"
+      }
+    }
+  ],
+  "approval_evidence": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/checks/reviewed-publication-manifest.json",
+      "sha256": "1dcba2ced37e03d8f24dc684947f5a6fb4b4b70d509480275989aebd7ab9f595"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/reviews/cases-zh-hant-final.json",
+      "sha256": "1292392c57681cc8d40893dd229ebd9b23c702c2fcdadf2f454f825e7fa00576"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/reviews/cases-en-final.json",
+      "sha256": "cbc3ecc3ea5bf871fbb6ed4f47a6f2a02fed90a3c65ed10864baba3c1efeccc9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch04/checks/case-topic-normalization.json",
+      "sha256": "b112e2b4ce61974a67eba71be9bc8e9603fba09b476b8cecde7a8bb88d39eac4"
+    }
+  ],
+  "notes": [
+    "2026-10-25 PASS applies to approved hashes. 2026-10-26 three ZH changes are only topic civil to litigation and lastmod date; exact reverse restoration checked independently.",
+    "Snapshot sources and reports are read-only outside this research directory. Prior manifest Not yet deployed is a historical status, not a current deployment determination."
+  ]
+}

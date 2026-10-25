@@ -173,7 +173,7 @@ describe('builder column storage backend', () => {
         // The 2026-09-30 expertise columns (041-048) lead the archive, in source order.
         expect(allPosts.slice(0, lead).map((post) => post.slug)).toEqual(expertiseSlugs);
         expect(allPosts.slice(0, lead).map((post) => post.publicationDate)).toEqual(
-          expertiseSlugs.map(archiveLeadPublicationDate),
+          expertiseSlugs.map((slug) => archiveLeadPublicationDate(slug, locale)),
         );
         // English-only native columns (2026-09-29) follow the gap columns in source order.
         expect(

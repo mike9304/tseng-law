@@ -1,0 +1,218 @@
+{
+  "at": "2026-10-25T17:30:58.439098+00:00",
+  "status": "APPROVE",
+  "must_open": 0,
+  "optional_open": 0,
+  "r1_report_preserved_sha256": "809e8b5139ddeefc90703226e48d141203a59206b924b415976b6fb7ddbf5345",
+  "report_sha256": "d315ec3413edd08c57555ac3d464504bad3a3a51432401a213f0620fb0e6aba8",
+  "author_manifest_sha256": "de294b04f4904907f8e347f572a0b5b21a548f4d7d4ead7e9ee1abcbdbf534b9",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "cc4d26cb0501458b2565a864cbff0e09554eb9f67b2a74c64fd12a4e1fc79902",
+      "final_hash_matches": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "7e68c5bb750057a8be218b6dfceb8572997825643b82efb9ea66b76461d2b49f",
+      "final_hash_matches": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "1309324c33e0e163f942615b9748179ffb644e6a3b5ef509a10980c601eac8ba",
+      "final_hash_matches": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "deaa2b344be1dac722a028989f24a34cc911255737a671613bdf62c05de66c8f",
+      "final_hash_matches": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "96d2f80c44c8911fc25ad03ff1cec6c88277d9e736ef4fd538f723c041a2bf7a",
+      "final_hash_matches": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "17605ada0c21df3071a432a2b1e12f3ff62d4f10444ea41418a1c9722ae0d6cd",
+      "final_hash_matches": true
+    }
+  ],
+  "change_verification": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/921-taiwan-online-game-coins-refund-judgment.md",
+      "before_sha256": "239049f897c49cadc42b0d195ec6faff521a57391b8694c80317606d1095683c",
+      "after_sha256": "17605ada0c21df3071a432a2b1e12f3ff62d4f10444ea41418a1c9722ae0d6cd",
+      "inverse_reconstructs_independent_r1_and_saved_original": true,
+      "faq_bytes_unchanged": true,
+      "url_order_unchanged": true,
+      "body_bytes_unchanged": true,
+      "edits_read": [
+        {
+          "before": "Das Gericht unterschied bereits verwendete Spielchips von ungenutzten bezahlten Punkten.",
+          "after": "Das Gericht unterschied Münzen, die als Chips für Spielpartien dienten, von ungenutzten bezahlten Punkten.",
+          "reason": "M01: summarize contractual chip function without asserting that every remaining chip had already been used."
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "before_sha256": "e854becb0216d2801578a9c3825b95d493c0a6b2227c72aad000f6629072b0ab",
+      "after_sha256": "96d2f80c44c8911fc25ad03ff1cec6c88277d9e736ef4fd538f723c041a2bf7a",
+      "inverse_reconstructs_independent_r1_and_saved_original": true,
+      "faq_bytes_unchanged": true,
+      "url_order_unchanged": true,
+      "body_bytes_unchanged": false,
+      "edits_read": [
+        {
+          "before": "Artikel 11 des taiwanesischen Apartment Building Management Act",
+          "after": "Artikel 11 des taiwanesischen Gesetzes über die Verwaltung von Wohnanlagen (公寓大廈管理條例)",
+          "reason": "M02: use a descriptive German statute label and its exact Chinese identity, retaining article11 and URL."
+        },
+        {
+          "before": "Apartment Building Management Act, Artikel 6",
+          "after": "Taiwanesisches Gesetz über die Verwaltung von Wohnanlagen (公寓大廈管理條例), Artikel 6",
+          "reason": "M02: same descriptive statute label in sources; retain articles6/11 and URLs."
+        }
+      ],
+      "boundary_delta": [
+        {
+          "index": 11,
+          "before": "Artikel 11 des taiwanesischen Apartment Building Management Act bindet den Abbruch, wesentliche Reparaturen oder Verbesserungen gemeinsamer Bereiche und zugehöriger Einrichtungen an einen Beschluss der Eigentümerversammlung.",
+          "after": "Artikel 11 des taiwanesischen Gesetzes über die Verwaltung von Wohnanlagen (公寓大廈管理條例) bindet den Abbruch, wesentliche Reparaturen oder Verbesserungen gemeinsamer Bereiche und zugehöriger Einrichtungen an einen Beschluss der Eigentümerversammlung."
+        }
+      ],
+      "boundary_count": 45
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "before_sha256": "12f3083a5e0a2c95d049fe146d2a5b0969fe83d30a13db1c9ad4cca3f2ead751",
+      "after_sha256": "7e68c5bb750057a8be218b6dfceb8572997825643b82efb9ea66b76461d2b49f",
+      "inverse_reconstructs_independent_r1_and_saved_original": true,
+      "faq_bytes_unchanged": true,
+      "url_order_unchanged": true,
+      "body_bytes_unchanged": false,
+      "edits_read": [
+        {
+          "before": "Hinsichtlich 246 Anspruchstellern",
+          "after": "Hinsichtlich der 246 Anspruchsteller",
+          "reason": "S01: standard written German case marking, unchanged246-part disposition."
+        },
+        {
+          "before": "Der Zusammenhang zählt.",
+          "after": "Wer erhielt den Bericht?",
+          "reason": "S02: replace an abstract emphasis with the concrete recipient question answered by the next sentence."
+        }
+      ],
+      "boundary_delta": [
+        {
+          "index": 9,
+          "before": "Der Zusammenhang zählt.",
+          "after": "Wer erhielt den Bericht?"
+        },
+        {
+          "index": 18,
+          "before": "Hinsichtlich 246 Anspruchstellern hob der Gerichtshof die betroffenen Entscheidungsteile auf und verwies sie zur weiteren Behandlung zurück.",
+          "after": "Hinsichtlich der 246 Anspruchsteller hob der Gerichtshof die betroffenen Entscheidungsteile auf und verwies sie zur weiteren Behandlung zurück."
+        }
+      ],
+      "boundary_count": 46
+    }
+  ],
+  "actual_shared_runs": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "96d2f80c44c8911fc25ad03ff1cec6c88277d9e736ef4fd538f723c041a2bf7a",
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/920-taiwan-apartment-ev-charger-common-area-judgment.md [de] sentences=45 mean=14.8 cv=0.466 short=0.222 run3=0.047 opener_rep=0.071 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "de",
+        "sentences": 45,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.8,
+        "len_cv": 0.466,
+        "short_share": 0.222,
+        "long_share": 0.0,
+        "para_cv": 0.193,
+        "even_run3": 0.047,
+        "top_end": "gemeinschaftsordnung",
+        "top_end_share": 0.044,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "auch",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 1,
+        "cite_para_share": 0.357,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 2.99,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Von der Wand hinter dem Stellplatz verlief die Ladeleitung über die Decke bis zum gemeinsa",
+        "last": "Quellenstand: 25. und 26. Oktober 2026. Spätere Entscheidungen oder die Rechtskraft des bezeichneten Urteils wurden nich",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "7e68c5bb750057a8be218b6dfceb8572997825643b82efb9ea66b76461d2b49f",
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/916-taiwan-parent-company-pollution-liability-us-investor.md [de] sentences=46 mean=15.9 cv=0.477 short=0.174 run3=0.045 opener_rep=0.133 cite_end=0.0 cite_para=0.067 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "de",
+        "sentences": 46,
+        "paras": 15,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 15.9,
+        "len_cv": 0.477,
+        "short_share": 0.174,
+        "long_share": 0.022,
+        "para_cv": 0.219,
+        "even_run3": 0.045,
+        "top_end": "ab",
+        "top_end_share": 0.043,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "wer",
+        "top_opener_n": 2,
+        "opener_rep": 0.133,
+        "consec_same_start": 2,
+        "cite_para_share": 0.067,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.05,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Umweltgutachten aus der Vorbereitung einer Übernahme wurden später zu Beweismitteln gegen ",
+        "last": "Quellenstand: 25. und 26. Oktober 2026. Der Beitrag behandelt das bezeichnete Urteil von 2018 anhand der amtlichen Erklä",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    }
+  ],
+  "structure_reused_exact_sha": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-content-independent-r1.json",
+    "sha256": "1a1988cd5509fb66ebf775b6aa6ecc62446610150516de502b13fe590a8d9471",
+    "selected": 3,
+    "errors": 0
+  },
+  "no_manuscript_or_tool_edits": true,
+  "human_native_or_legal_approval": false
+}

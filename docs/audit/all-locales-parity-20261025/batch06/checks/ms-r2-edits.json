@@ -1,0 +1,183 @@
+{
+  "checkedAt": "2026-10-25T17:26:09.195626+00:00",
+  "reviewReportSHA256": "2e7d3f7142149742c66e718e810bd83d20bdae7d47ef0c9a0eda1e3044b342b1",
+  "requiredFindingsAddressed": [
+    "M1",
+    "M2"
+  ],
+  "optionalAdopted": [
+    "O1",
+    "O2",
+    "O3"
+  ],
+  "exactReplacementCount": 6,
+  "changedFileCount": 4,
+  "unchangedFileCount": 2,
+  "readOnlyGuardsMatched": 20,
+  "rows": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "changed": true,
+      "beforeSHA256": "19c743f3d68a65ac4fb3a5ac25d9861df017ab48afde6bfa87d220bcb89badda",
+      "afterSHA256": "a84831b3f245c2eb8bb1f3333f75058ef8716e53f346e08db45347fa9c4ae103",
+      "restoredSHA256": "19c743f3d68a65ac4fb3a5ac25d9861df017ab48afde6bfa87d220bcb89badda",
+      "exactRoundTrip": true,
+      "changes": [
+        {
+          "reviewID": "O1",
+          "required": false,
+          "field": "title",
+          "old": "Tuntutan wang bertukar kepada lanjutan masa: award kerja awam Taiwan dibatalkan",
+          "new": "Tuntutan wang selepas syor lanjutan masa: award kerja awam Taiwan dibatalkan",
+          "reasonAndMeaning": "Titling now identifies the renewed money claim after the extension recommendation, matching the decisive gap already explained in the body. No universal bar on changed claims."
+        }
+      ],
+      "diff": [
+        "--- R1/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "+++ R2/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "@@ -1,5 +1,5 @@",
+        " ---",
+        "-title: \"Tuntutan wang bertukar kepada lanjutan masa: award kerja awam Taiwan dibatalkan\"",
+        "+title: \"Tuntutan wang selepas syor lanjutan masa: award kerja awam Taiwan dibatalkan\"",
+        " seoTitle: \"Mediasi dan timbang tara kontrak awam Taiwan\"",
+        " summary: \"Kontraktor hospital kehilangan award timbang tara selepas rekod mediasi hanya menghasilkan syor mengenai lanjutan masa. Laluan timbang tara berkanun memerlukan penelitian terhadap pertikaian khusus dan sebab mediasi gagal.\"",
+        " published: \"2026-10-26\""
+      ]
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "changed": false,
+      "sha256": "e8de772156076b020564e30955075e84a2ba0b6388ffbd99366c304829c38d86"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "changed": false,
+      "sha256": "bb55a0db717c9eafbcdc5c8b64a475dfec3f8d208c629e711e8ce8e9a4069ef0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "changed": true,
+      "beforeSHA256": "b7d5cf0db2af832600b286b0b3634e6f58fb1da81098f407ae007be6143ac549",
+      "afterSHA256": "1247ec843684dd22111d51a5478876f7c2e786cbce07a6a4964b85b47faba871",
+      "restoredSHA256": "b7d5cf0db2af832600b286b0b3634e6f58fb1da81098f407ae007be6143ac549",
+      "exactRoundTrip": true,
+      "changes": [
+        {
+          "reviewID": "O2",
+          "required": false,
+          "field": "title",
+          "old": "Pemecatan kerana buli di Taiwan: hukuman mendahului pertimbangan jawatankuasa",
+          "new": "Pemecatan kerana buli di Taiwan: pengumuman hukuman mendahului pertimbangan jawatankuasa",
+          "reasonAndMeaning": "Specifies the advance announcement rather than implying completed punishment necessarily preceded deliberation. Disposition and appealability unchanged."
+        },
+        {
+          "reviewID": "O3",
+          "required": false,
+          "field": "body",
+          "old": "Jawapan memerlukan perkara yang jelas untuk dijawab.",
+          "new": "Kandungan notis menentukan perkara yang perlu dijawab.",
+          "reasonAndMeaning": "Removes a tautology by naming the notice whose content sets the response scope. No new form or public disclosure duty."
+        }
+      ],
+      "diff": [
+        "--- R1/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "+++ R2/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "@@ -1,5 +1,5 @@",
+        " ---",
+        "-title: \"Pemecatan kerana buli di Taiwan: hukuman mendahului pertimbangan jawatankuasa\"",
+        "+title: \"Pemecatan kerana buli di Taiwan: pengumuman hukuman mendahului pertimbangan jawatankuasa\"",
+        " summary: \"Mahkamah membatalkan pemecatan seorang penjawat awam selepas meneliti keputusan yang didahului pengumuman, peluang menjawab dan laporan bercanggah. Majikan swasta pula mempunyai kewajipan siasatan serta perlindungan di bawah undang-undang Taiwan yang terpakai kepada mereka.\"",
+        " published: \"2026-10-26\"",
+        " lastmod: \"2026-10-26\"",
+        "@@ -48,7 +48,7 @@",
+        " ",
+        " Laporan sumber manusia boleh membezakan apa yang didakwa, bahan yang menyokongnya dan dapatan yang dibuat daripada bahan itu. Jika keterangan temu bual bercanggah, rekod boleh menjelaskan bukti mana yang diterima dan sebabnya. Rekod kehadiran, mesej atau minit yang tidak menyokong tuduhan juga perlu diambil kira. Ini ialah cadangan penyusunan berdasarkan masalah yang dikenal pasti dalam kes tersebut, bukan satu borang wajib baharu.",
+        " ",
+        "-Jawapan memerlukan perkara yang jelas untuk dijawab. Notis yang sekadar meminta penerangan tentang gaya pengurusan tidak memberikan maklumat sama seperti notis yang mengenal pasti perbuatan, masa dan persoalan tertentu. Penyiasat boleh membandingkan notis, rekod temu bual dan dapatan akhir untuk melihat sama ada semuanya meneliti kejadian yang sama. Semua butiran peribadi tidak perlu dimasukkan ke dalam kenyataan awam.",
+        "+Kandungan notis menentukan perkara yang perlu dijawab. Notis yang sekadar meminta penerangan tentang gaya pengurusan tidak memberikan maklumat sama seperti notis yang mengenal pasti perbuatan, masa dan persoalan tertentu. Penyiasat boleh membandingkan notis, rekod temu bual dan dapatan akhir untuk melihat sama ada semuanya meneliti kejadian yang sama. Semua butiran peribadi tidak perlu dimasukkan ke dalam kenyataan awam.",
+        " ",
+        " Untuk penilaian pertikaian pekerjaan Taiwan, [e-mel awal kepada firma](mailto:wei@hoveringlaw.com.tw) boleh menyatakan peringkat aduan, keputusan yang sudah dibuat dan tarikh akhir terdekat tanpa melampirkan keseluruhan fail sensitif. Sebelum hasil diumumkan, notis, rekod penjelasan dan alasan menerima bukti perlu dapat menunjukkan sama ada siasatan benar-benar mendengar pandangan yang berlainan.",
+        " "
+      ]
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "changed": true,
+      "beforeSHA256": "aed340902065a8149571f3ca67b74bdfea7d2c64d730ff5295f1316e3c5554b4",
+      "afterSHA256": "de6df23563ef5d7387180836408e3b20a5e6c7ea20ba4a9a30c36421e244a635",
+      "restoredSHA256": "aed340902065a8149571f3ca67b74bdfea7d2c64d730ff5295f1316e3c5554b4",
+      "exactRoundTrip": true,
+      "changes": [
+        {
+          "reviewID": "M1",
+          "required": true,
+          "field": "body",
+          "old": "Penghuni bersandar pada perkara 6(1)(4), yang menyentuh pemasangan saluran untuk bahagian persendirian dan penggunaan bahagian bersama apabila perlu. Hujah itu ditolak berdasarkan lokasi sebenar pemasangan.",
+          "new": "Perkara 6(1)(4) turut menyentuh pemasangan saluran untuk bahagian persendirian dan penggunaan bahagian bersama apabila perlu. Mahkamah tidak menerima pengelasan itu bagi pemasangan dalam kes ini.",
+          "reasonAndMeaning": "Neutralizes the unverified assignment of the specific Article6(1)(4) submission to the resident. Retained official L43 and L44 distinguish resident factual argument from respondent statutory classification. Case-specific classification rejection and statutory content remain."
+        }
+      ],
+      "diff": [
+        "--- R1/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "+++ R2/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "@@ -34,7 +34,7 @@",
+        " ",
+        " Peraturan komuniti turut mengikat penilaian kes. Pelanggaran perkara 11 dan peraturan tersebut termasuk dalam kewajipan mematuhi undang-undang atau peraturan komuniti di bawah [perkara 6(1)(5)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6). Selepas jawatankuasa mengirim surat rasmi untuk merundingkan isu itu, pemasangan masih tidak ditanggalkan. Mahkamah menerima bahawa tindakan boleh dimohon di bawah perkara 6(3), yang menangani ketidakpatuhan selepas usaha penyelesaian.",
+        " ",
+        "-Penghuni bersandar pada perkara 6(1)(4), yang menyentuh pemasangan saluran untuk bahagian persendirian dan penggunaan bahagian bersama apabila perlu. Hujah itu ditolak berdasarkan lokasi sebenar pemasangan. [Alasan kelima dan keenam penghakiman](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1) perlu dibaca bersama peraturan komuniti kes tersebut; ia tidak menetapkan satu prosedur undian yang sama bagi setiap pengecas di semua pangsapuri.",
+        "+Perkara 6(1)(4) turut menyentuh pemasangan saluran untuk bahagian persendirian dan penggunaan bahagian bersama apabila perlu. Mahkamah tidak menerima pengelasan itu bagi pemasangan dalam kes ini. [Alasan kelima dan keenam penghakiman](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1) perlu dibaca bersama peraturan komuniti kes tersebut; ia tidak menetapkan satu prosedur undian yang sama bagi setiap pengecas di semua pangsapuri.",
+        " ",
+        " Tentang dakwaan bahawa suis ditambah, penggunaan dihentikan dan peralatan dikunci dengan tawaran menyerahkan kunci kepada jawatankuasa, mahkamah menjelaskan bahawa sekalipun semuanya benar, kewajipan menanggalkan pemasangan dan memulihkan keadaan asal tetap tidak terhapus. Bekalan yang dihentikan tidak mengesahkan kuasa menjalankan kerja.",
+        " "
+      ]
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/921-taiwan-online-game-coins-refund-judgment.md",
+      "changed": true,
+      "beforeSHA256": "39113b45c74664dd0104e20a05837675b4aa1c5e9735e00de4df91a25bd84c2d",
+      "afterSHA256": "74db4d0b549a770c8c916b38047abfb0ef89391788f2cabe5f9050714e725889",
+      "restoredSHA256": "39113b45c74664dd0104e20a05837675b4aa1c5e9735e00de4df91a25bd84c2d",
+      "exactRoundTrip": true,
+      "changes": [
+        {
+          "reviewID": "M2",
+          "required": true,
+          "field": "body",
+          "old": "Bagi mata berbayar yang belum digunakan atau fi permainan, pengendali mesti membuat bayaran balik selepas menolak kos yang perlu dalam masa 30 hari dari tarikh penamatan kontrak.",
+          "new": "Bagi mata berbayar yang belum digunakan atau fi permainan yang belum digunakan, pengendali mesti membuat bayaran balik selepas menolak kos yang perlu dalam masa 30 hari dari tarikh penamatan kontrak.",
+          "reasonAndMeaning": "Makes unused scope attach to game fees as well as paid points. OR objects, necessary-cost deduction, must refund within30days from termination and following bilateral-agreement option remain."
+        },
+        {
+          "reviewID": "M2",
+          "required": true,
+          "field": "faq[1].a",
+          "old": "Bayaran balik bagi mata berbayar yang belum digunakan atau fi permainan mesti dibuat dalam masa 30 hari dari tarikh penamatan setelah kos perlu ditolak, atau diurus mengikut kaedah yang dipersetujui kedua-dua pihak.",
+          "new": "Bayaran balik bagi mata berbayar yang belum digunakan atau fi permainan yang belum digunakan mesti dibuat dalam masa 30 hari dari tarikh penamatan setelah kos perlu ditolak, atau diurus mengikut kaedah yang dipersetujui kedua-dua pihak.",
+          "reasonAndMeaning": "Same scope clarification in FAQ2 only; anytime termination, termination starting event, necessary costs and bilateral alternative remain. Case-classification FAQ1 unchanged."
+        }
+      ],
+      "diff": [
+        "--- R1/921-taiwan-online-game-coins-refund-judgment.md",
+        "+++ R2/921-taiwan-online-game-coins-refund-judgment.md",
+        "@@ -17,7 +17,7 @@",
+        "   - q: \"Adakah semua item bernama syiling tidak boleh dibayar balik?\"",
+        "     a: \"Nama sahaja tidak menentukan hak bayaran balik. Syiling dalam kes ini digunakan sebagai cip ketika pemain berlawan dan tidak dianggap mata berbayar yang belum digunakan atau fi permainan yang perlu dipulangkan. Bagi permainan lain, cara syiling diperoleh, kegunaan, penggunaan sebenar dan kontraknya perlu diperiksa.\"",
+        "   - q: \"Selepas tujuh hari bermain, adakah saya kehilangan hak menamatkan kontrak?\"",
+        "-    a: \"Peraturan semasa membenarkan pengguna menamatkan kontrak pada bila-bila masa dengan memberikan notis. Bayaran balik bagi mata berbayar yang belum digunakan atau fi permainan mesti dibuat dalam masa 30 hari dari tarikh penamatan setelah kos perlu ditolak, atau diurus mengikut kaedah yang dipersetujui kedua-dua pihak. Hak pembatalan dalam tujuh hari selepas mula bermain mempunyai syarat tersendiri.\"",
+        "+    a: \"Peraturan semasa membenarkan pengguna menamatkan kontrak pada bila-bila masa dengan memberikan notis. Bayaran balik bagi mata berbayar yang belum digunakan atau fi permainan yang belum digunakan mesti dibuat dalam masa 30 hari dari tarikh penamatan setelah kos perlu ditolak, atau diurus mengikut kaedah yang dipersetujui kedua-dua pihak. Hak pembatalan dalam tujuh hari selepas mula bermain mempunyai syarat tersendiri.\"",
+        "   - q: \"Bolehkah pengendali menetapkan bahawa hanya rekod sistemnya diterima dalam pertikaian?\"",
+        "     a: \"Peraturan semasa melarang terma yang mengehadkan asas penentuan pertikaian kepada sejarah permainan dan data elektronik yang disimpan pengendali sahaja. Pemain boleh menyimpan bukti pembayaran, tangkap layar dan komunikasi khidmat pelanggan, serta meminta sejarah permainan sendiri untuk menyemak bagaimana baki terbentuk.\"",
+        " ---",
+        "@@ -36,7 +36,7 @@",
+        " ",
+        " ## Hak penamatan dan baki yang dilindungi",
+        " ",
+        "-[Terma wajib kontrak standard perkhidmatan permainan dalam talian Taiwan](https://www.ey.gov.tw/File/C27658C15073FF69?A=C), perkara 18, membenarkan pengguna memberikan notis penamatan pada bila-bila masa. Bagi mata berbayar yang belum digunakan atau fi permainan, pengendali mesti membuat bayaran balik selepas menolak kos yang perlu dalam masa 30 hari dari tarikh penamatan kontrak. Kaedah lain memerlukan persetujuan kedua-dua pihak.",
+        "+[Terma wajib kontrak standard perkhidmatan permainan dalam talian Taiwan](https://www.ey.gov.tw/File/C27658C15073FF69?A=C), perkara 18, membenarkan pengguna memberikan notis penamatan pada bila-bila masa. Bagi mata berbayar yang belum digunakan atau fi permainan yang belum digunakan, pengendali mesti membuat bayaran balik selepas menolak kos yang perlu dalam masa 30 hari dari tarikh penamatan kontrak. Kaedah lain memerlukan persetujuan kedua-dua pihak.",
+        " ",
+        " Potongan kos memerlukan penjelasan. Pemain boleh meminta pecahan baki yang belum digunakan, setiap potongan dan asas pengiraannya untuk dibandingkan dengan kontrak. Peratus potongan yang ditetapkan pengendali tidak dengan sendirinya membuktikan bahawa kos itu munasabah.",
+        " "
+      ]
+    }
+  ]
+}

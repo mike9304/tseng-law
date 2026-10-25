@@ -1,0 +1,14 @@
+{
+  "recordedAt": "2026-10-26T02:43:56.190651+09:00",
+  "command": "git push origin HEAD:main",
+  "exitCode": 0,
+  "pushSession": 87578,
+  "previousMain": "435e9dd8a2f465c238c6f58716246058bb3981f8",
+  "pushedCommit": "1ef3a9fe1a8702cda57949c5c53d3b713cc20b64",
+  "verifiedContentCommit": "63f5fad925cba35d71c44d37fd48071c3409c862",
+  "stdout": "",
+  "stderr": "To https://github.com/mike9304/tseng-law.git\n   435e9dd8a..1ef3a9fe1  HEAD -> main\n",
+  "force": false,
+  "publicationVerified": false,
+  "note": "Authorized existing main-to-Air auto-build path. Local current main ref matches push receipt. No direct deploy or infrastructure mutation."
+}

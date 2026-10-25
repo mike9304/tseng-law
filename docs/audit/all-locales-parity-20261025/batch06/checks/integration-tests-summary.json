@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-25T17:55:59.972337+00:00",
+  "existingSuites": 27,
+  "existingTestsPassed": 747,
+  "newSuites": 1,
+  "newTestsPassed": 13,
+  "totalSuites": 28,
+  "totalTestsPassed": 760,
+  "failed": 0,
+  "existingRunCommand": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/integration-affected-tests-command.json",
+  "existingLogSHA256": "ecdb0fabcf50f390a33dbe1ead0a5f3022d262919055104844e57f6c0a5553bf",
+  "newRunResult": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/integration-case-regression-result.json",
+  "wholeRepositoryRerun": false,
+  "warnings": [
+    "Existing React SSR fetchPriority warning retained in the raw log; no test failures."
+  ],
+  "newCaseChecksRepeated": false
+}

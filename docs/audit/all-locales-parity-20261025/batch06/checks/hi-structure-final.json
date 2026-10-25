@@ -1,0 +1,518 @@
+{
+  "at": "2026-10-25T16:55:46.422783+00:00",
+  "locale": "hi",
+  "note": "Structural/source-link checks only; semantic and boundary findings are in author review.",
+  "records": [
+    {
+      "id": 915,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "7774b7c684516ceff0d8f7384634c97cb0b2ed0eda235499e409f55a0b58e9ba",
+      "canonicalPath": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "canonicalSha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "canonicalMatchesFreeze": true,
+      "metadata": {
+        "title": "सुलह में समय बढ़ाने की माँग, आर्बिट्रेशन में रकम: ताइवान के सरकारी ठेके का विवाद",
+        "seoTitle": "ताइवान में सरकारी ठेके की सुलह और आर्बिट्रेशन का दावा",
+        "summary": "अस्पताल के ठेकेदार का आर्बिट्रेशन अवॉर्ड रद्द रहा क्योंकि रकम वाले विवाद पर सुलह की सिफारिश नहीं बनी थी। ताइवान के वैधानिक मार्ग में असफल सुलह का रिकॉर्ड उसी ठोस विवाद से जुड़ना चाहिए जिसे निर्णय के लिए आगे भेजा जा रहा है।",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 अक्टूबर 2026",
+        "read_time": "5 मिनट में पढ़ें",
+        "categories": [
+          "सरकारी ठेके",
+          "ताइवान के न्यायिक फैसले"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "सरकारी खरीद",
+          "निर्माण विवाद",
+          "आर्बिट्रेशन",
+          "सुलह",
+          "अमेरिकी आपूर्तिकर्ता"
+        ],
+        "audience": [
+          "hi"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/915-case-trends-20261025.webp",
+        "featured_image_alt": "पुल के मॉडल के पास मेज़ पर सुरक्षा हेलमेट, निर्माण के नक्शे और दस्तावेज़ों के बाइंडर।",
+        "featured_image_caption": "काल्पनिक दृश्य",
+        "faq": [
+          {
+            "q": "ताइवान के सार्वजनिक निकाय से सुलह विफल हो तो क्या आर्बिट्रेशन अपने आप उपलब्ध हो जाता है?",
+            "a": "निर्माण कार्य या तकनीकी सेवाओं के वैधानिक मार्ग में खरीद शिकायत समीक्षा बोर्ड की सिफारिश या प्रस्ताव पर निकाय की असहमति के कारण सुलह विफल होनी चाहिए। आर्बिट्रेशन में भेजे गए ठोस विवाद को उस सुलह रिकॉर्ड से मिलाना होगा। अलग से हुआ आर्बिट्रेशन समझौता दूसरा आधार दे सकता है।"
+          },
+          {
+            "q": "क्या सुप्रीम कोर्ट ने दावे में हर बदलाव को आर्बिट्रेशन की बाधा माना?",
+            "a": "नहीं। इस मामले में समय बढ़ाने की सिफारिश के बाद ठेकेदार फिर रकम माँगने लगा था। इससे यह नियम नहीं बनता कि राशि का हर संशोधन या कानूनी तर्क की हर परिष्कृति नया विवाद है। तथ्यों, माँगी गई राहत और प्रक्रिया के दस्तावेज़ों की तुलना जरूरी है।"
+          }
+        ]
+      },
+      "caseId": "106年度台上字第723號",
+      "allLinks": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry",
+        "/en/contact",
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "canonicalOfficial": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "finalOfficial": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "missing": [],
+      "tableRows": [
+        "| चरण | माँगी गई राहत और उपलब्ध रिकॉर्ड |",
+        "|---|---|",
+        "| शुरुआती सुलह आवेदन | ठेकेदार ने धनराशि के रूप में क्षतिपूर्ति माँगी। |",
+        "| बदला हुआ आवेदन | माँग निर्माण पूरा करने की अवधि बढ़ाने की हो गई। |",
+        "| बोर्ड की सिफारिश | सिफारिश समय बढ़ाने पर थी और सार्वजनिक निकाय उससे सहमत नहीं हुआ। |",
+        "| उसके बाद का दावा | ठेकेदार फिर रकम माँगने लगा; उस रकम के विवाद पर आर्बिट्रेशन से पहले कोई सिफारिश या प्रस्ताव नहीं बना। |"
+      ],
+      "internalLinks": [
+        {
+          "url": "/en/contact",
+          "exists": true,
+          "evidence": "checks/hi-contact-live.json",
+          "method": "Actual public English contact page returned by web open; not a guessed local static page path."
+        }
+      ],
+      "bodyH2Count": 4,
+      "errors": []
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "1b9c86fcfac15a0e3b69a0f9b09c58459cce4b3e7d81eadf57b104ead5d0c4c2",
+      "canonicalPath": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "canonicalSha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "canonicalMatchesFreeze": true,
+      "metadata": {
+        "title": "ताइवान के कारखाने में प्रदूषण: मूल कंपनियों की जानकारी और उसके बाद के फैसले",
+        "seoTitle": "ताइवान में प्रदूषण और मूल कंपनी की जिम्मेदारी",
+        "summary": "एक प्रदूषण मामले में सुप्रीम कोर्ट ने जानकारी, कारोबारी नियंत्रण, जोखिम पर प्रतिक्रिया और संपत्ति बाहर भेजने को साथ देखा। अधिग्रहण की पर्यावरणीय जाँच का रिकॉर्ड रिपोर्ट मिलने के बाद लिए गए निर्णयों तक पहुँचना चाहिए; केवल शेयर रखने से जिम्मेदारी तय नहीं होती।",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 अक्टूबर 2026",
+        "read_time": "5 मिनट में पढ़ें",
+        "categories": [
+          "कंपनी और निवेश",
+          "ताइवान के न्यायिक फैसले"
+        ],
+        "topic": "company",
+        "tags": [
+          "मूल कंपनी की जिम्मेदारी",
+          "पर्यावरणीय जाँच",
+          "अधिग्रहण",
+          "कंपनी की अलग पहचान",
+          "अमेरिकी निवेश"
+        ],
+        "audience": [
+          "hi"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/916-case-trends-20261025.webp",
+        "featured_image_alt": "पुराने कारखाने के बाहर मोड़कर रखी जा सकने वाली मेज़ पर मिट्टी के नमूने का जार और नोटबुक।",
+        "featured_image_caption": "काल्पनिक दृश्य",
+        "faq": [
+          {
+            "q": "क्या ताइवान की सहायक कंपनी के शेयर रखने भर से विदेशी मूल कंपनी प्रदूषण के लिए जिम्मेदार है?",
+            "a": "इस फैसले का आधार अकेला स्वामित्व नहीं था। अदालत के विवरण में संचालन पर नियंत्रण, प्रदूषण की जानकारी, सुधार या कर्मचारियों को सूचना न देना और दायित्व से बचने के लिए संपत्ति का स्थानांतरण शामिल हैं। जिम्मेदारी के लिए विशिष्ट आचरण और लागू कानून का मूल्यांकन चाहिए।"
+          },
+          {
+            "q": "क्या 2018 के सुप्रीम कोर्ट फैसले से कारखाने के प्रदूषण के सभी मुकदमे समाप्त हो गए?",
+            "a": "नहीं। 246 दावेदारों से संबंधित हिस्से रद्द करके आगे सुनवाई के लिए लौटाए गए, जबकि 262 दावेदारों से संबंधित अपीलें खारिज हुईं। अलग हिस्सों के अलग परिणाम थे। अपील खारिज होना उन सभी मूल दावों का खारिज होना नहीं है, और यह समूचे संबंधित मुकदमों का अंत भी नहीं था।"
+          },
+          {
+            "q": "पर्यावरणीय समीक्षा के बाद अधिग्रहण टीम किन रिकॉर्ड को रखे?",
+            "a": "रिपोर्ट, उसे पाने वाले लोग, आगे पूछे गए प्रश्न, कर्मचारियों के जोखिम और प्रदूषण सुधार पर निर्णय तथा बाद में संपत्ति भेजने की मंज़ूरी और वित्तीय विश्लेषण उपयोगी रिकॉर्ड हैं। उनसे जानकारी और आचरण का मूल्यांकन किया जा सकता है। केवल फ़ाइल रख लेने से कानून का पालन सिद्ध नहीं होता।"
+          }
+        ]
+      },
+      "caseId": "107年度台上字第267號",
+      "allLinks": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "/hi/columns/taiwan-company-subsidiary-vs-branch",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade",
+        "/en/contact",
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "canonicalOfficial": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "finalOfficial": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "missing": [],
+      "tableRows": [],
+      "internalLinks": [
+        {
+          "url": "/hi/columns/taiwan-company-subsidiary-vs-branch",
+          "exists": true,
+          "method": "Exact source slug in R/src/content/columns-hi/004-taiwan-company-subsidiary-vs-branch.md"
+        },
+        {
+          "url": "/en/contact",
+          "exists": true,
+          "evidence": "checks/hi-contact-live.json",
+          "method": "Actual public English contact page returned by web open; not a guessed local static page path."
+        }
+      ],
+      "bodyH2Count": 5,
+      "errors": []
+    },
+    {
+      "id": 918,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "545f41ab9798bd155e9bdcac9b601d3c8944aa11d36c8f46c7ab367c6a61d933",
+      "canonicalPath": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "canonicalSha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "canonicalMatchesFreeze": true,
+      "metadata": {
+        "title": "गृहऋण की चिट्ठी और सजावट के लिए प्रवेश के बाद भी घर सौंपना बाकी था",
+        "seoTitle": "ताइवान के पूर्व-बिक्री आवास में देरी और घर सौंपने की सूचना",
+        "summary": "ताइचुंग की अदालत ने ऋण संबंधी पत्र, घर की दशा, निरीक्षण और वारंटी दस्तावेज़ देखकर बिल्डर की दलील अस्वीकार की। उस अनुबंध में सूचना के लिए चार महीने थे; वर्तमान मानक शर्त में उपयोग अनुमति मिलने से छह महीने हैं। ऋण की प्रक्रिया और घर सौंपने की जिम्मेदारी को एक तारीख में नहीं मिलाया जा सकता।",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 अक्टूबर 2026",
+        "read_time": "5 मिनट में पढ़ें",
+        "categories": [
+          "अचल संपत्ति",
+          "ताइवान के न्यायिक फैसले"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "पूर्व-बिक्री आवास",
+          "घर सौंपने की सूचना",
+          "गृहऋण",
+          "देरी का ब्याज",
+          "बिक्री अनुबंध"
+        ],
+        "audience": [
+          "hi"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/918-case-trends-20261025.webp",
+        "featured_image_alt": "नए खाली घर में मेज़ पर दस्तावेज़ों के फ़ोल्डर, सादा लिफाफा और सामान रखने का गत्ते का डिब्बा।",
+        "featured_image_caption": "काल्पनिक दृश्य",
+        "faq": [
+          {
+            "q": "बिल्डर गृहऋण की प्रक्रिया पूरी करने को कहे तो क्या वही घर सौंपने की सूचना है?",
+            "a": "पत्र की सामग्री और उस समय घर की दशा देखनी होगी। इस मामले में पत्र ऋण की प्रगति पूछता था और घर उपयोग के लिए तैयार होने की बात नहीं कहता था। पानी, बिजली और बाद के निरीक्षण रिकॉर्ड भी बिल्डर की बात का समर्थन नहीं करते थे, इसलिए वह अनुबंध वाली सूचना नहीं माना गया।"
+          },
+          {
+            "q": "उपयोग अनुमति मिलने के बाद सूचना की अवधि चार महीने है या छह?",
+            "a": "इस मामले का चार महीने का समय पक्षों के अनुबंध में था। वर्तमान अनिवार्य पूर्व-बिक्री आवास शर्त के बिंदु 15 में उपयोग अनुमति मिलने से छह महीने के भीतर खरीदार को घर सौंपने की सूचना देने का दायित्व है। अपने मामले में हस्ताक्षर के समय लागू नियम और वास्तविक अनुबंध साथ देखने होंगे।"
+          },
+          {
+            "q": "गृहऋण की रकम अभी जारी नहीं हुई तो क्या बिल्डर की सूचना अनदेखी कर सकते हैं?",
+            "a": "केवल ऋण लंबित होने से सूचना छोड़ देना उचित नहीं है। भुगतान, ऋण के कागज़, निरीक्षण और घर सौंपने के अपने दायित्व हैं। सूचना किस काम की माँग करती है और उसकी अवधि क्या है, यह पहचानकर बैंक तथा घर की दशा के रिकॉर्ड से विवाद देखना होगा। यह फैसला सभी खरीदारों को भुगतान रोकने का अधिकार नहीं देता।"
+          }
+        ]
+      },
+      "caseId": "109年度上易字第289號",
+      "allLinks": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+        "mailto:wei@hoveringlaw.com.tw",
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "canonicalOfficial": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "finalOfficial": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "missing": [],
+      "tableRows": [],
+      "internalLinks": [],
+      "bodyH2Count": 4,
+      "errors": []
+    },
+    {
+      "id": 919,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "06b50e30ebe32f00908faa1ab9d4a7e87d31a74f8c87b401af9211b3c8726ce9",
+      "canonicalPath": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "canonicalSha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "canonicalMatchesFreeze": true,
+      "metadata": {
+        "title": "सुनवाई से पहले दंड की घोषणा: ताइवान में कार्यस्थल प्रताड़ना का बर्खास्तगी मामला",
+        "seoTitle": "कार्यस्थल प्रताड़ना की जाँच और सुनवाई: ताइवान का फैसला",
+        "summary": "एक सरकारी अधिकारी की बर्खास्तगी रद्द करते हुए अदालत ने पहले से घोषित नतीजे, सुनवाई के अभाव और जाँच रिपोर्ट के विरोधाभास देखे। निजी नियोक्ताओं के लिए लागू ताइवान के वर्तमान नियम निष्पक्ष जाँच, जवाब देने के अवसर और तत्काल संरक्षण की अपनी शर्तें रखते हैं।",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 अक्टूबर 2026",
+        "read_time": "5 मिनट में पढ़ें",
+        "categories": [
+          "श्रम विवाद",
+          "ताइवान के न्यायिक फैसले"
+        ],
+        "topic": "labor",
+        "tags": [
+          "कार्यस्थल प्रताड़ना",
+          "जाँच प्रक्रिया",
+          "सुनवाई",
+          "मानव संसाधन",
+          "बर्खास्तगी"
+        ],
+        "audience": [
+          "hi"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/919-case-trends-20261025.webp",
+        "featured_image_alt": "खाली बैठक कक्ष में गोल मेज़, सादा दस्तावेज़ फ़ोल्डर और तीन कुर्सियाँ।",
+        "featured_image_caption": "काल्पनिक दृश्य",
+        "faq": [
+          {
+            "q": "बर्खास्तगी रद्द होने का मतलब क्या अदालत ने प्रताड़ना के सभी आरोप गलत माने?",
+            "a": "इस फैसले से ऐसा निष्कर्ष नहीं निकलता। अदालत ने विचार-विमर्श की प्रक्रिया, अपनी बात रखने के अवसर और तथ्य निर्धारण में कमियाँ पाईं तथा मूल आदेश और प्रशासनिक पुनरीक्षण का निर्णय रद्द किया। आधिकारिक विवरण में आगे अपील की संभावना भी बताई गई है।"
+          },
+          {
+            "q": "जाँच पूरी होने तक क्या कंपनी को संरक्षण के उपाय रोकने होंगे?",
+            "a": "नियोक्ता को घटना की जानकारी कैसे मिली, उसके अनुसार व्यावसायिक सुरक्षा और स्वास्थ्य अधिनियम उपाय तय करता है। पीड़ित कर्मचारी की शिकायत मिलने पर दोबारा प्रताड़ना रोकने, जरूरत और परिस्थिति के अनुसार सहायता व संरक्षण देने तथा जाँच करने का दायित्व है। संरक्षण और निष्पक्ष जाँच साथ चल सकते हैं।"
+          },
+          {
+            "q": "क्या निजी कंपनी का मानव संसाधन विभाग सरकारी अधिकारी वाले मामले की प्रक्रिया सीधे अपना सकता है?",
+            "a": "यह मामला सरकारी सेवा में मूल्यांकन और बर्खास्तगी का था। निजी कंपनी को अपने ऊपर लागू सुरक्षा, श्रम और अनुबंध संबंधी नियम देखने होंगे। पहले से तय निष्कर्ष, अनसुना जवाब और विरोधाभासी साक्ष्य की जाँच उपयोगी संदर्भ है, पर इससे लागू कानून तय करने की जरूरत समाप्त नहीं होती।"
+          }
+        ]
+      },
+      "caseId": "114年度訴字第869號",
+      "allLinks": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+        "mailto:wei@hoveringlaw.com.tw",
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt"
+      ],
+      "canonicalOfficial": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+      ],
+      "finalOfficial": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt"
+      ],
+      "missing": [],
+      "tableRows": [],
+      "internalLinks": [],
+      "bodyH2Count": 4,
+      "errors": []
+    },
+    {
+      "id": 920,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "9fa23a71953547b858e30ddd6031c749a67cc1bd091963d22dcc19708ab3b9b3",
+      "canonicalPath": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "canonicalSha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "canonicalMatchesFreeze": true,
+      "metadata": {
+        "title": "अपनी पार्किंग में EV चार्जर, साझा दीवारों में तार: ताइवान में हटाने का आदेश",
+        "seoTitle": "ताइवान के अपार्टमेंट में EV चार्जर और साझा हिस्सों की सहमति",
+        "summary": "काओशुंग के एक फैसले में चार्जर की जगह से आगे दीवार, छत और साझा बिजली बॉक्स तक गई वायरिंग देखी गई। अदालत ने भवन के साझा हिस्सों के नियम और उस परिसर के उपनियम लागू कर उपकरण हटाने का निर्णय बनाए रखा। पार्किंग के उपयोग और पूरे निर्माण मार्ग की अनुमति साथ जाँची जाती है।",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 अक्टूबर 2026",
+        "read_time": "5 मिनट में पढ़ें",
+        "categories": [
+          "अचल संपत्ति",
+          "ताइवान के न्यायिक फैसले"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "इलेक्ट्रिक वाहन",
+          "चार्जिंग उपकरण",
+          "अपार्टमेंट",
+          "साझा हिस्से",
+          "मालिकों की सभा"
+        ],
+        "audience": [
+          "hi"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/920-case-trends-20261025.webp",
+        "featured_image_alt": "भूमिगत पार्किंग में खंभे पर लगे चार्जर से जुड़ी कार और खंभे से छत की केबल ट्रे तक जाती वायरिंग।",
+        "featured_image_caption": "काल्पनिक दृश्य",
+        "faq": [
+          {
+            "q": "पार्किंग केवल मेरे उपयोग के लिए है, तो क्या चार्जर के तार खुद लगवा सकता हूँ?",
+            "a": "उपकरण और तार कहाँ से गुजरते हैं, यह देखना होगा। इस मामले में साझा दीवार, छत और बिजली बॉक्स इस्तेमाल हुए। अदालत ने निर्माण के वास्तविक दायरे, कानून और परिसर के उपनियमों के आधार पर निर्णय दिया; केवल निजी उपयोग वाले हिस्से में पाइप डालने का तर्क स्वीकार नहीं किया। दूसरे भवन की व्यवस्था और नियम अलग से जाँचने होंगे।"
+          },
+          {
+            "q": "चार्जर बंद करके ताला लगा दूँ तो क्या उसे हटाना जरूरी नहीं रहेगा?",
+            "a": "इस मामले के निवासी ने उपयोग बंद करने, ताला लगाने और चाबी समिति को देने का तर्क रखा था। अदालत ने माना कि ये बातें सच हों तब भी साझा हिस्सों के नियम और उपनियम तोड़ने से बनी हटाने की जिम्मेदारी समाप्त नहीं होती। इससे हर चार्जर विवाद में केवल हटाना ही उपाय नहीं बन जाता।"
+          },
+          {
+            "q": "क्या सरकारी चार्जिंग अनुदान भवन की सहमति की जगह ले सकता है?",
+            "a": "अनुदान की पात्रता और साझा हिस्सों में निर्माण की अनुमति अपनी-अपनी शर्तें रखती हैं। यहाँ उल्लिखित काओशुंग योजना में सार्वजनिक क्षेत्रों की EV चार्जिंग केबल ट्रे शामिल थी। उसकी घोषित आवेदन समय-सीमा 30 सितंबर 2026 थी और बीत चुकी है। योजना स्वयं किसी निवासी को साझा हिस्से में काम करने का अधिकार नहीं देती।"
+          }
+        ]
+      },
+      "caseId": "111年度上字第132號",
+      "allLinks": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE",
+        "mailto:wei@hoveringlaw.com.tw",
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "canonicalOfficial": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "finalOfficial": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "missing": [],
+      "tableRows": [],
+      "internalLinks": [],
+      "bodyH2Count": 3,
+      "errors": []
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "be7cabf7633ab91d4e762e293e6cb0d1ce43e001f7c90cc2c4265fe7d82493e8",
+      "canonicalPath": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "canonicalSha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "canonicalMatchesFreeze": true,
+      "metadata": {
+        "title": "गेम खाते में कॉइन बचे थे, फिर भी धनवापसी का दावा क्यों खारिज हुआ?",
+        "seoTitle": "ताइवान में गेम कॉइन और बचे हुए भुगतान वाले पॉइंट का रिफंड",
+        "summary": "कीलुंग की अदालत ने एक गेम में मुकाबले के लिए इस्तेमाल होने वाले कॉइन को अप्रयुक्त खरीदे गए पॉइंट से अलग माना। वर्तमान ताइवानी नियम अप्रयुक्त पॉइंट और गेम शुल्क की वापसी का प्रावधान रखते हैं; राशि तय करने के लिए खरीद, रूपांतरण और उपयोग का रिकॉर्ड जुड़ना चाहिए।",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 अक्टूबर 2026",
+        "read_time": "5 मिनट में पढ़ें",
+        "categories": [
+          "उपभोक्ता विवाद",
+          "ताइवान के न्यायिक फैसले"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "ऑनलाइन गेम",
+          "धनवापसी",
+          "गेम कॉइन",
+          "खरीदे गए पॉइंट",
+          "उपभोक्ता अनुबंध"
+        ],
+        "audience": [
+          "hi"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/921-case-trends-20261025.webp",
+        "featured_image_alt": "मेज़ पर गेम कंट्रोलर, अमूर्त गेम दृश्य वाला लैपटॉप, सादे रंगीन टोकन और बंद नोटबुक।",
+        "featured_image_caption": "काल्पनिक दृश्य",
+        "faq": [
+          {
+            "q": "क्या किसी वस्तु का नाम गेम कॉइन हो तो उसकी रकम वापस नहीं मिल सकती?",
+            "a": "केवल नाम से निर्णय नहीं होता। इस मामले के कॉइन मुकाबले के चिप थे, जिन्हें अदालत ने अप्रयुक्त खरीदे गए पॉइंट या लौटाए जाने वाले गेम शुल्क की श्रेणी में नहीं माना। दूसरे गेम में कॉइन पाने का तरीका, काम, उपयोग और अनुबंध देखना होगा।"
+          },
+          {
+            "q": "गेम शुरू किए सात दिन बीत जाएँ तो क्या अनुबंध समाप्त नहीं कर सकते?",
+            "a": "वर्तमान नियम उपभोक्ता को कभी भी सूचना देकर अनुबंध समाप्त करने देते हैं। समाप्ति पर आवश्यक लागत घटाकर अप्रयुक्त खरीदे गए पॉइंट या गेम शुल्क 30 दिन के भीतर लौटाना होगा, या दोनों पक्षों की सहमति वाले तरीके से निपटाना होगा। सात दिन का लिखित निरसन और किसी भी समय समाप्ति दो अलग व्यवस्थाएँ हैं।"
+          },
+          {
+            "q": "क्या विवाद में केवल गेम कंपनी के सर्वर रिकॉर्ड को निर्णायक माना जा सकता है?",
+            "a": "वर्तमान निषिद्ध शर्तें ऐसी व्यवस्था रोकती हैं जिसमें विवाद का निर्णय केवल कंपनी द्वारा रखे गए गेम इतिहास और इलेक्ट्रॉनिक डेटा से हो। खिलाड़ी भुगतान प्रमाण, स्क्रीनशॉट और ग्राहक सेवा से बातचीत रख सकता है तथा अपना गेम इतिहास माँगकर बचे हुए पॉइंट का हिसाब जाँच सकता है।"
+          }
+        ]
+      },
+      "caseId": "109年度消簡上字第1號",
+      "allLinks": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/",
+        "mailto:wei@hoveringlaw.com.tw",
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "canonicalOfficial": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "finalOfficial": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "missing": [],
+      "tableRows": [
+        "| रिकॉर्ड | उससे स्पष्ट होने वाला प्रश्न |",
+        "|---|---|",
+        "| भुगतान रसीद और रिचार्ज विवरण | कितनी रकम दी गई और बदले में किस प्रकार के पॉइंट या सेवा मिले? |",
+        "| पॉइंट रूपांतरण और व्यक्तिगत गेम इतिहास | रूपांतरण कब हुआ और उसके बाद कॉइन कैसे इस्तेमाल हुए? |",
+        "| समाप्ति की सूचना और रिफंड गणना | अनुबंध कब समाप्त हुआ, कंपनी ने कितनी राशि अप्रयुक्त मानी और क्या काटा? |"
+      ],
+      "internalLinks": [],
+      "bodyH2Count": 4,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "initialCheckLimitation": "Initial attempted src/pages/[lang]/contact.astro lookup was inappropriate for this Next application; false existence fields retained in hi-structure-initial.json. Actual live contact page resolves the link check; no manuscript link changed.",
+  "updatedAt": "2026-10-25T16:59:11.741043+00:00",
+  "finalOpeningReview": "915 body-only first two sentences revised; parsed frontmatter, image, case IDs, all links and tables verified unchanged by hi-self-review-edits.json."
+}

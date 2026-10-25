@@ -860,7 +860,7 @@ describe('localized column publication ordering', () => {
     const lead = expertiseSlugs.length;
     expect(allPosts.slice(0, lead).map((post) => post.slug)).toEqual(expertiseSlugs);
     expect(allPosts.slice(0, lead).map((post) => post.publicationDate)).toEqual(
-      expertiseSlugs.map(archiveLeadPublicationDate),
+      expertiseSlugs.map((slug) => archiveLeadPublicationDate(slug, locale)),
     );
     // Native single-locale columns share the 2026-09-29 date with the gap columns (024-031),
     // so equal-date source order places them right after that batch; the shared corpus follows.

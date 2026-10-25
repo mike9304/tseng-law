@@ -1,0 +1,45 @@
+{
+  "at_utc": "2026-10-25T17:25:01.961668+00:00",
+  "owner": "/root/column_voice_rules",
+  "scope": "Only M01/M02 summary fields. 916 S01/S02 intentionally unchanged by root instruction. Original author and independent R1 reports/evidence retained.",
+  "independent_review": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/it-independent.md",
+    "sha256": "be256327f8726f933c9cd3aca949ac73c90bc087a4d3a38797dc3ba92542e612"
+  },
+  "edits": [
+    {
+      "id": "M01",
+      "name": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "old": "La sentenza distingue i passaggi del contratto e il termine pattuito di quattro mesi dalla regola attuale dei sei mesi per comunicarne la consegna.",
+      "new": "La sentenza distingue i passaggi del contratto. Il termine di quattro mesi pattuito in quel caso va tenuto distinto dalla regola attuale dei sei mesi per comunicare la consegna.",
+      "reason": "Separate the historical judgment from the author’s comparison of the contractual four-month notice period and current six-month notice rule.",
+      "meaning_preserved": "The court’s distinction between contractual steps, four/six months and notification of delivery remain; only unsupported attribution of the current-law comparison to the court is removed.",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "field": "summary",
+      "before_summary_line": "summary: \"Una lettera sul mutuo e l’accesso per lavori interni non provavano l’avvenuta consegna dell’abitazione. La sentenza distingue i passaggi del contratto e il termine pattuito di quattro mesi dalla regola attuale dei sei mesi per comunicarne la consegna.\"",
+      "after_summary_line": "summary: \"Una lettera sul mutuo e l’accesso per lavori interni non provavano l’avvenuta consegna dell’abitazione. La sentenza distingue i passaggi del contratto. Il termine di quattro mesi pattuito in quel caso va tenuto distinto dalla regola attuale dei sei mesi per comunicare la consegna.\"",
+      "before_sha256": "d0e740245ba86df7b08c5fdbda63493c59a25fefb5e485ecdcb49b1ae80178dd",
+      "after_sha256": "575603a4fb63eb582dd0ed076f3f1a50af4aea796bb8140855728d98df691f66",
+      "before_bytes": 9003,
+      "after_bytes": 9033
+    },
+    {
+      "id": "M02",
+      "name": "921-taiwan-online-game-coins-refund-judgment.md",
+      "old": "Le regole attuali tutelano altri crediti rimborsabili e richiedono di ricostruirne l’uso.",
+      "new": "Le regole attuali tutelano altri crediti rimborsabili; ricostruire acquisti e utilizzo aiuta a capire quale saldo sia coperto.",
+      "reason": "Describe purchase/use reconstruction as practical assistance rather than a statutory consumer duty or a new refund condition.",
+      "meaning_preserved": "Other refundable credits remain within scope. Purchase/use history helps identify covered balances; operative refund objects, costs, 30-day period and bilateral alternatives remain unchanged in the body and FAQ.",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/921-taiwan-online-game-coins-refund-judgment.md",
+      "field": "summary",
+      "before_summary_line": "summary: \"Un giocatore chiedeva NT$243.548 per le monete rimaste nell’account. Il tribunale le ha considerate gettoni di partita, distinguendole dai punti acquistati e non utilizzati. Le regole attuali tutelano altri crediti rimborsabili e richiedono di ricostruirne l’uso.\"",
+      "after_summary_line": "summary: \"Un giocatore chiedeva NT$243.548 per le monete rimaste nell’account. Il tribunale le ha considerate gettoni di partita, distinguendole dai punti acquistati e non utilizzati. Le regole attuali tutelano altri crediti rimborsabili; ricostruire acquisti e utilizzo aiuta a capire quale saldo sia coperto.\"",
+      "before_sha256": "e52e70d61d129f6e6849eeb74d66a5aad7fd3d494666708b44439af5704952e2",
+      "after_sha256": "2e92a5de5a50c3bd2bddd8f7ac40077a6ee620a7c04ecdfb39ffa9862c93b0da",
+      "before_bytes": 9029,
+      "after_bytes": 9064
+    }
+  ],
+  "variety_rerun": false,
+  "variety_reason": "Metadata-only replacements. Original body metrics are retained as historical measurements; exact body and FAQ preservation is verified separately."
+}

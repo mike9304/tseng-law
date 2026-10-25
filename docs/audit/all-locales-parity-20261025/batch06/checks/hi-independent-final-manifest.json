@@ -1,0 +1,96 @@
+{
+  "atUTC": "2026-10-25T17:23:35.442854+00:00",
+  "verdict": "REQUEST_CHANGES",
+  "required": [
+    "M01"
+  ],
+  "optional": [
+    {
+      "id": "O01",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "before": "मामला इलेक्ट्रॉनिक सामान बनाने वाली कंपनी के कर्मचारियों का रसायनों के संपर्क में आना और व्यवसाय को नियंत्रित करने वाली कंपनियों की जिम्मेदारी था।",
+      "after": "मामला इलेक्ट्रॉनिक सामान बनाने वाली कंपनी के कर्मचारियों के रसायनों के संपर्क में आने और व्यवसाय को नियंत्रित करने वाली कंपनियों की जिम्मेदारी से संबंधित था।",
+      "reason": "힌디어 서술어 자연스러움. मामला ... आना ... था는 동작명사와 서술어의 결합이 어색하다. से संबंधित था로 대상 관계를 명시하면 전자제품 제조업체 근로자의 화학물질 노출과 지배기업 책임이라는 두 주제를 그대로 읽기 쉽다. 법적 명제를 뒤집은 문장은 아니므로 선택 교열이다.",
+      "line": 28,
+      "occurrences": 1
+    },
+    {
+      "id": "O02",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "before": "ताइवान उच्च न्यायालय की काओशुंग शाखा ने मामला 111年度上字第132號 में निवासी की अपील खारिज की।",
+      "after": "ताइवान उच्च न्यायालय की काओशुंग शाखा ने 111年度上字第132號 मामले में निवासी की अपील खारिज की।",
+      "reason": "힌디어 격형·어순. 후치사 में 앞에서는 मामला보다 मामले가 자연스럽다. 사건번호를 앞에 둔 मामले में로 다듬는다. 법원·사건번호·거주자 항소기각의 의미와 다음 문장의 날짜는 불변이다.",
+      "line": 28,
+      "occurrences": 1
+    },
+    {
+      "id": "O03",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/921-taiwan-online-game-coins-refund-judgment.md",
+      "before": "अप्रयुक्त खरीदे गए पॉइंट या गेम शुल्क",
+      "after": "अप्रयुक्त खरीदे गए पॉइंट या गेम शुल्क का अप्रयुक्त भाग",
+      "reason": "반환 대상 한정의 선택적 명료화. 본문 현행18점과 FAQ2에서 미사용 조건이 두 반환 대상 모두에 적용됨을 반복하여 분명히 할 수 있다. Hindi अप्रयुक्त는 성·격에 따라 두 번째 대상을 배제하는 러시아어 형태와 다르므로 현재 문장을 확정 오역으로 판정하지 않는다. 공식 PDF18의 L213–216@P7은 필요한 비용 공제 후 미사용 유료 포인트 OR 게임료, 30일 OR 쌍방 합의를 말한다. 제안은 7일 해제 조항에 게임료를 새로 추가하지 않고 해당 두 구절에만 적용한다.",
+      "line": 21,
+      "occurrences": 2
+    }
+  ],
+  "review": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/hi-independent.md",
+    "sha256": "01092c4f6ed232049a320f57eafd0b6d2bb2ef41cf31a7f6c55aea125c9e91f5"
+  },
+  "manuscripts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "7774b7c684516ceff0d8f7384634c97cb0b2ed0eda235499e409f55a0b58e9ba",
+      "bytes": 16710
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "1b9c86fcfac15a0e3b69a0f9b09c58459cce4b3e7d81eadf57b104ead5d0c4c2",
+      "bytes": 19066
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "545f41ab9798bd155e9bdcac9b601d3c8944aa11d36c8f46c7ab367c6a61d933",
+      "bytes": 17005
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "06b50e30ebe32f00908faa1ab9d4a7e87d31a74f8c87b401af9211b3c8726ce9",
+      "bytes": 16825
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "9fa23a71953547b858e30ddd6031c749a67cc1bd091963d22dcc19708ab3b9b3",
+      "bytes": 16631
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "be7cabf7633ab91d4e762e293e6cb0d1ce43e001f7c90cc2c4265fe7d82493e8",
+      "bytes": 17527
+    }
+  ],
+  "authorSHA256": "974212e10742af46d608544d62bc8c83d140fdf42592e6e5427de1fd1c21e55b",
+  "authorManifestSHA256": "4467b38040975f8c0e3b84745b1ef843b0d3c58e09d1fe6b6bb0a49b813903d3",
+  "ownEvidence": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/hi-independent-boundary-inspection.json",
+      "sha256": "7cffa3bf4e3a8de66aa5b5c8894ab0181c286d3534922cb98dd28e276f7e036b"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/hi-independent-inputs.json",
+      "sha256": "8910623feb8901057e1d778e8020b2979ee22bdc6853c0cab4875b4ce01ffe6b"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/hi-independent-structural-and-findings.json",
+      "sha256": "a7cf0fb523a9555b7b3a27b01321bf8afb3c24a9f658e330305e715a22e07c5f"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/hi-independent-variety.json",
+      "sha256": "452301eb28f33416546a0217b850b9e6a6128c2b7ffc12bec2d903830a7ff083"
+    }
+  ],
+  "varietyExitCode": 0,
+  "varietyFAIL": 0,
+  "allInputsUnmodified": true,
+  "noPublicationPerformed": true
+}

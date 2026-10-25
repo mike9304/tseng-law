@@ -1,0 +1,86 @@
+AUTO_OK src/content/columns-de/915-taiwan-public-contract-mediation-arbitration-same-claim.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 2 source-only / 2 target-only; context in JSON
+AUTO_OK src/content/columns-de/916-taiwan-parent-company-pollution-liability-us-investor.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 0 source-only / 2 target-only; context in JSON
+AUTO_OK src/content/columns-de/918-taiwan-presale-mortgage-notice-handover-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 10 source-only / 8 target-only; context in JSON
+AUTO_OK src/content/columns-de/919-taiwan-workplace-bullying-investigation-hearing-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 6 source-only / 2 target-only; context in JSON
+AUTO_OK src/content/columns-de/920-taiwan-apartment-ev-charger-common-area-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 3 source-only / 7 target-only; context in JSON
+AUTO_OK src/content/columns-de/921-taiwan-online-game-coins-refund-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 9 source-only / 12 target-only; context in JSON
+AUTO_OK src/content/columns-it/915-taiwan-public-contract-mediation-arbitration-same-claim.md — 0 errors, 6 required review items
+  REVIEW numeric token differences: 3 source-only / 2 target-only; context in JSON
+AUTO_OK src/content/columns-it/916-taiwan-parent-company-pollution-liability-us-investor.md — 0 errors, 6 required review items
+  REVIEW numeric token differences: 1 source-only / 3 target-only; context in JSON
+AUTO_OK src/content/columns-it/918-taiwan-presale-mortgage-notice-handover-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 11 source-only / 8 target-only; context in JSON
+AUTO_OK src/content/columns-it/919-taiwan-workplace-bullying-investigation-hearing-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 6 source-only / 2 target-only; context in JSON
+AUTO_OK src/content/columns-it/920-taiwan-apartment-ev-charger-common-area-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 3 source-only / 5 target-only; context in JSON
+AUTO_OK src/content/columns-it/921-taiwan-online-game-coins-refund-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 9 source-only / 12 target-only; context in JSON
+AUTO_OK src/content/columns-ar/915-taiwan-public-contract-mediation-arbitration-same-claim.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 4 source-only / 0 target-only; context in JSON
+AUTO_OK src/content/columns-ar/916-taiwan-parent-company-pollution-liability-us-investor.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 2 source-only / 0 target-only; context in JSON
+AUTO_OK src/content/columns-ar/918-taiwan-presale-mortgage-notice-handover-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 7 source-only / 1 target-only; context in JSON
+AUTO_OK src/content/columns-ar/919-taiwan-workplace-bullying-investigation-hearing-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 6 source-only / 1 target-only; context in JSON
+AUTO_OK src/content/columns-ar/920-taiwan-apartment-ev-charger-common-area-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 4 source-only / 1 target-only; context in JSON
+AUTO_OK src/content/columns-ar/921-taiwan-online-game-coins-refund-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 7 source-only / 3 target-only; context in JSON
+AUTO_OK src/content/columns-pt/915-taiwan-public-contract-mediation-arbitration-same-claim.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 3 source-only / 2 target-only; context in JSON
+AUTO_OK src/content/columns-pt/916-taiwan-parent-company-pollution-liability-us-investor.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 2 source-only / 2 target-only; context in JSON
+AUTO_OK src/content/columns-pt/918-taiwan-presale-mortgage-notice-handover-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 7 source-only / 4 target-only; context in JSON
+AUTO_OK src/content/columns-pt/919-taiwan-workplace-bullying-investigation-hearing-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 6 source-only / 2 target-only; context in JSON
+AUTO_OK src/content/columns-pt/920-taiwan-apartment-ev-charger-common-area-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 4 source-only / 5 target-only; context in JSON
+AUTO_OK src/content/columns-pt/921-taiwan-online-game-coins-refund-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 7 source-only / 6 target-only; context in JSON
+AUTO_OK src/content/columns-hi/915-taiwan-public-contract-mediation-arbitration-same-claim.md — 0 errors, 6 required review items
+  REVIEW numeric token differences: 2 source-only / 1 target-only; context in JSON
+AUTO_OK src/content/columns-hi/916-taiwan-parent-company-pollution-liability-us-investor.md — 0 errors, 6 required review items
+  REVIEW numeric token differences: 1 source-only / 3 target-only; context in JSON
+AUTO_OK src/content/columns-hi/918-taiwan-presale-mortgage-notice-handover-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 10 source-only / 6 target-only; context in JSON
+AUTO_OK src/content/columns-hi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 6 source-only / 2 target-only; context in JSON
+AUTO_OK src/content/columns-hi/920-taiwan-apartment-ev-charger-common-area-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 4 source-only / 7 target-only; context in JSON
+AUTO_OK src/content/columns-hi/921-taiwan-online-game-coins-refund-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 10 source-only / 12 target-only; context in JSON
+AUTO_OK src/content/columns-ms/915-taiwan-public-contract-mediation-arbitration-same-claim.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 3 source-only / 1 target-only; context in JSON
+AUTO_OK src/content/columns-ms/916-taiwan-parent-company-pollution-liability-us-investor.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 2 source-only / 2 target-only; context in JSON
+AUTO_OK src/content/columns-ms/918-taiwan-presale-mortgage-notice-handover-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 10 source-only / 9 target-only; context in JSON
+AUTO_OK src/content/columns-ms/919-taiwan-workplace-bullying-investigation-hearing-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 6 source-only / 3 target-only; context in JSON
+AUTO_OK src/content/columns-ms/920-taiwan-apartment-ev-charger-common-area-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 3 source-only / 7 target-only; context in JSON
+AUTO_OK src/content/columns-ms/921-taiwan-online-game-coins-refund-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 9 source-only / 13 target-only; context in JSON
+AUTO_OK src/content/columns-ru/915-taiwan-public-contract-mediation-arbitration-same-claim.md — 0 errors, 6 required review items
+  REVIEW numeric token differences: 4 source-only / 2 target-only; context in JSON
+AUTO_OK src/content/columns-ru/916-taiwan-parent-company-pollution-liability-us-investor.md — 0 errors, 6 required review items
+  REVIEW numeric token differences: 1 source-only / 1 target-only; context in JSON
+AUTO_OK src/content/columns-ru/918-taiwan-presale-mortgage-notice-handover-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 10 source-only / 7 target-only; context in JSON
+AUTO_OK src/content/columns-ru/919-taiwan-workplace-bullying-investigation-hearing-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 7 source-only / 2 target-only; context in JSON
+AUTO_OK src/content/columns-ru/920-taiwan-apartment-ev-charger-common-area-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 5 source-only / 7 target-only; context in JSON
+AUTO_OK src/content/columns-ru/921-taiwan-online-game-coins-refund-judgment.md — 0 errors, 5 required review items
+  REVIEW numeric token differences: 10 source-only / 10 target-only; context in JSON
+Automated: PASS; selected=42; errors=0; semantic=REVIEW_REQUIRED; publicationReady=false
+Review evidence: /Users/son7/tseng-all-language-columns-20261025/batch06/checks/integration-content-audit.json

@@ -1,0 +1,38 @@
+{
+  "at": "2026-10-25T17:24:58.933961+00:00",
+  "scope": "Only PT920 M01 and PT921 S01 changed; initial author/independent reports and prior results preserved",
+  "previous_manifest_sha256": "208737441560a31745330d37da46f27537edddbef3c5d7e953793dd83da6cfbe",
+  "preserved_manifest": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-author-manifest-r1-preserved.json",
+  "edits": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "finding": "M01",
+      "reason": "M01: precise Article 6 paragraph 1 subparagraph 4; paragraph 3 remains the preceding remedy provision",
+      "old": "Já o ponto quatro do mesmo parágrafo trata",
+      "new": "Já o ponto quatro do parágrafo um do artigo 6 trata",
+      "before_sha256": "6dd1b3478c1001f87980858789602e378d5d2956fe55c0259577d1c08dde26bc",
+      "after_sha256": "0e3c9f74b6c48427841020e5381528ce8a7406702352a45a254bbfd403ba4dca",
+      "inverse_bytes_equal": true,
+      "frontmatter_including_all_faq_bytes_unchanged": true,
+      "url_order_unchanged": true,
+      "previous_edits_then_new_edits_reverse_to_initial_sha256": "e33cc55f32cf1a7a23506d9feb47d95d0e8b8d3454c15eeb07b9ba5c153cd67a",
+      "expected_initial_sha256": "e33cc55f32cf1a7a23506d9feb47d95d0e8b8d3454c15eeb07b9ba5c153cd67a",
+      "diff": "--- 920-taiwan-apartment-ev-charger-common-area-judgment.md before R2\n+++ 920-taiwan-apartment-ev-charger-common-area-judgment.md after R2\n@@ -35,7 +35,7 @@\n \n O regulamento também contava. O tribunal considerou violados o artigo 11 e as regras internas, enquadrando a conduta no dever de cumprir as demais normas e o regulamento previsto no [artigo 6, parágrafo 1, ponto cinco](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6). A comissão enviara uma comunicação formal para tentar resolver o problema, mas a instalação continuava no local. Persistindo o incumprimento após essa tentativa, o parágrafo três permitia recorrer ao tribunal.\n \n-Já o ponto quatro do mesmo parágrafo trata de certas instalações de tubagens e cabos em partes exclusivas, com utilização das áreas comuns quando necessária. O tribunal rejeitou o argumento de que a obra em discussão se enquadrava nessa hipótese. A localização efetiva e as regras daquele edifício sustentam os [fundamentos dos pontos cinco e seis da decisão](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1). Retirá-los da análise transformaria um caso concreto numa regra de votação para qualquer carregador.\n+Já o ponto quatro do parágrafo um do artigo 6 trata de certas instalações de tubagens e cabos em partes exclusivas, com utilização das áreas comuns quando necessária. O tribunal rejeitou o argumento de que a obra em discussão se enquadrava nessa hipótese. A localização efetiva e as regras daquele edifício sustentam os [fundamentos dos pontos cinco e seis da decisão](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1). Retirá-los da análise transformaria um caso concreto numa regra de votação para qualquer carregador.\n \n Desligar a instalação resolveria o conflito? O morador alegou que tinha acrescentado um interruptor, cessado a utilização e trancado o equipamento, estando disposto a entregar a chave à administração. Segundo o tribunal, mesmo que tudo isso fosse verdade, permanecia a obrigação de retirada e reposição. Estava em causa também o direito de executar a obra naquelas áreas.\n \n"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/921-taiwan-online-game-coins-refund-judgment.md",
+      "finding": "S01",
+      "reason": "S01: state the court outcome rather than imply an independently confirmed payment history",
+      "old": "Não recebeu esse reembolso.",
+      "new": "O tribunal não acolheu esse pedido de reembolso.",
+      "before_sha256": "af08a2dc4021cf3d01d2a6f1b308d8cb2a571f6cc3cf5a5a227776da1faebd0f",
+      "after_sha256": "f2ceea36aaef83170ffbba9be26b26107330e34e6c3f6585ef1f005922f2948c",
+      "inverse_bytes_equal": true,
+      "frontmatter_including_all_faq_bytes_unchanged": true,
+      "url_order_unchanged": true,
+      "previous_edits_then_new_edits_reverse_to_initial_sha256": "b4a2653f952bff658ea8038988d3cab55241ba19b3b1b093f76b99765b16f068",
+      "expected_initial_sha256": "b4a2653f952bff658ea8038988d3cab55241ba19b3b1b093f76b99765b16f068",
+      "diff": "--- 921-taiwan-online-game-coins-refund-judgment.md before R2\n+++ 921-taiwan-online-game-coins-refund-judgment.md after R2\n@@ -23,7 +23,7 @@\n     a: \"As cláusulas proibidas impedem que o contrato faça dos históricos e dados eletrónicos conservados pela empresa o único critério para resolver um conflito. O jogador pode guardar comprovativos de pagamento, capturas do ecrã e mensagens, bem como pedir o seu histórico, para esclarecer a formação do saldo.\"\n ---\n \n-NT$243.548 foi o valor que um jogador atribuiu às moedas restantes na sua conta e pediu à empresa. Não recebeu esse reembolso. Embora o ecrã mostrasse um saldo, já não existiam pontos pagos por utilizar, facto que ambas as partes aceitavam no [processo reproduzido na coletânea oficial de proteção do consumidor](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), páginas impressas 140 a 153.\n+NT$243.548 foi o valor que um jogador atribuiu às moedas restantes na sua conta e pediu à empresa. O tribunal não acolheu esse pedido de reembolso. Embora o ecrã mostrasse um saldo, já não existiam pontos pagos por utilizar, facto que ambas as partes aceitavam no [processo reproduzido na coletânea oficial de proteção do consumidor](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), páginas impressas 140 a 153.\n \n Em 13 de setembro de 2021, o Tribunal Distrital de Keelung negou provimento ao recurso no processo 109年度消簡上字第1號. Não cabia novo recurso. A análise incidiu sobre a função daquelas moedas e as cláusulas de reembolso, sem excluir todos os bens virtuais da proteção dos consumidores.\n \n"
+    }
+  ]
+}

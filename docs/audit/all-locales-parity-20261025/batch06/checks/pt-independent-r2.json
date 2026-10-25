@@ -1,0 +1,124 @@
+{
+  "reviewed_at": "2026-10-26T02:34:13.014496+09:00",
+  "status": "APPROVE_TARGETED_R2",
+  "reviewer": "/root/column_inventory",
+  "M01_closed": true,
+  "S01_closed": true,
+  "required_open": 0,
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "R1_sha256": "6dd1b3478c1001f87980858789602e378d5d2956fe55c0259577d1c08dde26bc",
+      "current_sha256": "0e3c9f74b6c48427841020e5381528ce8a7406702352a45a254bbfd403ba4dca",
+      "one_exact_replacement": true,
+      "reverse_exact": true,
+      "frontmatter_FAQ_unchanged": true,
+      "all_URLs_values_order_unchanged": true,
+      "current_arrays_match_author": true,
+      "sentence_count": 41,
+      "changed_paragraphs_read": [
+        {
+          "paragraph": 6,
+          "before": [
+            "Já o ponto quatro do mesmo parágrafo trata de certas instalações de tubagens e cabos em partes exclusivas, com utilização das áreas comuns quando necessária.",
+            "O tribunal rejeitou o argumento de que a obra em discussão se enquadrava nessa hipótese.",
+            "A localização efetiva e as regras daquele edifício sustentam os fundamentos dos pontos cinco e seis da decisão.",
+            "Retirá-los da análise transformaria um caso concreto numa regra de votação para qualquer carregador."
+          ],
+          "after": [
+            "Já o ponto quatro do parágrafo um do artigo 6 trata de certas instalações de tubagens e cabos em partes exclusivas, com utilização das áreas comuns quando necessária.",
+            "O tribunal rejeitou o argumento de que a obra em discussão se enquadrava nessa hipótese.",
+            "A localização efetiva e as regras daquele edifício sustentam os fundamentos dos pontos cinco e seis da decisão.",
+            "Retirá-los da análise transformaria um caso concreto numa regra de votação para qualquer carregador."
+          ]
+        }
+      ],
+      "finding_closed": "M01"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/921-taiwan-online-game-coins-refund-judgment.md",
+      "R1_sha256": "af08a2dc4021cf3d01d2a6f1b308d8cb2a571f6cc3cf5a5a227776da1faebd0f",
+      "current_sha256": "1dba99a240d62a669a3d553e192431d7670faa64c0788f079cede63e7af00af6",
+      "one_exact_replacement": true,
+      "reverse_exact": true,
+      "frontmatter_FAQ_unchanged": true,
+      "all_URLs_values_order_unchanged": true,
+      "current_arrays_match_author": true,
+      "sentence_count": 41,
+      "changed_paragraphs_read": [
+        {
+          "paragraph": 1,
+          "before": [
+            "NT$243.548 foi o valor que um jogador atribuiu às moedas restantes na sua conta e pediu à empresa.",
+            "Não recebeu esse reembolso.",
+            "Embora o ecrã mostrasse um saldo, já não existiam pontos pagos por utilizar, facto que ambas as partes aceitavam no processo reproduzido na coletânea oficial de proteção do consumidor, páginas impressas 140 a 153."
+          ],
+          "after": [
+            "NT$243.548 foi o valor que um jogador atribuiu às moedas restantes na sua conta e pediu à empresa.",
+            "O tribunal julgou o pedido improcedente.",
+            "Embora o ecrã mostrasse um saldo, já não existiam pontos pagos por utilizar, facto que ambas as partes aceitavam no processo reproduzido na coletânea oficial de proteção do consumidor, páginas impressas 140 a 153."
+          ]
+        }
+      ],
+      "finding_closed": "S01"
+    }
+  ],
+  "unchanged_four": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "e40fa586ea8b835e6bdcb070fc0193bbea80e263df88aafa86d2f951f9894353"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "177be7395ee02cad28462e119942e229cd30542602f4687889adc7a79ca9eeac"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "70f1c01c0ce95f4f660726a6c747c80bc7115972a7f331d1fd46269782310dfc"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "77305593ff192c54b86fe07898e6cee983366cd077a73b9a3667f80b7e2817b5"
+    }
+  ],
+  "cli_rerun": false,
+  "method": "Exact current-byte one-replacement reverse verification, two changed paragraph contexts read, current sentence arrays regenerated for two only and compared to author final arrays. Original whole-six R1 remains historical.",
+  "source_meaning": {
+    "920": "Article6(1)(4) named explicitly; paragraph3 coordination/remedy remains distinct. No new claimant/approval condition.",
+    "921": "Court held the refund claim unfounded. Claim amount remains NT$243.548; no payout or execution fact and no new appellate-finality assertion."
+  },
+  "author_failure_history": "Initial S01 wording yielded actual CV .449 exit1 preserved; final direct merits wording yielded author exit0/FAIL0 CV .453. 920 author CV .459 exit0/FAIL0. No independent rerun claimed.",
+  "original_R1_report_sha256": "7b044a955e4eb76e239606d263f2c93b4877ec6442f67faa6ada6bfe1c180fff",
+  "author_inputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/pt-author-r2.md",
+      "sha256": "b2dc6450cbbe8dacf0824e2a67fc5b59996445aeb1f068015228f61c5abb9f2c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-author-manifest.json",
+      "sha256": "5d4210f4b9b35030fb4f959b6c5edee2a091ea52ad1d2467030774d2df3ae728"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-author-manifest-r1-preserved.json",
+      "sha256": "208737441560a31745330d37da46f27537edddbef3c5d7e953793dd83da6cfbe"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-review-r2-final-edits.json",
+      "sha256": "fcf3c542d1f8068f17fafcc5d31e6433c9d62e7a8b8c3c082e561ca0d35bbabf"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-review-r2-final-boundaries.json",
+      "sha256": "78f45440caa62b1df3f9afc232d3a56aacc860a8818748b4c2383c4a65842558"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-review-r2-variety.json",
+      "sha256": "54b682045c30f38181154ec4e431a700dbf7ec2ffffe23f6250f9a61e096e1fd"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-review-r2-prose-followup.json",
+      "sha256": "5d307de696000f4b623612017f471ecbecc37569fe93006a37ff2f072d2e7842"
+    }
+  ],
+  "human_native_or_lawyer_approval": false,
+  "manuscripts_changed_by_reviewer": false
+}

@@ -1,0 +1,268 @@
+{
+  "at": "2026-10-25T17:27:23.576874+00:00",
+  "only_changed_two_extracted": true,
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "0e3c9f74b6c48427841020e5381528ce8a7406702352a45a254bbfd403ba4dca",
+      "before_count": 41,
+      "after_count": 41,
+      "unchanged_paragraph_arrays": 11,
+      "delta": [
+        {
+          "paragraph": 6,
+          "before": [
+            "Já o ponto quatro do mesmo parágrafo trata de certas instalações de tubagens e cabos em partes exclusivas, com utilização das áreas comuns quando necessária.",
+            "O tribunal rejeitou o argumento de que a obra em discussão se enquadrava nessa hipótese.",
+            "A localização efetiva e as regras daquele edifício sustentam os fundamentos dos pontos cinco e seis da decisão.",
+            "Retirá-los da análise transformaria um caso concreto numa regra de votação para qualquer carregador."
+          ],
+          "after": [
+            "Já o ponto quatro do parágrafo um do artigo 6 trata de certas instalações de tubagens e cabos em partes exclusivas, com utilização das áreas comuns quando necessária.",
+            "O tribunal rejeitou o argumento de que a obra em discussão se enquadrava nessa hipótese.",
+            "A localização efetiva e as regras daquele edifício sustentam os fundamentos dos pontos cinco e seis da decisão.",
+            "Retirá-los da análise transformaria um caso concreto numa regra de votação para qualquer carregador."
+          ]
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "text": "O direito de usar um lugar de estacionamento abrange também a parede, o teto e o quadro elétrico por onde passam os cabos? Num condomínio de Taiwan, um morador instalou a caixa de carregamento atrás do seu lugar e ligou-a ao próprio contador através dessas áreas. O [tribunal examinou todo o percurso da instalação](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1), que ultrapassava as linhas pintadas no pavimento.",
+          "sentences": [
+            "O direito de usar um lugar de estacionamento abrange também a parede, o teto e o quadro elétrico por onde passam os cabos?",
+            "Num condomínio de Taiwan, um morador instalou a caixa de carregamento atrás do seu lugar e ligou-a ao próprio contador através dessas áreas.",
+            "O tribunal examinou todo o percurso da instalação, que ultrapassava as linhas pintadas no pavimento."
+          ]
+        },
+        {
+          "text": "No processo 111年度上字第132號, a secção de Kaohsiung do Tribunal Superior de Taiwan negou provimento ao recurso do morador. A decisão, de 22 de junho de 2022, manteve a retirada dos equipamentos e a reposição do estado anterior. Tratava-se de partes e instalações comuns utilizadas sem a autorização necessária.",
+          "sentences": [
+            "No processo 111年度上字第132號, a secção de Kaohsiung do Tribunal Superior de Taiwan negou provimento ao recurso do morador.",
+            "A decisão, de 22 de junho de 2022, manteve a retirada dos equipamentos e a reposição do estado anterior.",
+            "Tratava-se de partes e instalações comuns utilizadas sem a autorização necessária."
+          ]
+        },
+        {
+          "text": "Entre os factos não contestados estavam a caixa na parede posterior do lugar, as condutas presas aos suportes do teto e o disjuntor acrescentado ao quadro comum. A ligação seguia para o contador do morador. As áreas atravessadas continuavam a ser comuns.",
+          "sentences": [
+            "Entre os factos não contestados estavam a caixa na parede posterior do lugar, as condutas presas aos suportes do teto e o disjuntor acrescentado ao quadro comum.",
+            "A ligação seguia para o contador do morador.",
+            "As áreas atravessadas continuavam a ser comuns."
+          ]
+        },
+        {
+          "text": "Havia duas fontes de requisitos. O [artigo 11 da Lei de Gestão de Edifícios em Condomínio](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11) sujeita a demolição, reparação de grande dimensão ou melhoria das partes comuns e instalações associadas à deliberação da assembleia de proprietários. Por sua vez, o artigo 15 do regulamento daquele condomínio exigia autorização da comissão de administração e inspeção de segurança pela empresa de eletricidade para acrescentar cabos e condutas.",
+          "sentences": [
+            "Havia duas fontes de requisitos.",
+            "O artigo 11 da Lei de Gestão de Edifícios em Condomínio sujeita a demolição, reparação de grande dimensão ou melhoria das partes comuns e instalações associadas à deliberação da assembleia de proprietários.",
+            "Por sua vez, o artigo 15 do regulamento daquele condomínio exigia autorização da comissão de administração e inspeção de segurança pela empresa de eletricidade para acrescentar cabos e condutas."
+          ]
+        },
+        {
+          "text": "O regulamento também contava. O tribunal considerou violados o artigo 11 e as regras internas, enquadrando a conduta no dever de cumprir as demais normas e o regulamento previsto no [artigo 6, parágrafo 1, ponto cinco](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6). A comissão enviara uma comunicação formal para tentar resolver o problema, mas a instalação continuava no local. Persistindo o incumprimento após essa tentativa, o parágrafo três permitia recorrer ao tribunal.",
+          "sentences": [
+            "O regulamento também contava.",
+            "O tribunal considerou violados o artigo 11 e as regras internas, enquadrando a conduta no dever de cumprir as demais normas e o regulamento previsto no artigo 6, parágrafo 1, ponto cinco.",
+            "A comissão enviara uma comunicação formal para tentar resolver o problema, mas a instalação continuava no local.",
+            "Persistindo o incumprimento após essa tentativa, o parágrafo três permitia recorrer ao tribunal."
+          ]
+        },
+        {
+          "text": "Já o ponto quatro do parágrafo um do artigo 6 trata de certas instalações de tubagens e cabos em partes exclusivas, com utilização das áreas comuns quando necessária. O tribunal rejeitou o argumento de que a obra em discussão se enquadrava nessa hipótese. A localização efetiva e as regras daquele edifício sustentam os [fundamentos dos pontos cinco e seis da decisão](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1). Retirá-los da análise transformaria um caso concreto numa regra de votação para qualquer carregador.",
+          "sentences": [
+            "Já o ponto quatro do parágrafo um do artigo 6 trata de certas instalações de tubagens e cabos em partes exclusivas, com utilização das áreas comuns quando necessária.",
+            "O tribunal rejeitou o argumento de que a obra em discussão se enquadrava nessa hipótese.",
+            "A localização efetiva e as regras daquele edifício sustentam os fundamentos dos pontos cinco e seis da decisão.",
+            "Retirá-los da análise transformaria um caso concreto numa regra de votação para qualquer carregador."
+          ]
+        },
+        {
+          "text": "Desligar a instalação resolveria o conflito? O morador alegou que tinha acrescentado um interruptor, cessado a utilização e trancado o equipamento, estando disposto a entregar a chave à administração. Segundo o tribunal, mesmo que tudo isso fosse verdade, permanecia a obrigação de retirada e reposição. Estava em causa também o direito de executar a obra naquelas áreas.",
+          "sentences": [
+            "Desligar a instalação resolveria o conflito?",
+            "O morador alegou que tinha acrescentado um interruptor, cessado a utilização e trancado o equipamento, estando disposto a entregar a chave à administração.",
+            "Segundo o tribunal, mesmo que tudo isso fosse verdade, permanecia a obrigação de retirada e reposição.",
+            "Estava em causa também o direito de executar a obra naquelas áreas."
+          ]
+        },
+        {
+          "text": "Um orçamento com apenas o número do lugar deixaria de fora boa parte desta disputa. Antes de contratar a instalação, o desenho pode indicar a caixa, as paredes e os pilares atravessados, a passagem pelo teto e o quadro de ligação. Cada segmento pode ter um regime de uso diferente. O confronto com os documentos de propriedade, o regulamento e as deliberações existentes permite localizar a autorização de que a proposta necessita.",
+          "sentences": [
+            "Um orçamento com apenas o número do lugar deixaria de fora boa parte desta disputa.",
+            "Antes de contratar a instalação, o desenho pode indicar a caixa, as paredes e os pilares atravessados, a passagem pelo teto e o quadro de ligação.",
+            "Cada segmento pode ter um regime de uso diferente.",
+            "O confronto com os documentos de propriedade, o regulamento e as deliberações existentes permite localizar a autorização de que a proposta necessita."
+          ]
+        },
+        {
+          "text": "Uma resposta verbal pode ser incompleta. Ao apresentar o projeto, o morador pode pedir à administração que identifique a disposição aplicável, o órgão que decide e os documentos ainda necessários. Havendo aprovação, a versão autorizada deve ser comparada com os equipamentos, o percurso e as condições que o instalador pretende executar. Uma alteração do traçado pode mudar a análise.",
+          "sentences": [
+            "Uma resposta verbal pode ser incompleta.",
+            "Ao apresentar o projeto, o morador pode pedir à administração que identifique a disposição aplicável, o órgão que decide e os documentos ainda necessários.",
+            "Havendo aprovação, a versão autorizada deve ser comparada com os equipamentos, o percurso e as condições que o instalador pretende executar.",
+            "Uma alteração do traçado pode mudar a análise."
+          ]
+        },
+        {
+          "text": "Em maio de 2026, Kaohsiung anunciou um programa que incluía apoio a caminhos de cabos para carregamento de veículos elétricos em áreas comuns de condomínios. O [aviso municipal](https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE) fixava 30 de setembro como prazo de candidatura, já ultrapassado. Esse apoio à infraestrutura comum não substitui o consentimento do condomínio nem autoriza por si a obra de um morador.",
+          "sentences": [
+            "Em maio de 2026, Kaohsiung anunciou um programa que incluía apoio a caminhos de cabos para carregamento de veículos elétricos em áreas comuns de condomínios.",
+            "O aviso municipal fixava 30 de setembro como prazo de candidatura, já ultrapassado.",
+            "Esse apoio à infraestrutura comum não substitui o consentimento do condomínio nem autoriza por si a obra de um morador."
+          ]
+        },
+        {
+          "text": "Para discutir uma ordem de suspensão, retirada ou interpretação do regulamento, pode ser enviado um resumo a [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), indicando a disposição em causa e o prazo de resposta; as consultas decorrem em inglês, chinês, coreano e japonês. O contrato com o instalador pode também definir se a obra pode começar antes da autorização e quem suporta os custos se ela não for obtida. Assim, a divergência sobre o percurso dos cabos não fica escondida sob um orçamento já aceite.",
+          "sentences": [
+            "Para discutir uma ordem de suspensão, retirada ou interpretação do regulamento, pode ser enviado um resumo a wei@hoveringlaw.com.tw, indicando a disposição em causa e o prazo de resposta; as consultas decorrem em inglês, chinês, coreano e japonês.",
+            "O contrato com o instalador pode também definir se a obra pode começar antes da autorização e quem suporta os custos se ela não for obtida.",
+            "Assim, a divergência sobre o percurso dos cabos não fica escondida sob um orçamento já aceite."
+          ]
+        },
+        {
+          "text": "Legislação e aviso municipal revistos em 26 de outubro de 2026. A exposição do caso utiliza os fundamentos da decisão consultados em 25 de outubro; não foi confirmado um julgamento posterior nem o trânsito em julgado. Noutros condomínios, é necessário verificar a posição dos equipamentos, os direitos de utilização e as regras internas.",
+          "sentences": [
+            "Legislação e aviso municipal revistos em 26 de outubro de 2026.",
+            "A exposição do caso utiliza os fundamentos da decisão consultados em 25 de outubro; não foi confirmado um julgamento posterior nem o trânsito em julgado.",
+            "Noutros condomínios, é necessário verificar a posição dos equipamentos, os direitos de utilização e as regras internas."
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "1dba99a240d62a669a3d553e192431d7670faa64c0788f079cede63e7af00af6",
+      "before_count": 41,
+      "after_count": 41,
+      "unchanged_paragraph_arrays": 13,
+      "delta": [
+        {
+          "paragraph": 1,
+          "before": [
+            "NT$243.548 foi o valor que um jogador atribuiu às moedas restantes na sua conta e pediu à empresa.",
+            "Não recebeu esse reembolso.",
+            "Embora o ecrã mostrasse um saldo, já não existiam pontos pagos por utilizar, facto que ambas as partes aceitavam no processo reproduzido na coletânea oficial de proteção do consumidor, páginas impressas 140 a 153."
+          ],
+          "after": [
+            "NT$243.548 foi o valor que um jogador atribuiu às moedas restantes na sua conta e pediu à empresa.",
+            "O tribunal julgou o pedido improcedente.",
+            "Embora o ecrã mostrasse um saldo, já não existiam pontos pagos por utilizar, facto que ambas as partes aceitavam no processo reproduzido na coletânea oficial de proteção do consumidor, páginas impressas 140 a 153."
+          ]
+        }
+      ],
+      "final_paragraphs": [
+        {
+          "text": "NT$243.548 foi o valor que um jogador atribuiu às moedas restantes na sua conta e pediu à empresa. O tribunal julgou o pedido improcedente. Embora o ecrã mostrasse um saldo, já não existiam pontos pagos por utilizar, facto que ambas as partes aceitavam no [processo reproduzido na coletânea oficial de proteção do consumidor](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), páginas impressas 140 a 153.",
+          "sentences": [
+            "NT$243.548 foi o valor que um jogador atribuiu às moedas restantes na sua conta e pediu à empresa.",
+            "O tribunal julgou o pedido improcedente.",
+            "Embora o ecrã mostrasse um saldo, já não existiam pontos pagos por utilizar, facto que ambas as partes aceitavam no processo reproduzido na coletânea oficial de proteção do consumidor, páginas impressas 140 a 153."
+          ]
+        },
+        {
+          "text": "Em 13 de setembro de 2021, o Tribunal Distrital de Keelung negou provimento ao recurso no processo 109年度消簡上字第1號. Não cabia novo recurso. A análise incidiu sobre a função daquelas moedas e as cláusulas de reembolso, sem excluir todos os bens virtuais da proteção dos consumidores.",
+          "sentences": [
+            "Em 13 de setembro de 2021, o Tribunal Distrital de Keelung negou provimento ao recurso no processo 109年度消簡上字第1號.",
+            "Não cabia novo recurso.",
+            "A análise incidiu sobre a função daquelas moedas e as cláusulas de reembolso, sem excluir todos os bens virtuais da proteção dos consumidores."
+          ]
+        },
+        {
+          "text": "O contrato permitia comprar pontos e depois utilizá-los para obter serviços ou produtos do jogo. As moedas que restavam tinham outra função: serviam de fichas nas partidas. Por isso, o tribunal entendeu que já não integravam os pontos pagos não utilizados nem as taxas de jogo que o contrato previa devolver.",
+          "sentences": [
+            "O contrato permitia comprar pontos e depois utilizá-los para obter serviços ou produtos do jogo.",
+            "As moedas que restavam tinham outra função: serviam de fichas nas partidas.",
+            "Por isso, o tribunal entendeu que já não integravam os pontos pagos não utilizados nem as taxas de jogo que o contrato previa devolver."
+          ]
+        },
+        {
+          "text": "Permitir trocar essas fichas por dinheiro junto da empresa levantaria ainda uma questão de jogo a dinheiro, segundo a decisão. Esse fundamento está ligado ao funcionamento concreto daquele jogo. Para avaliar outro saldo, é necessário conhecer a aquisição, as possibilidades de troca e o uso efetivo das moedas; a palavra exibida no ecrã não resolve a questão. O [ponto oito da decisão](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), nas páginas impressas 148 a 152, explica essa distinção.",
+          "sentences": [
+            "Permitir trocar essas fichas por dinheiro junto da empresa levantaria ainda uma questão de jogo a dinheiro, segundo a decisão.",
+            "Esse fundamento está ligado ao funcionamento concreto daquele jogo.",
+            "Para avaliar outro saldo, é necessário conhecer a aquisição, as possibilidades de troca e o uso efetivo das moedas; a palavra exibida no ecrã não resolve a questão.",
+            "O ponto oito da decisão, nas páginas impressas 148 a 152, explica essa distinção."
+          ]
+        },
+        {
+          "text": "Terminar o contrato não deveria gerar uma devolução? O próprio jogador manifestara a vontade de o terminar, o que permitia ao tribunal apreciar o efeito da cessação e, depois, verificar se as moedas eram reembolsáveis. Isso não significou aprovar todos os motivos de bloqueio ou de cessação que a empresa invocara anteriormente.",
+          "sentences": [
+            "Terminar o contrato não deveria gerar uma devolução?",
+            "O próprio jogador manifestara a vontade de o terminar, o que permitia ao tribunal apreciar o efeito da cessação e, depois, verificar se as moedas eram reembolsáveis.",
+            "Isso não significou aprovar todos os motivos de bloqueio ou de cessação que a empresa invocara anteriormente."
+          ]
+        },
+        {
+          "text": "Nos termos do ponto 18 das [cláusulas obrigatórias e proibidas dos contratos de jogos online](https://www.ey.gov.tw/File/C27658C15073FF69?A=C), o consumidor pode comunicar a cessação a qualquer momento. A empresa deve restituir os pontos pagos não utilizados ou as taxas de jogo, depois de deduzir os custos necessários, no prazo de 30 dias após a cessação. Outra forma de tratamento depende de acordo de ambas as partes.",
+          "sentences": [
+            "Nos termos do ponto 18 das cláusulas obrigatórias e proibidas dos contratos de jogos online, o consumidor pode comunicar a cessação a qualquer momento.",
+            "A empresa deve restituir os pontos pagos não utilizados ou as taxas de jogo, depois de deduzir os custos necessários, no prazo de 30 dias após a cessação.",
+            "Outra forma de tratamento depende de acordo de ambas as partes."
+          ]
+        },
+        {
+          "text": "O custo também precisa de explicação. Uma conta de reembolso pode ser confrontada com o saldo reconhecido, cada dedução e a respetiva base contratual. A percentagem escolhida pela empresa não demonstra, só por existir, que o montante seja necessário ou razoável.",
+          "sentences": [
+            "O custo também precisa de explicação.",
+            "Uma conta de reembolso pode ser confrontada com o saldo reconhecido, cada dedução e a respetiva base contratual.",
+            "A percentagem escolhida pela empresa não demonstra, só por existir, que o montante seja necessário ou razoável."
+          ]
+        },
+        {
+          "text": "Essa versão das normas entrou em vigor em 1 de janeiro de 2023, depois do julgamento. O caso foi decidido segundo o contrato e as normas então aplicáveis. Atualmente, o ponto quatro prevê também a resolução por escrito nos sete dias após o início do jogo, sem necessidade de motivo ou encargo, com restituição dos pontos pagos não utilizados. Ultrapassar esses sete dias não elimina a possibilidade de cessação e reembolso prevista no ponto 18.",
+          "sentences": [
+            "Essa versão das normas entrou em vigor em 1 de janeiro de 2023, depois do julgamento.",
+            "O caso foi decidido segundo o contrato e as normas então aplicáveis.",
+            "Atualmente, o ponto quatro prevê também a resolução por escrito nos sete dias após o início do jogo, sem necessidade de motivo ou encargo, com restituição dos pontos pagos não utilizados.",
+            "Ultrapassar esses sete dias não elimina a possibilidade de cessação e reembolso prevista no ponto 18."
+          ]
+        },
+        {
+          "text": "Uma captura de ecrã mostra o que ficou. Para distinguir os pontos comprados das moedas obtidas e utilizadas nas partidas, é útil ligar os documentos entre si:",
+          "sentences": [
+            "Uma captura de ecrã mostra o que ficou.",
+            "Para distinguir os pontos comprados das moedas obtidas e utilizadas nas partidas, é útil ligar os documentos entre si:"
+          ]
+        },
+        {
+          "text": "Pelo ponto nove, a empresa deve conservar pelo menos 30 dias de histórico individual e fornecê-lo nos sete dias seguintes à receção do pedido de consulta. A conservação tem um limite temporal. Pedir cedo o histórico pode evitar que a discussão fique reduzida à última imagem do saldo.",
+          "sentences": [
+            "Pelo ponto nove, a empresa deve conservar pelo menos 30 dias de histórico individual e fornecê-lo nos sete dias seguintes à receção do pedido de consulta.",
+            "A conservação tem um limite temporal.",
+            "Pedir cedo o histórico pode evitar que a discussão fique reduzida à última imagem do saldo."
+          ]
+        },
+        {
+          "text": "Além disso, o ponto seis das [cláusulas proibidas](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) impede uma estipulação que faça dos dados e históricos guardados pela empresa o único critério para resolver o conflito. Os registos da empresa continuam a poder ser examinados; a proibição incide sobre a sua exclusividade contratual.",
+          "sentences": [
+            "Além disso, o ponto seis das cláusulas proibidas impede uma estipulação que faça dos dados e históricos guardados pela empresa o único critério para resolver o conflito.",
+            "Os registos da empresa continuam a poder ser examinados; a proibição incide sobre a sua exclusividade contratual."
+          ]
+        },
+        {
+          "text": "Nas [estatísticas oficiais de 2025, publicadas em maio de 2026](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930), os jogos online ocuparam o segundo lugar entre os tipos de primeiras reclamações de consumo, embora o número tenha diminuído face ao ano anterior. A autoridade também pediu uma resposta adequada aos problemas de bloqueio de contas, suspensão e atendimento.",
+          "sentences": [
+            "Nas estatísticas oficiais de 2025, publicadas em maio de 2026, os jogos online ocuparam o segundo lugar entre os tipos de primeiras reclamações de consumo, embora o número tenha diminuído face ao ano anterior.",
+            "A autoridade também pediu uma resposta adequada aos problemas de bloqueio de contas, suspensão e atendimento."
+          ]
+        },
+        {
+          "text": "Uma reclamação pode começar na empresa e seguir para o [sistema público de reclamações de consumo](https://appeal.cpc.ey.gov.tw/). Para uma questão de interpretação contratual ou recusa de prova, o contacto com [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) pode identificar o valor discutido e o prazo de resposta, sem enviar palavras-passe; as consultas são em inglês, chinês, coreano e japonês. A justificação do montante pedido depende do percurso entre o pagamento, a conversão e o uso do saldo.",
+          "sentences": [
+            "Uma reclamação pode começar na empresa e seguir para o sistema público de reclamações de consumo.",
+            "Para uma questão de interpretação contratual ou recusa de prova, o contacto com wei@hoveringlaw.com.tw pode identificar o valor discutido e o prazo de resposta, sem enviar palavras-passe; as consultas são em inglês, chinês, coreano e japonês.",
+            "A justificação do montante pedido depende do percurso entre o pagamento, a conversão e o uso do saldo."
+          ]
+        },
+        {
+          "text": "Normas atuais e fontes oficiais consultadas em 26 de outubro de 2026. O processo de 2021 diz respeito a um jogo específico e foi consultado na coletânea governamental. Outros pontos, objetos ou motivos de cessação exigem uma análise das suas funções e do contrato sujeito ao regime de Taiwan.",
+          "sentences": [
+            "Normas atuais e fontes oficiais consultadas em 26 de outubro de 2026.",
+            "O processo de 2021 diz respeito a um jogo específico e foi consultado na coletânea governamental.",
+            "Outros pontos, objetos ou motivos de cessação exigem uma análise das suas funções e do contrato sujeito ao regime de Taiwan."
+          ]
+        }
+      ]
+    }
+  ]
+}

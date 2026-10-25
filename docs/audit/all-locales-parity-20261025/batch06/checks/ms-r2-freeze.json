@@ -1,0 +1,93 @@
+{
+  "frozenAt": "2026-10-25T17:28:14.205935+00:00",
+  "scope": "Author correction freeze; independent R2 decision pending.",
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/ms-author.md",
+    "sha256": "6ce0d59d734f2d289115aa8dcbbf8b78ea83cf128a4fd5033c100e278e27a747",
+    "bytes": 19605,
+    "preservedR1PrefixSHA256": "e024f0fa5e4a41a0914eac79d59b872192b3d2c11c555808dbac620ffb78e8ab"
+  },
+  "currentManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ms-final-manifest.json",
+    "sha256": "71ac6385fb6596ceb6e93c92e94ed70c7ce5be4acc4b94ef394fc9bfc9171e6d"
+  },
+  "independentR1Report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/ms-independent.md",
+    "sha256": "2e7d3f7142149742c66e718e810bd83d20bdae7d47ef0c9a0eda1e3044b342b1"
+  },
+  "outputs": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "a84831b3f245c2eb8bb1f3333f75058ef8716e53f346e08db45347fa9c4ae103",
+      "bytes": 7824
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "e8de772156076b020564e30955075e84a2ba0b6388ffbd99366c304829c38d86",
+      "bytes": 9096
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "bb55a0db717c9eafbcdc5c8b64a475dfec3f8d208c629e711e8ce8e9a4069ef0",
+      "bytes": 8600
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "1247ec843684dd22111d51a5478876f7c2e786cbce07a6a4964b85b47faba871",
+      "bytes": 8160
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "de6df23563ef5d7387180836408e3b20a5e6c7ea20ba4a9a30c36421e244a635",
+      "bytes": 8434
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "74db4d0b549a770c8c916b38047abfb0ef89391788f2cabe5f9050714e725889",
+      "bytes": 8689
+    }
+  ],
+  "evidence": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/ms-author.md",
+      "sha256": "6ce0d59d734f2d289115aa8dcbbf8b78ea83cf128a4fd5033c100e278e27a747",
+      "bytes": 19605,
+      "phase": "R1 preserved plus R2 appendix"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ms-r1-author-manifest.json",
+      "sha256": "143c626e888e997b45260c1f1a24df0d60af899f32fc6ffde79adc09a4a6ed1b",
+      "bytes": 13997,
+      "phase": "Unchanged R1 author manifest archive"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ms-r2-baseline.json",
+      "sha256": "d5461a0be6980f6f065de800cfcf154c7d011086bfc7a13529e5feb4543d017c",
+      "bytes": 39922,
+      "phase": "R2 correction evidence"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ms-r2-edits.json",
+      "sha256": "69e869049a42e7e53f4ca59e6127e3bf089f8cb67860563df6ba55361be2f8a3",
+      "bytes": 15748,
+      "phase": "R2 correction evidence"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ms-r2-structure.json",
+      "sha256": "221a47c68724b8096957d9640b7b98f7be10262e56a6c626c7de1fa7b43f824f",
+      "bytes": 26964,
+      "phase": "R2 correction evidence"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ms-r2-variety.json",
+      "sha256": "6f3f225b1883aa1014ac16661466a16ed2749dd1a4e6ac1e12fc4b37f3da1dbf",
+      "bytes": 50546,
+      "phase": "R2 correction evidence"
+    }
+  ],
+  "readOnlyGuardMatches": 20,
+  "automatedErrors": 0,
+  "changedFileSharedFailures": 0,
+  "newAuditRequiredItems": 20,
+  "unmodifiedR1RequiredItems": 10
+}

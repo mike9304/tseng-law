@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-25T17:27:23.576874+00:00",
+  "effective_changed_positions": 2,
+  "actual_sequential_mutations": 3,
+  "initial_proposal_and_failure_preserved_in": [
+    "pt-review-r2-edits.json",
+    "pt-review-r2-variety.json",
+    "pt-review-r2-prose-followup.json"
+  ],
+  "edits": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "finding": "M01",
+      "before_sha256": "6dd1b3478c1001f87980858789602e378d5d2956fe55c0259577d1c08dde26bc",
+      "after_sha256": "0e3c9f74b6c48427841020e5381528ce8a7406702352a45a254bbfd403ba4dca",
+      "old": "Já o ponto quatro do mesmo parágrafo trata",
+      "new": "Já o ponto quatro do parágrafo um do artigo 6 trata",
+      "inverse_bytes_equal": true,
+      "frontmatter_including_faq_bytes_unchanged": true,
+      "all_url_values_and_order_unchanged": true,
+      "diff": "--- 920-taiwan-apartment-ev-charger-common-area-judgment.md R1\n+++ 920-taiwan-apartment-ev-charger-common-area-judgment.md R2\n@@ -35,7 +35,7 @@\n \n O regulamento também contava. O tribunal considerou violados o artigo 11 e as regras internas, enquadrando a conduta no dever de cumprir as demais normas e o regulamento previsto no [artigo 6, parágrafo 1, ponto cinco](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6). A comissão enviara uma comunicação formal para tentar resolver o problema, mas a instalação continuava no local. Persistindo o incumprimento após essa tentativa, o parágrafo três permitia recorrer ao tribunal.\n \n-Já o ponto quatro do mesmo parágrafo trata de certas instalações de tubagens e cabos em partes exclusivas, com utilização das áreas comuns quando necessária. O tribunal rejeitou o argumento de que a obra em discussão se enquadrava nessa hipótese. A localização efetiva e as regras daquele edifício sustentam os [fundamentos dos pontos cinco e seis da decisão](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1). Retirá-los da análise transformaria um caso concreto numa regra de votação para qualquer carregador.\n+Já o ponto quatro do parágrafo um do artigo 6 trata de certas instalações de tubagens e cabos em partes exclusivas, com utilização das áreas comuns quando necessária. O tribunal rejeitou o argumento de que a obra em discussão se enquadrava nessa hipótese. A localização efetiva e as regras daquele edifício sustentam os [fundamentos dos pontos cinco e seis da decisão](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1). Retirá-los da análise transformaria um caso concreto numa regra de votação para qualquer carregador.\n \n Desligar a instalação resolveria o conflito? O morador alegou que tinha acrescentado um interruptor, cessado a utilização e trancado o equipamento, estando disposto a entregar a chave à administração. Segundo o tribunal, mesmo que tudo isso fosse verdade, permanecia a obrigação de retirada e reposição. Estava em causa também o direito de executar a obra naquelas áreas.\n \n"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/921-taiwan-online-game-coins-refund-judgment.md",
+      "finding": "S01",
+      "before_sha256": "af08a2dc4021cf3d01d2a6f1b308d8cb2a571f6cc3cf5a5a227776da1faebd0f",
+      "after_sha256": "1dba99a240d62a669a3d553e192431d7670faa64c0788f079cede63e7af00af6",
+      "old": "Não recebeu esse reembolso.",
+      "new": "O tribunal julgou o pedido improcedente.",
+      "inverse_bytes_equal": true,
+      "frontmatter_including_faq_bytes_unchanged": true,
+      "all_url_values_and_order_unchanged": true,
+      "diff": "--- 921-taiwan-online-game-coins-refund-judgment.md R1\n+++ 921-taiwan-online-game-coins-refund-judgment.md R2\n@@ -23,7 +23,7 @@\n     a: \"As cláusulas proibidas impedem que o contrato faça dos históricos e dados eletrónicos conservados pela empresa o único critério para resolver um conflito. O jogador pode guardar comprovativos de pagamento, capturas do ecrã e mensagens, bem como pedir o seu histórico, para esclarecer a formação do saldo.\"\n ---\n \n-NT$243.548 foi o valor que um jogador atribuiu às moedas restantes na sua conta e pediu à empresa. Não recebeu esse reembolso. Embora o ecrã mostrasse um saldo, já não existiam pontos pagos por utilizar, facto que ambas as partes aceitavam no [processo reproduzido na coletânea oficial de proteção do consumidor](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), páginas impressas 140 a 153.\n+NT$243.548 foi o valor que um jogador atribuiu às moedas restantes na sua conta e pediu à empresa. O tribunal julgou o pedido improcedente. Embora o ecrã mostrasse um saldo, já não existiam pontos pagos por utilizar, facto que ambas as partes aceitavam no [processo reproduzido na coletânea oficial de proteção do consumidor](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), páginas impressas 140 a 153.\n \n Em 13 de setembro de 2021, o Tribunal Distrital de Keelung negou provimento ao recurso no processo 109年度消簡上字第1號. Não cabia novo recurso. A análise incidiu sobre a função daquelas moedas e as cláusulas de reembolso, sem excluir todos os bens virtuais da proteção dos consumidores.\n \n"
+    }
+  ]
+}

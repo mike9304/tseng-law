@@ -1,0 +1,107 @@
+{
+  "read_scope_date": "2026-10-26 KST",
+  "records": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/research/zh-hant-source-captures.json",
+      "sha256": "57d8063b173781bbc723dfa48e49d89f2a1169b3fcd8a07b7371bd8679797e82",
+      "read_scope": "zh-case-pass2 actual court response source lines 213–237; other entries indexed, not represented as complete fresh reads"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/research/zh-hant-ev-primary-recovered.md",
+      "sha256": "69e09470e7e81edf23c9708e3b942a01c32dfc2e6128c49b353d180634cebbe2",
+      "read_scope": "entire retained file"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/research/zh-hant-presale-audit-primary-recovered.md",
+      "sha256": "7a85ffb86d8f2726af8ca216f89e1ad81982b8645e4fbf5ac41cab522f7a7bdb",
+      "read_scope": "entire retained file"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/research/firm-profile.md",
+      "sha256": "5f4eda9ab38c410f3bc0bc3a8f39f07b99f152088f765dfa380519590b2b939f",
+      "read_scope": "entire retained file"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/research/en-captures/en-procurement-original-open.txt",
+      "sha256": "210e5841b601c5f429979ffd6b418aee01783a78613791290d14ce3d589220d5",
+      "read_scope": "entire retained file: actual official explanation source lines 0–56, including case sequence, finality and Article40(1)(2)"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/research/en-captures/en_open_newcases.txt",
+      "sha256": "d84e85dde724fe2de7f9288d4cafe9e5e8176926209ac2dded4d4c6ab120f1b3",
+      "read_scope": "only official case107台上267 response blocks, covering source lines24–40 collectively; unrelated cases not used"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/research/en-captures/en_case_finalread.txt",
+      "sha256": "9bb96d53157dffc01d49afd2a46e3654d49cd33095e6a88fa2ea73a2e51a7619",
+      "read_scope": "only official case107台上267 response blocks, covering source lines24–40 collectively; unrelated cases not used"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/research/en-captures/en-stock-final-reasons.txt",
+      "sha256": "801b141f1dc35b9349bc701c1d4760cecd97f7ccf0fb941286d2ca656913b577",
+      "read_scope": "only official case107台上267 response blocks, covering source lines24–40 collectively; unrelated cases not used"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/reviews/cases-zh-hant-final.md",
+      "sha256": "5ea4ad4a857324197df4af3dd1900e6e01baa398a1af400395d705aed22b30d8",
+      "read_scope": "entire report, including source-access and publication limits"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/reviews/cases-en-final.md",
+      "sha256": "ec4a25090ce0bfc6465456d8b98feeeef16b69a4a3acc304b7aa6a2f7acf154e",
+      "read_scope": "entire report, including source-access and publication limits"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/reviews/cases-zh-hant-locale-919-r1.md",
+      "sha256": "22f3ee4cbb0199532d55faaed069dff6bc3b103d1e290a3fd2620da652aae3c5",
+      "read_scope": "entire report, including source-access and publication limits"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/reviews/cases-zh-hant-locale-921-r1.md",
+      "sha256": "667b111628e9eec808079843572fc8539ef23b047f4fd5f49c737ea1f762c85b",
+      "read_scope": "entire report, including source-access and publication limits"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/reviews/cases-zh-hant-locale-920-r2.md",
+      "sha256": "be70ddc32e3a1a207ee91d653512b692679c67f440dd410ecae8b1977dccf59a",
+      "read_scope": "entire report, including source-access and publication limits"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/reviews/cases-zh-hant-locale-918-r1.md",
+      "sha256": "2b073a591905881bbe249b4d99642728fcaa741c65fc846611a172c2fbe2ce6a",
+      "read_scope": "entire report, including source-access and publication limits"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/reviews/cases-en-locale-final.md",
+      "sha256": "462926b90e5dd8a503bc48d1181088f5aef7fbd124843572194fb0126c6766fe",
+      "read_scope": "entire report, including source-access and publication limits"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/reviews/cases-zh-hant-final.json",
+      "sha256": "1292392c57681cc8d40893dd229ebd9b23c702c2fcdadf2f454f825e7fa00576",
+      "read_scope": "approval bindings, assigned-article records, source and evidence limits; unrelated EN914/917 not research sources"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/reviews/cases-en-final.json",
+      "sha256": "cbc3ecc3ea5bf871fbb6ed4f47a6f2a02fed90a3c65ed10864baba3c1efeccc9",
+      "read_scope": "approval bindings, assigned-article records, source and evidence limits; unrelated EN914/917 not research sources"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/checks/reviewed-publication-manifest.json",
+      "sha256": "1dcba2ced37e03d8f24dc684947f5a6fb4b4b70d509480275989aebd7ab9f595",
+      "read_scope": "entire manifest; six selected records SHA verified independently"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/case-trends-20261025/work/EDITORIAL-BRIEF.md",
+      "sha256": "6899141a5f28a0cbe803998899d78bd8215fe83fd7d97b2e3cfff12577affdbc",
+      "read_scope": "entire prior brief; historical original-workflow and four-market scope are not new authorization or nationality evidence"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/next-source-plan.md",
+      "sha256": "c869348bda7c996a965bcc3a9e5cdf1e6c427986734ef34cf976be46e8a66f06",
+      "read_scope": "entire plan; current parent priority order de,it,ar,pt,hi,ms,ru supersedes earlier proposal order"
+    }
+  ],
+  "review_report_hash_bindings_verified": true,
+  "note": "Prior official tool responses remain dated 2026-10-25. Fresh official lookups are separate recheck/official-*.json records."
+}

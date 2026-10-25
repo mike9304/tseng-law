@@ -1,0 +1,150 @@
+{
+  "frozen_at_utc": "2026-10-25T17:04:49.254078+00:00",
+  "owner": "/root/column_voice_rules",
+  "status": "Author self-review complete; frozen for a different reviewer. Not integrated or deployed.",
+  "locale": "it",
+  "inputs_manifest": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-inputs.json",
+  "all22InputsUnchanged": true,
+  "author_report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/it-author.md",
+    "sha256": "213caced6d6c3c0687c97cc683a474a4604a924260560902b2a4a8eca878374d",
+    "bytes": 13037
+  },
+  "outputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "35dac07dacd8bbec1a7485e1d4ac91ade04114dc8d0e73748c658396244a9cf8",
+      "bytes": 8807,
+      "extracted_units": 45,
+      "cv": 0.471,
+      "variety_exit": 0,
+      "hard_fail_count": 0,
+      "faq_count": 2,
+      "freeze_sha_still_matches_measured_and_audited": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "5cf2e361a6092205a2ae6e93977391be436a42e2916f8c9d6b3225acc9f80bab",
+      "bytes": 9920,
+      "extracted_units": 46,
+      "cv": 0.495,
+      "variety_exit": 0,
+      "hard_fail_count": 0,
+      "faq_count": 3,
+      "freeze_sha_still_matches_measured_and_audited": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "d0e740245ba86df7b08c5fdbda63493c59a25fefb5e485ecdcb49b1ae80178dd",
+      "bytes": 9003,
+      "extracted_units": 42,
+      "cv": 0.475,
+      "variety_exit": 0,
+      "hard_fail_count": 0,
+      "faq_count": 3,
+      "freeze_sha_still_matches_measured_and_audited": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "8242040c97d1f4aac945306fcde2614b77e03e7e93cdacebacf61986fcd68fd9",
+      "bytes": 8821,
+      "extracted_units": 40,
+      "cv": 0.463,
+      "variety_exit": 0,
+      "hard_fail_count": 0,
+      "faq_count": 3,
+      "freeze_sha_still_matches_measured_and_audited": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "7755edb8d8d4eb7d1d0035b22e53936e5b941dedc6210ab4ab617e9cd3bfd1cf",
+      "bytes": 8734,
+      "extracted_units": 42,
+      "cv": 0.491,
+      "variety_exit": 0,
+      "hard_fail_count": 0,
+      "faq_count": 3,
+      "freeze_sha_still_matches_measured_and_audited": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "e52e70d61d129f6e6849eeb74d66a5aad7fd3d494666708b44439af5704952e2",
+      "bytes": 9029,
+      "extracted_units": 42,
+      "cv": 0.535,
+      "variety_exit": 0,
+      "hard_fail_count": 0,
+      "faq_count": 3,
+      "freeze_sha_still_matches_measured_and_audited": true
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-boundary-review.json",
+      "sha256": "afd14a6bbec7db83e3f68e2931acfbc6f75623645a15c166af480d6cda1c8f15",
+      "bytes": 6399
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-content-audit.json",
+      "sha256": "94d7a0139fc4b81ac87db16725a48da2e2e56374cf8d35a08cb8ca103c3ce3ae",
+      "bytes": 26165
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-content-audit.mjs",
+      "sha256": "6f84bef7a9484390212234ffdaf2ecca900a9f68fe40292fec15055924c7a3f4",
+      "bytes": 4418
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-edit-reversal.json",
+      "sha256": "d79fe3ea37b0c98a8fb6a5f9379af79a23291ba384e8974f5aaae95c10627285",
+      "bytes": 8422
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-edits.json",
+      "sha256": "901b57054bd661eb448c7ea0ec968f38943cdec69e3d115681d136af7ef4e88f",
+      "bytes": 22808
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-input-validation.json",
+      "sha256": "c8a711042556174adee93f34090189f4d7acbc5b5583230f52b36395e4b45bbb",
+      "bytes": 8770
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-inputs.json",
+      "sha256": "ead488c6379e309d5e7d607d714dbbe03176f72ca14feaec1c81265698a5cc2b",
+      "bytes": 6965
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-planned-checker-update.json",
+      "sha256": "6e744135a9903f965da8171a7f6e3132ab3ea260ab38f0b6359843edd95b4fb9",
+      "bytes": 1487
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-variety-final.json",
+      "sha256": "561f88a947bb3ad64c55495aecb4cf17aa8573301848aa7c35df8b8f741b780f",
+      "bytes": 91868
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-variety-first.json",
+      "sha256": "75bcf394745fe8422c9979ea720a239f41575237e0edaf3ac6aafb8d03a3ebfc",
+      "bytes": 182015
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-variety-r1.json",
+      "sha256": "fbbbb7f68b391a1c5db87fb0a006632d7b330681385bffd2b23705a6c4125263",
+      "bytes": 90078
+    }
+  ],
+  "checks": {
+    "actual_shared_cli_exit0": 6,
+    "hard_failures": 0,
+    "content_audit_errors": 0,
+    "manual_extracted_units": 257,
+    "exact_reverse_edits": 22,
+    "initial_failures_retained": true,
+    "independent_meaning_review": "pending",
+    "native_human_or_legal_approval": false,
+    "root_integration_public_check": "pending"
+  },
+  "scope_preserved": "Only B6/src/content/columns-it six files, reviews/it-author.md and checks/it-* written. No R/shared edits, git, deployment or messages to third parties."
+}

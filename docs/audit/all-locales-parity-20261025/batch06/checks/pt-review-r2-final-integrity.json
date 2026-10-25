@@ -1,0 +1,83 @@
+{
+  "at": "2026-10-26T02:28:44.929845+09:00",
+  "status": "FROZEN_AFTER_R1_M01_S01_FOR_INDEPENDENT_DELTA_REVIEW",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "77305593ff192c54b86fe07898e6cee983366cd077a73b9a3667f80b7e2817b5",
+      "matches_manifest": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "1dba99a240d62a669a3d553e192431d7670faa64c0788f079cede63e7af00af6",
+      "matches_manifest": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "0e3c9f74b6c48427841020e5381528ce8a7406702352a45a254bbfd403ba4dca",
+      "matches_manifest": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "70f1c01c0ce95f4f660726a6c747c80bc7115972a7f331d1fd46269782310dfc",
+      "matches_manifest": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "e40fa586ea8b835e6bdcb070fc0193bbea80e263df88aafa86d2f951f9894353",
+      "matches_manifest": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "177be7395ee02cad28462e119942e229cd30542602f4687889adc7a79ca9eeac",
+      "matches_manifest": true
+    }
+  ],
+  "restoration_checks": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "r1_sha256": "6dd1b3478c1001f87980858789602e378d5d2956fe55c0259577d1c08dde26bc",
+      "r2_sha256": "0e3c9f74b6c48427841020e5381528ce8a7406702352a45a254bbfd403ba4dca",
+      "reverse_to_initial_sha256": "e33cc55f32cf1a7a23506d9feb47d95d0e8b8d3454c15eeb07b9ba5c153cd67a",
+      "matches_initial": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/921-taiwan-online-game-coins-refund-judgment.md",
+      "r1_sha256": "af08a2dc4021cf3d01d2a6f1b308d8cb2a571f6cc3cf5a5a227776da1faebd0f",
+      "r2_sha256": "1dba99a240d62a669a3d553e192431d7670faa64c0788f079cede63e7af00af6",
+      "reverse_to_initial_sha256": "b4a2653f952bff658ea8038988d3cab55241ba19b3b1b093f76b99765b16f068",
+      "matches_initial": true
+    }
+  ],
+  "original_author_report_sha256": "90d67ee4c86a90c4ebbde4da7d11a562b44813f92c205067b9d993a4247aa7d6",
+  "independent_r1_sha256": "7b044a955e4eb76e239606d263f2c93b4877ec6442f67faa6ada6bfe1c180fff",
+  "r1_manifest_preserved_sha256": "208737441560a31745330d37da46f27537edddbef3c5d7e953793dd83da6cfbe",
+  "current_manifest_sha256": "5d4210f4b9b35030fb4f959b6c5edee2a091ea52ad1d2467030774d2df3ae728",
+  "r2_author_report_sha256": "b2dc6450cbbe8dacf0824e2a67fc5b59996445aeb1f068015228f61c5abb9f2c",
+  "evidence": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-review-r2-content.json",
+      "sha256": "2f9b5f35de34eb4888e2b0c1dbb11c45969329a722d13dfe1a1153f0d272777e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-review-r2-edits.json",
+      "sha256": "5ca24caeee5a1b5ef1e7e681bc22a6b18ae18514fd39d9219d98f3477da20f2d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-review-r2-final-boundaries.json",
+      "sha256": "78f45440caa62b1df3f9afc232d3a56aacc860a8818748b4c2383c4a65842558"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-review-r2-final-edits.json",
+      "sha256": "fcf3c542d1f8068f17fafcc5d31e6433c9d62e7a8b8c3c082e561ca0d35bbabf"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-review-r2-prose-followup.json",
+      "sha256": "5d307de696000f4b623612017f471ecbecc37569fe93006a37ff2f072d2e7842"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-review-r2-variety.json",
+      "sha256": "54b682045c30f38181154ec4e431a700dbf7ec2ffffe23f6250f9a61e096e1fd"
+    }
+  ]
+}

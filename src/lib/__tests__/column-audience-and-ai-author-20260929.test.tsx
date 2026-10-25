@@ -32,7 +32,7 @@ function newestLeadSlug(locale: string): string | undefined {
   const slugs = expertiseSlugsFor(locale);
   let best: { slug: string; date: string; index: number } | undefined;
   slugs.forEach((slug, index) => {
-    const date = archiveLeadPublicationDate(slug);
+    const date = archiveLeadPublicationDate(slug, locale);
     if (!best || date > best.date || (date === best.date && index > best.index)) best = { slug, date, index };
   });
   return best?.slug;

@@ -1,0 +1,262 @@
+{
+  "at_utc": "2026-10-25T17:25:41.931Z",
+  "node": "v24.14.1",
+  "method": "Two-file gray-matter parse, exact raw-byte comparison outside summary, body/FAQ/URL preservation and reverse-to-R1 verification. No variety rerun; metadata is outside the retained body extraction contract. No new URL network requests because all URL bytes are unchanged.",
+  "runs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "before_sha256": "d0e740245ba86df7b08c5fdbda63493c59a25fefb5e485ecdcb49b1ae80178dd",
+      "after_sha256": "575603a4fb63eb582dd0ed076f3f1a50af4aea796bb8140855728d98df691f66",
+      "changed_metadata_fields": [
+        "summary"
+      ],
+      "exact_reverse_to_original_sha256": "d0e740245ba86df7b08c5fdbda63493c59a25fefb5e485ecdcb49b1ae80178dd",
+      "exact_reverse_pass": true,
+      "non_summary_bytes_identical": true,
+      "body_bytes_identical": true,
+      "body_sha256": "bb273a918465f073673fe70ba9b885cb8b50c207e8a73e040c9ce1586a248c3d",
+      "faq_raw_bytes_identical": true,
+      "faq_raw_sha256": "43998f4e47b266b5538e0098fc1d6c6a2e94890e2bb3acd206344284c21747d2",
+      "faq_parsed_equal": true,
+      "faq_count": 3,
+      "url_sequence_identical": true,
+      "url_count": 10,
+      "metadata": {
+        "title": "Mutuo avviato, casa ancora da consegnare: una controversia di Taiwan",
+        "seoTitle": "Casa in costruzione a Taiwan: mutuo e avviso di consegna",
+        "summary": "Una lettera sul mutuo e l’accesso per lavori interni non provavano l’avvenuta consegna dell’abitazione. La sentenza distingue i passaggi del contratto. Il termine di quattro mesi pattuito in quel caso va tenuto distinto dalla regola attuale dei sei mesi per comunicare la consegna.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 ottobre 2026",
+        "read_time": "5 min di lettura",
+        "categories": [
+          "Immobili a Taiwan",
+          "Sentenze di Taiwan"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "acquisto su progetto",
+          "consegna dell’immobile",
+          "mutuo",
+          "ritardo del costruttore",
+          "controversie contrattuali"
+        ],
+        "audience": [
+          "it"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/918-case-trends-20261025.webp",
+        "featured_image_alt": "Documenti, una busta senza scritte e scatole da trasloco all’interno di un’abitazione nuova.",
+        "featured_image_caption": "Scena immaginaria",
+        "faq": [
+          {
+            "q": "La richiesta del costruttore di avviare il mutuo vale come avviso di consegna?",
+            "a": "Dipende dal contenuto della lettera e dallo stato dell’immobile. Nel caso esaminato si chiedevano informazioni sul finanziamento, senza comunicare che la casa fosse utilizzabile. Mancavano gli allacci e i successivi verbali di verifica non sostenevano la tesi del costruttore. Il giudice non ha quindi riconosciuto l’avviso di consegna previsto dal contratto."
+          },
+          {
+            "q": "Il termine dalla licenza d’uso è di quattro o di sei mesi?",
+            "a": "I quattro mesi provenivano dal contratto di quel caso. Il punto 15 delle clausole obbligatorie attuali impone invece al venditore di comunicare la consegna entro sei mesi dall’ottenimento della licenza d’uso dell’edificio. Occorre confrontare l’accordo concreto con le regole applicabili al momento della stipula."
+          },
+          {
+            "q": "Posso ignorare una comunicazione finché la banca non eroga il mutuo?",
+            "a": "Il solo ritardo del finanziamento non consente di accantonare ogni comunicazione. Pagamenti, documenti bancari, verifica dell’immobile e consegna hanno obblighi e termini distinti. Vanno identificati il contenuto della richiesta e la sua scadenza, confrontandoli con i documenti della banca e sullo stato della casa. La sentenza non attribuisce a tutti gli acquirenti un diritto di sospendere i pagamenti."
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/921-taiwan-online-game-coins-refund-judgment.md",
+      "before_sha256": "e52e70d61d129f6e6849eeb74d66a5aad7fd3d494666708b44439af5704952e2",
+      "after_sha256": "2e92a5de5a50c3bd2bddd8f7ac40077a6ee620a7c04ecdfb39ffa9862c93b0da",
+      "changed_metadata_fields": [
+        "summary"
+      ],
+      "exact_reverse_to_original_sha256": "e52e70d61d129f6e6849eeb74d66a5aad7fd3d494666708b44439af5704952e2",
+      "exact_reverse_pass": true,
+      "non_summary_bytes_identical": true,
+      "body_bytes_identical": true,
+      "body_sha256": "bc1cd81f73708b1e0780d230383509added51ba3341962aa088f1ea9c5d231a8",
+      "faq_raw_bytes_identical": true,
+      "faq_raw_sha256": "db3b024a06b27c420a66d0ac2908f3f6213c843278fa26bc0f4b1cd1f5790fb0",
+      "faq_parsed_equal": true,
+      "faq_count": 3,
+      "url_sequence_identical": true,
+      "url_count": 11,
+      "metadata": {
+        "title": "Monete rimaste nel gioco: perché un rimborso è stato negato a Taiwan",
+        "seoTitle": "Giochi online a Taiwan: monete, punti e rimborsi",
+        "summary": "Un giocatore chiedeva NT$243.548 per le monete rimaste nell’account. Il tribunale le ha considerate gettoni di partita, distinguendole dai punti acquistati e non utilizzati. Le regole attuali tutelano altri crediti rimborsabili; ricostruire acquisti e utilizzo aiuta a capire quale saldo sia coperto.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 ottobre 2026",
+        "read_time": "5 min di lettura",
+        "categories": [
+          "Controversie dei consumatori",
+          "Sentenze di Taiwan"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "giochi online",
+          "rimborso",
+          "monete virtuali",
+          "punti a pagamento",
+          "contratti dei consumatori"
+        ],
+        "audience": [
+          "it"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/921-case-trends-20261025.webp",
+        "featured_image_alt": "Un controller, una schermata di gioco astratta, gettoni senza scritte e un quaderno chiuso.",
+        "featured_image_caption": "Scena immaginaria",
+        "faq": [
+          {
+            "q": "Un credito chiamato «moneta» è sempre escluso dal rimborso?",
+            "a": "Il nome non basta. Nel caso esaminato, le monete servivano come gettoni nelle partite e non costituivano punti acquistati e non utilizzati né spese di gioco da restituire. Per un altro gioco vanno esaminati acquisizione, funzione, utilizzo e contratto."
+          },
+          {
+            "q": "Dopo sette giorni dall’inizio del gioco posso ancora chiudere il contratto?",
+            "a": "Le regole attuali consentono di porre fine al contratto in qualsiasi momento mediante comunicazione al gestore. I punti acquistati e non utilizzati o le somme non utilizzate versate per il gioco devono essere restituiti entro trenta giorni dalla cessazione, dedotti i costi necessari, oppure trattati secondo una modalità concordata da entrambe le parti. È un percorso distinto dal recesso scritto nei primi sette giorni."
+          },
+          {
+            "q": "Il gestore può imporre che contino soltanto i suoi registri?",
+            "a": "Le clausole vietate escludono che, in caso di controversia, si possa imporre come unico criterio la cronologia e i dati elettronici conservati dal gestore. Il giocatore può conservare ricevute, schermate e corrispondenza con l’assistenza, oltre a chiedere la propria cronologia per ricostruire il saldo."
+          }
+        ]
+      },
+      "errors": []
+    }
+  ],
+  "other_four_it_files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "35dac07dacd8bbec1a7485e1d4ac91ade04114dc8d0e73748c658396244a9cf8",
+      "expected_sha256": "35dac07dacd8bbec1a7485e1d4ac91ade04114dc8d0e73748c658396244a9cf8",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "5cf2e361a6092205a2ae6e93977391be436a42e2916f8c9d6b3225acc9f80bab",
+      "expected_sha256": "5cf2e361a6092205a2ae6e93977391be436a42e2916f8c9d6b3225acc9f80bab",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "8242040c97d1f4aac945306fcde2614b77e03e7e93cdacebacf61986fcd68fd9",
+      "expected_sha256": "8242040c97d1f4aac945306fcde2614b77e03e7e93cdacebacf61986fcd68fd9",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "7755edb8d8d4eb7d1d0035b22e53936e5b941dedc6210ab4ab617e9cd3bfd1cf",
+      "expected_sha256": "7755edb8d8d4eb7d1d0035b22e53936e5b941dedc6210ab4ab617e9cd3bfd1cf",
+      "unchanged": true
+    }
+  ],
+  "protected_r1_files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-boundary-review.json",
+      "sha256": "afd14a6bbec7db83e3f68e2931acfbc6f75623645a15c166af480d6cda1c8f15",
+      "current_sha256": "afd14a6bbec7db83e3f68e2931acfbc6f75623645a15c166af480d6cda1c8f15",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-content-audit.json",
+      "sha256": "94d7a0139fc4b81ac87db16725a48da2e2e56374cf8d35a08cb8ca103c3ce3ae",
+      "current_sha256": "94d7a0139fc4b81ac87db16725a48da2e2e56374cf8d35a08cb8ca103c3ce3ae",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-content-audit.mjs",
+      "sha256": "6f84bef7a9484390212234ffdaf2ecca900a9f68fe40292fec15055924c7a3f4",
+      "current_sha256": "6f84bef7a9484390212234ffdaf2ecca900a9f68fe40292fec15055924c7a3f4",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-edit-reversal.json",
+      "sha256": "d79fe3ea37b0c98a8fb6a5f9379af79a23291ba384e8974f5aaae95c10627285",
+      "current_sha256": "d79fe3ea37b0c98a8fb6a5f9379af79a23291ba384e8974f5aaae95c10627285",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-edits.json",
+      "sha256": "901b57054bd661eb448c7ea0ec968f38943cdec69e3d115681d136af7ef4e88f",
+      "current_sha256": "901b57054bd661eb448c7ea0ec968f38943cdec69e3d115681d136af7ef4e88f",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-independent-checks.json",
+      "sha256": "07619e7ab9e050a2c65bfd02be2272d9471ae89d9791732ab451f8ea1aca9d0b",
+      "current_sha256": "07619e7ab9e050a2c65bfd02be2272d9471ae89d9791732ab451f8ea1aca9d0b",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-independent-manifest.json",
+      "sha256": "005a4fd63d6427552479c9b7d57ebcacd36b8cfc6a1df6927d86fbcc753d4aee",
+      "current_sha256": "005a4fd63d6427552479c9b7d57ebcacd36b8cfc6a1df6927d86fbcc753d4aee",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-independent-r1-originals.json",
+      "sha256": "7959ee00c7367ea5f3a28290d4fe41d579fede3895f57203c34e8f8183d84f86",
+      "current_sha256": "7959ee00c7367ea5f3a28290d4fe41d579fede3895f57203c34e8f8183d84f86",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-independent-start.json",
+      "sha256": "501d1f77a6ceb2840cb7174b8baae7774478d20e1b7bd335cb8bd556cd03ef2c",
+      "current_sha256": "501d1f77a6ceb2840cb7174b8baae7774478d20e1b7bd335cb8bd556cd03ef2c",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-input-validation.json",
+      "sha256": "c8a711042556174adee93f34090189f4d7acbc5b5583230f52b36395e4b45bbb",
+      "current_sha256": "c8a711042556174adee93f34090189f4d7acbc5b5583230f52b36395e4b45bbb",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-inputs.json",
+      "sha256": "ead488c6379e309d5e7d607d714dbbe03176f72ca14feaec1c81265698a5cc2b",
+      "current_sha256": "ead488c6379e309d5e7d607d714dbbe03176f72ca14feaec1c81265698a5cc2b",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-planned-checker-update.json",
+      "sha256": "6e744135a9903f965da8171a7f6e3132ab3ea260ab38f0b6359843edd95b4fb9",
+      "current_sha256": "6e744135a9903f965da8171a7f6e3132ab3ea260ab38f0b6359843edd95b4fb9",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-variety-final.json",
+      "sha256": "561f88a947bb3ad64c55495aecb4cf17aa8573301848aa7c35df8b8f741b780f",
+      "current_sha256": "561f88a947bb3ad64c55495aecb4cf17aa8573301848aa7c35df8b8f741b780f",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-variety-first.json",
+      "sha256": "75bcf394745fe8422c9979ea720a239f41575237e0edaf3ac6aafb8d03a3ebfc",
+      "current_sha256": "75bcf394745fe8422c9979ea720a239f41575237e0edaf3ac6aafb8d03a3ebfc",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-variety-r1.json",
+      "sha256": "fbbbb7f68b391a1c5db87fb0a006632d7b330681385bffd2b23705a6c4125263",
+      "current_sha256": "fbbbb7f68b391a1c5db87fb0a006632d7b330681385bffd2b23705a6c4125263",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/it-author.md",
+      "sha256": "213caced6d6c3c0687c97cc683a474a4604a924260560902b2a4a8eca878374d",
+      "current_sha256": "213caced6d6c3c0687c97cc683a474a4604a924260560902b2a4a8eca878374d",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/it-independent.md",
+      "sha256": "be256327f8726f933c9cd3aca949ac73c90bc087a4d3a38797dc3ba92542e612",
+      "current_sha256": "be256327f8726f933c9cd3aca949ac73c90bc087a4d3a38797dc3ba92542e612",
+      "unchanged": true
+    }
+  ],
+  "total_errors": 0
+}

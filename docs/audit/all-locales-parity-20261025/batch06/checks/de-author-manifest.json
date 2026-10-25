@@ -1,0 +1,190 @@
+{
+  "frozen_at": "2026-10-26T02:26:39.583998+09:00",
+  "author": "root",
+  "status": "AUTHOR_R1_EDITS_FROZEN_DELTA_REVIEW_PENDING",
+  "author_report": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/de-author.md",
+    "sha256": "262da65ec265821aba90cf78fb07e4e7739b160ea0a2be92d6037143b526a48d"
+  },
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "cc4d26cb0501458b2565a864cbff0e09554eb9f67b2a74c64fd12a4e1fc79902",
+      "source_file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "source_sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "faq_count": 2,
+      "official_urls_from_source": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "missing_official_urls": [],
+      "exitCode": 0,
+      "len_cv": 0.462,
+      "sentences": 44,
+      "local_board_structural_pass": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "7e68c5bb750057a8be218b6dfceb8572997825643b82efb9ea66b76461d2b49f",
+      "source_file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "source_sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "faq_count": 3,
+      "official_urls_from_source": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "missing_official_urls": [],
+      "exitCode": 0,
+      "len_cv": 0.477,
+      "sentences": 46,
+      "local_board_structural_pass": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "1309324c33e0e163f942615b9748179ffb644e6a3b5ef509a10980c601eac8ba",
+      "source_file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "source_sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "faq_count": 3,
+      "official_urls_from_source": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11"
+      ],
+      "missing_official_urls": [],
+      "exitCode": 0,
+      "len_cv": 0.451,
+      "sentences": 48,
+      "local_board_structural_pass": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "deaa2b344be1dac722a028989f24a34cc911255737a671613bdf62c05de66c8f",
+      "source_file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "source_sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "faq_count": 3,
+      "official_urls_from_source": [
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt"
+      ],
+      "missing_official_urls": [],
+      "exitCode": 0,
+      "len_cv": 0.486,
+      "sentences": 48,
+      "local_board_structural_pass": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "96d2f80c44c8911fc25ad03ff1cec6c88277d9e736ef4fd538f723c041a2bf7a",
+      "source_file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "source_sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "faq_count": 3,
+      "official_urls_from_source": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "missing_official_urls": [],
+      "exitCode": 0,
+      "len_cv": 0.466,
+      "sentences": 45,
+      "local_board_structural_pass": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "17605ada0c21df3071a432a2b1e12f3ff62d4f10444ea41418a1c9722ae0d6cd",
+      "source_file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+      "source_sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "faq_count": 3,
+      "official_urls_from_source": [
+        "https://appeal.cpc.ey.gov.tw/",
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C"
+      ],
+      "missing_official_urls": [],
+      "exitCode": 0,
+      "len_cv": 0.462,
+      "sentences": 50,
+      "local_board_structural_pass": true
+    }
+  ],
+  "evidence": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-inputs.json",
+      "sha256": "6230eb9f8b4023dd1d85665e1547989e5cdd33440812f1aea7a7b5133b9a84cd"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-self-edits.json",
+      "sha256": "74953811f2974f425e82542e8db805cb1da30c92e630c9c4dfd6801fe80e84bb"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-self-edits-r2.json",
+      "sha256": "b4ec5e05139bc8a5db133132d33ac813069a61b2d32bdf3cde6cc3417f6d8cb4"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-self-edits-r3.json",
+      "sha256": "ee382cb6d4106f37cb10cd32c54db7ec89effb2a791d35695791f01b756b9e1b"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-self-edits-r4.json",
+      "sha256": "1565f3b0c61cf25ab1f8dc871173f3cd178dff55d4ff88586e620ba2535f2cf4"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-variety-initial.json",
+      "sha256": "9902c148df87b25e8cf0055564f83dd29c0e9927789b11d3e92375426fb9095c"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-variety-r1-corrected-boundary.json",
+      "sha256": "25bbfc71458d89ee3f3d92211eae0c55c23bfbebecf1fff209af3a192d9385cb"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-variety-r3.json",
+      "sha256": "32331b90011c0607183de1a231270293bda4235ad68a6470b49d920f5afc8ad0"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-variety-final.json",
+      "sha256": "6b2c64e4564f41eea825bef0659489d500e80018d0d16959a91637a380cc3eda"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-boundary-delta.json",
+      "sha256": "39c1e11f5fd2470fccf2a54ea9f5ca66cd15f03f7c87fc1efaf64eb94713d74e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-content-final.json",
+      "sha256": "5aa4283cf5812d0849be1b34267fd7a15f418accab0984af200eb6e59913d6e4"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-content-options.json",
+      "sha256": "99ecbe9b9e6bb0acef4fadac8c8d5e2f2d30115bc48b8c4d1ab16033542cf175"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-final-integrity.json",
+      "sha256": "e594f5d25027fd3bec9bc90e6c17860f36fe884eaa4b7686079bdc1f93c9cd3c"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-independent-r1-edits.json",
+      "sha256": "bdc7454d8658263d5a4027d84352f31fa3ad3f0246875ea66a43eac52a1add00"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-independent-r1-boundary-delta.json",
+      "sha256": "5b405c00d7e42c027e12b80fbb02bfd825f8a28e5a7e5d727d775163a7bcf2a6"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-independent-r1-integrity.json",
+      "sha256": "eb363b4bb00bed1a61b5d727963bc357421d5334447c342eb5cfd718a64a9ea4"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-content-independent-r1.json",
+      "sha256": "1a1988cd5509fb66ebf775b6aa6ecc62446610150516de502b13fe590a8d9471"
+    }
+  ],
+  "no_human_native_or_legal_approval_claimed": true,
+  "prior_manifest": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-independent-r1-before/de-author-manifest.json"
+}

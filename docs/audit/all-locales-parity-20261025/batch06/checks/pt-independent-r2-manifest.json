@@ -1,0 +1,40 @@
+{
+  "closed_at": "2026-10-26T02:34:56.194293+09:00",
+  "status": "APPROVE_TARGETED_R2",
+  "required_open": 0,
+  "M01_closed": true,
+  "S01_closed": true,
+  "current_files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "0e3c9f74b6c48427841020e5381528ce8a7406702352a45a254bbfd403ba4dca"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "1dba99a240d62a669a3d553e192431d7670faa64c0788f079cede63e7af00af6"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "e40fa586ea8b835e6bdcb070fc0193bbea80e263df88aafa86d2f951f9894353"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "177be7395ee02cad28462e119942e229cd30542602f4687889adc7a79ca9eeac"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "70f1c01c0ce95f4f660726a6c747c80bc7115972a7f331d1fd46269782310dfc"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-pt/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "77305593ff192c54b86fe07898e6cee983366cd077a73b9a3667f80b7e2817b5"
+    }
+  ],
+  "original_author_and_R1_report_unchanged": true,
+  "original_report_sha256": "7b044a955e4eb76e239606d263f2c93b4877ec6442f67faa6ada6bfe1c180fff",
+  "current_report_sha256": "38d76f64f42673626938e97efa9b7d2b0b2fa5575be043b4163a160fe4eb0011",
+  "evidence_sha256": "0146ea490e7f4733ce9b471805682c69884460a01a07726126e2ee10cea1df97",
+  "no_full_cli_repeat": true,
+  "human_native_or_lawyer_approval": false,
+  "deployed": false
+}

@@ -1,0 +1,90 @@
+{
+  "frozenAt": "2026-10-26T02:22:16.565853+09:00",
+  "status": "R1_REQUEST_CHANGES_M01_ONLY",
+  "reviewer": "/root/column_existing_drafts",
+  "report": {
+    "path": "reviews/ar-independent.md",
+    "sha256": "5b8001b3af1dfb57b6d545f685e0bad19778d8aaba0c029c55070e1e292fecf5",
+    "bytes": 19452
+  },
+  "required": [
+    {
+      "id": "M01",
+      "article": 918,
+      "occurrences": 5,
+      "scope": "قبل البناء → قبل اكتمال البناء"
+    }
+  ],
+  "optional": [
+    "S01",
+    "S02",
+    "S03",
+    "S04"
+  ],
+  "reviewedFiles": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "231ce90371cf3783a60811a96edd45ed07271ecfc51a62c3c0000855183f9132"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "43da02d79088d4bf15201a87d73ac399f9b69491885b8694300218a735b6f084"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "71f92a27887f3578871273002bf7b147ddb235073306aa271afbb770323fc0c6"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "8d496fab0ff7a2ede0664c6fcf52ad07126b37e38860e64d437aae59ce359408"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "d0c3527b5a3cf23a1281d32254fcc7e7237f91e84f06eeb183305d10c06bf838"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "820c2b008f6e8f18981d0ab1c782bba84028eb0264b477b263ae41ffbc357e2b"
+    }
+  ],
+  "author": {
+    "path": "reviews/ar-author.md",
+    "sha256": "9452586cce9c137c50b93dab053d0b007c7634ab526bbbf2cc17134357220193"
+  },
+  "authorManifest": {
+    "path": "checks/ar-final-manifest.json",
+    "sha256": "c2df8f0257db548d6a44a9cd848d927f601e9985bd25064dde9d52bbe23ae81d"
+  },
+  "artifacts": [
+    {
+      "path": "checks/ar-independent-final-validation.json",
+      "sha256": "7b05f2a06b74e2ea1f537ba4fc23d9a7da9797d3ae09ea8fb26c19512c4c06b0"
+    },
+    {
+      "path": "checks/ar-independent-findings.json",
+      "sha256": "c68407d06d491fcf600405cbc079f85e375149ddbe14b69df7bd21ad58506205"
+    },
+    {
+      "path": "checks/ar-independent-inputs.json",
+      "sha256": "85f85de9faac8d4ea0878ad8a943665376ae0f996e53f870c9823c5b7dfb20e5"
+    },
+    {
+      "path": "checks/ar-independent-metrics-boundaries.json",
+      "sha256": "2ed19455dfecd100f6d8bd1caa45a1424e3fe6bd5a00d3adf66254b00613b708"
+    },
+    {
+      "path": "checks/ar-independent-source-check.json",
+      "sha256": "4b7314164189d663e8b387ec442ecd42f98668034cd252b660560e246827e939"
+    },
+    {
+      "path": "checks/ar-independent-structure.json",
+      "sha256": "77295176f4ed69efd0e2e52d1b59ae23b768dbe8c9c0a8594ba968c98acb6f3a"
+    }
+  ],
+  "limitations": [
+    "No manuscript/author/shared/R edits.",
+    "Exact-SHA author CLI evidence verified; no independent full metrics rerun.",
+    "Logical Arabic/boundary review only; rendered RTL belongs to integration.",
+    "Independent AI review is not human native/legal approval."
+  ]
+}

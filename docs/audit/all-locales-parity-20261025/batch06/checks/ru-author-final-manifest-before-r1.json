@@ -1,0 +1,47 @@
+{
+  "atUTC": "2026-10-25T17:06:34.884828+00:00",
+  "status": "AUTHOR_FROZEN_INDEPENDENT_REVIEW_PENDING",
+  "author": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/ru-author.md",
+    "sha256": "f1e047a69ca37dbf388f78a2db20469cb4548db9776db70af5907d82839aab19"
+  },
+  "manuscripts": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ru/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "0d332f323ff63eb0bd79fb3b02383499f23bc5375c17a8177ef637f567d1e50b"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ru/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "a5e367a361efa6bc898ce8a47d7bd47d9cc25e62cc6a094ee37adf6ebd310b00"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ru/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "63ac4498dccfa6d3027dc7b91b180a8a8ada6e7dc885340cfe09a25928143862"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ru/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "51278b88f3b5b2e591596bba78a998114dcca23e55e1ab04143b629b4b623508"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ru/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "3755ded080555521a143d6ff1b683003515fad545bc33bc6a87a6dfbb965be5e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ru/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "650eda56f924953b185a7283c8f498ad62422723155925ab9c5f222e153ede33"
+    }
+  ],
+  "variety": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-variety-freeze.json",
+    "sha256": "500f0b6c2e68c0f833b9ff59f4d7ad00d558ce61ace83917fc0b6c60eba8d7f0",
+    "exitCode": 0,
+    "failCount": 0
+  },
+  "verification": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-final-verification.json",
+    "sha256": "d7255a61c88f4e6cdc0709427a9964dc131b97d579d5208c4db4a2242c90db20"
+  },
+  "originalStructuralErrors": 2,
+  "falsePositiveEvidence": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-route-diagnostic.json",
+  "actualEdits": 16
+}

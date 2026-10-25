@@ -30,8 +30,8 @@ describe('home columns lead with the latest publication batch', () => {
       // production recommendation selector.
       const archive = archiveLeadSlugsFor(locale);
       // Newest first by publication day; within a day, descending column number.
-      const days = [...new Set(archive.map(archiveLeadPublicationDate))];
-      const newest = days.flatMap((day) => archive.filter((slug) => archiveLeadPublicationDate(slug) === day).reverse());
+      const days = [...new Set(archive.map((slug) => archiveLeadPublicationDate(slug, locale)))];
+      const newest = days.flatMap((day) => archive.filter((slug) => archiveLeadPublicationDate(slug, locale) === day).reverse());
       const count = Math.min(6, links.length);
       expect(links.slice(0, count)).toEqual(newest.slice(0, count));
       if (locale === 'zh-hant' || locale === 'en' || locale === 'es') {

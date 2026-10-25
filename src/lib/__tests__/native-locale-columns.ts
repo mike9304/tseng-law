@@ -1254,6 +1254,26 @@ export const CASE_COLUMN_FILES_20261025 = {
   ],
 } as const;
 
+const CASE_TRANSLATION_FILES_20261026 = [
+  '915-taiwan-public-contract-mediation-arbitration-same-claim.md',
+  '916-taiwan-parent-company-pollution-liability-us-investor.md',
+  '918-taiwan-presale-mortgage-notice-handover-judgment.md',
+  '919-taiwan-workplace-bullying-investigation-hearing-judgment.md',
+  '920-taiwan-apartment-ev-charger-common-area-judgment.md',
+  '921-taiwan-online-game-coins-refund-judgment.md',
+] as const;
+
+/** Reviewed translations published October26; their EN/ZH originals keep October25. */
+export const CASE_TRANSLATION_COLUMN_FILES_20261026: Partial<Record<string, readonly string[]>> = {
+  de: CASE_TRANSLATION_FILES_20261026,
+  it: CASE_TRANSLATION_FILES_20261026,
+  ar: CASE_TRANSLATION_FILES_20261026,
+  pt: CASE_TRANSLATION_FILES_20261026,
+  hi: CASE_TRANSLATION_FILES_20261026,
+  ms: CASE_TRANSLATION_FILES_20261026,
+  ru: CASE_TRANSLATION_FILES_20261026,
+};
+
 /** Country-specific market expansion, two original articles per selected locale. */
 export const MARKET_EXPANSION_COLUMN_FILES_20261025 = {
   'vi': [
@@ -1306,7 +1326,7 @@ export const MARKET_EXPANSION_COLUMN_FILES_20261025 = {
   ],
 } as const;
 
-/** Registered locale-specific batches through 2026-10-25, in filename order. */
+/** Registered locale-specific batches through 2026-10-26, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
@@ -1333,6 +1353,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...(ARC_VISA_COLUMN_FILES_20261024[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261024 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((CASE_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...(CASE_TRANSLATION_COLUMN_FILES_20261026[locale] ?? []),
     ...((MARKET_EXPANSION_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261014 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261015 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1359,11 +1380,12 @@ export function expertiseSlugsFor(locale: string): string[] {
 }
 
 /**
- * Archive lead of `locale`, newest first by date through 2026-10-25, with same-day
+ * Archive lead of `locale`, newest first by date through 2026-10-26, with same-day
  * files in source order. Use this for newest-first ordering assertions;
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
+  const day20261026 = CASE_TRANSLATION_COLUMN_FILES_20261026[locale] ?? [];
   const day20261025: readonly string[] = [
     ...((CASE_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((MARKET_EXPANSION_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1443,12 +1465,13 @@ export function archiveLeadSlugsFor(locale: string): string[] {
   const newestSlugs = [...newest].sort().map(slugOf);
   const newerSlugs = [...newer].sort().map(slugOf);
   const head = [...day20261023].sort().map(slugOf).concat([...day20261022].sort().map(slugOf), [...day20261021].sort().map(slugOf), [...day20261020].sort().map(slugOf), [...day20261018].sort().map(slugOf), [...day20261016].sort().map(slugOf), [...day20261015].sort().map(slugOf), [...day20261014].sort().map(slugOf), [...day20261013].sort().map(slugOf), [...day20261011].sort().map(slugOf), [...day20261010].sort().map(slugOf), [...day20261009].sort().map(slugOf), [...day20261008].sort().map(slugOf), day20261007Slugs, day20261006Slugs, day20261005Slugs, currentSlugs, latestSlugs, newestSlugs, newerSlugs);
-  const latestHead = [...day20261025].sort().map(slugOf).concat([...day20261024].sort().map(slugOf), head);
+  const latestHead = [...day20261026].sort().map(slugOf).concat([...day20261025].sort().map(slugOf), [...day20261024].sort().map(slugOf), head);
   return [...latestHead, ...expertiseSlugsFor(locale).filter((slug) => !latestHead.includes(slug))];
 }
 
-/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-25). */
-export function archiveLeadPublicationDate(slug: string): string {
+/** Locale is explicit because translated cases have a later publication date than their originals. */
+export function archiveLeadPublicationDate(slug: string, locale: string): string {
+  if (CASE_TRANSLATION_COLUMN_FILES_20261026[locale]?.map(slugOf).includes(slug)) return '2026-10-26';
   if (Object.values(CASE_COLUMN_FILES_20261025).flat().map(slugOf).includes(slug)) return '2026-10-25';
   if (Object.values(MARKET_EXPANSION_COLUMN_FILES_20261025).flat().map(slugOf).includes(slug)) return '2026-10-25';
   if (ARC_VISA_FILES_20261024.map(slugOf).includes(slug)) return '2026-10-24';

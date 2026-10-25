@@ -1,0 +1,28 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "test:unit",
+    "--",
+    "src/lib/__tests__/case-translations-20261026.test.ts",
+    "--maxWorkers=1",
+    "--testTimeout=30000"
+  ],
+  "cwd": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "node": "24.14.1",
+  "sessionId": 62759,
+  "exitCode": 0,
+  "suitesPassed": 1,
+  "testsPassed": 13,
+  "testsFailed": 0,
+  "startKST": "2026-10-26T02:52:05+09:00",
+  "durationSeconds": 24.44,
+  "testFileSHA256": "cf0401893d3cfd46d85339b5754354d20479b0593e3b3caadb80722b747fa138",
+  "capture": "Observed unified-exec completion; transcript summary, not a separately redirected raw log.",
+  "stdoutExcerpt": "Test Files  1 passed (1)\nTests  13 passed (13)\nStart at  02:52:05\nDuration  24.44s",
+  "coverage": [
+    "42 own-audience cases, October26 publication, board visibility, expected FAQ counts and topics",
+    "6 originals remain October25",
+    "48 article routes have reciprocal eight-locale clusters and nine hreflang keys including an in-cluster x-default"
+  ]
+}

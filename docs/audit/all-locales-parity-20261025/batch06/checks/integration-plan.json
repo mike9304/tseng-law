@@ -1,0 +1,35 @@
+{
+  "baseCommit": "1ef3a9fe1a8702cda57949c5c53d3b713cc20b64",
+  "count": 42,
+  "locales": [
+    "de",
+    "it",
+    "ar",
+    "pt",
+    "hi",
+    "ms",
+    "ru"
+  ],
+  "canonicalSources": 6,
+  "expectedCaseClusterSize": 8,
+  "arcClusterSize": 49,
+  "metadataDate": "2026-10-26",
+  "sourceCopyMode": "exact bytes",
+  "runtimeCodeChange": false,
+  "testRegistry": "CASE_TRANSLATION_COLUMN_FILES_20261026 and explicit locale date helper",
+  "precommitOnly": true,
+  "buildCommand": [
+    "node",
+    "scripts/static-site/build.mjs",
+    "--out=out-all-locales-batch06-release26",
+    "--port=4639",
+    "--media-origin=https://media.tseng-law.com"
+  ],
+  "dataMode": "local fallback; --data omitted explicitly",
+  "plannedBrowserCases": 104,
+  "separateHE706Regression": 1,
+  "caseClusterStaticPages": 48,
+  "buildRun": false,
+  "commitRun": false,
+  "pushRun": false
+}

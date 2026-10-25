@@ -1,0 +1,53 @@
+{
+  "atUTC": "2026-10-25T17:10:24.697111+00:00",
+  "reviewer": "Independent AI reviewer; no human or legal-admission claim",
+  "manuscripts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "7774b7c684516ceff0d8f7384634c97cb0b2ed0eda235499e409f55a0b58e9ba",
+      "bytes": 16710
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "1b9c86fcfac15a0e3b69a0f9b09c58459cce4b3e7d81eadf57b104ead5d0c4c2",
+      "bytes": 19066
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "545f41ab9798bd155e9bdcac9b601d3c8944aa11d36c8f46c7ab367c6a61d933",
+      "bytes": 17005
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "06b50e30ebe32f00908faa1ab9d4a7e87d31a74f8c87b401af9211b3c8726ce9",
+      "bytes": 16825
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "9fa23a71953547b858e30ddd6031c749a67cc1bd091963d22dcc19708ab3b9b3",
+      "bytes": 16631
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-hi/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "be7cabf7633ab91d4e762e293e6cb0d1ce43e001f7c90cc2c4265fe7d82493e8",
+      "bytes": 17527
+    }
+  ],
+  "authorSHA256": "974212e10742af46d608544d62bc8c83d140fdf42592e6e5427de1fd1c21e55b",
+  "manifestSHA256": "4467b38040975f8c0e3b84745b1ef843b0d3c58e09d1fe6b6bb0a49b813903d3",
+  "canonicalAndRuleReadReceipt": "ru-inputs.json — same continuous reviewer turn, full reads already completed and unchanged SHA verified; no redundant full reread asserted",
+  "recentHIToRead": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md",
+      "sha256": "4733e8474fbca987ac77441c0f2a6ac0348a050ea713a51840ecbb5f940c9c8a"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md",
+      "sha256": "f92e3cabcabac4828d3a0379d9376d150f54eddb4ac209f719088014bda7d969"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hi/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "32e0945e62394a3c8d5998492e86d632eb30cff9b34ffabcb87a9543235b6a91"
+    }
+  ]
+}

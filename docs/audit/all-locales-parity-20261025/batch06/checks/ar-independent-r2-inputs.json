@@ -1,0 +1,86 @@
+{
+  "at": "2026-10-26T02:35:12.323435+09:00",
+  "scope": "Targeted closure of R1 accepted changes; no whole-corpus reread, CLI rerun, visual RTL or new source fetch.",
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "231ce90371cf3783a60811a96edd45ed07271ecfc51a62c3c0000855183f9132"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "43da02d79088d4bf15201a87d73ac399f9b69491885b8694300218a735b6f084"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "14b8aa81db02c1a6d2ad8bd722be92b937145ab2b7817c0054f7f7cb3cbfdaa8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "8d496fab0ff7a2ede0664c6fcf52ad07126b37e38860e64d437aae59ce359408"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "7a5ac7a800b3f2ff3d106e0ae1a5d308f91485ac059005ded515013541abdd22"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "419bb7bdfcd0c9652d88fc250c401d5b729974d2781d7849307f12ed27854723"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/ar-author.md",
+      "sha256": "9452586cce9c137c50b93dab053d0b007c7634ab526bbbf2cc17134357220193"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ar-final-manifest.json",
+      "sha256": "c2df8f0257db548d6a44a9cd848d927f601e9985bd25064dde9d52bbe23ae81d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/ar-independent.md",
+      "sha256": "5b8001b3af1dfb57b6d545f685e0bad19778d8aaba0c029c55070e1e292fecf5"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ar-independent-final-manifest.json",
+      "sha256": "e1b6691d888562faf320a2ca6e56c91afa5c7861b538ea1751e8cf62fa5611b6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ar-author-r2.md",
+      "sha256": "4bd5dedae3ec99fe2cdc0700ce0a7c86bca80cca74967613344a5b352f9af282"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ar-review-r1-edits.json",
+      "sha256": "34b51293d44c51b050aa7c8f28e24dbc3f3048b99a8a0e5f348ea11ab6896b4f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ar-review-r2-variety.json",
+      "sha256": "e96e8caac2ff098028140ee556d816b502bebd49753b2a2586252354fbe1671a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ar-review-r2-structure.json",
+      "sha256": "d351534e7ddbdfa8ac05e32aee334675f9df98a9b481e1b6a415b638ff52f783"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ar-review-r2-integrity.json",
+      "sha256": "d2bb912fbf92fda5379c96ba7a3bc048b6aa7630213bfb790fcde1c30ab59414"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/ar.json",
+      "sha256": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ar-final-manifest-r2.json",
+      "sha256": "9b8f363ca9867860904585225a080ab25161c9bd32205d72f966560b463268b6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ar-independent-source-check.json",
+      "sha256": "4b7314164189d663e8b387ec442ecd42f98668034cd252b660560e246827e939"
+    }
+  ]
+}

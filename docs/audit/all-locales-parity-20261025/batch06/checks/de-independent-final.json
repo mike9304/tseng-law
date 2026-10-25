@@ -1,0 +1,77 @@
+{
+  "at": "2026-10-25T17:22:50.945448+00:00",
+  "status": "REQUEST_CHANGES",
+  "must": [
+    "M01 DE921 summary: function of chips versus already used chips",
+    "M02 DE920 official law name"
+  ],
+  "optional": [
+    "S01 DE916 case construction",
+    "S02 DE916 abstract transition"
+  ],
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "cc4d26cb0501458b2565a864cbff0e09554eb9f67b2a74c64fd12a4e1fc79902",
+      "unchanged_from_author_freeze": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "12f3083a5e0a2c95d049fe146d2a5b0969fe83d30a13db1c9ad4cca3f2ead751",
+      "unchanged_from_author_freeze": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "1309324c33e0e163f942615b9748179ffb644e6a3b5ef509a10980c601eac8ba",
+      "unchanged_from_author_freeze": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "deaa2b344be1dac722a028989f24a34cc911255737a671613bdf62c05de66c8f",
+      "unchanged_from_author_freeze": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "e854becb0216d2801578a9c3825b95d493c0a6b2227c72aad000f6629072b0ab",
+      "unchanged_from_author_freeze": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-de/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "239049f897c49cadc42b0d195ec6faff521a57391b8694c80317606d1095683c",
+      "unchanged_from_author_freeze": true
+    }
+  ],
+  "report_sha256": "809e8b5139ddeefc90703226e48d141203a59206b924b415976b6fb7ddbf5345",
+  "author_report_sha256": "c72fbea9dbd203f833bfe2675a7a5d2806af9e7bfd97fa45d23511da272e5f0a",
+  "author_manifest_sha256": "fc63fb3c1eca484e0f06074c8c213e72fc034520f72c75cebeedd13eb3e5e92d",
+  "evidence": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-independent-boundaries.json",
+      "sha256": "05c5e58a9650f4754362c5e1db7e896273bc0d0fdeef7571c4a0a726482b4aaf"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-independent-content.json",
+      "sha256": "40a172f129b887ca75b5d776a85f3e005840c76017ab534ad2364e0e8907a8a7"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-independent-inputs.json",
+      "sha256": "01daafe6ae31ece324b0dee458498c70086faa3259edaaacdcf9f3abe1c4e67a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-independent-official-name.json",
+      "sha256": "c1c6ed071b94326b65f8fc9d263587b02ac16e2cd2c6071eb6fb907988b33c58"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/de-independent-variety.json",
+      "sha256": "b9ee6e70233a5a48053e3a75a9416025664db2fa4a8f876ad7de566a24f2dc2b"
+    }
+  ],
+  "source_excerpt_read": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/recheck/zh921-government-pdf-selected-lines.txt",
+    "sha256": "80af53a717da07155d78ce64089db343c58d521494e4be8fcf4607688d522bcb",
+    "scope": "Court reasoning lines L4093-L4213 plus targeted preceding submissions; not a new PDF fetch"
+  },
+  "r_agents_sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19",
+  "no_manuscript_edits": true,
+  "no_human_native_or_legal_approval": true
+}

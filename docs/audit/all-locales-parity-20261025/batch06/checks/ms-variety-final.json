@@ -1,0 +1,1912 @@
+{
+  "checkedAt": "2026-10-25T16:57:01.944960+00:00",
+  "phase": "final",
+  "lang": "ms",
+  "method": "Exact shared CLI; paragraph and sentence arrays call the same unchanged shared functions. Frontmatter FAQ, headings, tables and final source list require separate manual review.",
+  "checkerInputs": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/ms.json",
+      "sha256": "88abb26243707cd9601ad80695494c1f951077a0d0f49a681d3ae639c9f60d00"
+    }
+  ],
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "19c743f3d68a65ac4fb3a5ac25d9861df017ab48afde6bfa87d220bcb89badda",
+      "bytes": 7827,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "--lang",
+        "ms"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/915-taiwan-public-contract-mediation-arbitration-same-claim.md [ms] sentences=43 mean=13.1 cv=0.501 short=0.302 run3=0.049 opener_rep=0.0 cite_end=0.0 cite_para=0.154 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "ms",
+        "sentences": 43,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 13.1,
+        "len_cv": 0.501,
+        "short_share": 0.302,
+        "long_share": 0.023,
+        "para_cv": 0.271,
+        "even_run3": 0.049,
+        "top_end": "undang-undang",
+        "top_end_share": 0.07,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "award",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 1,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.2,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Award timbang tara bernilai NT$44,417,150 yang diperoleh kontraktor hospital dibatalkan da",
+        "last": "Asas kes disemak pada 25 Oktober 2026. Teks undang-undang dan bahan pasaran berkaitan dibandingkan semula pada 26 Oktobe",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "award",
+          "sentences": [
+            {
+              "text": "Award timbang tara bernilai NT$44,417,150 yang diperoleh kontraktor hospital dibatalkan dalam prosiding mahkamah Taiwan.",
+              "words": 15
+            },
+            {
+              "text": "Rekod mediasi mempunyai syor tentang lanjutan masa, sedangkan tuntutan yang dibawa ke timbang tara meminta wang.",
+              "words": 16
+            },
+            {
+              "text": "Jurang antara kedua-duanya menjadi sebab penentu dalam penjelasan Mahkamah Agung bagi kes 106年度台上字第723號.",
+              "words": 13
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "pada",
+          "sentences": [
+            {
+              "text": "Pada 12 Julai 2017, mahkamah menolak rayuan kontraktor dan mengekalkan pembatalan award.",
+              "words": 12
+            },
+            {
+              "text": "Penjelasan rasmi menyatakan bahawa kes pembatalan itu telah muktamad.",
+              "words": 9
+            },
+            {
+              "text": "Bagi pertikaian wang tersebut, mahkamah tidak menemukan perjanjian timbang tara yang dipersetujui ataupun persetujuan yang dianggap wujud menurut undang-undang.",
+              "words": 19
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "permintaan",
+          "sentences": [
+            {
+              "text": "Permintaan kontraktor berubah semasa mediasi.",
+              "words": 5
+            },
+            {
+              "text": "Rekod prosedurnya menunjukkan urutan berikut:",
+              "words": 5
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "sijil",
+          "sentences": [
+            {
+              "text": "Sijil kegagalan mediasi belum mencukupi.",
+              "words": 5
+            },
+            {
+              "text": "Entiti awam perlu berpeluang menerima atau menolak syor mengenai pertikaian khusus yang hendak ditimbang tara, menurut alasan mahkamah.",
+              "words": 18
+            },
+            {
+              "text": "Mahkamah Agung turut membetulkan alasan mahkamah bawahan tentang versi undang-undang yang terpakai.",
+              "words": 12
+            },
+            {
+              "text": "Pembatalan award tetap dikekalkan.",
+              "words": 4
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "perkara",
+          "sentences": [
+            {
+              "text": "Perkara 85-1 Akta Perolehan Kerajaan Taiwan membenarkan pertikaian pelaksanaan kontrak dibawa untuk mediasi di Lembaga Semakan Aduan Perolehan Kerajaan.",
+              "words": 20
+            },
+            {
+              "text": "Entiti awam tidak boleh menolak permohonan mediasi pembekal.",
+              "words": 8
+            },
+            {
+              "text": "Untuk kerja pembinaan atau perkhidmatan teknikal, rujukan pembekal kepada timbang tara tidak boleh ditolak apabila mediasi gagal kerana entiti awam tidak bersetuju dengan syor atau cadangan mediasi yang wajib dikemukakan oleh lembaga.",
+              "words": 32
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "sebab",
+          "sentences": [
+            {
+              "text": "Sebab mediasi gagal mempunyai kesan undang-undang.",
+              "words": 6
+            },
+            {
+              "text": "Dalam kes hospital ini, ketiadaan perjanjian dan ketidakcukupan syarat persetujuan berkanun menyebabkan award tidak dapat dikekalkan.",
+              "words": 16
+            },
+            {
+              "text": "Mahkamah menggunakan alasan ketiadaan perjanjian timbang tara di bawah perkara 40(1)(2) Akta Timbang Tara.",
+              "words": 16
+            },
+            {
+              "text": "Huraian ini merujuk alasan khusus dalam kes tersebut.",
+              "words": 8
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "jenis",
+          "sentences": [
+            {
+              "text": "Jenis kontrak juga menentukan laluan.",
+              "words": 5
+            },
+            {
+              "text": "Skop kerja pembinaan atau perkhidmatan teknikal dalam peruntukan semasa tidak dengan sendirinya meliputi setiap pembelian peralatan atau kontrak sektor awam.",
+              "words": 20
+            },
+            {
+              "text": "Klausa timbang tara yang dipersetujui secara berasingan pula mungkin sudah menyediakan asas untuk menyelesaikan pertikaian.",
+              "words": 15
+            },
+            {
+              "text": "Oleh itu, klasifikasi perolehan dan kandungan klausa perlu dibaca bersama.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "bagi",
+          "sentences": [
+            {
+              "text": "Bagi pembekal Amerika Syarikat, laporan tenaga Pentadbiran Perdagangan Antarabangsa bertarikh 30 September 2026 menyebut peluang dalam perolehan kuasa dan grid Taiwan yang dijangka pada penghujung tahun itu serta sepanjang tahun berikutnya.",
+              "words": 31
+            },
+            {
+              "text": "Itu masih jangkaan perolehan.",
+              "words": 4
+            },
+            {
+              "text": "Laporan tersebut belum membuktikan tender tertentu sudah dibuka, syarikat tertentu layak atau kontrak yang bakal diberikan tergolong sebagai kerja pembinaan atau perkhidmatan teknikal.",
+              "words": 23
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "pasukan",
+          "sentences": [
+            {
+              "text": "Pasukan pembida boleh meneliti kategori perolehan dan klausa pertikaian ketika menyemak kontrak awal.",
+              "words": 13
+            },
+            {
+              "text": "Selepas kerja bermula, permintaan melanjutkan jadual mungkin berkembang menjadi tuntutan kos tambahan.",
+              "words": 12
+            },
+            {
+              "text": "Masalah komersialnya berkaitan, namun remedi yang tercatat dalam permohonan mediasi mungkin berbeza daripada remedi dalam permohonan timbang tara.",
+              "words": 18
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "adakah",
+          "sentences": [
+            {
+              "text": "Adakah lembaga sudah menangani tuntutan bayaran yang kini hendak dikemukakan?",
+              "words": 10
+            },
+            {
+              "text": "Permohonan asal dan pindaan, syor atau cadangan, jawapan entiti awam serta draf tuntutan timbang tara dapat memberikan jawapan.",
+              "words": 18
+            },
+            {
+              "text": "Kenyataan ringkas bahawa mediasi telah gagal tidak menunjukkan perbandingan itu.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "perubahan",
+          "sentences": [
+            {
+              "text": "Perubahan angka belum tentu menghasilkan pertikaian baharu.",
+              "words": 7
+            },
+            {
+              "text": "Begitu juga pemurnian hujah undang-undang.",
+              "words": 5
+            },
+            {
+              "text": "Sebaliknya, nombor projek yang sama tidak membuktikan bahawa remedi dan asas fakta masih sama.",
+              "words": 14
+            },
+            {
+              "text": "Penghakiman ini menyentuh urutan yang dapat dibuktikan melalui dokumen: tuntutan wang berubah kepada lanjutan masa, kemudian kembali kepada wang.",
+              "words": 19
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "sekiranya",
+          "sentences": [
+            {
+              "text": "Sekiranya rekod tersebut mempunyai jurang, peguam boleh menilai kewujudan perjanjian timbang tara atau keperluan mediasi lanjut bagi tuntutan yang dicadangkan.",
+              "words": 20
+            },
+            {
+              "text": "Pertanyaan kontrak kepada firma boleh menyatakan kategori projek, remedi yang diminta dan tarikh prosedur seterusnya.",
+              "words": 15
+            },
+            {
+              "text": "Dokumen yang paling berguna ialah urutan permohonan, pindaan dan tindak balas yang membawa kepada kegagalan mediasi.",
+              "words": 16
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "asas",
+          "sentences": [
+            {
+              "text": "Asas kes disemak pada 25 Oktober 2026.",
+              "words": 7
+            },
+            {
+              "text": "Teks undang-undang dan bahan pasaran berkaitan dibandingkan semula pada 26 Oktober 2026.",
+              "words": 12
+            },
+            {
+              "text": "Huraian kes bersandar pada penjelasan rasmi Mahkamah Agung.",
+              "words": 8
+            },
+            {
+              "text": "Laluan ini tidak menentukan forum atau tarikh akhir pemfailan bagi setiap kontrak.",
+              "words": 12
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Urutan permohonan mengubah persoalan",
+        "Bila entiti awam tidak boleh menolak timbang tara",
+        "Apabila kelewatan projek menjadi tuntutan kos"
+      ],
+      "excludedListItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "e8de772156076b020564e30955075e84a2ba0b6388ffbd99366c304829c38d86",
+      "bytes": 9096,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "--lang",
+        "ms"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/916-taiwan-parent-company-pollution-liability-us-investor.md [ms] sentences=47 mean=14.3 cv=0.515 short=0.255 run3=0.067 opener_rep=0.0 cite_end=0.0 cite_para=0.067 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "ms",
+        "sentences": 47,
+        "paras": 15,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 14.3,
+        "len_cv": 0.515,
+        "short_share": 0.255,
+        "long_share": 0.021,
+        "para_cv": 0.179,
+        "even_run3": 0.067,
+        "top_end": "itu",
+        "top_end_share": 0.085,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "apakah",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.067,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.93,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Apakah tindakan kumpulan syarikat selepas menerima laporan pencemaran sebelum pengambilali",
+        "last": "Asas kes disemak pada 25 Oktober 2026. Peruntukan undang-undang dan bahan dasar berkaitan dibandingkan semula pada 26 Ok",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "apakah",
+          "sentences": [
+            {
+              "text": "Apakah tindakan kumpulan syarikat selepas menerima laporan pencemaran sebelum pengambilalihan kilang?",
+              "words": 11
+            },
+            {
+              "text": "Dalam pertikaian sebuah kilang Taiwan, laporan itu menjadi sebahagian bukti terhadap syarikat induk, bersama pengetahuan tentang pencemaran, kawalan operasi, tindak balas terhadap bahaya dan pemindahan yang mengurangkan aset syarikat Taiwan.",
+              "words": 30
+            },
+            {
+              "text": "Penjelasan rasmi kes 107年度台上字第267號 meneliti urutan itu.",
+              "words": 7
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "mahkamah",
+          "sentences": [
+            {
+              "text": "Mahkamah Agung mengeluarkan keputusan itu pada 16 Ogos 2018.",
+              "words": 9
+            },
+            {
+              "text": "Kes tersebut melibatkan pendedahan pekerja kilang elektronik kepada bahan kimia dan tanggungjawab syarikat yang mengawal perniagaan berkenaan.",
+              "words": 17
+            },
+            {
+              "text": "Pemilikan asing semata-mata tidak menjadi asas liabiliti.",
+              "words": 7
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "menurut",
+          "sentences": [
+            {
+              "text": "Menurut penjelasan mahkamah, kajian sebelum pengambilalihan mengenal pasti pencemaran, dan kumpulan syarikat yang mengawal mengetahui masalah tersebut.",
+              "words": 17
+            },
+            {
+              "text": "Pekerja tidak dimaklumkan dan masalah itu tidak dipulihkan.",
+              "words": 8
+            },
+            {
+              "text": "Rekod turut menunjukkan pengurangan modal serta kiriman wang ke luar negara yang bertujuan mengelakkan liabiliti.",
+              "words": 15
+            },
+            {
+              "text": "Mahkamah mengekalkan alasan yang membolehkan tuntutan berkenaan menjangkau syarikat yang mengawal walaupun setiap syarikat mempunyai identiti perundangan tersendiri.",
+              "words": 18
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "senarai",
+          "sentences": [
+            {
+              "text": "Senarai penerima laporan membantu mengenal pasti siapa tahu.",
+              "words": 8
+            },
+            {
+              "text": "Kuasa membuat keputusan pula boleh dikesan melalui kertas lembaga pengarah serta arahan operasi, yang kemudian boleh dibandingkan dengan kelulusan pemindahan wang untuk menyusun urutan pengetahuan, kawalan dan tindakan kumpulan itu.",
+              "words": 30
+            },
+            {
+              "text": "Fail yang tidak dibandingkan menyukarkan penilaian.",
+              "words": 6
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "laporan",
+          "sentences": [
+            {
+              "text": "Laporan ialah titik permulaan.",
+              "words": 4
+            },
+            {
+              "text": "Rekod susulan boleh mengenal pasti siapa yang menyiasat kebimbangan tentang pendedahan pekerja, kerja lanjut yang diarahkan dan kesan penemuan itu terhadap keputusan tentang sumber syarikat operasi.",
+              "words": 26
+            },
+            {
+              "text": "Soalan yang belum terjawab patut kekal kelihatan dalam rekod.",
+              "words": 9
+            },
+            {
+              "text": "Pembentangan optimistik menjelang penutupan transaksi tidak sepatutnya menenggelamkan hasil teknikal asal atau tanggungjawab membuat susulan.",
+              "words": 15
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "bahagian",
+          "sentences": [
+            {
+              "text": "Bahagian yang melibatkan 246 pihak menuntut dibatalkan dan dikembalikan untuk prosiding lanjut.",
+              "words": 12
+            },
+            {
+              "text": "Rayuan berhubung 262 pihak menuntut pula ditolak.",
+              "words": 7
+            },
+            {
+              "text": "Pengembalian kes merangkumi kekurangan analisis tentang kecederaan, bukti dan kuasa mengemukakan tuntutan, seperti diterangkan dalam ringkasan keputusan mahkamah.",
+              "words": 18
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "angka",
+          "sentences": [
+            {
+              "text": "Angka itu perlu dibaca bersama hasilnya.",
+              "words": 6
+            },
+            {
+              "text": "Pengembalian kes tidak bermakna semua pihak terjejas tiada tuntutan, dan penolakan rayuan bagi bahagian lain tidak menamatkan setiap prosiding berkaitan.",
+              "words": 20
+            },
+            {
+              "text": "Pasukan transaksi yang menganggarkan tanggungan sejarah perlu mengenal pasti prosiding serta statusnya.",
+              "words": 12
+            },
+            {
+              "text": "Tajuk berita tentang satu tarikh keputusan tidak menunjukkan keseluruhan liabiliti yang masih perlu dinilai.",
+              "words": 14
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "perkara",
+          "sentences": [
+            {
+              "text": "Perkara 154 Akta Syarikat Taiwan pada asasnya mengehadkan tanggungjawab pemegang saham kepada pembayaran bagi sahamnya.",
+              "words": 15
+            },
+            {
+              "text": "Pengecualian dalam perenggan kedua mensyaratkan penyalahgunaan personaliti undang-undang syarikat oleh pemegang saham sehingga syarikat menanggung hutang tertentu yang jelas sukar dibayar, dalam keadaan serius sehingga pemegang saham perlu menanggung hutang itu.",
+              "words": 31
+            },
+            {
+              "text": "Syarat tersebut perlu dipenuhi bersama.",
+              "words": 5
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "hubungan",
+          "sentences": [
+            {
+              "text": "Hubungan pemilikan, satu hutang belum dibayar atau satu penemuan alam sekitar tidak menyatakan keseluruhan ujian itu.",
+              "words": 16
+            },
+            {
+              "text": "Peruntukan semasa juga tidak wajar dianggap sebagai satu-satunya asas mahkamah menilai segala tindakan sejarah dalam kes ini.",
+              "words": 17
+            },
+            {
+              "text": "Penghakiman berkenaan meneliti perbuatan syarikat yang mengawal dan alasan menjangkaui identiti perundangan yang berasingan.",
+              "words": 14
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "perbandingan",
+          "sentences": [
+            {
+              "text": "Perbandingan anak syarikat dan cawangan di Taiwan menerangkan kedudukan biasa bagi struktur tersebut.",
+              "words": 13
+            },
+            {
+              "text": "Pertikaian pencemaran menambah persoalan yang memerlukan rekod operasi: bagaimana kumpulan menggunakan kawalannya setelah mengetahui risiko?",
+              "words": 15
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "lembaran",
+          "sentences": [
+            {
+              "text": "Lembaran fakta USTR pada Februari 2026 menyatakan hasrat kedua-dua pihak memudahkan pelaburan rentas sempadan serta kemungkinan sokongan Amerika Syarikat bagi pembiayaan pelaburan swasta di Taiwan, tertakluk pada undang-undang yang berkenaan.",
+              "words": 30
+            },
+            {
+              "text": "Pernyataan dasar itu tidak memberikan jaminan pembiayaan kepada pelabur tertentu.",
+              "words": 10
+            },
+            {
+              "text": "Ia juga tidak menyelesaikan persoalan liabiliti syarikat dalam sesuatu transaksi.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "penilaian",
+          "sentences": [
+            {
+              "text": "Penilaian sebelum agihan, pengurangan modal atau pemindahan semasa keluar daripada pelaburan diluluskan boleh menghubungkan risiko yang dikenal pasti dan tuntutan belum selesai dengan sumber yang akan tinggal dalam syarikat Taiwan selepas transaksi.",
+              "words": 32
+            },
+            {
+              "text": "Cadangan semakan ini tidak mengesahkan kesahan pemindahan.",
+              "words": 7
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "nama",
+          "sentences": [
+            {
+              "text": "Nama dokumen tidak menentukan hasilnya.",
+              "words": 5
+            },
+            {
+              "text": "Penilaian undang-undang perlu menyentuh pemindahan yang benar-benar dicadangkan, sementara laporan yang tersimpan tanpa dibaca tidak menunjukkan tindak balas terhadap penemuannya.",
+              "words": 20
+            },
+            {
+              "text": "Perbandingan antara penemuan, keputusan dan aset yang dipindahkan dapat menjelaskan tindakan kumpulan dengan lebih tepat.",
+              "words": 15
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "untuk",
+          "sentences": [
+            {
+              "text": "Untuk pertanyaan syarikat atau pertikaian kepada firma, maklumat awal boleh mengenal pasti transaksi, entiti Taiwan dan tarikh pemindahan atau penutupan yang dijadualkan.",
+              "words": 22
+            },
+            {
+              "text": "Laporan teknikal serta maklumat sensitif pekerja boleh dihantar melalui kaedah yang dipersetujui.",
+              "words": 12
+            },
+            {
+              "text": "Rekod awal yang perlu dipelihara ialah penemuan asal, keputusan susulan dan kelulusan bagi pergerakan aset kemudian.",
+              "words": 16
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "opener": "asas",
+          "sentences": [
+            {
+              "text": "Asas kes disemak pada 25 Oktober 2026.",
+              "words": 7
+            },
+            {
+              "text": "Peruntukan undang-undang dan bahan dasar berkaitan dibandingkan semula pada 26 Oktober 2026.",
+              "words": 12
+            },
+            {
+              "text": "Huraian ini menggunakan penjelasan rasmi tentang satu keputusan tahun 2018.",
+              "words": 10
+            },
+            {
+              "text": "Ia tidak merangkumi seluruh sejarah litigasi pencemaran itu atau menentukan liabiliti pelabur tertentu.",
+              "words": 13
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Siapa tahu, siapa boleh membuat keputusan",
+        "Dua hasil dalam satu keputusan",
+        "Had tanggungjawab pemegang saham dan pengecualiannya",
+        "Keputusan pelaburan dan aset yang tinggal"
+      ],
+      "excludedListItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "bb55a0db717c9eafbcdc5c8b64a475dfec3f8d208c629e711e8ce8e9a4069ef0",
+      "bytes": 8600,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "--lang",
+        "ms"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/918-taiwan-presale-mortgage-notice-handover-judgment.md [ms] sentences=45 mean=14.0 cv=0.483 short=0.244 run3=0.0 opener_rep=0.077 cite_end=0.0 cite_para=0.154 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "ms",
+        "sentences": 45,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.0,
+        "len_cv": 0.483,
+        "short_share": 0.244,
+        "long_share": 0.022,
+        "para_cv": 0.131,
+        "even_run3": 0.0,
+        "top_end": "kontrak",
+        "top_end_share": 0.089,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "surat",
+        "top_opener_n": 2,
+        "opener_rep": 0.077,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.8,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Surat urusan pinjaman dihantar pada Februari ketika rumah belum mempunyai sambungan air da",
+        "last": "Asas kes disemak pada 25 Oktober 2026. Bahan undang-undang dan pentadbiran berkaitan dibandingkan semula pada 26 Oktober",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "surat",
+          "sentences": [
+            {
+              "text": "Surat urusan pinjaman dihantar pada Februari ketika rumah belum mempunyai sambungan air dan elektrik.",
+              "words": 14
+            },
+            {
+              "text": "Beberapa bulan kemudian pembeli dibenarkan masuk untuk kerja dalaman dan pembersihan, tetapi mahkamah masih tidak menganggap penyerahan mengikut kontrak sudah berlaku.",
+              "words": 21
+            },
+            {
+              "text": "Penghakiman yang dihimpunkan oleh Pejabat Perlindungan Pengguna, halaman bercetak 173–187, menilai setiap dokumen bersama keadaan rumah.",
+              "words": 17
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "kes",
+          "sentences": [
+            {
+              "text": "Kes No. 109年度上易字第289號 didengar oleh Cawangan Taichung Mahkamah Tinggi Taiwan.",
+              "words": 10
+            },
+            {
+              "text": "Pada 9 Februari 2022, mahkamah menolak rayuan dan tuntutan tambahan pemaju, lalu mengekalkan keputusan pembayaran faedah kelewatan.",
+              "words": 17
+            },
+            {
+              "text": "Penghakiman menyatakan bahawa rayuan lanjut tidak dibenarkan.",
+              "words": 7
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "surat",
+          "sentences": [
+            {
+              "text": "Surat bertarikh 23 Februari 2019 meminta pembeli menghubungi bank serta memaklumkan kemajuan pinjaman.",
+              "words": 13
+            },
+            {
+              "text": "Tiada kenyataan bahawa rumah sudah sesuai digunakan.",
+              "words": 7
+            },
+            {
+              "text": "Bekalan air dan elektrik hanya disambungkan kemudian; semasa pemeriksaan awal pada Julai tahun itu, masih ada kecacatan dan lif belum siap dipasang.",
+              "words": 22
+            },
+            {
+              "text": "Rekod ini menyebabkan mahkamah menolak hujah bahawa notis penyerahan sudah lama diberikan.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "pembeli",
+          "sentences": [
+            {
+              "text": "Pembeli menandatangani persetujuan masuk pada Ogos untuk kerja dalaman dan pembersihan.",
+              "words": 11
+            },
+            {
+              "text": "Setelah memeriksa kandungan persetujuan serta kerja pembaikan, mahkamah tidak menyamakannya dengan penyerahan selepas pemeriksaan yang ditetapkan dalam kontrak.",
+              "words": 18
+            },
+            {
+              "text": "Wang pinjaman dibayar ke akaun pemaju pada 5 November.",
+              "words": 9
+            },
+            {
+              "text": "Dokumen waranti pula mencatatkan 28 November sebagai tarikh penyerahan; urutan ini diterangkan dalam bahagian keempat alasan penghakiman, halaman bercetak 182–186.",
+              "words": 21
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "apabila",
+          "sentences": [
+            {
+              "text": "Apabila pinjaman selesai, kewajipan yang manakah telah dipenuhi?",
+              "words": 8
+            },
+            {
+              "text": "Mahkamah memeriksa pembiayaan, pembayaran dan penyerahan secara berasingan.",
+              "words": 8
+            },
+            {
+              "text": "Pemaju berhujah bahawa pembeli sepatutnya terus membayar penuh selepas menerima surat, tetapi rekod menunjukkan pembeli mematuhi jadual ansuran dan sudah menjelaskan harga sebelum penyerahan sebenar.",
+              "words": 25
+            },
+            {
+              "text": "Hujah pelanggaran kewajipan pembayaran itu tidak diterima.",
+              "words": 7
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "kontrak",
+          "sentences": [
+            {
+              "text": "Kontrak kes tersebut menetapkan notis penyerahan dalam empat bulan selepas permit penggunaan bangunan diperoleh.",
+              "words": 14
+            },
+            {
+              "text": "Peraturan semasa menggunakan tempoh lain.",
+              "words": 5
+            },
+            {
+              "text": "Perkara 15 terma wajib kontrak standard jual beli rumah prajualan menghendaki penjual memberikan notis penyerahan dalam enam bulan selepas memperoleh permit tersebut, bersama kewajipan pembaikan, penyelesaian bayaran dan penyerahan dokumen pada waktu serahan.",
+              "words": 33
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "kiraan",
+          "sentences": [
+            {
+              "text": "Kiraan bermula apabila permit diperoleh.",
+              "words": 5
+            },
+            {
+              "text": "Untuk menilai kelewatan notis sendiri, pembeli perlu membandingkan kontrak, aturan yang terpakai pada masa menandatangani, tarikh permit sebenar serta kandungan dan ketibaan notis.",
+              "words": 23
+            },
+            {
+              "text": "Tempoh enam bulan itu ialah keperluan notis yang dinyatakan dalam peraturan, bukan alasan menyamakan setiap tahap penyerahan dalam semua kontrak.",
+              "words": 20
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "kewajipan",
+          "sentences": [
+            {
+              "text": "Kewajipan pembeli juga kekal relevan.",
+              "words": 5
+            },
+            {
+              "text": "Perkara 14 peraturan yang sama menyentuh dokumen pinjaman, kerjasama dalam urusan berkaitan serta bayaran yang perlu dijelaskan sebelum pendaftaran pindah milik.",
+              "words": 21
+            },
+            {
+              "text": "Pertikaian tentang notis penyerahan perlu ditangani bersama permintaan bayaran dan dokumen yang sudah sampai tempohnya.",
+              "words": 15
+            },
+            {
+              "text": "Kehadiran kecacatan tidak dengan sendirinya menghapuskan semua kewajipan tersebut.",
+              "words": 9
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "dalam",
+          "sentences": [
+            {
+              "text": "Dalam hasil pemeriksaan kontrak pada 25 Ogos 2025, pihak perlindungan pengguna mengenal pasti terma yang menolak masa pengesahan dengan bank dan pengeluaran wang pinjaman daripada kiraan enam bulan sebagai pelanggaran.",
+              "words": 30
+            },
+            {
+              "text": "Pemeriksaan pentadbiran itu memberikan konteks berasingan tentang terma kontrak.",
+              "words": 9
+            },
+            {
+              "text": "Ia tidak menggantikan penilaian kandungan surat dalam transaksi 2019 tadi.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "peraturan",
+          "sentences": [
+            {
+              "text": "Peraturan pinjaman bercagar hartanah Bank Pusat Taiwan yang dirujuk berkuat kuasa pada 18 September 2026.",
+              "words": 15
+            },
+            {
+              "text": "Pembeli yang sedang menyemak pembiayaan boleh merekodkan anggaran tarikh pembayaran bank secara berasingan daripada tarikh pemeriksaan dan penyerahan oleh pemaju.",
+              "words": 20
+            },
+            {
+              "text": "Peraturan semasa itu tidak digunakan secara surut untuk menentukan transaksi 2019.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "tajuk",
+          "sentences": [
+            {
+              "text": "Tajuk surat tidak mencukupi.",
+              "words": 4
+            },
+            {
+              "text": "Surat penuh, sampul atau rekod penerimaan e-mel boleh disimpan bersama borang pemeriksaan, foto kecacatan, persetujuan masuk dan dokumen waranti.",
+              "words": 19
+            },
+            {
+              "text": "Gabungan ini menunjukkan sama ada rumah boleh digunakan ketika surat diterima dan urusan apa yang sebenarnya diselesaikan selepas itu.",
+              "words": 19
+            },
+            {
+              "text": "Anggaran tarikh bank tidak secara automatik memanjangkan tempoh kontrak.",
+              "words": 9
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "jika",
+          "sentences": [
+            {
+              "text": "Jika sudah menerima tuntutan penalti atau faedah kelewatan, pertanyaan kepada firma boleh merumuskan peruntukan kontrak, tarikh notis dan tarikh akhir jawapan.",
+              "words": 21
+            },
+            {
+              "text": "Dalam susunan dokumen, label urusan pinjaman, pemeriksaan dan penyerahan mengikut kandungan setiap notis.",
+              "words": 13
+            },
+            {
+              "text": "Dengan rekod tersebut, pertikaian tidak bergantung pada satu tarikh penyerahan yang disebut secara berbeza oleh kedua-dua pihak.",
+              "words": 17
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "asas",
+          "sentences": [
+            {
+              "text": "Asas kes disemak pada 25 Oktober 2026.",
+              "words": 7
+            },
+            {
+              "text": "Bahan undang-undang dan pentadbiran berkaitan dibandingkan semula pada 26 Oktober 2026.",
+              "words": 11
+            },
+            {
+              "text": "Keputusan ini bergantung pada kontrak serta bukti pelaksanaannya.",
+              "words": 8
+            },
+            {
+              "text": "Kewajipan pembayaran, penolakan penyerahan atau tuntutan kerugian individu memerlukan penilaian berasingan.",
+              "words": 11
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Kandungan surat dan keadaan rumah",
+        "Empat bulan dalam kontrak, enam bulan dalam aturan semasa",
+        "Satu garis masa untuk bank, pemeriksaan dan penyerahan"
+      ],
+      "excludedListItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b7d5cf0db2af832600b286b0b3634e6f58fb1da81098f407ae007be6143ac549",
+      "bytes": 8147,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "--lang",
+        "ms"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [ms] sentences=43 mean=13.7 cv=0.467 short=0.233 run3=0.0 opener_rep=0.077 cite_end=0.0 cite_para=0.231 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "ms",
+        "sentences": 43,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 13.7,
+        "len_cv": 0.467,
+        "short_share": 0.233,
+        "long_share": 0.0,
+        "para_cv": 0.212,
+        "even_run3": 0.0,
+        "top_end": "2026",
+        "top_end_share": 0.093,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "keputusan",
+        "top_opener_n": 2,
+        "opener_rep": 0.077,
+        "consec_same_start": 0,
+        "cite_para_share": 0.231,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.38,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Keputusan memecat seorang penyelia selepas mengenakan dua catatan demerit besar sekali gus",
+        "last": "Asas kes disemak pada 25 Oktober 2026. Peruntukan semasa dibandingkan semula pada 26 Oktober 2026. Huraian kes berpanduk",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "keputusan",
+          "sentences": [
+            {
+              "text": "Keputusan memecat seorang penyelia selepas mengenakan dua catatan demerit besar sekali gus dibatalkan oleh mahkamah Taiwan.",
+              "words": 16
+            },
+            {
+              "text": "Hukuman telah diumumkan sebelum jawatankuasa menimbang kes.",
+              "words": 7
+            },
+            {
+              "text": "Peluang memberikan penjelasan yang tidak memadai dan percanggahan dalam laporan siasatan turut menjadi alasan yang diperiksa, menurut penjelasan rasmi Mahkamah Pentadbiran Tinggi Taipei.",
+              "words": 23
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "kes",
+          "sentences": [
+            {
+              "text": "Kes No. 114年度訴字第869號 didengar oleh bahagian litigasi pentadbiran tinggi mahkamah itu.",
+              "words": 11
+            },
+            {
+              "text": "Keputusan dikeluarkan pada 3 September 2026.",
+              "words": 6
+            },
+            {
+              "text": "Kedua-dua keputusan asal dan keputusan semakan pentadbiran dibatalkan.",
+              "words": 8
+            },
+            {
+              "text": "Rayuan masih dibenarkan.",
+              "words": 3
+            },
+            {
+              "text": "Hasil pada peringkat ini tidak membuktikan bahawa semua tuduhan buli tidak berasas atau bahawa pegawai tersebut sudah kembali bertugas.",
+              "words": 19
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "ketua",
+          "sentences": [
+            {
+              "text": "Ketua pihak berkuasa telah mengumumkan hukuman sebelum jawatankuasa penilaian prestasi bermesyuarat.",
+              "words": 11
+            },
+            {
+              "text": "Agensi atasan kemudian mengadakan mesyuarat terlebih dahulu, sebelum menyerahkan perkara itu kepada agensi tempat pegawai berkhidmat.",
+              "words": 16
+            },
+            {
+              "text": "Mahkamah melihat susunan ini sebagai halangan kepada fungsi penilaian yang sebenar.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "keputusan",
+          "sentences": [
+            {
+              "text": "Keputusan sudah diumumkan.",
+              "words": 3
+            },
+            {
+              "text": "Selepas pengumuman itu, adakah jawatankuasa masih bebas membuat keputusan lain berdasarkan bukti?",
+              "words": 12
+            },
+            {
+              "text": "Minit mesyuarat sahaja belum menunjukkan bahawa ruang tersebut benar-benar wujud.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "pegawai",
+          "sentences": [
+            {
+              "text": "Pegawai tidak dipanggil dengan notis yang sah untuk menyatakan pendirian sebelum jawatankuasa membuat pertimbangan, dan peluang menjawab semasa semakan pentadbiran kemudian tidak membaiki kecacatan awal itu menurut ringkasan alasan mahkamah.",
+              "words": 30
+            },
+            {
+              "text": "Kandungan laporan tentang bukti buli pula tidak selaras dengan syor tindakan disiplin.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "pertikaian",
+          "sentences": [
+            {
+              "text": "Pertikaian penjawat awam itu dinilai melalui sistem penilaian perkhidmatannya sendiri, dan kejadian berkaitan mendahului peraturan baharu pencegahan buli.",
+              "words": 18
+            },
+            {
+              "text": "Bagi syarikat swasta, antara asas yang terpakai ialah pindaan Akta Keselamatan dan Kesihatan Pekerjaan Taiwan yang berkuat kuasa pada 1 Julai 2026.",
+              "words": 22
+            },
+            {
+              "text": "Sejarah perundangan dan penerangan Kementerian Buruh menerangkan pelaksanaannya.",
+              "words": 8
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "perkara",
+          "sentences": [
+            {
+              "text": "Perkara 22-2 menghendaki siasatan atau usaha penyelesaian antara pihak dijalankan secara objektif, tidak berat sebelah dan adil.",
+              "words": 18
+            },
+            {
+              "text": "Semasa siasatan, pihak yang terlibat mesti mendapat peluang yang mencukupi untuk menyatakan pendirian serta menjawab tuduhan.",
+              "words": 16
+            },
+            {
+              "text": "Peraturan penarikan diri kerana konflik kepentingan juga mesti dipatuhi.",
+              "words": 9
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "pengumuman",
+          "sentences": [
+            {
+              "text": "Pengumuman bahawa seseorang sudah bersalah sebelum siasatan menghasilkan dapatan boleh menyukarkan pematuhan kewajipan tersebut.",
+              "words": 14
+            },
+            {
+              "text": "Inilah hubungan praktikal antara alasan penghakiman dan prosedur syarikat.",
+              "words": 9
+            },
+            {
+              "text": "Penghakiman pentadbiran itu sendiri tidak menentukan kesahan hukuman oleh setiap majikan swasta.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "perlindungan",
+          "sentences": [
+            {
+              "text": "Perlindungan boleh bermula segera.",
+              "words": 4
+            },
+            {
+              "text": "Apabila mengetahui kejadian melalui aduan pekerja yang dibuli, majikan mesti mengambil langkah mencegah pengulangan, menyediakan sokongan serta perlindungan mengikut keperluan pengadu dan keadaan kejadian, dan menjalankan siasatan.",
+              "words": 27
+            },
+            {
+              "text": "Jika pengadu menghendakinya, usaha penyelesaian melalui perbincangan boleh diadakan.",
+              "words": 9
+            },
+            {
+              "text": "Apabila usaha itu tidak mencapai persetujuan, siasatan mesti diteruskan; kewajipan ini juga dinyatakan dalam perkara 22-2.",
+              "words": 17
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "laporan",
+          "sentences": [
+            {
+              "text": "Laporan sumber manusia boleh membezakan apa yang didakwa, bahan yang menyokongnya dan dapatan yang dibuat daripada bahan itu.",
+              "words": 18
+            },
+            {
+              "text": "Jika keterangan temu bual bercanggah, rekod boleh menjelaskan bukti mana yang diterima dan sebabnya.",
+              "words": 14
+            },
+            {
+              "text": "Rekod kehadiran, mesej atau minit yang tidak menyokong tuduhan juga perlu diambil kira.",
+              "words": 13
+            },
+            {
+              "text": "Ini ialah cadangan penyusunan berdasarkan masalah yang dikenal pasti dalam kes tersebut, bukan satu borang wajib baharu.",
+              "words": 17
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "jawapan",
+          "sentences": [
+            {
+              "text": "Jawapan memerlukan perkara yang jelas untuk dijawab.",
+              "words": 7
+            },
+            {
+              "text": "Notis yang sekadar meminta penerangan tentang gaya pengurusan tidak memberikan maklumat sama seperti notis yang mengenal pasti perbuatan, masa dan persoalan tertentu.",
+              "words": 22
+            },
+            {
+              "text": "Penyiasat boleh membandingkan notis, rekod temu bual dan dapatan akhir untuk melihat sama ada semuanya meneliti kejadian yang sama.",
+              "words": 19
+            },
+            {
+              "text": "Semua butiran peribadi tidak perlu dimasukkan ke dalam kenyataan awam.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "untuk",
+          "sentences": [
+            {
+              "text": "Untuk penilaian pertikaian pekerjaan Taiwan, e-mel awal kepada firma boleh menyatakan peringkat aduan, keputusan yang sudah dibuat dan tarikh akhir terdekat tanpa melampirkan keseluruhan fail sensitif.",
+              "words": 26
+            },
+            {
+              "text": "Sebelum hasil diumumkan, notis, rekod penjelasan dan alasan menerima bukti perlu dapat menunjukkan sama ada siasatan benar-benar mendengar pandangan yang berlainan.",
+              "words": 21
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "asas",
+          "sentences": [
+            {
+              "text": "Asas kes disemak pada 25 Oktober 2026.",
+              "words": 7
+            },
+            {
+              "text": "Peruntukan semasa dibandingkan semula pada 26 Oktober 2026.",
+              "words": 8
+            },
+            {
+              "text": "Huraian kes berpandukan penjelasan rasmi mahkamah dan tidak mengesahkan hasil rayuan seterusnya.",
+              "words": 12
+            },
+            {
+              "text": "Saluran pemulihan penjawat awam dan pekerja swasta bergantung pada status serta keputusan yang dicabar.",
+              "words": 14
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Adakah pertimbangan jawatankuasa masih boleh mengubah keputusan?",
+        "Kewajipan majikan swasta di bawah peraturan semasa",
+        "Daripada keterangan kepada alasan yang boleh diperiksa"
+      ],
+      "excludedListItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "aed340902065a8149571f3ca67b74bdfea7d2c64d730ff5295f1316e3c5554b4",
+      "bytes": 8445,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "--lang",
+        "ms"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/920-taiwan-apartment-ev-charger-common-area-judgment.md [ms] sentences=42 mean=14.6 cv=0.509 short=0.262 run3=0.025 opener_rep=0.0 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "ms",
+        "sentences": 42,
+        "paras": 12,
+        "heads": 2,
+        "list_items": 0,
+        "mean_len": 14.6,
+        "len_cv": 0.509,
+        "short_share": 0.262,
+        "long_share": 0.048,
+        "para_cv": 0.156,
+        "even_run3": 0.025,
+        "top_end": "pengecas",
+        "top_end_share": 0.048,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "adakah",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.333,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 3.43,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Adakah hak menggunakan petak parkir membolehkan penghuni memilih sendiri tempat memasang p",
+        "last": "Asas kes disemak pada 25 Oktober 2026. Peraturan dan pengumuman berkaitan dibandingkan semula pada 26 Oktober 2026. Kepu",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "adakah",
+          "sentences": [
+            {
+              "text": "Adakah hak menggunakan petak parkir membolehkan penghuni memilih sendiri tempat memasang pengecas?",
+              "words": 12
+            },
+            {
+              "text": "Dalam satu kes Taiwan, kotak pengecas dipasang pada dinding di belakang petak, manakala kabel melalui siling menuju peti elektrik bersama dan meter penghuni.",
+              "words": 23
+            },
+            {
+              "text": "Mahkamah meneliti seluruh pemasangan, termasuk kawasan di luar garisan petak parkir.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "cawangan",
+          "sentences": [
+            {
+              "text": "Cawangan Kaohsiung Mahkamah Tinggi Taiwan menolak rayuan penghuni dalam kes No. 111年度上字第132號.",
+              "words": 12
+            },
+            {
+              "text": "Keputusan bertarikh 22 Jun 2022 itu mengekalkan arahan menanggalkan peralatan dan memulihkan keadaan asal.",
+              "words": 14
+            },
+            {
+              "text": "Dinding, siling dan peti elektrik yang digunakan didapati sebagai bahagian serta kemudahan bersama, sedangkan persetujuan yang diperlukan belum diperoleh.",
+              "words": 19
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "dari",
+          "sentences": [
+            {
+              "text": "Dari kotak pada dinding belakang petak bawah tanah, paip kabel dipasang dengan penyangkut siling menuju peti elektrik bersama, tempat pemutus litar ditambah untuk menyambungkannya kepada meter penghuni; kedudukan itu tidak dipertikaikan.",
+              "words": 31
+            },
+            {
+              "text": "Meter itu miliknya.",
+              "words": 3
+            },
+            {
+              "text": "Hak terhadap meter tidak menentukan hak menjalankan kerja pada setiap bahagian laluan kabel.",
+              "words": 13
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "keperluan",
+          "sentences": [
+            {
+              "text": "Keperluan persetujuan datang daripada dua sumber.",
+              "words": 6
+            },
+            {
+              "text": "Perkara 11 Akta Pengurusan Bangunan Pangsapuri Taiwan menghendaki perobohan, pembaikan besar atau penambahbaikan bahagian dan kemudahan bersama dilaksanakan menurut keputusan mesyuarat pemilik unit.",
+              "words": 23
+            },
+            {
+              "text": "Mahkamah menggunakan peruntukan itu untuk menilai kerja tersebut.",
+              "words": 8
+            },
+            {
+              "text": "Perkara 15 peraturan komuniti berkenaan pula mensyaratkan kebenaran jawatankuasa pengurusan serta pemeriksaan keselamatan syarikat elektrik bagi penambahan wayar dan saluran.",
+              "words": 20
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "peraturan",
+          "sentences": [
+            {
+              "text": "Peraturan komuniti turut mengikat penilaian kes.",
+              "words": 6
+            },
+            {
+              "text": "Pelanggaran perkara 11 dan peraturan tersebut termasuk dalam kewajipan mematuhi undang-undang atau peraturan komuniti di bawah perkara 6(1)(5).",
+              "words": 20
+            },
+            {
+              "text": "Selepas jawatankuasa mengirim surat rasmi untuk merundingkan isu itu, pemasangan masih tidak ditanggalkan.",
+              "words": 13
+            },
+            {
+              "text": "Mahkamah menerima bahawa tindakan boleh dimohon di bawah perkara 6(3), yang menangani ketidakpatuhan selepas usaha penyelesaian.",
+              "words": 17
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "penghuni",
+          "sentences": [
+            {
+              "text": "Penghuni bersandar pada perkara 6(1)(4), yang menyentuh pemasangan saluran untuk bahagian persendirian dan penggunaan bahagian bersama apabila perlu.",
+              "words": 20
+            },
+            {
+              "text": "Hujah itu ditolak berdasarkan lokasi sebenar pemasangan.",
+              "words": 7
+            },
+            {
+              "text": "Alasan kelima dan keenam penghakiman perlu dibaca bersama peraturan komuniti kes tersebut; ia tidak menetapkan satu prosedur undian yang sama bagi setiap pengecas di semua pangsapuri.",
+              "words": 26
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "tentang",
+          "sentences": [
+            {
+              "text": "Tentang dakwaan bahawa suis ditambah, penggunaan dihentikan dan peralatan dikunci dengan tawaran menyerahkan kunci kepada jawatankuasa, mahkamah menjelaskan bahawa sekalipun semuanya benar, kewajipan menanggalkan pemasangan dan memulihkan keadaan asal tetap tidak terhapus.",
+              "words": 32
+            },
+            {
+              "text": "Bekalan yang dihentikan tidak mengesahkan kuasa menjalankan kerja.",
+              "words": 8
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "sebut",
+          "sentences": [
+            {
+              "text": "Sebut harga yang hanya menyenaraikan nombor petak tidak menunjukkan laluan kerja.",
+              "words": 11
+            },
+            {
+              "text": "Sebelum pemasangan, pembekal boleh menyediakan pelan kedudukan pengecas, dinding atau tiang yang dilalui, sambungan pada siling dan peti elektrik.",
+              "words": 19
+            },
+            {
+              "text": "Pelan itu boleh dibandingkan dengan dokumen hak milik, peraturan komuniti serta keputusan mesyuarat sedia ada.",
+              "words": 15
+            },
+            {
+              "text": "Setiap bahagian laluan mungkin mempunyai skop penggunaan berlainan.",
+              "words": 8
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "apakah",
+          "sentences": [
+            {
+              "text": "Apakah sebenarnya yang sudah diluluskan?",
+              "words": 5
+            },
+            {
+              "text": "Melalui permohonan bertulis yang menerangkan reka bentuk, penghuni boleh meminta jawatankuasa mengenal pasti peraturan dan pihak berkuasa meluluskan kerja, termasuk sama ada persetujuan mesyuarat pemilik unit diperlukan untuk laluan kabel serta peralatan yang dicadangkan.",
+              "words": 34
+            },
+            {
+              "text": "Jika diluluskan, pelan pemasangan masih perlu sepadan.",
+              "words": 7
+            },
+            {
+              "text": "Padanan itu merangkumi laluan, peralatan dan syarat persetujuan.",
+              "words": 8
+            },
+            {
+              "text": "Ini ialah cadangan persediaan, bukan kuasa bagi jawatankuasa menggantikan setiap keputusan mesyuarat pemilik unit.",
+              "words": 14
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "kaohsiung",
+          "sentences": [
+            {
+              "text": "Kaohsiung mengumumkan program subsidi pada Mei 2026 yang merangkumi dulang kabel pengecas EV di kawasan awam pangsapuri.",
+              "words": 17
+            },
+            {
+              "text": "Pengumuman kerajaan bandar menetapkan 30 September sebagai tarikh akhir permohonan; tarikh itu sudah berlalu.",
+              "words": 14
+            },
+            {
+              "text": "Skop tersebut tidak sama dengan subsidi semua pembelian pengecas.",
+              "words": 9
+            },
+            {
+              "text": "Bantuan kewangan juga tidak menggantikan persetujuan penggunaan atau prosedur kerja dalam komuniti.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "apabila",
+          "sentences": [
+            {
+              "text": "Apabila tuntutan menghentikan kerja atau menanggalkan peralatan sudah diterima, pertanyaan kepada firma boleh menyatakan pertikaian, perkara peraturan komuniti dan tarikh akhir jawapan.",
+              "words": 22
+            },
+            {
+              "text": "Kontrak pemasangan pula boleh menjelaskan sama ada kerja boleh bermula sebelum persetujuan diperoleh dan siapa menanggung kos jika permohonan ditolak.",
+              "words": 20
+            },
+            {
+              "text": "Dengan itu, laluan kabel yang belum dipersetujui tidak dibiarkan menjadi pertikaian bayaran pemasangan yang berasingan.",
+              "words": 15
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "asas",
+          "sentences": [
+            {
+              "text": "Asas kes disemak pada 25 Oktober 2026.",
+              "words": 7
+            },
+            {
+              "text": "Peraturan dan pengumuman berkaitan dibandingkan semula pada 26 Oktober 2026.",
+              "words": 10
+            },
+            {
+              "text": "Keputusan mahkamah berikutnya serta kemuktamadan kes ini belum disahkan.",
+              "words": 9
+            },
+            {
+              "text": "Kedudukan peralatan, skop hak dan peraturan setiap komuniti perlu diperiksa mengikut faktanya.",
+              "words": 12
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Laluan kabel menentukan bahagian yang terlibat",
+        "Pelan pemasangan dan skop persetujuan"
+      ],
+      "excludedListItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "39113b45c74664dd0104e20a05837675b4aa1c5e9735e00de4df91a25bd84c2d",
+      "bytes": 8647,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/921-taiwan-online-game-coins-refund-judgment.md",
+        "--lang",
+        "ms"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ms/921-taiwan-online-game-coins-refund-judgment.md [ms] sentences=43 mean=14.2 cv=0.472 short=0.209 run3=0.073 opener_rep=0.0 cite_end=0.0 cite_para=0.231 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "ms",
+        "sentences": 43,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.2,
+        "len_cv": 0.472,
+        "short_share": 0.209,
+        "long_share": 0.023,
+        "para_cv": 0.211,
+        "even_run3": 0.073,
+        "top_end": "itu",
+        "top_end_share": 0.07,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "nt",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.231,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.43,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "NT$243,548 dituntut seorang pemain sebagai nilai wang bagi baki syiling dalam akaunnya.",
+        "last": "Asas penghakiman dan sumber asal disemak pada 25 Oktober 2026. Bahan rasmi berkaitan dibandingkan semula pada 26 Oktober",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "nt",
+          "sentences": [
+            {
+              "text": "NT$243,548 dituntut seorang pemain sebagai nilai wang bagi baki syiling dalam akaunnya.",
+              "words": 13
+            },
+            {
+              "text": "Tuntutan itu tidak diterima.",
+              "words": 4
+            },
+            {
+              "text": "Kedua-dua pihak tidak mempertikaikan bahawa akaun tersebut sudah tiada mata berbayar yang belum digunakan, seperti direkodkan dalam penghakiman yang dihimpunkan oleh Pejabat Perlindungan Pengguna, halaman bercetak 140–153.",
+              "words": 28
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "mahkamah",
+          "sentences": [
+            {
+              "text": "Mahkamah Daerah Keelung menolak rayuan pemain dalam kes No. 109年度消簡上字第1號.",
+              "words": 10
+            },
+            {
+              "text": "Penghakiman bertarikh 13 September 2021 itu menyatakan bahawa rayuan lanjut tidak dibenarkan.",
+              "words": 12
+            },
+            {
+              "text": "Penilaian mahkamah tertumpu pada fungsi syiling dan terma bayaran balik permainan berkenaan, tanpa mengecualikan semua barangan maya daripada perlindungan pengguna.",
+              "words": 20
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "kontrak",
+          "sentences": [
+            {
+              "text": "Kontrak membolehkan pemain membeli mata, kemudian menukarnya untuk perkhidmatan atau barangan permainan.",
+              "words": 12
+            },
+            {
+              "text": "Syiling yang masih ada digunakan dalam perlawanan antara pemain dan berfungsi sebagai cip.",
+              "words": 13
+            },
+            {
+              "text": "Mahkamah memutuskan bahawa baki itu tidak lagi termasuk mata berbayar yang belum digunakan di bawah terma bayaran balik, dan juga bukan fi permainan yang dikutip pengendali.",
+              "words": 26
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "pertukaran",
+          "sentences": [
+            {
+              "text": "Pertukaran cip perlawanan itu kepada wang tunai melalui pengendali, menurut alasan mahkamah, akan melibatkan perjudian.",
+              "words": 15
+            },
+            {
+              "text": "Alasan tersebut berkait dengan cara permainan ini berfungsi.",
+              "words": 8
+            },
+            {
+              "text": "Untuk permainan lain, cara memperoleh syiling, perkara yang boleh ditukar dengannya dan penggunaannya tetap perlu ditentukan.",
+              "words": 16
+            },
+            {
+              "text": "Bahagian kelapan penghakiman, halaman bercetak 148–152, menerangkan pertimbangan itu.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "mengapa",
+          "sentences": [
+            {
+              "text": "Mengapa tiada bayaran balik walaupun kontrak sudah tamat?",
+              "words": 8
+            },
+            {
+              "text": "Pemain sendiri telah menyatakan hasrat menamatkan kontrak, membolehkan mahkamah menerima bahawa penamatan berlaku sebelum menilai sifat baki.",
+              "words": 17
+            },
+            {
+              "text": "Penerimaan itu tidak bermakna mahkamah mengesahkan semua alasan penggantungan atau penamatan terdahulu oleh pengendali.",
+              "words": 14
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "terma",
+          "sentences": [
+            {
+              "text": "Terma wajib kontrak standard perkhidmatan permainan dalam talian Taiwan, perkara 18, membenarkan pengguna memberikan notis penamatan pada bila-bila masa.",
+              "words": 19
+            },
+            {
+              "text": "Bagi mata berbayar yang belum digunakan atau fi permainan, pengendali mesti membuat bayaran balik selepas menolak kos yang perlu dalam masa 30 hari dari tarikh penamatan kontrak.",
+              "words": 27
+            },
+            {
+              "text": "Kaedah lain memerlukan persetujuan kedua-dua pihak.",
+              "words": 6
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "potongan",
+          "sentences": [
+            {
+              "text": "Potongan kos memerlukan penjelasan.",
+              "words": 4
+            },
+            {
+              "text": "Pemain boleh meminta pecahan baki yang belum digunakan, setiap potongan dan asas pengiraannya untuk dibandingkan dengan kontrak.",
+              "words": 17
+            },
+            {
+              "text": "Peratus potongan yang ditetapkan pengendali tidak dengan sendirinya membuktikan bahawa kos itu munasabah.",
+              "words": 13
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "pindaan",
+          "sentences": [
+            {
+              "text": "Pindaan peraturan yang dirujuk ini berkuat kuasa pada 1 Januari 2023, selepas penghakiman tersebut.",
+              "words": 14
+            },
+            {
+              "text": "Kes tahun 2021 dinilai mengikut kontrak dan aturan yang terpakai ketika itu.",
+              "words": 12
+            },
+            {
+              "text": "Perkara 4 peraturan semasa pula memberikan hak berasingan untuk membatalkan kontrak secara bertulis dalam tujuh hari selepas mula bermain, tanpa alasan atau kos, serta meminta bayaran balik bagi mata berbayar yang belum digunakan.",
+              "words": 33
+            },
+            {
+              "text": "Selepas tujuh hari, perkara 18 masih terpakai.",
+              "words": 7
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "satu",
+          "sentences": [
+            {
+              "text": "Satu tangkap layar akhir tidak menunjukkan keseluruhan transaksi.",
+              "words": 8
+            },
+            {
+              "text": "Mata yang dibeli, syiling hasil pertukaran dan baki selepas bermain boleh mempunyai fungsi berlainan.",
+              "words": 14
+            },
+            {
+              "text": "Perbandingan rekod membantu mengesan perubahannya:",
+              "words": 5
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "perkara",
+          "sentences": [
+            {
+              "text": "Perkara 9 terma wajib menghendaki pengendali menyimpan sejarah permainan peribadi sekurang-kurangnya 30 hari dan memberikannya dalam masa tujuh hari selepas menerima permohonan.",
+              "words": 22
+            },
+            {
+              "text": "Kedua-dua tempoh mempunyai fungsi berbeza.",
+              "words": 5
+            },
+            {
+              "text": "Permohonan awal ketika pertikaian timbul dapat mengurangkan risiko hanya baki akhir yang masih dapat dilihat.",
+              "words": 15
+            },
+            {
+              "text": "Perkara 6 terma terlarang pula melarang syarat yang menjadikan rekod pengendali satu-satunya asas menentukan pertikaian.",
+              "words": 15
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "dalam",
+          "sentences": [
+            {
+              "text": "Dalam statistik bagi tahun 2025, permainan dalam talian berada di tempat kedua antara kategori aduan pengguna peringkat pertama, walaupun bilangannya menurun berbanding tahun sebelumnya.",
+              "words": 24
+            },
+            {
+              "text": "Pejabat Perlindungan Pengguna mengumumkan angka dan peringatan itu pada 7 Mei 2026.",
+              "words": 12
+            },
+            {
+              "text": "Penjelasan rasmi turut meminta pengendali menangani sekatan akaun, penggantungan dan khidmat pelanggan dengan sewajarnya.",
+              "words": 14
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "pertikaian",
+          "sentences": [
+            {
+              "text": "Pertikaian bayaran balik boleh dikemukakan dahulu kepada pengendali, kemudian melalui saluran aduan pengguna kerajaan.",
+              "words": 14
+            },
+            {
+              "text": "Jika isu beralih kepada tafsiran kontrak atau penolakan bukti, e-mel kepada firma boleh merumuskan pertikaian dan tarikh akhir jawapan tanpa memberikan kata laluan akaun.",
+              "words": 24
+            },
+            {
+              "text": "Rekod yang menyokong jumlah tuntutan ialah aliran wang masuk, pertukaran mata dan penggunaan yang menghasilkan baki itu.",
+              "words": 17
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "asas",
+          "sentences": [
+            {
+              "text": "Asas penghakiman dan sumber asal disemak pada 25 Oktober 2026.",
+              "words": 10
+            },
+            {
+              "text": "Bahan rasmi berkaitan dibandingkan semula pada 26 Oktober 2026.",
+              "words": 9
+            },
+            {
+              "text": "Huraian ini menyentuh kontrak perkhidmatan yang tertakluk pada aturan Taiwan.",
+              "words": 10
+            },
+            {
+              "text": "Fungsi mata, barangan dan sebab penamatan permainan lain perlu dinilai mengikut keadaan masing-masing.",
+              "words": 13
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Apa yang berlaku kepada mata selepas pembelian",
+        "Hak penamatan dan baki yang dilindungi",
+        "Baki pada skrin dan sejarah yang membentuknya"
+      ],
+      "excludedListItems": []
+    }
+  ]
+}

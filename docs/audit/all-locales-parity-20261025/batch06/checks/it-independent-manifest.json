@@ -1,0 +1,127 @@
+{
+  "frozenAt": "2026-10-25T17:19:48.927846+00:00",
+  "result": "NEEDS_CHANGES",
+  "required": 2,
+  "optional": 2,
+  "scope": "Independent Italian meaning review only. No manuscript, author evidence, shared tool, R, git or deployment mutation.",
+  "authorReport": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/it-author.md",
+    "sha256": "213caced6d6c3c0687c97cc683a474a4604a924260560902b2a4a8eca878374d"
+  },
+  "authorManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-author-manifest.json",
+    "sha256": "8fe56630dac0f787a31a6d35dddd560a95614b1fa2dc2b18b4293f9a3ec1b011"
+  },
+  "manuscripts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "35dac07dacd8bbec1a7485e1d4ac91ade04114dc8d0e73748c658396244a9cf8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "5cf2e361a6092205a2ae6e93977391be436a42e2916f8c9d6b3225acc9f80bab"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "d0e740245ba86df7b08c5fdbda63493c59a25fefb5e485ecdcb49b1ae80178dd"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "8242040c97d1f4aac945306fcde2614b77e03e7e93cdacebacf61986fcd68fd9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "7755edb8d8d4eb7d1d0035b22e53936e5b941dedc6210ab4ab617e9cd3bfd1cf"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-it/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "e52e70d61d129f6e6849eeb74d66a5aad7fd3d494666708b44439af5704952e2"
+    }
+  ],
+  "checkerHashesCurrentlyEqualToFinalAuthorRun": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/it.json": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35"
+  },
+  "verification": {
+    "existingInputGuards": 33,
+    "mismatches": 0,
+    "runtimeBoardVisible": 6,
+    "extractedUnitsRead": 257,
+    "FAQsRead": 17,
+    "fullVarietyRerun": false,
+    "originalSnapshotRoundTripSHA": {
+      "916-taiwan-parent-company-pollution-liability-us-investor.md": true,
+      "918-taiwan-presale-mortgage-notice-handover-judgment.md": true,
+      "921-taiwan-online-game-coins-refund-judgment.md": true
+    }
+  },
+  "findings": [
+    {
+      "id": "M01",
+      "severity": "required",
+      "article": "918",
+      "field": "summary",
+      "line": 4,
+      "quote": "La sentenza distingue i passaggi del contratto e il termine pattuito di quattro mesi dalla regola attuale dei sei mesi per comunicarne la consegna.",
+      "reason": "Unsupported attribution of the current-law comparison to the judgment.",
+      "suggestion": "La sentenza distingue i passaggi del contratto. Il termine di quattro mesi pattuito in quel caso va tenuto distinto dalla regola attuale dei sei mesi per comunicare la consegna."
+    },
+    {
+      "id": "M02",
+      "severity": "required",
+      "article": "921",
+      "field": "summary",
+      "line": 4,
+      "quote": "Le regole attuali tutelano altri crediti rimborsabili e richiedono di ricostruirne l’uso.",
+      "reason": "Practical reconstruction guidance is presented as a legal requirement.",
+      "suggestion": "Le regole attuali tutelano altri crediti rimborsabili; ricostruire acquisti e utilizzo aiuta a capire quale saldo sia coperto."
+    },
+    {
+      "id": "S01",
+      "severity": "optional",
+      "article": "916",
+      "field": "body",
+      "line": 36,
+      "quote": "Le incertezze restano tali finché non vengono chiarite.",
+      "reason": "Tautological sentence adds no operative condition or practical step.",
+      "suggestion": "Delete this sentence; preserve the surrounding discussion of unanswered questions and original adverse findings."
+    },
+    {
+      "id": "S02",
+      "severity": "optional",
+      "article": "916",
+      "field": "body and FAQ1",
+      "lines": [
+        32,
+        19
+      ],
+      "quote": "la conoscenza del problema nei gruppi controllanti e il mancato intervento per risolverlo e la mancata informazione ai lavoratori",
+      "reason": "Repeated conjunctions obscure list rhythm; retain every conjunct.",
+      "suggestion": "la conoscenza del problema nei gruppi controllanti, il mancato intervento per risolverlo e la mancata informazione ai lavoratori"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/it-independent.md",
+      "sha256": "be256327f8726f933c9cd3aca949ac73c90bc087a4d3a38797dc3ba92542e612",
+      "bytes": 14165
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-independent-start.json",
+      "sha256": "501d1f77a6ceb2840cb7174b8baae7774478d20e1b7bd335cb8bd556cd03ef2c",
+      "bytes": 9817
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-independent-checks.json",
+      "sha256": "07619e7ab9e050a2c65bfd02be2272d9471ae89d9791732ab451f8ea1aca9d0b",
+      "bytes": 16410
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-independent-r1-originals.json",
+      "sha256": "7959ee00c7367ea5f3a28290d4fe41d579fede3895f57203c34e8f8183d84f86",
+      "bytes": 29309
+    }
+  ]
+}

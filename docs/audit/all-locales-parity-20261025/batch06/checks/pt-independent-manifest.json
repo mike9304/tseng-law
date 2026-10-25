@@ -1,0 +1,77 @@
+{
+  "closed_at": "2026-10-26T02:17:32.388172+09:00",
+  "reviewer": "/root/column_inventory",
+  "status": "REQUEST_CHANGES",
+  "required_open": [
+    "M01"
+  ],
+  "optional": [
+    "S01"
+  ],
+  "manuscript_rows": [
+    {
+      "file": "915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "initial_sha256": "e40fa586ea8b835e6bdcb070fc0193bbea80e263df88aafa86d2f951f9894353",
+      "closing_sha256": "e40fa586ea8b835e6bdcb070fc0193bbea80e263df88aafa86d2f951f9894353",
+      "unchanged": true
+    },
+    {
+      "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "initial_sha256": "177be7395ee02cad28462e119942e229cd30542602f4687889adc7a79ca9eeac",
+      "closing_sha256": "177be7395ee02cad28462e119942e229cd30542602f4687889adc7a79ca9eeac",
+      "unchanged": true
+    },
+    {
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "initial_sha256": "70f1c01c0ce95f4f660726a6c747c80bc7115972a7f331d1fd46269782310dfc",
+      "closing_sha256": "70f1c01c0ce95f4f660726a6c747c80bc7115972a7f331d1fd46269782310dfc",
+      "unchanged": true
+    },
+    {
+      "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "initial_sha256": "77305593ff192c54b86fe07898e6cee983366cd077a73b9a3667f80b7e2817b5",
+      "closing_sha256": "77305593ff192c54b86fe07898e6cee983366cd077a73b9a3667f80b7e2817b5",
+      "unchanged": true
+    },
+    {
+      "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "initial_sha256": "6dd1b3478c1001f87980858789602e378d5d2956fe55c0259577d1c08dde26bc",
+      "closing_sha256": "6dd1b3478c1001f87980858789602e378d5d2956fe55c0259577d1c08dde26bc",
+      "unchanged": true
+    },
+    {
+      "file": "921-taiwan-online-game-coins-refund-judgment.md",
+      "initial_sha256": "af08a2dc4021cf3d01d2a6f1b308d8cb2a571f6cc3cf5a5a227776da1faebd0f",
+      "closing_sha256": "af08a2dc4021cf3d01d2a6f1b308d8cb2a571f6cc3cf5a5a227776da1faebd0f",
+      "unchanged": true
+    }
+  ],
+  "all_author_evidence_and_inputs_unchanged": true,
+  "independent_outputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/pt-independent.md",
+      "sha256": "7b044a955e4eb76e239606d263f2c93b4877ec6442f67faa6ada6bfe1c180fff"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-independent-boundaries.json",
+      "sha256": "f2475c39d910e375c0d49a82e52e5087336fc2f716376ca1f1a6c882dc6fa028"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-independent-findings.json",
+      "sha256": "31508e693812e122a29fd250a899bdc6686ae53e307b1cd92bb74555903b2e04"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-independent-inputs.json",
+      "sha256": "dd2bd458fa2b228db1160d3000c42c9ac760a635bfdb930f7d9b82d28ad670df"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-independent-integrity.json",
+      "sha256": "1ceabcb12104c9a699c78d0b4e78ca0312e58afa78717fd7bb5f52394ead1350"
+    }
+  ],
+  "current_pt_cli_rerun": false,
+  "current_boundary_arrays_verified": true,
+  "human_native_or_legal_approval": false,
+  "manuscript_edits": false,
+  "deployed": false
+}

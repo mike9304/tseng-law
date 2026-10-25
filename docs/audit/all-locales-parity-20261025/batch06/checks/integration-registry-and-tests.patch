@@ -1,0 +1,149 @@
+diff --git a/src/components/__tests__/home-latest-columns.test.tsx b/src/components/__tests__/home-latest-columns.test.tsx
+index f1b1bafba..2e26136e9 100644
+--- a/src/components/__tests__/home-latest-columns.test.tsx
++++ b/src/components/__tests__/home-latest-columns.test.tsx
+@@ -30,8 +30,8 @@ describe('home columns lead with the latest publication batch', () => {
+       // production recommendation selector.
+       const archive = archiveLeadSlugsFor(locale);
+       // Newest first by publication day; within a day, descending column number.
+-      const days = [...new Set(archive.map(archiveLeadPublicationDate))];
+-      const newest = days.flatMap((day) => archive.filter((slug) => archiveLeadPublicationDate(slug) === day).reverse());
++      const days = [...new Set(archive.map((slug) => archiveLeadPublicationDate(slug, locale)))];
++      const newest = days.flatMap((day) => archive.filter((slug) => archiveLeadPublicationDate(slug, locale) === day).reverse());
+       const count = Math.min(6, links.length);
+       expect(links.slice(0, count)).toEqual(newest.slice(0, count));
+       if (locale === 'zh-hant' || locale === 'en' || locale === 'es') {
+diff --git a/src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx b/src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx
+index 4eb326ddf..988d69781 100644
+--- a/src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx
++++ b/src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx
+@@ -32,7 +32,7 @@ function newestLeadSlug(locale: string): string | undefined {
+   const slugs = expertiseSlugsFor(locale);
+   let best: { slug: string; date: string; index: number } | undefined;
+   slugs.forEach((slug, index) => {
+-    const date = archiveLeadPublicationDate(slug);
++    const date = archiveLeadPublicationDate(slug, locale);
+     if (!best || date > best.date || (date === best.date && index > best.index)) best = { slug, date, index };
+   });
+   return best?.slug;
+diff --git a/src/lib/__tests__/columns-publication-date.test.ts b/src/lib/__tests__/columns-publication-date.test.ts
+index c86db4bbd..ccdadc190 100644
+--- a/src/lib/__tests__/columns-publication-date.test.ts
++++ b/src/lib/__tests__/columns-publication-date.test.ts
+@@ -860,7 +860,7 @@ describe('localized column publication ordering', () => {
+     const lead = expertiseSlugs.length;
+     expect(allPosts.slice(0, lead).map((post) => post.slug)).toEqual(expertiseSlugs);
+     expect(allPosts.slice(0, lead).map((post) => post.publicationDate)).toEqual(
+-      expertiseSlugs.map(archiveLeadPublicationDate),
++      expertiseSlugs.map((slug) => archiveLeadPublicationDate(slug, locale)),
+     );
+     // Native single-locale columns share the 2026-09-29 date with the gap columns (024-031),
+     // so equal-date source order places them right after that batch; the shared corpus follows.
+diff --git a/src/lib/__tests__/native-locale-columns.ts b/src/lib/__tests__/native-locale-columns.ts
+index 580d842aa..13b146c67 100644
+--- a/src/lib/__tests__/native-locale-columns.ts
++++ b/src/lib/__tests__/native-locale-columns.ts
+@@ -1254,6 +1254,26 @@ export const CASE_COLUMN_FILES_20261025 = {
+   ],
+ } as const;
+ 
++const CASE_TRANSLATION_FILES_20261026 = [
++  '915-taiwan-public-contract-mediation-arbitration-same-claim.md',
++  '916-taiwan-parent-company-pollution-liability-us-investor.md',
++  '918-taiwan-presale-mortgage-notice-handover-judgment.md',
++  '919-taiwan-workplace-bullying-investigation-hearing-judgment.md',
++  '920-taiwan-apartment-ev-charger-common-area-judgment.md',
++  '921-taiwan-online-game-coins-refund-judgment.md',
++] as const;
++
++/** Reviewed translations published October26; their EN/ZH originals keep October25. */
++export const CASE_TRANSLATION_COLUMN_FILES_20261026: Partial<Record<string, readonly string[]>> = {
++  de: CASE_TRANSLATION_FILES_20261026,
++  it: CASE_TRANSLATION_FILES_20261026,
++  ar: CASE_TRANSLATION_FILES_20261026,
++  pt: CASE_TRANSLATION_FILES_20261026,
++  hi: CASE_TRANSLATION_FILES_20261026,
++  ms: CASE_TRANSLATION_FILES_20261026,
++  ru: CASE_TRANSLATION_FILES_20261026,
++};
++
+ /** Country-specific market expansion, two original articles per selected locale. */
+ export const MARKET_EXPANSION_COLUMN_FILES_20261025 = {
+   'vi': [
+@@ -1306,7 +1326,7 @@ export const MARKET_EXPANSION_COLUMN_FILES_20261025 = {
+   ],
+ } as const;
+ 
+-/** Registered locale-specific batches through 2026-10-25, in filename order. */
++/** Registered locale-specific batches through 2026-10-26, in filename order. */
+ function sameDayFilesOf(locale: string): readonly string[] {
+   return [
+     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
+@@ -1333,6 +1353,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
+     ...(ARC_VISA_COLUMN_FILES_20261024[locale] ?? []),
+     ...((COUNTRY_COLUMN_FILES_20261024 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+     ...((CASE_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
++    ...(CASE_TRANSLATION_COLUMN_FILES_20261026[locale] ?? []),
+     ...((MARKET_EXPANSION_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+     ...((TRAFFIC_SCENE_COLUMN_FILES_20261014 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+     ...((TRAFFIC_SCENE_COLUMN_FILES_20261015 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+@@ -1359,11 +1380,12 @@ export function expertiseSlugsFor(locale: string): string[] {
+ }
+ 
+ /**
+- * Archive lead of `locale`, newest first by date through 2026-10-25, with same-day
++ * Archive lead of `locale`, newest first by date through 2026-10-26, with same-day
+  * files in source order. Use this for newest-first ordering assertions;
+  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
+  */
+ export function archiveLeadSlugsFor(locale: string): string[] {
++  const day20261026 = CASE_TRANSLATION_COLUMN_FILES_20261026[locale] ?? [];
+   const day20261025: readonly string[] = [
+     ...((CASE_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+     ...((MARKET_EXPANSION_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+@@ -1443,12 +1465,13 @@ export function archiveLeadSlugsFor(locale: string): string[] {
+   const newestSlugs = [...newest].sort().map(slugOf);
+   const newerSlugs = [...newer].sort().map(slugOf);
+   const head = [...day20261023].sort().map(slugOf).concat([...day20261022].sort().map(slugOf), [...day20261021].sort().map(slugOf), [...day20261020].sort().map(slugOf), [...day20261018].sort().map(slugOf), [...day20261016].sort().map(slugOf), [...day20261015].sort().map(slugOf), [...day20261014].sort().map(slugOf), [...day20261013].sort().map(slugOf), [...day20261011].sort().map(slugOf), [...day20261010].sort().map(slugOf), [...day20261009].sort().map(slugOf), [...day20261008].sort().map(slugOf), day20261007Slugs, day20261006Slugs, day20261005Slugs, currentSlugs, latestSlugs, newestSlugs, newerSlugs);
+-  const latestHead = [...day20261025].sort().map(slugOf).concat([...day20261024].sort().map(slugOf), head);
++  const latestHead = [...day20261026].sort().map(slugOf).concat([...day20261025].sort().map(slugOf), [...day20261024].sort().map(slugOf), head);
+   return [...latestHead, ...expertiseSlugsFor(locale).filter((slug) => !latestHead.includes(slug))];
+ }
+ 
+-/** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-25). */
+-export function archiveLeadPublicationDate(slug: string): string {
++/** Locale is explicit because translated cases have a later publication date than their originals. */
++export function archiveLeadPublicationDate(slug: string, locale: string): string {
++  if (CASE_TRANSLATION_COLUMN_FILES_20261026[locale]?.map(slugOf).includes(slug)) return '2026-10-26';
+   if (Object.values(CASE_COLUMN_FILES_20261025).flat().map(slugOf).includes(slug)) return '2026-10-25';
+   if (Object.values(MARKET_EXPANSION_COLUMN_FILES_20261025).flat().map(slugOf).includes(slug)) return '2026-10-25';
+   if (ARC_VISA_FILES_20261024.map(slugOf).includes(slug)) return '2026-10-24';
+diff --git a/src/lib/builder/__tests__/columns-backend.test.ts b/src/lib/builder/__tests__/columns-backend.test.ts
+index 11f05f27a..dc568e121 100644
+--- a/src/lib/builder/__tests__/columns-backend.test.ts
++++ b/src/lib/builder/__tests__/columns-backend.test.ts
+@@ -173,7 +173,7 @@ describe('builder column storage backend', () => {
+         // The 2026-09-30 expertise columns (041-048) lead the archive, in source order.
+         expect(allPosts.slice(0, lead).map((post) => post.slug)).toEqual(expertiseSlugs);
+         expect(allPosts.slice(0, lead).map((post) => post.publicationDate)).toEqual(
+-          expertiseSlugs.map(archiveLeadPublicationDate),
++          expertiseSlugs.map((slug) => archiveLeadPublicationDate(slug, locale)),
+         );
+         // English-only native columns (2026-09-29) follow the gap columns in source order.
+         expect(
+diff --git a/src/lib/builder/__tests__/columns-blob-audience-backfill.test.ts b/src/lib/builder/__tests__/columns-blob-audience-backfill.test.ts
+index 65ff12402..35e23b39a 100644
+--- a/src/lib/builder/__tests__/columns-blob-audience-backfill.test.ts
++++ b/src/lib/builder/__tests__/columns-blob-audience-backfill.test.ts
+@@ -130,9 +130,9 @@ describe('published column copies keep file-only recommendation metadata', () =>
+       expect(shadowed).toMatchObject({ audience: ['ko'], aiAuthored: true, columnNumber: 24 });
+       // Newest publication date leads (archive lead order); same-day ties go to the higher column number.
+       const lead = archiveLeadSlugsFor('ko');
+-      const newestDay = archiveLeadPublicationDate(lead[0]!);
++      const newestDay = archiveLeadPublicationDate(lead[0]!, 'ko');
+       expect(prioritizeRecommendedColumns('ko', posts)[0]?.slug).toBe(
+-        lead.filter((slug) => archiveLeadPublicationDate(slug) === newestDay).at(-1),
++        lead.filter((slug) => archiveLeadPublicationDate(slug, 'ko') === newestDay).at(-1),
+       );
+     } finally {
+       await rm(root, { recursive: true, force: true });

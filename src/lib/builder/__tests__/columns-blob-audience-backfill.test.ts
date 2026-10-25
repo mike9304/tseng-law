@@ -130,9 +130,9 @@ describe('published column copies keep file-only recommendation metadata', () =>
       expect(shadowed).toMatchObject({ audience: ['ko'], aiAuthored: true, columnNumber: 24 });
       // Newest publication date leads (archive lead order); same-day ties go to the higher column number.
       const lead = archiveLeadSlugsFor('ko');
-      const newestDay = archiveLeadPublicationDate(lead[0]!);
+      const newestDay = archiveLeadPublicationDate(lead[0]!, 'ko');
       expect(prioritizeRecommendedColumns('ko', posts)[0]?.slug).toBe(
-        lead.filter((slug) => archiveLeadPublicationDate(slug) === newestDay).at(-1),
+        lead.filter((slug) => archiveLeadPublicationDate(slug, 'ko') === newestDay).at(-1),
       );
     } finally {
       await rm(root, { recursive: true, force: true });

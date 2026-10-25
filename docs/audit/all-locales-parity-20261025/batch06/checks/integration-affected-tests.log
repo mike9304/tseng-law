@@ -1,0 +1,159 @@
+
+> sejong-law@0.1.0 test:unit
+> vitest run src/app/[locale]/columns/__tests__/market-boards-20261024.test.tsx src/app/__tests__/sitemap-static-lastmod.test.ts src/app/__tests__/sitemap.test.ts src/components/__tests__/ColumnsGrid-topics.test.tsx src/components/__tests__/home-latest-columns.test.tsx src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx src/lib/__tests__/column-category-parity.test.ts src/lib/__tests__/column-image-caption-label.test.ts src/lib/__tests__/column-language-links.test.tsx src/lib/__tests__/column-no-public-authors.test.tsx src/lib/__tests__/column-summary-frontmatter.test.ts src/lib/__tests__/column-topics.test.ts src/lib/__tests__/columns-en-content.test.ts src/lib/__tests__/columns-ja-content.test.ts src/lib/__tests__/columns-new-four-locales.test.ts src/lib/__tests__/columns-publication-date.test.ts src/lib/__tests__/columns-zh-content.test.ts src/lib/__tests__/divorce-columns-20260927.test.ts src/lib/__tests__/domestic-zh-columns-20261001.test.ts src/lib/__tests__/expertise-columns-20260930.test.ts src/lib/__tests__/family-columns-20260927.test.ts src/lib/__tests__/market-board-columns-20261024.test.ts src/lib/__tests__/native-locale-columns-20260929.test.ts src/lib/__tests__/no-ai-labels-20261024.test.ts src/lib/builder/__tests__/columns-backend.test.ts src/lib/builder/__tests__/columns-blob-audience-backfill.test.ts src/lib/builder/canvas/__tests__/home-insights-publication-order.test.ts --maxWorkers=1 --testTimeout=30000
+
+
+ RUN  v3.2.6 /Users/son7/Projects/tseng-law-all-locales-20261025
+
+stderr | src/lib/__tests__/column-no-public-authors.test.tsx > all public columns omit author attribution (2026-10-20) > fr guidance home cards have no attribution
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at img
+    at div
+    at figure
+    at IntlHeroPlate (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/intl-design/IntlHeroPlate.tsx:8:26)
+    at section
+    at GuidanceHero (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:101:25)
+    at div
+    at GuidanceHomeBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:753:3)
+
+ ✓ |unit| src/lib/__tests__/column-no-public-authors.test.tsx (79 tests) 29602ms
+   ✓ all public columns omit author attribution (2026-10-20) > ko original expert column, archive, metadata and content corpus  812ms
+   ✓ all public columns omit author attribution (2026-10-20) > zh-hant original expert column, archive, metadata and content corpus  708ms
+   ✓ all public columns omit author attribution (2026-10-20) > en original expert column, archive, metadata and content corpus  719ms
+   ✓ all public columns omit author attribution (2026-10-20) > ja original expert column, archive, metadata and content corpus  669ms
+   ✓ all public columns omit author attribution (2026-10-20) > vi original expert column, archive, metadata and content corpus  582ms
+   ✓ all public columns omit author attribution (2026-10-20) > id original expert column, archive, metadata and content corpus  516ms
+   ✓ all public columns omit author attribution (2026-10-20) > th original expert column, archive, metadata and content corpus  527ms
+   ✓ all public columns omit author attribution (2026-10-20) > fil original expert column, archive, metadata and content corpus  520ms
+   ✓ all public columns omit author attribution (2026-10-20) > ar original expert column, archive, metadata and content corpus  517ms
+   ✓ all public columns omit author attribution (2026-10-20) > de original expert column, archive, metadata and content corpus  518ms
+   ✓ all public columns omit author attribution (2026-10-20) > es original expert column, archive, metadata and content corpus  535ms
+   ✓ all public columns omit author attribution (2026-10-20) > fr original expert column, archive, metadata and content corpus  528ms
+   ✓ all public columns omit author attribution (2026-10-20) > pt original expert column, archive, metadata and content corpus  517ms
+   ✓ all public columns omit author attribution (2026-10-20) > zh-hans original expert column, archive, metadata and content corpus  493ms
+   ✓ all public columns omit author attribution (2026-10-20) > ms original expert column, archive, metadata and content corpus  527ms
+   ✓ all public columns omit author attribution (2026-10-20) > ru original expert column, archive, metadata and content corpus  534ms
+   ✓ all public columns omit author attribution (2026-10-20) > tr original expert column, archive, metadata and content corpus  511ms
+   ✓ all public columns omit author attribution (2026-10-20) > it original expert column, archive, metadata and content corpus  531ms
+   ✓ all public columns omit author attribution (2026-10-20) > nl original expert column, archive, metadata and content corpus  524ms
+   ✓ all public columns omit author attribution (2026-10-20) > pl original expert column, archive, metadata and content corpus  529ms
+   ✓ all public columns omit author attribution (2026-10-20) > hi original expert column, archive, metadata and content corpus  539ms
+   ✓ all public columns omit author attribution (2026-10-20) > sv original expert column, archive, metadata and content corpus  521ms
+   ✓ all public columns omit author attribution (2026-10-20) > da original expert column, archive, metadata and content corpus  521ms
+   ✓ all public columns omit author attribution (2026-10-20) > nb original expert column, archive, metadata and content corpus  512ms
+   ✓ all public columns omit author attribution (2026-10-20) > fi original expert column, archive, metadata and content corpus  512ms
+   ✓ all public columns omit author attribution (2026-10-20) > cs original expert column, archive, metadata and content corpus  517ms
+   ✓ all public columns omit author attribution (2026-10-20) > hu original expert column, archive, metadata and content corpus  519ms
+   ✓ all public columns omit author attribution (2026-10-20) > ro original expert column, archive, metadata and content corpus  519ms
+   ✓ all public columns omit author attribution (2026-10-20) > uk original expert column, archive, metadata and content corpus  527ms
+   ✓ all public columns omit author attribution (2026-10-20) > el original expert column, archive, metadata and content corpus  528ms
+   ✓ all public columns omit author attribution (2026-10-20) > he original expert column, archive, metadata and content corpus  510ms
+   ✓ all public columns omit author attribution (2026-10-20) > bn original expert column, archive, metadata and content corpus  513ms
+   ✓ all public columns omit author attribution (2026-10-20) > ur original expert column, archive, metadata and content corpus  511ms
+   ✓ all public columns omit author attribution (2026-10-20) > fa original expert column, archive, metadata and content corpus  515ms
+   ✓ all public columns omit author attribution (2026-10-20) > my original expert column, archive, metadata and content corpus  526ms
+   ✓ all public columns omit author attribution (2026-10-20) > ta original expert column, archive, metadata and content corpus  524ms
+   ✓ all public columns omit author attribution (2026-10-20) > ne original expert column, archive, metadata and content corpus  514ms
+   ✓ all public columns omit author attribution (2026-10-20) > km original expert column, archive, metadata and content corpus  515ms
+   ✓ all public columns omit author attribution (2026-10-20) > mn original expert column, archive, metadata and content corpus  522ms
+   ✓ all public columns omit author attribution (2026-10-20) > sk original expert column, archive, metadata and content corpus  515ms
+   ✓ all public columns omit author attribution (2026-10-20) > bg original expert column, archive, metadata and content corpus  529ms
+   ✓ all public columns omit author attribution (2026-10-20) > hr original expert column, archive, metadata and content corpus  510ms
+   ✓ all public columns omit author attribution (2026-10-20) > sr original expert column, archive, metadata and content corpus  512ms
+   ✓ all public columns omit author attribution (2026-10-20) > sl original expert column, archive, metadata and content corpus  517ms
+   ✓ all public columns omit author attribution (2026-10-20) > lt original expert column, archive, metadata and content corpus  529ms
+   ✓ all public columns omit author attribution (2026-10-20) > lv original expert column, archive, metadata and content corpus  521ms
+   ✓ all public columns omit author attribution (2026-10-20) > et original expert column, archive, metadata and content corpus  512ms
+   ✓ all public columns omit author attribution (2026-10-20) > ca original expert column, archive, metadata and content corpus  520ms
+   ✓ all public columns omit author attribution (2026-10-20) > is original expert column, archive, metadata and content corpus  522ms
+   ✓ all public columns omit author attribution (2026-10-20) > ko traffic board and traffic article, including original lawyer content  596ms
+   ✓ all public columns omit author attribution (2026-10-20) > zh-hant traffic board and traffic article, including original lawyer content  587ms
+   ✓ all public columns omit author attribution (2026-10-20) > en traffic board and traffic article, including original lawyer content  616ms
+   ✓ all public columns omit author attribution (2026-10-20) > ja traffic board and traffic article, including original lawyer content  572ms
+ ✓ |unit| src/lib/__tests__/column-language-links.test.tsx (47 tests) 18782ms
+   ✓ column 051 (ko, zh-hant and en only) > links the three published versions from every one of them and never ja  1447ms
+   ✓ column 051 (ko, zh-hant and en only) > renders the server HTML of the footer switcher without any ja link  459ms
+   ✓ column 051 (ko, zh-hant and en only) > emits no ja hreflang and keeps x-default inside the cluster  458ms
+   ✓ column 051 (ko, zh-hant and en only) > builds the column page metadata alternates from the same cluster  1606ms
+   ✓ a column published in every language > links every language with that language's own URL  1838ms
+   ✓ every column in every language > switches only to versions that render, and to every version that does  1928ms
+   ✓ a builder/Blob-only column (no markdown file in any language) > lists only its own language and keeps x-default on it  1326ms
+   ✓ issue-board columns > list only their own language, since each is written for one language  4862ms
+   ✓ pages that are not column articles > keep listing every language  2273ms
+   ✓ client-side navigation > follows the pathname, since the shared layout does not re-render  458ms
+   ✓ client-side navigation > never applies one language's index to another language's article  458ms
+   ✓ client-side navigation > does not read inherited object properties as column slugs  448ms
+stderr | src/components/__tests__/home-latest-columns.test.tsx > home columns lead with the latest publication batch > ko shows its newest columns before older curated picks
+Warning: Received `true` for a non-boolean attribute `inert`.
+
+If you want to write it to the DOM, pass a string instead: inert="true" or inert={value.toString()}.
+    at nav
+    at KoMobileCta (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/ko-home/KoMobileCta.tsx:12:75)
+    at div
+    at KoHomeBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/KoHomeBody.tsx:24:23)
+    at LegacyHomePageBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/(legacy)/home-legacy.tsx:87:3)
+
+stderr | src/components/__tests__/home-latest-columns.test.tsx > home columns lead with the latest publication batch > es shows its newest columns before older curated picks
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at img
+    at div
+    at figure
+    at IntlHeroPlate (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/intl-design/IntlHeroPlate.tsx:8:26)
+    at section
+    at GuidanceHero (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:101:25)
+    at div
+    at GuidanceHomeBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:753:3)
+
+ ✓ |unit| src/components/__tests__/home-latest-columns.test.tsx (6 tests) 7217ms
+   ✓ home columns lead with the latest publication batch > ko shows its newest columns before older curated picks  1511ms
+   ✓ home columns lead with the latest publication batch > zh-hant shows its newest columns before older curated picks  2469ms
+   ✓ home columns lead with the latest publication batch > ja shows its newest columns before older curated picks  1663ms
+   ✓ home columns lead with the latest publication batch > en shows its newest columns before older curated picks  1549ms
+ ✓ |unit| src/app/__tests__/sitemap.test.ts (37 tests) 4643ms
+stderr | src/app/[locale]/columns/__tests__/market-boards-20261024.test.tsx > market boards render only their columns (2026-10-24) > th home: no hidden column links
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at img
+    at div
+    at figure
+    at IntlHeroPlate (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/intl-design/IntlHeroPlate.tsx:8:26)
+    at section
+    at GuidanceHero (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:101:25)
+    at div
+    at GuidanceHomeBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:753:3)
+
+ ✓ |unit| src/app/[locale]/columns/__tests__/market-boards-20261024.test.tsx (134 tests) 4156ms
+   ✓ market boards render only their columns (2026-10-24) > th board: no hidden or Korean-title links, opens with every own column  392ms
+ ✓ |unit| src/app/__tests__/sitemap-static-lastmod.test.ts (4 tests) 1736ms
+   ✓ sitemap static lastmod > gives STATIC_PATHS lastmod in ISO-8601, keeps column lastmod, and has unique loc  925ms
+   ✓ sitemap static lastmod > gives new-four core URLs an ISO-8601 lastmod  794ms
+ ✓ |unit| src/lib/__tests__/native-locale-columns-20260929.test.ts (37 tests) 1473ms
+ ✓ |unit| src/lib/__tests__/market-board-columns-20261024.test.ts (177 tests) 1416ms
+ ✓ |unit| src/lib/__tests__/divorce-columns-20260927.test.ts (10 tests) 1240ms
+   ✓ native divorce columns September 2026 > includes exactly the nine authored locales in sitemap alternates for each new article  472ms
+ ✓ |unit| src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx (12 tests) 1134ms
+   ✓ audience frontmatter recommendations > leads each locale with its own-audience columns newest first, then shared, from its own files only  628ms
+ ✓ |unit| src/lib/__tests__/family-columns-20260927.test.ts (10 tests) 1037ms
+   ✓ native marriage and birth columns September 2026 > includes exactly the nine authored locales in sitemap alternates for each new article  462ms
+ ✓ |unit| src/lib/__tests__/expertise-columns-20260930.test.ts (37 tests) 1011ms
+ ✓ |unit| src/lib/builder/__tests__/columns-backend.test.ts (12 tests) 840ms
+ ✓ |unit| src/lib/__tests__/columns-publication-date.test.ts (12 tests) 657ms
+ ✓ |unit| src/lib/__tests__/domestic-zh-columns-20261001.test.ts (13 tests) 618ms
+ ✓ |unit| src/lib/__tests__/columns-ja-content.test.ts (7 tests) 430ms
+   ✓ Japanese full column corpus + site locale > preserves FAQ count for known sources  328ms
+ ✓ |unit| src/lib/__tests__/column-category-parity.test.ts (49 tests) 431ms
+ ✓ |unit| src/lib/__tests__/no-ai-labels-20261024.test.ts (4 tests) 332ms
+ ✓ |unit| src/lib/builder/__tests__/columns-blob-audience-backfill.test.ts (3 tests) 343ms
+ ✓ |unit| src/lib/__tests__/column-topics.test.ts (8 tests) 315ms
+ ✓ |unit| src/lib/__tests__/column-summary-frontmatter.test.ts (8 tests) 252ms
+ ✓ |unit| src/lib/__tests__/columns-en-content.test.ts (7 tests) 234ms
+ ✓ |unit| src/components/__tests__/ColumnsGrid-topics.test.tsx (15 tests) 157ms
+ ✓ |unit| src/lib/builder/canvas/__tests__/home-insights-publication-order.test.ts (6 tests) 147ms
+ ✓ |unit| src/lib/__tests__/columns-zh-content.test.ts (5 tests) 143ms
+ ✓ |unit| src/lib/__tests__/column-image-caption-label.test.ts (1 test) 124ms
+ ✓ |unit| src/lib/__tests__/columns-new-four-locales.test.ts (7 tests) 71ms
+
+ Test Files  27 passed (27)
+      Tests  747 passed (747)
+   Start at  02:52:49
+   Duration  83.87s (transform 1.83s, setup 18ms, collect 3.40s, tests 78.54s, environment 2ms, prepare 608ms)
+

@@ -1,0 +1,19 @@
+{
+  "frozenAt": "2026-10-25T17:30:42.148166+00:00",
+  "result": "M01_M02_CLOSED",
+  "newRequiredFindings": 0,
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/reviews/it-independent-r2.md",
+      "sha256": "752761752c938f13f9d6961e5cecec146323e3558bd580caa6db2e09b8d0040c",
+      "bytes": 2518
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/it-independent-r2-checks.json",
+      "sha256": "75e737b7b05119e878531f476c7f14be4e6b6a821111987323bee2e00f0c8bb6",
+      "bytes": 5984
+    }
+  ],
+  "currentAuthorManifestSHA256": "f33646f61a7919d4925b3cc5ab033d7d14c948db29e2139033e29c9ea3e79ebc",
+  "allInputAndOutputGuardsStillMatch": true
+}

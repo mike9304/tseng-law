@@ -1,0 +1,68 @@
+{
+  "at": "2026-10-26T02:32:18.659395+09:00",
+  "status": "PASS_R1_FINDINGS_CLOSED",
+  "mandatory_open": 0,
+  "closed": [
+    "M01",
+    "M02",
+    "S01"
+  ],
+  "report_sha256": "cf31290f86329197b7f092a93db16f6fec3d330a69c8c8fdce4a5b438ef0a393",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ru/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "0d332f323ff63eb0bd79fb3b02383499f23bc5375c17a8177ef637f567d1e50b"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ru/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "a5e367a361efa6bc898ce8a47d7bd47d9cc25e62cc6a094ee37adf6ebd310b00"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ru/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "63ac4498dccfa6d3027dc7b91b180a8a8ada6e7dc885340cfe09a25928143862"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ru/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "548b8ca01b038849253985b6acaacd427b9791f19a1dd034a4a0af0684271906"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ru/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "0245e109b5976dce38bd36c60235aa90cd2a3acdadebd87ab8887f4d11e01435"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ru/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "cd67ec2c2e63c22704b7f0c2a210ff6cfe5a4209898bbd578802af30b770e4a4"
+    }
+  ],
+  "evidence": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-independent-r1-edits.json",
+      "sha256": "f7c795186750b7cd1a4cd1c73ab87cf31215884552b4c2cbbd3e5b3786ad3567"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-independent-r1-verification.json",
+      "sha256": "404941c7daa69d7b744ea9e94f97bd836d99d2df918ff3d82378b7cc227f695d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-author-final-manifest.json",
+      "sha256": "62fb88b6128a652ab0c1264383ff10e01f80bd455900055925a02b8d3f4c5ae4"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-independent-manifest.json",
+      "sha256": "f1563d20e4526b0e9e8e1c0aa843653d4fc17dbc93add3a181787cdf55bad876"
+    }
+  ],
+  "root_checks": [
+    "Actual four replacements read and direct SHA inverse verified",
+    "Prior author-prefix SHA verified",
+    "All six current manuscript SHA verified"
+  ],
+  "reused_checks": [
+    "Changed-three actual shared FAIL0; unchanged-three prior metrics",
+    "Current audit six files/errors0"
+  ],
+  "limits": [
+    "No repeated whole-language test or public-render check claimed",
+    "No human native-language/lawyer approval"
+  ]
+}

@@ -1,0 +1,681 @@
+{
+  "atUTC": "2026-10-25T16:47:14.769Z",
+  "groups": [
+    {
+      "version": 1,
+      "generatedAt": "2026-10-25T16:47:14.726Z",
+      "repoRoot": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+      "selectedFiles": 4,
+      "automatedStatus": "FAIL",
+      "semanticStatus": "REVIEW_REQUIRED",
+      "publicationReady": false,
+      "errors": 4,
+      "reviewItems": 8,
+      "policy": {
+        "minBodyLettersAndNumbers": 500,
+        "minUniqueParagraphLettersAndNumbers": 350,
+        "sourceLocale": "zh-hant",
+        "publicationDate": "2026-10-26",
+        "legacyPolicy": "Unselected files supply existence/duplicate context only; no content changes or audience changes are made.",
+        "sourceApproval": "The operator must select an accepted source; existence/hash is not evidence of legal approval."
+      },
+      "runtimeContractHashes": {
+        "src/lib/column-audience.ts": "a1cb781f1a787366199995b0312b0fa1556d850e0637eb5ea66cd2174680b760",
+        "src/data/market-column-curation.ts": "c42e22feed6e49e5f4915a48ad18a49d9b874c024824ddf53a74fd5ede8a8b94",
+        "src/lib/column-attribution.ts": "8111ea9feabcdc98f13485014da51d39c9aebd084cbb6a1e52d923624bb6dcc3",
+        "src/lib/columns.ts": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+        "src/lib/column-locales.ts": "26d8fe8de7a9703aa7b0d279f32938e84190d5199ce0c4ddee84e89bb934b535",
+        "src/lib/public-guidance.ts": "c00a193d0dd583145e544a2cc505efad75a4379f5c334a811655a689d6df8d85",
+        "src/lib/column-topics.ts": "3fb8e18ae18777481cb8a07c158ea1b6435cdab98da0ea4701a1b98bf3ba435a"
+      },
+      "inventory": {
+        "counts": {
+          "ko": 211,
+          "zh-hant": 290,
+          "en": 212,
+          "ja": 224,
+          "vi": 45,
+          "id": 33,
+          "th": 31,
+          "fil": 31,
+          "ar": 34,
+          "de": 26,
+          "es": 46,
+          "fr": 31,
+          "pt": 28,
+          "zh-hans": 29,
+          "ms": 24,
+          "ru": 24,
+          "tr": 24,
+          "it": 26,
+          "nl": 26,
+          "pl": 26,
+          "hi": 28,
+          "sv": 24,
+          "da": 24,
+          "nb": 24,
+          "fi": 24,
+          "cs": 26,
+          "hu": 24,
+          "ro": 24,
+          "uk": 24,
+          "el": 24,
+          "he": 26,
+          "bn": 24,
+          "ur": 24,
+          "fa": 24,
+          "my": 24,
+          "ta": 24,
+          "ne": 24,
+          "km": 21,
+          "mn": 21,
+          "sk": 24,
+          "bg": 24,
+          "hr": 24,
+          "sr": 21,
+          "sl": 21,
+          "lt": 23,
+          "lv": 21,
+          "et": 21,
+          "ca": 24,
+          "is": 24
+        },
+        "duplicateKeys": []
+      },
+      "files": [
+        {
+          "file": "../../tseng-all-language-columns-20261025/batch06/checks/ar-overlay-content/columns-ar/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+          "locale": "ar",
+          "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+          "errors": [
+            {
+              "code": "source-slug-mismatch",
+              "message": "Source mapping points to a different full slug"
+            }
+          ],
+          "reviews": [
+            {
+              "code": "public-output-and-native-prose",
+              "status": "REQUIRED",
+              "message": "Inspect rendered title, summary, FAQ, captions, cards, JSON-LD and feeds for native language and author leakage; compare opening/headings/ending with the previous three same-language articles. Automated token checks cannot prove either.",
+              "targetFields": [
+                {
+                  "key": "title",
+                  "text": "تأخر تسليم منزل في تايوان رغم رسالة القرض والسماح بالدخول"
+                },
+                {
+                  "key": "summary",
+                  "text": "رفضت محكمة تايتشونغ اعتبار طلب ترتيب القرض إخطارًا بتسليم المنزل، بعد فحص الرسالة والمرافق والمعاينة. وتختلف مهلة الأشهر الأربعة في عقد القضية عن مهلة الأشهر الستة في الشروط الحالية، مع بقاء التزامات المشتري بالدفع والتعاون."
+                },
+                {
+                  "key": "featured_image_alt",
+                  "text": "مستندات ومظروف سادة وصناديق نقل داخل منزل جديد."
+                },
+                {
+                  "key": "featured_image_caption",
+                  "text": "مشهد متخيَّل"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "هل إخطار المطور بترتيب القرض يُعد إخطارًا بتسليم المنزل؟"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "تُفحص صياغة الرسالة وحالة المنزل آنذاك. في القضية اقتصرت الرسالة على متابعة القرض دون عرض منزل صالح للاستعمال، ولم تؤيد سجلات الماء والكهرباء والمعاينة اللاحقة قول المطور. لذلك لم تعتبر المحكمة الرسالة وفاءً بإخطار التسليم المتفق عليه."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "هل المهلة بعد الحصول على إذن الاستعمال أربعة أشهر أم ستة؟"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "كانت الأشهر الأربعة شرطًا في عقد القضية. أما البند الخامس عشر من الشروط الإلزامية الحالية للبيع قبل البناء فيوجب إخطار المشتري بالتسليم خلال ستة أشهر من حصول البائع على إذن الاستعمال. ويتطلب أي نزاع مراجعة العقد والقواعد المنطبقة عند توقيعه."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "هل أستطيع تجاهل إخطار المطور ما دام القرض لم يُصرف؟"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "استمرار إجراءات القرض لا يكفي لترك الإخطار دون معالجة. للدفع ومستندات القرض والمعاينة والتسليم التزامات ومواعيد تُراجع كل على حدة، مع سجلات البنك وحالة المنزل. ولا يمنح الحكم جميع المشترين حق وقف الدفع."
+                }
+              ]
+            },
+            {
+              "code": "source-required",
+              "status": "REQUIRED",
+              "message": "Select an accepted source with this full slug before meaning review"
+            }
+          ],
+          "sha256": "e98a4302c1c5db7c31a9326d0a3ad041e784895d7f9481ad6a7ad53889b8dc58",
+          "board": {
+            "visible": true,
+            "audience": [
+              "ar"
+            ],
+            "marketBoard": true,
+            "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+          },
+          "bodyMetrics": {
+            "lettersAndNumbers": 3186,
+            "uniqueParagraphLettersAndNumbers": 3186,
+            "paragraphs": 17,
+            "h1": 0
+          }
+        },
+        {
+          "file": "../../tseng-all-language-columns-20261025/batch06/checks/ar-overlay-content/columns-ar/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+          "locale": "ar",
+          "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+          "errors": [
+            {
+              "code": "source-slug-mismatch",
+              "message": "Source mapping points to a different full slug"
+            }
+          ],
+          "reviews": [
+            {
+              "code": "public-output-and-native-prose",
+              "status": "REQUIRED",
+              "message": "Inspect rendered title, summary, FAQ, captions, cards, JSON-LD and feeds for native language and author leakage; compare opening/headings/ending with the previous three same-language articles. Automated token checks cannot prove either.",
+              "targetFields": [
+                {
+                  "key": "title",
+                  "text": "إعلان عقوبة التنمر قبل سماع الدفاع: إلغاء فصل موظف عام في تايوان"
+                },
+                {
+                  "key": "summary",
+                  "text": "ألغت محكمة تايبيه الإدارية قرار فصل وقرار مراجعته بسبب عيوب في المداولة وسماع الدفاع وتقدير الأدلة. ولتحقيقات التنمر لدى أصحاب العمل في القطاع الخاص أحكامها الحالية بشأن الإنصاف والحماية الفورية."
+                },
+                {
+                  "key": "featured_image_alt",
+                  "text": "طاولة مستديرة وملفات سادة وثلاثة كراسٍ في غرفة اجتماعات خالية."
+                },
+                {
+                  "key": "featured_image_caption",
+                  "text": "مشهد متخيَّل"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "هل إلغاء الفصل يعني أن المحكمة نفت وقوع التنمر؟"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "ألغت المحكمة القرار الأصلي وقرار المراجعة الإدارية بعد فحص عيوب المداولة وفرصة الدفاع وتقدير الوقائع. لا تثبت هذه النتيجة أن جميع الأفعال المنسوبة إلى الموظف لم تقع، ويذكر البيان القضائي إمكان الطعن في الحكم."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "هل تنتظر الشركة انتهاء التحقيق قبل حماية مقدم الشكوى؟"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "يحدد قانون السلامة والصحة المهنية تدابير صاحب العمل بحسب طريقة علمه بالواقعة. وعند تلقي شكوى العامل المتعرض للتنمر، يجب منع تجدد التنمر عليه، وتقديم المساعدة والحماية بحسب حاجته، وإجراء التحقيق. ويمكن أن تسير الحماية والتحقيق المنصف معًا."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "هل تطبق إدارة الموارد البشرية إجراءات قضية الموظف العام نفسها؟"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "تخضع الشركة الخاصة لقواعد السلامة والصحة المهنية وقوانين العمل والعقود المنطبقة عليها، بينما تتعلق القضية بتقييم موظف عام وفصله. وتفيد أسباب الحكم في فحص النتيجة المسبقة وإهمال الدفاع وتناقض الأدلة، لكنها لا تحل محل تحديد القانون الواجب التطبيق."
+                }
+              ]
+            },
+            {
+              "code": "source-required",
+              "status": "REQUIRED",
+              "message": "Select an accepted source with this full slug before meaning review"
+            }
+          ],
+          "sha256": "8d496fab0ff7a2ede0664c6fcf52ad07126b37e38860e64d437aae59ce359408",
+          "board": {
+            "visible": true,
+            "audience": [
+              "ar"
+            ],
+            "marketBoard": true,
+            "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+          },
+          "bodyMetrics": {
+            "lettersAndNumbers": 2791,
+            "uniqueParagraphLettersAndNumbers": 2791,
+            "paragraphs": 14,
+            "h1": 0
+          }
+        },
+        {
+          "file": "../../tseng-all-language-columns-20261025/batch06/checks/ar-overlay-content/columns-ar/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "locale": "ar",
+          "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+          "errors": [
+            {
+              "code": "source-slug-mismatch",
+              "message": "Source mapping points to a different full slug"
+            }
+          ],
+          "reviews": [
+            {
+              "code": "public-output-and-native-prose",
+              "status": "REQUIRED",
+              "message": "Inspect rendered title, summary, FAQ, captions, cards, JSON-LD and feeds for native language and author leakage; compare opening/headings/ending with the previous three same-language articles. Automated token checks cannot prove either.",
+              "targetFields": [
+                {
+                  "key": "title",
+                  "text": "شاحن في موقف خاص وأسلاك في أجزاء مشتركة: حكم بإزالة تركيب في تايوان"
+                },
+                {
+                  "key": "summary",
+                  "text": "أبقت محكمة كاوشيونغ على إزالة معدات شحن مرت بالجدار والسقف وصندوق الكهرباء المشترك. فحق استعمال الموقف ومسار الأسلاك والموافقات المطلوبة مسائل تؤثر في مشروعية التركيب، حتى عند توصيله بالعداد الخاص."
+                },
+                {
+                  "key": "featured_image_alt",
+                  "text": "سيارة كهربائية موصولة بشاحن على عمود في موقف تحت الأرض، وتمتد الأسلاك بمحاذاة العمود إلى مجرى في السقف."
+                },
+                {
+                  "key": "featured_image_caption",
+                  "text": "مشهد متخيَّل"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "هل يتيح استعمالي الخاص للموقف مد الأسلاك وتركيب شاحن بنفسي؟"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "يتوقف الفحص على مواضع المعدات ومسار الأسلاك. في القضية شمل التركيب جدرانًا وسقفًا وصندوق كهرباء مشتركًا، فلم تقبل المحكمة وصفه بأنه مجرد تمديدات في جزء خاص. ويحتاج أي مبنى آخر إلى مراجعة تكوينه الفعلي ولائحته والإجراءات المطلوبة."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "هل إيقاف الشاحن وإغلاقه بقفل يغنيان عن إزالته؟"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "ذكر الساكن أنه أوقف الاستخدام وأغلق المعدات بقفل واستعد لتسليم المفتاح. ورأت المحكمة أن هذه الأقوال، حتى لو صحت، لا ترفع واجب الإزالة الناتج عن مخالفة قواعد الأجزاء المشتركة ولائحة المبنى. ولا يعني ذلك أن الإزالة هي الحل الوحيد في كل نزاع شحن."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "هل يحل الدعم الحكومي للبنية الكهربائية محل موافقة المبنى؟"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "شروط الدعم وإذن استعمال الأجزاء المشتركة مسألتان مستقلتان. شملت خطة كاوشيونغ لعام 2026 حوامل مجاري كابلات شحن المركبات في المناطق المشتركة، وكان آخر موعد معلن للتقديم 30 سبتمبر وقد مضى. ولا تمنح الخطة بذاتها ساكنًا حق البناء في الأجزاء المشتركة."
+                }
+              ]
+            },
+            {
+              "code": "source-required",
+              "status": "REQUIRED",
+              "message": "Select an accepted source with this full slug before meaning review"
+            }
+          ],
+          "sha256": "b5b7a9a1c91923e64ef586132e0fea5ac924e2124e08ddc93e90439cc3cd8e81",
+          "board": {
+            "visible": true,
+            "audience": [
+              "ar"
+            ],
+            "marketBoard": true,
+            "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+          },
+          "bodyMetrics": {
+            "lettersAndNumbers": 3026,
+            "uniqueParagraphLettersAndNumbers": 3026,
+            "paragraphs": 15,
+            "h1": 0
+          }
+        },
+        {
+          "file": "../../tseng-all-language-columns-20261025/batch06/checks/ar-overlay-content/columns-ar/921-taiwan-online-game-coins-refund-judgment.md",
+          "locale": "ar",
+          "slug": "taiwan-online-game-coins-refund-judgment",
+          "errors": [
+            {
+              "code": "source-slug-mismatch",
+              "message": "Source mapping points to a different full slug"
+            }
+          ],
+          "reviews": [
+            {
+              "code": "public-output-and-native-prose",
+              "status": "REQUIRED",
+              "message": "Inspect rendered title, summary, FAQ, captions, cards, JSON-LD and feeds for native language and author leakage; compare opening/headings/ending with the previous three same-language articles. Automated token checks cannot prove either.",
+              "targetFields": [
+                {
+                  "key": "title",
+                  "text": "رصيد العملات داخل اللعبة والمبلغ القابل للاسترداد: حكم تايواني"
+                },
+                {
+                  "key": "summary",
+                  "text": "رفضت محكمة كيلونغ رد قيمة عملات كانت تستخدم للمنافسة داخل لعبة، مع عدم بقاء نقاط مدفوعة غير مستخدمة. وتظل القواعد الحالية تحمي رد الرصيد المشمول بعد إنهاء العقد؛ ويتحدد المبلغ من سجلات الشراء والتحويل والاستخدام."
+                },
+                {
+                  "key": "featured_image_alt",
+                  "text": "وحدة تحكم وشاشة لعبة بتكوين تجريدي وقطع رمزية سادة ودفتر مغلق."
+                },
+                {
+                  "key": "featured_image_caption",
+                  "text": "مشهد متخيَّل"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "هل تسمية الرصيد «عملات ذهبية» تمنع طلب استرداده؟"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "تتحدد النتيجة بوظيفة الرصيد وشروط العقد. كانت العملات في القضية رقائق للمنافسة داخل اللعبة، ولم تعد نقاطًا مدفوعة غير مستخدمة أو رسوم لعب واجبة الرد. وفي لعبة أخرى يلزم فحص طريقة اكتساب العملات واستخدامها وما يتيحه العقد."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "هل يفوت حق إنهاء العقد بعد سبعة أيام من بدء اللعب؟"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "تجيز القواعد الحالية للمستهلك إخطار المشغل بإنهاء العقد في أي وقت. وعند الإنهاء يجب رد النقاط المدفوعة غير المستخدمة أو رسوم اللعب، بعد خصم التكاليف الضرورية، خلال ثلاثين يومًا من الإنهاء، أو معالجة الرد بطريقة يتفق عليها الطرفان. ويختلف ذلك عن حق فسخ العقد كتابة خلال سبعة أيام من بدء اللعب."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "هل يجوز للمشغل أن يجعل سجلاته وحدها مرجعًا للنزاع؟"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "تحظر القواعد الحالية شرط حصر تقدير النزاع في سجل اللعب والبيانات الإلكترونية التي يحتفظ بها المشغل. ويمكن للاعب الاحتفاظ بإثباتات الدفع ولقطات الشاشة والمراسلات وطلب سجل لعبه لمقارنة كيفية تكوّن الرصيد."
+                }
+              ]
+            },
+            {
+              "code": "source-required",
+              "status": "REQUIRED",
+              "message": "Select an accepted source with this full slug before meaning review"
+            }
+          ],
+          "sha256": "5e603f4e5786daa42ead0f05d5ac4c44a2895d1d1248a42e98a5a76df85093de",
+          "board": {
+            "visible": true,
+            "audience": [
+              "ar"
+            ],
+            "marketBoard": true,
+            "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+          },
+          "bodyMetrics": {
+            "lettersAndNumbers": 3363,
+            "uniqueParagraphLettersAndNumbers": 3363,
+            "paragraphs": 25,
+            "h1": 0
+          }
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "generatedAt": "2026-10-25T16:47:14.769Z",
+      "repoRoot": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+      "selectedFiles": 2,
+      "automatedStatus": "FAIL",
+      "semanticStatus": "REVIEW_REQUIRED",
+      "publicationReady": false,
+      "errors": 2,
+      "reviewItems": 4,
+      "policy": {
+        "minBodyLettersAndNumbers": 500,
+        "minUniqueParagraphLettersAndNumbers": 350,
+        "sourceLocale": "en",
+        "publicationDate": "2026-10-26",
+        "legacyPolicy": "Unselected files supply existence/duplicate context only; no content changes or audience changes are made.",
+        "sourceApproval": "The operator must select an accepted source; existence/hash is not evidence of legal approval."
+      },
+      "runtimeContractHashes": {
+        "src/lib/column-audience.ts": "a1cb781f1a787366199995b0312b0fa1556d850e0637eb5ea66cd2174680b760",
+        "src/data/market-column-curation.ts": "c42e22feed6e49e5f4915a48ad18a49d9b874c024824ddf53a74fd5ede8a8b94",
+        "src/lib/column-attribution.ts": "8111ea9feabcdc98f13485014da51d39c9aebd084cbb6a1e52d923624bb6dcc3",
+        "src/lib/columns.ts": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+        "src/lib/column-locales.ts": "26d8fe8de7a9703aa7b0d279f32938e84190d5199ce0c4ddee84e89bb934b535",
+        "src/lib/public-guidance.ts": "c00a193d0dd583145e544a2cc505efad75a4379f5c334a811655a689d6df8d85",
+        "src/lib/column-topics.ts": "3fb8e18ae18777481cb8a07c158ea1b6435cdab98da0ea4701a1b98bf3ba435a"
+      },
+      "inventory": {
+        "counts": {
+          "ko": 211,
+          "zh-hant": 290,
+          "en": 212,
+          "ja": 224,
+          "vi": 45,
+          "id": 33,
+          "th": 31,
+          "fil": 31,
+          "ar": 34,
+          "de": 26,
+          "es": 46,
+          "fr": 31,
+          "pt": 28,
+          "zh-hans": 29,
+          "ms": 24,
+          "ru": 24,
+          "tr": 24,
+          "it": 26,
+          "nl": 26,
+          "pl": 26,
+          "hi": 28,
+          "sv": 24,
+          "da": 24,
+          "nb": 24,
+          "fi": 24,
+          "cs": 26,
+          "hu": 24,
+          "ro": 24,
+          "uk": 24,
+          "el": 24,
+          "he": 26,
+          "bn": 24,
+          "ur": 24,
+          "fa": 24,
+          "my": 24,
+          "ta": 24,
+          "ne": 24,
+          "km": 21,
+          "mn": 21,
+          "sk": 24,
+          "bg": 24,
+          "hr": 24,
+          "sr": 21,
+          "sl": 21,
+          "lt": 23,
+          "lv": 21,
+          "et": 21,
+          "ca": 24,
+          "is": 24
+        },
+        "duplicateKeys": []
+      },
+      "files": [
+        {
+          "file": "../../tseng-all-language-columns-20261025/batch06/checks/ar-overlay-content/columns-ar/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+          "locale": "ar",
+          "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+          "errors": [
+            {
+              "code": "source-slug-mismatch",
+              "message": "Source mapping points to a different full slug"
+            }
+          ],
+          "reviews": [
+            {
+              "code": "public-output-and-native-prose",
+              "status": "REQUIRED",
+              "message": "Inspect rendered title, summary, FAQ, captions, cards, JSON-LD and feeds for native language and author leakage; compare opening/headings/ending with the previous three same-language articles. Automated token checks cannot prove either.",
+              "targetFields": [
+                {
+                  "key": "title",
+                  "text": "مطالبة المقاول بين تمديد المدة والتعويض: حدود التحكيم في عقد عام تايواني"
+                },
+                {
+                  "key": "seoTitle",
+                  "text": "تغير المطالبة والتحكيم في العقود العامة التايوانية"
+                },
+                {
+                  "key": "summary",
+                  "text": "أُبطل حكم تحكيم لمقاول بعدما عاد إلى مطالبة مالية لم تتناولها توصية الوساطة. فاللجوء إلى التحكيم بموجب قانون المشتريات يتطلب مطابقة النزاع المطروح مع إجراءات الوساطة وشروطها."
+                },
+                {
+                  "key": "featured_image_alt",
+                  "text": "خوذة أمان ومخططات إنشاء وملفات إلى جانب نموذج لجسر."
+                },
+                {
+                  "key": "featured_image_caption",
+                  "text": "مشهد متخيَّل"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "هل يتيح فشل الوساطة تلقائيًا التحكيم ضد جهة عامة في تايوان؟"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "يشترط المسار القانوني لأعمال الإنشاء أو الخدمات الفنية أن تفشل الوساطة بسبب عدم موافقة الجهة العامة على توصية لجنة مراجعة المشتريات أو مقترحها. وتُقارن المطالبة المحددة المحالة إلى التحكيم بسجل تلك الوساطة. وقد يوفر اتفاق تحكيم مستقل أساسًا آخر."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "هل قررت المحكمة أن كل تعديل للمطالبة يمنع التحكيم؟"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "تناولت القضية العودة إلى طلب تعويض مالي بعد توصية تخص تمديد المدة. ولا تقرر أن كل تعديل للمبلغ أو للحجة القانونية ينشئ نزاعًا مختلفًا؛ إذ يلزم مقارنة الوقائع والطلبات والمستندات الإجرائية."
+                }
+              ]
+            },
+            {
+              "code": "source-required",
+              "status": "REQUIRED",
+              "message": "Select an accepted source with this full slug before meaning review"
+            }
+          ],
+          "sha256": "231ce90371cf3783a60811a96edd45ed07271ecfc51a62c3c0000855183f9132",
+          "board": {
+            "visible": true,
+            "audience": [
+              "ar"
+            ],
+            "marketBoard": true,
+            "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+          },
+          "bodyMetrics": {
+            "lettersAndNumbers": 3170,
+            "uniqueParagraphLettersAndNumbers": 3170,
+            "paragraphs": 27,
+            "h1": 0
+          }
+        },
+        {
+          "file": "../../tseng-all-language-columns-20261025/batch06/checks/ar-overlay-content/columns-ar/916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "locale": "ar",
+          "slug": "taiwan-parent-company-pollution-liability-us-investor",
+          "errors": [
+            {
+              "code": "source-slug-mismatch",
+              "message": "Source mapping points to a different full slug"
+            }
+          ],
+          "reviews": [
+            {
+              "code": "public-output-and-native-prose",
+              "status": "REQUIRED",
+              "message": "Inspect rendered title, summary, FAQ, captions, cards, JSON-LD and feeds for native language and author leakage; compare opening/headings/ending with the previous three same-language articles. Automated token checks cannot prove either.",
+              "targetFields": [
+                {
+                  "key": "title",
+                  "text": "تقارير التلوث التي وصلت إلى الشركة الأم: المعرفة والسيطرة ونقل الأصول"
+                },
+                {
+                  "key": "seoTitle",
+                  "text": "مسؤولية الشركة الأم عن تلوث مصنع في تايوان"
+                },
+                {
+                  "key": "summary",
+                  "text": "ربط حكم تايواني مسؤولية الشركات المسيطرة بعلمها بالتلوث وسلوكها وتحويل الأصول. ويتطلب تقييم الاستحواذ تتبع ما جرى بعد التقرير البيئي، مع التمييز بين أجزاء الحكم المعادة للمحاكمة والطعون المرفوضة."
+                },
+                {
+                  "key": "featured_image_alt",
+                  "text": "وعاء عينة تربة ودفتر على طاولة قابلة للطي أمام مصنع قديم."
+                },
+                {
+                  "key": "featured_image_caption",
+                  "text": "مشهد متخيَّل"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "هل تملك شركة تابعة في تايوان يجعل الشركة الأم الأجنبية مسؤولة عن التلوث؟"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "لم يقم الحكم على الملكية وحدها. يصف بيان المحكمة السيطرة والعلم بالتلوث وعدم الإفصاح عنه أو معالجته، وتحريك الأصول بقصد تفادي الالتزامات. ويتطلب تقرير المسؤولية فحص السلوك المحدد والقانون المنطبق."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "هل أنهى حكم المحكمة العليا جميع مطالبات التلوث في المصنع؟"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "نقضت المحكمة الأجزاء المتعلقة بـ246 مدعيًا وأعادتها للنظر، ورفضت الطعون المتعلقة بـ262 مدعيًا. كانت النتائج مختلفة بين أجزاء القضية، ولم يكن الحكم ختامًا لكل الدعاوى المرتبطة بالتلوث."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "ما السجلات التي يفيد الاحتفاظ بها بعد الفحص البيئي للاستحواذ؟"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "تشمل التقرير ومن تسلمه والأسئلة اللاحقة وقرارات التعرض المهني والمعالجة، ثم الموافقات والتحليل المالي لتحويلات الأصول التالية. تساعد هذه المواد في تقييم المعرفة والسلوك، لكن حفظ الملف وحده لا يثبت الامتثال."
+                }
+              ]
+            },
+            {
+              "code": "source-required",
+              "status": "REQUIRED",
+              "message": "Select an accepted source with this full slug before meaning review"
+            }
+          ],
+          "sha256": "4ae918a4265d71727180b02aba89a215682620c93c912f434f0c46867b5d4fe1",
+          "board": {
+            "visible": true,
+            "audience": [
+              "ar"
+            ],
+            "marketBoard": true,
+            "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+          },
+          "bodyMetrics": {
+            "lettersAndNumbers": 3503,
+            "uniqueParagraphLettersAndNumbers": 3503,
+            "paragraphs": 17,
+            "h1": 0
+          }
+        }
+      ]
+    }
+  ],
+  "errors": 6,
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "231ce90371cf3783a60811a96edd45ed07271ecfc51a62c3c0000855183f9132"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "4ae918a4265d71727180b02aba89a215682620c93c912f434f0c46867b5d4fe1"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "e98a4302c1c5db7c31a9326d0a3ad041e784895d7f9481ad6a7ad53889b8dc58"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "8d496fab0ff7a2ede0664c6fcf52ad07126b37e38860e64d437aae59ce359408"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "b5b7a9a1c91923e64ef586132e0fea5ac924e2124e08ddc93e90439cc3cd8e81"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "5e603f4e5786daa42ead0f05d5ac4c44a2895d1d1248a42e98a5a76df85093de"
+    }
+  ],
+  "note": "Unmodified production checker with explicit frozen mixed-locale source mapping. Structural checks do not certify legal meaning, native authorship, rendering or deployment."
+}

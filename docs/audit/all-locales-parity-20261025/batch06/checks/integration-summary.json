@@ -1,0 +1,83 @@
+{
+  "at": "2026-10-25T17:57:19.191830+00:00",
+  "status": "INTEGRATED_VERIFIED_READY_FOR_ROOT_PRECOMMIT_REVIEW",
+  "head": "1ef3a9fe1a8702cda57949c5c53d3b713cc20b64",
+  "articles": 42,
+  "locales": [
+    "de",
+    "it",
+    "ar",
+    "pt",
+    "hi",
+    "ms",
+    "ru"
+  ],
+  "existingRuntimeChanges": 0,
+  "existingManuscriptChanges": 0,
+  "structuralErrors": 0,
+  "metadataErrors": 0,
+  "tests": {
+    "suites": 28,
+    "passed": 760,
+    "failed": 0
+  },
+  "inventory": {
+    "professional": 2163,
+    "issues": 125,
+    "boardVisibleLocal": 1896,
+    "distinctProfessionalSlugs": 668,
+    "coreUnion": 475,
+    "coreCommon": 135,
+    "allLocaleCommon": 21,
+    "countDeficitTo286": 11855,
+    "visibleDeficitTo286": 12122,
+    "other45MissingCoreCommon": 5084
+  },
+  "evidence": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/integration-readiness-manifest.json",
+      "sha256": "6b8a8edffb405c25c85df834e737ff30ac0244dcef89c0056bc05a360e98008d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/integration-copy-manifest.json",
+      "sha256": "caa31e85b4c6c123eb1a62bba370732110c30cbf357a2c6dacc8e30d8a2283e7"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/integration-source-proof.json",
+      "sha256": "f288a422ff7e25ae15e6bd169d6364cb2ae0674500e186880698acd73170a1ee"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/integration-content-audit.json",
+      "sha256": "42ffccb417c9cc86b2fdbb428cbcd8b7db87f17b9ff59afaac335ca8430e52cd"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/integration-metadata.json",
+      "sha256": "bac1cb1beac3fb8bd3e0ed9861ba2c780281878a7549b7dd202007bb28a45d34"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/integration-tests-summary.json",
+      "sha256": "06c751147ac3f46d9f4e6dad0bbff35d75c7508833053b739c2215b8bb257e4f"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/integration-r-inventory.json",
+      "sha256": "fb4add9ec1eacabd7246fbf9724a451b096b8a97b15a0e30898bed220247ea62"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/integration-report.md",
+      "sha256": "31d65a266e67544e378540de53d61bc6756bed3090989a264d3160bd3caa8d7b"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/integration-registry-and-tests.patch",
+      "sha256": "753a7bbf6a99eecb5f8154c983f2a6bf1b1ff40e1542b3b98fde5eb8c710641a"
+    }
+  ],
+  "publicationRecord": {
+    "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/PUBLICATION.md",
+    "sha256": "e8a2a9a75aa99ca561140322f1c51f0789917cd7cdd449b09d11cf2065390fb1"
+  },
+  "B6BuildRun": false,
+  "commitRun": false,
+  "pushRun": false,
+  "publicVerified": false,
+  "fullRepositoryTestsRepeated": false
+}

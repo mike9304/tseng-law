@@ -1,0 +1,133 @@
+{
+  "at_utc": "2026-10-25T16:34:14.122430+00:00",
+  "author": "/root/column_voice_rules, directly written; not Kimi output",
+  "input_scope": "Six current canonicals read in full including metadata/FAQ/source lists; latest IT704/705/706 read in full; final research contract read in full. Facts initially read in full, final 919/921/918 precision changes reread. Prior full shared-rule/LESSONS reads reused with unchanged hashes, as the contract permits.",
+  "home_editorial_voice_present": false,
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/BRIEF.md",
+      "sha256": "f6c2579b6255705ece341a356d3a4d527ca74a869916785d51edb9c0f05ee1a8",
+      "bytes": 4759
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/AGENTS.md",
+      "sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19",
+      "bytes": 18421
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "bytes": 14050
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "bytes": 1705
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "bytes": 16440
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f",
+      "bytes": 17144
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/six-source-facts.md",
+      "sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a",
+      "bytes": 27065
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-register.md",
+      "sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d",
+      "bytes": 13984
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-freeze.json",
+      "sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "bytes": 9211
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/authoring-contract-draft.md",
+      "sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e",
+      "bytes": 12103
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "bytes": 6367
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "bytes": 7070
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "bytes": 6768
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "bytes": 6743
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "bytes": 7412
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "bytes": 8180
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-it/704-taiwan-arc-first-application.md",
+      "sha256": "ff49591c9d161b0143992f7c4f4a490baaa027ee84d00f61ea0e178fa567d092",
+      "bytes": 12334
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-it/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "785ab58116dffcd557112b47517ff7efab0e19101e84e90e0ac678a003f9ba31",
+      "bytes": 11728
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-it/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "0d106a8c5122f4fb97f5c4fab30ae766bd9262323e68460c5da001273781d0b3",
+      "bytes": 11901
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/bundle-manifest.json",
+      "sha256": "d56dfa2dd03c0e93c5f3576ee119c508f07daf24eb7412123aadc42e49bf3192",
+      "bytes": 19154
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/en916-court-explanation-lines24-40.txt",
+      "sha256": "47aa1634c01d5e037194f5aaf6389c8da43ddfe040c777c4044463d3d4f96e0e",
+      "bytes": 10368
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/zh-hant-ev-primary-recovered.md",
+      "sha256": "69e09470e7e81edf23c9708e3b942a01c32dfc2e6128c49b353d180634cebbe2",
+      "bytes": 7579
+    }
+  ],
+  "canonical_current_r_matches_frozen_snapshots": true,
+  "latest_it_selection": "Actual published date 2026-10-24, IDs 706/705/704 descending. No new B6 IT files existed at assignment start.",
+  "retained_source_reads": [
+    "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/zh919-court-explanation.txt",
+    "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/en915-court-explanation.txt",
+    "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/en916-court-explanation-lines24-40.txt",
+    "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/zh-hant-ev-primary-recovered.md"
+  ],
+  "new_direct_official_reads": [
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030057&flno=85-1",
+    "https://law.moda.gov.tw/LawContent.aspx?id=GL000018"
+  ],
+  "source_scope_limit": "Research register distinguishes current responses from retained October25 court responses and failed October26 requests. This author does not claim fresh court-text retrieval or finality beyond the recorded case."
+}

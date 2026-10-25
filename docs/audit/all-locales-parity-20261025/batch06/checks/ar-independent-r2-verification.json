@@ -1,0 +1,316 @@
+{
+  "at": "2026-10-26T02:35:12.380467+09:00",
+  "decision": "TARGETED_R2_CLOSED_M01_AND_ACCEPTED_S01_S02_S04",
+  "mandatoryRemaining": 0,
+  "optionalUnchanged": [
+    "S03: 915 generic transition retained by root; still optional, not a blocking legal error."
+  ],
+  "rows": [
+    {
+      "id": 915,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "231ce90371cf3783a60811a96edd45ed07271ecfc51a62c3c0000855183f9132",
+      "reverseSha256": "231ce90371cf3783a60811a96edd45ed07271ecfc51a62c3c0000855183f9132",
+      "R1ExpectedSha256": "231ce90371cf3783a60811a96edd45ed07271ecfc51a62c3c0000855183f9132",
+      "reverseExact": true,
+      "changed": false,
+      "URLsAndOrderUnchanged": true,
+      "numericTokensUnchanged": true,
+      "manualBidiControls": 0,
+      "findings": [],
+      "newSentenceCount": 35,
+      "sameSentences": 35,
+      "changedSentences": 0,
+      "independentlyReranCLI": false,
+      "priorExactSHAMetricsRetained": true,
+      "metadata": {
+        "id": 915,
+        "changedMetadataKeys": [],
+        "metadataMatchesAcceptedDelta": true,
+        "faqCount": 2,
+        "changedFAQ": null
+      }
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "43da02d79088d4bf15201a87d73ac399f9b69491885b8694300218a735b6f084",
+      "reverseSha256": "43da02d79088d4bf15201a87d73ac399f9b69491885b8694300218a735b6f084",
+      "R1ExpectedSha256": "43da02d79088d4bf15201a87d73ac399f9b69491885b8694300218a735b6f084",
+      "reverseExact": true,
+      "changed": false,
+      "URLsAndOrderUnchanged": true,
+      "numericTokensUnchanged": true,
+      "manualBidiControls": 0,
+      "findings": [],
+      "newSentenceCount": 37,
+      "sameSentences": 37,
+      "changedSentences": 0,
+      "independentlyReranCLI": false,
+      "priorExactSHAMetricsRetained": true,
+      "metadata": {
+        "id": 916,
+        "changedMetadataKeys": [],
+        "metadataMatchesAcceptedDelta": true,
+        "faqCount": 3,
+        "changedFAQ": null
+      }
+    },
+    {
+      "id": 918,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "14b8aa81db02c1a6d2ad8bd722be92b937145ab2b7817c0054f7f7cb3cbfdaa8",
+      "reverseSha256": "71f92a27887f3578871273002bf7b147ddb235073306aa271afbb770323fc0c6",
+      "R1ExpectedSha256": "71f92a27887f3578871273002bf7b147ddb235073306aa271afbb770323fc0c6",
+      "reverseExact": true,
+      "changed": true,
+      "URLsAndOrderUnchanged": true,
+      "numericTokensUnchanged": true,
+      "manualBidiControls": 0,
+      "findings": [
+        "M01",
+        "S01"
+      ],
+      "authorActualCLI": {
+        "evidence": "checks/ar-review-r2-variety.json",
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+          "--lang",
+          "ar"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/918-taiwan-presale-mortgage-notice-handover-judgment.md [ar] sentences=39 mean=15.2 cv=0.474 short=0.205 run3=0.081 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "CV": 0.474
+      },
+      "independentlyReranCLI": false,
+      "currentExtractionMatchesAuthorSaved": true,
+      "oldSentenceCount": 39,
+      "newSentenceCount": 39,
+      "sameSentences": 37,
+      "changedSentences": 2,
+      "changedParagraphsRead": [
+        {
+          "paragraph": 6,
+          "before": [
+            "حدد عقد القضية أربعة أشهر للإخطار بالتسليم، تبدأ من الحصول على إذن استعمال البناء.",
+            "أما البند الخامس عشر من الشروط الإلزامية الحالية للبيع قبل البناء فيوجب على البائع إخطار المشتري بالتسليم خلال ستة أشهر من الحصول على الإذن، ويحدد التزامات الإصلاح وتسوية المبالغ وتسليم الوثائق عند التسليم.",
+            "محل المهلة هنا هو الإخطار."
+          ],
+          "after": [
+            "حدد عقد القضية أربعة أشهر للإخطار بالتسليم، تبدأ من الحصول على إذن استعمال البناء.",
+            "أما البند الخامس عشر من الشروط الإلزامية الحالية للبيع قبل اكتمال البناء فيوجب على البائع إخطار المشتري بالتسليم خلال ستة أشهر من الحصول على الإذن، ويحدد التزامات الإصلاح وتسوية المبالغ وتسليم الوثائق عند التسليم.",
+            "محل المهلة هنا هو الإخطار."
+          ],
+          "newLengths": [
+            14,
+            34,
+            5
+          ]
+        },
+        {
+          "paragraph": 11,
+          "before": [
+            "عنوان الرسالة لا يحفظ مضمونها.",
+            "فالنسخة الكاملة، والمظروف أو دليل وصول البريد الإلكتروني، ومحاضر المعاينة وصور العيوب وإذن الدخول ووثيقة الضمان، تتيح بيان حالة المنزل وقت الإخطار وما أُنجز لاحقًا.",
+            "ويساعد ترتيبها بالتاريخ على ربط كل مطالبة بالدليل الذي يسندها."
+          ],
+          "after": [
+            "عنوان الرسالة لا يغني عن قراءة مضمونها.",
+            "فالنسخة الكاملة، والمظروف أو دليل وصول البريد الإلكتروني، ومحاضر المعاينة وصور العيوب وإذن الدخول ووثيقة الضمان، تتيح بيان حالة المنزل وقت الإخطار وما أُنجز لاحقًا.",
+            "ويساعد ترتيبها بالتاريخ على ربط كل مطالبة بالدليل الذي يسندها."
+          ],
+          "newLengths": [
+            7,
+            25,
+            10
+          ]
+        }
+      ],
+      "firstAndLastParagraphsUnchanged": true,
+      "metadata": {
+        "id": 918,
+        "changedMetadataKeys": [
+          "tags",
+          "faq"
+        ],
+        "metadataMatchesAcceptedDelta": true,
+        "faqCount": 3,
+        "changedFAQ": {
+          "q": "هل المهلة بعد الحصول على إذن الاستعمال أربعة أشهر أم ستة؟",
+          "a": "كانت الأشهر الأربعة شرطًا في عقد القضية. أما البند الخامس عشر من الشروط الإلزامية الحالية للبيع قبل اكتمال البناء فيوجب إخطار المشتري بالتسليم خلال ستة أشهر من حصول البائع على إذن الاستعمال. ويتطلب أي نزاع مراجعة العقد والقواعد المنطبقة عند توقيعه."
+        }
+      }
+    },
+    {
+      "id": 919,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "8d496fab0ff7a2ede0664c6fcf52ad07126b37e38860e64d437aae59ce359408",
+      "reverseSha256": "8d496fab0ff7a2ede0664c6fcf52ad07126b37e38860e64d437aae59ce359408",
+      "R1ExpectedSha256": "8d496fab0ff7a2ede0664c6fcf52ad07126b37e38860e64d437aae59ce359408",
+      "reverseExact": true,
+      "changed": false,
+      "URLsAndOrderUnchanged": true,
+      "numericTokensUnchanged": true,
+      "manualBidiControls": 0,
+      "findings": [],
+      "newSentenceCount": 30,
+      "sameSentences": 30,
+      "changedSentences": 0,
+      "independentlyReranCLI": false,
+      "priorExactSHAMetricsRetained": true,
+      "metadata": {
+        "id": 919,
+        "changedMetadataKeys": [],
+        "metadataMatchesAcceptedDelta": true,
+        "faqCount": 3,
+        "changedFAQ": null
+      }
+    },
+    {
+      "id": 920,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "7a5ac7a800b3f2ff3d106e0ae1a5d308f91485ac059005ded515013541abdd22",
+      "reverseSha256": "d0c3527b5a3cf23a1281d32254fcc7e7237f91e84f06eeb183305d10c06bf838",
+      "R1ExpectedSha256": "d0c3527b5a3cf23a1281d32254fcc7e7237f91e84f06eeb183305d10c06bf838",
+      "reverseExact": true,
+      "changed": true,
+      "URLsAndOrderUnchanged": true,
+      "numericTokensUnchanged": true,
+      "manualBidiControls": 0,
+      "findings": [
+        "S02"
+      ],
+      "authorActualCLI": {
+        "evidence": "checks/ar-review-r2-variety.json",
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "--lang",
+          "ar"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/920-taiwan-apartment-ev-charger-common-area-judgment.md [ar] sentences=33 mean=17.2 cv=0.47 short=0.212 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "CV": 0.47
+      },
+      "independentlyReranCLI": false,
+      "currentExtractionMatchesAuthorSaved": true,
+      "oldSentenceCount": 33,
+      "newSentenceCount": 33,
+      "sameSentences": 32,
+      "changedSentences": 1,
+      "changedParagraphsRead": [
+        {
+          "paragraph": 6,
+          "before": [
+            "يتناول البند الرابع من الفقرة الأولى أيضًا تمديدات قد تستلزم استعمال أجزاء مشتركة، إلا أن المحكمة استبعدت انطباق الوصف الذي تمسك به الساكن على هذا التركيب.",
+            "وتوضح الفقرتان الخامسة والسادسة من أسباب الحكم صلة ذلك بالمواقع الفعلية واللائحة.",
+            "فلا يُستخلص منهما أن جميع شواحن المواقف تخضع لإجراء تصويت واحد مهما اختلفت مواقعها."
+          ],
+          "after": [
+            "يتناول البند الرابع من الفقرة الأولى أيضًا تمديدات قد تستلزم استعمال أجزاء مشتركة، إلا أن المحكمة لم تعتبر هذا التركيب من الحالات التي ينطبق عليها ذلك البند.",
+            "وتوضح الفقرتان الخامسة والسادسة من أسباب الحكم صلة ذلك بالمواقع الفعلية واللائحة.",
+            "فلا يُستخلص منهما أن جميع شواحن المواقف تخضع لإجراء تصويت واحد مهما اختلفت مواقعها."
+          ],
+          "newLengths": [
+            27,
+            12,
+            14
+          ]
+        }
+      ],
+      "firstAndLastParagraphsUnchanged": true,
+      "metadata": {
+        "id": 920,
+        "changedMetadataKeys": [],
+        "metadataMatchesAcceptedDelta": true,
+        "faqCount": 3,
+        "changedFAQ": null
+      }
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "419bb7bdfcd0c9652d88fc250c401d5b729974d2781d7849307f12ed27854723",
+      "reverseSha256": "820c2b008f6e8f18981d0ab1c782bba84028eb0264b477b263ae41ffbc357e2b",
+      "R1ExpectedSha256": "820c2b008f6e8f18981d0ab1c782bba84028eb0264b477b263ae41ffbc357e2b",
+      "reverseExact": true,
+      "changed": true,
+      "URLsAndOrderUnchanged": true,
+      "numericTokensUnchanged": true,
+      "manualBidiControls": 0,
+      "findings": [
+        "S04"
+      ],
+      "authorActualCLI": {
+        "evidence": "checks/ar-review-r2-variety.json",
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/921-taiwan-online-game-coins-refund-judgment.md",
+          "--lang",
+          "ar"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/921-taiwan-online-game-coins-refund-judgment.md [ar] sentences=37 mean=16.1 cv=0.48 short=0.162 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "CV": 0.48
+      },
+      "independentlyReranCLI": false,
+      "currentExtractionMatchesAuthorSaved": true,
+      "oldSentenceCount": 37,
+      "newSentenceCount": 37,
+      "sameSentences": 36,
+      "changedSentences": 1,
+      "changedParagraphsRead": [
+        {
+          "paragraph": 10,
+          "before": [
+            "يلزم المشغل الاحتفاظ بسجل اللعب الشخصي مدة لا تقل عن ثلاثين يومًا، وتقديمه خلال سبعة أيام من تلقي طلب الاطلاع.",
+            "للحفظ مدة محددة.",
+            "تقديم الطلب مبكرًا يقلل احتمال الاكتفاء بصورة الرصيد الأخير.",
+            "وتحظر القواعد حصر تقدير النزاع في سجلات المشغل وبياناته الإلكترونية وحدها؛ وترد أحكام الحفظ والإتاحة في البند التاسع، وقيد الأدلة في البند السادس من الشروط المحظورة."
+          ],
+          "after": [
+            "يلزم المشغل الاحتفاظ بسجل اللعب الشخصي مدة لا تقل عن ثلاثين يومًا، وتقديمه خلال سبعة أيام من تلقي طلب الاطلاع.",
+            "الحد الأدنى للحفظ لا يضمن بقاء السجل دائمًا.",
+            "تقديم الطلب مبكرًا يقلل احتمال الاكتفاء بصورة الرصيد الأخير.",
+            "وتحظر القواعد حصر تقدير النزاع في سجلات المشغل وبياناته الإلكترونية وحدها؛ وترد أحكام الحفظ والإتاحة في البند التاسع، وقيد الأدلة في البند السادس من الشروط المحظورة."
+          ],
+          "newLengths": [
+            20,
+            8,
+            9,
+            26
+          ]
+        }
+      ],
+      "firstAndLastParagraphsUnchanged": true,
+      "metadata": {
+        "id": 921,
+        "changedMetadataKeys": [],
+        "metadataMatchesAcceptedDelta": true,
+        "faqCount": 3,
+        "changedFAQ": null
+      }
+    }
+  ],
+  "preservedInputCount": 20,
+  "allInputHashesMatch": true,
+  "acceptedStringReplacementCount": 8,
+  "actualCurrentParagraphExtractionUsed": true,
+  "independentCLIReruns": 0,
+  "sameSentences": 207,
+  "changedSentences": 4,
+  "totalSentences": 211,
+  "changedParagraphsRead": 4,
+  "contextSentencesRead": 13,
+  "faqTotal": 17,
+  "renderedRTLChecked": false,
+  "humanNativeOrLawyerApproval": false,
+  "errors": []
+}

@@ -1,0 +1,39 @@
+{
+  "at": "2026-10-26T02:59:57.741710+09:00",
+  "status": "ROOT_PREBUILD_REVIEW_PASS",
+  "baseCommit": "1ef3a9fe1a8702cda57949c5c53d3b713cc20b64",
+  "manuscriptsChecked": 42,
+  "matchedAuthorAndIndependentClosures": 7,
+  "canonicalSourcesChecked": 6,
+  "auditCopiesChecked": 179,
+  "summarySha256": "7cd3312a242da98cc095b59390735f671e7064b8052ee6d107af95fa9182fcbd",
+  "reportSha256": "31d65a266e67544e378540de53d61bc6756bed3090989a264d3160bd3caa8d7b",
+  "readTrackedTestPatch": true,
+  "readNewCaseRegressionInFull": true,
+  "testResult": {
+    "suites": 28,
+    "passed": 760,
+    "newCases": 13,
+    "existingAffected": 747,
+    "rootReran": false
+  },
+  "additionalCurrentAuthorRecordCopied": {
+    "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ar-author-r2.md",
+    "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/checks/ar-author-r2.md",
+    "sha256": "4bd5dedae3ec99fe2cdc0700ce0a7c86bca80cca74967613344a5b352f9af282"
+  },
+  "latestPublicObservation": {
+    "evidence": "/Users/son7/tseng-all-language-columns-20261025/live-batch03/b5-public-status.json",
+    "sha256": "c26b19f18d7a8c8a6c70b928fdc361def18a14ef905d4739f55c5e4818b3f742",
+    "at": "2026-10-26T02:57:12+09:00",
+    "commit": "3b4ea7900664b618746f7b5ce959515e124eefe8",
+    "httpStatus": 200,
+    "B3B4B5PublicVerified": false
+  },
+  "meaningReviewBasis": "Root DE authorship and RU full independent review; seven final R2 closures and unchanged source SHA verified. This is not a new whole-manuscript reread, human-native/legal approval or a build/publication result.",
+  "notes": [
+    "Locale-specific test helper preserves original October25 and translated October26 publication dates. No runtime edits.",
+    "B6 build/browser/pack remains pending until content commit.",
+    "Raw build-log whitespace is retained as source evidence rather than normalized."
+  ]
+}

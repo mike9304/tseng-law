@@ -1,0 +1,110 @@
+{
+  "recorded_at": "2026-10-25T17:31:24.822Z",
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "231ce90371cf3783a60811a96edd45ed07271ecfc51a62c3c0000855183f9132",
+      "r1_sha256": "231ce90371cf3783a60811a96edd45ed07271ecfc51a62c3c0000855183f9132",
+      "reverseToR1": true,
+      "changed": false,
+      "changedMetadataKeys": [],
+      "faqCount": 2,
+      "faqDiffIndexes": [],
+      "externalUrlsSameValuesAndOrder": true,
+      "numericTokensSame": true,
+      "manualBidiControls": 0,
+      "replacementChars": 0,
+      "arabicPresentationForms": 0,
+      "originalPresaleTermRemaining": 0
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "43da02d79088d4bf15201a87d73ac399f9b69491885b8694300218a735b6f084",
+      "r1_sha256": "43da02d79088d4bf15201a87d73ac399f9b69491885b8694300218a735b6f084",
+      "reverseToR1": true,
+      "changed": false,
+      "changedMetadataKeys": [],
+      "faqCount": 3,
+      "faqDiffIndexes": [],
+      "externalUrlsSameValuesAndOrder": true,
+      "numericTokensSame": true,
+      "manualBidiControls": 0,
+      "replacementChars": 0,
+      "arabicPresentationForms": 0,
+      "originalPresaleTermRemaining": 0
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "14b8aa81db02c1a6d2ad8bd722be92b937145ab2b7817c0054f7f7cb3cbfdaa8",
+      "r1_sha256": "71f92a27887f3578871273002bf7b147ddb235073306aa271afbb770323fc0c6",
+      "reverseToR1": true,
+      "changed": true,
+      "changedMetadataKeys": [
+        "tags",
+        "faq"
+      ],
+      "faqCount": 3,
+      "faqDiffIndexes": [
+        1
+      ],
+      "externalUrlsSameValuesAndOrder": true,
+      "numericTokensSame": true,
+      "manualBidiControls": 0,
+      "replacementChars": 0,
+      "arabicPresentationForms": 0,
+      "originalPresaleTermRemaining": 0
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "8d496fab0ff7a2ede0664c6fcf52ad07126b37e38860e64d437aae59ce359408",
+      "r1_sha256": "8d496fab0ff7a2ede0664c6fcf52ad07126b37e38860e64d437aae59ce359408",
+      "reverseToR1": true,
+      "changed": false,
+      "changedMetadataKeys": [],
+      "faqCount": 3,
+      "faqDiffIndexes": [],
+      "externalUrlsSameValuesAndOrder": true,
+      "numericTokensSame": true,
+      "manualBidiControls": 0,
+      "replacementChars": 0,
+      "arabicPresentationForms": 0,
+      "originalPresaleTermRemaining": 0
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "7a5ac7a800b3f2ff3d106e0ae1a5d308f91485ac059005ded515013541abdd22",
+      "r1_sha256": "d0c3527b5a3cf23a1281d32254fcc7e7237f91e84f06eeb183305d10c06bf838",
+      "reverseToR1": true,
+      "changed": true,
+      "changedMetadataKeys": [],
+      "faqCount": 3,
+      "faqDiffIndexes": [],
+      "externalUrlsSameValuesAndOrder": true,
+      "numericTokensSame": true,
+      "manualBidiControls": 0,
+      "replacementChars": 0,
+      "arabicPresentationForms": 0,
+      "originalPresaleTermRemaining": 0
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/src/content/columns-ar/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "419bb7bdfcd0c9652d88fc250c401d5b729974d2781d7849307f12ed27854723",
+      "r1_sha256": "820c2b008f6e8f18981d0ab1c782bba84028eb0264b477b263ae41ffbc357e2b",
+      "reverseToR1": true,
+      "changed": true,
+      "changedMetadataKeys": [],
+      "faqCount": 3,
+      "faqDiffIndexes": [],
+      "externalUrlsSameValuesAndOrder": true,
+      "numericTokensSame": true,
+      "manualBidiControls": 0,
+      "replacementChars": 0,
+      "arabicPresentationForms": 0,
+      "originalPresaleTermRemaining": 0
+    }
+  ],
+  "structure_errors": 0,
+  "structure_checker_sha256": "3926a274bf544fed7e34339aa8b2636d41a4be79c0aaff898f46fc65595faf4b",
+  "faq_total": 17,
+  "scope": "Three changed files structural audit; all six exact reverse/hash, URL/numeric/FAQ and logical Unicode checks. No visual RTL browser test."
+}

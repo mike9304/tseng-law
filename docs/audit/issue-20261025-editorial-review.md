@@ -4,13 +4,13 @@ Date: October 25, 2026 (Asia/Seoul). Worktree: air/issues-20261025, baseline HEA
 
 Scope: eight original market-language issue articles, eight generated scenes with matching WebP/JPEG renditions, one batch-scoped test and this audit. No application code, older batch test, configuration or canonical-checkout change. No staging, commit, push or publication.
 
-Review status: all eight independent locale reviews and all eight independent final reviews PASS on the current hashes below. No unresolved material finding or requested repair remains. The operator's separate Claude Code review remains the shipping gate.
+Initial review status: all eight independent locale reviews and all eight independent final reviews passed the initial handoff versions. The later Claude Code review returned FAIL for KO01's paragraph connection. Its R2 repair and current-version evidence are recorded below; the earlier KO01 PASS does not certify this revision. Claude Code re-review of KO01 remains pending. Other pieces' review records are unchanged.
 
 All author and reviewer roles are AI roles. These records do not assert human native-speaker review, attorney approval, an actual client relationship or successful publication.
 
 Detailed source, author, locale, final and media records are in the operator lane's external `20261025/work/` directory. `SOURCES.md` maps every retained manuscript URL to its claim. No judgment text or case number is cited.
 
-Final report SHA-256: KO `796e56c73b0da54a14e8eebc7eed53b6a1bb47b701b902101d2f4936163a4ae0`; JA `3d85d3cd55f4247c856bc98267e4bc634b3584d02c7e61740b45bb21a09b7650`; EN `c8e76e09929bf9c5304c0a260b1fe8aac6ef49bc6e5c1c3829363e89070a255f`; VI `c195c187974aeaf3e13fed91bca8e976346ccb1fd8e2f95548633d87cbb6c564`. These reviewers authored neither article in their pair, and checked the independent locale reports against the same current manuscript versions.
+Initial final report SHA-256: KO `796e56c73b0da54a14e8eebc7eed53b6a1bb47b701b902101d2f4936163a4ae0`; JA `3d85d3cd55f4247c856bc98267e4bc634b3584d02c7e61740b45bb21a09b7650`; EN `c8e76e09929bf9c5304c0a260b1fe8aac6ef49bc6e5c1c3829363e89070a255f`; VI `c195c187974aeaf3e13fed91bca8e976346ccb1fd8e2f95548633d87cbb6c564`. These reviewers authored neither article in their pair, and checked the independent locale reports against the same initial manuscript versions. KO01's later R2 version is recorded separately below.
 
 ## Current manuscripts
 
@@ -18,7 +18,7 @@ Body counts exclude headings, source tails, media captions and general-informati
 
 | Piece | Title | Body count | Inline/tail URLs | SHA-256 |
 |---|---|---:|---:|---|
-| ko-01 | 밀린 대만 교통 과태료, 집을 넘기려다 압류를 알게 된 사례 | 904 chars | 4/4 | 5735a77db0e486ba3e48d2efb0039f2a14c765ebba54766cc1de2c8f2a1ef351 |
+| ko-01 | 밀린 대만 교통 과태료, 집을 넘기려다 압류를 알게 된 사례 | 966 chars | 4/4 | c4486599d7b2ccafc1e646eeb1ad116d250f95474d1ab5d000ec8e8876bbbe50 |
 | ko-02 | 뮤직 엑스포 타이베이 공연 취소, 티켓 환불과 수수료의 범위 | 911 chars | 3/3 | 0b8854741cb02419958bee62e8d265dc6d0091eeee2a5e925d13b7159d079213 |
 | ja-03 | 日本人冒険家の百岳縦走計画、台湾の生態保護区で必要な入園許可 | 1095 chars | 5/5 | 70084c94a634de34a73332b0d8ad83ef7f116ccf48021f186e6b9d6466e81548 |
 | ja-04 | 台湾企業の設計ソフト捜査、日本本社の契約は子会社の利用をどこまで含むか | 1108 chars | 5/5 | 8f7c7734e55f882dc3844c9912010e96b071256f782047006439bf06b00815cb |
@@ -85,7 +85,7 @@ Authors and independent locale reviewers read actual openings, headings and endi
 
 Batch opening types: sourced amount (KO01), actual news fact/announcement (KO02, JA03, EN05), concrete news-linked question (JA04, EN06, VI07), and count of persons in the report (VI08). No type exceeds half the batch; no fictional anecdote is used.
 
-All eight current files pass the shared variety command with 0 FAIL. KO/JA polite-register warnings are documented and were reviewed rather than 'fixed' by switching register. Each article has at least two very short sentences; paragraph starts, citation placement, necessary contrasts and case-specific endings were manually checked under section 5. No bold, imperative checklist, invented first-person experience, promotional closing or internal production note appears in the articles.
+All eight initial handoff files passed the shared variety command with 0 FAIL; KO01's R2 result is recorded below. KO/JA polite-register warnings are documented and were reviewed rather than 'fixed' by switching register. Each article has at least two very short sentences; paragraph starts, citation placement, necessary contrasts and case-specific endings were manually checked under section 5. No bold, imperative checklist, invented first-person experience, promotional closing or internal production note appears in the articles.
 
 Internal `author: legal-ai-assistant` remains. No public author/byline or human-review claim is added. Generated-image captions identify fictional illustrations and exclude the actual event. KO/JA/EN repeat the frontmatter caption in the body because the current issue layout does not display their frontmatter caption; VI uses its rendered frontmatter caption.
 
@@ -94,9 +94,38 @@ Internal `author: legal-ai-assistant` remains. No public author/byline or human-
 - Eight separate built-in image-generation calls; no placeholder or CLI fallback. All scenes were actually viewed by the producer and independent reviewers. No identifiable people, logos or readable text were found.
 - All 16 WebP/JPEG files decode as opaque 1536×1024 images. Each pair comes from the same original. Prompts, original paths/hashes, final paths/hashes and checks are in external `work/media-manifest.json`; total final media size is 3,408,179 bytes.
 - Requested command: `npx vitest run src/lib/__tests__/issue-board-20261025.test.ts src/lib/__tests__/issue-board-20261002.test.ts src/lib/__tests__/issue-board-20260930.test.ts`.
-- Final repaired versions: 3 suites, 80 tests PASS, exit 0 (new batch 17, October 2 17, September 30 46). External evidence: `work/vitest-final.txt`.
-- All current article hashes are tied to `work/variety-final.json`; no nonzero result. `work/body-metrics.json` records lengths and exact inline/source-tail URL parity.
+- Initial handoff versions: 3 suites, 80 tests PASS, exit 0 (new batch 17, October 2 17, September 30 46). External evidence: `work/vitest-final.txt`. The R2 test run below is separate.
+- Initial article hashes are tied to `work/variety-final.json`; no nonzero result. `work/body-metrics.json` records their lengths and exact inline/source-tail URL parity. These external files were not edited for KO01 R2; its current hash and measurements are recorded below.
 - `columns.ts` maps `../images/<stem>/...` to `/images/blog/<stem>/...`; the new test checks real issue-loader results, image signatures, captions, audience/internal provenance and exclusion from the general column board.
 - Older tests remain scoped to their original batches and were not edited. The new test accepts any subset of the batch IDs listed in ALLOWED_NUMBERS, while rejecting duplicate or unexpected IDs within each locale; it does not require unshipped pieces or claim shipping approval.
 
 No production build, browser session, deployment or live publication is claimed. The operator receives the draft files, source/review evidence and exact shipping-path queue for its separate review/release procedure.
+
+## KO01 Claude Code FAIL repair — R2 (2026-10-25)
+
+Repair baseline: HEAD `a4fedad882d3aec0b91a804483c8df2c53d15392`, initially clean worktree. KO01 SHA-256 changed from `5735a77db0e486ba3e48d2efb0039f2a14c765ebba54766cc1de2c8f2a1ef351` to `c4486599d7b2ccafc1e646eeb1ad116d250f95474d1ab5d000ec8e8876bbbe50`. Only the manuscript and this audit were edited for this repair. No staging, commit or push.
+
+| Finding | Applied change and reason | Meaning retained or added |
+|---|---|---|
+| MINOR: the vehicle sentence interrupted Article 11's rule and its cases. | Moved “집행 대상은 차량만이 아닙니다.” to the paragraph end; changed “경우가 포함됩니다” to “경우가 여기에 해당합니다” and “경우가 해당합니다” to “경우입니다”. | Restores the antecedent without changing the overdue-payment, written-demand/notice, referral or property-execution conditions. |
+| NIT: Article 9(2)'s unfavorable-objection route was omitted. | Added “이유가 없다고 보면 10일 안에 의견을 붙여 직접 상급 주관기관에 보내고, 그 기관이 30일 안에 결정합니다.” after the favorable-objection route. | Adds the statutory 10-day transmission with an opinion and the direct superior competent authority's 30-day decision. Immediate suspension/cancellation/correction for a well-founded objection and Article 9(3)'s separate suspension rule remain unchanged. |
+| NIT: body length was near the lower bound. | The substantive addition raises the measured body from 904 to 966 characters under the method above. | No filler, headline, caption or disclaimer was added to reach the length. |
+
+Sources independently reopened on October 25:
+
+- [UDN, October 23 at 11:15](https://udn.com/news/story/7321/9833088): 24 violations totaling more than NT$150,000; initial recovery of several thousand dollars from deposits; repeated notices; a mid-October property-transfer report; attachment registration; payment on October 16. Existing manuscript facts remain supported.
+- MOJ Administrative Execution Act [Article 11](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030023&flno=11), [Article 3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030023&flno=3), and [Article 9](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030023&flno=9): all three Article 11(1) cases, the necessity limit, objection eligibility/timing, both Article 9(2) routes and Article 9(3)'s exception/discretion were checked. The reviewer's corrections are supported; no rebuttal is warranted.
+- MOJ [full current text](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030023) and [history](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=A0030023): displayed last amendment February 3, 2010; the history records the January 1, 2012 transfer of the relevant execution-office functions to branches. No pending commencement is shown for the cited provisions. The database's displayed consolidation cutoff is October 16, 2026; this is not an exhaustive post-cutoff gazette search.
+
+Current-version verification:
+
+- `python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check src/content/issues/ko/ISSUE-20261025-01-taiwan-unpaid-traffic-fines-property-seizure.md --lang ko`: exit 0, 0 FAIL; 22 sentences, CV 0.452, very-short share 0.091, run3 0.05, repeated paragraph openers 0, citation endings 0, contrast 0, caveat 1, question 1. The 96% 합니다체-ending warning was manually reviewed. Without `--lang ko`, the checker could not infer the issue-directory locale and exited 2; that attempt was not counted as a pass.
+- `node node_modules/vitest/vitest.mjs run src/lib/__tests__/issue-board-20261025.test.ts --no-cache --configLoader runner`: 1 suite, 17 tests PASS, exit 0. Existing metadata, media and issue-loader checks were used; no test was changed or added for the prose repair.
+- Frontmatter, all eight source-link occurrences and the 4/4 unique inline/tail URL sets are unchanged. The JPEG was visually inspected: house key and closed folder on a table; no faces, readable text or logos. Both image files retain their baseline bytes.
+- Exact replacement comparison reproduces the current manuscript from the baseline using only the documented repair; `git diff --check` passes. HEAD and the index match the repair baseline, and Git reports changes only to KO01 and this audit. Both images and the batch test match their baseline SHA-256 hashes.
+- Section 5 self-check: the sourced-amount opening remains distinct from the actual three Korean issue comparators named above; two very short sentences remain; no repeated paragraph opener or consecutive claim/caveat pattern; a citation-free paragraph remains; no formulaic contrast, invented experience, bold or imperative checklist. The ending remains tied to matching receipts with the execution notice, and all existing conditions, amounts and disclosures are preserved.
+- First-two-paragraph deletion check: removing the first paragraph loses the amount, agency, transfer trigger, prior recovery/notices and payment result. Removing any of the second prose paragraph's statutory routes loses a distinct condition; the moved vehicle sentence supplies the property-scope clarification after those routes. The opening, headings and ending were reread against the October 24 house-tax and exhibition articles and the October 22 hidden-camera article, using repository content rather than assumed live ordering.
+- Independent AI Korean repair reviewer `ko01_r2_locale` returned PASS on the exact R2 SHA-256 above, with no unresolved MAJOR/MINOR or additional repair. The reviewer did not author or edit the article and verified the changed provisions against live MOJ text. Its response is recorded here rather than in an out-of-scope report file.
+- Independent AI final repair reviewer `ko01_r2_final` also returned PASS on that exact SHA-256 after reading the actual diff, affected FAQ/conclusions, live Articles 11/9 and the official history. It authored neither the article nor the repair, confirmed the separate locale review and reported no remaining MAJOR/MINOR. It relied on the parent's automated-check results without claiming to rerun them.
+
+This is a local manuscript repair and evidence update. The requested Claude Code re-review remains pending; no browser, production build, release or publication result is asserted.

@@ -514,3 +514,4 @@
 - 10-26 00:47 KST 쉼: 디스크 부족(1.1Gi 남음, 100%). 00:41 sync 실패(No space left on device), 앞 회차엔 shallow 충돌도 있었음. 범위 밖 삭제 안 함. HANDOFF-air에 알림 1줄. 공간 확보 전까지 fetch 감시·쓰기 중지.
 - 10-26 00:57 KST 쉼 유지: 디스크 여전히 1.1Gi(100%). 00:46 Air push는 성공(5e0f6c1, 알림 반영). ref 재정렬(5d14f20). Studio 변화 grok NOTES뿐, Astra 판정 대기. 백그라운드 감시는 띄우지 않음.
 - 10-26 01:06 KST 정정: 00:57 줄의 '00:46 push에 알림 반영'은 틀림 — 5e0f6c1은 NOTES 1줄만 담았고 00:47 HANDOFF-air 알림은 아직 미전송(01:01 회차도 push 줄 없음, Studio 01:00 커밋 뒤 얕은 fetch 거부로 보임). 01:06 ref 재정렬(8a02625) 후 다음 회차 확인 중. 디스크 1.3Gi(100%).
+- 10-26 01:16 KST 쉼 유지: 디스크 2.3Gi(100%), 아직 부족. 01:11 Air push로 HANDOFF-air 알림 원격 반영 확인(1aa3446). ref 재정렬(33cfb44). Studio 변화 grok NOTES뿐, Astra 판정 대기.

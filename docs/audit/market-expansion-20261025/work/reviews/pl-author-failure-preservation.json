@@ -1,0 +1,8 @@
+{
+  "kind": "failed-draft-byte-reconstruction",
+  "reason": "Attempted pre-repair backup SHA assertion detected concurrent caption normalization; source file was not reset. Earlier preserved baseline plus exact recorded repair1 paragraph reconstructs the actual measured failure byte-for-byte.",
+  "path": "work/reviews/pl-author-941-before-metric-r2-FAIL.md",
+  "sha256": "ae9c9d62d4c29c9d3924d0bd8eb077730becbcb3c03aa1db74b7887812c7078f",
+  "matchesMeasuredFailure": "work/reviews/pl-author-metric-r1.json records[1]",
+  "concurrentChangePreserved": "featured_image_caption normalized to Scena fikcyjna in bothcurrentarticles"
+}

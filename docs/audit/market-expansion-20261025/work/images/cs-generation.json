@@ -1,0 +1,30 @@
+{
+  "mode": "native image_gen",
+  "generatedAt": "2026-10-25",
+  "assets": [
+    {
+      "id": 942,
+      "prompt": "Use case: photorealistic-natural. Asset type: wide editorial hero for a Czech-language Taiwan commercial-law article about whether an emailed purchase order forms a contract before a signed agreement. Create a restrained realistic still-life photograph in a small industrial supplier's office: a closed thin laptop turned diagonally, an unmarked folder with two blank sheets partly exposed, a steel precision coupling and two small machined metal components on a walnut desk. A simple pen rests beside the sheets without any signature. Gentle side-window daylight, tactile paper and brushed-steel surfaces, quiet muted blue and warm wood palette. Landscape 1536x1024 composition, camera from an elevated oblique angle, objects grouped naturally with breathing space. Entire scene fictional. No people, no faces, no letters or readable text, no numbers, no logo, no flag, no stamp, no signature, no identity documents, no courtroom symbols, no watermark. No screen UI.",
+      "originalPath": "/Users/son7/.codex/generated_images/01a17325-22c7-71a1-b618-8b4b17533937/exec-f52bb02d-0f39-4c63-be58-6940736e2681.png",
+      "finalPath": "repo/public/images/columns/942-market-expansion-20261025.webp",
+      "inspection": "Generated image displayed and actually inspected: fictional still life, no people/faces, readable text, logo, flag, identity document or official evidence; subject matches column; assets visually distinct.",
+      "originalSha256": "be5b68fb7e6cb1380f105a2d459a3d958a7d5f6529d66d19ba71b62bbca9e1d8",
+      "finalSha256": "fbe6798bf66fccdd74d1cf80421188c1da0fb122de6f0ad77625bf4491f46543",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 164852
+    },
+    {
+      "id": 943,
+      "prompt": "Use case: photorealistic-natural. Asset type: wide editorial hero for a Czech-language Taiwan patent-law article about revealing a prototype at an industrial exhibition before filing. Create a restrained realistic editorial photograph of a fictional precision-engineering exhibition booth before opening: a small innovative-looking brushed aluminum mechanical prototype with a red-brown ceramic insert on a pale stone pedestal, under a clear protective acrylic cover, with an empty dark transport case set behind it. Soft-focus spacious exhibition hall and warm ceiling lights in the background. Three-quarter close view at pedestal level, cool gray floor and muted copper accents, tactile materials, subtle natural imperfections, landscape 1536x1024. The design must be generic and fictional, not copying any identifiable product. No people, faces, readable text, name badges, signage, labels, numbers, flags, logos, official certificates, court evidence, identity documents or watermark.",
+      "originalPath": "/Users/son7/.codex/generated_images/01a17325-22c7-71a1-b618-8b4b17533937/exec-ccd6f2f4-5344-4d8a-807c-cdd103be85f9.png",
+      "finalPath": "repo/public/images/columns/943-market-expansion-20261025.webp",
+      "inspection": "Generated image displayed and actually inspected: fictional still life, no people/faces, readable text, logo, flag, identity document or official evidence; subject matches column; assets visually distinct.",
+      "originalSha256": "8c2436af9f56a73b2bc3204dafafb0ffe926032405b98f9705c1d1caef72e7c0",
+      "finalSha256": "d28c66a04807a5d524c06bd2ee1912a2c23b5bc60a6ebeaa8c6baec5c2ec35d0",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 130824
+    }
+  ]
+}

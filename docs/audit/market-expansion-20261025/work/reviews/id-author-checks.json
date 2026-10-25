@@ -1,0 +1,122 @@
+{
+  "checkedAt": "2026-10-25T13:22:58.117302+00:00",
+  "status": "AUTHOR_SELF_CHECK_ONLY",
+  "originalSharedCli": true,
+  "records": [
+    {
+      "file": "src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md",
+      "sha256": "8f8f4b9059df25cfaf8d29cb6fe73c7a9b462ef37f3876bf6a36becbfa9221db",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md",
+        "--lang",
+        "id"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md [id] sentences=51 mean=14.6 cv=0.468 short=0.235 run3=0.041 opener_rep=0.118 cite_end=0.0 cite_para=0.412 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "inlineOfficialUrls": [
+        "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb396b1b5b30196b414768a0b43",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=15",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=21",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=31",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=34",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=36",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=59",
+        "https://www.mol.gov.tw/1607/28162/28166/28268/28270/29101/",
+        "https://www.wda.gov.tw/News_Content.aspx?n=31&s=19455"
+      ],
+      "sourceListMissingUrls": [],
+      "forbiddenBold": false,
+      "leadingDuplicateH1": false,
+      "firstTwoParagraphs": [
+        "Majikan tidak boleh memberhentikan pengasuh rumah tangga karena hamil. [Pasal 11 Undang-Undang Kesetaraan Gender dalam Pekerjaan Taiwan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=11) juga melarang klausul yang sejak awal mewajibkan pekerja berhenti atau mengambil cuti tanpa gaji apabila hamil. Pemutusan kontrak yang melanggar ketentuan itu tidak berlaku.",
+        "Pekerja migran rumah tangga tidak tercakup oleh Undang-Undang Standar Ketenagakerjaan maupun Undang-Undang Asuransi Ketenagakerjaan Taiwan (Employment Insurance Act, 就業保險法). Hal ini ditegaskan Badan Pengembangan Tenaga Kerja Taiwan (WDA) dalam [klarifikasi 13 Oktober 2026](https://www.wda.gov.tw/News_Content.aspx?n=31&s=19455). Cuti melahirkan mereka pada dasarnya tanpa gaji."
+      ]
+    },
+    {
+      "file": "src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md",
+      "sha256": "d9b6f376d4eae90d11e8cc583818f32c56d0898a5457594566e617fa38e7dbaf",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md",
+        "--lang",
+        "id"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md [id] sentences=46 mean=14.8 cv=0.46 short=0.217 run3=0.023 opener_rep=0.071 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "inlineOfficialUrls": [
+        "https://fw.wda.gov.tw/wda-employer/home/no-work-illegally/no-work-illegally-file/2c95efb395ab11680195ac17c09d0157",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=57",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=59",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=72",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=73"
+      ],
+      "sourceListMissingUrls": [],
+      "forbiddenBold": false,
+      "leadingDuplicateH1": false,
+      "firstTwoParagraphs": [
+        "Apakah pekerjaan di warung milik majikan masih termasuk tugas pengasuh? [Panduan WDA berbahasa Indonesia](https://fw.wda.gov.tw/wda-employer/home/no-work-illegally/no-work-illegally-file/2c95efb395ab11680195ac17c09d0157) menyebut secara khusus bahwa pekerja migran rumah tangga tidak boleh bekerja di toko atau kedai makanan majikan. Izin untuk merawat seseorang tidak meluas karena usaha itu dimiliki keluarga yang sama.",
+        "Majikan dilarang menyuruh pekerja asing melakukan pekerjaan di luar izin menurut [Pasal 57 angka 3 Undang-Undang Layanan Ketenagakerjaan Taiwan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=57). Persetujuan majikan saja tidak cukup. Ketika keluarga menawarkan tambahan uang untuk membantu di warung, pekerjaan yang diminta tetap perlu dicocokkan dengan izin yang diberikan oleh Kementerian Ketenagakerjaan."
+      ]
+    }
+  ],
+  "draftIterationHistory": [
+    {
+      "id": 924,
+      "stage": "initial",
+      "exitCode": 0,
+      "cv": 0.498
+    },
+    {
+      "id": 925,
+      "stage": "initial",
+      "exitCode": 1,
+      "failure": "len_cv=0.387 < 0.45"
+    },
+    {
+      "id": 925,
+      "stage": "connected statutory sentences",
+      "exitCode": 1,
+      "failure": "top_opener_n=3; CV0.460 passed"
+    },
+    {
+      "id": 925,
+      "stage": "paragraph opener clarified as Majikan",
+      "exitCode": 0,
+      "failureCount": 0
+    },
+    {
+      "id": 924,
+      "stage": "opening deletion test concrete unpaid-leave distinction",
+      "exitCode": 0,
+      "cv": 0.469
+    }
+  ],
+  "independentReviewRepairs": [
+    {
+      "repairNumber": 1,
+      "stage": "independent final legal terminology repair",
+      "id": 924,
+      "requestedBy": "/root/expand_final_asia",
+      "localeAgreement": "/root/expand_locale_id",
+      "timestamp": "2026-10-25T13:22:58.117302+00:00",
+      "previousSha256": "b07ba325b1496e07901e5ccd79ae98a0066bb7add927257deae9db7c4557e85a",
+      "currentSha256": "8f8f4b9059df25cfaf8d29cb6fe73c7a9b462ef37f3876bf6a36becbfa9221db",
+      "change": "Add Taiwan (Employment Insurance Act, 就業保險法) at first mention only, distinguishing Employment Insurance Act from labor or occupational insurance.",
+      "basis": "WDA 2026-10-13 clarification, https://www.wda.gov.tw/News_Content.aspx?n=31&s=19455",
+      "unchanged925Sha256": "d9b6f376d4eae90d11e8cc583818f32c56d0898a5457594566e617fa38e7dbaf",
+      "originalSharedCliExitCode": 0,
+      "failureCount": 0,
+      "independentRereview": "Pending exact-SHA locale and final legal confirmation."
+    }
+  ]
+}

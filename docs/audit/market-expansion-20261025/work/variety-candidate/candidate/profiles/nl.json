@@ -1,0 +1,233 @@
+{
+  "locale": "nl",
+  "directory": "columns-nl",
+  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:[0-9]+[.)][^\\S\\r\\n]+)?(?:Referenties|Bronnen|Officiële\\s+bronnen|Geraadpleegde\\s+bronnen|Rechtsbronnen)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
+  "abbreviations": [
+    "dr",
+    "drs",
+    "mr",
+    "ir",
+    "ing",
+    "prof",
+    "dhr",
+    "mevr",
+    "art",
+    "nr",
+    "blz",
+    "p",
+    "pp",
+    "bijv",
+    "ca",
+    "enz",
+    "etc",
+    "e.d",
+    "d.w.z",
+    "m.a.w",
+    "i.p.v",
+    "o.a",
+    "a.u.b",
+    "nl"
+  ],
+  "terminal_abbreviations": [
+    "enz",
+    "etc",
+    "e.d"
+  ],
+  "join_hyphens": false,
+  "citation_pattern": "(?i:\\b(?:artikel(?:en)?|art\\.?|lid|leden)\\s*\\d+)",
+  "contrast_patterns": [
+    "(?i:\\bniet\\b(?!\\s+alleen\\b)[^.!?\\n]{0,160}\\bmaar\\b)",
+    "(?i:\\bgeen\\b[^.!?\\n]{0,160}\\bmaar\\b)",
+    "(?i:\\bin\\s+plaats\\s+van\\b)",
+    "(?i:\\banders\\s+dan\\b)"
+  ],
+  "caveat_pattern": "(?i:^[\\s“\"‘\\x27(\\[]*(?:Echter|Toch|Desondanks|Evenwel)\\b)",
+  "hypo_pattern": "(?i:^[\\s“\"‘\\x27(\\[]*(?:Stel\\s+dat|Veronderstel|Neem\\s+bijvoorbeeld|Een\\s+fictief\\s+voorbeeld)\\b)",
+  "formula_close_pattern": "(?i:\\b(?:algemene\\s+informatie|Ieder\\s+geval\\s+is\\s+anders|Ons\\s+kantoor\\s+kan\\s+u\\s+helpen|e-mail)\\b)",
+  "sentence_fixtures": [
+    {
+      "text": "De envelop ligt op tafel. De doos is open.",
+      "sentences": [
+        "De envelop ligt op tafel.",
+        "De doos is open."
+      ]
+    },
+    {
+      "text": "Waar ligt het potlood? Hier!",
+      "sentences": [
+        "Waar ligt het potlood?",
+        "Hier!"
+      ]
+    },
+    {
+      "text": "Dr. De Vries leest het blad. Mevr. Jansen sluit de doos.",
+      "sentences": [
+        "Dr. De Vries leest het blad.",
+        "Mevr. Jansen sluit de doos."
+      ]
+    },
+    {
+      "text": "Op blz. 7 staat een tekening. Art. 3 is slechts een fictief etiket.",
+      "sentences": [
+        "Op blz. 7 staat een tekening.",
+        "Art. 3 is slechts een fictief etiket."
+      ]
+    },
+    {
+      "text": "De fictieve lijst vermeldt 1.250,50 euro. Er staat geen handtekening.",
+      "sentences": [
+        "De fictieve lijst vermeldt 1.250,50 euro.",
+        "Er staat geen handtekening."
+      ]
+    },
+    {
+      "text": "In de doos liggen papier, potloden enz. De schaar ligt erbuiten.",
+      "sentences": [
+        "In de doos liggen papier, potloden enz.",
+        "De schaar ligt erbuiten."
+      ]
+    },
+    {
+      "text": "Er liggen enveloppen e.d. De doos blijft open.",
+      "sentences": [
+        "Er liggen enveloppen e.d.",
+        "De doos blijft open."
+      ]
+    },
+    {
+      "text": "“Waar is het blad?” vraagt Anna. Joost wijst naar de tafel.",
+      "sentences": [
+        "“Waar is het blad?” vraagt Anna.",
+        "Joost wijst naar de tafel."
+      ]
+    },
+    {
+      "text": "Dit is een kopie, d.w.z. een tweede exemplaar. Het origineel blijft hier.",
+      "sentences": [
+        "Dit is een kopie, d.w.z. een tweede exemplaar.",
+        "Het origineel blijft hier."
+      ]
+    }
+  ],
+  "word_fixtures": [
+    {
+      "text": "De aansprakelijkheidsverzekering staat vermeld.",
+      "tokens": [
+        "De",
+        "aansprakelijkheidsverzekering",
+        "staat",
+        "vermeld"
+      ]
+    },
+    {
+      "text": "O’Neils e-mail bevat één bijlage.",
+      "tokens": [
+        "O’Neils",
+        "e",
+        "mail",
+        "bevat",
+        "één",
+        "bijlage"
+      ]
+    },
+    {
+      "text": "€1.250,50; 3-5 bladen.",
+      "tokens": [
+        "1.250,50",
+        "3",
+        "5",
+        "bladen"
+      ]
+    },
+    {
+      "text": "Anna's kopie ligt hier.",
+      "tokens": [
+        "Anna's",
+        "kopie",
+        "ligt",
+        "hier"
+      ]
+    },
+    {
+      "text": "Dr. Jansen gebruikt A4.",
+      "tokens": [
+        "Dr",
+        "Jansen",
+        "gebruikt",
+        "A4"
+      ]
+    },
+    {
+      "text": "Eén wit vel.",
+      "tokens": [
+        "Eén",
+        "wit",
+        "vel"
+      ]
+    }
+  ],
+  "source_positive": [
+    "## Bronnen",
+    "### Officiële bronnen:",
+    "## 7. Geraadpleegde bronnen",
+    "## RECHTSBRONNEN ##"
+  ],
+  "source_negative": [
+    "## Bronnen van financiering",
+    "## De bron van het probleem",
+    "Bronnen",
+    "## Bronnen en analyse"
+  ],
+  "rhetorical_fixtures": [
+    [
+      "contrast",
+      "Het is niet rood maar blauw.",
+      1
+    ],
+    [
+      "contrast",
+      "Er ligt niet alleen papier maar ook een potlood.",
+      0
+    ],
+    [
+      "contrast",
+      "Hij brengt een doos in plaats van een envelop.",
+      1
+    ],
+    [
+      "contrast",
+      "De envelop ligt op tafel.",
+      0
+    ],
+    [
+      "caveat",
+      "Toch blijft de doos open.",
+      1
+    ],
+    [
+      "caveat",
+      "De doos is open, toch blijft de envelop dicht.",
+      0
+    ],
+    [
+      "hypo",
+      "Stel dat de doos rood is.",
+      1
+    ],
+    [
+      "hypo",
+      "De rode doos staat op tafel.",
+      0
+    ],
+    [
+      "formula",
+      "Dit artikel bevat algemene informatie.",
+      1
+    ],
+    [
+      "formula",
+      "De laatste kopie zit in de tweede envelop.",
+      0
+    ]
+  ]
+}

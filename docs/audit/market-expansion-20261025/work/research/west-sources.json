@@ -1,0 +1,1050 @@
+{
+  "research_date": "2026-10-25",
+  "owner": "/root/market_west_europe",
+  "scope": "Read-only editorial acquisition hypothesis; six article briefs, twelve locales screened. No publication or contact performed.",
+  "selected_markets": [
+    {
+      "locale": "nl",
+      "country": "Netherlands"
+    },
+    {
+      "locale": "fr",
+      "country": "France"
+    },
+    {
+      "locale": "pt",
+      "country": "Brazil"
+    }
+  ],
+  "screening": [
+    {
+      "locale": "de",
+      "country": "Germany",
+      "existing_columns": 26,
+      "selected": false,
+      "source_ids": [
+        "M-DE"
+      ],
+      "buyer": "Machine/precision-equipment supplier",
+      "trigger": "Taiwan customer order, FAT/SAT, continuing parts service",
+      "gap": "Industrial links strong, but DE679–683 already cover balance/defects/tooling/CAD and judgment enforcement. Later examine a fresh Taiwan procurement or service continuity decision with its own sources.",
+      "rationale": "Strong market evidence; defer this batch for topic inventory overlap, not weak country demand."
+    },
+    {
+      "locale": "fr",
+      "country": "France",
+      "existing_columns": 29,
+      "selected": true,
+      "source_ids": [
+        "M-FR",
+        "M-FR-WINE"
+      ],
+      "buyer": "Cosmetic brand export manager and winery/merchant",
+      "trigger": "Importer replacement; approval of Taiwan wine online campaign",
+      "gap": "FR011 general PIF/entry, FR676 exit inventory/accounts; no focused PIF access handover or wine electronic-order boundary found.",
+      "rationale": "Two distinct current regulatory decisions, official commercial link and verified firm PIF/contract service fit."
+    },
+    {
+      "locale": "es",
+      "country": "Spain; Mexico as distinct alternative",
+      "existing_columns": 46,
+      "selected": false,
+      "source_ids": [
+        "M-ES",
+        "M-MX"
+      ],
+      "buyer": "Spanish R&D company; Mexican buyer of Taiwan equipment",
+      "trigger": "2026 TSIP collaboration or machinery procurement",
+      "gap": "Spain old articles extensive but R&D milestone/data terms remain plausible. Mexico is underrepresented; do not reuse Spain document/visa assumptions.",
+      "rationale": "Strong backlog candidate. Current selected batch already has technology/licensing topics; another article requires a distinct contractual decision and Mexico-specific legal source review."
+    },
+    {
+      "locale": "pt",
+      "country": "Brazil; Portugal compared separately",
+      "existing_columns": 26,
+      "selected": true,
+      "source_ids": [
+        "M-BR",
+        "M-PT"
+      ],
+      "buyer": "Brazilian coffee exporter/roaster and Taiwan importer",
+      "trigger": "Failed import inspection notice; organic packaging approval before shipment",
+      "gap": "PT694–698 explicitly Portugal, plus general ARC704–706. Brazilian coffee supply chain and organic status are new.",
+      "rationale": "Actual trade-promotion participation and two separated Taiwan legal decisions; not a countrywide legal-demand estimate."
+    },
+    {
+      "locale": "it",
+      "country": "Italy",
+      "existing_columns": 26,
+      "selected": false,
+      "source_ids": [
+        "M-IT"
+      ],
+      "buyer": "Industrial equipment/OEM supplier",
+      "trigger": "Taiwan contract/project or local distributor",
+      "gap": "IT684–688 already cover installation balance, trademark, molds/drawings, inheritance and criminal summons.",
+      "rationale": "Concrete business network; defer pending stronger distinct project-level trigger and primary legal brief."
+    },
+    {
+      "locale": "nl",
+      "country": "Netherlands; Belgium separately compared",
+      "existing_columns": 21,
+      "selected": true,
+      "source_ids": [
+        "M-NL",
+        "M-BE"
+      ],
+      "buyer": "Dutch equipment service manager and credit/contract manager",
+      "trigger": "Three-week installation becomes six weeks; delivery before full payment",
+      "gap": "NL834–836 cover entity/first hire/working holiday. Contracted installation personnel and title-registration risk absent. Finalglobal scan found JA135 detailed same route; NL934 requires narrow schedule-change focus and editorial decision.",
+      "rationale": "Strong official equipment-export link plus specific contract/permit decisions. Belgium not silently treated as Netherlands."
+    },
+    {
+      "locale": "ca",
+      "country": "Catalonia, Spain",
+      "existing_columns": 21,
+      "selected": false,
+      "source_ids": [
+        "M-CA",
+        "M-CA-2026",
+        "M-ES"
+      ],
+      "buyer": "Catalan food/cosmetic exporter",
+      "trigger": "Taiwan importer compliance and distribution agreement",
+      "gap": "CA852–854 cover trademark/work/family. Sector-based product-import obligations remain plausible.",
+      "rationale": "Official Catalan exporter presence and Taiwan product mix confirmed with older trade year; this batch FR/BR has adjacent import subjects. Keep regional identity and Spain jurisdiction explicit."
+    },
+    {
+      "locale": "sv",
+      "country": "Sweden",
+      "existing_columns": 21,
+      "selected": false,
+      "source_ids": [
+        "M-SE"
+      ],
+      "buyer": "Swedish operating company in Taiwan",
+      "trigger": "Commercial operating/distribution/employment changes",
+      "gap": "SV837–839 entity/work/inheritance. A concrete buyer decision beyond generic business optimism needs sourcing.",
+      "rationale": "Current official survey confirms operating companies; no legal-problem frequency or buyer-role split measured. Defer with evidence limitations."
+    },
+    {
+      "locale": "da",
+      "country": "Denmark",
+      "existing_columns": 21,
+      "selected": false,
+      "source_ids": [
+        "M-DA"
+      ],
+      "buyer": "Danish equipment/energy-project supplier",
+      "trigger": "Project execution/change order or local operating contract",
+      "gap": "DA840–842 entity, wind-component defects, engineer work/family already cover immediate nearby concerns.",
+      "rationale": "High cumulative investment connection but not annual legal demand; defer until a genuinely new project clause/administrative trigger is verified."
+    },
+    {
+      "locale": "nb",
+      "country": "Norway",
+      "existing_columns": 21,
+      "selected": false,
+      "source_ids": [
+        "M-NO"
+      ],
+      "buyer": "Norwegian seafood producer/exporter",
+      "trigger": "Taiwan producer listing and health-certificate readiness",
+      "gap": "NB843 unpaid seafood invoice,844 work,845 accident; registration/traceability could be new.",
+      "rationale": "Strong actionable official2026 guidance; backlog priority. Current batch BR also food but separate registration topic merits later full Taiwan legal/source review; no expired deadline reuse."
+    },
+    {
+      "locale": "fi",
+      "country": "Finland",
+      "existing_columns": 21,
+      "selected": false,
+      "source_ids": [
+        "M-FI"
+      ],
+      "buyer": "Finnish technology/education enterprise",
+      "trigger": "Taiwan collaboration or operating contract",
+      "gap": "FI846–848 distribution exit/work/family/inheritance; distinct technology contract or education service is possible.",
+      "rationale": "Official2026 commercial-cooperation signal exists but buyer-level trigger weaker than selected markets. Do not claim prospective treaty or flights are effective."
+    },
+    {
+      "locale": "is",
+      "country": "Iceland",
+      "existing_columns": 21,
+      "selected": false,
+      "source_ids": [
+        "M-IS"
+      ],
+      "buyer": "Icelandic goods exporter",
+      "trigger": "Taiwan shipment and importer relationship",
+      "gap": "IS849–851 work,accident,unpaid shipment; specific product regulation could add value if sector evidence improved.",
+      "rationale": "Confirmed trade but only partial2025 country data located and product-direction ambiguity. Defer; small-language inventory is not itself market proof."
+    }
+  ],
+  "briefs": [
+    {
+      "id": 934,
+      "locale": "nl",
+      "country": "Netherlands",
+      "slug": "dutch-technicians-taiwan-installation-contract-work-permit",
+      "source_ids": [
+        "M-NL",
+        "L-NL-ESA",
+        "L-NL-PERMIT",
+        "L-NL-QUAL",
+        "G-NL-WDA",
+        "G-NL-DOCS",
+        "G-NL-BOCA"
+      ],
+      "decision": "Plan/apply for contracted technicians when installation stay changes and repeated visits affect qualification relief.",
+      "overlap_warning": {
+        "file": "src/content/columns-ja/135-japanese-equipment-maker-engineers-taiwan-work-permit.md",
+        "strength": "High legal-framework overlap discovered in final global audit",
+        "difference_required": "Only installation schedule change and contract coordination/responsibility, not generic permit guide",
+        "notified": [
+          "/root",
+          "/root/expand_author_nl",
+          "/root/expand_final_west"
+        ]
+      }
+    },
+    {
+      "id": 935,
+      "locale": "nl",
+      "country": "Netherlands",
+      "slug": "dutch-machinery-taiwan-retention-title-registration",
+      "source_ids": [
+        "M-NL",
+        "L-NL-CHATTEL",
+        "G-NL-REGISTER"
+      ],
+      "decision": "Check written conditional sale, registration/term and identifiable machine before third-party rights intervene."
+    },
+    {
+      "id": 936,
+      "locale": "fr",
+      "country": "France",
+      "slug": "french-cosmetics-taiwan-pif-importer-handover",
+      "source_ids": [
+        "M-FR",
+        "L-FR-COSMETIC",
+        "L-FR-PIF",
+        "G-FR-PHASE",
+        "G-FR-PIF-QA",
+        "G-FR-NOTIFY-QA"
+      ],
+      "decision": "Secure lawful continuing PIF access and new responsible-importer registration at distribution change."
+    },
+    {
+      "id": 937,
+      "locale": "fr",
+      "country": "France",
+      "slug": "french-wine-taiwan-online-orders-advertising",
+      "source_ids": [
+        "M-FR-WINE",
+        "L-FR-ALCOHOL",
+        "G-FR-ALCOHOL-FAQ"
+      ],
+      "decision": "Separate permissible advertising review from prohibited electronic ordering flow before approving campaign."
+    },
+    {
+      "id": 938,
+      "locale": "pt",
+      "country": "Brazil",
+      "slug": "brazil-coffee-taiwan-border-reinspection",
+      "source_ids": [
+        "M-BR",
+        "L-BR-FOOD"
+      ],
+      "decision": "Locate actual official notice/service date and original-sample retest route before return/storage decisions."
+    },
+    {
+      "id": 939,
+      "locale": "pt",
+      "country": "Brazil",
+      "slug": "brazil-organic-coffee-taiwan-label-certification",
+      "source_ids": [
+        "M-BR",
+        "L-BR-ORGANIC",
+        "G-BR-AFA",
+        "G-BR-LOOKUP",
+        "G-BR-MAPA"
+      ],
+      "decision": "Verify which Article17 organic pathway actually covers certificate/product/territory before printing Taiwan label."
+    }
+  ],
+  "sources": [
+    {
+      "id": "F-CONTACT",
+      "title": "tseng-law contact",
+      "url": "https://tseng-law.com/en/contact",
+      "type": "firm_primary",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Live page read 2026-10-25",
+      "claim": "Official email wei@hoveringlaw.com.tw; consultation languages Chinese, English, Korean, Japanese; initial short Taiwan-related facts and deadline.",
+      "limits": "Lower-page promise to reply in reader language conflicts with explicit four-language limit. Do not promise NL/FR/PT consultation.",
+      "evidence": "turn1291view0"
+    },
+    {
+      "id": "F-SERVICES",
+      "title": "tseng-law services",
+      "url": "https://tseng-law.com/en/services",
+      "type": "firm_primary",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Live page read",
+      "claim": "Contract review/commercial disputes, corporate legal advisory, employment/foreign-person work and cosmetics PIF-related legal services appear.",
+      "limits": "No foreign-law licence, foreign office, guaranteed acceptance or in-house technical certification verified.",
+      "evidence": "turn1291view1"
+    },
+    {
+      "id": "M-NL",
+      "title": "CBS: Meer export naar Taiwan, minder naar de VS en China",
+      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/15/meer-export-naar-taiwan-minder-naar-de-vs-en-china",
+      "type": "official_statistics",
+      "jurisdiction": "Netherlands",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Published 2026-04-08; provisional 2025 observations",
+      "claim": "Exports to Taiwan rose by EUR 2.6 billion in 2025, with specialized chipmaking machinery a principal driver.",
+      "limits": "2025 provisional trade data, not 2026 sales or legal-demand measurement.",
+      "published": "2026-04-08",
+      "data_period": "2025",
+      "evidence": "westFind1"
+    },
+    {
+      "id": "M-FR",
+      "title": "DG Trésor: Relations bilatérales Taiwan",
+      "url": "https://www.tresor.economie.gouv.fr/Pays/TW/relations-bilatreales",
+      "type": "official_market_analysis",
+      "jurisdiction": "France",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Published 2026-09-02; 2025 trade figures",
+      "claim": "French goods exports to Taiwan EUR 3.3 billion in 2025, down 0.2%; imports EUR 4.2 billion, up 0.4%.",
+      "limits": "Does not show rapid general export growth or quantify PIF disputes. Do not use unopened attached-PDF sector figures.",
+      "published": "2026-09-02",
+      "data_period": "2025",
+      "evidence": "westFind1"
+    },
+    {
+      "id": "M-FR-WINE",
+      "title": "Business France: Tastin'France Taipei 2026",
+      "url": "https://www.marketplace.businessfrance.fr/event/index/event/id/1271/",
+      "type": "official_export_promotion_event",
+      "jurisdiction": "France",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Event dated 2026-05-19, now past",
+      "claim": "Professional Taiwan wine/spirits tasting promoted for French producers and merchants demonstrates an actual commercial channel.",
+      "limits": "Event listing does not establish realized transactions, market share or legal inquiries.",
+      "event_date": "2026-05-19",
+      "evidence": "westScreenOpen10"
+    },
+    {
+      "id": "M-BR",
+      "title": "BSCA/ApexBrasil: Brazil. The Coffee Nation Taiwan participation",
+      "url": "https://www.bsca.com.br/acoes-coreia-taiwan-us-94-milhoes/",
+      "type": "industry_organizer_primary",
+      "jurisdiction": "Brazil",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Published 2025-12-18; reports 2025 events",
+      "claim": "The BSCA project with ApexBrasil brought 31 Brazilian specialty-coffee businesspeople to Taipei's Taiwan International Coffee Show on 2025-11-14–17.",
+      "limits": "Headline USD 9.435m is projected combined Korea+Taiwan business, not realized Taiwan trade. Even Taiwan-only USD 4.033m is projected through December 2026; omit revenue expectations.",
+      "published": "2025-12-18",
+      "data_period": "2025-11-14/2025-11-17",
+      "evidence": "westFinishMore0"
+    },
+    {
+      "id": "M-PT",
+      "title": "Taiwan MOEA: Taiwan-Portugal Economic Relations",
+      "url": "https://www.trade.gov.tw/english/Pages/Detail.aspx?nodeID=4639&pid=744602",
+      "type": "official_trade_statistics",
+      "jurisdiction": "Taiwan/Portugal",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Published 2026-01-13; 2025 trade",
+      "claim": "Bilateral trade USD 761m; Taiwan imports from Portugal USD 197m, down 5.74%; cumulative Portuguese investment 64 cases/USD241m by 2025.",
+      "limits": "Different reporter statistics in a Portuguese news repost conflict; do not combine into an asserted growth trend.",
+      "published": "2026-01-13",
+      "data_period": "2025",
+      "evidence": "westFinalFetch2"
+    },
+    {
+      "id": "M-DE",
+      "title": "GTAI Taiwan economic outlook",
+      "url": "https://www.gtai.de/de/trade/taiwan-wirtschaft/wirtschaftsausblick",
+      "type": "official_agency_analysis",
+      "jurisdiction": "Germany",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Published 2026-06-15; mixes observed data and forecast",
+      "claim": "Semiconductor equipment and precision instruments are concrete German industrial export links to Taiwan.",
+      "limits": "Forecast economic growth is not realized growth. Existing five industrial transaction articles substantially cover nearby buyer problems.",
+      "published": "2026-06-15",
+      "evidence": "westScreenOpen0"
+    },
+    {
+      "id": "M-ES",
+      "title": "CDTI fourth Spain-Taiwan TSIP call",
+      "url": "https://www.cdti.es/noticias/cdti-innovacion-apertura-4a-llamada-espana-taiwan-tsip-colaboracion-internacional",
+      "type": "official_program_call",
+      "jurisdiction": "Spain/Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Announced 2026-09-07; scheduled close 2026-11-19",
+      "claim": "Current joint R&D call covers Spanish/Taiwanese collaboration in identified technology sectors.",
+      "limits": "Funding call is not a statute or a grant award. Applicant eligibility, award probability and future continuation not assumed.",
+      "published": "2026-09-07",
+      "deadline": "2026-11-19",
+      "evidence": "westScreenOpen4"
+    },
+    {
+      "id": "M-IT",
+      "title": "Italian Office in Taipei: Italy in Taiwan",
+      "url": "https://taipei.esteri.it/it/italia-a-taiwan/",
+      "type": "official_diplomatic_economic_profile",
+      "jurisdiction": "Italy",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current page; reports 2025-05-14 Chamber opening",
+      "claim": "Italian Chamber opening and bilateral industrial/economic forums support a continuing commercial relationship.",
+      "limits": "Not a measured population of legal buyers; no unverified trade total used.",
+      "event_date": "2025-05-14",
+      "evidence": "westScreenOpen5"
+    },
+    {
+      "id": "M-BE",
+      "title": "Taiwan MOEA: Taiwan-Belgium Economic Relations",
+      "url": "https://www.trade.gov.tw/english/Pages/Detail.aspx?nodeID=4639&pid=744610",
+      "type": "official_trade_statistics",
+      "jurisdiction": "Taiwan/Belgium",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Published 2026-01-14; 2025 data",
+      "claim": "Bilateral 2025 trade USD2.44bn; Taiwan imports from Belgium USD720.5m, down24.68%; cumulative investment165cases/USD197.81m.",
+      "limits": "Belgium is a separate country; Dutch/French language does not justify applying Netherlands/France national assumptions.",
+      "published": "2026-01-14",
+      "data_period": "2025",
+      "evidence": "westScreenOpen3"
+    },
+    {
+      "id": "M-CA",
+      "title": "ACCIÓ Taiwan country opportunities report",
+      "url": "https://www.accio.gencat.cat/web/.content/bancconeixement/documents/fitxes-pais/ACCIO-informe-taiwan-oportunitats-negoci.pdf",
+      "type": "official_regional_market_report",
+      "jurisdiction": "Catalonia/Spain",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "October 2025 report; 2024 trade provisional, 2025 company presence",
+      "claim": "Page7 lists 468 regular Catalan exporters and sector connections including meat, pharmaceuticals, perfumery/cosmetics; page10 uses 2025 subsidiary-presence data.",
+      "limits": "Data are not 2026 realized trade. Do not repeat report's broad chip-share or expired 2025 green-investment forecasts. Catalonia is a Spanish region, not a separate foreign-law jurisdiction assumed here.",
+      "published": "2025-10",
+      "data_period": "2024/2025",
+      "evidence": "westCataloniaMexico"
+    },
+    {
+      "id": "M-CA-2026",
+      "title": "ACCIÓ 2025 Catalan exports analysis",
+      "url": "https://www.accio.gencat.cat/web/.content/bancconeixement/documents/informes/2026/ACCIO-analisi-exportacions-catalanes-2025.pdf",
+      "type": "official_regional_statistics",
+      "jurisdiction": "Catalonia/Spain",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "March 2026 report; provisional 2025 data",
+      "claim": "Current regional export-industry context; food and machinery remain relevant commercial sectors.",
+      "limits": "Taiwan is not separately found in this report. Do not infer a Taiwan-specific figure from total Catalan exports.",
+      "published": "2026-03",
+      "data_period": "2025",
+      "evidence": "westFinalFetch2"
+    },
+    {
+      "id": "M-SE",
+      "title": "Business Sweden Taiwan Business Climate Survey 2026 index",
+      "url": "https://www.business-sweden.com/insights/reports/business-climate-surveys/all/all/all/Taiwan/all/all/all",
+      "type": "official_trade_promotion_survey_index",
+      "jurisdiction": "Sweden",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current 2026 survey listing opened",
+      "claim": "Taiwan 2026 report describes continued Swedish-company activity and profitability sentiment.",
+      "limits": "Full 2026 report page later timed out; use only verified index statement. Survey respondents are not population demand or potential law-firm customers; no percentages reused.",
+      "data_period": "2026",
+      "evidence": "westLastVerify"
+    },
+    {
+      "id": "M-DA",
+      "title": "Taiwan MOEA: Taiwan-Denmark Economic Relations",
+      "url": "https://www.trade.gov.tw/english/Pages/Detail.aspx?nodeID=4639&pid=744609",
+      "type": "official_trade_statistics",
+      "jurisdiction": "Taiwan/Denmark",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Published 2026-01-13; 2025 trade/end-Nov2025 investments",
+      "claim": "2025 bilateral trade USD1.07bn, Taiwan imports Denmark USD724m; cumulative174investments/USD9.61bn includes equipment-related activity.",
+      "limits": "Cumulative investment stock/cases are not new annual transactions or demand for counsel.",
+      "published": "2026-01-13",
+      "data_period": "2025",
+      "evidence": "westScreenOpen2"
+    },
+    {
+      "id": "M-NO",
+      "title": "Mattilsynet: export of fish/seafood to Taiwan",
+      "url": "https://www.mattilsynet.no/mat-og-drikke/eksport-av-mat-og-drikke/eksport-av-fisk-og-sjomat/eksport-av-fisk-og-sjomat/landoversikt/eksport-av-fisk-og-sjomat-til-taiwan?noJS=true",
+      "type": "official_export_requirements_guidance",
+      "jurisdiction": "Norway",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current page with 2026 updates",
+      "claim": "Producer listing applies to Norwegian seafood exporters to Taiwan; 2026 clarification and listing/certificate process show an actual compliance decision.",
+      "limits": "Do not reuse expired application deadlines or turn Norwegian guidance into Taiwan statutory text. Need separately verify current exact deadline before an article.",
+      "data_period": "2026",
+      "evidence": "westProof1"
+    },
+    {
+      "id": "M-FI",
+      "title": "Legislative Yuan Finland-Taiwan delegation meeting",
+      "url": "https://www.ly.gov.tw/EngPages/Detail.aspx?nodeid=77734&pid=261315",
+      "type": "official_event_statement",
+      "jurisdiction": "Taiwan/Finland",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "2026-03-19 official meeting report",
+      "claim": "Officials discussed existing commercial exchanges, technology/education cooperation and further facilitation.",
+      "limits": "Political statements do not prove buyer demand. ADTA/direct flights were aspirations in this report, not confirmed signed/effective tax treaty or launched service. Omit ambiguous '2.14 times' growth wording.",
+      "published": "2026-03-19",
+      "evidence": "westScreenOpen8"
+    },
+    {
+      "id": "M-IS",
+      "title": "Taiwan MOEA Iceland country report",
+      "url": "https://www.trade.gov.tw/Files/PageFile/734570/734570nuif220251117105429.pdf",
+      "type": "official_country_trade_profile",
+      "jurisdiction": "Taiwan/Iceland",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Updated2025-11-17; latest located official country report",
+      "claim": "2025 Jan–Oct bilateral trade recorded; confirms actual goods trade connection.",
+      "limits": "Partial2025 data only; do not represent as full2025/2026. Product tables have different directions; avoid Taiwan-specific sector assertion without matching headings.",
+      "published": "2025-11-17",
+      "data_period": "2025-01/2025-10",
+      "evidence": "westNLOpen4"
+    },
+    {
+      "id": "M-MX",
+      "title": "DataMéxico country dashboard",
+      "url": "https://economia.gob.mx/datamexico/es/profile/geo/mexico?AnunciosInversion_Anios=2024",
+      "type": "official_statistics_dashboard",
+      "jurisdiction": "Mexico",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Opened 2026-10-25; latest narrative July2026 trade",
+      "claim": "Dashboard identifies Taiwan as a major source of Mexican imports in July2026; supports a separate Mexico-Taiwan machinery/parts buyer hypothesis.",
+      "limits": "Search snippet used June2026 but opened page July2026; do not mix. Avoid news-only USD48.2bn2025 total; old government twn.pdf is 2021/2022 and not current evidence.",
+      "data_period": "2026-07",
+      "evidence": "westMexico"
+    },
+    {
+      "id": "L-NL-ESA",
+      "title": "就業服務法",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
+      "type": "statute",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current consolidated law; last amendment2025-01-20",
+      "claim": "Art51(3): foreign legal person's performance of contracting/sale/technical-cooperation agreement, Art46(1)(1)/(2) work within contract; if no Taiwan branch/representative office, contracting business or authorized agent applies.",
+      "limits": "Contract-personnel route does not cover every visitor or task.",
+      "provisions": [
+        "51(3)",
+        "46(1)(1)",
+        "46(1)(2)"
+      ],
+      "amendment_date": "2025-01-20",
+      "commencement": "Relevant provisions effective in consolidated text; not a pending proposal.",
+      "evidence": "westNLESA51b"
+    },
+    {
+      "id": "L-NL-PERMIT",
+      "title": "雇主聘僱外國人許可及管理辦法",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090027",
+      "type": "regulation",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Amended2025-12-30; Art73 amendments effective on promulgation except listed historic exceptions",
+      "claim": "Arts5/12 distinguish eligible stays≤30 from31–90 days and post-entry30-day filing. Art9 specifies contract/registration/assignment/personnel evidence and cumulative90-day degree-document exception.",
+      "limits": "Statute uses stay period; do not count only business days. Current numbering9/12 supersedes older guide cross-references. The <=30day actual-work/90day visa-free-admission interaction remains unresolved; authority-specific confirmation needed.",
+      "provisions": [
+        "5(1)(1)",
+        "9(2)",
+        "12",
+        "73"
+      ],
+      "amendment_date": "2025-12-30",
+      "commencement": "2025-12-30 latest amendment per Art73 publication rule",
+      "evidence": "westFinalFetch0;westStatusFinal"
+    },
+    {
+      "id": "L-NL-QUAL",
+      "title": "外國人從事就業服務法第四十六條第一項第一款至第六款工作資格及審查標準",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090031",
+      "type": "regulation",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current consolidated text; amended2024-08-01",
+      "claim": "Art7 allows specified contract-work qualification relief≤90days but cumulative precedingyear+current period>90days requires Art5(1),(2),(4) qualifications.",
+      "limits": "Qualification relief is not work-permit exemption; new entry does not erase cumulative lookback.",
+      "provisions": [
+        "7",
+        "5(1)",
+        "5(2)",
+        "5(4)"
+      ],
+      "amendment_date": "2024-08-01",
+      "commencement": "Effective consolidated rule, no pending amendment relied on",
+      "evidence": "westFinish1"
+    },
+    {
+      "id": "G-NL-WDA",
+      "title": "WDA contract-personnel qualifications",
+      "url": "https://ezworktaiwan.wda.gov.tw/cp.aspx?n=79363C2C4E607E24&s=7CFAE4DF8A121AB5",
+      "type": "official_administrative_guidance",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current page opened",
+      "claim": "Taiwan branch/representative office or contracting business/authorized agent applicant; contract-work duration bands.",
+      "limits": "Read alongside current regulations. Short FAQ elsewhere has overlapping90-day wording.",
+      "provisions": [
+        "履約人員 qualifications"
+      ],
+      "evidence": "westNLFinal"
+    },
+    {
+      "id": "G-NL-DOCS",
+      "title": "WDA G-category contract-personnel document list",
+      "url": "https://ezworktaiwan.wda.gov.tw/cp.aspx?Create=1&n=79363C2C4E607E24&s=FF1DBF724E83E880",
+      "type": "official_administrative_guidance",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Updated2026-10-16",
+      "claim": "Contract/Chinese translation, assignment letter, contract-execution plan and relevant qualification/registration evidence listed.",
+      "limits": "A row references old regulation Art7; current legal document rule isArt9. Do not let outdated cross-reference override current law.",
+      "updated": "2026-10-16",
+      "evidence": "westProof0"
+    },
+    {
+      "id": "G-NL-BOCA",
+      "title": "BOCA visa-exempt entry",
+      "url": "https://www.boca.gov.tw/cp-149-4486-7785a-2.html",
+      "type": "official_entry_guidance",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current page opened",
+      "claim": "Netherlands in90-day visa-exempt category for qualifying passports; activities requiring a permit still require that permit.",
+      "limits": "Entry permission is not blanket work permission; usual passport/return travel/other conditions apply.",
+      "evidence": "westNLOpen3"
+    },
+    {
+      "id": "L-NL-CHATTEL",
+      "title": "動產擔保交易法",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380024",
+      "type": "statute",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current consolidated law; amended2007-07-11",
+      "claim": "Arts4/5/26/27: eligible machinery, written conditional sale, third-party effect of registration and essential contents. Art9 contract registration term, default1year and pre-expiry30day extension application. Art31 prohibits conditional sale of already chattel-mortgaged property.",
+      "limits": "Unregistered does not mean void between parties. No unrestricted self-help seizure or guaranteed priority.",
+      "provisions": [
+        "4",
+        "5",
+        "9",
+        "26",
+        "27",
+        "31"
+      ],
+      "amendment_date": "2007-07-11",
+      "commencement": "Long-effective consolidated statute; no proposed reform relied on",
+      "evidence": "westLawOpen1"
+    },
+    {
+      "id": "G-NL-REGISTER",
+      "title": "Official chattel secured-transactions registry",
+      "url": "https://ppstrq.nat.gov.tw/pps/web/Show/A1Page.do",
+      "type": "official_registry_guidance",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": false,
+      "status": "Observed official search result; full transactional procedure not executed",
+      "claim": "Official registration/publicity service and statutory excerpts.",
+      "limits": "No registration submitted, no user-specific collateral search or account action.",
+      "evidence": "westNative1"
+    },
+    {
+      "id": "L-FR-COSMETIC",
+      "title": "化粧品衛生安全管理法",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030013",
+      "type": "statute",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current consolidated law; amended2018-05-02; category phase-in separately checked",
+      "claim": "Art4: notified manufacturers/importers must complete product registration and establish PIF before supply/sale/gift/display/trial; changes also. Art7 identifies responsible operator label information.",
+      "limits": "Do not treat repealed former special-purpose-permit provisions as current; category phase-in is not same as Act amendment date.",
+      "provisions": [
+        "4",
+        "7(1)(7)"
+      ],
+      "amendment_date": "2018-05-02",
+      "commencement": "PIF category coverage per separate TFDA phased notice; final phase2026-07-01",
+      "evidence": "westLawOpen0"
+    },
+    {
+      "id": "L-FR-PIF",
+      "title": "化粧品產品資訊檔案管理辦法",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030098",
+      "type": "regulation",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Amended2022-06-16; original commencement2019-07-01 perArt9",
+      "claim": "Art3 CN/EN content and updating; Art7 paper/electronic preservation≥5years from day after last market date; Art8 availability at labeled operator address for inspection.",
+      "limits": "Private ownership/contractual access does not transfer automatically; qualified safety assessment is separate from legal services.",
+      "provisions": [
+        "3",
+        "7",
+        "8",
+        "9"
+      ],
+      "amendment_date": "2022-06-16",
+      "commencement": "2019-07-01 original commencement; current amended text effective",
+      "evidence": "westLawOpen0;westStatusFinal"
+    },
+    {
+      "id": "G-FR-PHASE",
+      "title": "TFDA PIF phased implementation",
+      "url": "https://www.fda.gov.tw/TC/newsContent.aspx?cid=118&id=31164",
+      "type": "official_explanation_of_phase_notice",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Published2025-08-14; final phase already effective2026-07-01",
+      "claim": "All cosmetics final-phase PIF requirement except handmade solid soap made by factory-registration-exempt entities.",
+      "limits": "Do not call2026-07-01 a future deadline on2026-10-25; exact product classification still matters.",
+      "published": "2025-08-14",
+      "commencement": "2026-07-01 final phase",
+      "evidence": "westFinishMore0"
+    },
+    {
+      "id": "G-FR-PIF-QA",
+      "title": "TFDA PIF questions and answers",
+      "url": "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639179794512621908&iid=13384&type=3",
+      "type": "official_administrative_guidance",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "2026-06-24 PDF; author and researcher independently opened",
+      "claim": "Printedp25 cloud/manufacturer-system storage can preserve trade secrets if authority access is assured; p27 compliant foreign CPSR portions reusable; p28Q6 commercial sharing requires authentic, complete, traceable, product-matching data.",
+      "limits": "Not a mandatory transfer right, PIF certificate or automatic acceptance of an EU dossier.",
+      "published": "2026-06-24",
+      "provisions": [
+        "p25 Q1–3",
+        "p27 Q4",
+        "p28 Q6"
+      ],
+      "evidence": "westLastVerify;westPifShare"
+    },
+    {
+      "id": "G-FR-NOTIFY-QA",
+      "title": "TFDA cosmetic product registration Q&A",
+      "url": "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639219591977347651&type=4",
+      "type": "official_administrative_guidance",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "2026-08-07 PDF opened",
+      "claim": "Printedp30Q2/Q8: each responsible importer must register; another company's registration of the same product is insufficient.",
+      "limits": "Registration and PIF are distinct; completing a platform submission alone is not necessarily completed registration.",
+      "published": "2026-08-07",
+      "provisions": [
+        "p30 Q2",
+        "p30 Q8"
+      ],
+      "evidence": "westLastVerify"
+    },
+    {
+      "id": "L-FR-ALCOHOL",
+      "title": "菸酒管理法 / Tobacco and Alcohol Administration Act",
+      "url": "https://law-out.mof.gov.tw/EngLawContent.aspx?id=304&lan=C",
+      "type": "statute",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current MOF Chinese/English pages; amended2017-12-27",
+      "claim": "Art30 electronic-shopping sale restrictions; Art37 advertising warnings/content restrictions; Art16 importer permit responsibility.",
+      "limits": "Online promotional content is not automatically identical to a completed electronic sale; age checkbox does not by itself legalize prohibited ordering.",
+      "provisions": [
+        "16",
+        "30(1)",
+        "37"
+      ],
+      "amendment_date": "2017-12-27",
+      "commencement": "Current effective text; no liberalization bill relied on",
+      "english_url": "https://law-out.mof.gov.tw/EngLawContent.aspx?KW=&id=304&lan=E",
+      "evidence": "westLawOpen3;westMore1"
+    },
+    {
+      "id": "G-FR-ALCOHOL-FAQ",
+      "title": "Taipei Finance online alcohol ordering FAQ",
+      "url": "https://dof.gov.taipei/News_Content.aspx?n=39A258CB8C1B2779&s=1EB2F8C0189F2E68&sms=87415A8B9CE81B16",
+      "type": "official_administrative_guidance",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Last inspection shown2026-10-20 when body reopened",
+      "claim": "Social sites, mobile apps and linked electronic order forms prohibited for alcohol orders regardless pickup or delivery; citesAct30/55.",
+      "limits": "Search-result inspection date09-23 was older than opened page10-20. No assumption that warnings alone cure prohibited order flow.",
+      "updated": "2026-10-20",
+      "evidence": "westFinishRemainder"
+    },
+    {
+      "id": "L-BR-FOOD",
+      "title": "食品及相關產品輸入查驗辦法",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0040017",
+      "type": "regulation",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Amended2025-08-21; Arts23–25 effective2026-01-01 perArt29",
+      "claim": "Importer/reporting obligor receives notice. Art23:15days, one retest, original lab/residual sample. Art25 presumes service on system issuance. Art24 distinguishes return/destruction from specifically eligible authority-approved treatment/correction.",
+      "limits": "Exporter receipt does not reset clock. New exporter sample not statutory retest. No universal right to relabel unsafe food.",
+      "provisions": [
+        "2",
+        "23",
+        "24",
+        "25",
+        "29"
+      ],
+      "amendment_date": "2025-08-21",
+      "commencement": "2026-01-01 for relevant provisions; Arts19–21 separately2025-09-01",
+      "evidence": "westMore0;westLastVerify;westScreenLast"
+    },
+    {
+      "id": "L-BR-ORGANIC",
+      "title": "有機農業促進法 / Organic Agriculture Promotion Act",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0030093",
+      "type": "statute",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Promulgated2018-05-30; Art42 commencement one year after promulgation",
+      "claim": "Art17 two import-organic pathways: Taiwan-accredited certifier within approved territory OR recognized equivalence territory certification plus importer approval. Art18 required labeling; Art20 mark rules separate.",
+      "limits": "Absence from equivalence list does not negate first pathway. Brazil certification is not automatically sufficient; food entry and organic sales/label status differ.",
+      "provisions": [
+        "17",
+        "18",
+        "20",
+        "42"
+      ],
+      "promulgation": "2018-05-30",
+      "commencement": "2019-05-30 perArt42 one-year rule",
+      "evidence": "westMore0;westCurrentCheck"
+    },
+    {
+      "id": "G-BR-AFA",
+      "title": "AFA recognized organic equivalence announcements",
+      "url": "https://www.afa.gov.tw/cht/index.php?code=list&ids=548",
+      "type": "official_equivalence_announcement_index",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Live listing opened2026-10-25",
+      "claim": "Brazil not shown on the opened AFA equivalence announcements index.",
+      "limits": "Index absence is not proof that no Taiwan-accredited certifier can certify within Brazil. Do not assert a global ban or an exhaustive country count.",
+      "evidence": "westMore0;westStatusFinal"
+    },
+    {
+      "id": "G-BR-LOOKUP",
+      "title": "AFA organic operator/certifier lookup",
+      "url": "https://epv.afa.gov.tw/Home/Organic",
+      "type": "official_lookup_route",
+      "jurisdiction": "Taiwan",
+      "research_date": "2026-10-25",
+      "opened": false,
+      "status": "Official lookup route identified",
+      "claim": "Route to check operator, certification and import-organic approval details.",
+      "limits": "No Brazil-specific current accredited-certifier territorial approval confirmed in this research; remains case-specific unresolved.",
+      "evidence": "westQ5"
+    },
+    {
+      "id": "G-BR-MAPA",
+      "title": "MAPA regularização da produção orgânica",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/sustentabilidade/organicos/regularizacao-da-producao-organica",
+      "type": "official_domestic_guidance",
+      "jurisdiction": "Brazil",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Page opened; current search result explicit Brazil domestic scope",
+      "claim": "Brazil organic regularization addresses Brazilian commercialization.",
+      "limits": "Does not establish recognition by Taiwan; no Brazilian-law advisory conclusion drawn.",
+      "evidence": "westNative4;westCurrentCheck"
+    }
+  ],
+  "search_observations": [
+    {
+      "locale": "nl",
+      "country": "Netherlands",
+      "language": "Dutch",
+      "query": "Taiwan machine eigendomsvoorbehoud registratie",
+      "date": "2026-10-25",
+      "observed_results": [
+        {
+          "url": "https://ppstrq.nat.gov.tw/pps/web/Show/A1Page.do",
+          "observation": "Taiwan official secured-transactions registry returned, Chinese."
+        },
+        {
+          "url": "https://www.gtai.de/de/trade/taiwan/recht/taiwan-sicherungsmittel-606850",
+          "observation": "German official trade-agency legal overview, not Dutch."
+        },
+        {
+          "url": "https://www.law.kuleuven.be/personal/mstorme/insolventierecht2024.pdf",
+          "observation": "Dutch-language insolvency material concerning another jurisdiction; excluded as Taiwan law."
+        }
+      ],
+      "evidence": "westNative1",
+      "limit": "Limited mixed-language result set. No volume, ranking, SEO difficulty, total-demand or competitor-performance inference."
+    },
+    {
+      "locale": "nl",
+      "country": "Netherlands",
+      "language": "Dutch",
+      "query": "Taiwan monteur installatie werkvergunning 30 dagen Nederland",
+      "date": "2026-10-25",
+      "observed_results": [
+        {
+          "url": "https://ezworktaiwan.wda.gov.tw/en/cp.aspx?n=602D9CE3DD72F51C&s=243D7E993A404388",
+          "observation": "WDA English contract-personnel guidance returned; followed current Chinese primary rules."
+        }
+      ],
+      "evidence": "westFinalFetch1;westFinalQueries",
+      "limit": "Query submitted in multi-query calls; result order not attributable as a separate rank. No observed query-frequency data."
+    },
+    {
+      "locale": "fr",
+      "country": "France",
+      "language": "French",
+      "query": "cosmétiques Taïwan changement importateur dossier PIF",
+      "date": "2026-10-25",
+      "observed_results": [
+        {
+          "url": "https://tseng-law.com/fr/columns/taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide",
+          "observation": "Own existing general FR011 returned: overlap warning, not independent demand."
+        },
+        {
+          "url": "https://www.fda.gov.tw/TC/newsContent.aspx?cid=118&id=31164",
+          "observation": "Official phase-in news returned."
+        },
+        {
+          "url": "https://triplicatedocs.com/fr/trade-notes/taiwan-cosmetics-tfda/",
+          "observation": "French regulatory-service content returned; not relied on as legal authority."
+        }
+      ],
+      "evidence": "westFinalFetch1",
+      "limit": "Mixed-query call; no rank claims. Available native-language explanation supports discoverability hypothesis only."
+    },
+    {
+      "locale": "fr",
+      "country": "France",
+      "language": "French",
+      "query": "vin Taïwan vente en ligne réglementation",
+      "date": "2026-10-25",
+      "observed_results": [
+        {
+          "url": "https://dof.gov.taipei/News_Content.aspx?n=39A258CB8C1B2779&s=1EB2F8C0189F2E68&sms=87415A8B9CE81B16",
+          "observation": "Taipei Finance official ordering FAQ returned and opened."
+        },
+        {
+          "url": "https://event.businessfrance.fr/etudes-agro/wp-content/uploads/sites/937/Taiwan-Fiche-courte.pdf",
+          "observation": "French e-commerce study with2020 wine data; not current-law proof."
+        },
+        {
+          "url": "https://www.wines-cloud.com/en/faqs/",
+          "observation": "Seller FAQ describes no direct online alcohol sales; contextual only."
+        }
+      ],
+      "evidence": "westNative2",
+      "limit": "No numerical demand metric; private seller policy not law."
+    },
+    {
+      "locale": "pt",
+      "country": "Brazil",
+      "language": "Brazilian Portuguese search phrasing",
+      "query": "exportar café Taiwan fiscalização rejeição lote",
+      "date": "2026-10-25",
+      "observed_results": [
+        {
+          "url": "https://www.tip.mci.gov.tl/pt-pt/site/display/1222",
+          "observation": "Timor-Leste coffee export guidance in Portuguese; different exporter jurisdiction."
+        },
+        {
+          "url": "https://pgice.sde.gob.hn/exportacion/cafe-europa-y-taiwan/",
+          "observation": "Honduras coffee-to-Taiwan page; not Brazil requirements."
+        },
+        {
+          "url": "https://recursos.exportemos.pe/informe-de-mercado-de-cafe-en-taiwan-.pdf.pdf",
+          "observation": "PROMPERU Taiwan coffee market report returned in Spanish."
+        }
+      ],
+      "evidence": "westNative3",
+      "limit": "Sparse Brazil-specific exact-match results; not evidence of zero demand or easy search ranking. Follow Taiwan primary food law."
+    },
+    {
+      "locale": "pt",
+      "country": "Brazil",
+      "language": "Brazilian Portuguese",
+      "query": "café orgânico Taiwan certificação Brasil",
+      "date": "2026-10-25",
+      "observed_results": [
+        {
+          "url": "https://www.gov.br/agricultura/pt-br/assuntos/sustentabilidade/organicos/regularizacao-da-producao-organica",
+          "observation": "MAPA domestic organic regularization returned."
+        },
+        {
+          "url": "https://www.gov.br/pt-br/servicos/obter-certificacao-de-produtos-organicos-producao-primaria-vegetal",
+          "observation": "Brazil government organic certification service returned."
+        }
+      ],
+      "evidence": "westNative4",
+      "limit": "Domestic certificates do not prove Taiwan acceptance. No search-volume or client-inquiry data."
+    }
+  ],
+  "common_cta_source_ids": [
+    "F-CONTACT",
+    "F-SERVICES"
+  ],
+  "unresolved_and_excluded": [
+    "No measured demand/search volumes/leads/conversion; all topic attractiveness judgments are editorial hypotheses.",
+    "Brazil-specific Taiwan-accredited certifier geographic scope not confirmed. No broad organic import ban inferred.",
+    "Brazil MOFA2025 coffee/trade snippet not promoted to verified body claim because later body retrieval timed out. Failed MOEA2026BrazilPDF returned an error page and is excluded.",
+    "BusinessSweden2026 fullreport timed out; official index only supports bounded activity/sentiment statement.",
+    "Current contact language conflict: four explicit consultation languages vs general lower-page reply-language promise. Use four-language limit and confirm other methods.",
+    "Portuguese mirrored trade-report conflict not reconciled; Brazil selected using specific coffee primary organizer evidence.",
+    "MOJ pages state compilation cutoff2026-10-16; source read2026-10-25. No uncommenced proposals used; authors/final reviewers independently inspect current exact official sources.",
+    "Old NLjointpatent proposal removed for overlap with HE newbatch; no drafting on that topic.",
+    "Final global inventory scan found JA135 japanese-equipment-maker-engineers-taiwan-work-permit, published2026-10-03/revised2026-10-06, covering the same legal framework. Parent/author/final reviewer alerted. NL934 needs narrow schedule-change/contract-responsibility focus, not a general30/90day guide or translation. Parent scope decision pending.",
+    "Art5 uses stay period<=30days; WDA summaries use work duration<=30days. Application to90day visa-free admission with actual<=30day work remains unresolved. Do not claim automatic exemption or approval-pending work legality."
+  ],
+  "inventory_note": {
+    "path": "current-column-inventory.json",
+    "basis": "All twelve locale titles screened; actual FR011/676/704–706, NL834–836, PT694/697/698/704–706 metadata/openers/headings read; independent locale authors inspect full neighboring articles. Finalkeyword scan read JA135 body and flagged substantial cross-locale overlap.",
+    "draft_briefs": "west-briefs.md"
+  }
+}

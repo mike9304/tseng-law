@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "sentence": 131,
+    "words": 100,
+    "body": 30,
+    "contracts": 98
+  },
+  "total": 359,
+  "errors": []
+}

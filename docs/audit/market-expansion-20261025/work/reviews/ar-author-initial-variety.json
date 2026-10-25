@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-25",
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "b6e225",
+        "wall_time_seconds": 0.000005083,
+        "exit_code": 1,
+        "original_token_count": 81,
+        "output": "src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md [ar] sentences=39 mean=16.7 cv=0.395 short=0.103 run3=0.108 opener_rep=0.071 cite_end=0.0 cite_para=0.286 contrast=0 caveat=0 q=2\n  FAIL len_cv=0.395 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "d3f5aa",
+        "wall_time_seconds": 0.000003875,
+        "exit_code": 0,
+        "original_token_count": 61,
+        "output": "src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md [ar] sentences=38 mean=16.9 cv=0.484 short=0.105 run3=0.083 opener_rep=0.0 cite_end=0.0 cite_para=0.214 contrast=0 caveat=1 q=3\n  OK — no variety limit violated\n"
+      }
+    }
+  ],
+  "note": "930 initial length CV failed and was repaired with meaningful sentence restructuring. 931 initial measurement already applies to final supplier draft."
+}

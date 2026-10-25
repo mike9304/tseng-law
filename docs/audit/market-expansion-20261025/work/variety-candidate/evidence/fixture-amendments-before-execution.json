@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-25T13:04:13.091495+00:00",
+  "candidate_executed": false,
+  "amendments": [
+    {
+      "locale": "he",
+      "before_sha256": "62556e756b2fd09bee1b8574978d23f3103da0ff0e4bbb40a1f532125128616d",
+      "after_sha256": "39a1209ba75396c0b0e99395f7cea5b0a833c81101e7ec7d47f64a3b3ab1eb16",
+      "reason": "Fresh independent reviewer identified trailing geresh/apostrophe spelling preservation, citing UAX #29 WB7a/tailoring. Author accepted before any candidate fixture execution. Initial freeze retained.",
+      "before_tokens": [
+        "פרופ",
+        "כהן",
+        "פרופ",
+        "לוי"
+      ],
+      "after_tokens": [
+        "פרופ׳",
+        "כהן",
+        "פרופ'",
+        "לוי"
+      ]
+    }
+  ]
+}

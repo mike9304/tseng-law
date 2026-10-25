@@ -1,0 +1,32 @@
+[
+  {
+    "source_path": "src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md",
+    "sha256": "3616a2fddce24e851e2ab9c657b47aee016ff6d5821c41eb1167cc496ef14873",
+    "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md --lang vi",
+    "exit_code": 0,
+    "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md [vi] sentences=45 mean=20.8 cv=0.458 short=0.178 run3=0.0 opener_rep=0.188 cite_end=0.0 cite_para=0.375 contrast=1 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "stderr": "",
+    "source_unchanged": true,
+    "checkedAt": "2026-10-25T13:21:08.926251+00:00"
+  },
+  {
+    "source_path": "src/content/columns-vi/923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md",
+    "sha256": "88335b55c5ea00cfac484947d743b1b8f09a32265f97eeef6f011799c0007f2c",
+    "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md --lang vi",
+    "exit_code": 0,
+    "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md [vi] sentences=49 mean=22.4 cv=0.485 short=0.184 run3=0.064 opener_rep=0.167 cite_end=0.0 cite_para=0.278 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "stderr": "",
+    "source_unchanged": true,
+    "checkedAt": "2026-10-25T13:21:09.018838+00:00"
+  },
+  {
+    "source_path": "src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md",
+    "sha256": "d9b6f376d4eae90d11e8cc583818f32c56d0898a5457594566e617fa38e7dbaf",
+    "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md --lang id",
+    "exit_code": 0,
+    "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md [id] sentences=46 mean=14.8 cv=0.46 short=0.217 run3=0.023 opener_rep=0.071 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "stderr": "",
+    "source_unchanged": true,
+    "checkedAt": "2026-10-25T13:21:09.129637+00:00"
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "reviewer": "/root/expand_locale_fil",
+  "checkedAt": "2026-10-25T13:16:07.302190+00:00",
+  "stage": "pre-freeze shared CLI unsupported audit; not a PASS",
+  "records": [
+    {
+      "source_path": "src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+      "sha256": "6cd2a012f50763becad739066294480ae4cb1959fc0a6011842202edc5a84355",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+        "--lang",
+        "fil"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'fil' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+    },
+    {
+      "source_path": "src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+      "sha256": "dae5a23e006da3d4989d547088a7555bbbe36279e0a2799e8223eb866000def1",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+        "--lang",
+        "fil"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'fil' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+    }
+  ]
+}

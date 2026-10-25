@@ -1,0 +1,168 @@
+{
+  "reviewer": "/root/expand_locale_ar",
+  "role": "locale",
+  "independentOfAuthor": true,
+  "checkedAt": "2026-10-25T22:28:22.844570+09:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md",
+      "sha256": "91a77cfc009bd425c4c1244832494e272284441bf06f0bfae013583ff8b328ce",
+      "verdict": "PASS",
+      "findings": [],
+      "image_path": "public/images/columns/930-market-expansion-20261025.webp",
+      "image_sha256": "a247a8544127f0eaf7a5bf0523191650463f909c31cc82276b396c50c113cb37",
+      "image_actually_inspected": true,
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md --lang ar",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md [ar] sentences=41 mean=15.9 cv=0.458 short=0.195 run3=0.051 opener_rep=0.071 cite_end=0.0 cite_para=0.286 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "variety_stderr": "",
+      "external_inline_and_list_sources": 5,
+      "opening_deletion_test": "See ar-locale.md: independent sentence-by-sentence deletion review of the first two paragraphs.",
+      "section5_review": "PASS; actual complete reading, comparator review and original CLI. See ar-locale.md.",
+      "limitations": [
+        "AI editorial role, no human/native-speaker or licensed-lawyer claim.",
+        "No browser rendering, RTL visual, interaction or public deployment verification.",
+        "Independent direct court request timed out; independently read actual complete official response captured in ar-author-opened-sources-2.json, results.ar-930-case-full, L0–64."
+      ],
+      "caption_normalization": {
+        "source_path": "src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md",
+        "old_sha256": "d478a7ac41c46ab5d9861f6d9544d3276d4334ad8f4c395bd65aa55aeedcd9a6",
+        "new_sha256": "91a77cfc009bd425c4c1244832494e272284441bf06f0bfae013583ff8b328ce",
+        "old_caption": "\"مشهد متخيَّل لمكتب شحن\"",
+        "new_caption": "مشهد متخيَّل",
+        "only_caption_changed_verified_by_reconstructed_sha": true,
+        "body_unchanged": true,
+        "alt_unchanged": true,
+        "image_sha256_unchanged": "a247a8544127f0eaf7a5bf0523191650463f909c31cc82276b396c50c113cb37",
+        "verdict": "PASS",
+        "reason": "The shortened Arabic label still accurately identifies both visually inspected scenes as fictional; the unchanged alt retains scene detail.",
+        "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md --lang ar",
+        "variety_exit_code": 0,
+        "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md [ar] sentences=41 mean=15.9 cv=0.458 short=0.195 run3=0.051 opener_rep=0.071 cite_end=0.0 cite_para=0.286 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+      }
+    },
+    {
+      "source_path": "src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+      "sha256": "24332b5c2d46a686ed3f4635bd16d418631d2cd6d1403d0c4d7ac82b355fa431",
+      "verdict": "PASS",
+      "findings": [],
+      "image_path": "public/images/columns/931-market-expansion-20261025.webp",
+      "image_sha256": "42285608197d77c9cb1b0c165705951a0750690711939f977b965ce51224bbaf",
+      "image_actually_inspected": true,
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md --lang ar",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md [ar] sentences=38 mean=16.9 cv=0.484 short=0.105 run3=0.083 opener_rep=0.0 cite_end=0.0 cite_para=0.214 contrast=0 caveat=1 q=3\n  OK — no variety limit violated\n",
+      "variety_stderr": "",
+      "external_inline_and_list_sources": 8,
+      "opening_deletion_test": "See ar-locale.md: independent sentence-by-sentence deletion review of the first two paragraphs.",
+      "section5_review": "PASS; actual complete reading, comparator review and original CLI. See ar-locale.md.",
+      "limitations": [
+        "AI editorial role, no human/native-speaker or licensed-lawyer claim.",
+        "No browser rendering, RTL visual, interaction or public deployment verification."
+      ],
+      "metadata_only_repair": {
+        "finder": "/root/expand_final_southwest",
+        "source_path": "src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+        "line": 10,
+        "before": "topic: \"business\"",
+        "after": "topic: \"company\"",
+        "reason": "business is outside COLUMN_TOPICS in src/lib/column-topics.ts; company is supported.",
+        "old_sha256": "e9b313ce38ff02e9b983fba6d8c0c7c67c22837443e7196312e974978163dbb5",
+        "new_sha256": "9561312bd3d24413e8d944f44affcac75c6d0d45535084add523df989acde551",
+        "only_this_field_changed_verified_by_reconstructed_sha": true,
+        "body_unchanged": true,
+        "variety_exit_code": 0,
+        "status": "RESOLVED"
+      },
+      "caption_normalization": {
+        "source_path": "src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+        "old_sha256": "9561312bd3d24413e8d944f44affcac75c6d0d45535084add523df989acde551",
+        "new_sha256": "24332b5c2d46a686ed3f4635bd16d418631d2cd6d1403d0c4d7ac82b355fa431",
+        "old_caption": "\"مشهد متخيَّل لعينات مواد صناعية\"",
+        "new_caption": "مشهد متخيَّل",
+        "only_caption_changed_verified_by_reconstructed_sha": true,
+        "body_unchanged": true,
+        "alt_unchanged": true,
+        "image_sha256_unchanged": "42285608197d77c9cb1b0c165705951a0750690711939f977b965ce51224bbaf",
+        "verdict": "PASS",
+        "reason": "The shortened Arabic label still accurately identifies both visually inspected scenes as fictional; the unchanged alt retains scene detail.",
+        "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md --lang ar",
+        "variety_exit_code": 0,
+        "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md [ar] sentences=38 mean=16.9 cv=0.484 short=0.105 run3=0.083 opener_rep=0.0 cite_end=0.0 cite_para=0.214 contrast=0 caveat=1 q=3\n  OK — no variety limit violated\n"
+      }
+    }
+  ],
+  "comparators": [
+    {
+      "source_path": "src/content/columns-ar/704-taiwan-arc-first-application.md",
+      "published": "2026-10-24",
+      "sha256": "a64f7b405783b22383a7df3e87e76a21d41307a920c6f1b9a8ee67da484ab81d",
+      "read_full": true
+    },
+    {
+      "source_path": "src/content/columns-ar/705-taiwan-visa-residence-work-study-family.md",
+      "published": "2026-10-24",
+      "sha256": "66ebe0430f90227014ed2a37420220090b889a53e87728adfecfaf6e2d6f01eb",
+      "read_full": true
+    },
+    {
+      "source_path": "src/content/columns-ar/706-taiwan-arc-renewal-changes-reentry.md",
+      "published": "2026-10-24",
+      "sha256": "253c199800eac1461ab48026679388c9d46c37939e0872cf84d5e53d4908572a",
+      "read_full": true
+    }
+  ],
+  "author_report": "work/reviews/ar-author.json",
+  "author_report_sha256": "54283c4284ff18f9b23ecc2e3bed6453731a9e2e53cb38b8bffcbd1d2259f6ef",
+  "human_report": "work/reviews/ar-locale.md",
+  "human_report_sha256": "d23973da100fab107526d51ebb8b234e841a236548ead76ba25117dd41d3a891",
+  "source_evidence": "work/reviews/ar-locale-evidence.json",
+  "source_evidence_sha256": "4fb5a4134a7f79b269d905463e5defccd825c20a3190c0b695f190d135e9f502",
+  "repair_rounds": 1,
+  "limitations": [
+    "No measured Arabic-market search volume or conversion claim; selection rationale follows the official-source research ledger.",
+    "Current law and scope checked as part of language review; final legal approval remains separate.",
+    "Review does not authorize or prove publication."
+  ],
+  "final_directed_metadata_repair_rounds": 1,
+  "caption_normalization_reapproval": {
+    "normalization_receipt": "work/checks/caption-normalization.json",
+    "receipt_sha256": "ba56978e7514d4d094fc35a0b0813f33ef6750568151d067a211ee08470038d2",
+    "checkedAt": "2026-10-25T22:28:22.844570+09:00",
+    "records": [
+      {
+        "source_path": "src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md",
+        "old_sha256": "d478a7ac41c46ab5d9861f6d9544d3276d4334ad8f4c395bd65aa55aeedcd9a6",
+        "new_sha256": "91a77cfc009bd425c4c1244832494e272284441bf06f0bfae013583ff8b328ce",
+        "old_caption": "\"مشهد متخيَّل لمكتب شحن\"",
+        "new_caption": "مشهد متخيَّل",
+        "only_caption_changed_verified_by_reconstructed_sha": true,
+        "body_unchanged": true,
+        "alt_unchanged": true,
+        "image_sha256_unchanged": "a247a8544127f0eaf7a5bf0523191650463f909c31cc82276b396c50c113cb37",
+        "verdict": "PASS",
+        "reason": "The shortened Arabic label still accurately identifies both visually inspected scenes as fictional; the unchanged alt retains scene detail.",
+        "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md --lang ar",
+        "variety_exit_code": 0,
+        "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md [ar] sentences=41 mean=15.9 cv=0.458 short=0.195 run3=0.051 opener_rep=0.071 cite_end=0.0 cite_para=0.286 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+      },
+      {
+        "source_path": "src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+        "old_sha256": "9561312bd3d24413e8d944f44affcac75c6d0d45535084add523df989acde551",
+        "new_sha256": "24332b5c2d46a686ed3f4635bd16d418631d2cd6d1403d0c4d7ac82b355fa431",
+        "old_caption": "\"مشهد متخيَّل لعينات مواد صناعية\"",
+        "new_caption": "مشهد متخيَّل",
+        "only_caption_changed_verified_by_reconstructed_sha": true,
+        "body_unchanged": true,
+        "alt_unchanged": true,
+        "image_sha256_unchanged": "42285608197d77c9cb1b0c165705951a0750690711939f977b965ce51224bbaf",
+        "verdict": "PASS",
+        "reason": "The shortened Arabic label still accurately identifies both visually inspected scenes as fictional; the unchanged alt retains scene detail.",
+        "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md --lang ar",
+        "variety_exit_code": 0,
+        "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md [ar] sentences=38 mean=16.9 cv=0.484 short=0.105 run3=0.083 opener_rep=0.0 cite_end=0.0 cite_para=0.214 contrast=0 caveat=1 q=3\n  OK — no variety limit violated\n"
+      }
+    ]
+  },
+  "author_report_scope": "Author evidence predates root caption normalization; exact pre/post chain is independently verified in caption_normalization_reapproval."
+}

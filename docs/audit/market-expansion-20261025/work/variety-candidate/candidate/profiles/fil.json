@@ -1,0 +1,223 @@
+{
+  "locale": "fil",
+  "directory": "columns-fil",
+  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:[0-9]+[.)][^\\S\\r\\n]+)?(?:(?:Mga\\s+)?(?:opisyal\\s+na\\s+)?sanggunian|Mga\\s+pinagkunan)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
+  "abbreviations": [
+    "G",
+    "Gng",
+    "Bb",
+    "Dr",
+    "Prop",
+    "Kgg",
+    "Sen",
+    "Gob",
+    "Hen",
+    "Blg",
+    "Art",
+    "Sek",
+    "hal",
+    "p",
+    "pp",
+    "atbp",
+    "etc",
+    "e.g",
+    "i.e"
+  ],
+  "terminal_abbreviations": [
+    "atbp",
+    "etc"
+  ],
+  "join_hyphens": true,
+  "citation_pattern": "(?i:\\b(?:Artikulo|Seksyon|Art\\.?|Sek\\.?)\\s*\\d+)",
+  "contrast_patterns": [
+    "(?i:\\bhindi\\b(?!\\s+lamang\\b)[^.!?\\n]{0,160}\\bkundi\\b)",
+    "(?i:\\bsa\\s+halip\\s+na\\b)",
+    "(?i:\\b(?:kaiba|iba)\\s+sa\\b)"
+  ],
+  "caveat_pattern": "(?i:^[\\s“\"‘\\x27(\\[]*(?:Ngunit|Subalit|Gayunman|Gayunpaman)\\b)",
+  "hypo_pattern": "(?i:^[\\s“\"‘\\x27(\\[]*(?:Ipagpalagay|Halimbawa|Isang\\s+kathang-isip\\s+na\\s+halimbawa)\\b)",
+  "formula_close_pattern": "(?i:\\b(?:pangkalahatang\\s+impormasyon|Maaaring\\s+tumulong\\s+ang\\s+aming\\s+tanggapan|Iba-iba\\s+ang\\s+bawat\\s+kaso|e-?mail)\\b)",
+  "sentence_fixtures": [
+    {
+      "text": "Nasa mesa ang sobre. Bukas ang kahon.",
+      "sentences": [
+        "Nasa mesa ang sobre.",
+        "Bukas ang kahon."
+      ]
+    },
+    {
+      "text": "Nasaan ang lapis? Narito!",
+      "sentences": [
+        "Nasaan ang lapis?",
+        "Narito!"
+      ]
+    },
+    {
+      "text": "Binasa ni Gng. Ana Cruz ang tala. Isinara ni Dr. Luis Santos ang kahon.",
+      "sentences": [
+        "Binasa ni Gng. Ana Cruz ang tala.",
+        "Isinara ni Dr. Luis Santos ang kahon."
+      ]
+    },
+    {
+      "text": "Nasa hal. 7 ang larawan. Blg. 3 ang nakasulat sa etiketa.",
+      "sentences": [
+        "Nasa hal. 7 ang larawan.",
+        "Blg. 3 ang nakasulat sa etiketa."
+      ]
+    },
+    {
+      "text": "May 1,250.50 sa kathang-isip na tala. Walang lagda.",
+      "sentences": [
+        "May 1,250.50 sa kathang-isip na tala.",
+        "Walang lagda."
+      ]
+    },
+    {
+      "text": "May papel, lapis, atbp. Nasa labas ang gunting.",
+      "sentences": [
+        "May papel, lapis, atbp.",
+        "Nasa labas ang gunting."
+      ]
+    },
+    {
+      "text": "“Nasaan ang papel?” tanong ni Ana. Nasa mesa iyon.",
+      "sentences": [
+        "“Nasaan ang papel?” tanong ni Ana.",
+        "Nasa mesa iyon."
+      ]
+    },
+    {
+      "text": "“Handa na ang kopya.” Isinara ni Ana ang kahon.",
+      "sentences": [
+        "“Handa na ang kopya.”",
+        "Isinara ni Ana ang kahon."
+      ]
+    },
+    {
+      "text": "Nasa papel ang e.g. at i.e. bilang mga halimbawa ng daglat. Malinaw ang tinta.",
+      "sentences": [
+        "Nasa papel ang e.g. at i.e. bilang mga halimbawa ng daglat.",
+        "Malinaw ang tinta."
+      ]
+    }
+  ],
+  "word_fixtures": [
+    {
+      "text": "Araw-araw ang pag-aaral.",
+      "tokens": [
+        "Araw-araw",
+        "ang",
+        "pag-aaral"
+      ]
+    },
+    {
+      "text": "3-5 pahina at ika-3 kahon.",
+      "tokens": [
+        "3",
+        "5",
+        "pahina",
+        "at",
+        "ika-3",
+        "kahon"
+      ]
+    },
+    {
+      "text": "Ito’y tala ni O’Neil.",
+      "tokens": [
+        "Ito’y",
+        "tala",
+        "ni",
+        "O’Neil"
+      ]
+    },
+    {
+      "text": "₱1,250.50; 25%.",
+      "tokens": [
+        "1,250.50",
+        "25"
+      ]
+    },
+    {
+      "text": "Gng. Ana; PDF; A4.",
+      "tokens": [
+        "Gng",
+        "Ana",
+        "PDF",
+        "A4"
+      ]
+    },
+    {
+      "text": "May puting papel.",
+      "tokens": [
+        "May",
+        "puting",
+        "papel"
+      ]
+    }
+  ],
+  "source_positive": [
+    "## Mga sanggunian",
+    "### Opisyal na sanggunian:",
+    "## 7. Mga pinagkunan",
+    "## SANGGUNIAN ##"
+  ],
+  "source_negative": [
+    "## Mga sanggunian sa pagpopondo",
+    "## Pinagmulan ng problema",
+    "Sanggunian",
+    "## Mga sanggunian at pagsusuri"
+  ],
+  "rhetorical_fixtures": [
+    [
+      "contrast",
+      "Hindi pula kundi asul ang etiketa.",
+      1
+    ],
+    [
+      "contrast",
+      "Hindi lamang papel kundi pati lapis ang nasa kahon.",
+      0
+    ],
+    [
+      "contrast",
+      "Sa halip na sobre, kahon ang dala niya.",
+      1
+    ],
+    [
+      "contrast",
+      "Nasa mesa ang sobre.",
+      0
+    ],
+    [
+      "caveat",
+      "Gayunman, bukas ang kahon.",
+      1
+    ],
+    [
+      "caveat",
+      "Bukas ang kahon ngunit sarado ang sobre.",
+      0
+    ],
+    [
+      "hypo",
+      "Ipagpalagay na may pulang kahon.",
+      1
+    ],
+    [
+      "hypo",
+      "May pulang kahon sa mesa.",
+      0
+    ],
+    [
+      "formula",
+      "Pangkalahatang impormasyon lamang ang artikulong ito.",
+      1
+    ],
+    [
+      "formula",
+      "Nasa ikalawang sobre ang huling kopya.",
+      0
+    ]
+  ]
+}

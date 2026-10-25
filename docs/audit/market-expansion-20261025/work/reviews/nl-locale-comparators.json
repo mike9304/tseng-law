@@ -1,0 +1,39 @@
+{
+  "reviewer": "/root/expand_locale_nl",
+  "checkedAt": "2026-10-25T13:16:13.952313+00:00",
+  "comparators": [
+    {
+      "source_path": "src/content/columns-nl/834-dutch-company-taiwan-subsidiary-branch-office.md",
+      "published": "2026-10-24",
+      "sha256": "7c26b714e8d1ff20fa68c9cbe1da9307b98715129066885ad8a1095b55dc0d9e",
+      "complete_manuscript_read": true,
+      "opening": "Fictieve Nederlandse onderhoudsleverancier; dochteronderneming versus contractpartij. The second paragraph directs a contract/activity comparison.",
+      "structure": "Four subject-specific headings: incorporation forms, investment approval, treaty calculation, first workday/address.",
+      "ending": "Concrete contract-party overview for delivery, maintenance and inventory after a longer contact notice.",
+      "new_scope_difference": "New 934 concerns a foreign supplier employee sent for defined contract work; 935 concerns security registration on the specific delivered machine. Neither repeats entity formation."
+    },
+    {
+      "source_path": "src/content/columns-nl/835-dutch-employer-taiwan-first-hire-eor.md",
+      "published": "2026-10-24",
+      "sha256": "a69d6e67344cba7f403a58ca596e1d4f2db58de4fcbeced76d1f4462d0cedda9",
+      "complete_manuscript_read": true,
+      "opening": "Actual recruitment-order question followed immediately by Labor Standards Act 17-1; paragraph two names interview and selection dates.",
+      "structure": "EOR characterization, recruitment consequences, payroll/insurance, treaty permanent establishment.",
+      "ending": "Initial inquiry asks whether the candidate was interviewed and the proposed first workday.",
+      "new_scope_difference": "934 is contract performance by foreign employer personnel rather than first Taiwanese employee/EOR; 935 is a property/security decision rather than hiring or tax presence."
+    },
+    {
+      "source_path": "src/content/columns-nl/836-dutch-working-holiday-taiwan-work-insurance-tax.md",
+      "published": "2026-10-24",
+      "sha256": "7c09003f98713e0d607bca023f28feb3920fad9da555396574d787e5ef27563b",
+      "complete_manuscript_read": true,
+      "opening": "100 Dutch working-holiday places and 18–30 age bracket, then holiday-purpose condition.",
+      "structure": "Application, two separate end dates, work versus medical coverage, tax days.",
+      "ending": "Last payslip and travel record, with flight versus lawful-stay dates.",
+      "new_scope_difference": "934 distinguishes the narrow contract-worker entry/permit mechanism and cumulative work qualification check; it does not describe holiday employment. 935 has no visa or individual tax overlap."
+    }
+  ],
+  "limitations": [
+    "AI editorial review; no claim of a human native speaker or licensed lawyer review. This comparator evidence is not an article PASS."
+  ]
+}

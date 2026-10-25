@@ -1,0 +1,39 @@
+{
+  "generatedDate": "2026-10-25",
+  "records": [
+    {
+      "id": 924,
+      "prompt": "Use case: photorealistic-natural. Asset type: editorial hero for an Indonesian-language Taiwan legal column about a pregnant home caregiver being pressured to resign. Primary request: a quiet, humane still life in a modest Taiwan apartment, showing a plain folded caregiver apron resting on a chair beside a small table with a closed unmarked fabric pouch, a glass of water, and a pair of tiny knitted baby socks. An empty wheelchair is softly out of focus near a sunlit window in the background. The foreground objects and room convey caregiving work continuing alongside a pregnancy, without sensationalism. Restrained editorial photography, natural cloth texture, warm afternoon window light, muted green and beige, realistic ordinary room. Wide horizontal landscape composition, 1536 by 1024, balanced spacious framing. Fictional illustrative scene only. No people, no faces, no hands, no pregnancy test, no medical records, no identity documents, no readable text, no logos, no flags, no emblems, no watermark. Do not imply a real client or actual case.",
+      "source": "/Users/son7/.codex/generated_images/01a17323-a371-7363-b167-e185bfb27ac6/exec-eff609ed-b299-49a9-89dc-fe677a8ccabd.png",
+      "mode": "native image_gen",
+      "inspected": true,
+      "inspection": "Fictional people-free editorial scene inspected in native output: topic-specific composition, no faces, readable text, identity documents, flags, logos or real-case evidence.",
+      "original": "/Users/son7/tseng-market-expansion-20261025/work/images/id-924-original.png",
+      "target": "/Users/son7/tseng-market-expansion-20261025/repo/public/images/columns/924-market-expansion-20261025.webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "originalSha256": "0df6a443687045a338d5e09a9dfeaa2d5586bce3d151d2d7e3f6b75394ff5c86",
+      "sha256": "d705073447ac0b21a047d736acca9cd73cc6e3e4ab98d560fc5f321bc5761b7a",
+      "bytes": 197798
+    },
+    {
+      "id": 925,
+      "prompt": "Use case: photorealistic-natural. Asset type: editorial hero for an Indonesian-language Taiwan legal column about a home caregiver ordered to work in a family restaurant outside the job covered by the work permit. Primary request: an empty modest restaurant after service, a metal trolley of stacked clean white bowls and a plain dishwashing apron in crisp foreground; through an open interior doorway, a quiet home-care corner with an empty wheelchair and a folded blanket is visible out of focus. This visual juxtaposition shows two different workplaces without any workers. Restrained editorial photograph with realistic brushed steel, ceramic and textured floor, cool daylight from restaurant windows balanced with warmer light in the domestic room. Horizontal landscape 1536 by 1024. Clear spatial depth, ordinary lived-in environment, no dramatic police imagery. Fictional illustrative setting. No people or faces or hands. No readable text, no menus, no labels, no signage, no numbers, no logos, no national flags, no identity documents, no legal documents, no watermark. Do not depict a real case.",
+      "source": "/Users/son7/.codex/generated_images/01a17323-a371-7363-b167-e185bfb27ac6/exec-f2199b2b-5f62-4353-8b3c-df3b134c6911.png",
+      "mode": "native image_gen",
+      "inspected": true,
+      "inspection": "Fictional people-free editorial scene inspected in native output: topic-specific composition, no faces, readable text, identity documents, flags, logos or real-case evidence.",
+      "original": "/Users/son7/tseng-market-expansion-20261025/work/images/id-925-original.png",
+      "target": "/Users/son7/tseng-market-expansion-20261025/repo/public/images/columns/925-market-expansion-20261025.webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "originalSha256": "e60efbbc71c2586733189affa57a38e8adae825802ea931ee982dbe7545c27c5",
+      "sha256": "41beac4dfdbb8f47d304252163c526d5586c68abc875937ff26ce65d7530aab8",
+      "bytes": 219956
+    }
+  ]
+}

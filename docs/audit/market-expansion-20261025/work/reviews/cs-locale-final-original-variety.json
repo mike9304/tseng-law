@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-25T13:27:56.527209+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+      "sha256": "b24786be986f1f9660c9fce10c830137156646755991d85215d4e96836fb1cef",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+        "--lang",
+        "cs"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'cs' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+    },
+    {
+      "source_path": "src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+      "sha256": "46c094fc25bee60eaddd867007b905a44a89c2c1dbb77ab9dda8cd5a5837fe91",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+        "--lang",
+        "cs"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'cs' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+    }
+  ]
+}

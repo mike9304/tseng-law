@@ -1,0 +1,66 @@
+{
+  "originalUnsupported944": {
+    "chunk_id": "8b14d6",
+    "wall_time_seconds": 0.00000575,
+    "exit_code": 2,
+    "original_token_count": 101,
+    "output": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'lt' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+  },
+  "originalUnsupported945": {
+    "chunk_id": "6030d9",
+    "wall_time_seconds": 0.00000575,
+    "exit_code": 2,
+    "original_token_count": 101,
+    "output": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'lt' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+  },
+  "candidateInitial944": {
+    "chunk_id": "29f692",
+    "wall_time_seconds": 0.000005917,
+    "exit_code": 1,
+    "original_token_count": 85,
+    "output": "repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md [lt] sentences=51 mean=13.1 cv=0.428 short=0.255 run3=0.041 opener_rep=0.062 cite_end=0.0 cite_para=0.312 contrast=0 caveat=1 q=2\n  FAIL len_cv=0.428 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n"
+  },
+  "candidateInitial945": {
+    "chunk_id": "a86483",
+    "wall_time_seconds": 0.000005792,
+    "exit_code": 1,
+    "original_token_count": 85,
+    "output": "repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md [lt] sentences=50 mean=13.2 cv=0.443 short=0.24 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.6 contrast=0 caveat=1 q=2\n  FAIL len_cv=0.443 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n"
+  },
+  "current944": {
+    "chunk_id": "a2f107",
+    "wall_time_seconds": 0.000006,
+    "exit_code": 1,
+    "original_token_count": 85,
+    "output": "repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md [lt] sentences=46 mean=14.7 cv=0.444 short=0.217 run3=0.023 opener_rep=0.125 cite_end=0.0 cite_para=0.312 contrast=0 caveat=1 q=2\n  FAIL len_cv=0.444 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n"
+  },
+  "current945": {
+    "chunk_id": "28f134",
+    "wall_time_seconds": 0.000006,
+    "exit_code": 0,
+    "original_token_count": 63,
+    "output": "repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md [lt] sentences=49 mean=13.8 cv=0.455 short=0.204 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.6 contrast=0 caveat=1 q=2\n  OK — no variety limit violated\n"
+  },
+  "intermediateObserved": {
+    "944": [
+      {
+        "cv": 0.418,
+        "exitCode": 1,
+        "chunkId": "4ce2ac"
+      },
+      {
+        "cv": 0.44,
+        "exitCode": 1,
+        "chunkId": "d7283a"
+      }
+    ],
+    "945": [
+      {
+        "cv": 0.465,
+        "exitCode": 0,
+        "chunkId": "e29ebf"
+      }
+    ]
+  },
+  "note": "Initial draft self-checks and one locale-directed repair are recorded without representing failed measurements as passes."
+}

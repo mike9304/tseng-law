@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-10-25",
+  "tool": "native image_gen.imagegen",
+  "formatConversion": "Pillow PNG→WebP quality88 method6; no content alteration",
+  "records": [
+    {
+      "id": 922,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial hero image for a Vietnamese-language Taiwan residential tenant article about returning keys and documenting the apartment condition when reclaiming a security deposit. Scene: a modest, clean, empty Taiwanese rental apartment on moving-out day, pale walls with small realistic wear, a window with gentle urban light, tiled floor. Foreground: two plain metal house keys resting beside a closed unbranded smartphone and a small folded blank paper on a simple wooden table; a single cardboard moving box farther back. Natural editorial photography, quiet warm daylight, realistic textures, wide horizontal 3:2 composition, restrained colors. Fictional scene; no people or faces, no readable text, no identity documents, no logos, no flags, no watermark, no symbols of justice, no fake evidence or actual identifiable property.",
+      "original": "/Users/son7/.codex/generated_images/01a17323-7607-7960-8aa4-cea5c7dcba83/exec-4be270d0-ef7d-4fb0-b00d-7344f551a8f1.png",
+      "destination": "repo/public/images/columns/922-market-expansion-20261025.webp",
+      "inspected": true,
+      "inspection": "Viewed tool-rendered original: empty apartment, keys, blank paper, blank phone; no persons/faces/text/logos/identity documents. Fictional scene.",
+      "sha256": "c41c0e82349c0d938850db2c824c67949ec674f9cbfc3d334ce33bc923908d85",
+      "bytes": 114908,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finalWebpInspected": true
+    },
+    {
+      "id": 923,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial hero image for Vietnamese graduates starting work in Taiwan and checking probation pay and their immigration work eligibility. Scene: quiet modest Taiwanese office workstation ready for a first working day, with an unbranded closed dark blue laptop, a plain ceramic mug, a few blank sheets in a simple open folder, a black pen, and a plain fabric backpack leaning against the chair. An out-of-focus campus-like building and trees are visible through the window. No graduation cap or diploma. Natural restrained editorial photograph with cool morning daylight, tactile paper and fabric, thoughtful wide horizontal 3:2 composition from a three-quarter desk-level view. This is a fictional generic scene. No people or faces, no text or numbers anywhere, no logos, no badges, no identity cards, no flags, no watermark, no fake evidence, no justice symbols.",
+      "original": "/Users/son7/.codex/generated_images/01a17323-7607-7960-8aa4-cea5c7dcba83/exec-ddb733a5-c5d2-46f7-a03b-8e5fbf411c8b.png",
+      "destination": "repo/public/images/columns/923-market-expansion-20261025.webp",
+      "inspected": true,
+      "inspection": "Viewed tool-rendered original: office desk, plain folder/laptop/mug/backpack, diffuse campus view; no persons/faces/text/logos/identity documents. Fictional scene.",
+      "sha256": "788418fe4ca09acbc7d0cc30985d254fa47d5a5192e98c50e022209cf3fc8125",
+      "bytes": 123086,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finalWebpInspected": true
+    }
+  ]
+}

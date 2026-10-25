@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-25T13:27:56.527209+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+      "source_sha256": "b24786be986f1f9660c9fce10c830137156646755991d85215d4e96836fb1cef",
+      "image_sha256": "fbe6798bf66fccdd74d1cf80421188c1da0fb122de6f0ad77625bf4491f46543",
+      "faq_count": 3,
+      "bold_markup": false,
+      "duplicate_leading_h1": false,
+      "email_occurrences": 1,
+      "topic": "company",
+      "caption": "Smyšlená scéna"
+    },
+    {
+      "source_path": "src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+      "source_sha256": "46c094fc25bee60eaddd867007b905a44a89c2c1dbb77ab9dda8cd5a5837fe91",
+      "image_sha256": "d28c66a04807a5d524c06bd2ee1912a2c23b5bc60a6ebeaa8c6baec5c2ec35d0",
+      "faq_count": 3,
+      "bold_markup": false,
+      "duplicate_leading_h1": false,
+      "email_occurrences": 1,
+      "topic": "company",
+      "caption": "Smyšlená scéna"
+    }
+  ]
+}

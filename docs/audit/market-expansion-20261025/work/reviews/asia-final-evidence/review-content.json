@@ -1,0 +1,129 @@
+{
+  "reviewer": "/root/expand_final_asia",
+  "independence": "AI final editorial and legal-evidence reviewer; did not author any of the six manuscripts or their locale reviews. No claim of professional licensure, human review or publication authority.",
+  "review_date": "2026-10-25",
+  "per_article": {
+    "922": {
+      "checks": "Rental Act Articles 3–4, 7, 12, 16 and 40: residential scope and exclusions; two-month deposit cap; return only after termination, delivery and contractual debts settled; balance after permitted setoff; joint condition handover and reasonable-period demand before deemed handover; separate abandoned-belongings demand/expense rule; fee-exempt local mediation without a promised result. Civil Code 432 preserves prudent care, causal breach and agreed/natural-use exception. The final Article40(3) tail expressly covers the pre-commencement continuing-lease exclusion and agreement alternative.",
+      "opening": "Paragraph1 states the actual return conditions and cap. Paragraph2 assigns different evidentiary roles to photos and repair invoices. Deleting either loses a concrete rule or evidence question; no general market preamble.",
+      "comparison": "Compared with VI704–706, the structure is a deposit/handover dispute rather than ARC forms, visa-route menus or renewal/travel. The ending identifies the deposit, delivery and disputed deduction records.",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0060125",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=432"
+      ],
+      "limitations": []
+    },
+    "923": {
+      "checks": "Foreign Professionals Act12 requires a Taiwan associate-or-higher degree, recent-graduate category and NIA-approved extension; receipt/application or an ARC alone is insufficient. Residence regulation11 gives one year from the day after prior residence expiry, with a further timely application and two-year maximum. Official history and WDA confirm work-permit exemption from2026-01-01; regulated occupations retain licensing. The wage table correctly separates 2026 TWD29,500/month and196/hour from announced2027 TWD30,900/205 effective2027-01-01. Normal hours, overtime exclusion and monthly/hourly categories remain. The clarified opening invalidates subminimum/no-overtime probation agreements within LSA scope, not probation agreements generally. Termination grounds/notice/severance are conditional; LSA23/30 records and dispute-law9 mediation jurisdiction checked.",
+      "opening": "Paragraph1 links permit exemption to probation pay and states LSA scope. Paragraph2 adds the lawful start-work date and degree/approved-extension requirement. The brief ARC warning answers the actual eligibility error.",
+      "comparison": "VI704–706 provide residence procedures. This piece makes one graduate-job decision and a current/future wage comparison; it does not reproduce their route or document lists.",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=A0030295",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030295",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080129&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0080129",
+        "https://ezworktaiwan.wda.gov.tw/cp.aspx?n=511766BD9E956242&s=35F4766BC4662D87",
+        "https://www.mol.gov.tw/1607/28162/28166/28180/70460/76761/76833/post",
+        "https://www.mol.gov.tw/1607/28162/28296/81778/81781/82213/post"
+      ],
+      "limitations": []
+    },
+    "924": {
+      "checks": "Gender Equality in Employment Act11 prohibits pregnancy-based termination and forced resignation/unpaid-leave clauses, without promising immunity from unrelated lawful grounds. WDA2026-10-13 specifically excludes domestic migrant workers from LSA and Employment Insurance Act (就業保險法); the first insurance-law name now identifies that Act. Eight-week calendar maternity leave and generally unpaid domestic-worker baseline are distinguished from seven paid prenatal-checkup days and more favorable contract rights. Articles21/31/34/36 preserve leave protection, prima-facie different-treatment facts before the employer burden, local complaint and retaliation protection. ESA59 transfer still needs authority approval. Official Indonesian public-help route precedes private inquiry.",
+      "opening": "Paragraph1 states three distinct effects: dismissal ban, prohibited advance clauses and ineffective termination. Paragraph2 identifies the two statutory exclusions, dated clarification and unpaid-maternity baseline. Both are substantive.",
+      "comparison": "ID704–706 concern ARC applications, visa categories and renewals; this article stays with the pregnancy-related signature and payment dispute. It does not generalize factory-worker benefits to private-home caregivers.",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030014",
+        "https://www.wda.gov.tw/News_Content.aspx?n=31&s=19455",
+        "https://www.mol.gov.tw/1607/1632/1633/99490/post",
+        "https://www.mol.gov.tw/1607/28162/28166/28268/28270/29101/",
+        "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb396b1b5b30196b414768a0b43",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=59"
+      ],
+      "limitations": [
+        "Direct final-reviewer requests for the Gender Equality Act history URL timed out. I independently opened its current full text, Article40 commencement provisions and contemporary MOL/WDA guidance, and read the author's preserved actual MOJ history response in id-author-source-evidence.json. No search snippet alone supports the rule."
+      ]
+    },
+    "925": {
+      "checks": "Official Indonesian WDA examples support the own-shop/restaurant question. ESA57(3) employer direction outside the permit is distinguished from73(1) another-employer work and73(2) self-initiated outside work without employer direction. The article neither promises worker immunity nor assumes automatic worker culpability. ESA43 permits/legislative exceptions, NT$30,000–150,000 employer fine under68, and72(3) failure to correct after a deadline before revocation are accurately bounded. Fine is not worker compensation. ESA59 approval remains required; no new rule about lawful accompaniment of the care recipient was invented. The ID664 unpaid-wage internal target exists.",
+      "opening": "Paragraph1 presents and answers the actual employer-owned shop request using official guidance. Paragraph2 adds the employer prohibition and why agreement or extra pay does not authorize duties.",
+      "comparison": "Distinct from ID704–706 residence procedures and from924 pregnancy/signing. Ends on the permit duties compared with the actual instructed work, rather than a generic CTA.",
+      "sources": [
+        "https://fw.wda.gov.tw/wda-employer/home/no-work-illegally/no-work-illegally-file/2c95efb395ab11680195ac17c09d0157",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001"
+      ],
+      "limitations": [
+        "The single Article43 URL and direct ESA history requests timed out. Article43 and commencement Article83 were independently read in current official LawAll; the author's preserved official history response was also read. Current LawAll identifies the2025-01-20 latest amendment."
+      ]
+    },
+    "926": {
+      "checks": "LSA61 compensation survives departure and uses two years from the date receivable; it is not a universal two-year accident deadline. Necessary medical/original-wage compensation and the narrowly conditioned40-month alternative in59 were checked. Valid settlement may extinguish released rights under Civil736–737; all738 mistake exceptions are bounded, with no automatic rescission. Occupational-insurance11 includes foreigners within statutory categories;27's same insured injury/disease one-year post-cessation condition is separate from37's five-year claim prescription.90 permits specified offset/refund rather than double gross recovery. LSA13 and insurance84 employer-termination exceptions retain approvals, medical/hospital findings and timing. Added written local mediation route matches dispute-law9.",
+      "opening": "Paragraph1 supplies the compensation right surviving departure. Paragraph2 distinguishes the employment-ending document from a valid settlement's relinquished claims and tells the reader to read them separately. No invented hospital anecdote.",
+      "comparison": "FIL801–803 address caregiver death/transfer, payslips and missing-worker/overstay reports. This piece focuses on resignation versus settlement. VI039 was read in full: overlapping necessary injury statutes remain, but its imagined crushed-finger story, broad three-source compensation survey and repatriation overview are not reused.",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=61",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=59",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0050031",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=737",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=738"
+      ],
+      "limitations": [
+        "Insurance single Article11 access failed; its current text was independently read in official LawAll. The insurance commencement history independently opened and confirms2022-05-01. No old BLI Article84 wording was substituted for current MOJ."
+      ]
+    },
+    "927": {
+      "checks": "CPC516 payment-order objection is20days to issuing court, whole/part, without reasons;519 effect is confined to the objected extent and continues as suit/mediation.512 and521 are accurately separated from merits judgment and possible secured stay. NCA42–43 promissory ruling appeal is10days, not the payment-order remedy; Bills123 permits enforcement against maker. NCA195's20day forgery/alteration suit and mandatory stay on proof are separated from its security/countersecurity exceptions and discretionary secured stay for other non-debt suits. CPC137–138 substituted/deposit service, NCA31 application, Civil120/122 and CPC161–162 time rules preserve conditions. LAF application is not guaranteed approval. Philippine-law loan/recruitment issues require separate review.",
+      "opening": "Paragraph1 identifies the two documents and their legal response routes in a recruitment-loan situation. Paragraph2 preserves the envelope/service record and links it to the earlier loan/note and collector identity.",
+      "comparison": "FIL801–803 do not teach debt-document triage. The concrete service/filing task differs from all five other new SEA pieces. The July2026 case is a district-court appeal ruling, not a firm case or a claimed Philippine-worker precedent.",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=519",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=521",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010008&flno=42",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010008&flno=195",
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPDV%2C115%2C%E6%8A%97%2C306%2C20260703%2C1",
+        "https://www.laf.org.tw/foreign/4",
+        "https://www.laf.org.tw/en/service-laywer-des"
+      ],
+      "limitations": [
+        "My repeated live printData/data requests for Taipei115抗306 timed out, and direct CLI fetch failed DNS. I read all50lines of the author's preserved actual official response (fil-author-judgment-115-306.txt and fil-author-source-opens.json response10). It confirms July3,2026 dismissal of the appeal, appellants' unproven financing allegation and formal-only review. I independently opened the governing current statutory provisions/history. I do not claim an independent successful live judgment fetch; a third-party search result was not used as the legal basis."
+      ]
+    }
+  },
+  "closed_findings": [
+    {
+      "id": "ASIA-F01",
+      "article": 924,
+      "file_line": "src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md:28",
+      "exact_sentence": "Pekerja migran rumah tangga tidak tercakup oleh Undang-Undang Standar Ketenagakerjaan maupun Undang-Undang Asuransi Ketenagakerjaan.",
+      "reason": "The generic Indonesian insurance-law label can obscure which Taiwan statute is excluded. The official2026-10-13 clarification specifies Employment Insurance Act (就業保險法), not labor/occupational insurance generally.",
+      "source": "https://www.wda.gov.tw/News_Content.aspx?n=31&s=19455",
+      "proposed_rewrite": "Pekerja migran rumah tangga tidak tercakup oleh Undang-Undang Standar Ketenagakerjaan maupun Undang-Undang Asuransi Ketenagakerjaan Taiwan (Employment Insurance Act, 就業保險法).",
+      "legal_meaning_preserved": true,
+      "substantive_conclusion_changed": false,
+      "status": "Author applied; final reviewer reread line28, leave/parental-benefit paragraphs and FAQs; fresh independent locale PASS verified."
+    },
+    {
+      "id": "ASIA-F02",
+      "article": 922,
+      "file_line": "src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md:74",
+      "exact_sentence": "Bài viết dành cho hợp đồng thuê nhà tư nhân để ở thuộc phạm vi luật Đài Loan nêu trên.",
+      "reason": "The detailed scope tail listed Article4 exclusions but omitted Article40(3)'s pre-commencement continuing-lease exception unless parties agree to apply the Act.",
+      "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
+      "proposed_rewrite": "Add: Theo khoản 3 Điều 40, hợp đồng ký trước khi luật có hiệu lực mà thời hạn thuê vẫn tiếp tục sau đó không thuộc luật này, trừ khi các bên thỏa thuận áp dụng.",
+      "legal_meaning_preserved": "Covered-lease conclusions preserved; the applicability conclusion is substantively narrowed for pre-commencement continuing leases.",
+      "substantive_conclusion_changed": true,
+      "status": "Author added linked Article40(3) sentence at final line76 and source-list reference; final reviewer and renewed locale review checked both time conditions and agreement alternative."
+    }
+  ],
+  "common_limits": [
+    "MOJ displayed compilation through2026-10-16 on review date2026-10-25. Current official MOL/WDA material and relevant statute history/commencement were checked; this is not exhaustive real-time legal monitoring or guaranteed legal accuracy.",
+    "AI editorial/legal-evidence review only. No human native-speaker or licensed-attorney review claim. No publication authority, deploy, live-page, browser-layout/hydration/interaction certification.",
+    "Shared variety checker supports VI/ID and passed. FIL original remains unsupported exit2; its actual PASS is the separately approved task-local extension, not shared installation/support or human readability certification."
+  ],
+  "statutory_history": "Rental Act:2017-12-27 enactment/six-month commencement;2023-02-08 amendment, specified34/38-2 later2023-09-01, distinct Article40 transition. Foreign Professionals Act2025-09-24 amendment and2025-11-18 order:Article12 effective2026-01-01; other specified provisions2026-06-30 not generalized. Residence regulation latest2025-12-30 change to3/10/19 effective2026-01-01; Article11 current. Gender Equality Act2023 revision/Article40 and preserved history distinguish2024-03-08 provisions and2022-01-18 Article15 commencement. ESA latest2025-01-20 Article46 amendment; cited sections current, Article83 checked. LSA history latest2024-07-31 Article54 change does not rewrite59/61. Occupational-insurance law enacted2021, commenced2022-05-01. CPC/NCA histories and Bills history read. Civil Code2026 Article1223 future commencement and166-1 uncommenced provision are not applied to current432/736–738/120/122.",
+  "market": "The research supports an editorial audience/issue hypothesis, not paid demand. All6 manuscripts avoid population, market-share, traffic, search-volume, conversion or victory claims. I independently opened MOE student and WDA programme figures; identified Indonesia's18740 versus13957+4753 inconsistency and WDA persons-versus-cases unit issue. Researcher corrected sea-market.md/sea-sources.json and preserved the discrepancy in sea-research-corrections.json. Neither clean student totals nor migrant client forecasts are inferred. FIL927 remains explicitly exploratory in the research.",
+  "service": "Current firm services/contact and repository service/inquiry copy support Taiwan labor/civil disputes, wei@hoveringlaw.com.tw and consultation in Chinese/English/Japanese/Korean. Each article uses one inquiry email, requires confirmation of VI/ID/FIL communication and distinguishes message receipt from accepting the matter. No foreign licence/office, interpreter guarantee, invented client/victory, human byline or public AI footer. Internal legal-ai-assistant provenance retained."
+}

@@ -1,0 +1,24 @@
+{
+  "reviewer": "/root/expand_locale_pl",
+  "checkedAt": "2026-10-25T13:20:26.595182+00:00",
+  "method_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+  "method_review": "work/variety-review/review-final.json",
+  "records": [
+    {
+      "source_path": "src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "sha256": "a163e85a051394b23172d1a77c57fee5b810a17f91da0fac036f015995f44820",
+      "command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md --lang pl",
+      "exit_code": 1,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md [pl] sentences=44 mean=15.3 cv=0.441 short=0.182 run3=0.071 opener_rep=0.067 cite_end=0.0 cite_para=0.4 contrast=0 caveat=0 q=1\n  FAIL len_cv=0.441 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+      "stderr": "OFFICIAL CHECKER: pl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "source_path": "src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "sha256": "5a4608ffd47e23663005ba9c77500e263b422d3907ff3b149ee6d39ff8ac8bc5",
+      "command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md --lang pl",
+      "exit_code": 1,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md [pl] sentences=52 mean=14.9 cv=0.426 short=0.212 run3=0.0 opener_rep=0.059 cite_end=0.0 cite_para=0.588 contrast=0 caveat=0 q=1\n  FAIL len_cv=0.426 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+      "stderr": "OFFICIAL CHECKER: pl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    }
+  ]
+}

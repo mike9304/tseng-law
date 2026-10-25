@@ -1,0 +1,23 @@
+{
+  "reviewer": "/root/expand_locale_pl",
+  "checkedAt": "2026-10-25T13:11:44.268830+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "sha256": "640bb0e3bb5cae1a5fa833bcf4ea835fb478aa5eef7a4a69955c260ede6062da",
+      "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md; supply --lang\n",
+      "stderr": ""
+    },
+    {
+      "source_path": "src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "sha256": "23d9c49e2d619cc2021e014224ce33e97670aea23dcac75ce05be5bb036896da",
+      "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md; supply --lang\n",
+      "stderr": ""
+    }
+  ],
+  "interpretation": "Shared CLI unsupported result is not a PASS. Await independently reviewed task-local extension."
+}

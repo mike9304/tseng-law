@@ -1,0 +1,28 @@
+{
+  "reviewer": "/root/expand_locale_fil",
+  "checkedAt": "2026-10-25T13:28:27.612862+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+      "before_sha256": "b5c61e5675ad7ace02ca89ed45af6434f53cf358731cfedbc5e222e4a881f1dc",
+      "current_sha256": "633126ec40c4f821c37e30b2610aeb2598a7c7fcc3617033960719ae2cf1bfc5",
+      "old_caption": "\"Kathang-isip na pahingahan sa factory.\"",
+      "current_caption": "Kathang-isip na eksena",
+      "reverse_substitution_matches_prior_full_source": true,
+      "body_alt_and_other_metadata_unchanged": true,
+      "image_sha256": "8c3d5654ac2ce688d46c9baeb28c59c28ee243aeca9663a7ba29c62b636ecf2f",
+      "review": "Current caption actually reread; accurate concise fictional-scene label for the previously displayed image; no byline/real-case implication."
+    },
+    {
+      "source_path": "src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+      "before_sha256": "0ce2bf7d0cd6a45886d56a5f5be25279f2d7894a83204f55d74b563eb1a51b5e",
+      "current_sha256": "535d60328cbcbf44ff21363a0a47a506858c8d38a4203dc5037bbe82b145d2b9",
+      "old_caption": "\"Kathang-isip na eksena; walang tunay na dokumento ng hukuman.\"",
+      "current_caption": "Kathang-isip na eksena",
+      "reverse_substitution_matches_prior_full_source": true,
+      "body_alt_and_other_metadata_unchanged": true,
+      "image_sha256": "4dcf34091e9d67c2cc5ebb7845775e25cdab69ec4b22322947b7e2e81b2c0ca7",
+      "review": "Current caption actually reread; accurate concise fictional-scene label for the previously displayed image; no byline/real-case implication."
+    }
+  ]
+}

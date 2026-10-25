@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-25T13:20:35.614106+00:00",
+  "checker": "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+  "checker_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+  "method_review": "work/variety-review/review-final.json",
+  "method_review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+  "records": [
+    {
+      "source_path": "src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+      "sha256": "bec0b9df6b63b0f17f5f9bc2ffac6b2ef23e2b8693475936eaca05ff1cfaa2a3",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+        "--lang",
+        "cs"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md [cs] sentences=44 mean=15.0 cv=0.455 short=0.159 run3=0.024 opener_rep=0.067 cite_end=0.0 cite_para=0.667 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "OFFICIAL CHECKER: cs unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "source_path": "src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+      "sha256": "2c09cb482f2efe0b4d4f63d570b2ebed210bdfdd3708d2dfd9de95f5efa858c8",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+        "--lang",
+        "cs"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md [cs] sentences=44 mean=14.8 cv=0.456 short=0.205 run3=0.024 opener_rep=0.062 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "OFFICIAL CHECKER: cs unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    }
+  ]
+}

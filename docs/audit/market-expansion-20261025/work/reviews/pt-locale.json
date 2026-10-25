@@ -1,0 +1,203 @@
+{
+  "reviewer": "/root/expand_locale_pt",
+  "role": "locale",
+  "locale": "pt-BR",
+  "independentOfAuthor": true,
+  "checkedAt": "2026-10-25T13:33:33.990457+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md",
+      "sha256": "3667f89c95b83e683ef27973cf65c04e06112ec2411a8b9dbb3456576707b1c1",
+      "verdict": "PASS",
+      "findings": [],
+      "image_path": "public/images/columns/938-market-expansion-20261025.webp",
+      "image_sha256": "46b814b548cea916f4e74b646645eac4b34926f257ed0ef4a01ef99bf34366a2",
+      "image_inspected": true,
+      "image_review": "Viewed actual WebP: sealed transparent container of green coffee beans, metal scoop, unmarked jute sack on a cool inspection counter. No faces, legible text, flags, logos or identifiers. Alt describes the visible scene; caption says fictional.",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md --lang pt",
+      "variety_cwd": "/Users/son7/tseng-market-expansion-20261025",
+      "variety_exit_code": 0,
+      "variety_metrics": {
+        "sentences": 36,
+        "mean": 18.4,
+        "cv": 0.515,
+        "short": 0.25,
+        "run3": 0.0,
+        "opener_rep": 0.077,
+        "cite_end": 0.0,
+        "cite_para": 0.615,
+        "contrast": 0,
+        "caveat": 0,
+        "q": 1
+      },
+      "variety_output": "OK — no variety limit violated",
+      "section5_review": "PASS; substantive observations in pt-locale.md",
+      "metadata_and_faq_reviewed": true,
+      "full_manuscript_read": true,
+      "limitations": [
+        "Independent AI editorial review; not a human native-speaker or licensed-lawyer certification.",
+        "Final independent legal/factual review and publication verification remain separate root-owned steps."
+      ],
+      "variety_stdout": "repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md [pt] sentences=36 mean=18.4 cv=0.515 short=0.25 run3=0.0 opener_rep=0.077 cite_end=0.0 cite_para=0.615 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "topic": "litigation",
+      "metadata_only_rebind": {
+        "previous_sha256": "c71b28ee78f1b6c0879ca7389c76dfbf4474cf5b361eb28a998b8d95be2941d0",
+        "change": "topic business -> litigation",
+        "all_other_bytes_identical": true,
+        "allowed_taxonomy_source": "src/lib/column-topics.ts",
+        "independent_rechecked": true
+      },
+      "featured_image_caption": "Cena fictícia",
+      "caption_rebind": {
+        "checkedAt": "2026-10-25T13:33:33.990457+00:00",
+        "previous_sha256": "e196bf577e8a7ef27dcc7204347a16d4c473e3a12e143e692518a53b4f860b58",
+        "current_sha256": "3667f89c95b83e683ef27973cf65c04e06112ec2411a8b9dbb3456576707b1c1",
+        "previous_caption": "Cena fictícia de amostragem de café.",
+        "current_caption": "Cena fictícia",
+        "all_other_source_bytes_identical": true,
+        "image_bytes_identical": true,
+        "verification": "Reverse only the caption value and recover exact previous PASS whole-file SHA; independently hash current image bytes.",
+        "previous_pass_report": "work/reviews/pt-locale-pre-caption.json",
+        "previous_pass_report_sha256": "a9278a0896823c0ae9cdc2dbe40b2eb4473388131f50e05248a9e859cd3958f1",
+        "caption_rule": "src/lib/__tests__/column-image-caption-label.test.ts:18",
+        "verdict": "PASS"
+      }
+    },
+    {
+      "source_path": "src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md",
+      "sha256": "f7fc7b4fc508e35a8d8313fc7d8e94e3178490ae0135755e116b71cc72b126e9",
+      "verdict": "PASS",
+      "findings": [],
+      "image_path": "public/images/columns/939-market-expansion-20261025.webp",
+      "image_sha256": "a80c077de19d2b485b7897723fbe7ab9531f7b193d37957bc94f83bc4b029451",
+      "image_inspected": true,
+      "image_review": "Viewed actual WebP: warm wood packaging table, two blank kraft pouches, roasted beans, blank paper samples and coffee foliage. No faces, legible text, certification marks, flags or logos. Alt and fictional caption match.",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md --lang pt",
+      "variety_cwd": "/Users/son7/tseng-market-expansion-20261025",
+      "variety_exit_code": 0,
+      "variety_metrics": {
+        "sentences": 37,
+        "mean": 19.5,
+        "cv": 0.454,
+        "short": 0.189,
+        "run3": 0.029,
+        "opener_rep": 0.231,
+        "cite_end": 0.0,
+        "cite_para": 0.462,
+        "contrast": 0,
+        "caveat": 0,
+        "q": 1
+      },
+      "variety_output": "OK — no variety limit violated",
+      "section5_review": "PASS; substantive observations in pt-locale.md",
+      "metadata_and_faq_reviewed": true,
+      "full_manuscript_read": true,
+      "limitations": [
+        "Independent AI editorial review; not a human native-speaker or licensed-lawyer certification.",
+        "Final independent legal/factual review and publication verification remain separate root-owned steps."
+      ],
+      "variety_stdout": "repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md [pt] sentences=37 mean=19.5 cv=0.454 short=0.189 run3=0.029 opener_rep=0.231 cite_end=0.0 cite_para=0.462 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "topic": "company",
+      "metadata_only_rebind": {
+        "previous_sha256": "03a12e5f770a04e9c6ecbe105632aa2fbe9b2b1b010095938587545ed8cef19d",
+        "change": "topic business -> company",
+        "all_other_bytes_identical": true,
+        "allowed_taxonomy_source": "src/lib/column-topics.ts",
+        "independent_rechecked": true
+      },
+      "featured_image_caption": "Cena fictícia",
+      "caption_rebind": {
+        "checkedAt": "2026-10-25T13:33:33.990457+00:00",
+        "previous_sha256": "5f684d9d24803677ba3288acc029b5739b8353ce41d9a4e19a13a3980c400a2d",
+        "current_sha256": "f7fc7b4fc508e35a8d8313fc7d8e94e3178490ae0135755e116b71cc72b126e9",
+        "previous_caption": "Cena fictícia de preparação de embalagens de café.",
+        "current_caption": "Cena fictícia",
+        "all_other_source_bytes_identical": true,
+        "image_bytes_identical": true,
+        "verification": "Reverse only the caption value and recover exact previous PASS whole-file SHA; independently hash current image bytes.",
+        "previous_pass_report": "work/reviews/pt-locale-pre-caption.json",
+        "previous_pass_report_sha256": "a9278a0896823c0ae9cdc2dbe40b2eb4473388131f50e05248a9e859cd3958f1",
+        "caption_rule": "src/lib/__tests__/column-image-caption-label.test.ts:18",
+        "verdict": "PASS"
+      }
+    }
+  ],
+  "comparators": [
+    {
+      "source_path": "src/content/columns-pt/704-taiwan-arc-first-application.md",
+      "published": "2026-10-24",
+      "sha256": "8aa828c67ccc8c9ffed1946592e0660bd03e36d4bce4744835a31f7672fa702d",
+      "scope": "Compared actual opening two paragraphs, headings and ending; this is not a new legal audit of the comparator."
+    },
+    {
+      "source_path": "src/content/columns-pt/705-taiwan-visa-residence-work-study-family.md",
+      "published": "2026-10-24",
+      "sha256": "8935d8bab66031ecfd5c6b01db002fecc8d78e22713365c52214adaaa594c359",
+      "scope": "Compared actual opening two paragraphs, headings and ending; this is not a new legal audit of the comparator."
+    },
+    {
+      "source_path": "src/content/columns-pt/706-taiwan-arc-renewal-changes-reentry.md",
+      "published": "2026-10-24",
+      "sha256": "6cd3d32cdbe24fa0a74f506cf17198f925d9780e769ad4ac3bf6331212d056f3",
+      "scope": "Compared actual opening two paragraphs, headings and ending; this is not a new legal audit of the comparator."
+    }
+  ],
+  "resolvedFindings": [
+    {
+      "id": "PT-938-01",
+      "source_path": "src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md",
+      "lines": [
+        21,
+        42
+      ],
+      "original_sha256": "603794474433f03f7ff04f30761c3ab45ea3d6fdd43acbb6ffbb22b8826dd460",
+      "original": [
+        "pelo responsável pela inspeção",
+        "atribui ao responsável pela inspeção a destinação"
+      ],
+      "reason": "Brazilian Portuguese can read responsável pela inspeção as the inspector/inspection authority; the law distinguishes the importer obliged to apply for inspection (報驗義務人) from the inspection authority (查驗機關).",
+      "official_source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0040017",
+      "articles": [
+        2,
+        23,
+        24,
+        25
+      ],
+      "proposed_rewrite": "importador responsável por solicitar a inspeção",
+      "legal_meaning_preserved": "Clarifies the legally intended subject; not merely cosmetic. Does not change the deadline, options, powers or duties.",
+      "owner_applied_repair": "/root/expand_author_pt_br",
+      "repair_round": 1,
+      "rechecked": true,
+      "status": "RESOLVED",
+      "final_sha256": "3667f89c95b83e683ef27973cf65c04e06112ec2411a8b9dbb3456576707b1c1",
+      "prose_repair_sha256": "c71b28ee78f1b6c0879ca7389c76dfbf4474cf5b361eb28a998b8d95be2941d0"
+    }
+  ],
+  "unsuccessful_repair_rounds": 0,
+  "evidence": [
+    "work/reviews/pt-locale-source-opens.json",
+    "work/reviews/pt-locale-afa-opens.json",
+    "work/reviews/pt-locale-caption-rebind.json"
+  ],
+  "limitations": [
+    "The three recent same-language comparators use primarily European Portuguese and address residence; they establish recent site structure, not Brazilian-native validation.",
+    "Individual MOJ LawSingle opens failed; the current official LawAll texts opened successfully and were inspected directly.",
+    "No Brazilian certifier eligibility or commercial demand volume is certified. The text keeps those limits explicit.",
+    "This review does not certify deployment or browser rendering."
+  ],
+  "author_evidence_read": [
+    {
+      "path": "work/reviews/pt-author.md",
+      "sha256": "7463d73dde1df0e05773d701ec9a8b0d1b4d25e669c22abca17b9116972feb71"
+    },
+    {
+      "path": "work/reviews/pt-author.json",
+      "sha256": "a6cb77cedcce3e3d48b72143c19b017f10044619ff7b9e5a26d3e4a2f3eff433"
+    }
+  ],
+  "captionNormalizationManifest": {
+    "path": "work/checks/caption-normalization.json",
+    "sha256": "ba56978e7514d4d094fc35a0b0813f33ef6750568151d067a211ee08470038d2"
+  },
+  "author_evidence_scope": "Previously read author evidence binds the pre-caption source; independent caption-only reverse-SHA verification connects it to the current source. No author report was modified by this reviewer."
+}

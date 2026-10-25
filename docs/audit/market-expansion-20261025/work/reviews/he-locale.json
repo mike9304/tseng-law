@@ -1,0 +1,102 @@
+{
+  "reviewer": "/root/expand_locale_he",
+  "role": "locale",
+  "independentOfAuthor": true,
+  "checkedAt": "2026-10-25T13:28:30.857284+00:00",
+  "status": "PASS",
+  "records": [
+    {
+      "source_path": "src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+      "sha256": "514c395c3212ea39504ab710d7b3130ad5bd0e996169b0c5cab212ea1752b3c5",
+      "verdict": "PASS",
+      "findings": [],
+      "image_sha256": "4037e0df9cfb08b660ca766fb21ae57558975f6ce7bb8ae19d63124fd7957822",
+      "image_actually_viewed": true,
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md --lang he",
+      "variety_exit_code": 0,
+      "variety_scope": "independently reviewed task-local Hebrew extension; original shared checker is unsupported",
+      "variety_original_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md --lang he",
+      "variety_original_exit_code": 2,
+      "sentence_count": 37,
+      "sentence_length_cv": 0.465,
+      "extracted_sentences_actually_read": true,
+      "section5_manual_check": "PASS; detailed findings in he-locale-evidence.md",
+      "repair_requests": 0,
+      "limitations": [
+        "AI editorial review, not a human native-speaker or attorney certification.",
+        "Original shared checker remains Hebrew-unsupported (exit 2); numerical PASS is from the independently reviewed task-local extension only.",
+        "Source-level Hebrew and mixed-script inspection; browser RTL rendering, interaction and deployment were not tested by this reviewer.",
+        "Full current-law certification is assigned separately to the independent final legal reviewer."
+      ],
+      "previous_sha256": "9115389453a135cf8b3b8f010f3bd996afbc0ee81bf6e92b43455033c617496f",
+      "caption_recheck": "PASS; only featured_image_caption shortened to סצנה בדיונית; all other source and image bytes unchanged",
+      "caption_recheck_evidence": "work/reviews/he-locale-caption-recheck.json"
+    },
+    {
+      "source_path": "src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+      "sha256": "95da9c181636d91a8a2da1e7e237f29d08c77c159740301e9c87b0804139a898",
+      "verdict": "PASS",
+      "findings": [],
+      "image_sha256": "e6048d77af3cded5a54553e88c92d2a0f9e9425f5f25f15d4e5db981b7163820",
+      "image_actually_viewed": true,
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md --lang he",
+      "variety_exit_code": 0,
+      "variety_scope": "independently reviewed task-local Hebrew extension; original shared checker is unsupported",
+      "variety_original_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md --lang he",
+      "variety_original_exit_code": 2,
+      "sentence_count": 43,
+      "sentence_length_cv": 0.481,
+      "extracted_sentences_actually_read": true,
+      "section5_manual_check": "PASS; detailed findings in he-locale-evidence.md",
+      "repair_requests": 0,
+      "limitations": [
+        "AI editorial review, not a human native-speaker or attorney certification.",
+        "Original shared checker remains Hebrew-unsupported (exit 2); numerical PASS is from the independently reviewed task-local extension only.",
+        "Source-level Hebrew and mixed-script inspection; browser RTL rendering, interaction and deployment were not tested by this reviewer.",
+        "Full current-law certification is assigned separately to the independent final legal reviewer."
+      ],
+      "previous_sha256": "c1edcaaa8978b6198116c522ad6edd879a9961a0f7c9f29af53a67c592f49e88",
+      "caption_recheck": "PASS; only featured_image_caption shortened to סצנה בדיונית; all other source and image bytes unchanged",
+      "caption_recheck_evidence": "work/reviews/he-locale-caption-recheck.json"
+    }
+  ],
+  "comparators": [
+    {
+      "source_path": "src/content/columns-he/858-israeli-tech-taiwan-source-code-trade-secrets.md",
+      "published": "2026-10-24"
+    },
+    {
+      "source_path": "src/content/columns-he/859-israeli-company-taiwan-subsidiary-branch-investment.md",
+      "published": "2026-10-24"
+    },
+    {
+      "source_path": "src/content/columns-he/860-israeli-professional-taiwan-work-permit-residence.md",
+      "published": "2026-10-24"
+    }
+  ],
+  "method_approval": {
+    "tool": "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+    "tool_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+    "review": "work/variety-review/review-final.json",
+    "review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c"
+  },
+  "evidence": {
+    "work/reviews/he-locale-evidence.md": "2491e4af50c75cf8b1ad3c7c09d74beb0a5e905b2db0d3b6a0479a6920232b90",
+    "work/reviews/he-locale-measurements.json": "c7aa3539998697e582d05c58841f4d3e765e5577908bdfbc2963c9fb19819e70",
+    "work/reviews/he-locale-extracted-sentences.json": "3b4eda4329b85f79af1ec2ba2fd1d4145a4aa4b3bfb012edb358b86b40d90c38",
+    "work/reviews/he-locale-caption-recheck.json": "3d153e9dcfb471aeebd2c290379546e099ac348b5763ca25fabc1aed64f5dead"
+  },
+  "limitations": [
+    "AI editorial review, not a human native-speaker or attorney certification.",
+    "Original shared checker remains Hebrew-unsupported (exit 2); numerical PASS is from the independently reviewed task-local extension only.",
+    "Source-level Hebrew and mixed-script inspection; browser RTL rendering, interaction and deployment were not tested by this reviewer.",
+    "Full current-law certification is assigned separately to the independent final legal reviewer."
+  ],
+  "caption_recheck": {
+    "status": "PASS",
+    "source_report": "work/checks/caption-normalization.json",
+    "independent_diff_and_old_hash_reconstruction": true,
+    "new_cli_runs": 2,
+    "original_shared_unsupported_runs": 2
+  }
+}

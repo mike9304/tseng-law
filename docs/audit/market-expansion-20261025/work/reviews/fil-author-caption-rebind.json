@@ -1,0 +1,29 @@
+{
+  "checked_at_utc": "2026-10-25T13:27:58.671470+00:00",
+  "origin": "Root confirmed caption normalization to the existing repository exact-label test. No author manuscript edit in this rebind.",
+  "root_evidence": "work/checks/caption-normalization.json",
+  "records": [
+    {
+      "id": 926,
+      "file": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+      "old_sha256": "b5c61e5675ad7ace02ca89ed45af6434f53cf358731cfedbc5e222e4a881f1dc",
+      "current_sha256": "633126ec40c4f821c37e30b2610aeb2598a7c7fcc3617033960719ae2cf1bfc5",
+      "old_caption": "Kathang-isip na pahingahan sa factory.",
+      "current_caption": "Kathang-isip na eksena",
+      "reconstructed_old_sha256": "b5c61e5675ad7ace02ca89ed45af6434f53cf358731cfedbc5e222e4a881f1dc",
+      "only_caption_changed": true,
+      "body_sha256": "478c383a1b83c6580728f466994cb83b5b3b8dc54fbbf7f306514d8e4edac5cc"
+    },
+    {
+      "id": 927,
+      "file": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+      "old_sha256": "0ce2bf7d0cd6a45886d56a5f5be25279f2d7894a83204f55d74b563eb1a51b5e",
+      "current_sha256": "535d60328cbcbf44ff21363a0a47a506858c8d38a4203dc5037bbe82b145d2b9",
+      "old_caption": "Kathang-isip na eksena; walang tunay na dokumento ng hukuman.",
+      "current_caption": "Kathang-isip na eksena",
+      "reconstructed_old_sha256": "0ce2bf7d0cd6a45886d56a5f5be25279f2d7894a83204f55d74b563eb1a51b5e",
+      "only_caption_changed": true,
+      "body_sha256": "36d51a08d19493021e11946d18e771a791aac77bf4b92072ac4e334327434db6"
+    }
+  ]
+}

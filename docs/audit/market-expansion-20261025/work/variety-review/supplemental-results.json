@@ -1,0 +1,921 @@
+{
+  "summary": {
+    "total": 114,
+    "passed": 114,
+    "failed": 0
+  },
+  "candidate_manifest_path": "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/evidence/candidate-manifest-repair-r1.json",
+  "candidate_manifest_sha256": "a495573c7986ac17c8212fefeee51bad1e07f8ea53444eb6424e35ecc481f275",
+  "checks": [
+    {
+      "id": "cs-ordinary-ordinal",
+      "status": "PASS",
+      "actual": [
+        "Jde o 5. odstavec 13. kapitoly.",
+        "Kopie je přiložena."
+      ],
+      "expected": [
+        "Jde o 5. odstavec 13. kapitoly.",
+        "Kopie je přiložena."
+      ],
+      "detail": null
+    },
+    {
+      "id": "cs-ordinary-ordinal-nfd-original-preserved",
+      "status": "PASS",
+      "actual": [
+        "Jde o 5. odstavec 13. kapitoly.",
+        "Kopie je přiložena."
+      ],
+      "expected": [
+        "Jde o 5. odstavec 13. kapitoly.",
+        "Kopie je přiložena."
+      ],
+      "detail": null
+    },
+    {
+      "id": "cs-ordinal-century",
+      "status": "PASS",
+      "actual": [
+        "Záznam pochází z 21. století.",
+        "Další údaje chybí."
+      ],
+      "expected": [
+        "Záznam pochází z 21. století.",
+        "Další údaje chybí."
+      ],
+      "detail": null
+    },
+    {
+      "id": "cs-ordinal-century-nfd-original-preserved",
+      "status": "PASS",
+      "actual": [
+        "Záznam pochází z 21. století.",
+        "Další údaje chybí."
+      ],
+      "expected": [
+        "Záznam pochází z 21. století.",
+        "Další údaje chybí."
+      ],
+      "detail": null
+    },
+    {
+      "id": "cs-terminal-integer",
+      "status": "PASS",
+      "actual": [
+        "Číslo položky je 21.",
+        "Další údaj chybí."
+      ],
+      "expected": [
+        "Číslo položky je 21.",
+        "Další údaj chybí."
+      ],
+      "detail": null
+    },
+    {
+      "id": "cs-terminal-integer-nfd-original-preserved",
+      "status": "PASS",
+      "actual": [
+        "Číslo položky je 21.",
+        "Další údaj chybí."
+      ],
+      "expected": [
+        "Číslo položky je 21.",
+        "Další údaj chybí."
+      ],
+      "detail": null
+    },
+    {
+      "id": "cs-terminal-year",
+      "status": "PASS",
+      "actual": [
+        "Rok je 2026.",
+        "Nový dokument je přiložen."
+      ],
+      "expected": [
+        "Rok je 2026.",
+        "Nový dokument je přiložen."
+      ],
+      "detail": null
+    },
+    {
+      "id": "cs-terminal-year-nfd-original-preserved",
+      "status": "PASS",
+      "actual": [
+        "Rok je 2026.",
+        "Nový dokument je přiložen."
+      ],
+      "expected": [
+        "Rok je 2026.",
+        "Nový dokument je přiložen."
+      ],
+      "detail": null
+    },
+    {
+      "id": "cs-date-in-parens",
+      "status": "PASS",
+      "actual": [
+        "Dopis dorazil včera (25. 10. 2026).",
+        "Kopie je přiložena."
+      ],
+      "expected": [
+        "Dopis dorazil včera (25. 10. 2026).",
+        "Kopie je přiložena."
+      ],
+      "detail": null
+    },
+    {
+      "id": "cs-date-in-parens-nfd-original-preserved",
+      "status": "PASS",
+      "actual": [
+        "Dopis dorazil včera (25. 10. 2026).",
+        "Kopie je přiložena."
+      ],
+      "expected": [
+        "Dopis dorazil včera (25. 10. 2026).",
+        "Kopie je přiložena."
+      ],
+      "detail": null
+    },
+    {
+      "id": "he-report-negative",
+      "status": "PASS",
+      "actual": [
+        "\"מי חתם?\"",
+        "העובד קרא את המסמך."
+      ],
+      "expected": [
+        "\"מי חתם?\"",
+        "העובד קרא את המסמך."
+      ],
+      "detail": null
+    },
+    {
+      "id": "he-report-negative-nfd-original-preserved",
+      "status": "PASS",
+      "actual": [
+        "\"מי חתם?\"",
+        "העובד קרא את המסמך."
+      ],
+      "expected": [
+        "\"מי חתם?\"",
+        "העובד קרא את המסמך."
+      ],
+      "detail": null
+    },
+    {
+      "id": "he-report-positive",
+      "status": "PASS",
+      "actual": [
+        "\"מי חתם?\" השיבה העובדת.",
+        "המסמך נשמר."
+      ],
+      "expected": [
+        "\"מי חתם?\" השיבה העובדת.",
+        "המסמך נשמר."
+      ],
+      "detail": null
+    },
+    {
+      "id": "he-report-positive-nfd-original-preserved",
+      "status": "PASS",
+      "actual": [
+        "\"מי חתם?\" השיבה העובדת.",
+        "המסמך נשמר."
+      ],
+      "expected": [
+        "\"מי חתם?\" השיבה העובדת.",
+        "המסמך נשמר."
+      ],
+      "detail": null
+    },
+    {
+      "id": "lt-email-abbreviation",
+      "status": "PASS",
+      "actual": [
+        "Dokumentus galima siųsti el. paštu.",
+        "Originalas lieka čia."
+      ],
+      "expected": [
+        "Dokumentus galima siųsti el. paštu.",
+        "Originalas lieka čia."
+      ],
+      "detail": null
+    },
+    {
+      "id": "lt-email-abbreviation-nfd-original-preserved",
+      "status": "PASS",
+      "actual": [
+        "Dokumentus galima siųsti el. paštu.",
+        "Originalas lieka čia."
+      ],
+      "expected": [
+        "Dokumentus galima siųsti el. paštu.",
+        "Originalas lieka čia."
+      ],
+      "detail": null
+    },
+    {
+      "id": "contrast-control-0-fil",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Hindi lamang papel kundi pati lapis ang narito."
+    },
+    {
+      "id": "contrast-control-1-fil",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Iba-iba ang kulay ng mga papel."
+    },
+    {
+      "id": "contrast-control-2-fil",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "Iba sa kahon ang sobre."
+    },
+    {
+      "id": "contrast-control-3-he",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "לא רק נייר אלא גם עיפרון נמצא כאן."
+    },
+    {
+      "id": "contrast-control-4-he",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "זה אינו נייר."
+    },
+    {
+      "id": "contrast-control-5-he",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "זו אינה מעטפה אלא קופסה."
+    },
+    {
+      "id": "contrast-control-6-nl",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Niet alleen papier maar ook een potlood ligt hier."
+    },
+    {
+      "id": "contrast-control-7-nl",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Het is geen boete."
+    },
+    {
+      "id": "contrast-control-8-nl",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Het is geen boete. Maar de brief blijft hier."
+    },
+    {
+      "id": "contrast-control-9-nl",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "Het is geen boete maar een betaling."
+    },
+    {
+      "id": "contrast-control-10-pl",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Nie tylko papier, ale również ołówek leży tutaj."
+    },
+    {
+      "id": "contrast-control-11-cs",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Nejen papír, ale také tužka leží zde."
+    },
+    {
+      "id": "contrast-control-12-cs",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Není to pokuta."
+    },
+    {
+      "id": "contrast-control-13-cs",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Nejde o pokutu. Ale dokument zůstává zde."
+    },
+    {
+      "id": "contrast-control-14-lt",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Ne tik popierius, bet ir pieštukas yra čia."
+    },
+    {
+      "id": "contrast-control-15-lt",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Tai ne mokestis."
+    },
+    {
+      "id": "contrast-control-16-lt",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "Tai ne bauda, bet mokestis."
+    },
+    {
+      "id": "new-source-alias-negative-nl",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "## Referenties in het contract"
+    },
+    {
+      "id": "new-source-alias-negative-pl",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "## Źródła urzędowe a dowody prywatne"
+    },
+    {
+      "id": "new-source-alias-negative-lt",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "## Šaltiniai ir jų vertinimas"
+    },
+    {
+      "id": "accepted-fil-hyphen-convention",
+      "status": "PASS",
+      "actual": [
+        "siya’y",
+        "pag-ibig",
+        "araw-araw"
+      ],
+      "expected": [
+        "siya’y",
+        "pag-ibig",
+        "araw-araw"
+      ],
+      "detail": "Accepted using pre-execution author freeze and KWF §§11.1/11.3; original reviewer discrepancy preserved."
+    },
+    {
+      "id": "fil-numeric-hyphen-still-splits",
+      "status": "PASS",
+      "actual": [
+        "8",
+        "12",
+        "araw"
+      ],
+      "expected": [
+        "8",
+        "12",
+        "araw"
+      ],
+      "detail": null
+    },
+    {
+      "id": "lt-suffix-full-sentences",
+      "status": "PASS",
+      "actual": 5,
+      "expected": 5,
+      "detail": null
+    },
+    {
+      "id": "lt-suffix-full-citation-ending",
+      "status": "PASS",
+      "actual": 0.2,
+      "expected": 0.2,
+      "detail": null
+    },
+    {
+      "id": "lt-suffix-genitive-sentences",
+      "status": "PASS",
+      "actual": 5,
+      "expected": 5,
+      "detail": null
+    },
+    {
+      "id": "lt-suffix-genitive-citation-ending",
+      "status": "PASS",
+      "actual": 0.2,
+      "expected": 0.2,
+      "detail": null
+    },
+    {
+      "id": "lt-suffix-abbreviated-sentences",
+      "status": "PASS",
+      "actual": 5,
+      "expected": 5,
+      "detail": null
+    },
+    {
+      "id": "lt-suffix-abbreviated-citation-ending",
+      "status": "PASS",
+      "actual": 0.2,
+      "expected": 0.2,
+      "detail": null
+    },
+    {
+      "id": "lt-suffix-negative-sentences",
+      "status": "PASS",
+      "actual": 5,
+      "expected": 5,
+      "detail": null
+    },
+    {
+      "id": "lt-suffix-negative-citation-ending",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0,
+      "detail": null
+    },
+    {
+      "id": "wrapper-fil-varied-exit",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-varied.md [fil] sentences=6 mean=11.2 cv=0.971 short=0.5 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\nOFFICIAL CHECKER: fil unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "id": "wrapper-fil-varied-official-unavailable-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-fil-varied-task-local-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-fil-uniform-exit",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-uniform.md [fil] sentences=6 mean=8 cv=0.0 short=1.0 run3=1.0 opener_rep=0.833 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  FAIL len_cv=0.0 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n  FAIL even_run3=1.0 (limit <= 0.3): too many runs of 3 sentences of almost the same length\n  FAIL top_opener_n=6 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n  FAIL consec_same_start=5 (limit <= 2): consecutive sentences start with the same word\n  WARN 100% of sentences end in 'theta' — vary endings within the register\nOFFICIAL CHECKER: fil unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "id": "wrapper-fil-uniform-official-unavailable-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-fil-uniform-task-local-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-he-varied-exit",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-varied.md [he] sentences=6 mean=11.2 cv=0.971 short=0.5 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\nOFFICIAL CHECKER: he unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "id": "wrapper-he-varied-official-unavailable-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-he-varied-task-local-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-he-uniform-exit",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-uniform.md [he] sentences=6 mean=8 cv=0.0 short=1.0 run3=1.0 opener_rep=0.833 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  FAIL len_cv=0.0 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n  FAIL even_run3=1.0 (limit <= 0.3): too many runs of 3 sentences of almost the same length\n  FAIL top_opener_n=6 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n  FAIL consec_same_start=5 (limit <= 2): consecutive sentences start with the same word\n  WARN 100% of sentences end in 'theta' — vary endings within the register\nOFFICIAL CHECKER: he unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "id": "wrapper-he-uniform-official-unavailable-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-he-uniform-task-local-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-nl-varied-exit",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-varied.md [nl] sentences=6 mean=11.2 cv=0.971 short=0.5 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\nOFFICIAL CHECKER: nl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "id": "wrapper-nl-varied-official-unavailable-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-nl-varied-task-local-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-nl-uniform-exit",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-uniform.md [nl] sentences=6 mean=8 cv=0.0 short=1.0 run3=1.0 opener_rep=0.833 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  FAIL len_cv=0.0 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n  FAIL even_run3=1.0 (limit <= 0.3): too many runs of 3 sentences of almost the same length\n  FAIL top_opener_n=6 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n  FAIL consec_same_start=5 (limit <= 2): consecutive sentences start with the same word\n  WARN 100% of sentences end in 'theta' — vary endings within the register\nOFFICIAL CHECKER: nl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "id": "wrapper-nl-uniform-official-unavailable-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-nl-uniform-task-local-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-pl-varied-exit",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-varied.md [pl] sentences=6 mean=11.2 cv=0.971 short=0.5 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\nOFFICIAL CHECKER: pl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "id": "wrapper-pl-varied-official-unavailable-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-pl-varied-task-local-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-pl-uniform-exit",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-uniform.md [pl] sentences=6 mean=8 cv=0.0 short=1.0 run3=1.0 opener_rep=0.833 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  FAIL len_cv=0.0 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n  FAIL even_run3=1.0 (limit <= 0.3): too many runs of 3 sentences of almost the same length\n  FAIL top_opener_n=6 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n  FAIL consec_same_start=5 (limit <= 2): consecutive sentences start with the same word\n  WARN 100% of sentences end in 'theta' — vary endings within the register\nOFFICIAL CHECKER: pl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "id": "wrapper-pl-uniform-official-unavailable-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-pl-uniform-task-local-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-cs-varied-exit",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-varied.md [cs] sentences=6 mean=11.2 cv=0.971 short=0.5 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\nOFFICIAL CHECKER: cs unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "id": "wrapper-cs-varied-official-unavailable-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-cs-varied-task-local-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-cs-uniform-exit",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-uniform.md [cs] sentences=6 mean=8 cv=0.0 short=1.0 run3=1.0 opener_rep=0.833 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  FAIL len_cv=0.0 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n  FAIL even_run3=1.0 (limit <= 0.3): too many runs of 3 sentences of almost the same length\n  FAIL top_opener_n=6 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n  FAIL consec_same_start=5 (limit <= 2): consecutive sentences start with the same word\n  WARN 100% of sentences end in 'theta' — vary endings within the register\nOFFICIAL CHECKER: cs unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "id": "wrapper-cs-uniform-official-unavailable-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-cs-uniform-task-local-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-lt-varied-exit",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-varied.md [lt] sentences=6 mean=11.2 cv=0.971 short=0.5 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\nOFFICIAL CHECKER: lt unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "id": "wrapper-lt-varied-official-unavailable-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-lt-varied-task-local-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-lt-uniform-exit",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-uniform.md [lt] sentences=6 mean=8 cv=0.0 short=1.0 run3=1.0 opener_rep=0.833 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  FAIL len_cv=0.0 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n  FAIL even_run3=1.0 (limit <= 0.3): too many runs of 3 sentences of almost the same length\n  FAIL top_opener_n=6 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n  FAIL consec_same_start=5 (limit <= 2): consecutive sentences start with the same word\n  WARN 100% of sentences end in 'theta' — vary endings within the register\nOFFICIAL CHECKER: lt unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "id": "wrapper-lt-uniform-official-unavailable-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-lt-uniform-task-local-label",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-corpus-unavailable",
+      "status": "PASS",
+      "actual": 2,
+      "expected": 2,
+      "detail": "TASK-LOCAL extension: only check mode is available through this guarded entrypoint.\n"
+    },
+    {
+      "id": "wrapper-unknown-locale-unavailable",
+      "status": "PASS",
+      "actual": 2,
+      "expected": 2,
+      "detail": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'zz' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+    },
+    {
+      "id": "wrapper-simulation-official-supported-exit",
+      "status": "PASS",
+      "actual": 2,
+      "expected": 2,
+      "detail": null
+    },
+    {
+      "id": "wrapper-simulation-official-supported-no-local-execution",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": null
+    },
+    {
+      "id": "wrapper-simulation-official-supported-explicit-withheld",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "wrapper-simulation-official-unavailable-other-reason-exit",
+      "status": "PASS",
+      "actual": 2,
+      "expected": 2,
+      "detail": null
+    },
+    {
+      "id": "wrapper-simulation-official-unavailable-other-reason-no-local-execution",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": null
+    },
+    {
+      "id": "wrapper-simulation-official-unavailable-other-reason-explicit-withheld",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-variety_metrics.py",
+      "status": "PASS",
+      "actual": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+      "expected": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-METHOD.md",
+      "status": "PASS",
+      "actual": "7696ab4bccaee2990a1040bb95a70e8ccef2c1c1c97b0e5b7e42fa140f7e9839",
+      "expected": "7696ab4bccaee2990a1040bb95a70e8ccef2c1c1c97b0e5b7e42fa140f7e9839",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/variety_metrics.py",
+      "status": "PASS",
+      "actual": "f6a53d8265224b5795be95501f317eac018c23dba5b79513c6179fe1caa363c7",
+      "expected": "f6a53d8265224b5795be95501f317eac018c23dba5b79513c6179fe1caa363c7",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/variety_multilingual.py",
+      "status": "PASS",
+      "actual": "776ab3e4364d2684e0d2b913933e7acc19fc6f01008b5ba042dbc7080e05f531",
+      "expected": "776ab3e4364d2684e0d2b913933e7acc19fc6f01008b5ba042dbc7080e05f531",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/ar.json",
+      "status": "PASS",
+      "actual": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+      "expected": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/cs.json",
+      "status": "PASS",
+      "actual": "07aca997353f22983df868222e0aac634ca1c70f3b3e68cd2553bc075618b8b7",
+      "expected": "07aca997353f22983df868222e0aac634ca1c70f3b3e68cd2553bc075618b8b7",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/de.json",
+      "status": "PASS",
+      "actual": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+      "expected": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/es.json",
+      "status": "PASS",
+      "actual": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+      "expected": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/fil.json",
+      "status": "PASS",
+      "actual": "9bb87f92fde0d17ec521c2c7b22e40c6eeb272f0b53405d480f07a4b5886cd66",
+      "expected": "9bb87f92fde0d17ec521c2c7b22e40c6eeb272f0b53405d480f07a4b5886cd66",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/fr.json",
+      "status": "PASS",
+      "actual": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+      "expected": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/he.json",
+      "status": "PASS",
+      "actual": "ae6d8b60d6546a0adc9813cb16d4a11de8d7158a0fb93b45a11712bf49662983",
+      "expected": "ae6d8b60d6546a0adc9813cb16d4a11de8d7158a0fb93b45a11712bf49662983",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/hi.json",
+      "status": "PASS",
+      "actual": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+      "expected": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/id.json",
+      "status": "PASS",
+      "actual": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+      "expected": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/it.json",
+      "status": "PASS",
+      "actual": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+      "expected": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/lt.json",
+      "status": "PASS",
+      "actual": "f536d937faf4c26eadb19d5c8e5a0078dcfbce901501a4a8544c456d2cd02965",
+      "expected": "f536d937faf4c26eadb19d5c8e5a0078dcfbce901501a4a8544c456d2cd02965",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/nl.json",
+      "status": "PASS",
+      "actual": "8ee2b7074e1ad3778998e87a1a566dff023a3c98c2525200d86c96050cf9dc2e",
+      "expected": "8ee2b7074e1ad3778998e87a1a566dff023a3c98c2525200d86c96050cf9dc2e",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/pl.json",
+      "status": "PASS",
+      "actual": "4137b957699be3977230e27533fcfcd27fb5a3cf5a04cc930ebf4f4c55c81f1d",
+      "expected": "4137b957699be3977230e27533fcfcd27fb5a3cf5a04cc930ebf4f4c55c81f1d",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/pt.json",
+      "status": "PASS",
+      "actual": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+      "expected": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/th.json",
+      "status": "PASS",
+      "actual": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+      "expected": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-candidate/profiles/vi.json",
+      "status": "PASS",
+      "actual": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+      "expected": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-test_candidate.py",
+      "status": "PASS",
+      "actual": "73deb339c9bc1b9b3ba930ab55033b1b9797e96b7bdec218cf658da202799e67",
+      "expected": "73deb339c9bc1b9b3ba930ab55033b1b9797e96b7bdec218cf658da202799e67",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-test_extension.py",
+      "status": "PASS",
+      "actual": "693bdb5fcd98b929d81027b4bcc2bbad5fe3b77e5ccbb9f23b44bb2ab9ee02d7",
+      "expected": "693bdb5fcd98b929d81027b4bcc2bbad5fe3b77e5ccbb9f23b44bb2ab9ee02d7",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-test_regression.py",
+      "status": "PASS",
+      "actual": "f67c7c56e78823a511f6fb88fa8a770aef8ee814739892ee0d0d52617bec86f1",
+      "expected": "f67c7c56e78823a511f6fb88fa8a770aef8ee814739892ee0d0d52617bec86f1",
+      "detail": null
+    },
+    {
+      "id": "exact-manifest-probe_neutral.py",
+      "status": "PASS",
+      "actual": "42aad1670c97a26d01e0a692a9834f80d70a88fc4af268d043e90dff4a546fdf",
+      "expected": "42aad1670c97a26d01e0a692a9834f80d70a88fc4af268d043e90dff4a546fdf",
+      "detail": null
+    }
+  ]
+}

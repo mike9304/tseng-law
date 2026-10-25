@@ -1,0 +1,230 @@
+{
+  "mode": "DRAFT",
+  "authorAgent": "expand_author_vi",
+  "checkedAt": "2026-10-25",
+  "independentReviewClaim": false,
+  "articles": [
+    {
+      "id": 922,
+      "path": "repo/src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md",
+      "sha256": "80779888e17199b5d1108f545d5587ce7ab5ec820f165a0f19a5ec90f4ad4a88",
+      "reviewStatus": "AUTHOR_SELF_CHECK_ONLY_PENDING_INDEPENDENT_REVIEW",
+      "variety": {
+        "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md --lang vi",
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md [vi] sentences=45 mean=20.8 cv=0.458 short=0.178 run3=0.0 opener_rep=0.188 cite_end=0.0 cite_para=0.375 contrast=1 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "stderr": ""
+      },
+      "boldMarkup": false,
+      "duplicateLeadingH1": false,
+      "sourceUrls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=7",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=432",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=12",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=16",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125"
+      ],
+      "preLocaleReviewSha256": "a8e165783bfda87202009205324a4443d49d3a8c5c32de15d08c73a57a335067",
+      "preFinalLegalRepairSha256": "3616a2fddce24e851e2ab9c657b47aee016ff6d5821c41eb1167cc496ef14873"
+    },
+    {
+      "id": 923,
+      "path": "repo/src/content/columns-vi/923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md",
+      "sha256": "88335b55c5ea00cfac484947d743b1b8f09a32265f97eeef6f011799c0007f2c",
+      "reviewStatus": "AUTHOR_SELF_CHECK_ONLY_PENDING_INDEPENDENT_REVIEW",
+      "variety": {
+        "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md --lang vi",
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md [vi] sentences=49 mean=22.4 cv=0.485 short=0.184 run3=0.064 opener_rep=0.167 cite_end=0.0 cite_para=0.278 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": ""
+      },
+      "boldMarkup": false,
+      "duplicateLeadingH1": false,
+      "sourceUrls": [
+        "https://www.mol.gov.tw/1607/28162/28296/81778/81781/82213/post",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030295",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080129&flno=11",
+        "https://ezworktaiwan.wda.gov.tw/cp.aspx?n=511766BD9E956242&s=35F4766BC4662D87",
+        "https://www.mol.gov.tw/1607/28162/28166/28180/70460/76761/76833/post",
+        "https://www.mol.gov.tw/1607/28162/28166/28180/28182/28188/29025/",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=23",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=30",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=9"
+      ],
+      "preLocaleReviewSha256": "3a9c9e7f073dda67f5c798fd1ae13c011aa454b06d2f914d6be7486ae5f1c8cf"
+    }
+  ],
+  "comparators": [
+    {
+      "path": "repo/src/content/columns-vi/704-taiwan-arc-first-application.md",
+      "published": "2026-10-24",
+      "sha256": "61b01a8bf30e4d997fd70bab01128859ced94e39ff59da4356a0eddee9485bd5",
+      "read": true
+    },
+    {
+      "path": "repo/src/content/columns-vi/705-taiwan-visa-residence-work-study-family.md",
+      "published": "2026-10-24",
+      "sha256": "1d7177dde3e0375593d14c441a3a527c74d6e9a2836340a69a805b9e0f3b092d",
+      "read": true
+    },
+    {
+      "path": "repo/src/content/columns-vi/706-taiwan-arc-renewal-changes-reentry.md",
+      "published": "2026-10-24",
+      "sha256": "08574be203883e7945b11f2e55206a69f56033dd608430745cf368d889b774ea",
+      "read": true
+    }
+  ],
+  "sourceLedger": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
+      "claim": "Residential tenancy scope and Article4 exclusions; current revision2023-02-08. Article7/12/16 opened separately. Article40(3) precommencementleaseexceptionwithpartyagreementoptin independentlyopenedonfinalreviewrepair.",
+      "status": "current law; page assembled through2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=7",
+      "claim": "Deposit cap2months; return after termination, home return, settlement of contract debt; balance after setoff.",
+      "status": "current law"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=12",
+      "claim": "Joint handover; absent party must first be requested with reasonable period; remaining goods notice and disposal cost conditions.",
+      "status": "current law"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060125&flno=16",
+      "claim": "Local-government tenancy mediation application and no mediation fee. Independently opened; expansion beyond researcherbrief.",
+      "status": "current law"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=432",
+      "claim": "Prudent-care duty, damage causation, exception for agreed/nature-appropriate use.",
+      "status": "current432; unrelated pending166-1 and1223 notices not represented as effective432amendments"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030295",
+      "claim": "Article12 Taiwan associate degree or above AND recent graduate AND NIA-approved residence extension; permit exemption within approved period.",
+      "status": "current law amended2025-09-24; WDAFAQ separately confirms2026-01-01 commencement"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080129&flno=11",
+      "claim": "Extension application before current expiry; one year from day after original expiry; further application before expiry if needed; maximumtotal2years.",
+      "status": "current regulation; independently opened beyond researcherbrief"
+    },
+    {
+      "url": "https://ezworktaiwan.wda.gov.tw/cp.aspx?n=511766BD9E956242&s=35F4766BC4662D87",
+      "claim": "Official FAQQ1-Q3 confirms commencement2026-01-01; full/parttime allowed; professionallicensing still required; ARCendorsement; pre-effective jobseekerARCexchange; next professionalworkpermit after qualifyingextension.",
+      "status": "official guidance updated2026-02-12"
+    },
+    {
+      "url": "https://www.mol.gov.tw/1607/28162/28296/81778/81781/82213/post",
+      "claim": "Probation labor protection; subminimum/no-overtime agreement invalid; termination legalgrounds; cannotconvertemployerterminationtovoluntaryresignation.",
+      "status": "official guidance published2025-08-13 updated2025-09-04"
+    },
+    {
+      "url": "https://www.mol.gov.tw/1607/28162/28166/28180/70460/76761/76833/post",
+      "claim": "2026monthly29500/hour196 effective2026-01-01;2027monthly30900/hour205 announced2026-10-16 and effective2027-01-01.",
+      "status": "official page updated2026-10-21;2027futurecommencement distinguished"
+    },
+    {
+      "url": "https://www.mol.gov.tw/1607/28162/28166/28180/28182/28188/29025/",
+      "claim": "Monthly/hourly applicability and normal-hoursbasis; overtime/restday premiums excluded; higheragreedpaynotunilaterallyreduced.",
+      "status": "official guidance updated2026-01-01"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=23",
+      "claim": "Itemized wage calculation statement.",
+      "status": "current law"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=30",
+      "claim": "Attendance records to minute and employer cannotrefuse employee copy.",
+      "status": "current law"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=9",
+      "claim": "Employmentdispute mediation requested from competentlocal authority where workprovided.",
+      "status": "current law"
+    }
+  ],
+  "sourceOpenEvidence": "work/reviews/vi-author-source-opens.json",
+  "researchBrief": "work/research/sea-briefs.md",
+  "sourceLimitations": [
+    "Direct MOJ single Article12 page inaccessible; full current A0030295 text opened and Article12 read.",
+    "NDC commencement history and two press pages returned403; WDA current FAQ explicitly verifies2026-01-01.",
+    "MOI PIP template page rejected; no claim dependent on its unavailable template.",
+    "VI public contact page inaccessible throughweb; current repository international-inquiry-copy.tsVI and en-service-scope.ts read, researcher separately verifiedliveENservices/contact.",
+    "MOJ page footer assemblycutoff2026-10-16; current official guide and MOL wagepage updated2026-10-21 checked.",
+    "Vietnam studentmarket figure is researcher marketrationale, not includedinbody and notpaidclientvolume.",
+    "MOJ single Article40 URL inaccessible; full current tenancy law paragraph3 opened/read and actualresponsepreserved."
+  ],
+  "serviceProfile": {
+    "files": [
+      "repo/src/data/international-inquiry-copy.ts",
+      "repo/src/data/en-service-scope.ts"
+    ],
+    "languages": [
+      "Chinese",
+      "English",
+      "Japanese",
+      "Korean"
+    ],
+    "vi": "guidance and initial inquiry only; no Vietnameseconsultation/interpreterpromise",
+    "email": "wei@hoveringlaw.com.tw",
+    "retainer": "receiptofemailnotacceptance"
+  },
+  "initialMeasurements": {
+    "922": {
+      "exitCode": 1,
+      "len_cv": 0.424,
+      "preserved": "work/reviews/vi-author-922-initial.md"
+    },
+    "923": {
+      "exitCode": 1,
+      "len_cv": 0.4,
+      "preserved": "work/reviews/vi-author-923-initial.md"
+    }
+  },
+  "repairHistory": [
+    {
+      "round": 1,
+      "922": "CV0.444FAIL preservedvi-author-922-repair1.md",
+      "923": "CV0.520PASS; then removedduplicateapprovalsentenceandmadeopeningexpresspermit/wageconnection;final0.491PASS"
+    },
+    {
+      "round": 2,
+      "922": "Removedunnecessarylistdisclaimerandclarifiedservice/acceptanceclauses;CV0.490PASS"
+    }
+  ],
+  "unresolved": [
+    "Independent VI locale review and separate final legal review pending.",
+    "No publication, browservisual, hydration or live-imageavailabilityclaim by author."
+  ],
+  "localeRepair": {
+    "reviewer": "expand_locale_vi",
+    "requests": [
+      "922removeincorrectNgượclạicontrast",
+      "922replaceabruptsubjectlessCTAwithnaturalservice/acceptanceparagraph",
+      "923clarifyinvalidagreementsnotinvalidthroughbeingcalledprobation"
+    ],
+    "meaning": "Originalintendedlegalmeaningpreserved;923modalclarificationrequiresfinallegalreview",
+    "922FirstRepair": {
+      "sha256": "5cee66fc8997f41aa9bb703bc0678af10af23d6a8f7486250d3e4a8f87859527",
+      "len_cv": 0.438,
+      "exitCode": 1,
+      "preserved": "work/reviews/vi-author-922-locale-r1-fail.md"
+    },
+    "922BoundedFollowup": "Jointinspection/handoverconditionexplicit;shortChineseprocedurename;noextraabstractwarning. FinalCV0.458PASS."
+  },
+  "researchMarketRead": "work/research/sea-market.md (Vietnamsection; fullsea-briefspreviouslyread)",
+  "finalLegalRepair": {
+    "requestedBy": "expand_final_asia",
+    "article": 922,
+    "scope": "Added RentalHousingActArticle40(3) precommencementlease transition exception with inline/fulltextcitation and updatedsourcelist. Noexactspecificcommencementdateadded.",
+    "meaning": "Substantive narrowingofarticlecoverage; coveredleaseconclusionsunchanged.",
+    "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
+    "evidence": "work/reviews/vi-author-art40-source-open.json",
+    "localeRereview": "requested on final80779888hash",
+    "metadataRepair": "Rootrequestedtopicreal-estate→litigation; otherfrontmatterunchanged",
+    "article923": "Unchanged88335b55c5ea00cfac484947d743b1b8f09a32265f97eeef6f011799c0007f2c"
+  }
+}

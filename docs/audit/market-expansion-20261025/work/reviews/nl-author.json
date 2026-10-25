@@ -1,0 +1,223 @@
+{
+  "createdAt": "2026-10-25T22:19:09.470384+09:00",
+  "scope": "934–935 only. Author preparation, not independent certification or publication.",
+  "status": "FROZEN_FOR_INDEPENDENT_REVIEW",
+  "records": [
+    {
+      "id": 934,
+      "path": "repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+      "sha256": "3b395842ebc879b6d3d61a3a8bab1bd006f9fd16aaf27113892497f03b7c0425",
+      "status": "AUTHOR_FROZEN_FOR_INDEPENDENT_REVIEW",
+      "authoredBy": "/root/expand_author_nl",
+      "locale": "nl",
+      "country": "Netherlands",
+      "sourceCheckedDate": "2026-10-25",
+      "sources": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090027",
+          "checked": "2026-10-25",
+          "support": "Articles 5,9,12 and73; current regulations last amended2025-12-30; article73 commencement inspected. Articles5/9/12 not asserted to have been changed by that latest amendment."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0090027",
+          "checked": "2026-10-25",
+          "support": "History confirms latest amendment2025-12-30; article9 last modified2023-10-13 among relevant records."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090027&flno=9",
+          "checked": "2026-10-25",
+          "support": "Contract-specific documents, potential authentication, previous-year plus requested-period diploma-copy exemption."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090027&flno=12",
+          "checked": "2026-10-25",
+          "support": "31–90-day stay; application within30days afterentry, not30days after schedulechange."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
+          "checked": "2026-10-25",
+          "support": "Article51(3) scope and applicant when noTaiwanbranch/rep; article46 occupational reference; current version2025-01-20."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090031&flno=7",
+          "checked": "2026-10-25",
+          "support": "Contract-work qualification relief up to90days; prior-year cumulative exception."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090031",
+          "checked": "2026-10-25",
+          "support": "Current standards version2024-08-01 and scope underarticle4."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0090031",
+          "checked": "2026-10-25",
+          "support": "2024-08-01 changes affected5-1 and37, not a claim article7 newly effective."
+        },
+        {
+          "url": "https://www.boca.gov.tw/cp-149-4486-7785a-2.html",
+          "checked": "2026-10-25",
+          "support": "Dutch nationals in90dayvisaexemption list; permittedentry not permission for restrictedactivities; updated2026-07-17."
+        },
+        {
+          "url": "https://ezworktaiwan.wda.gov.tw/cp.aspx?n=79363C2C4E607E24&s=7CFAE4DF8A121AB5",
+          "checked": "2026-10-25",
+          "support": "Administrativequalification summary opened; dated2018-09-18. Currentstatute used for duration and article numbers."
+        }
+      ],
+      "originalChecker": "unsupported exit2",
+      "localChecker": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+          "--lang",
+          "nl"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md [nl] sentences=36 mean=17.9 cv=0.483 short=0.139 run3=0.029 opener_rep=0.167 cite_end=0.0 cite_para=0.583 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": "OFFICIAL CHECKER: nl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+      },
+      "image": "repo/public/images/columns/934-market-expansion-20261025.webp",
+      "comparators": [
+        {
+          "file": "repo/src/content/columns-nl/834-dutch-company-taiwan-subsidiary-branch-office.md",
+          "published": "2026-10-24",
+          "sha256": "7c26b714e8d1ff20fa68c9cbe1da9307b98715129066885ad8a1095b55dc0d9e"
+        },
+        {
+          "file": "repo/src/content/columns-nl/835-dutch-employer-taiwan-first-hire-eor.md",
+          "published": "2026-10-24",
+          "sha256": "a69d6e67344cba7f403a58ca596e1d4f2db58de4fcbeced76d1f4462d0cedda9"
+        },
+        {
+          "file": "repo/src/content/columns-nl/836-dutch-working-holiday-taiwan-work-insurance-tax.md",
+          "published": "2026-10-24",
+          "sha256": "7c09003f98713e0d607bca023f28feb3920fad9da555396574d787e5ef27563b"
+        }
+      ]
+    },
+    {
+      "id": 935,
+      "path": "repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+      "sha256": "943a747d79288334da91b9c608ef558bda57ba8754e7acd5eac6c49083f11b01",
+      "status": "AUTHOR_FROZEN_FOR_INDEPENDENT_REVIEW",
+      "authoredBy": "/root/expand_author_nl",
+      "locale": "nl",
+      "country": "Netherlands",
+      "sourceCheckedDate": "2026-10-25",
+      "sources": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380024&flno=4",
+          "checked": "2026-10-25",
+          "support": "Machines/equipment included; itemnames designatedbyorder."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380024&flno=5",
+          "checked": "2026-10-25",
+          "support": "Writtencontract and lackofopposability togoodfaiththirdparties withoutregistration; notblanketinvaliditybetweenparties."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380024&flno=9",
+          "checked": "2026-10-25",
+          "support": "Contractterm/defaultoneyear; extensionrequestin30daysbeforeexpiry; eachmaximumoneyear."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380024&flno=26",
+          "checked": "2026-10-25",
+          "support": "Conditional sale with possessionbeforeownership and paymentorothercondition."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380024&flno=27",
+          "checked": "2026-10-25",
+          "support": "Eightmandatorycontractentries, including insurance ifany anddate."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380024&flno=28",
+          "checked": "2026-10-25",
+          "support": "Beforeownershiptransfer, specifiedbreach/disposal prejudicingvendor rights; notunconditionalselfhelp."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380024",
+          "checked": "2026-10-25",
+          "support": "Articles15,29–31and43 inspected; chattelmortgage withoutpossessiontransfer; existingmortgage conditional-saleinvalidity; proceduresnotexpandedintofullinstruction."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=G0380024",
+          "checked": "2026-10-25",
+          "support": "Currentlastamendment2007-07-11;amendments effectivepromulgation; nofuturecommencementclaimed."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=38",
+          "checked": "2026-10-25",
+          "support": "Lexsitus and changeoflocation temporal rule preserved; noautomatic transferofDutchlawresult."
+        },
+        {
+          "url": "https://law.fsc.gov.tw/LawContent.aspx?id=GL000440",
+          "checked": "2026-10-25",
+          "support": "Implementingrules2–4 applicant/competence/docs/onlinefiling;2015-12-17amendment,article2effective2016-01-01 underarticle14."
+        },
+        {
+          "url": "https://ppstrq.nat.gov.tw/pps/web/Show/B1Page.do",
+          "checked": "2026-10-25",
+          "support": "Officialdocumentlist and conditional-sale parties opened. No login/transaction performed."
+        }
+      ],
+      "originalChecker": "unsupported exit2",
+      "localChecker": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+          "--lang",
+          "nl"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md [nl] sentences=49 mean=14.7 cv=0.469 short=0.184 run3=0.085 opener_rep=0.214 cite_end=0.0 cite_para=0.714 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": "OFFICIAL CHECKER: nl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+      },
+      "image": "repo/public/images/columns/935-market-expansion-20261025.webp",
+      "comparators": [
+        {
+          "file": "repo/src/content/columns-nl/834-dutch-company-taiwan-subsidiary-branch-office.md",
+          "published": "2026-10-24",
+          "sha256": "7c26b714e8d1ff20fa68c9cbe1da9307b98715129066885ad8a1095b55dc0d9e"
+        },
+        {
+          "file": "repo/src/content/columns-nl/835-dutch-employer-taiwan-first-hire-eor.md",
+          "published": "2026-10-24",
+          "sha256": "a69d6e67344cba7f403a58ca596e1d4f2db58de4fcbeced76d1f4462d0cedda9"
+        },
+        {
+          "file": "repo/src/content/columns-nl/836-dutch-working-holiday-taiwan-work-insurance-tax.md",
+          "published": "2026-10-24",
+          "sha256": "7c09003f98713e0d607bca023f28feb3920fad9da555396574d787e5ef27563b"
+        }
+      ]
+    }
+  ],
+  "market": {
+    "url": "https://www.cbs.nl/nl-nl/nieuws/2026/15/meer-export-naar-taiwan-minder-naar-de-vs-en-china",
+    "published": "2026-04-08",
+    "checked": "2026-10-25",
+    "fact": "CBS provisional2025 goods exports toTaiwan increased byoverEUR2.6bn,especiallysemiconductormanufacturingmachinery.",
+    "use": "Editorial selection rationale only; nosearchvolumeorconversionclaim and nostatistics stuffedintomanuscripts."
+  },
+  "limitations": [
+    "Shared global variety CLI does not support nl. The task-local measurement method has independent PASS in work/variety-review/review-final.md/json; this does not replace article reviews.",
+    "DirectsinglearticleMOJ5(N0090027),51(N0090001),31(G0380024) returnedtoolerrors; sameofficialcurrentfulltexts opened successfully and used.",
+    "Officialregistrationrootinitpage returned503; detailedofficialinstructionpage opened. Noonlinefilingtested.",
+    "No Dutchlawlicensure, nativehumanreview, attorneyreview, searchvolume, conversions or realclientcase claimed.",
+    "GeneralTaiwanlawinformation only; no full enforcement/insolvency or Dutch tax analysis."
+  ],
+  "selfCheckReference": "work/reviews/nl-author.md",
+  "measurementEvidence": "work/reviews/nl-author-variety.json",
+  "imagesEvidence": "work/images/nl-generation.json",
+  "measurementMethod": {
+    "independentReview": "work/variety-review/review-final.md",
+    "wrapperSha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+    "globalSupport": "unsupported exit 2",
+    "taskLocalStatus": "independently reviewed method, measured exit 0 for both frozen article hashes"
+  }
+}

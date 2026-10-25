@@ -1,0 +1,42 @@
+{
+  "locale": "fil",
+  "generatedOn": "2026-10-25",
+  "records": [
+    {
+      "id": 926,
+      "tool": "native image_gen.imagegen",
+      "mode": "generate",
+      "prompt": "Use case: photorealistic-natural. Create a restrained editorial hero photograph, landscape 1536 by 1024, for a Filipino-language Taiwan-law article about a factory worker considering resignation or a settlement after an occupational injury. A quiet, fictional factory first-aid rest area: a softly worn dark-blue work jacket and clean cotton work gloves on a wooden bench, an unbranded removable wrist support beside them, muted industrial window glass in the background. Natural late-afternoon daylight, tactile fabric and wood, understated colors, documentary still-life quality. No people or body parts, no visible injury, no readable text, no logos, no flags, no identity documents, no medical records, no court materials. The scene must feel everyday and calm, not alarming or promotional. All objects fictional. No overlaid captions or watermark.",
+      "original": "/Users/son7/.codex/generated_images/01a17323-db42-7782-b970-33ae506a8ee0/exec-23b17620-48b7-4f18-8cb9-b3e05920a646.png",
+      "final": "/Users/son7/tseng-market-expansion-20261025/repo/public/images/columns/926-market-expansion-20261025.webp",
+      "inspected": true,
+      "inspection": "Inspected both the original native tool output and the final WebP using view_image. No people, readable text, logos, flags, identifying documents or official-looking legal material. Fictional props match the topic. Conversion changed format only, not composition.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "originalSha256": "79f7932c877af40673d2ee1d47d46e3f41fc596e9369f3356c9691163422e983",
+      "finalSha256": "8c3d5654ac2ce688d46c9baeb28c59c28ee243aeca9663a7ba29c62b636ecf2f",
+      "bytes": 173242,
+      "conversion": "Pillow WebP quality=88, method=6; source dimensions preserved at 1536x1024."
+    },
+    {
+      "id": 927,
+      "tool": "native image_gen.imagegen",
+      "mode": "generate",
+      "prompt": "Use case: photorealistic-natural. Generate a quiet editorial photograph, wide landscape 1536 by 1024, for a Filipino-language Taiwan-law column about a worker receiving a loan-related court notice and checking which procedure applies. Fictional modest rented apartment at night. Close oblique overhead composition of a small pale laminate table, two plain unmarked envelopes, blank cream papers laid separately, a closed simple notebook, an ordinary unbranded pen and a glass of water. Gentle pool of warm light from an unbranded desk lamp at the side; cool dusk through a small window beyond, out of focus. Natural minor wear, restrained composition, grounded everyday mood. Absolutely no readable writing, symbols, numbers, logos, official stamps, emblems, money, passports, identity cards, faces or people. The blank objects are illustrative props, never replicas of legal documents. No overlaid text or watermark.",
+      "original": "/Users/son7/.codex/generated_images/01a17323-db42-7782-b970-33ae506a8ee0/exec-e28b2b87-9d1b-46b7-9399-699ee6884fc4.png",
+      "final": "/Users/son7/tseng-market-expansion-20261025/repo/public/images/columns/927-market-expansion-20261025.webp",
+      "inspected": true,
+      "inspection": "Inspected both the original native tool output and the final WebP using view_image. No people, readable text, logos, flags, identifying documents or official-looking legal material. Fictional props match the topic. Conversion changed format only, not composition.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "originalSha256": "fd656d69d60606c369315db3cfa6b86de266187581f55e05fdfcc56c47c367cd",
+      "finalSha256": "4dcf34091e9d67c2cc5ebb7845775e25cdab69ec4b22322947b7e2e81b2c0ca7",
+      "bytes": 91628,
+      "conversion": "Pillow WebP quality=88, method=6; source dimensions preserved at 1536x1024."
+    }
+  ]
+}

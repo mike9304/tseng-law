@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-25",
+  "frozenAt": "2026-10-25T13:22:30.514112+00:00",
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "role": "Arabic author; not independent locale/final reviewer",
+  "records": [
+    {
+      "id": 930,
+      "file": "src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md",
+      "sha256": "d478a7ac41c46ab5d9861f6d9544d3276d4334ad8f4c395bd65aa55aeedcd9a6",
+      "image": "public/images/columns/930-market-expansion-20261025.webp",
+      "imageSha256": "a247a8544127f0eaf7a5bf0523191650463f909c31cc82276b396c50c113cb37",
+      "imageBytes": 171014,
+      "imageInspected": true,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md",
+        "--lang",
+        "ar"
+      ],
+      "exitCode": 0,
+      "output": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md [ar] sentences=41 mean=15.9 cv=0.458 short=0.195 run3=0.051 opener_rep=0.071 cite_end=0.0 cite_para=0.286 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "officialUrls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=225",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=227-2",
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSV%2C113%2C%E5%8F%B0%E4%B8%8A%2C496%2C20240509%2C1"
+      ]
+    },
+    {
+      "id": 931,
+      "file": "src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+      "sha256": "9561312bd3d24413e8d944f44affcac75c6d0d45535084add523df989acde551",
+      "image": "public/images/columns/931-market-expansion-20261025.webp",
+      "imageSha256": "42285608197d77c9cb1b0c165705951a0750690711939f977b965ce51224bbaf",
+      "imageBytes": 191658,
+      "imageInspected": true,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+        "--lang",
+        "ar"
+      ],
+      "exitCode": 0,
+      "output": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md [ar] sentences=38 mean=16.9 cv=0.484 short=0.105 run3=0.083 opener_rep=0.0 cite_end=0.0 cite_para=0.214 contrast=0 caveat=1 q=3\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "officialUrls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0150002&flno=19",
+        "https://www.ftc.gov.tw/internet/english/doc/docDetail.aspx?uid=1444&docid=14459",
+        "https://www.ftc.gov.tw/internet/english/doc/docDetail.aspx?uid=1444&docid=14455",
+        "https://www.ftc.gov.tw/internet/english/doc/docDetail.aspx?uid=1444&docid=14458",
+        "https://www.ftc.gov.tw/internet/english/doc/docDetail.aspx?uid=1184&docid=12669",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0150006&flno=25",
+        "https://www.ftc.gov.tw/internet/english/doc/docDetail.aspx?uid=1444&docid=14457",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0150002&flno=40"
+      ],
+      "metadataRepair": "Final reviewer requested allowed topic company instead of unsupported business; body and image unchanged. Original variety output remains applicable to unchanged body."
+    }
+  ],
+  "comparators": [
+    "src/content/columns-ar/706-taiwan-arc-renewal-changes-reentry.md",
+    "src/content/columns-ar/705-taiwan-visa-residence-work-study-family.md",
+    "src/content/columns-ar/704-taiwan-arc-first-application.md"
+  ],
+  "comparatorPublicationDate": "2026-10-24",
+  "researchBrief": "work/research/southwest-briefs.md",
+  "sourceEvidence": [
+    "work/reviews/ar-author-opened-sources.json",
+    "work/reviews/ar-author-opened-sources-2.json",
+    "work/reviews/ar-author-opened-sources-3.json"
+  ],
+  "imageEvidence": "work/images/ar-generation.json",
+  "limitations": [
+    "No human native-speaker or attorney review claim.",
+    "Source status checked 2026-10-25; Civil Code pending notices concern166-1/1223, not cited225/227-2/230.",
+    "Supreme Court113台上496 is a2024-05-09 construction-material supply case remanded to the High Court; no final damages outcome or UAE shipping holding asserted.",
+    "Saudi market page725574 reopened by author twice but failed; country/industrial-product choice uses regional researcher verified brief. No trade totals or current consumer-brand demand claims appear in article.",
+    "No current blanket UAE route closure, actual shipment, freight price or force-majeure result asserted.",
+    "FTC2017 compliance code is guidance; current Article19 exception and2026-05-22 FAQ evidence burden remain explicit.",
+    "No Saudi or UAE law advice, foreign-law licence, Arabic consultation or interpreter promise."
+  ],
+  "localeRepairRounds": [
+    {
+      "round": 1,
+      "file": "src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md",
+      "previousSha256": "2755999b08ab0c56bca95f8988d5901b5aeeb2e4f9afcf9305ee0cc9c94eb9fe",
+      "newSha256": "d478a7ac41c46ab5d9861f6d9544d3276d4334ad8f4c395bd65aa55aeedcd9a6",
+      "change": "Link label now identifies the civil judgment of the Supreme Court, not a separate Civil Supreme Court. Case, date, source and holding unchanged.",
+      "evidenceNote": "Fresh line-numbered source confirms CTA line56 precedes shipment-specific closing line58. Existing author §5.7 was already correct and retained."
+    }
+  ],
+  "finalRepairRounds": [
+    {
+      "round": 1,
+      "file": "src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+      "previousSha256": "e9b313ce38ff02e9b983fba6d8c0c7c67c22837443e7196312e974978163dbb5",
+      "newSha256": "9561312bd3d24413e8d944f44affcac75c6d0d45535084add523df989acde551",
+      "change": "Only topic business -> company. Verified COLUMN_TOPICS in src/lib/column-topics.ts. No body/image changes."
+    }
+  ]
+}

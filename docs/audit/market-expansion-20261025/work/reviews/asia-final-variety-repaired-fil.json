@@ -1,0 +1,76 @@
+[
+  {
+    "source_path": "src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md",
+    "sha256": "80779888e17199b5d1108f545d5587ce7ab5ec820f165a0f19a5ec90f4ad4a88",
+    "checkedAt": "2026-10-25T13:23:39.653115+00:00",
+    "runs": [
+      {
+        "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md --lang vi",
+        "script_sha256": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38",
+        "exit_code": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md [vi] sentences=45 mean=20.8 cv=0.458 short=0.178 run3=0.0 opener_rep=0.188 cite_end=0.0 cite_para=0.375 contrast=1 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    ],
+    "source_unchanged": true
+  },
+  {
+    "source_path": "src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md",
+    "sha256": "8f8f4b9059df25cfaf8d29cb6fe73c7a9b462ef37f3876bf6a36becbfa9221db",
+    "checkedAt": "2026-10-25T13:23:39.841070+00:00",
+    "runs": [
+      {
+        "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md --lang id",
+        "script_sha256": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38",
+        "exit_code": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md [id] sentences=51 mean=14.6 cv=0.468 short=0.235 run3=0.041 opener_rep=0.118 cite_end=0.0 cite_para=0.412 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    ],
+    "source_unchanged": true
+  },
+  {
+    "source_path": "src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+    "sha256": "b5c61e5675ad7ace02ca89ed45af6434f53cf358731cfedbc5e222e4a881f1dc",
+    "checkedAt": "2026-10-25T13:23:40.006149+00:00",
+    "runs": [
+      {
+        "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+        "script_sha256": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38",
+        "exit_code": 2,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md; supply --lang\n",
+        "stderr": ""
+      },
+      {
+        "command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+        "script_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+        "exit_code": 2,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md; supply --lang\n",
+        "stderr": ""
+      }
+    ],
+    "source_unchanged": true
+  },
+  {
+    "source_path": "src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+    "sha256": "0ce2bf7d0cd6a45886d56a5f5be25279f2d7894a83204f55d74b563eb1a51b5e",
+    "checkedAt": "2026-10-25T13:23:40.263249+00:00",
+    "runs": [
+      {
+        "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+        "script_sha256": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38",
+        "exit_code": 2,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md; supply --lang\n",
+        "stderr": ""
+      },
+      {
+        "command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+        "script_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+        "exit_code": 2,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md; supply --lang\n",
+        "stderr": ""
+      }
+    ],
+    "source_unchanged": true
+  }
+]

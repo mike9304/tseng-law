@@ -1,0 +1,12 @@
+python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md --lang pt
+cwd: /Users/son7/tseng-market-expansion-20261025
+exit: 0
+repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md [pt] sentences=36 mean=18.4 cv=0.515 short=0.25 run3=0.0 opener_rep=0.077 cite_end=0.0 cite_para=0.615 contrast=0 caveat=0 q=1
+  OK — no variety limit violated
+
+
+python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md --lang pt
+cwd: /Users/son7/tseng-market-expansion-20261025
+exit: 0
+repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md [pt] sentences=37 mean=19.5 cv=0.454 short=0.189 run3=0.029 opener_rep=0.231 cite_end=0.0 cite_para=0.462 contrast=0 caveat=0 q=1
+  OK — no variety limit violated

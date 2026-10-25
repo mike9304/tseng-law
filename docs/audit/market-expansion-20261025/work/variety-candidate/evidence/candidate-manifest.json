@@ -1,0 +1,127 @@
+{
+  "created_at": "2026-10-25T13:13:45.290428+00:00",
+  "review_status": "repair_r1_ready_for_independent_rerun_not_self_certified",
+  "global_checker_changed": false,
+  "target_manuscripts_or_scores_read": false,
+  "files": [
+    {
+      "path": "variety_metrics.py",
+      "sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5"
+    },
+    {
+      "path": "METHOD.md",
+      "sha256": "7696ab4bccaee2990a1040bb95a70e8ccef2c1c1c97b0e5b7e42fa140f7e9839"
+    },
+    {
+      "path": "candidate/variety_metrics.py",
+      "sha256": "f6a53d8265224b5795be95501f317eac018c23dba5b79513c6179fe1caa363c7"
+    },
+    {
+      "path": "candidate/variety_multilingual.py",
+      "sha256": "776ab3e4364d2684e0d2b913933e7acc19fc6f01008b5ba042dbc7080e05f531"
+    },
+    {
+      "path": "candidate/profiles/ar.json",
+      "sha256": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b"
+    },
+    {
+      "path": "candidate/profiles/cs.json",
+      "sha256": "07aca997353f22983df868222e0aac634ca1c70f3b3e68cd2553bc075618b8b7"
+    },
+    {
+      "path": "candidate/profiles/de.json",
+      "sha256": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc"
+    },
+    {
+      "path": "candidate/profiles/es.json",
+      "sha256": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a"
+    },
+    {
+      "path": "candidate/profiles/fil.json",
+      "sha256": "9bb87f92fde0d17ec521c2c7b22e40c6eeb272f0b53405d480f07a4b5886cd66"
+    },
+    {
+      "path": "candidate/profiles/fr.json",
+      "sha256": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b"
+    },
+    {
+      "path": "candidate/profiles/he.json",
+      "sha256": "ae6d8b60d6546a0adc9813cb16d4a11de8d7158a0fb93b45a11712bf49662983"
+    },
+    {
+      "path": "candidate/profiles/hi.json",
+      "sha256": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9"
+    },
+    {
+      "path": "candidate/profiles/id.json",
+      "sha256": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1"
+    },
+    {
+      "path": "candidate/profiles/it.json",
+      "sha256": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35"
+    },
+    {
+      "path": "candidate/profiles/lt.json",
+      "sha256": "f536d937faf4c26eadb19d5c8e5a0078dcfbce901501a4a8544c456d2cd02965"
+    },
+    {
+      "path": "candidate/profiles/nl.json",
+      "sha256": "8ee2b7074e1ad3778998e87a1a566dff023a3c98c2525200d86c96050cf9dc2e"
+    },
+    {
+      "path": "candidate/profiles/pl.json",
+      "sha256": "4137b957699be3977230e27533fcfcd27fb5a3cf5a04cc930ebf4f4c55c81f1d"
+    },
+    {
+      "path": "candidate/profiles/pt.json",
+      "sha256": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9"
+    },
+    {
+      "path": "candidate/profiles/th.json",
+      "sha256": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254"
+    },
+    {
+      "path": "candidate/profiles/vi.json",
+      "sha256": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df"
+    },
+    {
+      "path": "test_candidate.py",
+      "sha256": "73deb339c9bc1b9b3ba930ab55033b1b9797e96b7bdec218cf658da202799e67"
+    },
+    {
+      "path": "test_extension.py",
+      "sha256": "693bdb5fcd98b929d81027b4bcc2bbad5fe3b77e5ccbb9f23b44bb2ab9ee02d7"
+    },
+    {
+      "path": "test_regression.py",
+      "sha256": "f67c7c56e78823a511f6fb88fa8a770aef8ee814739892ee0d0d52617bec86f1"
+    },
+    {
+      "path": "probe_neutral.py",
+      "sha256": "42aad1670c97a26d01e0a692a9834f80d70a88fc4af268d043e90dff4a546fdf"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "test_candidate.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "test_extension.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "test_regression.py"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

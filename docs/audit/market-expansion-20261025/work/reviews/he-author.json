@@ -1,0 +1,262 @@
+{
+  "locale": "he",
+  "country": "Israel",
+  "authorRole": "Hebrew business/legal author; AI editorial role, not human or licensed reviewer",
+  "authored": true,
+  "independentReview": false,
+  "publish": false,
+  "date": "2026-10-25",
+  "readiness": "Ready for separate locale/final legal review; task-local measurement tool approval pending",
+  "records": [
+    {
+      "id": 932,
+      "file": "src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+      "sha256": "9115389453a135cf8b3b8f010f3bd996afbc0ee81bf6e92b43455033c617496f",
+      "status": "AUTHOR_READY_FOR_INDEPENDENT_REVIEW",
+      "image": "public/images/columns/932-market-expansion-20261025.webp",
+      "imageSHA256": "4037e0df9cfb08b660ca766fb21ae57558975f6ce7bb8ae19d63124fd7957822",
+      "sources": [
+        "https://www.tipo.gov.tw/wSite/public/Attachment/007/f1766476724604.pdf",
+        "https://www.tipo.gov.tw/tw/tipo1/799-68911.html",
+        "https://www.tipo.gov.tw/tw/patents/469.html",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070007"
+      ],
+      "openingDeletionTest": "See detailed per-sentence he-author.md",
+      "section5SelfCheck": "Completed; shared CLI unsupported is disclosed; candidate CLI no FAIL, independent extension approval pending",
+      "sourceCheckDate": "2026-10-25"
+    },
+    {
+      "id": 933,
+      "file": "src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+      "sha256": "c1edcaaa8978b6198116c522ad6edd879a9961a0f7c9f29af53a67c592f49e88",
+      "status": "AUTHOR_READY_FOR_INDEPENDENT_REVIEW",
+      "image": "public/images/columns/933-market-expansion-20261025.webp",
+      "imageSHA256": "e6048d77af3cded5a54553e88c92d2a0f9e9425f5f25f15d4e5db981b7163820",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=62",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=63",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=64",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=65",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070007",
+        "https://www.tipo.gov.tw/tw/patents/546-6714.html",
+        "https://www.tipo.gov.tw/tw/patents/989-23371.html",
+        "https://www.tipo.gov.tw/wSite/public/Attachment/007/f1758780077716.pdf"
+      ],
+      "openingDeletionTest": "See detailed per-sentence he-author.md",
+      "section5SelfCheck": "Completed; shared CLI unsupported is disclosed; candidate CLI no FAIL, independent extension approval pending",
+      "sourceCheckDate": "2026-10-25"
+    }
+  ],
+  "comparators": [
+    {
+      "file": "src/content/columns-he/858-israeli-tech-taiwan-source-code-trade-secrets.md",
+      "sha256": "694392f5830dc55f830017b5aaf7a22235807496146221be9b607b6e94f3b293",
+      "published": "2026-10-24"
+    },
+    {
+      "file": "src/content/columns-he/859-israeli-company-taiwan-subsidiary-branch-investment.md",
+      "sha256": "62be6cd64a59edb9218eb57a60ac5ec518c207b5ddbdf09c02270dbc777d281a",
+      "published": "2026-10-24"
+    },
+    {
+      "file": "src/content/columns-he/860-israeli-professional-taiwan-work-permit-residence.md",
+      "sha256": "236fbedd0ef5f6b3d4d9ea3de4b311b855904fd1db185d0114ccfb925635874c",
+      "published": "2026-10-24"
+    }
+  ],
+  "researchBrief": "work/research/southwest-briefs.md",
+  "marketRationale": "Current bilateral PPH launch and identified Hebrew Taiwan-patent transaction gap; an editorial acquisition hypothesis, not measured demand or conversion. Two native query observations in research brief.",
+  "sources": [
+    {
+      "url": "https://www.tipo.gov.tw/wSite/public/Attachment/007/f1766476724604.pdf",
+      "status": "opened official 20-page PDF, pp1–3 inspected in text",
+      "claims": [
+        "PPH commenced2026-01-02; initial term and continuation/termination conditions",
+        "same earliest date",
+        "at least one allowable Israeli claim even before formal grant",
+        "all claims correspond, supported narrower scope, no new category",
+        "notice of imminent substantive examination AND no first examination report",
+        "supporting documents, translations, table, simultaneous amendment, continued examination"
+      ],
+      "articles": [
+        932
+      ],
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "url": "https://www.tipo.gov.tw/tw/tipo1/799-68911.html",
+      "status": "opened current official announcement, published2026-01-06",
+      "claims": [
+        "PPH operational from2026-01-02"
+      ],
+      "articles": [
+        932
+      ],
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "url": "https://www.tipo.gov.tw/tw/patents/469.html",
+      "status": "opened official forms page",
+      "claims": [
+        "PPH request and specific amendment forms published"
+      ],
+      "articles": [
+        932
+      ],
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=11",
+      "status": "opened current official single provision",
+      "claims": [
+        "absence of residence/place of business requires agent; patent-attorney restriction subject to legal exceptions"
+      ],
+      "articles": [
+        932
+      ],
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=62",
+      "status": "opened current official single provision",
+      "claims": [
+        "recordation opposability against third parties",
+        "exclusive license excludes patentee and third parties within license scope"
+      ],
+      "articles": [
+        933
+      ],
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=63",
+      "status": "opened current official single provision",
+      "claims": [
+        "exclusive sublicense unless otherwise agreed",
+        "nonexclusive sublicense requires patentee/exclusive-licensee consent",
+        "sublicense recordation opposability"
+      ],
+      "articles": [
+        933
+      ],
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=64",
+      "status": "opened current official single provision",
+      "claims": [
+        "own-exploitation exception and unanimous consent for license/other listed acts"
+      ],
+      "articles": [
+        933
+      ],
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=65",
+      "status": "web tool failed; current official HTML captured by researcher and independently read/hash-verified by author",
+      "capture": "work/research/southwest-patent65-official.html",
+      "sha256": "2211a9c80fb2b745f34edb8abfeb2f6eea09698efe521df88471ea4dc51b458d",
+      "claims": [
+        "share assignment/trust/pledge requires other coowners consent",
+        "abandoned share vested in remaining coowners"
+      ],
+      "articles": [
+        933
+      ],
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070007",
+      "status": "opened actual current history",
+      "claims": [
+        "latest amendment2022-05-04 Art60-1 effective2022-07-01; cited provisions are operative"
+      ],
+      "articles": [
+        932,
+        933
+      ],
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "url": "https://www.tipo.gov.tw/tw/patents/546-6714.html",
+      "status": "opened current TIPO FAQ, updated2025-04-16",
+      "claims": [
+        "joint patent licensing requires all coowners except own exploitation"
+      ],
+      "articles": [
+        933
+      ],
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "url": "https://www.tipo.gov.tw/tw/patents/989-23371.html",
+      "status": "opened1999-08-26 interpretation as displayed on TIPO page with current Art64 pointer",
+      "claims": [
+        "company separate from its shareholder/manager who owns joint patent; need other coowners consent"
+      ],
+      "articles": [
+        933
+      ],
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "url": "https://www.tipo.gov.tw/wSite/public/Attachment/007/f1758780077716.pdf",
+      "status": "opened official September2025 article commentary; pp233–238 actual text inspected",
+      "claims": [
+        "current64/65 text and jointly owned share-disposal rules"
+      ],
+      "articles": [
+        933
+      ],
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "measurementRecord": "work/reviews/he-author-measurements.json",
+  "styleHistory": [
+    {
+      "path": "work/reviews/he-author-932-pre-style-r1.md",
+      "sha256": "524e854e463c5d3b95fb5de7f77d6f91359062c72fb1a394aa3e0079425fb1d5",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/candidate/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/work/reviews/he-author-932-pre-style-r1.md",
+        "--lang",
+        "he"
+      ],
+      "exit_code": 1,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/work/reviews/he-author-932-pre-style-r1.md [he] sentences=40 mean=13.7 cv=0.379 short=0.15 run3=0.026 opener_rep=0.0 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=2\n  FAIL len_cv=0.379 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+      "stderr": ""
+    },
+    {
+      "path": "work/reviews/he-author-932-pre-style-r2.md",
+      "sha256": "4aef19fbb91bcd6ce12b50bcf027987cbb4cf8ee2e67622e30a3914ea9b7afe2",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/candidate/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/work/reviews/he-author-932-pre-style-r2.md",
+        "--lang",
+        "he"
+      ],
+      "exit_code": 1,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/work/reviews/he-author-932-pre-style-r2.md [he] sentences=38 mean=14.1 cv=0.435 short=0.184 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=2\n  FAIL len_cv=0.435 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+      "stderr": ""
+    }
+  ],
+  "imageRecord": "work/images/he-generation.json",
+  "sourceEvidence": {
+    "path": "work/reviews/he-author-web-evidence.json",
+    "sha256": "1c6b43fdc8aedeeb12f8305650d2d6c2f5c70be7df750fac1e2035885869fc2a"
+  },
+  "limitations": [
+    "Original shared CLI does not support he and exits2; candidate extension needs independent approval.",
+    "Author self-check is not independent locale or legal review.",
+    "No human review or professional qualifications claimed.",
+    "No live publication or browser RTL/hydration/interaction check by author.",
+    "Intermittent MOJ access errors retained; Art65 official HTML captured by researcher and author independently inspected it.",
+    "No assumption that PPH approval grants a patent or initial email appoints a filing representative."
+  ]
+}

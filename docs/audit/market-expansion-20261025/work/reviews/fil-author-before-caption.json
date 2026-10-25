@@ -1,0 +1,612 @@
+{
+  "locale": "fil",
+  "author_agent": "/root/expand_author_fil",
+  "mode": "DRAFT",
+  "status": "AUTHOR_READY_FOR_INDEPENDENT_REVIEW",
+  "frozen_at_utc": "2026-10-25T13:24:05.142224+00:00",
+  "verified_date": "2026-10-25",
+  "review_identity": "AI author self-check, not independent locale/legal PASS and not a human/attorney-review claim.",
+  "articles": [
+    {
+      "id": 926,
+      "file": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+      "sha256": "b5c61e5675ad7ace02ca89ed45af6434f53cf358731cfedbc5e222e4a881f1dc",
+      "image": {
+        "id": 926,
+        "tool": "native image_gen.imagegen",
+        "mode": "generate",
+        "prompt": "Use case: photorealistic-natural. Create a restrained editorial hero photograph, landscape 1536 by 1024, for a Filipino-language Taiwan-law article about a factory worker considering resignation or a settlement after an occupational injury. A quiet, fictional factory first-aid rest area: a softly worn dark-blue work jacket and clean cotton work gloves on a wooden bench, an unbranded removable wrist support beside them, muted industrial window glass in the background. Natural late-afternoon daylight, tactile fabric and wood, understated colors, documentary still-life quality. No people or body parts, no visible injury, no readable text, no logos, no flags, no identity documents, no medical records, no court materials. The scene must feel everyday and calm, not alarming or promotional. All objects fictional. No overlaid captions or watermark.",
+        "original": "/Users/son7/.codex/generated_images/01a17323-db42-7782-b970-33ae506a8ee0/exec-23b17620-48b7-4f18-8cb9-b3e05920a646.png",
+        "final": "/Users/son7/tseng-market-expansion-20261025/repo/public/images/columns/926-market-expansion-20261025.webp",
+        "inspected": true,
+        "inspection": "Inspected both the original native tool output and the final WebP using view_image. No people, readable text, logos, flags, identifying documents or official-looking legal material. Fictional props match the topic. Conversion changed format only, not composition.",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "originalSha256": "79f7932c877af40673d2ee1d47d46e3f41fc596e9369f3356c9691163422e983",
+        "finalSha256": "8c3d5654ac2ce688d46c9baeb28c59c28ee243aeca9663a7ba29c62b636ecf2f",
+        "bytes": 173242,
+        "conversion": "Pillow WebP quality=88, method=6; source dimensions preserved at 1536x1024."
+      },
+      "status": "AUTHOR_READY_FOR_INDEPENDENT_REVIEW",
+      "measurement": {
+        "original_exit_code": 2,
+        "original_status": "UNSUPPORTED_NOT_PASS",
+        "task_local_exit_code": 0,
+        "task_local_output": "OFFICIAL CHECKER: fil unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md [fil] sentences=45 mean=19.2 cv=0.571 short=0.111 run3=0.023 opener_rep=0.118 cite_end=0.067 cite_para=0.706 contrast=0 caveat=0 q=4\n  OK — no variety limit violated\n",
+        "metrics": {
+          "lang": "fil",
+          "sentences": 45,
+          "paras": 17,
+          "heads": 4,
+          "list_items": 0,
+          "mean_len": 19.2,
+          "len_cv": 0.571,
+          "short_share": 0.111,
+          "long_share": 0.133,
+          "para_cv": 0.299,
+          "even_run3": 0.023,
+          "top_end": "trabaho",
+          "top_end_share": 0.044,
+          "ja_desu": 0,
+          "ja_da": 0,
+          "top_opener": "para",
+          "top_opener_n": 2,
+          "opener_rep": 0.118,
+          "consec_same_start": 0,
+          "cite_para_share": 0.706,
+          "cite_end_share": 0.067,
+          "contrast": 0,
+          "caveat": 0,
+          "questions": 4,
+          "num_per100": 1.62,
+          "hypo_open": false,
+          "q_open": false,
+          "formula_close": false,
+          "first": "Mananatili ang karapatan ng factory worker na tumanggap ng occupational accident compensat",
+          "last": "Ipunin sa isang folder ang diagnosis at wage records, ngunit panatilihing magkahiwalay ang resignation, settlement at in",
+          "length_unit": "orthographic_words",
+          "short_threshold": 8,
+          "long_threshold": 32,
+          "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations",
+          "measurement_scope": "task_local_extension_not_shared_checker"
+        }
+      },
+      "first_two_paragraph_deletion_test": {
+        "paragraph_1": "Deletion loses the key right surviving departure and its exact LSA 61 source. Removed the original third sentence repeating that continued employment was unnecessary. The remaining two sentences state the rule and identify its source.",
+        "paragraph_2": "Deletion loses the article’s central separate reading of resignation and settlement, including the Civil Code 737 effect. Each sentence states document purpose, relinquished-right question, legal consequence, or practical reading step."
+      },
+      "legal_claims_checked": [
+        "Labor Standards Act 3/13/59/61: manufacturing scope; medical-period employer termination restriction with approved force-majeure exception; necessary medical and original-wage compensation; 40-month alternative only after all specified conditions; two-year period from when compensation receivable; leaving employment does not erase right.",
+        "Occupational Accident Insurance and Protection Act 11/27/37/84/90: foreign workers within statutory insurance categories; one-year post-cessation condition for same insured injury/disease or resulting disease, distinct from five-year claims limitation; current MOJ 84 approved-hospital/mental-physical-disability wording used, not older BLI wording; permitted compensation offset/refund only.",
+        "Civil Code 736–738: valid settlement can extinguish released rights; mistake rescission limited, including all three statutory exceptions. No assertion every resignation or settlement is invalid.",
+        "Labor-Management Disputes Act 9: written mediation application to authority of labor-service location; not a guarantee of settlement or free private representation."
+      ],
+      "self_check_section5": {
+        "1": "Original shared CLI: unsupported exit 2, retained separately. Independently approved task-local FIL wrapper: exit 0 and no HARD failure for both exact manuscript hashes. All extracted sentences were read.",
+        "2": "No stock hypothetical opening. 926 begins with compensation surviving departure and distinguishes two documents; 927 begins with the procedural identity of two court papers. Different openings within this pair; root checks whole-batch distribution.",
+        "3": "926: 5/45 sentences at or below 8 orthographic units; 927: 6/52. No paragraph has more than one sentence above 32 units. Long legal conditions retained. Short units are actual rights/steps/limitations, not added filler.",
+        "4": "Read all paragraph opening words vertically. Maximum repeat is two in each manuscript (926: kung, para; 927: kapag, kung). No three identical paragraph starts.",
+        "5": "Citations occur in subjects, sentence middles and endings. No three successive claim-parenthesis-caveat paragraphs. Both have uncited practical document-comparison paragraphs. Cite-end share 0.067/0.135, sources not deleted.",
+        "6": "Automated selected contrast patterns: 0 each, not an exhaustive semantic count. Manually reviewed distinctions concern resignation/settlement, post-insurance eligibility/limitation and separate court remedies; no invented opposing assertion or recurring decorative X-not-Y framework.",
+        "7": "926 ends with the treatment and lost-wage periods covered by settlement and the remaining claim. 927 ends with the legal service date controlling the deadline despite an inquiry. Neither ends in a copied sales pitch.",
+        "8": "Natural professional Filipino with conventional worker-facing English legal/work terms. Korean/Japanese register rule not applicable. No bold, fabricated client/experience/quote, byline, imperative checklist headings or human-review claim. Fictional image captions remain.",
+        "9": "After edits compared article numbers, time origins, 2-year/1-year/5-year distinctions, 40-month exception conditions, 10-day/20-day remedies, service rules, security/stay qualifications and all source links. Legal conditions were not cut to improve scores."
+      },
+      "comparators": [
+        {
+          "path": "src/content/columns-fil/801-filipino-caregiver-taiwan-patient-died-transfer-employer.md",
+          "sha256": "22e499add2a3dfb997bf0eb969de7a2bf97936aefe99eaa229dfdd3ba7a22041",
+          "published": "2026-10-24",
+          "read_scope": "complete manuscript",
+          "comparison": "Statute-led caregiver death/employer-transfer article; permits, time off, abuse and wages. New 926 instead compares resignation and settlement effects; no copied scenario."
+        },
+        {
+          "path": "src/content/columns-fil/802-filipino-factory-worker-taiwan-overtime-deductions-broker-fee.md",
+          "sha256": "520395bdf43829af113529fd9f8797ab671803350c191d6176a94b9d3da60cd2",
+          "published": "2026-10-24",
+          "read_scope": "complete manuscript",
+          "comparison": "Pay-slip/overtime/deductions/broker-fee article with a three-part opening. Neither new article repeats that three-part opening or pay-slip checklist."
+        },
+        {
+          "path": "src/content/columns-fil/803-filipino-worker-taiwan-reported-missing-overstay-surrender.md",
+          "sha256": "9f96f2238af74f3d96887d6d7516a9515e3a1a42d6875e34a6edca199259db44",
+          "published": "2026-10-24",
+          "read_scope": "complete manuscript",
+          "comparison": "Missing-worker reporting/overstay/surrender article. New 927 concerns debt papers and legal service; no repeated enforcement/immigration narrative."
+        }
+      ]
+    },
+    {
+      "id": 927,
+      "file": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+      "sha256": "0ce2bf7d0cd6a45886d56a5f5be25279f2d7894a83204f55d74b563eb1a51b5e",
+      "image": {
+        "id": 927,
+        "tool": "native image_gen.imagegen",
+        "mode": "generate",
+        "prompt": "Use case: photorealistic-natural. Generate a quiet editorial photograph, wide landscape 1536 by 1024, for a Filipino-language Taiwan-law column about a worker receiving a loan-related court notice and checking which procedure applies. Fictional modest rented apartment at night. Close oblique overhead composition of a small pale laminate table, two plain unmarked envelopes, blank cream papers laid separately, a closed simple notebook, an ordinary unbranded pen and a glass of water. Gentle pool of warm light from an unbranded desk lamp at the side; cool dusk through a small window beyond, out of focus. Natural minor wear, restrained composition, grounded everyday mood. Absolutely no readable writing, symbols, numbers, logos, official stamps, emblems, money, passports, identity cards, faces or people. The blank objects are illustrative props, never replicas of legal documents. No overlaid text or watermark.",
+        "original": "/Users/son7/.codex/generated_images/01a17323-db42-7782-b970-33ae506a8ee0/exec-e28b2b87-9d1b-46b7-9399-699ee6884fc4.png",
+        "final": "/Users/son7/tseng-market-expansion-20261025/repo/public/images/columns/927-market-expansion-20261025.webp",
+        "inspected": true,
+        "inspection": "Inspected both the original native tool output and the final WebP using view_image. No people, readable text, logos, flags, identifying documents or official-looking legal material. Fictional props match the topic. Conversion changed format only, not composition.",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "originalSha256": "fd656d69d60606c369315db3cfa6b86de266187581f55e05fdfcc56c47c367cd",
+        "finalSha256": "4dcf34091e9d67c2cc5ebb7845775e25cdab69ec4b22322947b7e2e81b2c0ca7",
+        "bytes": 91628,
+        "conversion": "Pillow WebP quality=88, method=6; source dimensions preserved at 1536x1024."
+      },
+      "status": "AUTHOR_READY_FOR_INDEPENDENT_REVIEW",
+      "measurement": {
+        "original_exit_code": 2,
+        "original_status": "UNSUPPORTED_NOT_PASS",
+        "task_local_exit_code": 0,
+        "task_local_output": "OFFICIAL CHECKER: fil unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md [fil] sentences=52 mean=17.7 cv=0.505 short=0.115 run3=0.04 opener_rep=0.125 cite_end=0.135 cite_para=0.75 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "metrics": {
+          "lang": "fil",
+          "sentences": 52,
+          "paras": 16,
+          "heads": 4,
+          "list_items": 0,
+          "mean_len": 17.7,
+          "len_cv": 0.505,
+          "short_share": 0.115,
+          "long_share": 0.058,
+          "para_cv": 0.285,
+          "even_run3": 0.04,
+          "top_end": "order",
+          "top_end_share": 0.058,
+          "ja_desu": 0,
+          "ja_da": 0,
+          "top_opener": "kapag",
+          "top_opener_n": 2,
+          "opener_rep": 0.125,
+          "consec_same_start": 0,
+          "cite_para_share": 0.75,
+          "cite_end_share": 0.135,
+          "contrast": 0,
+          "caveat": 0,
+          "questions": 1,
+          "num_per100": 2.72,
+          "hypo_open": false,
+          "q_open": false,
+          "formula_close": true,
+          "first": "Magkaiba ang paraan ng pagtutol sa 本票裁定, isang ruling na nagpapahintulot sa enforcement ng",
+          "last": "Para sa pribadong pagsusuri ng Taiwan-law dispute, ipadala sa wei@hoveringlaw.com.tw ang uri ng order, petsa ng service ",
+          "length_unit": "orthographic_words",
+          "short_threshold": 8,
+          "long_threshold": 32,
+          "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations",
+          "measurement_scope": "task_local_extension_not_shared_checker"
+        }
+      },
+      "first_two_paragraph_deletion_test": {
+        "paragraph_1": "Deletion loses identification of 本票裁定 versus 支付命令 and the Taiwan recruitment-loan context; it also removes the two governing deadline provisions. No generic foreign-worker introduction.",
+        "paragraph_2": "Deletion loses preservation of envelope/service records and matching to the pre-departure loan or note; the final sentence prompts comparison of the person now collecting with the earlier lender. These are concrete records for the reader’s decision."
+      },
+      "legal_claims_checked": [
+        "Payment order: CPC 512,516,519,521; court may initially act without hearing debtor; 20-day objection after service to issuing court, whole/part, no reason required; proper timely objection removes corresponding order and converts creditor application to suit/mediation; no-objection enforcement and discretionary security-conditioned stay distinguished.",
+        "Promissory-note ruling: Negotiable Instruments Act 123 plus NCA 42–43; 10-day appeal after service to original court. No claim appeal alone decides substantive debt or automatically stays enforcement.",
+        "NCA 195: forgery/alteration special declaratory suit against holder, issuing court, within 20 days of service; proving qualifying filing requires stay, with holder/issuer security exceptions; other declaratory cases use discretionary security-conditioned stay.",
+        "Service: CPC 137/138 via NCA31, Civil Code120/122 and CPC161/162; substituted recipient and conflict restriction, deposit with required notice and ten-day effectiveness, start-day/holiday/travel-time qualifications. Reading the document or broker handover date is not automatically legal service.",
+        "Taipei District Court 115抗306 of 2026-07-03: official full printData body actually opened and retained (source responses[10], plus separate 50-line file). Financing shortfall is appellants’ allegation, not adjudicated factual finding; appeal dismissed on formal-proceeding scope. No firm-client attribution.",
+        "LAF Filipino materials and current eligibility page actually opened; application and review, no guaranteed aid. Taiwan court procedure is separated from Philippine recruitment/loan-law advice."
+      ],
+      "self_check_section5": {
+        "1": "Original shared CLI: unsupported exit 2, retained separately. Independently approved task-local FIL wrapper: exit 0 and no HARD failure for both exact manuscript hashes. All extracted sentences were read.",
+        "2": "No stock hypothetical opening. 926 begins with compensation surviving departure and distinguishes two documents; 927 begins with the procedural identity of two court papers. Different openings within this pair; root checks whole-batch distribution.",
+        "3": "926: 5/45 sentences at or below 8 orthographic units; 927: 6/52. No paragraph has more than one sentence above 32 units. Long legal conditions retained. Short units are actual rights/steps/limitations, not added filler.",
+        "4": "Read all paragraph opening words vertically. Maximum repeat is two in each manuscript (926: kung, para; 927: kapag, kung). No three identical paragraph starts.",
+        "5": "Citations occur in subjects, sentence middles and endings. No three successive claim-parenthesis-caveat paragraphs. Both have uncited practical document-comparison paragraphs. Cite-end share 0.067/0.135, sources not deleted.",
+        "6": "Automated selected contrast patterns: 0 each, not an exhaustive semantic count. Manually reviewed distinctions concern resignation/settlement, post-insurance eligibility/limitation and separate court remedies; no invented opposing assertion or recurring decorative X-not-Y framework.",
+        "7": "926 ends with the treatment and lost-wage periods covered by settlement and the remaining claim. 927 ends with the legal service date controlling the deadline despite an inquiry. Neither ends in a copied sales pitch.",
+        "8": "Natural professional Filipino with conventional worker-facing English legal/work terms. Korean/Japanese register rule not applicable. No bold, fabricated client/experience/quote, byline, imperative checklist headings or human-review claim. Fictional image captions remain.",
+        "9": "After edits compared article numbers, time origins, 2-year/1-year/5-year distinctions, 40-month exception conditions, 10-day/20-day remedies, service rules, security/stay qualifications and all source links. Legal conditions were not cut to improve scores."
+      },
+      "comparators": [
+        {
+          "path": "src/content/columns-fil/801-filipino-caregiver-taiwan-patient-died-transfer-employer.md",
+          "sha256": "22e499add2a3dfb997bf0eb969de7a2bf97936aefe99eaa229dfdd3ba7a22041",
+          "published": "2026-10-24",
+          "read_scope": "complete manuscript",
+          "comparison": "Statute-led caregiver death/employer-transfer article; permits, time off, abuse and wages. New 926 instead compares resignation and settlement effects; no copied scenario."
+        },
+        {
+          "path": "src/content/columns-fil/802-filipino-factory-worker-taiwan-overtime-deductions-broker-fee.md",
+          "sha256": "520395bdf43829af113529fd9f8797ab671803350c191d6176a94b9d3da60cd2",
+          "published": "2026-10-24",
+          "read_scope": "complete manuscript",
+          "comparison": "Pay-slip/overtime/deductions/broker-fee article with a three-part opening. Neither new article repeats that three-part opening or pay-slip checklist."
+        },
+        {
+          "path": "src/content/columns-fil/803-filipino-worker-taiwan-reported-missing-overstay-surrender.md",
+          "sha256": "9f96f2238af74f3d96887d6d7516a9515e3a1a42d6875e34a6edca199259db44",
+          "published": "2026-10-24",
+          "read_scope": "complete manuscript",
+          "comparison": "Missing-worker reporting/overstay/surrender article. New 927 concerns debt papers and legal service; no repeated enforcement/immigration narrative."
+        }
+      ]
+    }
+  ],
+  "research": [
+    "work/research/sea-briefs.md",
+    "work/research/sea-market.md",
+    "work/research/sea-sources.json"
+  ],
+  "market_limits": "Filipino worker/student Taiwan connection guides selection. Program cumulative approvals are not worker totals or clients. Search volume/conversion/payment willingness were not measured. 927 Tagalog search was weak/mixed with Cebuano and Philippine-law results, so it is an exploratory editorial choice. Historical LAF2017 material is not presented as a current trend or used as a fictional firm case.",
+  "duplication_limits": "926 settlement-first two-document interpretation and payment categories differs from VI039’s hospitalized worker/lump-sum/repatriation introduction; no copied hypothetical. 927 focuses worker debt papers/service, unlike JA719 business creditor or ZH164 loan non-disbursement article. Shared statutes are not claimed original.",
+  "source_open_evidence": "work/reviews/fil-author-source-opens.json",
+  "source_index": [
+    {
+      "response_index": 0,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=61",
+      "status": "opened",
+      "title": "勞動基準法§61-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=61&pcode=N0030001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 0,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=59",
+      "status": "opened",
+      "title": "勞動基準法§59-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=59&pcode=N0030001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 0,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13",
+      "status": "opened",
+      "title": "勞動基準法§13-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=13&pcode=N0030001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 0,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516",
+      "status": "opened",
+      "title": "民事訴訟法§516-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=516&pcode=B0010001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 0,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=519",
+      "status": "opened",
+      "title": "民事訴訟法§519-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=519&pcode=B0010001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 0,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=521",
+      "status": "opened",
+      "title": "民事訴訟法§521-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=521&pcode=B0010001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 1,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010008&flno=195",
+      "status": "opened",
+      "title": "非訟事件法§195-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=195&pcode=B0010008)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 1,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010008&flno=42",
+      "status": "opened",
+      "title": "非訟事件法§42-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=42&pcode=B0010008)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 1,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010009&flno=30-1",
+      "status": "failed",
+      "title": "Internal Error ()",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 1,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=736",
+      "status": "opened",
+      "title": "民法§736-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=736&pcode=B0000001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 1,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=737",
+      "status": "opened",
+      "title": "民法§737-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=737&pcode=B0000001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 1,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=738",
+      "status": "opened",
+      "title": "民法§738-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=738&pcode=B0000001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 1,
+      "ref_id": "https://www.bli.gov.tw/0105829.html",
+      "status": "opened",
+      "title": "勞動部勞工保險局全球資訊網-業務專區-勞工職業災害保險-給付保障 (https://www.bli.gov.tw/0105829.html)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 2,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010009",
+      "status": "opened",
+      "title": "非訟事件法施行細則-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010009)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 2,
+      "ref_id": "https://www.bli.gov.tw/0106128.html",
+      "status": "opened",
+      "title": "勞動部勞工保險局全球資訊網-公告資訊-勞工職業災害保險及保護法專區-法令規章-勞工職業災害保險及保護法 (https://www.bli.gov.tw/0106128.html)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 2,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+      "status": "opened",
+      "title": "勞動基準法-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 2,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0010008",
+      "status": "opened",
+      "title": "非訟事件法 沿革-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0010008)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 2,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0010001",
+      "status": "opened",
+      "title": "民事訴訟法 沿革-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0010001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 2,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001",
+      "status": "opened",
+      "title": "民法 沿革-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 4,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010009",
+      "status": "opened",
+      "title": "非訟事件法施行細則-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010009)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 4,
+      "ref_id": "https://www.bli.gov.tw/0105829.html",
+      "status": "opened",
+      "title": "勞動部勞工保險局全球資訊網-業務專區-勞工職業災害保險-給付保障 (https://www.bli.gov.tw/0105829.html)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 5,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010009",
+      "status": "opened",
+      "title": "非訟事件法施行細則-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010009)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 5,
+      "ref_id": "https://laws.mol.gov.tw/FLAW/PrintFLAWDOC01.aspx?flno=27&id=FL096423",
+      "status": "failed",
+      "title": "Internal Error ()",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 6,
+      "ref_id": "https://data.judicial.gov.tw/opendl/JDocFile/SLDV/112%2C%E6%8A%97%2C119%2C20230412%2C1.pdf",
+      "status": "failed",
+      "title": "Internal Error ()",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 7,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=27",
+      "status": "opened",
+      "title": "勞工職業災害保險及保護法§27-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=27&pcode=N0050031)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 7,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=37",
+      "status": "opened",
+      "title": "勞工職業災害保險及保護法§37-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=37&pcode=N0050031)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 7,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=6",
+      "status": "opened",
+      "title": "勞工職業災害保險及保護法§6-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=6&pcode=N0050031)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 7,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0050031",
+      "status": "failed",
+      "title": "Internal Error ()",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 8,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=27",
+      "status": "opened",
+      "title": "勞工職業災害保險及保護法§27-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=27&pcode=N0050031)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 8,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=37",
+      "status": "opened",
+      "title": "勞工職業災害保險及保護法§37-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=37&pcode=N0050031)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 8,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=6",
+      "status": "opened",
+      "title": "勞工職業災害保險及保護法§6-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=6&pcode=N0050031)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 8,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
+      "status": "opened",
+      "title": "勞工職業災害保險及保護法-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 8,
+      "ref_id": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=SLDV%2C112%2C%E6%8A%97%2C119%2C20230412%2C1",
+      "status": "failed",
+      "title": "Internal Error ()",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 10,
+      "ref_id": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPDV%2C115%2C%E6%8A%97%2C306%2C20260703%2C1",
+      "status": "opened",
+      "title": "臺灣臺北地方法院 115 年度抗字第 306 號民事裁定 (https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPDV%2C115%2C%E6%8A%97%2C306%2C20260703%2C1)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 10,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=138",
+      "status": "opened",
+      "title": "民事訴訟法§138-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=138&pcode=B0010001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 10,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=137",
+      "status": "opened",
+      "title": "民事訴訟法§137-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=137&pcode=B0010001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 10,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=161",
+      "status": "opened",
+      "title": "民事訴訟法§161-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=161&pcode=B0010001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 10,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=162",
+      "status": "opened",
+      "title": "民事訴訟法§162-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=162&pcode=B0010001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 11,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=84",
+      "status": "opened",
+      "title": "勞工職業災害保險及保護法§84-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=84&pcode=N0050031)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 11,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=90",
+      "status": "opened",
+      "title": "勞工職業災害保險及保護法§90-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=90&pcode=N0050031)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 11,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=11",
+      "status": "failed",
+      "title": "Internal Error ()",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 11,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=512",
+      "status": "opened",
+      "title": "民事訴訟法§512-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=512&pcode=B0010001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 11,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010008&flno=43",
+      "status": "opened",
+      "title": "非訟事件法§43-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=43&pcode=B0010008)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 11,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010008&flno=31",
+      "status": "opened",
+      "title": "非訟事件法§31-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=31&pcode=B0010008)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 11,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=120",
+      "status": "opened",
+      "title": "民法§120-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=120&pcode=B0000001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 11,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=122",
+      "status": "opened",
+      "title": "民法§122-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=122&pcode=B0000001)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 12,
+      "ref_id": "https://www.laf.org.tw/en",
+      "status": "opened",
+      "title": "Legal Aid Foundation of Taiwan (https://www.laf.org.tw/en)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 12,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0020007&flno=9",
+      "status": "opened",
+      "title": "勞資爭議處理法§9-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=9&pcode=N0020007)",
+      "verified_date": "2026-10-25"
+    },
+    {
+      "response_index": 12,
+      "ref_id": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380028&flno=123",
+      "status": "opened",
+      "title": "票據法§123-全國法規資料庫 (https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=123&pcode=G0380028)",
+      "verified_date": "2026-10-25"
+    }
+  ],
+  "law_status_notes": [
+    "Current MOJ single-article texts and relevant history pages opened on 2026-10-25; MOJ footer lists compilation through 2026-10-16, not same-day legislative exhaustiveness.",
+    "Civil Code history shows a 2026 amendment to Article1223 with delayed commencement and a separate uncommenced166-1; neither is relied on. Current cited settlement and period provisions are checked, no assertion entire Civil Code has one commencement.",
+    "N0050031 single Article11 and history URL failed; Article11 was directly read at official LawAll lines132–134. BLI old84 wording was not used; current official MOJ84 direct text was used.",
+    "Failed SLDV112抗119 opens were not relied on. Full TPDV115抗306 official response was successfully opened instead. Per-open exact retrieval times were not exposed; date and evidence serialization time are distinguished."
+  ],
+  "service_truth": "Taiwan-law scope; only English, Chinese, Korean and Japanese consultation. Filipino page is guidance and communication method must be confirmed. One email per article, nonconfidential initial summary, no receipt-as-retainer claim; public mediation/LAF options precede private inquiry.",
+  "measurement_method": {
+    "review": "work/variety-review/review-final.md",
+    "wrapper_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+    "fil_profile_sha256": "9bb87f92fde0d17ec521c2c7b22e40c6eeb272f0b53405d480f07a4b5886cd66",
+    "scope": "Task-local AI-reviewed heuristic; original HARD and8/32 unchanged; not human-native review, global support or semantic-load equivalence."
+  },
+  "evidence_files": [
+    "fil-author-original-variety.json",
+    "fil-author-local-variety-initial.json",
+    "fil-author-extracted-sentences.json",
+    "fil-author-metadata.json",
+    "fil-author-source-opens.json",
+    "fil-author-judgment-115-306.txt"
+  ],
+  "metadata_note": "Initial Python YAML import failed because PyYAML is unavailable. Actual metadata parsing then succeeded with existing repository gray-matter; no dependency installed. Both results retained.",
+  "publication": "No push, commit, deployment or live-readback performed by author. Root owns publication and date check.",
+  "repair_history": "One preparatory prose pass incorporated fresh locale reader feedback: removed repeated/filler lines, corrected nililimitahan/ibinasura/araw ng sagot, explained limitation terminology, moved settlement first and added public mediation. First task-local measure then passed both; no unsuccessful metric repair round."
+}

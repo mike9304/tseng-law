@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-10-25",
+  "method": "native image_gen__imagegen",
+  "fallback": false,
+  "inspection": "Both generated outputs and converted WebP files actually viewed by author. Fictional editorial props, no people/faces, no branding/flags/identity documents or readable documents. No public browser QA performed.",
+  "assets": [
+    {
+      "id": 940,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial hero for a Polish-language Taiwan commercial-law article about a fraudulent bank-account change on an import invoice. Create a restrained fictional still-life photograph, 1536x1024. Oblique close view of an uncluttered freight-office desk: closed slim laptop, small unbranded hardware security token, an open blank document folder with two completely blank cream sheets, one navy envelope, a metal paperclip. Soft out-of-focus shipping containers glimpsed through a window in the far background, daylight. Quiet, credible tactile detail, oak grain, brushed metal and paper, sophisticated documentary editorial feel. Muted navy, warm grey, ivory palette. No people, no faces, no text anywhere, no letters, numbers, signatures, stamps, logos, flags, currency, identity documents, screens or fake evidence. Objects appear ordinary, not dramatic hacker imagery. No padlocks, chains, giant warning symbols, neon, captions, borders or watermark.",
+      "original": "/Users/son7/.codex/generated_images/01a17324-fd0e-77f2-bc2d-ed9da69f9a20/exec-8cac5ffc-6b5a-4f9b-87e8-58d1896e6493.png",
+      "path": "repo/public/images/columns/940-market-expansion-20261025.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "formatConversion": "Pillow WebP quality88 method6; no crop or content edit",
+      "inspected": true,
+      "sha256": "f695325dd0624188a9de25dab62c5f2830f090d528e1b50c265cbb989d00ffbd",
+      "originalSha256": "3ef715ba2f3a9af47dc9c2e8962459f63adca2ba4b6de58d628d9f8086960ec8"
+    },
+    {
+      "id": 941,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial hero for a Polish-language Taiwan product-safety legal article, 1536x1024. A fictional quiet product-inspection bench in a small modern warehouse, three identical unbranded matte ivory electric kettles with simple rounded form set beside a single open corrugated box lined with molded pulp and two sealed plain boxes. One kettle isolated on a stainless steel tray in the foreground; its unplugged cord rests loosely with the plug clearly disconnected. White cotton inspection gloves rest beside a measuring caliper, no people. Natural morning light from the side, pale olive-grey wall, tactile cardboard, matte ceramic-style appliance finish and brushed stainless steel. Horizontal three-quarter composition, ample air, calm precision, editorial still life. No damage, no flames, no injury, no readable text, no logos, no brand marks, no symbols, no flags, no signatures, no people, no faces, no documents, no fake court or laboratory evidence, no watermark, no captions. All products are fictional generic props.",
+      "original": "/Users/son7/.codex/generated_images/01a17324-fd0e-77f2-bc2d-ed9da69f9a20/exec-2d4be6b6-247e-43c5-a9a3-bc4666b5aab1.png",
+      "path": "repo/public/images/columns/941-market-expansion-20261025.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "formatConversion": "Pillow WebP quality88 method6; no crop or content edit",
+      "inspected": true,
+      "sha256": "6357ffc8fbd81c105b8c941b95328e95ecafc3945a65860ae4dd7f8da38e8227",
+      "originalSha256": "b963c2734a416972822fb8559369bf2061a382c3788b54597d41c91dfa935d1b"
+    }
+  ]
+}

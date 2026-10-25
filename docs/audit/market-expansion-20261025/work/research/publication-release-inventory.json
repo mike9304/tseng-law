@@ -1,0 +1,199 @@
+{
+  "initial_research_base": "4a37a0b09aff6eea261a67519eeb375a48e1b19b",
+  "release_base": "5e2d0f5df8c75eb4aca8304b7d9f5110ac422f90",
+  "scope": "24newarticlesandimages plus3existingRussianARCcaption-onlyrepairs",
+  "records": [
+    {
+      "id": 922,
+      "locale": "vi",
+      "source_path": "src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md",
+      "route": "/vi/columns/vietnamese-tenant-taiwan-deposit-handover-deductions",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 923,
+      "locale": "vi",
+      "source_path": "src/content/columns-vi/923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md",
+      "route": "/vi/columns/vietnamese-graduate-taiwan-probation-pay-work-exemption",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 924,
+      "locale": "id",
+      "source_path": "src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md",
+      "route": "/id/columns/indonesian-caregiver-taiwan-pregnancy-dismissal",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 925,
+      "locale": "id",
+      "source_path": "src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md",
+      "route": "/id/columns/indonesian-caregiver-taiwan-work-outside-permit",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 926,
+      "locale": "fil",
+      "source_path": "src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+      "route": "/fil/columns/filipino-worker-taiwan-injury-resignation-settlement",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 927,
+      "locale": "fil",
+      "source_path": "src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+      "route": "/fil/columns/filipino-worker-taiwan-loan-promissory-note-court-order",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 928,
+      "locale": "hi",
+      "source_path": "src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md",
+      "route": "/hi/columns/indian-minority-investor-taiwan-company-inspector",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 929,
+      "locale": "hi",
+      "source_path": "src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md",
+      "route": "/hi/columns/indian-technical-service-fees-taiwan-tax-treaty",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 930,
+      "locale": "ar",
+      "source_path": "src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md",
+      "route": "/ar/columns/uae-taiwan-shipment-rerouting-hardship",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 931,
+      "locale": "ar",
+      "source_path": "src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+      "route": "/ar/columns/saudi-supplier-taiwan-distributor-resale-prices",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 932,
+      "locale": "he",
+      "source_path": "src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+      "route": "/he/columns/israel-taiwan-pph-patent-claims-window",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 933,
+      "locale": "he",
+      "source_path": "src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+      "route": "/he/columns/israeli-taiwan-joint-patent-license-consent",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 934,
+      "locale": "nl",
+      "source_path": "src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+      "route": "/nl/columns/dutch-technicians-taiwan-installation-contract-work-permit",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 935,
+      "locale": "nl",
+      "source_path": "src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+      "route": "/nl/columns/dutch-machinery-taiwan-retention-title-registration",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 936,
+      "locale": "fr",
+      "source_path": "src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md",
+      "route": "/fr/columns/french-cosmetics-taiwan-pif-importer-handover",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 937,
+      "locale": "fr",
+      "source_path": "src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md",
+      "route": "/fr/columns/french-wine-taiwan-online-orders-advertising",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 938,
+      "locale": "pt",
+      "source_path": "src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md",
+      "route": "/pt/columns/brazil-coffee-taiwan-border-reinspection",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 939,
+      "locale": "pt",
+      "source_path": "src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md",
+      "route": "/pt/columns/brazil-organic-coffee-taiwan-label-certification",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 940,
+      "locale": "pl",
+      "source_path": "src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "route": "/pl/columns/polish-importer-taiwan-invoice-bank-change-payment",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 941,
+      "locale": "pl",
+      "source_path": "src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "route": "/pl/columns/polish-brand-taiwan-consumer-injury-importer-recall",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 942,
+      "locale": "cs",
+      "source_path": "src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+      "route": "/cs/columns/czech-supplier-taiwan-email-purchase-order-contract",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 943,
+      "locale": "cs",
+      "source_path": "src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+      "route": "/cs/columns/czech-exhibitor-taiwan-patent-disclosure-priority",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 944,
+      "locale": "lt",
+      "source_path": "src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md",
+      "route": "/lt/columns/lithuanian-laser-taiwan-evaluation-samples-test-data",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 945,
+      "locale": "lt",
+      "source_path": "src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md",
+      "route": "/lt/columns/lithuanian-company-taiwan-firmware-copyright-source-code",
+      "included_in_codex_scope": true
+    },
+    {
+      "id": 704,
+      "locale": "ru",
+      "source_path": "src/content/columns-ru/704-taiwan-arc-first-application.md",
+      "route": "/ru/columns/taiwan-arc-first-application",
+      "included_in_codex_scope": true,
+      "scope": "inherited caption-only integration repair"
+    },
+    {
+      "id": 705,
+      "locale": "ru",
+      "source_path": "src/content/columns-ru/705-taiwan-visa-residence-work-study-family.md",
+      "route": "/ru/columns/taiwan-visa-residence-work-study-family",
+      "included_in_codex_scope": true,
+      "scope": "inherited caption-only integration repair"
+    },
+    {
+      "id": 706,
+      "locale": "ru",
+      "source_path": "src/content/columns-ru/706-taiwan-arc-renewal-changes-reentry.md",
+      "route": "/ru/columns/taiwan-arc-renewal-changes-reentry",
+      "included_in_codex_scope": true,
+      "scope": "inherited caption-only integration repair"
+    }
+  ]
+}

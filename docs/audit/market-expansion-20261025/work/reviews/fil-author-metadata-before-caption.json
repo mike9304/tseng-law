@@ -1,0 +1,52 @@
+{
+  "first_attempt": {
+    "command": "python3 metadata validation importing yaml",
+    "exit_code": 1,
+    "error": "ModuleNotFoundError: No module named yaml"
+  },
+  "fallback": {
+    "method": "existing repository dependency gray-matter; no install or code change",
+    "command": "node --input-type=module, gray-matter frontmatter parse and field checks",
+    "exit_code": 0,
+    "runs": [
+      {
+        "file": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+        "sha256": "b5c61e5675ad7ace02ca89ed45af6434f53cf358731cfedbc5e222e4a881f1dc",
+        "checks": {
+          "frontmatter_parsed": true,
+          "published": true,
+          "lastmod": true,
+          "audience_fil": true,
+          "internal_author": true,
+          "faq_count_1_to_3": true,
+          "no_bold": true,
+          "no_leading_h1": true,
+          "email_once": true,
+          "image_exists": true,
+          "fictional_image_caption": true
+        },
+        "all_pass": true,
+        "image_sha256": "8c3d5654ac2ce688d46c9baeb28c59c28ee243aeca9663a7ba29c62b636ecf2f"
+      },
+      {
+        "file": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+        "sha256": "0ce2bf7d0cd6a45886d56a5f5be25279f2d7894a83204f55d74b563eb1a51b5e",
+        "checks": {
+          "frontmatter_parsed": true,
+          "published": true,
+          "lastmod": true,
+          "audience_fil": true,
+          "internal_author": true,
+          "faq_count_1_to_3": true,
+          "no_bold": true,
+          "no_leading_h1": true,
+          "email_once": true,
+          "image_exists": true,
+          "fictional_image_caption": true
+        },
+        "all_pass": true,
+        "image_sha256": "4dcf34091e9d67c2cc5ebb7845775e25cdab69ec4b22322947b7e2e81b2c0ca7"
+      }
+    ]
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "reviewer": "/root/expand_final_southwest",
+  "role": "final",
+  "independentOfAuthor": true,
+  "independentOfLocaleReviewers": true,
+  "checkedAt": "2026-10-25T13:30:33.881489+00:00",
+  "overallVerdict": "PASS",
+  "status": "PASS",
+  "article_count": 6,
+  "records": [
+    {
+      "source_path": "src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md",
+      "sha256": "f92e3cabcabac4828d3a0379d9376d150f54eddb4ac209f719088014bda7d969",
+      "reviewedAt": "2026-10-25T13:30:33.881489+00:00",
+      "source_mtime_utc": "2026-10-25T13:26:11.022778+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "locale_report": "work/reviews/hi-locale.json",
+      "locale_report_sha256": "4cefd6a97d1fef15d1877450aaf314790581c30d726d353e8b7fd39495113ae5",
+      "locale_reviewer": "/root/expand_locale_hi",
+      "locale_report_md_sha256": "5112785ad446a643f95d1b74df3547b51c7d584ca2e3cd6c3d5aaa71b03010ae",
+      "image_path": "public/images/columns/928-market-expansion-20261025.webp",
+      "image_sha256": "8bf34a1678089f7017eeb6bb9a959a9834b04a9ee838d91ae245c6da10c39531",
+      "image_actually_viewed": true,
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md --lang hi",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md [hi] sentences=34 mean=17.6 cv=0.509 short=0.206 run3=0.031 opener_rep=0.167 cite_end=0.0 cite_para=0.583 contrast=0 caveat=0 q=1\n  WARN 59% of sentences end in 'है' — vary endings within the register\n",
+      "variety_stderr": "",
+      "variety_evidence": "work/reviews/southwest-final-evidence/caption-normalization-recheck.json",
+      "variety_scope": "original shared checker",
+      "full_manuscript_read": true,
+      "repaired_passages_and_affected_conclusions_read": true,
+      "section5_manual_review": "PASS",
+      "opening_deletion_review": "PASS; see southwest-final.md",
+      "legal_claim_checks": [
+        "Company Act 245: 股份有限公司; at least 1% of issued shares held continuously for six months; reasons, evidence and necessity; limited necessary scope; court appointment is not automatic.",
+        "Company Act 210: board, corporate articles, minutes/financial statements, company location and securities-authority exception; interest/scope for request. Article 109 nonexecuting-member supervision is a different company-form route."
+      ],
+      "official_sources": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=2",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=109",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=210",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=245",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0080001"
+      ],
+      "limitations": [
+        "Hindi original checker emits a nonblocking 59% है-ending warning; full prose and independent Hindi review support natural declarative register."
+      ],
+      "caption_only_reapproval": {
+        "old_sha256": "9bc016634e9ba1e326e5412f781a41bd6eba910d3c7ca91eb08786768ea70f21",
+        "new_sha256": "f92e3cabcabac4828d3a0379d9376d150f54eddb4ac209f719088014bda7d969",
+        "only_caption_changed": true,
+        "body_alt_faq_images_unchanged": true,
+        "current_caption": "featured_image_caption: \"काल्पनिक दृश्य\"",
+        "evidence": "work/reviews/southwest-final-evidence/caption-normalization-recheck.json"
+      }
+    },
+    {
+      "source_path": "src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md",
+      "sha256": "4733e8474fbca987ac77441c0f2a6ac0348a050ea713a51840ecbb5f940c9c8a",
+      "reviewedAt": "2026-10-25T13:30:33.881489+00:00",
+      "source_mtime_utc": "2026-10-25T13:26:11.023412+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "locale_report": "work/reviews/hi-locale.json",
+      "locale_report_sha256": "4cefd6a97d1fef15d1877450aaf314790581c30d726d353e8b7fd39495113ae5",
+      "locale_reviewer": "/root/expand_locale_hi",
+      "locale_report_md_sha256": "5112785ad446a643f95d1b74df3547b51c7d584ca2e3cd6c3d5aaa71b03010ae",
+      "image_path": "public/images/columns/929-market-expansion-20261025.webp",
+      "image_sha256": "8fecca91b72f0c95f2a679cdf58f3aff4097a141ba4276083194f76342d1c3f7",
+      "image_actually_viewed": true,
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md --lang hi",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md [hi] sentences=49 mean=18.2 cv=0.49 short=0.122 run3=0.021 opener_rep=0.125 cite_end=0.0 cite_para=0.625 contrast=1 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "variety_stderr": "",
+      "variety_evidence": "work/reviews/southwest-final-evidence/caption-normalization-recheck.json",
+      "variety_scope": "original shared checker",
+      "full_manuscript_read": true,
+      "repaired_passages_and_affected_conclusions_read": true,
+      "section5_manual_review": "PASS",
+      "opening_deletion_review": "PASS; see southwest-final.md",
+      "legal_claim_checks": [
+        "Actual India agreement Article 12, not 12A; no make-available test; conditional 10% gross ceiling; residence and beneficial ownership.",
+        "Mixed-income classification, royalties/managerial/technical/consultancy income, Articles 14/15 exclusions, source, PE/fixed-base effective connection, related-party excess, Article 28 and Protocol paragraph 1 preserved.",
+        "Actual current Rules 20/25/44; recipient proof, payer reporting, technical-service contract including Chinese translation and fee calculation; current official in-force network and downloaded treaty inspected."
+      ],
+      "official_sources": [
+        "https://www.mof.gov.tw/eng/download/10458",
+        "https://www.mof.gov.tw/eng/singlehtml/264?cntId=82780",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=G0340125"
+      ],
+      "limitations": [
+        "Web octet-stream and ordinary DNS retrieval failed; final reviewer independently retrieved the official treaty and current network HTML with normal TLS and explicit hostname resolution. PDF and failed attempts preserved.",
+        "Rule 25 single endpoint unavailable; actual official full Rules 20/25/44 independently opened and read."
+      ],
+      "caption_only_reapproval": {
+        "old_sha256": "9047bb9835688d004c31420212f78182ae28eade1503902ebc67b47992d06d4d",
+        "new_sha256": "4733e8474fbca987ac77441c0f2a6ac0348a050ea713a51840ecbb5f940c9c8a",
+        "only_caption_changed": true,
+        "body_alt_faq_images_unchanged": true,
+        "current_caption": "featured_image_caption: \"काल्पनिक दृश्य\"",
+        "evidence": "work/reviews/southwest-final-evidence/caption-normalization-recheck.json"
+      }
+    },
+    {
+      "source_path": "src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md",
+      "sha256": "91a77cfc009bd425c4c1244832494e272284441bf06f0bfae013583ff8b328ce",
+      "reviewedAt": "2026-10-25T13:30:33.881489+00:00",
+      "source_mtime_utc": "2026-10-25T13:26:11.023760+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "locale_report": "work/reviews/ar-locale.json",
+      "locale_report_sha256": "84cc4f429f5f00a25a3c5cbaab7d612d892bc3a0300a98a74d153fab15b9dc4f",
+      "locale_reviewer": "/root/expand_locale_ar",
+      "locale_report_md_sha256": "d23973da100fab107526d51ebb8b234e841a236548ead76ba25117dd41d3a891",
+      "image_path": "public/images/columns/930-market-expansion-20261025.webp",
+      "image_sha256": "a247a8544127f0eaf7a5bf0523191650463f909c31cc82276b396c50c113cb37",
+      "image_actually_viewed": true,
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md --lang ar",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md [ar] sentences=41 mean=15.9 cv=0.458 short=0.195 run3=0.051 opener_rep=0.071 cite_end=0.0 cite_para=0.286 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "variety_stderr": "",
+      "variety_evidence": "work/reviews/southwest-final-evidence/caption-normalization-recheck.json",
+      "variety_scope": "original shared checker",
+      "full_manuscript_read": true,
+      "repaired_passages_and_affected_conclusions_read": true,
+      "section5_manual_review": "PASS",
+      "opening_deletion_review": "PASS; see southwest-final.md",
+      "legal_claim_checks": [
+        "Taiwan-governed sale conditional on applicable law; conflicts Article 20; carrier rights and UAE law separate.",
+        "Civil Code 225/230/227-2: nonattributable impossibility, delay and hardship with court adjustment; extra freight alone is not automatic discharge or unilateral price authority.",
+        "Supreme Court 113台上496 (2024-05-09) actual full official capture: construction electrical-material contract; foreseeable-risk allocation; exceptional change; vacated/remanded, no final supplier award and no invented shipping holding."
+      ],
+      "official_sources": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=225",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=230",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=227-2",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007",
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSV%2C113%2C%E5%8F%B0%E4%B8%8A%2C496%2C20240509%2C1"
+      ],
+      "limitations": [
+        "Final reviewer direct court-page requests timed out; complete actual official response independently read at work/reviews/ar-author-opened-sources-2.json results.ar-930-case-full lines 0–64. No claim of fresh successful reviewer fetch or later remand outcome."
+      ],
+      "caption_only_reapproval": {
+        "old_sha256": "d478a7ac41c46ab5d9861f6d9544d3276d4334ad8f4c395bd65aa55aeedcd9a6",
+        "new_sha256": "91a77cfc009bd425c4c1244832494e272284441bf06f0bfae013583ff8b328ce",
+        "only_caption_changed": true,
+        "body_alt_faq_images_unchanged": true,
+        "current_caption": "featured_image_caption: \"مشهد متخيَّل\"",
+        "evidence": "work/reviews/southwest-final-evidence/caption-normalization-recheck.json"
+      }
+    },
+    {
+      "source_path": "src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+      "sha256": "24332b5c2d46a686ed3f4635bd16d418631d2cd6d1403d0c4d7ac82b355fa431",
+      "reviewedAt": "2026-10-25T13:30:33.881489+00:00",
+      "source_mtime_utc": "2026-10-25T13:26:11.024201+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "locale_report": "work/reviews/ar-locale.json",
+      "locale_report_sha256": "84cc4f429f5f00a25a3c5cbaab7d612d892bc3a0300a98a74d153fab15b9dc4f",
+      "locale_reviewer": "/root/expand_locale_ar",
+      "locale_report_md_sha256": "d23973da100fab107526d51ebb8b234e841a236548ead76ba25117dd41d3a891",
+      "image_path": "public/images/columns/931-market-expansion-20261025.webp",
+      "image_sha256": "42285608197d77c9cb1b0c165705951a0750690711939f977b965ce51224bbaf",
+      "image_actually_viewed": true,
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md --lang ar",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md [ar] sentences=38 mean=16.9 cv=0.484 short=0.105 run3=0.083 opener_rep=0.0 cite_end=0.0 cite_para=0.214 contrast=0 caveat=1 q=3\n  OK — no variety limit violated\n",
+      "variety_stderr": "",
+      "variety_evidence": "work/reviews/southwest-final-evidence/caption-normalization-recheck.json",
+      "variety_scope": "original shared checker",
+      "full_manuscript_read": true,
+      "repaired_passages_and_affected_conclusions_read": true,
+      "section5_manual_review": "PASS",
+      "opening_deletion_review": "PASS; see southwest-final.md",
+      "legal_claim_checks": [
+        "Fair Trade Act 19 legitimate-justification exception and Enforcement Rules 25 factors/evidence burden; new market entry is not automatic exemption.",
+        "FTC actual FAQs and guidance support B2B resale reach, suggested prices, discount freedom and supply sanctions; own wholesale price and agency/consignment arrangements distinguished.",
+        "Article 40 initial NT$100,000–50,000,000 fine discretionary; guidance not statute; no Saudi-law opinion. Supported topic company repaired and rebound."
+      ],
+      "official_sources": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0150002&flno=19",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0150002&flno=40",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0150006&flno=25",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0150002",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0150006",
+        "https://www.ftc.gov.tw/internet/english/doc/docDetail.aspx?uid=1444&docid=14455",
+        "https://www.ftc.gov.tw/internet/english/doc/docDetail.aspx?uid=1444&docid=14457",
+        "https://www.ftc.gov.tw/internet/english/doc/docDetail.aspx?uid=1444&docid=14458",
+        "https://www.ftc.gov.tw/internet/english/doc/docDetail.aspx?uid=1444&docid=14459",
+        "https://www.ftc.gov.tw/internet/english/doc/docDetail.aspx?uid=1184&docid=12669"
+      ],
+      "limitations": [],
+      "caption_only_reapproval": {
+        "old_sha256": "9561312bd3d24413e8d944f44affcac75c6d0d45535084add523df989acde551",
+        "new_sha256": "24332b5c2d46a686ed3f4635bd16d418631d2cd6d1403d0c4d7ac82b355fa431",
+        "only_caption_changed": true,
+        "body_alt_faq_images_unchanged": true,
+        "current_caption": "featured_image_caption: \"مشهد متخيَّل\"",
+        "evidence": "work/reviews/southwest-final-evidence/caption-normalization-recheck.json"
+      }
+    },
+    {
+      "source_path": "src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+      "sha256": "514c395c3212ea39504ab710d7b3130ad5bd0e996169b0c5cab212ea1752b3c5",
+      "reviewedAt": "2026-10-25T13:30:33.881489+00:00",
+      "source_mtime_utc": "2026-10-25T13:26:11.024641+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "locale_report": "work/reviews/he-locale.json",
+      "locale_report_sha256": "6a1b6be95e7472addf9f09f720837c577eb626b465b840fb66d7f188b2c34913",
+      "locale_reviewer": "/root/expand_locale_he",
+      "locale_report_md_sha256": "42c538f28c33c7607c02adb4974a22e0368e8a88045a0b8c68b185c453898f58",
+      "image_path": "public/images/columns/932-market-expansion-20261025.webp",
+      "image_sha256": "4037e0df9cfb08b660ca766fb21ae57558975f6ce7bb8ae19d63124fd7957822",
+      "image_actually_viewed": true,
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md --lang he",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md [he] sentences=37 mean=14.4 cv=0.465 short=0.189 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "variety_stderr": "OFFICIAL CHECKER: he unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n",
+      "variety_evidence": "work/reviews/southwest-final-evidence/caption-normalization-recheck.json",
+      "variety_scope": "independently approved task-local Hebrew extension; original unsupported",
+      "full_manuscript_read": true,
+      "repaired_passages_and_affected_conclusions_read": true,
+      "section5_manual_review": "PASS",
+      "opening_deletion_review": "PASS; see southwest-final.md",
+      "legal_claim_checks": [
+        "Actual TIPO–ILPO operative procedure and announcements: start 2026-01-02; same earliest date; at least one allowable Israeli claim; all Taiwanese claims correspond; supported narrowing and no new category.",
+        "Receipt of notice that substantive examination will begin AND no first examination report; table/amendment/documents/translation requirements. No automatic grant or PCT national phase.",
+        "Patent Act 11 nonresident agent and qualifications subject to exceptions; CTA does not claim patent-filing service or appointment."
+      ],
+      "official_sources": [
+        "https://www.tipo.gov.tw/wSite/public/Attachment/007/f1766476724604.pdf",
+        "https://www.tipo.gov.tw/tw/tipo1/799-68911.html",
+        "https://www.tipo.gov.tw/en/tipo2/324-76334.html",
+        "https://www.tipo.gov.tw/tw/patents/469.html",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070007"
+      ],
+      "limitations": [
+        "Original shared Hebrew checker unsupported exit 2; task-local independently approved extension measured exit 0. Not installed globally.",
+        "PDF actual text pages read; screenshot tool returned references only, not visual PDF pages."
+      ],
+      "caption_only_reapproval": {
+        "old_sha256": "9115389453a135cf8b3b8f010f3bd996afbc0ee81bf6e92b43455033c617496f",
+        "new_sha256": "514c395c3212ea39504ab710d7b3130ad5bd0e996169b0c5cab212ea1752b3c5",
+        "only_caption_changed": true,
+        "body_alt_faq_images_unchanged": true,
+        "current_caption": "featured_image_caption: \"סצנה בדיונית\"",
+        "evidence": "work/reviews/southwest-final-evidence/caption-normalization-recheck.json"
+      },
+      "original_variety_exit_code": 2,
+      "original_variety_result": "unsupported; not PASS",
+      "original_variety_evidence": "work/reviews/southwest-final-evidence/variety-original-preflight.json",
+      "method_approval": "work/variety-review/review-final.json",
+      "method_approval_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+      "method_wrapper_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+      "extracted_sentences_actually_read": true,
+      "extracted_sentence_count": 37
+    },
+    {
+      "source_path": "src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+      "sha256": "95da9c181636d91a8a2da1e7e237f29d08c77c159740301e9c87b0804139a898",
+      "reviewedAt": "2026-10-25T13:30:33.881489+00:00",
+      "source_mtime_utc": "2026-10-25T13:26:11.024998+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "locale_report": "work/reviews/he-locale.json",
+      "locale_report_sha256": "6a1b6be95e7472addf9f09f720837c577eb626b465b840fb66d7f188b2c34913",
+      "locale_reviewer": "/root/expand_locale_he",
+      "locale_report_md_sha256": "42c538f28c33c7607c02adb4974a22e0368e8a88045a0b8c68b185c453898f58",
+      "image_path": "public/images/columns/933-market-expansion-20261025.webp",
+      "image_sha256": "e6048d77af3cded5a54553e88c92d2a0f9e9425f5f25f15d4e5db981b7163820",
+      "image_actually_viewed": true,
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md --lang he",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md [he] sentences=43 mean=13.7 cv=0.481 short=0.256 run3=0.024 opener_rep=0.071 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "variety_stderr": "OFFICIAL CHECKER: he unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n",
+      "variety_evidence": "work/reviews/southwest-final-evidence/caption-normalization-recheck.json",
+      "variety_scope": "independently approved task-local Hebrew extension; original unsupported",
+      "full_manuscript_read": true,
+      "repaired_passages_and_affected_conclusions_read": true,
+      "section5_manual_review": "PASS",
+      "opening_deletion_review": "PASS; see southwest-final.md",
+      "legal_claim_checks": [
+        "Granted Taiwan invention patent; Article 64 own exploitation versus other-person licence with all owners consent, including nonexclusive licensing.",
+        "Articles 62/63 exclusivity within scope, sublicensing and recordation against third parties; no universal interparty invalidity claim.",
+        "Article 65 exact statutory text read in current official TIPO commentary: other owners consent to transfer/trust/pledge of share; abandonment accrues to other owners.",
+        "TIPO actual coownership FAQ and 1999 interpretation: separate company versus individual coowner; no blanket outsourcing rule or new-law date confusion."
+      ],
+      "official_sources": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=62",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=63",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=64",
+        "https://www.tipo.gov.tw/wSite/public/Attachment/007/f1758780077716.pdf",
+        "https://www.tipo.gov.tw/tw/patents/546-6714.html",
+        "https://www.tipo.gov.tw/tw/patents/989-23371.html",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070007"
+      ],
+      "limitations": [
+        "Patent Act 65 single endpoint unavailable; actual statutory text independently read in official TIPO commentary pages 237–238 and current Patent Act history checked.",
+        "Original shared Hebrew checker unsupported exit 2; task-local independently approved extension measured exit 0. Not installed globally."
+      ],
+      "caption_only_reapproval": {
+        "old_sha256": "c1edcaaa8978b6198116c522ad6edd879a9961a0f7c9f29af53a67c592f49e88",
+        "new_sha256": "95da9c181636d91a8a2da1e7e237f29d08c77c159740301e9c87b0804139a898",
+        "only_caption_changed": true,
+        "body_alt_faq_images_unchanged": true,
+        "current_caption": "featured_image_caption: \"סצנה בדיונית\"",
+        "evidence": "work/reviews/southwest-final-evidence/caption-normalization-recheck.json"
+      },
+      "original_variety_exit_code": 2,
+      "original_variety_result": "unsupported; not PASS",
+      "original_variety_evidence": "work/reviews/southwest-final-evidence/variety-original-preflight.json",
+      "method_approval": "work/variety-review/review-final.json",
+      "method_approval_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+      "method_wrapper_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+      "extracted_sentences_actually_read": true,
+      "extracted_sentence_count": 43
+    }
+  ],
+  "resolved_findings": [
+    {
+      "id": "SW-F1",
+      "source_path": "src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+      "line": 10,
+      "exact_sentence": "topic: \"business\"",
+      "reason": "business is absent from actual COLUMN_TOPICS and falls back to other.",
+      "source": "repo/src/lib/column-topics.ts:13",
+      "proposed_rewrite": "topic: \"company\"",
+      "legalMeaningPreserved": true,
+      "substantiveConclusionChanged": false,
+      "status": "RESOLVED by author; current diff and renewed locale PASS checked",
+      "targeted_repair_round": 1
+    }
+  ],
+  "blocking_findings": [],
+  "optional_style_observations": [
+    "928 original CLI है-ending warning is nonblocking; no legal condition deleted or filler inserted to improve a score."
+  ],
+  "repair_rounds": {
+    "final_requested_targeted_rounds": 1,
+    "unsuccessful_final_rounds": 0,
+    "root_caption_integration_recheck": 1,
+    "locale_repairs": "Bound locale reports preserve their own successful repair history."
+  },
+  "independence": {
+    "manuscripts_authored": false,
+    "manuscripts_edited": false,
+    "images_edited": false,
+    "human_or_licensed_review_claim": false,
+    "writes": "work/reviews/southwest-final.md/json and southwest-final-evidence only"
+  },
+  "firm_verification": {
+    "sources": [
+      "https://tseng-law.com/en/services",
+      "https://tseng-law.com/en/about",
+      "repo/src/data/en-service-scope.ts",
+      "repo/src/data/international-inquiry-copy.ts"
+    ],
+    "email": "wei@hoveringlaw.com.tw",
+    "consultation_languages": [
+      "English",
+      "Chinese",
+      "Japanese",
+      "Korean"
+    ],
+    "no_foreign_licensure_or_unverified_patent_prosecution_claim": true
+  },
+  "comparisons": {
+    "recent_same_locale": "Final reviewer compared actual openings/headings/closings for HI704–706, AR704–706, HE858–860, all 2026-10-24; independent locale reviewers read the three complete same-locale files.",
+    "cross_batch": "All 24 new titles/headings compared; adjacent Czech943 and Lithuanian944 full manuscripts read for patent/technology overlap. These are distinct reader decisions.",
+    "first_two_paragraph_deletion": "Each assigned article checked; concrete retained information and resolved removal recorded in MD.",
+    "entire_site_corpus_reviewed": false
+  },
+  "method_approval": {
+    "path": "work/variety-review/review-final.json",
+    "sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+    "all_approved_file_hashes_verified": true
+  },
+  "evidence": {
+    "work/reviews/southwest-final-evidence/web-opened-sources.json": "e7f4f714f4f1d11acd5cbaa7a47a7bcbdc132ac050d825d6d860018a98a19fad",
+    "work/reviews/southwest-final-evidence/web-opened-sources-final.json": "1129a7c74ef3ec6d0b9491522865f4bc44a8593bddda679bb763b5640050127e",
+    "work/reviews/southwest-final-evidence/direct-fetch.json": "6f880ae4a14ccab4fc3ff193ca502f826d47bead7976ad56fb95fc2c69522b51",
+    "work/reviews/southwest-final-evidence/mof-direct-success.json": "5fc8664463798e13c9c6f75323644b88cf2c7bc2607ff6e741faa85f55bd205b",
+    "work/reviews/southwest-final-evidence/india-treaty.pdf": "d4b811c8f1deebe2d8bcd6fb445e9f8d41bfa687fbbcf0f8d12e5ec5c482309d",
+    "work/reviews/southwest-final-evidence/india-treaty.txt": "de052ddbd1ccf279751c8e457da9707623965385bb901081366bdf4c55868d97",
+    "work/reviews/southwest-final-evidence/india-treaty-network.html": "d302aa91bcbf5974187c33cb979d8a84a8e9d511e3519952f883e0cebb78d889",
+    "work/reviews/southwest-final-evidence/variety-original-preflight.json": "3b97a28c6708b35bf2113c7868f5e1c17835727111310fdc22883a1bbe772722",
+    "work/reviews/southwest-final-evidence/variety-final-five.json": "ea5f13c80fc17c68fce951948b0b9c535e6ce38bbceb1f0e83917ec5014fd703",
+    "work/reviews/southwest-final-evidence/variety-final-931.json": "5aa17808c06c918fb3eecbe7f6e14ad2dab3476bfcc6f7079b979cecf45a2861",
+    "work/reviews/southwest-final-evidence/he-final-extracted-sentences.json": "81d046bef5ba4e13865ac095cc57f9faf4748387e0d849e0d39199f5173e74bf",
+    "work/reviews/southwest-final-evidence/comparator-excerpts.json": "2233faf9684906191b57161bbc8d4db0fce7ebcb9593020169dbae0cd0e778a7",
+    "work/reviews/southwest-final-evidence/batch-title-heading-comparison.json": "87d7dbbf3937da9426d06d514958af0461955663a79daf1bb8d4be6ed9afddec",
+    "work/reviews/southwest-final-evidence/caption-normalization-recheck.json": "cc2ca3208e71e7cde999f975f5b15639181ef01ef6920e26554fee758ceff571",
+    "work/reviews/southwest-final-evidence/final-bindings-before-caption.json": "585862aa7a195ecce7f17536b6a490cc75fe301a9aa7d43642cb5cf3476c2aba",
+    "work/reviews/southwest-final-evidence/final-bindings-and-sources.json": "16a5e5c3fba7acfbe33b532a2fc87ba30eeaa0124e100e2ac0277ed6843c2b02"
+  },
+  "readable_report": "work/reviews/southwest-final.md",
+  "readable_report_sha256": "8575eea19fe373e47d09201ef1903f427426cdfe901da7b31df1d54e6b7a612d",
+  "limitations": [
+    "AI editorial/evidence review only; no human lawyer/native-speaker certification or guarantee of legal accuracy.",
+    "MOF unsupported web/DNS path resolved by independent official TLS download; court direct network timeout handled by reading full captured official response; Patent65 single URL unavailable but official commentary reproduces exact statute. Full limits in MD.",
+    "HI/AR/HE contact page fetches unavailable; current live English firm material and repository scope/language data support the limited CTAs.",
+    "Original Hebrew checker remains unsupported exit2; only independently approved task-local extension measured PASS.",
+    "PDF screenshot responses contained no image pixels; claim is text-page review. Six article image files actually viewed.",
+    "Available current official law/history/commencement records checked 2026-10-25; no promise of future legal accuracy or exhaustive later amendment coverage.",
+    "No browser RTL/visual/hydration/interaction QA, deployment, public readback or market conversion measurement by this reviewer.",
+    "PASS binds only these exact current source/image/locale hashes and grants no publication authority."
+  ]
+}

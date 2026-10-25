@@ -1,0 +1,54 @@
+--- r0/936-french-cosmetics-taiwan-pif-importer-handover.md
++++ current/936-french-cosmetics-taiwan-pif-importer-handover.md
+@@ -13,7 +13,7 @@
+ author: "legal-ai-assistant"
+ featured_image: "/images/columns/936-market-expansion-20261025.webp"
+ featured_image_alt: "Trois contenants de cosmétiques sans marque, des classeurs ouverts et un support de stockage sur une table."
+-featured_image_caption: "Scène fictive de préparation d’une passation documentaire."
++featured_image_caption: "Scène fictive"
+ faq:
+   - q: "Le nouvel importateur peut-il utiliser le numéro d’enregistrement de son prédécesseur ?"
+     a: "La TFDA précise que chaque importateur responsable doit enregistrer le produit, même si un autre opérateur a déjà enregistré le même cosmétique. Le changement d’entreprise ne doit donc pas être traité comme une simple modification du nom ou de l’adresse de l’opérateur existant."
+@@ -23,13 +23,13 @@
+     a: "La TFDA prévoit qu’en présence de secrets commerciaux, les données puissent rester dans le système du fabricant ou dans un espace distant. L’importateur doit toutefois pouvoir les fournir ou permettre leur consultation lors du contrôle de l’autorité. L’accord de passation doit rendre cet accès effectif."
+ ---
+ 
+-Chaque nouvel importateur taïwanais d’une marque française doit enregistrer les cosmétiques qu’il importe, même si son prédécesseur avait déjà enregistré les mêmes références. La [FAQ de la TFDA du 7 août 2026, page 30](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639219591977347651&type=4), rattache cette démarche à chaque opérateur responsable. Le numéro de l’ancien partenaire ne suffit pas.
++Chaque nouvel importateur taïwanais d’une marque française doit enregistrer les cosmétiques qu’il importe, même si son prédécesseur avait déjà enregistré les mêmes références. La [FAQ de la TFDA du 7 août 2026, page 30](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639219591977347651&type=4) rattache cette démarche à chaque opérateur responsable.
+ 
+ Les essais déjà réalisés peuvent néanmoins être réutilisés. Dans sa [FAQ sur le PIF, page 28](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639179794512621908&iid=13384&type=3), la TFDA admet que deux entreprises conviennent de partager certaines données, à condition qu’elles soient exactes, complètes, traçables et adaptées au produit réel. Pour la marque, la négociation porte donc aussi sur le droit d’utiliser les rapports et sur leur remise effective au nouvel opérateur.
+ 
+ ## Ce que l’accord de passation doit permettre de retrouver
+ 
+-Composition, qualité et sécurité du cosmétique sont documentées dans le PIF, le dossier d’information du produit. Selon l’[article 3 du règlement applicable](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030098), il contient les informations sur l’importateur, la preuve d’enregistrement, les éléments techniques et l’évaluation de sécurité signée. Les données modifiées doivent être actualisées. Un dossier français doit aussi être accompagné des traductions chinoises ou anglaises nécessaires.
++Composition, qualité et sécurité du cosmétique sont documentées dans le PIF, le dossier d’information du produit. Selon l’[article 3 du règlement applicable](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030098), il contient les informations sur l’importateur, la preuve d’enregistrement, les éléments techniques et l’évaluation de sécurité signée. Les données modifiées doivent être actualisées. Les pièces en français doivent être traduites. Le chinois et l’anglais sont admis.
+ 
+ Avant de fixer la première livraison du nouveau partenaire, la marque peut lui faire vérifier un dossier complet pour chaque référence reprise. Le bordereau de remise devrait identifier la version de la formule, les rapports utilisables et les photographies du conditionnement taïwanais, en distinguant les pièces déjà reçues de celles qui restent à obtenir. Une liste de fichiers sans accès aux pièces ne permet pas cette vérification.
+ 
+@@ -39,7 +39,7 @@
+ 
+ ## Des secrets de formulation accessibles lors d’un contrôle
+ 
+-Le fabricant français peut souhaiter conserver la formule détaillée dans son propre système. La [FAQ PIF, page 25](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639179794512621908&iid=13384&type=3), prévoit cette organisation, y compris un stockage distant, lorsque les données relèvent de secrets commerciaux. L’importateur doit être en mesure de les fournir ou d’en permettre la consultation à l’autorité lors d’un contrôle.
++Le fabricant français peut souhaiter conserver la formule détaillée dans son propre système. La [FAQ PIF, page 25](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639179794512621908&iid=13384&type=3) prévoit cette organisation, y compris un stockage distant, lorsque les données relèvent de secrets commerciaux. L’importateur doit être en mesure de les fournir ou d’en permettre la consultation à l’autorité lors d’un contrôle.
+ 
+ Dans ce cas, la passation peut prévoir une personne habilitée à ouvrir les documents, un accès de secours et la conservation des versions antérieures. La clause de confidentialité doit permettre cette communication réglementaire. Un essai d’accès avec le nouvel opérateur, sans divulgation au-delà des personnes autorisées, permet de repérer un compte fermé ou un fichier illisible avant le départ de l’ancien partenaire.
+ 
+@@ -55,7 +55,7 @@
+ 
+ La version conservée du PIF doit suivre les changements effectifs du produit et de ses informations. Un nouveau conditionnement, une formule révisée ou une information de sécurité reçue après la passation peut imposer une mise à jour au titre de l’article 3. L’accord peut désigner qui transmettra ces informations à l’ancien et au nouvel importateur, avec un interlocuteur de remplacement si la collaboration prend fin.
+ 
+-## Le calendrier PIF est déjà déployé
++## La dernière étape du calendrier PIF est entrée en vigueur
+ 
+ L’[avis officiel de la TFDA](https://www.fda.gov.tw/tc/newsContent.aspx?cid=3&id=30614) a prévu trois étapes. Depuis le 1er juillet 2024, les produits correspondant aux usages et critères de composition de sa première catégorie sont concernés, notamment certains produits solaires, de coloration ou de permanente, antitranspirants et produits de blanchiment dentaire à domicile. Depuis le 1er juillet 2025, l’obligation couvre les produits pour bébés, lèvres et yeux, ainsi que les dentifrices et bains de bouche non médicamenteux.
+ 
+@@ -63,7 +63,7 @@
+ 
+ Pour soumettre une difficulté de remise des documents en droit taïwanais, un premier résumé non confidentiel peut être envoyé à [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), sans joindre la formule. Les consultations ont lieu en anglais, chinois, coréen ou japonais ; le mode de communication doit être confirmé si aucune de ces langues ne convient, et la réception du message ne vaut pas acceptation d’un mandat.
+ 
+-Au moment de signer la passation, le bordereau devrait permettre de retrouver la version du dossier, son détenteur et l’accès convenu pour chacun des produits repris.
++Lors de la signature de l’accord de passation, le bordereau devrait permettre de retrouver la version du dossier, son détenteur et l’accès convenu pour chacun des produits repris.
+ 
+ ## Sources et portée
+ 

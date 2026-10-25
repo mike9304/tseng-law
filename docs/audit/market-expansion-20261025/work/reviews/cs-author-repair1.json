@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-25",
+  "trigger": "Independent Czech locale reviewer targeted findings 1-8",
+  "records": [
+    {
+      "id": 942,
+      "file": "repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+      "beforeSha256": "ca6314914222ee103f7d88f471066c605c71c1f8a6b1f4f1c2fc214df3e8f30c",
+      "afterSha256": "bec0b9df6b63b0f17f5f9bc2ffac6b2ef23e2b8693475936eaca05ff1cfaa2a3",
+      "changes": [
+        {
+          "from": "Domněnka osobního podpisu podle článku 6 zákona o elektronických podpisech vyžaduje digitální podpis",
+          "to": "Domněnka, že dokument podepsala přímo daná osoba, podle článku 6 zákona o elektronických podpisech vyžaduje digitální podpis"
+        },
+        {
+          "from": "U přeshraničního obchodu je ovšem třeba určit rozhodné právo. ",
+          "to": ""
+        },
+        {
+          "from": "umožňuje nahradit zákonem požadovanou písemnost elektronickým dokumentem",
+          "to": "umožňuje splnit zákonný požadavek písemné formy elektronickým dokumentem"
+        },
+        {
+          "from": "Zvláštní domněnku osobního podpisu upravuje",
+          "to": "Zvláštní domněnku, že dokument podepsala přímo daná osoba, upravuje"
+        },
+        {
+          "from": "stačí necitlivé shrnutí, označení protistrany, sporná verze objednávky a nejbližší termín",
+          "to": "stačí shrnutí bez důvěrných údajů, označení protistrany, označení sporné verze objednávky a nejbližší termín"
+        }
+      ]
+    },
+    {
+      "id": 943,
+      "file": "repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+      "beforeSha256": "e6395948c90d21c0682a6197b72508560d47e669f63b962c84fd3e2d9a869c2f",
+      "afterSha256": "2c09cb482f2efe0b4d4f63d570b2ebed210bdfdd3708d2dfd9de95f5efa858c8",
+      "changes": [
+        {
+          "from": "stejné obchodní jméno prototypu",
+          "to": "stejné označení prototypu"
+        },
+        {
+          "from": "nebo už leží za platným prioritním dnem",
+          "to": "nebo nastalo až po platném prioritním dni"
+        },
+        {
+          "from": "Zveřejnění si tedy nerezervuje pořadí.",
+          "to": "Samotné zveřejnění dřívější pořadí nezajistí."
+        },
+        {
+          "from": "jen necitlivý popis technologie",
+          "to": "jen popis technologie bez důvěrných údajů"
+        }
+      ]
+    }
+  ]
+}

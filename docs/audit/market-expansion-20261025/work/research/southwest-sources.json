@@ -1,0 +1,791 @@
+{
+  "researchDate": "2026-10-25",
+  "mode": "research_only",
+  "selectedLocales": [
+    "hi",
+    "ar",
+    "he"
+  ],
+  "screenedLocales": [
+    "hi",
+    "ta",
+    "bn",
+    "ur",
+    "ne",
+    "ar",
+    "fa",
+    "he",
+    "tr",
+    "mn"
+  ],
+  "sourceRole": "AI research role; no licensure or native-speaker claim",
+  "scope": {
+    "owned": "work/research/southwest-*",
+    "repositoryMutations": false,
+    "authoredColumns": false,
+    "published": false
+  },
+  "inventory": {
+    "path": "current-column-inventory.json",
+    "totalFiles": 1992,
+    "ids801to921": 121,
+    "ownedLocaleBaselineTotal": 220,
+    "counts": {
+      "hi": 26,
+      "ar": 26,
+      "ta": 21,
+      "bn": 21,
+      "ur": 21,
+      "ne": 21,
+      "fa": 21,
+      "he": 21,
+      "tr": 21,
+      "mn": 21
+    },
+    "comparison": "Alllocaleandglobaltitles; relevantbodycomparisons includeAR699,HE858,JA712; detailedtopiccomparison inbriefs. Authors independentlyreadrecent3."
+  },
+  "firm": {
+    "verifiedUrls": [
+      "https://tseng-law.com/en/services",
+      "https://tseng-law.com/en/about",
+      "https://tseng-law.com/en/contact"
+    ],
+    "verifiedLocalFiles": [
+      "src/data/en-service-scope.ts",
+      "src/lib/consultation/public-contact.ts",
+      "src/data/contact-page-content.ts"
+    ],
+    "email": "wei@hoveringlaw.com.tw",
+    "consultLanguages": [
+      "Chinese",
+      "English",
+      "Korean",
+      "Japanese"
+    ],
+    "unverified": [
+      "Hindi/Arabic/Hebrewprofessionalconsultation",
+      "foreignlawlicences",
+      "foreignoffices",
+      "patentprosecution/PPHfilingcredentialsorresults"
+    ],
+    "cta": "NonconfidentialTaiwanconnection/counterpart/deadline summary; confirmcommunicationandengagementscope."
+  },
+  "sources": [
+    {
+      "id": "M-IN-INDUSTRY",
+      "type": "official_market_release",
+      "jurisdiction": "Taiwan / India",
+      "url": "https://www.ida.gov.tw/ctlr?PRO=news.NewsView&id=43246&type=Insights",
+      "published": "2026-06-18",
+      "status": "opened current full article",
+      "supports": [
+        "2026-06-17 eighth Taiwan–India industry working group addressed5G/satellite,pharma,CNC,smart cities andAI",
+        "2025 bilateral tradeUS$12.51bn, approximately18% growth"
+      ],
+      "limits": "Trade and meeting evidence are not Hindi readership or legal-client measurements.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "M-IN-FISCAL",
+      "type": "official_market_release",
+      "jurisdiction": "Taiwan / India",
+      "url": "https://www.mof.gov.tw/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=11e56ad041f74cf6a3b556cd04f1a73f",
+      "published": "2026-08-28",
+      "effective": "2026-08-28 (MoU only)",
+      "status": "opened",
+      "supports": [
+        "public-finance cooperation MoU signed/effective2026-08-28",
+        "2011-07-12 tax/customs agreements described as existing foundation"
+      ],
+      "limits": "The MoU does not itself amend treaty tax rates.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "M-TA-REPRINT",
+      "type": "reproduced_primary_statement_on_press_release_platform",
+      "jurisdiction": "Taiwan / India Tamil Nadu",
+      "url": "https://www.cna.com.tw/postwrite/chi/439932",
+      "published": "2026-07-27",
+      "status": "opened",
+      "supports": [
+        "named Chennai representative discusses Tamil Nadu manufacturing and university/technology cooperation"
+      ],
+      "limits": "CNA message platform is not independent CNA reporting; issuer identity is not independently established by this extraction. Use official India industry source as main country-level evidence; do not quote unverified population/client figures.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "M-BN",
+      "type": "official_trade_profile",
+      "jurisdiction": "Taiwan / Bangladesh",
+      "url": "https://www.trade.gov.tw/Pages/Detail.aspx?nodeID=45&pid=725495",
+      "published": "2026-09-24",
+      "status": "opened",
+      "supports": [
+        "2025 bilateral tradeUS$1.085bn",
+        "Taiwan synthetic fabrics/chemicals and Bangladeshi apparel/bags/footwear trade"
+      ],
+      "limits": "Country trade does not measure Bengali-language demand.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "M-UR",
+      "type": "official_trade_profile",
+      "jurisdiction": "Taiwan / Pakistan",
+      "url": "https://www.trade.gov.tw/Pages/Detail.aspx?nodeID=45&pid=725492",
+      "published": "2026-09-03",
+      "status": "opened",
+      "supports": [
+        "2025 bilateral tradeUS$390m",
+        "metal/chemical/textile and raw-material product ties"
+      ],
+      "limits": "No Urdu search volume or contract-dispute incidence measured.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "M-NE",
+      "type": "official_trade_profile",
+      "jurisdiction": "Taiwan / Nepal",
+      "url": "https://www.trade.gov.tw/Pages/Detail.aspx?nodeID=45&pid=725493",
+      "published": "2026-09-03",
+      "status": "opened",
+      "supports": [
+        "2025 bilateral tradeUS$7.5266m",
+        "machinery,steel,computer and textile/craft product ties"
+      ],
+      "limits": "Does not measure resident/student service needs.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "M-UAE",
+      "type": "official_trade_profile",
+      "jurisdiction": "Taiwan / UAE",
+      "url": "https://www.trade.gov.tw/Pages/detail.aspx?did=12448&nodeid=45&pid=725610",
+      "published": "2026-09-24",
+      "status": "opened",
+      "supports": [
+        "UAE role in regional logistics/transshipment"
+      ],
+      "limits": "No conclusion about current availability of a particular port/route or firm client demand.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "M-SA",
+      "type": "official_trade_profile",
+      "jurisdiction": "Taiwan / Saudi Arabia",
+      "url": "https://www.trade.gov.tw/Pages/Detail.aspx?nodeid=45&pid=725574",
+      "published": "2026-10-13",
+      "status": "opened",
+      "supports": [
+        "Taiwan imports from Saudi Arabia include crude,methanol,polyethylene,polycarbonate resin and polypropylene"
+      ],
+      "limits": "Supports industrial-material supplier scenario, not an invented Saudi consumer brand or office.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "M-FA",
+      "type": "official_trade_profile",
+      "jurisdiction": "Taiwan / Iran",
+      "url": "https://www.trade.gov.tw/Pages/Detail.aspx?nodeid=45&pid=725579",
+      "published": "2026-09-23",
+      "status": "opened",
+      "supports": [
+        "official profile reports2025 trade decline and suspension of Taiwan–Iran clearing mechanism"
+      ],
+      "limits": "A Taiwan market report is not a substitute for current US sanctions law; no blanket illegality conclusion.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "M-HE-RD",
+      "type": "official_program_information",
+      "jurisdiction": "Taiwan / Israel",
+      "url": "https://mnscdn.moea.gov.tw/Mns/doit_e/content/Content.aspx?menu_id=44172",
+      "published": "page content last update2025-12-11; site update2026-09-24",
+      "status": "opened current page",
+      "supports": [
+        "Israel included in international innovation/R&D collaboration platform"
+      ],
+      "limits": "Not proof of particular funded project, joint ownership, sales, clients or available funding today.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "M-TR-PROFILE",
+      "type": "official_trade_profile",
+      "jurisdiction": "Taiwan / Türkiye",
+      "url": "https://www.trade.gov.tw/Pages/Detail.aspx?nodeid=45&pid=721527",
+      "published": "2026-07-20",
+      "status": "profile opened; attached current/older PDFs failed",
+      "supports": [
+        "country industrial profile"
+      ],
+      "limits": "Unopened attached bilateral figures are not confirmed.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "M-TR-EVENT",
+      "type": "official_local_government_release",
+      "jurisdiction": "Taiwan / Türkiye",
+      "url": "https://www.taichung.gov.tw/8868/8872/9962/3385003/",
+      "published": "2026-10-05",
+      "status": "official HTTPS downloaded after web timeout, normal TLS with process-local DNS resolution",
+      "localFiles": [
+        "southwest-turkey-taichung-official.html",
+        "southwest-turkey-taichung-official.txt"
+      ],
+      "supports": [
+        "Taichung manufacturing/tool/machinery/trading businesses joined event with Turkish Airlines Taiwan manager on international logistics links"
+      ],
+      "limits": "Event evidence supports commercial ties, not completed transactions or inbound Turkish client demand.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "M-MN",
+      "type": "official_trade_profile",
+      "jurisdiction": "Taiwan / Mongolia",
+      "url": "https://www.trade.gov.tw/Pages/Detail.aspx?nodeID=45&pid=725505",
+      "published": "2026-10-19",
+      "status": "opened and official HTML downloaded",
+      "localFiles": [
+        "southwest-mongolia-official.html",
+        "southwest-mongolia-official.txt"
+      ],
+      "supports": [
+        "2025 bilateral tradeUS$8.19m versus2024 US$6.43m"
+      ],
+      "limits": "No inference of student/resident numbers from trade.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "L-COMPANY-210",
+      "type": "effective_statute",
+      "law": "公司法 / Company Act",
+      "jurisdiction": "Taiwan",
+      "provision": "210",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=210",
+      "status": "current operative provision opened",
+      "supports": [
+        "specified company records available through statutory shareholder/creditor route with interest and scope conditions"
+      ],
+      "limits": "Not an unconditional right to every underlying invoice.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "L-COMPANY-245",
+      "type": "effective_statute",
+      "law": "公司法 / Company Act",
+      "jurisdiction": "Taiwan",
+      "provision": "245(1)",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=245",
+      "status": "current operative provision opened",
+      "supports": [
+        "at least1% continuously at least6months; reasons,evidence,necessity for court-appointed inspector within necessary scope"
+      ],
+      "limits": "Threshold for245 is not imposed on210; court appointment is not automatic.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "L-COMPANY-STATUS",
+      "type": "statute_status",
+      "law": "公司法 / Company Act",
+      "jurisdiction": "Taiwan",
+      "provision": "full law;449",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001",
+      "amended": "2025-12-26",
+      "status": "current full law and commencement clause opened",
+      "supports": [
+        "current consolidated status"
+      ],
+      "limits": "Do not portray210/245 as newly created by2025 amendment or pending merely because other provisions have later commencement.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "L-IN-TREATY",
+      "type": "effective_tax_agreement",
+      "law": "Agreement between Taipei Economic and Cultural Center in New Delhi and India–Taipei Association in Taipei for avoidance of double taxation and prevention of fiscal evasion with respect to taxes on income",
+      "jurisdiction": "Taiwan / India",
+      "provision": "Article12(1)–(6),28;Protocol1",
+      "url": "https://www.mof.gov.tw/eng/download/10458",
+      "signed": "2011-07-12",
+      "status": "official fullPDF downloaded; current network expressly lists in-force agreement",
+      "localFiles": [
+        "southwest-india-treaty.pdf",
+        "southwest-india-treaty.txt"
+      ],
+      "sha256": "d4b811c8f1deebe2d8bcd6fb445e9f8d41bfa687fbbcf0f8d12e5ec5c482309d",
+      "supports": [
+        "10% gross source-tax ceiling for resident beneficial owner subject to conditions",
+        "managerial,technical,consultancy service definition without make-available test",
+        "effective-connection exception forPE/fixedbase",
+        "source/special-relationship/anti-abuse conditions"
+      ],
+      "limits": "Article12 not12A; do not substitute another Indian treaty or claim all services taxed10%.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "L-IN-NETWORK",
+      "type": "official_treaty_status",
+      "jurisdiction": "Taiwan / India",
+      "url": "https://www.mof.gov.tw/eng/singlehtml/264?cntId=82780",
+      "published": "2026-09-04",
+      "status": "opened; lists India among comprehensive agreements signed and brought into force",
+      "supports": [
+        "present treaty status"
+      ],
+      "limits": "Individual commencement date not necessary to the new article; do not confuse2026 MoU.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "L-TREATY-PROCEDURE",
+      "type": "effective_regulation",
+      "law": "適用所得稅協定查核準則",
+      "jurisdiction": "Taiwan",
+      "provision": "5(2),20,21,25(1),(2),(4)",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=G0340125",
+      "amended": "2025-04-08",
+      "status": "current full text opened",
+      "supports": [
+        "specified no-PE/unconnected-income conditions for payer treaty-ceiling withholding at payment",
+        "tax-residency and beneficial-owner evidence",
+        "withholding filing identifies treaty article and calculation support",
+        "technical-service contract including Chinese translation and fee breakdown",
+        "mixed-income classification"
+      ],
+      "limits": "No fixed certificate form or refund deadline asserted.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "L-CIVIL-225",
+      "type": "effective_statute",
+      "law": "民法 / Civil Code",
+      "jurisdiction": "Taiwan",
+      "provision": "225",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=225",
+      "status": "current provision opened; unrelated pending166-1/1223 notices excluded",
+      "supports": [
+        "nonattributable impossibility and consequent duty discharge"
+      ],
+      "limits": "Higher price alone is not automatically impossibility.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "L-CIVIL-2272",
+      "type": "effective_statute",
+      "law": "民法 / Civil Code",
+      "jurisdiction": "Taiwan",
+      "provision": "227-2",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=227-2",
+      "status": "current provision opened; unrelated pending166-1/1223 notices excluded",
+      "supports": [
+        "unforeseen post-contract changes plus manifest unfairness may support request for court adjustment"
+      ],
+      "limits": "Not automatic cancellation or unilateral price increase.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "L-CONFLICTS-20",
+      "type": "effective_statute",
+      "law": "涉外民事法律適用法",
+      "jurisdiction": "Taiwan",
+      "provision": "20",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+      "status": "current operative text opened",
+      "supports": [
+        "party choice for obligation formation/effect; absent effective express choice closest connection and statutory presumptions"
+      ],
+      "limits": "Taiwan seller nationality alone does not conclusively select governing law.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "M-SHIPPING",
+      "type": "dated_official_event_context",
+      "jurisdiction": "Taiwan / Gulf",
+      "url": "https://www.moeaea.gov.tw/ECW/PDA.aspx?kind=1&news_id=34445",
+      "published": "2026-05-07",
+      "status": "opened dated energy-sector release",
+      "supports": [
+        "reported Hormuz disruption and alternative procurement/routing at that date"
+      ],
+      "limits": "Not proof of present blockage of all UAE routes or this particular hypothetical shipment.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "J-CIVIL-496",
+      "type": "court_judgment",
+      "jurisdiction": "Taiwan",
+      "court": "Supreme Court",
+      "case": "113年度台上字第496號",
+      "date": "2024-05-09",
+      "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=TPSV%2C113%2C%E5%8F%B0%E4%B8%8A%2C496%2C20240509%2C1",
+      "status": "official complete judgment opened; vacated and remanded",
+      "supports": [
+        "fairly allocated foreseeable risks generally bind; abnormal risk changes beyond contractual foundation may warrant hardship adjustment analysis"
+      ],
+      "limits": "Electrical-material procurement and prolonged construction, not UAE shipping; no final damages award established.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "L-FTA-19",
+      "type": "effective_statute",
+      "law": "公平交易法 / Fair Trade Act",
+      "jurisdiction": "Taiwan",
+      "provision": "19",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0150002&flno=19",
+      "status": "current article and full law opened; full law last amended2017-06-14",
+      "supports": [
+        "resale-price restrictions prohibited absent justifiable cause; analogous application to services"
+      ],
+      "limits": "Actual arrangement/Taiwan-market application requires facts; not Saudi law.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "L-FTA-RULES25",
+      "type": "effective_regulation",
+      "law": "公平交易法施行細則",
+      "jurisdiction": "Taiwan",
+      "provision": "25",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0150006&flno=25",
+      "amended": "2022-04-07",
+      "status": "current article/fullrules opened",
+      "supports": [
+        "pre-sale service,free-riding,entry,interbrand competition and other reasonable competition grounds evaluated on evidence"
+      ],
+      "limits": "Brand protection label alone not exemption.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "G-FTA-BURDEN",
+      "type": "official_administrative_explanation",
+      "jurisdiction": "Taiwan",
+      "url": "https://www.ftc.gov.tw/internet/english/doc/docDetail.aspx?uid=1444&docid=14457",
+      "updated": "2026-05-22",
+      "status": "opened",
+      "supports": [
+        "enterprise must affirmatively establish justification evidence under19/rules25"
+      ],
+      "limits": "FAQ update date not new law effective date.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "G-FTA-SUGGESTION",
+      "type": "official_administrative_explanation",
+      "jurisdiction": "Taiwan",
+      "url": "https://www.ftc.gov.tw/internet/english/doc/docDetail.aspx?uid=1444&docid=14458",
+      "updated": "2026-05-22",
+      "status": "opened full relevant section",
+      "supports": [
+        "suggested price alone not violation where downstream pricing/discounting remains free"
+      ],
+      "limits": "Assess actual coercive conduct.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "G-FTA-SUPPLY",
+      "type": "official_administrative_explanation",
+      "jurisdiction": "Taiwan",
+      "url": "https://www.ftc.gov.tw/internet/english/doc/docDetail.aspx?uid=1444&docid=14459",
+      "updated": "2026-05-22",
+      "status": "opened",
+      "supports": [
+        "punitive supply suspension/termination for ignoring suggested price is restricted"
+      ],
+      "limits": "No unverified case or fine used.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "G-PPH",
+      "type": "effective_administrative_program_guidelines",
+      "jurisdiction": "Taiwan / Israel",
+      "law": "TIPO–ILPO PPH operational guidelines",
+      "provision": "2(a)–(d),3,4",
+      "url": "https://www.tipo.gov.tw/wSite/public/Attachment/007/f1766476724604.pdf",
+      "landing": "https://www.tipo.gov.tw/tw/patents/1062-68821.html",
+      "announced": "landing posted2025-12-29; English release2026-03-04",
+      "effective": "2026-01-02",
+      "status": "official20-pagePDF opened",
+      "supports": [
+        "same earliest date",
+        "at least oneILPO allowable claim",
+        "allTaiwan claims sufficiently correspond",
+        "TIPO substantive-examination notice received and no first examination report",
+        "documents/translations/correspondence table and permitted exceptions"
+      ],
+      "limits": "Accelerates examination, not automatic patent grant; noTaiwan PCTnationalphase statement or guarantee.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "G-PPH-NEWS",
+      "type": "official_program_announcement",
+      "jurisdiction": "Taiwan / Israel",
+      "url": "https://www.tipo.gov.tw/en/tipo2/324-76334.html",
+      "published": "2026-03-04",
+      "effective": "2026-01-02",
+      "status": "opened",
+      "supports": [
+        "bilateral new program and Israel eighthPPHpartner"
+      ],
+      "limits": "Do not equate announcement posting with operative date or infer firmfilingcredentials.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "L-PATENT7",
+      "type": "effective_statute",
+      "law": "專利法 / Patent Act",
+      "jurisdiction": "Taiwan",
+      "provision": "7(3)",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=7",
+      "status": "current provision opened; current full law amendment2022-05-04",
+      "supports": [
+        "commissionedR&D ownership follows agreement; absent agreement inventor owns rights and funder may exploit"
+      ],
+      "limits": "Funding does not automatically make funder soleowner; actual register/contracts must be checked.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "L-PATENT64",
+      "type": "effective_statute",
+      "law": "專利法 / Patent Act",
+      "jurisdiction": "Taiwan",
+      "provision": "64",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=64",
+      "status": "current provision opened; current full law amendment2022-05-04",
+      "supports": [
+        "own-exploitation exception; jointlyowned inventionpatent assignment,trust,licence,pledge,abandonment require allcoownersconsent"
+      ],
+      "limits": "Do not automatically classify independent contractor/licensee as coowner's ownexploitation; different from jointtradesecret law.",
+      "researchDate": "2026-10-25"
+    },
+    {
+      "id": "L-PATENT65",
+      "type": "effective_statute",
+      "law": "專利法 / Patent Act",
+      "jurisdiction": "Taiwan",
+      "provision": "65",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=65",
+      "status": "current officialHTML fetched with normalTLS and process-local publicDNS afterwebtimeouts",
+      "localFiles": [
+        "southwest-patent65-official.html",
+        "southwest-patent65-official.txt"
+      ],
+      "sha256": "2211a9c80fb2b745f34edb8abfeb2f6eea09698efe521df88471ea4dc51b458d",
+      "supports": [
+        "coowner share assignment,trust or pledge needs othercoownersconsent",
+        "abandonedshare belongs othercoowners"
+      ],
+      "limits": "Article does not itself state proportional distribution formula.",
+      "researchDate": "2026-10-25"
+    }
+  ],
+  "topics": [
+    {
+      "id": 928,
+      "locale": "hi",
+      "country": "India",
+      "slug": "indian-minority-investor-taiwan-company-inspector",
+      "reader": "Indian minority shareholder of Taiwan company limited by shares",
+      "decision": "direct specified-record request versus court inspector",
+      "sources": [
+        "M-IN-INDUSTRY",
+        "L-COMPANY-210",
+        "L-COMPANY-245",
+        "L-COMPANY-STATUS"
+      ],
+      "overlap": [
+        "HI669–673/704–706 different",
+        "ZH183 limitedcompany109 different",
+        "JA712 JVdeadlock different",
+        "global801–921 screened"
+      ]
+    },
+    {
+      "id": 929,
+      "locale": "hi",
+      "country": "India",
+      "slug": "indian-technical-service-fees-taiwan-tax-treaty",
+      "reader": "Indian technicalservice recipient company and Taiwan payer",
+      "decision": "feeclassification and treaty evidence beforewithholding",
+      "sources": [
+        "M-IN-FISCAL",
+        "L-IN-TREATY",
+        "L-IN-NETWORK",
+        "L-TREATY-PROCEDURE"
+      ],
+      "overlap": [
+        "HI669 unpaidinvoice different",
+        "JA/ZH646 technology sourcecontribution different",
+        "global801–921 screened"
+      ]
+    },
+    {
+      "id": 930,
+      "locale": "ar",
+      "country": "United Arab Emirates",
+      "slug": "uae-taiwan-shipment-rerouting-hardship",
+      "reader": "UAE importer contractedwithTaiwan supplier",
+      "decision": "extra freight/route amendment vs impossibility orcourtadjustment",
+      "sources": [
+        "M-UAE",
+        "M-SHIPPING",
+        "L-CIVIL-225",
+        "L-CIVIL-2272",
+        "L-CONFLICTS-20",
+        "J-CIVIL-496"
+      ],
+      "overlap": [
+        "AR699 ordinaryno-delivery/refund mustnotrepeat",
+        "AR700–706 different",
+        "global801–921 screened"
+      ]
+    },
+    {
+      "id": 931,
+      "locale": "ar",
+      "country": "Saudi Arabia",
+      "slug": "saudi-supplier-taiwan-distributor-resale-prices",
+      "reader": "Saudi industrialmaterial supplier intoTaiwan",
+      "decision": "audit mandatoryresaleprice and enforcement beforeTaiwan distribution",
+      "sources": [
+        "M-SA",
+        "L-FTA-19",
+        "L-FTA-RULES25",
+        "G-FTA-BURDEN",
+        "G-FTA-SUGGESTION",
+        "G-FTA-SUPPLY"
+      ],
+      "overlap": [
+        "AR699–706 different",
+        "global801–921 screened"
+      ]
+    },
+    {
+      "id": 932,
+      "locale": "he",
+      "country": "Israel",
+      "slug": "israel-taiwan-pph-patent-claims-window",
+      "reader": "Israeli applicantwithILPOallowableclaimsandpendingTaiwaninventionapplication",
+      "decision": "checkPPHnoticewindow andclaimcorrespondence",
+      "sources": [
+        "G-PPH",
+        "G-PPH-NEWS"
+      ],
+      "overlap": [
+        "HE858–860 different",
+        "programnew2026",
+        "global801–921 screened"
+      ],
+      "serviceBoundary": "No firmpatentprosecution qualification,filingsuccess orPPHretainerclaim verified."
+    },
+    {
+      "id": 933,
+      "locale": "he",
+      "country": "Israel",
+      "slug": "israeli-taiwan-joint-patent-license-consent",
+      "reader": "Israeli coownerofgrantedTaiwaninventionpatent",
+      "decision": "ownexploitation vs thirdpartylicence; coownerconsent",
+      "sources": [
+        "M-HE-RD",
+        "L-PATENT7",
+        "L-PATENT64",
+        "L-PATENT65"
+      ],
+      "overlap": [
+        "HE858 tradesecrets/copyright differsfromPatent64selfuse",
+        "JA117 earlierR&Downershipdifferent",
+        "NLbatchjointpatentcandidatechangedbyparent",
+        "global801–921 screened"
+      ]
+    }
+  ],
+  "nativeSearches": [
+    {
+      "locale": "hi",
+      "q": "ताइवान भारत तकनीकी सेवा शुल्क कर समझौता",
+      "results": [
+        "https://www.india.org.tw/",
+        "https://app.thynktax.com/dtaa/taiwan/article-12a-fees-for-technical-services"
+      ],
+      "observation": "IndiaAssociationandprivatetaxpage; privatepageArticle12A/makeavailableconfusion",
+      "cannotEstablish": "law,volume,rankings,customers",
+      "queryLanguage": "hi",
+      "date": "2026-10-25"
+    },
+    {
+      "locale": "hi",
+      "q": "ताइवान कंपनी अल्पसंख्यक शेयरधारक खातों की जांच",
+      "results": [
+        "https://practiceguides.chambers.com/practice-guides/investing-in-2026/taiwan/trends-and-developments/O23491",
+        "https://twse-regulation.twse.com.tw/ENG/EN/law/DOC01.aspx?FLCODE=FL007015&FLNO=18"
+      ],
+      "observation": "EnglishTaiwaninvesting andTWSErecordsreturned",
+      "cannotEstablish": "absenceofHindicontentormarketdemand",
+      "queryLanguage": "hi",
+      "date": "2026-10-25"
+    },
+    {
+      "locale": "ar",
+      "q": "تايوان الإمارات تأخر الشحن القوة القاهرة عقد",
+      "results": [
+        "https://www.freightamigo.com/en/routes/shipping-from-taiwan-to-united-arab-emirates/"
+      ],
+      "observation": "ArabicGulfenergyforcemajeurenewsandfreightvendorroutepage;fullnewsURLs inrawfile",
+      "cannotEstablish": "currentrouteblockage,freightprice,contractresult,demandvolume",
+      "queryLanguage": "ar",
+      "date": "2026-10-25"
+    },
+    {
+      "locale": "ar",
+      "q": "تايوان المورد السعودي تحديد سعر إعادة البيع موزع",
+      "results": [
+        "https://attent.com.sa/ar/reselling-program",
+        "https://hivoox.com/ar/shop/textile-reseller-in-taiwan",
+        "https://hivoox.com/ar/shop/web-sites-reseller-in-taiwan",
+        "https://gaft.gov.sa/media/zp3jh0jv/final-report.pdf"
+      ],
+      "observation": "commercialresellerpagesandunrelatedSaudi traderemedy; weakTaiwancompetitionlawsignal",
+      "cannotEstablish": "demonstratedstronglegal demand",
+      "queryLanguage": "ar",
+      "date": "2026-10-25"
+    },
+    {
+      "locale": "he",
+      "q": "פטנט בטאיוואן PPH ישראל",
+      "results": [
+        "https://www.tipo.gov.tw/en/tipo2/324-76334.html",
+        "https://govextra.gov.il/justice/ilpo-knowledge-center/ilpo-knowledge-center/newsletters/ip-date-12-2025/",
+        "https://www.gov.il/he/pages/patents-guides?chapterIndex=5",
+        "https://www.leeandli.com/EN/NewslettersDetail/7577.htm"
+      ],
+      "observation": "specificnew bilateralprogramofficialandprivate results",
+      "cannotEstablish": "volume,applicationgrowth,firmcredentials",
+      "queryLanguage": "he",
+      "date": "2026-10-25"
+    },
+    {
+      "locale": "he",
+      "q": "פטנט משותף טאיוואן רישיון",
+      "results": [
+        "https://fs.knesset.gov.il/6/law/6_lsr_209311.PDF",
+        "https://www.gov.il/he/service/filling_an_international_application_pct"
+      ],
+      "observation": "Israellaw/PCT ratherthanTaiwanjointpatentdecision",
+      "cannotEstablish": "Taiwanlaworabsenceofcompetitors",
+      "queryLanguage": "he",
+      "date": "2026-10-25"
+    }
+  ],
+  "legalStatusNotes": [
+    "CompanyActcurrentfullamendment2025-12-26doesnotmake210/245anew2026rule",
+    "CivilCodepending166-1/1223noticesnot225/227-2",
+    "IndiaexistingtreatyArticle12not12A; no makeavailable condition",
+    "TIPOPPHoperative2026-01-02versusEnglishrelease2026-03-04",
+    "FTCFAQupdated2026-05-22isadministrativeexplanationnotnewlawdate",
+    "SupremeCourt113台上496vacated/remanded,notfinalaward"
+  ],
+  "unresolvedOrNarrowed": [
+    "TurkeyMOFAcurrentbilateralnumericsectionsandold/currenttradePDFfetchfailed; nobilateralnumberreliedupon",
+    "TamilNaduCNAplatformstatementattributedtonamedofficialbutdirectgovernmentissueridentitynotconfirmed; officialIndiacountryevidencesuppliesmainlink",
+    "ILPOGov.il403/Govextradynamiccontentnotusedforunverifiedlegalconditions",
+    "NoanalyticalSEOvolumes,traffic,conversionorclientdataaccessed",
+    "NoIndianorSaudiforeignlawadviceverified"
+  ],
+  "rawEvidence": "southwest-web-evidence.json",
+  "artifactNotes": "OfficialPDF/HTMLdownloadusedpublicDNSresolutiononlywithincurlprocessandnormalTLSverificationafterDNSfailures; nosystemsettingschanged."
+}

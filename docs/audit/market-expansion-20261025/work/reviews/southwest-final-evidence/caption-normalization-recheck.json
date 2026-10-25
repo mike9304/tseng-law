@@ -1,0 +1,164 @@
+{
+  "reviewer": "/root/expand_final_southwest",
+  "checkedAt": "2026-10-25T13:27:48.865359+00:00",
+  "root_evidence": "work/checks/caption-normalization.json",
+  "root_evidence_sha256": "ba56978e7514d4d094fc35a0b0813f33ef6750568151d067a211ee08470038d2",
+  "records": [
+    {
+      "source_path": "src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md",
+      "old_sha256": "9bc016634e9ba1e326e5412f781a41bd6eba910d3c7ca91eb08786768ea70f21",
+      "sha256": "f92e3cabcabac4828d3a0379d9376d150f54eddb4ac209f719088014bda7d969",
+      "old_caption": "featured_image_caption: \"कंपनी के रिकॉर्ड की जाँच का काल्पनिक दृश्य।\"",
+      "new_caption": "featured_image_caption: \"काल्पनिक दृश्य\"",
+      "only_caption_changed": true,
+      "body_alt_images_unchanged": true,
+      "image_sha256": "8bf34a1678089f7017eeb6bb9a959a9834b04a9ee838d91ae245c6da10c39531",
+      "diff": "--- approved/928-indian-minority-investor-taiwan-company-inspector.md\n+++ current/928-indian-minority-investor-taiwan-company-inspector.md\n@@ -14,7 +14,7 @@\n author: \"legal-ai-assistant\"\n featured_image: \"/images/columns/928-market-expansion-20261025.webp\"\n featured_image_alt: \"मेज़ पर अलग रखी कंपनी की फ़ाइलें, खुला बहीखाता और एक पन्ने के ऊपर रखा आवर्धक काँच।\"\n-featured_image_caption: \"कंपनी के रिकॉर्ड की जाँच का काल्पनिक दृश्य।\"\n+featured_image_caption: \"काल्पनिक दृश्य\"\n faq:\n   - q: \"क्या 1% शेयर होने पर अदालत जाँचकर्ता नियुक्त कर देती है?\"\n     a: \"अपने-आप नहीं। कंपनी अधिनियम की धारा 245 में जारी शेयरों की कुल संख्या का कम से कम 1% लगातार छह महीने से रखने की शर्त है। आवेदक को कारण, प्रमाण और जाँच की आवश्यकता भी बतानी होगी; जाँच आवश्यक दायरे तक सीमित है।\"\n",
+      "variety": {
+        "source_path": "src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md",
+        "sha256": "f92e3cabcabac4828d3a0379d9376d150f54eddb4ac209f719088014bda7d969",
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md",
+          "--lang",
+          "hi"
+        ],
+        "exit_code": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md [hi] sentences=34 mean=17.6 cv=0.509 short=0.206 run3=0.031 opener_rep=0.167 cite_end=0.0 cite_para=0.583 contrast=0 caveat=0 q=1\n  WARN 59% of sentences end in 'है' — vary endings within the register\n",
+        "stderr": ""
+      }
+    },
+    {
+      "source_path": "src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md",
+      "old_sha256": "9047bb9835688d004c31420212f78182ae28eade1503902ebc67b47992d06d4d",
+      "sha256": "4733e8474fbca987ac77441c0f2a6ac0348a050ea713a51840ecbb5f940c9c8a",
+      "old_caption": "featured_image_caption: \"तकनीकी सेवा के कार्यस्थल का काल्पनिक दृश्य।\"",
+      "new_caption": "featured_image_caption: \"काल्पनिक दृश्य\"",
+      "only_caption_changed": true,
+      "body_alt_images_unchanged": true,
+      "image_sha256": "8fecca91b72f0c95f2a679cdf58f3aff4097a141ba4276083194f76342d1c3f7",
+      "diff": "--- approved/929-indian-technical-service-fees-taiwan-tax-treaty.md\n+++ current/929-indian-technical-service-fees-taiwan-tax-treaty.md\n@@ -14,7 +14,7 @@\n author: \"legal-ai-assistant\"\n featured_image: \"/images/columns/929-market-expansion-20261025.webp\"\n featured_image_alt: \"इंजीनियरिंग कार्य-मेज़ पर सर्किट बोर्ड, परीक्षण केबल, बंद लैपटॉप और सादा कागज़।\"\n-featured_image_caption: \"तकनीकी सेवा के कार्यस्थल का काल्पनिक दृश्य।\"\n+featured_image_caption: \"काल्पनिक दृश्य\"\n faq:\n   - q: \"क्या भारत से दी गई हर तकनीकी सेवा पर ताइवान में 10% कर लगेगा?\"\n     a: \"नहीं। अनुच्छेद 12 के दायरे, स्रोत और पात्रता की शर्तें पूरी होने पर यह सकल शुल्क पर अधिकतम कर की सीमा है। प्राप्तकर्ता उसका beneficial owner और समझौते के अनुसार भारत का निवासी होना चाहिए। ताइवान के स्थायी प्रतिष्ठान या निश्चित आधार से प्रभावी संबंध होने पर अलग प्रावधान लागू हो सकते हैं।\"\n",
+      "variety": {
+        "source_path": "src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md",
+        "sha256": "4733e8474fbca987ac77441c0f2a6ac0348a050ea713a51840ecbb5f940c9c8a",
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md",
+          "--lang",
+          "hi"
+        ],
+        "exit_code": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md [hi] sentences=49 mean=18.2 cv=0.49 short=0.122 run3=0.021 opener_rep=0.125 cite_end=0.0 cite_para=0.625 contrast=1 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    },
+    {
+      "source_path": "src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md",
+      "old_sha256": "d478a7ac41c46ab5d9861f6d9544d3276d4334ad8f4c395bd65aa55aeedcd9a6",
+      "sha256": "91a77cfc009bd425c4c1244832494e272284441bf06f0bfae013583ff8b328ce",
+      "old_caption": "featured_image_caption: \"مشهد متخيَّل لمكتب شحن\"",
+      "new_caption": "featured_image_caption: \"مشهد متخيَّل\"",
+      "only_caption_changed": true,
+      "body_alt_images_unchanged": true,
+      "image_sha256": "a247a8544127f0eaf7a5bf0523191650463f909c31cc82276b396c50c113cb37",
+      "diff": "--- approved/930-uae-taiwan-shipment-rerouting-hardship.md\n+++ current/930-uae-taiwan-shipment-rerouting-hardship.md\n@@ -13,7 +13,7 @@\n author: \"legal-ai-assistant\"\n featured_image: \"/images/columns/930-market-expansion-20261025.webp\"\n featured_image_alt: \"نموذج حاوية وورقة خالية وحبل على مكتب يطل على سفينتي شحن في الميناء.\"\n-featured_image_caption: \"مشهد متخيَّل لمكتب شحن\"\n+featured_image_caption: \"مشهد متخيَّل\"\n faq:\n   - q: \"هل زيادة أجرة النقل تعفي المورد التايواني من التسليم؟\"\n     a: \"لا تنشئ الزيادة وحدها إعفاءً. إذا كان القانون التايواني واجب التطبيق، تُفحص شروط العقد وسبب التعطل وإمكان التنفيذ. وتشترط المادة 225 استحالة الأداء لسبب لا يُنسب إلى المدين، بينما تتطلب المطالبة بتعديل العقد لتغير الظروف شروط المادة 227-2 وطلبًا إلى المحكمة.\"\n",
+      "variety": {
+        "source_path": "src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md",
+        "sha256": "91a77cfc009bd425c4c1244832494e272284441bf06f0bfae013583ff8b328ce",
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md",
+          "--lang",
+          "ar"
+        ],
+        "exit_code": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md [ar] sentences=41 mean=15.9 cv=0.458 short=0.195 run3=0.051 opener_rep=0.071 cite_end=0.0 cite_para=0.286 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    },
+    {
+      "source_path": "src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+      "old_sha256": "9561312bd3d24413e8d944f44affcac75c6d0d45535084add523df989acde551",
+      "sha256": "24332b5c2d46a686ed3f4635bd16d418631d2cd6d1403d0c4d7ac82b355fa431",
+      "old_caption": "featured_image_caption: \"مشهد متخيَّل لعينات مواد صناعية\"",
+      "new_caption": "featured_image_caption: \"مشهد متخيَّل\"",
+      "only_caption_changed": true,
+      "body_alt_images_unchanged": true,
+      "image_sha256": "42285608197d77c9cb1b0c165705951a0750690711939f977b965ce51224bbaf",
+      "diff": "--- approved/931-saudi-supplier-taiwan-distributor-resale-prices.md\n+++ current/931-saudi-supplier-taiwan-distributor-resale-prices.md\n@@ -13,7 +13,7 @@\n author: \"legal-ai-assistant\"\n featured_image: \"/images/columns/931-market-expansion-20261025.webp\"\n featured_image_alt: \"عينات حبيبات بوليمر في أوعية معدنية على منضدة، وخلفها عبوات توريد سادة على منصة خشبية.\"\n-featured_image_caption: \"مشهد متخيَّل لعينات مواد صناعية\"\n+featured_image_caption: \"مشهد متخيَّل\"\n faq:\n   - q: \"هل يجوز إدراج سعر إعادة بيع مقترح في عقد التوزيع التايواني؟\"\n     a: \"وفق توضيح لجنة التجارة العادلة، لا يشكل ذكر سعر مقترح وحده مخالفة للمادة 19 إذا لم يُلزم المورد الموزع بسعر ثابت ولم يمنعه من الخصم. ويتوقف التقييم أيضًا على طريقة تطبيق السياسة فعليًا.\"\n",
+      "variety": {
+        "source_path": "src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+        "sha256": "24332b5c2d46a686ed3f4635bd16d418631d2cd6d1403d0c4d7ac82b355fa431",
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+          "--lang",
+          "ar"
+        ],
+        "exit_code": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md [ar] sentences=38 mean=16.9 cv=0.484 short=0.105 run3=0.083 opener_rep=0.0 cite_end=0.0 cite_para=0.214 contrast=0 caveat=1 q=3\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    },
+    {
+      "source_path": "src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+      "old_sha256": "9115389453a135cf8b3b8f010f3bd996afbc0ee81bf6e92b43455033c617496f",
+      "sha256": "514c395c3212ea39504ab710d7b3130ad5bd0e996169b0c5cab212ea1752b3c5",
+      "old_caption": "featured_image_caption: \"סצנה בדיונית להמחשת השוואת תכנון טכני.\"",
+      "new_caption": "featured_image_caption: \"סצנה בדיונית\"",
+      "only_caption_changed": true,
+      "body_alt_images_unchanged": true,
+      "image_sha256": "4037e0df9cfb08b660ca766fb21ae57558975f6ce7bb8ae19d63124fd7957822",
+      "diff": "--- approved/932-israel-taiwan-pph-patent-claims-window.md\n+++ current/932-israel-taiwan-pph-patent-claims-window.md\n@@ -11,7 +11,7 @@\n tags: [\"פטנטים\", \"חברות ישראליות\", \"PPH\", \"רישוי טכנולוגיה\"]\n featured_image: \"/images/columns/932-market-expansion-20261025.webp\"\n featured_image_alt: \"שני שרטוטים ללא כיתוב של רכיב אופטי, אבטיפוס מתכתי ותיקייה כחולה על שולחן שרטוט מואר.\"\n-featured_image_caption: \"סצנה בדיונית להמחשת השוואת תכנון טכני.\"\n+featured_image_caption: \"סצנה בדיונית\"\n faq:\n   - q: \"האם צריך להמתין למתן הפטנט בישראל לפני בקשת PPH בטאיוואן?\"\n     a: \"לא בהכרח. נדרשת לפחות תביעה אחת שבוחן ישראלי זיהה בבירור ככשירה בהודעת הבחינה האחרונה, גם אם טרם ניתן הפטנט. נוסף לכך יש לעמוד בתנאי הקשר בין הבקשות, התאמת כל התביעות ושלב הבחינה בטאיוואן.\"\n",
+      "variety": {
+        "source_path": "src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+        "sha256": "514c395c3212ea39504ab710d7b3130ad5bd0e996169b0c5cab212ea1752b3c5",
+        "command": [
+          "python3",
+          "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+          "--lang",
+          "he"
+        ],
+        "exit_code": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md [he] sentences=37 mean=14.4 cv=0.465 short=0.189 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "stderr": "OFFICIAL CHECKER: he unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+      }
+    },
+    {
+      "source_path": "src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+      "old_sha256": "c1edcaaa8978b6198116c522ad6edd879a9961a0f7c9f29af53a67c592f49e88",
+      "sha256": "95da9c181636d91a8a2da1e7e237f29d08c77c159740301e9c87b0804139a898",
+      "old_caption": "featured_image_caption: \"סצנה בדיונית להמחשת פיתוח משותף.\"",
+      "new_caption": "featured_image_caption: \"סצנה בדיונית\"",
+      "only_caption_changed": true,
+      "body_alt_images_unchanged": true,
+      "image_sha256": "e6048d77af3cded5a54553e88c92d2a0f9e9425f5f25f15d4e5db981b7163820",
+      "diff": "--- approved/933-israeli-taiwan-joint-patent-license-consent.md\n+++ current/933-israeli-taiwan-joint-patent-license-consent.md\n@@ -11,7 +11,7 @@\n tags: [\"פטנט משותף\", \"חברות ישראליות\", \"רישוי טכנולוגיה\", \"הסכם פיתוח\"]\n featured_image: \"/images/columns/933-market-expansion-20261025.webp\"\n featured_image_alt: \"אבטיפוס מתכתי של ציר מחובר בין שתי תיקיות סגורות על שולחן עץ בחדר עבודה ריק.\"\n-featured_image_caption: \"סצנה בדיונית להמחשת פיתוח משותף.\"\n+featured_image_caption: \"סצנה בדיונית\"\n faq:\n   - q: \"האם אחד הבעלים של פטנט משותף בטאיוואן רשאי לתת רישיון לבדו?\"\n     a: \"סעיף 64 לחוק הפטנטים מחייב הסכמה של כל הבעלים למתן רישיון לאחר. החריג לשימוש עצמי של בעלים אינו מאפשר לו להעניק לבדו רישיון לצד שלישי, גם אם הרישיון אינו בלעדי.\"\n",
+      "variety": {
+        "source_path": "src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+        "sha256": "95da9c181636d91a8a2da1e7e237f29d08c77c159740301e9c87b0804139a898",
+        "command": [
+          "python3",
+          "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+          "--lang",
+          "he"
+        ],
+        "exit_code": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md [he] sentences=43 mean=13.7 cv=0.481 short=0.256 run3=0.024 opener_rep=0.071 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "stderr": "OFFICIAL CHECKER: he unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+      }
+    }
+  ]
+}

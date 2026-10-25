@@ -1,0 +1,129 @@
+{
+  "locale": "es",
+  "directory": "columns-es",
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?Fuentes(?:\\s+oficiales)?\\s*:?\\s*$)",
+  "abbreviations": [
+    "art",
+    "arts",
+    "apdo",
+    "núm",
+    "núms",
+    "p",
+    "pp",
+    "pág",
+    "págs",
+    "Sr",
+    "Sra",
+    "Dr",
+    "Dra",
+    "D",
+    "Dña",
+    "Lic",
+    "cfr",
+    "p. ej",
+    "p.ej",
+    "etc",
+    "C. Civ",
+    "C. Com"
+  ],
+  "contrast_patterns": [
+    "(?i:\\bno\\b[^.!?\\n]{0,160}\\bsino(?:\\s+que)?\\b)",
+    "(?i:\\ben\\s+(?:vez|lugar)\\s+de\\b)",
+    "(?i:\\b(?:es|son)\\s+(?:otra\\s+cosa|distint[oa]s?\\s+de)\\b)"
+  ],
+  "caveat_pattern": "(?i:^\\s*[«“\\\"(]*\\s*(?:sin\\s+embargo|no\\s+obstante|ahora\\s+bien|salvo\\s+que)\\b)",
+  "hypo_pattern": "(?i:^\\s*[«“\\\"(]*\\s*(?:supongamos\\b|imaginemos\\b|un\\s+caso\\s+hipotético\\b|un\\s+ejemplo\\s+ficticio\\b))",
+  "formula_close_pattern": "(?i:\\b(?:este\\s+artículo\\s+(?:ofrece\\s+(?:solo\\s+)?información\\s+general|tiene\\s+carácter\\s+(?:meramente\\s+)?informativo)|cada\\s+caso\\s+es\\s+diferente|nuestro\\s+despacho\\s+puede\\s+ayudarle)\\b)",
+  "sentence_fixtures": [
+    {
+      "text": "El registro ficticio incluye « art. 7, apdo. 2 ». Ángela guarda la copia.",
+      "sentences": [
+        "El registro ficticio incluye « art. 7, apdo. 2 ».",
+        "Ángela guarda la copia."
+      ]
+    },
+    {
+      "text": "El apunte ficticio contiene 1.234,50 € y 2,5 unidades. Únicamente falta la fecha.",
+      "sentences": [
+        "El apunte ficticio contiene 1.234,50 € y 2,5 unidades.",
+        "Únicamente falta la fecha."
+      ]
+    },
+    {
+      "text": "«La copia está lista». Él cierra la carpeta. última revisión: lunes.",
+      "sentences": [
+        "«La copia está lista».",
+        "Él cierra la carpeta.",
+        "última revisión: lunes."
+      ]
+    },
+    {
+      "text": "La Dra. Álvarez anota p. ej. una carpeta azul en el registro ficticio. El folio sigue vacío.",
+      "sentences": [
+        "La Dra. Álvarez anota p. ej. una carpeta azul en el registro ficticio.",
+        "El folio sigue vacío."
+      ]
+    },
+    {
+      "text": "La nota ficticia enumera copias, sobres, etc. Falta una etiqueta.",
+      "sentences": [
+        "La nota ficticia enumera copias, sobres, etc.",
+        "Falta una etiqueta."
+      ]
+    },
+    {
+      "text": "El apellido ficticio es D’Ávila. ¿Dónde está el índice? Está aquí. ¡Qué alivio!",
+      "sentences": [
+        "El apellido ficticio es D’Ávila.",
+        "¿Dónde está el índice?",
+        "Está aquí.",
+        "¡Qué alivio!"
+      ]
+    }
+  ],
+  "word_fixtures": [
+    {
+      "text": "Ángela revisa el expediente número 7.",
+      "tokens": [
+        "Ángela",
+        "revisa",
+        "el",
+        "expediente",
+        "número",
+        "7"
+      ]
+    },
+    {
+      "text": "D’Ávila envía un correo-e con 1.234,50 €.",
+      "tokens": [
+        "D’Ávila",
+        "envía",
+        "un",
+        "correo",
+        "e",
+        "con",
+        "1.234,50"
+      ]
+    },
+    {
+      "text": "¿Qué figura en la pág. 2?",
+      "tokens": [
+        "Qué",
+        "figura",
+        "en",
+        "la",
+        "pág",
+        "2"
+      ]
+    },
+    {
+      "text": "Únicamente falta el índice.",
+      "tokens": [
+        "Únicamente",
+        "falta",
+        "el",
+        "índice"
+      ]
+    }
+  ]
+}

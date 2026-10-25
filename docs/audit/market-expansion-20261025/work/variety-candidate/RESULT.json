@@ -1,0 +1,94 @@
+{
+  "status": "independently_reviewed_task_local_method_PASS",
+  "created_at": "2026-10-25T13:16:24.451862+00:00",
+  "entrypoint": "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+  "implementation": "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/candidate",
+  "profiles": [
+    "fil",
+    "he",
+    "nl",
+    "pl",
+    "cs",
+    "lt"
+  ],
+  "installed_shared_checker": false,
+  "shared_checker_path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+  "must_report_original_unsupported_separately": true,
+  "hard_thresholds_unchanged": true,
+  "new_unit": "orthographic_words",
+  "short_max": 8,
+  "long_min": 32,
+  "target_manuscripts_or_scores_read": false,
+  "self_tests": {
+    "fixture_contracts": {
+      "checks": 359,
+      "errors": 0,
+      "artifact": "fixture-tests.json"
+    },
+    "extension": {
+      "checks": 425,
+      "errors": 0,
+      "artifact": "evidence/extension-tests.json"
+    },
+    "old14_regression": {
+      "comparisons": 63,
+      "errors": 0,
+      "artifact": "evidence/old14-regression.json"
+    }
+  },
+  "independent_review": {
+    "reviewer": "/root/measure_new_locales_review",
+    "frozen_fixture_sha256": "41b6641d7f683f508b1db0a68984b46eedc903cc0aee1732b57a3191bd515511",
+    "first_result": "../variety-review/independent-results-r1.json",
+    "first_review": "../variety-review/review-r1.md",
+    "r1_repairs": "evidence/independent-review-r1-repairs.json",
+    "final_status": "PASS",
+    "final_report": "../variety-review/review-final.json",
+    "final_report_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+    "final_prose_report": "../variety-review/review-final.md",
+    "checks": {
+      "frozen_expectations": 215,
+      "frozen_exact_matches": 214,
+      "full_recheck_total": 334,
+      "full_recheck_exact_matches": 333,
+      "supplemental_total": 114,
+      "supplemental_exact_matches": 114,
+      "combined_total": 448,
+      "combined_exact_matches": 447,
+      "accepted_method_conventions": 1,
+      "unresolved_material_findings": 0
+    },
+    "accepted_convention": {
+      "fixture_id": "fil-words-1",
+      "status": "ACCEPTED_CONVENTION_DIFFERENCE_NOT_ERASED",
+      "original_reviewer_expected": [
+        "siya’y",
+        "pag",
+        "ibig",
+        "araw",
+        "araw"
+      ],
+      "accepted_author_preexecution_convention": [
+        "siya’y",
+        "pag-ibig",
+        "araw-araw"
+      ],
+      "reason": "The author froze hyphen-preserving Filipino orthographic units before any candidate execution; independent review accepted the choice after opening KWF §§11.1 and 11.3. Numeric ranges remain split and HARD/8/32 limits unchanged. No target scores informed this decision.",
+      "source": "https://kwfwikaatkultura.ph/download/21720/?tmstv=1710437195",
+      "frozen_file_unchanged": true,
+      "separate_accepted_expectation_test": "supplemental-results.json: accepted-fil-hyphen-convention"
+    },
+    "exact_reviewed_file_bindings_verified": true
+  },
+  "method": "METHOD.md",
+  "manifest": "evidence/candidate-manifest-repair-r1.json",
+  "manifest_sha256": "a495573c7986ac17c8212fefeee51bad1e07f8ea53444eb6424e35ecc481f275",
+  "limitations": [
+    "not an official installed shared checker",
+    "no article pass or publication certification",
+    "finite language heuristics and uncalibrated cross-language units",
+    "original14 comparison uses neutral fixtures, not target/current article corpus"
+  ],
+  "finalized_at": "2026-10-25T13:19:46.790783+00:00",
+  "global_checker_source_manifest_still_unchanged": true
+}

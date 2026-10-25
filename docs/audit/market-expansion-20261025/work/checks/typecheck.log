@@ -1,0 +1,6 @@
+
+> sejong-law@0.1.0 typecheck
+> NEXT_DIST_DIR=.next-build next typegen && tsc -p tsconfig.json --noEmit --incremental false
+
+Generating route types...
+✓ Route types generated successfully

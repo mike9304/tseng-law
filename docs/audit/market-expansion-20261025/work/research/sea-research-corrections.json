@@ -1,0 +1,59 @@
+{
+  "savedAt": "2026-10-25T13:27:16.600097+00:00",
+  "research_date": "2026-10-25",
+  "researcher": "market_se_asia",
+  "scope": "Narrow research-only corrections; no article edits",
+  "independent_observations": [
+    {
+      "source_id": "S-MOE",
+      "url": "https://depart.moe.edu.tw/phtw/News_Content.aspx?n=C55E4B183152E351&s=812090EFFB2368A9&sms=4FC4024DDD7B0CCB",
+      "method": "Live web open of official page",
+      "tool_ref": "turn1765view0",
+      "location": "L159 statistics date;L164 Indonesia row;L170 Myanmar row",
+      "source_date": "2026-02-26",
+      "country": "Indonesia",
+      "displayed_total": 18740,
+      "displayed_degree": 13957,
+      "displayed_nondegree": 4753,
+      "computed_component_sum": 18710,
+      "computed_difference": 30,
+      "decision": "Do not use either figure as a clean confirmed enrollment total; disclose mismatch and retain only evidence of student presence."
+    },
+    {
+      "source_id": "S-WDA",
+      "url": "https://lrsc.wda.gov.tw/Performance",
+      "method": "Live web open of official page",
+      "tool_ref": "turn1765view1",
+      "location": "L10–12 metric and total;L24–40 nationality counts",
+      "metric_label": "留用外國技術人力核准總人數",
+      "displayed_period": "截至115年09月底",
+      "unit": "人",
+      "displayed_total": 92184,
+      "country_counts": {
+        "Philippines": 20553,
+        "Indonesia": 47253,
+        "Thailand": 6181,
+        "Vietnam": 18090,
+        "Other": 107
+      },
+      "decision": "Programme-approved persons, not approval events/cases and not all current migrants or prospective clients."
+    }
+  ],
+  "independent_reviewer_corroboration": {
+    "reviewer": "expand_final_asia",
+    "file": "/Users/son7/tseng-market-expansion-20261025/work/reviews/asia-final-official-opens-supplement2.json",
+    "batch": 27,
+    "savedAt": "2026-10-25T13:25:09.877Z",
+    "sha256": "2dbe2b27847facf057f73354191dcd5be2793fad79475341fa909c4b0be3a4a7",
+    "verification": "Batch27 located in actual file; reviewer reported the same source rows and unit."
+  },
+  "changed_files": [
+    "sea-market.md",
+    "sea-sources.json"
+  ],
+  "checked_unchanged_files": [
+    "sea-briefs.md",
+    "sea-search-observations.json"
+  ],
+  "reason_unchanged": "Brief contains neither disputed Indonesia enrollment figure nor wrong WDA unit. Search observations retain historical raw tool responses."
+}

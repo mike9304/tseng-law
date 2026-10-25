@@ -1,0 +1,269 @@
+{
+  "reviewer": "/root/expand_final_east",
+  "checked_at_utc": "2026-10-25T13:21:45.835230+00:00",
+  "measurement_review": {
+    "path": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/review-final.json",
+    "sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c"
+  },
+  "approved_manifest_matches": true,
+  "manifest": {
+    "variety_metrics.py": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+    "METHOD.md": "7696ab4bccaee2990a1040bb95a70e8ccef2c1c1c97b0e5b7e42fa140f7e9839",
+    "candidate/variety_metrics.py": "f6a53d8265224b5795be95501f317eac018c23dba5b79513c6179fe1caa363c7",
+    "candidate/variety_multilingual.py": "776ab3e4364d2684e0d2b913933e7acc19fc6f01008b5ba042dbc7080e05f531",
+    "candidate/profiles/cs.json": "07aca997353f22983df868222e0aac634ca1c70f3b3e68cd2553bc075618b8b7",
+    "candidate/profiles/fil.json": "9bb87f92fde0d17ec521c2c7b22e40c6eeb272f0b53405d480f07a4b5886cd66",
+    "candidate/profiles/he.json": "ae6d8b60d6546a0adc9813cb16d4a11de8d7158a0fb93b45a11712bf49662983",
+    "candidate/profiles/lt.json": "f536d937faf4c26eadb19d5c8e5a0078dcfbce901501a4a8544c456d2cd02965",
+    "candidate/profiles/nl.json": "8ee2b7074e1ad3778998e87a1a566dff023a3c98c2525200d86c96050cf9dc2e",
+    "candidate/profiles/pl.json": "4137b957699be3977230e27533fcfcd27fb5a3cf5a04cc930ebf4f4c55c81f1d"
+  },
+  "articles": [
+    {
+      "id": 940,
+      "locale": "pl",
+      "path": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "source_sha256": "a163e85a051394b23172d1a77c57fee5b810a17f91da0fac036f015995f44820",
+      "mtime_utc": "2026-10-25T13:12:30.614145+00:00",
+      "runs": {
+        "shared": {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+            "--lang",
+            "pl"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'pl' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+        },
+        "task_local": {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+            "--lang",
+            "pl"
+          ],
+          "exit_code": 1,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md [pl] sentences=44 mean=15.3 cv=0.441 short=0.182 run3=0.071 opener_rep=0.067 cite_end=0.0 cite_para=0.4 contrast=0 caveat=0 q=1\n  FAIL len_cv=0.441 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+          "stderr": "OFFICIAL CHECKER: pl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+        }
+      },
+      "source_unchanged": true,
+      "image": {
+        "path": "/Users/son7/tseng-market-expansion-20261025/repo/public/images/columns/940-market-expansion-20261025.webp",
+        "sha256": "f695325dd0624188a9de25dab62c5f2830f090d528e1b50c265cbb989d00ffbd",
+        "bytes": 127632
+      }
+    },
+    {
+      "id": 941,
+      "locale": "pl",
+      "path": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "source_sha256": "5a4608ffd47e23663005ba9c77500e263b422d3907ff3b149ee6d39ff8ac8bc5",
+      "mtime_utc": "2026-10-25T13:12:30.614348+00:00",
+      "runs": {
+        "shared": {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+            "--lang",
+            "pl"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'pl' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+        },
+        "task_local": {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+            "--lang",
+            "pl"
+          ],
+          "exit_code": 1,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md [pl] sentences=52 mean=14.9 cv=0.426 short=0.212 run3=0.0 opener_rep=0.059 cite_end=0.0 cite_para=0.588 contrast=0 caveat=0 q=1\n  FAIL len_cv=0.426 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+          "stderr": "OFFICIAL CHECKER: pl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+        }
+      },
+      "source_unchanged": true,
+      "image": {
+        "path": "/Users/son7/tseng-market-expansion-20261025/repo/public/images/columns/941-market-expansion-20261025.webp",
+        "sha256": "6357ffc8fbd81c105b8c941b95328e95ecafc3945a65860ae4dd7f8da38e8227",
+        "bytes": 138916
+      }
+    },
+    {
+      "id": 942,
+      "locale": "cs",
+      "path": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+      "source_sha256": "bec0b9df6b63b0f17f5f9bc2ffac6b2ef23e2b8693475936eaca05ff1cfaa2a3",
+      "mtime_utc": "2026-10-25T13:13:58.256946+00:00",
+      "runs": {
+        "shared": {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+            "--lang",
+            "cs"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'cs' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+        },
+        "task_local": {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+            "--lang",
+            "cs"
+          ],
+          "exit_code": 0,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md [cs] sentences=44 mean=15.0 cv=0.455 short=0.159 run3=0.024 opener_rep=0.067 cite_end=0.0 cite_para=0.667 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+          "stderr": "OFFICIAL CHECKER: cs unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+        }
+      },
+      "source_unchanged": true,
+      "image": {
+        "path": "/Users/son7/tseng-market-expansion-20261025/repo/public/images/columns/942-market-expansion-20261025.webp",
+        "sha256": "fbe6798bf66fccdd74d1cf80421188c1da0fb122de6f0ad77625bf4491f46543",
+        "bytes": 164852
+      }
+    },
+    {
+      "id": 943,
+      "locale": "cs",
+      "path": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+      "source_sha256": "2c09cb482f2efe0b4d4f63d570b2ebed210bdfdd3708d2dfd9de95f5efa858c8",
+      "mtime_utc": "2026-10-25T13:13:58.257245+00:00",
+      "runs": {
+        "shared": {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+            "--lang",
+            "cs"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'cs' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+        },
+        "task_local": {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+            "--lang",
+            "cs"
+          ],
+          "exit_code": 0,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md [cs] sentences=44 mean=14.8 cv=0.456 short=0.205 run3=0.024 opener_rep=0.062 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+          "stderr": "OFFICIAL CHECKER: cs unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+        }
+      },
+      "source_unchanged": true,
+      "image": {
+        "path": "/Users/son7/tseng-market-expansion-20261025/repo/public/images/columns/943-market-expansion-20261025.webp",
+        "sha256": "d28c66a04807a5d524c06bd2ee1912a2c23b5bc60a6ebeaa8c6baec5c2ec35d0",
+        "bytes": 130824
+      }
+    },
+    {
+      "id": 944,
+      "locale": "lt",
+      "path": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md",
+      "source_sha256": "97d3b2e78a14b54de097dc66ae2a2db9f7abd1591a6aa0422c5e24625cdfbe50",
+      "mtime_utc": "2026-10-25T13:15:28.211394+00:00",
+      "runs": {
+        "shared": {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md",
+            "--lang",
+            "lt"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'lt' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+        },
+        "task_local": {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md",
+            "--lang",
+            "lt"
+          ],
+          "exit_code": 1,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md [lt] sentences=46 mean=14.7 cv=0.444 short=0.217 run3=0.023 opener_rep=0.125 cite_end=0.0 cite_para=0.312 contrast=0 caveat=1 q=2\n  FAIL len_cv=0.444 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+          "stderr": "OFFICIAL CHECKER: lt unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+        }
+      },
+      "source_unchanged": true,
+      "image": {
+        "path": "/Users/son7/tseng-market-expansion-20261025/repo/public/images/columns/944-market-expansion-20261025.webp",
+        "sha256": "2d622e75d557352b3b10b714fcc63bbd336b5f4a24758667c2fc4caf98bd000a",
+        "bytes": 208838
+      }
+    },
+    {
+      "id": 945,
+      "locale": "lt",
+      "path": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md",
+      "source_sha256": "2a0adb3d3c6c2293af7975144367e80fcfe7f3ce51102a314d9dc371090ba0c4",
+      "mtime_utc": "2026-10-25T13:13:34.956661+00:00",
+      "runs": {
+        "shared": {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md",
+            "--lang",
+            "lt"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'lt' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+        },
+        "task_local": {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md",
+            "--lang",
+            "lt"
+          ],
+          "exit_code": 0,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md [lt] sentences=49 mean=13.8 cv=0.455 short=0.204 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.6 contrast=0 caveat=1 q=2\n  OK — no variety limit violated\n",
+          "stderr": "OFFICIAL CHECKER: lt unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+        }
+      },
+      "source_unchanged": true,
+      "image": {
+        "path": "/Users/son7/tseng-market-expansion-20261025/repo/public/images/columns/945-market-expansion-20261025.webp",
+        "sha256": "ad89676d570335da227e9fea88f6c6e804af1b42b5541055ea2a93e5c5c67fe4",
+        "bytes": 236882
+      }
+    }
+  ]
+}

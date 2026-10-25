@@ -1,0 +1,128 @@
+{
+  "role": "AI Czech author",
+  "status": "FROZEN_FOR_METADATA_REBIND",
+  "date": "2026-10-25",
+  "revision": "locale-repair-1-and-943-topic-correction",
+  "independentReviewClaim": false,
+  "humanReviewClaim": false,
+  "publicationClaim": false,
+  "records": [
+    {
+      "id": 942,
+      "file": "repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+      "sha256": "bec0b9df6b63b0f17f5f9bc2ffac6b2ef23e2b8693475936eaca05ff1cfaa2a3",
+      "publicationDate": "2026-10-25",
+      "legalSourceCheckDate": "2026-10-25",
+      "inlineAndListedSources": [
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0080037",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=153",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=160",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=166",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=345",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080037&flno=4",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080037&flno=5",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080037&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080037&flno=8"
+      ],
+      "comparators": [
+        {
+          "file": "repo/src/content/columns-cs/873-czech-company-taiwan-subsidiary-branch-office.md",
+          "published": "2026-10-24",
+          "sha256": "4fa2004dc6c9221b58e919a38163897bf52b764f0e742a1811a55d07fca091d7",
+          "actualRead": true
+        },
+        {
+          "file": "repo/src/content/columns-cs/874-czech-working-holiday-taiwan-work-limits.md",
+          "published": "2026-10-24",
+          "sha256": "4fdee9eb324d52a49f18c53790d208c37e8bd356d88f41f2b27f2f9583e66566",
+          "actualRead": true
+        },
+        {
+          "file": "repo/src/content/columns-cs/875-czech-buyer-taiwan-defective-machine-claim.md",
+          "published": "2026-10-24",
+          "sha256": "e13f617788087fbecf742d5c2a8687941f98e9086c3edf277947f9c203f5ccd7",
+          "actualRead": true
+        }
+      ],
+      "firstTwoParagraphsDeletionTest": "See cs-author.md; repair 1 removes one redundant choice-of-law preview in 942",
+      "section5SelfCheck": "See nine-part self-check in cs-author.md",
+      "faqCount": 3,
+      "boldMarkupFound": false,
+      "duplicateLeadingH1": false,
+      "contactEmailOccurrences": 1,
+      "sourceCaptures": [
+        "work/reviews/cs-author-opened-sources.json",
+        "work/reviews/cs-author-supplemental-sources.json"
+      ],
+      "image": "repo/public/images/columns/942-market-expansion-20261025.webp",
+      "imageSha256": "fbe6798bf66fccdd74d1cf80421188c1da0fb122de6f0ad77625bf4491f46543",
+      "actualOriginalAndWebpImageInspection": true
+    },
+    {
+      "id": 943,
+      "file": "repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+      "sha256": "67fd481e9ae23009247b50aa53d09f6b3a21e962bf1dd76bbcbaed1de8592bc5",
+      "publicationDate": "2026-10-25",
+      "legalSourceCheckDate": "2026-10-25",
+      "inlineAndListedSources": [
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070007",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=22",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=28",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=29",
+        "https://mzv.gov.cz/taipei/cz/obcho_a_ekonomika/rostouci_stopa_ceske_republiky_v.html",
+        "https://www.tipo.gov.tw/en/tipo2/391-2525.html",
+        "https://www.tipo.gov.tw/tw/patents/998-66064.html",
+        "https://www.wto.org/english/thewto_e/countries_e/czech_republic_e.htm"
+      ],
+      "comparators": [
+        {
+          "file": "repo/src/content/columns-cs/873-czech-company-taiwan-subsidiary-branch-office.md",
+          "published": "2026-10-24",
+          "sha256": "4fa2004dc6c9221b58e919a38163897bf52b764f0e742a1811a55d07fca091d7",
+          "actualRead": true
+        },
+        {
+          "file": "repo/src/content/columns-cs/874-czech-working-holiday-taiwan-work-limits.md",
+          "published": "2026-10-24",
+          "sha256": "4fdee9eb324d52a49f18c53790d208c37e8bd356d88f41f2b27f2f9583e66566",
+          "actualRead": true
+        },
+        {
+          "file": "repo/src/content/columns-cs/875-czech-buyer-taiwan-defective-machine-claim.md",
+          "published": "2026-10-24",
+          "sha256": "e13f617788087fbecf742d5c2a8687941f98e9086c3edf277947f9c203f5ccd7",
+          "actualRead": true
+        }
+      ],
+      "firstTwoParagraphsDeletionTest": "See cs-author.md; repair 1 removes one redundant choice-of-law preview in 942",
+      "section5SelfCheck": "See nine-part self-check in cs-author.md",
+      "faqCount": 3,
+      "boldMarkupFound": false,
+      "duplicateLeadingH1": false,
+      "contactEmailOccurrences": 1,
+      "sourceCaptures": [
+        "work/reviews/cs-author-opened-sources.json",
+        "work/reviews/cs-author-supplemental-sources.json"
+      ],
+      "image": "repo/public/images/columns/943-market-expansion-20261025.webp",
+      "imageSha256": "d28c66a04807a5d524c06bd2ee1912a2c23b5bc60a6ebeaa8c6baec5c2ec35d0",
+      "actualOriginalAndWebpImageInspection": true,
+      "topic": "company",
+      "bodyUnchangedFromLocaleRepair1": true
+    }
+  ],
+  "imageEvidence": "work/images/cs-generation.json",
+  "varietyEvidence": "work/reviews/cs-author-variety.json",
+  "repairEvidence": "work/reviews/cs-author-repair1.json",
+  "marketBrief": "work/research/east-briefs.md",
+  "limitations": [
+    "Global variety CLI does not support Czech; exit 2 recorded, never relabelled English.",
+    "No measured search volume, conversion data or Czech-language consultation claim.",
+    "No direct patent-practitioner or PPH service claim; foreign rights outside scope.",
+    "No Git push, deployment or live readback by author."
+  ],
+  "metadataRepairEvidence": "work/reviews/cs-author-topic-repair.json",
+  "methodReview": "work/variety-review/review-final.json"
+}

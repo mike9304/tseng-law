@@ -1,0 +1,19 @@
+{
+  "counts": {
+    "unchanged": 23,
+    "source-positive": 48,
+    "source-tail": 48,
+    "source-negative": 48,
+    "body-preserved": 48,
+    "rhetorical": 120,
+    "citation": 24,
+    "units": 12,
+    "cli": 24,
+    "unavailable": 24,
+    "scope": 6
+  },
+  "total": 425,
+  "errors": [],
+  "target_manuscripts_or_scores_read": false,
+  "review_status": "author technical self-test only; independent review separate"
+}

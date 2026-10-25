@@ -1,0 +1,237 @@
+{
+  "date": "2026-10-25",
+  "locale": "pt",
+  "regionalLocale": "pt-BR",
+  "country": "Brazil",
+  "role": "author",
+  "independentReview": false,
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "records": [
+    {
+      "id": 938,
+      "path": "src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md",
+      "sha256": "e196bf577e8a7ef27dcc7204347a16d4c473e3a12e143e692518a53b4f860b58",
+      "variety": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md",
+          "--lang",
+          "pt"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md [pt] sentences=36 mean=18.4 cv=0.515 short=0.25 run3=0.0 opener_rep=0.077 cite_end=0.0 cite_para=0.615 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": "",
+        "fails": 0
+      },
+      "firstTwoParagraphs": [
+        "O importador que recebe uma notificação de reprovação na inspeção de alimentos de Taiwan tem 15 dias para solicitar nova análise à autoridade responsável, conforme o [artigo 23 do regulamento de inspeção de alimentos importados](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0040017&flno=23). Só cabe um pedido. Para o exportador de café no Brasil, obter a notificação completa permite conhecer o motivo da reprovação e decidir com o importador se há fundamento para contestar o resultado.",
+        "Pelo [artigo 25](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0040017&flno=25), presume-se realizada a entrega quando o sistema de inspeção fronteiriça expede a notificação eletrônica. A mensagem encaminhada depois ao fornecedor brasileiro não inicia outro prazo; por isso, o registro de emissão no sistema deve acompanhar a cópia do aviso."
+      ],
+      "metadataRepair": {
+        "oldSha256": "c71b28ee78f1b6c0879ca7389c76dfbf4474cf5b361eb28a998b8d95be2941d0",
+        "field": "topic",
+        "from": "business",
+        "to": "litigation",
+        "reason": "Actual taxonomy in src/lib/column-topics.ts excludes business; body unchanged."
+      }
+    },
+    {
+      "id": 939,
+      "path": "src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md",
+      "sha256": "5f684d9d24803677ba3288acc029b5739b8353ce41d9a4e19a13a3980c400a2d",
+      "variety": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md",
+          "--lang",
+          "pt"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md [pt] sentences=37 mean=19.5 cv=0.454 short=0.189 run3=0.029 opener_rep=0.231 cite_end=0.0 cite_para=0.462 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": "",
+        "fails": 0
+      },
+      "firstTwoParagraphs": [
+        "O café brasileiro precisa atender a uma das duas vias do [artigo 17 da Lei de Promoção da Agricultura Orgânica](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=M0030093&flno=17) para ser vendido como orgânico em Taiwan. A exigência alcança também rótulos, exposição e publicidade.",
+        "Para uma cooperativa ou torrefadora brasileira, a revisão começa no certificado que acompanha o produto: quem o emitiu, onde ocorreu a certificação e quais atividades ela cobre. Esses dados permitem avaliar o enquadramento em Taiwan antes de fechar uma encomenda de embalagens ou prometer ao distribuidor a venda como orgânico. O uso da expressão no Brasil, por si só, não resolve essa análise."
+      ],
+      "metadataRepair": {
+        "oldSha256": "03a12e5f770a04e9c6ecbe105632aa2fbe9b2b1b010095938587545ed8cef19d",
+        "field": "topic",
+        "from": "business",
+        "to": "company",
+        "reason": "Actual taxonomy in src/lib/column-topics.ts excludes business; body unchanged."
+      }
+    }
+  ],
+  "brief": "work/research/west-briefs.md",
+  "imageManifest": "work/images/pt-generation.json",
+  "comparators": [
+    {
+      "path": "src/content/columns-pt/704-taiwan-arc-first-application.md",
+      "published": "2026-10-24"
+    },
+    {
+      "path": "src/content/columns-pt/705-taiwan-visa-residence-work-study-family.md",
+      "published": "2026-10-24"
+    },
+    {
+      "path": "src/content/columns-pt/706-taiwan-arc-renewal-changes-reentry.md",
+      "published": "2026-10-24"
+    }
+  ],
+  "marketBasis": {
+    "url": "https://www.bsca.com.br/acoes-coreia-taiwan-us-94-milhoes/",
+    "opened": "2026-10-25",
+    "observed": "BSCA/ApexBrasil reported 31 Brazilian coffee businesspeople at Taipei Taiwan International Coffee Show, 14–17 November2025. Published18December2025.",
+    "interpretation": "Actual sector connection supports topic selection. Search volume, legal inquiries and conversions unmeasured. Projected turnover is not realized revenue and is not included in articles."
+  },
+  "sources": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0040017&flno=23",
+      "supports": "938: 15days from notice receipt, one reanalysis, original laboratory and remaining original sample; remaining sample disposal unless other law.",
+      "opened": "2026-10-25",
+      "status": "Current Chinese full text and exact-article link opened."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0040017&flno=24",
+      "supports": "938: importer applicant disposes of noncompliant goods, other law exception; return/destruction; enumerated treatment/relabel cases; authority approval to import first and perform correction later; conditionally released goods remain subject.",
+      "opened": "2026-10-25",
+      "status": "Current Chinese full text read; exact article clicked. Chinese text controls over shorter English rendering."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0040017&flno=25",
+      "supports": "938: electronic delivery presumed on issuance through system. Presumption preserved; no supplier-forwarding reset.",
+      "opened": "2026-10-25",
+      "status": "Current exact Chinese article reopened after cached result; text matches current LawAll."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0040017",
+      "supports": "938: amended21August2025; arts19–21 effective1September2025; other provisions including23–25 effective1January2026.",
+      "opened": "2026-10-25",
+      "status": "Current history opened through LawAll link."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0040001&flno=39",
+      "supports": "938: original sampling authority,15days; authority proceeds with reanalysis within3days, not a guarantee of results/cargo release; may refuse if no adequate preservation method.",
+      "opened": "2026-10-25",
+      "status": "Current Chinese article opened."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?Pcode=L0040017",
+      "supports": "938 article2 separates applicant importer from inspection authority; Chinese23–25 and29 cross-check.",
+      "opened": "2026-10-25",
+      "status": "Read current full text; independent reviewer used same for actor clarification."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=M0030093&flno=17",
+      "supports": "939: two conditional import organic routes; Taiwan-accredited body and territory; equivalent-country/WTO member accreditation and territory plus importer application/review/approval document; announced bilateral equivalence.",
+      "opened": "2026-10-25",
+      "status": "Current Chinese full text and exact article opened."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=M0030093&flno=18",
+      "supports": "939: Chinese/common symbols, product/organic indication, ingredient order and single-ingredient exception, imported-product importer details, origin and address exception, certifier and certificate/approval number, authority-announced items/limited exemptions; changes within3months.",
+      "opened": "2026-10-25",
+      "status": "Current Chinese exact article opened; full text cross-check."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=M0030093&flno=13",
+      "supports": "939: parties may contract for certification scope across production/processing/packaging/distribution.",
+      "opened": "2026-10-25",
+      "status": "Current exact article opened via LawAll click after initial direct open failed."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=M0030093&flno=16",
+      "supports": "939: certification of production/processing/packaging/distribution for sale as organic; prevents reading Article13 limited engagement as certification of all stages.",
+      "opened": "2026-10-25",
+      "status": "Current Chinese exact article opened and full text cross-checked."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=M0030093&flno=19",
+      "supports": "939: bulk-sales display product/origin and certificate or relevant approval copy; applicable18product/origin conditions.",
+      "opened": "2026-10-25",
+      "status": "Current exact article opened via LawAll click after initial direct open failed."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=M0030093",
+      "supports": "939: Act promulgated30May2018 and effective one year after publication; applicable authority transferred to Ministry of Agriculture1August2023.",
+      "opened": "2026-10-25",
+      "status": "Current history opened; no proposed/draft law used."
+    },
+    {
+      "url": "https://www.afa.gov.tw/cht/index.php?article_id=22184&code=list&flag=detail&ids=546",
+      "supports": "939: official certification body list describes scope, validity and authorized territories through attachments.",
+      "opened": "2026-10-25",
+      "status": "Opened current page labelled list as of9September2026; updated10September2026. No certifier Brazil eligibility claimed."
+    },
+    {
+      "url": "https://www.afa.gov.tw/cht/index.php?code=list&ids=548",
+      "supports": "939 bounded observation: Brazil not displayed among equivalence links on viewed current AFA page.",
+      "opened": "2026-10-25",
+      "status": "Opened full page. This is not proof all other routes or certification of Brazilian products are unavailable."
+    }
+  ],
+  "openingDeletionTest": {
+    "938": [
+      "P1S1 retained: applicant, notification trigger,15day deadline and receiving authority.",
+      "P1S2 retained: statutory one-request limit.",
+      "P1S3 retained: Brazilian supplier obtains full notice for technical/contract decision.",
+      "P2S1 retained: electronic issuance and rebuttable presumption of delivery.",
+      "P2S2 retained: forwarding to Brazil does not reset clock; preserve issuance record.",
+      "Removed redundant initial P2 short sentence about possible electronic notice; following sourced sentence contains fact."
+    ],
+    "939": [
+      "Removed initial question because it repeated the title without adding a condition.",
+      "P1S1 retained: two legal routes and Taiwan sale-as-organic condition for Brazilian product.",
+      "P1S2 retained: labels/display/advertising also covered.",
+      "P2S1 retained: buyer-specific actors and certificate issuer/location/activity fields.",
+      "P2S2 retained: check before printing/order commitments.",
+      "P2S3 retained: domestic Brazil usage does not establish Taiwan qualification."
+    ]
+  },
+  "section5SelfCheck": {
+    "1": "Original shared CLI --lang pt, both exit0 and0FAIL. See hash-bound records.",
+    "2": "938 direct15day deadline;939 direct organic-sale eligibility condition. No stock hypothetical opener. Full24article batch variety is root responsibility.",
+    "3": "938 short ratio.25 of36sentences;939 .189 of37; at least2short sentences each. No invented filler to pass numerical thresholds.",
+    "4": "Paragraph start threshold PASS after eliminating redundant notice sentence and reordering two organic paragraphs.",
+    "5": "No three consecutive claim-parenthetical-caveat paragraphs; practical contractual paragraphs contain no legal citation and are framed as negotiation/preparation.",
+    "6": "Automated contrast count0; no invented opposing proposition. Actual Brazil domestic certificate/Taiwan requirements distinction retained.",
+    "7": "938 ends on notice-date information;939 ends on product stage and secure document channel; no copied generic conclusion or sales promise.",
+    "8": "Brazilian terms include notificação, laudo, rotulagem, fracionamento, torrefadora, armazenagem, equipe, contrato. No bold/H1 duplicate/byline/fake first person.",
+    "9": "15days/one original sample/original lab/preservation exception/system presumption/conditional disposition and organic territorial/approval/label exceptions preserved. FAQ mirrors body."
+  },
+  "contactScope": {
+    "languages": [
+      "English",
+      "Chinese",
+      "Korean",
+      "Japanese"
+    ],
+    "email": "wei@hoveringlaw.com.tw",
+    "note": "Nonconfidential summary, communication method confirmation, receipt not acceptance. No Portuguese service promise. Word telefone in939 is required importer label information, not law-firm phone contact."
+  },
+  "repairs": [
+    {
+      "id": 938,
+      "round": "independent_locale_r1",
+      "requester": "expand_locale_pt",
+      "oldSha256": "603794474433f03f7ff04f30761c3ab45ea3d6fdd43acbb6ffbb22b8826dd460",
+      "change": "Two ambiguous phrases responsável pela inspeção changed to importador responsável por solicitar a inspeção inFAQ2 andArticle24 paragraph. Actor clarified underArticle2; deadlines/rights/disposition unchanged.",
+      "status": "Independent locale reviewer readback PASS received on pre-taxonomy SHA. Metadata-only rebind pending."
+    }
+  ],
+  "limitations": [
+    "Author self-check is not independent approval or human/native lawyer review.",
+    "No Brazil certifier territorial eligibility verified; article requires case-specific proof and makes no guarantee.",
+    "No Brazilian law analysis, customs broker service, lab testing service or approvals promised.",
+    "No quantified market or search-demand claim; no case statistics or actual-client story.",
+    "Some MOJ direct opens failed initially; same current official full text and later exact-page clicks succeeded.",
+    "No publication or browser layout QA by author. Root handles integration and public readback."
+  ],
+  "metadataRepair": "After locale PASS, author found unsupported topic business. Only topic fields changed:938litigation/939company. Body byte-identical to locale-PASS manuscripts; fresh full-file hashes require reviewer rebind."
+}

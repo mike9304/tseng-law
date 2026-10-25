@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-25T13:34:57.399978+00:00",
+  "reason": "Inherited latestmain Russian ARC captions failed existing exactcaptionlabel rule. Narrowintegrationrepair only, no legalbody changes.",
+  "records": [
+    {
+      "source_path": "src/content/columns-ru/704-taiwan-arc-first-application.md",
+      "old_sha256": "eb6556aa6226a2d2394a9c4d126246ef142e943a633c1cb1b3ae9a826684e69f",
+      "new_sha256": "ab1ee7e62195d68ae6042a3ca8746ec910543fb3b321f3fd62978954a8a6e71a",
+      "old_caption": "Условная сцена",
+      "new_caption": "Вымышленная сцена",
+      "body_and_all_other_metadata_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-ru/705-taiwan-visa-residence-work-study-family.md",
+      "old_sha256": "067ccea7c153d2531333702b913001e39f01d200f3202e4fda0be5a0eb387b53",
+      "new_sha256": "7cb92723448d3558487e297b6b89f62d3ab52955fac77bdfd651a80d49d33cdb",
+      "old_caption": "Условная сцена",
+      "new_caption": "Вымышленная сцена",
+      "body_and_all_other_metadata_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-ru/706-taiwan-arc-renewal-changes-reentry.md",
+      "old_sha256": "36debf5bfdd7138c98528d06dd8ea85b5724008d791df2d8263ac5f5becc49c9",
+      "new_sha256": "b9caf2c6328c7d328f376f9cecdaef142e265fa451a49a5c370edf2f177ffe28",
+      "old_caption": "Условная сцена",
+      "new_caption": "Вымышленная сцена",
+      "body_and_all_other_metadata_unchanged": true
+    }
+  ]
+}

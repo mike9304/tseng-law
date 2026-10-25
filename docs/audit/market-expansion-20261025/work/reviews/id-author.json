@@ -1,0 +1,167 @@
+{
+  "createdAt": "2026-10-25T13:14:06.394158+00:00",
+  "locale": "id",
+  "mode": "DRAFT",
+  "authorAgent": "/root/expand_author_id",
+  "report": "work/reviews/id-author.md",
+  "reportSha256": "45eac72fc5ca47ac55b1514b65c985640776fcf3d9b802908f5e5747b6cd589b",
+  "records": [
+    {
+      "id": 924,
+      "file": "src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md",
+      "sha256": "8f8f4b9059df25cfaf8d29cb6fe73c7a9b462ef37f3876bf6a36becbfa9221db",
+      "status": "READY_FOR_INDEPENDENT_REVIEW",
+      "authorSelfCheck": true,
+      "independentLocaleReview": false,
+      "independentFinalLegalReview": false,
+      "publishedByAuthor": false,
+      "image": {
+        "path": "public/images/columns/924-market-expansion-20261025.webp",
+        "sha256": "d705073447ac0b21a047d736acca9cd73cc6e3e4ab98d560fc5f321bc5761b7a",
+        "width": 1536,
+        "height": 1024,
+        "visuallyInspectedFinalFile": true
+      },
+      "comparators": [
+        {
+          "file": "src/content/columns-id/704-taiwan-arc-first-application.md",
+          "published": "2026-10-24"
+        },
+        {
+          "file": "src/content/columns-id/705-taiwan-visa-residence-work-study-family.md",
+          "published": "2026-10-24"
+        },
+        {
+          "file": "src/content/columns-id/706-taiwan-arc-renewal-changes-reentry.md",
+          "published": "2026-10-24"
+        }
+      ],
+      "firstTwoParagraphDeletionTest": "See id-author.md; 924 generic forecast sentence replaced with concrete unpaid-maternity baseline;925 each opening sentence retained for distinct permit/actor/extra-pay distinction.",
+      "section5SelfCheck": "Nine items recorded in id-author.md",
+      "measurement": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md",
+          "--lang",
+          "id"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md [id] sentences=51 mean=14.6 cv=0.468 short=0.235 run3=0.041 opener_rep=0.118 cite_end=0.0 cite_para=0.412 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "originalSharedCli": true,
+        "failureCount": 0
+      },
+      "officialUrlsChecked": [
+        "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb396b1b5b30196b414768a0b43",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=15",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=21",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=31",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=34",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=36",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=59",
+        "https://www.mol.gov.tw/1607/28162/28166/28268/28270/29101/",
+        "https://www.wda.gov.tw/News_Content.aspx?n=31&s=19455"
+      ],
+      "sourceReviewDate": "2026-10-25",
+      "sourceListMissingUrls": []
+    },
+    {
+      "id": 925,
+      "file": "src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md",
+      "sha256": "d9b6f376d4eae90d11e8cc583818f32c56d0898a5457594566e617fa38e7dbaf",
+      "status": "READY_FOR_INDEPENDENT_REVIEW",
+      "authorSelfCheck": true,
+      "independentLocaleReview": false,
+      "independentFinalLegalReview": false,
+      "publishedByAuthor": false,
+      "image": {
+        "path": "public/images/columns/925-market-expansion-20261025.webp",
+        "sha256": "41beac4dfdbb8f47d304252163c526d5586c68abc875937ff26ce65d7530aab8",
+        "width": 1536,
+        "height": 1024,
+        "visuallyInspectedFinalFile": true
+      },
+      "comparators": [
+        {
+          "file": "src/content/columns-id/704-taiwan-arc-first-application.md",
+          "published": "2026-10-24"
+        },
+        {
+          "file": "src/content/columns-id/705-taiwan-visa-residence-work-study-family.md",
+          "published": "2026-10-24"
+        },
+        {
+          "file": "src/content/columns-id/706-taiwan-arc-renewal-changes-reentry.md",
+          "published": "2026-10-24"
+        }
+      ],
+      "firstTwoParagraphDeletionTest": "See id-author.md; 924 generic forecast sentence replaced with concrete unpaid-maternity baseline;925 each opening sentence retained for distinct permit/actor/extra-pay distinction.",
+      "section5SelfCheck": "Nine items recorded in id-author.md",
+      "measurement": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md",
+          "--lang",
+          "id"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md [id] sentences=46 mean=14.8 cv=0.46 short=0.217 run3=0.023 opener_rep=0.071 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "originalSharedCli": true,
+        "failureCount": 0
+      },
+      "officialUrlsChecked": [
+        "https://fw.wda.gov.tw/wda-employer/home/no-work-illegally/no-work-illegally-file/2c95efb395ab11680195ac17c09d0157",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=43",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=57",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=59",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=68",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=72",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=73"
+      ],
+      "sourceReviewDate": "2026-10-25",
+      "sourceListMissingUrls": []
+    }
+  ],
+  "research": [
+    "work/research/sea-briefs.md",
+    "work/research/sea-market.md",
+    "work/research/sea-sources.json"
+  ],
+  "sourceEvidence": [
+    "work/reviews/id-author-source-evidence.json",
+    "work/reviews/id-author-support-evidence.json"
+  ],
+  "serviceTruth": [
+    "src/data/international-inquiry-copy.ts:id",
+    "src/data/en-service-scope.ts"
+  ],
+  "limits": [
+    "MOJ displayed compilation cutoff2026-10-16 on review date2026-10-25; official current WDA sources also opened.",
+    "No claim of measured search volume, conversion or paid-case demand.",
+    "No claim of human native or attorney review.",
+    "Root must independently certify frozen SHAs and publish."
+  ],
+  "updatedAt": "2026-10-25T13:22:58.117302+00:00",
+  "independentReviewRepairs": [
+    {
+      "repairNumber": 1,
+      "stage": "independent final legal terminology repair",
+      "id": 924,
+      "requestedBy": "/root/expand_final_asia",
+      "localeAgreement": "/root/expand_locale_id",
+      "timestamp": "2026-10-25T13:22:58.117302+00:00",
+      "previousSha256": "b07ba325b1496e07901e5ccd79ae98a0066bb7add927257deae9db7c4557e85a",
+      "currentSha256": "8f8f4b9059df25cfaf8d29cb6fe73c7a9b462ef37f3876bf6a36becbfa9221db",
+      "change": "Add Taiwan (Employment Insurance Act, 就業保險法) at first mention only, distinguishing Employment Insurance Act from labor or occupational insurance.",
+      "basis": "WDA 2026-10-13 clarification, https://www.wda.gov.tw/News_Content.aspx?n=31&s=19455",
+      "unchanged925Sha256": "d9b6f376d4eae90d11e8cc583818f32c56d0898a5457594566e617fa38e7dbaf",
+      "originalSharedCliExitCode": 0,
+      "failureCount": 0,
+      "independentRereview": "Pending exact-SHA locale and final legal confirmation."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "savedAt": "2026-10-25T13:27:16.600097+00:00",
+  "status": "PASS",
+  "scope": "Final research artifact hashes after MOE/WDA correction",
+  "files": [
+    {
+      "file": "sea-market.md",
+      "sha256": "19cbb215f8540b2bec4a3af472eaeb1652908c58afeb70b9ae5766cfa87b5314",
+      "bytes": 18442
+    },
+    {
+      "file": "sea-sources.json",
+      "sha256": "3c559eb6235e78a50e85a8c811a715e000b03f660d20c83aa66ee26fec421ddf",
+      "bytes": 38871
+    },
+    {
+      "file": "sea-briefs.md",
+      "sha256": "3aba6e935e34f5fc850cf0c628ba8d60a481057d3dc4179feae80f804705cc6c",
+      "bytes": 21200
+    },
+    {
+      "file": "sea-search-observations.json",
+      "sha256": "13824bee0e33f52213c059b744c2ff6f2c5adfaa971a282c99fa67e069437466",
+      "bytes": 219920
+    },
+    {
+      "file": "sea-research-corrections.json",
+      "sha256": "835c5edeaca14970ea15a4aca4a497d384c920f6975dceb962b94afc28e17fa0",
+      "bytes": 2416
+    }
+  ]
+}

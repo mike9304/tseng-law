@@ -1,0 +1,75 @@
+{
+  "status": "AUTHOR_SELF_CHECK_ONLY; candidate tool independent approval pending",
+  "candidateTool": "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/candidate/variety_metrics.py",
+  "candidateToolSHA256": "f6a53d8265224b5795be95501f317eac018c23dba5b79513c6179fe1caa363c7",
+  "candidateModuleSHA256": "34bca4bb031b7fa386ea1ef16014a62c9a5c140e89410f75f9ca527ad3f8e85d",
+  "candidateHebrewProfileSHA256": "39a1209ba75396c0b0e99395f7cea5b0a833c81101e7ec7d47f64a3b3ab1eb16",
+  "entries": [
+    {
+      "article": "932",
+      "path": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+      "sha256": "9115389453a135cf8b3b8f010f3bd996afbc0ee81bf6e92b43455033c617496f",
+      "measurements": [
+        {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+            "--lang",
+            "he"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'he' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+        },
+        {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+            "--lang",
+            "he"
+          ],
+          "exit_code": 0,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md [he] sentences=37 mean=14.4 cv=0.465 short=0.189 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "article": "933",
+      "path": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+      "sha256": "c1edcaaa8978b6198116c522ad6edd879a9961a0f7c9f29af53a67c592f49e88",
+      "measurements": [
+        {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+            "--lang",
+            "he"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'he' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+        },
+        {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+            "--lang",
+            "he"
+          ],
+          "exit_code": 0,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md [he] sentences=43 mean=13.7 cv=0.481 short=0.256 run3=0.024 opener_rep=0.071 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+          "stderr": ""
+        }
+      ]
+    }
+  ]
+}

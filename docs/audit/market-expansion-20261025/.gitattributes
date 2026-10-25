@@ -1,0 +1,11 @@
+# Raw official evidence and terminal output are preserved byte for byte.
+work/**/*.log -whitespace
+work/**/*.txt -whitespace
+work/**/*.html -whitespace
+work/**/*.diff -whitespace
+# Preserve reviewed report/source-capture hashes, including trailing newlines.
+work/research/*.md whitespace=-blank-at-eof
+work/reviews/**/*.md whitespace=-blank-at-eof
+work/reviews/*.md whitespace=-blank-at-eof
+work/reviews/**/*.json whitespace=-blank-at-eof
+work/reviews/*.json whitespace=-blank-at-eof

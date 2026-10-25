@@ -1,0 +1,49 @@
+{
+  "at": "2026-10-25T13:27:56.246140+00:00",
+  "reviewer": "/root",
+  "scope": "Read titles and first two body paragraphs of all24 drafts; qualitative batch distribution, not new native/attorney certification",
+  "classes": {
+    "concrete_rule_or_result": [
+      922,
+      923,
+      924,
+      926,
+      932,
+      934,
+      935,
+      936,
+      939,
+      941
+    ],
+    "reader_question": [
+      925,
+      931,
+      933,
+      937
+    ],
+    "mistaken_inference_or_distinction": [
+      927,
+      930,
+      940,
+      942,
+      943,
+      945
+    ],
+    "transaction_materials": [
+      929,
+      944
+    ],
+    "number_or_deadline": [
+      928,
+      938
+    ]
+  },
+  "largest_class": 10,
+  "total": 24,
+  "notes": [
+    "No generic welcome or stock hypothetical opener observed. Concrete rule/result 10/24; no single type abovehalf.",
+    "Introductions address different countries/transactions; exact within-locale deletion/comparator/§5 review is in independent locale reports.",
+    "NL934 vs JA135 focused finalWest review confirmed a distinct installation-extension decision; currentstay/workpermissionlimits and2018guidanceboundary recorded in west-final.md/json.",
+    "Editorial quantification cannot substitute for natural-language/current-law review."
+  ]
+}

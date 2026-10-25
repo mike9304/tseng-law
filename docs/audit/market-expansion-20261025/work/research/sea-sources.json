@@ -1,0 +1,1065 @@
+{
+  "research_date": "2026-10-25",
+  "researcher": "market_se_asia",
+  "scope": "8language screening;6 independent Taiwan-law topic briefs;research only",
+  "method_limits": [
+    "No traffic/search volume/conversion/client-lead measurements.",
+    "All priority rankings are editorial hypotheses, not forecasts.",
+    "Law database showed consolidated cutoff2026-10-16; authors must verify any later changes or newly added claims.",
+    "Actual article drafts, deployment and legal outcome not verified by this research agent."
+  ],
+  "sources": [
+    {
+      "id": "S-MOE",
+      "type": "official_market",
+      "title": "MOE overseas students 2025–26",
+      "url": "https://depart.moe.edu.tw/phtw/News_Content.aspx?n=C55E4B183152E351&s=812090EFFB2368A9&sms=4FC4024DDD7B0CCB",
+      "published_or_period": "2026-02-26",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "claims": [
+        "Vietnam 52974; Malaysia 8740; Philippines 5536; Thailand 4744; Mainland China 4113; Hong Kong 5103.",
+        "Indonesian students are present, but the row is internally inconsistent and no clean precise Indonesian enrollment figure is relied on."
+      ],
+      "limits": [
+        "Enrollment includes degree and nondegree students; not prospective paying clients.",
+        "Myanmar row is internally inconsistent: total4431, degree4431, nondegree793. Do not quote or silently repair.",
+        "Indonesia row total18740 differs by30 from degree13957 plus nondegree4753, which sums to18710. Do not select either total as authoritative or silently repair the source."
+      ],
+      "internal_discrepancies": [
+        {
+          "country": "Indonesia",
+          "reported_total": 18740,
+          "reported_degree": 13957,
+          "reported_nondegree": 4753,
+          "component_sum": 18710,
+          "difference": 30,
+          "use": "Exact enrollment figure withheld pending official reconciliation."
+        },
+        {
+          "country": "Myanmar",
+          "reported_total": 4431,
+          "reported_degree": 4431,
+          "reported_nondegree": 793,
+          "component_sum": 5224,
+          "difference": -793,
+          "use": "Exact enrollment figure withheld pending official reconciliation."
+        }
+      ],
+      "rechecked_date": "2026-10-25"
+    },
+    {
+      "id": "S-WDA",
+      "type": "official_market",
+      "title": "Foreign talent retention programme approved persons",
+      "url": "https://lrsc.wda.gov.tw/Performance",
+      "published_or_period": "Through 2026-09",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "claims": [
+        "Programme-approved persons through2026-09: total92184persons; Indonesia47253, Philippines20553, Vietnam18090, Thailand6181, other107."
+      ],
+      "limits": [
+        "Programme-approved persons, not the current total migrant-worker stock or unique prospective clients."
+      ],
+      "original_metric_label": "留用外國技術人力核准總人數",
+      "original_unit": "人",
+      "unit": "persons approved under the programme, not approval events/cases",
+      "rechecked_date": "2026-10-25"
+    },
+    {
+      "id": "S-ID-CITY",
+      "type": "official_market",
+      "title": "New Taipei Indonesia cultural event and migrant population",
+      "url": "https://www.sec.ntpc.gov.tw/home.jsp?act=be4f48068b2b0031&dataserno=dbacc22d58e86b9a736294aab17fbcc9&id=6918f79d690935a2&mserno=626ba3c03bd0076e3e585f9615d4c0fb",
+      "published_or_period": "2026-08-23",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "claims": [
+        "New Taipei states over90000 migrant workers, over42000 from Indonesia."
+      ],
+      "limits": [
+        "City only, not all Taiwan."
+      ]
+    },
+    {
+      "id": "S-MY-TRADE",
+      "type": "official_market",
+      "title": "Malaysia 2025 trade performance",
+      "url": "https://www.investmalaysia.gov.my/resources/latest-announcements/malaysia-surpasses-rm3-trillion-trade-milestone-in-2025/",
+      "published_or_period": "2026-01-20 reporting2025",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "claims": [
+        "Malaysia exports to Taiwan RM87.95b, up31.2%."
+      ],
+      "limits": [
+        "Exports in one direction, not bilateral total.",
+        "No evidence of Malay language preference or law-firm demand."
+      ]
+    },
+    {
+      "id": "S-KM",
+      "type": "official_market",
+      "title": "Taichung civil affairs official MOI household interpretations",
+      "url": "https://civilinfo.taichung.gov.tw/1486242/1486254/1486255?PageSize=30&type=8",
+      "published_or_period": "MOI letter2025-05-26 台內戶字第1140251264號",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "claims": [
+        "Cambodia removal from specified overseas marriage-interview country list formalized effective2025-05-22."
+      ],
+      "limits": [
+        "Specific marriage procedure; not blanket exemption from interviews or immigration rules.",
+        "Already covered by KM813."
+      ]
+    },
+    {
+      "id": "L-RENT",
+      "type": "primary_legal",
+      "title": "租賃住宅市場發展及管理條例",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
+      "jurisdiction": "Taiwan",
+      "provision": "Arts3,4,7",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current act and cited provisions.",
+      "dates": {
+        "amendment_published": "2023-02-08"
+      },
+      "claims": [
+        "Residential scope and statutory exclusions.",
+        "Deposit cap two months rent.",
+        "Return deposit or balance when lease ends, dwelling returned, contractual debts cleared."
+      ]
+    },
+    {
+      "id": "L-CIV432",
+      "type": "primary_legal",
+      "title": "民法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=432",
+      "jurisdiction": "Taiwan",
+      "provision": "Art432",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Cited provision current. Civil Code warnings concern other provisions, including166-1 and2026-08-17 amendment of1223 awaiting commencement.",
+      "dates": {},
+      "claims": [
+        "Lessee duty of prudent care and liability for breach-caused damage; agreed/natural use changes excluded."
+      ]
+    },
+    {
+      "id": "L-CIV455",
+      "type": "primary_legal",
+      "title": "民法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=455",
+      "jurisdiction": "Taiwan",
+      "provision": "Art455",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Cited provision current; unrelated pending Civil Code provisions not used.",
+      "dates": {},
+      "claims": [
+        "Return leased property on termination."
+      ]
+    },
+    {
+      "id": "L-GRAD12",
+      "type": "primary_legal",
+      "title": "外國專業人才延攬及僱用法",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030295",
+      "jurisdiction": "Taiwan",
+      "provision": "Art12",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Enacted and effective cited provision, supported by WDA effective-date FAQ.",
+      "dates": {
+        "amendment_published": "2025-09-24",
+        "cited_scheme_effective": "2026-01-01"
+      },
+      "claims": [
+        "Foreign new graduate with Taiwan associate-or-higher degree and NIA-authorized postgraduation residence extension exempt from work permit during approved period."
+      ]
+    },
+    {
+      "id": "L-GRADFAQ",
+      "type": "primary_legal",
+      "title": "WDA graduate work-permit exemption FAQ",
+      "url": "https://ezworktaiwan.wda.gov.tw/cp.aspx?n=511766BD9E956242&s=35F4766BC4662D87",
+      "jurisdiction": "Taiwan",
+      "provision": "Q1–Q3",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current official guidance, not statute.",
+      "dates": {
+        "effective": "2026-01-01"
+      },
+      "claims": [
+        "NIA-approved extension up to two years; not automatic two years.",
+        "Full/part-time and job/employer restrictions relaxed during covered period; regulated professions retain license/registration requirements.",
+        "Exemption operative2026-01-01; ARC annotation identifies work-permit exemption."
+      ]
+    },
+    {
+      "id": "L-PROBATION",
+      "type": "primary_legal",
+      "title": "MOL probation explanation",
+      "url": "https://www.mol.gov.tw/1607/28162/28296/81778/81781/82213/post",
+      "jurisdiction": "Taiwan",
+      "provision": "Probation FAQ",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current official explanation.",
+      "dates": {
+        "published": "2025-08-13",
+        "updated": "2025-09-04"
+      },
+      "claims": [
+        "Reasonable probation agreement does not remove labor protections; no below-minimum wage or unpaid-overtime agreement.",
+        "Probation is not arbitrary dismissal authority."
+      ]
+    },
+    {
+      "id": "L-WAGE2026",
+      "type": "primary_legal",
+      "title": "MOL minimum-wage explanation",
+      "url": "https://www.mol.gov.tw/1607/28690/2282/2284/2290/7121/post",
+      "jurisdiction": "Taiwan",
+      "provision": "Minimum Wage Act5 explanation / 2026 wage",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "2026 amounts effective;2027 announced amounts not current.",
+      "dates": {
+        "updated": "2026-04-21",
+        "effective": "2026-01-01"
+      },
+      "claims": [
+        "Current2026 monthly TWD29500 and hourlyTWD196.",
+        "Monthly figure for normal working hours, excludes overtime/rest/holiday premiums; hourly and monthly arrangements must be distinguished."
+      ]
+    },
+    {
+      "id": "L-WAGE2027",
+      "type": "primary_legal",
+      "title": "Executive Yuan future wage announcement",
+      "url": "https://english.ey.gov.tw/Page/61BF20C3E89B856/492ada9c-56a7-4c7f-a801-560ad0a65767",
+      "jurisdiction": "Taiwan",
+      "provision": "2027 minimum wage announcement",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Announced future change, not yet effective on research date.",
+      "dates": {
+        "published": "2026-10-01",
+        "effective": "2027-01-01"
+      },
+      "claims": [
+        "Announced2027 monthlyTWD30900/hourlyTWD205; do not substitute for2026 wage."
+      ]
+    },
+    {
+      "id": "L-GENDER11",
+      "type": "primary_legal",
+      "title": "性別平等工作法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030014&flno=11",
+      "jurisdiction": "Taiwan",
+      "provision": "Art11",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current cited provision checked; no pending commencement identified for this cited provision.",
+      "dates": {},
+      "claims": [
+        "Clauses requiring resignation or unpaid leave because of marriage,pregnancy,childbirth,childcare invalid; termination on these grounds ineffective.",
+        "Does not bar every termination for unrelated valid grounds."
+      ]
+    },
+    {
+      "id": "L-PREG2026",
+      "type": "primary_legal",
+      "title": "WDA correction concerning pregnant domestic migrant workers",
+      "url": "https://www.wda.gov.tw/News_Content.aspx?n=30&s=19456",
+      "jurisdiction": "Taiwan",
+      "provision": "2026-10-13 explanation paragraphs1–2",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current official clarification, not new legislation.",
+      "dates": {
+        "published": "2026-10-13",
+        "checked_by_agency": "2026-10-13"
+      },
+      "claims": [
+        "Domestic migrant workers' maternity leave is unpaid; LSA and Employment Insurance Act do not apply; no parental-leave allowance under those regimes.",
+        "Mutual termination/transfer/return agreement differs from forced pregnancy dismissal."
+      ]
+    },
+    {
+      "id": "L-ESA57",
+      "type": "primary_legal",
+      "title": "就業服務法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=57",
+      "jurisdiction": "Taiwan",
+      "provision": "Art57(2),(3),(4)",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current cited provision checked; no pending commencement identified for this cited provision.",
+      "dates": {},
+      "claims": [
+        "Employer prohibitions distinguish employing in own name for another, assigning outside-permit work, and unauthorized worksite change for specified categories."
+      ]
+    },
+    {
+      "id": "L-ESA59",
+      "type": "primary_legal",
+      "title": "就業服務法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=59",
+      "jurisdiction": "Taiwan",
+      "provision": "Art59",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current cited provision checked; no pending commencement identified for this cited provision.",
+      "dates": {},
+      "claims": [
+        "Specified foreign workers may transfer on approved grounds including circumstances not attributable to worker; central-authority approval required.",
+        "Complaint does not automatically authorize new job."
+      ]
+    },
+    {
+      "id": "L-ESA73",
+      "type": "primary_legal",
+      "title": "就業服務法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0090001&flno=73",
+      "jurisdiction": "Taiwan",
+      "provision": "Art73(1),(2),(3)",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current cited provision checked; no pending commencement identified for this cited provision.",
+      "dates": {},
+      "claims": [
+        "Item2 expressly concerns self-undertaken outside-permit work not assigned by employer.",
+        "Other-employer work and termination/absence have distinct permit consequences; no blanket immunity or automatic worker culpability inferred from employer instruction."
+      ]
+    },
+    {
+      "id": "L-OUTSIDE-ID",
+      "type": "primary_legal",
+      "title": "WDA Indonesian no-illegal-work guidance",
+      "url": "https://fw.wda.gov.tw/wda-employer/home/no-work-illegally/no-work-illegally-file/2c95efb395ab11680195ac17c09d0157",
+      "jurisdiction": "Taiwan",
+      "provision": "Indonesian caregiver outside-permit examples",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Official public guidance.",
+      "dates": {
+        "published": "2025-03-18",
+        "updated": "2025-03-19"
+      },
+      "claims": [
+        "Official Indonesian examples include restaurant/stall work, pet care and work in others' homes.",
+        "Do not generalize to all lawful accompaniment of care recipient; detailed accompaniment rules not verified here."
+      ]
+    },
+    {
+      "id": "L-LSA13",
+      "type": "primary_legal",
+      "title": "勞動基準法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=13",
+      "jurisdiction": "Taiwan",
+      "provision": "Art13",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current cited provision checked; no pending commencement identified for this cited provision.",
+      "dates": {},
+      "claims": [
+        "Dismissal barred during Art59 injury medical period, with force-majeure inability to continue business plus authority-approval exception."
+      ]
+    },
+    {
+      "id": "L-LSA59",
+      "type": "primary_legal",
+      "title": "勞動基準法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=59",
+      "jurisdiction": "Taiwan",
+      "provision": "Art59",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current cited provision checked; no pending commencement identified for this cited provision.",
+      "dates": {},
+      "claims": [
+        "Necessary medical compensation and original wage compensation when unable to work during treatment, plus other specified benefits.",
+        "Same-event statutory/employer-funded insurance offsets subject to legal conditions; no assumed double full recovery."
+      ]
+    },
+    {
+      "id": "L-LSA61",
+      "type": "primary_legal",
+      "title": "勞動基準法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=61",
+      "jurisdiction": "Taiwan",
+      "provision": "Art61",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current cited provision checked; no pending commencement identified for this cited provision.",
+      "dates": {},
+      "claims": [
+        "Compensation right unaffected by leaving employment; two years from when receivable.",
+        "This period is not the insurance-benefit limitation period."
+      ]
+    },
+    {
+      "id": "L-CIV737",
+      "type": "primary_legal",
+      "title": "民法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=737",
+      "jurisdiction": "Taiwan",
+      "provision": "Art737",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Cited provision current; unrelated pending Civil Code provisions not used.",
+      "dates": {},
+      "claims": [
+        "Settlement extinguishes waived rights and establishes rights expressly agreed; examine scope.",
+        "Resignation not extinguishing compensation does not make every settlement waiver invalid."
+      ]
+    },
+    {
+      "id": "L-BLI",
+      "type": "primary_legal",
+      "title": "BLI occupational accident insurance benefits",
+      "url": "https://www.bli.gov.tw/0105829.html",
+      "jurisdiction": "Taiwan",
+      "provision": "Benefits overview / coverage explanation",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current official administrative guidance; do not derive all deadlines from this summary.",
+      "dates": {},
+      "claims": [
+        "Insurance benefits require specific insured-event and benefit conditions.",
+        "Certain mandatory-covered workers retain statutory protection despite employer registration failure; not every uninsured person covered."
+      ]
+    },
+    {
+      "id": "L-OSHA",
+      "type": "primary_legal",
+      "title": "OSHA postdeparture occupational injury compensation FAQ",
+      "url": "https://www.osha.gov.tw/48110/48207/48319/48327/50553/post",
+      "jurisdiction": "Taiwan",
+      "provision": "Post-employment compensation explanation",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Older official guidance cross-checked against current LSA61.",
+      "dates": {
+        "published": "2021-11-18"
+      },
+      "claims": [
+        "Employment injury compensation can persist after departure when injury arose during employment and requirements proven."
+      ]
+    },
+    {
+      "id": "L-BILL123",
+      "type": "primary_legal",
+      "title": "票據法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380028&flno=123",
+      "jurisdiction": "Taiwan",
+      "provision": "Art123",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current cited provision checked; no pending commencement identified for this cited provision.",
+      "dates": {},
+      "claims": [
+        "Promissory-note holder may apply for court ruling authorizing enforcement against maker."
+      ]
+    },
+    {
+      "id": "L-NCA42",
+      "type": "primary_legal",
+      "title": "非訟事件法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010008&flno=42",
+      "jurisdiction": "Taiwan",
+      "provision": "Art42",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current cited provision checked; no pending commencement identified for this cited provision.",
+      "dates": {},
+      "claims": [
+        "Person served ruling: appeal within10day peremptory period from service; preservice appeal effective.",
+        "Do not generalize separate rule for unserved interested parties into ordinary served-party advice."
+      ]
+    },
+    {
+      "id": "L-NCA195",
+      "type": "primary_legal",
+      "title": "非訟事件法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010008&flno=195",
+      "jurisdiction": "Taiwan",
+      "provision": "Art195(1)–(3)",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current cited provision checked; no pending commencement identified for this cited provision.",
+      "dates": {},
+      "claims": [
+        "Forgery/alteration declaratory action special20day period after ruling service.",
+        "Proof of that suit invokes stay structure with statutory security/countersecurity exceptions.",
+        "Other note-debt nonexistence suits may lead to stay on adequate security; no universal20day defense or automatic stay from any appeal."
+      ]
+    },
+    {
+      "id": "L-CPC516",
+      "type": "primary_legal",
+      "title": "民事訴訟法",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=516",
+      "jurisdiction": "Taiwan",
+      "provision": "Art516",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "status": "Current cited provision checked; no pending commencement identified for this cited provision.",
+      "dates": {},
+      "claims": [
+        "Payment-order objection within20day peremptory period from service, whole/partial and without reasons, to issuing court.",
+        "Distinct from note-ruling appeal."
+      ]
+    },
+    {
+      "id": "S-LAF2017",
+      "type": "primary_historical_case_record",
+      "title": "LAF2017 Annual Report",
+      "url": "https://www.laf.org.tw/en/upload/2025/08/2017%20LAF%20Annual%20Report.pdf",
+      "location": "PDF page13 of26",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "period": "2017",
+      "claims": [
+        "LAF describes Filipino recruitment-fee loans/promissory-note enforcement assistance, with mixed outcomes."
+      ],
+      "limits": [
+        "Historical connection only; no2026 incidence, current demand, firm case history, or universal outcome inference."
+      ]
+    },
+    {
+      "id": "S-LAF-ELIG",
+      "type": "official_public_support",
+      "title": "LAF eligibility",
+      "url": "https://www.laf.org.tw/en/service-laywer-des",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "published": "2023-10-25",
+      "updated": "2025-10-02",
+      "claims": [
+        "Lawfully resident foreign nationals may apply; listed exceptions apply to others.",
+        "Financial capacity and case-merit evaluation required; specified migrant categories may use financial-incapacity affidavit."
+      ],
+      "limits": [
+        "Eligibility to apply is not automatic approval/free representation for everyone."
+      ]
+    },
+    {
+      "id": "S-LAF-FIL",
+      "type": "official_public_support",
+      "title": "LAF Filipino materials",
+      "url": "https://www.laf.org.tw/foreign/4",
+      "research_date": "2026-10-25",
+      "opened": true,
+      "claims": [
+        "Filipino application and informational materials visibly linked."
+      ]
+    },
+    {
+      "id": "S-FIRM",
+      "type": "verified_service",
+      "title": "Current tseng-law services and contact",
+      "urls": [
+        "https://tseng-law.com/en/services",
+        "https://tseng-law.com/en/contact"
+      ],
+      "local_files": [
+        "src/lib/consultation/public-contact.ts",
+        "src/data/firm-introduction.ts"
+      ],
+      "research_date": "2026-10-25",
+      "opened": true,
+      "claims": [
+        "Taiwan labor/employment and civil disputes are listed services.",
+        "Verified email wei@hoveringlaw.com.tw."
+      ],
+      "limits": [
+        "No verified Vietnamese/Indonesian/Filipino direct consultation fluency, foreign licenses/offices, free consultation promise, or firm representative cases."
+      ]
+    }
+  ],
+  "screening": [
+    {
+      "locale": "vi",
+      "countries": [
+        "Vietnam"
+      ],
+      "baseline_articles": 43,
+      "decision": "selected",
+      "source_ids": [
+        "S-MOE",
+        "S-WDA"
+      ],
+      "gap": "Residential deposit handover;2026 graduate exemption versus probation wage.",
+      "unknowns": [
+        "Paid demand",
+        "Consultation language arrangement"
+      ]
+    },
+    {
+      "locale": "id",
+      "countries": [
+        "Indonesia"
+      ],
+      "baseline_articles": 31,
+      "decision": "selected",
+      "source_ids": [
+        "S-MOE",
+        "S-WDA",
+        "S-ID-CITY",
+        "L-PREG2026"
+      ],
+      "gap": "Domestic caregiver pregnancy termination and employer-assigned outside-permit work.",
+      "unknowns": [
+        "Paid demand",
+        "Public-support substitution",
+        "MOE student table has30person arithmetic discrepancy; no precise Indonesia enrollment figure adopted."
+      ]
+    },
+    {
+      "locale": "fil",
+      "countries": [
+        "Philippines"
+      ],
+      "baseline_articles": 26,
+      "decision": "selected_with_exploratory_debt_topic",
+      "source_ids": [
+        "S-MOE",
+        "S-WDA",
+        "S-LAF2017"
+      ],
+      "gap": "Resignation/settlement document effects;note ruling versus payment order.",
+      "unknowns": [
+        "Current native search demand for note disputes",
+        "Paying consultation demand"
+      ]
+    },
+    {
+      "locale": "th",
+      "countries": [
+        "Thailand"
+      ],
+      "baseline_articles": 31,
+      "decision": "reserve",
+      "source_ids": [
+        "S-MOE",
+        "S-WDA"
+      ],
+      "gap": "Recent659–663 andARC704–706 cover mainworker/invoice triggers; new distincttransaction requires research.",
+      "unknowns": [
+        "Demand for nextspecificcommercialtopic"
+      ]
+    },
+    {
+      "locale": "ms",
+      "countries": [
+        "Malaysia"
+      ],
+      "possible_but_unverified_audience": [
+        "Singapore"
+      ],
+      "baseline_articles": 21,
+      "decision": "reserve_commercial_research_priority",
+      "source_ids": [
+        "S-MOE",
+        "S-MY-TRADE"
+      ],
+      "gap": "Businesscontract angle plausible beyond807–809.",
+      "unknowns": [
+        "Malay vsEnglish/Chinese buyer preference",
+        "Singapore Malay demand"
+      ]
+    },
+    {
+      "locale": "my",
+      "countries": [
+        "Myanmar"
+      ],
+      "baseline_articles": 21,
+      "decision": "hold",
+      "source_ids": [
+        "S-MOE"
+      ],
+      "gap": "810alreadygraduationwork;811bank;812marriagedocuments.",
+      "unknowns": [
+        "Student table arithmetic",
+        "Demand",
+        "Service language"
+      ]
+    },
+    {
+      "locale": "km",
+      "countries": [
+        "Cambodia"
+      ],
+      "baseline_articles": 21,
+      "decision": "hold",
+      "source_ids": [
+        "S-KM"
+      ],
+      "gap": "813–815alreadymarriage/interview/divorce/inheritance/residence.",
+      "unknowns": [
+        "Current audience size",
+        "Distinct search intent"
+      ]
+    },
+    {
+      "locale": "zh-hans",
+      "countries": [
+        "Mainland China"
+      ],
+      "possible_but_not_equivalent_audience": [
+        "Hong Kong",
+        "Malaysia"
+      ],
+      "baseline_articles": 26,
+      "decision": "hold",
+      "source_ids": [
+        "S-MOE"
+      ],
+      "gap": "804–806alreadyMainlandinheritance/divorce/residence/judgmentrecognition.",
+      "unknowns": [
+        "Script choice is not nationality",
+        "Distinct legal classifications",
+        "Commercialsearchdemand"
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "id": "Q-VI1",
+      "language": "vi",
+      "query": "\"Đài Loan\" \"thuê nhà\" \"cọc\"",
+      "date": "2026-10-25",
+      "observed_urls": [
+        "https://www.8386.tw/blog/kinh-nghiem-thue-nha-dai-loan-cho-nguoi-viet",
+        "https://tadidailoan.com/thue-nha-o-dai-loan/",
+        "https://news.immigration.gov.tw/NewsSection/Detail/7794c2fe-a46e-44e1-b58c-1892ed91290b?category=8&lang=VN"
+      ],
+      "observed": "Vietnamese rental guides and NIA rental-fraud material visible.",
+      "limits": "No search volume or proven disputed-deposit prevalence.",
+      "raw_response_key": "seaQvi1",
+      "legal_status": "Search observation only unless independently opened official source above."
+    },
+    {
+      "id": "Q-VI2",
+      "language": "vi",
+      "query": "\"Đài Loan\" \"tốt nghiệp\" \"2026\" \"giấy phép\"",
+      "date": "2026-10-25",
+      "observed_urls": [
+        "https://cedms.aric.stust.edu.tw/vi/faqs",
+        "https://news.pts.org.tw/article/817763",
+        "https://tuvanvisa.vn/du-hoc-dai-loan-tot-nghiep-lam-viec-2-nam-mien-giay-phep/"
+      ],
+      "observed": "University FAQ, Vietnamese news and private visa explanations of2026 exemption.",
+      "limits": "Private statement about salary threshold not legal proof; content confusion is editorial hypothesis.",
+      "raw_response_key": "seaQvi2",
+      "legal_status": "Search observation only unless independently opened official source above."
+    },
+    {
+      "id": "Q-ID1",
+      "language": "id",
+      "query": "pengasuh Taiwan hamil dipulangkan majikan hak kerja",
+      "date": "2026-10-25",
+      "observed_urls": [
+        "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb396b1b5b30196b414768a0b43",
+        "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb38998f23701899bab60871198",
+        "https://www.mol.gov.tw/1607/1632/1633/99490/post"
+      ],
+      "observed": "Official Indonesian pregnancy support and current MOL clarification.",
+      "limits": "Does not establish paid-client volume.",
+      "raw_response_key": "seaQid1",
+      "legal_status": "Search observation only unless independently opened official source above."
+    },
+    {
+      "id": "Q-ID2",
+      "language": "id",
+      "query": "pekerja Taiwan disuruh kerja rumah orang lain majikan",
+      "date": "2026-10-25",
+      "observed_urls": [
+        "https://fw.wda.gov.tw/wda-employer/home/no-work-illegally/no-work-illegally-file/2c95efb395ab11680195ac17c09d0157",
+        "https://indonesia.focustaiwan.tw/society/202607030004"
+      ],
+      "observed": "WDA examples and Indonesian CNA report of alleged caregiver restaurant work.",
+      "limits": "News allegation not verified judgment or firm case.",
+      "raw_response_key": "seaQid2",
+      "legal_status": "Search observation only unless independently opened official source above."
+    },
+    {
+      "id": "Q-FIL1",
+      "language": "fil",
+      "query": "\"Taiwan\" \"aksidente sa trabaho\"",
+      "date": "2026-10-25",
+      "observed_urls": [
+        "https://fw.wda.gov.tw/wda-employer/home/foreign-worker-affairs/index/2c95efb38430b589018431c9a3170647?locale=tl",
+        "https://www.recruitmentadvisor.org/fil/law/ph/tw/62/62/18497",
+        "https://tiwa.org.tw/wp-content/uploads/2023/12/總體檢報告.pdf"
+      ],
+      "observed": "Tagalog worker insurance materials, labor-rights guide and NGO report.",
+      "limits": "No measured settlement-review demand; NGO report dated2023.",
+      "raw_response_key": "seaQfil1",
+      "legal_status": "Search observation only unless independently opened official source above."
+    },
+    {
+      "id": "Q-FIL2",
+      "language": "fil",
+      "query": "\"Taiwan\" \"utang\" \"20\" \"araw\"",
+      "date": "2026-10-25",
+      "observed_urls": [
+        "https://www.reddit.com/r/utangPH/comments/1je4zq0",
+        "https://tl.asiadaily.org/news/5443/",
+        "https://www.bamaquino.com/tag/bida-ka-2/page/8/"
+      ],
+      "observed": "Weak direct relevance: general debt/fishing/news/economics results.",
+      "limits": "No direct current Taiwan procedural demand inference; limited results are not evidence of zero competition.",
+      "raw_response_key": "seaQfil2",
+      "legal_status": "Search observation only unless independently opened official source above."
+    },
+    {
+      "id": "Q-FIL3",
+      "language": "en",
+      "query": "\"Taiwan\" \"promissory note\" \"Filipino\"",
+      "date": "2026-10-25",
+      "observed_urls": [
+        "https://www.laf.org.tw/en/upload/2025/08/2017%20LAF%20Annual%20Report.pdf"
+      ],
+      "observed": "Historical Filipino recruitment debt/note enforcement cases.",
+      "limits": "Supplementary English query; not a native-language demand measurement.",
+      "raw_response_key": "seaQfil3",
+      "legal_status": "Search observation only unless independently opened official source above."
+    },
+    {
+      "id": "Q-FIL4",
+      "language": "fil",
+      "query": "\"Taiwan\" \"utang\" \"korte\"",
+      "date": "2026-10-25",
+      "observed_urls": [
+        "https://www.philstar.com/banat/opinyon/2025/02/12/2421098/unsaon-pagpangil-sa-utang-kon-atua-sa-abroad-ang-nangutang",
+        "https://www.philstar.com/opinyon/2006/06/29/344513/ofw-na-tinanggal-sa-trabaho"
+      ],
+      "observed": "Cebuano Philippine-debt advice concerning person working Taiwan and oldTagalog OFW dispute.",
+      "limits": "Language,jurisdiction,date mixed; no current Taiwan law inference.",
+      "raw_response_key": "seaQfil4",
+      "legal_status": "Search observation only unless independently opened official source above."
+    },
+    {
+      "id": "Q-FIL5",
+      "language": "fil",
+      "query": "\"Taiwan\" \"aksidente\" \"kasunduan\"",
+      "date": "2026-10-25",
+      "observed_urls": [
+        "https://www.mytaiwanlife.com/news/pages/ph/4pT0xwY/manggagawa-nasawi-sa-aksidente-sa-taiwan-mga-kumpanya-nagbayad-ng-kompensasyon/",
+        "https://tseng-law.com/fil/columns/taiwan-traffic-accident-procedure"
+      ],
+      "observed": "Tagalog injury-settlement reporting and existing own traffic article.",
+      "limits": "No adopted case or volume claim; own result highlights overlap.",
+      "raw_response_key": "seaQfil4",
+      "legal_status": "Search observation only unless independently opened official source above."
+    }
+  ],
+  "topics": [
+    {
+      "article_id": 922,
+      "locale": "vi",
+      "rank": 4,
+      "slug": "vietnamese-tenant-taiwan-deposit-handover-deductions",
+      "claims": [
+        "L-RENT",
+        "L-CIV432",
+        "L-CIV455"
+      ],
+      "queries": [
+        "Q-VI1"
+      ],
+      "market": [
+        "S-MOE"
+      ],
+      "overlap": [
+        "VI704–706genericARC, noVIdepositarticle"
+      ],
+      "brief": "sea-briefs.md#922"
+    },
+    {
+      "article_id": 923,
+      "locale": "vi",
+      "rank": 2,
+      "slug": "vietnamese-graduate-taiwan-probation-pay-work-exemption",
+      "claims": [
+        "L-GRAD12",
+        "L-GRADFAQ",
+        "L-PROBATION",
+        "L-WAGE2026",
+        "L-WAGE2027"
+      ],
+      "queries": [
+        "Q-VI2"
+      ],
+      "market": [
+        "S-MOE"
+      ],
+      "overlap": [
+        "VI705generalvisa",
+        "VI014minimumservice",
+        "MY810alreadygraduateexemption"
+      ],
+      "brief": "sea-briefs.md#923"
+    },
+    {
+      "article_id": 924,
+      "locale": "id",
+      "rank": 1,
+      "slug": "indonesian-caregiver-taiwan-pregnancy-dismissal",
+      "claims": [
+        "L-GENDER11",
+        "L-PREG2026"
+      ],
+      "queries": [
+        "Q-ID1"
+      ],
+      "market": [
+        "S-WDA",
+        "S-ID-CITY"
+      ],
+      "overlap": [
+        "ID664wages",
+        "ID665passport",
+        "ID667factoryinjury"
+      ],
+      "brief": "sea-briefs.md#924"
+    },
+    {
+      "article_id": 925,
+      "locale": "id",
+      "rank": 3,
+      "slug": "indonesian-caregiver-taiwan-work-outside-permit",
+      "claims": [
+        "L-ESA57",
+        "L-ESA59",
+        "L-ESA73",
+        "L-OUTSIDE-ID"
+      ],
+      "queries": [
+        "Q-ID2"
+      ],
+      "market": [
+        "S-WDA",
+        "S-ID-CITY"
+      ],
+      "overlap": [
+        "ID666voluntaryaccountcashjobcriminalrisk",
+        "FIL801patientdeathtransfer"
+      ],
+      "brief": "sea-briefs.md#925"
+    },
+    {
+      "article_id": 926,
+      "locale": "fil",
+      "rank": 5,
+      "slug": "filipino-worker-taiwan-injury-resignation-settlement",
+      "claims": [
+        "L-LSA13",
+        "L-LSA59",
+        "L-LSA61",
+        "L-CIV737",
+        "L-BLI",
+        "L-OSHA"
+      ],
+      "queries": [
+        "Q-FIL1",
+        "Q-FIL5"
+      ],
+      "market": [
+        "S-WDA"
+      ],
+      "overlap": [
+        "VI039alreadyhospitalsettlement/return/compensationdeadlines: avoidsameopeningandthree-sourceoverview",
+        "ID667injuryevidenceandsettlement",
+        "FIL003trafficsettlement",
+        "FIL801–803recentdistinctissues"
+      ],
+      "brief": "sea-briefs.md#926"
+    },
+    {
+      "article_id": 927,
+      "locale": "fil",
+      "rank": 6,
+      "slug": "filipino-worker-taiwan-loan-promissory-note-court-order",
+      "claims": [
+        "L-BILL123",
+        "L-NCA42",
+        "L-NCA195",
+        "L-CPC516",
+        "S-LAF2017"
+      ],
+      "queries": [
+        "Q-FIL2",
+        "Q-FIL3",
+        "Q-FIL4"
+      ],
+      "market": [
+        "S-WDA"
+      ],
+      "overlap": [
+        "JA719businesscreditor",
+        "ZH164undisbursedloanmaker: narrowtoPhilippinerecruitmentdebt/documenttriage"
+      ],
+      "brief": "sea-briefs.md#927"
+    }
+  ],
+  "unresolved": [
+    {
+      "url": "https://data.gov.tw/dataset/41882",
+      "issue": "Metadata opened;data body/download unavailable; no current national worker total used."
+    },
+    {
+      "url": "https://www.moi.gov.tw/News_Content.aspx?n=2905&s=339254",
+      "issue": "Page opened but numeric body not stably confirmed; marriage counts excluded."
+    },
+    {
+      "url": "https://www.judicial.gov.tw/tw/cp-139-1426570-5ed3c-1.html",
+      "issue": "404; not used as verified case."
+    }
+  ],
+  "inventory": {
+    "file": "current-column-inventory.json",
+    "recent_range": "801–921",
+    "targeted_body_comparators": [
+      "vi039",
+      "vi014",
+      "vi705",
+      "id664",
+      "id665",
+      "id667",
+      "fil801",
+      "fil802",
+      "fil803",
+      "my810",
+      "ja719",
+      "zh164"
+    ],
+    "limits": "Fulltitleinventory plus targetedbody/sections, not a corpuswide fulltext plagiarism audit."
+  },
+  "service": {
+    "source_id": "S-FIRM",
+    "public_support_ids": [
+      "S-LAF-ELIG",
+      "S-LAF-FIL"
+    ],
+    "cta": "Email wei@hoveringlaw.com.tw with necessary redacteddocuments and dates; no invented language/office/license/freeconsultation claims."
+  },
+  "correction_audit": {
+    "date": "2026-10-25",
+    "trigger": "Independent final Asia reviewer flagged Indonesia arithmetic and WDA unit; researcher independently reopened both official pages.",
+    "evidence_file": "sea-research-corrections.json",
+    "peer_evidence_file": "../reviews/asia-final-official-opens-supplement2.json",
+    "peer_batch": 27,
+    "article_changes": "None; research artifacts only.",
+    "brief_check": "sea-briefs.md contains neither disputed Indonesia enrollment count nor WDA approval-count unit; unchanged."
+  }
+}

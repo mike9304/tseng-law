@@ -1,0 +1,659 @@
+{
+  "reviewer": "/root/expand_locale_nl",
+  "wrapper_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+  "method_review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+  "records": [
+    {
+      "source_path": "src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+      "sha256": "8427d908388f0df5adf9b172935dd14447b2afc3179fd3f79db1cf66f2b1c6de",
+      "checkedAt": "2026-10-25T13:34:56.114174+00:00",
+      "commands": [
+        {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+            "--lang",
+            "nl"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'nl' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+        },
+        {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+            "--lang",
+            "nl"
+          ],
+          "exit_code": 0,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md [nl] sentences=36 mean=17.9 cv=0.483 short=0.139 run3=0.029 opener_rep=0.167 cite_end=0.0 cite_para=0.583 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+          "stderr": "OFFICIAL CHECKER: nl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+        }
+      ],
+      "metrics": {
+        "lang": "nl",
+        "sentences": 36,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 17.9,
+        "len_cv": 0.483,
+        "short_share": 0.139,
+        "long_share": 0.083,
+        "para_cv": 0.296,
+        "even_run3": 0.029,
+        "top_end": "duurt",
+        "top_end_share": 0.028,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "voor",
+        "top_opener_n": 2,
+        "opener_rep": 0.167,
+        "consec_same_start": 0,
+        "cite_para_share": 0.583,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 1.7,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Voor passend contractwerk van een Nederlandse machineleverancier in Taiwan stelt artikel 5",
+        "last": "Zet bij een verlengde installatie de oorspronkelijke binnenkomst en de nieuwe oplevering naast elkaar. Het dossier moet ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations",
+        "measurement_scope": "task_local_extension_not_shared_checker"
+      },
+      "extracted_paragraphs": [
+        {
+          "paragraph": 1,
+          "opener": "voor",
+          "sentences": [
+            {
+              "text": "Voor passend contractwerk van een Nederlandse machineleverancier in Taiwan stelt artikel 5 van de regeling voor de tewerkstelling van buitenlanders het inreisvisum of de inreistoestemming gelijk aan een werkvergunning als het verblijf hoogstens dertig dagen duurt.",
+              "units": 36
+            }
+          ]
+        },
+        {
+          "paragraph": 2,
+          "opener": "nederlandse",
+          "sentences": [
+            {
+              "text": "Nederlandse paspoorthouders komen onder voorwaarden in aanmerking voor maximaal negentig dagen visumvrij verblijf, volgens BOCA.",
+              "units": 15
+            },
+            {
+              "text": "Dat verblijf verleent op zichzelf geen toestemming voor werkzaamheden waarvoor een vergunning nodig is.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "paragraph": 3,
+          "opener": "een",
+          "sentences": [
+            {
+              "text": "Een installatie die drie weken zou duren, vergt na aankomst zes weken doordat een onderdeel later wordt geleverd (fictief voorbeeld).",
+              "units": 20
+            },
+            {
+              "text": "Kan dezelfde monteur blijven?",
+              "units": 4
+            },
+            {
+              "text": "Voor de hier bedoelde contractwerkers met een verblijf van 31 tot en met 90 dagen biedt artikel 12 de mogelijkheid om binnen dertig dagen na binnenkomst een vergunning aan te vragen.",
+              "units": 31
+            },
+            {
+              "text": "De termijn begint bij de binnenkomst.",
+              "units": 6
+            },
+            {
+              "text": "Hij begint niet opnieuw wanneer de klant de opleverdatum verschuift.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "paragraph": 4,
+          "opener": "bij",
+          "sentences": [
+            {
+              "text": "Bij een gewijzigde planning horen daarom meteen de aankomstdatum, de nieuwe vertrekdatum en de nog uit te voeren werkzaamheden op tafel.",
+              "units": 21
+            },
+            {
+              "text": "Laat de bevoegde aanvrager beoordelen of deze route past en de aanvraag tijdig indienen.",
+              "units": 14
+            },
+            {
+              "text": "Is de termijn al verstreken, laat dan eerst beoordelen hoe de werk- en verblijfspositie moet worden geregeld voordat het team een verdere inzet toezegt.",
+              "units": 24
+            }
+          ]
+        },
+        {
+          "paragraph": 5,
+          "opener": "de",
+          "sentences": [
+            {
+              "text": "De route voor contractuitvoering ziet op een buitenlandse rechtspersoon die personeel naar Taiwan stuurt voor bijvoorbeeld een koop-, aannemings- of technische samenwerkingsovereenkomst.",
+              "units": 22
+            },
+            {
+              "text": "Het werk moet binnen de contractuele werkzaamheden van artikel 51, derde lid, van de wet op de arbeidsbemiddeling vallen.",
+              "units": 19
+            },
+            {
+              "text": "Dat artikel verwijst naar de gespecialiseerde of technische werkzaamheden en leidinggevende functies van artikel 46.",
+              "units": 15
+            },
+            {
+              "text": "Een afspraak met een Taiwanese klant maakt elke inzet van personeel dus niet automatisch geschikt voor deze route.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "paragraph": 6,
+          "opener": "heeft",
+          "sentences": [
+            {
+              "text": "Heeft de Nederlandse bv geen filiaal of vertegenwoordigingskantoor in Taiwan, dan moet de contracterende onderneming of een gemachtigde agent de vergunning aanvragen.",
+              "units": 22
+            },
+            {
+              "text": "Artikel 51, derde lid, bepaalt wie in dat geval optreedt.",
+              "units": 10
+            },
+            {
+              "text": "Leg vóór vertrek vast wie het dossier indient en wie een wijziging van de planning aan die partij doorgeeft.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "paragraph": 7,
+          "opener": "voor",
+          "sentences": [
+            {
+              "text": "Voor de aanvraag verlangt artikel 9, tweede lid, van de regeling onder meer het leverings- of andere uitvoeringscontract, registratiebewijzen van de betrokken binnenlandse en buitenlandse rechtspersonen, en een verklaring van de buitenlandse onderneming dat zij de werknemer voor de uitvoering aanwijst.",
+              "units": 41
+            },
+            {
+              "text": "Verder zijn stukken over de aanvrager en de buitenlandse werknemer nodig, naast het aanvraagformulier, het betalingsbewijs van de behandelingskosten en eventuele aanvullend voorgeschreven documenten.",
+              "units": 24
+            },
+            {
+              "text": "Buitenlandse stukken kunnen legalisatie door een Taiwanese vertegenwoordiging vereisen.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "paragraph": 8,
+          "opener": "gebruik",
+          "sentences": [
+            {
+              "text": "Gebruik in het contract en de aanwijzingsverklaring dezelfde omschrijving van de installatie.",
+              "units": 12
+            },
+            {
+              "text": "Vermeld ook waar de monteur werkt.",
+              "units": 6
+            },
+            {
+              "text": "Een offerte voor levering zonder montage laat een andere opdracht zien dan een planning met installatie, proefbedrijf en instructie aan de klant.",
+              "units": 22
+            }
+          ]
+        },
+        {
+          "paragraph": 9,
+          "opener": "artikel",
+          "sentences": [
+            {
+              "text": "Artikel 7 van de kwalificatieregels versoepelt de eisen voor een buitenlandse werknemer die zijn buitenlandse werkgever voor deze contractuitvoering uitzendt, bij een werkperiode van hoogstens negentig dagen.",
+              "units": 27
+            },
+            {
+              "text": "Komt het contractwerk in het jaar vóór de aanvraag samen met de nieuwe periode boven die grens, dan gelden weer de in dat artikel genoemde kwalificatie-eisen.",
+              "units": 27
+            },
+            {
+              "text": "Een nieuwe klant zet de teller niet terug.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "paragraph": 10,
+          "opener": "ook",
+          "sentences": [
+            {
+              "text": "Ook voor het weglaten van het diploma-afschrift geldt een cumulatieve toets: het eerdere contractwerk in het jaar vóór de aanvraag plus de nu aangevraagde periode mag niet meer dan negentig dagen bedragen.",
+              "units": 33
+            },
+            {
+              "text": "Dat staat afzonderlijk in artikel 9, tweede lid, onderdeel 5.",
+              "units": 10
+            },
+            {
+              "text": "Maak daarom per monteur een overzicht van eerdere opdrachten in Taiwan, met begin- en einddatum.",
+              "units": 15
+            },
+            {
+              "text": "Alleen naar de huidige reis kijken is onvoldoende.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "paragraph": 11,
+          "opener": "een",
+          "sentences": [
+            {
+              "text": "Een niet-vertrouwelijke samenvatting van de contractpartijen, werkzaamheden en reisdata kunt u voor een beoordeling naar Taiwanees recht sturen naar wei@hoveringlaw.com.tw.",
+              "units": 24
+            },
+            {
+              "text": "Consultaties zijn mogelijk in het Engels, Chinees, Koreaans en Japans; een andere manier van communiceren moet vooraf worden bevestigd.",
+              "units": 19
+            },
+            {
+              "text": "Ontvangst van uw bericht betekent niet dat een opdracht is aanvaard.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "paragraph": 12,
+          "opener": "zet",
+          "sentences": [
+            {
+              "text": "Zet bij een verlengde installatie de oorspronkelijke binnenkomst en de nieuwe oplevering naast elkaar.",
+              "units": 14
+            },
+            {
+              "text": "Het dossier moet de extra werkzaamheden verklaren én nog binnen de toepasselijke aanvraagtermijn kunnen worden ingediend.",
+              "units": 16
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Een aanvraagtermijn vanaf de binnenkomst",
+        "De leverancier, de klant en de monteur moeten bij hetzelfde contract passen",
+        "Eerdere opdrachten tellen mee"
+      ]
+    },
+    {
+      "source_path": "src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+      "sha256": "241a1785fea4cfd9b19cd18bff733329caff8dec8721a85ea3d75634ba28cc11",
+      "checkedAt": "2026-10-25T13:34:56.114174+00:00",
+      "commands": [
+        {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+            "--lang",
+            "nl"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'nl' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+        },
+        {
+          "command": [
+            "python3",
+            "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+            "--lang",
+            "nl"
+          ],
+          "exit_code": 0,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md [nl] sentences=49 mean=14.7 cv=0.469 short=0.184 run3=0.085 opener_rep=0.214 cite_end=0.0 cite_para=0.714 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+          "stderr": "OFFICIAL CHECKER: nl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+        }
+      ],
+      "metrics": {
+        "lang": "nl",
+        "sentences": 49,
+        "paras": 14,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 14.7,
+        "len_cv": 0.469,
+        "short_share": 0.184,
+        "long_share": 0.02,
+        "para_cv": 0.266,
+        "even_run3": 0.085,
+        "top_end": "ongeldig",
+        "top_end_share": 0.041,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "zonder",
+        "top_opener_n": 2,
+        "opener_rep": 0.214,
+        "consec_same_start": 1,
+        "cite_para_share": 0.714,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 1.94,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Zonder registratie kan een Nederlandse leverancier een Taiwanese koop met eigendomsvoorbeh",
+        "last": "Bewaar het registratiebewijs bij de getekende overeenkomst en het betalingsschema. Als de laatste betaling wordt uitgest",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations",
+        "measurement_scope": "task_local_extension_not_shared_checker"
+      },
+      "extracted_paragraphs": [
+        {
+          "paragraph": 1,
+          "opener": "zonder",
+          "sentences": [
+            {
+              "text": "Zonder registratie kan een Nederlandse leverancier een Taiwanese koop met eigendomsvoorbehoud niet tegenwerpen aan derden te goeder trouw.",
+              "units": 18
+            },
+            {
+              "text": "Artikel 5 van de wet op zekerheidsrechten op roerende zaken verlangt daarnaast een schriftelijk contract.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "paragraph": 2,
+          "opener": "de",
+          "sentences": [
+            {
+              "text": "De ontbrekende registratie maakt de afspraak tussen koper en verkoper niet op grond van die regel alleen ongeldig.",
+              "units": 18
+            },
+            {
+              "text": "Voor de leverancier die betaling na installatie accepteert, horen daarom zowel de inhoud van het contract als de registratie vóór levering in de planning.",
+              "units": 24
+            }
+          ]
+        },
+        {
+          "paragraph": 3,
+          "opener": "de",
+          "sentences": [
+            {
+              "text": "De Taiwanese regeling voor 附條件買賣 past bij een transactie waarin de koper de roerende zaak al in bezit krijgt, maar pas eigenaar wordt na een overeengekomen betaling of een andere bepaalde voorwaarde.",
+              "units": 32
+            },
+            {
+              "text": "Artikel 26 omschrijft die constructie.",
+              "units": 5
+            },
+            {
+              "text": "Machines en apparatuur behoren tot de categorieën die artikel 4 toelaat, met nadere aanwijzing van de goederen bij uitvoeringsregeling.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "paragraph": 4,
+          "opener": "wat",
+          "sentences": [
+            {
+              "text": "Wat gebeurt er als het Nederlandse verkoopcontract alleen naar Nederlandse algemene voorwaarden verwijst?",
+              "units": 13
+            },
+            {
+              "text": "Voor goederenrechtelijke vragen verwijst artikel 38 van de Taiwanese wet inzake internationaal privaatrecht naar het recht van de plaats waar de zaak zich bevindt.",
+              "units": 24
+            },
+            {
+              "text": "Bij verplaatsing bepaalt de plaats op het moment waarop het relevante rechtsfeit is voltooid welk recht de verkrijging, het verlies of de wijziging beheerst.",
+              "units": 24
+            },
+            {
+              "text": "Laat daarom de eigendomsregeling toetsen aan de route en timing van deze levering.",
+              "units": 13
+            },
+            {
+              "text": "Een Nederlandse contracttekst beantwoordt de Taiwanese registratievraag niet vanzelf.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "paragraph": 5,
+          "opener": "artikel",
+          "sentences": [
+            {
+              "text": "Artikel 27 verlangt meer dan de woorden ‘eigendomsvoorbehoud tot volledige betaling’.",
+              "units": 11
+            },
+            {
+              "text": "Het contract moet de partijen en hun adres of vestigingsplaats noemen, de zaak omschrijven en het aantal en de prijs vastleggen.",
+              "units": 21
+            },
+            {
+              "text": "Bestaande bijzondere nummers, kenmerken of beschrijvingen horen erbij.",
+              "units": 8
+            },
+            {
+              "text": "Neem dus het serienummer over.",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "paragraph": 6,
+          "opener": "verder",
+          "sentences": [
+            {
+              "text": "Verder moeten de eigendom van de verkoper en het gebruik door de koper zijn vastgelegd, evenals de betaalwijze en de voorwaarden voor eigendomsoverdracht.",
+              "units": 23
+            },
+            {
+              "text": "Het contract moet ook bepalen hoe de verkoper bij niet-nakoming zijn goederenrechtelijke rechten en vorderingen uitoefent.",
+              "units": 17
+            },
+            {
+              "text": "Is er een verzekering, dan moet de verkoper als begunstigde worden vermeld.",
+              "units": 12
+            },
+            {
+              "text": "Ook de contractdatum is verplicht.",
+              "units": 5
+            },
+            {
+              "text": "Dit zijn de overige gegevens van artikel 27.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "paragraph": 7,
+          "opener": "controleer",
+          "sentences": [
+            {
+              "text": "Controleer daarnaast bestaande zekerheden.",
+              "units": 4
+            },
+            {
+              "text": "Een zaak waarop al een Taiwanees zekerheidsrecht zonder bezitsoverdracht (動產抵押) volgens deze wet is gevestigd, mag niet het voorwerp van zo'n voorwaardelijke koop zijn; een strijdige koopovereenkomst is ongeldig.",
+              "units": 29
+            },
+            {
+              "text": "Artikelen 15 en 31 omschrijven dit zekerheidsrecht en deze beperking.",
+              "units": 10
+            },
+            {
+              "text": "Leg bij een gebruikte machine of herfinanciering de beschikbare eigendoms- en financieringsstukken naast de omschrijving van precies die machine.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "paragraph": 8,
+          "opener": "contractpartijen",
+          "sentences": [
+            {
+              "text": "Contractpartijen of hun gemachtigde vragen de registratie aan bij de bevoegde instantie.",
+              "units": 12
+            },
+            {
+              "text": "De uitvoeringsregels, artikelen 2–4, regelen de bevoegdheid, online indiening en documenten.",
+              "units": 12
+            },
+            {
+              "text": "De locatie van de machine telt mee, bijvoorbeeld wanneer zij in een sciencepark staat.",
+              "units": 14
+            },
+            {
+              "text": "Bepaal de bevoegde instantie dus aan de hand van het afleveradres.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "paragraph": 9,
+          "opener": "bij",
+          "sentences": [
+            {
+              "text": "Bij de aanvraag horen onder meer het contract, gegevens over de partijen en, bij vertegenwoordiging, de volmacht.",
+              "units": 17
+            },
+            {
+              "text": "Welke aanvullende documenten nodig zijn, hangt mede af van de zaak en de aanvrager.",
+              "units": 14
+            },
+            {
+              "text": "De officiële uitleg bij de registratie bevat de documentenlijst en aanwijzingen voor de beschrijving van de machine.",
+              "units": 17
+            },
+            {
+              "text": "Controleer na verwerking of contract, machinegegevens en registratie overeenkomen.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "paragraph": 10,
+          "opener": "zonder",
+          "sentences": [
+            {
+              "text": "Zonder looptijdafspraak geldt één jaar vanaf registratie.",
+              "units": 7
+            },
+            {
+              "text": "Een afgesproken looptijd gaat voor.",
+              "units": 5
+            },
+            {
+              "text": "Artikel 9 biedt de schuldeiser de mogelijkheid om binnen de dertig dagen vóór het einde verlenging aan te vragen.",
+              "units": 19
+            },
+            {
+              "text": "Die sluit aan op de oorspronkelijke einddatum en mag maximaal één jaar duren.",
+              "units": 13
+            },
+            {
+              "text": "Noteer de vervaldatum naast de betaaltermijnen.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "paragraph": 11,
+          "opener": "zolang",
+          "sentences": [
+            {
+              "text": "Zolang de eigendom niet is overgegaan, geeft artikel 28 onder voorwaarden recht op terugneming.",
+              "units": 14
+            },
+            {
+              "text": "Het gaat om niet betalen volgens afspraak, niet vervullen van de overeengekomen voorwaarde of verkoop, verpanding of een andere beschikking door de koper, waardoor de rechten van de verkoper worden geschaad.",
+              "units": 31
+            },
+            {
+              "text": "Onderzoek dus ook wat er met de machine is gebeurd.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "paragraph": 12,
+          "opener": "terugneming",
+          "sentences": [
+            {
+              "text": "Terugneming en verdere verkoop hebben eigen regels in artikelen 29 en 30.",
+              "units": 12
+            },
+            {
+              "text": "Laat de uitvoeringswijze beoordelen voordat u een transporteur naar de fabriek stuurt.",
+              "units": 12
+            },
+            {
+              "text": "De registratie alleen geeft geen antwoord op toegang tot het terrein of op aanspraken van een derde.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "paragraph": 13,
+          "opener": "bij",
+          "sentences": [
+            {
+              "text": "Bij een dreigende doorverkoop of betalingsachterstand kunt u wei@hoveringlaw.com.tw een niet-vertrouwelijke samenvatting sturen met de contractpartijen, de locatie van de machine en relevante data.",
+              "units": 28
+            },
+            {
+              "text": "Het kantoor behandelt Taiwanees recht; consultaties vinden plaats in het Engels, Chinees, Koreaans of Japans.",
+              "units": 15
+            },
+            {
+              "text": "Een andere communicatiewijze moet vooraf worden bevestigd en ontvangst is geen aanvaarding van een opdracht.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "paragraph": 14,
+          "opener": "bewaar",
+          "sentences": [
+            {
+              "text": "Bewaar het registratiebewijs bij de getekende overeenkomst en het betalingsschema.",
+              "units": 10
+            },
+            {
+              "text": "Als de laatste betaling wordt uitgesteld, moet ook iemand de einddatum van de registratie blijven bewaken.",
+              "units": 16
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "De koper gebruikt de machine, de verkoper houdt de eigendom",
+        "De machine moet in het contract herkenbaar zijn",
+        "Registreren en de einddatum bewaken",
+        "Een betalingsachterstand en het terughalen van de machine"
+      ]
+    }
+  ],
+  "rebindAt": "2026-10-25T13:34:56.114174+00:00"
+}

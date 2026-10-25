@@ -1,0 +1,34 @@
+{
+  "article": "repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md",
+  "repairRound": 2,
+  "authorization": "Root explicitly authorized the second and final bounded repair; independent locale confirmed only one earlier unsuccessful directed metric repair.",
+  "beforeSha256": "97d3b2e78a14b54de097dc66ae2a2db9f7abd1591a6aa0422c5e24625cdfbe50",
+  "afterSha256": "1599708a692f0654296ccb9794c9916e5482b6308ba10bf4c2cde2ccceccae9b",
+  "preservedBefore": "work/reviews/lt-author-944-r1-held.md",
+  "reason": "The pre-heading NDA paragraph previewed Article 2, then the first headed paragraph restated it with the full conditions. Locale approved consolidating them at the point of actual explanation before execution.",
+  "scope": "One agreed block edit. No further edits after its one approved-wrapper measurement.",
+  "preserved": [
+    "NDA recipient duties",
+    "Information for production, sales or business",
+    "Not known to persons generally involved in that type of information",
+    "Actual or potential economic value because of secrecy",
+    "Reasonable secrecy measures by the information holder",
+    "Same unique official source URL",
+    "All other paragraphs, FAQ, image and metadata"
+  ],
+  "current945Sha256": "2a0adb3d3c6c2293af7975144367e80fcfe7f3ce51102a314d9dc371090ba0c4",
+  "measurement": {
+    "command": "python3 work/variety-candidate/variety_metrics.py check repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md --lang lt",
+    "chunk_id": "f41eb9",
+    "wall_time_seconds": 5.375e-06,
+    "exit_code": 0,
+    "original_token_count": 101,
+    "output": "OFFICIAL CHECKER: lt unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\nrepo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md [lt] sentences=43 mean=14.9 cv=0.49 short=0.233 run3=0.024 opener_rep=0.067 cite_end=0.0 cite_para=0.267 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+  },
+  "methodReview": "work/variety-review/review-final.md",
+  "independentArticleApproval": "Requested from expand_locale_lt and expand_final_east on exact after SHA; this author record does not self-certify their verdicts.",
+  "uniqueSourceUrlsPreserved": true,
+  "frontmatterPreserved": true,
+  "exactDiff": "work/reviews/lt-author-944-repair2.diff",
+  "methodReviewSha256": "6552e467e27c46b5b269e9ec56eaf3789442364a8e81a876e70fb1b3ec08776f"
+}

@@ -1,0 +1,46 @@
+{
+  "reviewer": "/root/expand_locale_pt",
+  "checkedAt": "2026-10-25T13:33:33.990457+00:00",
+  "role": "independent locale caption-only rebind",
+  "records": [
+    {
+      "source_path": "src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md",
+      "checkedAt": "2026-10-25T13:33:33.990457+00:00",
+      "previous_sha256": "e196bf577e8a7ef27dcc7204347a16d4c473e3a12e143e692518a53b4f860b58",
+      "current_sha256": "3667f89c95b83e683ef27973cf65c04e06112ec2411a8b9dbb3456576707b1c1",
+      "previous_caption": "Cena fictícia de amostragem de café.",
+      "current_caption": "Cena fictícia",
+      "all_other_source_bytes_identical": true,
+      "image_bytes_identical": true,
+      "verification": "Reverse only the caption value and recover exact previous PASS whole-file SHA; independently hash current image bytes.",
+      "previous_pass_report": "work/reviews/pt-locale-pre-caption.json",
+      "previous_pass_report_sha256": "a9278a0896823c0ae9cdc2dbe40b2eb4473388131f50e05248a9e859cd3958f1",
+      "caption_rule": "src/lib/__tests__/column-image-caption-label.test.ts:18",
+      "verdict": "PASS",
+      "image_sha256": "46b814b548cea916f4e74b646645eac4b34926f257ed0ef4a01ef99bf34366a2",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md --lang pt",
+      "variety_exit_code": 0,
+      "variety_stdout": "repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md [pt] sentences=36 mean=18.4 cv=0.515 short=0.25 run3=0.0 opener_rep=0.077 cite_end=0.0 cite_para=0.615 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+    },
+    {
+      "source_path": "src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md",
+      "checkedAt": "2026-10-25T13:33:33.990457+00:00",
+      "previous_sha256": "5f684d9d24803677ba3288acc029b5739b8353ce41d9a4e19a13a3980c400a2d",
+      "current_sha256": "f7fc7b4fc508e35a8d8313fc7d8e94e3178490ae0135755e116b71cc72b126e9",
+      "previous_caption": "Cena fictícia de preparação de embalagens de café.",
+      "current_caption": "Cena fictícia",
+      "all_other_source_bytes_identical": true,
+      "image_bytes_identical": true,
+      "verification": "Reverse only the caption value and recover exact previous PASS whole-file SHA; independently hash current image bytes.",
+      "previous_pass_report": "work/reviews/pt-locale-pre-caption.json",
+      "previous_pass_report_sha256": "a9278a0896823c0ae9cdc2dbe40b2eb4473388131f50e05248a9e859cd3958f1",
+      "caption_rule": "src/lib/__tests__/column-image-caption-label.test.ts:18",
+      "verdict": "PASS",
+      "image_sha256": "a80c077de19d2b485b7897723fbe7ab9531f7b193d37957bc94f83bc4b029451",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md --lang pt",
+      "variety_exit_code": 0,
+      "variety_stdout": "repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md [pt] sentences=37 mean=19.5 cv=0.454 short=0.189 run3=0.029 opener_rep=0.231 cite_end=0.0 cite_para=0.462 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+    }
+  ],
+  "manifest_sha256": "ba56978e7514d4d094fc35a0b0813f33ef6750568151d067a211ee08470038d2"
+}

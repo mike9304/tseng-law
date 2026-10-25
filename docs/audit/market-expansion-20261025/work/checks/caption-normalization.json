@@ -1,0 +1,198 @@
+{
+  "at": "2026-10-25T13:26:11.030853+00:00",
+  "reason": "Existing repository test requires exact short fictional-scene locale label; all24 new custom captions failed. Only caption metadata changed; alt/image/body unchanged. Independent locale/final rebinding required.",
+  "records": [
+    {
+      "source_path": "src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md",
+      "old_sha256": "80779888e17199b5d1108f545d5587ce7ab5ec820f165a0f19a5ec90f4ad4a88",
+      "new_sha256": "da58b3524de165051c33660d6784462be32a1b91241bf733355dc4567eefda53",
+      "old_caption": "\"Cảnh trả phòng hư cấu.\"",
+      "new_caption": "Cảnh hư cấu",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-vi/923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md",
+      "old_sha256": "88335b55c5ea00cfac484947d743b1b8f09a32265f97eeef6f011799c0007f2c",
+      "new_sha256": "2d8d9425d4dc1927611821b3ea7281a81f0bdb1083c614c9b91d3c4bb0b1edd1",
+      "old_caption": "\"Góc làm việc hư cấu cho ngày nhận việc.\"",
+      "new_caption": "Cảnh hư cấu",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md",
+      "old_sha256": "8f8f4b9059df25cfaf8d29cb6fe73c7a9b462ef37f3876bf6a36becbfa9221db",
+      "new_sha256": "a197b0284aea60858bfa499a7051f1ece5082236839cb4a24502dcbf3be82cff",
+      "old_caption": "\"Adegan fiksi tentang pekerjaan pengasuh dan persiapan kelahiran.\"",
+      "new_caption": "Adegan fiksi",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md",
+      "old_sha256": "d9b6f376d4eae90d11e8cc583818f32c56d0898a5457594566e617fa38e7dbaf",
+      "new_sha256": "f9bc4f713398de194ea6e8ffbf62b8bfc8294f5821fd1fce3fcfcbe1c9e9b439",
+      "old_caption": "\"Adegan fiksi yang memperlihatkan pekerjaan restoran dan perawatan rumah.\"",
+      "new_caption": "Adegan fiksi",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+      "old_sha256": "b5c61e5675ad7ace02ca89ed45af6434f53cf358731cfedbc5e222e4a881f1dc",
+      "new_sha256": "633126ec40c4f821c37e30b2610aeb2598a7c7fcc3617033960719ae2cf1bfc5",
+      "old_caption": "\"Kathang-isip na pahingahan sa factory.\"",
+      "new_caption": "Kathang-isip na eksena",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+      "old_sha256": "0ce2bf7d0cd6a45886d56a5f5be25279f2d7894a83204f55d74b563eb1a51b5e",
+      "new_sha256": "535d60328cbcbf44ff21363a0a47a506858c8d38a4203dc5037bbe82b145d2b9",
+      "old_caption": "\"Kathang-isip na eksena; walang tunay na dokumento ng hukuman.\"",
+      "new_caption": "Kathang-isip na eksena",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md",
+      "old_sha256": "9bc016634e9ba1e326e5412f781a41bd6eba910d3c7ca91eb08786768ea70f21",
+      "new_sha256": "f92e3cabcabac4828d3a0379d9376d150f54eddb4ac209f719088014bda7d969",
+      "old_caption": "\"कंपनी के रिकॉर्ड की जाँच का काल्पनिक दृश्य।\"",
+      "new_caption": "काल्पनिक दृश्य",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md",
+      "old_sha256": "9047bb9835688d004c31420212f78182ae28eade1503902ebc67b47992d06d4d",
+      "new_sha256": "4733e8474fbca987ac77441c0f2a6ac0348a050ea713a51840ecbb5f940c9c8a",
+      "old_caption": "\"तकनीकी सेवा के कार्यस्थल का काल्पनिक दृश्य।\"",
+      "new_caption": "काल्पनिक दृश्य",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md",
+      "old_sha256": "d478a7ac41c46ab5d9861f6d9544d3276d4334ad8f4c395bd65aa55aeedcd9a6",
+      "new_sha256": "91a77cfc009bd425c4c1244832494e272284441bf06f0bfae013583ff8b328ce",
+      "old_caption": "\"مشهد متخيَّل لمكتب شحن\"",
+      "new_caption": "مشهد متخيَّل",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+      "old_sha256": "9561312bd3d24413e8d944f44affcac75c6d0d45535084add523df989acde551",
+      "new_sha256": "24332b5c2d46a686ed3f4635bd16d418631d2cd6d1403d0c4d7ac82b355fa431",
+      "old_caption": "\"مشهد متخيَّل لعينات مواد صناعية\"",
+      "new_caption": "مشهد متخيَّل",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+      "old_sha256": "9115389453a135cf8b3b8f010f3bd996afbc0ee81bf6e92b43455033c617496f",
+      "new_sha256": "514c395c3212ea39504ab710d7b3130ad5bd0e996169b0c5cab212ea1752b3c5",
+      "old_caption": "\"סצנה בדיונית להמחשת השוואת תכנון טכני.\"",
+      "new_caption": "סצנה בדיונית",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+      "old_sha256": "c1edcaaa8978b6198116c522ad6edd879a9961a0f7c9f29af53a67c592f49e88",
+      "new_sha256": "95da9c181636d91a8a2da1e7e237f29d08c77c159740301e9c87b0804139a898",
+      "old_caption": "\"סצנה בדיונית להמחשת פיתוח משותף.\"",
+      "new_caption": "סצנה בדיונית",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+      "old_sha256": "3b395842ebc879b6d3d61a3a8bab1bd006f9fd16aaf27113892497f03b7c0425",
+      "new_sha256": "8427d908388f0df5adf9b172935dd14447b2afc3179fd3f79db1cf66f2b1c6de",
+      "old_caption": "\"Fictieve installatieomgeving.\"",
+      "new_caption": "Fictieve scène",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+      "old_sha256": "943a747d79288334da91b9c608ef558bda57ba8754e7acd5eac6c49083f11b01",
+      "new_sha256": "241a1785fea4cfd9b19cd18bff733329caff8dec8721a85ea3d75634ba28cc11",
+      "old_caption": "\"Fictieve machinelevering.\"",
+      "new_caption": "Fictieve scène",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md",
+      "old_sha256": "187c8a0c2b64ff6a69be32be21912d48b976cf56bd9e38a6cf2df52b53b56d64",
+      "new_sha256": "a24b1b5ef3d8925adb2d21d414c9ee7e906a0b764e0a2e79f19e2eeb0d35daf8",
+      "old_caption": "\"Scène fictive de préparation d’une passation documentaire.\"",
+      "new_caption": "Scène fictive",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md",
+      "old_sha256": "c09e180a592b02cc9a11f775aba7821dd7beba54c3bafd91cab7b7bf97f6a51a",
+      "new_sha256": "132e87abb6a25149cc00544a11e07aacdea61a9a3a18e142e14491e8b5a05a2b",
+      "old_caption": "\"Scène fictive dans une boutique de vins.\"",
+      "new_caption": "Scène fictive",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md",
+      "old_sha256": "e196bf577e8a7ef27dcc7204347a16d4c473e3a12e143e692518a53b4f860b58",
+      "new_sha256": "3667f89c95b83e683ef27973cf65c04e06112ec2411a8b9dbb3456576707b1c1",
+      "old_caption": "\"Cena fictícia de amostragem de café.\"",
+      "new_caption": "Cena fictícia",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md",
+      "old_sha256": "5f684d9d24803677ba3288acc029b5739b8353ce41d9a4e19a13a3980c400a2d",
+      "new_sha256": "f7fc7b4fc508e35a8d8313fc7d8e94e3178490ae0135755e116b71cc72b126e9",
+      "old_caption": "\"Cena fictícia de preparação de embalagens de café.\"",
+      "new_caption": "Cena fictícia",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "old_sha256": "325172f58af8948b09b2bfa0706012dbea33c6ae94bf56fd1550b7c044758641",
+      "new_sha256": "06813fc5597240ed39d513e1e88df483dec85cd8f277f89d1baaa41003b6f4ca",
+      "old_caption": "\"Fikcyjna scena w biurze firmy handlowej.\"",
+      "new_caption": "Scena fikcyjna",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "old_sha256": "ae9c9d62d4c29c9d3924d0bd8eb077730becbcb3c03aa1db74b7887812c7078f",
+      "new_sha256": "bd466928916454f42081d331f3ab0f93137ed6bd729c7e783cdcc769545677ba",
+      "old_caption": "\"Fikcyjna scena kontroli produktów, bez związku z rzeczywistą marką lub zdarzeniem.\"",
+      "new_caption": "Scena fikcyjna",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+      "old_sha256": "bec0b9df6b63b0f17f5f9bc2ffac6b2ef23e2b8693475936eaca05ff1cfaa2a3",
+      "new_sha256": "b24786be986f1f9660c9fce10c830137156646755991d85215d4e96836fb1cef",
+      "old_caption": "\"Smyšlená scéna z kanceláře dodavatele.\"",
+      "new_caption": "Smyšlená scéna",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+      "old_sha256": "67fd481e9ae23009247b50aa53d09f6b3a21e962bf1dd76bbcbaed1de8592bc5",
+      "new_sha256": "46c094fc25bee60eaddd867007b905a44a89c2c1dbb77ab9dda8cd5a5837fe91",
+      "old_caption": "\"Smyšlený prototyp ve fiktivním výstavním prostoru.\"",
+      "new_caption": "Smyšlená scéna",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md",
+      "old_sha256": "1599708a692f0654296ccb9794c9916e5482b6308ba10bf4c2cde2ccceccae9b",
+      "new_sha256": "52da5f555b98a01f66dc2140cbdfba2514eff3285b6898472d740b903e75a1ee",
+      "old_caption": "\"Išgalvota bandymų laboratorijos scena.\"",
+      "new_caption": "Išgalvota scena",
+      "body_unchanged": true
+    },
+    {
+      "source_path": "src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md",
+      "old_sha256": "2a0adb3d3c6c2293af7975144367e80fcfe7f3ce51102a314d9dc371090ba0c4",
+      "new_sha256": "2f3372bd6e3bc1422b2a6d377707338ede47d4049c388340e137989828a5b111",
+      "old_caption": "\"Išgalvota elektronikos kūrėjo darbo vieta.\"",
+      "new_caption": "Išgalvota scena",
+      "body_unchanged": true
+    }
+  ]
+}

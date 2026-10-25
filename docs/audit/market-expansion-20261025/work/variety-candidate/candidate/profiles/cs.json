@@ -1,0 +1,285 @@
+{
+  "locale": "cs",
+  "directory": "columns-cs",
+  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:[0-9]+[.)][^\\S\\r\\n]+)?(?:Zdroje|Oficiální\\s+zdroje|Použité\\s+zdroje|Prameny)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
+  "abbreviations": [
+    "č",
+    "čl",
+    "odst",
+    "písm",
+    "str",
+    "s",
+    "r",
+    "např",
+    "tj",
+    "tzn",
+    "atd",
+    "apod",
+    "resp",
+    "prof",
+    "doc",
+    "Ing",
+    "JUDr",
+    "MUDr",
+    "Ph.D",
+    "Sb",
+    "sp. zn",
+    "č. j",
+    "s. r. o",
+    "s.r.o",
+    "a. s",
+    "a.s"
+  ],
+  "terminal_abbreviations": [
+    "atd",
+    "apod",
+    "s.r.o",
+    "s. r. o",
+    "a.s",
+    "a. s",
+    "r"
+  ],
+  "join_hyphens": false,
+  "citation_pattern": "(?i:\\b(?:čl\\.?|článek|odst\\.?|odstavec)\\s*\\d+)",
+  "quote_closers": "“",
+  "calendar_months": [
+    "ledna",
+    "února",
+    "března",
+    "dubna",
+    "května",
+    "června",
+    "července",
+    "srpna",
+    "září",
+    "října",
+    "listopadu",
+    "prosince"
+  ],
+  "spaced_numeric_dates": true,
+  "contrast_patterns": [
+    "(?i:\\b(?:nikoli|ne|není|nejsou|nejde)\\b(?!\\s+(?:jen|pouze)\\b)[^.!?\\n]{0,160}\\b(?:nýbrž|ale)\\b)",
+    "(?i:\\bnamísto\\b)",
+    "(?i:\\bna\\s+rozdíl\\s+od\\b)"
+  ],
+  "caveat_pattern": "(?i:^[\\s„“\"‘\\x27(\\[]*(?:Avšak|Nicméně|Přesto|Ovšem)\\b)",
+  "hypo_pattern": "(?i:^[\\s„“\"‘\\x27(\\[]*(?:Představme\\s+si|Předpokládejme|Dejme\\s+tomu|Například|Hypotetický\\s+příklad)\\b)",
+  "formula_close_pattern": "(?i:\\b(?:obecné\\s+informace|Každý\\s+případ\\s+je\\s+jiný|Naše\\s+kancelář\\s+vám\\s+může\\s+pomoci|e-mailem)\\b)",
+  "sentence_fixtures": [
+    {
+      "text": "Obálka leží na stole. Krabice je otevřená.",
+      "sentences": [
+        "Obálka leží na stole.",
+        "Krabice je otevřená."
+      ]
+    },
+    {
+      "text": "Kde je tužka? Tady!",
+      "sentences": [
+        "Kde je tužka?",
+        "Tady!"
+      ]
+    },
+    {
+      "text": "Ing. Novák čte list. Prof. Černá zavírá krabici.",
+      "sentences": [
+        "Ing. Novák čte list.",
+        "Prof. Černá zavírá krabici."
+      ]
+    },
+    {
+      "text": "Na str. 7 je obrázek. Fiktivní štítek uvádí čl. 3 odst. 2.",
+      "sentences": [
+        "Na str. 7 je obrázek.",
+        "Fiktivní štítek uvádí čl. 3 odst. 2."
+      ]
+    },
+    {
+      "text": "Na lístku je 1 250,50 Kč. Podpis chybí.",
+      "sentences": [
+        "Na lístku je 1 250,50 Kč.",
+        "Podpis chybí."
+      ]
+    },
+    {
+      "text": "Uvnitř jsou listy, tužky atd. Nůžky leží vedle.",
+      "sentences": [
+        "Uvnitř jsou listy, tužky atd.",
+        "Nůžky leží vedle."
+      ]
+    },
+    {
+      "text": "Dne 3. května dorazila obálka. Krabice zůstala otevřená.",
+      "sentences": [
+        "Dne 3. května dorazila obálka.",
+        "Krabice zůstala otevřená."
+      ]
+    },
+    {
+      "text": "Lístek nese datum 5. 10. 2026. Text je čitelný.",
+      "sentences": [
+        "Lístek nese datum 5. 10. 2026.",
+        "Text je čitelný."
+      ]
+    },
+    {
+      "text": "„Kde je list?“ zeptala se Eva. Petr ukázal na stůl.",
+      "sentences": [
+        "„Kde je list?“ zeptala se Eva.",
+        "Petr ukázal na stůl."
+      ]
+    },
+    {
+      "text": "„Kopie je hotová.“ Eva zavřela krabici.",
+      "sentences": [
+        "„Kopie je hotová.“",
+        "Eva zavřela krabici."
+      ]
+    },
+    {
+      "text": "Fiktivní název zní Papír s. r. o. Vedle je prázdný řádek.",
+      "sentences": [
+        "Fiktivní název zní Papír s. r. o.",
+        "Vedle je prázdný řádek."
+      ]
+    },
+    {
+      "text": "Obálka leží na stole. Krabice je otevřená.",
+      "sentences": [
+        "Obálka leží na stole.",
+        "Krabice je otevřená."
+      ]
+    }
+  ],
+  "word_fixtures": [
+    {
+      "text": "Žlutá obálka leží tady.",
+      "tokens": [
+        "Žlutá",
+        "obálka",
+        "leží",
+        "tady"
+      ]
+    },
+    {
+      "text": "Česko-tchajwanský text; 3-5 listů.",
+      "tokens": [
+        "Česko",
+        "tchajwanský",
+        "text",
+        "3",
+        "5",
+        "listů"
+      ]
+    },
+    {
+      "text": "1 250,50 Kč; 25%.",
+      "tokens": [
+        "1",
+        "250,50",
+        "Kč",
+        "25"
+      ]
+    },
+    {
+      "text": "O’Neill čte PDF.",
+      "tokens": [
+        "O’Neill",
+        "čte",
+        "PDF"
+      ]
+    },
+    {
+      "text": "Čl. 3 odst. 2, A4.",
+      "tokens": [
+        "Čl",
+        "3",
+        "odst",
+        "2",
+        "A4"
+      ]
+    },
+    {
+      "text": "Příliš žluťoučký kůň.",
+      "tokens": [
+        "Příliš",
+        "žluťoučký",
+        "kůň"
+      ]
+    },
+    {
+      "text": "Žlutá obálka leží tady.",
+      "tokens": [
+        "Žlutá",
+        "obálka",
+        "leží",
+        "tady"
+      ]
+    }
+  ],
+  "source_positive": [
+    "## Zdroje",
+    "### Oficiální zdroje:",
+    "## 7. Použité zdroje",
+    "## PRAMENY ##"
+  ],
+  "source_negative": [
+    "## Zdroje financování",
+    "## Právní základ nároku",
+    "Zdroje",
+    "## Zdroje a rozbor"
+  ],
+  "rhetorical_fixtures": [
+    [
+      "contrast",
+      "Je to nikoli obálka, nýbrž krabice.",
+      1
+    ],
+    [
+      "contrast",
+      "Je tu nejen papír, ale i tužka.",
+      0
+    ],
+    [
+      "contrast",
+      "Přinesl krabici namísto obálky.",
+      1
+    ],
+    [
+      "contrast",
+      "Obálka leží na stole.",
+      0
+    ],
+    [
+      "caveat",
+      "Nicméně krabice je otevřená.",
+      1
+    ],
+    [
+      "caveat",
+      "Krabice je otevřená, nicméně obálka zůstává zavřená.",
+      0
+    ],
+    [
+      "hypo",
+      "Představme si červenou krabici.",
+      1
+    ],
+    [
+      "hypo",
+      "Červená krabice stojí na stole.",
+      0
+    ],
+    [
+      "formula",
+      "Tento text obsahuje obecné informace.",
+      1
+    ],
+    [
+      "formula",
+      "Poslední kopie je v druhé obálce.",
+      0
+    ]
+  ],
+  "ordinal_before_lowercase": true
+}

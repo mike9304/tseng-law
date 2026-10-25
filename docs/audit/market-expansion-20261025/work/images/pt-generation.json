@@ -1,0 +1,36 @@
+{
+  "createdAt": "2026-10-25",
+  "mode": "native image_gen",
+  "images": [
+    {
+      "id": 938,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial hero for a Brazilian Portuguese legal article about a Brazilian coffee shipment failing Taiwan border food inspection and the right to request one retest of the original sample. Create a fictional, restrained documentary-style still life: a stainless inspection counter with a clear sealed sample container holding unroasted green coffee beans, a clean metal sampling scoop beside it, and an unmarked burlap coffee sack further back in a quiet bonded warehouse. Cool daylight, natural texture, crisp sample container in foreground, softly blurred shelving, balanced wide 3:2 composition, muted sage and gray. No people, faces, hands, readable text, numbers, logos, trademarks, flags, stamps, labels, documents, signage, watermarks, or graphic overlays. This is an illustrative fictional scene, not a real inspection record. The container should be plain and transparent with a simple blank tamper seal and no printed markings.",
+      "original": "/Users/son7/.codex/generated_images/01a17324-ceb6-79c3-8fa9-dae7ead0550f/exec-dafb5843-0853-4d22-9cc3-01313c80bf83.png",
+      "target": "repo/public/images/columns/938-market-expansion-20261025.webp",
+      "inspected": true,
+      "visualFindings": "Sealed clear container with green coffee beans and scoop on inspection counter; no people, text, logo or case evidence.",
+      "originalCopy": "/Users/son7/tseng-market-expansion-20261025/work/images/938-original.png",
+      "sha256": "46b814b548cea916f4e74b646645eac4b34926f257ed0ef4a01ef99bf34366a2",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "size": 162730
+    },
+    {
+      "id": 939,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial hero for a Brazilian Portuguese legal article about certification and packaging of Brazilian organic coffee sold in Taiwan. Fictional still life in a small coffee packing studio: two unbranded kraft-paper stand-up pouches with completely blank unprinted rectangular label areas, one open pouch showing roasted coffee beans, a small ceramic bowl of beans, plain paper packaging swatches and a single fresh coffee plant sprig on a warm walnut workbench. The whole subject is packaging review before printing, not food inspection. Warm soft morning window light, subtle natural shadows, tactile matte paper, calm contemporary editorial photography, three-quarter overhead view, spacious 3:2 composition. No people, hands, faces, readable words, characters, numbers, certification badges, organic marks, stamps, logos, flags, watermarks, visible legal documents or graphic overlays. No coffee cups, no illustrative scales of justice. A distinct warm packaging composition, not a warehouse sample scene.",
+      "original": "/Users/son7/.codex/generated_images/01a17324-ceb6-79c3-8fa9-dae7ead0550f/exec-0298bc47-0652-43b7-9be1-58927c20e981.png",
+      "target": "repo/public/images/columns/939-market-expansion-20261025.webp",
+      "inspected": true,
+      "visualFindings": "Warm coffee packaging still life with unprinted pouches and beans; visually distinct from938; no certification marks, logos, text, people.",
+      "originalCopy": "/Users/son7/tseng-market-expansion-20261025/work/images/939-original.png",
+      "sha256": "a80c077de19d2b485b7897723fbe7ab9531f7b193d37957bc94f83bc4b029451",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "size": 171174
+    }
+  ]
+}

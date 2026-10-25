@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-10-25",
+  "mode": "native image_gen",
+  "assets": [
+    {
+      "id": 930,
+      "prompt": "Use case: photorealistic-natural. Asset type: wide editorial hero photograph for a Taiwan-law Arabic business column about a UAE importer facing an ocean shipment rerouting and added freight costs. A fictional, understated documentary still life in a harbor operations office: a small unmarked dark-blue container model beside a folded blank sheet and a simple coiled mooring line on a worn wooden table, with two cargo ships at different distances visible softly through a large window over pale sea water. The ships are stationary-looking and plausible, no disaster or drama. Natural cool morning light, textured paper, muted navy and warm limestone, carefully composed wide horizontal 3:2 photograph, realistic materials and depth. No people, no faces, no readable text, no map labels, no numbers, no logos, no flags, no stamps, no identity documents, no court objects, no watermarks. The composition should suggest freight and changing voyage options without drawing an actual route map.",
+      "original": "/Users/son7/.codex/generated_images/01a17324-45fd-7b91-be8c-8bc326ac495b/exec-68bc024b-01b9-4d10-81f8-a58523167005.png",
+      "output": "repo/public/images/columns/930-market-expansion-20261025.webp",
+      "size": [
+        1536,
+        1024
+      ],
+      "inspected": true,
+      "inspection": "Native rendered output and final WebP both visually inspected: container model, plain paper and rope in harbor office; no visible text, logos, faces, flags or actual case evidence.",
+      "conversion": "Pillow format-only WebP quality89 method6; no compositing or edits",
+      "sha256": "a247a8544127f0eaf7a5bf0523191650463f909c31cc82276b396c50c113cb37",
+      "bytes": 171014,
+      "originalSha256": "6fc6ba46cea0717b2e1961742f855cd9ef4b75e110bea9ab2a333afe441c1bb0"
+    },
+    {
+      "id": 931,
+      "prompt": "Use case: photorealistic-natural. Asset type: wide editorial photograph for an Arabic Taiwan-law business column about a Saudi industrial polymer supplier and a Taiwan distributor's resale pricing. Fictional clean material-sample preparation area at a modest distribution warehouse, no people. Foreground: three shallow stainless-steel trays holding different uncolored polymer pellets (small translucent beads, pale white pellets and amber granules) neatly arranged on a lightly scratched workbench, beside a closed plain folder. Mid-background: several sealed unmarked blue industrial drums and plain heavy kraft sacks on a wooden pallet, all closed and visually orderly, no dangerous spills. Soft natural window light, cool grey industrial palette with restrained warm kraft tones, realistic material textures, landscape horizontal 3:2 composition. No text, no numbers, no logos, no brands, no chemical labels, no flags, no faces, no readable documents, no court symbols, no watermarks. This is a fictional illustrative sample-room scene, not a depiction of any actual company's facility or shipment.",
+      "original": "/Users/son7/.codex/generated_images/01a17324-45fd-7b91-be8c-8bc326ac495b/exec-a67973e3-7713-4176-a73b-a939fd384676.png",
+      "output": "repo/public/images/columns/931-market-expansion-20261025.webp",
+      "size": [
+        1536,
+        1024
+      ],
+      "inspected": true,
+      "inspection": "Native rendered output and final WebP both visually inspected: polymer pellet samples in metal trays; closed plain folder; sealed unmarked blue drums and kraft sacks. No visible text, logos, faces, flags or actual case evidence.",
+      "conversion": "Pillow format-only WebP quality89 method6; no compositing or edits",
+      "sha256": "42285608197d77c9cb1b0c165705951a0750690711939f977b965ce51224bbaf",
+      "bytes": 191658,
+      "originalSha256": "1593fb92d9288dba2ab893fe79c488f83bcd98dab67b29f633bc2c495f9592f5"
+    }
+  ],
+  "discardedCandidates": [
+    {
+      "id": 931,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial hero photograph for an Arabic Taiwan-law column for a Saudi perfume brand arranging retail distribution and deciding recommended resale prices. Fictional restrained showroom still life: two open natural walnut display trays at different levels, one holding three beautiful unbranded clear amber perfume bottles with simple matte caps and the other holding two similarly shaped frosted bottles, a plain closed cardboard delivery carton behind them, and several entirely blank small ivory price-card holders at the edge of each tray. A softly lit retail shelving background with ample quiet space. No human figures. Warm afternoon side light, glass reflections and tactile wood grain, sophisticated but ordinary commercial setting, horizontal 3:2 crop. No readable words, Arabic lettering, numerals or prices anywhere; no logos, insignia, flags, faces, legal papers, currency, court symbols or watermarks. Do not copy any commercial perfume bottle design. This is an illustrative fictional retail scene.",
+      "original": "/Users/son7/.codex/generated_images/01a17324-45fd-7b91-be8c-8bc326ac495b/exec-81ce273d-6b6d-4f05-b68a-a129554fe78b.png",
+      "output": null,
+      "size": [
+        1536,
+        1024
+      ],
+      "inspected": true,
+      "inspection": "Visible rendered native output: five unbranded perfume bottles, wooden trays, delivery carton and entirely blank price holders; no visible text, logos, faces, flags or actual case evidence.",
+      "conversion": "Pillow format-only WebP quality89 method6; no compositing or edits",
+      "reason": "Parent and regional researcher narrowed article from consumer brand to official trade-supported chemical/polymer supplier. Perfume image replaced before review; original preserved, not referenced by final manuscript."
+    }
+  ]
+}

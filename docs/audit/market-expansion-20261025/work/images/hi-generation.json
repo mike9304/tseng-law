@@ -1,0 +1,59 @@
+{
+  "locale": "hi",
+  "records": [
+    {
+      "id": 928,
+      "original": "/Users/son7/.codex/generated_images/01a17324-09db-7722-8f01-155397eeed1a/exec-18f50a33-9b4e-4aad-9da2-01d94e320f25.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: restrained editorial hero photograph for a Hindi legal article about an Indian minority shareholder asking a Taiwan court to appoint a company inspector to examine specific company accounts. Fictional staged scene. On a pale oak meeting table in a quiet contemporary office, two neatly separated groups of plain cream bookkeeping folders, a partly opened unmarked bound ledger showing only very faint abstract ruled lines, a clear magnifying glass resting above one selected page, and a small metal binder clip. One small stack set to the side suggests a defined subset of records, not unrestricted access. Warm daylight from a side window; muted sand, charcoal, and sage colors, tactile paper and wood grain. Camera at low three-quarter angle, moderate depth of field, wide horizontal 3:2 composition approximately 1536x1024. No people, no hands, no faces, no passports or identity cards, no readable text, no numbers, no logos, no seals, no flags, no courthouse symbols, no watermark. Natural editorial photography, calm and specific, not glossy corporate stock art.",
+      "tool": "image_gen__imagegen",
+      "native": true,
+      "transparent_background": false,
+      "generated": "2026-10-25",
+      "visualInspection": {
+        "inspected": true,
+        "by": "expand_author_hi",
+        "noFaces": true,
+        "noReadableText": true,
+        "noLogos": true,
+        "noIdentityDocuments": true,
+        "fictionalScene": true
+      },
+      "final": "/Users/son7/tseng-market-expansion-20261025/repo/public/images/columns/928-market-expansion-20261025.webp",
+      "workspaceOriginal": "/Users/son7/tseng-market-expansion-20261025/work/images/hi-928-original.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "originalSha256": "328621117914a4c5ab39b8ab6b4bc18451afff913cb244e0a23f176dd90a5538",
+      "webpSha256": "8bf34a1678089f7017eeb6bb9a959a9834b04a9ee838d91ae245c6da10c39531",
+      "webpBytes": 148542
+    },
+    {
+      "id": 929,
+      "original": "/Users/son7/.codex/generated_images/01a17324-09db-7722-8f01-155397eeed1a/exec-3bf7c4f6-9d76-4c2b-844f-d1f5652639d2.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: legal-business editorial hero photo for Hindi readers in India providing technical engineering services to Taiwan customers; topic is contract classification and tax withholding on fees. Fictional staged engineering workbench, no actual client or evidence. Wide horizontal 3:2 image approximately 1536x1024. Close view of a compact unbranded green circuit-board prototype on a dark anti-static mat, a digital measuring instrument whose screen is off, a plain closed laptop, two tidy bundles of colored test cables, and a single folded blank cream work sheet nearby. Background soft-focus shelves in a clean small engineering studio, no people. Cool slate and blue-green palette with soft side daylight and a subtle warm desk lamp; realistic components, texture, believable arrangement. Composition should be distinctly different from a legal desk or bookkeeping folders: circuit prototype and service tools dominate. No words, readable text, numerals, invoices, legible screens, brand marks, logos, flags, faces, hands, identity documents, stamps, seals or watermark. Restrained documentary-quality editorial photograph, not a futuristic render.",
+      "tool": "image_gen__imagegen",
+      "native": true,
+      "transparent_background": false,
+      "generated": "2026-10-25",
+      "visualInspection": {
+        "inspected": true,
+        "by": "expand_author_hi",
+        "noFaces": true,
+        "noReadableText": true,
+        "noLogos": true,
+        "noIdentityDocuments": true,
+        "fictionalScene": true
+      },
+      "final": "/Users/son7/tseng-market-expansion-20261025/repo/public/images/columns/929-market-expansion-20261025.webp",
+      "workspaceOriginal": "/Users/son7/tseng-market-expansion-20261025/work/images/hi-929-original.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "originalSha256": "46bee20bdb60f19765f45ce769a22dd14539f70a2348ce1234630c27b0ebc5c9",
+      "webpSha256": "8fecca91b72f0c95f2a679cdf58f3aff4097a141ba4276083194f76342d1c3f7",
+      "webpBytes": 141566
+    }
+  ]
+}

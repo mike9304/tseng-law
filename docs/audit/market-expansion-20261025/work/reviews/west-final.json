@@ -1,0 +1,495 @@
+{
+  "reviewer": "/root/expand_final_west",
+  "role": "final",
+  "independentOfAuthor": true,
+  "independentOfLocaleReviewers": true,
+  "checkedAt": "2026-10-25T13:39:33.867606+00:00",
+  "reviewDate": "2026-10-25",
+  "overall_verdict": "PASS",
+  "records": [
+    {
+      "source_path": "src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+      "sha256": "8427d908388f0df5adf9b172935dd14447b2afc3179fd3f79db1cf66f2b1c6de",
+      "source_mtime_utc": "2026-10-25T13:26:11.025311+00:00",
+      "checkedAt": "2026-10-25T13:39:33.867606+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "optional_style_findings": [],
+      "locale_report": "work/reviews/nl-locale.json",
+      "locale_report_sha256": "fd1275a993b657ee00f4442f7d4989b2e2c072675de850199f8658a7631505b3",
+      "locale_reviewer": "/root/expand_locale_nl",
+      "locale_report_md": "work/reviews/nl-locale.md",
+      "locale_report_md_sha256": "cf7be473361abf8cdcbb4222f5a33e4b680a4c9f85338882d52b9b48410fe09a",
+      "image_path": "public/images/columns/934-market-expansion-20261025.webp",
+      "image_sha256": "0642ee36a4fb08d9d189c3b1563d77de7eb929f93beebe81ea38a10f046b9f55",
+      "image_inspected": true,
+      "image_observation": "Cool steel workbench, open industrial machine, tool case, torque wrench and gloves. Decorative glove marks do not identify a brand; no people or readable case documents. Alt matches.",
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md --lang nl",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md [nl] sentences=36 mean=17.9 cv=0.483 short=0.139 run3=0.029 opener_rep=0.167 cite_end=0.0 cite_para=0.583 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "measurement_evidence": "work/reviews/west-final-evidence/final-measurements-and-captions.json",
+      "full_manuscript_read": true,
+      "metadata_faq_and_captions_read": true,
+      "section5_checked": true,
+      "first_two_paragraph_deletion_checked": true,
+      "opening_deletion_result": "P1 supplies conditional article-5 equivalence and the stay threshold; P2 supplies Dutch entry eligibility and the separate work-permission boundary. Deletion loses distinct operative information.",
+      "legal_checks": [
+        "Eligibility is limited to foreign-legal-person contract work under Employment Service Act 51(3), involving the work in 46(1)(1) or (2). A Taiwanese contract alone is not enough.",
+        "Permission regulation 5 uses stay up to 30 days; 12 permits filing within 30 days of entry for a 31–90-day stay. Entry permission and permission to work remain separate. No sentence says filing itself authorizes pre-decision work.",
+        "Qualification standard 7 and the separate degree-copy exception in regulation 9(2)(5) each preserve the one year preceding the application plus current-period cumulative test. They concern work periods, not merely weekdays actually on site.",
+        "No Taiwan branch or representative office: the contractual business or authorized agent is the relevant applicant; the supplier's contract/registration/dispatch documents remain required."
+      ],
+      "commencement_and_history": "Permission regulation current revision 2025-12-30; cited 5/9/12 unaffected by that revision, 9 last amended 2023-10-13. Qualification standards current 2024-08-01 revision does not change 7. Employment Service Act current 2025-01-20 amendment concerns 46. Current full texts and commencement/history were read; ESA history used official Taipei PDF after MOJ history access failed.",
+      "official_sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090027",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090031",
+        "https://laws.gov.taipei/law/LawSearch/LawExport/FL015128?type=0",
+        "https://www.boca.gov.tw/cp-149-4486-7785a-2.html",
+        "https://ezworktaiwan.wda.gov.tw/cp.aspx?n=D7B5F886C207D205"
+      ],
+      "overlap_result": "Actual JA135 read, SHA 34f782154d76db2eaebfd79fc42c03c2cb5a40d8bb2de48cb6baa10fdff63881. Same legal backbone acknowledged. NL is a shorter changed-installation decision: 3 to 6 weeks, initial entry clock, notification responsibility, aligned contract/dispatch scope and previous assignments. JA is a broad multi-route guide with 30/90 table, pre-permit ambiguity, subsidiary, processing-time, sanctions, tax and inquiry sections. Not a translated structural duplicate.",
+      "legal_source_evidence": [
+        "work/reviews/west-final-evidence/source-opens-1.json",
+        "work/reviews/west-final-evidence/source-opens-2.json",
+        "work/reviews/west-final-evidence/source-opens-3.json"
+      ],
+      "limitations": [
+        "Current WDA manual-list page links a May 2018 contract-worker manual; printed p10 (PDF p13) explains stay calculation by entry/exit records. Its cover says current law governs. This is supplemental guidance, not a newly enacted rule or an individual clearance for every 90-day visa-free admission. No inference of lawful work before a decision is certified.",
+        "AI editorial review only; not human attorney/native-speaker certification, publication authority or an individual legal opinion."
+      ],
+      "original_variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md --lang nl",
+      "original_variety_exit_code": 2,
+      "original_variety_result": "Unsupported Dutch, exit 2; not a measured PASS.",
+      "variety_method": "Independently reviewed task-local Dutch extension with unchanged thresholds.",
+      "variety_method_review": "work/variety-review/review-final.json",
+      "variety_method_review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+      "variety_wrapper_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5"
+    },
+    {
+      "source_path": "src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+      "sha256": "241a1785fea4cfd9b19cd18bff733329caff8dec8721a85ea3d75634ba28cc11",
+      "source_mtime_utc": "2026-10-25T13:26:11.025761+00:00",
+      "checkedAt": "2026-10-25T13:39:33.867606+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "optional_style_findings": [],
+      "locale_report": "work/reviews/nl-locale.json",
+      "locale_report_sha256": "fd1275a993b657ee00f4442f7d4989b2e2c072675de850199f8658a7631505b3",
+      "locale_reviewer": "/root/expand_locale_nl",
+      "locale_report_md": "work/reviews/nl-locale.md",
+      "locale_report_md_sha256": "cf7be473361abf8cdcbb4222f5a33e4b680a4c9f85338882d52b9b48410fe09a",
+      "image_path": "public/images/columns/935-market-expansion-20261025.webp",
+      "image_sha256": "228564814ce94325a15636b897ef9d744f9bd05cd649db6b1370ad558da83a61",
+      "image_inspected": true,
+      "image_observation": "Warm warehouse with milling machine on transport base, open crate, blank closed folder and key. Distinct from the work-permit image; no people or readable identifying documents. Alt matches.",
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md --lang nl",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md [nl] sentences=49 mean=14.7 cv=0.469 short=0.184 run3=0.085 opener_rep=0.214 cite_end=0.0 cite_para=0.714 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "measurement_evidence": "work/reviews/west-final-evidence/final-measurements-and-captions.json",
+      "full_manuscript_read": true,
+      "metadata_faq_and_captions_read": true,
+      "section5_checked": true,
+      "first_two_paragraph_deletion_checked": true,
+      "opening_deletion_result": "P1 gives the third-party good-faith consequence and written form; P2 limits the consequence between the parties and ties separate contract/registration planning to payment after installation.",
+      "legal_checks": [
+        "Written conditional sale and unregistered non-opposability are limited to third parties in good faith; lack of registration is not equated with invalidity between the parties.",
+        "Machinery eligibility, possession before title, all article-27 contract particulars, conditional insurance-beneficiary requirement, and the article-31 pre-existing chattel-mortgage bar are retained. Taiwan chattel mortgage is explained without equating it to a Dutch security right.",
+        "IPR 38 uses situs and the location when the causative fact is completed for a moved asset. A Dutch governing-law clause is not represented as deciding Taiwan registration.",
+        "FSC rules 2–4 support authority, applicant/agent, electronic filing and documents. Article 9 preserves agreed duration, one-year default, application within the 30 days before expiry and up-to-one-year extension from expiry.",
+        "Articles 28–30 remain conditional pre-title recovery and prescribed recovery/resale procedures, not unconditional self-help access or immediate repossession."
+      ],
+      "commencement_and_history": "Movables law current 2007-07-11 revision with publication commencement; IPR 2010-05-26 enactment took effect one year later. FSC rules 2015-12-17 revision: article 2 from 2016-01-01, remainder from publication. Official texts/history read.",
+      "official_sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380024",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007",
+        "https://law.fsc.gov.tw/LawContent.aspx?id=GL000440",
+        "https://ppstrq.nat.gov.tw/pps/web/Show/B1Page.do"
+      ],
+      "overlap_result": "Compared DE679 machinery FAT/SAT/final payment and IT684 unpaid installation/debt enforcement. NL935's decision is retention of title, registration, term monitoring and third-party effect; it is not another acceptance or debt-demand article.",
+      "legal_source_evidence": [
+        "work/reviews/west-final-evidence/source-opens-1.json",
+        "work/reviews/west-final-evidence/source-opens-2.json",
+        "work/reviews/west-final-evidence/source-opens-3.json"
+      ],
+      "limitations": [
+        "B1 instruction URL repeatedly returned 503 here; no direct successful retrieval or filing-portal operation is claimed. Current FSC rules independently support the exact document/applicant/machine-description claims. The author's successful B1 retrieval is not used as a substitute for this review's statutory verification.",
+        "AI editorial review only; not human attorney/native-speaker certification, publication authority or an individual legal opinion."
+      ],
+      "original_variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md --lang nl",
+      "original_variety_exit_code": 2,
+      "original_variety_result": "Unsupported Dutch, exit 2; not a measured PASS.",
+      "variety_method": "Independently reviewed task-local Dutch extension with unchanged thresholds.",
+      "variety_method_review": "work/variety-review/review-final.json",
+      "variety_method_review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+      "variety_wrapper_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5"
+    },
+    {
+      "source_path": "src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md",
+      "sha256": "a24b1b5ef3d8925adb2d21d414c9ee7e906a0b764e0a2e79f19e2eeb0d35daf8",
+      "source_mtime_utc": "2026-10-25T13:26:11.026145+00:00",
+      "checkedAt": "2026-10-25T13:39:33.867606+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "optional_style_findings": [],
+      "locale_report": "work/reviews/fr-locale.json",
+      "locale_report_sha256": "b8e506192a597664523cb0d31f8f524115cb1d4a8fa59dcaf24f837d30b07b8a",
+      "locale_reviewer": "/root/expand_locale_fr",
+      "locale_report_md": "work/reviews/fr-locale.md",
+      "locale_report_md_sha256": "2acfc3b6d37177a0570162e0de21c1215e89abea09333b0b7fb3068265ef7363",
+      "image_path": "public/images/columns/936-market-expansion-20261025.webp",
+      "image_sha256": "eb54eb0f61c4240d888211b3abaf0014dd58fb957272b8f995eb616d81615d0e",
+      "image_inspected": true,
+      "image_observation": "Three unbranded cosmetic containers, blank binders and storage drive in cool light; no readable formulas or labels. Alt and fictional caption match.",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md --lang fr",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md [fr] sentences=54 mean=19.6 cv=0.469 short=0.185 run3=0.077 opener_rep=0.167 cite_end=0.0 cite_para=0.389 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "measurement_evidence": "work/reviews/west-final-evidence/final-measurements-and-captions.json",
+      "full_manuscript_read": true,
+      "metadata_faq_and_captions_read": true,
+      "section5_checked": true,
+      "first_two_paragraph_deletion_checked": true,
+      "opening_deletion_result": "P1 supplies the new responsible importer's own registration; P2 supplies conditional reuse and the separate contractual right/access decision. The author's redundant recap was removed during locale repair.",
+      "legal_checks": [
+        "Each responsible importer registers; a different legal entity is not merely the old operator's name/address amendment. TFDA registration FAQ dated 2026-08-07 printed p30 supports this.",
+        "TFDA PIF FAQ dated 2026-06-24 pp25/27/28 supports conditional sharing/reuse, product accuracy/completeness/traceability/match, foreign-file reuse only when Taiwan requirements are met, and confidential manufacturer/cloud holding with effective regulatory access.",
+        "The report does not assume paid-report ownership, license transfer, EU approval equivalence or automatic recognition of the safety assessor. Taiwan PIF articles 3–6 remain applicable.",
+        "Five-year minimum retention starts the day after last placement on the market, not termination. Labelled address and the former importer's own obligations remain; transfer of a copy is not permission to erase records.",
+        "Product-registration updates, seller relabel/resale prohibition, staged 2024/2025/2026 PIF coverage, exact limited handmade-solid-soap exception and pre-supply/sale/free distribution/public display/consumer trial obligations are preserved."
+      ],
+      "commencement_and_history": "PIF regulation 2019-05-30 promulgation effective 2019-07-01; 2022-06-16 article-4 amendment current. Registration regulation effective 2019-07-01. Cosmetics Act 2018-05-02 revision: article 4 generally 2019-07-01, article 7 2021-07-01 under official commencement order; the PIF category announcement phases culminated on 2026-07-01.",
+      "official_sources": [
+        "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639219591977347651&type=4",
+        "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639179794512621908&iid=13384&type=3",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030098",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030097",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030013",
+        "https://www.fda.gov.tw/tc/newsContent.aspx?cid=3&id=30614"
+      ],
+      "overlap_result": "Actual FR011 general cosmetics entry/PIF and FR676 distribution exit/stock/digital accounts compared. This manuscript narrows to handover of regulatory data, permissions, access and retention after importer replacement.",
+      "legal_source_evidence": [
+        "work/reviews/west-final-evidence/source-opens-1.json",
+        "work/reviews/west-final-evidence/source-opens-2.json",
+        "work/reviews/west-final-evidence/source-opens-3.json"
+      ],
+      "limitations": [
+        "No technical PIF, particular formula, assessor credential or relabeling operation is approved. Practical handover clauses are recommendations, not prescribed statutory contract wording.",
+        "AI editorial review only; not human attorney/native-speaker certification, publication authority or an individual legal opinion."
+      ],
+      "variety_method": "Original shared checker, explicit supported locale."
+    },
+    {
+      "source_path": "src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md",
+      "sha256": "132e87abb6a25149cc00544a11e07aacdea61a9a3a18e142e14491e8b5a05a2b",
+      "source_mtime_utc": "2026-10-25T13:26:11.026649+00:00",
+      "checkedAt": "2026-10-25T13:39:33.867606+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "optional_style_findings": [],
+      "locale_report": "work/reviews/fr-locale.json",
+      "locale_report_sha256": "b8e506192a597664523cb0d31f8f524115cb1d4a8fa59dcaf24f837d30b07b8a",
+      "locale_reviewer": "/root/expand_locale_fr",
+      "locale_report_md": "work/reviews/fr-locale.md",
+      "locale_report_md_sha256": "2acfc3b6d37177a0570162e0de21c1215e89abea09333b0b7fb3068265ef7363",
+      "image_path": "public/images/columns/937-market-expansion-20261025.webp",
+      "image_sha256": "692aeed72862d76e9613a26706d495c92bc5323afb513e0c0250012eb67ab1df",
+      "image_inspected": true,
+      "image_observation": "Unlabelled wine bottles in a carton and a dark blank tablet on a shop counter. No readable order, brand, people or flags; alt matches.",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md --lang fr",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md [fr] sentences=48 mean=19.6 cv=0.453 short=0.104 run3=0.13 opener_rep=0.222 cite_end=0.0 cite_para=0.278 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "measurement_evidence": "work/reviews/west-final-evidence/final-measurements-and-captions.json",
+      "full_manuscript_read": true,
+      "metadata_faq_and_captions_read": true,
+      "section5_checked": true,
+      "first_two_paragraph_deletion_checked": true,
+      "opening_deletion_result": "P1 fixes the online-order/pay-and-collect decision and guidance; P2 links the French supplier's campaign to the exact national sales rule. Removed recap is not replaced with filler.",
+      "legal_checks": [
+        "National Alcohol Act 30 and current Taipei/Taichung guidance support the electronic-order restriction, including social/app/form orders for collection or delivery. An identity/age check is not presented as an e-commerce authorization.",
+        "Advertising, neutral information and order acceptance remain separate. Taipei's advertising-classification principles are identified as local guidance and do not exempt electronic sales.",
+        "Article 37 warnings/prohibited claims and rule 11 retain independent continuous warning area at least 10%, character area at least half that background, contrast, permitted pictogram qualification, continuous video and audible audio.",
+        "Business France listing supports an announced 2026-05-19 event, not independently proven attendance, completed transactions or market conversion. Repaired text says annonçait ... pour le 19 mai 2026.",
+        "Per-format approval, publication archives, removal access and photo licenses are practical contractual allocations, not a new law or guarantee of campaign compliance."
+      ],
+      "commencement_and_history": "Alcohol Act current 2017-12-27 revision affects 57/59; cited 30/37 from 2014 amendment effective 2015-01-01. Implementing rules current 2023-03-22 revision affects 2/27; advertising rule 11 effective 2015-01-01, separately from rule 9's 2016-01-01 pictogram commencement. Current official histories read.",
+      "official_sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0330011",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0330012",
+        "https://dof.gov.taipei/News_Content.aspx?n=39A258CB8C1B2779&s=1EB2F8C0189F2E68&sms=87415A8B9CE81B16",
+        "https://www.finance.taichung.gov.tw/1997524/post",
+        "https://laws.gov.taipei/law/LawSearch/LawArticleContent/FL046302",
+        "https://www.marketplace.businessfrance.fr/event/index/event/id/1271/"
+      ],
+      "overlap_result": "Distinct from FR676 importer-exit stock/accounts and the ARC comparator group. Its object is pre-launch order path and warning/advertising review.",
+      "legal_source_evidence": [
+        "work/reviews/west-final-evidence/source-opens-1.json",
+        "work/reviews/west-final-evidence/source-opens-2.json",
+        "work/reviews/west-final-evidence/source-opens-3.json"
+      ],
+      "limitations": [
+        "No import permit, tax treatment, particular campaign or French-law advertising analysis is certified. Taipei FAQ reviewed 2026-10-20; older author access stamp is not asserted in the public manuscript.",
+        "AI editorial review only; not human attorney/native-speaker certification, publication authority or an individual legal opinion."
+      ],
+      "variety_method": "Original shared checker, explicit supported locale."
+    },
+    {
+      "source_path": "src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md",
+      "sha256": "3667f89c95b83e683ef27973cf65c04e06112ec2411a8b9dbb3456576707b1c1",
+      "source_mtime_utc": "2026-10-25T13:26:11.027127+00:00",
+      "checkedAt": "2026-10-25T13:39:33.867606+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "optional_style_findings": [],
+      "locale_report": "work/reviews/pt-locale.json",
+      "locale_report_sha256": "e6f8298a1f2c0a4cfd99358224804afef67659882cf888b7942b26411ac132d2",
+      "locale_reviewer": "/root/expand_locale_pt",
+      "locale_report_md": "work/reviews/pt-locale.md",
+      "locale_report_md_sha256": "55fe05454807291a0d4a55aad39ed8481e097444299dc26f8713f058fee58a2b",
+      "image_path": "public/images/columns/938-market-expansion-20261025.webp",
+      "image_sha256": "46b814b548cea916f4e74b646645eac4b34926f257ed0ef4a01ef99bf34366a2",
+      "image_inspected": true,
+      "image_observation": "Sealed transparent green-coffee sample container, scoop and plain jute sack on a cool inspection counter; no identifying label, person or official seal. Alt matches.",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md --lang pt",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md [pt] sentences=36 mean=18.4 cv=0.515 short=0.25 run3=0.0 opener_rep=0.077 cite_end=0.0 cite_para=0.615 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "measurement_evidence": "work/reviews/west-final-evidence/final-measurements-and-captions.json",
+      "full_manuscript_read": true,
+      "metadata_faq_and_captions_read": true,
+      "section5_checked": true,
+      "first_two_paragraph_deletion_checked": true,
+      "opening_deletion_result": "P1 supplies importer, 15-day deadline, authority, one request and Brazilian supplier's notice decision. P2 supplies electronic-service presumption and why later forwarding does not restart time.",
+      "legal_checks": [
+        "The importer obliged to request inspection, not the inspector, is the retest/disposition actor. The 15-day trigger is receipt of the noncompliance notice; article 25 retains a presumption of service on electronic system dispatch rather than an unqualified actual-receipt assertion.",
+        "Article 23 preserves one request, original remaining sample and initial laboratory; private Brazilian replacement sample does not substitute. Destruction provision concerns remaining sample, not automatic destruction of all cargo.",
+        "Food Act 39 preserves authority's three-day retest action and the inadequate-preservation refusal exception; it does not guarantee results or cargo release within three days.",
+        "Article 24's enumerated correction/treatment branches, return/destruction, prior agreement before import-to-correct and conditional early release are preserved; no general pesticide-residue cure is promised.",
+        "Commercial notice-sharing/cost allocation is distinct from administrative compliance and does not determine the contract's governing law or liability."
+      ],
+      "commencement_and_history": "Import-inspection regulation full revision promulgated 2025-08-21: 19–21 effective 2025-09-01, other provisions including 23–25 effective 2026-01-01 under 29/history. Food Act current 2019-06-12 revision did not amend 39; its relevant 2013 revision became effective on publication.",
+      "official_sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0040017",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0040017",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0040001"
+      ],
+      "overlap_result": "The recent PT704–706 corpus is mainly European Portuguese immigration material; it does not establish Brazilian idiom. New text directly addresses Brazilian coffee export records, cooperatives and Taiwan border notice/sample/cost decisions. PT694–698 commercial topics were also compared and have different decisions.",
+      "legal_source_evidence": [
+        "work/reviews/west-final-evidence/source-opens-1.json",
+        "work/reviews/west-final-evidence/source-opens-2.json",
+        "work/reviews/west-final-evidence/source-opens-3.json"
+      ],
+      "limitations": [
+        "No particular consignment, phytosanitary import requirement, laboratory methodology or Brazilian law is approved. Original MOJ single-page access failures were resolved with current official full texts.",
+        "AI editorial review only; not human attorney/native-speaker certification, publication authority or an individual legal opinion."
+      ],
+      "variety_method": "Original shared checker, explicit supported locale."
+    },
+    {
+      "source_path": "src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md",
+      "sha256": "f7fc7b4fc508e35a8d8313fc7d8e94e3178490ae0135755e116b71cc72b126e9",
+      "source_mtime_utc": "2026-10-25T13:26:11.027588+00:00",
+      "checkedAt": "2026-10-25T13:39:33.867606+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "optional_style_findings": [],
+      "locale_report": "work/reviews/pt-locale.json",
+      "locale_report_sha256": "e6f8298a1f2c0a4cfd99358224804afef67659882cf888b7942b26411ac132d2",
+      "locale_reviewer": "/root/expand_locale_pt",
+      "locale_report_md": "work/reviews/pt-locale.md",
+      "locale_report_md_sha256": "55fe05454807291a0d4a55aad39ed8481e097444299dc26f8713f058fee58a2b",
+      "image_path": "public/images/columns/939-market-expansion-20261025.webp",
+      "image_sha256": "a80c077de19d2b485b7897723fbe7ab9531f7b193d37957bc94f83bc4b029451",
+      "image_inspected": true,
+      "image_observation": "Blank kraft pouches, roasted beans, blank paper samples and leaves on warm wood; no certification seal, readable writing or people. Alt and fictional caption match.",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md --lang pt",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md [pt] sentences=37 mean=19.5 cv=0.454 short=0.189 run3=0.029 opener_rep=0.231 cite_end=0.0 cite_para=0.462 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "measurement_evidence": "work/reviews/west-final-evidence/final-measurements-and-captions.json",
+      "full_manuscript_read": true,
+      "metadata_faq_and_captions_read": true,
+      "section5_checked": true,
+      "first_two_paragraph_deletion_checked": true,
+      "opening_deletion_result": "P1 supplies two-route eligibility and label/display/advertising scope. P2 identifies issuer, territory and covered activities and places the decision before printing or promising organic sale.",
+      "legal_checks": [
+        "Organic Act 17's first route retains Taiwan-system accredited entity AND authorized territory. The second retains equivalence-country/WTO-member accredited entity AND certification within that territory AND Taiwan importer review/approval document.",
+        "Brazil's absence from AFA's currently observed equivalence list does not imply that every certification route is unavailable. The accredited-entity list is not a blanket finding of any certifier's authority in Brazil.",
+        "Articles 13 and 16 preserve contracted scope while requiring certification across relevant production/processing/repacking/distribution stages; green coffee roasted in Taiwan and packaged roasted imports are not treated as identical.",
+        "Article 18 retains Chinese/common-symbol labels, certificate versus second-route approval number, single-ingredient and identifiable-origin exceptions, three months from changed information and only authority-announced relief. Article 19's bulk display/copy requirement remains.",
+        "Foreign seal, certificate or distributor agreement is not equated with Taiwan organic approval or permission to use the Taiwan organic mark."
+      ],
+      "commencement_and_history": "Organic Agriculture Promotion Act promulgated 2018-05-30, effective one year later; 2023-08-01 competence transfer to Ministry of Agriculture distinguished from enactment. AFA equivalence list and accredited-entity/territory table currently opened; table dated 2026-09-09, updated 09-10.",
+      "official_sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0030093",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=M0030093",
+        "https://www.afa.gov.tw/cht/index.php?code=list&ids=548",
+        "https://www.afa.gov.tw/cht/index.php?article_id=22184&code=list&flag=detail&ids=546"
+      ],
+      "overlap_result": "Separate from PT938's border retest: certificate territorial scope and packaging/organic offer are the decision. Recent European-Portuguese residence comparators are explicitly not Brazilian-native validation.",
+      "legal_source_evidence": [
+        "work/reviews/west-final-evidence/source-opens-1.json",
+        "work/reviews/west-final-evidence/source-opens-2.json",
+        "work/reviews/west-final-evidence/source-opens-3.json"
+      ],
+      "limitations": [
+        "No individual Brazil-based certifier eligibility, Brazilian certificate compliance, complete coffee-import clearance or technical product review is certified.",
+        "AI editorial review only; not human attorney/native-speaker certification, publication authority or an individual legal opinion."
+      ],
+      "variety_method": "Original shared checker, explicit supported locale."
+    }
+  ],
+  "comparators": [
+    {
+      "source_path": "src/content/columns-nl/834-dutch-company-taiwan-subsidiary-branch-office.md",
+      "sha256": "7c26b714e8d1ff20fa68c9cbe1da9307b98715129066885ad8a1095b55dc0d9e",
+      "published": "2026-10-24",
+      "scope": "Actual first two paragraphs, headings and ending compared; no new legal audit of the comparator."
+    },
+    {
+      "source_path": "src/content/columns-nl/835-dutch-employer-taiwan-first-hire-eor.md",
+      "sha256": "a69d6e67344cba7f403a58ca596e1d4f2db58de4fcbeced76d1f4462d0cedda9",
+      "published": "2026-10-24",
+      "scope": "Actual first two paragraphs, headings and ending compared; no new legal audit of the comparator."
+    },
+    {
+      "source_path": "src/content/columns-nl/836-dutch-working-holiday-taiwan-work-insurance-tax.md",
+      "sha256": "7c09003f98713e0d607bca023f28feb3920fad9da555396574d787e5ef27563b",
+      "published": "2026-10-24",
+      "scope": "Actual first two paragraphs, headings and ending compared; no new legal audit of the comparator."
+    },
+    {
+      "source_path": "src/content/columns-nl/704-taiwan-arc-first-application.md",
+      "sha256": "47cb7de8d15fbbbdffe9d0bb2a0ea27e74a313e051a6ebaf8ba72455c0aab3c6",
+      "published": "2026-10-25",
+      "scope": "Actual first two paragraphs, headings and ending compared; no new legal audit of the comparator."
+    },
+    {
+      "source_path": "src/content/columns-nl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "a38063b5a16d9f5b4d44b0a5c1fffdb8b6b3c1de7ca8ab178966a1213135bae7",
+      "published": "2026-10-25",
+      "scope": "Actual first two paragraphs, headings and ending compared; no new legal audit of the comparator."
+    },
+    {
+      "source_path": "src/content/columns-nl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "788fcd4f71b5b453c921edb514b48ebe678ca123d9bfac90482b269968b0c37d",
+      "published": "2026-10-25",
+      "scope": "Actual first two paragraphs, headings and ending compared; no new legal audit of the comparator."
+    },
+    {
+      "source_path": "src/content/columns-fr/704-taiwan-arc-first-application.md",
+      "sha256": "b15d77af3ae7d7fa8ec3a39af881833f537ad2cf72351d54dc1ab2b7251e9896",
+      "published": "2026-10-24",
+      "scope": "Actual first two paragraphs, headings and ending compared; no new legal audit of the comparator."
+    },
+    {
+      "source_path": "src/content/columns-fr/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "b194fad64058a6ef06afd15e8b07da3d1b9175dfdb8ffeb8746606ed53b3ec60",
+      "published": "2026-10-24",
+      "scope": "Actual first two paragraphs, headings and ending compared; no new legal audit of the comparator."
+    },
+    {
+      "source_path": "src/content/columns-fr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "a8b9da8fccc6d312e5830fb463e52d4a8316e72d189b85d30af7f3b8fbb73243",
+      "published": "2026-10-24",
+      "scope": "Actual first two paragraphs, headings and ending compared; no new legal audit of the comparator."
+    },
+    {
+      "source_path": "src/content/columns-pt/704-taiwan-arc-first-application.md",
+      "sha256": "8aa828c67ccc8c9ffed1946592e0660bd03e36d4bce4744835a31f7672fa702d",
+      "published": "2026-10-24",
+      "scope": "Actual first two paragraphs, headings and ending compared; no new legal audit of the comparator."
+    },
+    {
+      "source_path": "src/content/columns-pt/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "8935d8bab66031ecfd5c6b01db002fecc8d78e22713365c52214adaaa594c359",
+      "published": "2026-10-24",
+      "scope": "Actual first two paragraphs, headings and ending compared; no new legal audit of the comparator."
+    },
+    {
+      "source_path": "src/content/columns-pt/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "6cd3d32cdbe24fa0a74f506cf17198f925d9780e769ad4ac3bf6331212d056f3",
+      "published": "2026-10-24",
+      "scope": "Actual first two paragraphs, headings and ending compared; no new legal audit of the comparator."
+    }
+  ],
+  "resolved_locale_findings_rechecked": [
+    {
+      "id": "PT-938-01",
+      "origin": "work/reviews/pt-locale.json",
+      "status": "RESOLVED",
+      "file_lines": "src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md:21 and :42",
+      "exact_original_spans": [
+        "pelo responsável pela inspeção",
+        "atribui ao responsável pela inspeção a destinação"
+      ],
+      "reason": "The actor could be read as the inspector; regulation 2 distinguishes importer required to seek inspection from inspection authority.",
+      "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0040017",
+      "proposed_and_applied_rewrite": "importador responsável por solicitar a inspeção",
+      "meaning": "Clarifies the legally intended actor, without changing deadline or disposition conditions; final text and affected FAQ rechecked."
+    },
+    {
+      "id": "FR937-F1",
+      "origin": "work/reviews/fr-locale-r0.json",
+      "status": "RESOLVED",
+      "meaning": "Event statement narrowed to what the official announcement supports; does not claim completed event or commercial outcome."
+    }
+  ],
+  "unresolved_blocking_findings": [],
+  "optional_style_findings": [],
+  "final_reviewer_requested_repairs": 0,
+  "unsuccessful_final_repair_rounds": 0,
+  "manuscripts_edited_by_reviewer": false,
+  "publication_performed": false,
+  "publication_authority": false,
+  "firm_checks": {
+    "sources": [
+      "https://tseng-law.com/en/services",
+      "https://tseng-law.com/en/contact"
+    ],
+    "result": "Current firm sources support Taiwan-law service scope and wei@hoveringlaw.com.tw. Each CTA uses English, Chinese, Korean and Japanese; another communication method requires confirmation, a nonconfidential initial summary and no acceptance of a mandate merely on receipt. No foreign-law licensure, human review, credentials, client success, guaranteed result or unsupported market metric is asserted."
+  },
+  "limitations": [
+    "Independent AI final editorial review, not human attorney review, legal advice to a particular client or a guarantee of legal accuracy.",
+    "No manuscript edits, publication, authenticated filing, production browser rendering, hydration or interaction verification performed by this reviewer.",
+    "Official full-text/history alternatives and failed access are preserved. No consequential conclusion rests solely on an official search-result snippet.",
+    "Whole-24-article opening-type distribution and live publication checks remain root-owned; this review covers six complete manuscripts and targeted actual comparators."
+  ],
+  "human_report": "work/reviews/west-final.md",
+  "human_report_sha256": "0502e6c3404da133a4330ff87c74a11226205d49b320bfcb237248db4ce32e55",
+  "evidence_files": [
+    {
+      "path": "work/reviews/west-final-evidence/final-measurements-and-captions.json",
+      "sha256": "8049f304f86460893893ab228d9f19676778ef19ac33a25b0ac548a8c6762a06"
+    },
+    {
+      "path": "work/reviews/west-final-evidence/legal-review-notes.json",
+      "sha256": "5166b31308f1f34ad250cfa12eb9b8e399388f8233b4ffb62a87fb6331f69b85"
+    },
+    {
+      "path": "work/reviews/west-final-evidence/new-nl-comparators.json",
+      "sha256": "0eee0b00e8966fbe542f91c96043ac338eb5aa0abcfe091785496044dcbd1443"
+    },
+    {
+      "path": "work/reviews/west-final-evidence/nl-extracted-sentences.json",
+      "sha256": "3e6f408552fc09a3e8ad88e48e0821fcb3da360dd1683325e06bec789598d420"
+    },
+    {
+      "path": "work/reviews/west-final-evidence/nl-task-local-variety.json",
+      "sha256": "12b676a007367552be404dcec321b05c026afaac5c2a67e912eab892b77ed836"
+    },
+    {
+      "path": "work/reviews/west-final-evidence/original-variety.json",
+      "sha256": "51c37abb7b5761c24566173aaa3b7645d483752a28cf566dc888f165c30656a7"
+    },
+    {
+      "path": "work/reviews/west-final-evidence/source-opens-1.json",
+      "sha256": "868537e25805f0d860cb408ff484fd95cad7db39eb916b8c5f738df5b322d195"
+    },
+    {
+      "path": "work/reviews/west-final-evidence/source-opens-2.json",
+      "sha256": "8685d7e3e7dda3fc04ab8ef96b0d9298b4b0949416673247eb644420b5c41c2a"
+    },
+    {
+      "path": "work/reviews/west-final-evidence/source-opens-3.json",
+      "sha256": "95b1129f85769a6e959ff01a55be228e2917a8142e02ae64142daa672440fba3"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+--- 944-r1-held
++++ 944-r2-current
+@@ -23,11 +23,9 @@
+ 
+ Su bandymams siunčiamu lazeriu Taivano laboratoriją gali pasiekti kalibravimo failas, proceso parametrai ir gamintojo parengta matavimo metodika. Lietuvos bendrovei perdavimo priede verta įvardyti kiekvieną iš šių dalykų: kokia versija siunčiama, kam ji prieinama ir kuriam bandymui skirta.
+ 
+-Konfidencialumo susitarimas, dažnai vadinamas NDA, padeda nustatyti gavėjo pareigas. Tačiau įstatyminė komercinės paslapties apsauga priklauso ir nuo pačios informacijos bei jos saugojimo: Taivano [Komercinių paslapčių įstatymo 2 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=2) reikalauja visų trijų sąlygų kartu.
+-
+ ## Ką gamintojas iš tikrųjų saugo
+ 
+-Taivano įstatymas apima gamybai, pardavimui ar verslui naudojamą techninę ir kitą informaciją. Ji turi būti nežinoma įprastai su tokia informacija dirbantiems asmenims, dėl slaptumo turėti tikrą arba potencialią ekonominę vertę, o jos turėtojas turi būti ėmęsis pagrįstų slaptumo priemonių. Tai [2 straipsnio](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=2) kriterijai, ne vien dokumento antraštė.
++Konfidencialumo susitarimas (NDA) apibrėžia gavėjo pareigas. Taivano [Komercinių paslapčių įstatymo 2 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=2) komercine paslaptimi laiko gamybai, pardavimui ar verslui naudojamą informaciją, kuri nežinoma įprastai su tokia informacija dirbantiems asmenims, dėl slaptumo turi tikrą arba potencialią ekonominę vertę ir kurios turėtojas yra ėmęsis pagrįstų slaptumo priemonių.
+ 
+ Viešoje produkto brošiūroje paskelbta galia ir neviešas parametrų derinys, leidžiantis pasiekti reikiamą apdirbimo tikslumą, vertinami pagal jų faktinį turinį. Pastarasis gali atitikti apsaugos sąlygas, jeigu galima paaiškinti jo slaptumą, vertę ir taikytas apsaugos priemones. Bendra žyma „visa techninė informacija“ savaime šių aplinkybių neparodo.
+ 

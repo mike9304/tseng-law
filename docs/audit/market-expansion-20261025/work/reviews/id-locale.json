@@ -1,0 +1,151 @@
+{
+  "reviewer": "/root/expand_locale_id",
+  "role": "locale",
+  "independentOfAuthor": true,
+  "checkedAt": "2026-10-25T13:27:45.383008+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md",
+      "sha256": "a197b0284aea60858bfa499a7051f1ece5082236839cb4a24502dcbf3be82cff",
+      "verdict": "PASS",
+      "findings": [],
+      "image_sha256": "d705073447ac0b21a047d736acca9cd73cc6e3e4ab98d560fc5f321bc5761b7a",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md --lang id",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md [id] sentences=51 mean=14.6 cv=0.468 short=0.235 run3=0.041 opener_rep=0.118 cite_end=0.0 cite_para=0.412 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "limitations": [
+        "Independent locale and source-meaning spot check; separate final legal review still required.",
+        "No claim of human native-speaker or attorney review.",
+        "No publication or browser-layout verification performed by this reviewer."
+      ],
+      "repair_history": [
+        {
+          "round": 1,
+          "requestedBy": "/root/expand_final_asia; agreed by /root/expand_locale_id",
+          "file_line": 28,
+          "before_sha256": "b07ba325b1496e07901e5ccd79ae98a0066bb7add927257deae9db7c4557e85a",
+          "after_sha256": "8f8f4b9059df25cfaf8d29cb6fe73c7a9b462ef37f3876bf6a36becbfa9221db",
+          "change": "First Employment Insurance Act mention disambiguated with Taiwan (Employment Insurance Act, 就業保險法).",
+          "recheckedAt": "2026-10-25T13:24:10.893595+00:00",
+          "verdict": "PASS",
+          "reverse_only_change_sha_verified": true,
+          "scope_preserved": true
+        }
+      ],
+      "caption_rebinding": {
+        "source_path": "src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md",
+        "before_sha256": "8f8f4b9059df25cfaf8d29cb6fe73c7a9b462ef37f3876bf6a36becbfa9221db",
+        "after_sha256": "a197b0284aea60858bfa499a7051f1ece5082236839cb4a24502dcbf3be82cff",
+        "old_caption": "\"Adegan fiksi tentang pekerjaan pengasuh dan persiapan kelahiran.\"",
+        "new_caption": "Adegan fiksi",
+        "reverse_caption_substitution_sha256": "8f8f4b9059df25cfaf8d29cb6fe73c7a9b462ef37f3876bf6a36becbfa9221db",
+        "noncaption_bytes_unchanged": true,
+        "image_sha256_unchanged": true,
+        "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md --lang id",
+        "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md [id] sentences=51 mean=14.6 cv=0.468 short=0.235 run3=0.041 opener_rep=0.118 cite_end=0.0 cite_para=0.412 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "variety_exit_code": 0,
+        "reviewer": "/root/expand_locale_id",
+        "checkedAt": "2026-10-25T13:27:45.383008+00:00",
+        "verdict": "PASS",
+        "meaning": "Natural Indonesian fictional-scene label; no real-case or authorship claim. Descriptive alt retained."
+      }
+    },
+    {
+      "source_path": "src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md",
+      "sha256": "f9bc4f713398de194ea6e8ffbf62b8bfc8294f5821fd1fce3fcfcbe1c9e9b439",
+      "verdict": "PASS",
+      "findings": [],
+      "image_sha256": "41beac4dfdbb8f47d304252163c526d5586c68abc875937ff26ce65d7530aab8",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md --lang id",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md [id] sentences=46 mean=14.8 cv=0.46 short=0.217 run3=0.023 opener_rep=0.071 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "limitations": [
+        "Independent locale and source-meaning spot check; separate final legal review still required.",
+        "No claim of human native-speaker or attorney review.",
+        "No publication or browser-layout verification performed by this reviewer."
+      ],
+      "caption_rebinding": {
+        "source_path": "src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md",
+        "before_sha256": "d9b6f376d4eae90d11e8cc583818f32c56d0898a5457594566e617fa38e7dbaf",
+        "after_sha256": "f9bc4f713398de194ea6e8ffbf62b8bfc8294f5821fd1fce3fcfcbe1c9e9b439",
+        "old_caption": "\"Adegan fiksi yang memperlihatkan pekerjaan restoran dan perawatan rumah.\"",
+        "new_caption": "Adegan fiksi",
+        "reverse_caption_substitution_sha256": "d9b6f376d4eae90d11e8cc583818f32c56d0898a5457594566e617fa38e7dbaf",
+        "noncaption_bytes_unchanged": true,
+        "image_sha256_unchanged": true,
+        "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md --lang id",
+        "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md [id] sentences=46 mean=14.8 cv=0.46 short=0.217 run3=0.023 opener_rep=0.071 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "variety_exit_code": 0,
+        "reviewer": "/root/expand_locale_id",
+        "checkedAt": "2026-10-25T13:27:45.383008+00:00",
+        "verdict": "PASS",
+        "meaning": "Natural Indonesian fictional-scene label; no real-case or authorship claim. Descriptive alt retained."
+      }
+    }
+  ],
+  "comparators": [
+    {
+      "source_path": "src/content/columns-id/704-taiwan-arc-first-application.md",
+      "published": "2026-10-24"
+    },
+    {
+      "source_path": "src/content/columns-id/705-taiwan-visa-residence-work-study-family.md",
+      "published": "2026-10-24"
+    },
+    {
+      "source_path": "src/content/columns-id/706-taiwan-arc-renewal-changes-reentry.md",
+      "published": "2026-10-24"
+    }
+  ],
+  "author_report": "work/reviews/id-author.md",
+  "author_report_sha256": "45eac72fc5ca47ac55b1514b65c985640776fcf3d9b802908f5e5747b6cd589b",
+  "evidence": "work/reviews/id-locale-evidence.json",
+  "human_report": "work/reviews/id-locale.md",
+  "unsuccessfulRepairRounds": 0,
+  "limitations": [
+    "The MOJ pages displayed a 2026-10-16 compilation cutoff when opened on 2026-10-25. Current WDA guidance was also opened; an exhaustive amendment/commencement audit belongs to the independent final review.",
+    "No measured market conversion, search volume, paid-case demand, human review, or public-release outcome is certified."
+  ],
+  "successfulRepairRounds": 1,
+  "caption_normalization_review": {
+    "origin": "root integration normalization",
+    "evidence": "work/checks/caption-normalization.json",
+    "records": [
+      {
+        "source_path": "src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md",
+        "before_sha256": "8f8f4b9059df25cfaf8d29cb6fe73c7a9b462ef37f3876bf6a36becbfa9221db",
+        "after_sha256": "a197b0284aea60858bfa499a7051f1ece5082236839cb4a24502dcbf3be82cff",
+        "old_caption": "\"Adegan fiksi tentang pekerjaan pengasuh dan persiapan kelahiran.\"",
+        "new_caption": "Adegan fiksi",
+        "reverse_caption_substitution_sha256": "8f8f4b9059df25cfaf8d29cb6fe73c7a9b462ef37f3876bf6a36becbfa9221db",
+        "noncaption_bytes_unchanged": true,
+        "image_sha256_unchanged": true,
+        "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md --lang id",
+        "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/924-indonesian-caregiver-taiwan-pregnancy-dismissal.md [id] sentences=51 mean=14.6 cv=0.468 short=0.235 run3=0.041 opener_rep=0.118 cite_end=0.0 cite_para=0.412 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "variety_exit_code": 0,
+        "reviewer": "/root/expand_locale_id",
+        "checkedAt": "2026-10-25T13:27:45.383008+00:00",
+        "verdict": "PASS",
+        "meaning": "Natural Indonesian fictional-scene label; no real-case or authorship claim. Descriptive alt retained."
+      },
+      {
+        "source_path": "src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md",
+        "before_sha256": "d9b6f376d4eae90d11e8cc583818f32c56d0898a5457594566e617fa38e7dbaf",
+        "after_sha256": "f9bc4f713398de194ea6e8ffbf62b8bfc8294f5821fd1fce3fcfcbe1c9e9b439",
+        "old_caption": "\"Adegan fiksi yang memperlihatkan pekerjaan restoran dan perawatan rumah.\"",
+        "new_caption": "Adegan fiksi",
+        "reverse_caption_substitution_sha256": "d9b6f376d4eae90d11e8cc583818f32c56d0898a5457594566e617fa38e7dbaf",
+        "noncaption_bytes_unchanged": true,
+        "image_sha256_unchanged": true,
+        "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md --lang id",
+        "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-id/925-indonesian-caregiver-taiwan-work-outside-permit.md [id] sentences=46 mean=14.8 cv=0.46 short=0.217 run3=0.023 opener_rep=0.071 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "variety_exit_code": 0,
+        "reviewer": "/root/expand_locale_id",
+        "checkedAt": "2026-10-25T13:27:45.383008+00:00",
+        "verdict": "PASS",
+        "meaning": "Natural Indonesian fictional-scene label; no real-case or authorship claim. Descriptive alt retained."
+      }
+    ],
+    "notAnAuthorRepairFailure": true
+  }
+}

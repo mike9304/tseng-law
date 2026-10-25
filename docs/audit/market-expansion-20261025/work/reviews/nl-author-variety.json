@@ -1,0 +1,73 @@
+{
+  "runAt": "2026-10-25T22:19:09.469234+09:00",
+  "interpretation": "Shared CLI exit 2 means unsupported, not PASS. Task-local extension exit 0 has no HARD failures. Independent extension approval and locale/legal certification remain separate.",
+  "runs": [
+    {
+      "file": "repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+      "sha256": "3b395842ebc879b6d3d61a3a8bab1bd006f9fd16aaf27113892497f03b7c0425",
+      "shared": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+          "--lang",
+          "nl"
+        ],
+        "exitCode": 2,
+        "stdout": "",
+        "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'nl' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+      },
+      "taskLocal": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+          "--lang",
+          "nl"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md [nl] sentences=36 mean=17.9 cv=0.483 short=0.139 run3=0.029 opener_rep=0.167 cite_end=0.0 cite_para=0.583 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": "OFFICIAL CHECKER: nl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+      }
+    },
+    {
+      "file": "repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+      "sha256": "943a747d79288334da91b9c608ef558bda57ba8754e7acd5eac6c49083f11b01",
+      "shared": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+          "--lang",
+          "nl"
+        ],
+        "exitCode": 2,
+        "stdout": "",
+        "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'nl' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+      },
+      "taskLocal": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+          "--lang",
+          "nl"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md [nl] sentences=49 mean=14.7 cv=0.469 short=0.184 run3=0.085 opener_rep=0.214 cite_end=0.0 cite_para=0.714 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": "OFFICIAL CHECKER: nl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+      }
+    }
+  ],
+  "methodReview": "work/variety-review/review-final.md",
+  "methodHashes": {
+    "work/variety-candidate/variety_metrics.py": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+    "work/variety-candidate/candidate/variety_metrics.py": "f6a53d8265224b5795be95501f317eac018c23dba5b79513c6179fe1caa363c7",
+    "work/variety-candidate/candidate/variety_multilingual.py": "776ab3e4364d2684e0d2b913933e7acc19fc6f01008b5ba042dbc7080e05f531",
+    "work/variety-candidate/candidate/profiles/nl.json": "8ee2b7074e1ad3778998e87a1a566dff023a3c98c2525200d86c96050cf9dc2e"
+  }
+}

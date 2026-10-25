@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-25T13:15:07.150721+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md",
+      "sha256": "cd2309ed6b0c521f0c05e111b9e3206c7b0b57fe87c952f7d4cfc31dd6fd4684",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md --lang fr",
+      "variety_exit_code": 0,
+      "variety_output": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md [fr] sentences=54 mean=19.7 cv=0.456 short=0.167 run3=0.038 opener_rep=0.167 cite_end=0.0 cite_para=0.389 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "image_sha256": "eb54eb0f61c4240d888211b3abaf0014dd58fb957272b8f995eb616d81615d0e"
+    },
+    {
+      "source_path": "src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md",
+      "sha256": "3138b30ca5b109a0e4e8770757092dd4e7ef3a2590b09e792702f5d1f8a4e932",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md --lang fr",
+      "variety_exit_code": 0,
+      "variety_output": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md [fr] sentences=50 mean=18.9 cv=0.451 short=0.14 run3=0.104 opener_rep=0.222 cite_end=0.0 cite_para=0.278 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "image_sha256": "692aeed72862d76e9613a26706d495c92bc5323afb513e0c0250012eb67ab1df"
+    }
+  ]
+}

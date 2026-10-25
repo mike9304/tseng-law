@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-25T13:27:22.001633+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md",
+      "previous_sha256": "1599708a692f0654296ccb9794c9916e5482b6308ba10bf4c2cde2ccceccae9b",
+      "current_sha256": "52da5f555b98a01f66dc2140cbdfba2514eff3285b6898472d740b903e75a1ee",
+      "only_change": "featured_image_caption",
+      "previous_caption": "Išgalvota bandymų laboratorijos scena.",
+      "current_caption": "Išgalvota scena",
+      "reverse_substitution_restores_exact_reviewed_bytes": true
+    },
+    {
+      "source_path": "src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md",
+      "previous_sha256": "2a0adb3d3c6c2293af7975144367e80fcfe7f3ce51102a314d9dc371090ba0c4",
+      "current_sha256": "2f3372bd6e3bc1422b2a6d377707338ede47d4049c388340e137989828a5b111",
+      "only_change": "featured_image_caption",
+      "previous_caption": "Išgalvota elektronikos kūrėjo darbo vieta.",
+      "current_caption": "Išgalvota scena",
+      "reverse_substitution_restores_exact_reviewed_bytes": true
+    }
+  ],
+  "assessment": "Natural Lithuanian fictional-scene label. Full alt descriptions and image bytes remain unchanged; no body or legal claim changed."
+}

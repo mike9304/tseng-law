@@ -1,0 +1,24 @@
+{
+  "reviewer": "/root/expand_locale_pl",
+  "checkedAt": "2026-10-25T13:27:53.158276+00:00",
+  "method_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+  "method_review": "work/variety-review/review-final.json",
+  "records": [
+    {
+      "source_path": "src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "sha256": "06813fc5597240ed39d513e1e88df483dec85cd8f277f89d1baaa41003b6f4ca",
+      "command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md --lang pl",
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md [pl] sentences=44 mean=15.4 cv=0.464 short=0.205 run3=0.048 opener_rep=0.0 cite_end=0.0 cite_para=0.4 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "OFFICIAL CHECKER: pl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "source_path": "src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "sha256": "17382511050d47b947e9ff81276b2b5f8cb5999ebe62aa86f679eb0546c580e7",
+      "command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md --lang pl",
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md [pl] sentences=51 mean=15.3 cv=0.457 short=0.216 run3=0.0 opener_rep=0.059 cite_end=0.0 cite_para=0.588 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "OFFICIAL CHECKER: pl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    }
+  ]
+}

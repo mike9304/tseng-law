@@ -1,0 +1,220 @@
+{
+  "locale": "lt",
+  "date": "2026-10-25",
+  "authorRole": "AI Lithuanian drafting specialist",
+  "independentReviewer": false,
+  "status": "AUTHOR_HANDOFF_READY_FOR_INDEPENDENT_REVIEW",
+  "publicationClaim": false,
+  "articles": [
+    {
+      "id": 944,
+      "file": "repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md",
+      "sha256": "1599708a692f0654296ccb9794c9916e5482b6308ba10bf4c2cde2ccceccae9b",
+      "status": "READY_FOR_INDEPENDENT_REVIEW",
+      "cv": 0.49,
+      "shortShare": 0.233,
+      "sentences": 43,
+      "openingType": "Concrete transferred information: laser, calibration file, process settings and measurement method",
+      "deletionTest": [
+        "P1 S1 identifies the calibration file, settings and measurement method transferred with equipment.",
+        "P1 S2 adds version, recipient and permitted-test records.",
+        "P2 S1 under the first substantive heading defines NDA recipient obligations.",
+        "P2 S2 states the complete Article 2 information scope and all three cumulative conditions with its official source.",
+        "The previous pre-heading preview and repeated concluding sentence were removed; the actual definition is stated once."
+      ],
+      "sources": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=2",
+          "supports": "Three cumulative conditions and production/sales/business information."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028",
+          "supports": "Article 4 commissioned R&D ownership, contractual priority, contractor default and funder's business-use right; not every evaluation is commissioned R&D."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=7",
+          "supports": "Contract-defined licence extent and holder consent for sublicensing."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=10",
+          "supports": "Improper use/disclosure of contract-acquired secrets; unauthorized copying and breach of confidentiality as improper means."
+        },
+        {
+          "url": "https://www.tipo.gov.tw/tw/tradesecrets/868.html",
+          "supports": "NDA, limited access marking, passwords and access control as examples of reasonable secrecy measures."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0080028",
+          "supports": "Current history last amendment 2020-01-15; no pending commencement notice on relevant provisions."
+        }
+      ],
+      "shortExamples": [
+        "Tai siūlomos derybų sąlygos.",
+        "Failams reikia atskiros tvarkos."
+      ],
+      "heldDraft": "work/reviews/lt-author-944-r1-held.md",
+      "checkedAt": "2026-10-25",
+      "comparators": [
+        "repo/src/content/columns-lt/897-lithuanian-laser-company-taiwan-subsidiary-branch.md",
+        "repo/src/content/columns-lt/898-lithuanian-engineer-taiwan-work-permit-residence.md",
+        "repo/src/content/columns-lt/899-lithuanian-brand-taiwan-distributor-trademark-registration.md"
+      ],
+      "globalMeasurement": {
+        "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md --lang lt",
+        "chunk_id": "d66a14",
+        "wall_time_seconds": 5.458e-06,
+        "exit_code": 2,
+        "original_token_count": 101,
+        "output": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'lt' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n",
+        "status": "UNSUPPORTED_NOT_PASS"
+      },
+      "selfCheck5": {
+        "item1": "Original lt unsupported exit 2; independently reviewed task-local wrapper actual exit 0 and zero HARD failures. This is not independent article approval.",
+        "item2": "No stock hypothetical opener; two Lithuanian drafts have different opening decisions.",
+        "item3": "At least two useful short sentences; no artificial filler added.",
+        "item4": "Paragraph openers read vertically; no word starts more than two prose paragraphs.",
+        "item5": "No three consecutive claim/citation/caveat paragraphs; practical paragraphs without legal citations exist.",
+        "item6": "No stock not-X-but-Y comparison; negatives preserve real legal limits.",
+        "item7": "Final substantive paragraph identifies exact handover materials for this transaction.",
+        "item8": "No bold, invented clients, public byline, human-review claims or imperative checklist headings; Korean/Japanese register not applicable.",
+        "item9": "Conditions, exceptions and source links retained; requested Article 11 scope and Article 37 sublicense FAQ repaired."
+      },
+      "previousSha256": "97d3b2e78a14b54de097dc66ae2a2db9f7abd1591a6aa0422c5e24625cdfbe50",
+      "previousCandidateMeasurement": {
+        "command": "python3 work/variety-candidate/candidate/variety_metrics.py check repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md --lang lt --out work/reviews/lt-author-944-candidate-metrics.json",
+        "chunk_id": "a2f107",
+        "wall_time_seconds": 6e-06,
+        "exit_code": 1,
+        "original_token_count": 85,
+        "output": "repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md [lt] sentences=46 mean=14.7 cv=0.444 short=0.217 run3=0.023 opener_rep=0.125 cite_end=0.0 cite_para=0.312 contrast=0 caveat=1 q=2\n  FAIL len_cv=0.444 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+        "status": "FAIL",
+        "note": "The check subcommand prints stdout; --out does not create a file. Actual stdout and exit status are recorded here."
+      },
+      "taskLocalMeasurement": {
+        "command": "python3 work/variety-candidate/variety_metrics.py check repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md --lang lt",
+        "chunk_id": "f41eb9",
+        "wall_time_seconds": 5.375e-06,
+        "exit_code": 0,
+        "original_token_count": 101,
+        "output": "OFFICIAL CHECKER: lt unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\nrepo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md [lt] sentences=43 mean=14.9 cv=0.49 short=0.233 run3=0.024 opener_rep=0.067 cite_end=0.0 cite_para=0.267 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+      },
+      "repair2": "work/reviews/lt-author-944-repair2.json"
+    },
+    {
+      "id": 945,
+      "file": "repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md",
+      "sha256": "2a0adb3d3c6c2293af7975144367e80fcfe7f3ce51102a314d9dc371090ba0c4",
+      "status": "READY_FOR_INDEPENDENT_REVIEW",
+      "cv": 0.455,
+      "shortShare": 0.204,
+      "sentences": 49,
+      "openingType": "Correcting the precise payment/ownership assumption, while preserving the funder's use right",
+      "deletionTest": [
+        "P1 S1 adds that commissioning payment does not automatically transfer all economic rights.",
+        "P1 S2 supplies the statutory default and the role of agreement.",
+        "P1 S3 preserves Article 12(3)'s use right.",
+        "P2 S1 identifies Lithuanian laser/measurement businesses and maintenance transfer.",
+        "P2 S2 states concrete copying/modification/deployment decisions for another engineering team.",
+        "P2 S3 adds actual file delivery to the rights analysis.",
+        "Deleted the earlier functioning-device emphasis sentence as repetitive."
+      ],
+      "sources": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=5",
+          "supports": "Computer programs within examples of copyright works."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=10-1",
+          "supports": "Expression, not underlying ideas, processes, systems or methods."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=11",
+          "supports": "Employee work completed in course of duties; author and economic-right defaults with contractual exceptions."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=12",
+          "supports": "Commissioned work outside Article 11; author default and agreed exception; economic-right agreement/default; funder's use right under paragraph 3."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=21",
+          "supports": "Moral rights personal to author and nontransferable."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=36",
+          "supports": "Whole/partial assignment; unclear extent presumed unassigned."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=37",
+          "supports": "Licence scope by agreement; unclear extent presumed unlicensed; holder consent for nonexclusive sublicense."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070017",
+          "supports": "Pending 2022-05-04 amendments concern 91, 91-1, 100, 117 and deletion 98/98-1, not article provisions used."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+          "supports": "Contract choice of law and closest-connection fallback."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=42",
+          "supports": "IP protection-place law and employment-contract law for ownership of employee-created IP."
+        }
+      ],
+      "shortExamples": [
+        "Tai sutartinio leidimo taisyklė.",
+        "Kodo pirmame laiške nesiųskite."
+      ],
+      "checkedAt": "2026-10-25",
+      "comparators": [
+        "repo/src/content/columns-lt/897-lithuanian-laser-company-taiwan-subsidiary-branch.md",
+        "repo/src/content/columns-lt/898-lithuanian-engineer-taiwan-work-permit-residence.md",
+        "repo/src/content/columns-lt/899-lithuanian-brand-taiwan-distributor-trademark-registration.md"
+      ],
+      "globalMeasurement": {
+        "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md --lang lt",
+        "chunk_id": "0a77c9",
+        "wall_time_seconds": 7.875e-06,
+        "exit_code": 2,
+        "original_token_count": 101,
+        "output": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'lt' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n",
+        "status": "UNSUPPORTED_NOT_PASS"
+      },
+      "candidateMeasurement": {
+        "command": "python3 work/variety-candidate/candidate/variety_metrics.py check repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md --lang lt --out work/reviews/lt-author-945-candidate-metrics.json",
+        "chunk_id": "28f134",
+        "wall_time_seconds": 6e-06,
+        "exit_code": 0,
+        "original_token_count": 63,
+        "output": "repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md [lt] sentences=49 mean=13.8 cv=0.455 short=0.204 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.6 contrast=0 caveat=1 q=2\n  OK — no variety limit violated\n",
+        "status": "NUMERIC_PASS_NOT_INDEPENDENT_APPROVAL",
+        "note": "The check subcommand prints stdout; --out does not create a file. Actual stdout and exit status are recorded here."
+      },
+      "selfCheck5": {
+        "item1": "Global unsupported; candidate numeric limits passed; extension approval and independent review required",
+        "item2": "No stock hypothetical opener; two Lithuanian drafts have different opening decisions.",
+        "item3": "At least two useful short sentences; no artificial filler added.",
+        "item4": "Paragraph openers read vertically; no word starts more than two prose paragraphs.",
+        "item5": "No three consecutive claim/citation/caveat paragraphs; practical paragraphs without legal citations exist.",
+        "item6": "No stock not-X-but-Y comparison; negatives preserve real legal limits.",
+        "item7": "Final substantive paragraph identifies exact handover materials for this transaction.",
+        "item8": "No bold, invented clients, public byline, human-review claims or imperative checklist headings; Korean/Japanese register not applicable.",
+        "item9": "Conditions, exceptions and source links retained; requested Article 11 scope and Article 37 sublicense FAQ repaired."
+      }
+    }
+  ],
+  "marketEvidence": "work/research/east-briefs.md; official Lithuania-Taiwan laser R&D link supports narrow buyer fit, not measured search demand or firmware outsourcing volume.",
+  "images": "work/images/lt-generation.json",
+  "sourceRecords": [
+    "work/reviews/lt-author-source-opens.json",
+    "work/reviews/lt-author-additional-source-opens.json"
+  ],
+  "limitations": [
+    "Global variety CLI does not support lt (exit 2). Task-local candidate metrics are not global PASS or independent review.",
+    "The trade-secret Article 4 individual page was inaccessible twice; its exact text was read in the official full-act page and that full-act URL is the published citation.",
+    "Private international law history page was inaccessible; current individual Article 20 and 42 text was successfully opened. No unverified amendment claim is added.",
+    "No human native-speaker or attorney review is claimed. Publication, build and live readback belong to root.",
+    "No official source establishes a volume of Lithuanian firmware outsourcing into Taiwan; no such claim is in the articles.",
+    "944 earlier failure remains preserved; second and final locale-agreed block repair passed the reviewed task-local wrapper once. Independent rereads requested on exact new SHA."
+  ],
+  "methodReview": "work/variety-review/review-final.md"
+}

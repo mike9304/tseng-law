@@ -1,0 +1,39 @@
+{
+  "locale": "lt",
+  "generatedAt": "2026-10-25",
+  "tool": "native image_gen.imagegen",
+  "transparentBackground": false,
+  "formatConversion": "cwebp -quiet -q 88; no cropping, composition or generated content editing",
+  "images": [
+    {
+      "id": 944,
+      "prompt": "Use case: photorealistic-natural. Asset: a landscape editorial hero image for a Lithuanian-language Taiwan-law article about sending a laser evaluation sample and confidential settings to an industrial customer's laboratory. Create a quiet, believable fictional optical laboratory still life: a compact brushed-aluminium laser module with its aperture safely capped in a fitted black foam transport case, a separate small optical mount, and a closed unmarked document sleeve on a clean dark optical breadboard. The module is switched off; no beam or glowing theatrical effects. Angled close view, restrained charcoal and muted blue-grey palette, soft natural side lighting, real metal and foam textures. 1536 by 1024 landscape. The equipment should look plausible but must not reproduce an identifiable manufacturer's design. No people, no faces, no text or numbers, no labels, no logos, no flags, no legal emblems, no identity documents, no watermarks. This is an illustrative fictional scene, not a real client's laboratory or evidence.",
+      "generatedOriginal": "/Users/son7/.codex/generated_images/01a17325-4b4b-7a30-a4a9-037b7993d1b2/exec-e8e8548d-cf9f-4710-be26-c1d631ccfebd.png",
+      "workspaceOriginal": "work/images/944-market-expansion-original.png",
+      "output": "repo/public/images/columns/944-market-expansion-20261025.webp",
+      "inspection": "Viewed native generated output and final WebP. Capped metal laser module in foam case, optical mount and closed folder. No faces, legible text, numbers, logos, flags or case evidence.",
+      "originalSha256": "c6e12a4f3975d491cbcbc30d5707465d220d54b8cc3076cb8f8123cc7a744fa5",
+      "webpSha256": "2d622e75d557352b3b10b714fcc63bbd336b5f4a24758667c2fc4caf98bd000a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "webpBytes": 208838
+    },
+    {
+      "id": 945,
+      "prompt": "Use case: photorealistic-natural. Asset: a landscape editorial hero for a Lithuanian-language Taiwan-law article about commissioned embedded firmware, copyright ownership and source-code delivery. Show a fictional electronics developer's workbench from a gently elevated side angle: an unbranded green prototype controller circuit board on an antistatic mat connected by a short cable to a plain closed dark laptop, beside a small brushed-metal external drive and a simple unmarked connector tray. Make the board credible with ordinary chips, solder joints and ports but no readable silkscreen or text. A warm daylight workshop, pale oak tabletop, muted green and copper colours, restrained documentary photography, tactile natural materials, balanced spacious framing. Landscape 1536 by 1024. No screens with code, no text or numbers, no people or faces, no logos or flags, no padlock/cybersecurity icons, no legal symbols, no identity documents, no watermark. This is a fictional illustrative scene, not evidence of any real case or named company's hardware.",
+      "generatedOriginal": "/Users/son7/.codex/generated_images/01a17325-4b4b-7a30-a4a9-037b7993d1b2/exec-722dab45-a58a-4736-a4a7-5252d11b4368.png",
+      "workspaceOriginal": "work/images/945-market-expansion-original.png",
+      "output": "repo/public/images/columns/945-market-expansion-20261025.webp",
+      "inspection": "Viewed native generated output and final WebP. Controller board, closed laptop, external drive and connectors on a warm wood workbench. No faces, legible text, logos, flags or case evidence.",
+      "originalSha256": "748d83c50aaa242975b6a9cfe6c1060c63c4b68b273ba3bfaeefde0f7f7d9a94",
+      "webpSha256": "ad89676d570335da227e9fea88f6c6e804af1b42b5541055ea2a93e5c5c67fe4",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "webpBytes": 236882
+    }
+  ]
+}

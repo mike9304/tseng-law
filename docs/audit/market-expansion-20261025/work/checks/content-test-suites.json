@@ -1,0 +1,21 @@
+[
+  "src/lib/__tests__/columns-en-content.test.ts",
+  "src/lib/__tests__/columns-ja-content.test.ts",
+  "src/lib/__tests__/columns-zh-content.test.ts",
+  "src/lib/__tests__/columns-new-four-locales.test.ts",
+  "src/lib/__tests__/column-category-parity.test.ts",
+  "src/lib/__tests__/expertise-columns-20260930.test.ts",
+  "src/lib/__tests__/native-locale-columns-20260929.test.ts",
+  "src/lib/__tests__/column-embeddings-content-sync.test.ts",
+  "src/lib/__tests__/column-pending-text-search.test.ts",
+  "src/lib/__tests__/column-emphasis.test.ts",
+  "src/lib/__tests__/column-image-caption-label.test.ts",
+  "src/lib/__tests__/column-image-descriptions.test.ts",
+  "src/lib/__tests__/column-summary-frontmatter.test.ts",
+  "src/lib/__tests__/column-seo-title-frontmatter.test.ts",
+  "src/lib/__tests__/columns-publication-date.test.ts",
+  "src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx",
+  "src/lib/__tests__/column-attribution.test.ts",
+  "src/lib/__tests__/columns-faq.test.ts",
+  "src/lib/__tests__/column-no-public-authors.test.tsx"
+]

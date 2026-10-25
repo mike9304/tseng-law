@@ -1,0 +1,107 @@
+{
+  "reviewer": "/root/expand_locale_cs",
+  "role": "locale",
+  "independentOfAuthor": true,
+  "checkedAt": "2026-10-25T13:13:43.664525+00:00",
+  "repair_round": 0,
+  "records": [
+    {
+      "source_path": "src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+      "sha256": "ca6314914222ee103f7d88f471066c605c71c1f8a6b1f4f1c2fc214df3e8f30c",
+      "verdict": "REQUEST_CHANGES",
+      "image_sha256": "fbe6798bf66fccdd74d1cf80421188c1da0fb122de6f0ad77625bf4491f46543",
+      "findings": [
+        {
+          "id": "CS942-1",
+          "line": 52,
+          "sentence": "umožňuje nahradit zákonem požadovanou písemnost elektronickým dokumentem",
+          "reason": "Písemnost denotes a document; the source regulates compliance with a requirement of written form.",
+          "proposed_rewrite": "umožňuje splnit zákonný požadavek písemné formy elektronickým dokumentem",
+          "legal_meaning_preserved": true,
+          "source": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080037&flno=5"
+        },
+        {
+          "id": "CS942-2",
+          "line": 54,
+          "also_line": 21,
+          "sentence": "domněnka osobního podpisu",
+          "reason": "Opaque Czech legal label; explain that the presumption attributes signing to the person. Certificate conditions and company authority must remain distinct.",
+          "proposed_rewrite": "domněnka, že dokument podepsala přímo daná osoba",
+          "legal_meaning_preserved": true,
+          "source": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080037&flno=6"
+        },
+        {
+          "id": "CS942-3",
+          "line": 58,
+          "sentence": "stačí necitlivé shrnutí, označení protistrany, sporná verze objednávky a nejbližší termín",
+          "reason": "Necitlivé is a calque and sporná verze objednávky may ask for the document itself despite the following confidential-attachment boundary.",
+          "proposed_rewrite": "stačí shrnutí bez důvěrných údajů, označení protistrany a sporné verze objednávky a nejbližší termín",
+          "legal_meaning_preserved": true
+        },
+        {
+          "id": "CS942-4",
+          "line": 28,
+          "sentence": "U přeshraničního obchodu je ovšem třeba určit rozhodné právo.",
+          "reason": "Opening-deletion test: adjacent Article 20 and Taiwan-law scope sentences already supply all information. This sentence previews them without adding a condition.",
+          "proposed_rewrite": "Delete this sentence only; retain the Article 20 rule and Taiwan-law applicability sentence.",
+          "legal_meaning_preserved": true
+        }
+      ],
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md --lang cs",
+      "variety_exit_code": 2,
+      "limitations": [
+        "Original shared checker does not support Czech; exit 2 is not PASS. Approved task-local extension pending.",
+        "Independent AI locale review, not human native-speaker or lawyer certification."
+      ]
+    },
+    {
+      "source_path": "src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+      "sha256": "e6395948c90d21c0682a6197b72508560d47e669f63b962c84fd3e2d9a869c2f",
+      "verdict": "REQUEST_CHANGES",
+      "image_sha256": "d28c66a04807a5d524c06bd2ee1912a2c23b5bc60a6ebeaa8c6baec5c2ec35d0",
+      "findings": [
+        {
+          "id": "CS943-1",
+          "line": 44,
+          "sentence": "stejné obchodní jméno prototypu samo nestačí.",
+          "reason": "Obchodní jméno identifies a business or trader, whereas this sentence means a product designation; inappropriate legal/business terminology.",
+          "proposed_rewrite": "stejné označení prototypu samo nestačí.",
+          "legal_meaning_preserved": true
+        },
+        {
+          "id": "CS943-2",
+          "line": 51,
+          "sentence": "nebo už leží za platným prioritním dnem",
+          "reason": "Figurative chronology obscures the legally relevant before/after relation.",
+          "proposed_rewrite": "nebo nastalo až po platném prioritním dni",
+          "legal_meaning_preserved": true
+        },
+        {
+          "id": "CS943-3",
+          "line": 38,
+          "sentence": "Zveřejnění si tedy nerezervuje pořadí.",
+          "reason": "Inanimate disclosure is given an unnatural reflexive action; describe its actual effect directly.",
+          "proposed_rewrite": "Samotné zveřejnění dřívější pořadí nezajistí.",
+          "legal_meaning_preserved": true
+        },
+        {
+          "id": "CS943-4",
+          "line": 65,
+          "sentence": "necitlivý popis technologie",
+          "reason": "Necitlivý sounds insensitive rather than nonconfidential in this context.",
+          "proposed_rewrite": "popis technologie bez důvěrných údajů",
+          "legal_meaning_preserved": true
+        }
+      ],
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md --lang cs",
+      "variety_exit_code": 2,
+      "limitations": [
+        "Original shared checker does not support Czech; exit 2 is not PASS. Approved task-local extension pending.",
+        "Independent AI locale review, not human native-speaker or lawyer certification."
+      ]
+    }
+  ],
+  "limitations": [
+    "Manuscripts not edited by reviewer. Fresh final legal reviewer independently certifies consequential law and status."
+  ]
+}

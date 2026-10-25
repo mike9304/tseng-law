@@ -1,0 +1,124 @@
+{
+  "reviewer": "/root/expand_final_east",
+  "checkedAt": "2026-10-25T13:15:47.947404+00:00",
+  "status": "PREFLIGHT ONLY — not final PASS; exact frozen article and independent locale report bindings pending",
+  "records": [
+    {
+      "id": 940,
+      "source_path": "src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "sha256": "a163e85a051394b23172d1a77c57fee5b810a17f91da0fac036f015995f44820",
+      "image_path": "public/images/columns/940-market-expansion-20261025.webp",
+      "image_sha256": "f695325dd0624188a9de25dab62c5f2830f090d528e1b50c265cbb989d00ffbd",
+      "image_inspected": true,
+      "image_findings": []
+    },
+    {
+      "id": 941,
+      "source_path": "src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "sha256": "5a4608ffd47e23663005ba9c77500e263b422d3907ff3b149ee6d39ff8ac8bc5",
+      "image_path": "public/images/columns/941-market-expansion-20261025.webp",
+      "image_sha256": "6357ffc8fbd81c105b8c941b95328e95ecafc3945a65860ae4dd7f8da38e8227",
+      "image_inspected": true,
+      "image_findings": []
+    },
+    {
+      "id": 942,
+      "source_path": "src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+      "sha256": "bec0b9df6b63b0f17f5f9bc2ffac6b2ef23e2b8693475936eaca05ff1cfaa2a3",
+      "image_path": "public/images/columns/942-market-expansion-20261025.webp",
+      "image_sha256": "fbe6798bf66fccdd74d1cf80421188c1da0fb122de6f0ad77625bf4491f46543",
+      "image_inspected": true,
+      "image_findings": []
+    },
+    {
+      "id": 943,
+      "source_path": "src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+      "sha256": "2c09cb482f2efe0b4d4f63d570b2ebed210bdfdd3708d2dfd9de95f5efa858c8",
+      "image_path": "public/images/columns/943-market-expansion-20261025.webp",
+      "image_sha256": "d28c66a04807a5d524c06bd2ee1912a2c23b5bc60a6ebeaa8c6baec5c2ec35d0",
+      "image_inspected": true,
+      "image_findings": []
+    },
+    {
+      "id": 944,
+      "source_path": "src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md",
+      "sha256": "97d3b2e78a14b54de097dc66ae2a2db9f7abd1591a6aa0422c5e24625cdfbe50",
+      "image_path": "public/images/columns/944-market-expansion-20261025.webp",
+      "image_sha256": "2d622e75d557352b3b10b714fcc63bbd336b5f4a24758667c2fc4caf98bd000a",
+      "image_inspected": true,
+      "image_findings": []
+    },
+    {
+      "id": 945,
+      "source_path": "src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md",
+      "sha256": "2a0adb3d3c6c2293af7975144367e80fcfe7f3ce51102a314d9dc371090ba0c4",
+      "image_path": "public/images/columns/945-market-expansion-20261025.webp",
+      "image_sha256": "ad89676d570335da227e9fea88f6c6e804af1b42b5541055ea2a93e5c5c67fe4",
+      "image_inspected": true,
+      "image_findings": []
+    }
+  ],
+  "comparators": [
+    {
+      "source_path": "src/content/columns-pl/870-polish-company-taiwan-subsidiary-branch-office.md",
+      "sha256": "fff46006998d18c39230a261cd2c652c7f60a95bbea2237035561519f9e9d0da",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-pl/871-polish-working-holiday-taiwan-six-month-work.md",
+      "sha256": "d2799eae87cdcd2b211a9ebf8b3567784dfd911099c959bfa8e7e1421b1c5cd7",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-pl/872-polish-exporter-taiwan-unpaid-euro-invoices.md",
+      "sha256": "835f0602bb3ecdbc73d5e04e09dca49eba7da392356dda7e05fa7c6b1b028dc9",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-cs/873-czech-company-taiwan-subsidiary-branch-office.md",
+      "sha256": "4fa2004dc6c9221b58e919a38163897bf52b764f0e742a1811a55d07fca091d7",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-cs/874-czech-working-holiday-taiwan-work-limits.md",
+      "sha256": "4fdee9eb324d52a49f18c53790d208c37e8bd356d88f41f2b27f2f9583e66566",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-cs/875-czech-buyer-taiwan-defective-machine-claim.md",
+      "sha256": "e13f617788087fbecf742d5c2a8687941f98e9086c3edf277947f9c203f5ccd7",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-lt/897-lithuanian-laser-company-taiwan-subsidiary-branch.md",
+      "sha256": "c7bcfbd5a80afe65b44dca93ab73979e4701120519dc8421e42b015e4cb16472",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-lt/898-lithuanian-engineer-taiwan-work-permit-residence.md",
+      "sha256": "7884cb8bb028dddb87a73eaefa0a49718c020e8a3d67f188a2adfbc04d60b2f5",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-lt/899-lithuanian-brand-taiwan-distributor-trademark-registration.md",
+      "sha256": "862a47b39060c3a0daac591d828191622d3c6a3d88023fd845b6ba00389468d0",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    }
+  ],
+  "independentOfAuthors": true,
+  "notes": [
+    "Direct official current Chinese law read; full raw opens in web-1 through web-8.json.",
+    "LT945 Art11 duty-created condition requested and observed repaired. PL941 Art10(2) warning/instructions combined-duty ambiguity independently checked; observed repaired.",
+    "Europol pl_0.pdf independent requests timed out twice. Actual author tool-return PDF text, 9 pages, P2 lines142–153 and174–183, read from pl-author-source-evidence.json results[3]. Not represented as independent successful fetch.",
+    "No publication authority or professional-human review claim."
+  ]
+}

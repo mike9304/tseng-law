@@ -1,0 +1,38 @@
+{
+  "reviewer": "/root/expand_locale_hi",
+  "checkedAt": "2026-10-25T13:27:49.759942+00:00",
+  "source_evidence": "work/checks/caption-normalization.json",
+  "method": "Reconstructed previous exact full-file bytes by restoring old caption, matched prior reviewed SHA, diffed all text, compared final image hashes, then reran original shared Hindi CLI.",
+  "records": [
+    {
+      "source_path": "src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md",
+      "old_sha256": "9bc016634e9ba1e326e5412f781a41bd6eba910d3c7ca91eb08786768ea70f21",
+      "new_sha256": "f92e3cabcabac4828d3a0379d9376d150f54eddb4ac209f719088014bda7d969",
+      "only_caption_changed": true,
+      "body_alt_and_all_other_metadata_unchanged": true,
+      "image_sha256": "8bf34a1678089f7017eeb6bb9a959a9834b04a9ee838d91ae245c6da10c39531",
+      "image_unchanged": true,
+      "old_caption": "\"कंपनी के रिकॉर्ड की जाँच का काल्पनिक दृश्य।\"",
+      "new_caption": "\"काल्पनिक दृश्य\"",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md --lang hi",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md [hi] sentences=34 mean=17.6 cv=0.509 short=0.206 run3=0.031 opener_rep=0.167 cite_end=0.0 cite_para=0.583 contrast=0 caveat=0 q=1\n  WARN 59% of sentences end in 'है' — vary endings within the register\n",
+      "variety_stderr": ""
+    },
+    {
+      "source_path": "src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md",
+      "old_sha256": "9047bb9835688d004c31420212f78182ae28eade1503902ebc67b47992d06d4d",
+      "new_sha256": "4733e8474fbca987ac77441c0f2a6ac0348a050ea713a51840ecbb5f940c9c8a",
+      "only_caption_changed": true,
+      "body_alt_and_all_other_metadata_unchanged": true,
+      "image_sha256": "8fecca91b72f0c95f2a679cdf58f3aff4097a141ba4276083194f76342d1c3f7",
+      "image_unchanged": true,
+      "old_caption": "\"तकनीकी सेवा के कार्यस्थल का काल्पनिक दृश्य।\"",
+      "new_caption": "\"काल्पनिक दृश्य\"",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md --lang hi",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md [hi] sentences=49 mean=18.2 cv=0.49 short=0.122 run3=0.021 opener_rep=0.125 cite_end=0.0 cite_para=0.625 contrast=1 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "variety_stderr": ""
+    }
+  ]
+}

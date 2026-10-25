@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-25T13:27:56.527209+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+      "before_sha256": "bec0b9df6b63b0f17f5f9bc2ffac6b2ef23e2b8693475936eaca05ff1cfaa2a3",
+      "after_sha256": "b24786be986f1f9660c9fce10c830137156646755991d85215d4e96836fb1cef",
+      "only_change": "featured_image_caption -> Smyšlená scéna",
+      "independent_reverse_reconstruction": true,
+      "body_byte_identical": true,
+      "extracted_sentences_identical": true
+    },
+    {
+      "source_path": "src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+      "before_sha256": "67fd481e9ae23009247b50aa53d09f6b3a21e962bf1dd76bbcbaed1de8592bc5",
+      "after_sha256": "46c094fc25bee60eaddd867007b905a44a89c2c1dbb77ab9dda8cd5a5837fe91",
+      "only_change": "featured_image_caption -> Smyšlená scéna",
+      "independent_reverse_reconstruction": true,
+      "body_byte_identical": true,
+      "extracted_sentences_identical": true
+    }
+  ]
+}

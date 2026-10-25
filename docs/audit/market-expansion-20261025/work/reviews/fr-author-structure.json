@@ -1,0 +1,39 @@
+{
+  "checkedDate": "2026-10-25",
+  "status": "PASS",
+  "files": [
+    {
+      "path": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md",
+      "sha256": "187c8a0c2b64ff6a69be32be21912d48b976cf56bd9e38a6cf2df52b53b56d64",
+      "checks": {
+        "published": true,
+        "lastmod": true,
+        "audience": true,
+        "authorInternal": true,
+        "faqCount": true,
+        "noBold": true,
+        "noLeadingH1": true,
+        "oneEmailLink": true,
+        "heroExists": true,
+        "noTrailingSpace": true
+      }
+    },
+    {
+      "path": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md",
+      "sha256": "c09e180a592b02cc9a11f775aba7821dd7beba54c3bafd91cab7b7bf97f6a51a",
+      "checks": {
+        "published": true,
+        "lastmod": true,
+        "audience": true,
+        "authorInternal": true,
+        "faqCount": true,
+        "noBold": true,
+        "noLeadingH1": true,
+        "oneEmailLink": true,
+        "heroExists": true,
+        "noTrailingSpace": true
+      }
+    }
+  ],
+  "method": "Project gray-matter frontmatter parser; initial Python PyYAML check was unavailable (no module), no installation."
+}

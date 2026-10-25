@@ -1,0 +1,560 @@
+{
+  "records": [
+    {
+      "source_path": "src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "sha256": "a163e85a051394b23172d1a77c57fee5b810a17f91da0fac036f015995f44820",
+      "paragraphs": [
+        {
+          "index": 1,
+          "sentences": [
+            {
+              "text": "Potwierdzenie przelewu na rachunek wskazany w podrobionym e-mailu nie przesądza, że polski importer zapłacił cenę należną tajwańskiemu dostawcy.",
+              "units": 19
+            },
+            {
+              "text": "Gdy zobowiązanie podlega prawu tajwańskiemu, art. 309 kodeksu cywilnego wiąże jego wygaśnięcie ze spełnieniem świadczenia zgodnie z treścią długu oraz przyjęciem go przez wierzyciela lub inną uprawnioną osobę.",
+              "units": 28
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "sentences": [
+            {
+              "text": "Po wykryciu podmiany danych warto natychmiast skontaktować się z bankiem prowadzącym przelew i z rzeczywistym dostawcą.",
+              "units": 16
+            },
+            {
+              "text": "Do kontaktu z dostawcą służą wcześniej sprawdzone dane, zgodnie z zaleceniem w polskojęzycznej ulotce Europolu o wyłudzeniach „na fakturę”.",
+              "units": 19
+            },
+            {
+              "text": "Możliwość zatrzymania lub odzyskania środków trzeba ustalić z bankiem; samo zgłoszenie nie zapewnia zwrotu.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "sentences": [
+            {
+              "text": "Czy kupujący ma zapłacić drugi raz?",
+              "units": 6
+            },
+            {
+              "text": "Przed odpowiedzią potrzebne są umowa, uzgodnione warunki płatności oraz pełna wiadomość o zmianie rachunku.",
+              "units": 14
+            },
+            {
+              "text": "Równie istotne jest ustalenie, czy dostawca rzeczywiście zatwierdził zmianę i kto otrzymał pieniądze.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "sentences": [
+            {
+              "text": "W sprawie rozpoznawanej na Tajwanie prawo właściwe dla zobowiązania umownego ustala się według art. 20 ustawy o prawie właściwym w sprawach cywilnych z elementem zagranicznym.",
+              "units": 25
+            },
+            {
+              "text": "Znaczenie ma wybór stron.",
+              "units": 4
+            },
+            {
+              "text": "Bez wyraźnego, skutecznego wyboru stosuje się prawo najściślej związane z umową, z ustawowym domniemaniem dotyczącym miejsca zamieszkania strony spełniającej świadczenie charakterystyczne.",
+              "units": 21
+            },
+            {
+              "text": "Sam adres dostawcy nie zastępuje tej oceny.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "sentences": [
+            {
+              "text": "Poniższe reguły dotyczą zobowiązania podlegającego prawu tajwańskiemu.",
+              "units": 7
+            },
+            {
+              "text": "Rozstrzygnięcie odpowiedzialności polskiego banku czy obowiązków wynikających z prawa polskiego wymaga osobnej analizy.",
+              "units": 13
+            },
+            {
+              "text": "W dokumentacji handlowej przyda się zachowanie waluty i kwoty ustalonej z dostawcą, bez zastępowania ich przeliczeniem używanym w polskiej księgowości.",
+              "units": 20
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "sentences": [
+            {
+              "text": "Art. 310 kodeksu cywilnego przewiduje kilka sytuacji, w których świadczenie przyjęte przez osobę trzecią ma skutek zapłaty.",
+              "units": 17
+            },
+            {
+              "text": "Jedną jest zatwierdzenie przez wierzyciela; drugą — późniejsze nabycie tej wierzytelności przez odbiorcę pieniędzy.",
+              "units": 13
+            },
+            {
+              "text": "Bez takich okoliczności pozostają jeszcze dwie podstawy wymagające sprawdzenia.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "sentences": [
+            {
+              "text": "Przepis chroni także zapłatę osobie określanej jako 債權之準占有人, czyli występującej wobec otoczenia jako uprawniona do wierzytelności, pod warunkiem że dłużnik nie wiedział, iż nie jest ona wierzycielem.",
+              "units": 27
+            },
+            {
+              "text": "To szczególna kategoria prawna.",
+              "units": 4
+            },
+            {
+              "text": "Wiarygodny wygląd e-maila sam nie dowodzi, że jego nadawca do niej należał.",
+              "units": 13
+            },
+            {
+              "text": "Trzeba ustalić okoliczności, z których wynikało przypisywane mu uprawnienie.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "sentences": [
+            {
+              "text": "Poza wskazanymi sytuacjami zapłata działa tylko w takim zakresie, w jakim wierzyciel uzyskał z niej korzyść.",
+              "units": 16
+            },
+            {
+              "text": "Dlatego warto wyjaśnić dalszą drogę środków, jeżeli pojawia się informacja, że część trafiła jednak do dostawcy.",
+              "units": 16
+            },
+            {
+              "text": "Nie można przyjąć takiego wpływu na podstawie zapewnienia zawartego w tej samej podejrzanej korespondencji.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "sentences": [
+            {
+              "text": "Odrębną regułę zawiera art. 309 ust. 2: posiadacza pokwitowania podpisanego przez wierzyciela uważa się za uprawnionego do odbioru świadczenia.",
+              "units": 19
+            },
+            {
+              "text": "Ochrona odpada, gdy dłużnik wiedział o braku tego uprawnienia lub nie wiedział o nim wskutek niedbalstwa.",
+              "units": 16
+            },
+            {
+              "text": "Zmieniona faktura i podpisane przez wierzyciela pokwitowanie wymagają więc odrębnej oceny; skopiowane logo nie przesądza o spełnieniu ustawowego warunku.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "sentences": [
+            {
+              "text": "Jeżeli importer twierdzi, że nadawca działał jako przedstawiciel dostawcy, trzeba ustalić także zachowanie samego dostawcy.",
+              "units": 15
+            },
+            {
+              "text": "Prawo właściwe dla kwestii umocowania między mocodawcą a kontrahentem określa osobno art. 18 ustawy kolizyjnej: według ich wyraźnego porozumienia, a bez niego według najściślejszego związku z czynnością przedstawiciela.",
+              "units": 28
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "sentences": [
+            {
+              "text": "Gdy stosuje się prawo tajwańskie, art. 169 obejmuje sytuację, gdy ktoś swoim zachowaniem wskazał, że udzielił innej osobie umocowania, albo wiedział, że ta przedstawia się jako jego pełnomocnik, i temu nie zaprzeczył.",
+              "units": 32
+            },
+            {
+              "text": "Wówczas ponosi wobec osoby trzeciej odpowiedzialność jak mocodawca.",
+              "units": 8
+            },
+            {
+              "text": "Wyjątek dotyczy osoby trzeciej, która wiedziała albo mogła wiedzieć o braku umocowania.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "sentences": [
+            {
+              "text": "W tej ocenie przydają się wcześniejsze zatwierdzenia płatności, zakres czynności pracownika i uzgodniony sposób zmiany rachunku.",
+              "units": 16
+            },
+            {
+              "text": "Samo ustalenie, do czyjej skrzynki włamano się jako pierwszej, nie odpowiada na wszystkie te pytania.",
+              "units": 15
+            },
+            {
+              "text": "Nie należy też utożsamiać skuteczności zapłaty z rozstrzygnięciem ewentualnego odszkodowania za zaniedbania po którejś ze stron.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "sentences": [
+            {
+              "text": "Oryginalna korespondencja pokazuje więcej niż wydruk ostatniego e-maila.",
+              "units": 9
+            },
+            {
+              "text": "Warto zachować wiadomości w formacie zawierającym nagłówki, pierwotne i zmienione faktury, historię potwierdzania rachunku oraz dowód zlecenia i wykonania przelewu.",
+              "units": 20
+            },
+            {
+              "text": "Potrzebne są również oryginalne załączniki.",
+              "units": 5
+            },
+            {
+              "text": "Przy każdym kontakcie z bankiem i dostawcą dobrze zapisać datę oraz uzyskane potwierdzenie.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "sentences": [
+            {
+              "text": "Do wstępnej oceny tajwańskiej części sporu można wysłać na wei@hoveringlaw.com.tw krótki opis bez poufnych danych, nazwę kontrahenta i najbliższy termin płatności lub odpowiedzi.",
+              "units": 26
+            },
+            {
+              "text": "Konsultacje są prowadzone po angielsku, chińsku, koreańsku lub japońsku; sposób komunikacji wymaga wcześniejszego potwierdzenia.",
+              "units": 14
+            },
+            {
+              "text": "Wysłanie wiadomości nie oznacza przyjęcia sprawy.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "sentences": [
+            {
+              "text": "Przed przekazaniem pełnych dokumentów warto ułożyć jedną chronologię: kiedy ustalono rachunek, kiedy nadeszła jego zmiana i jakie potwierdzenie uzyskano przed wysłaniem pieniędzy.",
+              "units": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_path": "src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "sha256": "5a4608ffd47e23663005ba9c77500e263b422d3907ff3b149ee6d39ff8ac8bc5",
+      "paragraphs": [
+        {
+          "index": 1,
+          "sentences": [
+            {
+              "text": "Tajwański importer odpowiada na podstawie art. 9 ustawy o ochronie konsumentów jak producent, także wtedy, gdy towar powstał w polskiej fabryce.",
+              "units": 21
+            },
+            {
+              "text": "Po zgłoszeniu urazu przez użytkownika trzeba więc ustalić obowiązki miejscowego importera oraz podmiotu, który produkt zaprojektował lub wyprodukował.",
+              "units": 18
+            },
+            {
+              "text": "Nazwa marki nie zastępuje ustalenia tych ról.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "sentences": [
+            {
+              "text": "Dla polskiej firmy sprzedającej na Tajwanie pojawiają się równolegle dwa zadania: ocena zagrożenia dla pozostałych użytkowników i ustalenie odpowiedzialności za szkodę.",
+              "units": 21
+            },
+            {
+              "text": "Wewnętrzny spór o koszty nie zmienia przesłanek niezwłocznego wycofania niebezpiecznej partii z art. 10.",
+              "units": 14
+            },
+            {
+              "text": "Dokumentacja partii jest potrzebna do obu zadań.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "sentences": [
+            {
+              "text": "Punktem odniesienia jest produkt nabywany lub używany w celu konsumpcyjnym, zgodnie z art. 2 ustawy.",
+              "units": 15
+            },
+            {
+              "text": "Spór dwóch fabryk o parametry zamówionej maszyny wymaga innej analizy.",
+              "units": 10
+            },
+            {
+              "text": "Przepisy o bezpieczeństwie produktów przewidują również ochronę osób trzecich poszkodowanych wskutek naruszenia obowiązków ustawowych, co wynika z art. 7 ust. 3.",
+              "units": 21
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "sentences": [
+            {
+              "text": "Przy zagranicznym producencie dochodzi pytanie o prawo właściwe.",
+              "units": 8
+            },
+            {
+              "text": "Dla szkody wynikłej ze zwykłego używania lub konsumpcji produktu art. 26 tajwańskiej ustawy kolizyjnej wskazuje jako punkt wyjścia prawo państwa producenta.",
+              "units": 21
+            },
+            {
+              "text": "Poszkodowany może jednak wybrać prawo miejsca szkody, miejsca zakupu albo swojego państwa, jeżeli producent wcześniej zgodził się na sprzedaż na obszarze obowiązywania tego prawa lub mógł taką sprzedaż przewidzieć.",
+              "units": 29
+            },
+            {
+              "text": "Dostawy do uzgodnionej sieci na Tajwanie są zatem okolicznością, którą trzeba uwzględnić, oceniając możliwość wyboru prawa tajwańskiego.",
+              "units": 17
+            },
+            {
+              "text": "Sam polski adres producenta nie zamyka tej analizy.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "sentences": [
+            {
+              "text": "Poniższe obowiązki opisują tajwański system ochrony konsumentów.",
+              "units": 7
+            },
+            {
+              "text": "Nie rozstrzygają prawa właściwego dla każdego zagranicznego uczestnika łańcucha dostaw ani właściwości sądu.",
+              "units": 13
+            },
+            {
+              "text": "Wymagania dla żywności, leków i wyrobów medycznych trzeba sprawdzić odrębnie.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "sentences": [
+            {
+              "text": "Art. 7 wymaga od projektanta i producenta bezpieczeństwa, jakiego można rozsądnie oczekiwać przy stanie wiedzy technicznej lub zawodowej z chwili wprowadzenia produktu do obrotu.",
+              "units": 24
+            },
+            {
+              "text": "Przy możliwości zagrożenia życia, ciała, zdrowia lub mienia potrzebne są widoczne ostrzeżenia i informacje o postępowaniu w razie niebezpieczeństwa.",
+              "units": 19
+            },
+            {
+              "text": "Naruszenie tych obowiązków, które powoduje szkodę konsumenta lub osoby trzeciej, prowadzi do odpowiedzialności solidarnej.",
+              "units": 14
+            },
+            {
+              "text": "Jeżeli przedsiębiorca wykaże brak winy, sąd może zmniejszyć jego odpowiedzialność.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "sentences": [
+            {
+              "text": "Nie jest to automatyczne zwolnienie z zapłaty.",
+              "units": 7
+            },
+            {
+              "text": "Z kolei art. 7-1 obciąża przedsiębiorcę dowodem jego twierdzenia, że produkt spełniał wymagany poziom bezpieczeństwa w chwili wprowadzenia do obrotu.",
+              "units": 21
+            },
+            {
+              "text": "Samo późniejsze pojawienie się lepszego produktu nie oznacza, że poprzedni był niebezpieczny.",
+              "units": 12
+            },
+            {
+              "text": "Dlatego przydają się wyniki badań odnoszące się do właściwego modelu i okresu produkcji.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "sentences": [
+            {
+              "text": "Ustawa odróżnia importera od dystrybutora, który tylko sprzedaje produkt dalej:",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "sentences": [
+            {
+              "text": "Jeden podmiot może pełnić kilka ról.",
+              "units": 6
+            },
+            {
+              "text": "Przy kwalifikacji liczą się rzeczywiste czynności, a nie wyłącznie tytuł umowy „dystrybucyjnej”.",
+              "units": 12
+            },
+            {
+              "text": "Do wyjaśnienia pozostają ponadto przyczyna zdarzenia, rozmiar szkody i związek z produktem; samo zgłoszenie urazu nie ustala wszystkich przesłanek odpowiedzialności z art. 7.",
+              "units": 23
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "sentences": [
+            {
+              "text": "Czy można czekać na uzgodnienie, kto pokryje transport zwrotny?",
+              "units": 9
+            },
+            {
+              "text": "Art. 10 wymaga niezwłocznego wycofania danej partii, gdy istnieją fakty uzasadniające obawę, że produkt zagraża bezpieczeństwu lub zdrowiu konsumentów.",
+              "units": 19
+            },
+            {
+              "text": "Wyjątek dotyczy sytuacji, w której niezbędne działania podjęte przez przedsiębiorcę wystarczają do usunięcia zagrożenia.",
+              "units": 14
+            },
+            {
+              "text": "O ich wystarczalności nie przesądza samo nazwanie ich „naprawą”.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "sentences": [
+            {
+              "text": "Regułę stosuje się również do produktu mogącego zagrażać życiu, ciału, zdrowiu lub mieniu, jeśli nie spełniono obowiązku zamieszczenia widocznego ostrzeżenia wraz z informacjami o postępowaniu w razie niebezpieczeństwa.",
+              "units": 28
+            },
+            {
+              "text": "Ocena musi zatem objąć instrukcję i oznaczenia, nie tylko konstrukcję urządzenia.",
+              "units": 11
+            },
+            {
+              "text": "Warto zachować wersję faktycznie dołączoną do sprzedanej partii.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "sentences": [
+            {
+              "text": "W zgłoszeniu od importera potrzebne są oznaczenie modelu, numer partii, opis zdarzenia, data sprzedaży i informacje o wykonanych już czynnościach.",
+              "units": 20
+            },
+            {
+              "text": "Zdjęcia i zabezpieczony egzemplarz pozwalają później porównać relację z badaniem produktu.",
+              "units": 11
+            },
+            {
+              "text": "Zabezpieczanie dowodów trzeba prowadzić razem z usuwaniem zagrożenia.",
+              "units": 8
+            },
+            {
+              "text": "Nie uzasadnia ono dalszej sprzedaży partii objętej obowiązkiem wycofania.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "sentences": [
+            {
+              "text": "Wcześniejsze postanowienie umowne nie może ograniczyć ani wyłączyć odpowiedzialności wobec konsumenta lub osoby trzeciej przewidzianej w tej części ustawy — stanowi o tym art. 10-1.",
+              "units": 25
+            },
+            {
+              "text": "Klauzula ograniczająca rozliczenie producenta z importerem do wartości dostawy nie wyznacza więc sama przez się górnej granicy roszczenia poszkodowanego.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "sentences": [
+            {
+              "text": "Firmy muszą osobno ocenić podstawę wzajemnych roszczeń o zwrot poniesionych kosztów.",
+              "units": 11
+            },
+            {
+              "text": "Dla zobowiązań umownych art. 20 ustawy kolizyjnej uwzględnia wybór prawa przez strony, a bez wyraźnego, skutecznego wyboru kieruje do prawa najściślej związanego z umową.",
+              "units": 24
+            },
+            {
+              "text": "Nie ma podstaw, by z samego faktu importu przyjmować równy podział kosztów albo obowiązek pokrycia wszystkiego przez polską firmę.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "sentences": [
+            {
+              "text": "W umowie warto odszukać zasady zgłaszania incydentów, uzgadniania badań, zatwierdzania ugód i dokumentowania wydatków.",
+              "units": 14
+            },
+            {
+              "text": "Polisę trzeba sprawdzić osobno, zwłaszcza warunki powiadomienia ubezpieczyciela.",
+              "units": 8
+            },
+            {
+              "text": "Rachunki za odbiór towaru, ekspertyzy i magazynowanie powinny dać się przypisać do konkretnej partii oraz podjętej czynności.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "sentences": [
+            {
+              "text": "Wstępne zapytanie na wei@hoveringlaw.com.tw może zawierać rodzaj produktu, nazwę tajwańskiego importera, datę zdarzenia i opis podjętych działań, bez dokumentacji medycznej ani listy klientów.",
+              "units": 26
+            },
+            {
+              "text": "Konsultacje dotyczą prawa tajwańskiego i odbywają się po angielsku, chińsku, koreańsku lub japońsku; sposób komunikacji trzeba potwierdzić wcześniej.",
+              "units": 18
+            },
+            {
+              "text": "Sam e-mail nie oznacza przyjęcia zlecenia.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "sentences": [
+            {
+              "text": "Numer partii w zgłoszeniu, raport z jej badania i zestawienie odebranych sztuk powinny pozwalać prześledzić ten sam produkt od sprzedaży do wycofania.",
+              "units": 22
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

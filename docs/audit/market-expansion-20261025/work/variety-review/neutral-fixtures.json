@@ -1,0 +1,2216 @@
+{
+  "schema_version": 1,
+  "prepared_at_utc": "2026-10-25T13:06:53.260506+00:00",
+  "reviewer": "/root/measure_new_locales_review",
+  "independence": "No target articles, target scores, candidate code, candidate profile files, or per-fixture candidate outputs read before freezing this file. Global original code/rules and author method description read. Author reported aggregate test counts and one Czech NFD issue by message during preparation; none of these expected arrays were derived from candidate outputs.",
+  "scope": "Independent operational expectations for a task-local six-locale measurement extension; no article certification.",
+  "rules": {
+    "short_units": 8,
+    "long_units": 32,
+    "hard_limits": "unchanged",
+    "hyphens": "split in these six profiles",
+    "source_tail": "anchored standalone headings only"
+  },
+  "references": [
+    {
+      "url": "https://www.unicode.org/reports/tr29/",
+      "opened": true,
+      "note": "Current Unicode 18.0.0 / rev49, section 4.1.1 WB7a-c and tailoring; orthographic units are declared heuristics, not claimed full UAX conformance."
+    },
+    {
+      "url": "https://prirucka.ujc.cas.cz/?id=160",
+      "opened": true,
+      "note": "Czech authority on date/ordinal/abbreviation periods, including sentence-final abbreviations."
+    },
+    {
+      "url": "https://www.vlkk.lt/konsultacijos/1120-santrumpos",
+      "opened": false,
+      "note": "Tool returned inaccessible; Lithuanian examples are independent AI editorial judgments, not claimed verified official quotations."
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "fil-sentences-plain",
+      "locale": "fil",
+      "kind": "sentences",
+      "text": "Nasa mesa ang liham. May kopya ang opisina.",
+      "expected": [
+        "Nasa mesa ang liham.",
+        "May kopya ang opisina."
+      ],
+      "note": ""
+    },
+    {
+      "id": "he-sentences-plain",
+      "locale": "he",
+      "kind": "sentences",
+      "text": "המכתב נמצא על השולחן. עותק נשמר במשרד.",
+      "expected": [
+        "המכתב נמצא על השולחן.",
+        "עותק נשמר במשרד."
+      ],
+      "note": ""
+    },
+    {
+      "id": "nl-sentences-plain",
+      "locale": "nl",
+      "kind": "sentences",
+      "text": "De brief ligt op tafel. Het kantoor bewaart een kopie.",
+      "expected": [
+        "De brief ligt op tafel.",
+        "Het kantoor bewaart een kopie."
+      ],
+      "note": ""
+    },
+    {
+      "id": "pl-sentences-plain",
+      "locale": "pl",
+      "kind": "sentences",
+      "text": "List leży na stole. Biuro przechowuje kopię.",
+      "expected": [
+        "List leży na stole.",
+        "Biuro przechowuje kopię."
+      ],
+      "note": ""
+    },
+    {
+      "id": "cs-sentences-plain",
+      "locale": "cs",
+      "kind": "sentences",
+      "text": "Dopis leží na stole. Kancelář má kopii.",
+      "expected": [
+        "Dopis leží na stole.",
+        "Kancelář má kopii."
+      ],
+      "note": ""
+    },
+    {
+      "id": "lt-sentences-plain",
+      "locale": "lt",
+      "kind": "sentences",
+      "text": "Laiškas guli ant stalo. Biuras saugo kopiją.",
+      "expected": [
+        "Laiškas guli ant stalo.",
+        "Biuras saugo kopiją."
+      ],
+      "note": ""
+    },
+    {
+      "id": "fil-sentences-titles",
+      "locale": "fil",
+      "kind": "sentences",
+      "text": "Kinausap ni Dr. Reyes si Bb. Cruz. Bumalik sila bukas.",
+      "expected": [
+        "Kinausap ni Dr. Reyes si Bb. Cruz.",
+        "Bumalik sila bukas."
+      ],
+      "note": ""
+    },
+    {
+      "id": "fil-sentences-citation",
+      "locale": "fil",
+      "kind": "sentences",
+      "text": "Nasa art. 5 ng Batas Blg. 12 ang tala. May hiwalay na kopya.",
+      "expected": [
+        "Nasa art. 5 ng Batas Blg. 12 ang tala.",
+        "May hiwalay na kopya."
+      ],
+      "note": ""
+    },
+    {
+      "id": "fil-sentences-decimal",
+      "locale": "fil",
+      "kind": "sentences",
+      "text": "Nakatala ang halagang 1,250.50 piso. May resibo rin.",
+      "expected": [
+        "Nakatala ang halagang 1,250.50 piso.",
+        "May resibo rin."
+      ],
+      "note": ""
+    },
+    {
+      "id": "fil-sentences-terminal-abbreviation",
+      "locale": "fil",
+      "kind": "sentences",
+      "text": "May mga resibo, liham, atbp. Nasa mesa ang folder.",
+      "expected": [
+        "May mga resibo, liham, atbp.",
+        "Nasa mesa ang folder."
+      ],
+      "note": ""
+    },
+    {
+      "id": "fil-sentences-abbreviation-middle",
+      "locale": "fil",
+      "kind": "sentences",
+      "text": "May mga resibo, liham, atbp. sa folder. Kumpleto ang tala.",
+      "expected": [
+        "May mga resibo, liham, atbp. sa folder.",
+        "Kumpleto ang tala."
+      ],
+      "note": ""
+    },
+    {
+      "id": "fil-sentences-quote-attribution",
+      "locale": "fil",
+      "kind": "sentences",
+      "text": "“Handa na ba?” tanong niya. Sumagot ang kawani.",
+      "expected": [
+        "“Handa na ba?” tanong niya.",
+        "Sumagot ang kawani."
+      ],
+      "note": ""
+    },
+    {
+      "id": "fil-sentences-quote-new-sentence",
+      "locale": "fil",
+      "kind": "sentences",
+      "text": "“Handa na ba?” Sumagot ang kawani.",
+      "expected": [
+        "“Handa na ba?”",
+        "Sumagot ang kawani."
+      ],
+      "note": ""
+    },
+    {
+      "id": "fil-sentences-ellipsis",
+      "locale": "fil",
+      "kind": "sentences",
+      "text": "Sandali... Bukas ang opisina.",
+      "expected": [
+        "Sandali...",
+        "Bukas ang opisina."
+      ],
+      "note": ""
+    },
+    {
+      "id": "he-sentences-gershayim",
+      "locale": "he",
+      "kind": "sentences",
+      "text": "עו״ד לוי קיבל את המכתב. העותק נשמר.",
+      "expected": [
+        "עו״ד לוי קיבל את המכתב.",
+        "העותק נשמר."
+      ],
+      "note": ""
+    },
+    {
+      "id": "he-sentences-ascii-gershayim",
+      "locale": "he",
+      "kind": "sentences",
+      "text": "עו\"ד לוי קיבל את המכתב. העותק נשמר.",
+      "expected": [
+        "עו\"ד לוי קיבל את המכתב.",
+        "העותק נשמר."
+      ],
+      "note": ""
+    },
+    {
+      "id": "he-sentences-geresh-name",
+      "locale": "he",
+      "kind": "sentences",
+      "text": "ג׳ורג׳ הגיע למשרד. הדלת הייתה פתוחה.",
+      "expected": [
+        "ג׳ורג׳ הגיע למשרד.",
+        "הדלת הייתה פתוחה."
+      ],
+      "note": ""
+    },
+    {
+      "id": "he-sentences-decimal",
+      "locale": "he",
+      "kind": "sentences",
+      "text": "הסכום הוא 1,250.50 ש״ח. הקבלה נשמרה.",
+      "expected": [
+        "הסכום הוא 1,250.50 ש״ח.",
+        "הקבלה נשמרה."
+      ],
+      "note": ""
+    },
+    {
+      "id": "he-sentences-citation",
+      "locale": "he",
+      "kind": "sentences",
+      "text": "ההפניה היא לסעיף 5 לחוק. המסמך מצורף.",
+      "expected": [
+        "ההפניה היא לסעיף 5 לחוק.",
+        "המסמך מצורף."
+      ],
+      "note": ""
+    },
+    {
+      "id": "he-sentences-quote-attribution",
+      "locale": "he",
+      "kind": "sentences",
+      "text": "\"מי חתם?\" שאל העובד. המנהל השיב.",
+      "expected": [
+        "\"מי חתם?\" שאל העובד.",
+        "המנהל השיב."
+      ],
+      "note": ""
+    },
+    {
+      "id": "he-sentences-quote-new-sentence",
+      "locale": "he",
+      "kind": "sentences",
+      "text": "\"מי חתם?\" העובד חזר לחדר.",
+      "expected": [
+        "\"מי חתם?\"",
+        "העובד חזר לחדר."
+      ],
+      "note": ""
+    },
+    {
+      "id": "he-sentences-punctuation",
+      "locale": "he",
+      "kind": "sentences",
+      "text": "מי חתם? העותק כאן! אפשר לבדוק.",
+      "expected": [
+        "מי חתם?",
+        "העותק כאן!",
+        "אפשר לבדוק."
+      ],
+      "note": ""
+    },
+    {
+      "id": "nl-sentences-title",
+      "locale": "nl",
+      "kind": "sentences",
+      "text": "Mr. De Vries las de brief. Daarna belde zij terug.",
+      "expected": [
+        "Mr. De Vries las de brief.",
+        "Daarna belde zij terug."
+      ],
+      "note": ""
+    },
+    {
+      "id": "nl-sentences-citation",
+      "locale": "nl",
+      "kind": "sentences",
+      "text": "Zie art. 5, lid 2. Daarna volgt de bijlage.",
+      "expected": [
+        "Zie art. 5, lid 2.",
+        "Daarna volgt de bijlage."
+      ],
+      "note": ""
+    },
+    {
+      "id": "nl-sentences-decimal",
+      "locale": "nl",
+      "kind": "sentences",
+      "text": "Het bedrag is 1.250,50 euro. De factuur ligt klaar.",
+      "expected": [
+        "Het bedrag is 1.250,50 euro.",
+        "De factuur ligt klaar."
+      ],
+      "note": ""
+    },
+    {
+      "id": "nl-sentences-terminal-abbreviation",
+      "locale": "nl",
+      "kind": "sentences",
+      "text": "Het dossier bevat facturen enz. De map blijft hier.",
+      "expected": [
+        "Het dossier bevat facturen enz.",
+        "De map blijft hier."
+      ],
+      "note": ""
+    },
+    {
+      "id": "nl-sentences-abbreviation-middle",
+      "locale": "nl",
+      "kind": "sentences",
+      "text": "Het dossier bevat facturen enz. in een map. Die map blijft hier.",
+      "expected": [
+        "Het dossier bevat facturen enz. in een map.",
+        "Die map blijft hier."
+      ],
+      "note": ""
+    },
+    {
+      "id": "nl-sentences-multi-abbreviation",
+      "locale": "nl",
+      "kind": "sentences",
+      "text": "Het pakket bevat o.a. facturen en brieven. De lijst is compleet.",
+      "expected": [
+        "Het pakket bevat o.a. facturen en brieven.",
+        "De lijst is compleet."
+      ],
+      "note": ""
+    },
+    {
+      "id": "nl-sentences-quote-attribution",
+      "locale": "nl",
+      "kind": "sentences",
+      "text": "“Wie heeft getekend?” vroeg hij. De medewerker antwoordde.",
+      "expected": [
+        "“Wie heeft getekend?” vroeg hij.",
+        "De medewerker antwoordde."
+      ],
+      "note": ""
+    },
+    {
+      "id": "nl-sentences-quote-new-sentence",
+      "locale": "nl",
+      "kind": "sentences",
+      "text": "“Wie heeft getekend?” De medewerker liep weg.",
+      "expected": [
+        "“Wie heeft getekend?”",
+        "De medewerker liep weg."
+      ],
+      "note": ""
+    },
+    {
+      "id": "pl-sentences-title",
+      "locale": "pl",
+      "kind": "sentences",
+      "text": "Prof. Nowak przeczytał list. Potem odłożył dokument.",
+      "expected": [
+        "Prof. Nowak przeczytał list.",
+        "Potem odłożył dokument."
+      ],
+      "note": ""
+    },
+    {
+      "id": "pl-sentences-citation",
+      "locale": "pl",
+      "kind": "sentences",
+      "text": "Zob. art. 5 ust. 1. Potem sprawdź załącznik.",
+      "expected": [
+        "Zob. art. 5 ust. 1.",
+        "Potem sprawdź załącznik."
+      ],
+      "note": ""
+    },
+    {
+      "id": "pl-sentences-decimal",
+      "locale": "pl",
+      "kind": "sentences",
+      "text": "Kwota wynosi 1.250,50 zł. Potwierdzenie jest w teczce.",
+      "expected": [
+        "Kwota wynosi 1.250,50 zł.",
+        "Potwierdzenie jest w teczce."
+      ],
+      "note": ""
+    },
+    {
+      "id": "pl-sentences-terminal-abbreviation",
+      "locale": "pl",
+      "kind": "sentences",
+      "text": "Spis zawiera listy itd. Kolejna strona jest pusta.",
+      "expected": [
+        "Spis zawiera listy itd.",
+        "Kolejna strona jest pusta."
+      ],
+      "note": ""
+    },
+    {
+      "id": "pl-sentences-abbreviation-middle",
+      "locale": "pl",
+      "kind": "sentences",
+      "text": "Spis zawiera listy itd. w jednej teczce. Teczka jest tutaj.",
+      "expected": [
+        "Spis zawiera listy itd. w jednej teczce.",
+        "Teczka jest tutaj."
+      ],
+      "note": ""
+    },
+    {
+      "id": "pl-sentences-year-terminal",
+      "locale": "pl",
+      "kind": "sentences",
+      "text": "Dokument pochodzi z 2025 r. Kolejny list jest nowszy.",
+      "expected": [
+        "Dokument pochodzi z 2025 r.",
+        "Kolejny list jest nowszy."
+      ],
+      "note": ""
+    },
+    {
+      "id": "pl-sentences-year-middle",
+      "locale": "pl",
+      "kind": "sentences",
+      "text": "Dokument powstał w 2025 r. w Warszawie. Kopia jest tutaj.",
+      "expected": [
+        "Dokument powstał w 2025 r. w Warszawie.",
+        "Kopia jest tutaj."
+      ],
+      "note": ""
+    },
+    {
+      "id": "pl-sentences-example",
+      "locale": "pl",
+      "kind": "sentences",
+      "text": "Termin podano np. jako 30 dni. Dopisano go ręcznie.",
+      "expected": [
+        "Termin podano np. jako 30 dni.",
+        "Dopisano go ręcznie."
+      ],
+      "note": ""
+    },
+    {
+      "id": "pl-sentences-quote-attribution",
+      "locale": "pl",
+      "kind": "sentences",
+      "text": "„Kto podpisał?” zapytał pracownik. Odpowiedź zapisano.",
+      "expected": [
+        "„Kto podpisał?” zapytał pracownik.",
+        "Odpowiedź zapisano."
+      ],
+      "note": ""
+    },
+    {
+      "id": "cs-sentences-named-date",
+      "locale": "cs",
+      "kind": "sentences",
+      "text": "Záznam vznikl 1. ledna 2026. Další list přišel později.",
+      "expected": [
+        "Záznam vznikl 1. ledna 2026.",
+        "Další list přišel později."
+      ],
+      "note": ""
+    },
+    {
+      "id": "cs-sentences-numeric-date",
+      "locale": "cs",
+      "kind": "sentences",
+      "text": "Dopis přišel 25. 10. 2026. Odpověď je přiložena.",
+      "expected": [
+        "Dopis přišel 25. 10. 2026.",
+        "Odpověď je přiložena."
+      ],
+      "note": ""
+    },
+    {
+      "id": "cs-sentences-date-no-year",
+      "locale": "cs",
+      "kind": "sentences",
+      "text": "Termín je 25. října. Další datum není uvedeno.",
+      "expected": [
+        "Termín je 25. října.",
+        "Další datum není uvedeno."
+      ],
+      "note": ""
+    },
+    {
+      "id": "cs-sentences-citation",
+      "locale": "cs",
+      "kind": "sentences",
+      "text": "Viz čl. 5 odst. 1. Kopie je přiložena.",
+      "expected": [
+        "Viz čl. 5 odst. 1.",
+        "Kopie je přiložena."
+      ],
+      "note": ""
+    },
+    {
+      "id": "cs-sentences-title",
+      "locale": "cs",
+      "kind": "sentences",
+      "text": "Ing. Novák podepsal dopis. Kopie zůstala v kanceláři.",
+      "expected": [
+        "Ing. Novák podepsal dopis.",
+        "Kopie zůstala v kanceláři."
+      ],
+      "note": ""
+    },
+    {
+      "id": "cs-sentences-company-abbreviation",
+      "locale": "cs",
+      "kind": "sentences",
+      "text": "Společnost Alfa, s. r. o., zaslala dopis. Kopie je v archivu.",
+      "expected": [
+        "Společnost Alfa, s. r. o., zaslala dopis.",
+        "Kopie je v archivu."
+      ],
+      "note": ""
+    },
+    {
+      "id": "cs-sentences-terminal-abbreviation",
+      "locale": "cs",
+      "kind": "sentences",
+      "text": "Seznam obsahuje dopisy atd. Další list chybí.",
+      "expected": [
+        "Seznam obsahuje dopisy atd.",
+        "Další list chybí."
+      ],
+      "note": ""
+    },
+    {
+      "id": "cs-sentences-ordinal-not-date",
+      "locale": "cs",
+      "kind": "sentences",
+      "text": "Jde o 2. čtení návrhu. Termín je znám.",
+      "expected": [
+        "Jde o 2. čtení návrhu.",
+        "Termín je znám."
+      ],
+      "note": ""
+    },
+    {
+      "id": "cs-sentences-integer-at-end",
+      "locale": "cs",
+      "kind": "sentences",
+      "text": "Číslo spisu je 2. Další položka je prázdná.",
+      "expected": [
+        "Číslo spisu je 2.",
+        "Další položka je prázdná."
+      ],
+      "note": ""
+    },
+    {
+      "id": "cs-sentences-decimal",
+      "locale": "cs",
+      "kind": "sentences",
+      "text": "Cena činí 1.250,50 Kč. Účet je přiložen.",
+      "expected": [
+        "Cena činí 1.250,50 Kč.",
+        "Účet je přiložen."
+      ],
+      "note": ""
+    },
+    {
+      "id": "cs-sentences-quote-attribution",
+      "locale": "cs",
+      "kind": "sentences",
+      "text": "„Kdo podepsal?“ zeptal se pracovník. Odpověď zapsal.",
+      "expected": [
+        "„Kdo podepsal?“ zeptal se pracovník.",
+        "Odpověď zapsal."
+      ],
+      "note": ""
+    },
+    {
+      "id": "lt-sentences-date",
+      "locale": "lt",
+      "kind": "sentences",
+      "text": "Laiškas gautas 2026 m. spalio 25 d. ryte. Kopija išsaugota.",
+      "expected": [
+        "Laiškas gautas 2026 m. spalio 25 d. ryte.",
+        "Kopija išsaugota."
+      ],
+      "note": ""
+    },
+    {
+      "id": "lt-sentences-title",
+      "locale": "lt",
+      "kind": "sentences",
+      "text": "Sąrašą patikrino dr. Jonas. Kopija liko biure.",
+      "expected": [
+        "Sąrašą patikrino dr. Jonas.",
+        "Kopija liko biure."
+      ],
+      "note": ""
+    },
+    {
+      "id": "lt-sentences-multi-abbreviation",
+      "locale": "lt",
+      "kind": "sentences",
+      "text": "Tai, t. y. kopija, liko biure. Originalas išsiųstas.",
+      "expected": [
+        "Tai, t. y. kopija, liko biure.",
+        "Originalas išsiųstas."
+      ],
+      "note": ""
+    },
+    {
+      "id": "lt-sentences-example-capital",
+      "locale": "lt",
+      "kind": "sentences",
+      "text": "Kopija saugoma kitur, pvz. Vilniuje. Originalas liko čia.",
+      "expected": [
+        "Kopija saugoma kitur, pvz. Vilniuje.",
+        "Originalas liko čia."
+      ],
+      "note": ""
+    },
+    {
+      "id": "lt-sentences-terminal-abbreviation",
+      "locale": "lt",
+      "kind": "sentences",
+      "text": "Sąraše yra laiškai ir t. t. Kitas lapas tuščias.",
+      "expected": [
+        "Sąraše yra laiškai ir t. t.",
+        "Kitas lapas tuščias."
+      ],
+      "note": ""
+    },
+    {
+      "id": "lt-sentences-abbreviation-middle",
+      "locale": "lt",
+      "kind": "sentences",
+      "text": "Laiškai ir t. t. sudėti į aplanką. Jis yra čia.",
+      "expected": [
+        "Laiškai ir t. t. sudėti į aplanką.",
+        "Jis yra čia."
+      ],
+      "note": ""
+    },
+    {
+      "id": "lt-sentences-year-terminal",
+      "locale": "lt",
+      "kind": "sentences",
+      "text": "Dokumentas gautas 2026 m. Kitas laiškas gautas vėliau.",
+      "expected": [
+        "Dokumentas gautas 2026 m.",
+        "Kitas laiškas gautas vėliau."
+      ],
+      "note": ""
+    },
+    {
+      "id": "lt-sentences-citation",
+      "locale": "lt",
+      "kind": "sentences",
+      "text": "Nurodytas 5 str. 1 d. tekstas. Kopija pridėta.",
+      "expected": [
+        "Nurodytas 5 str. 1 d. tekstas.",
+        "Kopija pridėta."
+      ],
+      "note": ""
+    },
+    {
+      "id": "lt-sentences-decimal",
+      "locale": "lt",
+      "kind": "sentences",
+      "text": "Suma yra 1.250,50 euro. Kvitas išsaugotas.",
+      "expected": [
+        "Suma yra 1.250,50 euro.",
+        "Kvitas išsaugotas."
+      ],
+      "note": ""
+    },
+    {
+      "id": "lt-sentences-quote-attribution",
+      "locale": "lt",
+      "kind": "sentences",
+      "text": "„Kas pasirašė?“ paklausė darbuotojas. Atsakymas užrašytas.",
+      "expected": [
+        "„Kas pasirašė?“ paklausė darbuotojas.",
+        "Atsakymas užrašytas."
+      ],
+      "note": ""
+    },
+    {
+      "id": "fil-words-1",
+      "locale": "fil",
+      "kind": "words",
+      "text": "siya’y pag-ibig araw-araw",
+      "expected": [
+        "siya’y",
+        "pag",
+        "ibig",
+        "araw",
+        "araw"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "fil-words-2",
+      "locale": "fil",
+      "kind": "words",
+      "text": "ako'y narito",
+      "expected": [
+        "ako'y",
+        "narito"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "fil-words-3",
+      "locale": "fil",
+      "kind": "words",
+      "text": "₱1,250.50 at 8-12 araw",
+      "expected": [
+        "1,250.50",
+        "at",
+        "8",
+        "12",
+        "araw"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "fil-words-4",
+      "locale": "fil",
+      "kind": "words",
+      "text": "Artikulo 5(1), Blg. 12.",
+      "expected": [
+        "Artikulo",
+        "5",
+        "1",
+        "Blg",
+        "12"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "fil-words-5",
+      "locale": "fil",
+      "kind": "words",
+      "text": "taó opisina",
+      "expected": [
+        "taó",
+        "opisina"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "he-words-1",
+      "locale": "he",
+      "kind": "words",
+      "text": "עו״ד בע״מ",
+      "expected": [
+        "עו״ד",
+        "בע״מ"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "he-words-2",
+      "locale": "he",
+      "kind": "words",
+      "text": "עו\"ד בע\"מ",
+      "expected": [
+        "עו\"ד",
+        "בע\"מ"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "he-words-3",
+      "locale": "he",
+      "kind": "words",
+      "text": "ג׳ורג׳ פרופ׳",
+      "expected": [
+        "ג׳ורג׳",
+        "פרופ׳"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "he-words-4",
+      "locale": "he",
+      "kind": "words",
+      "text": "ג'ורג' פרופ'",
+      "expected": [
+        "ג'ורג'",
+        "פרופ'"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "he-words-5",
+      "locale": "he",
+      "kind": "words",
+      "text": "בית־משפט שָׁלוֹם",
+      "expected": [
+        "בית",
+        "משפט",
+        "שָׁלוֹם"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "he-words-6",
+      "locale": "he",
+      "kind": "words",
+      "text": "₪1,250.50 ו־8-12 ימים",
+      "expected": [
+        "1,250.50",
+        "ו",
+        "8",
+        "12",
+        "ימים"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "he-words-7",
+      "locale": "he",
+      "kind": "words",
+      "text": "\"שלום\" \"עולם\"",
+      "expected": [
+        "שלום",
+        "עולם"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "nl-words-1",
+      "locale": "nl",
+      "kind": "words",
+      "text": "zo'n cliënt e-mail",
+      "expected": [
+        "zo'n",
+        "cliënt",
+        "e",
+        "mail"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "nl-words-2",
+      "locale": "nl",
+      "kind": "words",
+      "text": "€1.250,50 en 8-12 dagen",
+      "expected": [
+        "1.250,50",
+        "en",
+        "8",
+        "12",
+        "dagen"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "nl-words-3",
+      "locale": "nl",
+      "kind": "words",
+      "text": "art. 5 lid 2",
+      "expected": [
+        "art",
+        "5",
+        "lid",
+        "2"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "nl-words-4",
+      "locale": "nl",
+      "kind": "words",
+      "text": "coöperatie",
+      "expected": [
+        "coöperatie"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "pl-words-1",
+      "locale": "pl",
+      "kind": "words",
+      "text": "zażółć gęślą jaźń",
+      "expected": [
+        "zażółć",
+        "gęślą",
+        "jaźń"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "pl-words-2",
+      "locale": "pl",
+      "kind": "words",
+      "text": "1 250,50 zł; 8-12 dni",
+      "expected": [
+        "1",
+        "250,50",
+        "zł",
+        "8",
+        "12",
+        "dni"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "pl-words-3",
+      "locale": "pl",
+      "kind": "words",
+      "text": "art. 5 ust. 1 pkt 2",
+      "expected": [
+        "art",
+        "5",
+        "ust",
+        "1",
+        "pkt",
+        "2"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "pl-words-4",
+      "locale": "pl",
+      "kind": "words",
+      "text": "polsko-tajwański projekt",
+      "expected": [
+        "polsko",
+        "tajwański",
+        "projekt"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "cs-words-1",
+      "locale": "cs",
+      "kind": "words",
+      "text": "český návrh řízení",
+      "expected": [
+        "český",
+        "návrh",
+        "řízení"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "cs-words-2",
+      "locale": "cs",
+      "kind": "words",
+      "text": "1. 2. 2026 a 1.250,50 Kč",
+      "expected": [
+        "1",
+        "2",
+        "2026",
+        "a",
+        "1.250,50",
+        "Kč"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "cs-words-3",
+      "locale": "cs",
+      "kind": "words",
+      "text": "§ 5 odst. 1 písm. a)",
+      "expected": [
+        "5",
+        "odst",
+        "1",
+        "písm",
+        "a"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "cs-words-4",
+      "locale": "cs",
+      "kind": "words",
+      "text": "česko-tchajwanský projekt",
+      "expected": [
+        "česko",
+        "tchajwanský",
+        "projekt"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "lt-words-1",
+      "locale": "lt",
+      "kind": "words",
+      "text": "ąžuolas įmonė užsienyje",
+      "expected": [
+        "ąžuolas",
+        "įmonė",
+        "užsienyje"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "lt-words-2",
+      "locale": "lt",
+      "kind": "words",
+      "text": "2026 m. spalio 25 d.",
+      "expected": [
+        "2026",
+        "m",
+        "spalio",
+        "25",
+        "d"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "lt-words-3",
+      "locale": "lt",
+      "kind": "words",
+      "text": "1 250,50 Eur; 8-12 dienų",
+      "expected": [
+        "1",
+        "250,50",
+        "Eur",
+        "8",
+        "12",
+        "dienų"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "lt-words-4",
+      "locale": "lt",
+      "kind": "words",
+      "text": "t. y. 5 str. 1 d.",
+      "expected": [
+        "t",
+        "y",
+        "5",
+        "str",
+        "1",
+        "d"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "lt-words-5",
+      "locale": "lt",
+      "kind": "words",
+      "text": "Lietuvos-Taivano ryšys",
+      "expected": [
+        "Lietuvos",
+        "Taivano",
+        "ryšys"
+      ],
+      "note": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "fil-source_heading-positive-1",
+      "locale": "fil",
+      "kind": "source_heading",
+      "text": "## Mga sanggunian",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "fil-source_heading-positive-2",
+      "locale": "fil",
+      "kind": "source_heading",
+      "text": "### Sanggunian",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "fil-source_heading-positive-3",
+      "locale": "fil",
+      "kind": "source_heading",
+      "text": "## Mga opisyal na sanggunian",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "fil-source_heading-negative-1",
+      "locale": "fil",
+      "kind": "source_heading",
+      "text": "## Mga sanggunian ng puhunan",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "fil-source_heading-negative-2",
+      "locale": "fil",
+      "kind": "source_heading",
+      "text": "## Batayang legal ng paghahabol",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "fil-source_heading-negative-3",
+      "locale": "fil",
+      "kind": "source_heading",
+      "text": "Mga sanggunian",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "he-source_heading-positive-1",
+      "locale": "he",
+      "kind": "source_heading",
+      "text": "## מקורות",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "he-source_heading-positive-2",
+      "locale": "he",
+      "kind": "source_heading",
+      "text": "### מקורות רשמיים",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "he-source_heading-positive-3",
+      "locale": "he",
+      "kind": "source_heading",
+      "text": "## אסמכתאות",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "he-source_heading-negative-1",
+      "locale": "he",
+      "kind": "source_heading",
+      "text": "## מקורות המימון",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "he-source_heading-negative-2",
+      "locale": "he",
+      "kind": "source_heading",
+      "text": "## מקורות הסמכות של החברה",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "he-source_heading-negative-3",
+      "locale": "he",
+      "kind": "source_heading",
+      "text": "מקורות",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "nl-source_heading-positive-1",
+      "locale": "nl",
+      "kind": "source_heading",
+      "text": "## Bronnen",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "nl-source_heading-positive-2",
+      "locale": "nl",
+      "kind": "source_heading",
+      "text": "### Officiële bronnen",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "nl-source_heading-positive-3",
+      "locale": "nl",
+      "kind": "source_heading",
+      "text": "## Referenties",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "nl-source_heading-negative-1",
+      "locale": "nl",
+      "kind": "source_heading",
+      "text": "## Bronnen van financiering",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "nl-source_heading-negative-2",
+      "locale": "nl",
+      "kind": "source_heading",
+      "text": "## Juridische grondslag van de vordering",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "nl-source_heading-negative-3",
+      "locale": "nl",
+      "kind": "source_heading",
+      "text": "Bronnen",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "pl-source_heading-positive-1",
+      "locale": "pl",
+      "kind": "source_heading",
+      "text": "## Źródła",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "pl-source_heading-positive-2",
+      "locale": "pl",
+      "kind": "source_heading",
+      "text": "### Źródła urzędowe",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "pl-source_heading-positive-3",
+      "locale": "pl",
+      "kind": "source_heading",
+      "text": "## Oficjalne źródła",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "pl-source_heading-negative-1",
+      "locale": "pl",
+      "kind": "source_heading",
+      "text": "## Źródła finansowania",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "pl-source_heading-negative-2",
+      "locale": "pl",
+      "kind": "source_heading",
+      "text": "## Podstawa prawna roszczenia",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "pl-source_heading-negative-3",
+      "locale": "pl",
+      "kind": "source_heading",
+      "text": "Źródła",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "cs-source_heading-positive-1",
+      "locale": "cs",
+      "kind": "source_heading",
+      "text": "## Zdroje",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "cs-source_heading-positive-2",
+      "locale": "cs",
+      "kind": "source_heading",
+      "text": "### Oficiální zdroje",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "cs-source_heading-positive-3",
+      "locale": "cs",
+      "kind": "source_heading",
+      "text": "## Prameny",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "cs-source_heading-negative-1",
+      "locale": "cs",
+      "kind": "source_heading",
+      "text": "## Zdroje financování",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "cs-source_heading-negative-2",
+      "locale": "cs",
+      "kind": "source_heading",
+      "text": "## Právní základ nároku",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "cs-source_heading-negative-3",
+      "locale": "cs",
+      "kind": "source_heading",
+      "text": "Zdroje",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "lt-source_heading-positive-1",
+      "locale": "lt",
+      "kind": "source_heading",
+      "text": "## Šaltiniai",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "lt-source_heading-positive-2",
+      "locale": "lt",
+      "kind": "source_heading",
+      "text": "### Oficialūs šaltiniai",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "lt-source_heading-positive-3",
+      "locale": "lt",
+      "kind": "source_heading",
+      "text": "## Naudoti šaltiniai",
+      "expected": true,
+      "note": ""
+    },
+    {
+      "id": "lt-source_heading-negative-1",
+      "locale": "lt",
+      "kind": "source_heading",
+      "text": "## Finansavimo šaltiniai",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "lt-source_heading-negative-2",
+      "locale": "lt",
+      "kind": "source_heading",
+      "text": "## Teisinis reikalavimo pagrindas",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "lt-source_heading-negative-3",
+      "locale": "lt",
+      "kind": "source_heading",
+      "text": "Šaltiniai",
+      "expected": false,
+      "note": ""
+    },
+    {
+      "id": "fil-contrasts-contrast-1",
+      "locale": "fil",
+      "kind": "contrasts",
+      "text": "Hindi ito multa kundi bayad.",
+      "expected": 1,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-contrasts-contrast-2",
+      "locale": "fil",
+      "kind": "contrasts",
+      "text": "Ang petsa ay iba sa halaga.",
+      "expected": 1,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-contrasts-contrast-3",
+      "locale": "fil",
+      "kind": "contrasts",
+      "text": "Nasa mesa ang mga papel.",
+      "expected": 0,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-signal-caveat-1",
+      "locale": "fil",
+      "kind": "signal",
+      "text": "Gayunman, may hiwalay na tala.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "fil-signal-caveat-2",
+      "locale": "fil",
+      "kind": "signal",
+      "text": "Subalit may ibang kopya.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "fil-signal-caveat-3",
+      "locale": "fil",
+      "kind": "signal",
+      "text": "Gayon din ang kulay ng papel.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "fil-signal-hypo-1",
+      "locale": "fil",
+      "kind": "signal",
+      "text": "Halimbawa, may dalawang liham.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "fil-signal-hypo-2",
+      "locale": "fil",
+      "kind": "signal",
+      "text": "Ipagpalagay na dumating ang sulat.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "fil-signal-hypo-3",
+      "locale": "fil",
+      "kind": "signal",
+      "text": "Dumating ang sulat kahapon.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "fil-signal-close-1",
+      "locale": "fil",
+      "kind": "signal",
+      "text": "Pangkalahatang impormasyon lamang ang paliwanag.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "fil-signal-close-2",
+      "locale": "fil",
+      "kind": "signal",
+      "text": "Maaaring ipadala ang tala sa email.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "fil-signal-close-3",
+      "locale": "fil",
+      "kind": "signal",
+      "text": "Nananatili sa folder ang huling resibo.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "he-contrasts-contrast-1",
+      "locale": "he",
+      "kind": "contrasts",
+      "text": "זה אינו קנס אלא תשלום.",
+      "expected": 1,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-contrasts-contrast-2",
+      "locale": "he",
+      "kind": "contrasts",
+      "text": "זה לא קנס אלא תשלום.",
+      "expected": 1,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-contrasts-contrast-3",
+      "locale": "he",
+      "kind": "contrasts",
+      "text": "המסמכים נמצאים על השולחן.",
+      "expected": 0,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-signal-caveat-1",
+      "locale": "he",
+      "kind": "signal",
+      "text": "אולם יש עותק נוסף.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "he-signal-caveat-2",
+      "locale": "he",
+      "kind": "signal",
+      "text": "עם זאת, נותרה שאלה.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "he-signal-caveat-3",
+      "locale": "he",
+      "kind": "signal",
+      "text": "אולמרט הוא שם המופיע ברשימה.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "he-signal-hypo-1",
+      "locale": "he",
+      "kind": "signal",
+      "text": "נניח שהמכתב הגיע.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "he-signal-hypo-2",
+      "locale": "he",
+      "kind": "signal",
+      "text": "לדוגמה, יש שני מכתבים.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "he-signal-hypo-3",
+      "locale": "he",
+      "kind": "signal",
+      "text": "המכתב הגיע אתמול.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "he-signal-close-1",
+      "locale": "he",
+      "kind": "signal",
+      "text": "זהו מידע כללי בלבד.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "he-signal-close-2",
+      "locale": "he",
+      "kind": "signal",
+      "text": "אפשר לשלוח את המסמך בדוא״ל.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "he-signal-close-3",
+      "locale": "he",
+      "kind": "signal",
+      "text": "הקבלה האחרונה נשארה בתיק.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "nl-contrasts-contrast-1",
+      "locale": "nl",
+      "kind": "contrasts",
+      "text": "Het is geen boete maar een betaling.",
+      "expected": 1,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-contrasts-contrast-2",
+      "locale": "nl",
+      "kind": "contrasts",
+      "text": "Dit is anders dan het bedrag.",
+      "expected": 1,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-contrasts-contrast-3",
+      "locale": "nl",
+      "kind": "contrasts",
+      "text": "De papieren liggen op tafel.",
+      "expected": 0,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-signal-caveat-1",
+      "locale": "nl",
+      "kind": "signal",
+      "text": "Echter, er is een tweede kopie.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "nl-signal-caveat-2",
+      "locale": "nl",
+      "kind": "signal",
+      "text": "Toch ontbreekt de datum.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "nl-signal-caveat-3",
+      "locale": "nl",
+      "kind": "signal",
+      "text": "Echtheid is hier de vraag.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "nl-signal-hypo-1",
+      "locale": "nl",
+      "kind": "signal",
+      "text": "Stel dat de brief aankomt.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "nl-signal-hypo-2",
+      "locale": "nl",
+      "kind": "signal",
+      "text": "Neem bijvoorbeeld twee brieven.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "nl-signal-hypo-3",
+      "locale": "nl",
+      "kind": "signal",
+      "text": "De brief kwam gisteren aan.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "nl-signal-close-1",
+      "locale": "nl",
+      "kind": "signal",
+      "text": "Dit is algemene informatie.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "nl-signal-close-2",
+      "locale": "nl",
+      "kind": "signal",
+      "text": "U kunt de stukken per e-mail sturen.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "nl-signal-close-3",
+      "locale": "nl",
+      "kind": "signal",
+      "text": "De laatste factuur blijft in de map.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "pl-contrasts-contrast-1",
+      "locale": "pl",
+      "kind": "contrasts",
+      "text": "To nie kara, lecz opłata.",
+      "expected": 1,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-contrasts-contrast-2",
+      "locale": "pl",
+      "kind": "contrasts",
+      "text": "To nie kara, ale opłata.",
+      "expected": 1,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-contrasts-contrast-3",
+      "locale": "pl",
+      "kind": "contrasts",
+      "text": "Dokumenty leżą na stole.",
+      "expected": 0,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-signal-caveat-1",
+      "locale": "pl",
+      "kind": "signal",
+      "text": "Jednak istnieje druga kopia.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "pl-signal-caveat-2",
+      "locale": "pl",
+      "kind": "signal",
+      "text": "Mimo to brakuje daty.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "pl-signal-caveat-3",
+      "locale": "pl",
+      "kind": "signal",
+      "text": "Jednakowy kolor nie pomaga.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "pl-signal-hypo-1",
+      "locale": "pl",
+      "kind": "signal",
+      "text": "Załóżmy, że list dotarł.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "pl-signal-hypo-2",
+      "locale": "pl",
+      "kind": "signal",
+      "text": "Wyobraźmy sobie dwa listy.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "pl-signal-hypo-3",
+      "locale": "pl",
+      "kind": "signal",
+      "text": "List dotarł wczoraj.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "pl-signal-close-1",
+      "locale": "pl",
+      "kind": "signal",
+      "text": "To informacje ogólne.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "pl-signal-close-2",
+      "locale": "pl",
+      "kind": "signal",
+      "text": "Dokumenty można wysłać e-mailem.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "pl-signal-close-3",
+      "locale": "pl",
+      "kind": "signal",
+      "text": "Ostatni rachunek pozostaje w teczce.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "cs-contrasts-contrast-1",
+      "locale": "cs",
+      "kind": "contrasts",
+      "text": "Nejde o pokutu, ale o platbu.",
+      "expected": 1,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-contrasts-contrast-2",
+      "locale": "cs",
+      "kind": "contrasts",
+      "text": "Není to pokuta, nýbrž platba.",
+      "expected": 1,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-contrasts-contrast-3",
+      "locale": "cs",
+      "kind": "contrasts",
+      "text": "Dokumenty leží na stole.",
+      "expected": 0,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-signal-caveat-1",
+      "locale": "cs",
+      "kind": "signal",
+      "text": "Nicméně existuje další kopie.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "cs-signal-caveat-2",
+      "locale": "cs",
+      "kind": "signal",
+      "text": "Avšak datum chybí.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "cs-signal-caveat-3",
+      "locale": "cs",
+      "kind": "signal",
+      "text": "Nic není uvedeno.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "cs-signal-hypo-1",
+      "locale": "cs",
+      "kind": "signal",
+      "text": "Předpokládejme, že dopis dorazil.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "cs-signal-hypo-2",
+      "locale": "cs",
+      "kind": "signal",
+      "text": "Například existují dva dopisy.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "cs-signal-hypo-3",
+      "locale": "cs",
+      "kind": "signal",
+      "text": "Dopis dorazil včera.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "cs-signal-close-1",
+      "locale": "cs",
+      "kind": "signal",
+      "text": "Jde o obecné informace.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "cs-signal-close-2",
+      "locale": "cs",
+      "kind": "signal",
+      "text": "Podklady lze poslat e-mailem.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "cs-signal-close-3",
+      "locale": "cs",
+      "kind": "signal",
+      "text": "Poslední účet zůstává ve složce.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "lt-contrasts-contrast-1",
+      "locale": "lt",
+      "kind": "contrasts",
+      "text": "Tai ne bauda, o mokestis.",
+      "expected": 1,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-contrasts-contrast-2",
+      "locale": "lt",
+      "kind": "contrasts",
+      "text": "Tai ne bauda, bet mokestis.",
+      "expected": 1,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-contrasts-contrast-3",
+      "locale": "lt",
+      "kind": "contrasts",
+      "text": "Dokumentai guli ant stalo.",
+      "expected": 0,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-signal-caveat-1",
+      "locale": "lt",
+      "kind": "signal",
+      "text": "Tačiau yra kita kopija.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "lt-signal-caveat-2",
+      "locale": "lt",
+      "kind": "signal",
+      "text": "Vis dėlto datos nėra.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "lt-signal-caveat-3",
+      "locale": "lt",
+      "kind": "signal",
+      "text": "Taip pat yra aplankas.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "caveat_pattern"
+    },
+    {
+      "id": "lt-signal-hypo-1",
+      "locale": "lt",
+      "kind": "signal",
+      "text": "Tarkime, kad laiškas atėjo.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "lt-signal-hypo-2",
+      "locale": "lt",
+      "kind": "signal",
+      "text": "Įsivaizduokite du laiškus.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "lt-signal-hypo-3",
+      "locale": "lt",
+      "kind": "signal",
+      "text": "Laiškas atėjo vakar.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "hypo_pattern"
+    },
+    {
+      "id": "lt-signal-close-1",
+      "locale": "lt",
+      "kind": "signal",
+      "text": "Tai bendro pobūdžio informacija.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "lt-signal-close-2",
+      "locale": "lt",
+      "kind": "signal",
+      "text": "Dokumentus galima siųsti el. paštu.",
+      "expected": true,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "lt-signal-close-3",
+      "locale": "lt",
+      "kind": "signal",
+      "text": "Paskutinis kvitas lieka aplanke.",
+      "expected": false,
+      "note": "Selected formula detector; a negative count is not an exhaustive linguistic finding.",
+      "pattern_key": "formula_close_pattern"
+    },
+    {
+      "id": "fil-citation_metrics-ending",
+      "locale": "fil",
+      "kind": "citation_metrics",
+      "text": "May batayan ang tala (Artikulo 5).\n\nNasa mesa ang papel.\n\nMay hiwalay na kopya.\n\nBukas ang pinto.\n\nDumating ang sulat.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "fil-citation_metrics-negative",
+      "locale": "fil",
+      "kind": "citation_metrics",
+      "text": "May batayan ang tala (talahanayan 5).\n\nNasa mesa ang papel.\n\nMay hiwalay na kopya.\n\nBukas ang pinto.\n\nDumating ang sulat.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0,
+        "cite_end_share": 0
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "fil-citation_metrics-inline",
+      "locale": "fil",
+      "kind": "citation_metrics",
+      "text": "Artikulo 5 ang tinukoy sa tala.\n\nNasa mesa ang papel.\n\nMay hiwalay na kopya.\n\nBukas ang pinto.\n\nDumating ang sulat.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "he-citation_metrics-ending",
+      "locale": "he",
+      "kind": "citation_metrics",
+      "text": "יש הפניה במסמך (סעיף 5).\n\nהנייר על השולחן.\n\nיש עותק נוסף.\n\nהדלת פתוחה.\n\nהמכתב הגיע.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "he-citation_metrics-negative",
+      "locale": "he",
+      "kind": "citation_metrics",
+      "text": "יש הפניה במסמך (טבלה 5).\n\nהנייר על השולחן.\n\nיש עותק נוסף.\n\nהדלת פתוחה.\n\nהמכתב הגיע.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0,
+        "cite_end_share": 0
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "he-citation_metrics-inline",
+      "locale": "he",
+      "kind": "citation_metrics",
+      "text": "סעיף 5 מוזכר במסמך.\n\nהנייר על השולחן.\n\nיש עותק נוסף.\n\nהדלת פתוחה.\n\nהמכתב הגיע.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "nl-citation_metrics-ending",
+      "locale": "nl",
+      "kind": "citation_metrics",
+      "text": "De verwijzing staat vast (art. 5).\n\nHet papier ligt hier.\n\nEr is een kopie.\n\nDe deur staat open.\n\nDe brief kwam aan.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "nl-citation_metrics-negative",
+      "locale": "nl",
+      "kind": "citation_metrics",
+      "text": "De verwijzing staat vast (tabel 5).\n\nHet papier ligt hier.\n\nEr is een kopie.\n\nDe deur staat open.\n\nDe brief kwam aan.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0,
+        "cite_end_share": 0
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "nl-citation_metrics-inline",
+      "locale": "nl",
+      "kind": "citation_metrics",
+      "text": "Artikel 5 staat in de verwijzing.\n\nHet papier ligt hier.\n\nEr is een kopie.\n\nDe deur staat open.\n\nDe brief kwam aan.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "pl-citation_metrics-ending",
+      "locale": "pl",
+      "kind": "citation_metrics",
+      "text": "Odesłanie jest zapisane (art. 5 ust. 1).\n\nPapier leży tutaj.\n\nJest jeszcze kopia.\n\nDrzwi są otwarte.\n\nList już dotarł.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "pl-citation_metrics-negative",
+      "locale": "pl",
+      "kind": "citation_metrics",
+      "text": "Odesłanie jest zapisane (tabela 5).\n\nPapier leży tutaj.\n\nJest jeszcze kopia.\n\nDrzwi są otwarte.\n\nList już dotarł.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0,
+        "cite_end_share": 0
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "pl-citation_metrics-inline",
+      "locale": "pl",
+      "kind": "citation_metrics",
+      "text": "Artykuł 5 wskazano w dokumencie.\n\nPapier leży tutaj.\n\nJest jeszcze kopia.\n\nDrzwi są otwarte.\n\nList już dotarł.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "cs-citation_metrics-ending",
+      "locale": "cs",
+      "kind": "citation_metrics",
+      "text": "Odkaz je uveden (§ 5 odst. 1).\n\nPapír je zde.\n\nExistuje další kopie.\n\nDveře jsou otevřené.\n\nDopis již dorazil.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "cs-citation_metrics-negative",
+      "locale": "cs",
+      "kind": "citation_metrics",
+      "text": "Odkaz je uveden (tabulka 5).\n\nPapír je zde.\n\nExistuje další kopie.\n\nDveře jsou otevřené.\n\nDopis již dorazil.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0,
+        "cite_end_share": 0
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "cs-citation_metrics-inline",
+      "locale": "cs",
+      "kind": "citation_metrics",
+      "text": "Článek 5 je uveden v textu.\n\nPapír je zde.\n\nExistuje další kopie.\n\nDveře jsou otevřené.\n\nDopis již dorazil.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "lt-citation_metrics-ending",
+      "locale": "lt",
+      "kind": "citation_metrics",
+      "text": "Nuoroda pateikta (5 str. 1 d.).\n\nPopierius yra čia.\n\nYra kita kopija.\n\nDurys yra atviros.\n\nLaiškas jau atėjo.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "lt-citation_metrics-negative",
+      "locale": "lt",
+      "kind": "citation_metrics",
+      "text": "Nuoroda pateikta (5 lentelė).\n\nPopierius yra čia.\n\nYra kita kopija.\n\nDurys yra atviros.\n\nLaiškas jau atėjo.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0,
+        "cite_end_share": 0
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "lt-citation_metrics-inline",
+      "locale": "lt",
+      "kind": "citation_metrics",
+      "text": "5 straipsnis nurodytas tekste.\n\nPopierius yra čia.\n\nYra kita kopija.\n\nDurys yra atviros.\n\nLaiškas jau atėjo.",
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0
+      },
+      "note": "Neutral invented grammar example, not a legal proposition or target article."
+    }
+  ]
+}

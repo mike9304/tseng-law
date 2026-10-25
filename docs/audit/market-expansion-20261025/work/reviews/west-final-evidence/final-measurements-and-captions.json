@@ -1,0 +1,169 @@
+{
+  "checkedAt": "2026-10-25T13:30:17.709437+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+      "sha256": "8427d908388f0df5adf9b172935dd14447b2afc3179fd3f79db1cf66f2b1c6de",
+      "mtime": "2026-10-25T13:26:11.025311+00:00",
+      "old_sha256": "3b395842ebc879b6d3d61a3a8bab1bd006f9fd16aaf27113892497f03b7c0425",
+      "caption": "Fictieve scène",
+      "old_reconstructed_sha256": "3b395842ebc879b6d3d61a3a8bab1bd006f9fd16aaf27113892497f03b7c0425",
+      "caption_only_change_proven": true,
+      "image_path": "public/images/columns/934-market-expansion-20261025.webp",
+      "image_sha256": "0642ee36a4fb08d9d189c3b1563d77de7eb929f93beebe81ea38a10f046b9f55",
+      "bold": 0,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+        "--lang",
+        "nl"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md [nl] sentences=36 mean=17.9 cv=0.483 short=0.139 run3=0.029 opener_rep=0.167 cite_end=0.0 cite_para=0.583 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "OFFICIAL CHECKER: nl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n",
+      "original": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+          "--lang",
+          "nl"
+        ],
+        "exit_code": 2,
+        "stdout": "",
+        "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'nl' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+      }
+    },
+    {
+      "source_path": "src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+      "sha256": "241a1785fea4cfd9b19cd18bff733329caff8dec8721a85ea3d75634ba28cc11",
+      "mtime": "2026-10-25T13:26:11.025761+00:00",
+      "old_sha256": "943a747d79288334da91b9c608ef558bda57ba8754e7acd5eac6c49083f11b01",
+      "caption": "Fictieve scène",
+      "old_reconstructed_sha256": "943a747d79288334da91b9c608ef558bda57ba8754e7acd5eac6c49083f11b01",
+      "caption_only_change_proven": true,
+      "image_path": "public/images/columns/935-market-expansion-20261025.webp",
+      "image_sha256": "228564814ce94325a15636b897ef9d744f9bd05cd649db6b1370ad558da83a61",
+      "bold": 0,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+        "--lang",
+        "nl"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md [nl] sentences=49 mean=14.7 cv=0.469 short=0.184 run3=0.085 opener_rep=0.214 cite_end=0.0 cite_para=0.714 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "OFFICIAL CHECKER: nl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n",
+      "original": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+          "--lang",
+          "nl"
+        ],
+        "exit_code": 2,
+        "stdout": "",
+        "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'nl' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+      }
+    },
+    {
+      "source_path": "src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md",
+      "sha256": "a24b1b5ef3d8925adb2d21d414c9ee7e906a0b764e0a2e79f19e2eeb0d35daf8",
+      "mtime": "2026-10-25T13:26:11.026145+00:00",
+      "old_sha256": "187c8a0c2b64ff6a69be32be21912d48b976cf56bd9e38a6cf2df52b53b56d64",
+      "caption": "Scène fictive",
+      "old_reconstructed_sha256": "187c8a0c2b64ff6a69be32be21912d48b976cf56bd9e38a6cf2df52b53b56d64",
+      "caption_only_change_proven": true,
+      "image_path": "public/images/columns/936-market-expansion-20261025.webp",
+      "image_sha256": "eb54eb0f61c4240d888211b3abaf0014dd58fb957272b8f995eb616d81615d0e",
+      "bold": 0,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md",
+        "--lang",
+        "fr"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md [fr] sentences=54 mean=19.6 cv=0.469 short=0.185 run3=0.077 opener_rep=0.167 cite_end=0.0 cite_para=0.389 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "source_path": "src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md",
+      "sha256": "132e87abb6a25149cc00544a11e07aacdea61a9a3a18e142e14491e8b5a05a2b",
+      "mtime": "2026-10-25T13:26:11.026649+00:00",
+      "old_sha256": "c09e180a592b02cc9a11f775aba7821dd7beba54c3bafd91cab7b7bf97f6a51a",
+      "caption": "Scène fictive",
+      "old_reconstructed_sha256": "c09e180a592b02cc9a11f775aba7821dd7beba54c3bafd91cab7b7bf97f6a51a",
+      "caption_only_change_proven": true,
+      "image_path": "public/images/columns/937-market-expansion-20261025.webp",
+      "image_sha256": "692aeed72862d76e9613a26706d495c92bc5323afb513e0c0250012eb67ab1df",
+      "bold": 0,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md",
+        "--lang",
+        "fr"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md [fr] sentences=48 mean=19.6 cv=0.453 short=0.104 run3=0.13 opener_rep=0.222 cite_end=0.0 cite_para=0.278 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "source_path": "src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md",
+      "sha256": "3667f89c95b83e683ef27973cf65c04e06112ec2411a8b9dbb3456576707b1c1",
+      "mtime": "2026-10-25T13:26:11.027127+00:00",
+      "old_sha256": "e196bf577e8a7ef27dcc7204347a16d4c473e3a12e143e692518a53b4f860b58",
+      "caption": "Cena fictícia",
+      "old_reconstructed_sha256": "e196bf577e8a7ef27dcc7204347a16d4c473e3a12e143e692518a53b4f860b58",
+      "caption_only_change_proven": true,
+      "image_path": "public/images/columns/938-market-expansion-20261025.webp",
+      "image_sha256": "46b814b548cea916f4e74b646645eac4b34926f257ed0ef4a01ef99bf34366a2",
+      "bold": 0,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md",
+        "--lang",
+        "pt"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md [pt] sentences=36 mean=18.4 cv=0.515 short=0.25 run3=0.0 opener_rep=0.077 cite_end=0.0 cite_para=0.615 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "source_path": "src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md",
+      "sha256": "f7fc7b4fc508e35a8d8313fc7d8e94e3178490ae0135755e116b71cc72b126e9",
+      "mtime": "2026-10-25T13:26:11.027588+00:00",
+      "old_sha256": "5f684d9d24803677ba3288acc029b5739b8353ce41d9a4e19a13a3980c400a2d",
+      "caption": "Cena fictícia",
+      "old_reconstructed_sha256": "5f684d9d24803677ba3288acc029b5739b8353ce41d9a4e19a13a3980c400a2d",
+      "caption_only_change_proven": true,
+      "image_path": "public/images/columns/939-market-expansion-20261025.webp",
+      "image_sha256": "a80c077de19d2b485b7897723fbe7ab9531f7b193d37957bc94f83bc4b029451",
+      "bold": 0,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md",
+        "--lang",
+        "pt"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md [pt] sentences=37 mean=19.5 cv=0.454 short=0.189 run3=0.029 opener_rep=0.231 cite_end=0.0 cite_para=0.462 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": ""
+    }
+  ]
+}

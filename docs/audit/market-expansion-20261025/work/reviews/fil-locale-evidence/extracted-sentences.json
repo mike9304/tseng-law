@@ -1,0 +1,627 @@
+{
+  "reviewer": "/root/expand_locale_fil",
+  "checkedAt": "2026-10-25T13:28:27.612862+00:00",
+  "caption_only_change": true,
+  "records": [
+    {
+      "source_path": "src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+      "sha256": "633126ec40c4f821c37e30b2610aeb2598a7c7fcc3617033960719ae2cf1bfc5",
+      "headings": [
+        "Ano ang tinatapos ng settlement?",
+        "Compensation habang nagpapagamot",
+        "Insurance pagkatapos umalis sa trabaho",
+        "Ang petsa at dahilan ng resignation"
+      ],
+      "sentences": [
+        {
+          "paragraph": 1,
+          "text": "Mananatili ang karapatan ng factory worker na tumanggap ng occupational accident compensation kahit umalis na siya sa trabaho.",
+          "units": 18
+        },
+        {
+          "paragraph": 1,
+          "text": "Ito ang tahasang tuntunin ng Artikulo 61 ng Labor Standards Act.",
+          "units": 11
+        },
+        {
+          "paragraph": 2,
+          "text": "Sa resignation, ang usapin ay ang pagtatapos ng trabaho.",
+          "units": 9
+        },
+        {
+          "paragraph": 2,
+          "text": "Kapag may kasama itong settlement, may isa pang tanong: aling karapatan ang isinusuko kapalit ng bayad?",
+          "units": 16
+        },
+        {
+          "paragraph": 2,
+          "text": "Sa isang balidong kasunduan, maaaring mawala ang mga karapatang pinakawalan at mapalitan ng mga karapatang nakasulat sa settlement (Civil Code, Artikulo 737).",
+          "units": 22
+        },
+        {
+          "paragraph": 2,
+          "text": "Basahin ang dalawang dokumento nang magkahiwalay, kahit sabay itong ipinapapirma.",
+          "units": 10
+        },
+        {
+          "paragraph": 3,
+          "text": "Nakasulat ba na para lang sa mga resibong medikal hanggang sa isang petsa ang bayad, o kasama ang lahat ng kasalukuyan at susunod na claim mula sa aksidente?",
+          "units": 28
+        },
+        {
+          "paragraph": 3,
+          "text": "Itala ang bawat saklaw na bayad, takdang petsa, paraan ng pagbabayad at anumang future treatment o claim na pinananatili.",
+          "units": 19
+        },
+        {
+          "paragraph": 4,
+          "text": "Mahirap bawiin ang settlement dahil lamang sa pagkakamali.",
+          "units": 8
+        },
+        {
+          "paragraph": 4,
+          "text": "May mga eksepsiyon sa Artikulo 738 ng Civil Code: dokumentong kalauna'y natuklasang peke o binago, kung hindi sana nakipagkasundo ang panig kung alam niya iyon; final judgment sa usapin na hindi alam ng isa o parehong panig noong nagkasundo; o pagkakamali sa kwalipikasyon ng kabilang panig o sa mahalagang pinagtatalunang punto.",
+          "units": 51
+        },
+        {
+          "paragraph": 4,
+          "text": "Kailangang tumugma ang pangyayari sa naaangkop na batayan.",
+          "units": 8
+        },
+        {
+          "paragraph": 4,
+          "text": "Hindi garantiya ng pagbawi ang hindi pagkagusto sa halagang napirmahan.",
+          "units": 10
+        },
+        {
+          "paragraph": 5,
+          "text": "Para sa factory worker na saklaw ng Labor Standards Act, kasama sa obligasyon ng employer ang kinakailangang gastusing medikal dahil sa occupational injury o disease.",
+          "units": 25
+        },
+        {
+          "paragraph": 5,
+          "text": "Kung hindi makapagtrabaho habang ginagamot, may compensation ayon sa dating sahod (Artikulo 59).",
+          "units": 13
+        },
+        {
+          "paragraph": 6,
+          "text": "May limitadong paraan para matapos ang obligasyon sa wage compensation: matapos ang dalawang taong gamutan na walang paggaling, dapat matukoy ng itinalagang ospital na nawala ang dating kakayahang magtrabaho at hindi pasok sa disability benefit standard sa item 3.",
+          "units": 39
+        },
+        {
+          "paragraph": 6,
+          "text": "Saka maaaring magbayad ang employer ng lump sum na katumbas ng 40 buwang average wage sa ilalim ng parehong artikulo.",
+          "units": 20
+        },
+        {
+          "paragraph": 6,
+          "text": "Hindi sapat na sabihing matagal ka nang naka-leave.",
+          "units": 8
+        },
+        {
+          "paragraph": 7,
+          "text": "Dalawang taon ang panahon para habulin ang compensation, mula sa araw na maaari nang matanggap ang bayad, ayon sa Artikulo 61.",
+          "units": 21
+        },
+        {
+          "paragraph": 7,
+          "text": "Hindi palaging petsa ng aksidente ang simula para sa lahat ng uri ng compensation.",
+          "units": 14
+        },
+        {
+          "paragraph": 7,
+          "text": "Itabi ang diagnosis, resibo, patunay ng sahod at petsa ng bawat hindi nabayarang obligasyon.",
+          "units": 14
+        },
+        {
+          "paragraph": 8,
+          "text": "Kasama ang mga dayuhang manggagawa sa occupational accident insurance ayon sa Artikulo 11 ng Labor Occupational Accident Insurance and Protection Act.",
+          "units": 21
+        },
+        {
+          "paragraph": 9,
+          "text": "Kung nangyari ang occupational injury o disease habang may bisa ang insurance, pinahihintulutan ng Artikulo 27 ang medical, injury or sickness, disability o death benefits para sa parehong injury o disease at sakit na dulot nito sa loob ng isang taon mula sa araw pagkatapos tumigil ang bisa ng insurance.",
+          "units": 50
+        },
+        {
+          "paragraph": 10,
+          "text": "Hiwalay dito ang limang taong panahon para i-claim ang benepisyo sa Artikulo 37, na nagsisimula sa araw na maaari na itong i-claim.",
+          "units": 22
+        },
+        {
+          "paragraph": 10,
+          "text": "Hindi pinahahaba ng limang taong iyon ang isang taong kondisyon sa post-insurance coverage.",
+          "units": 13
+        },
+        {
+          "paragraph": 10,
+          "text": "Itabi rin ang insurance decision.",
+          "units": 5
+        },
+        {
+          "paragraph": 11,
+          "text": "Nauna bang magbayad ang employer, saka pa lang naaprubahan ang insurance?",
+          "units": 11
+        },
+        {
+          "paragraph": 11,
+          "text": "Sa ilalim ng Artikulo 90, maaaring hingin ng employer ang pagbabalik ng halagang pinapayagang i-offset sa compensation na naibigay niya.",
+          "units": 20
+        },
+        {
+          "paragraph": 11,
+          "text": "Kaya dapat magkahiwalay sa computation ang bayad ng employer, ang benepisyo mula sa insurer, at anumang halagang inaangking dapat ibawas.",
+          "units": 20
+        },
+        {
+          "paragraph": 11,
+          "text": "Huwag basta pagsamahin ang dalawang gross amount bilang tiyak na matatanggap.",
+          "units": 11
+        },
+        {
+          "paragraph": 12,
+          "text": "Habang nasa occupational injury medical period, may proteksiyon sa ilalim ng Artikulo 13 laban sa pagtatapos ng kontrata ng employer.",
+          "units": 20
+        },
+        {
+          "paragraph": 12,
+          "text": "Nasa batas ang eksepsiyon kapag hindi na maipagpatuloy ang negosyo dahil sa kalamidad, kaguluhan o ibang force majeure at inaprubahan ng awtoridad.",
+          "units": 22
+        },
+        {
+          "paragraph": 13,
+          "text": "Nililimitahan din ng Artikulo 84 ng occupational accident insurance law ang pagtatapos ng kontrata ng employer nang may paunang abiso.",
+          "units": 20
+        },
+        {
+          "paragraph": 13,
+          "text": "Saklaw nito ang pagsasara o malaking pagkalugi na inaprubahan ng awtoridad; kawalan ng kakayahang gampanan ang trabaho dahil sa kapansanang natukoy ng ospital na pasado sa pagsusuri ng central health authority matapos ang gamutan; o kawalan ng kakayahang ipagpatuloy ang negosyo dahil sa force majeure, na inaprubahan din.",
+          "units": 48
+        },
+        {
+          "paragraph": 13,
+          "text": "Hindi nito ginagawang balido ang bawat resignation na ipinapapirma habang nagpapagamot.",
+          "units": 11
+        },
+        {
+          "paragraph": 14,
+          "text": "Ang nakasulat bang dahilan ay kusang pag-alis, samantalang ang gusto mo ay manatili at magpagamot?",
+          "units": 15
+        },
+        {
+          "paragraph": 14,
+          "text": "Itago ang mensahe o alok na kasama ng dokumento.",
+          "units": 9
+        },
+        {
+          "paragraph": 14,
+          "text": "Ipasuri ang mismong dahilan ng pagtatapos bago tanggapin ang computation; ang separation pay, compensation at insurance benefits ay may magkakaibang batayan.",
+          "units": 21
+        },
+        {
+          "paragraph": 15,
+          "text": "Kung may hindi pagkakasundo sa employer, maaaring magsumite ng nakasulat na aplikasyon para sa mediation sa awtoridad ng lungsod o county kung saan ka nagtatrabaho (Act for Settlement of Labor-Management Disputes, Artikulo 9).",
+          "units": 33
+        },
+        {
+          "paragraph": 15,
+          "text": "Dalhin ang draft ng settlement at computation.",
+          "units": 7
+        },
+        {
+          "paragraph": 15,
+          "text": "Magagamit ang mga ito upang tukuyin ang bayad na inaangkin, nabayaran na o pinagtatalunan.",
+          "units": 14
+        },
+        {
+          "paragraph": 16,
+          "text": "Para sa pagrepaso ayon sa batas ng Taiwan, maaaring magpadala ng maikling buod na walang sensitibong detalye sa wei@hoveringlaw.com.tw, kasama ang petsa ng aksidente at kung napirmahan na ang alok.",
+          "units": 33
+        },
+        {
+          "paragraph": 16,
+          "text": "English, Chinese, Korean at Japanese lamang ang mga wika ng konsultasyon; kumpirmahin muna ang posibleng paraan ng pag-uusap kung Filipino ang kailangan.",
+          "units": 22
+        },
+        {
+          "paragraph": 16,
+          "text": "Ang pagtanggap ng email ay hindi pagtanggap sa kaso.",
+          "units": 9
+        },
+        {
+          "paragraph": 17,
+          "text": "Ipunin sa isang folder ang diagnosis at wage records, ngunit panatilihing magkahiwalay ang resignation, settlement at insurance decision.",
+          "units": 18
+        },
+        {
+          "paragraph": 17,
+          "text": "Sa draft ng settlement, dapat matukoy kung aling gamutan at aling panahon ng kawalan ng sahod ang binabayaran—at kung ano pa ang natitirang claim.",
+          "units": 25
+        }
+      ],
+      "paragraph_openers": [
+        "mananatili",
+        "sa",
+        "nakasulat",
+        "mahirap",
+        "para",
+        "may",
+        "dalawang",
+        "kasama",
+        "kung",
+        "hiwalay",
+        "nauna",
+        "habang",
+        "nililimitahan",
+        "ang",
+        "kung",
+        "para",
+        "ipunin"
+      ],
+      "metrics": {
+        "lang": "fil",
+        "sentences": 45,
+        "paras": 17,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 19.2,
+        "len_cv": 0.571,
+        "short_share": 0.111,
+        "long_share": 0.133,
+        "para_cv": 0.299,
+        "even_run3": 0.023,
+        "top_end": "trabaho",
+        "top_end_share": 0.044,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "para",
+        "top_opener_n": 2,
+        "opener_rep": 0.118,
+        "consec_same_start": 0,
+        "cite_para_share": 0.706,
+        "cite_end_share": 0.067,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 4,
+        "num_per100": 1.62,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Mananatili ang karapatan ng factory worker na tumanggap ng occupational accident compensat",
+        "last": "Ipunin sa isang folder ang diagnosis at wage records, ngunit panatilihing magkahiwalay ang resignation, settlement at in",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations",
+        "measurement_scope": "task_local_extension_not_shared_checker"
+      }
+    },
+    {
+      "source_path": "src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+      "sha256": "535d60328cbcbf44ff21363a0a47a506858c8d38a4203dc5037bbe82b145d2b9",
+      "headings": [
+        "支付命令: objection sa korte na naglabas nito",
+        "本票裁定: appeal at ang pinagtatalunang utang",
+        "Peke o binagong note: ang isa pang 20 araw",
+        "Kailan talaga na-serve ang sulat?"
+      ],
+      "sentences": [
+        {
+          "paragraph": 1,
+          "text": "Magkaiba ang paraan ng pagtutol sa 本票裁定, isang ruling na nagpapahintulot sa enforcement ng promissory note, at sa 支付命令, isang payment order.",
+          "units": 22
+        },
+        {
+          "paragraph": 1,
+          "text": "Kapag may kaugnayan sa pautang para sa recruitment o pagpunta sa Taiwan ang natanggap mong sulat, pangalan ng dokumento ang unahin—hindi lang ang halagang sinisingil.",
+          "units": 26
+        },
+        {
+          "paragraph": 1,
+          "text": "Nasa Non-Contentious Matters Act, Artikulo 42 at Code of Civil Procedure, Artikulo 516 ang magkaibang palugit.",
+          "units": 16
+        },
+        {
+          "paragraph": 2,
+          "text": "Panatilihin ang buong sulat at sobre.",
+          "units": 6
+        },
+        {
+          "paragraph": 2,
+          "text": "Isama ang petsa at paraan ng delivery, pangalan ng korte at case number.",
+          "units": 13
+        },
+        {
+          "paragraph": 2,
+          "text": "Kung may kopya ng loan agreement o 本票 na pinirmahan bago umalis ng Pilipinas, ilagay iyon sa tabi ng natanggap na order.",
+          "units": 22
+        },
+        {
+          "paragraph": 2,
+          "text": "Maaaring iba ang taong naniningil ngayon sa taong nakausap mo noong nanghiram.",
+          "units": 12
+        },
+        {
+          "paragraph": 3,
+          "text": "Dalawampung araw matapos ang legal na pagsisilbi ang takdang panahon para ihain sa issuing court ang objection, o 異議.",
+          "units": 19
+        },
+        {
+          "paragraph": 3,
+          "text": "Puwedeng tutulan ang buo o bahagi ng payment order at hindi kailangang maglahad ng dahilan sa objection mismo (Artikulo 516).",
+          "units": 20
+        },
+        {
+          "paragraph": 3,
+          "text": "Ang sulat sa lender o broker ay hindi paghahain sa korte.",
+          "units": 11
+        },
+        {
+          "paragraph": 4,
+          "text": "Kapag legal at nasa oras ang objection, nawawalan ng bisa ang payment order sa bahaging tinutulan, at itinuturing na demanda o aplikasyon para sa mediation ang kahilingan ng creditor (Artikulo 519).",
+          "units": 31
+        },
+        {
+          "paragraph": 4,
+          "text": "Magpapatuloy pa ang usapin.",
+          "units": 4
+        },
+        {
+          "paragraph": 4,
+          "text": "Kailangan pa ring ihanda ang patunay kung bakit mali ang claim o ang halaga.",
+          "units": 14
+        },
+        {
+          "paragraph": 5,
+          "text": "Sa Artikulo 512, hindi muna tinatanong ng korte ang debtor bago magpasya sa aplikasyon para sa payment order.",
+          "units": 18
+        },
+        {
+          "paragraph": 5,
+          "text": "Kaya maaaring unang balita mo tungkol sa kaso ang sulat mismo.",
+          "units": 11
+        },
+        {
+          "paragraph": 6,
+          "text": "Kung walang legal na objection sa loob ng palugit, maaari nang maging batayan ng compulsory enforcement ang order; may hiwalay na kaso pa ring maaaring ihain upang ipatukoy na walang utang, at maaaring payagan ng korte ang paghinto ng enforcement kapalit ng sapat at maaasahang security (Artikulo 521).",
+          "units": 48
+        },
+        {
+          "paragraph": 6,
+          "text": "Hindi awtomatiko ang paghinto.",
+          "units": 4
+        },
+        {
+          "paragraph": 7,
+          "text": "Sampung araw matapos ma-serve ang ruling ang takdang panahon para sa 抗告, ang appeal laban dito (Non-Contentious Matters Act, Artikulo 42).",
+          "units": 21
+        },
+        {
+          "paragraph": 7,
+          "text": "Sa korte na gumawa ng ruling ito inihahain (Artikulo 43).",
+          "units": 10
+        },
+        {
+          "paragraph": 7,
+          "text": "Pinapayagan ng Artikulo 123 ng Negotiable Instruments Act ang holder ng promissory note na humingi ng ruling para sa enforcement laban sa issuer.",
+          "units": 23
+        },
+        {
+          "paragraph": 8,
+          "text": "Noong 3 Hulyo 2026, ibinasura ng Taipei District Court ang appeal sa kasong 115年度抗字第306號.",
+          "units": 14
+        },
+        {
+          "paragraph": 8,
+          "text": "Inangkin ng mga appellant na hindi nila natanggap nang buo ang ipinangakong financing.",
+          "units": 13
+        },
+        {
+          "paragraph": 8,
+          "text": "Ipinaliwanag ng korte na ang promissory-note proceeding ay sumusuri sa formal requirements, habang ang pagtatalo tungkol sa mismong utang ay kailangang lutasin sa hiwalay na kaso.",
+          "units": 26
+        },
+        {
+          "paragraph": 8,
+          "text": "Ruling ito ng district court sa appeal, hindi pasya na nagsuri at nagpatunay sa lahat ng detalye ng pautang.",
+          "units": 19
+        },
+        {
+          "paragraph": 9,
+          "text": "Bayad na ba ang utang, o mas maliit ang aktuwal na natanggap kaysa sa nakasulat?",
+          "units": 15
+        },
+        {
+          "paragraph": 9,
+          "text": "Ipares ang transfer at repayment records sa mismong note.",
+          "units": 9
+        },
+        {
+          "paragraph": 9,
+          "text": "Ang pagpapaliwanag ng mga halagang iyon sa appeal lamang ay hindi kapalit ng angkop na paglilitis tungkol sa utang.",
+          "units": 19
+        },
+        {
+          "paragraph": 10,
+          "text": "May espesyal na tuntunin sa Artikulo 195 kapag sinasabi ng issuer na peke o binago ang promissory note.",
+          "units": 18
+        },
+        {
+          "paragraph": 10,
+          "text": "Sa loob ng 20 araw matapos ma-serve ang ruling, maaari siyang magsampa laban sa holder, sa korte na naglabas ng ruling, ng kasong humihingi ng deklarasyon tungkol sa kawalan ng claim.",
+          "units": 31
+        },
+        {
+          "paragraph": 10,
+          "text": "Hiwalay itong demanda.",
+          "units": 3
+        },
+        {
+          "paragraph": 11,
+          "text": "Kapag napatunayang naisampa ang kasong pasok sa espesyal na tuntuning iyon, dapat ihinto ng enforcement court ang compulsory enforcement.",
+          "units": 19
+        },
+        {
+          "paragraph": 11,
+          "text": "May eksepsiyon: maaaring pahintulutan ang holder na magbigay ng sapat na security upang magpatuloy, at maaari ring pahintulutan ang issuer na magbigay ng security upang ihinto ito.",
+          "units": 27
+        },
+        {
+          "paragraph": 11,
+          "text": "Para sa kasong hindi pasok sa unang talata ng Artikulo 195, maaaring payagan ng korte ang paghinto sa kahilingan ng issuer kapalit ng sapat at maaasahang security.",
+          "units": 27
+        },
+        {
+          "paragraph": 11,
+          "text": "Hindi lahat ng pagtatalo sa halaga ng loan ay saklaw ng espesyal na 20-araw na tuntunin.",
+          "units": 16
+        },
+        {
+          "paragraph": 12,
+          "text": "Puwedeng mauna ang legal na service sa araw na ikaw mismo ang bumasa ng dokumento.",
+          "units": 15
+        },
+        {
+          "paragraph": 12,
+          "text": "Pinahihintulutan ng Artikulo 137, kapag wala ang tatanggap sa kaniyang tirahan, opisina o negosyo, ang pagtanggap ng kasamang nakatira o empleyadong may kakayahang umunawa; hindi ito puwede kung kabilang panig sa kaso ang taong iyon.",
+          "units": 35
+        },
+        {
+          "paragraph": 12,
+          "text": "Hindi awtomatikong sapat ang pagtanggap ng kahit sinong broker.",
+          "units": 9
+        },
+        {
+          "paragraph": 13,
+          "text": "Kung hindi maisagawa ang mga naunang paraan, may service by deposit sa local government o police authority, kasama ang mga abisong hinihingi ng Artikulo 138.",
+          "units": 25
+        },
+        {
+          "paragraph": 13,
+          "text": "Nagkakabisa ito makalipas ang 10 araw mula sa pagdeposito.",
+          "units": 9
+        },
+        {
+          "paragraph": 13,
+          "text": "Saklaw din ng mga tuntunin sa service ang non-contentious proceedings sa pamamagitan ng Artikulo 31.",
+          "units": 15
+        },
+        {
+          "paragraph": 14,
+          "text": "Karaniwang hindi kasama sa bilang ang mismong araw na nagsimula ang period (Civil Code, Artikulo 120).",
+          "units": 16
+        },
+        {
+          "paragraph": 14,
+          "text": "May tuntunin para sa huling araw na holiday o rest day sa Artikulo 122.",
+          "units": 14
+        },
+        {
+          "paragraph": 14,
+          "text": "Maaari ring may dagdag na panahong itinakda para sa distansiya sa korte, depende sa tirahan at kung may kwalipikadong kinatawan doon (Code of Civil Procedure, Artikulo 161–162).",
+          "units": 28
+        },
+        {
+          "paragraph": 14,
+          "text": "Ipakumpirma ang aktuwal na huling araw sa korte gamit ang service record.",
+          "units": 12
+        },
+        {
+          "paragraph": 14,
+          "text": "Huwag ipagpaliban ang paghahain dahil inaayos pa ang usapan sa lender.",
+          "units": 11
+        },
+        {
+          "paragraph": 15,
+          "text": "Nasa Filipino-language page ng Legal Aid Foundation ang gabay at application forms.",
+          "units": 12
+        },
+        {
+          "paragraph": 15,
+          "text": "Maaaring magtanong tungkol sa tulong sa paggawa ng dokumento o pagharap sa kaso, na nakabatay sa eligibility at pagsusuri ng LAF.",
+          "units": 21
+        },
+        {
+          "paragraph": 15,
+          "text": "Hindi garantisado ang pag-apruba.",
+          "units": 4
+        },
+        {
+          "paragraph": 16,
+          "text": "Para sa pribadong pagsusuri ng Taiwan-law dispute, ipadala sa wei@hoveringlaw.com.tw ang uri ng order, petsa ng service at maikling buod na walang sensitibong detalye; huwag munang ipadala ang buong ID o bank records.",
+          "units": 36
+        },
+        {
+          "paragraph": 16,
+          "text": "English, Chinese, Korean at Japanese ang mga wika ng konsultasyon, kaya kailangan munang kumpirmahin ang paraan ng pag-uusap kung Filipino ang kailangan.",
+          "units": 22
+        },
+        {
+          "paragraph": 16,
+          "text": "Hindi pagtanggap sa kaso ang pagtanggap ng email.",
+          "units": 8
+        },
+        {
+          "paragraph": 16,
+          "text": "Ang pinakamalapit na deadline ay nasa legal na service ng dokumento, hindi sa araw ng sagot sa iyong inquiry.",
+          "units": 19
+        }
+      ],
+      "paragraph_openers": [
+        "magkaiba",
+        "panatilihin",
+        "dalawampung",
+        "kapag",
+        "sa",
+        "kung",
+        "sampung",
+        "noong",
+        "bayad",
+        "may",
+        "kapag",
+        "puwedeng",
+        "kung",
+        "karaniwang",
+        "nasa",
+        "para"
+      ],
+      "metrics": {
+        "lang": "fil",
+        "sentences": 52,
+        "paras": 16,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 17.7,
+        "len_cv": 0.505,
+        "short_share": 0.115,
+        "long_share": 0.058,
+        "para_cv": 0.285,
+        "even_run3": 0.04,
+        "top_end": "order",
+        "top_end_share": 0.058,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "kapag",
+        "top_opener_n": 2,
+        "opener_rep": 0.125,
+        "consec_same_start": 0,
+        "cite_para_share": 0.75,
+        "cite_end_share": 0.135,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.72,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": true,
+        "first": "Magkaiba ang paraan ng pagtutol sa 本票裁定, isang ruling na nagpapahintulot sa enforcement ng",
+        "last": "Para sa pribadong pagsusuri ng Taiwan-law dispute, ipadala sa wei@hoveringlaw.com.tw ang uri ng order, petsa ng service ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations",
+        "measurement_scope": "task_local_extension_not_shared_checker"
+      }
+    }
+  ]
+}

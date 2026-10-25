@@ -1,0 +1,52 @@
+{
+  "reviewer": "/root/expand_locale_vi",
+  "checkedAt": "2026-10-25T13:28:25.753115+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md",
+      "sha256": "da58b3524de165051c33660d6784462be32a1b91241bf733355dc4567eefda53",
+      "unchangedDuringCheck": true,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md",
+        "--lang",
+        "vi"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md [vi] sentences=45 mean=20.8 cv=0.458 short=0.178 run3=0.0 opener_rep=0.188 cite_end=0.0 cite_para=0.375 contrast=1 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "image_sha256": "c41c0e82349c0d938850db2c824c67949ec674f9cbfc3d334ce33bc923908d85",
+      "prior_reviewed_sha256": "3616a2fddce24e851e2ab9c657b47aee016ff6d5821c41eb1167cc496ef14873",
+      "reverse_only_declared_changes_sha256": "3616a2fddce24e851e2ab9c657b47aee016ff6d5821c41eb1167cc496ef14873",
+      "only_declared_changes_verified": true,
+      "bold_markup_found": false,
+      "duplicate_h1": false,
+      "email_count": 1
+    },
+    {
+      "source_path": "src/content/columns-vi/923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md",
+      "sha256": "2d8d9425d4dc1927611821b3ea7281a81f0bdb1083c614c9b91d3c4bb0b1edd1",
+      "unchangedDuringCheck": true,
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md",
+        "--lang",
+        "vi"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md [vi] sentences=49 mean=22.4 cv=0.485 short=0.184 run3=0.064 opener_rep=0.167 cite_end=0.0 cite_para=0.278 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "image_sha256": "788418fe4ca09acbc7d0cc30985d254fa47d5a5192e98c50e022209cf3fc8125",
+      "prior_reviewed_sha256": "88335b55c5ea00cfac484947d743b1b8f09a32265f97eeef6f011799c0007f2c",
+      "reverse_only_declared_changes_sha256": "88335b55c5ea00cfac484947d743b1b8f09a32265f97eeef6f011799c0007f2c",
+      "only_declared_changes_verified": true,
+      "bold_markup_found": false,
+      "duplicate_h1": false,
+      "email_count": 1
+    }
+  ]
+}

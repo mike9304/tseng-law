@@ -1,0 +1,46 @@
+[
+  {
+    "source_path": "src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+    "sha256": "b5c61e5675ad7ace02ca89ed45af6434f53cf358731cfedbc5e222e4a881f1dc",
+    "checkedAt": "2026-10-25T13:23:55.657204+00:00",
+    "runs": [
+      {
+        "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md --lang fil",
+        "script_sha256": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38",
+        "exit_code": 2,
+        "stdout": "",
+        "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'fil' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+      },
+      {
+        "command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md --lang fil",
+        "script_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+        "exit_code": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md [fil] sentences=45 mean=19.2 cv=0.571 short=0.111 run3=0.023 opener_rep=0.118 cite_end=0.067 cite_para=0.706 contrast=0 caveat=0 q=4\n  OK — no variety limit violated\n",
+        "stderr": "OFFICIAL CHECKER: fil unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+      }
+    ],
+    "source_unchanged": true
+  },
+  {
+    "source_path": "src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+    "sha256": "0ce2bf7d0cd6a45886d56a5f5be25279f2d7894a83204f55d74b563eb1a51b5e",
+    "checkedAt": "2026-10-25T13:23:55.909161+00:00",
+    "runs": [
+      {
+        "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md --lang fil",
+        "script_sha256": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38",
+        "exit_code": 2,
+        "stdout": "",
+        "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'fil' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+      },
+      {
+        "command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md --lang fil",
+        "script_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+        "exit_code": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md [fil] sentences=52 mean=17.7 cv=0.505 short=0.115 run3=0.04 opener_rep=0.125 cite_end=0.135 cite_para=0.75 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": "OFFICIAL CHECKER: fil unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+      }
+    ],
+    "source_unchanged": true
+  }
+]

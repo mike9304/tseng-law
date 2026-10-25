@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-25T13:13:57.205795+00:00",
+  "method": "curl --resolve www.mof.gov.tw:443:203.74.221.3; TLS validation remained enabled; no global DNS change",
+  "resolvedAddressSource": "HI author reported same-day Google DoH A lookup; both independent requests authenticated actual official hostname via normal TLS",
+  "records": [
+    {
+      "file": "india-treaty.pdf",
+      "url": "https://www.mof.gov.tw/eng/download/10458",
+      "httpStatus": 200,
+      "contentType": "application/octet-stream;charset=UTF-8",
+      "bytes": 220794,
+      "sha256": "d4b811c8f1deebe2d8bcd6fb445e9f8d41bfa687fbbcf0f8d12e5ec5c482309d"
+    },
+    {
+      "file": "india-treaty-network.html",
+      "url": "https://www.mof.gov.tw/eng/singlehtml/264?cntId=82780",
+      "httpStatus": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "bytes": 79505,
+      "sha256": "d302aa91bcbf5974187c33cb979d8a84a8e9d511e3519952f883e0cebb78d889"
+    }
+  ]
+}

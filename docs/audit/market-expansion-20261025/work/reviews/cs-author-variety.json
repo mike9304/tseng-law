@@ -1,0 +1,78 @@
+{
+  "checkedAt": "2026-10-25",
+  "revision": "locale-repair-1-and-943-topic-correction",
+  "globalSupport": "Czech unsupported; exit 2 is not PASS",
+  "candidateQualification": "Independent review accepted task-local extension; guarded entrypoint used for metadata-corrected 943. Shared checker remains unsupported.",
+  "records": [
+    {
+      "file": "repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+      "sha256": "bec0b9df6b63b0f17f5f9bc2ffac6b2ef23e2b8693475936eaca05ff1cfaa2a3",
+      "runs": [
+        {
+          "label": "global-infer",
+          "command": [
+            "python3",
+            "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md"
+          ],
+          "exitCode": 2,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md; supply --lang\n",
+          "stderr": "",
+          "checkerSha256": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38"
+        },
+        {
+          "label": "global-explicit-cs",
+          "command": [
+            "python3",
+            "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+            "--lang",
+            "cs"
+          ],
+          "exitCode": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'cs' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n",
+          "checkerSha256": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38"
+        },
+        {
+          "label": "task-local-candidate",
+          "command": [
+            "python3",
+            "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+            "--lang",
+            "cs"
+          ],
+          "exitCode": 0,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md [cs] sentences=44 mean=15.0 cv=0.455 short=0.159 run3=0.024 opener_rep=0.067 cite_end=0.0 cite_para=0.667 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+          "stderr": "",
+          "checkerSha256": "f6a53d8265224b5795be95501f317eac018c23dba5b79513c6179fe1caa363c7"
+        }
+      ]
+    },
+    {
+      "file": "repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+      "sha256": "67fd481e9ae23009247b50aa53d09f6b3a21e962bf1dd76bbcbaed1de8592bc5",
+      "runs": [
+        {
+          "label": "approved-guarded-task-local",
+          "command": [
+            "python3",
+            "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+            "--lang",
+            "cs"
+          ],
+          "exitCode": 0,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md [cs] sentences=44 mean=14.8 cv=0.456 short=0.205 run3=0.024 opener_rep=0.062 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+          "stderr": "OFFICIAL CHECKER: cs unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n",
+          "checkerSha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5"
+        }
+      ]
+    }
+  ]
+}

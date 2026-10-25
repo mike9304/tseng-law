@@ -1,0 +1,140 @@
+{
+  "reviewer": "/root/expand_locale_fr",
+  "role": "locale",
+  "independentOfAuthor": true,
+  "checkedAt": "2026-10-25T13:28:41.391484+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md",
+      "sha256": "a24b1b5ef3d8925adb2d21d414c9ee7e906a0b764e0a2e79f19e2eeb0d35daf8",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md --lang fr",
+      "variety_exit_code": 0,
+      "variety_output": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md [fr] sentences=54 mean=19.6 cv=0.469 short=0.185 run3=0.077 opener_rep=0.167 cite_end=0.0 cite_para=0.389 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "image_sha256": "eb54eb0f61c4240d888211b3abaf0014dd58fb957272b8f995eb616d81615d0e",
+      "bold_count": 0,
+      "email_links": 1,
+      "caption_normalization": {
+        "before_sha256": "187c8a0c2b64ff6a69be32be21912d48b976cf56bd9e38a6cf2df52b53b56d64",
+        "before_caption": "Scène fictive de préparation d’une passation documentaire.",
+        "current_caption": "Scène fictive",
+        "only_caption_changed": true,
+        "reviewer_acceptance": "Read and accepted; fictional-scene meaning preserved."
+      },
+      "verdict": "PASS",
+      "findings": [],
+      "resolved_findings": [
+        {
+          "id": "FR936-L1",
+          "status": "RESOLVED_AFTER_REPAIR_1"
+        },
+        {
+          "id": "FR936-L2",
+          "status": "RESOLVED_AFTER_REPAIR_1"
+        },
+        {
+          "id": "FR936-L3",
+          "status": "RESOLVED_AFTER_REPAIR_1"
+        },
+        {
+          "id": "FR936-M1",
+          "status": "RESOLVED_AFTER_REPAIR_1"
+        }
+      ],
+      "repair_round": 1,
+      "initial_review": "work/reviews/fr-locale-r0.json",
+      "image_inspected": true,
+      "author_report": "work/reviews/fr-author.json",
+      "author_evidence_binding": "Author evidence read; any intervening caption-only normalization independently reviewed and proven by reverse-field SHA match.",
+      "comparators": [
+        {
+          "source_path": "src/content/columns-fr/704-taiwan-arc-first-application.md",
+          "published": "2026-10-24",
+          "sha256": "b15d77af3ae7d7fa8ec3a39af881833f537ad2cf72351d54dc1ab2b7251e9896"
+        },
+        {
+          "source_path": "src/content/columns-fr/705-taiwan-visa-residence-work-study-family.md",
+          "published": "2026-10-24",
+          "sha256": "b194fad64058a6ef06afd15e8b07da3d1b9175dfdb8ffeb8746606ed53b3ec60"
+        },
+        {
+          "source_path": "src/content/columns-fr/706-taiwan-arc-renewal-changes-reentry.md",
+          "published": "2026-10-24",
+          "sha256": "a8b9da8fccc6d312e5830fb463e52d4a8316e72d189b85d30af7f3b8fbb73243"
+        }
+      ],
+      "limitations": [
+        "AI editorial locale review, not human native-speaker or licensed-lawyer certification.",
+        "Final legal review, deployment and live browser/media checks are separate."
+      ]
+    },
+    {
+      "source_path": "src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md",
+      "sha256": "132e87abb6a25149cc00544a11e07aacdea61a9a3a18e142e14491e8b5a05a2b",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md --lang fr",
+      "variety_exit_code": 0,
+      "variety_output": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md [fr] sentences=48 mean=19.6 cv=0.453 short=0.104 run3=0.13 opener_rep=0.222 cite_end=0.0 cite_para=0.278 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "image_sha256": "692aeed72862d76e9613a26706d495c92bc5323afb513e0c0250012eb67ab1df",
+      "bold_count": 0,
+      "email_links": 1,
+      "caption_normalization": {
+        "before_sha256": "c09e180a592b02cc9a11f775aba7821dd7beba54c3bafd91cab7b7bf97f6a51a",
+        "before_caption": "Scène fictive dans une boutique de vins.",
+        "current_caption": "Scène fictive",
+        "only_caption_changed": true,
+        "reviewer_acceptance": "Read and accepted; fictional-scene meaning preserved."
+      },
+      "verdict": "PASS",
+      "findings": [],
+      "resolved_findings": [
+        {
+          "id": "FR937-M1",
+          "status": "RESOLVED_AFTER_REPAIR_1"
+        },
+        {
+          "id": "FR937-M2",
+          "status": "RESOLVED_AFTER_REPAIR_1"
+        },
+        {
+          "id": "FR937-F1",
+          "status": "RESOLVED_AFTER_REPAIR_1"
+        }
+      ],
+      "repair_round": 1,
+      "initial_review": "work/reviews/fr-locale-r0.json",
+      "image_inspected": true,
+      "author_report": "work/reviews/fr-author.json",
+      "author_evidence_binding": "Author evidence read; any intervening caption-only normalization independently reviewed and proven by reverse-field SHA match.",
+      "comparators": [
+        {
+          "source_path": "src/content/columns-fr/704-taiwan-arc-first-application.md",
+          "published": "2026-10-24",
+          "sha256": "b15d77af3ae7d7fa8ec3a39af881833f537ad2cf72351d54dc1ab2b7251e9896"
+        },
+        {
+          "source_path": "src/content/columns-fr/705-taiwan-visa-residence-work-study-family.md",
+          "published": "2026-10-24",
+          "sha256": "b194fad64058a6ef06afd15e8b07da3d1b9175dfdb8ffeb8746606ed53b3ec60"
+        },
+        {
+          "source_path": "src/content/columns-fr/706-taiwan-arc-renewal-changes-reentry.md",
+          "published": "2026-10-24",
+          "sha256": "a8b9da8fccc6d312e5830fb463e52d4a8316e72d189b85d30af7f3b8fbb73243"
+        }
+      ],
+      "limitations": [
+        "AI editorial locale review, not human native-speaker or licensed-lawyer certification.",
+        "Final legal review, deployment and live browser/media checks are separate."
+      ]
+    }
+  ],
+  "human_report": "work/reviews/fr-locale.md",
+  "human_report_sha256": "2acfc3b6d37177a0570162e0de21c1215e89abea09333b0b7fb3068265ef7363",
+  "official_source_evidence": "work/reviews/fr-locale-official-source-evidence.json",
+  "final_measurements": "work/reviews/fr-locale-final-measurements.json",
+  "caption_normalization_evidence": "work/reviews/fr-locale-caption-normalization.json",
+  "limitations": [
+    "No publication or public browser verification performed by this reviewer.",
+    "Official source text and targeted PDF text were checked; this is not complete visual PDF or technical-product validation.",
+    "No measured search volume, acquisition conversion or market profitability is claimed."
+  ]
+}

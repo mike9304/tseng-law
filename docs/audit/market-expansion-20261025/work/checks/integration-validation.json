@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-25T13:38:30.123003+00:00",
+  "verdict": "PASS after repairs and focused reruns",
+  "content_suites": 21,
+  "distinct_tests": 1038,
+  "typecheck_exit": 0,
+  "history": [
+    "Initial19suites:953passed,onecaptionlabeltestfailed24customcaptions. Fixedcanonical24captionlabels, exactcaptionrecheckpassed.",
+    "Currentmain21suiteintegration:1031passed,1inheritedRUcaptionfailure and6five-secondtimeouts. FixedonlyRU3captions.",
+    "Singleworker3failedsuitesrecheck:126passed,1issueboardlanguage-link5000mstimeout.",
+    "Language-links full47test suite rerun singleworker with CLI testTimeout30000:47passed in23.75s; productioncode/test assertions unchanged."
+  ],
+  "evidence_sha256": {
+    "content-unit-final.log": "f9f9b12efbe061a9fb6330dc2f4848a7acb09e42d31cc057d4eadc5928ea4f51",
+    "caption-test-repair.log": "999b5edce1eff6cbf111af1ea952a5d899914d545b4b78b1b2335396889d3e72",
+    "integrated-content-tests.log": "a41af1963455ed82f1c073ff9c810066542b8804d39553664c749754dd2e632a",
+    "integrated-failed-suites-recheck.log": "b60344ea3db2124dea7c6ef98f9c2384b9b5a03d1ced423715a4219a9aa19905",
+    "language-links-resource-recheck.log": "e571dc22a22a58f3e85f8751065e1e46b3d6d1e788189a78f9417eb3011e984c",
+    "integrated-typecheck.log": "9fb5235f67a105a5aab0ddc282c571908aa17d1b2579b52dd2d6eb359c3d4838"
+  },
+  "browser_qa": "notperformed; previouspolicydenialnotbypassed"
+}

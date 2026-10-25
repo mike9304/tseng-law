@@ -1,0 +1,3255 @@
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+<!doctype html>
+<html  lang="en">
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>
+    
+    
+	    Ministry of Finance, R.O.C
+    
+</title>
+
+	
+	
+
+<link href='/eng/headerImg?type=icon&path=401170b701114c30abeb7ef80384bfe1' rel='SHORTCUT ICON' />
+
+
+
+<meta name="DC.Title" content=''/>
+<meta name="DC.Creator" content=''/>
+<meta name="DC.Subject" content=''/>
+<meta name="DC.Description" content=''/>
+<meta name="DC.Contributor" content=''/>
+<meta name="DC.Type" content=''/>
+<meta name="DC.Format" content=''/>
+<meta name="DC.Source" content=''/>
+<meta name="DC.Language" content=''/>
+<meta name="DC.coverage.t.min" content=''/>
+<meta name="DC.coverage.t.max" content=''/>
+<meta name="DC.Publisher" content=''/>
+<meta name="DC.Date" content=''/>
+<meta name="DC.Identifier" content=''/>
+<meta name="OID" content=''/>
+<meta name="DC.Relation" content=''/>
+<meta name="DC.Rights" content=''/>
+<meta name="Category.Theme" content=''/>
+<meta name="Category.Cake" content=''/>
+<meta name="Category.Service" content=''/>
+<meta name="Keywords" content=''/>
+
+
+	<link rel="stylesheet" type="text/css" href='/css/jquery/jquery-ui.css'/>
+	<link rel="stylesheet" type="text/css" href='/css/jquery/jqcloud.min.css'/>
+	<link rel="stylesheet" type="text/css" href='/css/jquery/ui/ui.totop.css'/>
+	<link rel="stylesheet" type="text/css" href='/template/bootstrap/bootstrap.min.css'/>
+	<link rel="stylesheet" type="text/css" href='/template/css/notosanstc.css'/>
+	<link rel="stylesheet" type="text/css" href='/template/css/slick/slick.css'/>
+	<link rel="stylesheet" type="text/css" href='/template/css/slick/slick-theme.css'/>
+
+	<link rel="stylesheet" type="text/css" href='/template/style-4/css/shared.css'/>
+	
+	
+
+<style type="text/css">
+.menu-box ul.menu li:nth-child(5) .menu-floor-down.multi-colums {
+  height:500px;
+}
+</style>
+	<style>
+		.function-cabinet .container .accesskey {
+			top: -90px;
+		}
+	</style>
+
+	<script type="text/javascript" src='/js/jquery/jquery-3.6.1.min.js'></script>
+	<script type="text/javascript" src='/js/jquery/jqcloud.min.js'></script>
+	<script type="text/javascript" src='/js/jquery/jquery-ui.min.js'></script>
+	<script type="text/javascript" src='/js/jquery/jquery-ui-timepicker-addon.js'></script>
+	<script type="text/javascript" src='/js/jquery/jquery.validate.js'></script>
+	<script type="text/javascript" src='/js/jquery/jquery.form.js'></script>
+	<script type="text/javascript" src='/js/jquery/jquery.twzipcode.min.js'></script>
+	<script type="text/javascript" src='/js/jquery/jquery.ui.totop.js'></script>
+	
+	<script type="text/javascript" src='/js/highcharts/highmaps.js'></script>
+
+	
+<script type="text/javascript" src='/js/highcharts/exporting-en.js'></script>
+<script type="text/javascript" src='/js/highcharts/tw-all-en.js'></script>
+	
+	
+
+
+	<script type="text/javascript" src='/js/datepicker.js'></script>
+	<script type="text/javascript" src='/js/search-google-focus.min.js'></script>
+	
+	<script type="text/javascript" src='/js/xssUtil.js'></script>
+	<script type="text/javascript" src='/template/js/shared.js'></script>
+	<script type="text/javascript" src='/template/js/portal.js'></script>
+	<script type="text/javascript" src='/template/js/moment.min.js'></script>
+	<script type="text/javascript" src='/template/js/slick.min.js'></script>
+	<script type="text/javascript" src='/template/js/validata.js'></script>
+	<script type="text/javascript" src='/template/js/marquee.js'></script>
+	<script type="text/javascript" src='/template/js/img-text-carousel.js'></script>
+	<script type="text/javascript" src='/template/js/convenient-service.js'></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JL406ZZ4K3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JL406ZZ4K3');
+</script>
+    <script>
+$(function() {
+//如果沒有預覽圖片，則隱藏「附件圖檔瀏覽」
+   if ($(".article-page .attachment .preview-img .img-list a").length<=0)
+      $(".article-page .attachment .preview-img").hide();
+
+//如果沒有預覽圖片及附件，則隱藏整個附件區
+   if (($(".article-page .attachment .preview-img .img-list a").length + $(".article-page .attachment div a:visible").length) <=0 ) 
+      $(".article-page .attachment").hide();
+});
+</script><script>
+$(function() {
+$(".portal div.separation-3").remove();
+$(".portal div.separation-7").removeClass("separation-7").addClass("separation-12");
+if ($(location).attr('href').indexOf('txtStatistics')>0) $('.t-c').css("display","none");
+
+    var fileExt=".zip.pdf.odt.ods.doc.xls.docx.xlsx.xml.json";  //可能的副檔名
+    $(".table-list td a, .list-single ul li a").each(function() {
+        var href = $(this).attr("href");
+        if((href === undefined) || (href.length ==0)) return;
+        var title = $(this).attr("title");
+        var url = $(this).attr("href").split("?");
+        if(url.length >0) {
+           var temp = url[0].split("/");
+           if(temp.length > 0) {
+              var idx = temp.length -1;                //找最後一段，即檔名所在
+              var ext = temp[idx].split(".");          //抓副檔名
+              if (ext.length>1) {                      //要有檔名
+                 var extIdx = ext.length -1;
+                 if (fileExt.indexOf('.'+ext[extIdx])>0) {  //是檔案
+                    $(this).attr("title", title + "（Filename: "+temp[idx]+"）");
+                 }
+              }
+           }
+        }
+    });
+});
+</script>
+	<script></script>
+</head>
+<body class="portal template-4  color-style1">
+<noscript><span>Please set this text as the default value of the No Script field.</span></noscript>
+
+
+
+
+<div class="light-msg-box" style="display: none;">
+	<div class="msg-box">
+	    
+		<div class="close-box">
+			<a href="javascript:void(0)" aria-label="close" title="close">X</a>
+		</div>
+		
+		<div class="msg-content">
+			<div class="title">message</div>
+			<div class="msg-text">
+				<p></p>
+			</div>
+			<div class="butn-box">
+			   
+			       
+			       
+			               <button aria-label="close message" class="butn-close" title="close">close</button>
+			       
+			    
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+    $(document).ready(function() {
+    	
+
+        $(".close-box").find("a").click(function(){
+        	lightMsgBoxToggle();
+        });
+        
+        $(".butn-close").click(function(){
+        	lightMsgBoxToggle();
+        });
+    });
+    
+    
+    function lightMsgBoxToggle(){
+    	$(".light-msg-box").toggle();
+    	if($(".light-msg-box").is(":visible")){
+    	    $('.light-msg-box').find('a').focus();
+    	}
+        
+    }
+    function showMessage(message){
+    	$('.light-msg-box .msg-text').text(message);
+    	lightMsgBoxToggle();
+    }
+</script>
+
+<form>
+  <input type="hidden" id="siteDateFormat" value="Western" />
+  <input type="hidden" id="language" value="en-US" />
+</form>
+
+
+
+
+    
+        
+        
+    
+	
+
+
+<script type="text/javascript">
+var language_accesskey_C = "Main content presentation";
+var index = true;
+</script>
+	
+
+
+	<header class="" style="background-image: url(/eng/headerImg?type=backGround&path=401170b701114c30abeb7ef80384bfe1)"><div class="accesskey"><a href="#a_U" id="a_U" accesskey="U" tabindex="2" title="Top content presentation">:::</a><a href="#a_C" class="to-main" tabindex="1" title="Skip to main content">Skip to main content</a></div><div class="second-menu-top">
+    <div>
+        
+        
+            
+        
+        
+            <a href="/eng" title="Home">Home</a>   
+        
+        
+            <a href="/eng/sitemap/sitemap" title="Site Map">Site Map</a>
+        
+        
+        
+            <a href="/eng/multiplehtml/1920d86cc1924f0ab167daea88210745" title='FAQ' 
+                >FAQ</a>
+        
+            <a href="https://fbk.mof.gov.tw/FeedbackMailEn.action" title='Contact Us((Open another window))' 
+                target="_blank">Contact Us</a>
+        
+            <a href="https://www.mof.gov.tw" title='中文版' 
+                >中文版</a>
+        
+        
+            <a href="/eng/Rss" title="RSS">RSS</a>
+        
+        
+    </div>
+</div><div class="header-width"><div class="logo-box">
+    
+    
+        
+    
+    <h1>
+        <a href="/eng" title="Ministry of Finance, R.O.C:Home" class="logo">
+            <img src="/eng/headerImg?type=logo&path=401170b701114c30abeb7ef80384bfe1" alt="Ministry of Finance, R.O.C">
+        </a>
+    </h1>
+    <div class="hamburger-box">
+        <a href="javascript:void(0);" class="hamburger-logo" title="Expand Menu" aria-label="Expand Menu" role="button">
+            <img src='/template/img/hamburger.png' alt="menu">
+        </a>
+    </div>
+</div><div class="function-header function-1"><ul><li class="header-function-top"></li><li class="header-function-center"></li><li class="header-function-bottom"><script type="text/javascript">
+$(window).on('load',function(){
+        $('div.search').show();
+$('.search-google .gsc-control-cse table.gsc-search-box tbody tr td.gsc-search-button .gsc-search-button ').attr('title', '搜尋完成會有彈跳視窗');
+				$('.gsc-input input[name=search]').css('background','');
+        $('.search-text-hide-google a').click(function(){
+            $.ajax({
+                async : false,
+                type: 'POST',
+                url: "/keyword",
+                data : { 
+                    "query" : $(this).text(),
+                    "type" : 'google_keyword',
+                    "csrfToken" : 'e5d41d03-d311-470a-af21-d6dd06809656'
+                },
+                success : function (result) {
+                    
+                }
+            });
+            $('.gsc-input input[name=search]').val($(this).text());
+        });
+
+
+        if ($('.gsc-input input[name=search]').length > 0) {
+            $('.gsc-input input[name=search]').autocomplete({
+                source: function(request, response) {
+                    var inputText = $('.gsc-input input[name=search]').val();
+
+                    $.ajax({
+                        url: '/keyword',
+                        type:"POST",
+                        data : { 
+                            "query" : inputText,
+                            "type" : 'google_keyword',
+                            "csrfToken" : 'e5d41d03-d311-470a-af21-d6dd06809656'
+                        },
+                        success: function(data){
+                            $('input.gsc-search-button:button').trigger('click');
+                        }
+                    });
+                },
+            });
+        }
+    });
+</script>
+
+<div class="search-google">
+		<form style="display: flex;">
+		<a href="#a_S" id="a_S" accesskey="S" style="display: inline-block; white-space:nowrap;" title="搜尋編輯區" aria-label="GOOGLE搜尋，會有彈跳視窗">:::</a>
+			<script async src="https://cse.google.com/cse.js?cx=000767939572429945707:42robwinemk">
+</script>
+<div class="gcse-search"></div>
+			
+							
+								
+							
+							<input class="advanced-button" type="button" onclick="javascript:location.href='https://www.google.com.tw/advanced_search?num=100&as_sitesearch=www.mof.gov.tw&ie=UTF-8&hl=en-US'" value="Advanced search">
+						
+		</form>
+		<div class="hot-search">
+			<span>Popular search：</span>
+			<div class="search-text-hide search-text-hide-google">
+				
+				   <a href="javascript:void(0)" title="Search:　　　">　　　</a>
+				
+				   <a href="javascript:void(0)" title="Search:Uniform-Invoice Winning Numbers">Uniform-Invoice Winning Numbers</a>
+				
+				   <a href="javascript:void(0)" title="Search:Uniform-Invoice">Uniform-Invoice</a>
+				
+			</div>
+		</div> 
+	</div>
+
+</li></ul></div></div></header>
+
+	<div class="function-cabinet full one-block" style=""><div class="container"><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive"><div class="menu-box">
+    <div class="container-hide">
+        <a class="hamburgerMenu" href="#" aria-label="關閉Menu" role="button">x</a>
+    </div>
+    <div class="rwd-header-function"></div>
+    <div class="container-middle">
+        <ul class="menu">
+        
+        
+            
+                
+                <li>
+                    <a class="classification-menu" href="/Eng/htmlList/247" title='About MOF' >About MOF</a>
+                    <ul class="menu-floor-down
+		                
+		                
+                    ">
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/270" title='Principal Officers' >Principal Officers</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/6967" title='Organization & Functions' >Organization & Functions</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/link/6977" title='The History of Ministry of Finance, R.O.C.(Open another window)' target='_blank'>The History of Ministry of Finance, R.O.C.</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/268" title='Location & Transportation' >Location & Transportation</a>
+                        </li>
+                        
+                        
+                    
+                    </ul>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="classification-menu" href="/Eng/htmlList/246" title='News & Releases' >News & Releases</a>
+                    <ul class="menu-floor-down
+		                
+		                
+                    ">
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/f48d641f159a4866b1d31c0916fbcc71" title='Press Releases Statements(News)' >Press Releases Statements(News)</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/link/6c720673971a4b4982787ada7fbf9224" title='Fact Check & Clarifications' >Fact Check & Clarifications</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/6642" title='Events Announcement' >Events Announcement</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/video/305" title='Audio & Visual' >Audio & Visual</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/6647" title='Employment Information' >Employment Information</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6645" title='Information on the National Financial Stabilization Fund' >Information on the National Financial Stabilization Fund</a>
+                        </li>
+                        
+                        
+                    
+                    </ul>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="classification-menu" href="/Eng/htmlList/6637" title='Themes' >Themes</a>
+                    <ul class="menu-floor-down
+		                
+		                
+                    ">
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/link/b02d8ffa66e64d0e98d3880eef1a9a64" title='Strengthening Taiwan's Export Supply Chain in Response to US Tariffs-Fiscal Support Measures(Open another window)' target='_blank'>Strengthening Taiwan's Export Supply Chain in Response to US Tariffs-Fiscal Support Measures</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/6648" title='Debt Management(Open another window)' target='_blank'>Debt Management</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/link/430fdca8e7c345c98d333aa1122f2363" title='Income Tax on House and Land Transactions 2.0(Open another window)' target='_blank'>Income Tax on House and Land Transactions 2.0</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/8f1050f92a04479cb39fd9589bb01bb8" title='Anti-Fraud & Anti-Disinformation' >Anti-Fraud & Anti-Disinformation</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/8c36eef876024991ab67442a61508f19" title='Version 2.0 of the Differential Tax Rate of the House Tax' >Version 2.0 of the Differential Tax Rate of the House Tax</a>
+                        </li>
+                        
+                        
+                    
+                    </ul>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="classification-menu" href="/Eng/htmlList/6635" title='Finance Related Laws & Regulations' >Finance Related Laws & Regulations</a>
+                    <ul class="menu-floor-down
+		                
+		                
+                    ">
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/link/6669" title='Laws and Regulations Retrieving System(Open another window)' target='_blank'>Laws and Regulations Retrieving System</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/8ad5d4f4bcbc441c9edf247b6297d179" title='Drafts of Regulations and Orders' >Drafts of Regulations and Orders</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/1b2a72fa5407417fbbe4c475cd1ba079" title='Related Law and Regulations of MOF' >Related Law and Regulations of MOF</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/7001" title='Explanatory Decrees Regarding Taxes' >Explanatory Decrees Regarding Taxes</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/5e45d0c59fcb40359211e6529ae40630" title='The Administrative Appeal Decision' >The Administrative Appeal Decision</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/756a156b04f24aa8ab9a794dde7ed850" title='English Translation of Laws and Regulations' >English Translation of Laws and Regulations</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/4e00e7441ddc409dbf6317e370277b2f" title='Annual Legislative Plan for Draft Regulations' >Annual Legislative Plan for Draft Regulations</a>
+                        </li>
+                        
+                        
+                    
+                    </ul>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="classification-menu" href="/Eng/htmlList/6636" title='Public Finance and Trade Statistics' >Public Finance and Trade Statistics</a>
+                    <ul class="menu-floor-down
+		                
+		                 multi-colums
+		                
+		                
+                    ">
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6690" title='Announcements' >Announcements</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6689" title='Statistical Release Announce' >Statistical Release Announce</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6688" title='Statistics Database' >Statistics Database</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6687" title='Standard Industrial Classification of Taxation' >Standard Industrial Classification of Taxation</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6686" title='Public Finance and Tax Statistics' >Public Finance and Tax Statistics</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6685" title='External Trade Statistics' >External Trade Statistics</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/link/59452b4edf324b2d869aacca2a517612" title='Gender Statistics(Open another window)' target='_blank'>Gender Statistics</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6682" title='Other Business Statistics' >Other Business Statistics</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6681" title='Analysis and Research' >Analysis and Research</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/b8a45309037f49c6814455b51220efd9" title='Visualising Data' >Visualising Data</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/6679" title='Statistical publications' >Statistical publications</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/5ff4fb6edfb942909858528756f10f3c" title='Related Links' >Related Links</a>
+                        </li>
+                        
+                        
+                    
+                    </ul>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="classification-menu" href="/Eng/htmlList/6638" title='Policies & Programs' >Policies & Programs</a>
+                    <ul class="menu-floor-down
+		                
+		                
+                    ">
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/6719" title='Major Administrative News' >Major Administrative News</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/ef9f0c3c267b43c39c656e0a065485e7" title='Important Measures' >Important Measures</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6713" title='Administration Plans' >Administration Plans</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6947" title='Governance Performance' >Governance Performance</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/6714" title='Research and Development' >Research and Development</a>
+                        </li>
+                        
+                        
+                    
+                    </ul>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="classification-menu" href="/Eng/htmlList/6634" title='Services' >Services</a>
+                    <ul class="menu-floor-down
+		                
+		                
+                    ">
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/1920d86cc1924f0ab167daea88210745" title='FAQs' >FAQs</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/6665" title='Tax Information' >Tax Information</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/link/bf33c8ea53394e5faeea99bf0849de4d" title='Contact Us(Open another window)' target='_blank'>Contact Us</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/7016" title='Administrative Appeal & complaint of PPP' >Administrative Appeal & complaint of PPP</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/540f446c515248b687ecc65d8ce4fdd4" title='Mediation of Contract Performance Disputes under the PPIP Act' >Mediation of Contract Performance Disputes under the PPIP Act</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/6659" title='Public Access to Records' >Public Access to Records</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/20467ff6d86140429a6a235b412c277e" title='Bilingual Glossary' >Bilingual Glossary</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/62b534487db34e5f8d4403ffd832dc08" title='Grievance Procedure Section for Worker Rights Protection of those  Dispatched by Labor Service Contracting' >Grievance Procedure Section for Worker Rights Protection of those  Dispatched by Labor Service Contracting</a>
+                        </li>
+                        
+                        
+                    
+                    </ul>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="classification-menu" href="/Eng/htmlList/7a292bbfe5174a9db3a612cac348811e" title='Resources' >Resources</a>
+                    <ul class="menu-floor-down
+		                
+		                
+                    ">
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6708" title='Active Publication of Government Information' >Active Publication of Government Information</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6658" title='Publications' >Publications</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6700" title='Gender Equality' >Gender Equality</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/6703" title='Government Integrity' >Government Integrity</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/htmlList/b703cc16bbf34297ab792e6bf28ef3a8" title='Human Rights' >Human Rights</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/multiplehtml/6707" title='Personal Data Protection' >Personal Data Protection</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li>
+                            <a href="/Eng/link/cd815c6060724937875e3328729cf919" title='The modification instruction of checking logic of Business Administration Number(Open another window)' target='_blank'>The modification instruction of checking logic of Business Administration Number</a>
+                        </li>
+                        
+                        
+                    
+                    </ul>
+                </li>
+                
+            
+        
+        </ul>
+    </div>
+</div></div>
+</div></div></div><div class="function-cabinet full" style=""><div class="container separation-8"><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 medium-content">
+<div class="banner banner-medium_carousel1" id="medium_carousel1">
+    <div>
+        
+            <div >
+            
+                <a href="https://www.dot.gov.tw/Eng/htmlList/en_182" target="_blank" title='link to Tax on Cross-Border Electronic Services(Open another window)'>
+            
+            
+                    <img src="/eng/images/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3GMza%2FlmmkBNSJmJVHNm7ZEqtlWVSGCWqyyIDgj8tHkB6woP%2BZBhWqZBvCYoSL1jrQ%3D" alt="Tax on Cross-Border Electronic Services picture">
+                </a>
+        </div>
+        
+            <div >
+            
+                <a href="https://www.dot.gov.tw/Eng/htmlList/en_209" target="_blank" title='link to Anti-tax Avoidance Rules(Open another window)'>
+            
+            
+                    <img src="/eng/images/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3GMza%2FlmmkBNSJmJVHNm7ZEjm7SUjkJpVob8M8V%2FHerQM7s%2BJVh%2FGL42GbDhLk0glA%3D" alt="Anti-tax Avoidance Rules pinture">
+                </a>
+        </div>
+        
+    </div>
+	<button id="carouselButton" class="carousel-btn" type="button">
+		<img id="carouselIcon" src="/images/pause.png" alt="暫停" />
+	</button>
+</div>
+<script type="text/javascript">
+ImgTextCarouselModule.carousel({
+    idx : 'medium_carousel1',
+    slidesToisAuto: true,
+		isBanner: true,
+    autoplaySpeed: 20000
+});
+        let isPlaying = true;
+        $('#carouselButton').on("click", function (){
+        	const $carousel = $(".banner-medium_carousel1 > div");
+        	
+        	if(isPlaying){
+        		$carousel.slick("slickPause");
+        		$(this).attr("aria-label","播放");
+				$('#carouselIcon').attr("src","/images/play.png");
+        	}else {
+        		$carousel.slick("slickPlay");
+        		$(this).attr("aria-label","暫停");
+				$('#carouselIcon').attr("src","/images/pause.png");
+        	}
+        	
+        	isPlaying = !isPlaying;
+        });
+</script>
+<style>
+#medium_carousel1 {
+  position: relative; 
+}
+
+.carousel-btn {
+  position: absolute;
+  left: 10px; 
+  bottom: 10px; 
+  padding: 6px 12px;
+  background: rgba(51, 51, 51, 0.7); 
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+}
+
+.carousel-btn img {
+	width: 20px;
+	height: 20px;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-btn:focus {
+  background-color: #e00;
+}
+</style>
+</div>
+</div><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 medium-content"><div class="tab-function"><a class="tab-select-text" href="javascript:void(0)" title="Pss Releases Statements(News)"><h2>Pss Releases Statements(News)</h2></a><ul class="tab-title"><li><a class="title-tab tab-select" href="javascript:void(0)" title="Pss Releases Statements(News)" role="button"><h2>Pss Releases Statements(News)</h2></a></li></ul><div class="tab-inner tab-inner-block"><div id="Tab_tab:medium_bulletinListA1" class="bulletin-list">
+<style>
+.bulletin-list .list ul li a p.h3 {
+    color: #353535;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+        
+</style>
+
+
+	
+		<h2 class="h2-title">Pss Releases Statements(News)</h2>
+	
+
+	
+
+	
+		<div class="link-select">
+			<a href="javascript:void(0);" class="link-classification">Classification</a>
+			<div class="link-select-content">
+				
+					
+						
+							
+
+						
+
+						<a href="javascript:void(0);" onclick="switchGategory('ALL','Tab_tab:medium_bulletinListA1', this)" class='selected' role="tab">
+							ALL
+						</a>
+					
+				
+					
+						
+						
+							
+
+
+						<a href="javascript:void(0);" onclick="switchGategory('NTA','Tab_tab:medium_bulletinListA1', this)"  role="tab">
+							National Treasury
+						</a>
+					
+				
+					
+						
+						
+							
+
+
+						<a href="javascript:void(0);" onclick="switchGategory('DOT','Tab_tab:medium_bulletinListA1', this)"  role="tab">
+							Taxation
+						</a>
+					
+				
+					
+						
+						
+							
+
+
+						<a href="javascript:void(0);" onclick="switchGategory('CUS','Tab_tab:medium_bulletinListA1', this)"  role="tab">
+							Customs
+						</a>
+					
+				
+					
+						
+						
+							
+
+
+						<a href="javascript:void(0);" onclick="switchGategory('FNP','Tab_tab:medium_bulletinListA1', this)"  role="tab">
+							National Property
+						</a>
+					
+				
+					
+						
+						
+							
+
+
+						<a href="javascript:void(0);" onclick="switchGategory('PPP','Tab_tab:medium_bulletinListA1', this)"  role="tab">
+							Promotion of Private Participation
+						</a>
+					
+				
+					
+						
+						
+							
+
+
+						<a href="javascript:void(0);" onclick="switchGategory('IFA','Tab_tab:medium_bulletinListA1', this)"  role="tab">
+							International Fiscal Affairs
+						</a>
+					
+				
+					
+						
+						
+							
+
+
+						<a href="javascript:void(0);" onclick="switchGategory('FIM','Tab_tab:medium_bulletinListA1', this)"  role="tab">
+							Financial Administration
+						</a>
+					
+				
+					
+						
+						
+							
+
+
+						<a href="javascript:void(0);" onclick="switchGategory('FaT','Tab_tab:medium_bulletinListA1', this)"  role="tab">
+							Financial and Trade Statistics
+						</a>
+					
+				
+					
+						
+						
+							
+
+
+						<a href="javascript:void(0);" onclick="switchGategory('BUSI','Tab_tab:medium_bulletinListA1', this)"  role="tab">
+							Subordinate Organizations
+						</a>
+					
+				
+					
+						
+						
+							
+
+
+						<a href="javascript:void(0);" onclick="switchGategory('OTH','Tab_tab:medium_bulletinListA1', this)"  role="tab">
+							others
+						</a>
+					
+				
+					
+						
+						
+							
+
+
+						<a href="javascript:void(0);" onclick="switchGategory('CLARIFY','Tab_tab:medium_bulletinListA1', this)"  role="tab">
+							Fact Check & Clarifications
+						</a>
+					
+				
+			</div>
+		</div>
+		<script type="text/javascript">
+			function switchGategory(gategoryCode, medium_bulletinListAId, element) {
+				$('#' + medium_bulletinListAId.replace(':', '\\:') + ' .ALL').hide();
+				if (isMobile()) {
+					$(element).parent('.link-select-content').toggle();
+				}
+				if (gategoryCode === 'ALL') {
+					$('#' + medium_bulletinListAId.replace(':', '\\:') + ' .list:eq(0)').show();
+					$('#' + medium_bulletinListAId.replace(':', '\\:') + ' .more:eq(0)').show();
+					$(element).parent('div').prev('.link-classification').text('Classification');
+				} else {
+					$('#' + medium_bulletinListAId.replace(':', '\\:') + ' .' + gategoryCode).show();
+					$(element).parent('div').prev('.link-classification').text('Classification[' + $(element).text() + ']')
+				}
+			}
+		</script>
+	
+
+	
+		
+			
+			
+			
+				
+			
+
+			<div class="ALL list   list-single" >
+				<ul>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=c2700fee0d9d459d977cc0a7b3b69c53" title='The payment period of the land value tax for 2026 is from November 1, 2026 to November 30, 2026'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								The payment period of the land value tax for 2026 is from November 1, 2026 to November 30, 2026
+							</p> 
+							
+								<span>The Taxation Administration has announced that the statutory payment period for the land value tax o...</span>
+							 
+							 
+							<span class="time">2026-10-22</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="https://service.mof.gov.tw/public/Data/statistic/bulletin/115/2026_17_Fitness_Centers.pdf" title='Statistical Bulletin-Fitness grows in popularity; number of fitness centers and their sales reach record highs in 2025.'
+									target="_blank">
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Statistical Bulletin-Fitness grows in popularity; number of fitness centers and their sales reach record highs in 2025.
+							</p> 
+							 
+							
+								<span></span>
+							 
+							<span class="time">2026-10-22</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=d60e1c5df0df45098086275a18eaba76" title='MOF Issues “A15110” 30-Year Central Government Bond'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								MOF Issues “A15110” 30-Year Central Government Bond
+							</p> 
+							
+								<span> 
+ The Ministry of Finance has commissioned the Central Bank of the Republic of China to auction on ...</span>
+							 
+							 
+							<span class="time">2026-10-20</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=7b2e181524ad43feb147a7dcae0ef5e1" title='Content Creators Who Are Required to Register for Taxation and Pay Business Tax Urged to File and Pay Supplementary Tax Promptly; Those Meeting the Requirements May Still Qualify for Penalty Exemption.'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Content Creators Who Are Required to Register for Taxation and Pay Business Tax Urged to File and Pay Supplementary Tax Promptly; Those Meeting the Requirements May Still Qualify for Penalty Exemption.
+							</p> 
+							
+								<span>The National Taxation Bureau of the Central Area, Ministry of Finance, states that the penalty-exemp...</span>
+							 
+							 
+							<span class="time">2026-10-19</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e46d62902c9042a7862cc90f0648ec02" title='Private Participation in Public Infrastructure Continues to Advance! Golden Thumb Awards, the Oscars of PPP, to Be Held on October 23!'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Private Participation in Public Infrastructure Continues to Advance! Golden Thumb Awards, the Oscars of PPP, to Be Held on October 23!
+							</p> 
+							
+								<span>According to the Ministry of Finance (MOF), the joint efforts of government agencies resulted in 93 ...</span>
+							 
+							 
+							<span class="time">2026-10-19</span> 
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+
+			<div class="ALL more " >
+				
+					
+				
+				
+				
+				
+					
+				
+				<a href="/eng/multiplehtml/f48d641f159a4866b1d31c0916fbcc71" title='ALL'>more ALL &gt;&gt; </a>
+			</div>
+		
+	
+		
+			
+				
+			
+			
+				
+			
+			
+
+			<div class="ALL list NTA  list-single" style='display:none'>
+				<ul>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=d60e1c5df0df45098086275a18eaba76" title='MOF Issues “A15110” 30-Year Central Government Bond'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								MOF Issues “A15110” 30-Year Central Government Bond
+							</p> 
+							
+								<span> 
+ The Ministry of Finance has commissioned the Central Bank of the Republic of China to auction on ...</span>
+							 
+							 
+							<span class="time">2026-10-20</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=27e4d3e046f044f29ff7c7a524f02edf" title='Ministry of Finance and Hualien County Government Jointly convened the 2026 Local Finance Conference to improve local financial performance by sharing excellent experiences and opinions'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Ministry of Finance and Hualien County Government Jointly convened the 2026 Local Finance Conference to improve local financial performance by sharing excellent experiences and opinions
+							</p> 
+							
+								<span> 
+ To strengthen local financial guidance and assist local governments in broadening their revenue s...</span>
+							 
+							 
+							<span class="time">2026-10-14</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=5b2427a7194940d6b097c19916f5e14d" title='MOF Issues “A15109” 10-Year Central Government Bond'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								MOF Issues “A15109” 10-Year Central Government Bond
+							</p> 
+							
+								<span> 
+ The Ministry of Finance has commissioned the Central Bank of the Republic of China to auction on ...</span>
+							 
+							 
+							<span class="time">2026-10-01</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=a97a447a49084db2836a4013ea5c92c8" title='MOF Issues “A15204” 2-Year Central Government Bond'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								MOF Issues “A15204” 2-Year Central Government Bond
+							</p> 
+							
+								<span> 
+ The Ministry of Finance has commissioned the Central Bank of the Republic of China to auction on ...</span>
+							 
+							 
+							<span class="time">2026-09-29</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=d4e7660928694b7ca22d0d1bf7068640" title='The Announcement of Government Bond and Treasury Bill Issuance in the 4th Quarter of FY2026'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								The Announcement of Government Bond and Treasury Bill Issuance in the 4th Quarter of FY2026
+							</p> 
+							
+								<span>1.The details of government bond issuance in the 4th quarter are as follows: 
+ 
+  
+   
+    Month  
+ ...</span>
+							 
+							 
+							<span class="time">2026-09-23</span> 
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+
+			<div class="ALL more NTA" style='display:none'>
+				
+					
+				
+				
+				
+				
+					
+				
+				<a href="/eng/multiplehtml/f48d641f159a4866b1d31c0916fbcc71?categoryCode=NTA" title='National Treasury'>more National Treasury &gt;&gt; </a>
+			</div>
+		
+	
+		
+			
+				
+			
+			
+				
+			
+			
+
+			<div class="ALL list DOT  list-single" style='display:none'>
+				<ul>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=c2700fee0d9d459d977cc0a7b3b69c53" title='The payment period of the land value tax for 2026 is from November 1, 2026 to November 30, 2026'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								The payment period of the land value tax for 2026 is from November 1, 2026 to November 30, 2026
+							</p> 
+							
+								<span>The Taxation Administration has announced that the statutory payment period for the land value tax o...</span>
+							 
+							 
+							<span class="time">2026-10-22</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=7b2e181524ad43feb147a7dcae0ef5e1" title='Content Creators Who Are Required to Register for Taxation and Pay Business Tax Urged to File and Pay Supplementary Tax Promptly; Those Meeting the Requirements May Still Qualify for Penalty Exemption.'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Content Creators Who Are Required to Register for Taxation and Pay Business Tax Urged to File and Pay Supplementary Tax Promptly; Those Meeting the Requirements May Still Qualify for Penalty Exemption.
+							</p> 
+							
+								<span>The National Taxation Bureau of the Central Area, Ministry of Finance, states that the penalty-exemp...</span>
+							 
+							 
+							<span class="time">2026-10-19</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=5155c2c0a3414e4eae0fd7b9ee33a938" title='Deductions for Losses from Overseas Property Transactions Are Limited to Income from Overseas Property Transactions in the Same Taxable Year'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Deductions for Losses from Overseas Property Transactions Are Limited to Income from Overseas Property Transactions in the Same Taxable Year
+							</p> 
+							
+								<span>The National Taxation Bureau of the Southern Area, Ministry of Finance, stated that when an individu...</span>
+							 
+							 
+							<span class="time">2026-10-08</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=c47930f72ad14cff8a2965e95c605541" title=' Business Entities That Issue Supplemental Uniform Invoices but Fail to File Supplementary Tax Declarations and Make Supplementary Payment Are Not Exempt From Penalty.'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								 Business Entities That Issue Supplemental Uniform Invoices but Fail to File Supplementary Tax Declarations and Make Supplementary Payment Are Not Exempt From Penalty.
+							</p> 
+							
+								<span>The National Taxation Bureau of the Southern Area, Ministry of Finance, stated that according to Art...</span>
+							 
+							 
+							<span class="time">2026-10-08</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=ecf3ee4243e545818d6065fbad4a30f3" title='Attention, Renters! Up to NT$180,000 in Rental Expense Deductions Allowed in Individual Income Tax Returns'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Attention, Renters! Up to NT$180,000 in Rental Expense Deductions Allowed in Individual Income Tax Returns
+							</p> 
+							
+								<span>The National Taxation Bureau of Taipei, Ministry of Finance announced that to ease the financial bur...</span>
+							 
+							 
+							<span class="time">2026-10-08</span> 
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+
+			<div class="ALL more DOT" style='display:none'>
+				
+					
+				
+				
+				
+				
+					
+				
+				<a href="/eng/multiplehtml/f48d641f159a4866b1d31c0916fbcc71?categoryCode=DOT" title='Taxation'>more Taxation &gt;&gt; </a>
+			</div>
+		
+	
+		
+			
+				
+			
+			
+				
+			
+			
+
+			<div class="ALL list CUS  list-single" style='display:none'>
+				<ul>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=ee6dbab0a0f245cdb94958d6c4914f8b" title='Customs Deploys More Manpower for Beigan Mini-Three-Links, Ensure Fast Passenger Clearance, Border Security'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Customs Deploys More Manpower for Beigan Mini-Three-Links, Ensure Fast Passenger Clearance, Border Security
+							</p> 
+							
+								<span>Keelung Customs (KLC) responded to the news that the X-ray inspection machine at Baisha Port in Beig...</span>
+							 
+							 
+							<span class="time">2026-10-15</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=b2fbbbac02f74a64a28e188f92b5af0a" title='Customs Administration Announced Amendment of the Operation Directions for Imported Used Cars Valuation to Simplify the Valuation Process for Used Cars Brought Back by Passengers for Personal Use'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Customs Administration Announced Amendment of the Operation Directions for Imported Used Cars Valuation to Simplify the Valuation Process for Used Cars Brought Back by Passengers for Personal Use
+							</p> 
+							
+								<span>To simplify the valuation process for used cars brought back by passengers for personal use, Customs...</span>
+							 
+							 
+							<span class="time">2026-10-02</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=a507bbfeb877473e93671013d6ded326" title='KHC Urges Importers to Accurately Declare Tariff Code for Paper Cutters with Protractor to Ensure Fast Clearance'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								KHC Urges Importers to Accurately Declare Tariff Code for Paper Cutters with Protractor to Ensure Fast Clearance
+							</p> 
+							
+								<span>Kaohsiung Customs (KHC) stated that there have been recent cases of importers declaring “PAPER CUTTE...</span>
+							 
+							 
+							<span class="time">2026-09-30</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=656d7ae90f5a4835bfbe80cb1ef6c15f" title='Customs to Remain Open During Mid-Autumn Festival and Teachers’ Day Holidays to Ensure Smooth Clearance'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Customs to Remain Open During Mid-Autumn Festival and Teachers’ Day Holidays to Ensure Smooth Clearance
+							</p> 
+							
+								<span>Taichung Customs, Customs Administration, Ministry of Finance, announced that, in response to the cu...</span>
+							 
+							 
+							<span class="time">2026-09-23</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=ec810eb053c64909a28a2bd324680898" title='Taipei Customs Steps Up Border Inspections Ahead of Mid-Autumn Festival to Keep African Swine Fever Out of Taiwan '
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Taipei Customs Steps Up Border Inspections Ahead of Mid-Autumn Festival to Keep African Swine Fever Out of Taiwan 
+							</p> 
+							
+								<span>With the Mid-Autumn Festival approaching, Taipei Customs steps up border inspections to prevent the ...</span>
+							 
+							 
+							<span class="time">2026-09-17</span> 
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+
+			<div class="ALL more CUS" style='display:none'>
+				
+					
+				
+				
+				
+				
+					
+				
+				<a href="/eng/multiplehtml/f48d641f159a4866b1d31c0916fbcc71?categoryCode=CUS" title='Customs'>more Customs &gt;&gt; </a>
+			</div>
+		
+	
+		
+			
+				
+			
+			
+				
+			
+			
+
+			<div class="ALL list FNP  list-single" style='display:none'>
+				<ul>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=8817dcb37c254067a0ed1ccf38c36937" title='Relevant Measures to Assist Lessees of National Land in Disaster-Affected Areas with Rent Reduction and the Repair or Reconstruction of Houses in Response to Typhoon Saudel'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Relevant Measures to Assist Lessees of National Land in Disaster-Affected Areas with Rent Reduction and the Repair or Reconstruction of Houses in Response to Typhoon Saudel
+							</p> 
+							
+								<span>　　In response to the possible damage caused by Typhoon Saudel in some areas in Taiwan, the NPA has r...</span>
+							 
+							 
+							<span class="time">2026-08-27</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=249ecca1596e4a8088117175aa156122" title='Diversify the Revitalization of National Assets to Implement National Policies and Increase Treasury Revenue'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Diversify the Revitalization of National Assets to Implement National Policies and Increase Treasury Revenue
+							</p> 
+							
+								<span>        The Ministry of Finance indicates that national real estate is the asset of all the people. ...</span>
+							 
+							 
+							<span class="time">2026-08-21</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=30d0c6def81c4ee78d59dcd6d6647a1e" title='MOF Issues “A15108” 5-Year Central Government Bond'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								MOF Issues “A15108” 5-Year Central Government Bond
+							</p> 
+							
+								<span> 
+ The Ministry of Finance has commissioned the Central Bank of the Republic of China to auction on ...</span>
+							 
+							 
+							<span class="time">2026-08-13</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=d3f9ecd3439e481a9e486629fda1cca1" title='New Lease Renewal System for Lease by Tender of National Houses and Lands Launched to Accelerate the Revitalization of National Assets'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								New Lease Renewal System for Lease by Tender of National Houses and Lands Launched to Accelerate the Revitalization of National Assets
+							</p> 
+							
+								<span>        To accelerate the revitalization of national assets, the National Property Administration (N...</span>
+							 
+							 
+							<span class="time">2026-07-23</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=3c809eaf1185458bb8c8e2a5a1c12032" title='Good News: Lessees of National Afforestation Land May Now Authorize Companies to Apply for Voluntary Greenhouse Gas Reduction Projects on Their Behalf'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Good News: Lessees of National Afforestation Land May Now Authorize Companies to Apply for Voluntary Greenhouse Gas Reduction Projects on Their Behalf
+							</p> 
+							
+								<span>        The National Property Administration (NPA) manages more than 20,000 hectares of national lea...</span>
+							 
+							 
+							<span class="time">2026-05-11</span> 
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+
+			<div class="ALL more FNP" style='display:none'>
+				
+					
+				
+				
+				
+				
+					
+				
+				<a href="/eng/multiplehtml/f48d641f159a4866b1d31c0916fbcc71?categoryCode=FNP" title='National Property'>more National Property &gt;&gt; </a>
+			</div>
+		
+	
+		
+			
+				
+			
+			
+				
+			
+			
+
+			<div class="ALL list PPP  list-single" style='display:none'>
+				<ul>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e46d62902c9042a7862cc90f0648ec02" title='Private Participation in Public Infrastructure Continues to Advance! Golden Thumb Awards, the Oscars of PPP, to Be Held on October 23!'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Private Participation in Public Infrastructure Continues to Advance! Golden Thumb Awards, the Oscars of PPP, to Be Held on October 23!
+							</p> 
+							
+								<span>According to the Ministry of Finance (MOF), the joint efforts of government agencies resulted in 93 ...</span>
+							 
+							 
+							<span class="time">2026-10-19</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=260a1f090e8c470e97618f6fcd3ecd22" title='The 24th GoldenThumb Awards for PPP Announced! Ministry of Finance to Hold Award Ceremony on October 23 '
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								The 24th GoldenThumb Awards for PPP Announced! Ministry of Finance to Hold Award Ceremony on October 23 
+							</p> 
+							
+								<span>The 24th Golden Thumb Awards for PPP have officially been announced! After a rigorous evaluation pro...</span>
+							 
+							 
+							<span class="time">2026-09-10</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e32d11e470da4ea6bd3f72f539ea95ad" title='Ministry of Finance’s 2026 Investment Promotion Conference Builds the Best Platform for PPP Unveiling Hundreds of Billions in PPP Opportunities!'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Ministry of Finance’s 2026 Investment Promotion Conference Builds the Best Platform for PPP Unveiling Hundreds of Billions in PPP Opportunities!
+							</p> 
+							
+								<span>The Ministry of Finance held the “2026 Investment Promotion Conference for Private Participation in ...</span>
+							 
+							 
+							<span class="time">2026-07-24</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=3016a29106e64f5a9eb296c1e00053a4" title='24th Golden Thumb Awards Preliminary Review Results Announced! 24 PPP Projects Showcase Diverse New Faces of Public Infrastructure'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								24th Golden Thumb Awards Preliminary Review Results Announced! 24 PPP Projects Showcase Diverse New Faces of Public Infrastructure
+							</p> 
+							
+								<span>                The Ministry of Finance today announced the preliminary review results of the 24th G...</span>
+							 
+							 
+							<span class="time">2026-07-01</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=4a016366a9064d3c8828a97bafb304cb" title='2026 PPP Investment Convention to Showcase Over NT$220 Billion in New Public Infrastructure Opportunities AI Computing Facilities Added to Major Public Infrastructure Projects; Long-Term Care Bed Ratio Requirements Relaxed'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								2026 PPP Investment Convention to Showcase Over NT$220 Billion in New Public Infrastructure Opportunities AI Computing Facilities Added to Major Public Infrastructure Projects; Long-Term Care Bed Ratio Requirements Relaxed
+							</p> 
+							
+								<span>Looking ahead to the second half of this year through the first half of 2027, investment opportuniti...</span>
+							 
+							 
+							<span class="time">2026-06-23</span> 
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+
+			<div class="ALL more PPP" style='display:none'>
+				
+					
+				
+				
+				
+				
+					
+				
+				<a href="/eng/multiplehtml/f48d641f159a4866b1d31c0916fbcc71?categoryCode=PPP" title='Promotion of Private Participation'>more Promotion of Private Participation &gt;&gt; </a>
+			</div>
+		
+	
+		
+			
+				
+			
+			
+				
+			
+			
+
+			<div class="ALL list IFA  list-single" style='display:none'>
+				<ul>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=f6857bbb6d684443851733297401bcf0" title='MOF Achieves Remarkable Outcomes in Promoting Tax and Customs Agreements in 2026 to Advance Fiscal Diplomacy'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								MOF Achieves Remarkable Outcomes in Promoting Tax and Customs Agreements in 2026 to Advance Fiscal Diplomacy
+							</p> 
+							
+								<span>The Ministry of Finance (MOF) actively promotes international fiscal exchanges and strengthens bilat...</span>
+							 
+							 
+							<span class="time">2026-08-31</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=264e8e7521b647c88dffce4c503b8d4c" title='Statistics of 2025 CRS data reported by Financial Institutions'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Statistics of 2025 CRS data reported by Financial Institutions
+							</p> 
+							
+								<span>The electronic reporting of 2025 financial account information in tax matters (CRS) was completed sm...</span>
+							 
+							 
+							<span class="time">2026-07-30</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=606a259962ae4c32ad1cada20dde955c" title='Finance Minister Ms. Tsui-Yun Chuang Led a Delegation to Attend the 59th Annual Meeting of the Board of Governors of the ADB in 2026'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Finance Minister Ms. Tsui-Yun Chuang Led a Delegation to Attend the 59th Annual Meeting of the Board of Governors of the ADB in 2026
+							</p> 
+							
+								<span>The Ministry of Finance (MOF) stated that the 59th Annual Meeting of the Board of Governors of the A...</span>
+							 
+							 
+							<span class="time">2026-06-10</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=f510c3b2d1c34772a85a75f5d9c18b88" title='The Republic of China (Taiwan) and the Kingdom of Eswatini Signed Customs Mutual Assistance Agreement to Establish Cooperation Mechanism'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								The Republic of China (Taiwan) and the Kingdom of Eswatini Signed Customs Mutual Assistance Agreement to Establish Cooperation Mechanism
+							</p> 
+							
+								<span>The Ministry of Finance (MOF) stated that the &#034;Agreement between the Government of the Republic of C...</span>
+							 
+							 
+							<span class="time">2026-05-03</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=9cca9b457e7e4b12bc8bd4715c1feece" title='Income Tax Agreement between Taiwan and Tuvalu Being Signed on March 4, 2026'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Income Tax Agreement between Taiwan and Tuvalu Being Signed on March 4, 2026
+							</p> 
+							
+								<span>The Ministry of Finance (MOF) states that the &#034;Agreement between the Government of the Republic of C...</span>
+							 
+							 
+							<span class="time">2026-03-05</span> 
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+
+			<div class="ALL more IFA" style='display:none'>
+				
+					
+				
+				
+				
+				
+					
+				
+				<a href="/eng/multiplehtml/f48d641f159a4866b1d31c0916fbcc71?categoryCode=IFA" title='International Fiscal Affairs'>more International Fiscal Affairs &gt;&gt; </a>
+			</div>
+		
+	
+		
+			
+				
+			
+			
+				
+			
+			
+
+			<div class="ALL list FIM  list-single" style='display:none'>
+				<ul>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=27e4d3e046f044f29ff7c7a524f02edf" title='Ministry of Finance and Hualien County Government Jointly convened the 2026 Local Finance Conference to improve local financial performance by sharing excellent experiences and opinions'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Ministry of Finance and Hualien County Government Jointly convened the 2026 Local Finance Conference to improve local financial performance by sharing excellent experiences and opinions
+							</p> 
+							
+								<span> 
+ To strengthen local financial guidance and assist local governments in broadening their revenue s...</span>
+							 
+							 
+							<span class="time">2026-10-14</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=77ec1d5c48b048f592de38eba6cec6ad" title='Total amount of money for cloud invoice and printed certification copy prize for May to June 2026 exceeds NT$3.94 billion'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Total amount of money for cloud invoice and printed certification copy prize for May to June 2026 exceeds NT$3.94 billion
+							</p> 
+							
+								<span>The winning number for the May to June 2026 uniform invoice special prize is 38548029. According to ...</span>
+							 
+							 
+							<span class="time">2026-08-04</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=f9c828db9b5f4ff4923a606bd19bf697" title='Total amount of money for cloud invoice and printed certification copy prize for January to February 2026 exceeds NT$3.92 billion'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Total amount of money for cloud invoice and printed certification copy prize for January to February 2026 exceeds NT$3.92 billion
+							</p> 
+							
+								<span>The winning number for the March to April 2026 uniform invoice special prize is 19531471. According ...</span>
+							 
+							 
+							<span class="time">2026-06-02</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=ef8744415e854fbe8dbe5411d7a048c1" title='FIA issues the 2023 statistical book of assessed individual income tax filing data'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								FIA issues the 2023 statistical book of assessed individual income tax filing data
+							</p> 
+							
+								<span>The Fiscal Information Agency (FIA), Ministry of Finance, announced that the 2023 statistical book o...</span>
+							 
+							 
+							<span class="time">2026-04-30</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=737dd1d80b6648ac8a96b0694e19659d" title='Total amount of money for cloud invoice and printed certification copy prize for November to December 2025 exceeds NT$3.52 billion'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Total amount of money for cloud invoice and printed certification copy prize for November to December 2025 exceeds NT$3.52 billion
+							</p> 
+							
+								<span>The winning number for the November to December 2025 uniform invoice special prize is 97023797. Acco...</span>
+							 
+							 
+							<span class="time">2026-02-04</span> 
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+
+			<div class="ALL more FIM" style='display:none'>
+				
+					
+				
+				
+				
+				
+					
+				
+				<a href="/eng/multiplehtml/f48d641f159a4866b1d31c0916fbcc71?categoryCode=FIM" title='Financial Administration'>more Financial Administration &gt;&gt; </a>
+			</div>
+		
+	
+		
+			
+				
+			
+			
+				
+			
+			
+
+			<div class="ALL list FaT  list-single" style='display:none'>
+				<ul>
+					
+						<li>
+						
+								<a href="https://service.mof.gov.tw/public/Data/statistic/bulletin/115/2026_17_Fitness_Centers.pdf" title='Statistical Bulletin-Fitness grows in popularity; number of fitness centers and their sales reach record highs in 2025.'
+									target="_blank">
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Statistical Bulletin-Fitness grows in popularity; number of fitness centers and their sales reach record highs in 2025.
+							</p> 
+							 
+							
+								<span></span>
+							 
+							<span class="time">2026-10-22</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=c9e2afdf55d649d69b8e1a05197ad83c" title='Preliminary Total Net Tax Revenue for September 2026'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Preliminary Total Net Tax Revenue for September 2026
+							</p> 
+							
+								<span>For the month of August 2026, total net tax revenue was NT$ 496.5 billion, which is NT$ 81.3 billion...</span>
+							 
+							 
+							<span class="time">2026-10-13</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=c4c81d1e185c4e85a192a0fb65f7cd64" title='Summary of Exports and Imports for September 2026'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Summary of Exports and Imports for September 2026
+							</p> 
+							
+								<span>For Sep. 2026, total exports expanded by 60.9% year on year to US$87.22 billion; total imports rose ...</span>
+							 
+							 
+							<span class="time">2026-10-08</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="https://service.mof.gov.tw/public/Data/statistic/bulletin/115/202616_female_staff.pdf" title='Statistical Bulletin - In 2023, each tax admin staff member in Taiwan served 2,583 citizens, with females making up roughly 80% of the workforce, significantly higher than most neighboring economies.'
+									target="_blank">
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Statistical Bulletin - In 2023, each tax admin staff member in Taiwan served 2,583 citizens, with females making up roughly 80% of the workforce, significantly higher than most neighboring economies.
+							</p> 
+							 
+							
+								<span></span>
+							 
+							<span class="time">2026-09-24</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="https://service.mof.gov.tw/public/Data/statistic/bulletin/115/2026_15_Top10_EX.pdf" title='Statistical Bulletin - Top 10 export commodities accounted for over 80% of Taiwan&#039;s total exports in Jan.–Aug. 2026, with “automatic data processing machines and units thereof” leading at 33.5%.'
+									target="_blank">
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Statistical Bulletin - Top 10 export commodities accounted for over 80% of Taiwan&#039;s total exports in Jan.–Aug. 2026, with “automatic data processing machines and units thereof” leading at 33.5%.
+							</p> 
+							 
+							
+								<span></span>
+							 
+							<span class="time">2026-09-17</span> 
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+
+			<div class="ALL more FaT" style='display:none'>
+				
+					
+				
+				
+				
+				
+					
+				
+				<a href="/eng/multiplehtml/f48d641f159a4866b1d31c0916fbcc71?categoryCode=FaT" title='Financial and Trade Statistics'>more Financial and Trade Statistics &gt;&gt; </a>
+			</div>
+		
+	
+		
+			
+				
+			
+			
+				
+			
+			
+
+			<div class="ALL list BUSI  list-single" style='display:none'>
+				<ul>
+					
+						<li>
+						
+								<a href="https://www.ppmof.gov.tw/eng/News/" title='Printing Plant, Ministry of Finance Latest News'
+									target="_blank">
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Printing Plant, Ministry of Finance Latest News
+							</p> 
+							 
+							
+								<span></span>
+							 
+							<span class="time">2021-02-01</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="https://www.eximbank.com.tw/en-us/news/GeneralAnnouncements/Pages/default.aspx" title='The Export-Import Bank of the Republic of China General Announcements'
+									target="_blank">
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								The Export-Import Bank of the Republic of China General Announcements
+							</p> 
+							 
+							
+								<span></span>
+							 
+							<span class="time">2021-02-01</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="https://en.ttl.com.tw/news/news.aspx" title='Taiwan Tobacco and Liquor Corporation News'
+									target="_blank">
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Taiwan Tobacco and Liquor Corporation News
+							</p> 
+							 
+							
+								<span></span>
+							 
+							<span class="time">2021-02-01</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="https://www.twfhc.com.tw/Eng/Home/index" title='Taiwan Financial Holdings Co., Ltd. Latest News'
+									target="_blank">
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Taiwan Financial Holdings Co., Ltd. Latest News
+							</p> 
+							 
+							
+								<span></span>
+							 
+							<span class="time">2021-02-01</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="https://www.landbank.com.tw/En/Category/Bulletins/Latest_News" title='Land Bank of Taiwan Latest News'
+									target="_blank">
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Land Bank of Taiwan Latest News
+							</p> 
+							 
+							
+								<span></span>
+							 
+							<span class="time">2021-02-01</span> 
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+
+			<div class="ALL more BUSI" style='display:none'>
+				
+					
+				
+				
+				
+				
+					
+				
+				<a href="/eng/multiplehtml/f48d641f159a4866b1d31c0916fbcc71?categoryCode=BUSI" title='Subordinate Organizations'>more Subordinate Organizations &gt;&gt; </a>
+			</div>
+		
+	
+		
+			
+				
+			
+			
+				
+			
+			
+
+			<div class="ALL list OTH  list-single" style='display:none'>
+				<ul>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=99a18a768fd1495985a18a43494b1d83" title='The Finance Minister, Dr. Su Jain-Rong attended the 2021 APEC Virtual Finance Ministers&#039; Meeting; he highlighted Taiwan&#039;s commitment to promoting economic recovery and maintaining fiscal sustainability.'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								The Finance Minister, Dr. Su Jain-Rong attended the 2021 APEC Virtual Finance Ministers&#039; Meeting; he highlighted Taiwan&#039;s commitment to promoting economic recovery and maintaining fiscal sustainability.
+							</p> 
+							
+								<span>The Finance Minister, Dr. Su Jain-Rong attended the 2021 APEC Virtual Finance Ministers’ Meeting (VF...</span>
+							 
+							 
+							<span class="time">2021-10-26</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=47b8c42fb8c64f24b989a9a9f94486c3" title='2020 International Taxation Workshop held at MOFTI '
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								2020 International Taxation Workshop held at MOFTI 
+							</p> 
+							
+								<span>To strengthen tax officials’ capabilities in the wave of recent international taxation reforms, the ...</span>
+							 
+							 
+							<span class="time">2020-09-07</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=be834c4591d047aeb709d57b2a73eac7" title='2020 Talent Cultivation Program'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								2020 Talent Cultivation Program
+							</p> 
+							
+								<span>The human resources are the most important assets of an organization, while the efficiency of govern...</span>
+							 
+							 
+							<span class="time">2020-08-28</span> 
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+
+			<div class="ALL more OTH" style='display:none'>
+				
+					
+				
+				
+				
+				
+					
+				
+				<a href="/eng/multiplehtml/f48d641f159a4866b1d31c0916fbcc71?categoryCode=OTH" title='others'>more others &gt;&gt; </a>
+			</div>
+		
+	
+		
+			
+				
+			
+			
+				
+			
+			
+
+			<div class="ALL list CLARIFY  list-single" style='display:none'>
+				<ul>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=ee6dbab0a0f245cdb94958d6c4914f8b" title='Customs Deploys More Manpower for Beigan Mini-Three-Links, Ensure Fast Passenger Clearance, Border Security'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Customs Deploys More Manpower for Beigan Mini-Three-Links, Ensure Fast Passenger Clearance, Border Security
+							</p> 
+							
+								<span>Keelung Customs (KLC) responded to the news that the X-ray inspection machine at Baisha Port in Beig...</span>
+							 
+							 
+							<span class="time">2026-10-15</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=3c319b7be9144c218a7ca5bd3c5368a1" title='Keelung Customs Responds to News on X-ray Channels for General Cargo Containers'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								Keelung Customs Responds to News on X-ray Channels for General Cargo Containers
+							</p> 
+							
+								<span>As the news stated: “Customs allowed Keelung Port Global Logistic Pty Ltd. to start operating and ch...</span>
+							 
+							 
+							<span class="time">2026-04-10</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=befb58b0c6ba466cb275a3448ec60ce6" title=' &#034;Advance Authorization System for Imported Express Cargo Fully Implemented from March 1, Freight Forwarders Fear Air Cargo Clearance Paralysis&#034; '
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								 &#034;Advance Authorization System for Imported Express Cargo Fully Implemented from March 1, Freight Forwarders Fear Air Cargo Clearance Paralysis&#034; 
+							</p> 
+							
+								<span>The Customs Administration stated that, in order to prevent fraudulent customs declarations made und...</span>
+							 
+							 
+							<span class="time">2026-04-10</span> 
+							</a>
+						</li>
+					
+						<li>
+						
+								<a href="/eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=e1326386f43142f28be1cdee04f586eb" title='MOF Reiterates That Popular Consumer Dining Establishments and Small-Scale Businesses with Monthly Sales Below NT$200,000 Remain Exempt from Issuing Uniform Invoices, to Avoid Public Misunderstanding'
+									>
+						 
+						 
+						
+								<span class="category">Press Releases Statements(News)</span>
+						
+							<p class='h3'>
+								
+								MOF Reiterates That Popular Consumer Dining Establishments and Small-Scale Businesses with Monthly Sales Below NT$200,000 Remain Exempt from Issuing Uniform Invoices, to Avoid Public Misunderstanding
+							</p> 
+							
+								<span>1. Popular consumer dining establishments and small-scale businesses with monthly assessed sales bel...</span>
+							 
+							 
+							<span class="time">2026-03-19</span> 
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+
+			<div class="ALL more CLARIFY" style='display:none'>
+				
+					
+				
+				
+				
+				
+					
+				
+				<a href="/eng/multiplehtml/f48d641f159a4866b1d31c0916fbcc71?categoryCode=CLARIFY" title='Fact Check & Clarifications'>more Fact Check & Clarifications &gt;&gt; </a>
+			</div>
+		
+	
+</div></div></div></div>
+</div></div><div class="container separation-2"><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 small-content">
+	<script type="text/javascript">
+		$(function(){
+			$.ajax({
+				url:"/eng/getCalendar",
+				data:{
+					svckey : "small_stroke1"
+					},
+				dataType: "html",
+				success:function(data) {
+					$("div#small_stroke1").html(data);
+				}
+			})
+		});
+	</script>
+
+	<div class="calendar-box">
+	 	<h2 class="h2-title">Schedule</h2>
+		<div class="border-box">
+			<div id="small_stroke1" class="calendar datepickerFocus" focus=''></div>
+			<div class="tips">
+	          	<div class="today">today</div>
+	        	<div class="article-content">content</div>
+	        </div>
+		</div>
+	</div>
+</div>
+</div><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 small-content">
+    <div class="video-block" id="small_videoBlock1">
+        <h2 class="h2-title">Audio & Visual</h2>
+        <div><iframe title="Audio & Visual" width="100%" height="235" src="https://www.youtube.com/embed/oC9lcIveA4o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <p>Extra Commodity Tax Refunds for Trading in Old Vehicles and Purchasing New Small Cars or Motorcycles.</p>
+        <a href='/eng/video/305' class="more" title="moreAudio & Visual">
+        more</a>
+    </div>
+</div>
+</div></div></div><div class="function-cabinet one-block" style=""><div class="container"><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive">
+    <div id="large_imgLink1" class="img-link">
+    
+        <h2 class="h2-title">What's Popular</h2>
+    
+        <div class="img-link-container row-quantity block-6 padding-slim" >
+        
+            <div class="img-buttom">
+                <a href="https://www.etax.nat.gov.tw/etwmain/en/commodity-tax-refund" title="Link to Commodity tax refund for purchase of energy-saving appliances(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeGwdQB%2FzpWHhl2O5B5sRTYBQ73mq13ckrCLCbEsmQaDO0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Commodity tax refund for purchase of energy-saving appliances</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.etax.nat.gov.tw/etwmain/en/commodity-tax-deduction" title="Link to Refund on Newly Purchased Vehicles for Discard or Export of Used Car/Motorcycle(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeKfO96fdndAJBanF0jVKMjU0oiUJ0sgDkvJMNr07w4Dd0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Tax Refund for New or Replacement Vehicle Purchases</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.nta.gov.tw/Eng/htmlList/2764" title="Link to Preferential Housing Loans for the Youth(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeKfO96fdndAJM6OCpNOO1GDpjy9gpRSed3UbnYCRTjHM0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Preferential Housing Loans for the Youth</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.etax.nat.gov.tw/etwmain/en/etw183w" title="Link to Uniform-Invoice Winning Numbers(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeOKIWCV0eX%2Fjph53nGeQXAd%2Bs2jbjg%2B98MntgVVNtS6n0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Uniform-Invoice Winning Numbers</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.dot.gov.tw/Eng/htmlList/en_209" title="Link to Anti-tax Avoidance Rules(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeI2rBzZqLRoxJCKthsUSDAGmZkqPVBjo5GxN4Ud3KrIQ0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Anti-tax Avoidance Rules</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.dot.gov.tw/Eng/htmlList/en_182" title="Link to Tax on Cross-Border Electronic Services(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeI2rBzZqLRoxCjtxSaHRJRFRaNsHZ9jDb5HLCFnLvO2w0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Tax on Cross-Border Electronic Services</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.mof.gov.tw/Eng/htmlList/6706" title="Link to Taxpayer Rights Protection(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeOHQZ7%2FuXP3kprAmHvocijO3LyS0SAu1h3C1NaVwoEUh0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Taxpayer Rights Protection</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.dot.gov.tw/Eng/htmlList/en_149" title="Link to Taiwan Tax Refund(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeObiuvYvRcwOIgO1wgsXRWu0RRiEM1qYMYvd%2FkS4uU320wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Taiwan Tax Refund</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.dot.gov.tw/Eng/htmlList/en_135" title="Link to Investment in Taiwan(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeGPFvbEnHY3JEd7EDUwIrXtaA%2B1Nd%2BeKbzZLJ3ByYJKs0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Investment in Taiwan</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.etax.nat.gov.tw/etwmain/en/exhibitor-vat-refund-system" title="Link to Exhibitor's VAT Refund System(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeJW8agKDG84vv2rW2CaZbZUge%2FlWcBZ5DC%2B9F1efN%2FAD0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Exhibitor's VAT Refund System</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://tax.nat.gov.tw/alltax.html?id=9" title="Link to Individual Income Tax for Aliens(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeJW8agKDG84v8jbZyJ6Qw%2B0RwLFUlfAiBP%2BwpF%2B4IU6J0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Individual Income Tax for Aliens</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://tax.nat.gov.tw/alltax.html?id=28" title="Link to Country-by-Country Report Submission System(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeCi0iKLTXmgao9JvK3qIUxqngfdmQEgdYFurHgVWCG1B0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Country-by-Country Report Submission System</h3>
+                        
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+</div><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive">
+    <div id="large_imgLink2" class="img-link">
+    
+        <h2 class="h2-title">Core Business</h2>
+    
+        <div class="img-link-container  padding-slim" >
+        
+            <div class="img-buttom">
+                <a href="https://www.nta.gov.tw/eng" title="Link to National Treasury(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeBjsHHe91LC%2FVB2FbsfticbOGHHF95cOD%2F20gwG0NiDn0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>National Treasury</h3>
+                        <p><p>Public Welfare Lottery, Tobacco and Alcohol Administration, Public Debt, Treasury Finance,  Treasury Disbursement</p>
+</p>
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.dot.gov.tw/Eng" title="Link to Taxation(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeDS0lwxV9QQaMB1UNKGQiYxSYiGibqV19HkRMiUQlvx10wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Taxation</h3>
+                        <p><p>National and Local Tax Laws & Regulations, Planning of Tax Collection and Tax Administration, Uniform Invoices, Certified Public Bookkeepers</p>
+</p>
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://web.customs.gov.tw/en/" title="Link to Customs(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeAvNu8oJ0KZEI3MBJt76gWTIw3reTcA%2F3eA3EFWuXgKa0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Customs</h3>
+                        <p><p>Cargo Clearance, Offshore Island Duty-free Shops, Imported/Exported Goods, Customs Duty</p>
+</p>
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.fnp.gov.tw/fnpen" title="Link to National Property(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeAvNu8oJ0KZEeaNcN99OYA3QnycNIvHt6VcP1gqkMf3Y0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>National Property</h3>
+                        <p><p>Lease, Purchase, Improvement and Utilization, Afforestation and Beautification of National Non-public Use Land</p>
+</p>
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://www.mof.gov.tw/Eng/multiplehtml/264" title="Link to International Fiscal Affairs(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeLTcifb9cQP7QqhX60RlOKhHFvZykyAhjbix3%2BeqWrro0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>International Fiscal Affairs</h3>
+                        <p><p>Tax Agreements, International Customs Affairs, Tax Cooperation, Financial Cooperation and Exchanges</p>
+</p>
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+            <div class="img-buttom">
+                <a href="https://ppp.mof.gov.tw/WWWE/index.aspx" title="Link to Promotion of Private Participation(Open another window) "  target="_blank">
+                        <div class="buttomImg-box">
+                                <img src="/eng/graphicLinkImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3FVyG6oJqCIeA9bBUaJ0Cj6WtqQ62GFThpQf6YGAFybP6%2FbHEEEfMVZ0wobdd%2F9d2A%3D"  alt=''>
+                        </div>
+                        <h3>Promotion of Private Participation</h3>
+                        <p><p>Establishment and Interpretation of PPP Laws and Regulations, Certification and Training, Information Collection Statistics, Subsidies and Incentives, Supervision and Evaluation, Performance Dispute Mediation</p>
+</p>
+                    </a>
+                    <div class="social-icon">
+                        
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+</div></div></div><div class="function-cabinet" style=""><div class="container separation-7"><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 medium-content">
+    <div  id="medium_txtStatistics1" class="statistical-indicators">
+        <h2 class="h2-title">Statistical Indicators</h2>
+        <div class="statistical-container">
+            <ul class="list">
+                
+                    <li onclick='changeImgtxtStatistics("medium_txtStatistics1","https://www.mof.gov.tw/Eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=c9e2afdf55d649d69b8e1a05197ad83c","/eng/txtStatisticsImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3G3lXRL9SF6LwBM9YuVGwV8tmgk4xB9DXuB9vapVNpJKe9lAQUZbxOEW0dtWzD40IaKgWSYS08VnQ%3D%3D","Y","Preliminary Total Net Tax Revenue from Jan. to Sep. 2026(Open another window)", "Preliminary Total Net Tax Revenue for Sep. 2026");'>
+                        <div class="title"><a href="https://www.mof.gov.tw/Eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=c9e2afdf55d649d69b8e1a05197ad83c" title="Preliminary Total Net Tax Revenue from Jan. to Sep. 2026(Open another window)" 
+                            target='_blank' >Preliminary Total Net Tax Revenue from Jan. to Sep. 2026</a></div>
+                        <div class="static-num up" title="Statistics：NT$ 3,571.4 billion">NT$ 3,571.4 billion</div>
+                    </li>
+                
+                    <li onclick='changeImgtxtStatistics("medium_txtStatistics1","https://service.mof.gov.tw/public/Data/statistic/monthly/11508/21020_11508.pdf","/eng/txtStatisticsImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3G3lXRL9SF6LwBM9YuVGwV8b52KzkZTbBcTlqULU3sCeQZPBOsf9GBjhz%2Bhjo%2BFdYOKgWSYS08VnQ%3D%3D","Y","Revenues of General Treasury from Jan. to Aug. 2026(Open another window)", "Revenues of General Treasury");'>
+                        <div class="title"><a href="https://service.mof.gov.tw/public/Data/statistic/monthly/11508/21020_11508.pdf" title="Revenues of General Treasury from Jan. to Aug. 2026(Open another window)" 
+                            target='_blank' >Revenues of General Treasury from Jan. to Aug. 2026</a></div>
+                        <div class="static-num up" title="Statistics：NT$ 4,573.8 billion">NT$ 4,573.8 billion</div>
+                    </li>
+                
+                    <li onclick='changeImgtxtStatistics("medium_txtStatistics1","https://service.mof.gov.tw/public/Data/statistic/monthly/11508/21020_11508.pdf","/eng/txtStatisticsImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3G3lXRL9SF6LwBM9YuVGwV8O8%2BebskWPM%2FKB%2FAKshcHUAyCWvUQvRD7%2BLjExTJa5nCKgWSYS08VnQ%3D%3D","Y","Expenditures of General Treasury from Jan. to Aug. 2026(Open another window)", "Expenditures of General Treasury");'>
+                        <div class="title"><a href="https://service.mof.gov.tw/public/Data/statistic/monthly/11508/21020_11508.pdf" title="Expenditures of General Treasury from Jan. to Aug. 2026(Open another window)" 
+                            target='_blank' >Expenditures of General Treasury from Jan. to Aug. 2026</a></div>
+                        <div class="static-num up" title="Statistics：NT$ 4,210.4 billion">NT$ 4,210.4 billion</div>
+                    </li>
+                
+                    <li onclick='changeImgtxtStatistics("medium_txtStatistics1","https://www.mof.gov.tw/Eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=c4c81d1e185c4e85a192a0fb65f7cd64","/eng/txtStatisticsImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3G3lXRL9SF6LwBM9YuVGwV828qxK8osACx88QbaDsvCMsrx1Z7SnJ3Mi%2FbolLeXTeGKgWSYS08VnQ%3D%3D","Y","Exports for Sep. 2026(Open another window)", "Exports for Sep. 2026picture");'>
+                        <div class="title"><a href="https://www.mof.gov.tw/Eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=c4c81d1e185c4e85a192a0fb65f7cd64" title="Exports for Sep. 2026(Open another window)" 
+                            target='_blank' >Exports for Sep. 2026</a></div>
+                        <div class="static-num up" title="Statistics：US$ 87.22 billion">US$ 87.22 billion</div>
+                    </li>
+                
+                    <li onclick='changeImgtxtStatistics("medium_txtStatistics1","https://www.mof.gov.tw/Eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=c4c81d1e185c4e85a192a0fb65f7cd64","/eng/txtStatisticsImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3G3lXRL9SF6LwBM9YuVGwV8O9oMZjIVZFTCosg%2FprLtvtwmhOwBvK8rEIsmH0IOr%2BKKgWSYS08VnQ%3D%3D","Y","Imports for Sep. 2026(Open another window)", "Imports for Sep. 2026 picture");'>
+                        <div class="title"><a href="https://www.mof.gov.tw/Eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=c4c81d1e185c4e85a192a0fb65f7cd64" title="Imports for Sep. 2026(Open another window)" 
+                            target='_blank' >Imports for Sep. 2026</a></div>
+                        <div class="static-num up" title="Statistics：US$ 63.59 billion">US$ 63.59 billion</div>
+                    </li>
+                
+            </ul>
+            <div class="chart">
+                <a href="https://www.mof.gov.tw/Eng/singlehtml/f48d641f159a4866b1d31c0916fbcc71?cntId=c9e2afdf55d649d69b8e1a05197ad83c"  title="Preliminary Total Net Tax Revenue from Jan. to Sep. 2026(Open another window)"><img src="/eng/txtStatisticsImages/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3G3lXRL9SF6LwBM9YuVGwV8tmgk4xB9DXuB9vapVNpJKe9lAQUZbxOEW0dtWzD40IaKgWSYS08VnQ%3D%3D" alt="Preliminary Total Net Tax Revenue for Sep. 2026"></a>
+            </div>
+        </div>
+        <a class="more" href="/eng/txtStatistics/0c5f184675194239a5b661cc87eb3f11">more Statistical Indicators</a>  
+    </div>
+</div>
+</div></div><div class="container separation-3"><div class="row"><div class="undefined"></div>
+</div></div></div><div class="function-cabinet one-block" style=""><div class="container"><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive">
+    <div  class="img-text-carousel img-text-carousel-large_multiCarousel1">
+        
+        <h2 class="h2-title">Internal Links</h2>
+        
+        <div>
+            
+                <div>
+                    
+                        <a href="https://www.etax.nat.gov.tw/etwmain/en" target="_blank" title='Link to eTax Portal, Ministry of Finance(Open another window)'>
+                    
+                    
+                        <div><img src="/eng/images/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3GMza%2FlmmkBNVvHwLFTlyLYtJ28%2F9j0bgo0Fl%2BbwzueLlAQKoyUhBYc95qF2sIKm%2FU%3D" alt="eTax Portal, Ministry of Finance"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://paytax.nat.gov.tw/TaxEn/Default.aspx" target="_blank" title='Link to Tax Online(Open another window)'>
+                    
+                    
+                        <div><img src="/eng/images/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3GMza%2FlmmkBNVvHwLFTlyLYEUXp0UvQrix94ULkWAP5aduEXoSQ%2Fynh95qF2sIKm%2FU%3D" alt="Tax Online"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://einvoice.nat.gov.tw/" target="_blank" title='Link to E-invoice Platform(Open another window)'>
+                    
+                    
+                        <div><img src="/eng/images/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3GMza%2FlmmkBNVvHwLFTlyLYjUppWgVwWeC5u%2Fu%2BWVL5QAL3kRwNsPJX95qF2sIKm%2FU%3D" alt="E-invoice Platform"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://portal.sw.nat.gov.tw/PPL/eng" target="_blank" title='Link to CPT(Open another window)'>
+                    
+                    
+                        <div><img src="/eng/images/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3GMza%2FlmmkBNZbPmENerPGwn8M461EO74AH%2ByAXAmD9Di3eaQsbrhMH95qF2sIKm%2FU%3D" alt="CPT"></div>
+                        
+                    </a>
+                </div>
+            
+        </div>
+        
+    </div>
+    <script type="text/javascript">
+		ImgTextCarouselModule.carousel({
+				idx: 'large_multiCarousel1',
+				slidesToShow : 5,
+				autoplaySpeed : 5000,
+				slidesToisAuto : false
+		});
+    </script>
+</div>
+</div><div class="row"><div class="box col-lg-12 col-md-12 col-xs-12 big-content box-receive">
+    <div  class="img-text-carousel img-text-carousel-large_multiCarousel2">
+        
+        <h2 class="h2-title">Related Links</h2>
+        
+        <div>
+            
+                <div>
+                    
+                        <a href="https://english.ey.gov.tw/Page/6CE015CB135DCEC5" target="_blank" title='Link to Executive Yuan Major Policies(Open another window)'>
+                    
+                    
+                        <div><img src="/eng/images/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3GMza%2FlmmkBNZbPmENerPGwSJSzvpK9B8eVZY3InIol0x6KvpSCEqBU95qF2sIKm%2FU%3D" alt="Executive Yuan Major Policies"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://gazette.nat.gov.tw/egFront/indexEng.do" target="_blank" title='Link to The Executive Yuan Gazette Online(Open another window)'>
+                    
+                    
+                        <div><img src="/eng/images/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3GMza%2FlmmkBNZbPmENerPGwlosPJLOnZJz55%2F0J6uk9DWF7HqeUFaBq95qF2sIKm%2FU%3D" alt="The Executive Yuan Gazette Online"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://crpd.sfaa.gov.tw/" target="_blank" title='Link to CRPD(Open another window)'>
+                    
+                    
+                        <div><img src="/eng/images/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3GMza%2FlmmkBNZbPmENerPGw7h9YQeMCQBbYNqj%2F7yZqh%2BRrEYJ4uWlE95qF2sIKm%2FU%3D" alt="CRPD"></div>
+                        
+                    </a>
+                </div>
+            
+                <div>
+                    
+                        <a href="https://moda.gov.tw/en/" target="_blank" title='Link to MODA ODF Application Tools(Open another window)'>
+                    
+                    
+                        <div><img src="/eng/images/401170b701114c30abeb7ef80384bfe1?imgKey=OzddXOTSs3GMza%2FlmmkBNZbPmENerPGw40R4PCEFNFD2zw7pvREXWcar8l864HAC95qF2sIKm%2FU%3D" alt="MODA ODF Application Tools"></div>
+                        
+                    </a>
+                </div>
+            
+        </div>
+        
+    </div>
+    <script type="text/javascript">
+		ImgTextCarouselModule.carousel({
+				idx: 'large_multiCarousel2',
+				slidesToShow : 5,
+				autoplaySpeed : 5000,
+				slidesToisAuto : false
+		});
+    </script>
+</div>
+</div></div></div>
+	
+	<footer>
+      <div class='accesskey  no-second'>
+          <a href="#a_Z" id="a_Z" accesskey="Z" title="End of content presentation">:::</a>
+      </div>
+      <div class="container-background">
+          <div class="container-middle">
+              <div class="footer-info">
+                  <article><table border="0" cellpadding="1" cellspacing="1">
+	<tbody>
+		<tr>
+			<td><img alt="Ministry of Finance, R.O.C" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAAA8CAYAAAD2SSHcAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFymlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgOS4xLWMwMDEgMTE2LmNhODJhZTQsIDIwMjQvMDIvMjItMjE6NTg6NDEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyNC43IChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjQtMDgtMjNUMTM6MzY6MzIrMDg6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDI0LTA4LTIzVDEzOjM5OjQxKzA4OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDI0LTA4LTIzVDEzOjM5OjQxKzA4OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpmMWE0MWZkZS0yMzc0LThlNGMtYmFjNy1mYTU5NGRlYjI4YjkiIHhtcE1NOkRvY3VtZW50SUQ9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" /><br />
+			 </td>
+			<td><span style="color:#ffffff;">Address: No.1 Lane 142 Sec.6 Roosevelt Rd. Taipei, 116055 Taiwan , R.O.C </span><a href="https://www.mof.gov.tw/Eng/singlehtml/268?cntId=57231" target="_blank" title="Map(open a new window)"><span style="color:#ffffff;">map</span></a><br />
+			<span style="color:#ffffff;">Tel: +886-2-23228000 Fax: +886-2-23568774 </span>
+			<p><span style="color:#ffffff;"><span style="color:#ffffff;">Service hours:<br />
+			Mon - Fri AM 08:30 ～ PM 12:30<br />
+			                PM 13:30 ～ PM 17:30</span></span></p>
+			<span style="color:#ffffff;"> </span>
+
+			<p><span style="color:#ffffff;"><a href="/eng/singlehtml/1471?cntId=70037" title="Website Open Information Announcement"><span style="color:#ffffff;">｜Website Open Information Announcement｜</span></a><span style="color:#ffffff;"> </span><a href="/eng/singlehtml/1471?cntId=70036" title="Privacy Policy"><span style="color:#ffffff;">Privacy Policy｜</span></a><span style="color:#ffffff;"> </span><a href="/eng/singlehtml/1471?cntId=70035" title="Security Policy"><span style="color:#ffffff;">Security Policy｜</span></a></span></p>
+			<span style="color:#ffffff;"> </span>
+
+			<p><span style="color:#ffffff;"><span style="color:#ffffff;">It is recommended to use latest Chrome,Edge,Firefox or above browser and resolution 1280 X 800</span></span></p>
+			<span style="color:#ffffff;"> </span>
+
+			<p><span style="color:#ffffff;"><span style="color:#ffffff;">Copyright by the Ministry of Finance</span></span></p>
+			<span style="color:#ffffff;"> </span>
+
+			<div class="shareBox"><a href="https://www.facebook.com/mof.gov.tw" title="MOF facebook"><img alt="facebook icon" src="https://www.mof.gov.tw/download/PgUpload38" style="width: 33px; height: 30px;" /></a> <a href="https://www.youtube.com/user/mofweb" title="MOF youtube"><img alt="youtube icon" src="https://www.mof.gov.tw/download/PgUpload40" style="width: 33px; height: 30px;" /></a> <a href="https://gazette.nat.gov.tw/egFront/indexEng.do" title="Link to The Executive Yuan Gazette Online"><img alt="The Executive Yuan Gazette Online icon" src="https://gazette.nat.gov.tw/egFront/images/Download/1.jpg" style="width: 120px; height: 60px;" /></a> </div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</article>
+  
+                  <div class="other">
+                      
+                          <span>Last updated:2026-10-22</span>
+                      
+                      
+                  </div>
+              </div>
+              
+              <div class="footer-icon">
+              	
+                  
+  	                <div>
+  	                    <a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20250807161021" title='MODA accessibility conformance level AA ' target="_blank">
+  	                        <img src="data:image/png;base64,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" border="0" height="31" alt='MODA accessibility conformance level AA ' />
+  	                    </a>
+  	                </div>
+                  
+              	
+                  
+                      <div>
+                          <a href="https://www.gov.tw/" title="My E government(Open another window)" target="_blank">
+                              <img src="data:image/png;base64,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" border="0" height="31"  alt="My E government picture" />
+                          </a>
+                      </div>
+                  
+ 				 
+ 				   
+   				 
+ 				   
+              </div>
+          </div>    
+      </div>
+  </footer>
+</body>
+</html>

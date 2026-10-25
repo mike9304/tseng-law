@@ -1,0 +1,23 @@
+
+ RUN  v3.2.6 /Users/son7/tseng-market-expansion-20261025/repo
+
+ ✓ |unit| src/lib/__tests__/column-language-links.test.tsx (47 tests) 23140ms
+   ✓ column 051 (ko, zh-hant and en only) > links the three published versions from every one of them and never ja  1530ms
+   ✓ column 051 (ko, zh-hant and en only) > renders the server HTML of the footer switcher without any ja link  364ms
+   ✓ column 051 (ko, zh-hant and en only) > emits no ja hreflang and keeps x-default inside the cluster  443ms
+   ✓ column 051 (ko, zh-hant and en only) > builds the column page metadata alternates from the same cluster  2418ms
+   ✓ a column published in every language > links every language with that language's own URL  2847ms
+   ✓ every column in every language > switches only to versions that render, and to every version that does  1895ms
+   ✓ every column in every language > emits hreflang alternates only for versions that render  309ms
+   ✓ a builder/Blob-only column (no markdown file in any language) > lists only its own language and keeps x-default on it  1324ms
+   ✓ issue-board columns > list only their own language, since each is written for one language  6782ms
+   ✓ pages that are not column articles > keep listing every language  2311ms
+   ✓ client-side navigation > follows the pathname, since the shared layout does not re-render  704ms
+   ✓ client-side navigation > never applies one language's index to another language's article  700ms
+   ✓ client-side navigation > does not read inherited object properties as column slugs  474ms
+
+ Test Files  1 passed (1)
+      Tests  47 passed (47)
+   Start at  22:36:54
+   Duration  23.75s (transform 730ms, setup 11ms, collect 441ms, tests 23.14s, environment 0ms, prepare 50ms)
+

@@ -1,0 +1,84 @@
+{
+  "reviewer": "/root/expand_locale_fil",
+  "checkedAt": "2026-10-25T13:28:27.612862+00:00",
+  "wrapper_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+  "fil_profile_sha256": "9bb87f92fde0d17ec521c2c7b22e40c6eeb272f0b53405d480f07a4b5886cd66",
+  "method_review_json_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+  "records": [
+    {
+      "source_path": "src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+      "sha256": "633126ec40c4f821c37e30b2610aeb2598a7c7fcc3617033960719ae2cf1bfc5",
+      "commands": [
+        {
+          "kind": "shared",
+          "command": [
+            "python3",
+            "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+            "--lang",
+            "fil"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'fil' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+        },
+        {
+          "kind": "task-local",
+          "command": [
+            "python3",
+            "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+            "--lang",
+            "fil"
+          ],
+          "exit_code": 0,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md [fil] sentences=45 mean=19.2 cv=0.571 short=0.111 run3=0.023 opener_rep=0.118 cite_end=0.067 cite_para=0.706 contrast=0 caveat=0 q=4\n  OK — no variety limit violated\n",
+          "stderr": "OFFICIAL CHECKER: fil unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+        }
+      ],
+      "image_path": "public/images/columns/926-market-expansion-20261025.webp",
+      "image_sha256": "8c3d5654ac2ce688d46c9baeb28c59c28ee243aeca9663a7ba29c62b636ecf2f",
+      "image_inspection": "Actual tool-displayed WebP inspected; fictional relevant scene, no readable text, logos, faces, flags or identifying documents; localized alt and caption agree."
+    },
+    {
+      "source_path": "src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+      "sha256": "535d60328cbcbf44ff21363a0a47a506858c8d38a4203dc5037bbe82b145d2b9",
+      "commands": [
+        {
+          "kind": "shared",
+          "command": [
+            "python3",
+            "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+            "--lang",
+            "fil"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'fil' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+        },
+        {
+          "kind": "task-local",
+          "command": [
+            "python3",
+            "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+            "--lang",
+            "fil"
+          ],
+          "exit_code": 0,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md [fil] sentences=52 mean=17.7 cv=0.505 short=0.115 run3=0.04 opener_rep=0.125 cite_end=0.135 cite_para=0.75 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+          "stderr": "OFFICIAL CHECKER: fil unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+        }
+      ],
+      "image_path": "public/images/columns/927-market-expansion-20261025.webp",
+      "image_sha256": "4dcf34091e9d67c2cc5ebb7845775e25cdab69ec4b22322947b7e2e81b2c0ca7",
+      "image_inspection": "Actual tool-displayed WebP inspected; fictional relevant scene, no readable text, logos, faces, flags or identifying documents; localized alt and caption agree."
+    }
+  ],
+  "caption_normalization_rechecked": true
+}

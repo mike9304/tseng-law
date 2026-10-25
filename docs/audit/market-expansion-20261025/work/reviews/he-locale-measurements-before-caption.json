@@ -1,0 +1,76 @@
+{
+  "reviewer": "/root/expand_locale_he",
+  "checkedAt": "2026-10-25T13:20:19.679689+00:00",
+  "records": [
+    {
+      "article": "932",
+      "path": "src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+      "sha256": "9115389453a135cf8b3b8f010f3bd996afbc0ee81bf6e92b43455033c617496f",
+      "image_sha256": "4037e0df9cfb08b660ca766fb21ae57558975f6ce7bb8ae19d63124fd7957822",
+      "original": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+          "--lang",
+          "he"
+        ],
+        "exit_code": 2,
+        "stdout": "",
+        "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'he' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+      },
+      "task_local": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+          "--lang",
+          "he"
+        ],
+        "exit_code": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md [he] sentences=37 mean=14.4 cv=0.465 short=0.189 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "stderr": "OFFICIAL CHECKER: he unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+      }
+    },
+    {
+      "article": "933",
+      "path": "src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+      "sha256": "c1edcaaa8978b6198116c522ad6edd879a9961a0f7c9f29af53a67c592f49e88",
+      "image_sha256": "e6048d77af3cded5a54553e88c92d2a0f9e9425f5f25f15d4e5db981b7163820",
+      "original": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+          "--lang",
+          "he"
+        ],
+        "exit_code": 2,
+        "stdout": "",
+        "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'he' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+      },
+      "task_local": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+          "--lang",
+          "he"
+        ],
+        "exit_code": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md [he] sentences=43 mean=13.7 cv=0.481 short=0.256 run3=0.024 opener_rep=0.071 cite_end=0.0 cite_para=0.357 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "stderr": "OFFICIAL CHECKER: he unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+      }
+    }
+  ],
+  "extension_approval": {
+    "tool": "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+    "tool_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+    "review": "work/variety-review/review-final.json",
+    "review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c"
+  }
+}

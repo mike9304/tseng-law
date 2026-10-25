@@ -1,0 +1,9 @@
+{
+  "reviewer": "/root/expand_final_east",
+  "checked_at_utc": "2026-10-25T13:24:23.073237+00:00",
+  "file": "repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+  "current_sha256": "67fd481e9ae23009247b50aa53d09f6b3a21e962bf1dd76bbcbaed1de8592bc5",
+  "reversed_topic_change_sha256": "2c09cb482f2efe0b4d4f63d570b2ebed210bdfdd3708d2dfd9de95f5efa858c8",
+  "expected_previous_sha256": "2c09cb482f2efe0b4d4f63d570b2ebed210bdfdd3708d2dfd9de95f5efa858c8",
+  "only_change_verified": true
+}

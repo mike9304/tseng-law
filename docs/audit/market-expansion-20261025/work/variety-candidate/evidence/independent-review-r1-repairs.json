@@ -1,0 +1,80 @@
+{
+  "at": "2026-10-25T13:13:08.981635+00:00",
+  "source_report": "../variety-review/independent-results-r1.json",
+  "target_manuscripts_or_scores_read": false,
+  "repairs": [
+    {
+      "locale": "fil",
+      "before_sha256": "695dd6baf6c83766052baa3efeb28201ee0a106b6e436ca5d6aa909354303334",
+      "after_sha256": "9bb87f92fde0d17ec521c2c7b22e40c6eeb272f0b53405d480f07a4b5886cd66",
+      "changed_keys": [
+        "contrast_patterns",
+        "formula_close_pattern"
+      ],
+      "expectations_changed": false
+    },
+    {
+      "locale": "he",
+      "before_sha256": "39a1209ba75396c0b0e99395f7cea5b0a833c81101e7ec7d47f64a3b3ab1eb16",
+      "after_sha256": "ae6d8b60d6546a0adc9813cb16d4a11de8d7158a0fb93b45a11712bf49662983",
+      "changed_keys": [
+        "contrast_patterns",
+        "hypo_pattern",
+        "formula_close_pattern"
+      ],
+      "expectations_changed": false
+    },
+    {
+      "locale": "nl",
+      "before_sha256": "0982c731a77395976a66a15d363b234c3719567ada0d279961f5d0cc4494fbfb",
+      "after_sha256": "8ee2b7074e1ad3778998e87a1a566dff023a3c98c2525200d86c96050cf9dc2e",
+      "changed_keys": [
+        "source_heading_pattern",
+        "contrast_patterns",
+        "hypo_pattern",
+        "formula_close_pattern"
+      ],
+      "expectations_changed": false
+    },
+    {
+      "locale": "pl",
+      "before_sha256": "cdbcd3b2f1f4b999ec1693b12d0d493956c17368ef72998424e490b63e18ed2f",
+      "after_sha256": "4137b957699be3977230e27533fcfcd27fb5a3cf5a04cc930ebf4f4c55c81f1d",
+      "changed_keys": [
+        "source_heading_pattern",
+        "formula_close_pattern"
+      ],
+      "expectations_changed": false
+    },
+    {
+      "locale": "cs",
+      "before_sha256": "b361a081115f144f61f45062aa1ae88d5afeaecfca84a8bd2590bbb007dc0355",
+      "after_sha256": "07aca997353f22983df868222e0aac634ca1c70f3b3e68cd2553bc075618b8b7",
+      "changed_keys": [
+        "contrast_patterns",
+        "hypo_pattern",
+        "formula_close_pattern",
+        "ordinal_before_lowercase"
+      ],
+      "expectations_changed": false
+    },
+    {
+      "locale": "lt",
+      "before_sha256": "da801eac299efcd35d428ab1fa623f28a26513378d53e68398684b807f35bf17",
+      "after_sha256": "f536d937faf4c26eadb19d5c8e5a0078dcfbce901501a4a8544c456d2cd02965",
+      "changed_keys": [
+        "abbreviations",
+        "citation_pattern",
+        "contrast_patterns",
+        "hypo_pattern",
+        "formula_close_pattern"
+      ],
+      "expectations_changed": false
+    }
+  ],
+  "implementation_changes": [
+    "Czech non-date ordinal before lowercase word",
+    "wrapper disables global bytecode cache writes"
+  ],
+  "convention_retained": "Filipino orthographic hyphen compounds retained per initial specification; reviewer adjudication separate."
+}

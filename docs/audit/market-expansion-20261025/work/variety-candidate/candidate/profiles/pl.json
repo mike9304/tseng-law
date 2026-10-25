@@ -1,0 +1,245 @@
+{
+  "locale": "pl",
+  "directory": "columns-pl",
+  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:[0-9]+[.)][^\\S\\r\\n]+)?(?:Źródła\\s+urzędowe|Źródła|Źródła\\s+oficjalne|Oficjalne\\s+źródła|Materiały\\s+źródłowe)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
+  "abbreviations": [
+    "art",
+    "ust",
+    "pkt",
+    "lit",
+    "nr",
+    "str",
+    "s",
+    "r",
+    "prof",
+    "hab",
+    "inż",
+    "np",
+    "tj",
+    "tzn",
+    "itd",
+    "itp",
+    "zob",
+    "por",
+    "m.in",
+    "godz",
+    "ok"
+  ],
+  "terminal_abbreviations": [
+    "itd",
+    "itp",
+    "r"
+  ],
+  "join_hyphens": false,
+  "citation_pattern": "(?i:\\b(?:art\\.?|artykuł|artykuły|ust\\.?|paragraf)\\s*\\d+)",
+  "contrast_patterns": [
+    "(?i:\\bnie\\b(?!\\s+tylko\\b)[^.!?\\n]{0,160}\\b(?:lecz|ale)\\b)",
+    "(?i:\\bzamiast\\b)",
+    "(?i:\\bróżni\\s+się\\s+od\\b)"
+  ],
+  "caveat_pattern": "(?i:^[\\s„“\"‘\\x27(\\[]*(?:Jednak|Jednakże|Niemniej|Mimo\\s+to)\\b)",
+  "hypo_pattern": "(?i:^[\\s„“\"‘\\x27(\\[]*(?:Załóżmy|Wyobraźmy\\s+sobie|Przypuśćmy|Hipotetyczny\\s+przykład)\\b)",
+  "formula_close_pattern": "(?i:\\b(?:ogólne\\s+informacje|informacje\\s+ogólne|Każdy\\s+przypadek\\s+jest\\s+inny|Nasza\\s+kancelaria\\s+może\\s+pomóc|e-mailem)\\b)",
+  "sentence_fixtures": [
+    {
+      "text": "Koperta leży na stole. Pudełko jest otwarte.",
+      "sentences": [
+        "Koperta leży na stole.",
+        "Pudełko jest otwarte."
+      ]
+    },
+    {
+      "text": "Gdzie jest ołówek? Tutaj!",
+      "sentences": [
+        "Gdzie jest ołówek?",
+        "Tutaj!"
+      ]
+    },
+    {
+      "text": "Prof. Kowalska czyta kartkę. Dr Nowak zamyka pudełko.",
+      "sentences": [
+        "Prof. Kowalska czyta kartkę.",
+        "Dr Nowak zamyka pudełko."
+      ]
+    },
+    {
+      "text": "Na str. 7 jest rysunek. Fikcyjna etykieta zawiera art. 3 ust. 2.",
+      "sentences": [
+        "Na str. 7 jest rysunek.",
+        "Fikcyjna etykieta zawiera art. 3 ust. 2."
+      ]
+    },
+    {
+      "text": "Przykładowy zapis to 1.250,50 zł. Brakuje podpisu.",
+      "sentences": [
+        "Przykładowy zapis to 1.250,50 zł.",
+        "Brakuje podpisu."
+      ]
+    },
+    {
+      "text": "W pudełku są kartki, ołówki itd. Nożyczki leżą obok.",
+      "sentences": [
+        "W pudełku są kartki, ołówki itd.",
+        "Nożyczki leżą obok."
+      ]
+    },
+    {
+      "text": "Notatka pochodzi z 2026 r. Kopia jest biała.",
+      "sentences": [
+        "Notatka pochodzi z 2026 r.",
+        "Kopia jest biała."
+      ]
+    },
+    {
+      "text": "„Gdzie jest kartka?” pyta Anna. Jan wskazuje stół.",
+      "sentences": [
+        "„Gdzie jest kartka?” pyta Anna.",
+        "Jan wskazuje stół."
+      ]
+    },
+    {
+      "text": "W środku są m.in. kartki. Pudełko jest lekkie.",
+      "sentences": [
+        "W środku są m.in. kartki.",
+        "Pudełko jest lekkie."
+      ]
+    },
+    {
+      "text": "Koperta leży na stole. Pudełko jest otwarte.",
+      "sentences": [
+        "Koperta leży na stole.",
+        "Pudełko jest otwarte."
+      ]
+    }
+  ],
+  "word_fixtures": [
+    {
+      "text": "Żółta koperta leży tutaj.",
+      "tokens": [
+        "Żółta",
+        "koperta",
+        "leży",
+        "tutaj"
+      ]
+    },
+    {
+      "text": "Polsko-tajwański napis; 3-5 kartek.",
+      "tokens": [
+        "Polsko",
+        "tajwański",
+        "napis",
+        "3",
+        "5",
+        "kartek"
+      ]
+    },
+    {
+      "text": "1 250,50 zł; 25%.",
+      "tokens": [
+        "1",
+        "250,50",
+        "zł",
+        "25"
+      ]
+    },
+    {
+      "text": "O’Neill czyta PDF.",
+      "tokens": [
+        "O’Neill",
+        "czyta",
+        "PDF"
+      ]
+    },
+    {
+      "text": "Art. 3 ust. 2, A4.",
+      "tokens": [
+        "Art",
+        "3",
+        "ust",
+        "2",
+        "A4"
+      ]
+    },
+    {
+      "text": "Zażółć gęślą jaźń.",
+      "tokens": [
+        "Zażółć",
+        "gęślą",
+        "jaźń"
+      ]
+    },
+    {
+      "text": "Żółta koperta leży tutaj.",
+      "tokens": [
+        "Żółta",
+        "koperta",
+        "leży",
+        "tutaj"
+      ]
+    }
+  ],
+  "source_positive": [
+    "## Źródła",
+    "### Oficjalne źródła:",
+    "## 7. Materiały źródłowe",
+    "## ŹRÓDŁA OFICJALNE ##"
+  ],
+  "source_negative": [
+    "## Źródła finansowania",
+    "## Podstawa prawna roszczenia",
+    "Źródła",
+    "## Źródła i analiza"
+  ],
+  "rhetorical_fixtures": [
+    [
+      "contrast",
+      "To nie koperta, lecz pudełko.",
+      1
+    ],
+    [
+      "contrast",
+      "Jest tu nie tylko papier, ale także ołówek.",
+      0
+    ],
+    [
+      "contrast",
+      "Przyniósł pudełko zamiast koperty.",
+      1
+    ],
+    [
+      "contrast",
+      "Koperta leży na stole.",
+      0
+    ],
+    [
+      "caveat",
+      "Jednak pudełko jest otwarte.",
+      1
+    ],
+    [
+      "caveat",
+      "Pudełko jest otwarte, jednak koperta pozostaje zamknięta.",
+      0
+    ],
+    [
+      "hypo",
+      "Załóżmy, że pudełko jest czerwone.",
+      1
+    ],
+    [
+      "hypo",
+      "Czerwone pudełko stoi na stole.",
+      0
+    ],
+    [
+      "formula",
+      "Ten artykuł zawiera ogólne informacje.",
+      1
+    ],
+    [
+      "formula",
+      "Ostatnia kopia jest w drugiej kopercie.",
+      0
+    ]
+  ]
+}

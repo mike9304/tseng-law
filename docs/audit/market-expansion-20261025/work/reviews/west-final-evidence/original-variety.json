@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-10-25T13:18:52.863054+00:00",
+  "records": [
+    {
+      "source_path": "repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+      "sha256": "3b395842ebc879b6d3d61a3a8bab1bd006f9fd16aaf27113892497f03b7c0425",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+        "--lang",
+        "nl"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'nl' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+    },
+    {
+      "source_path": "repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+      "sha256": "943a747d79288334da91b9c608ef558bda57ba8754e7acd5eac6c49083f11b01",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+        "--lang",
+        "nl"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'nl' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+    },
+    {
+      "source_path": "repo/src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md",
+      "sha256": "187c8a0c2b64ff6a69be32be21912d48b976cf56bd9e38a6cf2df52b53b56d64",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "repo/src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md",
+        "--lang",
+        "fr"
+      ],
+      "exit_code": 0,
+      "stdout": "repo/src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md [fr] sentences=54 mean=19.6 cv=0.469 short=0.185 run3=0.077 opener_rep=0.167 cite_end=0.0 cite_para=0.389 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "source_path": "repo/src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md",
+      "sha256": "cbaef4999a8bbd94567761471b74a627a2717d232410ed598efe601adf7e66b0",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "repo/src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md",
+        "--lang",
+        "fr"
+      ],
+      "exit_code": 1,
+      "stdout": "repo/src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md [fr] sentences=48 mean=19.4 cv=0.429 short=0.104 run3=0.152 opener_rep=0.222 cite_end=0.0 cite_para=0.278 contrast=0 caveat=0 q=2\n  FAIL len_cv=0.429 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+      "stderr": ""
+    },
+    {
+      "source_path": "repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md",
+      "sha256": "e196bf577e8a7ef27dcc7204347a16d4c473e3a12e143e692518a53b4f860b58",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md",
+        "--lang",
+        "pt"
+      ],
+      "exit_code": 0,
+      "stdout": "repo/src/content/columns-pt/938-brazil-coffee-taiwan-border-reinspection.md [pt] sentences=36 mean=18.4 cv=0.515 short=0.25 run3=0.0 opener_rep=0.077 cite_end=0.0 cite_para=0.615 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "source_path": "repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md",
+      "sha256": "5f684d9d24803677ba3288acc029b5739b8353ce41d9a4e19a13a3980c400a2d",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md",
+        "--lang",
+        "pt"
+      ],
+      "exit_code": 0,
+      "stdout": "repo/src/content/columns-pt/939-brazil-organic-coffee-taiwan-label-certification.md [pt] sentences=37 mean=19.5 cv=0.454 short=0.189 run3=0.029 opener_rep=0.231 cite_end=0.0 cite_para=0.462 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": ""
+    }
+  ]
+}

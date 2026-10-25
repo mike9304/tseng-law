@@ -1,0 +1,266 @@
+{
+  "locale": "lt",
+  "directory": "columns-lt",
+  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:[0-9]+[.)][^\\S\\r\\n]+)?(?:Šaltiniai|Oficialūs\\s+šaltiniai|Naudoti\\s+šaltiniai|Informacijos\\s+šaltiniai)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
+  "abbreviations": [
+    "str",
+    "d",
+    "p",
+    "Nr",
+    "pvz",
+    "t. y",
+    "t.y",
+    "t. t",
+    "t.t",
+    "ir kt",
+    "kt",
+    "pan",
+    "m",
+    "mėn",
+    "g",
+    "pr",
+    "žr",
+    "plg",
+    "dr",
+    "prof",
+    "doc",
+    "val",
+    "el"
+  ],
+  "terminal_abbreviations": [
+    "t. t",
+    "t.t",
+    "kt",
+    "pan",
+    "m",
+    "d"
+  ],
+  "join_hyphens": false,
+  "citation_pattern": "(?i:\\b(?:(?:straipsn(?:is|io|į|iai|ius)|str\\.?)\\s*\\d+|\\d+\\s*(?:straipsn(?:is|io|į|iai|ius)|str\\.?))\\b)",
+  "quote_closers": "“",
+  "contrast_patterns": [
+    "(?i:\\bne\\b(?!\\s+tik\\b)[^.!?\\n]{0,160}\\b(?:o|bet)\\b)",
+    "(?i:\\bvietoj\\b)",
+    "(?i:\\bskiriasi\\s+nuo\\b)"
+  ],
+  "caveat_pattern": "(?i:^[\\s„“\"‘\\x27(\\[]*(?:Tačiau|Vis\\s+dėlto|Visgi|Nepaisant\\s+to)\\b)",
+  "hypo_pattern": "(?i:^[\\s„“\"‘\\x27(\\[]*(?:Tarkime|Įsivaizduokime|Įsivaizduokite|Hipotetinis\\s+pavyzdys)\\b)",
+  "formula_close_pattern": "(?i:\\b(?:bendra\\s+informacija|bendro\\s+pobūdžio\\s+informacija|Kiekvienas\\s+atvejis\\s+yra\\s+skirtingas|Mūsų\\s+kontora\\s+gali\\s+jums\\s+padėti|el\\.\\s*paštu)\\b)",
+  "sentence_fixtures": [
+    {
+      "text": "Vokas guli ant stalo. Dėžė atidaryta.",
+      "sentences": [
+        "Vokas guli ant stalo.",
+        "Dėžė atidaryta."
+      ]
+    },
+    {
+      "text": "Kur pieštukas? Čia!",
+      "sentences": [
+        "Kur pieštukas?",
+        "Čia!"
+      ]
+    },
+    {
+      "text": "Dr. Jonaitis skaito lapą. Prof. Žukienė uždaro dėžę.",
+      "sentences": [
+        "Dr. Jonaitis skaito lapą.",
+        "Prof. Žukienė uždaro dėžę."
+      ]
+    },
+    {
+      "text": "Piešinys yra p. 7. Išgalvotoje etiketėje nurodytas str. 3.",
+      "sentences": [
+        "Piešinys yra p. 7.",
+        "Išgalvotoje etiketėje nurodytas str. 3."
+      ]
+    },
+    {
+      "text": "Lape įrašyta 1 250,50 Eur. Parašo nėra.",
+      "sentences": [
+        "Lape įrašyta 1 250,50 Eur.",
+        "Parašo nėra."
+      ]
+    },
+    {
+      "text": "Dėžėje yra lapų, pieštukų ir t. t. Žirklės guli šalia.",
+      "sentences": [
+        "Dėžėje yra lapų, pieštukų ir t. t.",
+        "Žirklės guli šalia."
+      ]
+    },
+    {
+      "text": "Tai kopija, t. y. antras egzempliorius. Originalas lieka čia.",
+      "sentences": [
+        "Tai kopija, t. y. antras egzempliorius.",
+        "Originalas lieka čia."
+      ]
+    },
+    {
+      "text": "Raštelis parašytas 2026 m. Popierius baltas.",
+      "sentences": [
+        "Raštelis parašytas 2026 m.",
+        "Popierius baltas."
+      ]
+    },
+    {
+      "text": "Data yra 2026 m. spalio 5 d. Tekstas įskaitomas.",
+      "sentences": [
+        "Data yra 2026 m. spalio 5 d.",
+        "Tekstas įskaitomas."
+      ]
+    },
+    {
+      "text": "„Kur lapas?“ paklausė Ona. Jonas parodė į stalą.",
+      "sentences": [
+        "„Kur lapas?“ paklausė Ona.",
+        "Jonas parodė į stalą."
+      ]
+    },
+    {
+      "text": "„Kopija paruošta.“ Ona uždarė dėžę.",
+      "sentences": [
+        "„Kopija paruošta.“",
+        "Ona uždarė dėžę."
+      ]
+    },
+    {
+      "text": "Vokas guli ant stalo. Dėžė atidaryta.",
+      "sentences": [
+        "Vokas guli ant stalo.",
+        "Dėžė atidaryta."
+      ]
+    }
+  ],
+  "word_fixtures": [
+    {
+      "text": "Žalias vokas guli čia.",
+      "tokens": [
+        "Žalias",
+        "vokas",
+        "guli",
+        "čia"
+      ]
+    },
+    {
+      "text": "Lietuvos–Taivano tekstas; 3-5 lapai.",
+      "tokens": [
+        "Lietuvos",
+        "Taivano",
+        "tekstas",
+        "3",
+        "5",
+        "lapai"
+      ]
+    },
+    {
+      "text": "1 250,50 Eur; 25%.",
+      "tokens": [
+        "1",
+        "250,50",
+        "Eur",
+        "25"
+      ]
+    },
+    {
+      "text": "O’Neill skaito PDF.",
+      "tokens": [
+        "O’Neill",
+        "skaito",
+        "PDF"
+      ]
+    },
+    {
+      "text": "Str. 3, p. 7, A4.",
+      "tokens": [
+        "Str",
+        "3",
+        "p",
+        "7",
+        "A4"
+      ]
+    },
+    {
+      "text": "Ąžuolas, ėriukas ir ūdra.",
+      "tokens": [
+        "Ąžuolas",
+        "ėriukas",
+        "ir",
+        "ūdra"
+      ]
+    },
+    {
+      "text": "Žalias vokas guli čia.",
+      "tokens": [
+        "Žalias",
+        "vokas",
+        "guli",
+        "čia"
+      ]
+    }
+  ],
+  "source_positive": [
+    "## Šaltiniai",
+    "### Oficialūs šaltiniai:",
+    "## 7. Naudoti šaltiniai",
+    "## INFORMACIJOS ŠALTINIAI ##"
+  ],
+  "source_negative": [
+    "## Finansavimo šaltiniai",
+    "## Reikalavimo teisinis pagrindas",
+    "Šaltiniai",
+    "## Šaltiniai ir analizė"
+  ],
+  "rhetorical_fixtures": [
+    [
+      "contrast",
+      "Tai ne vokas, o dėžė.",
+      1
+    ],
+    [
+      "contrast",
+      "Čia yra ne tik popierius, bet ir pieštukas.",
+      0
+    ],
+    [
+      "contrast",
+      "Jis atnešė dėžę vietoj voko.",
+      1
+    ],
+    [
+      "contrast",
+      "Vokas guli ant stalo.",
+      0
+    ],
+    [
+      "caveat",
+      "Vis dėlto dėžė atidaryta.",
+      1
+    ],
+    [
+      "caveat",
+      "Dėžė atidaryta, tačiau vokas užklijuotas.",
+      0
+    ],
+    [
+      "hypo",
+      "Įsivaizduokime raudoną dėžę.",
+      1
+    ],
+    [
+      "hypo",
+      "Raudona dėžė stovi ant stalo.",
+      0
+    ],
+    [
+      "formula",
+      "Šiame straipsnyje pateikiama bendra informacija.",
+      1
+    ],
+    [
+      "formula",
+      "Paskutinė kopija yra antrame voke.",
+      0
+    ]
+  ]
+}

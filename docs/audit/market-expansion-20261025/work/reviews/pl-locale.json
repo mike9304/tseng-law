@@ -1,0 +1,98 @@
+{
+  "reviewer": "/root/expand_locale_pl",
+  "role": "locale",
+  "independentOfAuthor": true,
+  "checkedAt": "2026-10-25T13:30:09.245645+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "sha256": "06813fc5597240ed39d513e1e88df483dec85cd8f277f89d1baaa41003b6f4ca",
+      "verdict": "PASS",
+      "prose_verdict": "PASS",
+      "findings": [],
+      "image_sha256": "f695325dd0624188a9de25dab62c5f2830f090d528e1b50c265cbb989d00ffbd",
+      "image_inspected": true,
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md --lang pl",
+      "variety_exit_code": 0,
+      "limitations": [
+        "The shared checker does not support Polish; the exact independently reviewed task-local method was used.",
+        "AI locale review, not human native-speaker or lawyer certification."
+      ],
+      "variety_evidence": "work/reviews/pl-locale-local-variety-final.json",
+      "variety_scope": "Independently reviewed task-local Polish extension; original shared checker remains unsupported exit2.",
+      "variety_metrics": {
+        "sentences": 44.0,
+        "mean": 15.4,
+        "cv": 0.464,
+        "short": 0.205,
+        "run3": 0.048,
+        "opener_rep": 0.0,
+        "cite_end": 0.0,
+        "cite_para": 0.4,
+        "contrast": 0.0,
+        "caveat": 0.0,
+        "q": 1.0
+      }
+    },
+    {
+      "source_path": "src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "sha256": "17382511050d47b947e9ff81276b2b5f8cb5999ebe62aa86f679eb0546c580e7",
+      "verdict": "PASS",
+      "prose_verdict": "PASS",
+      "findings": [],
+      "image_sha256": "6357ffc8fbd81c105b8c941b95328e95ecafc3945a65860ae4dd7f8da38e8227",
+      "image_inspected": true,
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md --lang pl",
+      "variety_exit_code": 0,
+      "limitations": [
+        "The shared checker does not support Polish; the exact independently reviewed task-local method was used.",
+        "AI locale review, not human native-speaker or lawyer certification."
+      ],
+      "variety_evidence": "work/reviews/pl-locale-local-variety-final.json",
+      "variety_scope": "Independently reviewed task-local Polish extension; original shared checker remains unsupported exit2.",
+      "variety_metrics": {
+        "sentences": 51.0,
+        "mean": 15.3,
+        "cv": 0.457,
+        "short": 0.216,
+        "run3": 0.0,
+        "opener_rep": 0.059,
+        "cite_end": 0.0,
+        "cite_para": 0.588,
+        "contrast": 0.0,
+        "caveat": 0.0,
+        "q": 1.0
+      }
+    }
+  ],
+  "human_report": "work/reviews/pl-locale.md",
+  "original_variety_evidence": "work/reviews/pl-locale-shared-variety-final-source.json",
+  "source_evidence": "work/reviews/pl-locale-opened-sources.json",
+  "author_evidence_read": "work/reviews/pl-author.md and pl-author.json",
+  "limitations": [
+    "Full legal/factual certification belongs to the separate final reviewer.",
+    "Direct Europol PDF open timed out; successful official PDF response saved in author source evidence results[3] was read instead.",
+    "Publication and browser QA are not part of this review."
+  ],
+  "approved_measurement_method": {
+    "path": "work/variety-candidate/variety_metrics.py",
+    "sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+    "independent_review": "work/variety-review/review-final.json",
+    "independent_review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c"
+  },
+  "extraction_evidence": "work/reviews/pl-locale-extraction-final.json",
+  "status": "PASS",
+  "unresolved_material_findings": 0,
+  "human_report_sha256": "f16213dfd45efe6964e2958037ec8b52f06bb256b079759443db7ff56a309817",
+  "repair_history": {
+    "initial_five_wording_findings": "Resolved in one author repair and independently reread. Includes substantive CPA10(2) precision clarification agreed by final reviewer.",
+    "940_metric": "Initial CV0.441; first targeted repair CV0.464 PASS.",
+    "941_metric": "Initial CV0.426; first targeted repair CV0.421 FAIL preserved; second targeted repair CV0.457 PASS.",
+    "failure_evidence": [
+      "work/reviews/pl-locale-local-variety-r1.json",
+      "work/reviews/pl-author-metric-r1.json",
+      "work/reviews/pl-author-failure-preservation.json"
+    ],
+    "third_unsuccessful_repair": false
+  }
+}

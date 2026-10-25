@@ -1,0 +1,34 @@
+[
+  {
+    "file": "repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+    "sha256": "3b395842ebc879b6d3d61a3a8bab1bd006f9fd16aaf27113892497f03b7c0425",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+      "--lang",
+      "nl"
+    ],
+    "exitCode": 2,
+    "stdout": "",
+    "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'nl' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n",
+    "interpretation": "UNSUPPORTED, not measured PASS"
+  },
+  {
+    "file": "repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+    "sha256": "943a747d79288334da91b9c608ef558bda57ba8754e7acd5eac6c49083f11b01",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+      "--lang",
+      "nl"
+    ],
+    "exitCode": 2,
+    "stdout": "",
+    "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'nl' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n",
+    "interpretation": "UNSUPPORTED, not measured PASS"
+  }
+]

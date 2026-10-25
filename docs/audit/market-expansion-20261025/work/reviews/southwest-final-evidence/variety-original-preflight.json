@@ -1,0 +1,89 @@
+{
+  "checkedAt": "2026-10-25T13:13:43.994531+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md",
+      "sha256": "817cbaa231f71a6f668afafb4b1ce1631523096a4cd5160deb88f6e2e264061d",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "repo/src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md"
+      ],
+      "exit_code": 0,
+      "stdout": "repo/src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md [hi] sentences=35 mean=17.2 cv=0.512 short=0.229 run3=0.03 opener_rep=0.167 cite_end=0.0 cite_para=0.583 contrast=0 caveat=0 q=1\n  WARN 60% of sentences end in 'है' — vary endings within the register\n",
+      "stderr": "",
+      "image_sha256": "8bf34a1678089f7017eeb6bb9a959a9834b04a9ee838d91ae245c6da10c39531"
+    },
+    {
+      "source_path": "src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md",
+      "sha256": "109a51118497a801e7299db2aedd00ad9524459dcf2dd62ebf17e4aa2458ee31",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "repo/src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md"
+      ],
+      "exit_code": 0,
+      "stdout": "repo/src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md [hi] sentences=50 mean=18.1 cv=0.492 short=0.12 run3=0.021 opener_rep=0.125 cite_end=0.0 cite_para=0.625 contrast=1 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "image_sha256": "8fecca91b72f0c95f2a679cdf58f3aff4097a141ba4276083194f76342d1c3f7"
+    },
+    {
+      "source_path": "src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md",
+      "sha256": "2755999b08ab0c56bca95f8988d5901b5aeeb2e4f9afcf9305ee0cc9c94eb9fe",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "repo/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md"
+      ],
+      "exit_code": 0,
+      "stdout": "repo/src/content/columns-ar/930-uae-taiwan-shipment-rerouting-hardship.md [ar] sentences=41 mean=15.9 cv=0.458 short=0.195 run3=0.051 opener_rep=0.071 cite_end=0.0 cite_para=0.286 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "image_sha256": "a247a8544127f0eaf7a5bf0523191650463f909c31cc82276b396c50c113cb37"
+    },
+    {
+      "source_path": "src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md",
+      "sha256": "e9b313ce38ff02e9b983fba6d8c0c7c67c22837443e7196312e974978163dbb5",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "repo/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md"
+      ],
+      "exit_code": 0,
+      "stdout": "repo/src/content/columns-ar/931-saudi-supplier-taiwan-distributor-resale-prices.md [ar] sentences=38 mean=16.9 cv=0.484 short=0.105 run3=0.083 opener_rep=0.0 cite_end=0.0 cite_para=0.214 contrast=0 caveat=1 q=3\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "image_sha256": "42285608197d77c9cb1b0c165705951a0750690711939f977b965ce51224bbaf"
+    },
+    {
+      "source_path": "src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+      "sha256": "9115389453a135cf8b3b8f010f3bd996afbc0ee81bf6e92b43455033c617496f",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md"
+      ],
+      "exit_code": 2,
+      "stdout": "repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md: ERROR measurement unavailable: cannot infer language for repo/src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md; supply --lang\n",
+      "stderr": "",
+      "image_sha256": "4037e0df9cfb08b660ca766fb21ae57558975f6ce7bb8ae19d63124fd7957822"
+    },
+    {
+      "source_path": "src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+      "sha256": "c1edcaaa8978b6198116c522ad6edd879a9961a0f7c9f29af53a67c592f49e88",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md"
+      ],
+      "exit_code": 2,
+      "stdout": "repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md: ERROR measurement unavailable: cannot infer language for repo/src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md; supply --lang\n",
+      "stderr": "",
+      "image_sha256": "e6048d77af3cded5a54553e88c92d2a0f9e9425f5f25f15d4e5db981b7163820"
+    }
+  ]
+}

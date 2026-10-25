@@ -1,0 +1,58 @@
+{
+  "locale": "nl",
+  "status": "generated and visually inspected",
+  "assets": [
+    {
+      "id": 934,
+      "tool": "image_gen__imagegen",
+      "mode": "built-in native generation",
+      "prompt": "Use case: photorealistic-natural. Asset type: restrained editorial hero for a Dutch-language Taiwan law column about a Dutch machinery supplier sending installation technicians to Taiwan, an installation schedule extending from three weeks to six. Generate a fictional industrial scene, landscape 1536 x 1024. A precision machine installation bay in a modern factory, close foreground with an open fitted tool case, torque wrench, coiled cable and a pair of unused work gloves on a brushed-steel service trolley; behind it an unpowered partly installed precision equipment cabinet with a removable panel set safely aside. No workers or people. Quiet natural side daylight, neutral silver and muted blue-gray materials, believable small surface marks, realistic documentary photography, wide composition, crisp foreground and gentle depth. No readable text, no numbers, no calendar, no screens with writing, no logos, flags, identity documents, watermarks or brand designs. The image must not resemble evidence from a real case.",
+      "outputHint": "Generated images are saved to /Users/son7/.codex/generated_images/01a1732a-574d-7043-857f-df5dabbc4635 as /Users/son7/.codex/generated_images/01a1732a-574d-7043-857f-df5dabbc4635/exec-36fb6513-70e3-4582-a59a-23cd3a003573.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "originalPath": "/Users/son7/.codex/generated_images/01a1732a-574d-7043-857f-df5dabbc4635/exec-36fb6513-70e3-4582-a59a-23cd3a003573.png",
+      "finalPath": "repo/public/images/columns/934-market-expansion-20261025.webp",
+      "width": 1536,
+      "height": 1024,
+      "encoding": "sharp WebP quality 86; no crop, resizing or visual edit",
+      "inspection": {
+        "date": "2026-10-25",
+        "originalVisibleInTool": true,
+        "finalWebpViewedWithViewImage": true,
+        "people": false,
+        "readableText": false,
+        "logos": false,
+        "identityDocuments": false,
+        "realCaseEvidence": false,
+        "subject": "Unpowered precision equipment installation bay, tool case, cable and gloves"
+      },
+      "originalSha256": "d8c229ba5472135b35635f5be43a7d9ee29dba09a3477feba8f04fe5ee2427e7",
+      "finalSha256": "0642ee36a4fb08d9d189c3b1563d77de7eb929f93beebe81ea38a10f046b9f55",
+      "finalBytes": 199034
+    },
+    {
+      "id": 935,
+      "tool": "image_gen__imagegen",
+      "mode": "built-in native generation",
+      "prompt": "Use case: photorealistic-natural. Asset type: restrained editorial hero for a Dutch-language Taiwan legal column about sale of industrial machinery with retention of title and registration before delivery. Generate a fictional landscape industrial still life, 1536 x 1024. A single compact precision milling machine securely mounted on a timber shipping base in a clean warehouse loading area, a partly assembled pale plywood shipping crate behind it, a cream paper folder closed on a low wooden packing bench in the near foreground, an unmarked steel key resting beside the folder. The machine is disconnected and prepared for shipment, no people. Warm slanting late-afternoon daylight across timber grain, graphite metal and concrete, realistic photography with careful material textures, visual distinction from a blue factory installation scene. Wide view with the machinery and crate readable as shapes, calm and practical mood. No readable text, labels, numbers, logos, flags, screens, seals, identity documents, watermarks or recognizable brand designs. No fake legal stamps or court evidence. Clearly fictional scene.",
+      "outputHint": "Generated images are saved to /Users/son7/.codex/generated_images/01a1732a-574d-7043-857f-df5dabbc4635 as /Users/son7/.codex/generated_images/01a1732a-574d-7043-857f-df5dabbc4635/exec-dc2549c9-9793-40de-8c9c-dd668a60b6e2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "originalPath": "/Users/son7/.codex/generated_images/01a1732a-574d-7043-857f-df5dabbc4635/exec-dc2549c9-9793-40de-8c9c-dd668a60b6e2.png",
+      "finalPath": "repo/public/images/columns/935-market-expansion-20261025.webp",
+      "width": 1536,
+      "height": 1024,
+      "encoding": "sharp WebP quality 86; no crop, resizing or visual edit",
+      "inspection": {
+        "date": "2026-10-25",
+        "originalVisibleInTool": true,
+        "finalWebpViewedWithViewImage": true,
+        "people": false,
+        "readableText": false,
+        "logos": false,
+        "identityDocuments": false,
+        "realCaseEvidence": false,
+        "subject": "Machinery prepared for shipping, crate, closed folder and key"
+      },
+      "originalSha256": "52d05b5b14dc5aad366b926b20e8a7e38c30355175fc79608b0698c4f0d0fab1",
+      "finalSha256": "228564814ce94325a15636b897ef9d744f9bd05cd649db6b1370ad558da83a61",
+      "finalBytes": 197732
+    }
+  ]
+}

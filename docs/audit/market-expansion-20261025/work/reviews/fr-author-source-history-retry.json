@@ -1,0 +1,5 @@
+{
+  "checkedDate": "2026-10-25",
+  "result": "Internal Error ()\nciteturn1733view0 [wordlim: 200] Source: open({\"ref_id\":\"https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0030013\",\"lineno\":29}); Total lines: 1\nL0: URL https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0030013 is not accessible via this tool.\n--------------------------------------------------------------------------------\nInternal Error ()\nciteturn1733view1 [wordlim: 200] Source: open({\"ref_id\":\"https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=G0330011\",\"lineno\":28}); Total lines: 1\nL0: URL https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=G0330011 is not accessible via this tool.\n",
+  "note": "Later MOJ history retries failed; this is retained alongside the successful current-article and earlier history/MOF fallback reads."
+}

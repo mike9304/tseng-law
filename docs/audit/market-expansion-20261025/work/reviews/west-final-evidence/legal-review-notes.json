@@ -1,0 +1,180 @@
+{
+  "scope": "Independent final review only; no manuscript edits or publication.",
+  "reviewer": "/root/expand_final_west",
+  "reviewed_date": "2026-10-25",
+  "articles": [
+    {
+      "id": 934,
+      "locale": "nl",
+      "line_ranges": [
+        "17–21",
+        "26–50"
+      ],
+      "legal_checks": [
+        "Eligibility is limited to foreign-legal-person contract work under Employment Service Act 51(3), involving the work in 46(1)(1) or (2). A Taiwanese contract alone is not enough.",
+        "Permission regulation 5 uses stay up to 30 days; 12 permits filing within 30 days of entry for a 31–90-day stay. Entry permission and permission to work remain separate. No sentence says filing itself authorizes pre-decision work.",
+        "Qualification standard 7 and the separate degree-copy exception in regulation 9(2)(5) each preserve the one year preceding the application plus current-period cumulative test. They concern work periods, not merely weekdays actually on site.",
+        "No Taiwan branch or representative office: the contractual business or authorized agent is the relevant applicant; the supplier's contract/registration/dispatch documents remain required."
+      ],
+      "commencement": "Permission regulation current revision 2025-12-30; cited 5/9/12 unaffected by that revision, 9 last amended 2023-10-13. Qualification standards current 2024-08-01 revision does not change 7. Employment Service Act current 2025-01-20 amendment concerns 46. Current full texts and commencement/history were read; ESA history used official Taipei PDF after MOJ history access failed.",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090027",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090031",
+        "https://laws.gov.taipei/law/LawSearch/LawExport/FL015128?type=0",
+        "https://www.boca.gov.tw/cp-149-4486-7785a-2.html",
+        "https://ezworktaiwan.wda.gov.tw/cp.aspx?n=D7B5F886C207D205"
+      ],
+      "opening_deletion": "P1 supplies conditional article-5 equivalence and the stay threshold; P2 supplies Dutch entry eligibility and the separate work-permission boundary. Deletion loses distinct operative information.",
+      "overlap": "Actual JA135 read, SHA 34f782154d76db2eaebfd79fc42c03c2cb5a40d8bb2de48cb6baa10fdff63881. Same legal backbone acknowledged. NL is a shorter changed-installation decision: 3 to 6 weeks, initial entry clock, notification responsibility, aligned contract/dispatch scope and previous assignments. JA is a broad multi-route guide with 30/90 table, pre-permit ambiguity, subsidiary, processing-time, sanctions, tax and inquiry sections. Not a translated structural duplicate.",
+      "special_limit": "Current WDA manual-list page links a May 2018 contract-worker manual; printed p10 (PDF p13) explains stay calculation by entry/exit records. Its cover says current law governs. This is supplemental guidance, not a newly enacted rule or an individual clearance for every 90-day visa-free admission. No inference of lawful work before a decision is certified.",
+      "image_observation": "Cool steel workbench, open industrial machine, tool case, torque wrench and gloves. Decorative glove marks do not identify a brand; no people or readable case documents. Alt matches."
+    },
+    {
+      "id": 935,
+      "locale": "nl",
+      "line_ranges": [
+        "17–21",
+        "26–56"
+      ],
+      "legal_checks": [
+        "Written conditional sale and unregistered non-opposability are limited to third parties in good faith; lack of registration is not equated with invalidity between the parties.",
+        "Machinery eligibility, possession before title, all article-27 contract particulars, conditional insurance-beneficiary requirement, and the article-31 pre-existing chattel-mortgage bar are retained. Taiwan chattel mortgage is explained without equating it to a Dutch security right.",
+        "IPR 38 uses situs and the location when the causative fact is completed for a moved asset. A Dutch governing-law clause is not represented as deciding Taiwan registration.",
+        "FSC rules 2–4 support authority, applicant/agent, electronic filing and documents. Article 9 preserves agreed duration, one-year default, application within the 30 days before expiry and up-to-one-year extension from expiry.",
+        "Articles 28–30 remain conditional pre-title recovery and prescribed recovery/resale procedures, not unconditional self-help access or immediate repossession."
+      ],
+      "commencement": "Movables law current 2007-07-11 revision with publication commencement; IPR 2010-05-26 enactment took effect one year later. FSC rules 2015-12-17 revision: article 2 from 2016-01-01, remainder from publication. Official texts/history read.",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380024",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007",
+        "https://law.fsc.gov.tw/LawContent.aspx?id=GL000440",
+        "https://ppstrq.nat.gov.tw/pps/web/Show/B1Page.do"
+      ],
+      "opening_deletion": "P1 gives the third-party good-faith consequence and written form; P2 limits the consequence between the parties and ties separate contract/registration planning to payment after installation.",
+      "overlap": "Compared DE679 machinery FAT/SAT/final payment and IT684 unpaid installation/debt enforcement. NL935's decision is retention of title, registration, term monitoring and third-party effect; it is not another acceptance or debt-demand article.",
+      "special_limit": "B1 instruction URL repeatedly returned 503 here; no direct successful retrieval or filing-portal operation is claimed. Current FSC rules independently support the exact document/applicant/machine-description claims. The author's successful B1 retrieval is not used as a substitute for this review's statutory verification.",
+      "image_observation": "Warm warehouse with milling machine on transport base, open crate, blank closed folder and key. Distinct from the work-permit image; no people or readable identifying documents. Alt matches."
+    },
+    {
+      "id": 936,
+      "locale": "fr",
+      "line_ranges": [
+        "18–23",
+        "26–62"
+      ],
+      "legal_checks": [
+        "Each responsible importer registers; a different legal entity is not merely the old operator's name/address amendment. TFDA registration FAQ dated 2026-08-07 printed p30 supports this.",
+        "TFDA PIF FAQ dated 2026-06-24 pp25/27/28 supports conditional sharing/reuse, product accuracy/completeness/traceability/match, foreign-file reuse only when Taiwan requirements are met, and confidential manufacturer/cloud holding with effective regulatory access.",
+        "The report does not assume paid-report ownership, license transfer, EU approval equivalence or automatic recognition of the safety assessor. Taiwan PIF articles 3–6 remain applicable.",
+        "Five-year minimum retention starts the day after last placement on the market, not termination. Labelled address and the former importer's own obligations remain; transfer of a copy is not permission to erase records.",
+        "Product-registration updates, seller relabel/resale prohibition, staged 2024/2025/2026 PIF coverage, exact limited handmade-solid-soap exception and pre-supply/sale/free distribution/public display/consumer trial obligations are preserved."
+      ],
+      "commencement": "PIF regulation 2019-05-30 promulgation effective 2019-07-01; 2022-06-16 article-4 amendment current. Registration regulation effective 2019-07-01. Cosmetics Act 2018-05-02 revision: article 4 generally 2019-07-01, article 7 2021-07-01 under official commencement order; the PIF category announcement phases culminated on 2026-07-01.",
+      "sources": [
+        "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639219591977347651&type=4",
+        "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639179794512621908&iid=13384&type=3",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030098",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030097",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030013",
+        "https://www.fda.gov.tw/tc/newsContent.aspx?cid=3&id=30614"
+      ],
+      "opening_deletion": "P1 supplies the new responsible importer's own registration; P2 supplies conditional reuse and the separate contractual right/access decision. The author's redundant recap was removed during locale repair.",
+      "overlap": "Actual FR011 general cosmetics entry/PIF and FR676 distribution exit/stock/digital accounts compared. This manuscript narrows to handover of regulatory data, permissions, access and retention after importer replacement.",
+      "special_limit": "No technical PIF, particular formula, assessor credential or relabeling operation is approved. Practical handover clauses are recommendations, not prescribed statutory contract wording.",
+      "image_observation": "Three unbranded cosmetic containers, blank binders and storage drive in cool light; no readable formulas or labels. Alt and fictional caption match."
+    },
+    {
+      "id": 937,
+      "locale": "fr",
+      "line_ranges": [
+        "18–23",
+        "26–66"
+      ],
+      "legal_checks": [
+        "National Alcohol Act 30 and current Taipei/Taichung guidance support the electronic-order restriction, including social/app/form orders for collection or delivery. An identity/age check is not presented as an e-commerce authorization.",
+        "Advertising, neutral information and order acceptance remain separate. Taipei's advertising-classification principles are identified as local guidance and do not exempt electronic sales.",
+        "Article 37 warnings/prohibited claims and rule 11 retain independent continuous warning area at least 10%, character area at least half that background, contrast, permitted pictogram qualification, continuous video and audible audio.",
+        "Business France listing supports an announced 2026-05-19 event, not independently proven attendance, completed transactions or market conversion. Repaired text says annonçait ... pour le 19 mai 2026.",
+        "Per-format approval, publication archives, removal access and photo licenses are practical contractual allocations, not a new law or guarantee of campaign compliance."
+      ],
+      "commencement": "Alcohol Act current 2017-12-27 revision affects 57/59; cited 30/37 from 2014 amendment effective 2015-01-01. Implementing rules current 2023-03-22 revision affects 2/27; advertising rule 11 effective 2015-01-01, separately from rule 9's 2016-01-01 pictogram commencement. Current official histories read.",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0330011",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0330012",
+        "https://dof.gov.taipei/News_Content.aspx?n=39A258CB8C1B2779&s=1EB2F8C0189F2E68&sms=87415A8B9CE81B16",
+        "https://www.finance.taichung.gov.tw/1997524/post",
+        "https://laws.gov.taipei/law/LawSearch/LawArticleContent/FL046302",
+        "https://www.marketplace.businessfrance.fr/event/index/event/id/1271/"
+      ],
+      "opening_deletion": "P1 fixes the online-order/pay-and-collect decision and guidance; P2 links the French supplier's campaign to the exact national sales rule. Removed recap is not replaced with filler.",
+      "overlap": "Distinct from FR676 importer-exit stock/accounts and the ARC comparator group. Its object is pre-launch order path and warning/advertising review.",
+      "special_limit": "No import permit, tax treatment, particular campaign or French-law advertising analysis is certified. Taipei FAQ reviewed 2026-10-20; older author access stamp is not asserted in the public manuscript.",
+      "image_observation": "Unlabelled wine bottles in a carton and a dark blank tablet on a shop counter. No readable order, brand, people or flags; alt matches."
+    },
+    {
+      "id": 938,
+      "locale": "pt-BR",
+      "line_ranges": [
+        "18–23",
+        "26–62"
+      ],
+      "legal_checks": [
+        "The importer obliged to request inspection, not the inspector, is the retest/disposition actor. The 15-day trigger is receipt of the noncompliance notice; article 25 retains a presumption of service on electronic system dispatch rather than an unqualified actual-receipt assertion.",
+        "Article 23 preserves one request, original remaining sample and initial laboratory; private Brazilian replacement sample does not substitute. Destruction provision concerns remaining sample, not automatic destruction of all cargo.",
+        "Food Act 39 preserves authority's three-day retest action and the inadequate-preservation refusal exception; it does not guarantee results or cargo release within three days.",
+        "Article 24's enumerated correction/treatment branches, return/destruction, prior agreement before import-to-correct and conditional early release are preserved; no general pesticide-residue cure is promised.",
+        "Commercial notice-sharing/cost allocation is distinct from administrative compliance and does not determine the contract's governing law or liability."
+      ],
+      "commencement": "Import-inspection regulation full revision promulgated 2025-08-21: 19–21 effective 2025-09-01, other provisions including 23–25 effective 2026-01-01 under 29/history. Food Act current 2019-06-12 revision did not amend 39; its relevant 2013 revision became effective on publication.",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0040017",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0040017",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0040001"
+      ],
+      "opening_deletion": "P1 supplies importer, 15-day deadline, authority, one request and Brazilian supplier's notice decision. P2 supplies electronic-service presumption and why later forwarding does not restart time.",
+      "overlap": "The recent PT704–706 corpus is mainly European Portuguese immigration material; it does not establish Brazilian idiom. New text directly addresses Brazilian coffee export records, cooperatives and Taiwan border notice/sample/cost decisions. PT694–698 commercial topics were also compared and have different decisions.",
+      "special_limit": "No particular consignment, phytosanitary import requirement, laboratory methodology or Brazilian law is approved. Original MOJ single-page access failures were resolved with current official full texts.",
+      "image_observation": "Sealed transparent green-coffee sample container, scoop and plain jute sack on a cool inspection counter; no identifying label, person or official seal. Alt matches."
+    },
+    {
+      "id": 939,
+      "locale": "pt-BR",
+      "line_ranges": [
+        "18–23",
+        "26–65"
+      ],
+      "legal_checks": [
+        "Organic Act 17's first route retains Taiwan-system accredited entity AND authorized territory. The second retains equivalence-country/WTO-member accredited entity AND certification within that territory AND Taiwan importer review/approval document.",
+        "Brazil's absence from AFA's currently observed equivalence list does not imply that every certification route is unavailable. The accredited-entity list is not a blanket finding of any certifier's authority in Brazil.",
+        "Articles 13 and 16 preserve contracted scope while requiring certification across relevant production/processing/repacking/distribution stages; green coffee roasted in Taiwan and packaged roasted imports are not treated as identical.",
+        "Article 18 retains Chinese/common-symbol labels, certificate versus second-route approval number, single-ingredient and identifiable-origin exceptions, three months from changed information and only authority-announced relief. Article 19's bulk display/copy requirement remains.",
+        "Foreign seal, certificate or distributor agreement is not equated with Taiwan organic approval or permission to use the Taiwan organic mark."
+      ],
+      "commencement": "Organic Agriculture Promotion Act promulgated 2018-05-30, effective one year later; 2023-08-01 competence transfer to Ministry of Agriculture distinguished from enactment. AFA equivalence list and accredited-entity/territory table currently opened; table dated 2026-09-09, updated 09-10.",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0030093",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=M0030093",
+        "https://www.afa.gov.tw/cht/index.php?code=list&ids=548",
+        "https://www.afa.gov.tw/cht/index.php?article_id=22184&code=list&flag=detail&ids=546"
+      ],
+      "opening_deletion": "P1 supplies two-route eligibility and label/display/advertising scope. P2 identifies issuer, territory and covered activities and places the decision before printing or promising organic sale.",
+      "overlap": "Separate from PT938's border retest: certificate territorial scope and packaging/organic offer are the decision. Recent European-Portuguese residence comparators are explicitly not Brazilian-native validation.",
+      "special_limit": "No individual Brazil-based certifier eligibility, Brazilian certificate compliance, complete coffee-import clearance or technical product review is certified.",
+      "image_observation": "Blank kraft pouches, roasted beans, blank paper samples and leaves on warm wood; no certification seal, readable writing or people. Alt and fictional caption match."
+    }
+  ],
+  "common_firm_checks": {
+    "sources": [
+      "https://tseng-law.com/en/services",
+      "https://tseng-law.com/en/contact"
+    ],
+    "result": "Current firm sources support Taiwan-law service scope and wei@hoveringlaw.com.tw. Each CTA uses English, Chinese, Korean and Japanese; another communication method requires confirmation, a nonconfidential initial summary and no acceptance of a mandate merely on receipt. No foreign-law licensure, human review, credentials, client success, guaranteed result or unsupported market metric is asserted."
+  },
+  "evidence_limits": [
+    "Independent AI final editorial review, not human attorney review, legal advice to a particular client or a guarantee of legal accuracy.",
+    "No manuscript edits, publication, authenticated filing, production browser rendering, hydration or interaction verification performed by this reviewer.",
+    "Official full-text/history alternatives and failed access are preserved. No consequential conclusion rests solely on an official search-result snippet.",
+    "Whole-24-article opening-type distribution and live publication checks remain root-owned; this review covers six complete manuscripts and targeted actual comparators."
+  ]
+}

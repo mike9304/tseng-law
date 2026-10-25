@@ -1,0 +1,686 @@
+{
+  "reviewer": "/root/expand_final_east",
+  "role": "final",
+  "independentOfAuthor": true,
+  "independentOfLocaleReviewers": true,
+  "authoredAssignedArticles": false,
+  "human_or_licensed_attorney_claim": false,
+  "checkedAt": "2026-10-25T13:34:10.157315+00:00",
+  "verdict": "PASS",
+  "overall_verdict": "PASS",
+  "records": [
+    {
+      "id": 940,
+      "locale": "pl",
+      "source_path": "src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "sha256": "06813fc5597240ed39d513e1e88df483dec85cd8f277f89d1baaa41003b6f4ca",
+      "source_mtime_utc": "2026-10-25T13:26:11.027930+00:00",
+      "checkedAt": "2026-10-25T13:34:10.157315+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "optional_style_findings": [],
+      "locale_report": "work/reviews/pl-locale.json",
+      "locale_report_sha256": "ef78fa420ae1f373b69ab28acc8a554e5b1d4fc52aed6920b50e2f1de496837b",
+      "locale_human_report": "work/reviews/pl-locale.md",
+      "locale_human_report_sha256": "f16213dfd45efe6964e2958037ec8b52f06bb256b079759443db7ff56a309817",
+      "image_path": "public/images/columns/940-market-expansion-20261025.webp",
+      "image_sha256": "f695325dd0624188a9de25dab62c5f2830f090d528e1b50c265cbb989d00ffbd",
+      "image_inspected": true,
+      "image_inspection": "항구가 보이는 책상, 빈 종이 폴더, 닫힌 노트북과 보안키; 텍스트·얼굴·로고·신분문서 없음. 현지어 alt와 가상 장면 표기 일치. 실제 사건 증거 아님.",
+      "image_unchanged_since_inspection": true,
+      "caption": "Scena fikcyjna",
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md --lang pl",
+      "variety_exit_code": 0,
+      "variety_scope": "approved task-local extension; shared checker remains unsupported",
+      "variety_metrics": {
+        "sentences": 44.0,
+        "mean": 15.4,
+        "cv": 0.464,
+        "short": 0.205,
+        "run3": 0.048,
+        "opener_rep": 0.0,
+        "cite_end": 0.0,
+        "cite_para": 0.4,
+        "contrast": 0.0,
+        "caveat": 0.0,
+        "q": 1.0
+      },
+      "original_variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md --lang pl",
+      "original_variety_exit_code": 2,
+      "original_variety_status": "UNSUPPORTED_NOT_PASS",
+      "variety_evidence": "work/reviews/east-final-evidence/final-variety-r1.json",
+      "content_checks": {
+        "no_bold_markup": true,
+        "internal_provenance_retained": true,
+        "no_public_ai_byline": true,
+        "one_mailto_link": true,
+        "published_date": true,
+        "lastmod_date": true
+      },
+      "first_two_paragraph_deletion_check": "L24: 송금 증명과 채무 소멸의 차이·대만법 적용 조건·수령권자를 제시한다. L26: 은행/실제 공급자 즉시 연락, 기존 확인 연락처, 회수 비보장을 각각 설명한다. 삭제하면 구체 정보가 사라진다.",
+      "section5_check": "최종 본문·도입·첫 단어·인용 리듬·실질 단문·마무리·보정 후 조건 보존을 재독. 미해결 단조로움 없음. 수치만으로 승인하지 않음.",
+      "legal_checks": [
+        {
+          "provisions": "민법309",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=309",
+          "result": "채무 내용에 맞는 급부, 채권자/수령권자 및 수령 조건을 보존. 송금 성공 증빙만으로 채무 소멸을 단정하지 않는다."
+        },
+        {
+          "provisions": "민법310",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=310",
+          "result": "추인/채권 취득, 채권 준점유자 및 채무자의 비채권자 지위 불인지, 채권자가 실제 이익을 받은 범위의 세 경로를 구별. 중국어 債務人이 지배하며 영문 오역 creditor를 따르지 않는다. 단순 선의 일반 면책 아님."
+        },
+        {
+          "provisions": "민법169",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=169",
+          "result": "본인 자신의 대리권 표시 또는 알면서 묵인한 조건과 제3자가 알았거나 알 수 있었던 예외. 사기꾼의 외관만으로 자동 성립시키지 않는다."
+        },
+        {
+          "provisions": "섭외법18/20",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007",
+          "result": "계약상 채무 관계와 본인·상대방 사이 대리권 문제의 법 선택을 구분한다."
+        }
+      ],
+      "legal_evidence": [
+        "work/reviews/east-final-evidence/web-1.json",
+        "work/reviews/east-final-evidence/web-6.json",
+        "work/reviews/east-final-evidence/web-7.json",
+        "work/reviews/east-final-evidence/web-12.json",
+        "work/reviews/east-final-evidence/web-13.json"
+      ],
+      "limitations": [
+        "독립 AI 편집/법률 근거 검토. 원어민 인간 또는 자격 있는 변호사의 검수 주장 아님.",
+        "실제 게시·배포·브라우저 렌더링·사건 결과를 검증한 보고서가 아님.",
+        "Europol PDF 직접 열람 2회 timeout. 작성자가 저장한 실제 공식 PDF 도구 반환 pl-author-source-evidence.json results[3]의 P2/L142–153,175–183을 독립 재검토. 자신의 실시간 직접 열람 성공으로 표시하지 않음."
+      ]
+    },
+    {
+      "id": 941,
+      "locale": "pl",
+      "source_path": "src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "sha256": "17382511050d47b947e9ff81276b2b5f8cb5999ebe62aa86f679eb0546c580e7",
+      "source_mtime_utc": "2026-10-25T13:26:25.475983+00:00",
+      "checkedAt": "2026-10-25T13:34:10.157315+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "optional_style_findings": [],
+      "locale_report": "work/reviews/pl-locale.json",
+      "locale_report_sha256": "ef78fa420ae1f373b69ab28acc8a554e5b1d4fc52aed6920b50e2f1de496837b",
+      "locale_human_report": "work/reviews/pl-locale.md",
+      "locale_human_report_sha256": "f16213dfd45efe6964e2958037ec8b52f06bb256b079759443db7ff56a309817",
+      "image_path": "public/images/columns/941-market-expansion-20261025.webp",
+      "image_sha256": "6357ffc8fbd81c105b8c941b95328e95ecafc3945a65860ae4dd7f8da38e8227",
+      "image_inspected": true,
+      "image_inspection": "무상표 주전자·상자·분리된 플러그와 검사 도구; 텍스트·얼굴·로고·신분문서 없음. 현지어 alt와 가상 장면 표기 일치. 실제 사건 증거 아님.",
+      "image_unchanged_since_inspection": true,
+      "caption": "Scena fikcyjna",
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md --lang pl",
+      "variety_exit_code": 0,
+      "variety_scope": "approved task-local extension; shared checker remains unsupported",
+      "variety_metrics": {
+        "sentences": 51.0,
+        "mean": 15.3,
+        "cv": 0.457,
+        "short": 0.216,
+        "run3": 0.0,
+        "opener_rep": 0.059,
+        "cite_end": 0.0,
+        "cite_para": 0.588,
+        "contrast": 0.0,
+        "caveat": 0.0,
+        "q": 1.0
+      },
+      "original_variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md --lang pl",
+      "original_variety_exit_code": 2,
+      "original_variety_status": "UNSUPPORTED_NOT_PASS",
+      "variety_evidence": "work/reviews/east-final-evidence/final-variety-r1.json",
+      "content_checks": {
+        "no_bold_markup": true,
+        "internal_provenance_retained": true,
+        "no_public_ai_byline": true,
+        "one_mailto_link": true,
+        "published_date": true,
+        "lastmod_date": true
+      },
+      "first_two_paragraph_deletion_check": "L26: 수입자의 제조자 책임과 브랜드/실제 역할의 차이. L28: 현재 위험 제거와 손해배상이라는 서로 다른 업무, 내부 비용분쟁이 회수 조건을 바꾸지 못한다는 점, 배치 기록의 용도를 제시한다.",
+      "section5_check": "최종 본문·도입·첫 단어·인용 리듬·실질 단문·마무리·보정 후 조건 보존을 재독. 미해결 단조로움 없음. 수치만으로 승인하지 않음.",
+      "legal_checks": [
+        {
+          "provisions": "소비자보호법2/7/7-1",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
+          "result": "소비 목적 범위, 공급 시 과학·전문 수준에 비춘 합리적 안전 기대, 의무 위반과 손해의 인과관계, 안전성 주장 입증 부담. 무과실 입증은 법원이 감경할 수 있는 조건이며 자동 전면 면책 아님."
+        },
+        {
+          "provisions": "소비자보호법8/9",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
+          "result": "수입자의 제조자 책임과 유통자의 책임·상당한 주의/불가피 손해 항변, 개조·재포장 취급을 분리. 브랜드명만으로 법적 역할 확정 금지."
+        },
+        {
+          "provisions": "소비자보호법10/10-1",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=10",
+          "result": "위험을 판단할 사실이 있으면 해당 배치 즉시 회수, 필요한 조치로 충분히 위험 제거하는 예외 보존. 경고 및 긴급대처정보 의무의 미충족 조건은 두 항목 모두 완전히 없을 때만으로 축소하지 않는다. 소비자/제3자 책임 사전 제한 금지와 내부 비용분담은 별개."
+        },
+        {
+          "provisions": "섭외법26/20",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=26",
+          "result": "제조자 본국법 기본; 해당 지역 판매 동의/예견가능성과 피해자 선택 조건을 보존. 내부 계약 준거법은 별도."
+        }
+      ],
+      "legal_evidence": [
+        "work/reviews/east-final-evidence/web-1.json",
+        "work/reviews/east-final-evidence/web-3.json",
+        "work/reviews/east-final-evidence/web-5.json",
+        "work/reviews/east-final-evidence/web-8.json",
+        "work/reviews/east-final-evidence/web-12.json",
+        "work/reviews/east-final-evidence/web-13.json"
+      ],
+      "limitations": [
+        "독립 AI 편집/법률 근거 검토. 원어민 인간 또는 자격 있는 변호사의 검수 주장 아님.",
+        "실제 게시·배포·브라우저 렌더링·사건 결과를 검증한 보고서가 아님."
+      ]
+    },
+    {
+      "id": 942,
+      "locale": "cs",
+      "source_path": "src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md",
+      "sha256": "b24786be986f1f9660c9fce10c830137156646755991d85215d4e96836fb1cef",
+      "source_mtime_utc": "2026-10-25T13:26:11.029028+00:00",
+      "checkedAt": "2026-10-25T13:34:10.157315+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "optional_style_findings": [],
+      "locale_report": "work/reviews/cs-locale.json",
+      "locale_report_sha256": "2a354337ab610b98729b42b0b7386c577fe0ef1ab936c36c3db604459cf311c7",
+      "locale_human_report": "work/reviews/cs-locale.md",
+      "locale_human_report_sha256": "a47971c1d0eae62d541f6287639274701889e0dd7597fe3165b1b67c62c87c3b",
+      "image_path": "public/images/columns/942-market-expansion-20261025.webp",
+      "image_sha256": "fbe6798bf66fccdd74d1cf80421188c1da0fb122de6f0ad77625bf4491f46543",
+      "image_inspected": true,
+      "image_inspection": "공급자 책상 위 빈 문서·닫힌 노트북·가공 부품; 텍스트·얼굴·로고·신분문서 없음. 현지어 alt와 가상 장면 표기 일치. 실제 사건 증거 아님.",
+      "image_unchanged_since_inspection": true,
+      "caption": "Smyšlená scéna",
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md --lang cs",
+      "variety_exit_code": 0,
+      "variety_scope": "approved task-local extension; shared checker remains unsupported",
+      "variety_metrics": {
+        "sentences": 44.0,
+        "mean": 15.0,
+        "cv": 0.455,
+        "short": 0.159,
+        "run3": 0.024,
+        "opener_rep": 0.067,
+        "cite_end": 0.0,
+        "cite_para": 0.667,
+        "contrast": 0.0,
+        "caveat": 0.0,
+        "q": 1.0
+      },
+      "original_variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/942-czech-supplier-taiwan-email-purchase-order-contract.md --lang cs",
+      "original_variety_exit_code": 2,
+      "original_variety_status": "UNSUPPORTED_NOT_PASS",
+      "variety_evidence": "work/reviews/east-final-evidence/final-variety-r1.json",
+      "content_checks": {
+        "no_bold_markup": true,
+        "internal_provenance_retained": true,
+        "no_public_ai_byline": true,
+        "one_mailto_link": true,
+        "published_date": true,
+        "lastmod_date": true
+      },
+      "first_two_paragraph_deletion_check": "L26/L28의 도입은 서명 없는 합의의 법적 효과·명시/묵시 합의 증거와 선택법/최밀접법 조건을 제시한다. 불필요한 준거법 예고를 삭제한 최종판을 확인했다.",
+      "section5_check": "최종 본문·도입·첫 단어·인용 리듬·실질 단문·마무리·보정 후 조건 보존을 재독. 미해결 단조로움 없음. 수치만으로 승인하지 않음.",
+      "legal_checks": [
+        {
+          "provisions": "민법153/160(2)/166/345",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=153",
+          "result": "명시/묵시 합의, 필수점 합의와 비필수점, 변경 승낙의 새 청약, 당사자 약정 형식 미완성시 불성립 추정을 구별한다. 단순 이메일 수신만으로 조건 승낙 아님. 유효한166과 미시행166-1 혼동 없음."
+        },
+        {
+          "provisions": "전자서명법4/5/6/8",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080037",
+          "result": "2024-05-15 개정 현행법. 전자형태만을 이유로 효력 부정 금지와 완전 재현/추후 열람 요건, 상대 동의 또는 고지·상당기간 이의기회, 적격 인증기관/유효 인증서에 한정한 직접 서명 추정을 구별. 스캔 PDF/EU 인증서 일반 추정 아님. 8조 메타데이터는 보존할 수 있음이지 모두 의무 아님."
+        },
+        {
+          "provisions": "섭외법20",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+          "result": "준거법 선결 문제를 보존한다."
+        }
+      ],
+      "legal_evidence": [
+        "work/reviews/east-final-evidence/web-2.json",
+        "work/reviews/east-final-evidence/web-3.json",
+        "work/reviews/east-final-evidence/web-5.json",
+        "work/reviews/east-final-evidence/web-8.json",
+        "work/reviews/east-final-evidence/web-13.json"
+      ],
+      "limitations": [
+        "독립 AI 편집/법률 근거 검토. 원어민 인간 또는 자격 있는 변호사의 검수 주장 아님.",
+        "실제 게시·배포·브라우저 렌더링·사건 결과를 검증한 보고서가 아님."
+      ]
+    },
+    {
+      "id": 943,
+      "locale": "cs",
+      "source_path": "src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+      "sha256": "46c094fc25bee60eaddd867007b905a44a89c2c1dbb77ab9dda8cd5a5837fe91",
+      "source_mtime_utc": "2026-10-25T13:26:11.029635+00:00",
+      "checkedAt": "2026-10-25T13:34:10.157315+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "optional_style_findings": [],
+      "locale_report": "work/reviews/cs-locale.json",
+      "locale_report_sha256": "2a354337ab610b98729b42b0b7386c577fe0ef1ab936c36c3db604459cf311c7",
+      "locale_human_report": "work/reviews/cs-locale.md",
+      "locale_human_report_sha256": "a47971c1d0eae62d541f6287639274701889e0dd7597fe3165b1b67c62c87c3b",
+      "image_path": "public/images/columns/943-market-expansion-20261025.webp",
+      "image_sha256": "d28c66a04807a5d524c06bd2ee1912a2c23b5bc60a6ebeaa8c6baec5c2ec35d0",
+      "image_inspected": true,
+      "image_inspection": "투명 덮개 아래 가상 기계 시제품과 전시장; 텍스트·얼굴·로고·신분문서 없음. 현지어 alt와 가상 장면 표기 일치. 실제 사건 증거 아님.",
+      "image_unchanged_since_inspection": true,
+      "caption": "Smyšlená scéna",
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md --lang cs",
+      "variety_exit_code": 0,
+      "variety_scope": "approved task-local extension; shared checker remains unsupported",
+      "variety_metrics": {
+        "sentences": 44.0,
+        "mean": 14.8,
+        "cv": 0.456,
+        "short": 0.205,
+        "run3": 0.024,
+        "opener_rep": 0.062,
+        "cite_end": 0.0,
+        "cite_para": 0.25,
+        "contrast": 0.0,
+        "caveat": 0.0,
+        "q": 1.0
+      },
+      "original_variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md --lang cs",
+      "original_variety_exit_code": 2,
+      "original_variety_status": "UNSUPPORTED_NOT_PASS",
+      "variety_evidence": "work/reviews/east-final-evidence/final-variety-r1.json",
+      "content_checks": {
+        "no_bold_markup": true,
+        "internal_provenance_retained": true,
+        "no_public_ai_byline": true,
+        "one_mailto_link": true,
+        "published_date": true,
+        "lastmod_date": true
+      },
+      "first_two_paragraph_deletion_check": "첫 문단은 서로 다른 기산점의 두12개월과 합산 금지, 전시 후 첫 출원의 오류를 설명한다. 둘째는 공개된 실제 기술내용·자료 종류·버전별 날짜와 선행 웹 공개를 구분한다.",
+      "section5_check": "최종 본문·도입·첫 단어·인용 리듬·실질 단문·마무리·보정 후 조건 보존을 재독. 미해결 단조로움 없음. 수치만으로 승인하지 않음.",
+      "legal_checks": [
+        {
+          "provisions": "특허법22/TIPO 공개 유예",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=22",
+          "result": "신규성/진보성, 출원인 의도·비의도 공개의 12개월 예외, 출원인이 의도한 대만/외국 특허공보 공개 제외. 공개된 실제 기술내용과 날짜·증거 필요. 유예는 우선일을 만들거나 타인 선출원을 무력화하지 않음."
+        },
+        {
+          "provisions": "특허법28/29",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=29",
+          "result": "동일 발명 첫 합법적 외국 출원에서 12개월; 상호주의/WTO 조건. 체코 WTO 회원 확인. 최초 출원과 공개의 두 12개월 시계는 합산/연장되지 않는다. 우선권 서류의 최우선일로부터 16개월은 별도 서류 기간, 대만 출원 추가 기간 아님. 제한적 비의도 누락 회복은 자동 약속 아님."
+        },
+        {
+          "provisions": "특허법11",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=11",
+          "result": "대만 주소/영업소 없는 출원인의 법정 대리 요건. 사무소의 확인되지 않은 특허대리 자격을 광고하지 않음."
+        }
+      ],
+      "legal_evidence": [
+        "work/reviews/east-final-evidence/web-2.json",
+        "work/reviews/east-final-evidence/web-3.json",
+        "work/reviews/east-final-evidence/web-5.json",
+        "work/reviews/east-final-evidence/web-6.json",
+        "work/reviews/east-final-evidence/web-7.json"
+      ],
+      "limitations": [
+        "독립 AI 편집/법률 근거 검토. 원어민 인간 또는 자격 있는 변호사의 검수 주장 아님.",
+        "실제 게시·배포·브라우저 렌더링·사건 결과를 검증한 보고서가 아님."
+      ]
+    },
+    {
+      "id": 944,
+      "locale": "lt",
+      "source_path": "src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md",
+      "sha256": "52da5f555b98a01f66dc2140cbdfba2514eff3285b6898472d740b903e75a1ee",
+      "source_mtime_utc": "2026-10-25T13:26:11.030108+00:00",
+      "checkedAt": "2026-10-25T13:34:10.157315+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "optional_style_findings": [],
+      "locale_report": "work/reviews/lt-locale.json",
+      "locale_report_sha256": "d36af6c1767b64f0c800aaf3228f94b3261694dc7030118fb6e41e8cb58e0089",
+      "locale_human_report": "work/reviews/lt-locale.md",
+      "locale_human_report_sha256": "45eeb546a8730fff7cff575d2971318441af4c79592741f5b335f45b4622cc30",
+      "image_path": "public/images/columns/944-market-expansion-20261025.webp",
+      "image_sha256": "2d622e75d557352b3b10b714fcc63bbd336b5f4a24758667c2fc4caf98bd000a",
+      "image_inspected": true,
+      "image_inspection": "작동하지 않는 광학 모듈·운송 케이스·닫힌 폴더; 텍스트·얼굴·로고·신분문서 없음. 현지어 alt와 가상 장면 표기 일치. 실제 사건 증거 아님.",
+      "image_unchanged_since_inspection": true,
+      "caption": "Išgalvota scena",
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md --lang lt",
+      "variety_exit_code": 0,
+      "variety_scope": "approved task-local extension; shared checker remains unsupported",
+      "variety_metrics": {
+        "sentences": 43.0,
+        "mean": 14.9,
+        "cv": 0.49,
+        "short": 0.233,
+        "run3": 0.024,
+        "opener_rep": 0.067,
+        "cite_end": 0.0,
+        "cite_para": 0.267,
+        "contrast": 0.0,
+        "caveat": 0.0,
+        "q": 2.0
+      },
+      "original_variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md --lang lt",
+      "original_variety_exit_code": 2,
+      "original_variety_status": "UNSUPPORTED_NOT_PASS",
+      "variety_evidence": "work/reviews/east-final-evidence/final-variety-r1.json",
+      "content_checks": {
+        "no_bold_markup": true,
+        "internal_provenance_retained": true,
+        "no_public_ai_byline": true,
+        "one_mailto_link": true,
+        "published_date": true,
+        "lastmod_date": true
+      },
+      "first_two_paragraph_deletion_check": "L24는 레이저와 함께 전달되는 설정/방법과 버전·수령인·목적을 제시한다. 둘째 본문은 H2 뒤 L28이며 NDA 역할과 실제 법정 정의·세 누적 요건을 한 번만 설명한다. r2에서 중복 예고를 제거했고 조건을 잃지 않았다.",
+      "section5_check": "최종 본문·도입·첫 단어·인용 리듬·실질 단문·마무리·보정 후 조건 보존을 재독. 미해결 단조로움 없음. 수치만으로 승인하지 않음.",
+      "legal_checks": [
+        {
+          "provisions": "영업비밀법2/TIPO",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028",
+          "result": "관련 정보를 다루는 사람에게 비공지, 비밀로 인한 실제/잠재 경제가치, 합리적 비밀관리의 세 누적 요건. NDA만으로 모든 정보를 법정 비밀로 만들지 않음. 최신 r2 통합 정의에서도 세 조건 보존."
+        },
+        {
+          "provisions": "영업비밀법4/7",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028",
+          "result": "위탁 연구/개발 관계의 비밀에 한정한 계약 우선·수급자 기본 귀속·자금 제공자의 업무상 이용권. 모든 장비 평가가 위탁 연구 아님. 제3자 재허락은 권리자 동의 필요."
+        },
+        {
+          "provisions": "영업비밀법10",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080028&flno=10",
+          "result": "적법한 계약 수령 이후 부정한 이용/공개와 부정수단 예시. 보호정보·허용범위·실제행위 입증 필요하며 장비반환 지연만으로 침해 확정하지 않음."
+        }
+      ],
+      "legal_evidence": [
+        "work/reviews/east-final-evidence/web-4.json",
+        "work/reviews/east-final-evidence/web-5.json"
+      ],
+      "limitations": [
+        "독립 AI 편집/법률 근거 검토. 원어민 인간 또는 자격 있는 변호사의 검수 주장 아님.",
+        "실제 게시·배포·브라우저 렌더링·사건 결과를 검증한 보고서가 아님."
+      ]
+    },
+    {
+      "id": 945,
+      "locale": "lt",
+      "source_path": "src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md",
+      "sha256": "2f3372bd6e3bc1422b2a6d377707338ede47d4049c388340e137989828a5b111",
+      "source_mtime_utc": "2026-10-25T13:26:11.030784+00:00",
+      "checkedAt": "2026-10-25T13:34:10.157315+00:00",
+      "verdict": "PASS",
+      "findings": [],
+      "optional_style_findings": [],
+      "locale_report": "work/reviews/lt-locale.json",
+      "locale_report_sha256": "d36af6c1767b64f0c800aaf3228f94b3261694dc7030118fb6e41e8cb58e0089",
+      "locale_human_report": "work/reviews/lt-locale.md",
+      "locale_human_report_sha256": "45eeb546a8730fff7cff575d2971318441af4c79592741f5b335f45b4622cc30",
+      "image_path": "public/images/columns/945-market-expansion-20261025.webp",
+      "image_sha256": "ad89676d570335da227e9fea88f6c6e804af1b42b5541055ea2a93e5c5c67fe4",
+      "image_inspected": true,
+      "image_inspection": "제어기 보드·닫힌 노트북·외장 드라이브; 텍스트·얼굴·로고·신분문서 없음. 현지어 alt와 가상 장면 표기 일치. 실제 사건 증거 아님.",
+      "image_unchanged_since_inspection": true,
+      "caption": "Išgalvota scena",
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md --lang lt",
+      "variety_exit_code": 0,
+      "variety_scope": "approved task-local extension; shared checker remains unsupported",
+      "variety_metrics": {
+        "sentences": 49.0,
+        "mean": 13.8,
+        "cv": 0.455,
+        "short": 0.204,
+        "run3": 0.0,
+        "opener_rep": 0.0,
+        "cite_end": 0.0,
+        "cite_para": 0.6,
+        "contrast": 0.0,
+        "caveat": 1.0,
+        "q": 2.0
+      },
+      "original_variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md --lang lt",
+      "original_variety_exit_code": 2,
+      "original_variety_status": "UNSUPPORTED_NOT_PASS",
+      "variety_evidence": "work/reviews/east-final-evidence/final-variety-r1.json",
+      "content_checks": {
+        "no_bold_markup": true,
+        "internal_provenance_retained": true,
+        "no_public_ai_byline": true,
+        "one_mailto_link": true,
+        "published_date": true,
+        "lastmod_date": true
+      },
+      "first_two_paragraph_deletion_check": "L26은 지급·경제권 귀속·발주자 법정 이용권을 모두 담는다. L28은 다른 팀의 수정/신제품 적용과 실제 납품 범위라는 독자 결정을 제시한다. 이용권 문장을 삭제하면 법12조를 왜곡하므로 유지한다.",
+      "section5_check": "최종 본문·도입·첫 단어·인용 리듬·실질 단문·마무리·보정 후 조건 보존을 재독. 미해결 단조로움 없음. 수치만으로 승인하지 않음.",
+      "legal_checks": [
+        {
+          "provisions": "저작권법5/10-1/11/12",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=12",
+          "result": "프로그램 표현과 아이디어 구별. 비고용 위탁창작의 저작자/경제권 계약 및 기본 귀속, 12(3) 발주자 이용권을 도입·본문·FAQ 모두 유지. 직원 창작11조는 업무 수행 중 창작 조건을 명시적으로 보완. 고용주 경제권 기본값과 계약 예외 보존."
+        },
+        {
+          "provisions": "저작권법21/36/37",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=37",
+          "result": "저작인격권 양도 불가, 경제권 전부/일부 양도, 불명확 범위의 미양도/미허락 추정, 비독점 라이선스 제3자 재허락 동의. 계약 라이선스가 법정12(3)이용권을 없애지 않음. FAQ는 양도가 아닌 재허락 질문으로 수정."
+        },
+        {
+          "provisions": "섭외법20/42",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=42",
+          "result": "계약상 채무의 선택법/최밀접법, IP 보호지법, 업무 수행 중 생긴 직원 IP 귀속의 고용계약 준거법을 구분."
+        }
+      ],
+      "legal_evidence": [
+        "work/reviews/east-final-evidence/web-4.json",
+        "work/reviews/east-final-evidence/web-8.json",
+        "work/reviews/east-final-evidence/web-12.json",
+        "work/reviews/east-final-evidence/web-13.json"
+      ],
+      "limitations": [
+        "독립 AI 편집/법률 근거 검토. 원어민 인간 또는 자격 있는 변호사의 검수 주장 아님.",
+        "실제 게시·배포·브라우저 렌더링·사건 결과를 검증한 보고서가 아님."
+      ]
+    }
+  ],
+  "unresolved_material_findings": 0,
+  "publication_authority": false,
+  "source_currentness": "공식 중국어 현행 조문과 연혁/시행 기록을 읽었다. DB에 표시된 법령 정리 기준일은 2026-10-16이다. 당일 관보 전수 감사 또는 법률 결과 보장은 하지 않는다.",
+  "statutory_histories": [
+    {
+      "law": "민법",
+      "date": "2026-08-17",
+      "result": "166-1 시행 미정 및 1223 공포후6개월 시행 경고는 인용 조문에 적용하지 않음.",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001"
+    },
+    {
+      "law": "섭외민사법률적용법",
+      "date": "2010-05-26",
+      "result": "전63조 개정,63조 공포후1년 시행. 직접 history URL 오류 후 공식 full Act의 연혁 링크 click으로 실제 열람 성공.",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000007"
+    },
+    {
+      "law": "전자서명법",
+      "date": "2024-05-15",
+      "result": "현행22조 공포일부터 시행. 3월 제안 자료를 현행법으로 사용하지 않음.",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0080037"
+    },
+    {
+      "law": "특허법",
+      "date": "2022-05-04",
+      "result": "최신60-1 시행2022-07-01. 인용22조2017-05-01,28조2010-09-12,29조2019-11-01 시행 연혁을 확인. 개정일과 모든 조문의 최초 시행일을 혼동하지 않음.",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070007"
+    },
+    {
+      "law": "소비자보호법",
+      "date": "2015-06-17",
+      "result": "인용 조문 현행, 제안/장래 시행 규정을 적용하지 않음.",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0170001"
+    },
+    {
+      "law": "영업비밀법",
+      "date": "2020-01-15",
+      "result": "인용 조문 현행, 관련 미시행 경고 없음.",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0080028"
+    },
+    {
+      "law": "저작권법",
+      "date": "2022-06-15",
+      "result": "2022-05-04 형사91/91-1/100/117와98/98-1삭제 시행 미정 경고는 이번 경제권·저작자 조문과 별개.",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070017"
+    }
+  ],
+  "firm_scope": {
+    "sources": [
+      "https://tseng-law.com/en/services",
+      "https://tseng-law.com/en/lawyers"
+    ],
+    "verified": "대만 변호사 Wei Tseng / Hovering Law 실제 자료; 계약·민사·IP 업무. 직접 상담 언어 영어·중국어·일본어·한국어. 현지어 상담, 외국 자격/사무실, 성공사례, 특허대리 자격 미창작.",
+    "cta": "wei@hoveringlaw.com.tw 1회, 비민감 초기 개요, 소스코드/비공개 파라미터 최초 첨부 요구 없음. 메일 수신이 수임 승낙 아님."
+  },
+  "market_assessment": {
+    "evidence_read": [
+      "work/research/east-briefs.md",
+      "work/research/east-market.md",
+      "work/research/east-sources.json"
+    ],
+    "conclusion": "공식 거래/사절단·SEMICON 참가·레이저 협력 근거로 좁은 독자를 선택. 검색량·수임/전환·펌웨어 외주 규모는 미측정 가설. 종료된 LMT 공고나 장비 매출 전망을 현재 이용 가능한 지원금/확정 실적으로 쓰지 않음.",
+    "independent_live_sources": [
+      "https://poland.tw/web/tajwan/informator-ekonomiczny",
+      "https://www.gov.pl/web/development-technology/polish-business-mission-to-taiwan--a-new-opening-in-economic-relations",
+      "https://mzv.gov.cz/taipei/cz/obcho_a_ekonomika/rostouci_stopa_ceske_republiky_v.html",
+      "https://eksportas.inovacijuagentura.lt/eksporto-rinkos/tikslines-rinkos/taivanas",
+      "https://www.mofa.gov.tw/News_Content.aspx?n=96&s=123017"
+    ]
+  },
+  "comparators": [
+    {
+      "source_path": "src/content/columns-pl/870-polish-company-taiwan-subsidiary-branch-office.md",
+      "sha256": "fff46006998d18c39230a261cd2c652c7f60a95bbea2237035561519f9e9d0da",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-pl/871-polish-working-holiday-taiwan-six-month-work.md",
+      "sha256": "d2799eae87cdcd2b211a9ebf8b3567784dfd911099c959bfa8e7e1421b1c5cd7",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-pl/872-polish-exporter-taiwan-unpaid-euro-invoices.md",
+      "sha256": "835f0602bb3ecdbc73d5e04e09dca49eba7da392356dda7e05fa7c6b1b028dc9",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-cs/873-czech-company-taiwan-subsidiary-branch-office.md",
+      "sha256": "4fa2004dc6c9221b58e919a38163897bf52b764f0e742a1811a55d07fca091d7",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-cs/874-czech-working-holiday-taiwan-work-limits.md",
+      "sha256": "4fdee9eb324d52a49f18c53790d208c37e8bd356d88f41f2b27f2f9583e66566",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-cs/875-czech-buyer-taiwan-defective-machine-claim.md",
+      "sha256": "e13f617788087fbecf742d5c2a8687941f98e9086c3edf277947f9c203f5ccd7",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-lt/897-lithuanian-laser-company-taiwan-subsidiary-branch.md",
+      "sha256": "c7bcfbd5a80afe65b44dca93ab73979e4701120519dc8421e42b015e4cb16472",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-lt/898-lithuanian-engineer-taiwan-work-permit-residence.md",
+      "sha256": "7884cb8bb028dddb87a73eaefa0a49718c020e8a3d67f188a2adfbc04d60b2f5",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    },
+    {
+      "source_path": "src/content/columns-lt/899-lithuanian-brand-taiwan-distributor-trademark-registration.md",
+      "sha256": "862a47b39060c3a0daac591d828191622d3c6a3d88023fd845b6ba00389468d0",
+      "published": "\"2026-10-24\"",
+      "read_scope": "title/date/opening paragraphs/headings/closing paragraphs/sources; comparison, not recertification of entire legacy article"
+    }
+  ],
+  "comparison_limits": "직접 비교는 세 언어의 최근9편 제목·날짜·첫 두 문단·구성·말미·출처다. 이전 글 전체 법률 재인증 아님. 본 배정6편 전문을 서로 비교했고 다른 배치 주제는 연구 브리프의 중복 경계로 대조했다. 전체1992편 또는 다른18편 전문 전수검토 주장 없음.",
+  "resolved_legal_findings": [
+    {
+      "id": "LT945-EMPLOYEE-DUTIES",
+      "location": "src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md:36",
+      "original_sentence": "Jos darbuotojų atliekamam kūrimui taikoma [11 straipsnio] darbo santykių taisyklė.",
+      "reason": "직원이 만든 모든 창작물이 아니라 업무 수행 중 완성한 저작물이라는11조 조건이 누락됨.",
+      "source": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=11",
+      "proposed_rewrite": "Taivano [11 straipsnis](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=11) skirtas kūriniams, kuriuos darbuotojai sukuria atlikdami darbo funkcijas.",
+      "legal_meaning_preserved": false,
+      "substantive_effect": "적용 범위를 업무 수행 중 창작으로 정확하게 좁히는 실질 법률 보정.",
+      "status": "작성자가 적용했고 최신2a0adb3d… 전문 및 영향받는 권리 연쇄·준거법 결론을 독립 재검토함."
+    }
+  ],
+  "resolved_locale_accuracy_findings": [
+    "PL941:58 경고/긴급대처정보 의무의 AND/OR 오독을 막는 조건 보정; 공식10(2) 직접 대조.",
+    "LT945 FAQ 재허락 질문을37조 답과 일치시킴.",
+    "CS942 전자서명의 추정과 서면 형식 표현 및 CS943 우선권 이후 연대기 표현을 해당 공식 조문과 대조."
+  ],
+  "bounded_repair_history": {
+    "PL940": "수치 초기 .441 FAIL →1차 .464 PASS.",
+    "PL941": "초기 .426 FAIL →1차 .421 FAIL →2차 .457 PASS. 원실행 바이트 복원 한계/증빙은 pl-author-failure-preservation.json 및 locale 보고서에 명시.",
+    "LT944": "독립1차 후 .444 FAIL을 보존; 최종2차에서 중복 예고/정의 통합 →.490 PASS. 실패한 이전 판을 소급 PASS로 부르지 않음.",
+    "LT945": "업무 수행 중 창작 조건1회 보정 뒤 재독;12(3)이용권 등 유지.",
+    "CS": "언어1차 보정 완료; 이후943 topic 및 두 캡션만 변경, 역치환 SHA로 본문 동일성 확인."
+  },
+  "measurement_method": {
+    "wrapper": "work/variety-candidate/variety_metrics.py",
+    "sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+    "independent_review": "work/variety-review/review-final.json",
+    "independent_review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+    "all_manifest_hashes_reverified": true,
+    "shared_checker_modified": false,
+    "hard_thresholds_modified": false
+  },
+  "input_evidence_sha256": {
+    "work/AUTHOR-BRIEF.md": "1981e89b5fcdca22ac7c76ee653d545ab5bf9c5336f67537ab77aa127655a578",
+    "work/REVIEW-BRIEF.md": "8ccd4c57f1f8fca18581132977ff44ebc30513b486cff38f3bd1df6fb82befa3",
+    "work/research/east-briefs.md": "f2db426f010b7188dfd0ecd47ec8e05e18e7a697edfb0209911ce6a97d02e75a",
+    "work/research/east-market.md": "2d81bbdaeaf09356ebe4ce55862140401113bc445608d11be4bc18965d305594",
+    "work/research/east-sources.json": "1957bdc1be5476e08f44a766cef1b597c703b24742cbc90e8e84dae9874b2eba",
+    "work/variety-review/review-final.json": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+    "work/variety-candidate/variety_metrics.py": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+    "work/checks/caption-normalization.json": "ba56978e7514d4d094fc35a0b0813f33ef6750568151d067a211ee08470038d2",
+    "work/reviews/pl-author.md": "9aeecb8c972ad8e80e352ccca23a43e152de7905b96e001daf3b640b28563e2c",
+    "work/reviews/pl-author.json": "31792a08b812414740082483e7e1228b72bfcf1445669f07121be08774f1f180",
+    "work/reviews/pl-locale.md": "f16213dfd45efe6964e2958037ec8b52f06bb256b079759443db7ff56a309817",
+    "work/reviews/pl-locale.json": "ef78fa420ae1f373b69ab28acc8a554e5b1d4fc52aed6920b50e2f1de496837b",
+    "work/reviews/cs-author.md": "6c3e8fbe633a4ce7f8740927de17aa14bb5f4f8208988a491baaa0d743e03f9c",
+    "work/reviews/cs-author.json": "fe9971ba4103d55d29b17b5440734d2e04ae7ed1c595a14dc554cb4ccf471277",
+    "work/reviews/cs-locale.md": "a47971c1d0eae62d541f6287639274701889e0dd7597fe3165b1b67c62c87c3b",
+    "work/reviews/cs-locale.json": "2a354337ab610b98729b42b0b7386c577fe0ef1ab936c36c3db604459cf311c7",
+    "work/reviews/lt-author.md": "664c0c44a8300df0e178527b16cc507ad133e38ae78a6ca810f95b5193da291a",
+    "work/reviews/lt-author.json": "36b3572fa8ef924b3b5f882d6d1c79fd2730f1b2b4c19b899b87de137311c347",
+    "work/reviews/lt-locale.md": "45eeb546a8730fff7cff575d2971318441af4c79592741f5b335f45b4622cc30",
+    "work/reviews/lt-locale.json": "d36af6c1767b64f0c800aaf3228f94b3261694dc7030118fb6e41e8cb58e0089"
+  },
+  "limits": [
+    "검토일2026-10-25, 공식 DB 정리 기준일2026-10-16. 현행 조문·연혁·표시된 미시행 경고를 확인했으며 당일 관보 전수 감사는 아님.",
+    "Europol PDF는 이 검수자의 직접 열람이 timeout. 작성자의 실제 성공한 공식 도구 반환을 읽었고 이를 직접 접속 성공으로 바꾸지 않음.",
+    "섭외법 history 직접 URL 오류는 full Act의 공식 연혁 링크 click으로 해결. 일부 개별 조문 URL 실패 시 정확한 공식 전문을 읽음.",
+    "시장성은 검증된 대만 거래 접점과 독립 주제를 기초로 한 수임 가능성 가설. 검색량·전환·실제 의뢰량이나 대규모 시장 순위 검증 아님.",
+    "3개 언어 shared checker exit2 미지원이며 독립 검토된 task-local 방식만 사용. 의미량의 언어간 경험적 동등성/인간 원어민 검증 아님.",
+    "이 PASS는 명시된 전체 파일 SHA에만 해당하며 공개 게시·승소·자격·법적 정확성 보장을 뜻하지 않음."
+  ]
+}

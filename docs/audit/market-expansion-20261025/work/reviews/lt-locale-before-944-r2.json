@@ -1,0 +1,96 @@
+{
+  "reviewer": "/root/expand_locale_lt",
+  "role": "locale",
+  "independentOfAuthor": true,
+  "checkedAt": "2026-10-25T13:23:25.851813+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md",
+      "sha256": "97d3b2e78a14b54de097dc66ae2a2db9f7abd1591a6aa0422c5e24625cdfbe50",
+      "verdict": "REQUEST_CHANGES",
+      "findings": [
+        {
+          "code": "MONOTONY",
+          "location": "src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md:56; whole measured body",
+          "exact_sentence": "Pagal [10 straipsnį] netinkamas sutartimi gautos komercinės paslapties naudojimas ar atskleidimas laikomas pažeidimu; prie netinkamų būdų priskiriami ir neleistinas kopijavimas bei konfidencialumo pareigos pažeidimas.",
+          "reason": "Whole-article length variation CV 0.444 is below the unchanged HARD threshold 0.45. The quoted final repair is not asserted to be the sole cause. One independent directed repair cycle failed to remove this numerical issue.",
+          "proposed_rewrite": "No further replacement proposed: preserve the failed draft. A remaining bounded repair, if root elects one, must fix an identified real redundancy or natural connection and be rechecked; no filler or threshold change.",
+          "legal_meaning_preserved": "The applied Article 10 connection preserved improper use/disclosure, both examples, and the following proof requirements. A future replacement is not certified."
+        }
+      ],
+      "image_sha256": "2d622e75d557352b3b10b714fcc63bbd336b5f4a24758667c2fc4caf98bd000a",
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md --lang lt",
+      "variety_exit_code": 1,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md [lt] sentences=46 mean=14.7 cv=0.444 short=0.217 run3=0.023 opener_rep=0.125 cite_end=0.0 cite_para=0.312 contrast=0 caveat=1 q=2\n  FAIL len_cv=0.444 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+      "variety_stderr": "OFFICIAL CHECKER: lt unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n",
+      "original_variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md --lang lt",
+      "original_variety_exit_code": 2,
+      "original_variety_status": "UNSUPPORTED_NOT_PASS",
+      "method_wrapper_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+      "method_review": "work/variety-review/review-final.json",
+      "method_review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+      "image_inspected": true,
+      "independent_failed_variety_repair_cycles": 1,
+      "limitations": [
+        "Independent AI locale review, not human native-speaker or licensed-lawyer review.",
+        "Original shared Lithuanian measurement is unavailable (exit 2); the approved task-local extension retains the original HARD thresholds.",
+        "Current-law release verification and publication belong to the separate final reviewer and root."
+      ]
+    },
+    {
+      "source_path": "src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md",
+      "sha256": "2a0adb3d3c6c2293af7975144367e80fcfe7f3ce51102a314d9dc371090ba0c4",
+      "verdict": "PASS",
+      "findings": [],
+      "image_sha256": "ad89676d570335da227e9fea88f6c6e804af1b42b5541055ea2a93e5c5c67fe4",
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md --lang lt",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md [lt] sentences=49 mean=13.8 cv=0.455 short=0.204 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.6 contrast=0 caveat=1 q=2\n  OK — no variety limit violated\n",
+      "variety_stderr": "OFFICIAL CHECKER: lt unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n",
+      "original_variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md --lang lt",
+      "original_variety_exit_code": 2,
+      "original_variety_status": "UNSUPPORTED_NOT_PASS",
+      "method_wrapper_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+      "method_review": "work/variety-review/review-final.json",
+      "method_review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+      "image_inspected": true,
+      "independent_failed_variety_repair_cycles": 0,
+      "limitations": [
+        "Independent AI locale review, not human native-speaker or licensed-lawyer review.",
+        "Original shared Lithuanian measurement is unavailable (exit 2); the approved task-local extension retains the original HARD thresholds.",
+        "Current-law release verification and publication belong to the separate final reviewer and root."
+      ]
+    }
+  ],
+  "comparators": [
+    {
+      "source_path": "src/content/columns-lt/897-lithuanian-laser-company-taiwan-subsidiary-branch.md",
+      "published": "2026-10-24",
+      "sha256": "c7bcfbd5a80afe65b44dca93ab73979e4701120519dc8421e42b015e4cb16472",
+      "read_in_full": true
+    },
+    {
+      "source_path": "src/content/columns-lt/898-lithuanian-engineer-taiwan-work-permit-residence.md",
+      "published": "2026-10-24",
+      "sha256": "7884cb8bb028dddb87a73eaefa0a49718c020e8a3d67f188a2adfbc04d60b2f5",
+      "read_in_full": true
+    },
+    {
+      "source_path": "src/content/columns-lt/899-lithuanian-brand-taiwan-distributor-trademark-registration.md",
+      "published": "2026-10-24",
+      "sha256": "862a47b39060c3a0daac591d828191622d3c6a3d88023fd845b6ba00389468d0",
+      "read_in_full": true
+    }
+  ],
+  "manual_review_report": "work/reviews/lt-locale.md",
+  "manual_review_report_sha256": "9b07d7423f917f27637ab4a5780ee6beb3ae762937e70a85c5416e0ff1c8d2c0",
+  "evidence": [
+    "work/reviews/lt-locale-variety.json",
+    "work/reviews/lt-locale-source-opens.json",
+    "work/reviews/lt-locale-findings-history.md"
+  ],
+  "limitations": [
+    "944 remains REQUEST_CHANGES after one unsuccessful independent variety repair cycle, not two.",
+    "No publication, browser UI inspection, native-speaker certification or professional legal review is claimed."
+  ]
+}

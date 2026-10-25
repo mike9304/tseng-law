@@ -1,0 +1,7 @@
+{
+  "at": "2026-10-25T13:33:13.012095+00:00",
+  "verdict": "PASS",
+  "independent_review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+  "matched_reviewed_files": 10,
+  "original_shared_checker": "Still14supported; new6unsupported, task-localreviewedextension distinct"
+}

@@ -1,0 +1,40 @@
+{
+  "reviewer": "/root/expand_locale_he",
+  "checkedAt": "2026-10-25T13:28:06.846355+00:00",
+  "scope": "caption-only independent rebinding",
+  "normalization_evidence": "work/checks/caption-normalization.json",
+  "records": [
+    {
+      "source_path": "src/content/columns-he/932-israel-taiwan-pph-patent-claims-window.md",
+      "old_sha256": "9115389453a135cf8b3b8f010f3bd996afbc0ee81bf6e92b43455033c617496f",
+      "new_sha256": "514c395c3212ea39504ab710d7b3130ad5bd0e996169b0c5cab212ea1752b3c5",
+      "old_caption": "\"סצנה בדיונית להמחשת השוואת תכנון טכני.\"",
+      "new_caption": "סצנה בדיונית",
+      "body_unchanged": true,
+      "independent_reconstruction_sha_matches_prior_review": true,
+      "only_changed_line": "featured_image_caption",
+      "other_metadata_alt_body_source_links_unchanged": true,
+      "image_sha256": "4037e0df9cfb08b660ca766fb21ae57558975f6ce7bb8ae19d63124fd7957822",
+      "image_bytes_unchanged": true,
+      "measured_sentence_array_unchanged": true,
+      "actual_diff": "--- reviewed-before\n+++ current-after\n@@ -12,5 +12,5 @@\n featured_image: \"/images/columns/932-market-expansion-20261025.webp\"\n featured_image_alt: \"שני שרטוטים ללא כיתוב של רכיב אופטי, אבטיפוס מתכתי ותיקייה כחולה על שולחן שרטוט מואר.\"\n-featured_image_caption: \"סצנה בדיונית להמחשת השוואת תכנון טכני.\"\n+featured_image_caption: \"סצנה בדיונית\"\n faq:\n   - q: \"האם צריך להמתין למתן הפטנט בישראל לפני בקשת PPH בטאיוואן?\"\n",
+      "new_caption_language_verdict": "PASS: natural Hebrew fictional-scene label; no attribution or legal condition removed"
+    },
+    {
+      "source_path": "src/content/columns-he/933-israeli-taiwan-joint-patent-license-consent.md",
+      "old_sha256": "c1edcaaa8978b6198116c522ad6edd879a9961a0f7c9f29af53a67c592f49e88",
+      "new_sha256": "95da9c181636d91a8a2da1e7e237f29d08c77c159740301e9c87b0804139a898",
+      "old_caption": "\"סצנה בדיונית להמחשת פיתוח משותף.\"",
+      "new_caption": "סצנה בדיונית",
+      "body_unchanged": true,
+      "independent_reconstruction_sha_matches_prior_review": true,
+      "only_changed_line": "featured_image_caption",
+      "other_metadata_alt_body_source_links_unchanged": true,
+      "image_sha256": "e6048d77af3cded5a54553e88c92d2a0f9e9425f5f25f15d4e5db981b7163820",
+      "image_bytes_unchanged": true,
+      "measured_sentence_array_unchanged": true,
+      "actual_diff": "--- reviewed-before\n+++ current-after\n@@ -12,5 +12,5 @@\n featured_image: \"/images/columns/933-market-expansion-20261025.webp\"\n featured_image_alt: \"אבטיפוס מתכתי של ציר מחובר בין שתי תיקיות סגורות על שולחן עץ בחדר עבודה ריק.\"\n-featured_image_caption: \"סצנה בדיונית להמחשת פיתוח משותף.\"\n+featured_image_caption: \"סצנה בדיונית\"\n faq:\n   - q: \"האם אחד הבעלים של פטנט משותף בטאיוואן רשאי לתת רישיון לבדו?\"\n",
+      "new_caption_language_verdict": "PASS: natural Hebrew fictional-scene label; no attribution or legal condition removed"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-25",
+  "trigger": "Root metadata audit: ip is not a supported topic; company is supported",
+  "file": "repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+  "beforeSha256": "2c09cb482f2efe0b4d4f63d570b2ebed210bdfdd3708d2dfd9de95f5efa858c8",
+  "afterSha256": "67fd481e9ae23009247b50aa53d09f6b3a21e962bf1dd76bbcbaed1de8592bc5",
+  "onlyChange": {
+    "from": "topic: \"ip\"",
+    "to": "topic: \"company\""
+  },
+  "bodyByteIdentical": true,
+  "bodySha256": "ffe3ed641f563273e5cbac9bb6367364407602a004f1f71ada8bf2bf8c3d4f22",
+  "imageByteIdentical": true,
+  "imageSha256": "d28c66a04807a5d524c06bd2ee1912a2c23b5bc60a6ebeaa8c6baec5c2ec35d0",
+  "command": [
+    "python3",
+    "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md",
+    "--lang",
+    "cs"
+  ],
+  "checkerSha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+  "methodReview": "work/variety-review/review-final.json",
+  "methodReviewSha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+  "exitCode": 0,
+  "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-cs/943-czech-exhibitor-taiwan-patent-disclosure-priority.md [cs] sentences=44 mean=14.8 cv=0.456 short=0.205 run3=0.024 opener_rep=0.062 cite_end=0.0 cite_para=0.25 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+  "stderr": "OFFICIAL CHECKER: cs unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+}

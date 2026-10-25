@@ -1,0 +1,120 @@
+{
+  "checkedAt": "2026-10-25T13:16:39.293308+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md",
+      "sha256": "cd2309ed6b0c521f0c05e111b9e3206c7b0b57fe87c952f7d4cfc31dd6fd4684",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md --lang fr",
+      "variety_exit_code": 0,
+      "variety_output": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/936-french-cosmetics-taiwan-pif-importer-handover.md [fr] sentences=54 mean=19.7 cv=0.456 short=0.167 run3=0.038 opener_rep=0.167 cite_end=0.0 cite_para=0.389 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "image_sha256": "eb54eb0f61c4240d888211b3abaf0014dd58fb957272b8f995eb616d81615d0e",
+      "verdict": "REQUEST_CHANGES",
+      "findings": [
+        {
+          "id": "FR936-L1",
+          "lines": [
+            26,
+            42
+          ],
+          "type": "punctuation",
+          "sentence": "La [FAQ …], rattache / La [FAQ PIF, page 25 …], prévoit",
+          "reason": "Unnecessary comma between complete subject and verb.",
+          "proposed_rewrite": "Remove comma after each linked subject.",
+          "legal_meaning_preserved": true
+        },
+        {
+          "id": "FR936-L2",
+          "lines": [
+            58
+          ],
+          "type": "locale",
+          "sentence": "Le calendrier PIF est déjà déployé",
+          "reason": "Unnatural collocation for effective regulatory stages.",
+          "proposed_rewrite": "La dernière étape du calendrier PIF est entrée en vigueur",
+          "legal_meaning_preserved": true
+        },
+        {
+          "id": "FR936-L3",
+          "lines": [
+            66
+          ],
+          "type": "locale",
+          "sentence": "Au moment de signer la passation",
+          "reason": "The agreement, not the handover operation, is signed.",
+          "proposed_rewrite": "Lors de la signature de l’accord de passation",
+          "legal_meaning_preserved": true
+        },
+        {
+          "id": "FR936-M1",
+          "lines": [
+            26
+          ],
+          "type": "MONOTONY",
+          "sentence": "Le numéro de l’ancien partenaire ne suffit pas.",
+          "reason": "Opening deletion test: standalone short recap of the preceding obligation, without new information.",
+          "proposed_rewrite": "Delete; retain the separate importer obligation and official citation.",
+          "legal_meaning_preserved": true
+        }
+      ],
+      "limitations": [
+        "Independent locale review; final legal review and publication readback are separate.",
+        "Author evidence is being prepared."
+      ]
+    },
+    {
+      "source_path": "src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md",
+      "sha256": "3138b30ca5b109a0e4e8770757092dd4e7ef3a2590b09e792702f5d1f8a4e932",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md --lang fr",
+      "variety_exit_code": 0,
+      "variety_output": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fr/937-french-wine-taiwan-online-orders-advertising.md [fr] sentences=50 mean=18.9 cv=0.451 short=0.14 run3=0.104 opener_rep=0.222 cite_end=0.0 cite_para=0.278 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "image_sha256": "692aeed72862d76e9613a26706d495c92bc5323afb513e0c0250012eb67ab1df",
+      "verdict": "REQUEST_CHANGES",
+      "findings": [
+        {
+          "id": "FR937-M1",
+          "lines": [
+            26
+          ],
+          "type": "MONOTONY",
+          "sentence": "La remise en boutique ne change rien.",
+          "reason": "Opening deletion test: repeats the immediately preceding pickup-or-delivery scope.",
+          "proposed_rewrite": "Delete the recap while retaining the scenario question and sourced answer.",
+          "legal_meaning_preserved": true
+        },
+        {
+          "id": "FR937-M2",
+          "lines": [
+            54
+          ],
+          "type": "MONOTONY",
+          "sentence": "Le fichier diffusé doit être contrôlé.",
+          "reason": "Generic short instruction without new check; the next paragraph supplies the real format checks.",
+          "proposed_rewrite": "Delete, or integrate a specific useful check into the next paragraph.",
+          "legal_meaning_preserved": true
+        },
+        {
+          "id": "FR937-F1",
+          "lines": [
+            60
+          ],
+          "type": "evidence_scope",
+          "sentence": "Business France a organisé … le 19 mai 2026",
+          "reason": "Official page advertises an event and labels it Past event; no completion report establishes that it actually took place. Independently raised by author and verified by locale reviewer.",
+          "proposed_rewrite": "Business France annonçait … pour le 19 mai 2026",
+          "legal_meaning_preserved": "Taiwan-law conclusions unchanged; factual event assertion narrowed."
+        }
+      ],
+      "limitations": [
+        "Independent locale review; final legal review and publication readback are separate.",
+        "Author evidence is being prepared."
+      ]
+    }
+  ],
+  "reviewer": "/root/expand_locale_fr",
+  "role": "locale",
+  "independentOfAuthor": true,
+  "limitations": [
+    "No human native-speaker or licensed-lawyer review claim.",
+    "Initial findings only; repaired exact sources require renewed read."
+  ]
+}

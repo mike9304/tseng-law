@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-25T13:27:59.070957+00:00",
+  "changes": [
+    {
+      "id": 936,
+      "before_sha256": "187c8a0c2b64ff6a69be32be21912d48b976cf56bd9e38a6cf2df52b53b56d64",
+      "before_caption": "Scène fictive de préparation d’une passation documentaire.",
+      "current_caption": "Scène fictive",
+      "only_caption_changed": true,
+      "reviewer_acceptance": "Read and accepted; fictional-scene meaning preserved.",
+      "current_sha256": "a24b1b5ef3d8925adb2d21d414c9ee7e906a0b764e0a2e79f19e2eeb0d35daf8"
+    },
+    {
+      "id": 937,
+      "before_sha256": "c09e180a592b02cc9a11f775aba7821dd7beba54c3bafd91cab7b7bf97f6a51a",
+      "before_caption": "Scène fictive dans une boutique de vins.",
+      "current_caption": "Scène fictive",
+      "only_caption_changed": true,
+      "reviewer_acceptance": "Read and accepted; fictional-scene meaning preserved.",
+      "current_sha256": "132e87abb6a25149cc00544a11e07aacdea61a9a3a18e142e14491e8b5a05a2b"
+    }
+  ]
+}

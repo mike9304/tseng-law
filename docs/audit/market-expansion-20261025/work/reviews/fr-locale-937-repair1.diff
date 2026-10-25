@@ -1,0 +1,37 @@
+--- r0/937-french-wine-taiwan-online-orders-advertising.md
++++ current/937-french-wine-taiwan-online-orders-advertising.md
+@@ -13,7 +13,7 @@
+ author: "legal-ai-assistant"
+ featured_image: "/images/columns/937-market-expansion-20261025.webp"
+ featured_image_alt: "Des bouteilles de vin sans étiquette dans un carton, près d’une tablette éteinte sur un comptoir en bois."
+-featured_image_caption: "Scène fictive dans une boutique de vins."
++featured_image_caption: "Scène fictive"
+ faq:
+   - q: "Un client peut-il commander sur un réseau social puis payer en boutique ?"
+     a: "La direction des finances de Taipei précise que la commande électronique de boissons alcoolisées, par réseau social, application ou formulaire en ligne, est interdite aussi bien pour un retrait que pour une livraison. Le paiement différé ne doit pas être présenté comme une autorisation de prendre la commande en ligne."
+@@ -23,7 +23,7 @@
+     a: "Non. Il faut distinguer la vente électronique, la publicité et l’information. La publicité est encadrée par l’article 37 et les règles sur les avertissements. Les principes de Taipei apprécient l’ensemble du contenu et son objectif promotionnel ; une présentation informative ne bénéficie pas d’une exemption automatique parce qu’elle est appelée article ou reportage."
+ ---
+ 
+-Peut-on prendre une commande de vin sur internet si le client vient ensuite payer et retirer les bouteilles en boutique ? La [direction des finances de Taipei](https://dof.gov.taipei/News_Content.aspx?n=39A258CB8C1B2779&s=1EB2F8C0189F2E68&sms=87415A8B9CE81B16) précise que la commande par réseau social, application ou formulaire électronique est interdite, qu’elle débouche sur un retrait ou une livraison. La remise en boutique ne change rien.
++Peut-on prendre une commande de vin sur internet si le client vient ensuite payer et retirer les bouteilles en boutique ? La [direction des finances de Taipei](https://dof.gov.taipei/News_Content.aspx?n=39A258CB8C1B2779&s=1EB2F8C0189F2E68&sms=87415A8B9CE81B16) précise que la commande par réseau social, application ou formulaire électronique est interdite, qu’elle débouche sur un retrait ou une livraison.
+ 
+ Pour un domaine ou un négociant français qui prépare les ventes de son importateur taïwanais, cette limite concerne aussi la campagne publicitaire. Un visuel peut renvoyer vers une boutique physique ; un lien qui recueille la référence et la quantité commandées pose une autre question. L’[article 30 de la loi taïwanaise sur le tabac et les boissons alcoolisées](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0330011&flno=30) interdit notamment la vente ou la cession par achat électronique.
+ 
+@@ -51,13 +51,13 @@
+ 
+ Selon l’[article 11 du règlement d’application](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0330012&flno=11), les avertissements doivent occuper une zone continue et indépendante représentant au moins 10 % du support. La surface des caractères doit atteindre au moins la moitié de celle du fond réservé à l’avertissement, avec des couleurs contrastées. Cet espace ne doit pas contenir de texte ou d’image sans rapport avec l’avertissement, sous réserve du pictogramme prévu par le règlement.
+ 
+-En vidéo, l’incrustation doit rester présente pendant toute la durée. L’audio seul exige un avertissement clairement audible. Le fichier diffusé doit être contrôlé.
++En vidéo, l’incrustation doit être permanente. Pour un message uniquement sonore, l’avertissement doit être clairement audible.
+ 
+-Un recadrage vertical peut couper la zone prévue. Une traduction ajoutée au dernier moment peut réduire sa lisibilité. Le contrat avec l’importateur ou l’agence peut prévoir la validation de chaque format final, la conservation des versions diffusées et la personne habilitée à retirer rapidement une publication erronée. Ces dispositions organisent le travail ; elles ne remplacent pas les obligations légales.
++Un recadrage peut couper l’avertissement. Une traduction ajoutée au dernier moment peut réduire sa lisibilité. Le contrat avec l’importateur ou l’agence peut préciser, pour chaque format, qui valide le fichier final avant sa diffusion, qui conserve les versions publiées et qui détient les accès nécessaires pour retirer une publication erronée sans attendre l’intervention d’un autre prestataire. Ces dispositions organisent le travail ; elles ne remplacent pas les obligations légales.
+ 
+ ## Le canal de vente fait partie de la négociation commerciale
+ 
+-Business France a organisé [Tastin’France à Taipei le 19 mai 2026](https://www.marketplace.businessfrance.fr/event/index/event/id/1271/) pour présenter des vins et spiritueux de producteurs et négociants français. Ces rencontres professionnelles permettent d’aborder les circuits envisagés avec les importateurs. Elles ne préjugent pas de la légalité du parcours de vente au consommateur proposé ensuite.
++Business France annonçait [Tastin’France à Taipei pour le 19 mai 2026](https://www.marketplace.businessfrance.fr/event/index/event/id/1271/), à destination des producteurs et négociants français de vins et spiritueux. Ces rencontres professionnelles permettent d’aborder les circuits envisagés avec les importateurs. Elles ne préjugent pas de la légalité du parcours de vente au consommateur proposé ensuite.
+ 
+ Dans une discussion contractuelle, le fournisseur peut demander quels points de vente assureront les transactions et qui contrôlera les campagnes, les publications des partenaires et les modifications des liens. La licence d’utilisation des photographies devrait aussi préciser les formats et les usages autorisés. Le traitement d’une publicité irrégulière doit être possible sans attendre de renégocier toute la distribution.
+ 

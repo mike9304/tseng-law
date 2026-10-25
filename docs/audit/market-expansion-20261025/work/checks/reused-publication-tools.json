@@ -1,0 +1,50 @@
+[
+  {
+    "file": "verify-publication.py",
+    "source": "/Users/son7/tseng-case-trends-20261025/work/verify-publication.py",
+    "sha256": "65faeb0cb640cd1851e12745aecea6ffaf738f6735944796d120335028f06535",
+    "unchanged": true
+  },
+  {
+    "file": "extract-manifest-bodies.mjs",
+    "source": "/Users/son7/tseng-case-trends-20261025/work/extract-manifest-bodies.mjs",
+    "sha256": "19e5ca0389266f9f8c0d4b57d4c6df51bde91f997676e3cda5415d23774e4819",
+    "unchanged": true
+  },
+  {
+    "file": "source-body-normalization.mjs",
+    "source": "/Users/son7/tseng-case-trends-20261025/work/source-body-normalization.mjs",
+    "sha256": "6226cdd78b3699a43321ef3b767199d55c1bd2874d17882cd001331ef7de0606",
+    "unchanged": true
+  },
+  {
+    "file": "start-air-publication.py",
+    "source": "/Users/son7/tseng-case-trends-20261025/work/start-air-publication.py",
+    "sha256": "57b801279b83d3de87260f62801294ab1c9ab76f96816b05ec7bc4acd426133b",
+    "unchanged": true
+  },
+  {
+    "file": "sites-publish-bridge.py",
+    "source": "/Users/son7/tseng-case-trends-20261025/work/sites-publish-bridge.py",
+    "sha256": "cfdda1ffdb8470b56b80c15783fd17e03e2f514e898711fad0b5473b9f3a2ef4",
+    "unchanged": true
+  },
+  {
+    "file": "run-sites-workflow.py",
+    "source": "/Users/son7/tseng-case-trends-20261025/work/run-sites-workflow.py",
+    "sha256": "a409b3b60c23208287f3d5bc8b495f78fc419cb5be2c9836e8d851f24ff1db45",
+    "unchanged": true
+  },
+  {
+    "file": "media-dns.cjs",
+    "source": "/Users/son7/tseng-case-trends-20261025/work/media-dns.cjs",
+    "sha256": "c6f62c9cd1891838f819bcec002f3cdefb703f6b970ca425bf75ea7327433a28",
+    "unchanged": true
+  },
+  {
+    "file": "push-via-studio.py",
+    "source": "/Users/son7/tseng-case-trends-20261025/work/push-via-studio.py",
+    "sha256": "fd325e10cb3b00905e201f1f8e4e20e7796faeb041a20e7337c8a97507305f48",
+    "change": "task-local directory,bundle and branch names only"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-25",
+  "mode": "native image_gen",
+  "assets": [
+    {
+      "id": 936,
+      "prompt": "Use case: photorealistic-natural. Asset type: editorial hero for a French-language law-firm article on changing the Taiwanese importer of French cosmetics while preserving the product information file. Create one refined fictional still life in landscape 1536x1024: on a pale stone working table, three unbranded cosmetic containers (a frosted pump bottle, small amber serum bottle, cream jar) beside two open neutral document folders and a compact metal external storage drive, conveying a careful handover of technical product records. Soft cool daylight from a side window, natural paper and glass textures, quiet professional setting, close oblique view, restrained palette of ivory, pale sage and graphite. No people, hands, faces, readable text, numbers, identity documents, seals, flags, logos, trademarks, watermark, decorative legal scales or gavels. Folders show blank pages only. This is an illustrative fictional scene, not regulatory evidence.",
+      "originalPath": "/Users/son7/.codex/generated_images/01a17324-a6ab-7851-a136-3c3b771ec835/exec-310df84d-685e-4aff-bbf0-b54807dd9996.png",
+      "originalSha256": "1d52393a6a1f14c21cd0319473a5505f614eb7abfe155fc41e1c5fef6e84bd37",
+      "finalPath": "repo/public/images/columns/936-market-expansion-20261025.webp",
+      "sha256": "eb54eb0f61c4240d888211b3abaf0014dd58fb957272b8f995eb616d81615d0e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 157886,
+      "inspection": "Actually inspected generated image: three unbranded cosmetic containers, blank binder pages, neutral storage drive, no readable text, faces, labels, logos, flags or identity documents. Fictional scene. File-format conversion only, no scene edits."
+    },
+    {
+      "id": 937,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial hero for a French-language law-firm article about a French wine exporter designing compliant advertising and sales channels in Taiwan. Create one fictional, understated still life in 1536x1024: three closed dark green wine bottles without labels or marks stand in an open corrugated cardboard six-bottle shipping box on an oak counter of an empty specialist wine shop, while a tablet with a completely blank dark screen rests flat nearby. Frame at counter height with bottles dominant left and tablet at lower right, a softly blurred shelf of unlabeled bottles behind. Warm late afternoon side light, deep burgundy and olive shadows, tactile paper dividers and wood. No people, faces, hands, readable text, labels, prices, QR codes, logos, flags, seals, watermarks, drinking scene, legal scales or gavel. Convey planning a retailer's channel, not actual online purchasing. Illustrative fictional scene, no suggestion of real evidence or an operating sales page.",
+      "originalPath": "/Users/son7/.codex/generated_images/01a17324-a6ab-7851-a136-3c3b771ec835/exec-6482ed41-482c-4946-9ea6-76dfb84e83c5.png",
+      "originalSha256": "858a4bf77f51cc0267ac0fa7fb42eea848d5b2f0d16822fe7546ed02f76eb72e",
+      "finalPath": "repo/public/images/columns/937-market-expansion-20261025.webp",
+      "sha256": "692aeed72862d76e9613a26706d495c92bc5323afb513e0c0250012eb67ab1df",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 253578,
+      "inspection": "Actually inspected generated image: closed unlabeled wine bottles in shipping carton, blank tablet, empty shop. No people, marks, readable text, prices, drinking scene, flags or claims of an operating store. Fictional scene. File-format conversion only."
+    }
+  ]
+}

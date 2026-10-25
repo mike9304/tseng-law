@@ -1,0 +1,143 @@
+{
+  "locale": "fr",
+  "directory": "columns-fr",
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?Sources(?:\\s+officielles)?\\s*:?\\s*$)",
+  "abbreviations": [
+    "art",
+    "arts",
+    "al",
+    "chap",
+    "p",
+    "pp",
+    "réf",
+    "cf",
+    "éd",
+    "C. civ",
+    "C. pén",
+    "C. pr. civ",
+    "Cass",
+    "Cass. civ",
+    "M",
+    "Mme",
+    "Dr",
+    "Pr",
+    "p. ex",
+    "p.ex",
+    "etc"
+  ],
+  "contrast_patterns": [
+    "(?i:\\bplutôt\\s+que\\b)",
+    "(?i:\\bnon\\s+pas\\b[^.!?\\n]{0,160}\\bmais\\b)",
+    "(?i:\\b(?:n[’\\']est|ne\\s+sont)\\s+pas\\b[^.!?\\n]{0,160}\\bmais\\b)"
+  ],
+  "caveat_pattern": "(?i:^\\s*[«“\\\"(]*\\s*(?:cependant|toutefois|néanmoins|en\\s+revanche|sous\\s+réserve)\\b)",
+  "hypo_pattern": "(?i:^\\s*[«“\\\"(]*\\s*(?:supposons\\b|imaginons\\b|imaginez\\b|un\\s+cas\\s+hypothétique\\b|un\\s+exemple\\s+fictif\\b))",
+  "formula_close_pattern": "(?i:\\b(?:cet\\s+article\\s+(?:fournit|présente)\\s+(?:des\\s+)?informations\\s+générales|les\\s+cas\\s+particuliers\\s+peuvent\\s+varier|notre\\s+cabinet\\s+peut\\s+vous\\s+aider)\\b)",
+  "sentence_fixtures": [
+    {
+      "text": "Le dossier fictif porte la mention « art. 7, al. 2 ». Élodie classe la copie.",
+      "sentences": [
+        "Le dossier fictif porte la mention « art. 7, al. 2 ».",
+        "Élodie classe la copie."
+      ]
+    },
+    {
+      "text": "Le relevé fictif indique 1 234,50 € et 2,5 unités. À gauche, une case reste vide.",
+      "sentences": [
+        "Le relevé fictif indique 1 234,50 € et 2,5 unités.",
+        "À gauche, une case reste vide."
+      ]
+    },
+    {
+      "text": "« La copie est prête. » Étienne ferme le dossier. à suivre : une annexe sans titre.",
+      "sentences": [
+        "« La copie est prête. »",
+        "Étienne ferme le dossier.",
+        "à suivre : une annexe sans titre."
+      ]
+    },
+    {
+      "text": "Le bordereau fictif cite C. civ., art. 4. M. Évrard range la copie.",
+      "sentences": [
+        "Le bordereau fictif cite C. civ., art. 4.",
+        "M. Évrard range la copie."
+      ]
+    },
+    {
+      "text": "Le registre fictif énumère des copies, des enveloppes, etc. Une étiquette manque.",
+      "sentences": [
+        "Le registre fictif énumère des copies, des enveloppes, etc.",
+        "Une étiquette manque."
+      ]
+    },
+    {
+      "text": "L’archiviste relit l'exemple. Où est la seconde copie ? Elle est ici.",
+      "sentences": [
+        "L’archiviste relit l'exemple.",
+        "Où est la seconde copie ?",
+        "Elle est ici."
+      ]
+    }
+  ],
+  "word_fixtures": [
+    {
+      "text": "L’archiviste relit l'exemple à côté du procès-verbal.",
+      "tokens": [
+        "L’archiviste",
+        "relit",
+        "l'exemple",
+        "à",
+        "côté",
+        "du",
+        "procès",
+        "verbal"
+      ]
+    },
+    {
+      "text": "Élodie note 2,5 unités et 1.234,50 €.",
+      "tokens": [
+        "Élodie",
+        "note",
+        "2,5",
+        "unités",
+        "et",
+        "1.234,50"
+      ]
+    },
+    {
+      "text": "Le lot porte la référence C. civ. et le n° 7.",
+      "tokens": [
+        "Le",
+        "lot",
+        "porte",
+        "la",
+        "référence",
+        "C",
+        "civ",
+        "et",
+        "le",
+        "n",
+        "7"
+      ]
+    },
+    {
+      "text": "À droite, l’étiquette manque.",
+      "tokens": [
+        "À",
+        "droite",
+        "l’étiquette",
+        "manque"
+      ]
+    },
+    {
+      "text": "Le total est 1 234,50 €.",
+      "tokens": [
+        "Le",
+        "total",
+        "est",
+        "1",
+        "234,50"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+The box is open. Paper remains inside. Where is the pencil? A white envelope on the desk holds the copy that was prepared yesterday. Nothing fills the drawer. One final sheet bears a date.

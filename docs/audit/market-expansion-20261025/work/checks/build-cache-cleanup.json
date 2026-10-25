@@ -1,0 +1,6 @@
+{
+  "at": "2026-10-25T13:37:42.778461+00:00",
+  "path": "/Users/son7/Projects/tseng-law-deploy/.next-static/cache",
+  "removed_kib": 1786716,
+  "reason": "Rebuildable Next.js compiler cache only; free space before authorized Air rebuild. Deployer lock absent. Source, current server/output, originals and release evidence preserved."
+}

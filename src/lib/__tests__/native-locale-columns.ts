@@ -1219,6 +1219,58 @@ export const CASE_COLUMN_FILES_20261025 = {
   ],
 } as const;
 
+/** Country-specific market expansion, two original articles per selected locale. */
+export const MARKET_EXPANSION_COLUMN_FILES_20261025 = {
+  'vi': [
+    '922-vietnamese-tenant-taiwan-deposit-handover-deductions.md',
+    '923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md',
+  ],
+  'id': [
+    '924-indonesian-caregiver-taiwan-pregnancy-dismissal.md',
+    '925-indonesian-caregiver-taiwan-work-outside-permit.md',
+  ],
+  'fil': [
+    '926-filipino-worker-taiwan-injury-resignation-settlement.md',
+    '927-filipino-worker-taiwan-loan-promissory-note-court-order.md',
+  ],
+  'hi': [
+    '928-indian-minority-investor-taiwan-company-inspector.md',
+    '929-indian-technical-service-fees-taiwan-tax-treaty.md',
+  ],
+  'ar': [
+    '930-uae-taiwan-shipment-rerouting-hardship.md',
+    '931-saudi-supplier-taiwan-distributor-resale-prices.md',
+  ],
+  'he': [
+    '932-israel-taiwan-pph-patent-claims-window.md',
+    '933-israeli-taiwan-joint-patent-license-consent.md',
+  ],
+  'nl': [
+    '934-dutch-technicians-taiwan-installation-contract-work-permit.md',
+    '935-dutch-machinery-taiwan-retention-title-registration.md',
+  ],
+  'fr': [
+    '936-french-cosmetics-taiwan-pif-importer-handover.md',
+    '937-french-wine-taiwan-online-orders-advertising.md',
+  ],
+  'pt': [
+    '938-brazil-coffee-taiwan-border-reinspection.md',
+    '939-brazil-organic-coffee-taiwan-label-certification.md',
+  ],
+  'pl': [
+    '940-polish-importer-taiwan-invoice-bank-change-payment.md',
+    '941-polish-brand-taiwan-consumer-injury-importer-recall.md',
+  ],
+  'cs': [
+    '942-czech-supplier-taiwan-email-purchase-order-contract.md',
+    '943-czech-exhibitor-taiwan-patent-disclosure-priority.md',
+  ],
+  'lt': [
+    '944-lithuanian-laser-taiwan-evaluation-samples-test-data.md',
+    '945-lithuanian-company-taiwan-firmware-copyright-source-code.md',
+  ],
+} as const;
+
 /** Registered locale-specific batches through 2026-10-25, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
@@ -1246,6 +1298,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...(ARC_VISA_COLUMN_FILES_20261024[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261024 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((CASE_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((MARKET_EXPANSION_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261014 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261015 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261021 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1276,7 +1329,10 @@ export function expertiseSlugsFor(locale: string): string[] {
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
-  const day20261025 = (CASE_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
+  const day20261025: readonly string[] = [
+    ...((CASE_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((MARKET_EXPANSION_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+  ];
   const day20261024: readonly string[] = [
     ...(ARC_VISA_COLUMN_FILES_20261024[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261024 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1359,6 +1415,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 /** Verified publication date of an archive-lead slug (2026-09-30 through 2026-10-25). */
 export function archiveLeadPublicationDate(slug: string): string {
   if (Object.values(CASE_COLUMN_FILES_20261025).flat().map(slugOf).includes(slug)) return '2026-10-25';
+  if (Object.values(MARKET_EXPANSION_COLUMN_FILES_20261025).flat().map(slugOf).includes(slug)) return '2026-10-25';
   if (ARC_VISA_FILES_20261024.map(slugOf).includes(slug)) return '2026-10-24';
   if (Object.values(COUNTRY_COLUMN_FILES_20261024).flat().map(slugOf).includes(slug)) return '2026-10-24';
   if (Object.values(COUNTRY_COLUMN_FILES_20261023).flat().map(slugOf).includes(slug)) return '2026-10-23';
@@ -1445,6 +1502,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ARC_VISA_FILES_20261024,
     ...Object.values(COUNTRY_COLUMN_FILES_20261024),
     ...Object.values(CASE_COLUMN_FILES_20261025),
+    ...Object.values(MARKET_EXPANSION_COLUMN_FILES_20261025),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261014),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261015),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021),

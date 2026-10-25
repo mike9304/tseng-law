@@ -1,0 +1,5344 @@
+{
+  "reviewed_at_utc": "2026-10-25T13:09:33.987179+00:00",
+  "reviewer": "/root/measure_new_locales_review",
+  "candidate_path": "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/candidate",
+  "candidate_manifest": {
+    "MULTILINGUAL-METHOD.md": "124c841548f4f425b4ba1017729803496dee7ed55e5667b2d3565a816995ae82",
+    "profiles/ar.json": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+    "profiles/cs.json": "b361a081115f144f61f45062aa1ae88d5afeaecfca84a8bd2590bbb007dc0355",
+    "profiles/de.json": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+    "profiles/es.json": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+    "profiles/fil.json": "695dd6baf6c83766052baa3efeb28201ee0a106b6e436ca5d6aa909354303334",
+    "profiles/fr.json": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+    "profiles/he.json": "39a1209ba75396c0b0e99395f7cea5b0a833c81101e7ec7d47f64a3b3ab1eb16",
+    "profiles/hi.json": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+    "profiles/id.json": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+    "profiles/it.json": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+    "profiles/lt.json": "da801eac299efcd35d428ab1fa623f28a26513378d53e68398684b807f35bf17",
+    "profiles/nl.json": "0982c731a77395976a66a15d363b234c3719567ada0d279961f5d0cc4494fbfb",
+    "profiles/pl.json": "cdbcd3b2f1f4b999ec1693b12d0d493956c17368ef72998424e490b63e18ed2f",
+    "profiles/pt.json": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+    "profiles/th.json": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+    "profiles/vi.json": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+    "variety_metrics.py": "f6a53d8265224b5795be95501f317eac018c23dba5b79513c6179fe1caa363c7",
+    "variety_multilingual.py": "34bca4bb031b7fa386ea1ef16014a62c9a5c140e89410f75f9ca527ad3f8e85d"
+  },
+  "original_path": "/Users/son7/tseng-lanes-shared/variety",
+  "original_manifest": {
+    "MULTILINGUAL-METHOD.md": "124c841548f4f425b4ba1017729803496dee7ed55e5667b2d3565a816995ae82",
+    "build-rewrite-queue.py": "510cc4881b562713699a0f208df96e1ecc5d01ca66f0add49e876c95c3a9ce59",
+    "profiles/ar.json": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+    "profiles/de.json": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+    "profiles/es.json": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+    "profiles/fr.json": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+    "profiles/hi.json": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+    "profiles/id.json": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+    "profiles/it.json": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+    "profiles/pt.json": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+    "profiles/th.json": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+    "profiles/vi.json": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+    "variety_metrics.py": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38",
+    "variety_multilingual.py": "bb6bb2e8b18496b4422d291c2d273f119e4038e2d20005e6231e85c4c11b8c8b"
+  },
+  "fixture_sha256": "41b6641d7f683f508b1db0a68984b46eedc903cc0aee1732b57a3191bd515511",
+  "summary": {
+    "total": 334,
+    "passed": 307,
+    "failed": 27
+  },
+  "records": [
+    {
+      "id": "fil-sentences-plain",
+      "status": "PASS",
+      "actual": [
+        "Nasa mesa ang liham.",
+        "May kopya ang opisina."
+      ],
+      "expected": [
+        "Nasa mesa ang liham.",
+        "May kopya ang opisina."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "he-sentences-plain",
+      "status": "PASS",
+      "actual": [
+        "המכתב נמצא על השולחן.",
+        "עותק נשמר במשרד."
+      ],
+      "expected": [
+        "המכתב נמצא על השולחן.",
+        "עותק נשמר במשרד."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "nl-sentences-plain",
+      "status": "PASS",
+      "actual": [
+        "De brief ligt op tafel.",
+        "Het kantoor bewaart een kopie."
+      ],
+      "expected": [
+        "De brief ligt op tafel.",
+        "Het kantoor bewaart een kopie."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "pl-sentences-plain",
+      "status": "PASS",
+      "actual": [
+        "List leży na stole.",
+        "Biuro przechowuje kopię."
+      ],
+      "expected": [
+        "List leży na stole.",
+        "Biuro przechowuje kopię."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "cs-sentences-plain",
+      "status": "PASS",
+      "actual": [
+        "Dopis leží na stole.",
+        "Kancelář má kopii."
+      ],
+      "expected": [
+        "Dopis leží na stole.",
+        "Kancelář má kopii."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "lt-sentences-plain",
+      "status": "PASS",
+      "actual": [
+        "Laiškas guli ant stalo.",
+        "Biuras saugo kopiją."
+      ],
+      "expected": [
+        "Laiškas guli ant stalo.",
+        "Biuras saugo kopiją."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "fil-sentences-titles",
+      "status": "PASS",
+      "actual": [
+        "Kinausap ni Dr. Reyes si Bb. Cruz.",
+        "Bumalik sila bukas."
+      ],
+      "expected": [
+        "Kinausap ni Dr. Reyes si Bb. Cruz.",
+        "Bumalik sila bukas."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "fil-sentences-citation",
+      "status": "PASS",
+      "actual": [
+        "Nasa art. 5 ng Batas Blg. 12 ang tala.",
+        "May hiwalay na kopya."
+      ],
+      "expected": [
+        "Nasa art. 5 ng Batas Blg. 12 ang tala.",
+        "May hiwalay na kopya."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "fil-sentences-decimal",
+      "status": "PASS",
+      "actual": [
+        "Nakatala ang halagang 1,250.50 piso.",
+        "May resibo rin."
+      ],
+      "expected": [
+        "Nakatala ang halagang 1,250.50 piso.",
+        "May resibo rin."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "fil-sentences-terminal-abbreviation",
+      "status": "PASS",
+      "actual": [
+        "May mga resibo, liham, atbp.",
+        "Nasa mesa ang folder."
+      ],
+      "expected": [
+        "May mga resibo, liham, atbp.",
+        "Nasa mesa ang folder."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "fil-sentences-abbreviation-middle",
+      "status": "PASS",
+      "actual": [
+        "May mga resibo, liham, atbp. sa folder.",
+        "Kumpleto ang tala."
+      ],
+      "expected": [
+        "May mga resibo, liham, atbp. sa folder.",
+        "Kumpleto ang tala."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "fil-sentences-quote-attribution",
+      "status": "PASS",
+      "actual": [
+        "“Handa na ba?” tanong niya.",
+        "Sumagot ang kawani."
+      ],
+      "expected": [
+        "“Handa na ba?” tanong niya.",
+        "Sumagot ang kawani."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "fil-sentences-quote-new-sentence",
+      "status": "PASS",
+      "actual": [
+        "“Handa na ba?”",
+        "Sumagot ang kawani."
+      ],
+      "expected": [
+        "“Handa na ba?”",
+        "Sumagot ang kawani."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "fil-sentences-ellipsis",
+      "status": "PASS",
+      "actual": [
+        "Sandali...",
+        "Bukas ang opisina."
+      ],
+      "expected": [
+        "Sandali...",
+        "Bukas ang opisina."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "he-sentences-gershayim",
+      "status": "PASS",
+      "actual": [
+        "עו״ד לוי קיבל את המכתב.",
+        "העותק נשמר."
+      ],
+      "expected": [
+        "עו״ד לוי קיבל את המכתב.",
+        "העותק נשמר."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "he-sentences-ascii-gershayim",
+      "status": "PASS",
+      "actual": [
+        "עו\"ד לוי קיבל את המכתב.",
+        "העותק נשמר."
+      ],
+      "expected": [
+        "עו\"ד לוי קיבל את המכתב.",
+        "העותק נשמר."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "he-sentences-geresh-name",
+      "status": "PASS",
+      "actual": [
+        "ג׳ורג׳ הגיע למשרד.",
+        "הדלת הייתה פתוחה."
+      ],
+      "expected": [
+        "ג׳ורג׳ הגיע למשרד.",
+        "הדלת הייתה פתוחה."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "he-sentences-decimal",
+      "status": "PASS",
+      "actual": [
+        "הסכום הוא 1,250.50 ש״ח.",
+        "הקבלה נשמרה."
+      ],
+      "expected": [
+        "הסכום הוא 1,250.50 ש״ח.",
+        "הקבלה נשמרה."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "he-sentences-citation",
+      "status": "PASS",
+      "actual": [
+        "ההפניה היא לסעיף 5 לחוק.",
+        "המסמך מצורף."
+      ],
+      "expected": [
+        "ההפניה היא לסעיף 5 לחוק.",
+        "המסמך מצורף."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "he-sentences-quote-attribution",
+      "status": "PASS",
+      "actual": [
+        "\"מי חתם?\" שאל העובד.",
+        "המנהל השיב."
+      ],
+      "expected": [
+        "\"מי חתם?\" שאל העובד.",
+        "המנהל השיב."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "he-sentences-quote-new-sentence",
+      "status": "PASS",
+      "actual": [
+        "\"מי חתם?\"",
+        "העובד חזר לחדר."
+      ],
+      "expected": [
+        "\"מי חתם?\"",
+        "העובד חזר לחדר."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "he-sentences-punctuation",
+      "status": "PASS",
+      "actual": [
+        "מי חתם?",
+        "העותק כאן!",
+        "אפשר לבדוק."
+      ],
+      "expected": [
+        "מי חתם?",
+        "העותק כאן!",
+        "אפשר לבדוק."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "nl-sentences-title",
+      "status": "PASS",
+      "actual": [
+        "Mr. De Vries las de brief.",
+        "Daarna belde zij terug."
+      ],
+      "expected": [
+        "Mr. De Vries las de brief.",
+        "Daarna belde zij terug."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "nl-sentences-citation",
+      "status": "PASS",
+      "actual": [
+        "Zie art. 5, lid 2.",
+        "Daarna volgt de bijlage."
+      ],
+      "expected": [
+        "Zie art. 5, lid 2.",
+        "Daarna volgt de bijlage."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "nl-sentences-decimal",
+      "status": "PASS",
+      "actual": [
+        "Het bedrag is 1.250,50 euro.",
+        "De factuur ligt klaar."
+      ],
+      "expected": [
+        "Het bedrag is 1.250,50 euro.",
+        "De factuur ligt klaar."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "nl-sentences-terminal-abbreviation",
+      "status": "PASS",
+      "actual": [
+        "Het dossier bevat facturen enz.",
+        "De map blijft hier."
+      ],
+      "expected": [
+        "Het dossier bevat facturen enz.",
+        "De map blijft hier."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "nl-sentences-abbreviation-middle",
+      "status": "PASS",
+      "actual": [
+        "Het dossier bevat facturen enz. in een map.",
+        "Die map blijft hier."
+      ],
+      "expected": [
+        "Het dossier bevat facturen enz. in een map.",
+        "Die map blijft hier."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "nl-sentences-multi-abbreviation",
+      "status": "PASS",
+      "actual": [
+        "Het pakket bevat o.a. facturen en brieven.",
+        "De lijst is compleet."
+      ],
+      "expected": [
+        "Het pakket bevat o.a. facturen en brieven.",
+        "De lijst is compleet."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "nl-sentences-quote-attribution",
+      "status": "PASS",
+      "actual": [
+        "“Wie heeft getekend?” vroeg hij.",
+        "De medewerker antwoordde."
+      ],
+      "expected": [
+        "“Wie heeft getekend?” vroeg hij.",
+        "De medewerker antwoordde."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "nl-sentences-quote-new-sentence",
+      "status": "PASS",
+      "actual": [
+        "“Wie heeft getekend?”",
+        "De medewerker liep weg."
+      ],
+      "expected": [
+        "“Wie heeft getekend?”",
+        "De medewerker liep weg."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "pl-sentences-title",
+      "status": "PASS",
+      "actual": [
+        "Prof. Nowak przeczytał list.",
+        "Potem odłożył dokument."
+      ],
+      "expected": [
+        "Prof. Nowak przeczytał list.",
+        "Potem odłożył dokument."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "pl-sentences-citation",
+      "status": "PASS",
+      "actual": [
+        "Zob. art. 5 ust. 1.",
+        "Potem sprawdź załącznik."
+      ],
+      "expected": [
+        "Zob. art. 5 ust. 1.",
+        "Potem sprawdź załącznik."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "pl-sentences-decimal",
+      "status": "PASS",
+      "actual": [
+        "Kwota wynosi 1.250,50 zł.",
+        "Potwierdzenie jest w teczce."
+      ],
+      "expected": [
+        "Kwota wynosi 1.250,50 zł.",
+        "Potwierdzenie jest w teczce."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "pl-sentences-terminal-abbreviation",
+      "status": "PASS",
+      "actual": [
+        "Spis zawiera listy itd.",
+        "Kolejna strona jest pusta."
+      ],
+      "expected": [
+        "Spis zawiera listy itd.",
+        "Kolejna strona jest pusta."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "pl-sentences-abbreviation-middle",
+      "status": "PASS",
+      "actual": [
+        "Spis zawiera listy itd. w jednej teczce.",
+        "Teczka jest tutaj."
+      ],
+      "expected": [
+        "Spis zawiera listy itd. w jednej teczce.",
+        "Teczka jest tutaj."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "pl-sentences-year-terminal",
+      "status": "PASS",
+      "actual": [
+        "Dokument pochodzi z 2025 r.",
+        "Kolejny list jest nowszy."
+      ],
+      "expected": [
+        "Dokument pochodzi z 2025 r.",
+        "Kolejny list jest nowszy."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "pl-sentences-year-middle",
+      "status": "PASS",
+      "actual": [
+        "Dokument powstał w 2025 r. w Warszawie.",
+        "Kopia jest tutaj."
+      ],
+      "expected": [
+        "Dokument powstał w 2025 r. w Warszawie.",
+        "Kopia jest tutaj."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "pl-sentences-example",
+      "status": "PASS",
+      "actual": [
+        "Termin podano np. jako 30 dni.",
+        "Dopisano go ręcznie."
+      ],
+      "expected": [
+        "Termin podano np. jako 30 dni.",
+        "Dopisano go ręcznie."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "pl-sentences-quote-attribution",
+      "status": "PASS",
+      "actual": [
+        "„Kto podpisał?” zapytał pracownik.",
+        "Odpowiedź zapisano."
+      ],
+      "expected": [
+        "„Kto podpisał?” zapytał pracownik.",
+        "Odpowiedź zapisano."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "cs-sentences-named-date",
+      "status": "PASS",
+      "actual": [
+        "Záznam vznikl 1. ledna 2026.",
+        "Další list přišel později."
+      ],
+      "expected": [
+        "Záznam vznikl 1. ledna 2026.",
+        "Další list přišel později."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "cs-sentences-numeric-date",
+      "status": "PASS",
+      "actual": [
+        "Dopis přišel 25. 10. 2026.",
+        "Odpověď je přiložena."
+      ],
+      "expected": [
+        "Dopis přišel 25. 10. 2026.",
+        "Odpověď je přiložena."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "cs-sentences-date-no-year",
+      "status": "PASS",
+      "actual": [
+        "Termín je 25. října.",
+        "Další datum není uvedeno."
+      ],
+      "expected": [
+        "Termín je 25. října.",
+        "Další datum není uvedeno."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "cs-sentences-citation",
+      "status": "PASS",
+      "actual": [
+        "Viz čl. 5 odst. 1.",
+        "Kopie je přiložena."
+      ],
+      "expected": [
+        "Viz čl. 5 odst. 1.",
+        "Kopie je přiložena."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "cs-sentences-title",
+      "status": "PASS",
+      "actual": [
+        "Ing. Novák podepsal dopis.",
+        "Kopie zůstala v kanceláři."
+      ],
+      "expected": [
+        "Ing. Novák podepsal dopis.",
+        "Kopie zůstala v kanceláři."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "cs-sentences-company-abbreviation",
+      "status": "PASS",
+      "actual": [
+        "Společnost Alfa, s. r. o., zaslala dopis.",
+        "Kopie je v archivu."
+      ],
+      "expected": [
+        "Společnost Alfa, s. r. o., zaslala dopis.",
+        "Kopie je v archivu."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "cs-sentences-terminal-abbreviation",
+      "status": "PASS",
+      "actual": [
+        "Seznam obsahuje dopisy atd.",
+        "Další list chybí."
+      ],
+      "expected": [
+        "Seznam obsahuje dopisy atd.",
+        "Další list chybí."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "cs-sentences-ordinal-not-date",
+      "status": "FAIL",
+      "actual": [
+        "Jde o 2.",
+        "čtení návrhu.",
+        "Termín je znám."
+      ],
+      "expected": [
+        "Jde o 2. čtení návrhu.",
+        "Termín je znám."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "cs-sentences-integer-at-end",
+      "status": "PASS",
+      "actual": [
+        "Číslo spisu je 2.",
+        "Další položka je prázdná."
+      ],
+      "expected": [
+        "Číslo spisu je 2.",
+        "Další položka je prázdná."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "cs-sentences-decimal",
+      "status": "PASS",
+      "actual": [
+        "Cena činí 1.250,50 Kč.",
+        "Účet je přiložen."
+      ],
+      "expected": [
+        "Cena činí 1.250,50 Kč.",
+        "Účet je přiložen."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "cs-sentences-quote-attribution",
+      "status": "PASS",
+      "actual": [
+        "„Kdo podepsal?“ zeptal se pracovník.",
+        "Odpověď zapsal."
+      ],
+      "expected": [
+        "„Kdo podepsal?“ zeptal se pracovník.",
+        "Odpověď zapsal."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "lt-sentences-date",
+      "status": "PASS",
+      "actual": [
+        "Laiškas gautas 2026 m. spalio 25 d. ryte.",
+        "Kopija išsaugota."
+      ],
+      "expected": [
+        "Laiškas gautas 2026 m. spalio 25 d. ryte.",
+        "Kopija išsaugota."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "lt-sentences-title",
+      "status": "PASS",
+      "actual": [
+        "Sąrašą patikrino dr. Jonas.",
+        "Kopija liko biure."
+      ],
+      "expected": [
+        "Sąrašą patikrino dr. Jonas.",
+        "Kopija liko biure."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "lt-sentences-multi-abbreviation",
+      "status": "PASS",
+      "actual": [
+        "Tai, t. y. kopija, liko biure.",
+        "Originalas išsiųstas."
+      ],
+      "expected": [
+        "Tai, t. y. kopija, liko biure.",
+        "Originalas išsiųstas."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "lt-sentences-example-capital",
+      "status": "PASS",
+      "actual": [
+        "Kopija saugoma kitur, pvz. Vilniuje.",
+        "Originalas liko čia."
+      ],
+      "expected": [
+        "Kopija saugoma kitur, pvz. Vilniuje.",
+        "Originalas liko čia."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "lt-sentences-terminal-abbreviation",
+      "status": "PASS",
+      "actual": [
+        "Sąraše yra laiškai ir t. t.",
+        "Kitas lapas tuščias."
+      ],
+      "expected": [
+        "Sąraše yra laiškai ir t. t.",
+        "Kitas lapas tuščias."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "lt-sentences-abbreviation-middle",
+      "status": "PASS",
+      "actual": [
+        "Laiškai ir t. t. sudėti į aplanką.",
+        "Jis yra čia."
+      ],
+      "expected": [
+        "Laiškai ir t. t. sudėti į aplanką.",
+        "Jis yra čia."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "lt-sentences-year-terminal",
+      "status": "PASS",
+      "actual": [
+        "Dokumentas gautas 2026 m.",
+        "Kitas laiškas gautas vėliau."
+      ],
+      "expected": [
+        "Dokumentas gautas 2026 m.",
+        "Kitas laiškas gautas vėliau."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "lt-sentences-citation",
+      "status": "PASS",
+      "actual": [
+        "Nurodytas 5 str. 1 d. tekstas.",
+        "Kopija pridėta."
+      ],
+      "expected": [
+        "Nurodytas 5 str. 1 d. tekstas.",
+        "Kopija pridėta."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "lt-sentences-decimal",
+      "status": "PASS",
+      "actual": [
+        "Suma yra 1.250,50 euro.",
+        "Kvitas išsaugotas."
+      ],
+      "expected": [
+        "Suma yra 1.250,50 euro.",
+        "Kvitas išsaugotas."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "lt-sentences-quote-attribution",
+      "status": "PASS",
+      "actual": [
+        "„Kas pasirašė?“ paklausė darbuotojas.",
+        "Atsakymas užrašytas."
+      ],
+      "expected": [
+        "„Kas pasirašė?“ paklausė darbuotojas.",
+        "Atsakymas užrašytas."
+      ],
+      "detail": ""
+    },
+    {
+      "id": "fil-words-1",
+      "status": "FAIL",
+      "actual": [
+        "siya’y",
+        "pag-ibig",
+        "araw-araw"
+      ],
+      "expected": [
+        "siya’y",
+        "pag",
+        "ibig",
+        "araw",
+        "araw"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "fil-words-2",
+      "status": "PASS",
+      "actual": [
+        "ako'y",
+        "narito"
+      ],
+      "expected": [
+        "ako'y",
+        "narito"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "fil-words-3",
+      "status": "PASS",
+      "actual": [
+        "1,250.50",
+        "at",
+        "8",
+        "12",
+        "araw"
+      ],
+      "expected": [
+        "1,250.50",
+        "at",
+        "8",
+        "12",
+        "araw"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "fil-words-4",
+      "status": "PASS",
+      "actual": [
+        "Artikulo",
+        "5",
+        "1",
+        "Blg",
+        "12"
+      ],
+      "expected": [
+        "Artikulo",
+        "5",
+        "1",
+        "Blg",
+        "12"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "fil-words-5",
+      "status": "PASS",
+      "actual": [
+        "taó",
+        "opisina"
+      ],
+      "expected": [
+        "taó",
+        "opisina"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "he-words-1",
+      "status": "PASS",
+      "actual": [
+        "עו״ד",
+        "בע״מ"
+      ],
+      "expected": [
+        "עו״ד",
+        "בע״מ"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "he-words-2",
+      "status": "PASS",
+      "actual": [
+        "עו\"ד",
+        "בע\"מ"
+      ],
+      "expected": [
+        "עו\"ד",
+        "בע\"מ"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "he-words-3",
+      "status": "PASS",
+      "actual": [
+        "ג׳ורג׳",
+        "פרופ׳"
+      ],
+      "expected": [
+        "ג׳ורג׳",
+        "פרופ׳"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "he-words-4",
+      "status": "PASS",
+      "actual": [
+        "ג'ורג'",
+        "פרופ'"
+      ],
+      "expected": [
+        "ג'ורג'",
+        "פרופ'"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "he-words-5",
+      "status": "PASS",
+      "actual": [
+        "בית",
+        "משפט",
+        "שָׁלוֹם"
+      ],
+      "expected": [
+        "בית",
+        "משפט",
+        "שָׁלוֹם"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "he-words-6",
+      "status": "PASS",
+      "actual": [
+        "1,250.50",
+        "ו",
+        "8",
+        "12",
+        "ימים"
+      ],
+      "expected": [
+        "1,250.50",
+        "ו",
+        "8",
+        "12",
+        "ימים"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "he-words-7",
+      "status": "PASS",
+      "actual": [
+        "שלום",
+        "עולם"
+      ],
+      "expected": [
+        "שלום",
+        "עולם"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "nl-words-1",
+      "status": "PASS",
+      "actual": [
+        "zo'n",
+        "cliënt",
+        "e",
+        "mail"
+      ],
+      "expected": [
+        "zo'n",
+        "cliënt",
+        "e",
+        "mail"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "nl-words-2",
+      "status": "PASS",
+      "actual": [
+        "1.250,50",
+        "en",
+        "8",
+        "12",
+        "dagen"
+      ],
+      "expected": [
+        "1.250,50",
+        "en",
+        "8",
+        "12",
+        "dagen"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "nl-words-3",
+      "status": "PASS",
+      "actual": [
+        "art",
+        "5",
+        "lid",
+        "2"
+      ],
+      "expected": [
+        "art",
+        "5",
+        "lid",
+        "2"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "nl-words-4",
+      "status": "PASS",
+      "actual": [
+        "coöperatie"
+      ],
+      "expected": [
+        "coöperatie"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "pl-words-1",
+      "status": "PASS",
+      "actual": [
+        "zażółć",
+        "gęślą",
+        "jaźń"
+      ],
+      "expected": [
+        "zażółć",
+        "gęślą",
+        "jaźń"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "pl-words-2",
+      "status": "PASS",
+      "actual": [
+        "1",
+        "250,50",
+        "zł",
+        "8",
+        "12",
+        "dni"
+      ],
+      "expected": [
+        "1",
+        "250,50",
+        "zł",
+        "8",
+        "12",
+        "dni"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "pl-words-3",
+      "status": "PASS",
+      "actual": [
+        "art",
+        "5",
+        "ust",
+        "1",
+        "pkt",
+        "2"
+      ],
+      "expected": [
+        "art",
+        "5",
+        "ust",
+        "1",
+        "pkt",
+        "2"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "pl-words-4",
+      "status": "PASS",
+      "actual": [
+        "polsko",
+        "tajwański",
+        "projekt"
+      ],
+      "expected": [
+        "polsko",
+        "tajwański",
+        "projekt"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "cs-words-1",
+      "status": "PASS",
+      "actual": [
+        "český",
+        "návrh",
+        "řízení"
+      ],
+      "expected": [
+        "český",
+        "návrh",
+        "řízení"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "cs-words-2",
+      "status": "PASS",
+      "actual": [
+        "1",
+        "2",
+        "2026",
+        "a",
+        "1.250,50",
+        "Kč"
+      ],
+      "expected": [
+        "1",
+        "2",
+        "2026",
+        "a",
+        "1.250,50",
+        "Kč"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "cs-words-3",
+      "status": "PASS",
+      "actual": [
+        "5",
+        "odst",
+        "1",
+        "písm",
+        "a"
+      ],
+      "expected": [
+        "5",
+        "odst",
+        "1",
+        "písm",
+        "a"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "cs-words-4",
+      "status": "PASS",
+      "actual": [
+        "česko",
+        "tchajwanský",
+        "projekt"
+      ],
+      "expected": [
+        "česko",
+        "tchajwanský",
+        "projekt"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "lt-words-1",
+      "status": "PASS",
+      "actual": [
+        "ąžuolas",
+        "įmonė",
+        "užsienyje"
+      ],
+      "expected": [
+        "ąžuolas",
+        "įmonė",
+        "užsienyje"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "lt-words-2",
+      "status": "PASS",
+      "actual": [
+        "2026",
+        "m",
+        "spalio",
+        "25",
+        "d"
+      ],
+      "expected": [
+        "2026",
+        "m",
+        "spalio",
+        "25",
+        "d"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "lt-words-3",
+      "status": "PASS",
+      "actual": [
+        "1",
+        "250,50",
+        "Eur",
+        "8",
+        "12",
+        "dienų"
+      ],
+      "expected": [
+        "1",
+        "250,50",
+        "Eur",
+        "8",
+        "12",
+        "dienų"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "lt-words-4",
+      "status": "PASS",
+      "actual": [
+        "t",
+        "y",
+        "5",
+        "str",
+        "1",
+        "d"
+      ],
+      "expected": [
+        "t",
+        "y",
+        "5",
+        "str",
+        "1",
+        "d"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "lt-words-5",
+      "status": "PASS",
+      "actual": [
+        "Lietuvos",
+        "Taivano",
+        "ryšys"
+      ],
+      "expected": [
+        "Lietuvos",
+        "Taivano",
+        "ryšys"
+      ],
+      "detail": "Declared orthographic units, not morphemes; hyphens split, whitespace separates numbers."
+    },
+    {
+      "id": "fil-source_heading-positive-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "fil-source_heading-positive-2",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "fil-source_heading-positive-3",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "fil-source_heading-negative-1",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "fil-source_heading-negative-2",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "fil-source_heading-negative-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "he-source_heading-positive-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "he-source_heading-positive-2",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "he-source_heading-positive-3",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "he-source_heading-negative-1",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "he-source_heading-negative-2",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "he-source_heading-negative-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "nl-source_heading-positive-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "nl-source_heading-positive-2",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "nl-source_heading-positive-3",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "nl-source_heading-negative-1",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "nl-source_heading-negative-2",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "nl-source_heading-negative-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "pl-source_heading-positive-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "pl-source_heading-positive-2",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "pl-source_heading-positive-3",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "pl-source_heading-negative-1",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "pl-source_heading-negative-2",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "pl-source_heading-negative-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "cs-source_heading-positive-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "cs-source_heading-positive-2",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "cs-source_heading-positive-3",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "cs-source_heading-negative-1",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "cs-source_heading-negative-2",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "cs-source_heading-negative-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "lt-source_heading-positive-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "lt-source_heading-positive-2",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "lt-source_heading-positive-3",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "id": "lt-source_heading-negative-1",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "lt-source_heading-negative-2",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "lt-source_heading-negative-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "id": "fil-contrasts-contrast-1",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-contrasts-contrast-2",
+      "status": "FAIL",
+      "actual": 0,
+      "expected": 1,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-contrasts-contrast-3",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-signal-caveat-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-signal-caveat-2",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-signal-caveat-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-signal-hypo-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-signal-hypo-2",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-signal-hypo-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-signal-close-1",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-signal-close-2",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-signal-close-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-contrasts-contrast-1",
+      "status": "FAIL",
+      "actual": 0,
+      "expected": 1,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-contrasts-contrast-2",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-contrasts-contrast-3",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-signal-caveat-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-signal-caveat-2",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-signal-caveat-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-signal-hypo-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-signal-hypo-2",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-signal-hypo-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-signal-close-1",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-signal-close-2",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "he-signal-close-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-contrasts-contrast-1",
+      "status": "FAIL",
+      "actual": 0,
+      "expected": 1,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-contrasts-contrast-2",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-contrasts-contrast-3",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-signal-caveat-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-signal-caveat-2",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-signal-caveat-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-signal-hypo-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-signal-hypo-2",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-signal-hypo-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-signal-close-1",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-signal-close-2",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "nl-signal-close-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-contrasts-contrast-1",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-contrasts-contrast-2",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-contrasts-contrast-3",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-signal-caveat-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-signal-caveat-2",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-signal-caveat-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-signal-hypo-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-signal-hypo-2",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-signal-hypo-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-signal-close-1",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-signal-close-2",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "pl-signal-close-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-contrasts-contrast-1",
+      "status": "FAIL",
+      "actual": 0,
+      "expected": 1,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-contrasts-contrast-2",
+      "status": "FAIL",
+      "actual": 0,
+      "expected": 1,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-contrasts-contrast-3",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-signal-caveat-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-signal-caveat-2",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-signal-caveat-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-signal-hypo-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-signal-hypo-2",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-signal-hypo-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-signal-close-1",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-signal-close-2",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "cs-signal-close-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-contrasts-contrast-1",
+      "status": "PASS",
+      "actual": 1,
+      "expected": 1,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-contrasts-contrast-2",
+      "status": "FAIL",
+      "actual": 0,
+      "expected": 1,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-contrasts-contrast-3",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-signal-caveat-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-signal-caveat-2",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-signal-caveat-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-signal-hypo-1",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-signal-hypo-2",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-signal-hypo-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-signal-close-1",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-signal-close-2",
+      "status": "FAIL",
+      "actual": false,
+      "expected": true,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "lt-signal-close-3",
+      "status": "PASS",
+      "actual": false,
+      "expected": false,
+      "detail": "Selected formula detector; a negative count is not an exhaustive linguistic finding."
+    },
+    {
+      "id": "fil-citation_metrics-ending",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "fil-citation_metrics-negative",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0,
+        "cite_end_share": 0
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "fil-citation_metrics-inline",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.0
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "he-citation_metrics-ending",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "he-citation_metrics-negative",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0,
+        "cite_end_share": 0
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "he-citation_metrics-inline",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.0
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "nl-citation_metrics-ending",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "nl-citation_metrics-negative",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0,
+        "cite_end_share": 0
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "nl-citation_metrics-inline",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.0
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "pl-citation_metrics-ending",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "pl-citation_metrics-negative",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0,
+        "cite_end_share": 0
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "pl-citation_metrics-inline",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.0
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "cs-citation_metrics-ending",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "cs-citation_metrics-negative",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0,
+        "cite_end_share": 0
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "cs-citation_metrics-inline",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.0
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "lt-citation_metrics-ending",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0.2
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "lt-citation_metrics-negative",
+      "status": "PASS",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0,
+        "cite_end_share": 0
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "lt-citation_metrics-inline",
+      "status": "FAIL",
+      "actual": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0
+      },
+      "expected": {
+        "sentences": 5,
+        "paras": 5,
+        "cite_para_share": 0.2,
+        "cite_end_share": 0
+      },
+      "detail": "Neutral invented grammar example, not a legal proposition or target article."
+    },
+    {
+      "id": "contract-hard-values",
+      "status": "PASS",
+      "actual": {
+        "len_cv": [
+          ">=",
+          0.45,
+          "sentence-length variation (stdev/mean) too low — mix very short and long sentences"
+        ],
+        "short_share": [
+          ">=",
+          0.08,
+          "need at least ~1 in 12 sentences that is very short"
+        ],
+        "even_run3": [
+          "<=",
+          0.3,
+          "too many runs of 3 sentences of almost the same length"
+        ],
+        "top_opener_n": [
+          "<=",
+          "dyn",
+          "too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)"
+        ],
+        "consec_same_start": [
+          "<=",
+          2,
+          "consecutive sentences start with the same word"
+        ],
+        "cite_end_share": [
+          "<=",
+          0.45,
+          "too many sentences end with a (statute) parenthesis — move some citations to the front or into the sentence"
+        ],
+        "contrast": [
+          "<=",
+          3,
+          "contrast template (X is not Y / 不是…而是 / ではなく) used too often — max 1 deliberate, 3 total"
+        ]
+      },
+      "expected": {
+        "len_cv": [
+          ">=",
+          0.45,
+          "sentence-length variation (stdev/mean) too low — mix very short and long sentences"
+        ],
+        "short_share": [
+          ">=",
+          0.08,
+          "need at least ~1 in 12 sentences that is very short"
+        ],
+        "even_run3": [
+          "<=",
+          0.3,
+          "too many runs of 3 sentences of almost the same length"
+        ],
+        "top_opener_n": [
+          "<=",
+          "dyn",
+          "too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)"
+        ],
+        "consec_same_start": [
+          "<=",
+          2,
+          "consecutive sentences start with the same word"
+        ],
+        "cite_end_share": [
+          "<=",
+          0.45,
+          "too many sentences end with a (statute) parenthesis — move some citations to the front or into the sentence"
+        ],
+        "contrast": [
+          "<=",
+          3,
+          "contrast template (X is not Y / 不是…而是 / ではなく) used too often — max 1 deliberate, 3 total"
+        ]
+      },
+      "detail": null
+    },
+    {
+      "id": "contract-short-units",
+      "status": "PASS",
+      "actual": 8,
+      "expected": 8,
+      "detail": null
+    },
+    {
+      "id": "contract-long-units",
+      "status": "PASS",
+      "actual": 32,
+      "expected": 32,
+      "detail": null
+    },
+    {
+      "id": "contract-existing-supported",
+      "status": "PASS",
+      "actual": [
+        "ko",
+        "ja",
+        "en",
+        "zh-hant",
+        "th",
+        "id",
+        "hi",
+        "fr",
+        "de",
+        "it",
+        "es",
+        "pt",
+        "ar",
+        "vi"
+      ],
+      "expected": [
+        "ko",
+        "ja",
+        "en",
+        "zh-hant",
+        "th",
+        "id",
+        "hi",
+        "fr",
+        "de",
+        "it",
+        "es",
+        "pt",
+        "ar",
+        "vi"
+      ],
+      "detail": null
+    },
+    {
+      "id": "contract-new-supported",
+      "status": "PASS",
+      "actual": [
+        "cs",
+        "fil",
+        "he",
+        "lt",
+        "nl",
+        "pl"
+      ],
+      "expected": [
+        "cs",
+        "fil",
+        "he",
+        "lt",
+        "nl",
+        "pl"
+      ],
+      "detail": null
+    },
+    {
+      "id": "original-profile-bytes-profiles/ar.json",
+      "status": "PASS",
+      "actual": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+      "expected": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+      "detail": null
+    },
+    {
+      "id": "original-profile-bytes-profiles/de.json",
+      "status": "PASS",
+      "actual": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+      "expected": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+      "detail": null
+    },
+    {
+      "id": "original-profile-bytes-profiles/es.json",
+      "status": "PASS",
+      "actual": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+      "expected": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+      "detail": null
+    },
+    {
+      "id": "original-profile-bytes-profiles/fr.json",
+      "status": "PASS",
+      "actual": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+      "expected": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+      "detail": null
+    },
+    {
+      "id": "original-profile-bytes-profiles/hi.json",
+      "status": "PASS",
+      "actual": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+      "expected": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+      "detail": null
+    },
+    {
+      "id": "original-profile-bytes-profiles/id.json",
+      "status": "PASS",
+      "actual": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+      "expected": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+      "detail": null
+    },
+    {
+      "id": "original-profile-bytes-profiles/it.json",
+      "status": "PASS",
+      "actual": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+      "expected": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+      "detail": null
+    },
+    {
+      "id": "original-profile-bytes-profiles/pt.json",
+      "status": "PASS",
+      "actual": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+      "expected": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+      "detail": null
+    },
+    {
+      "id": "original-profile-bytes-profiles/th.json",
+      "status": "PASS",
+      "actual": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+      "expected": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+      "detail": null
+    },
+    {
+      "id": "original-profile-bytes-profiles/vi.json",
+      "status": "PASS",
+      "actual": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+      "expected": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+      "detail": null
+    },
+    {
+      "id": "regression-ko-plain-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "ko",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 17.7,
+        "len_cv": 0.673,
+        "short_share": 0.667,
+        "long_share": 0.0,
+        "para_cv": 0.673,
+        "even_run3": 0.0,
+        "top_end": "니다.",
+        "top_end_share": 1.0,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "서류가",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "서류가 왔습니다.",
+        "last": "다음 날 답변을 받았습니다."
+      },
+      "expected": {
+        "lang": "ko",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 17.7,
+        "len_cv": 0.673,
+        "short_share": 0.667,
+        "long_share": 0.0,
+        "para_cv": 0.673,
+        "even_run3": 0.0,
+        "top_end": "니다.",
+        "top_end_share": 1.0,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "서류가",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "서류가 왔습니다.",
+        "last": "다음 날 답변을 받았습니다."
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-ko-plain-score",
+      "status": "PASS",
+      "actual": 7.1,
+      "expected": 7.1,
+      "detail": null
+    },
+    {
+      "id": "regression-ko-extended-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "ko",
+        "sentences": 7,
+        "paras": 7,
+        "heads": 1,
+        "list_items": 1,
+        "mean_len": 17.6,
+        "len_cv": 0.627,
+        "short_share": 0.571,
+        "long_share": 0.0,
+        "para_cv": 0.627,
+        "even_run3": 0.0,
+        "top_end": "니다.",
+        "top_end_share": 0.857,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "서류가",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.143,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.75,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "서류가 왔습니다.",
+        "last": "A citation appears (Article 5)."
+      },
+      "expected": {
+        "lang": "ko",
+        "sentences": 7,
+        "paras": 7,
+        "heads": 1,
+        "list_items": 1,
+        "mean_len": 17.6,
+        "len_cv": 0.627,
+        "short_share": 0.571,
+        "long_share": 0.0,
+        "para_cv": 0.627,
+        "even_run3": 0.0,
+        "top_end": "니다.",
+        "top_end_share": 0.857,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "서류가",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.143,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.75,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "서류가 왔습니다.",
+        "last": "A citation appears (Article 5)."
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-ko-extended-score",
+      "status": "PASS",
+      "actual": 5.5,
+      "expected": 5.5,
+      "detail": null
+    },
+    {
+      "id": "regression-ko-routing",
+      "status": "PASS",
+      "actual": "ko",
+      "expected": "ko",
+      "detail": null
+    },
+    {
+      "id": "regression-ja-plain-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "ja",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 20.7,
+        "len_cv": 0.816,
+        "short_share": 0.667,
+        "long_share": 0.0,
+        "para_cv": 0.816,
+        "even_run3": 0.0,
+        "top_end": "desu-masu",
+        "top_end_share": 1.0,
+        "ja_desu": 6,
+        "ja_da": 0,
+        "top_opener": "書類",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "書類が届きました。",
+        "last": "翌日に返事が届きました。"
+      },
+      "expected": {
+        "lang": "ja",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 20.7,
+        "len_cv": 0.816,
+        "short_share": 0.667,
+        "long_share": 0.0,
+        "para_cv": 0.816,
+        "even_run3": 0.0,
+        "top_end": "desu-masu",
+        "top_end_share": 1.0,
+        "ja_desu": 6,
+        "ja_da": 0,
+        "top_opener": "書類",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "書類が届きました。",
+        "last": "翌日に返事が届きました。"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-ja-plain-score",
+      "status": "PASS",
+      "actual": 7.1,
+      "expected": 7.1,
+      "detail": null
+    },
+    {
+      "id": "regression-ja-extended-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "ja",
+        "sentences": 7,
+        "paras": 7,
+        "heads": 1,
+        "list_items": 1,
+        "mean_len": 20.1,
+        "len_cv": 0.777,
+        "short_share": 0.714,
+        "long_share": 0.0,
+        "para_cv": 0.777,
+        "even_run3": 0.0,
+        "top_end": "desu-masu",
+        "top_end_share": 0.857,
+        "ja_desu": 6,
+        "ja_da": 0,
+        "top_opener": "書類",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.143,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.66,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "書類が届きました。",
+        "last": "A citation appears (Article 5)."
+      },
+      "expected": {
+        "lang": "ja",
+        "sentences": 7,
+        "paras": 7,
+        "heads": 1,
+        "list_items": 1,
+        "mean_len": 20.1,
+        "len_cv": 0.777,
+        "short_share": 0.714,
+        "long_share": 0.0,
+        "para_cv": 0.777,
+        "even_run3": 0.0,
+        "top_end": "desu-masu",
+        "top_end_share": 0.857,
+        "ja_desu": 6,
+        "ja_da": 0,
+        "top_opener": "書類",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.143,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.66,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "書類が届きました。",
+        "last": "A citation appears (Article 5)."
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-ja-extended-score",
+      "status": "PASS",
+      "actual": 5.5,
+      "expected": 5.5,
+      "detail": null
+    },
+    {
+      "id": "regression-ja-routing",
+      "status": "PASS",
+      "actual": "ja",
+      "expected": "ja",
+      "detail": null
+    },
+    {
+      "id": "regression-en-plain-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "en",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "Alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota."
+      },
+      "expected": {
+        "lang": "en",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "Alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota."
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-en-plain-score",
+      "status": "PASS",
+      "actual": 1.2,
+      "expected": 1.2,
+      "detail": null
+    },
+    {
+      "id": "regression-en-extended-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "en",
+        "sentences": 7,
+        "paras": 7,
+        "heads": 1,
+        "list_items": 1,
+        "mean_len": 10.3,
+        "len_cv": 0.998,
+        "short_share": 0.571,
+        "long_share": 0.143,
+        "para_cv": 0.998,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.143,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "Alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.143,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.39,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "A citation appears (Article 5)."
+      },
+      "expected": {
+        "lang": "en",
+        "sentences": 7,
+        "paras": 7,
+        "heads": 1,
+        "list_items": 1,
+        "mean_len": 10.3,
+        "len_cv": 0.998,
+        "short_share": 0.571,
+        "long_share": 0.143,
+        "para_cv": 0.998,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.143,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "Alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.143,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.39,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "A citation appears (Article 5)."
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-en-extended-score",
+      "status": "PASS",
+      "actual": 0.8,
+      "expected": 0.8,
+      "detail": null
+    },
+    {
+      "id": "regression-en-routing",
+      "status": "PASS",
+      "actual": "en",
+      "expected": "en",
+      "detail": null
+    },
+    {
+      "id": "regression-zh-hant-plain-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "zh-hant",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 16,
+        "len_cv": 1.026,
+        "short_share": 0.667,
+        "long_share": 0.0,
+        "para_cv": 1.026,
+        "even_run3": 0.0,
+        "top_end": "了。",
+        "top_end_share": 0.333,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "文件",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "文件到了。",
+        "last": "隔天收到回覆。"
+      },
+      "expected": {
+        "lang": "zh-hant",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 16,
+        "len_cv": 1.026,
+        "short_share": 0.667,
+        "long_share": 0.0,
+        "para_cv": 1.026,
+        "even_run3": 0.0,
+        "top_end": "了。",
+        "top_end_share": 0.333,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "文件",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "文件到了。",
+        "last": "隔天收到回覆。"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-zh-hant-plain-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-zh-hant-extended-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "zh-hant",
+        "sentences": 7,
+        "paras": 7,
+        "heads": 1,
+        "list_items": 1,
+        "mean_len": 16.1,
+        "len_cv": 0.941,
+        "short_share": 0.571,
+        "long_share": 0.0,
+        "para_cv": 0.941,
+        "even_run3": 0.0,
+        "top_end": "了。",
+        "top_end_share": 0.286,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "文件",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.143,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.81,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "文件到了。",
+        "last": "A citation appears (Article 5)."
+      },
+      "expected": {
+        "lang": "zh-hant",
+        "sentences": 7,
+        "paras": 7,
+        "heads": 1,
+        "list_items": 1,
+        "mean_len": 16.1,
+        "len_cv": 0.941,
+        "short_share": 0.571,
+        "long_share": 0.0,
+        "para_cv": 0.941,
+        "even_run3": 0.0,
+        "top_end": "了。",
+        "top_end_share": 0.286,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "文件",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.143,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.81,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "文件到了。",
+        "last": "A citation appears (Article 5)."
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-zh-hant-extended-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-zh-hant-routing",
+      "status": "PASS",
+      "actual": "zh-hant",
+      "expected": "zh-hant",
+      "detail": null
+    },
+    {
+      "id": "regression-th-plain-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "th",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 9.8,
+        "len_cv": 0.86,
+        "short_share": 0.667,
+        "long_share": 0.0,
+        "para_cv": 0.86,
+        "even_run3": 0.0,
+        "top_end": "แล้ว",
+        "top_end_share": 0.333,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "เอกสาร",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "เอกสารมาถึงแล้ว",
+        "last": "วันต่อมาได้รับคำตอบ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "reviewed_sha_bound_map",
+        "word_segmenter": {
+          "node": "25.9.0",
+          "icu": "78.3",
+          "unicode": "17.0"
+        }
+      },
+      "expected": {
+        "lang": "th",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 9.8,
+        "len_cv": 0.86,
+        "short_share": 0.667,
+        "long_share": 0.0,
+        "para_cv": 0.86,
+        "even_run3": 0.0,
+        "top_end": "แล้ว",
+        "top_end_share": 0.333,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "เอกสาร",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "เอกสารมาถึงแล้ว",
+        "last": "วันต่อมาได้รับคำตอบ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "reviewed_sha_bound_map",
+        "word_segmenter": {
+          "node": "25.9.0",
+          "icu": "78.3",
+          "unicode": "17.0"
+        }
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-th-plain-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-th-extended-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "th",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 8.2,
+        "len_cv": 0.952,
+        "short_share": 0.75,
+        "long_share": 0.0,
+        "para_cv": 0.952,
+        "even_run3": 0.0,
+        "top_end": "แล้ว",
+        "top_end_share": 0.25,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "เอกสาร",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.52,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "เอกสารมาถึงแล้ว",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "reviewed_sha_bound_map",
+        "word_segmenter": {
+          "node": "25.9.0",
+          "icu": "78.3",
+          "unicode": "17.0"
+        }
+      },
+      "expected": {
+        "lang": "th",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 8.2,
+        "len_cv": 0.952,
+        "short_share": 0.75,
+        "long_share": 0.0,
+        "para_cv": 0.952,
+        "even_run3": 0.0,
+        "top_end": "แล้ว",
+        "top_end_share": 0.25,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "เอกสาร",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.52,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "เอกสารมาถึงแล้ว",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "reviewed_sha_bound_map",
+        "word_segmenter": {
+          "node": "25.9.0",
+          "icu": "78.3",
+          "unicode": "17.0"
+        }
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-th-extended-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-th-routing",
+      "status": "PASS",
+      "actual": "th",
+      "expected": "th",
+      "detail": null
+    },
+    {
+      "id": "regression-id-plain-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "id",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "id",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-id-plain-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-id-extended-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "id",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "id",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-id-extended-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-id-routing",
+      "status": "PASS",
+      "actual": "id",
+      "expected": "id",
+      "detail": null
+    },
+    {
+      "id": "regression-hi-plain-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "hi",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "hi",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-hi-plain-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-hi-extended-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "hi",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "hi",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-hi-extended-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-hi-routing",
+      "status": "PASS",
+      "actual": "hi",
+      "expected": "hi",
+      "detail": null
+    },
+    {
+      "id": "regression-fr-plain-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "fr",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "fr",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-fr-plain-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-fr-extended-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "fr",
+        "sentences": 7,
+        "paras": 7,
+        "heads": 1,
+        "list_items": 1,
+        "mean_len": 10.3,
+        "len_cv": 0.998,
+        "short_share": 0.571,
+        "long_share": 0.143,
+        "para_cv": 0.998,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.143,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.143,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.39,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "A citation appears (Article 5).",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "fr",
+        "sentences": 7,
+        "paras": 7,
+        "heads": 1,
+        "list_items": 1,
+        "mean_len": 10.3,
+        "len_cv": 0.998,
+        "short_share": 0.571,
+        "long_share": 0.143,
+        "para_cv": 0.998,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.143,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.143,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.39,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "A citation appears (Article 5).",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-fr-extended-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-fr-routing",
+      "status": "PASS",
+      "actual": "fr",
+      "expected": "fr",
+      "detail": null
+    },
+    {
+      "id": "regression-de-plain-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "de",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "de",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-de-plain-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-de-extended-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "de",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "de",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-de-extended-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-de-routing",
+      "status": "PASS",
+      "actual": "de",
+      "expected": "de",
+      "detail": null
+    },
+    {
+      "id": "regression-it-plain-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "it",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "it",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-it-plain-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-it-extended-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "it",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "it",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-it-extended-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-it-routing",
+      "status": "PASS",
+      "actual": "it",
+      "expected": "it",
+      "detail": null
+    },
+    {
+      "id": "regression-es-plain-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "es",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "es",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-es-plain-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-es-extended-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "es",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "es",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-es-extended-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-es-routing",
+      "status": "PASS",
+      "actual": "es",
+      "expected": "es",
+      "detail": null
+    },
+    {
+      "id": "regression-pt-plain-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "pt",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "pt",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-pt-plain-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-pt-extended-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "pt",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "pt",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-pt-extended-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-pt-routing",
+      "status": "PASS",
+      "actual": "pt",
+      "expected": "pt",
+      "detail": null
+    },
+    {
+      "id": "regression-ar-plain-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "ar",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "ar",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-ar-plain-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-ar-extended-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "ar",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "ar",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-ar-extended-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-ar-routing",
+      "status": "PASS",
+      "actual": "ar",
+      "expected": "ar",
+      "detail": null
+    },
+    {
+      "id": "regression-vi-plain-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "vi",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_syllabic_units",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "vi",
+        "sentences": 6,
+        "paras": 6,
+        "heads": 0,
+        "list_items": 0,
+        "mean_len": 11.2,
+        "len_cv": 0.971,
+        "short_share": 0.5,
+        "long_share": 0.167,
+        "para_cv": 0.971,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.167,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 0.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Zeta eta theta iota.",
+        "length_unit": "orthographic_syllabic_units",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-vi-plain-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-vi-extended-metrics",
+      "status": "PASS",
+      "actual": {
+        "lang": "vi",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_syllabic_units",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "expected": {
+        "lang": "vi",
+        "sentences": 8,
+        "paras": 8,
+        "heads": 2,
+        "list_items": 1,
+        "mean_len": 9.2,
+        "len_cv": 1.079,
+        "short_share": 0.625,
+        "long_share": 0.125,
+        "para_cv": 1.079,
+        "even_run3": 0.0,
+        "top_end": "beta",
+        "top_end_share": 0.125,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "alpha",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.125,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.35,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Alpha beta.",
+        "last": "Ignored text.",
+        "length_unit": "orthographic_syllabic_units",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "detail": null
+    },
+    {
+      "id": "regression-vi-extended-score",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 0.0,
+      "detail": null
+    },
+    {
+      "id": "regression-vi-routing",
+      "status": "PASS",
+      "actual": "vi",
+      "expected": "vi",
+      "detail": null
+    },
+    {
+      "id": "source-tail-integration-fil",
+      "status": "PASS",
+      "actual": [
+        "First neutral paragraph.",
+        "Second neutral paragraph."
+      ],
+      "expected": [
+        "First neutral paragraph.",
+        "Second neutral paragraph."
+      ],
+      "detail": null
+    },
+    {
+      "id": "new-routing-fil",
+      "status": "PASS",
+      "actual": "fil",
+      "expected": "fil",
+      "detail": null
+    },
+    {
+      "id": "source-tail-integration-he",
+      "status": "PASS",
+      "actual": [
+        "First neutral paragraph.",
+        "Second neutral paragraph."
+      ],
+      "expected": [
+        "First neutral paragraph.",
+        "Second neutral paragraph."
+      ],
+      "detail": null
+    },
+    {
+      "id": "new-routing-he",
+      "status": "PASS",
+      "actual": "he",
+      "expected": "he",
+      "detail": null
+    },
+    {
+      "id": "source-tail-integration-nl",
+      "status": "PASS",
+      "actual": [
+        "First neutral paragraph.",
+        "Second neutral paragraph."
+      ],
+      "expected": [
+        "First neutral paragraph.",
+        "Second neutral paragraph."
+      ],
+      "detail": null
+    },
+    {
+      "id": "new-routing-nl",
+      "status": "PASS",
+      "actual": "nl",
+      "expected": "nl",
+      "detail": null
+    },
+    {
+      "id": "source-tail-integration-pl",
+      "status": "PASS",
+      "actual": [
+        "First neutral paragraph.",
+        "Second neutral paragraph."
+      ],
+      "expected": [
+        "First neutral paragraph.",
+        "Second neutral paragraph."
+      ],
+      "detail": null
+    },
+    {
+      "id": "new-routing-pl",
+      "status": "PASS",
+      "actual": "pl",
+      "expected": "pl",
+      "detail": null
+    },
+    {
+      "id": "source-tail-integration-cs",
+      "status": "PASS",
+      "actual": [
+        "First neutral paragraph.",
+        "Second neutral paragraph."
+      ],
+      "expected": [
+        "First neutral paragraph.",
+        "Second neutral paragraph."
+      ],
+      "detail": null
+    },
+    {
+      "id": "new-routing-cs",
+      "status": "PASS",
+      "actual": "cs",
+      "expected": "cs",
+      "detail": null
+    },
+    {
+      "id": "source-tail-integration-lt",
+      "status": "PASS",
+      "actual": [
+        "First neutral paragraph.",
+        "Second neutral paragraph."
+      ],
+      "expected": [
+        "First neutral paragraph.",
+        "Second neutral paragraph."
+      ],
+      "detail": null
+    },
+    {
+      "id": "new-routing-lt",
+      "status": "PASS",
+      "actual": "lt",
+      "expected": "lt",
+      "detail": null
+    },
+    {
+      "id": "cli-fil-short-exit",
+      "status": "PASS",
+      "actual": 2,
+      "expected": 2,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-short.md: too short to measure\n"
+    },
+    {
+      "id": "cli-fil-short-message",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "cli-he-short-exit",
+      "status": "PASS",
+      "actual": 2,
+      "expected": 2,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-short.md: too short to measure\n"
+    },
+    {
+      "id": "cli-he-short-message",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "cli-nl-short-exit",
+      "status": "PASS",
+      "actual": 2,
+      "expected": 2,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-short.md: too short to measure\n"
+    },
+    {
+      "id": "cli-nl-short-message",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "cli-pl-short-exit",
+      "status": "PASS",
+      "actual": 2,
+      "expected": 2,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-short.md: too short to measure\n"
+    },
+    {
+      "id": "cli-pl-short-message",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "cli-cs-short-exit",
+      "status": "PASS",
+      "actual": 2,
+      "expected": 2,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-short.md: too short to measure\n"
+    },
+    {
+      "id": "cli-cs-short-message",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "cli-lt-short-exit",
+      "status": "PASS",
+      "actual": 2,
+      "expected": 2,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-short.md: too short to measure\n"
+    },
+    {
+      "id": "cli-lt-short-message",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "cli-unsupported-language-exit",
+      "status": "PASS",
+      "actual": 2,
+      "expected": 2,
+      "detail": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi,fil,he,nl,pl,cs,lt}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'zz' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'fil', 'he', 'nl', 'pl', 'cs', 'lt')\n"
+    },
+    {
+      "id": "cli-unsupported-language-message",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "cli-unknown-path-exit",
+      "status": "PASS",
+      "actual": 2,
+      "expected": 2,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-short.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-short.md; supply --lang\n"
+    },
+    {
+      "id": "cli-unknown-path-message",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "cli-invalid-utf8-exit",
+      "status": "PASS",
+      "actual": 2,
+      "expected": 2,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/invalid.md: ERROR measurement unavailable: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte\n"
+    },
+    {
+      "id": "cli-invalid-utf8-message",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "cli-thai-map-missing-exit",
+      "status": "PASS",
+      "actual": 2,
+      "expected": 2,
+      "detail": "/Users/son7/tseng-market-expansion-20261025/work/variety-review/generated/neutral-short.md: ERROR measurement unavailable: Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback\n"
+    },
+    {
+      "id": "cli-thai-map-missing-message",
+      "status": "PASS",
+      "actual": true,
+      "expected": true,
+      "detail": null
+    },
+    {
+      "id": "original-tree-unchanged",
+      "status": "PASS",
+      "actual": {
+        "MULTILINGUAL-METHOD.md": "124c841548f4f425b4ba1017729803496dee7ed55e5667b2d3565a816995ae82",
+        "build-rewrite-queue.py": "510cc4881b562713699a0f208df96e1ecc5d01ca66f0add49e876c95c3a9ce59",
+        "profiles/ar.json": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+        "profiles/de.json": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+        "profiles/es.json": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+        "profiles/fr.json": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+        "profiles/hi.json": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+        "profiles/id.json": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+        "profiles/it.json": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+        "profiles/pt.json": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+        "profiles/th.json": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+        "profiles/vi.json": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+        "variety_metrics.py": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38",
+        "variety_multilingual.py": "bb6bb2e8b18496b4422d291c2d273f119e4038e2d20005e6231e85c4c11b8c8b"
+      },
+      "expected": {
+        "MULTILINGUAL-METHOD.md": "124c841548f4f425b4ba1017729803496dee7ed55e5667b2d3565a816995ae82",
+        "build-rewrite-queue.py": "510cc4881b562713699a0f208df96e1ecc5d01ca66f0add49e876c95c3a9ce59",
+        "profiles/ar.json": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+        "profiles/de.json": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+        "profiles/es.json": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+        "profiles/fr.json": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+        "profiles/hi.json": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+        "profiles/id.json": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+        "profiles/it.json": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+        "profiles/pt.json": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+        "profiles/th.json": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+        "profiles/vi.json": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+        "variety_metrics.py": "69ea04deab5f7988be2eb10d93d2c6eaf75bd4db2de97f3e4cab7712183c6e38",
+        "variety_multilingual.py": "bb6bb2e8b18496b4422d291c2d273f119e4038e2d20005e6231e85c4c11b8c8b"
+      },
+      "detail": null
+    },
+    {
+      "id": "candidate-tree-unchanged-during-run",
+      "status": "PASS",
+      "actual": {
+        "MULTILINGUAL-METHOD.md": "124c841548f4f425b4ba1017729803496dee7ed55e5667b2d3565a816995ae82",
+        "profiles/ar.json": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+        "profiles/cs.json": "b361a081115f144f61f45062aa1ae88d5afeaecfca84a8bd2590bbb007dc0355",
+        "profiles/de.json": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+        "profiles/es.json": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+        "profiles/fil.json": "695dd6baf6c83766052baa3efeb28201ee0a106b6e436ca5d6aa909354303334",
+        "profiles/fr.json": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+        "profiles/he.json": "39a1209ba75396c0b0e99395f7cea5b0a833c81101e7ec7d47f64a3b3ab1eb16",
+        "profiles/hi.json": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+        "profiles/id.json": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+        "profiles/it.json": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+        "profiles/lt.json": "da801eac299efcd35d428ab1fa623f28a26513378d53e68398684b807f35bf17",
+        "profiles/nl.json": "0982c731a77395976a66a15d363b234c3719567ada0d279961f5d0cc4494fbfb",
+        "profiles/pl.json": "cdbcd3b2f1f4b999ec1693b12d0d493956c17368ef72998424e490b63e18ed2f",
+        "profiles/pt.json": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+        "profiles/th.json": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+        "profiles/vi.json": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+        "variety_metrics.py": "f6a53d8265224b5795be95501f317eac018c23dba5b79513c6179fe1caa363c7",
+        "variety_multilingual.py": "34bca4bb031b7fa386ea1ef16014a62c9a5c140e89410f75f9ca527ad3f8e85d"
+      },
+      "expected": {
+        "MULTILINGUAL-METHOD.md": "124c841548f4f425b4ba1017729803496dee7ed55e5667b2d3565a816995ae82",
+        "profiles/ar.json": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+        "profiles/cs.json": "b361a081115f144f61f45062aa1ae88d5afeaecfca84a8bd2590bbb007dc0355",
+        "profiles/de.json": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+        "profiles/es.json": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+        "profiles/fil.json": "695dd6baf6c83766052baa3efeb28201ee0a106b6e436ca5d6aa909354303334",
+        "profiles/fr.json": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+        "profiles/he.json": "39a1209ba75396c0b0e99395f7cea5b0a833c81101e7ec7d47f64a3b3ab1eb16",
+        "profiles/hi.json": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+        "profiles/id.json": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+        "profiles/it.json": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+        "profiles/lt.json": "da801eac299efcd35d428ab1fa623f28a26513378d53e68398684b807f35bf17",
+        "profiles/nl.json": "0982c731a77395976a66a15d363b234c3719567ada0d279961f5d0cc4494fbfb",
+        "profiles/pl.json": "cdbcd3b2f1f4b999ec1693b12d0d493956c17368ef72998424e490b63e18ed2f",
+        "profiles/pt.json": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+        "profiles/th.json": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+        "profiles/vi.json": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+        "variety_metrics.py": "f6a53d8265224b5795be95501f317eac018c23dba5b79513c6179fe1caa363c7",
+        "variety_multilingual.py": "34bca4bb031b7fa386ea1ef16014a62c9a5c140e89410f75f9ca527ad3f8e85d"
+      },
+      "detail": null
+    }
+  ]
+}

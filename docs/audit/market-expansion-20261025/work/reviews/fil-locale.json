@@ -1,0 +1,291 @@
+{
+  "reviewer": "/root/expand_locale_fil",
+  "role": "locale",
+  "independentOfAuthor": true,
+  "author": "/root/expand_author_fil",
+  "checkedAt": "2026-10-25T13:30:30.956212+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md",
+      "sha256": "633126ec40c4f821c37e30b2610aeb2598a7c7fcc3617033960719ae2cf1bfc5",
+      "verdict": "PASS",
+      "findings": [],
+      "image_path": "public/images/columns/926-market-expansion-20261025.webp",
+      "image_sha256": "8c3d5654ac2ce688d46c9baeb28c59c28ee243aeca9663a7ba29c62b636ecf2f",
+      "image_inspected": true,
+      "current_caption": "Kathang-isip na eksena",
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md --lang fil",
+      "variety_exit_code": 0,
+      "original_variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/926-filipino-worker-taiwan-injury-resignation-settlement.md --lang fil",
+      "original_variety_exit_code": 2,
+      "original_variety_status": "UNSUPPORTED_NOT_PASS",
+      "measurement_scope": "independently reviewed task-local extension, not shared checker",
+      "metrics": {
+        "lang": "fil",
+        "sentences": 45,
+        "paras": 17,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 19.2,
+        "len_cv": 0.571,
+        "short_share": 0.111,
+        "long_share": 0.133,
+        "para_cv": 0.299,
+        "even_run3": 0.023,
+        "top_end": "trabaho",
+        "top_end_share": 0.044,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "para",
+        "top_opener_n": 2,
+        "opener_rep": 0.118,
+        "consec_same_start": 0,
+        "cite_para_share": 0.706,
+        "cite_end_share": 0.067,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 4,
+        "num_per100": 1.62,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Mananatili ang karapatan ng factory worker na tumanggap ng occupational accident compensat",
+        "last": "Ipunin sa isang folder ang diagnosis at wage records, ngunit panatilihing magkahiwalay ang resignation, settlement at in",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations",
+        "measurement_scope": "task_local_extension_not_shared_checker"
+      },
+      "opening_deletion_test": {
+        "paragraph_1": "Deleting this loses the concrete LSA 61 result that compensation survives leaving employment and its official statutory basis. The earlier repetitive third sentence was removed. The remaining second sentence supplies authority, not an article preview.",
+        "paragraph_2": "Deleting this loses the separate purposes of resignation and settlement, the question of released rights, the effect of a valid settlement under Civil Code 737, and the reason to read both papers separately. Each sentence serves the article decision."
+      },
+      "section5": {
+        "1": "Original shared CLI actually returned exit 2 unsupported, separately retained. The independently approved task-local wrapper returned exit 0 with no HARD failures on both current full-source hashes. All 45/52 extracted sentences were displayed and read.",
+        "2": "No stock hypothetical opening or article preview. 926 opens on compensation surviving departure; 927 identifies two documents. Whole-batch opening-type distribution is root scope.",
+        "3": "926 has 5/45 sentences at or below 8 orthographic units; 927 has 6/52. No paragraph contains more than one sentence above 32 units. Statutory conditions in the long sentences are intact. Useful short steps and procedural limits remain after the author removed generic filler.",
+        "4": "Read paragraph starts vertically. Maximum repetition is 2: kung/para in 926, kapag/kung in 927. No 3 identical starts or consecutive-start failure.",
+        "5": "Citation authorities occur within sentences and at endings. No 3 consecutive claim-citation-caveat paragraphs. Both have uncited practical record-comparison paragraphs. Citation links were not trimmed for scores.",
+        "6": "Automated selected contrast counts are 0; manually inspected unmarked comparisons as well. Document effects, insurance periods and court remedies require distinctions. No repeated decorative contrast or invented opposing reader position remains.",
+        "7": "926 ends with which treatment/lost-wage periods are paid and which claims remain. 927 ends with legal service controlling the deadline despite an inquiry. Required service-language limits do not replace those article-specific conclusions.",
+        "8": "Professional worker-facing Filipino with familiar English work/legal terms and explained Chinese identifiers. No bold, duplicate H1, invented client/experience, public byline, human-review claim or imperative checklist headings. Korean/Japanese register requirements are inapplicable.",
+        "9": "Compared repairs with affected body and FAQ: 2-year/1-year/5-year origins, conditional 40-month compensation, 10-day appeal/20-day objection/special 20-day suit, settlement validity and stay/security conditions remain distinct. Caption-only normalization was independently reverse-hashed; no body, alt or legal detail changed."
+      },
+      "comparators": [
+        {
+          "source_path": "src/content/columns-fil/801-filipino-caregiver-taiwan-patient-died-transfer-employer.md",
+          "sha256": "22e499add2a3dfb997bf0eb969de7a2bf97936aefe99eaa229dfdd3ba7a22041",
+          "published": "2026-10-24",
+          "read_scope": "complete article, metadata and FAQ",
+          "comparison": "Caregiver death and employer transfer, then permit/time-off/abuse/wage consequences. 926 instead interprets two documents for an injured factory worker; 927 identifies debt-court remedies."
+        },
+        {
+          "source_path": "src/content/columns-fil/802-filipino-factory-worker-taiwan-overtime-deductions-broker-fee.md",
+          "sha256": "520395bdf43829af113529fd9f8797ab671803350c191d6176a94b9d3da60cd2",
+          "published": "2026-10-24",
+          "read_scope": "complete article, metadata and FAQ",
+          "comparison": "A payslip introduces three questions about overtime, deductions and broker fees. Neither new manuscript repeats that three-part opening or payslip-checklist order."
+        },
+        {
+          "source_path": "src/content/columns-fil/803-filipino-worker-taiwan-reported-missing-overstay-surrender.md",
+          "sha256": "9f96f2238af74f3d96887d6d7516a9515e3a1a42d6875e34a6edca199259db44",
+          "published": "2026-10-24",
+          "read_scope": "complete article, metadata and FAQ",
+          "comparison": "A counted absence condition leads into missing-worker reports, permits, overstay and surrender. 927 addresses debt papers and service, not the immigration consequences of a report."
+        }
+      ],
+      "limitations": [
+        "This is an independent AI locale/editorial review, not human-native or licensed-lawyer review. A separate final legal reviewer checks current law, histories and full claim/source fit.",
+        "The original shared checker remains unsupported for Filipino. Numerical PASS is from the exact independently reviewed task-local extension only; HARD and 8/32 cutoffs were not relaxed. It is a finite heuristic, not empirical equivalence across languages.",
+        "Reviewed assigned articles, three complete recent Filipino comparators and complete VI039. Whole-batch opening distribution and exhaustive historical duplication are outside this locale review.",
+        "No deployment, browser rendering, hydration or interaction checks were performed by this reviewer."
+      ]
+    },
+    {
+      "source_path": "src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+      "sha256": "535d60328cbcbf44ff21363a0a47a506858c8d38a4203dc5037bbe82b145d2b9",
+      "verdict": "PASS",
+      "findings": [],
+      "image_path": "public/images/columns/927-market-expansion-20261025.webp",
+      "image_sha256": "4dcf34091e9d67c2cc5ebb7845775e25cdab69ec4b22322947b7e2e81b2c0ca7",
+      "image_inspected": true,
+      "current_caption": "Kathang-isip na eksena",
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md --lang fil",
+      "variety_exit_code": 0,
+      "original_variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-fil/927-filipino-worker-taiwan-loan-promissory-note-court-order.md --lang fil",
+      "original_variety_exit_code": 2,
+      "original_variety_status": "UNSUPPORTED_NOT_PASS",
+      "measurement_scope": "independently reviewed task-local extension, not shared checker",
+      "metrics": {
+        "lang": "fil",
+        "sentences": 52,
+        "paras": 16,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 17.7,
+        "len_cv": 0.505,
+        "short_share": 0.115,
+        "long_share": 0.058,
+        "para_cv": 0.285,
+        "even_run3": 0.04,
+        "top_end": "order",
+        "top_end_share": 0.058,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "kapag",
+        "top_opener_n": 2,
+        "opener_rep": 0.125,
+        "consec_same_start": 0,
+        "cite_para_share": 0.75,
+        "cite_end_share": 0.135,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.72,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": true,
+        "first": "Magkaiba ang paraan ng pagtutol sa 本票裁定, isang ruling na nagpapahintulot sa enforcement ng",
+        "last": "Para sa pribadong pagsusuri ng Taiwan-law dispute, ipadala sa wei@hoveringlaw.com.tw ang uri ng order, petsa ng service ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations",
+        "measurement_scope": "task_local_extension_not_shared_checker"
+      },
+      "opening_deletion_test": {
+        "paragraph_1": "Deleting this loses the exact Chinese document names and their functions, the recruitment/migration-loan context, and the two governing deadline provisions. The title alone does not explain them.",
+        "paragraph_2": "Deleting this loses the envelope and delivery evidence, court/case identifiers, comparison with the pre-departure loan/note and possible difference between collector and lender. These are concrete evidential actions, not generic preparation advice."
+      },
+      "section5": {
+        "1": "Original shared CLI actually returned exit 2 unsupported, separately retained. The independently approved task-local wrapper returned exit 0 with no HARD failures on both current full-source hashes. All 45/52 extracted sentences were displayed and read.",
+        "2": "No stock hypothetical opening or article preview. 926 opens on compensation surviving departure; 927 identifies two documents. Whole-batch opening-type distribution is root scope.",
+        "3": "926 has 5/45 sentences at or below 8 orthographic units; 927 has 6/52. No paragraph contains more than one sentence above 32 units. Statutory conditions in the long sentences are intact. Useful short steps and procedural limits remain after the author removed generic filler.",
+        "4": "Read paragraph starts vertically. Maximum repetition is 2: kung/para in 926, kapag/kung in 927. No 3 identical starts or consecutive-start failure.",
+        "5": "Citation authorities occur within sentences and at endings. No 3 consecutive claim-citation-caveat paragraphs. Both have uncited practical record-comparison paragraphs. Citation links were not trimmed for scores.",
+        "6": "Automated selected contrast counts are 0; manually inspected unmarked comparisons as well. Document effects, insurance periods and court remedies require distinctions. No repeated decorative contrast or invented opposing reader position remains.",
+        "7": "926 ends with which treatment/lost-wage periods are paid and which claims remain. 927 ends with legal service controlling the deadline despite an inquiry. Required service-language limits do not replace those article-specific conclusions.",
+        "8": "Professional worker-facing Filipino with familiar English work/legal terms and explained Chinese identifiers. No bold, duplicate H1, invented client/experience, public byline, human-review claim or imperative checklist headings. Korean/Japanese register requirements are inapplicable.",
+        "9": "Compared repairs with affected body and FAQ: 2-year/1-year/5-year origins, conditional 40-month compensation, 10-day appeal/20-day objection/special 20-day suit, settlement validity and stay/security conditions remain distinct. Caption-only normalization was independently reverse-hashed; no body, alt or legal detail changed."
+      },
+      "comparators": [
+        {
+          "source_path": "src/content/columns-fil/801-filipino-caregiver-taiwan-patient-died-transfer-employer.md",
+          "sha256": "22e499add2a3dfb997bf0eb969de7a2bf97936aefe99eaa229dfdd3ba7a22041",
+          "published": "2026-10-24",
+          "read_scope": "complete article, metadata and FAQ",
+          "comparison": "Caregiver death and employer transfer, then permit/time-off/abuse/wage consequences. 926 instead interprets two documents for an injured factory worker; 927 identifies debt-court remedies."
+        },
+        {
+          "source_path": "src/content/columns-fil/802-filipino-factory-worker-taiwan-overtime-deductions-broker-fee.md",
+          "sha256": "520395bdf43829af113529fd9f8797ab671803350c191d6176a94b9d3da60cd2",
+          "published": "2026-10-24",
+          "read_scope": "complete article, metadata and FAQ",
+          "comparison": "A payslip introduces three questions about overtime, deductions and broker fees. Neither new manuscript repeats that three-part opening or payslip-checklist order."
+        },
+        {
+          "source_path": "src/content/columns-fil/803-filipino-worker-taiwan-reported-missing-overstay-surrender.md",
+          "sha256": "9f96f2238af74f3d96887d6d7516a9515e3a1a42d6875e34a6edca199259db44",
+          "published": "2026-10-24",
+          "read_scope": "complete article, metadata and FAQ",
+          "comparison": "A counted absence condition leads into missing-worker reports, permits, overstay and surrender. 927 addresses debt papers and service, not the immigration consequences of a report."
+        }
+      ],
+      "limitations": [
+        "This is an independent AI locale/editorial review, not human-native or licensed-lawyer review. A separate final legal reviewer checks current law, histories and full claim/source fit.",
+        "The original shared checker remains unsupported for Filipino. Numerical PASS is from the exact independently reviewed task-local extension only; HARD and 8/32 cutoffs were not relaxed. It is a finite heuristic, not empirical equivalence across languages.",
+        "Reviewed assigned articles, three complete recent Filipino comparators and complete VI039. Whole-batch opening distribution and exhaustive historical duplication are outside this locale review.",
+        "No deployment, browser rendering, hydration or interaction checks were performed by this reviewer."
+      ]
+    }
+  ],
+  "author_evidence": "work/reviews/fil-author.json",
+  "author_evidence_sha256": "b9682468bd38b717bf558cc11ea5921a23a903db6ac7e8fefa00f67bfe98b0ec",
+  "method_review": "work/variety-review/review-final.json",
+  "method_review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+  "wrapper_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+  "fil_profile_sha256": "9bb87f92fde0d17ec521c2c7b22e40c6eeb272f0b53405d480f07a4b5886cd66",
+  "resolved_pre_freeze_feedback": [
+    {
+      "article": 926,
+      "original": "Limitado rin ng [Artikulo 84] ang termination",
+      "reason": "Unnatural adjectival construction obscures the actor.",
+      "rewrite": "Nililimitahan din ng [Artikulo 84] ang pagtatapos ng kontrata ng employer nang may paunang abiso.",
+      "meaning_preserved": true,
+      "status": "Author applied; full grounds and affected conclusion reread."
+    },
+    {
+      "article": 926,
+      "original": "dalawang taong prescription / limang taong prescription",
+      "reason": "Unexplained legal English can suggest a medical prescription to the worker audience.",
+      "rewrite": "panahon para habulin ang compensation / panahon para i-claim ang benepisyo",
+      "meaning_preserved": true,
+      "status": "Body and standalone FAQ fixed; numerical periods and entitlement-based time origins retained."
+    },
+    {
+      "article": 926,
+      "original": "Hindi pareho ang lahat ng uri ng bayad. / May sariling mga kondisyon ang insurance. / Dito kailangang maging tiyak ang kasunduan.",
+      "reason": "MONOTONY: empty bridges — these announce a distinction without supplying it — remove and retain the concrete legal detail.",
+      "rewrite": "Removed three filler statements. Settlement interpretation moved before the compensation details.",
+      "meaning_preserved": true,
+      "status": "Full restructured article reread; actual short procedural sentences remain."
+    },
+    {
+      "article": 927,
+      "original": "itinanggi ... ang appeal",
+      "reason": "Awkward collocation for dismissal of an appeal.",
+      "rewrite": "ibinasura ... ang appeal",
+      "meaning_preserved": true,
+      "status": "Applied; the court disposition remains separate from appellants’ financing allegation."
+    },
+    {
+      "article": 927,
+      "original": "hindi sa petsa ng sasagot sa iyong inquiry",
+      "reason": "sasagot describes the person/action, making the reference to a reply date grammatically awkward.",
+      "rewrite": "hindi sa araw ng sagot sa iyong inquiry",
+      "meaning_preserved": true,
+      "status": "Applied; legal service remains the deadline trigger."
+    }
+  ],
+  "unsuccessful_repair_rounds": 0,
+  "caption_normalization_evidence": "work/reviews/fil-locale-evidence/caption-normalization-recheck.json",
+  "evidence_files": [
+    "work/reviews/fil-locale-evidence/final-checks.json",
+    "work/reviews/fil-locale-evidence/extracted-sentences.json",
+    "work/reviews/fil-author.md",
+    "work/reviews/fil-author.json",
+    "work/reviews/fil-author-judgment-115-306.txt",
+    "work/research/sea-market.md",
+    "work/research/sea-briefs.md",
+    "work/images/fil-generation.json"
+  ],
+  "direct_official_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=61",
+      "date": "2026-10-25",
+      "scope": "Direct official text read for compensation/departure wording and time origin."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0050031&flno=84",
+      "date": "2026-10-25",
+      "scope": "Direct official text read for termination actor and qualifications."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010008&flno=195",
+      "date": "2026-10-25",
+      "scope": "Direct official text read for forgery/alteration action and stays."
+    },
+    {
+      "url": "https://www.laf.org.tw/foreign/4",
+      "date": "2026-10-25",
+      "scope": "Direct current page confirms Filipino guide and application materials."
+    }
+  ],
+  "limitations": [
+    "This is an independent AI locale/editorial review, not human-native or licensed-lawyer review. A separate final legal reviewer checks current law, histories and full claim/source fit.",
+    "The original shared checker remains unsupported for Filipino. Numerical PASS is from the exact independently reviewed task-local extension only; HARD and 8/32 cutoffs were not relaxed. It is a finite heuristic, not empirical equivalence across languages.",
+    "Reviewed assigned articles, three complete recent Filipino comparators and complete VI039. Whole-batch opening distribution and exhaustive historical duplication are outside this locale review.",
+    "No deployment, browser rendering, hydration or interaction checks were performed by this reviewer."
+  ]
+}

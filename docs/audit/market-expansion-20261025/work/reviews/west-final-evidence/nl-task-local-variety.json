@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-25T13:21:07.231614+00:00",
+  "wrapper_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+  "method_review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+  "records": [
+    {
+      "source_path": "repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+      "sha256": "3b395842ebc879b6d3d61a3a8bab1bd006f9fd16aaf27113892497f03b7c0425",
+      "command": [
+        "python3",
+        "work/variety-candidate/variety_metrics.py",
+        "check",
+        "repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+        "--lang",
+        "nl"
+      ],
+      "exit_code": 0,
+      "stdout": "repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md [nl] sentences=36 mean=17.9 cv=0.483 short=0.139 run3=0.029 opener_rep=0.167 cite_end=0.0 cite_para=0.583 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "OFFICIAL CHECKER: nl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    },
+    {
+      "source_path": "repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+      "sha256": "943a747d79288334da91b9c608ef558bda57ba8754e7acd5eac6c49083f11b01",
+      "command": [
+        "python3",
+        "work/variety-candidate/variety_metrics.py",
+        "check",
+        "repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+        "--lang",
+        "nl"
+      ],
+      "exit_code": 0,
+      "stdout": "repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md [nl] sentences=49 mean=14.7 cv=0.469 short=0.184 run3=0.085 opener_rep=0.214 cite_end=0.0 cite_para=0.714 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "OFFICIAL CHECKER: nl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+# Country-specific market expansion — 2026-10-25
+
+This release adds 24 original Taiwan-law articles and 24 inspected fictional editorial images for 12 languages: Vietnamese, Indonesian, Filipino, Hindi, Arabic, Hebrew, Dutch, French, Brazilian Portuguese, Polish, Czech and Lithuanian. Arabic addresses UAE buyers and Saudi suppliers separately. Portuguese addresses Brazilian coffee exporters rather than repeating the existing Portugal-focused articles.
+
+The research screened all 49 site languages and compared the initial inventory of 1,992 article titles/topics, with closer full-text comparisons where relevant. Official trade, education, employment and industrial links and actual native-language query observations support topic selection. They are not measured search volumes, qualified leads, paid demand, market shares or conversion forecasts. Access failures, inconsistent official statistical rows and weak query evidence are retained. See `outputs/MARKET-RESEARCH.md` and the four regional research ledgers.
+
+## Editorial evidence
+
+Every article has a separate author, independent locale reviewer and independent final legal/evidence reviewer. The reports identify actual reviewed source/image hashes and their source-access limits. They do not claim human native-speaker review, attorney certification, represented clients, litigation victories, foreign licensure or guaranteed commercial results. Consultation-language claims remain limited to the firm's supported English, Chinese, Korean and Japanese.
+
+The twelve locale reports and four final reports in `work/reviews/` are bound by `work/checks/reviewed-publication-manifest.json`. Failed drafts and bounded repairs are preserved. These include actual initial variety failures for Polish and Lithuanian, resolved through substantive prose repair, not changed limits or filler. The first integrated check also found all 24 custom captions inconsistent with the existing exact fictional-scene labels. The caption-only change, byte-preservation evidence and renewed independent bindings are recorded.
+
+The original shared variety checker supports fourteen languages. For fil/he/nl/pl/cs/lt, its unsupported exit 2 remains distinct from the task-local measurement. A separate method author and independent reviewer developed/tested the extension without reading target manuscripts or their scores. Its frozen tests, initial failures, bounded repair, accepted Filipino orthographic convention, preserved HARD limits and exact approved code/profile hashes are archived in `work/variety-candidate/` and `work/variety-review/`. The method is a finite heuristic, not a native-fluency certificate; article-level full prose and extracted-sentence review remain separate.
+
+## Integration and publication boundary
+
+The task began on `4a37a0b09aff6eea261a67519eeb375a48e1b19b` and fast-forwarded to concurrent release `5e2d0f5df8c75eb4aca8304b7d9f5110ac422f90`, preserving its 21 ARC columns, layout/language-link changes and sitemap fix. Initial research counts remain timestamped to the starting inventory. Besides the new article/image files, content/date test registries and audit records, this release makes one narrow integration repair: the three inherited Russian ARC captions now use the repository's exact `Вымышленная сцена` label. Their legal bodies, FAQs, alt text and image references are unchanged; separate exact-diff review is recorded in `work/reviews/inherited-russian-caption-final.*`.
+
+Publication follows the existing GitHub main → MacBook Air static deployer → Sites route, preserving the current public audience and domain configuration. Source review, a commit or a build alone is not a publication claim. Final deployment identifiers and exact public body/image/index/sitemap readback are recorded after release under `/Users/son7/tseng-market-expansion-20261025/outputs/` and `work/checks/publication-live.json`.
+
+The final verification rollup covers 21 existing suites and 1,038 distinct checks, all passing after the caption repair and focused reruns. The combined run had six five-second timeouts; single-worker reruns cleared five, and the remaining issue-board language-link check passed with the full 47-test language-link suite under a 30-second CLI test budget. No application logic or test assertion was changed for timing. Typecheck passed on the integrated source. Initial failure logs and successful rerun logs are preserved in `work/checks/integration-validation.json`.
+
+Browser visual, hydration and interaction QA was not performed in this task. The previous selected-browser session's policy-verification denial was not bypassed. Actual image-file inspection and direct public HTML/asset verification have different, narrower scopes.

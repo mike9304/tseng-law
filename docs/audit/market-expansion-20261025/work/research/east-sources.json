@@ -1,0 +1,1464 @@
+{
+  "schemaVersion": 1,
+  "researchDate": "2026-10-25",
+  "owner": "/root/market_east_europe",
+  "scope": "Research only,15 assigned language markets;6 independent Taiwan-law briefs; no repo authoring/deployment.",
+  "selectedMarkets": [
+    "pl",
+    "cs",
+    "lt"
+  ],
+  "articleIds": [
+    940,
+    941,
+    942,
+    943,
+    944,
+    945
+  ],
+  "demandLimits": [
+    "No search-volume, click, ranking, conversion, lead or paid-consultation measurements obtained.",
+    "No nationality-specific resident/student counts independently retrieved; null does not mean zero.",
+    "Selection prioritizes verified Taiwan transaction context and a distinct legal decision, not a numerical market ranking.",
+    "No real client or judicial case is claimed in these six briefs; concrete scenarios must be marked hypothetical.",
+    "Official-law database pages showed compilation cutoff2026-10-16; current cited provisions and displayed commencement warnings were checked on2026-10-25. No claim of exhaustive same-day gazette monitoring."
+  ],
+  "firmProfile": {
+    "verifiedDate": "2026-10-25",
+    "sources": [
+      {
+        "url": "https://tseng-law.com/en/services",
+        "verified": "opened"
+      },
+      {
+        "url": "https://tseng-law.com/en/lawyers",
+        "verified": "opened"
+      }
+    ],
+    "identity": "Taiwan attorney Wei Tseng / Hovering Law team as described on actual site.",
+    "services": [
+      "Taiwan investment and company establishment",
+      "civil contract/tort/consumer disputes",
+      "corporate contract review",
+      "intellectual-property matters"
+    ],
+    "consultationLanguages": [
+      "English",
+      "Chinese",
+      "Japanese",
+      "Korean"
+    ],
+    "email": "wei@hoveringlaw.com.tw",
+    "limits": [
+      "No Polish, Czech or Lithuanian consultation fluency claimed.",
+      "No foreign licence, foreign office, patent-agent qualification, client or representative case invented.",
+      "Localized contact page direct open did not succeed; email route confirmed on live services/team pages.",
+      "Initial inquiry should contain nonconfidential facts and opposing party identity for conflict check; no raw secret test data/source code."
+    ],
+    "draftingFit": "Articles invite Taiwan-law contract/IP/dispute review within actual service profile; they do not promise bank recall, patent registration or guaranteed compensation."
+  },
+  "marketSources": [
+    {
+      "id": "M-PL-TRADE",
+      "title": "Biuro Polskie w Tajpej: Informator ekonomiczny",
+      "url": "https://poland.tw/web/tajwan/informator-ekonomiczny",
+      "researchDate": "2026-10-25",
+      "publisher": "Polish Office in Taipei / gov.pl",
+      "verification": "opened full page and table at lines195–214",
+      "period": "2025 full year, Taiwan MOEA statistics reproduced by Polish office",
+      "claim": "Taiwan-reported 2025 bilateral trade USD2,543 million, Taiwan exports to Poland2,060 million and imports from Poland483 million.",
+      "limits": "Polish GUS table is a different series and Jan–Nov2025 period. Do not mix. Investment paragraph/table inconsistencies not relied on. No legal-demand inference."
+    },
+    {
+      "id": "M-PL-MISSION",
+      "title": "Polish business mission to Taiwan – a new opening in economic relations",
+      "url": "https://www.gov.pl/web/development-technology/polish-business-mission-to-taiwan--a-new-opening-in-economic-relations",
+      "researchDate": "2026-10-25",
+      "publisher": "Polish Ministry of Development and Technology",
+      "publicationDate": "2025-07-08",
+      "verification": "opened",
+      "claim": "Official report of a Polish business mission to Taiwan.",
+      "limits": "No confirmed customer acquisition, new-client count or specific signed consumer-products contract inferred."
+    },
+    {
+      "id": "M-CS-SEMICON",
+      "title": "Rostoucí stopa České republiky v polovodičovém ekosystému Tchaj-wanu",
+      "url": "https://mzv.gov.cz/taipei/cz/obcho_a_ekonomika/rostouci_stopa_ceske_republiky_v.html",
+      "researchDate": "2026-10-25",
+      "publisher": "Czech Economic and Cultural Office Taipei / MFA",
+      "publicationDate": "2026-09-11",
+      "verification": "opened full article",
+      "claim": "Czech industry and academic participation at SEMICON Taiwan2026 and meetings in IC design, advanced packaging, chemicals and materials.",
+      "limits": "Named participants are not firm clients; no disclosed disputes or contract conversion counts."
+    },
+    {
+      "id": "M-CS-HYDROGEN",
+      "title": "Nový impuls pro tchajwansko-českou spolupráci v oblasti vodíkových technologií",
+      "url": "https://mzv.gov.cz/taipei/cz/novy_impuls_pro_tchajwansko_ceskou.html",
+      "researchDate": "2026-10-25",
+      "publisher": "Czech Economic and Cultural Office Taipei / MFA",
+      "publicationDate": "2026-10-20",
+      "verification": "opened full article",
+      "claim": "Taiwan-Czech hydrogen forum was held at Energy Taiwan / Net-Zero Taiwan2026.",
+      "limits": "Forum occurrence does not establish signed contracts or legal demand."
+    },
+    {
+      "id": "M-LT-TRADE",
+      "title": "Taivanas – eksporto rinka",
+      "url": "https://eksportas.inovacijuagentura.lt/eksporto-rinkos/tikslines-rinkos/taivanas",
+      "researchDate": "2026-10-25",
+      "publisher": "Innovation Agency Lithuania",
+      "verification": "opened",
+      "period": "2025 trade; page also includes2026Q1 information",
+      "claim": "Lithuanian goods exports to Taiwan were EUR36 million in2025, about0.1% of total exports; Lithuanian-origin exports aboutEUR30 million include optical/measurement/medical instruments.",
+      "limits": "Small niche market, not mass market. Do not reuse promotional ecommerce/cultural claims or third-party Statista material on page. No firmware-outsourcing volume disclosed."
+    },
+    {
+      "id": "M-LT-MOU",
+      "title": "ITRI and Lithuanian Laser Association sign expanded laser cooperation MOU",
+      "url": "https://www.mofa.gov.tw/News_Content.aspx?n=96&s=123017",
+      "researchDate": "2026-10-25",
+      "publisher": "Taiwan Ministry of Foreign Affairs",
+      "publicationDate": "2026-09-04",
+      "verification": "opened and read substantive lines1624–1643",
+      "claim": "Actual signing of advanced-semiconductor-packaging laser technology cooperation MOU involving ITRI, LLA, FTMC and industry associations; builds on2023 ULTRI cooperation.",
+      "limits": "Forecast system sales/output in article are forecasts, not realized results. No actual confidentiality dispute alleged."
+    },
+    {
+      "id": "M-LT-LMT",
+      "title": "Lietuvos–Taivano tęstinių projektų2026m. konkursas",
+      "url": "https://lmt.lrv.lt/lt/naujienos/kvieciame-teikti-paraiskas-lietuvostaivano-testiniu-projektu-2026-m-konkursui-9wi/",
+      "researchDate": "2026-10-25",
+      "publisher": "Research Council of Lithuania",
+      "publicationDate": "2026-04-27",
+      "verification": "opened full notice",
+      "claim": "Continuation funding call for existing Lithuania-Taiwan joint research, including laser and biomedical fields.",
+      "status": "Call deadline2026-07-31 is past; evidence of programme only, not current open application.",
+      "limits": "Academic collaborations are not equivalent to legal buyers or commissioned private firmware projects."
+    },
+    {
+      "id": "M-LT-CONFERENCE",
+      "title": "3-ioji Taivano–Lietuvos lazerių konferencija",
+      "url": "https://www.ftmc.lt/renginiai/n3-ioji-taivano-lietuvos-lazeriu-konferencija/",
+      "researchDate": "2026-10-25",
+      "publisher": "FTMC",
+      "publicationDate": "2026-10-08",
+      "verification": "opened notice",
+      "claim": "Announcement of8–9October2026 Taiwan-Lithuania laser conference.",
+      "status": "Programme/notice; completed attendance and outcomes not independently verified.",
+      "limits": "Do not convert a scheduled event into measured commercial outcomes."
+    },
+    {
+      "id": "M-SK",
+      "title": "Slovensko prehlbuje ekonomickú spoluprácu s Taiwanom",
+      "url": "https://www.economy.gov.sk/press/slovensko-prehlbuje-ekonomicku-spolupracu-s-taiwanom",
+      "researchDate": "2026-10-25",
+      "publisher": "Slovak Ministry of Economy",
+      "publicationDate": "2023-06-28",
+      "verification": "opened and read2023 event body",
+      "claim": "Eight MOUs following2023 delegation in semiconductor, education and health fields; actual Sensoneo financing announcement also reported.",
+      "limits": "Historical2023 evidence; no refreshed2026 transaction pipeline or buyer-demand measure."
+    },
+    {
+      "id": "M-HU",
+      "title": "2025 Taiwan-Hungary Seminar & Business Matchmaking Event",
+      "url": "https://startupterrace.sme.gov.tw/en/News_Content.aspx?n=1678&s=14606&sms=11665",
+      "researchDate": "2026-10-25",
+      "publisher": "Taiwan Startup Terrace / SME agency",
+      "publicationDate": "2025-02-19",
+      "verification": "opened",
+      "claim": "Notice scheduled a March19,2025 delegation and smart-city business matchmaking.",
+      "status": "Past event notice, not outcome report.",
+      "limits": "Do not infer the planned ten companies attended or contracted; no fresh2026 commercial legal trigger verified."
+    },
+    {
+      "id": "M-RO",
+      "title": "Romania economic and trade profile",
+      "url": "https://www.trade.gov.tw/Files/PageFile/725620/7256204t31i20251106175507.pdf",
+      "researchDate": "2026-10-25",
+      "publisher": "Taiwan International Trade Administration",
+      "publicationDate": "2025-11-06",
+      "verification": "opened PDF and read first pages",
+      "claim": "Official industry profile lists machinery, electrical equipment and agricultural products.",
+      "limits": "Many component statistics dated2023 despite2025 update. No new2026 bilateral deal or legal-demand estimate established; do not quote foreign tax statements as current."
+    },
+    {
+      "id": "M-BG",
+      "title": "2026–2027 Taiwan-Bulgaria (NSTC-BAS) Project-Based Personnel Exchange Program",
+      "url": "https://ord.ntu.edu.tw/w/ordntuEN/news_plan_25050611531819987",
+      "researchDate": "2026-10-25",
+      "publisher": "National Taiwan University ORD carrying NSTC programme",
+      "publicationDate": "2025-05-06",
+      "verification": "opened substantive application instructions",
+      "claim": "Bilateral research-personnel exchange programme exists; university deadline was2025-07-29.",
+      "status": "Closed call for2026–2027 programme.",
+      "limits": "Academic-personnel link, not counted foreign residents or commercial client demand."
+    },
+    {
+      "id": "M-HR",
+      "title": "Croatia foreign trade in goods – provisional January–May2025 and January–June2025",
+      "url": "https://podaci.dzs.hr/2025/en/97234",
+      "researchDate": "2026-10-25",
+      "publisher": "Croatian Bureau of Statistics",
+      "publicationDate": "2025-08-08",
+      "verification": "opened and Taiwan row found",
+      "claim": "Official provisional trade table includes Taiwan.",
+      "limits": "No numeric comparison used because reporting periods and units must be retained. No recent narrow legal trigger beyond existing machine-defect article verified."
+    },
+    {
+      "id": "M-SR",
+      "title": "Serbia economic profile legacy inventory link",
+      "url": "https://www.trade.gov.tw/Files/PageFile/732206/732206egs3020230427104531.pdf",
+      "researchDate": "2026-10-25",
+      "publisher": "Taiwan International Trade Administration",
+      "verification": "open failed; legacy URL found in existing892 article",
+      "claim": null,
+      "status": "Unresolved; not a confirmed-current source.",
+      "limits": "Limited search did not establish current bilateral buyer/transaction data. This is an evidence gap, not proof of no market."
+    },
+    {
+      "id": "M-SL",
+      "title": "GZS Taiwan business opportunities webinar notice",
+      "url": "https://www.gzs.si/Default.aspx?ContainerSrc=%5BG%5DContainers%2FGZS%2FNoTitle&ID=6561&SkinSrc=%5BG%5DSkins%2FGZS%2FPrintNoSkin&TabId=52840&dnnprintmode=true&language=sl-SI",
+      "researchDate": "2026-10-25",
+      "publisher": "Chamber of Commerce and Industry of Slovenia",
+      "verification": "observed search result; direct open failed",
+      "claim": null,
+      "status": "Search-only historical2025 event lead.",
+      "limits": "Not promoted to verified event outcome or market-size fact."
+    },
+    {
+      "id": "M-LV",
+      "title": "Call for2027–2029 Taiwan-Latvia-Lithuania Cooperation Project",
+      "url": "https://www.ibms.sinica.edu.tw/en/funding/funding-908.html",
+      "researchDate": "2026-10-25",
+      "publisher": "Academia Sinica IBMS",
+      "publicationDate": "2026-02-06",
+      "verification": "opened",
+      "claim": "Trilateral research programme call with university application deadline2026-04-23.",
+      "status": "Application period closed; project period2027–2029.",
+      "limits": "Does not measure Latvian buyers, students, residents or paid legal work."
+    },
+    {
+      "id": "M-ET",
+      "title": "President meets Estonian parliamentary Foreign Affairs Committee delegation",
+      "url": "https://english.president.gov.tw/News/6827",
+      "researchDate": "2026-10-25",
+      "publisher": "Office of the President Taiwan",
+      "publicationDate": "2024-11-01",
+      "verification": "opened",
+      "claim": "Official bilateral meeting and expressed intention to deepen economic ties.",
+      "limits": "Diplomatic aspiration, not a disclosed technology contract. A2026 research exchange notice appeared in screening but was not relied on as a business outcome."
+    },
+    {
+      "id": "M-EL",
+      "title": "Taiwan/Chinese Taipei bilateral relations page",
+      "url": "https://www.mfa.gr/en/bilateral-relations/taiwan-chinese-taipei/",
+      "researchDate": "2026-10-25",
+      "publisher": "Hellenic Republic Ministry of Foreign Affairs",
+      "verification": "page opened but substantive follow-up timed out",
+      "claim": null,
+      "status": "Official navigation lead only.",
+      "limits": "No current quantified bilateral commercial or legal-demand proposition relied on."
+    },
+    {
+      "id": "M-RU",
+      "title": "What are Strategic High-Tech Commodities?",
+      "url": "https://www.trade.gov.tw/Pages/Detail.aspx?nodeID=4433&pid=725764",
+      "researchDate": "2026-10-25",
+      "publisher": "Taiwan International Trade Administration",
+      "publicationDate": "2026-02-11",
+      "verification": "opened substantive current guidance",
+      "claim": "Taiwan export-control framework includes Russia/Belarus goods lists and end-use/end-user controls.",
+      "status": "Agency guidance linking controlling lists; not independent exhaustive review of all restrictions.",
+      "limits": "Already covered by existingRU865; no new sanctions-law guide proposed, no inference about people based on nationality."
+    },
+    {
+      "id": "M-UK",
+      "title": "Ukraine economic and trade profile",
+      "url": "https://www.trade.gov.tw/Files/PageFile/719437/719437cnl5q20260422141019.pdf",
+      "researchDate": "2026-10-25",
+      "publisher": "Taiwan International Trade Administration",
+      "publicationDate": "2026-04-22",
+      "verification": "initial PDF open succeeded; later same URL returned removed/error page",
+      "claim": "Official profile documents Ukrainian trade sectors, including sunflower oil.",
+      "status": "Saved first PDF text available; URL availability intermittent.",
+      "limits": "Do not treat2026 profile forecasts or foreign-law summaries as verified current law; new legal buyer trigger beyond existingUK869 unpaid oil invoice not established."
+    }
+  ],
+  "lawSources": [
+    {
+      "id": "L-CIVIL",
+      "title": "民法 / Civil Code",
+      "url": "https://mojlaw.moj.gov.tw/LawContent.aspx?LSID=fl001351&TypeSort=4&lawNumber=309",
+      "researchDate": "2026-10-25",
+      "jurisdiction": "Taiwan",
+      "lastPromulgatedAmendment": "2026-08-17",
+      "verification": "Current Chinese official text and individual153,166,169,310 opened;309 read in MoJ version.",
+      "currentStatus": "Cited153/166/169/309/310 in force in consulted current text.",
+      "announcementVsCommencement": "2026-08-17 promulgation of1223 is effective six months later;166-1 commencement remains undetermined. Neither pending provision is applied in these briefs.",
+      "translationCaveat": "Old official English310(2) says creditor where Chinese says debtor; use Chinese 債務人."
+    },
+    {
+      "id": "L-PIL",
+      "title": "涉外民事法律適用法 / Act Governing the Choice of Law in Civil Matters Involving Foreign Elements",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000007",
+      "researchDate": "2026-10-25",
+      "jurisdiction": "Taiwan",
+      "verification": "Individual20,26,42 opened; author also opened complete Act.",
+      "currentStatus": "Cited provisions current in official text.",
+      "lastPromulgatedAmendment": null,
+      "announcementVsCommencement": "No proposed/new amendment relied on; exact enactment/commencement history is not a claim of this research."
+    },
+    {
+      "id": "L-ESA",
+      "title": "電子簽章法 / Electronic Signatures Act",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080037",
+      "researchDate": "2026-10-25",
+      "jurisdiction": "Taiwan",
+      "lastPromulgatedAmendment": "2024-05-15",
+      "verification": "Current whole Act4–6 and8 opened and re-read; individual5 opened. Individual8 failed, but current whole Act113–116 independently confirms the rule.",
+      "currentStatus": "Cited provisions effective in current official text.",
+      "announcementVsCommencement": "Use enacted May2024 text, not March2024 proposal explanations. Last amendment date is not used as a blanket commencement claim."
+    },
+    {
+      "id": "L-PATENT",
+      "title": "專利法 / Patent Act",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070007",
+      "researchDate": "2026-10-25",
+      "jurisdiction": "Taiwan",
+      "lastPromulgatedAmendment": "2022-05-04",
+      "verification": "Opened current whole Act plus individual22,28,29.",
+      "currentStatus": "Cited11/22/28/29 effective in current official text.",
+      "announcementVsCommencement": "No pending amendment applied; May2022 is edition amendment date, not the date every cited provision first commenced."
+    },
+    {
+      "id": "L-CPA",
+      "title": "消費者保護法 / Consumer Protection Act",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
+      "researchDate": "2026-10-25",
+      "jurisdiction": "Taiwan",
+      "lastPromulgatedAmendment": "2015-06-17",
+      "verification": "Opened whole Act2/7/7-1/8 and individual9/10/10-1.",
+      "currentStatus": "Cited provisions effective.",
+      "announcementVsCommencement": "No new reform asserted; current text is used."
+    },
+    {
+      "id": "L-TS",
+      "title": "營業秘密法 / Trade Secrets Act",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028",
+      "researchDate": "2026-10-25",
+      "jurisdiction": "Taiwan",
+      "lastPromulgatedAmendment": "2020-01-15",
+      "verification": "Opened whole Act;2/4/7/10/11 read.",
+      "currentStatus": "Cited provisions effective.",
+      "announcementVsCommencement": "No draft or pending amendment applied."
+    },
+    {
+      "id": "L-COPYRIGHT",
+      "title": "著作權法 / Copyright Act",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070017",
+      "researchDate": "2026-10-25",
+      "jurisdiction": "Taiwan",
+      "lastPromulgatedAmendment": "2022-06-15",
+      "verification": "Opened current whole Act5 plus individual10-1/12/36/37.",
+      "currentStatus": "Cited5/10-1/12/36/37 effective in consulted text.",
+      "announcementVsCommencement": "2022-05-04 amendments91/91-1/100/117 and deletions98/98-1 await an Executive Yuan commencement date; they are excluded from articles."
+    }
+  ],
+  "claimLedger": [
+    {
+      "id": "C-PIL20",
+      "sourceId": "L-PIL",
+      "lawName": "涉外民事法律適用法 / Act Governing the Choice of Law in Civil Matters Involving Foreign Elements",
+      "jurisdiction": "Taiwan",
+      "provision": "20",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+      "claim": "Contract formation and effects follow valid party choice; absent effective express choice, the closest connection and statutory characteristic-performance presumption matter.",
+      "caveat": "A Taiwanese counterparty alone does not make Taiwan law govern.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-PIL26",
+      "sourceId": "L-PIL",
+      "lawName": "涉外民事法律適用法 / Act Governing the Choice of Law in Civil Matters Involving Foreign Elements",
+      "jurisdiction": "Taiwan",
+      "provision": "26",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=26",
+      "claim": "Ordinary use/consumption product harm relationship between victim and manufacturer defaults to manufacturer national law, with conditional victim selection of injury/place-of-purchase/victim-national law where manufacturer consented to or could foresee marketing there.",
+      "caveat": "Preserve both foreseeable/consented marketing and victim election conditions; corporate recourse contract is separate.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-PIL42",
+      "sourceId": "L-PIL",
+      "lawName": "涉外民事法律適用法 / Act Governing the Choice of Law in Civil Matters Involving Foreign Elements",
+      "jurisdiction": "Taiwan",
+      "provision": "42",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=42",
+      "claim": "IP rights follow law of the territory where protection is claimed; employee-created IP ownership follows applicable employment-contract law.",
+      "caveat": "Do not claim one Taiwan agreement determines worldwide title or all upstream employees' rights.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-C309",
+      "sourceId": "L-CIVIL",
+      "lawName": "民法 / Civil Code",
+      "jurisdiction": "Taiwan",
+      "provision": "309",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=309",
+      "claim": "Proper performance to creditor or authorized recipient, accepted, extinguishes obligation.",
+      "caveat": "Bank transfer success alone does not identify an authorized recipient.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-C310",
+      "sourceId": "L-CIVIL",
+      "lawName": "民法 / Civil Code",
+      "jurisdiction": "Taiwan",
+      "provision": "310",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=310",
+      "claim": "Payment to a third person has effects in listed circumstances: creditor ratification/later acquisition of claim, payment to quasi-possessor with debtor unaware of noncreditor status, or extent creditor actually benefits.",
+      "caveat": "Three distinct routes; no automatic recovery or universal good-faith safe harbor. Chinese debtor wording controls.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-C169",
+      "sourceId": "L-CIVIL",
+      "lawName": "民法 / Civil Code",
+      "jurisdiction": "Taiwan",
+      "provision": "169",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=169",
+      "claim": "Principal's own representation of authority or knowing tolerance of purported agency can create responsibility as if authorized, subject to third-party knowledge/could-know exception.",
+      "caveat": "Spoofed appearance by fraudster alone is not automatically the principal's representation.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-C153",
+      "sourceId": "L-CIVIL",
+      "lawName": "民法 / Civil Code",
+      "jurisdiction": "Taiwan",
+      "provision": "153",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=153",
+      "claim": "Contract may arise by express or tacit agreement; agreed essential points with nonessential gaps can be presumed sufficient.",
+      "caveat": "Whether an actual PO/email accepted essential terms requires facts; not every email forms a contract.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-C166",
+      "sourceId": "L-CIVIL",
+      "lawName": "民法 / Civil Code",
+      "jurisdiction": "Taiwan",
+      "provision": "166",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=166",
+      "claim": "When parties agree a specified form is required for contract formation, absence of that form creates a presumption of no contract.",
+      "caveat": "Do not confuse effective166 with pending166-1.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-E4",
+      "sourceId": "L-ESA",
+      "lawName": "電子簽章法 / Electronic Signatures Act",
+      "jurisdiction": "Taiwan",
+      "provision": "4",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080037",
+      "claim": "Compliant electronic records/signatures are not denied legal effect solely because electronic.",
+      "caveat": "Other formation, authority and authenticity questions remain.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-E5",
+      "sourceId": "L-ESA",
+      "lawName": "電子簽章法 / Electronic Signatures Act",
+      "jurisdiction": "Taiwan",
+      "provision": "5",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080037",
+      "claim": "Electronic-form rules include counterparty acceptance and the statutory notice/reasonable-opportunity-to-object mechanism.",
+      "caveat": "Avoid claiming an email recipient always agreed to all terms.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-E6",
+      "sourceId": "L-ESA",
+      "lawName": "電子簽章法 / Electronic Signatures Act",
+      "jurisdiction": "Taiwan",
+      "provision": "6",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080037",
+      "claim": "Qualified digital signatures can receive signature/seal presumptions under approved-certification-authority and valid-certificate conditions.",
+      "caveat": "No blanket presumption for every scanned signature or foreign/EU certificate.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-E8",
+      "sourceId": "L-ESA",
+      "lawName": "電子簽章法 / Electronic Signatures Act",
+      "jurisdiction": "Taiwan",
+      "provision": "8",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080037",
+      "claim": "Where law requires written retention, an electronic record may substitute if its content can be fully reproduced and retrieved later for inspection. Authenticity metadata may be retained with it.",
+      "caveat": "Article8 paragraph2 permits metadata retention; it does not make every listed metadata item a mandatory condition. Keeping original emails/attachments/version history is practical evidence advice.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-P11",
+      "sourceId": "L-PATENT",
+      "lawName": "專利法 / Patent Act",
+      "jurisdiction": "Taiwan",
+      "provision": "11",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070007",
+      "claim": "Applicants without Taiwan domicile or business establishment must appoint an agent under statutory qualification rules.",
+      "caveat": "Firm's patent-agent qualification is not established by general attorney service page.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-P22",
+      "sourceId": "L-PATENT",
+      "lawName": "專利法 / Patent Act",
+      "jurisdiction": "Taiwan",
+      "provision": "22",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=22",
+      "claim": "Invention novelty/nonobviousness rules include a12-month applicant intentional/unintentional disclosure exception; voluntary publication in a Taiwan or foreign patent gazette is excluded from that exception.",
+      "caveat": "Grace period does not guarantee patentability, ownership or registration; design regime not covered.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-P28",
+      "sourceId": "L-PATENT",
+      "lawName": "專利法 / Patent Act",
+      "jurisdiction": "Taiwan",
+      "provision": "28",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=28",
+      "claim": "For the same invention, first lawful filing in reciprocal/WTO jurisdiction can ground priority when Taiwan filing is within12 months; earliest priority matters if multiple.",
+      "caveat": "A separate clock from disclosure grace; neither extends the other.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-P29",
+      "sourceId": "L-PATENT",
+      "lawName": "專利法 / Patent Act",
+      "jurisdiction": "Taiwan",
+      "provision": "29",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070007&flno=29",
+      "claim": "Priority declaration accompanies filing and certified first-filing documents are due within16 months from earliest priority; limited restoration rules apply.",
+      "caveat": "Not an automatic restoration promise or general additional16 months to file.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-A2",
+      "sourceId": "L-CPA",
+      "lawName": "消費者保護法 / Consumer Protection Act",
+      "jurisdiction": "Taiwan",
+      "provision": "2",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
+      "claim": "Consumer definition is tied to consumption/use of goods/services.",
+      "caveat": "Do not silently apply consumer scheme to an industrial B2B machine purchase.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-A7",
+      "sourceId": "L-CPA",
+      "lawName": "消費者保護法 / Consumer Protection Act",
+      "jurisdiction": "Taiwan",
+      "provision": "7",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
+      "claim": "Manufacturers and service providers must meet reasonably expected safety at supply given technical/professional standards and supply required hazard warnings; breach causing consumer/third-party harm can create joint liability.",
+      "caveat": "No-fault proof may permit judicial reduction, not automatic total exemption.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-A71",
+      "sourceId": "L-CPA",
+      "lawName": "消費者保護法 / Consumer Protection Act",
+      "jurisdiction": "Taiwan",
+      "provision": "7-1",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
+      "claim": "An enterprise asserting requisite product safety bears the statutory proof burden; later improved goods alone do not prove old goods unsafe.",
+      "caveat": "Maintain accident condition, testing, batch and warning evidence.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-A8",
+      "sourceId": "L-CPA",
+      "lawName": "消費者保護法 / Consumer Protection Act",
+      "jurisdiction": "Taiwan",
+      "provision": "8",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
+      "claim": "Distributors can share liability, subject to statutory due-care/unavoidable-harm defense; alteration/repackaging can change treatment.",
+      "caveat": "Preserve seller exceptions rather than label every seller strictly liable in all cases.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-A9",
+      "sourceId": "L-CPA",
+      "lawName": "消費者保護法 / Consumer Protection Act",
+      "jurisdiction": "Taiwan",
+      "provision": "9",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=9",
+      "claim": "Importer bears manufacturer responsibility under Article7.",
+      "caveat": "Not a rule fixing final B2B contribution percentage.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-A10",
+      "sourceId": "L-CPA",
+      "lawName": "消費者保護法 / Consumer Protection Act",
+      "jurisdiction": "Taiwan",
+      "provision": "10",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=10",
+      "claim": "Facts indicating a risk to consumer health/safety trigger immediate withdrawal of that batch/cessation of services, subject to sufficient necessary measures removing the hazard; required missing-warning cases are included.",
+      "caveat": "Not every complaint automatically mandates recall; sector-specific reporting/certification not covered.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-A101",
+      "sourceId": "L-CPA",
+      "lawName": "消費者保護法 / Consumer Protection Act",
+      "jurisdiction": "Taiwan",
+      "provision": "10-1",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=10-1",
+      "claim": "Liability under this section to consumers/third parties cannot be limited or excluded in advance.",
+      "caveat": "Internal allocation/recourse between businesses requires its own contract and legal analysis.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-T2",
+      "sourceId": "L-TS",
+      "lawName": "營業秘密法 / Trade Secrets Act",
+      "jurisdiction": "Taiwan",
+      "provision": "2",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028",
+      "claim": "Trade secret requires secrecy, actual/potential economic value from secrecy, and reasonable secrecy measures.",
+      "caveat": "NDA alone does not turn every test record into a statutory trade secret.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-T4",
+      "sourceId": "L-TS",
+      "lawName": "營業秘密法 / Trade Secrets Act",
+      "jurisdiction": "Taiwan",
+      "provision": "4",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028",
+      "claim": "Ownership of commissioned R&D secrets follows agreement; absent agreement contractor owns and funder may use within business.",
+      "caveat": "Not every evaluation/test is commissioned R&D.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-T7",
+      "sourceId": "L-TS",
+      "lawName": "營業秘密法 / Trade Secrets Act",
+      "jurisdiction": "Taiwan",
+      "provision": "7",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028",
+      "claim": "License territory, time, content and methods follow agreement; sublicensing requires owner consent.",
+      "caveat": "Specify affiliates and outside testing labs; physical access and legal permission are distinct.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-T10",
+      "sourceId": "L-TS",
+      "lawName": "營業秘密法 / Trade Secrets Act",
+      "jurisdiction": "Taiwan",
+      "provision": "10",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028",
+      "claim": "Misappropriation includes improper use/disclosure in listed circumstances, including information lawfully received under obligations.",
+      "caveat": "Lawful initial receipt does not authorize every later use.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-T11",
+      "sourceId": "L-TS",
+      "lawName": "營業秘密法 / Trade Secrets Act",
+      "jurisdiction": "Taiwan",
+      "provision": "11",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028",
+      "claim": "Owner may seek removal/prevention of infringement and destruction of infringing things or other necessary measures.",
+      "caveat": "No universal automatic statutory right to return/delete every device, copy or test result; design contract obligations separately.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-R5",
+      "sourceId": "L-COPYRIGHT",
+      "lawName": "著作權法 / Copyright Act",
+      "jurisdiction": "Taiwan",
+      "provision": "5",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070017",
+      "claim": "Computer programs are included in listed types of works.",
+      "caveat": "Protection of specific work still requires statutory conditions.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-R101",
+      "sourceId": "L-COPYRIGHT",
+      "lawName": "著作權法 / Copyright Act",
+      "jurisdiction": "Taiwan",
+      "provision": "10-1",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=10-1",
+      "claim": "Copyright protects expression, excluding underlying ideas, procedures, systems, operating methods and principles.",
+      "caveat": "Do not claim ownership of every functional idea through copyright.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-R12",
+      "sourceId": "L-COPYRIGHT",
+      "lawName": "著作權法 / Copyright Act",
+      "jurisdiction": "Taiwan",
+      "provision": "12",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=12",
+      "claim": "For nonemployment commissioned works, creator is author unless agreement designates funder; economic rights follow agreement and default to creator, while funder may use under paragraph3.",
+      "caveat": "Payment is neither automatic full assignment nor zero rights. Paragraph3 use is distinct from a contractually defined Article37 license.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-R36",
+      "sourceId": "L-COPYRIGHT",
+      "lawName": "著作權法 / Copyright Act",
+      "jurisdiction": "Taiwan",
+      "provision": "36",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=36",
+      "claim": "Economic rights may be wholly/partly transferred; unclear scope presumed untransferred.",
+      "caveat": "Source-code delivery is separately agreed, not automatically accomplished by abstract transfer wording.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    },
+    {
+      "id": "C-R37",
+      "sourceId": "L-COPYRIGHT",
+      "lawName": "著作權法 / Copyright Act",
+      "jurisdiction": "Taiwan",
+      "provision": "37",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=37",
+      "claim": "License scope follows agreement; unclear scope presumed unlicensed and nonexclusive sublicense requires owner consent.",
+      "caveat": "Do not erase Article12(3) statutory use; separately evaluate third-party maintenance and modifications.",
+      "verificationDate": "2026-10-25",
+      "status": "current-effective cited provision; see source-level commencement caveat"
+    }
+  ],
+  "countryScreening": [
+    {
+      "locale": "pl",
+      "market": "Poland",
+      "decision": "selected",
+      "sourceIds": [
+        "M-PL-TRADE",
+        "M-PL-MISSION"
+      ],
+      "rationale": "Current official bilateral trade in both directions and actual business mission; clear buyer/payment and exporter/product safety decisions.",
+      "existingRecentIds": [
+        870,
+        871,
+        872
+      ],
+      "gap": "Account-change payment effect and consumer injury/recall differ from normal invoice recovery.",
+      "limits": "Trade is not measured legal demand.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    },
+    {
+      "locale": "cs",
+      "market": "Czechia",
+      "decision": "selected",
+      "sourceIds": [
+        "M-CS-SEMICON",
+        "M-CS-HYDROGEN"
+      ],
+      "rationale": "Recent2026 industry/academic contacts give concrete PO formation and prefiling-disclosure decisions.",
+      "existingRecentIds": [
+        873,
+        874,
+        875
+      ],
+      "gap": "Formation before delivery and patent timing differ from post-delivery machine defect.",
+      "limits": "No exhibition leads/contracts conversion count.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    },
+    {
+      "locale": "sk",
+      "market": "Slovakia",
+      "decision": "defer",
+      "sourceIds": [
+        "M-SK"
+      ],
+      "rationale": "Historical semiconductor/R&D/investment links are real but freshest opened transactional evidence is2023.",
+      "existingRecentIds": [
+        876,
+        877,
+        878
+      ],
+      "gap": "R&D deliverables or investment rights require newer distinct source before commissioning.",
+      "limits": "Absence of current evidence in limited search is not absence of market.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    },
+    {
+      "locale": "hu",
+      "market": "Hungary",
+      "decision": "defer",
+      "sourceIds": [
+        "M-HU"
+      ],
+      "rationale": "2025 smart-city delegation notice suggests possible B2B contacts; outcome/current pipeline not verified.",
+      "existingRecentIds": [
+        879,
+        880,
+        881
+      ],
+      "gap": "Future software pilot/acceptance topic only after specific Taiwan transaction corroboration.",
+      "limits": "Scheduled participants are not confirmed purchasers.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    },
+    {
+      "locale": "ro",
+      "market": "Romania",
+      "decision": "defer",
+      "sourceIds": [
+        "M-RO"
+      ],
+      "rationale": "Official industry profile exists but much underlying data are2023.",
+      "existingRecentIds": [
+        882,
+        883,
+        884
+      ],
+      "gap": "Export-panel payment already covered; no distinctive2026 Taiwan transaction established.",
+      "limits": "No country-wide demand score.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    },
+    {
+      "locale": "bg",
+      "market": "Bulgaria",
+      "decision": "defer",
+      "sourceIds": [
+        "M-BG"
+      ],
+      "rationale": "Official2026–2027 research-personnel exchange establishes academic tie.",
+      "existingRecentIds": [
+        885,
+        886,
+        887
+      ],
+      "gap": "Research agreement article possible later, but current multi-market IP overlap is high.",
+      "limits": "No resident/student count or commercial funding-contract demand measured.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    },
+    {
+      "locale": "hr",
+      "market": "Croatia",
+      "decision": "defer",
+      "sourceIds": [
+        "M-HR"
+      ],
+      "rationale": "Official2025 trade table includes Taiwan.",
+      "existingRecentIds": [
+        888,
+        889,
+        890
+      ],
+      "gap": "Machine-defect evidence already covered; no differentiated new trigger verified.",
+      "limits": "Table is provisional and not an inquiry-volume estimate.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    },
+    {
+      "locale": "sr",
+      "market": "Serbia",
+      "decision": "defer",
+      "sourceIds": [
+        "M-SR"
+      ],
+      "rationale": "Legacy official economic profile could not be reopened; limited fresh search insufficient.",
+      "existingRecentIds": [
+        891,
+        892,
+        893
+      ],
+      "gap": "Fruit invoice/default already covered; need verified product-specific trade or other buyer event.",
+      "limits": "Unknown current market; do not label low value.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    },
+    {
+      "locale": "sl",
+      "market": "Slovenia",
+      "decision": "defer",
+      "sourceIds": [
+        "M-SL"
+      ],
+      "rationale": "2025 chamber webinar appeared in results; direct source access failed.",
+      "existingRecentIds": [
+        894,
+        895,
+        896
+      ],
+      "gap": "Distributor termination/stock/service already covered.",
+      "limits": "Search-only lead, no confirmed outcome.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    },
+    {
+      "locale": "lt",
+      "market": "Lithuania",
+      "decision": "selected",
+      "sourceIds": [
+        "M-LT-TRADE",
+        "M-LT-MOU",
+        "M-LT-LMT",
+        "M-LT-CONFERENCE"
+      ],
+      "rationale": "Small but specific laser/photonics trade and actual2026 joint-technology MOU support tightly targeted IP/contract questions.",
+      "existingRecentIds": [
+        897,
+        898,
+        899
+      ],
+      "gap": "Evaluation-data controls and commissioned firmware rights differ from entity/engineer/trademark articles.",
+      "limits": "Actual firmware-outsourcing prevalence and legal-demand volume remain unknown.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    },
+    {
+      "locale": "lv",
+      "market": "Latvia",
+      "decision": "defer",
+      "sourceIds": [
+        "M-LV"
+      ],
+      "rationale": "Current official call establishes2027–2029 research link; application period closed.",
+      "existingRecentIds": [
+        900,
+        901,
+        902
+      ],
+      "gap": "Timber invoice already covered; research IP angle would duplicate selectedLT without stronger distinct transaction.",
+      "limits": "Academic call is not commercial demand evidence.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    },
+    {
+      "locale": "et",
+      "market": "Estonia",
+      "decision": "defer",
+      "sourceIds": [
+        "M-ET"
+      ],
+      "rationale": "Official2024 meeting expresses economic cooperation intentions;2026 research programme lead observed.",
+      "existingRecentIds": [
+        903,
+        904,
+        905
+      ],
+      "gap": "EOR/first hire and technology invoice already covered; source-code topic would overlapLT.",
+      "limits": "No narrow new buyer transaction verified.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    },
+    {
+      "locale": "el",
+      "market": "Greece",
+      "decision": "defer",
+      "sourceIds": [
+        "M-EL"
+      ],
+      "rationale": "Official bilateral page located but no fresh quantitative commercial body verified in this pass.",
+      "existingRecentIds": [
+        855,
+        856,
+        857
+      ],
+      "gap": "Shipping foreign-award enforcement and olive-oil invoices already covered.",
+      "limits": "Do not infer a lack of shipping demand; evidence incomplete.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    },
+    {
+      "locale": "ru",
+      "market": "Russian-language / Russia nexus",
+      "decision": "defer",
+      "sourceIds": [
+        "M-RU"
+      ],
+      "rationale": "Current Taiwan guidance confirms transaction-specific export-control issues.",
+      "existingRecentIds": [
+        864,
+        865,
+        866
+      ],
+      "gap": "Existing865 already covers end-user/export controls; new article must demonstrate a separate actual gap.",
+      "limits": "Legal restrictions attach transactions/goods/end uses; language/nationality is not treated as uniform buyer behavior.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    },
+    {
+      "locale": "uk",
+      "market": "Ukraine",
+      "decision": "defer",
+      "sourceIds": [
+        "M-UK"
+      ],
+      "rationale": "2026 official profile and exports offer context, but no new distinct Taiwan commercial trigger verified.",
+      "existingRecentIds": [
+        867,
+        868,
+        869
+      ],
+      "gap": "Oil invoice recovery already covered; additional trade-risk article requires specific current evidence.",
+      "limits": "Profile access intermittent; no wartime commercial outcome inferred.",
+      "residentCount": null,
+      "studentCount": null,
+      "measuredLegalDemand": null
+    }
+  ],
+  "searchObservations": [
+    {
+      "id": "pl-search-2",
+      "locale": "pl",
+      "query": "Tajwan zmiana konta faktura oszustwo dostawca",
+      "language": "Polish",
+      "results": [
+        {
+          "title": "Revolut invoice fraud help",
+          "url": "https://help.revolut.com/pl-PL/help/security-logging-in/how-do-i-protect-myself-from-fraudsters/fraud-education-invoice/",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        },
+        {
+          "title": "mBank supplier impersonation / fake invoices",
+          "url": "https://www.mbank.pl/artykuly/podszycie-sie-pod-kontrahenta-i-falszywe-faktury/",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        },
+        {
+          "title": "Europol Polish fraud PDF",
+          "url": "https://www.europol.europa.eu/sites/default/files/documents/pl_0.pdf",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        }
+      ],
+      "observed": "Polish banking/police prevention information appeared; Taiwan civil-law allocation was not established by these results.",
+      "cannotEstablish": "Taiwan-specific search volume, ranking persistence, frequency of Polish-Taiwan fraud, or firm demand.",
+      "searchDate": "2026-10-25",
+      "rankClaim": false,
+      "searchVolume": null
+    },
+    {
+      "id": "pl-search-3",
+      "locale": "pl",
+      "query": "Tajwan eksport produkt niebezpieczny odpowiedzialność importer wycofanie",
+      "language": "Polish",
+      "results": [
+        {
+          "title": "EU General Product Safety Regulation, Polish",
+          "url": "https://eur-lex.europa.eu/legal-content/PL/TXT/PDF/?uri=CELEX%3A02023R0988-20260529",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        },
+        {
+          "title": "Polish product safety legal document",
+          "url": "https://uokik.gov.pl/downloadId/755",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        },
+        {
+          "title": "Polish plant inspection Taiwan information",
+          "url": "https://www.gov.pl/web/piorin/tajwan",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        }
+      ],
+      "observed": "Returned material skews EU/Polish product law or Taiwan plant-import information.",
+      "cannotEstablish": "Taiwan CPA rule or unmet demand. EU GPSR is not the governing Taiwan-law source.",
+      "searchDate": "2026-10-25",
+      "rankClaim": false,
+      "searchVolume": null
+    },
+    {
+      "id": "cs-search-1",
+      "locale": "cs",
+      "query": "Tchaj-wan patent veletrh zveřejnění",
+      "language": "Czech",
+      "results": [
+        {
+          "title": "ASLE2026 industry invitation",
+          "url": "https://www.technikaatrh.cz/tchaj-wan-hleda-ceske-prumyslove-firmy-na-veletrh-asle-2026-s-hrazenou-letenkou-i-ubytovanim/",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        },
+        {
+          "title": "Czech industry association Taiwan mission",
+          "url": "https://www.spcr.cz/podnikatelska-mise-na-tchaj-wan-6",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        },
+        {
+          "title": "2024 Taiwan territorial information",
+          "url": "https://publiccontent.sinpro.cz/PublicFiles/2024/10/14/tchaj-wan-souhrnna-teritorialni-informace-2024-160326858.pdf",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        }
+      ],
+      "observed": "Trade-show/business mission material dominates the observed set.",
+      "cannotEstablish": "No complete Czech-language Taiwan grace/priority analysis observed in this limited set does not prove no competing content or high intent volume.",
+      "searchDate": "2026-10-25",
+      "rankClaim": false,
+      "searchVolume": null
+    },
+    {
+      "id": "cs-search-2",
+      "locale": "cs",
+      "query": "Tchaj-wan smlouva elektronický podpis objednávka",
+      "language": "Czech",
+      "results": [
+        {
+          "title": "Czech MFA Taiwan visas",
+          "url": "https://mzv.gov.cz/jnp/cz/encyklopedie_statu/asie/tchaj_wan/cestovani/visa.mobi",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        },
+        {
+          "title": "T-Mobile electronic signature",
+          "url": "https://www.t-mobile.cz/elektronickypodpis",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        },
+        {
+          "title": "Czech CAA signature FAQ",
+          "url": "https://www.caa.gov.cz/ufaqs/musi-byt-overeny-podpis-na-kupni-smlouve-nebo-zastavni-smlouve/",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        }
+      ],
+      "observed": "Mixed travel and general Czech e-signature results; weak direct Taiwan-contract search signal.",
+      "cannotEstablish": "Demand volume; legal rule for Taiwan purchase orders.",
+      "searchDate": "2026-10-25",
+      "rankClaim": false,
+      "searchVolume": null
+    },
+    {
+      "id": "lt-search-1",
+      "locale": "lt",
+      "query": "Taivanas lazeriai bendri tyrimai intelektinė nuosavybė sutartis",
+      "language": "Lithuanian",
+      "results": [
+        {
+          "title": "LMT2026 Taiwan continuation call",
+          "url": "https://lmt.lrv.lt/lt/naujienos/kvieciame-teikti-paraiskas-lietuvostaivano-testiniu-projektu-2026-m-konkursui-9wi/",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        },
+        {
+          "title": "LMT bilateral continued funding",
+          "url": "https://lmt.lrv.lt/lt/naujienos/lietuva-ir-taivanas-itvirtina-testiniu-moksliniu-projektu-finansavima-4l2/",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        },
+        {
+          "title": "FTMC intellectual property and contracts",
+          "url": "https://www.ftmc.lt/intelektine-nuosavybe-sutartys/",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        }
+      ],
+      "observed": "Actual Lithuanian research institutions and Taiwan collaboration results appear.",
+      "cannotEstablish": "Private legal spending, contract disputes, or future clients.",
+      "searchDate": "2026-10-25",
+      "rankClaim": false,
+      "searchVolume": null
+    },
+    {
+      "id": "lt-search-3",
+      "locale": "lt",
+      "query": "Taivanas lazeris bandymai duomenys konfidencialumo sutartis",
+      "language": "Lithuanian",
+      "results": [
+        {
+          "title": "LMT document template",
+          "url": "https://lmt.lrv.lt/media/viesa/saugykla/2023/12/Qfiq0ZLH6HI.pdf",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        },
+        {
+          "title": "Lithuanian procurement confidentiality guidance",
+          "url": "https://klausk.vpt.lt/hc/lt/articles/360016398700--20-straipsnis-Konfidencialumas",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        },
+        {
+          "title": "Procurement confidentiality explanation",
+          "url": "https://vpt.lrv.lt/uploads/vpt/documents/files/mp/konfidenciali_informacija2020-01-08--2023-04-05.pdf",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        }
+      ],
+      "observed": "Generic Lithuanian confidentiality/procurement materials rather than a demonstrated Taiwan evaluation-data legal answer.",
+      "cannotEstablish": "Taiwan Trade Secrets Act rules, search volume or no existing Taiwanese-language competitor.",
+      "searchDate": "2026-10-25",
+      "rankClaim": false,
+      "searchVolume": null
+    },
+    {
+      "id": "lt-search-4",
+      "locale": "lt",
+      "query": "Taivanas programinė įranga kūrimo sutartis autorių teisės kodas",
+      "language": "Lithuanian",
+      "results": [
+        {
+          "title": "Infolex commissioned-work contract",
+          "url": "https://www.infolex.lt/teise/DocumentSinglePart.aspx?AktoId=23542&StrNr=41",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        },
+        {
+          "title": "Infolex copyright-contract form",
+          "url": "https://www.infolex.lt/teise/DocumentSinglePart.aspx?AktoId=23542&StrNr=42",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        },
+        {
+          "title": "Lithuanian copyright act",
+          "url": "https://www.e-tar.lt/portal/lt/legalActPrint?actualEditionId=TAIS_285756&documentId=TAR.551F0CDE5B64",
+          "status": "observed search result; not necessarily opened, not used as Taiwan-law authority"
+        }
+      ],
+      "observed": "Lithuanian domestic copyright law dominates observed results.",
+      "cannotEstablish": "Rules for Taiwan-commissioned firmware or any number of such transactions.",
+      "searchDate": "2026-10-25",
+      "rankClaim": false,
+      "searchVolume": null
+    }
+  ],
+  "briefs": [
+    {
+      "articleId": 940,
+      "locale": "pl",
+      "slug": "polish-importer-taiwan-invoice-bank-change-payment",
+      "reader": "Polish importer/payables decision-maker",
+      "trigger": "Paid changed Taiwan supplier bank account; supplier denies receipt",
+      "claimIds": [
+        "C-PIL20",
+        "C-C309",
+        "C-C310",
+        "C-C169"
+      ],
+      "marketSourceIds": [
+        "M-PL-TRADE"
+      ],
+      "searchIds": [
+        "pl-search-2"
+      ],
+      "overlap": "PL872 deals with ordinary unpaid supplier debt;940 asks whether a buyer's already-sent payment discharged debt.",
+      "priorityRationale": "Specific time-sensitive contractual decision with documented two-way trade; legal-demand hypothesis unmeasured."
+    },
+    {
+      "articleId": 941,
+      "locale": "pl",
+      "slug": "polish-brand-taiwan-consumer-injury-importer-recall",
+      "reader": "Polish consumer-products manufacturer/exporter quality/legal manager",
+      "trigger": "Taiwan importer reports injury or product hazard and asks who bears recall/compensation costs",
+      "claimIds": [
+        "C-PIL26",
+        "C-PIL20",
+        "C-A2",
+        "C-A7",
+        "C-A71",
+        "C-A8",
+        "C-A9",
+        "C-A10",
+        "C-A101"
+      ],
+      "marketSourceIds": [
+        "M-PL-TRADE",
+        "M-PL-MISSION"
+      ],
+      "searchIds": [
+        "pl-search-3"
+      ],
+      "overlap": "CS875/HR888 B2B defective machines and common011 cosmetics market entry are different from consumer/third-party safety and internal allocation.",
+      "priorityRationale": "Material buyer decision, but no Polish-product accident rate or measured legal demand."
+    },
+    {
+      "articleId": 942,
+      "locale": "cs",
+      "slug": "czech-supplier-taiwan-email-purchase-order-contract",
+      "reader": "Czech equipment/technology seller",
+      "trigger": "Email PO and specifications confirmed before paper signature; cancellation/dispute after work starts",
+      "claimIds": [
+        "C-PIL20",
+        "C-C153",
+        "C-C166",
+        "C-E4",
+        "C-E5",
+        "C-E6",
+        "C-E8"
+      ],
+      "marketSourceIds": [
+        "M-CS-SEMICON",
+        "M-CS-HYDROGEN"
+      ],
+      "searchIds": [
+        "cs-search-2"
+      ],
+      "overlap": "CS873 entity choice/874WH/875 post-delivery machine defects do not answer contract-formation decision.",
+      "priorityRationale": "Actual2026 industry contacts support scenario; native search signal weak, not measured demand."
+    },
+    {
+      "articleId": 943,
+      "locale": "cs",
+      "slug": "czech-exhibitor-taiwan-patent-disclosure-priority",
+      "reader": "Czech exhibitor or research team considering Taiwan invention patent",
+      "trigger": "Prototype publicly shown; foreign-first-filing date and disclosure date differ",
+      "claimIds": [
+        "C-P11",
+        "C-P22",
+        "C-P28",
+        "C-P29"
+      ],
+      "marketSourceIds": [
+        "M-CS-SEMICON"
+      ],
+      "searchIds": [
+        "cs-search-1"
+      ],
+      "overlap": "Different from other-market joint-patent licensing and existing corporate-entry articles.",
+      "priorityRationale": "Documented exhibition connection and irreversible timing decision, without inventing a real failed patent case."
+    },
+    {
+      "articleId": 944,
+      "locale": "lt",
+      "slug": "lithuanian-laser-taiwan-evaluation-samples-test-data",
+      "reader": "Lithuanian laser/photonics technical director",
+      "trigger": "Evaluation samples/configuration/test data sent to Taiwan; later reuse or onward sharing unclear",
+      "claimIds": [
+        "C-PIL20",
+        "C-PIL42",
+        "C-T2",
+        "C-T4",
+        "C-T7",
+        "C-T10",
+        "C-T11"
+      ],
+      "marketSourceIds": [
+        "M-LT-TRADE",
+        "M-LT-MOU",
+        "M-LT-LMT"
+      ],
+      "searchIds": [
+        "lt-search-1",
+        "lt-search-3"
+      ],
+      "overlap": "LT897 company/898 work permit/899 distributor trademark differ. Physical/sample and test-secret control are distinct from945 copyright.",
+      "priorityRationale": "Specific actual bilateral laser link in a small market; no confirmed leak case or acquisition volume."
+    },
+    {
+      "articleId": 945,
+      "locale": "lt",
+      "slug": "lithuanian-company-taiwan-firmware-copyright-source-code",
+      "reader": "Lithuanian laser/measurement company commissioning Taiwan software",
+      "trigger": "Only executable delivered; new maintainer needs source, modification and sublicensing permissions",
+      "claimIds": [
+        "C-PIL20",
+        "C-PIL42",
+        "C-R5",
+        "C-R101",
+        "C-R12",
+        "C-R36",
+        "C-R37"
+      ],
+      "marketSourceIds": [
+        "M-LT-TRADE",
+        "M-LT-MOU"
+      ],
+      "searchIds": [
+        "lt-search-4"
+      ],
+      "overlap": "944 concerns pre-existing/evaluation secrets and permitted use;945 concerns newly commissioned copyright, delivery and maintenance. Not a translation of another locale's film licensing.",
+      "priorityRationale": "Coherent narrow commercial hypothesis; prevalence of Lithuanian firms commissioning Taiwan firmware is explicitly unknown."
+    }
+  ],
+  "practicalGuidance": [
+    {
+      "id": "G-EUROPOL",
+      "title": "Europol Polish invoice-fraud prevention PDF",
+      "url": "https://www.europol.europa.eu/sites/default/files/documents/pl_0.pdf",
+      "researchDate": "2026-10-25",
+      "jurisdiction": "Fraud-prevention guidance, not Taiwan civil law",
+      "verification": "Researcher's direct opens timed out twice. PL author independently opened9-page PDF; research agent read the saved original result at work/reviews/pl-author-source-evidence.json, PDFpage2 lines142–153 and175–183.",
+      "claim": "Verify changed payment details using established contact details, not the suspicious message; describes supplier impersonation/account change.",
+      "limits": "No promise of bank recovery or debt extinction."
+    }
+  ],
+  "inventory": {
+    "snapshot": "current-column-inventory.json",
+    "totalEntries": 1992,
+    "recentRange": "801–921",
+    "recentCount": 121,
+    "assignedLocaleRecentCount": 45,
+    "selectedLocaleRecentCount": 9,
+    "reviewMethod": "All121 recent titles/slugs screened; selected locales'001–018 baseline titles and870–875/897–899 headings, opening and substantive topic passages inspected. Authors separately report full recent same-locale corpus reads.",
+    "detailedOverlap": "east-market.md"
+  },
+  "discardedTopics": [
+    {
+      "locale": "pl",
+      "topic": "Minimum resale price",
+      "reason": "Overlaps ar(Saudi) Fair Trade Act19 topic in same batch."
+    },
+    {
+      "locale": "lt",
+      "topic": "Joint patent third-party licensing/share transfer",
+      "reason": "Overlaps he joint-patent topic."
+    },
+    {
+      "locale": "lt",
+      "topic": "Minority shareholder inspection",
+      "reason": "Overlaps hi Company Act245 inspector topic."
+    }
+  ],
+  "styleAndVerification": {
+    "briefFile": "east-briefs.md",
+    "columnsAuthoredByThisAgent": false,
+    "automatedVariety": "Current variety CLI does not support pl/cs/lt. Do not report unsupported results as PASS; manual sentence-variety§5 and independent language review required.",
+    "reviewIdentity": "AI research and editorial roles only; no claim of human/native-speaker/licensed review."
+  },
+  "rawEvidenceFiles": [
+    "east-search-observations.json",
+    "east-search-revised-observations.json",
+    "east-market-screen-observations.json",
+    "east-opened-primary-1.json",
+    "east-opened-primary-2.json",
+    "east-opened-primary-3.json",
+    "east-opened-lt-market.json",
+    "east-opened-final-checks.json",
+    "east-screen-opened.json",
+    "east-opened-final-checks-2.json",
+    "east-electronic-signature-final.json",
+    "east-electronic-signature-whole-final.json"
+  ]
+}

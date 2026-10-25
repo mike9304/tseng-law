@@ -1,0 +1,70 @@
+{
+  "reviewer": "/root/expand_locale_nl",
+  "role": "locale",
+  "independentOfAuthor": true,
+  "checkedAt": "2026-10-25T13:24:13.406517+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+      "sha256": "3b395842ebc879b6d3d61a3a8bab1bd006f9fd16aaf27113892497f03b7c0425",
+      "verdict": "PASS",
+      "findings": [],
+      "resolved_findings": [
+        "Opening deletion/duplication observations resolved before freeze; exact before/after in nl-locale.md.",
+        "934 work-period summary ambiguity clarified; 935 Taiwan-specific security term explained with article 15 source."
+      ],
+      "image_sha256": "0642ee36a4fb08d9d189c3b1563d77de7eb929f93beebe81ea38a10f046b9f55",
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md --lang nl",
+      "variety_exit_code": 0,
+      "original_variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md --lang nl",
+      "original_variety_exit_code": 2,
+      "original_variety_result": "Unsupported Dutch, not a measured PASS.",
+      "variety_scope": "Independently reviewed task-local extension; shared checker unchanged.",
+      "variety_evidence": "work/reviews/nl-locale-variety.json",
+      "section5_checked": true,
+      "opening_deletion_test": "work/reviews/nl-locale.md",
+      "comparators_evidence": "work/reviews/nl-locale-comparators.json",
+      "image_evidence": "work/reviews/nl-locale-images.json",
+      "limitations": [
+        "AI locale review, not human native-speaker or licensed-lawyer review.",
+        "Shared Dutch measurement unsupported; task-local unchanged-threshold heuristic only."
+      ]
+    },
+    {
+      "source_path": "src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+      "sha256": "943a747d79288334da91b9c608ef558bda57ba8754e7acd5eac6c49083f11b01",
+      "verdict": "PASS",
+      "findings": [],
+      "resolved_findings": [
+        "Opening deletion/duplication observations resolved before freeze; exact before/after in nl-locale.md.",
+        "934 work-period summary ambiguity clarified; 935 Taiwan-specific security term explained with article 15 source."
+      ],
+      "image_sha256": "228564814ce94325a15636b897ef9d744f9bd05cd649db6b1370ad558da83a61",
+      "variety_command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md --lang nl",
+      "variety_exit_code": 0,
+      "original_variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md --lang nl",
+      "original_variety_exit_code": 2,
+      "original_variety_result": "Unsupported Dutch, not a measured PASS.",
+      "variety_scope": "Independently reviewed task-local extension; shared checker unchanged.",
+      "variety_evidence": "work/reviews/nl-locale-variety.json",
+      "section5_checked": true,
+      "opening_deletion_test": "work/reviews/nl-locale.md",
+      "comparators_evidence": "work/reviews/nl-locale-comparators.json",
+      "image_evidence": "work/reviews/nl-locale-images.json",
+      "limitations": [
+        "AI locale review, not human native-speaker or licensed-lawyer review.",
+        "Shared Dutch measurement unsupported; task-local unchanged-threshold heuristic only.",
+        "Direct B1 registration instruction page returned 503; accessible FSC rules independently support applicant/document/asset-identification claims."
+      ]
+    }
+  ],
+  "measurement_review": "work/variety-review/review-final.json",
+  "measurement_review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+  "measurement_wrapper_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+  "report_md_sha256": "3288523797f29b899307f6ee6a49fba92bd5aa5d8da14932e283408fb5a010a2",
+  "limitations": [
+    "No claim of publication, browser visual/interaction testing or full final legal review.",
+    "Full 24-article opening-type distribution belongs to root integration; this review compares Dutch934–935 with three actual recent Dutch columns.",
+    "Single-article MOJ ESA51 and movables31 opens failed; current official full-text provisions opened successfully instead."
+  ]
+}

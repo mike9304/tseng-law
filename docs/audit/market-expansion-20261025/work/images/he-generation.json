@@ -1,0 +1,39 @@
+{
+  "locale": "he",
+  "createdAt": "2026-10-25",
+  "method": "native image_gen__imagegen",
+  "articles": [
+    {
+      "id": 932,
+      "prompt": "Use case: photorealistic-natural. Asset type: editorial hero for a Hebrew article for Israeli technology companies about Taiwan patent accelerated examination and matching invention claims. Create a restrained, believable still-life in a small modern engineering studio: two translucent technical drawing sheets with ONLY abstract unlabeled geometric contour lines of the same small optical sensor housing, one slightly narrower, carefully aligned over each other on a pale drafting surface. Beside them an unbranded miniature metal sensor prototype, a precision caliper and a closed matte blue folder. No paperwork text at all. Angled overhead camera, generous quiet space, natural late morning side light, realistic paper grain and brushed metal, muted warm gray and navy palette, crisp but not glossy or commercial. Landscape 3:2, 1536 by 1024. Scene is fictional, not a real invention, laboratory, patent office or legal evidence. No people, hands, faces, readable text, letters, numbers, patent stamps, seals, flags, logos, watermarks, documents resembling official certificates or identity documents. No arrow diagrams, neon effects, courthouse clichés or scales of justice.",
+      "original": "/Users/son7/.codex/generated_images/01a17324-7421-72d3-8066-478971ea7af3/exec-452b6db5-cc39-4f85-82e5-48755c66c2bc.png",
+      "editPrompt": "Edit this image only to remove the metal caliper at right completely and restore the same pale work surface underneath it. Preserve the two unlabelled abstract technical drawings, small metal optical prototype, blue folder, plant, lighting, camera angle and all other composition. No text, numbers, letters, symbols, labels, logos or watermarks anywhere.",
+      "selectedOriginal": "/Users/son7/.codex/generated_images/01a17324-7421-72d3-8066-478971ea7af3/exec-8b6d3f4f-1cc5-4a49-a25a-ecff01bc3393.png",
+      "final": "repo/public/images/columns/932-market-expansion-20261025.webp",
+      "inspection": "Actually inspected native generation and edit output. Initial caliper had small scale numbers, so removed with native image edit. Final has two unlabelled sensor drawings, small optical prototype, plain blue folder, plant and pencils; no people, text, logo or official document. Distinct light drafting-table scene.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "conversion": "Pillow format conversion only, WEBP quality88 method6; no scene editing by code.",
+      "selectedOriginalSHA256": "85ef2d98cebd17f2b3105c44b5a7e6251c2992245aef1dc6f4a047cf15ade5f0",
+      "finalSHA256": "4037e0df9cfb08b660ca766fb21ae57558975f6ce7bb8ae19d63124fd7957822",
+      "finalFileViewed": true
+    },
+    {
+      "id": 933,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape editorial hero, 1536 by 1024, for a Hebrew business-law article for an Israeli technology company sharing a Taiwan patent with a development partner. Create an understated still life at table height in an empty prototype workshop meeting room. In the center of a dark walnut table, a small beautifully made modular mechanical prototype: two distinct brushed-metal interlocking halves joined into one functioning compact precision hinge. On opposite sides of it lie two closed plain folders, one warm ivory and one muted deep teal, with two ordinary unmarked pencils. In the softly out-of-focus background a shelf holds simple unmarked tooling parts; soft overcast window light, calm authentic texture, asymmetrical composition with breathing room, realistic editorial photography, restrained no glossy advertising. Scene is fictional and illustrative, not a real client or real patented invention. No people, hands, faces, readable writing, numbers, letters, computer screens, flags, stamps, certificates, seals, logos, brands, watermarks, arrows, keys, chains, padlocks, scales of justice or courthouse imagery.",
+      "selectedOriginal": "/Users/son7/.codex/generated_images/01a17324-7421-72d3-8066-478971ea7af3/exec-ecfe655f-0afa-469a-9974-bba03e1ce1a4.png",
+      "final": "repo/public/images/columns/933-market-expansion-20261025.webp",
+      "inspection": "Actually inspected native generation. Dark walnut table, two plain folders and pencils, one compact interlocking metal hinge prototype; no people, text, logo, flag or real-case evidence. Distinct low-angle workshop scene.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "conversion": "Pillow format conversion only, WEBP quality88 method6; no scene editing by code.",
+      "selectedOriginalSHA256": "ca73dba5032c863d74f8b56bb2f0a2cc9777934c09e7a2f865acc1f6094de88e",
+      "finalSHA256": "e6048d77af3cded5a54553e88c92d2a0f9e9425f5f25f15d4e5db981b7163820",
+      "finalFileViewed": true
+    }
+  ]
+}

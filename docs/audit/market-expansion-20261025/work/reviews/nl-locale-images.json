@@ -1,0 +1,20 @@
+{
+  "reviewer": "/root/expand_locale_nl",
+  "checkedAt": "2026-10-25T13:18:31.700030+00:00",
+  "images": [
+    {
+      "image_path": "public/images/columns/934-market-expansion-20261025.webp",
+      "sha256": "0642ee36a4fb08d9d189c3b1563d77de7eb929f93beebe81ea38a10f046b9f55",
+      "actually_viewed": true,
+      "observations": "Viewed the actual WebP: open machinery enclosure with detached panel, steel workbench, torque wrench, tool case and gloves. Installation/commissioning setting matches the article. No people, readable document, flag or identifiable logo. Non-identifying decorative marks on gloves are not a recognizable brand.",
+      "alt_caption_assessment": "Localized Dutch description accurately describes visible objects; fictional-scene caption is explicit and makes no provenance or authorship claim."
+    },
+    {
+      "image_path": "public/images/columns/935-market-expansion-20261025.webp",
+      "sha256": "228564814ce94325a15636b897ef9d744f9bd05cd649db6b1370ad558da83a61",
+      "actually_viewed": true,
+      "observations": "Viewed the actual WebP: standalone milling machine on shipping base next to open timber crate; foreground closed plain folder and key on packing bench. Distinct delivery/security scene. No people, readable document, flag or identifiable logo.",
+      "alt_caption_assessment": "Localized Dutch description accurately describes visible objects; fictional-scene caption is explicit and makes no provenance or authorship claim."
+    }
+  ]
+}

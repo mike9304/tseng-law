@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-25T13:20:39.952908+00:00",
+  "wrapper_sha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+  "method_review": "work/variety-review/review-final.json",
+  "method_review_sha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+  "records": [
+    {
+      "source_path": "src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md",
+      "sha256": "97d3b2e78a14b54de097dc66ae2a2db9f7abd1591a6aa0422c5e24625cdfbe50",
+      "runs": [
+        {
+          "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md --lang lt",
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'lt' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+        },
+        {
+          "command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md --lang lt",
+          "exit_code": 1,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md [lt] sentences=46 mean=14.7 cv=0.444 short=0.217 run3=0.023 opener_rep=0.125 cite_end=0.0 cite_para=0.312 contrast=0 caveat=1 q=2\n  FAIL len_cv=0.444 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+          "stderr": "OFFICIAL CHECKER: lt unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+        }
+      ]
+    },
+    {
+      "source_path": "src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md",
+      "sha256": "2a0adb3d3c6c2293af7975144367e80fcfe7f3ce51102a314d9dc371090ba0c4",
+      "runs": [
+        {
+          "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md --lang lt",
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'lt' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+        },
+        {
+          "command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md --lang lt",
+          "exit_code": 0,
+          "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md [lt] sentences=49 mean=13.8 cv=0.455 short=0.204 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.6 contrast=0 caveat=1 q=2\n  OK — no variety limit violated\n",
+          "stderr": "OFFICIAL CHECKER: lt unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+        }
+      ]
+    }
+  ]
+}

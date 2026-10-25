@@ -1,0 +1,75 @@
+{
+  "reviewer": "/root/expand_locale_nl",
+  "checkedAt": "2026-10-25T13:34:56.114174+00:00",
+  "reason": "Canonical Dutch fictional-scene caption required by existing repository test; independent rebind requested by root.",
+  "records": [
+    {
+      "source_path": "src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+      "prior_sha256": "3b395842ebc879b6d3d61a3a8bab1bd006f9fd16aaf27113892497f03b7c0425",
+      "current_sha256": "8427d908388f0df5adf9b172935dd14447b2afc3179fd3f79db1cf66f2b1c6de",
+      "caption_before": "\"Fictieve installatieomgeving.\"",
+      "caption_after": "Fictieve scène",
+      "inverse_caption_replacement_matches_prior_full_file_hash": true,
+      "old_body_sha256": "f19cebc87d5272aa68c7da6e020881484345141ccacdb1b70cb61572c4d9058a",
+      "current_body_sha256": "f19cebc87d5272aa68c7da6e020881484345141ccacdb1b70cb61572c4d9058a",
+      "body_bytes_identical": true,
+      "image_bytes_identical": true,
+      "extracted_sentences_and_metrics_identical": true,
+      "diff": "--- prior-approved\n+++ current-caption-normalized\n@@ -11,7 +11,7 @@\n tags: [\"Nederland\", \"machinebouw\", \"installatie\", \"werkvergunning\", \"contractuitvoering\"]\n featured_image: \"/images/columns/934-market-expansion-20261025.webp\"\n featured_image_alt: \"Gereedschapskoffer, momentsleutel en werkhandschoenen op een stalen werktafel naast een geopende machinekast in een fabriek.\"\n-featured_image_caption: \"Fictieve installatieomgeving.\"\n+featured_image_caption: \"Fictieve scène\"\n faq:\n   - q: \"Mag een Nederlandse monteur negentig dagen werken omdat hij visumvrij mag binnenkomen?\"\n     a: \"De visumvrijstelling geeft op zichzelf geen toestemming voor installatiewerk. Voor passende contractwerkzaamheden geldt bij een verblijf van hoogstens dertig dagen een gelijkstelling van het inreisvisum of de inreistoestemming met een werkvergunning. Bij een verblijf van 31 tot en met 90 dagen biedt artikel 12 een aanvraagroute binnen dertig dagen na binnenkomst.\"\n"
+    },
+    {
+      "source_path": "src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+      "prior_sha256": "943a747d79288334da91b9c608ef558bda57ba8754e7acd5eac6c49083f11b01",
+      "current_sha256": "241a1785fea4cfd9b19cd18bff733329caff8dec8721a85ea3d75634ba28cc11",
+      "caption_before": "\"Fictieve machinelevering.\"",
+      "caption_after": "Fictieve scène",
+      "inverse_caption_replacement_matches_prior_full_file_hash": true,
+      "old_body_sha256": "5b245491f005cc44093fae04b9d201e1ed7280df751e403110a6187f9431672c",
+      "current_body_sha256": "5b245491f005cc44093fae04b9d201e1ed7280df751e403110a6187f9431672c",
+      "body_bytes_identical": true,
+      "image_bytes_identical": true,
+      "extracted_sentences_and_metrics_identical": true,
+      "diff": "--- prior-approved\n+++ current-caption-normalized\n@@ -11,7 +11,7 @@\n tags: [\"Nederland\", \"machinebouw\", \"eigendomsvoorbehoud\", \"betaling\", \"registratie\"]\n featured_image: \"/images/columns/935-market-expansion-20261025.webp\"\n featured_image_alt: \"Een freesmachine op een houten transportbodem bij een open kist, met een gesloten documentenmap en sleutel op een paktafel.\"\n-featured_image_caption: \"Fictieve machinelevering.\"\n+featured_image_caption: \"Fictieve scène\"\n faq:\n   - q: \"Maakt een ontbrekende registratie de koop met eigendomsvoorbehoud altijd ongeldig?\"\n     a: \"Artikel 5 verlangt een schriftelijk contract en bepaalt dat een niet-geregistreerde transactie niet aan derden te goeder trouw kan worden tegengeworpen. Dat is geen algemene regel dat het contract tussen koper en verkoper zonder registratie ongeldig is. Andere geldigheidsvereisten blijven wel gelden.\"\n"
+    }
+  ],
+  "supplemental_comparators": [
+    {
+      "source_path": "src/content/columns-nl/704-taiwan-arc-first-application.md",
+      "sha256": "47cb7de8d15fbbbdffe9d0bb2a0ea27e74a313e051a6ebaf8ba72455c0aab3c6",
+      "published": "2026-10-25",
+      "scope_read_now": "title, publication metadata and first two body paragraphs only",
+      "opening_paragraphs": [
+        "Met een verblijfsvisum binnengekomen en toestemming tot verblijf gekregen? Dan moet u binnen 30 dagen een Alien Resident Certificate, kortweg ARC, aanvragen. De termijn begint de dag na aankomst. [Artikel 22 van de Taiwanese immigratiewet](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) legt die verplichting vast. Aanvragen doet u bij de National Immigration Agency (NIA).",
+        "Met een geldig gecombineerd document dat de ARC-functie al vervult, zoals een Employment Gold Card, valt u onder de wettelijke uitzondering op een afzonderlijke aanvraag. Wie als bezoeker binnenkomt, moet eerst in aanmerking komen voor een toegestane verblijfsroute. De 30 dagen zijn geen algemene mogelijkheid om een kort bezoek in verblijf om te zetten."
+      ]
+    },
+    {
+      "source_path": "src/content/columns-nl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "a38063b5a16d9f5b4d44b0a5c1fffdb8b6b3c1de7ca8ab178966a1213135bae7",
+      "published": "2026-10-25",
+      "scope_read_now": "title, publication metadata and first two body paragraphs only",
+      "opening_paragraphs": [
+        "Visumvrij aankomen kan de gebruikelijke verblijfsaanvraag voor een studie in Taiwan uitsluiten. Voor bepaalde buitenlandse professionals bestaat juist een rechtstreekse aanvraag bij de National Immigration Agency (NIA). Die professionele route staat in [artikel 16 van de wet inzake buitenlandse professionals](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295); BOCA stelt andere inreisvoorwaarden voor [reguliere opleidingen](https://www.boca.gov.tw/cp-166-283-c4da3-2.html) en [Chinese taalstudie](https://www.boca.gov.tw/fp-158-260-9690c-2.html).",
+        "Uw nationaliteit en het gebruikte paspoort bepalen welke visa en inreisregelingen beschikbaar zijn. Dat volgt niet uit de taal die u spreekt. De [Taiwanese vertegenwoordiging die uw aanvraag behandelt](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html) verstrekt de vereisten voor uw nationaliteit en buitenlandse documenten."
+      ]
+    },
+    {
+      "source_path": "src/content/columns-nl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "788fcd4f71b5b453c921edb514b48ebe678ca123d9bfac90482b269968b0c37d",
+      "published": "2026-10-25",
+      "scope_read_now": "title, publication metadata and first two body paragraphs only",
+      "opening_paragraphs": [
+        "De einddatum op uw Alien Resident Certificate (ARC) kan later liggen dan de datum waarop uw baan, opleiding of gezinsrelatie eindigt. Valt de grond voor het verblijf weg, dan schrijft [artikel 31 van de Taiwanese immigratiewet](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31) voor dat de National Immigration Agency (NIA) de verblijfsvergunning intrekt en de kaart ongeldig maakt. De wet kent wel omstandigheden waarin de NIA voortgezet verblijf mag toestaan.",
+        "Daarom telt ook de datum van de verandering. Bewaar het document dat die datum vastlegt: een ontslagbrief, bewijs van afstuderen, document over uw gezinssituatie of nieuw huurcontract. De [NIA-verblijfsinstructies](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) verlangen bewijs dat past bij de aangevraagde verlenging of wijziging."
+      ]
+    }
+  ],
+  "supplemental_comparison": "704 covers first residence-card deadline, 705 work/study/family entry eligibility, 706 continuing residence basis. Their openings were read now after main integration, not during the original review. New934 concerns contract-installation staffing and stay/qualification clocks; new935 concerns retention-of-title registration. No generic copied opening was found in this bounded comparison.",
+  "prior_locale_report_sha256": "8117a54ac8145790a68b37d25b1d7877991b88965f30c84937298b203362150f",
+  "prior_locale_md_sha256": "3288523797f29b899307f6ee6a49fba92bd5aa5d8da14932e283408fb5a010a2",
+  "prior_variety_sha256": "6dacc0095bbe3cd032ba21655a00cf070bceeab9f6c727761acce862bdc17321",
+  "limits": [
+    "No manuscript or image edits by reviewer.",
+    "Supplemental NL704–706 comparison is an opening/metadata read, not a full legal/content certification of those articles."
+  ]
+}

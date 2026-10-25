@@ -1,0 +1,5 @@
+{
+  "reviewer": "/root/expand_final_east",
+  "checked_date": "2026-10-25",
+  "result": "Internal Error ()\nciteturn1757view0 [wordlim: 200] Source: open({\"ref_id\":\"https://law.moj.gov.tw/LawClass/LawHistory.aspx?PCode=B0000007\",\"lineno\":null}); Total lines: 1\nL0: URL https://law.moj.gov.tw/LawClass/LawHistory.aspx?PCode=B0000007 is not accessible via this tool.\n--------------------------------------------------------------------------------\n外交部長林佳龍見證財團法人工業技術研究院與立陶宛雷射協會簽署擴大雷射技術合作備忘錄 (https://www.mofa.gov.tw/News_Content.aspx?n=96&s=123017)\nciteturn1757view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn1756view1\",\"pattern\":\"123017\"}); Total lines: 1781\nNo matching text found for \"123017\"--------------------------------------------------------------------------------\n外交部長林佳龍見證財團法人工業技術研究院與立陶宛雷射協會簽署擴大雷射技術合作備忘錄 (https://www.mofa.gov.tw/News_Content.aspx?n=96&s=123017)\nciteturn1757view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({\"ref_id\":\"turn1756view1\",\"pattern\":\"2026年9月4日\"}); Total lines: 1781\nNo matching text found for \"2026年9月4日\""
+}

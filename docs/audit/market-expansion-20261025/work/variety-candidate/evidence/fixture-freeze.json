@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-10-25T13:01:03.605564+00:00",
+  "provenance": "Manually authored neutral expected arrays before first candidate execution. Not machine-generated expected outputs; fresh independent review still required.",
+  "target_manuscripts_or_scores_read": false,
+  "rows": [
+    {
+      "locale": "fil",
+      "path": "candidate/profiles/fil.json",
+      "sha256": "695dd6baf6c83766052baa3efeb28201ee0a106b6e436ca5d6aa909354303334",
+      "sentence": 9,
+      "words": 6,
+      "source": 8,
+      "rhetorical": 10
+    },
+    {
+      "locale": "he",
+      "path": "candidate/profiles/he.json",
+      "sha256": "62556e756b2fd09bee1b8574978d23f3103da0ff0e4bbb40a1f532125128616d",
+      "sentence": 8,
+      "words": 7,
+      "source": 8,
+      "rhetorical": 10
+    },
+    {
+      "locale": "nl",
+      "path": "candidate/profiles/nl.json",
+      "sha256": "0982c731a77395976a66a15d363b234c3719567ada0d279961f5d0cc4494fbfb",
+      "sentence": 9,
+      "words": 6,
+      "source": 8,
+      "rhetorical": 10
+    },
+    {
+      "locale": "pl",
+      "path": "candidate/profiles/pl.json",
+      "sha256": "cdbcd3b2f1f4b999ec1693b12d0d493956c17368ef72998424e490b63e18ed2f",
+      "sentence": 10,
+      "words": 7,
+      "source": 8,
+      "rhetorical": 10
+    },
+    {
+      "locale": "cs",
+      "path": "candidate/profiles/cs.json",
+      "sha256": "b361a081115f144f61f45062aa1ae88d5afeaecfca84a8bd2590bbb007dc0355",
+      "sentence": 12,
+      "words": 7,
+      "source": 8,
+      "rhetorical": 10
+    },
+    {
+      "locale": "lt",
+      "path": "candidate/profiles/lt.json",
+      "sha256": "da801eac299efcd35d428ab1fa623f28a26513378d53e68398684b807f35bf17",
+      "sentence": 12,
+      "words": 7,
+      "source": 8,
+      "rhetorical": 10
+    }
+  ]
+}

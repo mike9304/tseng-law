@@ -1,0 +1,118 @@
+{
+  "reviewer": "/root/expand_locale_hi",
+  "role": "locale",
+  "independentOfAuthor": true,
+  "checkedAt": "2026-10-25T13:27:49.759942+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md",
+      "sha256": "f92e3cabcabac4828d3a0379d9376d150f54eddb4ac209f719088014bda7d969",
+      "verdict": "PASS",
+      "findings": [],
+      "image_sha256": "8bf34a1678089f7017eeb6bb9a959a9834b04a9ee838d91ae245c6da10c39531",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md --lang hi",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/928-indian-minority-investor-taiwan-company-inspector.md [hi] sentences=34 mean=17.6 cv=0.509 short=0.206 run3=0.031 opener_rep=0.167 cite_end=0.0 cite_para=0.583 contrast=0 caveat=0 q=1\n  WARN 59% of sentences end in 'है' — vary endings within the register\n",
+      "variety_evidence": "work/reviews/hi-locale-variety-evidence.json",
+      "resolved_findings": [
+        {
+          "id": "HI-L1",
+          "article": 928,
+          "original_line": 39,
+          "original_sentence": "कंपनी को अपने नियम, पिछली शेयरधारक बैठकों के कार्यवृत्त और वित्तीय विवरण उपलब्ध स्थान पर रखने होते हैं",
+          "reason": "Article 210 identifies the board as the actor and requires the listed documents at the company; उपलब्ध स्थान was an imprecise location and नियम did not identify corporate articles. Live Chinese Article 210 independently opened.",
+          "proposed_rewrite": "निदेशक मंडल को कंपनी के अंतर्नियम, पिछली शेयरधारक बैठकों के कार्यवृत्त और वित्तीय विवरण कंपनी के कार्यालय में रखने होते हैं",
+          "legalMeaningPreserved": false,
+          "legal_change_note": "Substantive precision correction restores actor, corporate articles and location. Securities-authority exception remains unchanged.",
+          "status": "resolved_in_author_repair_1"
+        },
+        {
+          "id": "HI-L2",
+          "article": 928,
+          "original_line": 27,
+          "original_sentence": "अदालत द्वारा नियुक्त जाँचकर्ता यह जाँच करता है।",
+          "reason": "Opening deletion test: the first paragraph already identifies court appointment and the inspection purpose. This sentence adds no distinct condition or actor.",
+          "proposed_rewrite": "Delete this sentence.",
+          "legalMeaningPreserved": true,
+          "status": "resolved_in_author_repair_1"
+        }
+      ],
+      "limitations": [
+        "Original CLI emits a nonblocking 59% है-ending warning; the complete prose was read and the legal declaratives are natural in this Hindi register."
+      ],
+      "caption": "काल्पनिक दृश्य",
+      "caption_rebinding_evidence": "work/reviews/hi-locale-caption-rebinding-evidence.json"
+    },
+    {
+      "source_path": "src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md",
+      "sha256": "4733e8474fbca987ac77441c0f2a6ac0348a050ea713a51840ecbb5f940c9c8a",
+      "verdict": "PASS",
+      "findings": [],
+      "image_sha256": "8fecca91b72f0c95f2a679cdf58f3aff4097a141ba4276083194f76342d1c3f7",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md --lang hi",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-hi/929-indian-technical-service-fees-taiwan-tax-treaty.md [hi] sentences=49 mean=18.2 cv=0.49 short=0.122 run3=0.021 opener_rep=0.125 cite_end=0.0 cite_para=0.625 contrast=1 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "variety_evidence": "work/reviews/hi-locale-variety-evidence.json",
+      "resolved_findings": [
+        {
+          "id": "HI-L3",
+          "article": 929,
+          "original_line": 49,
+          "original_sentence": "स्थायी प्रतिष्ठान और निश्चित आधार की पहचान अपने तथ्य माँगती है।",
+          "reason": "Abstract translated phrasing. The following sentence already identifies concrete locations, activities and contractual performance records.",
+          "proposed_rewrite": "Delete this sentence and begin the paragraph with स्थानीय जगह का उपयोग.",
+          "legalMeaningPreserved": true,
+          "status": "resolved_in_author_repair_1"
+        }
+      ],
+      "limitations": [
+        "The locale reviewer read the preserved official treaty PDF extraction and author-captured Rule 25 full-text response after independent web retrieval failed; the separate final legal reviewer must complete legal/status review."
+      ],
+      "caption": "काल्पनिक दृश्य",
+      "caption_rebinding_evidence": "work/reviews/hi-locale-caption-rebinding-evidence.json"
+    }
+  ],
+  "comparators": [
+    {
+      "source_path": "src/content/columns-hi/704-taiwan-arc-first-application.md",
+      "published": "2026-10-24",
+      "lastmod": "2026-10-24",
+      "sha256": "e9c117570460078783e5f344943bcaebdb76db72fc8a94b150068ca45a58a77d"
+    },
+    {
+      "source_path": "src/content/columns-hi/705-taiwan-visa-residence-work-study-family.md",
+      "published": "2026-10-24",
+      "lastmod": "2026-10-24",
+      "sha256": "282eeaee9aabf69a8eafea04af003bd6bf84732a10b9e7d4e4aef152d0addb8d"
+    },
+    {
+      "source_path": "src/content/columns-hi/706-taiwan-arc-renewal-changes-reentry.md",
+      "published": "2026-10-24",
+      "lastmod": "2026-10-24",
+      "sha256": "32e0945e62394a3c8d5998492e86d632eb30cff9b34ffabcb87a9543235b6a91"
+    }
+  ],
+  "repair_rounds": 1,
+  "unsuccessful_repair_rounds": 0,
+  "limitations": [
+    "Independent AI locale review, not a claim of human native-speaker or licensed-lawyer review.",
+    "This report certifies the exact source/image hashes for locale readiness only. It does not certify publication or public browser rendering.",
+    "Independent web opens succeeded for Company Act 2, 109, 210 and 245. The official MOF treaty download was unsupported application/octet-stream in web; the Rule 25 single endpoint was unavailable. Those failures are preserved in hi-locale-official-opens*.json. The preserved official treaty extraction and captured full regulation response were read; no search snippets substitute for their text."
+  ],
+  "source_evidence": [
+    "work/reviews/hi-locale-official-opens.json",
+    "work/reviews/hi-locale-official-opens-2.json",
+    "work/reviews/hi-author-treaty.pdf",
+    "work/reviews/hi-author-treaty.txt",
+    "work/reviews/hi-author-source-opens.json"
+  ],
+  "author_report_sha256": "9fbe7eaffef2fc02dae5c8f564c8800983f4c8dc528fc76adbbc7b91c0c71ba7",
+  "caption_rebinding": {
+    "evidence": "work/reviews/hi-locale-caption-rebinding-evidence.json",
+    "source": "work/checks/caption-normalization.json",
+    "onlyCaptionChanged": true,
+    "bodyAltAndImagesUnchanged": true,
+    "previous_report": "work/reviews/hi-locale-before-caption-normalization.json",
+    "previous_report_sha256": "9b4ef7ebd848fd73b54a01468922f3dc7a0e7f6c4a9b179f059792d018198d54"
+  }
+}

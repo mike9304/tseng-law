@@ -1,0 +1,134 @@
+{
+  "reviewer": "/root/expand_locale_vi",
+  "role": "locale",
+  "independentOfAuthor": true,
+  "author": "/root/expand_author_vi",
+  "checkedAt": "2026-10-25T13:20:04.667682+00:00",
+  "records": [
+    {
+      "source_path": "src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md",
+      "sha256": "3616a2fddce24e851e2ab9c657b47aee016ff6d5821c41eb1167cc496ef14873",
+      "verdict": "PASS",
+      "findings": [],
+      "image_sha256": "c41c0e82349c0d938850db2c824c67949ec674f9cbfc3d334ce33bc923908d85",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md --lang vi",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/922-vietnamese-tenant-taiwan-deposit-handover-deductions.md [vi] sentences=45 mean=20.8 cv=0.458 short=0.178 run3=0.0 opener_rep=0.188 cite_end=0.0 cite_para=0.375 contrast=1 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "variety_evidence": "work/reviews/vi-locale-variety-final.json",
+      "image_actually_inspected": true,
+      "metadata_faq_alt_caption_reviewed": true,
+      "section5_review": "PASS; details in vi-locale.md",
+      "closed_findings": [
+        {
+          "id": "VI-L01",
+          "source_id": 922,
+          "file_line": "922-vietnamese-tenant-taiwan-deposit-handover-deductions.md:32",
+          "exact_sentence": "Ngược lại, ảnh cho thấy hư hỏng đã có từ trước cũng cần xác định được thời điểm chụp.",
+          "reason": "Ornamental contrast; the photo-date point supplements rather than contradicts the preceding wear analysis.",
+          "proposed_rewrite": "Ảnh cho thấy hư hỏng đã có từ trước cũng cần xác định được thời điểm chụp.",
+          "legal_meaning_preserved": true,
+          "status": "resolved_by_author_and_rechecked"
+        },
+        {
+          "id": "VI-L02",
+          "source_id": 922,
+          "file_line": "922-vietnamese-tenant-taiwan-deposit-handover-deductions.md:65",
+          "exact_sentence": "Cần xác nhận cách trao đổi. Không cam kết tư vấn tiếng Việt. Nhận email chưa phải nhận vụ việc.",
+          "reason": "MONOTONY: fragmented CTA rhythm — three subjectless short declarations. Real service and retainer limits must remain in connected prose.",
+          "proposed_rewrite": "Văn phòng hiện tư vấn bằng tiếng Trung, Anh, Nhật và Hàn; trước khi trao đổi, hai bên cần thống nhất ngôn ngữ và cách liên lạc. Việc tiếp nhận email tiếng Việt không đồng nghĩa văn phòng đã nhận vụ việc hoặc cam kết tư vấn bằng tiếng Việt.",
+          "legal_meaning_preserved": true,
+          "status": "resolved_by_author_and_rechecked"
+        }
+      ],
+      "limitations": [
+        "AI editorial locale review; no human native-speaker or licensed-lawyer claim.",
+        "Foreign Professionals Act Article12 single-article URL inaccessible; current complete official text and MOJ commencement history opened successfully.",
+        "MOJ source assembly cutoff2026-10-16; MOL wage history updated2026-10-21. No claim of exhaustive post-cutoff legal monitoring.",
+        "Current repository service profile checked; no independent live contact-page or browser-rendering verification in this locale review.",
+        "No publication, hydration, live image availability or exhaustive cross-language plagiarism claim."
+      ]
+    },
+    {
+      "source_path": "src/content/columns-vi/923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md",
+      "sha256": "88335b55c5ea00cfac484947d743b1b8f09a32265f97eeef6f011799c0007f2c",
+      "verdict": "PASS",
+      "findings": [],
+      "image_sha256": "788418fe4ca09acbc7d0cc30985d254fa47d5a5192e98c50e022209cf3fc8125",
+      "variety_command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md --lang vi",
+      "variety_exit_code": 0,
+      "variety_stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-vi/923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md [vi] sentences=49 mean=22.4 cv=0.485 short=0.184 run3=0.064 opener_rep=0.167 cite_end=0.0 cite_para=0.278 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "variety_evidence": "work/reviews/vi-locale-variety-final.json",
+      "image_actually_inspected": true,
+      "metadata_faq_alt_caption_reviewed": true,
+      "section5_review": "PASS; details in vi-locale.md",
+      "closed_findings": [
+        {
+          "id": "VI-L03",
+          "source_id": 923,
+          "file_line": "923-vietnamese-graduate-taiwan-probation-pay-work-exemption.md:26",
+          "exact_sentence": "thỏa thuận trả thấp hơn lương tối thiểu hoặc không trả tiền tăng ca không có hiệu lực chỉ vì hai bên gọi đó là thử việc",
+          "reason": "Placement of chỉ vì can misstate the causal explanation of invalidity. MOL probation guidance says the subminimum/no-overtime agreement is invalid.",
+          "proposed_rewrite": "Theo Bộ Lao động, với công việc thuộc phạm vi Luật Tiêu chuẩn lao động Đài Loan, thỏa thuận trả thấp hơn lương tối thiểu hoặc không trả tiền tăng ca trong thời gian thử việc đều vô hiệu.",
+          "legal_meaning_preserved": true,
+          "legal_effect_clarification_for_final_review": true,
+          "official_source": "https://www.mol.gov.tw/1607/28162/28296/81778/81781/82213/post",
+          "status": "resolved_by_author_and_rechecked"
+        }
+      ],
+      "limitations": [
+        "AI editorial locale review; no human native-speaker or licensed-lawyer claim.",
+        "Foreign Professionals Act Article12 single-article URL inaccessible; current complete official text and MOJ commencement history opened successfully.",
+        "MOJ source assembly cutoff2026-10-16; MOL wage history updated2026-10-21. No claim of exhaustive post-cutoff legal monitoring.",
+        "Current repository service profile checked; no independent live contact-page or browser-rendering verification in this locale review.",
+        "No publication, hydration, live image availability or exhaustive cross-language plagiarism claim."
+      ]
+    }
+  ],
+  "comparators": [
+    {
+      "source_path": "src/content/columns-vi/704-taiwan-arc-first-application.md",
+      "published": "2026-10-24",
+      "sha256": "61b01a8bf30e4d997fd70bab01128859ced94e39ff59da4356a0eddee9485bd5",
+      "read_complete": true
+    },
+    {
+      "source_path": "src/content/columns-vi/705-taiwan-visa-residence-work-study-family.md",
+      "published": "2026-10-24",
+      "sha256": "1d7177dde3e0375593d14c441a3a527c74d6e9a2836340a69a805b9e0f3b092d",
+      "read_complete": true
+    },
+    {
+      "source_path": "src/content/columns-vi/706-taiwan-arc-renewal-changes-reentry.md",
+      "published": "2026-10-24",
+      "sha256": "08574be203883e7945b11f2e55206a69f56033dd608430745cf368d889b774ea",
+      "read_complete": true
+    }
+  ],
+  "source_open_evidence": [
+    "work/reviews/vi-locale-source-opens.json",
+    "work/reviews/vi-locale-source-history-and-labor.json"
+  ],
+  "repair_history": [
+    {
+      "round": 1,
+      "922_sha256": "5cee66fc8997f41aa9bb703bc0678af10af23d6a8f7486250d3e4a8f87859527",
+      "922_result": "REQUEST_CHANGES: actual CV.438 FAIL; preserved vi-locale-variety-r1.json",
+      "923_result": "PASS: wording clarification rechecked, CV.485"
+    },
+    {
+      "round": 2,
+      "922_sha256": "3616a2fddce24e851e2ab9c657b47aee016ff6d5821c41eb1167cc496ef14873",
+      "922_result": "PASS after author limited repair to joint inspection/handover term explanation; actual CV.458",
+      "legal_scope_preserved": true
+    }
+  ],
+  "limitations": [
+    "AI editorial locale review; no human native-speaker or licensed-lawyer claim.",
+    "Foreign Professionals Act Article12 single-article URL inaccessible; current complete official text and MOJ commencement history opened successfully.",
+    "MOJ source assembly cutoff2026-10-16; MOL wage history updated2026-10-21. No claim of exhaustive post-cutoff legal monitoring.",
+    "Current repository service profile checked; no independent live contact-page or browser-rendering verification in this locale review.",
+    "No publication, hydration, live image availability or exhaustive cross-language plagiarism claim."
+  ],
+  "unresolved": [],
+  "next_step": "Separate final legal review on these exact SHAs and locale JSON SHA; root owns integration and publication."
+}

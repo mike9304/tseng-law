@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-25T13:18:37.346935+00:00",
+  "status": "PASS",
+  "scope": "Independent editorial measurement method for task-local fil/he/nl/pl/cs/lt extension only; not article review, shared installation or publication authority.",
+  "reviewer": "/root/measure_new_locales_review",
+  "independence": {
+    "authored_candidate": false,
+    "target_articles_read": false,
+    "target_article_scores_read": false,
+    "human_native_or_attorney_claim": false,
+    "own_writes": "work/variety-review/** only"
+  },
+  "candidate_root": "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate",
+  "candidate_manifest": {
+    "path": "/Users/son7/tseng-market-expansion-20261025/work/variety-candidate/evidence/candidate-manifest-repair-r1.json",
+    "sha256": "a495573c7986ac17c8212fefeee51bad1e07f8ea53444eb6424e35ecc481f275"
+  },
+  "reviewed_files": {
+    "variety_metrics.py": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+    "METHOD.md": "7696ab4bccaee2990a1040bb95a70e8ccef2c1c1c97b0e5b7e42fa140f7e9839",
+    "candidate/variety_metrics.py": "f6a53d8265224b5795be95501f317eac018c23dba5b79513c6179fe1caa363c7",
+    "candidate/variety_multilingual.py": "776ab3e4364d2684e0d2b913933e7acc19fc6f01008b5ba042dbc7080e05f531",
+    "candidate/profiles/cs.json": "07aca997353f22983df868222e0aac634ca1c70f3b3e68cd2553bc075618b8b7",
+    "candidate/profiles/fil.json": "9bb87f92fde0d17ec521c2c7b22e40c6eeb272f0b53405d480f07a4b5886cd66",
+    "candidate/profiles/he.json": "ae6d8b60d6546a0adc9813cb16d4a11de8d7158a0fb93b45a11712bf49662983",
+    "candidate/profiles/lt.json": "f536d937faf4c26eadb19d5c8e5a0078dcfbce901501a4a8544c456d2cd02965",
+    "candidate/profiles/nl.json": "8ee2b7074e1ad3778998e87a1a566dff023a3c98c2525200d86c96050cf9dc2e",
+    "candidate/profiles/pl.json": "4137b957699be3977230e27533fcfcd27fb5a3cf5a04cc930ebf4f4c55c81f1d"
+  },
+  "per_locale": {
+    "fil": {
+      "status": "PASS",
+      "frozen_expectations": 35,
+      "exact_matches": 34,
+      "accepted_method_conventions": 1,
+      "unresolved_material_findings": 0
+    },
+    "he": {
+      "status": "PASS",
+      "frozen_expectations": 37,
+      "exact_matches": 37,
+      "accepted_method_conventions": 0,
+      "unresolved_material_findings": 0
+    },
+    "nl": {
+      "status": "PASS",
+      "frozen_expectations": 34,
+      "exact_matches": 34,
+      "accepted_method_conventions": 0,
+      "unresolved_material_findings": 0
+    },
+    "pl": {
+      "status": "PASS",
+      "frozen_expectations": 35,
+      "exact_matches": 35,
+      "accepted_method_conventions": 0,
+      "unresolved_material_findings": 0
+    },
+    "cs": {
+      "status": "PASS",
+      "frozen_expectations": 37,
+      "exact_matches": 37,
+      "accepted_method_conventions": 0,
+      "unresolved_material_findings": 0
+    },
+    "lt": {
+      "status": "PASS",
+      "frozen_expectations": 37,
+      "exact_matches": 37,
+      "accepted_method_conventions": 0,
+      "unresolved_material_findings": 0
+    }
+  },
+  "independent_checks": {
+    "frozen_expectations": 215,
+    "frozen_exact_matches": 214,
+    "full_recheck_total": 334,
+    "full_recheck_exact_matches": 333,
+    "supplemental_total": 114,
+    "supplemental_exact_matches": 114,
+    "combined_total": 448,
+    "combined_exact_matches": 447,
+    "accepted_method_conventions": 1,
+    "unresolved_material_findings": 0
+  },
+  "accepted_convention": {
+    "fixture_id": "fil-words-1",
+    "status": "ACCEPTED_CONVENTION_DIFFERENCE_NOT_ERASED",
+    "original_reviewer_expected": [
+      "siya’y",
+      "pag",
+      "ibig",
+      "araw",
+      "araw"
+    ],
+    "accepted_author_preexecution_convention": [
+      "siya’y",
+      "pag-ibig",
+      "araw-araw"
+    ],
+    "reason": "The author froze hyphen-preserving Filipino orthographic units before any candidate execution; independent review accepted the choice after opening KWF §§11.1 and 11.3. Numeric ranges remain split and HARD/8/32 limits unchanged. No target scores informed this decision.",
+    "source": "https://kwfwikaatkultura.ph/download/21720/?tmstv=1710437195",
+    "frozen_file_unchanged": true,
+    "separate_accepted_expectation_test": "supplemental-results.json: accepted-fil-hyphen-convention"
+  },
+  "repairs": {
+    "independent_review_passes": 2,
+    "author_targeted_repairs": 1,
+    "first_pass_discrepancies": 27,
+    "corrected_discrepancies": 26,
+    "accepted_conventions": 1,
+    "hard_threshold_changes": 0
+  },
+  "existing14": {
+    "neutral_metric_comparisons": 28,
+    "neutral_score_comparisons": 28,
+    "directory_routes": 14,
+    "old_extension_profile_byte_hashes": 10,
+    "observed_differences": 0,
+    "all_inputs_equivalence_claim": false,
+    "current_article_corpus_replayed": false
+  },
+  "original_checker_support_for_new6": "unsupported; wrapper labels original exit 2 and separate local measurement",
+  "evidence": {
+    "neutral-fixtures.json": "41b6641d7f683f508b1db0a68984b46eedc903cc0aee1732b57a3191bd515511",
+    "independent-results-r1.json": "e609821c553ebac218e3ddbaaf86cdf0e50823247e4d96e1186a37daa67b2da4",
+    "review-r1.md": "58be760dda848269428ffb4d5a0e86f63cee2a117e0207e5b6c4be12eea41b93",
+    "independent-results-r2.json": "00a7fcde984c6d6c2dc65e754e090e1365efd24268f261233f9cf23c0a36a166",
+    "supplemental-results.json": "b35a51c1846c1de49292b3a9317dd64c0d6a7c6ba5a5155dcc28765af60bdd4d",
+    "run-independent-review.py": "e0cefec2cfe57e5a4a6849aff6456642d755f045738d8dd7565cfd42eb5016bc",
+    "run-supplemental.py": "d552862490cfd1e76c07a99cf3029ad7f33f19167a60a570c0c480a5af047bbf"
+  },
+  "limits": [
+    "Finite AI editorial idiom and segmentation fixtures, not human native-speaker certification, full syntax parsing or exhaustive coverage.",
+    "Orthographic units differ in semantic load; unchanged 8/32 and HARD limits are operational heuristics, not empirically validated equal readability.",
+    "Actual extracted sentences and section-5 prose/legal self-check remain necessary for each article; no target manuscripts or actual article scores were read.",
+    "Hebrew single quotes can be ambiguous, Latin terminal abbreviations in Hebrew lack a capitalization cue, Czech lowercase continuation after a bare terminal number is heuristic, uncommon abbreviations/initials/quotes need inspection.",
+    "Source-tail recognition is restricted to standalone headings. Headings/lists/tables remain outside prose metric scope as before.",
+    "Formula/email cues are review signals; do not remove a necessary disclaimer, citation, legal condition or useful document-delivery step to satisfy style.",
+    "Existing14 synthetic regressions and code isolation were checked; no full current-article-corpus equivalence claim.",
+    "Global checker remains unchanged. Unsupported languages and missing/invalid Thai boundaries remain unavailable; this PASS grants no installation or publication authority."
+  ]
+}

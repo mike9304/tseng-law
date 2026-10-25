@@ -1,0 +1,381 @@
+{
+  "locale": "pl",
+  "date": "2026-10-25",
+  "role": "author",
+  "status": "AUTHOR_READY_PENDING_INDEPENDENT_FINAL_CERTIFICATION",
+  "independentReview": false,
+  "sourceEvidence": "work/reviews/pl-author-source-evidence.json",
+  "imageEvidence": "work/images/pl-generation.json",
+  "rulesRead": [
+    "repo/AGENTS.md",
+    "repo/docs/columns/EDITORIAL-VOICE.md",
+    "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+    "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+    "/Users/son7/tseng-lanes-shared/LESSONS.md",
+    "/Users/son7/.codex/skills/tseng-law-editorial/SKILL.md",
+    "/Users/son7/.codex/skills/tseng-law-editorial/references/review-criteria.md",
+    "/Users/son7/.codex/skills/.system/imagegen/SKILL.md",
+    "work/AUTHOR-BRIEF.md",
+    "work/research/east-briefs.md"
+  ],
+  "comparators": [
+    {
+      "path": "repo/src/content/columns-pl/870-polish-company-taiwan-subsidiary-branch-office.md",
+      "published": "2026-10-24",
+      "comparison": "Question opening, operating-role chart, company/branch/office, investment/tax. 940 uses payment effect and agency evidence;941 product-liability actors/recall. Neither repeats formation guide."
+    },
+    {
+      "path": "repo/src/content/columns-pl/871-polish-working-holiday-taiwan-six-month-work.md",
+      "published": "2026-10-24",
+      "comparison": "Six-month numeric opening and immigration/work/insurance sequence. New pair targets business decision makers; no visa/ARC copy."
+    },
+    {
+      "path": "repo/src/content/columns-pl/872-polish-exporter-taiwan-unpaid-euro-invoices.md",
+      "published": "2026-10-24",
+      "comparison": "Hypothetical Polish exporter unpaid afterdelivery; limitation/payment order/attachment.940 reverses commercial direction and asks discharge after fraud, not normal debt collection.941 safety/consumer injury not commercial warranty."
+    }
+  ],
+  "marketEvidence": [
+    {
+      "url": "https://poland.tw/web/tajwan/informator-ekonomiczny",
+      "observation": "Official Polish representative office table: Taiwan statistics full2025 bilateral USD2543m, Taiwan exports toPoland2060m, importsfromPoland483m. Distinct from Polish GUS Jan–Nov table. No volume or conversion claim. Kept out of article intro as unnecessary."
+    },
+    {
+      "url": "https://www.gov.pl/web/development-technology/polish-business-mission-to-taiwan--a-new-opening-in-economic-relations",
+      "observation": "Official8July2025 account of economic mission30June–4July2025. Evidence of trade-development activity, not safety incidents or fraud prevalence."
+    }
+  ],
+  "lawStatus": [
+    {
+      "law": "Civil Code",
+      "history": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001",
+      "status": "Current MOJ history updated17Aug2026. Pending166-1/1223 notices do not include169/309/310. No future amendment represented as current."
+    },
+    {
+      "law": "Consumer Protection Act",
+      "history": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0170001",
+      "status": "Current last amendment17June2015. Discussed2/7/7-1/8/9/10/10-1 currently effective. Publication vs delayed2(10)(11)/18–19-2 distinguished."
+    },
+    {
+      "law": "PIL",
+      "history": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000007",
+      "status": "Current26May2010 full amendment; history says effective one year after promulgation.18/20/26 direct current text inspected. Initial direct historyopenfailed; following officialhistorylink succeeded."
+    }
+  ],
+  "selfCheckSection5": {
+    "measurement": "Approved task-local PL extension final exact-SHA:94044sentences CV0.464 short0.205,94151sentences CV0.457 short0.216; both exit0 with no HARD limits violated. Original shared CLI remains unsupported exit2.",
+    "openings": "Neither stockhypothetical. Both concrete legaldecision openings distinct from recent870question/871number/872hypothetical. Root must evaluate fullbatch opening share.",
+    "shortSentences": "Actual approved extension measures940short share0.205 and9410.216, both above0.08; no empty short filler added.",
+    "paragraphStarts": "Manual prose-paragraph check: W at most twice in each; other lexical starts not repeated3times. Tables/source tail treated separately.",
+    "citationRhythm": "No3claim-citation-however paragraphs; sources placed as subject/inline and topic evidence. Practical documentary paragraphs have no legalcites because they are recommendations, not asserted statutory mandates.",
+    "contrast": "No notXbutY formula series; operative limits/exceptions preserved.",
+    "endings": "940 ends on approvedaccount/change/confirmation chronology;941 ends on matchingbatch/report/returnedunits. CTA before that, once only.",
+    "registerAndProvenance": "Professional Polish. No bold, duplicateH1, invented case/client/experience, public author/byline/humanreview assertion. Internalauthor retained.",
+    "legalIntegrity": "All listedexceptions, legalconditions, causation, proofburdens preserved. No numeric deadline invention. No Poland-law conclusion. Fourconsultationlanguages and no automaticretainer preserved."
+  },
+  "measurementRuns": [
+    {
+      "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "sha256": "06813fc5597240ed39d513e1e88df483dec85cd8f277f89d1baaa41003b6f4ca",
+      "exitCode": 2,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md; supply --lang\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "sha256": "17382511050d47b947e9ff81276b2b5f8cb5999ebe62aa86f679eb0546c580e7",
+      "exitCode": 2,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md; supply --lang\n",
+      "stderr": ""
+    }
+  ],
+  "measurementNote": "Final exact-SHA shared CLI remains exit2 unsupported. Independently reviewed task-local wrapper yields exit0 and zero violated HARD limits for both final files. It is not installed as the shared checker.",
+  "articles": [
+    {
+      "id": 940,
+      "path": "repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "sha256": "06813fc5597240ed39d513e1e88df483dec85cd8f277f89d1baaa41003b6f4ca",
+      "decision": "Polish importer: whether payment to a changed bank account discharged the Taiwan supplier debt, and which communications establish recipient authority.",
+      "openingType": "Concrete legal consequence of a payment confirmation",
+      "deletionTest": [
+        {
+          "paragraph": 1,
+          "sentence": 1,
+          "keepBecause": "Distinguishes a bank transfer confirmation from proof that the supplier's price was paid."
+        },
+        {
+          "paragraph": 1,
+          "sentence": 2,
+          "keepBecause": "States Taiwan-law premise, proper-performance/authorized-recipient/acceptance elements with Civil309 source."
+        },
+        {
+          "paragraph": 2,
+          "sentence": 1,
+          "keepBecause": "Gives the immediate practical bank and real-supplier contacts."
+        },
+        {
+          "paragraph": 2,
+          "sentence": 2,
+          "keepBecause": "Specifies previously verified contact data, and connects this precise recommendation to Europol."
+        },
+        {
+          "paragraph": 2,
+          "sentence": 3,
+          "keepBecause": "Separates reporting from the bank's case-specific ability to stop or recover the funds; no return guarantee."
+        }
+      ],
+      "shortSentenceExamples": [
+        "Znaczenie ma wybór stron.",
+        "To szczególna kategoria prawna.",
+        "Potrzebne są również oryginalne załączniki."
+      ],
+      "claimSources": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=309",
+          "claims": "Performance according to debt; creditor or authorized recipient acceptance; signed receipt holder presumption with knowledge/negligent ignorance exception."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=310",
+          "claims": "Third-party payment ratification or subsequent acquisition; quasi-possessor with debtor ignorance; creditor actual benefit extent. Chinese controls; English mistranslation not used."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=169",
+          "claims": "Principal's own representation or knowingly not objecting; third party knew/could know exception."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+          "claims": "Contract choice of law then closest connection; characteristic-performance presumption."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=18",
+          "claims": "Separate agency authority question between principal and counterparty; express agreement then closest connection to agency act."
+        },
+        {
+          "url": "https://www.europol.europa.eu/sites/default/files/documents/pl_0.pdf",
+          "claims": "Invoice fraud involves purported supplier/creditor and new controlled bank account; use previously obtained contact details, not suspicious-message details. Actual opened PDF text page3, lines142–153 and175–183."
+        }
+      ],
+      "repairRound1": [
+        {
+          "before": "uregulował cenę wobec",
+          "after": "zapłacił cenę należną",
+          "reason": "Native Polish payment collocation; legal meaning preserved."
+        },
+        {
+          "before": "prawo zobowiązania umownego",
+          "after": "prawo właściwe dla zobowiązania umownego",
+          "reason": "Precise conflicts terminology; legal meaning preserved."
+        }
+      ],
+      "priorLocaleRepair1Sha256": "a163e85a051394b23172d1a77c57fee5b810a17f91da0fac036f015995f44820",
+      "measurementFinal": {
+        "path": "repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+        "sha256": "06813fc5597240ed39d513e1e88df483dec85cd8f277f89d1baaa41003b6f4ca",
+        "command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md --lang pl",
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md [pl] sentences=44 mean=15.4 cv=0.464 short=0.205 run3=0.048 opener_rep=0.0 cite_end=0.0 cite_para=0.4 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": "OFFICIAL CHECKER: pl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+      },
+      "concurrentCaptionNormalizationPreserved": "Scena fikcyjna",
+      "metricRepairSummary": "Reconnected authorization documents and intrusion path in one paragraph, then stated that intrusion location alone does not establish authority. No change to agency/discharge/damages rules.",
+      "metricRepairCount": 1
+    },
+    {
+      "id": 941,
+      "path": "repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "sha256": "17382511050d47b947e9ff81276b2b5f8cb5999ebe62aa86f679eb0546c580e7",
+      "decision": "Polish consumer-product manufacturer/exporter: respond to Taiwan injury/safety report and determine recall/cost-recourse duties without misreading importer allocation as consumer-liability cap.",
+      "openingType": "Importer statutory status and incident-response roles",
+      "deletionTest": [
+        {
+          "paragraph": 1,
+          "sentence": 1,
+          "keepBecause": "States importer-as-manufacturer statutory responsibility, including product made in Poland."
+        },
+        {
+          "paragraph": 1,
+          "sentence": 2,
+          "keepBecause": "Identifies importer/designer/manufacturer as separate participants that must be established."
+        },
+        {
+          "paragraph": 1,
+          "sentence": 3,
+          "keepBecause": "Prevents a brand name from substituting identification of legal role."
+        },
+        {
+          "paragraph": 2,
+          "sentence": 1,
+          "keepBecause": "Sets out simultaneous product-safety and injury-liability decisions."
+        },
+        {
+          "paragraph": 2,
+          "sentence": 2,
+          "keepBecause": "States costs dispute does not change immediate recall conditions, with Art10 source."
+        },
+        {
+          "paragraph": 2,
+          "sentence": 3,
+          "keepBecause": "Connects the same batch records to both safety and injury-response tasks."
+        }
+      ],
+      "shortSentenceExamples": [
+        "Nazwa marki nie zastępuje ustalenia tych ról.",
+        "Dokumentacja partii jest potrzebna do obu zadań.",
+        "Jeden podmiot może pełnić kilka ról."
+      ],
+      "claimSources": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=2",
+          "claims": "Consumption-purpose consumer scope, economic operators."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=7",
+          "claims": "Reasonably expected safety at distribution under scientific/professional level; warnings/emergency directions; violation causing consumer/third-party damage; solidarity; lack of fault discretionary reduction not automatic exemption."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=7-1",
+          "claims": "Business bears burden of its safety-compliance assertion; later better product insufficient alone to establish past unsafe product."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=8",
+          "claims": "Distributor joint responsibility; due-care or damage unavoidable despite due-care exceptions; modification/repackaging treated underArt7."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=9",
+          "claims": "Importer bears manufacturer liability underArt7."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=10",
+          "claims": "Facts sufficient to recognize safety/health risk require immediate batch recall; necessary-measures-sufficient exception; warning/emergency-method noncompliance extension."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0170001&flno=10-1",
+          "claims": "No advance agreement limiting/excluding statutory consumer/third-party damages liability in section."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=26",
+          "claims": "Normal use/consumption manufacturer national-law default; victim selection of injury/place-of-purchase/victim-national law conditioned on prior consent or foreseeability of sales in that territory."
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000007&flno=20",
+          "claims": "Contract claims choice-of-law treatment separately from product-injury rule."
+        }
+      ],
+      "repairRound1": [
+        {
+          "before": "Ustawa rozróżnia importera od dystrybutora",
+          "after": "Ustawa odróżnia importera od dystrybutora",
+          "reason": "Native collocation; legal scope preserved."
+        },
+        {
+          "before": "jeśli zabrakło widocznego ostrzeżenia oraz informacji o postępowaniu w razie niebezpieczeństwa",
+          "after": "jeśli nie spełniono obowiązku zamieszczenia widocznego ostrzeżenia wraz z informacjami o postępowaniu w razie niebezpieczeństwa",
+          "reason": "Clarifies failure of combined statutory warning/emergency-information duty; avoids suggesting both components must be absent. Independent final legal reviewer agreed via message; final certification pending."
+        },
+        {
+          "before": "Polisa wymaga osobnego odczytania, zwłaszcza warunków powiadomienia ubezpieczyciela.",
+          "after": "Polisę trzeba sprawdzić osobno, zwłaszcza warunki powiadomienia ubezpieczyciela.",
+          "reason": "Natural business Polish; no legal rule changed."
+        }
+      ],
+      "priorLocaleRepair1Sha256": "5a4608ffd47e23663005ba9c77500e263b422d3907ff3b149ee6d39ff8ac8bc5",
+      "measurementFinal": {
+        "path": "repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+        "sha256": "17382511050d47b947e9ff81276b2b5f8cb5999ebe62aa86f679eb0546c580e7",
+        "command": "python3 /Users/son7/tseng-market-expansion-20261025/work/variety-candidate/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md --lang pl",
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md [pl] sentences=51 mean=15.3 cv=0.457 short=0.216 run3=0.0 opener_rep=0.059 cite_end=0.0 cite_para=0.588 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": "OFFICIAL CHECKER: pl unsupported (exit 2; not a measured PASS).\nTASK-LOCAL EXTENSION: original HARD thresholds; not installed as the shared checker.\n"
+      },
+      "concurrentCaptionNormalizationPreserved": "Scena fikcyjna",
+      "metricRepairSummary": "Repair1 failed and was retained. Repair2 connects importer report fields with later photo/product-examination comparison, while preserving the separate original sentences on simultaneous hazard removal and no continued sale of a recalled batch. No change to Art10(2), FAQs or sources.",
+      "metricRepairCount": 2
+    }
+  ],
+  "limitations": [
+    "AI author self-check only; exact-final-SHA independent Polish locale and legal certification are issued separately.",
+    "No measured market searchvolume, conversion, leads or incident frequency.",
+    "EuropolPDF text opened successfully; screenshotattempt failed. Other reviewers may need savedtooltext because theirsourceopenstimedout.",
+    "No Polish-law advice or service-languagepromise.",
+    "No publication or browservisualQA by author."
+  ],
+  "measurementRunsBeforeLocaleRepair": [
+    {
+      "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "4f12c6",
+        "wall_time_seconds": 6.333e-06,
+        "exit_code": 2,
+        "original_token_count": 84,
+        "output": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md; supply --lang\n"
+      }
+    },
+    {
+      "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "6f8174",
+        "wall_time_seconds": 6.459e-06,
+        "exit_code": 2,
+        "original_token_count": 84,
+        "output": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md; supply --lang\n"
+      }
+    },
+    {
+      "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md --lang pl",
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "ccd287",
+        "wall_time_seconds": 5.167e-06,
+        "exit_code": 2,
+        "original_token_count": 101,
+        "output": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'pl' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+      }
+    }
+  ],
+  "originalSharedRunsAtLocaleRepair1": [
+    {
+      "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "sha256": "a163e85a051394b23172d1a77c57fee5b810a17f91da0fac036f015995f44820",
+      "exitCode": 2,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md; supply --lang\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "sha256": "5a4608ffd47e23663005ba9c77500e263b422d3907ff3b149ee6d39ff8ac8bc5",
+      "exitCode": 2,
+      "stdout": "/Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/941-polish-brand-taiwan-consumer-injury-importer-recall.md; supply --lang\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check /Users/son7/tseng-market-expansion-20261025/repo/src/content/columns-pl/940-polish-importer-taiwan-invoice-bank-change-payment.md --lang pl",
+      "sha256": "a163e85a051394b23172d1a77c57fee5b810a17f91da0fac036f015995f44820",
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'pl' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi')\n"
+    }
+  ],
+  "approvedLocalMeasurement": {
+    "evidence": "work/reviews/pl-author-metric-final.json",
+    "methodSha256": "44c287ea5f6e26b694881418acebf4c9c115b87b2a965ea0c10a43fb1830e2e5",
+    "approval": "work/variety-review/review-final.json",
+    "approvalSha256": "f0cfcfea6e841dd0ed59df3b2727fd74bb236604d0991e124b88bceb12c3659c",
+    "allExitZero": true,
+    "globalCheckerUnchanged": true
+  },
+  "failurePreservation": [
+    "work/reviews/pl-author-940-before-metric-r1-FAIL.md",
+    "work/reviews/pl-author-941-before-metric-r1-FAIL.md",
+    "work/reviews/pl-author-941-before-metric-r2-FAIL.md",
+    "work/reviews/pl-author-failure-preservation.json"
+  ],
+  "independentLocaleReceipt": {
+    "path": "work/reviews/pl-locale.json",
+    "sha256": "ef78fa420ae1f373b69ab28acc8a554e5b1d4fc52aed6920b50e2f1de496837b",
+    "status": "PASS",
+    "receivedFrom": "/root/expand_locale_pl",
+    "authorDidNotCertifyReview": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-25T13:08:45.876292+00:00",
+  "existing_fixture_sources": [
+    {
+      "path": "/Users/son7/tseng-arc-visas-20261024/work/vi-measurement/test_candidate.py",
+      "sha256": "055cbacaadd9bcc0bc014d1a7570f1d99224ed480ec3caaf350df39758aaef87"
+    },
+    {
+      "path": "/Users/son7/tseng-arc-visas-20261024/work/vi-measurement/profile-author.md",
+      "sha256": "8bed74dc77b6211b23439f46da611ce6fac9c67e8bcecb22faf9cc4cb8b4efd0"
+    }
+  ],
+  "new_examples": "fixtures/author_profiles.py: manually fixed before execution, not candidate outputs",
+  "target_manuscripts_or_scores_read": false
+}

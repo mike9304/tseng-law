@@ -511,3 +511,5 @@
 - 10-26 00:16 KST 대기: 원격=로컬(5c4a274), Air 00:11 push 확인. Studio 00:10 커밋은 grok NOTES뿐, Astra 채택 판정 대기.
 - 10-26 00:26 KST 대기: ref 재정렬(99c563e), Air 00:16 push 확인(a1b888f). Studio 00:20 커밋은 grok NOTES뿐, Astra 채택 판정 대기.
 - 10-26 00:36 KST 대기: ref 재정렬(3401292), Air 00:26 push 확인(49fb10d). Studio 00:30 커밋은 grok NOTES뿐, Astra 채택 판정 대기.
+- 10-26 00:47 KST 쉼: 디스크 부족(1.1Gi 남음, 100%). 00:41 sync 실패(No space left on device), 앞 회차엔 shallow 충돌도 있었음. 범위 밖 삭제 안 함. HANDOFF-air에 알림 1줄. 공간 확보 전까지 fetch 감시·쓰기 중지.
+- 10-26 00:57 KST 쉼 유지: 디스크 여전히 1.1Gi(100%). 00:46 Air push는 성공(5e0f6c1, 알림 반영). ref 재정렬(5d14f20). Studio 변화 grok NOTES뿐, Astra 판정 대기. 백그라운드 감시는 띄우지 않음.

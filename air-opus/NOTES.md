@@ -518,3 +518,5 @@
 - 10-26 01:26 KST 쉼 유지: 디스크 2.3Gi(100%). Air 01:16 push 확인(554e312), ref 재정렬(de1a4ce). Studio 변화 grok NOTES뿐, Astra 판정 대기.
 - 10-26 01:36 KST 쉼 유지: 디스크 2.3Gi(100%). Air 01:26 push 확인(8a585ca), ref 재정렬(c6b9cea). Studio 변화 grok NOTES뿐, Astra 판정 대기.
 - 10-26 01:46 KST 쉼 유지: 디스크 123Mi로 악화. Air 01:36 push 확인(41155f9), ref 재정렬(9039418). Studio 변화 grok NOTES뿐. HANDOFF-air 갱신 1줄.
+- 10-26 02:26 KST 쉼: 01:56~02:16 ENOSPC로 명령 실행 불가(그동안 기록 못 함). 02:26 여유 197Mi, 여전히 위험. 쓰기 최소화 위해 fetch 생략.
+- 10-26 02:37 KST 쉼: 디스크 209Mi, Air sync 계속 ENOSPC 실패(마지막 push 01:46). 원격 변화는 gh api로만 확인.

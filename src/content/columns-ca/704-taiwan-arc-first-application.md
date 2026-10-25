@@ -2,9 +2,9 @@
 title: "El primer ARC a Taiwan: terminis, documents i recollida"
 seoTitle: "Primer ARC a Taiwan: sol·licitud i terminis"
 summary: "El termini del primer ARC depèn de com heu entrat i de quan s’ha expedit el visat. El motiu de residència determina els documents i la via de sol·licitud."
-published: "2026-10-25"
-lastmod: "2026-10-25"
-date_display: "25 d’octubre de 2026"
+published: "2026-10-26"
+lastmod: "2026-10-26"
+date_display: "26 d’octubre de 2026"
 read_time: "7 min de lectura"
 categories: ["Informació jurídica de Taiwan"]
 topic: "visa"

@@ -2,9 +2,9 @@
 title: "Boravak na Tajvanu zbog rada, studija ili obitelji"
 seoTitle: "Tajvan: viza i boravak za rad, studij i obitelj"
 summary: "Mogućnost prijave boravka na Tajvanu ovisi o razlogu dolaska i načinu ulaska. Stručni rad, redovni studij, učenje mandarinskog i obitelj imaju različite uvjete."
-published: "2026-10-25"
-lastmod: "2026-10-25"
-date_display: "25. listopada 2026."
+published: "2026-10-26"
+lastmod: "2026-10-26"
+date_display: "26. listopada 2026."
 read_time: "6 min čitanja"
 categories: ["Pravne informacije o Tajvanu"]
 topic: "visa"

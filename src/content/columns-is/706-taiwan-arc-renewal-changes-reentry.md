@@ -2,9 +2,9 @@
 title: "ARC á Taívan eftir starfslok, flutning eða fyrirhugaða ferð"
 seoTitle: "Framlenging ARC, breytingar og endurkoma til Taívan"
 summary: "Lokadagur ARC er aðeins einn af frestunum. Nýtt heimili, starfslok eða breytt fjölskyldustaða geta kallað á fyrri umsókn, og endurkoma þarf gild gögn."
-published: "2026-10-25"
-lastmod: "2026-10-25"
-date_display: "25. október 2026"
+published: "2026-10-26"
+lastmod: "2026-10-26"
+date_display: "26. október 2026"
 read_time: "8 mín. lestur"
 categories: ["Lagaupplýsingar um Taívan"]
 topic: "visa"

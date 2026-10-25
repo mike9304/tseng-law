@@ -2,9 +2,9 @@
 title: "Prva iskaznica ARC na Tajvanu: od zahtjeva do preuzimanja"
 seoTitle: "Prvi ARC na Tajvanu: rokovi, dokumenti i naknade"
 summary: "Datum ulaska i datum izdavanja boravišne vize mogu pokrenuti različite rokove za prvi ARC. Dokumenti i način prijave ovise o radu, studiju ili obiteljskom boravku."
-published: "2026-10-25"
-lastmod: "2026-10-25"
-date_display: "25. listopada 2026."
+published: "2026-10-26"
+lastmod: "2026-10-26"
+date_display: "26. listopada 2026."
 read_time: "6 min čitanja"
 categories: ["Pravne informacije o Tajvanu"]
 topic: "visa"

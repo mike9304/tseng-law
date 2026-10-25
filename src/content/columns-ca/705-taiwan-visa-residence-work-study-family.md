@@ -2,9 +2,9 @@
 title: "Residència a Taiwan per treball, estudis o família"
 seoTitle: "Visat i residència a Taiwan: treball, estudis i família"
 summary: "La feina prevista, el tipus d’estudis i la situació del familiar a Taiwan determinen la via de residència. La modalitat d’entrada també en condiciona l’accés."
-published: "2026-10-25"
-lastmod: "2026-10-25"
-date_display: "25 d’octubre de 2026"
+published: "2026-10-26"
+lastmod: "2026-10-26"
+date_display: "26 d’octubre de 2026"
 read_time: "7 min de lectura"
 categories: ["Informació jurídica de Taiwan"]
 topic: "visa"

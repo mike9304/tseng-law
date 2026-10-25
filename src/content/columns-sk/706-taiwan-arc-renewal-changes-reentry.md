@@ -2,9 +2,9 @@
 title: "Predĺženie ARC, zmena pobytu a návrat na Taiwan"
 seoTitle: "Taiwanská ARC: predĺženie, zmeny a opätovný vstup"
 summary: "Dátum na ARC je iba jednou lehotou. Sťahovanie, zmena zamestnania alebo zánik dôvodu pobytu môžu vyžadovať skoršie podanie; pri ceste musia doklady pokrývať návrat."
-published: "2026-10-25"
-lastmod: "2026-10-25"
-date_display: "25. októbra 2026"
+published: "2026-10-26"
+lastmod: "2026-10-26"
+date_display: "26. októbra 2026"
 read_time: "8 min čítania"
 categories: ["Právne informácie o Taiwane"]
 topic: "visa"

@@ -3,7 +3,7 @@ title: "Uw eerste ARC in Taiwan: aanvraagtermijn, documenten en afhalen"
 seoTitle: "Uw eerste ARC in Taiwan aanvragen"
 summary: "Voor uw eerste ARC in Taiwan hangen de termijn, documenten en aanvraagroute af van uw binnenkomst en verblijfsdoel. Ook betaling en afhalen vragen aandacht."
 published: "2026-10-25"
-lastmod: "2026-10-25"
+lastmod: "2026-10-26"
 date_display: "25 oktober 2026"
 read_time: "7 minuten leestijd"
 categories: ["Juridische informatie over Taiwan"]
@@ -81,7 +81,7 @@ Gewone aanvragen hebben volgens de [NIA een behandeltijd van tien werkdagen](htt
 
 Bij de [online studentenprocedure](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) is de behandeltijd vijf werkdagen, exclusief onder meer de tijd voor het aanvullen van stukken. Na aanvulling begint de telling opnieuw.
 
-Vanaf de goedkeuring heeft u vijf werkdagen om te betalen. Een elektronische ARC voor maximaal zes maanden kunt u na betaling downloaden en afdrukken. Voor een kaart met chip drukt u het online betaalbewijs af en haalt u de kaart drie werkdagen na betaling op bij het gekozen NIA-servicecentrum. Deze betaal- en afhaaltermijnen horen bij de studentenprocedure. Andere aanvragers volgen hun eigen besluit en afhaalinstructies.
+Vanaf de goedkeuring heeft u vijf werkdagen om te betalen. Een elektronische ARC voor maximaal zes maanden moet u na betaling downloaden en afdrukken. Voor een kaart met chip drukt u het online betaalbewijs af en haalt u de kaart drie werkdagen na betaling op bij het gekozen NIA-servicecentrum. Deze betaal- en afhaaltermijnen horen bij de studentenprocedure. Andere aanvragers volgen hun eigen besluit en afhaalinstructies.
 
 Vergelijk na ontvangst uw naam, paspoortgegevens, adres en einddatum met de goedgekeurde aanvraag. Werk mag u vervolgens alleen verrichten binnen een toepasselijke vergunning of vrijstelling, zoals geregeld in [artikelen 43 en 48 van de wet op de arbeidsbemiddeling](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001). Bij een verhuizing, nieuwe baan of reis worden de [regels voor verlenging, wijzigingen en terugkeer](/nl/columns/taiwan-arc-renewal-changes-reentry) relevant. Bewaar de beschikking, kaartgegevens en ingediende stukken bij elkaar voor die volgende aanvraag.
 

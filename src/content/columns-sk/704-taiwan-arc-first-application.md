@@ -2,9 +2,9 @@
 title: "Prvá ARC na Taiwane: odkedy plynie lehota a čo doložiť"
 seoTitle: "Prvá taiwanská ARC: žiadosť, doklady a poplatky"
 summary: "Po vstupe s pobytovým vízom a povolení pobytu sa o prvú ARC žiada do 30 dní od nasledujúceho dňa po príchode. Vízum vydané až na Taiwane má iný začiatok lehoty."
-published: "2026-10-25"
-lastmod: "2026-10-25"
-date_display: "25. októbra 2026"
+published: "2026-10-26"
+lastmod: "2026-10-26"
+date_display: "26. októbra 2026"
 read_time: "7 min čítania"
 categories: ["Právne informácie o Taiwane"]
 topic: "visa"

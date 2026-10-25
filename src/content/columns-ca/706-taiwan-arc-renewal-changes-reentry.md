@@ -2,9 +2,9 @@
 title: "Canvis de feina, domicili i viatges amb un ARC de Taiwan"
 seoTitle: "ARC de Taiwan: renovació, canvis i reentrada"
 summary: "Un canvi de domicili o de motiu de residència pot exigir tràmits abans que caduqui l’ARC. La renovació i el retorn d’un viatge tenen requisits propis."
-published: "2026-10-25"
-lastmod: "2026-10-25"
-date_display: "25 d’octubre de 2026"
+published: "2026-10-26"
+lastmod: "2026-10-26"
+date_display: "26 d’octubre de 2026"
 read_time: "8 min de lectura"
 categories: ["Informació jurídica de Taiwan"]
 topic: "visa"

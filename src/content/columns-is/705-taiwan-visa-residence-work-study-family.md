@@ -2,9 +2,9 @@
 title: "Að flytja til Taívan vegna vinnu, náms eða fjölskyldu"
 seoTitle: "Dvöl á Taívan vegna vinnu, náms og fjölskyldu"
 summary: "Koma án áritunar getur hentað hæfum sérfræðingi en lokað almennri námsleið innanlands. Fyrir flutning þarf að samræma komuleið, dvalarástæðu og gögn."
-published: "2026-10-25"
-lastmod: "2026-10-25"
-date_display: "25. október 2026"
+published: "2026-10-26"
+lastmod: "2026-10-26"
+date_display: "26. október 2026"
 read_time: "7 mín. lestur"
 categories: ["Lagaupplýsingar um Taívan"]
 topic: "visa"

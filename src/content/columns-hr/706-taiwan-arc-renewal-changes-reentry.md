@@ -2,9 +2,9 @@
 title: "Produljenje ARC-a, nova adresa i povratak na Tajvan"
 seoTitle: "Tajvan: produljenje ARC-a, promjene i ponovni ulazak"
 summary: "Promjena adrese ili prestanak osnove boravka može pokrenuti rok prije isteka ARC-a. Za putovanje treba utvrditi koje isprave omogućuju povratak na Tajvan."
-published: "2026-10-25"
-lastmod: "2026-10-25"
-date_display: "25. listopada 2026."
+published: "2026-10-26"
+lastmod: "2026-10-26"
+date_display: "26. listopada 2026."
 read_time: "7 min čitanja"
 categories: ["Pravne informacije o Tajvanu"]
 topic: "visa"

@@ -1,9 +1,9 @@
 ---
 title: "Fyrsta ARC-dvalarkortið á Taívan: frestur, gögn og afhending"
 summary: "Upphaf umsóknarfrests um fyrsta ARC-kortið ræðst af því hvenær búsetuáritun var gefin út. Dvalarástæðan ræður gögnum, umsóknarleið og gildistíma."
-published: "2026-10-25"
-lastmod: "2026-10-25"
-date_display: "25. október 2026"
+published: "2026-10-26"
+lastmod: "2026-10-26"
+date_display: "26. október 2026"
 read_time: "7 mín. lestur"
 categories: ["Lagaupplýsingar um Taívan"]
 topic: "visa"

@@ -3,7 +3,7 @@ title: "Unang ARC sa Taiwan: petsa ng aplikasyon, mga dokumento at bayad"
 seoTitle: "Unang ARC sa Taiwan: aplikasyon at mga kailangan"
 summary: "Ang petsa ng pagpasok o pag-isyu ng resident visa ang maaaring magpasimula sa takdang panahon para sa unang ARC. Magkakaiba rin ang katibayan at paraan ng aplikasyon ayon sa dahilan ng paninirahan."
 published: "2026-10-25"
-lastmod: "2026-10-25"
+lastmod: "2026-10-26"
 date_display: "25 Oktubre 2026"
 read_time: "8 minutong pagbasa"
 categories: ["Impormasyong Legal sa Taiwan"]
@@ -71,7 +71,7 @@ NIA ang nagtatakda ng haba ng paninirahan. Hanggang tatlong taon ang karaniwang 
 
 Sampung araw ng trabaho ang nakasaad sa [karaniwang proseso ng NIA](https://www.immigration.gov.tw/5475/5478/141465/141808/141970), bukod sa pagbabalik ng papeles, paghihintay sa dagdag na dokumento at panayam. Muling bibilangin ang panahon ng pagsusuri matapos maipasa ang mga kailangang dagdag. Maaaring iba ang takbo ng pagsusuri sa mga nakatalagang sistema sa internet.
 
-Limang araw ng trabaho ang pagsusuri sa [proseso para sa mga mag-aaral](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news), bukod sa panahong ginugol sa pagkumpleto ng kulang na papeles; magsisimula muli ang bilang matapos makumpleto ang mga ito. Kailangang magbayad sa loob ng limang araw ng trabaho mula sa pag-apruba. Maaaring i-download at ilimbag pagkatapos magbayad ang elektronikong ARC na may bisang anim na buwan o mas maikli.
+Limang araw ng trabaho ang pagsusuri sa [proseso para sa mga mag-aaral](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news), bukod sa panahong ginugol sa pagkumpleto ng kulang na papeles; magsisimula muli ang bilang matapos makumpleto ang mga ito. Kailangang magbayad sa loob ng limang araw ng trabaho mula sa pag-apruba. Dapat i-download at ilimbag pagkatapos magbayad ang elektronikong ARC na may bisang anim na buwan o mas maikli.
 
 Para sa kard na may chip, ililimbag ang resibo ng bayad mula sa sistema at kukunin ang kard sa napiling tanggapan ng NIA makalipas ang tatlong araw ng trabaho mula sa pagbabayad. Mga mag-aaral ang saklaw ng iskedyul na ito. Dapat sundin ng ibang aplikante ang paraan ng pagkuha at pagkakakilanlang hinihingi sa sarili nilang abiso.
 

@@ -2,9 +2,9 @@
 title: "Tajvani tartózkodás munkához, tanuláshoz vagy családdal"
 seoTitle: "Tajvani vízum és ARC: munka, tanulmányok, család"
 summary: "Vízummentes belépés után egy jogosult szakember közvetlenül kérhet tartózkodási engedélyt, a szokásos tanulmányi út viszont más belépést kíván. A munkakategória, a tanulás célja és a családtag státusza dönti el, melyik eljárás használható."
-published: "2026-10-25"
-lastmod: "2026-10-25"
-date_display: "2026. október 25."
+published: "2026-10-26"
+lastmod: "2026-10-26"
+date_display: "2026. október 26."
 read_time: "7 perc olvasás"
 categories: ["Tajvani jogi tájékoztatás"]
 topic: "visa"

@@ -1,0 +1,216 @@
+{
+  "at": "2026-10-25T15:03:18.271022+00:00",
+  "reason": "Not yet publicly deployed before KST midnight; actual release metadata26 October. Existing source checks24–25 unchanged. Fresh eARC targeted review found exactly one HU704 optional verb; six other locales procedure descriptions unchanged.",
+  "records": [
+    {
+      "locale": "bg",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-bg/704-taiwan-arc-first-application.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/704-taiwan-arc-first-application.md",
+      "beforeSHA256": "4b499ba4c8061aff37c82173b62b6ca4c6ddc6d727de56db9ac98b2e8dbb3b30",
+      "afterSHA256": "823b5ea0597b7b531de819a92854cd963ee2d0d9d86555d6f6f68cf45f083575",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/bg/704-taiwan-arc-first-application.md\n+++ release26/bg/704-taiwan-arc-first-application.md\n@@ -2,9 +2,9 @@\n title: \"Първо кандидатстване за ARC в Тайван: срокове, документи и получаване\"\n seoTitle: \"Първи ARC в Тайван: срок, документи и такси\"\n summary: \"Срокът за първи ARC зависи от влизането и издаването на визата. Документите, каналът за кандидатстване и получаването също се различават по категории.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25 октомври 2026 г.\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26 октомври 2026 г.\"\n read_time: \"7 мин четене\"\n categories: [\"Правна информация за Тайван\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "bg",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-bg/705-taiwan-visa-residence-work-study-family.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/705-taiwan-visa-residence-work-study-family.md",
+      "beforeSHA256": "230ab8d78911e8d823e1f0bc7583eb110bc6c7097b51f04c146b54f78ac34129",
+      "afterSHA256": "777899d149cc5654f007ba65929dee57d91e48002a23c610ffc8cd017ce2aaad",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/bg/705-taiwan-visa-residence-work-study-family.md\n+++ release26/bg/705-taiwan-visa-residence-work-study-family.md\n@@ -2,9 +2,9 @@\n title: \"Пребиваване в Тайван за работа, обучение или при семейството\"\n seoTitle: \"Тайван: пребиваване за работа, обучение и семейство\"\n summary: \"Правилният път за Тайван зависи от дейността, спонсора и влизането. Безвизовият вход е възможен за някои специалисти, но ограничава обичайните студентски процедури.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25 октомври 2026 г.\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26 октомври 2026 г.\"\n read_time: \"8 мин четене\"\n categories: [\"Правна информация за Тайван\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "bg",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-bg/706-taiwan-arc-renewal-changes-reentry.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/706-taiwan-arc-renewal-changes-reentry.md",
+      "beforeSHA256": "cc7b8b8e14d9235e83ec69aaaa97a84a2b54931dbbea7e88a8625144db964a62",
+      "afterSHA256": "d1aa1863c836606247c976cb1e15a0e29f82407937b0712a0f8154e584f444c5",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/bg/706-taiwan-arc-renewal-changes-reentry.md\n+++ release26/bg/706-taiwan-arc-renewal-changes-reentry.md\n@@ -2,9 +2,9 @@\n title: \"ARC в Тайван: подновяване, промяна на адрес или работа и пътуване\"\n seoTitle: \"ARC: подновяване, промени и повторно влизане\"\n summary: \"Срокът на картата не е единственият срок. Промяна на адрес или работа може да изисква по-рано заявление, а при пътуване се проверяват паспортът и повторното влизане.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25 октомври 2026 г.\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26 октомври 2026 г.\"\n read_time: \"9 мин четене\"\n categories: [\"Правна информация за Тайван\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "ca",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-ca/704-taiwan-arc-first-application.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/704-taiwan-arc-first-application.md",
+      "beforeSHA256": "5a631c65a8a5a13d919eff42d5defd7444c8f69d5c5589cbd80e504e40eef9b1",
+      "afterSHA256": "5afa4da34df2bfb0ba4f5d4f47bf6db8b63622c0e2525b39eefa30e7cea8e7e2",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/ca/704-taiwan-arc-first-application.md\n+++ release26/ca/704-taiwan-arc-first-application.md\n@@ -2,9 +2,9 @@\n title: \"El primer ARC a Taiwan: terminis, documents i recollida\"\n seoTitle: \"Primer ARC a Taiwan: sol·licitud i terminis\"\n summary: \"El termini del primer ARC depèn de com heu entrat i de quan s’ha expedit el visat. El motiu de residència determina els documents i la via de sol·licitud.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25 d’octubre de 2026\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26 d’octubre de 2026\"\n read_time: \"7 min de lectura\"\n categories: [\"Informació jurídica de Taiwan\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "ca",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-ca/705-taiwan-visa-residence-work-study-family.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/705-taiwan-visa-residence-work-study-family.md",
+      "beforeSHA256": "ec948306ff661f2b909c180749186b883ba628bf59edae408ab086dfc8730c52",
+      "afterSHA256": "dd447d258158bea56a10a73634663adc7008a3d2057e36eae99b087521dd646f",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/ca/705-taiwan-visa-residence-work-study-family.md\n+++ release26/ca/705-taiwan-visa-residence-work-study-family.md\n@@ -2,9 +2,9 @@\n title: \"Residència a Taiwan per treball, estudis o família\"\n seoTitle: \"Visat i residència a Taiwan: treball, estudis i família\"\n summary: \"La feina prevista, el tipus d’estudis i la situació del familiar a Taiwan determinen la via de residència. La modalitat d’entrada també en condiciona l’accés.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25 d’octubre de 2026\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26 d’octubre de 2026\"\n read_time: \"7 min de lectura\"\n categories: [\"Informació jurídica de Taiwan\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "ca",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-ca/706-taiwan-arc-renewal-changes-reentry.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/706-taiwan-arc-renewal-changes-reentry.md",
+      "beforeSHA256": "ea145bd471e622e2d6abe5edb4b9939b1afeeec6f5d19b3f14b97f30d066caf5",
+      "afterSHA256": "000a6605ef491108da625e2060c563ee42a59bfec83680ea6fc695060f5e86b7",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/ca/706-taiwan-arc-renewal-changes-reentry.md\n+++ release26/ca/706-taiwan-arc-renewal-changes-reentry.md\n@@ -2,9 +2,9 @@\n title: \"Canvis de feina, domicili i viatges amb un ARC de Taiwan\"\n seoTitle: \"ARC de Taiwan: renovació, canvis i reentrada\"\n summary: \"Un canvi de domicili o de motiu de residència pot exigir tràmits abans que caduqui l’ARC. La renovació i el retorn d’un viatge tenen requisits propis.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25 d’octubre de 2026\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26 d’octubre de 2026\"\n read_time: \"8 min de lectura\"\n categories: [\"Informació jurídica de Taiwan\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "el",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-el/704-taiwan-arc-first-application.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-el/704-taiwan-arc-first-application.md",
+      "beforeSHA256": "106d28806d0ca36cf15dbfa239a8718259f74eefdfa5058d8b55e5a008ca0152",
+      "afterSHA256": "ed305ba079d234dc5f8a9ea82fbed5e8195bb8adf06b009874fd39ea6aeaeb72",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/el/704-taiwan-arc-first-application.md\n+++ release26/el/704-taiwan-arc-first-application.md\n@@ -2,9 +2,9 @@\n title: \"Πρώτη ARC στην Ταϊβάν: προθεσμία, δικαιολογητικά και παραλαβή\"\n seoTitle: \"Πρώτη κάρτα διαμονής ARC στην Ταϊβάν\"\n summary: \"Η προθεσμία της πρώτης ARC εξαρτάται από το αν η θεώρηση διαμονής εκδόθηκε πριν ή μετά την άφιξη. Η εργασία, οι σπουδές και η οικογενειακή σχέση χρειάζονται διαφορετικά αποδεικτικά, ενώ ο τρόπος υποβολής καθορίζει και την πληρωμή και την παραλαβή.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25 Οκτωβρίου 2026\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26 Οκτωβρίου 2026\"\n read_time: \"7 λεπτά ανάγνωσης\"\n categories: [\"Νομικές πληροφορίες για την Ταϊβάν\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "el",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-el/705-taiwan-visa-residence-work-study-family.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-el/705-taiwan-visa-residence-work-study-family.md",
+      "beforeSHA256": "3ce4d50e09ec4a6e7432d37970685d966a25e7a40ea500b0398af9f0de16fc82",
+      "afterSHA256": "0054450fb0330e0f7fd6681376c0d1dfd516661fba7782eaa960600811827af1",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/el/705-taiwan-visa-residence-work-study-family.md\n+++ release26/el/705-taiwan-visa-residence-work-study-family.md\n@@ -2,9 +2,9 @@\n title: \"Διαμονή στην Ταϊβάν για εργασία, σπουδές ή οικογένεια\"\n seoTitle: \"Ταϊβάν: βίζα και διαμονή για εργασία, σπουδές, οικογένεια\"\n summary: \"Η είσοδος χωρίς βίζα επιτρέπει σε ορισμένους επαγγελματίες να ζητήσουν διαμονή, αλλά δεν καλύπτει τις συνήθεις φοιτητικές διαδρομές. Για οικογενειακή αίτηση εξετάζονται η ιδιότητα του συγγενή, η σχέση και ο τρόπος εισόδου του αιτούντος.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25 Οκτωβρίου 2026\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26 Οκτωβρίου 2026\"\n read_time: \"7 λεπτά ανάγνωσης\"\n categories: [\"Νομικές πληροφορίες για την Ταϊβάν\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "el",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-el/706-taiwan-arc-renewal-changes-reentry.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-el/706-taiwan-arc-renewal-changes-reentry.md",
+      "beforeSHA256": "dd1e71c86e6b462f1a927c7588a059af9053e02a548cd5e156223a94f02b7f95",
+      "afterSHA256": "ab25e0978afe2cb3df99fbffd0b5b7fd0b835a6688d45bd942fc2f5b8edcad49",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/el/706-taiwan-arc-renewal-changes-reentry.md\n+++ release26/el/706-taiwan-arc-renewal-changes-reentry.md\n@@ -2,9 +2,9 @@\n title: \"Παράταση ARC, αλλαγή διεύθυνσης και επιστροφή στην Ταϊβάν\"\n seoTitle: \"ARC Ταϊβάν: παράταση, μετακόμιση και επανείσοδος\"\n summary: \"Η λήξη της ARC δεν είναι η μόνη προθεσμία. Μετακόμιση, αλλαγή εργασίας ή απώλεια του λόγου διαμονής μπορεί να απαιτούν νωρίτερη αίτηση. Για ταξίδι ενώ εκκρεμεί η νέα κάρτα χρειάζεται έλεγχος της διαμονής, του διαβατηρίου και της άδειας επανεισόδου.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25 Οκτωβρίου 2026\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26 Οκτωβρίου 2026\"\n read_time: \"8 λεπτά ανάγνωσης\"\n categories: [\"Νομικές πληροφορίες για την Ταϊβάν\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "hr",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-hr/704-taiwan-arc-first-application.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hr/704-taiwan-arc-first-application.md",
+      "beforeSHA256": "f5ae1cb6a378e2c5c6fe7f1cb3137e00bd0bad50da39c3bbea21669a6f72cee3",
+      "afterSHA256": "8575fc01e571acbf80470e9680a24344542e72c585f33d095335e081c10cd762",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/hr/704-taiwan-arc-first-application.md\n+++ release26/hr/704-taiwan-arc-first-application.md\n@@ -2,9 +2,9 @@\n title: \"Prva iskaznica ARC na Tajvanu: od zahtjeva do preuzimanja\"\n seoTitle: \"Prvi ARC na Tajvanu: rokovi, dokumenti i naknade\"\n summary: \"Datum ulaska i datum izdavanja boravišne vize mogu pokrenuti različite rokove za prvi ARC. Dokumenti i način prijave ovise o radu, studiju ili obiteljskom boravku.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25. listopada 2026.\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26. listopada 2026.\"\n read_time: \"6 min čitanja\"\n categories: [\"Pravne informacije o Tajvanu\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "hr",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-hr/705-taiwan-visa-residence-work-study-family.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hr/705-taiwan-visa-residence-work-study-family.md",
+      "beforeSHA256": "86086af13bf8b01280ff46115efb94d461efad6afea70370a17d57f27dff292c",
+      "afterSHA256": "d8bea761975a8643861d33391f53a7ce0e7bf2109d664e2205f5b663966ecb73",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/hr/705-taiwan-visa-residence-work-study-family.md\n+++ release26/hr/705-taiwan-visa-residence-work-study-family.md\n@@ -2,9 +2,9 @@\n title: \"Boravak na Tajvanu zbog rada, studija ili obitelji\"\n seoTitle: \"Tajvan: viza i boravak za rad, studij i obitelj\"\n summary: \"Mogućnost prijave boravka na Tajvanu ovisi o razlogu dolaska i načinu ulaska. Stručni rad, redovni studij, učenje mandarinskog i obitelj imaju različite uvjete.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25. listopada 2026.\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26. listopada 2026.\"\n read_time: \"6 min čitanja\"\n categories: [\"Pravne informacije o Tajvanu\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "hr",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-hr/706-taiwan-arc-renewal-changes-reentry.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hr/706-taiwan-arc-renewal-changes-reentry.md",
+      "beforeSHA256": "b339966a41c6902cd86c6c2d066a2a692bf30fd2e4ad8f2d555d8ef96d462f93",
+      "afterSHA256": "2663860398db720bf3b25eb3c00885f8f7c3e84e3eeabc82aac1bfb1972928d3",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/hr/706-taiwan-arc-renewal-changes-reentry.md\n+++ release26/hr/706-taiwan-arc-renewal-changes-reentry.md\n@@ -2,9 +2,9 @@\n title: \"Produljenje ARC-a, nova adresa i povratak na Tajvan\"\n seoTitle: \"Tajvan: produljenje ARC-a, promjene i ponovni ulazak\"\n summary: \"Promjena adrese ili prestanak osnove boravka može pokrenuti rok prije isteka ARC-a. Za putovanje treba utvrditi koje isprave omogućuju povratak na Tajvan.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25. listopada 2026.\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26. listopada 2026.\"\n read_time: \"7 min čitanja\"\n categories: [\"Pravne informacije o Tajvanu\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "hu",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-hu/704-taiwan-arc-first-application.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hu/704-taiwan-arc-first-application.md",
+      "beforeSHA256": "85f5e774de55aa774e9a3d1167d8a17d8930ec0f82a210f2fbd75c6b618c5146",
+      "afterSHA256": "96db7ce41b5038c9fce43fd0c1e50f2598202240183a9a8fe5ca76824e9d4ecc",
+      "metadataOnly": false,
+      "bodyChange": "HU eARC download and print mandatory, not optional",
+      "diff": "--- before/hu/704-taiwan-arc-first-application.md\n+++ release26/hu/704-taiwan-arc-first-application.md\n@@ -2,9 +2,9 @@\n title: \"Első ARC Tajvanon: határidő, iratok és átvétel\"\n seoTitle: \"Első tajvani ARC: a 30 nap kezdete, iratok és díjak\"\n summary: \"Az első ARC kérelmének 30 napját más naptól számítják, ha a tartózkodási vízumot már a belépés után adták ki. Az iratokat a munka, a tanulmányok vagy a családi kapcsolat igazolása egészíti ki; a fizetés és az átvétel rendje az eljárástól függ.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"2026. október 25.\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"2026. október 26.\"\n read_time: \"7 perc olvasás\"\n categories: [\"Tajvani jogi tájékoztatás\"]\n topic: \"visa\"\n@@ -69,7 +69,7 @@\n \n Az általános elbírálásra az [NIA tíz munkanapot](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) határoz meg, amelybe az iratvisszaadás, a hiánypótlás és a személyes meghallgatás ideje nem számít bele. Hiánypótlás után újraindul a számítás. A diákok online eljárásában öt munkanap szerepel, szintén újraszámítással a pótlás után. Ezek az ügyintézés szabályai, nem egy előre lefoglalt utazásig garantált átvételi dátumok.\n \n-Jóváhagyástól számított öt munkanapon belül kell fizetni a [diákok online eljárásában](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news). Legfeljebb hat hónapos elektronikus ARC esetén fizetés után letölthető és kinyomtatható az okmány. Chipes kártyánál a kinyomtatott online fizetési bizonylattal, a fizetéstől számított három munkanap elteltével lehet átvenni a kártyát a kiválasztott NIA-központban. A többi kérelmező a saját értesítésében szereplő átvételi rendet követi.\n+Jóváhagyástól számított öt munkanapon belül kell fizetni a [diákok online eljárásában](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news). Legfeljebb hat hónapos elektronikus ARC esetén fizetés után le kell tölteni és ki kell nyomtatni az okmányt. Chipes kártyánál a kinyomtatott online fizetési bizonylattal, a fizetéstől számított három munkanap elteltével lehet átvenni a kártyát a kiválasztott NIA-központban. A többi kérelmező a saját értesítésében szereplő átvételi rendet követi.\n \n Átvételkor a nevet, az útlevéladatokat, a címet és a lejáratot kell összevetni a jóváhagyott adatokkal. A határozatot és a bizonylatot is őrizze meg. Munkába állás előtt a tényleges feladatot és munkáltatót az alkalmazható engedélyhez vagy mentességhez kell igazítani a [foglalkoztatási szolgáltatásokról szóló törvény 43. és 48. cikke](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) szerint. A kártya lejárata, a későbbi költözés vagy munkaváltás határozza meg a következő [hosszabbítási és adatváltozási teendőket](/hu/columns/taiwan-arc-renewal-changes-reentry).\n \n"
+    },
+    {
+      "locale": "hu",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-hu/705-taiwan-visa-residence-work-study-family.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hu/705-taiwan-visa-residence-work-study-family.md",
+      "beforeSHA256": "766f08472e4184f4b5d9d96011e1b9c1a4a2f25d38cda28ae50823cfd2d11d16",
+      "afterSHA256": "59771fe17d126fb32e3426f5cb8ac5956ecbecbbe25aba99f07c10408d787f4e",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/hu/705-taiwan-visa-residence-work-study-family.md\n+++ release26/hu/705-taiwan-visa-residence-work-study-family.md\n@@ -2,9 +2,9 @@\n title: \"Tajvani tartózkodás munkához, tanuláshoz vagy családdal\"\n seoTitle: \"Tajvani vízum és ARC: munka, tanulmányok, család\"\n summary: \"Vízummentes belépés után egy jogosult szakember közvetlenül kérhet tartózkodási engedélyt, a szokásos tanulmányi út viszont más belépést kíván. A munkakategória, a tanulás célja és a családtag státusza dönti el, melyik eljárás használható.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"2026. október 25.\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"2026. október 26.\"\n read_time: \"7 perc olvasás\"\n categories: [\"Tajvani jogi tájékoztatás\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "hu",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-hu/706-taiwan-arc-renewal-changes-reentry.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hu/706-taiwan-arc-renewal-changes-reentry.md",
+      "beforeSHA256": "36e5d579f34d279f8263e7d8feca990c82db574fcb0183e3a3462e0bbc4f07df",
+      "afterSHA256": "0e2e2791a2233d96a2e01ac0536d8dc9c901d9219b1ec4e977fec539c15ca6d7",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/hu/706-taiwan-arc-renewal-changes-reentry.md\n+++ release26/hu/706-taiwan-arc-renewal-changes-reentry.md\n@@ -2,9 +2,9 @@\n title: \"Tajvani ARC: hosszabbítás, költözés és visszautazás\"\n seoTitle: \"ARC-hosszabbítás Tajvanon: adatváltozás és visszatérés\"\n summary: \"A költözés vagy a tartózkodás jogcímének változása az ARC lejárata előtt is benyújtási határidőt indíthat. A munkaváltás, a hosszabbítás és az utazás külön iratokat igényel; a kártyán szereplő lejárat önmagában nem biztosítja a további tartózkodást.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"2026. október 25.\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"2026. október 26.\"\n read_time: \"8 perc olvasás\"\n categories: [\"Tajvani jogi tájékoztatás\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "is",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-is/704-taiwan-arc-first-application.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-is/704-taiwan-arc-first-application.md",
+      "beforeSHA256": "b9c21267925b98ec161d911e22232f9c1e43ac6d80b107856828738f559ef0d3",
+      "afterSHA256": "46f91a4f964782286b4e79c443d53dcc1ab01a7f3a472846a8283ddc86474c70",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/is/704-taiwan-arc-first-application.md\n+++ release26/is/704-taiwan-arc-first-application.md\n@@ -1,9 +1,9 @@\n ---\n title: \"Fyrsta ARC-dvalarkortið á Taívan: frestur, gögn og afhending\"\n summary: \"Upphaf umsóknarfrests um fyrsta ARC-kortið ræðst af því hvenær búsetuáritun var gefin út. Dvalarástæðan ræður gögnum, umsóknarleið og gildistíma.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25. október 2026\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26. október 2026\"\n read_time: \"7 mín. lestur\"\n categories: [\"Lagaupplýsingar um Taívan\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "is",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-is/705-taiwan-visa-residence-work-study-family.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-is/705-taiwan-visa-residence-work-study-family.md",
+      "beforeSHA256": "57037ffbde3224aaeb8b34dd963a166b232ce43631fa63e60069b01077255da5",
+      "afterSHA256": "d4cfb96e0de0ab59da3024b7a645a06aa51e70b74805d645c1456b71174e4af0",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/is/705-taiwan-visa-residence-work-study-family.md\n+++ release26/is/705-taiwan-visa-residence-work-study-family.md\n@@ -2,9 +2,9 @@\n title: \"Að flytja til Taívan vegna vinnu, náms eða fjölskyldu\"\n seoTitle: \"Dvöl á Taívan vegna vinnu, náms og fjölskyldu\"\n summary: \"Koma án áritunar getur hentað hæfum sérfræðingi en lokað almennri námsleið innanlands. Fyrir flutning þarf að samræma komuleið, dvalarástæðu og gögn.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25. október 2026\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26. október 2026\"\n read_time: \"7 mín. lestur\"\n categories: [\"Lagaupplýsingar um Taívan\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "is",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-is/706-taiwan-arc-renewal-changes-reentry.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-is/706-taiwan-arc-renewal-changes-reentry.md",
+      "beforeSHA256": "ac5b83d0c073e2750fc74ce3bfb51b075e08fd32ade0d0499cbd3bcdc21ed3f7",
+      "afterSHA256": "67366df5650c5d1844e8ed2b4303f701a56a9727362c4da89c816a2fbe5475a6",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/is/706-taiwan-arc-renewal-changes-reentry.md\n+++ release26/is/706-taiwan-arc-renewal-changes-reentry.md\n@@ -2,9 +2,9 @@\n title: \"ARC á Taívan eftir starfslok, flutning eða fyrirhugaða ferð\"\n seoTitle: \"Framlenging ARC, breytingar og endurkoma til Taívan\"\n summary: \"Lokadagur ARC er aðeins einn af frestunum. Nýtt heimili, starfslok eða breytt fjölskyldustaða geta kallað á fyrri umsókn, og endurkoma þarf gild gögn.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25. október 2026\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26. október 2026\"\n read_time: \"8 mín. lestur\"\n categories: [\"Lagaupplýsingar um Taívan\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "sk",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-sk/704-taiwan-arc-first-application.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sk/704-taiwan-arc-first-application.md",
+      "beforeSHA256": "32162857995b9336edabd034c3f511a625e1cddbf90c9d7536485d1f682aa509",
+      "afterSHA256": "cf1c7cce578f38ca8e87f4b2752db321ae7fba6238ba5f385f152fe20494780a",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/sk/704-taiwan-arc-first-application.md\n+++ release26/sk/704-taiwan-arc-first-application.md\n@@ -2,9 +2,9 @@\n title: \"Prvá ARC na Taiwane: odkedy plynie lehota a čo doložiť\"\n seoTitle: \"Prvá taiwanská ARC: žiadosť, doklady a poplatky\"\n summary: \"Po vstupe s pobytovým vízom a povolení pobytu sa o prvú ARC žiada do 30 dní od nasledujúceho dňa po príchode. Vízum vydané až na Taiwane má iný začiatok lehoty.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25. októbra 2026\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26. októbra 2026\"\n read_time: \"7 min čítania\"\n categories: [\"Právne informácie o Taiwane\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "sk",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-sk/705-taiwan-visa-residence-work-study-family.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sk/705-taiwan-visa-residence-work-study-family.md",
+      "beforeSHA256": "47d0a750ee13eb4e85c9252addd4fb5a95dafcb4d82c68dd9f01d3028be3159a",
+      "afterSHA256": "0cdf2213d780c4db78c221c34ed53460c0ff758eaa595e8c211de2fc1ef23507",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/sk/705-taiwan-visa-residence-work-study-family.md\n+++ release26/sk/705-taiwan-visa-residence-work-study-family.md\n@@ -2,9 +2,9 @@\n title: \"Pobyt na Taiwane za prácou, štúdiom alebo rodinou\"\n seoTitle: \"Taiwan: pobytové podmienky pre prácu, štúdium a rodinu\"\n summary: \"Bezvízový vstup môže umožniť priamu žiadosť oprávneného odborníka, no vylúčiť bežnú študentskú cestu. Rozhodujú činnosť, rodinný príslušník aj vlastný spôsob vstupu.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25. októbra 2026\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26. októbra 2026\"\n read_time: \"7 min čítania\"\n categories: [\"Právne informácie o Taiwane\"]\n topic: \"visa\"\n"
+    },
+    {
+      "locale": "sk",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/src/content/columns-sk/706-taiwan-arc-renewal-changes-reentry.md",
+      "repositoryFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sk/706-taiwan-arc-renewal-changes-reentry.md",
+      "beforeSHA256": "8fa19db348cf21a5220cb5295c0aa38f42f84bc075eaf0ac366a60af99c9ee51",
+      "afterSHA256": "3f6a81b43fc2c0ca65fa592e9632eef7e1f9d51545228596b3b658c6dc91170d",
+      "metadataOnly": true,
+      "bodyChange": null,
+      "diff": "--- before/sk/706-taiwan-arc-renewal-changes-reentry.md\n+++ release26/sk/706-taiwan-arc-renewal-changes-reentry.md\n@@ -2,9 +2,9 @@\n title: \"Predĺženie ARC, zmena pobytu a návrat na Taiwan\"\n seoTitle: \"Taiwanská ARC: predĺženie, zmeny a opätovný vstup\"\n summary: \"Dátum na ARC je iba jednou lehotou. Sťahovanie, zmena zamestnania alebo zánik dôvodu pobytu môžu vyžadovať skoršie podanie; pri ceste musia doklady pokrývať návrat.\"\n-published: \"2026-10-25\"\n-lastmod: \"2026-10-25\"\n-date_display: \"25. októbra 2026\"\n+published: \"2026-10-26\"\n+lastmod: \"2026-10-26\"\n+date_display: \"26. októbra 2026\"\n read_time: \"8 min čítania\"\n categories: [\"Právne informácie o Taiwane\"]\n topic: \"visa\"\n"
+    }
+  ]
+}

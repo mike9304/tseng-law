@@ -2,9 +2,9 @@
 title: "Első ARC Tajvanon: határidő, iratok és átvétel"
 seoTitle: "Első tajvani ARC: a 30 nap kezdete, iratok és díjak"
 summary: "Az első ARC kérelmének 30 napját más naptól számítják, ha a tartózkodási vízumot már a belépés után adták ki. Az iratokat a munka, a tanulmányok vagy a családi kapcsolat igazolása egészíti ki; a fizetés és az átvétel rendje az eljárástól függ."
-published: "2026-10-25"
-lastmod: "2026-10-25"
-date_display: "2026. október 25."
+published: "2026-10-26"
+lastmod: "2026-10-26"
+date_display: "2026. október 26."
 read_time: "7 perc olvasás"
 categories: ["Tajvani jogi tájékoztatás"]
 topic: "visa"
@@ -69,7 +69,7 @@ Engedélyezett szakmai munkára foglalkoztatott, különleges szaktudású külf
 
 Az általános elbírálásra az [NIA tíz munkanapot](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) határoz meg, amelybe az iratvisszaadás, a hiánypótlás és a személyes meghallgatás ideje nem számít bele. Hiánypótlás után újraindul a számítás. A diákok online eljárásában öt munkanap szerepel, szintén újraszámítással a pótlás után. Ezek az ügyintézés szabályai, nem egy előre lefoglalt utazásig garantált átvételi dátumok.
 
-Jóváhagyástól számított öt munkanapon belül kell fizetni a [diákok online eljárásában](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news). Legfeljebb hat hónapos elektronikus ARC esetén fizetés után letölthető és kinyomtatható az okmány. Chipes kártyánál a kinyomtatott online fizetési bizonylattal, a fizetéstől számított három munkanap elteltével lehet átvenni a kártyát a kiválasztott NIA-központban. A többi kérelmező a saját értesítésében szereplő átvételi rendet követi.
+Jóváhagyástól számított öt munkanapon belül kell fizetni a [diákok online eljárásában](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news). Legfeljebb hat hónapos elektronikus ARC esetén fizetés után le kell tölteni és ki kell nyomtatni az okmányt. Chipes kártyánál a kinyomtatott online fizetési bizonylattal, a fizetéstől számított három munkanap elteltével lehet átvenni a kártyát a kiválasztott NIA-központban. A többi kérelmező a saját értesítésében szereplő átvételi rendet követi.
 
 Átvételkor a nevet, az útlevéladatokat, a címet és a lejáratot kell összevetni a jóváhagyott adatokkal. A határozatot és a bizonylatot is őrizze meg. Munkába állás előtt a tényleges feladatot és munkáltatót az alkalmazható engedélyhez vagy mentességhez kell igazítani a [foglalkoztatási szolgáltatásokról szóló törvény 43. és 48. cikke](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) szerint. A kártya lejárata, a későbbi költözés vagy munkaváltás határozza meg a következő [hosszabbítási és adatváltozási teendőket](/hu/columns/taiwan-arc-renewal-changes-reentry).
 

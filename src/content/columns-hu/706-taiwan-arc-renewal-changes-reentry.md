@@ -2,9 +2,9 @@
 title: "Tajvani ARC: hosszabbítás, költözés és visszautazás"
 seoTitle: "ARC-hosszabbítás Tajvanon: adatváltozás és visszatérés"
 summary: "A költözés vagy a tartózkodás jogcímének változása az ARC lejárata előtt is benyújtási határidőt indíthat. A munkaváltás, a hosszabbítás és az utazás külön iratokat igényel; a kártyán szereplő lejárat önmagában nem biztosítja a további tartózkodást."
-published: "2026-10-25"
-lastmod: "2026-10-25"
-date_display: "2026. október 25."
+published: "2026-10-26"
+lastmod: "2026-10-26"
+date_display: "2026. október 26."
 read_time: "8 perc olvasás"
 categories: ["Tajvani jogi tájékoztatás"]
 topic: "visa"

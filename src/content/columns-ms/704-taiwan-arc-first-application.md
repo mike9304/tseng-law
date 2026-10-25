@@ -3,7 +3,7 @@ title: "ARC pertama di Taiwan: tarikh permohonan, dokumen dan pengambilan kad"
 seoTitle: "ARC pertama Taiwan: tempoh, dokumen dan yuran"
 summary: "Tempoh memohon ARC pertama bergantung pada cara anda masuk ke Taiwan. Dokumen, saluran permohonan dan pengambilan kad pula mengikut tujuan kediaman."
 published: "2026-10-25"
-lastmod: "2026-10-25"
+lastmod: "2026-10-26"
 date_display: "25 Oktober 2026"
 read_time: "7 minit bacaan"
 categories: ["Maklumat undang-undang Taiwan"]
@@ -75,7 +75,7 @@ Bagi profesional asing berkepakaran khusus yang diambil bekerja dan mendapat keb
 
 [NIA menyatakan masa pemprosesan biasa selama sepuluh hari bekerja](https://www.immigration.gov.tw/5475/5478/141465/141808/141970), tidak termasuk masa untuk pemulangan dokumen, penyerahan dokumen tambahan dan temu duga. Kiraan bermula semula selepas dokumen tambahan diserahkan. Prosedur dalam talian mempunyai jadual mengikut kategori; bagi pelajar, panduan menetapkan lima hari bekerja, dengan masa melengkapkan dokumen dikecualikan dan kiraan bermula semula selepas dokumen dilengkapkan.
 
-Di bawah [prosedur pelajar](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news), bayaran mesti dibuat dalam masa lima hari bekerja dari kelulusan. Pemohon kad ARC bercip perlu mencetak resit bayaran dalam talian dan mengambil kad di pusat NIA yang dipilih, tiga hari bekerja selepas bayaran selesai. ARC elektronik dengan tempoh sah enam bulan atau kurang boleh dimuat turun dan dicetak selepas pembayaran. Jadual ini khusus untuk prosedur pelajar. Pemohon lain mengikuti kaedah serta dokumen pengenalan yang dinyatakan dalam notis kelulusan atau pengambilan mereka.
+Di bawah [prosedur pelajar](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news), bayaran mesti dibuat dalam masa lima hari bekerja dari kelulusan. Pemohon kad ARC bercip perlu mencetak resit bayaran dalam talian dan mengambil kad di pusat NIA yang dipilih, tiga hari bekerja selepas bayaran selesai. ARC elektronik dengan tempoh sah enam bulan atau kurang mesti dimuat turun dan dicetak selepas pembayaran. Jadual ini khusus untuk prosedur pelajar. Pemohon lain mengikuti kaedah serta dokumen pengenalan yang dinyatakan dalam notis kelulusan atau pengambilan mereka.
 
 Semasa menerima kad, nama, butiran pasport, alamat dan tarikh tamat kediaman perlu dipadankan dengan keputusan serta dokumen permohonan. Kesilapan boleh dimaklumkan kepada unit yang mengendalikan permohonan.
 

@@ -1,0 +1,45 @@
+{
+  "sourceCommit": "3b4ea7900664b618746f7b5ce959515e124eefe8",
+  "buildInfoBefore": {
+    "commit": "3b4ea7900664b618746f7b5ce959515e124eefe8",
+    "builtAt": "2026-10-25T14:35:16.940Z"
+  },
+  "buildInfoAfter": {
+    "commit": "3b4ea7900664b618746f7b5ce959515e124eefe8",
+    "builtAt": "2026-10-25T14:35:16.940Z"
+  },
+  "startedAt": "2026-10-25T14:52:24.550Z",
+  "finishedAt": "2026-10-25T14:53:51.678Z",
+  "summary": {
+    "total": 62,
+    "passed": 62,
+    "failed": 0,
+    "fatal": false
+  },
+  "sourceManuscripts": 21,
+  "uniqueBodyBlocks": 957,
+  "bodyComparisons": 2540,
+  "missingBodyBlocks": 0,
+  "faqComparisons": 168,
+  "imageDecodes": 56,
+  "documentSwitches": 42,
+  "pageErrors": 0,
+  "consoleErrors": 0,
+  "failedRequests": 0,
+  "rscRequests": 0,
+  "expectedNoJsScriptBlocks": 7,
+  "rawResultSHA256": "79756da1480da2845dadeb721ac607608f1cf8d0dd22a0a97409ced3eb06a39f",
+  "scriptSHA256": "aa02488bcb3f8eea0db386002ac3f730592fae08f1548c5ab638a19f2458459c",
+  "logSHA256": "3315d976eda5386b552f920359829f3d501e40b3eeba9d4f15ff5432e30cf07d",
+  "rootVisuallyInspected": [
+    "browser-screenshots/mobile-nb-705-body.png"
+  ],
+  "browser": {
+    "engine": "Chromium",
+    "version": "156.0.8078.4",
+    "playwright": "1.59.1",
+    "executablePath": "/Users/son7/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+    "headless": true,
+    "isolatedTemporaryProfiles": true
+  }
+}

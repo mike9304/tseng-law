@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-26T01:44:57.825818+09:00",
+  "reason": "Two long condition cells caused a 23-1 line break on mobile390; both labels shortened within the table residence context. Same statutory branches, NIA30-day and BOCA15-day event dates, article links and surrounding conditions retained. No CSS or bidi controls.",
+  "before_sha256": "d405faa17ee7ce3fd11adaf843be8b0c7a9bb6ef474d33244b1e4ee945d2f802",
+  "after_sha256": "fa78467ebf94880a503e0549e6f00b73950771324285d92524996f8e09f87b3d",
+  "edits": [
+    {
+      "before": "שינוי עילת תושבות העומד בתנאי סעיף 23-1 לחוק ההגירה",
+      "after": "שינוי עילה לפי סעיף 23-1"
+    },
+    {
+      "before": "שינוי עילת תושבות שאינו נכלל בסעיף 23-1",
+      "after": "שינוי עילה מחוץ לסעיף 23-1"
+    }
+  ],
+  "exact_reverse": true,
+  "frontmatter_faq_unchanged": true,
+  "source_date_and_all_urls_unchanged": true,
+  "reviewer_preview": "release26/checks/browser-he706-parallel-preview.json",
+  "root_visually_checked_preview": true,
+  "actual_check": {
+    "command": [
+      "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he/706-taiwan-arc-renewal-changes-reentry.md",
+      "--lang",
+      "he"
+    ],
+    "exit_code": 0,
+    "stdout": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he/706-taiwan-arc-renewal-changes-reentry.md [he] sentences=89 mean=13.9 cv=0.475 short=0.236 run3=0.069 opener_rep=0.111 cite_end=0.0 cite_para=0.519 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  "final_render_status": "new content build pending"
+}

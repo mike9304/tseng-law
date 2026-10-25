@@ -1,0 +1,69 @@
+{
+  "at": "2026-10-25T16:27:40.865440+00:00",
+  "status": "R2_M01_S01_S02_CLOSED_NEW_MANDATORY_ZERO",
+  "mandatoryOpen": 0,
+  "optionalAdopted": [
+    "S01",
+    "S02"
+  ],
+  "r1ReportSha256": "e730c2ac777a27d3fecdbd7b3144944d492bfd97ab872c201c3bf6f39021603b",
+  "r1ReportBytes": 22598,
+  "r1PrefixPreserved": true,
+  "manuscripts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/704-taiwan-arc-first-application.md",
+      "sha256": "8ae680254e50bf202d7a3ebe1f886de19264a22251bdda5effbdc9c74b649b53"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d1a5eff1eb9fed410075031876b059d635ac4c9de9cd75a61c5a2ac540371286"
+    }
+  ],
+  "authorSha256": "8dff6adaa711a0cbbae4d1e5442305a971ece16f2667f3f70e2d76429018a094",
+  "authorFinalManifestSha256": "5721d3db84709945f583b2fef7fa8ea80b3e5a7bd20d2180d75eebc06894a0da",
+  "commonInputChanges": [],
+  "expectedAuthorInputChanges": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/km-author.md",
+      "before": "2a40f1fe11b99a2ffea8320e10f466864c98aa601205fe7aeaca7eccbc03121f",
+      "after": "8dff6adaa711a0cbbae4d1e5442305a971ece16f2667f3f70e2d76429018a094"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-final-manifest.json",
+      "before": "e1b623f601a16c7c6b2bc268ed822488110edca706e2c7429f7702cc0f248303",
+      "after": "5721d3db84709945f583b2fef7fa8ea80b3e5a7bd20d2180d75eebc06894a0da"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/km-independent.md",
+      "sha256": "1fc40a74ee6b700da4844d41c0606eb90be6e4d7206119ef2094dd921cae2e1a",
+      "bytes": 29331
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-independent-r2.json",
+      "sha256": "9badf5563ffbb4757c5e9e4a8674988862d093abaefc9612a65262ce4af57c15",
+      "bytes": 160356
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-independent-r2-check.py",
+      "sha256": "51aec6eb0bb034ecf18c2c0363b8a571b9a027011a5051ffb02d3658a1251ac0",
+      "bytes": 9685
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-independent-r1-originals.json",
+      "sha256": "88fe831d8a0b7f07eb06c53da0e55239957f86d3a19d870078eda01c6cb75250",
+      "bytes": 85906
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-independent-final-manifest.json",
+      "sha256": "07be006b3d3d0bc1bf305fe99513f9e03d703797306baf91701037eeb7d5a6bc",
+      "bytes": 3132
+    }
+  ],
+  "scope": "Independent read-only manuscript review. R1 report bytes and R1 evidence preserved; no claim of human language/legal approval, browser rendering or live deployment."
+}

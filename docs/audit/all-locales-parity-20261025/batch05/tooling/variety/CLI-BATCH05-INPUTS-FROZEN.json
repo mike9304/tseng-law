@@ -1,0 +1,142 @@
+{
+  "at": "2026-10-25T15:23:42.975797+00:00",
+  "lengths_fixed_before_cli": [
+    4,
+    25,
+    7,
+    40,
+    5,
+    18,
+    32,
+    8
+  ],
+  "natural_prose_or_target_score": false,
+  "inputs": [
+    {
+      "locale": "km",
+      "kind": "varied",
+      "path": "tests/generated-batch05/varied.km.md",
+      "sha256": "d05c830fe58a045c5f334bb09786ec4f73112af492ea4da241408c432b79c4d5"
+    },
+    {
+      "locale": "km",
+      "kind": "uniform",
+      "path": "tests/generated-batch05/uniform.km.md",
+      "sha256": "eff68ff01696246e02f9c4d81b20dd82c20661c47cd547b15fd95deb1812d957"
+    },
+    {
+      "locale": "km",
+      "kind": "short",
+      "path": "tests/generated-batch05/short.km.md",
+      "sha256": "b40ed65a6eb1e523d014745743acb6a211a89d7ef56f582455cf18f57c59dd01"
+    },
+    {
+      "locale": "mn",
+      "kind": "varied",
+      "path": "tests/generated-batch05/varied.mn.md",
+      "sha256": "cc5da3adceb38a126177555e99ec0cc235c77ea50e6ea1a9acd6c4c5db16e423"
+    },
+    {
+      "locale": "mn",
+      "kind": "uniform",
+      "path": "tests/generated-batch05/uniform.mn.md",
+      "sha256": "6a93a4d8eb81fa46a6c89d3f7b37be3913b09ad23a5ec1c6e8de5a3b4451c555"
+    },
+    {
+      "locale": "mn",
+      "kind": "short",
+      "path": "tests/generated-batch05/short.mn.md",
+      "sha256": "5ed55c8b5a2dbeeb81ce8602381d988999e0aa58c09ca6eb63bdb4d053e889d4"
+    },
+    {
+      "locale": "sr",
+      "kind": "varied",
+      "path": "tests/generated-batch05/varied.sr.md",
+      "sha256": "fd8591bdb893e47111feeec4c8d5ab3432c0c3806193bf1b43c566761c8ad460"
+    },
+    {
+      "locale": "sr",
+      "kind": "uniform",
+      "path": "tests/generated-batch05/uniform.sr.md",
+      "sha256": "4f5a204df4fb78e1937cb51b89cd65c73027fb31d553622d02ff1bb4c40f1996"
+    },
+    {
+      "locale": "sr",
+      "kind": "short",
+      "path": "tests/generated-batch05/short.sr.md",
+      "sha256": "185c2aeb753d6bbe6e58efc8758b6a38a834d8a38fe170907d905d4825e375ed"
+    },
+    {
+      "locale": "sl",
+      "kind": "varied",
+      "path": "tests/generated-batch05/varied.sl.md",
+      "sha256": "df3bc6309af263a4bc6913c8957ecc3dc77f84df61b76ab5083c5850dabd93bf"
+    },
+    {
+      "locale": "sl",
+      "kind": "uniform",
+      "path": "tests/generated-batch05/uniform.sl.md",
+      "sha256": "f25b5dc089c8216b4d286977583ef733ab14343c134dceb44740bde112de5151"
+    },
+    {
+      "locale": "sl",
+      "kind": "short",
+      "path": "tests/generated-batch05/short.sl.md",
+      "sha256": "fa4210ad5562cc8770f3626241ea01ff34a506bbeba07970da8701265d5e49f7"
+    },
+    {
+      "locale": "lt",
+      "kind": "varied",
+      "path": "tests/generated-batch05/varied.lt.md",
+      "sha256": "fc82b7388dabd6dec8142b780a6e0d8800cc159ac6d597333d22504e795bef83"
+    },
+    {
+      "locale": "lt",
+      "kind": "uniform",
+      "path": "tests/generated-batch05/uniform.lt.md",
+      "sha256": "e5787a4f7914cb99871dc185db512ff3d095cbc6998ef1eddcd81930b2de8e40"
+    },
+    {
+      "locale": "lt",
+      "kind": "short",
+      "path": "tests/generated-batch05/short.lt.md",
+      "sha256": "ae20c28a435261e3a7bb930a76f020c56a5abcb41bcc3317a66820838c7e8832"
+    },
+    {
+      "locale": "lv",
+      "kind": "varied",
+      "path": "tests/generated-batch05/varied.lv.md",
+      "sha256": "27ba057b8b057885907003757e7b11418a744ee20d87265278d11610e067c2fb"
+    },
+    {
+      "locale": "lv",
+      "kind": "uniform",
+      "path": "tests/generated-batch05/uniform.lv.md",
+      "sha256": "00f022168c2729413d03621ebd1a77d9a88b01abdfdb2d61b429874010553a96"
+    },
+    {
+      "locale": "lv",
+      "kind": "short",
+      "path": "tests/generated-batch05/short.lv.md",
+      "sha256": "e134aaf854bf560540c9841ebaa7df498f93e38971285e3e617c07e9db4b681d"
+    },
+    {
+      "locale": "et",
+      "kind": "varied",
+      "path": "tests/generated-batch05/varied.et.md",
+      "sha256": "fdcbdbe32ac2aa8af9d53b3b3c75e5963cdada75174ef3fda60f76e6abe5e726"
+    },
+    {
+      "locale": "et",
+      "kind": "uniform",
+      "path": "tests/generated-batch05/uniform.et.md",
+      "sha256": "f68534a3cca97c1e3df70177fab1b1f5f006d1c02c99d5372210d920ab696e52"
+    },
+    {
+      "locale": "et",
+      "kind": "short",
+      "path": "tests/generated-batch05/short.et.md",
+      "sha256": "c71a8f37f512e6a5be933086e6aac4d4482a711cee674c6ed5f05878959e6327"
+    }
+  ]
+}

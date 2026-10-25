@@ -1,0 +1,152 @@
+{
+  "at": "2026-10-25T15:38:28.510481+00:00",
+  "entries": [
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "before": "Uverenje o nekažnjavanju i zdravstveni pregled zavise od kategorije i njenog izuzetka.",
+      "after": "Uverenje o nekažnjavanju i zdravstveni pregled zavise od kategorije i primenljivih izuzetaka.",
+      "reason": "Natural plural reference; category-specific exceptions retained.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "before": "Odluku i račun čuvajte u istom dosijeu.",
+      "after": "Odluku i potvrdu uplate čuvajte u istom dosijeu.",
+      "reason": "Receipt rather than an invoice; same residence-record purpose.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "before": "član 12: prvi ARC tajvanskog supružnika.",
+      "after": "član 12: prvi ARC supružnika tajvanskog državljanina.",
+      "reason": "Clarify the foreign spouse is the ARC holder, not the Taiwan citizen; body already correct.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "before": "Za opšti postupak [NIA navodi deset radnih dana](https://www.immigration.gov.tw/5475/5478/141465/141808/141970).",
+      "after": "[NIA za opšti postupak navodi deset radnih dana](https://www.immigration.gov.tw/5475/5478/141465/141808/141970).",
+      "reason": "Give agency as subject instead of third paragraph starting Za; general processing scope and ten working days preserved.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "before": " Ovaj pregled ne polazi od određenog pasoša.",
+      "after": "",
+      "reason": "Remove reader-facing editorial instruction; actual citizenship/passport/activity criteria and office remain.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "before": "Za studentski rad relevantni su [članovi 43 i 50 Zakona o službama zapošljavanja](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001).",
+      "after": "Studentski rad uređuju [članovi 43 i 50 Zakona o službama zapošljavanja](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001).",
+      "reason": "Direct legal subject/verb instead of third Za opener; provisions, students and following limits retained.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "before": "Pasošu, boravišnom statusu i pravu ponovnog ulaska moraju odgovarati stvarni datumi putovanja.",
+      "after": "Važenje pasoša, boravišni status i pravo ponovnog ulaska proveravaju se prema stvarnim datumima putovanja.",
+      "reason": "Repair awkward dative/inverted FAQ syntax; same travel dates and three separate prerequisites, with mandatory legal rules in body.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "before": "Za preduzetnika koji nastavlja poslovanje na Tajvanu i ispunjava uslove, [NIA dopušta prijavu za produženje tokom četiri meseca pre isteka](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/).",
+      "after": "Preduzetnik koji nastavlja poslovanje na Tajvanu i ispunjava uslove može [podneti zahtev za produženje tokom četiri meseca pre isteka](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/).",
+      "reason": "Applicant as subject instead of repeated Za; continuing Taiwan business AND eligibility, advance four-month window and NIA source retained.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "before": "Za selidbu se podnosi zahtev za registraciju uz dokaz nove adrese u navedenom roku od 30 dana.",
+      "after": "Posle selidbe podnosi se zahtev za registraciju uz dokaz nove adrese u navedenom roku od 30 dana.",
+      "reason": "Event led paragraph instead of repeated Za; filing duty, proof and table next-day thirty-day start retained.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "before": "Za početni upit o radnom ili porodičnom sporu koji utiče na boravak, na [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) navedite događaj i relevantne datume, bez broja pasoša i originalnih identifikacionih isprava.",
+      "after": "Početni upit o radnom ili porodičnom sporu koji utiče na boravak pošaljite na [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw), uz događaj i relevantne datume, bez broja pasoša i originalnih identifikacionih isprava.",
+      "reason": "Direct contact action instead of fifth Za opener; event, dates, one email and data minimization preserved.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "before": "[Član 34 Zakona o imigraciji](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34) zahteva da dozvola za ponovni ulazak bude pribavljena pre odlaska.",
+      "after": "Dozvola za ponovni ulazak mora biti pribavljena pre odlaska, prema [članu 34 Zakona o imigraciji](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34).",
+      "reason": "Move citation to end instead of third Član opener; mandatory predeparture permission and immediate APRC exception retained.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "before": " Datum ranijeg ulaska ovde nije početni datum.",
+      "after": "",
+      "reason": "First-paragraph deletion test: source sentence already specifies issuance date; next paragraph preserves separate entry-next-day rule.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "before": " To su dve različite faze.",
+      "after": "",
+      "reason": "Remove empty restatement after explicit student review five-working-day and payment five-working-day rules; both rules remain.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "before": " Broj predmeta ostaje veza sa podnetom dokumentacijom.",
+      "after": "",
+      "reason": "Remove repeated file-number instruction; earlier paragraph still instructs keeping the case number and submitted files.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "before": "vizom za posetu posebno izdatom radi studiranja stranog studenta",
+      "after": "vizom za posetu izdatom za studiranje u svojstvu stranog studenta",
+      "reason": "Natural Serbian relation between visa purpose and foreign-student status; does not mean a separate curriculum only for foreigners.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "before": "Porodica stranog stručnjaka ima drugi osnov. U [članu 16 stav 2 Zakona o stranim stručnjacima](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295), to može biti strani stručnjak koji obavlja stručni posao na Tajvanu ili strani stručnjak sa posebnim kvalifikacijama.",
+      "after": "Porodična prijava iz [člana 16 stav 2 Zakona o stranim stručnjacima](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) može se zasnivati na statusu stranog stručnjaka koji obavlja stručni posao na Tajvanu ili stranog stručnjaka sa posebnim kvalifikacijama.",
+      "reason": "Replace abstract preview and ambiguous to with explicit sponsor status; exact F04 OR, general-professional employment modifier and following shared NIA residence/permanent-residence requirement preserved.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "before": "Potvrda banke ili univerziteta da je promenio vaš zapis ne zamenjuje zahtev NIA-i po [članu 31](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31).",
+      "after": "Promena adrese u evidenciji banke ili univerziteta ne zamenjuje zahtev NIA-i po [članu 31](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31).",
+      "reason": "Fix ambiguous masculine verb after bank/university alternative; third-party record changes still do not replace NIA filing.",
+      "meaningPreserved": true
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "before": "Svaki slučaj ima uslove. NIA može dati odobrenje kada su oni ispunjeni.",
+      "after": "NIA može odobriti nastavak kada su uslovi konkretnog osnova ispunjeni.",
+      "reason": "Remove empty short assertion while explicitly preserving NIA discretion and conditions for each continued-residence basis.",
+      "meaningPreserved": true
+    }
+  ],
+  "outputs": [
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "beforeSha256": "335e67474329c0843ef25c5c1ef2900dc142f40f3cbfa037c67c5bc53c5037e9",
+      "afterSha256": "15229f8e599464d507976f6d91818d441c6a1c8be1448af31f79fd79b8730dac",
+      "diff": "checks/sr-self-edits-704.diff"
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "beforeSha256": "44699714cb898b7acc97cbf1d6eb831f7f39ecfa12d5bfa529334edb16e3d0e7",
+      "afterSha256": "9057c2a83ef6e71ab6f576702943fdf604ae345b627b94d98986baf4a6b7d6b2",
+      "diff": "checks/sr-self-edits-705.diff"
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "beforeSha256": "6071534a9e6b9fe15a17c2b4f2efd64b3e983f05847107d5edbf62f6e2e4da98",
+      "afterSha256": "1e5a3547ce8437f9ddb4f3a3b61dd62261a4a1dccaa63683d43d9692b73331d9",
+      "diff": "checks/sr-self-edits-706.diff"
+    }
+  ],
+  "finalEditAt": "2026-10-25T15:41:43.628849+00:00"
+}

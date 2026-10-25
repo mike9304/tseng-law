@@ -1,0 +1,58 @@
+{
+  "terminal_abbreviations": {
+    "bg": [
+      "Има книги, тетрадки и т.н.",
+      "После затвориха шкафа."
+    ],
+    "ca": [
+      "Hi ha llibres, carpetes, etc.",
+      "Després tanquem l'armari."
+    ],
+    "el": [
+      "Υπάρχουν βιβλία, τετράδια κ.λπ.",
+      "Μετά κλείνουν το ντουλάπι."
+    ],
+    "hr": [
+      "Tu su knjige, mape itd.",
+      "Zatim zatvaraju ormar."
+    ],
+    "hu": [
+      "Vannak könyvek, füzetek stb.",
+      "Utána bezárják a szekrényt."
+    ],
+    "is": [
+      "Þarna eru bækur, möppur o.fl.",
+      "Síðan loka þau skápnum."
+    ],
+    "sk": [
+      "Sú tu knihy, zošity atď.",
+      "Potom zatvoria skriňu."
+    ]
+  },
+  "greek_urls": [
+    {
+      "input": "Ο σύνδεσμος είναι https://example.test/a?x=1; Μετά κλείνω.",
+      "raw_sentences": [
+        "Ο σύνδεσμος είναι https://example.test/a?x=1;",
+        "Μετά κλείνω."
+      ],
+      "visible_sentences": [
+        "Ο σύνδεσμος είναι ;",
+        "Μετά κλείνω."
+      ],
+      "question": "Ο σύνδεσμος είναι https://example.test/a?x=1;"
+    },
+    {
+      "input": "Ο σύνδεσμος είναι https://example.test/a?x=1; Μετά κλείνω.",
+      "raw_sentences": [
+        "Ο σύνδεσμος είναι https://example.test/a?x=1;",
+        "Μετά κλείνω."
+      ],
+      "visible_sentences": [
+        "Ο σύνδεσμος είναι ;",
+        "Μετά κλείνω."
+      ],
+      "question": "Ο σύνδεσμος είναι https://example.test/a?x=1;"
+    }
+  ]
+}

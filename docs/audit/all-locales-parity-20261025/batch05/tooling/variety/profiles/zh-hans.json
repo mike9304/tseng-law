@@ -1,0 +1,17 @@
+{
+  "locale": "zh-hans",
+  "directory": "columns-zh-hans",
+  "review_status": "AI-authored neutral contract; coordinating review pending",
+  "length_unit": "nonspace_characters_excluding_parentheticals",
+  "short_threshold": 12,
+  "long_threshold": 60,
+  "source_heading_pattern": "^#{1,6}\\s+(?:[0-9]+[.)、]\\s*)?(?:官方来源|官方资料|资料来源|参考资料|来源与核对日期)\\s*[：:]?\\s*$",
+  "abbreviations": ["Dr", "Mr", "Ms", "Art", "No", "e.g", "i.e", "U.S"],
+  "terminal_abbreviations": [],
+  "opener_pattern": "^(?:申请人|居留证|不过|但是|如果|根据|依照|另外|此外|因此|所以|台湾|文件|许可|雇主|这|那|若|但|在|依)",
+  "contrast_patterns": ["不是[^。！？!?\\n]{0,80}而是", "并非[^。！？!?\\n]{0,80}而是", "不同于", "另一回事", "不等于"],
+  "caveat_pattern": "^\\s*[“\"「（(]*(?:不过|但是|然而|只是|但)",
+  "hypo_pattern": "^\\s*[“\"「（(]*(?:假设|假如|例如|设想)",
+  "formula_close_pattern": "(?:本文|本篇文章)(?:仅|只)?(?:提供|属于)一般(?:性)?(?:信息|说明)|本所可以提供帮助",
+  "citation_pattern": "第\\s*\\d+(?:-\\d+)?\\s*条"
+}

@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-25T15:37:22.138626+00:00",
+  "command": [
+    "python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/704-taiwan-arc-first-application.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+    "--lang",
+    "sr"
+  ],
+  "exit_code": 1,
+  "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/704-taiwan-arc-first-application.md [sr] sentences=68 mean=13.0 cv=0.568 short=0.382 run3=0.015 opener_rep=0.105 cite_end=0.0 cite_para=0.316 contrast=0 caveat=0 q=1\n  FAIL top_opener_n=3 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md [sr] sentences=73 mean=13.8 cv=0.46 short=0.219 run3=0.07 opener_rep=0.136 cite_end=0.0 cite_para=0.545 contrast=0 caveat=0 q=1\n  FAIL top_opener_n=3 (limit <= 2): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md [sr] sentences=89 mean=13.9 cv=0.463 short=0.202 run3=0.092 opener_rep=0.259 cite_end=0.0 cite_para=0.481 contrast=0 caveat=0 q=1\n  FAIL top_opener_n=5 (limit <= 3): too many paragraphs start with the same word (max 2, or paragraphs/8 for long columns)\n",
+  "stderr": "",
+  "inputs": [
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "sha256": "335e67474329c0843ef25c5c1ef2900dc142f40f3cbfa037c67c5bc53c5037e9"
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "44699714cb898b7acc97cbf1d6eb831f7f39ecfa12d5bfa529334edb16e3d0e7"
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "6071534a9e6b9fe15a17c2b4f2efd64b3e983f05847107d5edbf62f6e2e4da98"
+    }
+  ],
+  "note": "First actual SR execution; shared49 installed before drafts were complete. No unsupported SR run occurred."
+}

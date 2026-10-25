@@ -1,0 +1,55 @@
+{
+  "review_status": "AI-authored neutral contract; root review/install pending",
+  "join_hyphens": true,
+  "canonical_abbreviations": true,
+  "question_pattern": "[?？؟]\\s*[\\\"”’»›“«)]*$",
+  "provenance": "MULTILINGUAL-METHOD.md (batch03); audit tests/fixtures-batch03.json frozen before profile implementation",
+  "register": "Standard Croatian",
+  "abbreviations": [
+    "dr",
+    "prof",
+    "doc",
+    "mr",
+    "sc",
+    "dipl",
+    "ing",
+    "npr",
+    "tj",
+    "tzv",
+    "itd",
+    "itsl",
+    "i sl",
+    "br",
+    "čl",
+    "st",
+    "str",
+    "god",
+    "g",
+    "usp"
+  ],
+  "terminal_abbreviations": [
+    "itd",
+    "itsl",
+    "i sl",
+    "god"
+  ],
+  "context_terminal_abbreviations": {
+    "g": "\\d{4}\\s*$"
+  },
+  "ordinal_followers": "kat|katu|razred|razreda|poglavlje|poglavlja|članak|stavak|godine|siječnja|veljače|ožujka|travnja|svibnja|lipnja|srpnja|kolovoza|rujna|listopada|studenoga|prosinca",
+  "ordinal_pattern": "(?:(?<!\\w)[IVXLCDM]+\\.(?=\\s+(?:poglavlje|poglavlja|razred|stoljeće|stoljeća)\\b)|(?<![\\w\\u0300-\\u036f])(?:član(?:ak|ka|ku|kom|ci|aka|cima)|stav(?:ak|ka|ku|kom|ci|aka|cima)|točk(?:a|e|i|u|om|ama)|poglavlj(?:e|a|u|em|ima)|pravil(?:o|a|u|om|ima))[^\\S\\r\\n]+(?:\\d+|(?-i:[IVXLCDM]+))\\.(?:(?:[^\\S\\r\\n]+(?:i|ili)[^\\S\\r\\n]+|,[^\\S\\r\\n]*)(?:\\d+|(?-i:[IVXLCDM]+))\\.)*(?=[^\\S\\r\\n]+(?-i:Zakona|Priručnika|Pravilnika|Statuta|Ustava|Uredbe|Pravila)\\b))",
+  "additional_closing_quotes": "“",
+  "contrast_patterns": [
+    "(?i:\\b(?:ne|nije|nisu)\\b[^.!?\\n;;]{0,180}\\b(?:nego|već)\\b)",
+    "(?i:\\bza\\s+razliku\\s+od\\b)",
+    "(?i:\\bumjesto\\s+toga\\b)"
+  ],
+  "caveat_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:međutim|ipak|unatoč\\s+tome)\\b)",
+  "hypo_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:pretpostavimo\\s+da|zamislimo\\s+da)\\b)",
+  "formula_close_pattern": "(?i:ovaj\\s+članak\\s+(?:pruža|sadrži)\\s+opće\\s+informacije|naš\\s+ured\\s+vam\\s+može\\s+pomoći)",
+  "citation_pattern": "(?i:\\b(?:članak|članka|čl\\.)\\s*\\d+)",
+  "locale": "hr",
+  "directory": "columns-hr",
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:izvori|službeni\\s+izvori|literatura)\\s*:?\\s*$)",
+  "dotted_ordinal_lowercase_continuation": true
+}

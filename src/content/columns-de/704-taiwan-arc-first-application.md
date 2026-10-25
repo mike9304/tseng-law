@@ -3,7 +3,7 @@ title: "ARC in Taiwan beantragen: Frist, Unterlagen und erste Karte"
 seoTitle: "Erste ARC in Taiwan: Frist und Antrag"
 summary: "Nach der Einreise mit Aufenthaltsgenehmigung bleiben 30 Tage für den ARC-Antrag. Benötigte Unterlagen, Online-Anträge und Abholung für Beschäftigte, Studierende und Angehörige."
 published: "2026-10-24"
-lastmod: "2026-10-24"
+lastmod: "2026-10-26"
 date_display: "24. Oktober 2026"
 read_time: "7 Minuten Lesezeit"
 categories:
@@ -74,7 +74,7 @@ Die NIA legt die Gültigkeitsdauer anhand der Rechtsgrundlage und der Nachweise 
 
 Im allgemeinen Verfahren nennt [NIA 0902](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) zehn Arbeitstage Bearbeitungszeit. Zeiten für Nachreichungen, Rücksendung und persönliche Befragung zählen nicht mit; nach einer Ergänzung beginnt die Prüfung erneut. Im studentischen Online-Verfahren sind es nach [NIA 0929](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) fünf Arbeitstage. Diese Angaben garantieren keinen bestimmten Reisetermin.
 
-Nach der Bewilligung im Studentenportal bleiben fünf Arbeitstage zur Zahlung. Wer eine Chipkarte erhält, lädt den Zahlungsbeleg herunter, druckt ihn aus und holt die Karte laut [NIA 0929](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) drei Arbeitstage nach Zahlung bei der im Antrag gewählten Servicestelle ab. Eine elektronische ARC mit höchstens sechs Monaten Gültigkeit wird nach Zahlung heruntergeladen. Andere Verfahren haben eigene Abholhinweise.
+Nach der Bewilligung im Studentenportal bleiben fünf Arbeitstage zur Zahlung. Wer eine Chipkarte erhält, lädt den Zahlungsbeleg herunter, druckt ihn aus und holt die Karte laut [NIA 0929](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) drei Arbeitstage nach Zahlung bei der im Antrag gewählten Servicestelle ab. Eine elektronische ARC mit höchstens sechs Monaten Gültigkeit muss nach Zahlung heruntergeladen und ausgedruckt werden. Andere Verfahren haben eigene Abholhinweise.
 
 Bei der Abholung lassen sich Name, Passnummer, Wohnadresse und Ablaufdatum direkt mit den Antragsunterlagen abgleichen. Das Ablaufdatum wird später für die [Verlängerung](/de/columns/taiwan-arc-renewal-changes-reentry) gebraucht; Änderungen etwa der Wohnadresse können schon vorher eine eigene Meldefrist auslösen.
 

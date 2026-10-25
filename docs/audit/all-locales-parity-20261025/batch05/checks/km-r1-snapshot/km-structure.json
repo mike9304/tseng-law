@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-25T15:53:49.274Z",
+  "node": "v24.14.1",
+  "icu": "78.2",
+  "scope": "Structural checks only; legal meaning, Khmer naturalness, publication and live rendering are not certified.",
+  "auditAutomatedStatus": "PASS",
+  "auditErrors": 0,
+  "auditRequiredSemanticReviewItems": 24,
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/704-taiwan-arc-first-application.md",
+      "sha256": "e7093b04429ae7e91ea0d981e625921bbbcb82ce4cb84ead5e28b01953be5809",
+      "bytes": 27812,
+      "officialURLs": 13,
+      "missingEn": [],
+      "missingFooter": [],
+      "errors": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba",
+      "bytes": 26623,
+      "officialURLs": 15,
+      "missingEn": [],
+      "missingFooter": [],
+      "errors": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "316892dfc981a0316b198b3e7a946eecd32c25b5499d9366a63e6ed6a5b2add1",
+      "bytes": 30046,
+      "officialURLs": 14,
+      "missingEn": [],
+      "missingFooter": [],
+      "errors": []
+    }
+  ],
+  "errors": 0
+}

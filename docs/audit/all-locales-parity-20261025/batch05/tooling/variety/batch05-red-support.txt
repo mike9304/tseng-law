@@ -1,0 +1,533 @@
+FFFFFFFFFFFFFFFFFFFFFFF.FFFFFFFFFFFFFFFFFFFFF
+======================================================================
+FAIL: test_khmer_backend_failures_do_not_cache_invalid_results (test_batch05.BatchFiveTests.test_khmer_backend_failures_do_not_cache_invalid_results)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 144, in test_khmer_backend_failures_do_not_cache_invalid_results
+    self.require('km')
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'km' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_khmer_dictionary_runtime_and_real_unavailability (test_batch05.BatchFiveTests.test_khmer_dictionary_runtime_and_real_unavailability)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 124, in test_khmer_dictionary_runtime_and_real_unavailability
+    self.require('km')
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'km' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 46, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'km' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (locale='mn')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 46, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'mn' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (locale='sr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 46, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'sr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (locale='sl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 46, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'sl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 46, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lt' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (locale='lv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 46, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (locale='et')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 46, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'et' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 60, in test_literal_units_and_opener
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'km' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (locale='mn')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 60, in test_literal_units_and_opener
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'mn' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (locale='sr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 60, in test_literal_units_and_opener
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'sr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (locale='sl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 60, in test_literal_units_and_opener
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'sl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 60, in test_literal_units_and_opener
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lt' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (locale='lv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 60, in test_literal_units_and_opener
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (locale='et')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 60, in test_literal_units_and_opener
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'et' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_markdown_url_sources_and_content_heading_scope (test_batch05.BatchFiveTests.test_markdown_url_sources_and_content_heading_scope) (locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 75, in test_markdown_url_sources_and_content_heading_scope
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'km' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_markdown_url_sources_and_content_heading_scope (test_batch05.BatchFiveTests.test_markdown_url_sources_and_content_heading_scope) (locale='mn')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 75, in test_markdown_url_sources_and_content_heading_scope
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'mn' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_markdown_url_sources_and_content_heading_scope (test_batch05.BatchFiveTests.test_markdown_url_sources_and_content_heading_scope) (locale='sr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 75, in test_markdown_url_sources_and_content_heading_scope
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'sr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_markdown_url_sources_and_content_heading_scope (test_batch05.BatchFiveTests.test_markdown_url_sources_and_content_heading_scope) (locale='sl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 75, in test_markdown_url_sources_and_content_heading_scope
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'sl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_markdown_url_sources_and_content_heading_scope (test_batch05.BatchFiveTests.test_markdown_url_sources_and_content_heading_scope) (locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 75, in test_markdown_url_sources_and_content_heading_scope
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lt' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_markdown_url_sources_and_content_heading_scope (test_batch05.BatchFiveTests.test_markdown_url_sources_and_content_heading_scope) (locale='lv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 75, in test_markdown_url_sources_and_content_heading_scope
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_markdown_url_sources_and_content_heading_scope (test_batch05.BatchFiveTests.test_markdown_url_sources_and_content_heading_scope) (locale='et')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 75, in test_markdown_url_sources_and_content_heading_scope
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'et' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_real_failure_short_unavailable_and_unsupported_paths (test_batch05.BatchFiveTests.test_real_failure_short_unavailable_and_unsupported_paths) (locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 108, in test_real_failure_short_unavailable_and_unsupported_paths
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'km' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_real_failure_short_unavailable_and_unsupported_paths (test_batch05.BatchFiveTests.test_real_failure_short_unavailable_and_unsupported_paths) (locale='mn')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 108, in test_real_failure_short_unavailable_and_unsupported_paths
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'mn' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_real_failure_short_unavailable_and_unsupported_paths (test_batch05.BatchFiveTests.test_real_failure_short_unavailable_and_unsupported_paths) (locale='sr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 108, in test_real_failure_short_unavailable_and_unsupported_paths
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'sr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_real_failure_short_unavailable_and_unsupported_paths (test_batch05.BatchFiveTests.test_real_failure_short_unavailable_and_unsupported_paths) (locale='sl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 108, in test_real_failure_short_unavailable_and_unsupported_paths
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'sl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_real_failure_short_unavailable_and_unsupported_paths (test_batch05.BatchFiveTests.test_real_failure_short_unavailable_and_unsupported_paths) (locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 108, in test_real_failure_short_unavailable_and_unsupported_paths
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lt' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_real_failure_short_unavailable_and_unsupported_paths (test_batch05.BatchFiveTests.test_real_failure_short_unavailable_and_unsupported_paths) (locale='lv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 108, in test_real_failure_short_unavailable_and_unsupported_paths
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_real_failure_short_unavailable_and_unsupported_paths (test_batch05.BatchFiveTests.test_real_failure_short_unavailable_and_unsupported_paths) (locale='et')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 108, in test_real_failure_short_unavailable_and_unsupported_paths
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'et' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_registry_and_real_length_contract (test_batch05.BatchFiveTests.test_registry_and_real_length_contract) (locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 31, in test_registry_and_real_length_contract
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'km' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_registry_and_real_length_contract (test_batch05.BatchFiveTests.test_registry_and_real_length_contract) (locale='mn')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 31, in test_registry_and_real_length_contract
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'mn' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_registry_and_real_length_contract (test_batch05.BatchFiveTests.test_registry_and_real_length_contract) (locale='sr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 31, in test_registry_and_real_length_contract
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'sr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_registry_and_real_length_contract (test_batch05.BatchFiveTests.test_registry_and_real_length_contract) (locale='sl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 31, in test_registry_and_real_length_contract
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'sl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_registry_and_real_length_contract (test_batch05.BatchFiveTests.test_registry_and_real_length_contract) (locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 31, in test_registry_and_real_length_contract
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lt' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_registry_and_real_length_contract (test_batch05.BatchFiveTests.test_registry_and_real_length_contract) (locale='lv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 31, in test_registry_and_real_length_contract
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_registry_and_real_length_contract (test_batch05.BatchFiveTests.test_registry_and_real_length_contract) (locale='et')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 31, in test_registry_and_real_length_contract
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'et' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 93, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'km' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='mn')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 93, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'mn' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='sr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 93, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'sr' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='sl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 93, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'sl' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 93, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lt' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='lv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 93, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lv' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='et')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 93, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.require(locale)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 26, in require
+    self.assertIn(locale, metrics.SUPPORTED, 'explicit new locale support required')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'et' not found in ('ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne') : explicit new locale support required
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.273s
+
+FAILED (failures=44)

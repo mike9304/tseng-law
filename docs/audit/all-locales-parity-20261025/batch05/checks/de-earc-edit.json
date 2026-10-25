@@ -1,0 +1,27 @@
+{
+  "at_utc": "2026-10-25T16:25:12.350211+00:00",
+  "source": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-de/704-taiwan-arc-first-application.md",
+  "source_sha256": "07b02d98ad6c6e6679d32bb8315391c678fa23bc7eb0c485ba9bf9dc6440a306",
+  "target": "/Users/son7/tseng-all-language-columns-20261025/batch05/existing-corrections/columns-de/704-taiwan-arc-first-application.md",
+  "target_sha256": "e4088a2d7a48a32b0f63c7642fc4557e537c7db6d840daa69dec09329d200ce2",
+  "old": "Eine elektronische ARC mit höchstens sechs Monaten Gültigkeit wird nach Zahlung heruntergeladen.",
+  "new": "Eine elektronische ARC mit höchstens sechs Monaten Gültigkeit muss nach Zahlung heruntergeladen und ausgedruckt werden.",
+  "lastmod": {
+    "old": "2026-10-24",
+    "new": "2026-10-26"
+  },
+  "published_preserved": "2026-10-24",
+  "date_display_preserved": "24. Oktober 2026",
+  "exact_reverse_sha256": "07b02d98ad6c6e6679d32bb8315391c678fa23bc7eb0c485ba9bf9dc6440a306",
+  "exact_reverse_equals_source": true,
+  "r_source_sha_after": "07b02d98ad6c6e6679d32bb8315391c678fa23bc7eb0c485ba9bf9dc6440a306",
+  "source_verification": {
+    "url": "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+    "section": "4(3)(a), electronic ARC collection",
+    "page_updated": "2026-08-28",
+    "read_in_this_task": true,
+    "short_quote": "applicants shall download and print",
+    "conditions": "After online-system payment; electronic ARC valid for six months or less; in student online-procedure context."
+  },
+  "scope": "Only this existing-corrections DE704 copy plus de-earc-* evidence and de-earc-correction.md review; no R/shared changes."
+}

@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-10-25T16:21:48.804012+00:00",
+  "scope": "Complete comparison of R1 and R2 actual shared-KM arrays; every changed segment printed and manually read. Earlier full R1 read carries over only to byte-identical segments. FAQ remains outside rhythm denominator and is checked separately.",
+  "articles": [
+    {
+      "article": "704",
+      "oldSHA256": "e7093b04429ae7e91ea0d981e625921bbbcb82ce4cb84ead5e28b01953be5809",
+      "newSHA256": "8ae680254e50bf202d7a3ebe1f886de19264a22251bdda5effbdc9c74b649b53",
+      "oldSegments": 67,
+      "newSegments": 67,
+      "unchangedSegments": 66,
+      "changedSegments": [
+        {
+          "beforeRange": [
+            2,
+            2
+          ],
+          "afterRange": [
+            2,
+            2
+          ],
+          "before": [
+            "អ្នកកាន់ឯកសាររួមដែលមានមុខងារ ARC រួចហើយ ស្ថិតក្នុងករណីលើកលែង។"
+          ],
+          "after": [
+            "អ្នកកាន់ឯកសាររួមដែលមានសុពលភាព និងមានមុខងារ ARC រួចហើយ ស្ថិតក្នុងករណីលើកលែង។"
+          ]
+        }
+      ],
+      "URLOrderAndValuesUnchanged": true,
+      "headingsAndExcludedListItemsUnchanged": true
+    },
+    {
+      "article": "705",
+      "oldSHA256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba",
+      "newSHA256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba",
+      "oldSegments": 65,
+      "newSegments": 65,
+      "unchangedSegments": 65,
+      "changedSegments": [],
+      "URLOrderAndValuesUnchanged": true,
+      "headingsAndExcludedListItemsUnchanged": true
+    },
+    {
+      "article": "706",
+      "oldSHA256": "316892dfc981a0316b198b3e7a946eecd32c25b5499d9366a63e6ed6a5b2add1",
+      "newSHA256": "d1a5eff1eb9fed410075031876b059d635ac4c9de9cd75a61c5a2ac540371286",
+      "oldSegments": 79,
+      "newSegments": 78,
+      "unchangedSegments": 76,
+      "changedSegments": [
+        {
+          "beforeRange": [
+            36,
+            37
+          ],
+          "afterRange": [
+            36,
+            36
+          ],
+          "before": [
+            "កាលបរិច្ឆេទលើកាតនៅតែមួយ។",
+            "មូលហេតុដែលធ្លាប់គាំទ្រវាអាចបានបញ្ចប់ទៅហើយ។"
+          ],
+          "after": [
+            "ថ្ងៃផុតសុពលភាពលើកាតនៅដដែល ប៉ុន្តែមូលហេតុស្នាក់នៅអាចបានបញ្ចប់ទៅហើយ។"
+          ]
+        },
+        {
+          "beforeRange": [
+            43,
+            43
+          ],
+          "afterRange": [
+            42,
+            42
+          ],
+          "before": [
+            "ចំពោះវិវាទការងារ នីតិវិធីបណ្តឹងត្រូវកំពុងដំណើរការ; ចំពោះគ្រោះថ្នាក់ការងារ ត្រូវកំពុងព្យាបាល។"
+          ],
+          "after": [
+            "ចំពោះវិវាទការងារជាមួយនិយោជកតៃវ៉ាន់ នីតិវិធីបណ្តឹងត្រូវកំពុងដំណើរការ; ចំពោះគ្រោះថ្នាក់ការងារ ត្រូវកំពុងព្យាបាល។"
+          ]
+        }
+      ],
+      "URLOrderAndValuesUnchanged": true,
+      "headingsAndExcludedListItemsUnchanged": true
+    }
+  ]
+}

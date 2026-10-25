@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-26T01:30:06.098681+09:00",
+  "status": "ALL_21_READY_FOR_ROOT_INTEGRATION",
+  "pending": 0,
+  "publicationReady": false,
+  "KMchecks": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/704-taiwan-arc-first-application.md",
+      "sha256": "8ae680254e50bf202d7a3ebe1f886de19264a22251bdda5effbdc9c74b649b53",
+      "sameAsAlreadyTestedReadinessSnapshot": true,
+      "linkedToR2ReportAndManifest": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba",
+      "sameAsAlreadyTestedReadinessSnapshot": true,
+      "linkedToR2ReportAndManifest": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d1a5eff1eb9fed410075031876b059d635ac4c9de9cd75a61c5a2ac540371286",
+      "sameAsAlreadyTestedReadinessSnapshot": true,
+      "linkedToR2ReportAndManifest": true
+    }
+  ],
+  "review": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/km-independent.md",
+    "sha256": "1fc40a74ee6b700da4844d41c0606eb90be6e4d7206119ef2094dd921cae2e1a"
+  },
+  "R2manifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-independent-r2-final-manifest.json",
+    "sha256": "361ec4979a6450c9d844b9da21c87e9b42ec416416acf73097286f645891cc07"
+  },
+  "readinessManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-readiness-manifest.json",
+    "sha256": "bc548dc8e708657d2c2c424b743022bd42a2ac3b2667e9e880cf079c85425c31"
+  },
+  "summary": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/integration-readiness.md",
+    "sha256": "cf6a52e77a95f7aa4b0b0a88198f61fc6d98d76c18810d316c9530ac7cf826ee"
+  },
+  "fullTestsRerun": false,
+  "rInventoryRunCount": 1,
+  "mutated": "Only owned integration-readiness evidence and summary; no manuscript, R or shared checker changes."
+}

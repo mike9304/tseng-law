@@ -1,0 +1,15 @@
+{
+  "locale": "tr",
+  "directory": "columns-tr",
+  "review_status": "AI-authored neutral contract; coordinating review pending",
+  "join_hyphens": true,
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:(?:resm[iî]\\s+)?kaynaklar(?:\\s+ve\\s+kontrol\\s+tarihi)?)\\s*:?\\s*$)",
+  "abbreviations": ["Dr", "Prof", "Av", "Sn", "No", "md", "m", "f", "bkz", "örn", "vb", "vs", "T.C"],
+  "terminal_abbreviations": ["vb", "vs"],
+  "ordinal_followers": "madde|fıkra|bent|sayfa|Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık",
+  "contrast_patterns": ["(?i:\\bdeğil\\s*[,;][^.!?\\n]{1,160})", "(?i:\\byerine\\b)", "(?i:\\b\\w+(?:dan|den|tan|ten)\\s+farklı\\b)"],
+  "caveat_pattern": "(?i:^\\s*[“\"(]*(?:ancak|bununla\\s+birlikte|yine\\s+de|buna\\s+rağmen)\\b)",
+  "hypo_pattern": "(?i:^\\s*[“\"(]*(?:varsayalım|diyelim|farz\\s+edelim)\\b|^.{0,140}\\bvarsayalım[.!?]?$)",
+  "formula_close_pattern": "(?i:bu\\s+yazı\\s+(?:yalnızca\\s+)?genel\\s+bilgi|büromuz\\s+size\\s+yardımcı\\s+olabilir)",
+  "citation_pattern": "(?i:\\b(?:madde|md\\.)\\s*\\d+)"
+}

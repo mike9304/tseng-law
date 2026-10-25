@@ -1,0 +1,76 @@
+{
+  "capturedAt": "2026-10-25T16:20:49.710197+00:00",
+  "scope": "Exact pre-R2 author evidence and manuscripts; independent reviewer files remain untouched.",
+  "files": [
+    {
+      "originalPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/km-author.md",
+      "archivePath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r1-snapshot/km-author.md",
+      "sha256": "2a40f1fe11b99a2ffea8320e10f466864c98aa601205fe7aeaca7eccbc03121f"
+    },
+    {
+      "originalPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-final-manifest.json",
+      "archivePath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r1-snapshot/km-final-manifest.json",
+      "sha256": "e1b623f601a16c7c6b2bc268ed822488110edca706e2c7429f7702cc0f248303"
+    },
+    {
+      "originalPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-final.json",
+      "archivePath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r1-snapshot/km-variety-final.json",
+      "sha256": "04dd26e1740703ef129a0a33683a1ed999ff5390f59caf7d761c76b21a59ca12"
+    },
+    {
+      "originalPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-content-audit.json",
+      "archivePath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r1-snapshot/km-content-audit.json",
+      "sha256": "b3b597d18728edac7cfb5403e554623d001f80b7b61acb6f83288e1556d064ba"
+    },
+    {
+      "originalPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-structure.json",
+      "archivePath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r1-snapshot/km-structure.json",
+      "sha256": "8a2529acac53def4cc7f63af936124d278ac4991061f5c865133ed3196e974b5"
+    },
+    {
+      "originalPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-sentences-final-704.json",
+      "archivePath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r1-snapshot/km-sentences-final-704.json",
+      "sha256": "6afb60fa3690a5214489b9aab3f81d5d6de908f706ac185cd5858e214b9e8beb"
+    },
+    {
+      "originalPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-sentences-final-705.json",
+      "archivePath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r1-snapshot/km-sentences-final-705.json",
+      "sha256": "3f9544eae413b64c09af4e24ff572cc5dc087c2c7a5c76353e7db267773392b5"
+    },
+    {
+      "originalPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-sentences-final-706.json",
+      "archivePath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r1-snapshot/km-sentences-final-706.json",
+      "sha256": "d2d5c6781e1ebe4330e463e54eb2dce2913a42652d8a3573f81ad845c12e4018"
+    },
+    {
+      "originalPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-final-704.log",
+      "archivePath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r1-snapshot/km-variety-final-704.log",
+      "sha256": "84af4d20d6e2d55812f56f8578b9c5b282915142d4c97cbc04683981cdba7338"
+    },
+    {
+      "originalPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-final-705.log",
+      "archivePath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r1-snapshot/km-variety-final-705.log",
+      "sha256": "e9b91e407fcf3531213f9bcb2687964ce54fee1589c66dcee6dc3b61212e82e9"
+    },
+    {
+      "originalPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-final-706.log",
+      "archivePath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r1-snapshot/km-variety-final-706.log",
+      "sha256": "279825c411ed5fdaf8582e7de9a97353fa491955e7c7530ff9d8fb6d916f3c4e"
+    },
+    {
+      "originalPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/704-taiwan-arc-first-application.md",
+      "archivePath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r1-snapshot/704-taiwan-arc-first-application.md",
+      "sha256": "e7093b04429ae7e91ea0d981e625921bbbcb82ce4cb84ead5e28b01953be5809"
+    },
+    {
+      "originalPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+      "archivePath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r1-snapshot/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba"
+    },
+    {
+      "originalPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+      "archivePath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r1-snapshot/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "316892dfc981a0316b198b3e7a946eecd32c25b5499d9366a63e6ed6a5b2add1"
+    }
+  ]
+}

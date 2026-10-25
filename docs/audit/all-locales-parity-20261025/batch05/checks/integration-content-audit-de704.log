@@ -1,0 +1,8 @@
+FAIL src/content/columns-de/704-taiwan-arc-first-application.md — 4 errors, 13 required review items
+  ERROR publication-date: lastmod must match the selected release date
+  ERROR source-url-missing: A cited source URL was removed or changed; restore it or resolve an explicitly reviewed replacement before integration (https://www.boca.gov.tw/cp-166-276-48430-2.html)
+  ERROR source-url-missing: A cited source URL was removed or changed; restore it or resolve an explicitly reviewed replacement before integration (https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295)
+  ERROR source-url-missing: A cited source URL was removed or changed; restore it or resolve an explicitly reviewed replacement before integration (https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/)
+  REVIEW numeric token differences: 9 source-only / 10 target-only; context in JSON
+Automated: FAIL; selected=1; errors=4; semantic=REVIEW_REQUIRED; publicationReady=false
+Review evidence: /Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-content-audit-de704.json

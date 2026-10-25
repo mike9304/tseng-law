@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-10-25T15:21:28.925413+00:00",
+  "before_production_edits": true,
+  "support_red_failures": 45,
+  "files": [
+    {
+      "path": "tests/test_batch05.py",
+      "sha256": "a8074e25f5ae55aeb0b93d3acf0bc249a591cfe4ee9e11f8f45c86da1feca44e"
+    },
+    {
+      "path": "tests/fixtures-km-author.json",
+      "sha256": "482521ceaa22e8786c6cefa9b9c1e6c6d59bb4c5e8eb1884287e4da7a55cb99a"
+    },
+    {
+      "path": "KM-AUTHOR-CONTRACT.json",
+      "sha256": "f747c4d2b77280d0f5b9b287125b3cebc7a632cb2a229790f3e30c21b80e9d1f"
+    },
+    {
+      "path": "batch05-red-support-author.txt",
+      "sha256": "be0735c181001524f5f537f3e4289e53a02693effd6b3c6641383f0fe5587c4d"
+    }
+  ]
+}

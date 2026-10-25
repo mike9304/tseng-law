@@ -1,0 +1,65 @@
+{
+  "at": "2026-10-26T02:14:51.714676+09:00",
+  "observedToolSHAAtInitialCommand": "eea579eedf007e403209d59f2089b7f2d1e465c03294df9bad5f50c24b4a8b03",
+  "wrapperExitCode": 1,
+  "originalCLI": "--source-locale en --publication-date2026-10-26 for21; --source-locale en --publication-date2026-10-24 forDE; both--errors-only",
+  "runs": [
+    {
+      "group": "new21",
+      "report": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-content-audit-new21.json",
+        "sha256": "f62650798b0eb7ed81e9316c986a39ec467278535b8c1d643dfcd8ee7e560f53"
+      },
+      "log": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-content-audit-new21.log",
+        "sha256": "8b1e5d216683ab4baee29126f30240814e2c78b8120ff2329bcefc779da35350"
+      },
+      "errors": 0,
+      "automatedStatus": "PASS",
+      "semanticStatus": "REVIEW_REQUIRED",
+      "publicationReady": false,
+      "errorsDetail": []
+    },
+    {
+      "group": "de704",
+      "report": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-content-audit-de704.json",
+        "sha256": "de3e449ae8656b71b03dffbaf93ee5a325d0d29a5fb616963dbe0044703e5282"
+      },
+      "log": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-content-audit-de704.log",
+        "sha256": "bef931ecf504dfe155732bfdae257e4aa055371e4a5affe69a774d7c57d35c39"
+      },
+      "errors": 4,
+      "automatedStatus": "FAIL",
+      "semanticStatus": "REVIEW_REQUIRED",
+      "publicationReady": false,
+      "errorsDetail": [
+        {
+          "code": "publication-date",
+          "message": "lastmod must match the selected release date",
+          "field": "lastmod",
+          "expected": "2026-10-24",
+          "actual": "2026-10-26"
+        },
+        {
+          "code": "source-url-missing",
+          "message": "A cited source URL was removed or changed; restore it or resolve an explicitly reviewed replacement before integration",
+          "url": "https://www.boca.gov.tw/cp-166-276-48430-2.html"
+        },
+        {
+          "code": "source-url-missing",
+          "message": "A cited source URL was removed or changed; restore it or resolve an explicitly reviewed replacement before integration",
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295"
+        },
+        {
+          "code": "source-url-missing",
+          "message": "A cited source URL was removed or changed; restore it or resolve an explicitly reviewed replacement before integration",
+          "url": "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/"
+        }
+      ]
+    }
+  ],
+  "cause": "DE one-sentence correction was incorrectly checked as a new EN translation with equal publication/lastmod. Existing DE publication24/lastmod26 differ intentionally and three EN URLs were never in the reviewed DE before.",
+  "resolution": "Preserve initial4 errors. Root approved final DE check against immutable prior DE source, omit unified date option, explicitly assert published24,lastmod26, all remaining bytes/URL set preserved. Root installed final auditor SHA3926…faf4b; run final21 again because tool changed. No manuscript or checker edited to suppress errors."
+}

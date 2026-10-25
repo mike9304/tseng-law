@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-25T15:56:07.460245+00:00",
+  "toolSha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+  "profileSha256": "a91bc6f0a6d80aada83de9c463836b6c4c4d724eddc32ff18905b573642d3694",
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/704-taiwan-arc-first-application.md",
+      "beforeSha256": "f46f3545e94950ba11cb30f118689721608e6f9593a088a40b10f3b8618a35a9",
+      "afterSha256": "f46f3545e94950ba11cb30f118689721608e6f9593a088a40b10f3b8618a35a9",
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/704-taiwan-arc-first-application.md [lt] sentences=74 mean=12.3 cv=0.476 short=0.311 run3=0.069 opener_rep=0.05 cite_end=0.0 cite_para=0.35 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "beforeSha256": "33b0cc65e3720963cac03710365c44c3c8a88a953309b38314680bca963c14c5",
+      "afterSha256": "33b0cc65e3720963cac03710365c44c3c8a88a953309b38314680bca963c14c5",
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md [lt] sentences=77 mean=13.4 cv=0.456 short=0.247 run3=0.093 opener_rep=0.0 cite_end=0.0 cite_para=0.476 contrast=0 caveat=1 q=2\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "beforeSha256": "4b2d935fa2496bf95b6e304f976e937221a6ab696ab9aa7cf526e2811c7cf1c6",
+      "afterSha256": "4b2d935fa2496bf95b6e304f976e937221a6ab696ab9aa7cf526e2811c7cf1c6",
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md [lt] sentences=92 mean=13.1 cv=0.482 short=0.283 run3=0.078 opener_rep=0.04 cite_end=0.0 cite_para=0.52 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": ""
+    }
+  ]
+}

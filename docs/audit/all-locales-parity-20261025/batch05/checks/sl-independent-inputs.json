@@ -1,0 +1,178 @@
+{
+  "at": "2026-10-25T15:56:57.001601+00:00",
+  "scope": "Independent SL manuscript review; this reviewer implemented SL profile, not tool-independent certification",
+  "repo_head": "3b5ea95061d61a6b9a0e94eb61438be843fdd63c",
+  "author_manifest_input_drift": [],
+  "files": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/704-taiwan-arc-first-application.md",
+      "sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1",
+      "bytes": 13902
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a",
+      "bytes": 13422
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc",
+      "bytes": 16043
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+      "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f",
+      "bytes": 11003
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304",
+      "bytes": 11813
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71",
+      "bytes": 12985
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/704-taiwan-arc-first-application.md",
+      "sha256": "0c00bc06bf3c3c1860a95af4dbcea9eaab981300860916856295e8b947244468",
+      "bytes": 10598
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "290a50047632ad830ea98c524ffef6ed91c2b4c8d555a1844689824c3ffea7a3",
+      "bytes": 11997
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4d70e78b9a197f4a2b81d25d61b6fa862ee849a6392d5fd905e90bcf781e721c",
+      "bytes": 13255
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/894-slovenian-supplier-taiwan-distributor-exit-stock.md",
+      "sha256": "b577ce6a140a04f562d7a869b988e1195b9e2c866613aebb03faca5cbb41b207",
+      "bytes": 9016
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/895-slovenian-professional-taiwan-work-permit-residence.md",
+      "sha256": "c8cab244c0aa0e5cab1073530aaddead9c0feb351e4df5d20580fffb4455e962",
+      "bytes": 9980
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/896-slovenian-heir-taiwan-estate-documents-deadlines.md",
+      "sha256": "e663bcb2a25e0359c6a40d74dcc4afa47b5ba684e6bf15bd8141563977eb0f1a",
+      "bytes": 11265
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/704-taiwan-arc-first-application.md",
+      "sha256": "a87a3ac1137b0012120a56629dccc0e0d64dcbb55a2e2a6110e2be213cde6bd6",
+      "bytes": 11474
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "817393175801756e47f9ae7176d2b4336b0fdb47fca765b8dab4edcb9262cbbc",
+      "bytes": 12588
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "c85cb2409fa70abca79392f127d2948f33684e89f9b42cde4410a569139e2243",
+      "bytes": 15338
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/sl-author.md",
+      "sha256": "1e3bb5eb255f4e7b086ad616d9fbaef0535d7ffec267d7c12ba57388b72afc79",
+      "bytes": 9078
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-author-manifest.json",
+      "sha256": "d8dd2d888723238d414c3f5d135b184964d5d2bc1738b225088bd4ccfe3ecfb1",
+      "bytes": 4111
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/AGENTS.md",
+      "sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19",
+      "bytes": 18421
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/BRIEF.md",
+      "sha256": "a8546e8a19f911b16c07f29ff874fb4ad70bb04d087a16354ad2adc8a57246f7",
+      "bytes": 5971
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/research/arc-source-facts.md",
+      "sha256": "4776f60010172120e0812d8d552123aeb5c7cc0b467cb5306ca031a1e17c2145",
+      "bytes": 22170
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/codex-column-recheck-20261024/research/source-refresh.md",
+      "sha256": "a33d5bd1439879bc7461755c3b6793f4942ec161454032dcb8cde1c4d52a6983",
+      "bytes": 21581
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "bytes": 14050
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/FRONTMATTER.md",
+      "sha256": "7a2590f33ba49c55f539f1fade51fed1290808352b16247445a714333593a364",
+      "bytes": 8842
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "bytes": 1705
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "bytes": 16440
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "92c572987cbc3c03eeb934fbfd2de6cf42d7e4b2e441cc39fb009c0e11f0e71a",
+      "bytes": 17485
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/BRIEF.md",
+      "sha256": "104c4c4df457e5627b6970599661be78182d7101cbb9090df549670501846105",
+      "bytes": 3597
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch03/BRIEF.md",
+      "sha256": "076a5bd7220bead942bf9dcf4c649180c8036b85d5c019775f1aad1a42eb3c7e",
+      "bytes": 3942
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch04/BRIEF.md",
+      "sha256": "67af9e0e6ebdcf818bfe41d84dac0000f8a1252bc6bf55c02ce6eeaaa7445ef9",
+      "bytes": 3721
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/BRIEF.md",
+      "sha256": "3ec4273b3e346bb20e1b6513c6a146682da2e39fa5c48c17d5496bd8195a4863",
+      "bytes": 3688
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+      "bytes": 21867
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "128fe9c0a911f0f85b5423453ec681866b452185628a0fe6e311c829e05c4106",
+      "bytes": 23551
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc",
+      "bytes": 9201
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/sl.json",
+      "sha256": "f7fdb543f7952d5e891a30fd5d167b3035a3933c982a01f6d70b03c5f554c040",
+      "bytes": 1835
+    }
+  ]
+}

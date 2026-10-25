@@ -1,0 +1,17 @@
+{
+  "locale": "pl",
+  "directory": "columns-pl",
+  "review_status": "AI-authored neutral contract; coordinating review pending",
+  "register": "Standard Polish",
+  "join_hyphens": true,
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:(?:oficjalne|urzędowe)\\s+)?źródła(?:\\s+(?:urzędowe|oficjalne))?(?:\\s+i\\s+data\\s+weryfikacji)?\\s*:?\\s*$)",
+  "abbreviations": ["prof", "hab", "inż", "art", "ust", "pkt", "str", "r", "poz", "ul", "al", "ok", "np", "m.in", "itd", "itp", "tj", "tzn", "tzw"],
+  "terminal_abbreviations": ["itd", "itp"],
+  "context_terminal_abbreviations": {"r": "\\d{4}\\s*$"},
+  "ordinal_followers": "stycznia|lutego|marca|kwietnia|maja|czerwca|lipca|sierpnia|września|października|listopada|grudnia|piętro|piętrze|rozdział|rozdziale|punkt|punkcie|klasa|klasie",
+  "contrast_patterns": ["(?i:\\bnie\\b[^.!?\\n]{0,180}\\b(?:lecz|ale)\\b)", "(?i:\\bzamiast\\b)", "(?i:\\bw\\s+przeciwieństwie\\s+do\\b)"],
+  "caveat_pattern": "(?i:^\\s*[”\"(«»„“]*(?:jednak|niemniej|mimo\\s+to)\\b)",
+  "hypo_pattern": "(?i:^\\s*[”\"(«»„“]*(?:załóżmy\\s*,?\\s+że|wyobraźmy\\s+sobie)\\b)",
+  "formula_close_pattern": "(?i:ten\\s+artykuł\\s+(?:zawiera|przedstawia)\\s+ogólne\\s+informacje|nasza\\s+kancelaria\\s+może\\s+pomóc)",
+  "citation_pattern": "(?i:(?:\\b(?:artykuł|artykuły|art\\.)\\s*|§\\s*)\\d+)"
+}

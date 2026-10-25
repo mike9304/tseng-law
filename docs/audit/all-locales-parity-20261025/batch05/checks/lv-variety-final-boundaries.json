@@ -1,0 +1,1440 @@
+{
+  "at": "2026-10-25T15:50:07.521570+00:00",
+  "method": "Exact shared lv prose sentence array; entire 222 sentences read and all changed paragraphs separately reread. Last adjustment shortened opening statute link label while keeping same article URL and later article numbers.",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/704-taiwan-arc-first-application.md",
+      "sha256": "f47d6be694c2e9601fa457d64598379b5065fa48a94937d5ff11a76d3637c810",
+      "metrics": {
+        "lang": "lv",
+        "sentences": 64,
+        "paras": 21,
+        "heads": 5,
+        "list_items": 3,
+        "mean_len": 11.9,
+        "len_cv": 0.519,
+        "short_share": 0.359,
+        "long_share": 0.0,
+        "para_cv": 0.353,
+        "even_run3": 0.032,
+        "top_end": "taivānā",
+        "top_end_share": 0.031,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "ja",
+        "top_opener_n": 2,
+        "opener_rep": 0.048,
+        "consec_same_start": 0,
+        "cite_para_share": 0.333,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.49,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "30 dienu termiņu pirmās ARC pieteikumam Taivānas Konsulāro lietu birojs (BOCA) skaita no u",
+        "last": "Avotu pārbaudes pamats ir 2026. gada 24. oktobris; atsevišķi nosacījumi papildus salīdzināti 25. oktobrī. Šis skaidrojum",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "text": "30 dienu termiņu pirmās ARC pieteikumam [Taivānas Konsulāro lietu birojs (BOCA)](https://www.boca.gov.tw/cp-166-276-48430-2.html) skaita no uzturēšanās vīzas izsniegšanas dienas, ja vīza saņemta pēc ierašanās Taivānā.",
+          "opener": "30",
+          "sentences": [
+            {
+              "text": "30 dienu termiņu pirmās ARC pieteikumam Taivānas Konsulāro lietu birojs (BOCA) skaita no uzturēšanās vīzas izsniegšanas dienas, ja vīza saņemta pēc ierašanās Taivānā.",
+              "units": 23
+            }
+          ]
+        },
+        {
+          "text": "Ja ārvalstnieks jau ieceļo ar uzturēšanās vīzu un saņem uzturēšanās atļauju, [Imigrācijas likums](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) liek pieteikties 30 dienu laikā no nākamās dienas pēc ieceļošanas. Pieteikumu izskata Nacionālā imigrācijas aģentūra (NIA), kas izsniedz ārvalstnieka uzturēšanās apliecību — Alien Resident Certificate jeb ARC. Tādēļ kopā jāsalīdzina vīza un ieceļošanas ieraksts.",
+          "opener": "ja",
+          "sentences": [
+            {
+              "text": "Ja ārvalstnieks jau ieceļo ar uzturēšanās vīzu un saņem uzturēšanās atļauju, Imigrācijas likums liek pieteikties 30 dienu laikā no nākamās dienas pēc ieceļošanas.",
+              "units": 23
+            },
+            {
+              "text": "Pieteikumu izskata Nacionālā imigrācijas aģentūra (NIA), kas izsniedz ārvalstnieka uzturēšanās apliecību — Alien Resident Certificate jeb ARC.",
+              "units": 16
+            },
+            {
+              "text": "Tādēļ kopā jāsalīdzina vīza un ieceļošanas ieraksts.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "text": "Apmeklētājam vispirms vajadzīgs tiesisks pamats pieteikties uzturēšanās atļaujai. Piemērojamo procedūru skaidro [NIA uzturēšanās norādījumi](https://www.immigration.gov.tw/5475/5478/141465/141808/141970). Savukārt derīga apvienotā dokumenta, kas pilda arī ARC funkciju, īpašniekam likuma 22. pants paredz izņēmumu no atsevišķas kartes pieprasīšanas; tāds dokuments ir Employment Gold Card.",
+          "opener": "apmeklētājam",
+          "sentences": [
+            {
+              "text": "Apmeklētājam vispirms vajadzīgs tiesisks pamats pieteikties uzturēšanās atļaujai.",
+              "units": 8
+            },
+            {
+              "text": "Piemērojamo procedūru skaidro NIA uzturēšanās norādījumi.",
+              "units": 6
+            },
+            {
+              "text": "Savukārt derīga apvienotā dokumenta, kas pilda arī ARC funkciju, īpašniekam likuma 22. pants paredz izņēmumu no atsevišķas kartes pieprasīšanas; tāds dokuments ir Employment Gold Card.",
+              "units": 25
+            }
+          ]
+        },
+        {
+          "text": "Atbilstošam ārvalstu speciālistam ar profesionālā darba atļauju vai piemērojamu atbrīvojumu [Ārvalstu speciālistu piesaistes un nodarbināšanas likuma 16. pants](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) ļauj pēc atbilstošas bezvīzu vai apmeklētāja vīzas ieceļošanas pieteikties tieši NIA. ARC izsniedz pēc uzturēšanās pieteikuma apstiprināšanas. Citām situācijām noder [darba, studiju un ģimenes uzturēšanās ceļu salīdzinājums](/lv/columns/taiwan-visa-residence-work-study-family).",
+          "opener": "atbilstošam",
+          "sentences": [
+            {
+              "text": "Atbilstošam ārvalstu speciālistam ar profesionālā darba atļauju vai piemērojamu atbrīvojumu Ārvalstu speciālistu piesaistes un nodarbināšanas likuma 16. pants ļauj pēc atbilstošas bezvīzu vai apmeklētāja vīzas ieceļošanas pieteikties tieši NIA.",
+              "units": 29
+            },
+            {
+              "text": "ARC izsniedz pēc uzturēšanās pieteikuma apstiprināšanas.",
+              "units": 6
+            },
+            {
+              "text": "Citām situācijām noder darba, studiju un ģimenes uzturēšanās ceļu salīdzinājums.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "text": "Pieteikumam uz uzturēšanās vīzas pamata [NIA saraksts](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) prasa veidlapu, fotogrāfiju, pasi un uzturēšanās vīzu, uzturēšanās iemesla pierādījumus un faktiskās adreses apliecinājumu. Fotogrāfijai jābūt uzņemtai pēdējo divu gadu laikā. Vajadzīgi norādītie oriģināli un kopijas. Pēc pārbaudes oriģinālus atdod.",
+          "opener": "pieteikumam",
+          "sentences": [
+            {
+              "text": "Pieteikumam uz uzturēšanās vīzas pamata NIA saraksts prasa veidlapu, fotogrāfiju, pasi un uzturēšanās vīzu, uzturēšanās iemesla pierādījumus un faktiskās adreses apliecinājumu.",
+              "units": 21
+            },
+            {
+              "text": "Fotogrāfijai jābūt uzņemtai pēdējo divu gadu laikā.",
+              "units": 7
+            },
+            {
+              "text": "Vajadzīgi norādītie oriģināli un kopijas.",
+              "units": 5
+            },
+            {
+              "text": "Pēc pārbaudes oriģinālus atdod.",
+              "units": 4
+            }
+          ]
+        },
+        {
+          "text": "Pamatojuma dokumenti atšķiras:",
+          "opener": "pamatojuma",
+          "sentences": [
+            {
+              "text": "Pamatojuma dokumenti atšķiras:",
+              "units": 3
+            }
+          ]
+        },
+        {
+          "text": "Ar kuru dokumentu apliecināsiet adresi? Viens no pieļaujamajiem pierādījumiem ir īres līgums. Tam jāattiecas uz faktisko dzīvesvietu.",
+          "opener": "ar",
+          "sentences": [
+            {
+              "text": "Ar kuru dokumentu apliecināsiet adresi?",
+              "units": 5
+            },
+            {
+              "text": "Viens no pieļaujamajiem pierādījumiem ir īres līgums.",
+              "units": 7
+            },
+            {
+              "text": "Tam jāattiecas uz faktisko dzīvesvietu.",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "text": "Ja pirmo ARC pieprasāt uz laulības pamata ar Taivānā dzīvojošu Taivānas pilsoni, kuram ir mājsaimniecības reģistrācija, šim laulātajam jāierodas līdzi. [NIA prasa](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) arī pierādījumu, ka laulība reģistrēta Taivānā. Šajā kategorijā pirmās ARC maksimālais derīgums ir viens gads saskaņā ar [uzturēšanās noteikumu 12. pantu](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129). Ģimenes dokumenti plašāk aprakstīti [rakstā angļu valodā par Taivānas pilsoņa laulāto](/en/columns/taiwan-foreign-spouse-residence).",
+          "opener": "ja",
+          "sentences": [
+            {
+              "text": "Ja pirmo ARC pieprasāt uz laulības pamata ar Taivānā dzīvojošu Taivānas pilsoni, kuram ir mājsaimniecības reģistrācija, šim laulātajam jāierodas līdzi.",
+              "units": 20
+            },
+            {
+              "text": "NIA prasa arī pierādījumu, ka laulība reģistrēta Taivānā.",
+              "units": 8
+            },
+            {
+              "text": "Šajā kategorijā pirmās ARC maksimālais derīgums ir viens gads saskaņā ar uzturēšanās noteikumu 12. pantu.",
+              "units": 15
+            },
+            {
+              "text": "Ģimenes dokumenti plašāk aprakstīti rakstā angļu valodā par Taivānas pilsoņa laulāto.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "text": "Ārvalstīs izsniegtajiem dokumentiem vajadzīga noteiktajā kārtībā veikta autentifikācija. Ķīniešu tulkojumu NIA var pieprasīt papildus; tam jābūt pārstāvniecības pārbaudītam vai Taivānas notāra apliecinātam atbilstoši norādījumiem. Procedūru palīdz precizēt [Taivānas pārstāvniecība, kuras kompetencē ir dokumenta izsniegšanas vieta](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html). Veselības pārbaude un sodāmības izziņa vajadzīga atbilstoši konkrētās kategorijas noteikumiem, nevis katrā pirmās ARC lietā.",
+          "opener": "ārvalstīs",
+          "sentences": [
+            {
+              "text": "Ārvalstīs izsniegtajiem dokumentiem vajadzīga noteiktajā kārtībā veikta autentifikācija.",
+              "units": 8
+            },
+            {
+              "text": "Ķīniešu tulkojumu NIA var pieprasīt papildus; tam jābūt pārstāvniecības pārbaudītam vai Taivānas notāra apliecinātam atbilstoši norādījumiem.",
+              "units": 16
+            },
+            {
+              "text": "Procedūru palīdz precizēt Taivānas pārstāvniecība, kuras kompetencē ir dokumenta izsniegšanas vieta.",
+              "units": 11
+            },
+            {
+              "text": "Veselības pārbaude un sodāmības izziņa vajadzīga atbilstoši konkrētās kategorijas noteikumiem, nevis katrā pirmās ARC lietā.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "text": "Dažādām kategorijām [NIA pieteikumu katalogā](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/) norādītas atšķirīgas sistēmas: vispārīgā uzturēšanās, profesionāļi un viņu ģimenes, studenti un noteiktu profesiju viesstrādnieki. Darbs Taivānā vien vēl nenozīmē, ka piemērota profesionāļu sistēma. Jāsalīdzina atļaujā norādītā darba kategorija.",
+          "opener": "dažādām",
+          "sentences": [
+            {
+              "text": "Dažādām kategorijām NIA pieteikumu katalogā norādītas atšķirīgas sistēmas: vispārīgā uzturēšanās, profesionāļi un viņu ģimenes, studenti un noteiktu profesiju viesstrādnieki.",
+              "units": 19
+            },
+            {
+              "text": "Darbs Taivānā vien vēl nenozīmē, ka piemērota profesionāļu sistēma.",
+              "units": 9
+            },
+            {
+              "text": "Jāsalīdzina atļaujā norādītā darba kategorija.",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "text": "Studentiem ir [sava tiešsaistes procedūra](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news). Parastam klātienes pieteikumam kompetents ir NIA apkalpošanas centrs pēc pašreizējās adreses; tādu pašu norādi [NIA sniedz Taivānas pilsoņa laulātā pieteikumam](https://www.immigration.gov.tw/5475/5478/141465/141808/141970).",
+          "opener": "studentiem",
+          "sentences": [
+            {
+              "text": "Studentiem ir sava tiešsaistes procedūra.",
+              "units": 5
+            },
+            {
+              "text": "Parastam klātienes pieteikumam kompetents ir NIA apkalpošanas centrs pēc pašreizējās adreses; tādu pašu norādi NIA sniedz Taivānas pilsoņa laulātā pieteikumam.",
+              "units": 20
+            }
+          ]
+        },
+        {
+          "text": "Saglabājiet iesniegšanas apliecinājumu un augšupielādētās datnes. Ja vēlāk prasa papildu dokumentus, pievienojiet lietai arī šo pieprasījumu. Tad ir redzams, kas jau iesniegts un kas vēl jāpapildina.",
+          "opener": "saglabājiet",
+          "sentences": [
+            {
+              "text": "Saglabājiet iesniegšanas apliecinājumu un augšupielādētās datnes.",
+              "units": 6
+            },
+            {
+              "text": "Ja vēlāk prasa papildu dokumentus, pievienojiet lietai arī šo pieprasījumu.",
+              "units": 10
+            },
+            {
+              "text": "Tad ir redzams, kas jau iesniegts un kas vēl jāpapildina.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "text": "Vispārīgās 0902 procedūras [norādījumi ķīniešu valodā](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/) dod 15 kalendāra dienas papildinājumu iesniegšanai, sākot ar nākamo dienu pēc paziņojuma. Ja trūkstošie vai neatbilstošie dokumenti jāpieprasa ārvalstīs, kontinentālajā Ķīnā, Honkongā vai Makao, papildināšanas termiņš ir trīs mēneši. Abus termiņus nesaskaita. Nepilnīgs vai laikus neiesniegts papildinājums noved pie pieteikuma noraidīšanas.",
+          "opener": "vispārīgās",
+          "sentences": [
+            {
+              "text": "Vispārīgās 0902 procedūras norādījumi ķīniešu valodā dod 15 kalendāra dienas papildinājumu iesniegšanai, sākot ar nākamo dienu pēc paziņojuma.",
+              "units": 18
+            },
+            {
+              "text": "Ja trūkstošie vai neatbilstošie dokumenti jāpieprasa ārvalstīs, kontinentālajā Ķīnā, Honkongā vai Makao, papildināšanas termiņš ir trīs mēneši.",
+              "units": 17
+            },
+            {
+              "text": "Abus termiņus nesaskaita.",
+              "units": 3
+            },
+            {
+              "text": "Nepilnīgs vai laikus neiesniegts papildinājums noved pie pieteikuma noraidīšanas.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "text": "Par katru apstiprinātā derīguma gadu parastā maksa ir NT$1,000. Arī nepilns gads maksā tikpat. [Atļauju maksu noteikumu 3. pants](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135) attiecīgajam pieteikumam pēc bezvīzu vai apmeklētāja vīzas ieceļošanas paredz vēl NT$2,200. Noteiktais maksas samazinājums ārvalstīs dzīvojošo tautiešu studentiem jeb 僑生 attiecas uz šo īpašo statusu, nevis visiem ārvalstu studentiem.",
+          "opener": "par",
+          "sentences": [
+            {
+              "text": "Par katru apstiprinātā derīguma gadu parastā maksa ir NT$1,000.",
+              "units": 10
+            },
+            {
+              "text": "Arī nepilns gads maksā tikpat.",
+              "units": 5
+            },
+            {
+              "text": "Atļauju maksu noteikumu 3. pants attiecīgajam pieteikumam pēc bezvīzu vai apmeklētāja vīzas ieceļošanas paredz vēl NT$2,200.",
+              "units": 17
+            },
+            {
+              "text": "Noteiktais maksas samazinājums ārvalstīs dzīvojošo tautiešu studentiem jeb 僑生 attiecas uz šo īpašo statusu, nevis visiem ārvalstu studentiem.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "text": "Derīgumu nosaka NIA. [Imigrācijas likuma 22. pantā](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) parastais maksimālais periods ir trīs gadi. Nodarbinātiem ārvalstu īpaši kvalificētiem speciālistiem un likumā noteiktajiem ģimenes locekļiem [speciālistu likuma 8. pants](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) paredz atsevišķu maksimumu līdz pieciem gadiem. Vajadzīga atbilstība attiecīgajai kategorijai un NIA apstiprinājums. Šā panta periodu skaita no nākamās dienas pēc uzturēšanās atļaujas apstiprināšanas, nevis darba atļaujas izsniegšanas.",
+          "opener": "derīgumu",
+          "sentences": [
+            {
+              "text": "Derīgumu nosaka NIA.",
+              "units": 3
+            },
+            {
+              "text": "Imigrācijas likuma 22. pantā parastais maksimālais periods ir trīs gadi.",
+              "units": 10
+            },
+            {
+              "text": "Nodarbinātiem ārvalstu īpaši kvalificētiem speciālistiem un likumā noteiktajiem ģimenes locekļiem speciālistu likuma 8. pants paredz atsevišķu maksimumu līdz pieciem gadiem.",
+              "units": 20
+            },
+            {
+              "text": "Vajadzīga atbilstība attiecīgajai kategorijai un NIA apstiprinājums.",
+              "units": 7
+            },
+            {
+              "text": "Šā panta periodu skaita no nākamās dienas pēc uzturēšanās atļaujas apstiprināšanas, nevis darba atļaujas izsniegšanas.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "text": "Vispārīgam pieteikumam [NIA norāda desmit darbdienas](https://www.immigration.gov.tw/5475/5478/141465/141808/141970), neieskaitot dokumentu atdošanai, papildināšanai un intervijai vajadzīgo laiku. Pēc papildu dokumentu iesniegšanas izskatīšanas periodu skaita no jauna. Tas nav solījums izsniegt karti noteiktā kalendāra datumā.",
+          "opener": "vispārīgam",
+          "sentences": [
+            {
+              "text": "Vispārīgam pieteikumam NIA norāda desmit darbdienas, neieskaitot dokumentu atdošanai, papildināšanai un intervijai vajadzīgo laiku.",
+              "units": 14
+            },
+            {
+              "text": "Pēc papildu dokumentu iesniegšanas izskatīšanas periodu skaita no jauna.",
+              "units": 9
+            },
+            {
+              "text": "Tas nav solījums izsniegt karti noteiktā kalendāra datumā.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "text": "[Studentu tiešsaistes procedūrā](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) norādītais izskatīšanas laiks ir piecas darbdienas, un pēc papildināšanas tas sākas no jauna. Pēc apstiprinājuma ir piecas darbdienas samaksai, skaitot no apstiprināšanas dienas. Tie ir divi dažādi posmi.",
+          "opener": "studentu",
+          "sentences": [
+            {
+              "text": "Studentu tiešsaistes procedūrā norādītais izskatīšanas laiks ir piecas darbdienas, un pēc papildināšanas tas sākas no jauna.",
+              "units": 16
+            },
+            {
+              "text": "Pēc apstiprinājuma ir piecas darbdienas samaksai, skaitot no apstiprināšanas dienas.",
+              "units": 10
+            },
+            {
+              "text": "Tie ir divi dažādi posmi.",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "text": "Elektroniskā ARC ar derīgumu līdz sešiem mēnešiem pēc samaksas ir jālejupielādē un jāizdrukā. Lai saņemtu viedkartes formāta ARC, students izdrukā tiešsaistes maksājuma kvīti un trīs darbdienas pēc samaksas ar to ierodas izvēlētajā NIA centrā. Citu kategoriju pieteicēji ievēro savā lēmumā vai saņemšanas paziņojumā norādīto kārtību.",
+          "opener": "elektroniskā",
+          "sentences": [
+            {
+              "text": "Elektroniskā ARC ar derīgumu līdz sešiem mēnešiem pēc samaksas ir jālejupielādē un jāizdrukā.",
+              "units": 13
+            },
+            {
+              "text": "Lai saņemtu viedkartes formāta ARC, students izdrukā tiešsaistes maksājuma kvīti un trīs darbdienas pēc samaksas ar to ierodas izvēlētajā NIA centrā.",
+              "units": 21
+            },
+            {
+              "text": "Citu kategoriju pieteicēji ievēro savā lēmumā vai saņemšanas paziņojumā norādīto kārtību.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "text": "Saņemtajā kartē salīdziniet vārdu, pases datus, adresi un termiņu ar apstiprināto pieteikumu. Saglabājiet arī lēmumu. Pirms darba sākuma atļaujai vai atbrīvojumam jāaptver konkrētā nodarbinātība atbilstoši [Nodarbinātības pakalpojumu likuma 43. un 48. pantam](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001).",
+          "opener": "saņemtajā",
+          "sentences": [
+            {
+              "text": "Saņemtajā kartē salīdziniet vārdu, pases datus, adresi un termiņu ar apstiprināto pieteikumu.",
+              "units": 12
+            },
+            {
+              "text": "Saglabājiet arī lēmumu.",
+              "units": 3
+            },
+            {
+              "text": "Pirms darba sākuma atļaujai vai atbrīvojumam jāaptver konkrētā nodarbinātība atbilstoši Nodarbinātības pakalpojumu likuma 43. un 48. pantam.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "text": "Turpmākās [ARC pagarināšanas, izmaiņu un atkārtotas ieceļošanas darbības](/lv/columns/taiwan-arc-renewal-changes-reentry) saistās gan ar kartes termiņu, gan jauniem notikumiem. Dzīvesvietas vai darbavietas maiņa var prasīt pieteikumu vēl ilgi pirms datuma, kas uzdrukāts uz kartes.",
+          "opener": "turpmākās",
+          "sentences": [
+            {
+              "text": "Turpmākās ARC pagarināšanas, izmaiņu un atkārtotas ieceļošanas darbības saistās gan ar kartes termiņu, gan jauniem notikumiem.",
+              "units": 16
+            },
+            {
+              "text": "Dzīvesvietas vai darbavietas maiņa var prasīt pieteikumu vēl ilgi pirms datuma, kas uzdrukāts uz kartes.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "text": "Avotu pārbaudes pamats ir 2026. gada 24. oktobris; atsevišķi nosacījumi papildus salīdzināti 25. oktobrī. Šis skaidrojums attiecas uz ārvalstnieku procedūrām un nenosaka konkrēta pieteicēja atbilstību. Kontinentālās Ķīnas, Honkongas un Makao iedzīvotājiem, kā arī Ķīnas Republikas pilsoņiem bez mājsaimniecības reģistrācijas ir citas sistēmas.",
+          "opener": "avotu",
+          "sentences": [
+            {
+              "text": "Avotu pārbaudes pamats ir 2026. gada 24. oktobris; atsevišķi nosacījumi papildus salīdzināti 25. oktobrī.",
+              "units": 14
+            },
+            {
+              "text": "Šis skaidrojums attiecas uz ārvalstnieku procedūrām un nenosaka konkrēta pieteicēja atbilstību.",
+              "units": 11
+            },
+            {
+              "text": "Kontinentālās Ķīnas, Honkongas un Makao iedzīvotājiem, kā arī Ķīnas Republikas pilsoņiem bez mājsaimniecības reģistrācijas ir citas sistēmas.",
+              "units": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "de24030f670164d376227740b49a16a3e1883fa29def34a483fda0672a529102",
+      "metrics": {
+        "lang": "lv",
+        "sentences": 69,
+        "paras": 22,
+        "heads": 5,
+        "list_items": 2,
+        "mean_len": 12.4,
+        "len_cv": 0.502,
+        "short_share": 0.304,
+        "long_share": 0.0,
+        "para_cv": 0.308,
+        "even_run3": 0.06,
+        "top_end": "nia",
+        "top_end_share": 0.043,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "ārvalstu",
+        "top_opener_n": 2,
+        "opener_rep": 0.045,
+        "consec_same_start": 0,
+        "cite_para_share": 0.545,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.79,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Atbilstošs ārvalstu profesionālis pēc bezvīzu ieceļošanas var pieteikties tieši NIA saskaņ",
+        "last": "Avoti pārbaudīti 2026. gada 24. oktobrī, atsevišķi nosacījumi papildus salīdzināti 25. oktobrī. Atbilstību izlemj pēc ko",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "text": "Atbilstošs ārvalstu profesionālis pēc bezvīzu ieceļošanas var pieteikties tieši NIA saskaņā ar [Ārvalstu speciālistu piesaistes un nodarbināšanas likuma 16. pantu](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295). Parastam grāda vai ķīniešu valodas studentam šāda ieceļošana var liegt pieteikties Taivānā, kā skaidro BOCA [studentu](https://www.boca.gov.tw/cp-166-283-c4da3-2.html) un [valodas apguves vīzu norādījumi](https://www.boca.gov.tw/fp-158-260-9690c-2.html).",
+          "opener": "atbilstošs",
+          "sentences": [
+            {
+              "text": "Atbilstošs ārvalstu profesionālis pēc bezvīzu ieceļošanas var pieteikties tieši NIA saskaņā ar Ārvalstu speciālistu piesaistes un nodarbināšanas likuma 16. pantu.",
+              "units": 20
+            },
+            {
+              "text": "Parastam grāda vai ķīniešu valodas studentam šāda ieceļošana var liegt pieteikties Taivānā, kā skaidro BOCA studentu un valodas apguves vīzu norādījumi.",
+              "units": 21
+            }
+          ]
+        },
+        {
+          "text": "Kuru pasi izmantosiet? Pilsonība un konkrētais ceļošanas dokuments nosaka vīzu iespējas. [Attiecīgā Taivānas pārstāvniecība](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html) sniedz šim dokumentam piemērojamās prasības un dokumentu sagatavošanas kārtību. Darba piedāvājums vai uzņemšanas vēstule jāvērtē kopā ar paredzēto ieceļošanas veidu.",
+          "opener": "kuru",
+          "sentences": [
+            {
+              "text": "Kuru pasi izmantosiet?",
+              "units": 3
+            },
+            {
+              "text": "Pilsonība un konkrētais ceļošanas dokuments nosaka vīzu iespējas.",
+              "units": 8
+            },
+            {
+              "text": "Attiecīgā Taivānas pārstāvniecība sniedz šim dokumentam piemērojamās prasības un dokumentu sagatavošanas kārtību.",
+              "units": 12
+            },
+            {
+              "text": "Darba piedāvājums vai uzņemšanas vēstule jāvērtē kopā ar paredzēto ieceļošanas veidu.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "text": "Apmeklētāja atļautais uzturēšanās ilgums un darbības izriet no piešķirtā ieceļošanas režīma. Ilgākai dzīvei Taivānā vajadzīgs atbilstošs pamats, piemēram, darbs, studijas vai ģimenes apvienošana. [Konsulāro lietu biroja (BOCA) vīzu skaidrojums](https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html) aptver šos mērķus, bet uzturēšanās pieteikumus izlemj un ARC izsniedz Nacionālā imigrācijas aģentūra (NIA).",
+          "opener": "apmeklētāja",
+          "sentences": [
+            {
+              "text": "Apmeklētāja atļautais uzturēšanās ilgums un darbības izriet no piešķirtā ieceļošanas režīma.",
+              "units": 11
+            },
+            {
+              "text": "Ilgākai dzīvei Taivānā vajadzīgs atbilstošs pamats, piemēram, darbs, studijas vai ģimenes apvienošana.",
+              "units": 12
+            },
+            {
+              "text": "Konsulāro lietu biroja (BOCA) vīzu skaidrojums aptver šos mērķus, bet uzturēšanās pieteikumus izlemj un ARC izsniedz Nacionālā imigrācijas aģentūra (NIA).",
+              "units": 20
+            }
+          ]
+        },
+        {
+          "text": "Daļa apmeklētāju drīkst pieteikties tieši NIA. Citiem vispirms vajadzīga attiecīgā vīza. Ierašanās īsam apmeklējumam pati par sevi nedod vispārējas tiesības mainīt statusu.",
+          "opener": "daļa",
+          "sentences": [
+            {
+              "text": "Daļa apmeklētāju drīkst pieteikties tieši NIA.",
+              "units": 6
+            },
+            {
+              "text": "Citiem vispirms vajadzīga attiecīgā vīza.",
+              "units": 5
+            },
+            {
+              "text": "Ierašanās īsam apmeklējumam pati par sevi nedod vispārējas tiesības mainīt statusu.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "text": "Parastā ārvalstu profesionāļa pieņemšanā darbā atļauju pieprasa darba devējs. [Speciālistu likuma 4. un 5. pants](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) nosaka profesionālā darba kategorijas, atļaujas kārtību un piemērojamos izņēmumus; kompetentā iestāde atkarīga no darba veida. Ar parakstītu piedāvājumu nepietiek.",
+          "opener": "parastā",
+          "sentences": [
+            {
+              "text": "Parastā ārvalstu profesionāļa pieņemšanā darbā atļauju pieprasa darba devējs.",
+              "units": 9
+            },
+            {
+              "text": "Speciālistu likuma 4. un 5. pants nosaka profesionālā darba kategorijas, atļaujas kārtību un piemērojamos izņēmumus; kompetentā iestāde atkarīga no darba veida.",
+              "units": 21
+            },
+            {
+              "text": "Ar parakstītu piedāvājumu nepietiek.",
+              "units": 4
+            }
+          ]
+        },
+        {
+          "text": "Ārvalstu speciālists vai ārvalstu īpaši kvalificēts speciālists — likumā lietotie foreign professional un foreign specialist professional — ar attiecīgo profesionālā darba atļauju vai atbrīvojumu var izmantot 16. panta tiešā pieteikuma ceļu. Tam vajadzīga arī pieļaujama bezvīzu vai apmeklētāja vīzas ieceļošana. ARC saņem pēc NIA apstiprinājuma. Panta pašreizējā redakcija stājās spēkā 2026. gada 1. janvārī, kā fiksēts [likuma vēsturē](https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295).",
+          "opener": "ārvalstu",
+          "sentences": [
+            {
+              "text": "Ārvalstu speciālists vai ārvalstu īpaši kvalificēts speciālists — likumā lietotie foreign professional un foreign specialist professional — ar attiecīgo profesionālā darba atļauju vai atbrīvojumu var izmantot 16. panta tiešā pieteikuma ceļu.",
+              "units": 29
+            },
+            {
+              "text": "Tam vajadzīga arī pieļaujama bezvīzu vai apmeklētāja vīzas ieceļošana.",
+              "units": 9
+            },
+            {
+              "text": "ARC saņem pēc NIA apstiprinājuma.",
+              "units": 5
+            },
+            {
+              "text": "Panta pašreizējā redakcija stājās spēkā 2026. gada 1. janvārī, kā fiksēts likuma vēsturē.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "text": "[NIA 0915 norādījumi](https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news) no šā ceļa izslēdz izmēģinājuma bezvīzu režīmus, noteiktām Dienvidaustrumāzijas valstīm paredzēto tiešsaistes ceļošanas atļauju un citus uzskaitītos ieceļošanas veidus, ja vien citā piemērojamā normā nav izņēmuma. Darba atļauja šo ieceļošanas nosacījumu neatceļ.",
+          "opener": "nia",
+          "sentences": [
+            {
+              "text": "NIA 0915 norādījumi no šā ceļa izslēdz izmēģinājuma bezvīzu režīmus, noteiktām Dienvidaustrumāzijas valstīm paredzēto tiešsaistes ceļošanas atļauju un citus uzskaitītos ieceļošanas veidus, ja vien citā piemērojamā normā nav izņēmuma.",
+              "units": 29
+            },
+            {
+              "text": "Darba atļauja šo ieceļošanas nosacījumu neatceļ.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "text": "Aprūpes darbs, zvejniecība un citas [Nodarbinātības pakalpojumu likuma 46. pantā](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) paredzētās viesstrādnieku kategorijas pakļautas saviem noteikumiem. Tām NIA paredz [atsevišķu uzturēšanās procedūru](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/). Darba atļaujā norādītā kategorija palīdz noteikt izmantojamo sistēmu.",
+          "opener": "aprūpes",
+          "sentences": [
+            {
+              "text": "Aprūpes darbs, zvejniecība un citas Nodarbinātības pakalpojumu likuma 46. pantā paredzētās viesstrādnieku kategorijas pakļautas saviem noteikumiem.",
+              "units": 16
+            },
+            {
+              "text": "Tām NIA paredz atsevišķu uzturēšanās procedūru.",
+              "units": 6
+            },
+            {
+              "text": "Darba atļaujā norādītā kategorija palīdz noteikt izmantojamo sistēmu.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "text": "Ārvalstu studenti, kuri paredzējuši pilna laika studijas grāda iegūšanai, no ārvalstīm var pieprasīt uzturēšanās vīzu Taivānas pārstāvniecībā. Ja viņi ieceļojuši ar apmeklētāja vīzu tieši ārvalstu studenta mācībām, atbilstošā gadījumā iespējams uzturēšanās pieteikums NIA. [BOCA parastā iekšzemes studiju procedūra](https://www.boca.gov.tw/cp-166-283-c4da3-2.html) neaptver bezvīzu ieceļošanu, vīzu pēc ierašanās vai citam mērķim izsniegtu apmeklētāja vīzu.",
+          "opener": "ārvalstu",
+          "sentences": [
+            {
+              "text": "Ārvalstu studenti, kuri paredzējuši pilna laika studijas grāda iegūšanai, no ārvalstīm var pieprasīt uzturēšanās vīzu Taivānas pārstāvniecībā.",
+              "units": 17
+            },
+            {
+              "text": "Ja viņi ieceļojuši ar apmeklētāja vīzu tieši ārvalstu studenta mācībām, atbilstošā gadījumā iespējams uzturēšanās pieteikums NIA.",
+              "units": 16
+            },
+            {
+              "text": "BOCA parastā iekšzemes studiju procedūra neaptver bezvīzu ieceļošanu, vīzu pēc ierašanās vai citam mērķim izsniegtu apmeklētāja vīzu.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "text": "Līdzās uzņemšanas vēstulei atkarībā no pieteikuma prasa iepriekšējās izglītības dokumentus, finanšu pierādījumus un veselības apliecinājumu. Konkrētais saraksts nosaka arī ārvalstu dokumentu autentifikāciju. Uzņemšanas lēmums un iestādes prasītie pierādījumi jāsalīdzina pirms pieteikuma iesniegšanas.",
+          "opener": "līdzās",
+          "sentences": [
+            {
+              "text": "Līdzās uzņemšanas vēstulei atkarībā no pieteikuma prasa iepriekšējās izglītības dokumentus, finanšu pierādījumus un veselības apliecinājumu.",
+              "units": 15
+            },
+            {
+              "text": "Konkrētais saraksts nosaka arī ārvalstu dokumentu autentifikāciju.",
+              "units": 7
+            },
+            {
+              "text": "Uzņemšanas lēmums un iestādes prasītie pierādījumi jāsalīdzina pirms pieteikuma iesniegšanas.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "text": "Ķīniešu valodas apguvei parasti vispirms vajadzīga [šim mērķim paredzēta apmeklētāja vīza](https://www.boca.gov.tw/fp-158-260-9690c-2.html). Uzturēšanās ceļam jābūt pabeigtiem četriem mēnešiem atbilstošā, atzītai universitātei piesaistītā valodu centrā un reģistrācijai vismaz vēl trim mēnešiem. [BOCA norādījumi](https://www.boca.gov.tw/fp-166-285-041cb-2.html) prasa vismaz 15 nodarbību stundas nedēļā no pirmdienas līdz piektdienai. Kavējumi, ieskaitot attaisnotu prombūtni, nedrīkst pārsniegt ceturtdaļu nodarbību stundu. Samaksāta mācību maksa neapliecina apmeklējumu.",
+          "opener": "ķīniešu",
+          "sentences": [
+            {
+              "text": "Ķīniešu valodas apguvei parasti vispirms vajadzīga šim mērķim paredzēta apmeklētāja vīza.",
+              "units": 11
+            },
+            {
+              "text": "Uzturēšanās ceļam jābūt pabeigtiem četriem mēnešiem atbilstošā, atzītai universitātei piesaistītā valodu centrā un reģistrācijai vismaz vēl trim mēnešiem.",
+              "units": 18
+            },
+            {
+              "text": "BOCA norādījumi prasa vismaz 15 nodarbību stundas nedēļā no pirmdienas līdz piektdienai.",
+              "units": 12
+            },
+            {
+              "text": "Kavējumi, ieskaitot attaisnotu prombūtni, nedrīkst pārsniegt ceturtdaļu nodarbību stundu.",
+              "units": 9
+            },
+            {
+              "text": "Samaksāta mācību maksa neapliecina apmeklējumu.",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "text": "Vai students var pieņemt nepilna laika darbu? [Nodarbinātības pakalpojumu likuma 43. un 50. pants](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) nosaka darba atļauju un attiecīgo studentu nodarbinātības kārtību. Šā panta studentiem ārpus vasaras un ziemas brīvlaika darba limits ir 20 stundas nedēļā. Uzņemšanas vēstule un studenta ARC neaizstāj vajadzīgo darba atļauju.",
+          "opener": "vai",
+          "sentences": [
+            {
+              "text": "Vai students var pieņemt nepilna laika darbu?",
+              "units": 7
+            },
+            {
+              "text": "Nodarbinātības pakalpojumu likuma 43. un 50. pants nosaka darba atļauju un attiecīgo studentu nodarbinātības kārtību.",
+              "units": 15
+            },
+            {
+              "text": "Šā panta studentiem ārpus vasaras un ziemas brīvlaika darba limits ir 20 stundas nedēļā.",
+              "units": 14
+            },
+            {
+              "text": "Uzņemšanas vēstule un studenta ARC neaizstāj vajadzīgo darba atļauju.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "text": "Taivānas pilsoņa laulātajam viens no [Imigrācijas likuma 23. panta](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23) iekšzemes ceļiem prasa, lai Taivānas pilsonis tur dzīvotu un viņam būtu mājsaimniecības reģistrācija. Pieteicējam vajadzīga derīga apmeklētāja vīza ar atļauto uzturēšanos vismaz 60 dienas un bez noteiktajiem ierobežojumiem, piemēram, aizlieguma pagarināt uzturēšanos. Šeit 60 dienas ir atļautais uzturēšanās ilgums. Tas nav termiņš, kurā vīzu var izmantot ieceļošanai. Dokumentus plašāk skaidro [raksts angļu valodā par Taivānas pilsoņa laulātā uzturēšanos](/en/columns/taiwan-foreign-spouse-residence).",
+          "opener": "taivānas",
+          "sentences": [
+            {
+              "text": "Taivānas pilsoņa laulātajam viens no Imigrācijas likuma 23. panta iekšzemes ceļiem prasa, lai Taivānas pilsonis tur dzīvotu un viņam būtu mājsaimniecības reģistrācija.",
+              "units": 22
+            },
+            {
+              "text": "Pieteicējam vajadzīga derīga apmeklētāja vīza ar atļauto uzturēšanos vismaz 60 dienas un bez noteiktajiem ierobežojumiem, piemēram, aizlieguma pagarināt uzturēšanos.",
+              "units": 19
+            },
+            {
+              "text": "Šeit 60 dienas ir atļautais uzturēšanās ilgums.",
+              "units": 7
+            },
+            {
+              "text": "Tas nav termiņš, kurā vīzu var izmantot ieceļošanai.",
+              "units": 8
+            },
+            {
+              "text": "Dokumentus plašāk skaidro raksts angļu valodā par Taivānas pilsoņa laulātā uzturēšanos.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "text": "Ģimenes tiešajam pieteikumam 16. panta otrā daļa prasa, lai persona, kurai ģimene pievienojas, būtu:",
+          "opener": "ģimenes",
+          "sentences": [
+            {
+              "text": "Ģimenes tiešajam pieteikumam 16. panta otrā daļa prasa, lai persona, kurai ģimene pievienojas, būtu:",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "text": "Abos gadījumos šai personai jau jābūt NIA apstiprinātai uzturēšanās vai pastāvīgās uzturēšanās atļaujai. [16. panta ģimenes ceļš](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) aptver laulāto, nepilngadīgus bērnus un pilngadīgus bērnus, kuri fiziskas vai garīgas invaliditātes dēļ nespēj par sevi rūpēties. Ģimenes pieteicējam pašam jāatbilst pieļaujamai bezvīzu vai apmeklētāja vīzas ieceļošanai. Vecāki šajā sarakstā neietilpst. Tas neaptver arī visus pilngadīgos bērnus.",
+          "opener": "abos",
+          "sentences": [
+            {
+              "text": "Abos gadījumos šai personai jau jābūt NIA apstiprinātai uzturēšanās vai pastāvīgās uzturēšanās atļaujai.",
+              "units": 13
+            },
+            {
+              "text": "16. panta ģimenes ceļš aptver laulāto, nepilngadīgus bērnus un pilngadīgus bērnus, kuri fiziskas vai garīgas invaliditātes dēļ nespēj par sevi rūpēties.",
+              "units": 21
+            },
+            {
+              "text": "Ģimenes pieteicējam pašam jāatbilst pieļaujamai bezvīzu vai apmeklētāja vīzas ieceļošanai.",
+              "units": 10
+            },
+            {
+              "text": "Vecāki šajā sarakstā neietilpst.",
+              "units": 4
+            },
+            {
+              "text": "Tas neaptver arī visus pilngadīgos bērnus.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "text": "Tiesības strādāt izriet no attiecīgās ģimenes kategorijas. Ārvalstniekam, kurš ir precējies ar Taivānas pilsoni ar mājsaimniecības reģistrāciju un saņēmis uzturēšanās atļauju, [Nodarbinātības pakalpojumu likuma 48. pants](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) paredz atbrīvojumu no darba atļaujas. Ārvalstu profesionāļa laulātais šo atbrīvojumu automātiski nepārņem.",
+          "opener": "tiesības",
+          "sentences": [
+            {
+              "text": "Tiesības strādāt izriet no attiecīgās ģimenes kategorijas.",
+              "units": 7
+            },
+            {
+              "text": "Ārvalstniekam, kurš ir precējies ar Taivānas pilsoni ar mājsaimniecības reģistrāciju un saņēmis uzturēšanās atļauju, Nodarbinātības pakalpojumu likuma 48. pants paredz atbrīvojumu no darba atļaujas.",
+              "units": 24
+            },
+            {
+              "text": "Ārvalstu profesionāļa laulātais šo atbrīvojumu automātiski nepārņem.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "text": "Personisku darba atļauju Darba ministrijā saskaņā ar [speciālistu likuma 15. pantu](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) var pieprasīt atbilstošs ārvalstu īpaši kvalificēta vai augsta līmeņa speciālista laulātais, kuram NIA apstiprinājusi uzturēšanos kā ģimenes loceklim.",
+          "opener": "personisku",
+          "sentences": [
+            {
+              "text": "Personisku darba atļauju Darba ministrijā saskaņā ar speciālistu likuma 15. pantu var pieprasīt atbilstošs ārvalstu īpaši kvalificēta vai augsta līmeņa speciālista laulātais, kuram NIA apstiprinājusi uzturēšanos kā ģimenes loceklim.",
+              "units": 29
+            }
+          ]
+        },
+        {
+          "text": "[Employment Gold Card](https://goldcard.nat.gov.tw/en/) apvieno darba atļauju, uzturēšanās vīzu, ARC un atkārtotas ieceļošanas atļauju. Pieteikums nav piesaistīts vienam darba devējam, taču jāizpilda programmas profesionālās kvalifikācijas kritēriji. Likuma 9. pants paredz derīgumu no viena līdz trim gadiem. Pieteikšanās aprakstīta [Gold Card rakstā angļu valodā](/en/columns/taiwan-employment-gold-card).",
+          "opener": "employment",
+          "sentences": [
+            {
+              "text": "Employment Gold Card apvieno darba atļauju, uzturēšanās vīzu, ARC un atkārtotas ieceļošanas atļauju.",
+              "units": 13
+            },
+            {
+              "text": "Pieteikums nav piesaistīts vienam darba devējam, taču jāizpilda programmas profesionālās kvalifikācijas kritēriji.",
+              "units": 12
+            },
+            {
+              "text": "Likuma 9. pants paredz derīgumu no viena līdz trim gadiem.",
+              "units": 10
+            },
+            {
+              "text": "Pieteikšanās aprakstīta Gold Card rakstā angļu valodā.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "text": "Uzņēmuma dibinātājam BOCA publicē [uzņēmējdarbības ceļa prasības](https://www.boca.gov.tw/lp-154-2.html). Iecerētā darbība un atbilstības pierādījumi jāvērtē pēc šā saraksta. Darba un brīvdienu iespējas savukārt nosaka [konkrētās pilsonības programma](https://www.boca.gov.tw/lp-153-2.html).",
+          "opener": "uzņēmuma",
+          "sentences": [
+            {
+              "text": "Uzņēmuma dibinātājam BOCA publicē uzņēmējdarbības ceļa prasības.",
+              "units": 7
+            },
+            {
+              "text": "Iecerētā darbība un atbilstības pierādījumi jāvērtē pēc šā saraksta.",
+              "units": 9
+            },
+            {
+              "text": "Darba un brīvdienu iespējas savukārt nosaka konkrētās pilsonības programma.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "text": "[Digitālā nomada apmeklētāja vīzai](https://www.boca.gov.tw/cp-158-7718-c0382-2.html) ir savas pilsonības un kvalifikācijas prasības; tā pati par sevi nedod ARC. Speciālistu likuma 14. pants šo ceļu saista ar atbilstošu attālinātu darbu, nesniedzot pakalpojumus Taivānas uzņēmumiem vai darba devējiem.",
+          "opener": "digitālā",
+          "sentences": [
+            {
+              "text": "Digitālā nomada apmeklētāja vīzai ir savas pilsonības un kvalifikācijas prasības; tā pati par sevi nedod ARC.",
+              "units": 16
+            },
+            {
+              "text": "Speciālistu likuma 14. pants šo ceļu saista ar atbilstošu attālinātu darbu, nesniedzot pakalpojumus Taivānas uzņēmumiem vai darba devējiem.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "text": "Kad noteikts piemērotais pamats un ieceļošanas nosacījumi, var sagatavot [pirmās ARC pieteikumu](/lv/columns/taiwan-arc-first-application). Ja uzturēšanās jau atļauta, bet mainās darbs, studijas vai ģimenes pamats, jāņem vērā arī [pagarināšana un izmaiņu pieteikumi](/lv/columns/taiwan-arc-renewal-changes-reentry). Jaunās darbības sākuma datumā saņemtajai atļaujai jāaptver tieši šī darbība.",
+          "opener": "kad",
+          "sentences": [
+            {
+              "text": "Kad noteikts piemērotais pamats un ieceļošanas nosacījumi, var sagatavot pirmās ARC pieteikumu.",
+              "units": 12
+            },
+            {
+              "text": "Ja uzturēšanās jau atļauta, bet mainās darbs, studijas vai ģimenes pamats, jāņem vērā arī pagarināšana un izmaiņu pieteikumi.",
+              "units": 18
+            },
+            {
+              "text": "Jaunās darbības sākuma datumā saņemtajai atļaujai jāaptver tieši šī darbība.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "text": "Avoti pārbaudīti 2026. gada 24. oktobrī, atsevišķi nosacījumi papildus salīdzināti 25. oktobrī. Atbilstību izlemj pēc konkrētā pieteikuma. Aprakstītie ceļi attiecas uz ārvalstniekiem; kontinentālās Ķīnas, Honkongas un Makao iedzīvotājiem, kā arī Ķīnas Republikas pilsoņiem bez mājsaimniecības reģistrācijas ir atsevišķi noteikumi.",
+          "opener": "avoti",
+          "sentences": [
+            {
+              "text": "Avoti pārbaudīti 2026. gada 24. oktobrī, atsevišķi nosacījumi papildus salīdzināti 25. oktobrī.",
+              "units": 12
+            },
+            {
+              "text": "Atbilstību izlemj pēc konkrētā pieteikuma.",
+              "units": 5
+            },
+            {
+              "text": "Aprakstītie ceļi attiecas uz ārvalstniekiem; kontinentālās Ķīnas, Honkongas un Makao iedzīvotājiem, kā arī Ķīnas Republikas pilsoņiem bez mājsaimniecības reģistrācijas ir atsevišķi noteikumi.",
+              "units": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "e5b600ba790cdbcd9f225c1703c81e28e7ab49974d504b4ba77b1070d48e700d",
+      "metrics": {
+        "lang": "lv",
+        "sentences": 89,
+        "paras": 27,
+        "heads": 6,
+        "list_items": 0,
+        "mean_len": 12.5,
+        "len_cv": 0.468,
+        "short_share": 0.281,
+        "long_share": 0.0,
+        "para_cv": 0.196,
+        "even_run3": 0.057,
+        "top_end": "beigām",
+        "top_end_share": 0.056,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "vai",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.444,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.34,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Vai Taivānā drīkst palikt līdz ARC uzdrukātajam datumam, ja darbs vai studijas, kuru dēļ a",
+        "last": "Juridiskie avoti pārbaudīti 2026. gada 24. oktobrī; atsevišķi nosacījumi un tiešsaistes izbraukšanas sekas papildus salī",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "text": "Vai Taivānā drīkst palikt līdz ARC uzdrukātajam datumam, ja darbs vai studijas, kuru dēļ atļauja saņemta, jau beigušies? [Imigrācijas likuma 31. pants](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31) prasa Nacionālajai imigrācijas aģentūrai (NIA) atsaukt uzturēšanās atļauju un anulēt karti, kad zudis uzturēšanās pamats. Likums paredz arī konkrētus apstākļus, kuros NIA var atļaut uzturēties turpmāk.",
+          "opener": "vai",
+          "sentences": [
+            {
+              "text": "Vai Taivānā drīkst palikt līdz ARC uzdrukātajam datumam, ja darbs vai studijas, kuru dēļ atļauja saņemta, jau beigušies?",
+              "units": 18
+            },
+            {
+              "text": "Imigrācijas likuma 31. pants prasa Nacionālajai imigrācijas aģentūrai (NIA) atsaukt uzturēšanās atļauju un anulēt karti, kad zudis uzturēšanās pamats.",
+              "units": 19
+            },
+            {
+              "text": "Likums paredz arī konkrētus apstākļus, kuros NIA var atļaut uzturēties turpmāk.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "text": "Izmaiņas datums var prasīt pieteikumu vēl pirms kartes termiņa. Darba attiecību izbeigšanas paziņojums, studiju pabeigšanas apliecinājums vai ģimenes stāvokļa dokuments parāda notikumu un tā laiku. Saglabājiet šo ierakstu. [NIA norādījumi](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) prasa pierādījumus, kas atbilst konkrētajam pagarinājumam vai izmaiņai.",
+          "opener": "izmaiņas",
+          "sentences": [
+            {
+              "text": "Izmaiņas datums var prasīt pieteikumu vēl pirms kartes termiņa.",
+              "units": 9
+            },
+            {
+              "text": "Darba attiecību izbeigšanas paziņojums, studiju pabeigšanas apliecinājums vai ģimenes stāvokļa dokuments parāda notikumu un tā laiku.",
+              "units": 16
+            },
+            {
+              "text": "Saglabājiet šo ierakstu.",
+              "units": 3
+            },
+            {
+              "text": "NIA norādījumi prasa pierādījumus, kas atbilst konkrētajam pagarinājumam vai izmaiņai.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "text": "Adreses un darba vietas reģistrācijas prasība ir [31. pantā](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31); pamata maiņu un pagarināšanu regulē [uzturēšanās noteikumu 7. un 9. pants](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129). Adreses maiņai skaitīšana sākas nākamajā dienā, bet uzturēšanās pamata maiņai — pašā notikuma dienā. BOCA norādītās 15 dienas ir pieteikuma iesniegšanai. Vīzas izsniegšana šajā laikā nav garantēta.",
+          "opener": "adreses",
+          "sentences": [
+            {
+              "text": "Adreses un darba vietas reģistrācijas prasība ir 31. pantā; pamata maiņu un pagarināšanu regulē uzturēšanās noteikumu 7. un 9. pants.",
+              "units": 20
+            },
+            {
+              "text": "Adreses maiņai skaitīšana sākas nākamajā dienā, bet uzturēšanās pamata maiņai — pašā notikuma dienā.",
+              "units": 13
+            },
+            {
+              "text": "BOCA norādītās 15 dienas ir pieteikuma iesniegšanai.",
+              "units": 7
+            },
+            {
+              "text": "Vīzas izsniegšana šajā laikā nav garantēta.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "text": "Dažām programmām pieteikšanās sākas agrāk. [Atbilstošs uzņēmējs, kurš turpina darbību Taivānā](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/), ARC pagarinājumu var prasīt četru mēnešu laikā pirms termiņa beigām. Atsevišķajam turpmākas uzturēšanās ceļam pēc šīs darbības izbeigšanas ir triju mēnešu pieteikšanās periods pirms atļaujas beigām. [Gold Card atjaunošanu](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/) var pieteikt četru mēnešu laikā pirms derīguma beigām.",
+          "opener": "dažām",
+          "sentences": [
+            {
+              "text": "Dažām programmām pieteikšanās sākas agrāk.",
+              "units": 5
+            },
+            {
+              "text": "Atbilstošs uzņēmējs, kurš turpina darbību Taivānā, ARC pagarinājumu var prasīt četru mēnešu laikā pirms termiņa beigām.",
+              "units": 16
+            },
+            {
+              "text": "Atsevišķajam turpmākas uzturēšanās ceļam pēc šīs darbības izbeigšanas ir triju mēnešu pieteikšanās periods pirms atļaujas beigām.",
+              "units": 16
+            },
+            {
+              "text": "Gold Card atjaunošanu var pieteikt četru mēnešu laikā pirms derīguma beigām.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "text": "Parastam pagarinājumam vajadzīga veidlapa, pase, esošā ARC, fotogrāfija un aktuāli uzturēšanās pamata pierādījumi. [NIA saraksts](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) tos saista ar darbu, studijām vai ģimeni. Pēc pārcelšanās pievieno jaunās adreses apliecinājumu.",
+          "opener": "parastam",
+          "sentences": [
+            {
+              "text": "Parastam pagarinājumam vajadzīga veidlapa, pase, esošā ARC, fotogrāfija un aktuāli uzturēšanās pamata pierādījumi.",
+              "units": 13
+            },
+            {
+              "text": "NIA saraksts tos saista ar darbu, studijām vai ģimeni.",
+              "units": 9
+            },
+            {
+              "text": "Pēc pārcelšanās pievieno jaunās adreses apliecinājumu.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "text": "Dokumentiem jāaptver prasītais periods. Darba atļaujas beigu datums vai nākamā semestra reģistrācija var noteikt, cik ilgu pagarinājumu iespējams pamatot. Laikus saņemti dokumenti atstāj iespēju pirms ARC pieteikuma termiņa sagādāt trūkstošos reģistrācijas pierādījumus vai risināt jautājumu par darba atļauju, kuras derīgums drīz beigsies.",
+          "opener": "dokumentiem",
+          "sentences": [
+            {
+              "text": "Dokumentiem jāaptver prasītais periods.",
+              "units": 4
+            },
+            {
+              "text": "Darba atļaujas beigu datums vai nākamā semestra reģistrācija var noteikt, cik ilgu pagarinājumu iespējams pamatot.",
+              "units": 15
+            },
+            {
+              "text": "Laikus saņemti dokumenti atstāj iespēju pirms ARC pieteikuma termiņa sagādāt trūkstošos reģistrācijas pierādījumus vai risināt jautājumu par darba atļauju, kuras derīgums drīz beigsies.",
+              "units": 23
+            }
+          ]
+        },
+        {
+          "text": "Ķīniešu valodas studijām ir šaurāks periods: [NIA studentu norādījumi](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) ļauj katru pagarinājumu piešķirt atbilstoši reģistrācijas pierādījumiem, bet ne ilgāk par sešiem mēnešiem. Īslaicīgās uzturēšanās un uzturēšanās ar atļauju kopējais ilgums parasti nepārsniedz divus gadus. Šo valodas apguves ierobežojumu nevar automātiski attiecināt uz visām grāda studijām.",
+          "opener": "ķīniešu",
+          "sentences": [
+            {
+              "text": "Ķīniešu valodas studijām ir šaurāks periods: NIA studentu norādījumi ļauj katru pagarinājumu piešķirt atbilstoši reģistrācijas pierādījumiem, bet ne ilgāk par sešiem mēnešiem.",
+              "units": 22
+            },
+            {
+              "text": "Īslaicīgās uzturēšanās un uzturēšanās ar atļauju kopējais ilgums parasti nepārsniedz divus gadus.",
+              "units": 12
+            },
+            {
+              "text": "Šo valodas apguves ierobežojumu nevar automātiski attiecināt uz visām grāda studijām.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "text": "Par katru apstiprināto gadu parastā pagarināšanas maksa ir NT$1,000, un arī periods, kas īsāks par gadu, maksā viena gada maksu saskaņā ar [maksu noteikumu 3. pantu](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135). Apstiprināmo periodu nosaka uzturēšanās kategorija un pierādījumi. Samaksa pati par sevi nedod tiesības uz ilgāku atļauju.",
+          "opener": "par",
+          "sentences": [
+            {
+              "text": "Par katru apstiprināto gadu parastā pagarināšanas maksa ir NT$1,000, un arī periods, kas īsāks par gadu, maksā viena gada maksu saskaņā ar maksu noteikumu 3. pantu.",
+              "units": 27
+            },
+            {
+              "text": "Apstiprināmo periodu nosaka uzturēšanās kategorija un pierādījumi.",
+              "units": 7
+            },
+            {
+              "text": "Samaksa pati par sevi nedod tiesības uz ilgāku atļauju.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "text": "Termiņš jau beidzies? Nekavējoties sazinieties ar NIA. [31. panta trešā daļa](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31) paredz atkārtotu pieteikumu pēc soda piemērošanas, ja pārkavētais laiks ir mazāks par 30 dienām un sākotnējais uzturēšanās pamats turpinās. Vajadzīgi abi nosacījumi. Vecā atļauja ar to nepagarinās; turklāt pastāvīgās uzturēšanās vajadzībām aprēķinātajā uzturēšanās ilgumā šajā gadījumā jāatskaita viens gads.",
+          "opener": "termiņš",
+          "sentences": [
+            {
+              "text": "Termiņš jau beidzies?",
+              "units": 3
+            },
+            {
+              "text": "Nekavējoties sazinieties ar NIA.",
+              "units": 4
+            },
+            {
+              "text": "31. panta trešā daļa paredz atkārtotu pieteikumu pēc soda piemērošanas, ja pārkavētais laiks ir mazāks par 30 dienām un sākotnējais uzturēšanās pamats turpinās.",
+              "units": 23
+            },
+            {
+              "text": "Vajadzīgi abi nosacījumi.",
+              "units": 3
+            },
+            {
+              "text": "Vecā atļauja ar to nepagarinās; turklāt pastāvīgās uzturēšanās vajadzībām aprēķinātajā uzturēšanās ilgumā šajā gadījumā jāatskaita viens gads.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "text": "Jauno adresi NIA piesaka ar tās pierādījumiem noteiktajā 30 dienu termiņā. Bankas, universitātes vai darba devēja informēšana neaizstāj imigrācijas reģistrācijas pieteikumu. Saglabājiet iesniegšanas datumu.",
+          "opener": "jauno",
+          "sentences": [
+            {
+              "text": "Jauno adresi NIA piesaka ar tās pierādījumiem noteiktajā 30 dienu termiņā.",
+              "units": 11
+            },
+            {
+              "text": "Bankas, universitātes vai darba devēja informēšana neaizstāj imigrācijas reģistrācijas pieteikumu.",
+              "units": 10
+            },
+            {
+              "text": "Saglabājiet iesniegšanas datumu.",
+              "units": 3
+            }
+          ]
+        },
+        {
+          "text": "Darba devēja maiņai vai papildu darbam [Nodarbinātības pakalpojumu likuma 53. pants](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) paredz atšķirīgas prasības atkarībā no darbinieka kategorijas. Pirms jaunā darba sākuma jābūt atļaujai vai atbrīvojumam, kas aptver konkrēto darbu. NIA ieraksta maiņa pati par sevi šo darbu neatļauj.",
+          "opener": "darba",
+          "sentences": [
+            {
+              "text": "Darba devēja maiņai vai papildu darbam Nodarbinātības pakalpojumu likuma 53. pants paredz atšķirīgas prasības atkarībā no darbinieka kategorijas.",
+              "units": 18
+            },
+            {
+              "text": "Pirms jaunā darba sākuma jābūt atļaujai vai atbrīvojumam, kas aptver konkrēto darbu.",
+              "units": 12
+            },
+            {
+              "text": "NIA ieraksta maiņa pati par sevi šo darbu neatļauj.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "text": "Pārejai pie cita darba devēja noteiktajā procedūrā prasa iepriekšējā darba izbeigšanas pierādījumu. Šo prasību nevar pārvērst par vispārēju pienākumu pamest pirmo darbu ikvienā papildu nodarbinātības gadījumā. Jāvērtē attiecīgā darba kategorija un atļauja.",
+          "opener": "pārejai",
+          "sentences": [
+            {
+              "text": "Pārejai pie cita darba devēja noteiktajā procedūrā prasa iepriekšējā darba izbeigšanas pierādījumu.",
+              "units": 12
+            },
+            {
+              "text": "Šo prasību nevar pārvērst par vispārēju pienākumu pamest pirmo darbu ikvienā papildu nodarbinātības gadījumā.",
+              "units": 14
+            },
+            {
+              "text": "Jāvērtē attiecīgā darba kategorija un atļauja.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "text": "Pēc absolvēšanas, darba attiecību beigām vai ģimenes stāvokļa maiņas jaunu pamatu var pieprasīt [Imigrācijas likuma 23-1. pantā](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1) uzskaitītajās situācijās. Katru pamata maiņu šis pants neaptver.",
+          "opener": "pēc",
+          "sentences": [
+            {
+              "text": "Pēc absolvēšanas, darba attiecību beigām vai ģimenes stāvokļa maiņas jaunu pamatu var pieprasīt Imigrācijas likuma 23-1. pantā uzskaitītajās situācijās.",
+              "units": 20
+            },
+            {
+              "text": "Katru pamata maiņu šis pants neaptver.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "text": "Turpmāku uzturēšanos NIA var atļaut arī [31. panta](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31) apstākļos: piemēram, miris ģimenes loceklis, uz kura statusu balstījās atļauja, vai pastāv likumā noteiktais ar bērnu saistītais pamats. Bērna gadījumā nozīme ir nepilngadībai, Taivānas mājsaimniecības reģistrācijai un attiecīgajiem aprūpes, tiesību un pienākumu vai saskarsmes nosacījumiem. Darba strīda pamats attiecas uz notiekošu tiesvedību ar Taivānas darba devēju, bet darba traumas pamats — uz turpinātu ārstēšanos.",
+          "opener": "turpmāku",
+          "sentences": [
+            {
+              "text": "Turpmāku uzturēšanos NIA var atļaut arī 31. panta apstākļos: piemēram, miris ģimenes loceklis, uz kura statusu balstījās atļauja, vai pastāv likumā noteiktais ar bērnu saistītais pamats.",
+              "units": 26
+            },
+            {
+              "text": "Bērna gadījumā nozīme ir nepilngadībai, Taivānas mājsaimniecības reģistrācijai un attiecīgajiem aprūpes, tiesību un pienākumu vai saskarsmes nosacījumiem.",
+              "units": 17
+            },
+            {
+              "text": "Darba strīda pamats attiecas uz notiekošu tiesvedību ar Taivānas darba devēju, bet darba traumas pamats — uz turpinātu ārstēšanos.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "text": "Vardarbības ģimenē dēļ šķirtas laulības izņēmumā ārvalstu pieteicējs ir tas, kurš nedrīkst būt atkārtoti apprecējies. Bijušajam laulātajam jābūt Taivānā dzīvojošam Taivānas pilsonim ar mājsaimniecības reģistrāciju, un laulībai jābūt šķirtai vardarbības dēļ. Ar šķiršanos vai darba strīdu vien nepietiek, lai automātiski iegūtu turpmākas uzturēšanās tiesības.",
+          "opener": "vardarbības",
+          "sentences": [
+            {
+              "text": "Vardarbības ģimenē dēļ šķirtas laulības izņēmumā ārvalstu pieteicējs ir tas, kurš nedrīkst būt atkārtoti apprecējies.",
+              "units": 15
+            },
+            {
+              "text": "Bijušajam laulātajam jābūt Taivānā dzīvojošam Taivānas pilsonim ar mājsaimniecības reģistrāciju, un laulībai jābūt šķirtai vardarbības dēļ.",
+              "units": 16
+            },
+            {
+              "text": "Ar šķiršanos vai darba strīdu vien nepietiek, lai automātiski iegūtu turpmākas uzturēšanās tiesības.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "text": "Atbilstošs profesionālis var pirms atļaujas beigām pieteikties [speciālistu likuma 17. panta](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) pagarinājumam. Ja pieteikumu apstiprina, piešķir sešus mēnešus no nākamās dienas pēc sākotnējās ARC vai Gold Card derīguma beigām. Iespējams vēl viens pagarinājums, kopā nepārsniedzot gadu. Tas nepagarina iepriekšējo darba atļauju automātiski.",
+          "opener": "atbilstošs",
+          "sentences": [
+            {
+              "text": "Atbilstošs profesionālis var pirms atļaujas beigām pieteikties speciālistu likuma 17. panta pagarinājumam.",
+              "units": 12
+            },
+            {
+              "text": "Ja pieteikumu apstiprina, piešķir sešus mēnešus no nākamās dienas pēc sākotnējās ARC vai Gold Card derīguma beigām.",
+              "units": 17
+            },
+            {
+              "text": "Iespējams vēl viens pagarinājums, kopā nepārsniedzot gadu.",
+              "units": 7
+            },
+            {
+              "text": "Tas nepagarina iepriekšējo darba atļauju automātiski.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "text": "Absolventiem [uzturēšanās noteikumu 11. pants](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129) paredz citu ceļu. Ja NIA apstiprina atbilstoša absolventa pirms termiņa beigām iesniegtu pieteikumu, piešķir vienu gadu no nākamās dienas pēc iepriekšējā termiņa beigām. Pirms pagarinājuma beigām var lūgt vēl vienu, kopā līdz diviem gadiem. Vienkārša valodas kursa pabeigšana nav šā ceļa akadēmiskā kvalifikācija.",
+          "opener": "absolventiem",
+          "sentences": [
+            {
+              "text": "Absolventiem uzturēšanās noteikumu 11. pants paredz citu ceļu.",
+              "units": 8
+            },
+            {
+              "text": "Ja NIA apstiprina atbilstoša absolventa pirms termiņa beigām iesniegtu pieteikumu, piešķir vienu gadu no nākamās dienas pēc iepriekšējā termiņa beigām.",
+              "units": 20
+            },
+            {
+              "text": "Pirms pagarinājuma beigām var lūgt vēl vienu, kopā līdz diviem gadiem.",
+              "units": 11
+            },
+            {
+              "text": "Vienkārša valodas kursa pabeigšana nav šā ceļa akadēmiskā kvalifikācija.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "text": "Taivānā associate degree vai augstāku grādu nesen ieguvušam absolventam, kuram NIA apstiprinājusi uzturēšanās pagarinājumu absolventa statusā, [speciālistu likuma 12. pants](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) šā pagarinājuma laikā paredz atbrīvojumu no darba atļaujas. Tas neattiecas uz jebkuru studentu vai jebkuru darba meklēšanai izmantotu ARC.",
+          "opener": "taivānā",
+          "sentences": [
+            {
+              "text": "Taivānā associate degree vai augstāku grādu nesen ieguvušam absolventam, kuram NIA apstiprinājusi uzturēšanās pagarinājumu absolventa statusā, speciālistu likuma 12. pants šā pagarinājuma laikā paredz atbrīvojumu no darba atļaujas.",
+              "units": 28
+            },
+            {
+              "text": "Tas neattiecas uz jebkuru studentu vai jebkuru darba meklēšanai izmantotu ARC.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "text": "Sākotnējā e-pastā par uzturēšanos ietekmējošu darba vai ģimenes strīdu uz [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) var īsi norādīt notikumu un būtiskos datumus. Pases numuru un identitātes dokumentu oriģinālus šai pirmajai ziņai nepievienojiet. Konsultācijas notiek angļu, ķīniešu, japāņu vai korejiešu valodā.",
+          "opener": "sākotnējā",
+          "sentences": [
+            {
+              "text": "Sākotnējā e-pastā par uzturēšanos ietekmējošu darba vai ģimenes strīdu uz wei@hoveringlaw.com.tw var īsi norādīt notikumu un būtiskos datumus.",
+              "units": 22
+            },
+            {
+              "text": "Pases numuru un identitātes dokumentu oriģinālus šai pirmajai ziņai nepievienojiet.",
+              "units": 10
+            },
+            {
+              "text": "Konsultācijas notiek angļu, ķīniešu, japāņu vai korejiešu valodā.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "text": "Pases atjaunošanai jāseko atbilstošai NIA datu atjaunošanai, kā skaidro [NIA jautājumi un atbildes](https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN). Izmaiņu pieteikumam [dokumentu saraksts](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) prasa veidlapu, fotogrāfiju, pasi un izmaiņas pierādījumu. Vecā pase vai kopija palīdz sasaistīt abus ierakstus. Visām pases izmaiņām nevar pieņemt vienu kopēju 30 dienu termiņu.",
+          "opener": "pases",
+          "sentences": [
+            {
+              "text": "Pases atjaunošanai jāseko atbilstošai NIA datu atjaunošanai, kā skaidro NIA jautājumi un atbildes.",
+              "units": 13
+            },
+            {
+              "text": "Izmaiņu pieteikumam dokumentu saraksts prasa veidlapu, fotogrāfiju, pasi un izmaiņas pierādījumu.",
+              "units": 11
+            },
+            {
+              "text": "Vecā pase vai kopija palīdz sasaistīt abus ierakstus.",
+              "units": 8
+            },
+            {
+              "text": "Visām pases izmaiņām nevar pieņemt vienu kopēju 30 dienu termiņu.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "text": "ARC nozaudēšanas vai bojājuma gadījumā iesniedz bojāto karti, paziņojumu par nozaudēšanu, policijas izziņu vai citus situācijai atbilstošus pierādījumus. Policijas izziņa nav vienīgais variants. [Maksu noteikumu 7. pantā](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135) parastā atkārtotas izsniegšanas maksa ir NT$500. Jauna karte uzturēšanās periodu nepagarina.",
+          "opener": "arc",
+          "sentences": [
+            {
+              "text": "ARC nozaudēšanas vai bojājuma gadījumā iesniedz bojāto karti, paziņojumu par nozaudēšanu, policijas izziņu vai citus situācijai atbilstošus pierādījumus.",
+              "units": 18
+            },
+            {
+              "text": "Policijas izziņa nav vienīgais variants.",
+              "units": 5
+            },
+            {
+              "text": "Maksu noteikumu 7. pantā parastā atkārtotas izsniegšanas maksa ir NT$500.",
+              "units": 11
+            },
+            {
+              "text": "Jauna karte uzturēšanās periodu nepagarina.",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "text": "Nozaudēšana ārvalstīs ietekmē arī atgriešanos. Pirms brauciena sazinieties ar NIA un [attiecīgo Taivānas pārstāvniecību](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html), norādot pases datus, ARC kopiju, ja tāda ir, un plānoto atgriešanās dienu. Tās var precizēt vajadzīgo dokumentu. Iespēja pieteikt kartes aizstāšanu ārvalstīs pati par sevi negarantē iekāpšanu lidmašīnā vai ieceļošanu.",
+          "opener": "nozaudēšana",
+          "sentences": [
+            {
+              "text": "Nozaudēšana ārvalstīs ietekmē arī atgriešanos.",
+              "units": 5
+            },
+            {
+              "text": "Pirms brauciena sazinieties ar NIA un attiecīgo Taivānas pārstāvniecību, norādot pases datus, ARC kopiju, ja tāda ir, un plānoto atgriešanās dienu.",
+              "units": 21
+            },
+            {
+              "text": "Tās var precizēt vajadzīgo dokumentu.",
+              "units": 5
+            },
+            {
+              "text": "Iespēja pieteikt kartes aizstāšanu ārvalstīs pati par sevi negarantē iekāpšanu lidmašīnā vai ieceļošanu.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "text": "Parastā atkārtotas ieceļošanas atļauja saskaņā ar [Imigrācijas likuma 34. pantu](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34) vajadzīga pirms izbraukšanas. [Uzturēšanās noteikumu 20. pants](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129) sasaista tās derīgumu ar ARC periodu un anulē atļauju, ja anulēta ARC. Pastāvīgās uzturēšanās atļaujas saņēmējam ir izņēmums: ar derīgu pasi un APRC var atgriezties bez atsevišķas atkārtotas ieceļošanas atļaujas.",
+          "opener": "parastā",
+          "sentences": [
+            {
+              "text": "Parastā atkārtotas ieceļošanas atļauja saskaņā ar Imigrācijas likuma 34. pantu vajadzīga pirms izbraukšanas.",
+              "units": 13
+            },
+            {
+              "text": "Uzturēšanās noteikumu 20. pants sasaista tās derīgumu ar ARC periodu un anulē atļauju, ja anulēta ARC.",
+              "units": 16
+            },
+            {
+              "text": "Pastāvīgās uzturēšanās atļaujas saņēmējam ir izņēmums: ar derīgu pasi un APRC var atgriezties bez atsevišķas atkārtotas ieceļošanas atļaujas.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "text": "Kamēr pagarināšana vai kartes aizstāšana vēl procesā, pirms izbraukšanas saņemiet NIA norādījumus konkrētajam braucienam. Iesniegšanas kvīts automātiski neaizstāj vajadzīgos ceļošanas dokumentus. Pases un atļauju derīgums jāpārbauda plānotajai atgriešanās dienai.",
+          "opener": "kamēr",
+          "sentences": [
+            {
+              "text": "Kamēr pagarināšana vai kartes aizstāšana vēl procesā, pirms izbraukšanas saņemiet NIA norādījumus konkrētajam braucienam.",
+              "units": 14
+            },
+            {
+              "text": "Iesniegšanas kvīts automātiski neaizstāj vajadzīgos ceļošanas dokumentus.",
+              "units": 7
+            },
+            {
+              "text": "Pases un atļauju derīgums jāpārbauda plānotajai atgriešanās dienai.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "text": "NIA [konkrētajā profesionāļu un ģimenes locekļu tiešsaistes procedūrā](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/) pieteikuma izskatīšanu neturpina, ja pieteicējs tās laikā izbrauc no Taivānas. Pēc atkārtotas ieceļošanas var iesniegt jaunu pieteikumu, ja atkal izpildīti attiecīgās kategorijas nosacījumi. Tas ir šīs tiešsaistes kārtības noteikums, nevis vispārējs izceļošanas aizliegums ARC pieteicējiem vai garantija atgriezties.",
+          "opener": "nia",
+          "sentences": [
+            {
+              "text": "NIA konkrētajā profesionāļu un ģimenes locekļu tiešsaistes procedūrā pieteikuma izskatīšanu neturpina, ja pieteicējs tās laikā izbrauc no Taivānas.",
+              "units": 18
+            },
+            {
+              "text": "Pēc atkārtotas ieceļošanas var iesniegt jaunu pieteikumu, ja atkal izpildīti attiecīgās kategorijas nosacījumi.",
+              "units": 13
+            },
+            {
+              "text": "Tas ir šīs tiešsaistes kārtības noteikums, nevis vispārējs izceļošanas aizliegums ARC pieteicējiem vai garantija atgriezties.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "text": "Pirmo dokumentu sagatavošanu skaidro [pirmās ARC pieteikums](/lv/columns/taiwan-arc-first-application), bet jaunu pamatu — [darba, studiju un ģimenes ceļi](/lv/columns/taiwan-visa-residence-work-study-family). Par pastāvīgo uzturēšanos pieejams [APRC raksts angļu valodā](/en/columns/taiwan-permanent-residence-aprc). Pirms izbraukšanas jāzina, kuri derīgie dokumenti būs līdzi plānotajā atgriešanās dienā.",
+          "opener": "pirmo",
+          "sentences": [
+            {
+              "text": "Pirmo dokumentu sagatavošanu skaidro pirmās ARC pieteikums, bet jaunu pamatu — darba, studiju un ģimenes ceļi.",
+              "units": 15
+            },
+            {
+              "text": "Par pastāvīgo uzturēšanos pieejams APRC raksts angļu valodā.",
+              "units": 8
+            },
+            {
+              "text": "Pirms izbraukšanas jāzina, kuri derīgie dokumenti būs līdzi plānotajā atgriešanās dienā.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "text": "Juridiskie avoti pārbaudīti 2026. gada 24. oktobrī; atsevišķi nosacījumi un tiešsaistes izbraukšanas sekas papildus salīdzinātas 25. oktobrī. Šeit aprakstītas ārvalstnieku procedūras un nosacīti izņēmumi, nevis izlemta konkrēta lieta. Kontinentālās Ķīnas, Honkongas un Makao iedzīvotājiem, kā arī Ķīnas Republikas pilsoņiem bez mājsaimniecības reģistrācijas ir atsevišķa kārtība.",
+          "opener": "juridiskie",
+          "sentences": [
+            {
+              "text": "Juridiskie avoti pārbaudīti 2026. gada 24. oktobrī; atsevišķi nosacījumi un tiešsaistes izbraukšanas sekas papildus salīdzinātas 25. oktobrī.",
+              "units": 17
+            },
+            {
+              "text": "Šeit aprakstītas ārvalstnieku procedūras un nosacīti izņēmumi, nevis izlemta konkrēta lieta.",
+              "units": 11
+            },
+            {
+              "text": "Kontinentālās Ķīnas, Honkongas un Makao iedzīvotājiem, kā arī Ķīnas Republikas pilsoņiem bez mājsaimniecības reģistrācijas ir atsevišķa kārtība.",
+              "units": 17
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "frozenAt": "2026-10-25T15:58:11.917622+00:00",
+  "state": "author-ready; independent meaning review and publication pending",
+  "articles": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/704-taiwan-arc-first-application.md",
+      "sha256": "e7093b04429ae7e91ea0d981e625921bbbcb82ce4cb84ead5e28b01953be5809",
+      "bytes": 27812,
+      "structureErrors": [],
+      "varietyExit": 0,
+      "metrics": {
+        "lang": "km",
+        "sentences": 67,
+        "paras": 20,
+        "heads": 5,
+        "list_items": 3,
+        "mean_len": 16.1,
+        "len_cv": 0.509,
+        "short_share": 0.149,
+        "long_share": 0.045,
+        "para_cv": 0.288,
+        "even_run3": 0.031,
+        "top_end": "ទេ",
+        "top_end_share": 0.104,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "មាត្រា",
+        "top_opener_n": 2,
+        "opener_rep": 0.15,
+        "consec_same_start": 1,
+        "cite_para_share": 0.3,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.7,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "មាត្រា 22 នៃច្បាប់អន្តោប្រវេសន៍ កំណត់ឱ្យអ្នកដែលចូលតៃវ៉ាន់ដោយទិដ្ឋាការស្នាក់នៅ និងទទួលការអន",
+        "last": "ប្រភពច្បាប់ និងនីតិវិធីក្នុងស៊េរីនេះត្រូវបានពិនិត្យនៅថ្ងៃទី 24–25 តុលា 2026។ ផ្លូវដែលពន្យល់នៅទីនេះសម្រាប់ជនបរទេសតាមក្របខ",
+        "length_unit": "icu_dictionary_wordlike_units",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations",
+        "word_segmenter": {
+          "locale": "km",
+          "node": "24.14.1",
+          "icu": "78.2",
+          "unicode": "17.0",
+          "whitespace": "Unicode_White_Space_phrase_chunks"
+        }
+      }
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba",
+      "bytes": 26623,
+      "structureErrors": [],
+      "varietyExit": 0,
+      "metrics": {
+        "lang": "km",
+        "sentences": 65,
+        "paras": 20,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 16.8,
+        "len_cv": 0.463,
+        "short_share": 0.092,
+        "long_share": 0.046,
+        "para_cv": 0.336,
+        "even_run3": 0.032,
+        "top_end": "ទេ",
+        "top_end_share": 0.092,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "ប្រភេទ",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.5,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.1,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "ប្រភេទទិដ្ឋាការដែលប្រើចូលតៃវ៉ាន់ អាចកំណត់ថាអ្នកត្រូវសុំការស្នាក់នៅនៅទីណា។",
+        "last": "ប្រភពក្នុងស៊េរីនេះត្រូវបានពិនិត្យនៅថ្ងៃទី 24–25 តុលា 2026។ លក្ខខណ្ឌត្រូវអនុវត្តតាមស្ថានភាពរបស់អ្នកសុំម្នាក់ៗ។ អត្ថបទនេះព",
+        "length_unit": "icu_dictionary_wordlike_units",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations",
+        "word_segmenter": {
+          "locale": "km",
+          "node": "24.14.1",
+          "icu": "78.2",
+          "unicode": "17.0",
+          "whitespace": "Unicode_White_Space_phrase_chunks"
+        }
+      }
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "316892dfc981a0316b198b3e7a946eecd32c25b5499d9366a63e6ed6a5b2add1",
+      "bytes": 30046,
+      "structureErrors": [],
+      "varietyExit": 0,
+      "metrics": {
+        "lang": "km",
+        "sentences": 79,
+        "paras": 25,
+        "heads": 6,
+        "list_items": 0,
+        "mean_len": 15.8,
+        "len_cv": 0.478,
+        "short_share": 0.152,
+        "long_share": 0.063,
+        "para_cv": 0.249,
+        "even_run3": 0.039,
+        "top_end": "ទេ",
+        "top_end_share": 0.139,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "មាត្រា",
+        "top_opener_n": 3,
+        "opener_rep": 0.12,
+        "consec_same_start": 0,
+        "cite_para_share": 0.52,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.88,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "បើការងារចប់មុនថ្ងៃផុតសុពលភាព ARC តើអាចនៅបន្តរហូតដល់ថ្ងៃលើកាតឬទេ?",
+        "last": "ការផ្ទៀងផ្ទាត់ប្រភពសម្រាប់ស៊េរីនេះធ្វើនៅថ្ងៃទី 24–25 តុលា 2026។ ករណីបន្តស្នាក់នៅ និងការលើកលែងត្រូវពិនិត្យតាមភស្តុតាងរបស់",
+        "length_unit": "icu_dictionary_wordlike_units",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations",
+        "word_segmenter": {
+          "locale": "km",
+          "node": "24.14.1",
+          "icu": "78.2",
+          "unicode": "17.0",
+          "whitespace": "Unicode_White_Space_phrase_chunks"
+        }
+      }
+    }
+  ],
+  "inputsUnchanged": true,
+  "changedInputs": [],
+  "authorReport": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/km-author.md",
+    "sha256": "2a40f1fe11b99a2ffea8320e10f466864c98aa601205fe7aeaca7eccbc03121f"
+  },
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-content-audit.json",
+      "sha256": "b3b597d18728edac7cfb5403e554623d001f80b7b61acb6f83288e1556d064ba"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-inputs.json",
+      "sha256": "c4f65d9b009109d7bdd5cdbf9ea257fd2bfe122ead39055ae41c6c097858654b"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-neutral-boundaries.json",
+      "sha256": "482521ceaa22e8786c6cefa9b9c1e6c6d59bb4c5e8eb1884287e4da7a55cb99a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-sentences-final-704.json",
+      "sha256": "6afb60fa3690a5214489b9aab3f81d5d6de908f706ac185cd5858e214b9e8beb"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-sentences-final-705.json",
+      "sha256": "3f9544eae413b64c09af4e24ff572cc5dc087c2c7a5c76353e7db267773392b5"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-sentences-final-706.json",
+      "sha256": "d2d5c6781e1ebe4330e463e54eb2dce2913a42652d8a3573f81ad845c12e4018"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-sentences-initial-704.json",
+      "sha256": "17253df9aca2da2d69891480e98354efa874576f0d247021d2397e36770347f3"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-sentences-initial-705.json",
+      "sha256": "718e122e014baa5e7f502aa9a9612c7ac23dd1259ada588f7597f0263e579e07"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-sentences-initial-706.json",
+      "sha256": "37264abf0f4ae3c9296ce3c6fee860b784749cfa1329bb789c29165b3dbcfd3a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-source-readback.md",
+      "sha256": "30246a6a9459068bd404ba8c31c88a6f374008ce1afccd7eb70e6e5f1aede994"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-structure.json",
+      "sha256": "8a2529acac53def4cc7f63af936124d278ac4991061f5c865133ed3196e974b5"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-before-profile.json",
+      "sha256": "ac07d30a528732a91c9ffc96996bcadbf997b5d2b1acf880a53b5a71dad62406"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-before-profile.log",
+      "sha256": "355af4334adb510deeb903f48576ab5c8bd82c1f0af966d4a564394416a95c84"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-check.py",
+      "sha256": "89922dc0c80114af4c63e65e466e92447750ca48f9d74aec04b134fc15dbb3e9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-final-704.log",
+      "sha256": "84af4d20d6e2d55812f56f8578b9c5b282915142d4c97cbc04683981cdba7338"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-final-705.log",
+      "sha256": "e9b91e407fcf3531213f9bcb2687964ce54fee1589c66dcee6dc3b61212e82e9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-final-706.log",
+      "sha256": "279825c411ed5fdaf8582e7de9a97353fa491955e7c7530ff9d8fb6d916f3c4e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-final.json",
+      "sha256": "04dd26e1740703ef129a0a33683a1ed999ff5390f59caf7d761c76b21a59ca12"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-initial-704.log",
+      "sha256": "fbc840b87dc78c6caa1e303c5a6d704c6886003153504055c635a871cb69f47d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-initial-705.log",
+      "sha256": "d68ad2340cd78273a558d09d6314a3ed72e8e4470e07be88f7066cdffd264e15"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-initial-706.log",
+      "sha256": "78d3a592318f7285c99063d6e54e608d9838860f6a556a73aad871673e138942"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-initial.json",
+      "sha256": "d3a512818139ff3c03a57c57fd8be1e46c1f6e24ade72bdf2fd7307363a65064"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-variety-revision-706.log",
+      "sha256": "0327748a91cb63646344fd417ab857715876f2c73134716e3ab1f34dab8193aa"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-verify.mjs",
+      "sha256": "da9f791ea1a9a65c0265c641bf2b3cd943cea9c98344b9031818278a3b34df03"
+    }
+  ]
+}

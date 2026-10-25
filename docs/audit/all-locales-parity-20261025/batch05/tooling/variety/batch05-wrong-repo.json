@@ -1,0 +1,11 @@
+{
+  "args": [
+    "--repo-root",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety"
+  ],
+  "expected_exit": 2,
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "usage: compare_forty_two.py [-h] --repo-root REPO_ROOT\ncompare_forty_two.py: error: explicit repo-root must equal the frozen real repository; no parent-depth inference\n",
+  "ok": true
+}

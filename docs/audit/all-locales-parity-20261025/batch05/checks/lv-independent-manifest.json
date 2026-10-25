@@ -1,0 +1,425 @@
+{
+  "frozenAt": "2026-10-25T16:14:52.958064+00:00",
+  "scope": "Independent LV704–706 source/meaning/style review; LV manuscripts and author evidence remain read-only. Input hashes captured at final freeze, not a pre-review snapshot.",
+  "status": "PASS",
+  "mandatoryFindings": 0,
+  "nativeHumanReviewed": false,
+  "lawyerApproved": false,
+  "renderingVerified": false,
+  "published": false,
+  "publicationReady": false,
+  "manuscriptSourceDatesChanged": false,
+  "readbackLimit": "Focused official-source reads; not all official URLs freshly fetched. Bibliographic source-update date label omissions are explicitly documented; legal dates are reviewed in context.",
+  "articles": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/704-taiwan-arc-first-application.md",
+      "sha256": "f47d6be694c2e9601fa457d64598379b5065fa48a94937d5ff11a76d3637c810",
+      "sameAsRootFreezeAndIndependentChecks": true,
+      "structureErrors": [],
+      "varietyExitCode": 0,
+      "varietyMetrics": {
+        "lang": "lv",
+        "sentences": 64,
+        "paras": 21,
+        "heads": 5,
+        "list_items": 3,
+        "mean_len": 11.9,
+        "len_cv": 0.519,
+        "short_share": 0.359,
+        "long_share": 0.0,
+        "para_cv": 0.353,
+        "even_run3": 0.032,
+        "top_end": "taivānā",
+        "top_end_share": 0.031,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "ja",
+        "top_opener_n": 2,
+        "opener_rep": 0.048,
+        "consec_same_start": 0,
+        "cite_para_share": 0.333,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.49,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "30 dienu termiņu pirmās ARC pieteikumam Taivānas Konsulāro lietu birojs (BOCA) skaita no u",
+        "last": "Avotu pārbaudes pamats ir 2026. gada 24. oktobris; atsevišķi nosacījumi papildus salīdzināti 25. oktobrī. Šis skaidrojum",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "officialURLCount": 11
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "de24030f670164d376227740b49a16a3e1883fa29def34a483fda0672a529102",
+      "sameAsRootFreezeAndIndependentChecks": true,
+      "structureErrors": [],
+      "varietyExitCode": 0,
+      "varietyMetrics": {
+        "lang": "lv",
+        "sentences": 69,
+        "paras": 22,
+        "heads": 5,
+        "list_items": 2,
+        "mean_len": 12.4,
+        "len_cv": 0.502,
+        "short_share": 0.304,
+        "long_share": 0.0,
+        "para_cv": 0.308,
+        "even_run3": 0.06,
+        "top_end": "nia",
+        "top_end_share": 0.043,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "ārvalstu",
+        "top_opener_n": 2,
+        "opener_rep": 0.045,
+        "consec_same_start": 0,
+        "cite_para_share": 0.545,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.79,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Atbilstošs ārvalstu profesionālis pēc bezvīzu ieceļošanas var pieteikties tieši NIA saskaņ",
+        "last": "Avoti pārbaudīti 2026. gada 24. oktobrī, atsevišķi nosacījumi papildus salīdzināti 25. oktobrī. Atbilstību izlemj pēc ko",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "officialURLCount": 15
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "e5b600ba790cdbcd9f225c1703c81e28e7ab49974d504b4ba77b1070d48e700d",
+      "sameAsRootFreezeAndIndependentChecks": true,
+      "structureErrors": [],
+      "varietyExitCode": 0,
+      "varietyMetrics": {
+        "lang": "lv",
+        "sentences": 89,
+        "paras": 27,
+        "heads": 6,
+        "list_items": 0,
+        "mean_len": 12.5,
+        "len_cv": 0.468,
+        "short_share": 0.281,
+        "long_share": 0.0,
+        "para_cv": 0.196,
+        "even_run3": 0.057,
+        "top_end": "beigām",
+        "top_end_share": 0.056,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "vai",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.444,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.34,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Vai Taivānā drīkst palikt līdz ARC uzdrukātajam datumam, ja darbs vai studijas, kuru dēļ a",
+        "last": "Juridiskie avoti pārbaudīti 2026. gada 24. oktobrī; atsevišķi nosacījumi un tiešsaistes izbraukšanas sekas papildus salī",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "officialURLCount": 14
+    }
+  ],
+  "inputs": [
+    {
+      "role": "accepted_source",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+      "bytes": 11003,
+      "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "accepted_source",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+      "bytes": 11813,
+      "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "accepted_source",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+      "bytes": 12985,
+      "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "accepted_source",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/704-taiwan-arc-first-application.md",
+      "bytes": 13902,
+      "sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "accepted_source",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "bytes": 13422,
+      "sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "accepted_source",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "bytes": 16043,
+      "sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "accepted_source",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/704-taiwan-arc-first-application.md",
+      "bytes": 10598,
+      "sha256": "0c00bc06bf3c3c1860a95af4dbcea9eaab981300860916856295e8b947244468",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "accepted_source",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md",
+      "bytes": 11997,
+      "sha256": "290a50047632ad830ea98c524ffef6ed91c2b4c8d555a1844689824c3ffea7a3",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "accepted_source",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md",
+      "bytes": 13255,
+      "sha256": "4d70e78b9a197f4a2b81d25d61b6fa862ee849a6392d5fd905e90bcf781e721c",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "contract",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/BRIEF.md",
+      "bytes": 3688,
+      "sha256": "3ec4273b3e346bb20e1b6513c6a146682da2e39fa5c48c17d5496bd8195a4863",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "contract",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch04/BRIEF.md",
+      "bytes": 3721,
+      "sha256": "67af9e0e6ebdcf818bfe41d84dac0000f8a1252bc6bf55c02ce6eeaaa7445ef9",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "contract",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch03/BRIEF.md",
+      "bytes": 3942,
+      "sha256": "076a5bd7220bead942bf9dcf4c649180c8036b85d5c019775f1aad1a42eb3c7e",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "contract",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/BRIEF.md",
+      "bytes": 3597,
+      "sha256": "104c4c4df457e5627b6970599661be78182d7101cbb9090df549670501846105",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "contract",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/AGENTS.md",
+      "bytes": 18421,
+      "sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "contract",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "bytes": 14050,
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "contract",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/FRONTMATTER.md",
+      "bytes": 8842,
+      "sha256": "7a2590f33ba49c55f539f1fade51fed1290808352b16247445a714333593a364",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "contract",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/BRIEF.md",
+      "bytes": 5971,
+      "sha256": "a8546e8a19f911b16c07f29ff874fb4ad70bb04d087a16354ad2adc8a57246f7",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "contract",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/research/arc-source-facts.md",
+      "bytes": 22170,
+      "sha256": "4776f60010172120e0812d8d552123aeb5c7cc0b467cb5306ca031a1e17c2145",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "contract",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/codex-column-recheck-20261024/research/source-refresh.md",
+      "bytes": 21581,
+      "sha256": "a33d5bd1439879bc7461755c3b6793f4942ec161454032dcb8cde1c4d52a6983",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "contract",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/arc-visas-20261024/BRIEF.md",
+      "bytes": 4832,
+      "sha256": "4111ebc6497a5a908cc77182a9fdccfd84c87da52b71c9a7b253b8cc7b5e4a17",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "contract",
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "bytes": 1705,
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "contract",
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "bytes": 16440,
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "contract",
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "bytes": 17144,
+      "sha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f",
+      "sameAsEarlierReadSnapshot": false,
+      "earlierSHA256": "92c572987cbc3c03eeb934fbfd2de6cf42d7e4b2e441cc39fb009c0e11f0e71a",
+      "changeHandling": "Freeze guard detected automated regeneration; current 2026-10-26 01:04 KST version was read in full before final freeze."
+    },
+    {
+      "role": "image_visually_inspected",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+      "bytes": 379140,
+      "sha256": "e33f7f381d597a9ae5b3693d7c4f887a29d7420b1b4ae3c98db664a06dceae31",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "image_visually_inspected",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+      "bytes": 284390,
+      "sha256": "9933406b2c0c64af337aaf443c6c5e1ed4afb94e9ed7ab5a5e3635a2b940f16f",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "image_visually_inspected",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+      "bytes": 385502,
+      "sha256": "0f9d9a4041f5978119b71a6c89ba1a9b01e2643871143163a4bc4d8f792a7e84",
+      "sameAsEarlierReadSnapshot": true
+    },
+    {
+      "role": "recent_comparator_read_in_full",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/900-latvian-timber-exporter-taiwan-unpaid-invoices.md",
+      "bytes": 10851,
+      "sha256": "be94667f997685ce4f8d13e3832ebcbfc1356df24fef0c3832b3d606330361d1"
+    },
+    {
+      "role": "recent_comparator_read_in_full",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/901-latvian-professional-taiwan-work-permit-family.md",
+      "bytes": 11107,
+      "sha256": "f91d73c148b147217588de7f4f7eb20816bf108d43e27e07f98e59d162937ba0"
+    },
+    {
+      "role": "recent_comparator_read_in_full",
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/902-latvian-visitor-taiwan-traffic-injury-return-home.md",
+      "bytes": 11214,
+      "sha256": "c36ad16972aaa5a0ac784f10d80de8ed76044e359a4e006260a9885fa8d736fa"
+    },
+    {
+      "role": "author_report_read_only",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/lv-author.md",
+      "bytes": 18074,
+      "sha256": "36bdb7bceb1097b4a587e8a2247f25663ea01e40b4284f5fd6c215f557ebeefa"
+    },
+    {
+      "role": "exact_checker",
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "bytes": 21867,
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "role": "exact_profile",
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/lv.json",
+      "bytes": 1838,
+      "sha256": "09dc74f01e20b3430b1bf00c1e9ae4c2b941e081505e63cd4f9d86fb8fdb836e"
+    }
+  ],
+  "supportingEvidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lv-independent-content-audit.json",
+      "bytes": 307868,
+      "sha256": "a62ef87c9e39d8250a2a8833f9cb43c972ffa0ef258cbae0cbaefd76b84a9cf2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lv-independent-source-readback.md",
+      "bytes": 3872,
+      "sha256": "7f6be4b074e871d065047de4a11f304790466ce24e719cb16ab2179b5037e744"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lv-independent-structure.json",
+      "bytes": 3752,
+      "sha256": "6e0033b06fb5e82ea0da85df38a777f7cba658f92ccd4a8157e65c8e1b997ccb"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lv-independent-variety-704.log",
+      "bytes": 280,
+      "sha256": "081059e43d9c6e2f8adc248c53671192d4a17c98e0908b0086e6e1105f119c7a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lv-independent-variety-705.log",
+      "bytes": 290,
+      "sha256": "43e5f9857eaca7dcbd8190be8914ea8e139dad9185cef8a471ce5d8d00bd2d22"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lv-independent-variety-706.log",
+      "bytes": 284,
+      "sha256": "3149f5c152506ae6ff9a41a466a54fb9efda20a17424eb2c6e4c19e10194f3c8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lv-independent-variety.json",
+      "bytes": 64602,
+      "sha256": "6938e0ab615a3c210868e650f5b72f985a40fda3ff47eb584266a623edfee6f3"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lv-independent-verify.mjs",
+      "bytes": 4479,
+      "sha256": "d221e8ee5d289cf753419494a734ae7febdf57334effbcc73cca2166d474c5fe"
+    }
+  ],
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/lv-independent.md",
+    "sha256": "70cfaba5b3cca199def749e139441fe0b15fad333dcc9af629f413ed50a11dbf",
+    "bytes": 20732
+  },
+  "untouchedScopes": [
+    "R",
+    "shared checker/profile",
+    "LV manuscripts",
+    "LV author evidence",
+    "other locales",
+    "git",
+    "deployment"
+  ]
+}

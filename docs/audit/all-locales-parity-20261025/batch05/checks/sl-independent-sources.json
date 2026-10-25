@@ -1,0 +1,110 @@
+{
+  "recorded_at_utc": "2026-10-25T16:13:53.494502+00:00",
+  "review": "SL 704–706 independent manuscript review",
+  "scope": "Actual primary-source page reads during this continuous LT/SL review; this record does not claim a fresh reopening of every URL in each manuscript source tail. Earlier individual-page failures and successful full-text fallbacks are retained.",
+  "source_observations": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16",
+      "status": "read",
+      "language": "zh-Hant",
+      "read_scope": "Article 16",
+      "use": "F03/F04: ordinary foreign professionals performing professional work OR special foreign professionals; family route with NIA residence OR permanent-residence approval."
+    },
+    {
+      "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+      "status": "read",
+      "language": "en",
+      "read_scope": "Articles 12, 15, 16 and 17",
+      "use": "Taiwan-degree new-graduate exemption during NIA-approved extended residence; qualified spouse work-permit application; residence pathways; six-month extension with one further extension."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080132",
+      "status": "read",
+      "language": "zh-Hant",
+      "read_scope": "Articles 31 and 34",
+      "use": "Grounds ending and discretionary continued residence; foreign spouse after domestic-violence divorce who has not remarried; valid passport plus APRC reentry exception. M1 is a state-of-eligibility correction, not a general ban on future remarriage."
+    },
+    {
+      "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+      "status": "read",
+      "language": "en",
+      "read_scope": "Articles 11 and 12",
+      "use": "Eligible graduate extension with approval, one plus one year; first ARC for qualifying spouse of registered Taiwan national up to one year."
+    },
+    {
+      "url": "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+      "status": "read",
+      "language": "zh-Hant",
+      "read_scope": "Documents, processing and notes including overseas-document authentication/possible translation, rectification, entry/address timing and NIA approval timing",
+      "use": "F01, F07, F08, F11, F16, F24; fifteen calendar days from the day after notice OR applicable three-month overseas-document period, not cumulative."
+    },
+    {
+      "url": "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+      "status": "read",
+      "language": "en",
+      "read_scope": "NIA 0929 study documents and payment/collection procedure",
+      "use": "Recent enrollment proof OR student ID, student processing/payment/collection clocks, electronic ARC download AND print, IC ARC collection. Language-study threshold is checked with the canonical statutory and BOCA treatment rather than converting the page’s inconsistent English wording into an extra condition."
+    },
+    {
+      "url": "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/",
+      "status": "read",
+      "language": "zh-Hant",
+      "read_scope": "Online foreign-professional/family procedure notes, especially note 9",
+      "use": "F23: examination does not continue after applicant departs during this specific online application; after reentry an eligible person may apply anew. No general prohibition on departure."
+    },
+    {
+      "url": "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+      "status": "read",
+      "language": "en",
+      "read_scope": "NIA 0915 note 7(1)",
+      "use": "Trial visa-exempt and other listed excluded entry routes, subject to other legal provisions; used in the continuous LT/SL source comparison."
+    },
+    {
+      "url": "https://fran.si/iskanje?View=1&Query=smeti",
+      "status": "entry_text_read_on_official_portal",
+      "language": "sl",
+      "read_scope": "SSKJ² sméti entry, permission sense and negative prohibition sense",
+      "use": "Lexical support for interpreting ne sme ponovno poročiti as prohibition. This is not authority on Taiwan law. The canonical individual-entry link was observed but did not load directly."
+    },
+    {
+      "url": "https://tseng-law.com/en/contact",
+      "status": "read",
+      "language": "en",
+      "read_scope": "Current contact-page body, email, initial inquiry scope, four consultation languages, sensitive-data limits",
+      "use": "706 email and Chinese/English/Korean/Japanese languages; no Slovene service guarantee, no inquiry sent."
+    }
+  ],
+  "access_failures_and_fallbacks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=12",
+      "outcome": "individual article unavailable/internal error",
+      "fallback": "Successful current English full statute, Article 12, above."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+      "outcome": "individual article unavailable",
+      "fallback": "Successful current Chinese full statute, Article 34, above."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+      "outcome": "individual article HTTP 400/timeout",
+      "fallback": "Successful current Chinese full statute, Article 31, above."
+    },
+    {
+      "url": "https://fran.si/133/sskj2-slovar-slovenskega-knjiznega-jezika-2/4532045/smeti",
+      "outcome": "individual entry click/open inaccessible; cache miss on queried link",
+      "fallback": "Actual SSKJ² entry displayed and read on the official Fran portal search view above; direct individual-page retrieval is not claimed."
+    },
+    {
+      "url": "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+      "outcome": "find for 十五 produced no match",
+      "fallback": "Opened surrounding page text directly and read the rectification paragraph; not treated as a missing legal condition."
+    }
+  ],
+  "limits": [
+    "MOJ pages displayed a database cutoff of 2026-10-16. No claim of a complete later official-gazette scan through 2026-10-26.",
+    "Canonical nine manuscripts and F01–F24/source-refresh are separate local review inputs; their hashes are in sl-independent-inputs.json.",
+    "No human native-speaker certification, Taiwan lawyer approval, or independent certification of the SL checker authored by this reviewer.",
+    "No source-tail-wide fresh URL crawl, rendered-page or public deployment validation."
+  ]
+}

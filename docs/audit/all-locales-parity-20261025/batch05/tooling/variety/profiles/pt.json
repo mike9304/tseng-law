@@ -1,0 +1,138 @@
+{
+  "locale": "pt",
+  "directory": "columns-pt",
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?Fontes(?:\\s+(?:oficiais|consultadas))?\\s*:?\\s*$)",
+  "abbreviations": [
+    "art",
+    "arts",
+    "n",
+    "al",
+    "als",
+    "p",
+    "pp",
+    "Sr",
+    "Sra",
+    "Dr",
+    "Dra",
+    "Exmo",
+    "Exma",
+    "Eng",
+    "Prof",
+    "cf",
+    "cfr",
+    "v.g",
+    "v. g",
+    "p.ex",
+    "p. ex",
+    "etc",
+    "Proc",
+    "Ac",
+    "Cód",
+    "Cód. Civ",
+    "Cód. Proc. Civ"
+  ],
+  "contrast_patterns": [
+    "(?i:\\bnão\\b[^.!?\\n]{0,160}\\bmas(?:\\s+sim)?\\b)",
+    "(?i:\\bem\\s+(?:vez|lugar)\\s+de\\b)",
+    "(?i:\\b(?:é|são)\\s+(?:outra\\s+coisa|diferentes?\\s+de)\\b)"
+  ],
+  "caveat_pattern": "(?i:^\\s*[«“\\\"(]*\\s*(?:porém|contudo|todavia|no\\s+entanto|ainda\\s+assim|salvo\\s+se)\\b)",
+  "hypo_pattern": "(?i:^\\s*[«“\\\"(]*\\s*(?:suponhamos\\b|imaginemos\\b|um\\s+caso\\s+hipotético\\b|um\\s+exemplo\\s+fictício\\b))",
+  "formula_close_pattern": "(?i:\\b(?:este\\s+artigo\\s+(?:fornece\\s+(?:apenas\\s+)?informação\\s+geral|tem\\s+caráter\\s+(?:meramente\\s+)?informativo)|cada\\s+caso\\s+é\\s+diferente|o\\s+nosso\\s+escritório\\s+pode\\s+ajudar)\\b)",
+  "sentence_fixtures": [
+    {
+      "text": "O registo fictício menciona o art. 7.º, n.º 2, al. a). É apenas uma etiqueta.",
+      "sentences": [
+        "O registo fictício menciona o art. 7.º, n.º 2, al. a).",
+        "É apenas uma etiqueta."
+      ]
+    },
+    {
+      "text": "A linha fictícia contém 1.234,50 € e 2,5 unidades. À esquerda há uma caixa vazia.",
+      "sentences": [
+        "A linha fictícia contém 1.234,50 € e 2,5 unidades.",
+        "À esquerda há uma caixa vazia."
+      ]
+    },
+    {
+      "text": "«A cópia está pronta.» Álvaro fecha a pasta. última revisão: segunda-feira.",
+      "sentences": [
+        "«A cópia está pronta.»",
+        "Álvaro fecha a pasta.",
+        "última revisão: segunda-feira."
+      ]
+    },
+    {
+      "text": "A Dra. Ângela anota « Proc. n.º 7 » no registo fictício. O anexo está na pasta.",
+      "sentences": [
+        "A Dra. Ângela anota « Proc. n.º 7 » no registo fictício.",
+        "O anexo está na pasta."
+      ]
+    },
+    {
+      "text": "A nota fictícia enumera cópias, envelopes, etc. Falta uma etiqueta.",
+      "sentences": [
+        "A nota fictícia enumera cópias, envelopes, etc.",
+        "Falta uma etiqueta."
+      ]
+    },
+    {
+      "text": "A cópia de D’Ávila está aqui. Onde está o índice? Está na gaveta.",
+      "sentences": [
+        "A cópia de D’Ávila está aqui.",
+        "Onde está o índice?",
+        "Está na gaveta."
+      ]
+    }
+  ],
+  "word_fixtures": [
+    {
+      "text": "A ação de D’Ávila consta do registo.",
+      "tokens": [
+        "A",
+        "ação",
+        "de",
+        "D’Ávila",
+        "consta",
+        "do",
+        "registo"
+      ]
+    },
+    {
+      "text": "É possível enviar-lhe 1.234,50 €.",
+      "tokens": [
+        "É",
+        "possível",
+        "enviar",
+        "lhe",
+        "1.234,50"
+      ]
+    },
+    {
+      "text": "O art. 7.º tem o n.º 2 na etiqueta.",
+      "tokens": [
+        "O",
+        "art",
+        "7",
+        "º",
+        "tem",
+        "o",
+        "n",
+        "º",
+        "2",
+        "na",
+        "etiqueta"
+      ]
+    },
+    {
+      "text": "À esquerda está a cópia.",
+      "tokens": [
+        "À",
+        "esquerda",
+        "está",
+        "a",
+        "cópia"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Initial helper exit 1 before sentence comparison: KeyError for absolute manuscript path. The prior extraction JSON stores basenames. This is a lookup-key error in the one-off comparison helper, not a shared --lang lt checker failure. No extraction artifact or manuscript was written by the failed helper.

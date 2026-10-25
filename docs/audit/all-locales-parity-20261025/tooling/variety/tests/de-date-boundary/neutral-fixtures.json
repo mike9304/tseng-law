@@ -1,0 +1,178 @@
+{
+  "at": "2026-10-26T01:49:26.738039+09:00",
+  "locale": "de",
+  "design": "Neutral literal sentences frozen before candidate editing; no batch06 manuscript or target score read. Day conjunction/range and real sentence-end counterexamples.",
+  "cases": [
+    {
+      "id": "two-days-und",
+      "kind": "date-continuation",
+      "text": "Die Bibliothek öffnet am 7. und 8. November. Danach bleibt sie geschlossen.",
+      "sentences": [
+        "Die Bibliothek öffnet am 7. und 8. November.",
+        "Danach bleibt sie geschlossen."
+      ]
+    },
+    {
+      "id": "alternative-oder",
+      "kind": "date-continuation",
+      "text": "Die Probe findet am 12. oder 13. März statt. Der Saal ist reserviert.",
+      "sentences": [
+        "Die Probe findet am 12. oder 13. März statt.",
+        "Der Saal ist reserviert."
+      ]
+    },
+    {
+      "id": "range-bis",
+      "kind": "date-continuation",
+      "text": "Die Ausstellung läuft vom 2. bis 4. Juli. Der Eintritt ist frei.",
+      "sentences": [
+        "Die Ausstellung läuft vom 2. bis 4. Juli.",
+        "Der Eintritt ist frei."
+      ]
+    },
+    {
+      "id": "list-with-comma",
+      "kind": "date-continuation",
+      "text": "Am 2., 3. und 4. April lesen wir die Briefe. Die Kopien bleiben hier.",
+      "sentences": [
+        "Am 2., 3. und 4. April lesen wir die Briefe.",
+        "Die Kopien bleiben hier."
+      ]
+    },
+    {
+      "id": "mid-sentence-comma",
+      "kind": "date-continuation",
+      "text": "Am 4. und 5. Juni, jeweils morgens, wird der Garten geöffnet. Danach wird das Tor geschlossen.",
+      "sentences": [
+        "Am 4. und 5. Juni, jeweils morgens, wird der Garten geöffnet.",
+        "Danach wird das Tor geschlossen."
+      ]
+    },
+    {
+      "id": "year-supplied",
+      "kind": "date-continuation",
+      "text": "Die Treffen sind am 9. und 10. September 2027 geplant. Die Einladung folgt später.",
+      "sentences": [
+        "Die Treffen sind am 9. und 10. September 2027 geplant.",
+        "Die Einladung folgt später."
+      ]
+    },
+    {
+      "id": "named-dates-in-quotation",
+      "kind": "date-continuation",
+      "text": "„Am 6. und 7. Dezember ist geöffnet“, schrieb die Bibliothek. Die Antwort liegt bei.",
+      "sentences": [
+        "„Am 6. und 7. Dezember ist geöffnet“, schrieb die Bibliothek.",
+        "Die Antwort liegt bei."
+      ]
+    },
+    {
+      "id": "multiple-und",
+      "kind": "date-continuation",
+      "text": "Die Uhr wird am 1. und 2. und 3. Januar geprüft. Sie bleibt im Labor.",
+      "sentences": [
+        "Die Uhr wird am 1. und 2. und 3. Januar geprüft.",
+        "Sie bleibt im Labor."
+      ]
+    },
+    {
+      "id": "compact-dash",
+      "kind": "existing-date-control",
+      "text": "Terminfenster: 8.–10. August. Danach folgt eine Pause.",
+      "sentences": [
+        "Terminfenster: 8.–10. August.",
+        "Danach folgt eine Pause."
+      ]
+    },
+    {
+      "id": "numeric-date",
+      "kind": "existing-date-control",
+      "text": "Die Tür öffnet am 07.11.2027. Der Schlüssel liegt bereit.",
+      "sentences": [
+        "Die Tür öffnet am 07.11.2027.",
+        "Der Schlüssel liegt bereit."
+      ]
+    },
+    {
+      "id": "two-complete-dates",
+      "kind": "existing-date-control",
+      "text": "Am 30. September und 1. Oktober lesen wir die Karten. Danach werden sie abgelegt.",
+      "sentences": [
+        "Am 30. September und 1. Oktober lesen wir die Karten.",
+        "Danach werden sie abgelegt."
+      ]
+    },
+    {
+      "id": "ordinary-ordinal-end",
+      "kind": "sentence-end",
+      "text": "Er wurde 7. Die Siegerehrung begann.",
+      "sentences": [
+        "Er wurde 7.",
+        "Die Siegerehrung begann."
+      ]
+    },
+    {
+      "id": "day-at-end",
+      "kind": "sentence-end",
+      "text": "Sie blieb bis zum 7. Dann fuhr sie ab.",
+      "sentences": [
+        "Sie blieb bis zum 7.",
+        "Dann fuhr sie ab."
+      ]
+    },
+    {
+      "id": "year-end",
+      "kind": "sentence-end",
+      "text": "Die Mappe stammt aus dem Jahr 2027. Im März kam eine Kopie hinzu.",
+      "sentences": [
+        "Die Mappe stammt aus dem Jahr 2027.",
+        "Im März kam eine Kopie hinzu."
+      ]
+    },
+    {
+      "id": "uppercase-und-month",
+      "kind": "sentence-end",
+      "text": "Ihr Eintrag lautete: 7. Und 8. Mai war bereits ausgebucht.",
+      "sentences": [
+        "Ihr Eintrag lautete: 7.",
+        "Und 8. Mai war bereits ausgebucht."
+      ]
+    },
+    {
+      "id": "uppercase-oder-month",
+      "kind": "sentence-end",
+      "text": "Auf dem Zettel stand nur 7. Oder 8. Juni war gemeint.",
+      "sentences": [
+        "Auf dem Zettel stand nur 7.",
+        "Oder 8. Juni war gemeint."
+      ]
+    },
+    {
+      "id": "uppercase-und-other-noun",
+      "kind": "sentence-end",
+      "text": "Die Hausnummer ist 7. Und 8 Gäste warten.",
+      "sentences": [
+        "Die Hausnummer ist 7.",
+        "Und 8 Gäste warten."
+      ]
+    },
+    {
+      "id": "month-word-inside-next-sentence",
+      "kind": "sentence-end",
+      "text": "Es blieb bei 7. Im Mai wurden die Bücher gezählt.",
+      "sentences": [
+        "Es blieb bei 7.",
+        "Im Mai wurden die Bücher gezählt."
+      ]
+    },
+    {
+      "id": "ordinary-period-after-number",
+      "kind": "sentence-end",
+      "text": "Die Antwort lautet 7. Sie nennt außerdem den 8. Oktober.",
+      "sentences": [
+        "Die Antwort lautet 7.",
+        "Sie nennt außerdem den 8. Oktober."
+      ]
+    }
+  ]
+}

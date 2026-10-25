@@ -1,0 +1,86 @@
+{
+  "at": "2026-10-26T00:47:07.221502+09:00",
+  "author": "primary Codex /root directly authored all three; not Kimi output",
+  "sources": [
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/704-taiwan-arc-first-application.md",
+      "sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+      "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/704-taiwan-arc-first-application.md",
+      "sha256": "0c00bc06bf3c3c1860a95af4dbcea9eaab981300860916856295e8b947244468"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "290a50047632ad830ea98c524ffef6ed91c2b4c8d555a1844689824c3ffea7a3"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4d70e78b9a197f4a2b81d25d61b6fa862ee849a6392d5fd905e90bcf781e721c"
+    }
+  ],
+  "recent_articles_read_in_full_this_phase": [
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/894-slovenian-supplier-taiwan-distributor-exit-stock.md",
+      "sha256": "b577ce6a140a04f562d7a869b988e1195b9e2c866613aebb03faca5cbb41b207"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/895-slovenian-professional-taiwan-work-permit-residence.md",
+      "sha256": "c8cab244c0aa0e5cab1073530aaddead9c0feb351e4df5d20580fffb4455e962"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/896-slovenian-heir-taiwan-estate-documents-deadlines.md",
+      "sha256": "e663bcb2a25e0359c6a40d74dcc4afa47b5ba684e6bf15bd8141563977eb0f1a"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/704-taiwan-arc-first-application.md",
+      "sha256": "a87a3ac1137b0012120a56629dccc0e0d64dcbb55a2e2a6110e2be213cde6bd6",
+      "source_official_urls": 9,
+      "all_source_urls_retained": true,
+      "target_official_urls": 10
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "90d5e07a124a7b1c6aeb46a5be8293a44007a58f6e2dad2593c96b1067834932",
+      "source_official_urls": 15,
+      "all_source_urls_retained": true,
+      "target_official_urls": 15
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d5b7581f6dcff33cdcb5b65e1b46bd0654e050acb94434bbdaab68222c0aca5b",
+      "source_official_urls": 13,
+      "all_source_urls_retained": true,
+      "target_official_urls": 14
+    }
+  ],
+  "review_status": "R1 required edits and optional O1 applied; R2 and rendered release pending",
+  "updated_at": "2026-10-26T01:19:36.713141+09:00",
+  "independent_fix_receipt": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-independent-fixes.json",
+    "sha256": "7c8547961bce988acb183c79d706327ee77109e3a12fea9d99c7028f53cc4d45"
+  },
+  "author_record_sha256": "2bd2d8702a749f7a5b9a6b0c0ad8572c3cade153c0bcfdfa8d9420cbcb3b52fa"
+}

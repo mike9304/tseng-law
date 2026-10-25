@@ -1,0 +1,1603 @@
+{
+  "createdAt": "2026-10-25T16:00:58.122671+00:00",
+  "method": "shared strip_fm -> body_blocks -> sentences -> slen; source section, frontmatter FAQs, headings, tables and list items excluded by shared tool; prose introductory colon fragments remain",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/704-taiwan-arc-first-application.md",
+      "sha256": "f15069557979333b4febbff860e45755472675d20f056ac2d05664f788eaea96",
+      "metrics": {
+        "lang": "et",
+        "sentences": 64,
+        "paras": 18,
+        "heads": 4,
+        "list_items": 3,
+        "mean_len": 11.3,
+        "len_cv": 0.477,
+        "short_share": 0.406,
+        "long_share": 0.0,
+        "para_cv": 0.313,
+        "even_run3": 0.048,
+        "top_end": "juhis",
+        "top_end_share": 0.031,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "nia",
+        "top_opener_n": 2,
+        "opener_rep": 0.056,
+        "consec_same_start": 0,
+        "cite_para_share": 0.333,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 2.5,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Taiwanis pärast saabumist väljastatud elamisviisa käivitab esimese ARC taotluse 30-päevase",
+        "last": "Aluseks on 24.–25. oktoobril 2026 kontrollitud allikad. Juhis käsitleb välisriikide kodanike üldist korda; Mandri-Hiina,",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "headings": [
+        "Sisenemisviis määrab taotluse lähtekoha",
+        "Elamise põhjus ja seda tõendavad paberid",
+        "Taotluskanal ja puuduvad dokumendid",
+        "Tasu, loa kestus ja kättesaamine"
+      ],
+      "listItems": [
+        "- Töötamise puhul on asjakohane töö heakskiit ja viimase kuu jooksul väljastatud töötamise tõend või kohaldatava vabastuse dokumendid.",
+        "- Kõrgkooliõpingute puhul kasutatakse enne registreerimist vastuvõtukirja ning pärast registreerimist viimase kuu jooksul väljastatud õppimise tõendit NIA loetelu kohaselt.",
+        "- Perega ühinemisel tõendatakse abielu või sugulust ning esitatakse taotluse aluseks oleva pereliikme isikut või elamist puudutavad dokumendid."
+      ],
+      "paragraphOpeners": [
+        "taiwanis",
+        "välismaalase",
+        "passi",
+        "erialase",
+        "nia",
+        "tõendite",
+        "abikaasa",
+        "välismaal",
+        "nia",
+        "üliõpilased",
+        "puudulike",
+        "tavamenetluse",
+        "tavapärase",
+        "üldine",
+        "õppuri",
+        "kaardi",
+        "loa",
+        "aluseks"
+      ],
+      "sentences": [
+        {
+          "n": 1,
+          "paragraph": 1,
+          "length": 15,
+          "text": "Taiwanis pärast saabumist väljastatud elamisviisa käivitab esimese ARC taotluse 30-päevase tähtaja viisa väljastamise päeval."
+        },
+        {
+          "n": 2,
+          "paragraph": 1,
+          "length": 5,
+          "text": "Nii selgitab konsulaarasjade büroo BOCA."
+        },
+        {
+          "n": 3,
+          "paragraph": 1,
+          "length": 15,
+          "text": "Elamisviisaga juba riiki sisenenud ja elamisõiguse saanud inimese puhul on algus teine: saabumisele järgnev päev."
+        },
+        {
+          "n": 4,
+          "paragraph": 2,
+          "length": 7,
+          "text": "Välismaalase elamisloakaardi ehk ARC väljastab immigratsiooniamet NIA."
+        },
+        {
+          "n": 5,
+          "paragraph": 2,
+          "length": 16,
+          "text": "Immigratsiooniseaduse artikkel 22 nõuab selle taotlemist, kuid jätab erandi kehtivale ühenddokumendile, mis sisaldab juba ARC funktsiooni."
+        },
+        {
+          "n": 6,
+          "paragraph": 2,
+          "length": 10,
+          "text": "Näiteks Employment Gold Cardi omanik ei vaja eraldi ARC-d."
+        },
+        {
+          "n": 7,
+          "paragraph": 3,
+          "length": 11,
+          "text": "Passi sisenemiskanne ja viisa väljastamise kuupäev näitavad, kumb algus on asjakohane."
+        },
+        {
+          "n": 8,
+          "paragraph": 3,
+          "length": 10,
+          "text": "NIA üldjuhis ning BOCA erialatöötajate viisajuhis kirjeldavad neid eri teid."
+        },
+        {
+          "n": 9,
+          "paragraph": 3,
+          "length": 8,
+          "text": "Külastaja vajab enne elamisloa taotlemist seaduses lubatud alust."
+        },
+        {
+          "n": 10,
+          "paragraph": 3,
+          "length": 10,
+          "text": "Kolmekümne päeva reegel ei anna igale külastajale õigust staatust muuta."
+        },
+        {
+          "n": 11,
+          "paragraph": 4,
+          "length": 23,
+          "text": "Erialase töö loa või kohaldatava vabastusega kvalifitseeruv välisspetsialist või eripädevusega välisspetsialist võib pärast sobivat viisavaba või külastusviisaga sisenemist taotleda elamisluba otse NIA-lt."
+        },
+        {
+          "n": 12,
+          "paragraph": 4,
+          "length": 10,
+          "text": "Selle tee sätestab välisspetsialistide kaasamise ja tööleandmise seaduse artikkel 16."
+        },
+        {
+          "n": 13,
+          "paragraph": 4,
+          "length": 5,
+          "text": "Tööandja pakkumine ei asenda luba."
+        },
+        {
+          "n": 14,
+          "paragraph": 4,
+          "length": 10,
+          "text": "Töö, õpingute ja pere alusel elamise võrdlus käsitleb kvalifikatsiooni täpsemalt."
+        },
+        {
+          "n": 15,
+          "paragraph": 5,
+          "length": 25,
+          "text": "NIA dokumentide loetelu nõuab elamisviisal põhineva taotluse puhul vormi, viimase kahe aasta jooksul tehtud nõuetekohast fotot, passi ja elamisviisat, elamise põhjuse ning praeguse aadressi tõendeid."
+        },
+        {
+          "n": 16,
+          "paragraph": 5,
+          "length": 7,
+          "text": "Esitada tuleb loetelus nõutud originaalid ja koopiad."
+        },
+        {
+          "n": 17,
+          "paragraph": 5,
+          "length": 4,
+          "text": "Originaalid tagastatakse pärast kontrolli."
+        },
+        {
+          "n": 18,
+          "paragraph": 5,
+          "length": 5,
+          "text": "Aadressi võib tõendada näiteks üürilepinguga."
+        },
+        {
+          "n": 19,
+          "paragraph": 6,
+          "length": 4,
+          "text": "Tõendite sisu sõltub taotlusest:"
+        },
+        {
+          "n": 20,
+          "paragraph": 7,
+          "length": 18,
+          "text": "Abikaasa kaudu esimest ARC-d taotledes peab Taiwanis elav ja seal leibkonnaregistris (戶籍) registreeritud Taiwani abikaasa kohal olema."
+        },
+        {
+          "n": 21,
+          "paragraph": 7,
+          "length": 6,
+          "text": "Nõutakse ka abielu Taiwani registreerimise tõendit."
+        },
+        {
+          "n": 22,
+          "paragraph": 7,
+          "length": 14,
+          "text": "Selle esimese kaardi kehtivus on elamist reguleerivate eeskirjade artikli 12 järgi kuni üks aasta."
+        },
+        {
+          "n": 23,
+          "paragraph": 7,
+          "length": 8,
+          "text": "See piir puudutab kirjeldatud kodaniku abikaasa esimest taotlust."
+        },
+        {
+          "n": 24,
+          "paragraph": 7,
+          "length": 8,
+          "text": "Dokumente selgitab ka ingliskeelne abikaasa kaudu elamise juhis."
+        },
+        {
+          "n": 25,
+          "paragraph": 8,
+          "length": 11,
+          "text": "Välismaal väljastatud dokumentide kinnitamine võib võtta rohkem aega kui vormi täitmine."
+        },
+        {
+          "n": 26,
+          "paragraph": 8,
+          "length": 19,
+          "text": "NIA nõuab ettenähtud autentimist ning võib küsida hiinakeelset tõlget, mille on nõutud korras kinnitanud Taiwani välisesindus või Taiwani notar."
+        },
+        {
+          "n": 27,
+          "paragraph": 8,
+          "length": 6,
+          "text": "Sobiva esinduse leiab BOCA ametlikust loetelust."
+        },
+        {
+          "n": 28,
+          "paragraph": 8,
+          "length": 10,
+          "text": "Tervisetõendi ja karistusregistri tõendi nõuded sõltuvad viisa- või elamisloa kategooriast."
+        },
+        {
+          "n": 29,
+          "paragraph": 9,
+          "length": 15,
+          "text": "NIA elamislubade teenuste loetelus on spetsialistidele ja nende peredele, õppuritele ning teistele töötajarühmadele eraldi menetlused."
+        },
+        {
+          "n": 30,
+          "paragraph": 9,
+          "length": 8,
+          "text": "Ametikoha lubatud kategooria määrab, kas kasutada spetsialistide süsteemi."
+        },
+        {
+          "n": 31,
+          "paragraph": 9,
+          "length": 7,
+          "text": "Taiwanis töötamine üksi sellele vastust ei anna."
+        },
+        {
+          "n": 32,
+          "paragraph": 10,
+          "length": 4,
+          "text": "Üliõpilased kasutavad oma veebimenetlust."
+        },
+        {
+          "n": 33,
+          "paragraph": 10,
+          "length": 18,
+          "text": "Tavaline kohapeal esitatav taotlus läheb praeguse elukoha aadressi teenindavasse NIA keskusse; sinna suunatakse ka Taiwani abikaasa kaudu taotleja."
+        },
+        {
+          "n": 34,
+          "paragraph": 10,
+          "length": 13,
+          "text": "Taotluse number ja esitatud failide koopiad aitavad hilisema lisadokumendinõude algse toimikuga kokku viia."
+        },
+        {
+          "n": 35,
+          "paragraph": 11,
+          "length": 12,
+          "text": "Puudulike dokumentide parandamiseks annab hiinakeelne üldjuhis 0902 15 kalendripäeva teavitamisele järgnevast päevast."
+        },
+        {
+          "n": 36,
+          "paragraph": 11,
+          "length": 20,
+          "text": "Kui puuduv või nõuetele mittevastav dokument tuleb taotleda välismaalt, Mandri-Hiinast, Hongkongist või Macaust, on parandamistähtaeg samast alguspäevast kolm kuud."
+        },
+        {
+          "n": 37,
+          "paragraph": 11,
+          "length": 7,
+          "text": "See asendab 15 päeva ega lisandu sellele."
+        },
+        {
+          "n": 38,
+          "paragraph": 11,
+          "length": 19,
+          "text": "Õigel ajal parandamata või endiselt puudulik taotlus jäetakse rahuldamata; taotleja enda välismaal viibimine ei täida üksinda kolmekuulise tähtaja tingimust."
+        },
+        {
+          "n": 39,
+          "paragraph": 12,
+          "length": 6,
+          "text": "Tavamenetluse avaldatud läbivaatamisaeg on kümme tööpäeva."
+        },
+        {
+          "n": 40,
+          "paragraph": 12,
+          "length": 17,
+          "text": "Dokumentide tagastamisele, täiendamisele ja vestlusele kuluvat aega sinna ei loeta ning pärast puuduste kõrvaldamist algab arvestus uuesti."
+        },
+        {
+          "n": 41,
+          "paragraph": 12,
+          "length": 14,
+          "text": "Õppurite veebimenetluse avaldatud läbivaatamisaeg on viis tööpäeva; täiendamise järel algab ka see arvestus uuesti."
+        },
+        {
+          "n": 42,
+          "paragraph": 12,
+          "length": 4,
+          "text": "Kaardi kättesaamine järgneb eraldi."
+        },
+        {
+          "n": 43,
+          "paragraph": 13,
+          "length": 12,
+          "text": "Tavapärase ARC tasu on 1000 Taiwani uut dollarit iga heakskiidetud kehtivusaasta eest."
+        },
+        {
+          "n": 44,
+          "paragraph": 13,
+          "length": 8,
+          "text": "Alla aasta kestuse korral makstakse samuti aasta eest."
+        },
+        {
+          "n": 45,
+          "paragraph": 13,
+          "length": 17,
+          "text": "Tasumääruse artikkel 3 näeb asjaomase viisavaba või külastusviisaga sisenemise järel esitatava taotluse eest ette veel 2200 dollarit."
+        },
+        {
+          "n": 46,
+          "paragraph": 13,
+          "length": 13,
+          "text": "僑生 staatusega õppurite 50-protsendiline soodustus puudutab seda tunnustatud staatust, mitte kõiki välisüliõpilasi."
+        },
+        {
+          "n": 47,
+          "paragraph": 14,
+          "length": 6,
+          "text": "Üldine seaduslik kehtivuspiir on kolm aastat."
+        },
+        {
+          "n": 48,
+          "paragraph": 14,
+          "length": 4,
+          "text": "NIA otsustab lubatud kestuse."
+        },
+        {
+          "n": 49,
+          "paragraph": 14,
+          "length": 20,
+          "text": "Tööle võetud eripädevusega välisspetsialistile, kelle elamise NIA heaks kiidab, võimaldab välisspetsialistide seaduse artikkel 8 kuni viit aastat heakskiidule järgnevast päevast."
+        },
+        {
+          "n": 50,
+          "paragraph": 14,
+          "length": 6,
+          "text": "Hõlmatud pereliikmed vajavad samuti elamise heakskiitu."
+        },
+        {
+          "n": 51,
+          "paragraph": 14,
+          "length": 10,
+          "text": "Gold Cardi üks kuni kolm aastat tuleneb eraldi artiklist 9."
+        },
+        {
+          "n": 52,
+          "paragraph": 15,
+          "length": 11,
+          "text": "Õppuri veebitaotluse heakskiitmisel tuleb tasu maksta viie tööpäeva jooksul heakskiidu kuupäevast."
+        },
+        {
+          "n": 53,
+          "paragraph": 15,
+          "length": 13,
+          "text": "Kuni kuuekuulise kehtivusega elektrooniline ARC tuleb pärast maksmist alla laadida ja välja printida."
+        },
+        {
+          "n": 54,
+          "paragraph": 15,
+          "length": 18,
+          "text": "Kiipkaardi jaoks prinditakse veebimakse kviitung ning kaart võetakse taotluses valitud NIA keskusest välja kolme tööpäeva möödumisel makse lõpetamisest."
+        },
+        {
+          "n": 55,
+          "paragraph": 15,
+          "length": 6,
+          "text": "Need NIA väljastamisjuhised kuuluvad õppurite menetlusse."
+        },
+        {
+          "n": 56,
+          "paragraph": 15,
+          "length": 12,
+          "text": "Teised taotlejad järgivad enda teates märgitud kättesaamise viisi ja isikut tõendamise nõudeid."
+        },
+        {
+          "n": 57,
+          "paragraph": 16,
+          "length": 11,
+          "text": "Kaardi kättesaamisel tasub võrrelda nime, passiandmeid, aadressi ja lõppkuupäeva heakskiidetud taotlusega."
+        },
+        {
+          "n": 58,
+          "paragraph": 16,
+          "length": 6,
+          "text": "Hoidke alles ka otsus ja kviitung."
+        },
+        {
+          "n": 59,
+          "paragraph": 16,
+          "length": 20,
+          "text": "Enne töö alustamist peab tegelik ametikoht ning tööandja olema hõlmatud tööhõiveteenuste seaduse artiklite 43 ja 48 kohase loa või vabastusega."
+        },
+        {
+          "n": 60,
+          "paragraph": 17,
+          "length": 10,
+          "text": "Loa järgmine muudatus võib olla vajalik juba enne kaardi lõppkuupäeva."
+        },
+        {
+          "n": 61,
+          "paragraph": 17,
+          "length": 18,
+          "text": "Uus kodu, töökoht või reis toob kaasa teistsugused dokumendid ja tähtajad; neid käsitleb ARC pikendamise ning muutmise juhis."
+        },
+        {
+          "n": 62,
+          "paragraph": 18,
+          "length": 8,
+          "text": "Aluseks on 24.–25. oktoobril 2026 kontrollitud allikad."
+        },
+        {
+          "n": 63,
+          "paragraph": 18,
+          "length": 21,
+          "text": "Juhis käsitleb välisriikide kodanike üldist korda; Mandri-Hiina, Hongkongi ja Macau elanikele ning Taiwani leibkonnaregistreeringuta Hiina Vabariigi kodanikele kehtivad eraldi süsteemid."
+        },
+        {
+          "n": 64,
+          "paragraph": 18,
+          "length": 7,
+          "text": "Isikliku taotluse sobivust hinnatakse selle asjaolude järgi."
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "6bf9a4fca0d1b90d3bf0e4f46e4c87ba43cb5c4b32989ab3e98eaed52955acc8",
+      "metrics": {
+        "lang": "et",
+        "sentences": 74,
+        "paras": 22,
+        "heads": 5,
+        "list_items": 2,
+        "mean_len": 11.2,
+        "len_cv": 0.522,
+        "short_share": 0.392,
+        "long_share": 0.027,
+        "para_cv": 0.292,
+        "even_run3": 0.028,
+        "top_end": "juhis",
+        "top_end_share": 0.041,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "kas",
+        "top_opener_n": 2,
+        "opener_rep": 0.045,
+        "consec_same_start": 0,
+        "cite_para_share": 0.5,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 3.15,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Kas pärast viisavaba saabumist saab Taiwanis õpinguteks elamisluba taotleda?",
+        "last": "Juhis tugineb 24.–25. oktoobril 2026 kontrollitud allikatele ja käsitleb välisriikide kodanikke. Mandri-Hiina, Hongkongi",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "headings": [
+        "Külastusest elamiseni",
+        "Tööandja taotlus ja spetsialisti elamisluba",
+        "Kõrgkooliõpe ja keelekursus",
+        "Abikaasa või vanema juurde elama asumine",
+        "Gold Card, ettevõtlus ja pikem külastus"
+      ],
+      "listItems": [
+        "- välisspetsialist, kes teeb Taiwanis erialast tööd;",
+        "- eripädevusega välisspetsialist."
+      ],
+      "paragraphOpeners": [
+        "kas",
+        "kasutatav",
+        "lühiajalise",
+        "osa",
+        "tavapärase",
+        "välisspetsialist",
+        "kõik",
+        "hooldustöö",
+        "täiskoormusega",
+        "vastuvõtukirjale",
+        "mandariini",
+        "kohalolekut",
+        "kas",
+        "perepõhise",
+        "välisspetsialisti",
+        "mõlemas",
+        "vanemad",
+        "abikaasa",
+        "employment",
+        "working",
+        "kui",
+        "juhis"
+      ],
+      "sentences": [
+        {
+          "n": 1,
+          "paragraph": 1,
+          "length": 9,
+          "text": "Kas pärast viisavaba saabumist saab Taiwanis õpinguteks elamisluba taotleda?"
+        },
+        {
+          "n": 2,
+          "paragraph": 1,
+          "length": 12,
+          "text": "BOCA tavapärane välisüliõpilaste juhis seda sisenemisviisi riigisisese õppepõhise taotluse jaoks ei aktsepteeri."
+        },
+        {
+          "n": 3,
+          "paragraph": 1,
+          "length": 14,
+          "text": "Kvalifitseeruvale spetsialistile näeb välisspetsialistide seaduse artikkel 16 seevastu ette otse NIA-lt taotlemise tee."
+        },
+        {
+          "n": 4,
+          "paragraph": 1,
+          "length": 7,
+          "text": "Vastuvõtukiri ja tööpakkumine ei tekita ühesuguseid võimalusi."
+        },
+        {
+          "n": 5,
+          "paragraph": 2,
+          "length": 15,
+          "text": "Kasutatav pass ja kodakondsus määravad, milline viisa või viisavaba sisenemise võimalus üldse kõne alla tuleb."
+        },
+        {
+          "n": 6,
+          "paragraph": 2,
+          "length": 10,
+          "text": "Asjaomane Taiwani välisesindus selgitab selle passi ning taotluse dokumentide tingimusi."
+        },
+        {
+          "n": 7,
+          "paragraph": 2,
+          "length": 8,
+          "text": "Samal reisil osalevatel pereliikmetel võivad olla erinevad sisenemisalused."
+        },
+        {
+          "n": 8,
+          "paragraph": 3,
+          "length": 8,
+          "text": "Lühiajalise külastuse lubatud tegevused ja kestus sõltuvad sisenemiskorrast."
+        },
+        {
+          "n": 9,
+          "paragraph": 3,
+          "length": 11,
+          "text": "Taiwanis tööks, õpinguteks või perega ühinemiseks elamine vajab sobivat õiguslikku alust."
+        },
+        {
+          "n": 10,
+          "paragraph": 3,
+          "length": 14,
+          "text": "BOCA elamisviisade juhis kirjeldab neid eesmärke; elamisloa taotlust menetleb ja ARC väljastab immigratsiooniamet NIA."
+        },
+        {
+          "n": 11,
+          "paragraph": 4,
+          "length": 7,
+          "text": "Osa külastajaid võib pöörduda otse NIA poole."
+        },
+        {
+          "n": 12,
+          "paragraph": 4,
+          "length": 7,
+          "text": "Teised peavad hankima sobiva viisa enne saabumist."
+        },
+        {
+          "n": 13,
+          "paragraph": 4,
+          "length": 12,
+          "text": "Lubatud külastusaeg ei anna üldist õigust muuta iga külastus elamisloa alusel viibimiseks."
+        },
+        {
+          "n": 14,
+          "paragraph": 5,
+          "length": 5,
+          "text": "Tavapärase välisspetsialisti tööloa taotleb tööandja."
+        },
+        {
+          "n": 15,
+          "paragraph": 5,
+          "length": 6,
+          "text": "Erandid ning pädev asutus sõltuvad tööst."
+        },
+        {
+          "n": 16,
+          "paragraph": 5,
+          "length": 15,
+          "text": "Välisspetsialistide kaasamise ja tööleandmise seaduse artiklid 4 ja 5 määratlevad erialase töö ja loa raamistiku."
+        },
+        {
+          "n": 17,
+          "paragraph": 5,
+          "length": 5,
+          "text": "Allkirjastatud tööpakkumine ei ole tööluba."
+        },
+        {
+          "n": 18,
+          "paragraph": 6,
+          "length": 27,
+          "text": "Välisspetsialist või eripädevusega välisspetsialist, kelle erialaseks tööks on luba või kohaldatav seaduslik vabastus, võib artikli 16 tingimustel pärast viisavaba või külastusviisaga sisenemist taotleda elamisluba otse NIA-lt."
+        },
+        {
+          "n": 19,
+          "paragraph": 6,
+          "length": 7,
+          "text": "Kaardi saamiseks peab NIA taotluse heaks kiitma."
+        },
+        {
+          "n": 20,
+          "paragraph": 6,
+          "length": 14,
+          "text": "Selle artikli praegune kord jõustus 1. jaanuaril 2026; kuupäeva näitab seaduse muutmis- ja jõustumisajalugu."
+        },
+        {
+          "n": 21,
+          "paragraph": 7,
+          "length": 8,
+          "text": "Kõik viisavabaks nimetatud sisenemiskorrad sellesse teesse ei sobi."
+        },
+        {
+          "n": 22,
+          "paragraph": 7,
+          "length": 25,
+          "text": "NIA juhise 0915 märkus 7(1) nimetab välistuste hulgas katseprogrammi viisavabastused, saabumisviisa, teatavate Kagu-Aasia riikide veebipõhise reisiloa, APEC-i ärireisikaardi ja working holiday korra."
+        },
+        {
+          "n": 23,
+          "paragraph": 7,
+          "length": 6,
+          "text": "Arvestada tuleb ka viisa piiravate märgetega."
+        },
+        {
+          "n": 24,
+          "paragraph": 7,
+          "length": 6,
+          "text": "Erand võib tuleneda muust kohaldatavast normist."
+        },
+        {
+          "n": 25,
+          "paragraph": 8,
+          "length": 14,
+          "text": "Hooldustöö, kalanduse ja teiste tööhõiveteenuste seaduse artikli 46 töötajakategooriate puhul kasutatakse nendele mõeldud korda."
+        },
+        {
+          "n": 26,
+          "paragraph": 8,
+          "length": 7,
+          "text": "NIA-l on eraldi võõrtöötajate elamisloa juhis."
+        },
+        {
+          "n": 27,
+          "paragraph": 8,
+          "length": 8,
+          "text": "Töö heakskiidus nimetatud kategooria aitab taotluskanali paika panna."
+        },
+        {
+          "n": 28,
+          "paragraph": 9,
+          "length": 10,
+          "text": "Täiskoormusega kõrgkooliõppesse suunduv välisüliõpilane saab välismaalt taotleda elamisviisat Taiwani esinduses."
+        },
+        {
+          "n": 29,
+          "paragraph": 9,
+          "length": 15,
+          "text": "Spetsiaalselt välisüliõpilasena õppimiseks antud külastusviisaga sisenejal võib olla võimalus pöörduda elamisloa saamiseks otse NIA poole."
+        },
+        {
+          "n": 30,
+          "paragraph": 9,
+          "length": 15,
+          "text": "BOCA üliõpilaste juhise tavapärane riigisisene tee ei hõlma viisavaba, saabumisviisaga ega muul eesmärgil külastusviisaga sisenemist."
+        },
+        {
+          "n": 31,
+          "paragraph": 10,
+          "length": 10,
+          "text": "Vastuvõtukirjale võivad lisanduda varasema hariduse, rahaliste vahendite ja tervise tõendid."
+        },
+        {
+          "n": 32,
+          "paragraph": 10,
+          "length": 4,
+          "text": "Täpne nimekiri sõltub taotlusest."
+        },
+        {
+          "n": 33,
+          "paragraph": 10,
+          "length": 12,
+          "text": "Välismaal koostatud dokumendi autentimisvajadus tuleb samuti sellest nimekirjast, mitte üksnes ülikooli nõusolekust."
+        },
+        {
+          "n": 34,
+          "paragraph": 11,
+          "length": 10,
+          "text": "Mandariini keele õppimiseks võetakse tavaliselt enne reisi selle eesmärgiga külastusviisa."
+        },
+        {
+          "n": 35,
+          "paragraph": 11,
+          "length": 16,
+          "text": "Elamisloa tee eeldab nelja lõpetatud õppekuud kvalifitseeruvas kõrgkooliga seotud keelekeskuses ning registreerimist veel vähemalt kolmeks kuuks."
+        },
+        {
+          "n": 36,
+          "paragraph": 11,
+          "length": 10,
+          "text": "BOCA elamisjuhis keeleõppuritele nõuab vähemalt 15 tundi nädalas esmaspäevast reedeni."
+        },
+        {
+          "n": 37,
+          "paragraph": 11,
+          "length": 10,
+          "text": "Puudumised, sealhulgas lubatud eemalolek, ei tohi ületada veerandit tundide koguarvust."
+        },
+        {
+          "n": 38,
+          "paragraph": 12,
+          "length": 3,
+          "text": "Kohalolekut tuleb tõendada."
+        },
+        {
+          "n": 39,
+          "paragraph": 12,
+          "length": 6,
+          "text": "Õppemaksu kviitung ei näita tundides osalemist."
+        },
+        {
+          "n": 40,
+          "paragraph": 12,
+          "length": 9,
+          "text": "Registreerimise, õppeaja ja kohaloleku dokumendid peavad toetama sama õppeperioodi."
+        },
+        {
+          "n": 41,
+          "paragraph": 13,
+          "length": 5,
+          "text": "Kas õppimise kõrvalt saab töötada?"
+        },
+        {
+          "n": 42,
+          "paragraph": 13,
+          "length": 13,
+          "text": "Tööhõiveteenuste seaduse artiklid 43 ja 50 reguleerivad tööloa nõuet ning asjaomaste õppurite tööaega."
+        },
+        {
+          "n": 43,
+          "paragraph": 13,
+          "length": 12,
+          "text": "Tavapiir on 20 tundi nädalas; sellest ajapiirist on erand suve- ja talvevaheajal."
+        },
+        {
+          "n": 44,
+          "paragraph": 13,
+          "length": 5,
+          "text": "Muud tööloa tingimused jäävad kehtima."
+        },
+        {
+          "n": 45,
+          "paragraph": 13,
+          "length": 9,
+          "text": "Vastuvõtukiri ega üliõpilase ARC ei asenda vajalikku töötamise alust."
+        },
+        {
+          "n": 46,
+          "paragraph": 14,
+          "length": 9,
+          "text": "Perepõhise taotluse puhul on oluline, millise pereliikme staatusele tuginetakse."
+        },
+        {
+          "n": 47,
+          "paragraph": 14,
+          "length": 34,
+          "text": "Taiwanis elava ja seal leibkonnaregistris registreeritud Taiwani kodaniku abikaasa jaoks nõuab üks immigratsiooniseaduse artikli 23 kohane riigisisene tee kehtivat viisat, mis lubab viibida vähemalt 60 päeva ning millel puudub pikendamiskeeld või muu ettenähtud piirang."
+        },
+        {
+          "n": 48,
+          "paragraph": 14,
+          "length": 5,
+          "text": "Kuuskümmend päeva tähendab lubatud viibimisaega."
+        },
+        {
+          "n": 49,
+          "paragraph": 14,
+          "length": 8,
+          "text": "Perekonnadokumente käsitleb ingliskeelne Taiwani kodaniku abikaasa elamise juhis."
+        },
+        {
+          "n": 50,
+          "paragraph": 15,
+          "length": 14,
+          "text": "Välisspetsialisti pere otsetee alusisik võib artikli 16 lõike 2 järgi kuuluda ühte kahest rühmast:"
+        },
+        {
+          "n": 51,
+          "paragraph": 16,
+          "length": 12,
+          "text": "Mõlemas rühmas peab NIA olema spetsialistile juba lubanud elamise või alalise elamise."
+        },
+        {
+          "n": 52,
+          "paragraph": 16,
+          "length": 32,
+          "text": "Siis võivad tema abikaasa, alaealised lapsed ning täisealised lapsed, kes füüsilise või vaimse puude tõttu ei suuda ise enda eest hoolitseda, pärast sobivat viisavaba või külastusviisaga sisenemist taotleda elamisluba otse NIA-lt."
+        },
+        {
+          "n": 53,
+          "paragraph": 16,
+          "length": 5,
+          "text": "Pere taotlus vajab samuti heakskiitu."
+        },
+        {
+          "n": 54,
+          "paragraph": 17,
+          "length": 10,
+          "text": "Vanemad ja muud täisealised lapsed ei kuulu selle sätte loetellu."
+        },
+        {
+          "n": 55,
+          "paragraph": 17,
+          "length": 11,
+          "text": "Üldise artikli 23 tee puhul on teatavate võõrtöötajate kategooriate abikaasad välistatud."
+        },
+        {
+          "n": 56,
+          "paragraph": 17,
+          "length": 15,
+          "text": "Ühe ARC olemasolu ei tõenda seega iga pereliikme taotlusõigust; ka taotleja enda sisenemisviis peab sobima."
+        },
+        {
+          "n": 57,
+          "paragraph": 18,
+          "length": 6,
+          "text": "Abikaasa töötamise õigus sõltub tema kategooriast."
+        },
+        {
+          "n": 58,
+          "paragraph": 18,
+          "length": 17,
+          "text": "Taiwani leibkonnaregistreeringuga kodanikuga abielus ja elamisloa saanud välismaalane on tööhõiveteenuste seaduse artikli 48 tingimustel tööloa nõudest vabastatud."
+        },
+        {
+          "n": 59,
+          "paragraph": 18,
+          "length": 7,
+          "text": "Välisspetsialisti abikaasa ei saa seda erandit eeldada."
+        },
+        {
+          "n": 60,
+          "paragraph": 18,
+          "length": 21,
+          "text": "Eripädevusega või kõrgetasemelise välisspetsialisti abikaasa, kellele NIA on lubanud pereliikmena elamise, võib välisspetsialistide seaduse artikli 15 järgi taotleda tööluba otse tööministeeriumilt."
+        },
+        {
+          "n": 61,
+          "paragraph": 18,
+          "length": 8,
+          "text": "Loa kestus ei tohi ületada perepõhise elamisloa kestust."
+        },
+        {
+          "n": 62,
+          "paragraph": 19,
+          "length": 11,
+          "text": "Employment Gold Card ühendab tööloa, elamisviisa, ARC ja korduva sisenemise loa."
+        },
+        {
+          "n": 63,
+          "paragraph": 19,
+          "length": 17,
+          "text": "Eripädevusega taotleja peab vastama programmi tingimustele; seaduse artikli 9 kohane algne kestus on üks kuni kolm aastat."
+        },
+        {
+          "n": 64,
+          "paragraph": 19,
+          "length": 7,
+          "text": "Seda taotlust kirjeldab ingliskeelne Gold Cardi juhis."
+        },
+        {
+          "n": 65,
+          "paragraph": 19,
+          "length": 8,
+          "text": "Ettevõtte rajajale on BOCA avaldanud eraldi ettevõtlusviisa nõuded."
+        },
+        {
+          "n": 66,
+          "paragraph": 20,
+          "length": 7,
+          "text": "Working holiday võimalus sõltub kodakondsusele kohaldatavast programmist."
+        },
+        {
+          "n": 67,
+          "paragraph": 20,
+          "length": 14,
+          "text": "Diginomaadi külastusviisal on oma kodakondsus- ja kvalifikatsioonitingimused ning see ei muutu automaatselt ARC-ks."
+        },
+        {
+          "n": 68,
+          "paragraph": 20,
+          "length": 16,
+          "text": "Artikli 14 kaugtöötee peab vastama selle sätte nõuetele ega hõlma teenuste osutamist Taiwani ettevõtetele või tööandjatele."
+        },
+        {
+          "n": 69,
+          "paragraph": 21,
+          "length": 11,
+          "text": "Kui sobiv alus on selge, saab kokku panna esimese ARC dokumendid."
+        },
+        {
+          "n": 70,
+          "paragraph": 21,
+          "length": 16,
+          "text": "Juba Taiwanis elav inimene vajab töö, õpingute või peresuhte muutumisel ka pikendamise ja staatuse muutmise tähtaegu."
+        },
+        {
+          "n": 71,
+          "paragraph": 21,
+          "length": 9,
+          "text": "Tegeliku tegevuse algus tuleb siduda selleks antud loa kehtivusega."
+        },
+        {
+          "n": 72,
+          "paragraph": 22,
+          "length": 12,
+          "text": "Juhis tugineb 24.–25. oktoobril 2026 kontrollitud allikatele ja käsitleb välisriikide kodanikke."
+        },
+        {
+          "n": 73,
+          "paragraph": 22,
+          "length": 15,
+          "text": "Mandri-Hiina, Hongkongi ja Macau elanikele ning Taiwani leibkonnaregistreeringuta Hiina Vabariigi kodanikele kehtivad eraldi süsteemid."
+        },
+        {
+          "n": 74,
+          "paragraph": 22,
+          "length": 8,
+          "text": "Konkreetse taotluse tulemus sõltub isiku staatusest ja tõenditest."
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "dce0dce717cd732bce40b187f43ef31cbcf0758d71256c129263c23fc7da856a",
+      "metrics": {
+        "lang": "et",
+        "sentences": 90,
+        "paras": 26,
+        "heads": 6,
+        "list_items": 0,
+        "mean_len": 11.8,
+        "len_cv": 0.459,
+        "short_share": 0.367,
+        "long_share": 0.0,
+        "para_cv": 0.208,
+        "even_run3": 0.034,
+        "top_end": "lõppu",
+        "top_end_share": 0.044,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "elamise",
+        "top_opener_n": 2,
+        "opener_rep": 0.038,
+        "consec_same_start": 0,
+        "cite_para_share": 0.462,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.36,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Kolimise järel tuleb taotleda aadressimuudatuse registreerimist NIA-s ka siis, kui senine ",
+        "last": "Aluseks on 24.–25. oktoobril 2026 kontrollitud allikad. See on välisriikide kodanike üldise korra selgitus; Mandri-Hiina",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "headings": [
+        "Neli eri tähtaega",
+        "Töö, õpingud või perealus jätkub",
+        "Uus tööandja või teine töökoht",
+        "Kui senine elamise alus lõpeb",
+        "Lõppenud kehtivus, uus pass või kaotatud kaart",
+        "Reis menetluse kestel"
+      ],
+      "listItems": [],
+      "paragraphOpeners": [
+        "kolimise",
+        "elamise",
+        "elamise",
+        "ettevõtja",
+        "tavalise",
+        "tööloa",
+        "mandariini",
+        "tavatasu",
+        "millal",
+        "nia",
+        "aluse",
+        "perevägivallast",
+        "töövaidluse",
+        "kvalifitseeruv",
+        "kvalifitseeruval",
+        "pikem",
+        "elamisstaatust",
+        "kas",
+        "passi",
+        "kaotatud",
+        "välismaal",
+        "immigratsiooniseaduse",
+        "spetsialistide",
+        "taotluse",
+        "esimese",
+        "aluseks"
+      ],
+      "sentences": [
+        {
+          "n": 1,
+          "paragraph": 1,
+          "length": 16,
+          "text": "Kolimise järel tuleb taotleda aadressimuudatuse registreerimist NIA-s ka siis, kui senine ARC kehtib veel kaua."
+        },
+        {
+          "n": 2,
+          "paragraph": 1,
+          "length": 10,
+          "text": "Immigratsiooniseaduse artikkel 31 annab selleks 30 päeva muudatusele järgnevast päevast."
+        },
+        {
+          "n": 3,
+          "paragraph": 1,
+          "length": 7,
+          "text": "Sama registreerimistähtaeg puudutab töö tegemise koha muutust."
+        },
+        {
+          "n": 4,
+          "paragraph": 1,
+          "length": 9,
+          "text": "Panga või ülikooli aadressikirje muutmine seda taotlust ei asenda."
+        },
+        {
+          "n": 5,
+          "paragraph": 2,
+          "length": 8,
+          "text": "Elamise põhjus võib lõppeda enne kaardile trükitud kuupäeva."
+        },
+        {
+          "n": 6,
+          "paragraph": 2,
+          "length": 11,
+          "text": "Töölepingu lõpp, lõpetatud õppekava või muutunud peresuhe vajab seetõttu eraldi hindamist."
+        },
+        {
+          "n": 7,
+          "paragraph": 2,
+          "length": 8,
+          "text": "NIA taotlusjuhis seob pikendamise ja muudatused asjakohaste tõenditega."
+        },
+        {
+          "n": 8,
+          "paragraph": 2,
+          "length": 5,
+          "text": "Sündmuse kuupäeva näitab selle dokument."
+        },
+        {
+          "n": 9,
+          "paragraph": 3,
+          "length": 14,
+          "text": "Elamise aluse muutmise ja pikendamise tähtajad tulenevad elamist reguleerivate eeskirjade artiklitest 7 ja 9."
+        },
+        {
+          "n": 10,
+          "paragraph": 3,
+          "length": 11,
+          "text": "Aadressi puhul algab arvestus järgmisel päeval, aluse muutuse puhul sündmuse päeval."
+        },
+        {
+          "n": 11,
+          "paragraph": 3,
+          "length": 6,
+          "text": "Viieteistkümne päeva jooksul tuleb viisat taotleda."
+        },
+        {
+          "n": 12,
+          "paragraph": 3,
+          "length": 8,
+          "text": "Selleks päevaks ei pea viisa juba väljastatud olema."
+        },
+        {
+          "n": 13,
+          "paragraph": 4,
+          "length": 5,
+          "text": "Ettevõtja taotlusaken sõltub ettevõtluse jätkumisest."
+        },
+        {
+          "n": 14,
+          "paragraph": 4,
+          "length": 15,
+          "text": "Nõuetele vastava Taiwani ettevõtluse jätkumisel saab pikendamist taotleda nelja kuu jooksul enne ARC kehtivuse lõppu."
+        },
+        {
+          "n": 15,
+          "paragraph": 4,
+          "length": 28,
+          "text": "Kui ettevõtlus on lõppenud, kuid ettevõtja ARC omanikul on jätkuvalt vaja Taiwanis elada, võib ta kasutada eraldi teed ja esitada taotluse praeguse elamisloa lõppemisele eelneva kolme kuu jooksul."
+        },
+        {
+          "n": 16,
+          "paragraph": 4,
+          "length": 12,
+          "text": "Gold Cardi enda uuendamise aken avaneb samuti neli kuud enne kehtivuse lõppu."
+        },
+        {
+          "n": 17,
+          "paragraph": 5,
+          "length": 14,
+          "text": "Tavalise pikendamise juurde kuuluvad vorm, pass, kehtiv kaart, foto ja ajakohane elamise aluse tõend."
+        },
+        {
+          "n": 18,
+          "paragraph": 5,
+          "length": 16,
+          "text": "NIA loetelu täpsustab töö, õpingute ja pere dokumente; kolimise järel on vaja ka uue aadressi tõendit."
+        },
+        {
+          "n": 19,
+          "paragraph": 5,
+          "length": 5,
+          "text": "Dokumendid peavad katma taotletavat perioodi."
+        },
+        {
+          "n": 20,
+          "paragraph": 6,
+          "length": 8,
+          "text": "Tööloa järelejäänud kehtivus on tööpõhise taotluse jaoks oluline."
+        },
+        {
+          "n": 21,
+          "paragraph": 6,
+          "length": 6,
+          "text": "Üliõpilasel tõendab õppeaega vastava perioodi registreerimine."
+        },
+        {
+          "n": 22,
+          "paragraph": 6,
+          "length": 16,
+          "text": "Kui need andmed on olemas juba taotlusakna avanedes, jääb aega aeguvat tööluba või puuduvat registreerimist selgitada."
+        },
+        {
+          "n": 23,
+          "paragraph": 7,
+          "length": 10,
+          "text": "Mandariini keele õppimise pikendust seob NIA õppurite juhis tõendatud õppeperioodiga."
+        },
+        {
+          "n": 24,
+          "paragraph": 7,
+          "length": 6,
+          "text": "Üks pikendus on kuni kuus kuud."
+        },
+        {
+          "n": 25,
+          "paragraph": 7,
+          "length": 22,
+          "text": "Külastusena viibimise ja elamisloa alusel elamise kogukestus Taiwanis on sellel alusel üldjuhul kuni kaks aastat; seda piiri ei saa laiendada igale kõrgkooliõppele."
+        },
+        {
+          "n": 26,
+          "paragraph": 8,
+          "length": 10,
+          "text": "Tavatasu on 1000 Taiwani uut dollarit iga heakskiidetud kehtivusaasta eest."
+        },
+        {
+          "n": 27,
+          "paragraph": 8,
+          "length": 11,
+          "text": "Alla aasta kestuse korral nõuab tasumääruse artikkel 3 samuti täisaasta tasu."
+        },
+        {
+          "n": 28,
+          "paragraph": 8,
+          "length": 8,
+          "text": "Lubatav periood sõltub elamisloa kategooriast ja NIA otsusest."
+        },
+        {
+          "n": 29,
+          "paragraph": 8,
+          "length": 7,
+          "text": "Suurem makse ei anna õigust pikemale loale."
+        },
+        {
+          "n": 30,
+          "paragraph": 9,
+          "length": 5,
+          "text": "Millal võib uut tööd alustada?"
+        },
+        {
+          "n": 31,
+          "paragraph": 9,
+          "length": 12,
+          "text": "Tegelik töö peab enne selle alustamist olema kaetud sobiva loa või vabastusega."
+        },
+        {
+          "n": 32,
+          "paragraph": 9,
+          "length": 13,
+          "text": "Tööhõiveteenuste seaduse artikkel 53 eristab tööandja vahetuse ja lisatöö nõudeid töötajate kategooriate järgi."
+        },
+        {
+          "n": 33,
+          "paragraph": 9,
+          "length": 15,
+          "text": "Asjaomase tööandjavahetuse puhul nõutavat eelmise töösuhte lõppemise tõendit ei tohi pidada iga lisatöö üldiseks nõudeks."
+        },
+        {
+          "n": 34,
+          "paragraph": 10,
+          "length": 7,
+          "text": "NIA töökoha kanne ei ole ise tööluba."
+        },
+        {
+          "n": 35,
+          "paragraph": 10,
+          "length": 13,
+          "text": "Senise lepingu lõpp, uue tööloa algus ja aadressi muutus võivad langeda eri päevadele."
+        },
+        {
+          "n": 36,
+          "paragraph": 10,
+          "length": 14,
+          "text": "Iga kuupäeva kõrvale saab lisada just seda sündmust tõendava dokumendi ning esitatud taotluse kviitungi."
+        },
+        {
+          "n": 37,
+          "paragraph": 11,
+          "length": 13,
+          "text": "Aluse äralangemisel peab NIA artikli 31 järgi elamisloa tühistama ja kaardi kehtetuks tunnistama."
+        },
+        {
+          "n": 38,
+          "paragraph": 11,
+          "length": 8,
+          "text": "Sama säte sisaldab kindlate tingimustega jätkuva elamise erandeid."
+        },
+        {
+          "n": 39,
+          "paragraph": 11,
+          "length": 18,
+          "text": "Töö, õpingute või perestaatuse muutuse järel saab uut alust taotleda artikli 23-1 korras üksnes seal loetletud juhtudel."
+        },
+        {
+          "n": 40,
+          "paragraph": 11,
+          "length": 8,
+          "text": "Kaardil hilisemaks märgitud kuupäev ei otsusta seda küsimust."
+        },
+        {
+          "n": 41,
+          "paragraph": 12,
+          "length": 17,
+          "text": "Perevägivallast tingitud lahutuse erandis peab välismaalasest taotleja olema lahutatud selle vägivalla tõttu ega tohi olla uuesti abiellunud."
+        },
+        {
+          "n": 42,
+          "paragraph": 12,
+          "length": 12,
+          "text": "Taiwani kodanikust endise abikaasa Taiwanis elamine ja sealne leibkonnaregistreering on eraldi tingimused."
+        },
+        {
+          "n": 43,
+          "paragraph": 12,
+          "length": 26,
+          "text": "Artikkel 31 näeb ette ka muid pereolukordi, sealhulgas aluseks olnud pereliikme surma ja Taiwani leibkonnaregistreeringuga alaealise lapsega seotud juhte; igaüks neist peab vastama oma sätte tingimustele."
+        },
+        {
+          "n": 44,
+          "paragraph": 13,
+          "length": 7,
+          "text": "Töövaidluse erandis peab kohtumenetlus Taiwani tööandjaga jätkuma."
+        },
+        {
+          "n": 45,
+          "paragraph": 13,
+          "length": 8,
+          "text": "Tööga seotud kahjustuse puhul peab ravi olema pooleli."
+        },
+        {
+          "n": 46,
+          "paragraph": 13,
+          "length": 14,
+          "text": "Need on võimaliku jätkuva elamise alused, mitte iga lahutuse või töövaidlusega automaatselt kaasnev õigus."
+        },
+        {
+          "n": 47,
+          "paragraph": 14,
+          "length": 22,
+          "text": "Kvalifitseeruv spetsialist ja seaduses nimetatud, juba elamisloa saanud pereliikmed võivad välisspetsialistide seaduse artikli 17 alusel taotleda jätkuvat elamist enne kehtiva loa lõppu."
+        },
+        {
+          "n": 48,
+          "paragraph": 14,
+          "length": 12,
+          "text": "Heakskiitmisel algab kuuekuuline periood senise ARC või Gold Cardi lõppemisele järgnevast päevast."
+        },
+        {
+          "n": 49,
+          "paragraph": 14,
+          "length": 15,
+          "text": "Vajaduse püsimisel saab enne selle pikenduse lõppu taotleda veel ühe pikenduse, kokku kuni üheks aastaks."
+        },
+        {
+          "n": 50,
+          "paragraph": 15,
+          "length": 10,
+          "text": "Kvalifitseeruval Taiwani õppeasutuse lõpetajal on eraldi eeskirjade artikli 11 tee."
+        },
+        {
+          "n": 51,
+          "paragraph": 15,
+          "length": 7,
+          "text": "Taotlus tuleb esitada enne senise elamisloa lõppu."
+        },
+        {
+          "n": 52,
+          "paragraph": 15,
+          "length": 23,
+          "text": "Heakskiitmisel kestab pikendus ühe aasta, senise perioodi lõppemisele järgnevast päevast; vajaduse korral saab enne pikenduse lõppu taotleda veel ühe, kokku kuni kaheks aastaks."
+        },
+        {
+          "n": 53,
+          "paragraph": 15,
+          "length": 7,
+          "text": "Ainult keelekursuse lõpetamine sellele alusele ei vasta."
+        },
+        {
+          "n": 54,
+          "paragraph": 16,
+          "length": 7,
+          "text": "Pikem elamisluba ei pikenda iseenesest vana tööluba."
+        },
+        {
+          "n": 55,
+          "paragraph": 16,
+          "length": 28,
+          "text": "Välisspetsialistide seaduse artikkel 12 annab siiski tööloa vabastuse värskele lõpetajale, kes on Taiwanis omandanud associate degree taseme või kõrgema kraadi ning saanud NIA-lt vastava lõpetamisjärgse elamise pikenduse."
+        },
+        {
+          "n": 56,
+          "paragraph": 16,
+          "length": 5,
+          "text": "Vabastus kehtib selle loa ajal."
+        },
+        {
+          "n": 57,
+          "paragraph": 16,
+          "length": 12,
+          "text": "Üksnes kraad või mis tahes tööotsija ARC ei täida kõiki neid tingimusi."
+        },
+        {
+          "n": 58,
+          "paragraph": 17,
+          "length": 18,
+          "text": "Elamisstaatust mõjutava töö- või peretüli esmaseks kirjeldamiseks võib kirjutada wei@hoveringlaw.com.tw aadressile sündmuse ja selle kuupäevad."
+        },
+        {
+          "n": 59,
+          "paragraph": 17,
+          "length": 10,
+          "text": "Esimesse kirja pole vaja passiandmeid ega isikut tõendavate dokumentide originaale."
+        },
+        {
+          "n": 60,
+          "paragraph": 17,
+          "length": 13,
+          "text": "Nõustamine toimub inglise, hiina, jaapani või korea keeles ja suhtluskorraldus lepitakse enne kokku."
+        },
+        {
+          "n": 61,
+          "paragraph": 18,
+          "length": 6,
+          "text": "Kas elamisloa tähtaeg on juba möödunud?"
+        },
+        {
+          "n": 62,
+          "paragraph": 18,
+          "length": 4,
+          "text": "Pöörduge kohe NIA poole."
+        },
+        {
+          "n": 63,
+          "paragraph": 18,
+          "length": 21,
+          "text": "Kui lubatud elamise ületus on alla 30 päeva ja esialgne elamise põhjus jätkub, võimaldab artikkel 31 pärast karistuse kohaldamist uuesti taotleda."
+        },
+        {
+          "n": 64,
+          "paragraph": 18,
+          "length": 8,
+          "text": "See ei ole automaatne pikendus ega tagajärgedeta lisaaeg."
+        },
+        {
+          "n": 65,
+          "paragraph": 18,
+          "length": 12,
+          "text": "Sama norm näeb alalise elamise jaoks arvestatavast perioodist ette ühe aasta mahaarvamise."
+        },
+        {
+          "n": 66,
+          "paragraph": 19,
+          "length": 16,
+          "text": "Passi uuendamise järel on vaja uuendada ka NIA elamisandmeid, nagu selgitab ameti passi- ja kaardiküsimuste juhis."
+        },
+        {
+          "n": 67,
+          "paragraph": 19,
+          "length": 10,
+          "text": "Muudatuse jaoks nõutakse vormi, fotot, passi ja muudatust tõendavaid dokumente."
+        },
+        {
+          "n": 68,
+          "paragraph": 19,
+          "length": 10,
+          "text": "Vana pass või selle koopia seob varasema ja praeguse kirje."
+        },
+        {
+          "n": 69,
+          "paragraph": 19,
+          "length": 10,
+          "text": "Aadressi 30-päevast tähtaega ei tohi automaatselt kanda igale passimuudatusele."
+        },
+        {
+          "n": 70,
+          "paragraph": 20,
+          "length": 18,
+          "text": "Kaotatud või kahjustatud ARC asendamisel sõltuvad tõendid asjaoludest: vana kahjustatud kaart, kaotuse avaldus, politseidokument või muu sobiv tõend."
+        },
+        {
+          "n": 71,
+          "paragraph": 20,
+          "length": 11,
+          "text": "Tavaline asendustasu on tasumääruse artikli 7 järgi 500 Taiwani uut dollarit."
+        },
+        {
+          "n": 72,
+          "paragraph": 20,
+          "length": 4,
+          "text": "Asenduskaart ei pikenda elamisluba."
+        },
+        {
+          "n": 73,
+          "paragraph": 21,
+          "length": 6,
+          "text": "Välismaal kaotatud kaart mõjutab ka tagasisõitu."
+        },
+        {
+          "n": 74,
+          "paragraph": 21,
+          "length": 15,
+          "text": "Enne reisile asumist tuleb NIA ja asjaomase Taiwani välisesindusega selgitada, millist tagasipöördumise dokumenti on vaja."
+        },
+        {
+          "n": 75,
+          "paragraph": 21,
+          "length": 12,
+          "text": "Pass, võimaluse korral kaardi koopia ning kavandatud naasmise kuupäev aitavad olukorda kirjeldada."
+        },
+        {
+          "n": 76,
+          "paragraph": 22,
+          "length": 11,
+          "text": "Immigratsiooniseaduse artikkel 34 nõuab üldjuhul korduva sisenemise loa saamist enne väljasõitu."
+        },
+        {
+          "n": 77,
+          "paragraph": 22,
+          "length": 14,
+          "text": "Alalise elamise loa saaja saab kasutada sama sätte erandit kehtiva passi ja APRC-ga."
+        },
+        {
+          "n": 78,
+          "paragraph": 22,
+          "length": 21,
+          "text": "Tavaline korduva sisenemise luba ei või eeskirjade artikli 20 järgi ületada ARC kehtivust ning kaardi kehtetuks tunnistamisel lõpeb ka see luba."
+        },
+        {
+          "n": 79,
+          "paragraph": 23,
+          "length": 15,
+          "text": "Spetsialistide ja nende perede konkreetses veebimenetluses ei jätkata poolelioleva taotluse läbivaatamist, kui taotleja lahkub Taiwanist."
+        },
+        {
+          "n": 80,
+          "paragraph": 23,
+          "length": 11,
+          "text": "Pärast uuesti sisenemist võib sobivate tingimuste jätkuval täitmisel esitada uue taotluse."
+        },
+        {
+          "n": 81,
+          "paragraph": 23,
+          "length": 6,
+          "text": "Märkus 9 käsitleb seda kindlat menetlust."
+        },
+        {
+          "n": 82,
+          "paragraph": 23,
+          "length": 8,
+          "text": "Üldist reisikeeldu igale ARC taotlejale sellest ei tulene."
+        },
+        {
+          "n": 83,
+          "paragraph": 24,
+          "length": 9,
+          "text": "Taotluse kviitung kinnitab esitamist, kuid ei taga tagasipöördumise õigust."
+        },
+        {
+          "n": 84,
+          "paragraph": 24,
+          "length": 16,
+          "text": "Kui pikendus või asenduskaart ei saa enne väljasõitu valmis, peab NIA juhis lähtuma sellest konkreetsest reisist."
+        },
+        {
+          "n": 85,
+          "paragraph": 25,
+          "length": 16,
+          "text": "Esimese kaardi samme kirjeldab ARC taotlemise juhis, uut alust aga töö-, õppe- ja perepõhise elamise võrdlus."
+        },
+        {
+          "n": 86,
+          "paragraph": 25,
+          "length": 8,
+          "text": "Alalise elamise eraldi tingimused on ingliskeelses APRC käsitluses."
+        },
+        {
+          "n": 87,
+          "paragraph": 25,
+          "length": 13,
+          "text": "Reisi kavandamisel tuleb sobitada tagasisõidupäev dokumentidega, mida inimene sel päeval tegelikult kasutada saab."
+        },
+        {
+          "n": 88,
+          "paragraph": 26,
+          "length": 8,
+          "text": "Aluseks on 24.–25. oktoobril 2026 kontrollitud allikad."
+        },
+        {
+          "n": 89,
+          "paragraph": 26,
+          "length": 22,
+          "text": "See on välisriikide kodanike üldise korra selgitus; Mandri-Hiina, Hongkongi ja Macau elanikele ning Taiwani leibkonnaregistreeringuta Hiina Vabariigi kodanikele kehtivad eraldi süsteemid."
+        },
+        {
+          "n": 90,
+          "paragraph": 26,
+          "length": 7,
+          "text": "Kirjeldus ei määra ühegi konkreetse taotluse tulemust."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,571 @@
+{
+  "at": "2026-10-25T17:16:16.594Z",
+  "newFiles": 21,
+  "existingCorrections": 1,
+  "rows": [
+    {
+      "locale": "km",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-km/704-taiwan-arc-first-application.md",
+      "sha256": "8ae680254e50bf202d7a3ebe1f886de19264a22251bdda5effbdc9c74b649b53",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 27901,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 តុលា 2026",
+        "audience": [
+          "km"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "ឈុតឆាកប្រឌិត",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "9c11a44ab4b473e660b6f61db7ba2846dd842cdafcd2fc3d4c68ecc3e2aaf8c7",
+      "faqSHA256": "110cc89e053a83705190b8834aba102ad6cec665d62aa424a6bad84c64e08a92"
+    },
+    {
+      "locale": "km",
+      "number": "705",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 26623,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 តុលា 2026",
+        "audience": [
+          "km"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "ឈុតឆាកប្រឌិត",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "0e1e2167b3b3bd5f4c002e2f81873b6ba8c4ff8a122ec5a375065d4525822708",
+      "faqSHA256": "d3b2fcd1a5112cf073feaf73a64c43a70186cb70b857387696981a0baa566015"
+    },
+    {
+      "locale": "km",
+      "number": "706",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d1a5eff1eb9fed410075031876b059d635ac4c9de9cd75a61c5a2ac540371286",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 30097,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 តុលា 2026",
+        "audience": [
+          "km"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "ឈុតឆាកប្រឌិត",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "6c78233c5a3633abda53e4a5406b8900da3ff1f6b20afbf1f3c51a694d8d589c",
+      "faqSHA256": "2141aaa149153e4030abdf7c6ebd199fae7b806289a5a75e7eeb33a8c307c172"
+    },
+    {
+      "locale": "mn",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/704-taiwan-arc-first-application.md",
+      "sha256": "c33ec471bf92fd0d55977d3e5e40dde1fed5130d73645c3836c43895b1f918de",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 19583,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026.10.26",
+        "audience": [
+          "mn"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Зохиомол дүр зураг",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "2b3dbd0ce0ed9987d6dd2fda5d4f83ee8f5f24efc41fd4da596bed8a62eef314",
+      "faqSHA256": "ffb46455e2e7b99655ebfa7f8f2921ac6f5a772073b7980bf56229f79f1a9b80"
+    },
+    {
+      "locale": "mn",
+      "number": "705",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "d54e05e91c9d6e9da6ee536009c01b9d44d34b0a78e74dbe07b2e294dde261ac",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 21424,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026.10.26",
+        "audience": [
+          "mn"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Зохиомол дүр зураг",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "e2ccc835c5f4fc2aabf3c77d7f773c5fc46f69b80a00526ce9f6fb04c142ca3f",
+      "faqSHA256": "c4ce058beb9c4ae629ffa40cb602d3014b0e7d2ce50de6e0c878769f55fbdbb5"
+    },
+    {
+      "locale": "mn",
+      "number": "706",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "f3ced3a9c5be6948ce8ead66d0110be0a8e8309f39f414712f24bff50de965a4",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 25173,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026.10.26",
+        "audience": [
+          "mn"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Зохиомол дүр зураг",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "43dba79cc58b242f94e7d795c9d84b9363af4d77fe4143696cb1c7fb8bd3e630",
+      "faqSHA256": "ed97a9bd4f7ce7bc951c28fa4eff6afe13df6497c7b0cb16628e9eb7fbfddec5"
+    },
+    {
+      "locale": "sr",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/704-taiwan-arc-first-application.md",
+      "sha256": "15229f8e599464d507976f6d91818d441c6a1c8be1448af31f79fd79b8730dac",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 11816,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "audience": [
+          "sr"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Izmišljeni prizor",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "685af36aa502727f845fc81d8b457408bdaf08c111ba28dfb5fcae2007047b43",
+      "faqSHA256": "a1aecf0585102a55e9e1f876a6acb4408efb3fcfa7d326543d80b3d34395b1e5"
+    },
+    {
+      "locale": "sr",
+      "number": "705",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "9057c2a83ef6e71ab6f576702943fdf604ae345b627b94d98986baf4a6b7d6b2",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 12246,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "audience": [
+          "sr"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Izmišljeni prizor",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "aba2f44a699a33f52d9c5205cc5bfa1a0d7a7694599f94d20598acb2fd99b0ce",
+      "faqSHA256": "0d3f14de0eb18c58ff439ceb4c562b36fd3235631f405bb62478c45c9f464a12"
+    },
+    {
+      "locale": "sr",
+      "number": "706",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1e5a3547ce8437f9ddb4f3a3b61dd62261a4a1dccaa63683d43d9692b73331d9",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 15018,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "audience": [
+          "sr"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Izmišljeni prizor",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "d1e20e326c3b5772943e2bc4d0a00d756e34c45e4c63a27916e7fb99d04b4d7a",
+      "faqSHA256": "b3e584e25054f47d021d79c213e498555481e6bb722bb2a475d674afbc73972e"
+    },
+    {
+      "locale": "sl",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/704-taiwan-arc-first-application.md",
+      "sha256": "a87a3ac1137b0012120a56629dccc0e0d64dcbb55a2e2a6110e2be213cde6bd6",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 11474,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "audience": [
+          "sl"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Izmišljen prizor",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "6be5c6d0b1cef32c15f82e37d89c144e172da4084c7e98828e3b6a5573f145ef",
+      "faqSHA256": "00d0dd1227e84800f9591c5e44f8097f9f8cf9b25196d8c18ffd6687538dd5c8"
+    },
+    {
+      "locale": "sl",
+      "number": "705",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "90d5e07a124a7b1c6aeb46a5be8293a44007a58f6e2dad2593c96b1067834932",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 12595,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "audience": [
+          "sl"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Izmišljen prizor",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "451bd4e1d5b3661662cff502aa9f261a2d8153c43c9fdf18554f7f06e341539f",
+      "faqSHA256": "0c5bfed53823ae653ce33f0d0cbf761533f1a7a0172fe9227f7b274adc618502"
+    },
+    {
+      "locale": "sl",
+      "number": "706",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d5b7581f6dcff33cdcb5b65e1b46bd0654e050acb94434bbdaab68222c0aca5b",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 15362,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "audience": [
+          "sl"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Izmišljen prizor",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "715b54728816db52ce029053aeb5e8d402326991b209c9d1bd0526cbfaaddd38",
+      "faqSHA256": "98dc62010450d613a329e289c8ff5bc253e6cb2dee12af048f7768933160b679"
+    },
+    {
+      "locale": "lt",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lt/704-taiwan-arc-first-application.md",
+      "sha256": "f46f3545e94950ba11cb30f118689721608e6f9593a088a40b10f3b8618a35a9",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 14236,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026 m. spalio 26 d.",
+        "audience": [
+          "lt"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Išgalvota scena",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "589e94088449a462d234fa39e7f12f2882ea80f969c8408b0f7cc42877e7a951",
+      "faqSHA256": "0939b2f242f08d2d2dca40d7536173e08037358743491d1f282fa303ee298f69"
+    },
+    {
+      "locale": "lt",
+      "number": "705",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "33b0cc65e3720963cac03710365c44c3c8a88a953309b38314680bca963c14c5",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 14443,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026 m. spalio 26 d.",
+        "audience": [
+          "lt"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Išgalvota scena",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "6b867e3d3d5d0c8e0333cbd51c318d43780f79ad583846e25a4b760b9f7ca9c5",
+      "faqSHA256": "69f55c21faa0cb74dad456340ac68f6db0f028aaadb9d92f90e0562d2bba964f"
+    },
+    {
+      "locale": "lt",
+      "number": "706",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4b2d935fa2496bf95b6e304f976e937221a6ab696ab9aa7cf526e2811c7cf1c6",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 17555,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026 m. spalio 26 d.",
+        "audience": [
+          "lt"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Išgalvota scena",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "6c242c6a98c322c7ae644154dce39154d0bba3c71f596344f6a067f9d99152dd",
+      "faqSHA256": "dc6baba86679f42798431a961cc2b5e67780686ed4fead0c6faaeb821deb4f4f"
+    },
+    {
+      "locale": "lv",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/704-taiwan-arc-first-application.md",
+      "sha256": "f47d6be694c2e9601fa457d64598379b5065fa48a94937d5ff11a76d3637c810",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 12919,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026. gada 26. oktobris",
+        "audience": [
+          "lv"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Izdomāta aina",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "06bdbb791f654e637bedc8448d235d0dd0ca35dcb7fec80d3e0602e43effb596",
+      "faqSHA256": "45ca0b5e7fdcd733b36d4e81071c792cccf766552436cd0172e1513b74d0be65"
+    },
+    {
+      "locale": "lv",
+      "number": "705",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "de24030f670164d376227740b49a16a3e1883fa29def34a483fda0672a529102",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 13259,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026. gada 26. oktobris",
+        "audience": [
+          "lv"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Izdomāta aina",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "86157089e45dbfc45c9674727741337becc83fa94901777bf7f392940e1f6578",
+      "faqSHA256": "1a9421c3cd05a75dfc80bda13bd95b078db61380583b63a78f5406aa4c966515"
+    },
+    {
+      "locale": "lv",
+      "number": "706",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "e5b600ba790cdbcd9f225c1703c81e28e7ab49974d504b4ba77b1070d48e700d",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 16268,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026. gada 26. oktobris",
+        "audience": [
+          "lv"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Izdomāta aina",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "41a0c4ac9dfce3fb7ebc42192c4ed957b4455f62f96d992b8b3344322245d755",
+      "faqSHA256": "4d2c79fc846756068ce748e0af266e7f05554f78e2b6457c90ead92f63863677"
+    },
+    {
+      "locale": "et",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/704-taiwan-arc-first-application.md",
+      "sha256": "f15069557979333b4febbff860e45755472675d20f056ac2d05664f788eaea96",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 11716,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "audience": [
+          "et"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Väljamõeldud stseen",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "6e12b373df2d0331d288a7ace4e3b443ee39263b6f33c0155acbe23f1b88861c",
+      "faqSHA256": "e4f911a9674777279d35431eccfbd64a449024c04811c27bdb4579dadbc35696"
+    },
+    {
+      "locale": "et",
+      "number": "705",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "6bf9a4fca0d1b90d3bf0e4f46e4c87ba43cb5c4b32989ab3e98eaed52955acc8",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 12484,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "audience": [
+          "et"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Väljamõeldud stseen",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "eea1895f6b622d4d43021737a1840fe2a7810c14a08157f9d9abf843d06bdb56",
+      "faqSHA256": "d3660a2529c13ae7492356b45104ca549c22f713123ea93a5718392fb91c286f"
+    },
+    {
+      "locale": "et",
+      "number": "706",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "dce0dce717cd732bce40b187f43ef31cbcf0758d71256c129263c23fc7da856a",
+      "sourceEqual": true,
+      "kind": "new",
+      "bytes": 14866,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "audience": [
+          "et"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Väljamõeldud stseen",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "d992db48216133f9963c0739a04ea63019058d433034c6a831bb44ab59b7152e",
+      "faqSHA256": "04880e4c2f19ac9bb7b7630e2ebaf19a37b0c7d98629c31be87d901615e37e8e"
+    },
+    {
+      "locale": "de",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/existing-corrections/columns-de/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-de/704-taiwan-arc-first-application.md",
+      "beforeSHA256": "07b02d98ad6c6e6679d32bb8315391c678fa23bc7eb0c485ba9bf9dc6440a306",
+      "sha256": "e4088a2d7a48a32b0f63c7642fc4557e537c7db6d840daa69dec09329d200ce2",
+      "sourceEqual": true,
+      "kind": "existing-correction",
+      "bytes": 12712,
+      "metadata": {
+        "published": "2026-10-24",
+        "lastmod": "2026-10-26",
+        "date_display": "24. Oktober 2026",
+        "audience": [
+          "de"
+        ],
+        "author": "legal-ai-assistant",
+        "topic": "visa",
+        "caption": "Fiktive Szene",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "bodySHA256": "12efb30723faa399f5eb77519c0471afa5fa65fa1614cce4860e7e27b3887a40",
+      "faqSHA256": "eeacc85a2651bf0a7991316c2942c22952da65b2a96cf5122b6f967e51ece039"
+    }
+  ],
+  "deProof": {
+    "beforeSHA256": "07b02d98ad6c6e6679d32bb8315391c678fa23bc7eb0c485ba9bf9dc6440a306",
+    "afterSHA256": "e4088a2d7a48a32b0f63c7642fc4557e537c7db6d840daa69dec09329d200ce2",
+    "exactTwoChangeReverse": true,
+    "allFrontmatterExceptLastmodEqual": true,
+    "FAQEqual": true,
+    "urlMultisetEqual": true,
+    "published": "2026-10-24",
+    "lastmod": "2026-10-26",
+    "dateDisplay": "24. Oktober 2026",
+    "unifiedDateOptionOmittedBecause": "This is an existing correction with unchanged original publication24 and actual modification26."
+  },
+  "publicationReady": false
+}

@@ -1,0 +1,61 @@
+{
+  "time": "2026-10-26T00:39:00.105157+09:00",
+  "kind": "author self-review before independent review",
+  "edits": [
+    {
+      "id": "T01",
+      "file": "704-taiwan-arc-first-application.md",
+      "before": " Üks päev võib seega erineda ka siis, kui mõlemas juhises seisab arv 30.",
+      "after": "",
+      "reason_and_meaning_preservation": "서로 다른 기산점을 설명한 뒤 하루 차이로 오해하게 하는 불필요한 추론을 삭제. 앞의 입국 다음 날/국내 발급일 명제와 출처는 보존."
+    },
+    {
+      "id": "T02",
+      "file": "704-taiwan-arc-first-application.md",
+      "before": "Kõrgkooliõpingute puhul kasutatakse enne registreerimist vastuvõtukirja ning pärast registreerimist ajakohast õppimise tõendit. NIA loetelu näeb ette viimase kuu jooksul väljastatud tõendi; selle alla kuuluvad jooksva semestri registreerimistõend või üliõpilaspilet.",
+      "after": "Kõrgkooliõpingute puhul kasutatakse enne registreerimist vastuvõtukirja ning pärast registreerimist viimase kuu jooksul väljastatud õppimise tõendit NIA loetelu kohaselt.",
+      "reason_and_meaning_preservation": "재학 증빙을 NIA 목록에 따른 최근 1개월 발급 증명으로 정확히 요약. 학생증을 반드시 최근 1개월 내 발급해야 한다는 함의 및 불명확한 문서 포함관계를 제거; 입학 전/등록 후 구분 보존."
+    },
+    {
+      "id": "T03",
+      "file": "704-taiwan-arc-first-application.md",
+      "before": "on parandamistähtaeg kolm kuud.",
+      "after": "on parandamistähtaeg samast alguspäevast kolm kuud.",
+      "reason_and_meaning_preservation": "F24 해외 등에서 필요한 서류의 보완 3개월도 통지 다음 날부터라는 기산점을 명시. 15일에 가산하지 않는 대체 기간과 지역/문서 조건은 그대로."
+    },
+    {
+      "id": "T04",
+      "file": "704-taiwan-arc-first-application.md",
+      "before": "Õppurite veebimenetluse tähtaeg on viis tööpäeva, samuti uuesti arvestatavana pärast täiendamist. Need on menetluse ajad.",
+      "after": "Õppurite veebimenetluse avaldatud läbivaatamisaeg on viis tööpäeva; täiendamise järel algab ka see arvestus uuesti. Kaardi kättesaamine järgneb eraldi.",
+      "reason_and_meaning_preservation": "공표 심사 시간을 보장된 법정 마감으로 읽히지 않게 하고 후속 수령과 구별. 5근무일/보완 후 재기산 유지, 아래 납부 5근무일·납부 후 수령 3근무일 보존."
+    },
+    {
+      "id": "T05",
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "before": "mistahes tööotsija ARC",
+      "after": "mis tahes tööotsija ARC",
+      "reason_and_meaning_preservation": "표준 에스토니아어 띄어쓰기 수정. 졸업생 취업허가 면제의 범위와 조건 변경 없음."
+    }
+  ],
+  "files": [
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "before_sha256": "bfdecef5ded70f3b856570d0face09d625738dbe466fb3b8f5b45ed4df61a6c9",
+      "after_sha256": "f15069557979333b4febbff860e45755472675d20f056ac2d05664f788eaea96",
+      "diff": "--- 704-taiwan-arc-first-application.md:initial\n+++ 704-taiwan-arc-first-application.md:self-review\n@@ -23,7 +23,7 @@\n     a: \"Tegelik töö ja tööandja peavad olema hõlmatud kehtiva tööloa või kohaldatava seadusliku erandiga. ARC tõendab elamisluba; see ei anna üldist õigust töötada igal ametikohal.\"\n ---\n \n-Taiwanis pärast saabumist väljastatud elamisviisa käivitab esimese ARC taotluse 30-päevase tähtaja viisa väljastamise päeval. Nii selgitab [konsulaarasjade büroo BOCA](https://www.boca.gov.tw/fp-398-723-7b71f-1.html). Elamisviisaga juba riiki sisenenud ja elamisõiguse saanud inimese puhul on algus teine: saabumisele järgnev päev. Üks päev võib seega erineda ka siis, kui mõlemas juhises seisab arv 30.\n+Taiwanis pärast saabumist väljastatud elamisviisa käivitab esimese ARC taotluse 30-päevase tähtaja viisa väljastamise päeval. Nii selgitab [konsulaarasjade büroo BOCA](https://www.boca.gov.tw/fp-398-723-7b71f-1.html). Elamisviisaga juba riiki sisenenud ja elamisõiguse saanud inimese puhul on algus teine: saabumisele järgnev päev.\n \n Välismaalase elamisloakaardi ehk ARC väljastab immigratsiooniamet NIA. [Immigratsiooniseaduse artikkel 22](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) nõuab selle taotlemist, kuid jätab erandi kehtivale ühenddokumendile, mis sisaldab juba ARC funktsiooni. Näiteks Employment Gold Cardi omanik ei vaja eraldi ARC-d.\n \n@@ -46,7 +46,7 @@\n Tõendite sisu sõltub taotlusest:\n \n - Töötamise puhul on asjakohane töö heakskiit ja viimase kuu jooksul väljastatud töötamise tõend või kohaldatava vabastuse dokumendid.\n-- Kõrgkooliõpingute puhul kasutatakse enne registreerimist vastuvõtukirja ning pärast registreerimist ajakohast õppimise tõendit. NIA loetelu näeb ette viimase kuu jooksul väljastatud tõendi; selle alla kuuluvad jooksva semestri registreerimistõend või üliõpilaspilet.\n+- Kõrgkooliõpingute puhul kasutatakse enne registreerimist vastuvõtukirja ning pärast registreerimist viimase kuu jooksul väljastatud õppimise tõendit NIA loetelu kohaselt.\n - Perega ühinemisel tõendatakse abielu või sugulust ning esitatakse taotluse aluseks oleva pereliikme isikut või elamist puudutavad dokumendid.\n \n Abikaasa kaudu esimest ARC-d taotledes peab Taiwanis elav ja seal leibkonnaregistris (戶籍) registreeritud Taiwani abikaasa kohal olema. Nõutakse ka abielu Taiwani registreerimise tõendit. Selle esimese kaardi kehtivus on [elamist reguleerivate eeskirjade artikli 12](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129) järgi kuni üks aasta. See piir puudutab kirjeldatud kodaniku abikaasa esimest taotlust. Dokumente selgitab ka [ingliskeelne abikaasa kaudu elamise juhis](/en/columns/taiwan-foreign-spouse-residence).\n@@ -59,9 +59,9 @@\n \n Üliõpilased kasutavad [oma veebimenetlust](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news). Tavaline kohapeal esitatav taotlus läheb praeguse elukoha aadressi teenindavasse NIA keskusse; sinna suunatakse ka Taiwani abikaasa kaudu taotleja. Taotluse number ja esitatud failide koopiad aitavad hilisema lisadokumendinõude algse toimikuga kokku viia.\n \n-Puudulike dokumentide parandamiseks annab [hiinakeelne üldjuhis 0902](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/) 15 kalendripäeva teavitamisele järgnevast päevast. Kui puuduv või nõuetele mittevastav dokument tuleb taotleda välismaalt, Mandri-Hiinast, Hongkongist või Macaust, on parandamistähtaeg kolm kuud. See asendab 15 päeva ega lisandu sellele. Õigel ajal parandamata või endiselt puudulik taotlus jäetakse rahuldamata; taotleja enda välismaal viibimine ei täida üksinda kolmekuulise tähtaja tingimust.\n+Puudulike dokumentide parandamiseks annab [hiinakeelne üldjuhis 0902](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/) 15 kalendripäeva teavitamisele järgnevast päevast. Kui puuduv või nõuetele mittevastav dokument tuleb taotleda välismaalt, Mandri-Hiinast, Hongkongist või Macaust, on parandamistähtaeg samast alguspäevast kolm kuud. See asendab 15 päeva ega lisandu sellele. Õigel ajal parandamata või endiselt puudulik taotlus jäetakse rahuldamata; taotleja enda välismaal viibimine ei täida üksinda kolmekuulise tähtaja tingimust.\n \n-Tavamenetluse avaldatud läbivaatamisaeg on kümme tööpäeva. Dokumentide tagastamisele, täiendamisele ja vestlusele kuluvat aega sinna ei loeta ning pärast puuduste kõrvaldamist algab arvestus uuesti. Õppurite veebimenetluse tähtaeg on viis tööpäeva, samuti uuesti arvestatavana pärast täiendamist. Need on menetluse ajad.\n+Tavamenetluse avaldatud läbivaatamisaeg on kümme tööpäeva. Dokumentide tagastamisele, täiendamisele ja vestlusele kuluvat aega sinna ei loeta ning pärast puuduste kõrvaldamist algab arvestus uuesti. Õppurite veebimenetluse avaldatud läbivaatamisaeg on viis tööpäeva; täiendamise järel algab ka see arvestus uuesti. Kaardi kättesaamine järgneb eraldi.\n \n ## Tasu, loa kestus ja kättesaamine\n \n"
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "before_sha256": "73cc7dd4d3ed3fd9873d73e973ea37ddec76177151eb1c4d1f0543a81c23140b",
+      "after_sha256": "73cc7dd4d3ed3fd9873d73e973ea37ddec76177151eb1c4d1f0543a81c23140b",
+      "diff": ""
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "before_sha256": "9dc24aa435a50c5cc718a4c46d33e916e75236196eb47df6f6fc650ba6b1886b",
+      "after_sha256": "dce0dce717cd732bce40b187f43ef31cbcf0758d71256c129263c23fc7da856a",
+      "diff": "--- 706-taiwan-arc-renewal-changes-reentry.md:initial\n+++ 706-taiwan-arc-renewal-changes-reentry.md:self-review\n@@ -68,7 +68,7 @@\n \n Kvalifitseeruval Taiwani õppeasutuse lõpetajal on eraldi [eeskirjade artikli 11](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129) tee. Taotlus tuleb esitada enne senise elamisloa lõppu. Heakskiitmisel kestab pikendus ühe aasta, senise perioodi lõppemisele järgnevast päevast; vajaduse korral saab enne pikenduse lõppu taotleda veel ühe, kokku kuni kaheks aastaks. Ainult keelekursuse lõpetamine sellele alusele ei vasta.\n \n-Pikem elamisluba ei pikenda iseenesest vana tööluba. [Välisspetsialistide seaduse artikkel 12](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) annab siiski tööloa vabastuse värskele lõpetajale, kes on Taiwanis omandanud associate degree taseme või kõrgema kraadi ning saanud NIA-lt vastava lõpetamisjärgse elamise pikenduse. Vabastus kehtib selle loa ajal. Üksnes kraad või mistahes tööotsija ARC ei täida kõiki neid tingimusi.\n+Pikem elamisluba ei pikenda iseenesest vana tööluba. [Välisspetsialistide seaduse artikkel 12](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) annab siiski tööloa vabastuse värskele lõpetajale, kes on Taiwanis omandanud associate degree taseme või kõrgema kraadi ning saanud NIA-lt vastava lõpetamisjärgse elamise pikenduse. Vabastus kehtib selle loa ajal. Üksnes kraad või mis tahes tööotsija ARC ei täida kõiki neid tingimusi.\n \n Elamisstaatust mõjutava töö- või peretüli esmaseks kirjeldamiseks võib kirjutada [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) aadressile sündmuse ja selle kuupäevad. Esimesse kirja pole vaja passiandmeid ega isikut tõendavate dokumentide originaale. Nõustamine toimub inglise, hiina, jaapani või korea keeles ja suhtluskorraldus lepitakse enne kokku.\n \n"
+    }
+  ]
+}

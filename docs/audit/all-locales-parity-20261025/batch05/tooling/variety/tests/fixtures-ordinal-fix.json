@@ -1,0 +1,270 @@
+{
+  "hr": [
+    {
+      "text": "Poglavlje 7. priručnika opisuje vrt. Učenici crtaju lišće.",
+      "sentences": [
+        "Poglavlje 7. priručnika opisuje vrt.",
+        "Učenici crtaju lišće."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "Pročitala je poglavlja 7. i 8. priručnika. Knjiga je ostala otvorena.",
+      "sentences": [
+        "Pročitala je poglavlja 7. i 8. priručnika.",
+        "Knjiga je ostala otvorena."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "U 4. i 5. sobi čuvaju se stare knjige. Vrata su zaključana.",
+      "sentences": [
+        "U 4. i 5. sobi čuvaju se stare knjige.",
+        "Vrata su zaključana."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "Prema točki 6. stavku 2. kućnog reda, knjige se vraćaju na policu. Soba je uredna.",
+      "sentences": [
+        "Prema točki 6. stavku 2. kućnog reda, knjige se vraćaju na policu.",
+        "Soba je uredna."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "Pravilo 7. Priručnika o pisanju govori o razmacima. Primjeri su kratki.",
+      "sentences": [
+        "Pravilo 7. Priručnika o pisanju govori o razmacima.",
+        "Primjeri su kratki."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "Knjiga je objavljena 2018. i ponovno tiskana 2021. godine. Oba su izdanja dostupna.",
+      "sentences": [
+        "Knjiga je objavljena 2018. i ponovno tiskana 2021. godine.",
+        "Oba su izdanja dostupna."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "Bilješka je napisana 3. lipnja 2019. i dopunjena idućeg tjedna. Datum je čitljiv.",
+      "sentences": [
+        "Bilješka je napisana 3. lipnja 2019. i dopunjena idućeg tjedna.",
+        "Datum je čitljiv."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "Članci 6. i 9. Pravilnika o čitanju nalaze se na istoj stranici. Korice su plave.",
+      "sentences": [
+        "Članci 6. i 9. Pravilnika o čitanju nalaze se na istoj stranici.",
+        "Korice su plave."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "Na temelju članka 5. Pravilnika o igri, igrači uzimaju po jednu kartu. Sljedeća je runda kratka.",
+      "sentences": [
+        "Na temelju članka 5. Pravilnika o igri, igrači uzimaju po jednu kartu.",
+        "Sljedeća je runda kratka."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "Uvod spominje poglavlje 2. Priručnika o slovima. Nastavnik ga čita naglas.",
+      "sentences": [
+        "Uvod spominje poglavlje 2. Priručnika o slovima.",
+        "Nastavnik ga čita naglas."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "Čitamo II. i IV. odjeljak danas. Knjiga je otvorena.",
+      "sentences": [
+        "Čitamo II. i IV. odjeljak danas.",
+        "Knjiga je otvorena."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "Pročitali smo poglavlje 7. Sutra nastavljamo.",
+      "sentences": [
+        "Pročitali smo poglavlje 7.",
+        "Sutra nastavljamo."
+      ],
+      "kind": "negative"
+    },
+    {
+      "text": "Otvorite stranicu 12. Na njoj je karta.",
+      "sentences": [
+        "Otvorite stranicu 12.",
+        "Na njoj je karta."
+      ],
+      "kind": "negative"
+    },
+    {
+      "text": "Knjiga je objavljena 2018. Iduće godine dobila je nagradu.",
+      "sentences": [
+        "Knjiga je objavljena 2018.",
+        "Iduće godine dobila je nagradu."
+      ],
+      "kind": "negative"
+    },
+    {
+      "text": "Broj primjeraka bio je 12. Zaliha je rasprodana.",
+      "sentences": [
+        "Broj primjeraka bio je 12.",
+        "Zaliha je rasprodana."
+      ],
+      "kind": "negative"
+    },
+    {
+      "text": "Broj je 12. I to je sve.",
+      "sentences": [
+        "Broj je 12.",
+        "I to je sve."
+      ],
+      "kind": "negative"
+    },
+    {
+      "text": "Pročitajte pravilo 7. Priručnik ostaje ovdje.",
+      "sentences": [
+        "Pročitajte pravilo 7.",
+        "Priručnik ostaje ovdje."
+      ],
+      "kind": "negative"
+    },
+    {
+      "text": "Broj je 12. iPhone je na stolu.",
+      "sentences": [
+        "Broj je 12.",
+        "iPhone je na stolu."
+      ],
+      "kind": "negative"
+    },
+    {
+      "text": "Čitali smo poglavlje IV. Sutra nastavljamo.",
+      "sentences": [
+        "Čitali smo poglavlje IV.",
+        "Sutra nastavljamo."
+      ],
+      "kind": "negative"
+    },
+    {
+      "text": "Članak 9. Zakona o knjižnicama nalazi se na plakatu. Plakat je plav.",
+      "sentences": [
+        "Članak 9. Zakona o knjižnicama nalazi se na plakatu.",
+        "Plakat je plav."
+      ],
+      "kind": "positive"
+    }
+  ],
+  "hu": [
+    {
+      "text": "A könyv 2. és 5. fejezetét olvastuk el. A történet folytatódik.",
+      "sentences": [
+        "A könyv 2. és 5. fejezetét olvastuk el.",
+        "A történet folytatódik."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "A 3., 6. és 8. sorban ugyanaz a jel szerepel. Minden más sor üres.",
+      "sentences": [
+        "A 3., 6. és 8. sorban ugyanaz a jel szerepel.",
+        "Minden más sor üres."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "A 4. vagy az 5. polcon keresse a kötetet. Lent csak folyóiratok vannak.",
+      "sentences": [
+        "A 4. vagy az 5. polcon keresse a kötetet.",
+        "Lent csak folyóiratok vannak."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "A II. és IV. fejezet rövid. A függelék hosszabb.",
+      "sentences": [
+        "A II. és IV. fejezet rövid.",
+        "A függelék hosszabb."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "A 2. átdolgozott kiadásból tanulunk. Néhány ábra új.",
+      "sentences": [
+        "A 2. átdolgozott kiadásból tanulunk.",
+        "Néhány ábra új."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "A 2. csoport olvas, a 3. csoport rajzol. Utána szünet lesz.",
+      "sentences": [
+        "A 2. csoport olvas, a 3. csoport rajzol.",
+        "Utána szünet lesz."
+      ],
+      "kind": "positive"
+    },
+    {
+      "text": "Az eredmény 12. A következő feladat nehezebb.",
+      "sentences": [
+        "Az eredmény 12.",
+        "A következő feladat nehezebb."
+      ],
+      "kind": "negative"
+    },
+    {
+      "text": "A versenyen Júlia lett a 2. Ez volt az eddigi legjobb eredménye.",
+      "sentences": [
+        "A versenyen Júlia lett a 2.",
+        "Ez volt az eddigi legjobb eredménye."
+      ],
+      "kind": "negative"
+    },
+    {
+      "text": "Az eredmény 12. És ez már elegendő.",
+      "sentences": [
+        "Az eredmény 12.",
+        "És ez már elegendő."
+      ],
+      "kind": "negative"
+    },
+    {
+      "text": "A listán három szám áll: 2, 5 és 8. A következő sor üres.",
+      "sentences": [
+        "A listán három szám áll: 2, 5 és 8.",
+        "A következő sor üres."
+      ],
+      "kind": "negative"
+    },
+    {
+      "text": "A polc száma 12. iPhone van a polcon.",
+      "sentences": [
+        "A polc száma 12.",
+        "iPhone van a polcon."
+      ],
+      "kind": "negative"
+    },
+    {
+      "text": "Ez volt a IV. Most kezdődik az ötödik.",
+      "sentences": [
+        "Ez volt a IV.",
+        "Most kezdődik az ötödik."
+      ],
+      "kind": "negative"
+    },
+    {
+      "text": "Az újság 6. és 9. cikke rövid. A címlap kék.",
+      "sentences": [
+        "Az újság 6. és 9. cikke rövid.",
+        "A címlap kék."
+      ],
+      "kind": "positive"
+    }
+  ]
+}

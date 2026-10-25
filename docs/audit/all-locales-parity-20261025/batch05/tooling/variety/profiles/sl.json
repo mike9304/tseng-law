@@ -1,0 +1,58 @@
+{
+  "review_status": "AI neutral contract; root independent review/install pending",
+  "provenance": "METHOD-BATCH05.md; tests/fixtures-batch05.json fixed before production edits",
+  "join_hyphens": false,
+  "canonical_abbreviations": true,
+  "flexible_abbreviation_spaces": true,
+  "length_unit": "orthographic_words",
+  "short_threshold": 8,
+  "long_threshold": 32,
+  "question_pattern": "[?？؟]\\s*[\"”’»›“)]*$",
+  "terminal_abbreviations": [
+    "itd",
+    "ipd",
+    "d.o.o",
+    "d. o. o"
+  ],
+  "register": "Standard Slovenian",
+  "abbreviations": [
+    "dr",
+    "prof",
+    "mag",
+    "doc",
+    "npr",
+    "tj",
+    "t.j",
+    "t. j",
+    "itd",
+    "ipd",
+    "oz",
+    "prim",
+    "gl",
+    "št",
+    "čl",
+    "odst",
+    "str",
+    "t.i",
+    "t. i",
+    "d.o.o",
+    "d. o. o"
+  ],
+  "context_terminal_abbreviations": {
+    "čl": "\\d+[\\ue000.]?\\s*$",
+    "str": "\\d+[\\ue000.]?\\s*$"
+  },
+  "dotted_ordinal_lowercase_continuation": true,
+  "ordinal_pattern": "(?<!\\w)\\d{1,2}[.\\ue000]\\s+(?:\\d{1,2}|[IVX]+)\\.(?=\\s+\\d{4})",
+  "additional_closing_quotes": "“«",
+  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:Viri|Uradni\\s+viri|Literatura)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
+  "contrast_patterns": [
+    "(?i:(?:^|(?<=[.!?\\n]))\\s*(?![^.!?\\n;]{0,220}(?:\\b(?:samo|le)\\b))[^.!?\\n;]{0,220}(?:\\bni\\b)[^.!?\\n;]{0,120}(?:\\b(?:temveč|ampak)\\b))"
+  ],
+  "caveat_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Vendar|Kljub\\s+temu|Toda)\\b)",
+  "hypo_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Predpostavimo|Zamislimo\\s+si)\\b)",
+  "formula_close_pattern": "(?i:splošne\\s+informacije)",
+  "citation_pattern": "(?i:\\b\\d+\\.\\s*člen(?:u|a|om)?|\\bčlen(?:u|a|om)?\\s*\\d+)",
+  "locale": "sl",
+  "directory": "columns-sl"
+}

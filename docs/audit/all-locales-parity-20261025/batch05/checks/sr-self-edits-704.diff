@@ -1,0 +1,46 @@
+--- sr-initial-704.md
++++ 704-taiwan-arc-first-application.md
+@@ -23,7 +23,7 @@
+     a: "Rad je moguć samo ako stvarni posao i poslodavca obuhvata važeća dozvola ili primenljivo zakonsko oslobođenje. ARC potvrđuje odobren boravak, ali sam ne daje neograničeno pravo na rad."
+ ---
+ 
+-Boravišna viza izdata tek posle dolaska na Tajvan pokreće rok za prvi ARC od datuma svog izdavanja, prema [uputstvu Biroa za konzularne poslove, BOCA](https://www.boca.gov.tw/fp-398-723-7b71f-1.html). Rok je 30 dana. Datum ranijeg ulaska ovde nije početni datum.
++Boravišna viza izdata tek posle dolaska na Tajvan pokreće rok za prvi ARC od datuma svog izdavanja, prema [uputstvu Biroa za konzularne poslove, BOCA](https://www.boca.gov.tw/fp-398-723-7b71f-1.html). Rok je 30 dana.
+ 
+ Za osobu koja je ušla sa boravišnom vizom i dobila odobrenje boravka, [član 22 Zakona o ulasku, izlasku i imigraciji](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22) nalaže prijavu u roku od 30 dana od narednog dana po ulasku. Zahtev prima Nacionalna imigraciona agencija, NIA. Ona izdaje Alien Resident Certificate, odnosno ARC, kao potvrdu odobrenog boravka.
+ 
+@@ -53,7 +53,7 @@
+ 
+ Kod prve prijave po osnovu braka sa državljaninom Tajvana koji tamo živi i ima registraciju domaćinstva, tajvanski supružnik mora doći sa podnosiocem. Potreban je i dokaz da je brak registrovan na Tajvanu. [Član 12 propisa o boravku stranaca](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129) ograničava taj prvi ARC na najviše godinu dana, a [NIA uputstvo](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) uređuje prisustvo supružnika. Taj maksimum ne važi za svaku porodičnu kategoriju. Više dokumenata opisuje [tekst o boravku preko tajvanskog supružnika, na engleskom](/en/columns/taiwan-foreign-spouse-residence).
+ 
+-Isprave izdate u inostranstvu moraju proći propisanu autentifikaciju. NIA može zahtevati i prevod na kineski potvrđen ili overen na propisani način. Postupak se proverava kod [tajvanskog predstavništva nadležnog za mesto izdavanja](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html); ne treba unapred pretpostaviti da određena strana overa zamenjuje taj postupak. Uverenje o nekažnjavanju i zdravstveni pregled zavise od kategorije i njenog izuzetka. Nisu opšti uslov svake prve kartice.
++Isprave izdate u inostranstvu moraju proći propisanu autentifikaciju. NIA može zahtevati i prevod na kineski potvrđen ili overen na propisani način. Postupak se proverava kod [tajvanskog predstavništva nadležnog za mesto izdavanja](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html); ne treba unapred pretpostaviti da određena strana overa zamenjuje taj postupak. Uverenje o nekažnjavanju i zdravstveni pregled zavise od kategorije i primenljivih izuzetaka. Nisu opšti uslov svake prve kartice.
+ 
+ ## Nadležni sistem i dopuna spisa
+ 
+@@ -71,13 +71,13 @@
+ 
+ ## Od provere prijave do kartice
+ 
+-Za opšti postupak [NIA navodi deset radnih dana](https://www.immigration.gov.tw/5475/5478/141465/141808/141970). Vreme vraćanja dokumentacije, dopune i razgovora ne ulazi u taj period. Posle dopune računanje počinje iznova.
++[NIA za opšti postupak navodi deset radnih dana](https://www.immigration.gov.tw/5475/5478/141465/141808/141970). Vreme vraćanja dokumentacije, dopune i razgovora ne ulazi u taj period. Posle dopune računanje počinje iznova.
+ 
+-Studentski onlajn postupak ima svoje rokove. U [uputstvu 0929](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) navedeno je pet radnih dana za proveru, koji se ponovo računaju posle dopune. Taksu treba platiti u roku od pet radnih dana od odobrenja. To su dve različite faze.
++Studentski onlajn postupak ima svoje rokove. U [uputstvu 0929](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) navedeno je pet radnih dana za proveru, koji se ponovo računaju posle dopune. Taksu treba platiti u roku od pet radnih dana od odobrenja.
+ 
+ Elektronski ARC sa važenjem do šest meseci mora se preuzeti i odštampati nakon uplate. Za karticu sa čipom student štampa onlajn potvrdu uplate i odnosi je u izabranu službu NIA tri radna dana posle izvršene uplate. Ovaj raspored pripada studentskom postupku; ostali podnosioci prate način preuzimanja iz svog odobrenja ili obaveštenja.
+ 
+-Na izdatoj kartici uporedite ime, broj pasoša, adresu i datum isteka sa odobrenim podacima. Odluku i račun čuvajte u istom dosijeu. Broj predmeta ostaje veza sa podnetom dokumentacijom.
++Na izdatoj kartici uporedite ime, broj pasoša, adresu i datum isteka sa odobrenim podacima. Odluku i potvrdu uplate čuvajte u istom dosijeu.
+ 
+ Može li posao početi čim kartica stigne? [Članovi 43 i 48 Zakona o službama zapošljavanja](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) zahtevaju da stvarni posao i poslodavca pokriva odgovarajuća dozvola ili oslobođenje. Sledeći rokovi proizlaze iz isteka boravka, selidbe, promene rada i planiranog povratka sa puta. Njih razrađuje [vodič za produženje i promene ARC-a](/sr/columns/taiwan-arc-renewal-changes-reentry), uz dokumente koji pokazuju kada je promena nastala.
+ 
+@@ -89,7 +89,7 @@
+ - [NIA 0902, prijave boravka i promena](https://www.immigration.gov.tw/5475/5478/141465/141808/141970), ažurirano 14. aprila 2026; [kineski tekst](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/): početak roka za dopunu i posledice nepotpune dopune.
+ - BOCA: [rok nakon izdavanja boravišne vize na Tajvanu](https://www.boca.gov.tw/fp-398-723-7b71f-1.html) i [vize za stručni rad](https://www.boca.gov.tw/cp-166-276-48430-2.html).
+ - [Zakon o privlačenju i zapošljavanju stranih stručnjaka](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295), članovi 8 i 16.
+-- [Propisi o kratkotrajnim posetama, boravku i stalnom boravku stranaca](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129), član 12: prvi ARC tajvanskog supružnika.
++- [Propisi o kratkotrajnim posetama, boravku i stalnom boravku stranaca](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129), član 12: prvi ARC supružnika tajvanskog državljanina.
+ - NIA: [imenik postupaka](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/) i [studentski onlajn postupak 0929](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news), ažuriran 28. avgusta 2026.
+ - BOCA: [studentske vize](https://www.boca.gov.tw/cp-166-283-c4da3-2.html) i [imenik predstavništava](https://www.boca.gov.tw/sp-foof-countrylp-01-2.html).
+ - [Pravila o taksama za imigracione dozvole](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135), član 3.

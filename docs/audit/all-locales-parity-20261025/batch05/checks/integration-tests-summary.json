@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-26T02:12:15.925409+09:00",
+  "files": 27,
+  "passed": 747,
+  "failed": 0,
+  "exitCode": 0,
+  "runtime": "Node24.14.1",
+  "singleWorker": true,
+  "timeoutMs": 30000,
+  "commandReceipt": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-affected-tests-command.json",
+    "sha256": "3927747280414b853fabf65113053ba4d819ea250b11deceffce88f7d4457055"
+  },
+  "log": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-affected-tests.log",
+    "sha256": "47d5c471382d266ab68ce04313fd89a7ad07a619523087ef5617130c473558d9"
+  },
+  "registrySHA256": "d96d8607d18d6c86ee0e5c6829ff4aeb62f1273a1998c2f395cfc3668130b534",
+  "selectedManuscriptSHAUnchanged": true,
+  "fullRepositoryTestRun": false,
+  "nonFailingStderr": "React DOM test mocks emit existing fetchPriority casing warnings; retained verbatim in log."
+}

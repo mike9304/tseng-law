@@ -1,0 +1,40 @@
+{
+  "review_status": "AI neutral contract; coordinating review and installation pending",
+  "join_hyphens": false,
+  "canonical_abbreviations": true,
+  "question_pattern": "[?؟]\\s*[\"”’»›“״)]*$",
+  "length_unit": "orthographic_words",
+  "short_threshold": 8,
+  "long_threshold": 32,
+  "provenance": "METHOD-BATCH04.md; frozen tests/fixtures-batch04.json and separate MY neutral fixtures",
+  "abbreviations": [
+    "Dr",
+    "Prof",
+    "Mr",
+    "Ms",
+    "Art",
+    "No",
+    "p",
+    "pp",
+    "e.g",
+    "i.e",
+    "ড",
+    "মো",
+    "পৃ"
+  ],
+  "terminal_abbreviations": [],
+  "register": "Standard Bengali/Bangla",
+  "source_heading_pattern": "^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:তথ্যসূত্র|উৎস|সরকারি\\s+(?:উৎস|সূত্র))[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$",
+  "additional_sentence_terminators": "।॥",
+  "unspaced_sentence_terminators": "।॥",
+  "quote_attribution_pattern": "^(?:বলে|বলল|বললেন|জিজ্ঞেস\\s+করল)(?=$|\\s|[,،:;.!?।॥۔؟])",
+  "citation_pattern": "(?:ধারা|অনুচ্ছেদ)\\s*\\d+",
+  "contrast_patterns": [
+    "(?:^|(?<=[.!?।॥\\n]))\\s*(?![^.!?।॥\\n]{0,220}(?:শুধু|কেবল))[^.!?।॥\\n]{0,220}(?:নয়)\\s*[,،]?\\s*(?:বরং)"
+  ],
+  "caveat_pattern": "^[\\s“”\"\\x27«»״(\\[]*(?:তবে|কিন্তু|তবু)(?=$|\\s|[,،:;.!?।॥۔؟])",
+  "hypo_pattern": "^[\\s“”\"\\x27«»״(\\[]*(?:ধরুন|উদাহরণস্বরূপ)(?=$|\\s|[,،:;.!?।॥۔؟])",
+  "formula_close_pattern": "সাধারণ\\s+তথ্য|প্রতিটি\\s+ঘটনা\\s+আলাদা",
+  "locale": "bn",
+  "directory": "columns-bn"
+}

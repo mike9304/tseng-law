@@ -1,0 +1,66 @@
+{
+  "frozenAt": "2026-10-26T00:46:05.396441+09:00",
+  "language": "et",
+  "status": "author complete; independent review pending; no publication claim",
+  "inputChanges": [],
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/704-taiwan-arc-first-application.md",
+      "sha256": "f15069557979333b4febbff860e45755472675d20f056ac2d05664f788eaea96"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "6bf9a4fca0d1b90d3bf0e4f46e4c87ba43cb5c4b32989ab3e98eaed52955acc8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "dce0dce717cd732bce40b187f43ef31cbcf0758d71256c129263c23fc7da856a"
+    }
+  ],
+  "author": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/et-author.md",
+    "sha256": "d2b3c49a9a1d51954dc2a84c1a45b64bb802f5ca306b25e26a7f71e763a6c817"
+  },
+  "checks": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-input-sha.json",
+      "sha256": "fdfb6d0a5f36870e9f638596db1e8e7e09673a5e4ea002c6054f78cca0008972"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-self-review-edits.json",
+      "sha256": "dc6413e6e728d488b14ffe69a293bcc5b076b2bc16032f3ca57e4a48d07d0be2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-self-review-t06.json",
+      "sha256": "ee0587033d02c8ffb7c2dd7ae6f0091ea44057b6cfc92ceea8e102229e352d93"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-variety-initial.json",
+      "sha256": "3e6af870d0d90ec36cd4c1fabe9dafeae06e42bb73049aa3c2cf012a6b83fec6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-variety-before-t06.json",
+      "sha256": "794a03132f322e3c94bdbc4c12b8858c11608b07136f056580d8411459ea61e9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-variety-final.json",
+      "sha256": "ca164db2b1190d8211e6b36ef111aac9e8201a65175185d2610d0f85a0508b8a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-sentences-before-t06.json",
+      "sha256": "086c42dab9c1c3130b94a97841b15e09f13942b9e782e53b80779101b735fe1f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-sentences-final.json",
+      "sha256": "f9d76e3736253873c38a54d0635a370a837ae32729f25ea71f76252a69660c94"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-content-audit-before-t06.json",
+      "sha256": "0a24eb6c6c6acdc49d901b3a4da78583907556674b50c6e23b8a2b83c6286b53"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-content-audit-final.json",
+      "sha256": "1f6f6ad43421a26d222053a354cd76b824c4ce1b0281ff3fd1df7d7d0d76ce4f"
+    }
+  ]
+}

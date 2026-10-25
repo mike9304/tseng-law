@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-26T01:08:35.256168+09:00",
+  "changes": [
+    {
+      "file": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "initial_sha256": "92c572987cbc3c03eeb934fbfd2de6cf42d7e4b2e441cc39fb009c0e11f0e71a",
+      "current_sha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f"
+    }
+  ],
+  "readInFullAfterAutomaticRefresh": true,
+  "effect": "Only the automatic 01:04 LESSONS aggregation changed. Read full current file; no new finding affecting this review. Manuscripts, author record, all 9 canonical sources and other rules unchanged."
+}

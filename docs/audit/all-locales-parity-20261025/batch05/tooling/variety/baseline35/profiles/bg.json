@@ -1,0 +1,54 @@
+{
+  "review_status": "AI-authored neutral contract; root review/install pending",
+  "join_hyphens": true,
+  "canonical_abbreviations": true,
+  "question_pattern": "[?？؟]\\s*[\\\"”’»›“«)]*$",
+  "provenance": "MULTILINGUAL-METHOD.md (batch03); audit tests/fixtures-batch03.json frozen before profile implementation",
+  "register": "Standard Bulgarian",
+  "abbreviations": [
+    "проф",
+    "доц",
+    "акад",
+    "чл",
+    "ал",
+    "т",
+    "стр",
+    "бр",
+    "г",
+    "гр",
+    "ул",
+    "напр",
+    "т.е",
+    "т. е",
+    "т.н",
+    "т. н",
+    "др",
+    "лв",
+    "млн",
+    "ч",
+    "мин"
+  ],
+  "terminal_abbreviations": [
+    "т.н",
+    "т. н",
+    "др",
+    "лв"
+  ],
+  "context_terminal_abbreviations": {
+    "г": "\\d{4}\\s*$"
+  },
+  "ordinal_followers": "клас|класове|етаж|глава|точка|януари|февруари|март|април|май|юни|юли|август|септември|октомври|ноември|декември",
+  "additional_closing_quotes": "“",
+  "contrast_patterns": [
+    "(?i:\\bне\\b[^.!?\\n;;]{0,180}\\b(?:а|но)\\b)",
+    "(?i:\\bза\\s+разлика\\s+от\\b)",
+    "(?i:\\bвместо\\s+това\\b)"
+  ],
+  "caveat_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:обаче|въпреки\\s+това|все\\s+пак)\\b)",
+  "hypo_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:да\\s+предположим\\s*,?\\s*че|представете\\s+си)\\b)",
+  "formula_close_pattern": "(?i:тази\\s+статия\\s+(?:предоставя|съдържа)\\s+обща\\s+информация|нашата\\s+кантора\\s+може\\s+да\\s+помогне)",
+  "citation_pattern": "(?i:\\b(?:член|чл\\.)\\s*\\d+)",
+  "locale": "bg",
+  "directory": "columns-bg",
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:източници|официални\\s+източници|използвани\\s+източници)\\s*:?\\s*$)"
+}

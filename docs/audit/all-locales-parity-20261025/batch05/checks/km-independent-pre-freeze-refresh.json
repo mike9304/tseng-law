@@ -1,0 +1,66 @@
+{
+  "at": "2026-10-25T16:19:49.366954+00:00",
+  "phase": "Pre-freeze verification found automated shared LESSONS refresh; no manuscript change.",
+  "observedManifest": {
+    "at": "2026-10-25T16:13:34.860777+00:00",
+    "status": "R1_REQUEST_CHANGE_M01_validity_qualifier_in_704_body_and_FAQ1",
+    "mandatoryGroups": 1,
+    "optional": 2,
+    "manuscripts": [
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/704-taiwan-arc-first-application.md",
+        "sha256": "e7093b04429ae7e91ea0d981e625921bbbcb82ce4cb84ead5e28b01953be5809"
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+        "sha256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba"
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+        "sha256": "316892dfc981a0316b198b3e7a946eecd32c25b5499d9366a63e6ed6a5b2add1"
+      }
+    ],
+    "allInputsUnchanged": false,
+    "changedInputs": [
+      {
+        "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+        "before": "92c572987cbc3c03eeb934fbfd2de6cf42d7e4b2e441cc39fb009c0e11f0e71a",
+        "after": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f"
+      }
+    ],
+    "artifacts": [
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/km-independent.md",
+        "sha256": "8e01260e0c30078cdc5947794ddd9618196ba73fa3efcb70a7e8e6e6596b3117",
+        "bytes": 22085
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-independent-boundary-audit.json",
+        "sha256": "53172e0c5a0f459db920f019ef04776c3a71dfcbb8405d522c6df12f28d55c0c",
+        "bytes": 38074
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-independent-inputs.json",
+        "sha256": "b4210e039e4a64b121a82c712d35e817047ea8afa9d7e0c05f2dc8b7134fba11",
+        "bytes": 11752
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-independent-sentences.json",
+        "sha256": "470edf9c3133c182604bb65292f457fadb020269c201ccf189a909993daa4e92",
+        "bytes": 117785
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-independent-structure.json",
+        "sha256": "6b196c64c47d4a787b1892fe3081ccaeea83dd463d663b86976508401e19599d",
+        "bytes": 18524
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-independent-variety.json",
+        "sha256": "c9a852b24a3015a5e346cd49d4295aa50e53d1d4d81a23a80e2f28d1c001716d",
+        "bytes": 10140
+      }
+    ],
+    "scope": "Only own independent review output written; KM manuscripts and author unchanged."
+  },
+  "resolution": "Reread complete updated LESSONS.md; operative 25 lessons unchanged in substance, updated timestamp/example counts. No KM verdict change."
+}

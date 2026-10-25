@@ -1,0 +1,155 @@
+{
+  "recorded_at": "2026-10-25T15:24:51.550772+00:00",
+  "actual_cli_fault_injection": true,
+  "candidate_files_mutated": false,
+  "node": "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+  "invocations": 16,
+  "passed": 16,
+  "ok": true,
+  "results": [
+    {
+      "kind": "native_abbreviation_ambiguous",
+      "locale": "km",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: Khmer native abbreviation followed by prose has an ambiguous sentence boundary; reviewed segmentation required\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "reserved_marker",
+      "locale": "km",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: input contains reserved segmentation marker\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "reserved_marker",
+      "locale": "mn",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: input contains reserved segmentation marker\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "reserved_marker",
+      "locale": "sr",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: input contains reserved segmentation marker\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "reserved_marker",
+      "locale": "sl",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: input contains reserved segmentation marker\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "reserved_marker",
+      "locale": "lt",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: input contains reserved segmentation marker\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "reserved_marker",
+      "locale": "lv",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: input contains reserved segmentation marker\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "reserved_marker",
+      "locale": "et",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: input contains reserved segmentation marker\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "icu_locale_unavailable",
+      "locale": "km",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: Khmer dictionary segmentation unavailable: Command '['/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/bin/node', '-e', \"\\nconst fs = require('node:fs');\\nif (!Intl.Segmenter.supportedLocalesOf(['km']).length) throw Error('Khmer ICU unavailable');\\nconst segmenter = new Intl.Segmenter('km', {granularity: 'word'});\\nif (segmenter.resolvedOptions().locale !== 'km') throw Error('Khmer ICU locale fallback');\\n// Khmer spaces delimit phrases, not words. Keep phrase whitespace variants\\n// equivalent; dictionary-segment the unspaced text inside each phrase.\\nconst words = text => text.split(/\\\\p{White_Space}+/u).flatMap(part =>\\n  [...segmenter.segment(part)].filter(x => x.isWordLike).map(x => x.segment));\\nif (JSON.stringify(words('សៀវភៅខ្មៅ')) !== JSON.stringify(['សៀវភៅ', 'ខ្មៅ']))\\n  throw Error('Khmer dictionary capability probe differs; re-audit runtime');\\nconst input = JSON.parse(fs.readFileSync(0, 'utf8'));\\nprocess.stdout.write(JSON.stringify({tokens: input.map(words), locale: 'km',\\n  whitespace: 'Unicode_White_Space_phrase_chunks',\\n  node: process.versions.node, icu: process.versions.icu, unicode: process.versions.unicode}));\\n\"]' returned non-zero exit status 1.\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "icu_resolved_locale_fallback",
+      "locale": "km",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: Khmer dictionary segmentation unavailable: Command '['/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/bin/node', '-e', \"\\nconst fs = require('node:fs');\\nif (!Intl.Segmenter.supportedLocalesOf(['km']).length) throw Error('Khmer ICU unavailable');\\nconst segmenter = new Intl.Segmenter('km', {granularity: 'word'});\\nif (segmenter.resolvedOptions().locale !== 'km') throw Error('Khmer ICU locale fallback');\\n// Khmer spaces delimit phrases, not words. Keep phrase whitespace variants\\n// equivalent; dictionary-segment the unspaced text inside each phrase.\\nconst words = text => text.split(/\\\\p{White_Space}+/u).flatMap(part =>\\n  [...segmenter.segment(part)].filter(x => x.isWordLike).map(x => x.segment));\\nif (JSON.stringify(words('សៀវភៅខ្មៅ')) !== JSON.stringify(['សៀវភៅ', 'ខ្មៅ']))\\n  throw Error('Khmer dictionary capability probe differs; re-audit runtime');\\nconst input = JSON.parse(fs.readFileSync(0, 'utf8'));\\nprocess.stdout.write(JSON.stringify({tokens: input.map(words), locale: 'km',\\n  whitespace: 'Unicode_White_Space_phrase_chunks',\\n  node: process.versions.node, icu: process.versions.icu, unicode: process.versions.unicode}));\\n\"]' returned non-zero exit status 1.\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "icu_dictionary_probe_differs",
+      "locale": "km",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: Khmer dictionary segmentation unavailable: Command '['/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/bin/node', '-e', \"\\nconst fs = require('node:fs');\\nif (!Intl.Segmenter.supportedLocalesOf(['km']).length) throw Error('Khmer ICU unavailable');\\nconst segmenter = new Intl.Segmenter('km', {granularity: 'word'});\\nif (segmenter.resolvedOptions().locale !== 'km') throw Error('Khmer ICU locale fallback');\\n// Khmer spaces delimit phrases, not words. Keep phrase whitespace variants\\n// equivalent; dictionary-segment the unspaced text inside each phrase.\\nconst words = text => text.split(/\\\\p{White_Space}+/u).flatMap(part =>\\n  [...segmenter.segment(part)].filter(x => x.isWordLike).map(x => x.segment));\\nif (JSON.stringify(words('សៀវភៅខ្មៅ')) !== JSON.stringify(['សៀវភៅ', 'ខ្មៅ']))\\n  throw Error('Khmer dictionary capability probe differs; re-audit runtime');\\nconst input = JSON.parse(fs.readFileSync(0, 'utf8'));\\nprocess.stdout.write(JSON.stringify({tokens: input.map(words), locale: 'km',\\n  whitespace: 'Unicode_White_Space_phrase_chunks',\\n  node: process.versions.node, icu: process.versions.icu, unicode: process.versions.unicode}));\\n\"]' returned non-zero exit status 1.\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "malformed_backend_output",
+      "locale": "km",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: Khmer dictionary segmentation unavailable: Expecting value: line 1 column 1 (char 0)\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "backend_nonzero_exit",
+      "locale": "km",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: Khmer dictionary segmentation unavailable: Command '['/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/bin/node', '-e', \"\\nconst fs = require('node:fs');\\nif (!Intl.Segmenter.supportedLocalesOf(['km']).length) throw Error('Khmer ICU unavailable');\\nconst segmenter = new Intl.Segmenter('km', {granularity: 'word'});\\nif (segmenter.resolvedOptions().locale !== 'km') throw Error('Khmer ICU locale fallback');\\n// Khmer spaces delimit phrases, not words. Keep phrase whitespace variants\\n// equivalent; dictionary-segment the unspaced text inside each phrase.\\nconst words = text => text.split(/\\\\p{White_Space}+/u).flatMap(part =>\\n  [...segmenter.segment(part)].filter(x => x.isWordLike).map(x => x.segment));\\nif (JSON.stringify(words('សៀវភៅខ្មៅ')) !== JSON.stringify(['សៀវភៅ', 'ខ្មៅ']))\\n  throw Error('Khmer dictionary capability probe differs; re-audit runtime');\\nconst input = JSON.parse(fs.readFileSync(0, 'utf8'));\\nprocess.stdout.write(JSON.stringify({tokens: input.map(words), locale: 'km',\\n  whitespace: 'Unicode_White_Space_phrase_chunks',\\n  node: process.versions.node, icu: process.versions.icu, unicode: process.versions.unicode}));\\n\"]' returned non-zero exit status 7.\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "missing_profile",
+      "locale": "sr",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: missing or invalid language profile: /Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/isolated/profiles/sr.json\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "invalid_profile_json",
+      "locale": "km",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: missing or invalid language profile: /Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/isolated/profiles/km.json\n",
+      "stderr": "",
+      "ok": true
+    },
+    {
+      "kind": "profile_locale_mismatch",
+      "locale": "km",
+      "expected_exit": 2,
+      "exit_code": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/neutral.km.md: ERROR measurement unavailable: profile locale mismatch: /Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tmphnrc1v_x/isolated/profiles/km.json\n",
+      "stderr": "",
+      "ok": true
+    }
+  ]
+}

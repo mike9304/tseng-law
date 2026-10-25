@@ -1,0 +1,234 @@
+{
+  "at": "2026-10-25T15:43:11.449Z",
+  "scope": "Local metadata/URL/format audit, not legal or rendered-site approval",
+  "files": [
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "sha256": "15229f8e599464d507976f6d91818d441c6a1c8be1448af31f79fd79b8730dac",
+      "bytes": 11816,
+      "metadata": {
+        "title": "Prvi ARC na Tajvanu: datum prijave, dokumenti i preuzimanje",
+        "seoTitle": "Prvi tajvanski ARC: rok, potrebni dokumenti i takse",
+        "summary": "Rok za prvi ARC računa se od narednog dana po ulasku sa boravišnom vizom i odobrenjem boravka, ili od izdavanja te vize na Tajvanu. Dokazi i postupak zavise od osnova boravka.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "read_time": "7 min čitanja",
+        "categories": [
+          "Pravne informacije o Tajvanu"
+        ],
+        "topic": "visa",
+        "tags": [
+          "prvi ARC",
+          "boravišna viza",
+          "NIA",
+          "dokumenti za boravak",
+          "Tajvan"
+        ],
+        "audience": [
+          "sr"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "featured_image_alt": "Jednobojna putna knjižica, fascikla sa dokumentima i mala prazna kartica na stolu",
+        "featured_image_caption": "Izmišljeni prizor",
+        "faq": [
+          {
+            "q": "Od kog dana računam rok za prvi ARC?",
+            "a": "Posle ulaska sa boravišnom vizom i odobrenjem boravka, zahtev se podnosi u roku od 30 dana od narednog dana po ulasku. Ako je boravišna viza izdata tek na Tajvanu, BOCA računa 30 dana od njenog izdavanja. Neposredna prijava nakon ulaska bez vize ili sa vizom za posetu zavisi od uslova i rokova konkretne kategorije."
+          },
+          {
+            "q": "Kolika je taksa za prvi ARC?",
+            "a": "Osnovna taksa iznosi 1.000 novih tajvanskih dolara za svaku odobrenu godinu; period kraći od godine naplaćuje se kao cela godina. U odgovarajućim postupcima posle ulaska bez vize ili sa vizom za posetu dodaje se 2.200 dolara. Propisi predviđaju određena umanjenja i oslobođenja."
+          },
+          {
+            "q": "Da li smem da radim čim dobijem ARC?",
+            "a": "Rad je moguć samo ako stvarni posao i poslodavca obuhvata važeća dozvola ili primenljivo zakonsko oslobođenje. ARC potvrđuje odobren boravak, ali sam ne daje neograničeno pravo na rad."
+          }
+        ]
+      },
+      "officialUrls": 13,
+      "missingENUrls": [],
+      "bodyUrlsMissingFromSources": [],
+      "removedOfficialUrls": [],
+      "internalLinks": [
+        {
+          "label": "radu, studijama i porodici",
+          "url": "/sr/columns/taiwan-visa-residence-work-study-family",
+          "exists": true
+        },
+        {
+          "label": "tekst o boravku preko tajvanskog supružnika, na engleskom",
+          "url": "/en/columns/taiwan-foreign-spouse-residence",
+          "exists": true
+        },
+        {
+          "label": "vodič za produženje i promene ARC-a",
+          "url": "/sr/columns/taiwan-arc-renewal-changes-reentry",
+          "exists": true
+        }
+      ],
+      "imageMatchesEN": true,
+      "imageExists": true,
+      "bodyH1": false,
+      "bold": false,
+      "manualBidi": 0,
+      "htmlWrappers": false,
+      "errors": []
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "9057c2a83ef6e71ab6f576702943fdf604ae345b627b94d98986baf4a6b7d6b2",
+      "bytes": 12246,
+      "metadata": {
+        "title": "Boravak na Tajvanu zbog rada, studija ili porodice",
+        "seoTitle": "Tajvan: viza i boravak za rad, studije i porodicu",
+        "summary": "Pravo na prijavu boravka zavisi od posla ili studija, statusa člana porodice i načina ulaska. Za neke stručnjake postoji neposredan zahtev NIA-i, dok studentski putevi imaju drugačije uslove.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "read_time": "7 min čitanja",
+        "categories": [
+          "Pravne informacije o Tajvanu"
+        ],
+        "topic": "visa",
+        "tags": [
+          "boravak na Tajvanu",
+          "radna dozvola",
+          "studentska viza",
+          "mandarinski",
+          "spajanje porodice"
+        ],
+        "audience": [
+          "sr"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "featured_image_alt": "Zatvoren laptop, knjige i dve šolje pored jednobojne putne knjižice",
+        "featured_image_caption": "Izmišljeni prizor",
+        "faq": [
+          {
+            "q": "Mogu li posle ulaska bez vize da tražim boravak na Tajvanu?",
+            "a": "Član 16 Zakona o stranim stručnjacima dopušta neposrednu prijavu NIA-i stručnjacima koji imaju odgovarajuću radnu dozvolu ili oslobođenje i određenim članovima porodice pod propisanim uslovima. I korišćeni režim ulaska mora biti prihvatljiv. Redovne studije i učenje mandarinskog imaju drugačije uslove ulaska i vize."
+          },
+          {
+            "q": "Koliko dugo moram da učim mandarinski pre prijave za ARC?",
+            "a": "Potrebni su odgovarajuća viza za posetu radi učenja, završena četiri meseca u priznatom centru pri kvalifikovanoj visokoškolskoj ustanovi i upis za najmanje još tri meseca. Uslovi obuhvataju i broj časova, prisustvo i dokaze. Sama prijava na kurs nije dovoljna."
+          },
+          {
+            "q": "Može li svaki nosilac ARC-a da bude osnov boravka supružnika?",
+            "a": "Podobnost zavisi od državljanstva i boravišne kategorije člana porodice na Tajvanu, porodičnog odnosa i statusa ulaska podnosioca. Pravila za porodicu stranog stručnjaka i supružnika tajvanskog državljanina imaju različite uslove. Za pojedine kategorije postoje zakonska isključenja."
+          }
+        ]
+      },
+      "officialUrls": 15,
+      "missingENUrls": [],
+      "bodyUrlsMissingFromSources": [],
+      "removedOfficialUrls": [],
+      "internalLinks": [
+        {
+          "label": "tekstu o tajvanskom supružniku, na engleskom",
+          "url": "/en/columns/taiwan-foreign-spouse-residence",
+          "exists": true
+        },
+        {
+          "label": "vodiču za Gold Card na engleskom",
+          "url": "/en/columns/taiwan-employment-gold-card",
+          "exists": true
+        },
+        {
+          "label": "prvi zahtev za ARC",
+          "url": "/sr/columns/taiwan-arc-first-application",
+          "exists": true
+        },
+        {
+          "label": "postupak promene ili produženja",
+          "url": "/sr/columns/taiwan-arc-renewal-changes-reentry",
+          "exists": true
+        }
+      ],
+      "imageMatchesEN": true,
+      "imageExists": true,
+      "bodyH1": false,
+      "bold": false,
+      "manualBidi": 0,
+      "htmlWrappers": false,
+      "errors": []
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1e5a3547ce8437f9ddb4f3a3b61dd62261a4a1dccaa63683d43d9692b73331d9",
+      "bytes": 15018,
+      "metadata": {
+        "title": "Produženje ARC-a, promena adrese i povratak na Tajvan",
+        "seoTitle": "Tajvanski ARC: produženje, promene i ponovni ulazak",
+        "summary": "Promena adrese ili mesta rada traži blagovremenu prijavu NIA-i. Prestanak osnova boravka može pokrenuti postupak pre isteka kartice, a putovanje zahteva dokumente za stvarni datum povratka.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "read_time": "8 min čitanja",
+        "categories": [
+          "Pravne informacije o Tajvanu"
+        ],
+        "topic": "visa",
+        "tags": [
+          "produženje ARC-a",
+          "promena adrese",
+          "osnov boravka",
+          "ponovni ulazak",
+          "izgubljena kartica"
+        ],
+        "audience": [
+          "sr"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "featured_image_alt": "Prazan planer, jednobojna putna knjižica, mala kartica i ključevi stana na stolu",
+        "featured_image_caption": "Izmišljeni prizor",
+        "faq": [
+          {
+            "q": "Kada mogu da podnesem zahtev za produženje ARC-a?",
+            "a": "Opšti zahtev podnosi se tokom tri meseca pre isteka odobrenog boravka. Obnova Gold Card-a i odgovarajuće produženje za preduzetnika koji nastavlja posao na Tajvanu imaju zasebne periode od četiri meseca pre isteka. To nisu dodatni periodi dopuštenog boravka posle isteka."
+          },
+          {
+            "q": "Kada se prijavljuje nova adresa ili mesto rada?",
+            "a": "Zahtev za registraciju promene mora se podneti NIA-i u roku od 30 dana od narednog dana po promeni. Novi poslodavac može zahtevati posebno odobrenje rada, a novi osnov boravka zasebnu prijavu. Ažuriranje adrese ili mesta rada ne završava te postupke."
+          },
+          {
+            "q": "Mogu li da se vratim sa potvrdom da sam tražio produženje?",
+            "a": "Potvrda prijave ne zamenjuje potrebne putne isprave i dozvole. Ako nova kartica neće biti spremna pre puta, pre odlaska proverite sa NIA koji dokument pokriva povratak. Važenje pasoša, boravišni status i pravo ponovnog ulaska proveravaju se prema stvarnim datumima putovanja."
+          }
+        ]
+      },
+      "officialUrls": 15,
+      "missingENUrls": [],
+      "bodyUrlsMissingFromSources": [],
+      "removedOfficialUrls": [],
+      "internalLinks": [
+        {
+          "label": "vodič za prvi ARC",
+          "url": "/sr/columns/taiwan-arc-first-application",
+          "exists": true
+        },
+        {
+          "label": "pregled rada, studija i porodice",
+          "url": "/sr/columns/taiwan-visa-residence-work-study-family",
+          "exists": true
+        },
+        {
+          "label": "Stalni boravak i APRC, na engleskom",
+          "url": "/en/columns/taiwan-permanent-residence-aprc",
+          "exists": true
+        }
+      ],
+      "imageMatchesEN": true,
+      "imageExists": true,
+      "bodyH1": false,
+      "bold": false,
+      "manualBidi": 0,
+      "htmlWrappers": false,
+      "errors": []
+    }
+  ],
+  "errors": []
+}

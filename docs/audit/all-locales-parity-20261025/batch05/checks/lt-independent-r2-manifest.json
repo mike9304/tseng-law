@@ -1,0 +1,51 @@
+{
+  "finalized_at": "2026-10-25T16:02:08.393916+00:00",
+  "scope": "Two accepted optional changes, same manuscript boundaries elsewhere; original review and manifest retained",
+  "remaining_mandatory_findings": 0,
+  "O1": "resolved",
+  "O2": "resolved",
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lt-independent-r2.json",
+      "sha256": "62ef05fad61524cea72e515f3a7fe1c96b816f9d01a1a9d6db7c238d8a06d385",
+      "bytes": 11600
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/lt-independent.md",
+      "sha256": "54845d89260dfbd1cba45e0fa8c78e495929d993c5ce36a6e6d5855e819817a2",
+      "bytes": 21219
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lt-independent-manifest.json",
+      "sha256": "d1e3049cc38f6a860012dab6249947f75adfa917e05b9cdcc212f7f1ce099407",
+      "bytes": 13444
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/lt-author.md",
+      "sha256": "c66e8d727a73d6949d1b5d3da4960018fdeaa96e8db753da6db389cb3e293f0c",
+      "bytes": 22978
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lt-options-edits.json",
+      "sha256": "114fd3a6a94c884ae3c767a690ee0296ba666f7cf00070a0451641b6e2f2a764",
+      "bytes": 2134
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/704-taiwan-arc-first-application.md",
+      "sha256": "f46f3545e94950ba11cb30f118689721608e6f9593a088a40b10f3b8618a35a9",
+      "bytes": 14236
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "33b0cc65e3720963cac03710365c44c3c8a88a953309b38314680bca963c14c5",
+      "bytes": 14443
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4b2d935fa2496bf95b6e304f976e937221a6ab696ab9aa7cf526e2811c7cf1c6",
+      "bytes": 17555
+    }
+  ],
+  "human_native_or_lawyer_approval": false,
+  "render_or_publication_verified": false
+}

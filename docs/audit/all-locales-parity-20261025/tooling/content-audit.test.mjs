@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, readFileSync, readdirSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
@@ -113,4 +113,69 @@ test('malformed YAML is rejected instead of accepting fields found by a regex', 
   const result = await auditBatch(options);
   assert.ok(result.files[0].errors.some((item) => item.code === 'frontmatter-parse'));
   assert.equal(result.automatedStatus, 'FAIL');
+});
+
+
+test('ordinary Portuguese and Spanish todo in prose and titles is not an unfinished marker', async (t) => {
+  const options = fixture(t, (raw) => raw.replace(/^title:.*$/m, 'title: "Todo o arquivo foi lido"') + '\nO arquivo reúne todo o material. Todo documento tem um número. El informe explica todo el recorrido.\n');
+  const result = await auditBatch(options);
+  assert.equal(result.files[0].errors.filter((item) => item.code === 'placeholder').length, 0);
+});
+
+test('explicit TODO markers and existing unfinished text remain errors', async (t) => {
+  for (const text of ['TODO', 'Draft TODO remains.', 'todo: add a conclusion', '[todo]', 'TBD', 'lorem ipsum', '[TRANSLATE]', '待補充']) {
+    const result = await auditBatch(fixture(t, (raw) => raw + '\n' + text + '\n'));
+    assert.ok(result.files[0].errors.some((item) => item.code === 'placeholder'), text);
+  }
+});
+
+test('explicit legacy pages resolve without treating their cross-language label or meaning as approved', async (t) => {
+  for (const href of ['/en/contact', '/ko/contact', '/zh-hant/contact', '/ja/contact', '/en/about', '/de/contact']) {
+    const result = await auditBatch(fixture(t, (raw) => `${raw}\n[Contact information in its destination language](${href})\n`));
+    assert.ok(!result.files[0].errors.some((item) => item.code === 'internal-link-missing' && item.href === href), href);
+    assert.ok(result.files[0].reviews.some((item) => item.code === 'cross-language-link' && item.href === href), href);
+    assert.equal(result.semanticStatus, 'REVIEW_REQUIRED');
+    assert.equal(result.publicationReady, false);
+  }
+});
+
+test('unregistered catch-all paths, extra segments and unsupported locales still fail', async (t) => {
+  for (const href of ['/en/nonexistent', '/en/contact/nonexistent', '/en/Contact', '/ja/nonexistent', '/de/nonexistent', '/zz/contact']) {
+    const result = await auditBatch(fixture(t, (raw) => `${raw}\n[Unknown page](${href})\n`));
+    assert.ok(result.files[0].errors.some((item) => item.code === 'internal-link-missing' && item.href === href), href);
+  }
+});
+
+function legacyContractFixture(t, transform) {
+  const root = mkdtempSync(path.join(tmpdir(), 'column-legacy-contract-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  const localApp = path.join(root, 'src/app/[locale]');
+  mkdirSync(path.join(localApp, '(legacy)'), { recursive: true });
+  mkdirSync(path.join(localApp, '[[...slug]]'), { recursive: true });
+  for (const name of ['lib', 'data']) symlinkSync(path.join(repoRoot, 'src', name), path.join(root, 'src', name));
+  symlinkSync(path.join(repoRoot, 'public'), path.join(root, 'public'));
+  const originalLegacy = path.join(repoRoot, 'src/app/[locale]/(legacy)');
+  for (const name of readdirSync(originalLegacy)) {
+    if (name !== 'index.tsx') symlinkSync(path.join(originalLegacy, name), path.join(localApp, '(legacy)', name));
+  }
+  writeFileSync(path.join(localApp, '(legacy)/index.tsx'), transform(readFileSync(path.join(originalLegacy, 'index.tsx'), 'utf8')));
+  writeFileSync(path.join(localApp, '[[...slug]]/page.tsx'), readFileSync(path.join(repoRoot, 'src/app/[locale]/[[...slug]]/page.tsx')));
+  return root;
+}
+
+test('legacy resolution follows the render registration rather than a contact allowlist or metadata-only case', async (t) => {
+  const changedRoot = legacyContractFixture(t, (raw) => raw.replace("case 'contact':\n      return <ContactLegacyPage", "case 'fixture-contact':\n      return <ContactLegacyPage"));
+  const options = fixture(t, (raw) => `${raw}\n[Registered destination](/en/fixture-contact)\n[Metadata alone](/en/contact)\n[Outside the Japanese static policy](/ja/fixture-contact)\n`);
+  const result = await auditBatch({ ...options, repoRoot: changedRoot });
+  const missing = result.files[0].errors.filter((item) => item.code === 'internal-link-missing');
+  assert.ok(!missing.some((item) => item.href === '/en/fixture-contact'));
+  assert.ok(missing.some((item) => item.href === '/en/contact'));
+  assert.ok(missing.some((item) => item.href === '/ja/fixture-contact'));
+});
+
+test('a literal legacy case returning null is not an available page', async (t) => {
+  const changedRoot = legacyContractFixture(t, (raw) => raw.replace('return <ContactLegacyPage locale={locale} />;', 'return null;'));
+  const options = fixture(t, (raw) => `${raw}\n[No rendered page](/en/contact)\n`);
+  const result = await auditBatch({ ...options, repoRoot: changedRoot });
+  assert.ok(result.files[0].errors.some((item) => item.code === 'internal-link-missing' && item.href === '/en/contact'));
 });

@@ -1,0 +1,285 @@
+{
+  "checked_at": "2026-10-25T15:47:04.123Z",
+  "method": "gray-matter parse, exact fields/image existence, Markdown URL set and explicit route filesystem resolution; no HTTP/render/deployment claim",
+  "repo": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "batch": "/Users/son7/tseng-all-language-columns-20261025/batch05",
+  "node": "v24.14.1",
+  "results": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/704-taiwan-arc-first-application.md",
+      "sha256": "51188308b2cc93faedf23524d48597d0da663229893ed7f1c0b447babc2e444e",
+      "fields": {
+        "title": "Pirmoji ARC Taivane: prašymo terminas, dokumentai ir kortelės atsiėmimas",
+        "seoTitle": "Pirmoji Taivano ARC: terminas, dokumentai ir mokestis",
+        "summary": "Su gyventojo viza atvykęs ir leidimą gyventi gavęs užsienietis turi prašyti ARC per 30 dienų nuo kitos dienos po atvykimo. Taivane išduotai gyventojo vizai taikoma kita termino pradžia, o atvykus be vizos pirmiausia reikia nustatyti teisę kreiptis dėl gyvenimo.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026 m. spalio 26 d.",
+        "read_time": "7 min. skaitymo",
+        "categories": [
+          "Teisinė informacija apie Taivaną"
+        ],
+        "topic": "visa",
+        "tags": [
+          "Taivano ARC",
+          "pirmas prašymas",
+          "gyventojo viza",
+          "NIA",
+          "užsieniečių gyvenimas"
+        ],
+        "audience": [
+          "lt"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "featured_image_alt": "Vienspalvė kelionės dokumento knygelė, dokumentų aplankas ir maža tuščia kortelė ant prašymui ruošiamo stalo.",
+        "featured_image_caption": "Išgalvota scena",
+        "faq": [
+          {
+            "q": "Nuo kada skaičiuojamas pirmosios ARC prašymo terminas?",
+            "a": "Atvykus su gyventojo viza ir gavus leidimą gyventi, 30 dienų skaičiuojama nuo kitos dienos po atvykimo. Jei gyventojo viza išduota jau atvykus į Taivaną, BOCA nurodo skaičiuoti nuo jos išdavimo dienos. Tiesiogiai dėl gyvenimo besikreipiantis lankytojas turi atitikti savo kategorijos tinkamumo ir pateikimo sąlygas."
+          },
+          {
+            "q": "Kiek kainuoja pirmoji ARC?",
+            "a": "Įprastas mokestis yra NT$1,000 už kiekvienus patvirtinto galiojimo metus; trumpesnis nei metų laikotarpis apmokestinamas kaip metai. Atitinkamoms paraiškoms po bevizio atvykimo arba atvykimo su lankytojo viza taikomas papildomas NT$2,200 mokestis. Įstatyme numatytos konkrečios lengvatos ir išimtys."
+          },
+          {
+            "q": "Ar gavęs ARC galiu pradėti dirbti?",
+            "a": "Tik jeigu taikomas darbo leidimas arba teisės aktuose nustatyta išimtis apima tikrąjį darbą ir darbdavį. ARC patvirtina leidimą gyventi, tačiau savaime nesuteikia neribotos teisės dirbti."
+          }
+        ]
+      },
+      "body_h2": [
+        "Taivane išduotos vizos data",
+        "Dokumentai pagal gyvenimo pagrindą",
+        "Užsienyje išduoti dokumentai",
+        "Prašymo pateikimas ir trūkstami dokumentai",
+        "Mokestis ir patvirtintas laikotarpis",
+        "Nagrinėjimas, mokėjimas ir kortelės gavimas",
+        "Oficialūs šaltiniai"
+      ],
+      "body_table_rows": 5,
+      "internal_links": [
+        {
+          "label": "atskirame straipsnyje",
+          "url": "/lt/columns/taiwan-visa-residence-work-study-family",
+          "exists_in_release": false,
+          "exists_in_batch": true,
+          "source_paths": [
+            "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md"
+          ]
+        },
+        {
+          "label": "ARC pratęsimo ir pakeitimų straipsnyje",
+          "url": "/lt/columns/taiwan-arc-renewal-changes-reentry",
+          "exists_in_release": false,
+          "exists_in_batch": true,
+          "source_paths": [
+            "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md"
+          ]
+        }
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "exists": true
+      },
+      "official_inline_count": 15,
+      "official_tail_count": 15,
+      "inline_sources_absent_from_tail": [],
+      "issues": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "ca974db0271c49c33ac808f095e8c7708ad89e205828e7ce8b2dedef14048bc9",
+      "fields": {
+        "title": "Gyvenimas Taivane dėl darbo, studijų ar šeimos: nuo kurios procedūros pradėti",
+        "seoTitle": "Taivano viza ir gyvenimas dėl darbo, studijų ar šeimos",
+        "summary": "Gyvenimo Taivane pagrindą lemia numatoma veikla, kviečiančio šeimos nario statusas ir atvykimo būdas. Specialistui tinkantis bevizis atvykimas gali užkirsti kelią įprastam studento prašymui jau Taivane.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026 m. spalio 26 d.",
+        "read_time": "7 min. skaitymo",
+        "categories": [
+          "Teisinė informacija apie Taivaną"
+        ],
+        "topic": "visa",
+        "tags": [
+          "Taivano viza",
+          "darbas Taivane",
+          "studijos Taivane",
+          "mandarinų kalba",
+          "šeimos susijungimas"
+        ],
+        "audience": [
+          "lt"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "featured_image_alt": "Uždarytas nešiojamasis kompiuteris, knygos ir du puodeliai šalia vienspalvės kelionės dokumento knygelės.",
+        "featured_image_caption": "Išgalvota scena",
+        "faq": [
+          {
+            "q": "Ar galima prašyti leidimo gyventi atvykus į Taivaną be vizos?",
+            "a": "Užsienio specialistų įstatymo 16 straipsnis leidžia reikalavimus atitinkantiems specialistams, turintiems darbo leidimą arba taikomą išimtį, ir tam tikriems šeimos nariams tiesiogiai kreiptis į NIA. Svarbi ir konkreti atvykimo programa. Įprastoms studijoms pagal laipsnį suteikiančią programą bei mandarinų kalbos mokymuisi taikomos kitos atvykimo sąlygos."
+          },
+          {
+            "q": "Kiek laiko reikia mokytis mandarinų kalbos prieš prašant ARC?",
+            "a": "Reikia tinkamos mokymosi tikslo lankytojo vizos, keturių baigtų mokymosi mėnesių reikalavimus atitinkančiame universiteto kalbų centre ir registracijos bent trims tolesniems mėnesiams. Prašymui taip pat svarbus pamokų skaičius, lankomumas ir pagrindžiantys dokumentai. Vien registracijos į kursus nepakanka."
+          },
+          {
+            "q": "Ar kiekvienas ARC turėtojas gali atsivežti sutuoktinį gyventi į Taivaną?",
+            "a": "Galimybė priklauso nuo kviečiančio asmens pilietybės bei gyvenimo kategorijos, šeimos ryšio ir atvykstančio asmens statuso. Užsienio specialisto šeimai ir Taivano piliečio sutuoktiniui nustatytos skirtingos sąlygos, o kai kurioms kviečiančių asmenų kategorijoms taikomos įstatymo išimtys."
+          }
+        ]
+      },
+      "body_h2": [
+        "Lankytojo buvimo laikas ir leidimas gyventi",
+        "Darbo pasiūlymas, leidimas ir gyvenimo prašymas",
+        "Studijos ir kalbos kursai",
+        "Sutuoktinis arba vienas iš tėvų Taivane",
+        "„Gold Card“, verslo steigimas ir ilgesnis apsilankymas",
+        "Oficialūs šaltiniai"
+      ],
+      "body_table_rows": 0,
+      "internal_links": [
+        {
+          "label": "straipsnyje apie gyvenimą su Taivano piliečiu sutuoktiniu (anglų kalba)",
+          "url": "/en/columns/taiwan-foreign-spouse-residence",
+          "exists_in_release": true,
+          "exists_in_batch": false,
+          "source_paths": [
+            "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/028-taiwan-foreign-spouse-residence.md"
+          ]
+        },
+        {
+          "label": "atskirame straipsnyje anglų kalba",
+          "url": "/en/columns/taiwan-employment-gold-card",
+          "exists_in_release": true,
+          "exists_in_batch": false,
+          "source_paths": [
+            "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/027-taiwan-employment-gold-card.md"
+          ]
+        },
+        {
+          "label": "pirmosios ARC straipsnyje",
+          "url": "/lt/columns/taiwan-arc-first-application",
+          "exists_in_release": false,
+          "exists_in_batch": true,
+          "source_paths": [
+            "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/704-taiwan-arc-first-application.md"
+          ]
+        },
+        {
+          "label": "atskiro pakeitimo arba pratęsimo prašymo",
+          "url": "/lt/columns/taiwan-arc-renewal-changes-reentry",
+          "exists_in_release": false,
+          "exists_in_batch": true,
+          "source_paths": [
+            "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md"
+          ]
+        }
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "exists": true
+      },
+      "official_inline_count": 15,
+      "official_tail_count": 15,
+      "inline_sources_absent_from_tail": [],
+      "issues": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4b2d935fa2496bf95b6e304f976e937221a6ab696ab9aa7cf526e2811c7cf1c6",
+      "fields": {
+        "title": "ARC pratęsimas ir pakeitimai: persikraustymas, darbo pabaiga ir grįžimas į Taivaną",
+        "seoTitle": "Taivano ARC pratęsimas, duomenų keitimas ir pakartotinis atvykimas",
+        "summary": "Prašymo terminas gali ateiti anksčiau už ARC galiojimo pabaigą. Adreso, darbovietės ar gyvenimo pagrindo pasikeitimai skaičiuojami nuo skirtingų datų, o kelionei reikia patikrinti grįžimui tinkamus dokumentus.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026 m. spalio 26 d.",
+        "read_time": "8 min. skaitymo",
+        "categories": [
+          "Teisinė informacija apie Taivaną"
+        ],
+        "topic": "visa",
+        "tags": [
+          "ARC pratęsimas",
+          "adreso pakeitimas",
+          "darbovietės pakeitimas",
+          "pakartotinis atvykimas",
+          "prarasta ARC"
+        ],
+        "audience": [
+          "lt"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "featured_image_alt": "Tuščia planavimo užrašinė, vienspalvė kelionės dokumento knygelė, maža kortelė ir namų raktai ant stalo.",
+        "featured_image_caption": "Išgalvota scena",
+        "faq": [
+          {
+            "q": "Kada galima pateikti prašymą pratęsti ARC?",
+            "a": "Įprastą prašymą galima pateikti per tris mėnesius iki leidimo gyventi galiojimo pabaigos, kol jis dar galioja. „Gold Card“ atnaujinimui ir reikalavimus atitinkančiam verslininkui, tęsiančiam verslą Taivane, numatyti atskiri keturių mėnesių laikotarpiai prieš galiojimo pabaigą. Tai išankstinio pateikimo laikotarpiai, o ne laikas pasibaigus leidimui."
+          },
+          {
+            "q": "Per kiek laiko reikia pranešti apie persikraustymą ar darbovietės pasikeitimą?",
+            "a": "Prašymą įregistruoti pakeitimą NIA reikia pateikti per 30 dienų, skaičiuojamų nuo kitos dienos po pasikeitimo. Naujam darbui gali reikėti ir atitinkamo darbo leidimo, o pasikeitus gyvenimo pagrindui — atskiro prašymo. Adreso ar darbovietės duomenų pakeitimas šių procedūrų neatstoja."
+          },
+          {
+            "q": "Ar galima grįžti į Taivaną su ARC pratęsimo prašymo kvitu?",
+            "a": "Kvitas nepakeičia kelionei reikalingų dokumentų. Jei naujos kortelės dar laukiama, prieš išvykstant reikia su NIA išsiaiškinti, kokiu dokumentu bus galima grįžti. Pasas, gyvenimo statusas ir pakartotinio atvykimo leidimas turi tikti numatytai kelionei."
+          }
+        ]
+      },
+      "body_h2": [
+        "Nuo kurios dienos skaičiuojamas terminas",
+        "Kai darbas, studijos ar šeimos pagrindas tęsiasi",
+        "Persikraustymas ir naujas darbdavys",
+        "Pasibaigus ankstesniam gyvenimo pagrindui",
+        "Naujas pasas ir prarasta kortelė",
+        "Kelionė, kol prašymas dar nagrinėjamas",
+        "Oficialūs šaltiniai"
+      ],
+      "body_table_rows": 6,
+      "internal_links": [
+        {
+          "label": "ARC gavimo straipsnyje",
+          "url": "/lt/columns/taiwan-arc-first-application",
+          "exists_in_release": false,
+          "exists_in_batch": true,
+          "source_paths": [
+            "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/704-taiwan-arc-first-application.md"
+          ]
+        },
+        {
+          "label": "darbo, studijų ir šeimos palyginime",
+          "url": "/lt/columns/taiwan-visa-residence-work-study-family",
+          "exists_in_release": false,
+          "exists_in_batch": true,
+          "source_paths": [
+            "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md"
+          ]
+        },
+        {
+          "label": "APRC straipsnyje anglų kalba",
+          "url": "/en/columns/taiwan-permanent-residence-aprc",
+          "exists_in_release": true,
+          "exists_in_batch": false,
+          "source_paths": [
+            "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/029-taiwan-permanent-residence-aprc.md"
+          ]
+        }
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "exists": true
+      },
+      "official_inline_count": 16,
+      "official_tail_count": 16,
+      "inline_sources_absent_from_tail": [],
+      "issues": []
+    }
+  ],
+  "issue_count": 0
+}

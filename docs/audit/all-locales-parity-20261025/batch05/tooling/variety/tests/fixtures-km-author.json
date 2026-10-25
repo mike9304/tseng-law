@@ -1,0 +1,57 @@
+{
+  "purpose": "Independent neutral Khmer sentence-boundary examples, fixed before any B5 KM manuscript is written. No legal subject, target manuscript, or manuscript score is included.",
+  "expectedConvention": "Expected strings retain terminal punctuation and quotation marks. Leading/trailing inter-sentence whitespace is excluded; internal ordinary spaces are preserved. These are semantic boundary expectations, not a claim that whitespace tokens are Khmer words.",
+  "nativeReviewStatus": "Author-generated model examples; not native-human validated. Review orthography independently before using them as a profile gate.",
+  "cases": [
+    {
+      "id": "km-neutral-01-khan",
+      "input": "បណ្ណាល័យបើកនៅព្រឹកនេះ។ សិស្សចូលអានសៀវភៅ។",
+      "expectedSentences": ["បណ្ណាល័យបើកនៅព្រឹកនេះ។", "សិស្សចូលអានសៀវភៅ។"]
+    },
+    {
+      "id": "km-neutral-02-bariyoosan",
+      "input": "ការអានបានបញ្ចប់៕ សិស្សរៀបសៀវភៅវិញ។",
+      "expectedSentences": ["ការអានបានបញ្ចប់៕", "សិស្សរៀបសៀវភៅវិញ។"]
+    },
+    {
+      "id": "km-neutral-03-colon",
+      "input": "គ្រូបានប្រាប់ថា៖ សៀវភៅថ្មីដាក់នៅលើតុ។ កុមារម្នាក់យកវាទៅអាន។",
+      "expectedSentences": ["គ្រូបានប្រាប់ថា៖ សៀវភៅថ្មីដាក់នៅលើតុ។", "កុមារម្នាក់យកវាទៅអាន។"]
+    },
+    {
+      "id": "km-neutral-04-etc",
+      "input": "សម្ភារៈដូចជា ខ្មៅដៃ សៀវភៅ បន្ទាត់ ។ល។ ត្រូវបានដាក់នៅលើតុ។ គ្រូចាប់ផ្តើមមេរៀន។",
+      "expectedSentences": ["សម្ភារៈដូចជា ខ្មៅដៃ សៀវភៅ បន្ទាត់ ។ល។ ត្រូវបានដាក់នៅលើតុ។", "គ្រូចាប់ផ្តើមមេរៀន។"]
+    },
+    {
+      "id": "km-neutral-05-quotation",
+      "input": "គ្រូនិយាយថា «ថ្ងៃនេះយើងអានរឿងខ្លី»។ សិស្សស្តាប់ដោយស្ងៀមស្ងាត់។",
+      "expectedSentences": ["គ្រូនិយាយថា «ថ្ងៃនេះយើងអានរឿងខ្លី»។", "សិស្សស្តាប់ដោយស្ងៀមស្ងាត់។"]
+    },
+    {
+      "id": "km-neutral-06-numbers",
+      "input": "បណ្ណាល័យបើកនៅម៉ោង ៨.៣០ ព្រឹក។ តុថ្មីមានប្រវែង 1.5 ម៉ែត្រ។",
+      "expectedSentences": ["បណ្ណាល័យបើកនៅម៉ោង ៨.៣០ ព្រឹក។", "តុថ្មីមានប្រវែង 1.5 ម៉ែត្រ។"]
+    },
+    {
+      "id": "km-neutral-07-latin-abbreviation",
+      "input": "គ្រូប្រើអក្សរកាត់ e.g. ក្នុងលំហាត់ភាសាអង់គ្លេស។ សិស្សចម្លងឧទាហរណ៍។",
+      "expectedSentences": ["គ្រូប្រើអក្សរកាត់ e.g. ក្នុងលំហាត់ភាសាអង់គ្លេស។", "សិស្សចម្លងឧទាហរណ៍។"]
+    },
+    {
+      "id": "km-neutral-08-no-space-after-stop",
+      "input": "សិស្សបិទសៀវភៅ។គ្រូសរសេរលើក្តារ។",
+      "expectedSentences": ["សិស្សបិទសៀវភៅ។", "គ្រូសរសេរលើក្តារ។"]
+    },
+    {
+      "id": "km-neutral-09-whitespace",
+      "input": "បណ្ណាល័យបើកនៅព្រឹកនេះ។   \nសិស្សមកអានសៀវភៅ។",
+      "expectedSentences": ["បណ្ណាល័យបើកនៅព្រឹកនេះ។", "សិស្សមកអានសៀវភៅ។"]
+    },
+    {
+      "id": "km-neutral-10-question-and-pdf",
+      "input": "តើសៀវភៅថ្មីនៅឯណា? វានៅលើធ្នើក្បែរបង្អួច។ ឯកសារ PDF មាននៅក្នុងកុំព្យូទ័រ។",
+      "expectedSentences": ["តើសៀវភៅថ្មីនៅឯណា?", "វានៅលើធ្នើក្បែរបង្អួច។", "ឯកសារ PDF មាននៅក្នុងកុំព្យូទ័រ។"]
+    }
+  ]
+}

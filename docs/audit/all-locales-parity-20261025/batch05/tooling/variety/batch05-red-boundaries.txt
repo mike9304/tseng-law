@@ -1,0 +1,1219 @@
+FFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF....FFFFFFF
+======================================================================
+ERROR: test_khmer_dictionary_runtime_and_real_unavailability (test_batch05.BatchFiveTests.test_khmer_dictionary_runtime_and_real_unavailability)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 127, in test_khmer_dictionary_runtime_and_real_unavailability
+    self.assertEqual(value['word_segmenter'], {'locale': 'km', 'node': '24.14.1', 'icu': '78.2', 'unicode': '17.0', 'whitespace': 'Unicode_White_Space_phrase_chunks'})
+                     ~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'word_segmenter'
+
+======================================================================
+FAIL: test_khmer_backend_failures_do_not_cache_invalid_results (test_batch05.BatchFiveTests.test_khmer_backend_failures_do_not_cache_invalid_results) (index=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 151, in test_khmer_backend_failures_do_not_cache_invalid_results
+    with self.assertRaises(multilingual.MeasurementError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MeasurementError not raised
+
+======================================================================
+FAIL: test_khmer_backend_failures_do_not_cache_invalid_results (test_batch05.BatchFiveTests.test_khmer_backend_failures_do_not_cache_invalid_results) (index=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 151, in test_khmer_backend_failures_do_not_cache_invalid_results
+    with self.assertRaises(multilingual.MeasurementError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MeasurementError not raised
+
+======================================================================
+FAIL: test_khmer_backend_failures_do_not_cache_invalid_results (test_batch05.BatchFiveTests.test_khmer_backend_failures_do_not_cache_invalid_results) (index=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 151, in test_khmer_backend_failures_do_not_cache_invalid_results
+    with self.assertRaises(multilingual.MeasurementError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MeasurementError not raised
+
+======================================================================
+FAIL: test_khmer_backend_failures_do_not_cache_invalid_results (test_batch05.BatchFiveTests.test_khmer_backend_failures_do_not_cache_invalid_results) (index=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 151, in test_khmer_backend_failures_do_not_cache_invalid_results
+    with self.assertRaises(multilingual.MeasurementError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MeasurementError not raised
+
+======================================================================
+FAIL: test_khmer_backend_failures_do_not_cache_invalid_results (test_batch05.BatchFiveTests.test_khmer_backend_failures_do_not_cache_invalid_results)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 155, in test_khmer_backend_failures_do_not_cache_invalid_results
+    with self.assertRaises(multilingual.MeasurementError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MeasurementError not raised
+
+======================================================================
+FAIL: test_khmer_separately_authored_boundaries_and_declared_unavailable_case (test_batch05.BatchFiveTests.test_khmer_separately_authored_boundaries_and_declared_unavailable_case) (id='km-neutral-04-etc')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 164, in test_khmer_separately_authored_boundaries_and_declared_unavailable_case
+    with self.assertRaises(multilingual.MeasurementError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: MeasurementError not raised
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='សៀវភៅ ប៊ិច ។ល។', form='NFC', space="' '", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅ ប៊ិច ។', 'ល។'] != ['សៀវភៅ ប៊ិច ។ល។']
+
+First differing element 0:
+'សៀវភៅ ប៊ិច ។'
+'សៀវភៅ ប៊ិច ។ល។'
+
+First list contains 1 additional elements.
+First extra element 1:
+'ល។'
+
+- ['សៀវភៅ ប៊ិច ។', 'ល។']
+?               ----
+
++ ['សៀវភៅ ប៊ិច ។ល។']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='សៀវភៅ ប៊ិច ។ល។', form='NFC', space="'\\xa0'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅ\xa0ប៊ិច\xa0។', 'ល។'] != ['សៀវភៅ\xa0ប៊ិច\xa0។ល។']
+
+First differing element 0:
+'សៀវភៅ\xa0ប៊ិច\xa0។'
+'សៀវភៅ\xa0ប៊ិច\xa0។ល។'
+
+First list contains 1 additional elements.
+First extra element 1:
+'ល។'
+
+- ['សៀវភៅ\xa0ប៊ិច\xa0។', 'ល។']
+?                     ----
+
++ ['សៀវភៅ\xa0ប៊ិច\xa0។ល។']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='សៀវភៅ ប៊ិច ។ល។', form='NFC', space="'\\u202f'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅ\u202fប៊ិច\u202f។', 'ល។'] != ['សៀវភៅ\u202fប៊ិច\u202f។ល។']
+
+First differing element 0:
+'សៀវភៅ\u202fប៊ិច\u202f។'
+'សៀវភៅ\u202fប៊ិច\u202f។ល។'
+
+First list contains 1 additional elements.
+First extra element 1:
+'ល។'
+
+- ['សៀវភៅ\u202fប៊ិច\u202f។', 'ល។']
+?                         ----
+
++ ['សៀវភៅ\u202fប៊ិច\u202f។ល។']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='សៀវភៅ ប៊ិច ។ល។', form='NFD', space="' '", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅ ប៊ិច ។', 'ល។'] != ['សៀវភៅ ប៊ិច ។ល។']
+
+First differing element 0:
+'សៀវភៅ ប៊ិច ។'
+'សៀវភៅ ប៊ិច ។ល។'
+
+First list contains 1 additional elements.
+First extra element 1:
+'ល។'
+
+- ['សៀវភៅ ប៊ិច ។', 'ល។']
+?               ----
+
++ ['សៀវភៅ ប៊ិច ។ល។']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='សៀវភៅ ប៊ិច ។ល។', form='NFD', space="'\\xa0'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅ\xa0ប៊ិច\xa0។', 'ល។'] != ['សៀវភៅ\xa0ប៊ិច\xa0។ល។']
+
+First differing element 0:
+'សៀវភៅ\xa0ប៊ិច\xa0។'
+'សៀវភៅ\xa0ប៊ិច\xa0។ល។'
+
+First list contains 1 additional elements.
+First extra element 1:
+'ល។'
+
+- ['សៀវភៅ\xa0ប៊ិច\xa0។', 'ល។']
+?                     ----
+
++ ['សៀវភៅ\xa0ប៊ិច\xa0។ល។']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='សៀវភៅ ប៊ិច ។ល។', form='NFD', space="'\\u202f'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅ\u202fប៊ិច\u202f។', 'ល។'] != ['សៀវភៅ\u202fប៊ិច\u202f។ល។']
+
+First differing element 0:
+'សៀវភៅ\u202fប៊ិច\u202f។'
+'សៀវភៅ\u202fប៊ិច\u202f។ល។'
+
+First list contains 1 additional elements.
+First extra element 1:
+'ល។'
+
+- ['សៀវភៅ\u202fប៊ិច\u202f។', 'ល។']
+?                         ----
+
++ ['សៀវភៅ\u202fប៊ិច\u202f។ល។']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='សៀវភៅ ប៊ិច ។ល។, ទាំងអស់នៅលើតុ។ ប្រអប់ទទេ។', form='NFC', space="' '", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅ ប៊ិច ។', 'ល។', ', ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។'] != ['សៀវភៅ ប៊ិច ។ល។, ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+
+First differing element 0:
+'សៀវភៅ ប៊ិច ។'
+'សៀវភៅ ប៊ិច ។ល។, ទាំងអស់នៅលើតុ។'
+
+First list contains 2 additional elements.
+First extra element 2:
+', ទាំងអស់នៅលើតុ។'
+
+- ['សៀវភៅ ប៊ិច ។', 'ល។', ', ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+?               ----  - ---
+
++ ['សៀវភៅ ប៊ិច ។ល។, ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='សៀវភៅ ប៊ិច ។ល។, ទាំងអស់នៅលើតុ។ ប្រអប់ទទេ។', form='NFC', space="'\\xa0'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅ\xa0ប៊ិច\xa0។', 'ល។', ',\xa0ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។'] != ['សៀវភៅ\xa0ប៊ិច\xa0។ល។,\xa0ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+
+First differing element 0:
+'សៀវភៅ\xa0ប៊ិច\xa0។'
+'សៀវភៅ\xa0ប៊ិច\xa0។ល។,\xa0ទាំងអស់នៅលើតុ។'
+
+First list contains 2 additional elements.
+First extra element 2:
+',\xa0ទាំងអស់នៅលើតុ។'
+
+- ['សៀវភៅ\xa0ប៊ិច\xa0។', 'ល។', ',\xa0ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+?                     ----  ----
+
++ ['សៀវភៅ\xa0ប៊ិច\xa0។ល។,\xa0ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='សៀវភៅ ប៊ិច ។ល។, ទាំងអស់នៅលើតុ។ ប្រអប់ទទេ។', form='NFC', space="'\\u202f'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅ\u202fប៊ិច\u202f។', 'ល។', ',\u202fទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។'] != ['សៀវភៅ\u202fប៊ិច\u202f។ល។,\u202fទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+
+First differing element 0:
+'សៀវភៅ\u202fប៊ិច\u202f។'
+'សៀវភៅ\u202fប៊ិច\u202f។ល។,\u202fទាំងអស់នៅលើតុ។'
+
+First list contains 2 additional elements.
+First extra element 2:
+',\u202fទាំងអស់នៅលើតុ។'
+
+- ['សៀវភៅ\u202fប៊ិច\u202f។', 'ល។', ',\u202fទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+?                         ----  ----
+
++ ['សៀវភៅ\u202fប៊ិច\u202f។ល។,\u202fទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='សៀវភៅ ប៊ិច ។ល។, ទាំងអស់នៅលើតុ។ ប្រអប់ទទេ។', form='NFD', space="' '", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅ ប៊ិច ។', 'ល។', ', ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។'] != ['សៀវភៅ ប៊ិច ។ល។, ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+
+First differing element 0:
+'សៀវភៅ ប៊ិច ។'
+'សៀវភៅ ប៊ិច ។ល។, ទាំងអស់នៅលើតុ។'
+
+First list contains 2 additional elements.
+First extra element 2:
+', ទាំងអស់នៅលើតុ។'
+
+- ['សៀវភៅ ប៊ិច ។', 'ល។', ', ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+?               ----  - ---
+
++ ['សៀវភៅ ប៊ិច ។ល។, ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='សៀវភៅ ប៊ិច ។ល។, ទាំងអស់នៅលើតុ។ ប្រអប់ទទេ។', form='NFD', space="'\\xa0'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅ\xa0ប៊ិច\xa0។', 'ល។', ',\xa0ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។'] != ['សៀវភៅ\xa0ប៊ិច\xa0។ល។,\xa0ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+
+First differing element 0:
+'សៀវភៅ\xa0ប៊ិច\xa0។'
+'សៀវភៅ\xa0ប៊ិច\xa0។ល។,\xa0ទាំងអស់នៅលើតុ។'
+
+First list contains 2 additional elements.
+First extra element 2:
+',\xa0ទាំងអស់នៅលើតុ។'
+
+- ['សៀវភៅ\xa0ប៊ិច\xa0។', 'ល។', ',\xa0ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+?                     ----  ----
+
++ ['សៀវភៅ\xa0ប៊ិច\xa0។ល។,\xa0ទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='សៀវភៅ ប៊ិច ។ល។, ទាំងអស់នៅលើតុ។ ប្រអប់ទទេ។', form='NFD', space="'\\u202f'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅ\u202fប៊ិច\u202f។', 'ល។', ',\u202fទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។'] != ['សៀវភៅ\u202fប៊ិច\u202f។ល។,\u202fទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+
+First differing element 0:
+'សៀវភៅ\u202fប៊ិច\u202f។'
+'សៀវភៅ\u202fប៊ិច\u202f។ល។,\u202fទាំងអស់នៅលើតុ។'
+
+First list contains 2 additional elements.
+First extra element 2:
+',\u202fទាំងអស់នៅលើតុ។'
+
+- ['សៀវភៅ\u202fប៊ិច\u202f។', 'ល។', ',\u202fទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+?                         ----  ----
+
++ ['សៀវភៅ\u202fប៊ិច\u202f។ល។,\u202fទាំងអស់នៅលើតុ។', 'ប្រអប់ទទេ។']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='»Beri!« Učenec je odprl knjigo.', form='NFC', space="' '", locale='sl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['»Beri!« Učenec je odprl knjigo.'] != ['»Beri!«', 'Učenec je odprl knjigo.']
+
+First differing element 0:
+'»Beri!« Učenec je odprl knjigo.'
+'»Beri!«'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'Učenec je odprl knjigo.'
+
+- ['»Beri!« Učenec je odprl knjigo.']
+?          ^
+
++ ['»Beri!«', 'Učenec je odprl knjigo.']
+?          ^^^^
+
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='»Beri!« Učenec je odprl knjigo.', form='NFC', space="'\\xa0'", locale='sl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['»Beri!«\xa0Učenec\xa0je\xa0odprl\xa0knjigo.'] != ['»Beri!«', 'Učenec\xa0je\xa0odprl\xa0knjigo.']
+
+First differing element 0:
+'»Beri!«\xa0Učenec\xa0je\xa0odprl\xa0knjigo.'
+'»Beri!«'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'Učenec\xa0je\xa0odprl\xa0knjigo.'
+
+- ['»Beri!«\xa0Učenec\xa0je\xa0odprl\xa0knjigo.']
+?          ^^^^
+
++ ['»Beri!«', 'Učenec\xa0je\xa0odprl\xa0knjigo.']
+?          ^^^^
+
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='»Beri!« Učenec je odprl knjigo.', form='NFC', space="'\\u202f'", locale='sl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['»Beri!«\u202fUčenec\u202fje\u202fodprl\u202fknjigo.'] != ['»Beri!«', 'Učenec\u202fje\u202fodprl\u202fknjigo.']
+
+First differing element 0:
+'»Beri!«\u202fUčenec\u202fje\u202fodprl\u202fknjigo.'
+'»Beri!«'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'Učenec\u202fje\u202fodprl\u202fknjigo.'
+
+- ['»Beri!«\u202fUčenec\u202fje\u202fodprl\u202fknjigo.']
+?          ^^^^^^
+
++ ['»Beri!«', 'Učenec\u202fje\u202fodprl\u202fknjigo.']
+?          ^^^^
+
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='»Beri!« Učenec je odprl knjigo.', form='NFD', space="' '", locale='sl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['»Beri!« Učenec je odprl knjigo.'] != ['»Beri!«', 'Učenec je odprl knjigo.']
+
+First differing element 0:
+'»Beri!« Učenec je odprl knjigo.'
+'»Beri!«'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'Učenec je odprl knjigo.'
+
+- ['»Beri!« Učenec je odprl knjigo.']
+?          ^
+
++ ['»Beri!«', 'Učenec je odprl knjigo.']
+?          ^^^^
+
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='»Beri!« Učenec je odprl knjigo.', form='NFD', space="'\\xa0'", locale='sl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['»Beri!«\xa0Učenec\xa0je\xa0odprl\xa0knjigo.'] != ['»Beri!«', 'Učenec\xa0je\xa0odprl\xa0knjigo.']
+
+First differing element 0:
+'»Beri!«\xa0Učenec\xa0je\xa0odprl\xa0knjigo.'
+'»Beri!«'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'Učenec\xa0je\xa0odprl\xa0knjigo.'
+
+- ['»Beri!«\xa0Učenec\xa0je\xa0odprl\xa0knjigo.']
+?          ^^^^
+
++ ['»Beri!«', 'Učenec\xa0je\xa0odprl\xa0knjigo.']
+?          ^^^^
+
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='»Beri!« Učenec je odprl knjigo.', form='NFD', space="'\\u202f'", locale='sl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['»Beri!«\u202fUčenec\u202fje\u202fodprl\u202fknjigo.'] != ['»Beri!«', 'Učenec\u202fje\u202fodprl\u202fknjigo.']
+
+First differing element 0:
+'»Beri!«\u202fUčenec\u202fje\u202fodprl\u202fknjigo.'
+'»Beri!«'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'Učenec\u202fje\u202fodprl\u202fknjigo.'
+
+- ['»Beri!«\u202fUčenec\u202fje\u202fodprl\u202fknjigo.']
+?          ^^^^^^
+
++ ['»Beri!«', 'Učenec\u202fje\u202fodprl\u202fknjigo.']
+?          ^^^^
+
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='Dėžėje yra lapų, pieštukų ir t. t. Žirklės guli šalia.', form='NFC', space="'\\xa0'", locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['Dėž[17 chars]ų,\xa0pieštukų\xa0ir\xa0t.', 't.', 'Žirklės\xa0guli\xa0šalia.'] != ['Dėž[17 chars]ų,\xa0pieštukų\xa0ir\xa0t.\xa0t.', 'Žirklės\xa0guli\xa0šalia.']
+
+First differing element 0:
+'Dėžėje\xa0yra\xa0lapų,\xa0pieštukų\xa0ir\xa0t.'
+'Dėžėje\xa0yra\xa0lapų,\xa0pieštukų\xa0ir\xa0t.\xa0t.'
+
+First list contains 1 additional elements.
+First extra element 2:
+'Žirklės\xa0guli\xa0šalia.'
+
+- ['Dėžėje\xa0yra\xa0lapų,\xa0pieštukų\xa0ir\xa0t.',
++ ['Dėžėje\xa0yra\xa0lapų,\xa0pieštukų\xa0ir\xa0t.\xa0t.',
+?                                                 ++++++
+
+-  't.',
+   'Žirklės\xa0guli\xa0šalia.']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='Dėžėje yra lapų, pieštukų ir t. t. Žirklės guli šalia.', form='NFC', space="'\\u202f'", locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['Dėž[33 chars]tukų\u202fir\u202ft.', 't.', 'Žirklės\u202fguli\u202fšalia.'] != ['Dėž[33 chars]tukų\u202fir\u202ft.\u202ft.', 'Žirklės\u202fguli\u202fšalia.']
+
+First differing element 0:
+'Dėžėje\u202fyra\u202flapų,\u202fpieštukų\u202fir\u202ft.'
+'Dėžėje\u202fyra\u202flapų,\u202fpieštukų\u202fir\u202ft.\u202ft.'
+
+First list contains 1 additional elements.
+First extra element 2:
+'Žirklės\u202fguli\u202fšalia.'
+
+- ['Dėžėje\u202fyra\u202flapų,\u202fpieštukų\u202fir\u202ft.',
++ ['Dėžėje\u202fyra\u202flapų,\u202fpieštukų\u202fir\u202ft.\u202ft.',
+?                                                           ++++++++
+
+-  't.',
+   'Žirklės\u202fguli\u202fšalia.']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='Dėžėje yra lapų, pieštukų ir t. t. Žirklės guli šalia.', form='NFD', space="'\\xa0'", locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['Dė[26 chars]0pieštukų\xa0ir\xa0t.', 't.', 'Žirklės\xa0guli\xa0šalia.'] != ['Dė[26 chars]0pieštukų\xa0ir\xa0t.\xa0t.', 'Žirklės\xa0guli\xa0šalia.']
+
+First differing element 0:
+'Dėžėje\xa0yra\xa0lapų,\xa0pieštukų\xa0ir\xa0t.'
+'Dėžėje\xa0yra\xa0lapų,\xa0pieštukų\xa0ir\xa0t.\xa0t.'
+
+First list contains 1 additional elements.
+First extra element 2:
+'Žirklės\xa0guli\xa0šalia.'
+
+- ['Dėžėje\xa0yra\xa0lapų,\xa0pieštukų\xa0ir\xa0t.',
++ ['Dėžėje\xa0yra\xa0lapų,\xa0pieštukų\xa0ir\xa0t.\xa0t.',
+?                                                       ++++++
+
+-  't.',
+   'Žirklės\xa0guli\xa0šalia.']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='Dėžėje yra lapų, pieštukų ir t. t. Žirklės guli šalia.', form='NFD', space="'\\u202f'", locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['Dė[42 chars]̨\u202fir\u202ft.', 't.', 'Žirklės\u202fguli\u202fšalia.'] != ['Dė[42 chars]̨\u202fir\u202ft.\u202ft.', 'Žirklės\u202fguli\u202fšalia.']
+
+First differing element 0:
+'Dėžėje\u202fyra\u202flapų,\u202fpieštukų\u202fir\u202ft.'
+'Dėžėje\u202fyra\u202flapų,\u202fpieštukų\u202fir\u202ft.\u202ft.'
+
+First list contains 1 additional elements.
+First extra element 2:
+'Žirklės\u202fguli\u202fšalia.'
+
+- ['Dėžėje\u202fyra\u202flapų,\u202fpieštukų\u202fir\u202ft.',
++ ['Dėžėje\u202fyra\u202flapų,\u202fpieštukų\u202fir\u202ft.\u202ft.',
+?                                                                 ++++++++
+
+-  't.',
+   'Žirklės\u202fguli\u202fšalia.']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='Tai kopija, t. y. antras egzempliorius. Originalas lieka čia.', form='NFC', space="'\\xa0'", locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['Tai\xa0kopija,\xa0t.', 'y.', 'antras\xa0egzempliorius.', 'Ori[21 chars]ia.'] != ['Tai\xa0kopija,\xa0t.\xa0y.\xa0antras\xa0egzempliorius.', 'Ori[21 chars]ia.']
+
+First differing element 0:
+'Tai\xa0kopija,\xa0t.'
+'Tai\xa0kopija,\xa0t.\xa0y.\xa0antras\xa0egzempliorius.'
+
+First list contains 2 additional elements.
+First extra element 2:
+'antras\xa0egzempliorius.'
+
++ ['Tai\xa0kopija,\xa0t.\xa0y.\xa0antras\xa0egzempliorius.',
+- ['Tai\xa0kopija,\xa0t.',
+-  'y.',
+-  'antras\xa0egzempliorius.',
+   'Originalas\xa0lieka\xa0čia.']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='Tai kopija, t. y. antras egzempliorius. Originalas lieka čia.', form='NFC', space="'\\u202f'", locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['Tai[16 chars]02ft.', 'y.', 'antras\u202fegzempliorius.', 'O[27 chars]ia.'] != ['Tai[16 chars]02ft.\u202fy.\u202fantras\u202fegzempliorius.'[31 chars]ia.']
+
+First differing element 0:
+'Tai\u202fkopija,\u202ft.'
+'Tai\u202fkopija,\u202ft.\u202fy.\u202fantras\u202fegzempliorius.'
+
+First list contains 2 additional elements.
+First extra element 2:
+'antras\u202fegzempliorius.'
+
++ ['Tai\u202fkopija,\u202ft.\u202fy.\u202fantras\u202fegzempliorius.',
+- ['Tai\u202fkopija,\u202ft.',
+-  'y.',
+-  'antras\u202fegzempliorius.',
+   'Originalas\u202flieka\u202fčia.']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='Tai kopija, t. y. antras egzempliorius. Originalas lieka čia.', form='NFD', space="'\\xa0'", locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['Tai\xa0kopija,\xa0t.', 'y.', 'antras\xa0egzempliorius.', 'Ori[22 chars]ia.'] != ['Tai\xa0kopija,\xa0t.\xa0y.\xa0antras\xa0egzempliorius.', 'Ori[22 chars]ia.']
+
+First differing element 0:
+'Tai\xa0kopija,\xa0t.'
+'Tai\xa0kopija,\xa0t.\xa0y.\xa0antras\xa0egzempliorius.'
+
+First list contains 2 additional elements.
+First extra element 2:
+'antras\xa0egzempliorius.'
+
++ ['Tai\xa0kopija,\xa0t.\xa0y.\xa0antras\xa0egzempliorius.',
+- ['Tai\xa0kopija,\xa0t.',
+-  'y.',
+-  'antras\xa0egzempliorius.',
+   'Originalas\xa0lieka\xa0čia.']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='Tai kopija, t. y. antras egzempliorius. Originalas lieka čia.', form='NFD', space="'\\u202f'", locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['Tai[16 chars]02ft.', 'y.', 'antras\u202fegzempliorius.', 'O[28 chars]ia.'] != ['Tai[16 chars]02ft.\u202fy.\u202fantras\u202fegzempliorius.'[32 chars]ia.']
+
+First differing element 0:
+'Tai\u202fkopija,\u202ft.'
+'Tai\u202fkopija,\u202ft.\u202fy.\u202fantras\u202fegzempliorius.'
+
+First list contains 2 additional elements.
+First extra element 2:
+'antras\u202fegzempliorius.'
+
++ ['Tai\u202fkopija,\u202ft.\u202fy.\u202fantras\u202fegzempliorius.',
+- ['Tai\u202fkopija,\u202ft.',
+-  'y.',
+-  'antras\u202fegzempliorius.',
+   'Originalas\u202flieka\u202fčia.']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='Tur ir grāmatas, burtnīcas u. c. Plaukts ir pilns.', form='NFC', space="'\\xa0'", locale='lv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['Tur\xa0ir\xa0grāmatas,\xa0burtnīcas\xa0u.', 'c.', 'Plaukts\xa0ir\xa0pilns.'] != ['Tur\xa0ir\xa0grāmatas,\xa0burtnīcas\xa0u.\xa0c.', 'Plaukts\xa0ir\xa0pilns.']
+
+First differing element 0:
+'Tur\xa0ir\xa0grāmatas,\xa0burtnīcas\xa0u.'
+'Tur\xa0ir\xa0grāmatas,\xa0burtnīcas\xa0u.\xa0c.'
+
+First list contains 1 additional elements.
+First extra element 2:
+'Plaukts\xa0ir\xa0pilns.'
+
+- ['Tur\xa0ir\xa0grāmatas,\xa0burtnīcas\xa0u.', 'c.', 'Plaukts\xa0ir\xa0pilns.']
+?                                            ^^^^
+
++ ['Tur\xa0ir\xa0grāmatas,\xa0burtnīcas\xa0u.\xa0c.', 'Plaukts\xa0ir\xa0pilns.']
+?                                            ^^^^
+
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='Tur ir grāmatas, burtnīcas u. c. Plaukts ir pilns.', form='NFC', space="'\\u202f'", locale='lv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['Tur[24 chars]u202fburtnīcas\u202fu.', 'c.', 'Plaukts\u202fir\u202fpilns.'] != ['Tur[24 chars]u202fburtnīcas\u202fu.\u202fc.', 'Plaukts\u202fir\u202fpilns.']
+
+First differing element 0:
+'Tur\u202fir\u202fgrāmatas,\u202fburtnīcas\u202fu.'
+'Tur\u202fir\u202fgrāmatas,\u202fburtnīcas\u202fu.\u202fc.'
+
+First list contains 1 additional elements.
+First extra element 2:
+'Plaukts\u202fir\u202fpilns.'
+
+- ['Tur\u202fir\u202fgrāmatas,\u202fburtnīcas\u202fu.',
++ ['Tur\u202fir\u202fgrāmatas,\u202fburtnīcas\u202fu.\u202fc.',
+?                                                    ++++++++
+
+-  'c.',
+   'Plaukts\u202fir\u202fpilns.']
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='Tur ir grāmatas, burtnīcas u. c. Plaukts ir pilns.', form='NFD', space="'\\xa0'", locale='lv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['Tur\xa0ir\xa0grāmatas,\xa0burtnīcas\xa0u.', 'c.', 'Plaukts\xa0ir\xa0pilns.'] != ['Tur\xa0ir\xa0grāmatas,\xa0burtnīcas\xa0u.\xa0c.', 'Plaukts\xa0ir\xa0pilns.']
+
+First differing element 0:
+'Tur\xa0ir\xa0grāmatas,\xa0burtnīcas\xa0u.'
+'Tur\xa0ir\xa0grāmatas,\xa0burtnīcas\xa0u.\xa0c.'
+
+First list contains 1 additional elements.
+First extra element 2:
+'Plaukts\xa0ir\xa0pilns.'
+
+- ['Tur\xa0ir\xa0grāmatas,\xa0burtnīcas\xa0u.', 'c.', 'Plaukts\xa0ir\xa0pilns.']
+?                                              ^^^^
+
++ ['Tur\xa0ir\xa0grāmatas,\xa0burtnīcas\xa0u.\xa0c.', 'Plaukts\xa0ir\xa0pilns.']
+?                                              ^^^^
+
+
+======================================================================
+FAIL: test_literal_sentence_boundaries_survive_unicode_normalization (test_batch05.BatchFiveTests.test_literal_sentence_boundaries_survive_unicode_normalization) (text='Tur ir grāmatas, burtnīcas u. c. Plaukts ir pilns.', form='NFD', space="'\\u202f'", locale='lv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 53, in test_literal_sentence_boundaries_survive_unicode_normalization
+    self.assertEqual(multilingual.split_sentences(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['Tur[26 chars]202fburtnīcas\u202fu.', 'c.', 'Plaukts\u202fir\u202fpilns.'] != ['Tur[26 chars]202fburtnīcas\u202fu.\u202fc.', 'Plaukts\u202fir\u202fpilns.']
+
+First differing element 0:
+'Tur\u202fir\u202fgrāmatas,\u202fburtnīcas\u202fu.'
+'Tur\u202fir\u202fgrāmatas,\u202fburtnīcas\u202fu.\u202fc.'
+
+First list contains 1 additional elements.
+First extra element 2:
+'Plaukts\u202fir\u202fpilns.'
+
+- ['Tur\u202fir\u202fgrāmatas,\u202fburtnīcas\u202fu.',
++ ['Tur\u202fir\u202fgrāmatas,\u202fburtnīcas\u202fu.\u202fc.',
+?                                                      ++++++++
+
+-  'c.',
+   'Plaukts\u202fir\u202fpilns.']
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅខ្មៅ', form='NFC', space="' '", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅខ្មៅ'] != ['សៀវភៅ', 'ខ្មៅ']
+
+First differing element 0:
+'សៀវភៅខ្មៅ'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'ខ្មៅ'
+
+- ['សៀវភៅខ្មៅ']
++ ['សៀវភៅ', 'ខ្មៅ']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅខ្មៅ', form='NFC', space="'\\xa0'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅខ្មៅ'] != ['សៀវភៅ', 'ខ្មៅ']
+
+First differing element 0:
+'សៀវភៅខ្មៅ'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'ខ្មៅ'
+
+- ['សៀវភៅខ្មៅ']
++ ['សៀវភៅ', 'ខ្មៅ']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅខ្មៅ', form='NFC', space="'\\u202f'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅខ្មៅ'] != ['សៀវភៅ', 'ខ្មៅ']
+
+First differing element 0:
+'សៀវភៅខ្មៅ'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'ខ្មៅ'
+
+- ['សៀវភៅខ្មៅ']
++ ['សៀវភៅ', 'ខ្មៅ']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅខ្មៅ', form='NFD', space="' '", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅខ្មៅ'] != ['សៀវភៅ', 'ខ្មៅ']
+
+First differing element 0:
+'សៀវភៅខ្មៅ'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'ខ្មៅ'
+
+- ['សៀវភៅខ្មៅ']
++ ['សៀវភៅ', 'ខ្មៅ']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅខ្មៅ', form='NFD', space="'\\xa0'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅខ្មៅ'] != ['សៀវភៅ', 'ខ្មៅ']
+
+First differing element 0:
+'សៀវភៅខ្មៅ'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'ខ្មៅ'
+
+- ['សៀវភៅខ្មៅ']
++ ['សៀវភៅ', 'ខ្មៅ']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅខ្មៅ', form='NFD', space="'\\u202f'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅខ្មៅ'] != ['សៀវភៅ', 'ខ្មៅ']
+
+First differing element 0:
+'សៀវភៅខ្មៅ'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'ខ្មៅ'
+
+- ['សៀវភៅខ្មៅ']
++ ['សៀវភៅ', 'ខ្មៅ']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅប៊ិច ៣,៥ 9:30', form='NFC', space="' '", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅប៊ិច', '៣,៥', '9', '30'] != ['សៀវភៅ', 'ប៊ិច', '៣,៥', '9', '30']
+
+First differing element 0:
+'សៀវភៅប៊ិច'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 4:
+'30'
+
+- ['សៀវភៅប៊ិច', '៣,៥', '9', '30']
++ ['សៀវភៅ', 'ប៊ិច', '៣,៥', '9', '30']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅប៊ិច ៣,៥ 9:30', form='NFC', space="'\\xa0'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅប៊ិច', '៣,៥', '9', '30'] != ['សៀវភៅ', 'ប៊ិច', '៣,៥', '9', '30']
+
+First differing element 0:
+'សៀវភៅប៊ិច'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 4:
+'30'
+
+- ['សៀវភៅប៊ិច', '៣,៥', '9', '30']
++ ['សៀវភៅ', 'ប៊ិច', '៣,៥', '9', '30']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅប៊ិច ៣,៥ 9:30', form='NFC', space="'\\u202f'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅប៊ិច', '៣,៥', '9', '30'] != ['សៀវភៅ', 'ប៊ិច', '៣,៥', '9', '30']
+
+First differing element 0:
+'សៀវភៅប៊ិច'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 4:
+'30'
+
+- ['សៀវភៅប៊ិច', '៣,៥', '9', '30']
++ ['សៀវភៅ', 'ប៊ិច', '៣,៥', '9', '30']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅប៊ិច ៣,៥ 9:30', form='NFD', space="' '", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅប៊ិច', '៣,៥', '9', '30'] != ['សៀវភៅ', 'ប៊ិច', '៣,៥', '9', '30']
+
+First differing element 0:
+'សៀវភៅប៊ិច'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 4:
+'30'
+
+- ['សៀវភៅប៊ិច', '៣,៥', '9', '30']
++ ['សៀវភៅ', 'ប៊ិច', '៣,៥', '9', '30']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅប៊ិច ៣,៥ 9:30', form='NFD', space="'\\xa0'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅប៊ិច', '៣,៥', '9', '30'] != ['សៀវភៅ', 'ប៊ិច', '៣,៥', '9', '30']
+
+First differing element 0:
+'សៀវភៅប៊ិច'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 4:
+'30'
+
+- ['សៀវភៅប៊ិច', '៣,៥', '9', '30']
++ ['សៀវភៅ', 'ប៊ិច', '៣,៥', '9', '30']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅប៊ិច ៣,៥ 9:30', form='NFD', space="'\\u202f'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅប៊ិច', '៣,៥', '9', '30'] != ['សៀវភៅ', 'ប៊ិច', '៣,៥', '9', '30']
+
+First differing element 0:
+'សៀវភៅប៊ិច'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 4:
+'30'
+
+- ['សៀវភៅប៊ិច', '៣,៥', '9', '30']
++ ['សៀវភៅ', 'ប៊ិច', '៣,៥', '9', '30']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅៗ', form='NFC', space="' '", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅៗ'] != ['សៀវភៅ', 'ៗ']
+
+First differing element 0:
+'សៀវភៅៗ'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'ៗ'
+
+- ['សៀវភៅៗ']
++ ['សៀវភៅ', 'ៗ']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅៗ', form='NFC', space="'\\xa0'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅៗ'] != ['សៀវភៅ', 'ៗ']
+
+First differing element 0:
+'សៀវភៅៗ'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'ៗ'
+
+- ['សៀវភៅៗ']
++ ['សៀវភៅ', 'ៗ']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅៗ', form='NFC', space="'\\u202f'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅៗ'] != ['សៀវភៅ', 'ៗ']
+
+First differing element 0:
+'សៀវភៅៗ'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'ៗ'
+
+- ['សៀវភៅៗ']
++ ['សៀវភៅ', 'ៗ']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅៗ', form='NFD', space="' '", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅៗ'] != ['សៀវភៅ', 'ៗ']
+
+First differing element 0:
+'សៀវភៅៗ'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'ៗ'
+
+- ['សៀវភៅៗ']
++ ['សៀវភៅ', 'ៗ']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅៗ', form='NFD', space="'\\xa0'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅៗ'] != ['សៀវភៅ', 'ៗ']
+
+First differing element 0:
+'សៀវភៅៗ'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'ៗ'
+
+- ['សៀវភៅៗ']
++ ['សៀវភៅ', 'ៗ']
+?        ++++
+
+
+======================================================================
+FAIL: test_literal_units_and_opener (test_batch05.BatchFiveTests.test_literal_units_and_opener) (text='សៀវភៅៗ', form='NFD', space="'\\u202f'", locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 67, in test_literal_units_and_opener
+    self.assertEqual(multilingual.words(original, locale), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['សៀវភៅៗ'] != ['សៀវភៅ', 'ៗ']
+
+First differing element 0:
+'សៀវភៅៗ'
+'សៀវភៅ'
+
+Second list contains 1 additional elements.
+First extra element 1:
+'ៗ'
+
+- ['សៀវភៅៗ']
++ ['សៀវភៅ', 'ៗ']
+?        ++++
+
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 100, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.assertEqual(value[key], wanted, (locale, fixture, value))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 != 1 : ('km', 'citation', {'lang': 'km', 'sentences': 5, 'paras': 5, 'heads': 0, 'list_items': 0, 'mean_len': 2, 'len_cv': 0.0, 'short_share': 1.0, 'long_share': 0.0, 'para_cv': 0.0, 'even_run3': 1.0, 'top_end': '7', 'top_end_share': 1.0, 'ja_desu': 0, 'ja_da': 0, 'top_opener': 'អត្ថបទយោងមាត្រា', 'top_opener_n': 5, 'opener_rep': 0.8, 'consec_same_start': 4, 'cite_para_share': 1.0, 'cite_end_share': 0.0, 'contrast': 0, 'caveat': 0, 'questions': 0, 'num_per100': 50.0, 'hypo_open': False, 'q_open': False, 'formula_close': False, 'first': 'អត្ថបទយោងមាត្រា 7។', 'last': 'អត្ថបទយោងមាត្រា 7។', 'length_unit': 'icu_dictionary_wordlike_units', 'short_threshold': 8, 'long_threshold': 32, 'sentence_boundary_method': 'unicode_punctuation_with_locale_abbreviations'})
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='mn')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 100, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.assertEqual(value[key], wanted, (locale, fixture, value))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 != 1 : ('mn', 'citation', {'lang': 'mn', 'sentences': 5, 'paras': 5, 'heads': 0, 'list_items': 0, 'mean_len': 5, 'len_cv': 0.0, 'short_share': 1.0, 'long_share': 0.0, 'para_cv': 0.0, 'even_run3': 1.0, 'top_end': 'байна', 'top_end_share': 1.0, 'ja_desu': 0, 'ja_da': 0, 'top_opener': 'тайлбар', 'top_opener_n': 5, 'opener_rep': 0.8, 'consec_same_start': 4, 'cite_para_share': 1.0, 'cite_end_share': 0.0, 'contrast': 0, 'caveat': 0, 'questions': 0, 'num_per100': 20.0, 'hypo_open': False, 'q_open': False, 'formula_close': False, 'first': 'Тайлбар 7 дугаар зүйлд байна.', 'last': 'Тайлбар 7 дугаар зүйлд байна.', 'length_unit': 'orthographic_words', 'short_threshold': 8, 'long_threshold': 32, 'sentence_boundary_method': 'unicode_punctuation_with_locale_abbreviations'})
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='sr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 100, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.assertEqual(value[key], wanted, (locale, fixture, value))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 != 1 : ('sr', 'citation', {'lang': 'sr', 'sentences': 5, 'paras': 5, 'heads': 0, 'list_items': 0, 'mean_len': 5, 'len_cv': 0.0, 'short_share': 1.0, 'long_share': 0.0, 'para_cv': 0.0, 'even_run3': 1.0, 'top_end': '7', 'top_end_share': 1.0, 'ja_desu': 0, 'ja_da': 0, 'top_opener': 'pravilo', 'top_opener_n': 5, 'opener_rep': 0.8, 'consec_same_start': 4, 'cite_para_share': 1.0, 'cite_end_share': 0.0, 'contrast': 0, 'caveat': 0, 'questions': 0, 'num_per100': 20.0, 'hypo_open': False, 'q_open': False, 'formula_close': False, 'first': 'Pravilo je u članu 7.', 'last': 'Pravilo je u članu 7.', 'length_unit': 'orthographic_words', 'short_threshold': 8, 'long_threshold': 32, 'sentence_boundary_method': 'unicode_punctuation_with_locale_abbreviations'})
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='sl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 100, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.assertEqual(value[key], wanted, (locale, fixture, value))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 != 1 : ('sl', 'citation', {'lang': 'sl', 'sentences': 5, 'paras': 5, 'heads': 0, 'list_items': 0, 'mean_len': 5, 'len_cv': 0.0, 'short_share': 1.0, 'long_share': 0.0, 'para_cv': 0.0, 'even_run3': 1.0, 'top_end': 'členu', 'top_end_share': 1.0, 'ja_desu': 0, 'ja_da': 0, 'top_opener': 'pravilo', 'top_opener_n': 5, 'opener_rep': 0.8, 'consec_same_start': 4, 'cite_para_share': 1.0, 'cite_end_share': 0.0, 'contrast': 0, 'caveat': 0, 'questions': 0, 'num_per100': 20.0, 'hypo_open': False, 'q_open': False, 'formula_close': False, 'first': 'Pravilo je v 7. členu.', 'last': 'Pravilo je v 7. členu.', 'length_unit': 'orthographic_words', 'short_threshold': 8, 'long_threshold': 32, 'sentence_boundary_method': 'unicode_punctuation_with_locale_abbreviations'})
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 100, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.assertEqual(value[key], wanted, (locale, fixture, value))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 != 1 : ('lt', 'citation', {'lang': 'lt', 'sentences': 5, 'paras': 5, 'heads': 0, 'list_items': 0, 'mean_len': 4, 'len_cv': 0.0, 'short_share': 1.0, 'long_share': 0.0, 'para_cv': 0.0, 'even_run3': 1.0, 'top_end': 'straipsnyje', 'top_end_share': 1.0, 'ja_desu': 0, 'ja_da': 0, 'top_opener': 'taisyklė', 'top_opener_n': 5, 'opener_rep': 0.8, 'consec_same_start': 4, 'cite_para_share': 1.0, 'cite_end_share': 0.0, 'contrast': 0, 'caveat': 0, 'questions': 0, 'num_per100': 25.0, 'hypo_open': False, 'q_open': False, 'formula_close': False, 'first': 'Taisyklė nurodyta 7 straipsnyje.', 'last': 'Taisyklė nurodyta 7 straipsnyje.', 'length_unit': 'orthographic_words', 'short_threshold': 8, 'long_threshold': 32, 'sentence_boundary_method': 'unicode_punctuation_with_locale_abbreviations'})
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='lv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 100, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.assertEqual(value[key], wanted, (locale, fixture, value))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 != 1 : ('lv', 'citation', {'lang': 'lv', 'sentences': 5, 'paras': 5, 'heads': 0, 'list_items': 0, 'mean_len': 4, 'len_cv': 0.0, 'short_share': 1.0, 'long_share': 0.0, 'para_cv': 0.0, 'even_run3': 1.0, 'top_end': 'pantā', 'top_end_share': 1.0, 'ja_desu': 0, 'ja_da': 0, 'top_opener': 'noteikums', 'top_opener_n': 5, 'opener_rep': 0.8, 'consec_same_start': 4, 'cite_para_share': 1.0, 'cite_end_share': 0.0, 'contrast': 0, 'caveat': 0, 'questions': 0, 'num_per100': 25.0, 'hypo_open': False, 'q_open': False, 'formula_close': False, 'first': 'Noteikums ir 7. pantā.', 'last': 'Noteikums ir 7. pantā.', 'length_unit': 'orthographic_words', 'short_threshold': 8, 'long_threshold': 32, 'sentence_boundary_method': 'unicode_punctuation_with_locale_abbreviations'})
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='et')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 100, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.assertEqual(value[key], wanted, (locale, fixture, value))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 != 1 : ('et', 'citation', {'lang': 'et', 'sentences': 5, 'paras': 5, 'heads': 0, 'list_items': 0, 'mean_len': 4, 'len_cv': 0.0, 'short_share': 1.0, 'long_share': 0.0, 'para_cv': 0.0, 'even_run3': 1.0, 'top_end': '7', 'top_end_share': 1.0, 'ja_desu': 0, 'ja_da': 0, 'top_opener': 'reegel', 'top_opener_n': 5, 'opener_rep': 0.8, 'consec_same_start': 4, 'cite_para_share': 1.0, 'cite_end_share': 0.0, 'contrast': 0, 'caveat': 0, 'questions': 0, 'num_per100': 25.0, 'hypo_open': False, 'q_open': False, 'formula_close': False, 'first': 'Reegel on artiklis 7.', 'last': 'Reegel on artiklis 7.', 'length_unit': 'orthographic_words', 'short_threshold': 8, 'long_threshold': 32, 'sentence_boundary_method': 'unicode_punctuation_with_locale_abbreviations'})
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.690s
+
+FAILED (failures=61, errors=1)

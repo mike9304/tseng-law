@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-25T15:41:43.843517+00:00",
+  "command": [
+    "python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/704-taiwan-arc-first-application.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+    "--lang",
+    "sr"
+  ],
+  "exit_code": 0,
+  "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/704-taiwan-arc-first-application.md [sr] sentences=65 mean=13.3 cv=0.555 short=0.354 run3=0.0 opener_rep=0.053 cite_end=0.0 cite_para=0.316 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md [sr] sentences=71 mean=14.1 cv=0.46 short=0.197 run3=0.087 opener_rep=0.091 cite_end=0.0 cite_para=0.545 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md [sr] sentences=88 mean=14.0 cv=0.453 short=0.182 run3=0.093 opener_rep=0.148 cite_end=0.0 cite_para=0.481 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+  "stderr": "",
+  "inputs": [
+    {
+      "file": "704-taiwan-arc-first-application.md",
+      "sha256": "15229f8e599464d507976f6d91818d441c6a1c8be1448af31f79fd79b8730dac"
+    },
+    {
+      "file": "705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "9057c2a83ef6e71ab6f576702943fdf604ae345b627b94d98986baf4a6b7d6b2"
+    },
+    {
+      "file": "706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1e5a3547ce8437f9ddb4f3a3b61dd62261a4a1dccaa63683d43d9692b73331d9"
+    }
+  ]
+}

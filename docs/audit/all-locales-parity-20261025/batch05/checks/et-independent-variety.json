@@ -1,0 +1,32 @@
+{
+  "startedAt": "2026-10-25T16:00:57.971508+00:00",
+  "finishedAt": "2026-10-25T16:00:58.050077+00:00",
+  "argv": [
+    "python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/704-taiwan-arc-first-application.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+    "--lang",
+    "et"
+  ],
+  "exitCode": 0,
+  "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/704-taiwan-arc-first-application.md [et] sentences=64 mean=11.3 cv=0.477 short=0.406 run3=0.048 opener_rep=0.056 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md [et] sentences=74 mean=11.2 cv=0.522 short=0.392 run3=0.028 opener_rep=0.045 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md [et] sentences=90 mean=11.8 cv=0.459 short=0.367 run3=0.034 opener_rep=0.038 cite_end=0.0 cite_para=0.462 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+  "stderr": "",
+  "fileHashes": {
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/704-taiwan-arc-first-application.md": "f15069557979333b4febbff860e45755472675d20f056ac2d05664f788eaea96",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md": "6bf9a4fca0d1b90d3bf0e4f46e4c87ba43cb5c4b32989ab3e98eaed52955acc8",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md": "dce0dce717cd732bce40b187f43ef31cbcf0758d71256c129263c23fc7da856a"
+  },
+  "toolHashes": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "128fe9c0a911f0f85b5423453ec681866b452185628a0fe6e311c829e05c4106",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/et.json": "1cb9d12e7653189b58cdc1f8fd480608d967f70db0fddc9951598610b35d0b5a"
+  },
+  "environment": {
+    "PATHPrefix": "/Users/son7/.nvm/versions/node/v24.14.1/bin",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}

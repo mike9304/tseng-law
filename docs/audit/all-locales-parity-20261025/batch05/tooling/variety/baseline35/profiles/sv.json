@@ -1,0 +1,14 @@
+{
+  "locale": "sv",
+  "directory": "columns-sv",
+  "review_status": "AI-authored neutral contract; coordinating review pending",
+  "join_hyphens": true,
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:(?:officiella\\s+)?källor(?:\\s+och\\s+kontrolldatum)?)\\s*:?\\s*$)",
+  "abbreviations": ["dr", "prof", "kap", "st", "s", "nr", "prop", "bl.a", "bl. a", "dvs", "d.v.s", "t.ex", "t. ex", "m.fl", "m. fl", "m.m", "m. m", "fr.o.m", "t.o.m"],
+  "terminal_abbreviations": ["m.fl", "m. fl", "m.m", "m. m"],
+  "contrast_patterns": ["(?i:\\binte\\b[^.!?\\n]{0,180}\\butan\\b)", "(?i:\\bi\\s+stället\\s+för\\b)", "(?i:\\btill\\s+skillnad\\s+från\\b)", "(?i:\\binte\\s+samma\\s+sak\\b)"],
+  "caveat_pattern": "(?i:^\\s*[”\"(]*(?:dock|däremot|ändå|trots\\s+det)\\b)",
+  "hypo_pattern": "(?i:^\\s*[”\"(]*(?:anta\\s+att|föreställ\\s+dig|tänk\\s+dig)\\b)",
+  "formula_close_pattern": "(?i:denna\\s+artikel\\s+(?:ger|innehåller)\\s+(?:endast\\s+)?allmän\\s+information|vår\\s+byrå\\s+kan\\s+hjälpa)",
+  "citation_pattern": "(?i:\\b(?:artikel|artiklar|art\\.)\\s*\\d+)"
+}

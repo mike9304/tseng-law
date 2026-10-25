@@ -1,0 +1,292 @@
+{
+  "checked_at": "2026-10-25T15:59:42.858Z",
+  "method": "Actual gray-matter parse and exact local structure/path checks; no HTTP/render claim",
+  "node": "v24.14.1",
+  "repo": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "batch": "/Users/son7/tseng-all-language-columns-20261025/batch05",
+  "results": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/704-taiwan-arc-first-application.md",
+      "sha256": "a87a3ac1137b0012120a56629dccc0e0d64dcbb55a2e2a6110e2be213cde6bd6",
+      "fields": {
+        "title": "Prvi ARC na Tajvanu: od katerega dne teče rok?",
+        "seoTitle": "Prvi tajvanski ARC: rok, listine in prevzem",
+        "summary": "Rok za prvo izkaznico ARC je odvisen od vstopa in izdaje vizuma. Preverite dokazila za prebivanje, pristojni postopek, pristojbine in poziv k dopolnitvi.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "read_time": "7 min branja",
+        "categories": [
+          "Pravne informacije o Tajvanu"
+        ],
+        "topic": "visa",
+        "tags": [
+          "ARC",
+          "prvo prebivanje",
+          "vizum za prebivanje",
+          "NIA",
+          "listine"
+        ],
+        "audience": [
+          "sl"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "featured_image_alt": "Nevtralna potna knjižica, mapa z dokumenti in majhna prazna kartica na mizi za pripravo vloge.",
+        "featured_image_caption": "Izmišljen prizor",
+        "faq": [
+          {
+            "q": "Ali rok za prvi ARC vedno teče od prihoda na Tajvan?",
+            "a": "Pri vstopu z vizumom za prebivanje in dovoljenim prebivanjem je treba zaprositi v 30 dneh od dne po prihodu. Če vizum za prebivanje dobite šele na Tajvanu, BOCA šteje 30 dni od njegove izdaje. Neposredna prijava obiskovalca pri NIA zahteva izpolnitev pogojev njegove kategorije; veljaven združen dokument s funkcijo ARC pa omogoča izjemo od ločene prijave."
+          },
+          {
+            "q": "Koliko znaša običajna pristojbina za ARC?",
+            "a": "Za vsako leto odobrene veljavnosti znaša NT$1.000; obdobje, krajše od leta, se obračuna kot leto. Za zadevne prijave po brezvizumskem vstopu ali vstopu z vizumom za obisk se prišteje NT$2.200. Posebne oprostitve in znižanja veljajo le za določene upravičence."
+          },
+          {
+            "q": "Ali prejem ARC zadošča za začetek dela?",
+            "a": "Za konkretno delo in delodajalca mora veljati ustrezno delovno dovoljenje ali zakonska izjema. ARC dokazuje dovoljeno prebivanje, sam pa ne daje neomejene pravice do dela."
+          }
+        ]
+      },
+      "body_h2": [
+        "Dva začetna datuma in posebna pot za obiskovalce",
+        "Listine morajo dokazovati razlog in dejanski naslov",
+        "Kam oddati vlogo in kam poslati dopolnitev",
+        "Pristojbina, odločitev in prevzem izkaznice",
+        "Uradni viri"
+      ],
+      "table_rows": 5,
+      "internal_links": [
+        {
+          "label": "primerjavi dela, študija in družinskega prebivanja",
+          "url": "/sl/columns/taiwan-visa-residence-work-study-family",
+          "source_paths": [
+            "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md"
+          ],
+          "exists_in_release": false,
+          "exists_in_batch": true
+        },
+        {
+          "label": "razlaga družinskih listin je v angleščini",
+          "url": "/en/columns/taiwan-foreign-spouse-residence",
+          "source_paths": [
+            "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/028-taiwan-foreign-spouse-residence.md"
+          ],
+          "exists_in_release": true,
+          "exists_in_batch": false
+        },
+        {
+          "label": "vodnik po podaljšanju in ponovnem vstopu",
+          "url": "/sl/columns/taiwan-arc-renewal-changes-reentry",
+          "source_paths": [
+            "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md"
+          ],
+          "exists_in_release": false,
+          "exists_in_batch": true
+        }
+      ],
+      "official_inline_count": 10,
+      "official_tail_count": 10,
+      "inline_sources_absent_from_tail": [],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "exists": true
+      },
+      "issues": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "817393175801756e47f9ae7176d2b4336b0fdb47fca765b8dab4edcb9262cbbc",
+      "fields": {
+        "title": "Delo, študij ali družina: s katerim statusom na Tajvan?",
+        "seoTitle": "Prebivanje na Tajvanu zaradi dela, študija in družine",
+        "summary": "Brezvizumski prihod omogoča nekatere prijave strokovnjakov, pri študiju pa lahko zapre običajno pot do prebivanja. Pogoji so odvisni tudi od družinskega člana in namena vizuma.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "read_time": "7 min branja",
+        "categories": [
+          "Pravne informacije o Tajvanu"
+        ],
+        "topic": "visa",
+        "tags": [
+          "prebivanje na Tajvanu",
+          "strokovno delo",
+          "študij",
+          "kitajščina",
+          "družina"
+        ],
+        "audience": [
+          "sl"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "featured_image_alt": "Zaprt prenosnik, knjige in dve skodelici ob nevtralni potni knjižici.",
+        "featured_image_caption": "Izmišljen prizor",
+        "faq": [
+          {
+            "q": "Ali lahko po brezvizumskem prihodu zaprosim za prebivanje?",
+            "a": "Za upravičene tuje strokovnjake z delovnim dovoljenjem ali ustrezno izjemo 16. člen posebnega zakona omogoča neposredno prijavo pri NIA. Posebej določa pot za nekatere družinske člane. Preveriti je treba tudi uporabljeno ureditev vstopa. Običajni poti za študij in učenje kitajščine imata drugačne vstopne pogoje."
+          },
+          {
+            "q": "Koliko časa moram obiskovati tečaj kitajščine pred prijavo za prebivanje?",
+            "a": "Pot zahteva ustrezen vizum za obisk zaradi učenja jezika, štiri zaključene mesece pri upravičenem univerzitetnem jezikovnem centru in vpis še za najmanj tri mesece. Izpolniti je treba tudi pogoje glede ur, navzočnosti in dokazil. Samo plačilo tečaja ne zadostuje."
+          },
+          {
+            "q": "Ali vsak imetnik ARC lahko omogoči prebivanje zakoncu?",
+            "a": "Ne. Odločilni so državljanstvo in status družinskega člana na Tajvanu, sorodstveno razmerje ter način vstopa prosilca. Pravila za družino tujega strokovnjaka in za zakonca tajvanskega državljana so različna; zakon nekatere kategorije izključuje."
+          }
+        ]
+      },
+      "body_h2": [
+        "Dovoljen obisk in podlaga za prebivanje",
+        "Ponudba za delo potrebuje ustrezno dovoljenje",
+        "Redni študij in tečaj kitajščine imata različne pogoje",
+        "Na kateri družinski status se opira prijava?",
+        "Gold Card, ustanovitev podjetja in daljši obisk",
+        "Uradni viri"
+      ],
+      "table_rows": 0,
+      "internal_links": [
+        {
+          "label": "Dokumentacija za zakonca tajvanskega državljana je podrobneje opisana v angleščini",
+          "url": "/en/columns/taiwan-foreign-spouse-residence",
+          "source_paths": [
+            "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/028-taiwan-foreign-spouse-residence.md"
+          ],
+          "exists_in_release": true,
+          "exists_in_batch": false
+        },
+        {
+          "label": "razlaga prijave za Gold Card je v angleščini",
+          "url": "/en/columns/taiwan-employment-gold-card",
+          "source_paths": [
+            "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/027-taiwan-employment-gold-card.md"
+          ],
+          "exists_in_release": true,
+          "exists_in_batch": false
+        },
+        {
+          "label": "vodnik za prvi ARC",
+          "url": "/sl/columns/taiwan-arc-first-application",
+          "source_paths": [
+            "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/704-taiwan-arc-first-application.md"
+          ],
+          "exists_in_release": false,
+          "exists_in_batch": true
+        },
+        {
+          "label": "pravila o spremembi razloga in podaljšanju",
+          "url": "/sl/columns/taiwan-arc-renewal-changes-reentry",
+          "source_paths": [
+            "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md"
+          ],
+          "exists_in_release": false,
+          "exists_in_batch": true
+        }
+      ],
+      "official_inline_count": 15,
+      "official_tail_count": 15,
+      "inline_sources_absent_from_tail": [],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "exists": true
+      },
+      "issues": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "c85cb2409fa70abca79392f127d2948f33684e89f9b42cde4410a569139e2243",
+      "fields": {
+        "title": "Selitev, nova služba in potovanje pred iztekom ARC",
+        "seoTitle": "Podaljšanje ARC na Tajvanu, spremembe in ponovni vstop",
+        "summary": "Selitev ali prenehanje zaposlitve lahko sprožita rok pred iztekom ARC. Kdaj zaprositi za podaljšanje, prijaviti spremembo in urediti dokumente za vrnitev.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "read_time": "8 min branja",
+        "categories": [
+          "Pravne informacije o Tajvanu"
+        ],
+        "topic": "visa",
+        "tags": [
+          "podaljšanje ARC",
+          "sprememba naslova",
+          "nova zaposlitev",
+          "ponovni vstop",
+          "izgubljeni dokumenti"
+        ],
+        "audience": [
+          "sl"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "featured_image_alt": "Prazen rokovnik, nevtralna potna knjižica, majhna kartica in ključi na pisalni mizi.",
+        "featured_image_caption": "Izmišljen prizor",
+        "faq": [
+          {
+            "q": "Kdaj lahko vložim prošnjo za podaljšanje ARC?",
+            "a": "Običajna prošnja se vloži v zadnjih treh mesecih pred iztekom dovoljenega prebivanja in pred samim iztekom. Za podaljšanje Gold Card in upravičenega podjetniškega ARC ob nadaljevanju poslovanja veljata posebni štirimesečni obdobji pred iztekom. To niso dodatni meseci po poteku dovoljenja."
+          },
+          {
+            "q": "Do kdaj moram prijaviti selitev ali spremembo delovnega mesta?",
+            "a": "Za vpis spremembe pri NIA je treba zaprositi v 30 dneh od dne po spremembi. Nova zaposlitev lahko zahteva tudi delovno dovoljenje, spremenjeni razlog prebivanja pa svojo prošnjo. Vloga za posodobitev naslova ali kraja dela teh postopkov ne nadomesti."
+          },
+          {
+            "q": "Ali za vrnitev na Tajvan zadošča potrdilo o vloženi prošnji za ARC?",
+            "a": "Potrdilo ne nadomesti zahtevanih potovalnih dokumentov. Pred odhodom pri NIA preverite dokument za svojo vrnitev, če nove kartice še ne bo. Potni list, prebivanje in potrebno dovoljenje za ponovni vstop morajo pokrivati potovanje; za imetnike stalnega prebivanja velja posebna ureditev z veljavnim potnim listom in APRC."
+          }
+        ]
+      },
+      "body_h2": [
+        "Rok določa dogodek, zaradi katerega vlagate prošnjo",
+        "Podaljšanje ob nadaljevanju dela, študija ali družinske vezi",
+        "Nov naslov ali delodajalec zahtevata svoja dokazila",
+        "Ko dosedanja podlaga prebivanja preneha",
+        "Nov potni list in izgubljena kartica",
+        "Odhod med obravnavo in dokument za vrnitev",
+        "Uradni viri"
+      ],
+      "table_rows": 6,
+      "internal_links": [
+        {
+          "label": "Prva prijava",
+          "url": "/sl/columns/taiwan-arc-first-application",
+          "source_paths": [
+            "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/704-taiwan-arc-first-application.md"
+          ],
+          "exists_in_release": false,
+          "exists_in_batch": true
+        },
+        {
+          "label": "izbira novega namena prebivanja",
+          "url": "/sl/columns/taiwan-visa-residence-work-study-family",
+          "source_paths": [
+            "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md"
+          ],
+          "exists_in_release": false,
+          "exists_in_batch": true
+        },
+        {
+          "label": "stalno prebivanje APRC, opisano v angleščini",
+          "url": "/en/columns/taiwan-permanent-residence-aprc",
+          "source_paths": [
+            "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/029-taiwan-permanent-residence-aprc.md"
+          ],
+          "exists_in_release": true,
+          "exists_in_batch": false
+        }
+      ],
+      "official_inline_count": 14,
+      "official_tail_count": 14,
+      "inline_sources_absent_from_tail": [],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "exists": true
+      },
+      "issues": []
+    }
+  ],
+  "issue_count": 0
+}

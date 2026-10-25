@@ -1,0 +1,46 @@
+{
+  "review_status": "AI-authored neutral contract; root review/install pending",
+  "join_hyphens": true,
+  "canonical_abbreviations": true,
+  "question_pattern": "[?？;;]\\s*[\\\"”’»›)]*$",
+  "provenance": "MULTILINGUAL-METHOD.md (batch03); audit tests/fixtures-batch03.json frozen before profile implementation",
+  "register": "Standard Modern Greek",
+  "abbreviations": [
+    "κ",
+    "κα",
+    "δρ",
+    "καθ",
+    "αρ",
+    "άρθ",
+    "παρ",
+    "σελ",
+    "π.χ",
+    "π. χ",
+    "κ.λπ",
+    "κτλ",
+    "κ.ά",
+    "π.μ",
+    "μ.μ"
+  ],
+  "terminal_abbreviations": [
+    "κ.λπ",
+    "κτλ",
+    "κ.ά",
+    "π.μ",
+    "μ.μ"
+  ],
+  "additional_sentence_terminators": ";;",
+  "question_open_pattern": "[?？;;]",
+  "contrast_patterns": [
+    "(?i:\\b(?:δεν|όχι)\\b[^.!?\\n;;]{0,180}\\bαλλά\\b)",
+    "(?i:\\bσε\\s+αντίθεση\\s+με\\b)",
+    "(?i:\\bαντί\\s+για\\b)"
+  ],
+  "caveat_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:ωστόσο|όμως|παρ[’\\x27]\\s*όλα\\s*αυτά)\\b)",
+  "hypo_pattern": "(?i:^\\s*[”\\\"\\'(«»„“]*(?:ας\\s+υποθέσουμε\\s+ότι|φανταστείτε\\s+ότι)\\b)",
+  "formula_close_pattern": "(?i:(?:το\\s+άρθρο\\s+αυτό|αυτό\\s+το\\s+άρθρο)\\s+παρέχει\\s+γενικές\\s+πληροφορίες|το\\s+γραφείο\\s+μας\\s+μπορεί\\s+να\\s+βοηθήσει)",
+  "citation_pattern": "(?i:\\b(?:άρθρο|άρθρα|άρθ\\.)\\s*\\d+)",
+  "locale": "el",
+  "directory": "columns-el",
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:πηγές|επίσημες\\s+πηγές|βιβλιογραφία)\\s*:?\\s*$)"
+}

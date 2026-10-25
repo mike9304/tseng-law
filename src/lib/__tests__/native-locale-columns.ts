@@ -982,7 +982,7 @@ const ARC_VISA_FILES_20261024 = [
   '706-taiwan-arc-renewal-changes-reentry.md',
 ] as const;
 
-/** ARC/visa procedure series, expanded to42 authored locales through October26. */
+/** ARC/visa procedure series, expanded to49 authored locales through October26. */
 export const ARC_VISA_COLUMN_FILES_20261024: Partial<Record<string, readonly string[]>> = {
   ko: ARC_VISA_FILES_20261024,
   en: ARC_VISA_FILES_20261024,
@@ -1026,6 +1026,13 @@ export const ARC_VISA_COLUMN_FILES_20261024: Partial<Record<string, readonly str
   'my': ARC_VISA_FILES_20261024,
   'ta': ARC_VISA_FILES_20261024,
   'ne': ARC_VISA_FILES_20261024,
+  'km': ARC_VISA_FILES_20261024,
+  'mn': ARC_VISA_FILES_20261024,
+  'sr': ARC_VISA_FILES_20261024,
+  'sl': ARC_VISA_FILES_20261024,
+  'lt': ARC_VISA_FILES_20261024,
+  'lv': ARC_VISA_FILES_20261024,
+  'et': ARC_VISA_FILES_20261024,
 };
 
 /** Native audience columns published 2026-10-24. */

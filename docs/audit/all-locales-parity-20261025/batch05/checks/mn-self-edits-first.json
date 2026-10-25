@@ -1,0 +1,128 @@
+{
+  "atUTC": "2026-10-25T15:32:06.764613+00:00",
+  "records": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/704-taiwan-arc-first-application.md",
+      "beforeSHA256": "52f8b19368a63de374a8729e171121e8d0e35bb0b132f906a2099dcf8b811cc7",
+      "afterSHA256": "b4132dc5c792f68709a71ba8ff81cf456312f0f58112639a153b985ed010aa1a",
+      "exactReverseToInitial": true,
+      "edits": [
+        {
+          "id": "704-E01",
+          "offset": 6078,
+          "before": "Цахим хүсэлт үү, оршин суугаа газрын севисийн төв үү",
+          "after": "Цахим хүсэлт үү, оршин суугаа газрын үйлчилгээний төв үү",
+          "reason": "Correct the misspelt loan word to the normal Mongolian term for service center; same filing location.",
+          "beforeSHA256": "52f8b19368a63de374a8729e171121e8d0e35bb0b132f906a2099dcf8b811cc7",
+          "afterSHA256": "8216b682d64bd5968a0328f4c20bc41edf0208d16794f41c0c656143a9413fcd"
+        },
+        {
+          "id": "704-E02",
+          "offset": 7163,
+          "before": "Хугацаанд нь нөхөөгүй эсвэл дутуу нөхсөн бол хүсэлтийг татгалзана.",
+          "after": "Хугацаанд нь нөхөөгүй эсвэл дутуу нөхсөн бол хүсэлтээс татгалзана.",
+          "reason": "Correct the case governed by татгалзах; retain the rejection consequence for late OR incomplete supplementation.",
+          "beforeSHA256": "8216b682d64bd5968a0328f4c20bc41edf0208d16794f41c0c656143a9413fcd",
+          "afterSHA256": "fb1cd20123270b0c50443f19694f571114605a5a0c314fe95430c8df584d1410"
+        },
+        {
+          "id": "704-E03",
+          "offset": 8531,
+          "before": "Гэр бүлийн гишүүн бүр өөрийн оршин суух зөвшөөрлийн маргаашаас тоолно.",
+          "after": "Гэр бүлийн гишүүн бүрийн хугацааг NIA түүнд оршин суух зөвшөөрөл олгосон өдрийн маргаашаас тоолно.",
+          "reason": "Name the family member’s own NIA residence approval date explicitly; not work approval or the sponsor’s date.",
+          "beforeSHA256": "fb1cd20123270b0c50443f19694f571114605a5a0c314fe95430c8df584d1410",
+          "afterSHA256": "3ea422382ae6eb78a83300ed2d35f036742c8af473d9d56136cda1b5e8032137"
+        },
+        {
+          "id": "704-E04",
+          "offset": 4316,
+          "before": "Ажлын үндэслэлд холбогдох ажлын зөвшөөрөл болон сүүлийн нэг сарын дотор олгосон ажил эрхэлж буй тодорхойлолт хамаарна. Зөвшөөрлөөс чөлөөлөгдсөн бол тэр үндэслэлд тохирох баримт үзүүлнэ. Сургуульд хараахан бүртгүүлээгүй хүн элсэх эрхийн бичиг, бүртгүүлсэн хүн NIA-ийн шаардлагад нийцсэн сүүлийн нэг сарын суралцаж буй нотолгоо өгнө. Гэр бүлийн хүсэлтэд харилцааг нотлох гэрлэлт, төрсний баримт болон түшиглэж буй гэр бүлийн гишүүний биеийн байцаалт эсвэл оршин суух баримт шаардлагатай.",
+          "after": "Ажлын үндэслэлд холбогдох ажлын зөвшөөрөл болон сүүлийн нэг сарын дотор олгосон ажил эрхэлж буй тодорхойлолт хамаарна. Зөвшөөрлөөс чөлөөлөгдсөн бол тэр үндэслэлд тохирох баримт үзүүлнэ.\n\nСургуульд хараахан бүртгүүлээгүй хүн элсэх эрхийн бичиг өгнө. Бүртгүүлсэн оюутны хувьд NIA-ийн жагсаалт сүүлийн нэг сарын суралцаж буй нотолгоог дурддаг бөгөөд одоогийн улирлын бүртгэл эсвэл оюутны үнэмлэхийг ч заасан.\n\nГэр бүлийн хүсэлтэд харилцаагаа нотлох тохирох баримт, тухайлбал гэрлэлтийн эсвэл төрсний гэрчилгээ, мөн түшиглэж буй гэр бүлийн гишүүний биеийн байцаалт эсвэл оршин суух баримт шаардлагатай.",
+          "reason": "Separate employment/school/family documents. Express school enrollment OR card without making all records mandatory, and relationship certificate examples as marriage OR birth as appropriate; keep one-month freshness and sponsor identity OR residence proof.",
+          "beforeSHA256": "3ea422382ae6eb78a83300ed2d35f036742c8af473d9d56136cda1b5e8032137",
+          "afterSHA256": "b4132dc5c792f68709a71ba8ff81cf456312f0f58112639a153b985ed010aa1a"
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+      "beforeSHA256": "575148d6b5325de422aca8c292ea50c8edd74881125c23a697ba0b3701889b05",
+      "afterSHA256": "513d07afb479b840665c4464ab16c379adc929105d24d24444f864cdcadc99f3",
+      "exactReverseToInitial": true,
+      "edits": [
+        {
+          "id": "705-E01",
+          "offset": 2989,
+          "before": " Нийтлэлийг монголоор уншиж байгаа нь эдгээр мэдээллийг орлохгүй.",
+          "after": "",
+          "reason": "Remove an unprompted editorial statement about reading language; the paragraph already names actual nationality, passport, residence and issuing place.",
+          "beforeSHA256": "575148d6b5325de422aca8c292ea50c8edd74881125c23a697ba0b3701889b05",
+          "afterSHA256": "513d07afb479b840665c4464ab16c379adc929105d24d24444f864cdcadc99f3"
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+      "beforeSHA256": "cf55e040d0c00f577e05f0b40057c9fe6efdbe0dded735713b505fc384009cc2",
+      "afterSHA256": "c104ac77d73fe5c4a3de64dc8578498523759428bf7fa81af4152f964c3d4864",
+      "exactReverseToInitial": true,
+      "edits": [
+        {
+          "id": "706-E01",
+          "offset": 2504,
+          "before": "Өөрчлөлт гарсан өдөр картаас эрт хугацаа үүсгэж болно.",
+          "after": "Өөрчлөлт гарснаар картын хугацаа дуусахаас өмнө хүсэлт гаргах үүрэг үүсэж болно.",
+          "reason": "Replace an unclear comparison with the card by the concrete possibility of a filing obligation before card expiry.",
+          "beforeSHA256": "cf55e040d0c00f577e05f0b40057c9fe6efdbe0dded735713b505fc384009cc2",
+          "afterSHA256": "289b09eed3604b5b037db69620a2605d5381d99c3cd3ddc6073e5c55241e5cc0"
+        },
+        {
+          "id": "706-E02",
+          "offset": 5615,
+          "before": " Энэ нь аяллын үргэлжлэх хугацааг тоолж буй хэрэг биш.",
+          "after": "",
+          "reason": "Remove an unnecessary rebuttal about ordinary travel after the exact temporary-stay plus residence limit is already stated; keep max six-month extension and generally two-year combined limit.",
+          "beforeSHA256": "289b09eed3604b5b037db69620a2605d5381d99c3cd3ddc6073e5c55241e5cc0",
+          "afterSHA256": "d43286d23af4d612cdd38b4e84c2d7298a5f4e5f34530413f1ce6c25035c4efd"
+        },
+        {
+          "id": "706-E03",
+          "offset": 4114,
+          "before": "Тайваньд бизнесээ үргэлжлүүлэн эрхэлж, шаардлага хангасан хүний [бизнес эрхлэгчийн ARC сунгалт](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/) хугацаа дуусахаас өмнөх дөрвөн сарын дотор нээгдэнэ.",
+          "after": "Тайваньд бизнесээ үргэлжлүүлэн эрхэлж, шаардлага хангасан хүний [бизнес эрхлэгчийн ARC сунгалтын хүсэлтийг](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/) хугацаа дуусахаас өмнөх дөрвөн сарын дотор гаргаж болно.",
+          "reason": "State the permitted filing window directly instead of saying the extension opens sometime during it; keep continuing Taiwan business and qualification conditions.",
+          "beforeSHA256": "d43286d23af4d612cdd38b4e84c2d7298a5f4e5f34530413f1ce6c25035c4efd",
+          "afterSHA256": "572f02ea2a4d1499e2817c05f16be989f915a6f211f2fc24a378a967a7f458b1"
+        },
+        {
+          "id": "706-E04",
+          "offset": 9020,
+          "before": "Нэг удаа нэмж хүсэж, нийт хамгийн ихдээ нэг жил хүргэж болно.",
+          "after": "Сунгасан хугацаа дуусахаас өмнө нэг удаа нэмж хүсэж, нийт хамгийн ихдээ нэг жил хүргэж болно.",
+          "reason": "Clarify that the further professional extension is also applied for before the extended term expires; keep once and total max one year.",
+          "beforeSHA256": "572f02ea2a4d1499e2817c05f16be989f915a6f211f2fc24a378a967a7f458b1",
+          "afterSHA256": "342aee6c860d21441be2c2e44ea43c4005801bcfe05c1ec82d5a5e735c0e73f9"
+        },
+        {
+          "id": "706-E05",
+          "offset": 9458,
+          "before": "Дахин нэг удаа сунгаж, нийт хамгийн ихдээ хоёр жил болгох боломжтой.",
+          "after": "Сунгасан хугацаа дуусахаас өмнө дахин нэг удаа хүсэлт гаргаж, нийт хамгийн ихдээ хоёр жил болгох боломжтой.",
+          "reason": "Clarify the graduate further-extension filing timing, not a pre-expiry approval-completion requirement; keep one extra and total max two years.",
+          "beforeSHA256": "342aee6c860d21441be2c2e44ea43c4005801bcfe05c1ec82d5a5e735c0e73f9",
+          "afterSHA256": "3529c7dbf46555798155de9a9dfeac22058c6afce9962534c29c84da82833eec"
+        },
+        {
+          "id": "706-E06",
+          "offset": 11449,
+          "before": " Тодорхойгүй байхад зөвхөн хуулбараар нисэж, нэвтэрч чадна гэж найдахгүй.",
+          "after": "",
+          "reason": "Remove an unprompted airline/photocopy warning after the concrete NIA/mission inquiry with passport, ARC copy if available and return date; no return-entry entitlement is created.",
+          "beforeSHA256": "3529c7dbf46555798155de9a9dfeac22058c6afce9962534c29c84da82833eec",
+          "afterSHA256": "c104ac77d73fe5c4a3de64dc8578498523759428bf7fa81af4152f964c3d4864"
+        }
+      ]
+    }
+  ]
+}

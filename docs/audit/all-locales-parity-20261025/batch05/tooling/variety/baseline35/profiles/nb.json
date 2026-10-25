@@ -1,0 +1,16 @@
+{
+  "locale": "nb",
+  "directory": "columns-nb",
+  "review_status": "AI-authored neutral contract; coordinating review pending",
+  "register": "Norwegian Bokmål; not an alias for Nynorsk or unspecified no",
+  "join_hyphens": true,
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:offisielle\\s+)?kilder(?:\\s+og\\s+kontrolldato)?\\s*:?\\s*$)",
+  "abbreviations": ["dr", "prof", "art", "nr", "kap", "s", "pkt", "kl", "ca", "jf", "f.eks", "bl.a", "dvs", "osv", "mfl", "m.m", "o.l"],
+  "terminal_abbreviations": ["osv", "mfl", "m.m", "o.l"],
+  "ordinal_followers": "januar|februar|mars|april|mai|juni|juli|august|september|oktober|november|desember|etasje|ledd|punkt|kapittel|klasse",
+  "contrast_patterns": ["(?i:\\bikke\\b[^.!?\\n]{0,180}\\bmen\\b)", "(?i:\\bi\\s+stedet\\s+for\\b)", "(?i:\\btil\\s+forskjell\\s+fra\\b)", "(?i:\\bikke\\s+det\\s+samme\\b)"],
+  "caveat_pattern": "(?i:^\\s*[”\"(«»„“]*(?:likevel|imidlertid|men)\\b)",
+  "hypo_pattern": "(?i:^\\s*[”\"(«»„“]*(?:anta\\s+at|forestill\\s+deg)\\b)",
+  "formula_close_pattern": "(?i:denne\\s+artikkelen\\s+(?:gir|inneholder)\\s+generell\\s+informasjon|vårt\\s+firma\\s+kan\\s+hjelpe)",
+  "citation_pattern": "(?i:(?:\\b(?:artikkel|artikler|art\\.)\\s*|§\\s*)\\d+)"
+}

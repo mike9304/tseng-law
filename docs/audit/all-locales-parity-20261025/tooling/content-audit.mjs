@@ -21,7 +21,9 @@ const FIRST_BATCH = {
 const SITE_HOSTS = new Set(['tseng-law.com', 'www.tseng-law.com']);
 const MIN_BODY_LETTERS = 500;
 const MIN_UNIQUE_BODY_LETTERS = 350;
-const PLACEHOLDER = /\b(?:TODO|TBD|lorem ipsum|insert (?:text|content|translation) here|translation pending)\b|내용\s*작성\s*예정|待(?:翻译|翻譯|补充|補充)|\[\s*(?:TRANSLATE|PLACEHOLDER)\s*\]/iu;
+const PLACEHOLDER = /\b(?:TBD|lorem ipsum|insert (?:text|content|translation) here|translation pending)\b|내용\s*작성\s*예정|待(?:翻译|翻譯|补充|補充)|\[\s*(?:TRANSLATE|PLACEHOLDER)\s*\]/iu;
+// "todo" is ordinary Portuguese/Spanish prose; uppercase or explicit markers remain unfinished text.
+const TODO_PLACEHOLDER = /\bTODO\b|\b[Tt][Oo][Dd][Oo]\s*:|\[\s*[Tt][Oo][Dd][Oo]\s*\]/u;
 const CONDITION_HINT = /\b(?:must|may|only|unless|except|if|eligible|eligibility|cannot|does not|not automatically|before|after|within|required|permission|permit|exemption|and|or)\b|(?:경우|요건|기한|예외|허가|신청|해야|또는|다만|않)|(?:應|应|須|须|得|不得|但|除外|如果|許可|许可|期限|申請|申请)/iu;
 const COUNTRY_HINT = /\b(?:nationality|citizen|nationals?|passport|mainland|Hong Kong|Macau|China|Taiwan|Korea|Japan|United States|Russia|Malaysia|Philippines|Turkey|Netherlands|граждан|гражданство|паспорт|warganegara|kewarganegaraan|mamamayan|pagkamamamayan|vatandaş|uyruk|nationaliteit|staatsburger)\b|国籍|國籍|국적|국민|台湾|台灣|大陆|大陸|香港|澳門|澳门|中国|中國/iu;
 
@@ -51,6 +53,8 @@ function literalDeclaration(root, file, name) {
     if (ts.isAsExpression(node) || ts.isSatisfiesExpression(node) || ts.isParenthesizedExpression(node)) return literal(node.expression);
     if (ts.isStringLiteralLike(node)) return node.text;
     if (ts.isArrayLiteralExpression(node)) return node.elements.map(literal);
+    if (ts.isNewExpression(node) && ts.isIdentifier(node.expression) && node.expression.text === 'Set'
+      && node.arguments?.length === 1 && ts.isArrayLiteralExpression(node.arguments[0])) return literal(node.arguments[0]);
     if (ts.isObjectLiteralExpression(node)) return Object.fromEntries(node.properties.map((item) => {
       if (!ts.isPropertyAssignment(item)) throw new Error(`Nonliteral property in ${file}:${name}`);
       return [ts.isIdentifier(item.name) || ts.isStringLiteralLike(item.name) ? item.name.text : item.name.getText(ast), literal(item.initializer)];
@@ -58,6 +62,31 @@ function literalDeclaration(root, file, name) {
     throw new Error(`Unsupported runtime declaration ${file}:${name}; inspect the changed contract`);
   }
   return literal(found);
+}
+
+/** The catch-all's literal legacy renderer is a route registry, not an arbitrary published slug. */
+function legacyPagePaths(root) {
+  const file = 'src/app/[locale]/(legacy)/index.tsx';
+  const ast = parseTsFile(root, file);
+  const declaration = ast.statements.find((node) => ts.isFunctionDeclaration(node) && node.name?.text === 'renderLegacyPage');
+  const statement = declaration?.body?.statements[0];
+  if (declaration?.body?.statements.length !== 1 || !statement || !ts.isSwitchStatement(statement)
+    || !ts.isIdentifier(statement.expression) || statement.expression.text !== 'slugPath') {
+    throw new Error(`Unsupported legacy renderer in ${file}; inspect the changed route contract`);
+  }
+  return statement.caseBlock.clauses.flatMap((clause) => {
+    const result = clause.statements[0];
+    if (clause.statements.length !== 1 || !result || !ts.isReturnStatement(result)) {
+      throw new Error(`Nonliteral legacy render case in ${file}; inspect the changed route contract`);
+    }
+    const expression = result.expression;
+    if (expression?.kind === ts.SyntaxKind.NullKeyword) return [];
+    if (!ts.isCaseClause(clause) || !ts.isStringLiteralLike(clause.expression) || !expression
+      || (!ts.isJsxElement(expression) && !ts.isJsxSelfClosingElement(expression))) {
+      throw new Error(`Unsupported legacy render case in ${file}; inspect the changed route contract`);
+    }
+    return [clause.expression.text];
+  });
 }
 
 /** Only these three pure repository modules are evaluated; no CMS/store/API module is loaded. */
@@ -103,9 +132,16 @@ function readRuntimeContract(root) {
     topics: literalDeclaration(root, 'src/lib/column-topics.ts', 'COLUMN_TOPICS'),
     guidance: literalDeclaration(root, 'src/lib/public-guidance.ts', 'GUIDANCE_LOCALES_4'),
     guidanceRoutes: literalDeclaration(root, 'src/lib/public-guidance.ts', 'GUIDANCE_CORE_ROUTE_KEYS'),
+    siteLocales: literalDeclaration(root, 'src/lib/locales.ts', 'siteLocales'),
+    legacyRoutes: legacyPagePaths(root),
+    jaStaticPaths: literalDeclaration(root, 'src/lib/public-route-policy.ts', 'JA_FULL_STATIC_PATHS'),
+    jaUnsupportedPrefixes: literalDeclaration(root, 'src/lib/public-route-policy.ts', 'JA_UNSUPPORTED_PREFIXES'),
     issueLocales: literalDeclaration(root, 'src/lib/columns.ts', 'ISSUE_BOARD_LOCALES'),
     aliases: literalDeclaration(root, 'src/lib/columns.ts', 'SLUG_ALIASES'),
-    hashes: { ...pure.hashes, ...Object.fromEntries(['src/lib/columns.ts', 'src/lib/column-locales.ts', 'src/lib/public-guidance.ts', 'src/lib/column-topics.ts'].map((file) => [file, hash(readFileSync(path.join(root, file)))])) },
+    hashes: { ...pure.hashes, ...Object.fromEntries([
+      'src/lib/columns.ts', 'src/lib/column-locales.ts', 'src/lib/public-guidance.ts', 'src/lib/column-topics.ts',
+      'src/lib/locales.ts', 'src/lib/public-route-policy.ts', 'src/app/[locale]/(legacy)/index.tsx', 'src/app/[locale]/[[...slug]]/page.tsx',
+    ].map((file) => [file, hash(readFileSync(path.join(root, file)))])) },
   };
 }
 
@@ -278,7 +314,9 @@ function verifyLink(link, row, context) {
     else if (url.hash) addReview(row, 'internal-anchor-review', 'Check the rendered core-page anchor', link);
     return;
   }
-  const fixed = patterns.some((pattern) => pattern.every((part) => !part.startsWith('[')) && pattern.join('/') === segments);
+  const legacy = contract.siteLocales.includes(locale) && contract.legacyRoutes.includes(segments)
+    && (locale !== 'ja' || (contract.jaStaticPaths.includes(segments) && !contract.jaUnsupportedPrefixes.includes(parts[0] ?? '')));
+  const fixed = legacy || patterns.some((pattern) => pattern.every((part) => !part.startsWith('[')) && pattern.join('/') === segments);
   const dynamic = patterns.some((pattern) => pattern.length === parts.length && pattern.every((part, i) => /^\[[^\]]+\]$/.test(part) || part === parts[i]));
   if (!fixed && !dynamic) addError(row, 'internal-link-missing', 'No public route found in the App Router tree', link);
   else if (!fixed) addReview(row, 'dynamic-route-review', 'Dynamic route exists; its published record and final HTTP response still require verification', link);
@@ -325,7 +363,7 @@ function checkDocument(row, target, source, context, publicationDate) {
   const uniqueProse = [...new Set(target.paragraphs.map((item) => item.text))].join('\n');
   row.bodyMetrics = { lettersAndNumbers: letters(prose), uniqueParagraphLettersAndNumbers: letters(uniqueProse), paragraphs: target.paragraphs.length, h1: target.h1.length };
   if (letters(prose) < MIN_BODY_LETTERS || letters(uniqueProse) < MIN_UNIQUE_BODY_LETTERS) addError(row, 'body-too-short', 'Insufficient substantive visible prose (URLs, code and images do not count)', { minimumLettersAndNumbers: MIN_BODY_LETTERS, minimumUnique: MIN_UNIQUE_BODY_LETTERS, ...row.bodyMetrics });
-  for (const passage of [...target.fields, ...target.paragraphs, ...target.headings]) if (PLACEHOLDER.test(passage.text)) addError(row, 'placeholder', 'Unfinished placeholder text', passage);
+  for (const passage of [...target.fields, ...target.paragraphs, ...target.headings]) if (PLACEHOLDER.test(passage.text) || TODO_PLACEHOLDER.test(passage.text)) addError(row, 'placeholder', 'Unfinished placeholder text', passage);
   for (const line of target.h1) addError(row, 'body-h1', 'New manuscripts must not repeat the page title as body H1', { line });
   for (const item of target.strong) {
     if (item.quoted) addReview(row, 'quoted-bold', 'Confirm that bold markers are literal quoted content rather than decoration', item);

@@ -1,0 +1,225 @@
+{
+  "at": "2026-10-26T02:09:55.003800+09:00",
+  "headUnchanged": true,
+  "new": 21,
+  "updated": 1,
+  "rows": [
+    {
+      "locale": "km",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-km/704-taiwan-arc-first-application.md",
+      "sha256": "8ae680254e50bf202d7a3ebe1f886de19264a22251bdda5effbdc9c74b649b53",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "km",
+      "number": "705",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "km",
+      "number": "706",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d1a5eff1eb9fed410075031876b059d635ac4c9de9cd75a61c5a2ac540371286",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "mn",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/704-taiwan-arc-first-application.md",
+      "sha256": "c33ec471bf92fd0d55977d3e5e40dde1fed5130d73645c3836c43895b1f918de",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "mn",
+      "number": "705",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "d54e05e91c9d6e9da6ee536009c01b9d44d34b0a78e74dbe07b2e294dde261ac",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "mn",
+      "number": "706",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "f3ced3a9c5be6948ce8ead66d0110be0a8e8309f39f414712f24bff50de965a4",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "sr",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/704-taiwan-arc-first-application.md",
+      "sha256": "15229f8e599464d507976f6d91818d441c6a1c8be1448af31f79fd79b8730dac",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "sr",
+      "number": "705",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "9057c2a83ef6e71ab6f576702943fdf604ae345b627b94d98986baf4a6b7d6b2",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "sr",
+      "number": "706",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1e5a3547ce8437f9ddb4f3a3b61dd62261a4a1dccaa63683d43d9692b73331d9",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "sl",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/704-taiwan-arc-first-application.md",
+      "sha256": "a87a3ac1137b0012120a56629dccc0e0d64dcbb55a2e2a6110e2be213cde6bd6",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "sl",
+      "number": "705",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "90d5e07a124a7b1c6aeb46a5be8293a44007a58f6e2dad2593c96b1067834932",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "sl",
+      "number": "706",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d5b7581f6dcff33cdcb5b65e1b46bd0654e050acb94434bbdaab68222c0aca5b",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "lt",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lt/704-taiwan-arc-first-application.md",
+      "sha256": "f46f3545e94950ba11cb30f118689721608e6f9593a088a40b10f3b8618a35a9",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "lt",
+      "number": "705",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "33b0cc65e3720963cac03710365c44c3c8a88a953309b38314680bca963c14c5",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "lt",
+      "number": "706",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4b2d935fa2496bf95b6e304f976e937221a6ab696ab9aa7cf526e2811c7cf1c6",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "lv",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/704-taiwan-arc-first-application.md",
+      "sha256": "f47d6be694c2e9601fa457d64598379b5065fa48a94937d5ff11a76d3637c810",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "lv",
+      "number": "705",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "de24030f670164d376227740b49a16a3e1883fa29def34a483fda0672a529102",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "lv",
+      "number": "706",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "e5b600ba790cdbcd9f225c1703c81e28e7ab49974d504b4ba77b1070d48e700d",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "et",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/704-taiwan-arc-first-application.md",
+      "sha256": "f15069557979333b4febbff860e45755472675d20f056ac2d05664f788eaea96",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "et",
+      "number": "705",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "6bf9a4fca0d1b90d3bf0e4f46e4c87ba43cb5c4b32989ab3e98eaed52955acc8",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "et",
+      "number": "706",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "dce0dce717cd732bce40b187f43ef31cbcf0758d71256c129263c23fc7da856a",
+      "sourceEqual": true,
+      "kind": "new"
+    },
+    {
+      "locale": "de",
+      "number": "704",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/existing-corrections/columns-de/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-de/704-taiwan-arc-first-application.md",
+      "beforeSHA256": "07b02d98ad6c6e6679d32bb8315391c678fa23bc7eb0c485ba9bf9dc6440a306",
+      "sha256": "e4088a2d7a48a32b0f63c7642fc4557e537c7db6d840daa69dec09329d200ce2",
+      "sourceEqual": true,
+      "kind": "existing-correction"
+    }
+  ],
+  "registry": {
+    "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/native-locale-columns.ts",
+    "beforeSHA256": "1b863756441391cfadb0a9e534309cc779e75ba2702abc2e3c98905a65c09b9c",
+    "afterSHA256": "d96d8607d18d6c86ee0e5c6829ff4aeb62f1273a1998c2f395cfc3668130b534",
+    "exactReverse": true,
+    "addedLocales": [
+      "km",
+      "mn",
+      "sr",
+      "sl",
+      "lt",
+      "lv",
+      "et"
+    ],
+    "oldEntriesPreserved": 42
+  },
+  "allowedChanges": "Only these22 content paths and one registry helper; root tooling changes are separately owned.",
+  "commitBuildDeployPerformed": false
+}

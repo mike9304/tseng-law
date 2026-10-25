@@ -1,0 +1,62 @@
+{
+  "review_status": "AI neutral contract; root independent review/install pending",
+  "provenance": "METHOD-BATCH05.md; tests/fixtures-batch05.json fixed before production edits",
+  "join_hyphens": false,
+  "canonical_abbreviations": true,
+  "flexible_abbreviation_spaces": true,
+  "length_unit": "orthographic_words",
+  "short_threshold": 8,
+  "long_threshold": 32,
+  "question_pattern": "[?？؟]\\s*[\"”’»›“)]*$",
+  "terminal_abbreviations": [
+    "u.c",
+    "u. c",
+    "u.tml",
+    "u. tml",
+    "utt",
+    "g"
+  ],
+  "register": "Standard Latvian",
+  "abbreviations": [
+    "Dr",
+    "prof",
+    "doc",
+    "piem",
+    "t.i",
+    "t. i",
+    "t.sk",
+    "t. sk",
+    "u.c",
+    "u. c",
+    "u.tml",
+    "u. tml",
+    "utt",
+    "Nr",
+    "nr",
+    "lpp",
+    "lp",
+    "g",
+    "plkst",
+    "sk",
+    "sal",
+    "att",
+    "tab"
+  ],
+  "context_terminal_abbreviations": {
+    "lpp": "\\d+[\\ue000.]?\\s*$",
+    "lp": "\\d+[\\ue000.]?\\s*$"
+  },
+  "dotted_ordinal_lowercase_continuation": true,
+  "dotted_ordinal_arabic_only": true,
+  "additional_closing_quotes": "“",
+  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:Avoti|Oficiālie\\s+avoti|Izmantotie\\s+avoti)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
+  "contrast_patterns": [
+    "(?i:(?:^|(?<=[.!?\\n]))\\s*(?![^.!?\\n;]{0,220}(?:\\b(?:tikai|vienīgi)\\b))[^.!?\\n;]{0,220}(?:\\bnav\\b)[^.!?\\n;]{0,120}(?:\\bbet\\b))"
+  ],
+  "caveat_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Tomēr|Taču|Neraugoties\\s+uz\\s+to)\\b)",
+  "hypo_pattern": "(?i:^[\\s“”„\"\\x27«»(\\[]*(?:Pieņemsim|Iedomāsimies)\\b)",
+  "formula_close_pattern": "(?i:vispārīga\\s+informācija)",
+  "citation_pattern": "(?i:\\b\\d+\\.\\s*pant(?:s|a|ā|u)|\\bpant(?:s|a|ā|u)\\s*\\d+)",
+  "locale": "lv",
+  "directory": "columns-lv"
+}

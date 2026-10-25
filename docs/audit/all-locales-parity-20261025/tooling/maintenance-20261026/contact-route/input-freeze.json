@@ -1,0 +1,59 @@
+{
+  "recorded_at": "2026-10-26T02:05:28.532348+09:00",
+  "ownership": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/contact-route",
+  "input_files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/placeholder/repo/docs/audit/all-locales-parity-20261025/tooling/content-audit.mjs",
+      "sha256": "2f4e4860bfb06316b33df502fa39bf6814da09ccf70fba611427dd668e3928b6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/placeholder/repo/docs/audit/all-locales-parity-20261025/tooling/content-audit.test.mjs",
+      "sha256": "0439b856c311b774d90ea68f6c60692beedb724bafe12b140f5f0dc29050505d"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/content-audit.mjs",
+      "sha256": "eea579eedf007e403209d59f2089b7f2d1e465c03294df9bad5f50c24b4a8b03"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/content-audit.test.mjs",
+      "sha256": "4cb12db0be0fbbc34d4af76e60b1c089d58362754de15e47883c3d233194f92c"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/(legacy)/index.tsx",
+      "sha256": "5e485ee21bac81e7b8dc74778fba24d69e8541492010e791709a82373c3eb2da"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/[[...slug]]/page.tsx",
+      "sha256": "3dab508b2dddb716fa84184335f4f62b3d35164d30abdb3ab30185a3bb6a4f03"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/locales.ts",
+      "sha256": "38304dea2b15fc6d6d05cebafa6cc08fdac18d66da875da7c79b7a117e431c54"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/public-route-policy.ts",
+      "sha256": "7a71128c423d76057bd50e791189533ab96789594aef994f4346f4ead2c6607c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-route-diagnostic.json",
+      "sha256": "99493c83f4e50b9fdd16dae9120a9fd9677f831d27470c20fc1dd4a8fe3ab2fa"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-contact-public.json",
+      "sha256": "933408585753f8d8db3e88e540de73298b431b90c2e96161cb47fdf49c22f574"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-contact-public-parsed.json",
+      "sha256": "9fccc279757ae3d2226752a7cd97449d96d752edd32558478dcc41395ee4f1f2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-contact-public.html",
+      "sha256": "4059217778790e844bd71ed7ce0a2cabc865a29c0d9a5efcbb3e69efb371690f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-audit.mjs",
+      "sha256": "2b80039479bd0049ef86a6f314c12551813d217cfffbab192392eb094594ce2a"
+    }
+  ],
+  "note": "Base is parent-owned placeholder candidate with12 tests. Only independent candidate copy and reports under contact-route will change; R, original candidate, B4, manuscripts and prior reports remain untouched."
+}

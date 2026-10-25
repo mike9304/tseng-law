@@ -1,0 +1,133 @@
+{
+  "createdAt": "2026-10-25T15:29:23.228302+00:00",
+  "fixedSourceContentBase": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/BRIEF.md",
+      "sha256": "67af9e0e6ebdcf818bfe41d84dac0000f8a1252bc6bf55c02ce6eeaaa7445ef9",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch03/BRIEF.md",
+      "sha256": "076a5bd7220bead942bf9dcf4c649180c8036b85d5c019775f1aad1a42eb3c7e",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch02/BRIEF.md",
+      "sha256": "104c4c4df457e5627b6970599661be78182d7101cbb9090df549670501846105",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/AGENTS.md",
+      "sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/BRIEF.md",
+      "sha256": "a8546e8a19f911b16c07f29ff874fb4ad70bb04d087a16354ad2adc8a57246f7",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/research/arc-source-facts.md",
+      "sha256": "4776f60010172120e0812d8d552123aeb5c7cc0b467cb5306ca031a1e17c2145",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/codex-column-recheck-20261024/research/source-refresh.md",
+      "sha256": "a33d5bd1439879bc7461755c3b6793f4942ec161454032dcb8cde1c4d52a6983",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/FRONTMATTER.md",
+      "sha256": "7a2590f33ba49c55f539f1fade51fed1290808352b16247445a714333593a364",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "92c572987cbc3c03eeb934fbfd2de6cf42d7e4b2e441cc39fb009c0e11f0e71a",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/704-taiwan-arc-first-application.md",
+      "sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+      "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/704-taiwan-arc-first-application.md",
+      "sha256": "0c00bc06bf3c3c1860a95af4dbcea9eaab981300860916856295e8b947244468",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "290a50047632ad830ea98c524ffef6ed91c2b4c8d555a1844689824c3ffea7a3",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4d70e78b9a197f4a2b81d25d61b6fa862ee849a6392d5fd905e90bcf781e721c",
+      "sameAsPreviouslyFullyRead": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/BRIEF.md",
+      "sha256": "3ec4273b3e346bb20e1b6513c6a146682da2e39fa5c48c17d5496bd8195a4863",
+      "readInFullForThisBatch": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/900-latvian-timber-exporter-taiwan-unpaid-invoices.md",
+      "sha256": "be94667f997685ce4f8d13e3832ebcbfc1356df24fef0c3832b3d606330361d1",
+      "readInFullForThisBatch": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/901-latvian-professional-taiwan-work-permit-family.md",
+      "sha256": "f91d73c148b147217588de7f4f7eb20816bf108d43e27e07f98e59d162937ba0",
+      "readInFullForThisBatch": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/902-latvian-visitor-taiwan-traffic-injury-return-home.md",
+      "sha256": "c36ad16972aaa5a0ac784f10d80de8ed76044e359a4e006260a9885fa8d736fa",
+      "readInFullForThisBatch": true
+    }
+  ],
+  "homeEditorialExists": false,
+  "readScope": "Same continuing session: all nine EN/KO/ZH frozen sources and complete upstream contracts/rules were read in full before prior author/review work; current hashes revalidated. EN3, B5/B4, R AGENTS and LV900-902 read again in full for this batch. No held/rejected draft is an input. Fixed original verification remains Oct24-25. No git or R mutations."
+}

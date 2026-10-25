@@ -1,0 +1,14 @@
+{
+  "locale": "nl",
+  "directory": "columns-nl",
+  "review_status": "AI-authored neutral contract; coordinating review pending",
+  "join_hyphens": true,
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:(?:officiële\\s+)?bronnen(?:\\s+en\\s+controledatum)?)\\s*:?\\s*$)",
+  "abbreviations": ["mr", "dr", "prof", "art", "nr", "blz", "d.w.z", "m.a.w", "o.a", "bv", "bijv", "a.u.b", "enz", "etc", "e.d"],
+  "terminal_abbreviations": ["enz", "etc", "e.d"],
+  "contrast_patterns": ["(?i:\\bniet\\b[^.!?\\n]{0,180}\\bmaar\\b)", "(?i:\\bin\\s+plaats\\s+van\\b)", "(?i:\\banders\\s+dan\\b)", "(?i:\\bniet\\s+hetzelfde\\s+als\\b)"],
+  "caveat_pattern": "(?i:^\\s*[‘“\"(]*(?:echter|toch|desondanks|niettemin)\\b)",
+  "hypo_pattern": "(?i:^\\s*[‘“\"(]*(?:stel\\s+dat|veronderstel|neem\\s+aan)\\b)",
+  "formula_close_pattern": "(?i:dit\\s+artikel\\s+(?:bevat|geeft)\\s+(?:alleen\\s+)?algemene\\s+informatie|ons\\s+kantoor\\s+kan\\s+u\\s+helpen)",
+  "citation_pattern": "(?i:\\b(?:artikel|artikelen|art\\.)\\s*\\d+)"
+}

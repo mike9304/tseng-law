@@ -1,0 +1,156 @@
+{
+  "at_utc": "2026-10-25T16:23:14.212618+00:00",
+  "scope": "Narrow changed-passage SL R2; R1 preserved",
+  "decision": {
+    "remaining_mandatory_findings": 0,
+    "remaining_optional_findings": 0,
+    "changed_passage_new_issue_found": false,
+    "machine_pass_independent_of_meaning_review": true
+  },
+  "report": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-independent-r2.md",
+  "outputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-independent-r2.md",
+      "sha256": "006f2ef2634088e240a85b85f6ba3be9102d3b843037a50b8d71fba33ef032b5",
+      "bytes": 4803
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-independent-r2.json",
+      "sha256": "c71d6d837b3f9af85c6583ab02835a73fcacb7a8114175578c3633a234af6da9",
+      "bytes": 72320
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/704-taiwan-arc-first-application.md",
+      "sha256": "a87a3ac1137b0012120a56629dccc0e0d64dcbb55a2e2a6110e2be213cde6bd6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "90d5e07a124a7b1c6aeb46a5be8293a44007a58f6e2dad2593c96b1067834932"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d5b7581f6dcff33cdcb5b65e1b46bd0654e050acb94434bbdaab68222c0aca5b"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/sl-author.md",
+      "sha256": "2bd2d8702a749f7a5b9a6b0c0ad8572c3cade153c0bcfdfa8d9420cbcb3b52fa"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-author-manifest.json",
+      "sha256": "3b212ab2d8cd97ce58dbf031d682e9d62bebf9008149a528aa23469e1e3f0674"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-independent-fixes.json",
+      "sha256": "7c8547961bce988acb183c79d706327ee77109e3a12fea9d99c7028f53cc4d45"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-shared49-after-independent-fixes.json",
+      "sha256": "2af4bc8030782739eedfa05229cc9938d07e52e09f5bfaf4eb694a4468e046f2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/sl-independent.md",
+      "sha256": "8ae2309049efe1452759d8beab110d6ef0c0184093abae3188683a59c47b7721"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-independent-manifest.json",
+      "sha256": "48ec7b70278abc1f5db3814e284338cb8c704d5070c9710f2f835ed41a7b06bf"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-independent-variety.json",
+      "sha256": "d97d2e1772f4acebd459d950f53330d2196e27a40d9c4970dc3d3fc3ad68a3ae"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/research/arc-source-facts.md",
+      "sha256": "4776f60010172120e0812d8d552123aeb5c7cc0b467cb5306ca031a1e17c2145"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/codex-column-recheck-20261024/research/source-refresh.md",
+      "sha256": "a33d5bd1439879bc7461755c3b6793f4942ec161454032dcb8cde1c4d52a6983"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/FRONTMATTER.md",
+      "sha256": "7a2590f33ba49c55f539f1fade51fed1290808352b16247445a714333593a364"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "128fe9c0a911f0f85b5423453ec681866b452185628a0fe6e311c829e05c4106"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/sl.json",
+      "sha256": "f7fdb543f7952d5e891a30fd5d167b3035a3933c982a01f6d70b03c5f554c040"
+    }
+  ],
+  "final_input_hash_check": "all unchanged",
+  "canonical_recent_target_manifest_hashes": "all 9 canonical + 3 recent + 3 target files matched current author manifest again at finish",
+  "r1_artifacts": "all R1 manifest outputs preserved byte for byte",
+  "actual_cli": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/704-taiwan-arc-first-application.md",
+      "sha256": "a87a3ac1137b0012120a56629dccc0e0d64dcbb55a2e2a6110e2be213cde6bd6",
+      "exit_code": 0,
+      "fail_count": 0,
+      "cv": 0.577,
+      "sentence_units": 60,
+      "changed_indices_1based": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "90d5e07a124a7b1c6aeb46a5be8293a44007a58f6e2dad2593c96b1067834932",
+      "exit_code": 0,
+      "fail_count": 0,
+      "cv": 0.48,
+      "sentence_units": 69,
+      "changed_indices_1based": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d5b7581f6dcff33cdcb5b65e1b46bd0654e050acb94434bbdaab68222c0aca5b",
+      "exit_code": 0,
+      "fail_count": 0,
+      "cv": 0.49,
+      "sentence_units": 82,
+      "changed_indices_1based": [
+        41,
+        56,
+        73
+      ]
+    }
+  ],
+  "source_recheck": {
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080132",
+    "directly_reopened_in_r2": true,
+    "scope": "Article 31 paragraph 4 item 2 and surrounding discretionary permission clause",
+    "observed_condition": "且未再婚",
+    "application": "New wording states foreign applicant has not remarried after divorce due to domestic violence, preserving Taiwan-national counterpart residence/household registration and NIA discretionary continuation. No prospective remarriage ban."
+  },
+  "limits": [
+    "Model-based narrow review, not human native-speaker approval or Taiwan lawyer approval.",
+    "Reviewer implemented SL profile; no independent tool certification.",
+    "R1 full review applies to unchanged content; not a second full manuscript/source-tail review.",
+    "No public deployment or render verification performed.",
+    "Orthographic units and fixed 8/32 thresholds are unchanged; not readability-calibrated natural-word counts."
+  ],
+  "modification_scope": "Only newly created checks/sl-independent-r2* review outputs; manuscripts, author records, R, shared checker and R1 outputs unchanged."
+}

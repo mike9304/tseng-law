@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-10-25T15:02:18.594503+00:00",
+  "scope": "Non-target existing publication files only; no content/score used for tailoring. ARC704–706 explicitly excluded. Counts establish script practice, not language accuracy.",
+  "files": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/893-serbian-resident-taiwan-police-summons-interpreter.md",
+      "sha256": "5112dbc5f365d27ba99ef2df129c0ccdbbe857e689ca37f4434fe0d87cd3f808",
+      "latin_extended_letters": 4636,
+      "cyrillic_letters": 0
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/892-serbian-fruit-exporter-taiwan-unpaid-invoices.md",
+      "sha256": "1b57af3faed919f620043e7c7d53ca2db9f611245c37b399ac8c301fc7c047cb",
+      "latin_extended_letters": 4382,
+      "cyrillic_letters": 0
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/891-serbian-professional-taiwan-work-permit-residence.md",
+      "sha256": "64af5e62b523700566d7f2f71af2fb9eb83119df17fde5f890806dd056e0c021",
+      "latin_extended_letters": 4713,
+      "cyrillic_letters": 0
+    }
+  ]
+}

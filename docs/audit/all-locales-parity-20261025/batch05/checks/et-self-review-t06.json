@@ -1,0 +1,11 @@
+{
+  "time": "2026-10-26T00:41:53.214511+09:00",
+  "file": "705-taiwan-visa-residence-work-study-family.md",
+  "id": "T06",
+  "before": "Taiwanis elava ja seal leibkonnaregistris registreeritud kodaniku abikaasa jaoks",
+  "after": "Taiwanis elava ja seal leibkonnaregistris registreeritud Taiwani kodaniku abikaasa jaoks",
+  "reason": "Taiwani kodaniku를 명시해 대만 거주/호적 요건이 붙는 국민의 국적을 문장 안에서 완결. 인접 링크에 있던 대만 국민이라는 기존 의미를 옮긴 것이며 범위를 새로 좁히거나 넓히지 않음.",
+  "before_sha256": "73cc7dd4d3ed3fd9873d73e973ea37ddec76177151eb1c4d1f0543a81c23140b",
+  "after_sha256": "6bf9a4fca0d1b90d3bf0e4f46e4c87ba43cb5c4b32989ab3e98eaed52955acc8",
+  "diff": "--- 705-taiwan-visa-residence-work-study-family.md:pre\n+++ 705-taiwan-visa-residence-work-study-family.md:post\n@@ -57,7 +57,7 @@\n \n ## Abikaasa või vanema juurde elama asumine\n \n-Perepõhise taotluse puhul on oluline, millise pereliikme staatusele tuginetakse. Taiwanis elava ja seal leibkonnaregistris registreeritud kodaniku abikaasa jaoks nõuab üks [immigratsiooniseaduse artikli 23](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23) kohane riigisisene tee kehtivat viisat, mis lubab viibida vähemalt 60 päeva ning millel puudub pikendamiskeeld või muu ettenähtud piirang. Kuuskümmend päeva tähendab lubatud viibimisaega. Perekonnadokumente käsitleb [ingliskeelne Taiwani kodaniku abikaasa elamise juhis](/en/columns/taiwan-foreign-spouse-residence).\n+Perepõhise taotluse puhul on oluline, millise pereliikme staatusele tuginetakse. Taiwanis elava ja seal leibkonnaregistris registreeritud Taiwani kodaniku abikaasa jaoks nõuab üks [immigratsiooniseaduse artikli 23](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23) kohane riigisisene tee kehtivat viisat, mis lubab viibida vähemalt 60 päeva ning millel puudub pikendamiskeeld või muu ettenähtud piirang. Kuuskümmend päeva tähendab lubatud viibimisaega. Perekonnadokumente käsitleb [ingliskeelne Taiwani kodaniku abikaasa elamise juhis](/en/columns/taiwan-foreign-spouse-residence).\n \n Välisspetsialisti pere otsetee alusisik võib [artikli 16 lõike 2](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295) järgi kuuluda ühte kahest rühmast:\n \n"
+}

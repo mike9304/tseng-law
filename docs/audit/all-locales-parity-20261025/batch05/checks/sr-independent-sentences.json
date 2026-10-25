@@ -1,0 +1,1470 @@
+{
+  "time": "2026-10-26T00:50:13.844342+09:00",
+  "lang": "sr",
+  "method": "independent actual shared strip_fm/body_blocks/sentences/slen; no override",
+  "tool_sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/704-taiwan-arc-first-application.md",
+      "sha256": "15229f8e599464d507976f6d91818d441c6a1c8be1448af31f79fd79b8730dac",
+      "sentences": [
+        {
+          "n": 1,
+          "paragraph": 1,
+          "units": 24,
+          "sentence": "Boravišna viza izdata tek posle dolaska na Tajvan pokreće rok za prvi ARC od datuma svog izdavanja, prema uputstvu Biroa za konzularne poslove, BOCA."
+        },
+        {
+          "n": 2,
+          "paragraph": 1,
+          "units": 4,
+          "sentence": "Rok je 30 dana."
+        },
+        {
+          "n": 3,
+          "paragraph": 2,
+          "units": 32,
+          "sentence": "Za osobu koja je ušla sa boravišnom vizom i dobila odobrenje boravka, član 22 Zakona o ulasku, izlasku i imigraciji nalaže prijavu u roku od 30 dana od narednog dana po ulasku."
+        },
+        {
+          "n": 4,
+          "paragraph": 2,
+          "units": 6,
+          "sentence": "Zahtev prima Nacionalna imigraciona agencija, NIA."
+        },
+        {
+          "n": 5,
+          "paragraph": 2,
+          "units": 11,
+          "sentence": "Ona izdaje Alien Resident Certificate, odnosno ARC, kao potvrdu odobrenog boravka."
+        },
+        {
+          "n": 6,
+          "paragraph": 3,
+          "units": 19,
+          "sentence": "Važeći Employment Gold Card ili drugi objedinjeni dokument sa funkcijom ARC-a obuhvaćen je zakonskim izuzetkom od posebne prijave."
+        },
+        {
+          "n": 7,
+          "paragraph": 3,
+          "units": 22,
+          "sentence": "Posetiocu bez boravišne vize najpre je potreban odgovarajući osnov za prelazak na boravak; sam dolazak ne otvara opšti rok za takvu promenu."
+        },
+        {
+          "n": 8,
+          "paragraph": 4,
+          "units": 13,
+          "sentence": "BOCA objašnjava postupak za zaposlene u uputstvu o boravišnim vizama za stručni rad."
+        },
+        {
+          "n": 9,
+          "paragraph": 4,
+          "units": 42,
+          "sentence": "Za stranog stručnjaka ili stručnjaka sa posebnim kvalifikacijama, koji ima dozvolu za stručni rad ili odgovarajuće oslobođenje, član 16 Zakona o privlačenju i zapošljavanju stranih stručnjaka predviđa i neposredan zahtev NIA-i nakon odgovarajućeg ulaska bez vize ili sa vizom za posetu."
+        },
+        {
+          "n": 10,
+          "paragraph": 4,
+          "units": 7,
+          "sentence": "Tek odobrenje boravka vodi izdavanju ARC-a."
+        },
+        {
+          "n": 11,
+          "paragraph": 4,
+          "units": 11,
+          "sentence": "Uslove za druge podnosioce razdvaja tekst o radu, studijama i porodici."
+        },
+        {
+          "n": 12,
+          "paragraph": 5,
+          "units": 26,
+          "sentence": "Za prijavu na osnovu boravišne vize NIA 0902 traži obrazac, fotografiju iz poslednje dve godine, pasoš i boravišnu vizu, dokaz razloga boravka i dokaz stvarne adrese."
+        },
+        {
+          "n": 13,
+          "paragraph": 5,
+          "units": 7,
+          "sentence": "Potrebni su originali i kopije prema spisku."
+        },
+        {
+          "n": 14,
+          "paragraph": 5,
+          "units": 5,
+          "sentence": "Originali se vraćaju posle provere."
+        },
+        {
+          "n": 15,
+          "paragraph": 5,
+          "units": 8,
+          "sentence": "Ugovor o zakupu može poslužiti kao dokaz adrese."
+        },
+        {
+          "n": 16,
+          "paragraph": 6,
+          "units": 17,
+          "sentence": "Fotografija za vizu može imati drugačiji zahtev: BOCA za studentsku vizu traži fotografiju iz poslednjih šest meseci."
+        },
+        {
+          "n": 17,
+          "paragraph": 6,
+          "units": 13,
+          "sentence": "Zato dokumentacija za ARC i raniju vizu ne mora imati isti vremenski obuhvat."
+        },
+        {
+          "n": 18,
+          "paragraph": 7,
+          "units": 22,
+          "sentence": "Kod prve prijave po osnovu braka sa državljaninom Tajvana koji tamo živi i ima registraciju domaćinstva, tajvanski supružnik mora doći sa podnosiocem."
+        },
+        {
+          "n": 19,
+          "paragraph": 7,
+          "units": 10,
+          "sentence": "Potreban je i dokaz da je brak registrovan na Tajvanu."
+        },
+        {
+          "n": 20,
+          "paragraph": 7,
+          "units": 20,
+          "sentence": "Član 12 propisa o boravku stranaca ograničava taj prvi ARC na najviše godinu dana, a NIA uputstvo uređuje prisustvo supružnika."
+        },
+        {
+          "n": 21,
+          "paragraph": 7,
+          "units": 8,
+          "sentence": "Taj maksimum ne važi za svaku porodičnu kategoriju."
+        },
+        {
+          "n": 22,
+          "paragraph": 7,
+          "units": 11,
+          "sentence": "Više dokumenata opisuje tekst o boravku preko tajvanskog supružnika, na engleskom."
+        },
+        {
+          "n": 23,
+          "paragraph": 8,
+          "units": 8,
+          "sentence": "Isprave izdate u inostranstvu moraju proći propisanu autentifikaciju."
+        },
+        {
+          "n": 24,
+          "paragraph": 8,
+          "units": 13,
+          "sentence": "NIA može zahtevati i prevod na kineski potvrđen ili overen na propisani način."
+        },
+        {
+          "n": 25,
+          "paragraph": 8,
+          "units": 21,
+          "sentence": "Postupak se proverava kod tajvanskog predstavništva nadležnog za mesto izdavanja; ne treba unapred pretpostaviti da određena strana overa zamenjuje taj postupak."
+        },
+        {
+          "n": 26,
+          "paragraph": 8,
+          "units": 12,
+          "sentence": "Uverenje o nekažnjavanju i zdravstveni pregled zavise od kategorije i primenljivih izuzetaka."
+        },
+        {
+          "n": 27,
+          "paragraph": 8,
+          "units": 6,
+          "sentence": "Nisu opšti uslov svake prve kartice."
+        },
+        {
+          "n": 28,
+          "paragraph": 9,
+          "units": 18,
+          "sentence": "Imenik boravišnih postupaka NIA odvaja opšte prijave, stručnjake i njihovu porodicu, studente i radnike u drugim migracionim kategorijama."
+        },
+        {
+          "n": 29,
+          "paragraph": 9,
+          "units": 7,
+          "sentence": "Svaki postupak ima određeni portal ili službu."
+        },
+        {
+          "n": 30,
+          "paragraph": 9,
+          "units": 10,
+          "sentence": "Samo zaposlenje na Tajvanu ne potvrđuje pristup sistemu za stručnjake."
+        },
+        {
+          "n": 31,
+          "paragraph": 10,
+          "units": 6,
+          "sentence": "Studenti koriste poseban onlajn postupak 0929."
+        },
+        {
+          "n": 32,
+          "paragraph": 10,
+          "units": 19,
+          "sentence": "Za redovan lični zahtev nadležna je služba NIA prema sadašnjoj adresi; tu se podnose i prijave preko tajvanskog supružnika."
+        },
+        {
+          "n": 33,
+          "paragraph": 10,
+          "units": 8,
+          "sentence": "Sačuvajte broj predmeta i dokumente koje ste poslali."
+        },
+        {
+          "n": 34,
+          "paragraph": 11,
+          "units": 8,
+          "sentence": "Poziv za dopunu treba čuvati uz prvobitnu prijavu."
+        },
+        {
+          "n": 35,
+          "paragraph": 11,
+          "units": 18,
+          "sentence": "Prema kineskom tekstu NIA 0902, redovni rok za dopunu iznosi 15 kalendarskih dana od narednog dana po obaveštenju."
+        },
+        {
+          "n": 36,
+          "paragraph": 11,
+          "units": 18,
+          "sentence": "Ako nedostajuću ili neodgovarajuću ispravu treba pribaviti u inostranstvu, kontinentalnoj Kini, Hongkongu ili Makau, rok je tri meseca."
+        },
+        {
+          "n": 37,
+          "paragraph": 11,
+          "units": 7,
+          "sentence": "Neblagovremena ili nepotpuna dopuna vodi odbijanju zahteva."
+        },
+        {
+          "n": 38,
+          "paragraph": 11,
+          "units": 4,
+          "sentence": "To nije produženje boravka."
+        },
+        {
+          "n": 39,
+          "paragraph": 12,
+          "units": 12,
+          "sentence": "Osnovna taksa je 1.000 novih tajvanskih dolara za svaku odobrenu godinu važenja."
+        },
+        {
+          "n": 40,
+          "paragraph": 12,
+          "units": 7,
+          "sentence": "Kraći period naplaćuje se kao cela godina."
+        },
+        {
+          "n": 41,
+          "paragraph": 12,
+          "units": 22,
+          "sentence": "Član 3 pravila o imigracionim taksama predviđa još 2.200 dolara za odgovarajuće prijave nakon ulaska bez vize ili sa vizom za posetu."
+        },
+        {
+          "n": 42,
+          "paragraph": 12,
+          "units": 18,
+          "sentence": "Studenti sa priznatim statusom 僑生 imaju umanjenje relevantnih ARC taksi od 50%; ono ne obuhvata sve strane studente."
+        },
+        {
+          "n": 43,
+          "paragraph": 13,
+          "units": 3,
+          "sentence": "Trajanje određuje NIA."
+        },
+        {
+          "n": 44,
+          "paragraph": 13,
+          "units": 9,
+          "sentence": "Opšti zakonski maksimum je tri godine, prema članu 22."
+        },
+        {
+          "n": 45,
+          "paragraph": 13,
+          "units": 29,
+          "sentence": "Za zaposlenog stranog stručnjaka sa posebnim kvalifikacijama kome je NIA odobrila boravak, član 8 Zakona o stranim stručnjacima predviđa najviše pet godina, računajući od narednog dana po tom odobrenju."
+        },
+        {
+          "n": 46,
+          "paragraph": 13,
+          "units": 10,
+          "sentence": "Isto pravilo obuhvata propisane članove porodice kojima je odobren boravak."
+        },
+        {
+          "n": 47,
+          "paragraph": 13,
+          "units": 6,
+          "sentence": "Veća uplata ne obezbeđuje duže odobrenje."
+        },
+        {
+          "n": 48,
+          "paragraph": 14,
+          "units": 8,
+          "sentence": "NIA za opšti postupak navodi deset radnih dana."
+        },
+        {
+          "n": 49,
+          "paragraph": 14,
+          "units": 11,
+          "sentence": "Vreme vraćanja dokumentacije, dopune i razgovora ne ulazi u taj period."
+        },
+        {
+          "n": 50,
+          "paragraph": 14,
+          "units": 5,
+          "sentence": "Posle dopune računanje počinje iznova."
+        },
+        {
+          "n": 51,
+          "paragraph": 15,
+          "units": 6,
+          "sentence": "Studentski onlajn postupak ima svoje rokove."
+        },
+        {
+          "n": 52,
+          "paragraph": 15,
+          "units": 16,
+          "sentence": "U uputstvu 0929 navedeno je pet radnih dana za proveru, koji se ponovo računaju posle dopune."
+        },
+        {
+          "n": 53,
+          "paragraph": 15,
+          "units": 11,
+          "sentence": "Taksu treba platiti u roku od pet radnih dana od odobrenja."
+        },
+        {
+          "n": 54,
+          "paragraph": 16,
+          "units": 14,
+          "sentence": "Elektronski ARC sa važenjem do šest meseci mora se preuzeti i odštampati nakon uplate."
+        },
+        {
+          "n": 55,
+          "paragraph": 16,
+          "units": 22,
+          "sentence": "Za karticu sa čipom student štampa onlajn potvrdu uplate i odnosi je u izabranu službu NIA tri radna dana posle izvršene uplate."
+        },
+        {
+          "n": 56,
+          "paragraph": 16,
+          "units": 15,
+          "sentence": "Ovaj raspored pripada studentskom postupku; ostali podnosioci prate način preuzimanja iz svog odobrenja ili obaveštenja."
+        },
+        {
+          "n": 57,
+          "paragraph": 17,
+          "units": 14,
+          "sentence": "Na izdatoj kartici uporedite ime, broj pasoša, adresu i datum isteka sa odobrenim podacima."
+        },
+        {
+          "n": 58,
+          "paragraph": 17,
+          "units": 8,
+          "sentence": "Odluku i potvrdu uplate čuvajte u istom dosijeu."
+        },
+        {
+          "n": 59,
+          "paragraph": 18,
+          "units": 7,
+          "sentence": "Može li posao početi čim kartica stigne?"
+        },
+        {
+          "n": 60,
+          "paragraph": 18,
+          "units": 19,
+          "sentence": "Članovi 43 i 48 Zakona o službama zapošljavanja zahtevaju da stvarni posao i poslodavca pokriva odgovarajuća dozvola ili oslobođenje."
+        },
+        {
+          "n": 61,
+          "paragraph": 18,
+          "units": 14,
+          "sentence": "Sledeći rokovi proizlaze iz isteka boravka, selidbe, promene rada i planiranog povratka sa puta."
+        },
+        {
+          "n": 62,
+          "paragraph": 18,
+          "units": 17,
+          "sentence": "Njih razrađuje vodič za produženje i promene ARC-a, uz dokumente koji pokazuju kada je promena nastala."
+        },
+        {
+          "n": 63,
+          "paragraph": 19,
+          "units": 13,
+          "sentence": "Izvori su provereni 24. oktobra 2026, uz dopunsku proveru navedenih pravila 25. oktobra."
+        },
+        {
+          "n": 64,
+          "paragraph": 19,
+          "units": 11,
+          "sentence": "Tekst opisuje postupke za strane državljane, bez odluke o pojedinačnoj podobnosti."
+        },
+        {
+          "n": 65,
+          "paragraph": 19,
+          "units": 17,
+          "sentence": "Za stanovnike kontinentalne Kine, Hongkonga i Makaa i državljane Republike Kine bez registracije domaćinstva važe posebni sistemi."
+        }
+      ],
+      "paragraph_openers": [
+        "boravišna",
+        "za",
+        "važeći",
+        "boca",
+        "za",
+        "fotografija",
+        "kod",
+        "isprave",
+        "imenik",
+        "studenti",
+        "poziv",
+        "osnovna",
+        "trajanje",
+        "nia",
+        "studentski",
+        "elektronski",
+        "na",
+        "može",
+        "izvori"
+      ],
+      "headings": [
+        "Viza određuje početak roka",
+        "Dokument kojim se dokazuje razlog boravka",
+        "Nadležni sistem i dopuna spisa",
+        "Taksa i odobreni period",
+        "Od provere prijave do kartice"
+      ],
+      "list_items": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "9057c2a83ef6e71ab6f576702943fdf604ae345b627b94d98986baf4a6b7d6b2",
+      "sentences": [
+        {
+          "n": 1,
+          "paragraph": 1,
+          "units": 13,
+          "sentence": "Može li poseta bez vize da se nastavi boravkom radi rada ili studija?"
+        },
+        {
+          "n": 2,
+          "paragraph": 1,
+          "units": 17,
+          "sentence": "Za kvalifikovane stručnjake član 16 Zakona o privlačenju i zapošljavanju stranih stručnjaka predviđa neposrednu prijavu u Tajvanu."
+        },
+        {
+          "n": 3,
+          "paragraph": 1,
+          "units": 13,
+          "sentence": "Redovni putevi za studente i polaznike mandarinskog traže drugačiju pripremu vize pre puta."
+        },
+        {
+          "n": 4,
+          "paragraph": 2,
+          "units": 11,
+          "sentence": "Državljanstvo, pasoš kojim se putuje i planirana aktivnost određuju dostupne vize."
+        },
+        {
+          "n": 5,
+          "paragraph": 2,
+          "units": 13,
+          "sentence": "Tajvansko predstavništvo koje prima zahtev daje odgovarajući spisak isprava i uslove njihove overe."
+        },
+        {
+          "n": 6,
+          "paragraph": 3,
+          "units": 13,
+          "sentence": "Dozvoljeni kratkotrajni boravak, označen kao 停留, zavisi od načina ulaska i njegove svrhe."
+        },
+        {
+          "n": 7,
+          "paragraph": 3,
+          "units": 15,
+          "sentence": "Za boravak u kategoriji 居留 potreban je poseban osnov, poput rada, studija ili porodične veze."
+        },
+        {
+          "n": 8,
+          "paragraph": 3,
+          "units": 7,
+          "sentence": "BOCA pregled boravišnih viza objašnjava te svrhe."
+        },
+        {
+          "n": 9,
+          "paragraph": 3,
+          "units": 13,
+          "sentence": "Nacionalna imigraciona agencija, NIA, odlučuje o zahtevu za boravak i izdaje potvrdu ARC."
+        },
+        {
+          "n": 10,
+          "paragraph": 4,
+          "units": 10,
+          "sentence": "Neke kategorije dopuštaju da posetilac zahtev preda neposredno NIA-i."
+        },
+        {
+          "n": 11,
+          "paragraph": 4,
+          "units": 6,
+          "sentence": "Za druge odgovarajuća viza prethodi dolasku."
+        },
+        {
+          "n": 12,
+          "paragraph": 4,
+          "units": 11,
+          "sentence": "Promena kratkotrajne posete u boravak zato zavisi od tačno određenog postupka."
+        },
+        {
+          "n": 13,
+          "paragraph": 5,
+          "units": 11,
+          "sentence": "U uobičajenom zapošljavanju stranog stručnjaka poslodavac podnosi zahtev za radnu dozvolu."
+        },
+        {
+          "n": 14,
+          "paragraph": 5,
+          "units": 19,
+          "sentence": "Članovi 4 i 5 Zakona o stranim stručnjacima određuju stručne poslove, nadležni organ i okvir dozvola, uz zakonske izuzetke."
+        },
+        {
+          "n": 15,
+          "paragraph": 5,
+          "units": 4,
+          "sentence": "Potpisana ponuda nije dozvola."
+        },
+        {
+          "n": 16,
+          "paragraph": 6,
+          "units": 26,
+          "sentence": "Strani stručnjak, kao i strani stručnjak sa posebnim kvalifikacijama, može koristiti član 16 kada ima dozvolu za stručni rad na Tajvanu ili primenljivo oslobođenje od nje."
+        },
+        {
+          "n": 17,
+          "paragraph": 6,
+          "units": 12,
+          "sentence": "Potreban je i odgovarajući ulazak bez vize ili sa vizom za posetu."
+        },
+        {
+          "n": 18,
+          "paragraph": 6,
+          "units": 5,
+          "sentence": "NIA zasebno odlučuje o boravku."
+        },
+        {
+          "n": 19,
+          "paragraph": 6,
+          "units": 4,
+          "sentence": "ARC sledi nakon odobrenja."
+        },
+        {
+          "n": 20,
+          "paragraph": 7,
+          "units": 12,
+          "sentence": "Sadašnji član 16 primenjuje se od 1. januara 2026, prema zakonodavnoj istoriji."
+        },
+        {
+          "n": 21,
+          "paragraph": 7,
+          "units": 36,
+          "sentence": "NIA 0915 navodi režime ulaska koji su iz ovog postupka isključeni: probna oslobođenja od vize, viza po dolasku, elektronsko odobrenje TAC za određene države jugoistočne Azije, ABTC i radni odmor, osim kada drugi propis dopušta izuzetak."
+        },
+        {
+          "n": 22,
+          "paragraph": 7,
+          "units": 7,
+          "sentence": "Radna dozvola sama ne uklanja ta ograničenja."
+        },
+        {
+          "n": 23,
+          "paragraph": 8,
+          "units": 18,
+          "sentence": "Rad u nezi, ribarstvu i druge kategorije radnika iz člana 46 Zakona o službama zapošljavanja imaju sopstvene uslove."
+        },
+        {
+          "n": 24,
+          "paragraph": 8,
+          "units": 8,
+          "sentence": "Na njih se primenjuje poseban postupak boravka NIA."
+        },
+        {
+          "n": 25,
+          "paragraph": 8,
+          "units": 12,
+          "sentence": "Kategorija navedena u odobrenju rada određuje koji obrazac i sistem treba koristiti."
+        },
+        {
+          "n": 26,
+          "paragraph": 9,
+          "units": 15,
+          "sentence": "Strani student na redovnim studijama može u inostranstvu da traži boravišnu vizu preko tajvanskog predstavništva."
+        },
+        {
+          "n": 27,
+          "paragraph": 9,
+          "units": 24,
+          "sentence": "Ako je ušao sa vizom za posetu izdatom za studiranje u svojstvu stranog studenta, može pod propisanim uslovima neposredno da zatraži boravak kod NIA."
+        },
+        {
+          "n": 28,
+          "paragraph": 9,
+          "units": 25,
+          "sentence": "U redovnom postupku iz BOCA studentskog uputstva ulazak bez vize, viza po dolasku i viza za posetu druge namene ne daju taj put do boravka."
+        },
+        {
+          "n": 29,
+          "paragraph": 10,
+          "units": 17,
+          "sentence": "Uz pismo o prijemu, odgovarajući spisak može tražiti ranije obrazovne isprave, dokaz finansijskih sredstava i zdravstvenu potvrdu."
+        },
+        {
+          "n": 30,
+          "paragraph": 10,
+          "units": 10,
+          "sentence": "Iz istog spiska vidi se koje strane isprave treba autentifikovati."
+        },
+        {
+          "n": 31,
+          "paragraph": 10,
+          "units": 7,
+          "sentence": "Prijava na fakultet ne završava vizni postupak."
+        },
+        {
+          "n": 32,
+          "paragraph": 11,
+          "units": 16,
+          "sentence": "Za učenje mandarinskog uobičajena polazna tačka je viza za posetu radi učenja jezika, pribavljena pre dolaska."
+        },
+        {
+          "n": 33,
+          "paragraph": 11,
+          "units": 26,
+          "sentence": "Pre zahteva za boravak potrebno je završiti četiri meseca u priznatom jezičkom centru pri visokoškolskoj ustanovi koju priznaje Ministarstvo obrazovanja i upisati najmanje još tri meseca."
+        },
+        {
+          "n": 34,
+          "paragraph": 11,
+          "units": 14,
+          "sentence": "BOCA pravila za ovaj boravak traže najmanje 15 časova nedeljno, od ponedeljka do petka."
+        },
+        {
+          "n": 35,
+          "paragraph": 11,
+          "units": 11,
+          "sentence": "Izostanci, uključujući odobrena odsustva, ne smeju preći četvrtinu ukupnog broja časova."
+        },
+        {
+          "n": 36,
+          "paragraph": 12,
+          "units": 5,
+          "sentence": "Dokaz prisustva ostaje deo prijave."
+        },
+        {
+          "n": 37,
+          "paragraph": 12,
+          "units": 5,
+          "sentence": "Uplaćena školarina ga ne zamenjuje."
+        },
+        {
+          "n": 38,
+          "paragraph": 12,
+          "units": 13,
+          "sentence": "Program, upisani period i evidencija nastave zajedno pokazuju da li su uslovi ispunjeni."
+        },
+        {
+          "n": 39,
+          "paragraph": 13,
+          "units": 11,
+          "sentence": "Studentski rad uređuju članovi 43 i 50 Zakona o službama zapošljavanja."
+        },
+        {
+          "n": 40,
+          "paragraph": 13,
+          "units": 14,
+          "sentence": "Kada je dozvola potrebna, ne zamenjuju je ni pismo o prijemu ni studentski ARC."
+        },
+        {
+          "n": 41,
+          "paragraph": 13,
+          "units": 20,
+          "sentence": "Za studente obuhvaćene članom 50 važi najviše 20 radnih sati nedeljno; letnji i zimski raspust izuzeti su od tog ograničenja."
+        },
+        {
+          "n": 42,
+          "paragraph": 14,
+          "units": 23,
+          "sentence": "Jedan postupak iz člana 23 Zakona o ulasku, izlasku i imigraciji obuhvata supružnika državljanina Tajvana koji živi na Tajvanu i ima registraciju domaćinstva."
+        },
+        {
+          "n": 43,
+          "paragraph": 14,
+          "units": 22,
+          "sentence": "Za taj put unutar Tajvana potrebna je važeća viza koja dopušta najmanje 60 dana boravka, bez zabrane produženja ili drugih propisanih ograničenja."
+        },
+        {
+          "n": 44,
+          "paragraph": 14,
+          "units": 8,
+          "sentence": "Šezdeset dana odnosi se na dopušteno trajanje posete."
+        },
+        {
+          "n": 45,
+          "paragraph": 14,
+          "units": 13,
+          "sentence": "Sam brak ne daje opšte pravo da se bezvizna poseta pretvori u boravak."
+        },
+        {
+          "n": 46,
+          "paragraph": 14,
+          "units": 11,
+          "sentence": "Dokazi odnosa opisani su u tekstu o tajvanskom supružniku, na engleskom."
+        },
+        {
+          "n": 47,
+          "paragraph": 15,
+          "units": 30,
+          "sentence": "Porodična prijava iz člana 16 stav 2 Zakona o stranim stručnjacima može se zasnivati na statusu stranog stručnjaka koji obavlja stručni posao na Tajvanu ili stranog stručnjaka sa posebnim kvalifikacijama."
+        },
+        {
+          "n": 48,
+          "paragraph": 15,
+          "units": 15,
+          "sentence": "U oba slučaja NIA tom licu već mora da je odobrila boravak ili stalni boravak."
+        },
+        {
+          "n": 49,
+          "paragraph": 16,
+          "units": 22,
+          "sentence": "Obuhvaćeni su supružnik, maloletna deca i punoletna deca koja zbog fizičkog ili mentalnog invaliditeta ne mogu samostalno da se staraju o sebi."
+        },
+        {
+          "n": 50,
+          "paragraph": 16,
+          "units": 15,
+          "sentence": "Posle odgovarajućeg ulaska bez vize ili sa vizom za posetu mogu neposredno da zatraže boravak."
+        },
+        {
+          "n": 51,
+          "paragraph": 16,
+          "units": 9,
+          "sentence": "Roditelji i druga punoletna deca nisu obuhvaćeni ovom odredbom."
+        },
+        {
+          "n": 52,
+          "paragraph": 16,
+          "units": 10,
+          "sentence": "Za druge porodične kategorije ostaju njihovi uslovi i zakonska isključenja."
+        },
+        {
+          "n": 53,
+          "paragraph": 17,
+          "units": 26,
+          "sentence": "Član 48 Zakona o službama zapošljavanja oslobađa od radne dozvole stranca kome je odobren boravak i koji je u braku sa tajvanskim državljaninom sa registracijom domaćinstva."
+        },
+        {
+          "n": 54,
+          "paragraph": 17,
+          "units": 13,
+          "sentence": "Supružnik stranog stručnjaka ne dobija isto oslobođenje samo na osnovu porodičnog ARC-a."
+        },
+        {
+          "n": 55,
+          "paragraph": 18,
+          "units": 18,
+          "sentence": "Za supružnika stranog stručnjaka sa posebnim kvalifikacijama ili visokokvalifikovanog stranog stručnjaka postoji član 15 Zakona o stranim stručnjacima."
+        },
+        {
+          "n": 56,
+          "paragraph": 18,
+          "units": 19,
+          "sentence": "Kada NIA tom supružniku odobri boravak radi spajanja porodice, on može sam da zatraži radnu dozvolu od Ministarstva rada."
+        },
+        {
+          "n": 57,
+          "paragraph": 18,
+          "units": 10,
+          "sentence": "Rok te dozvole ne može preći period odobrenog porodičnog boravka."
+        },
+        {
+          "n": 58,
+          "paragraph": 19,
+          "units": 13,
+          "sentence": "Employment Gold Card objedinjuje radnu dozvolu, boravišnu vizu, ARC i dozvolu ponovnog ulaska."
+        },
+        {
+          "n": 59,
+          "paragraph": 19,
+          "units": 14,
+          "sentence": "Kandidat koji ispunjava kriterijume može se prijaviti bez unapred ugovorenog posla kod određenog poslodavca."
+        },
+        {
+          "n": 60,
+          "paragraph": 19,
+          "units": 10,
+          "sentence": "Po članu 9 važenje je od jedne do tri godine."
+        },
+        {
+          "n": 61,
+          "paragraph": 19,
+          "units": 9,
+          "sentence": "Detalji su u vodiču za Gold Card na engleskom."
+        },
+        {
+          "n": 62,
+          "paragraph": 20,
+          "units": 7,
+          "sentence": "Osnivanje posla ima poseban preduzetnički postupak BOCA."
+        },
+        {
+          "n": 63,
+          "paragraph": 20,
+          "units": 8,
+          "sentence": "Radni odmor zavisi od programa za konkretno državljanstvo."
+        },
+        {
+          "n": 64,
+          "paragraph": 20,
+          "units": 16,
+          "sentence": "Ni viza za posetu digitalnih nomada ne donosi ARC automatski: ima sopstvene uslove državljanstva i kvalifikacija."
+        },
+        {
+          "n": 65,
+          "paragraph": 20,
+          "units": 21,
+          "sentence": "Kod rada na daljinu iz člana 14 ovog zakona nisu dopuštene usluge tajvanskim privrednim subjektima ili poslodavcima u okviru tog režima."
+        },
+        {
+          "n": 66,
+          "paragraph": 21,
+          "units": 13,
+          "sentence": "Po utvrđivanju osnova boravka, prvi zahtev za ARC povezuje rok, dokumente i preuzimanje."
+        },
+        {
+          "n": 67,
+          "paragraph": 21,
+          "units": 16,
+          "sentence": "Postojećem stanovniku koji menja posao, studije ili porodični osnov potreban je i postupak promene ili produženja."
+        },
+        {
+          "n": 68,
+          "paragraph": 21,
+          "units": 16,
+          "sentence": "Njegov dosije treba da pokaže upravo novu svrhu boravka, a ne samo preostalo važenje stare kartice."
+        },
+        {
+          "n": 69,
+          "paragraph": 22,
+          "units": 13,
+          "sentence": "Izvori su provereni 24. oktobra 2026, uz dopunsku proveru navedenih pravila 25. oktobra."
+        },
+        {
+          "n": 70,
+          "paragraph": 22,
+          "units": 6,
+          "sentence": "Ishod zavisi od uslova pojedinačne prijave."
+        },
+        {
+          "n": 71,
+          "paragraph": 22,
+          "units": 23,
+          "sentence": "Ovi putevi odnose se na strane državljane; stanovnici kontinentalne Kine, Hongkonga i Makaa i državljani Republike Kine bez registracije domaćinstva podležu posebnim sistemima."
+        }
+      ],
+      "paragraph_openers": [
+        "može",
+        "državljanstvo",
+        "dozvoljeni",
+        "neke",
+        "u",
+        "strani",
+        "sadašnji",
+        "rad",
+        "strani",
+        "uz",
+        "za",
+        "dokaz",
+        "studentski",
+        "jedan",
+        "porodična",
+        "obuhvaćeni",
+        "član",
+        "za",
+        "employment",
+        "osnivanje",
+        "po",
+        "izvori"
+      ],
+      "headings": [
+        "Poseta i odobrenje boravka",
+        "Ponuda poslodavca i dozvola za stvarni posao",
+        "Studije i kurs mandarinskog",
+        "Čiji status omogućava porodičnu prijavu",
+        "Rad supružnika zavisi od porodične kategorije",
+        "Gold Card, preduzetništvo i duže posete"
+      ],
+      "list_items": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1e5a3547ce8437f9ddb4f3a3b61dd62261a4a1dccaa63683d43d9692b73331d9",
+      "sentences": [
+        {
+          "n": 1,
+          "paragraph": 1,
+          "units": 12,
+          "sentence": "Prestanak osnova boravka može zahtevati postupanje pre datuma odštampanog na ARC-u."
+        },
+        {
+          "n": 2,
+          "paragraph": 1,
+          "units": 24,
+          "sentence": "Član 31 Zakona o ulasku, izlasku i imigraciji nalaže Nacionalnoj imigracionoj agenciji, NIA, da ukine odobrenje boravka i poništi karticu kada razlog boravka prestane."
+        },
+        {
+          "n": 3,
+          "paragraph": 1,
+          "units": 11,
+          "sentence": "Zakon istovremeno propisuje slučajeve u kojima NIA može odobriti nastavak boravka."
+        },
+        {
+          "n": 4,
+          "paragraph": 2,
+          "units": 10,
+          "sentence": "Dokument o promeni pokazuje od kog događaja se računa rok."
+        },
+        {
+          "n": 5,
+          "paragraph": 2,
+          "units": 17,
+          "sentence": "To može biti obaveštenje o prestanku zaposlenja, diploma, isprava o porodičnom statusu ili ugovor za novu adresu."
+        },
+        {
+          "n": 6,
+          "paragraph": 2,
+          "units": 14,
+          "sentence": "Spisak NIA traži dokaze koji odgovaraju produženju ili promeni za koju se podnosi zahtev."
+        },
+        {
+          "n": 7,
+          "paragraph": 3,
+          "units": 8,
+          "sentence": "Registraciju adrese i mesta rada uređuje član 31."
+        },
+        {
+          "n": 8,
+          "paragraph": 3,
+          "units": 16,
+          "sentence": "Za promenu razloga boravka i produženje merodavni su članovi 7 i 9 propisa o boravku stranaca."
+        },
+        {
+          "n": 9,
+          "paragraph": 3,
+          "units": 12,
+          "sentence": "Rok BOCA od 15 dana odnosi se na podnošenje zahteva za vizu."
+        },
+        {
+          "n": 10,
+          "paragraph": 3,
+          "units": 9,
+          "sentence": "Ne znači da viza do tada mora biti izdata."
+        },
+        {
+          "n": 11,
+          "paragraph": 4,
+          "units": 19,
+          "sentence": "Preduzetnik koji nastavlja poslovanje na Tajvanu i ispunjava uslove može podneti zahtev za produženje tokom četiri meseca pre isteka."
+        },
+        {
+          "n": 12,
+          "paragraph": 4,
+          "units": 17,
+          "sentence": "Kada taj posao prestane, poseban put nastavka boravka ima period za prijavu tokom tri meseca pre isteka."
+        },
+        {
+          "n": 13,
+          "paragraph": 4,
+          "units": 12,
+          "sentence": "Obnova Gold Card-a takođe se otvara četiri meseca pre isteka kartice."
+        },
+        {
+          "n": 14,
+          "paragraph": 5,
+          "units": 16,
+          "sentence": "U opštem postupku produženja NIA traži obrazac, pasoš, postojeći ARC, fotografiju i aktuelni dokaz osnova boravka."
+        },
+        {
+          "n": 15,
+          "paragraph": 5,
+          "units": 12,
+          "sentence": "Dokument može poticati od poslodavca ili obrazovne ustanove, odnosno potvrđivati porodični odnos."
+        },
+        {
+          "n": 16,
+          "paragraph": 5,
+          "units": 8,
+          "sentence": "Posle selidbe prilaže se i dokaz nove adrese."
+        },
+        {
+          "n": 17,
+          "paragraph": 6,
+          "units": 6,
+          "sentence": "Dokazi treba da pokrivaju traženi period."
+        },
+        {
+          "n": 18,
+          "paragraph": 6,
+          "units": 13,
+          "sentence": "Kod rada to uključuje odgovarajuću dozvolu, a kod studiranja dokumentaciju o upisanom periodu."
+        },
+        {
+          "n": 19,
+          "paragraph": 6,
+          "units": 17,
+          "sentence": "Ranije pribavljanje tih isprava ostavlja vreme da se reši dozvola koja uskoro ističe ili nepotpun dokaz upisa."
+        },
+        {
+          "n": 20,
+          "paragraph": 7,
+          "units": 5,
+          "sentence": "Učenje mandarinskog ima posebna ograničenja."
+        },
+        {
+          "n": 21,
+          "paragraph": 7,
+          "units": 16,
+          "sentence": "Prema studentskom uputstvu NIA, pojedinačno produženje prati dokazani period učenja i može trajati najviše šest meseci."
+        },
+        {
+          "n": 22,
+          "paragraph": 7,
+          "units": 17,
+          "sentence": "Zbir kratkotrajnog boravka i boravka sa ARC-om po ovom osnovu načelno je ograničen na dve godine."
+        },
+        {
+          "n": 23,
+          "paragraph": 7,
+          "units": 7,
+          "sentence": "To nije opšta granica svih studijskih programa."
+        },
+        {
+          "n": 24,
+          "paragraph": 8,
+          "units": 23,
+          "sentence": "Član 3 pravila o taksama određuje 1.000 novih tajvanskih dolara za svaku odobrenu godinu produženja; i kraći period naplaćuje se kao jedna godina."
+        },
+        {
+          "n": 25,
+          "paragraph": 8,
+          "units": 6,
+          "sentence": "Kategorija i odluka NIA određuju trajanje."
+        },
+        {
+          "n": 26,
+          "paragraph": 8,
+          "units": 5,
+          "sentence": "Uplata ga ne produžava sama."
+        },
+        {
+          "n": 27,
+          "paragraph": 9,
+          "units": 6,
+          "sentence": "Šta ako je rok već istekao?"
+        },
+        {
+          "n": 28,
+          "paragraph": 9,
+          "units": 24,
+          "sentence": "Član 31 stav 3 dopušta novu prijavu posle izrečene kazne ako prekoračenje traje manje od 30 dana i prvobitni razlog boravka i dalje postoji."
+        },
+        {
+          "n": 29,
+          "paragraph": 9,
+          "units": 13,
+          "sentence": "Zadržava se i zakonsko odbijanje jedne godine pri računanju perioda za stalni boravak."
+        },
+        {
+          "n": 30,
+          "paragraph": 9,
+          "units": 14,
+          "sentence": "Ova mogućnost ne pomera raniji datum isteka; o nastaloj situaciji treba odmah obavestiti NIA."
+        },
+        {
+          "n": 31,
+          "paragraph": 10,
+          "units": 17,
+          "sentence": "Posle selidbe podnosi se zahtev za registraciju uz dokaz nove adrese u navedenom roku od 30 dana."
+        },
+        {
+          "n": 32,
+          "paragraph": 10,
+          "units": 15,
+          "sentence": "Promena adrese u evidenciji banke ili univerziteta ne zamenjuje zahtev NIA-i po članu 31."
+        },
+        {
+          "n": 33,
+          "paragraph": 10,
+          "units": 3,
+          "sentence": "Sačuvajte potvrdu podnošenja."
+        },
+        {
+          "n": 34,
+          "paragraph": 11,
+          "units": 17,
+          "sentence": "Promena poslodavca ili dodatni posao podležu članu 53 Zakona o službama zapošljavanja, uz uslove određene radnom kategorijom."
+        },
+        {
+          "n": 35,
+          "paragraph": 11,
+          "units": 10,
+          "sentence": "Pre početka novog rada mora postojati odgovarajuća dozvola ili oslobođenje."
+        },
+        {
+          "n": 36,
+          "paragraph": 11,
+          "units": 9,
+          "sentence": "Upis mesta rada kod NIA ne daje tu dozvolu."
+        },
+        {
+          "n": 37,
+          "paragraph": 12,
+          "units": 12,
+          "sentence": "Prestanak starog posla, odobrenje novog rada i selidba mogu imati različite datume."
+        },
+        {
+          "n": 38,
+          "paragraph": 12,
+          "units": 6,
+          "sentence": "Uz svaki se čuva njegova isprava."
+        },
+        {
+          "n": 39,
+          "paragraph": 12,
+          "units": 16,
+          "sentence": "Tako se može utvrditi koji događaj pokreće prijavu i da li treba menjati i osnov boravka."
+        },
+        {
+          "n": 40,
+          "paragraph": 13,
+          "units": 15,
+          "sentence": "Član 23-1 Zakona o imigraciji dopušta prijavu za promenu osnova samo u navedenim situacijama."
+        },
+        {
+          "n": 41,
+          "paragraph": 13,
+          "units": 12,
+          "sentence": "Preostali meseci na kartici sami ne potvrđuju da je novi osnov prihvatljiv."
+        },
+        {
+          "n": 42,
+          "paragraph": 14,
+          "units": 34,
+          "sentence": "Mogućnost nastavka po članu 31 obuhvata i određene slučajeve smrti člana porodice na kojem se boravak zasnivao, dece na Tajvanu, sudskog radnog spora koji je u toku ili povrede na radu čije lečenje traje."
+        },
+        {
+          "n": 43,
+          "paragraph": 14,
+          "units": 10,
+          "sentence": "NIA može odobriti nastavak kada su uslovi konkretnog osnova ispunjeni."
+        },
+        {
+          "n": 44,
+          "paragraph": 15,
+          "units": 22,
+          "sentence": "Kod izuzetka za razvod zbog nasilja u porodici, strani podnosilac mora biti razveden zbog tog nasilja i ne sme ponovo sklopiti brak."
+        },
+        {
+          "n": 45,
+          "paragraph": 15,
+          "units": 15,
+          "sentence": "Bivši tajvanski supružnik mora pripadati kategoriji državljana koji žive na Tajvanu i imaju registraciju domaćinstva."
+        },
+        {
+          "n": 46,
+          "paragraph": 15,
+          "units": 24,
+          "sentence": "Osnovi povezani sa brigom o detetu, roditeljskim pravima ili viđanjem deteta odnose se na propisane situacije sa maloletnim detetom sa registracijom domaćinstva na Tajvanu."
+        },
+        {
+          "n": 47,
+          "paragraph": 15,
+          "units": 14,
+          "sentence": "Sam razvod zato ne daje automatsko pravo ostanka niti u svakom slučaju nalaže odlazak."
+        },
+        {
+          "n": 48,
+          "paragraph": 16,
+          "units": 21,
+          "sentence": "Kvalifikovani stručnjaci i određeni članovi porodice sa odobrenim boravkom mogu pre isteka zatražiti produženje po članu 17 Zakona o stranim stručnjacima."
+        },
+        {
+          "n": 49,
+          "paragraph": 16,
+          "units": 18,
+          "sentence": "Kada je odobreno, traje šest meseci od narednog dana po isteku ranijeg ARC-a ili Gold Card-a."
+        },
+        {
+          "n": 50,
+          "paragraph": 16,
+          "units": 9,
+          "sentence": "Pre isteka tog produženja može se tražiti još jedno."
+        },
+        {
+          "n": 51,
+          "paragraph": 16,
+          "units": 5,
+          "sentence": "Ukupan maksimum je godinu dana."
+        },
+        {
+          "n": 52,
+          "paragraph": 16,
+          "units": 17,
+          "sentence": "To je drugi postupak od obnove samog Gold Card-a i ne produžava automatski raniju radnu dozvolu."
+        },
+        {
+          "n": 53,
+          "paragraph": 17,
+          "units": 16,
+          "sentence": "Za diplomce koji ispunjavaju uslove člana 11 propisa o boravku, zahtev se takođe podnosi pre isteka."
+        },
+        {
+          "n": 54,
+          "paragraph": 17,
+          "units": 13,
+          "sentence": "Po odobrenju, produženje traje godinu dana od narednog dana po isteku prethodnog boravka."
+        },
+        {
+          "n": 55,
+          "paragraph": 17,
+          "units": 12,
+          "sentence": "Ako je potrebno, može se tražiti još jedno, do ukupno dve godine."
+        },
+        {
+          "n": 56,
+          "paragraph": 17,
+          "units": 8,
+          "sentence": "Završetak običnog jezičkog kursa ne daje isti status."
+        },
+        {
+          "n": 57,
+          "paragraph": 18,
+          "units": 36,
+          "sentence": "Posebno oslobođenje od radne dozvole iz člana 12 Zakona o stranim stručnjacima važi za stranca koji je na Tajvanu stekao najmanje stepen associate degree i kome je NIA, u statusu novodiplomiranog studenta, zakonito odobrila produženje boravka."
+        },
+        {
+          "n": 58,
+          "paragraph": 18,
+          "units": 6,
+          "sentence": "Oslobođenje traje tokom tog odobrenog perioda."
+        },
+        {
+          "n": 59,
+          "paragraph": 18,
+          "units": 4,
+          "sentence": "Diploma sama nije dovoljna."
+        },
+        {
+          "n": 60,
+          "paragraph": 19,
+          "units": 29,
+          "sentence": "Početni upit o radnom ili porodičnom sporu koji utiče na boravak pošaljite na wei@hoveringlaw.com.tw, uz događaj i relevantne datume, bez broja pasoša i originalnih identifikacionih isprava."
+        },
+        {
+          "n": 61,
+          "paragraph": 19,
+          "units": 9,
+          "sentence": "Konsultacije se vode na engleskom, kineskom, japanskom ili korejskom."
+        },
+        {
+          "n": 62,
+          "paragraph": 20,
+          "units": 16,
+          "sentence": "Posle izdavanja novog pasoša moraju se ažurirati podaci kod NIA, prema njenom uputstvu o promeni pasoša."
+        },
+        {
+          "n": 63,
+          "paragraph": 20,
+          "units": 11,
+          "sentence": "Spisak za promenu podataka obuhvata obrazac, fotografiju, pasoš i dokaz promene."
+        },
+        {
+          "n": 64,
+          "paragraph": 20,
+          "units": 10,
+          "sentence": "Stari pasoš ili njegova kopija povezuje prethodni i novi zapis."
+        },
+        {
+          "n": 65,
+          "paragraph": 20,
+          "units": 11,
+          "sentence": "Rok za promenu adrese ne treba prenositi na svaku promenu pasoša."
+        },
+        {
+          "n": 66,
+          "paragraph": 21,
+          "units": 25,
+          "sentence": "Za izgubljenu ili oštećenu karticu, uz odgovarajući zahtev i identifikacione dokumente prilažu se oštećeni ARC, izjava o gubitku, policijska potvrda ili drugi dokaz primeren događaju."
+        },
+        {
+          "n": 67,
+          "paragraph": 21,
+          "units": 15,
+          "sentence": "Standardna taksa za zamenu je 500 novih tajvanskih dolara, prema članu 7 pravila o taksama."
+        },
+        {
+          "n": 68,
+          "paragraph": 21,
+          "units": 4,
+          "sentence": "Zamena ne produžava boravak."
+        },
+        {
+          "n": 69,
+          "paragraph": 22,
+          "units": 14,
+          "sentence": "Ako kartica nestane u inostranstvu, pre povratka se obratite NIA i nadležnom tajvanskom predstavništvu."
+        },
+        {
+          "n": 70,
+          "paragraph": 22,
+          "units": 13,
+          "sentence": "Pripremite podatke pasoša, kopiju ARC-a ako je imate i datum planiranog povratka."
+        },
+        {
+          "n": 71,
+          "paragraph": 22,
+          "units": 14,
+          "sentence": "Potreban dokument zavisi od tog slučaja; mogućnost zamene kartice nije garancija ukrcavanja ili ulaska."
+        },
+        {
+          "n": 72,
+          "paragraph": 23,
+          "units": 15,
+          "sentence": "Dozvola za ponovni ulazak mora biti pribavljena pre odlaska, prema članu 34 Zakona o imigraciji."
+        },
+        {
+          "n": 73,
+          "paragraph": 23,
+          "units": 16,
+          "sentence": "Za osobu sa odobrenim stalnim boravkom postoji izuzetak: može se vratiti uz važeći pasoš i APRC."
+        },
+        {
+          "n": 74,
+          "paragraph": 23,
+          "units": 20,
+          "sentence": "Kod redovne dozvole, član 20 propisa o boravku vezuje njeno važenje za ARC i predviđa prestanak kada se kartica poništi."
+        },
+        {
+          "n": 75,
+          "paragraph": 24,
+          "units": 14,
+          "sentence": "Poseban efekat odlaska propisan je za onlajn postupak stručnjaka i njihovih porodica, napomena 9."
+        },
+        {
+          "n": 76,
+          "paragraph": 24,
+          "units": 12,
+          "sentence": "Ako podnosilac napusti Tajvan dok traje obrada, NIA obustavlja razmatranje te prijave."
+        },
+        {
+          "n": 77,
+          "paragraph": 24,
+          "units": 12,
+          "sentence": "Posle ponovnog ulaska može podneti novu ako ispunjava uslove za odgovarajuću kategoriju."
+        },
+        {
+          "n": 78,
+          "paragraph": 24,
+          "units": 14,
+          "sentence": "Ovo pravilo uređuje navedeni portal, a ne opštu zabranu putovanja svakog nosioca ARC-a."
+        },
+        {
+          "n": 79,
+          "paragraph": 25,
+          "units": 10,
+          "sentence": "Potvrda prijave i fotografija kartice ne zamenjuju potrebne putne dokumente."
+        },
+        {
+          "n": 80,
+          "paragraph": 25,
+          "units": 18,
+          "sentence": "Kada obnova ili zamena neće biti završena do odlaska, od NIA treba dobiti uputstvo za stvarni datum povratka."
+        },
+        {
+          "n": 81,
+          "paragraph": 25,
+          "units": 28,
+          "sentence": "Za nosioca važećeg ARC-a ili APRC-a NIA objašnjava da pasoš mora važiti na dan dolaska, bez opšteg zahteva za još šest meseci važenja u toj situaciji."
+        },
+        {
+          "n": 82,
+          "paragraph": 25,
+          "units": 8,
+          "sentence": "Provera pri ulasku i ostali primenljivi uslovi ostaju."
+        },
+        {
+          "n": 83,
+          "paragraph": 26,
+          "units": 16,
+          "sentence": "Prvu karticu obrađuje vodič za prvi ARC, a izbor novog osnova pregled rada, studija i porodice."
+        },
+        {
+          "n": 84,
+          "paragraph": 26,
+          "units": 9,
+          "sentence": "Stalni boravak i APRC, na engleskom, imaju zasebne uslove."
+        },
+        {
+          "n": 85,
+          "paragraph": 26,
+          "units": 17,
+          "sentence": "Za predstojeći put presudni su dokumenti koje ćete zaista imati i njihov rok važenja na dan povratka."
+        },
+        {
+          "n": 86,
+          "paragraph": 27,
+          "units": 20,
+          "sentence": "Pravni izvori provereni su 24. oktobra 2026, uz dopunsku proveru navedenih pravila i posledice odlaska tokom onlajn prijave 25. oktobra."
+        },
+        {
+          "n": 87,
+          "paragraph": 27,
+          "units": 9,
+          "sentence": "Ovo su opšte informacije o postupcima za strane državljane."
+        },
+        {
+          "n": 88,
+          "paragraph": 27,
+          "units": 17,
+          "sentence": "Za stanovnike kontinentalne Kine, Hongkonga i Makaa i državljane Republike Kine bez registracije domaćinstva važe posebna pravila."
+        }
+      ],
+      "paragraph_openers": [
+        "prestanak",
+        "dokument",
+        "registraciju",
+        "preduzetnik",
+        "u",
+        "dokazi",
+        "učenje",
+        "član",
+        "šta",
+        "posle",
+        "promena",
+        "prestanak",
+        "član",
+        "mogućnost",
+        "kod",
+        "kvalifikovani",
+        "za",
+        "posebno",
+        "početni",
+        "posle",
+        "za",
+        "ako",
+        "dozvola",
+        "poseban",
+        "potvrda",
+        "prvu",
+        "pravni"
+      ],
+      "headings": [
+        "Rok za adresu i rok za novi osnov",
+        "Kada posao, studije ili porodični osnov traju",
+        "Nova adresa i novi poslodavac",
+        "Prestanak rada, diplomiranje ili porodična promena",
+        "Novi pasoš ili izgubljen ARC",
+        "Putovanje dok je prijava još u obradi"
+      ],
+      "list_items": []
+    }
+  ]
+}

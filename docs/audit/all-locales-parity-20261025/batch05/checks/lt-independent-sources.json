@@ -1,0 +1,70 @@
+{
+  "recorded_at": "2026-10-25T15:53:36.236977+00:00",
+  "scope": "Selected official provisions actually read through web tools during this independent review; no full-site refresh, no agency inquiry, no raw-page SHA asserted",
+  "successful_reads": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=16",
+      "sections": "Article 16 paragraphs 1 and 2",
+      "finding": "F03 own permit/exemption and F04 category grouping/common NIA residence-or-permanent approval distinguished."
+    },
+    {
+      "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+      "sections": "Articles 12, 15, 16, 17",
+      "finding": "Taiwan degree already obtained, new-graduate NIA-approved period; spouse own permit application; sponsor scope; professional extension duration and application timing."
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080132",
+      "sections": "Articles 31 and 34",
+      "finding": "Next-day address/workplace filing; lost-ground cancellation with conditional exceptions; under-30-day overstay and one-year deduction; APRC re-entry exception."
+    },
+    {
+      "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+      "sections": "Articles 11 and 12",
+      "finding": "Graduate applies before expiry; approved one-year period from day after former expiry and one further extension, total two years; first Taiwan-resident household-registered spouse maximum one year."
+    },
+    {
+      "url": "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+      "sections": "Application processing paragraph line 191 and notes; overseas authentication paragraph",
+      "finding": "Next-day 15-calendar-day rectification; three-month alternative when obtaining specified overseas documents; incomplete rectification rejected; general 10-working-day recount; authentication must versus translation may."
+    },
+    {
+      "url": "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+      "sections": "Required documents; section 4 payment/collection; sections 5 and 6",
+      "finding": "Student enrollment/date conditions, five working days from approval for payment, electronic ARC download AND print, IC receipt print and collection three working days after payment. English more-than/at-least wording discrepancy is not imported over statutory minimum."
+    },
+    {
+      "url": "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/",
+      "sections": "Notes 5-10, especially 9 at line155",
+      "finding": "This online route stops examination upon departure; eligible applicant may make a new application after re-entry."
+    },
+    {
+      "url": "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+      "sections": "Notes 7(1), required-document portions and notes through 7(9)",
+      "finding": "Trial exemption, visa on arrival, TAC, ABTC and working holiday exclusions retain unless-other-law exception. O2 clarifies the Lithuanian reference to excluded routes."
+    }
+  ],
+  "failed_direct_reads_with_successful_fallback": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=A0030295&flno=12",
+      "observed": "tool inaccessible/internal error",
+      "fallback": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+      "fallback_section": "Article12"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+      "observed": "tool inaccessible/internal error",
+      "fallback": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080132",
+      "fallback_section": "Article34"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+      "observed": "400 timeout fetching",
+      "fallback": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080132",
+      "fallback_section": "Article31"
+    }
+  ],
+  "search_limit": "NIA0902 find for 十五 reported no match; actual paragraph was read by opening around line190 and displayed line191.",
+  "legal_database_cutoff_display": "2026-10-16",
+  "later_gazette_full_scan": false,
+  "other_support": "Frozen current EN/KO/ZH nine articles, arc-source-facts F01-F24 and source-refresh; not every reference URL was freshly reopened."
+}

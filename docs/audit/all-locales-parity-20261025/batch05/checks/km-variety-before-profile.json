@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-25T15:20:26.619767+00:00",
+  "command": [
+    "python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-km/813-cambodian-spouse-marry-taiwanese-interview-list-registration.md",
+    "--lang",
+    "km"
+  ],
+  "targetSha256": "9ca06d98eeccb7c49af2b1771949fce937ccb3f130b26dd2b1d5915b52d44d53",
+  "exitCode": 2,
+  "stdout": "",
+  "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi,ru,ms,fil,tr,nl,zh-hans,sv,da,nb,fi,pl,cs,ro,uk,bg,ca,el,hr,hu,is,sk,he,bn,ur,fa,my,ta,ne}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'km' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne')\n",
+  "interpretation": "Actual existing KM article probe before B5 manuscript drafting; unsupported is not PASS."
+}

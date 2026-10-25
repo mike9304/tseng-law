@@ -1,0 +1,204 @@
+{
+  "atUTC": "2026-10-25T16:06:27.975884+00:00",
+  "r1ReportUnchanged": true,
+  "r1SHA256": "59fcffbba5d4ce67e1267ee028b416c0651bf50bc656746f446a909a5d39b767",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/704-taiwan-arc-first-application.md",
+      "sha256": "c33ec471bf92fd0d55977d3e5e40dde1fed5130d73645c3836c43895b1f918de",
+      "inverseSHA256": "b4132dc5c792f68709a71ba8ff81cf456312f0f58112639a153b985ed010aa1a",
+      "inverseMatchesR1": true,
+      "URLSequenceUnchanged": true,
+      "frontmatterOnlyM01": true,
+      "changedExtractedParagraphs": [
+        {
+          "paragraphIndex": 7,
+          "before": [
+            {
+              "text": "Сургуульд хараахан бүртгүүлээгүй хүн элсэх эрхийн бичиг өгнө.",
+              "units": 8
+            },
+            {
+              "text": "Бүртгүүлсэн оюутны хувьд NIA-ийн жагсаалт сүүлийн нэг сарын суралцаж буй нотолгоог дурддаг бөгөөд одоогийн улирлын бүртгэл эсвэл оюутны үнэмлэхийг ч заасан.",
+              "units": 22
+            }
+          ],
+          "after": [
+            {
+              "text": "Сургуульд хараахан бүртгүүлээгүй хүн элсэх эрхийн бичиг өгнө.",
+              "units": 8
+            },
+            {
+              "text": "Бүртгүүлсэн оюутан NIA-ийн жагсаалтад нийцсэн, сүүлийн нэг сарын дотор олгосон суралцаж буй нотолгоо өгнө.",
+              "units": 15
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "lang": "mn",
+        "sentences": 71,
+        "paras": 21,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 13.3,
+        "len_cv": 0.497,
+        "short_share": 0.268,
+        "long_share": 0.014,
+        "para_cv": 0.366,
+        "even_run3": 0.029,
+        "top_end": "болно",
+        "top_end_share": 0.085,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "оршин",
+        "top_opener_n": 2,
+        "opener_rep": 0.143,
+        "consec_same_start": 1,
+        "cite_para_share": 0.381,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.76,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Оршин суух визтэй Тайваньд нэвтэрч, оршин суух зөвшөөрөл авсан хүн нэвтэрсний маргаашаас 3",
+        "last": "Эх сурвалжийг 2026 оны 10 дугаар сарын 24–25-нд шалгасан. Энэ нийтлэл гадаадын иргэний ерөнхий ажиллагааг тайлбарлах бөг",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "d54e05e91c9d6e9da6ee536009c01b9d44d34b0a78e74dbe07b2e294dde261ac",
+      "inverseSHA256": "d54e05e91c9d6e9da6ee536009c01b9d44d34b0a78e74dbe07b2e294dde261ac",
+      "inverseMatchesR1": true,
+      "URLSequenceUnchanged": true,
+      "frontmatterOnlyM01": true,
+      "changedExtractedParagraphs": [],
+      "metrics": {
+        "lang": "mn",
+        "sentences": 75,
+        "paras": 22,
+        "heads": 5,
+        "list_items": 2,
+        "mean_len": 13.5,
+        "len_cv": 0.473,
+        "short_share": 0.24,
+        "long_share": 0.013,
+        "para_cv": 0.306,
+        "even_run3": 0.041,
+        "top_end": "болно",
+        "top_end_share": 0.107,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "гадаадын",
+        "top_opener_n": 2,
+        "opener_rep": 0.045,
+        "consec_same_start": 0,
+        "cite_para_share": 0.5,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.67,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Шаардлага хангасан гадаадын мэргэжилтэн визгүй нэвтрээд Тайваньд оршин суух хүсэлтээ шууд ",
+        "last": "Эх сурвалжийг 2026 оны 10 дугаар сарын 24–25-нд шалгасан. Нийтлэл гадаадын иргэний виз, оршин суух замыг тайлбарлах бөгө",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "f3ced3a9c5be6948ce8ead66d0110be0a8e8309f39f414712f24bff50de965a4",
+      "inverseSHA256": "c104ac77d73fe5c4a3de64dc8578498523759428bf7fa81af4152f964c3d4864",
+      "inverseMatchesR1": true,
+      "URLSequenceUnchanged": true,
+      "frontmatterOnlyM01": true,
+      "changedExtractedParagraphs": [
+        {
+          "paragraphIndex": 22,
+          "before": [
+            {
+              "text": "Сунгалт эсвэл карт дахин олгох ажиллагаа дуусаагүй байхад явах бол бодит аяллынхаа баримтыг NIA-аас урьдчилан тодруулна.",
+              "units": 17
+            },
+            {
+              "text": "Өргөдөл хүлээн авсан баримт аяллын баримтыг автоматаар орлохгүй.",
+              "units": 8
+            },
+            {
+              "text": "Гарах хүртэл шинэ карт бэлэн болохгүй бол буцахдаа ямар баримт ашиглахыг асуух хэрэгтэй.",
+              "units": 13
+            }
+          ],
+          "after": [
+            {
+              "text": "Сунгалт эсвэл карт дахин олгох ажиллагаа дуусаагүй байхад явах бол буцаж нэвтрэхэд хэрэгтэй баримтыг NIA-аас урьдчилан тодруулна.",
+              "units": 18
+            },
+            {
+              "text": "Өргөдөл хүлээн авсан баримт аяллын баримтыг автоматаар орлохгүй.",
+              "units": 8
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "lang": "mn",
+        "sentences": 87,
+        "paras": 25,
+        "heads": 6,
+        "list_items": 0,
+        "mean_len": 13.6,
+        "len_cv": 0.461,
+        "short_share": 0.207,
+        "long_share": 0.011,
+        "para_cv": 0.338,
+        "even_run3": 0.047,
+        "top_end": "болно",
+        "top_end_share": 0.149,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "arc",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.48,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 1,
+        "questions": 2,
+        "num_per100": 2.37,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "ARC дээр хэдэн сарын хугацаа үлдсэн байхад түүнийг авсан ажил, сургалт эсвэл гэр бүлийн ха",
+        "last": "Эх сурвалжийг 2026 оны 10 дугаар сарын 24–25-нд шалгасан. Нийтлэл гадаадын иргэний ажиллагаа болон ангилал бүрийн онцгой",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    }
+  ],
+  "structure": {
+    "errors": 0,
+    "selectedFiles": 3,
+    "semanticStatus": "REVIEW_REQUIRED"
+  },
+  "evidenceSHA256": {
+    "mn-independent-r1-edits.json": "d381cae38ef5a23899d4054cdc7d2ee6dc03cf42d186d1919d3b71073010cd23",
+    "mn-variety-independent-r1.json": "c742718f7d17dad6ef8c016b0748e11aec18079c340de8979598646df1907642",
+    "mn-content-audit.json": "9e1beff78a6ac275945da7febd03ce94ef7c5bb9b20ed1bc958c979f656db069"
+  }
+}

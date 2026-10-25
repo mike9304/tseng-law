@@ -1,0 +1,49 @@
+{
+  "at": "2026-10-26T01:18:12.865556+09:00",
+  "author": "primary /root",
+  "review": "reviews/sl-independent.md",
+  "lessons_sha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f",
+  "changes": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "before_sha256": "817393175801756e47f9ae7176d2b4336b0fdb47fca765b8dab4edcb9262cbbc",
+      "after_sha256": "90d5e07a124a7b1c6aeb46a5be8293a44007a58f6e2dad2593c96b1067834932",
+      "frontmatter_and_faq_unchanged": true,
+      "url_multiset_unchanged": true,
+      "exact_reverse": true,
+      "edits": [
+        {
+          "id": "O1",
+          "old": "## Ponudba za delo potrebuje ustrezno dovoljenje",
+          "new": "## Začetek dela zahteva dovoljenje ali zakonsko izjemo"
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "before_sha256": "c85cb2409fa70abca79392f127d2948f33684e89f9b42cde4410a569139e2243",
+      "after_sha256": "d5b7581f6dcff33cdcb5b65e1b46bd0654e050acb94434bbdaab68222c0aca5b",
+      "frontmatter_and_faq_unchanged": true,
+      "url_multiset_unchanged": true,
+      "exact_reverse": true,
+      "edits": [
+        {
+          "id": "M1",
+          "old": "tuji prosilec se po razvezi zaradi tega nasilja ne sme ponovno poročiti.",
+          "new": "pogoj je tudi, da se tuji prosilec po razvezi zaradi tega nasilja ni ponovno poročil."
+        },
+        {
+          "id": "M2a",
+          "old": "Za prvo vprašanje o sporu, ki vpliva na prebivanje, lahko pisarni Hovering International Law Firm na [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) navedete dogodek, pomembne datume in neobčutljiv povzetek.",
+          "new": "Pisarni Hovering International Law Firm lahko na [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) pošljete prvo vprašanje o sporu, ki vpliva na prebivanje, z navedbo dogodka, pomembnih datumov in neobčutljivega povzetka."
+        },
+        {
+          "id": "M2b",
+          "old": "Pri [določenem spletnem postopku za tuje strokovnjake in njihove družine](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/) NIA po odhodu prosilca med prijavo obravnave ne nadaljuje.",
+          "new": "NIA v [določenem spletnem postopku za tuje strokovnjake in njihove družine](https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/) po odhodu prosilca med prijavo obravnave ne nadaljuje."
+        }
+      ]
+    }
+  ],
+  "review_status": "R2 pending"
+}

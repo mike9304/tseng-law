@@ -1,0 +1,40 @@
+{
+  "createdAt": "2026-10-25T16:04:19.421641+00:00",
+  "method": "Independently reverse exact T06 string, then reverse author T01-T05 unified diff hunks against current full manuscripts; verify all original hashes. Does not establish legal correctness by itself.",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/704-taiwan-arc-first-application.md",
+      "current_sha256": "f15069557979333b4febbff860e45755472675d20f056ac2d05664f788eaea96",
+      "restored_initial_sha256": "bfdecef5ded70f3b856570d0face09d625738dbe466fb3b8f5b45ed4df61a6c9",
+      "initial_hash_matches_record": true,
+      "frontmatter_and_faq_unchanged": true,
+      "external_url_sequence_unchanged": true,
+      "reversed_edits": [
+        "T01-T05"
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+      "current_sha256": "6bf9a4fca0d1b90d3bf0e4f46e4c87ba43cb5c4b32989ab3e98eaed52955acc8",
+      "restored_initial_sha256": "73cc7dd4d3ed3fd9873d73e973ea37ddec76177151eb1c4d1f0543a81c23140b",
+      "initial_hash_matches_record": true,
+      "frontmatter_and_faq_unchanged": true,
+      "external_url_sequence_unchanged": true,
+      "reversed_edits": [
+        "T06",
+        "T01-T05"
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+      "current_sha256": "dce0dce717cd732bce40b187f43ef31cbcf0758d71256c129263c23fc7da856a",
+      "restored_initial_sha256": "9dc24aa435a50c5cc718a4c46d33e916e75236196eb47df6f6fc650ba6b1886b",
+      "initial_hash_matches_record": true,
+      "frontmatter_and_faq_unchanged": true,
+      "external_url_sequence_unchanged": true,
+      "reversed_edits": [
+        "T01-T05"
+      ]
+    }
+  ]
+}

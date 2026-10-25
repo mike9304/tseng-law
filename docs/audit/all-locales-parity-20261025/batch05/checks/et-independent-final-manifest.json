@@ -1,0 +1,45 @@
+{
+  "closedAt": "2026-10-26T01:08:35.257722+09:00",
+  "status": "APPROVE",
+  "mandatoryFindings": 0,
+  "optionalFindings": [
+    "O1",
+    "O2"
+  ],
+  "inputChangesAcknowledged": [
+    {
+      "file": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "initial_sha256": "92c572987cbc3c03eeb934fbfd2de6cf42d7e4b2e441cc39fb009c0e11f0e71a",
+      "current_sha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f"
+    }
+  ],
+  "allOtherInputsUnchanged": true,
+  "crossLanguageLinkCheck": {
+    "taiwan-foreign-spouse-residence": {
+      "sameLanguageExists": false,
+      "englishExists": true
+    },
+    "taiwan-employment-gold-card": {
+      "sameLanguageExists": false,
+      "englishExists": true
+    },
+    "taiwan-permanent-residence-aprc": {
+      "sameLanguageExists": false,
+      "englishExists": true
+    }
+  },
+  "reportSha256": "fefb82c1226338d68b64dfdf608a6399ecb0eda855814b78ddc227dad381d646",
+  "artifacts": {
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-independent-content-audit.json": "e43b6080eb99cb0244434880886476b6cfa62c888b735b886053c59ff57e6296",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-independent-edit-integrity.json": "f046cc6e44c0d65520f5021b7141bf6b9816c8f37072ecffd016af6c8bacb034",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-independent-input-refresh.json": "c093dc66f159e8e4b68c3b92cf49e4f7db5895347c1a51a668911261aae6fde3",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-independent-inputs.json": "d50c66e17b5130a6daf0db7c51761a160410a9ed2d89b9e94c08c5064c3600f7",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-independent-overlay.json": "3e97e45b1d222aa6ac4bb33381640a7ceb3446224eb6d9f493659cdca3ae4844",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-independent-sentences.json": "81490061498f74b84e87f55cf58743e65efe969053540ff794181c0292cb39ce",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-independent-url-audit.json": "a7401c2e5e9c3adc17fbfd63a695d2650ceb9f2514392dd28fb6f0bdbaf35833",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-independent-variety.json": "581f5c0a9dd9a5c9bbc984225ec2f489144e42e283bf0d98f3705b1751ec9048",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/et-independent.md": "fefb82c1226338d68b64dfdf608a6399ecb0eda855814b78ddc227dad381d646"
+  },
+  "publicationReady": false,
+  "remaining": "Root integration rendering; AI review is not human native-language or legal approval."
+}

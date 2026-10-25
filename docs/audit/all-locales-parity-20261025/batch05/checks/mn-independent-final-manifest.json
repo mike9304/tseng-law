@@ -1,0 +1,50 @@
+{
+  "at": "2026-10-25T16:00:50.642606+00:00",
+  "status": "R1_REQUEST_CHANGE_M01_FAQ_subject_object_reversal",
+  "mandatory": 1,
+  "optional": 2,
+  "manuscripts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/704-taiwan-arc-first-application.md",
+      "sha256": "b4132dc5c792f68709a71ba8ff81cf456312f0f58112639a153b985ed010aa1a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "d54e05e91c9d6e9da6ee536009c01b9d44d34b0a78e74dbe07b2e294dde261ac"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "c104ac77d73fe5c4a3de64dc8578498523759428bf7fa81af4152f964c3d4864"
+    }
+  ],
+  "unchangedAllInputs": true,
+  "changedInputs": [],
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/mn-independent.md",
+      "sha256": "59fcffbba5d4ce67e1267ee028b416c0651bf50bc656746f446a909a5d39b767",
+      "bytes": 21107
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/mn-independent-inputs.json",
+      "sha256": "67ef10c5916615873e5530b699b85e37d5cd3c8bffd8e2eefa9b92ad72238771",
+      "bytes": 10118
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/mn-independent-sentences.json",
+      "sha256": "1f1fdf39ce5065fd3430906584580d35649cf7971626fd0a955f4f825b8921c4",
+      "bytes": 94061
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/mn-independent-structure.json",
+      "sha256": "0d13778e728fb723985a2bda16e110d151e76a365f9bc75309e770dd0e7d7c9e",
+      "bytes": 15099
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/mn-independent-variety.json",
+      "sha256": "1ef38cf531d57960d0bc2ecc8850b1acf105e5dbca99f5183370691e452e8c0b",
+      "bytes": 2796
+    }
+  ],
+  "scope": "Only own independent review artifacts written; MN manuscripts and author kept unchanged."
+}

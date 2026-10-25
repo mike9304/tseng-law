@@ -1,0 +1,15 @@
+{
+  "locale": "ro",
+  "directory": "columns-ro",
+  "review_status": "AI-authored neutral contract; coordinating review pending",
+  "register": "Standard Romanian, comma-below ș and ț retained distinctly from cedilla forms",
+  "join_hyphens": true,
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?surse(?:\\s+oficiale)?(?:\\s+și\\s+data\\s+verificării)?\\s*:?\\s*$)",
+  "abbreviations": ["dr", "prof", "conf", "ing", "art", "alin", "lit", "nr", "pct", "pag", "p", "vol", "cap", "ex", "de ex", "d.ex", "ș.a", "ș.a.m.d", "etc", "cf", "O.U.G"],
+  "terminal_abbreviations": ["etc", "ș.a", "ș.a.m.d"],
+  "contrast_patterns": ["(?i:\\bnu\\b[^.!?\\n]{0,180}\\bci\\b)", "(?i:\\bîn\\s+loc\\s+de\\b)", "(?i:\\bspre\\s+deosebire\\s+de\\b)"],
+  "caveat_pattern": "(?i:^\\s*[”\"(«»„“]*(?:totuși|însă|cu\\s+toate\\s+acestea)\\b)",
+  "hypo_pattern": "(?i:^\\s*[”\"(«»„“]*(?:să\\s+presupunem\\s+că|imaginați-vă)\\b)",
+  "formula_close_pattern": "(?i:acest\\s+articol\\s+(?:oferă|conține)\\s+informații\\s+generale|firma\\s+noastră\\s+vă\\s+poate\\s+ajuta)",
+  "citation_pattern": "(?i:\\b(?:articolul|articolele|art\\.)\\s*\\d+)"
+}

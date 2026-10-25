@@ -390,6 +390,13 @@ independently reviewed sentence map is required instead.
         # A German calendar ordinal has a dot followed by a month name;
         # it is not the end of the enclosing sentence.
         months = r'Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember'
+        # Coordinated calendar days share the following month (7. und 8. Mai).
+        # Require a complete day/month continuation and lower-case connector;
+        # an actual next sentence beginning with "Und" must remain separate.
+        day = r'(?:0?[1-9]|[12]\d|3[01])'
+        protected = re.sub(
+            r'(?<!\w)' + day + r'\.(?=(?:\s+(?:und|oder|bis)\s+' + day + r'\.)+\s+(?i:' + months + r')\b)',
+            lambda match: match.group()[:-1] + marker, protected)
         protected = re.sub(r'(?<=\d)\.(?=\s+(?:' + months + r')\b)', marker, protected, flags=re.I)
     if lang == 'vi':
         # Vietnamese terminal dotted abbreviations such as v.v. can close a

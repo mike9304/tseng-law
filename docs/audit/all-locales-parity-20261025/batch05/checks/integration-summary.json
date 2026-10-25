@@ -1,0 +1,96 @@
+{
+  "createdAt": "2026-10-26T02:17:13.481530+09:00",
+  "status": "READY_FOR_ROOT_PRECOMMIT_REVIEW",
+  "head": "435e9dd8a2f465c238c6f58716246058bb3981f8",
+  "contentChanges": {
+    "newArticles": 21,
+    "correctedExistingArticles": 1,
+    "registryLocales": 49,
+    "ARCFiles": 147,
+    "allSelectedSourceBytesMatch": true
+  },
+  "manuscripts": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-final-manuscript-manifest.json",
+    "sha256": "9293e83a08481f368bb88aa8dc531fce8291c871f8837286d450feb4e71f1cde",
+    "bytes": 24362
+  },
+  "copyReceipt": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-copy-manifest.json",
+    "sha256": "e96ce0938c1182ec54198832c16898aee0b865be06a1e0b243dbfa3601efa83e",
+    "bytes": 11067
+  },
+  "registry": {
+    "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/native-locale-columns.ts",
+    "sha256": "d96d8607d18d6c86ee0e5c6829ff4aeb62f1273a1998c2f395cfc3668130b534",
+    "bytes": 94049
+  },
+  "registryPatch": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-registry.patch",
+    "sha256": "b89ee60b5677d5622d8953e099f60c8bcd215a53d8bdb8fc994e9905a43ec9df",
+    "bytes": 931
+  },
+  "sourceProof": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-source-proof.json",
+    "sha256": "3c436a4e6d0d2d82d9d946abf7c737daa133dc4fda59942c9972daa5e02c995d",
+    "bytes": 3186
+  },
+  "tests": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-tests-summary.json",
+    "sha256": "063125bc75fafd97a9b129471b85017f1c9fa6e3b1d7bc82f25e0c93abd56c12",
+    "bytes": 898
+  },
+  "testsPassed": 747,
+  "testFilesPassed": 27,
+  "finalStructuralRuns": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-content-audit-final-runs.json",
+    "sha256": "b43bb1146479a9987fc836f84936425bfecbe22c9153ba4e9f660d29f1a31088",
+    "bytes": 10648
+  },
+  "initialStructuralScopeMismatchPreserved": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-content-audit-initial-scope-mismatch.json",
+    "sha256": "cf344f979e0cba6711ee05da6f05adaabbf7330843cc846846a6418e46b9391a",
+    "bytes": 3312
+  },
+  "inventory": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-r-inventory.json",
+    "sha256": "c113297c8c3f93caaac36ed854940f84d143ae01c14734f70c756ef983b9c044",
+    "bytes": 4345556
+  },
+  "inventoryTotals": {
+    "professional": 2121,
+    "issues": 125,
+    "boardVisibleLocal": 1854,
+    "distinctProfessionalSlugs": 668,
+    "coreUnion": 475,
+    "coreCommon": 135,
+    "allLocaleCommon": 21,
+    "countDeficitTo286": 11897,
+    "visibleDeficitTo286": 12164,
+    "other45MissingCoreCommon": 5084
+  },
+  "finalToolHashes": {
+    "content-audit.mjs": "3926a274bf544fed7e34339aa8b2636d41a4be79c0aaff898f46fc65595faf4b",
+    "variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+  },
+  "toolOwner": "root; this agent did not edit or install tools",
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-report.md",
+    "sha256": "a4f1b0e58ab4ac2fe9abf944bedf2a684ac1e419bcd1d58a3a7d4a495c48e8d5",
+    "bytes": 4867
+  },
+  "plan": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-plan.json",
+    "sha256": "addb6590c239a4216d6bd168e5943171cbe83dc979d0256847b9a60b28737ff2",
+    "bytes": 66672
+  },
+  "auditCopyManifestPath": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-audit-copy-manifest.json",
+  "remaining": [
+    "Root precommit/HEAD coordination",
+    "Root full build with existing media-origin option",
+    "NewB5 static/browser/pack verification",
+    "Root main push and actual Air/public confirmation"
+  ],
+  "noCommitBuildPushDeploy": true,
+  "publicationReady": false,
+  "notHumanNativeOrLawyerApproval": true
+}

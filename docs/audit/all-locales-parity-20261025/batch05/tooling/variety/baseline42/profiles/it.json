@@ -1,0 +1,130 @@
+{
+  "locale": "it",
+  "directory": "columns-it",
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?Fonti(?:\\s+ufficiali)?\\s*:?\\s*$)",
+  "abbreviations": [
+    "art",
+    "artt",
+    "co",
+    "c.c",
+    "c.p",
+    "c.p.c",
+    "d.l",
+    "d.lgs",
+    "n",
+    "nn",
+    "p",
+    "pp",
+    "avv",
+    "dott",
+    "sig",
+    "prof",
+    "ecc",
+    "es",
+    "cfr",
+    "lett",
+    "ss"
+  ],
+  "contrast_patterns": [
+    "(?i:\\bnon\\b[^.!?\\n]{0,160}\\bma\\b)",
+    "(?i:\\b(?:piuttosto\\s+che|invece\\s+di)\\b)",
+    "(?i:\\b(?:è|sono)\\s+(?:un[’\\']altra\\s+cosa|divers[oaie]\\s+da)\\b)"
+  ],
+  "caveat_pattern": "(?i:^\\s*[«“\\\"(]*\\s*(?:tuttavia|peraltro|nondimeno|salvo\\s+che)\\b)",
+  "hypo_pattern": "(?i:^\\s*[«“\\\"(]*\\s*(?:supponiamo\\b|immaginiamo\\b|un\\s+caso\\s+ipotetico\\b|un\\s+esempio\\s+(?:fittizio|inventato)\\b))",
+  "formula_close_pattern": "(?i:\\b(?:questo\\s+articolo\\s+(?:fornisce\\s+(?:solo\\s+)?informazioni\\s+generali|ha\\s+carattere\\s+(?:meramente\\s+)?informativo)|ogni\\s+caso\\s+è\\s+diverso|il\\s+nostro\\s+studio\\s+può\\s+aiutarvi)\\b)",
+  "sentence_fixtures": [
+    {
+      "text": "Il registro fittizio riporta « art. 7, co. 2, c.p.c. » come etichetta. È una copia.",
+      "sentences": [
+        "Il registro fittizio riporta « art. 7, co. 2, c.p.c. » come etichetta.",
+        "È una copia."
+      ]
+    },
+    {
+      "text": "La riga fittizia contiene 1.234,50 € e 2,5 unità. È l'unico importo visibile.",
+      "sentences": [
+        "La riga fittizia contiene 1.234,50 € e 2,5 unità.",
+        "È l'unico importo visibile."
+      ]
+    },
+    {
+      "text": "«La copia è pronta.» È già sul tavolo. è presente un allegato.",
+      "sentences": [
+        "«La copia è pronta.»",
+        "È già sul tavolo.",
+        "è presente un allegato."
+      ]
+    },
+    {
+      "text": "L'avv. Rossi annota un rinvio al c.p.c. nel registro fittizio. L’originale resta qui.",
+      "sentences": [
+        "L'avv. Rossi annota un rinvio al c.p.c. nel registro fittizio.",
+        "L’originale resta qui."
+      ]
+    },
+    {
+      "text": "La nota fittizia elenca copie, buste, ecc. Un foglio manca.",
+      "sentences": [
+        "La nota fittizia elenca copie, buste, ecc.",
+        "Un foglio manca."
+      ]
+    },
+    {
+      "text": "Un'altra copia è nel cassetto. Dov'è l'indice? È accanto al fascicolo.",
+      "sentences": [
+        "Un'altra copia è nel cassetto.",
+        "Dov'è l'indice?",
+        "È accanto al fascicolo."
+      ]
+    }
+  ],
+  "word_fixtures": [
+    {
+      "text": "L’avvocata legge un'altra copia del verbale.",
+      "tokens": [
+        "L’avvocata",
+        "legge",
+        "un'altra",
+        "copia",
+        "del",
+        "verbale"
+      ]
+    },
+    {
+      "text": "Il foglio costa 2,50 € e riporta c.p.c.",
+      "tokens": [
+        "Il",
+        "foglio",
+        "costa",
+        "2,50",
+        "e",
+        "riporta",
+        "c",
+        "p",
+        "c"
+      ]
+    },
+    {
+      "text": "C'è un po’ di spazio nel porta-documenti.",
+      "tokens": [
+        "C'è",
+        "un",
+        "po",
+        "di",
+        "spazio",
+        "nel",
+        "porta",
+        "documenti"
+      ]
+    },
+    {
+      "text": "È tutto nell’archivio.",
+      "tokens": [
+        "È",
+        "tutto",
+        "nell’archivio"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "review_status": "AI neutral contract; coordinating review and installation pending",
+  "join_hyphens": false,
+  "canonical_abbreviations": true,
+  "question_pattern": "[?؟]\\s*[\"”’»›“״)]*$",
+  "length_unit": "orthographic_words",
+  "short_threshold": 8,
+  "long_threshold": 32,
+  "provenance": "METHOD-BATCH04.md; frozen tests/fixtures-batch04.json and separate MY neutral fixtures",
+  "abbreviations": [
+    "Dr",
+    "Prof",
+    "Mr",
+    "Ms",
+    "Art",
+    "No",
+    "p",
+    "pp",
+    "e.g",
+    "i.e",
+    "etc"
+  ],
+  "terminal_abbreviations": [
+    "etc"
+  ],
+  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:[0-9]+[.)][^\\S\\r\\n]+)?(?:מקורות(?:\\s+(?:רשמיים|משפטיים))?|אסמכתאות)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
+  "citation_pattern": "(?<!\\w)(?:סעיף|סעיפים|ס[׳\\x27])\\s*\\d+",
+  "quote_attribution_pattern": "^(?:אמר|אמרה|שאל|שאלה|השיב|השיבה)\\s",
+  "contrast_patterns": [
+    "(?<!\\w)(?:לא|אינו|אינה|אינם|אינן)(?!\\s+רק\\b)[^.!?\\n]{0,160}\\sאלא\\b",
+    "(?<!\\w)במקום\\b",
+    "(?<!\\w)שונה\\s+מ"
+  ],
+  "caveat_pattern": "^[\\s“\"״(\\[]*(?:אולם|ואולם|עם\\s+זאת|למרות\\s+זאת)(?!\\w)",
+  "hypo_pattern": "^[\\s“\"״(\\[]*(?:נניח|למשל|לדוגמה|דוגמה\\s+היפותטית)(?!\\w)",
+  "formula_close_pattern": "(?:מידע\\s+כללי|כל\\s+מקרה\\s+שונה|משרדנו\\s+יכול\\s+לעזור|דוא[״\"]ל)",
+  "register": "Modern Hebrew, Unicode orthographic units",
+  "additional_closing_quotes": "״",
+  "hebrew_internal_quotes": true,
+  "locale": "he",
+  "directory": "columns-he"
+}

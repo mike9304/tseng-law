@@ -1,0 +1,18 @@
+{
+  "locale": "cs",
+  "directory": "columns-cs",
+  "review_status": "AI-authored neutral contract; coordinating review pending",
+  "register": "Standard Czech",
+  "join_hyphens": true,
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:oficiální\\s+)?zdroje(?:\\s+a\\s+datum\\s+ověření)?\\s*:?\\s*$)",
+  "abbreviations": ["Ing", "Mgr", "Dr", "prof", "doc", "JUDr", "Ph.D", "např", "mj", "atd", "apod", "tj", "tzv", "č", "čl", "odst", "písm", "str", "s", "r", "Sb"],
+  "terminal_abbreviations": ["atd", "apod", "Sb"],
+  "context_terminal_abbreviations": {"r": "\\d{4}\\s*$"},
+  "ordinal_followers": "ledna|února|března|dubna|května|června|července|srpna|září|října|listopadu|prosince|odstavec|odstavce|kapitola|kapitoly|bod|patro|patře|třída|třídě|ročník|svazku|hodině",
+  "additional_closing_quotes": "“",
+  "contrast_patterns": ["(?i:\\b(?:nikoli|ne|není|nejsou|nejde)\\b[^.!?\\n]{0,180}\\b(?:ale|nýbrž)\\b)", "(?i:\\bna\\s+rozdíl\\s+od\\b)", "(?i:\\bmísto\\s+toho\\b)"],
+  "caveat_pattern": "(?i:^\\s*[”\"(«»„“]*(?:nicméně|avšak|přesto)\\b)",
+  "hypo_pattern": "(?i:^\\s*[”\"(«»„“]*(?:představme\\s+si|předpokládejme)\\s*,?\\s+že\\b)",
+  "formula_close_pattern": "(?i:tento\\s+článek\\s+(?:poskytuje|obsahuje)\\s+obecné\\s+informace|naše\\s+kancelář\\s+vám\\s+může\\s+pomoci)",
+  "citation_pattern": "(?i:(?:\\b(?:článek|články|čl\\.)\\s*|§\\s*)\\d+)"
+}

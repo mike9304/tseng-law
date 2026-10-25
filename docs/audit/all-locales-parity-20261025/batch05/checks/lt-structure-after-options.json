@@ -1,0 +1,83 @@
+{
+  "at": "2026-10-25T15:56:07.237Z",
+  "node": "v24.14.1",
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/704-taiwan-arc-first-application.md",
+      "sha256": "f46f3545e94950ba11cb30f118689721608e6f9593a088a40b10f3b8618a35a9",
+      "bytes": 14236,
+      "proseWords": 1022,
+      "officialURLs": 15,
+      "baselineEnURLs": 9,
+      "missingEn": [],
+      "missingFooter": [],
+      "internalChecks": [
+        {
+          "url": "/lt/columns/taiwan-visa-residence-work-study-family",
+          "exists": true
+        },
+        {
+          "url": "/lt/columns/taiwan-arc-renewal-changes-reentry",
+          "exists": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "33b0cc65e3720963cac03710365c44c3c8a88a953309b38314680bca963c14c5",
+      "bytes": 14443,
+      "proseWords": 1065,
+      "officialURLs": 15,
+      "baselineEnURLs": 15,
+      "missingEn": [],
+      "missingFooter": [],
+      "internalChecks": [
+        {
+          "url": "/en/columns/taiwan-foreign-spouse-residence",
+          "exists": true
+        },
+        {
+          "url": "/en/columns/taiwan-employment-gold-card",
+          "exists": true
+        },
+        {
+          "url": "/lt/columns/taiwan-arc-first-application",
+          "exists": true
+        },
+        {
+          "url": "/lt/columns/taiwan-arc-renewal-changes-reentry",
+          "exists": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4b2d935fa2496bf95b6e304f976e937221a6ab696ab9aa7cf526e2811c7cf1c6",
+      "bytes": 17555,
+      "proseWords": 1338,
+      "officialURLs": 16,
+      "baselineEnURLs": 13,
+      "missingEn": [],
+      "missingFooter": [],
+      "internalChecks": [
+        {
+          "url": "/lt/columns/taiwan-arc-first-application",
+          "exists": true
+        },
+        {
+          "url": "/lt/columns/taiwan-visa-residence-work-study-family",
+          "exists": true
+        },
+        {
+          "url": "/en/columns/taiwan-permanent-residence-aprc",
+          "exists": true
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "changedInputs": [],
+  "errors": 0
+}

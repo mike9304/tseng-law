@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-26T01:26:28.468046+09:00",
+  "manifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-readiness-manifest.json",
+    "sha256": "caa29ded15c04974ea76b0855aa10f8defbbac98bc6c8f50d9bfea84b49448d8"
+  },
+  "summary": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/integration-readiness.md",
+    "sha256": "c4c0ecff468a59353306b6ab6a87321f1f8e48c2625fd61d0f1893d111fe5fd2"
+  },
+  "articleHashDrift": [],
+  "readyEvidenceHashDrift": [],
+  "pendingEvidenceHashDrift": [],
+  "captionAndAudienceAndAuthorExact": true,
+  "ready": 18,
+  "pending": 3,
+  "scope": "No additional full test rerun. Pending author/review updates do not close KM; use follow-up closure on current SHA."
+}

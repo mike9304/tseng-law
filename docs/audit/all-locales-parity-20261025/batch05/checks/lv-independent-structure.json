@@ -1,0 +1,96 @@
+{
+  "checkedAt": "2026-10-25T16:02:18.011Z",
+  "node": "v24.14.1",
+  "scope": "Independent structure and source retention; semantic review is separate.",
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/704-taiwan-arc-first-application.md",
+      "sha256": "f47d6be694c2e9601fa457d64598379b5065fa48a94937d5ff11a76d3637c810",
+      "expectedSHA256": "f47d6be694c2e9601fa457d64598379b5065fa48a94937d5ff11a76d3637c810",
+      "sourceFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+      "sourceSHA256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f",
+      "officialURLCount": 11,
+      "missingEN": [],
+      "missingFooter": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "lv"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "auditorErrors": [],
+      "additionalErrors": [],
+      "requiredReviewItems": [
+        "cross-language-link",
+        "public-output-and-native-prose",
+        "source-url-added",
+        "source-url-added",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "de24030f670164d376227740b49a16a3e1883fa29def34a483fda0672a529102",
+      "expectedSHA256": "de24030f670164d376227740b49a16a3e1883fa29def34a483fda0672a529102",
+      "sourceFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+      "sourceSHA256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304",
+      "officialURLCount": 15,
+      "missingEN": [],
+      "missingFooter": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "lv"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "auditorErrors": [],
+      "additionalErrors": [],
+      "requiredReviewItems": [
+        "cross-language-link",
+        "cross-language-link",
+        "public-output-and-native-prose",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "e5b600ba790cdbcd9f225c1703c81e28e7ab49974d504b4ba77b1070d48e700d",
+      "expectedSHA256": "e5b600ba790cdbcd9f225c1703c81e28e7ab49974d504b4ba77b1070d48e700d",
+      "sourceFile": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSHA256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71",
+      "officialURLCount": 14,
+      "missingEN": [],
+      "missingFooter": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "lv"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "auditorErrors": [],
+      "additionalErrors": [],
+      "requiredReviewItems": [
+        "cross-language-link",
+        "public-output-and-native-prose",
+        "source-url-added",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ]
+    }
+  ],
+  "errors": 0
+}

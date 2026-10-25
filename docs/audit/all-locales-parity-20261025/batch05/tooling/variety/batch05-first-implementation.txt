@@ -1,0 +1,68 @@
+.........FFFFFFF
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='km')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 100, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.assertEqual(value[key], wanted, (locale, fixture, value))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 != 1 : ('km', 'citation', {'lang': 'km', 'sentences': 5, 'paras': 5, 'heads': 0, 'list_items': 0, 'mean_len': 4, 'len_cv': 0.0, 'short_share': 1.0, 'long_share': 0.0, 'para_cv': 0.0, 'even_run3': 1.0, 'top_end': '7', 'top_end_share': 1.0, 'ja_desu': 0, 'ja_da': 0, 'top_opener': 'អត្ថបទ', 'top_opener_n': 5, 'opener_rep': 0.8, 'consec_same_start': 4, 'cite_para_share': 1.0, 'cite_end_share': 0.0, 'contrast': 0, 'caveat': 0, 'questions': 0, 'num_per100': 25.0, 'hypo_open': False, 'q_open': False, 'formula_close': False, 'first': 'អត្ថបទយោងមាត្រា 7។', 'last': 'អត្ថបទយោងមាត្រា 7។', 'length_unit': 'icu_dictionary_wordlike_units', 'short_threshold': 8, 'long_threshold': 32, 'sentence_boundary_method': 'unicode_punctuation_with_locale_abbreviations', 'word_segmenter': {'locale': 'km', 'node': '24.14.1', 'icu': '78.2', 'unicode': '17.0', 'whitespace': 'Unicode_White_Space_phrase_chunks'}})
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='mn')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 100, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.assertEqual(value[key], wanted, (locale, fixture, value))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 != 1 : ('mn', 'citation', {'lang': 'mn', 'sentences': 5, 'paras': 5, 'heads': 0, 'list_items': 0, 'mean_len': 5, 'len_cv': 0.0, 'short_share': 1.0, 'long_share': 0.0, 'para_cv': 0.0, 'even_run3': 1.0, 'top_end': 'байна', 'top_end_share': 1.0, 'ja_desu': 0, 'ja_da': 0, 'top_opener': 'тайлбар', 'top_opener_n': 5, 'opener_rep': 0.8, 'consec_same_start': 4, 'cite_para_share': 1.0, 'cite_end_share': 0.0, 'contrast': 0, 'caveat': 0, 'questions': 0, 'num_per100': 20.0, 'hypo_open': False, 'q_open': False, 'formula_close': False, 'first': 'Тайлбар 7 дугаар зүйлд байна.', 'last': 'Тайлбар 7 дугаар зүйлд байна.', 'length_unit': 'orthographic_words', 'short_threshold': 8, 'long_threshold': 32, 'sentence_boundary_method': 'unicode_punctuation_with_locale_abbreviations'})
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='sr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 100, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.assertEqual(value[key], wanted, (locale, fixture, value))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 != 1 : ('sr', 'citation', {'lang': 'sr', 'sentences': 5, 'paras': 5, 'heads': 0, 'list_items': 0, 'mean_len': 5, 'len_cv': 0.0, 'short_share': 1.0, 'long_share': 0.0, 'para_cv': 0.0, 'even_run3': 1.0, 'top_end': '7', 'top_end_share': 1.0, 'ja_desu': 0, 'ja_da': 0, 'top_opener': 'pravilo', 'top_opener_n': 5, 'opener_rep': 0.8, 'consec_same_start': 4, 'cite_para_share': 1.0, 'cite_end_share': 0.0, 'contrast': 0, 'caveat': 0, 'questions': 0, 'num_per100': 20.0, 'hypo_open': False, 'q_open': False, 'formula_close': False, 'first': 'Pravilo je u članu 7.', 'last': 'Pravilo je u članu 7.', 'length_unit': 'orthographic_words', 'short_threshold': 8, 'long_threshold': 32, 'sentence_boundary_method': 'unicode_punctuation_with_locale_abbreviations'})
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='sl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 100, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.assertEqual(value[key], wanted, (locale, fixture, value))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 != 1 : ('sl', 'citation', {'lang': 'sl', 'sentences': 5, 'paras': 5, 'heads': 0, 'list_items': 0, 'mean_len': 5, 'len_cv': 0.0, 'short_share': 1.0, 'long_share': 0.0, 'para_cv': 0.0, 'even_run3': 1.0, 'top_end': 'členu', 'top_end_share': 1.0, 'ja_desu': 0, 'ja_da': 0, 'top_opener': 'pravilo', 'top_opener_n': 5, 'opener_rep': 0.8, 'consec_same_start': 4, 'cite_para_share': 1.0, 'cite_end_share': 0.0, 'contrast': 0, 'caveat': 0, 'questions': 0, 'num_per100': 20.0, 'hypo_open': False, 'q_open': False, 'formula_close': False, 'first': 'Pravilo je v 7. členu.', 'last': 'Pravilo je v 7. členu.', 'length_unit': 'orthographic_words', 'short_threshold': 8, 'long_threshold': 32, 'sentence_boundary_method': 'unicode_punctuation_with_locale_abbreviations'})
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 100, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.assertEqual(value[key], wanted, (locale, fixture, value))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 != 1 : ('lt', 'citation', {'lang': 'lt', 'sentences': 5, 'paras': 5, 'heads': 0, 'list_items': 0, 'mean_len': 4, 'len_cv': 0.0, 'short_share': 1.0, 'long_share': 0.0, 'para_cv': 0.0, 'even_run3': 1.0, 'top_end': 'straipsnyje', 'top_end_share': 1.0, 'ja_desu': 0, 'ja_da': 0, 'top_opener': 'taisyklė', 'top_opener_n': 5, 'opener_rep': 0.8, 'consec_same_start': 4, 'cite_para_share': 1.0, 'cite_end_share': 0.0, 'contrast': 0, 'caveat': 0, 'questions': 0, 'num_per100': 25.0, 'hypo_open': False, 'q_open': False, 'formula_close': False, 'first': 'Taisyklė nurodyta 7 straipsnyje.', 'last': 'Taisyklė nurodyta 7 straipsnyje.', 'length_unit': 'orthographic_words', 'short_threshold': 8, 'long_threshold': 32, 'sentence_boundary_method': 'unicode_punctuation_with_locale_abbreviations'})
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='lv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 100, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.assertEqual(value[key], wanted, (locale, fixture, value))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 != 1 : ('lv', 'citation', {'lang': 'lv', 'sentences': 5, 'paras': 5, 'heads': 0, 'list_items': 0, 'mean_len': 4, 'len_cv': 0.0, 'short_share': 1.0, 'long_share': 0.0, 'para_cv': 0.0, 'even_run3': 1.0, 'top_end': 'pantā', 'top_end_share': 1.0, 'ja_desu': 0, 'ja_da': 0, 'top_opener': 'noteikums', 'top_opener_n': 5, 'opener_rep': 0.8, 'consec_same_start': 4, 'cite_para_share': 1.0, 'cite_end_share': 0.0, 'contrast': 0, 'caveat': 0, 'questions': 0, 'num_per100': 25.0, 'hypo_open': False, 'q_open': False, 'formula_close': False, 'first': 'Noteikums ir 7. pantā.', 'last': 'Noteikums ir 7. pantā.', 'length_unit': 'orthographic_words', 'short_threshold': 8, 'long_threshold': 32, 'sentence_boundary_method': 'unicode_punctuation_with_locale_abbreviations'})
+
+======================================================================
+FAIL: test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence (test_batch05.BatchFiveTests.test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence) (locale='et')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/son7/tseng-all-language-columns-20261025/batch05/tooling/variety/tests/test_batch05.py", line 100, in test_rhetoric_distinguishes_negation_and_additive_or_cross_sentence
+    self.assertEqual(value[key], wanted, (locale, fixture, value))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 != 1 : ('et', 'citation', {'lang': 'et', 'sentences': 5, 'paras': 5, 'heads': 0, 'list_items': 0, 'mean_len': 4, 'len_cv': 0.0, 'short_share': 1.0, 'long_share': 0.0, 'para_cv': 0.0, 'even_run3': 1.0, 'top_end': '7', 'top_end_share': 1.0, 'ja_desu': 0, 'ja_da': 0, 'top_opener': 'reegel', 'top_opener_n': 5, 'opener_rep': 0.8, 'consec_same_start': 4, 'cite_para_share': 1.0, 'cite_end_share': 0.0, 'contrast': 0, 'caveat': 0, 'questions': 0, 'num_per100': 25.0, 'hypo_open': False, 'q_open': False, 'formula_close': False, 'first': 'Reegel on artiklis 7.', 'last': 'Reegel on artiklis 7.', 'length_unit': 'orthographic_words', 'short_threshold': 8, 'long_threshold': 32, 'sentence_boundary_method': 'unicode_punctuation_with_locale_abbreviations'})
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.197s
+
+FAILED (failures=7)

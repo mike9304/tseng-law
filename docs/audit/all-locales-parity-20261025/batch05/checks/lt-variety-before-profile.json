@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-25T15:19:56.242305+00:00",
+  "toolSHA256": "98056d054aadf197d953bbde78cfb4498dded0e11ca5bc724c61286184feb3ad",
+  "profileExists": false,
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/704-taiwan-arc-first-application.md",
+      "startSHA256": "b81db60c91c2451b2446d7eed8f92021820672988d1c24a704f429ee1b968d05",
+      "endSHA256": "b81db60c91c2451b2446d7eed8f92021820672988d1c24a704f429ee1b968d05",
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi,ru,ms,fil,tr,nl,zh-hans,sv,da,nb,fi,pl,cs,ro,uk,bg,ca,el,hr,hu,is,sk,he,bn,ur,fa,my,ta,ne}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'lt' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne')\n"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "startSHA256": "ca974db0271c49c33ac808f095e8c7708ad89e205828e7ce8b2dedef14048bc9",
+      "endSHA256": "ca974db0271c49c33ac808f095e8c7708ad89e205828e7ce8b2dedef14048bc9",
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi,ru,ms,fil,tr,nl,zh-hans,sv,da,nb,fi,pl,cs,ro,uk,bg,ca,el,hr,hu,is,sk,he,bn,ur,fa,my,ta,ne}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'lt' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne')\n"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "startSHA256": "59a4262192dcfb422f21fcdbf2232ee70d0dd7268ac46e1ea5f46000ba4d0291",
+      "endSHA256": "59a4262192dcfb422f21fcdbf2232ee70d0dd7268ac46e1ea5f46000ba4d0291",
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi,ru,ms,fil,tr,nl,zh-hans,sv,da,nb,fi,pl,cs,ro,uk,bg,ca,el,hr,hu,is,sk,he,bn,ur,fa,my,ta,ne}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'lt' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne')\n"
+    }
+  ]
+}

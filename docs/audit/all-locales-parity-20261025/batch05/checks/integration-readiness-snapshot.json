@@ -1,0 +1,2435 @@
+{
+  "startedAt": "2026-10-25T16:20:50.204Z",
+  "finishedAt": "2026-10-25T16:20:50.549Z",
+  "overlay": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content",
+  "rows": [
+    {
+      "locale": "lt",
+      "number": "704",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/704-taiwan-arc-first-application.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lt/704-taiwan-arc-first-application.md",
+      "sha256": "f46f3545e94950ba11cb30f118689721608e6f9593a088a40b10f3b8618a35a9",
+      "bytes": 14236,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026 m. spalio 26 d.",
+        "audience": [
+          "lt"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Išgalvota scena",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Oficialūs šaltiniai",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+        "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f"
+      },
+      "urls": {
+        "uniqueExternal": 15,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+          "https://www.boca.gov.tw/fp-398-723-7b71f-1.html",
+          "https://www.boca.gov.tw/cp-166-276-48430-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+          "https://www.boca.gov.tw/fp-398-723-7b71f-1.html",
+          "https://www.boca.gov.tw/cp-166-276-48430-2.html",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001"
+        ]
+      },
+      "internalLinks": [
+        "/lt/columns/taiwan-visa-residence-work-study-family",
+        "/lt/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "lt"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.boca.gov.tw/fp-398-723-7b71f-1.html"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.boca.gov.tw/cp-166-283-c4da3-2.html"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "lt",
+      "number": "705",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "33b0cc65e3720963cac03710365c44c3c8a88a953309b38314680bca963c14c5",
+      "bytes": 14443,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026 m. spalio 26 d.",
+        "audience": [
+          "lt"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Išgalvota scena",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Oficialūs šaltiniai",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+        "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304"
+      },
+      "urls": {
+        "uniqueExternal": 15,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+          "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+          "https://goldcard.nat.gov.tw/en/",
+          "https://www.boca.gov.tw/lp-154-2.html",
+          "https://www.boca.gov.tw/lp-153-2.html",
+          "https://www.boca.gov.tw/cp-158-7718-c0382-2.html"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+          "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+          "https://goldcard.nat.gov.tw/en/",
+          "https://www.boca.gov.tw/lp-154-2.html",
+          "https://www.boca.gov.tw/lp-153-2.html",
+          "https://www.boca.gov.tw/cp-158-7718-c0382-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html"
+        ]
+      },
+      "internalLinks": [
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/en/columns/taiwan-employment-gold-card",
+        "/lt/columns/taiwan-arc-first-application",
+        "/lt/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "lt"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-foreign-spouse-residence",
+          "text": "straipsnyje apie gyvenimą su Taivano piliečiu sutuoktiniu (anglų kalba)"
+        },
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-employment-gold-card",
+          "text": "atskirame straipsnyje anglų kalba"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "lt",
+      "number": "706",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4b2d935fa2496bf95b6e304f976e937221a6ab696ab9aa7cf526e2811c7cf1c6",
+      "bytes": 17555,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026 m. spalio 26 d.",
+        "audience": [
+          "lt"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Išgalvota scena",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Oficialūs šaltiniai",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+        "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71"
+      },
+      "urls": {
+        "uniqueExternal": 16,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+          "https://www.immigration.gov.tw/5385/7229/7232/368785/",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+          "https://www.immigration.gov.tw/5382/5385/12162/12197/414977/",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+          "https://www.immigration.gov.tw/5385/7229/7232/368785/",
+          "https://www.immigration.gov.tw/5382/5385/12162/12197/414977/",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html"
+        ]
+      },
+      "internalLinks": [
+        "/lt/columns/taiwan-arc-first-application",
+        "/lt/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-permanent-residence-aprc"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "lt"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-permanent-residence-aprc",
+          "text": "APRC straipsnyje anglų kalba"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5385/7229/7232/368785/"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5382/5385/12162/12197/414977/"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "mn",
+      "number": "704",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/704-taiwan-arc-first-application.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-mn/704-taiwan-arc-first-application.md",
+      "sha256": "c33ec471bf92fd0d55977d3e5e40dde1fed5130d73645c3836c43895b1f918de",
+      "bytes": 19583,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026.10.26",
+        "audience": [
+          "mn"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Зохиомол дүр зураг",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Албан ёсны эх сурвалж",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+        "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f"
+      },
+      "urls": {
+        "uniqueExternal": 11,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+          "https://www.boca.gov.tw/cp-166-276-48430-2.html",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+          "https://www.boca.gov.tw/cp-166-276-48430-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001"
+        ]
+      },
+      "internalLinks": [
+        "/mn/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/mn/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "mn"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-foreign-spouse-residence",
+          "text": "Тайванийн иргэний гадаад эхнэр, нөхрийн оршин суух тухай англи нийтлэлээс"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "mn",
+      "number": "705",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "d54e05e91c9d6e9da6ee536009c01b9d44d34b0a78e74dbe07b2e294dde261ac",
+      "bytes": 21424,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026.10.26",
+        "audience": [
+          "mn"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Зохиомол дүр зураг",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Албан ёсны эх сурвалж",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+        "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304"
+      },
+      "urls": {
+        "uniqueExternal": 15,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+          "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+          "https://goldcard.nat.gov.tw/en/",
+          "https://www.boca.gov.tw/lp-154-2.html",
+          "https://www.boca.gov.tw/lp-153-2.html",
+          "https://www.boca.gov.tw/cp-158-7718-c0382-2.html"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+          "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+          "https://goldcard.nat.gov.tw/en/",
+          "https://www.boca.gov.tw/lp-154-2.html",
+          "https://www.boca.gov.tw/lp-153-2.html",
+          "https://www.boca.gov.tw/cp-158-7718-c0382-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html"
+        ]
+      },
+      "internalLinks": [
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/en/columns/taiwan-employment-gold-card",
+        "/mn/columns/taiwan-arc-first-application",
+        "/mn/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "mn"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-foreign-spouse-residence",
+          "text": "Тайванийн иргэний гадаад эхнэр, нөхрийн тухай англи нийтлэлд"
+        },
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-employment-gold-card",
+          "text": "Gold Card-ийн тухай англи нийтлэлд"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "mn",
+      "number": "706",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "f3ced3a9c5be6948ce8ead66d0110be0a8e8309f39f414712f24bff50de965a4",
+      "bytes": 25173,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026.10.26",
+        "audience": [
+          "mn"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Зохиомол дүр зураг",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Албан ёсны эх сурвалж",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+        "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71"
+      },
+      "urls": {
+        "uniqueExternal": 14,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        ]
+      },
+      "internalLinks": [
+        "/mn/columns/taiwan-arc-first-application",
+        "/mn/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-permanent-residence-aprc"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "mn"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-permanent-residence-aprc",
+          "text": "APRC-ийн англи нийтлэлд"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "sr",
+      "number": "704",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/704-taiwan-arc-first-application.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sr/704-taiwan-arc-first-application.md",
+      "sha256": "15229f8e599464d507976f6d91818d441c6a1c8be1448af31f79fd79b8730dac",
+      "bytes": 11816,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "audience": [
+          "sr"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izmišljeni prizor",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Zvanični izvori",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+        "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f"
+      },
+      "urls": {
+        "uniqueExternal": 13,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://www.boca.gov.tw/fp-398-723-7b71f-1.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+          "https://www.boca.gov.tw/cp-166-276-48430-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+          "https://www.boca.gov.tw/fp-398-723-7b71f-1.html",
+          "https://www.boca.gov.tw/cp-166-276-48430-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001"
+        ]
+      },
+      "internalLinks": [
+        "/sr/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/sr/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "sr"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-foreign-spouse-residence",
+          "text": "tekst o boravku preko tajvanskog supružnika, na engleskom"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.boca.gov.tw/fp-398-723-7b71f-1.html"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.boca.gov.tw/cp-166-283-c4da3-2.html"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "sr",
+      "number": "705",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "9057c2a83ef6e71ab6f576702943fdf604ae345b627b94d98986baf4a6b7d6b2",
+      "bytes": 12246,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "audience": [
+          "sr"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izmišljeni prizor",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Zvanični izvori",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+        "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304"
+      },
+      "urls": {
+        "uniqueExternal": 15,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+          "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+          "https://goldcard.nat.gov.tw/en/",
+          "https://www.boca.gov.tw/lp-154-2.html",
+          "https://www.boca.gov.tw/lp-153-2.html",
+          "https://www.boca.gov.tw/cp-158-7718-c0382-2.html"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+          "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+          "https://goldcard.nat.gov.tw/en/",
+          "https://www.boca.gov.tw/lp-154-2.html",
+          "https://www.boca.gov.tw/lp-153-2.html",
+          "https://www.boca.gov.tw/cp-158-7718-c0382-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html"
+        ]
+      },
+      "internalLinks": [
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/en/columns/taiwan-employment-gold-card",
+        "/sr/columns/taiwan-arc-first-application",
+        "/sr/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "sr"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-foreign-spouse-residence",
+          "text": "tekstu o tajvanskom supružniku, na engleskom"
+        },
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-employment-gold-card",
+          "text": "vodiču za Gold Card na engleskom"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "sr",
+      "number": "706",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1e5a3547ce8437f9ddb4f3a3b61dd62261a4a1dccaa63683d43d9692b73331d9",
+      "bytes": 15018,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "audience": [
+          "sr"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izmišljeni prizor",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Zvanični izvori",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+        "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71"
+      },
+      "urls": {
+        "uniqueExternal": 15,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/",
+          "https://www.immigration.gov.tw/5385/12162/12197/414977/"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/",
+          "https://www.immigration.gov.tw/5385/12162/12197/414977/",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html"
+        ]
+      },
+      "internalLinks": [
+        "/sr/columns/taiwan-arc-first-application",
+        "/sr/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-permanent-residence-aprc"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "sr"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-permanent-residence-aprc",
+          "text": "Stalni boravak i APRC, na engleskom"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5385/12162/12197/414977/"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "et",
+      "number": "704",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/704-taiwan-arc-first-application.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-et/704-taiwan-arc-first-application.md",
+      "sha256": "f15069557979333b4febbff860e45755472675d20f056ac2d05664f788eaea96",
+      "bytes": 11716,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "audience": [
+          "et"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Väljamõeldud stseen",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Ametlikud allikad",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+        "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f"
+      },
+      "urls": {
+        "uniqueExternal": 12,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://www.boca.gov.tw/fp-398-723-7b71f-1.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.boca.gov.tw/cp-166-276-48430-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+          "https://www.boca.gov.tw/cp-166-276-48430-2.html",
+          "https://www.boca.gov.tw/fp-398-723-7b71f-1.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001"
+        ]
+      },
+      "internalLinks": [
+        "/et/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/et/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "et"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-foreign-spouse-residence",
+          "text": "ingliskeelne abikaasa kaudu elamise juhis"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.boca.gov.tw/fp-398-723-7b71f-1.html"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "et",
+      "number": "705",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "6bf9a4fca0d1b90d3bf0e4f46e4c87ba43cb5c4b32989ab3e98eaed52955acc8",
+      "bytes": 12484,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "audience": [
+          "et"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Väljamõeldud stseen",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Ametlikud allikad",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+        "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304"
+      },
+      "urls": {
+        "uniqueExternal": 15,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+          "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+          "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+          "https://goldcard.nat.gov.tw/en/",
+          "https://www.boca.gov.tw/lp-154-2.html",
+          "https://www.boca.gov.tw/lp-153-2.html",
+          "https://www.boca.gov.tw/cp-158-7718-c0382-2.html"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+          "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+          "https://goldcard.nat.gov.tw/en/",
+          "https://www.boca.gov.tw/lp-154-2.html",
+          "https://www.boca.gov.tw/lp-153-2.html",
+          "https://www.boca.gov.tw/cp-158-7718-c0382-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html"
+        ]
+      },
+      "internalLinks": [
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/en/columns/taiwan-employment-gold-card",
+        "/et/columns/taiwan-arc-first-application",
+        "/et/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "et"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-foreign-spouse-residence",
+          "text": "ingliskeelne Taiwani kodaniku abikaasa elamise juhis"
+        },
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-employment-gold-card",
+          "text": "ingliskeelne Gold Cardi juhis"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "et",
+      "number": "706",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "dce0dce717cd732bce40b187f43ef31cbcf0758d71256c129263c23fc7da856a",
+      "bytes": 14866,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "audience": [
+          "et"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Väljamõeldud stseen",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Ametlikud allikad",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+        "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71"
+      },
+      "urls": {
+        "uniqueExternal": 14,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html"
+        ]
+      },
+      "internalLinks": [
+        "/et/columns/taiwan-arc-first-application",
+        "/et/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-permanent-residence-aprc"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "et"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-permanent-residence-aprc",
+          "text": "ingliskeelses APRC käsitluses"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "lv",
+      "number": "704",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/704-taiwan-arc-first-application.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lv/704-taiwan-arc-first-application.md",
+      "sha256": "f47d6be694c2e9601fa457d64598379b5065fa48a94937d5ff11a76d3637c810",
+      "bytes": 12919,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026. gada 26. oktobris",
+        "audience": [
+          "lv"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izdomāta aina",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Oficiālie avoti",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+        "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f"
+      },
+      "urls": {
+        "uniqueExternal": 11,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://www.boca.gov.tw/cp-166-276-48430-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+          "https://www.boca.gov.tw/cp-166-276-48430-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001"
+        ]
+      },
+      "internalLinks": [
+        "/lv/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/lv/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "lv"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-foreign-spouse-residence",
+          "text": "rakstā angļu valodā par Taivānas pilsoņa laulāto"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "lv",
+      "number": "705",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "de24030f670164d376227740b49a16a3e1883fa29def34a483fda0672a529102",
+      "bytes": 13259,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026. gada 26. oktobris",
+        "audience": [
+          "lv"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izdomāta aina",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Oficiālie avoti",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+        "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304"
+      },
+      "urls": {
+        "uniqueExternal": 15,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+          "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+          "https://goldcard.nat.gov.tw/en/",
+          "https://www.boca.gov.tw/lp-154-2.html",
+          "https://www.boca.gov.tw/lp-153-2.html",
+          "https://www.boca.gov.tw/cp-158-7718-c0382-2.html"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+          "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+          "https://goldcard.nat.gov.tw/en/",
+          "https://www.boca.gov.tw/lp-154-2.html",
+          "https://www.boca.gov.tw/lp-153-2.html",
+          "https://www.boca.gov.tw/cp-158-7718-c0382-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html"
+        ]
+      },
+      "internalLinks": [
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/en/columns/taiwan-employment-gold-card",
+        "/lv/columns/taiwan-arc-first-application",
+        "/lv/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "lv"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-foreign-spouse-residence",
+          "text": "raksts angļu valodā par Taivānas pilsoņa laulātā uzturēšanos"
+        },
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-employment-gold-card",
+          "text": "Gold Card rakstā angļu valodā"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "lv",
+      "number": "706",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "e5b600ba790cdbcd9f225c1703c81e28e7ab49974d504b4ba77b1070d48e700d",
+      "bytes": 16268,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026. gada 26. oktobris",
+        "audience": [
+          "lv"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izdomāta aina",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Oficiālie avoti",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+        "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71"
+      },
+      "urls": {
+        "uniqueExternal": 14,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/",
+          "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html"
+        ]
+      },
+      "internalLinks": [
+        "/lv/columns/taiwan-arc-first-application",
+        "/lv/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-permanent-residence-aprc"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "lv"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-permanent-residence-aprc",
+          "text": "APRC raksts angļu valodā"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "sl",
+      "number": "704",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/704-taiwan-arc-first-application.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sl/704-taiwan-arc-first-application.md",
+      "sha256": "a87a3ac1137b0012120a56629dccc0e0d64dcbb55a2e2a6110e2be213cde6bd6",
+      "bytes": 11474,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "audience": [
+          "sl"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izmišljen prizor",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Uradni viri",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+        "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f"
+      },
+      "urls": {
+        "uniqueExternal": 10,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.boca.gov.tw/cp-166-276-48430-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+          "https://www.boca.gov.tw/cp-166-276-48430-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001"
+        ]
+      },
+      "internalLinks": [
+        "/sl/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/sl/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "sl"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-foreign-spouse-residence",
+          "text": "razlaga družinskih listin je v angleščini"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "sl",
+      "number": "705",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "90d5e07a124a7b1c6aeb46a5be8293a44007a58f6e2dad2593c96b1067834932",
+      "bytes": 12595,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "audience": [
+          "sl"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izmišljen prizor",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Uradni viri",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+        "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304"
+      },
+      "urls": {
+        "uniqueExternal": 15,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html",
+          "https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+          "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+          "https://goldcard.nat.gov.tw/en/",
+          "https://www.boca.gov.tw/lp-154-2.html",
+          "https://www.boca.gov.tw/lp-153-2.html",
+          "https://www.boca.gov.tw/cp-158-7718-c0382-2.html"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+          "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+          "https://goldcard.nat.gov.tw/en/",
+          "https://www.boca.gov.tw/lp-154-2.html",
+          "https://www.boca.gov.tw/lp-153-2.html",
+          "https://www.boca.gov.tw/cp-158-7718-c0382-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html"
+        ]
+      },
+      "internalLinks": [
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/en/columns/taiwan-employment-gold-card",
+        "/sl/columns/taiwan-arc-first-application",
+        "/sl/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "sl"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-foreign-spouse-residence",
+          "text": "Dokumentacija za zakonca tajvanskega državljana je podrobneje opisana v angleščini"
+        },
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-employment-gold-card",
+          "text": "razlaga prijave za Gold Card je v angleščini"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "sl",
+      "number": "706",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d5b7581f6dcff33cdcb5b65e1b46bd0654e050acb94434bbdaab68222c0aca5b",
+      "bytes": 15362,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "audience": [
+          "sl"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izmišljen prizor",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "Uradni viri",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+        "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71"
+      },
+      "urls": {
+        "uniqueExternal": 14,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        ]
+      },
+      "internalLinks": [
+        "/sl/columns/taiwan-arc-first-application",
+        "/sl/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-permanent-residence-aprc"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "sl"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-permanent-residence-aprc",
+          "text": "stalno prebivanje APRC, opisano v angleščini"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "km",
+      "number": "704",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/704-taiwan-arc-first-application.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-km/704-taiwan-arc-first-application.md",
+      "sha256": "8ae680254e50bf202d7a3ebe1f886de19264a22251bdda5effbdc9c74b649b53",
+      "bytes": 27901,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 តុលា 2026",
+        "audience": [
+          "km"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "ឈុតឆាកប្រឌិត",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "ប្រភពផ្លូវការ",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+        "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f"
+      },
+      "urls": {
+        "uniqueExternal": 13,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+          "https://www.boca.gov.tw/fp-398-723-7b71f-1.html",
+          "https://www.boca.gov.tw/cp-166-276-48430-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=22",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.boca.gov.tw/fp-398-723-7b71f-1.html",
+          "https://www.boca.gov.tw/cp-166-276-48430-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001"
+        ]
+      },
+      "internalLinks": [
+        "/km/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/km/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "km"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-foreign-spouse-residence",
+          "text": "ការស្នាក់នៅតាមស្វាមីឬភរិយាតៃវ៉ាន់"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.boca.gov.tw/fp-398-723-7b71f-1.html"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080129"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "km",
+      "number": "705",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba",
+      "bytes": 26623,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 តុលា 2026",
+        "audience": [
+          "km"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "ឈុតឆាកប្រឌិត",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "ប្រភពផ្លូវការ",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+        "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304"
+      },
+      "urls": {
+        "uniqueExternal": 15,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+          "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+          "https://goldcard.nat.gov.tw/en/",
+          "https://www.boca.gov.tw/lp-154-2.html",
+          "https://www.boca.gov.tw/lp-153-2.html",
+          "https://www.boca.gov.tw/cp-158-7718-c0382-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawHistory.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.boca.gov.tw/cp-165-1878-1ff5e-2.html",
+          "https://www.boca.gov.tw/cp-166-283-c4da3-2.html",
+          "https://www.boca.gov.tw/fp-158-260-9690c-2.html",
+          "https://www.boca.gov.tw/fp-166-285-041cb-2.html",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141824/cp_news",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/181964/",
+          "https://goldcard.nat.gov.tw/en/",
+          "https://www.boca.gov.tw/lp-154-2.html",
+          "https://www.boca.gov.tw/lp-153-2.html",
+          "https://www.boca.gov.tw/cp-158-7718-c0382-2.html",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html"
+        ]
+      },
+      "internalLinks": [
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/en/columns/taiwan-employment-gold-card",
+        "/km/columns/taiwan-arc-first-application",
+        "/km/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "km"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-foreign-spouse-residence",
+          "text": "អត្ថបទអំពីការស្នាក់នៅតាមស្វាមីឬភរិយាតៃវ៉ាន់"
+        },
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-employment-gold-card",
+          "text": "អត្ថបទ Gold Card ជាភាសាអង់គ្លេស"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    },
+    {
+      "locale": "km",
+      "number": "706",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d1a5eff1eb9fed410075031876b059d635ac4c9de9cd75a61c5a2ac540371286",
+      "bytes": 30097,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 តុលា 2026",
+        "audience": [
+          "km"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "ឈុតឆាកប្រឌិត",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "lastSectionHeading": "ប្រភពផ្លូវការ",
+      "source": {
+        "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+        "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71"
+      },
+      "urls": {
+        "uniqueExternal": 14,
+        "missingEN": [],
+        "bodyMissingTail": [],
+        "body": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        ],
+        "tail": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=23-1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=31",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0080132&flno=34",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0080129",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030295",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/141970",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/348924/",
+          "https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/406403/",
+          "https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news",
+          "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/",
+          "https://news.immigration.gov.tw/EasyPack/Detail/DDA469F4-E2D0-4A98-847C-21432DCC040E?lang=EN",
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080135",
+          "https://www.boca.gov.tw/sp-foof-countrylp-01-2.html"
+        ]
+      },
+      "internalLinks": [
+        "/km/columns/taiwan-arc-first-application",
+        "/km/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-permanent-residence-aprc"
+      ],
+      "automatedErrors": [],
+      "board": {
+        "visible": true,
+        "audience": [
+          "km"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "reviewItems": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED",
+          "href": "/en/columns/taiwan-permanent-residence-aprc",
+          "text": "ការសុំ APRC"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "source-url-added",
+          "status": "REQUIRED",
+          "url": "https://www.immigration.gov.tw/5382/5385/7244/7250/7317/%E5%B1%85%E7%95%99/httpscoaimmigrationgovtwcoa-frontendforeign-white-collar/"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ],
+      "currentUnchangedAtEnd": true
+    }
+  ],
+  "audit": {
+    "errors": 0,
+    "automatedStatus": "PASS",
+    "semanticStatus": "REVIEW_REQUIRED",
+    "publicationReady": false
+  },
+  "method": "B5 bytes copied once to a private temporary overlay; unselected R corpus is read-only symlinks. Existing content-audit.mjs and current runtime policy run unchanged. No semantic review or public deployment is inferred from automated checks."
+}

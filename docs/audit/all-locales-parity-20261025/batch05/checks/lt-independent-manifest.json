@@ -1,0 +1,289 @@
+{
+  "finalized_at": "2026-10-25T15:53:36.236977+00:00",
+  "reviewer": "/root/column_voice_rules",
+  "author": "/root/column_deploy",
+  "scope": "Independent manuscript meaning/style review only; checker profile not independently re-certified; read-only manuscripts/R/shared/author report",
+  "mandatory_findings": 0,
+  "optional_findings": [
+    "O1",
+    "O2"
+  ],
+  "manuscripts_modified": false,
+  "tool_modified": false,
+  "native_human_review": false,
+  "lawyer_approval": false,
+  "deployed": false,
+  "repo_head_initial": "3b5ea95061d61a6b9a0e94eb61438be843fdd63c",
+  "repo_head_final": "3b5ea95061d61a6b9a0e94eb61438be843fdd63c",
+  "input_rechecks": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/704-taiwan-arc-first-application.md",
+      "initial_sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f",
+      "final_sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+      "initial_sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304",
+      "final_sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+      "initial_sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71",
+      "final_sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/704-taiwan-arc-first-application.md",
+      "initial_sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1",
+      "final_sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "initial_sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a",
+      "final_sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "initial_sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc",
+      "final_sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/704-taiwan-arc-first-application.md",
+      "initial_sha256": "0c00bc06bf3c3c1860a95af4dbcea9eaab981300860916856295e8b947244468",
+      "final_sha256": "0c00bc06bf3c3c1860a95af4dbcea9eaab981300860916856295e8b947244468",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md",
+      "initial_sha256": "290a50047632ad830ea98c524ffef6ed91c2b4c8d555a1844689824c3ffea7a3",
+      "final_sha256": "290a50047632ad830ea98c524ffef6ed91c2b4c8d555a1844689824c3ffea7a3",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md",
+      "initial_sha256": "4d70e78b9a197f4a2b81d25d61b6fa862ee849a6392d5fd905e90bcf781e721c",
+      "final_sha256": "4d70e78b9a197f4a2b81d25d61b6fa862ee849a6392d5fd905e90bcf781e721c",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lt/945-lithuanian-company-taiwan-firmware-copyright-source-code.md",
+      "initial_sha256": "2f3372bd6e3bc1422b2a6d377707338ede47d4049c388340e137989828a5b111",
+      "final_sha256": "2f3372bd6e3bc1422b2a6d377707338ede47d4049c388340e137989828a5b111",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lt/944-lithuanian-laser-taiwan-evaluation-samples-test-data.md",
+      "initial_sha256": "52da5f555b98a01f66dc2140cbdfba2514eff3285b6898472d740b903e75a1ee",
+      "final_sha256": "52da5f555b98a01f66dc2140cbdfba2514eff3285b6898472d740b903e75a1ee",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lt/899-lithuanian-brand-taiwan-distributor-trademark-registration.md",
+      "initial_sha256": "862a47b39060c3a0daac591d828191622d3c6a3d88023fd845b6ba00389468d0",
+      "final_sha256": "862a47b39060c3a0daac591d828191622d3c6a3d88023fd845b6ba00389468d0",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/research/arc-source-facts.md",
+      "initial_sha256": "4776f60010172120e0812d8d552123aeb5c7cc0b467cb5306ca031a1e17c2145",
+      "final_sha256": "4776f60010172120e0812d8d552123aeb5c7cc0b467cb5306ca031a1e17c2145",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/codex-column-recheck-20261024/research/source-refresh.md",
+      "initial_sha256": "a33d5bd1439879bc7461755c3b6793f4942ec161454032dcb8cde1c4d52a6983",
+      "final_sha256": "a33d5bd1439879bc7461755c3b6793f4942ec161454032dcb8cde1c4d52a6983",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "initial_sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "final_sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/FRONTMATTER.md",
+      "initial_sha256": "7a2590f33ba49c55f539f1fade51fed1290808352b16247445a714333593a364",
+      "final_sha256": "7a2590f33ba49c55f539f1fade51fed1290808352b16247445a714333593a364",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "initial_sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "final_sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "initial_sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "final_sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "initial_sha256": "92c572987cbc3c03eeb934fbfd2de6cf42d7e4b2e441cc39fb009c0e11f0e71a",
+      "final_sha256": "92c572987cbc3c03eeb934fbfd2de6cf42d7e4b2e441cc39fb009c0e11f0e71a",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/BRIEF.md",
+      "initial_sha256": "3ec4273b3e346bb20e1b6513c6a146682da2e39fa5c48c17d5496bd8195a4863",
+      "final_sha256": "3ec4273b3e346bb20e1b6513c6a146682da2e39fa5c48c17d5496bd8195a4863",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/704-taiwan-arc-first-application.md",
+      "initial_sha256": "51188308b2cc93faedf23524d48597d0da663229893ed7f1c0b447babc2e444e",
+      "final_sha256": "51188308b2cc93faedf23524d48597d0da663229893ed7f1c0b447babc2e444e",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "initial_sha256": "ca974db0271c49c33ac808f095e8c7708ad89e205828e7ce8b2dedef14048bc9",
+      "final_sha256": "ca974db0271c49c33ac808f095e8c7708ad89e205828e7ce8b2dedef14048bc9",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "initial_sha256": "4b2d935fa2496bf95b6e304f976e937221a6ab696ab9aa7cf526e2811c7cf1c6",
+      "final_sha256": "4b2d935fa2496bf95b6e304f976e937221a6ab696ab9aa7cf526e2811c7cf1c6",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/lt-author.md",
+      "initial_sha256": "ff31f23245966285099cc6a34afd0a55fe3d9e949e746489fe9754def2ae81aa",
+      "final_sha256": "ff31f23245966285099cc6a34afd0a55fe3d9e949e746489fe9754def2ae81aa",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "initial_sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+      "final_sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "initial_sha256": "128fe9c0a911f0f85b5423453ec681866b452185628a0fe6e311c829e05c4106",
+      "final_sha256": "128fe9c0a911f0f85b5423453ec681866b452185628a0fe6e311c829e05c4106",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "initial_sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc",
+      "final_sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/lt.json",
+      "initial_sha256": "a91bc6f0a6d80aada83de9c463836b6c4c4d724eddc32ff18905b573642d3694",
+      "final_sha256": "a91bc6f0a6d80aada83de9c463836b6c4c4d724eddc32ff18905b573642d3694",
+      "unchanged": true
+    }
+  ],
+  "input_drift_count": 0,
+  "additional_read_contracts": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/AGENTS.md",
+      "sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19",
+      "read_scope": "full contract read; captured at finalization"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/BRIEF.md",
+      "sha256": "a8546e8a19f911b16c07f29ff874fb4ad70bb04d087a16354ad2adc8a57246f7",
+      "read_scope": "full contract read; captured at finalization"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch02/BRIEF.md",
+      "sha256": "104c4c4df457e5627b6970599661be78182d7101cbb9090df549670501846105",
+      "read_scope": "full contract read; captured at finalization"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch03/BRIEF.md",
+      "sha256": "076a5bd7220bead942bf9dcf4c649180c8036b85d5c019775f1aad1a42eb3c7e",
+      "read_scope": "full contract read; captured at finalization"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch04/BRIEF.md",
+      "sha256": "67af9e0e6ebdcf818bfe41d84dac0000f8a1252bc6bf55c02ce6eeaaa7445ef9",
+      "read_scope": "full contract read; captured at finalization"
+    }
+  ],
+  "absent_home_voice_path": "/Users/son7/agent-library/knowledge/editorial-voice.md",
+  "home_voice_path_exists": false,
+  "observed_variety": {
+    "704": {
+      "exit": 0,
+      "fail": 0,
+      "sentences": 74,
+      "cv": 0.478
+    },
+    "705": {
+      "exit": 0,
+      "fail": 0,
+      "sentences": 77,
+      "cv": 0.451
+    },
+    "706": {
+      "exit": 0,
+      "fail": 0,
+      "sentences": 92,
+      "cv": 0.482
+    }
+  },
+  "manual_boundary_review": {
+    "704": {
+      "reviewed_inclusive": [
+        1,
+        74
+      ],
+      "defects_observed": 0
+    },
+    "705": {
+      "reviewed_inclusive": [
+        1,
+        77
+      ],
+      "defects_observed": 0
+    },
+    "706": {
+      "reviewed_inclusive": [
+        1,
+        92
+      ],
+      "defects_observed": 0
+    },
+    "scope": "Actual extracted prose sentences checked against fixed source; tables, frontmatter and source tail excluded by checker and reviewed separately"
+  },
+  "outputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/lt-independent.md",
+      "bytes": 21219,
+      "sha256": "54845d89260dfbd1cba45e0fa8c78e495929d993c5ce36a6e6d5855e819817a2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lt-independent-inputs.json",
+      "bytes": 6824,
+      "sha256": "f07b085de9bf6a8d09102cd329d7894f3e7246fa5241a44744d3a37f49c99d69"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lt-independent-variety.json",
+      "bytes": 138640,
+      "sha256": "44f6ece70885c01a8f6c3eb2103b14fcde66aedde531448d520cb04aeaccc6e6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lt-independent-structure.json",
+      "bytes": 14669,
+      "sha256": "8e43ea8f383ce59988febd6cb784631be9b9549bd61a56fd4edeb79f734a2cef"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lt-independent-sources.json",
+      "bytes": 4401,
+      "sha256": "f2391e5ed691123f26c4b517c9ff731a84f46cbfc3d15bffe91f779265733d7b"
+    }
+  ]
+}

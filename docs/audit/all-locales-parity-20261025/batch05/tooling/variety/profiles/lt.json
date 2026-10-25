@@ -1,0 +1,62 @@
+{
+  "review_status": "AI neutral contract; root independent review/install pending",
+  "provenance": "METHOD-BATCH05.md; tests/fixtures-batch05.json fixed before production edits",
+  "join_hyphens": false,
+  "canonical_abbreviations": true,
+  "flexible_abbreviation_spaces": true,
+  "length_unit": "orthographic_words",
+  "short_threshold": 8,
+  "long_threshold": 32,
+  "question_pattern": "[?？؟]\\s*[\"”’»›“)]*$",
+  "terminal_abbreviations": [
+    "t. t",
+    "t.t",
+    "kt",
+    "pan",
+    "m",
+    "d",
+    "val"
+  ],
+  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:[0-9]+[.)][^\\S\\r\\n]+)?(?:Šaltiniai|Oficialūs\\s+šaltiniai|Naudoti\\s+šaltiniai|Informacijos\\s+šaltiniai)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
+  "abbreviations": [
+    "str",
+    "d",
+    "p",
+    "Nr",
+    "pvz",
+    "t. y",
+    "t.y",
+    "t. t",
+    "t.t",
+    "ir kt",
+    "kt",
+    "pan",
+    "m",
+    "mėn",
+    "g",
+    "pr",
+    "žr",
+    "plg",
+    "dr",
+    "prof",
+    "doc",
+    "val",
+    "el"
+  ],
+  "contrast_patterns": [
+    "(?i:\\bne\\b(?!\\s+tik\\b)[^.!?\\n]{0,160}\\b(?:o|bet)\\b)",
+    "(?i:\\bvietoj\\b)",
+    "(?i:\\bskiriasi\\s+nuo\\b)"
+  ],
+  "caveat_pattern": "(?i:^[\\s„“\"‘\\x27(\\[]*(?:Tačiau|Vis\\s+dėlto|Visgi|Nepaisant\\s+to)\\b)",
+  "hypo_pattern": "(?i:^[\\s„“\"‘\\x27(\\[]*(?:Tarkime|Įsivaizduokime|Įsivaizduokite|Hipotetinis\\s+pavyzdys)\\b)",
+  "formula_close_pattern": "(?i:\\b(?:bendra\\s+informacija|bendro\\s+pobūdžio\\s+informacija|Kiekvienas\\s+atvejis\\s+yra\\s+skirtingas|Mūsų\\s+kontora\\s+gali\\s+jums\\s+padėti|el\\.\\s*paštu)\\b)",
+  "register": "Standard Lithuanian; independently researched neutral arrays reused",
+  "additional_closing_quotes": "“",
+  "context_terminal_abbreviations": {
+    "str": "\\d+\\s*$"
+  },
+  "citation_pattern": "(?i:\\b(?:(?:straipsn(?:is|io|į|iai|ius|yje)|str\\.?)\\s*\\d+|\\d+\\s*(?:straipsn(?:is|io|į|iai|ius|yje)|str\\.?)))",
+  "locale": "lt",
+  "directory": "columns-lt"
+}

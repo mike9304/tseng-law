@@ -1,0 +1,42 @@
+{
+  "review_status": "AI neutral contract; root independent review/install pending",
+  "provenance": "METHOD-BATCH05.md; tests/fixtures-batch05.json fixed before production edits",
+  "join_hyphens": false,
+  "canonical_abbreviations": true,
+  "flexible_abbreviation_spaces": true,
+  "length_unit": "icu_dictionary_wordlike_units",
+  "short_threshold": 8,
+  "long_threshold": 32,
+  "question_pattern": "[?？؟]\\s*[\"”’»›“)]*$",
+  "terminal_abbreviations": [],
+  "register": "Modern Khmer; ICU dictionary wordlike units",
+  "abbreviations": [
+    "Dr",
+    "Prof",
+    "Mr",
+    "Ms",
+    "Art",
+    "No",
+    "p",
+    "pp",
+    "e.g",
+    "i.e"
+  ],
+  "additional_sentence_terminators": "។៕",
+  "unspaced_sentence_terminators": "។៕",
+  "native_abbreviation_sequences": [
+    "។ល។",
+    "។បេ។"
+  ],
+  "quote_attribution_pattern": "^(?:គាត់បាននិយាយ|គាត់និយាយ|គ្រូបាននិយាយ|គ្រូនិយាយ)",
+  "source_heading_pattern": "(?i:^#{1,6}[^\\S\\r\\n]+(?:\\d+[.)][^\\S\\r\\n]+)?(?:ប្រភព|ប្រភពផ្លូវការ|ឯកសារយោង)[^\\S\\r\\n]*[:：]?(?:[^\\S\\r\\n]+#+)?[^\\S\\r\\n]*$)",
+  "citation_pattern": "មាត្រា\\s*\\d+",
+  "contrast_patterns": [
+    "(?i:(?:^|(?<=[.!?។៕\\n]))\\s*(?![^.!?។៕\\n;]{0,220}(?:មិនត្រឹមតែ))[^.!?។៕\\n;]{0,220}(?:មិនមែន)[^.!?។៕\\n;]{0,120}(?:ប៉ុន្តែ))"
+  ],
+  "caveat_pattern": "^[\\s“”„\"\\x27«»(\\[]*(?:ទោះយ៉ាងណា|ប៉ុន្តែ)",
+  "hypo_pattern": "^[\\s“”„\"\\x27«»(\\[]*(?:ឧបមាថា|សន្មតថា)",
+  "formula_close_pattern": "ព័ត៌មានទូទៅ",
+  "locale": "km",
+  "directory": "columns-km"
+}

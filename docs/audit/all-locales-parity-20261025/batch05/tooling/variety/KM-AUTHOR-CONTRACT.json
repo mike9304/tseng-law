@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-10-25T15:19:50.492923+00:00",
+  "source": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-neutral-boundaries.json",
+  "sha256": "482521ceaa22e8786c6cefa9b9c1e6c6d59bb4c5e8eb1884287e4da7a55cb99a",
+  "expected_arrays_preserved": true,
+  "supported_cases": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "unavailable_cases": [
+    {
+      "id": "km-neutral-04-etc",
+      "reason": "Semantic expectation preserved; native abbreviation followed by lexical prose is ambiguous to punctuation-only segmentation. Explicit exit2 instead of invented automatic support."
+    }
+  ],
+  "target_manuscript_seen": false
+}

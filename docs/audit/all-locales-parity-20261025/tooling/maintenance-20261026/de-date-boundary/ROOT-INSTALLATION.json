@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-26T01:55:37.757744+09:00",
+  "supported_locales": 49,
+  "scope": "DE coordinated calendar dates only; word units, thresholds, profiles and other language branches unchanged",
+  "backup": "/Users/son7/tseng-lanes-shared/variety-backups/de-date-fix-20261026",
+  "changed_production_file": {
+    "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+    "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+  },
+  "previous_installation": "/Users/son7/tseng-lanes-shared/variety-backups/de-date-fix-20261026/CURRENT-INSTALLATION.json",
+  "author_report": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/de-date-boundary/REPORT.md",
+    "sha256": "ba7cef3863f4e4c440e8210eac29aed34b5cb8ab82b6c832238dc2420345a4e0"
+  },
+  "root_neutral_check": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/de-date-boundary/root-neutral-verification.json",
+    "sha256": "a298f9b769cf393753c2244878a4c07f2b4cbc80c92f7bb7103beb750704fbdf",
+    "passed": 57
+  },
+  "prior_regression": "66 existing tests passed; prior26 DE documents have identical sentence arrays/metrics/decisions",
+  "new_regression_command": "PYTHONDONTWRITEBYTECODE=1 python3 tests/de-date-boundary/run_neutral.py --root . --report <fresh-output.json>",
+  "repository_mirror_status": "not copied yet; R frozen for final B4 QA"
+}

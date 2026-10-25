@@ -1,0 +1,54 @@
+{
+  "time": "2026-10-26T00:38:12.026598+09:00",
+  "tool": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+  "tool_sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+  "lang": "et",
+  "phase": "initial draft before documented self-review edits",
+  "results": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/704-taiwan-arc-first-application.md",
+      "sha256": "bfdecef5ded70f3b856570d0face09d625738dbe466fb3b8f5b45ed4df61a6c9",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/704-taiwan-arc-first-application.md",
+        "--lang",
+        "et"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/704-taiwan-arc-first-application.md [et] sentences=65 mean=11.2 cv=0.471 short=0.4 run3=0.048 opener_rep=0.056 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "73cc7dd4d3ed3fd9873d73e973ea37ddec76177151eb1c4d1f0543a81c23140b",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+        "--lang",
+        "et"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md [et] sentences=74 mean=11.1 cv=0.518 short=0.392 run3=0.028 opener_rep=0.045 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "9dc24aa435a50c5cc718a4c46d33e916e75236196eb47df6f6fc650ba6b1886b",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "et"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md [et] sentences=90 mean=11.8 cv=0.459 short=0.367 run3=0.034 opener_rep=0.038 cite_end=0.0 cite_para=0.462 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": ""
+    }
+  ]
+}

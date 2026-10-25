@@ -1,0 +1,115 @@
+{
+  "at": "2026-10-26T02:17:51.087359+09:00",
+  "installed": {
+    "content-audit.mjs": "3926a274bf544fed7e34339aa8b2636d41a4be79c0aaff898f46fc65595faf4b",
+    "content-audit.test.mjs": "7510b6ad0e8be8e3408c3de497f0f65a2f373d1717e881069b7a9d372b5e4d81",
+    "variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+  },
+  "actual_installed_tests": {
+    "content_audit": {
+      "exitCode": 0,
+      "passed": 16,
+      "failed": 0
+    },
+    "variety_existing": {
+      "exitCode": 0,
+      "passed": 66,
+      "failed": 0
+    },
+    "de_date_neutral": {
+      "exitCode": 0,
+      "passed": 57,
+      "failed": 0
+    }
+  },
+  "root_review": "Read full incremental route patch, neutral tests and candidate reports; original placeholder fix separately reviewed. Bounded changes preserve arbitrary catch-all rejection and semantic-review requirements. Existing DE26 baseline unchanged in candidate verification.",
+  "copied_evidence": [
+    {
+      "relative_path": "placeholder/REPORT.md",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/placeholder/REPORT.md",
+      "sha256": "54b3be472cf47f541fb2d702ef2c75ee689c311655ebc22bf9ec447e30ec29d1"
+    },
+    {
+      "relative_path": "placeholder/verification.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/placeholder/verification.json",
+      "sha256": "d66e4e8fb364111479e0400795a15f6c293372b06cb7e250f0ac0695715806c3"
+    },
+    {
+      "relative_path": "placeholder/verification-before-root-hashes.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/placeholder/verification-before-root-hashes.json",
+      "sha256": "29d744cd330d7bc0203a2510d91366c68af51fc9a35e7a131ff1f5f73d687d17"
+    },
+    {
+      "relative_path": "placeholder/baseline-test.log",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/placeholder/baseline-test.log",
+      "sha256": "09ea0ed1526d32dce5154c65e053274418f7557df028f2763feceeafaf38a813"
+    },
+    {
+      "relative_path": "placeholder/candidate-test.log",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/placeholder/candidate-test.log",
+      "sha256": "2e455c7163e3dcff0e322f9e71ff7671bcc65abc5acb4da657169288c7260202"
+    },
+    {
+      "relative_path": "placeholder/candidate.patch",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/placeholder/candidate.patch",
+      "sha256": "dade4ee41d42691c6f7eb4df4afdc0b5c2f6afedeeb005eda7400272997948dc"
+    },
+    {
+      "relative_path": "contact-route/README.md",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/contact-route/README.md",
+      "sha256": "006f9e8d57d0ceab3fa97d4b49e1787f7ceb16de030a3f77364bed5bebbc8177"
+    },
+    {
+      "relative_path": "contact-route/verification.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/contact-route/verification.json",
+      "sha256": "d0981a461e2f6f9bc974495b806233b11dfafee23252ac443ff8ec9f79d7527e"
+    },
+    {
+      "relative_path": "contact-route/input-freeze.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/contact-route/input-freeze.json",
+      "sha256": "87e07844c4ccaffce01d404dadc2f5ea109a6be45b3512258e397c5e21632fb0"
+    },
+    {
+      "relative_path": "contact-route/contact-route.patch",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/contact-route/contact-route.patch",
+      "sha256": "2eeaa32941923bdac7a3c66abe0cb837b046c2f333fa283d53452b8566313070"
+    },
+    {
+      "relative_path": "contact-route/tests-before.log",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/contact-route/tests-before.log",
+      "sha256": "98fe5058aa0dd09510b5df3b7e681095cb78dadbd65fd50fd89904babac54bae"
+    },
+    {
+      "relative_path": "contact-route/tests-final.log",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/contact-route/tests-final.log",
+      "sha256": "945f9effc97adf12222eecb033c0853927bfeddd611fd1c961c6248c28510dc8"
+    },
+    {
+      "relative_path": "root-installed-content-tests.log",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/root-installed-content-tests.log",
+      "sha256": "c10ec94d2d953947ad8e7930ce350f31676349ee82ab1b156af6713e6ee17bad"
+    },
+    {
+      "relative_path": "de-date-boundary/REPORT.md",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/de-date-boundary/REPORT.md",
+      "sha256": "ba7cef3863f4e4c440e8210eac29aed34b5cb8ab82b6c832238dc2420345a4e0"
+    },
+    {
+      "relative_path": "de-date-boundary/ROOT-INSTALLATION.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/de-date-boundary/ROOT-INSTALLATION.json",
+      "sha256": "91244506456a6a95f71f5c938778f0851c14ea72b2f0b3d3f5fc51edf73467d2"
+    },
+    {
+      "relative_path": "de-date-boundary/root-repository-regression.log",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/de-date-boundary/root-repository-regression.log",
+      "sha256": "73673bdc50878437577837bcdeb9b35e4381d0447f92a7f9ce2856d9870b00a6"
+    },
+    {
+      "relative_path": "de-date-boundary/root-repository-neutral.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/de-date-boundary/root-repository-neutral.json",
+      "sha256": "69bb977d99a61b05eeb229efb949419d731ea465432a5354d1e0072236b27d04"
+    }
+  ],
+  "scope": "Audit tools only. No runtime application code, profile, threshold, manuscript, infrastructure or deployment route modified by these fixes.",
+  "preserved_failures": "Placeholder baseline11/12; route baseline14/16; PT3/RU2 initial manuscript false positives and DEdate24/57 failures retained."
+}

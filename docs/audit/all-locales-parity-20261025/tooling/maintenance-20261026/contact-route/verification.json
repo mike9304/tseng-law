@@ -1,0 +1,204 @@
+{
+  "recorded_at": "2026-10-26T02:10:33.646080+09:00",
+  "status": "CANDIDATE_VERIFIED_NOT_INSTALLED",
+  "ownership": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/contact-route",
+  "base": "Parent-owned TODO candidate, left unchanged",
+  "tests": {
+    "before": {
+      "file": "tests-before.log",
+      "exit_code": 1,
+      "total": 16,
+      "passed": 14,
+      "failed": 2
+    },
+    "after": {
+      "file": "tests-after.log",
+      "exit_code": 0,
+      "total": 16,
+      "passed": 16,
+      "failed": 0
+    },
+    "final_with_japanese_policy_assertion": {
+      "file": "tests-final.log",
+      "exit_code": 0,
+      "total": 16,
+      "passed": 16,
+      "failed": 0
+    }
+  },
+  "ru_before": {
+    "file": "ru-content-audit-before.json",
+    "exit_code": 1,
+    "errors": 2,
+    "checker_sha256": "2f4e4860bfb06316b33df502fa39bf6814da09ccf70fba611427dd668e3928b6"
+  },
+  "ru_after": {
+    "file": "ru-content-audit-after.json",
+    "exit_code": 0,
+    "errors": 0,
+    "checker_sha256": "3926a274bf544fed7e34339aa8b2636d41a4be79c0aaff898f46fc65595faf4b"
+  },
+  "ru_input_hashes": {
+    "915-taiwan-public-contract-mediation-arbitration-same-claim.md": "0d332f323ff63eb0bd79fb3b02383499f23bc5375c17a8177ef637f567d1e50b",
+    "916-taiwan-parent-company-pollution-liability-us-investor.md": "a5e367a361efa6bc898ce8a47d7bd47d9cc25e62cc6a094ee37adf6ebd310b00",
+    "918-taiwan-presale-mortgage-notice-handover-judgment.md": "63ac4498dccfa6d3027dc7b91b180a8a8ada6e7dc885340cfe09a25928143862",
+    "919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "51278b88f3b5b2e591596bba78a998114dcca23e55e1ab04143b629b4b623508",
+    "920-taiwan-apartment-ev-charger-common-area-judgment.md": "3755ded080555521a143d6ff1b683003515fad545bc33bc6a87a6dfbb965be5e",
+    "921-taiwan-online-game-coins-refund-judgment.md": "650eda56f924953b185a7283c8f498ad62422723155925ab9c5f222e153ede33"
+  },
+  "ru_same_sha_before_after": true,
+  "only_file_result_change": "Two /en/contact internal-link-missing errors removed; every other per-file result including review evidence is byte-equivalent as JSON values",
+  "removed_errors": [
+    {
+      "file": "../../tseng-all-language-columns-20261025/batch06/tooling/contact-route/ru-overlay-content/columns-ru/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "code": "internal-link-missing",
+      "message": "No public route found in the App Router tree",
+      "href": "/en/contact",
+      "text": "страницу контактов на английском языке",
+      "line": 59,
+      "kind": "body"
+    },
+    {
+      "file": "../../tseng-all-language-columns-20261025/batch06/tooling/contact-route/ru-overlay-content/columns-ru/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "code": "internal-link-missing",
+      "message": "No public route found in the App Router tree",
+      "href": "/en/contact",
+      "text": "страницу контактов на английском языке",
+      "line": 58,
+      "kind": "body"
+    }
+  ],
+  "review_item_counts": [
+    20,
+    12
+  ],
+  "semantic_status": "REVIEW_REQUIRED",
+  "publication_ready": false,
+  "input_checks": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/placeholder/repo/docs/audit/all-locales-parity-20261025/tooling/content-audit.mjs",
+      "sha256": "2f4e4860bfb06316b33df502fa39bf6814da09ccf70fba611427dd668e3928b6",
+      "final_sha256": "2f4e4860bfb06316b33df502fa39bf6814da09ccf70fba611427dd668e3928b6",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/placeholder/repo/docs/audit/all-locales-parity-20261025/tooling/content-audit.test.mjs",
+      "sha256": "0439b856c311b774d90ea68f6c60692beedb724bafe12b140f5f0dc29050505d",
+      "final_sha256": "0439b856c311b774d90ea68f6c60692beedb724bafe12b140f5f0dc29050505d",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/content-audit.mjs",
+      "sha256": "eea579eedf007e403209d59f2089b7f2d1e465c03294df9bad5f50c24b4a8b03",
+      "final_sha256": "eea579eedf007e403209d59f2089b7f2d1e465c03294df9bad5f50c24b4a8b03",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/content-audit.test.mjs",
+      "sha256": "4cb12db0be0fbbc34d4af76e60b1c089d58362754de15e47883c3d233194f92c",
+      "final_sha256": "4cb12db0be0fbbc34d4af76e60b1c089d58362754de15e47883c3d233194f92c",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/(legacy)/index.tsx",
+      "sha256": "5e485ee21bac81e7b8dc74778fba24d69e8541492010e791709a82373c3eb2da",
+      "final_sha256": "5e485ee21bac81e7b8dc74778fba24d69e8541492010e791709a82373c3eb2da",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/[[...slug]]/page.tsx",
+      "sha256": "3dab508b2dddb716fa84184335f4f62b3d35164d30abdb3ab30185a3bb6a4f03",
+      "final_sha256": "3dab508b2dddb716fa84184335f4f62b3d35164d30abdb3ab30185a3bb6a4f03",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/locales.ts",
+      "sha256": "38304dea2b15fc6d6d05cebafa6cc08fdac18d66da875da7c79b7a117e431c54",
+      "final_sha256": "38304dea2b15fc6d6d05cebafa6cc08fdac18d66da875da7c79b7a117e431c54",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/public-route-policy.ts",
+      "sha256": "7a71128c423d76057bd50e791189533ab96789594aef994f4346f4ead2c6607c",
+      "final_sha256": "7a71128c423d76057bd50e791189533ab96789594aef994f4346f4ead2c6607c",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-route-diagnostic.json",
+      "sha256": "99493c83f4e50b9fdd16dae9120a9fd9677f831d27470c20fc1dd4a8fe3ab2fa",
+      "final_sha256": "99493c83f4e50b9fdd16dae9120a9fd9677f831d27470c20fc1dd4a8fe3ab2fa",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-contact-public.json",
+      "sha256": "933408585753f8d8db3e88e540de73298b431b90c2e96161cb47fdf49c22f574",
+      "final_sha256": "933408585753f8d8db3e88e540de73298b431b90c2e96161cb47fdf49c22f574",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-contact-public-parsed.json",
+      "sha256": "9fccc279757ae3d2226752a7cd97449d96d752edd32558478dcc41395ee4f1f2",
+      "final_sha256": "9fccc279757ae3d2226752a7cd97449d96d752edd32558478dcc41395ee4f1f2",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-contact-public.html",
+      "sha256": "4059217778790e844bd71ed7ce0a2cabc865a29c0d9a5efcbb3e69efb371690f",
+      "final_sha256": "4059217778790e844bd71ed7ce0a2cabc865a29c0d9a5efcbb3e69efb371690f",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/ru-audit.mjs",
+      "sha256": "2b80039479bd0049ef86a6f314c12551813d217cfffbab192392eb094594ce2a",
+      "final_sha256": "2b80039479bd0049ef86a6f314c12551813d217cfffbab192392eb094594ce2a",
+      "unchanged": true
+    }
+  ],
+  "fresh_network_request": false,
+  "public_evidence": "Retained actual RU HTTP capture read and raw HTML SHA verified; no claim of a new request",
+  "scope": "All 12 existing content-audit tests plus 4 route tests. Unrelated application/variety test suites not rerun: no application or variety code changed.",
+  "candidate_files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/contact-route/repo/docs/audit/all-locales-parity-20261025/tooling/content-audit.mjs",
+      "sha256": "3926a274bf544fed7e34339aa8b2636d41a4be79c0aaff898f46fc65595faf4b"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/tooling/contact-route/repo/docs/audit/all-locales-parity-20261025/tooling/content-audit.test.mjs",
+      "sha256": "7510b6ad0e8be8e3408c3de497f0f65a2f373d1717e881069b7a9d372b5e4d81"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "input-freeze.json",
+      "sha256": "87e07844c4ccaffce01d404dadc2f5ea109a6be45b3512258e397c5e21632fb0"
+    },
+    {
+      "path": "tests-before.log",
+      "sha256": "98fe5058aa0dd09510b5df3b7e681095cb78dadbd65fd50fd89904babac54bae"
+    },
+    {
+      "path": "tests-after.log",
+      "sha256": "3d4571f6b27c7c599abf57cf4cb0a5f183bc25bb7628e758173f4ac3685d6088"
+    },
+    {
+      "path": "tests-final.log",
+      "sha256": "945f9effc97adf12222eecb033c0853927bfeddd611fd1c961c6248c28510dc8"
+    },
+    {
+      "path": "run-ru.mjs",
+      "sha256": "51023fb670cdd5c771f0cc46aa0bf09aa5d2ad0951a064fc3e098179042ec106"
+    },
+    {
+      "path": "ru-content-audit-before.json",
+      "sha256": "0960bce764d7e25bc03cc595eb13cf1a293896c02cc6ff3e9cfd127bcb13d415"
+    },
+    {
+      "path": "ru-content-audit-after.json",
+      "sha256": "553ef9baafc8c7628032a232dadb8e0b0cd78950a1b4b2d5bbca9af65256da76"
+    },
+    {
+      "path": "contact-route.patch",
+      "sha256": "2eeaa32941923bdac7a3c66abe0cb837b046c2f333fa283d53452b8566313070"
+    }
+  ]
+}

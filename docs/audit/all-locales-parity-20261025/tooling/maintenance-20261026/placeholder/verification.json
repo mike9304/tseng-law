@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-26T01:52:36.059430+09:00",
+  "status": "candidate verified; not installed in R while final B4 artifact QA is frozen",
+  "before_sha256": "eea579eedf007e403209d59f2089b7f2d1e465c03294df9bad5f50c24b4a8b03",
+  "candidate_sha256": "2f4e4860bfb06316b33df502fa39bf6814da09ccf70fba611427dd668e3928b6",
+  "baseline_tests": {
+    "total": 12,
+    "passed": 11,
+    "failed": 1,
+    "reason": "normal Portuguese/Spanish todo in prose/title falsely flagged"
+  },
+  "candidate_tests": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0
+  },
+  "actual_pt_recheck": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/checks/pt-content-audit-candidate.json",
+    "sha256": "9fc2de51a2f55f2a94f8d7c8ca34330a618147819276bba8fffb4ff2c230b2cb",
+    "errors": 0
+  },
+  "scope": "Only TODO marker detection; all other structural/legal-review flags retained. Uppercase bare TODO and explicit todo:/[todo] stay errors. No manuscript allowlist or manuscript edits.",
+  "test_and_log_sha256": {
+    "repo/docs/audit/all-locales-parity-20261025/tooling/content-audit.test.mjs": "0439b856c311b774d90ea68f6c60692beedb724bafe12b140f5f0dc29050505d",
+    "baseline-test.log": "09ea0ed1526d32dce5154c65e053274418f7557df028f2763feceeafaf38a813",
+    "candidate-test.log": "2e455c7163e3dcff0e322f9e71ff7671bcc65abc5acb4da657169288c7260202"
+  }
+}

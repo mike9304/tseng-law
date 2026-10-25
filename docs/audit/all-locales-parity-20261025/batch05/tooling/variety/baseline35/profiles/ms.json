@@ -1,0 +1,14 @@
+{
+  "locale": "ms",
+  "directory": "columns-ms",
+  "review_status": "AI-authored neutral contract; coordinating review pending",
+  "join_hyphens": true,
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:Sumber(?:\\s+rasmi|\\s+dan\\s+tarikh\\s+semakan)?|Rujukan)\\s*:?\\s*$)",
+  "abbreviations": ["Dr", "Prof", "En", "Pn", "Cik", "No", "hlm", "dll", "dsb", "spt", "cth"],
+  "terminal_abbreviations": ["dll", "dsb"],
+  "contrast_patterns": ["(?i:\\bbukan(?:nya)?\\b[^.!?\\n]{0,180}\\b(?:tetapi|melainkan|sebaliknya)\\b)", "(?i:\\bberbeza\\s+daripada\\b)", "(?i:\\bdan\\s+bukannya\\b)"],
+  "caveat_pattern": "(?i:^\\s*[“\"(]*(?:namun|walau\\s+bagaimanapun|meskipun\\s+demikian)\\b)",
+  "hypo_pattern": "(?i:^\\s*[“\"(]*(?:andaikan|katakan|bayangkan|sebagai\\s+contoh)\\b)",
+  "formula_close_pattern": "(?i:artikel\\s+ini\\s+(?:hanya\\s+)?(?:memberikan|mengandungi)\\s+maklumat\\s+umum|firma\\s+kami\\s+boleh\\s+membantu)",
+  "citation_pattern": "(?i:\\b(?:Perkara|Seksyen)\\s*\\d+)"
+}

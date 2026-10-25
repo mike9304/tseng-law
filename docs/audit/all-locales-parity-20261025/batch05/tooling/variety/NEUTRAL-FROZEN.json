@@ -1,0 +1,31 @@
+{
+  "recorded_at": "2026-10-25T15:19:16.423527+00:00",
+  "target_manuscripts_read": false,
+  "phase": "before production edits; 44 expected unsupported-locale failures",
+  "files": [
+    {
+      "path": "tests/build_batch05_fixtures.py",
+      "sha256": "82e9467f6619000733260117411c6872b5b8172a6b7a37a30ae7b07023fbb580"
+    },
+    {
+      "path": "tests/fixtures-batch05.json",
+      "sha256": "1e2fb8c7100ed3352d1cb40c670ffb5ea86869379715d7207fa8bf41b07bf3b1"
+    },
+    {
+      "path": "tests/test_batch05.py",
+      "sha256": "f7daec7eb077cd736aca05edcfb1c0e82fdba2a4188827ed8a5396cf39916b82"
+    },
+    {
+      "path": "METHOD-BATCH05.md",
+      "sha256": "2e930511ebc4bc12adf00342ade6ba9fc075b84fcc52959db2b95fcf08a98784"
+    },
+    {
+      "path": "batch05-red-support.txt",
+      "sha256": "e8a9d4cfb5d7e39c00c41b358e7f74b87d60437cd4883ee4a5a1766414d95d34"
+    },
+    {
+      "path": "BASELINE42-INPUTS.json",
+      "sha256": "be04ec21c94fad94b7e18a0ca4cc85c72482b7d8b9b3a0e8ecfe81bbe45f65d8"
+    }
+  ]
+}

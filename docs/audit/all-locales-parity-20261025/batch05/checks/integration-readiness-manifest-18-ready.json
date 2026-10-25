@@ -1,0 +1,1087 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-10-26T01:26:02.267226+09:00",
+  "scope": "Read-only integration readiness of B5 21 article bytes, current author/independent evidence and existing runtime structural/link policy. No manuscripts, R, shared tools or deployment changed.",
+  "readyForRootIntegration": 18,
+  "pendingR2": 3,
+  "pendingLocales": [
+    "km"
+  ],
+  "publicationReady": false,
+  "locales": [
+    {
+      "locale": "lt",
+      "status": "READY_FOR_ROOT_INTEGRATION",
+      "articleCount": 3,
+      "authorReport": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/lt-author.md",
+        "sha256": "c66e8d727a73d6949d1b5d3da4960018fdeaa96e8db753da6db389cb3e293f0c"
+      },
+      "authorEvidence": [
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lt-options-edits.json",
+          "sha256": "114fd3a6a94c884ae3c767a690ee0296ba666f7cf00070a0451641b6e2f2a764"
+        }
+      ],
+      "independentReport": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/lt-independent.md",
+        "sha256": "54845d89260dfbd1cba45e0fa8c78e495929d993c5ce36a6e6d5855e819817a2"
+      },
+      "closureEvidence": [
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lt-independent-r2.json",
+          "sha256": "62ef05fad61524cea72e515f3a7fe1c96b816f9d01a1a9d6db7c238d8a06d385"
+        },
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lt-independent-r2-manifest.json",
+          "sha256": "72d557439c1878a80bbcf5ec038ccef8fff61e8525455ea0e99b8216e879e8f3"
+        }
+      ],
+      "reviewRequiredFindings": 0,
+      "notes": "R1 had no mandatory issue. R2 JSON closes adopted O1/O2 on current 704/705 SHA; original R1 Markdown is retained.",
+      "currentExactLocaleVarietyExit": 0,
+      "nativeHumanApproved": false,
+      "lawyerApproved": false,
+      "renderingVerified": false
+    },
+    {
+      "locale": "mn",
+      "status": "READY_FOR_ROOT_INTEGRATION",
+      "articleCount": 3,
+      "authorReport": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/mn-author.md",
+        "sha256": "72de55f6baa11f8f4231329337cbc5bb5cf152a16d7b3635e7bca0c6073a6125"
+      },
+      "authorEvidence": [
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/mn-independent-r1-edits.json",
+          "sha256": "d381cae38ef5a23899d4054cdc7d2ee6dc03cf42d186d1919d3b71073010cd23"
+        }
+      ],
+      "independentReport": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/mn-independent.md",
+        "sha256": "b0496616b884cf7922972c89299752513a7a1c554e3a2c5105c1b286e8f5ff17"
+      },
+      "closureEvidence": [
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/mn-independent-r2.json",
+          "sha256": "796de47b5f94721fc0aad1c81208b8d7163e18ef207bfa4a144f3140cbf7ea25"
+        },
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/mn-independent-r2-final-manifest.json",
+          "sha256": "a13300ae611688a5790b8e24184325860e50e53d00208ae313fd4e27f571c734"
+        }
+      ],
+      "reviewRequiredFindings": 0,
+      "notes": "R1 mandatory M01 and optional S01/S02 closed by appended R2 and current-hash R2 manifest.",
+      "currentExactLocaleVarietyExit": 0,
+      "nativeHumanApproved": false,
+      "lawyerApproved": false,
+      "renderingVerified": false
+    },
+    {
+      "locale": "sr",
+      "status": "READY_FOR_ROOT_INTEGRATION",
+      "articleCount": 3,
+      "authorReport": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/sr-author.md",
+        "sha256": "eb25ed0e06489a95bbb5f2505b4fc8747491b22a95e687c70754a6668dbe0ef5"
+      },
+      "authorEvidence": [
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sr-final-manifest.json",
+          "sha256": "f4da7f43ea920a5a81579e362afc8d2e1e79ec804d93dc29a15c888fbfc473b6"
+        }
+      ],
+      "independentReport": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/sr-independent.md",
+        "sha256": "8fc21caf7759bdb871025d25b42f39d31adcf0b0b72b47081b8f61d6d77e095c"
+      },
+      "closureEvidence": [],
+      "reviewRequiredFindings": 0,
+      "notes": "R1 mandatory 0; optional S01 remains optional, no manuscript change required by reviewer.",
+      "currentExactLocaleVarietyExit": 0,
+      "nativeHumanApproved": false,
+      "lawyerApproved": false,
+      "renderingVerified": false
+    },
+    {
+      "locale": "et",
+      "status": "READY_FOR_ROOT_INTEGRATION",
+      "articleCount": 3,
+      "authorReport": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/et-author.md",
+        "sha256": "d2b3c49a9a1d51954dc2a84c1a45b64bb802f5ca306b25e26a7f71e763a6c817"
+      },
+      "authorEvidence": [
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-final-manifest.json",
+          "sha256": "423ad4c0b6f3cd2d89348be677996cf424b754ce950e8f3ac4ee7da607215c53"
+        }
+      ],
+      "independentReport": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/et-independent.md",
+        "sha256": "fefb82c1226338d68b64dfdf608a6399ecb0eda855814b78ddc227dad381d646"
+      },
+      "closureEvidence": [
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/et-independent-final-manifest.json",
+          "sha256": "a091ec0cbe311bf0acfe5efb10772a276549190b9f20a483db6b5e265ca430da"
+        }
+      ],
+      "reviewRequiredFindings": 0,
+      "notes": "R1 mandatory 0; O1/O2 optional and current original freeze remains approved in review scope.",
+      "currentExactLocaleVarietyExit": 0,
+      "nativeHumanApproved": false,
+      "lawyerApproved": false,
+      "renderingVerified": false
+    },
+    {
+      "locale": "lv",
+      "status": "READY_FOR_ROOT_INTEGRATION",
+      "articleCount": 3,
+      "authorReport": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/lv-author.md",
+        "sha256": "36bdb7bceb1097b4a587e8a2247f25663ea01e40b4284f5fd6c215f557ebeefa"
+      },
+      "authorEvidence": [
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lv-author-manifest.json",
+          "sha256": "feb21ed9909c2b6b5190cfdc09caa0eb0d99a11d6ea88b1e0ebb0dd94b1d5090"
+        }
+      ],
+      "independentReport": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/lv-independent.md",
+        "sha256": "70cfaba5b3cca199def749e139441fe0b15fad333dcc9af629f413ed50a11dbf"
+      },
+      "closureEvidence": [
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/lv-independent-manifest.json",
+          "sha256": "bc2cc8c9154411a358f3c5898d5cc4ce46bc7d174e699d9566785d4ecf188706"
+        }
+      ],
+      "reviewRequiredFindings": 0,
+      "notes": "Independent PASS with mandatory 0 on unchanged author freeze.",
+      "currentExactLocaleVarietyExit": 0,
+      "nativeHumanApproved": false,
+      "lawyerApproved": false,
+      "renderingVerified": false
+    },
+    {
+      "locale": "sl",
+      "status": "READY_FOR_ROOT_INTEGRATION",
+      "articleCount": 3,
+      "authorReport": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/sl-author.md",
+        "sha256": "2bd2d8702a749f7a5b9a6b0c0ad8572c3cade153c0bcfdfa8d9420cbcb3b52fa"
+      },
+      "authorEvidence": [
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-author-manifest.json",
+          "sha256": "3b212ab2d8cd97ce58dbf031d682e9d62bebf9008149a528aa23469e1e3f0674"
+        },
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-independent-fixes.json",
+          "sha256": "7c8547961bce988acb183c79d706327ee77109e3a12fea9d99c7028f53cc4d45"
+        }
+      ],
+      "independentReport": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/sl-independent.md",
+        "sha256": "8ae2309049efe1452759d8beab110d6ef0c0184093abae3188683a59c47b7721"
+      },
+      "closureEvidence": [
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-independent-r2.md",
+          "sha256": "006f2ef2634088e240a85b85f6ba3be9102d3b843037a50b8d71fba33ef032b5"
+        },
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-independent-r2.json",
+          "sha256": "c71d6d837b3f9af85c6583ab02835a73fcacb7a8114175578c3633a234af6da9"
+        },
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/sl-independent-r2-manifest.json",
+          "sha256": "3651ea84f6751ff6780be84af64f3502979112d7f74ae696e64264fc4eda412f"
+        }
+      ],
+      "reviewRequiredFindings": 0,
+      "notes": "R1 M1/M2a/M2b and O1 closed by separate R2 Markdown/JSON/manifest; root confirmed readiness update.",
+      "currentExactLocaleVarietyExit": 0,
+      "nativeHumanApproved": false,
+      "lawyerApproved": false,
+      "renderingVerified": false
+    },
+    {
+      "locale": "km",
+      "status": "PENDING_R2",
+      "articleCount": 3,
+      "authorReport": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/km-author.md",
+        "sha256": "8dff6adaa711a0cbbae4d1e5442305a971ece16f2667f3f70e2d76429018a094"
+      },
+      "authorEvidence": [
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-final-manifest.json",
+          "sha256": "5721d3db84709945f583b2fef7fa8ea80b3e5a7bd20d2180d75eebc06894a0da"
+        },
+        {
+          "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/km-r2-edits.json",
+          "sha256": "33933e94e047947c76099d5008c2b10a384a1a02fc76d2a6bb7d1664e28a578b"
+        }
+      ],
+      "independentReport": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/reviews/km-independent.md",
+        "sha256": "e730c2ac777a27d3fecdbd7b3144944d492bfd97ab872c201c3bf6f39021603b"
+      },
+      "closureEvidence": [],
+      "reviewRequiredFindings": "R1 M01 awaiting R2 closure",
+      "notes": "Revised 704/706 bytes are structurally checked. R1 M01 validity condition and optional S01/S02 await author/independent R2 closure at this readiness cut; all three KM articles held together.",
+      "currentExactLocaleVarietyExit": 0,
+      "nativeHumanApproved": false,
+      "lawyerApproved": false,
+      "renderingVerified": false
+    }
+  ],
+  "articles": [
+    {
+      "locale": "lt",
+      "number": "704",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/704-taiwan-arc-first-application.md",
+      "sha256": "f46f3545e94950ba11cb30f118689721608e6f9593a088a40b10f3b8618a35a9",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026 m. spalio 26 d.",
+        "audience": [
+          "lt"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Išgalvota scena",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 15,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/lt/columns/taiwan-visa-residence-work-study-family",
+        "/lt/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Oficialūs šaltiniai",
+      "publicationReady": false
+    },
+    {
+      "locale": "lt",
+      "number": "705",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "33b0cc65e3720963cac03710365c44c3c8a88a953309b38314680bca963c14c5",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026 m. spalio 26 d.",
+        "audience": [
+          "lt"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Išgalvota scena",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 15,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/en/columns/taiwan-employment-gold-card",
+        "/lt/columns/taiwan-arc-first-application",
+        "/lt/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Oficialūs šaltiniai",
+      "publicationReady": false
+    },
+    {
+      "locale": "lt",
+      "number": "706",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4b2d935fa2496bf95b6e304f976e937221a6ab696ab9aa7cf526e2811c7cf1c6",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026 m. spalio 26 d.",
+        "audience": [
+          "lt"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Išgalvota scena",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 16,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/lt/columns/taiwan-arc-first-application",
+        "/lt/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-permanent-residence-aprc"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Oficialūs šaltiniai",
+      "publicationReady": false
+    },
+    {
+      "locale": "mn",
+      "number": "704",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/704-taiwan-arc-first-application.md",
+      "sha256": "c33ec471bf92fd0d55977d3e5e40dde1fed5130d73645c3836c43895b1f918de",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026.10.26",
+        "audience": [
+          "mn"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Зохиомол дүр зураг",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 11,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/mn/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/mn/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Албан ёсны эх сурвалж",
+      "publicationReady": false
+    },
+    {
+      "locale": "mn",
+      "number": "705",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "d54e05e91c9d6e9da6ee536009c01b9d44d34b0a78e74dbe07b2e294dde261ac",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026.10.26",
+        "audience": [
+          "mn"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Зохиомол дүр зураг",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 15,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/en/columns/taiwan-employment-gold-card",
+        "/mn/columns/taiwan-arc-first-application",
+        "/mn/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Албан ёсны эх сурвалж",
+      "publicationReady": false
+    },
+    {
+      "locale": "mn",
+      "number": "706",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "f3ced3a9c5be6948ce8ead66d0110be0a8e8309f39f414712f24bff50de965a4",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026.10.26",
+        "audience": [
+          "mn"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Зохиомол дүр зураг",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 14,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/mn/columns/taiwan-arc-first-application",
+        "/mn/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-permanent-residence-aprc"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Албан ёсны эх сурвалж",
+      "publicationReady": false
+    },
+    {
+      "locale": "sr",
+      "number": "704",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/704-taiwan-arc-first-application.md",
+      "sha256": "15229f8e599464d507976f6d91818d441c6a1c8be1448af31f79fd79b8730dac",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "audience": [
+          "sr"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izmišljeni prizor",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 13,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/sr/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/sr/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Zvanični izvori",
+      "publicationReady": false
+    },
+    {
+      "locale": "sr",
+      "number": "705",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "9057c2a83ef6e71ab6f576702943fdf604ae345b627b94d98986baf4a6b7d6b2",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "audience": [
+          "sr"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izmišljeni prizor",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 15,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/en/columns/taiwan-employment-gold-card",
+        "/sr/columns/taiwan-arc-first-application",
+        "/sr/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Zvanični izvori",
+      "publicationReady": false
+    },
+    {
+      "locale": "sr",
+      "number": "706",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1e5a3547ce8437f9ddb4f3a3b61dd62261a4a1dccaa63683d43d9692b73331d9",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "audience": [
+          "sr"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izmišljeni prizor",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 15,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/sr/columns/taiwan-arc-first-application",
+        "/sr/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-permanent-residence-aprc"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Zvanični izvori",
+      "publicationReady": false
+    },
+    {
+      "locale": "et",
+      "number": "704",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/704-taiwan-arc-first-application.md",
+      "sha256": "f15069557979333b4febbff860e45755472675d20f056ac2d05664f788eaea96",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "audience": [
+          "et"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Väljamõeldud stseen",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 12,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/et/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/et/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Ametlikud allikad",
+      "publicationReady": false
+    },
+    {
+      "locale": "et",
+      "number": "705",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "6bf9a4fca0d1b90d3bf0e4f46e4c87ba43cb5c4b32989ab3e98eaed52955acc8",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "audience": [
+          "et"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Väljamõeldud stseen",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 15,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/en/columns/taiwan-employment-gold-card",
+        "/et/columns/taiwan-arc-first-application",
+        "/et/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Ametlikud allikad",
+      "publicationReady": false
+    },
+    {
+      "locale": "et",
+      "number": "706",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "dce0dce717cd732bce40b187f43ef31cbcf0758d71256c129263c23fc7da856a",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "audience": [
+          "et"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Väljamõeldud stseen",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 14,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/et/columns/taiwan-arc-first-application",
+        "/et/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-permanent-residence-aprc"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Ametlikud allikad",
+      "publicationReady": false
+    },
+    {
+      "locale": "lv",
+      "number": "704",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/704-taiwan-arc-first-application.md",
+      "sha256": "f47d6be694c2e9601fa457d64598379b5065fa48a94937d5ff11a76d3637c810",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026. gada 26. oktobris",
+        "audience": [
+          "lv"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izdomāta aina",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 11,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/lv/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/lv/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Oficiālie avoti",
+      "publicationReady": false
+    },
+    {
+      "locale": "lv",
+      "number": "705",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "de24030f670164d376227740b49a16a3e1883fa29def34a483fda0672a529102",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026. gada 26. oktobris",
+        "audience": [
+          "lv"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izdomāta aina",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 15,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/en/columns/taiwan-employment-gold-card",
+        "/lv/columns/taiwan-arc-first-application",
+        "/lv/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Oficiālie avoti",
+      "publicationReady": false
+    },
+    {
+      "locale": "lv",
+      "number": "706",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "e5b600ba790cdbcd9f225c1703c81e28e7ab49974d504b4ba77b1070d48e700d",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "2026. gada 26. oktobris",
+        "audience": [
+          "lv"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izdomāta aina",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 14,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/lv/columns/taiwan-arc-first-application",
+        "/lv/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-permanent-residence-aprc"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Oficiālie avoti",
+      "publicationReady": false
+    },
+    {
+      "locale": "sl",
+      "number": "704",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/704-taiwan-arc-first-application.md",
+      "sha256": "a87a3ac1137b0012120a56629dccc0e0d64dcbb55a2e2a6110e2be213cde6bd6",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "audience": [
+          "sl"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izmišljen prizor",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 10,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/sl/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/sl/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Uradni viri",
+      "publicationReady": false
+    },
+    {
+      "locale": "sl",
+      "number": "705",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "90d5e07a124a7b1c6aeb46a5be8293a44007a58f6e2dad2593c96b1067834932",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "audience": [
+          "sl"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izmišljen prizor",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 15,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/en/columns/taiwan-employment-gold-card",
+        "/sl/columns/taiwan-arc-first-application",
+        "/sl/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Uradni viri",
+      "publicationReady": false
+    },
+    {
+      "locale": "sl",
+      "number": "706",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d5b7581f6dcff33cdcb5b65e1b46bd0654e050acb94434bbdaab68222c0aca5b",
+      "readyForRootIntegration": true,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "audience": [
+          "sl"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "Izmišljen prizor",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 14,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/sl/columns/taiwan-arc-first-application",
+        "/sl/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-permanent-residence-aprc"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "Uradni viri",
+      "publicationReady": false
+    },
+    {
+      "locale": "km",
+      "number": "704",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/704-taiwan-arc-first-application.md",
+      "sha256": "8ae680254e50bf202d7a3ebe1f886de19264a22251bdda5effbdc9c74b649b53",
+      "readyForRootIntegration": false,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": false,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 តុលា 2026",
+        "audience": [
+          "km"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "ឈុតឆាកប្រឌិត",
+        "image": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 13,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/km/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/km/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "ប្រភពផ្លូវការ",
+      "publicationReady": false
+    },
+    {
+      "locale": "km",
+      "number": "705",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba",
+      "readyForRootIntegration": false,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": true,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 តុលា 2026",
+        "audience": [
+          "km"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "ឈុតឆាកប្រឌិត",
+        "image": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 15,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/en/columns/taiwan-foreign-spouse-residence",
+        "/en/columns/taiwan-employment-gold-card",
+        "/km/columns/taiwan-arc-first-application",
+        "/km/columns/taiwan-arc-renewal-changes-reentry"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "ប្រភពផ្លូវការ",
+      "publicationReady": false
+    },
+    {
+      "locale": "km",
+      "number": "706",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d1a5eff1eb9fed410075031876b059d635ac4c9de9cd75a61c5a2ac540371286",
+      "readyForRootIntegration": false,
+      "authorCurrentShaLinked": true,
+      "independentCurrentShaLinked": false,
+      "metadata": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 តុលា 2026",
+        "audience": [
+          "km"
+        ],
+        "topic": "visa",
+        "author": "legal-ai-assistant",
+        "caption": "ឈុតឆាកប្រឌិត",
+        "image": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "faqCount": 3
+      },
+      "boardVisibleUnderCurrentPolicy": true,
+      "automatedErrors": [],
+      "uniqueExternalURLs": 14,
+      "missingSourceURLs": [],
+      "bodyURLsMissingInSources": [],
+      "internalLinks": [
+        "/km/columns/taiwan-arc-first-application",
+        "/km/columns/taiwan-visa-residence-work-study-family",
+        "/en/columns/taiwan-permanent-residence-aprc"
+      ],
+      "internalLinkExistence": "PASS in B5+R overlay; no live HTTP assertion",
+      "sourceTailHeading": "ប្រភពផ្លូវការ",
+      "publicationReady": false
+    }
+  ],
+  "checks": {
+    "automatedStructuralErrors": 0,
+    "localBoardPolicyVisibleArticles": 21,
+    "missingENSourceURLs": 0,
+    "bodyURLsMissingFromSourceTail": 0,
+    "internalLinkExistenceErrors": 0,
+    "F23BodyAndTailAll7": true,
+    "F24BodyAndTailAll7": true,
+    "sharedLocaleCliRuns": 7,
+    "sharedCliExit0Articles": 21,
+    "currentB5HashesMatchTestedSnapshot": true,
+    "networkHTTPFreshCheck": false
+  },
+  "rInventory": {
+    "evidence": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-readiness-r-inventory.json",
+      "sha256": "949bd34d94b8beca24cabfcdd93e5b1ec2c68455969589661826407895862fe3"
+    },
+    "script": {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/inventory.py",
+      "sha256": "f949f3368ad1b653510a27d453f01a4f97a104dca60bd5be8f90f01549f46680"
+    },
+    "baseline": {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/baseline.json",
+      "sha256": "375b8c98d4ea8a7131d98879ccfd87f0ecc34dcd9c9c9b9dbcaceb9b2a294396"
+    },
+    "command": [
+      "python3",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/inventory.py",
+      "--repo",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025",
+      "--worktree",
+      "--compare",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/baseline.json",
+      "--output",
+      "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-readiness-r-inventory.json"
+    ],
+    "exitCode": 0,
+    "runCount": 1,
+    "source": {
+      "kind": "working-tree",
+      "commit": "3b5ea95061d61a6b9a0e94eb61438be843fdd63c"
+    },
+    "supportedLocales": 49,
+    "totals": {
+      "professional": 2100,
+      "issues": 125,
+      "boardVisibleLocal": 1833,
+      "distinctProfessionalSlugs": 668,
+      "coreUnion": 475,
+      "coreCommon": 135,
+      "allLocaleCommon": 18,
+      "countDeficitTo286": 11918,
+      "visibleDeficitTo286": 12185,
+      "other45MissingCoreCommon": 5105
+    },
+    "validation": {
+      "valid": true,
+      "parseErrors": [],
+      "duplicateSlugs": [],
+      "emptyBodies": [],
+      "missingTitles": []
+    },
+    "policyHashesUnchangedAtClose": true,
+    "countsExcludeB5": true,
+    "fallbackCountsAsLocal": false,
+    "notLiveHTMLOrCMSOverlayInventory": true,
+    "conditionalProjectionAfterAll21ApprovedAndIntegrated": {
+      "professional": 2121,
+      "boardVisibleLocal": 1854,
+      "allLocaleCommon": 21,
+      "countDeficitTo286": 11897,
+      "visibleDeficitTo286": 12164,
+      "status": "projection only; not integrated or deployed"
+    }
+  },
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-readiness-check.mjs",
+      "sha256": "fc8c2707ad9dc9c4f4ed05b942d5acaad7e1a7e144c8fe2165cbca2928c63276"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-readiness-snapshot.json",
+      "sha256": "48ce1fd2771306e30cd23b8555c09ffff6abd7b68b9f8dd7f470cf9a61d0dc43"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-readiness-content-audit.json",
+      "sha256": "bbee79b47dd7beed7464335b2bf78afa1e4a5d87459daa19304b8254fa2cc347"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/integration-readiness-variety.json",
+      "sha256": "7bfe59d49249615e51379ac92391865ab0571fd603b28f1dedba88e4d354d9e7"
+    }
+  ],
+  "limitations": [
+    "Current article readiness is a chain of author and independent AI review, not native-human or lawyer approval.",
+    "The structural auditor retains REVIEW_REQUIRED and publicationReady:false. Public rendering, feeds, schema, canonical/hreflang and actual delivery are still root work.",
+    "R worktree inventory is read-only file-backed current-policy accounting, not an atomic deployment snapshot. The 286-per-locale target is unchanged.",
+    "KM remains pending despite machine PASS; only new closure and current-SHA verification can close its required finding."
+  ]
+}

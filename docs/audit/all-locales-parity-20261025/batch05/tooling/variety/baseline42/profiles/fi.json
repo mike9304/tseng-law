@@ -1,0 +1,16 @@
+{
+  "locale": "fi",
+  "directory": "columns-fi",
+  "review_status": "AI-authored neutral contract; coordinating review pending",
+  "register": "Standard Finnish",
+  "join_hyphens": true,
+  "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:viralliset\\s+)?lähteet(?:\\s+ja\\s+tarkistuspäivä)?\\s*:?\\s*$)",
+  "abbreviations": ["prof", "esim", "mm", "jne", "tms", "ym", "ks", "ns", "n", "s", "v", "p", "huom"],
+  "terminal_abbreviations": ["jne", "tms", "ym"],
+  "ordinal_followers": "tammikuuta|helmikuuta|maaliskuuta|huhtikuuta|toukokuuta|kesäkuuta|heinäkuuta|elokuuta|syyskuuta|lokakuuta|marraskuuta|joulukuuta|luku|kohta|kerros|päivä|päivänä",
+  "contrast_patterns": ["(?i:\\b(?:ei|en|et|emme|ette|eivät)\\b[^.!?\\n]{0,180}\\bvaan\\b)", "(?i:\\btoisin\\s+kuin\\b)", "(?i:\\bsen\\s+sijaan\\s+että\\b)"],
+  "caveat_pattern": "(?i:^\\s*[”\"(«»„“]*(?:kuitenkin|toisaalta|silti)\\b)",
+  "hypo_pattern": "(?i:^\\s*[”\"(«»„“]*(?:oletetaan\\s*,?\\s+että|kuvitellaan\\s*,?\\s+että)\\b)",
+  "formula_close_pattern": "(?i:tämä\\s+artikkeli\\s+(?:antaa|sisältää)\\s+yleistä\\s+tietoa|toimistomme\\s+voi\\s+auttaa)",
+  "citation_pattern": "(?i:\\b(?:artikla|artiklat|pykälä)\\s*\\d+|\\b\\d+\\s*§)"
+}

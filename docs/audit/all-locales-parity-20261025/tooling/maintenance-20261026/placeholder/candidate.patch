@@ -1,0 +1,22 @@
+--- /Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/content-audit.mjs	2026-10-25 21:42:20
++++ /Users/son7/tseng-all-language-columns-20261025/batch06/tooling/placeholder/repo/docs/audit/all-locales-parity-20261025/tooling/content-audit.mjs	2026-10-26 01:48:26
+@@ -21,7 +21,9 @@
+ const SITE_HOSTS = new Set(['tseng-law.com', 'www.tseng-law.com']);
+ const MIN_BODY_LETTERS = 500;
+ const MIN_UNIQUE_BODY_LETTERS = 350;
+-const PLACEHOLDER = /\b(?:TODO|TBD|lorem ipsum|insert (?:text|content|translation) here|translation pending)\b|내용\s*작성\s*예정|待(?:翻译|翻譯|补充|補充)|\[\s*(?:TRANSLATE|PLACEHOLDER)\s*\]/iu;
++const PLACEHOLDER = /\b(?:TBD|lorem ipsum|insert (?:text|content|translation) here|translation pending)\b|내용\s*작성\s*예정|待(?:翻译|翻譯|补充|補充)|\[\s*(?:TRANSLATE|PLACEHOLDER)\s*\]/iu;
++// "todo" is ordinary Portuguese/Spanish prose; uppercase or explicit markers remain unfinished text.
++const TODO_PLACEHOLDER = /\bTODO\b|\b[Tt][Oo][Dd][Oo]\s*:|\[\s*[Tt][Oo][Dd][Oo]\s*\]/u;
+ const CONDITION_HINT = /\b(?:must|may|only|unless|except|if|eligible|eligibility|cannot|does not|not automatically|before|after|within|required|permission|permit|exemption|and|or)\b|(?:경우|요건|기한|예외|허가|신청|해야|또는|다만|않)|(?:應|应|須|须|得|不得|但|除外|如果|許可|许可|期限|申請|申请)/iu;
+ const COUNTRY_HINT = /\b(?:nationality|citizen|nationals?|passport|mainland|Hong Kong|Macau|China|Taiwan|Korea|Japan|United States|Russia|Malaysia|Philippines|Turkey|Netherlands|граждан|гражданство|паспорт|warganegara|kewarganegaraan|mamamayan|pagkamamamayan|vatandaş|uyruk|nationaliteit|staatsburger)\b|国籍|國籍|국적|국민|台湾|台灣|大陆|大陸|香港|澳門|澳门|中国|中國/iu;
+ 
+@@ -325,7 +327,7 @@
+   const uniqueProse = [...new Set(target.paragraphs.map((item) => item.text))].join('\n');
+   row.bodyMetrics = { lettersAndNumbers: letters(prose), uniqueParagraphLettersAndNumbers: letters(uniqueProse), paragraphs: target.paragraphs.length, h1: target.h1.length };
+   if (letters(prose) < MIN_BODY_LETTERS || letters(uniqueProse) < MIN_UNIQUE_BODY_LETTERS) addError(row, 'body-too-short', 'Insufficient substantive visible prose (URLs, code and images do not count)', { minimumLettersAndNumbers: MIN_BODY_LETTERS, minimumUnique: MIN_UNIQUE_BODY_LETTERS, ...row.bodyMetrics });
+-  for (const passage of [...target.fields, ...target.paragraphs, ...target.headings]) if (PLACEHOLDER.test(passage.text)) addError(row, 'placeholder', 'Unfinished placeholder text', passage);
++  for (const passage of [...target.fields, ...target.paragraphs, ...target.headings]) if (PLACEHOLDER.test(passage.text) || TODO_PLACEHOLDER.test(passage.text)) addError(row, 'placeholder', 'Unfinished placeholder text', passage);
+   for (const line of target.h1) addError(row, 'body-h1', 'New manuscripts must not repeat the page title as body H1', { line });
+   for (const item of target.strong) {
+     if (item.quoted) addReview(row, 'quoted-bold', 'Confirm that bold markers are literal quoted content rather than decoration', item);

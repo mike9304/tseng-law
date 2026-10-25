@@ -1,0 +1,284 @@
+{
+  "createdAt": "2026-10-25T16:21:26.015033+00:00",
+  "toolHashes": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "128fe9c0a911f0f85b5423453ec681866b452185628a0fe6e311c829e05c4106",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/lt.json": "a91bc6f0a6d80aada83de9c463836b6c4c4d724eddc32ff18905b573642d3694",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/mn.json": "f55713d7239df7da1e2c86c8bc1698a36377fe36175b435383a16a26830d56f5",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/sr.json": "b82eac56b6e35c4a08e8029317975be46ee3930f2366633a704dd487a69d0419",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/et.json": "1cb9d12e7653189b58cdc1f8fd480608d967f70db0fddc9951598610b35d0b5a",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/lv.json": "09dc74f01e20b3430b1bf00c1e9ae4c2b941e081505e63cd4f9d86fb8fdb836e",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/sl.json": "f7fdb543f7952d5e891a30fd5d167b3035a3933c982a01f6d70b03c5f554c040",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/km.json": "87c3558f74be7faaab25178d605a5dc332607046e64799ecbfd28cdbca688521"
+  },
+  "method": "Exact shared locale CLI on private snapshot bytes; does not replace each author/reviewer manual boundary and meaning record.",
+  "runs": [
+    {
+      "locale": "lt",
+      "argv": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lt/704-taiwan-arc-first-application.md",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "lt"
+      ],
+      "startedAt": "2026-10-25T16:21:25.852433+00:00",
+      "finishedAt": "2026-10-25T16:21:25.946093+00:00",
+      "exitCode": 0,
+      "stdout": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lt/704-taiwan-arc-first-application.md [lt] sentences=74 mean=12.3 cv=0.476 short=0.311 run3=0.069 opener_rep=0.05 cite_end=0.0 cite_para=0.35 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lt/705-taiwan-visa-residence-work-study-family.md [lt] sentences=77 mean=13.4 cv=0.456 short=0.247 run3=0.093 opener_rep=0.0 cite_end=0.0 cite_para=0.476 contrast=0 caveat=1 q=2\n  OK — no variety limit violated\n/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md [lt] sentences=92 mean=13.1 cv=0.482 short=0.283 run3=0.078 opener_rep=0.04 cite_end=0.0 cite_para=0.52 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "files": [
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/704-taiwan-arc-first-application.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lt/704-taiwan-arc-first-application.md",
+          "sha256": "f46f3545e94950ba11cb30f118689721608e6f9593a088a40b10f3b8618a35a9",
+          "snapshotHashVerified": true
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+          "sha256": "33b0cc65e3720963cac03710365c44c3c8a88a953309b38314680bca963c14c5",
+          "snapshotHashVerified": true
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+          "sha256": "4b2d935fa2496bf95b6e304f976e937221a6ab696ab9aa7cf526e2811c7cf1c6",
+          "snapshotHashVerified": true
+        }
+      ]
+    },
+    {
+      "locale": "mn",
+      "argv": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-mn/704-taiwan-arc-first-application.md",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "mn"
+      ],
+      "startedAt": "2026-10-25T16:21:25.853518+00:00",
+      "finishedAt": "2026-10-25T16:21:25.937745+00:00",
+      "exitCode": 0,
+      "stdout": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-mn/704-taiwan-arc-first-application.md [mn] sentences=71 mean=13.3 cv=0.497 short=0.268 run3=0.029 opener_rep=0.143 cite_end=0.0 cite_para=0.381 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-mn/705-taiwan-visa-residence-work-study-family.md [mn] sentences=75 mean=13.5 cv=0.473 short=0.24 run3=0.041 opener_rep=0.045 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md [mn] sentences=87 mean=13.6 cv=0.461 short=0.207 run3=0.047 opener_rep=0.0 cite_end=0.0 cite_para=0.48 contrast=0 caveat=1 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "files": [
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/704-taiwan-arc-first-application.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-mn/704-taiwan-arc-first-application.md",
+          "sha256": "c33ec471bf92fd0d55977d3e5e40dde1fed5130d73645c3836c43895b1f918de",
+          "snapshotHashVerified": true
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+          "sha256": "d54e05e91c9d6e9da6ee536009c01b9d44d34b0a78e74dbe07b2e294dde261ac",
+          "snapshotHashVerified": true
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+          "sha256": "f3ced3a9c5be6948ce8ead66d0110be0a8e8309f39f414712f24bff50de965a4",
+          "snapshotHashVerified": true
+        }
+      ]
+    },
+    {
+      "locale": "sr",
+      "argv": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sr/704-taiwan-arc-first-application.md",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "sr"
+      ],
+      "startedAt": "2026-10-25T16:21:25.853611+00:00",
+      "finishedAt": "2026-10-25T16:21:25.949166+00:00",
+      "exitCode": 0,
+      "stdout": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sr/704-taiwan-arc-first-application.md [sr] sentences=65 mean=13.3 cv=0.555 short=0.354 run3=0.0 opener_rep=0.053 cite_end=0.0 cite_para=0.316 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sr/705-taiwan-visa-residence-work-study-family.md [sr] sentences=71 mean=14.1 cv=0.46 short=0.197 run3=0.087 opener_rep=0.091 cite_end=0.0 cite_para=0.545 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md [sr] sentences=88 mean=14.0 cv=0.453 short=0.182 run3=0.093 opener_rep=0.148 cite_end=0.0 cite_para=0.481 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "files": [
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/704-taiwan-arc-first-application.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sr/704-taiwan-arc-first-application.md",
+          "sha256": "15229f8e599464d507976f6d91818d441c6a1c8be1448af31f79fd79b8730dac",
+          "snapshotHashVerified": true
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+          "sha256": "9057c2a83ef6e71ab6f576702943fdf604ae345b627b94d98986baf4a6b7d6b2",
+          "snapshotHashVerified": true
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+          "sha256": "1e5a3547ce8437f9ddb4f3a3b61dd62261a4a1dccaa63683d43d9692b73331d9",
+          "snapshotHashVerified": true
+        }
+      ]
+    },
+    {
+      "locale": "et",
+      "argv": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-et/704-taiwan-arc-first-application.md",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "et"
+      ],
+      "startedAt": "2026-10-25T16:21:25.853711+00:00",
+      "finishedAt": "2026-10-25T16:21:25.940203+00:00",
+      "exitCode": 0,
+      "stdout": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-et/704-taiwan-arc-first-application.md [et] sentences=64 mean=11.3 cv=0.477 short=0.406 run3=0.048 opener_rep=0.056 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-et/705-taiwan-visa-residence-work-study-family.md [et] sentences=74 mean=11.2 cv=0.522 short=0.392 run3=0.028 opener_rep=0.045 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md [et] sentences=90 mean=11.8 cv=0.459 short=0.367 run3=0.034 opener_rep=0.038 cite_end=0.0 cite_para=0.462 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "files": [
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/704-taiwan-arc-first-application.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-et/704-taiwan-arc-first-application.md",
+          "sha256": "f15069557979333b4febbff860e45755472675d20f056ac2d05664f788eaea96",
+          "snapshotHashVerified": true
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+          "sha256": "6bf9a4fca0d1b90d3bf0e4f46e4c87ba43cb5c4b32989ab3e98eaed52955acc8",
+          "snapshotHashVerified": true
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+          "sha256": "dce0dce717cd732bce40b187f43ef31cbcf0758d71256c129263c23fc7da856a",
+          "snapshotHashVerified": true
+        }
+      ]
+    },
+    {
+      "locale": "lv",
+      "argv": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lv/704-taiwan-arc-first-application.md",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "lv"
+      ],
+      "startedAt": "2026-10-25T16:21:25.854721+00:00",
+      "finishedAt": "2026-10-25T16:21:25.944912+00:00",
+      "exitCode": 0,
+      "stdout": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lv/704-taiwan-arc-first-application.md [lv] sentences=64 mean=11.9 cv=0.519 short=0.359 run3=0.032 opener_rep=0.048 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lv/705-taiwan-visa-residence-work-study-family.md [lv] sentences=69 mean=12.4 cv=0.502 short=0.304 run3=0.06 opener_rep=0.045 cite_end=0.0 cite_para=0.545 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md [lv] sentences=89 mean=12.5 cv=0.468 short=0.281 run3=0.057 opener_rep=0.0 cite_end=0.0 cite_para=0.444 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "files": [
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/704-taiwan-arc-first-application.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lv/704-taiwan-arc-first-application.md",
+          "sha256": "f47d6be694c2e9601fa457d64598379b5065fa48a94937d5ff11a76d3637c810",
+          "snapshotHashVerified": true
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+          "sha256": "de24030f670164d376227740b49a16a3e1883fa29def34a483fda0672a529102",
+          "snapshotHashVerified": true
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+          "sha256": "e5b600ba790cdbcd9f225c1703c81e28e7ab49974d504b4ba77b1070d48e700d",
+          "snapshotHashVerified": true
+        }
+      ]
+    },
+    {
+      "locale": "sl",
+      "argv": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sl/704-taiwan-arc-first-application.md",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "sl"
+      ],
+      "startedAt": "2026-10-25T16:21:25.854855+00:00",
+      "finishedAt": "2026-10-25T16:21:25.943437+00:00",
+      "exitCode": 0,
+      "stdout": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sl/704-taiwan-arc-first-application.md [sl] sentences=60 mean=13.7 cv=0.577 short=0.333 run3=0.017 opener_rep=0.111 cite_end=0.017 cite_para=0.278 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sl/705-taiwan-visa-residence-work-study-family.md [sl] sentences=69 mean=14.5 cv=0.48 short=0.246 run3=0.06 opener_rep=0.143 cite_end=0.0 cite_para=0.429 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md [sl] sentences=82 mean=14.8 cv=0.49 short=0.159 run3=0.05 opener_rep=0.24 cite_end=0.0 cite_para=0.52 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "files": [
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/704-taiwan-arc-first-application.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sl/704-taiwan-arc-first-application.md",
+          "sha256": "a87a3ac1137b0012120a56629dccc0e0d64dcbb55a2e2a6110e2be213cde6bd6",
+          "snapshotHashVerified": true
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+          "sha256": "90d5e07a124a7b1c6aeb46a5be8293a44007a58f6e2dad2593c96b1067834932",
+          "snapshotHashVerified": true
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+          "sha256": "d5b7581f6dcff33cdcb5b65e1b46bd0654e050acb94434bbdaab68222c0aca5b",
+          "snapshotHashVerified": true
+        }
+      ]
+    },
+    {
+      "locale": "km",
+      "argv": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-km/704-taiwan-arc-first-application.md",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+        "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+        "--lang",
+        "km"
+      ],
+      "startedAt": "2026-10-25T16:21:25.857048+00:00",
+      "finishedAt": "2026-10-25T16:21:26.014635+00:00",
+      "exitCode": 0,
+      "stdout": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-km/704-taiwan-arc-first-application.md [km] sentences=67 mean=16.2 cv=0.507 short=0.149 run3=0.031 opener_rep=0.15 cite_end=0.0 cite_para=0.3 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-km/705-taiwan-visa-residence-work-study-family.md [km] sentences=65 mean=16.8 cv=0.463 short=0.092 run3=0.032 opener_rep=0.0 cite_end=0.0 cite_para=0.5 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md [km] sentences=78 mean=16.1 cv=0.466 short=0.141 run3=0.039 opener_rep=0.12 cite_end=0.0 cite_para=0.52 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "files": [
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/704-taiwan-arc-first-application.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-km/704-taiwan-arc-first-application.md",
+          "sha256": "8ae680254e50bf202d7a3ebe1f886de19264a22251bdda5effbdc9c74b649b53",
+          "snapshotHashVerified": true
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+          "sha256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba",
+          "snapshotHashVerified": true
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch05/src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+          "snapshotFile": "/var/folders/x7/w92bx9bd09l65n9hpcq81b8h0000gn/T/integration-readiness-rdNGhL/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+          "sha256": "d1a5eff1eb9fed410075031876b059d635ac4c9de9cd75a61c5a2ac540371286",
+          "snapshotHashVerified": true
+        }
+      ]
+    }
+  ]
+}

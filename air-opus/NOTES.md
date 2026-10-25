@@ -516,3 +516,4 @@
 - 10-26 01:06 KST 정정: 00:57 줄의 '00:46 push에 알림 반영'은 틀림 — 5e0f6c1은 NOTES 1줄만 담았고 00:47 HANDOFF-air 알림은 아직 미전송(01:01 회차도 push 줄 없음, Studio 01:00 커밋 뒤 얕은 fetch 거부로 보임). 01:06 ref 재정렬(8a02625) 후 다음 회차 확인 중. 디스크 1.3Gi(100%).
 - 10-26 01:16 KST 쉼 유지: 디스크 2.3Gi(100%), 아직 부족. 01:11 Air push로 HANDOFF-air 알림 원격 반영 확인(1aa3446). ref 재정렬(33cfb44). Studio 변화 grok NOTES뿐, Astra 판정 대기.
 - 10-26 01:26 KST 쉼 유지: 디스크 2.3Gi(100%). Air 01:16 push 확인(554e312), ref 재정렬(de1a4ce). Studio 변화 grok NOTES뿐, Astra 판정 대기.
+- 10-26 01:36 KST 쉼 유지: 디스크 2.3Gi(100%). Air 01:26 push 확인(8a585ca), ref 재정렬(c6b9cea). Studio 변화 grok NOTES뿐, Astra 판정 대기.

@@ -1,0 +1,32 @@
+{
+  "reason": "Existing repository exact fictional-scene label test; both labels describe fiction. Only caption metadata is normalized, never article text, FAQ, alt or image.",
+  "files": [
+    {
+      "file": "src/content/columns-nb/704-taiwan-arc-first-application.md",
+      "before": "43eae981b3999cf13b943e69d789dcea616ba7519bbcaa97b7b9aa8dffcf5251",
+      "oldCaption": "Fiktiv scene",
+      "newCaption": "Oppdiktet scene",
+      "onlyCaptionChanged": true,
+      "after": "cba566d0784ea956b38847832ce22be370c76831194873328c900de2858c5340",
+      "diff": "--- before/704-taiwan-arc-first-application.md\n+++ after/704-taiwan-arc-first-application.md\n@@ -13,7 +13,7 @@\n author: \"legal-ai-assistant\"\n featured_image: \"/images/columns/taiwan-arc-first-application-20261024-v2.webp\"\n featured_image_alt: \"En enkel reisedokumentmappe, en dokumentperm og et lite blankt kort på et søknadsbord\"\n-featured_image_caption: \"Fiktiv scene\"\n+featured_image_caption: \"Oppdiktet scene\"\n faq:\n   - q: \"Når begynner fristen for mitt første ARC å løpe?\"\n     a: \"Ved innreise med oppholdsvisum og oppholdstillatelse regnes de 30 dagene fra dagen etter ankomst. Blir oppholdsvisumet utstedt etter innreise, regner BOCA 30 dager fra utstedelsesdatoen. Den som kommer visumfritt eller med besøksvisum, må først oppfylle vilkårene for sin oppholdskategori.\"\n"
+    },
+    {
+      "file": "src/content/columns-nb/705-taiwan-visa-residence-work-study-family.md",
+      "before": "12e38bdc71537107ea3667130075331efbc1c4f375ea424fa97a2f0309161571",
+      "oldCaption": "Fiktiv scene",
+      "newCaption": "Oppdiktet scene",
+      "onlyCaptionChanged": true,
+      "after": "cc836d5c7d11066b328cad6c725334a596e1463d1af290af0779b6575e1f6b88",
+      "diff": "--- before/705-taiwan-visa-residence-work-study-family.md\n+++ after/705-taiwan-visa-residence-work-study-family.md\n@@ -13,7 +13,7 @@\n author: \"legal-ai-assistant\"\n featured_image: \"/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp\"\n featured_image_alt: \"En lukket bærbar datamaskin, bøker og to kopper ved siden av en enkel reisedokumentmappe\"\n-featured_image_caption: \"Fiktiv scene\"\n+featured_image_caption: \"Oppdiktet scene\"\n faq:\n   - q: \"Kan jeg søke om opphold etter visumfri innreise i Taiwan?\"\n     a: \"Artikkel 16 i fagpersonloven tillater kvalifiserte fagpersoner med arbeidstillatelse eller et relevant unntak, og bestemte familiemedlemmer, å søke direkte til NIA. Innreiseordningen må også være kvalifisert. Ordinære ordninger for gradsgivende studier og mandarinstudier har andre innreisekrav.\"\n"
+    },
+    {
+      "file": "src/content/columns-nb/706-taiwan-arc-renewal-changes-reentry.md",
+      "before": "fadba2c1f345db167feb99eae18e6f509d9fe419feb71bd13cf1af65d5d4bf03",
+      "oldCaption": "Fiktiv scene",
+      "newCaption": "Oppdiktet scene",
+      "onlyCaptionChanged": true,
+      "after": "2c39c9657f8f8d704afbeb4b7640bd5faaf63debb0384a546966652128bbbea1",
+      "diff": "--- before/706-taiwan-arc-renewal-changes-reentry.md\n+++ after/706-taiwan-arc-renewal-changes-reentry.md\n@@ -13,7 +13,7 @@\n author: \"legal-ai-assistant\"\n featured_image: \"/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp\"\n featured_image_alt: \"En blank planleggingsbok, en enkel reisedokumentmappe, et lite kort og husnøkler på et skrivebord\"\n-featured_image_caption: \"Fiktiv scene\"\n+featured_image_caption: \"Oppdiktet scene\"\n faq:\n   - q: \"Hvor tidlig kan jeg fornye ARC?\"\n     a: \"Det ordinære søknadsvinduet åpner tre måneder før det tillatte oppholdet utløper. Fornyelse av Gold Card og kvalifiserte forlengelser av gründer-ARC for en fortsatt virksomhet i Taiwan har separate vinduer på fire måneder. Dette er frister for forhåndssøknad, ikke frister etter utløp.\"\n"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ audience: ["nb"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-first-application-20261024-v2.webp"
 featured_image_alt: "En enkel reisedokumentmappe, en dokumentperm og et lite blankt kort på et søknadsbord"
-featured_image_caption: "Fiktiv scene"
+featured_image_caption: "Oppdiktet scene"
 faq:
   - q: "Når begynner fristen for mitt første ARC å løpe?"
     a: "Ved innreise med oppholdsvisum og oppholdstillatelse regnes de 30 dagene fra dagen etter ankomst. Blir oppholdsvisumet utstedt etter innreise, regner BOCA 30 dager fra utstedelsesdatoen. Den som kommer visumfritt eller med besøksvisum, må først oppfylle vilkårene for sin oppholdskategori."

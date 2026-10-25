@@ -13,7 +13,7 @@ audience: ["nb"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp"
 featured_image_alt: "En lukket bærbar datamaskin, bøker og to kopper ved siden av en enkel reisedokumentmappe"
-featured_image_caption: "Fiktiv scene"
+featured_image_caption: "Oppdiktet scene"
 faq:
   - q: "Kan jeg søke om opphold etter visumfri innreise i Taiwan?"
     a: "Artikkel 16 i fagpersonloven tillater kvalifiserte fagpersoner med arbeidstillatelse eller et relevant unntak, og bestemte familiemedlemmer, å søke direkte til NIA. Innreiseordningen må også være kvalifisert. Ordinære ordninger for gradsgivende studier og mandarinstudier har andre innreisekrav."

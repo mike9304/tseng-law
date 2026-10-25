@@ -20,17 +20,17 @@
     {
       "locale": "nb",
       "file": "src/content/columns-nb/704-taiwan-arc-first-application.md",
-      "sha256": "43eae981b3999cf13b943e69d789dcea616ba7519bbcaa97b7b9aa8dffcf5251"
+      "sha256": "cba566d0784ea956b38847832ce22be370c76831194873328c900de2858c5340"
     },
     {
       "locale": "nb",
       "file": "src/content/columns-nb/705-taiwan-visa-residence-work-study-family.md",
-      "sha256": "12e38bdc71537107ea3667130075331efbc1c4f375ea424fa97a2f0309161571"
+      "sha256": "cc836d5c7d11066b328cad6c725334a596e1463d1af290af0779b6575e1f6b88"
     },
     {
       "locale": "nb",
       "file": "src/content/columns-nb/706-taiwan-arc-renewal-changes-reentry.md",
-      "sha256": "fadba2c1f345db167feb99eae18e6f509d9fe419feb71bd13cf1af65d5d4bf03"
+      "sha256": "2c39c9657f8f8d704afbeb4b7640bd5faaf63debb0384a546966652128bbbea1"
     },
     {
       "locale": "fi",
@@ -118,5 +118,6 @@
     "src/content/columns-zh/704-taiwan-arc-first-application.md": "0c00bc06bf3c3c1860a95af4dbcea9eaab981300860916856295e8b947244468",
     "src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md": "290a50047632ad830ea98c524ffef6ed91c2b4c8d555a1844689824c3ffea7a3",
     "src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md": "4d70e78b9a197f4a2b81d25d61b6fa862ee849a6392d5fd905e90bcf781e721c"
-  }
+  },
+  "captionNormalization": "nb-caption-normalization.json"
 }

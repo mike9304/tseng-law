@@ -13,7 +13,7 @@ audience: ["nb"]
 author: "legal-ai-assistant"
 featured_image: "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp"
 featured_image_alt: "En blank planleggingsbok, en enkel reisedokumentmappe, et lite kort og husnøkler på et skrivebord"
-featured_image_caption: "Fiktiv scene"
+featured_image_caption: "Oppdiktet scene"
 faq:
   - q: "Hvor tidlig kan jeg fornye ARC?"
     a: "Det ordinære søknadsvinduet åpner tre måneder før det tillatte oppholdet utløper. Fornyelse av Gold Card og kvalifiserte forlengelser av gründer-ARC for en fortsatt virksomhet i Taiwan har separate vinduer på fire måneder. Dette er frister for forhåndssøknad, ikke frister etter utløp."

@@ -43,3 +43,8 @@
 /Users/son7/tseng-all-language-columns-20261025/batch02/src/content/columns-nb/706-taiwan-arc-renewal-changes-reentry.md [nb] sentences=92 mean=13.5 cv=0.476 short=0.261 run3=0.056 opener_rep=0.083 cite_end=0.0 cite_para=0.542 contrast=0 caveat=0 q=1
   OK — no variety limit violated
 ```
+
+
+## Repository caption normalization — 2026-10-25
+
+Root normalized the three fictional labels from `Fiktiv scene` to the exact existing Norwegian label `Oppdiktet scene`. Both mean a fictional scene; no factual image claim changed. Full exact diffs and pre/post SHA are in ../checks/nb-caption-normalization.json. Article bodies, FAQs, image alt text and references are byte-identical. The preceding independent semantic review binds the unchanged body; it is not relabeled as a new review of these caption hashes. Final build/browser checks will use the normalized version.

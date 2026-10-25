@@ -1,0 +1,171 @@
+{
+  "at": "2026-10-26T02:37:21.571392+09:00",
+  "status": "LOCAL_FINAL_ARTIFACT_QA_PASS",
+  "commit": "63f5fad925cba35d71c44d37fd48071c3409c862",
+  "artifact": "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch05-release26",
+  "dataMode": "localfallback; not productionCMSmirror parity",
+  "build": {
+    "exitCode": 0,
+    "crawlPages": 2824,
+    "htmlPages": 3016,
+    "files": 5385,
+    "bytes": 469679857,
+    "sitemapURLs": 2819,
+    "brokenMissingOversizeFlight": 0,
+    "command": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/static-build-release26-command.json",
+      "sha256": "febb25778d9151b146b238b3e4e96006335e25b6a47753d61831ff5189126ef7",
+      "bytes": 1271551
+    },
+    "report": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/static-build-release26-report.json",
+      "sha256": "e5a9cf5235a808b5597577a68fac2c22341b4496fb8f498d4664e842bfa62241",
+      "bytes": 3439
+    }
+  },
+  "browserPrimary": {
+    "total": 64,
+    "passed": 64,
+    "failed": 0,
+    "exitCode": 0,
+    "report": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-arc-results.json",
+      "sha256": "1ea7b1e3f2fb19d72821af9dfb67aea1b5138fb963983690d33a8c9472472895",
+      "bytes": 1706241
+    },
+    "command": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-arc-command.json",
+      "sha256": "0444b5a5c9b235df7302cde61d52806f0d4627e34d1ab664961a48a5fad7a7ce",
+      "bytes": 704
+    }
+  },
+  "heRegression": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "exitCode": 0,
+    "identifiers231": 4,
+    "allVisibleSingleLineLTR": true,
+    "rtlTokenCount": 93,
+    "report": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-he706-results.json",
+      "sha256": "6c3be24883fb09f9b3fdf0f19509e939e160154fc216fd12aadd6efab8740998",
+      "bytes": 492654
+    },
+    "screenshot": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-he-706-rtl-table.png",
+      "sha256": "67238eabe998e358f8da5586eebb2c484c4a32ccd756697980317140dbef0774",
+      "bytes": 76647
+    }
+  },
+  "static147": {
+    "total": 147,
+    "passed": 147,
+    "failed": 0,
+    "bodySegments": 6553,
+    "exitCode": 0,
+    "report": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/static-arc147-r2.json",
+      "sha256": "5693aa268d8b9ec2a5b5a5465a6ef0d45af74fb329195900311e1cfb599ed5bc",
+      "bytes": 260052
+    },
+    "initialFailedHarnessReport": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/static-arc147.json",
+      "sha256": "62dddcb17476f0a6f86b25f5daf58411acae6291ffc5565144cdf99e7497b242",
+      "bytes": 273086
+    },
+    "correctionReceipt": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/static-harness-corrections.json",
+      "sha256": "957954c8a5930bab8f920fd5de685a89de46e15e5f6513d4a7326825f9e7275e",
+      "bytes": 4316
+    }
+  },
+  "pack": {
+    "pages": 3016,
+    "assets": 2366,
+    "expandedBytes": 168180980,
+    "limitBytes": 268435456,
+    "headroomBytes": 100254476,
+    "expandedMiB": 160.3898811340332,
+    "headroomMiB": 95.6101188659668,
+    "gzipHtmlRoundTrips": 3016,
+    "unchangedAssets": 2366,
+    "verificationFailures": 0,
+    "packerSha256": "c983e275e92ef2aff523f6307069ca54121fc79400e9c247fa02f7c1b73d85e7",
+    "workerTemplateSha256": "1d822b535ea1011a27fd037cfb2f9cef9245aacb0cc541b26d926c55923998b9"
+  },
+  "packEvidence": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-pack-report.json",
+    "sha256": "9e460f234be249a63618bc9e148d7f0e28276449714b41e199404e97359b8eb5",
+    "bytes": 1385895
+  },
+  "packConfigEvidence": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/pack-config-verify.json",
+    "sha256": "9283c262ec0179ffdbea7c6789e1532f8f0d4399c995bd42d875902e518ea7fc",
+    "bytes": 3167
+  },
+  "visualReview": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/visual-review.json",
+    "sha256": "dce45677c5199f19b46ec0d2a9ae654417438fcb18f4f08b0c6a35e83db7c045",
+    "bytes": 3127
+  },
+  "sourceProof": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/final-source-proof.json",
+    "sha256": "2b16a070267f7511774ab39c4125f367c968e3620b42d5081ae70b9eb59b1ba0",
+    "bytes": 6478
+  },
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/REPORT.md",
+    "sha256": "1ef2fc37ec95ed25751561e37fa82daf8c8a61d036f97c2602d242a3afe74bb5",
+    "bytes": 5327
+  },
+  "representativeScreenshots": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-he-706-rtl-table.png",
+      "sha256": "67238eabe998e358f8da5586eebb2c484c4a32ccd756697980317140dbef0774",
+      "bytes": 76647
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-km-704-body.png",
+      "sha256": "d3ede365cbe7e77864e5f226414e98c6ecf0abf453221a2031c16fde7b86fde4",
+      "bytes": 219941
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-mn-705-body.png",
+      "sha256": "69d3232ffcf3afee4747aac01aa476d58f5431bd40dbb600fc6019e4dac61695",
+      "bytes": 218871
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-sr-704-body.png",
+      "sha256": "43a188973039d65b3e5c5051e43230abfc5dcb3158dd86cdac3793f903ee334f",
+      "bytes": 225587
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-sl-706-body.png",
+      "sha256": "960b608f3cf08fc4fb7f63d3da274256c87b79f7928e0bc62fbe14de36c949f1",
+      "bytes": 235540
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-lt-704-body.png",
+      "sha256": "a11875aa63bf5059026e263b190526406d74f1a31d9e51147cd84cffe41bd19b",
+      "bytes": 245013
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-lv-706-body.png",
+      "sha256": "6255b92e2dd551525e2a2ba8f64c7bd4c2401a4eecba280733063a64277bf968",
+      "bytes": 231292
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-et-705-body.png",
+      "sha256": "4b8db61bc6ba7265778c4443b7ce69920dd66d2677986d8b5d9221a4bbcc3ce6",
+      "bytes": 251512
+    }
+  ],
+  "noSourceMutationCommitPushDeploy": true,
+  "publicationVerified": false,
+  "limits": [
+    "AI localartifact verification, not human-native/lawyer approval.",
+    "No productionCMSmirror/publicAir/Cloudflare delivery verification in this task.",
+    "All147ARC completeness does not finish49×286 professional-column parity."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "startedAt": "2026-10-26T02:29:30.650608+09:00",
+  "command": [
+    "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/scripts/static-site/sites-pack.mjs",
+    "--out=/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch05-release26",
+    "--dist=/Users/son7/tseng-all-language-columns-20261025/batch05/release26/pack",
+    "--host=tseng-law.com"
+  ],
+  "packerSHA256": "c983e275e92ef2aff523f6307069ca54121fc79400e9c247fa02f7c1b73d85e7",
+  "workerSHA256": "1d822b535ea1011a27fd037cfb2f9cef9245aacb0cc541b26d926c55923998b9",
+  "exitCode": 0,
+  "finishedAt": "2026-10-26T02:29:37.727425+09:00",
+  "packerUnchanged": true,
+  "logSHA256": "390be1f26f4b881cccf3df590f8af0a799e6dfa55876061c3e8757da5b2cd52d"
+}

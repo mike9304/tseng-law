@@ -1,0 +1,61 @@
+{
+  "at": "2026-10-26T02:30:59.464638+09:00",
+  "initialScript": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/verification/static-arc147.mjs",
+    "sha256": "66f08ca41ff4ef5f48bf5e9126722d9dd9c576b778f41d90d815a67621172a6a"
+  },
+  "initialReport": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/static-arc147.json",
+    "sha256": "62dddcb17476f0a6f86b25f5daf58411acae6291ffc5565144cdf99e7497b242"
+  },
+  "initialResult": "147 rows fail only two wrong harness assumptions; body6553blocks and otherchecks passed.",
+  "changes": [
+    {
+      "before": "const reportFile=path.join(D,'checks/static-arc147.json');",
+      "after": "const reportFile=path.join(D,'checks/static-arc147-r2.json');"
+    },
+    {
+      "before": "const rows=[];",
+      "after": "const media=JSON.parse(read('/Users/son7/tseng-all-language-columns-20261025/batch05/checks/static-build-release26-media.json'));\nif(media.mediaOrigin!=='https://media.tseng-law.com'||media.missingReferences.length)throw Error('Unexpected build media-origin contract');\nconst mediaByKey=new Map(media.files.map(row=>[row.key,row]));\nconst heroSourceHashes=new Map();\nread(path.join(R,'scripts/static-site/assemble.mjs'));read(path.join(R,'src/app/sitemap.ts'));\nconst rows=[];"
+    },
+    {
+      "before": "check(fs.existsSync(path.join(O,data.featured_image)),'hero asset missing from artifact');",
+      "after": "const mediaAsset=mediaByKey.get(data.featured_image.replace(/^\\//,''));\n check(mediaAsset&&actualImage===`${media.mediaOrigin}${data.featured_image}`&&fs.existsSync(mediaAsset.source)&&fs.statSync(mediaAsset.source).size===mediaAsset.bytes&&!fs.existsSync(path.join(O,data.featured_image)),'hero media-origin URL/manifest/source/intentional local exclusion mismatch');\n if(mediaAsset&&!heroSourceHashes.has(mediaAsset.key))heroSourceHashes.set(mediaAsset.key,sha(read(mediaAsset.source)));"
+    },
+    {
+      "before": "check(sitemapLinks.length===49&&sameSet(sitemapLinks.map(a=>new URL(a.href).pathname),expectedLinks),'sitemap reciprocal49 cluster mismatch');",
+      "after": "check(sitemapLinks.length===50&&sameSet(sitemapLinks.filter(a=>a.lang!=='x-default').map(a=>new URL(a.href).pathname),expectedLinks),'sitemap reciprocal49 cluster mismatch');\n check(sitemapLinks.find(a=>a.lang==='x-default')?.href===`https://tseng-law.com/en/columns/${slug}`,'sitemap x-default must point to existing English version');"
+    },
+    {
+      "before": "buildInfo,inputHashes:Object.fromEntries(inputs),inputsUnchanged,rows,summary:",
+      "after": "buildInfo,mediaContract:{origin:media.mediaOrigin,mediaFiles:media.files.length,missingReferences:media.missingReferences,heroSourceHashes:Object.fromEntries(heroSourceHashes)},inputHashes:Object.fromEntries(inputs),inputsUnchanged,rows,summary:"
+    }
+  ],
+  "correctedScript": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/verification/static-arc147-r2.mjs",
+    "sha256": "539c114fc87946ddb5cd144b25ae318294af39b38d0caec40a28b61929de5347"
+  },
+  "sourceContractEvidence": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/scripts/static-site/assemble.mjs",
+      "sha256": "e0f527322c6f264ff3fc59f1c26fd67f9b4fb45fbb65dda78046ba3d7caaf61e",
+      "lines": "MEDIA_DIRS/rewriteMediaRefs/moveMediaToOrigin: all nonbrand images/video live on media-origin and are absent fromout."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/sitemap.ts",
+      "sha256": "d810e1753ff08ee79b09942a35b6121586074a5d92a40bd1207b0c9b87f6e939",
+      "lines": "createEntry uses getLanguageAlternates with xDefaultWithinCluster; current3 ARC each49+Englishx-default."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/seo.ts",
+      "sha256": "c53f1a54564ef810f39d76dfd952eea3c23ce5debad61b3f3170d6937115c0d4",
+      "lines": "getLanguageAlternates returns explicitx-default after locale map."
+    }
+  ],
+  "mediaManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/checks/static-build-release26-media.json",
+    "sha256": "9bb73eae98f60a412c714d80d9e7b1fb861bc0e89e237d13074fce0be7d38a09"
+  },
+  "sourceOrArtifactEdited": false,
+  "initialEvidencePreserved": true
+}

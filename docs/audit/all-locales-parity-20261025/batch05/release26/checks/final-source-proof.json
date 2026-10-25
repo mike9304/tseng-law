@@ -1,0 +1,158 @@
+{
+  "at": "2026-10-26T02:37:21.557120+09:00",
+  "HEAD": "63f5fad925cba35d71c44d37fd48071c3409c862",
+  "gitStatus": "",
+  "selected22": [
+    {
+      "path": "src/content/columns-km/704-taiwan-arc-first-application.md",
+      "bytes": 27901,
+      "sha256": "8ae680254e50bf202d7a3ebe1f886de19264a22251bdda5effbdc9c74b649b53"
+    },
+    {
+      "path": "src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+      "bytes": 26623,
+      "sha256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba"
+    },
+    {
+      "path": "src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+      "bytes": 30097,
+      "sha256": "d1a5eff1eb9fed410075031876b059d635ac4c9de9cd75a61c5a2ac540371286"
+    },
+    {
+      "path": "src/content/columns-mn/704-taiwan-arc-first-application.md",
+      "bytes": 19583,
+      "sha256": "c33ec471bf92fd0d55977d3e5e40dde1fed5130d73645c3836c43895b1f918de"
+    },
+    {
+      "path": "src/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+      "bytes": 21424,
+      "sha256": "d54e05e91c9d6e9da6ee536009c01b9d44d34b0a78e74dbe07b2e294dde261ac"
+    },
+    {
+      "path": "src/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+      "bytes": 25173,
+      "sha256": "f3ced3a9c5be6948ce8ead66d0110be0a8e8309f39f414712f24bff50de965a4"
+    },
+    {
+      "path": "src/content/columns-sr/704-taiwan-arc-first-application.md",
+      "bytes": 11816,
+      "sha256": "15229f8e599464d507976f6d91818d441c6a1c8be1448af31f79fd79b8730dac"
+    },
+    {
+      "path": "src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+      "bytes": 12246,
+      "sha256": "9057c2a83ef6e71ab6f576702943fdf604ae345b627b94d98986baf4a6b7d6b2"
+    },
+    {
+      "path": "src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+      "bytes": 15018,
+      "sha256": "1e5a3547ce8437f9ddb4f3a3b61dd62261a4a1dccaa63683d43d9692b73331d9"
+    },
+    {
+      "path": "src/content/columns-sl/704-taiwan-arc-first-application.md",
+      "bytes": 11474,
+      "sha256": "a87a3ac1137b0012120a56629dccc0e0d64dcbb55a2e2a6110e2be213cde6bd6"
+    },
+    {
+      "path": "src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "bytes": 12595,
+      "sha256": "90d5e07a124a7b1c6aeb46a5be8293a44007a58f6e2dad2593c96b1067834932"
+    },
+    {
+      "path": "src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "bytes": 15362,
+      "sha256": "d5b7581f6dcff33cdcb5b65e1b46bd0654e050acb94434bbdaab68222c0aca5b"
+    },
+    {
+      "path": "src/content/columns-lt/704-taiwan-arc-first-application.md",
+      "bytes": 14236,
+      "sha256": "f46f3545e94950ba11cb30f118689721608e6f9593a088a40b10f3b8618a35a9"
+    },
+    {
+      "path": "src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "bytes": 14443,
+      "sha256": "33b0cc65e3720963cac03710365c44c3c8a88a953309b38314680bca963c14c5"
+    },
+    {
+      "path": "src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "bytes": 17555,
+      "sha256": "4b2d935fa2496bf95b6e304f976e937221a6ab696ab9aa7cf526e2811c7cf1c6"
+    },
+    {
+      "path": "src/content/columns-lv/704-taiwan-arc-first-application.md",
+      "bytes": 12919,
+      "sha256": "f47d6be694c2e9601fa457d64598379b5065fa48a94937d5ff11a76d3637c810"
+    },
+    {
+      "path": "src/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+      "bytes": 13259,
+      "sha256": "de24030f670164d376227740b49a16a3e1883fa29def34a483fda0672a529102"
+    },
+    {
+      "path": "src/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+      "bytes": 16268,
+      "sha256": "e5b600ba790cdbcd9f225c1703c81e28e7ab49974d504b4ba77b1070d48e700d"
+    },
+    {
+      "path": "src/content/columns-et/704-taiwan-arc-first-application.md",
+      "bytes": 11716,
+      "sha256": "f15069557979333b4febbff860e45755472675d20f056ac2d05664f788eaea96"
+    },
+    {
+      "path": "src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+      "bytes": 12484,
+      "sha256": "6bf9a4fca0d1b90d3bf0e4f46e4c87ba43cb5c4b32989ab3e98eaed52955acc8"
+    },
+    {
+      "path": "src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+      "bytes": 14866,
+      "sha256": "dce0dce717cd732bce40b187f43ef31cbcf0758d71256c129263c23fc7da856a"
+    },
+    {
+      "path": "src/content/columns-de/704-taiwan-arc-first-application.md",
+      "bytes": 12712,
+      "sha256": "e4088a2d7a48a32b0f63c7642fc4557e537c7db6d840daa69dec09329d200ce2"
+    }
+  ],
+  "heRegressionSource": {
+    "path": "src/content/columns-he/706-taiwan-arc-renewal-changes-reentry.md",
+    "bytes": 20544,
+    "sha256": "fa78467ebf94880a503e0549e6f00b73950771324285d92524996f8e09f87b3d"
+  },
+  "allSourceMarkdownCount": 2250,
+  "sourceTreeSHA256": "76e7164836f3ee9ce75e21b021ab198e2098387ea9d902071de55ad3362b7f62",
+  "artifactFileCount": 5385,
+  "artifactBytes": 469679857,
+  "artifactTreeSHA256": "695ac6a83f247b7de62838f0f36cadd3c4be2d3f6d5860ed35ec623ca0a96211",
+  "snapshotBefore": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/snapshot-before.json",
+    "sha256": "136e2cd3ae04d5e1c372d09233c4c14a0a72deb70564dd5d86feeba6f9475495",
+    "bytes": 14799335
+  },
+  "snapshotAfter": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/snapshot-after.json",
+    "sha256": "20a281f43a2ec1626886186bf20ccaf3d80dbeec32633e740a9e7418b99fc89c",
+    "bytes": 14799549
+  },
+  "beforeAfterChecks": {
+    "head": true,
+    "buildInfo": true,
+    "sources": true,
+    "heRegressionSource": true,
+    "allSources": true,
+    "artifacts": true
+  },
+  "preservedPreviousFiles": {
+    "/Users/son7/tseng-all-language-columns-20261025/batch03": 16809,
+    "/Users/son7/tseng-all-language-columns-20261025/batch04": 15364,
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch03": 5343,
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch03-release26": 5347,
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch04-release26": 5364,
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch04-release26-final": 5364,
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch04-release26-with-local-media": 7510
+  },
+  "preservedPreviousFileCount": 61101,
+  "preservedDrift": [],
+  "preservedAdditions": {},
+  "noSourceEditsCommitPushDeploy": true
+}

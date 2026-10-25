@@ -1,0 +1,12 @@
+{
+  "startedAt": "2026-10-26T02:29:30.650603+09:00",
+  "command": [
+    "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/verification/static-arc147.mjs"
+  ],
+  "scriptSHA256": "66f08ca41ff4ef5f48bf5e9126722d9dd9c576b778f41d90d815a67621172a6a",
+  "exitCode": 1,
+  "finishedAt": "2026-10-26T02:29:31.548668+09:00",
+  "scriptUnchanged": true,
+  "logSHA256": "b565d6198b8afa83d6e35f29fdf9a3351f397dd4b687cd0063ffa94a16cb8c6e"
+}

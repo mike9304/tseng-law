@@ -1,0 +1,53 @@
+{
+  "at": "2026-10-26T02:37:21.389389+09:00",
+  "method": "Images opened with view_image and visually inspected by this AI reviewer. No DOM/CSS/source mutation. Not native-human or lawyer approval.",
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-he-706-rtl-table.png",
+      "sha256": "67238eabe998e358f8da5586eebb2c484c4a32ccd756697980317140dbef0774",
+      "bytes": 76647
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-km-704-body.png",
+      "sha256": "d3ede365cbe7e77864e5f226414e98c6ecf0abf453221a2031c16fde7b86fde4",
+      "bytes": 219941
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-mn-705-body.png",
+      "sha256": "69d3232ffcf3afee4747aac01aa476d58f5431bd40dbb600fc6019e4dac61695",
+      "bytes": 218871
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-sr-704-body.png",
+      "sha256": "43a188973039d65b3e5c5051e43230abfc5dcb3158dd86cdac3793f903ee334f",
+      "bytes": 225587
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-sl-706-body.png",
+      "sha256": "960b608f3cf08fc4fb7f63d3da274256c87b79f7928e0bc62fbe14de36c949f1",
+      "bytes": 235540
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-lt-704-body.png",
+      "sha256": "a11875aa63bf5059026e263b190526406d74f1a31d9e51147cd84cffe41bd19b",
+      "bytes": 245013
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-lv-706-body.png",
+      "sha256": "6255b92e2dd551525e2a2ba8f64c7bd4c2401a4eecba280733063a64277bf968",
+      "bytes": 231292
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-screenshots/mobile-et-705-body.png",
+      "sha256": "4b8db61bc6ba7265778c4443b7ce69920dd66d2677986d8b5d9221a4bbcc3ce6",
+      "bytes": 251512
+    }
+  ],
+  "observations": {
+    "he706": "Both table identifiers23-1 stay intact on one visual line. RTL column order and30/15-day cells remain readable in390px actualartifact capture. DOM Range check independently verifies all4 occurrences single-line/LTR.",
+    "km": "Selected title/caption/opening Khmer glyphs are visible without observed missing-glyph boxes, overlap or viewport clipping.",
+    "mn": "Selected Cyrillic title and opening render with visible paragraph/link structure and no observed overlap.",
+    "sr_sl_lt_lv_et": "Each selected mobile title/caption/first paragraph is readable with visible Latin diacritics and no observed clipping/overlap; decorative drop caps are existing runtime styling."
+  },
+  "limitations": "Only the listed screenshots were manually viewed; body parity/FAQ/metadata and all22 changed pages are separately machine-checked across64 browser cases."
+}

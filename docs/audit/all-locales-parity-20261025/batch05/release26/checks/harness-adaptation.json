@@ -1,0 +1,84 @@
+{
+  "at": "2026-10-26T02:24:46.959414+09:00",
+  "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/verification/browser-arc.mjs",
+  "sourceSHA256": "99db84bcad1f22d209baf247e3022d31fb2d7adb950b32af1117681b1f65a58c",
+  "target": "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/verification/browser-arc.mjs",
+  "targetSHA256": "eeb033d331db11e5d2a5fb5e3ba9d50dd1d4bfa41b469c07981844eac64fecc9",
+  "changes": [
+    {
+      "before": "const LOCALES = ['he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne'];",
+      "after": "const LOCALES = ['km', 'mn', 'sr', 'sl', 'lt', 'lv', 'et'];"
+    },
+    {
+      "before": "const RTL_LOCALES = new Set(['he', 'ur', 'fa']);",
+      "after": "const RTL_LOCALES = new Set(['he']); // Existing HE706 mobile regression only."
+    },
+    {
+      "before": "const ARC_LOCALES = ['ko', 'zh-hant', 'en', 'ja', 'vi', 'id', 'th', 'ar', 'de', 'es', 'fr', 'pt', 'it', 'hi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', ...LOCALES];",
+      "after": "const ARC_LOCALES = ['ko','zh-hant','en','ja','vi','id','th','fil','ar','de','es','fr','pt','zh-hans','ms','ru','tr','it','nl','pl','hi','sv','da','nb','fi','cs','hu','ro','uk','el','he','bn','ur','fa','my','ta','ne','km','mn','sk','bg','hr','sr','sl','lt','lv','et','ca','is']; // All 49 have these three ARC articles."
+    },
+    {
+      "before": "const BROWSER_LANGUAGES = { he:'he-IL', bn:'bn-BD', ur:'ur-PK', fa:'fa-IR', my:'my-MM', ta:'ta-IN', ne:'ne-NP', ko:'ko-KR', en:'en-US' };",
+      "after": "const BROWSER_LANGUAGES = { km:'km-KH', mn:'mn-MN', sr:'sr-Latn-RS', sl:'sl-SI', lt:'lt-LT', lv:'lv-LV', et:'et-EE', de:'de-DE', he:'he-IL', ko:'ko-KR', en:'en-US' };"
+    },
+    {
+      "before": "out:'out-all-locales-batch04-release26-final', report:'/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/checks/browser-arc-results.json'",
+      "after": "out:'out-all-locales-batch05-release26', report:'/Users/son7/tseng-all-language-columns-20261025/batch05/release26/checks/browser-arc-results.json'"
+    },
+    {
+      "before": "if (!['','rtl705'].includes(args.focus))",
+      "after": "if (!['','he706'].includes(args.focus))"
+    },
+    {
+      "before": "const MANUSCRIPTS = LOCALES.flatMap(locale=>SLUGS.map((slug,index)=>({locale,slug,index})));",
+      "after": "const MANUSCRIPTS = [...LOCALES.flatMap(locale=>SLUGS.map((slug,index)=>({locale,slug,index}))), {locale:'de',slug:SLUGS[0],index:0}, {locale:'he',slug:SLUGS[2],index:2}];"
+    },
+    {
+      "before": "selectedFocus:args.focus||'all62', scopeNote:'Local unpublished artifact identified by its build-info commit, HTML SHA and manuscript SHA. The 21 new B4 articles are file-backed; HE/UR/FA direction, identifiers, numbers and tables are checked in the actual page. Core CMS mirror parity is outside this verification scope.'",
+      "after": "selectedFocus:args.focus||'primary64', scopeNote:'B5 existing artifact:21 new articles plusDE704 correction yield64 primary browser cases; --focus=he706 runs one separate mobile390 regression on the actual artifact. Exact49ARC cluster and home49. Local builder fallback is not production CMS mirror parity.'"
+    },
+    {
+      "before": "body:document.querySelector('.column-markdown')?.textContent,",
+      "after": "body:document.querySelector('.column-markdown')?.textContent,\n    tableCount:document.querySelectorAll('.column-markdown table').length,"
+    },
+    {
+      "before": "check(row,(snapshot.body?.length??0)>500,'substantive rendered body missing');",
+      "after": "check(row,(snapshot.body?.length??0)>500,'substantive rendered body missing');\n  check(row,snapshot.tableCount===expected.tableCount,'rendered table count differs from the actual source AST');"
+    },
+    {
+      "before": "exactly the 42 published ARC versions",
+      "after": "exactly the 49 published ARC versions",
+      "count": 1
+    },
+    {
+      "before": "the 42 published ARC versions",
+      "after": "the 49 published ARC versions",
+      "count": 1
+    },
+    {
+      "before": "exactly the 42 same-slug translations",
+      "after": "exactly the 49 same-slug translations",
+      "count": 1
+    },
+    {
+      "before": "'HE/UR/FA DOM does not inherit genuine RTL direction'",
+      "after": "'HE706 DOM does not inherit genuine RTL direction'"
+    },
+    {
+      "before": "const row={kind:'article',mode,locale:item.locale",
+      "after": "const row={kind:args.focus==='he706'?'regression':'article',mode,locale:item.locale"
+    },
+    {
+      "before": "for(const mode of ['desktop','mobile'])if(args.phase==='all'||args.phase===mode)for(const item of manifest.values())if(!args.focus||(RTL_LOCALES.has(item.locale)&&item.slug===SLUGS[1]))tasks.push(()=>runArticle(browser,base,item,mode));",
+      "after": "for(const mode of ['desktop','mobile'])if(args.phase==='all'||args.phase===mode)for(const item of manifest.values())if(args.focus==='he706' ? item.locale==='he'&&mode==='mobile' : item.locale!=='he')tasks.push(()=>runArticle(browser,base,item,mode));"
+    },
+    {
+      "before": "const expectedCases=args.focus==='rtl705'?6:62;",
+      "after": "const expectedCases=args.focus==='he706'?1:64;"
+    }
+  ],
+  "primaryExpected": 64,
+  "separateHE706": 1,
+  "runtimeSourceEdited": false,
+  "packerVerifierOnlyOutputRootChanged": true
+}

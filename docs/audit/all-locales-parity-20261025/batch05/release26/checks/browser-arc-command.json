@@ -1,0 +1,16 @@
+{
+  "startedAt": "2026-10-26T02:29:18.211678+09:00",
+  "command": [
+    "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+    "/Users/son7/tseng-all-language-columns-20261025/batch05/release26/verification/browser-arc.mjs",
+    "--commit=63f5fad925cba35d71c44d37fd48071c3409c862"
+  ],
+  "cwd": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "scriptSHA256": "eeb033d331db11e5d2a5fb5e3ba9d50dd1d4bfa41b469c07981844eac64fecc9",
+  "expectedCases": 64,
+  "artifactCommit": "63f5fad925cba35d71c44d37fd48071c3409c862",
+  "exitCode": 0,
+  "finishedAt": "2026-10-26T02:30:37.894747+09:00",
+  "scriptUnchanged": true,
+  "logSHA256": "5fe923f0925e261e6f765c6fb8bb6cb6e129e7b2b7a39631eb47d231bee4c087"
+}

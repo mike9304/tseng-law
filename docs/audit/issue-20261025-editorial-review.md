@@ -97,6 +97,6 @@ Internal `author: legal-ai-assistant` remains. No public author/byline or human-
 - Final repaired versions: 3 suites, 80 tests PASS, exit 0 (new batch 17, October 2 17, September 30 46). External evidence: `work/vitest-final.txt`.
 - All current article hashes are tied to `work/variety-final.json`; no nonzero result. `work/body-metrics.json` records lengths and exact inline/source-tail URL parity.
 - `columns.ts` maps `../images/<stem>/...` to `/images/blog/<stem>/...`; the new test checks real issue-loader results, image signatures, captions, audience/internal provenance and exclusion from the general column board.
-- Older tests remain scoped to their original batches and were not edited. The new test's EXPECTED table deliberately requires this full eight-piece batch, as requested; it does not claim shipping approval.
+- Older tests remain scoped to their original batches and were not edited. The new test accepts any subset of the batch IDs listed in ALLOWED_NUMBERS, while rejecting duplicate or unexpected IDs within each locale; it does not require unshipped pieces or claim shipping approval.
 
 No production build, browser session, deployment or live publication is claimed. The operator receives the draft files, source/review evidence and exact shipping-path queue for its separate review/release procedure.

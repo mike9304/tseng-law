@@ -1,0 +1,7 @@
+{
+  "reason": "Next compilation succeeded but sandbox denied loopback127.0.0.1:4636 listen with EPERM before crawling. Retry the documented --skip-build route with the exact existing compilation, unchanged tracked sources, and loopback authorization; preserve both failure logs.",
+  "head": "3b4cc3f4793e1b3593c9621cc8733019a8078e5d",
+  "sourceDrift": "",
+  "initialLogSHA256": "284baaeb50c4f5bc449eda9474ac1c568d9992255c9e1afdffe0fadfb6ec08fd",
+  "serverErrorSHA256": "def67a148faaa5f152325f2be7bef8a69d65b3d8b5ec4aaaf2c6810baa0669cb"
+}

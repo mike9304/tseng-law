@@ -1,0 +1,101 @@
+{
+  "startedAt": "2026-10-25T15:27:14.229Z",
+  "finishedAt": "2026-10-25T15:28:32.697Z",
+  "buildInfo": {
+    "commit": "3b4cc3f4793e1b3593c9621cc8733019a8078e5d",
+    "builtAt": "2026-10-25T15:21:25.133Z"
+  },
+  "browser": {
+    "engine": "Chromium",
+    "version": "156.0.8078.4",
+    "playwright": "1.59.1",
+    "executablePath": "/Users/son7/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+    "headless": true,
+    "isolatedTemporaryProfiles": true
+  },
+  "summary": {
+    "total": 68,
+    "passed": 68,
+    "failed": 0,
+    "fatal": false
+  },
+  "cases": {
+    "article/desktop": 24,
+    "article/mobile": 24,
+    "article/slow": 7,
+    "article/nojs": 7,
+    "navigation/desktop": 2,
+    "navigation/mobile": 2,
+    "navigation/slow": 2
+  },
+  "articleManuscripts": 24,
+  "bodySegmentsUnique": 1112,
+  "bodySegmentsCompared": 2862,
+  "missingBodySegments": 0,
+  "faqCompared": 186,
+  "imageDecodeCases": 62,
+  "freshDocumentSwitches": 48,
+  "pickerCases": 55,
+  "slowBodyReplacements": 0,
+  "slowBodyDisappearances": 0,
+  "pageErrors": 0,
+  "consoleErrors": 0,
+  "failedRequests": 0,
+  "rscRequests": 0,
+  "expectedNoJsPreloadBlocks": 7,
+  "expectedNoJsPreloadBlockCases": 7,
+  "screenshots": 102,
+  "inputComparison": {
+    "sources": true,
+    "allSources": true,
+    "originalEvidence": true,
+    "artifacts": true,
+    "head": true,
+    "buildInfo": true
+  },
+  "sourceCount": 24,
+  "allMarkdownCount": 2208,
+  "originalEvidenceFileCount": 5446,
+  "artifactCount": 5347,
+  "artifactBytes": 463006310,
+  "artifactTreeSha256": "dec8c3e69f2763b85d6f3e48a79778be853908d927f709292ca73d6cf864dec1",
+  "sourceTreeSha256": "46e00ee6bfd9cd7db66797b9b1e43a60e37aa2af50e4be28625a67c925968aaa",
+  "correctedExtraCases": [
+    {
+      "locale": "ms",
+      "mode": "desktop",
+      "pass": true,
+      "destination": "bg"
+    },
+    {
+      "locale": "fil",
+      "mode": "desktop",
+      "pass": true,
+      "destination": "bg"
+    },
+    {
+      "locale": "nl",
+      "mode": "desktop",
+      "pass": true,
+      "destination": "bg"
+    },
+    {
+      "locale": "ms",
+      "mode": "mobile",
+      "pass": true,
+      "destination": "bg"
+    },
+    {
+      "locale": "fil",
+      "mode": "mobile",
+      "pass": true,
+      "destination": "bg"
+    },
+    {
+      "locale": "nl",
+      "mode": "mobile",
+      "pass": true,
+      "destination": "bg"
+    }
+  ]
+}

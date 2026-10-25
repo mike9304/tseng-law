@@ -1,0 +1,46 @@
+{
+  "at": "2026-10-25T15:26:39.833451+00:00",
+  "sourceBrowserSHA256": "545b0bcb1feab55f561c429cf243f8009849b73ea2b17ce6057590ed57e779f8",
+  "adaptedBrowserSHA256": "3abd2ab674a4afce40662b056bc7e8e5282a698ec64a0d9d7d39f2727d554328",
+  "edits": [
+    {
+      "old": "const BROWSER_LANGUAGES = { bg:'bg-BG', ca:'ca-ES', el:'el-GR', hr:'hr-HR', hu:'hu-HU', is:'is-IS', sk:'sk-SK', ko:'ko-KR', en:'en-US' };",
+      "new": "const BROWSER_LANGUAGES = { bg:'bg-BG', ca:'ca-ES', el:'el-GR', hr:'hr-HR', hu:'hu-HU', is:'is-IS', sk:'sk-SK', ms:'ms-MY', fil:'fil-PH', nl:'nl-NL', ko:'ko-KR', en:'en-US' };"
+    },
+    {
+      "old": "const args = { out:'out-all-locales-batch03', report:'/Users/son7/tseng-all-language-columns-20261025/batch03/checks/browser-arc-results.json', concurrency:2, phase:'all' };",
+      "new": "const args = { out:'out-all-locales-batch03-release26', report:'/Users/son7/tseng-all-language-columns-20261025/batch03/release26/checks/browser-arc-results.json', concurrency:2, phase:'all' };"
+    },
+    {
+      "old": "for (const locale of LOCALES) for (const [index,slug] of SLUGS.entries()) {",
+      "new": "const MANUSCRIPTS = [...LOCALES.flatMap(locale=>SLUGS.map((slug,index)=>({locale,slug,index}))), ...['ms','fil','nl'].map(locale=>({locale,slug:SLUGS[0],index:0}))];\nfor (const {locale,slug,index} of MANUSCRIPTS) {"
+    },
+    {
+      "old": "The 21 new articles are file-backed.",
+      "new": "The 21 new articles and three corrected MS/FIL/NL704 articles are file-backed."
+    },
+    {
+      "old": "const destination=LOCALES[(LOCALES.indexOf(item.locale)+1)%LOCALES.length];",
+      "new": "const destination=LOCALES.includes(item.locale)?LOCALES[(LOCALES.indexOf(item.locale)+1)%LOCALES.length]:'bg';"
+    },
+    {
+      "old": "if(args.phase==='all'&&rows.length!==62){result.fatalError=`Expected 62 cases, observed ${rows.length}`;",
+      "new": "if(args.phase==='all'&&rows.length!==68){result.fatalError=`Expected 68 cases, observed ${rows.length}`;"
+    }
+  ],
+  "expectedCases": {
+    "desktop": 24,
+    "mobile": 24,
+    "slow": 7,
+    "nojs": 7,
+    "navigation": 6
+  },
+  "languageCluster": 35,
+  "newLocales": 7,
+  "extraCorrected704": [
+    "ms",
+    "fil",
+    "nl"
+  ],
+  "expectedHEAD": "3b4cc3f4793e1b3593c9621cc8733019a8078e5d"
+}

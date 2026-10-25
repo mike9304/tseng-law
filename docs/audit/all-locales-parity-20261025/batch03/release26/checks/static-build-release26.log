@@ -1,0 +1,31 @@
+[static-site] no --data: builder pages render from repo files only (legacy fallback).
+[crawl] ... 100 fetched, 2691 queued
+[crawl] ... 200 fetched, 2591 queued
+[crawl] ... 300 fetched, 2491 queued
+[crawl] ... 400 fetched, 2391 queued
+[crawl] ... 500 fetched, 2291 queued
+[crawl] ... 600 fetched, 2191 queued
+[crawl] ... 700 fetched, 2091 queued
+[crawl] ... 800 fetched, 1991 queued
+[crawl] ... 900 fetched, 1891 queued
+[crawl] ... 1000 fetched, 1791 queued
+[crawl] ... 1100 fetched, 1691 queued
+[crawl] ... 1200 fetched, 1591 queued
+[crawl] ... 1300 fetched, 1491 queued
+[crawl] ... 1400 fetched, 1391 queued
+[crawl] ... 1500 fetched, 1291 queued
+[crawl] ... 1600 fetched, 1191 queued
+[crawl] ... 1700 fetched, 1091 queued
+[crawl] ... 1800 fetched, 991 queued
+[crawl] ... 1900 fetched, 891 queued
+[crawl] ... 2000 fetched, 791 queued
+[crawl] ... 2100 fetched, 691 queued
+[crawl] ... 2200 fetched, 591 queued
+[crawl] ... 2300 fetched, 491 queued
+[crawl] ... 2400 fetched, 391 queued
+[crawl] ... 2500 fetched, 291 queued
+[crawl] ... 2600 fetched, 191 queued
+[crawl] ... 2700 fetched, 91 queued
+[static-site] crawled 2782 pages, 9 files, 0 redirects in 49s
+[static-site] out: 5347 files, 441.6 MB, 2974 html; sitemap 2777/2777; broken refs 0; oversize 0; crawl missing 0; flight errors 0
+[static-site] media: 2146 files (2964.7 MB) → https://media.tseng-law.com; 1334 referenced, missing locally: none

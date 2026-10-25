@@ -1,0 +1,143 @@
+{
+  "at": "2026-10-26T00:34:28.008269+09:00",
+  "verified_content_commit": "3b4cc3f4793e1b3593c9621cc8733019a8078e5d",
+  "all_evidence_files_rehashed": 115,
+  "full_evidence_archive": "/Users/son7/tseng-all-language-columns-20261025/batch03/release26",
+  "copied_files": [
+    {
+      "path": "checks/browser-REPORT.md",
+      "sha256": "342e180a3b06973f5a27b36e58881478780c7109968a13cac46fcbff41ddd60a"
+    },
+    {
+      "path": "checks/browser-pack-verify.log",
+      "sha256": "1efbb07bb8ef771019c7e86004516662630a0dbfc788d85dfb20a23354170bf2"
+    },
+    {
+      "path": "checks/browser-snapshot-after.json",
+      "sha256": "dd62cfe89ea3d91551c28a11579d2fb8a74b46d2fad4b4be851eba07843a63e3"
+    },
+    {
+      "path": "checks/browser-run.log",
+      "sha256": "497b55251781b5327cbaa731baf903bbdef34bb25b20b14bfdd743de128d3c3d"
+    },
+    {
+      "path": "checks/browser-run-summary.json",
+      "sha256": "0da6b2b8ac9aaaafc74c48c4230ca647b69ddcc9ae7c944c48f456556f5f3dec"
+    },
+    {
+      "path": "checks/browser-snapshot-before.json",
+      "sha256": "e414b6b46b3aec829a59cb10a73ece320734ecd6d82e0b0f4f3e7625339e51c9"
+    },
+    {
+      "path": "checks/browser-pack-run.log",
+      "sha256": "9f1369daa278c3d89a56a53f57d52ce241c0f8fdf20412c38d47854a771eac70"
+    },
+    {
+      "path": "checks/browser-evidence-sha256.json",
+      "sha256": "a9082aadb11cfbc09d88ab8e1008d8ce52ef4af3b17db58a71fa4841aecf9657"
+    },
+    {
+      "path": "checks/browser-adaptation.json",
+      "sha256": "c0be84c8d89ef0f17fae9cf1fd6daa0c8fe05324119a9e7ae47ee4ab04ed9581"
+    },
+    {
+      "path": "checks/browser-arc-results.json",
+      "sha256": "3880fba700b72942e813a3cc615fa39de91ea15d3fcadb03c5efeb441cc867d7"
+    },
+    {
+      "path": "checks/browser-pack-report.json",
+      "sha256": "e841fc2b6e8e1ec136436bdc37a80d53d69e05085fafb66d24b0b835f32ea420"
+    },
+    {
+      "path": "verification/browser-arc.mjs",
+      "sha256": "3abd2ab674a4afce40662b056bc7e8e5282a698ec64a0d9d7d39f2727d554328"
+    },
+    {
+      "path": "verification/pack-verify.mjs",
+      "sha256": "9f79264ed79b33f2ea4acd8179d9dd45e3460ca6e05a6cf046dafc673c86c28a"
+    },
+    {
+      "path": "verification/snapshot.py",
+      "sha256": "670384b6bf26188125fded1de7b1aad9bb284c19d67948e35f1787b9f6e9ca44"
+    },
+    {
+      "path": "checks/browser-screenshots/desktop-hu-704-hero.png",
+      "sha256": "276b17c09bbd82bbb1bb2889e53ef8ec845a8edcc156ee32f3d6d344c94e36e8"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-hu-704-body.png",
+      "sha256": "ce7ad8e1ea4a05880ea24ba4b9e46b83427385c22cbe6836285119ca5a8154a2"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-ms-704-body.png",
+      "sha256": "4c72766391643f2c0db1289e036299c728a440837c1f16a93e03dc1fa1de7c93"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-fil-704-body.png",
+      "sha256": "e46cc56b94bdbc8c9ad28341e24d8da22915745e91534b2b8f09ccb7ba6e1cf9"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-nl-704-body.png",
+      "sha256": "916f9e3ed0fd9c85ecf6483b20509cabfcbdfcc98491a20f6ea03ee61d2b04f1"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-bg-704-body.png",
+      "sha256": "1cd6c4e89af6a7082ea0b12d793b628e52b02e0446ab238a9ff6434394fe9cc5"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-bg-704-hero.png",
+      "sha256": "dd9a1f4288b0c9493a3e9f0ef1168206369638e2e4acda8e80de1c91848ef7c2"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-ca-705-body.png",
+      "sha256": "e1bd1ad09a15927760560ee970dd682b99e0f834fb1876b609250e6689035c61"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-el-706-body.png",
+      "sha256": "c8510434a3ce0854fd8f9a887f2aff96b10ed5bc6f6e894675571d50cb5fb60a"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-hr-704-body.png",
+      "sha256": "723fa03d14475f55b428b2806a7a2bb402c954e210ee0f50052d22ab7f475da1"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-is-705-body.png",
+      "sha256": "88c16f3c0567ebd3cc4964eb85eee5872fe95a33987e60c1a6c8adfdc441d2d9"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-sk-706-body.png",
+      "sha256": "811934be132c3ff9a0c55b57944a18a8248e0b7d25ee88027351dcd39da3bacc"
+    },
+    {
+      "path": "checks/repository-tests-release26.log",
+      "sha256": "9a99234c55c341372220d7f604edb9d0c8e1cb972de600cac2878f2dc0156e23"
+    },
+    {
+      "path": "checks/static-build-release26.log",
+      "sha256": "cb014a3b9b0aa3246ba63eee5c2ad299b778edd6bda1ff96447a54a1729aab50"
+    },
+    {
+      "path": "checks/static-build-release26-initial.log",
+      "sha256": "284baaeb50c4f5bc449eda9474ac1c568d9992255c9e1afdffe0fadfb6ec08fd"
+    },
+    {
+      "path": "checks/static-server-release26-initial.log",
+      "sha256": "def67a148faaa5f152325f2be7bef8a69d65b3d8b5ec4aaaf2c6810baa0669cb"
+    },
+    {
+      "path": "checks/static-release26-retry.json",
+      "sha256": "69e1880dc88a53fbddb13b818e37d4d209813ceac6cf7970077f42f5ef564f14"
+    },
+    {
+      "path": "checks/earc-published-review.md",
+      "sha256": "10dd19f92c93ed67b8a305281b05576f0fc4061fd4102d03f553915456c86a8c"
+    }
+  ],
+  "screenshots_copied": 12,
+  "root_directly_opened": [
+    "mobile-hu-704-body.png",
+    "mobile-nl-704-body.png"
+  ],
+  "other90_screenshots": "Preserved in full local archive, all hashed in browser-evidence-sha256.json. Not all screenshots manually opened.",
+  "publish_status": "main push pending; final static/browser/package verification passed; upcoming audit-only commit does not change source/build scripts"
+}

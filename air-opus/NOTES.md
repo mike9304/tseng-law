@@ -504,3 +504,4 @@
 - 10-25 23:06 KST 대기: 원격=로컬(3b6e972), Air 23:00 push 확인. Studio 22:59 커밋은 grok NOTES뿐, Astra 채택 판정 대기.
 - 10-25 23:16 KST 대기: 원격=로컬(4cb5ea8), Air 23:10 push 확인. Studio 23:09 커밋은 grok NOTES뿐, Astra 채택 판정 대기.
 - 10-25 23:26 KST 대기: 원격=로컬(58b978c), Air 23:21 push 확인. Studio 23:19 커밋은 grok NOTES뿐, Astra 채택 판정 대기.
+- 10-25 23:36 KST 대기: 23:36 fetch가 shallow.lock 충돌(일시적, 수 초 뒤 잠금 사라짐)→재시도 성공, fsck 연결 이상 없음. 원격=로컬(9fa35a1), Air 23:31 push 확인. Studio 23:29 커밋은 grok NOTES뿐, Astra 채택 판정 대기.

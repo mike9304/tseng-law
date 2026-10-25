@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-10-26T01:46:50.822889+09:00",
+  "commit": "e990fd45165b73724ef870ecc80cd6dd9910cd05",
+  "command": [
+    "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+    "scripts/static-site/build.mjs",
+    "--media-origin=https://media.tseng-law.com",
+    "--out=out-all-locales-batch04-release26-final",
+    "--port=4637"
+  ],
+  "data_mode": "repository-only local fallback; not Air prod-mirror parity",
+  "reason": "Full recompile after two Hebrew table labels changed; existing media-origin policy. Prior artifacts retained.",
+  "status": "finished",
+  "exit_code": 0,
+  "finished_at": "2026-10-26T01:49:04.600024+09:00"
+}

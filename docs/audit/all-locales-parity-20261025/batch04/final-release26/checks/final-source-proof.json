@@ -1,0 +1,39 @@
+{
+  "old_commit": "42f2d1e2c92b871f91a5e03b57300ea85f387852",
+  "final_commit": "e990fd45165b73724ef870ecc80cd6dd9910cd05",
+  "changed_src_scripts_public_paths": [
+    "src/content/columns-he/706-taiwan-arc-renewal-changes-reentry.md"
+  ],
+  "only_two_approved_cells_changed": true,
+  "exact_forward_reverse": true,
+  "frontmatter_FAQ_unchanged": true,
+  "before_sha256": "d405faa17ee7ce3fd11adaf843be8b0c7a9bb6ef474d33244b1e4ee945d2f802",
+  "after_sha256": "fa78467ebf94880a503e0549e6f00b73950771324285d92524996f8e09f87b3d",
+  "changes": [
+    [
+      "שינוי עילת תושבות העומד בתנאי סעיף 23-1 לחוק ההגירה",
+      "שינוי עילה לפי סעיף 23-1"
+    ],
+    [
+      "שינוי עילת תושבות שאינו נכלל בסעיף 23-1",
+      "שינוי עילה מחוץ לסעיף 23-1"
+    ]
+  ],
+  "prepared_scripts": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/verification/browser-arc.mjs",
+      "from_sha256": "0eb33aa0e0a5f12b98e4858c5f12f1efacfe646123b5ed94107ad92cd20eb424",
+      "sha256": "99db84bcad1f22d209baf247e3022d31fb2d7adb950b32af1117681b1f65a58c"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/verification/metadata-zh-cases.mjs",
+      "from_sha256": "4c1c8f455522642f3a5c0cc4e70c2bece5356b68aff0d814eaabcb724b640e0e",
+      "sha256": "0c1a9c3aff1d082170c6afdc888f112ee6da6908aeb0779f44fac2c97ccd260d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/verification/pack-verify.mjs",
+      "from_sha256": "10a69a769f9dc7e2320ba5abb911aa37136c55b05ecbc8b946d496c84f87d82e",
+      "sha256": "57961752de47fac2122fade5ba7621eb364c794bbb215c203836fdc4706034d1"
+    }
+  ]
+}

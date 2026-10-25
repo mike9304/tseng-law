@@ -1,0 +1,227 @@
+{
+  "at": "2026-10-26T02:02:59.491563+09:00",
+  "content_commit": "e990fd45165b73724ef870ecc80cd6dd9910cd05",
+  "reviewer": "root",
+  "final_source_and_artifact_qa": {
+    "completed_at": "2026-10-26T01:58:31.277173+09:00",
+    "status": "PASS_final_artifact_QA",
+    "content_commit": "e990fd45165b73724ef870ecc80cd6dd9910cd05",
+    "buildInfo": {
+      "commit": "e990fd45165b73724ef870ecc80cd6dd9910cd05",
+      "builtAt": "2026-10-25T16:49:01.858Z"
+    },
+    "artifact": "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch04-release26-final",
+    "arc_browser": {
+      "summary": {
+        "total": 62,
+        "passed": 62,
+        "failed": 0,
+        "fatal": false
+      },
+      "case_counts": {
+        "article/desktop": 21,
+        "article/mobile": 21,
+        "article/slow": 7,
+        "article/nojs": 7,
+        "navigation/desktop": 2,
+        "navigation/mobile": 2,
+        "navigation/slow": 2
+      },
+      "cluster_locales": 42,
+      "home_locales": 49,
+      "legacy_ko_locales": [
+        "ko",
+        "zh-hant",
+        "en"
+      ],
+      "rtl_rows": 24,
+      "rtl_tokens_checked": 1326,
+      "table_counts_checked_against_source_AST": true
+    },
+    "metadata_zh": {
+      "summary": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "fatal": false
+      },
+      "clusters": [
+        [
+          "zh-hant"
+        ],
+        [
+          "zh-hant"
+        ],
+        [
+          "zh-hant"
+        ]
+      ],
+      "publication": "2026-10-25",
+      "dateModified": "2026-10-26T00:00:00.000Z",
+      "board_topic": "litigation",
+      "label": "訴訟與糾紛"
+    },
+    "he706": {
+      "source_sha256": "fa78467ebf94880a503e0549e6f00b73950771324285d92524996f8e09f87b3d",
+      "exact_two_cell_forward_reverse": true,
+      "mobile_actual_final_HTML": true,
+      "all_four_identifiers_single_line_LTR": true,
+      "screenshot": "checks/browser-screenshots/mobile-he-706-rtl-table.png"
+    },
+    "pack": {
+      "pages": 2995,
+      "assets": 2366,
+      "expandedBytes": 167300148,
+      "expandedMiB": 159.54985427856445,
+      "headroomBytes": 101135308,
+      "headroomMiB": 96.45014572143555,
+      "gzipHtmlRoundTrips": 2995,
+      "unchangedAssets": 2366,
+      "headersEqual": true,
+      "verificationFailures": 0,
+      "packerSha256": "c983e275e92ef2aff523f6307069ca54121fc79400e9c247fa02f7c1b73d85e7",
+      "packedWorkerSha256": "84711e76427f7a5ae35a8be8e2c872adfba9b7291f76566eac99ffe4836d74ff"
+    },
+    "frozen_inputs": {
+      "comparison": {
+        "head": true,
+        "buildInfo": true,
+        "sources": true,
+        "metadataSources": true,
+        "allSources": true,
+        "artifacts": true,
+        "preserved": true
+      },
+      "all_markdown_files": 2229,
+      "artifact_files": 5364,
+      "source_tree_sha256": "f59fa3d66d09bfd61b342c6fee52d7c70dcfeea6de996e470483de59429d168d",
+      "artifact_tree_sha256": "e5632b9e3e5e75b22dd04391994c443a45e1daf76e4b59be831df7e082ce7e31",
+      "preserved_file_counts": {
+        "/Users/son7/tseng-all-language-columns-20261025/batch03/release26": 5465,
+        "/Users/son7/tseng-all-language-columns-20261025/batch04/release26": 5557,
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch03-release26": 5347,
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch04-release26": 5364,
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch04-release26-with-local-media": 7510
+      }
+    },
+    "evidence_sha256": {
+      "checks/browser-arc-results.json": "1e5052274a22d28625740bb66df7a2b8f82217247b8a9cc99aeb9652abb81872",
+      "checks/browser-arc.log": "46e081dfb774605ae3bc4693065d7f460d271d92f36e96481ed5ed6e42ee24c4",
+      "checks/metadata-zh-results.json": "930d2e8e3bff17c54edd6761f8d0008201196e906aa2921b885c296d34cecaaf",
+      "checks/metadata-zh.log": "9bc6aad13e04677c72391192c4730926c5e8b5d3fe3117408460a38dd79468e6",
+      "checks/browser-pack-report.json": "a34a388e0812966b489f87b3a711bff588cab31f9a814ec4a4d12e0e87e64b84",
+      "checks/pack.log": "82a1131d3558a36e9a9e3a8871fe56bb3efa02e698815949b5833cd760a3cce8",
+      "checks/snapshot-before.json": "09251bc9665737b91c89f527e4730c69452029998cc3a57f40eb4e0b5c4d9908",
+      "checks/snapshot-after.json": "542056b024a2d1c6337a50d7c9f60f0e2223743518175915f190d5e63f21a25e",
+      "checks/final-source-proof.json": "278b36ad7815efb7540b5eb3a34342abc67c9ea2e7c1903b62f21aef7393ba7c",
+      "verification/browser-arc.mjs": "99db84bcad1f22d209baf247e3022d31fb2d7adb950b32af1117681b1f65a58c",
+      "verification/metadata-zh-cases.mjs": "0c1a9c3aff1d082170c6afdc888f112ee6da6908aeb0779f44fac2c97ccd260d",
+      "verification/pack-verify.mjs": "57961752de47fac2122fade5ba7621eb364c794bbb215c203836fdc4706034d1",
+      "verification/snapshot.py": "24599759894fb88ecd6bdeddaf822b460032ee2f618d5a10807fbcb16f4144ad",
+      "checks/browser-screenshots/mobile-he-706-rtl-table.png": "67238eabe998e358f8da5586eebb2c484c4a32ccd756697980317140dbef0774",
+      "checks/browser-screenshots/desktop-he-706-rtl-table.png": "51a37007d5d1e07f12ec8661aad075d943cc5879314e937d21c8160adff33f45"
+    },
+    "limits": [
+      "Local existing artifact QA only; no production deployment performed.",
+      "Earlier 42f2 failures and counterfactual previews remain separate preserved evidence.",
+      "No claim of human native-language or legal approval.",
+      "Full unit-test suite was not rerun by this reviewer."
+    ]
+  },
+  "evidence_copies": [
+    {
+      "path": "batch04/final-release26/checks/REPORT.md",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/checks/REPORT.md",
+      "sha256": "aff11d5b3414765def29d5b9ac142ec8546dcee4a230983d3f49585c29ebdc92",
+      "bytes": 4709
+    },
+    {
+      "path": "batch04/final-release26/checks/final-verification-summary.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/checks/final-verification-summary.json",
+      "sha256": "81aed8183eed1071c55cb9303fedca6d4b1b57754ce64c948849a9793bed5eee",
+      "bytes": 5105
+    },
+    {
+      "path": "batch04/final-release26/checks/browser-arc-results.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/checks/browser-arc-results.json",
+      "sha256": "1e5052274a22d28625740bb66df7a2b8f82217247b8a9cc99aeb9652abb81872",
+      "bytes": 3046785
+    },
+    {
+      "path": "batch04/final-release26/checks/browser-arc.log",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/checks/browser-arc.log",
+      "sha256": "46e081dfb774605ae3bc4693065d7f460d271d92f36e96481ed5ed6e42ee24c4",
+      "bytes": 2983
+    },
+    {
+      "path": "batch04/final-release26/checks/metadata-zh-results.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/checks/metadata-zh-results.json",
+      "sha256": "930d2e8e3bff17c54edd6761f8d0008201196e906aa2921b885c296d34cecaaf",
+      "bytes": 75589
+    },
+    {
+      "path": "batch04/final-release26/checks/metadata-zh.log",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/checks/metadata-zh.log",
+      "sha256": "9bc6aad13e04677c72391192c4730926c5e8b5d3fe3117408460a38dd79468e6",
+      "bytes": 229
+    },
+    {
+      "path": "batch04/final-release26/checks/browser-pack-report.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/checks/browser-pack-report.json",
+      "sha256": "a34a388e0812966b489f87b3a711bff588cab31f9a814ec4a4d12e0e87e64b84",
+      "bytes": 1380673
+    },
+    {
+      "path": "batch04/final-release26/checks/pack.log",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/checks/pack.log",
+      "sha256": "82a1131d3558a36e9a9e3a8871fe56bb3efa02e698815949b5833cd760a3cce8",
+      "bytes": 609
+    },
+    {
+      "path": "batch04/final-release26/checks/final-source-proof.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/checks/final-source-proof.json",
+      "sha256": "278b36ad7815efb7540b5eb3a34342abc67c9ea2e7c1903b62f21aef7393ba7c",
+      "bytes": 1795
+    },
+    {
+      "path": "batch04/final-release26/verification/browser-arc.mjs",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/verification/browser-arc.mjs",
+      "sha256": "99db84bcad1f22d209baf247e3022d31fb2d7adb950b32af1117681b1f65a58c",
+      "bytes": 31191
+    },
+    {
+      "path": "batch04/final-release26/verification/metadata-zh-cases.mjs",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/verification/metadata-zh-cases.mjs",
+      "sha256": "0c1a9c3aff1d082170c6afdc888f112ee6da6908aeb0779f44fac2c97ccd260d",
+      "bytes": 15981
+    },
+    {
+      "path": "batch04/final-release26/verification/pack-verify.mjs",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/verification/pack-verify.mjs",
+      "sha256": "57961752de47fac2122fade5ba7621eb364c794bbb215c203836fdc4706034d1",
+      "bytes": 2933
+    },
+    {
+      "path": "batch04/final-release26/verification/snapshot.py",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/verification/snapshot.py",
+      "sha256": "24599759894fb88ecd6bdeddaf822b460032ee2f618d5a10807fbcb16f4144ad",
+      "bytes": 3273
+    },
+    {
+      "path": "batch04/final-release26/checks/browser-screenshots/mobile-he-706-rtl-table.png",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/checks/browser-screenshots/mobile-he-706-rtl-table.png",
+      "sha256": "67238eabe998e358f8da5586eebb2c484c4a32ccd756697980317140dbef0774",
+      "bytes": 76647
+    },
+    {
+      "path": "batch04/final-release26/checks/browser-screenshots/desktop-he-706-rtl-table.png",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch04/final-release26/checks/browser-screenshots/desktop-he-706-rtl-table.png",
+      "sha256": "51a37007d5d1e07f12ec8661aad075d943cc5879314e937d21c8160adff33f45",
+      "bytes": 265045
+    }
+  ],
+  "root_visual_review": "Opened actual final mobile-he-706-rtl-table.png. Both edited situation labels preserve readable complete 23-1; deadlines and surrounding RTL text visible. Existing English table-scroll hint remains.",
+  "test_scope": "Initial full unit run preserved with six failed tests; bounded fixes then 28 suites/820 tests passed. Final build exit0, final browser62+3 and pack full verification passed. Full unit suite was not rerun.",
+  "publication_status": "Ready for authorized non-force main push; public B3/B4 pending Air build.",
+  "deployment_route": "main -> MacBook Air automatic static build -> existing Sites. No infra change."
+}

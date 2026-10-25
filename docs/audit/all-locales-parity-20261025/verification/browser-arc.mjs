@@ -55,7 +55,7 @@ for (const file of artifactFiles) if (!fs.existsSync(file)) throw new Error(`Com
 const artifactManifest=artifactFiles.map(file=>{const data=fs.readFileSync(file);return{file:path.relative(ROOT,file),bytes:data.length,sha256:sha(data)};});
 const buildInfo = JSON.parse(fs.readFileSync(path.join(out,'build-info.json'),'utf8'));
 const rows = [];
-const result = { startedAt:new Date().toISOString(), artifact:out, buildInfo, artifactManifest, frozenProdMirror:null, scopeNote:'Local unpublished artifact, traced by HTML SHA and current manuscript SHA because build-info identifies the uncommitted base. No frozen prod-mirror is available on this machine (data:null). The 21 new articles are file-backed. This does not certify core CMS mirror parity.', browserSkill:{connectedBrowserAvailable:false,standaloneFallback:true}, sourceManifest:[...manifest.values()], rows };
+const result = { startedAt:new Date().toISOString(), artifact:out, buildInfo, artifactManifest, frozenProdMirror:null, scopeNote:'Local unpublished artifact identified by its build-info commit, HTML SHA and manuscript SHA. No frozen prod-mirror is available on this machine (data:null). The 21 new articles are file-backed. This does not certify core CMS mirror parity.', browserSkill:{connectedBrowserAvailable:false,standaloneFallback:true}, sourceManifest:[...manifest.values()], rows };
 const save = () => fs.writeFileSync(reportFile,`${JSON.stringify(result,null,2)}\n`);
 const check = (row,ok,message) => { if(!ok) row.failures.push(message); };
 

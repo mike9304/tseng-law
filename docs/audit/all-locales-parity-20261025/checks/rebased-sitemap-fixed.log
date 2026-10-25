@@ -1,0 +1,10 @@
+
+ RUN  v3.2.6 /Users/son7/Projects/tseng-law-all-locales-20261025
+
+ ✓ |unit| src/app/__tests__/sitemap.test.ts (37 tests) 4490ms
+
+ Test Files  1 passed (1)
+      Tests  37 passed (37)
+   Start at  21:44:58
+   Duration  4.79s (transform 148ms, setup 5ms, collect 179ms, tests 4.49s, environment 0ms, prepare 34ms)
+

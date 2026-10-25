@@ -1,6 +1,7 @@
 # Bulky intermediate captures remain available locally. Reproduction scripts,
 # hashes, the frozen final audit and final browser evidence are versioned.
 checks/browser-screenshots/
+checks/**/browser-screenshots/
 checks/content-audit-initial.json
 checks/content-audit-r2.json
 checks/nia-*.html

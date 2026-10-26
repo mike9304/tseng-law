@@ -1,0 +1,56 @@
+{
+  "atUTC": "2026-10-26T12:12:08.784547+00:00",
+  "method": "Assistant directly opened actual screenshots with view_image after successful isolated Chromium execution. No DOM/CSS/text injection. This is sampled visual inspection, not human native-language or legal review.",
+  "screenshots": [
+    {
+      "path": "checks/browser-screenshots/mobile-ne-919-body.png",
+      "bytes": 194584,
+      "sha256": "23491bc0cbaa5429a8bfbbb5f9e0aa1e1dc11d699ef8c72568797032424768b9",
+      "observation": "Viewed Devanagari title/body and Chinese case identifier; visible glyphs and wrapping readable in this viewport."
+    },
+    {
+      "path": "checks/browser-screenshots/desktop-pl-915-body.png",
+      "bytes": 638174,
+      "sha256": "feb2a146f9f6eeb5a9454bd90804e99c1f2965130b2ec9897c9480bb50ae608e",
+      "observation": "Viewed Polish diacritics, amount with existing drop cap, body and Chinese source link; no apparent clipping."
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-sr-920-body.png",
+      "bytes": 190070,
+      "sha256": "e3ba5dd72c5c15b66032225be3d16ce61837fda27e70bdb200dcc7cb979a6cef",
+      "observation": "Viewed Serbian Latin title/body, image and localized caption; viewport edges preserved."
+    },
+    {
+      "path": "checks/browser-screenshots/desktop-nb-918-hero.png",
+      "bytes": 584146,
+      "sha256": "22b55711eb5eba4fc73ef34c81cfcbb0ff01441b69876603277fbecf47afeb28",
+      "observation": "Viewed Norwegian title/date and hero at1440px; title fits."
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-ro-921-body.png",
+      "bytes": 197096,
+      "sha256": "e4d4c3a633d4b52cce68b5a888bd1069c4a82b539bf40e11474fe848ae44b76b",
+      "observation": "Viewed Romanian diacritics, title/body/caption at390px; no apparent clipping."
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-sk-014-body.png",
+      "bytes": 114046,
+      "sha256": "223864796404cc8d388d11351c6c1196907621c4fd1123c5c10a37a0d8219633",
+      "observation": "Viewed changed legacy opening and Chinese terms; existing diagram/video region retained; no source rewrite."
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-he-706-rtl-table.png",
+      "bytes": 76647,
+      "sha256": "67238eabe998e358f8da5586eebb2c484c4a32ccd756697980317140dbef0774",
+      "observation": "Viewed real RTL table;23-1 digits/hyphen stay together. Existing English table-scroll help is unchanged."
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-fa-915-rtl-table.png",
+      "bytes": 81345,
+      "sha256": "78b5f2940c956c63049cad36fe224e82ecd45631dde1fc42b9b779e2e14efca5",
+      "observation": "Viewed Persian RTL table and body; proper visual order. Legal-ID bdi positions independently verified in browser records."
+    }
+  ],
+  "allScreensViewed": false,
+  "mandatoryVisualFindings": []
+}

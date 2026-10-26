@@ -1,0 +1,32 @@
+{
+  "atUTC": "2026-10-26T12:21:36.554146+00:00",
+  "reviewer": "root AI",
+  "head": "89206d10a5d3beb7223207f0ca2f3d34889b19ed",
+  "status": "READY_FOR_AUTHORIZED_NONFORCE_MAIN_PUSH",
+  "verifiedCurrentHashes": {
+    "evidence": 246,
+    "sourceMarkdown": 2454,
+    "canonical": 6,
+    "selected": 42,
+    "repairs": 3,
+    "artifacts": 5593,
+    "pack": 5594
+  },
+  "evidenceManifestSHA256": "07651f10e4c4a9ecc5b7e1c3decb3564e8f9f79ba087aacacb38cff88f1f7b05",
+  "finalSHA256": "f9947500acfead9d426eff0dc1dfce458e8e7acf8618125a4862ae9545c80554",
+  "reportReadFully": true,
+  "rootVisuallyViewed": [
+    "checks/browser-screenshots/mobile-ne-919-body.png",
+    "checks/browser-screenshots/desktop-pl-915-body.png",
+    "checks/browser-screenshots/mobile-he-706-rtl-table.png"
+  ],
+  "visualFindings": "Nepali body/caption readable without overflow; Polish amount and prose intact; Hebrew RTL table readable. Existing shared English scroll hint not modified.",
+  "tests": "Reviewed frozen actual build exit0, static324 article comparisons, browser113 pass. Did not rerun completed suites.",
+  "limits": [
+    "Local fallback build, not Air prod-mirror",
+    "Public deployment not confirmed",
+    "Capacity candidate not included; full49x286 capacity not proven",
+    "Legacy SK014 date fallbacks preserved"
+  ],
+  "authorization": "Existing approved nonforce main push followed by MacBook Air automatic build and existing Sites only."
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "command": [
+      "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+      "--check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/browser-cases.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "",
+    "sha256": "2dcc7bc95306b19f207eb40ae2ca1e593a48a7717923f99c6f1e5cc85df4e699"
+  },
+  {
+    "command": [
+      "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+      "--check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/pack-config-verify.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "",
+    "sha256": "51665c565bf0c91e323c8034179f5526ccb10963eddbb44e09e3d319fc4c7f04"
+  },
+  {
+    "command": [
+      "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+      "--check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/pack-verify.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "",
+    "sha256": "f16d2043b07af82250f00a1ce4318ab813fcf734c4cc67ddf2bcb12efe6fa37f"
+  },
+  {
+    "command": [
+      "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+      "--check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/static-arc147-regression.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "",
+    "sha256": "a2df7abfddfde9c7b5f99ca93855750e48e75fed967c86088e4694330f389753"
+  },
+  {
+    "command": [
+      "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+      "--check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/static-cases174.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "",
+    "sha256": "06d0349e85ff99322a1948ef2a12d95ce8e062d5c51b790db721ff6dd07d3918"
+  },
+  {
+    "command": [
+      "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+      "--check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/static-sk-repairs3.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "",
+    "sha256": "9550d91402578982c15c13fc10030eaeef04dac5e42a9dbc1aaaf44ed472c20d"
+  }
+]

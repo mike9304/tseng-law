@@ -1,0 +1,55 @@
+{
+  "scope": "174 cases,147 ARC,3 SK repairs;104 primary+9 regression browsers",
+  "legacyContract": "Actual getColumnPost and fileBackedColumnAlternateLocales; jiti caches disabled; no runtime writes. SK014 leading duplicate H1/image and paths normalize per source loader; no fabricated fields.",
+  "priorEvidenceUnchanged": true,
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/adapt-b9.py",
+      "sha256": "671d2962418b377cc0005f20508e7ac131f3a9969790b1527c7f1c4a19c29d65"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/browser-cases.mjs",
+      "sha256": "2dcc7bc95306b19f207eb40ae2ca1e593a48a7717923f99c6f1e5cc85df4e699"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/pack-config-verify.mjs",
+      "sha256": "51665c565bf0c91e323c8034179f5526ccb10963eddbb44e09e3d319fc4c7f04"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/pack-verify.mjs",
+      "sha256": "f16d2043b07af82250f00a1ce4318ab813fcf734c4cc67ddf2bcb12efe6fa37f"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/run-browser.py",
+      "sha256": "4718a175205983e07152b216b7d049962038f77c270c8bb2ad38e9f2437b0012"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/run-full-build.py",
+      "sha256": "3c9f49661fedf7466017bee370b1fc2c9c3d0a1f1da657ac229fa10ad9b1de51"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/run-pack.py",
+      "sha256": "ed8aa3a09f0c2d0f1ce7804088aaddc08da7ecc7b402239a6db2e1b7327a18e1"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/run-static.py",
+      "sha256": "82c196322d4aa1b7308d9b6c87c88dc0965f909affd4a292d594aea4e87b1c6c"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/snapshot.py",
+      "sha256": "00e6bbd487f1768a90bb43eee7cc940886146fcc17355de4318930660bb8d41e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/static-arc147-regression.mjs",
+      "sha256": "a2df7abfddfde9c7b5f99ca93855750e48e75fed967c86088e4694330f389753"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/static-cases174.mjs",
+      "sha256": "06d0349e85ff99322a1948ef2a12d95ce8e062d5c51b790db721ff6dd07d3918"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/static-sk-repairs3.mjs",
+      "sha256": "9550d91402578982c15c13fc10030eaeef04dac5e42a9dbc1aaaf44ed472c20d"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+PASS desktop sk/slovak-exporter-taiwan-unpaid-invoice-recovery
+PASS desktop sk/taiwan-mandatory-employment-period
+PASS desktop sk/slovak-business-taiwan-subsidiary-branch-office
+PASS mobile fa/taiwan-public-contract-mediation-arbitration-same-claim
+PASS mobile fa/taiwan-workplace-bullying-investigation-hearing-judgment
+PASS mobile he/taiwan-arc-renewal-changes-reentry
+PASS mobile sk/taiwan-mandatory-employment-period
+PASS mobile sk/slovak-business-taiwan-subsidiary-branch-office
+PASS mobile sk/slovak-exporter-taiwan-unpaid-invoice-recovery
+{"total":9,"passed":9,"failed":0,"fatal":false}

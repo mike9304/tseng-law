@@ -1,0 +1,40 @@
+from pathlib import Path
+import json,hashlib
+D=Path('/Users/son7/tseng-all-language-columns-20261025/batch09/release26')
+p=D/'verification/browser-cases.mjs';s=p.read_text()
+def change(old,new):
+ global s
+ assert old in s,old[:150]
+ s=s.replace(old,new)
+change("const LOCALES = ['fi','hr','hu','is','km','lv','mn'];","const LOCALES = ['nb','ne','pl','ro','sk','sl','sr'];")
+change("'bg','bn','ca','da','el','et','fa'];","'bg','bn','ca','da','el','et','fa','fi','hr','hu','is','km','lv','mn'];")
+change("const matter = require('gray-matter');","const matter = require('gray-matter');\nconst {createJiti}=require('jiti');\nconst jiti=createJiti(path.join(ROOT,'package.json'),{fsCache:false,moduleCache:false,alias:{'@':path.join(ROOT,'src')}});\nconst {getColumnPost,fileBackedColumnAlternateLocales}=jiti(path.join(ROOT,'src/lib/columns.ts'));\nconst REPAIRS=[{number:'014',slug:'taiwan-mandatory-employment-period'},{number:877,slug:'slovak-exporter-taiwan-unpaid-invoice-recovery'},{number:878,slug:'slovak-business-taiwan-subsidiary-branch-office'}];")
+change(":ARC_LOCALES;};",":fileBackedColumnAlternateLocales(slug);};")
+change("const BROWSER_LANGUAGES = { fi:","const BROWSER_LANGUAGES = { nb:'nb-NO',ne:'ne-NP',pl:'pl-PL',ro:'ro-RO',sk:'sk-SK',sl:'sl-SI',sr:'sr-RS',fi:")
+start=s.index('const MANUSCRIPTS = ');end=s.index('\nfor (const {locale',start)
+s=s[:start]+"const MANUSCRIPTS = [...LOCALES.flatMap(locale=>CASES.map(item=>({...item,locale,primary:true}))), ...[915,919].map(number=>({...CASES.find(x=>x.number===number),locale:'fa',primary:false,regression:'rtl-fa'})), {locale:'he',slug:HE_SLUG,number:706,primary:false,regression:'rtl-he'}, {locale:'de',slug:HE_SLUG,number:706,primary:false}, {locale:'nb',slug:HE_SLUG,number:706,primary:false}, ...REPAIRS.map(item=>({...item,locale:'sk',primary:false,regression:'sk-repair'})), {locale:'nb',...REPAIRS[0],primary:false}];"+s[end:]
+change("const {data,content} = matter(raw,{});\n  const tree=parser.parse(content);","let {data,content} = matter(raw,{});\n  const legacy=REPAIRS.some(item=>item.slug===slug);\n  if(legacy){const post=getColumnPost(slug,locale);if(!post)throw Error('Missing legacy loader post');data={...data,title:post.title,seoTitle:post.seoTitle,summary:post.summary,published:post.publicationDate||post.date,lastmod:post.date,date_display:post.dateDisplay,faq:post.faq,featured_image:post.featuredImage,featured_image_alt:post.featuredImageAlt||post.title,featured_image_caption:post.featuredImageCaption||''};content=post.content;}\n  const tree=parser.parse(content);")
+change("scopeNote:'B9 artifact:42 new translations yield104 primary browser cases; every case has22 actual versions. Separate11 regressions cover3 repaired ARC pages at desktop/mobile,FA915/919 at desktop/mobile andHE706 mobile. ARC49 remains unchanged. Home49 and legacy KO0513 remain separate. Local fallback is not production CMS mirror parity.'","scopeNote:'B9 artifact:42 new translations yield104 primary browser cases; each has29 actual case versions. Separate9 regressions cover3 repaired SK pages at desktop/mobile plus FA915/919 mobile and HE706 mobile. SK014 has49 versions; SK877/878 onlySK, not fictional translations. Legacy fields follow actual unchanged loader. ARC49 and home49 remain separate. Local fallback is not production CMS mirror parity.'")
+change("if(mode==='desktop'||mode==='mobile') {\n        const destination=item.locale==='he'?'de':LOCALES[(LOCALES.indexOf(item.locale)+1)%LOCALES.length];","if((mode==='desktop'||mode==='mobile')&&item.cluster.length===1) {\n        row.switching={skippedReason:'Only one actual translation exists; exact single self-link verified, no fabricated destination.'};\n        await page.keyboard.press('Escape');\n        check(row,await page.locator('.column-markdown').isVisible(),'single-language article disappeared after menu close');\n      } else if(mode==='desktop'||mode==='mobile') {\n        const destination=item.locale==='he'?'de':item.regression==='sk-repair'?'nb':LOCALES[(LOCALES.indexOf(item.locale)+1)%LOCALES.length];")
+change("(item.regression==='rtl-he' ? mode==='mobile' : !!item.regression)","(['rtl-he','rtl-fa'].includes(item.regression) ? mode==='mobile' : !!item.regression)")
+change("args.focus==='regressions'?11:104","args.focus==='regressions'?9:104")
+p.write_text(s)
+p=D/'verification/run-browser.py';s=p.read_text().replace('browser-regressions11','browser-regressions9');p.write_text(s)
+# Separate SK legacy static comparison retains every existing assertion, binding metadata to actual loader normalization.
+s=(D/'verification/static-arc147-regression.mjs').read_text()
+s=s.replace("const matter=require('gray-matter');","const matter=require('gray-matter');\nconst {createJiti}=require('jiti');\nconst jiti=createJiti(path.join(R,'package.json'),{fsCache:false,moduleCache:false,alias:{'@':path.join(R,'src')}});\nconst {getColumnPost,fileBackedColumnAlternateLocales}=jiti(path.join(R,'src/lib/columns.ts'));")
+s=s.replace('static-arc147-regression.json','static-sk-repairs3.json')
+a=s.index('const locales=');b=s.index("const tags=",a)
+s=s[:a]+"const repairs=[{number:'014',slug:'taiwan-mandatory-employment-period'},{number:877,slug:'slovak-exporter-taiwan-unpaid-invoice-recovery'},{number:878,slug:'slovak-business-taiwan-subsidiary-branch-office'}];\n"+s[b:]
+s=s.replace("for(const locale of locales)for(const [index,slug]of slugs.entries()){","for(const {number,slug} of repairs){\n const locale='sk';const locales=fileBackedColumnAlternateLocales(slug);const xDefault=locales.includes('en')?'en':locales[0];")
+s=s.replace('`${704+index}-${slug}.md`','`${number}-${slug}.md`')
+s=s.replace("const raw=read(sourceFile);const{data,content}=matter(raw.toString());const tree=parser.parse(content);","const raw=read(sourceFile);const parsed=matter(raw.toString());const post=getColumnPost(slug,locale);if(!post)throw Error('Missing legacy post');const data={...parsed.data,title:post.title,seoTitle:post.seoTitle,summary:post.summary,published:post.publicationDate||post.date,lastmod:post.date,faq:post.faq,featured_image:post.featuredImage,featured_image_alt:post.featuredImageAlt||post.title,featured_image_caption:post.featuredImageCaption||''};const content=post.content;const tree=parser.parse(content);")
+s=s.replace('length===50','length===locales.length+1').replace('length===49','length===locales.length').replace('`https://tseng-law.com/en/columns/${slug}`','`https://tseng-law.com/${xDefault}/columns/${slug}`')
+s=s.replace('exact49','actual cluster').replace('hreflang49','hreflang actual').replace('reciprocal49','reciprocal actual').replace('existing English version','existing preferred in-cluster version')
+s=s.replace("scope:'All147 file-backed ARC versions: metadata/FAQ, ordered source-body blocks, hero identity, table count, actual cluster HTML/footer/sitemap reciprocal cluster. Static parsing is not a browser, legal or native-language review. Core title/date expectations follow unchanged existing layout/builder contracts.'","scope:'Three approved existing SK repairs: actual loader metadata, normalized legacy body, every FAQ/link, hero/table, actual same-slug cluster and sitemap. SK014 legacy publication fallback is preserved, not silently repaired; SK877/878 are SK-only. No legal or native-language approval.'")
+s=s.replace('rows.length!==147','rows.length!==3')
+(D/'verification/static-sk-repairs3.mjs').write_text(s)
+# Complete syntax checks later are recorded with actual exit codes.
+rows=[{'file':str(x),'sha256':hashlib.sha256(x.read_bytes()).hexdigest()}for x in sorted((D/'verification').iterdir())if x.is_file()]
+(D/'checks/harness-adaptation-final.json').write_text(json.dumps({'scope':'174 cases,147 ARC,3 SK repairs;104 primary+9 regression browsers','legacyContract':'Actual getColumnPost and fileBackedColumnAlternateLocales; jiti caches disabled; no runtime writes. SK014 leading duplicate H1/image and paths normalize per source loader; no fabricated fields.','priorEvidenceUnchanged':True,'files':rows},indent=2)+'\n')
+print('adapted browser + separate SK static harness')

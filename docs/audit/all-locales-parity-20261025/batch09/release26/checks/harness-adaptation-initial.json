@@ -1,0 +1,56 @@
+[
+  {
+    "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/snapshot.py",
+    "sourceSHA256": "c39ccba628e109ca782125e3d7d54a03416cddf7681872c9d779285b67c9920c",
+    "destination": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/snapshot.py",
+    "initialAdaptedSHA256": "00e6bbd487f1768a90bb43eee7cc940886146fcc17355de4318930660bb8d41e"
+  },
+  {
+    "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/run-static.py",
+    "sourceSHA256": "2049cad057d6ded4f1e9f2f0c58b0e95114379b4fbbafa8ebfdacfe7757b68d0",
+    "destination": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/run-static.py",
+    "initialAdaptedSHA256": "82c196322d4aa1b7308d9b6c87c88dc0965f909affd4a292d594aea4e87b1c6c"
+  },
+  {
+    "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/static-cases132.mjs",
+    "sourceSHA256": "988c5c5c3fc89ffebb14ccc7933ffae0240d7dbb900ee3da4a90033386d26736",
+    "destination": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/static-cases174.mjs",
+    "initialAdaptedSHA256": "06d0349e85ff99322a1948ef2a12d95ce8e062d5c51b790db721ff6dd07d3918"
+  },
+  {
+    "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/static-arc147-regression.mjs",
+    "sourceSHA256": "78dc371957a19e4f7d19ecf10120a4f3b89ab4cc5655c18cba89337c57e23868",
+    "destination": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/static-arc147-regression.mjs",
+    "initialAdaptedSHA256": "a2df7abfddfde9c7b5f99ca93855750e48e75fed967c86088e4694330f389753"
+  },
+  {
+    "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/pack-verify.mjs",
+    "sourceSHA256": "cf88256fb1d1f24ad6a79149cd78382effa1b674d12dde07931ce347d8f0a724",
+    "destination": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/pack-verify.mjs",
+    "initialAdaptedSHA256": "f16d2043b07af82250f00a1ce4318ab813fcf734c4cc67ddf2bcb12efe6fa37f"
+  },
+  {
+    "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/pack-config-verify.mjs",
+    "sourceSHA256": "34f35f4ec94a509517848dd92d2e62c2220ff6112cddf01a0d6359189c05230d",
+    "destination": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/pack-config-verify.mjs",
+    "initialAdaptedSHA256": "51665c565bf0c91e323c8034179f5526ccb10963eddbb44e09e3d319fc4c7f04"
+  },
+  {
+    "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/run-pack.py",
+    "sourceSHA256": "a12525e3ae57fbfcde0268b90f2886704bc8c56018758d97f2ca5ca2eae1c032",
+    "destination": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/run-pack.py",
+    "initialAdaptedSHA256": "ed8aa3a09f0c2d0f1ce7804088aaddc08da7ecc7b402239a6db2e1b7327a18e1"
+  },
+  {
+    "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/run-browser.py",
+    "sourceSHA256": "1c2cfd2a465a0ebc4e9d25e78f21b6902e7e16b0460a7b6ed196a051aa8765e8",
+    "destination": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/run-browser.py",
+    "initialAdaptedSHA256": "0bdb2b4b59a75c7af4a6a9a539dc650a11639cc9b7fe6d15e37b44a4f275cd81"
+  },
+  {
+    "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/browser-cases.mjs",
+    "sourceSHA256": "b015b3cc0b74b537198ae25e4a9b9013d3102041eb315240f891699acffd869e",
+    "destination": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/browser-cases.mjs",
+    "initialAdaptedSHA256": "46c0b04bbc2bf7b84bf8e586e3b66df868b21cb6b681dff91ec7daab48c28350"
+  }
+]

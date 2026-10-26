@@ -1,0 +1,168 @@
+{
+  "generatedAt": "2026-10-26T12:02:12.893Z",
+  "data": null,
+  "crawl": {
+    "pages": 3028,
+    "files": [
+      {
+        "path": "/manifest.webmanifest",
+        "file": "manifest.webmanifest",
+        "contentType": "application/manifest+json"
+      },
+      {
+        "path": "/icon.png",
+        "file": "icon.png",
+        "contentType": "image/png"
+      },
+      {
+        "path": "/apple-icon.png",
+        "file": "apple-icon.png",
+        "contentType": "image/png"
+      },
+      {
+        "path": "/sitemap.xml",
+        "file": "sitemap.xml",
+        "contentType": "application/xml"
+      },
+      {
+        "path": "/robots.txt",
+        "file": "robots.txt",
+        "contentType": "text/plain"
+      },
+      {
+        "path": "/ko/llms.txt",
+        "file": "ko/llms.txt",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "/en/llms.txt",
+        "file": "en/llms.txt",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "/zh-hant/llms.txt",
+        "file": "zh-hant/llms.txt",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "/ja/llms.txt",
+        "file": "ja/llms.txt",
+        "contentType": "text/plain; charset=utf-8"
+      }
+    ],
+    "redirects": [],
+    "missing": [],
+    "serverOnlyLinks": {},
+    "notFoundPages": {
+      "ko": "ko/404.html",
+      "zh-hant": "zh-hant/404.html",
+      "en": "en/404.html",
+      "ja": "ja/404.html",
+      "id": "id/404.html",
+      "th": "th/404.html",
+      "de": "de/404.html",
+      "es": "es/404.html",
+      "fr": "fr/404.html",
+      "it": "it/404.html",
+      "pt": "pt/404.html",
+      "nl": "nl/404.html",
+      "pl": "pl/404.html",
+      "ru": "ru/404.html",
+      "uk": "uk/404.html",
+      "el": "el/404.html",
+      "sv": "sv/404.html",
+      "da": "da/404.html",
+      "nb": "nb/404.html",
+      "fi": "fi/404.html",
+      "cs": "cs/404.html",
+      "hu": "hu/404.html",
+      "ro": "ro/404.html",
+      "sk": "sk/404.html",
+      "bg": "bg/404.html",
+      "hr": "hr/404.html",
+      "sr": "sr/404.html",
+      "sl": "sl/404.html",
+      "lt": "lt/404.html",
+      "lv": "lv/404.html",
+      "et": "et/404.html",
+      "ca": "ca/404.html",
+      "is": "is/404.html",
+      "/": "404.html"
+    }
+  },
+  "assembled": {
+    "redirectRules": 162,
+    "redirectStubs": 155,
+    "headerBlocks": 6,
+    "rootLocales": [
+      "ar",
+      "bg",
+      "bn",
+      "ca",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "en",
+      "es",
+      "et",
+      "fa",
+      "fi",
+      "fil",
+      "fr",
+      "he",
+      "hi",
+      "hr",
+      "hu",
+      "id",
+      "is",
+      "it",
+      "ja",
+      "km",
+      "ko",
+      "lt",
+      "lv",
+      "mn",
+      "ms",
+      "my",
+      "nb",
+      "ne",
+      "nl",
+      "pl",
+      "pt",
+      "ro",
+      "ru",
+      "sk",
+      "sl",
+      "sr",
+      "sv",
+      "ta",
+      "th",
+      "tr",
+      "uk",
+      "ur",
+      "vi",
+      "zh-hans",
+      "zh-hant"
+    ],
+    "media": {
+      "origin": "https://media.tseng-law.com",
+      "files": 2164,
+      "bytes": 3110120312,
+      "referenced": 1346,
+      "missingReferences": []
+    }
+  },
+  "verification": {
+    "files": 5593,
+    "bytes": 496233237,
+    "htmlPages": 3220,
+    "oversize": [],
+    "sitemapUrls": 3023,
+    "sitemapMissing": [],
+    "brokenRefs": {},
+    "serverOnlyRefs": {},
+    "apiStrings": {},
+    "flightErrors": {}
+  }
+}

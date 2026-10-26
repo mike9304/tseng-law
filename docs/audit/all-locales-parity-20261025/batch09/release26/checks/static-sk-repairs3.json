@@ -1,0 +1,164 @@
+{
+  "startedFromCommit": "89206d10a5d3beb7223207f0ca2f3d34889b19ed",
+  "finishedAt": "2026-10-26T12:05:43.300Z",
+  "scope": "Three approved existing SK repairs: actual loader metadata, normalized legacy body, every FAQ/link, hero/table, actual same-slug cluster and sitemap. SK014 legacy publication fallback is preserved, not silently repaired; SK877/878 are SK-only. No legal or native-language approval.",
+  "parser": {
+    "htmlparser2": "6.1.0",
+    "cssSelect": "4.3.0"
+  },
+  "buildInfo": {
+    "commit": "89206d10a5d3beb7223207f0ca2f3d34889b19ed",
+    "builtAt": "2026-10-26T12:02:09.899Z"
+  },
+  "mediaContract": {
+    "origin": "https://media.tseng-law.com",
+    "mediaFiles": 2164,
+    "missingReferences": [],
+    "heroSourceHashes": {
+      "images/blog/014-taiwan-mandatory-employment-period/featured-01.jpg": "7ad012ee33a23688c98121dca1e63f31052bacdf1cb4525c946c3a93c03c4418",
+      "images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp": "918e0c6be06873086b5e8a5f32931045ee5a51e004c3074cad20f044fc9a4aa7",
+      "images/blog/singapore-20261010/investment-1600x900.webp": "6de65f0b068845440b280267600eefbb6451f8165c54bfa4a5dca8d409cc3249"
+    }
+  },
+  "inputHashes": {
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/seo.ts": "c53f1a54564ef810f39d76dfd952eea3c23ce5debad61b3f3170d6937115c0d4",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/layout.tsx": "2062a9982bb7a38cbdd2660fd407300e6ea30b744894214a18fe0791139f698a",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/columns/[slug]/page.tsx": "1ab62d68f2dd9725e0bbb31def3b43ecba95bb20c6bfed05de6643cf7c3ef090",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/columns.ts": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/builder/columns/storage.ts": "042a9cf508dcd78974d4cab668fd49e62d8a948f729fdc9aa7712d5cfd553ba2",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/consultation/columns-blob-reader.ts": "4fbcceb3125213b7f281bbcb3657b5facfcb6877bdcef67bdbfd12b4ec15320f",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/column-locales.ts": "26d8fe8de7a9703aa7b0d279f32938e84190d5199ce0c4ddee84e89bb934b535",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch09-release26/build-info.json": "8e092bb586a27a353df0a2d47a1938eafc0f08e53d4157fb261e278915d24af8",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch09-release26/sitemap.xml": "25e7695a6e3c4f4cef22ee6030d0d43cfa0ed2d3a4f6a5fb65a1b196c142bd88",
+    "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/checks/static-build-release26-media.json": "b5cf05e7f34e991967689c9b10faf8b677ef4a6885987930e8dff00303a49354",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/scripts/static-site/assemble.mjs": "e0f527322c6f264ff3fc59f1c26fd67f9b4fb45fbb65dda78046ba3d7caaf61e",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/sitemap.ts": "d810e1753ff08ee79b09942a35b6121586074a5d92a40bd1207b0c9b87f6e939",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sk/014-taiwan-mandatory-employment-period.md": "631c8e1ba003b6bc0268a09e76e67af95fea57384be4826484850c3399a68ef6",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch09-release26/sk/columns/taiwan-mandatory-employment-period.html": "99a99f97b0cac74fe46e03b792eb12e12410f638f507d40778455cbc2e4b714e",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/blog/014-taiwan-mandatory-employment-period/featured-01.jpg": "7ad012ee33a23688c98121dca1e63f31052bacdf1cb4525c946c3a93c03c4418",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sk/877-slovak-exporter-taiwan-unpaid-invoice-recovery.md": "60638adf443098093688db12bb8be6374d858783382548fb91afd5a0e963d911",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch09-release26/sk/columns/slovak-exporter-taiwan-unpaid-invoice-recovery.html": "c15c63fe1a1a89af9836793af946b3d288cdc173fd84a14582ffaca8a7f5c097",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp": "918e0c6be06873086b5e8a5f32931045ee5a51e004c3074cad20f044fc9a4aa7",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sk/878-slovak-business-taiwan-subsidiary-branch-office.md": "f9998228d7d54128519262cc1884a86e8d62906e66db27189b515c9cba7d9da2",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch09-release26/sk/columns/slovak-business-taiwan-subsidiary-branch-office.html": "e0a73366f90df3d9b65cf502a3388f0765a12de0241641d5551a778ec4ce3ae7",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/blog/singapore-20261010/investment-1600x900.webp": "6de65f0b068845440b280267600eefbb6451f8165c54bfa4a5dca8d409cc3249"
+  },
+  "inputsUnchanged": true,
+  "rows": [
+    {
+      "locale": "sk",
+      "slug": "taiwan-mandatory-employment-period",
+      "source": {
+        "file": "src/content/columns-sk/014-taiwan-mandatory-employment-period.md",
+        "sha256": "631c8e1ba003b6bc0268a09e76e67af95fea57384be4826484850c3399a68ef6"
+      },
+      "artifact": {
+        "file": "sk/columns/taiwan-mandatory-employment-period.html",
+        "bytes": 160250,
+        "sha256": "99a99f97b0cac74fe46e03b792eb12e12410f638f507d40778455cbc2e4b714e"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Dohoda o minimálnej dobe trvania pracovného pomeru na Taiwane: kritériá platnosti, náklady na školenie a zmluvná pokuta",
+        "canonical": "https://tseng-law.com/sk/columns/taiwan-mandatory-employment-period",
+        "alternateCount": 50,
+        "footerCount": 49,
+        "articleDates": {
+          "published": "2026-07-25",
+          "modified": "2026-07-25"
+        },
+        "bodySegmentCount": 97,
+        "sourceLinkCount": 7,
+        "missingSourceLinks": [],
+        "bodySegmentSHA256": "030fff8438c152c4550da6a8695bb8a37ccc5e53533d5c84ae738437e565bda7",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 4,
+        "imagePath": "/images/blog/014-taiwan-mandatory-employment-period/featured-01.jpg",
+        "sitemapLastmod": "2026-07-25",
+        "sitemapAlternateCount": 50
+      },
+      "pass": true
+    },
+    {
+      "locale": "sk",
+      "slug": "slovak-exporter-taiwan-unpaid-invoice-recovery",
+      "source": {
+        "file": "src/content/columns-sk/877-slovak-exporter-taiwan-unpaid-invoice-recovery.md",
+        "sha256": "60638adf443098093688db12bb8be6374d858783382548fb91afd5a0e963d911"
+      },
+      "artifact": {
+        "file": "sk/columns/slovak-exporter-taiwan-unpaid-invoice-recovery.html",
+        "bytes": 99033,
+        "sha256": "c15c63fe1a1a89af9836793af946b3d288cdc173fd84a14582ffaca8a7f5c097"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: nezaplatené faktúry slovenského exportéra",
+        "canonical": "https://tseng-law.com/sk/columns/slovak-exporter-taiwan-unpaid-invoice-recovery",
+        "alternateCount": 2,
+        "footerCount": 1,
+        "articleDates": {
+          "published": "2026-10-24",
+          "modified": "2026-10-24"
+        },
+        "bodySegmentCount": 26,
+        "sourceLinkCount": 39,
+        "missingSourceLinks": [],
+        "bodySegmentSHA256": "6ecf35aaedba2e6d69b242e01d39ff244e89c66ed89bfdc0cce717bd3d697e68",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/blog/354-unpaid-invoices-taiwan-buyer-payment-order-attachment/featured-01.webp",
+        "sitemapLastmod": "2026-10-24",
+        "sitemapAlternateCount": 2
+      },
+      "pass": true
+    },
+    {
+      "locale": "sk",
+      "slug": "slovak-business-taiwan-subsidiary-branch-office",
+      "source": {
+        "file": "src/content/columns-sk/878-slovak-business-taiwan-subsidiary-branch-office.md",
+        "sha256": "f9998228d7d54128519262cc1884a86e8d62906e66db27189b515c9cba7d9da2"
+      },
+      "artifact": {
+        "file": "sk/columns/slovak-business-taiwan-subsidiary-branch-office.html",
+        "bytes": 99290,
+        "sha256": "e0a73366f90df3d9b65cf502a3388f0765a12de0241641d5551a778ec4ce3ae7"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: založenie firmy so slovenským vlastníkom",
+        "canonical": "https://tseng-law.com/sk/columns/slovak-business-taiwan-subsidiary-branch-office",
+        "alternateCount": 2,
+        "footerCount": 1,
+        "articleDates": {
+          "published": "2026-10-24",
+          "modified": "2026-10-24"
+        },
+        "bodySegmentCount": 27,
+        "sourceLinkCount": 37,
+        "missingSourceLinks": [],
+        "bodySegmentSHA256": "f08a1cc59c924e7932c2295612add6a5be4f0a979e8a3aa064bc1552fe03752a",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/blog/singapore-20261010/investment-1600x900.webp",
+        "sitemapLastmod": "2026-10-24",
+        "sitemapAlternateCount": 2
+      },
+      "pass": true
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "bodySegments": 150,
+    "sourceLinks": 83
+  }
+}

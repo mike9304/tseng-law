@@ -1,0 +1,10 @@
+{
+  "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/run-full-build.py",
+  "sourceSHA256": "154bab899a09edbb12c68e3160e3f0066a3db2ddeecf608551b3b6b8000b0447",
+  "destination": "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/run-full-build.py",
+  "changes": [
+    "batch08 \u2192 batch09",
+    "build port 4642 \u2192 4643"
+  ],
+  "destinationSHA256": "3c9f49661fedf7466017bee370b1fc2c9c3d0a1f1da657ac229fa10ad9b1de51"
+}

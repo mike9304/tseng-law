@@ -1,0 +1,19 @@
+{
+  "atUTC": "2026-10-26T11:59:40.455458+00:00",
+  "commandStage": "loopback port preflight before build or artifact writes",
+  "attempts": [
+    {
+      "kind": "harness adaptation port probe",
+      "actualExit": 1,
+      "stderr": "PermissionError: [Errno 1] Operation not permitted"
+    },
+    {
+      "kind": "run-full-build.py port probe",
+      "actualExit": 1,
+      "stderr": "PermissionError: [Errno 1] Operation not permitted"
+    }
+  ],
+  "buildStarted": false,
+  "sourceMutated": false,
+  "nextAction": "Same authorized local build via tool review with loopback bind permission"
+}

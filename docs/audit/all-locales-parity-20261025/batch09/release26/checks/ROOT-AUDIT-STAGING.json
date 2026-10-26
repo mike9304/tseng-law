@@ -1,0 +1,10 @@
+{
+  "atUTC": "2026-10-26T12:21:57.548681+00:00",
+  "stagedFilesBeforeReceipt": 57,
+  "onlyReleaseAuditChanges": true,
+  "fullStagedWhitespaceExit": 2,
+  "rawLogWhitespace": "docs/audit/all-locales-parity-20261025/batch09/release26/checks/static-build-release26-full.log:38: space before tab in indent.\n+   \t- include was updated to add '.next-static/types/**/*.ts'\ndocs/audit/all-locales-parity-20261025/batch09/release26/checks/static-build-release26-full.log:42: trailing whitespace.\n+   Generating static pages (693/2775) \ndocs/audit/all-locales-parity-20261025/batch09/release26/checks/static-build-release26-full.log:43: trailing whitespace.\n+   Generating static pages (1387/2775) \ndocs/audit/all-locales-parity-20261025/batch09/release26/checks/static-build-release26-full.log:44: trailing whitespace.\n+   Generating static pages (2081/2775) \n",
+  "rawBytesPreserved": true,
+  "excludingSingleRawBuildLogExit": 0,
+  "sourceRuntimeChanges": false
+}

@@ -1,0 +1,21 @@
+{
+  "startedAt": "2026-10-26T12:02:57.904214+00:00",
+  "expectedCommit": "89206d10a5d3beb7223207f0ca2f3d34889b19ed",
+  "cwd": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "command": [
+    "node",
+    "scripts/static-site/sites-pack.mjs",
+    "--out=/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch09-release26",
+    "--dist=/Users/son7/tseng-all-language-columns-20261025/batch09/release26/pack"
+  ],
+  "mode": "unchanged default packer; capacity candidate not imported",
+  "sourceSHA256": {
+    "scripts/static-site/sites-pack.mjs": "c983e275e92ef2aff523f6307069ca54121fc79400e9c247fa02f7c1b73d85e7",
+    "scripts/static-site/sites-worker.js": "1d822b535ea1011a27fd037cfb2f9cef9245aacb0cc541b26d926c55923998b9"
+  },
+  "sameDefaultPackerAndWorkerAsB8": true,
+  "exitCode": 0,
+  "finishedAt": "2026-10-26T12:03:04.117724+00:00",
+  "sourceUnchanged": true,
+  "logSHA256": "ff340eb54c7a02006d6f0d40ca7778080b43fd78477156f7d4ed5a000f7acbc9"
+}

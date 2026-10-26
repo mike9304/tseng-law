@@ -1,0 +1,223 @@
+{
+  "atUTC": "2026-10-26T12:12:08.786126+00:00",
+  "status": "LOCAL_QA_PASS",
+  "head": "89206d10a5d3beb7223207f0ca2f3d34889b19ed",
+  "gitClean": true,
+  "buildCommand": [
+    "node",
+    "scripts/static-site/build.mjs",
+    "--out=out-all-locales-batch09-release26",
+    "--port=4643",
+    "--media-origin=https://media.tseng-law.com"
+  ],
+  "buildExitCode": 0,
+  "buildSeconds": 148.29049,
+  "artifact": "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch09-release26",
+  "artifactFiles": 5593,
+  "artifactBytes": 496233237,
+  "htmlPages": 3220,
+  "crawlPages": 3028,
+  "sitemapUrls": 3023,
+  "staticArticleTotals": {
+    "articles": 324,
+    "bodySegments": 10870,
+    "sourceLinks": 7402,
+    "faqItems": 944
+  },
+  "casePages": 174,
+  "caseLocalesEach": 29,
+  "arcPages": 147,
+  "arcLocalesEach": 49,
+  "legacySK": {
+    "SK014": {
+      "rawPublishedAbsent": true,
+      "visibleSourceDate": "13. septembra 2025",
+      "unchangedLoaderArticlePublishedFallback": "2026-07-25",
+      "lastmod": "2026-07-25",
+      "summary": "existing loader extracts first prose",
+      "image": "existing ../images to /images/blog normalization",
+      "alt": "existing renderer falls back to title",
+      "heroCaption": "absent in original, not invented",
+      "cluster": 49
+    },
+    "SK877": {
+      "cluster": 1,
+      "published": "2026-10-24"
+    },
+    "SK878": {
+      "cluster": 1,
+      "published": "2026-10-24"
+    },
+    "interpretation": "Checks preserve unchanged source/loader contracts. The legacy visible/publication fallback difference is not newly introduced or corrected by this QA."
+  },
+  "primaryBrowser": {
+    "total": 104,
+    "passed": 104,
+    "failed": 0,
+    "fatal": false
+  },
+  "regressionBrowser": {
+    "total": 9,
+    "passed": 9,
+    "failed": 0,
+    "fatal": false
+  },
+  "browserVersion": {
+    "engine": "Chromium",
+    "version": "156.0.8078.4",
+    "playwright": "1.59.1",
+    "executablePath": "/Users/son7/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+    "headless": true,
+    "isolatedTemporaryProfiles": true
+  },
+  "noJSScriptPreloadBlocksPreserved": 7,
+  "browserConsolePageHttpRscErrors": 0,
+  "defaultPack": {
+    "expandedBytes": 174462193,
+    "expandedMiB": 166.38011264801025,
+    "headroomBytes": 93973263,
+    "headroomMiB": 89.61988735198975,
+    "pages": 3220,
+    "assets": 2370,
+    "packedFileCount": 5594,
+    "verificationFailures": 0,
+    "packerSha256": "c983e275e92ef2aff523f6307069ca54121fc79400e9c247fa02f7c1b73d85e7",
+    "workerTemplateSha256": "1d822b535ea1011a27fd037cfb2f9cef9245aacb0cc541b26d926c55923998b9",
+    "packedWorkerSha256": "84711e76427f7a5ae35a8be8e2c872adfba9b7291f76566eac99ffe4836d74ff"
+  },
+  "sourceTreeSHA256": "1a0cfbb7acf1792606267fdbce72c2b038f20dec4e629f27c18aceefc48cfcde",
+  "artifactTreeSHA256": "e1c757945cca22bb6965417f895b7804be48358dc71ee4d0ec5066631a6e4fbe",
+  "packageTreeSHA256": "a0380745c77751b7047eff6bd6c5a7503be2c5943ccaaacaef763f8528924901",
+  "snapshotComparison": {
+    "head": true,
+    "buildInfo": true,
+    "selected42": true,
+    "approvedRepairs3": true,
+    "canonical6": true,
+    "allSources": true,
+    "artifacts": true
+  },
+  "exactMarkdownDeltaFromB8": {
+    "added": [
+      "src/content/columns-nb/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-nb/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-nb/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-nb/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-nb/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-nb/921-taiwan-online-game-coins-refund-judgment.md",
+      "src/content/columns-ne/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-ne/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-ne/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-ne/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-ne/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-ne/921-taiwan-online-game-coins-refund-judgment.md",
+      "src/content/columns-pl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-pl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-pl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-pl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-pl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-pl/921-taiwan-online-game-coins-refund-judgment.md",
+      "src/content/columns-ro/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-ro/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-ro/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-ro/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-ro/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-ro/921-taiwan-online-game-coins-refund-judgment.md",
+      "src/content/columns-sk/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-sk/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-sk/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-sk/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+      "src/content/columns-sl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-sl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-sl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-sl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-sl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-sl/921-taiwan-online-game-coins-refund-judgment.md",
+      "src/content/columns-sr/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-sr/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-sr/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-sr/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-sr/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-sr/921-taiwan-online-game-coins-refund-judgment.md"
+    ],
+    "removed": [],
+    "changed": [
+      "src/content/columns-sk/014-taiwan-mandatory-employment-period.md",
+      "src/content/columns-sk/877-slovak-exporter-taiwan-unpaid-invoice-recovery.md",
+      "src/content/columns-sk/878-slovak-business-taiwan-subsidiary-branch-office.md"
+    ]
+  },
+  "inputSourceChanged": false,
+  "capacityCandidateUsed": false,
+  "capacityProven": false,
+  "published": false,
+  "commitPushDeployExecuted": false,
+  "report": {
+    "path": "REPORT.md",
+    "bytes": 5367,
+    "sha256": "87deebe2e87a7a76a89def65cc0ec93742cfb6c0e241df755a78d6574e404a96"
+  },
+  "commands": [
+    {
+      "command": [
+        "node",
+        "scripts/static-site/build.mjs",
+        "--out=out-all-locales-batch09-release26",
+        "--port=4643",
+        "--media-origin=https://media.tseng-law.com"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/static-cases174.mjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/static-arc147-regression.mjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/static-sk-repairs3.mjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/browser-cases.mjs",
+        "--commit=89206d10a5d3beb7223207f0ca2f3d34889b19ed"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/release26/verification/browser-cases.mjs",
+        "--commit=89206d10a5d3beb7223207f0ca2f3d34889b19ed",
+        "--focus=regressions",
+        "--report=/Users/son7/tseng-all-language-columns-20261025/batch09/release26/checks/browser-regressions-results.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "scripts/static-site/sites-pack.mjs",
+        "--out=/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch09-release26",
+        "--dist=/Users/son7/tseng-all-language-columns-20261025/batch09/release26/pack"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "limitation": "Local fallback, not Air prod-mirror or public deployment. No repeated unit suites, human/native legal approval, actual Sites importer or full49x286 capacity proof."
+}

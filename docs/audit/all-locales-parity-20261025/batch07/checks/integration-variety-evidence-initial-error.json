@@ -1,0 +1,6 @@
+{
+  "stage": "saved CLI evidence normalization; no source or shared edits",
+  "exit": 1,
+  "error": "DA915 saved full batch exit1 although current SHA row is OK",
+  "correction": "Preserve actual DA and FA batch exits; validate selected per-file OK block. Do not convert batch1 to exit0."
+}

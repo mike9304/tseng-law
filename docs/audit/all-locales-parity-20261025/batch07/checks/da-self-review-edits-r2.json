@@ -1,0 +1,52 @@
+{
+  "atUTC": "2026-10-25T17:50:51.060655+00:00",
+  "changes": [
+    {
+      "id": 918,
+      "code": "D17",
+      "before": "Brevet af 23. februar 2019 bad hovedsageligt køberne kontakte banken og oplyse, hvor langt lånesagen var kommet. Det sagde ikke, at boligen var klar til brug. Tilslutningen af vand og strøm kom senere, og ved den første gennemgang i juli manglede der stadig udbedringer, ligesom boligens elevator ikke var færdigmonteret. Retten tiltrådte derfor ikke bygherrens påstand om, at overdragelsen allerede var varslet.",
+      "after": "Brevet af 23. februar 2019 bad køberne kontakte banken og oplyse lånesagens status. Det beskrev ikke boligen som klar til brug. Vand og strøm blev tilsluttet senere. Da der ved den første gennemgang i juli stadig var mangler og en ufærdig elevator, godtog retten ikke bygherrens påstand om allerede at have givet den aftalte overdragelsesmeddelelse.",
+      "reason": "The factual sequence still had four fairly even statements after R1. Condense the loan request, give utility connection its own short statement and connect the remaining defects directly to the rejected contention.",
+      "meaningPreservation": "Letter date, bank/status request, no readiness statement, later utility connection, July first inspection, defects/unfinished lift and rejected prior-notice assertion all remain.",
+      "occurrences": 1
+    },
+    {
+      "id": 921,
+      "code": "D18",
+      "before": "Retten knyttede også muligheden for at veksle disse jetoner til kontanter hos udbyderen til spørgsmålet om pengespil.",
+      "after": "Retten fandt også, at en kontant indløsning af disse jetoner hos udbyderen ville indebære hasardspil.",
+      "reason": "Make the gambling rationale an actual finding, not merely an unspecified question.",
+      "meaningPreservation": "Conditional cash conversion of these PvP chips only, tied to this game; no universal rule on all virtual assets.",
+      "occurrences": 1
+    },
+    {
+      "id": 921,
+      "code": "D19",
+      "before": "lå onlinespil på andenpladsen blandt kategorier af forbrugerklager indgivet første gang i 2025.",
+      "after": "lå onlinespil på andenpladsen blandt kategorier af forbrugerklager på første trin i 2025.",
+      "reason": "Clarify first-stage complaint statistics rather than implying a complainant’s first-ever complaint.",
+      "meaningPreservation": "2025 first-stage category ranking2, published7May2026 and year-on-year decline unchanged.",
+      "occurrences": 1
+    }
+  ],
+  "files": [
+    {
+      "id": 918,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSha256": "47df19e5019a4622051051d15470ce5838fdd78cd94e8b3e5291f489c08a7995",
+      "afterSha256": "793d7791f755e82fd4e2e9f40bead2f5b7c7a17ea9004129b90938d19d7a0ab5",
+      "actualReverseSha256": "47df19e5019a4622051051d15470ce5838fdd78cd94e8b3e5291f489c08a7995",
+      "reverseEqualsBefore": true,
+      "diff": "--- r1/918-taiwan-presale-mortgage-notice-handover-judgment.md\n+++ r2/918-taiwan-presale-mortgage-notice-handover-judgment.md\n@@ -29,7 +29,7 @@\n \n ## Bankens sag og boligens tilstand fulgte ikke samme tidsplan\n \n-Brevet af 23. februar 2019 bad hovedsageligt køberne kontakte banken og oplyse, hvor langt lånesagen var kommet. Det sagde ikke, at boligen var klar til brug. Tilslutningen af vand og strøm kom senere, og ved den første gennemgang i juli manglede der stadig udbedringer, ligesom boligens elevator ikke var færdigmonteret. Retten tiltrådte derfor ikke bygherrens påstand om, at overdragelsen allerede var varslet.\n+Brevet af 23. februar 2019 bad køberne kontakte banken og oplyse lånesagens status. Det beskrev ikke boligen som klar til brug. Vand og strøm blev tilsluttet senere. Da der ved den første gennemgang i juli stadig var mangler og en ufærdig elevator, godtog retten ikke bygherrens påstand om allerede at have givet den aftalte overdragelsesmeddelelse.\n \n I august underskrev køberne et dokument om adgang til indretning og rengøring. På baggrund af dokumentets indhold og de udestående udbedringer fandt retten heller ikke her bevis for kontraktmæssig overdragelse. Banken overførte lånebeløbet til bygherren den 5. november. Parternes garantidokument angav derimod den 28. november som overdragelsesdato. [Dommens begrundelse, punkt 4](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), gennemgår materialet på trykte sider 182–186.\n \n"
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSha256": "d769c895e41942b7bab35c3a146a806f64c06ce4c02228985dbf2815f0a197d1",
+      "afterSha256": "63f99210d7a75b030a17ab20b237d5d735693c5eeda8b4d8d6ebafdee5e261fe",
+      "actualReverseSha256": "d769c895e41942b7bab35c3a146a806f64c06ce4c02228985dbf2815f0a197d1",
+      "reverseEqualsBefore": true,
+      "diff": "--- r1/921-taiwan-online-game-coins-refund-judgment.md\n+++ r2/921-taiwan-online-game-coins-refund-judgment.md\n@@ -31,7 +31,7 @@\n \n Efter aftalen købte spilleren point til spillets tjenester eller varer; de resterende guldmønter havde en anden funktion som jetoner i spil mod andre deltagere. Retten anså dem hverken for de ubrugte købte point, som aftalen gav ret til at få tilbagebetalt, eller for spilgebyrer opkrævet af udbyderen. De kunne derfor ikke omregnes til et tilsvarende kontant tilbagebetalingskrav.\n \n-Retten knyttede også muligheden for at veksle disse jetoner til kontanter hos udbyderen til spørgsmålet om pengespil. Begrundelsen angik denne spilleform. I et andet spil må det undersøges, hvordan mønterne opstår, hvad de kan bruges til, og om de er brugt; betegnelsen på skærmen giver ikke svaret. [Dommens punkt 8](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C) gennemgår spørgsmålet på trykte sider 148–152.\n+Retten fandt også, at en kontant indløsning af disse jetoner hos udbyderen ville indebære hasardspil. Begrundelsen angik denne spilleform. I et andet spil må det undersøges, hvordan mønterne opstår, hvad de kan bruges til, og om de er brugt; betegnelsen på skærmen giver ikke svaret. [Dommens punkt 8](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C) gennemgår spørgsmålet på trykte sider 148–152.\n \n Aftalen var ophørt. Spilleren havde selv også meddelt sit ønske om at afslutte den, så retten kunne lægge ophøret til grund og vurdere de resterende mønter. Det indebærer ikke, at udbyderens tidligere begrundelser for spærring eller ophør alle blev anset for lovlige.\n \n@@ -57,7 +57,7 @@\n \n Punkt 6 i de forbudte standardvilkår forbyder at aftale, at en tvist alene må afgøres efter udbyderens gemte historik og elektroniske data. Det gør spillerens egne betalingsbilag, skærmbilleder og fulde korrespondance med kundeservice relevante. Reglen gør ikke automatisk alle udbyderens data ugyldige.\n \n-I [statistikken offentliggjort den 7. maj 2026](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930) lå onlinespil på andenpladsen blandt kategorier af forbrugerklager indgivet første gang i 2025. Antallet var faldet i forhold til året før. Myndigheden opfordrede samtidig udbyderne til at håndtere spærringer, suspensioner og kundeserviceklager ordentligt.\n+I [statistikken offentliggjort den 7. maj 2026](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930) lå onlinespil på andenpladsen blandt kategorier af forbrugerklager på første trin i 2025. Antallet var faldet i forhold til året før. Myndigheden opfordrede samtidig udbyderne til at håndtere spærringer, suspensioner og kundeserviceklager ordentligt.\n \n En tilbagebetalingstvist kan først rejses over for udbyderen og derefter gennem [myndighedernes klagesystem](https://appeal.cpc.ey.gov.tw/). Ved uenighed om kontraktens betydning eller afviste beviser kan en mail til [kontoret](mailto:wei@hoveringlaw.com.tw) angive tvistens emne og svarfristen; kontoens adgangskode er ikke nødvendig. Dokumentationen for det krævede beløb er forbindelsen mellem pengene, der blev indbetalt, de efterfølgende omvekslinger og den faktiske brug.\n \n"
+    }
+  ]
+}

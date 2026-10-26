@@ -1,0 +1,167 @@
+{
+  "atUTC": "2026-10-25T18:25:45.054387+00:00",
+  "status": "PREVIOUS_FINDINGS_CLOSED_NEW_M03_REQUIRED",
+  "closed": [
+    "M01",
+    "M02",
+    "S01",
+    "S02"
+  ],
+  "optionalS03": "unchanged and not a blocker",
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "71965945cfaaa67695b54df22fff330e988a96a64f8b1416e7be00df3f13ebb2",
+      "r1SHA": "534cd48a07b129dc51a55a0697bd93e41ee4f48bf61b190bdd0c30a8d1f828a6",
+      "exactReverseRestoresR1": true,
+      "changes": 1,
+      "bodyIdentical": true,
+      "frontmatterIdentical": false,
+      "faqBytesIdentical": true,
+      "URLSequenceIdentical": true,
+      "digitSequenceIdentical": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "d82fd20cc58e146613730221dacd28948a3f2b1aa92177ce8a916accf8a0b12f",
+      "r1SHA": "d82fd20cc58e146613730221dacd28948a3f2b1aa92177ce8a916accf8a0b12f",
+      "exactReverseRestoresR1": true,
+      "changes": 0,
+      "bodyIdentical": true,
+      "frontmatterIdentical": true,
+      "faqBytesIdentical": true,
+      "URLSequenceIdentical": true,
+      "digitSequenceIdentical": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "7e59a55f865bc4b3617c5d12371546be42aade935b4ab9fa6a775177ea6bcc49",
+      "r1SHA": "f2c94dacfac2769b7950c6063569d6e1da83bf8e6e78034cc7caad963308e9db",
+      "exactReverseRestoresR1": true,
+      "changes": 1,
+      "bodyIdentical": false,
+      "frontmatterIdentical": true,
+      "faqBytesIdentical": true,
+      "URLSequenceIdentical": true,
+      "digitSequenceIdentical": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "da1ba752fc6193222b844e5be491cb382ab55f49b3a714b49b27b5849825c3aa",
+      "r1SHA": "da1ba752fc6193222b844e5be491cb382ab55f49b3a714b49b27b5849825c3aa",
+      "exactReverseRestoresR1": true,
+      "changes": 0,
+      "bodyIdentical": true,
+      "frontmatterIdentical": true,
+      "faqBytesIdentical": true,
+      "URLSequenceIdentical": true,
+      "digitSequenceIdentical": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "cc59c5a7212683e20fcdf9fbccdf686ceb870db8de7447303dc4c04c74a8028a",
+      "r1SHA": "afac76c9b48c610c9e0d6a30956340c076bbe373cc41341051d9830eb47e5479",
+      "exactReverseRestoresR1": true,
+      "changes": 2,
+      "bodyIdentical": false,
+      "frontmatterIdentical": true,
+      "faqBytesIdentical": true,
+      "URLSequenceIdentical": true,
+      "digitSequenceIdentical": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "e058c5964d75cfad256f5fd99b6c474b9acbd80408a5e06229652116e3d38094",
+      "r1SHA": "e058c5964d75cfad256f5fd99b6c474b9acbd80408a5e06229652116e3d38094",
+      "exactReverseRestoresR1": true,
+      "changes": 0,
+      "bodyIdentical": true,
+      "frontmatterIdentical": true,
+      "faqBytesIdentical": true,
+      "URLSequenceIdentical": true,
+      "digitSequenceIdentical": true
+    }
+  ],
+  "exactEdits": 4,
+  "newFinding": {
+    "id": "M03",
+    "severity": "MUST",
+    "article": "918",
+    "old": "Juulikuisel esimesel ülevaatusel ootasid puudused endiselt parandamist ning lift polnud veel paigaldatud.",
+    "suggested": "Juulikuisel esimesel ülevaatusel ootasid puudused endiselt parandamist ning lifti paigaldamine polnud veel lõpetatud.",
+    "source": "電梯也未裝好",
+    "reason": "Keep incomplete elevator installation; do not strengthen to an unqualified not-installed state. Discovered in the changed paragraph during targeted R2; R1 omission acknowledged."
+  },
+  "boundaryDeltas": [
+    {
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "index": 8,
+      "before": {
+        "text": "Arendaja 23. veebruari 2019 kiri küsis ostja suhtlust laenupangaga ja toimingute edenemist.",
+        "units": 12
+      },
+      "after": {
+        "text": "Arendaja palus 23. veebruari 2019 kirjas ostjal võtta ühendust laenupangaga ja teatada laenutoimingute edenemisest.",
+        "units": 14
+      },
+      "previous": {
+        "text": "Otsuse järgi ei saanud seda edasi kaevata.",
+        "units": 7
+      },
+      "next": {
+        "text": "Selles ei öeldud, et eluase oleks kasutamiseks valmis.",
+        "units": 8
+      }
+    },
+    {
+      "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "index": 9,
+      "before": {
+        "text": "Arvesti kuulumine elanikule ei muutnud kõiki neid paigalduskohti erakasutuses ruumiks.",
+        "units": 10
+      },
+      "after": {
+        "text": "Ühendus elaniku arvestiga ei muutnud seina, lae ja ühise elektrikilbi õiguslikku staatust.",
+        "units": 12
+      },
+      "previous": {
+        "text": "Juhtmestik ühendati elaniku oma arvestiga.",
+        "units": 5
+      },
+      "next": {
+        "text": "Taiwani korterelamute haldamise seaduse artikkel 11 nõuab ühiste osade ja nendega seotud rajatiste lammutamise, olulise remondi või parendamise puhul korteriomanike koosoleku otsust.",
+        "units": 22
+      }
+    },
+    {
+      "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "index": 37,
+      "before": {
+        "text": "Selle juhtumi keskne dokument on täielik paigaldusjoonis koos otsustega, milles on lubatud kasutada just joonisel märgitud kohti.",
+        "units": 17
+      },
+      "after": {
+        "text": "Vaidluse hindamisel saab paigaldusjoonise kõrvutada olemasolevate otsustega, et selgitada, kas ja millises ulatuses ühiste osade kasutamine lubati.",
+        "units": 17
+      },
+      "previous": {
+        "text": "Peatamis- või eemaldamisnõude korral võib büroole saadetav e-kiri sisaldada vaidluse lühikirjeldust, eeskirjapunkti ja vastamise tähtaega.",
+        "units": 16
+      },
+      "next": {
+        "text": "Kohtulahendi alusandmed kontrolliti 25. oktoobril 2026, seotud normid ja teade 26. oktoobri seisuga.",
+        "units": 13
+      }
+    }
+  ],
+  "unchangedUnits": 256,
+  "totalUnits": 259,
+  "existingRecordsUnchanged": 20,
+  "freshCLIRunsByIndependentReviewer": 0,
+  "freshAuthorCLIRunsLinked": 2,
+  "authorEvidenceHashesVerified": true,
+  "structureErrors": 0,
+  "targetedRequiredItems": 16,
+  "batchRequiredItemsPreserved": 32,
+  "limits": "Targeted independent content review; no native-speaker/legal approval, browser rendering or deployment claim."
+}

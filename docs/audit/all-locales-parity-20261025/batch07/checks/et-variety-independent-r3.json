@@ -1,0 +1,353 @@
+{
+  "at_utc": "2026-10-25T18:27:24.763524+00:00",
+  "phase": "independent-r3",
+  "locale": "et",
+  "method": "Actual shared CLI with explicit et; extracted arrays from unchanged shared functions. Orthographic units, not native readability or legal approval. Metadata/FAQ/tables/headings/source list separately reviewed.",
+  "tool_inputs": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/et.json",
+      "sha256": "1cb9d12e7653189b58cdc1f8fd480608d967f70db0fddc9951598610b35d0b5a"
+    }
+  ],
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "18706d6b788879e3f3d6dff97136cee18f65321163adadb58d6bd23215fc4a05",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "--lang",
+        "et"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md [et] sentences=46 mean=11.6 cv=0.493 short=0.304 run3=0.023 opener_rep=0.071 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "et",
+        "sentences": 46,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 11.6,
+        "len_cv": 0.493,
+        "short_share": 0.304,
+        "long_share": 0.0,
+        "para_cv": 0.134,
+        "even_run3": 0.023,
+        "top_end": "üleandmist",
+        "top_end_share": 0.065,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "taiwani",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.14,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Veebruaris saabunud kiri palus ostjal tegelda eluasemelaenuga, kuid majas polnud veel vee-",
+        "last": "Kohtulahendi ja selle allikate alusandmed kontrolliti 25. oktoobril 2026; seotud kehtivaid norme ning ametlikke teateid ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "veebruaris",
+          "sentences": [
+            {
+              "text": "Veebruaris saabunud kiri palus ostjal tegelda eluasemelaenuga, kuid majas polnud veel vee- ega elektriühendust.",
+              "units": 14
+            },
+            {
+              "text": "Hiljem lubati ostja sisse remontima ja koristama.",
+              "units": 7
+            },
+            {
+              "text": "Kohtule ei tõendanud kumbki sündmus üksinda lepingukohast üleandmist.",
+              "units": 8
+            },
+            {
+              "text": "Vaidlust kirjeldab Taiwani tarbijakaitseameti avaldatud kohtulahendite kogumik, trükileheküljed 173–187.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "taiwani",
+          "sentences": [
+            {
+              "text": "Taiwani kõrgema kohtu Taichungi osakonna asi kandis numbrit 109年度上易字第289號.",
+              "units": 9
+            },
+            {
+              "text": "Kohus jättis 9. veebruaril 2022 arendaja apellatsioonkaebuse ja täiendava hagi rahuldamata, säilitades viivise maksmise kohustuse.",
+              "units": 15
+            },
+            {
+              "text": "Otsuse järgi ei saanud seda edasi kaevata.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "arendaja",
+          "sentences": [
+            {
+              "text": "Arendaja palus 23. veebruari 2019 kirjas ostjal võtta ühendust laenupangaga ja teatada laenutoimingute edenemisest.",
+              "units": 14
+            },
+            {
+              "text": "Selles ei öeldud, et eluase oleks kasutamiseks valmis.",
+              "units": 8
+            },
+            {
+              "text": "Ühendused rajati hiljem.",
+              "units": 3
+            },
+            {
+              "text": "Juulikuisel esimesel ülevaatusel ootasid puudused endiselt parandamist ning lifti paigaldamine polnud veel lõpetatud.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "augustis",
+          "sentences": [
+            {
+              "text": "Augustis allkirjastatud nõusolek lubas ostjal sisse pääseda sisetöödeks ja koristamiseks.",
+              "units": 10
+            },
+            {
+              "text": "Kohus võrdles seda kokkulepet parandustööde seisuga ega pidanud sissepääsu lepingus ette nähtud ülevaatuse järgseks üleandmiseks.",
+              "units": 15
+            },
+            {
+              "text": "Laen maksti arendajale välja 5. novembril.",
+              "units": 6
+            },
+            {
+              "text": "Garantiidokumendis märgiti üleandmise päevaks 28. november.",
+              "units": 6
+            },
+            {
+              "text": "Neid tõendeid käsitleb otsuse neljas põhjendus, trükileheküljed 182–186.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "milline",
+          "sentences": [
+            {
+              "text": "Milline kohustus laenu vormistamisega tegelikult täideti?",
+              "units": 6
+            },
+            {
+              "text": "Vastus eeldab kirja sisu, maksegraafiku ja maja seisundi kõrvutamist.",
+              "units": 9
+            },
+            {
+              "text": "Arendaja väitis, et ostja pidanuks pärast kirja saamist kogu hinna tasuma, kuid maksete ülevaatest nägi kohus, et ostja oli järginud kokkulepitud osamakseid ja tasunud kogu summa enne üleandmist.",
+              "units": 28
+            },
+            {
+              "text": "Väidetud makserikkumist ei tuvastatud.",
+              "units": 4
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "asjas",
+          "sentences": [
+            {
+              "text": "Asjas kohaldatud leping andis müüjale üleandmisest teatamiseks neli kuud kasutusloa saamisest, tänane ehitatava eluaseme müügi kohustuslike tüüptingimuste punkt 15 aga sätestab kuus kuud samast algsündmusest.",
+              "units": 25
+            },
+            {
+              "text": "Oma lepingu puhul tuleb kontrollida sõlmimise ajal kehtinud nõudeid.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "arvestus",
+          "sentences": [
+            {
+              "text": "Arvestus algab kasutusloa saamisest.",
+              "units": 4
+            },
+            {
+              "text": "Laenu taotlemise, heakskiitmise või väljamaksmise kuupäev seda algust ei asenda.",
+              "units": 10
+            },
+            {
+              "text": "Kuue kuu nõue puudutab üleandmisest teatamist; sama punkt loetleb üleandmisega seotud parandamise, arveldamise ja dokumentide andmise kohustused.",
+              "units": 17
+            },
+            {
+              "text": "Sellest ei saa tuletada iga juhtumi jaoks ühesugust täieliku üleandmise lõpptähtaega.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "ostja",
+          "sentences": [
+            {
+              "text": "Ostja kohustused jäävad samuti asjakohaseks.",
+              "units": 5
+            },
+            {
+              "text": "Punkt 14 käsitleb laenudokumentide esitamist, vajalikes toimingutes osalemist ja enne omandiõiguse ülemineku registreerimist tasumisele kuuluvaid summasid.",
+              "units": 16
+            },
+            {
+              "text": "Vaidlus üleandmisteate üle ei kõrvalda automaatselt muid juba saabunud makse- või dokumentide esitamise kohustusi.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "tarbijakaitseameti",
+          "sentences": [
+            {
+              "text": "Tarbijakaitseameti 25. augusti 2025 lepingukontrolli tulemustes märgiti rikkumisena tingimusi, mis arvasid üleandmisteate tähtajast välja pangas toimuvaks kinnitamiseks ja laenu väljamakseks kuluva aja.",
+              "units": 22
+            },
+            {
+              "text": "Tegemist oli hilisema halduskontrolliga.",
+              "units": 4
+            },
+            {
+              "text": "See ei otsustanud kirjeldatud ostja varasema kirja õiguslikku tähendust.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "taiwani",
+          "sentences": [
+            {
+              "text": "Taiwani keskpanga kinnisvaralaenude eeskirjade praegune redaktsioon jõustus 18. septembril 2026 pärast eelmisel päeval tehtud muudatust.",
+              "units": 15
+            },
+            {
+              "text": "Uut laenu kavandav ostja saab pangaga täpsustada, millised nõuded tema tehingule kohalduvad.",
+              "units": 12
+            },
+            {
+              "text": "Neid reegleid ei kanta tagasi 2019. aasta tehingule ega kasutata siinse loo põhjal laenu saamise tagatisena.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "panga",
+          "sentences": [
+            {
+              "text": "Panga prognoositud maksepäev ja arendaja pakutud ülevaatusaeg võivad erineda.",
+              "units": 9
+            },
+            {
+              "text": "Mõlemat saab võrrelda lepingu tähtaegadega.",
+              "units": 5
+            },
+            {
+              "text": "Täielik kiri koos ümbriku või e-kirja saabumisandmetega näitab teate sisu ja kättesaamist; ülevaatusaktid, fotod ja sissepääsukokkulepe selgitavad samal ajal eluruumi seisundit.",
+              "units": 22
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "üks",
+          "sentences": [
+            {
+              "text": "Üks pealkiri jääb napiks.",
+              "units": 4
+            },
+            {
+              "text": "Märge „laenu korraldamine” ei ütle, kas samas kirjas tehti veel mõni õiguslikult oluline avaldus.",
+              "units": 14
+            },
+            {
+              "text": "Ka garantiidokumenti tuleb lugeda koos teiste üleandmise tõenditega, mitte üksnes selle kuupäeva järgi.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "viivise",
+          "sentences": [
+            {
+              "text": "Viivise või leppetrahvi nõude saamisel võib büroole e-kirjaga kirjeldada vaidlusalust tingimust, teate kuupäeva ja vastamise tähtaega.",
+              "units": 17
+            },
+            {
+              "text": "Dokumente korrastades saab eraldi märkida, milline kiri käsitles laenu, milline ülevaatust ja milline üleandmist.",
+              "units": 14
+            },
+            {
+              "text": "Nii on näha, millise sündmuse kohta pooled tegelikult eri seisukohtadel on.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "kohtulahendi",
+          "sentences": [
+            {
+              "text": "Kohtulahendi ja selle allikate alusandmed kontrolliti 25. oktoobril 2026; seotud kehtivaid norme ning ametlikke teateid võrreldi 26. oktoobri seisuga.",
+              "units": 19
+            },
+            {
+              "text": "Konkreetse ostja maksete peatamine, üleandmisest keeldumine või kahjunõue vajab tema lepingu ja tõendite hindamist.",
+              "units": 14
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Pangatoimingud ja eluruumi seisund",
+        "Lepingu neli kuud ja praeguste tingimuste kuus kuud",
+        "Teated, ülevaatused ja maksed ühel ajajoonel"
+      ],
+      "excludedListItems": []
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "atUTC": "2026-10-26T07:34:20.377713+00:00",
+  "baseCommit": "f66daa9f153537c000d23486e8be638472251012",
+  "checkedHashBindings": 698,
+  "hashMismatches": 0,
+  "allowedWorkingTreePaths": 257,
+  "sourceManuscripts": 42,
+  "canonicalFilesUnchanged": 6,
+  "review": "Root read full integration report and entire helper/case-regression/PUBLICATION tracked diff. Same-day ARC ordering reflects retained publication dates; preserves date, FAQ, audience, topic, reciprocal/hreflang assertions and prior colleague additions. No runtime change. Root verified frozen current files and complete copied/raw artifact bindings. Prior independent closures remain the meaning-review evidence.",
+  "testEvidence": {
+    "currentCoveredSuites": 28,
+    "currentCoveredTests": 767,
+    "initialRunFailurePreserved": true,
+    "followup20Suites313TestsExit": 0,
+    "unchanged8Suites454PassReused": true
+  },
+  "freshTestsClaimed": false,
+  "diffCheckExitCode": 0,
+  "knownLimits": [
+    "BG915 normal year abbreviation false split retained",
+    "DA/FA saved batch exit1 retained with individual current-SHA OK rows",
+    "Two unchanged-body summary deltas reuse prior actual CLI",
+    "No new browser/RTL/static-pack/public checks"
+  ],
+  "fullBuildBrowserPackPublicPending": true
+}

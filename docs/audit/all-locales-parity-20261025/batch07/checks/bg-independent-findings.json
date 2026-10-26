@@ -1,0 +1,109 @@
+{
+  "at_utc": "2026-10-25T18:17:45.820192+00:00",
+  "status": "PROPOSALS_ONLY_NOT_APPLIED",
+  "mandatory_findings": 2,
+  "mandatory_legal_errors_found": 0,
+  "optional_groups": 2,
+  "changes": [
+    {
+      "id": "M1",
+      "required": true,
+      "file_id": "921",
+      "old": "Балансът в профила показва останали монети.",
+      "new": "Дава ли остатъкът от монети в профила право на връщане на пари?",
+      "reason": "Batch factual/result opening type4/6; reader refund question changes type without inventing facts.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "source_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "old_occurrences": 1
+    },
+    {
+      "id": "M2a",
+      "required": true,
+      "file_id": "921",
+      "old": "Сумата е поискана, не присъдена.",
+      "new": "Съдът не присъжда поисканата сума.",
+      "reason": "State court result directly; claim/award distinction preserved.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "source_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "old_occurrences": 1
+    },
+    {
+      "id": "M2b",
+      "required": true,
+      "file_id": "921",
+      "old": "Кой е прекратил договора и какво подлежи на връщане са отделни въпроси.",
+      "new": "В това дело съдът преценява искането за възстановяване според функцията на останалите монети.",
+      "reason": "Replace abstract separate-topic recap with case-specific refund basis; own termination and nonapproval of operator actions stay preceding.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "source_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "old_occurrences": 1
+    },
+    {
+      "id": "M2c",
+      "required": true,
+      "file_id": "921",
+      "old": "След изтичането му правото по клауза 18 за прекратяване по всяко време остава отделен въпрос. Двата реда не се смесват.",
+      "new": "След изтичането на седемдневния срок потребителят може да прекрати договора с уведомление по всяко време по клауза 18.",
+      "reason": "Preserve post-seven-day anytime notice right under clause18 while preceding clause4 withdrawal conditions stay intact.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "source_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "old_occurrences": 1
+    },
+    {
+      "id": "M2d",
+      "required": true,
+      "file_id": "921",
+      "old": "Това са различни срокове с различни начални моменти.",
+      "new": "",
+      "reason": "Remove only abstract recap. Preceding complete sentence preserves storage minimum30days and delivery7days from receipt.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "source_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "old_occurrences": 1
+    },
+    {
+      "id": "O1",
+      "required": false,
+      "file_id": "916",
+      "old": "и възможна подкрепа за частно американско финансиране при спазване на приложимото право.",
+      "new": "и възможна подкрепа от САЩ за финансиране на частни инвестиции в Тайван при спазване на приложимото право.",
+      "reason": "Clarify US support actor and Taiwan investment destination; keep conditional support/currentlaw qualification.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "source_sha256": "f161ce0b785f0fd8bdaeb7b25fcb71e48243930b5cbddfabcd0c9f61aef2fcb5",
+      "old_occurrences": 1
+    },
+    {
+      "id": "O2a",
+      "required": false,
+      "file_id": "915",
+      "old": "В [материал от 30 септември 2026 г. за енергийния сектор в Тайван](https://www.trade.gov/market-intelligence/taiwan-energy-industry) американската International Trade Administration разглежда планирани енергийни и мрежови поръчки в края на 2026 г. и през 2027 г. от гледна точка на американските доставчици.",
+      "new": "В [материал от 30 септември 2026 г. за енергийния сектор в Тайван](https://www.trade.gov/market-intelligence/taiwan-energy-industry) американската International Trade Administration разглежда пазара от гледна точка на американските доставчици. Анализът обхваща планирани енергийни и мрежови поръчки в края на 2026 г. и през 2027 г.",
+      "reason": "Optional date density; no date/source/supplier scope deletion and no asserted hard numeric FAIL.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "source_sha256": "b2b058966c26f084e38969656625cbd642fc9f71dbb14bcbf7f30f9ecc28387f",
+      "old_occurrences": 1
+    },
+    {
+      "id": "O2b",
+      "required": false,
+      "file_id": "918",
+      "old": "Към 26 октомври 2026 г. официалната страница на [Централната банка за ограниченията при жилищното кредитиране](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html) показва действащите правила от 18 септември 2026 г.",
+      "new": "Към 26 октомври 2026 г. официалната страница на [Централната банка за ограниченията при жилищното кредитиране](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html) показва актуалните правила. Те са от 18 септември 2026 г.",
+      "reason": "Optional readability split; exact check/rules dates and CBC URL retained.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "source_sha256": "783fdbb7d7b80a6fb580bbe6a94da36b85f6d35109bb23d6c9370d813de95985",
+      "old_occurrences": 1
+    },
+    {
+      "id": "O2c",
+      "required": false,
+      "file_id": "921",
+      "old": "Действащите [задължителни и забранени клаузи за услуги за онлайн игри](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) са изменени на 10 август 2022 г. и се прилагат от 1 януари 2023 г.",
+      "new": "Действащите [задължителни и забранени клаузи за услуги за онлайн игри](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) са изменени на 10 август 2022 г. Те се прилагат от 1 януари 2023 г.",
+      "reason": "Optional readability split; amendment/effectiveness dates preserved.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "source_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "old_occurrences": 1
+    }
+  ],
+  "note": "M2 is one prose finding with4 suggested local substitutions. No proposed text has been run through CLI or claimed passing. Existing manuscript hashes remain unchanged."
+}

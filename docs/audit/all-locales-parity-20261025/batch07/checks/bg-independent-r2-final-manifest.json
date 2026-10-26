@@ -1,0 +1,55 @@
+{
+  "at_utc": "2026-10-25T18:26:23.783133+00:00",
+  "status": "TARGETED_CLOSURE_M1_M2_O1_COMPLETE",
+  "remaining_mandatory_in_reviewed_change_scope": 0,
+  "unchanged_optional": "O2 date readability; normal and accurate existing dates retained",
+  "input_hashes_reconfirmed": 21,
+  "author_r2_manifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-author-r2-manifest.json",
+    "sha256": "6a7f59f1abf0d33739755627698fc27eba97f05842b4e7d248526ec7d3df1d14"
+  },
+  "outputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/bg-independent-r2.md",
+      "sha256": "0f7d4714ee64dc9dc35a84d91f1582a00bdb700129adf51d178ede5f665b2240"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-independent-r2-evidence.json",
+      "sha256": "4f802b9c13b0c83e87a61ebef1ea9f50366173fd5bb5e6699782ec1d1e539c93"
+    }
+  ],
+  "current_changed_manuscripts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "a7e85faf8bd43c50827620fbc8e3e92e1b7eb18b825254bd4ca98fb712392013"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "cb3f84123bfd34d8c9587088875d7b7820e630afa5621c4e3a0fe6245f151cfa"
+    }
+  ],
+  "current_other_four": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "b2b058966c26f084e38969656625cbd642fc9f71dbb14bcbf7f30f9ecc28387f"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "783fdbb7d7b80a6fb580bbe6a94da36b85f6d35109bb23d6c9370d813de95985"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b94e2e414de8359fd969af0fdf6d1af61722ff08126f7fe44f083bd14e82b8af"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "0f2f518c48f2ab988d2c66dab1791a8478cf3b146fa7d0ad9a3f36579bcb6bfe"
+    }
+  ],
+  "known_unresolved_measurement_limit": "BG915 year abbreviation false split unchanged; no checker modification or exception waiver.",
+  "fresh_cli_runs_by_reviewer": 0,
+  "publication_ready": false,
+  "native_or_legal_approval": false,
+  "tool_code_independence_claim": false,
+  "manuscripts_R_shared_modified": false
+}

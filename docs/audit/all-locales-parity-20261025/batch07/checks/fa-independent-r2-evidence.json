@@ -1,0 +1,115 @@
+{
+  "at": "2026-10-25T18:22:46.522011+00:00",
+  "scope": "Targeted five accepted optional changes; same-SHA R1 review reused for remaining text; no manuscript mutations",
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "before_sha256": "0210db2a1ad6a56b7c2eb9d069aa3c2a0e8c8c977001ce2b367ac84c72788543",
+      "current_sha256": "0210db2a1ad6a56b7c2eb9d069aa3c2a0e8c8c977001ce2b367ac84c72788543",
+      "exact_proposed_changes": 0,
+      "reverse_matches_R1_and_backup": true,
+      "FAQ_and_URL_values_order_unchanged": true,
+      "same_shared_extraction": true,
+      "segments": 41
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "before_sha256": "cebe40e77b1e448c5d70cd27adeb3e1c478beab240e739b73f36ad73e44cf59e",
+      "current_sha256": "cebe40e77b1e448c5d70cd27adeb3e1c478beab240e739b73f36ad73e44cf59e",
+      "exact_proposed_changes": 0,
+      "reverse_matches_R1_and_backup": true,
+      "FAQ_and_URL_values_order_unchanged": true,
+      "same_shared_extraction": true,
+      "segments": 46
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "before_sha256": "9a87d93cbfebed87af7c3a19b690ecc1d0a004fe4e9691ad89e4389faebee996",
+      "current_sha256": "9088ef6d1791a04d500e33d9c567433bd830200106b17b56fc102cca5c2d09a6",
+      "exact_proposed_changes": 1,
+      "reverse_matches_R1_and_backup": true,
+      "FAQ_and_URL_values_order_unchanged": true,
+      "same_shared_extraction": true,
+      "segments": 39
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "before_sha256": "4090a4f229dff8bdb3efa9dc4aca424ca85b3a211894c70d2daece243a124105",
+      "current_sha256": "7e8b3785a68b9157b9f5719fbc9409ac21fd54cf8d3c460126a19baf524c6561",
+      "exact_proposed_changes": 2,
+      "reverse_matches_R1_and_backup": true,
+      "FAQ_and_URL_values_order_unchanged": true,
+      "same_shared_extraction": true,
+      "segments": 40
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "before_sha256": "3ac5e23ff82197cfed9c68da8e93bd7b4e6f7a9bcecd6290c9e4ed4f49056cad",
+      "current_sha256": "3ac5e23ff82197cfed9c68da8e93bd7b4e6f7a9bcecd6290c9e4ed4f49056cad",
+      "exact_proposed_changes": 0,
+      "reverse_matches_R1_and_backup": true,
+      "FAQ_and_URL_values_order_unchanged": true,
+      "same_shared_extraction": true,
+      "segments": 40
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/921-taiwan-online-game-coins-refund-judgment.md",
+      "before_sha256": "e74174377e15e78ae04c90e8406468071ae3e272d1b6c77128c7b828ada647bb",
+      "current_sha256": "6e1bf2a8ffa06f66533173b1e6636a008da1c92b7373d2adc15007e572883d44",
+      "exact_proposed_changes": 2,
+      "reverse_matches_R1_and_backup": true,
+      "FAQ_and_URL_values_order_unchanged": true,
+      "same_shared_extraction": true,
+      "segments": 41
+    }
+  ],
+  "changed_sentence_deltas": [
+    {
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "tag": "replace",
+      "before": [
+        "آب و برق بعداً وصل شد و هنگام نخستین بازرسی در ژوئیه، هنوز عیب‌هایی برای تعمیر باقی مانده بود؛ آسانسور داخل خانه نیز نصب نشده بود."
+      ],
+      "after": [
+        "آب و برق بعداً وصل شد و هنگام نخستین بازرسی در ژوئیه، هنوز عیب‌هایی برای تعمیر باقی مانده بود؛ نصب آسانسور داخل خانه نیز هنوز کامل نشده بود."
+      ]
+    },
+    {
+      "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "tag": "replace",
+      "before": [
+        "مدیر با ثبت دو امتیاز منفیِ سنگین انضباطی از خدمت عزل شده بود."
+      ],
+      "after": [
+        "مدیر با ثبت دو امتیاز منفیِ سنگین انضباطی در یک نوبت، از خدمت عزل شده بود."
+      ]
+    },
+    {
+      "file": "921-taiwan-online-game-coins-refund-judgment.md",
+      "tag": "replace",
+      "before": [
+        "شرکت باید دست‌کم سی روز تاریخچهٔ شخصی بازی را نگه دارد و مطابق مقررات، درخواست دسترسی را رسیدگی کند؛ پس از دریافت درخواست، ارائهٔ آن باید ظرف هفت روز انجام شود."
+      ],
+      "after": [
+        "شرکت باید دست‌کم سی روز تاریخچهٔ شخصی بازی را نگه دارد و مطابق مقررات، به درخواست دسترسی رسیدگی کند؛ پس از دریافت درخواست، ارائهٔ آن باید ظرف هفت روز انجام شود."
+      ]
+    }
+  ],
+  "title_S03_directly_read": true,
+  "heading_S05_directly_read": true,
+  "raw_shared_exit_code": 0,
+  "raw_shared_stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/918-taiwan-presale-mortgage-notice-handover-judgment.md [fa] sentences=39 mean=17.9 cv=0.488 short=0.179 run3=0.108 opener_rep=0.077 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [fa] sentences=40 mean=17.2 cv=0.451 short=0.125 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.143 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/921-taiwan-online-game-coins-refund-judgment.md [fa] sentences=41 mean=17.1 cv=0.453 short=0.122 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+  "shared_cli_rerun": false,
+  "structure_errors": 0,
+  "FAQ_total": 17,
+  "total_segments": 247,
+  "evidence_hashes": {
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/fa-author-final-manifest.json": "bf66da2e7dd3474f797583f0e4a201a16209e23534579405d8bd1e7d639a4569",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/fa-independent-suggestions-edits.json": "64cf3ba334b4a5d58453a09333ce08294abd3c9f52a499af04c7b0cdff3a1d68",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/fa-variety-independent-suggestions.json": "dd8cfe206a0ba38aabd531898384b66fcb40f442ecf44d032932c9ecfad72b72",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/fa-content-audit-independent-suggestions.json": "d2bc6aed92aed0d88e495ed1ba910b89a0d566e21dd9c8a92ae66ff29d069660",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/fa-final-boundaries-after-independent.json": "e19f695e9b40d852e2f7d2b74589252054430db8f9538db6e7e83e310f3caa5e"
+  },
+  "R1_report_unchanged": true,
+  "no_RTL_screen_or_human_approval": true
+}

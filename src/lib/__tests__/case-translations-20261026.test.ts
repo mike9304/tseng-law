@@ -6,7 +6,9 @@ import { columnLanguageLinksFromIndex, type PublicLocale8 } from '@/lib/public-g
 import { buildAbsoluteUrl, getLanguageAlternates } from '@/lib/seo';
 import { archiveLeadPublicationDate, archiveLeadSlugsFor, expertiseSlugsFor } from './native-locale-columns';
 
-const TRANSLATIONS = ['de', 'it', 'ar', 'pt', 'hi', 'ms', 'ru'] as const;
+const TRANSLATIONS = ['de', 'it', 'ar', 'pt', 'hi', 'ms', 'ru', 'bg', 'bn', 'ca', 'da', 'el', 'et', 'fa'] as const;
+const SAME_DAY_ARC_LOCALES: readonly string[] = ['bg', 'bn', 'ca', 'el', 'et', 'fa'];
+const ARC_SLUGS = ['taiwan-arc-first-application', 'taiwan-visa-residence-work-study-family', 'taiwan-arc-renewal-changes-reentry'];
 // Independently pin the release contract, rather than deriving it from the test registry.
 const CASES = [
   { slug: 'taiwan-public-contract-mediation-arbitration-same-claim', source: 'en', topic: 'litigation', faqs: 2 },
@@ -18,13 +20,23 @@ const CASES = [
 ] as const;
 
 describe('reviewed case translations published October26', () => {
-  it.each(TRANSLATIONS)('%s has all six complete, own-audience cases leading its visible board', (locale) => {
+  it.each(TRANSLATIONS)('%s has all six complete, own-audience cases in its newest publication batch', (locale) => {
     const posts = getAllColumnPosts(locale);
     const visible = filterMarketBoardColumns(locale, posts);
     const slugs = CASES.map(({ slug }) => slug);
-    expect(posts.slice(0, 6).map(({ slug }) => slug)).toEqual(slugs);
-    expect(visible.slice(0, 6).map(({ slug }) => slug)).toEqual(slugs);
-    expect(archiveLeadSlugsFor(locale).slice(0, 6)).toEqual(slugs);
+    // Existing October26 ARC files lead the same-day batch by their lower column numbers.
+    const expectedLead = SAME_DAY_ARC_LOCALES.includes(locale) ? [...ARC_SLUGS, ...slugs] : slugs;
+    expect(posts.slice(0, expectedLead.length).map(({ slug }) => slug)).toEqual(expectedLead);
+    expect(visible.slice(0, expectedLead.length).map(({ slug }) => slug)).toEqual(expectedLead);
+    expect(archiveLeadSlugsFor(locale).slice(0, expectedLead.length)).toEqual(expectedLead);
+    expect(new Set(archiveLeadSlugsFor(locale)).size).toBe(archiveLeadSlugsFor(locale).length);
+    if (SAME_DAY_ARC_LOCALES.includes(locale) || locale === 'da') {
+      const expectedArcDate = locale === 'da' ? '2026-10-25' : '2026-10-26';
+      for (const slug of ARC_SLUGS) {
+        expect(posts.find(post => post.slug === slug)?.publicationDate).toBe(expectedArcDate);
+        expect(archiveLeadPublicationDate(slug, locale)).toBe(expectedArcDate);
+      }
+    }
     expect(expertiseSlugsFor(locale)).toEqual(expect.arrayContaining(slugs));
     for (const item of CASES) {
       const post = posts.find(({ slug }) => slug === item.slug);
@@ -34,7 +46,7 @@ describe('reviewed case translations published October26', () => {
     }
   });
 
-  it.each(CASES)('$slug retains its original publication date and exactly eight real translations', (item) => {
+  it.each(CASES)('$slug retains its original publication date and exactly fifteen real language versions', (item) => {
     const original = getAllColumnPosts(item.source).find(({ slug }) => slug === item.slug);
     expect(original?.publicationDate).toBe('2026-10-25');
     expect(original?.faq).toHaveLength(item.faqs);
@@ -44,7 +56,7 @@ describe('reviewed case translations published October26', () => {
     expect([...cluster].sort()).toEqual(expected);
     const urls = expected.map((locale) => buildAbsoluteUrl(`/${locale}/columns/${item.slug}`));
     const alternates = getLanguageAlternates(`/columns/${item.slug}`, cluster, { xDefaultWithinCluster: true });
-    expect(Object.keys(alternates)).toHaveLength(9);
+    expect(Object.keys(alternates)).toHaveLength(16);
     expect(Object.entries(alternates).filter(([tag]) => tag !== 'x-default').map(([, url]) => url).sort()).toEqual(urls.sort());
     expect(urls).toContain(alternates['x-default']);
     for (const locale of expected as PublicLocale8[]) {

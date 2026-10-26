@@ -1,0 +1,603 @@
+{
+  "baseCommit": "f66daa9f153537c000d23486e8be638472251012",
+  "externalChangeCount": 85,
+  "unchanged": 84,
+  "changedOnlyByApprovedHelperPatch": 1,
+  "files": [
+    {
+      "path": "docs/audit/columns-20261026-946-integration.md",
+      "HEADSHA256": "ce3ca40b712bc95fbc591d7a12ff501725117bc29527fb8db7095b4a15db9cf1",
+      "currentSHA256": "ce3ca40b712bc95fbc591d7a12ff501725117bc29527fb8db7095b4a15db9cf1",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/audit/columns-20261026-947-integration.md",
+      "HEADSHA256": "0ba220652457305d07205877425993dbb79854b9c74bb9cd7c74a66c5b810459",
+      "currentSHA256": "0ba220652457305d07205877425993dbb79854b9c74bb9cd7c74a66c5b810459",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/audit/columns-20261026-948-integration.md",
+      "HEADSHA256": "1b44776abb6254b521d539c4eacdf0fa00ca8441e94713df419d7ce62727a19c",
+      "currentSHA256": "1b44776abb6254b521d539c4eacdf0fa00ca8441e94713df419d7ce62727a19c",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/audit/columns-20261026-949-integration.md",
+      "HEADSHA256": "c4f008d0eb1e392fd7ea07213017df371edff6ffd9d1edf6e3c45145645d8961",
+      "currentSHA256": "c4f008d0eb1e392fd7ea07213017df371edff6ffd9d1edf6e3c45145645d8961",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/audit/columns-20261026-950-integration.md",
+      "HEADSHA256": "43148698588bc7435b57f0e1890fa3281db450e231744a463dd45d42102992d3",
+      "currentSHA256": "43148698588bc7435b57f0e1890fa3281db450e231744a463dd45d42102992d3",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/audit/columns-20261026-951-integration.md",
+      "HEADSHA256": "3358c935d2b84f628d678b610c7d87bd09a034106bcb6eb941aecd8c3033be9f",
+      "currentSHA256": "3358c935d2b84f628d678b610c7d87bd09a034106bcb6eb941aecd8c3033be9f",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/946-1026-G1-ASTRA-PASS.md",
+      "HEADSHA256": "809caa0e7cd61f34a5e23e5af766d56b054eb990e4129c95a70810f9b0df4770",
+      "currentSHA256": "809caa0e7cd61f34a5e23e5af766d56b054eb990e4129c95a70810f9b0df4770",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/946-1026-G1-CROSS-fixed-opusA.md",
+      "HEADSHA256": "3492a8fe2b4470373b5702dd8f75a670dd4ba0968147ff0de63c485ea8d5bb2f",
+      "currentSHA256": "3492a8fe2b4470373b5702dd8f75a670dd4ba0968147ff0de63c485ea8d5bb2f",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/946-1026-G1-CROSS-opusB.md",
+      "HEADSHA256": "df8e7dfd218589af9bf32d9a74a1e95d2b5c2ad65496197a562b7e3ad1090ae8",
+      "currentSHA256": "df8e7dfd218589af9bf32d9a74a1e95d2b5c2ad65496197a562b7e3ad1090ae8",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/947-1026-G2-ASTRA-PASS.md",
+      "HEADSHA256": "1a6dca67d336accd3e87ebc7ecf50681b34c5fa923cb18b08160d37c4e8fd63a",
+      "currentSHA256": "1a6dca67d336accd3e87ebc7ecf50681b34c5fa923cb18b08160d37c4e8fd63a",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/947-1026-G2-CROSS-opusA.md",
+      "HEADSHA256": "a7fc101d61421c77dbb2a736cb9e4febdb44b831113b59f50f679f33bd2e73b1",
+      "currentSHA256": "a7fc101d61421c77dbb2a736cb9e4febdb44b831113b59f50f679f33bd2e73b1",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/948-1026-G3-ASTRA-PASS.md",
+      "HEADSHA256": "a89805823d4ee9209bd770321e1bad9eb987751fc4d05e0e25a165e59cda843a",
+      "currentSHA256": "a89805823d4ee9209bd770321e1bad9eb987751fc4d05e0e25a165e59cda843a",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/948-1026-G3-CROSS-fixed-opusA.md",
+      "HEADSHA256": "a5b6bf314bec057ba0c3fb57f2d29169380e3c5c5adf00b6ef56130b26a18f89",
+      "currentSHA256": "a5b6bf314bec057ba0c3fb57f2d29169380e3c5c5adf00b6ef56130b26a18f89",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/948-1026-G3-CROSS-opusB.md",
+      "HEADSHA256": "2e02024b3ee5bd4a331b9cbe362729106fd7f7640b34e4d2a31ae11af84130a5",
+      "currentSHA256": "2e02024b3ee5bd4a331b9cbe362729106fd7f7640b34e4d2a31ae11af84130a5",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/949-1026-G4-ASTRA-PASS.md",
+      "HEADSHA256": "9d466d89b43b4e7f30542b4dfb49c225822b6fcda61f9b89af217dc538ef7a7f",
+      "currentSHA256": "9d466d89b43b4e7f30542b4dfb49c225822b6fcda61f9b89af217dc538ef7a7f",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/949-1026-G4-CROSS-opusA.md",
+      "HEADSHA256": "2805380f8302085efa0c31850d26ce870260a40bdc197ef7cac9218b2a16f461",
+      "currentSHA256": "2805380f8302085efa0c31850d26ce870260a40bdc197ef7cac9218b2a16f461",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/950-1026-G5-ASTRA-PASS.md",
+      "HEADSHA256": "dad5b116ef5d401102a5600095fda98c4fc1ccd61dcfc327376f8075b17d514a",
+      "currentSHA256": "dad5b116ef5d401102a5600095fda98c4fc1ccd61dcfc327376f8075b17d514a",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/950-1026-G5-CROSS-fixed-opusA.md",
+      "HEADSHA256": "8945bc5a3aa4ac9b515cd48d7ec1250769634c887924698c4ac7cb1e9d7de868",
+      "currentSHA256": "8945bc5a3aa4ac9b515cd48d7ec1250769634c887924698c4ac7cb1e9d7de868",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/950-1026-G5-CROSS-opusB.md",
+      "HEADSHA256": "5738275c989df615d7fa621b4a27c77161579099aace4ded8e95ae72c1881d9e",
+      "currentSHA256": "5738275c989df615d7fa621b4a27c77161579099aace4ded8e95ae72c1881d9e",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/951-1026-G6-ASTRA-PASS.md",
+      "HEADSHA256": "f6dc8297902e873b952fc7cfb74a23ff3260e1e544b98552ad98bd0a0f5860cc",
+      "currentSHA256": "f6dc8297902e873b952fc7cfb74a23ff3260e1e544b98552ad98bd0a0f5860cc",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "docs/columns/reviews/2026-10-26/columns/951-1026-G6-CROSS-opusA.md",
+      "HEADSHA256": "b99a5844d2717ba11e77e3ef85701aead4e5d0896a710e55763e291fa9c39df5",
+      "currentSHA256": "b99a5844d2717ba11e77e3ef85701aead4e5d0896a710e55763e291fa9c39df5",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis/featured-01.webp",
+      "HEADSHA256": "e199ad0c9236b26315c704d6c0d85db88aa65e8b117e2fca12463a963397e759",
+      "currentSHA256": "e199ad0c9236b26315c704d6c0d85db88aa65e8b117e2fca12463a963397e759",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction/featured-01.webp",
+      "HEADSHA256": "a27040063a2fd69128dc39cfff2cc9b6bbf623963ef6389358ad10c9af0cd967",
+      "currentSHA256": "a27040063a2fd69128dc39cfff2cc9b6bbf623963ef6389358ad10c9af0cd967",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect/featured-01.webp",
+      "HEADSHA256": "96ef6f305e17a4223fe3c7ffadc76072e631881b94d5d5d51c41844100df07aa",
+      "currentSHA256": "96ef6f305e17a4223fe3c7ffadc76072e631881b94d5d5d51c41844100df07aa",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/949-taiwan-national-park-filming-fine-administrative-appeal/featured-01.webp",
+      "HEADSHA256": "a6d40b8da325f184d37b071b6d8e75197780cb3fd367f831bbf39dafc5dca606",
+      "currentSHA256": "a6d40b8da325f184d37b071b6d8e75197780cb3fd367f831bbf39dafc5dca606",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/950-taiwan-estate-tax-listed-shares-closing-price-valuation/featured-01.webp",
+      "HEADSHA256": "3aab6f1f6c62d2ca4c349ac92080b641997154008726c6528f5d0b60cd4661ca",
+      "currentSHA256": "3aab6f1f6c62d2ca4c349ac92080b641997154008726c6528f5d0b60cd4661ca",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/951-taiwan-construction-subcontractor-fall-principal-contractor-liability/featured-01.webp",
+      "HEADSHA256": "b81bb9581f85294358b80f29fae55fc741c633139b29c23828945ebf9d845421",
+      "currentSHA256": "b81bb9581f85294358b80f29fae55fc741c633139b29c23828945ebf9d845421",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/ISSUE-20261026-01-taiwan-cash-courier-part-time-job-fraud-money-laundering-korean/featured-01.jpg",
+      "HEADSHA256": "38df725e5a3e66e1de5411cd0ff32ba2fa8bde0a73d2b6fccc11697935e94604",
+      "currentSHA256": "38df725e5a3e66e1de5411cd0ff32ba2fa8bde0a73d2b6fccc11697935e94604",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/ISSUE-20261026-01-taiwan-cash-courier-part-time-job-fraud-money-laundering-korean/featured-01.webp",
+      "HEADSHA256": "a22fb18c4c399f190839121692571491a6f04437c1df84e89bc3a04609ec2644",
+      "currentSHA256": "a22fb18c4c399f190839121692571491a6f04437c1df84e89bc3a04609ec2644",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/ISSUE-20261026-03-japan-equal-pay-guideline-taiwan-subsidiary-part-time-dispatch/featured-01.jpg",
+      "HEADSHA256": "131835e3db18eaca24a338868d9545a88fa8fec51ff3ecfe3aed025c11c5288b",
+      "currentSHA256": "131835e3db18eaca24a338868d9545a88fa8fec51ff3ecfe3aed025c11c5288b",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/ISSUE-20261026-03-japan-equal-pay-guideline-taiwan-subsidiary-part-time-dispatch/featured-01.webp",
+      "HEADSHA256": "1178a2850e7f40a1b3989a224a9e47895621607c4be99944cab8b3f3a3f2373f",
+      "currentSHA256": "1178a2850e7f40a1b3989a224a9e47895621607c4be99944cab8b3f3a3f2373f",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/ISSUE-20261026-05-taiwan-public-facility-reserved-land-value-tax-exemption-deadline/featured-01.jpg",
+      "HEADSHA256": "3193bdb21bcfebcef95e62b653da2b648b934516dbd16651f288b47f8ceab190",
+      "currentSHA256": "3193bdb21bcfebcef95e62b653da2b648b934516dbd16651f288b47f8ceab190",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/ISSUE-20261026-05-taiwan-public-facility-reserved-land-value-tax-exemption-deadline/featured-01.webp",
+      "HEADSHA256": "145cf7995eb00b69017799093ac44bfc9686ca90739e41367929897b2b4d777c",
+      "currentSHA256": "145cf7995eb00b69017799093ac44bfc9686ca90739e41367929897b2b4d777c",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/ISSUE-20261026-06-platforms-asked-to-label-generative-images/featured-01.jpg",
+      "HEADSHA256": "02674b3e7a64baa954de09802b73e324c3dbae3e31a7a9a7ac102c8484b60d1b",
+      "currentSHA256": "02674b3e7a64baa954de09802b73e324c3dbae3e31a7a9a7ac102c8484b60d1b",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/ISSUE-20261026-06-platforms-asked-to-label-generative-images/featured-01.webp",
+      "HEADSHA256": "29a72c6887c6d58ac21f5fbcdc5fdb65f42c697ae9cc30b75a811ac8bfc257de",
+      "currentSHA256": "29a72c6887c6d58ac21f5fbcdc5fdb65f42c697ae9cc30b75a811ac8bfc257de",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/ISSUE-20261026-08-vang-mieng-khai-hai-quan-dai-loan-viet-nam/featured-01.jpg",
+      "HEADSHA256": "8702da97a29e9793d7bccafa359521169de19b146b35b9ebbb7c17b400e21672",
+      "currentSHA256": "8702da97a29e9793d7bccafa359521169de19b146b35b9ebbb7c17b400e21672",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/ISSUE-20261026-08-vang-mieng-khai-hai-quan-dai-loan-viet-nam/featured-01.webp",
+      "HEADSHA256": "199e987c8f060e9fbd960ec3cbc0dab96ecf9861b2a9c0e31d01425eb2c846eb",
+      "currentSHA256": "199e987c8f060e9fbd960ec3cbc0dab96ecf9861b2a9c0e31d01425eb2c846eb",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/ISSUE-20261026-09-giam-tru-thue-viet-nam-luong-dai-loan/featured-01.jpg",
+      "HEADSHA256": "c5f03a99618f36a91d2d5c29dc20d1205d11f119ceb6f63c5408bd4ffb382efb",
+      "currentSHA256": "c5f03a99618f36a91d2d5c29dc20d1205d11f119ceb6f63c5408bd4ffb382efb",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "public/images/blog/ISSUE-20261026-09-giam-tru-thue-viet-nam-luong-dai-loan/featured-01.webp",
+      "HEADSHA256": "7658321b57b8d2ff760a387327d08121f689876ad9be8f276d7f915f66086a24",
+      "currentSHA256": "7658321b57b8d2ff760a387327d08121f689876ad9be8f276d7f915f66086a24",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/app/[locale]/llms.txt/__tests__/route.test.ts",
+      "HEADSHA256": "d23faeea72f6714105522d929240a08d05b197669df3ccec87c8739ab4cbb73e",
+      "currentSHA256": "d23faeea72f6714105522d929240a08d05b197669df3ccec87c8739ab4cbb73e",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/app/__tests__/sitemap.test.ts",
+      "HEADSHA256": "6c66f88f06489dae0bcef03fdaa2ad980c284aa981df01c99facb6aa877c835e",
+      "currentSHA256": "6c66f88f06489dae0bcef03fdaa2ad980c284aa981df01c99facb6aa877c835e",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/column-embeddings-pending.json",
+      "HEADSHA256": "6b2cf8b570c051197239a507a4123faa1dc04acc4f427b52317ee426d503ad9d",
+      "currentSHA256": "6b2cf8b570c051197239a507a4123faa1dc04acc4f427b52317ee426d503ad9d",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-en/946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md",
+      "HEADSHA256": "8760b5f676e82e39bfcf01caec7aed722260219756c452318adc0e5d70148e4e",
+      "currentSHA256": "8760b5f676e82e39bfcf01caec7aed722260219756c452318adc0e5d70148e4e",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-en/947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md",
+      "HEADSHA256": "ff338c5890111efe6795076381c134de100018c4e8ddeb1f36283e92e1175d68",
+      "currentSHA256": "ff338c5890111efe6795076381c134de100018c4e8ddeb1f36283e92e1175d68",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-en/948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md",
+      "HEADSHA256": "8d8ef985cde85ed4bdae003f7e39e121c9cfbf5d239b9dd13f38d4227f87a41b",
+      "currentSHA256": "8d8ef985cde85ed4bdae003f7e39e121c9cfbf5d239b9dd13f38d4227f87a41b",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-en/949-taiwan-national-park-filming-fine-administrative-appeal.md",
+      "HEADSHA256": "53f4c47a5fab9a1b47760595f0e8e374566577aab7a8aaf42c5d56caf89a1c6d",
+      "currentSHA256": "53f4c47a5fab9a1b47760595f0e8e374566577aab7a8aaf42c5d56caf89a1c6d",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-en/950-taiwan-estate-tax-listed-shares-closing-price-valuation.md",
+      "HEADSHA256": "e66125e731f5bf15a6cc26fd22515b8540a69b0a4de979d961ec52c24487b082",
+      "currentSHA256": "e66125e731f5bf15a6cc26fd22515b8540a69b0a4de979d961ec52c24487b082",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-en/951-taiwan-construction-subcontractor-fall-principal-contractor-liability.md",
+      "HEADSHA256": "1e0d412f72fbc419b7d014d803b57977bab91e32e94d9bbeb6a368e66d75c3df",
+      "currentSHA256": "1e0d412f72fbc419b7d014d803b57977bab91e32e94d9bbeb6a368e66d75c3df",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-es/946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md",
+      "HEADSHA256": "9e0c797bf0efa45133d7115fa2743d4dc08ac829ae10bc20d5279ac505f9b454",
+      "currentSHA256": "9e0c797bf0efa45133d7115fa2743d4dc08ac829ae10bc20d5279ac505f9b454",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-es/947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md",
+      "HEADSHA256": "ffbc29d4127aedec4932c3e9847970766d515fc52c8b32ed2e641666372a2e98",
+      "currentSHA256": "ffbc29d4127aedec4932c3e9847970766d515fc52c8b32ed2e641666372a2e98",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-es/948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md",
+      "HEADSHA256": "d876f0c03f8fa8947fd674b3e955b15761a253a257ac73c27a23dcbf5d8d3421",
+      "currentSHA256": "d876f0c03f8fa8947fd674b3e955b15761a253a257ac73c27a23dcbf5d8d3421",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-es/949-taiwan-national-park-filming-fine-administrative-appeal.md",
+      "HEADSHA256": "548a114139a144c1eab827905d7dd389a709f784f57167d0f9f0becba0223e4c",
+      "currentSHA256": "548a114139a144c1eab827905d7dd389a709f784f57167d0f9f0becba0223e4c",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-es/950-taiwan-estate-tax-listed-shares-closing-price-valuation.md",
+      "HEADSHA256": "8556bd68763db0f1257d2c71e5c066be76a451c421042d7028916fb9d595d3a9",
+      "currentSHA256": "8556bd68763db0f1257d2c71e5c066be76a451c421042d7028916fb9d595d3a9",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-es/951-taiwan-construction-subcontractor-fall-principal-contractor-liability.md",
+      "HEADSHA256": "2523c9af3b068396a135f49fbb6221a79cd2a4a53417da735cef44d0d1133768",
+      "currentSHA256": "2523c9af3b068396a135f49fbb6221a79cd2a4a53417da735cef44d0d1133768",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-ja/946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md",
+      "HEADSHA256": "fc56c5060d709e75bf49514a389d6e3c41bf6fab1308e57402b46ff4b72d0109",
+      "currentSHA256": "fc56c5060d709e75bf49514a389d6e3c41bf6fab1308e57402b46ff4b72d0109",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-ja/947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md",
+      "HEADSHA256": "ec100437c109f830a7642c003bdfe26b65dbdd9789bd937b88701844bd2cddde",
+      "currentSHA256": "ec100437c109f830a7642c003bdfe26b65dbdd9789bd937b88701844bd2cddde",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-ja/948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md",
+      "HEADSHA256": "1b22435fae294bafc49bad797a35290033c76ab90fb197bd5d95d91998e2f477",
+      "currentSHA256": "1b22435fae294bafc49bad797a35290033c76ab90fb197bd5d95d91998e2f477",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-ja/949-taiwan-national-park-filming-fine-administrative-appeal.md",
+      "HEADSHA256": "17c275579af6abaeec1e59e76a1c2b30bad9cd8c4d1247c6eb69a9784eb63a73",
+      "currentSHA256": "17c275579af6abaeec1e59e76a1c2b30bad9cd8c4d1247c6eb69a9784eb63a73",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-ja/950-taiwan-estate-tax-listed-shares-closing-price-valuation.md",
+      "HEADSHA256": "ff456e4ecbb28627b7e3b127a18d8a93ded4889dc7bd57127774c3b49bd7b908",
+      "currentSHA256": "ff456e4ecbb28627b7e3b127a18d8a93ded4889dc7bd57127774c3b49bd7b908",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-ja/951-taiwan-construction-subcontractor-fall-principal-contractor-liability.md",
+      "HEADSHA256": "b8e62a41fca1d27999857c3283c945964175d855fa7c79c4d6ba2419198776c6",
+      "currentSHA256": "b8e62a41fca1d27999857c3283c945964175d855fa7c79c4d6ba2419198776c6",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-zh/946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md",
+      "HEADSHA256": "7c392e85d60979b73787559e14cece86182352f78726140696da4c30267d6924",
+      "currentSHA256": "7c392e85d60979b73787559e14cece86182352f78726140696da4c30267d6924",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-zh/947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md",
+      "HEADSHA256": "a84a383d862e9d63b23d6e86662926eb40202db4999e6a91960345199a7f27da",
+      "currentSHA256": "a84a383d862e9d63b23d6e86662926eb40202db4999e6a91960345199a7f27da",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-zh/948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md",
+      "HEADSHA256": "3ca9156f70b8c8719025daaa16e5726a0727f0b856ef1aebc4404682738b2d23",
+      "currentSHA256": "3ca9156f70b8c8719025daaa16e5726a0727f0b856ef1aebc4404682738b2d23",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-zh/949-taiwan-national-park-filming-fine-administrative-appeal.md",
+      "HEADSHA256": "17e6bc36c3e2fec1ef94f002ba1e0d541d7589fd5a66080fba9669077a3c78e4",
+      "currentSHA256": "17e6bc36c3e2fec1ef94f002ba1e0d541d7589fd5a66080fba9669077a3c78e4",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-zh/950-taiwan-estate-tax-listed-shares-closing-price-valuation.md",
+      "HEADSHA256": "b25f4ae64bc41ed5989ba7af94b7118fdb11c715e188433d356a2a9df4c39b7d",
+      "currentSHA256": "b25f4ae64bc41ed5989ba7af94b7118fdb11c715e188433d356a2a9df4c39b7d",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns-zh/951-taiwan-construction-subcontractor-fall-principal-contractor-liability.md",
+      "HEADSHA256": "a874145d3939f702f033888aaa210086bcddcdcfbfcff2458b50ce7bae02e136",
+      "currentSHA256": "a874145d3939f702f033888aaa210086bcddcdcfbfcff2458b50ce7bae02e136",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns/946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md",
+      "HEADSHA256": "c0a2dcf33ad4f0acdf163e75e5506f158b70cb3f589f31596d1ef32f1b092a41",
+      "currentSHA256": "c0a2dcf33ad4f0acdf163e75e5506f158b70cb3f589f31596d1ef32f1b092a41",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns/947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md",
+      "HEADSHA256": "98d3781eebe508ec97f6ca1ac736e51b47462998aa9a44ed7fcf4434845ad86c",
+      "currentSHA256": "98d3781eebe508ec97f6ca1ac736e51b47462998aa9a44ed7fcf4434845ad86c",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns/948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md",
+      "HEADSHA256": "38dfb12ab781ab51a5592e3f275fe1e5f3152308507580eb8c43b632a6e78b90",
+      "currentSHA256": "38dfb12ab781ab51a5592e3f275fe1e5f3152308507580eb8c43b632a6e78b90",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns/949-taiwan-national-park-filming-fine-administrative-appeal.md",
+      "HEADSHA256": "37b3e7b38f69a026434a4627c313a265635fa466148c3f276836130791752dbf",
+      "currentSHA256": "37b3e7b38f69a026434a4627c313a265635fa466148c3f276836130791752dbf",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns/950-taiwan-estate-tax-listed-shares-closing-price-valuation.md",
+      "HEADSHA256": "98213bd5b780232206065cfba96cb383beddc117807f51abd8cae496a7fbd66f",
+      "currentSHA256": "98213bd5b780232206065cfba96cb383beddc117807f51abd8cae496a7fbd66f",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/columns/951-taiwan-construction-subcontractor-fall-principal-contractor-liability.md",
+      "HEADSHA256": "db8a7af61d04b545aaeb1e4c5f9b9000b15a5936c35d66450f07097f84155df3",
+      "currentSHA256": "db8a7af61d04b545aaeb1e4c5f9b9000b15a5936c35d66450f07097f84155df3",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/issues/en/ISSUE-20261026-06-platforms-asked-to-label-generative-images.md",
+      "HEADSHA256": "7ba4a3508674ab1a093f1976526fa2ddcb5a182e110f00ca2955fa9b01531a31",
+      "currentSHA256": "7ba4a3508674ab1a093f1976526fa2ddcb5a182e110f00ca2955fa9b01531a31",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/issues/ja/ISSUE-20261026-03-japan-equal-pay-guideline-taiwan-subsidiary-part-time-dispatch.md",
+      "HEADSHA256": "b616e6b17e59aefda2e0d1b45bf2dd6a0daf1255746207ffb8c5585c3baa37ac",
+      "currentSHA256": "b616e6b17e59aefda2e0d1b45bf2dd6a0daf1255746207ffb8c5585c3baa37ac",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/issues/ko/ISSUE-20261026-01-taiwan-cash-courier-part-time-job-fraud-money-laundering-korean.md",
+      "HEADSHA256": "2e19811ccc71343eb6db71309175e5534b3583ad76a4ed6cf426ead87c436073",
+      "currentSHA256": "2e19811ccc71343eb6db71309175e5534b3583ad76a4ed6cf426ead87c436073",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/issues/vi/ISSUE-20261026-08-vang-mieng-khai-hai-quan-dai-loan-viet-nam.md",
+      "HEADSHA256": "e788ffe8ac96472ee306d4fbddad39eef3ed26670862c4bfda0f4cfe5dbc288a",
+      "currentSHA256": "e788ffe8ac96472ee306d4fbddad39eef3ed26670862c4bfda0f4cfe5dbc288a",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/issues/vi/ISSUE-20261026-09-giam-tru-thue-viet-nam-luong-dai-loan.md",
+      "HEADSHA256": "b0fbabc9acdbe3f80f08e078488dd141149dd749f0f32cd41c0f79a50f8972bb",
+      "currentSHA256": "b0fbabc9acdbe3f80f08e078488dd141149dd749f0f32cd41c0f79a50f8972bb",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/content/issues/zh-hant/ISSUE-20261026-05-taiwan-public-facility-reserved-land-value-tax-exemption-deadline.md",
+      "HEADSHA256": "0a066db0826b56702a9f9f6122ba146d5b841630d52ae5a52b2062f2ab30cbf3",
+      "currentSHA256": "0a066db0826b56702a9f9f6122ba146d5b841630d52ae5a52b2062f2ab30cbf3",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/lib/__tests__/column-category-parity.test.ts",
+      "HEADSHA256": "b7b5eca69231c53ffab9b59e38cc31844e3dceb0d09c5c08c21ee23e56b1ef92",
+      "currentSHA256": "b7b5eca69231c53ffab9b59e38cc31844e3dceb0d09c5c08c21ee23e56b1ef92",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/lib/__tests__/column-language-links.test.tsx",
+      "HEADSHA256": "b731027d3d2e55e387e78905dfdace77a146d409aa691f410fa7fff75d635387",
+      "currentSHA256": "b731027d3d2e55e387e78905dfdace77a146d409aa691f410fa7fff75d635387",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/lib/__tests__/columns-publication-date.test.ts",
+      "HEADSHA256": "51229258aca99739c2ef05a32365785559ac729a4e48fc19ece1f4fd86d7dd26",
+      "currentSHA256": "51229258aca99739c2ef05a32365785559ac729a4e48fc19ece1f4fd86d7dd26",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/lib/__tests__/criminal-coverage-column-files.ts",
+      "HEADSHA256": "c8be8c01d30242218f5d0e9c164d727fdc1d298a09e8016373e0a2d8b71af16b",
+      "currentSHA256": "c8be8c01d30242218f5d0e9c164d727fdc1d298a09e8016373e0a2d8b71af16b",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/lib/__tests__/issue-board-20261026.test.ts",
+      "HEADSHA256": "2eeb072c58cb118df2173c973315def5d7dca21b30663eeab55ae999a1fd3d79",
+      "currentSHA256": "2eeb072c58cb118df2173c973315def5d7dca21b30663eeab55ae999a1fd3d79",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    },
+    {
+      "path": "src/lib/__tests__/native-locale-columns.ts",
+      "HEADSHA256": "33571a70c6438ba683445226816258555726116d4790b5b77d3771b3543db230",
+      "currentSHA256": "840f4af53418c7c22b199f024b35d884d8a2f63aba936e005db34bb8a11e630a",
+      "bytesUnchanged": false,
+      "allowedAdditiveHelperChange": true
+    },
+    {
+      "path": "src/lib/__tests__/tax-accounting-column-files.ts",
+      "HEADSHA256": "e6f3c01c0229623be7f3226ad083e36ec9f710b95d867e246376c53c26c44623",
+      "currentSHA256": "e6f3c01c0229623be7f3226ad083e36ec9f710b95d867e246376c53c26c44623",
+      "bytesUnchanged": true,
+      "allowedAdditiveHelperChange": false
+    }
+  ]
+}

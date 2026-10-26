@@ -1,0 +1,41 @@
+{
+  "initialRun": {
+    "suites": 28,
+    "passedSuites": 27,
+    "failedSuites": 1,
+    "passedTests": 761,
+    "failedTests": 6,
+    "exit": 1,
+    "logSHA256": "09f349be77b2ff344f0300338a92b27e5b3a6e1b10bbb2d983d843dd486aae18"
+  },
+  "rootCause": "Case-only leading-six expectation omitted older-authored ARC files also published October26; actual loader ties same-day items by numeric source order. No runtime or manuscript defect.",
+  "fix": "Pin ARC3+case6 leading order for bg/bn/ca/el/et/fa; preserve DA October25 ARC. Correct only test-helper grouping/date for these seven case locales and assert no duplicate archive entries. Preserve original source-date, FAQ, audience, cluster and link assertions.",
+  "followupRun": {
+    "suites": 20,
+    "passedTests": 313,
+    "failedTests": 0,
+    "exit": 0,
+    "logSHA256": "36682b2cb659fc04b98b820398630108d66500455a29d7fa688ee6e3357ec630"
+  },
+  "unaffectedInitialPasses": {
+    "src/app/[locale]/columns/__tests__/market-boards-20261024.test.tsx": 134,
+    "src/app/__tests__/sitemap-static-lastmod.test.ts": 4,
+    "src/lib/__tests__/column-image-caption-label.test.ts": 1,
+    "src/lib/__tests__/column-language-links.test.tsx": 47,
+    "src/lib/__tests__/column-no-public-authors.test.tsx": 79,
+    "src/lib/__tests__/column-topics.test.ts": 8,
+    "src/lib/__tests__/market-board-columns-20261024.test.ts": 177,
+    "src/lib/__tests__/no-ai-labels-20261024.test.ts": 4
+  },
+  "unaffectedSuiteCount": 8,
+  "unaffectedTests": 454,
+  "currentCoveredSuites": 28,
+  "currentCoveredTests": 767,
+  "wholeRepositoryRunRepeated": false,
+  "same28SuiteRunRepeated": false,
+  "remainingFailure": 0,
+  "warningsRetained": [
+    "Existing React SSR inert boolean warning",
+    "Existing React SSR fetchPriority warning"
+  ]
+}

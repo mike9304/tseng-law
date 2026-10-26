@@ -1,0 +1,86 @@
+{
+  "completed_at": "2026-10-26T03:27:51.525541+09:00",
+  "verdict": "APPROVE_TARGETED_R2",
+  "remaining_mandatory": 0,
+  "remaining_optional": 0,
+  "author_r2_manifest_sha256": "426867520cb2a25d1115fd10158f06d5416be68cab7e46265f3934c0ae7c186d",
+  "end_SHA_verified_references": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "183c8045ea1d1d443672376af9f8866b3771c2ed429aae6d24f47398eaccb5d9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "4971777565edde14f6e41cef422d252b251a527d48f7bdcdf62169ede5034506"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "89bc806c446b85e4cd7f8dc7b6231bb74345b6c985124b13af100aaca4deaeb1"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "5047e951b20e1dc6d3914692c69f9a9b62c323e519418221f153bc0a60fa9d2a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "cd071bb9bda0be5353eb0df7f1ac9a8b892a3dfa4fff701735ce893e43a48999"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "f6b34469c5dcd72ef92ee65d8a857b46ba3333a955c955a0d365cbb3849b0c07"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-author-r2.md",
+      "sha256": "047d655380233f4138a2462803fa94f99543e5f359eaba50ea3ea0c18b8c0ac3"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/ca-author.md",
+      "sha256": "33b6b78386bf65245f34bd008382f51d62af9cd61bba9820e5cbccb758edb827"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-final-manifest.json",
+      "sha256": "11dc5746437153978bf8a20a53f913668746a2d5637149da5fe501583188857f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/ca-independent.md",
+      "sha256": "3d2ffce8e55db9a9ad58fe2442b067f3dfa8920abab03f0ebe51bad776d82b6d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-independent-final-manifest.json",
+      "sha256": "e91cad359a97328b60f8a344d8beaa91a03c59261ead34f7c8869b5d5fcc8679"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-review-r1-snapshot.json",
+      "sha256": "a74e73b2bf0e21a854ef8f668141b163d4c1993b5e2b22fe2aa5fcadf9c613c4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-review-r1-edits.json",
+      "sha256": "91d3f13b0a6109f4f316545a7385078b73e206f882f6bd647505dd3ab4927246"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-review-r2-variety.json",
+      "sha256": "5eecc56eb1f849acf88ce6b9e06850edeb6eb6b320d6f190bda583fe7c88c098"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-review-r2-content-audit.json",
+      "sha256": "6795a9cf916d70ccf73f4659d253ce242f4f673e840ef5affd9601470f8a27a2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-review-r2-integrity.json",
+      "sha256": "af97498e65eede9a27f0f4fffb31cba261b0f3d32c8ca1c5b405b488c6ddf870"
+    }
+  ],
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-independent-r2.md",
+    "sha256": "20b827ebcb943ff7c3610a5705e71123a3337250eb3e7c4c39afe24c972b2c50"
+  },
+  "evidence": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-independent-r2.json",
+    "sha256": "9ac8a92fc44f0ecef9bf92c9cbc9e045ab4f9a42c41ccce3d83c47d22e3c8828"
+  },
+  "preserved_R1_report_sha256": "3d2ffce8e55db9a9ad58fe2442b067f3dfa8920abab03f0ebe51bad776d82b6d",
+  "actual_changed_contexts_read": 4,
+  "actual_context_sentences_read": 10,
+  "new_cli_runs": 0,
+  "read_only_manuscripts_author_tools_R": true
+}

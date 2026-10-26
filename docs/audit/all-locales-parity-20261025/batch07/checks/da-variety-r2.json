@@ -1,0 +1,653 @@
+{
+  "atUTC": "2026-10-25T17:50:51.264369+00:00",
+  "command": [
+    "python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/921-taiwan-online-game-coins-refund-judgment.md",
+    "--lang",
+    "da"
+  ],
+  "exitCode": 0,
+  "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/918-taiwan-presale-mortgage-notice-handover-judgment.md [da] sentences=43 mean=14.8 cv=0.467 short=0.233 run3=0.0 opener_rep=0.071 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/921-taiwan-online-game-coins-refund-judgment.md [da] sentences=46 mean=14.3 cv=0.454 short=0.239 run3=0.0 opener_rep=0.071 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+  "stderr": "",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "793d7791f755e82fd4e2e9f40bead2f5b7c7a17ea9004129b90938d19d7a0ab5"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "63f99210d7a75b030a17ab20b237d5d735693c5eeda8b4d8d6ebafdee5e261fe"
+    }
+  ],
+  "toolHashes": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/da.json": "d97cb6ecf083d3a000d9e68c9aca35be606afcc262cf676723f9fc06ba3352df"
+  },
+  "extraction": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "793d7791f755e82fd4e2e9f40bead2f5b7c7a17ea9004129b90938d19d7a0ab5",
+      "metrics": {
+        "lang": "da",
+        "sentences": 43,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.8,
+        "len_cv": 0.467,
+        "short_share": 0.233,
+        "long_share": 0.0,
+        "para_cv": 0.182,
+        "even_run3": 0.0,
+        "top_end": "overdragelse",
+        "top_end_share": 0.07,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "i",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.77,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Vand og strøm var endnu ikke tilsluttet, da bygherren i februar skrev til køberne om bolig",
+        "last": "Kilderne er sammenholdt den 25.–26. oktober 2026. Sagen beroede på den konkrete kontrakt og opfyldelsesforløbet; artikle",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "vand",
+          "sentences": [
+            {
+              "text": "Vand og strøm var endnu ikke tilsluttet, da bygherren i februar skrev til køberne om boliglånet.",
+              "units": 16
+            },
+            {
+              "text": "Senere fik de adgang til at indrette og gøre rent, men heller ikke det dokumenterede, at boligen var overdraget som aftalt.",
+              "units": 21
+            },
+            {
+              "text": "Forløbet findes i den officielle samling af forbrugerafgørelser, trykte sider 173–187.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "sagen",
+          "sentences": [
+            {
+              "text": "Sagen var 109年度上易字第289號 ved Taiwans landsret, afdelingen i Taichung.",
+              "units": 9
+            },
+            {
+              "text": "Den 9. februar 2022 forkastede retten bygherrens anke og afviste det yderligere krav, så pligten til at betale renter for forsinkelsen blev opretholdt.",
+              "units": 23
+            },
+            {
+              "text": "Afgørelsen fastslår, at den ikke kan ankes videre.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "brevet",
+          "sentences": [
+            {
+              "text": "Brevet af 23. februar 2019 bad køberne kontakte banken og oplyse lånesagens status.",
+              "units": 13
+            },
+            {
+              "text": "Det beskrev ikke boligen som klar til brug.",
+              "units": 8
+            },
+            {
+              "text": "Vand og strøm blev tilsluttet senere.",
+              "units": 6
+            },
+            {
+              "text": "Da der ved den første gennemgang i juli stadig var mangler og en ufærdig elevator, godtog retten ikke bygherrens påstand om allerede at have givet den aftalte overdragelsesmeddelelse.",
+              "units": 28
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "i",
+          "sentences": [
+            {
+              "text": "I august underskrev køberne et dokument om adgang til indretning og rengøring.",
+              "units": 12
+            },
+            {
+              "text": "På baggrund af dokumentets indhold og de udestående udbedringer fandt retten heller ikke her bevis for kontraktmæssig overdragelse.",
+              "units": 18
+            },
+            {
+              "text": "Banken overførte lånebeløbet til bygherren den 5. november.",
+              "units": 8
+            },
+            {
+              "text": "Parternes garantidokument angav derimod den 28. november som overdragelsesdato.",
+              "units": 9
+            },
+            {
+              "text": "Dommens begrundelse, punkt 4, gennemgår materialet på trykte sider 182–186.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "hvilken",
+          "sentences": [
+            {
+              "text": "Hvilken betaling forlangte brevet?",
+              "units": 4
+            },
+            {
+              "text": "Bygherren gjorde gældende, at køberne skulle have betalt hele prisen efter brevet.",
+              "units": 12
+            },
+            {
+              "text": "Retten sammenholdt betalingsoversigten med de aftalte rater og fandt, at køberne havde betalt rettidigt efter disse aftaler og betalt hele beløbet før overdragelsen.",
+              "units": 23
+            },
+            {
+              "text": "Påstanden om betalingsmisligholdelse blev ikke taget til følge.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "parternes",
+          "sentences": [
+            {
+              "text": "Parternes kontrakt satte en frist på fire måneder for meddelelsen.",
+              "units": 10
+            },
+            {
+              "text": "De aktuelle obligatoriske standardvilkår for salg af boliger før færdiggørelse, punkt 15, kræver meddelelse til køberen om overdragelse inden seks måneder efter, at sælgeren har modtaget ibrugtagningstilladelsen.",
+              "units": 27
+            },
+            {
+              "text": "Punktet omfatter også udbedringer, endelig afregning og dokumentudlevering ved overdragelsen.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "det",
+          "sentences": [
+            {
+              "text": "Det er en frist for meddelelsen.",
+              "units": 6
+            },
+            {
+              "text": "Den skal ikke omskrives til en generel regel om, at enhver overdragelse nødvendigvis skal være gennemført inden seks måneder.",
+              "units": 19
+            },
+            {
+              "text": "Sammenligningen med dagens regler foretages her i artiklen; retten fra 2022 tog stilling til den daværende kontrakt og sagens dokumenter.",
+              "units": 20
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "start",
+          "sentences": [
+            {
+              "text": "Start med den faktiske modtagelse af ibrugtagningstilladelsen, når fristen skal beregnes.",
+              "units": 11
+            },
+            {
+              "text": "Kontrakten og reglerne ved dens indgåelse bestemmer rammen, mens meddelelsens indhold og tidspunktet for dens modtagelse viser, hvad sælgeren faktisk gjorde.",
+              "units": 21
+            },
+            {
+              "text": "En anden købers dom kan ikke alene afgøre antallet af måneder i din sag.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "køberen",
+          "sentences": [
+            {
+              "text": "Køberen har også opgaver ved lånet.",
+              "units": 6
+            },
+            {
+              "text": "Punkt 14 i de aktuelle vilkår omfatter lånedokumenter, medvirken til de relevante formaliteter og betalinger før registrering af ejerskiftet.",
+              "units": 19
+            },
+            {
+              "text": "En indsigelse mod overdragelsesmeddelelsen besvarer ikke automatisk spørgsmål om allerede forfaldne betalinger eller dokumentkrav.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "i",
+          "sentences": [
+            {
+              "text": "I en officiel kontraktkontrol offentliggjort den 25. august 2025 blev det udpeget som en overtrædelse at holde tiden til bankens lånekontrol og udbetaling uden for beregningen af overdragelsesmeddelelsens frist.",
+              "units": 29
+            },
+            {
+              "text": "Bankforløbet kan derfor ikke blot skrives ud af den tidsplan, som vilkårene kræver.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "de",
+          "sentences": [
+            {
+              "text": "De seneste ændringer af centralbankens regler om lån med pant i fast ejendom trådte i kraft den 18. september 2026.",
+              "units": 20
+            },
+            {
+              "text": "En køber, der nu skal have lånevilkårene afklaret, kan notere bankens forventede udbetalingsdato særskilt fra bygherrens datoer for gennemgang og overdragelse.",
+              "units": 21
+            },
+            {
+              "text": "Ændringerne anvendes ikke her som grundlag for begivenhederne i 2019.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "læs",
+          "sentences": [
+            {
+              "text": "Læs også selve brevet.",
+              "units": 4
+            },
+            {
+              "text": "Modtagelsesoplysningerne i kuverten eller mailen kan vise, hvornår køberen fik beskeden, mens gennemgangsrapporter, fotos af mangler, adgangstilladelsen og garantidokumentet belyser boligens tilstand og de efterfølgende handlinger.",
+              "units": 26
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "ved",
+          "sentences": [
+            {
+              "text": "Ved et krav om bod eller renter for forsinkelse kan en første besked til kontorets mailadresse angive den omstridte kontraktbestemmelse, meddelelsens dato og svarfristen.",
+              "units": 24
+            },
+            {
+              "text": "Mærk samtidig materialet efter indhold: henvendelse om lånet, indkaldelse til gennemgang eller meddelelse om overdragelse.",
+              "units": 15
+            },
+            {
+              "text": "Det gør det muligt at drøfte de enkelte forpligtelser frem for kun to modstridende påstande om én overdragelsesdato.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "kilderne",
+          "sentences": [
+            {
+              "text": "Kilderne er sammenholdt den 25.–26. oktober 2026.",
+              "units": 8
+            },
+            {
+              "text": "Sagen beroede på den konkrete kontrakt og opfyldelsesforløbet; artiklen afgør ikke, om en bestemt køber bør betale, afvise overdragelse eller rejse et erstatningskrav.",
+              "units": 23
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Bankens sag og boligens tilstand fulgte ikke samme tidsplan",
+        "Fire måneder i kontrakten og seks måneder i de aktuelle vilkår",
+        "Tre forskellige meddelelser i samme mappe"
+      ],
+      "listItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "63f99210d7a75b030a17ab20b237d5d735693c5eeda8b4d8d6ebafdee5e261fe",
+      "metrics": {
+        "lang": "da",
+        "sentences": 46,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.3,
+        "len_cv": 0.454,
+        "short_share": 0.239,
+        "long_share": 0.0,
+        "para_cv": 0.211,
+        "even_run3": 0.0,
+        "top_end": "tilbage",
+        "top_end_share": 0.043,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "efter",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.11,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Hvorfor udløste guldmønterne ingen tilbagebetaling?",
+        "last": "Kilderne er sammenholdt den 25.–26. oktober 2026. Artiklen behandler den konkrete taiwanske spilafgørelse og de aktuelle",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "hvorfor",
+          "sentences": [
+            {
+              "text": "Hvorfor udløste guldmønterne ingen tilbagebetaling?",
+              "units": 5
+            },
+            {
+              "text": "En spiller krævede NT$243.548 for kontoens resterende guldmønter, men fik ikke medhold.",
+              "units": 13
+            },
+            {
+              "text": "Parterne var enige om, at kontoen ikke længere indeholdt ubrugte købte point, selv om der var mønter tilbage.",
+              "units": 18
+            },
+            {
+              "text": "Dommen er gengivet i den officielle samling af forbrugerafgørelser, trykte sider 140–153.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "keelungs",
+          "sentences": [
+            {
+              "text": "Keelungs distriktsdomstol forkastede spillerens anke den 13. september 2021 i sag 109年度消簡上字第1號.",
+              "units": 12
+            },
+            {
+              "text": "Afgørelsen kunne ikke ankes videre.",
+              "units": 5
+            },
+            {
+              "text": "Retten undersøgte mønternes funktion og tilbagebetalingsvilkårene i netop dette spil; den udelukkede ikke alle virtuelle genstande fra forbrugerbeskyttelsen.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "efter",
+          "sentences": [
+            {
+              "text": "Efter aftalen købte spilleren point til spillets tjenester eller varer; de resterende guldmønter havde en anden funktion som jetoner i spil mod andre deltagere.",
+              "units": 24
+            },
+            {
+              "text": "Retten anså dem hverken for de ubrugte købte point, som aftalen gav ret til at få tilbagebetalt, eller for spilgebyrer opkrævet af udbyderen.",
+              "units": 23
+            },
+            {
+              "text": "De kunne derfor ikke omregnes til et tilsvarende kontant tilbagebetalingskrav.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "retten",
+          "sentences": [
+            {
+              "text": "Retten fandt også, at en kontant indløsning af disse jetoner hos udbyderen ville indebære hasardspil.",
+              "units": 15
+            },
+            {
+              "text": "Begrundelsen angik denne spilleform.",
+              "units": 4
+            },
+            {
+              "text": "I et andet spil må det undersøges, hvordan mønterne opstår, hvad de kan bruges til, og om de er brugt; betegnelsen på skærmen giver ikke svaret.",
+              "units": 26
+            },
+            {
+              "text": "Dommens punkt 8 gennemgår spørgsmålet på trykte sider 148–152.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "aftalen",
+          "sentences": [
+            {
+              "text": "Aftalen var ophørt.",
+              "units": 3
+            },
+            {
+              "text": "Spilleren havde selv også meddelt sit ønske om at afslutte den, så retten kunne lægge ophøret til grund og vurdere de resterende mønter.",
+              "units": 23
+            },
+            {
+              "text": "Det indebærer ikke, at udbyderens tidligere begrundelser for spærring eller ophør alle blev anset for lovlige.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "efter",
+          "sentences": [
+            {
+              "text": "Efter punkt 18 i Taiwans aktuelle standardvilkår for onlinespil kan forbrugeren når som helst meddele udbyderen, at aftalen opsiges.",
+              "units": 19
+            },
+            {
+              "text": "Ubrugte købte point eller den ubrugte del af spilgebyrerne skal, efter fradrag af nødvendige omkostninger, tilbagebetales inden 30 dage efter aftalens ophør.",
+              "units": 22
+            },
+            {
+              "text": "Parterne kan i stedet blive enige om en anden håndtering.",
+              "units": 10
+            },
+            {
+              "text": "Udbyderens ensidige meddelelse er ikke en sådan aftale.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "fradraget",
+          "sentences": [
+            {
+              "text": "Fradraget skal kunne undersøges.",
+              "units": 4
+            },
+            {
+              "text": "Det er nyttigt at bede om en opdeling i ubrugt saldo, fradragne poster og beregningsgrundlag og derefter sammenholde den med kontrakten.",
+              "units": 21
+            },
+            {
+              "text": "En fast procentsats valgt af udbyderen er ikke alene bevis for, at beløbet er rimeligt.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "den",
+          "sentences": [
+            {
+              "text": "Den seneste ændring af de citerede standardvilkår trådte i kraft den 1. januar 2023, efter dommen fra 2021.",
+              "units": 18
+            },
+            {
+              "text": "Dommen blev afgjort efter datidens aftale og regler.",
+              "units": 8
+            },
+            {
+              "text": "De aktuelle vilkårs punkt 4 giver desuden ret til at fortryde skriftligt inden syv dage efter spillets begyndelse uden begrundelse eller omkostninger og kræve ubrugte købte point tilbagebetalt.",
+              "units": 28
+            },
+            {
+              "text": "Efter de syv dage består muligheden for opsigelse efter punkt 18.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "et",
+          "sentences": [
+            {
+              "text": "Et skærmbillede af saldoen viser sjældent hele vejen fra betaling til brug.",
+              "units": 12
+            },
+            {
+              "text": "Det kan være nødvendigt at skelne mellem de oprindeligt købte point, mønter opnået ved omveksling og det, der var tilbage efter spillet:",
+              "units": 22
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "udbyderen",
+          "sentences": [
+            {
+              "text": "Udbyderen skal opbevare den personlige spilhistorik i mindst 30 dage og udlevere den inden syv dage efter modtagelsen af en anmodning.",
+              "units": 21
+            },
+            {
+              "text": "Punkt 9 fastsætter dermed både en opbevaringsperiode og en svarfrist.",
+              "units": 10
+            },
+            {
+              "text": "Oplysningerne er ikke nødvendigvis tilgængelige ubegrænset.",
+              "units": 6
+            },
+            {
+              "text": "En tidlig anmodning kan mindske risikoen for, at kun det sidste skærmbillede er tilbage.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "punkt",
+          "sentences": [
+            {
+              "text": "Punkt 6 i de forbudte standardvilkår forbyder at aftale, at en tvist alene må afgøres efter udbyderens gemte historik og elektroniske data.",
+              "units": 22
+            },
+            {
+              "text": "Det gør spillerens egne betalingsbilag, skærmbilleder og fulde korrespondance med kundeservice relevante.",
+              "units": 12
+            },
+            {
+              "text": "Reglen gør ikke automatisk alle udbyderens data ugyldige.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "i",
+          "sentences": [
+            {
+              "text": "I statistikken offentliggjort den 7. maj 2026 lå onlinespil på andenpladsen blandt kategorier af forbrugerklager på første trin i 2025.",
+              "units": 20
+            },
+            {
+              "text": "Antallet var faldet i forhold til året før.",
+              "units": 8
+            },
+            {
+              "text": "Myndigheden opfordrede samtidig udbyderne til at håndtere spærringer, suspensioner og kundeserviceklager ordentligt.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "en",
+          "sentences": [
+            {
+              "text": "En tilbagebetalingstvist kan først rejses over for udbyderen og derefter gennem myndighedernes klagesystem.",
+              "units": 13
+            },
+            {
+              "text": "Ved uenighed om kontraktens betydning eller afviste beviser kan en mail til kontoret angive tvistens emne og svarfristen; kontoens adgangskode er ikke nødvendig.",
+              "units": 23
+            },
+            {
+              "text": "Dokumentationen for det krævede beløb er forbindelsen mellem pengene, der blev indbetalt, de efterfølgende omvekslinger og den faktiske brug.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "kilderne",
+          "sentences": [
+            {
+              "text": "Kilderne er sammenholdt den 25.–26. oktober 2026.",
+              "units": 8
+            },
+            {
+              "text": "Artiklen behandler den konkrete taiwanske spilafgørelse og de aktuelle taiwanske standardvilkår.",
+              "units": 11
+            },
+            {
+              "text": "Andre spils valuta, genstande og ophørsgrunde må vurderes efter deres faktiske funktion og aftalen.",
+              "units": 14
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Købte point og jetoner havde forskellige funktioner",
+        "Opsigelse kan stadig give ret til tilbagebetaling",
+        "Betalingen skal kunne følges frem til saldoen"
+      ],
+      "listItems": []
+    }
+  ]
+}

@@ -1,0 +1,1135 @@
+{
+  "frozen_at_utc": "2026-10-25T17:51:34.768565+00:00",
+  "owner": "/root/column_voice_rules",
+  "locale": "et",
+  "input_and_tool_guards": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/BRIEF.md",
+      "expected_sha256": "8103ae1441fe0abbdb76362d6086a267014664f31997f5676b37c6962cfcd306",
+      "current_sha256": "8103ae1441fe0abbdb76362d6086a267014664f31997f5676b37c6962cfcd306",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/BRIEF.md",
+      "expected_sha256": "f6c2579b6255705ece341a356d3a4d527ca74a869916785d51edb9c0f05ee1a8",
+      "current_sha256": "f6c2579b6255705ece341a356d3a4d527ca74a869916785d51edb9c0f05ee1a8",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/authoring-contract-draft.md",
+      "expected_sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e",
+      "current_sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/six-source-facts.md",
+      "expected_sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a",
+      "current_sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-register.md",
+      "expected_sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d",
+      "current_sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-freeze.json",
+      "expected_sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "current_sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/bundle-manifest.json",
+      "expected_sha256": "d56dfa2dd03c0e93c5f3576ee119c508f07daf24eb7412123aadc42e49bf3192",
+      "current_sha256": "d56dfa2dd03c0e93c5f3576ee119c508f07daf24eb7412123aadc42e49bf3192",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/AGENTS.md",
+      "expected_sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19",
+      "current_sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "expected_sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "current_sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "expected_sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "current_sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "expected_sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "current_sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "expected_sha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f",
+      "current_sha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "expected_sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "current_sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "expected_sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "current_sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "expected_sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "current_sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "expected_sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "current_sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "expected_sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "current_sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "expected_sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "current_sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/704-taiwan-arc-first-application.md",
+      "expected_sha256": "f15069557979333b4febbff860e45755472675d20f056ac2d05664f788eaea96",
+      "current_sha256": "f15069557979333b4febbff860e45755472675d20f056ac2d05664f788eaea96",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+      "expected_sha256": "6bf9a4fca0d1b90d3bf0e4f46e4c87ba43cb5c4b32989ab3e98eaed52955acc8",
+      "current_sha256": "6bf9a4fca0d1b90d3bf0e4f46e4c87ba43cb5c4b32989ab3e98eaed52955acc8",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+      "expected_sha256": "dce0dce717cd732bce40b187f43ef31cbcf0758d71256c129263c23fc7da856a",
+      "current_sha256": "dce0dce717cd732bce40b187f43ef31cbcf0758d71256c129263c23fc7da856a",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/content-audit.mjs",
+      "expected_sha256": "3926a274bf544fed7e34339aa8b2636d41a4be79c0aaff898f46fc65595faf4b",
+      "current_sha256": "3926a274bf544fed7e34339aa8b2636d41a4be79c0aaff898f46fc65595faf4b",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "expected_sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+      "current_sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "expected_sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+      "current_sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "expected_sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc",
+      "current_sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/et.json",
+      "expected_sha256": "1cb9d12e7653189b58cdc1f8fd480608d967f70db0fddc9951598610b35d0b5a",
+      "current_sha256": "1cb9d12e7653189b58cdc1f8fd480608d967f70db0fddc9951598610b35d0b5a",
+      "unchanged": true
+    }
+  ],
+  "all21_read_inputs_and5_tools_unchanged": true,
+  "rows": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "534cd48a07b129dc51a55a0697bd93e41ee4f48bf61b190bdd0c30a8d1f828a6",
+      "bytes": 7407,
+      "initial_sha256": "7544c57d8349b6ed8a64ba35c911c06f7593461ff785e80d449046efa783fc26",
+      "edit_count": 1,
+      "exact_replay_and_reverse": true,
+      "variety_exit": 0,
+      "metrics": {
+        "lang": "et",
+        "sentences": 40,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 12,
+        "len_cv": 0.462,
+        "short_share": 0.325,
+        "long_share": 0.0,
+        "para_cv": 0.303,
+        "even_run3": 0.026,
+        "top_end": "püsima",
+        "top_end_share": 0.025,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "44",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.96,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "44 417 150 Taiwani uue dollari suurune vahekohtuotsus ei jäänud haigla ehitaja kohtuvaidlu",
+        "last": "Kohtuasja käsitlus tugineb 25. oktoobril 2026 kontrollitud ülemkohtu ametlikule selgitusele. Kehtivat seadust ja turuüle",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "original_extracted_units": 41,
+      "current_extracted_units": 40,
+      "unchanged_units": 39,
+      "new_or_changed_units": 1,
+      "boundary_changes_read": [
+        {
+          "tag": "replace",
+          "old_index": 33,
+          "new_index": 33,
+          "old": [
+            "Käimasolevas projektis tekib küsimus sageli siis, kui tähtaja pikendamise soovile lisandub rahaline nõue.",
+            "Dokumentides peaks olema jälgitav, millal see lisandus ja mille kohta teine pool tegelikult vastas."
+          ],
+          "new": [
+            "Käimasolevas projektis tekib küsimus sageli siis, kui tähtaja pikendamise soovile lisandub rahaline nõue, mistõttu peaks dokumentidest selguma, millal nõue lisandus ja mille kohta teine pool tegelikult vastas."
+          ]
+        }
+      ],
+      "short_units": 13,
+      "max_long_units_in_one_paragraph": 0,
+      "paragraph_openers": {
+        "44": 1,
+        "kassatsioonkaebus": 1,
+        "lepitusmenetluses": 1,
+        "tõend": 1,
+        "kas": 1,
+        "taiwani": 1,
+        "need": 1,
+        "lepingu": 1,
+        "nõude": 1,
+        "usa": 1,
+        "pakkumist": 1,
+        "puuduliku": 1,
+        "kohtuasja": 1
+      },
+      "max_same_paragraph_opener": 1,
+      "faq_count": 2,
+      "source_locale": "en",
+      "source_sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "board_visible": true,
+      "official_urls_final_count": 4,
+      "numeric_source_only": [
+        {
+          "token": "44,417,150",
+          "count": 1
+        },
+        {
+          "token": "2017",
+          "count": 1
+        },
+        {
+          "token": "85-1",
+          "count": 1
+        }
+      ],
+      "numeric_target_only": [
+        {
+          "token": "44 417 150",
+          "count": 1
+        },
+        {
+          "token": "26",
+          "count": 1
+        }
+      ],
+      "automated_required_codes": [
+        "cross-language-link",
+        "public-output-and-native-prose",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ]
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "d82fd20cc58e146613730221dacd28948a3f2b1aa92177ce8a916accf8a0b12f",
+      "bytes": 8416,
+      "initial_sha256": "9f612091fae90d014beab62df391a688149130938583ed8c08a2784daee40646",
+      "edit_count": 4,
+      "exact_replay_and_reverse": true,
+      "variety_exit": 0,
+      "metrics": {
+        "lang": "et",
+        "sentences": 46,
+        "paras": 16,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 12.2,
+        "len_cv": 0.465,
+        "short_share": 0.239,
+        "long_share": 0.0,
+        "para_cv": 0.215,
+        "even_run3": 0.091,
+        "top_end": "sai",
+        "top_end_share": 0.022,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "mis",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.062,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.14,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Mis sai saasteuuringust pärast seda, kui omandamist kavandanud kontsern selle kätte sai?",
+        "last": "Kohtuasja aluseks on 25. oktoobril 2026 kontrollitud ülemkohtu selgitus; kehtivat seadust ja poliitikamaterjali võrreldi",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "original_extracted_units": 48,
+      "current_extracted_units": 46,
+      "unchanged_units": 42,
+      "new_or_changed_units": 4,
+      "boundary_changes_read": [
+        {
+          "tag": "replace",
+          "old_index": 6,
+          "new_index": 6,
+          "old": [
+            "Kohtu ametlikus selgituses on kirjeldatud saastet tuvastanud keskkonnauuringuid, kontrollivate kontsernide teadlikkust, probleemi kõrvaldamata jätmist ja töötajate teavitamata jätmist.",
+            "Sellele lisandusid vastutusest hoidumiseks tehtud kapitali vähendamised ning raha ülekandmine välismaale.",
+            "Kohus nõustus põhjendusega, mis võimaldas asjaomased nõuded suunata kontrollivate ettevõtete vastu nende eraldiseisvast juriidilisest isikust hoolimata."
+          ],
+          "new": [
+            "Kohtu ametlikus selgituses on kirjeldatud saastet tuvastanud keskkonnauuringuid, kontrollivate kontsernide teadlikkust, probleemi kõrvaldamata jätmist ja töötajate teavitamata jätmist koos vastutusest hoidumiseks tehtud kapitali vähendamiste ning raha välismaale ülekandmisega.",
+            "Kohus nõustus põhjendusega, mis võimaldas asjaomased nõuded suunata kontrollivate ettevõtete vastu, kuigi tegemist oli eraldi juriidiliste isikutega."
+          ]
+        },
+        {
+          "tag": "replace",
+          "old_index": 30,
+          "new_index": 29,
+          "old": [
+            "Teine lõige käsitleb olukorda, kus aktsionär kuritarvitab äriühingu juriidilist isikut, põhjustab sellega konkreetse võla tekkimise, mille tasumine on ilmselgelt raskendatud, ning asjaolud on sedavõrd tõsised, et aktsionäri vastutus on vajalik."
+          ],
+          "new": [
+            "Teine lõige käsitleb olukorda, kus aktsionär kuritarvitab äriühingu juriidilise isiku staatust, põhjustab sellega konkreetse võla tekkimise, mille tasumine on ilmselgelt raskendatud, ning asjaolud on sedavõrd tõsised, et aktsionäri vastutus on vajalik."
+          ]
+        },
+        {
+          "tag": "replace",
+          "old_index": 35,
+          "new_index": 34,
+          "old": [
+            "Siinne kohtuasi lisab asutamisdokumentidele sisulise küsimuse.",
+            "Kuidas kasutas kontsern oma kontrolli pärast ohu ilmnemist?"
+          ],
+          "new": [
+            "Asutamisdokumendid üksi ei näita, kuidas kontsern pärast ohu ilmnemist oma kontrolli kasutas."
+          ]
+        }
+      ],
+      "short_units": 11,
+      "max_long_units_in_one_paragraph": 0,
+      "paragraph_openers": {
+        "mis": 1,
+        "otsus": 1,
+        "kohtu": 1,
+        "aruande": 1,
+        "kes": 1,
+        "kirjeldatud": 1,
+        "246": 1,
+        "tagasisaatmine": 1,
+        "tehingumeeskonnale": 1,
+        "taiwani": 1,
+        "eeldused": 1,
+        "tütarettevõtte": 1,
+        "usa": 1,
+        "väljamakse": 1,
+        "büroo": 1,
+        "kohtuasja": 1
+      },
+      "max_same_paragraph_opener": 1,
+      "faq_count": 3,
+      "source_locale": "en",
+      "source_sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "board_visible": true,
+      "official_urls_final_count": 3,
+      "numeric_source_only": [
+        {
+          "token": "2018",
+          "count": 1
+        },
+        {
+          "token": "2",
+          "count": 1
+        }
+      ],
+      "numeric_target_only": [
+        {
+          "token": "26",
+          "count": 1
+        }
+      ],
+      "automated_required_codes": [
+        "cross-language-link",
+        "public-output-and-native-prose",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ]
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "f2c94dacfac2769b7950c6063569d6e1da83bf8e6e78034cc7caad963308e9db",
+      "bytes": 7829,
+      "initial_sha256": "54c2a5d209f8b1a5fc57044b0dd3d10bfda2f133283b2a354dbf53ea52581fe7",
+      "edit_count": 3,
+      "exact_replay_and_reverse": true,
+      "variety_exit": 0,
+      "metrics": {
+        "lang": "et",
+        "sentences": 46,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 11.5,
+        "len_cv": 0.494,
+        "short_share": 0.304,
+        "long_share": 0.0,
+        "para_cv": 0.136,
+        "even_run3": 0.023,
+        "top_end": "üleandmist",
+        "top_end_share": 0.065,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "taiwani",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.16,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Veebruaris saabunud kiri palus ostjal tegelda eluasemelaenuga, kuid majas polnud veel vee-",
+        "last": "Kohtulahendi ja selle allikate alusandmed kontrolliti 25. oktoobril 2026; seotud kehtivaid norme ning ametlikke teateid ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "original_extracted_units": 49,
+      "current_extracted_units": 46,
+      "unchanged_units": 42,
+      "new_or_changed_units": 4,
+      "boundary_changes_read": [
+        {
+          "tag": "replace",
+          "old_index": 18,
+          "new_index": 18,
+          "old": [
+            "Arendaja väitis, et ostja pidanuks pärast kirja saamist kogu hinna tasuma.",
+            "Maksete ülevaatest nägi kohus aga, et ostja oli järginud kokkulepitud osamakseid ja tasunud kogu summa enne üleandmist."
+          ],
+          "new": [
+            "Arendaja väitis, et ostja pidanuks pärast kirja saamist kogu hinna tasuma, kuid maksete ülevaatest nägi kohus, et ostja oli järginud kokkulepitud osamakseid ja tasunud kogu summa enne üleandmist."
+          ]
+        },
+        {
+          "tag": "replace",
+          "old_index": 21,
+          "new_index": 20,
+          "old": [
+            "Asjas kohaldatud leping andis müüjale üleandmisest teatamiseks neli kuud kasutusloa saamisest.",
+            "Tänane ehitatava eluaseme müügi kohustuslike tüüptingimuste punkt 15 sätestab kuus kuud samast algsündmusest.",
+            "See on praeguse korra võrdlus ajaloolise lepinguga.",
+            "Kohtule ei omistata hilisema regulatsiooni kohaldamist."
+          ],
+          "new": [
+            "Asjas kohaldatud leping andis müüjale üleandmisest teatamiseks neli kuud kasutusloa saamisest, tänane ehitatava eluaseme müügi kohustuslike tüüptingimuste punkt 15 aga sätestab kuus kuud samast algsündmusest.",
+            "Oma lepingu puhul tuleb kontrollida sõlmimise ajal kehtinud nõudeid."
+          ]
+        },
+        {
+          "tag": "replace",
+          "old_index": 30,
+          "new_index": 27,
+          "old": [
+            "Punkt 14 käsitleb laenudokumentide esitamist, vajalikes toimingutes osalemist ja enne omandi registreerimise üleminekut tasumisele kuuluvaid summasid."
+          ],
+          "new": [
+            "Punkt 14 käsitleb laenudokumentide esitamist, vajalikes toimingutes osalemist ja enne omandiõiguse ülemineku registreerimist tasumisele kuuluvaid summasid."
+          ]
+        }
+      ],
+      "short_units": 14,
+      "max_long_units_in_one_paragraph": 0,
+      "paragraph_openers": {
+        "veebruaris": 1,
+        "taiwani": 2,
+        "arendaja": 1,
+        "augustis": 1,
+        "milline": 1,
+        "asjas": 1,
+        "arvestus": 1,
+        "ostja": 1,
+        "tarbijakaitseameti": 1,
+        "panga": 1,
+        "üks": 1,
+        "viivise": 1,
+        "kohtulahendi": 1
+      },
+      "max_same_paragraph_opener": 2,
+      "faq_count": 3,
+      "source_locale": "zh-hant",
+      "source_sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "board_visible": true,
+      "official_urls_final_count": 4,
+      "numeric_source_only": [
+        {
+          "token": "2",
+          "count": 3
+        },
+        {
+          "token": "173",
+          "count": 2
+        },
+        {
+          "token": "187",
+          "count": 2
+        },
+        {
+          "token": "9",
+          "count": 2
+        },
+        {
+          "token": "7",
+          "count": 1
+        },
+        {
+          "token": "8",
+          "count": 3
+        },
+        {
+          "token": "11",
+          "count": 2
+        },
+        {
+          "token": "182",
+          "count": 1
+        },
+        {
+          "token": "186",
+          "count": 1
+        },
+        {
+          "token": "10",
+          "count": 1
+        }
+      ],
+      "numeric_target_only": [
+        {
+          "token": "15",
+          "count": 3
+        },
+        {
+          "token": "173–187",
+          "count": 2
+        },
+        {
+          "token": "2019",
+          "count": 1
+        },
+        {
+          "token": "182–186",
+          "count": 1
+        },
+        {
+          "token": "14",
+          "count": 2
+        },
+        {
+          "token": "25",
+          "count": 1
+        },
+        {
+          "token": "26",
+          "count": 1
+        }
+      ],
+      "automated_required_codes": [
+        "public-output-and-native-prose",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ]
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "da1ba752fc6193222b844e5be491cb382ab55f49b3a714b49b27b5849825c3aa",
+      "bytes": 7311,
+      "initial_sha256": "84520743dd02563e484f3c0ec4c3920324f106455d2ef602a1810f05030a16ed",
+      "edit_count": 5,
+      "exact_replay_and_reverse": true,
+      "variety_exit": 0,
+      "metrics": {
+        "lang": "et",
+        "sentences": 39,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 12.2,
+        "len_cv": 0.492,
+        "short_share": 0.308,
+        "long_share": 0.026,
+        "para_cv": 0.263,
+        "even_run3": 0.027,
+        "top_end": "läbivaatamisotsuse",
+        "top_end_share": 0.026,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "kohtu",
+        "top_opener_n": 2,
+        "opener_rep": 0.154,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.32,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Taipei kõrgem halduskohus tühistas juhi teenistusest vabastamise ja seda kinnitanud haldus",
+        "last": "Kohtu selgitus kontrolliti 25. oktoobril 2026 ja kehtivaid tööõigusnorme võrreldi 26. oktoobri seisuga. Hilisema edasika",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "original_extracted_units": 43,
+      "current_extracted_units": 39,
+      "unchanged_units": 36,
+      "new_or_changed_units": 3,
+      "boundary_changes_read": [
+        {
+          "tag": "replace",
+          "old_index": 6,
+          "new_index": 6,
+          "old": [
+            "Kohtu kirjelduses oli asutuse juht teatanud kahe raske distsiplinaarmärkuse määramisest enne teenistushindamise komisjoni arutelu.",
+            "Seejärel pidas kõrgem asutus oma koosoleku ning alles siis anti küsimus allasutuse komisjonile."
+          ],
+          "new": [
+            "Kohtu kirjelduses oli asutuse juht kahe raske distsiplinaarmärkuse määramise ette teatanud ning seejärel pidas kõigepealt koosoleku kõrgem asutus, enne kui küsimus anti allasutuse teenistushindamise komisjonile."
+          ]
+        },
+        {
+          "tag": "replace",
+          "old_index": 19,
+          "new_index": 18,
+          "old": [
+            "Artikkel 22-2 nõuab uurimisel ja poolte lahenduse kooskõlastamisel objektiivsust, erapooletust ning õiglust.",
+            "Uurimises tuleb anda osalistele piisav võimalus oma seisukohti ja vastuväiteid esitada ning järgida huvide konflikti tõttu taandumise nõudeid."
+          ],
+          "new": [
+            "Artikkel 22-2 nõuab nii uurimisel kui ka pooltevahelise lahenduse otsimisel objektiivsust, erapooletust ning õiglust, kusjuures uurimises tuleb anda osalistele piisav võimalus oma seisukohti ja vastuväiteid esitada ning järgida huvide konflikti tõttu taandumise nõudeid."
+          ]
+        },
+        {
+          "tag": "replace",
+          "old_index": 26,
+          "new_index": 24,
+          "old": [
+            "Meetmete rakendamine ja tulevase käitumise tagamine on erineva ulatusega väited.",
+            "Seaduse nõue võtta ennetavaid meetmeid ei tähenda siin lubadust, et kiusamine ei saa enam kunagi korduda.",
+            "Samuti ei otsusta kirjeldatud halduskohtu lahend automaatselt ühegi eraettevõtte karistuse kehtivust."
+          ],
+          "new": [
+            "Kirjeldatud halduskohtu lahend ei otsusta ühegi eraettevõtte karistuse kehtivust."
+          ]
+        }
+      ],
+      "short_units": 12,
+      "max_long_units_in_one_paragraph": 1,
+      "paragraph_openers": {
+        "taipei": 1,
+        "asja": 1,
+        "kohtu": 2,
+        "tulemus": 1,
+        "asjaomased": 1,
+        "kirjeldatud": 2,
+        "artikkel": 1,
+        "kaitse": 1,
+        "personalitöös": 1,
+        "teate": 1,
+        "täiendava": 1
+      },
+      "max_same_paragraph_opener": 2,
+      "faq_count": 3,
+      "source_locale": "zh-hant",
+      "source_sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "board_visible": true,
+      "official_urls_final_count": 4,
+      "numeric_source_only": [
+        {
+          "token": "9",
+          "count": 2
+        },
+        {
+          "token": "7",
+          "count": 1
+        },
+        {
+          "token": "22",
+          "count": 2
+        },
+        {
+          "token": "2",
+          "count": 2
+        },
+        {
+          "token": "10",
+          "count": 1
+        },
+        {
+          "token": "6",
+          "count": 1
+        }
+      ],
+      "numeric_target_only": [
+        {
+          "token": "22-2",
+          "count": 2
+        },
+        {
+          "token": "26",
+          "count": 1
+        }
+      ],
+      "automated_required_codes": [
+        "public-output-and-native-prose",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ]
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "afac76c9b48c610c9e0d6a30956340c076bbe373cc41341051d9830eb47e5479",
+      "bytes": 7866,
+      "initial_sha256": "9fb29f8b112188a5f67a9df19a5b9f7b50907dda4d41ee57e4f515c99379a0d5",
+      "edit_count": 6,
+      "exact_replay_and_reverse": true,
+      "variety_exit": 0,
+      "metrics": {
+        "lang": "et",
+        "sentences": 40,
+        "paras": 14,
+        "heads": 2,
+        "list_items": 0,
+        "mean_len": 13.5,
+        "len_cv": 0.475,
+        "short_share": 0.2,
+        "long_share": 0.025,
+        "para_cv": 0.173,
+        "even_run3": 0.079,
+        "top_end": "kohustus",
+        "top_end_share": 0.05,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "taiwani",
+        "top_opener_n": 2,
+        "opener_rep": 0.143,
+        "consec_same_start": 0,
+        "cite_para_share": 0.286,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.71,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Laadimiskarp kinnitati parkimiskoha tagaseinale, juhtmed kulgesid lae kaudu ühisesse elekt",
+        "last": "Kohtulahendi alusandmed kontrolliti 25. oktoobril 2026, seotud normid ja teade 26. oktoobri seisuga. Hilisemaid lahendei",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "original_extracted_units": 43,
+      "current_extracted_units": 40,
+      "unchanged_units": 36,
+      "new_or_changed_units": 4,
+      "boundary_changes_read": [
+        {
+          "tag": "replace",
+          "old_index": 16,
+          "new_index": 16,
+          "old": [
+            "Halduskomitee saatis kirjaliku teate ja püüdis küsimust lahendada, kuid paigaldust ei eemaldatud.",
+            "Kohus leidis, et pärast lahenduskatse ebaõnnestumist oli võimalik taotleda kohtu sekkumist sama artikli lõike 3 alusel."
+          ],
+          "new": [
+            "Halduskomitee saatis kirjaliku teate ja püüdis küsimust lahendada, kuid paigaldust ei eemaldatud, mistõttu pidas kohus võimalikuks taotleda pärast lahenduskatse ebaõnnestumist kohtu sekkumist sama artikli lõike 3 alusel."
+          ]
+        },
+        {
+          "tag": "replace",
+          "old_index": 21,
+          "new_index": 20,
+          "old": [
+            "Elanik väitis veel, et oli lisanud lüliti, laadimise peatanud ja seadmed lukustanud ning pakkunud võtme komiteele.",
+            "Kohtu vastus oli tingimuslik: isegi kui need väited olid õiged, säilis eemaldamise ja taastamise kohustus."
+          ],
+          "new": [
+            "Elaniku väitel oli ta lisanud lüliti, laadimise peatanud ja seadmed lukustanud ning pakkunud võtme komiteele, kuid kohus leidis, et isegi nende väidete tõeks osutumise korral säilis õigusnormide ja maja eeskirja rikkumisest tulenev eemaldamise ning taastamise kohustus."
+          ]
+        },
+        {
+          "tag": "replace",
+          "old_index": 25,
+          "new_index": 23,
+          "old": [
+            "Paigaldaja joonisele saab kanda karbi, seina- ja laeläbiviigud ning kasutatava elektrikilbi.",
+            "Seejärel on võimalik võrrelda iga teelõiku omandiandmete, eeskirja ja olemasolevate otsustega."
+          ],
+          "new": [
+            "Paigaldaja joonisele saab kanda karbi, seina- ja laeläbiviigud ning kasutatava elektrikilbi, et iga teelõiku oleks võimalik võrrelda omandiandmete, eeskirja ja olemasolevate otsustega."
+          ]
+        },
+        {
+          "tag": "replace",
+          "old_index": 31,
+          "new_index": 28,
+          "old": [
+            "Kaohsiungi linn avaldas 29. mail 2026 toetusteate, mis hõlmas korterelamute ühiskasutusaladel elektriautode laadimiskaablite tugitaristu rajamist."
+          ],
+          "new": [
+            "Kaohsiungi linn avaldas 29. mail 2026 toetusteate, mis hõlmas korterelamute ühiskasutusaladel elektriautode laadimiskaablite rennide rajamist."
+          ]
+        }
+      ],
+      "short_units": 8,
+      "max_long_units_in_one_paragraph": 1,
+      "paragraph_openers": {
+        "laadimiskarp": 1,
+        "taiwani": 2,
+        "vaieldamatute": 1,
+        "mõlemad": 1,
+        "artikli": 2,
+        "elaniku": 1,
+        "kas": 1,
+        "halduskomiteele": 1,
+        "kaohsiungi": 1,
+        "paigalduslepingu": 1,
+        "peatamis": 1,
+        "kohtulahendi": 1
+      },
+      "max_same_paragraph_opener": 2,
+      "faq_count": 3,
+      "source_locale": "zh-hant",
+      "source_sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "board_visible": true,
+      "official_urls_final_count": 4,
+      "numeric_source_only": [
+        {
+          "token": "9",
+          "count": 2
+        },
+        {
+          "token": "5",
+          "count": 1
+        },
+        {
+          "token": "10",
+          "count": 1
+        }
+      ],
+      "numeric_target_only": [
+        {
+          "token": "11",
+          "count": 3
+        },
+        {
+          "token": "15",
+          "count": 1
+        },
+        {
+          "token": "6",
+          "count": 1
+        },
+        {
+          "token": "1",
+          "count": 2
+        },
+        {
+          "token": "3",
+          "count": 1
+        },
+        {
+          "token": "4",
+          "count": 1
+        },
+        {
+          "token": "29",
+          "count": 1
+        },
+        {
+          "token": "26",
+          "count": 1
+        }
+      ],
+      "automated_required_codes": [
+        "public-output-and-native-prose",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ]
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "e058c5964d75cfad256f5fd99b6c474b9acbd80408a5e06229652116e3d38094",
+      "bytes": 8427,
+      "initial_sha256": "728772444935c56ec2f9cf0b70eec51d0c97391ba4ee06811ec21387a45dd416",
+      "edit_count": 2,
+      "exact_replay_and_reverse": true,
+      "variety_exit": 0,
+      "metrics": {
+        "lang": "et",
+        "sentences": 48,
+        "paras": 15,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 11.3,
+        "len_cv": 0.459,
+        "short_share": 0.333,
+        "long_share": 0.0,
+        "para_cv": 0.271,
+        "even_run3": 0.022,
+        "top_end": "tagastamist",
+        "top_end_share": 0.042,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "mängukontol",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.97,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Mängukontol oli münte alles, kuid kasutamata tasulisi punkte enam polnud.",
+        "last": "Kohtulahendi alusmaterjal kontrolliti 25. oktoobril 2026; kehtivat regulatsiooni ja ametlikku statistikat võrreldi 26. o",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "original_extracted_units": 49,
+      "current_extracted_units": 48,
+      "unchanged_units": 47,
+      "new_or_changed_units": 1,
+      "boundary_changes_read": [
+        {
+          "tag": "delete",
+          "old_index": 13,
+          "new_index": 13,
+          "old": [
+            "Kohtu põhjendus ei nõudnud järeldust, et iga allesjäänud žetoon oleks juba ära kasutatud."
+          ],
+          "new": []
+        },
+        {
+          "tag": "replace",
+          "old_index": 31,
+          "new_index": 30,
+          "old": [
+            "Punkt 4 annab eraldi õiguse mängimise alustamisest seitsme päeva jooksul kirjalikult lepingust taganeda, põhjendust ja kulusid nõudmata, ning taotleda kasutamata tasuliste punktide tagastamist."
+          ],
+          "new": [
+            "Punkt 4 annab eraldi õiguse mängimise alustamisest seitsme päeva jooksul kirjalikult lepingust taganeda, põhjust nimetamata ja kulusid kandmata, ning taotleda kasutamata tasuliste punktide tagastamist."
+          ]
+        }
+      ],
+      "short_units": 16,
+      "max_long_units_in_one_paragraph": 0,
+      "paragraph_openers": {
+        "mängukontol": 1,
+        "keelungi": 1,
+        "leping": 1,
+        "funktsioon": 1,
+        "miks": 1,
+        "teise": 1,
+        "taiwani": 1,
+        "mahaarvatud": 1,
+        "praegune": 1,
+        "punkt": 1,
+        "üks": 1,
+        "teenusepakkuja": 1,
+        "tarbijakaitseameti": 1,
+        "tagasimakse": 1,
+        "kohtulahendi": 1
+      },
+      "max_same_paragraph_opener": 1,
+      "faq_count": 3,
+      "source_locale": "zh-hant",
+      "source_sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "board_visible": true,
+      "official_urls_final_count": 4,
+      "numeric_source_only": [
+        {
+          "token": "24",
+          "count": 1
+        },
+        {
+          "token": "3,548",
+          "count": 1
+        },
+        {
+          "token": "140",
+          "count": 2
+        },
+        {
+          "token": "153",
+          "count": 2
+        },
+        {
+          "token": "1",
+          "count": 1
+        },
+        {
+          "token": "148",
+          "count": 1
+        },
+        {
+          "token": "152",
+          "count": 1
+        },
+        {
+          "token": "5",
+          "count": 2
+        }
+      ],
+      "numeric_target_only": [
+        {
+          "token": "30",
+          "count": 3
+        },
+        {
+          "token": "243 548",
+          "count": 1
+        },
+        {
+          "token": "140–153",
+          "count": 2
+        },
+        {
+          "token": "148–152",
+          "count": 1
+        },
+        {
+          "token": "18",
+          "count": 3
+        },
+        {
+          "token": "2022",
+          "count": 1
+        },
+        {
+          "token": "4",
+          "count": 2
+        },
+        {
+          "token": "9",
+          "count": 1
+        },
+        {
+          "token": "6",
+          "count": 2
+        },
+        {
+          "token": "7",
+          "count": 1
+        },
+        {
+          "token": "26",
+          "count": 1
+        }
+      ],
+      "automated_required_codes": [
+        "public-output-and-native-prose",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ]
+    }
+  ],
+  "total_exact_edits": 21,
+  "all_six_current_sha_match_actual_shared_and_content_checks": true,
+  "initial_extracted_units_read": 273,
+  "final_extracted_units_covered": 259,
+  "unchanged_units_in_order": 242,
+  "changed_final_units_read": 17,
+  "actual_boundary_errors_found": 0,
+  "automated_errors": 0,
+  "automatic_semantic_required_items_retained": 32,
+  "method_limits": "Full initial 273-unit extraction read, then every changed final unit and exact unchanged-unit correspondence inspected. Current 259 units accounted for without another unchanged measurement. Raw numeral tokens are not normalized or declared semantically equal automatically. Manual reasons recorded in author report; rendered cards/JSON-LD/feeds and independent review remain outside author scope.",
+  "scope": "Only ET6 manuscripts, et-author and et-* checks in batch07. R/shared/other locales untouched; no git/deployment.",
+  "human_native_or_legal_approval": false
+}

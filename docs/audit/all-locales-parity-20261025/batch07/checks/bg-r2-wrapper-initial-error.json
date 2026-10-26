@@ -1,0 +1,6 @@
+{
+  "stage": "916 CLI completed with stdout OK; wrapper then failed before saving and before running 921",
+  "error": "KeyError: sentences; prior schema uses sentences_by_paragraph",
+  "resolution": "Read actual schema; rerun changed916/921 to persist exit codes; structure run succeeded separately",
+  "first_observed_916_stdout": "[bg] sentences=42 mean=15.3 cv=0.484 short=0.19 run3=0.025 opener_rep=0.308 cite_end=0.0 cite_para=0.154 contrast=0 caveat=0 q=2; OK"
+}

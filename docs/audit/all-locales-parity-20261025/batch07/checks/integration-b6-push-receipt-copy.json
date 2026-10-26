@@ -1,0 +1,8 @@
+{
+  "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/release26/checks/main-push.json",
+  "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch06/release26/checks/main-push.json",
+  "sha256": "3453469e13c6284cda0753a17901886b63b8bfc5f60a1a7de5c467f504cefadc",
+  "bytesIdentical": true,
+  "noNewPush": true,
+  "publicVerificationNotClaimed": true
+}

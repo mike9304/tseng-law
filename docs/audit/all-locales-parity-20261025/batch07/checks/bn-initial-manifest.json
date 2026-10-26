@@ -1,0 +1,36 @@
+{
+  "stage": "initial drafts before any self-review change",
+  "created_at": "2026-10-26T02:54:16.709293+09:00",
+  "files": [
+    {
+      "file": "src/content/columns-bn/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "snapshot": "checks/bn-initial/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "431a779eaf22d733220313778cb2469744836cac99bce692f2b2741711b6f623"
+    },
+    {
+      "file": "src/content/columns-bn/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "snapshot": "checks/bn-initial/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "b6b74d97653bfbed690dd60d826193dcabf9a71c2abd05fdb97ed83e4af2fc7a"
+    },
+    {
+      "file": "src/content/columns-bn/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "snapshot": "checks/bn-initial/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "262dbe377c6b7f547c7af5f558a8c0f3b30af49d9971dbcd55f16e99143ad4fe"
+    },
+    {
+      "file": "src/content/columns-bn/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "snapshot": "checks/bn-initial/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "958cc5d4460ac2f34f185ba8a9e7e2b1c161633f5e679e3fcdac7b3ab4082eac"
+    },
+    {
+      "file": "src/content/columns-bn/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "snapshot": "checks/bn-initial/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "289e8a43ee7c26bcc5399e351fc98d83b8a6090a4028f46293f3f7bc7367f283"
+    },
+    {
+      "file": "src/content/columns-bn/921-taiwan-online-game-coins-refund-judgment.md",
+      "snapshot": "checks/bn-initial/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "efc6213fd4e189e17f5ab54a07a73dd3e80798605e8205a5d43ef790b685ca87"
+    }
+  ]
+}

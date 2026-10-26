@@ -1,0 +1,6 @@
+{
+  "stage": "readiness guard, no R mutation",
+  "exit": 1,
+  "error": "KeyError checks/bn-author-r2.md due to relative manifest path not normalized",
+  "fix": "Normalize relative evidence paths against batch root before comparing hashes; no source or review changes"
+}

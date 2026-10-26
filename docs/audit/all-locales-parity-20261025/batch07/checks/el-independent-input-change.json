@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-25T18:12:42.769217+00:00",
+  "priorAttempt": "An earlier reviewer evidence guard stopped when current LESSONS SHA differed from the previously read/author input SHA. It wrote no final review artifact. This was an input-refresh guard, not a manuscript or shared-checker failure.",
+  "changedInputs": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "9d3af531126f65057fa1ceea9785b6464e512c80ce25d922e822e01438e70486",
+      "bytes": 17225,
+      "matchesAuthorReadHash": false,
+      "priorSHA256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f",
+      "reviewerRead": "Current 134-line version fully read in two bounded reads, lines 1–100 and 101–134. Prior author evidence remains unchanged."
+    }
+  ],
+  "otherReadOnlyInspectionMistakes": [
+    "A bounded schema inspection also tried the nonexistent da-final-manifest.json name; FileNotFoundError. The correct name is da-author-final-manifest.json. No file was changed.",
+    "A shell glob for not-yet-created el-independent files returned no matches. This was discovery, not content validation."
+  ],
+  "resolution": "Read current LESSONS in full, preserve the author snapshots unchanged, then tie all other inputs and per-file receipts to their actual bytes."
+}

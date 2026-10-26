@@ -1,0 +1,388 @@
+{
+  "at_utc": "2026-10-25T17:50:45.320Z",
+  "node": "v24.14.1",
+  "scope": "Final metadata/FAQ/image and source-list preservation supplement; no network/rendering claim.",
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "534cd48a07b129dc51a55a0697bd93e41ee4f48bf61b190bdd0c30a8d1f828a6",
+      "metadata": {
+        "title": "Rahanõue pärast tähtaja pikendamise soovitust: Taiwani vahekohtuotsus tühistati",
+        "seoTitle": "Taiwani riigihange: lepitus ja muutunud vahekohtunõue",
+        "summary": "Haigla ehitaja kasuks tehtud vahekohtuotsus tühistati, sest lepitussoovitus puudutas lisaaega, hilisem nõue aga raha. Seaduslik tee vahekohtusse eeldab konkreetse vaidluse ja lepitusmenetluse dokumentide võrdlemist.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "read_time": "5 min lugemist",
+        "categories": [
+          "Lepingulised vaidlused",
+          "Taiwani kohtupraktika"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "riigihanked",
+          "ehitusvaidlused",
+          "vahekohus",
+          "lepitus",
+          "Ameerika Ühendriikide tarnijad"
+        ],
+        "audience": [
+          "et"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/915-case-trends-20261025.webp",
+        "featured_image_alt": "Kaitsekiiver, ehitusjoonised ja kaustad sillamudeli kõrval",
+        "featured_image_caption": "Väljamõeldud stseen",
+        "faq": [
+          {
+            "q": "Kas nurjunud lepitus annab alati õiguse viia vaidlus Taiwani avaliku sektori hankijaga vahekohtusse?",
+            "a": "Ei. Ehitustööde või tehniliste teenuste seaduslikus menetluses peab lepitus ebaõnnestuma seetõttu, et hankija ei nõustu komisjoni lepitussoovituse või ettepanekuga. Vahekohtusse esitatavat konkreetset vaidlust tuleb võrrelda nende dokumentidega. Teise aluse võib anda eraldi vahekohtukokkulepe."
+          },
+          {
+            "q": "Kas kohtuotsuse järgi välistab iga nõude muutmine vahekohtu?",
+            "a": "Ei. Selles asjas pöörduti pärast tähtaja pikendamist puudutanud soovitust tagasi rahalise hüvitise nõude juurde. Summade muutmine või õigusliku põhjenduse täpsustamine ei tähenda tingimata uut vaidlust. Võrrelda tuleb asjaolusid, taotletavat õiguskaitset ja menetlusdokumente."
+          }
+        ]
+      },
+      "metadata_changed_since_initial": [],
+      "faq_count": 2,
+      "canonical_sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "expected_final_official_urls": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "actual_final_official_urls": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "initial_url_sequence_unchanged": true,
+      "image_exists": true,
+      "errors": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "d82fd20cc58e146613730221dacd28948a3f2b1aa92177ce8a916accf8a0b12f",
+      "metadata": {
+        "title": "Saastunud tehas Taiwanis: mida emaettevõtted teadsid ja tegid",
+        "seoTitle": "Taiwani tehasesaaste ja emaettevõtte vastutus",
+        "summary": "Tehasesaaste kohtuasjas seostas Taiwani ülemkohus vastutuse kontrolli, saastest teadlikkuse ja vara väljaviimisega. Omandamise eelne keskkonnauuring vajab jätkuks jälgitavaid otsuseid selle leidude kohta.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "read_time": "5 min lugemist",
+        "categories": [
+          "Äriühingud Taiwanis",
+          "Taiwani kohtupraktika"
+        ],
+        "topic": "company",
+        "tags": [
+          "emaettevõtte vastutus",
+          "keskkonnauuring",
+          "ettevõtte omandamine",
+          "piiratud vastutus",
+          "USA investeeringud"
+        ],
+        "audience": [
+          "et"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/916-case-trends-20261025.webp",
+        "featured_image_alt": "Pinnaseproovi purk ja märkmik kokkupandaval laual vana tehase ees",
+        "featured_image_caption": "Väljamõeldud stseen",
+        "faq": [
+          {
+            "q": "Kas osalus Taiwani tütarettevõttes muudab välismaise emaettevõtte saaste eest vastutavaks?",
+            "a": "Ainuüksi osalus polnud kirjeldatud otsuse alus. Kohtu selgitus käsitleb tegelikku kontrolli, saastest teadlikkust, probleemi kõrvaldamata jätmist, töötajate teavitamata jätmist ja vastutusest hoidumiseks tehtud varaülekandeid. Vastutust tuleb hinnata konkreetsete tegude ja kohaldatava õiguse järgi."
+          },
+          {
+            "q": "Kas 2018. aasta ülemkohtu otsus lõpetas kõik selle tehasega seotud nõuded?",
+            "a": "Ei. Kohus tühistas 246 hagejat puudutanud otsuseosad ja saatis need uuesti läbivaatamiseks; 262 hagejat puudutanud kassatsioonkaebused jäeti rahuldamata. Menetluse eri osadel olid erinevad tulemused. Sellest ei saa järeldada kogu seotud kohtuvaidluse lõppu."
+          },
+          {
+            "q": "Millised dokumendid võiks omandamismeeskond pärast keskkonnauuringut säilitada?",
+            "a": "Uuringu kõrval on asjakohased saajate nimekiri, järelküsimused, otsused töötajate kokkupuute ja saaste kõrvaldamise kohta ning hilisema vara liikumise heakskiidud ja finantsanalüüs. Need aitavad hinnata teadlikkust ja tegutsemist. Dokumentide hoidmine üksi ei tõenda nõuetele vastavust."
+          }
+        ]
+      },
+      "metadata_changed_since_initial": [],
+      "faq_count": 3,
+      "canonical_sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "expected_final_official_urls": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "actual_final_official_urls": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "initial_url_sequence_unchanged": true,
+      "image_exists": true,
+      "errors": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "f2c94dacfac2769b7950c6063569d6e1da83bf8e6e78034cc7caad963308e9db",
+      "metadata": {
+        "title": "Laenukiri ja sissepääs remondiks ei tõendanud eluaseme üleandmist",
+        "seoTitle": "Taiwani ehitatav eluase: laen ja üleandmisteade",
+        "summary": "Arendaja kiri laenu korraldamiseks ja ostja varasem pääs eluruumi ei tõendanud Taiwani kohtuasjas lepingukohast üleandmist. Asja neljakuulist lepingulist teatamistähtaega tuleb eristada praeguste tüüptingimuste kuuekuulisest tähtajast.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "read_time": "5 min lugemist",
+        "categories": [
+          "Kinnisvara Taiwanis",
+          "Taiwani kohtupraktika"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "ehitatava eluaseme ost",
+          "üleandmisteade",
+          "eluasemelaen",
+          "arendaja viivitus",
+          "müügileping"
+        ],
+        "audience": [
+          "et"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/918-case-trends-20261025.webp",
+        "featured_image_alt": "Dokumendid, kirjata ümbrik ja kolimiskast uues eluruumis",
+        "featured_image_caption": "Väljamõeldud stseen",
+        "faq": [
+          {
+            "q": "Kas arendaja palve eluasemelaenu vormistada on ühtlasi üleandmisteade?",
+            "a": "See sõltub kirja sisust ja eluaseme seisundist. Kirjeldatud asjas küsiti pangatoimingute kohta, kuid ei teatatud kasutusvalmis eluruumi üleandmisest. Vee- ja elektriühendused ning hilisemad ülevaatusdokumendid ei toetanud arendaja väidet. Kohus ei lugenud kirja lepingujärgseks üleandmisteateks."
+          },
+          {
+            "q": "Kas kasutusloa saamisest algav teatamistähtaeg on neli või kuus kuud?",
+            "a": "Selle asja neli kuud tulenesid poolte lepingust. Praeguste kohustuslike tüüptingimuste punkt 15 nõuab müüjalt üleandmisest teatamist kuue kuu jooksul hoone kasutusloa saamisest. Konkreetse lepingu puhul tuleb võrrelda tegelikku kokkulepet sõlmimise ajal kohaldunud nõuetega."
+          },
+          {
+            "q": "Kas võib arendaja teate kõrvale jätta, kuni pank laenu välja maksab?",
+            "a": "Laenu menetlemine ei anna üldist õigust teateid eirata. Maksetel, laenudokumentidel, ülevaatusel ja üleandmisel on erinevad kohustused ning tähtajad. Teate sisu tuleb võrrelda panga dokumentide ja eluaseme tegeliku seisundiga. See otsus ei anna kõigile ostjatele õigust maksmist peatada."
+          }
+        ]
+      },
+      "metadata_changed_since_initial": [],
+      "faq_count": 3,
+      "canonical_sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "expected_final_official_urls": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11"
+      ],
+      "actual_final_official_urls": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11"
+      ],
+      "initial_url_sequence_unchanged": true,
+      "image_exists": true,
+      "errors": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "da1ba752fc6193222b844e5be491cb382ab55f49b3a714b49b27b5849825c3aa",
+      "metadata": {
+        "title": "Karistusest teatati enne arutelu: miks Taiwani kohus ametniku vabastamise tühistas",
+        "seoTitle": "Töökiusu uurimine Taiwanis ja õigus vastata",
+        "summary": "Taipei kõrgem halduskohus tühistas ametniku teenistusest vabastamise, osutades ette teatatud tulemusele, ärakuulamise puudustele ja vastuolulisele aruandele. Eraettevõtte kohustused tulenevad talle kohalduvast tööõigusest, sealhulgas kehtivast töökiusu tõrje korrast.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "read_time": "5 min lugemist",
+        "categories": [
+          "Töövaidlused Taiwanis",
+          "Taiwani kohtupraktika"
+        ],
+        "topic": "labor",
+        "tags": [
+          "töökius",
+          "siseuurimine",
+          "ärakuulamine",
+          "personalitöö",
+          "teenistusest vabastamine"
+        ],
+        "audience": [
+          "et"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/919-case-trends-20261025.webp",
+        "featured_image_alt": "Ümar laud, üks kirjata dokumendikaust ja kolm tooli tühjas koosolekuruumis",
+        "featured_image_caption": "Väljamõeldud stseen",
+        "faq": [
+          {
+            "q": "Kas vabastamise tühistamine tähendab, et kohus välistas töökiusu?",
+            "a": "Ei. Kohus leidis puudusi arutamise korras, ärakuulamises ja asjaolude tuvastamises ning tühistas algse otsuse koos halduskorras tehtud läbivaatamisotsusega. See ei tähenda, et kõiki etteheidetud tegusid oleks peetud olematuks. Ametliku teate järgi sai kohtuotsust edasi kaevata."
+          },
+          {
+            "q": "Kas tööandja peab kaitsemeetmetega ootama uurimise lõpuni?",
+            "a": "Kiusamist kogenud töötaja kaebuse saamisel peab tööandja rakendama meetmeid uue kiusamise vältimiseks, pakkuma vajaduse järgi nõustamist, abi ja kaitset ning uurima juhtunut. Kaitsmine ja õiglane uurimine võivad toimuda samal ajal. Konkreetne kohustus sõltub ka sellest, kuidas tööandja juhtunust teada sai."
+          },
+          {
+            "q": "Kas eraettevõte võib selle ametniku kohtuasja menetluse otse üle võtta?",
+            "a": "Ettevõte peab järgima talle kohalduvaid tööohutuse ja muid töösuhte norme ning lepinguid. Ametniku hindamise ja vabastamise korda ei saa nendega samastada. Kohtu käsitletud ette otsustatud tulemus, vastuväidete eiramine ja tõendite vastuolud aitavad uurimise kvaliteeti hinnata, kuid ei asenda kohaldatava õiguse määramist."
+          }
+        ]
+      },
+      "metadata_changed_since_initial": [],
+      "faq_count": 3,
+      "canonical_sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "expected_final_official_urls": [
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt"
+      ],
+      "actual_final_official_urls": [
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt"
+      ],
+      "initial_url_sequence_unchanged": true,
+      "image_exists": true,
+      "errors": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "afac76c9b48c610c9e0d6a30956340c076bbe373cc41341051d9830eb47e5479",
+      "metadata": {
+        "title": "Laadija oma parkimiskohal, juhtmed ühisseinal: Taiwani eemaldamisvaidlus",
+        "seoTitle": "Elektriauto laadija Taiwanis ja ühiste ruumide nõusolek",
+        "summary": "Parkimiskoha kasutaja paigaldas laadimisseadme ühisseinale ning vedas juhtmed lae kaudu ühisesse elektrikilpi. Taiwani kohus jättis jõusse eemaldamise ja endise olukorra taastamise kohustuse, lähtudes paigalduskohast, seadusest ning maja eeskirjast.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "read_time": "5 min lugemist",
+        "categories": [
+          "Kinnisvara Taiwanis",
+          "Taiwani kohtupraktika"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "elektriauto laadimine",
+          "korterelamu",
+          "kaasomand",
+          "korteriomanike koosolek",
+          "paigaldusluba"
+        ],
+        "audience": [
+          "et"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/920-case-trends-20261025.webp",
+        "featured_image_alt": "Elektriauto on maa-aluses parklas ühendatud samba küljes oleva laadijaga; juhtmestik ulatub lae kaabliteeni",
+        "featured_image_caption": "Väljamõeldud stseen",
+        "faq": [
+          {
+            "q": "Kas oma parkimiskoha kasutaja võib laadija juhtmed ise paigaldada?",
+            "a": "Esmalt tuleb kindlaks teha, kust seadmed ja juhtmed läbi lähevad. Selles kohtuasjas kasutati ühisseina, lage ja ühist elektrikilpi. Kohus hindas tööde tegelikku ulatust, seadust ning maja eeskirja ega käsitanud paigaldust üksnes erakasutuses osa teenindava juhtmestikuna. Teises majas sõltub menetlus selle paigutusest ja reeglitest."
+          },
+          {
+            "q": "Kas väljalülitatud ja lukustatud laadija võib eemaldamata jätta?",
+            "a": "Elanik väitis selles asjas, et oli laadija välja lülitanud ja lukustanud ning pakkunud võtme halduskomiteele. Kohus leidis, et isegi nende väidete tõeks osutumine ei kõrvaldaks kaasomandi ja maja eeskirja rikkumisest tulenevat eemaldamiskohustust. See ei tähenda, et iga laadimisvaidlus peab lõppema eemaldamisega."
+          },
+          {
+            "q": "Kas laadimistaristu toetus asendab maja nõusolekut?",
+            "a": "Toetuse tingimused ja ühiste osade kasutamise õigus tuleb eraldi lahendada. Kaohsiungi 2026. aasta meetmes käsitleti ühiskasutusalade laadimiskaablite renne ning avaldatud taotlustähtaeg lõppes 30. septembril. Toetus ei andnud üksikule elanikule iseseisvat õigust kaasomandis töid teha."
+          }
+        ]
+      },
+      "metadata_changed_since_initial": [
+        "faq"
+      ],
+      "faq_count": 3,
+      "canonical_sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "expected_final_official_urls": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "actual_final_official_urls": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "initial_url_sequence_unchanged": true,
+      "image_exists": true,
+      "errors": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "e058c5964d75cfad256f5fd99b6c474b9acbd80408a5e06229652116e3d38094",
+      "metadata": {
+        "title": "Mängukontol oli münte alles: miks Taiwani kohus tagasimaksest keeldus",
+        "seoTitle": "Veebimängud Taiwanis: mündid, punktid ja tagasimakse",
+        "summary": "Kohus pidas ühe mängu kontole jäänud münte mänguvoorude žetoonideks, mille funktsioon erines kasutamata tasulistest punktidest. Praegused reeglid kaitsevad kasutamata punktide ja mängutasude tagastamist; ostu ning kasutuse jälg aitab kindlaks teha kaitstud jäägi.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktoober 2026",
+        "read_time": "5 min lugemist",
+        "categories": [
+          "Tarbijavaidlused",
+          "Taiwani kohtupraktika"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "veebimängud",
+          "tagasimakse",
+          "mängumündid",
+          "tasulised punktid",
+          "tarbijaleping"
+        ],
+        "audience": [
+          "et"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/921-case-trends-20261025.webp",
+        "featured_image_alt": "Mängupult, abstraktne mänguekraan, kirjata žetoonid ja suletud märkmik",
+        "featured_image_caption": "Väljamõeldud stseen",
+        "faq": [
+          {
+            "q": "Kas mängus mündiks nimetatud ühik jääb alati tagasimaksest välja?",
+            "a": "Nimetus üksi ei otsusta. Selle mängu mündid toimisid mänguvoorudes žetoonidena ega olnud kohtu hinnangul tagastatavad kasutamata tasulised punktid või mängutasud. Teises mängus tuleb uurida omandamise viisi, funktsiooni, tegelikku kasutust ja lepingut."
+          },
+          {
+            "q": "Kas pärast esimest seitset päeva ei saa enam lepingut lõpetada?",
+            "a": "Praegune kord lubab tarbijal teenusepakkujat teavitades lepingu igal ajal lõpetada. Kasutamata tasulised punktid või kasutamata mängutasud tuleb vajalikud kulud maha arvanuna tagastada 30 päeva jooksul lepingu lõppemisest või käsitleda mõlema poole kokkulepitud viisil. Esimese seitsme päeva kirjalik taganemisõigus on eraldi võimalus oma tingimustega."
+          },
+          {
+            "q": "Kas teenusepakkuja võib kehtestada, et vaidluses loevad ainult tema andmed?",
+            "a": "Keelatud tüüptingimused ei luba kokku leppida, et vaidluse hindamise aluseks saavad olla üksnes teenusepakkuja säilitatud mänguajalugu ja elektroonilised andmed. Mängija saab alles hoida maksetõendid, kuvatõmmised ja kirjavahetuse klienditoega ning küsida oma mänguajalugu jäägi kujunemise selgitamiseks."
+          }
+        ]
+      },
+      "metadata_changed_since_initial": [],
+      "faq_count": 3,
+      "canonical_sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "expected_final_official_urls": [
+        "https://appeal.cpc.ey.gov.tw/",
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C"
+      ],
+      "actual_final_official_urls": [
+        "https://appeal.cpc.ey.gov.tw/",
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C"
+      ],
+      "initial_url_sequence_unchanged": true,
+      "image_exists": true,
+      "errors": []
+    }
+  ],
+  "total_errors": 0
+}

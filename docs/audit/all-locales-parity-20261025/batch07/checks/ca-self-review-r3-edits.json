@@ -1,0 +1,99 @@
+{
+  "at": "2026-10-26T02:58:16.208333+09:00",
+  "stage": "Actual complete 256-segment R2 reading found remaining abstract repetitions and two precise wording improvements despite machine PASS.",
+  "changes": [
+    {
+      "id": 915,
+      "finding": "S03",
+      "before": "La reparació demanada pot haver canviat.",
+      "after": "La pretensió concreta pot haver canviat.",
+      "reasonAndMeaning": "구제/청구를 뜻하는 reparació가 공사 수리로 읽힐 여지를 줄임. 같은 상업상 문제라도 청구대상이 바뀔 수 있다는 관계 보존."
+    },
+    {
+      "id": 915,
+      "finding": "V20",
+      "before": "onsentiment, aquesta no pot refusar que el proveïdor sotmeti la controvèrsia a arbitratge. La causa del fracàs importa. També importa a quina petició responia la recomanació.",
+      "after": "onsentiment, aquesta no pot refusar que el proveïdor sotmeti la controvèrsia a arbitratge.",
+      "reasonAndMeaning": "MONOTONY: importa 중요성 선언2개는 앞의 누적 조건과 다른 문단의 특정청구 설명을 반복했다. 실제85-1 조건·권고/안·기관부동의·거절불가는 앞 완전한 문장에 모두 남는다. 의미 없는 강조를 제거."
+    },
+    {
+      "id": 916,
+      "finding": "V21",
+      "before": "Les preguntes pendents continuen sent pendents.",
+      "after": "Les preguntes sense resposta poden quedar identificades com a punts oberts de la revisió.",
+      "reasonAndMeaning": "MONOTONY: pending은pending이라는 동어반복을 답변없는 질문을 검토기록의 미해결항목으로 표시하는 구체 행동으로 수정. 실무 권고 범위/가능형 유지."
+    },
+    {
+      "id": 916,
+      "finding": "V22",
+      "before": "Aquesta és una pauta de revisió de l’operació. No crea un formulari legal nou ni converteix qualsevol transferència d’actius en una infracció. La seva utilitat és poder relacionar una troballa ambiental amb les persones que la van conèixer i amb les decisions preses després.\n\n## Les 246 i les 262 persones no van rebre el mateix pronunciament",
+      "after": "## Les 246 i les 262 persones no van rebre el mateix pronunciament",
+      "reasonAndMeaning": "MONOTONY: 원문 밖 메타설명·가공의 오해 부정과 바로 앞 자료연결의 반복을 제거. 앞 문단의 수신자·운영결정·이전문서 연결 및 이후 자산이전평가, 모든 법적조건/246·262 범위는 그대로."
+    },
+    {
+      "id": 918,
+      "finding": "S04",
+      "before": "segons el [judici recollit a la compilació oficial de protecció del consumidor]",
+      "after": "segons la [sentència publicada a la compilació oficial de protecció del consumidor]",
+      "reasonAndMeaning": "공식 판결집이 재판절차기록이라는 인상을 피하고 실제 수록물인 판결(sentència)을 정확히 명명. 원래URL·인쇄쪽수·사실범위 유지."
+    },
+    {
+      "id": 921,
+      "finding": "V23",
+      "before": "La funció era decisiva. Segons la motivació,",
+      "after": "Segons la motivació,",
+      "reasonAndMeaning": "MONOTONY: 기능이 중요하다는 추상 단문은 바로 앞 칩 기능 설명을 반복한다. 법원 도박 관련 이유부터 문단을 시작. 그 게임의 기능 및 일반 코인으로 확대하지 않는 제한은 보존."
+    }
+  ],
+  "files": [
+    {
+      "id": 915,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSha256": "ced38d20a30ccdea8457c77347e3e34306cc74606c176f103afc50941b5c97cc",
+      "afterSha256": "183c8045ea1d1d443672376af9f8866b3771c2ed429aae6d24f47398eaccb5d9",
+      "reverseMatchesR2": true,
+      "diff": "--- R2/915-taiwan-public-contract-mediation-arbitration-same-claim.md\n+++ R3/915-taiwan-public-contract-mediation-arbitration-same-claim.md\n@@ -44,7 +44,7 @@\n \n L’[article 85-1 de la Llei de contractació pública de Taiwan](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) regula aquesta via per a controvèrsies sobre l’execució del contracte en què les parts no arriben a un acord. El proveïdor pot demanar la mediació davant l’òrgan de revisió de reclamacions de contractació pública. L’entitat no pot refusar aquesta sol·licitud.\n \n-Per a contractes d’obres o de serveis tècnics, l’òrgan ha de formular una recomanació o proposta; si la mediació fracassa perquè l’entitat no hi dona el consentiment, aquesta no pot refusar que el proveïdor sotmeti la controvèrsia a arbitratge. La causa del fracàs importa. També importa a quina petició responia la recomanació.\n+Per a contractes d’obres o de serveis tècnics, l’òrgan ha de formular una recomanació o proposta; si la mediació fracassa perquè l’entitat no hi dona el consentiment, aquesta no pot refusar que el proveïdor sotmeti la controvèrsia a arbitratge.\n \n En el cas de l’hospital faltava la base arbitral per a la reclamació de diners. El tribunal va situar l’absència de conveni arbitral en l’[article 40, apartat 1, punt 2, de la Llei d’arbitratge](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001), com a fonament de l’anul·lació. Aquesta explicació del cas no converteix qualsevol canvi de quantia en una causa automàtica d’anul·lació.\n \n@@ -54,7 +54,7 @@\n \n L’[informe energètic de l’International Trade Administration del 30 de setembre de 2026](https://www.trade.gov/market-intelligence/taiwan-energy-industry) descriu contractacions previstes a Taiwan per a finals de 2026 i el 2027, amb oportunitats per a proveïdors dels Estats Units. Són previsions de mercat. No acrediten que una licitació concreta ja s’hagi obert, que una empresa hi pugui participar o que el futur contracte es classifiqui com a obra o servei tècnic.\n \n-Per als equips que estudien presentar una oferta, la clàusula de resolució de conflictes es pot revisar juntament amb la categoria de contractació. Quan l’obra ja acumula retards, convé poder seguir com una petició de més temps es transforma en una reclamació de costos addicionals. L’origen comercial pot ser comú. La reparació demanada pot haver canviat.\n+Per als equips que estudien presentar una oferta, la clàusula de resolució de conflictes es pot revisar juntament amb la categoria de contractació. Quan l’obra ja acumula retards, convé poder seguir com una petició de més temps es transforma en una reclamació de costos addicionals. L’origen comercial pot ser comú. La pretensió concreta pot haver canviat.\n \n La petició de pagament que ara es prepara va ser objecte de la recomanació? Per respondre, serveixen la sol·licitud inicial, les modificacions, la recomanació o proposta, la resposta de l’entitat i la demanda arbitral prevista. El número d’un mateix projecte no basta per demostrar que tots aquests documents tracten la mateixa controvèrsia.\n \n"
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSha256": "6b3ffa19c59a946248481d3e196f7c63299704c96a997d2c7afd30a7328bfabd",
+      "afterSha256": "4971777565edde14f6e41cef422d252b251a527d48f7bdcdf62169ede5034506",
+      "reverseMatchesR2": true,
+      "diff": "--- R2/916-taiwan-parent-company-pollution-liability-us-investor.md\n+++ R3/916-taiwan-parent-company-pollution-liability-us-investor.md\n@@ -33,9 +33,7 @@\n \n Qui va rebre l’informe i què va poder decidir? Els destinataris ajuden a reconstruir el coneixement del risc, mentre que les instruccions operatives i els documents del consell mostren qui podia actuar. Les aprovacions de transferències posteriors es poden llegir dins d’aquesta mateixa seqüència per valorar la conducta del grup.\n \n-Després de rebre els resultats, es pot documentar qui va investigar l’exposició, quines proves addicionals es van encarregar i com es van assignar recursos per afrontar el problema. Les preguntes pendents continuen sent pendents. Una presentació favorable al tancament de l’operació no resol, per si mateixa, els interrogants que encara consten a les dades tècniques.\n-\n-Aquesta és una pauta de revisió de l’operació. No crea un formulari legal nou ni converteix qualsevol transferència d’actius en una infracció. La seva utilitat és poder relacionar una troballa ambiental amb les persones que la van conèixer i amb les decisions preses després.\n+Després de rebre els resultats, es pot documentar qui va investigar l’exposició, quines proves addicionals es van encarregar i com es van assignar recursos per afrontar el problema. Les preguntes sense resposta poden quedar identificades com a punts oberts de la revisió. Una presentació favorable al tancament de l’operació no resol, per si mateixa, els interrogants que encara consten a les dades tècniques.\n \n ## Les 246 i les 262 persones no van rebre el mateix pronunciament\n \n"
+    },
+    {
+      "id": 918,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSha256": "2c17dbf85fca52e5fedc2a43a68dc9c637d23d464ab85cffcc5a29b9a18bc921",
+      "afterSha256": "96a0a5565a433d45174251c9f6e579c7f8ffa56861def81332acac807ed1f555",
+      "reverseMatchesR2": true,
+      "diff": "--- R2/918-taiwan-presale-mortgage-notice-handover-judgment.md\n+++ R3/918-taiwan-presale-mortgage-notice-handover-judgment.md\n@@ -23,7 +23,7 @@\n     a: \"El préstec pendent no justifica deixar l’avís sense resposta. El pagament, la documentació bancària, la inspecció i el lliurament tenen obligacions i dates que s’han d’identificar per separat. Els registres del banc i de l’estat de la casa ajuden a valorar el desacord. La sentència no autoritza tots els compradors a suspendre els pagaments.\"\n ---\n \n-El 23 de febrer de 2019, un promotor va escriure al comprador perquè contactés amb el banc i informés dels tràmits de la hipoteca. La casa encara no tenia aigua ni electricitat. La carta i l’autorització posterior per entrar-hi a fer treballs no van convèncer el tribunal que s’hagués complert el lliurament previst al contracte, segons el [judici recollit a la compilació oficial de protecció del consumidor](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), pàgines impreses 173–187.\n+El 23 de febrer de 2019, un promotor va escriure al comprador perquè contactés amb el banc i informés dels tràmits de la hipoteca. La casa encara no tenia aigua ni electricitat. La carta i l’autorització posterior per entrar-hi a fer treballs no van convèncer el tribunal que s’hagués complert el lliurament previst al contracte, segons la [sentència publicada a la compilació oficial de protecció del consumidor](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), pàgines impreses 173–187.\n \n En el cas 109年度上易字第289號, la secció de Taichung del Tribunal Superior de Taiwan va desestimar el recurs del promotor i la demanda addicional el 9 de febrer de 2022. Es va mantenir el resultat que l’obligava a pagar interessos pel retard. La resolució indicava que no admetia un altre recurs.\n \n"
+    },
+    {
+      "id": 919,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSha256": "5047e951b20e1dc6d3914692c69f9a9b62c323e519418221f153bc0a60fa9d2a",
+      "afterSha256": "5047e951b20e1dc6d3914692c69f9a9b62c323e519418221f153bc0a60fa9d2a",
+      "reverseMatchesR2": true,
+      "diff": ""
+    },
+    {
+      "id": 920,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSha256": "cd071bb9bda0be5353eb0df7f1ac9a8b892a3dfa4fff701735ce893e43a48999",
+      "afterSha256": "cd071bb9bda0be5353eb0df7f1ac9a8b892a3dfa4fff701735ce893e43a48999",
+      "reverseMatchesR2": true,
+      "diff": ""
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSha256": "b39f598d9f25aebb777f979b01e15618da50d9ef1049e22a5731058a790b7dea",
+      "afterSha256": "1057d5ef96c5f259ea0dc46fe5c6f0cb1158f8b1e49fa55b2a4a7035df2f91b1",
+      "reverseMatchesR2": true,
+      "diff": "--- R2/921-taiwan-online-game-coins-refund-judgment.md\n+++ R3/921-taiwan-online-game-coins-refund-judgment.md\n@@ -31,7 +31,7 @@\n \n Segons el contracte, es podien comprar punts i utilitzar-los per obtenir serveis o productes del joc. Les monedes que restaven tenien una funció de fitxes en les partides entre jugadors. El tribunal no les va incloure entre els punts de pagament no utilitzats ni entre els imports cobrats pel servei de joc que el contracte obligava a retornar.\n \n-La funció era decisiva. Segons la motivació, permetre convertir en efectiu aquelles fitxes de partida implicaria una qüestió de joc d’apostes. El [punt vuitè de la sentència](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), pàgines impreses 148–152, vincula aquest raonament a la manera de jugar del cas; no basta que un altre producte porti el nom de moneda per rebutjar-ne el reemborsament.\n+Segons la motivació, permetre convertir en efectiu aquelles fitxes de partida implicaria una qüestió de joc d’apostes. El [punt vuitè de la sentència](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), pàgines impreses 148–152, vincula aquest raonament a la manera de jugar del cas; no basta que un altre producte porti el nom de moneda per rebutjar-ne el reemborsament.\n \n En aquest procediment, el jugador mateix havia expressat que volia acabar el contracte. Això permetia al tribunal donar-ne per produïda la terminació i passar a examinar si les monedes restants eren reemborsables. No significava aprovar tots els motius amb què l’operador havia suspès o donat per acabat el compte anteriorment.\n \n"
+    }
+  ],
+  "note": "Semantic/style edits after PASS; legal statements, numbers and official links retained; only four files changed."
+}

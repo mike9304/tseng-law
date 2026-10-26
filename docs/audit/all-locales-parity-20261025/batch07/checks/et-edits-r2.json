@@ -1,0 +1,94 @@
+{
+  "at_utc": "2026-10-25T17:48:52.036774+00:00",
+  "phase": "manual-semantic-prose-precision",
+  "edits": [
+    {
+      "id": "916",
+      "old": "kuritarvitab äriühingu juriidilist isikut",
+      "new": "kuritarvitab äriühingu juriidilise isiku staatust",
+      "reason": "Use the natural legal expression for abuse of corporate personality/status rather than abuse of the person itself.",
+      "meaning_preserved": "Article154 cumulative test unchanged; corporate status is the object of abuse.",
+      "edit": 1,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "before_sha256": "0576d1b614489d9b813288f9830bcc371bd29a27641ad3fbf50ecd3decd531f9",
+      "after_sha256": "d82fd20cc58e146613730221dacd28948a3f2b1aa92177ce8a916accf8a0b12f"
+    },
+    {
+      "id": "918",
+      "old": "enne omandi registreerimise üleminekut",
+      "new": "enne omandiõiguse ülemineku registreerimist",
+      "reason": "Correct the unnatural order of ownership transfer and registration.",
+      "meaning_preserved": "Buyer payment/document obligations before transfer registration retained.",
+      "edit": 2,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "before_sha256": "c8c60346af8e4b84a95c3d4103dfbfd488f9dc6130601aa5d9ab0200a1de2954",
+      "after_sha256": "f2c94dacfac2769b7950c6063569d6e1da83bf8e6e78034cc7caad963308e9db"
+    },
+    {
+      "id": "919",
+      "old": "Kohtu kirjelduses oli asutuse juht teatanud kahe raske distsiplinaarmärkuse määramisest enne teenistushindamise komisjoni arutelu, millele eelnes ka kõrgema asutuse koosolek, enne kui küsimus üldse allasutuse komisjonile anti.",
+      "new": "Kohtu kirjelduses oli asutuse juht kahe raske distsiplinaarmärkuse määramise ette teatanud ning seejärel pidas kõigepealt koosoleku kõrgem asutus, enne kui küsimus anti allasutuse teenistushindamise komisjonile.",
+      "reason": "Manual reread found repeated before-relations in the first rhythm edit; express the sequence once.",
+      "meaning_preserved": "Prior announcement, upper body meeting first and subordinate assessment later remain; no new institution or chronology.",
+      "edit": 3,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "before_sha256": "33e086dc53af52d681900be8224aa03b863a1ecdea8b94af6d0130d6e11703b9",
+      "after_sha256": "287a4e8373fdc20188b9cde9604c63ff88a707e221c8c6b724c55c335a8379e9"
+    },
+    {
+      "id": "919",
+      "old": "nõuab uurimisel ja poolte lahenduse kooskõlastamisel objektiivsust",
+      "new": "nõuab nii uurimisel kui ka pooltevahelise lahenduse otsimisel objektiivsust",
+      "reason": "Replace literal coordination phrasing with plain Estonian describing the resolution effort.",
+      "meaning_preserved": "Coordination is not relabelled as a mandatory formal mediation; impartial/objective/fair standard applies to both processes.",
+      "edit": 4,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "before_sha256": "287a4e8373fdc20188b9cde9604c63ff88a707e221c8c6b724c55c335a8379e9",
+      "after_sha256": "da1ba752fc6193222b844e5be491cb382ab55f49b3a714b49b27b5849825c3aa"
+    },
+    {
+      "id": "920",
+      "old": "laadimiskaablite tugitaristut",
+      "new": "laadimiskaablite renne",
+      "reason": "Specify the actual cable-tray subsidy object in FAQ3.",
+      "meaning_preserved": "Narrows wording to the announced common-area charging cable trays; application expiry and no replacement for consent retained.",
+      "edit": 5,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "before_sha256": "4605d9124908249716ac7a2c88b75aecd1668f64f04d87e8df803838a2114355",
+      "after_sha256": "718668ce037a8447d7c23f276787d1ed6458b559949577cb35044129fe99fc73"
+    },
+    {
+      "id": "920",
+      "old": "elektriautode laadimiskaablite tugitaristu rajamist",
+      "new": "elektriautode laadimiskaablite rennide rajamist",
+      "reason": "Name cable trays rather than broader supporting infrastructure in the subsidy paragraph.",
+      "meaning_preserved": "Same public-area subsidy object, dates and early budget exhaustion condition.",
+      "edit": 6,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "before_sha256": "718668ce037a8447d7c23f276787d1ed6458b559949577cb35044129fe99fc73",
+      "after_sha256": "5763d397fe911e882aef56974718dac0bc58bafdd59f6b60f54cd2373f81dfb1"
+    },
+    {
+      "id": "920",
+      "old": "laadimiskaablite tugitaristu toetusteade",
+      "new": "laadimiskaablite rennide toetusteade",
+      "reason": "Align the descriptive source label with the precise cable-tray object.",
+      "meaning_preserved": "Official URL bytes unchanged; no broader subsidy offered.",
+      "edit": 7,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "before_sha256": "5763d397fe911e882aef56974718dac0bc58bafdd59f6b60f54cd2373f81dfb1",
+      "after_sha256": "afac76c9b48c610c9e0d6a30956340c076bbe373cc41341051d9830eb47e5479"
+    },
+    {
+      "id": "921",
+      "old": "põhjendust ja kulusid nõudmata",
+      "new": "põhjust nimetamata ja kulusid kandmata",
+      "reason": "Make the consumer’s no-reason/no-cost withdrawal clear rather than grammatically implying that the consumer requests no costs.",
+      "meaning_preserved": "Written withdrawal within7days of starting, no reason/no costs, unused paid point return maintained.",
+      "edit": 8,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/921-taiwan-online-game-coins-refund-judgment.md",
+      "before_sha256": "0eacd3dd112dc7828ad15daba50c6907860b00e8861398a4357285e62a7bc290",
+      "after_sha256": "e058c5964d75cfad256f5fd99b6c474b9acbd80408a5e06229652116e3d38094"
+    }
+  ]
+}

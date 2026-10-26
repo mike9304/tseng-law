@@ -1,0 +1,166 @@
+{
+  "at_utc": "2026-10-25T18:21:57.717902+00:00",
+  "status": "AUTHOR_R2_TARGETED_CHECKS_COMPLETE_INDEPENDENT_CLOSURE_REQUESTED",
+  "edited_files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "71965945cfaaa67695b54df22fff330e988a96a64f8b1416e7be00df3f13ebb2",
+      "reverse_restores_independent_r1": true,
+      "faq_bytes_unchanged": true,
+      "external_url_sequence_unchanged": true,
+      "body_bytes_unchanged": true,
+      "frontmatter_bytes_unchanged": false
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "7e59a55f865bc4b3617c5d12371546be42aade935b4ab9fa6a775177ea6bcc49",
+      "reverse_restores_independent_r1": true,
+      "faq_bytes_unchanged": true,
+      "external_url_sequence_unchanged": true,
+      "body_bytes_unchanged": false,
+      "frontmatter_bytes_unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "cc59c5a7212683e20fcdf9fbccdf686ceb870db8de7447303dc4c04c74a8028a",
+      "reverse_restores_independent_r1": true,
+      "faq_bytes_unchanged": true,
+      "external_url_sequence_unchanged": true,
+      "body_bytes_unchanged": false,
+      "frontmatter_bytes_unchanged": true
+    }
+  ],
+  "existing_records_preserved_count": 20,
+  "unchanged_manuscripts": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "d82fd20cc58e146613730221dacd28948a3f2b1aa92177ce8a916accf8a0b12f"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "da1ba752fc6193222b844e5be491cb382ab55f49b3a714b49b27b5849825c3aa"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "e058c5964d75cfad256f5fd99b6c474b9acbd80408a5e06229652116e3d38094"
+    }
+  ],
+  "shared_tool_inputs_unchanged": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/et.json",
+      "sha256": "1cb9d12e7653189b58cdc1f8fd480608d967f70db0fddc9951598610b35d0b5a"
+    }
+  ],
+  "fresh_cli_scope": [
+    "918",
+    "920"
+  ],
+  "fresh_cli_exit0": 2,
+  "no_cli_rerun_for_summary_only_915_or_unchanged_files": true,
+  "boundary_deltas": [
+    {
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "same_sentence_count": 46,
+      "changed": [
+        {
+          "index": 8,
+          "before": {
+            "text": "Arendaja 23. veebruari 2019 kiri küsis ostja suhtlust laenupangaga ja toimingute edenemist.",
+            "units": 12
+          },
+          "after": {
+            "text": "Arendaja palus 23. veebruari 2019 kirjas ostjal võtta ühendust laenupangaga ja teatada laenutoimingute edenemisest.",
+            "units": 14
+          },
+          "previous": {
+            "text": "Otsuse järgi ei saanud seda edasi kaevata.",
+            "units": 7
+          },
+          "next": {
+            "text": "Selles ei öeldud, et eluase oleks kasutamiseks valmis.",
+            "units": 8
+          }
+        }
+      ],
+      "identical_text_units_and_order": 45,
+      "changed_sentences_and_neighbors_read": true,
+      "no_new_boundary_error_observed": true
+    },
+    {
+      "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "same_sentence_count": 40,
+      "changed": [
+        {
+          "index": 9,
+          "before": {
+            "text": "Arvesti kuulumine elanikule ei muutnud kõiki neid paigalduskohti erakasutuses ruumiks.",
+            "units": 10
+          },
+          "after": {
+            "text": "Ühendus elaniku arvestiga ei muutnud seina, lae ja ühise elektrikilbi õiguslikku staatust.",
+            "units": 12
+          },
+          "previous": {
+            "text": "Juhtmestik ühendati elaniku oma arvestiga.",
+            "units": 5
+          },
+          "next": {
+            "text": "Taiwani korterelamute haldamise seaduse artikkel 11 nõuab ühiste osade ja nendega seotud rajatiste lammutamise, olulise remondi või parendamise puhul korteriomanike koosoleku otsust.",
+            "units": 22
+          }
+        },
+        {
+          "index": 37,
+          "before": {
+            "text": "Selle juhtumi keskne dokument on täielik paigaldusjoonis koos otsustega, milles on lubatud kasutada just joonisel märgitud kohti.",
+            "units": 17
+          },
+          "after": {
+            "text": "Vaidluse hindamisel saab paigaldusjoonise kõrvutada olemasolevate otsustega, et selgitada, kas ja millises ulatuses ühiste osade kasutamine lubati.",
+            "units": 17
+          },
+          "previous": {
+            "text": "Peatamis- või eemaldamisnõude korral võib büroole saadetav e-kiri sisaldada vaidluse lühikirjeldust, eeskirjapunkti ja vastamise tähtaega.",
+            "units": 16
+          },
+          "next": {
+            "text": "Kohtulahendi alusandmed kontrolliti 25. oktoobril 2026, seotud normid ja teade 26. oktoobri seisuga.",
+            "units": 13
+          }
+        }
+      ],
+      "identical_text_units_and_order": 38,
+      "changed_sentences_and_neighbors_read": true,
+      "no_new_boundary_error_observed": true
+    }
+  ],
+  "total_body_units_all6": 259,
+  "total_body_units_unchanged_all6": 256,
+  "total_body_units_changed": 3,
+  "all_changed_units_and_neighbors_read": true,
+  "new_structure_scope": {
+    "selected": 3,
+    "errors": 0,
+    "required": 16,
+    "node": "v24.14.1",
+    "semanticStatus": "REVIEW_REQUIRED"
+  },
+  "retained_full_batch_required_items": 32,
+  "dates_option_S03_not_applied": true,
+  "latest_lessons_sha256": "9d3af531126f65057fa1ceea9785b6464e512c80ce25d922e822e01438e70486",
+  "independent_review_is_separate": true,
+  "native_or_legal_approval_claim": false,
+  "deployment": false
+}

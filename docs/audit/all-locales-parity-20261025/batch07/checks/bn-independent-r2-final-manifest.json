@@ -1,0 +1,98 @@
+{
+  "at": "2026-10-26T03:27:19.736139+09:00",
+  "status": "TARGETED_R2_CLOSED_MUST0_OPTIONAL0",
+  "currentFiles": [
+    {
+      "id": 915,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "ee32fe88b941adfb66db43282eeba14fadd8cb9c2049aab64c224d2cdd1fd5cc",
+      "R1Sha256": "431a779eaf22d733220313778cb2469744836cac99bce692f2b2741711b6f623",
+      "reverseExact": true,
+      "FM_FAQ_LinkSequence_NumbersUnchanged": true,
+      "exactR1BoundaryMinusSpecifiedDeletion": true,
+      "currentUnits": 40,
+      "deletedSentence": "এখানে ওই মামলার ভিত্তিটিই আলোচনা করা হচ্ছে।",
+      "heading": null
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "2db801a857692db09fbe7e32ed76f301c5a792057eb795b3a5a0f066a963c0d3",
+      "R1Sha256": "b6b74d97653bfbed690dd60d826193dcabf9a71c2abd05fdb97ed83e4af2fc7a",
+      "reverseExact": true,
+      "FM_FAQ_LinkSequence_NumbersUnchanged": true,
+      "exactR1BoundaryMinusSpecifiedDeletion": true,
+      "currentUnits": 41,
+      "deletedSentence": "এগুলো ইচ্ছা ও সম্ভাবনার কথা।",
+      "heading": "246 জনের অংশ ফেরত, 262 জনসংক্রান্ত আপিল খারিজ"
+    },
+    {
+      "id": 918,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "54f6aed17c28b35ea8a4d042f8f4112ba229f8cfd04c120f73728cf362d58ef7",
+      "R1Sha256": "54f6aed17c28b35ea8a4d042f8f4112ba229f8cfd04c120f73728cf362d58ef7",
+      "reverseExact": true,
+      "FM_FAQ_LinkSequence_NumbersUnchanged": true,
+      "exactR1BoundaryMinusSpecifiedDeletion": true,
+      "currentUnits": 45,
+      "deletedSentence": null,
+      "heading": null
+    },
+    {
+      "id": 919,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "320be4966948f532d062f8fd0c4a1ccfea42d858070847d9846d3f30bcbc8d53",
+      "R1Sha256": "320be4966948f532d062f8fd0c4a1ccfea42d858070847d9846d3f30bcbc8d53",
+      "reverseExact": true,
+      "FM_FAQ_LinkSequence_NumbersUnchanged": true,
+      "exactR1BoundaryMinusSpecifiedDeletion": true,
+      "currentUnits": 41,
+      "deletedSentence": null,
+      "heading": null
+    },
+    {
+      "id": 920,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "8b4f7d05978161b0843dc6e21a29ed36b56b3a0ab5e62598a82698be96c4a93e",
+      "R1Sha256": "8b4f7d05978161b0843dc6e21a29ed36b56b3a0ab5e62598a82698be96c4a93e",
+      "reverseExact": true,
+      "FM_FAQ_LinkSequence_NumbersUnchanged": true,
+      "exactR1BoundaryMinusSpecifiedDeletion": true,
+      "currentUnits": 40,
+      "deletedSentence": null,
+      "heading": null
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "a54de3500f6f831efbaaeb32e6be9bbb7866b4fe32ec39755e7c0852ebdba770",
+      "R1Sha256": "a54de3500f6f831efbaaeb32e6be9bbb7866b4fe32ec39755e7c0852ebdba770",
+      "reverseExact": true,
+      "FM_FAQ_LinkSequence_NumbersUnchanged": true,
+      "exactR1BoundaryMinusSpecifiedDeletion": true,
+      "currentUnits": 45,
+      "deletedSentence": null,
+      "heading": null
+    }
+  ],
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bn-independent-r2.md",
+    "sha256": "a3b6a577efc3d4d775240aa4f763ace15f7969b0c08bc46190bd9c356c0a4ff0"
+  },
+  "evidence": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bn-independent-r2-check.json",
+    "sha256": "2ab7cd9de653ddb76a9a742fa149d0d2409890c3ff34c206eed40b20b6ceb1d1"
+  },
+  "R1ReportPreserved": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/bn-independent.md",
+    "sha256": "bc832629fe8a31cc193ef1a504fcb2f5eef645c056154f7b878e173fa360e6b9"
+  },
+  "authorR2Manifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bn-final-manifest-r2.json",
+    "sha256": "6dd8ab628c9c552d00c6605ea5d5070c06618d782e4f41e0f849d8b5deb82056"
+  },
+  "endVerifiedInputCount": 17,
+  "endHashMismatches": 0,
+  "noManuscriptOrAuthorEdits": true,
+  "noFullCLIRerun": true
+}

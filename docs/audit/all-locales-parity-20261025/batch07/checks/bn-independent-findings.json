@@ -1,0 +1,109 @@
+{
+  "at": "2026-10-26T03:16:01.892077+09:00",
+  "mandatory": 1,
+  "optionalStyle": 2,
+  "findings": [
+    {
+      "code": "M01",
+      "id": 916,
+      "level": "mandatory",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "line": 38,
+      "before": "246 জনের অংশ ফেরত, 262 জনের আপিল খারিজ",
+      "proposedAfter": "246 জনের অংশ ফেরত, 262 জনসংক্রান্ত আপিল খারিজ",
+      "reasonAndMeaningPreservation": "소제목은262명 자신의 상고로 읽힌다. 정본·본문·FAQ는262명에 관한 부분이며 공식 회신 L25는 양측 상고 기각, L38은 관련262명의 범위다. 관련 범위로 최소 교정하면 상고 주체를 새로 정하지 않고 숫자·파기환송/기각의 차이 보존.",
+      "applied": false
+    },
+    {
+      "code": "S01",
+      "id": 915,
+      "level": "optional_style",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "line": 47,
+      "before": "এখানে ওই মামলার ভিত্তিটিই আলোচনা করা হচ্ছে।",
+      "proposedAfter": "",
+      "reasonAndMeaningPreservation": "MONOTONY: 독자에게 현재 글이 무엇을 논하는지 말하는 메타 문장이다. 앞 두 문장이 해당병원사건·중재합의부재·40(1)(2)를 이미 특정하므로 이 문장만 삭제 가능. 조문·좁은사건범위·URL·법적결과는 그대로.",
+      "applied": false
+    },
+    {
+      "code": "S02",
+      "id": 916,
+      "level": "optional_style",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "line": 54,
+      "before": "এগুলো ইচ্ছা ও সম্ভাবনার কথা।",
+      "proposedAfter": "",
+      "reasonAndMeaningPreservation": "MONOTONY: 직전 USTR 문장의 ইচ্ছা/সম্ভাবনা를 그대로 되풀이한다. 중복 단문만 삭제하고 직전의 적용법조건·미국지원가능성 및 다음의 자동금융권리부인은 유지. 새미국국적조건을 강제로 추가하는 제안이 아니다.",
+      "applied": false
+    }
+  ],
+  "nonFindings": [
+    {
+      "id": 916,
+      "issueConsidered": "Article154 statutory consequence",
+      "reason": "The source EN paragraph itself states the default, exception and cumulative conditions. BN preserves abuse→specific debt, clear repayment difficulty AND seriousness/necessity. No permissive alternative or OR test is introduced; an extra full statutory sentence is not a mandatory correction."
+    },
+    {
+      "id": 916,
+      "issueConsidered": "USTR private-partner detail",
+      "reason": "Current BN mirrors accepted EN possible US support for private investment financing in Taiwan, subject to applicable law. It does not grant rights to all nationalities or claim in-force financing; no mandatory expansion beyond accepted exact summary."
+    },
+    {
+      "id": 920,
+      "issueConsidered": "Subsidy budget-exhaustion detail",
+      "reason": "BN states the announced deadline already elapsed, not that applications actually remained open until September30 or that money remains available. It does not prove execution status; accurate current-source summary is not rejected merely for more detail."
+    }
+  ],
+  "endings": [
+    {
+      "id": 915,
+      "substantiveEndingBeforeNotice": "কোনো অংশ মধ্যস্থতায় বিবেচিত না হলে, আইনি পর্যালোচনায় আলাদা সালিশি চুক্তি আছে কি না বা সেই দাবির জন্য আরও মধ্যস্থতা প্রয়োজন কি না দেখা যায়। [যোগাযোগের ইংরেজি পাতায়](/en/contact) প্রাথমিক বিবরণে প্রকল্পের শ্রেণি, চাওয়া প্রতিকার ও পরের প্রক্রিয়াগত তারিখ জানানো যায়; পরামর্শের ভাষা ইংরেজি, চীনা, কোরীয় ও জাপানি। আবেদন থেকে মধ্যস্থতার সমাপ্তি পর্যন্ত দাবি ও প্রতিক্রিয়ার নথিগুলো একসঙ্গে থাকলে ঠিক কোন পর্যায়ে অর্থদাবিটি উঠেছিল, তা দেখা সম্ভব হয়।",
+      "scopeNotice": "বর্তমান আইন ও বাণিজ্যসংক্রান্ত সূত্র 26 অক্টোবর 2026-এ যাচাই করা হয়েছে। মামলার বিবরণ 25 অক্টোবর দেখা সর্বোচ্চ আদালতের সরকারি ব্যাখ্যা থেকে নেওয়া। এই আলোচনা নির্দিষ্ট বিরোধের উপযুক্ত দপ্তর বা আবেদন করার শেষ দিন নির্ধারণ করে না।",
+      "allSegmentsRead": true,
+      "count": 41
+    },
+    {
+      "id": 916,
+      "substantiveEndingBeforeNotice": "পরামর্শের জন্য [যোগাযোগের ইংরেজি পাতায়](/en/contact) প্রাথমিক বিবরণে স্থানীয় কোম্পানি, প্রস্তাবিত লেনদেন ও অর্থ পাঠানো বা অধিগ্রহণ শেষ করার তারিখ উল্লেখ করা যায়। পরামর্শের ভাষা ইংরেজি, চীনা, কোরীয় ও জাপানি। শ্রমিকের সংবেদনশীল তথ্য ও সম্পূর্ণ কারিগরি প্রতিবেদন পরে সম্মত মাধ্যমে দেওয়া যায়। সংরক্ষিত নথিতে মূল অনুসন্ধান, তার পরের সিদ্ধান্ত এবং সম্পদ সরানোর অনুমোদনের ধারাবাহিকতা দেখা যাওয়া দরকার।",
+      "scopeNotice": "বর্তমান অনুচ্ছেদ ও USTR তথ্যপত্র 26 অক্টোবর 2026-এ যাচাই করা হয়েছে। 2018 সালের মামলার বিবরণ 25 অক্টোবর দেখা সর্বোচ্চ আদালতের সরকারি ব্যাখ্যার ওপর নির্ভর করে; সব সম্পর্কিত মামলার ইতিহাস এখানে পুনর্গঠন করা হয়নি। নির্দিষ্ট বিনিয়োগকারীর দায় তাঁর আচরণ, ঘটনা ও প্রযোজ্য আইন দেখে মূল্যায়ন করতে হয়।",
+      "allSegmentsRead": true,
+      "count": 42
+    },
+    {
+      "id": 918,
+      "substantiveEndingBeforeNotice": "জরিমানা বা বিলম্বের সুদ দাবি করা হলে [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)-এ প্রাথমিক বিবরণে সংশ্লিষ্ট চুক্তির শর্ত, নোটিশের তারিখ ও জবাবের সময় উল্লেখ করা যায়। পরামর্শের ভাষা ইংরেজি, চীনা, কোরীয় ও জাপানি। নথি সাজানোর সময় ঋণের চিঠি, পরিদর্শনের আহ্বান ও হস্তান্তরের নোটিশের আলাদা তারিখ এবং উদ্দেশ্য যেন অক্ষুণ্ণ থাকে।",
+      "scopeNotice": "সরকারি সূত্র ও বর্তমান বিধি 26 অক্টোবর 2026-এ যাচাই করা হয়েছে। রায়টি সরকারি সংকলনে প্রকাশিত পাঠ থেকে দেখা হয়েছে এবং নির্দিষ্ট চুক্তি ও প্রমাণের ওপর নির্ভর করে। অন্য ক্রেতা কখন টাকা স্থগিত রাখবেন, হস্তান্তর প্রত্যাখ্যান করবেন বা ক্ষতিপূরণ চাইবেন, এই লেখা তা নির্ধারণ করে না।",
+      "allSegmentsRead": true,
+      "count": 45
+    },
+    {
+      "id": 919,
+      "substantiveEndingBeforeNotice": "তাইওয়ানের শ্রমবিরোধ নিয়ে প্রাথমিক বিবরণ [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)-এ পাঠাতে চাইলে অভিযোগের পর্যায়, ইতিমধ্যে নেওয়া সিদ্ধান্ত ও পরের সময়সীমা উল্লেখ করা যায়। পরামর্শের ভাষা ইংরেজি, চীনা, কোরীয় ও জাপানি; সংবেদনশীল সম্পূর্ণ নথি পরে সম্মত মাধ্যমে দেওয়া যায়। ফল প্রকাশের আগে নোটিশ, বক্তব্য ও প্রমাণ বেছে নেওয়ার কারণ থেকে যেন বোঝা যায়, পরস্পরবিরোধী বর্ণনাগুলো বাস্তবে কীভাবে শোনা ও বিচার করা হয়েছে।",
+      "scopeNotice": "আইন ও কার্যকারিতার তথ্য 26 অক্টোবর 2026-এ যাচাই করা হয়েছে। মামলার বিবরণ 25 অক্টোবর দেখা সরকারি ব্যাখ্যার ওপর নির্ভর করে; পরে কোনো আপিলের ফল নিশ্চিত করা হয়নি। সরকারি কর্মচারী ও বেসরকারি শ্রমিকের প্রতিকার সংশ্লিষ্ট আইন ও সিদ্ধান্ত অনুযায়ী ভিন্ন হয়।",
+      "allSegmentsRead": true,
+      "count": 41
+    },
+    {
+      "id": 920,
+      "substantiveEndingBeforeNotice": "কাজ বন্ধ বা সরানোর নির্দেশ কিংবা ভবনের বিধির ব্যাখ্যা নিয়ে পরামর্শ চাইলে [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)-এ প্রাথমিক বিবরণে সংশ্লিষ্ট বিধান ও জবাবের শেষ দিন জানানো যায়। পরামর্শের ভাষা ইংরেজি, চীনা, কোরীয় ও জাপানি। স্থাপনকারী প্রতিষ্ঠানের চুক্তিতে অনুমতি পাওয়ার আগে কাজ শুরু হবে কি না এবং অনুমতি না পেলে খরচ কার হবে, তা নির্ধারণ করা যায়।",
+      "scopeNotice": "আইন ও পৌর কর্মসূচি 26 অক্টোবর 2026-এ যাচাই করা হয়েছে। মামলার বিবরণ 25 অক্টোবর দেখা রায়ের কারণ থেকে নেওয়া; পরবর্তী বিচার বা চূড়ান্ত হওয়ার অবস্থা নিশ্চিত করা হয়নি। অন্য ভবনে সরঞ্জামের স্থান, ব্যবহার-অধিকার ও নিজস্ব বিধি আলাদাভাবে পরীক্ষা করতে হয়।",
+      "allSegmentsRead": true,
+      "count": 40
+    },
+    {
+      "id": 921,
+      "substantiveEndingBeforeNotice": "প্রথমে কোম্পানিতে অভিযোগ জানিয়ে পরে [সরকারি ভোক্তা-অভিযোগ ব্যবস্থায়](https://appeal.cpc.ey.gov.tw/) যাওয়া যায়। চুক্তির ব্যাখ্যা বা প্রমাণ গ্রহণ না করার বিরোধে [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw)-এ প্রাথমিক বিবরণে বিতর্কিত অঙ্ক ও জবাবের সময় জানানো যায়; পাসওয়ার্ড পাঠানোর প্রয়োজন নেই। পরামর্শের ভাষা ইংরেজি, চীনা, কোরীয় ও জাপানি। ফেরত চাওয়া অঙ্কের ব্যাখ্যা দাঁড়াবে টাকা দেওয়া, পয়েন্ট রূপান্তর ও ব্যালান্স ব্যবহারের সেই ধারাবাহিক রেকর্ডে।",
+      "scopeNotice": "বর্তমান বিধি ও সরকারি সূত্র 26 অক্টোবর 2026-এ যাচাই করা হয়েছে। 2021 সালের রায় সরকারি সংকলনে পড়া হয়েছে এবং একটি নির্দিষ্ট গেম নিয়ে। অন্য পয়েন্ট, বস্তু বা চুক্তি শেষ করার কারণের ক্ষেত্রে তাদের কাজ এবং তাইওয়ানের প্রযোজ্য চুক্তিশর্ত আলাদাভাবে দেখতে হয়।",
+      "allSegmentsRead": true,
+      "count": 45
+    }
+  ],
+  "manualBoundaryRead": {
+    "total": 254,
+    "allArraysRead": true,
+    "method": "Displayed/read 915/916,918/919,920/921 complete actual arrays; independently compared current extraction with author arrays. FAQ17/tables2/frontmatter read separately.",
+    "defectsFound": 0
+  },
+  "styleStatus": "Isolated optional repetition, not batch-level §5 failure; mandatory heading attribution still open.",
+  "noManuscriptEdits": true
+}

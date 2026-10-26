@@ -1,0 +1,70 @@
+
+> sejong-law@0.1.0 test:unit
+> vitest run src/app/__tests__/sitemap.test.ts src/components/__tests__/ColumnsGrid-topics.test.tsx src/components/__tests__/home-latest-columns.test.tsx src/lib/__tests__/case-translations-20261026.test.ts src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx src/lib/__tests__/column-category-parity.test.ts src/lib/__tests__/column-summary-frontmatter.test.ts src/lib/__tests__/columns-en-content.test.ts src/lib/__tests__/columns-ja-content.test.ts src/lib/__tests__/columns-new-four-locales.test.ts src/lib/__tests__/columns-publication-date.test.ts src/lib/__tests__/columns-zh-content.test.ts src/lib/__tests__/divorce-columns-20260927.test.ts src/lib/__tests__/domestic-zh-columns-20261001.test.ts src/lib/__tests__/expertise-columns-20260930.test.ts src/lib/__tests__/family-columns-20260927.test.ts src/lib/__tests__/native-locale-columns-20260929.test.ts src/lib/builder/__tests__/columns-backend.test.ts src/lib/builder/__tests__/columns-blob-audience-backfill.test.ts src/lib/builder/canvas/__tests__/home-insights-publication-order.test.ts --maxWorkers=1 --testTimeout=30000
+
+
+ RUN  v3.2.6 /Users/son7/Projects/tseng-law-all-locales-20261025
+
+ ✓ |unit| src/lib/__tests__/case-translations-20261026.test.ts (20 tests) 43950ms
+   ✓ reviewed case translations published October26 > 'taiwan-public-contract-mediation-arbi…' retains its original publication date and exactly fifteen real language versions  7696ms
+   ✓ reviewed case translations published October26 > 'taiwan-parent-company-pollution-liabi…' retains its original publication date and exactly fifteen real language versions  7067ms
+   ✓ reviewed case translations published October26 > 'taiwan-presale-mortgage-notice-handov…' retains its original publication date and exactly fifteen real language versions  7203ms
+   ✓ reviewed case translations published October26 > 'taiwan-workplace-bullying-investigati…' retains its original publication date and exactly fifteen real language versions  7218ms
+   ✓ reviewed case translations published October26 > 'taiwan-apartment-ev-charger-common-ar…' retains its original publication date and exactly fifteen real language versions  7239ms
+   ✓ reviewed case translations published October26 > 'taiwan-online-game-coins-refund-judgm…' retains its original publication date and exactly fifteen real language versions  7240ms
+stderr | src/components/__tests__/home-latest-columns.test.tsx > home columns lead with the latest publication batch > ko shows its newest columns before older curated picks
+Warning: Received `true` for a non-boolean attribute `inert`.
+
+If you want to write it to the DOM, pass a string instead: inert="true" or inert={value.toString()}.
+    at nav
+    at KoMobileCta (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/ko-home/KoMobileCta.tsx:12:75)
+    at div
+    at KoHomeBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/KoHomeBody.tsx:24:23)
+    at LegacyHomePageBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/(legacy)/home-legacy.tsx:87:3)
+
+stderr | src/components/__tests__/home-latest-columns.test.tsx > home columns lead with the latest publication batch > es shows its newest columns before older curated picks
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at img
+    at div
+    at figure
+    at IntlHeroPlate (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/intl-design/IntlHeroPlate.tsx:8:26)
+    at section
+    at GuidanceHero (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:101:25)
+    at div
+    at GuidanceHomeBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:753:3)
+
+ ✓ |unit| src/components/__tests__/home-latest-columns.test.tsx (6 tests) 10496ms
+   ✓ home columns lead with the latest publication batch > ko shows its newest columns before older curated picks  2242ms
+   ✓ home columns lead with the latest publication batch > zh-hant shows its newest columns before older curated picks  3531ms
+   ✓ home columns lead with the latest publication batch > ja shows its newest columns before older curated picks  2379ms
+   ✓ home columns lead with the latest publication batch > en shows its newest columns before older curated picks  2295ms
+ ✓ |unit| src/app/__tests__/sitemap.test.ts (37 tests) 4860ms
+   ✓ sitemap column lastModified > does not invent vi/id/th/fil URLs or hreflang for deep articles or US landings  318ms
+ ✓ |unit| src/lib/__tests__/native-locale-columns-20260929.test.ts (37 tests) 1519ms
+ ✓ |unit| src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx (12 tests) 1308ms
+   ✓ audience frontmatter recommendations > leads each locale with its own-audience columns newest first, then shared, from its own files only  736ms
+   ✓ audience frontmatter recommendations > breaks same-day ties by column number regardless of input order  300ms
+ ✓ |unit| src/lib/__tests__/divorce-columns-20260927.test.ts (10 tests) 1248ms
+   ✓ native divorce columns September 2026 > includes exactly the nine authored locales in sitemap alternates for each new article  483ms
+ ✓ |unit| src/lib/__tests__/family-columns-20260927.test.ts (10 tests) 1086ms
+   ✓ native marriage and birth columns September 2026 > includes exactly the nine authored locales in sitemap alternates for each new article  492ms
+ ✓ |unit| src/lib/__tests__/expertise-columns-20260930.test.ts (37 tests) 1043ms
+ ✓ |unit| src/lib/builder/__tests__/columns-backend.test.ts (12 tests) 972ms
+ ✓ |unit| src/lib/__tests__/columns-publication-date.test.ts (12 tests) 794ms
+ ✓ |unit| src/lib/__tests__/domestic-zh-columns-20261001.test.ts (13 tests) 659ms
+ ✓ |unit| src/lib/__tests__/columns-ja-content.test.ts (7 tests) 448ms
+   ✓ Japanese full column corpus + site locale > preserves FAQ count for known sources  343ms
+ ✓ |unit| src/lib/__tests__/column-category-parity.test.ts (49 tests) 445ms
+ ✓ |unit| src/lib/builder/__tests__/columns-blob-audience-backfill.test.ts (3 tests) 378ms
+ ✓ |unit| src/lib/__tests__/column-summary-frontmatter.test.ts (8 tests) 256ms
+ ✓ |unit| src/lib/__tests__/columns-en-content.test.ts (7 tests) 245ms
+ ✓ |unit| src/components/__tests__/ColumnsGrid-topics.test.tsx (15 tests) 162ms
+ ✓ |unit| src/lib/builder/canvas/__tests__/home-insights-publication-order.test.ts (6 tests) 152ms
+ ✓ |unit| src/lib/__tests__/columns-zh-content.test.ts (5 tests) 148ms
+ ✓ |unit| src/lib/__tests__/columns-new-four-locales.test.ts (7 tests) 69ms
+
+ Test Files  20 passed (20)
+      Tests  313 passed (313)
+   Start at  16:16:39
+   Duration  74.19s (transform 920ms, setup 22ms, collect 2.31s, tests 70.24s, environment 1ms, prepare 642ms)
+

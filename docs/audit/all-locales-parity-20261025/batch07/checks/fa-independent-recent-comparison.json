@@ -1,0 +1,30 @@
+{
+  "actual_latest_by_published": "FA704–706, 2026-10-26",
+  "additional_full_current_reads": "FA828–830, 2026-10-24, highest numeric IDs but not newest publication date",
+  "files": [
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/704-taiwan-arc-first-application.md",
+      "current_sha256": "fe975485d8a8fed7bd467c42860c4d29ad575a2d2a981ce3d3fc7e63113509a3",
+      "prior_fully_read_r3_sha256": "19ff8e7f6ac668c9aba8de35e19209d6d1fc0162b5ffc74ed9818690e812491e",
+      "metadata_only_date_change_reversal": true,
+      "body_and_faq_same_as_prior_full_read": true,
+      "read_basis": "B4 FA R1 full manuscript and R3 full 191-boundary review by this same agent; current date metadata read now"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md",
+      "current_sha256": "1c96fab7471e92a166705ec25385ef99980df2237fcc676d294c24efc4c424ab",
+      "prior_fully_read_r3_sha256": "5d391fbbdfd0abfab8dbd2a1a076c04fb8a7d737ee3fa9c544711c23f24507f7",
+      "metadata_only_date_change_reversal": true,
+      "body_and_faq_same_as_prior_full_read": true,
+      "read_basis": "B4 FA R1 full manuscript and R3 full 191-boundary review by this same agent; current date metadata read now"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+      "current_sha256": "d5e9636efd65707cd86b0e0c24aa700e2d0b1948d6749302e96cd5d81dc9fa77",
+      "prior_fully_read_r3_sha256": "4e23c5162d245a912bc6147ae3f50e05a1b066729e50631168b1968698797e21",
+      "metadata_only_date_change_reversal": true,
+      "body_and_faq_same_as_prior_full_read": true,
+      "read_basis": "B4 FA R1 full manuscript and R3 full 191-boundary review by this same agent; current date metadata read now"
+    }
+  ]
+}

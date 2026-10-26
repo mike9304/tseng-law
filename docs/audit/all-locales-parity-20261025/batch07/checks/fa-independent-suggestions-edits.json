@@ -1,0 +1,110 @@
+{
+  "atUTC": "2026-10-25T18:19:11.596400+00:00",
+  "author": "root directly",
+  "reviewSHA256": "1ad856894c7cab485c59270855cda028828a9c160342322017c5b431234d4838",
+  "selected": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05"
+  ],
+  "edits": [
+    {
+      "id": "S01",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "old": "مدیر با ثبت دو امتیاز منفیِ سنگین انضباطی از خدمت عزل شده بود.",
+      "new": "مدیر با ثبت دو امتیاز منفیِ سنگین انضباطی در یک نوبت، از خدمت عزل شده بود.",
+      "beforeSHA256": "4090a4f229dff8bdb3efa9dc4aca424ca85b3a211894c70d2daece243a124105",
+      "afterSHA256": "e892fc9ce10a1a6f2e16f9667ba404756b1c80f0542d05dc60ae9c55404e3956"
+    },
+    {
+      "id": "S02",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "old": "آسانسور داخل خانه نیز نصب نشده بود.",
+      "new": "نصب آسانسور داخل خانه نیز هنوز کامل نشده بود.",
+      "beforeSHA256": "9a87d93cbfebed87af7c3a19b690ecc1d0a004fe4e9691ad89e4389faebee996",
+      "afterSHA256": "9088ef6d1791a04d500e33d9c567433bd830200106b17b56fc102cca5c2d09a6"
+    },
+    {
+      "id": "S03",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/921-taiwan-online-game-coins-refund-judgment.md",
+      "old": "سکه در حساب مانده بود، پولی برنگشت؛ اختلاف بازپرداخت بازی آنلاین در تایوان",
+      "new": "سکه در حساب مانده بود، دادگاه بازپرداخت را نپذیرفت؛ اختلاف بازی آنلاین در تایوان",
+      "beforeSHA256": "e74174377e15e78ae04c90e8406468071ae3e272d1b6c77128c7b828ada647bb",
+      "afterSHA256": "997ac5d2dcbe7c0d559fafdbabc89c1fe7e53fe1a009aba1a3afc307181a3e04"
+    },
+    {
+      "id": "S04",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/921-taiwan-online-game-coins-refund-judgment.md",
+      "old": "مطابق مقررات، درخواست دسترسی را رسیدگی کند",
+      "new": "مطابق مقررات، به درخواست دسترسی رسیدگی کند",
+      "beforeSHA256": "997ac5d2dcbe7c0d559fafdbabc89c1fe7e53fe1a009aba1a3afc307181a3e04",
+      "afterSHA256": "6e1bf2a8ffa06f66533173b1e6636a008da1c92b7373d2adc15007e572883d44"
+    },
+    {
+      "id": "S05",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "old": "گزارش میان گفته، مدرک و نتیجه چه ارتباطی می‌گذارد؟",
+      "new": "پیوند میان گفته، مدرک و نتیجه در گزارش",
+      "beforeSHA256": "e892fc9ce10a1a6f2e16f9667ba404756b1c80f0542d05dc60ae9c55404e3956",
+      "afterSHA256": "7e8b3785a68b9157b9f5719fbc9409ac21fd54cf8d3c460126a19baf524c6561"
+    }
+  ],
+  "verification": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSHA256": "0210db2a1ad6a56b7c2eb9d069aa3c2a0e8c8c977001ce2b367ac84c72788543",
+      "afterSHA256": "0210db2a1ad6a56b7c2eb9d069aa3c2a0e8c8c977001ce2b367ac84c72788543",
+      "changed": false,
+      "inverseMatches": true,
+      "FAQUnchanged": true,
+      "linkValuesAndOrderUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSHA256": "cebe40e77b1e448c5d70cd27adeb3e1c478beab240e739b73f36ad73e44cf59e",
+      "afterSHA256": "cebe40e77b1e448c5d70cd27adeb3e1c478beab240e739b73f36ad73e44cf59e",
+      "changed": false,
+      "inverseMatches": true,
+      "FAQUnchanged": true,
+      "linkValuesAndOrderUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSHA256": "9a87d93cbfebed87af7c3a19b690ecc1d0a004fe4e9691ad89e4389faebee996",
+      "afterSHA256": "9088ef6d1791a04d500e33d9c567433bd830200106b17b56fc102cca5c2d09a6",
+      "changed": true,
+      "inverseMatches": true,
+      "FAQUnchanged": true,
+      "linkValuesAndOrderUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "4090a4f229dff8bdb3efa9dc4aca424ca85b3a211894c70d2daece243a124105",
+      "afterSHA256": "7e8b3785a68b9157b9f5719fbc9409ac21fd54cf8d3c460126a19baf524c6561",
+      "changed": true,
+      "inverseMatches": true,
+      "FAQUnchanged": true,
+      "linkValuesAndOrderUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "3ac5e23ff82197cfed9c68da8e93bd7b4e6f7a9bcecd6290c9e4ed4f49056cad",
+      "afterSHA256": "3ac5e23ff82197cfed9c68da8e93bd7b4e6f7a9bcecd6290c9e4ed4f49056cad",
+      "changed": false,
+      "inverseMatches": true,
+      "FAQUnchanged": true,
+      "linkValuesAndOrderUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "e74174377e15e78ae04c90e8406468071ae3e272d1b6c77128c7b828ada647bb",
+      "afterSHA256": "6e1bf2a8ffa06f66533173b1e6636a008da1c92b7373d2adc15007e572883d44",
+      "changed": true,
+      "inverseMatches": true,
+      "FAQUnchanged": true,
+      "linkValuesAndOrderUnchanged": true
+    }
+  ]
+}

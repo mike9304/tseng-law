@@ -1,0 +1,56 @@
+{
+  "recorded_at": "2026-10-26T02:58:31.758640+09:00",
+  "results": [
+    {
+      "file": "src/content/columns-bn/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "8b4f7d05978161b0843dc6e21a29ed36b56b3a0ab5e62598a82698be96c4a93e",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "--lang",
+        "bn"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/920-taiwan-apartment-ev-charger-common-area-judgment.md [bn] sentences=40 mean=14.4 cv=0.465 short=0.225 run3=0.132 opener_rep=0.0 cite_end=0.0 cite_para=0.308 contrast=0 caveat=1 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "bn",
+        "sentences": 40,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.4,
+        "len_cv": 0.465,
+        "short_share": 0.225,
+        "long_share": 0.025,
+        "para_cv": 0.211,
+        "even_run3": 0.132,
+        "top_end": "যায়",
+        "top_end_share": 0.225,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "চার্জারটি",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.308,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 1,
+        "questions": 1,
+        "num_per100": 2.43,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "চার্জারটি পার্কিংয়ের পেছনে, কিন্তু তারের পথ সেখানেই শেষ হয়নি।",
+        "last": "আইন ও পৌর কর্মসূচি 26 অক্টোবর 2026-এ যাচাই করা হয়েছে। মামলার বিবরণ 25 অক্টোবর দেখা রায়ের কারণ থেকে নেওয়া; পরবর্তী বিচ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    }
+  ]
+}

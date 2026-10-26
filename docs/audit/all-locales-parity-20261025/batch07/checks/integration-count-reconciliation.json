@@ -1,0 +1,578 @@
+{
+  "benchmark": {
+    "perLocale": 286,
+    "referenceLocale": "zh-hant",
+    "referenceCommit": "ef3b24e73d84968eea08ea9d58e991ccbbf83fa8",
+    "meaning": "Initial largest primary-language professional collection; substantive local articles and board visibility required; common-four coverage is only a milestone."
+  },
+  "B6LocalInventory": {
+    "professional": 2163,
+    "issues": 125,
+    "boardVisibleLocal": 1896,
+    "distinctProfessionalSlugs": 668,
+    "coreUnion": 475,
+    "coreCommon": 135,
+    "allLocaleCommon": 21,
+    "countDeficitTo286": 11855,
+    "visibleDeficitTo286": 12122,
+    "other45MissingCoreCommon": 5084
+  },
+  "afterExternalColleagueCommit": {
+    "professional": 2193,
+    "issues": 131,
+    "boardVisibleLocal": 1926,
+    "distinctProfessionalSlugs": 674,
+    "coreUnion": 481,
+    "coreCommon": 141,
+    "allLocaleCommon": 21,
+    "countDeficitTo286": 11831,
+    "visibleDeficitTo286": 12098,
+    "other45MissingCoreCommon": 5348
+  },
+  "afterB7Integration": {
+    "professional": 2235,
+    "issues": 131,
+    "boardVisibleLocal": 1968,
+    "distinctProfessionalSlugs": 674,
+    "coreUnion": 481,
+    "coreCommon": 141,
+    "allLocaleCommon": 21,
+    "countDeficitTo286": 11789,
+    "visibleDeficitTo286": 12056,
+    "other45MissingCoreCommon": 5348
+  },
+  "externalAddedByBoard": {
+    "columns": 30,
+    "issues": 6
+  },
+  "externalAddedByLocale": {
+    "en": 7,
+    "es": 6,
+    "ja": 7,
+    "ko": 7,
+    "vi": 2,
+    "zh-hant": 7
+  },
+  "externalAdded": [
+    {
+      "file": "src/content/columns-en/951-taiwan-construction-subcontractor-fall-principal-contractor-liability.md",
+      "sha256": "1e0d412f72fbc419b7d014d803b57977bab91e32e94d9bbeb6a368e66d75c3df",
+      "board": "columns",
+      "locale": "en"
+    },
+    {
+      "file": "src/content/columns-en/946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md",
+      "sha256": "8760b5f676e82e39bfcf01caec7aed722260219756c452318adc0e5d70148e4e",
+      "board": "columns",
+      "locale": "en"
+    },
+    {
+      "file": "src/content/columns-en/950-taiwan-estate-tax-listed-shares-closing-price-valuation.md",
+      "sha256": "e66125e731f5bf15a6cc26fd22515b8540a69b0a4de979d961ec52c24487b082",
+      "board": "columns",
+      "locale": "en"
+    },
+    {
+      "file": "src/content/columns-en/949-taiwan-national-park-filming-fine-administrative-appeal.md",
+      "sha256": "53f4c47a5fab9a1b47760595f0e8e374566577aab7a8aaf42c5d56caf89a1c6d",
+      "board": "columns",
+      "locale": "en"
+    },
+    {
+      "file": "src/content/columns-en/947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md",
+      "sha256": "ff338c5890111efe6795076381c134de100018c4e8ddeb1f36283e92e1175d68",
+      "board": "columns",
+      "locale": "en"
+    },
+    {
+      "file": "src/content/columns-en/948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md",
+      "sha256": "8d8ef985cde85ed4bdae003f7e39e121c9cfbf5d239b9dd13f38d4227f87a41b",
+      "board": "columns",
+      "locale": "en"
+    },
+    {
+      "file": "src/content/issues/en/ISSUE-20261026-06-platforms-asked-to-label-generative-images.md",
+      "sha256": "7ba4a3508674ab1a093f1976526fa2ddcb5a182e110f00ca2955fa9b01531a31",
+      "board": "issues",
+      "locale": "en"
+    },
+    {
+      "file": "src/content/columns-es/951-taiwan-construction-subcontractor-fall-principal-contractor-liability.md",
+      "sha256": "2523c9af3b068396a135f49fbb6221a79cd2a4a53417da735cef44d0d1133768",
+      "board": "columns",
+      "locale": "es"
+    },
+    {
+      "file": "src/content/columns-es/946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md",
+      "sha256": "9e0c797bf0efa45133d7115fa2743d4dc08ac829ae10bc20d5279ac505f9b454",
+      "board": "columns",
+      "locale": "es"
+    },
+    {
+      "file": "src/content/columns-es/950-taiwan-estate-tax-listed-shares-closing-price-valuation.md",
+      "sha256": "8556bd68763db0f1257d2c71e5c066be76a451c421042d7028916fb9d595d3a9",
+      "board": "columns",
+      "locale": "es"
+    },
+    {
+      "file": "src/content/columns-es/949-taiwan-national-park-filming-fine-administrative-appeal.md",
+      "sha256": "548a114139a144c1eab827905d7dd389a709f784f57167d0f9f0becba0223e4c",
+      "board": "columns",
+      "locale": "es"
+    },
+    {
+      "file": "src/content/columns-es/947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md",
+      "sha256": "ffbc29d4127aedec4932c3e9847970766d515fc52c8b32ed2e641666372a2e98",
+      "board": "columns",
+      "locale": "es"
+    },
+    {
+      "file": "src/content/columns-es/948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md",
+      "sha256": "d876f0c03f8fa8947fd674b3e955b15761a253a257ac73c27a23dcbf5d8d3421",
+      "board": "columns",
+      "locale": "es"
+    },
+    {
+      "file": "src/content/columns-ja/951-taiwan-construction-subcontractor-fall-principal-contractor-liability.md",
+      "sha256": "b8e62a41fca1d27999857c3283c945964175d855fa7c79c4d6ba2419198776c6",
+      "board": "columns",
+      "locale": "ja"
+    },
+    {
+      "file": "src/content/columns-ja/946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md",
+      "sha256": "fc56c5060d709e75bf49514a389d6e3c41bf6fab1308e57402b46ff4b72d0109",
+      "board": "columns",
+      "locale": "ja"
+    },
+    {
+      "file": "src/content/columns-ja/950-taiwan-estate-tax-listed-shares-closing-price-valuation.md",
+      "sha256": "ff456e4ecbb28627b7e3b127a18d8a93ded4889dc7bd57127774c3b49bd7b908",
+      "board": "columns",
+      "locale": "ja"
+    },
+    {
+      "file": "src/content/columns-ja/949-taiwan-national-park-filming-fine-administrative-appeal.md",
+      "sha256": "17c275579af6abaeec1e59e76a1c2b30bad9cd8c4d1247c6eb69a9784eb63a73",
+      "board": "columns",
+      "locale": "ja"
+    },
+    {
+      "file": "src/content/columns-ja/947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md",
+      "sha256": "ec100437c109f830a7642c003bdfe26b65dbdd9789bd937b88701844bd2cddde",
+      "board": "columns",
+      "locale": "ja"
+    },
+    {
+      "file": "src/content/columns-ja/948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md",
+      "sha256": "1b22435fae294bafc49bad797a35290033c76ab90fb197bd5d95d91998e2f477",
+      "board": "columns",
+      "locale": "ja"
+    },
+    {
+      "file": "src/content/issues/ja/ISSUE-20261026-03-japan-equal-pay-guideline-taiwan-subsidiary-part-time-dispatch.md",
+      "sha256": "b616e6b17e59aefda2e0d1b45bf2dd6a0daf1255746207ffb8c5585c3baa37ac",
+      "board": "issues",
+      "locale": "ja"
+    },
+    {
+      "file": "src/content/columns/951-taiwan-construction-subcontractor-fall-principal-contractor-liability.md",
+      "sha256": "db8a7af61d04b545aaeb1e4c5f9b9000b15a5936c35d66450f07097f84155df3",
+      "board": "columns",
+      "locale": "ko"
+    },
+    {
+      "file": "src/content/columns/946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md",
+      "sha256": "c0a2dcf33ad4f0acdf163e75e5506f158b70cb3f589f31596d1ef32f1b092a41",
+      "board": "columns",
+      "locale": "ko"
+    },
+    {
+      "file": "src/content/columns/950-taiwan-estate-tax-listed-shares-closing-price-valuation.md",
+      "sha256": "98213bd5b780232206065cfba96cb383beddc117807f51abd8cae496a7fbd66f",
+      "board": "columns",
+      "locale": "ko"
+    },
+    {
+      "file": "src/content/columns/949-taiwan-national-park-filming-fine-administrative-appeal.md",
+      "sha256": "37b3e7b38f69a026434a4627c313a265635fa466148c3f276836130791752dbf",
+      "board": "columns",
+      "locale": "ko"
+    },
+    {
+      "file": "src/content/columns/947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md",
+      "sha256": "98d3781eebe508ec97f6ca1ac736e51b47462998aa9a44ed7fcf4434845ad86c",
+      "board": "columns",
+      "locale": "ko"
+    },
+    {
+      "file": "src/content/columns/948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md",
+      "sha256": "38dfb12ab781ab51a5592e3f275fe1e5f3152308507580eb8c43b632a6e78b90",
+      "board": "columns",
+      "locale": "ko"
+    },
+    {
+      "file": "src/content/issues/ko/ISSUE-20261026-01-taiwan-cash-courier-part-time-job-fraud-money-laundering-korean.md",
+      "sha256": "2e19811ccc71343eb6db71309175e5534b3583ad76a4ed6cf426ead87c436073",
+      "board": "issues",
+      "locale": "ko"
+    },
+    {
+      "file": "src/content/issues/vi/ISSUE-20261026-09-giam-tru-thue-viet-nam-luong-dai-loan.md",
+      "sha256": "b0fbabc9acdbe3f80f08e078488dd141149dd749f0f32cd41c0f79a50f8972bb",
+      "board": "issues",
+      "locale": "vi"
+    },
+    {
+      "file": "src/content/issues/vi/ISSUE-20261026-08-vang-mieng-khai-hai-quan-dai-loan-viet-nam.md",
+      "sha256": "e788ffe8ac96472ee306d4fbddad39eef3ed26670862c4bfda0f4cfe5dbc288a",
+      "board": "issues",
+      "locale": "vi"
+    },
+    {
+      "file": "src/content/columns-zh/951-taiwan-construction-subcontractor-fall-principal-contractor-liability.md",
+      "sha256": "a874145d3939f702f033888aaa210086bcddcdcfbfcff2458b50ce7bae02e136",
+      "board": "columns",
+      "locale": "zh-hant"
+    },
+    {
+      "file": "src/content/columns-zh/946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md",
+      "sha256": "7c392e85d60979b73787559e14cece86182352f78726140696da4c30267d6924",
+      "board": "columns",
+      "locale": "zh-hant"
+    },
+    {
+      "file": "src/content/columns-zh/950-taiwan-estate-tax-listed-shares-closing-price-valuation.md",
+      "sha256": "b25f4ae64bc41ed5989ba7af94b7118fdb11c715e188433d356a2a9df4c39b7d",
+      "board": "columns",
+      "locale": "zh-hant"
+    },
+    {
+      "file": "src/content/columns-zh/949-taiwan-national-park-filming-fine-administrative-appeal.md",
+      "sha256": "17e6bc36c3e2fec1ef94f002ba1e0d541d7589fd5a66080fba9669077a3c78e4",
+      "board": "columns",
+      "locale": "zh-hant"
+    },
+    {
+      "file": "src/content/columns-zh/947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md",
+      "sha256": "a84a383d862e9d63b23d6e86662926eb40202db4999e6a91960345199a7f27da",
+      "board": "columns",
+      "locale": "zh-hant"
+    },
+    {
+      "file": "src/content/columns-zh/948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md",
+      "sha256": "3ca9156f70b8c8719025daaa16e5726a0727f0b856ef1aebc4404682738b2d23",
+      "board": "columns",
+      "locale": "zh-hant"
+    },
+    {
+      "file": "src/content/issues/zh-hant/ISSUE-20261026-05-taiwan-public-facility-reserved-land-value-tax-exemption-deadline.md",
+      "sha256": "0a066db0826b56702a9f9f6122ba146d5b841630d52ae5a52b2062f2ab30cbf3",
+      "board": "issues",
+      "locale": "zh-hant"
+    }
+  ],
+  "B7AddedCount": 42,
+  "B7ExistingChanged": 0,
+  "B7Removed": 0,
+  "B7LocaleDeltas": [
+    {
+      "locale": "ko",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "zh-hant",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "en",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "ja",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "vi",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "id",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "th",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "fil",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "ar",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "de",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "es",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "fr",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "pt",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "zh-hans",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "ms",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "ru",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "tr",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "it",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "nl",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "pl",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "hi",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "sv",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "da",
+      "localColumnCount": 6,
+      "boardVisibleLocalCount": 6,
+      "issueCount": 0
+    },
+    {
+      "locale": "nb",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "fi",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "cs",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "hu",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "ro",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "uk",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "el",
+      "localColumnCount": 6,
+      "boardVisibleLocalCount": 6,
+      "issueCount": 0
+    },
+    {
+      "locale": "he",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "bn",
+      "localColumnCount": 6,
+      "boardVisibleLocalCount": 6,
+      "issueCount": 0
+    },
+    {
+      "locale": "ur",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "fa",
+      "localColumnCount": 6,
+      "boardVisibleLocalCount": 6,
+      "issueCount": 0
+    },
+    {
+      "locale": "my",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "ta",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "ne",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "km",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "mn",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "sk",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "bg",
+      "localColumnCount": 6,
+      "boardVisibleLocalCount": 6,
+      "issueCount": 0
+    },
+    {
+      "locale": "hr",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "sr",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "sl",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "lt",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "lv",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    },
+    {
+      "locale": "et",
+      "localColumnCount": 6,
+      "boardVisibleLocalCount": 6,
+      "issueCount": 0
+    },
+    {
+      "locale": "ca",
+      "localColumnCount": 6,
+      "boardVisibleLocalCount": 6,
+      "issueCount": 0
+    },
+    {
+      "locale": "is",
+      "localColumnCount": 0,
+      "boardVisibleLocalCount": 0,
+      "issueCount": 0
+    }
+  ],
+  "caseClusterLanguageCount": 15,
+  "ARCClusterLanguageCount": 49,
+  "fixedTargetUnchanged": 286,
+  "deficitFormula": "Sum over all49 locales of max(0, 286 - visible local columns); excess in one locale does not satisfy another.",
+  "readinessDoesNotImplyHumanOrPublicApproval": true
+}

@@ -1,0 +1,536 @@
+[
+  {
+    "version": 1,
+    "generatedAt": "2026-10-25T18:16:36.984Z",
+    "repoRoot": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+    "selectedFiles": 1,
+    "automatedStatus": "PASS",
+    "semanticStatus": "REVIEW_REQUIRED",
+    "publicationReady": false,
+    "errors": 0,
+    "reviewItems": 6,
+    "policy": {
+      "minBodyLettersAndNumbers": 500,
+      "minUniqueParagraphLettersAndNumbers": 350,
+      "sourceLocale": "en",
+      "publicationDate": "2026-10-26",
+      "legacyPolicy": "Unselected files supply existence/duplicate context only; no content changes or audience changes are made.",
+      "sourceApproval": "The operator must select an accepted source; existence/hash is not evidence of legal approval."
+    },
+    "runtimeContractHashes": {
+      "src/lib/column-audience.ts": "a1cb781f1a787366199995b0312b0fa1556d850e0637eb5ea66cd2174680b760",
+      "src/data/market-column-curation.ts": "c42e22feed6e49e5f4915a48ad18a49d9b874c024824ddf53a74fd5ede8a8b94",
+      "src/lib/column-attribution.ts": "8111ea9feabcdc98f13485014da51d39c9aebd084cbb6a1e52d923624bb6dcc3",
+      "src/lib/columns.ts": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+      "src/lib/column-locales.ts": "26d8fe8de7a9703aa7b0d279f32938e84190d5199ce0c4ddee84e89bb934b535",
+      "src/lib/public-guidance.ts": "c00a193d0dd583145e544a2cc505efad75a4379f5c334a811655a689d6df8d85",
+      "src/lib/column-topics.ts": "3fb8e18ae18777481cb8a07c158ea1b6435cdab98da0ea4701a1b98bf3ba435a",
+      "src/lib/locales.ts": "38304dea2b15fc6d6d05cebafa6cc08fdac18d66da875da7c79b7a117e431c54",
+      "src/lib/public-route-policy.ts": "7a71128c423d76057bd50e791189533ab96789594aef994f4346f4ead2c6607c",
+      "src/app/[locale]/(legacy)/index.tsx": "5e485ee21bac81e7b8dc74778fba24d69e8541492010e791709a82373c3eb2da",
+      "src/app/[locale]/[[...slug]]/page.tsx": "3dab508b2dddb716fa84184335f4f62b3d35164d30abdb3ab30185a3bb6a4f03"
+    },
+    "inventory": {
+      "counts": {
+        "ko": 211,
+        "zh-hant": 290,
+        "en": 212,
+        "ja": 224,
+        "vi": 45,
+        "id": 33,
+        "th": 31,
+        "fil": 31,
+        "ar": 34,
+        "de": 32,
+        "es": 46,
+        "fr": 31,
+        "pt": 34,
+        "zh-hans": 29,
+        "ms": 30,
+        "ru": 30,
+        "tr": 24,
+        "it": 32,
+        "nl": 26,
+        "pl": 26,
+        "hi": 34,
+        "sv": 24,
+        "da": 24,
+        "nb": 24,
+        "fi": 24,
+        "cs": 26,
+        "hu": 24,
+        "ro": 24,
+        "uk": 24,
+        "el": 30,
+        "he": 26,
+        "bn": 24,
+        "ur": 24,
+        "fa": 24,
+        "my": 24,
+        "ta": 24,
+        "ne": 24,
+        "km": 24,
+        "mn": 24,
+        "sk": 24,
+        "bg": 24,
+        "hr": 24,
+        "sr": 24,
+        "sl": 24,
+        "lt": 26,
+        "lv": 24,
+        "et": 24,
+        "ca": 24,
+        "is": 24
+      },
+      "duplicateKeys": []
+    },
+    "files": [
+      {
+        "file": "../../tseng-all-language-columns-20261025/batch07/checks/el-audit-context-pFWnPV/columns-el/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "locale": "el",
+        "slug": "taiwan-parent-company-pollution-liability-us-investor",
+        "errors": [],
+        "reviews": [
+          {
+            "code": "cross-language-link",
+            "status": "REQUIRED",
+            "message": "Confirm that the label explicitly identifies the source language and that no same-language page is available"
+          },
+          {
+            "code": "public-output-and-native-prose",
+            "status": "REQUIRED",
+            "message": "Inspect rendered title, summary, FAQ, captions, cards, JSON-LD and feeds for native language and author leakage; compare opening/headings/ending with the previous three same-language articles. Automated token checks cannot prove either."
+          },
+          {
+            "code": "title-summary-faq",
+            "status": "REQUIRED",
+            "message": "Compare legal subject and scope in title, summary and every FAQ; presence/count is not semantic preservation. Check translated category labels and captions too."
+          },
+          {
+            "code": "legal-conditions",
+            "status": "REQUIRED",
+            "message": "Verify every source actor, must/may, AND/OR, exception, eligibility, starting date, period, amount, quotation and factual qualifier against the full target. Passage order/count need not match. No heuristic clears this item."
+          },
+          {
+            "code": "numbers-dates-currencies",
+            "status": "REQUIRED",
+            "message": "Raw numeric-token differences require context review; locale separators, spelled-out numerals and era conversions are not automatically equivalent. Matching tokens also do not prove matching conditions. No values are synthesized or zero-filled.",
+            "sourceOnly": [
+              {
+                "token": "2",
+                "count": 1
+              }
+            ],
+            "targetOnly": [
+              {
+                "token": "2018",
+                "count": 1
+              },
+              {
+                "token": "246",
+                "count": 2
+              },
+              {
+                "token": "262",
+                "count": 2
+              },
+              {
+                "token": "26",
+                "count": 1
+              }
+            ],
+            "spelledOutNumerals": "Not completely parsed in 49 languages. Review the full source/target passages; absence from these arrays is not zero or PASS."
+          },
+          {
+            "code": "nationality-jurisdiction",
+            "status": "REQUIRED",
+            "message": "A language does not establish nationality. Verify Taiwan jurisdiction, immigration status, nationality qualifications and any foreign-law/consular claim throughout the text; the highlighted passages are incomplete hints, not a language classifier."
+          }
+        ],
+        "sha256": "76b55da4d3569872e2c4be4423bfcb4e4dce4ebde5935a0ffdcecbc166f76e9b",
+        "source": {
+          "file": "../../tseng-all-language-columns-20261025/batch07/checks/el-audit-context-pFWnPV/_accepted-snapshots/en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "locale": "en",
+          "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+        },
+        "board": {
+          "visible": true,
+          "audience": [
+            "el"
+          ],
+          "marketBoard": true,
+          "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+        },
+        "bodyMetrics": {
+          "lettersAndNumbers": 4562,
+          "uniqueParagraphLettersAndNumbers": 4562,
+          "paragraphs": 18,
+          "h1": 0
+        },
+        "classification": {
+          "sourceCategory": "legal",
+          "targetCategory": "legal",
+          "topic": "company"
+        },
+        "sourceUrls": {
+          "expected": [
+            "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+            "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+            "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+          ],
+          "actual": [
+            "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+            "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+            "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+          ],
+          "networkChecked": false
+        }
+      }
+    ],
+    "auditContext": {
+      "method": "Read-only R content symlink union, six local EL drafts as context; only 916/919/920 selected, accepted snapshot aliases with exact original filenames.",
+      "frozenSources": [
+        {
+          "filename": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+        }
+      ]
+    }
+  },
+  {
+    "version": 1,
+    "generatedAt": "2026-10-25T18:16:37.035Z",
+    "repoRoot": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+    "selectedFiles": 2,
+    "automatedStatus": "PASS",
+    "semanticStatus": "REVIEW_REQUIRED",
+    "publicationReady": false,
+    "errors": 0,
+    "reviewItems": 10,
+    "policy": {
+      "minBodyLettersAndNumbers": 500,
+      "minUniqueParagraphLettersAndNumbers": 350,
+      "sourceLocale": "zh-hant",
+      "publicationDate": "2026-10-26",
+      "legacyPolicy": "Unselected files supply existence/duplicate context only; no content changes or audience changes are made.",
+      "sourceApproval": "The operator must select an accepted source; existence/hash is not evidence of legal approval."
+    },
+    "runtimeContractHashes": {
+      "src/lib/column-audience.ts": "a1cb781f1a787366199995b0312b0fa1556d850e0637eb5ea66cd2174680b760",
+      "src/data/market-column-curation.ts": "c42e22feed6e49e5f4915a48ad18a49d9b874c024824ddf53a74fd5ede8a8b94",
+      "src/lib/column-attribution.ts": "8111ea9feabcdc98f13485014da51d39c9aebd084cbb6a1e52d923624bb6dcc3",
+      "src/lib/columns.ts": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+      "src/lib/column-locales.ts": "26d8fe8de7a9703aa7b0d279f32938e84190d5199ce0c4ddee84e89bb934b535",
+      "src/lib/public-guidance.ts": "c00a193d0dd583145e544a2cc505efad75a4379f5c334a811655a689d6df8d85",
+      "src/lib/column-topics.ts": "3fb8e18ae18777481cb8a07c158ea1b6435cdab98da0ea4701a1b98bf3ba435a",
+      "src/lib/locales.ts": "38304dea2b15fc6d6d05cebafa6cc08fdac18d66da875da7c79b7a117e431c54",
+      "src/lib/public-route-policy.ts": "7a71128c423d76057bd50e791189533ab96789594aef994f4346f4ead2c6607c",
+      "src/app/[locale]/(legacy)/index.tsx": "5e485ee21bac81e7b8dc74778fba24d69e8541492010e791709a82373c3eb2da",
+      "src/app/[locale]/[[...slug]]/page.tsx": "3dab508b2dddb716fa84184335f4f62b3d35164d30abdb3ab30185a3bb6a4f03"
+    },
+    "inventory": {
+      "counts": {
+        "ko": 211,
+        "zh-hant": 290,
+        "en": 212,
+        "ja": 224,
+        "vi": 45,
+        "id": 33,
+        "th": 31,
+        "fil": 31,
+        "ar": 34,
+        "de": 32,
+        "es": 46,
+        "fr": 31,
+        "pt": 34,
+        "zh-hans": 29,
+        "ms": 30,
+        "ru": 30,
+        "tr": 24,
+        "it": 32,
+        "nl": 26,
+        "pl": 26,
+        "hi": 34,
+        "sv": 24,
+        "da": 24,
+        "nb": 24,
+        "fi": 24,
+        "cs": 26,
+        "hu": 24,
+        "ro": 24,
+        "uk": 24,
+        "el": 30,
+        "he": 26,
+        "bn": 24,
+        "ur": 24,
+        "fa": 24,
+        "my": 24,
+        "ta": 24,
+        "ne": 24,
+        "km": 24,
+        "mn": 24,
+        "sk": 24,
+        "bg": 24,
+        "hr": 24,
+        "sr": 24,
+        "sl": 24,
+        "lt": 26,
+        "lv": 24,
+        "et": 24,
+        "ca": 24,
+        "is": 24
+      },
+      "duplicateKeys": []
+    },
+    "files": [
+      {
+        "file": "../../tseng-all-language-columns-20261025/batch07/checks/el-audit-context-pFWnPV/columns-el/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "locale": "el",
+        "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+        "errors": [],
+        "reviews": [
+          {
+            "code": "public-output-and-native-prose",
+            "status": "REQUIRED",
+            "message": "Inspect rendered title, summary, FAQ, captions, cards, JSON-LD and feeds for native language and author leakage; compare opening/headings/ending with the previous three same-language articles. Automated token checks cannot prove either."
+          },
+          {
+            "code": "title-summary-faq",
+            "status": "REQUIRED",
+            "message": "Compare legal subject and scope in title, summary and every FAQ; presence/count is not semantic preservation. Check translated category labels and captions too."
+          },
+          {
+            "code": "legal-conditions",
+            "status": "REQUIRED",
+            "message": "Verify every source actor, must/may, AND/OR, exception, eligibility, starting date, period, amount, quotation and factual qualifier against the full target. Passage order/count need not match. No heuristic clears this item."
+          },
+          {
+            "code": "numbers-dates-currencies",
+            "status": "REQUIRED",
+            "message": "Raw numeric-token differences require context review; locale separators, spelled-out numerals and era conversions are not automatically equivalent. Matching tokens also do not prove matching conditions. No values are synthesized or zero-filled.",
+            "sourceOnly": [
+              {
+                "token": "9",
+                "count": 2
+              },
+              {
+                "token": "7",
+                "count": 1
+              },
+              {
+                "token": "22",
+                "count": 2
+              },
+              {
+                "token": "2",
+                "count": 2
+              },
+              {
+                "token": "10",
+                "count": 1
+              },
+              {
+                "token": "6",
+                "count": 1
+              }
+            ],
+            "targetOnly": [
+              {
+                "token": "22-2",
+                "count": 3
+              },
+              {
+                "token": "26",
+                "count": 1
+              }
+            ],
+            "spelledOutNumerals": "Not completely parsed in 49 languages. Review the full source/target passages; absence from these arrays is not zero or PASS."
+          },
+          {
+            "code": "nationality-jurisdiction",
+            "status": "REQUIRED",
+            "message": "A language does not establish nationality. Verify Taiwan jurisdiction, immigration status, nationality qualifications and any foreign-law/consular claim throughout the text; the highlighted passages are incomplete hints, not a language classifier."
+          }
+        ],
+        "sha256": "ddecc74e8ef307a0964fac3b560933605d347f7bad5fea67e7a8b68efcfd0325",
+        "source": {
+          "file": "../../tseng-all-language-columns-20261025/batch07/checks/el-audit-context-pFWnPV/_accepted-snapshots/zh-hant/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+          "locale": "zh-hant",
+          "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+        },
+        "board": {
+          "visible": true,
+          "audience": [
+            "el"
+          ],
+          "marketBoard": true,
+          "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+        },
+        "bodyMetrics": {
+          "lettersAndNumbers": 4117,
+          "uniqueParagraphLettersAndNumbers": 4117,
+          "paragraphs": 16,
+          "h1": 0
+        },
+        "classification": {
+          "sourceCategory": "legal",
+          "targetCategory": "legal",
+          "topic": "labor"
+        },
+        "sourceUrls": {
+          "expected": [
+            "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+            "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+            "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+          ],
+          "actual": [
+            "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+            "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+            "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+          ],
+          "networkChecked": false
+        }
+      },
+      {
+        "file": "../../tseng-all-language-columns-20261025/batch07/checks/el-audit-context-pFWnPV/columns-el/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "locale": "el",
+        "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+        "errors": [],
+        "reviews": [
+          {
+            "code": "public-output-and-native-prose",
+            "status": "REQUIRED",
+            "message": "Inspect rendered title, summary, FAQ, captions, cards, JSON-LD and feeds for native language and author leakage; compare opening/headings/ending with the previous three same-language articles. Automated token checks cannot prove either."
+          },
+          {
+            "code": "title-summary-faq",
+            "status": "REQUIRED",
+            "message": "Compare legal subject and scope in title, summary and every FAQ; presence/count is not semantic preservation. Check translated category labels and captions too."
+          },
+          {
+            "code": "legal-conditions",
+            "status": "REQUIRED",
+            "message": "Verify every source actor, must/may, AND/OR, exception, eligibility, starting date, period, amount, quotation and factual qualifier against the full target. Passage order/count need not match. No heuristic clears this item."
+          },
+          {
+            "code": "numbers-dates-currencies",
+            "status": "REQUIRED",
+            "message": "Raw numeric-token differences require context review; locale separators, spelled-out numerals and era conversions are not automatically equivalent. Matching tokens also do not prove matching conditions. No values are synthesized or zero-filled.",
+            "sourceOnly": [
+              {
+                "token": "2026",
+                "count": 1
+              },
+              {
+                "token": "9",
+                "count": 2
+              },
+              {
+                "token": "5",
+                "count": 1
+              },
+              {
+                "token": "10",
+                "count": 1
+              }
+            ],
+            "targetOnly": [
+              {
+                "token": "11",
+                "count": 2
+              },
+              {
+                "token": "15",
+                "count": 1
+              },
+              {
+                "token": "6",
+                "count": 1
+              },
+              {
+                "token": "1",
+                "count": 2
+              },
+              {
+                "token": "3",
+                "count": 1
+              },
+              {
+                "token": "4",
+                "count": 1
+              },
+              {
+                "token": "26",
+                "count": 2
+              }
+            ],
+            "spelledOutNumerals": "Not completely parsed in 49 languages. Review the full source/target passages; absence from these arrays is not zero or PASS."
+          },
+          {
+            "code": "nationality-jurisdiction",
+            "status": "REQUIRED",
+            "message": "A language does not establish nationality. Verify Taiwan jurisdiction, immigration status, nationality qualifications and any foreign-law/consular claim throughout the text; the highlighted passages are incomplete hints, not a language classifier."
+          }
+        ],
+        "sha256": "7897ed03d257814fd770a4527992ae9433b9cbef5b12ce2f8ee97bf6e461a802",
+        "source": {
+          "file": "../../tseng-all-language-columns-20261025/batch07/checks/el-audit-context-pFWnPV/_accepted-snapshots/zh-hant/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "locale": "zh-hant",
+          "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+        },
+        "board": {
+          "visible": true,
+          "audience": [
+            "el"
+          ],
+          "marketBoard": true,
+          "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+        },
+        "bodyMetrics": {
+          "lettersAndNumbers": 4073,
+          "uniqueParagraphLettersAndNumbers": 4073,
+          "paragraphs": 16,
+          "h1": 0
+        },
+        "classification": {
+          "sourceCategory": "legal",
+          "targetCategory": "legal",
+          "topic": "litigation"
+        },
+        "sourceUrls": {
+          "expected": [
+            "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+            "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+            "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+            "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+          ],
+          "actual": [
+            "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+            "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+            "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+            "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+          ],
+          "networkChecked": false
+        }
+      }
+    ],
+    "auditContext": {
+      "method": "Read-only R content symlink union, six local EL drafts as context; only 916/919/920 selected, accepted snapshot aliases with exact original filenames.",
+      "frozenSources": [
+        {
+          "filename": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+          "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+          "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+        },
+        {
+          "filename": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+        }
+      ]
+    }
+  }
+]

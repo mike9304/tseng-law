@@ -1,0 +1,69 @@
+{
+  "at": "2026-10-25T18:21:36.444666+00:00",
+  "status": "AUTHOR_CORRECTIONS_FROZEN_PENDING_TARGETED_INDEPENDENT_REVIEW",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "b2b058966c26f084e38969656625cbd642fc9f71dbb14bcbf7f30f9ecc28387f",
+      "changed_after_R1": false,
+      "variety_exit": 0,
+      "len_cv": 0.543,
+      "evidence": "bg-variety-final.json"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "cb3f84123bfd34d8c9587088875d7b7820e630afa5621c4e3a0fe6245f151cfa",
+      "changed_after_R1": true,
+      "variety_exit": 0,
+      "len_cv": 0.484,
+      "evidence": "bg-variety-r2-review.json"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "783fdbb7d7b80a6fb580bbe6a94da36b85f6d35109bb23d6c9370d813de95985",
+      "changed_after_R1": false,
+      "variety_exit": 0,
+      "len_cv": 0.473,
+      "evidence": "bg-variety-final.json"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b94e2e414de8359fd969af0fdf6d1af61722ff08126f7fe44f083bd14e82b8af",
+      "changed_after_R1": false,
+      "variety_exit": 0,
+      "len_cv": 0.49,
+      "evidence": "bg-variety-final.json"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "0f2f518c48f2ab988d2c66dab1791a8478cf3b146fa7d0ad9a3f36579bcb6bfe",
+      "changed_after_R1": false,
+      "variety_exit": 0,
+      "len_cv": 0.512,
+      "evidence": "bg-variety-final.json"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "a7e85faf8bd43c50827620fbc8e3e92e1b7eb18b825254bd4ca98fb712392013",
+      "changed_after_R1": true,
+      "variety_exit": 0,
+      "len_cv": 0.458,
+      "evidence": "bg-variety-r2-review.json"
+    }
+  ],
+  "artifacts": {
+    "reviews/bg-author-r2.md": "354c63af1ef452026490d49ef2414f8cd3c2f18d6e32f9fcb8617003ed949f3a",
+    "checks/bg-r2-edits.json": "819770c0005bec5fc3950aacbae966f43b80c2e2e5ab82776247291491e82cac",
+    "checks/bg-variety-r2-review.json": "8821e925b83bbd8c9c272164fea4269e749b8cfbb3fc8bed4c69bc62fe5d5156",
+    "checks/bg-boundaries-r2-review.json": "961e9cbbb15081d74cc7a793fc047de290671b642f3588bf74ce461689eff3ef",
+    "checks/bg-boundary-delta-r2-review.json": "c4b68bae19588270f8f984d17c906c4357fb1b0b08098921c35a24ee2fb1afc6",
+    "checks/bg-content-audit-r2.json": "0a602fc21f6d7ab6f257bd3933a34ba83ad31fe95f59e0d92648e2459878de4f",
+    "checks/bg-r2-wrapper-initial-error.json": "9338b8b46b39b9c06200807af9f4a69d33721e6bd56d81167b8b776762a5fe8d"
+  },
+  "old_author_review_manifest_preserved": true,
+  "unchanged_other_four": true,
+  "normal_BG_date_notation_preserved": true,
+  "915_existing_boundary_limitation_unchanged": true,
+  "R_shared_modified": false,
+  "human_approval_or_publication": false
+}

@@ -1,0 +1,87 @@
+{
+  "generated_at_utc": "2026-10-25T18:18:07.620208+00:00",
+  "status": "REQUEST_CHANGES_MANUAL_PROSE",
+  "mandatory_legal_errors_found": 0,
+  "mandatory_prose_findings": [
+    "M1",
+    "M2"
+  ],
+  "optional_groups": [
+    "O1",
+    "O2"
+  ],
+  "author_report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/bg-author.md",
+    "sha256": "b1107ae48bb5d16e448c4b6766347d2adbc6e00e2dcd9fc95f06492d61b5eeca"
+  },
+  "author_manifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-author-manifest.json",
+    "sha256": "482b53256e39eb2864cb63fffa56a5c2002dbad7e202a125b80d5229f863f44a"
+  },
+  "manuscripts": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "b2b058966c26f084e38969656625cbd642fc9f71dbb14bcbf7f30f9ecc28387f",
+      "unchanged_from_author_freeze": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "f161ce0b785f0fd8bdaeb7b25fcb71e48243930b5cbddfabcd0c9f61aef2fcb5",
+      "unchanged_from_author_freeze": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "783fdbb7d7b80a6fb580bbe6a94da36b85f6d35109bb23d6c9370d813de95985",
+      "unchanged_from_author_freeze": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b94e2e414de8359fd969af0fdf6d1af61722ff08126f7fe44f083bd14e82b8af",
+      "unchanged_from_author_freeze": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "0f2f518c48f2ab988d2c66dab1791a8478cf3b146fa7d0ad9a3f36579bcb6bfe",
+      "unchanged_from_author_freeze": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "unchanged_from_author_freeze": true
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/bg-independent.md",
+      "sha256": "f43dc902b8db3de7abbdbfd3c43dbb19385a5ca44af2cb9a426c968783e796cf"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-independent-start.json",
+      "sha256": "061e8a165209028f66edaf6a303080f0f71cdaacc0e540e2c8b949ef9a2abe92"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-independent-evidence.json",
+      "sha256": "524a25e2f80eacb5fc8017ac8a08bee56b7566b6c99a954435285ae14f0500b8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-independent-findings.json",
+      "sha256": "aa074e89319cfd7818315dcad5a5a069a36ebb927fafcafeed36d26ba061dc49"
+    }
+  ],
+  "read_scope": "All6 BG manuscripts and FAQ17, canonical6 under unchanged fullSHA, published-latest BG704–706 full,251 stored extraction units,14 neutral diagnostic cases,24 author substitutions forward+reverse,latest LESSONS03:05 full.",
+  "verification": {
+    "unchanged_original_inputs": 46,
+    "planned_lessons_refresh": 1,
+    "all_final_input_hashes_match_evidence": true,
+    "tools_unchanged": 5,
+    "fresh_cli_runs": 0,
+    "saved_actual_cli_exit0_files": 6,
+    "saved_structural_errors": 0,
+    "saved_required_review_items_retained": 30,
+    "known_splitter_defects_unresolved": 1
+  },
+  "publication_ready": false,
+  "human_native_or_legal_approval": false,
+  "tool_code_independence_claim": false,
+  "source_author_R_shared_mutated": false
+}

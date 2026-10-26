@@ -1,0 +1,15 @@
+{
+  "recordedAt": "2026-10-26T03:24:08.530572+09:00",
+  "recordedAtNote": "Receipt write time, not precise network push instant.",
+  "command": "git push origin HEAD:main",
+  "workdir": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "actualExitCode": 0,
+  "execSessionId": 30554,
+  "stdout": "To https://github.com/mike9304/tseng-law.git\n   1ef3a9fe1..eca6d3d77  HEAD -> main\n",
+  "newMain": "eca6d3d77b24e06ff85cbe4608aec76bf5762d76",
+  "originMainAfter": "eca6d3d77b24e06ff85cbe4608aec76bf5762d76",
+  "contentCommit": "5a2931d5afb21ace98b52a7ade1dc0db07d19c5a",
+  "force": false,
+  "authorizedRoute": "main -> existing MacBook Air automatic static deployment -> existing Sites",
+  "publiclyVerified": false
+}

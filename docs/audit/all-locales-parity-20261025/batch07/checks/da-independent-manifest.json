@@ -1,0 +1,45 @@
+{
+  "at": "2026-10-25T18:07:18.424619+00:00",
+  "status": "MEANING_REVIEW_PASS_TWO_OPTIONAL_EDITS_SELECTED",
+  "mandatoryOpen": 0,
+  "selectedOptional": [
+    "S01",
+    "S02"
+  ],
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "f0350644b9a9a644a26f7c3cce16a2009651f083ea7b2ff92ea6687d7d6e706c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "e84f9c194992ef65dfccf4d7b4ecde21adb0fc4f6072d27e560502aa73070b91"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "793d7791f755e82fd4e2e9f40bead2f5b7c7a17ea9004129b90938d19d7a0ab5"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "733c4ffb57a6f4c77dab0f149d7e2f5b44a0a9a5c9972567bd66e6d132242063"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "1c0bed7a12c7d725a915e7fa72626fc490f4149749edf48f3f7dce5281c8e32f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "63f99210d7a75b030a17ab20b237d5d735693c5eeda8b4d8d6ebafdee5e261fe"
+    }
+  ],
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/da-independent.md",
+    "sha256": "c82dc71dc4256a97ede29c33fbfc078a290465f5439d33a9b3d2bdd06f4ef1a4"
+  },
+  "verification": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/da-independent-verification.json",
+    "sha256": "4ae203056390b5ea0c673b4cd192620ad3f6e02da00ab207915be9ae6ab2f298"
+  },
+  "humanApproval": false,
+  "publicVerified": false
+}

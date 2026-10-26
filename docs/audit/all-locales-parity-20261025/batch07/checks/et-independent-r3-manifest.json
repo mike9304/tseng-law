@@ -1,0 +1,45 @@
+{
+  "atUTC": "2026-10-26T06:47:35.311552+00:00",
+  "status": "M03_CLOSED_NO_UNRESOLVED_MUST",
+  "unresolvedMust": 0,
+  "currentManuscripts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "71965945cfaaa67695b54df22fff330e988a96a64f8b1416e7be00df3f13ebb2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "d82fd20cc58e146613730221dacd28948a3f2b1aa92177ce8a916accf8a0b12f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "18706d6b788879e3f3d6dff97136cee18f65321163adadb58d6bd23215fc4a05"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "da1ba752fc6193222b844e5be491cb382ab55f49b3a714b49b27b5849825c3aa"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "cc59c5a7212683e20fcdf9fbccdf686ceb870db8de7447303dc4c04c74a8028a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "e058c5964d75cfad256f5fd99b6c474b9acbd80408a5e06229652116e3d38094"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/et-independent-r3.md",
+      "sha256": "30b42db59aec1a587131c476ec4be1d4d26241adcd13cbe574be6ed5c62a9707"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/et-independent-r3-checks.json",
+      "sha256": "e69de44a1710b4839d11f221ba3587a105bbf97c65e02a79a52b611edc9d76a7"
+    }
+  ],
+  "authorR3": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/et-author-r3.md",
+    "sha256": "90ff41d14e9ee40bcd2955e67e3465a150288276a9242102c8674a381880fbaf"
+  }
+}

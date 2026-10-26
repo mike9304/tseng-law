@@ -1,0 +1,84 @@
+{
+  "atUTC": "2026-10-25T18:11:43.595456+00:00",
+  "verdict": "REQUEST_CHANGES",
+  "must": 2,
+  "optionalGroups": 3,
+  "proposedOnly": true,
+  "manuscriptsEdited": false,
+  "findings": [
+    {
+      "id": "M01",
+      "severity": "MUST",
+      "article": "915",
+      "scope": "summary",
+      "old": "Seaduslik tee vahekohtusse eeldab konkreetse vaidluse ja lepitusmenetluse dokumentide võrdlemist.",
+      "suggested": "Dokumentide võrdlemine aitab hinnata, kas lepitus käsitles sama konkreetset vaidlust, mis viiakse vahekohtusse.",
+      "reason": "Do not present practical document comparison as an independent statutory prerequisite; preserve the concrete-dispute inquiry.",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "line": 4,
+      "current_sha256": "534cd48a07b129dc51a55a0697bd93e41ee4f48bf61b190bdd0c30a8d1f828a6"
+    },
+    {
+      "id": "M02",
+      "severity": "MUST",
+      "article": "920",
+      "scope": "body",
+      "old": "Arvesti kuulumine elanikule ei muutnud kõiki neid paigalduskohti erakasutuses ruumiks.",
+      "suggested": "Ühendus elaniku arvestiga ei muutnud seina, lae ja ühise elektrikilbi õiguslikku staatust.",
+      "reason": "Retained judgment establishes connection to the resident meter, not a separate finding that the meter belongs to the resident. No contrary ownership assertion is proposed.",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "line": 32,
+      "current_sha256": "afac76c9b48c610c9e0d6a30956340c076bbe373cc41341051d9830eb47e5479"
+    },
+    {
+      "id": "S01",
+      "severity": "OPTIONAL",
+      "article": "918",
+      "scope": "body",
+      "old": "Arendaja 23. veebruari 2019 kiri küsis ostja suhtlust laenupangaga ja toimingute edenemist.",
+      "suggested": "Arendaja palus 23. veebruari 2019 kirjas ostjal võtta ühendust laenupangaga ja teatada laenutoimingute edenemisest.",
+      "reason": "Concrete natural verbs for the request to contact the bank and report progress; same date and actors.",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "line": 32,
+      "current_sha256": "f2c94dacfac2769b7950c6063569d6e1da83bf8e6e78034cc7caad963308e9db"
+    },
+    {
+      "id": "S02",
+      "severity": "OPTIONAL",
+      "article": "920",
+      "scope": "body",
+      "old": "Selle juhtumi keskne dokument on täielik paigaldusjoonis koos otsustega, milles on lubatud kasutada just joonisel märgitud kohti.",
+      "suggested": "Vaidluse hindamisel saab paigaldusjoonise kõrvutada olemasolevate otsustega, et selgitada, kas ja millises ulatuses ühiste osade kasutamine lubati.",
+      "reason": "MONOTONY: replace abstract central-document closing with concrete comparison; do not presume approval or attribute an evidentiary finding to the historic court.",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "line": 54,
+      "current_sha256": "afac76c9b48c610c9e0d6a30956340c076bbe373cc41341051d9830eb47e5479"
+    },
+    {
+      "id": "S03a",
+      "group": "S03",
+      "severity": "OPTIONAL",
+      "article": "915",
+      "scope": "inline link label",
+      "old": "[30. septembri 2026 energiasektori ülevaade](https://www.trade.gov/market-intelligence/taiwan-energy-industry)",
+      "suggested": "[energiasektori ülevaade](https://www.trade.gov/market-intelligence/taiwan-energy-industry)",
+      "reason": "Reduce date crowding; keep exact 30. september 2026 in final official sources. This changes a duplicate numeric occurrence, not the publication date or forecast.",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "line": 55,
+      "current_sha256": "534cd48a07b129dc51a55a0697bd93e41ee4f48bf61b190bdd0c30a8d1f828a6"
+    },
+    {
+      "id": "S03b",
+      "group": "S03",
+      "severity": "OPTIONAL",
+      "article": "921",
+      "scope": "body",
+      "old": "Praegune regulatsioon muudeti 10. augustil 2022 ja jõustus 1. jaanuaril 2023. See on hilisem kui kirjeldatud kohtuotsus.",
+      "suggested": "Praegune regulatsioon muudeti 10. augustil 2022. See jõustus 1. jaanuaril 2023, pärast kirjeldatud kohtuotsust.",
+      "reason": "Separate amendment and commencement while preserving both dates and the judgment-before-current-rules chronology. Actual current sentence boundary is already correct.",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/921-taiwan-online-game-coins-refund-judgment.md",
+      "line": 46,
+      "current_sha256": "e058c5964d75cfad256f5fd99b6c474b9acbd80408a5e06229652116e3d38094"
+    }
+  ]
+}

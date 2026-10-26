@@ -1,0 +1,408 @@
+{
+  "at": "2026-10-25T18:08:00.345Z",
+  "method": "Current raw files parsed with installed gray-matter; all frontmatter and FAQ17/table2 previously read by author. Structural checks do not establish legal correctness or rendered output.",
+  "errors": [],
+  "faqTotal": 17,
+  "officialUrlCountPerArticle": [
+    {
+      "id": 915,
+      "count": 4
+    },
+    {
+      "id": 916,
+      "count": 3
+    },
+    {
+      "id": 918,
+      "count": 4
+    },
+    {
+      "id": 919,
+      "count": 4
+    },
+    {
+      "id": 920,
+      "count": 4
+    },
+    {
+      "id": 921,
+      "count": 4
+    }
+  ],
+  "rows": [
+    {
+      "id": 915,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "183c8045ea1d1d443672376af9f8866b3771c2ed429aae6d24f47398eaccb5d9",
+      "metadata": {
+        "title": "De reclamar més temps a reclamar diners: un arbitratge d’obra pública a Taiwan",
+        "seoTitle": "Taiwan: canvi de reclamació entre mediació i arbitratge",
+        "summary": "El laude d’un contractista hospitalari va quedar anul·lat perquè la mediació havia tractat una ampliació del termini, però la reclamació econòmica posterior no havia rebut cap recomanació. La via legal d’arbitratge exigeix contrastar la controvèrsia concreta amb aquell expedient.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 d’octubre de 2026",
+        "read_time": "5 min de lectura",
+        "categories": [
+          "Contractació pública",
+          "Jurisprudència de Taiwan"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "obra pública",
+          "mediació",
+          "arbitratge",
+          "canvi de reclamació",
+          "proveïdors dels Estats Units"
+        ],
+        "audience": [
+          "ca"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/915-case-trends-20261025.webp",
+        "featured_image_alt": "Un casc de seguretat, plànols i arxivadors sobre una taula al costat d’una maqueta de pont.",
+        "featured_image_caption": "Escena fictícia",
+        "faq": [
+          {
+            "q": "Si la mediació amb una entitat pública de Taiwan fracassa, ja es pot anar a arbitratge?",
+            "a": "No automàticament. En la via legal per a obres o serveis tècnics, la mediació ha de fracassar perquè l’entitat no accepta la recomanació o proposta de l’òrgan de revisió de la contractació pública. Cal comparar la controvèrsia concreta sotmesa a arbitratge amb aquell expedient. Un conveni arbitral separat pot oferir una altra base."
+          },
+          {
+            "q": "El Tribunal Suprem va dir que qualsevol canvi de reclamació impedeix l’arbitratge?",
+            "a": "No. En aquell cas es va tornar a demanar diners després d’una recomanació sobre l’ampliació del termini. La decisió no estableix que cada canvi d’import o d’argument jurídic creï una controvèrsia diferent. S’han de comparar els fets, allò que es demana i els documents del procediment."
+          }
+        ]
+      },
+      "faqCount": 2,
+      "officialSourceUrls": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "officialSourceCount": 4,
+      "allSourceUrlsPreserved": true,
+      "allSourceUrlsInEndList": true,
+      "urlsSequenceUnchangedFromInitial": true,
+      "tables": [
+        "| Moment | Petició i resposta del procediment |",
+        "|---|---|",
+        "| Inici de la mediació | El contractista demanava una compensació econòmica. |",
+        "| Modificació de la petició | Va passar a sol·licitar una ampliació del termini. |",
+        "| Recomanació de l’òrgan de revisió | Es referia a l’ampliació; l’entitat pública no la va acceptar. |",
+        "| Reclamació posterior | El contractista va tornar a demanar diners, sense recomanació o proposta sobre aquesta reclamació abans de l’arbitratge. |"
+      ],
+      "noDecorativeBoldOrHtml": true,
+      "manualBidiControlCount": 0
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "4971777565edde14f6e41cef422d252b251a527d48f7bdcdf62169ede5034506",
+      "metadata": {
+        "title": "Contaminació a una fàbrica de Taiwan: què sabien les societats matrius",
+        "seoTitle": "Taiwan: contaminació, control empresarial i responsabilitat de la matriu",
+        "summary": "Un cas de contaminació va relacionar la responsabilitat de les societats matrius amb el coneixement del risc, el control del negoci i les transferències d’actius. En una adquisició, també importa què es va decidir després de rebre l’informe ambiental.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 d’octubre de 2026",
+        "read_time": "5 min de lectura",
+        "categories": [
+          "Societats i inversió",
+          "Jurisprudència de Taiwan"
+        ],
+        "topic": "company",
+        "tags": [
+          "societat matriu",
+          "contaminació",
+          "revisió ambiental",
+          "adquisicions",
+          "inversors dels Estats Units"
+        ],
+        "audience": [
+          "ca"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/916-case-trends-20261025.webp",
+        "featured_image_alt": "Un pot amb una mostra de terra i una llibreta damunt una taula plegable, davant d’una fàbrica antiga.",
+        "featured_image_caption": "Escena fictícia",
+        "faq": [
+          {
+            "q": "Ser propietària d’una filial de Taiwan fa responsable la matriu estrangera de la contaminació?",
+            "a": "La simple titularitat no va ser el fonament del cas. L’explicació judicial descriu el control, el coneixement de la contaminació, la manca d’informació als treballadors o de mesures correctores i els moviments d’actius destinats a eludir responsabilitats. La conducta concreta i la llei aplicable determinen l’anàlisi."
+          },
+          {
+            "q": "La decisió del Tribunal Suprem de 2018 va posar fi a totes les reclamacions?",
+            "a": "No. Va deixar sense efecte les parts relatives a 246 reclamants i les va retornar perquè continués l’examen, mentre que va desestimar els recursos relatius a 262. Els efectes eren diferents segons la part del cas; no es va concloure tota la litigació relacionada amb la fàbrica."
+          },
+          {
+            "q": "Quins documents convé conservar després d’una revisió ambiental d’adquisició?",
+            "a": "L’informe, els destinataris, les preguntes de seguiment, les decisions sobre exposició dels treballadors i descontaminació, i les autoritzacions i l’anàlisi financera de transferències posteriors d’actius. Permeten reconstruir el coneixement i la conducta, però tenir un arxiu no acredita per si sol el compliment legal."
+          }
+        ]
+      },
+      "faqCount": 3,
+      "officialSourceUrls": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "officialSourceCount": 3,
+      "allSourceUrlsPreserved": true,
+      "allSourceUrlsInEndList": true,
+      "urlsSequenceUnchangedFromInitial": true,
+      "tables": [],
+      "noDecorativeBoldOrHtml": true,
+      "manualBidiControlCount": 0
+    },
+    {
+      "id": 918,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "96a0a5565a433d45174251c9f6e579c7f8ffa56861def81332acac807ed1f555",
+      "metadata": {
+        "title": "La carta sobre la hipoteca i l’autorització d’entrada no acreditaven el lliurament",
+        "seoTitle": "Taiwan: avís de lliurament i retard en un habitatge no acabat",
+        "summary": "El promotor havia enviat una carta sobre el préstec i després havia permès entrar a l’habitatge per fer-hi treballs. El tribunal va contrastar aquests documents amb l’estat de la casa. Els quatre mesos del contracte del cas s’han de distingir dels sis mesos de notificació previstos avui.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 d’octubre de 2026",
+        "read_time": "5 min de lectura",
+        "categories": [
+          "Habitatge i contractes",
+          "Jurisprudència de Taiwan"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "venda d’habitatges no acabats",
+          "avís de lliurament",
+          "hipoteca",
+          "retard",
+          "contracte de compravenda"
+        ],
+        "audience": [
+          "ca"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/918-case-trends-20261025.webp",
+        "featured_image_alt": "Documents i un sobre sense marques dins un habitatge nou, al costat d’una caixa de mudança.",
+        "featured_image_caption": "Escena fictícia",
+        "faq": [
+          {
+            "q": "Una carta del promotor per tramitar la hipoteca ja és un avís de lliurament de l’habitatge?",
+            "a": "Depèn del contingut i de l’estat de l’habitatge en aquell moment. La carta del cas només demanava informació sobre el préstec i no oferia una casa apta per a l’ús. La connexió dels subministraments i les inspeccions posteriors tampoc no sostenien la versió del promotor. El tribunal no la va considerar l’avís de lliurament pactat."
+          },
+          {
+            "q": "El termini després d’obtenir el permís d’ús és de quatre mesos o de sis?",
+            "a": "Els quatre mesos provenien del contracte examinat en el cas. El punt 15 de les condicions obligatòries vigents per a la venda d’habitatges encara no acabats exigeix al venedor notificar el lliurament dins dels sis mesos des que obté el permís d’ús. Cada operació requereix contrastar el contracte i les normes aplicables quan es va signar."
+          },
+          {
+            "q": "Puc ignorar l’avís del promotor mentre el banc no hagi desemborsat el préstec?",
+            "a": "El préstec pendent no justifica deixar l’avís sense resposta. El pagament, la documentació bancària, la inspecció i el lliurament tenen obligacions i dates que s’han d’identificar per separat. Els registres del banc i de l’estat de la casa ajuden a valorar el desacord. La sentència no autoritza tots els compradors a suspendre els pagaments."
+          }
+        ]
+      },
+      "faqCount": 3,
+      "officialSourceUrls": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "officialSourceCount": 4,
+      "allSourceUrlsPreserved": true,
+      "allSourceUrlsInEndList": true,
+      "urlsSequenceUnchangedFromInitial": true,
+      "tables": [],
+      "noDecorativeBoldOrHtml": true,
+      "manualBidiControlCount": 0
+    },
+    {
+      "id": 919,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "5047e951b20e1dc6d3914692c69f9a9b62c323e519418221f153bc0a60fa9d2a",
+      "metadata": {
+        "title": "Una sanció anunciada abans de deliberar: l’anul·lació d’un cessament per assetjament",
+        "seoTitle": "Taiwan: investigació d’assetjament laboral i dret a ser escoltat",
+        "summary": "Un tribunal administratiu de Taipei va anul·lar un cessament i la resolució de revisió per defectes de deliberació, audiència i prova. El cas d’un funcionari ajuda a revisar una investigació, però les empreses privades han d’aplicar el seu propi règim de protecció i investigació.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 d’octubre de 2026",
+        "read_time": "5 min de lectura",
+        "categories": [
+          "Relacions laborals",
+          "Jurisprudència de Taiwan"
+        ],
+        "topic": "labor",
+        "tags": [
+          "assetjament laboral",
+          "investigació interna",
+          "audiència",
+          "recursos humans",
+          "funció pública"
+        ],
+        "audience": [
+          "ca"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/919-case-trends-20261025.webp",
+        "featured_image_alt": "Una taula rodona amb una carpeta sense marques i tres cadires en una sala de reunions buida.",
+        "featured_image_caption": "Escena fictícia",
+        "faq": [
+          {
+            "q": "Anul·lar el cessament significa que el tribunal va declarar que no hi havia hagut assetjament?",
+            "a": "No. El tribunal va identificar defectes en la deliberació, l’oportunitat de ser escoltat i la determinació dels fets, i va anul·lar la decisió inicial i la de revisió. Això no declara inexistents totes les conductes denunciades. L’explicació judicial també indica que la sentència es podia recórrer."
+          },
+          {
+            "q": "L’empresa ha d’esperar que acabi la investigació per protegir la persona denunciant?",
+            "a": "La llei de seguretat i salut laboral exigeix mesures adequades segons com l’ocupador ha tingut coneixement dels fets. Si rep la denúncia de la persona afectada, ha de prendre mesures per evitar nous episodis, oferir l’assistència i la protecció que corresponguin a les necessitats i investigar. La protecció i una investigació justa poden avançar alhora."
+          },
+          {
+            "q": "Recursos humans pot copiar el procediment d’aquest cas de funció pública?",
+            "a": "El cas tractava l’avaluació i el cessament d’un funcionari. Una empresa privada ha d’aplicar les normes de seguretat i salut laboral, la resta de legislació laboral i els contractes que li corresponguin. Les observacions sobre conclusions anticipades, falta d’audiència i prova contradictòria ajuden a revisar la qualitat de la investigació, però no substitueixen aquesta anàlisi jurídica."
+          }
+        ]
+      },
+      "faqCount": 3,
+      "officialSourceUrls": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+      ],
+      "officialSourceCount": 4,
+      "allSourceUrlsPreserved": true,
+      "allSourceUrlsInEndList": true,
+      "urlsSequenceUnchangedFromInitial": true,
+      "tables": [],
+      "noDecorativeBoldOrHtml": true,
+      "manualBidiControlCount": 0
+    },
+    {
+      "id": 920,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "cd071bb9bda0be5353eb0df7f1ac9a8b892a3dfa4fff701735ce893e43a48999",
+      "metadata": {
+        "title": "El carregador era per a la seva plaça: per què el tribunal en va ordenar la retirada?",
+        "seoTitle": "Taiwan: carregadors de vehicles elèctrics i obres en elements comuns",
+        "summary": "Un carregador connectat al comptador d’un resident ocupava parets, sostre i un quadre elèctric comuns. El tribunal va mantenir la retirada de la instal·lació perquè faltaven les autoritzacions exigides. El dret d’ús de la plaça i el dret a fer obres al recorregut del cablejat s’han de valorar per separat.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 d’octubre de 2026",
+        "read_time": "5 min de lectura",
+        "categories": [
+          "Comunitats d’edificis",
+          "Jurisprudència de Taiwan"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "vehicle elèctric",
+          "carregador",
+          "elements comuns",
+          "comitè de gestió",
+          "junta de propietaris"
+        ],
+        "audience": [
+          "ca"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/920-case-trends-20261025.webp",
+        "featured_image_alt": "Un vehicle elèctric connectat a un carregador fixat a una columna d’un aparcament, amb cablejat que puja fins a les safates del sostre.",
+        "featured_image_caption": "Escena fictícia",
+        "faq": [
+          {
+            "q": "Si tinc l’ús de la plaça, puc instal·lar-hi pel meu compte el cablejat d’un carregador?",
+            "a": "Cal saber per on passen els equips i els cables. En aquest cas ocupaven parets, sostre i un quadre comuns, i el tribunal va valorar l’abast de l’obra, la llei i el reglament de la comunitat. No va acceptar tractar la instal·lació com una simple ampliació de conduccions en una part privativa. En altres edificis s’ha de comprovar la distribució real i el reglament."
+          },
+          {
+            "q": "Deixar d’utilitzar el carregador i tancar-lo amb clau evita haver-lo de retirar?",
+            "a": "El resident va al·legar que havia deixat d’utilitzar-lo, l’havia tancat i estava disposat a lliurar la clau. El tribunal va considerar que, encara que fos cert, això no l’eximia de retirar les obres fetes sense les autoritzacions exigides. És el resultat d’aquest cas, no una ordre general de retirar qualsevol carregador discutit."
+          },
+          {
+            "q": "Una subvenció pública per a la recàrrega substitueix el consentiment de la comunitat?",
+            "a": "La subvenció i l’autorització per utilitzar elements comuns són qüestions diferents. L’anunci de Kaohsiung de 2026 incloïa safates portacables de recàrrega en zones comunes, amb un termini anunciat fins al 30 de setembre que ja ha passat. El programa no dona per si mateix dret a un resident a executar obres als elements comuns."
+          }
+        ]
+      },
+      "faqCount": 3,
+      "officialSourceUrls": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "officialSourceCount": 4,
+      "allSourceUrlsPreserved": true,
+      "allSourceUrlsInEndList": true,
+      "urlsSequenceUnchangedFromInitial": true,
+      "tables": [],
+      "noDecorativeBoldOrHtml": true,
+      "manualBidiControlCount": 0
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "78d2251b2d8fe0d19589a53a4d734ba30ed8b708c84829a86ab6b6e763cb4b5a",
+      "metadata": {
+        "title": "Quedaven monedes al joc: per què no es va concedir el reemborsament?",
+        "seoTitle": "Taiwan: monedes de joc, punts no utilitzats i reemborsament",
+        "summary": "Un tribunal de Keelung va distingir les monedes que servien com a fitxes de partida dels punts de pagament no consumits. Les regles vigents continuen protegint el reemborsament dels imports no utilitzats, però el saldo de la pantalla s’ha de relacionar amb la compra, la conversió i l’ús.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 d’octubre de 2026",
+        "read_time": "5 min de lectura",
+        "categories": [
+          "Conflictes de consum",
+          "Jurisprudència de Taiwan"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "jocs en línia",
+          "reemborsament",
+          "monedes de joc",
+          "punts de pagament",
+          "contracte de consum"
+        ],
+        "audience": [
+          "ca"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/921-case-trends-20261025.webp",
+        "featured_image_alt": "Un comandament de joc, un ordinador amb una escena abstracta, fitxes sense marques i una llibreta tancada damunt una taula.",
+        "featured_image_caption": "Escena fictícia",
+        "faq": [
+          {
+            "q": "Si el joc en diu monedes, ja no es pot demanar el reemborsament?",
+            "a": "El nom no determina el resultat. En aquell joc servien com a fitxes per a les partides i el tribunal no les va considerar punts de pagament no utilitzats ni imports del joc que s’haguessin de retornar. En un altre joc cal examinar com s’obtenen les monedes, per a què serveixen, si s’han utilitzat i què preveu el contracte."
+          },
+          {
+            "q": "Passats els primers set dies, ja no es pot posar fi al contracte?",
+            "a": "Les condicions vigents permeten notificar-ne la terminació en qualsevol moment. Descomptats els costos necessaris, s’ha de reemborsar el valor dels punts comprats i no utilitzats o la part no utilitzada dels imports pagats pel joc dins dels trenta dies des de la terminació, o tractar-los de la manera acordada per les dues parts. Deixar sense efecte el contracte per escrit en els primers set dies i acabar-lo en qualsevol moment són vies diferents."
+          },
+          {
+            "q": "L’empresa pot imposar que només comptin els registres del seu servidor?",
+            "a": "Les condicions prohibides vigents impedeixen pactar que un conflicte es decideixi únicament amb l’historial i les dades electròniques que conserva l’operador. El jugador pot conservar justificants de pagament, captures i missatges amb l’atenció al client, i demanar el seu historial per contrastar com s’ha format el saldo."
+          }
+        ]
+      },
+      "faqCount": 3,
+      "officialSourceUrls": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "officialSourceCount": 4,
+      "allSourceUrlsPreserved": true,
+      "allSourceUrlsInEndList": true,
+      "urlsSequenceUnchangedFromInitial": true,
+      "tables": [
+        "| Document | Relació que permet comprovar |",
+        "|---|---|",
+        "| Justificants de pagament i recàrrega | Import pagat i tipus de punts o servei adquirit. |",
+        "| Conversions i historial personal de joc | Moment de la conversió i manera d’utilitzar les monedes resultants. |",
+        "| Avís de terminació i càlcul del reemborsament | Data final del contracte, saldo reconegut i motius dels descomptes. |"
+      ],
+      "noDecorativeBoldOrHtml": true,
+      "manualBidiControlCount": 0
+    }
+  ]
+}

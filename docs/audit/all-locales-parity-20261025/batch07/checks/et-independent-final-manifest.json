@@ -1,0 +1,88 @@
+{
+  "frozenAt": "2026-10-25T18:12:10.966330+00:00",
+  "reviewer": "/root/column_pipeline",
+  "verdict": "REQUEST_CHANGES",
+  "must": 2,
+  "optionalGroups": 3,
+  "publicationReady": false,
+  "humanNativeOrLawyerApproval": false,
+  "runtimeOrDeploymentVerified": false,
+  "authorManifestSHA256": "7b54649732c3b3fdf4683f2b01cf86f31a54354201e00b1d9b11913e7ee625a2",
+  "authorReportSHA256": "b842e905ee39b0ff03818f502568f573088a0ff79e2fada80b9428168b41ce15",
+  "actualUnitsRead": 259,
+  "FAQRead": 17,
+  "exactAuthorEditsReplayedAndReversed": 21,
+  "sharedCLIReruns": 0,
+  "structureAuditorReruns": 0,
+  "currentManuscriptHashes": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "534cd48a07b129dc51a55a0697bd93e41ee4f48bf61b190bdd0c30a8d1f828a6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "d82fd20cc58e146613730221dacd28948a3f2b1aa92177ce8a916accf8a0b12f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "f2c94dacfac2769b7950c6063569d6e1da83bf8e6e78034cc7caad963308e9db"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "da1ba752fc6193222b844e5be491cb382ab55f49b3a714b49b27b5849825c3aa"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "afac76c9b48c610c9e0d6a30956340c076bbe373cc41341051d9830eb47e5479"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "e058c5964d75cfad256f5fd99b6c474b9acbd80408a5e06229652116e3d38094"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/et-independent.md",
+      "sha256": "731b76e084163310091b6c0f20636fc0be48177527127c7922c7428424848ff3",
+      "bytes": 16048
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/et-independent-checks.json",
+      "sha256": "9e17f43014e486e66016f103737654a0f5008be8bf2eb11bcb60663bc394db3c",
+      "bytes": 29979
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/et-independent-findings.json",
+      "sha256": "250cba74d368d59d83756629c24e529f1edb020d6095b0c5cf1ed47c55110068",
+      "bytes": 5032
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/et-independent-r1-originals.json",
+      "sha256": "b639e5e54d8edcd0befffb40b04a1ec12504bd8dce4861e91ceb52de506115b3",
+      "bytes": 49515
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/et-independent-verify.py",
+      "sha256": "5f46512d935b0a9bcba8e8170aa855e1b3bf5bb68628b57cff49f32683160efb",
+      "bytes": 7678
+    }
+  ],
+  "additionalPrimaryInputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/zh-hant-ev-primary-recovered.md",
+      "sha256": "69e09470e7e81edf23c9708e3b942a01c32dfc2e6128c49b353d180634cebbe2",
+      "bytes": 7579
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/recheck/official-04.json",
+      "sha256": "151502199d4109a8aecb1e4a95b755f1e8171b96550e86b1753d9b0cfb7f9d58",
+      "bytes": 31652
+    }
+  ],
+  "LESSONSRefresh": {
+    "old": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f",
+    "new": "9d3af531126f65057fa1ceea9785b6464e512c80ce25d922e822e01438e70486",
+    "newFullTextRead": true,
+    "sharedEdited": false
+  }
+}

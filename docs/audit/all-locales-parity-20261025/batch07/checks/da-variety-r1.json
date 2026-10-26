@@ -1,0 +1,1825 @@
+{
+  "atUTC": "2026-10-25T17:48:41.888489+00:00",
+  "command": [
+    "python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/921-taiwan-online-game-coins-refund-judgment.md",
+    "--lang",
+    "da"
+  ],
+  "exitCode": 1,
+  "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/915-taiwan-public-contract-mediation-arbitration-same-claim.md [da] sentences=38 mean=15.8 cv=0.45 short=0.184 run3=0.083 opener_rep=0.0 cite_end=0.0 cite_para=0.231 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/916-taiwan-parent-company-pollution-liability-us-investor.md [da] sentences=45 mean=15.6 cv=0.476 short=0.222 run3=0.023 opener_rep=0.071 cite_end=0.0 cite_para=0.071 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/918-taiwan-presale-mortgage-notice-handover-judgment.md [da] sentences=43 mean=15.0 cv=0.442 short=0.186 run3=0.0 opener_rep=0.071 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  FAIL len_cv=0.442 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [da] sentences=42 mean=15.8 cv=0.47 short=0.214 run3=0.05 opener_rep=0.077 cite_end=0.0 cite_para=0.154 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/920-taiwan-apartment-ev-charger-common-area-judgment.md [da] sentences=37 mean=15.2 cv=0.484 short=0.243 run3=0.029 opener_rep=0.0 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/921-taiwan-online-game-coins-refund-judgment.md [da] sentences=46 mean=14.3 cv=0.454 short=0.239 run3=0.0 opener_rep=0.071 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+  "stderr": "",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "f0350644b9a9a644a26f7c3cce16a2009651f083ea7b2ff92ea6687d7d6e706c"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "e84f9c194992ef65dfccf4d7b4ecde21adb0fc4f6072d27e560502aa73070b91"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "47df19e5019a4622051051d15470ce5838fdd78cd94e8b3e5291f489c08a7995"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "733c4ffb57a6f4c77dab0f149d7e2f5b44a0a9a5c9972567bd66e6d132242063"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "1c0bed7a12c7d725a915e7fa72626fc490f4149749edf48f3f7dce5281c8e32f"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d769c895e41942b7bab35c3a146a806f64c06ce4c02228985dbf2815f0a197d1"
+    }
+  ],
+  "toolHashes": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/da.json": "d97cb6ecf083d3a000d9e68c9aca35be606afcc262cf676723f9fc06ba3352df"
+  },
+  "extraction": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "f0350644b9a9a644a26f7c3cce16a2009651f083ea7b2ff92ea6687d7d6e706c",
+      "metrics": {
+        "lang": "da",
+        "sentences": 38,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.8,
+        "len_cv": 0.45,
+        "short_share": 0.184,
+        "long_share": 0.026,
+        "para_cv": 0.315,
+        "even_run3": 0.083,
+        "top_end": "krav",
+        "top_end_share": 0.053,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "nt",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.231,
+        "cite_end_share": 0.0,
+        "contrast": 1,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.65,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "NT$44.417.150 var beløbet i en voldgiftskendelse til fordel for en entreprenør på et taiwa",
+        "last": "Kildegrundlaget er rettens officielle forklaring tilgået den 25. oktober 2026 samt aktuelle lovtekster og den daterede a",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "nt",
+          "sentences": [
+            {
+              "text": "NT$44.417.150 var beløbet i en voldgiftskendelse til fordel for en entreprenør på et taiwansk hospitalsbyggeri.",
+              "units": 16
+            },
+            {
+              "text": "Kendelsen blev tilsidesat.",
+              "units": 3
+            },
+            {
+              "text": "Mæglingen havde ført til en anbefaling om mere tid, mens entreprenøren bagefter krævede penge ved voldgift uden en anbefaling om det ændrede krav.",
+              "units": 23
+            },
+            {
+              "text": "Netop dette hul i forløbet fremgår af Taiwans højesterets forklaring til sag 106年度台上字第723號.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "højesteret",
+          "sentences": [
+            {
+              "text": "Højesteret forkastede entreprenørens anke den 12. juli 2017, så tilsidesættelsen blev opretholdt.",
+              "units": 12
+            },
+            {
+              "text": "Ifølge rettens officielle forklaring var sagen dermed endelig.",
+              "units": 8
+            },
+            {
+              "text": "Der forelå hverken en udtrykkelig voldgiftsaftale eller det grundlag, som efter loven kunne erstatte den i den konkrete pengetvist.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "entreprenørens",
+          "sentences": [
+            {
+              "text": "Entreprenørens krav havde ikke samme indhold gennem hele forløbet:",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "en",
+          "sentences": [
+            {
+              "text": "En attest om mislykket mægling var ikke tilstrækkelig.",
+              "units": 8
+            },
+            {
+              "text": "Højesteret fremhævede, at myndigheden skulle have haft mulighed for at tage stilling til en anbefaling om netop den pågældende tvist.",
+              "units": 20
+            },
+            {
+              "text": "Retten ændrede den lavere instans' begrundelse om, hvilken lovversion der fandt anvendelse, men lod afgørelsen om at tilsidesætte voldgiftskendelsen stå.",
+              "units": 20
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "efter",
+          "sentences": [
+            {
+              "text": "Efter artikel 85-1 i Taiwans lov om offentlige indkøb kan tvister om kontraktopfyldelse indbringes for det offentlige indkøbsklagenævn med henblik på mægling.",
+              "units": 23
+            },
+            {
+              "text": "Når leverandøren søger mægling, kan myndigheden ikke afvise den.",
+              "units": 9
+            },
+            {
+              "text": "For byggearbejder og tekniske tjenesteydelser skal nævnet fremsætte en mæglingsanbefaling eller et forslag; mislykkes mæglingen, fordi myndigheden ikke tiltræder det, kan myndigheden ikke afvise leverandørens efterfølgende indbringelse for voldgift.",
+              "units": 29
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "det",
+          "sentences": [
+            {
+              "text": "Det gælder den konkrete tvist.",
+              "units": 5
+            },
+            {
+              "text": "I hospitalssagen fandt retten hverken en aftalt voldgiftsklausul eller de forhold, som kunne træde i stedet for en aftale efter loven.",
+              "units": 21
+            },
+            {
+              "text": "Den anvendte voldgiftslovens artikel 40, stk. 1, nr. 2 om manglende voldgiftsaftale som grundlag for at tilsidesætte kendelsen.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "kontraktens",
+          "sentences": [
+            {
+              "text": "Kontraktens kategori har derfor betydning allerede ved gennemgangen af tvistbestemmelsen.",
+              "units": 10
+            },
+            {
+              "text": "Den aktuelle artikel 85-1 omfatter byggearbejder og tekniske tjenesteydelser i denne særlige adgang til voldgift.",
+              "units": 16
+            },
+            {
+              "text": "Et indkøb af udstyr eller en anden offentlig kontrakt falder ikke automatisk ind under den.",
+              "units": 15
+            },
+            {
+              "text": "En særskilt aftale om voldgift kan dog være gældende uafhængigt af denne adgang.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "den",
+          "sentences": [
+            {
+              "text": "Den amerikanske International Trade Administration beskrev i sin energirapport af 30. september 2026 forventede taiwanske indkøb til elproduktion og elnet i slutningen af 2026 og i 2027, herunder muligheder for amerikanske leverandører.",
+              "units": 32
+            },
+            {
+              "text": "Rapporten handler om planlagte muligheder.",
+              "units": 5
+            },
+            {
+              "text": "Den dokumenterer hverken, at et konkret udbud er åbnet, at en bestemt virksomhed opfylder deltagelseskravene, eller at kontrakten vil blive klassificeret som byggearbejde eller tekniske tjenesteydelser.",
+              "units": 26
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "ved",
+          "sentences": [
+            {
+              "text": "Ved et nyt tilbud hører kontraktkategori og tvistklausul derfor med i kontraktgennemgangen.",
+              "units": 12
+            },
+            {
+              "text": "På et projekt, hvor arbejdet allerede er forsinket, kan samme spørgsmål opstå, når ønsket om mere tid udvikler sig til et krav om ekstra betaling.",
+              "units": 25
+            },
+            {
+              "text": "Projektgruppen kan opleve én samlet uenighed, selv om de processuelle dokumenter beskriver forskellige krav.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "har",
+          "sentences": [
+            {
+              "text": "Har nævnet behandlet det pengekrav, der nu skal stå i voldgiftsbegæringen?",
+              "units": 11
+            },
+            {
+              "text": "Ansøgningen og dens ændringer, anbefalingen eller forslaget, myndighedens svar og den planlagte begæring giver grundlaget for sammenligningen.",
+              "units": 17
+            },
+            {
+              "text": "Projektets nummer gør ikke arbejdet alene.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "et",
+          "sentences": [
+            {
+              "text": "Et nyt beløb behøver ikke at gøre tvisten til en anden.",
+              "units": 11
+            },
+            {
+              "text": "Det samme gælder et mere præcist juridisk argument.",
+              "units": 8
+            },
+            {
+              "text": "Dommen fra 2017 angik det dokumenterede skift mellem fristforlængelse og økonomisk kompensation, så vurderingen kræver de faktiske omstændigheder og den ønskede afgørelse.",
+              "units": 22
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "viser",
+          "sentences": [
+            {
+              "text": "Viser sammenligningen et hul, kan en konkret juridisk vurdering afklare, om en voldgiftsaftale allerede dækker kravet, eller om yderligere mægling er nødvendig.",
+              "units": 22
+            },
+            {
+              "text": "En henvendelse om en taiwansk kontrakttvist via den engelske kontaktside kan begynde med projektkategori, krav og næste frist.",
+              "units": 18
+            },
+            {
+              "text": "Saml ansøgninger, ændringer og svar i den rækkefølge, de blev sendt; så kan det ses, hvilket krav myndigheden faktisk fik anledning til at tage stilling til.",
+              "units": 26
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "kildegrundlaget",
+          "sentences": [
+            {
+              "text": "Kildegrundlaget er rettens officielle forklaring tilgået den 25. oktober 2026 samt aktuelle lovtekster og den daterede amerikanske rapport sammenholdt den 26. oktober.",
+              "units": 22
+            },
+            {
+              "text": "Beskrivelsen angår denne adgang til voldgift og afgør ikke en konkret kontrakts værneting eller frister.",
+              "units": 15
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Mæglingen skiftede fra penge til mere tid",
+        "Myndighedens adgang til at afvise voldgift er begrænset på bestemte vilkår",
+        "En planlagt udbudsmulighed afgør ikke kontraktens tvistløsning"
+      ],
+      "listItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "e84f9c194992ef65dfccf4d7b4ecde21adb0fc4f6072d27e560502aa73070b91",
+      "metrics": {
+        "lang": "da",
+        "sentences": 45,
+        "paras": 14,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 15.6,
+        "len_cv": 0.476,
+        "short_share": 0.222,
+        "long_share": 0.022,
+        "para_cv": 0.181,
+        "even_run3": 0.023,
+        "top_end": "identitet",
+        "top_end_share": 0.044,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "en",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 1,
+        "cite_para_share": 0.071,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.28,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "En miljøundersøgelse før et virksomhedskøb blev senere en del af beviserne mod moderselska",
+        "last": "Kildegrundlaget er Højesterets forklaring tilgået den 25. oktober 2026 og den aktuelle lovbestemmelse og det daterede US",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "en",
+          "sentences": [
+            {
+              "text": "En miljøundersøgelse før et virksomhedskøb blev senere en del af beviserne mod moderselskaberne i en taiwansk fabriksforureningssag.",
+              "units": 17
+            },
+            {
+              "text": "Højesteret så viden om forureningen i sammenhæng med kontrollen over driften, reaktionen på faren og overførsler, som reducerede det taiwanske selskabs aktiver.",
+              "units": 22
+            },
+            {
+              "text": "Rettens forklaring til sag 107年度台上字第267號 viser, at også beslutningerne efter rapportens levering havde betydning.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "dommen",
+          "sentences": [
+            {
+              "text": "Dommen blev afsagt den 16. august 2018.",
+              "units": 7
+            },
+            {
+              "text": "Den vedrørte medarbejderes udsættelse for kemikalier hos en elektronikproducent og ansvaret hos de selskaber, der kontrollerede virksomheden.",
+              "units": 17
+            },
+            {
+              "text": "Ansvaret fulgte ikke alene af, at en udenlandsk investor ejede et datterselskab i Taiwan.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "højesterets",
+          "sentences": [
+            {
+              "text": "Højesterets redegørelse omtaler miljøundersøgelser, som viste forurening, viden i de kontrollerende koncerner og undladelser af at orientere medarbejderne eller afhjælpe problemet.",
+              "units": 21
+            },
+            {
+              "text": "Hertil kom kapitalnedsættelser og overførsler til udlandet med det formål at undgå forpligtelser.",
+              "units": 13
+            },
+            {
+              "text": "Retten tiltrådte den begrundelse, som gjorde det muligt at rette de relevante krav mod de kontrollerende selskaber trods deres adskilte juridiske identitet.",
+              "units": 22
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "hvem",
+          "sentences": [
+            {
+              "text": "Hvem modtog rapporten?",
+              "units": 3
+            },
+            {
+              "text": "En distributionsliste kan vise, hvor oplysningerne kom hen.",
+              "units": 8
+            },
+            {
+              "text": "Bestyrelsesmateriale og instrukser om driften kan belyse, hvem der havde mulighed for at beslutte en reaktion.",
+              "units": 16
+            },
+            {
+              "text": "Senere godkendelser af pengeoverførsler må læses sammen med den viden og kontrol, hvis koncernens beslutningsforløb skal kunne rekonstrueres.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "undersøgelsen",
+          "sentences": [
+            {
+              "text": "Undersøgelsen slutter ikke ved afleveringen.",
+              "units": 5
+            },
+            {
+              "text": "Ved et opkøb er det nyttigt at følge, hvem der undersøgte medarbejdernes eksponering, hvilket yderligere arbejde der blev bestilt, og hvordan resultaterne påvirkede beslutninger om driftsselskabets ressourcer.",
+              "units": 27
+            },
+            {
+              "text": "Ubesvarede spørgsmål bør fortsat kunne ses som ubesvarede.",
+              "units": 8
+            },
+            {
+              "text": "En positiv præsentation af handlen giver ikke svar på de tekniske fund eller på, hvem der skulle følge dem op.",
+              "units": 20
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "for",
+          "sentences": [
+            {
+              "text": "For 246 sagsøgere ophævede Højesteret de relevante dele og hjemviste dem til fortsat behandling.",
+              "units": 14
+            },
+            {
+              "text": "Ankerne vedrørende 262 sagsøgere blev forkastet.",
+              "units": 6
+            },
+            {
+              "text": "De hjemviste dele omfattede mangler ved vurderingen af skade, beviser og bemyndigelsen til at føre krav.",
+              "units": 16
+            },
+            {
+              "text": "Tallene og afgrænsningen står i rettens beskrivelse af resultatet.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "hjemvisning",
+          "sentences": [
+            {
+              "text": "Hjemvisning afslutter ikke et krav.",
+              "units": 5
+            },
+            {
+              "text": "De forkastede anker må heller ikke beskrives som afvisning af de 262 personers oprindelige erstatningskrav.",
+              "units": 15
+            },
+            {
+              "text": "Før en køber anslår en historisk forpligtelse, må de enkelte retssager og deres aktuelle status identificeres.",
+              "units": 16
+            },
+            {
+              "text": "Denne ene afgørelse afsluttede ikke hele det bredere sagskompleks.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "efter",
+          "sentences": [
+            {
+              "text": "Efter artikel 154, stk. 1, i Taiwans selskabslov er aktionærens ansvar over for selskabet som udgangspunkt begrænset til betaling for aktierne.",
+              "units": 21
+            },
+            {
+              "text": "Stk. 2 giver en undtagelse, når en aktionær misbruger selskabets juridiske personlighed og derved påfører det en bestemt gæld, som det klart har vanskeligt ved at tilbagebetale, og omstændighederne er så alvorlige, at aktionærens hæftelse er nødvendig.",
+              "units": 37
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "betingelserne",
+          "sentences": [
+            {
+              "text": "Betingelserne skal ses samlet.",
+              "units": 4
+            },
+            {
+              "text": "Et ejerskab, en ubetalt gæld eller et fund af forurening udgør ikke hver for sig hele lovens prøvelse.",
+              "units": 18
+            },
+            {
+              "text": "Den aktuelle bestemmelse er heller ikke alene en forklaring på rettens vurdering af den historiske adfærd i 2018-sagen.",
+              "units": 18
+            },
+            {
+              "text": "Retten undersøgte de kontrollerende selskabers handlinger og grundlaget for at se ud over deres selvstændige juridiske identitet.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "artiklen",
+          "sentences": [
+            {
+              "text": "Artiklen om datterselskab og filial beskriver det almindelige udgangspunkt ved valg af virksomhedsform.",
+              "units": 13
+            },
+            {
+              "text": "Forureningssagen stiller et yderligere spørgsmål: Hvordan brugte koncernen faktisk sin kontrol, da den kendte risikoen?",
+              "units": 15
+            },
+            {
+              "text": "Det kan stiftelsesdokumenterne ikke alene besvare.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "det",
+          "sentences": [
+            {
+              "text": "Det amerikanske handelskontor USTR beskrev i sit faktaark fra februar 2026 parternes hensigt om at fremme grænseoverskridende investeringer.",
+              "units": 18
+            },
+            {
+              "text": "Materialet omtaler også mulig amerikansk støtte til finansiering af private investeringer i Taiwan i kritiske sektorer med amerikanske private partnere, under forbehold af gældende ret.",
+              "units": 25
+            },
+            {
+              "text": "Faktaarket er ikke et finansieringstilsagn til en bestemt investor.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "før",
+          "sentences": [
+            {
+              "text": "Før en udlodning, kapitalnedsættelse eller overførsel ved en udtræden af investeringen er det nyttigt at sammenholde kendt eksponering, uafklarede krav og de ressourcer, der bliver tilbage i det taiwanske selskab.",
+              "units": 30
+            },
+            {
+              "text": "Den juridiske vurdering må angå selve dispositionen.",
+              "units": 7
+            },
+            {
+              "text": "Navnet på dokumentet kan ikke gøre overførslen lovlig, og en ulæst rapport i et datarum viser ikke, hvordan dens fund blev håndteret.",
+              "units": 22
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "en",
+          "sentences": [
+            {
+              "text": "En henvendelse om taiwanske selskabsforhold eller tvister på den engelske kontaktside kan angive transaktionen, selskabet i Taiwan og en planlagt overførsels- eller afslutningsdato.",
+              "units": 23
+            },
+            {
+              "text": "Tekniske rapporter og følsomme medarbejderoplysninger kan derefter håndteres gennem en aftalt leveringsform.",
+              "units": 12
+            },
+            {
+              "text": "Gem de oprindelige fund sammen med beslutningerne om opfølgning og godkendelserne af senere aktivbevægelser, så det kan ses, hvad koncernen vidste, og hvad den gjorde med den viden.",
+              "units": 28
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "kildegrundlaget",
+          "sentences": [
+            {
+              "text": "Kildegrundlaget er Højesterets forklaring tilgået den 25. oktober 2026 og den aktuelle lovbestemmelse og det daterede USTR-materiale sammenholdt den 26. oktober.",
+              "units": 21
+            },
+            {
+              "text": "Artiklen vedrører den identificerede dom fra 2018, ikke alle tilknyttede retssager eller en bestemt investors ansvar.",
+              "units": 16
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Viden om forureningen fulgte med kontrollen",
+        "Hjemvisning for 246 og forkastede anker vedrørende 262",
+        "Aktionærens begrænsede hæftelse har en bestemt undtagelse",
+        "En planlagt investering kræver stillingtagen til de kendte risici"
+      ],
+      "listItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "47df19e5019a4622051051d15470ce5838fdd78cd94e8b3e5291f489c08a7995",
+      "metrics": {
+        "lang": "da",
+        "sentences": 43,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.0,
+        "len_cv": 0.442,
+        "short_share": 0.186,
+        "long_share": 0.0,
+        "para_cv": 0.196,
+        "even_run3": 0.0,
+        "top_end": "overdragelse",
+        "top_end_share": 0.07,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "i",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.73,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Vand og strøm var endnu ikke tilsluttet, da bygherren i februar skrev til køberne om bolig",
+        "last": "Kilderne er sammenholdt den 25.–26. oktober 2026. Sagen beroede på den konkrete kontrakt og opfyldelsesforløbet; artikle",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "vand",
+          "sentences": [
+            {
+              "text": "Vand og strøm var endnu ikke tilsluttet, da bygherren i februar skrev til køberne om boliglånet.",
+              "units": 16
+            },
+            {
+              "text": "Senere fik de adgang til at indrette og gøre rent, men heller ikke det dokumenterede, at boligen var overdraget som aftalt.",
+              "units": 21
+            },
+            {
+              "text": "Forløbet findes i den officielle samling af forbrugerafgørelser, trykte sider 173–187.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "sagen",
+          "sentences": [
+            {
+              "text": "Sagen var 109年度上易字第289號 ved Taiwans landsret, afdelingen i Taichung.",
+              "units": 9
+            },
+            {
+              "text": "Den 9. februar 2022 forkastede retten bygherrens anke og afviste det yderligere krav, så pligten til at betale renter for forsinkelsen blev opretholdt.",
+              "units": 23
+            },
+            {
+              "text": "Afgørelsen fastslår, at den ikke kan ankes videre.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "brevet",
+          "sentences": [
+            {
+              "text": "Brevet af 23. februar 2019 bad hovedsageligt køberne kontakte banken og oplyse, hvor langt lånesagen var kommet.",
+              "units": 17
+            },
+            {
+              "text": "Det sagde ikke, at boligen var klar til brug.",
+              "units": 9
+            },
+            {
+              "text": "Tilslutningen af vand og strøm kom senere, og ved den første gennemgang i juli manglede der stadig udbedringer, ligesom boligens elevator ikke var færdigmonteret.",
+              "units": 24
+            },
+            {
+              "text": "Retten tiltrådte derfor ikke bygherrens påstand om, at overdragelsen allerede var varslet.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "i",
+          "sentences": [
+            {
+              "text": "I august underskrev køberne et dokument om adgang til indretning og rengøring.",
+              "units": 12
+            },
+            {
+              "text": "På baggrund af dokumentets indhold og de udestående udbedringer fandt retten heller ikke her bevis for kontraktmæssig overdragelse.",
+              "units": 18
+            },
+            {
+              "text": "Banken overførte lånebeløbet til bygherren den 5. november.",
+              "units": 8
+            },
+            {
+              "text": "Parternes garantidokument angav derimod den 28. november som overdragelsesdato.",
+              "units": 9
+            },
+            {
+              "text": "Dommens begrundelse, punkt 4, gennemgår materialet på trykte sider 182–186.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "hvilken",
+          "sentences": [
+            {
+              "text": "Hvilken betaling forlangte brevet?",
+              "units": 4
+            },
+            {
+              "text": "Bygherren gjorde gældende, at køberne skulle have betalt hele prisen efter brevet.",
+              "units": 12
+            },
+            {
+              "text": "Retten sammenholdt betalingsoversigten med de aftalte rater og fandt, at køberne havde betalt rettidigt efter disse aftaler og betalt hele beløbet før overdragelsen.",
+              "units": 23
+            },
+            {
+              "text": "Påstanden om betalingsmisligholdelse blev ikke taget til følge.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "parternes",
+          "sentences": [
+            {
+              "text": "Parternes kontrakt satte en frist på fire måneder for meddelelsen.",
+              "units": 10
+            },
+            {
+              "text": "De aktuelle obligatoriske standardvilkår for salg af boliger før færdiggørelse, punkt 15, kræver meddelelse til køberen om overdragelse inden seks måneder efter, at sælgeren har modtaget ibrugtagningstilladelsen.",
+              "units": 27
+            },
+            {
+              "text": "Punktet omfatter også udbedringer, endelig afregning og dokumentudlevering ved overdragelsen.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "det",
+          "sentences": [
+            {
+              "text": "Det er en frist for meddelelsen.",
+              "units": 6
+            },
+            {
+              "text": "Den skal ikke omskrives til en generel regel om, at enhver overdragelse nødvendigvis skal være gennemført inden seks måneder.",
+              "units": 19
+            },
+            {
+              "text": "Sammenligningen med dagens regler foretages her i artiklen; retten fra 2022 tog stilling til den daværende kontrakt og sagens dokumenter.",
+              "units": 20
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "start",
+          "sentences": [
+            {
+              "text": "Start med den faktiske modtagelse af ibrugtagningstilladelsen, når fristen skal beregnes.",
+              "units": 11
+            },
+            {
+              "text": "Kontrakten og reglerne ved dens indgåelse bestemmer rammen, mens meddelelsens indhold og tidspunktet for dens modtagelse viser, hvad sælgeren faktisk gjorde.",
+              "units": 21
+            },
+            {
+              "text": "En anden købers dom kan ikke alene afgøre antallet af måneder i din sag.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "køberen",
+          "sentences": [
+            {
+              "text": "Køberen har også opgaver ved lånet.",
+              "units": 6
+            },
+            {
+              "text": "Punkt 14 i de aktuelle vilkår omfatter lånedokumenter, medvirken til de relevante formaliteter og betalinger før registrering af ejerskiftet.",
+              "units": 19
+            },
+            {
+              "text": "En indsigelse mod overdragelsesmeddelelsen besvarer ikke automatisk spørgsmål om allerede forfaldne betalinger eller dokumentkrav.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "i",
+          "sentences": [
+            {
+              "text": "I en officiel kontraktkontrol offentliggjort den 25. august 2025 blev det udpeget som en overtrædelse at holde tiden til bankens lånekontrol og udbetaling uden for beregningen af overdragelsesmeddelelsens frist.",
+              "units": 29
+            },
+            {
+              "text": "Bankforløbet kan derfor ikke blot skrives ud af den tidsplan, som vilkårene kræver.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "de",
+          "sentences": [
+            {
+              "text": "De seneste ændringer af centralbankens regler om lån med pant i fast ejendom trådte i kraft den 18. september 2026.",
+              "units": 20
+            },
+            {
+              "text": "En køber, der nu skal have lånevilkårene afklaret, kan notere bankens forventede udbetalingsdato særskilt fra bygherrens datoer for gennemgang og overdragelse.",
+              "units": 21
+            },
+            {
+              "text": "Ændringerne anvendes ikke her som grundlag for begivenhederne i 2019.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "læs",
+          "sentences": [
+            {
+              "text": "Læs også selve brevet.",
+              "units": 4
+            },
+            {
+              "text": "Modtagelsesoplysningerne i kuverten eller mailen kan vise, hvornår køberen fik beskeden, mens gennemgangsrapporter, fotos af mangler, adgangstilladelsen og garantidokumentet belyser boligens tilstand og de efterfølgende handlinger.",
+              "units": 26
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "ved",
+          "sentences": [
+            {
+              "text": "Ved et krav om bod eller renter for forsinkelse kan en første besked til kontorets mailadresse angive den omstridte kontraktbestemmelse, meddelelsens dato og svarfristen.",
+              "units": 24
+            },
+            {
+              "text": "Mærk samtidig materialet efter indhold: henvendelse om lånet, indkaldelse til gennemgang eller meddelelse om overdragelse.",
+              "units": 15
+            },
+            {
+              "text": "Det gør det muligt at drøfte de enkelte forpligtelser frem for kun to modstridende påstande om én overdragelsesdato.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "kilderne",
+          "sentences": [
+            {
+              "text": "Kilderne er sammenholdt den 25.–26. oktober 2026.",
+              "units": 8
+            },
+            {
+              "text": "Sagen beroede på den konkrete kontrakt og opfyldelsesforløbet; artiklen afgør ikke, om en bestemt køber bør betale, afvise overdragelse eller rejse et erstatningskrav.",
+              "units": 23
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Bankens sag og boligens tilstand fulgte ikke samme tidsplan",
+        "Fire måneder i kontrakten og seks måneder i de aktuelle vilkår",
+        "Tre forskellige meddelelser i samme mappe"
+      ],
+      "listItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "733c4ffb57a6f4c77dab0f149d7e2f5b44a0a9a5c9972567bd66e6d132242063",
+      "metrics": {
+        "lang": "da",
+        "sentences": 42,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.8,
+        "len_cv": 0.47,
+        "short_share": 0.214,
+        "long_share": 0.024,
+        "para_cv": 0.234,
+        "even_run3": 0.05,
+        "top_end": "resultatet",
+        "top_end_share": 0.048,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "den",
+        "top_opener_n": 2,
+        "opener_rep": 0.077,
+        "consec_same_start": 2,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.66,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Sanktionen var meldt ud, før udvalget havde behandlet sagen.",
+        "last": "Sagsfremstillingen bygger på rettens offentlige forklaring tilgået den 25. oktober 2026; de aktuelle regler er sammenhol",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "sanktionen",
+          "sentences": [
+            {
+              "text": "Sanktionen var meldt ud, før udvalget havde behandlet sagen.",
+              "units": 9
+            },
+            {
+              "text": "En leder i den offentlige forvaltning fik to alvorlige disciplinære anmærkninger og blev afskediget, men retten ophævede både afgørelsen og resultatet af den administrative prøvelse.",
+              "units": 25
+            },
+            {
+              "text": "Taipeis højere forvaltningsdomstols forklaring fremhæver den tidlige annoncering, utilstrækkelig mulighed for at udtale sig og modstridende vurderinger i undersøgelsesmaterialet.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "dommen",
+          "sentences": [
+            {
+              "text": "Dommen er 114年度訴字第869號, afsagt den 3. september 2026 af domstolens afdeling for højere forvaltningsretlige sager.",
+              "units": 15
+            },
+            {
+              "text": "Ifølge meddelelsen kunne den ankes.",
+              "units": 5
+            },
+            {
+              "text": "Ophævelsen viser hverken, at retten afviste alle beskyldninger om mobning, eller at den pågældende faktisk var genindtrådt i stillingen.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "myndighedens",
+          "sentences": [
+            {
+              "text": "Myndighedens leder havde på forhånd meddelt, at sanktionen ville blive to alvorlige disciplinære anmærkninger.",
+              "units": 14
+            },
+            {
+              "text": "Dernæst holdt den overordnede myndighed møde, før sagen blev sendt til behandling hos den underordnede myndighed.",
+              "units": 16
+            },
+            {
+              "text": "Retten vurderede, at dette forløb svækkede bedømmelsesudvalgets mulighed for at foretage en reel vurdering.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "kunne",
+          "sentences": [
+            {
+              "text": "Kunne mødet stadig ændre resultatet?",
+              "units": 5
+            },
+            {
+              "text": "At der fandtes et referat, besvarede ikke det spørgsmål.",
+              "units": 9
+            },
+            {
+              "text": "Det offentliggjorte udfald kunne gøre den efterfølgende behandling til en bekræftelse af en allerede truffet beslutning.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "der",
+          "sentences": [
+            {
+              "text": "Der var også problemer med høringen og beviserne.",
+              "units": 8
+            },
+            {
+              "text": "De relevante udvalg havde ikke korrekt indkaldt den pågældende til at udtale sig, og rapportens vurdering af beviserne for mobning stemte ikke overens med dens anbefaling om sanktion.",
+              "units": 28
+            },
+            {
+              "text": "Retten bemærkede desuden, at et senere svar under den administrative prøvelse ikke kunne afhjælpe den høringsmulighed, som skulle have været givet oprindeligt.",
+              "units": 22
+            },
+            {
+              "text": "Begrundelsen fremgår af rettens officielle meddelelse.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "den",
+          "sentences": [
+            {
+              "text": "Den offentligt ansattes sag blev behandlet efter reglerne om bedømmelse og afskedigelse i den offentlige forvaltning.",
+              "units": 16
+            },
+            {
+              "text": "Hændelserne lå også før de nye regler om forebyggelse af mobning.",
+              "units": 11
+            },
+            {
+              "text": "For private virksomheder omfatter det direkte lovgrundlag arbejdsmiljølovens nye bestemmelser, som trådte i kraft den 1. juli 2026, jf. lovens ændringshistorik og arbejdsmiljømyndighedens forklaring.",
+              "units": 24
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "artikel",
+          "sentences": [
+            {
+              "text": "Artikel 22-2 i Taiwans arbejdsmiljølov kræver objektivitet, upartiskhed og en fair behandling af parterne ved undersøgelse eller mægling.",
+              "units": 19
+            },
+            {
+              "text": "Under undersøgelsen skal parterne have tilstrækkelig mulighed for at udtale sig og imødegå anklagerne, og reglerne om inhabilitet skal overholdes.",
+              "units": 20
+            },
+            {
+              "text": "En offentlig erklæring om en bestemt persons skyld, før undersøgelsen er færdig, kan gøre det vanskeligt at efterleve disse krav.",
+              "units": 20
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "beskyttelse",
+          "sentences": [
+            {
+              "text": "Beskyttelse kan begynde med det samme.",
+              "units": 6
+            },
+            {
+              "text": "Når en arbejdsgiver modtager en klage fra en medarbejder, der er udsat for mobning, kræver samme artikel foranstaltninger for at forebygge gentagen mobning, rådgivning, hjælp og beskyttelse efter behov samt en undersøgelse.",
+              "units": 32
+            },
+            {
+              "text": "Hvis klageren ønsker det, kan der mægles; fører det ikke til en aftale, skal undersøgelsen fortsætte.",
+              "units": 16
+            },
+            {
+              "text": "Bestemmelsen pålægger at træffe forebyggende foranstaltninger, ikke at garantere et bestemt resultat.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "den",
+          "sentences": [
+            {
+              "text": "Den administrative dom afgør ikke gyldigheden af en privat virksomheds sanktion.",
+              "units": 11
+            },
+            {
+              "text": "Den giver derimod konkrete spørgsmål at stille til forløbet: Er konklusionen åben, bliver svarene faktisk læst, og hænger bevisvurderingen sammen med resultatet?",
+              "units": 22
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "rapporten",
+          "sentences": [
+            {
+              "text": "Rapporten kan begynde med det, der faktisk blev sagt.",
+              "units": 9
+            },
+            {
+              "text": "Derefter kan den vise, hvilke oplysninger der støtter forklaringen, og hvorfor en hændelse anses for bevist, herunder hvilke af modstridende udsagn der blev lagt til grund.",
+              "units": 26
+            },
+            {
+              "text": "Manglende støtte er også relevant.",
+              "units": 5
+            },
+            {
+              "text": "Hvis beskeder, fremmøde eller mødereferater ikke støtter en beskyldning, er den forskel værd at bevare i beskrivelsen.",
+              "units": 17
+            },
+            {
+              "text": "Det er dokumentationsråd ud fra dommen.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "en",
+          "sentences": [
+            {
+              "text": "En part skal vide, hvad svaret skal angå.",
+              "units": 8
+            },
+            {
+              "text": "En anmodning om at beskrive sin ledelsesstil giver ikke samme mulighed for at svare som en meddelelse, der identificerer den omstridte handling, tidspunktet og de uafklarede spørgsmål.",
+              "units": 27
+            },
+            {
+              "text": "Indkaldelsen, interviewnotaterne og den endelige vurdering kan derfor sammenholdes for at se, om de faktisk vedrører samme hændelse.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "ved",
+          "sentences": [
+            {
+              "text": "Ved behov for en konkret vurdering af en taiwansk arbejdstvist kan en første mail til kontoret kort beskrive klagens status, de beslutninger, der allerede er truffet, og den nærmeste frist.",
+              "units": 30
+            },
+            {
+              "text": "Det fulde følsomme materiale behøver ikke følge med den første henvendelse.",
+              "units": 11
+            },
+            {
+              "text": "Gem meddelelsen til parterne, deres svar og begrundelsen for at lægge bestemte beviser til grund, så undersøgelsens vej fra beskyldning til konklusion kan efterprøves.",
+              "units": 24
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "sagsfremstillingen",
+          "sentences": [
+            {
+              "text": "Sagsfremstillingen bygger på rettens offentlige forklaring tilgået den 25. oktober 2026; de aktuelle regler er sammenholdt den 26. oktober.",
+              "units": 19
+            },
+            {
+              "text": "Et senere ankeresultat er ikke bekræftet.",
+              "units": 6
+            },
+            {
+              "text": "Klage- og prøvelsesmuligheder for offentligt og privat ansatte må vurderes efter personens status og den konkrete afgørelse.",
+              "units": 17
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Udvalget mødtes efter den offentlige udmelding",
+        "Private arbejdsgivere har deres eget lovgrundlag",
+        "Fra interviewnotat til begrundet konklusion"
+      ],
+      "listItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "1c0bed7a12c7d725a915e7fa72626fc490f4149749edf48f3f7dce5281c8e32f",
+      "metrics": {
+        "lang": "da",
+        "sentences": 37,
+        "paras": 12,
+        "heads": 2,
+        "list_items": 0,
+        "mean_len": 15.2,
+        "len_cv": 0.484,
+        "short_share": 0.243,
+        "long_share": 0.0,
+        "para_cv": 0.217,
+        "even_run3": 0.029,
+        "top_end": "anlæg",
+        "top_end_share": 0.054,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "ledningerne",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.333,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.28,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Ledningerne gik fra væggen bag parkeringspladsen op under loftet og videre til den fælles ",
+        "last": "Kilderne er sammenholdt den 25.–26. oktober 2026. Beskrivelsen bygger på den konkrete dom fra Kaohsiung; et senere udfal",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "ledningerne",
+          "sentences": [
+            {
+              "text": "Ledningerne gik fra væggen bag parkeringspladsen op under loftet og videre til den fælles eltavle.",
+              "units": 15
+            },
+            {
+              "text": "Selve måleren var beboerens egen.",
+              "units": 5
+            },
+            {
+              "text": "Derfor rakte rettens undersøgelse ud over spørgsmålet om, hvem der måtte parkere i den afmærkede bås.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "taiwans",
+          "sentences": [
+            {
+              "text": "Taiwans landsret, afdelingen i Kaohsiung, forkastede den 22. juni 2022 beboerens anke i sag 111年度上字第132號.",
+              "units": 15
+            },
+            {
+              "text": "Resultatet om at fjerne ladeudstyret og retablere forholdene blev opretholdt.",
+              "units": 10
+            },
+            {
+              "text": "Installationen brugte fælles væg, loft og eltavle, uden at den nødvendige tilladelse først var indhentet.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "ifølge",
+          "sentences": [
+            {
+              "text": "Ifølge dommens ubestridte faktiske forhold sad ladeboksen på væggen bag pladsen i kælderen.",
+              "units": 13
+            },
+            {
+              "text": "Rør til ledningerne var hængt op under loftet, og der var tilføjet en afbryder i eltavlen med forbindelse til beboerens måler.",
+              "units": 21
+            },
+            {
+              "text": "Disse steder var fælles dele og anlæg.",
+              "units": 7
+            },
+            {
+              "text": "Arbejdet gik dermed videre end den udvidelse af ledninger i et område med eneret til brug, som beboeren beskrev.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "tilladelseskravene",
+          "sentences": [
+            {
+              "text": "Tilladelseskravene havde to forskellige grundlag.",
+              "units": 5
+            },
+            {
+              "text": "Artikel 11 i Taiwans lov om administration af ejerlejlighedsejendomme kræver en beslutning på ejerforsamlingen ved nedrivning, større reparationer eller forbedringer af fællesdele og tilhørende anlæg.",
+              "units": 25
+            },
+            {
+              "text": "Retten bedømte arbejdet efter denne bestemmelse.",
+              "units": 6
+            },
+            {
+              "text": "Ejendommens egne vedtægter, artikel 15, krævede desuden bestyrelsens tilladelse og elselskabets sikkerhedskontrol ved tilføjelse af ledninger og kabelrør.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "begge",
+          "sentences": [
+            {
+              "text": "Begge grundlag indgik i afgørelsen.",
+              "units": 5
+            },
+            {
+              "text": "Retten fandt, at overtrædelsen af artikel 11 og vedtægterne også var en tilsidesættelse af pligten til at overholde øvrige regler og vedtægter efter artikel 6, stk. 1, nr. 5.",
+              "units": 29
+            },
+            {
+              "text": "Da installationen heller ikke blev fjernet efter bestyrelsens forsøg på at løse sagen gennem et formelt brev, kunne bestyrelsen indbringe sagen for retten efter artikel 6, stk. 3.",
+              "units": 28
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "artikel",
+          "sentences": [
+            {
+              "text": "Artikel 6, stk. 1, nr. 4, handler også om ledninger og nødvendig brug af fællesdele.",
+              "units": 15
+            },
+            {
+              "text": "Retten fandt imidlertid, at den konkrete situation ikke faldt ind under denne bestemmelse.",
+              "units": 13
+            },
+            {
+              "text": "Dommens punkt 5 og 6 knytter vurderingen til arbejdets placering og vedtægterne, så resultatet kan ikke omskrives til én afstemningsprocedure for alle ladere på parkeringspladser.",
+              "units": 25
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "beboeren",
+          "sentences": [
+            {
+              "text": "Beboeren henviste også til en ny kontakt, ophørt brug, aflåsning og mulighed for at give nøglen til bestyrelsen.",
+              "units": 18
+            },
+            {
+              "text": "Retten fandt, at selv hvis disse oplysninger var rigtige, kunne de ikke ophæve pligten til fjernelse og retablering.",
+              "units": 18
+            },
+            {
+              "text": "Tilladelsen manglede stadig.",
+              "units": 3
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "parkeringsnummeret",
+          "sentences": [
+            {
+              "text": "Parkeringsnummeret viser ikke kabelruten.",
+              "units": 4
+            },
+            {
+              "text": "Installatøren kan tegne ladeboksens placering, ruten over vægge, søjler og loft og tilslutningen til eltavlen, så hver strækning kan sammenholdes med ejendomsoplysninger, vedtægter og tidligere beslutninger.",
+              "units": 26
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "hvad",
+          "sentences": [
+            {
+              "text": "Hvad har bestyrelsen faktisk sagt ja til?",
+              "units": 7
+            },
+            {
+              "text": "En ansøgning med beskrivelse af arbejdet gør det lettere at få afklaret, hvilken vedtægtsbestemmelse der gælder, om afgørelsen ligger hos bestyrelsen eller ejerforsamlingen, og hvilke oplysninger der mangler.",
+              "units": 28
+            },
+            {
+              "text": "Er en tilladelse allerede givet, kan rute, udstyr og vilkår sammenholdes med den version, installatøren vil udføre.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "kaohsiungs",
+          "sentences": [
+            {
+              "text": "Kaohsiungs offentliggjorte tilskudsordning af 29. maj 2026 omfattede kabelbakker til elbilopladning på fællesarealer i ejerlejlighedsejendomme.",
+              "units": 15
+            },
+            {
+              "text": "Den annoncerede frist var 30. september 2026 og er passeret.",
+              "units": 10
+            },
+            {
+              "text": "Tilskuddet vedrørte den fælles kabelføring og kan ikke læses som en individuel tilladelse til at købe og montere en lader hvor som helst.",
+              "units": 23
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "ved",
+          "sentences": [
+            {
+              "text": "Ved et krav om standsning eller fjernelse kan en første mail til kontoret beskrive uenigheden, de relevante vedtægtsbestemmelser og svarfristen.",
+              "units": 20
+            },
+            {
+              "text": "I en installationsaftale kan parterne også afklare, om arbejdet må begynde før tilladelsen, og hvem der betaler, hvis den ikke opnås.",
+              "units": 21
+            },
+            {
+              "text": "Det hjælper med at fordele udgifterne, mens kabelruten stadig er til behandling.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "kilderne",
+          "sentences": [
+            {
+              "text": "Kilderne er sammenholdt den 25.–26. oktober 2026.",
+              "units": 8
+            },
+            {
+              "text": "Beskrivelsen bygger på den konkrete dom fra Kaohsiung; et senere udfald eller dommens endelighed er ikke bekræftet.",
+              "units": 17
+            },
+            {
+              "text": "Andre ejendommes installationer, rettigheder og vedtægter skal vurderes særskilt.",
+              "units": 9
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Beboerens egen måler lå for enden af fælles installationer",
+        "Kabelruten bør kunne ses i installationsforslaget"
+      ],
+      "listItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d769c895e41942b7bab35c3a146a806f64c06ce4c02228985dbf2815f0a197d1",
+      "metrics": {
+        "lang": "da",
+        "sentences": 46,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.3,
+        "len_cv": 0.454,
+        "short_share": 0.239,
+        "long_share": 0.0,
+        "para_cv": 0.213,
+        "even_run3": 0.0,
+        "top_end": "tilbage",
+        "top_end_share": 0.043,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "efter",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.1,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Hvorfor udløste guldmønterne ingen tilbagebetaling?",
+        "last": "Kilderne er sammenholdt den 25.–26. oktober 2026. Artiklen behandler den konkrete taiwanske spilafgørelse og de aktuelle",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "hvorfor",
+          "sentences": [
+            {
+              "text": "Hvorfor udløste guldmønterne ingen tilbagebetaling?",
+              "units": 5
+            },
+            {
+              "text": "En spiller krævede NT$243.548 for kontoens resterende guldmønter, men fik ikke medhold.",
+              "units": 13
+            },
+            {
+              "text": "Parterne var enige om, at kontoen ikke længere indeholdt ubrugte købte point, selv om der var mønter tilbage.",
+              "units": 18
+            },
+            {
+              "text": "Dommen er gengivet i den officielle samling af forbrugerafgørelser, trykte sider 140–153.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "keelungs",
+          "sentences": [
+            {
+              "text": "Keelungs distriktsdomstol forkastede spillerens anke den 13. september 2021 i sag 109年度消簡上字第1號.",
+              "units": 12
+            },
+            {
+              "text": "Afgørelsen kunne ikke ankes videre.",
+              "units": 5
+            },
+            {
+              "text": "Retten undersøgte mønternes funktion og tilbagebetalingsvilkårene i netop dette spil; den udelukkede ikke alle virtuelle genstande fra forbrugerbeskyttelsen.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "efter",
+          "sentences": [
+            {
+              "text": "Efter aftalen købte spilleren point til spillets tjenester eller varer; de resterende guldmønter havde en anden funktion som jetoner i spil mod andre deltagere.",
+              "units": 24
+            },
+            {
+              "text": "Retten anså dem hverken for de ubrugte købte point, som aftalen gav ret til at få tilbagebetalt, eller for spilgebyrer opkrævet af udbyderen.",
+              "units": 23
+            },
+            {
+              "text": "De kunne derfor ikke omregnes til et tilsvarende kontant tilbagebetalingskrav.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "retten",
+          "sentences": [
+            {
+              "text": "Retten knyttede også muligheden for at veksle disse jetoner til kontanter hos udbyderen til spørgsmålet om pengespil.",
+              "units": 17
+            },
+            {
+              "text": "Begrundelsen angik denne spilleform.",
+              "units": 4
+            },
+            {
+              "text": "I et andet spil må det undersøges, hvordan mønterne opstår, hvad de kan bruges til, og om de er brugt; betegnelsen på skærmen giver ikke svaret.",
+              "units": 26
+            },
+            {
+              "text": "Dommens punkt 8 gennemgår spørgsmålet på trykte sider 148–152.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "aftalen",
+          "sentences": [
+            {
+              "text": "Aftalen var ophørt.",
+              "units": 3
+            },
+            {
+              "text": "Spilleren havde selv også meddelt sit ønske om at afslutte den, så retten kunne lægge ophøret til grund og vurdere de resterende mønter.",
+              "units": 23
+            },
+            {
+              "text": "Det indebærer ikke, at udbyderens tidligere begrundelser for spærring eller ophør alle blev anset for lovlige.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "efter",
+          "sentences": [
+            {
+              "text": "Efter punkt 18 i Taiwans aktuelle standardvilkår for onlinespil kan forbrugeren når som helst meddele udbyderen, at aftalen opsiges.",
+              "units": 19
+            },
+            {
+              "text": "Ubrugte købte point eller den ubrugte del af spilgebyrerne skal, efter fradrag af nødvendige omkostninger, tilbagebetales inden 30 dage efter aftalens ophør.",
+              "units": 22
+            },
+            {
+              "text": "Parterne kan i stedet blive enige om en anden håndtering.",
+              "units": 10
+            },
+            {
+              "text": "Udbyderens ensidige meddelelse er ikke en sådan aftale.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "fradraget",
+          "sentences": [
+            {
+              "text": "Fradraget skal kunne undersøges.",
+              "units": 4
+            },
+            {
+              "text": "Det er nyttigt at bede om en opdeling i ubrugt saldo, fradragne poster og beregningsgrundlag og derefter sammenholde den med kontrakten.",
+              "units": 21
+            },
+            {
+              "text": "En fast procentsats valgt af udbyderen er ikke alene bevis for, at beløbet er rimeligt.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "den",
+          "sentences": [
+            {
+              "text": "Den seneste ændring af de citerede standardvilkår trådte i kraft den 1. januar 2023, efter dommen fra 2021.",
+              "units": 18
+            },
+            {
+              "text": "Dommen blev afgjort efter datidens aftale og regler.",
+              "units": 8
+            },
+            {
+              "text": "De aktuelle vilkårs punkt 4 giver desuden ret til at fortryde skriftligt inden syv dage efter spillets begyndelse uden begrundelse eller omkostninger og kræve ubrugte købte point tilbagebetalt.",
+              "units": 28
+            },
+            {
+              "text": "Efter de syv dage består muligheden for opsigelse efter punkt 18.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "et",
+          "sentences": [
+            {
+              "text": "Et skærmbillede af saldoen viser sjældent hele vejen fra betaling til brug.",
+              "units": 12
+            },
+            {
+              "text": "Det kan være nødvendigt at skelne mellem de oprindeligt købte point, mønter opnået ved omveksling og det, der var tilbage efter spillet:",
+              "units": 22
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "udbyderen",
+          "sentences": [
+            {
+              "text": "Udbyderen skal opbevare den personlige spilhistorik i mindst 30 dage og udlevere den inden syv dage efter modtagelsen af en anmodning.",
+              "units": 21
+            },
+            {
+              "text": "Punkt 9 fastsætter dermed både en opbevaringsperiode og en svarfrist.",
+              "units": 10
+            },
+            {
+              "text": "Oplysningerne er ikke nødvendigvis tilgængelige ubegrænset.",
+              "units": 6
+            },
+            {
+              "text": "En tidlig anmodning kan mindske risikoen for, at kun det sidste skærmbillede er tilbage.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "punkt",
+          "sentences": [
+            {
+              "text": "Punkt 6 i de forbudte standardvilkår forbyder at aftale, at en tvist alene må afgøres efter udbyderens gemte historik og elektroniske data.",
+              "units": 22
+            },
+            {
+              "text": "Det gør spillerens egne betalingsbilag, skærmbilleder og fulde korrespondance med kundeservice relevante.",
+              "units": 12
+            },
+            {
+              "text": "Reglen gør ikke automatisk alle udbyderens data ugyldige.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "i",
+          "sentences": [
+            {
+              "text": "I statistikken offentliggjort den 7. maj 2026 lå onlinespil på andenpladsen blandt kategorier af forbrugerklager indgivet første gang i 2025.",
+              "units": 20
+            },
+            {
+              "text": "Antallet var faldet i forhold til året før.",
+              "units": 8
+            },
+            {
+              "text": "Myndigheden opfordrede samtidig udbyderne til at håndtere spærringer, suspensioner og kundeserviceklager ordentligt.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "en",
+          "sentences": [
+            {
+              "text": "En tilbagebetalingstvist kan først rejses over for udbyderen og derefter gennem myndighedernes klagesystem.",
+              "units": 13
+            },
+            {
+              "text": "Ved uenighed om kontraktens betydning eller afviste beviser kan en mail til kontoret angive tvistens emne og svarfristen; kontoens adgangskode er ikke nødvendig.",
+              "units": 23
+            },
+            {
+              "text": "Dokumentationen for det krævede beløb er forbindelsen mellem pengene, der blev indbetalt, de efterfølgende omvekslinger og den faktiske brug.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "kilderne",
+          "sentences": [
+            {
+              "text": "Kilderne er sammenholdt den 25.–26. oktober 2026.",
+              "units": 8
+            },
+            {
+              "text": "Artiklen behandler den konkrete taiwanske spilafgørelse og de aktuelle taiwanske standardvilkår.",
+              "units": 11
+            },
+            {
+              "text": "Andre spils valuta, genstande og ophørsgrunde må vurderes efter deres faktiske funktion og aftalen.",
+              "units": 14
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Købte point og jetoner havde forskellige funktioner",
+        "Opsigelse kan stadig give ret til tilbagebetaling",
+        "Betalingen skal kunne følges frem til saldoen"
+      ],
+      "listItems": []
+    }
+  ]
+}

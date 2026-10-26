@@ -1,0 +1,110 @@
+{
+  "at": "2026-10-25T18:19:51.773668+00:00",
+  "scope": "Parent approved M1/M2 and O1 only. O2 dates kept. Original author/freeze/review preserved.",
+  "changes": [
+    {
+      "id": "M1",
+      "required": true,
+      "file_id": "921",
+      "old": "Балансът в профила показва останали монети.",
+      "new": "Дава ли остатъкът от монети в профила право на връщане на пари?",
+      "reason": "Batch factual/result opening type4/6; reader refund question changes type without inventing facts.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "source_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "old_occurrences": 1,
+      "applied_old": "Балансът в профила показва останали монети.",
+      "applied_new": "Дава ли остатъкът от монети в профила право на връщане на пари?",
+      "character_offset_at_application": 1959
+    },
+    {
+      "id": "M2a",
+      "required": true,
+      "file_id": "921",
+      "old": "Сумата е поискана, не присъдена.",
+      "new": "Съдът не присъжда поисканата сума.",
+      "reason": "State court result directly; claim/award distinction preserved.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "source_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "old_occurrences": 1,
+      "applied_old": "Сумата е поискана, не присъдена.",
+      "applied_new": "Съдът не присъжда поисканата сума.",
+      "character_offset_at_application": 2403
+    },
+    {
+      "id": "M2b",
+      "required": true,
+      "file_id": "921",
+      "old": "Кой е прекратил договора и какво подлежи на връщане са отделни въпроси.",
+      "new": "В това дело съдът преценява искането за възстановяване според функцията на останалите монети.",
+      "reason": "Replace abstract separate-topic recap with case-specific refund basis; own termination and nonapproval of operator actions stay preceding.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "source_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "old_occurrences": 1,
+      "applied_old": "Кой е прекратил договора и какво подлежи на връщане са отделни въпроси.",
+      "applied_new": "В това дело съдът преценява искането за възстановяване според функцията на останалите монети.",
+      "character_offset_at_application": 2992
+    },
+    {
+      "id": "M2c",
+      "required": true,
+      "file_id": "921",
+      "old": "След изтичането му правото по клауза 18 за прекратяване по всяко време остава отделен въпрос. Двата реда не се смесват.",
+      "new": "След изтичането на седемдневния срок потребителят може да прекрати договора с уведомление по всяко време по клауза 18.",
+      "reason": "Preserve post-seven-day anytime notice right under clause18 while preceding clause4 withdrawal conditions stay intact.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "source_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "old_occurrences": 1,
+      "applied_old": "След изтичането му правото по клауза 18 за прекратяване по всяко време остава отделен въпрос. Двата реда не се смесват.",
+      "applied_new": "След изтичането на седемдневния срок потребителят може да прекрати договора с уведомление по всяко време по клауза 18.",
+      "character_offset_at_application": 4748
+    },
+    {
+      "id": "M2d",
+      "required": true,
+      "file_id": "921",
+      "old": "Това са различни срокове с различни начални моменти.",
+      "new": "",
+      "reason": "Remove only abstract recap. Preceding complete sentence preserves storage minimum30days and delivery7days from receipt.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "source_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "old_occurrences": 1,
+      "applied_old": "Това са различни срокове с различни начални моменти. ",
+      "applied_new": "",
+      "character_offset_at_application": 5220
+    },
+    {
+      "id": "O1",
+      "required": false,
+      "file_id": "916",
+      "old": "и възможна подкрепа за частно американско финансиране при спазване на приложимото право.",
+      "new": "и възможна подкрепа от САЩ за финансиране на частни инвестиции в Тайван при спазване на приложимото право.",
+      "reason": "Clarify US support actor and Taiwan investment destination; keep conditional support/currentlaw qualification.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "source_sha256": "f161ce0b785f0fd8bdaeb7b25fcb71e48243930b5cbddfabcd0c9f61aef2fcb5",
+      "old_occurrences": 1,
+      "applied_old": "и възможна подкрепа за частно американско финансиране при спазване на приложимото право.",
+      "applied_new": "и възможна подкрепа от САЩ за финансиране на частни инвестиции в Тайван при спазване на приложимото право.",
+      "character_offset_at_application": 5949
+    }
+  ],
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "before_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "after_sha256": "a7e85faf8bd43c50827620fbc8e3e92e1b7eb18b825254bd4ca98fb712392013",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-r1-before/921-taiwan-online-game-coins-refund-judgment.md",
+      "reverse_exact": true,
+      "frontmatter_and_FAQ_unchanged": true,
+      "all_link_values_order_unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "before_sha256": "f161ce0b785f0fd8bdaeb7b25fcb71e48243930b5cbddfabcd0c9f61aef2fcb5",
+      "after_sha256": "cb3f84123bfd34d8c9587088875d7b7820e630afa5621c4e3a0fe6245f151cfa",
+      "backup": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-r1-before/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "reverse_exact": true,
+      "frontmatter_and_FAQ_unchanged": true,
+      "all_link_values_order_unchanged": true
+    }
+  ]
+}

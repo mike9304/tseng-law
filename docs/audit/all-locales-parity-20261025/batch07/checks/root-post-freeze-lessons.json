@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-25T18:11:39.043983+00:00",
+  "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+  "sha256": "9d3af531126f65057fa1ceea9785b6464e512c80ce25d922e822e01438e70486",
+  "rootReadFull": true,
+  "previousSha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f",
+  "source": "03:05 scheduled rules-only rebuild; 25 recurring lessons and examples read.",
+  "effect": "Counts/examples refreshed; no new defect found in the current FA6 or DA6 from this lesson refresh. Pending independently selected textual edits remain separate. No claim of renewed reads of unchanged other rules."
+}

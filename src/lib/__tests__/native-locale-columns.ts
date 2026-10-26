@@ -1272,6 +1272,19 @@ export const CASE_TRANSLATION_COLUMN_FILES_20261026: Partial<Record<string, read
   hi: CASE_TRANSLATION_FILES_20261026,
   ms: CASE_TRANSLATION_FILES_20261026,
   ru: CASE_TRANSLATION_FILES_20261026,
+  bg: CASE_TRANSLATION_FILES_20261026,
+  bn: CASE_TRANSLATION_FILES_20261026,
+  ca: CASE_TRANSLATION_FILES_20261026,
+  da: CASE_TRANSLATION_FILES_20261026,
+  el: CASE_TRANSLATION_FILES_20261026,
+  et: CASE_TRANSLATION_FILES_20261026,
+  fa: CASE_TRANSLATION_FILES_20261026,
+};
+
+// These case locales already have ARC articles with later dates than the original ARC batch.
+const CASE_LOCALE_ARC_PUBLICATION_DATES: Partial<Record<string, string>> = {
+  bg: '2026-10-26', bn: '2026-10-26', ca: '2026-10-26', da: '2026-10-25',
+  el: '2026-10-26', et: '2026-10-26', fa: '2026-10-26',
 };
 
 /** Country-specific market expansion, two original articles per selected locale. */
@@ -1427,16 +1440,18 @@ export function expertiseSlugsFor(locale: string): string[] {
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
   const day20261026: readonly string[] = [
+    ...(CASE_LOCALE_ARC_PUBLICATION_DATES[locale] === '2026-10-26' ? ARC_VISA_FILES_20261024 : []),
     ...(CASE_TRANSLATION_COLUMN_FILES_20261026[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261026 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...(taxAccountingFilesPublishedOn('2026-10-26')[locale] ?? []),
   ];
   const day20261025: readonly string[] = [
+    ...(CASE_LOCALE_ARC_PUBLICATION_DATES[locale] === '2026-10-25' ? ARC_VISA_FILES_20261024 : []),
     ...((CASE_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((MARKET_EXPANSION_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ];
   const day20261024: readonly string[] = [
-    ...(ARC_VISA_COLUMN_FILES_20261024[locale] ?? []),
+    ...(CASE_LOCALE_ARC_PUBLICATION_DATES[locale] ? [] : ARC_VISA_COLUMN_FILES_20261024[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261024 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ];
   const day20261023: readonly string[] = [
@@ -1521,7 +1536,7 @@ export function archiveLeadPublicationDate(slug: string, locale: string): string
   if (day20261026.includes(slug)) return '2026-10-26';
   if (Object.values(CASE_COLUMN_FILES_20261025).flat().map(slugOf).includes(slug)) return '2026-10-25';
   if (Object.values(MARKET_EXPANSION_COLUMN_FILES_20261025).flat().map(slugOf).includes(slug)) return '2026-10-25';
-  if (ARC_VISA_FILES_20261024.map(slugOf).includes(slug)) return '2026-10-24';
+  if (ARC_VISA_FILES_20261024.map(slugOf).includes(slug)) return CASE_LOCALE_ARC_PUBLICATION_DATES[locale] ?? '2026-10-24';
   if (Object.values(COUNTRY_COLUMN_FILES_20261024).flat().map(slugOf).includes(slug)) return '2026-10-24';
   if (Object.values(COUNTRY_COLUMN_FILES_20261023).flat().map(slugOf).includes(slug)) return '2026-10-23';
   const day20261022 = [...Object.values(COUNTRY_COLUMN_FILES_20261022), ...Object.values(taxAccountingFilesPublishedOn('2026-10-22')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf);

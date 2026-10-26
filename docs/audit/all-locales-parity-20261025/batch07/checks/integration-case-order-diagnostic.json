@@ -1,0 +1,105 @@
+{
+  "reason": "The same-day source-number tie-break places October26 ARC704–706 before case915–921 for six B7 locales. DA ARC remains October25. Original assumption all cases lead every newly-added locale was invalid.",
+  "observedARC": {
+    "bg": [
+      {
+        "file": "src/content/columns-bg/704-taiwan-arc-first-application.md",
+        "published": "\"2026-10-26\""
+      },
+      {
+        "file": "src/content/columns-bg/705-taiwan-visa-residence-work-study-family.md",
+        "published": "\"2026-10-26\""
+      },
+      {
+        "file": "src/content/columns-bg/706-taiwan-arc-renewal-changes-reentry.md",
+        "published": "\"2026-10-26\""
+      }
+    ],
+    "bn": [
+      {
+        "file": "src/content/columns-bn/704-taiwan-arc-first-application.md",
+        "published": "\"2026-10-26\""
+      },
+      {
+        "file": "src/content/columns-bn/705-taiwan-visa-residence-work-study-family.md",
+        "published": "\"2026-10-26\""
+      },
+      {
+        "file": "src/content/columns-bn/706-taiwan-arc-renewal-changes-reentry.md",
+        "published": "\"2026-10-26\""
+      }
+    ],
+    "ca": [
+      {
+        "file": "src/content/columns-ca/704-taiwan-arc-first-application.md",
+        "published": "\"2026-10-26\""
+      },
+      {
+        "file": "src/content/columns-ca/705-taiwan-visa-residence-work-study-family.md",
+        "published": "\"2026-10-26\""
+      },
+      {
+        "file": "src/content/columns-ca/706-taiwan-arc-renewal-changes-reentry.md",
+        "published": "\"2026-10-26\""
+      }
+    ],
+    "da": [
+      {
+        "file": "src/content/columns-da/704-taiwan-arc-first-application.md",
+        "published": "\"2026-10-25\""
+      },
+      {
+        "file": "src/content/columns-da/705-taiwan-visa-residence-work-study-family.md",
+        "published": "\"2026-10-25\""
+      },
+      {
+        "file": "src/content/columns-da/706-taiwan-arc-renewal-changes-reentry.md",
+        "published": "\"2026-10-25\""
+      }
+    ],
+    "el": [
+      {
+        "file": "src/content/columns-el/704-taiwan-arc-first-application.md",
+        "published": "\"2026-10-26\""
+      },
+      {
+        "file": "src/content/columns-el/705-taiwan-visa-residence-work-study-family.md",
+        "published": "\"2026-10-26\""
+      },
+      {
+        "file": "src/content/columns-el/706-taiwan-arc-renewal-changes-reentry.md",
+        "published": "\"2026-10-26\""
+      }
+    ],
+    "et": [
+      {
+        "file": "src/content/columns-et/704-taiwan-arc-first-application.md",
+        "published": "\"2026-10-26\""
+      },
+      {
+        "file": "src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+        "published": "\"2026-10-26\""
+      },
+      {
+        "file": "src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+        "published": "\"2026-10-26\""
+      }
+    ],
+    "fa": [
+      {
+        "file": "src/content/columns-fa/704-taiwan-arc-first-application.md",
+        "published": "\"2026-10-26\""
+      },
+      {
+        "file": "src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md",
+        "published": "\"2026-10-26\""
+      },
+      {
+        "file": "src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+        "published": "\"2026-10-26\""
+      }
+    ]
+  },
+  "originalFailures": 6,
+  "runtimeOrArticleChangeRequired": false
+}

@@ -1,0 +1,90 @@
+{
+  "atUTC": "2026-10-25T18:25:45.054387+00:00",
+  "status": "PREVIOUS_FINDINGS_CLOSED_NEW_M03_REQUIRED",
+  "unresolvedMust": 1,
+  "outputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/et-independent-r2.md",
+      "sha256": "bcb5bc0efbbe2f756a7cf38532e2f8f9e46486b09989ff28e7fbd920b9f97ba6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/et-independent-r2-checks.json",
+      "sha256": "03f2ae7bb1498970ee7c8c194769e7412914af033f59f9db0ca2db14a868ea69"
+    }
+  ],
+  "manuscripts": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "71965945cfaaa67695b54df22fff330e988a96a64f8b1416e7be00df3f13ebb2",
+      "r1SHA": "534cd48a07b129dc51a55a0697bd93e41ee4f48bf61b190bdd0c30a8d1f828a6",
+      "exactReverseRestoresR1": true,
+      "changes": 1,
+      "bodyIdentical": true,
+      "frontmatterIdentical": false,
+      "faqBytesIdentical": true,
+      "URLSequenceIdentical": true,
+      "digitSequenceIdentical": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "d82fd20cc58e146613730221dacd28948a3f2b1aa92177ce8a916accf8a0b12f",
+      "r1SHA": "d82fd20cc58e146613730221dacd28948a3f2b1aa92177ce8a916accf8a0b12f",
+      "exactReverseRestoresR1": true,
+      "changes": 0,
+      "bodyIdentical": true,
+      "frontmatterIdentical": true,
+      "faqBytesIdentical": true,
+      "URLSequenceIdentical": true,
+      "digitSequenceIdentical": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "7e59a55f865bc4b3617c5d12371546be42aade935b4ab9fa6a775177ea6bcc49",
+      "r1SHA": "f2c94dacfac2769b7950c6063569d6e1da83bf8e6e78034cc7caad963308e9db",
+      "exactReverseRestoresR1": true,
+      "changes": 1,
+      "bodyIdentical": false,
+      "frontmatterIdentical": true,
+      "faqBytesIdentical": true,
+      "URLSequenceIdentical": true,
+      "digitSequenceIdentical": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "da1ba752fc6193222b844e5be491cb382ab55f49b3a714b49b27b5849825c3aa",
+      "r1SHA": "da1ba752fc6193222b844e5be491cb382ab55f49b3a714b49b27b5849825c3aa",
+      "exactReverseRestoresR1": true,
+      "changes": 0,
+      "bodyIdentical": true,
+      "frontmatterIdentical": true,
+      "faqBytesIdentical": true,
+      "URLSequenceIdentical": true,
+      "digitSequenceIdentical": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "cc59c5a7212683e20fcdf9fbccdf686ceb870db8de7447303dc4c04c74a8028a",
+      "r1SHA": "afac76c9b48c610c9e0d6a30956340c076bbe373cc41341051d9830eb47e5479",
+      "exactReverseRestoresR1": true,
+      "changes": 2,
+      "bodyIdentical": false,
+      "frontmatterIdentical": true,
+      "faqBytesIdentical": true,
+      "URLSequenceIdentical": true,
+      "digitSequenceIdentical": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "e058c5964d75cfad256f5fd99b6c474b9acbd80408a5e06229652116e3d38094",
+      "r1SHA": "e058c5964d75cfad256f5fd99b6c474b9acbd80408a5e06229652116e3d38094",
+      "exactReverseRestoresR1": true,
+      "changes": 0,
+      "bodyIdentical": true,
+      "frontmatterIdentical": true,
+      "faqBytesIdentical": true,
+      "URLSequenceIdentical": true,
+      "digitSequenceIdentical": true
+    }
+  ],
+  "authorManifestSHA": "82bf4c8629c74a6cb45cf32cb342de558debb2fe8fce1e06a4a378b78d88c01c"
+}

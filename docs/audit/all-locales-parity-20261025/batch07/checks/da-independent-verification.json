@@ -1,0 +1,717 @@
+{
+  "at": "2026-10-25T18:05:09.788192+00:00",
+  "reviewer": "root",
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "f0350644b9a9a644a26f7c3cce16a2009651f083ea7b2ff92ea6687d7d6e706c",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sourceSha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "varietyEvidence": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/da-variety-r1.json",
+      "varietyEvidenceSha256": "2754ca3d82a449b88425215d3aeaad43b58316ae1133c9d71df289a9085a90e8",
+      "evidenceBatchExitCode": 1,
+      "currentExtractionMatches": true,
+      "sentences": 38,
+      "metrics": {
+        "lang": "da",
+        "sentences": 38,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.8,
+        "len_cv": 0.45,
+        "short_share": 0.184,
+        "long_share": 0.026,
+        "para_cv": 0.315,
+        "even_run3": 0.083,
+        "top_end": "krav",
+        "top_end_share": 0.053,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "nt",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.231,
+        "cite_end_share": 0.0,
+        "contrast": 1,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.65,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "NT$44.417.150 var beløbet i en voldgiftskendelse til fordel for en entreprenør på et taiwa",
+        "last": "Kildegrundlaget er rettens officielle forklaring tilgået den 25. oktober 2026 samt aktuelle lovtekster og den daterede a",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "faqCount": 2,
+      "sourceOfficialURLs": 4,
+      "missingSourceURLs": [],
+      "metadataVerified": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "e84f9c194992ef65dfccf4d7b4ecde21adb0fc4f6072d27e560502aa73070b91",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sourceSha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "varietyEvidence": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/da-variety-r1.json",
+      "varietyEvidenceSha256": "2754ca3d82a449b88425215d3aeaad43b58316ae1133c9d71df289a9085a90e8",
+      "evidenceBatchExitCode": 1,
+      "currentExtractionMatches": true,
+      "sentences": 45,
+      "metrics": {
+        "lang": "da",
+        "sentences": 45,
+        "paras": 14,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 15.6,
+        "len_cv": 0.476,
+        "short_share": 0.222,
+        "long_share": 0.022,
+        "para_cv": 0.181,
+        "even_run3": 0.023,
+        "top_end": "identitet",
+        "top_end_share": 0.044,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "en",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 1,
+        "cite_para_share": 0.071,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.28,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "En miljøundersøgelse før et virksomhedskøb blev senere en del af beviserne mod moderselska",
+        "last": "Kildegrundlaget er Højesterets forklaring tilgået den 25. oktober 2026 og den aktuelle lovbestemmelse og det daterede US",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "faqCount": 3,
+      "sourceOfficialURLs": 3,
+      "missingSourceURLs": [],
+      "metadataVerified": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "793d7791f755e82fd4e2e9f40bead2f5b7c7a17ea9004129b90938d19d7a0ab5",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sourceSha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "varietyEvidence": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/da-variety-r2.json",
+      "varietyEvidenceSha256": "fcdd55037031e3338ac77fade583ed59981939b31b61fc5cb09ddcb11195ed23",
+      "evidenceBatchExitCode": 0,
+      "currentExtractionMatches": true,
+      "sentences": 43,
+      "metrics": {
+        "lang": "da",
+        "sentences": 43,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.8,
+        "len_cv": 0.467,
+        "short_share": 0.233,
+        "long_share": 0.0,
+        "para_cv": 0.182,
+        "even_run3": 0.0,
+        "top_end": "overdragelse",
+        "top_end_share": 0.07,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "i",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.77,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Vand og strøm var endnu ikke tilsluttet, da bygherren i februar skrev til køberne om bolig",
+        "last": "Kilderne er sammenholdt den 25.–26. oktober 2026. Sagen beroede på den konkrete kontrakt og opfyldelsesforløbet; artikle",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "faqCount": 3,
+      "sourceOfficialURLs": 4,
+      "missingSourceURLs": [],
+      "metadataVerified": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "733c4ffb57a6f4c77dab0f149d7e2f5b44a0a9a5c9972567bd66e6d132242063",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sourceSha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "varietyEvidence": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/da-variety-r1.json",
+      "varietyEvidenceSha256": "2754ca3d82a449b88425215d3aeaad43b58316ae1133c9d71df289a9085a90e8",
+      "evidenceBatchExitCode": 1,
+      "currentExtractionMatches": true,
+      "sentences": 42,
+      "metrics": {
+        "lang": "da",
+        "sentences": 42,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.8,
+        "len_cv": 0.47,
+        "short_share": 0.214,
+        "long_share": 0.024,
+        "para_cv": 0.234,
+        "even_run3": 0.05,
+        "top_end": "resultatet",
+        "top_end_share": 0.048,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "den",
+        "top_opener_n": 2,
+        "opener_rep": 0.077,
+        "consec_same_start": 2,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.66,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Sanktionen var meldt ud, før udvalget havde behandlet sagen.",
+        "last": "Sagsfremstillingen bygger på rettens offentlige forklaring tilgået den 25. oktober 2026; de aktuelle regler er sammenhol",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "faqCount": 3,
+      "sourceOfficialURLs": 4,
+      "missingSourceURLs": [],
+      "metadataVerified": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "1c0bed7a12c7d725a915e7fa72626fc490f4149749edf48f3f7dce5281c8e32f",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sourceSha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "varietyEvidence": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/da-variety-r1.json",
+      "varietyEvidenceSha256": "2754ca3d82a449b88425215d3aeaad43b58316ae1133c9d71df289a9085a90e8",
+      "evidenceBatchExitCode": 1,
+      "currentExtractionMatches": true,
+      "sentences": 37,
+      "metrics": {
+        "lang": "da",
+        "sentences": 37,
+        "paras": 12,
+        "heads": 2,
+        "list_items": 0,
+        "mean_len": 15.2,
+        "len_cv": 0.484,
+        "short_share": 0.243,
+        "long_share": 0.0,
+        "para_cv": 0.217,
+        "even_run3": 0.029,
+        "top_end": "anlæg",
+        "top_end_share": 0.054,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "ledningerne",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.333,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.28,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Ledningerne gik fra væggen bag parkeringspladsen op under loftet og videre til den fælles ",
+        "last": "Kilderne er sammenholdt den 25.–26. oktober 2026. Beskrivelsen bygger på den konkrete dom fra Kaohsiung; et senere udfal",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "faqCount": 3,
+      "sourceOfficialURLs": 4,
+      "missingSourceURLs": [],
+      "metadataVerified": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-da/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "63f99210d7a75b030a17ab20b237d5d735693c5eeda8b4d8d6ebafdee5e261fe",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sourceSha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "varietyEvidence": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/da-variety-r2.json",
+      "varietyEvidenceSha256": "fcdd55037031e3338ac77fade583ed59981939b31b61fc5cb09ddcb11195ed23",
+      "evidenceBatchExitCode": 0,
+      "currentExtractionMatches": true,
+      "sentences": 46,
+      "metrics": {
+        "lang": "da",
+        "sentences": 46,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.3,
+        "len_cv": 0.454,
+        "short_share": 0.239,
+        "long_share": 0.0,
+        "para_cv": 0.211,
+        "even_run3": 0.0,
+        "top_end": "tilbage",
+        "top_end_share": 0.043,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "efter",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.11,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Hvorfor udløste guldmønterne ingen tilbagebetaling?",
+        "last": "Kilderne er sammenholdt den 25.–26. oktober 2026. Artiklen behandler den konkrete taiwanske spilafgørelse og de aktuelle",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "faqCount": 3,
+      "sourceOfficialURLs": 4,
+      "missingSourceURLs": [],
+      "metadataVerified": true
+    }
+  ],
+  "authorManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/da-author-final-manifest.json",
+    "sha256": "248eb0e1ba022275adaf370873af3563d8db3a7a6216f660fb15237546284ff0"
+  },
+  "authorReport": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/da-author.md",
+    "sha256": "d79876cbe34c3a1cce51478cd48c7d3399d01313faebeb23d3946aec302e090d"
+  },
+  "recentThree": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-da/704-taiwan-arc-first-application.md",
+      "sha256": "c94d3cddab3ab1a3707449cf98e251392cca9d6b1d640f1603ac16f8c7deac2e"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-da/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "01ca9fe806e56bb377be8374e83c97ed39849f7e7d238e106991bc4026b461e9"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-da/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "97c908a410527c336c7387aa5f153f3fcf2ef58e871ebedbf22f7f020cb512df"
+    }
+  ],
+  "fullManuscriptsRead": 6,
+  "faqRead": 17,
+  "sharedCLIRepeated": false,
+  "freshExtractionCompared": 251,
+  "criticalBoundaryCount": 62,
+  "criticals": [
+    {
+      "id": 915,
+      "paragraph": 1,
+      "text": "NT$44.417.150 var beløbet i en voldgiftskendelse til fordel for en entreprenør på et taiwansk hospitalsbyggeri.",
+      "units": 16
+    },
+    {
+      "id": 915,
+      "paragraph": 1,
+      "text": "Netop dette hul i forløbet fremgår af Taiwans højesterets forklaring til sag 106年度台上字第723號.",
+      "units": 13
+    },
+    {
+      "id": 915,
+      "paragraph": 2,
+      "text": "Højesteret forkastede entreprenørens anke den 12. juli 2017, så tilsidesættelsen blev opretholdt.",
+      "units": 12
+    },
+    {
+      "id": 915,
+      "paragraph": 5,
+      "text": "Efter artikel 85-1 i Taiwans lov om offentlige indkøb kan tvister om kontraktopfyldelse indbringes for det offentlige indkøbsklagenævn med henblik på mægling.",
+      "units": 23
+    },
+    {
+      "id": 915,
+      "paragraph": 6,
+      "text": "Den anvendte voldgiftslovens artikel 40, stk. 1, nr. 2 om manglende voldgiftsaftale som grundlag for at tilsidesætte kendelsen.",
+      "units": 18
+    },
+    {
+      "id": 915,
+      "paragraph": 7,
+      "text": "Den aktuelle artikel 85-1 omfatter byggearbejder og tekniske tjenesteydelser i denne særlige adgang til voldgift.",
+      "units": 16
+    },
+    {
+      "id": 915,
+      "paragraph": 8,
+      "text": "Den amerikanske International Trade Administration beskrev i sin energirapport af 30. september 2026 forventede taiwanske indkøb til elproduktion og elnet i slutningen af 2026 og i 2027, herunder muligheder for amerikanske leverandører.",
+      "units": 32
+    },
+    {
+      "id": 915,
+      "paragraph": 11,
+      "text": "Dommen fra 2017 angik det dokumenterede skift mellem fristforlængelse og økonomisk kompensation, så vurderingen kræver de faktiske omstændigheder og den ønskede afgørelse.",
+      "units": 22
+    },
+    {
+      "id": 915,
+      "paragraph": 13,
+      "text": "Kildegrundlaget er rettens officielle forklaring tilgået den 25. oktober 2026 samt aktuelle lovtekster og den daterede amerikanske rapport sammenholdt den 26. oktober.",
+      "units": 22
+    },
+    {
+      "id": 916,
+      "paragraph": 1,
+      "text": "Rettens forklaring til sag 107年度台上字第267號 viser, at også beslutningerne efter rapportens levering havde betydning.",
+      "units": 14
+    },
+    {
+      "id": 916,
+      "paragraph": 2,
+      "text": "Dommen blev afsagt den 16. august 2018.",
+      "units": 7
+    },
+    {
+      "id": 916,
+      "paragraph": 6,
+      "text": "For 246 sagsøgere ophævede Højesteret de relevante dele og hjemviste dem til fortsat behandling.",
+      "units": 14
+    },
+    {
+      "id": 916,
+      "paragraph": 6,
+      "text": "Ankerne vedrørende 262 sagsøgere blev forkastet.",
+      "units": 6
+    },
+    {
+      "id": 916,
+      "paragraph": 7,
+      "text": "De forkastede anker må heller ikke beskrives som afvisning af de 262 personers oprindelige erstatningskrav.",
+      "units": 15
+    },
+    {
+      "id": 916,
+      "paragraph": 8,
+      "text": "Efter artikel 154, stk. 1, i Taiwans selskabslov er aktionærens ansvar over for selskabet som udgangspunkt begrænset til betaling for aktierne.",
+      "units": 21
+    },
+    {
+      "id": 916,
+      "paragraph": 8,
+      "text": "Stk. 2 giver en undtagelse, når en aktionær misbruger selskabets juridiske personlighed og derved påfører det en bestemt gæld, som det klart har vanskeligt ved at tilbagebetale, og omstændighederne er så alvorlige, at aktionærens hæftelse er nødvendig.",
+      "units": 37
+    },
+    {
+      "id": 916,
+      "paragraph": 9,
+      "text": "Den aktuelle bestemmelse er heller ikke alene en forklaring på rettens vurdering af den historiske adfærd i 2018-sagen.",
+      "units": 18
+    },
+    {
+      "id": 916,
+      "paragraph": 11,
+      "text": "Det amerikanske handelskontor USTR beskrev i sit faktaark fra februar 2026 parternes hensigt om at fremme grænseoverskridende investeringer.",
+      "units": 18
+    },
+    {
+      "id": 916,
+      "paragraph": 14,
+      "text": "Kildegrundlaget er Højesterets forklaring tilgået den 25. oktober 2026 og den aktuelle lovbestemmelse og det daterede USTR-materiale sammenholdt den 26. oktober.",
+      "units": 21
+    },
+    {
+      "id": 916,
+      "paragraph": 14,
+      "text": "Artiklen vedrører den identificerede dom fra 2018, ikke alle tilknyttede retssager eller en bestemt investors ansvar.",
+      "units": 16
+    },
+    {
+      "id": 918,
+      "paragraph": 1,
+      "text": "Forløbet findes i den officielle samling af forbrugerafgørelser, trykte sider 173–187.",
+      "units": 12
+    },
+    {
+      "id": 918,
+      "paragraph": 2,
+      "text": "Sagen var 109年度上易字第289號 ved Taiwans landsret, afdelingen i Taichung.",
+      "units": 9
+    },
+    {
+      "id": 918,
+      "paragraph": 2,
+      "text": "Den 9. februar 2022 forkastede retten bygherrens anke og afviste det yderligere krav, så pligten til at betale renter for forsinkelsen blev opretholdt.",
+      "units": 23
+    },
+    {
+      "id": 918,
+      "paragraph": 3,
+      "text": "Brevet af 23. februar 2019 bad køberne kontakte banken og oplyse lånesagens status.",
+      "units": 13
+    },
+    {
+      "id": 918,
+      "paragraph": 4,
+      "text": "Banken overførte lånebeløbet til bygherren den 5. november.",
+      "units": 8
+    },
+    {
+      "id": 918,
+      "paragraph": 4,
+      "text": "Parternes garantidokument angav derimod den 28. november som overdragelsesdato.",
+      "units": 9
+    },
+    {
+      "id": 918,
+      "paragraph": 4,
+      "text": "Dommens begrundelse, punkt 4, gennemgår materialet på trykte sider 182–186.",
+      "units": 11
+    },
+    {
+      "id": 918,
+      "paragraph": 6,
+      "text": "De aktuelle obligatoriske standardvilkår for salg af boliger før færdiggørelse, punkt 15, kræver meddelelse til køberen om overdragelse inden seks måneder efter, at sælgeren har modtaget ibrugtagningstilladelsen.",
+      "units": 27
+    },
+    {
+      "id": 918,
+      "paragraph": 7,
+      "text": "Sammenligningen med dagens regler foretages her i artiklen; retten fra 2022 tog stilling til den daværende kontrakt og sagens dokumenter.",
+      "units": 20
+    },
+    {
+      "id": 918,
+      "paragraph": 9,
+      "text": "Punkt 14 i de aktuelle vilkår omfatter lånedokumenter, medvirken til de relevante formaliteter og betalinger før registrering af ejerskiftet.",
+      "units": 19
+    },
+    {
+      "id": 918,
+      "paragraph": 10,
+      "text": "I en officiel kontraktkontrol offentliggjort den 25. august 2025 blev det udpeget som en overtrædelse at holde tiden til bankens lånekontrol og udbetaling uden for beregningen af overdragelsesmeddelelsens frist.",
+      "units": 29
+    },
+    {
+      "id": 918,
+      "paragraph": 11,
+      "text": "De seneste ændringer af centralbankens regler om lån med pant i fast ejendom trådte i kraft den 18. september 2026.",
+      "units": 20
+    },
+    {
+      "id": 918,
+      "paragraph": 11,
+      "text": "Ændringerne anvendes ikke her som grundlag for begivenhederne i 2019.",
+      "units": 10
+    },
+    {
+      "id": 918,
+      "paragraph": 14,
+      "text": "Kilderne er sammenholdt den 25.–26. oktober 2026.",
+      "units": 8
+    },
+    {
+      "id": 919,
+      "paragraph": 2,
+      "text": "Dommen er 114年度訴字第869號, afsagt den 3. september 2026 af domstolens afdeling for højere forvaltningsretlige sager.",
+      "units": 15
+    },
+    {
+      "id": 919,
+      "paragraph": 6,
+      "text": "For private virksomheder omfatter det direkte lovgrundlag arbejdsmiljølovens nye bestemmelser, som trådte i kraft den 1. juli 2026, jf. lovens ændringshistorik og arbejdsmiljømyndighedens forklaring.",
+      "units": 24
+    },
+    {
+      "id": 919,
+      "paragraph": 7,
+      "text": "Artikel 22-2 i Taiwans arbejdsmiljølov kræver objektivitet, upartiskhed og en fair behandling af parterne ved undersøgelse eller mægling.",
+      "units": 19
+    },
+    {
+      "id": 919,
+      "paragraph": 13,
+      "text": "Sagsfremstillingen bygger på rettens offentlige forklaring tilgået den 25. oktober 2026; de aktuelle regler er sammenholdt den 26. oktober.",
+      "units": 19
+    },
+    {
+      "id": 920,
+      "paragraph": 2,
+      "text": "Taiwans landsret, afdelingen i Kaohsiung, forkastede den 22. juni 2022 beboerens anke i sag 111年度上字第132號.",
+      "units": 15
+    },
+    {
+      "id": 920,
+      "paragraph": 4,
+      "text": "Artikel 11 i Taiwans lov om administration af ejerlejlighedsejendomme kræver en beslutning på ejerforsamlingen ved nedrivning, større reparationer eller forbedringer af fællesdele og tilhørende anlæg.",
+      "units": 25
+    },
+    {
+      "id": 920,
+      "paragraph": 4,
+      "text": "Ejendommens egne vedtægter, artikel 15, krævede desuden bestyrelsens tilladelse og elselskabets sikkerhedskontrol ved tilføjelse af ledninger og kabelrør.",
+      "units": 18
+    },
+    {
+      "id": 920,
+      "paragraph": 5,
+      "text": "Retten fandt, at overtrædelsen af artikel 11 og vedtægterne også var en tilsidesættelse af pligten til at overholde øvrige regler og vedtægter efter artikel 6, stk. 1, nr. 5.",
+      "units": 29
+    },
+    {
+      "id": 920,
+      "paragraph": 5,
+      "text": "Da installationen heller ikke blev fjernet efter bestyrelsens forsøg på at løse sagen gennem et formelt brev, kunne bestyrelsen indbringe sagen for retten efter artikel 6, stk. 3.",
+      "units": 28
+    },
+    {
+      "id": 920,
+      "paragraph": 6,
+      "text": "Artikel 6, stk. 1, nr. 4, handler også om ledninger og nødvendig brug af fællesdele.",
+      "units": 15
+    },
+    {
+      "id": 920,
+      "paragraph": 6,
+      "text": "Dommens punkt 5 og 6 knytter vurderingen til arbejdets placering og vedtægterne, så resultatet kan ikke omskrives til én afstemningsprocedure for alle ladere på parkeringspladser.",
+      "units": 25
+    },
+    {
+      "id": 920,
+      "paragraph": 10,
+      "text": "Kaohsiungs offentliggjorte tilskudsordning af 29. maj 2026 omfattede kabelbakker til elbilopladning på fællesarealer i ejerlejlighedsejendomme.",
+      "units": 15
+    },
+    {
+      "id": 920,
+      "paragraph": 10,
+      "text": "Den annoncerede frist var 30. september 2026 og er passeret.",
+      "units": 10
+    },
+    {
+      "id": 920,
+      "paragraph": 12,
+      "text": "Kilderne er sammenholdt den 25.–26. oktober 2026.",
+      "units": 8
+    },
+    {
+      "id": 921,
+      "paragraph": 1,
+      "text": "En spiller krævede NT$243.548 for kontoens resterende guldmønter, men fik ikke medhold.",
+      "units": 13
+    },
+    {
+      "id": 921,
+      "paragraph": 1,
+      "text": "Dommen er gengivet i den officielle samling af forbrugerafgørelser, trykte sider 140–153.",
+      "units": 13
+    },
+    {
+      "id": 921,
+      "paragraph": 2,
+      "text": "Keelungs distriktsdomstol forkastede spillerens anke den 13. september 2021 i sag 109年度消簡上字第1號.",
+      "units": 12
+    },
+    {
+      "id": 921,
+      "paragraph": 4,
+      "text": "Dommens punkt 8 gennemgår spørgsmålet på trykte sider 148–152.",
+      "units": 10
+    },
+    {
+      "id": 921,
+      "paragraph": 6,
+      "text": "Efter punkt 18 i Taiwans aktuelle standardvilkår for onlinespil kan forbrugeren når som helst meddele udbyderen, at aftalen opsiges.",
+      "units": 19
+    },
+    {
+      "id": 921,
+      "paragraph": 6,
+      "text": "Ubrugte købte point eller den ubrugte del af spilgebyrerne skal, efter fradrag af nødvendige omkostninger, tilbagebetales inden 30 dage efter aftalens ophør.",
+      "units": 22
+    },
+    {
+      "id": 921,
+      "paragraph": 8,
+      "text": "Den seneste ændring af de citerede standardvilkår trådte i kraft den 1. januar 2023, efter dommen fra 2021.",
+      "units": 18
+    },
+    {
+      "id": 921,
+      "paragraph": 8,
+      "text": "De aktuelle vilkårs punkt 4 giver desuden ret til at fortryde skriftligt inden syv dage efter spillets begyndelse uden begrundelse eller omkostninger og kræve ubrugte købte point tilbagebetalt.",
+      "units": 28
+    },
+    {
+      "id": 921,
+      "paragraph": 8,
+      "text": "Efter de syv dage består muligheden for opsigelse efter punkt 18.",
+      "units": 11
+    },
+    {
+      "id": 921,
+      "paragraph": 10,
+      "text": "Udbyderen skal opbevare den personlige spilhistorik i mindst 30 dage og udlevere den inden syv dage efter modtagelsen af en anmodning.",
+      "units": 21
+    },
+    {
+      "id": 921,
+      "paragraph": 10,
+      "text": "Punkt 9 fastsætter dermed både en opbevaringsperiode og en svarfrist.",
+      "units": 10
+    },
+    {
+      "id": 921,
+      "paragraph": 11,
+      "text": "Punkt 6 i de forbudte standardvilkår forbyder at aftale, at en tvist alene må afgøres efter udbyderens gemte historik og elektroniske data.",
+      "units": 22
+    },
+    {
+      "id": 921,
+      "paragraph": 12,
+      "text": "I statistikken offentliggjort den 7. maj 2026 lå onlinespil på andenpladsen blandt kategorier af forbrugerklager på første trin i 2025.",
+      "units": 20
+    },
+    {
+      "id": 921,
+      "paragraph": 14,
+      "text": "Kilderne er sammenholdt den 25.–26. oktober 2026.",
+      "units": 8
+    }
+  ],
+  "independentFreshWebEvidence": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/da-independent-game-rules-web.json",
+  "changesMade": false,
+  "humanApproval": false,
+  "published": false
+}

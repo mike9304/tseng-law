@@ -1,0 +1,50 @@
+{
+  "mandatory": [],
+  "optional": [
+    {
+      "id": "S01",
+      "severity": "optional",
+      "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "line": 27,
+      "old": "مدیر با ثبت دو امتیاز منفیِ سنگین انضباطی از خدمت عزل شده بود.",
+      "new": "مدیر با ثبت دو امتیاز منفیِ سنگین انضباطی در یک نوبت، از خدمت عزل شده بود.",
+      "basis": "Retained official court explanation original L220/L225/L226: 一次記2大過; clarify one occasion without adding a foreign disciplinary rule"
+    },
+    {
+      "id": "S02",
+      "severity": "optional",
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "line": 31,
+      "old": "آسانسور داخل خانه نیز نصب نشده بود.",
+      "new": "نصب آسانسور داخل خانه نیز هنوز کامل نشده بود.",
+      "basis": "Canonical ZH918 line31 未裝好 and official selected PDF L5041@P194 未裝設完畢: incomplete installation, not necessarily never begun"
+    },
+    {
+      "id": "S03",
+      "severity": "optional",
+      "file": "921-taiwan-online-game-coins-refund-judgment.md",
+      "line": 2,
+      "old": "سکه در حساب مانده بود، پولی برنگشت؛ اختلاف بازپرداخت بازی آنلاین در تایوان",
+      "new": "سکه در حساب مانده بود، دادگاه بازپرداخت را نپذیرفت؛ اختلاف بازی آنلاین در تایوان",
+      "basis": "Tie headline to judicial refusal of refund claim; do not imply knowledge of every subsequent payment event"
+    },
+    {
+      "id": "S04",
+      "severity": "optional",
+      "file": "921-taiwan-online-game-coins-refund-judgment.md",
+      "line": 55,
+      "old": "مطابق مقررات، درخواست دسترسی را رسیدگی کند",
+      "new": "مطابق مقررات، به درخواست دسترسی رسیدگی کند",
+      "basis": "Persian verb/preposition collocation; keep retention/provision periods and obligations"
+    },
+    {
+      "id": "S05",
+      "severity": "optional",
+      "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "line": 49,
+      "old": "گزارش میان گفته، مدرک و نتیجه چه ارتباطی می‌گذارد؟",
+      "new": "پیوند میان گفته، مدرک و نتیجه در گزارش",
+      "basis": "Natural heading and less question-template stacking; no body/legal change required"
+    }
+  ]
+}

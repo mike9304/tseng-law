@@ -1,0 +1,247 @@
+{
+  "at": "2026-10-26T02:39:24.429393+09:00",
+  "locale": "ca",
+  "inputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/BRIEF.md",
+      "sha256": "f6c2579b6255705ece341a356d3a4d527ca74a869916785d51edb9c0f05ee1a8",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-freeze.json",
+      "sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/authoring-contract-draft.md",
+      "sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/six-source-facts.md",
+      "sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-register.md",
+      "sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/README.md",
+      "sha256": "a25bbd8007e62b6d6fc71f3b937652e589a65257d1c0e667cb36cf6005bb5b6d",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/AGENTS.md",
+      "sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/FRONTMATTER.md",
+      "sha256": "7a2590f33ba49c55f539f1fade51fed1290808352b16247445a714333593a364",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/919-case-trends-20261025.webp",
+      "sha256": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/921-case-trends-20261025.webp",
+      "sha256": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/920-case-trends-20261025.webp",
+      "sha256": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/918-case-trends-20261025.webp",
+      "sha256": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/915-case-trends-20261025.webp",
+      "sha256": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/916-case-trends-20261025.webp",
+      "sha256": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/zh919-court-explanation.txt",
+      "sha256": "d8480dde5b10a31620df258cf2a8d1040e8741fc386ae2b79ef39c55c44ea7d1",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/en915-court-explanation.txt",
+      "sha256": "210e5841b601c5f429979ffd6b418aee01783a78613791290d14ce3d589220d5",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/en916-court-explanation-lines24-40.txt",
+      "sha256": "47aa1634c01d5e037194f5aaf6389c8da43ddfe040c777c4044463d3d4f96e0e",
+      "readBasis": "Same continuous task full reading/direct image viewing preserved; exact SHA unchanged from B6 author input. Research canonical6/contract/register reread for CA drafting; not counted as new research."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/BRIEF.md",
+      "sha256": "8103ae1441fe0abbdb76362d6086a267014664f31997f5676b37c6962cfcd306",
+      "readBasis": "B7 BRIEF/profile/recent CA3 full text read; tooling/bundle metadata hash inspection only where applicable."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/bundle-manifest.json",
+      "sha256": "d56dfa2dd03c0e93c5f3576ee119c508f07daf24eb7412123aadc42e49bf3192",
+      "readBasis": "B7 BRIEF/profile/recent CA3 full text read; tooling/bundle metadata hash inspection only where applicable."
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/ca.json",
+      "sha256": "ff8b9474d63ab895cfcd4669fe3cf799045c03801107a1ded976c8e9b4b40822",
+      "readBasis": "B7 BRIEF/profile/recent CA3 full text read; tooling/bundle metadata hash inspection only where applicable."
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+      "readBasis": "B7 BRIEF/profile/recent CA3 full text read; tooling/bundle metadata hash inspection only where applicable."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/content-audit.mjs",
+      "sha256": "3926a274bf544fed7e34339aa8b2636d41a4be79c0aaff898f46fc65595faf4b",
+      "readBasis": "B7 BRIEF/profile/recent CA3 full text read; tooling/bundle metadata hash inspection only where applicable."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/704-taiwan-arc-first-application.md",
+      "sha256": "5afa4da34df2bfb0ba4f5d4f47bf6db8b63622c0e2525b39eefa30e7cea8e7e2",
+      "readBasis": "B7 BRIEF/profile/recent CA3 full text read; tooling/bundle metadata hash inspection only where applicable."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "dd447d258158bea56a10a73634663adc7008a3d2057e36eae99b087521dd646f",
+      "readBasis": "B7 BRIEF/profile/recent CA3 full text read; tooling/bundle metadata hash inspection only where applicable."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "000a6605ef491108da625e2060c563ee42a59bfec83680ea6fc695060f5e86b7",
+      "readBasis": "B7 BRIEF/profile/recent CA3 full text read; tooling/bundle metadata hash inspection only where applicable."
+    }
+  ],
+  "canonicalLiveRMatchesFrozen": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sourceLocale": "zh-hant"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sourceLocale": "zh-hant"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sourceLocale": "zh-hant"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sourceLocale": "zh-hant"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sourceLocale": "en"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sourceLocale": "en"
+    }
+  ],
+  "recentSelection": "Current R published descending, numeric ID descending tie break: 706/705/704 published 2026-10-26. 854/853/852 are older 2026-10-24; not substituted by higher numeric ID.",
+  "unavailable": [
+    {
+      "path": "/Users/son7/agent-library/knowledge/editorial-voice.md",
+      "exists": false,
+      "fallback": "R/docs/columns/EDITORIAL-VOICE.md per B7 BRIEF"
+    }
+  ],
+  "newTargetPathsVerifiedAbsent": [
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/921-taiwan-online-game-coins-refund-judgment.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/916-taiwan-parent-company-pollution-liability-us-investor.md"
+  ],
+  "existingInternalLink": {
+    "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/004-taiwan-company-subsidiary-vs-branch.md",
+    "sha256": "3346af64eb2b1c3aa2625f7239f5074c508050664f349950dbf63cd642930e7c",
+    "scope": "Filename/existence only, not whole-body reading claimed."
+  },
+  "imageReadBasis": "Same six actual webp images opened by this author during B6; SHA unchanged, not claiming another agent view as mine.",
+  "sourceLimit": "Frozen B6 actual official reads reused. No fresh B7 full-court or web fetch claimed; 25-day court responses and 26-day current law/policy distinctions retained."
+}

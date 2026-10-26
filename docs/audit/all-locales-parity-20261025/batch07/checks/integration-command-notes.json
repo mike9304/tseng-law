@@ -1,0 +1,24 @@
+{
+  "readOnlyPreparationFailures": [
+    {
+      "scope": "Initial readiness path normalization",
+      "record": "integration-prepare-initial-error.json"
+    },
+    {
+      "scope": "Saved DA batch exit interpretation",
+      "record": "integration-variety-evidence-initial-error.json"
+    },
+    {
+      "scope": "Read-only metadata preview",
+      "error": "Unqualified system node25 could not load llhttp.9.3.dylib",
+      "resolution": "Absolute existing Node24 binary used for successful commands; no environment/package installation"
+    },
+    {
+      "scope": "Count-reconciliation guard before write",
+      "error": "Inventory board enum is columns, not professional",
+      "resolution": "Use actual columns/issues enum; counts assert30/6 and42 unchanged."
+    }
+  ],
+  "sourceAndToolChangesFromTheseFailures": false,
+  "testFailuresAreSeparatelyPreserved": "integration-affected-tests.log"
+}

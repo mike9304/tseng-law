@@ -1,0 +1,73 @@
+{
+  "completed_at": "2026-10-26T03:21:40.339792+09:00",
+  "verdict": "APPROVE_WITH_OPTIONAL_NOTES",
+  "mandatory": 0,
+  "optional": [
+    "S01:918 explicit handover notification object",
+    "S02:921 explicit bilateral agreement object",
+    "S03:921 retain all sentences and move existing short result to paragraph end"
+  ],
+  "reviewed_author_manifest_sha256": "11dc5746437153978bf8a20a53f913668746a2d5637149da5fe501583188857f",
+  "reviewed_files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "183c8045ea1d1d443672376af9f8866b3771c2ed429aae6d24f47398eaccb5d9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "4971777565edde14f6e41cef422d252b251a527d48f7bdcdf62169ede5034506"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "96a0a5565a433d45174251c9f6e579c7f8ffa56861def81332acac807ed1f555"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "5047e951b20e1dc6d3914692c69f9a9b62c323e519418221f153bc0a60fa9d2a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "cd071bb9bda0be5353eb0df7f1ac9a8b892a3dfa4fff701735ce893e43a48999"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "78d2251b2d8fe0d19589a53a4d734ba30ed8b708c84829a86ab6b6e763cb4b5a"
+    }
+  ],
+  "author_artifact_SHA_unchanged_at_end": 29,
+  "all_preparation_input_SHA_unchanged": true,
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-independent-boundaries.json",
+      "sha256": "ec8e789ca9b454242b87187d935455b6c369e1ce310828d795cdfde241bd1429"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-independent-findings.json",
+      "sha256": "345666f90dd4a2449f4c8cc58810a98765975395cc70dd35c2151435498f5042"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-independent-freeze.json",
+      "sha256": "dddfee3c060b8429f04ccf2635e1119da91f97b8185f6189011fbb99d156d124"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-independent-inputs.json",
+      "sha256": "15bc3ce81100f6fc4e10747f01d8d4bd96bebf5ab9bf205142e88119eb9dcee7"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/ca-independent.md",
+      "sha256": "3d2ffce8e55db9a9ad58fe2442b067f3dfa8920abab03f0ebe51bad776d82b6d"
+    }
+  ],
+  "actual_current_units_read": 249,
+  "faq_read": 17,
+  "tables_read": 2,
+  "official_urls_per_article_sum": 23,
+  "new_full_cli_runs": 0,
+  "fresh_extraction_matches_actual_author_arrays": true,
+  "no_manuscript_author_shared_R_edits": true,
+  "limits": [
+    "Independent model review only, not native-speaker or lawyer approval.",
+    "No new web/court fetch or live rendering/deployment.",
+    "Optional changes require their own exact-delta closure; this report remains on original SHA."
+  ]
+}

@@ -1,0 +1,1926 @@
+{
+  "at_utc": "2026-10-25T17:48:57.110184+00:00",
+  "phase": "revised",
+  "locale": "et",
+  "method": "Actual shared CLI with explicit et; extracted arrays from unchanged shared functions. Orthographic units, not native readability or legal approval. Metadata/FAQ/tables/headings/source list separately reviewed.",
+  "tool_inputs": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/et.json",
+      "sha256": "1cb9d12e7653189b58cdc1f8fd480608d967f70db0fddc9951598610b35d0b5a"
+    }
+  ],
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "534cd48a07b129dc51a55a0697bd93e41ee4f48bf61b190bdd0c30a8d1f828a6",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "--lang",
+        "et"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/915-taiwan-public-contract-mediation-arbitration-same-claim.md [et] sentences=40 mean=12 cv=0.462 short=0.325 run3=0.026 opener_rep=0.0 cite_end=0.0 cite_para=0.154 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "et",
+        "sentences": 40,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 12,
+        "len_cv": 0.462,
+        "short_share": 0.325,
+        "long_share": 0.0,
+        "para_cv": 0.303,
+        "even_run3": 0.026,
+        "top_end": "püsima",
+        "top_end_share": 0.025,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "44",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.96,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "44 417 150 Taiwani uue dollari suurune vahekohtuotsus ei jäänud haigla ehitaja kohtuvaidlu",
+        "last": "Kohtuasja käsitlus tugineb 25. oktoobril 2026 kontrollitud ülemkohtu ametlikule selgitusele. Kehtivat seadust ja turuüle",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "44",
+          "sentences": [
+            {
+              "text": "44 417 150 Taiwani uue dollari suurune vahekohtuotsus ei jäänud haigla ehitaja kohtuvaidluses püsima.",
+              "units": 14
+            },
+            {
+              "text": "Ehitaja oli saanud lepitussoovituse tööde tähtaja pikendamise kohta, kuid vahekohtus nõudis ta taas raha.",
+              "units": 14
+            },
+            {
+              "text": "Selle rahalise nõude kohta soovitust polnud.",
+              "units": 6
+            },
+            {
+              "text": "Taiwani ülemkohtu selgitus kohtuasjas 106年度台上字第723號 peab just seda puuduvat menetlusetappi määravaks.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "kassatsioonkaebus",
+          "sentences": [
+            {
+              "text": "Kassatsioonkaebus jäeti 12. juulil 2017 rahuldamata ja vahekohtuotsuse tühistamine jäi jõusse.",
+              "units": 11
+            },
+            {
+              "text": "Ametlik selgitus märgib, et lahend jõustus.",
+              "units": 6
+            },
+            {
+              "text": "Konkreetse rahanõude jaoks puudus nii poolte vahekohtukokkulepe kui ka seadusest tuleneva nõusoleku alus.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "lepitusmenetluses",
+          "sentences": [
+            {
+              "text": "Lepitusmenetluses muutus taotletav õiguskaitse mitu korda:",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "tõend",
+          "sentences": [
+            {
+              "text": "Tõend lepituse ebaõnnestumise kohta ei täitnud seda lünka.",
+              "units": 8
+            },
+            {
+              "text": "Kohtu põhjenduse järgi pidi hankijal olema võimalus võtta seisukoht just selle vaidluse kohta esitatud soovituse suhtes.",
+              "units": 16
+            },
+            {
+              "text": "Ülemkohus parandas madalama kohtu selgitust kohaldatava seaduse redaktsiooni kohta, ent jättis vahekohtuotsuse tühistamise tulemuse alles.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "kas",
+          "sentences": [
+            {
+              "text": "Kas komisjon käsitles sedasama maksenõuet, mis nüüd vahekohtule esitatakse?",
+              "units": 9
+            },
+            {
+              "text": "Vastust näitavad algne avaldus, selle muudatused, soovitus või ettepanek ning hankija vastus.",
+              "units": 12
+            },
+            {
+              "text": "Projekti number üksi seda ei selgita.",
+              "units": 6
+            },
+            {
+              "text": "Ajapikendust ja lisakulude hüvitamist võib äriliselt ühendada sama viivitus, kuid menetluses tuleb hinnata ka taotletavat tulemust.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "taiwani",
+          "sentences": [
+            {
+              "text": "Taiwani riigihangete seaduse artikkel 85-1 võimaldab lepingu täitmise vaidluse esitada lepitusse riigihangete kaebuste läbivaatamise komisjonile.",
+              "units": 16
+            },
+            {
+              "text": "Hankija ei või tarnija lepitusavaldusest keelduda.",
+              "units": 6
+            },
+            {
+              "text": "Ehitustööde või tehniliste teenuste puhul peab komisjon esitama lepitussoovituse või ettepaneku; kui lepitus nurjub hankija mittenõustumise tõttu, ei või hankija keelduda tarnija taotlusest anda vaidlus vahekohtusse.",
+              "units": 26
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "need",
+          "sentences": [
+            {
+              "text": "Need tingimused kuuluvad kokku.",
+              "units": 4
+            },
+            {
+              "text": "Haigla asjas ei olnud poolte kokkulepet ega täitunud konkreetse rahanõude seadusliku vahekohtutee eeldused.",
+              "units": 13
+            },
+            {
+              "text": "Tühistamise alusena nimetas kohus vahekohtukokkuleppe puudumist vahekohtuseaduse artikli 40 lõike 1 punkti 2 tähenduses.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "lepingu",
+          "sentences": [
+            {
+              "text": "Lepingu liik vajab eraldi tähelepanu.",
+              "units": 5
+            },
+            {
+              "text": "Iga seadmete ost ega muu avaliku sektori leping ei kuulu ehitustööde või tehniliste teenuste hulka.",
+              "units": 15
+            },
+            {
+              "text": "Samuti võib lepingus juba olla eraldi vahekohtuklausel, mis annab vaidluse lahendamiseks teise aluse.",
+              "units": 13
+            },
+            {
+              "text": "Selle olemasolu ja ulatust tuleb hinnata enne üksnes seaduslikule nõusolekule tuginemist.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "nõude",
+          "sentences": [
+            {
+              "text": "Nõude summa täpsustamine ei loo alati uut vaidlust.",
+              "units": 8
+            },
+            {
+              "text": "Sama kehtib õigusliku argumendi parandamise kohta.",
+              "units": 6
+            },
+            {
+              "text": "Kirjeldatud kohtuasi käsitles dokumenteeritud liikumist rahalise hüvitise ja ajapikenduse vahel; sellest ei tulene üldist keeldu kõiki nõudeid muuta.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "usa",
+          "sentences": [
+            {
+              "text": "USA rahvusvahelise kaubanduse administratsiooni ITA 30. septembri 2026 energiasektori ülevaade kirjeldab Taiwanis kavandatavaid elektritootmise ja võrgu hankeid 2026. aasta lõpus ning 2027. aastal.",
+              "units": 23
+            },
+            {
+              "text": "Ülevaade käsitleb ka USA tarnijate võimalusi.",
+              "units": 6
+            },
+            {
+              "text": "Tegemist on plaanidega.",
+              "units": 3
+            },
+            {
+              "text": "See ei tõenda ühegi konkreetse hanke avanemist, ettevõtte kvalifitseerumist ega tulevase lepingu kuulumist ehitustööde või tehniliste teenuste kategooriasse.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "pakkumist",
+          "sentences": [
+            {
+              "text": "Pakkumist ette valmistades saab vaidluste lahendamise klauslit lugeda koos hankeliigi ja tööde kirjeldusega.",
+              "units": 13
+            },
+            {
+              "text": "Käimasolevas projektis tekib küsimus sageli siis, kui tähtaja pikendamise soovile lisandub rahaline nõue, mistõttu peaks dokumentidest selguma, millal nõue lisandus ja mille kohta teine pool tegelikult vastas.",
+              "units": 27
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "puuduliku",
+          "sentences": [
+            {
+              "text": "Puuduliku menetlusjälje korral saab õigusnõustaja hinnata eraldi kokkuleppe olemasolu või täiendava lepituse vajadust.",
+              "units": 13
+            },
+            {
+              "text": "Büroo ingliskeelse kontaktilehe kaudu saadetav esmase päringu kirjeldus võib piirduda projekti liigi, nõude ja järgmise menetlustähtajaga.",
+              "units": 16
+            },
+            {
+              "text": "Selle juhtumi jaoks kõnekas toimik koosneb avaldustest, muudatustest ja vastustest, mis eelnesid lepituse lõppemisele.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "kohtuasja",
+          "sentences": [
+            {
+              "text": "Kohtuasja käsitlus tugineb 25. oktoobril 2026 kontrollitud ülemkohtu ametlikule selgitusele.",
+              "units": 10
+            },
+            {
+              "text": "Kehtivat seadust ja turuülevaadet võrreldi 26. oktoobri seisuga.",
+              "units": 8
+            },
+            {
+              "text": "See kohtuasi ei määra teise lepingu vaidlusfoorumit ega selle esitamise tähtaegu.",
+              "units": 11
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Millise nõude kohta komisjon seisukoha võttis?",
+        "Seadusest tulenev nõusolek ja selle piirid",
+        "Energiaprojektide lepingud ja nõuete dokumenteerimine"
+      ],
+      "excludedListItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "d82fd20cc58e146613730221dacd28948a3f2b1aa92177ce8a916accf8a0b12f",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "--lang",
+        "et"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/916-taiwan-parent-company-pollution-liability-us-investor.md [et] sentences=46 mean=12.2 cv=0.465 short=0.239 run3=0.091 opener_rep=0.0 cite_end=0.0 cite_para=0.062 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "et",
+        "sentences": 46,
+        "paras": 16,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 12.2,
+        "len_cv": 0.465,
+        "short_share": 0.239,
+        "long_share": 0.0,
+        "para_cv": 0.215,
+        "even_run3": 0.091,
+        "top_end": "sai",
+        "top_end_share": 0.022,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "mis",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.062,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.14,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Mis sai saasteuuringust pärast seda, kui omandamist kavandanud kontsern selle kätte sai?",
+        "last": "Kohtuasja aluseks on 25. oktoobril 2026 kontrollitud ülemkohtu selgitus; kehtivat seadust ja poliitikamaterjali võrreldi",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "mis",
+          "sentences": [
+            {
+              "text": "Mis sai saasteuuringust pärast seda, kui omandamist kavandanud kontsern selle kätte sai?",
+              "units": 12
+            },
+            {
+              "text": "Taiwani tehase töötajate kohtuasjas kujunes uuring üheks tõendiks emaettevõtete vastu.",
+              "units": 10
+            },
+            {
+              "text": "Ülemkohtu selgitus asjas 107年度台上字第267號 seob saastest teadlikkuse ettevõtte juhtimise, ohule reageerimise ja Taiwani äriühingu vara vähendanud tehingutega.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "otsus",
+          "sentences": [
+            {
+              "text": "Otsus tehti 16. augustil 2018.",
+              "units": 5
+            },
+            {
+              "text": "Vaidlus puudutas elektroonikatehase töötajate kokkupuudet kemikaalidega ning tehast kontrollinud ettevõtete vastutust.",
+              "units": 11
+            },
+            {
+              "text": "Üksnes välismaise investori osalusest selleks ei piisanud.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "kohtu",
+          "sentences": [
+            {
+              "text": "Kohtu ametlikus selgituses on kirjeldatud saastet tuvastanud keskkonnauuringuid, kontrollivate kontsernide teadlikkust, probleemi kõrvaldamata jätmist ja töötajate teavitamata jätmist koos vastutusest hoidumiseks tehtud kapitali vähendamiste ning raha välismaale ülekandmisega.",
+              "units": 28
+            },
+            {
+              "text": "Kohus nõustus põhjendusega, mis võimaldas asjaomased nõuded suunata kontrollivate ettevõtete vastu, kuigi tegemist oli eraldi juriidiliste isikutega.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "aruande",
+          "sentences": [
+            {
+              "text": "Aruande saajate nimekiri aitab tuvastada, kes ohust teadis.",
+              "units": 8
+            },
+            {
+              "text": "Juhtimisotsused ja töökorralduslikud juhised näitavad, kellel oli võimalik sellele reageerida.",
+              "units": 10
+            },
+            {
+              "text": "Hilisemate ülekannete heakskiidud kuuluvad samasse ajajoonde.",
+              "units": 6
+            },
+            {
+              "text": "Eraldi kaustadesse paigutatud dokumendid võivad puudutada üht ja sama otsustusahelat.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "kes",
+          "sentences": [
+            {
+              "text": "Kes tellis lisauuringud ning kuidas mõjutasid tulemused töötajate kaitsmist või saaste kõrvaldamist?",
+              "units": 12
+            },
+            {
+              "text": "Omandamise õiguskontrollis saab nende küsimuste juurde koguda vastavad otsused ja vastutajad.",
+              "units": 11
+            },
+            {
+              "text": "Vastuseta küsimused peavad jääma nähtavaks.",
+              "units": 5
+            },
+            {
+              "text": "Tehingu lõpuesitluse optimistlik kokkuvõte ei tohiks kustutada esialgseid tehnilisi leide ega nende lahendamiseks kokku lepitud samme.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "kirjeldatud",
+          "sentences": [
+            {
+              "text": "Kirjeldatud dokumenteerimine on praktiline hindamisviis.",
+              "units": 5
+            },
+            {
+              "text": "See ei taga tehingu õiguspärasust ega asenda meetmeid, mida tuvastatud oht tegelikult nõuab.",
+              "units": 13
+            },
+            {
+              "text": "Alleshoitud aruanne näitab selle olemasolu; ettevõtte reaktsiooni selgitavad järgnevad toimingud.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "246",
+          "sentences": [
+            {
+              "text": "246 hagejat puudutanud otsuseosad tühistati ja saadeti uuesti läbivaatamiseks.",
+              "units": 9
+            },
+            {
+              "text": "262 hagejat puudutanud kassatsioonkaebused jäeti rahuldamata.",
+              "units": 6
+            },
+            {
+              "text": "Kohtu kokkuvõttes seostati tagasisaatmist muu hulgas kahju, tõendite ning nõuete esitamise volituste hindamise puudustega.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "tagasisaatmine",
+          "sentences": [
+            {
+              "text": "Tagasisaatmine jättis neis osades küsimused lahtiseks.",
+              "units": 6
+            },
+            {
+              "text": "Sellest ei järeldu, et kõigil kannatanutel puudus nõue, samuti ei lõpetanud teiste kaebuste rahuldamata jätmine kogu laiemat kohtuvaidlust.",
+              "units": 18
+            },
+            {
+              "text": "Varasematest sündmustest tuleneva riski hindamiseks on vaja tuvastada just asjakohane menetlus ja selle seis.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "tehingumeeskonnale",
+          "sentences": [
+            {
+              "text": "Tehingumeeskonnale ei anna ühe otsuse kuupäev veel kohustuste summat.",
+              "units": 9
+            },
+            {
+              "text": "Hagejate rühmad, otsuse eri osad ja hilisemad menetlused võivad mõjutada hinnangut erinevalt.",
+              "units": 12
+            },
+            {
+              "text": "Käesolev käsitlus piirdub nimetatud otsusega ega taasta kogu tehasevaidluse ajalugu.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "taiwani",
+          "sentences": [
+            {
+              "text": "Taiwani äriühinguseaduse artikli 154 üldreegli järgi piirdub aktsionäri vastutus aktsiate eest tasumisega.",
+              "units": 12
+            },
+            {
+              "text": "Teine lõige käsitleb olukorda, kus aktsionär kuritarvitab äriühingu juriidilise isiku staatust, põhjustab sellega konkreetse võla tekkimise, mille tasumine on ilmselgelt raskendatud, ning asjaolud on sedavõrd tõsised, et aktsionäri vastutus on vajalik.",
+              "units": 31
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "eeldused",
+          "sentences": [
+            {
+              "text": "Eeldused peavad esinema koos.",
+              "units": 4
+            },
+            {
+              "text": "Osalus, tasumata võlg või saasteleid eraldi ei väljenda kogu seaduslikku testi.",
+              "units": 11
+            },
+            {
+              "text": "Ka ei saa praegust artiklit esitada 2018. aasta otsuse ainsa põhjendusena: ajaloolise käitumise puhul hindas kohus kontrollivate ettevõtete tegevust ja vastutuse laiendamise õiguslikku alust.",
+              "units": 24
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "tütarettevõtte",
+          "sentences": [
+            {
+              "text": "Tütarettevõtte ja filiaali tavapärast erinevust selgitab eraldi eestikeelne käsitlus.",
+              "units": 9
+            },
+            {
+              "text": "Asutamisdokumendid üksi ei näita, kuidas kontsern pärast ohu ilmnemist oma kontrolli kasutas.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "usa",
+          "sentences": [
+            {
+              "text": "USA kaubandusesindaja USTR-i 2026. aasta veebruari teabeleht kirjeldab poolte kavatsust soodustada piiriüleseid investeeringuid.",
+              "units": 14
+            },
+            {
+              "text": "USA võib koos erasektori partneritega kaaluda Taiwani kriitiliste sektorite investeeringute rahastamise toetamist kohaldatava õiguse piires.",
+              "units": 15
+            },
+            {
+              "text": "Tegemist on USA poliitikakontekstiga, millest ei teki konkreetsele investorile automaatset toetuse õigust.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "väljamakse",
+          "sentences": [
+            {
+              "text": "Väljamakse, kapitali vähendamise või väljumistehingu heakskiitmisel saab otsustajatele esitada hinnangu teadaolevatele riskidele, lahendamata nõuetele ja Taiwani äriühingusse jäävatele vahenditele.",
+              "units": 19
+            },
+            {
+              "text": "Õiguslik analüüs peab käsitlema kavandatud tehingut ennast.",
+              "units": 7
+            },
+            {
+              "text": "Ülekande nimetus ei määra selle õiguspärasust.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "opener": "büroo",
+          "sentences": [
+            {
+              "text": "Büroo ingliskeelse kontaktilehe kaudu võib esmalt kirjeldada tehingut, Taiwani äriühingut ning kavandatud varaülekande või tehingu lõpetamise kuupäeva.",
+              "units": 17
+            },
+            {
+              "text": "Tehniliste aruannete ja töötajate tundlike andmete edastamise saab eraldi kokku leppida.",
+              "units": 11
+            },
+            {
+              "text": "Saasteleiu, sellele järgnenud otsuste ja hilisemate ülekannete seos peab säilima ka siis, kui omanik või tehingumeeskond vahetub.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "opener": "kohtuasja",
+          "sentences": [
+            {
+              "text": "Kohtuasja aluseks on 25. oktoobril 2026 kontrollitud ülemkohtu selgitus; kehtivat seadust ja poliitikamaterjali võrreldi 26. oktoobri seisuga.",
+              "units": 17
+            },
+            {
+              "text": "Siin ei hinnata ühegi konkreetse investori vastutust ega kõigi seotud menetluste lõpptulemust.",
+              "units": 12
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Uuringu saajad ja järgnevad otsused",
+        "Hagejate rühmad said erineva menetlustulemuse",
+        "Piiratud vastutuse erandi kumulatiivsed eeldused",
+        "Vara liikumine kavandatavas investeeringus"
+      ],
+      "excludedListItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "f2c94dacfac2769b7950c6063569d6e1da83bf8e6e78034cc7caad963308e9db",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "--lang",
+        "et"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md [et] sentences=46 mean=11.5 cv=0.494 short=0.304 run3=0.023 opener_rep=0.071 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "et",
+        "sentences": 46,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 11.5,
+        "len_cv": 0.494,
+        "short_share": 0.304,
+        "long_share": 0.0,
+        "para_cv": 0.136,
+        "even_run3": 0.023,
+        "top_end": "üleandmist",
+        "top_end_share": 0.065,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "taiwani",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.16,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Veebruaris saabunud kiri palus ostjal tegelda eluasemelaenuga, kuid majas polnud veel vee-",
+        "last": "Kohtulahendi ja selle allikate alusandmed kontrolliti 25. oktoobril 2026; seotud kehtivaid norme ning ametlikke teateid ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "veebruaris",
+          "sentences": [
+            {
+              "text": "Veebruaris saabunud kiri palus ostjal tegelda eluasemelaenuga, kuid majas polnud veel vee- ega elektriühendust.",
+              "units": 14
+            },
+            {
+              "text": "Hiljem lubati ostja sisse remontima ja koristama.",
+              "units": 7
+            },
+            {
+              "text": "Kohtule ei tõendanud kumbki sündmus üksinda lepingukohast üleandmist.",
+              "units": 8
+            },
+            {
+              "text": "Vaidlust kirjeldab Taiwani tarbijakaitseameti avaldatud kohtulahendite kogumik, trükileheküljed 173–187.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "taiwani",
+          "sentences": [
+            {
+              "text": "Taiwani kõrgema kohtu Taichungi osakonna asi kandis numbrit 109年度上易字第289號.",
+              "units": 9
+            },
+            {
+              "text": "Kohus jättis 9. veebruaril 2022 arendaja apellatsioonkaebuse ja täiendava hagi rahuldamata, säilitades viivise maksmise kohustuse.",
+              "units": 15
+            },
+            {
+              "text": "Otsuse järgi ei saanud seda edasi kaevata.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "arendaja",
+          "sentences": [
+            {
+              "text": "Arendaja 23. veebruari 2019 kiri küsis ostja suhtlust laenupangaga ja toimingute edenemist.",
+              "units": 12
+            },
+            {
+              "text": "Selles ei öeldud, et eluase oleks kasutamiseks valmis.",
+              "units": 8
+            },
+            {
+              "text": "Ühendused rajati hiljem.",
+              "units": 3
+            },
+            {
+              "text": "Juulikuisel esimesel ülevaatusel ootasid puudused endiselt parandamist ning lift polnud veel paigaldatud.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "augustis",
+          "sentences": [
+            {
+              "text": "Augustis allkirjastatud nõusolek lubas ostjal sisse pääseda sisetöödeks ja koristamiseks.",
+              "units": 10
+            },
+            {
+              "text": "Kohus võrdles seda kokkulepet parandustööde seisuga ega pidanud sissepääsu lepingus ette nähtud ülevaatuse järgseks üleandmiseks.",
+              "units": 15
+            },
+            {
+              "text": "Laen maksti arendajale välja 5. novembril.",
+              "units": 6
+            },
+            {
+              "text": "Garantiidokumendis märgiti üleandmise päevaks 28. november.",
+              "units": 6
+            },
+            {
+              "text": "Neid tõendeid käsitleb otsuse neljas põhjendus, trükileheküljed 182–186.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "milline",
+          "sentences": [
+            {
+              "text": "Milline kohustus laenu vormistamisega tegelikult täideti?",
+              "units": 6
+            },
+            {
+              "text": "Vastus eeldab kirja sisu, maksegraafiku ja maja seisundi kõrvutamist.",
+              "units": 9
+            },
+            {
+              "text": "Arendaja väitis, et ostja pidanuks pärast kirja saamist kogu hinna tasuma, kuid maksete ülevaatest nägi kohus, et ostja oli järginud kokkulepitud osamakseid ja tasunud kogu summa enne üleandmist.",
+              "units": 28
+            },
+            {
+              "text": "Väidetud makserikkumist ei tuvastatud.",
+              "units": 4
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "asjas",
+          "sentences": [
+            {
+              "text": "Asjas kohaldatud leping andis müüjale üleandmisest teatamiseks neli kuud kasutusloa saamisest, tänane ehitatava eluaseme müügi kohustuslike tüüptingimuste punkt 15 aga sätestab kuus kuud samast algsündmusest.",
+              "units": 25
+            },
+            {
+              "text": "Oma lepingu puhul tuleb kontrollida sõlmimise ajal kehtinud nõudeid.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "arvestus",
+          "sentences": [
+            {
+              "text": "Arvestus algab kasutusloa saamisest.",
+              "units": 4
+            },
+            {
+              "text": "Laenu taotlemise, heakskiitmise või väljamaksmise kuupäev seda algust ei asenda.",
+              "units": 10
+            },
+            {
+              "text": "Kuue kuu nõue puudutab üleandmisest teatamist; sama punkt loetleb üleandmisega seotud parandamise, arveldamise ja dokumentide andmise kohustused.",
+              "units": 17
+            },
+            {
+              "text": "Sellest ei saa tuletada iga juhtumi jaoks ühesugust täieliku üleandmise lõpptähtaega.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "ostja",
+          "sentences": [
+            {
+              "text": "Ostja kohustused jäävad samuti asjakohaseks.",
+              "units": 5
+            },
+            {
+              "text": "Punkt 14 käsitleb laenudokumentide esitamist, vajalikes toimingutes osalemist ja enne omandiõiguse ülemineku registreerimist tasumisele kuuluvaid summasid.",
+              "units": 16
+            },
+            {
+              "text": "Vaidlus üleandmisteate üle ei kõrvalda automaatselt muid juba saabunud makse- või dokumentide esitamise kohustusi.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "tarbijakaitseameti",
+          "sentences": [
+            {
+              "text": "Tarbijakaitseameti 25. augusti 2025 lepingukontrolli tulemustes märgiti rikkumisena tingimusi, mis arvasid üleandmisteate tähtajast välja pangas toimuvaks kinnitamiseks ja laenu väljamakseks kuluva aja.",
+              "units": 22
+            },
+            {
+              "text": "Tegemist oli hilisema halduskontrolliga.",
+              "units": 4
+            },
+            {
+              "text": "See ei otsustanud kirjeldatud ostja varasema kirja õiguslikku tähendust.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "taiwani",
+          "sentences": [
+            {
+              "text": "Taiwani keskpanga kinnisvaralaenude eeskirjade praegune redaktsioon jõustus 18. septembril 2026 pärast eelmisel päeval tehtud muudatust.",
+              "units": 15
+            },
+            {
+              "text": "Uut laenu kavandav ostja saab pangaga täpsustada, millised nõuded tema tehingule kohalduvad.",
+              "units": 12
+            },
+            {
+              "text": "Neid reegleid ei kanta tagasi 2019. aasta tehingule ega kasutata siinse loo põhjal laenu saamise tagatisena.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "panga",
+          "sentences": [
+            {
+              "text": "Panga prognoositud maksepäev ja arendaja pakutud ülevaatusaeg võivad erineda.",
+              "units": 9
+            },
+            {
+              "text": "Mõlemat saab võrrelda lepingu tähtaegadega.",
+              "units": 5
+            },
+            {
+              "text": "Täielik kiri koos ümbriku või e-kirja saabumisandmetega näitab teate sisu ja kättesaamist; ülevaatusaktid, fotod ja sissepääsukokkulepe selgitavad samal ajal eluruumi seisundit.",
+              "units": 22
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "üks",
+          "sentences": [
+            {
+              "text": "Üks pealkiri jääb napiks.",
+              "units": 4
+            },
+            {
+              "text": "Märge „laenu korraldamine” ei ütle, kas samas kirjas tehti veel mõni õiguslikult oluline avaldus.",
+              "units": 14
+            },
+            {
+              "text": "Ka garantiidokumenti tuleb lugeda koos teiste üleandmise tõenditega, mitte üksnes selle kuupäeva järgi.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "viivise",
+          "sentences": [
+            {
+              "text": "Viivise või leppetrahvi nõude saamisel võib büroole e-kirjaga kirjeldada vaidlusalust tingimust, teate kuupäeva ja vastamise tähtaega.",
+              "units": 17
+            },
+            {
+              "text": "Dokumente korrastades saab eraldi märkida, milline kiri käsitles laenu, milline ülevaatust ja milline üleandmist.",
+              "units": 14
+            },
+            {
+              "text": "Nii on näha, millise sündmuse kohta pooled tegelikult eri seisukohtadel on.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "kohtulahendi",
+          "sentences": [
+            {
+              "text": "Kohtulahendi ja selle allikate alusandmed kontrolliti 25. oktoobril 2026; seotud kehtivaid norme ning ametlikke teateid võrreldi 26. oktoobri seisuga.",
+              "units": 19
+            },
+            {
+              "text": "Konkreetse ostja maksete peatamine, üleandmisest keeldumine või kahjunõue vajab tema lepingu ja tõendite hindamist.",
+              "units": 14
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Pangatoimingud ja eluruumi seisund",
+        "Lepingu neli kuud ja praeguste tingimuste kuus kuud",
+        "Teated, ülevaatused ja maksed ühel ajajoonel"
+      ],
+      "excludedListItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "da1ba752fc6193222b844e5be491cb382ab55f49b3a714b49b27b5849825c3aa",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "--lang",
+        "et"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [et] sentences=39 mean=12.2 cv=0.492 short=0.308 run3=0.027 opener_rep=0.154 cite_end=0.0 cite_para=0.154 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "et",
+        "sentences": 39,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 12.2,
+        "len_cv": 0.492,
+        "short_share": 0.308,
+        "long_share": 0.026,
+        "para_cv": 0.263,
+        "even_run3": 0.027,
+        "top_end": "läbivaatamisotsuse",
+        "top_end_share": 0.026,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "kohtu",
+        "top_opener_n": 2,
+        "opener_rep": 0.154,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.32,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Taipei kõrgem halduskohus tühistas juhi teenistusest vabastamise ja seda kinnitanud haldus",
+        "last": "Kohtu selgitus kontrolliti 25. oktoobril 2026 ja kehtivaid tööõigusnorme võrreldi 26. oktoobri seisuga. Hilisema edasika",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "taipei",
+          "sentences": [
+            {
+              "text": "Taipei kõrgem halduskohus tühistas juhi teenistusest vabastamise ja seda kinnitanud halduskorras tehtud läbivaatamisotsuse.",
+              "units": 13
+            },
+            {
+              "text": "Kaks rasket distsiplinaarmärkust kaasa toonud juhtumis oli karistus avalikkusele teatatud juba enne komisjoni arutelu.",
+              "units": 14
+            },
+            {
+              "text": "Kohtu ametlik selgitus tõstab esile ka puuduliku ärakuulamise ja uurimisaruande vastuolud.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "asja",
+          "sentences": [
+            {
+              "text": "Asja number on 114年度訴字第869號.",
+              "units": 4
+            },
+            {
+              "text": "Otsus tehti 3. septembril 2026 ning seda sai ametliku teate järgi edasi kaevata.",
+              "units": 13
+            },
+            {
+              "text": "Tühistamine ei kinnita kõigi kiusamisväidete alusetust ega tõenda iseenesest ametniku tegelikku tööle ennistamist.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "kohtu",
+          "sentences": [
+            {
+              "text": "Kohtu kirjelduses oli asutuse juht kahe raske distsiplinaarmärkuse määramise ette teatanud ning seejärel pidas kõigepealt koosoleku kõrgem asutus, enne kui küsimus anti allasutuse teenistushindamise komisjonile.",
+              "units": 25
+            },
+            {
+              "text": "Selline järjekord kahjustas komisjoni võimalust tegelikult hinnata, milline tulemus tõenditest järeldub.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "tulemus",
+          "sentences": [
+            {
+              "text": "Tulemus oli juba välja öeldud.",
+              "units": 5
+            },
+            {
+              "text": "Kas hilisem arutelu saanuks selle veel ümber hinnata?",
+              "units": 8
+            },
+            {
+              "text": "Kohtu jaoks kuulus see menetlusliku puuduse juurde.",
+              "units": 7
+            },
+            {
+              "text": "Koosoleku protokolli olemasolu üksi ei näita, et erinevaid järeldusi tõepoolest kaaluti.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "asjaomased",
+          "sentences": [
+            {
+              "text": "Asjaomased komisjonid ei teatanud ametnikule nõuetekohaselt võimalusest tulla selgitusi andma.",
+              "units": 10
+            },
+            {
+              "text": "Samal ajal ei sobinud aruande hinnang kiusamist toetavatele tõenditele kokku selle lõpliku karistusettepanekuga.",
+              "units": 13
+            },
+            {
+              "text": "Kohtu põhjenduste kokkuvõte lisab, et hilisem vastamine halduskorras läbivaatamisel ei parandanud selles asjas algselt andmata jäänud ärakuulamisvõimalust.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "kirjeldatud",
+          "sentences": [
+            {
+              "text": "Kirjeldatud juhtum puudutas ametniku hindamist ning sündmusi enne uut töökiusu tõrje korda.",
+              "units": 12
+            },
+            {
+              "text": "Eraettevõtte kaebuste menetlemisel tuleb lähtuda talle kohalduvast õigusest.",
+              "units": 8
+            },
+            {
+              "text": "Taiwani tööohutuse ja töötervishoiu seaduse uued töökiusu sätted jõustusid 1. juulil 2026; seda näitavad seaduse ajalugu ja tööministeeriumi selgitus.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "artikkel",
+          "sentences": [
+            {
+              "text": "Artikkel 22-2 nõuab nii uurimisel kui ka pooltevahelise lahenduse otsimisel objektiivsust, erapooletust ning õiglust, kusjuures uurimises tuleb anda osalistele piisav võimalus oma seisukohti ja vastuväiteid esitada ning järgida huvide konflikti tõttu taandumise nõudeid.",
+              "units": 34
+            },
+            {
+              "text": "Enneaegne avalik süüdistus võib nende nõuete täitmist raskendada.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "kaitse",
+          "sentences": [
+            {
+              "text": "Kaitse ei pea ootama lõpparuannet.",
+              "units": 5
+            },
+            {
+              "text": "Kui tööandja saab kiusamist kogenud töötaja kaebuse, peab ta võtma meetmeid kaebaja edasise kiusamise vältimiseks ning pakkuma vajaduse järgi nõustamist, abi ja kaitset.",
+              "units": 23
+            },
+            {
+              "text": "Juhtunut tuleb uurida.",
+              "units": 3
+            },
+            {
+              "text": "Kaebaja soovi korral võib tööandja aidata pooltel lahenduses kokku leppida; kui kokkulepet ei sünni, tuleb uurimist jätkata.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "kirjeldatud",
+          "sentences": [
+            {
+              "text": "Kirjeldatud halduskohtu lahend ei otsusta ühegi eraettevõtte karistuse kehtivust.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "personalitöös",
+          "sentences": [
+            {
+              "text": "Personalitöös saab eraldi nähtavaks teha kellegi ütluse, seda toetava materjali ja uurija järelduse.",
+              "units": 13
+            },
+            {
+              "text": "Vastuoluliste intervjuude puhul aitab põhjendus selgitada, millist tõendit usaldati ja miks.",
+              "units": 11
+            },
+            {
+              "text": "Säilitada saab ka lõhe, kui kohalolekuandmed, sõnumid või koosoleku materjalid etteheidet ei toeta.",
+              "units": 13
+            },
+            {
+              "text": "See on dokumentide korrastamise soovitus, mis lähtub kohtu tuvastatud puudustest.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "teate",
+          "sentences": [
+            {
+              "text": "Teate sisu määrab vastamise võimalused.",
+              "units": 5
+            },
+            {
+              "text": "Üldine palve selgitada juhtimisstiili annab teistsuguse lähtekoha kui konkreetse teo, aja ja lahendamist vajava küsimuse nimetamine.",
+              "units": 16
+            },
+            {
+              "text": "Uurija saab võrrelda, kas teade, intervjuud ja lõppjäreldus käsitlevad sama sündmust.",
+              "units": 11
+            },
+            {
+              "text": "Kogu isiklikku teavet pole vaja avalikku teadaandesse koondada.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "täiendava",
+          "sentences": [
+            {
+              "text": "Täiendava õigusliku hinnangu jaoks võib büroole kirjutades nimetada kaebuse etapi, juba tehtud otsused ja lähima tähtaja.",
+              "units": 16
+            },
+            {
+              "text": "Esimesse kirja ei pea lisama tervet tundlikku toimikut.",
+              "units": 8
+            },
+            {
+              "text": "Enne tulemuse avaldamist peaks teate, vastuste ja tõendihinnangu seosest olema võimalik aru saada, kas uurimine arvestas ka teistsuguste selgitustega.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "kohtu",
+          "sentences": [
+            {
+              "text": "Kohtu selgitus kontrolliti 25. oktoobril 2026 ja kehtivaid tööõigusnorme võrreldi 26. oktoobri seisuga.",
+              "units": 13
+            },
+            {
+              "text": "Hilisema edasikaebamise tulemust pole selle materjali põhjal kinnitatud.",
+              "units": 8
+            },
+            {
+              "text": "Ametniku ja eraettevõtte töötaja õiguskaitsevahendid sõltuvad nende staatusest ja konkreetsest otsusest.",
+              "units": 11
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Avalik teade eelnes sisulisele hindamisele",
+        "Eraettevõtte jaoks kohaldub teine õiguslik kord",
+        "Mida aruandes väideti ja mida tõendid näitasid?"
+      ],
+      "excludedListItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "afac76c9b48c610c9e0d6a30956340c076bbe373cc41341051d9830eb47e5479",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "--lang",
+        "et"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md [et] sentences=40 mean=13.5 cv=0.475 short=0.2 run3=0.079 opener_rep=0.143 cite_end=0.0 cite_para=0.286 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "et",
+        "sentences": 40,
+        "paras": 14,
+        "heads": 2,
+        "list_items": 0,
+        "mean_len": 13.5,
+        "len_cv": 0.475,
+        "short_share": 0.2,
+        "long_share": 0.025,
+        "para_cv": 0.173,
+        "even_run3": 0.079,
+        "top_end": "kohustus",
+        "top_end_share": 0.05,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "taiwani",
+        "top_opener_n": 2,
+        "opener_rep": 0.143,
+        "consec_same_start": 0,
+        "cite_para_share": 0.286,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.71,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Laadimiskarp kinnitati parkimiskoha tagaseinale, juhtmed kulgesid lae kaudu ühisesse elekt",
+        "last": "Kohtulahendi alusandmed kontrolliti 25. oktoobril 2026, seotud normid ja teade 26. oktoobri seisuga. Hilisemaid lahendei",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "laadimiskarp",
+          "sentences": [
+            {
+              "text": "Laadimiskarp kinnitati parkimiskoha tagaseinale, juhtmed kulgesid lae kaudu ühisesse elektrikilpi ning sealt elaniku isikliku arvestini.",
+              "units": 15
+            },
+            {
+              "text": "Nii ulatus paigaldus põrandale märgitud parkimiskohast kaugemale.",
+              "units": 7
+            },
+            {
+              "text": "Kohtulahendi tekst kirjeldab just neid asukohti, kui põhjendab vajaliku nõusoleku puudumist.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "taiwani",
+          "sentences": [
+            {
+              "text": "Taiwani kõrgema kohtu Kaohsiungi osakond jättis elaniku apellatsioonkaebuse rahuldamata 22. juunil 2022.",
+              "units": 12
+            },
+            {
+              "text": "Asjas 111年度上字第132號 jäi alles seadmete eemaldamise ja endise olukorra taastamise kohustus.",
+              "units": 11
+            },
+            {
+              "text": "Ühisseina, lae ja kilbi kasutamist ei saanud hinnata ainult parkimiskoha kasutusõiguse põhjal.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "vaieldamatute",
+          "sentences": [
+            {
+              "text": "Vaieldamatute asjaolude hulka kuulusid lae riputitele kinnitatud elektritorud, laadimiskarp ning elektrikilpi lisatud kaitselüliti.",
+              "units": 13
+            },
+            {
+              "text": "Juhtmestik ühendati elaniku oma arvestiga.",
+              "units": 5
+            },
+            {
+              "text": "Arvesti kuulumine elanikule ei muutnud kõiki neid paigalduskohti erakasutuses ruumiks.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "taiwani",
+          "sentences": [
+            {
+              "text": "Taiwani korterelamute haldamise seaduse artikkel 11 nõuab ühiste osade ja nendega seotud rajatiste lammutamise, olulise remondi või parendamise puhul korteriomanike koosoleku otsust.",
+              "units": 22
+            },
+            {
+              "text": "Selle sätte järgi hindas kohus kirjeldatud töid.",
+              "units": 7
+            },
+            {
+              "text": "Lisaks nõudis konkreetse maja eeskirja punkt 15 elektrijuhtmete ja torude lisamiseks halduskomitee luba ning elektriettevõtte ohutuskontrolli.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "mõlemad",
+          "sentences": [
+            {
+              "text": "Mõlemad alused olid olulised.",
+              "units": 4
+            },
+            {
+              "text": "Koosoleku pädevust puudutav seadus ja selle maja eeskiri ei ole üks ja sama norm.",
+              "units": 14
+            },
+            {
+              "text": "Ohutuskontroll omakorda ei otsusta, kas elanikul oli õigus kasutada kõnealust seina või elektrikilpi.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "artikli",
+          "sentences": [
+            {
+              "text": "Artikli 11 ja eeskirja rikkumine tähendas kohtu hinnangul ka artikli 6 lõike 1 punkti 5 järgse muude õigusnormide ning maja eeskirja täitmise kohustuse rikkumist.",
+              "units": 24
+            },
+            {
+              "text": "Halduskomitee saatis kirjaliku teate ja püüdis küsimust lahendada, kuid paigaldust ei eemaldatud, mistõttu pidas kohus võimalikuks taotleda pärast lahenduskatse ebaõnnestumist kohtu sekkumist sama artikli lõike 3 alusel.",
+              "units": 27
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "artikli",
+          "sentences": [
+            {
+              "text": "Artikli 6 lõike 1 punkt 4 käsitleb samuti juhtmete või torude paigaldamist ning vajaduse korral ühiste osade kasutamist.",
+              "units": 18
+            },
+            {
+              "text": "Kohus ei pidanud seda paigaldust selles punktis kirjeldatud olukorraks.",
+              "units": 9
+            },
+            {
+              "text": "Otsuse viies ja kuues põhjendus tuleb lugeda koos tegelike paigalduskohtade ja eeskirjaga; neist ei tulene kõigile parklalaadijatele ühesugust hääletuskorda.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "elaniku",
+          "sentences": [
+            {
+              "text": "Elaniku väitel oli ta lisanud lüliti, laadimise peatanud ja seadmed lukustanud ning pakkunud võtme komiteele, kuid kohus leidis, et isegi nende väidete tõeks osutumise korral säilis õigusnormide ja maja eeskirja rikkumisest tulenev eemaldamise ning taastamise kohustus.",
+              "units": 36
+            },
+            {
+              "text": "Vaidlus puudutas ka tööde tegemise õigust.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "kas",
+          "sentences": [
+            {
+              "text": "Kas hinnapakkumine näitab ainult laadija asukohta või ka ühendust hoone võrguga?",
+              "units": 11
+            },
+            {
+              "text": "Paigaldaja joonisele saab kanda karbi, seina- ja laeläbiviigud ning kasutatava elektrikilbi, et iga teelõiku oleks võimalik võrrelda omandiandmete, eeskirja ja olemasolevate otsustega.",
+              "units": 22
+            },
+            {
+              "text": "Pelgast parkimiskoha numbrist selleks ei piisa.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "halduskomiteele",
+          "sentences": [
+            {
+              "text": "Halduskomiteele esitatavas kirjelduses saab täpsustada tööde ulatuse ja küsida, millise eeskirjapunkti järgi neid hinnatakse.",
+              "units": 14
+            },
+            {
+              "text": "Vastusest peaks selguma, kas otsustama peab komitee või omanike koosolek ning millised andmed on veel puudu.",
+              "units": 16
+            },
+            {
+              "text": "Juba antud nõusolekut saab võrrelda kavandatud seadme, marsruudi ja tingimustega.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "kaohsiungi",
+          "sentences": [
+            {
+              "text": "Kaohsiungi linn avaldas 29. mail 2026 toetusteate, mis hõlmas korterelamute ühiskasutusaladel elektriautode laadimiskaablite rennide rajamist.",
+              "units": 15
+            },
+            {
+              "text": "Linna ametlik teade nägi taotluste lõpukuupäevana ette 30. septembri; eelarve ammendumisel võis vastuvõtt lõppeda varem.",
+              "units": 15
+            },
+            {
+              "text": "Avaldatud tähtaeg on nüüd möödas.",
+              "units": 5
+            },
+            {
+              "text": "See meede ei asendanud maja nõusolekut ega konkreetse töö lubamise menetlust.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "paigalduslepingu",
+          "sentences": [
+            {
+              "text": "Paigalduslepingu sõlmimisel saab kokku leppida, kas enne nõusoleku saamist üldse alustatakse ning kuidas jagunevad kulud, kui luba ei anta.",
+              "units": 19
+            },
+            {
+              "text": "Joonise muutmisel vajab tähelepanu ka varasema nõusoleku ulatus.",
+              "units": 8
+            },
+            {
+              "text": "Need küsimused aitavad eristada paigaldaja tasunõuet ja elaniku õigust ühiseid osi kasutada.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "peatamis",
+          "sentences": [
+            {
+              "text": "Peatamis- või eemaldamisnõude korral võib büroole saadetav e-kiri sisaldada vaidluse lühikirjeldust, eeskirjapunkti ja vastamise tähtaega.",
+              "units": 16
+            },
+            {
+              "text": "Selle juhtumi keskne dokument on täielik paigaldusjoonis koos otsustega, milles on lubatud kasutada just joonisel märgitud kohti.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "kohtulahendi",
+          "sentences": [
+            {
+              "text": "Kohtulahendi alusandmed kontrolliti 25. oktoobril 2026, seotud normid ja teade 26. oktoobri seisuga.",
+              "units": 13
+            },
+            {
+              "text": "Hilisemaid lahendeid ega kirjeldatud otsuse jõustumist pole siin kinnitatud.",
+              "units": 9
+            },
+            {
+              "text": "Teise maja paigutus, õigused ja eeskiri võivad olla teistsugused.",
+              "units": 9
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Seadus ja maja eeskiri nõudsid eri otsuseid",
+        "Paigaldusplaan algab kogu juhtmeteekonnast"
+      ],
+      "excludedListItems": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "e058c5964d75cfad256f5fd99b6c474b9acbd80408a5e06229652116e3d38094",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/921-taiwan-online-game-coins-refund-judgment.md",
+        "--lang",
+        "et"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/921-taiwan-online-game-coins-refund-judgment.md [et] sentences=48 mean=11.3 cv=0.459 short=0.333 run3=0.022 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "et",
+        "sentences": 48,
+        "paras": 15,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 11.3,
+        "len_cv": 0.459,
+        "short_share": 0.333,
+        "long_share": 0.0,
+        "para_cv": 0.271,
+        "even_run3": 0.022,
+        "top_end": "tagastamist",
+        "top_end_share": 0.042,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "mängukontol",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.97,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Mängukontol oli münte alles, kuid kasutamata tasulisi punkte enam polnud.",
+        "last": "Kohtulahendi alusmaterjal kontrolliti 25. oktoobril 2026; kehtivat regulatsiooni ja ametlikku statistikat võrreldi 26. o",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "mängukontol",
+          "sentences": [
+            {
+              "text": "Mängukontol oli münte alles, kuid kasutamata tasulisi punkte enam polnud.",
+              "units": 10
+            },
+            {
+              "text": "Selles olid vaidluse pooled ühel meelel.",
+              "units": 6
+            },
+            {
+              "text": "Mängija arvestas müntide rahaliseks väärtuseks 243 548 Taiwani uut dollarit ja nõudis summa tagastamist.",
+              "units": 14
+            },
+            {
+              "text": "Nõuet kirjeldab tarbijakaitseameti avaldatud kohtulahend, trükileheküljed 140–153.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "keelungi",
+          "sentences": [
+            {
+              "text": "Keelungi piirkonnakohus jättis mängija apellatsioonkaebuse rahuldamata asjas 109年度消簡上字第1號.",
+              "units": 8
+            },
+            {
+              "text": "Otsus tehti 13. septembril 2021 ja selle järgi polnud edasikaebamine lubatud.",
+              "units": 11
+            },
+            {
+              "text": "Kohus hindas selle mängu müntide funktsiooni ning lepingulisi tagasimaksetingimusi.",
+              "units": 9
+            },
+            {
+              "text": "Kõiki virtuaalseid esemeid tarbijakaitsest välja ei jäetud.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "leping",
+          "sentences": [
+            {
+              "text": "Leping võimaldas kõigepealt osta punkte, millega sai seejärel mänguteenuseid või kaupu.",
+              "units": 11
+            },
+            {
+              "text": "Kontole jäänud mündid toimisid mängijatevahelistes voorudes žetoonidena.",
+              "units": 7
+            },
+            {
+              "text": "Kohtu hinnangul ei olnud need enam lepingus tagastatavatena määratletud kasutamata tasulised punktid ega teenusepakkuja võetud mängutasud.",
+              "units": 16
+            },
+            {
+              "text": "Seetõttu ei saanud nende jääki selles asjas rahaks ümber arvutada.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "funktsioon",
+          "sentences": [
+            {
+              "text": "Funktsioon oli määrav.",
+              "units": 3
+            },
+            {
+              "text": "Otsuse kaheksandas põhjenduses, trükilehekülgedel 148–152, seostati niisuguste mängužetoonide rahaks vahetamise võimalust ka hasartmänguga.",
+              "units": 14
+            },
+            {
+              "text": "See käsitlus puudutas konkreetset mänguviisi.",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "miks",
+          "sentences": [
+            {
+              "text": "Miks ei järgnenud lepingu lõppemisele tagasimakset?",
+              "units": 6
+            },
+            {
+              "text": "Mängija oli ise avaldanud soovi leping lõpetada, mistõttu kohus sai lähtuda lõpetamisest ja hinnata eraldi allesjäänud müntide olemust.",
+              "units": 18
+            },
+            {
+              "text": "Selleks ei pidanud ta heaks kiitma kõiki teenusepakkuja varasemaid konto peatamise või lepingu lõpetamise põhjendusi.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "teise",
+          "sentences": [
+            {
+              "text": "Teise mängu puhul võib sama nimetusega ühik tekkida ja toimida teisiti.",
+              "units": 11
+            },
+            {
+              "text": "Uurida saab, kuidas see omandati, mille vastu seda vahetada saab, kuidas seda kasutati ja mida leping ette näeb.",
+              "units": 18
+            },
+            {
+              "text": "Üksnes sõna „münt” ei lahenda tagasimaksenõuet.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "taiwani",
+          "sentences": [
+            {
+              "text": "Taiwani veebimänguteenuste kohustuslike tüüptingimuste punkt 18 lubab tarbijal teenusepakkujat teavitades lepingu igal ajal lõpetada.",
+              "units": 14
+            },
+            {
+              "text": "Kasutamata tasulised punktid või kasutamata mängutasud tuleb pärast vajalike kulude mahaarvamist tagastada 30 päeva jooksul lepingu lõppemisest või käsitleda poolte kokkulepitud muul viisil.",
+              "units": 23
+            },
+            {
+              "text": "Teenusepakkuja ühepoolne teade ei asenda kokkulepet.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "mahaarvatud",
+          "sentences": [
+            {
+              "text": "Mahaarvatud kulud vajavad selgitust.",
+              "units": 4
+            },
+            {
+              "text": "Tarbija saab küsida kasutamata jäägi arvestust, mahaarvamiste loetelu ja arvutuse alust ning võrrelda neid lepinguga.",
+              "units": 15
+            },
+            {
+              "text": "Ettevõtte valitud kindel protsent ei tõenda iseenesest kulu vajalikkust ega mõistlikkust.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "praegune",
+          "sentences": [
+            {
+              "text": "Praegune regulatsioon muudeti 10. augustil 2022 ja jõustus 1. jaanuaril 2023.",
+              "units": 11
+            },
+            {
+              "text": "See on hilisem kui kirjeldatud kohtuotsus.",
+              "units": 6
+            },
+            {
+              "text": "Ajaloolist vaidlust lahendati tollase lepingu ja kohaldunud normide järgi.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "punkt",
+          "sentences": [
+            {
+              "text": "Punkt 4 annab eraldi õiguse mängimise alustamisest seitsme päeva jooksul kirjalikult lepingust taganeda, põhjust nimetamata ja kulusid kandmata, ning taotleda kasutamata tasuliste punktide tagastamist.",
+              "units": 24
+            },
+            {
+              "text": "Seitsme päeva möödumine ei kaota punktis 18 sätestatud võimalust leping igal ajal lõpetada.",
+              "units": 13
+            },
+            {
+              "text": "Nendel õigustel on erinevad tingimused.",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "üks",
+          "sentences": [
+            {
+              "text": "Üks kuvatõmmis näitab vaid hetkeolukorda.",
+              "units": 5
+            },
+            {
+              "text": "Algsete ostude, punktide vahetamise ja mängimise jäljed aitavad näha, millest see arv koosneb.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "teenusepakkuja",
+          "sentences": [
+            {
+              "text": "Teenusepakkuja peab isiklikku mänguajalugu säilitama vähemalt 30 päeva ja esitama selle seitsme päeva jooksul päringu saamisest.",
+              "units": 16
+            },
+            {
+              "text": "Need on erinevad tähtajad.",
+              "units": 4
+            },
+            {
+              "text": "Vaidluse tekkides tehtud varane päring võib aidata säilitada enamat kui viimast kontopilti.",
+              "units": 12
+            },
+            {
+              "text": "Punkt 9 ja keelatud tüüptingimuste punkt 6 käsitlevad andmeid ning keelavad tingimuse, mis lubaks vaidlust hinnata üksnes teenusepakkuja säilitatud ajaloo ja elektrooniliste andmete põhjal.",
+              "units": 24
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "tarbijakaitseameti",
+          "sentences": [
+            {
+              "text": "Tarbijakaitseameti 7. mail 2026 avaldatud statistikas oli veebimängude valdkond 2025. aasta esmaste tarbijakaebuste liikide hulgas teisel kohal.",
+              "units": 17
+            },
+            {
+              "text": "Selle valdkonna kaebuste arv oli samas eelnenud aastaga võrreldes vähenenud.",
+              "units": 10
+            },
+            {
+              "text": "Amet juhtis tähelepanu ka kontode blokeerimisele, peatamisele ja klienditoe toimimisele.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "tagasimakse",
+          "sentences": [
+            {
+              "text": "Tagasimakse küsimuse saab kõigepealt esitada teenusepakkujale ning vajaduse korral kasutada riiklikku tarbijakaebuste kanalit.",
+              "units": 13
+            },
+            {
+              "text": "Lepingu tõlgendamise või tõendite vastuvõtmise vaidlust võib büroole kirjeldada e-kirjaga, nimetades vaidlusaluse summa ja vastamise tähtaja.",
+              "units": 17
+            },
+            {
+              "text": "Konto parooli pole selleks vaja.",
+              "units": 5
+            },
+            {
+              "text": "Nõude põhjendust toetab jälg sellest, kuidas raha kontole jõudis ja milleks ostetud ühikuid kasutati.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "opener": "kohtulahendi",
+          "sentences": [
+            {
+              "text": "Kohtulahendi alusmaterjal kontrolliti 25. oktoobril 2026; kehtivat regulatsiooni ja ametlikku statistikat võrreldi 26. oktoobri seisuga.",
+              "units": 15
+            },
+            {
+              "text": "Teiste mängude punktide, esemete ja lõpetamisaluste hindamisel tuleb lähtuda nende tegelikust funktsioonist ja lepingust.",
+              "units": 14
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Ostetud punkt ja mänguvooru žetoon",
+        "Praegune lõpetamisõigus ja kasutamata jääk",
+        "Kuidas kontojääk tekkis?"
+      ],
+      "excludedListItems": []
+    }
+  ]
+}

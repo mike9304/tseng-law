@@ -1,0 +1,1123 @@
+{
+  "generated_at_utc": "2026-10-25T18:13:44.589654+00:00",
+  "status": "NO_MANDATORY_LEGAL_ERROR_FOUND; REQUEST_CHANGES_TWO_MANUAL_PROSE_ITEMS",
+  "owned_scope": "reviews/bg-independent.md and checks/bg-independent* only",
+  "input_guard_count": 47,
+  "input_guards": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/BRIEF.md",
+      "sha256": "8103ae1441fe0abbdb76362d6086a267014664f31997f5676b37c6962cfcd306",
+      "bytes": 8589,
+      "end_sha256": "8103ae1441fe0abbdb76362d6086a267014664f31997f5676b37c6962cfcd306",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/BRIEF.md",
+      "sha256": "f6c2579b6255705ece341a356d3a4d527ca74a869916785d51edb9c0f05ee1a8",
+      "bytes": 4759,
+      "end_sha256": "f6c2579b6255705ece341a356d3a4d527ca74a869916785d51edb9c0f05ee1a8",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/authoring-contract-draft.md",
+      "sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e",
+      "bytes": 12103,
+      "end_sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/six-source-facts.md",
+      "sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a",
+      "bytes": 27065,
+      "end_sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-register.md",
+      "sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d",
+      "bytes": 13984,
+      "end_sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-freeze.json",
+      "sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "bytes": 9211,
+      "end_sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/bundle-manifest.json",
+      "sha256": "d56dfa2dd03c0e93c5f3576ee119c508f07daf24eb7412123aadc42e49bf3192",
+      "bytes": 19154,
+      "end_sha256": "d56dfa2dd03c0e93c5f3576ee119c508f07daf24eb7412123aadc42e49bf3192",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/AGENTS.md",
+      "sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19",
+      "bytes": 18421,
+      "end_sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "bytes": 14050,
+      "end_sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "bytes": 1705,
+      "end_sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "bytes": 16440,
+      "end_sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f",
+      "bytes": 17144,
+      "end_sha256": "9d3af531126f65057fa1ceea9785b6464e512c80ce25d922e822e01438e70486",
+      "unchanged": false
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "bytes": 6367,
+      "end_sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "bytes": 7070,
+      "end_sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "bytes": 6768,
+      "end_sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "bytes": 6743,
+      "end_sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "bytes": 7412,
+      "end_sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "bytes": 8180,
+      "end_sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/bg-author.md",
+      "sha256": "b1107ae48bb5d16e448c4b6766347d2adbc6e00e2dcd9fc95f06492d61b5eeca",
+      "bytes": 13122,
+      "end_sha256": "b1107ae48bb5d16e448c4b6766347d2adbc6e00e2dcd9fc95f06492d61b5eeca",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-author-manifest.json",
+      "sha256": "482b53256e39eb2864cb63fffa56a5c2002dbad7e202a125b80d5229f863f44a",
+      "bytes": 7027,
+      "end_sha256": "482b53256e39eb2864cb63fffa56a5c2002dbad7e202a125b80d5229f863f44a",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "b2b058966c26f084e38969656625cbd642fc9f71dbb14bcbf7f30f9ecc28387f",
+      "bytes": 12013,
+      "end_sha256": "b2b058966c26f084e38969656625cbd642fc9f71dbb14bcbf7f30f9ecc28387f",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "f161ce0b785f0fd8bdaeb7b25fcb71e48243930b5cbddfabcd0c9f61aef2fcb5",
+      "bytes": 12953,
+      "end_sha256": "f161ce0b785f0fd8bdaeb7b25fcb71e48243930b5cbddfabcd0c9f61aef2fcb5",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "783fdbb7d7b80a6fb580bbe6a94da36b85f6d35109bb23d6c9370d813de95985",
+      "bytes": 12287,
+      "end_sha256": "783fdbb7d7b80a6fb580bbe6a94da36b85f6d35109bb23d6c9370d813de95985",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b94e2e414de8359fd969af0fdf6d1af61722ff08126f7fe44f083bd14e82b8af",
+      "bytes": 12510,
+      "end_sha256": "b94e2e414de8359fd969af0fdf6d1af61722ff08126f7fe44f083bd14e82b8af",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "0f2f518c48f2ab988d2c66dab1791a8478cf3b146fa7d0ad9a3f36579bcb6bfe",
+      "bytes": 12795,
+      "end_sha256": "0f2f518c48f2ab988d2c66dab1791a8478cf3b146fa7d0ad9a3f36579bcb6bfe",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "bytes": 12277,
+      "end_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/704-taiwan-arc-first-application.md",
+      "sha256": "823b5ea0597b7b531de819a92854cd963ee2d0d9d86555d6f6f68cf45f083575",
+      "bytes": 18809,
+      "end_sha256": "823b5ea0597b7b531de819a92854cd963ee2d0d9d86555d6f6f68cf45f083575",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "777899d149cc5654f007ba65929dee57d91e48002a23c610ffc8cd017ce2aaad",
+      "bytes": 21442,
+      "end_sha256": "777899d149cc5654f007ba65929dee57d91e48002a23c610ffc8cd017ce2aaad",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d1aa1863c836606247c976cb1e15a0e29f82407937b0712a0f8154e584f444c5",
+      "bytes": 23305,
+      "end_sha256": "d1aa1863c836606247c976cb1e15a0e29f82407937b0712a0f8154e584f444c5",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-input-freeze.json",
+      "sha256": "5b348290e1a8af4d1ee3d0e7de21f6a20b589340f277138a971607a1d93f75bf",
+      "bytes": 5059,
+      "end_sha256": "5b348290e1a8af4d1ee3d0e7de21f6a20b589340f277138a971607a1d93f75bf",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-input-integrity.json",
+      "sha256": "06a33d6527661a02e229725420345b959b1df5ee5646a37e80641883cf83005f",
+      "bytes": 8175,
+      "end_sha256": "06a33d6527661a02e229725420345b959b1df5ee5646a37e80641883cf83005f",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-variety-initial.json",
+      "sha256": "4629bf5db10efd4f3218786a714c7cf34e2ffd35b7de233e6444a7daae0853be",
+      "bytes": 11508,
+      "end_sha256": "4629bf5db10efd4f3218786a714c7cf34e2ffd35b7de233e6444a7daae0853be",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-variety-r1.json",
+      "sha256": "8b7e68b0c89c38e7902acab00ac12272af835f1d9a1aba31029e84511cb10168",
+      "bytes": 9361,
+      "end_sha256": "8b7e68b0c89c38e7902acab00ac12272af835f1d9a1aba31029e84511cb10168",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-variety-r2.json",
+      "sha256": "a77cda1f9899e83c36f7fc2d42d98ea093b6e7af0793007335e13a9c069af648",
+      "bytes": 5553,
+      "end_sha256": "a77cda1f9899e83c36f7fc2d42d98ea093b6e7af0793007335e13a9c069af648",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-variety-final.json",
+      "sha256": "23fb22a120ea343fcf0407c67df399f9a622ec0dcf8a01d0b169bc87498c578e",
+      "bytes": 11237,
+      "end_sha256": "23fb22a120ea343fcf0407c67df399f9a622ec0dcf8a01d0b169bc87498c578e",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-boundaries-initial.json",
+      "sha256": "a9e0359ecd5c49259658c5f0c1c25f2403a4a582d70e171caf1111300f839dcb",
+      "bytes": 100509,
+      "end_sha256": "a9e0359ecd5c49259658c5f0c1c25f2403a4a582d70e171caf1111300f839dcb",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-boundary-delta.json",
+      "sha256": "3519dc8af95b9416dc04d217c0e6022e1b8d43873b04aa314c77ad88d298595f",
+      "bytes": 7409,
+      "end_sha256": "3519dc8af95b9416dc04d217c0e6022e1b8d43873b04aa314c77ad88d298595f",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-boundaries-final.json",
+      "sha256": "0616879b9f3bcec7bfd5a2ee532775ec2b352a664647d3d4ec2167a94410ef10",
+      "bytes": 101771,
+      "end_sha256": "0616879b9f3bcec7bfd5a2ee532775ec2b352a664647d3d4ec2167a94410ef10",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-edit-integrity.json",
+      "sha256": "d939d6f37c47b0cd4d2126e6ab10ad3bfdb9503d1072c2b577ab238377ccb90b",
+      "bytes": 2704,
+      "end_sha256": "d939d6f37c47b0cd4d2126e6ab10ad3bfdb9503d1072c2b577ab238377ccb90b",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-self-edits-r1.json",
+      "sha256": "d77ce57935a5240d1381fccf23ea73c972ea634259a310074ff6e661e9c1a9d3",
+      "bytes": 24415,
+      "end_sha256": "d77ce57935a5240d1381fccf23ea73c972ea634259a310074ff6e661e9c1a9d3",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-self-edits-r2.json",
+      "sha256": "6fefe32183fdf4acd79bf4c784996be5002f51177fd0bfc3d02e640f689375ea",
+      "bytes": 17602,
+      "end_sha256": "6fefe32183fdf4acd79bf4c784996be5002f51177fd0bfc3d02e640f689375ea",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-self-edits-r3.json",
+      "sha256": "20ec6b0843667ca441f137f530f3a0c7d70637cc0107987f956da305a1d6f36f",
+      "bytes": 165652,
+      "end_sha256": "20ec6b0843667ca441f137f530f3a0c7d70637cc0107987f956da305a1d6f36f",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-content-audit.mjs",
+      "sha256": "853982beb314e89975fd55a9051d645eb22476d193dc57ebbd07141a90497394",
+      "bytes": 2101,
+      "end_sha256": "853982beb314e89975fd55a9051d645eb22476d193dc57ebbd07141a90497394",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-content-audit.json",
+      "sha256": "f065ffe94b31514bf4c6a8d77da46dec8befe8c643fcafc12eb394784dfae0ce",
+      "bytes": 437161,
+      "end_sha256": "f065ffe94b31514bf4c6a8d77da46dec8befe8c643fcafc12eb394784dfae0ce",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-915-manual-boundary-impact.json",
+      "sha256": "1d2c9e9dba8b5a37e74a02db70e3dc617437995032a372275c513974041c08c8",
+      "bytes": 1496,
+      "end_sha256": "1d2c9e9dba8b5a37e74a02db70e3dc617437995032a372275c513974041c08c8",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/tooling/bg-date-boundary/README.md",
+      "sha256": "5e584141e9cd62153a3e17a8fab22e79c437b2eb63320a10ca157dbb2d6e6db1",
+      "bytes": 2954,
+      "end_sha256": "5e584141e9cd62153a3e17a8fab22e79c437b2eb63320a10ca157dbb2d6e6db1",
+      "unchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/tooling/bg-date-boundary/neutral-diagnostic.json",
+      "sha256": "1b59625aefb43b069e7ed1e90c14fddee68c9cb8f7272a1a22a7a34ecd30c48b",
+      "bytes": 8203,
+      "end_sha256": "1b59625aefb43b069e7ed1e90c14fddee68c9cb8f7272a1a22a7a34ecd30c48b",
+      "unchanged": true
+    }
+  ],
+  "unchanged_input_count": 46,
+  "planned_rule_refresh": {
+    "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+    "old_sha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f",
+    "new_sha256": "9d3af531126f65057fa1ceea9785b6464e512c80ce25d922e822e01438e70486",
+    "new_full_text_read": true,
+    "edition": "2026-10-26 03:05 KST",
+    "effect": "Current advice preserves legal facts, dates, source attribution, actor distinctions and anti-monotony checks; no new mandate to alter prose facts."
+  },
+  "verification_attempt_note": "Initial all-inputs-unchanged assertion stopped before writing evidence because LESSONS refreshed during review. Diagnostic confirmed only this rule changed. New full text read and this transition explicitly allowed; no source/author/manuscript drift waived.",
+  "tools": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "author_observed_sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+      "current_sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "author_observed_sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+      "current_sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "author_observed_sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc",
+      "current_sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/bg.json",
+      "author_observed_sha256": "3462bfb1ef3eb72956a2b28b2dfdd9f3179d5c60472753e2ead4ccc3e6f1a442",
+      "current_sha256": "3462bfb1ef3eb72956a2b28b2dfdd9f3179d5c60472753e2ead4ccc3e6f1a442"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/content-audit.mjs",
+      "author_observed_sha256": "3926a274bf544fed7e34339aa8b2636d41a4be79c0aaff898f46fc65595faf4b",
+      "current_sha256": "3926a274bf544fed7e34339aa8b2636d41a4be79c0aaff898f46fc65595faf4b"
+    }
+  ],
+  "author_edits_forward_and_reverse": [
+    {
+      "file": "915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "initial_sha256": "337453feb2447710ccf33e1df2d794affbeed8103699134892d0b63cdce943cc",
+      "final_sha256": "b2b058966c26f084e38969656625cbd642fc9f71dbb14bcbf7f30f9ecc28387f",
+      "exact_substitutions": 4,
+      "forward_matches_final": true,
+      "position_aware_reverse_matches_initial": true,
+      "external_url_sequence_identical": true,
+      "stages": [
+        {
+          "stage": "r1",
+          "before": "337453feb2447710ccf33e1df2d794affbeed8103699134892d0b63cdce943cc",
+          "after": "cdfd460620f15746ada160464cd9ae53c276981011e675257245b1dad34c6efc"
+        },
+        {
+          "stage": "r1",
+          "before": "cdfd460620f15746ada160464cd9ae53c276981011e675257245b1dad34c6efc",
+          "after": "896803171469b7cf703cbbaa5f1e84882f622bdc3a20924abf6c49c25268e75c"
+        },
+        {
+          "stage": "r3",
+          "before": "896803171469b7cf703cbbaa5f1e84882f622bdc3a20924abf6c49c25268e75c",
+          "after": "b2b058966c26f084e38969656625cbd642fc9f71dbb14bcbf7f30f9ecc28387f"
+        }
+      ]
+    },
+    {
+      "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "initial_sha256": "f0d3ab37d4628c85f1e7f4d7fccf2afb83b88bec347c7cd28088896a37c62bee",
+      "final_sha256": "f161ce0b785f0fd8bdaeb7b25fcb71e48243930b5cbddfabcd0c9f61aef2fcb5",
+      "exact_substitutions": 8,
+      "forward_matches_final": true,
+      "position_aware_reverse_matches_initial": true,
+      "external_url_sequence_identical": true,
+      "stages": [
+        {
+          "stage": "r1",
+          "before": "f0d3ab37d4628c85f1e7f4d7fccf2afb83b88bec347c7cd28088896a37c62bee",
+          "after": "954372cc057bd97b83ee5ab2c5cafaa8bcb605a81efb20ea4a2b70b63ce9be62"
+        },
+        {
+          "stage": "r1",
+          "before": "954372cc057bd97b83ee5ab2c5cafaa8bcb605a81efb20ea4a2b70b63ce9be62",
+          "after": "9dc0de78bfdc69f6e3e9bb3b617aea029d29102cfdc6202521643877286518d0"
+        },
+        {
+          "stage": "r2",
+          "before": "9dc0de78bfdc69f6e3e9bb3b617aea029d29102cfdc6202521643877286518d0",
+          "after": "6cb42238221ffa7aaa8d5b8e625a2ce8a98be2b2fed0e0d3758f011b43613826"
+        },
+        {
+          "stage": "r2",
+          "before": "6cb42238221ffa7aaa8d5b8e625a2ce8a98be2b2fed0e0d3758f011b43613826",
+          "after": "3a26db35053259bb4b2f7de7e8ab54c49af755026bf96c1adf767dafd1af82f3"
+        },
+        {
+          "stage": "r2",
+          "before": "3a26db35053259bb4b2f7de7e8ab54c49af755026bf96c1adf767dafd1af82f3",
+          "after": "284c8046a24d5070b74383768c8e9dd16045a58c4b418637c18c43e12922ac76"
+        },
+        {
+          "stage": "r2",
+          "before": "284c8046a24d5070b74383768c8e9dd16045a58c4b418637c18c43e12922ac76",
+          "after": "6437e7b31677afe2ad177a48f72f40ed38e2d0b358eba78e4af149915d0d79b9"
+        },
+        {
+          "stage": "r3",
+          "before": "6437e7b31677afe2ad177a48f72f40ed38e2d0b358eba78e4af149915d0d79b9",
+          "after": "f161ce0b785f0fd8bdaeb7b25fcb71e48243930b5cbddfabcd0c9f61aef2fcb5"
+        }
+      ]
+    },
+    {
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "initial_sha256": "3d07199737050828f242f9a64caa5fd14f98eb76fa69a67a52d609eabb6223f1",
+      "final_sha256": "783fdbb7d7b80a6fb580bbe6a94da36b85f6d35109bb23d6c9370d813de95985",
+      "exact_substitutions": 3,
+      "forward_matches_final": true,
+      "position_aware_reverse_matches_initial": true,
+      "external_url_sequence_identical": true,
+      "stages": [
+        {
+          "stage": "r1",
+          "before": "3d07199737050828f242f9a64caa5fd14f98eb76fa69a67a52d609eabb6223f1",
+          "after": "e49e94e79bc8a065694b615b1861e25fbf093f24d5b3d20328026d22f212b766"
+        },
+        {
+          "stage": "r3",
+          "before": "e49e94e79bc8a065694b615b1861e25fbf093f24d5b3d20328026d22f212b766",
+          "after": "783fdbb7d7b80a6fb580bbe6a94da36b85f6d35109bb23d6c9370d813de95985"
+        }
+      ]
+    },
+    {
+      "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "initial_sha256": "8329db7c6179a4d178fbae5f44eff0405358fd91fe8e7f98e8221e0246471665",
+      "final_sha256": "b94e2e414de8359fd969af0fdf6d1af61722ff08126f7fe44f083bd14e82b8af",
+      "exact_substitutions": 1,
+      "forward_matches_final": true,
+      "position_aware_reverse_matches_initial": true,
+      "external_url_sequence_identical": true,
+      "stages": [
+        {
+          "stage": "r3",
+          "before": "8329db7c6179a4d178fbae5f44eff0405358fd91fe8e7f98e8221e0246471665",
+          "after": "b94e2e414de8359fd969af0fdf6d1af61722ff08126f7fe44f083bd14e82b8af"
+        }
+      ]
+    },
+    {
+      "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "initial_sha256": "1aaedecb1b36dd78604e8b7f7a11b14e66d82b38d3b833707ea8b720c686409c",
+      "final_sha256": "0f2f518c48f2ab988d2c66dab1791a8478cf3b146fa7d0ad9a3f36579bcb6bfe",
+      "exact_substitutions": 5,
+      "forward_matches_final": true,
+      "position_aware_reverse_matches_initial": true,
+      "external_url_sequence_identical": true,
+      "stages": [
+        {
+          "stage": "r1",
+          "before": "1aaedecb1b36dd78604e8b7f7a11b14e66d82b38d3b833707ea8b720c686409c",
+          "after": "7fd924c3077f0bdfbdd7fa2eb03a4c19802b2223cc3c60f4c0df1052c73ff582"
+        },
+        {
+          "stage": "r1",
+          "before": "7fd924c3077f0bdfbdd7fa2eb03a4c19802b2223cc3c60f4c0df1052c73ff582",
+          "after": "82a5615049c25f76d2fad4334e0c2db2dfc71ec69ba611b5f64746c41e720beb"
+        },
+        {
+          "stage": "r2",
+          "before": "82a5615049c25f76d2fad4334e0c2db2dfc71ec69ba611b5f64746c41e720beb",
+          "after": "fe02ae349b5095407d71427aee7a2bd5b7826ba1ea4a6a76d54ea75f58311b52"
+        },
+        {
+          "stage": "r3",
+          "before": "fe02ae349b5095407d71427aee7a2bd5b7826ba1ea4a6a76d54ea75f58311b52",
+          "after": "0f2f518c48f2ab988d2c66dab1791a8478cf3b146fa7d0ad9a3f36579bcb6bfe"
+        }
+      ]
+    },
+    {
+      "file": "921-taiwan-online-game-coins-refund-judgment.md",
+      "initial_sha256": "f5339e3dcc1bef19ea426c21dfdf8ab92176f94af91db0dcb665e27a2ce4523b",
+      "final_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "exact_substitutions": 3,
+      "forward_matches_final": true,
+      "position_aware_reverse_matches_initial": true,
+      "external_url_sequence_identical": true,
+      "stages": [
+        {
+          "stage": "r1",
+          "before": "f5339e3dcc1bef19ea426c21dfdf8ab92176f94af91db0dcb665e27a2ce4523b",
+          "after": "4fd383a1e5e3657ec3dfa6462ad2ba36ca138fb4b7921c9d3f1edeee495d8093"
+        },
+        {
+          "stage": "r2",
+          "before": "4fd383a1e5e3657ec3dfa6462ad2ba36ca138fb4b7921c9d3f1edeee495d8093",
+          "after": "48711ab02052040f01d57d035fface6e4b525d0043e7e377d0e17b1d0e92f0ec"
+        },
+        {
+          "stage": "r3",
+          "before": "48711ab02052040f01d57d035fface6e4b525d0043e7e377d0e17b1d0e92f0ec",
+          "after": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a"
+        }
+      ]
+    }
+  ],
+  "substitution_count": 24,
+  "reused_actual_measurements": [
+    {
+      "file": "915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "b2b058966c26f084e38969656625cbd642fc9f71dbb14bcbf7f30f9ecc28387f",
+      "saved_actual_exit": 0,
+      "metrics": {
+        "lang": "bg",
+        "sentences": 43,
+        "paras": 13,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 14.4,
+        "len_cv": 0.543,
+        "short_share": 0.349,
+        "long_share": 0.023,
+        "para_cv": 0.203,
+        "even_run3": 0.049,
+        "top_end": "арбитраж",
+        "top_end_share": 0.047,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "при",
+        "top_opener_n": 2,
+        "opener_rep": 0.077,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.58,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Удостоверението за неуспешна медиация не е било достатъчно, за да се запази арбитражно реш",
+        "last": "За първоначален разговор чрез страницата за контакт може да посочите вида на проекта, търсеното плащане или друго изпълн",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "all_extracted_units_read": 43,
+      "observed_boundary_defects": [
+        {
+          "units": [
+            3,
+            4
+          ],
+          "type": "false_split_after_year_abbreviation",
+          "actual": [
+            "В решение 106年度台上字第723號 от 12 юли 2017 г.",
+            "Върховният съд на Тайван оставя в сила отмяната на арбитражното решение и отхвърля жалбата на изпълнителя."
+          ],
+          "expected": "В решение 106年度台上字第723號 от 12 юли 2017 г. Върховният съд на Тайван оставя в сила отмяната на арбитражното решение и отхвърля жалбата на изпълнителя."
+        }
+      ],
+      "fresh_cli_run": false
+    },
+    {
+      "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "f161ce0b785f0fd8bdaeb7b25fcb71e48243930b5cbddfabcd0c9f61aef2fcb5",
+      "saved_actual_exit": 0,
+      "metrics": {
+        "lang": "bg",
+        "sentences": 42,
+        "paras": 13,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 15.1,
+        "len_cv": 0.47,
+        "short_share": 0.19,
+        "long_share": 0.024,
+        "para_cv": 0.15,
+        "even_run3": 0.025,
+        "top_end": "отговорността",
+        "top_end_share": 0.071,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "в",
+        "top_opener_n": 2,
+        "opener_rep": 0.308,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.89,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Кой е получил доклада за замърсяването и какво е последвало?",
+        "last": "При запитване чрез страницата за контакт са полезни видът на сделката, наименованието на тайванското дружество и датата ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "all_extracted_units_read": 42,
+      "observed_boundary_defects": [],
+      "fresh_cli_run": false
+    },
+    {
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "783fdbb7d7b80a6fb580bbe6a94da36b85f6d35109bb23d6c9370d813de95985",
+      "saved_actual_exit": 0,
+      "metrics": {
+        "lang": "bg",
+        "sentences": 42,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.3,
+        "len_cv": 0.473,
+        "short_share": 0.238,
+        "long_share": 0.024,
+        "para_cv": 0.196,
+        "even_run3": 0.0,
+        "top_end": "предаване",
+        "top_end_share": 0.095,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "в",
+        "top_opener_n": 2,
+        "opener_rep": 0.154,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.17,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "На 23 февруари 2019 г. строителят изпраща писмо за движението на ипотечния кредит.",
+        "last": "При първоначално запитване до wei@hoveringlaw.com.tw могат да се посочат клаузата за уведомяване, датите на получените п",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "all_extracted_units_read": 42,
+      "observed_boundary_defects": [],
+      "fresh_cli_run": false
+    },
+    {
+      "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b94e2e414de8359fd969af0fdf6d1af61722ff08126f7fe44f083bd14e82b8af",
+      "saved_actual_exit": 0,
+      "metrics": {
+        "lang": "bg",
+        "sentences": 40,
+        "paras": 13,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 14.8,
+        "len_cv": 0.49,
+        "short_share": 0.125,
+        "long_share": 0.025,
+        "para_cv": 0.237,
+        "even_run3": 0.079,
+        "top_end": "решението",
+        "top_end_share": 0.05,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "в",
+        "top_opener_n": 2,
+        "opener_rep": 0.077,
+        "consec_same_start": 0,
+        "cite_para_share": 0.077,
+        "cite_end_share": 0.0,
+        "contrast": 1,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.36,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Наказанието е оповестено, преди компетентната комисия да е заседавала.",
+        "last": "При запитване до wei@hoveringlaw.com.tw посочете накратко етапа, датата на решението и най-близкия срок. Пълни доклади и",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "all_extracted_units_read": 40,
+      "observed_boundary_defects": [],
+      "fresh_cli_run": false
+    },
+    {
+      "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "0f2f518c48f2ab988d2c66dab1791a8478cf3b146fa7d0ad9a3f36579bcb6bfe",
+      "saved_actual_exit": 0,
+      "metrics": {
+        "lang": "bg",
+        "sentences": 42,
+        "paras": 13,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 15.4,
+        "len_cv": 0.512,
+        "short_share": 0.143,
+        "long_share": 0.048,
+        "para_cv": 0.201,
+        "even_run3": 0.025,
+        "top_end": "части",
+        "top_end_share": 0.119,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "член",
+        "top_opener_n": 2,
+        "opener_rep": 0.077,
+        "consec_same_start": 1,
+        "cite_para_share": 0.385,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 2.95,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Зарядното устройство е свързано към личния електромер, но пътят до него минава през общи ч",
+        "last": "За запитване до wei@hoveringlaw.com.tw са полезни схема на трасето, относимата част от правилника и полученото решение и",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "all_extracted_units_read": 42,
+      "observed_boundary_defects": [],
+      "fresh_cli_run": false
+    },
+    {
+      "file": "921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "saved_actual_exit": 0,
+      "metrics": {
+        "lang": "bg",
+        "sentences": 42,
+        "paras": 13,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 14.8,
+        "len_cv": 0.493,
+        "short_share": 0.238,
+        "long_share": 0.024,
+        "para_cv": 0.149,
+        "even_run3": 0.0,
+        "top_end": "г",
+        "top_end_share": 0.048,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "в",
+        "top_opener_n": 2,
+        "opener_rep": 0.154,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 3.37,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Балансът в профила показва останали монети.",
+        "last": "Потребителят може да използва официалния портал за жалби. За първоначално запитване до wei@hoveringlaw.com.tw са полезни",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "all_extracted_units_read": 42,
+      "observed_boundary_defects": [],
+      "fresh_cli_run": false
+    }
+  ],
+  "extracted_units_read_total": 251,
+  "manual_915_sensitivity_reused": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "sha256": "b2b058966c26f084e38969656625cbd642fc9f71dbb14bcbf7f30f9ecc28387f",
+    "status": "MANUAL_BOUNDARY_SENSITIVITY_ONLY_NOT_SHARED_CLI",
+    "original_segments": [
+      "В решение 106年度台上字第723號 от 12 юли 2017 г.",
+      "Върховният съд на Тайван оставя в сила отмяната на арбитражното решение и отхвърля жалбата на изпълнителя."
+    ],
+    "manual_complete_sentence": "В решение 106年度台上字第723號 от 12 юли 2017 г. Върховният съд на Тайван оставя в сила отмяната на арбитражното решение и отхвърля жалбата на изпълнителя.",
+    "automated_sentence_count": 43,
+    "manual_sentence_count": 42,
+    "length_unit": "same shared orthographic words, unchanged thresholds",
+    "manual_mean_length": 14.761904761904763,
+    "manual_len_cv": 0.5406859635076864,
+    "manual_short_share": 0.3333333333333333,
+    "limitation": "The CLI still emits the original two fragments. This arithmetic does not alter or waive its result and is not a full replacement metric run.",
+    "previous_sha256": "896803171469b7cf703cbbaa5f1e84882f622bdc3a20924abf6c49c25268e75c",
+    "measured_body_identical_after_source_footer_only_typography": true
+  },
+  "diagnostic_scope": "Full README and all14 neutral examples read; saved9/14 expected matches. No code candidate, test run or CLI repeat. No manuscript spelling change to fit segmentation.",
+  "structural_audit_reused": {
+    "errors": 0,
+    "review_items_retained": 30,
+    "files": [
+      {
+        "file": "915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "source": {
+          "file": "src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+          "locale": "en",
+          "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+        },
+        "errors": [],
+        "review_items": [
+          {
+            "code": "public-output-and-native-prose",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "title-summary-faq",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "legal-conditions",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "numbers-dates-currencies",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "nationality-jurisdiction",
+            "status": "REQUIRED"
+          }
+        ],
+        "saved_runtime_board_visible": true,
+        "external_source_url_sets_equal": true
+      },
+      {
+        "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "source": {
+          "file": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "locale": "en",
+          "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+        },
+        "errors": [],
+        "review_items": [
+          {
+            "code": "public-output-and-native-prose",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "title-summary-faq",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "legal-conditions",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "numbers-dates-currencies",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "nationality-jurisdiction",
+            "status": "REQUIRED"
+          }
+        ],
+        "saved_runtime_board_visible": true,
+        "external_source_url_sets_equal": true
+      },
+      {
+        "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "source": {
+          "file": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+          "locale": "zh-hant",
+          "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+        },
+        "errors": [],
+        "review_items": [
+          {
+            "code": "public-output-and-native-prose",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "title-summary-faq",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "legal-conditions",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "numbers-dates-currencies",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "nationality-jurisdiction",
+            "status": "REQUIRED"
+          }
+        ],
+        "saved_runtime_board_visible": true,
+        "external_source_url_sets_equal": true
+      },
+      {
+        "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "source": {
+          "file": "src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+          "locale": "zh-hant",
+          "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+        },
+        "errors": [],
+        "review_items": [
+          {
+            "code": "public-output-and-native-prose",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "title-summary-faq",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "legal-conditions",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "numbers-dates-currencies",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "nationality-jurisdiction",
+            "status": "REQUIRED"
+          }
+        ],
+        "saved_runtime_board_visible": true,
+        "external_source_url_sets_equal": true
+      },
+      {
+        "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "source": {
+          "file": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "locale": "zh-hant",
+          "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+        },
+        "errors": [],
+        "review_items": [
+          {
+            "code": "public-output-and-native-prose",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "title-summary-faq",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "legal-conditions",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "numbers-dates-currencies",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "nationality-jurisdiction",
+            "status": "REQUIRED"
+          }
+        ],
+        "saved_runtime_board_visible": true,
+        "external_source_url_sets_equal": true
+      },
+      {
+        "file": "921-taiwan-online-game-coins-refund-judgment.md",
+        "source": {
+          "file": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+          "locale": "zh-hant",
+          "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+        },
+        "errors": [],
+        "review_items": [
+          {
+            "code": "public-output-and-native-prose",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "title-summary-faq",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "legal-conditions",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "numbers-dates-currencies",
+            "status": "REQUIRED"
+          },
+          {
+            "code": "nationality-jurisdiction",
+            "status": "REQUIRED"
+          }
+        ],
+        "saved_runtime_board_visible": true,
+        "external_source_url_sets_equal": true
+      }
+    ],
+    "public_rendering_checked": false
+  },
+  "recent_by_published": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/704-taiwan-arc-first-application.md",
+      "sha256": "823b5ea0597b7b531de819a92854cd963ee2d0d9d86555d6f6f68cf45f083575",
+      "published": "2026-10-26",
+      "read_scope": "full text; opening/headings/ending comparison"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "777899d149cc5654f007ba65929dee57d91e48002a23c610ffc8cd017ce2aaad",
+      "published": "2026-10-26",
+      "read_scope": "full text; opening/headings/ending comparison"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d1aa1863c836606247c976cb1e15a0e29f82407937b0712a0f8154e584f444c5",
+      "published": "2026-10-26",
+      "read_scope": "full text; opening/headings/ending comparison"
+    }
+  ],
+  "author_recent_selection": "Author BG885–887 selected by file number; author confirmed limitation. This independent review compares current published-latest BG704–706.",
+  "additional_primary_checks": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/recheck/zh918-government-pdf-selected-lines.txt",
+      "sha256_at_read": "a8e696fb5301ada084435e21d18b7f33e1f8bf6e42961f00278f08dcf67b00fd",
+      "reviewed_lines": "L5057–L5085, especially L5075–L5077 signed warranty and recorded handover date108/11/28",
+      "conclusion": "No mandatory error raised for BG918 compressed warranty/handover chronology; earlier11/26 testimony is distinguished from the undisputed signed document date."
+    },
+    {
+      "url": "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade",
+      "access": "successful web open 2026-10-26 KST",
+      "section": "Facilitating Mutually Beneficial Investment",
+      "use": "Optional BG916 actor/location precision. Conditional US consideration of financing in Taiwan with private US partners, consistent with law. No assertion of full treaty effectiveness."
+    }
+  ],
+  "manual_findings": {
+    "mandatory_legal": 0,
+    "mandatory_prose": [
+      "M1 batch opening category1 count4/6, §2-4/§5.2",
+      "M2 BG921 direct contrast lowerbound4 plus separate-topic recaps3; ordinary negative legal statements excluded, §2-6/§5.6"
+    ],
+    "optional": [
+      "O1 BG916 US actor/Taiwan investment destination clarity",
+      "O2 BG915/918/921 date-density readability; not automatic hard numeric FAIL"
+    ],
+    "contrast_units_921": {
+      "literal": [
+        3,
+        5,
+        6,
+        25
+      ],
+      "separate_recaps": [
+        [
+          11
+        ],
+        [
+          27,
+          28
+        ],
+        [
+          31
+        ]
+      ],
+      "saved_regex_metric": 0,
+      "manual_status": "rhetorical review, not new software score"
+    }
+  },
+  "limits": [
+    "Independent of BG author but not an independent tool-code audit: reviewer previously implemented BG profile.",
+    "AI-assisted Bulgarian meaning/prose comparison, not human native-language or legal approval.",
+    "No independent rendering of pages/cards/JSON-LD/feeds and no new image viewing.",
+    "No manuscript, author, R, shared code, threshold, git or deployment changes.",
+    "Multi-part dates and case identifiers do not automatically establish a legal numeric-count violation."
+  ]
+}

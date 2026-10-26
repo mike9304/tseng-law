@@ -1,0 +1,428 @@
+{
+  "at": "2026-10-25T18:15:07.854Z",
+  "scope": "Independent actual YAML/URL/FAQ/table/source verification and exact recorded CLI comparison; no new full CLI or content-audit rerun.",
+  "errors": [],
+  "totalFAQ": 17,
+  "sourceURLsPerArticleSum": 23,
+  "rows": [
+    {
+      "id": 915,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "431a779eaf22d733220313778cb2469744836cac99bce692f2b2741711b6f623",
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sourceSha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "metadata": {
+        "title": "মধ্যস্থতায় সময়, সালিশে টাকা: তাইওয়ানের হাসপাতাল নির্মাণের বিরোধ",
+        "seoTitle": "তাইওয়ানের সরকারি চুক্তি: মধ্যস্থতা থেকে সালিশ",
+        "summary": "নির্মাণের সময় বাড়ানোর সুপারিশ পাওয়ার পরে ঠিকাদার সালিশে আবার টাকা চেয়েছিলেন। সেই অর্থদাবি নিয়ে মধ্যস্থতার সুপারিশ না থাকায় সালিশি রায় বাতিল থাকে। আইনি পথটি নির্দিষ্ট বিরোধ ও সরকারি সংস্থার প্রতিক্রিয়ার ওপর নির্ভর করে।",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 অক্টোবর 2026",
+        "read_time": "5 মিনিটের পাঠ",
+        "categories": [
+          "তাইওয়ানের সরকারি চুক্তি"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "সরকারি ক্রয়",
+          "নির্মাণ বিরোধ",
+          "মধ্যস্থতা",
+          "সালিশ",
+          "মার্কিন সরবরাহকারী"
+        ],
+        "audience": [
+          "bn"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/915-case-trends-20261025.webp",
+        "featured_image_alt": "একটি সেতুর মডেলের পাশে নিরাপত্তার হেলমেট, নির্মাণের নকশা ও ফাইলের বাইন্ডার।",
+        "featured_image_caption": "কাল্পনিক দৃশ্য",
+        "faq": [
+          {
+            "q": "মধ্যস্থতায় সমঝোতা না হলেই কি তাইওয়ানের সরকারি সংস্থার বিরুদ্ধে সালিশ করা যায়?",
+            "a": "সব ক্ষেত্রে নয়। নির্মাণকাজ বা কারিগরি সেবার জন্য আইনে নির্ধারিত পথে সংশ্লিষ্ট ক্রয় অভিযোগ পর্যালোচনা কমিটির সুপারিশ বা প্রস্তাবে সরকারি সংস্থার অসম্মতির কারণে মধ্যস্থতা ব্যর্থ হতে হবে। সালিশে তোলা নির্দিষ্ট বিরোধের সঙ্গে সেই প্রক্রিয়ার নথি মিলিয়ে দেখতে হয়। আলাদা সালিশি চুক্তি থাকলে অন্য ভিত্তি থাকতে পারে।"
+          },
+          {
+            "q": "দাবিতে যেকোনো পরিবর্তন হলেই কি সালিশের পথ বন্ধ বলে সর্বোচ্চ আদালত সিদ্ধান্ত দিয়েছিল?",
+            "a": "এ মামলায় সময় বাড়ানোর সুপারিশের পরে ঠিকাদার আবার অর্থদাবিতে ফেরেন। তাই বলে প্রতিবার অঙ্ক বা আইনগত যুক্তি বদলালেই নতুন বিরোধ হয়, এমন নিয়ম আদালত স্থির করেনি। ঘটনা, চাওয়া প্রতিকার ও প্রক্রিয়ার নথি পাশাপাশি দেখতে হয়।"
+          }
+        ]
+      },
+      "faqCount": 2,
+      "officialUrls": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "missingInBody": [],
+      "missingInEndList": [],
+      "tables": [
+        "| পর্যায় | দাবি ও সিদ্ধান্তের বিষয় |",
+        "|---|---|",
+        "| প্রথম আবেদন | ঠিকাদার আর্থিক ক্ষতিপূরণ চান। |",
+        "| সংশোধিত আবেদন | দাবি বদলে নির্মাণের সময় বাড়ানোর আবেদন করা হয়। |",
+        "| কমিটির সুপারিশ | সময় বাড়ানোর বিষয়টি বিবেচিত হয়; সরকারি সংস্থা তাতে একমত হয়নি। |",
+        "| পরের অর্থদাবি | ঠিকাদার আবার টাকা চান, কিন্তু সালিশের আগে সেই দাবি নিয়ে সুপারিশ বা প্রস্তাব দেওয়া হয়নি। |"
+      ],
+      "noBold": true,
+      "bidiControlCount": 0,
+      "currentMetricEvidence": {
+        "file": "checks/bn-variety-initial.json",
+        "sha256": "055bda08cde51f3de5746823a993fa088d7cc2c2b0fe9a655d6ee638c825b4e7",
+        "exit": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/915-taiwan-public-contract-mediation-arbitration-same-claim.md [bn] sentences=41 mean=14.0 cv=0.493 short=0.244 run3=0.051 opener_rep=0.0 cite_end=0.0 cite_para=0.143 contrast=0 caveat=1 q=1\n  OK — no variety limit violated\n",
+        "metricsMatch": true,
+        "exactManuscriptSha": true
+      }
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "b6b74d97653bfbed690dd60d826193dcabf9a71c2abd05fdb97ed83e4af2fc7a",
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sourceSha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "metadata": {
+        "title": "তাইওয়ানের কারখানায় দূষণ: প্রতিবেদন পাওয়ার পরে মূল কোম্পানির সিদ্ধান্ত",
+        "seoTitle": "তাইওয়ানে দূষণের দায় ও মূল কোম্পানির ভূমিকা",
+        "summary": "একটি দূষণ মামলায় মূল কোম্পানিগুলোর নিয়ন্ত্রণ, ঝুঁকির জ্ঞান ও সম্পদ সরানোর সঙ্গে দায়ের সম্পর্ক দেখা হয়। অধিগ্রহণের আগে প্রতিবেদন সংগ্রহের পাশাপাশি পরে কে কী সিদ্ধান্ত নিয়েছিলেন, তার নথিও দরকার হয়।",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 অক্টোবর 2026",
+        "read_time": "5 মিনিটের পাঠ",
+        "categories": [
+          "তাইওয়ানে কোম্পানি ও অধিগ্রহণ"
+        ],
+        "topic": "company",
+        "tags": [
+          "মূল কোম্পানি",
+          "কারখানার দূষণ",
+          "অধিগ্রহণ",
+          "সম্পদ হস্তান্তর",
+          "বিনিয়োগ"
+        ],
+        "audience": [
+          "bn"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/916-case-trends-20261025.webp",
+        "featured_image_alt": "পুরোনো একটি কারখানার পাশে ভাঁজ করা যায় এমন টেবিলে মাটির নমুনার পাত্র ও একটি খাতা।",
+        "featured_image_caption": "কাল্পনিক দৃশ্য",
+        "faq": [
+          {
+            "q": "তাইওয়ানে সহায়ক কোম্পানি থাকলেই কি বিদেশি মূল কোম্পানি তার দূষণের জন্য দায়ী?",
+            "a": "এ মামলায় শুধু মালিকানা দায়ের ভিত্তি ছিল না। আদালতের ব্যাখ্যায় নিয়ন্ত্রণ, দূষণ সম্পর্কে জানা, সমস্যাটি জানানো বা মোকাবিলা না করা এবং দায় এড়াতে সম্পদ সরানোর কথা রয়েছে। নির্দিষ্ট আচরণ ও প্রযোজ্য আইন দেখে দায় নির্ধারণ করতে হয়।"
+          },
+          {
+            "q": "2018 সালের সর্বোচ্চ আদালতের রায় কি কারখানাটির সব ক্ষতিপূরণ দাবি শেষ করে দেয়?",
+            "a": "না। 246 জন দাবিদারের সংশ্লিষ্ট অংশ বাতিল করে আবার বিচারের জন্য পাঠানো হয়, আর 262 জনসংক্রান্ত আপিল খারিজ হয়। মামলার বিভিন্ন অংশে ফল ভিন্ন ছিল। এটি সব সম্পর্কিত মামলা শেষ হওয়া বা 262 জনের মূল দাবি পুরোপুরি খারিজ হওয়ার ঘোষণা নয়।"
+          },
+          {
+            "q": "পরিবেশগত পরীক্ষা শেষে অধিগ্রহণের দল কোন নথি রাখবে?",
+            "a": "প্রতিবেদন, প্রাপকদের তালিকা, পরের প্রশ্ন, শ্রমিকের ঝুঁকি ও দূষণ মোকাবিলার সিদ্ধান্ত, এবং পরবর্তী সম্পদ হস্তান্তরের অনুমোদন ও আর্থিক বিশ্লেষণ সংরক্ষণ করা যায়। এসব নথি জ্ঞান ও আচরণ মূল্যায়নে সাহায্য করে; ফাইল রেখে দিলেই আইন মানার প্রমাণ হয় না।"
+          }
+        ]
+      },
+      "faqCount": 3,
+      "officialUrls": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "missingInBody": [],
+      "missingInEndList": [],
+      "tables": [],
+      "noBold": true,
+      "bidiControlCount": 0,
+      "currentMetricEvidence": {
+        "file": "checks/bn-variety-initial.json",
+        "sha256": "055bda08cde51f3de5746823a993fa088d7cc2c2b0fe9a655d6ee638c825b4e7",
+        "exit": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/916-taiwan-parent-company-pollution-liability-us-investor.md [bn] sentences=42 mean=15.0 cv=0.511 short=0.262 run3=0.025 opener_rep=0.071 cite_end=0.0 cite_para=0.071 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "metricsMatch": true,
+        "exactManuscriptSha": true
+      }
+    },
+    {
+      "id": 918,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "54f6aed17c28b35ea8a4d042f8f4112ba229f8cfd04c120f73728cf362d58ef7",
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sourceSha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "metadata": {
+        "title": "ঋণের চিঠি থেকে বাড়ি হস্তান্তর: তাইওয়ানে বিলম্বের একটি মামলা",
+        "seoTitle": "তাইওয়ানে বাড়ি হস্তান্তরের নোটিশ ও ঋণের চিঠি",
+        "summary": "নির্মাতার ঋণসংক্রান্ত চিঠি এবং পরে ঘরে কাজ করার অনুমতি চুক্তি অনুযায়ী হস্তান্তরের প্রমাণ হয়নি। ওই চুক্তির চার মাস ও বর্তমান বিধানের ছয় মাস আলাদা; ব্যবহার-অনুমতি, চিঠির বিষয়বস্তু ও বাড়ির অবস্থা মিলিয়ে দেখতে হয়।",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 অক্টোবর 2026",
+        "read_time": "5 মিনিটের পাঠ",
+        "categories": [
+          "তাইওয়ানের আবাসন",
+          "আদালতের সিদ্ধান্ত"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "নির্মাণ সম্পূর্ণ হওয়ার আগে বাড়ি বিক্রি",
+          "হস্তান্তরের নোটিশ",
+          "গৃহঋণ",
+          "বিলম্বের সুদ"
+        ],
+        "audience": [
+          "bn"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/918-case-trends-20261025.webp",
+        "featured_image_alt": "নতুন বাড়ির একটি টেবিলে ফোল্ডার, লেখা না থাকা খাম ও একটি বাক্স।",
+        "featured_image_caption": "কাল্পনিক দৃশ্য",
+        "faq": [
+          {
+            "q": "নির্মাতা গৃহঋণের কাজ করতে বললে কি সেটিই বাড়ি হস্তান্তরের নোটিশ?",
+            "a": "চিঠির বিষয়বস্তু ও তখনকার বাড়ির অবস্থা দেখতে হয়। এ মামলার চিঠি ঋণের অগ্রগতি জানতে চেয়েছিল, বাড়ি ব্যবহারের উপযুক্ত হয়েছে এমন কথা বলেনি। পানি-বিদ্যুৎ সংযোগ ও পরের পরিদর্শনের রেকর্ডও নির্মাতার বক্তব্য সমর্থন করেনি। তাই আদালত চুক্তির হস্তান্তর-নোটিশের কর্তব্য পূরণ হয়েছে বলে মানেনি।"
+          },
+          {
+            "q": "ব্যবহারের অনুমতি পাওয়ার পরে নোটিশের সময় চার মাস না ছয় মাস?",
+            "a": "এ মামলায় চার মাস ছিল পক্ষগুলোর চুক্তির শর্ত। নির্মাণ সম্পূর্ণ হওয়ার আগে বাড়ি বিক্রির বর্তমান বাধ্যতামূলক মানচুক্তির 15 নম্বর বিধান অনুযায়ী বিক্রেতা ব্যবহার-অনুমতি পাওয়ার ছয় মাসের মধ্যে ক্রেতাকে হস্তান্তরের নোটিশ দেবেন। নির্দিষ্ট ঘটনায় চুক্তি সইয়ের সময় প্রযোজ্য বিধি ও প্রকৃত চুক্তি মিলিয়ে দেখতে হয়।"
+          },
+          {
+            "q": "ব্যাংক এখনও ঋণের টাকা না ছাড়লে নির্মাতার নোটিশ উপেক্ষা করতে পারি?",
+            "a": "ঋণ প্রক্রিয়াধীন থাকা একাই নোটিশ ফেলে রাখার কারণ নয়। মূল্য পরিশোধ, ঋণের নথি, পরিদর্শন ও হস্তান্তরের আলাদা শর্ত থাকে। নোটিশে কোন কাজটি কোন সময়ের মধ্যে করতে বলা হয়েছে, আগে তা বুঝে ব্যাংক ও বাড়ির অবস্থার রেকর্ড মেলানো যায়। এ রায় সব ক্রেতাকে টাকা দেওয়া বন্ধ করার অধিকার দেয় না।"
+          }
+        ]
+      },
+      "faqCount": 3,
+      "officialUrls": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "missingInBody": [],
+      "missingInEndList": [],
+      "tables": [],
+      "noBold": true,
+      "bidiControlCount": 0,
+      "currentMetricEvidence": {
+        "file": "checks/bn-variety-self-review.json",
+        "sha256": "a80c795786260cd52017edfdecc41a13820de3013c34f13c7aa2f0731e1b0726",
+        "exit": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/918-taiwan-presale-mortgage-notice-handover-judgment.md [bn] sentences=45 mean=13.6 cv=0.466 short=0.244 run3=0.023 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=1 q=1\n  OK — no variety limit violated\n",
+        "metricsMatch": true,
+        "exactManuscriptSha": true
+      }
+    },
+    {
+      "id": 919,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "320be4966948f532d062f8fd0c4a1ccfea42d858070847d9846d3f30bcbc8d53",
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sourceSha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "metadata": {
+        "title": "কমিটির আলোচনার আগেই শাস্তির ঘোষণা: তাইওয়ানে বরখাস্তের সিদ্ধান্ত বাতিল",
+        "seoTitle": "তাইওয়ানে কর্মস্থলের নিপীড়ন তদন্ত ও জবাব দেওয়ার সুযোগ",
+        "summary": "এক সরকারি কর্মচারীর বরখাস্তের সিদ্ধান্ত বাতিল করতে গিয়ে আদালত পূর্বনির্ধারিত ফল, জবাব দেওয়ার সুযোগের অভাব ও প্রতিবেদনের অসংগতি চিহ্নিত করে। বেসরকারি নিয়োগকর্তার তদন্ত ও সুরক্ষার কর্তব্য আলাদা আইনে নির্ধারিত।",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 অক্টোবর 2026",
+        "read_time": "5 মিনিটের পাঠ",
+        "categories": [
+          "তাইওয়ানের শ্রম আইন",
+          "আদালতের সিদ্ধান্ত"
+        ],
+        "topic": "labor",
+        "tags": [
+          "কর্মস্থলে নিপীড়ন",
+          "অভিযোগ তদন্ত",
+          "আত্মপক্ষ সমর্থন",
+          "সরকারি কর্মচারী",
+          "বরখাস্ত"
+        ],
+        "audience": [
+          "bn"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/919-case-trends-20261025.webp",
+        "featured_image_alt": "খালি সভাকক্ষে গোল টেবিলের ওপর একটি ফাইল এবং চারপাশে তিনটি চেয়ার।",
+        "featured_image_caption": "কাল্পনিক দৃশ্য",
+        "faq": [
+          {
+            "q": "বরখাস্ত বাতিল হলে কি আদালত বলেছে কোনো নিপীড়ন ঘটেনি?",
+            "a": "এমন সিদ্ধান্ত টানা যায় না। আদালত আলোচনা ও মূল্যায়নের প্রক্রিয়া, জবাব দেওয়ার সুযোগ এবং ঘটনা নির্ধারণে সমস্যা চিহ্নিত করে মূল সিদ্ধান্ত ও প্রশাসনিক পুনর্বিবেচনার সিদ্ধান্ত বাতিল করেছে। এতে অভিযোগের সব আচরণ ঘটেনি বলে প্রমাণ হয় না। সরকারি বিবৃতিতে আপিলের সুযোগও উল্লেখ রয়েছে।"
+          },
+          {
+            "q": "তদন্ত শেষ না হওয়া পর্যন্ত কি কোম্পানিকে সুরক্ষার ব্যবস্থা না করে অপেক্ষা করতে হবে?",
+            "a": "নিয়োগকর্তা কীভাবে ঘটনা জানতে পেরেছেন, সে অনুযায়ী তাইওয়ানের আইন ব্যবস্থা নিতে বলে। ক্ষতিগ্রস্ত শ্রমিকের অভিযোগ পেলে পুনরায় নিপীড়ন ঠেকাতে ব্যবস্থা, প্রয়োজনমতো সহায়তা ও সুরক্ষা এবং তদন্ত করতে হয়। সুরক্ষামূলক পদক্ষেপ ও ন্যায্য তদন্ত একই সময়ে চলতে পারে।"
+          },
+          {
+            "q": "কোম্পানির মানবসম্পদ বিভাগ কি এই সরকারি কর্মচারীর মামলার প্রক্রিয়া সরাসরি অনুসরণ করতে পারে?",
+            "a": "মামলাটি সরকারি কর্মচারীর মূল্যায়ন ও বরখাস্ত নিয়ে। বেসরকারি কোম্পানিকে তার জন্য প্রযোজ্য পেশাগত নিরাপত্তা ও স্বাস্থ্য আইন, শ্রমবিধি ও চুক্তি অনুসরণ করতে হবে। আগেই ফল ঠিক করা, জবাব উপেক্ষা করা ও প্রমাণের অসংগতি নিয়ে রায়ের বিশ্লেষণ তদন্ত মূল্যায়নে সাহায্য করে; প্রযোজ্য আইন নির্ধারণের বিকল্প হয় না।"
+          }
+        ]
+      },
+      "faqCount": 3,
+      "officialUrls": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+      ],
+      "missingInBody": [],
+      "missingInEndList": [],
+      "tables": [],
+      "noBold": true,
+      "bidiControlCount": 0,
+      "currentMetricEvidence": {
+        "file": "checks/bn-variety-self-review.json",
+        "sha256": "a80c795786260cd52017edfdecc41a13820de3013c34f13c7aa2f0731e1b0726",
+        "exit": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [bn] sentences=41 mean=14.4 cv=0.451 short=0.22 run3=0.077 opener_rep=0.0 cite_end=0.0 cite_para=0.154 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "metricsMatch": true,
+        "exactManuscriptSha": true
+      }
+    },
+    {
+      "id": 920,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "8b4f7d05978161b0843dc6e21a29ed36b56b3a0ab5e62598a82698be96c4a93e",
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sourceSha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "metadata": {
+        "title": "পার্কিংয়ের চার্জার থেকে যৌথ বিদ্যুৎবাক্স: তাইওয়ানে তার সরানোর নির্দেশ",
+        "seoTitle": "তাইওয়ানের যৌথ ভবনে চার্জার স্থাপনের অনুমতি",
+        "summary": "চার্জারটি বাসিন্দার পার্কিংয়ের পেছনে থাকলেও তার ও সরঞ্জাম যৌথ দেয়াল, ছাদ এবং বিদ্যুৎবাক্স ব্যবহার করেছিল। আদালত আইন ও ওই ভবনের বিধি অনুযায়ী সরিয়ে আগের অবস্থা ফেরানোর সিদ্ধান্ত বহাল রাখে।",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 অক্টোবর 2026",
+        "read_time": "5 মিনিটের পাঠ",
+        "categories": [
+          "তাইওয়ানের আবাসন",
+          "আদালতের সিদ্ধান্ত"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "বৈদ্যুতিক গাড়ির চার্জার",
+          "পার্কিং",
+          "ভবনের যৌথ অংশ",
+          "স্থাপনের অনুমতি",
+          "ভবন ব্যবস্থাপনা"
+        ],
+        "audience": [
+          "bn"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/920-case-trends-20261025.webp",
+        "featured_image_alt": "গ্যারেজের খুঁটিতে লাগানো চার্জারের সঙ্গে যুক্ত বৈদ্যুতিক গাড়ি এবং ওপরের দিকে চলে যাওয়া তারের নালি।",
+        "featured_image_caption": "কাল্পনিক দৃশ্য",
+        "faq": [
+          {
+            "q": "পার্কিংয়ের জায়গাটি আমি ব্যবহার করলে নিজের মতো চার্জারের তার বসাতে পারি?",
+            "a": "সরঞ্জাম কোথায় বসবে এবং তার কোথা দিয়ে যাবে তা দেখতে হয়। এ মামলায় ভবনের যৌথ দেয়াল, ছাদ ও বিদ্যুৎবাক্স ব্যবহার করা হয়েছিল। আদালত কাজের পরিধি, আইন ও ভবনের বিধি দেখে কেবল ব্যক্তিগত ব্যবহারের অংশে বাড়তি তার বসানোর যুক্তি গ্রহণ করেনি। অন্য ভবনের অবস্থান ও বিধি দেখে প্রযোজ্য প্রক্রিয়া নির্ধারণ করতে হবে।"
+          },
+          {
+            "q": "চার্জার বন্ধ করে তালা লাগালে কি আর সরাতে হয় না?",
+            "a": "বাসিন্দা ব্যবহার বন্ধ, তালা লাগানো ও চাবি দেওয়ার যুক্তি তুলেছিলেন। আদালত বলে, সেগুলো সত্য হলেও যৌথ অংশের আইন ও ভবনের বিধি ভেঙে স্থাপন করা সরঞ্জাম সরিয়ে আগের অবস্থা ফেরানোর দায় শেষ হয় না। এটি ওই ঘটনার সিদ্ধান্ত; সব চার্জার বিরোধে একমাত্র ফল সরিয়ে ফেলা নয়।"
+          },
+          {
+            "q": "সরকারি সহায়তা পেলে কি ভবনের অনুমতির দরকার শেষ হয়?",
+            "a": "সহায়তার যোগ্যতা ও যৌথ অংশ ব্যবহার করার অনুমতি আলাদা বিষয়। লেখায় উল্লিখিত কাওশিয়ুংয়ের 2026 সালের কর্মসূচিতে যৌথ এলাকায় বৈদ্যুতিক গাড়ির চার্জিং কেবল বসানোর ট্রে অন্তর্ভুক্ত ছিল; ঘোষিত আবেদনের শেষ দিন 30 সেপ্টেম্বর 2026 ইতিমধ্যে পেরিয়েছে। ওই সহায়তা নিজে থেকে বাসিন্দাকে যৌথ অংশে কাজ করার অধিকার দেয় না।"
+          }
+        ]
+      },
+      "faqCount": 3,
+      "officialUrls": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "missingInBody": [],
+      "missingInEndList": [],
+      "tables": [],
+      "noBold": true,
+      "bidiControlCount": 0,
+      "currentMetricEvidence": {
+        "file": "checks/bn-variety-followup.json",
+        "sha256": "3fc03082fd5442e977c83856f8f8b26f0a83aab402d5a1bcd0c351b62b41da8a",
+        "exit": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/920-taiwan-apartment-ev-charger-common-area-judgment.md [bn] sentences=40 mean=14.4 cv=0.465 short=0.225 run3=0.132 opener_rep=0.0 cite_end=0.0 cite_para=0.308 contrast=0 caveat=1 q=1\n  OK — no variety limit violated\n",
+        "metricsMatch": true,
+        "exactManuscriptSha": true
+      }
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "a54de3500f6f831efbaaeb32e6be9bbb7866b4fe32ec39755e7c0852ebdba770",
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+      "sourceSha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "metadata": {
+        "title": "গেমের অ্যাকাউন্টে মুদ্রা ছিল, তবু ফেরতের দাবি খারিজ: তাইওয়ানের একটি রায়",
+        "seoTitle": "তাইওয়ানে গেমের পয়েন্ট, মুদ্রা ও টাকা ফেরত",
+        "summary": "এক খেলোয়াড় বাকি মুদ্রার মূল্য ফেরত চেয়েছিলেন। আদালত ওই গেমের খেলার চিপ ও অব্যবহৃত কেনা পয়েন্টকে আলাদা করে। বর্তমান নিয়মে ফেরতযোগ্য অব্যবহৃত পয়েন্ট বা ফি আছে কি না দেখতে অর্থ ভরা, রূপান্তর ও ব্যবহার মিলিয়ে দেখা দরকার।",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 অক্টোবর 2026",
+        "read_time": "5 মিনিটের পাঠ",
+        "categories": [
+          "তাইওয়ানের ভোক্তা অধিকার",
+          "আদালতের সিদ্ধান্ত"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "অনলাইন গেম",
+          "টাকা ফেরত",
+          "কেনা পয়েন্ট",
+          "গেমের মুদ্রা",
+          "খেলার রেকর্ড"
+        ],
+        "audience": [
+          "bn"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/921-case-trends-20261025.webp",
+        "featured_image_alt": "টেবিলে গেমের কন্ট্রোলার, গেমের দৃশ্যসহ পর্দা, রঙিন টোকেন ও একটি খাতা।",
+        "featured_image_caption": "কাল্পনিক দৃশ্য",
+        "faq": [
+          {
+            "q": "গেমের ব্যালান্সের নাম মুদ্রা হলেই কি টাকা ফেরত চাওয়া যায় না?",
+            "a": "শুধু নাম দিয়ে সিদ্ধান্ত হয় না। এ মামলায় মুদ্রাগুলো খেলোয়াড়দের পারস্পরিক খেলায় চিপ হিসেবে কাজ করত। আদালত এগুলোকে অব্যবহৃত কেনা পয়েন্ট বা ফেরতযোগ্য গেমের ফি বলে মানেনি। অন্য গেমে কীভাবে মুদ্রা পাওয়া হয়েছে, তার কাজ, ব্যবহার ও চুক্তির শর্ত দেখতে হবে।"
+          },
+          {
+            "q": "খেলা শুরুর সাত দিন পেরিয়ে গেলে কি চুক্তি শেষ করা যায় না?",
+            "a": "বর্তমান বিধিতে ভোক্তা যেকোনো সময় কোম্পানিকে জানিয়ে চুক্তি শেষ করতে পারেন। অব্যবহৃত কেনা পয়েন্ট বা অব্যবহৃত গেমের ফি প্রয়োজনীয় খরচ বাদ দিয়ে চুক্তি শেষ হওয়ার 30 দিনের মধ্যে ফেরত দিতে হয়, অথবা উভয় পক্ষের সম্মত পদ্ধতিতে নিষ্পত্তি করা যায়। খেলা শুরুর সাত দিনের মধ্যে চুক্তি প্রত্যাহারের আলাদা শর্ত রয়েছে।"
+          },
+          {
+            "q": "কোম্পানি কি বলতে পারে বিরোধে শুধু তার সংরক্ষিত রেকর্ডই মানতে হবে?",
+            "a": "বর্তমান নিষিদ্ধ চুক্তিশর্তে কোম্পানির রাখা খেলার ইতিহাস ও ইলেকট্রনিক তথ্যকেই বিরোধ নির্ধারণের একমাত্র মানদণ্ড করার বিধান নিষিদ্ধ। খেলোয়াড় পেমেন্টের প্রমাণ, স্ক্রিনশট ও গ্রাহকসেবার বার্তা রাখতে পারেন এবং নিজের খেলার ইতিহাস চাইতে পারেন। এগুলো দিয়ে ব্যালান্স তৈরির ধাপ মেলানো যায়।"
+          }
+        ]
+      },
+      "faqCount": 3,
+      "officialUrls": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "missingInBody": [],
+      "missingInEndList": [],
+      "tables": [
+        "| রেকর্ড | কোন তথ্য মেলানো যায় |",
+        "|---|---|",
+        "| পেমেন্ট ও রিচার্জের রসিদ | টাকা দেওয়ার দিন, পরিমাণ ও কেনা পয়েন্ট। |",
+        "| পয়েন্ট রূপান্তর ও খেলার ইতিহাস | পয়েন্ট দিয়ে কী নেওয়া হয়েছে, মুদ্রার কাজ ও ব্যবহার। |",
+        "| চুক্তি শেষ করার বার্তা ও গ্রাহকসেবার উত্তর | চাওয়া ফল, অবশিষ্ট মূল্য নিয়ে বিরোধ ও কর্তনের ব্যাখ্যা। |"
+      ],
+      "noBold": true,
+      "bidiControlCount": 0,
+      "currentMetricEvidence": {
+        "file": "checks/bn-variety-self-review.json",
+        "sha256": "a80c795786260cd52017edfdecc41a13820de3013c34f13c7aa2f0731e1b0726",
+        "exit": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bn/921-taiwan-online-game-coins-refund-judgment.md [bn] sentences=45 mean=13.6 cv=0.479 short=0.222 run3=0.093 opener_rep=0.067 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "metricsMatch": true,
+        "exactManuscriptSha": true
+      }
+    }
+  ]
+}

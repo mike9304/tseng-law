@@ -1,0 +1,475 @@
+{
+  "at": "2026-10-26T02:54:38.929660+09:00",
+  "contentRoot": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay",
+  "mutationScope": "Only checks/ca-audit-overlay aliases created; target files read only by audit; no copies or changes in R.",
+  "links": [
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ar",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ar",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-bg",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-bn",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-cs",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-cs",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-da",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-da",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-de",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-de",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-el",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-el",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-en",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-es",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-es",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-et",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-fa",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-fi",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fi",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-fil",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fil",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-fr",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fr",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-he",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-hi",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hi",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-hr",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hr",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-hu",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hu",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-id",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-id",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-is",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-is",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-it",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-it",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ja",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ja",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-km",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-km",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-lt",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lt",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-lv",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-mn",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ms",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ms",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-my",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-nb",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-nb",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ne",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ne",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-nl",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-nl",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-pl",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-pl",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-pt",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-pt",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ro",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ro",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ru",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ru",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-sk",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sk",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-sl",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-sr",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-sv",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sv",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ta",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ta",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-th",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-th",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-tr",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-tr",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-uk",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-uk",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ur",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ur",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-vi",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-vi",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-zh",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-zh-hans",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh-hans",
+      "kind": "directory",
+      "scope": "Read-only existence/duplicate context for audit; no target edits"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/001-taiwan-company-establishment-basics.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/001-taiwan-company-establishment-basics.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/002-withdraw-capital-taiwan-company.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/002-withdraw-capital-taiwan-company.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/003-taiwan-traffic-accident-procedure.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/003-taiwan-traffic-accident-procedure.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/004-taiwan-company-subsidiary-vs-branch.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/004-taiwan-company-subsidiary-vs-branch.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/005-taiwan-company-establishment-advanced-2.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/005-taiwan-company-establishment-advanced-2.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/006-taiwan-massage-history-law.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/006-taiwan-massage-history-law.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/007-taiwan-divorce-lawsuit-qna.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/007-taiwan-divorce-lawsuit-qna.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/008-taiwan-labor-severance-law.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/008-taiwan-labor-severance-law.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/009-taiwan-voluntary-resignation-severance.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/009-taiwan-voluntary-resignation-severance.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/010-taiwan-gym-injury-lawsuit.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/010-taiwan-gym-injury-lawsuit.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/012-taiwan-overtaking-accident-liability.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/012-taiwan-overtaking-accident-liability.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/013-taiwan-company-establishment-advanced-1.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/013-taiwan-company-establishment-advanced-1.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/014-taiwan-mandatory-employment-period.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/014-taiwan-mandatory-employment-period.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/015-taiwan-company-setup-pitch-location.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/015-taiwan-company-setup-pitch-location.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/016-taiwan-inheritance-custody-analysis.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/016-taiwan-inheritance-custody-analysis.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/017-taiwan-logistics-business-setup.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/017-taiwan-logistics-business-setup.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/018-taiwan-semiconductor-market-entry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/018-taiwan-semiconductor-market-entry.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/704-taiwan-arc-first-application.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/704-taiwan-arc-first-application.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/705-taiwan-visa-residence-work-study-family.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/705-taiwan-visa-residence-work-study-family.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/706-taiwan-arc-renewal-changes-reentry.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/706-taiwan-arc-renewal-changes-reentry.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/852-catalan-brand-taiwan-trademark-distributor.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/852-catalan-brand-taiwan-trademark-distributor.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/853-catalan-professional-taiwan-work-permit-residence.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/853-catalan-professional-taiwan-work-permit-residence.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/854-catalan-taiwan-divorce-children-residence.md",
+      "target": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/854-catalan-taiwan-divorce-children-residence.md",
+      "kind": "file",
+      "scope": "Read-only existing CA context"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "kind": "file",
+      "scope": "Owned new CA selection"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "kind": "file",
+      "scope": "Owned new CA selection"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "kind": "file",
+      "scope": "Owned new CA selection"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "kind": "file",
+      "scope": "Owned new CA selection"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "kind": "file",
+      "scope": "Owned new CA selection"
+    },
+    {
+      "alias": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/ca-audit-overlay/columns-ca/921-taiwan-online-game-coins-refund-judgment.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/921-taiwan-online-game-coins-refund-judgment.md",
+      "kind": "file",
+      "scope": "Owned new CA selection"
+    }
+  ]
+}

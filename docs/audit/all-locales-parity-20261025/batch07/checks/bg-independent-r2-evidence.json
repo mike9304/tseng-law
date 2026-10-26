@@ -1,0 +1,307 @@
+{
+  "at_utc": "2026-10-25T18:25:22.260746+00:00",
+  "status": "R1_M1_M2_AND_O1_CLOSED_IN_TARGETED_REVIEW",
+  "mandatory_remaining_in_reviewed_change_scope": 0,
+  "input_guards": {
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-author-r2-manifest.json": "6a7f59f1abf0d33739755627698fc27eba97f05842b4e7d248526ec7d3df1d14",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-author-manifest.json": "482b53256e39eb2864cb63fffa56a5c2002dbad7e202a125b80d5229f863f44a",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/bg-author.md": "b1107ae48bb5d16e448c4b6766347d2adbc6e00e2dcd9fc95f06492d61b5eeca",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/bg-independent.md": "f43dc902b8db3de7abbdbfd3c43dbb19385a5ca44af2cb9a426c968783e796cf",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-independent-final-manifest.json": "fd59a750b16725b5d7e7d007b2aa92b31c05092fc0caf55006accda8034e5309",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-independent-findings.json": "aa074e89319cfd7818315dcad5a5a069a36ebb927fafcafeed36d26ba061dc49",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/bg-author-r2.md": "354c63af1ef452026490d49ef2414f8cd3c2f18d6e32f9fcb8617003ed949f3a",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-r2-edits.json": "819770c0005bec5fc3950aacbae966f43b80c2e2e5ab82776247291491e82cac",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-variety-r2-review.json": "8821e925b83bbd8c9c272164fea4269e749b8cfbb3fc8bed4c69bc62fe5d5156",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-boundaries-r2-review.json": "961e9cbbb15081d74cc7a793fc047de290671b642f3588bf74ce461689eff3ef",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-boundary-delta-r2-review.json": "c4b68bae19588270f8f984d17c906c4357fb1b0b08098921c35a24ee2fb1afc6",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-content-audit-r2.json": "0a602fc21f6d7ab6f257bd3933a34ba83ad31fe95f59e0d92648e2459878de4f",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-r2-wrapper-initial-error.json": "9338b8b46b39b9c06200807af9f4a69d33721e6bd56d81167b8b776762a5fe8d",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "b2b058966c26f084e38969656625cbd642fc9f71dbb14bcbf7f30f9ecc28387f",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/916-taiwan-parent-company-pollution-liability-us-investor.md": "cb3f84123bfd34d8c9587088875d7b7820e630afa5621c4e3a0fe6245f151cfa",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/918-taiwan-presale-mortgage-notice-handover-judgment.md": "783fdbb7d7b80a6fb580bbe6a94da36b85f6d35109bb23d6c9370d813de95985",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "b94e2e414de8359fd969af0fdf6d1af61722ff08126f7fe44f083bd14e82b8af",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/920-taiwan-apartment-ev-charger-common-area-judgment.md": "0f2f518c48f2ab988d2c66dab1791a8478cf3b146fa7d0ad9a3f36579bcb6bfe",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md": "a7e85faf8bd43c50827620fbc8e3e92e1b7eb18b825254bd4ca98fb712392013",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-r1-before/921-taiwan-online-game-coins-refund-judgment.md": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/bg-r1-before/916-taiwan-parent-company-pollution-liability-us-investor.md": "f161ce0b785f0fd8bdaeb7b25fcb71e48243930b5cbddfabcd0c9f61aef2fcb5"
+  },
+  "proof": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+      "before_sha256": "5738bfa72462972d8903e63759961c7b692dd8fec773af1fddee58f9b830c37a",
+      "after_sha256": "a7e85faf8bd43c50827620fbc8e3e92e1b7eb18b825254bd4ca98fb712392013",
+      "exact_changes": [
+        "M1",
+        "M2a",
+        "M2b",
+        "M2c",
+        "M2d"
+      ],
+      "forward_reproduces_final": true,
+      "offset_reverse_restores_r1": true,
+      "frontmatter_including_faq_unchanged": true,
+      "all_link_values_order_identical": true,
+      "extra_spacing": "M2d deletes its immediately following single space only"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "before_sha256": "f161ce0b785f0fd8bdaeb7b25fcb71e48243930b5cbddfabcd0c9f61aef2fcb5",
+      "after_sha256": "cb3f84123bfd34d8c9587088875d7b7820e630afa5621c4e3a0fe6245f151cfa",
+      "exact_changes": [
+        "O1"
+      ],
+      "forward_reproduces_final": true,
+      "offset_reverse_restores_r1": true,
+      "frontmatter_including_faq_unchanged": true,
+      "all_link_values_order_identical": true,
+      "extra_spacing": null
+    }
+  ],
+  "boundary_delta": [
+    {
+      "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "before_count": 42,
+      "after_count": 42,
+      "equal_units": 41,
+      "delta": [
+        {
+          "tag": "replace",
+          "old_indices_zero_based": [
+            33,
+            34
+          ],
+          "new_indices_zero_based": [
+            33,
+            34
+          ],
+          "before": [
+            "В информационния материал на USTR от февруари 2026 г. са изложени намерения за улесняване на трансграничните инвестиции и възможна подкрепа за частно американско финансиране при спазване на приложимото право."
+          ],
+          "after": [
+            "В информационния материал на USTR от февруари 2026 г. са изложени намерения за улесняване на трансграничните инвестиции и възможна подкрепа от САЩ за финансиране на частни инвестиции в Тайван при спазване на приложимото право."
+          ]
+        }
+      ],
+      "changed_passages_and_adjacent_conditions_read": true,
+      "new_segmentation_error_observed": false,
+      "saved_metrics": {
+        "lang": "bg",
+        "sentences": 42,
+        "paras": 13,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 15.3,
+        "len_cv": 0.484,
+        "short_share": 0.19,
+        "long_share": 0.048,
+        "para_cv": 0.149,
+        "even_run3": 0.025,
+        "top_end": "отговорността",
+        "top_end_share": 0.071,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "в",
+        "top_opener_n": 2,
+        "opener_rep": 0.308,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.87,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Кой е получил доклада за замърсяването и какво е последвало?",
+        "last": "При запитване чрез страницата за контакт са полезни видът на сделката, наименованието на тайванското дружество и датата ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    },
+    {
+      "file": "921-taiwan-online-game-coins-refund-judgment.md",
+      "before_count": 42,
+      "after_count": 40,
+      "equal_units": 36,
+      "delta": [
+        {
+          "tag": "replace",
+          "old_indices_zero_based": [
+            0,
+            1
+          ],
+          "new_indices_zero_based": [
+            0,
+            1
+          ],
+          "before": [
+            "Балансът в профила показва останали монети."
+          ],
+          "after": [
+            "Дава ли остатъкът от монети в профила право на връщане на пари?"
+          ]
+        },
+        {
+          "tag": "replace",
+          "old_indices_zero_based": [
+            4,
+            5
+          ],
+          "new_indices_zero_based": [
+            4,
+            5
+          ],
+          "before": [
+            "Сумата е поискана, не присъдена."
+          ],
+          "after": [
+            "Съдът не присъжда поисканата сума."
+          ]
+        },
+        {
+          "tag": "replace",
+          "old_indices_zero_based": [
+            10,
+            11
+          ],
+          "new_indices_zero_based": [
+            10,
+            11
+          ],
+          "before": [
+            "Кой е прекратил договора и какво подлежи на връщане са отделни въпроси."
+          ],
+          "after": [
+            "В това дело съдът преценява искането за възстановяване според функцията на останалите монети."
+          ]
+        },
+        {
+          "tag": "replace",
+          "old_indices_zero_based": [
+            26,
+            28
+          ],
+          "new_indices_zero_based": [
+            26,
+            27
+          ],
+          "before": [
+            "След изтичането му правото по клауза 18 за прекратяване по всяко време остава отделен въпрос.",
+            "Двата реда не се смесват."
+          ],
+          "after": [
+            "След изтичането на седемдневния срок потребителят може да прекрати договора с уведомление по всяко време по клауза 18."
+          ]
+        },
+        {
+          "tag": "delete",
+          "old_indices_zero_based": [
+            30,
+            31
+          ],
+          "new_indices_zero_based": [
+            29,
+            29
+          ],
+          "before": [
+            "Това са различни срокове с различни начални моменти."
+          ],
+          "after": []
+        }
+      ],
+      "changed_passages_and_adjacent_conditions_read": true,
+      "new_segmentation_error_observed": false,
+      "saved_metrics": {
+        "lang": "bg",
+        "sentences": 40,
+        "paras": 13,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 15.5,
+        "len_cv": 0.458,
+        "short_share": 0.175,
+        "long_share": 0.025,
+        "para_cv": 0.169,
+        "even_run3": 0.0,
+        "top_end": "г",
+        "top_end_share": 0.05,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "съдът",
+        "top_opener_n": 2,
+        "opener_rep": 0.231,
+        "consec_same_start": 2,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.39,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Дава ли остатъкът от монети в профила право на връщане на пари?",
+        "last": "Потребителят може да използва официалния портал за жалби. За първоначално запитване до wei@hoveringlaw.com.tw са полезни",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    }
+  ],
+  "changed_two_files_equal_units": 77,
+  "changed_two_files_new_changed_units": 5,
+  "current_total_extracted_units": 249,
+  "total_original_units_identical_in_current": 244,
+  "unchanged_other_four": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "b2b058966c26f084e38969656625cbd642fc9f71dbb14bcbf7f30f9ecc28387f"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "783fdbb7d7b80a6fb580bbe6a94da36b85f6d35109bb23d6c9370d813de95985"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b94e2e414de8359fd969af0fdf6d1af61722ff08126f7fe44f083bd14e82b8af"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-bg/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "0f2f518c48f2ab988d2c66dab1791a8478cf3b146fa7d0ad9a3f36579bcb6bfe"
+    }
+  ],
+  "new_cli_runs_by_reviewer": 0,
+  "actual_author_cli_exit0_files": 2,
+  "author_wrapper_initial_error_reviewed": {
+    "stage": "916 CLI completed with stdout OK; wrapper then failed before saving and before running 921",
+    "error": "KeyError: sentences; prior schema uses sentences_by_paragraph",
+    "resolution": "Read actual schema; rerun changed916/921 to persist exit codes; structure run succeeded separately",
+    "first_observed_916_stdout": "[bg] sentences=42 mean=15.3 cv=0.484 short=0.19 run3=0.025 opener_rep=0.308 cite_end=0.0 cite_para=0.154 contrast=0 caveat=0 q=2; OK"
+  },
+  "structure_reused": {
+    "selected": 2,
+    "errors": 0,
+    "required": 10,
+    "full_batch_required_items_retained": 30
+  },
+  "manual_prose": {
+    "opening_types": {
+      "concrete_facts_results": 3,
+      "reader_questions": 2,
+      "physical_scene": 1
+    },
+    "direct_contrasts_retained_921": 3,
+    "new_same_start_adjacency": "Съдът / Съдът once; within stated limit2",
+    "refund_timing_and_both_unused_conditions_preserved": true,
+    "O1_US_actor_Taiwan_destination_conditional_scope_preserved": true,
+    "O2_dates_unchanged": true
+  },
+  "unresolved_prior_measurement_limit": "Unchanged BG915 false split after г.; manual sensitivity remains distinct from shared metrics.",
+  "human_native_or_legal_approval": false,
+  "publication_ready": false,
+  "scope": "Read-only drafts, source, author records, R/shared. Only bg-independent-r2 outputs added."
+}

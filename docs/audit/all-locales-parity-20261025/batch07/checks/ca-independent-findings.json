@@ -1,0 +1,143 @@
+{
+  "recorded_at": "2026-10-26T03:19:10.771782+09:00",
+  "verdict": "APPROVE_WITH_OPTIONAL_NOTES",
+  "mandatory": 0,
+  "optional": 3,
+  "findings": [
+    {
+      "id": "S01",
+      "severity": "optional_clarity",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "96a0a5565a433d45174251c9f6e579c7f8ffa56861def81332acac807ed1f555",
+      "line": 42,
+      "actual_text": "notificar-lo",
+      "proposed_text": "notificar el lliurament",
+      "reason": "직전 명사 termini de notificació/permís가 있어 -lo의 대상을 뒤에서 복원하게 된다. FAQ2와 전체 문맥으로 인도 통지임은 확인되므로 필수 법률 오류로 판정하지 않았다.",
+      "meaning_preservation": "통지 목적어만 명시한다. 사용허가 취득 기산·6개월·수선/정산/문서 의무는 그대로다.",
+      "applied": false
+    },
+    {
+      "id": "S02",
+      "severity": "optional_clarity",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "78d2251b2d8fe0d19589a53a4d734ba30ed8b708c84829a86ab6b6e763cb4b5a",
+      "line": 42,
+      "actual_text": "Una decisió unilateral de l’empresa no el substitueix",
+      "proposed_text": "Una decisió unilateral de l’empresa no substitueix l’acord entre les parts",
+      "reason": "직전 문장은 han d’acceptar-ho이고 앞에 명사 acord가 명시되지 않아 el이 가리키는 합의를 암묵적으로 복원해야 한다. 쌍방 합의 요건은 앞 두 문장에서 분명하므로 실제 권리 변경으로 판정하지 않았다.",
+      "meaning_preservation": "일방 결정이 쌍방 합의를 대체하지 못한다는 기존 뜻 유지. 30일/대안 OR/필요비용·미사용 두 대상은 변경하지 않는다.",
+      "applied": false
+    },
+    {
+      "id": "S03",
+      "severity": "optional_monotony",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "78d2251b2d8fe0d19589a53a4d734ba30ed8b708c84829a86ab6b6e763cb4b5a",
+      "line": 26,
+      "actual_text": "NT$243.548 era la quantitat que un jugador reclamava per les monedes que quedaven al compte. El tribunal no la va concedir. Les parts coincidien que ja no hi havia punts de pagament no utilitzats, encara que la pantalla mostrés monedes, segons el [cas publicat a la compilació oficial de protecció del consumidor](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), pàgines impreses 140–153.",
+      "proposed_text": "NT$243.548 era la quantitat que un jugador reclamava per les monedes que quedaven al compte. Les parts coincidien que ja no hi havia punts de pagament no utilitzats, encara que la pantalla mostrés monedes, segons el [cas publicat a la compilació oficial de protecció del consumidor](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), pàgines impreses 140–153. El tribunal no la va concedir.",
+      "reason": "MONOTONY: 첫 문단의 마지막 35단어 문장 바로 뒤에 다음 문단의 32단어 판결문이 온다. 중간에 문단 경계가 있어 가독성 결함을 필수 반려로 확대하지 않지만 §5(3)의 장문 후 호흡은 개선할 수 있다.",
+      "meaning_preservation": "기존 6단어 결과문을 같은 문단 마지막으로 옮겨 청구액→다툼 없는 포인트 잔액 사실→기각 결과 순서로 만든다. 모든 원문 문장·URL·수치·확정 범위 그대로, 글자를 바꾸지 않는 재배치다. 실제 적용 시 시작 반복·현재 SHA만 대상 재확인.",
+      "applied": false
+    }
+  ],
+  "files": [
+    {
+      "id": 915,
+      "sha256": "183c8045ea1d1d443672376af9f8866b3771c2ed429aae6d24f47398eaccb5d9",
+      "all_body_title_summary_faq_tables_read": true,
+      "all_current_boundary_units_read": 40,
+      "mandatory_findings": 0,
+      "legal_and_faq_review": "금액44.417.150=취소 판정액, 2017-07-12/106台上723 상고기각·확정/원심 법버전 이유 정정; 85-1 공사OR기술서비스·권고OR안·기관부동의 때문에 실패·거절불가·별도합의. 표4단계와FAQ2정확. US ITA예상2026말·2027 유지.",
+      "paragraph_start_limit": 2,
+      "same_sentence_start_pairs": 1,
+      "long_adjacent_pairs": [],
+      "max_long_sentences_per_paragraph": 1,
+      "final_substantive_sentence": "L’expedient útil per valorar-la és la seqüència de sol·licituds, canvis i respostes que va desembocar en la mediació infructuosa."
+    },
+    {
+      "id": 916,
+      "sha256": "4971777565edde14f6e41cef422d252b251a527d48f7bdcdf62169ede5034506",
+      "all_body_title_summary_faq_tables_read": true,
+      "all_current_boundary_units_read": 41,
+      "mandatory_findings": 0,
+      "legal_and_faq_review": "2018-08-16/107台上267; 246관련부분 환송 vs 262관련상고 기각, 문단/FAQ 모두 relatius a로 청구인 상고만으로 좁히지 않음. 통제·인지·미고지/미조치·책임회피 이체; 154조 누적 요건과현행/역사구별. USTR조건부 US민간금융의향. FAQ3정확.",
+      "paragraph_start_limit": 2,
+      "same_sentence_start_pairs": 1,
+      "long_adjacent_pairs": [],
+      "max_long_sentences_per_paragraph": 1,
+      "final_substantive_sentence": "El primer conjunt documental és el que uneix les troballes originals, les decisions que van provocar i les aprovacions dels moviments posteriors d’actius."
+    },
+    {
+      "id": 918,
+      "sha256": "96a0a5565a433d45174251c9f6e579c7f8ffa56861def81332acac807ed1f555",
+      "all_body_title_summary_faq_tables_read": true,
+      "all_current_boundary_units_read": 40,
+      "mandatory_findings": 0,
+      "legal_and_faq_review": "2019-02-23건설사서신/수도전기·7월하자·8월공사진입·11/5입금과11/28인도;109上易289/2022-02-09항소·추가청구기각·상소불가. 계약4개월 vs현행6개월 사용허가취득 기산의 통지, 전부인도완료시한아님. 14항매수의무,2025검사에서 은행기간제외를 irregular로 명확히표현. 2026은행규정비소급. FAQ3정확.",
+      "paragraph_start_limit": 2,
+      "same_sentence_start_pairs": 2,
+      "long_adjacent_pairs": [],
+      "max_long_sentences_per_paragraph": 1,
+      "final_substantive_sentence": "En ordenar l’expedient, identificar cada escrit pel que demana —préstec, inspecció o lliurament— permet comparar les obligacions sense reduir-les a una sola data discutida."
+    },
+    {
+      "id": 919,
+      "sha256": "5047e951b20e1dc6d3914692c69f9a9b62c323e519418221f153bc0a60fa9d2a",
+      "all_body_title_summary_faq_tables_read": true,
+      "all_current_boundary_units_read": 42,
+      "mandatory_findings": 0,
+      "legal_and_faq_review": "114訴869/2026-09-03 원처분·재심취소, 2큰demerit단일처분·면직, 상소가능/괴롭힘전체부정·실제복직 단정없음. 선발표→상급기관→소속기관/정당진술·모순증거/사후불치유. 민간2026-07-01과22-2별도; 피해신고전제, 방지조치 의무≠결과보장, 필요한지원·보호·조사, 신고자뜻이면조율MAY·불성립MUST계속. FAQ3정확.",
+      "paragraph_start_limit": 2,
+      "same_sentence_start_pairs": 1,
+      "long_adjacent_pairs": [],
+      "max_long_sentences_per_paragraph": 1,
+      "final_substantive_sentence": "Abans de publicar el resultat, la notificació, les respostes i els motius per donar credibilitat a una prova haurien de permetre entendre si les diferents versions es van escoltar de debò."
+    },
+    {
+      "id": 920,
+      "sha256": "cd071bb9bda0be5353eb0df7f1ac9a8b892a3dfa4fff701735ce893e43a48999",
+      "all_body_title_summary_faq_tables_read": true,
+      "all_current_boundary_units_read": 41,
+      "mandatory_findings": 0,
+      "legal_and_faq_review": "111上132/2022-06-22항소기각·복구 유지/확정미확인; 계량기·주차면vs공용벽천장전기함. 법11조와규약15조 AND안전검사;6(1)(5)/조율후6(3)/6(1)(4)비적용 정확. 잠금·열쇠는 당사자주장과가정적판단. 보조기한9/30경과·예산조기소진은연구S13/920-M1근거;개별허가대체아님. FAQ3정확.",
+      "paragraph_start_limit": 2,
+      "same_sentence_start_pairs": 0,
+      "long_adjacent_pairs": [],
+      "max_long_sentences_per_paragraph": 1,
+      "final_substantive_sentence": "Així es disposa d’una base contractual per examinar el cost d’aquell desacord."
+    },
+    {
+      "id": 921,
+      "sha256": "78d2251b2d8fe0d19589a53a4d734ba30ed8b708c84829a86ab6b6e763cb4b5a",
+      "all_body_title_summary_faq_tables_read": true,
+      "all_current_boundary_units_read": 45,
+      "mandatory_findings": 0,
+      "legal_and_faq_review": "NT$243.548=청구액, 109消簡上1/2021-09-13항소기각·추가상소불가. 남은코인기능≠모두소진추가없음; 사용되지않은유료포인트부존재·자체종료/회사의과거조치승인아님. 2023-01-01현행18점 언제든종료·미사용두대상·필요비용·종료기산30일OR쌍방합의. 4점시작기산7일 서면/무이유/무비용,9점최소30일·요청수령7일,금지6점유일증거금지≠배제.2025분야2위·감소/2026-05-07발표. FAQ3정확.",
+      "paragraph_start_limit": 2,
+      "same_sentence_start_pairs": 0,
+      "long_adjacent_pairs": [
+        {
+          "first": {
+            "paragraph": 1,
+            "sentence": 3,
+            "words": 35,
+            "text": "Les parts coincidien que ja no hi havia punts de pagament no utilitzats, encara que la pantalla mostrés monedes, segons el cas publicat a la compilació oficial de protecció del consumidor, pàgines impreses 140–153."
+          },
+          "second": {
+            "paragraph": 2,
+            "sentence": 1,
+            "words": 32,
+            "text": "El Tribunal de Districte de Keelung va desestimar el recurs del jugador el 13 de setembre de 2021, en el cas 109年度消簡上字第1號, i la resolució indicava que no admetia un altre recurs."
+          }
+        }
+      ],
+      "max_long_sentences_per_paragraph": 1,
+      "final_substantive_sentence": "La quantitat demanada es pot fonamentar amb el recorregut dels diners: entrada al compte, conversió i ús."
+    }
+  ],
+  "review_scope": "Independent model review, not native-speaker or lawyer approval. No manuscripts/author evidence/shared/R changes. Sources frozen provided content reused; no new web lookup.",
+  "metric_note": "No repeated same-SHA CLI/structure audit. Current tool hashes and author actual execution log SHA verified, fresh actual shared extraction arrays equal. No para_cv threshold invented; paragraph uniformity considered with actual legal transitions.",
+  "batch_style": "Openings amount2, concrete facts/time3, question1; no stock hypothetical. Questions 1/1/1/0/1/0: procedural exposition in919 and balance/cash classification in921 justify zeros with FAQ3 each. Long-pair S03 is disclosed, not called fully absent.",
+  "source_limit": "B6 frozen source-register distinguishes successful25 court responses from26 current law/policy verification and failed refreshes. S13 early-budget closure explicitly confirmed in provided source-register/facts; no new grant-availability or later-case result claim."
+}

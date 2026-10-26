@@ -1,0 +1,230 @@
+{
+  "at": "2026-10-25T18:10:50.866760+00:00",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "start_sha256": "0210db2a1ad6a56b7c2eb9d069aa3c2a0e8c8c977001ce2b367ac84c72788543",
+      "end_sha256": "0210db2a1ad6a56b7c2eb9d069aa3c2a0e8c8c977001ce2b367ac84c72788543",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "start_sha256": "cebe40e77b1e448c5d70cd27adeb3e1c478beab240e739b73f36ad73e44cf59e",
+      "end_sha256": "cebe40e77b1e448c5d70cd27adeb3e1c478beab240e739b73f36ad73e44cf59e",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "start_sha256": "9a87d93cbfebed87af7c3a19b690ecc1d0a004fe4e9691ad89e4389faebee996",
+      "end_sha256": "9a87d93cbfebed87af7c3a19b690ecc1d0a004fe4e9691ad89e4389faebee996",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "start_sha256": "4090a4f229dff8bdb3efa9dc4aca424ca85b3a211894c70d2daece243a124105",
+      "end_sha256": "4090a4f229dff8bdb3efa9dc4aca424ca85b3a211894c70d2daece243a124105",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "start_sha256": "3ac5e23ff82197cfed9c68da8e93bd7b4e6f7a9bcecd6290c9e4ed4f49056cad",
+      "end_sha256": "3ac5e23ff82197cfed9c68da8e93bd7b4e6f7a9bcecd6290c9e4ed4f49056cad",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-fa/921-taiwan-online-game-coins-refund-judgment.md",
+      "start_sha256": "e74174377e15e78ae04c90e8406468071ae3e272d1b6c77128c7b828ada647bb",
+      "end_sha256": "e74174377e15e78ae04c90e8406468071ae3e272d1b6c77128c7b828ada647bb",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/fa-author.md",
+      "start_sha256": "7076499890866ee03a046604947bd2ee84b094f218533500b11ee7ece1a09268",
+      "end_sha256": "7076499890866ee03a046604947bd2ee84b094f218533500b11ee7ece1a09268",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/fa-author-manifest.json",
+      "start_sha256": "4f01232f7743eadd37240101b83d3b6e192574b47e1159634325485cddd39ef8",
+      "end_sha256": "4f01232f7743eadd37240101b83d3b6e192574b47e1159634325485cddd39ef8",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/fa-final-boundaries.json",
+      "start_sha256": "09ad4bb8108aa10f8a638f04ce770de3dccc5100c4d90b91388cd5b00810de07",
+      "end_sha256": "09ad4bb8108aa10f8a638f04ce770de3dccc5100c4d90b91388cd5b00810de07",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/fa-author-exact-delta.json",
+      "start_sha256": "6663c9bdda12d2ae4a02c4ec7ac1c69368edfb781bc3294a49c28643d348be8a",
+      "end_sha256": "6663c9bdda12d2ae4a02c4ec7ac1c69368edfb781bc3294a49c28643d348be8a",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/fa-variety-initial.json",
+      "start_sha256": "4fa38ce79758190ebfd4057b833876b43b79d9e7bc8259d4fa94be58bf81ffc6",
+      "end_sha256": "4fa38ce79758190ebfd4057b833876b43b79d9e7bc8259d4fa94be58bf81ffc6",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/fa-variety-author-r1.json",
+      "start_sha256": "440e1c6daa8ad288e07bbdd31846ac3f836bbf218b3129c56d3af8c8417b55ee",
+      "end_sha256": "440e1c6daa8ad288e07bbdd31846ac3f836bbf218b3129c56d3af8c8417b55ee",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/fa-variety-author-r2.json",
+      "start_sha256": "21a3d45c9147a46957b9c738aa9e1569d2e612fbe24f9ecf94bd7d583b962328",
+      "end_sha256": "21a3d45c9147a46957b9c738aa9e1569d2e612fbe24f9ecf94bd7d583b962328",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/828-iranian-professional-taiwan-work-permit-visa-arc.md",
+      "start_sha256": "b5acda8f0ca39c32efc0a173cd5f776effd3133af57bfd161e4a4ff6a22d250b",
+      "end_sha256": "b5acda8f0ca39c32efc0a173cd5f776effd3133af57bfd161e4a4ff6a22d250b",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/829-iranian-buyer-taiwan-supplier-export-control-permit.md",
+      "start_sha256": "c6ba594f12f01332cd3d9379fa246b01411fb2a34257f3bd6903120b68446b79",
+      "end_sha256": "c6ba594f12f01332cd3d9379fa246b01411fb2a34257f3bd6903120b68446b79",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/830-iranian-spouse-marry-taiwanese-national-registration.md",
+      "start_sha256": "56cb7746038bf95d06a647a9f681d47ccac10b222b84e1b36edc8f23e97396fe",
+      "end_sha256": "56cb7746038bf95d06a647a9f681d47ccac10b222b84e1b36edc8f23e97396fe",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "start_sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "end_sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "start_sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "end_sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "start_sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "end_sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "start_sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "end_sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "start_sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "end_sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "start_sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "end_sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/six-source-facts.md",
+      "start_sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a",
+      "end_sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-register.md",
+      "start_sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d",
+      "end_sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/authoring-contract-draft.md",
+      "start_sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e",
+      "end_sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-freeze.json",
+      "start_sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "end_sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "start_sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "end_sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "start_sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "end_sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "start_sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "end_sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "start_sha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f",
+      "end_sha256": "9d3af531126f65057fa1ceea9785b6464e512c80ce25d922e822e01438e70486",
+      "unchanged": false
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/704-taiwan-arc-first-application.md",
+      "start_sha256": "fe975485d8a8fed7bd467c42860c4d29ad575a2d2a981ce3d3fc7e63113509a3",
+      "end_sha256": "fe975485d8a8fed7bd467c42860c4d29ad575a2d2a981ce3d3fc7e63113509a3",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md",
+      "start_sha256": "1c96fab7471e92a166705ec25385ef99980df2237fcc676d294c24efc4c424ab",
+      "end_sha256": "1c96fab7471e92a166705ec25385ef99980df2237fcc676d294c24efc4c424ab",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+      "start_sha256": "d5e9636efd65707cd86b0e0c24aa700e2d0b1948d6749302e96cd5d81dc9fa77",
+      "end_sha256": "d5e9636efd65707cd86b0e0c24aa700e2d0b1948d6749302e96cd5d81dc9fa77",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/zh919-court-explanation.txt",
+      "start_sha256": "d8480dde5b10a31620df258cf2a8d1040e8741fc386ae2b79ef39c55c44ea7d1",
+      "end_sha256": "d8480dde5b10a31620df258cf2a8d1040e8741fc386ae2b79ef39c55c44ea7d1",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/recheck/zh918-government-pdf-selected-lines.txt",
+      "start_sha256": "a8e696fb5301ada084435e21d18b7f33e1f8bf6e42961f00278f08dcf67b00fd",
+      "end_sha256": "a8e696fb5301ada084435e21d18b7f33e1f8bf6e42961f00278f08dcf67b00fd",
+      "unchanged": true
+    }
+  ],
+  "unchanged_count": 34,
+  "changed_count": 1,
+  "observed_rule_refresh": {
+    "file": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+    "start_sha256": "127c8235b5f8f4938ad635cadb55a77386d42eda82973305b4b6aa508612f66f",
+    "end_sha256": "9d3af531126f65057fa1ceea9785b6464e512c80ce25d922e822e01438e70486",
+    "generated_header": "2026-10-26 03:05 KST",
+    "new_full_text_read": true,
+    "new_blocking_issue_found": false,
+    "changed_by_reviewer": false
+  },
+  "all_manuscripts_author_records_and_sources_unchanged": true,
+  "modified_manuscripts": false,
+  "modified_author_report_or_manifest": false,
+  "modified_shared_or_R": false
+}

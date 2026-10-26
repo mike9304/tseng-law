@@ -1,0 +1,123 @@
+{
+  "frozen_at": "2026-10-26T03:25:34.986314+09:00",
+  "status": "R2_AUTHOR_FROZEN_FOR_TARGETED_REVIEW",
+  "files": [
+    {
+      "path": "src/content/columns-bn/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "ee32fe88b941adfb66db43282eeba14fadd8cb9c2049aab64c224d2cdd1fd5cc",
+      "pre_R1_sha256": "431a779eaf22d733220313778cb2469744836cac99bce692f2b2741711b6f623",
+      "changed": true,
+      "exact_reverse_to_R1": true,
+      "FM_FAQ_URLs_numbers_unchanged": true,
+      "actual_CLI_evidence": "checks/bn-review-r2-variety.json",
+      "exit_code": 0,
+      "CV": 0.486,
+      "extracted_units": 40
+    },
+    {
+      "path": "src/content/columns-bn/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "2db801a857692db09fbe7e32ed76f301c5a792057eb795b3a5a0f066a963c0d3",
+      "pre_R1_sha256": "b6b74d97653bfbed690dd60d826193dcabf9a71c2abd05fdb97ed83e4af2fc7a",
+      "changed": true,
+      "exact_reverse_to_R1": true,
+      "FM_FAQ_URLs_numbers_unchanged": true,
+      "actual_CLI_evidence": "checks/bn-review-r2-variety.json",
+      "exit_code": 0,
+      "CV": 0.498,
+      "extracted_units": 41
+    },
+    {
+      "path": "src/content/columns-bn/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "54f6aed17c28b35ea8a4d042f8f4112ba229f8cfd04c120f73728cf362d58ef7",
+      "pre_R1_sha256": "54f6aed17c28b35ea8a4d042f8f4112ba229f8cfd04c120f73728cf362d58ef7",
+      "changed": false,
+      "exact_reverse_to_R1": true,
+      "FM_FAQ_URLs_numbers_unchanged": true,
+      "actual_CLI_evidence": "checks/bn-variety-self-review.json",
+      "exit_code": 0,
+      "CV": 0.466,
+      "extracted_units": 45
+    },
+    {
+      "path": "src/content/columns-bn/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "320be4966948f532d062f8fd0c4a1ccfea42d858070847d9846d3f30bcbc8d53",
+      "pre_R1_sha256": "320be4966948f532d062f8fd0c4a1ccfea42d858070847d9846d3f30bcbc8d53",
+      "changed": false,
+      "exact_reverse_to_R1": true,
+      "FM_FAQ_URLs_numbers_unchanged": true,
+      "actual_CLI_evidence": "checks/bn-variety-self-review.json",
+      "exit_code": 0,
+      "CV": 0.451,
+      "extracted_units": 41
+    },
+    {
+      "path": "src/content/columns-bn/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "8b4f7d05978161b0843dc6e21a29ed36b56b3a0ab5e62598a82698be96c4a93e",
+      "pre_R1_sha256": "8b4f7d05978161b0843dc6e21a29ed36b56b3a0ab5e62598a82698be96c4a93e",
+      "changed": false,
+      "exact_reverse_to_R1": true,
+      "FM_FAQ_URLs_numbers_unchanged": true,
+      "actual_CLI_evidence": "checks/bn-variety-followup.json",
+      "exit_code": 0,
+      "CV": 0.465,
+      "extracted_units": 40
+    },
+    {
+      "path": "src/content/columns-bn/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "a54de3500f6f831efbaaeb32e6be9bbb7866b4fe32ec39755e7c0852ebdba770",
+      "pre_R1_sha256": "a54de3500f6f831efbaaeb32e6be9bbb7866b4fe32ec39755e7c0852ebdba770",
+      "changed": false,
+      "exact_reverse_to_R1": true,
+      "FM_FAQ_URLs_numbers_unchanged": true,
+      "actual_CLI_evidence": "checks/bn-variety-self-review.json",
+      "exit_code": 0,
+      "CV": 0.479,
+      "extracted_units": 45
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "checks/bn-review-r1-before.json",
+      "sha256": "49f4683eb8d3112e35672c27beab0c5a6688bc8b07306660d14bb528e30de6c1"
+    },
+    {
+      "path": "checks/bn-review-r1-edits.json",
+      "sha256": "4fafc3540dcf95996367e7877dcfdf108936a09c38ec85fbd6c358baa67d2c48"
+    },
+    {
+      "path": "checks/bn-review-r2-variety.json",
+      "sha256": "9c3b10dfca892ea50cd0403bff610264eab7ba145e29a208a302583762e467b3"
+    },
+    {
+      "path": "checks/bn-review-r2-structure.json",
+      "sha256": "53da275d446f6b3e8fa0afa8b9ff88ab9143dd9d6881cdd53e28e93b5104c581"
+    },
+    {
+      "path": "checks/bn-review-r2-integrity.json",
+      "sha256": "320c662e8b53b51c397700d0954e2f7036660a345c4c352fbc12072c45734e7b"
+    },
+    {
+      "path": "checks/bn-author-r2.md",
+      "sha256": "8416bc4dbc5901d8df3d1bcde6493061392e738d7e578089deb230502c7a1027"
+    }
+  ],
+  "preserved_R1_artifacts": {
+    "reviews/bn-author.md": "c18de91adea9065d082128a074fbbbf257071dc88a1f4c8c6e9c76d9ad5035ca",
+    "checks/bn-final-manifest.json": "e0a46a39e861ba44aedb283447e5de9f21c9e7cd26f505310e7d26ae6e40b220",
+    "reviews/bn-independent.md": "bc832629fe8a31cc193ef1a504fcb2f5eef645c056154f7b878e173fa360e6b9",
+    "checks/bn-independent-final-manifest.json": "aaabcd28c53075759436a03a2a249bb288f0a9220b2643b7ff202fc92c352eb0"
+  },
+  "accepted_findings": [
+    "M01",
+    "S01",
+    "S02"
+  ],
+  "changes": 3,
+  "changed_files": 2,
+  "current_checker_FAIL": 0,
+  "current_structural_errors": 0,
+  "FAQ": 17,
+  "source_URLs_per_article_sum": 23,
+  "current_units_read_or_exactly_reused": 252,
+  "no_R_shared_other_author_or_independent_record_edits": true
+}

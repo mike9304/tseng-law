@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-26T07:18:19.691470+00:00",
+  "baseCommit": "f66daa9f153537c000d23486e8be638472251012",
+  "trackedSourceScriptFiles": 7027,
+  "changedExistingFiles": [
+    {
+      "path": "src/lib/__tests__/case-translations-20261026.test.ts",
+      "beforeSHA256": "cf0401893d3cfd46d85339b5754354d20479b0593e3b3caadb80722b747fa138",
+      "afterSHA256": "6ecf1380bb5eed440c0a96fc573883c278038a0751f114f16d3e600426582c44"
+    },
+    {
+      "path": "src/lib/__tests__/native-locale-columns.ts",
+      "beforeSHA256": "33571a70c6438ba683445226816258555726116d4790b5b77d3771b3543db230",
+      "afterSHA256": "840f4af53418c7c22b199f024b35d884d8a2f63aba936e005db34bb8a11e630a"
+    }
+  ],
+  "existingMarkdownFilesUnchanged": 2330,
+  "existingManuscriptChanges": 0,
+  "newManuscripts": 42,
+  "canonicalOriginalsUnchanged": 6,
+  "ARCFilesUnchanged": 147,
+  "ARCLocales": 49,
+  "runtimeScriptChanges": 0,
+  "externalColleagueChangesPreserved": true
+}

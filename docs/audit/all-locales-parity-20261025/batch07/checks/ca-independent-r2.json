@@ -1,0 +1,144 @@
+{
+  "recorded_at": "2026-10-26T03:26:49.691147+09:00",
+  "verdict": "APPROVE_TARGETED_R2",
+  "closed": [
+    "S01",
+    "S02",
+    "S03"
+  ],
+  "remaining_mandatory": 0,
+  "remaining_optional": 0,
+  "files": [
+    {
+      "id": 915,
+      "sha256": "183c8045ea1d1d443672376af9f8866b3771c2ed429aae6d24f47398eaccb5d9",
+      "reverse_sha256": "183c8045ea1d1d443672376af9f8866b3771c2ed429aae6d24f47398eaccb5d9",
+      "exact_reverse_to_R1": true,
+      "FM_FAQ_URL_sequence_numbers_unchanged": true
+    },
+    {
+      "id": 916,
+      "sha256": "4971777565edde14f6e41cef422d252b251a527d48f7bdcdf62169ede5034506",
+      "reverse_sha256": "4971777565edde14f6e41cef422d252b251a527d48f7bdcdf62169ede5034506",
+      "exact_reverse_to_R1": true,
+      "FM_FAQ_URL_sequence_numbers_unchanged": true
+    },
+    {
+      "id": 918,
+      "sha256": "89bc806c446b85e4cd7f8dc7b6231bb74345b6c985124b13af100aaca4deaeb1",
+      "reverse_sha256": "96a0a5565a433d45174251c9f6e579c7f8ffa56861def81332acac807ed1f555",
+      "exact_reverse_to_R1": true,
+      "FM_FAQ_URL_sequence_numbers_unchanged": true,
+      "actual_cli": {
+        "at": "2026-10-26T03:24:12.627202+09:00",
+        "exit": 0,
+        "CV": 0.523,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/918-taiwan-presale-mortgage-notice-handover-judgment.md [ca] sentences=40 mean=19.9 cv=0.523 short=0.175 run3=0.0 opener_rep=0.071 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "evidence": "checks/ca-review-r2-variety.json"
+      },
+      "fresh_extraction_matches_author": true
+    },
+    {
+      "id": 919,
+      "sha256": "5047e951b20e1dc6d3914692c69f9a9b62c323e519418221f153bc0a60fa9d2a",
+      "reverse_sha256": "5047e951b20e1dc6d3914692c69f9a9b62c323e519418221f153bc0a60fa9d2a",
+      "exact_reverse_to_R1": true,
+      "FM_FAQ_URL_sequence_numbers_unchanged": true
+    },
+    {
+      "id": 920,
+      "sha256": "cd071bb9bda0be5353eb0df7f1ac9a8b892a3dfa4fff701735ce893e43a48999",
+      "reverse_sha256": "cd071bb9bda0be5353eb0df7f1ac9a8b892a3dfa4fff701735ce893e43a48999",
+      "exact_reverse_to_R1": true,
+      "FM_FAQ_URL_sequence_numbers_unchanged": true
+    },
+    {
+      "id": 921,
+      "sha256": "f6b34469c5dcd72ef92ee65d8a857b46ba3333a955c955a0d365cbb3849b0c07",
+      "reverse_sha256": "78d2251b2d8fe0d19589a53a4d734ba30ed8b708c84829a86ab6b6e763cb4b5a",
+      "exact_reverse_to_R1": true,
+      "FM_FAQ_URL_sequence_numbers_unchanged": true,
+      "actual_cli": {
+        "at": "2026-10-26T03:24:12.695855+09:00",
+        "exit": 0,
+        "CV": 0.456,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-ca/921-taiwan-online-game-coins-refund-judgment.md [ca] sentences=45 mean=19.1 cv=0.456 short=0.111 run3=0.0 opener_rep=0.188 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+        "evidence": "checks/ca-review-r2-variety.json"
+      },
+      "fresh_extraction_matches_author": true
+    }
+  ],
+  "contexts_read": [
+    {
+      "id": 918,
+      "paragraph": 7,
+      "text": "Per al contracte del cas, el termini de notificació era de quatre mesos des de l’obtenció del permís d’ús. El [punt 15 de les condicions obligatòries vigents per a la venda d’habitatges encara no acabats](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) exigeix al venedor notificar el lliurament dins dels sis mesos següents a l’obtenció d’aquell permís i regula les reparacions, la liquidació d’imports i els documents del lliurament.",
+      "sentences": [
+        {
+          "words": 19,
+          "text": "Per al contracte del cas, el termini de notificació era de quatre mesos des de l’obtenció del permís d’ús."
+        },
+        {
+          "words": 43,
+          "text": "El punt 15 de les condicions obligatòries vigents per a la venda d’habitatges encara no acabats exigeix al venedor notificar el lliurament dins dels sis mesos següents a l’obtenció d’aquell permís i regula les reparacions, la liquidació d’imports i els documents del lliurament."
+        }
+      ]
+    },
+    {
+      "id": 921,
+      "paragraph": 1,
+      "text": "NT$243.548 era la quantitat que un jugador reclamava per les monedes que quedaven al compte. Les parts coincidien que ja no hi havia punts de pagament no utilitzats, encara que la pantalla mostrés monedes, segons el [cas publicat a la compilació oficial de protecció del consumidor](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), pàgines impreses 140–153. El tribunal no la va concedir.",
+      "sentences": [
+        {
+          "words": 16,
+          "text": "NT$243.548 era la quantitat que un jugador reclamava per les monedes que quedaven al compte."
+        },
+        {
+          "words": 35,
+          "text": "Les parts coincidien que ja no hi havia punts de pagament no utilitzats, encara que la pantalla mostrés monedes, segons el cas publicat a la compilació oficial de protecció del consumidor, pàgines impreses 140–153."
+        },
+        {
+          "words": 6,
+          "text": "El tribunal no la va concedir."
+        }
+      ]
+    },
+    {
+      "id": 921,
+      "paragraph": 2,
+      "text": "El Tribunal de Districte de Keelung va desestimar el recurs del jugador el 13 de setembre de 2021, en el cas 109年度消簡上字第1號, i la resolució indicava que no admetia un altre recurs. Va examinar la funció d’aquelles monedes i les clàusules de reemborsament, sense excloure tots els objectes virtuals de la protecció del consumidor.",
+      "sentences": [
+        {
+          "words": 32,
+          "text": "El Tribunal de Districte de Keelung va desestimar el recurs del jugador el 13 de setembre de 2021, en el cas 109年度消簡上字第1號, i la resolució indicava que no admetia un altre recurs."
+        },
+        {
+          "words": 22,
+          "text": "Va examinar la funció d’aquelles monedes i les clàusules de reemborsament, sense excloure tots els objectes virtuals de la protecció del consumidor."
+        }
+      ]
+    },
+    {
+      "id": 921,
+      "paragraph": 7,
+      "text": "Totes dues parts han d’acceptar-ho. Una decisió unilateral de l’empresa no substitueix l’acord entre les parts, i una regla general de no retornar res no descriu el règim del punt 18. Si es rep un càlcul, es pot demanar quin saldo es reconeix com a no utilitzat, quins costos es descompten i com s’han calculat.",
+      "sentences": [
+        {
+          "words": 5,
+          "text": "Totes dues parts han d’acceptar-ho."
+        },
+        {
+          "words": 26,
+          "text": "Una decisió unilateral de l’empresa no substitueix l’acord entre les parts, i una regla general de no retornar res no descriu el règim del punt 18."
+        },
+        {
+          "words": 24,
+          "text": "Si es rep un càlcul, es pot demanar quin saldo es reconeix com a no utilitzat, quins costos es descompten i com s’han calculat."
+        }
+      ]
+    }
+  ],
+  "scope": "Actual reverse independently performed on current6. Fresh extraction only2 changed files, no repeated CLI. New two sentences and moved result sentence plus neighboring paragraph directly read. Original R1 preserved.",
+  "new_cli_runs": 0,
+  "limits": "Model independent targeted review; no new source research/rendering/deployment or human native/lawyer approval."
+}

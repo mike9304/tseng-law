@@ -1,0 +1,281 @@
+{
+  "checkedAt": "2026-10-25T18:19:58.655810+00:00",
+  "decision": "APPROVE_TARGETED_R2",
+  "mandatoryRemaining": 0,
+  "closed": [
+    "M01",
+    "O01",
+    "O02"
+  ],
+  "scope": "Only accepted three literal edits and evidence connections; no full CLI repeats.",
+  "r1ReportBackup": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/el-independent-r1-report.md",
+    "sha256": "6796a2c0398486bf5d165787781b3192519972029018be1239bb1243f9a788db",
+    "bytes": 16696
+  },
+  "r1Manifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/el-independent-manifest.json",
+    "sha256": "05dc665e978da543705cd069b92dbbe986df80093bac78fa1f5b941c7fc35a7b",
+    "bytes": 3068
+  },
+  "r1AuthorManifestBackup": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/el-r1-final-manifest.json",
+    "sha256": "dc9d0c3543be2905d3f5fe3fb9840ece334c69e47323fd25fc89a2f22d80aec5",
+    "bytes": 8748
+  },
+  "currentAuthor": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/reviews/el-author.md",
+    "sha256": "62e9924b3ffa1f904634ccb6bf9a137fd3c0566d6cf2021e3dc08f2e5e3e630a",
+    "bytes": 14006
+  },
+  "authorR1PrefixBytes": 10849,
+  "authorR1PrefixSHA256": "27c2de8b050cf3007e41c9b4e1cf2ccd2bd8c95cc3ea6e75ae9c27d5e025fc28",
+  "currentAuthorManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/el-final-manifest.json",
+    "sha256": "d4ecfca9430d9a372ee6b9f6761c8cfccd5aedff2540c4e5000a7fdb409ca699",
+    "bytes": 11801
+  },
+  "authorR2Evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/el-r2-edits.json",
+      "sha256": "21e7e7cc569d920a1ec16f519a13022e70c6aeecb85866baa4305115d6c67e53",
+      "bytes": 2939
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/el-r2-edit-validation.json",
+      "sha256": "9b228119059fa29e6d57f37d492e3b551b6fbe232b1d9ed6d9aad19b54519821",
+      "bytes": 9571
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/el-r2-boundary-review.json",
+      "sha256": "1541aae3608e5e5f93c4ee3ee6a0518de917f2a8a50f598ebc5ea39463dc5983",
+      "bytes": 1845
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/el-variety-r2.json",
+      "sha256": "e7876bea368a3461888f137a9cbbd4f26776ec703807b931e479062267b0d90f",
+      "bytes": 50740
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/el-r2-structure.json",
+      "sha256": "9ae3b0b33c57caeebf3f572c30cbe5a682b3222096878c5012283a97109e0676",
+      "bytes": 3367
+    }
+  ],
+  "currentManuscripts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-el/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "a0db3a7ac11ed580969d9a5cd15cce8729d4480cdd241e99a9bdea839c2301fc",
+      "bytes": 12712
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-el/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "76b55da4d3569872e2c4be4423bfcb4e4dce4ebde5935a0ffdcecbc166f76e9b",
+      "bytes": 14808
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-el/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "27973631f8eaad94e106f70fbf556da40efc978f10ce0f1e28c80562ddb3cf76",
+      "bytes": 13996
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-el/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "ddecc74e8ef307a0964fac3b560933605d347f7bad5fea67e7a8b68efcfd0325",
+      "bytes": 13919
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-el/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "7897ed03d257814fd770a4527992ae9433b9cbef5b12ce2f8ee97bf6e461a802",
+      "bytes": 13773
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-el/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "5dd4cd90e02a242fdb672be29acd837888fd5564a34823c0220f62b648843cb4",
+      "bytes": 15083
+    }
+  ],
+  "changes": [
+    {
+      "id": "O01",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-el/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSHA256": "6e66c3a0d9e2f52bbe8158fe537e7802f94fdea635a05e8f379ebe9ff782b4ee",
+      "afterSHA256": "76b55da4d3569872e2c4be4423bfcb4e4dce4ebde5935a0ffdcecbc166f76e9b",
+      "old": "για την έκθεση εργαζομένων",
+      "new": "για την έκθεση εργαζομένων σε χημικές ουσίες",
+      "actualReverseSHA256": "6e66c3a0d9e2f52bbe8158fe537e7802f94fdea635a05e8f379ebe9ff782b4ee",
+      "actualInverseMatchesR1": true,
+      "metadataChangedKeys": [
+        "faq"
+      ],
+      "urlSequenceUnchanged": true,
+      "numberSequenceUnchanged": true,
+      "actualBodySegmentCount": 47,
+      "changedBodySegments": [],
+      "authorActualExit": 0,
+      "metrics": {
+        "lang": "el",
+        "sentences": 47,
+        "paras": 15,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 15.9,
+        "len_cv": 0.461,
+        "short_share": 0.213,
+        "long_share": 0.043,
+        "para_cv": 0.15,
+        "even_run3": 0.022,
+        "top_end": "τησ",
+        "top_end_share": 0.064,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "κατά",
+        "top_opener_n": 2,
+        "opener_rep": 0.067,
+        "consec_same_start": 1,
+        "cite_para_share": 0.067,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.14,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Ποιος έλαβε τις περιβαλλοντικές εκθέσεις πριν από την εξαγορά και τι αποφασίστηκε μετά;",
+        "last": "Η ανακοίνωση για την απόφαση του 2018 ελέγχθηκε στις 25 Οκτωβρίου 2026. Νομοθεσία και οικονομικό υλικό επανεξετάστηκαν σ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "diff": "--- 916-taiwan-parent-company-pollution-liability-us-investor.md@R1\n+++ 916-taiwan-parent-company-pollution-liability-us-investor.md@R2\n@@ -20,7 +20,7 @@\n   - q: \"Η απόφαση του 2018 έκλεισε όλες τις αξιώσεις για το εργοστάσιο;\"\n     a: \"Για τα τμήματα που αφορούσαν 246 αιτούντες, το Ανώτατο Δικαστήριο αναίρεσε την απόφαση και παρέπεμψε για νέα κρίση. Απέρριψε τα ένδικα μέσα που αφορούσαν άλλους 262. Η δεύτερη έκβαση δεν σημαίνει ότι απορρίφθηκαν όλες οι αρχικές αξιώσεις αυτών των προσώπων, ούτε οι αριθμοί περιγράφουν το τέλος κάθε συναφούς δίκης.\"\n   - q: \"Ποια αρχεία συνδέονται με τον περιβαλλοντικό έλεγχο μιας εξαγοράς;\"\n-    a: \"Η έκθεση, οι αποδέκτες της, τα επόμενα ερωτήματα, οι αποφάσεις για την έκθεση εργαζομένων και την αποκατάσταση, καθώς και οι εγκρίσεις και χρηματοοικονομικές αναλύσεις μεταγενέστερων μεταφορών περιουσίας. Βοηθούν να εξεταστούν γνώση και συμπεριφορά. Η απλή τήρηση φακέλου δεν αποδεικνύει συμμόρφωση.\"\n+    a: \"Η έκθεση, οι αποδέκτες της, τα επόμενα ερωτήματα, οι αποφάσεις για την έκθεση εργαζομένων σε χημικές ουσίες και την αποκατάσταση, καθώς και οι εγκρίσεις και χρηματοοικονομικές αναλύσεις μεταγενέστερων μεταφορών περιουσίας. Βοηθούν να εξεταστούν γνώση και συμπεριφορά. Η απλή τήρηση φακέλου δεν αποδεικνύει συμμόρφωση.\"\n ---\n \n Ποιος έλαβε τις περιβαλλοντικές εκθέσεις πριν από την εξαγορά και τι αποφασίστηκε μετά; Σε διαφορά για ρύπανση εργοστασίου ηλεκτρονικών στην Ταϊβάν, τα ευρήματα των ερευνών συνδέθηκαν με την ευθύνη των μητρικών εταιρειών. Η [επίσημη εξήγηση της απόφασης 107年度台上字第267號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) ακολουθεί τη γνώση, τον έλεγχο και τις επόμενες ενέργειες των ομίλων.\n"
+    },
+    {
+      "id": "O02",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-el/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "742a5607655772c46e870e6875afb86490f6fa8ad96127c237a1b1f28dad0406",
+      "afterSHA256": "ddecc74e8ef307a0964fac3b560933605d347f7bad5fea67e7a8b68efcfd0325",
+      "old": "δύο βαριές πειθαρχικές επιβαρύνσεις",
+      "new": "δύο βαριές πειθαρχικές κυρώσεις",
+      "actualReverseSHA256": "742a5607655772c46e870e6875afb86490f6fa8ad96127c237a1b1f28dad0406",
+      "actualInverseMatchesR1": true,
+      "metadataChangedKeys": [],
+      "urlSequenceUnchanged": true,
+      "numberSequenceUnchanged": true,
+      "actualBodySegmentCount": 42,
+      "changedBodySegments": [
+        {
+          "index": 1,
+          "before": "Ακυρώθηκε η απόλυση προϊσταμένου στον δημόσιο τομέα, στον οποίο είχαν επιβληθεί ταυτόχρονα δύο βαριές πειθαρχικές επιβαρύνσεις.",
+          "after": "Ακυρώθηκε η απόλυση προϊσταμένου στον δημόσιο τομέα, στον οποίο είχαν επιβληθεί ταυτόχρονα δύο βαριές πειθαρχικές κυρώσεις."
+        }
+      ],
+      "authorActualExit": 0,
+      "metrics": {
+        "lang": "el",
+        "sentences": 42,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.5,
+        "len_cv": 0.465,
+        "short_share": 0.214,
+        "long_share": 0.048,
+        "para_cv": 0.168,
+        "even_run3": 0.125,
+        "top_end": "2026",
+        "top_end_share": 0.071,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "ακυρώθηκε",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.231,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.0,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Ακυρώθηκε η απόλυση προϊσταμένου στον δημόσιο τομέα, στον οποίο είχαν επιβληθεί ταυτόχρονα",
+        "last": "Η περιγραφή στηρίζεται στην επίσημη δικαστική ανακοίνωση που ελέγχθηκε στις 25 Οκτωβρίου 2026. Οι νομοθετικές πηγές επαν",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "diff": "--- 919-taiwan-workplace-bullying-investigation-hearing-judgment.md@R1\n+++ 919-taiwan-workplace-bullying-investigation-hearing-judgment.md@R2\n@@ -22,7 +22,7 @@\n     a: \"Η υπόθεση αφορά αξιολόγηση υπηρεσίας και απόλυση δημόσιου υπαλλήλου. Για ιδιωτική εταιρεία εξετάζονται η εφαρμοστέα νομοθεσία ασφάλειας στην εργασία, το εργατικό δίκαιο και η σύμβαση. Τα προβλήματα προειλημμένης απόφασης, παραμελημένων απαντήσεων και αντιφατικών στοιχείων βοηθούν στον έλεγχο μιας έρευνας, χωρίς να υποκαθιστούν αυτόν τον προσδιορισμό.\"\n ---\n \n-Ακυρώθηκε η απόλυση προϊσταμένου στον δημόσιο τομέα, στον οποίο είχαν επιβληθεί ταυτόχρονα δύο βαριές πειθαρχικές επιβαρύνσεις. Η κύρωση είχε ανακοινωθεί πριν την εξετάσει η αρμόδια επιτροπή. Το [Ανώτερο Διοικητικό Δικαστήριο της Ταϊπέι](https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html) εντόπισε επίσης ανεπαρκή δυνατότητα απάντησης και αντιφάσεις στην έκθεση για τον καταγγελλόμενο εργασιακό εκφοβισμό.\n+Ακυρώθηκε η απόλυση προϊσταμένου στον δημόσιο τομέα, στον οποίο είχαν επιβληθεί ταυτόχρονα δύο βαριές πειθαρχικές κυρώσεις. Η κύρωση είχε ανακοινωθεί πριν την εξετάσει η αρμόδια επιτροπή. Το [Ανώτερο Διοικητικό Δικαστήριο της Ταϊπέι](https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html) εντόπισε επίσης ανεπαρκή δυνατότητα απάντησης και αντιφάσεις στην έκθεση για τον καταγγελλόμενο εργασιακό εκφοβισμό.\n \n Με την απόφαση 114年度訴字第869號 ακυρώθηκαν τόσο η αρχική πράξη όσο και η απόφαση διοικητικής επανεξέτασης. Η κρίση εκδόθηκε στις 3 Σεπτεμβρίου 2026. Επιτρέπεται ένδικο μέσο. Η έκβαση δεν αποδεικνύει ότι όλες οι καταγγελίες ήταν αβάσιμες ή ότι ο υπάλληλος έχει ήδη επανέλθει στη θέση του.\n \n"
+    },
+    {
+      "id": "M01",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-el/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "345068d60d912e49f9e6bd52e723b123b6da8488b45c4a5563025e9ee3b92937",
+      "afterSHA256": "7897ed03d257814fd770a4527992ae9433b9cbef5b12ce2f8ee97bf6e461a802",
+      "old": "Ο μετρητής ανήκε στον κάτοικο. Η κυριότητά του δεν άλλαζε το καθεστώς των υπόλοιπων σημείων από τα οποία περνούσαν τα καλώδια.",
+      "new": "Τα καλώδια κατέληγαν στον μετρητή του κατοίκου. Αυτό δεν άλλαζε το καθεστώς των υπόλοιπων σημείων από τα οποία περνούσαν.",
+      "actualReverseSHA256": "345068d60d912e49f9e6bd52e723b123b6da8488b45c4a5563025e9ee3b92937",
+      "actualInverseMatchesR1": true,
+      "metadataChangedKeys": [],
+      "urlSequenceUnchanged": true,
+      "numberSequenceUnchanged": true,
+      "actualBodySegmentCount": 45,
+      "changedBodySegments": [
+        {
+          "index": 9,
+          "before": "Ο μετρητής ανήκε στον κάτοικο.",
+          "after": "Τα καλώδια κατέληγαν στον μετρητή του κατοίκου."
+        },
+        {
+          "index": 10,
+          "before": "Η κυριότητά του δεν άλλαζε το καθεστώς των υπόλοιπων σημείων από τα οποία περνούσαν τα καλώδια.",
+          "after": "Αυτό δεν άλλαζε το καθεστώς των υπόλοιπων σημείων από τα οποία περνούσαν."
+        }
+      ],
+      "authorActualExit": 0,
+      "metrics": {
+        "lang": "el",
+        "sentences": 45,
+        "paras": 13,
+        "heads": 2,
+        "list_items": 0,
+        "mean_len": 14.6,
+        "len_cv": 0.497,
+        "short_share": 0.311,
+        "long_share": 0.0,
+        "para_cv": 0.208,
+        "even_run3": 0.0,
+        "top_end": "κατοίκου",
+        "top_end_share": 0.067,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "από",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 2,
+        "cite_para_share": 0.308,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.88,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Από τον τοίχο πίσω από τη θέση στάθμευσης, τα καλώδια ακολουθούσαν την οροφή μέχρι έναν κο",
+        "last": "Η περιγραφή της απόφασης χρησιμοποιεί το επίσημο κείμενο που ελέγχθηκε στις 25 Οκτωβρίου 2026. Νομοθεσία και πρόγραμμα ε",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "diff": "--- 920-taiwan-apartment-ev-charger-common-area-judgment.md@R1\n+++ 920-taiwan-apartment-ev-charger-common-area-judgment.md@R2\n@@ -29,7 +29,7 @@\n \n ## Η διαδρομή από τον φορτιστή στον μετρητή\n \n-Μεταξύ των μη αμφισβητούμενων γεγονότων ήταν το κουτί φόρτισης στον πίσω τοίχο, οι σωληνώσεις με στηρίγματα στην οροφή και η προσθήκη διακόπτη στον κοινό πίνακα για σύνδεση με τον μετρητή. Ο μετρητής ανήκε στον κάτοικο. Η κυριότητά του δεν άλλαζε το καθεστώς των υπόλοιπων σημείων από τα οποία περνούσαν τα καλώδια.\n+Μεταξύ των μη αμφισβητούμενων γεγονότων ήταν το κουτί φόρτισης στον πίσω τοίχο, οι σωληνώσεις με στηρίγματα στην οροφή και η προσθήκη διακόπτη στον κοινό πίνακα για σύνδεση με τον μετρητή. Τα καλώδια κατέληγαν στον μετρητή του κατοίκου. Αυτό δεν άλλαζε το καθεστώς των υπόλοιπων σημείων από τα οποία περνούσαν.\n \n Δύο διαφορετικές πηγές ρύθμιζαν τη συναίνεση. Το [άρθρο 11 του ταϊβανέζικου νόμου για τη διαχείριση πολυκατοικιών](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11) απαιτεί απόφαση της συνέλευσης ιδιοκτητών μονάδων για κατεδάφιση, σημαντικές επισκευές ή βελτιώσεις κοινών μερών και σχετικών εγκαταστάσεων. Το δικαστήριο το εφάρμοσε στις συγκεκριμένες εργασίες. Χωριστά, το άρθρο 15 του κανονισμού αυτού του συγκροτήματος απαιτούσε άδεια της επιτροπής διαχείρισης και έλεγχο ασφάλειας από την εταιρεία ηλεκτρισμού για πρόσθετα καλώδια και σωληνώσεις.\n \n"
+    }
+  ],
+  "reviewerCLIReruns": 0,
+  "newWebQueries": 0,
+  "published": false,
+  "limitations": "AI independent delta review; no human native/legal certification or live/rendering verification."
+}

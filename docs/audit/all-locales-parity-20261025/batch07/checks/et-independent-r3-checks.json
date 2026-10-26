@@ -1,0 +1,66 @@
+{
+  "atUTC": "2026-10-26T06:47:35.311552+00:00",
+  "verdict": "M03_CLOSED_NO_UNRESOLVED_MUST",
+  "manuscript": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "sha256": "18706d6b788879e3f3d6dff97136cee18f65321163adadb58d6bd23215fc4a05"
+  },
+  "exactReplacement": {
+    "old": "Juulikuisel esimesel ülevaatusel ootasid puudused endiselt parandamist ning lift polnud veel paigaldatud.",
+    "new": "Juulikuisel esimesel ülevaatusel ootasid puudused endiselt parandamist ning lifti paigaldamine polnud veel lõpetatud."
+  },
+  "reverseRestoresR2": true,
+  "otherFiveUnchanged": true,
+  "previous30RecordsUnchanged": true,
+  "frontmatterAndFAQBytesUnchanged": true,
+  "URLSequenceUnchanged": true,
+  "digitSequenceUnchanged": true,
+  "sentenceDelta": [
+    {
+      "index": 11,
+      "before": {
+        "text": "Juulikuisel esimesel ülevaatusel ootasid puudused endiselt parandamist ning lift polnud veel paigaldatud.",
+        "units": 12
+      },
+      "after": {
+        "text": "Juulikuisel esimesel ülevaatusel ootasid puudused endiselt parandamist ning lifti paigaldamine polnud veel lõpetatud.",
+        "units": 13
+      },
+      "previous": {
+        "text": "Ühendused rajati hiljem.",
+        "units": 3
+      },
+      "next": {
+        "text": "Augustis allkirjastatud nõusolek lubas ostjal sisse pääseda sisetöödeks ja koristamiseks.",
+        "units": 10
+      }
+    }
+  ],
+  "unchangedUnits": 45,
+  "totalUnits": 46,
+  "freshReviewerCLIRuns": 0,
+  "sameSHAActualAuthorCLIExit": 0,
+  "sameSHAActualAuthorCV": 0.493,
+  "structure": "R2 structural evidence reused with exact unchanged frontmatter/FAQ/links; no new full run claimed.",
+  "sources": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "passage": "屋內電梯也未裝好"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/recheck/zh918-government-pdf-selected-lines.txt",
+      "sha256": "a8e696fb5301ada084435e21d18b7f33e1f8bf6e42961f00278f08dcf67b00fd",
+      "passage": "L5041@P194: 屋內電梯未裝設完畢"
+    }
+  ],
+  "lessons": {
+    "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+    "sha256": "ca642a38c2b0a925c19ded6600b2f06901aed057bed44b71fab9c16f22c2b7ab",
+    "fullRead": "2026-10-26 15:05 edition read on resume"
+  },
+  "limitations": [
+    "No native-speaker/legal approval claim",
+    "No rendering or deployment claim"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "resumed_at_utc": "2026-10-26T06:48:01.184721+00:00",
+  "status": "SAVED_R3_VERIFIED_NO_REWRITE_NO_CLI_REPEAT",
+  "current_918_sha256": "18706d6b788879e3f3d6dff97136cee18f65321163adadb58d6bd23215fc4a05",
+  "exact_reverse_to_r2": true,
+  "previous_records_unchanged": 30,
+  "other_five_manuscripts_unchanged": 5,
+  "saved_cli": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/et-variety-independent-r3.json",
+    "sha256": "1eb2bb6e48ed4150a7e01eaa9474df9a7fa9af599396a052731010968e6ee0e1",
+    "exit": 0,
+    "metrics": {
+      "lang": "et",
+      "sentences": 46,
+      "paras": 14,
+      "heads": 3,
+      "list_items": 0,
+      "mean_len": 11.6,
+      "len_cv": 0.493,
+      "short_share": 0.304,
+      "long_share": 0.0,
+      "para_cv": 0.134,
+      "even_run3": 0.023,
+      "top_end": "üleandmist",
+      "top_end_share": 0.065,
+      "ja_desu": 0,
+      "ja_da": 0,
+      "top_opener": "taiwani",
+      "top_opener_n": 2,
+      "opener_rep": 0.071,
+      "consec_same_start": 0,
+      "cite_para_share": 0.0,
+      "cite_end_share": 0.0,
+      "contrast": 0,
+      "caveat": 0,
+      "questions": 1,
+      "num_per100": 4.14,
+      "hypo_open": false,
+      "q_open": false,
+      "formula_close": false,
+      "first": "Veebruaris saabunud kiri palus ostjal tegelda eluasemelaenuga, kuid majas polnud veel vee-",
+      "last": "Kohtulahendi ja selle allikate alusandmed kontrolliti 25. oktoobril 2026; seotud kehtivaid norme ning ametlikke teateid ",
+      "length_unit": "orthographic_words",
+      "short_threshold": 8,
+      "long_threshold": 32,
+      "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+    },
+    "current_tools_match_saved_inputs": true
+  },
+  "boundary_delta": [
+    {
+      "index": 11,
+      "before": {
+        "text": "Juulikuisel esimesel ülevaatusel ootasid puudused endiselt parandamist ning lift polnud veel paigaldatud.",
+        "units": 12
+      },
+      "after": {
+        "text": "Juulikuisel esimesel ülevaatusel ootasid puudused endiselt parandamist ning lifti paigaldamine polnud veel lõpetatud.",
+        "units": 13
+      },
+      "previous": {
+        "text": "Ühendused rajati hiljem.",
+        "units": 3
+      },
+      "next": {
+        "text": "Augustis allkirjastatud nõusolek lubas ostjal sisse pääseda sisetöödeks ja koristamiseks.",
+        "units": 10
+      }
+    }
+  ],
+  "unchanged_918_units": 45,
+  "full_batch_r2_relative_unchanged_units": 258,
+  "full_batch_units": 259,
+  "changed_sentence_and_adjacent_passages_read": true,
+  "new_boundary_error_observed": false,
+  "frontmatter_faq_url_unchanged": true,
+  "structure": "R2 structural evidence retained; exact body-only sentence change and unchanged frontmatter/FAQ/URLs verified, no fresh full audit.",
+  "rule_update": {
+    "previous_read_edition": "2026-10-26 03:05 KST",
+    "previous_sha256": "9d3af531126f65057fa1ceea9785b6464e512c80ce25d922e822e01438e70486",
+    "current_read_edition": "2026-10-26 15:05 KST",
+    "current_sha256": "ca642a38c2b0a925c19ded6600b2f06901aed057bed44b71fab9c16f22c2b7ab",
+    "current_full_text_read": true,
+    "old_manifests_rewritten": false
+  },
+  "quota_resume_note": "Parent reported prior terminal quota interruption; existing R3 artifacts verified first. No repeated quota retries or duplicate CLI executions in this resumption.",
+  "independent_closure_requested": true,
+  "human_native_or_legal_approval": false,
+  "deployment": false
+}

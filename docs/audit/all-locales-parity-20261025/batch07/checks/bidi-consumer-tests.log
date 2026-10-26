@@ -1,0 +1,29 @@
+
+ RUN  v3.2.6 /Users/son7/Projects/tseng-law-all-locales-20261025
+
+ ✓ |unit| src/lib/__tests__/traffic-diagrams.test.tsx (12 tests) 1610ms
+   ✓ animated traffic diagrams > gives each core-language traffic column its own original diagram  1119ms
+ ✓ |unit| src/lib/__tests__/columns-en-family-007.test.ts (43 tests) 474ms
+   ✓ English family column 007 — Taiwan divorce procedure Q&A > links the hub to column 275 and every inline English column link resolves to a published English column  313ms
+ ✓ |unit| src/lib/__tests__/columns-ja-family-007.test.ts (36 tests) 407ms
+ ✓ |unit| src/components/__tests__/column-content-consultation-links.test.tsx (10 tests) 236ms
+ ✓ |unit| src/lib/__tests__/traffic-stop-dialogue.test.tsx (3 tests) 213ms
+ ✓ |unit| src/lib/__tests__/traffic-starting-entry.test.tsx (3 tests) 92ms
+ ✓ |unit| src/lib/__tests__/traffic-chain-collision.test.tsx (3 tests) 92ms
+ ✓ |unit| src/components/vi-design/__tests__/vi-article-ui.test.tsx (3 tests) 18ms
+ ✓ |unit| src/data/__tests__/wo-x1-en-ja-audience.test.ts (12 tests) 17ms
+ ✓ |unit| src/components/__tests__/column-table-accessibility.test.tsx (6 tests) 16ms
+ ✓ |unit| src/components/__tests__/column-content-underline.test.tsx (1 test) 6ms
+ ✓ |unit| src/components/builder/columns/__tests__/column-preview-parity.test.ts (3 tests) 1ms
+ ✓ |unit| src/lib/builder/columns/__tests__/preview-parity.test.ts (3 tests) 1ms
+ ✓ |unit| src/components/__tests__/column-toc.test.tsx (8 tests) 8768ms
+   ✓ column "In this article" navigation > stays aligned with the rendered headings for every ko column  1857ms
+   ✓ column "In this article" navigation > stays aligned with the rendered headings for every zh-hant column  1939ms
+   ✓ column "In this article" navigation > stays aligned with the rendered headings for every en column  3253ms
+   ✓ column "In this article" navigation > stays aligned with the rendered headings for every ja column  1705ms
+
+ Test Files  14 passed (14)
+      Tests  146 passed (146)
+   Start at  16:50:45
+   Duration  9.01s (transform 356ms, setup 21ms, collect 1.43s, tests 11.95s, environment 1ms, prepare 311ms)
+

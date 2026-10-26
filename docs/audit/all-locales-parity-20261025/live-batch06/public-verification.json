@@ -1,0 +1,2500 @@
+{
+  "generatedAtUTC": "2026-10-26T07:18:37.029104+00:00",
+  "scope": "B3–B6 actual public article delivery; immutable source commit binding",
+  "publicCommit": "f66daa9f153537c000d23486e8be638472251012",
+  "publicBuiltAt": "2026-10-26T06:42:32.834Z",
+  "verificationWindows": {
+    "httpStartUTC": "2026-10-26T06:59:24.299360+00:00",
+    "httpEndUTC": "2026-10-26T07:00:22.381898+00:00",
+    "browserStartUTC": "2026-10-26T07:06:59.780Z",
+    "browserEndUTC": "2026-10-26T07:08:03.743Z"
+  },
+  "beforeAfterCommitIdentical": true,
+  "ancestry": [
+    {
+      "batch": "B3",
+      "commit": "3b5ea95061d61a6b9a0e94eb61438be843fdd63c",
+      "command": [
+        "git",
+        "-C",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025",
+        "merge-base",
+        "--is-ancestor",
+        "3b5ea95061d61a6b9a0e94eb61438be843fdd63c",
+        "f66daa9f153537c000d23486e8be638472251012"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "batch": "B4",
+      "commit": "435e9dd8a2f465c238c6f58716246058bb3981f8",
+      "command": [
+        "git",
+        "-C",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025",
+        "merge-base",
+        "--is-ancestor",
+        "435e9dd8a2f465c238c6f58716246058bb3981f8",
+        "f66daa9f153537c000d23486e8be638472251012"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "batch": "B5",
+      "commit": "1ef3a9fe1a8702cda57949c5c53d3b713cc20b64",
+      "command": [
+        "git",
+        "-C",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025",
+        "merge-base",
+        "--is-ancestor",
+        "1ef3a9fe1a8702cda57949c5c53d3b713cc20b64",
+        "f66daa9f153537c000d23486e8be638472251012"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "batch": "B6",
+      "commit": "eca6d3d77b24e06ff85cbe4608aec76bf5762d76",
+      "command": [
+        "git",
+        "-C",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025",
+        "merge-base",
+        "--is-ancestor",
+        "eca6d3d77b24e06ff85cbe4608aec76bf5762d76",
+        "f66daa9f153537c000d23486e8be638472251012"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "batch": "initial-public",
+      "commit": "f0dd7cb36088d9108e239eafdcb2278d4f6d1093",
+      "command": [
+        "git",
+        "-C",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025",
+        "merge-base",
+        "--is-ancestor",
+        "f0dd7cb36088d9108e239eafdcb2278d4f6d1093",
+        "f66daa9f153537c000d23486e8be638472251012"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "atomicRebinding": {
+    "initialRootObservationCommit": "f0dd7cb36088d9108e239eafdcb2278d4f6d1093",
+    "firstAuditObservedCommit": "f66daa9f153537c000d23486e8be638472251012",
+    "staleExpectationAuditStoppedBeforeArticleFetch": true,
+    "oldResponse": "runs/20261026T065838012480Z/not-ready.json",
+    "same195SourceManifestBytes": true,
+    "sourceManifestSHA256": "1c311a51164ccfc074886bb88ec9365a705a71f04fbe2b723480c89a7354da13"
+  },
+  "articleDeliveryVerified": true,
+  "articleCounts": {
+    "newB3": 21,
+    "newB4": 21,
+    "newB5": 21,
+    "newB6": 42,
+    "newTotal": 105,
+    "changedExisting": 7,
+    "unchangedReference": 83,
+    "total": 195,
+    "locales": 49,
+    "FAQEntries": 577,
+    "bodyBlocks": 7703,
+    "sourceLinkOccurrences": 6082
+  },
+  "fullArticleChecks": "HTTP200, exact native source title/body blocks/FAQ/links, canonical, language, SEO/OG metadata, dates, no public author, no decorative bold, hero alt/caption; whitespace+NFC normalization only for text comparison. Mailto and UTC-midnight date serializations are separately qualified below. No fallback English is counted as translated content.",
+  "reciprocalGraphs": {
+    "taiwan-apartment-ev-charger-common-area-judgment": {
+      "expected_locales": [
+        "ar",
+        "de",
+        "hi",
+        "it",
+        "ms",
+        "pt",
+        "ru",
+        "zh-hant"
+      ],
+      "audited_locales": [
+        "ar",
+        "de",
+        "hi",
+        "it",
+        "ms",
+        "pt",
+        "ru",
+        "zh-hant"
+      ],
+      "page_count": 8,
+      "directed_locale_links": 64,
+      "passed": true
+    },
+    "taiwan-arc-first-application": {
+      "expected_locales": [
+        "ar",
+        "bg",
+        "bn",
+        "ca",
+        "cs",
+        "da",
+        "de",
+        "el",
+        "en",
+        "es",
+        "et",
+        "fa",
+        "fi",
+        "fil",
+        "fr",
+        "he",
+        "hi",
+        "hr",
+        "hu",
+        "id",
+        "is",
+        "it",
+        "ja",
+        "km",
+        "ko",
+        "lt",
+        "lv",
+        "mn",
+        "ms",
+        "my",
+        "nb",
+        "ne",
+        "nl",
+        "pl",
+        "pt",
+        "ro",
+        "ru",
+        "sk",
+        "sl",
+        "sr",
+        "sv",
+        "ta",
+        "th",
+        "tr",
+        "uk",
+        "ur",
+        "vi",
+        "zh-hans",
+        "zh-hant"
+      ],
+      "audited_locales": [
+        "ar",
+        "bg",
+        "bn",
+        "ca",
+        "cs",
+        "da",
+        "de",
+        "el",
+        "en",
+        "es",
+        "et",
+        "fa",
+        "fi",
+        "fil",
+        "fr",
+        "he",
+        "hi",
+        "hr",
+        "hu",
+        "id",
+        "is",
+        "it",
+        "ja",
+        "km",
+        "ko",
+        "lt",
+        "lv",
+        "mn",
+        "ms",
+        "my",
+        "nb",
+        "ne",
+        "nl",
+        "pl",
+        "pt",
+        "ro",
+        "ru",
+        "sk",
+        "sl",
+        "sr",
+        "sv",
+        "ta",
+        "th",
+        "tr",
+        "uk",
+        "ur",
+        "vi",
+        "zh-hans",
+        "zh-hant"
+      ],
+      "page_count": 49,
+      "directed_locale_links": 2401,
+      "passed": true
+    },
+    "taiwan-arc-renewal-changes-reentry": {
+      "expected_locales": [
+        "ar",
+        "bg",
+        "bn",
+        "ca",
+        "cs",
+        "da",
+        "de",
+        "el",
+        "en",
+        "es",
+        "et",
+        "fa",
+        "fi",
+        "fil",
+        "fr",
+        "he",
+        "hi",
+        "hr",
+        "hu",
+        "id",
+        "is",
+        "it",
+        "ja",
+        "km",
+        "ko",
+        "lt",
+        "lv",
+        "mn",
+        "ms",
+        "my",
+        "nb",
+        "ne",
+        "nl",
+        "pl",
+        "pt",
+        "ro",
+        "ru",
+        "sk",
+        "sl",
+        "sr",
+        "sv",
+        "ta",
+        "th",
+        "tr",
+        "uk",
+        "ur",
+        "vi",
+        "zh-hans",
+        "zh-hant"
+      ],
+      "audited_locales": [
+        "ar",
+        "bg",
+        "bn",
+        "ca",
+        "cs",
+        "da",
+        "de",
+        "el",
+        "en",
+        "es",
+        "et",
+        "fa",
+        "fi",
+        "fil",
+        "fr",
+        "he",
+        "hi",
+        "hr",
+        "hu",
+        "id",
+        "is",
+        "it",
+        "ja",
+        "km",
+        "ko",
+        "lt",
+        "lv",
+        "mn",
+        "ms",
+        "my",
+        "nb",
+        "ne",
+        "nl",
+        "pl",
+        "pt",
+        "ro",
+        "ru",
+        "sk",
+        "sl",
+        "sr",
+        "sv",
+        "ta",
+        "th",
+        "tr",
+        "uk",
+        "ur",
+        "vi",
+        "zh-hans",
+        "zh-hant"
+      ],
+      "page_count": 49,
+      "directed_locale_links": 2401,
+      "passed": true
+    },
+    "taiwan-online-game-coins-refund-judgment": {
+      "expected_locales": [
+        "ar",
+        "de",
+        "hi",
+        "it",
+        "ms",
+        "pt",
+        "ru",
+        "zh-hant"
+      ],
+      "audited_locales": [
+        "ar",
+        "de",
+        "hi",
+        "it",
+        "ms",
+        "pt",
+        "ru",
+        "zh-hant"
+      ],
+      "page_count": 8,
+      "directed_locale_links": 64,
+      "passed": true
+    },
+    "taiwan-parent-company-pollution-liability-us-investor": {
+      "expected_locales": [
+        "ar",
+        "de",
+        "en",
+        "hi",
+        "it",
+        "ms",
+        "pt",
+        "ru"
+      ],
+      "audited_locales": [
+        "ar",
+        "de",
+        "en",
+        "hi",
+        "it",
+        "ms",
+        "pt",
+        "ru"
+      ],
+      "page_count": 8,
+      "directed_locale_links": 64,
+      "passed": true
+    },
+    "taiwan-presale-mortgage-notice-handover-judgment": {
+      "expected_locales": [
+        "ar",
+        "de",
+        "hi",
+        "it",
+        "ms",
+        "pt",
+        "ru",
+        "zh-hant"
+      ],
+      "audited_locales": [
+        "ar",
+        "de",
+        "hi",
+        "it",
+        "ms",
+        "pt",
+        "ru",
+        "zh-hant"
+      ],
+      "page_count": 8,
+      "directed_locale_links": 64,
+      "passed": true
+    },
+    "taiwan-public-contract-mediation-arbitration-same-claim": {
+      "expected_locales": [
+        "ar",
+        "de",
+        "en",
+        "hi",
+        "it",
+        "ms",
+        "pt",
+        "ru"
+      ],
+      "audited_locales": [
+        "ar",
+        "de",
+        "en",
+        "hi",
+        "it",
+        "ms",
+        "pt",
+        "ru"
+      ],
+      "page_count": 8,
+      "directed_locale_links": 64,
+      "passed": true
+    },
+    "taiwan-visa-residence-work-study-family": {
+      "expected_locales": [
+        "ar",
+        "bg",
+        "bn",
+        "ca",
+        "cs",
+        "da",
+        "de",
+        "el",
+        "en",
+        "es",
+        "et",
+        "fa",
+        "fi",
+        "fil",
+        "fr",
+        "he",
+        "hi",
+        "hr",
+        "hu",
+        "id",
+        "is",
+        "it",
+        "ja",
+        "km",
+        "ko",
+        "lt",
+        "lv",
+        "mn",
+        "ms",
+        "my",
+        "nb",
+        "ne",
+        "nl",
+        "pl",
+        "pt",
+        "ro",
+        "ru",
+        "sk",
+        "sl",
+        "sr",
+        "sv",
+        "ta",
+        "th",
+        "tr",
+        "uk",
+        "ur",
+        "vi",
+        "zh-hans",
+        "zh-hant"
+      ],
+      "audited_locales": [
+        "ar",
+        "bg",
+        "bn",
+        "ca",
+        "cs",
+        "da",
+        "de",
+        "el",
+        "en",
+        "es",
+        "et",
+        "fa",
+        "fi",
+        "fil",
+        "fr",
+        "he",
+        "hi",
+        "hr",
+        "hu",
+        "id",
+        "is",
+        "it",
+        "ja",
+        "km",
+        "ko",
+        "lt",
+        "lv",
+        "mn",
+        "ms",
+        "my",
+        "nb",
+        "ne",
+        "nl",
+        "pl",
+        "pt",
+        "ro",
+        "ru",
+        "sk",
+        "sl",
+        "sr",
+        "sv",
+        "ta",
+        "th",
+        "tr",
+        "uk",
+        "ur",
+        "vi",
+        "zh-hans",
+        "zh-hant"
+      ],
+      "page_count": 49,
+      "directed_locale_links": 2401,
+      "passed": true
+    },
+    "taiwan-workplace-bullying-investigation-hearing-judgment": {
+      "expected_locales": [
+        "ar",
+        "de",
+        "hi",
+        "it",
+        "ms",
+        "pt",
+        "ru",
+        "zh-hant"
+      ],
+      "audited_locales": [
+        "ar",
+        "de",
+        "hi",
+        "it",
+        "ms",
+        "pt",
+        "ru",
+        "zh-hant"
+      ],
+      "page_count": 8,
+      "directed_locale_links": 64,
+      "passed": true
+    }
+  },
+  "directedLocaleLinksIncludingSelf": 7587,
+  "listings": {
+    "scopedLocales": 31,
+    "initialHTMLCardChecksPass": 30,
+    "legacyZHExpandedCardClickPass": true,
+    "legacyZHOptionalMetaContentLanguageAbsent": true,
+    "legacyZHHTMLLang": "zh-Hant",
+    "nativeZHCardAndDestinationVerified": true,
+    "functionalListingVerificationTotal": 31
+  },
+  "home": {
+    "url": "https://tseng-law.com/en",
+    "switcherLinks": 49,
+    "hreflangLinksIncludingXDefault": 50,
+    "passed": true
+  },
+  "images": {
+    "unique": 9,
+    "allHTTP200ExactGitBytesAndWebPSignature": true,
+    "details": [
+      {
+        "path": "/images/columns/915-case-trends-20261025.webp",
+        "sha256": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95",
+        "checks": {
+          "status_200": true,
+          "image_mime": true,
+          "source_sha256": true,
+          "webp_signature": true
+        }
+      },
+      {
+        "path": "/images/columns/916-case-trends-20261025.webp",
+        "sha256": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+        "checks": {
+          "status_200": true,
+          "image_mime": true,
+          "source_sha256": true,
+          "webp_signature": true
+        }
+      },
+      {
+        "path": "/images/columns/918-case-trends-20261025.webp",
+        "sha256": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+        "checks": {
+          "status_200": true,
+          "image_mime": true,
+          "source_sha256": true,
+          "webp_signature": true
+        }
+      },
+      {
+        "path": "/images/columns/919-case-trends-20261025.webp",
+        "sha256": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+        "checks": {
+          "status_200": true,
+          "image_mime": true,
+          "source_sha256": true,
+          "webp_signature": true
+        }
+      },
+      {
+        "path": "/images/columns/920-case-trends-20261025.webp",
+        "sha256": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+        "checks": {
+          "status_200": true,
+          "image_mime": true,
+          "source_sha256": true,
+          "webp_signature": true
+        }
+      },
+      {
+        "path": "/images/columns/921-case-trends-20261025.webp",
+        "sha256": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933",
+        "checks": {
+          "status_200": true,
+          "image_mime": true,
+          "source_sha256": true,
+          "webp_signature": true
+        }
+      },
+      {
+        "path": "/images/columns/taiwan-arc-first-application-20261024-v2.webp",
+        "sha256": "e33f7f381d597a9ae5b3693d7c4f887a29d7420b1b4ae3c98db664a06dceae31",
+        "checks": {
+          "status_200": true,
+          "image_mime": true,
+          "source_sha256": true,
+          "webp_signature": true
+        }
+      },
+      {
+        "path": "/images/columns/taiwan-visa-residence-work-study-family-20261024-v2.webp",
+        "sha256": "0f9d9a4041f5978119b71a6c89ba1a9b01e2643871143163a4bc4d8f792a7e84",
+        "checks": {
+          "status_200": true,
+          "image_mime": true,
+          "source_sha256": true,
+          "webp_signature": true
+        }
+      },
+      {
+        "path": "/images/columns/taiwan-arc-renewal-changes-reentry-20261024-v2.webp",
+        "sha256": "9933406b2c0c64af337aaf443c6c5e1ed4afb94e9ed7ab5a5e3635a2b940f16f",
+        "checks": {
+          "status_200": true,
+          "image_mime": true,
+          "source_sha256": true,
+          "webp_signature": true
+        }
+      }
+    ]
+  },
+  "browser": {
+    "summary": {
+      "total": 37,
+      "passed": 37,
+      "failed": 0,
+      "fatal": false
+    },
+    "newLocaleMobileRepresentatives": 28,
+    "articleCases": 32,
+    "navigationCases": 4,
+    "expandedListingCases": 1,
+    "temporaryIsolatedChromium": true,
+    "userBrowserProfileUsed": false,
+    "fontWaitUnchanged": true,
+    "report": "browser/results-f66daa9f.json",
+    "execution": "browser/execution.json",
+    "visualReview": "browser/visual-review.json"
+  },
+  "preservedInitialFailures": {
+    "initialStrictResult": "runs/20261026T065924226319Z/results.json",
+    "sha256": "9a5335ff8e8f069382b17f7dba52a197010e037325009807fec55c584796c00c",
+    "initialPassedFlag": false,
+    "offlineReassessment": "runs/20261026T065924226319Z/results-serializer-reassessed.json",
+    "networkRequestsForReassessment": 0,
+    "emailSerializerCases": 66,
+    "sameCalendarDateUTCSerializationCases": 15,
+    "emailRule": "Same exact recipient and fragment; actual query keys may only be subject/body where source had no query. All non-mailto source hrefs retain exact matching. No email opened/submitted.",
+    "dateRule": "Only exact date or exact date + T00:00:00.000Z qualifies.",
+    "reassessedGlobalFlagRemainsFalse": "Original/reassessment files were not rewritten to hide ZH initial HTML limitation; this combined record closes card discovery using the additional actual browser click."
+  },
+  "observedLimitations": [
+    "Shared table scroll-helper remains English on inspected AR921 and HE706 screenshots; no claim that all shared interface copy is localized.",
+    "ZH-Hant listing has no optional meta content-language; its html lang, title, canonical and localized cards are verified.",
+    "ZH918 card image area in the expanded-list screenshot is a gray-gradient placeholder. Nine article hero assets passed byte HTTP checks and selected browser images decoded; not every listing thumbnail was verified.",
+    "Browser coverage is 37 selected cases, not a visual review of every one of195articles or every device/browser. All195received full-source HTTP checks.",
+    "No external legal-source endpoint availability sweep, user authentication, contact submission, account data, deployment queue, Air state, or infrastructure change was performed.",
+    "Content identity to the reviewed immutable source is verified; this delivery audit is not a fresh legal or native human certification."
+  ],
+  "allSharedInterfaceCopyLocalized": false,
+  "articleSourceChecks": [
+    {
+      "sourcePath": "src/content/columns-ar/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ar/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "231ce90371cf3783a60811a96edd45ed07271ecfc51a62c3c0000855183f9132",
+      "locale": "ar",
+      "number": 915,
+      "url": "https://tseng-law.com/ar/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ar/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ar/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "43da02d79088d4bf15201a87d73ac399f9b69491885b8694300218a735b6f084",
+      "locale": "ar",
+      "number": 916,
+      "url": "https://tseng-law.com/ar/columns/taiwan-parent-company-pollution-liability-us-investor",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ar/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ar/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "14b8aa81db02c1a6d2ad8bd722be92b937145ab2b7817c0054f7f7cb3cbfdaa8",
+      "locale": "ar",
+      "number": 918,
+      "url": "https://tseng-law.com/ar/columns/taiwan-presale-mortgage-notice-handover-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ar/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ar/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "8d496fab0ff7a2ede0664c6fcf52ad07126b37e38860e64d437aae59ce359408",
+      "locale": "ar",
+      "number": 919,
+      "url": "https://tseng-law.com/ar/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ar/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ar/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "7a5ac7a800b3f2ff3d106e0ae1a5d308f91485ac059005ded515013541abdd22",
+      "locale": "ar",
+      "number": 920,
+      "url": "https://tseng-law.com/ar/columns/taiwan-apartment-ev-charger-common-area-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ar/921-taiwan-online-game-coins-refund-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ar/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "419bb7bdfcd0c9652d88fc250c401d5b729974d2781d7849307f12ed27854723",
+      "locale": "ar",
+      "number": 921,
+      "url": "https://tseng-law.com/ar/columns/taiwan-online-game-coins-refund-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-bg/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/bg/704-taiwan-arc-first-application.md",
+      "sha256": "823b5ea0597b7b531de819a92854cd963ee2d0d9d86555d6f6f68cf45f083575",
+      "locale": "bg",
+      "number": 704,
+      "url": "https://tseng-law.com/bg/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-bg/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/bg/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "777899d149cc5654f007ba65929dee57d91e48002a23c610ffc8cd017ce2aaad",
+      "locale": "bg",
+      "number": 705,
+      "url": "https://tseng-law.com/bg/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-bg/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/bg/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d1aa1863c836606247c976cb1e15a0e29f82407937b0712a0f8154e584f444c5",
+      "locale": "bg",
+      "number": 706,
+      "url": "https://tseng-law.com/bg/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-bn/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/bn/704-taiwan-arc-first-application.md",
+      "sha256": "3bb9fb746cfd2d8bed5e2ef160ecdecf81a959d1d2b55464604a708d8e0782c5",
+      "locale": "bn",
+      "number": 704,
+      "url": "https://tseng-law.com/bn/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-bn/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/bn/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "a97cacf663e16351a351cdce9fb7d4013ebf2b98ceb16ca559f4ac3ad9d4d2cd",
+      "locale": "bn",
+      "number": 705,
+      "url": "https://tseng-law.com/bn/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-bn/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/bn/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4250564b6c98cbcf7a1ae3778b13c817f416c8991cf5ad3fbbb3dfebbfd0e6dc",
+      "locale": "bn",
+      "number": 706,
+      "url": "https://tseng-law.com/bn/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ca/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ca/704-taiwan-arc-first-application.md",
+      "sha256": "5afa4da34df2bfb0ba4f5d4f47bf6db8b63622c0e2525b39eefa30e7cea8e7e2",
+      "locale": "ca",
+      "number": 704,
+      "url": "https://tseng-law.com/ca/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ca/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ca/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "dd447d258158bea56a10a73634663adc7008a3d2057e36eae99b087521dd646f",
+      "locale": "ca",
+      "number": 705,
+      "url": "https://tseng-law.com/ca/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ca/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ca/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "000a6605ef491108da625e2060c563ee42a59bfec83680ea6fc695060f5e86b7",
+      "locale": "ca",
+      "number": 706,
+      "url": "https://tseng-law.com/ca/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-de/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/de/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "cc4d26cb0501458b2565a864cbff0e09554eb9f67b2a74c64fd12a4e1fc79902",
+      "locale": "de",
+      "number": 915,
+      "url": "https://tseng-law.com/de/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-de/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/de/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "7e68c5bb750057a8be218b6dfceb8572997825643b82efb9ea66b76461d2b49f",
+      "locale": "de",
+      "number": 916,
+      "url": "https://tseng-law.com/de/columns/taiwan-parent-company-pollution-liability-us-investor",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-de/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/de/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "1309324c33e0e163f942615b9748179ffb644e6a3b5ef509a10980c601eac8ba",
+      "locale": "de",
+      "number": 918,
+      "url": "https://tseng-law.com/de/columns/taiwan-presale-mortgage-notice-handover-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-de/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/de/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "deaa2b344be1dac722a028989f24a34cc911255737a671613bdf62c05de66c8f",
+      "locale": "de",
+      "number": 919,
+      "url": "https://tseng-law.com/de/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-de/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/de/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "96d2f80c44c8911fc25ad03ff1cec6c88277d9e736ef4fd538f723c041a2bf7a",
+      "locale": "de",
+      "number": 920,
+      "url": "https://tseng-law.com/de/columns/taiwan-apartment-ev-charger-common-area-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-de/921-taiwan-online-game-coins-refund-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/de/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "17605ada0c21df3071a432a2b1e12f3ff62d4f10444ea41418a1c9722ae0d6cd",
+      "locale": "de",
+      "number": 921,
+      "url": "https://tseng-law.com/de/columns/taiwan-online-game-coins-refund-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-el/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/el/704-taiwan-arc-first-application.md",
+      "sha256": "ed305ba079d234dc5f8a9ea82fbed5e8195bb8adf06b009874fd39ea6aeaeb72",
+      "locale": "el",
+      "number": 704,
+      "url": "https://tseng-law.com/el/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-el/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/el/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "0054450fb0330e0f7fd6681376c0d1dfd516661fba7782eaa960600811827af1",
+      "locale": "el",
+      "number": 705,
+      "url": "https://tseng-law.com/el/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-el/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/el/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "ab25e0978afe2cb3df99fbffd0b5b7fd0b835a6688d45bd942fc2f5b8edcad49",
+      "locale": "el",
+      "number": 706,
+      "url": "https://tseng-law.com/el/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-et/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/et/704-taiwan-arc-first-application.md",
+      "sha256": "f15069557979333b4febbff860e45755472675d20f056ac2d05664f788eaea96",
+      "locale": "et",
+      "number": 704,
+      "url": "https://tseng-law.com/et/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-et/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/et/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "6bf9a4fca0d1b90d3bf0e4f46e4c87ba43cb5c4b32989ab3e98eaed52955acc8",
+      "locale": "et",
+      "number": 705,
+      "url": "https://tseng-law.com/et/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-et/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/et/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "dce0dce717cd732bce40b187f43ef31cbcf0758d71256c129263c23fc7da856a",
+      "locale": "et",
+      "number": 706,
+      "url": "https://tseng-law.com/et/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-fa/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/fa/704-taiwan-arc-first-application.md",
+      "sha256": "fe975485d8a8fed7bd467c42860c4d29ad575a2d2a981ce3d3fc7e63113509a3",
+      "locale": "fa",
+      "number": 704,
+      "url": "https://tseng-law.com/fa/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-fa/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/fa/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "1c96fab7471e92a166705ec25385ef99980df2237fcc676d294c24efc4c424ab",
+      "locale": "fa",
+      "number": 705,
+      "url": "https://tseng-law.com/fa/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-fa/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/fa/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d5e9636efd65707cd86b0e0c24aa700e2d0b1948d6749302e96cd5d81dc9fa77",
+      "locale": "fa",
+      "number": 706,
+      "url": "https://tseng-law.com/fa/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-he/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/he/704-taiwan-arc-first-application.md",
+      "sha256": "053b4e004dab8579821b95552b731804a6feab7d317c77b1c5a55611c40e16fe",
+      "locale": "he",
+      "number": 704,
+      "url": "https://tseng-law.com/he/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-he/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/he/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "2a9e5b3a802d105b582fd1a579d0a3b8fa8f1b825954c4c56cbfdfe263c08caf",
+      "locale": "he",
+      "number": 705,
+      "url": "https://tseng-law.com/he/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-he/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/he/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "fa78467ebf94880a503e0549e6f00b73950771324285d92524996f8e09f87b3d",
+      "locale": "he",
+      "number": 706,
+      "url": "https://tseng-law.com/he/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "7774b7c684516ceff0d8f7384634c97cb0b2ed0eda235499e409f55a0b58e9ba",
+      "locale": "hi",
+      "number": 915,
+      "url": "https://tseng-law.com/hi/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "347b9d36770424f382e8c9365a9fc7f920982aeea434c60e0accc70f50878545",
+      "locale": "hi",
+      "number": 916,
+      "url": "https://tseng-law.com/hi/columns/taiwan-parent-company-pollution-liability-us-investor",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "302a1aa063340a2d00cf786bf7f2ee009080675cd5227b47ddea9f767010fc49",
+      "locale": "hi",
+      "number": 918,
+      "url": "https://tseng-law.com/hi/columns/taiwan-presale-mortgage-notice-handover-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "06b50e30ebe32f00908faa1ab9d4a7e87d31a74f8c87b401af9211b3c8726ce9",
+      "locale": "hi",
+      "number": 919,
+      "url": "https://tseng-law.com/hi/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "31c86181c1fe6b2315b23a0b117fb5adb09d5174250a00d2817a334635a42bad",
+      "locale": "hi",
+      "number": 920,
+      "url": "https://tseng-law.com/hi/columns/taiwan-apartment-ev-charger-common-area-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hi/921-taiwan-online-game-coins-refund-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hi/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d3fe078af72657bba8fa660486fbec0776b9a9d8e585f805f44f2c6808a937c3",
+      "locale": "hi",
+      "number": 921,
+      "url": "https://tseng-law.com/hi/columns/taiwan-online-game-coins-refund-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hr/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hr/704-taiwan-arc-first-application.md",
+      "sha256": "8575fc01e571acbf80470e9680a24344542e72c585f33d095335e081c10cd762",
+      "locale": "hr",
+      "number": 704,
+      "url": "https://tseng-law.com/hr/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hr/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hr/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "d8bea761975a8643861d33391f53a7ce0e7bf2109d664e2205f5b663966ecb73",
+      "locale": "hr",
+      "number": 705,
+      "url": "https://tseng-law.com/hr/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hr/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "2663860398db720bf3b25eb3c00885f8f7c3e84e3eeabc82aac1bfb1972928d3",
+      "locale": "hr",
+      "number": 706,
+      "url": "https://tseng-law.com/hr/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hu/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hu/704-taiwan-arc-first-application.md",
+      "sha256": "96db7ce41b5038c9fce43fd0c1e50f2598202240183a9a8fe5ca76824e9d4ecc",
+      "locale": "hu",
+      "number": 704,
+      "url": "https://tseng-law.com/hu/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hu/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hu/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "59771fe17d126fb32e3426f5cb8ac5956ecbecbbe25aba99f07c10408d787f4e",
+      "locale": "hu",
+      "number": 705,
+      "url": "https://tseng-law.com/hu/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hu/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hu/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "0e2e2791a2233d96a2e01ac0536d8dc9c901d9219b1ec4e977fec539c15ca6d7",
+      "locale": "hu",
+      "number": 706,
+      "url": "https://tseng-law.com/hu/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-is/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/is/704-taiwan-arc-first-application.md",
+      "sha256": "46f91a4f964782286b4e79c443d53dcc1ab01a7f3a472846a8283ddc86474c70",
+      "locale": "is",
+      "number": 704,
+      "url": "https://tseng-law.com/is/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-is/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/is/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "d4cfb96e0de0ab59da3024b7a645a06aa51e70b74805d645c1456b71174e4af0",
+      "locale": "is",
+      "number": 705,
+      "url": "https://tseng-law.com/is/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-is/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/is/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "67366df5650c5d1844e8ed2b4303f701a56a9727362c4da89c816a2fbe5475a6",
+      "locale": "is",
+      "number": 706,
+      "url": "https://tseng-law.com/is/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-it/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/it/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "35dac07dacd8bbec1a7485e1d4ac91ade04114dc8d0e73748c658396244a9cf8",
+      "locale": "it",
+      "number": 915,
+      "url": "https://tseng-law.com/it/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-it/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/it/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "5cf2e361a6092205a2ae6e93977391be436a42e2916f8c9d6b3225acc9f80bab",
+      "locale": "it",
+      "number": 916,
+      "url": "https://tseng-law.com/it/columns/taiwan-parent-company-pollution-liability-us-investor",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-it/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/it/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "575603a4fb63eb582dd0ed076f3f1a50af4aea796bb8140855728d98df691f66",
+      "locale": "it",
+      "number": 918,
+      "url": "https://tseng-law.com/it/columns/taiwan-presale-mortgage-notice-handover-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-it/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/it/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "8242040c97d1f4aac945306fcde2614b77e03e7e93cdacebacf61986fcd68fd9",
+      "locale": "it",
+      "number": 919,
+      "url": "https://tseng-law.com/it/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-it/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/it/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "7755edb8d8d4eb7d1d0035b22e53936e5b941dedc6210ab4ab617e9cd3bfd1cf",
+      "locale": "it",
+      "number": 920,
+      "url": "https://tseng-law.com/it/columns/taiwan-apartment-ev-charger-common-area-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-it/921-taiwan-online-game-coins-refund-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/it/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "2e92a5de5a50c3bd2bddd8f7ac40077a6ee620a7c04ecdfb39ffa9862c93b0da",
+      "locale": "it",
+      "number": 921,
+      "url": "https://tseng-law.com/it/columns/taiwan-online-game-coins-refund-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-km/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/km/704-taiwan-arc-first-application.md",
+      "sha256": "8ae680254e50bf202d7a3ebe1f886de19264a22251bdda5effbdc9c74b649b53",
+      "locale": "km",
+      "number": 704,
+      "url": "https://tseng-law.com/km/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-km/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/km/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "f3b6eec9bcd2559f10f6e9fd05d74c8040d1a65ccda1fdcb79632961ad58aeba",
+      "locale": "km",
+      "number": 705,
+      "url": "https://tseng-law.com/km/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-km/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/km/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d1a5eff1eb9fed410075031876b059d635ac4c9de9cd75a61c5a2ac540371286",
+      "locale": "km",
+      "number": 706,
+      "url": "https://tseng-law.com/km/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-lt/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/lt/704-taiwan-arc-first-application.md",
+      "sha256": "f46f3545e94950ba11cb30f118689721608e6f9593a088a40b10f3b8618a35a9",
+      "locale": "lt",
+      "number": 704,
+      "url": "https://tseng-law.com/lt/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-lt/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/lt/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "33b0cc65e3720963cac03710365c44c3c8a88a953309b38314680bca963c14c5",
+      "locale": "lt",
+      "number": 705,
+      "url": "https://tseng-law.com/lt/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/lt/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4b2d935fa2496bf95b6e304f976e937221a6ab696ab9aa7cf526e2811c7cf1c6",
+      "locale": "lt",
+      "number": 706,
+      "url": "https://tseng-law.com/lt/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-lv/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/lv/704-taiwan-arc-first-application.md",
+      "sha256": "f47d6be694c2e9601fa457d64598379b5065fa48a94937d5ff11a76d3637c810",
+      "locale": "lv",
+      "number": 704,
+      "url": "https://tseng-law.com/lv/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-lv/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/lv/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "de24030f670164d376227740b49a16a3e1883fa29def34a483fda0672a529102",
+      "locale": "lv",
+      "number": 705,
+      "url": "https://tseng-law.com/lv/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-lv/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/lv/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "e5b600ba790cdbcd9f225c1703c81e28e7ab49974d504b4ba77b1070d48e700d",
+      "locale": "lv",
+      "number": 706,
+      "url": "https://tseng-law.com/lv/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-mn/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/mn/704-taiwan-arc-first-application.md",
+      "sha256": "c33ec471bf92fd0d55977d3e5e40dde1fed5130d73645c3836c43895b1f918de",
+      "locale": "mn",
+      "number": 704,
+      "url": "https://tseng-law.com/mn/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/mn/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "d54e05e91c9d6e9da6ee536009c01b9d44d34b0a78e74dbe07b2e294dde261ac",
+      "locale": "mn",
+      "number": 705,
+      "url": "https://tseng-law.com/mn/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/mn/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "f3ced3a9c5be6948ce8ead66d0110be0a8e8309f39f414712f24bff50de965a4",
+      "locale": "mn",
+      "number": 706,
+      "url": "https://tseng-law.com/mn/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ms/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ms/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "a84831b3f245c2eb8bb1f3333f75058ef8716e53f346e08db45347fa9c4ae103",
+      "locale": "ms",
+      "number": 915,
+      "url": "https://tseng-law.com/ms/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ms/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ms/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "e8de772156076b020564e30955075e84a2ba0b6388ffbd99366c304829c38d86",
+      "locale": "ms",
+      "number": 916,
+      "url": "https://tseng-law.com/ms/columns/taiwan-parent-company-pollution-liability-us-investor",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ms/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ms/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "bb55a0db717c9eafbcdc5c8b64a475dfec3f8d208c629e711e8ce8e9a4069ef0",
+      "locale": "ms",
+      "number": 918,
+      "url": "https://tseng-law.com/ms/columns/taiwan-presale-mortgage-notice-handover-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ms/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ms/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "1247ec843684dd22111d51a5478876f7c2e786cbce07a6a4964b85b47faba871",
+      "locale": "ms",
+      "number": 919,
+      "url": "https://tseng-law.com/ms/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ms/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ms/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "de6df23563ef5d7387180836408e3b20a5e6c7ea20ba4a9a30c36421e244a635",
+      "locale": "ms",
+      "number": 920,
+      "url": "https://tseng-law.com/ms/columns/taiwan-apartment-ev-charger-common-area-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ms/921-taiwan-online-game-coins-refund-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ms/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "74db4d0b549a770c8c916b38047abfb0ef89391788f2cabe5f9050714e725889",
+      "locale": "ms",
+      "number": 921,
+      "url": "https://tseng-law.com/ms/columns/taiwan-online-game-coins-refund-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-my/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/my/704-taiwan-arc-first-application.md",
+      "sha256": "5dc05c7e2d82c50be381d779bf6c4273e216e4e1564f485ffff7ae2f6131c579",
+      "locale": "my",
+      "number": 704,
+      "url": "https://tseng-law.com/my/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-my/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/my/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "567f73364f69d7c2a1b9fba5f92c612a0cb71d952b2454870fdc8f46a0afb6ec",
+      "locale": "my",
+      "number": 705,
+      "url": "https://tseng-law.com/my/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-my/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/my/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "62197d327d34f575c00853a07609d9aa6b42b6419decb066bc38545e83f40fb4",
+      "locale": "my",
+      "number": 706,
+      "url": "https://tseng-law.com/my/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ne/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ne/704-taiwan-arc-first-application.md",
+      "sha256": "c54085fe51c726aba838c6f4c16935daa1df73a5a80e834ac5a6ed8c077bdfce",
+      "locale": "ne",
+      "number": 704,
+      "url": "https://tseng-law.com/ne/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ne/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ne/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "6910f76946692f0d808e29ccbacd31617e0608e533382697d710c511ddf46b84",
+      "locale": "ne",
+      "number": 705,
+      "url": "https://tseng-law.com/ne/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ne/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ne/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "baba14a7e65ff20941900607496fa4bf3e447ade70915cb1bc289bfa81f2f2ce",
+      "locale": "ne",
+      "number": 706,
+      "url": "https://tseng-law.com/ne/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-pt/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/pt/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "e40fa586ea8b835e6bdcb070fc0193bbea80e263df88aafa86d2f951f9894353",
+      "locale": "pt",
+      "number": 915,
+      "url": "https://tseng-law.com/pt/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-pt/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/pt/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "177be7395ee02cad28462e119942e229cd30542602f4687889adc7a79ca9eeac",
+      "locale": "pt",
+      "number": 916,
+      "url": "https://tseng-law.com/pt/columns/taiwan-parent-company-pollution-liability-us-investor",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-pt/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/pt/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "70f1c01c0ce95f4f660726a6c747c80bc7115972a7f331d1fd46269782310dfc",
+      "locale": "pt",
+      "number": 918,
+      "url": "https://tseng-law.com/pt/columns/taiwan-presale-mortgage-notice-handover-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-pt/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/pt/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "77305593ff192c54b86fe07898e6cee983366cd077a73b9a3667f80b7e2817b5",
+      "locale": "pt",
+      "number": 919,
+      "url": "https://tseng-law.com/pt/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-pt/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/pt/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "0e3c9f74b6c48427841020e5381528ce8a7406702352a45a254bbfd403ba4dca",
+      "locale": "pt",
+      "number": 920,
+      "url": "https://tseng-law.com/pt/columns/taiwan-apartment-ev-charger-common-area-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-pt/921-taiwan-online-game-coins-refund-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/pt/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "1dba99a240d62a669a3d553e192431d7670faa64c0788f079cede63e7af00af6",
+      "locale": "pt",
+      "number": 921,
+      "url": "https://tseng-law.com/pt/columns/taiwan-online-game-coins-refund-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ru/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ru/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "0d332f323ff63eb0bd79fb3b02383499f23bc5375c17a8177ef637f567d1e50b",
+      "locale": "ru",
+      "number": 915,
+      "url": "https://tseng-law.com/ru/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ru/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ru/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "a5e367a361efa6bc898ce8a47d7bd47d9cc25e62cc6a094ee37adf6ebd310b00",
+      "locale": "ru",
+      "number": 916,
+      "url": "https://tseng-law.com/ru/columns/taiwan-parent-company-pollution-liability-us-investor",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ru/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ru/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "63ac4498dccfa6d3027dc7b91b180a8a8ada6e7dc885340cfe09a25928143862",
+      "locale": "ru",
+      "number": 918,
+      "url": "https://tseng-law.com/ru/columns/taiwan-presale-mortgage-notice-handover-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ru/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ru/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "548b8ca01b038849253985b6acaacd427b9791f19a1dd034a4a0af0684271906",
+      "locale": "ru",
+      "number": 919,
+      "url": "https://tseng-law.com/ru/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ru/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ru/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "0245e109b5976dce38bd36c60235aa90cd2a3acdadebd87ab8887f4d11e01435",
+      "locale": "ru",
+      "number": 920,
+      "url": "https://tseng-law.com/ru/columns/taiwan-apartment-ev-charger-common-area-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ru/921-taiwan-online-game-coins-refund-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ru/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "cd67ec2c2e63c22704b7f0c2a210ff6cfe5a4209898bbd578802af30b770e4a4",
+      "locale": "ru",
+      "number": 921,
+      "url": "https://tseng-law.com/ru/columns/taiwan-online-game-coins-refund-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-sk/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/sk/704-taiwan-arc-first-application.md",
+      "sha256": "cf1c7cce578f38ca8e87f4b2752db321ae7fba6238ba5f385f152fe20494780a",
+      "locale": "sk",
+      "number": 704,
+      "url": "https://tseng-law.com/sk/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-sk/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/sk/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "0cdf2213d780c4db78c221c34ed53460c0ff758eaa595e8c211de2fc1ef23507",
+      "locale": "sk",
+      "number": 705,
+      "url": "https://tseng-law.com/sk/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-sk/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/sk/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "3f6a81b43fc2c0ca65fa592e9632eef7e1f9d51545228596b3b658c6dc91170d",
+      "locale": "sk",
+      "number": 706,
+      "url": "https://tseng-law.com/sk/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-sl/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/sl/704-taiwan-arc-first-application.md",
+      "sha256": "a87a3ac1137b0012120a56629dccc0e0d64dcbb55a2e2a6110e2be213cde6bd6",
+      "locale": "sl",
+      "number": 704,
+      "url": "https://tseng-law.com/sl/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/sl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "90d5e07a124a7b1c6aeb46a5be8293a44007a58f6e2dad2593c96b1067834932",
+      "locale": "sl",
+      "number": 705,
+      "url": "https://tseng-law.com/sl/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d5b7581f6dcff33cdcb5b65e1b46bd0654e050acb94434bbdaab68222c0aca5b",
+      "locale": "sl",
+      "number": 706,
+      "url": "https://tseng-law.com/sl/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-sr/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/sr/704-taiwan-arc-first-application.md",
+      "sha256": "15229f8e599464d507976f6d91818d441c6a1c8be1448af31f79fd79b8730dac",
+      "locale": "sr",
+      "number": 704,
+      "url": "https://tseng-law.com/sr/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/sr/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "9057c2a83ef6e71ab6f576702943fdf604ae345b627b94d98986baf4a6b7d6b2",
+      "locale": "sr",
+      "number": 705,
+      "url": "https://tseng-law.com/sr/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/sr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1e5a3547ce8437f9ddb4f3a3b61dd62261a4a1dccaa63683d43d9692b73331d9",
+      "locale": "sr",
+      "number": 706,
+      "url": "https://tseng-law.com/sr/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ta/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ta/704-taiwan-arc-first-application.md",
+      "sha256": "43281f25b19a64781a4780aaea55de66faf9188507141e04566e20ef064a51c9",
+      "locale": "ta",
+      "number": 704,
+      "url": "https://tseng-law.com/ta/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ta/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ta/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "ee53660f0cab0a61b271d739f9f9b2d8b0a2f9d95601d2987a78c4b67c8f5758",
+      "locale": "ta",
+      "number": 705,
+      "url": "https://tseng-law.com/ta/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ta/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ta/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "e56fb228bfbba836b2ad8e50879b4ca14c46ea6453feb6405dbe069983c4fe33",
+      "locale": "ta",
+      "number": 706,
+      "url": "https://tseng-law.com/ta/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ur/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ur/704-taiwan-arc-first-application.md",
+      "sha256": "6e92ef71f4728e0194d91c50fb4caa2e2abd191b2bed781deb73453854a5d8e3",
+      "locale": "ur",
+      "number": 704,
+      "url": "https://tseng-law.com/ur/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ur/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ur/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "02a1b2eb83419a9864cfd86cf1ced163ac619cd25922c27e73f978de3b82857c",
+      "locale": "ur",
+      "number": 705,
+      "url": "https://tseng-law.com/ur/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ur/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ur/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "51899903b1df3c9dd1a2b94b5e8cbf97cbdc7189e9db35a6624318ab5feb599a",
+      "locale": "ur",
+      "number": 706,
+      "url": "https://tseng-law.com/ur/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-de/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/de/704-taiwan-arc-first-application.md",
+      "sha256": "e4088a2d7a48a32b0f63c7642fc4557e537c7db6d840daa69dec09329d200ce2",
+      "locale": "de",
+      "number": 704,
+      "url": "https://tseng-law.com/de/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-fil/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/fil/704-taiwan-arc-first-application.md",
+      "sha256": "bb7ff2f040c525204e62d406cb52df6d43a6a1f8d61916f4c415b97a42134438",
+      "locale": "fil",
+      "number": 704,
+      "url": "https://tseng-law.com/fil/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ms/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ms/704-taiwan-arc-first-application.md",
+      "sha256": "3dc7d4bc504efd07e4aa9c0fde7f1db666d26f9516a985ec95c537b6111927b7",
+      "locale": "ms",
+      "number": 704,
+      "url": "https://tseng-law.com/ms/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-nl/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/nl/704-taiwan-arc-first-application.md",
+      "sha256": "9afd04adb2dd9c2a57e898c991b4642a71a7c83df3cd7016efe7e704c96d1483",
+      "locale": "nl",
+      "number": 704,
+      "url": "https://tseng-law.com/nl/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/zh-hant/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "locale": "zh-hant",
+      "number": 918,
+      "url": "https://tseng-law.com/zh-hant/columns/taiwan-presale-mortgage-notice-handover-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/zh-hant/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "locale": "zh-hant",
+      "number": 920,
+      "url": "https://tseng-law.com/zh-hant/columns/taiwan-apartment-ev-charger-common-area-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/zh-hant/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "locale": "zh-hant",
+      "number": 921,
+      "url": "https://tseng-law.com/zh-hant/columns/taiwan-online-game-coins-refund-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ar/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ar/704-taiwan-arc-first-application.md",
+      "sha256": "a64f7b405783b22383a7df3e87e76a21d41307a920c6f1b9a8ee67da484ab81d",
+      "locale": "ar",
+      "number": 704,
+      "url": "https://tseng-law.com/ar/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ar/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ar/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "66ebe0430f90227014ed2a37420220090b889a53e87728adfecfaf6e2d6f01eb",
+      "locale": "ar",
+      "number": 705,
+      "url": "https://tseng-law.com/ar/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ar/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ar/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "253c199800eac1461ab48026679388c9d46c37939e0872cf84d5e53d4908572a",
+      "locale": "ar",
+      "number": 706,
+      "url": "https://tseng-law.com/ar/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-cs/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/cs/704-taiwan-arc-first-application.md",
+      "sha256": "b04287c15c9dc9eedbfd0e2ac81108bf68fffbeb2ee85cfc985b51bb5e628f94",
+      "locale": "cs",
+      "number": 704,
+      "url": "https://tseng-law.com/cs/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-cs/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/cs/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "357362b8ce38bb4d12766b2e2893ac9497ea722c3ac571d5ec5e80f3556add0b",
+      "locale": "cs",
+      "number": 705,
+      "url": "https://tseng-law.com/cs/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-cs/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/cs/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "502b0a214d07abc2d721fccd6258ee95805375edf05f63066e31910a8848ac22",
+      "locale": "cs",
+      "number": 706,
+      "url": "https://tseng-law.com/cs/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-da/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/da/704-taiwan-arc-first-application.md",
+      "sha256": "c94d3cddab3ab1a3707449cf98e251392cca9d6b1d640f1603ac16f8c7deac2e",
+      "locale": "da",
+      "number": 704,
+      "url": "https://tseng-law.com/da/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-da/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/da/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "01ca9fe806e56bb377be8374e83c97ed39849f7e7d238e106991bc4026b461e9",
+      "locale": "da",
+      "number": 705,
+      "url": "https://tseng-law.com/da/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-da/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/da/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "97c908a410527c336c7387aa5f153f3fcf2ef58e871ebedbf22f7f020cb512df",
+      "locale": "da",
+      "number": 706,
+      "url": "https://tseng-law.com/da/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-de/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/de/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "038cbed98651ea9aa67796a82e4a83d449c843542fe96fbabbaeb0848f693265",
+      "locale": "de",
+      "number": 705,
+      "url": "https://tseng-law.com/de/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-de/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/de/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "7dc7053950479519253179c3fa4c03069a7c8c3f8d7c42b0c43d7c61e9587a2b",
+      "locale": "de",
+      "number": 706,
+      "url": "https://tseng-law.com/de/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-en/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/en/704-taiwan-arc-first-application.md",
+      "sha256": "610343da1255e2e873956c6de54bd0f9c72c6731aae9343bd7bae9884efdd39f",
+      "locale": "en",
+      "number": 704,
+      "url": "https://tseng-law.com/en/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-en/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/en/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "87a4ab6e9a5e8b434a30de0dc111307fc58e878a7534cef793e2a3e27be38304",
+      "locale": "en",
+      "number": 705,
+      "url": "https://tseng-law.com/en/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-en/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/en/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1ecf6acc92d181afb2820bb001d4e4d45cc4eeca823d2e32def25faebe119d71",
+      "locale": "en",
+      "number": 706,
+      "url": "https://tseng-law.com/en/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "locale": "en",
+      "number": 915,
+      "url": "https://tseng-law.com/en/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "locale": "en",
+      "number": 916,
+      "url": "https://tseng-law.com/en/columns/taiwan-parent-company-pollution-liability-us-investor",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-es/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/es/704-taiwan-arc-first-application.md",
+      "sha256": "f2723eedf735414413c04515279ab4bcf80beb291477bd2662c6d28ba5bc54a5",
+      "locale": "es",
+      "number": 704,
+      "url": "https://tseng-law.com/es/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-es/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/es/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "d48d1bce4587347d61ed90f73ba5995772f8bb358f37b4cdb0e3b771c8a21bc5",
+      "locale": "es",
+      "number": 705,
+      "url": "https://tseng-law.com/es/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-es/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/es/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "2b2135ac4907f2080582a2ad903f08f4b5cb29dd64b89622fdc81922e7096182",
+      "locale": "es",
+      "number": 706,
+      "url": "https://tseng-law.com/es/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-fi/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/fi/704-taiwan-arc-first-application.md",
+      "sha256": "ab3d0231a3f1bf8c22c7bf22ef48142b9d2e9eb72d0e422082bec6fb076b395d",
+      "locale": "fi",
+      "number": 704,
+      "url": "https://tseng-law.com/fi/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-fi/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/fi/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "c7f7d229342f780b467d09fc794f7c350dc61a65f7a11ad2b6d2f29fd0152efd",
+      "locale": "fi",
+      "number": 705,
+      "url": "https://tseng-law.com/fi/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-fi/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/fi/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "9d8378231e7c024bfa49689cada7a7406837b5afed540fab217bd99f0e5a97ea",
+      "locale": "fi",
+      "number": 706,
+      "url": "https://tseng-law.com/fi/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-fil/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/fil/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "b3d5a3132b260ef14653bab7ea8e40ce303817b76365d22d29c2df62fc93e70e",
+      "locale": "fil",
+      "number": 705,
+      "url": "https://tseng-law.com/fil/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-fil/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/fil/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "8efd98ba2187a676ad7965d9b5d9281897522599b54f4795ba29fa621426ffae",
+      "locale": "fil",
+      "number": 706,
+      "url": "https://tseng-law.com/fil/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-fr/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/fr/704-taiwan-arc-first-application.md",
+      "sha256": "b15d77af3ae7d7fa8ec3a39af881833f537ad2cf72351d54dc1ab2b7251e9896",
+      "locale": "fr",
+      "number": 704,
+      "url": "https://tseng-law.com/fr/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-fr/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/fr/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "b194fad64058a6ef06afd15e8b07da3d1b9175dfdb8ffeb8746606ed53b3ec60",
+      "locale": "fr",
+      "number": 705,
+      "url": "https://tseng-law.com/fr/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-fr/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/fr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "a8b9da8fccc6d312e5830fb463e52d4a8316e72d189b85d30af7f3b8fbb73243",
+      "locale": "fr",
+      "number": 706,
+      "url": "https://tseng-law.com/fr/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hi/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hi/704-taiwan-arc-first-application.md",
+      "sha256": "e9c117570460078783e5f344943bcaebdb76db72fc8a94b150068ca45a58a77d",
+      "locale": "hi",
+      "number": 704,
+      "url": "https://tseng-law.com/hi/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hi/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hi/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "282eeaee9aabf69a8eafea04af003bd6bf84732a10b9e7d4e4aef152d0addb8d",
+      "locale": "hi",
+      "number": 705,
+      "url": "https://tseng-law.com/hi/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-hi/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/hi/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "32e0945e62394a3c8d5998492e86d632eb30cff9b34ffabcb87a9543235b6a91",
+      "locale": "hi",
+      "number": 706,
+      "url": "https://tseng-law.com/hi/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-id/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/id/704-taiwan-arc-first-application.md",
+      "sha256": "0f6eb5fa439f2fd28d3a4d71837cbe94ee8cc0dc17cb53eff6e064d05a69f8e4",
+      "locale": "id",
+      "number": 704,
+      "url": "https://tseng-law.com/id/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-id/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/id/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "f5403aaf015974377db2c7fa123bf85f372d94ca3e95ed65772b01d8a6173a80",
+      "locale": "id",
+      "number": 705,
+      "url": "https://tseng-law.com/id/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-id/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/id/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "97f52339f99267e005a32b322178804a1438bc038e611b0ca4891cf8d87e03d6",
+      "locale": "id",
+      "number": 706,
+      "url": "https://tseng-law.com/id/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-it/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/it/704-taiwan-arc-first-application.md",
+      "sha256": "ff49591c9d161b0143992f7c4f4a490baaa027ee84d00f61ea0e178fa567d092",
+      "locale": "it",
+      "number": 704,
+      "url": "https://tseng-law.com/it/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-it/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/it/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "785ab58116dffcd557112b47517ff7efab0e19101e84e90e0ac678a003f9ba31",
+      "locale": "it",
+      "number": 705,
+      "url": "https://tseng-law.com/it/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-it/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/it/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "0d106a8c5122f4fb97f5c4fab30ae766bd9262323e68460c5da001273781d0b3",
+      "locale": "it",
+      "number": 706,
+      "url": "https://tseng-law.com/it/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ja/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ja/704-taiwan-arc-first-application.md",
+      "sha256": "b7bb06673c3ea5802ab425b8121ddee47af31120ec7ac0a2acf3618bfa8c8b70",
+      "locale": "ja",
+      "number": 704,
+      "url": "https://tseng-law.com/ja/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ja/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ja/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "27e370a2b42dcb27618f4d155656730a43183c30150b6e4dbce0776f228fd0b6",
+      "locale": "ja",
+      "number": 705,
+      "url": "https://tseng-law.com/ja/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ja/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ja/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "9f4f5f18da7d2e844260075fe2dda906bf1b28a049699f690cf41c489c30f8fe",
+      "locale": "ja",
+      "number": 706,
+      "url": "https://tseng-law.com/ja/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ms/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ms/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "ed821ce519c4fe273addbc34381bcdc5b9ce7c40e0710924a6d0d042d12c877a",
+      "locale": "ms",
+      "number": 705,
+      "url": "https://tseng-law.com/ms/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ms/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ms/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "a63acbaa0fe59bc7bcffc6a3b537a28222b07c5659bcb44c41be84cff97e8cd1",
+      "locale": "ms",
+      "number": 706,
+      "url": "https://tseng-law.com/ms/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-nb/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/nb/704-taiwan-arc-first-application.md",
+      "sha256": "cba566d0784ea956b38847832ce22be370c76831194873328c900de2858c5340",
+      "locale": "nb",
+      "number": 704,
+      "url": "https://tseng-law.com/nb/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-nb/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/nb/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "cc836d5c7d11066b328cad6c725334a596e1463d1af290af0779b6575e1f6b88",
+      "locale": "nb",
+      "number": 705,
+      "url": "https://tseng-law.com/nb/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-nb/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/nb/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "2c39c9657f8f8d704afbeb4b7640bd5faaf63debb0384a546966652128bbbea1",
+      "locale": "nb",
+      "number": 706,
+      "url": "https://tseng-law.com/nb/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-nl/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/nl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "a38063b5a16d9f5b4d44b0a5c1fffdb8b6b3c1de7ca8ab178966a1213135bae7",
+      "locale": "nl",
+      "number": 705,
+      "url": "https://tseng-law.com/nl/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-nl/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/nl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "788fcd4f71b5b453c921edb514b48ebe678ca123d9bfac90482b269968b0c37d",
+      "locale": "nl",
+      "number": 706,
+      "url": "https://tseng-law.com/nl/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-pl/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/pl/704-taiwan-arc-first-application.md",
+      "sha256": "67c353609d8fb1b2de6db627c0f6e2d1ce6563714261229251d8bfeba6051011",
+      "locale": "pl",
+      "number": 704,
+      "url": "https://tseng-law.com/pl/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-pl/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/pl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "ec5f086868aaf4409f55f4ed2aec3cccbe65fcb74b66213e133b55b171924f95",
+      "locale": "pl",
+      "number": 705,
+      "url": "https://tseng-law.com/pl/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-pl/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/pl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1e6671e104c15ff573fb69434280258c57583e77d3a30f999da38d63d2e038bc",
+      "locale": "pl",
+      "number": 706,
+      "url": "https://tseng-law.com/pl/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-pt/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/pt/704-taiwan-arc-first-application.md",
+      "sha256": "8aa828c67ccc8c9ffed1946592e0660bd03e36d4bce4744835a31f7672fa702d",
+      "locale": "pt",
+      "number": 704,
+      "url": "https://tseng-law.com/pt/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-pt/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/pt/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "8935d8bab66031ecfd5c6b01db002fecc8d78e22713365c52214adaaa594c359",
+      "locale": "pt",
+      "number": 705,
+      "url": "https://tseng-law.com/pt/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-pt/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/pt/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "6cd3d32cdbe24fa0a74f506cf17198f925d9780e769ad4ac3bf6331212d056f3",
+      "locale": "pt",
+      "number": 706,
+      "url": "https://tseng-law.com/pt/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ro/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ro/704-taiwan-arc-first-application.md",
+      "sha256": "15d32900d2bf701fc6b9900d0f8e4cfce447495629d9b658e6d1973a69374b4b",
+      "locale": "ro",
+      "number": 704,
+      "url": "https://tseng-law.com/ro/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ro/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ro/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "3e999c705f6a2cfca52dc7eea0453b9515e1e1d2bd2ccdb216b76594f2720230",
+      "locale": "ro",
+      "number": 705,
+      "url": "https://tseng-law.com/ro/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ro/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ro/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1d39394a43fb41b390ff7483caca02d0bcbfa2cb8eb8b8664bb0a5bc04a3d635",
+      "locale": "ro",
+      "number": 706,
+      "url": "https://tseng-law.com/ro/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ru/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ru/704-taiwan-arc-first-application.md",
+      "sha256": "ab1ee7e62195d68ae6042a3ca8746ec910543fb3b321f3fd62978954a8a6e71a",
+      "locale": "ru",
+      "number": 704,
+      "url": "https://tseng-law.com/ru/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ru/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ru/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "7cb92723448d3558487e297b6b89f62d3ab52955fac77bdfd651a80d49d33cdb",
+      "locale": "ru",
+      "number": 705,
+      "url": "https://tseng-law.com/ru/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-ru/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ru/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "b9caf2c6328c7d328f376f9cecdaef142e265fa451a49a5c370edf2f177ffe28",
+      "locale": "ru",
+      "number": 706,
+      "url": "https://tseng-law.com/ru/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-sv/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/sv/704-taiwan-arc-first-application.md",
+      "sha256": "367126180229208d662621ab42add0ad7498ba8496abf4f188f76e70d0b3f569",
+      "locale": "sv",
+      "number": 704,
+      "url": "https://tseng-law.com/sv/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-sv/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/sv/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "ed8011bbf7d82dc23c5136c026111c3da76f96478344e6fc0835abaa2ca37204",
+      "locale": "sv",
+      "number": 705,
+      "url": "https://tseng-law.com/sv/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-sv/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/sv/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "54420eac11065722ae23083e98432813f9ffd50d82491bbbf78d33c8bb7ebe1c",
+      "locale": "sv",
+      "number": 706,
+      "url": "https://tseng-law.com/sv/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-th/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/th/704-taiwan-arc-first-application.md",
+      "sha256": "f4ab018ecbdd93c7cea7f67cb0559f575e7ddf45f884bf046ec21c35c76e1829",
+      "locale": "th",
+      "number": 704,
+      "url": "https://tseng-law.com/th/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-th/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/th/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "9443904b8750edfef5742c0bcccc984a1bc5ea883c2a016dbccff7233a10454b",
+      "locale": "th",
+      "number": 705,
+      "url": "https://tseng-law.com/th/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-th/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/th/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "03d0a97e50d4375236152c7701db93ae283f72f910ce94a617a51e5808e65c0b",
+      "locale": "th",
+      "number": 706,
+      "url": "https://tseng-law.com/th/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-tr/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/tr/704-taiwan-arc-first-application.md",
+      "sha256": "eae17b5cd8d03c42697698a996d5566d016c04070716da27655cd365be1e0d8a",
+      "locale": "tr",
+      "number": 704,
+      "url": "https://tseng-law.com/tr/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-tr/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/tr/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "3310f47c1ef54d7e6567af7d5dcbdb49318148fbfee47d71e18746d821f2d2d0",
+      "locale": "tr",
+      "number": 705,
+      "url": "https://tseng-law.com/tr/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-tr/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/tr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "cf143d1db6bf28bc9771ec0bf6e5a505b112bcf00779b0b0e901c3cada6901fb",
+      "locale": "tr",
+      "number": 706,
+      "url": "https://tseng-law.com/tr/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-uk/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/uk/704-taiwan-arc-first-application.md",
+      "sha256": "156224482a5736b90a79065ed084595670658b38da6aee89fef3c01c156d6923",
+      "locale": "uk",
+      "number": 704,
+      "url": "https://tseng-law.com/uk/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-uk/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/uk/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "fc253fc88cb05ea4d2cc01d1078c14587e69795b553d9d31e066493148437c68",
+      "locale": "uk",
+      "number": 705,
+      "url": "https://tseng-law.com/uk/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-uk/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/uk/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "cd1274eb20514808ef3c21d3c7c7313fe92ab989f54d31dc32372fbbb7edf7b5",
+      "locale": "uk",
+      "number": 706,
+      "url": "https://tseng-law.com/uk/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-vi/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/vi/704-taiwan-arc-first-application.md",
+      "sha256": "61b01a8bf30e4d997fd70bab01128859ced94e39ff59da4356a0eddee9485bd5",
+      "locale": "vi",
+      "number": 704,
+      "url": "https://tseng-law.com/vi/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-vi/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/vi/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "1d7177dde3e0375593d14c441a3a527c74d6e9a2836340a69a805b9e0f3b092d",
+      "locale": "vi",
+      "number": 705,
+      "url": "https://tseng-law.com/vi/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-vi/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/vi/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "08574be203883e7945b11f2e55206a69f56033dd608430745cf368d889b774ea",
+      "locale": "vi",
+      "number": 706,
+      "url": "https://tseng-law.com/vi/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-zh-hans/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/zh-hans/704-taiwan-arc-first-application.md",
+      "sha256": "bc621dfb4edc8838994318847fa914dc48e2f33512d5406aa1c2d8c06384b7f0",
+      "locale": "zh-hans",
+      "number": 704,
+      "url": "https://tseng-law.com/zh-hans/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-zh-hans/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/zh-hans/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "59b439ddf643b0c46b36672a5844bcb0aee8f5f1b155e263fac762959da4ccf2",
+      "locale": "zh-hans",
+      "number": 705,
+      "url": "https://tseng-law.com/zh-hans/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-zh-hans/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/zh-hans/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "fe7738b6f822c3b1dc28508e43fb4df3c073fcdc8be6a5f70cadf98cce7d2d19",
+      "locale": "zh-hans",
+      "number": 706,
+      "url": "https://tseng-law.com/zh-hans/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-zh/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/zh-hant/704-taiwan-arc-first-application.md",
+      "sha256": "0c00bc06bf3c3c1860a95af4dbcea9eaab981300860916856295e8b947244468",
+      "locale": "zh-hant",
+      "number": 704,
+      "url": "https://tseng-law.com/zh-hant/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-zh/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/zh-hant/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "290a50047632ad830ea98c524ffef6ed91c2b4c8d555a1844689824c3ffea7a3",
+      "locale": "zh-hant",
+      "number": 705,
+      "url": "https://tseng-law.com/zh-hant/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-zh/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/zh-hant/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4d70e78b9a197f4a2b81d25d61b6fa862ee849a6392d5fd905e90bcf781e721c",
+      "locale": "zh-hant",
+      "number": 706,
+      "url": "https://tseng-law.com/zh-hant/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/zh-hant/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "locale": "zh-hant",
+      "number": 919,
+      "url": "https://tseng-law.com/zh-hant/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns/704-taiwan-arc-first-application.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ko/704-taiwan-arc-first-application.md",
+      "sha256": "cbf6b07b2d41c3b136ceac099f8d32152ca125c18478321610ffa715c29476a1",
+      "locale": "ko",
+      "number": 704,
+      "url": "https://tseng-law.com/ko/columns/taiwan-arc-first-application",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns/705-taiwan-visa-residence-work-study-family.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ko/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "727377648fcc7e2bd1d8ea8202bea5fb69f01174ce51a0ee422891126011d54a",
+      "locale": "ko",
+      "number": 705,
+      "url": "https://tseng-law.com/ko/columns/taiwan-visa-residence-work-study-family",
+      "status": 200
+    },
+    {
+      "sourcePath": "src/content/columns/706-taiwan-arc-renewal-changes-reentry.md",
+      "snapshot": "bindings/f66daa9f153537c000d23486e8be638472251012/sources/ko/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "4cd612086336cb1a3720111390ce7aca3f4eff5c7f96c5e92aea001fa7b8cfbc",
+      "locale": "ko",
+      "number": 706,
+      "url": "https://tseng-law.com/ko/columns/taiwan-arc-renewal-changes-reentry",
+      "status": 200
+    }
+  ]
+}

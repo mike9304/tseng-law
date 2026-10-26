@@ -1,0 +1,41 @@
+{
+  "reviewedAtUTC": "2026-10-26T07:18:37.029104+00:00",
+  "method": "Assistant directly viewed seven unmodified captured PNGs via view_image; not a human/native review",
+  "screenshots": [
+    {
+      "file": "browser/browser-screenshots/mobile-ar-921-hero.png",
+      "sha256": "7ee46daf8d02e8d81d0d74779700b500d562db0ee3cbb27ead7a28a47d2f5dc6",
+      "observation": "Arabic title/date and article body, game image and localized fictional caption visibly rendered; number 243,548 and Chinese case identifier remain present. No clipped title or blank hero observed."
+    },
+    {
+      "file": "browser/browser-screenshots/mobile-ar-921-rtl-table.png",
+      "sha256": "0d10dfe4a1045ffccf7d085edea63b573688c4fd1defcbd2bac7e2648337fde7",
+      "observation": "RTL two-column table is inside viewport and body lines remain readable. Shared horizontal-scroll helper is visibly English; this is an unresolved interface localization limitation."
+    },
+    {
+      "file": "browser/browser-screenshots/mobile-he-706-rtl-table.png",
+      "sha256": "67238eabe998e358f8da5586eebb2c484c4a32ccd756697980317140dbef0774",
+      "observation": "Hebrew RTL table, ARC/NIA/BOCA identifiers and durations visibly render within the viewport. The shared horizontal-scroll helper is also English."
+    },
+    {
+      "file": "browser/browser-screenshots/mobile-he-706-rtl-identifier.png",
+      "sha256": "587e09afea7dc2cbc3ecb1d0f7fd7765aacbcb386b19ef29dc532c6745c9ad7f",
+      "observation": "Hebrew body includes 23-1, 30 and 15 with NIA/BOCA in context; text wraps and the document has no horizontal clipping in this capture. This is visual observation, not a native Hebrew legal-language certification."
+    },
+    {
+      "file": "browser/browser-screenshots/mobile-km-704-body.png",
+      "sha256": "8996a2e6a7c259c968e0708af82ca1b7f61973b61ee9af454dcda344bb76b5b8",
+      "observation": "Khmer title, date, fictional caption and first body paragraphs render with visible Khmer glyphs and linked Article22; no missing-glyph boxes or horizontal clipping observed in this capture."
+    },
+    {
+      "file": "browser/browser-screenshots/mobile-hi-919-body.png",
+      "sha256": "6fadd83d4d1851117c4a6cf8724b8f4a3bf4f55a3f5ab295e700e0303aa2d64c",
+      "observation": "Hindi title, date, fictional caption and initial paragraphs visibly render with case identifier and image; no missing-glyph boxes or horizontal clipping observed in this capture."
+    },
+    {
+      "file": "browser/browser-screenshots/mobile-zh-hant-918-expanded-list.png",
+      "sha256": "51e1fa1b3b328009d54d79e0a3b1cba7423a9be0509dd9684cb367b16e6da0fe",
+      "observation": "After the real list expansion click, the localized ZH918 card and link are visible. Card image areas show the existing gray-gradient placeholder; article hero visibility was separately checked by the article harness. No claim is made that every listing thumbnail loaded."
+    }
+  ]
+}

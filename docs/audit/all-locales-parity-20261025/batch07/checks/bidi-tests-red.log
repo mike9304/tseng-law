@@ -1,0 +1,110 @@
+
+ RUN  v3.2.6 /Users/son7/Projects/tseng-law-all-locales-20261025
+
+ ❯ |unit| src/components/__tests__/column-legal-identifiers-bidi.test.tsx (12 tests | 5 failed) 19ms
+   × direction of linked legal article identifiers > isolates مادهٔ ۸۵-۱ without changing the linked text 10ms
+     → expected '<div class="column-markdown" data-col…' to contain '<bdi dir="ltr">۸۵-۱</bdi>'
+   × direction of linked legal article identifiers > isolates مادهٔ ۲۲-۲ without changing the linked text 1ms
+     → expected '<div class="column-markdown" data-col…' to contain '<bdi dir="ltr">۲۲-۲</bdi>'
+   × direction of linked legal article identifiers > isolates المادة ٨٥-١ without changing the linked text 1ms
+     → expected '<div class="column-markdown" data-col…' to contain '<bdi dir="ltr">٨٥-١</bdi>'
+   × direction of linked legal article identifiers > isolates סעיף 23-1 without changing the linked text 2ms
+     → expected '<div class="column-markdown" data-col…' to contain '<bdi dir="ltr">23-1</bdi>'
+   × direction of linked legal article identifiers > keeps formatting around a linked identifier 1ms
+     → expected '<div class="column-markdown" data-col…' to contain '<em><bdi dir="ltr">۸۵-۱</bdi></em>'
+   ✓ direction of linked legal article identifiers > does not reinterpret an unrelated range or different article: [بازهٔ ۸۵-۱](https://example.com/?flno=85-1) 1ms
+   ✓ direction of linked legal article identifiers > does not reinterpret an unrelated range or different article: [بازهٔ ۸۵-۱](https://law.moj.gov.tw/LawClass/LawAll.aspx?flno=85-1) 0ms
+   ✓ direction of linked legal article identifiers > does not reinterpret an unrelated range or different article: [۸۵-۱](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=85) 0ms
+   ✓ direction of linked legal article identifiers > does not reinterpret an unrelated range or different article: [۸۵-۱](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=22-2) 0ms
+   ✓ direction of linked legal article identifiers > does not reinterpret an unrelated range or different article: [۱۸۵-۱](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=85-1) 0ms
+   ✓ direction of linked legal article identifiers > does not reinterpret an unrelated range or different article: [۸۵-۱-۲](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=85-1) 0ms
+   ✓ direction of linked legal article identifiers > does not reinterpret an unrelated range or different article: بازهٔ ۸۵-۱ روز 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit| src/components/__tests__/column-legal-identifiers-bidi.test.tsx > direction of linked legal article identifiers > isolates مادهٔ ۸۵-۱ without changing the linked text
+AssertionError: expected '<div class="column-markdown" data-col…' to contain '<bdi dir="ltr">۸۵-۱</bdi>'
+
+Expected: "<bdi dir="ltr">۸۵-۱</bdi>"
+Received: "<div class="column-markdown" data-column-content="markdown"><p class="blog-paragraph"><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&amp;flno=85-1" target="_blank" rel="noopener noreferrer" class="link-underline">مادهٔ ۸۵-۱</a></p></div>"
+
+ ❯ src/components/__tests__/column-legal-identifiers-bidi.test.tsx:16:18
+     14|     const href = `https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode…
+     15|     const html = renderToStaticMarkup(<ColumnContent content={`[${labe…
+     16|     expect(html).toContain(`<bdi dir="ltr">${identifier}</bdi>`);
+       |                  ^
+     17|     expect(html.replace(/<[^>]+>/g, '')).toBe(label);
+     18|     expect(html).toContain(`href="${href.replace('&', '&amp;')}"`);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  |unit| src/components/__tests__/column-legal-identifiers-bidi.test.tsx > direction of linked legal article identifiers > isolates مادهٔ ۲۲-۲ without changing the linked text
+AssertionError: expected '<div class="column-markdown" data-col…' to contain '<bdi dir="ltr">۲۲-۲</bdi>'
+
+Expected: "<bdi dir="ltr">۲۲-۲</bdi>"
+Received: "<div class="column-markdown" data-column-content="markdown"><p class="blog-paragraph"><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&amp;flno=22-2" target="_blank" rel="noopener noreferrer" class="link-underline">مادهٔ ۲۲-۲</a></p></div>"
+
+ ❯ src/components/__tests__/column-legal-identifiers-bidi.test.tsx:16:18
+     14|     const href = `https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode…
+     15|     const html = renderToStaticMarkup(<ColumnContent content={`[${labe…
+     16|     expect(html).toContain(`<bdi dir="ltr">${identifier}</bdi>`);
+       |                  ^
+     17|     expect(html.replace(/<[^>]+>/g, '')).toBe(label);
+     18|     expect(html).toContain(`href="${href.replace('&', '&amp;')}"`);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  |unit| src/components/__tests__/column-legal-identifiers-bidi.test.tsx > direction of linked legal article identifiers > isolates المادة ٨٥-١ without changing the linked text
+AssertionError: expected '<div class="column-markdown" data-col…' to contain '<bdi dir="ltr">٨٥-١</bdi>'
+
+Expected: "<bdi dir="ltr">٨٥-١</bdi>"
+Received: "<div class="column-markdown" data-column-content="markdown"><p class="blog-paragraph"><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&amp;flno=85-1" target="_blank" rel="noopener noreferrer" class="link-underline">المادة ٨٥-١</a></p></div>"
+
+ ❯ src/components/__tests__/column-legal-identifiers-bidi.test.tsx:16:18
+     14|     const href = `https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode…
+     15|     const html = renderToStaticMarkup(<ColumnContent content={`[${labe…
+     16|     expect(html).toContain(`<bdi dir="ltr">${identifier}</bdi>`);
+       |                  ^
+     17|     expect(html.replace(/<[^>]+>/g, '')).toBe(label);
+     18|     expect(html).toContain(`href="${href.replace('&', '&amp;')}"`);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+
+ FAIL  |unit| src/components/__tests__/column-legal-identifiers-bidi.test.tsx > direction of linked legal article identifiers > isolates סעיף 23-1 without changing the linked text
+AssertionError: expected '<div class="column-markdown" data-col…' to contain '<bdi dir="ltr">23-1</bdi>'
+
+Expected: "<bdi dir="ltr">23-1</bdi>"
+Received: "<div class="column-markdown" data-column-content="markdown"><p class="blog-paragraph"><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&amp;flno=23-1" target="_blank" rel="noopener noreferrer" class="link-underline">סעיף 23-1</a></p></div>"
+
+ ❯ src/components/__tests__/column-legal-identifiers-bidi.test.tsx:16:18
+     14|     const href = `https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode…
+     15|     const html = renderToStaticMarkup(<ColumnContent content={`[${labe…
+     16|     expect(html).toContain(`<bdi dir="ltr">${identifier}</bdi>`);
+       |                  ^
+     17|     expect(html.replace(/<[^>]+>/g, '')).toBe(label);
+     18|     expect(html).toContain(`href="${href.replace('&', '&amp;')}"`);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/5]⎯
+
+ FAIL  |unit| src/components/__tests__/column-legal-identifiers-bidi.test.tsx > direction of linked legal article identifiers > keeps formatting around a linked identifier
+AssertionError: expected '<div class="column-markdown" data-col…' to contain '<em><bdi dir="ltr">۸۵-۱</bdi></em>'
+
+Expected: "<em><bdi dir="ltr">۸۵-۱</bdi></em>"
+Received: "<div class="column-markdown" data-column-content="markdown"><p class="blog-paragraph"><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=85-1" target="_blank" rel="noopener noreferrer" class="link-underline">مادهٔ <em>۸۵-۱</em></a></p></div>"
+
+ ❯ src/components/__tests__/column-legal-identifiers-bidi.test.tsx:23:18
+     21|   it('keeps formatting around a linked identifier', () => {
+     22|     const html = renderToStaticMarkup(<ColumnContent content="[مادهٔ *…
+     23|     expect(html).toContain('<em><bdi dir="ltr">۸۵-۱</bdi></em>');
+       |                  ^
+     24|   });
+     25| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/5]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  5 failed | 7 passed (12)
+   Start at  16:46:38
+   Duration  197ms (transform 36ms, setup 5ms, collect 79ms, tests 19ms, environment 0ms, prepare 24ms)
+

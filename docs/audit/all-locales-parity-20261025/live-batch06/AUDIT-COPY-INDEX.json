@@ -1,0 +1,44 @@
+{
+  "atUTC": "2026-10-26T07:55:49.917291+00:00",
+  "copied": [
+    {
+      "path": "REPORT.md",
+      "sha256": "9ccf534c9946d423ff4659103f58bb6376200609eb11cde09af09d435e83e91c",
+      "bytes": 5821
+    },
+    {
+      "path": "public-verification.json",
+      "sha256": "f89b5201085848ecbe54d07e91b072e1d8f4c729a63b9793d580ae675adab00a",
+      "bytes": 108668
+    },
+    {
+      "path": "final-manifest.json",
+      "sha256": "9f5562f1178800829020722b1d2497cf812f6f79be68dc6cf527ca0c68e223d6",
+      "bytes": 208916
+    },
+    {
+      "path": "ROOT-PUBLIC-REVIEW.json",
+      "sha256": "3d6f4afca54876b4944265cfe6fb7779c8738cda7ce36f956423e52a4f65cd2f",
+      "bytes": 3775
+    },
+    {
+      "path": "browser/visual-review.json",
+      "sha256": "c7269023945aeb55fc46b94a0b29037e43f34456856451a75f5970bf63366326",
+      "bytes": 2922
+    },
+    {
+      "path": "browser/execution.json",
+      "sha256": "39b6399504685b7c39e91fb86b51d432f5fc8452620e2b085dec06fdc672a2f0",
+      "bytes": 619
+    },
+    {
+      "path": "browser/results-f66daa9f.json",
+      "sha256": "a4d087e265c2973a75451f29211153eafdc83adf135b4f040a0fe82b07c60d46",
+      "bytes": 3976458
+    }
+  ],
+  "fullEvidenceRetainedAt": "/Users/son7/tseng-all-language-columns-20261025/live-batch06",
+  "fullEvidenceManifestFiles": 926,
+  "rootVerifiedSourceSnapshotsAgainstPublicGit": 195,
+  "rawScreenshotsHTTPAndInitialFailuresPreserved": true
+}

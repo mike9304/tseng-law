@@ -1,0 +1,80 @@
+diff --git a/src/components/ColumnContent.tsx b/src/components/ColumnContent.tsx
+index 79ba210f5..8af471458 100644
+--- a/src/components/ColumnContent.tsx
++++ b/src/components/ColumnContent.tsx
+@@ -2,6 +2,7 @@
+ 
+ import {
+   Children,
++  cloneElement,
+   isValidElement,
+   type ReactNode,
+ } from 'react';
+@@ -65,6 +66,48 @@ function getNodeText(node: ReactNode): string {
+   return '';
+ }
+ 
++function asciiArticleDigits(value: string): string {
++  return value.replace(/[٠-٩۰-۹]/g, (digit) => String(
++    digit.charCodeAt(0) - (digit >= '۰' ? 0x06f0 : 0x0660),
++  ));
++}
++
++/** Legal IDs keep their group order even inside an RTL sentence. */
++function isolateLinkedArticleNumber(href: string, children: ReactNode): ReactNode {
++  let article: string | undefined;
++  try {
++    const url = new URL(href);
++    if (url.origin !== 'https://law.moj.gov.tw') return children;
++    if (/^\/(?:ENG\/)?LawClass\/LawSingle\.aspx$/.test(url.pathname)) {
++      article = url.searchParams.get('flno') ?? undefined;
++    } else if (/^\/(?:ENG\/)?LawClass\/LawAll\.aspx$/.test(url.pathname)) {
++      // Whole-law links have no flno; only an explicit Persian article label
++      // identifies this as an article number, rather than an ordinary range.
++      const label = getNodeText(children);
++      const match = label.match(/(?:^|[\s،])ماده[\u064b-\u065f]*\s+([0-9٠-٩۰-۹]+(?:-[0-9٠-٩۰-۹]+)+)/u);
++      article = match ? asciiArticleDigits(match[1]) : undefined;
++    }
++  } catch {
++    return children;
++  }
++  if (!article || !/^\d+(?:-\d+)+$/.test(article)) return children;
++
++  const isolate = (nodes: ReactNode): ReactNode => Children.map(nodes, (node) => {
++    if (typeof node === 'string') {
++      return node.split(/([0-9٠-٩۰-۹]+(?:-[0-9٠-٩۰-۹]+)+)/u).map((part, index) => (
++        asciiArticleDigits(part) === article
++          ? <bdi key={index} dir="ltr">{part}</bdi>
++          : part
++      ));
++    }
++    if (isValidElement<{ children?: ReactNode }>(node) && node.props.children != null) {
++      return cloneElement(node, undefined, isolate(node.props.children));
++    }
++    return node;
++  });
++  return isolate(children);
++}
++
+ /**
+  * Convert only explicit consultation CTAs that point at the current locale's
+  * internal contact route. Ordinary contact-page navigation remains internal.
+@@ -231,15 +274,16 @@ export default function ColumnContent({
+             const resolvedHref = consultationLocale && href === `mailto:${CONSULTATION_EMAIL}`
+               ? getLocalizedConsultationMailto(consultationLocale)
+               : resolveColumnMarkdownLinkHref(href, linkLabel, locale);
++            const linkChildren = isolateLinkedArticleNumber(resolvedHref, children);
+             if (uiLocale === 'vi' && resolvedHref.startsWith('#')) {
+               // Footnote references need their generated IDs and accessible
+               // return labels, and must stay in this article's document.
+               return (
+-                <a href={resolvedHref} id={id} title={title} aria-label={ariaLabel} aria-describedby={ariaDescribedBy} className="link-underline">{children}</a>
++                <a href={resolvedHref} id={id} title={title} aria-label={ariaLabel} aria-describedby={ariaDescribedBy} className="link-underline">{linkChildren}</a>
+               );
+             }
+             return (
+-              <a href={resolvedHref} target="_blank" rel="noopener noreferrer" className="link-underline">{children}</a>
++              <a href={resolvedHref} target="_blank" rel="noopener noreferrer" className="link-underline">{linkChildren}</a>
+             );
+           },
+         }}

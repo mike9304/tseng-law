@@ -1,0 +1,63 @@
+{
+  "atUTC": "2026-10-26T07:47:21.005430+00:00",
+  "publicCommit": "f66daa9f153537c000d23486e8be638472251012",
+  "publicBuiltAt": "2026-10-26T06:42:32.834Z",
+  "verificationWindows": {
+    "httpStartUTC": "2026-10-26T06:59:24.299360+00:00",
+    "httpEndUTC": "2026-10-26T07:00:22.381898+00:00",
+    "browserStartUTC": "2026-10-26T07:06:59.780Z",
+    "browserEndUTC": "2026-10-26T07:08:03.743Z"
+  },
+  "rootReview": "Read complete agent REPORT, verification summary including exceptions, full visual-review observations; verified all926 manifest file SHA and195 source snapshots against immutable public Git commit. Directly opened AR921 RTL table and KM704 body PNGs. AR table fits viewport with English helper remaining; KM glyphs/title/fictional caption/body visible without clipped width. Not fresh legal/native review.",
+  "artifactHashBindingsVerified": 926,
+  "immutableGitSourceBindingsVerified": 195,
+  "newArticleCount": 105,
+  "totalSourceHTTPChecks": 195,
+  "browserCases": 37,
+  "observedLimitations": [
+    "Shared table scroll-helper remains English on inspected AR921 and HE706 screenshots; no claim that all shared interface copy is localized.",
+    "ZH-Hant listing has no optional meta content-language; its html lang, title, canonical and localized cards are verified.",
+    "ZH918 card image area in the expanded-list screenshot is a gray-gradient placeholder. Nine article hero assets passed byte HTTP checks and selected browser images decoded; not every listing thumbnail was verified.",
+    "Browser coverage is 37 selected cases, not a visual review of every one of195articles or every device/browser. All195received full-source HTTP checks.",
+    "No external legal-source endpoint availability sweep, user authentication, contact submission, account data, deployment queue, Air state, or infrastructure change was performed.",
+    "Content identity to the reviewed immutable source is verified; this delivery audit is not a fresh legal or native human certification."
+  ],
+  "strictInitialFailurePreserved": true,
+  "serializerExceptions": {
+    "initialStrictResult": "runs/20261026T065924226319Z/results.json",
+    "sha256": "9a5335ff8e8f069382b17f7dba52a197010e037325009807fec55c584796c00c",
+    "initialPassedFlag": false,
+    "offlineReassessment": "runs/20261026T065924226319Z/results-serializer-reassessed.json",
+    "networkRequestsForReassessment": 0,
+    "emailSerializerCases": 66,
+    "sameCalendarDateUTCSerializationCases": 15,
+    "emailRule": "Same exact recipient and fragment; actual query keys may only be subject/body where source had no query. All non-mailto source hrefs retain exact matching. No email opened/submitted.",
+    "dateRule": "Only exact date or exact date + T00:00:00.000Z qualifies.",
+    "reassessedGlobalFlagRemainsFalse": "Original/reassessment files were not rewritten to hide ZH initial HTML limitation; this combined record closes card discovery using the additional actual browser click."
+  },
+  "newNetworkRequestsByThisReview": 0,
+  "screensViewedByRoot": [
+    "browser/browser-screenshots/mobile-ar-921-rtl-table.png",
+    "browser/browser-screenshots/mobile-km-704-body.png"
+  ],
+  "reports": [
+    {
+      "path": "REPORT.md",
+      "sha256": "9ccf534c9946d423ff4659103f58bb6376200609eb11cde09af09d435e83e91c"
+    },
+    {
+      "path": "public-verification.json",
+      "sha256": "f89b5201085848ecbe54d07e91b072e1d8f4c729a63b9793d580ae675adab00a"
+    },
+    {
+      "path": "final-manifest.json",
+      "sha256": "9f5562f1178800829020722b1d2497cf812f6f79be68dc6cf527ca0c68e223d6"
+    },
+    {
+      "path": "browser/visual-review.json",
+      "sha256": "c7269023945aeb55fc46b94a0b29037e43f34456856451a75f5970bf63366326"
+    }
+  ],
+  "articleDeliveryVerified": true,
+  "all49x286Complete": false
+}

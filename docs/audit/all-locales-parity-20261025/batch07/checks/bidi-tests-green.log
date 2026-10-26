@@ -1,0 +1,12 @@
+
+ RUN  v3.2.6 /Users/son7/Projects/tseng-law-all-locales-20261025
+
+ ✓ |unit| src/components/__tests__/column-markdown-spacers.test.tsx (3 tests) 11ms
+ ✓ |unit| src/components/__tests__/column-legal-identifiers-bidi.test.tsx (14 tests) 15ms
+ ✓ |unit| src/components/__tests__/column-markdown-ranges.test.tsx (2 tests) 7ms
+
+ Test Files  3 passed (3)
+      Tests  19 passed (19)
+   Start at  16:50:12
+   Duration  311ms (transform 43ms, setup 10ms, collect 208ms, tests 34ms, environment 0ms, prepare 71ms)
+

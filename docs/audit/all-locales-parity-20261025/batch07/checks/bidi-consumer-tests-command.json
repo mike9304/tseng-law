@@ -1,0 +1,22 @@
+{
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "src/data/__tests__/wo-x1-en-ja-audience.test.ts",
+    "src/components/builder/columns/__tests__/column-preview-parity.test.ts",
+    "src/components/__tests__/column-content-underline.test.tsx",
+    "src/lib/__tests__/traffic-chain-collision.test.tsx",
+    "src/lib/builder/columns/__tests__/preview-parity.test.ts",
+    "src/components/__tests__/column-toc.test.tsx",
+    "src/lib/__tests__/traffic-starting-entry.test.tsx",
+    "src/components/__tests__/column-content-consultation-links.test.tsx",
+    "src/lib/__tests__/columns-en-family-007.test.ts",
+    "src/lib/__tests__/traffic-stop-dialogue.test.tsx",
+    "src/components/__tests__/column-table-accessibility.test.tsx",
+    "src/lib/__tests__/traffic-diagrams.test.tsx",
+    "src/components/vi-design/__tests__/vi-article-ui.test.tsx",
+    "src/lib/__tests__/columns-ja-family-007.test.ts"
+  ],
+  "exitCode": 0
+}

@@ -1,0 +1,146 @@
+{
+  "atUTC": "2026-10-26T08:13:45.775021+00:00",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "3ba7ba24c0ec9c31fbfb1b0686032d33c305488acb64d55bb9d1c0f104841f3d",
+      "matchesExpectedAfter": true,
+      "reverseExact": true,
+      "beforeSHA256": "3ba7ba24c0ec9c31fbfb1b0686032d33c305488acb64d55bb9d1c0f104841f3d",
+      "URLSequenceUnchanged": true,
+      "numericTokenSequenceUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "0f51ecead9b78fa3a51ac4cfc6fea0a828fe24910fb69385cb37dc7e82c8d0db",
+      "matchesExpectedAfter": true,
+      "reverseExact": true,
+      "beforeSHA256": "03d2248e93f7bad97d76e622f07575eaaafc2b555641ab68b80a0cdf76e3f5cd",
+      "URLSequenceUnchanged": true,
+      "numericTokenSequenceUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "2661e4c6163d28b727805c018a62516b9060dfda396ad86c7b30f4c631460af5",
+      "matchesExpectedAfter": true,
+      "reverseExact": true,
+      "beforeSHA256": "3de83250611c1f1071803fb141c650446c65163ce32a06125485aa27e99b6c60",
+      "URLSequenceUnchanged": true,
+      "numericTokenSequenceUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "09bab5c57eea037bd207f536090989cd76ad2e340f654d4ea63d3f3ffeb871ca",
+      "matchesExpectedAfter": true,
+      "reverseExact": true,
+      "beforeSHA256": "09bab5c57eea037bd207f536090989cd76ad2e340f654d4ea63d3f3ffeb871ca",
+      "URLSequenceUnchanged": true,
+      "numericTokenSequenceUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "b4b41ccba00179a1b54b5425964eebd992aff3076ba8646eafe90440ac9d27f8",
+      "matchesExpectedAfter": true,
+      "reverseExact": true,
+      "beforeSHA256": "b4b41ccba00179a1b54b5425964eebd992aff3076ba8646eafe90440ac9d27f8",
+      "URLSequenceUnchanged": true,
+      "numericTokenSequenceUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "bbce5fdff033d02529be025515dba7af17bef00f429ec8bf41bc807873fd5e8b",
+      "matchesExpectedAfter": true,
+      "reverseExact": true,
+      "beforeSHA256": "af57a32c37bce920c808c59c5264a593d07058f10a87f9e1376d436e5e6103c2",
+      "URLSequenceUnchanged": true,
+      "numericTokenSequenceUnchanged": true
+    }
+  ],
+  "preservedRecords": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/is-author.md",
+      "sha256": "06941e50c3ea8d53956362f2ae00b184efb8a5c23a55cf922df7cea1a6eb85cc",
+      "byteUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-final-manifest.json",
+      "sha256": "b8320ebe977eb4b1aa64fb18a403e8c7aecbedf9b68c122b9549aad8d95d87e4",
+      "byteUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/is-independent.md",
+      "sha256": "91fd87ea6dfbcef01d8b1108f7b3f4f6673cc1a2de227fdbd68c76e184841980",
+      "byteUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-independent-final-manifest.json",
+      "sha256": "411f459a7bf9d5deadd71e1a2f80e5a208a58f808cf08bc6388ad7d52fc84e2e",
+      "byteUnchanged": true
+    }
+  ],
+  "boundaries": [
+    {
+      "file": "915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "oldUnits": 41,
+      "newUnits": 41,
+      "delta": [],
+      "unchangedUnits": 41
+    },
+    {
+      "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "oldUnits": 42,
+      "newUnits": 41,
+      "delta": [
+        {
+          "op": "delete",
+          "old": [
+            "Ósvöruð spurning getur staðið opin í yfirferðinni."
+          ],
+          "new": []
+        }
+      ],
+      "unchangedUnits": 41
+    },
+    {
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "oldUnits": 43,
+      "newUnits": 43,
+      "delta": [],
+      "unchangedUnits": 43
+    },
+    {
+      "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "oldUnits": 36,
+      "newUnits": 36,
+      "delta": [],
+      "unchangedUnits": 36
+    },
+    {
+      "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "oldUnits": 37,
+      "newUnits": 37,
+      "delta": [],
+      "unchangedUnits": 37
+    },
+    {
+      "file": "921-taiwan-online-game-coins-refund-judgment.md",
+      "oldUnits": 45,
+      "newUnits": 45,
+      "delta": [
+        {
+          "op": "replace",
+          "old": [
+            "Varðveislutíminn er takmarkaður."
+          ],
+          "new": [
+            "Þrjátíu dagar eru lögbundið lágmark."
+          ]
+        }
+      ],
+      "unchangedUnits": 44
+    }
+  ],
+  "totalCurrentUnits": 243,
+  "unchangedUnits": 242,
+  "readScope": "Read changed 916 paragraph and all four 921 paragraph sentences; 918 SEO title read. Full prior arrays reused for unchanged units."
+}

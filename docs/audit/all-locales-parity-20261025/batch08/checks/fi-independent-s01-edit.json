@@ -1,0 +1,13 @@
+{
+  "atUTC": "2026-10-26T08:09:42.197347+00:00",
+  "finding": "FI independent S01 accepted",
+  "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+  "beforeSHA256": "48aa5debe29787ced8afc034f40ba3417dd20afbc7e80b3078b77543a368814a",
+  "afterSHA256": "41db82df9e378f70cda63273f1dc53295d076d3b88bda8796af3806398f9b381",
+  "old": "Säännös ei tee yrityksen aineistosta käyttökelvotonta. Sen rinnalle voidaan esittää maksukuitteja ja tukiviestejä, jotka kuvaavat rahan ja pisteiden kulkua.",
+  "new": "Yrityksen aineiston rinnalle voidaan esittää maksukuitteja ja tukiviestejä, jotka kuvaavat rahan ja pisteiden kulkua.",
+  "reason": "Remove a rebuttal to the unasserted claim that operator records are useless. State directly that payment receipts and support messages may accompany them. The preceding ban on using operator data as the sole contractual criterion remains.",
+  "meaningPreserved": true,
+  "inverseExact": true,
+  "frontmatterFAQUnchanged": true
+}

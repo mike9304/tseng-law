@@ -1,0 +1,849 @@
+diff --git a/docs/audit/all-locales-parity-20261025/tooling/variety/variety_expansion.py b/docs/audit/all-locales-parity-20261025/tooling/variety/variety_expansion.py
+index 4506a4687..6c807bfb7 100644
+--- a/docs/audit/all-locales-parity-20261025/tooling/variety/variety_expansion.py
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/variety_expansion.py
+@@ -32,6 +32,44 @@ def url_pattern(unspaced_terminators=''):
+ 
+ def visible_text(text, additional_terminal_punctuation='', unspaced_terminators=''):
+     """Remove destinations without swallowing the surrounding sentence end."""
++    # Block classification has already used the original Markdown. Decode
++    # ASCII punctuation escapes only now, retaining escaped markup literally.
++    # Inline code has no backslash escapes (CommonMark 2.4 and 6.1).
++    literals = []
++    prefix = '\ue100'
++    while prefix in text:
++        prefix += '\ue100'
++    if '\\' in text:
++        parts = []
++        i = 0
++        def literal(value):
++            literals.append(value)
++            return prefix + str(len(literals) - 1) + '\ue101'
++        while i < len(text):
++            if text[i] == '\\' and i + 1 < len(text) and (
++                    '!' <= text[i + 1] <= '/' or ':' <= text[i + 1] <= '@'
++                    or '[' <= text[i + 1] <= '`' or '{' <= text[i + 1] <= '~'):
++                parts.append(literal(text[i + 1]))
++                i += 2
++                continue
++            if text[i] == '`':
++                count = len(re.match(r'`+', text[i:]).group())
++                closing = next((m for m in re.finditer(r'`+', text[i + count:])
++                                if len(m.group()) == count), None)
++                if closing:
++                    end = i + count + closing.start()
++                    code = text[i + count:end].replace('\n', ' ')
++                    if code.startswith(' ') and code.endswith(' ') and code.strip(' '):
++                        code = code[1:-1]
++                    parts.append(literal(code))
++                    i = end + count
++                    continue
++                parts.append(text[i:i + count])
++                i += count
++                continue
++            parts.append(text[i])
++            i += 1
++        text = ''.join(parts)
+     text = re.sub(r'!\[[^\]]*\]\([^)]*\)', '', text)
+     text = re.sub(r'\[([^\]]+)\]\([^)]*\)', r'\1', text)
+     def omit_url(match):
+@@ -39,7 +77,11 @@ def visible_text(text, additional_terminal_punctuation='', unspaced_terminators=
+         core = value.rstrip('.,;:!?' + additional_terminal_punctuation)
+         return value[len(core):]
+     text = url_pattern(unspaced_terminators).sub(omit_url, text)
+-    return re.sub(r'[*_`]', '', text)
++    text = re.sub(r'[*_`]', '', text)
++    if literals:
++        text = re.sub(re.escape(prefix) + r'(\d+)\ue101',
++                      lambda match: literals[int(match.group(1))], text)
++    return text
+ 
+ 
+ def characters(text):
+@@ -90,6 +132,17 @@ def split_sentences(text, lang, data):
+             raise SegmentationError('Khmer native abbreviation followed by prose has an ambiguous sentence boundary; reviewed segmentation required')
+         protected = re.sub(re.escape(abbreviation), protect_native, protected)
+ 
++    if lang == 'fi':
++        # A shared month completes coordinated dates, e.g. 7. ja 8. toukokuuta.
++        # A capitalized next-sentence connector is deliberately not protected.
++        months = r'tammikuuta|helmikuuta|maaliskuuta|huhtikuuta|toukokuuta|kesäkuuta|heinäkuuta|elokuuta|syyskuuta|lokakuuta|marraskuuta|joulukuuta'
++        day = r'(?:0?[1-9]|[12]\d|3[01])'
++        space = r'[^\S\r\n]+'
++        protected = re.sub(
++            r'(?<!\w)' + day + r'\.(?=(?:' + space + r'(?:ja|tai|vai)'
++            + space + day + r'\.)+' + space + r'(?i:' + months + r')\b)',
++            lambda match: match.group()[:-1] + marker, protected)
++
+     followers = data.get('ordinal_followers')
+     if followers:
+         end_word = r'\b'
+diff --git a/src/content/columns-fi/704-taiwan-arc-first-application.md b/src/content/columns-fi/704-taiwan-arc-first-application.md
+index 55474f26d..57d230939 100644
+--- a/src/content/columns-fi/704-taiwan-arc-first-application.md
++++ b/src/content/columns-fi/704-taiwan-arc-first-application.md
+@@ -68,7 +68,7 @@ Tavallisen ARC:n lakisääteinen enimmäiskesto on kolme vuotta. Työhön palkat
+ 
+ ## Käsittelystä kortin noutamiseen
+ 
+-Yleisen menettelyn ilmoitettu käsittelyaika on kymmenen työpäivää. Siihen ei lasketa asiakirjojen palauttamista, täydentämistä eikä haastattelua. Kun pyydetyt täydennykset on toimitettu, kymmenen työpäivän käsittely alkaa uudelleen ([NIA:n yleisohje](https://www.immigration.gov.tw/5475/5478/141465/141808/141970); [täydennysmenettelyn täsmennys](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/)). Tämä arvio ei takaa, että kortti olisi tiettynä matkapäivänä valmis.
++Jos NIA pyytää puuttuvia asiakirjoja, yleisen menettelyn kymmenen työpäivän käsittely alkaa uudelleen vasta, kun hakija on toimittanut pyydetyt täydennykset; tähän käsittelyaikaan eivät sisälly asiakirjojen palauttaminen, täydentäminen tai haastattelu ([NIA:n yleisohje](https://www.immigration.gov.tw/5475/5478/141465/141808/141970); [täydennysmenettelyn täsmennys](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/)). Kyse on käsittelyaika-arviosta. Se ei takaa kortin valmistumista tiettyyn matkapäivään.
+ 
+ [Opiskelijoiden verkkomenettelyssä](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) käsittelyajaksi ilmoitetaan viisi työpäivää, ja aika alkaa uudelleen täydennysten jälkeen. Maksu on suoritettava viiden työpäivän kuluessa hyväksymisestä. Enintään kuudeksi kuukaudeksi myönnetty sähköinen ARC ladataan ja tulostetaan maksamisen jälkeen. Sirukorttia noudettaessa tulostettu verkkopalvelun maksukuitti viedään valittuun NIA:n palvelukeskukseen kolmen työpäivän kuluttua maksusta. Muiden hakijaryhmien on seurattava oman hyväksymis- tai noutoilmoituksensa ohjeita.
+ 
+diff --git a/src/content/columns-fi/706-taiwan-arc-renewal-changes-reentry.md b/src/content/columns-fi/706-taiwan-arc-renewal-changes-reentry.md
+index 12d29eced..48cc4fbd8 100644
+--- a/src/content/columns-fi/706-taiwan-arc-renewal-changes-reentry.md
++++ b/src/content/columns-fi/706-taiwan-arc-renewal-changes-reentry.md
+@@ -42,7 +42,7 @@ Hakija ei voi valita vapaasti kahden viimeisen rivin välillä. Soveltuva menett
+ 
+ Uudesta vuokrasopimuksesta tarvitaan osoitteen selvitys. [NIA:n ohjeen](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) mukainen rekisteröinti tehdään erikseen, vaikka muutto olisi jo ilmoitettu pankille, oppilaitokselle tai työnantajalle. Vastaanottokuittaus jää hakijalle.
+ 
+-Työnantajan vaihtuminen tai lisätyö voi vaatia uuden luvan ennen työn alkua. [Työllisyyspalvelulain 53 §:n](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) ehdot vaihtelevat työntekijäluokittain. Uuden työn on kuuluttava soveltuvan työluvan tai lupavapautuksen piiriin; pelkkä NIA:n rekisteritietojen muuttaminen ei anna tätä oikeutta.
++Työnantajan vaihtuminen tai lisätyö voi edellyttää uutta lupaa jo ennen työn aloittamista, sillä [työllisyyspalvelulain 53 §:n](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) ehdot riippuvat työntekijäluokasta ja uuden työn on kuuluttava soveltuvan työluvan tai lupavapautuksen piiriin. NIA:n rekisterimuutos ei yksin anna työnteko-oikeutta.
+ 
+ ## Jatkohakemus saman perusteen jatkuessa
+ 
+diff --git a/src/content/columns-is/704-taiwan-arc-first-application.md b/src/content/columns-is/704-taiwan-arc-first-application.md
+index 96068f3e6..d2d2c202c 100644
+--- a/src/content/columns-is/704-taiwan-arc-first-application.md
++++ b/src/content/columns-is/704-taiwan-arc-first-application.md
+@@ -44,7 +44,7 @@ Fyrir umsókn á grundvelli búsetuáritunar þarf umsóknareyðublað, nýlega
+ 
+ Fylgigögn vegna vinnu eru viðeigandi atvinnuheimild og staðfesting á starfi, gefin út innan síðasta mánaðar, eða gögn um undanþágu frá atvinnuleyfi.
+ 
+-Ertu þegar skráður í skólann? Fyrir skráningu er inntökubréfið lagt fram. Eftir skráningu þarf nýlega staðfestingu skólans, útgefna innan síðasta mánaðar, ásamt gögnum um skráningu á yfirstandandi önn.
++Ertu þegar skráður í skólann? Fyrir skráningu er inntökubréfið lagt fram. Eftir skráningu þarf nýlega staðfestingu á námi, útgefna innan síðasta mánaðar.
+ 
+ Fjölskyldutengsl eru staðfest með til dæmis hjúskapar- eða fæðingarvottorði. Við bætast viðeigandi persónu- eða dvalarskilríki þess fjölskyldumeðlims sem umsóknin byggist á. Nákvæm gögn ráðast af stöðu hans; vegabréf þess aðila er ekki algilt fylgiskjal fyrir alla fjölskylduflokka.
+ 
+diff --git a/src/lib/__tests__/case-translations-20261026.test.ts b/src/lib/__tests__/case-translations-20261026.test.ts
+index 91a47f8f8..573e1dba1 100644
+--- a/src/lib/__tests__/case-translations-20261026.test.ts
++++ b/src/lib/__tests__/case-translations-20261026.test.ts
+@@ -6,8 +6,8 @@ import { columnLanguageLinksFromIndex, type PublicLocale8 } from '@/lib/public-g
+ import { buildAbsoluteUrl, getLanguageAlternates } from '@/lib/seo';
+ import { archiveLeadPublicationDate, archiveLeadSlugsFor, expertiseSlugsFor } from './native-locale-columns';
+ 
+-const TRANSLATIONS = ['de', 'it', 'ar', 'pt', 'hi', 'ms', 'ru', 'bg', 'bn', 'ca', 'da', 'el', 'et', 'fa'] as const;
+-const SAME_DAY_ARC_LOCALES: readonly string[] = ['bg', 'bn', 'ca', 'el', 'et', 'fa'];
++const TRANSLATIONS = ['de', 'it', 'ar', 'pt', 'hi', 'ms', 'ru', 'bg', 'bn', 'ca', 'da', 'el', 'et', 'fa', 'fi', 'hr', 'hu', 'is', 'km', 'lv', 'mn'] as const;
++const SAME_DAY_ARC_LOCALES: readonly string[] = ['bg', 'bn', 'ca', 'el', 'et', 'fa', 'hr', 'hu', 'is', 'km', 'lv', 'mn'];
+ const ARC_SLUGS = ['taiwan-arc-first-application', 'taiwan-visa-residence-work-study-family', 'taiwan-arc-renewal-changes-reentry'];
+ // Independently pin the release contract, rather than deriving it from the test registry.
+ const CASES = [
+@@ -30,8 +30,8 @@ describe('reviewed case translations published October26', () => {
+     expect(visible.slice(0, expectedLead.length).map(({ slug }) => slug)).toEqual(expectedLead);
+     expect(archiveLeadSlugsFor(locale).slice(0, expectedLead.length)).toEqual(expectedLead);
+     expect(new Set(archiveLeadSlugsFor(locale)).size).toBe(archiveLeadSlugsFor(locale).length);
+-    if (SAME_DAY_ARC_LOCALES.includes(locale) || locale === 'da') {
+-      const expectedArcDate = locale === 'da' ? '2026-10-25' : '2026-10-26';
++    if (SAME_DAY_ARC_LOCALES.includes(locale) || locale === 'da' || locale === 'fi') {
++      const expectedArcDate = locale === 'da' || locale === 'fi' ? '2026-10-25' : '2026-10-26';
+       for (const slug of ARC_SLUGS) {
+         expect(posts.find(post => post.slug === slug)?.publicationDate).toBe(expectedArcDate);
+         expect(archiveLeadPublicationDate(slug, locale)).toBe(expectedArcDate);
+@@ -46,7 +46,7 @@ describe('reviewed case translations published October26', () => {
+     }
+   });
+ 
+-  it.each(CASES)('$slug retains its original publication date and exactly fifteen real language versions', (item) => {
++  it.each(CASES)('$slug retains its original publication date and exactly twenty-two real language versions', (item) => {
+     const original = getAllColumnPosts(item.source).find(({ slug }) => slug === item.slug);
+     expect(original?.publicationDate).toBe('2026-10-25');
+     expect(original?.faq).toHaveLength(item.faqs);
+@@ -56,7 +56,7 @@ describe('reviewed case translations published October26', () => {
+     expect([...cluster].sort()).toEqual(expected);
+     const urls = expected.map((locale) => buildAbsoluteUrl(`/${locale}/columns/${item.slug}`));
+     const alternates = getLanguageAlternates(`/columns/${item.slug}`, cluster, { xDefaultWithinCluster: true });
+-    expect(Object.keys(alternates)).toHaveLength(16);
++    expect(Object.keys(alternates)).toHaveLength(23);
+     expect(Object.entries(alternates).filter(([tag]) => tag !== 'x-default').map(([, url]) => url).sort()).toEqual(urls.sort());
+     expect(urls).toContain(alternates['x-default']);
+     for (const locale of expected as PublicLocale8[]) {
+diff --git a/src/lib/__tests__/native-locale-columns.ts b/src/lib/__tests__/native-locale-columns.ts
+index 735bc93d1..4cd8e685b 100644
+--- a/src/lib/__tests__/native-locale-columns.ts
++++ b/src/lib/__tests__/native-locale-columns.ts
+@@ -1279,12 +1279,21 @@ export const CASE_TRANSLATION_COLUMN_FILES_20261026: Partial<Record<string, read
+   el: CASE_TRANSLATION_FILES_20261026,
+   et: CASE_TRANSLATION_FILES_20261026,
+   fa: CASE_TRANSLATION_FILES_20261026,
++  fi: CASE_TRANSLATION_FILES_20261026,
++  hr: CASE_TRANSLATION_FILES_20261026,
++  hu: CASE_TRANSLATION_FILES_20261026,
++  is: CASE_TRANSLATION_FILES_20261026,
++  km: CASE_TRANSLATION_FILES_20261026,
++  lv: CASE_TRANSLATION_FILES_20261026,
++  mn: CASE_TRANSLATION_FILES_20261026,
+ };
+ 
+ // These case locales already have ARC articles with later dates than the original ARC batch.
+ const CASE_LOCALE_ARC_PUBLICATION_DATES: Partial<Record<string, string>> = {
+   bg: '2026-10-26', bn: '2026-10-26', ca: '2026-10-26', da: '2026-10-25',
+   el: '2026-10-26', et: '2026-10-26', fa: '2026-10-26',
++  fi: '2026-10-25', hr: '2026-10-26', hu: '2026-10-26', is: '2026-10-26',
++  km: '2026-10-26', lv: '2026-10-26', mn: '2026-10-26',
+ };
+ 
+ /** Country-specific market expansion, two original articles per selected locale. */
+--- /dev/null
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/date-boundaries/run_neutral.py
+@@ -0,0 +1,48 @@
++#!/usr/bin/env python3
++"""Exercise literal neutral display/boundary contracts against a selected copy."""
++from pathlib import Path
++import argparse
++import hashlib
++import json
++import sys
++
++sys.dont_write_bytecode = True
++ap = argparse.ArgumentParser()
++ap.add_argument('--root', required=True)
++ap.add_argument('--report', required=True)
++args = ap.parse_args()
++work = Path(__file__).resolve().parent
++root = Path(args.root).resolve()
++sys.path.insert(0, str(root))
++import variety_metrics as metrics
++import variety_expansion as expansion
++
++fixture_path = work / 'neutral-fixtures.json'
++fixtures = json.loads(fixture_path.read_text())
++results = []
++for case in fixtures['sentences']:
++    paragraphs, headings, items = metrics.body_blocks(case['input'], case['lang'])
++    actual = [s for p in paragraphs for s in metrics.sentences(p, case['lang'])]
++    checks = {'sentences': actual == case['expected_sentences']}
++    if 'expected_paragraph_count' in case:
++        checks['paragraph_count'] = len(paragraphs) == case['expected_paragraph_count']
++    if 'expected_list_count' in case:
++        checks['list_count'] = len(items) == case['expected_list_count']
++    lengths = [metrics.slen(s, case['lang']) for s in actual]
++    if 'expected_lengths' in case:
++        checks['lengths'] = lengths == case['expected_lengths']
++    results.append({'id': case['id'], 'checks': checks, 'passed': all(checks.values()),
++                    'actual': actual, 'lengths': lengths,
++                    'paragraphs': paragraphs, 'list_items': items})
++for case in fixtures['visible_text']:
++    actual = expansion.visible_text(case['input'])
++    results.append({'id': case['id'], 'passed': actual == case['expected'], 'actual': actual})
++sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
++report = {'root': str(root), 'fixture_sha256': sha(fixture_path),
++          'production_sha256': {p.name: sha(p) for p in sorted(root.glob('*.py'))},
++          'cases': len(results), 'passed': sum(x['passed'] for x in results), 'results': results}
++with Path(args.report).open('x') as handle:
++    handle.write(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
++print(json.dumps({'cases': report['cases'], 'passed': report['passed'],
++                  'failed_ids': [x['id'] for x in results if not x['passed']]}))
++sys.exit(0 if report['passed'] == report['cases'] else 1)
+--- /dev/null
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/date-boundaries/neutral-fixtures.json
+@@ -0,0 +1,606 @@
++{
++  "at": "2026-10-26T16:16:07.592209+09:00",
++  "source_urls": [
++    "https://kielitoimistonohjepankki.fi/ohje/ajanilmaukset-paivays-ja-vuosiluku/",
++    "https://kielitoimistonohjepankki.fi/ohje/luvut-ja-numerot-jarjestysluvut/",
++    "https://spec.commonmark.org/0.31.2/#backslash-escapes",
++    "https://spec.commonmark.org/0.31.2/#code-spans"
++  ],
++  "notes": [
++    "Literal expectations fixed before candidate production changes. Dates/library examples are neutral, not target column fitting.",
++    "Reported FI footer and HU escape fragments already seen; target full manuscripts/scores not used to choose conditions.",
++    "FI complete day + lower-case ja/tai/vai + day + known month; ordinary real next sentences kept. Grammar inference for tai/vai is not a quotation of a splitter rule.",
++    "CommonMark ASCII punctuation escapes, literal backslashes and code spans; existing lightweight Markdown stripping is not a full CommonMark implementation. No ordered-list rule change."
++  ],
++  "sentences": [
++    {
++      "id": "fi-ja-tammikuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. ja 8. tammikuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. ja 8. tammikuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-tai-tammikuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. tai 8. tammikuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. tai 8. tammikuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-vai-tammikuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. vai 8. tammikuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. vai 8. tammikuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-ja-helmikuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. ja 8. helmikuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. ja 8. helmikuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-tai-helmikuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. tai 8. helmikuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. tai 8. helmikuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-vai-helmikuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. vai 8. helmikuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. vai 8. helmikuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-ja-maaliskuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. ja 8. maaliskuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. ja 8. maaliskuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-tai-maaliskuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. tai 8. maaliskuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. tai 8. maaliskuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-vai-maaliskuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. vai 8. maaliskuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. vai 8. maaliskuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-ja-huhtikuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. ja 8. huhtikuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. ja 8. huhtikuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-tai-huhtikuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. tai 8. huhtikuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. tai 8. huhtikuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-vai-huhtikuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. vai 8. huhtikuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. vai 8. huhtikuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-ja-toukokuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. ja 8. toukokuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. ja 8. toukokuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-tai-toukokuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. tai 8. toukokuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. tai 8. toukokuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-vai-toukokuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. vai 8. toukokuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. vai 8. toukokuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-ja-kesäkuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. ja 8. kesäkuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. ja 8. kesäkuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-tai-kesäkuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. tai 8. kesäkuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. tai 8. kesäkuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-vai-kesäkuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. vai 8. kesäkuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. vai 8. kesäkuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-ja-heinäkuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. ja 8. heinäkuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. ja 8. heinäkuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-tai-heinäkuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. tai 8. heinäkuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. tai 8. heinäkuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-vai-heinäkuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. vai 8. heinäkuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. vai 8. heinäkuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-ja-elokuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. ja 8. elokuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. ja 8. elokuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-tai-elokuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. tai 8. elokuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. tai 8. elokuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-vai-elokuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. vai 8. elokuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. vai 8. elokuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-ja-syyskuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. ja 8. syyskuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. ja 8. syyskuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-tai-syyskuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. tai 8. syyskuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. tai 8. syyskuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-vai-syyskuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. vai 8. syyskuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. vai 8. syyskuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-ja-lokakuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. ja 8. lokakuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. ja 8. lokakuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-tai-lokakuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. tai 8. lokakuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. tai 8. lokakuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-vai-lokakuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. vai 8. lokakuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. vai 8. lokakuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-ja-marraskuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. ja 8. marraskuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. ja 8. marraskuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-tai-marraskuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. tai 8. marraskuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. tai 8. marraskuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-vai-marraskuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. vai 8. marraskuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. vai 8. marraskuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-ja-joulukuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. ja 8. joulukuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. ja 8. joulukuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-tai-joulukuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. tai 8. joulukuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. tai 8. joulukuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-vai-joulukuuta",
++      "lang": "fi",
++      "input": "Kirjasto on auki 7. vai 8. joulukuuta. Ovi suljetaan illalla.",
++      "expected_sentences": [
++        "Kirjasto on auki 7. vai 8. joulukuuta.",
++        "Ovi suljetaan illalla."
++      ]
++    },
++    {
++      "id": "fi-chain",
++      "lang": "fi",
++      "input": "Koulu on auki 2. ja 5. ja 8. huhtikuuta. Retki alkaa myöhemmin.",
++      "expected_sentences": [
++        "Koulu on auki 2. ja 5. ja 8. huhtikuuta.",
++        "Retki alkaa myöhemmin."
++      ]
++    },
++    {
++      "id": "fi-comma-list",
++      "lang": "fi",
++      "input": "Koulu on auki 2., 5. ja 8. huhtikuuta. Retki alkaa myöhemmin.",
++      "expected_sentences": [
++        "Koulu on auki 2., 5. ja 8. huhtikuuta.",
++        "Retki alkaa myöhemmin."
++      ]
++    },
++    {
++      "id": "fi-nbsp",
++      "lang": "fi",
++      "input": "Koulu on auki 2. ja 5. huhtikuuta. Retki alkaa myöhemmin.",
++      "expected_sentences": [
++        "Koulu on auki 2. ja 5. huhtikuuta.",
++        "Retki alkaa myöhemmin."
++      ]
++    },
++    {
++      "id": "fi-quoted",
++      "lang": "fi",
++      "input": "”Koulu on auki 2. ja 5. huhtikuuta.” Retki alkaa myöhemmin.",
++      "expected_sentences": [
++        "”Koulu on auki 2. ja 5. huhtikuuta.”",
++        "Retki alkaa myöhemmin."
++      ]
++    },
++    {
++      "id": "fi-uppercase-next",
++      "lang": "fi",
++      "input": "Numero on 7. Ja 8. huhtikuuta alkaa retki.",
++      "expected_sentences": [
++        "Numero on 7.",
++        "Ja 8. huhtikuuta alkaa retki."
++      ]
++    },
++    {
++      "id": "fi-uppercase-tai",
++      "lang": "fi",
++      "input": "Numero on 7. Tai 8. huhtikuuta alkaa retki.",
++      "expected_sentences": [
++        "Numero on 7.",
++        "Tai 8. huhtikuuta alkaa retki."
++      ]
++    },
++    {
++      "id": "fi-no-month",
++      "lang": "fi",
++      "input": "Numero on 7. Ja seuraava numero on 8.",
++      "expected_sentences": [
++        "Numero on 7.",
++        "Ja seuraava numero on 8."
++      ]
++    },
++    {
++      "id": "fi-month-boundary",
++      "lang": "fi",
++      "input": "Numero on 7. Ja 8. huhtikuutapahtumaa odotetaan.",
++      "expected_sentences": [
++        "Numero on 7.",
++        "Ja 8.",
++        "huhtikuutapahtumaa odotetaan."
++      ],
++      "scope": "lexical negative: no month token; fragment is not certified native prose"
++    },
++    {
++      "id": "fi-date-end",
++      "lang": "fi",
++      "input": "Retki päättyy 8. huhtikuuta 2024. Huomenna opiskellaan.",
++      "expected_sentences": [
++        "Retki päättyy 8. huhtikuuta 2024.",
++        "Huomenna opiskellaan."
++      ]
++    },
++    {
++      "id": "fi-ordinal-end",
++      "lang": "fi",
++      "input": "Sijoitus on 7. Huomenna jatketaan.",
++      "expected_sentences": [
++        "Sijoitus on 7.",
++        "Huomenna jatketaan."
++      ]
++    },
++    {
++      "id": "fi-decimal-url",
++      "lang": "fi",
++      "input": "Arvo on 3.5. Katso https://example.test/a.pdf. Retki alkaa.",
++      "expected_sentences": [
++        "Arvo on 3.5.",
++        "Katso .",
++        "Retki alkaa."
++      ]
++    },
++    {
++      "id": "hu-escaped-year",
++      "lang": "hu",
++      "input": "2018\\. augusztus 16-án nyílt meg a könyvtár. Másnap új olvasókat fogadtak.",
++      "expected_sentences": [
++        "2018. augusztus 16-án nyílt meg a könyvtár.",
++        "Másnap új olvasókat fogadtak."
++      ],
++      "expected_lengths": [
++        7,
++        4
++      ],
++      "expected_paragraph_count": 1,
++      "expected_list_count": 0
++    },
++    {
++      "id": "hu-escaped-february",
++      "lang": "hu",
++      "input": "2022\\. február 9-én kinyitott a múzeum. A terem üres volt.",
++      "expected_sentences": [
++        "2022. február 9-én kinyitott a múzeum.",
++        "A terem üres volt."
++      ]
++    },
++    {
++      "id": "hu-escaped-abbreviation",
++      "lang": "hu",
++      "input": "Dr\\. Kovács könyvet olvas. A terem csendes.",
++      "expected_sentences": [
++        "Dr. Kovács könyvet olvas.",
++        "A terem csendes."
++      ]
++    },
++    {
++      "id": "hu-escaped-real-stop",
++      "lang": "hu",
++      "input": "A szám 12\\. Ez az utolsó adat.",
++      "expected_sentences": [
++        "A szám 12.",
++        "Ez az utolsó adat."
++      ]
++    },
++    {
++      "id": "hu-escaped-decimal",
++      "lang": "hu",
++      "input": "Az érték 3\\.5. Ez kevés.",
++      "expected_sentences": [
++        "Az érték 3.5.",
++        "Ez kevés."
++      ]
++    },
++    {
++      "id": "hu-raw-year-is-list",
++      "lang": "hu",
++      "input": "2018. augusztus 16-án nyílt meg a könyvtár.",
++      "expected_sentences": [],
++      "expected_paragraph_count": 0,
++      "expected_list_count": 1
++    },
++    {
++      "id": "hu-actual-list",
++      "lang": "hu",
++      "input": "1. Vegyen egy könyvet.",
++      "expected_sentences": [],
++      "expected_paragraph_count": 0,
++      "expected_list_count": 1
++    },
++    {
++      "id": "hu-possible-list",
++      "lang": "hu",
++      "input": "2018. könyv",
++      "expected_sentences": [],
++      "expected_paragraph_count": 0,
++      "expected_list_count": 1
++    },
++    {
++      "id": "hu-literal-double-backslash",
++      "lang": "hu",
++      "input": "2018\\\\. augusztus elején nyitott. Másnap esett.",
++      "expected_sentences": [
++        "2018\\.",
++        "augusztus elején nyitott.",
++        "Másnap esett."
++      ],
++      "scope": "literal rendered backslash must not be erased as a date escape"
++    },
++    {
++      "id": "hu-three-backslashes",
++      "lang": "hu",
++      "input": "2018\\\\\\. augusztus elején nyitott. Másnap esett.",
++      "expected_sentences": [
++        "2018\\.",
++        "augusztus elején nyitott.",
++        "Másnap esett."
++      ]
++    },
++    {
++      "id": "hu-inline-code-backslash",
++      "lang": "hu",
++      "input": "A minta `2018\\. augusztus`. Ez kód.",
++      "expected_sentences": [
++        "A minta 2018\\.",
++        "augusztus.",
++        "Ez kód."
++      ],
++      "scope": "display preserves code backslash; current heuristic may split code punctuation"
++    },
++    {
++      "id": "hu-literal-letter-backslash",
++      "lang": "hu",
++      "input": "A jel \\A marad. Ez látható.",
++      "expected_sentences": [
++        "A jel \\A marad.",
++        "Ez látható."
++      ]
++    }
++  ],
++  "visible_text": [
++    {
++      "id": "escaped-ascii-punctuation",
++      "input": "\\!\\\"\\#\\$\\%\\&\\'\\(\\)\\*\\+\\,\\-\\.\\/\\:\\;\\<\\=\\>\\?\\@\\[\\\\\\]\\^\\_\\`\\{\\|\\}\\~",
++      "expected": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
++    },
++    {
++      "id": "literal-escape-pairs",
++      "input": "\\\\ \\A \\3 \\«",
++      "expected": "\\ \\A \\3 \\«"
++    },
++    {
++      "id": "escaped-emphasis",
++      "input": "\\*jel\\* \\_szó\\_",
++      "expected": "*jel* _szó_"
++    },
++    {
++      "id": "escaped-code-markers",
++      "input": "\\`jel\\`",
++      "expected": "`jel`"
++    },
++    {
++      "id": "code-keeps-escapes",
++      "input": "`2018\\. augusztus`",
++      "expected": "2018\\. augusztus"
++    },
++    {
++      "id": "code-multiple-ticks",
++      "input": "``2018\\. ` jel``",
++      "expected": "2018\\. ` jel"
++    },
++    {
++      "id": "link-label-escape",
++      "input": "[2018\\. augusztus](https://example.test/a.pdf)",
++      "expected": "2018. augusztus"
++    },
++    {
++      "id": "escaped-brackets",
++      "input": "\\[jel\\]",
++      "expected": "[jel]"
++    },
++    {
++      "id": "unescaped-markup-stays",
++      "input": "*szó* és [jel](https://example.test/a.pdf).",
++      "expected": "szó és jel."
++    }
++  ]
++}

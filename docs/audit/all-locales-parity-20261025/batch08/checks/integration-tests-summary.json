@@ -1,0 +1,61 @@
+{
+  "at": "2026-10-26T09:21:21.393328+00:00",
+  "unit": {
+    "files": 28,
+    "tests": 774,
+    "exitCode": 0,
+    "execution": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-unit-execution.json",
+      "sha256": "7a3b615b72e83e1e6f3f75e2fc943f6a5ec9817b6fdb8230113a4eb7ab5ea8ef",
+      "bytes": 8781
+    }
+  },
+  "neutral": {
+    "cases": 68,
+    "passed": 68,
+    "exitCode": 0,
+    "repositoryMirrorExecuted": true,
+    "execution": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-neutral-execution.json",
+      "sha256": "749b7af04fec26338f7d2b188730dbcaf73fabb3dc47597eeed4e9b8b72b43d5",
+      "bytes": 2340
+    }
+  },
+  "automatedContent": {
+    "selected": 42,
+    "errors": 0,
+    "requiredReviewItems": 225,
+    "semanticStatus": "REVIEW_REQUIRED",
+    "publicationReady": false,
+    "fullOriginal": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-content-audit.json",
+      "sha256": "56f75e79ff6f3d6a882e83655183643f0c076a37a01b4efe32196b05f1eb9c37",
+      "bytes": 2790221
+    }
+  },
+  "metadata": {
+    "errors": 0,
+    "faqTotal": 119,
+    "evidence": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-metadata.json",
+      "sha256": "cc5f24a81c07fa912c6ff17ef430b9343f8b703c082c39a33acdb26a3dc11024",
+      "bytes": 62599
+    }
+  },
+  "warnings": {
+    "count": 4,
+    "distinct": [
+      "Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.",
+      "Warning: Received `true` for a non-boolean attribute `inert`."
+    ],
+    "sameWarningTextInPriorB7Log": true,
+    "priorLog": {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch07/checks/integration-affected-tests.log",
+      "sha256": "09f349be77b2ff344f0300338a92b27e5b3a6e1b10bbb2d983d843dd486aae18",
+      "bytes": 23309
+    }
+  },
+  "newArticleCLIRuns": 0,
+  "wholeProjectTestRun": false,
+  "buildOrBrowserRun": false
+}

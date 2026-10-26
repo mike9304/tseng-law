@@ -42,7 +42,7 @@ Hakija ei voi valita vapaasti kahden viimeisen rivin välillä. Soveltuva menett
 
 Uudesta vuokrasopimuksesta tarvitaan osoitteen selvitys. [NIA:n ohjeen](https://www.immigration.gov.tw/5475/5478/141465/141808/141970) mukainen rekisteröinti tehdään erikseen, vaikka muutto olisi jo ilmoitettu pankille, oppilaitokselle tai työnantajalle. Vastaanottokuittaus jää hakijalle.
 
-Työnantajan vaihtuminen tai lisätyö voi vaatia uuden luvan ennen työn alkua. [Työllisyyspalvelulain 53 §:n](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) ehdot vaihtelevat työntekijäluokittain. Uuden työn on kuuluttava soveltuvan työluvan tai lupavapautuksen piiriin; pelkkä NIA:n rekisteritietojen muuttaminen ei anna tätä oikeutta.
+Työnantajan vaihtuminen tai lisätyö voi edellyttää uutta lupaa jo ennen työn aloittamista, sillä [työllisyyspalvelulain 53 §:n](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) ehdot riippuvat työntekijäluokasta ja uuden työn on kuuluttava soveltuvan työluvan tai lupavapautuksen piiriin. NIA:n rekisterimuutos ei yksin anna työnteko-oikeutta.
 
 ## Jatkohakemus saman perusteen jatkuessa
 

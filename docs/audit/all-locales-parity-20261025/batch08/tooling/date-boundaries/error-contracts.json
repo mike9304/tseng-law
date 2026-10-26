@@ -1,0 +1,54 @@
+[
+  {
+    "tool": "baseline",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/baseline/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/unknown-name.md"
+    ],
+    "exit": 2,
+    "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/unknown-name.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/unknown-name.md; supply --lang\n",
+    "stderr": ""
+  },
+  {
+    "tool": "baseline",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/baseline/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/unknown-name.md",
+      "--lang",
+      "xx"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi,ru,ms,fil,tr,nl,zh-hans,sv,da,nb,fi,pl,cs,ro,uk,bg,ca,el,hr,hu,is,sk,he,bn,ur,fa,my,ta,ne,km,mn,sr,sl,lt,lv,et}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'xx' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne', 'km', 'mn', 'sr', 'sl', 'lt', 'lv', 'et')\n"
+  },
+  {
+    "tool": "candidate",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/unknown-name.md"
+    ],
+    "exit": 2,
+    "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/unknown-name.md: ERROR measurement unavailable: cannot infer language for /Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/unknown-name.md; supply --lang\n",
+    "stderr": ""
+  },
+  {
+    "tool": "candidate",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/unknown-name.md",
+      "--lang",
+      "xx"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "usage: variety_metrics.py [-h]\n                          [--lang {ko,ja,en,zh-hant,th,id,hi,fr,de,it,es,pt,ar,vi,ru,ms,fil,tr,nl,zh-hans,sv,da,nb,fi,pl,cs,ro,uk,bg,ca,el,hr,hu,is,sk,he,bn,ur,fa,my,ta,ne,km,mn,sr,sl,lt,lv,et}]\n                          [--out OUT] [--sentences SENTENCES]\n                          {check,corpus} path [path ...]\nvariety_metrics.py: error: argument --lang: invalid choice: 'xx' (choose from 'ko', 'ja', 'en', 'zh-hant', 'th', 'id', 'hi', 'fr', 'de', 'it', 'es', 'pt', 'ar', 'vi', 'ru', 'ms', 'fil', 'tr', 'nl', 'zh-hans', 'sv', 'da', 'nb', 'fi', 'pl', 'cs', 'ro', 'uk', 'bg', 'ca', 'el', 'hr', 'hu', 'is', 'sk', 'he', 'bn', 'ur', 'fa', 'my', 'ta', 'ne', 'km', 'mn', 'sr', 'sl', 'lt', 'lv', 'et')\n"
+  }
+]

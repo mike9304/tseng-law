@@ -1,0 +1,8 @@
+{
+  "command": "PATH=/Users/son7/.nvm/versions/node/v24.14.1/bin:$PATH PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -p test_*.py",
+  "cwd": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate",
+  "actual_unified_exec_session": 4791,
+  "exit": 0,
+  "result": "Ran 66 tests in 4.292s; OK",
+  "test_scope": "all installed unittest discovery methods; additional DE neutral runner is separate"
+}

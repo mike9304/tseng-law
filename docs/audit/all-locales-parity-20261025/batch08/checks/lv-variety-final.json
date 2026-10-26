@@ -1,0 +1,614 @@
+{
+  "checkedAt": "2026-10-26T07:00:26.982863+00:00",
+  "phase": "final",
+  "locale": "lv",
+  "checkerInputs": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/lv.json",
+      "sha256": "09dc74f01e20b3430b1bf00c1e9ae4c2b941e081505e63cd4f9d86fb8fdb836e"
+    }
+  ],
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b26bff2ba9bfad7ccd88bd9e3ee3bbc34458de838f157b9b9dec3f1211251323",
+      "bytes": 8325,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "--lang",
+        "lv"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [lv] sentences=41 mean=12.5 cv=0.477 short=0.244 run3=0.077 opener_rep=0.0 cite_end=0.0 cite_para=0.167 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "lv",
+        "sentences": 41,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 12.5,
+        "len_cv": 0.477,
+        "short_share": 0.244,
+        "long_share": 0.0,
+        "para_cv": 0.223,
+        "even_run3": 0.077,
+        "top_end": "lietā",
+        "top_end_share": 0.024,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "taipejas",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.167,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.14,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Taipejas Augstā administratīvā tiesa atcēla vadītāja atbrīvošanu no amata mobinga lietā.",
+        "last": "Īsā e-pastā birojam var aprakstīt sūdzības stadiju, jau pieņemtos lēmumus un tuvāko termiņu, sākotnēji nesūtot visus sen",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "taipejas",
+          "sentences": [
+            {
+              "text": "Taipejas Augstā administratīvā tiesa atcēla vadītāja atbrīvošanu no amata mobinga lietā.",
+              "words": 11
+            },
+            {
+              "text": "Sākotnējā lēmumā vadītājam vienlaikus piemēroja divus smagus disciplinārsodus, kuru rezultāts šajā lietā bija atlaišana.",
+              "words": 14
+            },
+            {
+              "text": "Tiesa atcēla arī administratīvās pārskatīšanas lēmumu, konstatējot problēmas iepriekš paziņotajā iznākumā, uzklausīšanā un izmeklēšanas materiālos.",
+              "words": 15
+            },
+            {
+              "text": "Iemesli izklāstīti tiesas oficiālajā paziņojumā.",
+              "words": 5
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "lieta",
+          "sentences": [
+            {
+              "text": "Lieta 114年度訴字第869號 attiecās uz valsts amatpersonas dienestu.",
+              "words": 7
+            },
+            {
+              "text": "Spriedums pieņemts 2026. gada 3. septembrī, un to var pārsūdzēt.",
+              "words": 10
+            },
+            {
+              "text": "Atcelšana nepierāda, ka visa pārmestā rīcība nav notikusi, un paziņojums neapstiprina personas faktisku atjaunošanu amatā.",
+              "words": 15
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "vēl",
+          "sentences": [
+            {
+              "text": "Vēl pirms novērtēšanas komisijas apspriedes iestādes vadītājs publiski paziņoja paredzēto sodu, bet pēc tam augstākā iestāde pati sanāca, pirms jautājumu izskatīja padotā iestāde.",
+              "words": 23
+            },
+            {
+              "text": "Tiesa vērtēja šo secību.",
+              "words": 4
+            },
+            {
+              "text": "Tā ierobežoja komisijas iespēju veikt patstāvīgu, saturisku izvērtējumu.",
+              "words": 8
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "iznākums",
+          "sentences": [
+            {
+              "text": "Iznākums jau bija izteikts publiski.",
+              "words": 5
+            },
+            {
+              "text": "Vai vēlākie dalībnieki, izvērtējot pierādījumus, varēja nonākt pie cita secinājuma?",
+              "words": 10
+            },
+            {
+              "text": "Sanāksmes protokola esamība vien neatbild uz šo jautājumu.",
+              "words": 8
+            },
+            {
+              "text": "Lietā nozīme bija tam, kā lēmuma pieņemšana patiesībā notika.",
+              "words": 9
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "arī",
+          "sentences": [
+            {
+              "text": "Arī uzklausīšana bija nepilnīga.",
+              "words": 4
+            },
+            {
+              "text": "Attiecīgā komisija nebija pienācīgi paziņojusi personai par iespēju ierasties un sniegt paskaidrojumus.",
+              "words": 12
+            },
+            {
+              "text": "Ziņojumā konstatējumi par mobinga pierādījumiem nesaskanēja ar ierosināto disciplināro rezultātu.",
+              "words": 10
+            },
+            {
+              "text": "Tiesas pamatojuma kopsavilkums norāda, ka vēlāka iebildumu sniegšana administratīvajā pārskatīšanā šīs lietas sākotnējās uzklausīšanas trūkumu nenovērsa.",
+              "words": 16
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "amatpersonas",
+          "sentences": [
+            {
+              "text": "Amatpersonas lietu vērtēja tās dienesta sistēmā, un attiecīgie notikumi bija pirms jaunajiem mobinga novēršanas noteikumiem.",
+              "words": 15
+            },
+            {
+              "text": "Privātiem darba devējiem piemērojamais darba drošības regulējums stājās spēkā 2026. gada 1. jūlijā.",
+              "words": 13
+            },
+            {
+              "text": "Tā laika tvērums redzams likuma grozījumu vēsturē un darba drošības iestādes skaidrojumā.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "darba",
+          "sentences": [
+            {
+              "text": "Darba drošības un veselības aizsardzības likuma 22-2. pants prasa objektīvu, neitrālu un taisnīgu izmeklēšanu vai pušu domstarpību saskaņošanu.",
+              "words": 19
+            },
+            {
+              "text": "Izmeklēšanā pusēm jādod pilnvērtīga iespēja izteikties un aizstāvēties, ievērojot arī atstatīšanās prasības interešu konflikta gadījumā.",
+              "words": 15
+            },
+            {
+              "text": "Publiski pasludināts pārkāpums pirms izmeklēšanas pabeigšanas var apgrūtināt šo prasību ievērošanu.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "aizsardzība",
+          "sentences": [
+            {
+              "text": "Aizsardzība var sākties uzreiz.",
+              "words": 4
+            },
+            {
+              "text": "Ja darba devējs saņem mobingam pakļautā darbinieka sūdzību, tam jāveic pasākumi, lai nepieļautu atkārtotu mobingu, jānodrošina vajadzībām atbilstošas konsultācijas, palīdzība un aizsardzība, kā arī jāizmeklē notikušais.",
+              "words": 26
+            },
+            {
+              "text": "Tie ir pasākumu veikšanas pienākumi, nevis iepriekš izšķirta sūdzība.",
+              "words": 9
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "ja",
+          "sentences": [
+            {
+              "text": "Ja sūdzības iesniedzējs piekrīt, var mēģināt panākt pušu vienošanos.",
+              "words": 9
+            },
+            {
+              "text": "Ja vienošanās neizdodas, izmeklēšana jāturpina.",
+              "words": 5
+            },
+            {
+              "text": "Aizsardzības pasākumi un iespēja atbildēt uz pārmetumiem tādējādi var pastāvēt vienlaikus; minētais administratīvās tiesas spriedums pats nenosaka privāta uzņēmuma soda spēkā esamību.",
+              "words": 22
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "personāla",
+          "sentences": [
+            {
+              "text": "Personāla darbinieks var salīdzināt, ko liecinieks teicis, kādi dati to atbalsta un kāds secinājums no tiem izdarīts.",
+              "words": 17
+            },
+            {
+              "text": "Pretrunīgu interviju gadījumā noder norāde, kuram pierādījumam dota priekšroka un kāpēc.",
+              "words": 11
+            },
+            {
+              "text": "Ja darba laika uzskaite, sarakste vai sanāksmes materiāli pārmetumu neatbalsta, šī neatbilstība arī ir daļa no izvērtējuma.",
+              "words": 17
+            },
+            {
+              "text": "Tas ir praktisks dokumentu sakārtošanas ieteikums, nevis jauna obligāta ziņojuma veidlapa.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "paskaidrojumam",
+          "sentences": [
+            {
+              "text": "Paskaidrojumam vajag saprotamu priekšmetu.",
+              "words": 4
+            },
+            {
+              "text": "Paziņojums par konkrēto rīcību, tās laiku un noskaidrojamajiem apstākļiem dod personai iespēju atbildēt precīzāk nekā vispārīgs lūgums raksturot vadības stilu.",
+              "words": 20
+            },
+            {
+              "text": "Šādi var pārbaudīt, vai uzaicinājums, intervija un gala secinājumi attiecas uz vienu notikumu.",
+              "words": 13
+            },
+            {
+              "text": "Publiskā paziņojumā nav jāievieto visi lietā esošie personas dati.",
+              "words": 9
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "īsā",
+          "sentences": [
+            {
+              "text": "Īsā e-pastā birojam var aprakstīt sūdzības stadiju, jau pieņemtos lēmumus un tuvāko termiņu, sākotnēji nesūtot visus sensitīvos materiālus.",
+              "words": 19
+            },
+            {
+              "text": "Tiesas publikācija pārbaudīta 2026. gada 25. oktobrī, spēkā esošie darba drošības noteikumi salīdzināti 26. oktobrī; vēlāks pārsūdzības iznākums šeit nav apstiprināts.",
+              "words": 21
+            },
+            {
+              "text": "Amatpersonas un darbinieka aizsardzības ceļi atkarīgi no viņu statusa un konkrētā lēmuma, bet izmeklēšanas mapē paliek pārbaudāms, kas bija paziņots, kas uzklausīts un kādēļ pierādījumiem ticēts.",
+              "words": 26
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Vai sanāksme vēl varēja ietekmēt rezultātu?",
+        "Uzņēmuma pienākumus nosaka tam piemērojamais likums",
+        "Ko var izlasīt izmeklēšanas ziņojuma pamatojumā"
+      ],
+      "excludedLists": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "180f2341d274efee506c8164a1e49247058580b8aa5235e53c145aa5e9b28326",
+      "bytes": 8229,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "--lang",
+        "lv"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/920-taiwan-apartment-ev-charger-common-area-judgment.md [lv] sentences=39 mean=13.8 cv=0.474 short=0.256 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.308 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "lv",
+        "sentences": 39,
+        "paras": 13,
+        "heads": 2,
+        "list_items": 0,
+        "mean_len": 13.8,
+        "len_cv": 0.474,
+        "short_share": 0.256,
+        "long_share": 0.0,
+        "para_cv": 0.19,
+        "even_run3": 0.0,
+        "top_end": "slēdzi",
+        "top_end_share": 0.051,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "uzlādes",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.308,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.79,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Uzlādes kaste atradās pie sienas aiz stāvvietas.",
+        "last": "Ja saņemts darbu apturēšanas vai demontāžas pieprasījums, e-pastā birojam var norādīt strīda būtību, mājas noteikumu pun",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "uzlādes",
+          "sentences": [
+            {
+              "text": "Uzlādes kaste atradās pie sienas aiz stāvvietas.",
+              "words": 7
+            },
+            {
+              "text": "Vadi pa griestiem sasniedza kopīgo elektrības sadalni un iedzīvotāja skaitītāju.",
+              "words": 10
+            },
+            {
+              "text": "Tādēļ tiesas pārbaudītais uzstādījums sniedzās ārpus uz grīdas iezīmētās vietas: bija jāvērtē arī tiesības izmantot šos kopīgos elementus.",
+              "words": 18
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "taivānas",
+          "sentences": [
+            {
+              "text": "Taivānas Augstās tiesas Gaosjunas nodaļa lietā 111年度上字第132號 noraidīja iedzīvotāja apelācijas sūdzību.",
+              "words": 11
+            },
+            {
+              "text": "Spriedumu pieņēma 2022. gada 22. jūnijā.",
+              "words": 6
+            },
+            {
+              "text": "Palika spēkā iekārtu demontāža un iepriekšējā stāvokļa atjaunošana, jo vajadzīgā piekrišana kopīgo daļu izmantošanai nebija saņemta.",
+              "words": 16
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "neapstrīdētie",
+          "sentences": [
+            {
+              "text": "Neapstrīdētie apstākļi ietvēra uzlādes kasti, pie griestu piekarēm stiprinātas vadu caurules un sadalnē pievienotu automātisko slēdzi.",
+              "words": 16
+            },
+            {
+              "text": "Savienojums veda līdz iedzīvotāja skaitītājam.",
+              "words": 5
+            },
+            {
+              "text": "Šī savienojuma vieta nemainīja kopīgās sienas, griestu un sadalnes tiesisko statusu.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "daudzdzīvokļu",
+          "sentences": [
+            {
+              "text": "Daudzdzīvokļu māju pārvaldīšanas likuma 11. pants prasa atsevišķo īpašumu īpašnieku sapulces lēmumu kopīgo daļu un saistīto iekārtu demontāžai, būtiskam remontam vai uzlabošanai.",
+              "words": 22
+            },
+            {
+              "text": "Pēc šīs normas tiesa vērtēja darbus.",
+              "words": 6
+            },
+            {
+              "text": "Konkrētās mājas noteikumu 15. punkts papildus prasīja pārvaldības komitejas atļauju jauniem vadiem un caurulēm, kā arī elektrības uzņēmuma drošības pārbaudi.",
+              "words": 20
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "nozīme",
+          "sentences": [
+            {
+              "text": "Nozīme bija abiem pamatiem.",
+              "words": 4
+            },
+            {
+              "text": "Likums noteica īpašnieku sapulces kompetenci, bet mājas noteikumi paredzēja konkrētos uzstādīšanas saskaņojumus.",
+              "words": 12
+            },
+            {
+              "text": "Drošības pārbaude pati par sevi neizšķīra tiesības izmantot attiecīgo sienu vai sadalni.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "tiesa",
+          "sentences": [
+            {
+              "text": "Tiesa sasaistīja likuma un mājas noteikumu pārkāpumu ar 6. panta pirmās daļas 5. punktā paredzēto pienākumu ievērot citas tiesību normas un mājas noteikumus.",
+              "words": 23
+            },
+            {
+              "text": "Pēc komitejas rakstiskā paziņojuma un neveiksmīgā mēģinājuma panākt risinājumu uzstādījums palika vietā, tādēļ turpinātā pārkāpuma dēļ komiteja varēja vērsties tiesā saskaņā ar šā panta trešo daļu.",
+              "words": 26
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "panta",
+          "sentences": [
+            {
+              "text": "Panta pirmās daļas 4. punkts arī skar vadu ierīkošanu un vajadzības gadījumā kopīgo daļu izmantošanu.",
+              "words": 15
+            },
+            {
+              "text": "Tiesa atteicās kvalificēt konkrēto uzstādījumu kā šajā punktā aprakstīto situāciju.",
+              "words": 10
+            },
+            {
+              "text": "Sprieduma piektā un sestā pamatojuma daļa balstās faktiskajās darbu vietās un noteikumos; tās neievieš vienādu balsošanas kārtību visiem stāvvietu lādētājiem.",
+              "words": 20
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "iedzīvotājs",
+          "sentences": [
+            {
+              "text": "Iedzīvotājs apgalvoja, ka pievienojis slēdzi.",
+              "words": 5
+            },
+            {
+              "text": "Viņš arī apgalvoja, ka ierīces lietošana ir pārtraukta un tā ir aizslēgta, un piedāvāja atslēgu komitejai; tiesa secināja, ka pat šo apgalvojumu patiesums neatceltu pārkāpumu radīto demontāžas un atjaunošanas pienākumu.",
+              "words": 30
+            },
+            {
+              "text": "Runa bija arī par tiesībām veikt darbus.",
+              "words": 7
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "vai",
+          "sentences": [
+            {
+              "text": "Vai piedāvājumā uzzīmēts tikai lādētājs vai arī tā savienojums ar mājas tīklu?",
+              "words": 12
+            },
+            {
+              "text": "Plānā var iezīmēt kasti, sienu un griestu šķērsojumus un izmantojamo sadalni, pēc tam salīdzinot katru posmu ar īpašuma dokumentiem, mājas noteikumiem un jau pieņemtajiem lēmumiem.",
+              "words": 25
+            },
+            {
+              "text": "Stāvvietas numurs viens pats šo maršrutu neparāda.",
+              "words": 7
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "komitejai",
+          "sentences": [
+            {
+              "text": "Komitejai iesniedzamajā aprakstā var norādīt darbu apjomu un lūgt paskaidrot piemērojamo mājas noteikumu punktu.",
+              "words": 14
+            },
+            {
+              "text": "Atbildē var precizēt, vai lēmums jāpieņem komitejai vai īpašnieku sapulcei un kādu ziņu vēl trūkst.",
+              "words": 15
+            },
+            {
+              "text": "Agrāku piekrišanu savukārt salīdzina ar tieši plānoto maršrutu, ierīci un nosacījumiem.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "gaosjunas",
+          "sentences": [
+            {
+              "text": "Gaosjunas pilsēta 2026. gada 29. maijā paziņoja par atbalstu, kas aptvēra elektroauto uzlādes kabeļu teknes māju koplietošanas zonās.",
+              "words": 18
+            },
+            {
+              "text": "Oficiālajā paziņojumā pieteikšanās beigas bija noteiktas 30. septembrī, paredzot iespēju pieņemšanu pārtraukt agrāk, ja finansējums izsmelts.",
+              "words": 16
+            },
+            {
+              "text": "Publicētais termiņš ir pagājis.",
+              "words": 4
+            },
+            {
+              "text": "Šis atbalsts neaizstāja piekrišanu kopīgo daļu izmantošanai vai konkrēto darbu atļaušanu.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "uzstādīšanas",
+          "sentences": [
+            {
+              "text": "Uzstādīšanas līgumā var atrunāt, vai darbi sāksies pirms piekrišanas saņemšanas un kā sadalīs izmaksas, ja atļauju nedos.",
+              "words": 17
+            },
+            {
+              "text": "Mainot vadu maršrutu, jāvērtē agrākās piekrišanas tvērums.",
+              "words": 7
+            },
+            {
+              "text": "Tas palīdz nodalīt uzstādītāja maksājuma prasījumu no iedzīvotāja tiesībām izmantot kopīgās daļas.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "ja",
+          "sentences": [
+            {
+              "text": "Ja saņemts darbu apturēšanas vai demontāžas pieprasījums, e-pastā birojam var norādīt strīda būtību, mājas noteikumu punktu un atbildes termiņu.",
+              "words": 20
+            },
+            {
+              "text": "Sprieduma pamatmateriāli pārbaudīti 2026. gada 25. oktobrī, saistītās normas un paziņojums salīdzināti 26. oktobrī.",
+              "words": 14
+            },
+            {
+              "text": "Vēlāki nolēmumi un šā sprieduma galīgums nav apstiprināti; citas mājas izvērtējumā ierīču izvietojums, tiesību apjoms un piekrišana jāsalīdzina ar tās pašas dokumentiem.",
+              "words": 22
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Likums un mājas noteikumi paredzēja dažādus saskaņojumus",
+        "Uzstādītāja plānā redzams viss vadu ceļš"
+      ],
+      "excludedLists": []
+    }
+  ]
+}

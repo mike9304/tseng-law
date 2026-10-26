@@ -1,0 +1,54 @@
+{
+  "at": "2026-10-26T08:11:45.503841+00:00",
+  "scope": "All six images actually opened via tools.view_image earlier in this continuous authoring task; updates the initial input manifest statement that only root observations were then available. No image edited.",
+  "rows": [
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/915-case-trends-20261025.webp",
+      "sha256": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95",
+      "direct_tool": "view_image",
+      "observation": "hard hat, plans, binders and bridge model on a table; no visible person",
+      "target_alt_matches": true,
+      "caption": "Зохиомол дүр зураг"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/916-case-trends-20261025.webp",
+      "sha256": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+      "direct_tool": "view_image",
+      "observation": "soil sample jar, notebook, table and industrial site",
+      "target_alt_matches": true,
+      "caption": "Зохиомол дүр зураг"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/918-case-trends-20261025.webp",
+      "sha256": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+      "direct_tool": "view_image",
+      "observation": "documents/plain envelope and box inside new housing",
+      "target_alt_matches": true,
+      "caption": "Зохиомол дүр зураг"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/919-case-trends-20261025.webp",
+      "sha256": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+      "direct_tool": "view_image",
+      "observation": "round table, folder and three chairs",
+      "target_alt_matches": true,
+      "caption": "Зохиомол дүр зураг"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/920-case-trends-20261025.webp",
+      "sha256": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+      "direct_tool": "view_image",
+      "observation": "mounted EV charger and cable path toward ceiling tray",
+      "target_alt_matches": true,
+      "caption": "Зохиомол дүр зураг"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/921-case-trends-20261025.webp",
+      "sha256": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933",
+      "direct_tool": "view_image",
+      "observation": "controller, laptop with abstract game, tokens and notebook",
+      "target_alt_matches": true,
+      "caption": "Зохиомол дүр зураг"
+    }
+  ]
+}

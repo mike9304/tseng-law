@@ -1,0 +1,462 @@
+{
+  "at": "2026-10-26T17:21:29.051224+09:00",
+  "scope": "Targeted independent closure of five accepted edits; no CLI/network/manuscript mutations",
+  "r1_review": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hu-independent.md",
+    "sha256": "72c85b55bc27d2c3ccb901c355e2934625c52d565e5958dbf341e255ed47f287"
+  },
+  "r1_manifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-independent-manifest.json",
+    "sha256": "2b12807d6a46ba4ea31568fd3d453cfe83033e3d9d23793b7b3f6c1bd47ac8dc"
+  },
+  "author_r2": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hu-author-r2.md",
+    "sha256": "0528471de934e07b474c18b90efcef6d053e4d6405fc49baa22c7bdf561d1982"
+  },
+  "author_r2_manifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-final-manifest-r2.json",
+    "sha256": "a39258c8ec0988a12e2b8377b593a828bd85f994b6142e8407cf521dfef7149a"
+  },
+  "r2_hash_checks": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "6659ae1fc0f21374b23de7592c07db1ea40e59c7d5c098c4576e134ac805887d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "cd2edf272341f53231e55246994f431a59da1f5ea83e7dda16c588a6928859ee"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "44ce1490aeec719f4ec8ae26ec5654368939cfd689f7781f5b1f66d16c951f5e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "1ac72ef840a1bd2b09b0462269afc8ca420cc6208bb99b350b52d91b414efb4a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "a0af0c0413587cf3bff740f7c42ac38f3177d4d7c65eb88d53947166576e4898"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "b1a400ffc4a2aae73c631a3851df2f2d86570beb59c1c18c0decc03ca56f5a09"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hu-author-r2.md",
+      "sha256": "0528471de934e07b474c18b90efcef6d053e4d6405fc49baa22c7bdf561d1982"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hu-author.md",
+      "sha256": "55c57011550bddf540380bec57523347a9c3eeec29f27bdd2731fbbb8bdea35a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-final-manifest.json",
+      "sha256": "c86464785b7223f62c531030be5771c02c8f5b4a0311975bbaa78cb061bcf07c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hu-independent.md",
+      "sha256": "72c85b55bc27d2c3ccb901c355e2934625c52d565e5958dbf341e255ed47f287"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hu-author.md",
+      "sha256": "55c57011550bddf540380bec57523347a9c3eeec29f27bdd2731fbbb8bdea35a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-final-manifest.json",
+      "sha256": "c86464785b7223f62c531030be5771c02c8f5b4a0311975bbaa78cb061bcf07c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hu-independent.md",
+      "sha256": "72c85b55bc27d2c3ccb901c355e2934625c52d565e5958dbf341e255ed47f287"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-independent-manifest.json",
+      "sha256": "2b12807d6a46ba4ea31568fd3d453cfe83033e3d9d23793b7b3f6c1bd47ac8dc"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hu-author-r2.md",
+      "sha256": "0528471de934e07b474c18b90efcef6d053e4d6405fc49baa22c7bdf561d1982"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-review-r1-preserved.json",
+      "sha256": "0130891549f710a35d02b70c2866ed956964e21601c3d1e35a32706a732b5028"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-review-r1-edits.json",
+      "sha256": "ef983d7d166e491f24d6d49f332f290b0cf334e60424a60795941e8635b81f8f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-review-r2-variety.json",
+      "sha256": "c934175e4a8caa0bf20255f9bb5f1f98eb30dee63272dd38921ba7571f714405"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-review-r2-structure-render.json",
+      "sha256": "0650341d6289117a12f5a7a10a87ecf9978a837e0ea7ac303c8ea63e656785c4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-review-r2-integrity.json",
+      "sha256": "98b1495d00ef2209b7324b2801a2eb19f6d4c2a1feadb5fa5e585d2392d2db67"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/hu.json",
+      "sha256": "cef85b13e94e3fd08f23d3aa4fba80ab51c116adf3c7d30cb8e4e59d00b1279b"
+    }
+  ],
+  "all_prior_independent_outputs_unchanged": true,
+  "r1_author_and_manifest_preserved": true,
+  "proposal_exact_replacements": 5,
+  "rows": [
+    {
+      "id": "915",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "old_sha256": "6659ae1fc0f21374b23de7592c07db1ea40e59c7d5c098c4576e134ac805887d",
+      "current_sha256": "6659ae1fc0f21374b23de7592c07db1ea40e59c7d5c098c4576e134ac805887d",
+      "reverse_sha256": "6659ae1fc0f21374b23de7592c07db1ea40e59c7d5c098c4576e134ac805887d",
+      "exact_reverse": true,
+      "matches_preserved_author_old_text": true,
+      "frontmatter_changed_keys": [],
+      "body_byte_identical": true,
+      "URL_sequence_and_digits_unchanged": true,
+      "actual_changed_sentence_array": [],
+      "actual_cli_record_reused": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-variety-final.json",
+      "current_actual_cli_exit": 0,
+      "metrics_reused": {
+        "lang": "hu",
+        "sentences": 34,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 16.5,
+        "len_cv": 0.509,
+        "short_share": 0.176,
+        "long_share": 0.059,
+        "para_cv": 0.172,
+        "even_run3": 0.0,
+        "top_end": "előtt",
+        "top_end_share": 0.059,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "az",
+        "top_opener_n": 2,
+        "opener_rep": 0.083,
+        "consec_same_start": 2,
+        "cite_para_share": 0.167,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 3.2,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Mire vonatkozott a közvetítői testület ajánlása: a teljesítési határidő meghosszabbítására",
+        "last": "Forrásállapot: a bírósági ismertető 2026. október 25-i ellenőrzésére, a hatályos jogszabályok és piaci tájékoztató októb",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_diff": ""
+    },
+    {
+      "id": "916",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "old_sha256": "c9242a25ba5bdd6b37157958ecd9f9ac9e2c06b82fbca3f48e4814cf01d8eb79",
+      "current_sha256": "cd2edf272341f53231e55246994f431a59da1f5ea83e7dda16c588a6928859ee",
+      "reverse_sha256": "c9242a25ba5bdd6b37157958ecd9f9ac9e2c06b82fbca3f48e4814cf01d8eb79",
+      "exact_reverse": true,
+      "matches_preserved_author_old_text": true,
+      "frontmatter_changed_keys": [
+        "faq"
+      ],
+      "body_byte_identical": true,
+      "URL_sequence_and_digits_unchanged": true,
+      "actual_changed_sentence_array": [],
+      "actual_cli_record_reused": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-review-r2-variety.json",
+      "current_actual_cli_exit": 0,
+      "metrics_reused": {
+        "lang": "hu",
+        "sentences": 41,
+        "paras": 14,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 16.0,
+        "len_cv": 0.484,
+        "short_share": 0.22,
+        "long_share": 0.024,
+        "para_cv": 0.151,
+        "even_run3": 0.026,
+        "top_end": "perben",
+        "top_end_share": 0.024,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "a",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.071,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.67,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "A felvásárlás előtt készült környezeti jelentések később az anyavállalatokkal szembeni biz",
+        "last": "Forrásállapot: a bíróság hivatalos magyarázatának ellenőrzése 2026. október 25., a jelenlegi jogszabály és befektetési t",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_diff": "--- R1/916-taiwan-parent-company-pollution-liability-us-investor.md\n+++ R2/916-taiwan-parent-company-pollution-liability-us-investor.md\n@@ -20,7 +20,7 @@\n   - q: \"A Legfelsőbb Bíróság 2018-as döntése lezárta az összes kapcsolódó kártérítési ügyet?\"\n     a: \"Nem. A 246 felperest érintő részeket hatályon kívül helyezte és új eljárásra visszautalta, a 262 felpereshez kapcsolódó jogorvoslatokat pedig elutasította. A döntés az ügy különböző részeiben eltérő eredménnyel járt, és nem zárta le az összes kapcsolódó pert.\"\n   - q: \"Milyen iratokat érdemes megőrizni a környezeti átvilágítás után?\"\n-    a: \"A jelentést és címzettjeinek körét, a további kérdéseket, a dolgozók kitettségéről és a helyreállításról hozott döntéseket, valamint a későbbi vagyonmozgások jóváhagyásait és pénzügyi elemzését. Ezekből értékelhető a tudomás és a magatartás; egy irattár megléte önmagában nem bizonyítja a jogszerűséget.\"\n+    a: \"A jelentést és címzettjeinek körét, a további kérdéseket, a dolgozók vegyi anyagoknak való kitettségéről és a helyreállításról hozott döntéseket, valamint a későbbi vagyonmozgások jóváhagyásait és pénzügyi elemzését. Ezekből értékelhető a tudomás és a magatartás; egy irattár megléte önmagában nem bizonyítja a jogszerűséget.\"\n ---\n \n A felvásárlás előtt készült környezeti jelentések később az anyavállalatokkal szembeni bizonyítékok közé kerültek egy tajvani gyárszennyezési perben. A Legfelsőbb Bíróság a szennyezés ismeretét az üzemi irányítással, a veszélyre adott válasszal és a tajvani társaság vagyonát csökkentő átutalásokkal együtt értékelte. Ezt a kapcsolatot mutatja be a [107年度台上字第267號 ítélet hivatalos magyarázata](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523)."
+    },
+    {
+      "id": "918",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "old_sha256": "ce4b8197e98d3772df2f907550e4c33f2fc9798faf39cd56e2c4835516c7f362",
+      "current_sha256": "44ce1490aeec719f4ec8ae26ec5654368939cfd689f7781f5b1f66d16c951f5e",
+      "reverse_sha256": "ce4b8197e98d3772df2f907550e4c33f2fc9798faf39cd56e2c4835516c7f362",
+      "exact_reverse": true,
+      "matches_preserved_author_old_text": true,
+      "frontmatter_changed_keys": [],
+      "body_byte_identical": false,
+      "URL_sequence_and_digits_unchanged": true,
+      "actual_changed_sentence_array": [
+        {
+          "index": 4,
+          "before": "2022. február 9-én a Tajvani Felsőbíróság Taichungi Tanácsa elutasította az építtető fellebbezését és utólag előterjesztett keresetét a 109年度上易字第289號 ügyben.",
+          "after": "2022. február 9-én a Tajvani Felsőbíróság taichungi kirendeltsége elutasította az építtető fellebbezését és utólag előterjesztett keresetét a 109年度上易字第289號 ügyben."
+        }
+      ],
+      "actual_cli_record_reused": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-review-r2-variety.json",
+      "current_actual_cli_exit": 0,
+      "metrics_reused": {
+        "lang": "hu",
+        "sentences": 37,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 16.3,
+        "len_cv": 0.484,
+        "short_share": 0.216,
+        "long_share": 0.054,
+        "para_cv": 0.201,
+        "even_run3": 0.029,
+        "top_end": "oldalon",
+        "top_end_share": 0.054,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "a",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.32,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "A februári levél a lakáshitel intézéséről szólt, miközben az új lakásban még nem volt bekö",
+        "last": "Forrásállapot: a jogszabályok és hivatalos tájékoztatók 2026. október 26-i ellenőrzése, a megjelölt ítéleti oldalakra tá",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_diff": "--- R1/918-taiwan-presale-mortgage-notice-handover-judgment.md\n+++ R2/918-taiwan-presale-mortgage-notice-handover-judgment.md\n@@ -25,7 +25,7 @@\n \n A februári levél a lakáshitel intézéséről szólt, miközben az új lakásban még nem volt bekötve a víz és az áram. Hónapokkal később a vevő bejuthatott felújítani és takarítani, de a bíróság ebből sem állapította meg a szerződésszerű átadást. A levelet és a bejutás engedélyét a lakás állapotával együtt vizsgálta a [fogyasztóvédelmi hatóság gyűjteményében közölt ítélet](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), a nyomtatott oldalszámozás szerinti 173–187. oldalon.\n \n-2022\\. február 9-én a Tajvani Felsőbíróság Taichungi Tanácsa elutasította az építtető fellebbezését és utólag előterjesztett keresetét a 109年度上易字第289號 ügyben. Fennmaradt a késedelmi kamat megfizetésének kötelezettsége. Az ítélet szerint további fellebbezésnek nem volt helye.\n+2022\\. február 9-én a Tajvani Felsőbíróság taichungi kirendeltsége elutasította az építtető fellebbezését és utólag előterjesztett keresetét a 109年度上易字第289號 ügyben. Fennmaradt a késedelmi kamat megfizetésének kötelezettsége. Az ítélet szerint további fellebbezésnek nem volt helye.\n \n ## Mit kért a levél, és mire volt kész a lakás?\n "
+    },
+    {
+      "id": "919",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "old_sha256": "1ac72ef840a1bd2b09b0462269afc8ca420cc6208bb99b350b52d91b414efb4a",
+      "current_sha256": "1ac72ef840a1bd2b09b0462269afc8ca420cc6208bb99b350b52d91b414efb4a",
+      "reverse_sha256": "1ac72ef840a1bd2b09b0462269afc8ca420cc6208bb99b350b52d91b414efb4a",
+      "exact_reverse": true,
+      "matches_preserved_author_old_text": true,
+      "frontmatter_changed_keys": [],
+      "body_byte_identical": true,
+      "URL_sequence_and_digits_unchanged": true,
+      "actual_changed_sentence_array": [],
+      "actual_cli_record_reused": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-variety-final.json",
+      "current_actual_cli_exit": 0,
+      "metrics_reused": {
+        "lang": "hu",
+        "sentences": 35,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 16.4,
+        "len_cv": 0.479,
+        "short_share": 0.143,
+        "long_share": 0.086,
+        "para_cv": 0.217,
+        "even_run3": 0.061,
+        "top_end": "alapján",
+        "top_end_share": 0.086,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "megsemmisítette",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 2,
+        "cite_para_share": 0.231,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.27,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Megsemmisítette a bíróság egy tajvani közszolgálati vezető elbocsátását és az azt fenntart",
+        "last": "Forrásállapot: a bírósági közlemény 2026. október 25-i, a hatályos szabályok október 26-i ellenőrzése alapján. Későbbi f",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_diff": ""
+    },
+    {
+      "id": "920",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "old_sha256": "b2d8445a1c180c179672919a6f0eb5a5278ede6c2d518ca4009f6d960143ed5e",
+      "current_sha256": "a0af0c0413587cf3bff740f7c42ac38f3177d4d7c65eb88d53947166576e4898",
+      "reverse_sha256": "b2d8445a1c180c179672919a6f0eb5a5278ede6c2d518ca4009f6d960143ed5e",
+      "exact_reverse": true,
+      "matches_preserved_author_old_text": true,
+      "frontmatter_changed_keys": [],
+      "body_byte_identical": false,
+      "URL_sequence_and_digits_unchanged": true,
+      "actual_changed_sentence_array": [
+        {
+          "index": 2,
+          "before": "Egy tajvani lakó a beálló mögötti falra szerelt töltőszekrényt, majd a mennyezet felől a közös elektromos szekrényhez és a hozzá tartozó mérőórához vezette a kábeleket.",
+          "after": "Egy tajvani lakó a beálló mögötti falra szerelt töltőszekrényt, majd a mennyezet felől a közös elektromos szekrényhez és a lakó mérőórájához vezette a kábeleket."
+        },
+        {
+          "index": 4,
+          "before": "2022. június 22-én a Tajvani Felsőbíróság Kaohsiungi Tanácsa elutasította a lakó fellebbezését a 111年度上字第132號 ügyben.",
+          "after": "2022. június 22-én a Tajvani Felsőbíróság kaohsiungi kirendeltsége elutasította a lakó fellebbezését a 111年度上字第132號 ügyben."
+        }
+      ],
+      "actual_cli_record_reused": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-review-r2-variety.json",
+      "current_actual_cli_exit": 0,
+      "metrics_reused": {
+        "lang": "hu",
+        "sentences": 35,
+        "paras": 12,
+        "heads": 2,
+        "list_items": 0,
+        "mean_len": 16.1,
+        "len_cv": 0.48,
+        "short_share": 0.286,
+        "long_share": 0.029,
+        "para_cv": 0.145,
+        "even_run3": 0.061,
+        "top_end": "munkát",
+        "top_end_share": 0.057,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "meddig",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 2,
+        "cite_para_share": 0.333,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.02,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Meddig terjed a parkolóhely kizárólagos használata, ha a töltő vezetéke a közös mennyezete",
+        "last": "Forrásállapot: az ítélet 2026. október 25-i, a jelenlegi jogszabályok és a városi közlemény október 26-i ellenőrzése. Ké",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_diff": "--- R1/920-taiwan-apartment-ev-charger-common-area-judgment.md\n+++ R2/920-taiwan-apartment-ev-charger-common-area-judgment.md\n@@ -23,9 +23,9 @@\n     a: \"Nem. A támogatás feltételeit és a közös részek használatának eljárását külön kell kezelni. Az ismertetett 2026-os kaohsiungi program a közös területek töltési kábeltálcáira is kiterjedt, de a meghirdetett szeptember 30-i benyújtási határidő már eltelt. A program önmagában nem jogosítja fel a lakót a közös részeken végzett munkára.\"\n ---\n \n-Meddig terjed a parkolóhely kizárólagos használata, ha a töltő vezetéke a közös mennyezeten halad? Egy tajvani lakó a beálló mögötti falra szerelt töltőszekrényt, majd a mennyezet felől a közös elektromos szekrényhez és a hozzá tartozó mérőórához vezette a kábeleket. A [közzétett ítélet](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1) ezért a felfestett parkolóhelyen túli területeket is vizsgálta.\n+Meddig terjed a parkolóhely kizárólagos használata, ha a töltő vezetéke a közös mennyezeten halad? Egy tajvani lakó a beálló mögötti falra szerelt töltőszekrényt, majd a mennyezet felől a közös elektromos szekrényhez és a lakó mérőórájához vezette a kábeleket. A [közzétett ítélet](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1) ezért a felfestett parkolóhelyen túli területeket is vizsgálta.\n \n-2022\\. június 22-én a Tajvani Felsőbíróság Kaohsiungi Tanácsa elutasította a lakó fellebbezését a 111年度上字第132號 ügyben. A leszerelési és helyreállítási kötelezettség fennmaradt. A bíróság szerint az érintett közös falhoz, mennyezethez és elektromos szekrényhez szükséges előzetes hozzájárulás hiányzott.\n+2022\\. június 22-én a Tajvani Felsőbíróság kaohsiungi kirendeltsége elutasította a lakó fellebbezését a 111年度上字第132號 ügyben. A leszerelési és helyreállítási kötelezettség fennmaradt. A bíróság szerint az érintett közös falhoz, mennyezethez és elektromos szekrényhez szükséges előzetes hozzájárulás hiányzott.\n \n ## A szerelés túlnyúlt a beállón\n \n@@ -53,6 +53,6 @@\n \n ## Hivatalos források\n \n-- [Tajvani Felsőbíróság, Kaohsiungi Tanács: 111年度上字第132號 polgári ítélet](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1), 2022. június 22.\n+- [Tajvani Felsőbíróság, kaohsiungi kirendeltség: 111年度上字第132號 polgári ítélet](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1), 2022. június 22.\n - Társasház-kezelési szabályozás: [6. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6) és [11. cikk](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11).\n - [Kaohsiung: támogatás a társasházi közös területek töltési kábeltálcáihoz](https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE), 2026. május 29.; a meghirdetett benyújtási határidő eltelt."
+    },
+    {
+      "id": "921",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/921-taiwan-online-game-coins-refund-judgment.md",
+      "old_sha256": "b1a400ffc4a2aae73c631a3851df2f2d86570beb59c1c18c0decc03ca56f5a09",
+      "current_sha256": "b1a400ffc4a2aae73c631a3851df2f2d86570beb59c1c18c0decc03ca56f5a09",
+      "reverse_sha256": "b1a400ffc4a2aae73c631a3851df2f2d86570beb59c1c18c0decc03ca56f5a09",
+      "exact_reverse": true,
+      "matches_preserved_author_old_text": true,
+      "frontmatter_changed_keys": [],
+      "body_byte_identical": true,
+      "URL_sequence_and_digits_unchanged": true,
+      "actual_changed_sentence_array": [],
+      "actual_cli_record_reused": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-variety-final.json",
+      "current_actual_cli_exit": 0,
+      "metrics_reused": {
+        "lang": "hu",
+        "sentences": 41,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.6,
+        "len_cv": 0.518,
+        "short_share": 0.22,
+        "long_share": 0.024,
+        "para_cv": 0.196,
+        "even_run3": 0.026,
+        "top_end": "szerint",
+        "top_end_share": 0.073,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "243",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 2,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.12,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "243 548 tajvani dollárt kért egy játékos a számláján megmaradt aranyérmék ellenértékeként.",
+        "last": "Forrásállapot: a megjelölt ítéleti oldalak, a hatályos feltételek és hivatalos tájékoztatók 2026. október 26-i ellenőrzé",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_diff": ""
+    }
+  ],
+  "unchanged_sentences": 220,
+  "changed_sentences": 3,
+  "structure_errors_reused": 0,
+  "mandatory_open": [],
+  "optional_open": [],
+  "semantic_result": "M01/O01/O02 closed; no new mandatory finding",
+  "new_cli_invocations": 0,
+  "errors": []
+}

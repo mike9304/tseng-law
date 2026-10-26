@@ -1,0 +1,1174 @@
+{
+  "checker_root": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate",
+  "module_sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+  "fixture_sha256": "894f994ea8ab8bd320c04b43b3b96aded0518db85b0cf073a15d7357f5083940",
+  "rows": [
+    {
+      "id": "two-days-und",
+      "kind": "date-continuation",
+      "space": "' '",
+      "text": "Die Bibliothek öffnet am 7. und 8. November. Danach bleibt sie geschlossen.",
+      "expected": [
+        "Die Bibliothek öffnet am 7. und 8. November.",
+        "Danach bleibt sie geschlossen."
+      ],
+      "direct": [
+        "Die Bibliothek öffnet am 7. und 8. November.",
+        "Danach bleibt sie geschlossen."
+      ],
+      "pipeline": [
+        "Die Bibliothek öffnet am 7. und 8. November.",
+        "Danach bleibt sie geschlossen."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "two-days-und",
+      "kind": "date-continuation",
+      "space": "'\\xa0'",
+      "text": "Die Bibliothek öffnet am 7. und 8. November. Danach bleibt sie geschlossen.",
+      "expected": [
+        "Die Bibliothek öffnet am 7. und 8. November.",
+        "Danach bleibt sie geschlossen."
+      ],
+      "direct": [
+        "Die Bibliothek öffnet am 7. und 8. November.",
+        "Danach bleibt sie geschlossen."
+      ],
+      "pipeline": [
+        "Die Bibliothek öffnet am 7. und 8. November.",
+        "Danach bleibt sie geschlossen."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "two-days-und",
+      "kind": "date-continuation",
+      "space": "'\\u202f'",
+      "text": "Die Bibliothek öffnet am 7. und 8. November. Danach bleibt sie geschlossen.",
+      "expected": [
+        "Die Bibliothek öffnet am 7. und 8. November.",
+        "Danach bleibt sie geschlossen."
+      ],
+      "direct": [
+        "Die Bibliothek öffnet am 7. und 8. November.",
+        "Danach bleibt sie geschlossen."
+      ],
+      "pipeline": [
+        "Die Bibliothek öffnet am 7. und 8. November.",
+        "Danach bleibt sie geschlossen."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "alternative-oder",
+      "kind": "date-continuation",
+      "space": "' '",
+      "text": "Die Probe findet am 12. oder 13. März statt. Der Saal ist reserviert.",
+      "expected": [
+        "Die Probe findet am 12. oder 13. März statt.",
+        "Der Saal ist reserviert."
+      ],
+      "direct": [
+        "Die Probe findet am 12. oder 13. März statt.",
+        "Der Saal ist reserviert."
+      ],
+      "pipeline": [
+        "Die Probe findet am 12. oder 13. März statt.",
+        "Der Saal ist reserviert."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "alternative-oder",
+      "kind": "date-continuation",
+      "space": "'\\xa0'",
+      "text": "Die Probe findet am 12. oder 13. März statt. Der Saal ist reserviert.",
+      "expected": [
+        "Die Probe findet am 12. oder 13. März statt.",
+        "Der Saal ist reserviert."
+      ],
+      "direct": [
+        "Die Probe findet am 12. oder 13. März statt.",
+        "Der Saal ist reserviert."
+      ],
+      "pipeline": [
+        "Die Probe findet am 12. oder 13. März statt.",
+        "Der Saal ist reserviert."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "alternative-oder",
+      "kind": "date-continuation",
+      "space": "'\\u202f'",
+      "text": "Die Probe findet am 12. oder 13. März statt. Der Saal ist reserviert.",
+      "expected": [
+        "Die Probe findet am 12. oder 13. März statt.",
+        "Der Saal ist reserviert."
+      ],
+      "direct": [
+        "Die Probe findet am 12. oder 13. März statt.",
+        "Der Saal ist reserviert."
+      ],
+      "pipeline": [
+        "Die Probe findet am 12. oder 13. März statt.",
+        "Der Saal ist reserviert."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "range-bis",
+      "kind": "date-continuation",
+      "space": "' '",
+      "text": "Die Ausstellung läuft vom 2. bis 4. Juli. Der Eintritt ist frei.",
+      "expected": [
+        "Die Ausstellung läuft vom 2. bis 4. Juli.",
+        "Der Eintritt ist frei."
+      ],
+      "direct": [
+        "Die Ausstellung läuft vom 2. bis 4. Juli.",
+        "Der Eintritt ist frei."
+      ],
+      "pipeline": [
+        "Die Ausstellung läuft vom 2. bis 4. Juli.",
+        "Der Eintritt ist frei."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "range-bis",
+      "kind": "date-continuation",
+      "space": "'\\xa0'",
+      "text": "Die Ausstellung läuft vom 2. bis 4. Juli. Der Eintritt ist frei.",
+      "expected": [
+        "Die Ausstellung läuft vom 2. bis 4. Juli.",
+        "Der Eintritt ist frei."
+      ],
+      "direct": [
+        "Die Ausstellung läuft vom 2. bis 4. Juli.",
+        "Der Eintritt ist frei."
+      ],
+      "pipeline": [
+        "Die Ausstellung läuft vom 2. bis 4. Juli.",
+        "Der Eintritt ist frei."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "range-bis",
+      "kind": "date-continuation",
+      "space": "'\\u202f'",
+      "text": "Die Ausstellung läuft vom 2. bis 4. Juli. Der Eintritt ist frei.",
+      "expected": [
+        "Die Ausstellung läuft vom 2. bis 4. Juli.",
+        "Der Eintritt ist frei."
+      ],
+      "direct": [
+        "Die Ausstellung läuft vom 2. bis 4. Juli.",
+        "Der Eintritt ist frei."
+      ],
+      "pipeline": [
+        "Die Ausstellung läuft vom 2. bis 4. Juli.",
+        "Der Eintritt ist frei."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "list-with-comma",
+      "kind": "date-continuation",
+      "space": "' '",
+      "text": "Am 2., 3. und 4. April lesen wir die Briefe. Die Kopien bleiben hier.",
+      "expected": [
+        "Am 2., 3. und 4. April lesen wir die Briefe.",
+        "Die Kopien bleiben hier."
+      ],
+      "direct": [
+        "Am 2., 3. und 4. April lesen wir die Briefe.",
+        "Die Kopien bleiben hier."
+      ],
+      "pipeline": [
+        "Am 2., 3. und 4. April lesen wir die Briefe.",
+        "Die Kopien bleiben hier."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "list-with-comma",
+      "kind": "date-continuation",
+      "space": "'\\xa0'",
+      "text": "Am 2., 3. und 4. April lesen wir die Briefe. Die Kopien bleiben hier.",
+      "expected": [
+        "Am 2., 3. und 4. April lesen wir die Briefe.",
+        "Die Kopien bleiben hier."
+      ],
+      "direct": [
+        "Am 2., 3. und 4. April lesen wir die Briefe.",
+        "Die Kopien bleiben hier."
+      ],
+      "pipeline": [
+        "Am 2., 3. und 4. April lesen wir die Briefe.",
+        "Die Kopien bleiben hier."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "list-with-comma",
+      "kind": "date-continuation",
+      "space": "'\\u202f'",
+      "text": "Am 2., 3. und 4. April lesen wir die Briefe. Die Kopien bleiben hier.",
+      "expected": [
+        "Am 2., 3. und 4. April lesen wir die Briefe.",
+        "Die Kopien bleiben hier."
+      ],
+      "direct": [
+        "Am 2., 3. und 4. April lesen wir die Briefe.",
+        "Die Kopien bleiben hier."
+      ],
+      "pipeline": [
+        "Am 2., 3. und 4. April lesen wir die Briefe.",
+        "Die Kopien bleiben hier."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "mid-sentence-comma",
+      "kind": "date-continuation",
+      "space": "' '",
+      "text": "Am 4. und 5. Juni, jeweils morgens, wird der Garten geöffnet. Danach wird das Tor geschlossen.",
+      "expected": [
+        "Am 4. und 5. Juni, jeweils morgens, wird der Garten geöffnet.",
+        "Danach wird das Tor geschlossen."
+      ],
+      "direct": [
+        "Am 4. und 5. Juni, jeweils morgens, wird der Garten geöffnet.",
+        "Danach wird das Tor geschlossen."
+      ],
+      "pipeline": [
+        "Am 4. und 5. Juni, jeweils morgens, wird der Garten geöffnet.",
+        "Danach wird das Tor geschlossen."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "mid-sentence-comma",
+      "kind": "date-continuation",
+      "space": "'\\xa0'",
+      "text": "Am 4. und 5. Juni, jeweils morgens, wird der Garten geöffnet. Danach wird das Tor geschlossen.",
+      "expected": [
+        "Am 4. und 5. Juni, jeweils morgens, wird der Garten geöffnet.",
+        "Danach wird das Tor geschlossen."
+      ],
+      "direct": [
+        "Am 4. und 5. Juni, jeweils morgens, wird der Garten geöffnet.",
+        "Danach wird das Tor geschlossen."
+      ],
+      "pipeline": [
+        "Am 4. und 5. Juni, jeweils morgens, wird der Garten geöffnet.",
+        "Danach wird das Tor geschlossen."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "mid-sentence-comma",
+      "kind": "date-continuation",
+      "space": "'\\u202f'",
+      "text": "Am 4. und 5. Juni, jeweils morgens, wird der Garten geöffnet. Danach wird das Tor geschlossen.",
+      "expected": [
+        "Am 4. und 5. Juni, jeweils morgens, wird der Garten geöffnet.",
+        "Danach wird das Tor geschlossen."
+      ],
+      "direct": [
+        "Am 4. und 5. Juni, jeweils morgens, wird der Garten geöffnet.",
+        "Danach wird das Tor geschlossen."
+      ],
+      "pipeline": [
+        "Am 4. und 5. Juni, jeweils morgens, wird der Garten geöffnet.",
+        "Danach wird das Tor geschlossen."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "year-supplied",
+      "kind": "date-continuation",
+      "space": "' '",
+      "text": "Die Treffen sind am 9. und 10. September 2027 geplant. Die Einladung folgt später.",
+      "expected": [
+        "Die Treffen sind am 9. und 10. September 2027 geplant.",
+        "Die Einladung folgt später."
+      ],
+      "direct": [
+        "Die Treffen sind am 9. und 10. September 2027 geplant.",
+        "Die Einladung folgt später."
+      ],
+      "pipeline": [
+        "Die Treffen sind am 9. und 10. September 2027 geplant.",
+        "Die Einladung folgt später."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "year-supplied",
+      "kind": "date-continuation",
+      "space": "'\\xa0'",
+      "text": "Die Treffen sind am 9. und 10. September 2027 geplant. Die Einladung folgt später.",
+      "expected": [
+        "Die Treffen sind am 9. und 10. September 2027 geplant.",
+        "Die Einladung folgt später."
+      ],
+      "direct": [
+        "Die Treffen sind am 9. und 10. September 2027 geplant.",
+        "Die Einladung folgt später."
+      ],
+      "pipeline": [
+        "Die Treffen sind am 9. und 10. September 2027 geplant.",
+        "Die Einladung folgt später."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "year-supplied",
+      "kind": "date-continuation",
+      "space": "'\\u202f'",
+      "text": "Die Treffen sind am 9. und 10. September 2027 geplant. Die Einladung folgt später.",
+      "expected": [
+        "Die Treffen sind am 9. und 10. September 2027 geplant.",
+        "Die Einladung folgt später."
+      ],
+      "direct": [
+        "Die Treffen sind am 9. und 10. September 2027 geplant.",
+        "Die Einladung folgt später."
+      ],
+      "pipeline": [
+        "Die Treffen sind am 9. und 10. September 2027 geplant.",
+        "Die Einladung folgt später."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "named-dates-in-quotation",
+      "kind": "date-continuation",
+      "space": "' '",
+      "text": "„Am 6. und 7. Dezember ist geöffnet“, schrieb die Bibliothek. Die Antwort liegt bei.",
+      "expected": [
+        "„Am 6. und 7. Dezember ist geöffnet“, schrieb die Bibliothek.",
+        "Die Antwort liegt bei."
+      ],
+      "direct": [
+        "„Am 6. und 7. Dezember ist geöffnet“, schrieb die Bibliothek.",
+        "Die Antwort liegt bei."
+      ],
+      "pipeline": [
+        "„Am 6. und 7. Dezember ist geöffnet“, schrieb die Bibliothek.",
+        "Die Antwort liegt bei."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "named-dates-in-quotation",
+      "kind": "date-continuation",
+      "space": "'\\xa0'",
+      "text": "„Am 6. und 7. Dezember ist geöffnet“, schrieb die Bibliothek. Die Antwort liegt bei.",
+      "expected": [
+        "„Am 6. und 7. Dezember ist geöffnet“, schrieb die Bibliothek.",
+        "Die Antwort liegt bei."
+      ],
+      "direct": [
+        "„Am 6. und 7. Dezember ist geöffnet“, schrieb die Bibliothek.",
+        "Die Antwort liegt bei."
+      ],
+      "pipeline": [
+        "„Am 6. und 7. Dezember ist geöffnet“, schrieb die Bibliothek.",
+        "Die Antwort liegt bei."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "named-dates-in-quotation",
+      "kind": "date-continuation",
+      "space": "'\\u202f'",
+      "text": "„Am 6. und 7. Dezember ist geöffnet“, schrieb die Bibliothek. Die Antwort liegt bei.",
+      "expected": [
+        "„Am 6. und 7. Dezember ist geöffnet“, schrieb die Bibliothek.",
+        "Die Antwort liegt bei."
+      ],
+      "direct": [
+        "„Am 6. und 7. Dezember ist geöffnet“, schrieb die Bibliothek.",
+        "Die Antwort liegt bei."
+      ],
+      "pipeline": [
+        "„Am 6. und 7. Dezember ist geöffnet“, schrieb die Bibliothek.",
+        "Die Antwort liegt bei."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "multiple-und",
+      "kind": "date-continuation",
+      "space": "' '",
+      "text": "Die Uhr wird am 1. und 2. und 3. Januar geprüft. Sie bleibt im Labor.",
+      "expected": [
+        "Die Uhr wird am 1. und 2. und 3. Januar geprüft.",
+        "Sie bleibt im Labor."
+      ],
+      "direct": [
+        "Die Uhr wird am 1. und 2. und 3. Januar geprüft.",
+        "Sie bleibt im Labor."
+      ],
+      "pipeline": [
+        "Die Uhr wird am 1. und 2. und 3. Januar geprüft.",
+        "Sie bleibt im Labor."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "multiple-und",
+      "kind": "date-continuation",
+      "space": "'\\xa0'",
+      "text": "Die Uhr wird am 1. und 2. und 3. Januar geprüft. Sie bleibt im Labor.",
+      "expected": [
+        "Die Uhr wird am 1. und 2. und 3. Januar geprüft.",
+        "Sie bleibt im Labor."
+      ],
+      "direct": [
+        "Die Uhr wird am 1. und 2. und 3. Januar geprüft.",
+        "Sie bleibt im Labor."
+      ],
+      "pipeline": [
+        "Die Uhr wird am 1. und 2. und 3. Januar geprüft.",
+        "Sie bleibt im Labor."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "multiple-und",
+      "kind": "date-continuation",
+      "space": "'\\u202f'",
+      "text": "Die Uhr wird am 1. und 2. und 3. Januar geprüft. Sie bleibt im Labor.",
+      "expected": [
+        "Die Uhr wird am 1. und 2. und 3. Januar geprüft.",
+        "Sie bleibt im Labor."
+      ],
+      "direct": [
+        "Die Uhr wird am 1. und 2. und 3. Januar geprüft.",
+        "Sie bleibt im Labor."
+      ],
+      "pipeline": [
+        "Die Uhr wird am 1. und 2. und 3. Januar geprüft.",
+        "Sie bleibt im Labor."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "compact-dash",
+      "kind": "existing-date-control",
+      "space": "' '",
+      "text": "Terminfenster: 8.–10. August. Danach folgt eine Pause.",
+      "expected": [
+        "Terminfenster: 8.–10. August.",
+        "Danach folgt eine Pause."
+      ],
+      "direct": [
+        "Terminfenster: 8.–10. August.",
+        "Danach folgt eine Pause."
+      ],
+      "pipeline": [
+        "Terminfenster: 8.–10. August.",
+        "Danach folgt eine Pause."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "compact-dash",
+      "kind": "existing-date-control",
+      "space": "'\\xa0'",
+      "text": "Terminfenster: 8.–10. August. Danach folgt eine Pause.",
+      "expected": [
+        "Terminfenster: 8.–10. August.",
+        "Danach folgt eine Pause."
+      ],
+      "direct": [
+        "Terminfenster: 8.–10. August.",
+        "Danach folgt eine Pause."
+      ],
+      "pipeline": [
+        "Terminfenster: 8.–10. August.",
+        "Danach folgt eine Pause."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "compact-dash",
+      "kind": "existing-date-control",
+      "space": "'\\u202f'",
+      "text": "Terminfenster: 8.–10. August. Danach folgt eine Pause.",
+      "expected": [
+        "Terminfenster: 8.–10. August.",
+        "Danach folgt eine Pause."
+      ],
+      "direct": [
+        "Terminfenster: 8.–10. August.",
+        "Danach folgt eine Pause."
+      ],
+      "pipeline": [
+        "Terminfenster: 8.–10. August.",
+        "Danach folgt eine Pause."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "numeric-date",
+      "kind": "existing-date-control",
+      "space": "' '",
+      "text": "Die Tür öffnet am 07.11.2027. Der Schlüssel liegt bereit.",
+      "expected": [
+        "Die Tür öffnet am 07.11.2027.",
+        "Der Schlüssel liegt bereit."
+      ],
+      "direct": [
+        "Die Tür öffnet am 07.11.2027.",
+        "Der Schlüssel liegt bereit."
+      ],
+      "pipeline": [
+        "Die Tür öffnet am 07.11.2027.",
+        "Der Schlüssel liegt bereit."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "numeric-date",
+      "kind": "existing-date-control",
+      "space": "'\\xa0'",
+      "text": "Die Tür öffnet am 07.11.2027. Der Schlüssel liegt bereit.",
+      "expected": [
+        "Die Tür öffnet am 07.11.2027.",
+        "Der Schlüssel liegt bereit."
+      ],
+      "direct": [
+        "Die Tür öffnet am 07.11.2027.",
+        "Der Schlüssel liegt bereit."
+      ],
+      "pipeline": [
+        "Die Tür öffnet am 07.11.2027.",
+        "Der Schlüssel liegt bereit."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "numeric-date",
+      "kind": "existing-date-control",
+      "space": "'\\u202f'",
+      "text": "Die Tür öffnet am 07.11.2027. Der Schlüssel liegt bereit.",
+      "expected": [
+        "Die Tür öffnet am 07.11.2027.",
+        "Der Schlüssel liegt bereit."
+      ],
+      "direct": [
+        "Die Tür öffnet am 07.11.2027.",
+        "Der Schlüssel liegt bereit."
+      ],
+      "pipeline": [
+        "Die Tür öffnet am 07.11.2027.",
+        "Der Schlüssel liegt bereit."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "two-complete-dates",
+      "kind": "existing-date-control",
+      "space": "' '",
+      "text": "Am 30. September und 1. Oktober lesen wir die Karten. Danach werden sie abgelegt.",
+      "expected": [
+        "Am 30. September und 1. Oktober lesen wir die Karten.",
+        "Danach werden sie abgelegt."
+      ],
+      "direct": [
+        "Am 30. September und 1. Oktober lesen wir die Karten.",
+        "Danach werden sie abgelegt."
+      ],
+      "pipeline": [
+        "Am 30. September und 1. Oktober lesen wir die Karten.",
+        "Danach werden sie abgelegt."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "two-complete-dates",
+      "kind": "existing-date-control",
+      "space": "'\\xa0'",
+      "text": "Am 30. September und 1. Oktober lesen wir die Karten. Danach werden sie abgelegt.",
+      "expected": [
+        "Am 30. September und 1. Oktober lesen wir die Karten.",
+        "Danach werden sie abgelegt."
+      ],
+      "direct": [
+        "Am 30. September und 1. Oktober lesen wir die Karten.",
+        "Danach werden sie abgelegt."
+      ],
+      "pipeline": [
+        "Am 30. September und 1. Oktober lesen wir die Karten.",
+        "Danach werden sie abgelegt."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "two-complete-dates",
+      "kind": "existing-date-control",
+      "space": "'\\u202f'",
+      "text": "Am 30. September und 1. Oktober lesen wir die Karten. Danach werden sie abgelegt.",
+      "expected": [
+        "Am 30. September und 1. Oktober lesen wir die Karten.",
+        "Danach werden sie abgelegt."
+      ],
+      "direct": [
+        "Am 30. September und 1. Oktober lesen wir die Karten.",
+        "Danach werden sie abgelegt."
+      ],
+      "pipeline": [
+        "Am 30. September und 1. Oktober lesen wir die Karten.",
+        "Danach werden sie abgelegt."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "ordinary-ordinal-end",
+      "kind": "sentence-end",
+      "space": "' '",
+      "text": "Er wurde 7. Die Siegerehrung begann.",
+      "expected": [
+        "Er wurde 7.",
+        "Die Siegerehrung begann."
+      ],
+      "direct": [
+        "Er wurde 7.",
+        "Die Siegerehrung begann."
+      ],
+      "pipeline": [
+        "Er wurde 7.",
+        "Die Siegerehrung begann."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "ordinary-ordinal-end",
+      "kind": "sentence-end",
+      "space": "'\\xa0'",
+      "text": "Er wurde 7. Die Siegerehrung begann.",
+      "expected": [
+        "Er wurde 7.",
+        "Die Siegerehrung begann."
+      ],
+      "direct": [
+        "Er wurde 7.",
+        "Die Siegerehrung begann."
+      ],
+      "pipeline": [
+        "Er wurde 7.",
+        "Die Siegerehrung begann."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "ordinary-ordinal-end",
+      "kind": "sentence-end",
+      "space": "'\\u202f'",
+      "text": "Er wurde 7. Die Siegerehrung begann.",
+      "expected": [
+        "Er wurde 7.",
+        "Die Siegerehrung begann."
+      ],
+      "direct": [
+        "Er wurde 7.",
+        "Die Siegerehrung begann."
+      ],
+      "pipeline": [
+        "Er wurde 7.",
+        "Die Siegerehrung begann."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "day-at-end",
+      "kind": "sentence-end",
+      "space": "' '",
+      "text": "Sie blieb bis zum 7. Dann fuhr sie ab.",
+      "expected": [
+        "Sie blieb bis zum 7.",
+        "Dann fuhr sie ab."
+      ],
+      "direct": [
+        "Sie blieb bis zum 7.",
+        "Dann fuhr sie ab."
+      ],
+      "pipeline": [
+        "Sie blieb bis zum 7.",
+        "Dann fuhr sie ab."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "day-at-end",
+      "kind": "sentence-end",
+      "space": "'\\xa0'",
+      "text": "Sie blieb bis zum 7. Dann fuhr sie ab.",
+      "expected": [
+        "Sie blieb bis zum 7.",
+        "Dann fuhr sie ab."
+      ],
+      "direct": [
+        "Sie blieb bis zum 7.",
+        "Dann fuhr sie ab."
+      ],
+      "pipeline": [
+        "Sie blieb bis zum 7.",
+        "Dann fuhr sie ab."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "day-at-end",
+      "kind": "sentence-end",
+      "space": "'\\u202f'",
+      "text": "Sie blieb bis zum 7. Dann fuhr sie ab.",
+      "expected": [
+        "Sie blieb bis zum 7.",
+        "Dann fuhr sie ab."
+      ],
+      "direct": [
+        "Sie blieb bis zum 7.",
+        "Dann fuhr sie ab."
+      ],
+      "pipeline": [
+        "Sie blieb bis zum 7.",
+        "Dann fuhr sie ab."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "year-end",
+      "kind": "sentence-end",
+      "space": "' '",
+      "text": "Die Mappe stammt aus dem Jahr 2027. Im März kam eine Kopie hinzu.",
+      "expected": [
+        "Die Mappe stammt aus dem Jahr 2027.",
+        "Im März kam eine Kopie hinzu."
+      ],
+      "direct": [
+        "Die Mappe stammt aus dem Jahr 2027.",
+        "Im März kam eine Kopie hinzu."
+      ],
+      "pipeline": [
+        "Die Mappe stammt aus dem Jahr 2027.",
+        "Im März kam eine Kopie hinzu."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "year-end",
+      "kind": "sentence-end",
+      "space": "'\\xa0'",
+      "text": "Die Mappe stammt aus dem Jahr 2027. Im März kam eine Kopie hinzu.",
+      "expected": [
+        "Die Mappe stammt aus dem Jahr 2027.",
+        "Im März kam eine Kopie hinzu."
+      ],
+      "direct": [
+        "Die Mappe stammt aus dem Jahr 2027.",
+        "Im März kam eine Kopie hinzu."
+      ],
+      "pipeline": [
+        "Die Mappe stammt aus dem Jahr 2027.",
+        "Im März kam eine Kopie hinzu."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "year-end",
+      "kind": "sentence-end",
+      "space": "'\\u202f'",
+      "text": "Die Mappe stammt aus dem Jahr 2027. Im März kam eine Kopie hinzu.",
+      "expected": [
+        "Die Mappe stammt aus dem Jahr 2027.",
+        "Im März kam eine Kopie hinzu."
+      ],
+      "direct": [
+        "Die Mappe stammt aus dem Jahr 2027.",
+        "Im März kam eine Kopie hinzu."
+      ],
+      "pipeline": [
+        "Die Mappe stammt aus dem Jahr 2027.",
+        "Im März kam eine Kopie hinzu."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "uppercase-und-month",
+      "kind": "sentence-end",
+      "space": "' '",
+      "text": "Ihr Eintrag lautete: 7. Und 8. Mai war bereits ausgebucht.",
+      "expected": [
+        "Ihr Eintrag lautete: 7.",
+        "Und 8. Mai war bereits ausgebucht."
+      ],
+      "direct": [
+        "Ihr Eintrag lautete: 7.",
+        "Und 8. Mai war bereits ausgebucht."
+      ],
+      "pipeline": [
+        "Ihr Eintrag lautete: 7.",
+        "Und 8. Mai war bereits ausgebucht."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "uppercase-und-month",
+      "kind": "sentence-end",
+      "space": "'\\xa0'",
+      "text": "Ihr Eintrag lautete: 7. Und 8. Mai war bereits ausgebucht.",
+      "expected": [
+        "Ihr Eintrag lautete: 7.",
+        "Und 8. Mai war bereits ausgebucht."
+      ],
+      "direct": [
+        "Ihr Eintrag lautete: 7.",
+        "Und 8. Mai war bereits ausgebucht."
+      ],
+      "pipeline": [
+        "Ihr Eintrag lautete: 7.",
+        "Und 8. Mai war bereits ausgebucht."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "uppercase-und-month",
+      "kind": "sentence-end",
+      "space": "'\\u202f'",
+      "text": "Ihr Eintrag lautete: 7. Und 8. Mai war bereits ausgebucht.",
+      "expected": [
+        "Ihr Eintrag lautete: 7.",
+        "Und 8. Mai war bereits ausgebucht."
+      ],
+      "direct": [
+        "Ihr Eintrag lautete: 7.",
+        "Und 8. Mai war bereits ausgebucht."
+      ],
+      "pipeline": [
+        "Ihr Eintrag lautete: 7.",
+        "Und 8. Mai war bereits ausgebucht."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "uppercase-oder-month",
+      "kind": "sentence-end",
+      "space": "' '",
+      "text": "Auf dem Zettel stand nur 7. Oder 8. Juni war gemeint.",
+      "expected": [
+        "Auf dem Zettel stand nur 7.",
+        "Oder 8. Juni war gemeint."
+      ],
+      "direct": [
+        "Auf dem Zettel stand nur 7.",
+        "Oder 8. Juni war gemeint."
+      ],
+      "pipeline": [
+        "Auf dem Zettel stand nur 7.",
+        "Oder 8. Juni war gemeint."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "uppercase-oder-month",
+      "kind": "sentence-end",
+      "space": "'\\xa0'",
+      "text": "Auf dem Zettel stand nur 7. Oder 8. Juni war gemeint.",
+      "expected": [
+        "Auf dem Zettel stand nur 7.",
+        "Oder 8. Juni war gemeint."
+      ],
+      "direct": [
+        "Auf dem Zettel stand nur 7.",
+        "Oder 8. Juni war gemeint."
+      ],
+      "pipeline": [
+        "Auf dem Zettel stand nur 7.",
+        "Oder 8. Juni war gemeint."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "uppercase-oder-month",
+      "kind": "sentence-end",
+      "space": "'\\u202f'",
+      "text": "Auf dem Zettel stand nur 7. Oder 8. Juni war gemeint.",
+      "expected": [
+        "Auf dem Zettel stand nur 7.",
+        "Oder 8. Juni war gemeint."
+      ],
+      "direct": [
+        "Auf dem Zettel stand nur 7.",
+        "Oder 8. Juni war gemeint."
+      ],
+      "pipeline": [
+        "Auf dem Zettel stand nur 7.",
+        "Oder 8. Juni war gemeint."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "uppercase-und-other-noun",
+      "kind": "sentence-end",
+      "space": "' '",
+      "text": "Die Hausnummer ist 7. Und 8 Gäste warten.",
+      "expected": [
+        "Die Hausnummer ist 7.",
+        "Und 8 Gäste warten."
+      ],
+      "direct": [
+        "Die Hausnummer ist 7.",
+        "Und 8 Gäste warten."
+      ],
+      "pipeline": [
+        "Die Hausnummer ist 7.",
+        "Und 8 Gäste warten."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "uppercase-und-other-noun",
+      "kind": "sentence-end",
+      "space": "'\\xa0'",
+      "text": "Die Hausnummer ist 7. Und 8 Gäste warten.",
+      "expected": [
+        "Die Hausnummer ist 7.",
+        "Und 8 Gäste warten."
+      ],
+      "direct": [
+        "Die Hausnummer ist 7.",
+        "Und 8 Gäste warten."
+      ],
+      "pipeline": [
+        "Die Hausnummer ist 7.",
+        "Und 8 Gäste warten."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "uppercase-und-other-noun",
+      "kind": "sentence-end",
+      "space": "'\\u202f'",
+      "text": "Die Hausnummer ist 7. Und 8 Gäste warten.",
+      "expected": [
+        "Die Hausnummer ist 7.",
+        "Und 8 Gäste warten."
+      ],
+      "direct": [
+        "Die Hausnummer ist 7.",
+        "Und 8 Gäste warten."
+      ],
+      "pipeline": [
+        "Die Hausnummer ist 7.",
+        "Und 8 Gäste warten."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "month-word-inside-next-sentence",
+      "kind": "sentence-end",
+      "space": "' '",
+      "text": "Es blieb bei 7. Im Mai wurden die Bücher gezählt.",
+      "expected": [
+        "Es blieb bei 7.",
+        "Im Mai wurden die Bücher gezählt."
+      ],
+      "direct": [
+        "Es blieb bei 7.",
+        "Im Mai wurden die Bücher gezählt."
+      ],
+      "pipeline": [
+        "Es blieb bei 7.",
+        "Im Mai wurden die Bücher gezählt."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "month-word-inside-next-sentence",
+      "kind": "sentence-end",
+      "space": "'\\xa0'",
+      "text": "Es blieb bei 7. Im Mai wurden die Bücher gezählt.",
+      "expected": [
+        "Es blieb bei 7.",
+        "Im Mai wurden die Bücher gezählt."
+      ],
+      "direct": [
+        "Es blieb bei 7.",
+        "Im Mai wurden die Bücher gezählt."
+      ],
+      "pipeline": [
+        "Es blieb bei 7.",
+        "Im Mai wurden die Bücher gezählt."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "month-word-inside-next-sentence",
+      "kind": "sentence-end",
+      "space": "'\\u202f'",
+      "text": "Es blieb bei 7. Im Mai wurden die Bücher gezählt.",
+      "expected": [
+        "Es blieb bei 7.",
+        "Im Mai wurden die Bücher gezählt."
+      ],
+      "direct": [
+        "Es blieb bei 7.",
+        "Im Mai wurden die Bücher gezählt."
+      ],
+      "pipeline": [
+        "Es blieb bei 7.",
+        "Im Mai wurden die Bücher gezählt."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "ordinary-period-after-number",
+      "kind": "sentence-end",
+      "space": "' '",
+      "text": "Die Antwort lautet 7. Sie nennt außerdem den 8. Oktober.",
+      "expected": [
+        "Die Antwort lautet 7.",
+        "Sie nennt außerdem den 8. Oktober."
+      ],
+      "direct": [
+        "Die Antwort lautet 7.",
+        "Sie nennt außerdem den 8. Oktober."
+      ],
+      "pipeline": [
+        "Die Antwort lautet 7.",
+        "Sie nennt außerdem den 8. Oktober."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "ordinary-period-after-number",
+      "kind": "sentence-end",
+      "space": "'\\xa0'",
+      "text": "Die Antwort lautet 7. Sie nennt außerdem den 8. Oktober.",
+      "expected": [
+        "Die Antwort lautet 7.",
+        "Sie nennt außerdem den 8. Oktober."
+      ],
+      "direct": [
+        "Die Antwort lautet 7.",
+        "Sie nennt außerdem den 8. Oktober."
+      ],
+      "pipeline": [
+        "Die Antwort lautet 7.",
+        "Sie nennt außerdem den 8. Oktober."
+      ],
+      "literal_slices": true,
+      "pass": true
+    },
+    {
+      "id": "ordinary-period-after-number",
+      "kind": "sentence-end",
+      "space": "'\\u202f'",
+      "text": "Die Antwort lautet 7. Sie nennt außerdem den 8. Oktober.",
+      "expected": [
+        "Die Antwort lautet 7.",
+        "Sie nennt außerdem den 8. Oktober."
+      ],
+      "direct": [
+        "Die Antwort lautet 7.",
+        "Sie nennt außerdem den 8. Oktober."
+      ],
+      "pipeline": [
+        "Die Antwort lautet 7.",
+        "Sie nennt außerdem den 8. Oktober."
+      ],
+      "literal_slices": true,
+      "pass": true
+    }
+  ],
+  "body_pipeline": {
+    "expected": [
+      "Die Bibliothek öffnet am 7. und 8. November.",
+      "Danach bleibt sie geschlossen.",
+      "Die Probe findet am 12. oder 13. März statt.",
+      "Der Saal ist reserviert.",
+      "Die Ausstellung läuft vom 2. bis 4. Juli.",
+      "Der Eintritt ist frei."
+    ],
+    "actual": [
+      "Die Bibliothek öffnet am 7. und 8. November.",
+      "Danach bleibt sie geschlossen.",
+      "Die Probe findet am 12. oder 13. März statt.",
+      "Der Saal ist reserviert.",
+      "Die Ausstellung läuft vom 2. bis 4. Juli.",
+      "Der Eintritt ist frei."
+    ],
+    "paragraphs": 3,
+    "pass": true
+  },
+  "summary": {
+    "literal_cases": 19,
+    "space_variants": 57,
+    "passed": 57,
+    "failed": 0,
+    "body_pipeline_pass": true
+  }
+}

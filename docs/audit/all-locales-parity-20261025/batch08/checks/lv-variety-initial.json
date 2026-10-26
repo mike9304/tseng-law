@@ -1,0 +1,1853 @@
+{
+  "checkedAt": "2026-10-26T06:55:59.545962+00:00",
+  "phase": "initial",
+  "locale": "lv",
+  "checkerInputs": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/lv.json",
+      "sha256": "09dc74f01e20b3430b1bf00c1e9ae4c2b941e081505e63cd4f9d86fb8fdb836e"
+    }
+  ],
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "7788c3d6594e7b8680cb30d31cc29cbdd5a92f07a40e0caf14a4c9d918c65eb6",
+      "bytes": 7870,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "--lang",
+        "lv"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/915-taiwan-public-contract-mediation-arbitration-same-claim.md [lv] sentences=38 mean=12.7 cv=0.511 short=0.342 run3=0.056 opener_rep=0.0 cite_end=0.0 cite_para=0.167 contrast=0 caveat=1 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "lv",
+        "sentences": 38,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 12.7,
+        "len_cv": 0.511,
+        "short_share": 0.342,
+        "long_share": 0.0,
+        "para_cv": 0.3,
+        "even_run3": 0.056,
+        "top_end": "šķīrējtiesā",
+        "top_end_share": 0.053,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "44",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.167,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 1,
+        "questions": 1,
+        "num_per100": 3.31,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "44 417 150 Taivānas jauno dolāru bija slimnīcas būvniekam piešķirtā summa šķīrējtiesā.",
+        "last": "Pirmajā ziņā, kas nosūtīta caur biroja kontaktlapu angļu valodā, var norādīt projekta veidu, prasīto rezultātu un nākamo",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "44",
+          "sentences": [
+            {
+              "text": "44 417 150 Taivānas jauno dolāru bija slimnīcas būvniekam piešķirtā summa šķīrējtiesā.",
+              "words": 12
+            },
+            {
+              "text": "Tomēr šis spriedums tika atcelts.",
+              "words": 5
+            },
+            {
+              "text": "Būvnieks bija saņēmis mediācijas ieteikumu par papildu laiku, pēc tam šķīrējtiesā pieprasījis naudu, par kuru ieteikuma nebija.",
+              "words": 17
+            },
+            {
+              "text": "Šo trūkumu izceļ Taivānas Augstākās tiesas skaidrojums lietā 106年度台上字第723號.",
+              "words": 9
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "kasācijas",
+          "sentences": [
+            {
+              "text": "Kasācijas sūdzību tiesa noraidīja 2017. gada 12. jūlijā.",
+              "words": 8
+            },
+            {
+              "text": "Sprieduma atcelšana palika spēkā.",
+              "words": 4
+            },
+            {
+              "text": "Oficiālajā skaidrojumā norādīts, ka lieta ir noslēgusies galīgi: konkrētajam naudas strīdam nebija ne pušu vienošanās par šķīrējtiesu, ne likumā paredzētās piekrišanas pamata.",
+              "words": 22
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "prasījuma",
+          "sentences": [
+            {
+              "text": "Prasījuma gaita atklāj, kāpēc nepietika ar izziņu par neveiksmīgu mediāciju:",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "pasūtītājam",
+          "sentences": [
+            {
+              "text": "Pasūtītājam bija jābūt iespējai piekrist vai nepiekrist ieteikumam tieši par attiecīgo strīdu.",
+              "words": 12
+            },
+            {
+              "text": "To paskaidro tiesas argumentācija.",
+              "words": 4
+            },
+            {
+              "text": "Augstākā tiesa laboja zemākās instances pamatojumu par piemērojamo likuma redakciju, taču saglabāja šķīrējtiesas sprieduma atcelšanas rezultātu.",
+              "words": 16
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "vai",
+          "sentences": [
+            {
+              "text": "Vai komisija izskatīja to pašu maksājuma prasījumu, kuru tagad gatavojas iesniegt šķīrējtiesā?",
+              "words": 12
+            },
+            {
+              "text": "To palīdz noskaidrot pieteikums, tā grozījumi, ieteikums vai priekšlikums un pasūtītāja atbilde.",
+              "words": 12
+            },
+            {
+              "text": "Projekta numurs vien to neizskaidro.",
+              "words": 5
+            },
+            {
+              "text": "Viens būvdarbu kavējums var izraisīt gan vajadzību pēc papildu laika, gan papildu izmaksas, bet procedūras dokumentos nozīme ir arī tam, kādu rezultātu puse lūgusi.",
+              "words": 24
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "saskaņā",
+          "sentences": [
+            {
+              "text": "Saskaņā ar Publisko iepirkumu likuma 85-1. pantu neatrisinātu līguma izpildes strīdu var nodot mediācijai iepirkumu sūdzību izskatīšanas komisijā.",
+              "words": 19
+            },
+            {
+              "text": "Pasūtītājs nedrīkst atteikt piegādātāja pieteikto mediāciju.",
+              "words": 6
+            },
+            {
+              "text": "Būvdarbu vai tehnisko pakalpojumu strīdā komisijai jāsniedz ieteikums vai priekšlikums; ja mediācija neizdodas pasūtītāja nepiekrišanas dēļ, tas nedrīkst atteikt piegādātāja prasīto strīda nodošanu šķīrējtiesai.",
+              "words": 24
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "nosacījumi",
+          "sentences": [
+            {
+              "text": "Nosacījumi darbojas kopā.",
+              "words": 3
+            },
+            {
+              "text": "Slimnīcas lietā tiesa konstatēja gan pušu šķīrējtiesas vienošanās trūkumu, gan nepietiekamu pamatu likumā paredzētajai piekrišanai attiecībā uz konkrēto naudas prasījumu.",
+              "words": 20
+            },
+            {
+              "text": "Sprieduma atcelšanai izmantoja šķīrējtiesas vienošanās neesamības pamatu, kas paredzēts Šķīrējtiesu likuma 40. panta pirmās daļas 2. punktā.",
+              "words": 17
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "līguma",
+          "sentences": [
+            {
+              "text": "Līguma veids var mainīt izvērtējumu.",
+              "words": 5
+            },
+            {
+              "text": "Katrs iekārtu pirkums vai cits publiskā sektora līgums automātiski neietilpst būvdarbu vai tehnisko pakalpojumu kategorijā.",
+              "words": 15
+            },
+            {
+              "text": "Savukārt pašā līgumā jau var būt atsevišķa šķīrējtiesas klauzula.",
+              "words": 9
+            },
+            {
+              "text": "Tās saturs un tvērums jāpārbauda līdzās likuma procedūrai.",
+              "words": 8
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "summas",
+          "sentences": [
+            {
+              "text": "Summas precizēšana ne vienmēr rada jaunu strīdu.",
+              "words": 7
+            },
+            {
+              "text": "Tas pats attiecas uz juridiskā argumenta pilnveidošanu.",
+              "words": 7
+            },
+            {
+              "text": "Aprakstītā lieta attiecās uz dokumentētu pāreju starp naudas atlīdzību un termiņa pagarinājumu; no tās neizriet vispārējs aizliegums grozīt jebkuru prasījumu.",
+              "words": 20
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "asv",
+          "sentences": [
+            {
+              "text": "ASV Starptautiskās tirdzniecības administrācijas ITA Taivānas enerģētikas pārskatā aprakstīti elektroenerģijas ražošanas un tīklu iepirkumi, kas plānoti 2026. gada beigās un 2027. gadā.",
+              "words": 22
+            },
+            {
+              "text": "Pārskats aplūko arī ASV piegādātāju iespējas.",
+              "words": 6
+            },
+            {
+              "text": "Tās ir ieceres.",
+              "words": 3
+            },
+            {
+              "text": "Publikācija neapstiprina konkrēta konkursa atvēršanu, uzņēmuma kvalifikāciju vai nākamā līguma atbilstību minētajai būvdarbu un tehnisko pakalpojumu procedūrai.",
+              "words": 17
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "piedāvājuma",
+          "sentences": [
+            {
+              "text": "Piedāvājuma sagatavošanas laikā strīdu risināšanas klauzulu var lasīt kopā ar iepirkuma kategoriju un darbu aprakstu.",
+              "words": 15
+            },
+            {
+              "text": "Jau notiekošā projektā noder dokumenti, kuros redzams, kad termiņa pagarinājuma lūgumam pievienojās naudas prasījums un uz ko otra puse atbildēja.",
+              "words": 20
+            },
+            {
+              "text": "Tas ļauj izvērtēt arī atsevišķas vienošanās vai papildu mediācijas nepieciešamību.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "pirmajā",
+          "sentences": [
+            {
+              "text": "Pirmajā ziņā, kas nosūtīta caur biroja kontaktlapu angļu valodā, var norādīt projekta veidu, prasīto rezultātu un nākamo procedūras datumu.",
+              "words": 19
+            },
+            {
+              "text": "Lietas skaidrojums balstās uz 2026. gada 25. oktobrī pārbaudīto tiesas publikāciju; spēkā esošie noteikumi un tirgus pārskats salīdzināti 26. oktobrī.",
+              "words": 20
+            },
+            {
+              "text": "Cita līguma strīda forumu un iesniegšanas termiņus nevar noteikt tikai pēc šā sprieduma: vērtēšanai vajadzīga pieteikumu, grozījumu un atbilžu secība.",
+              "words": 20
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Mediācijas dokumentos mainījās prasītais rezultāts",
+        "Likuma paredzētajai piekrišanai ir kopīgi nosacījumi",
+        "Enerģētikas projekti un līguma pārskatīšana"
+      ],
+      "excludedLists": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "2c1aaac63715a0a8275f88ad6b9ab91bb5adfdbba639f7d18ed4e7121a36e650",
+      "bytes": 9211,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "--lang",
+        "lv"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/916-taiwan-parent-company-pollution-liability-us-investor.md [lv] sentences=44 mean=13.7 cv=0.498 short=0.25 run3=0.048 opener_rep=0.0 cite_end=0.0 cite_para=0.067 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "lv",
+        "sentences": 44,
+        "paras": 15,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 13.7,
+        "len_cv": 0.498,
+        "short_share": 0.25,
+        "long_share": 0.0,
+        "para_cv": 0.221,
+        "even_run3": 0.048,
+        "top_end": "personas",
+        "top_end_share": 0.045,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "kas",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.067,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.83,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Kas notika pēc tam, kad uzņēmumu grupa saņēma ziņojumu par rūpnīcas piesārņojumu?",
+        "last": "Sākotnējā ziņā caur biroja kontaktlapu angļu valodā var aprakstīt darījumu, Taivānas uzņēmumu un plānoto pārveduma vai d",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "kas",
+          "sentences": [
+            {
+              "text": "Kas notika pēc tam, kad uzņēmumu grupa saņēma ziņojumu par rūpnīcas piesārņojumu?",
+              "words": 12
+            },
+            {
+              "text": "Taivānas elektronikas ražotāja darbinieku lietā izpēte pirms uzņēmuma iegādes kļuva par pierādījumu pret mātesuzņēmumiem.",
+              "words": 14
+            },
+            {
+              "text": "Augstākās tiesas skaidrojums lietā 107年度台上字第267號 saista zināšanas par piesārņojumu ar kontroli, reakciju uz apdraudējumu un darījumiem, kas samazināja Taivānas uzņēmuma aktīvus.",
+              "words": 21
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "spriedumu",
+          "sentences": [
+            {
+              "text": "Spriedumu pieņēma 2018. gada 16. augustā.",
+              "words": 6
+            },
+            {
+              "text": "Strīds attiecās uz rūpnīcas darbinieku pakļautību ķīmisko vielu iedarbībai un uzņēmumu, kuri kontrolēja ražotāju, atbildību.",
+              "words": 15
+            },
+            {
+              "text": "Ar ārvalsts investora līdzdalību vien nepietika.",
+              "words": 6
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "tiesas",
+          "sentences": [
+            {
+              "text": "Tiesas oficiālajā skaidrojumā aplūkota piesārņojuma atklāšana vides izpētē, kontrolējošo grupu informētība, problēmas nenovēršana un darbinieku neinformēšana, kā arī kapitāla samazināšana un naudas pārvedumi uz ārvalstīm nolūkā izvairīties no saistībām.",
+              "words": 29
+            },
+            {
+              "text": "Tiesa atbalstīja pamatojumu, kas ļāva attiecīgās prasības vērst pret kontrolējošajiem uzņēmumiem, lai gan tie bija atsevišķas juridiskas personas.",
+              "words": 18
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "saņēmēju",
+          "sentences": [
+            {
+              "text": "Saņēmēju saraksts var parādīt, kurš zināja par apdraudējumu.",
+              "words": 8
+            },
+            {
+              "text": "Valdes materiāli un darba organizācijas norādījumi palīdz noskaidrot, kurš varēja lemt par reakciju.",
+              "words": 13
+            },
+            {
+              "text": "Vēlāko pārvedumu apstiprinājumi papildina šo secību.",
+              "words": 6
+            },
+            {
+              "text": "Vienas grupas lēmumi var būt izkaisīti vairākās dokumentu mapēs.",
+              "words": 9
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "kurš",
+          "sentences": [
+            {
+              "text": "Kurš pasūtīja papildu izpēti, un kā tās rezultāti ietekmēja darbinieku aizsardzību vai piesārņojuma novēršanu?",
+              "words": 14
+            },
+            {
+              "text": "Iegādes izvērtējumā atbildēm var pievienot attiecīgos lēmumus un atbildīgās personas.",
+              "words": 10
+            },
+            {
+              "text": "Neatbildētie jautājumi jāatstāj redzami.",
+              "words": 4
+            },
+            {
+              "text": "Optimistisks darījuma noslēguma pārskats nedrīkst aizstāt sākotnējos tehniskos konstatējumus vai pasākumus, kas bija paredzēti to risināšanai.",
+              "words": 16
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "šāda",
+          "sentences": [
+            {
+              "text": "Šāda dokumentu salīdzināšana ir praktiska izvērtēšanas metode.",
+              "words": 7
+            },
+            {
+              "text": "Tā neaizstāj apdraudējuma prasīto rīcību un pati par sevi neapliecina darījuma tiesiskumu.",
+              "words": 12
+            },
+            {
+              "text": "Saglabāts ziņojums rāda, kāda informācija bija pieejama; uzņēmuma reakciju atklāj turpmākie notikumi.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "attiecībā",
+          "sentences": [
+            {
+              "text": "Attiecībā uz 246 prasītājiem tiesa atcēla sprieduma daļas un nodeva tās jaunai izskatīšanai.",
+              "words": 13
+            },
+            {
+              "text": "Kasācijas sūdzības par 262 prasītājiem noraidīja.",
+              "words": 6
+            },
+            {
+              "text": "Tiesas iznākuma kopsavilkums saista lietas daļu nodošanu atpakaļ arī ar trūkumiem kaitējuma, pierādījumu un pilnvarojuma celt prasības izvērtēšanā.",
+              "words": 18
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "jauna",
+          "sentences": [
+            {
+              "text": "Jauna izskatīšana atstāja attiecīgos jautājumus atvērtus.",
+              "words": 6
+            },
+            {
+              "text": "Šis lēmums nenozīmēja, ka visiem cietušajiem trūkst prasījuma, un pārējo kasācijas sūdzību noraidīšana neizbeidza visu plašāko tiesvedību.",
+              "words": 17
+            },
+            {
+              "text": "Iepriekšējo notikumu riska aprēķinam jānoskaidro, par kuru procesu un kuru tā stadiju ir runa.",
+              "words": 14
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "vienas",
+          "sentences": [
+            {
+              "text": "Vienas tiesas sēdes vai sprieduma datums nepasaka iespējamo saistību summu.",
+              "words": 10
+            },
+            {
+              "text": "Vērtējumu var mainīt prasītāju grupas, atsevišķās sprieduma daļas un vēlākas tiesvedības.",
+              "words": 11
+            },
+            {
+              "text": "Šeit aplūkots konkrētais nolēmums, nevis atjaunota visas rūpnīcas strīdu vēsture.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "taivānas",
+          "sentences": [
+            {
+              "text": "Taivānas Uzņēmumu likuma 154. pants parasti ierobežo akcionāra atbildību ar samaksu par akcijām.",
+              "words": 13
+            },
+            {
+              "text": "Otrās daļas izņēmums prasa sabiedrības juridiskās personības ļaunprātīgu izmantošanu, kuras dēļ sabiedrībai rodas konkrēts parāds ar acīmredzamām atmaksas grūtībām, turklāt apstākļiem jābūt tik smagiem, ka nepieciešama akcionāra atbildība.",
+              "words": 28
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "šie",
+          "sentences": [
+            {
+              "text": "Šie priekšnoteikumi ir kumulatīvi.",
+              "words": 4
+            },
+            {
+              "text": "Līdzdalība uzņēmumā, nesamaksāts parāds vai piesārņojuma konstatējums atsevišķi neaptver visu likuma pārbaudi.",
+              "words": 12
+            },
+            {
+              "text": "Spēkā esošo pantu arī nevar pasniegt kā vienīgo pamatojumu vēsturiskās rīcības vērtējumam aprakstītajā lietā: tiesa analizēja kontrolējošo uzņēmumu rīcību un pamatu atkāpties no atsevišķas juridiskās personības aizsardzības.",
+              "words": 27
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "par",
+          "sentences": [
+            {
+              "text": "Par parasto uzņēmumu struktūras atšķirību var lasīt meitasuzņēmuma un filiāles salīdzinājumā.",
+              "words": 11
+            },
+            {
+              "text": "Piesārņojuma strīdā ar reģistrācijas dokumentiem nepietiek, lai noskaidrotu, kā grupa izmantoja kontroli pēc tam, kad uzzināja par apdraudējumu.",
+              "words": 18
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "asv",
+          "sentences": [
+            {
+              "text": "ASV tirdzniecības pārstāvja USTR 2026. gada februāra faktu lapā aprakstīta abu pušu iecere veicināt pārrobežu ieguldījumus.",
+              "words": 16
+            },
+            {
+              "text": "Tajā paredzēts, ka ASV atbilstošos gadījumos apsvērs finansējuma atbalstu ieguldījumiem Taivānas kritiskajās nozarēs kopā ar ASV privātajiem partneriem un saskaņā ar piemērojamiem tiesību aktiem.",
+              "words": 24
+            },
+            {
+              "text": "Tā nav automātiska finansējuma piešķiršana investoram.",
+              "words": 6
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "pirms",
+          "sentences": [
+            {
+              "text": "Pirms peļņas sadales, kapitāla samazināšanas vai līdzekļu pārveduma, izbeidzot ieguldījumu, lēmuma pieņēmēji var salīdzināt konstatētos riskus, neatrisinātās prasības un resursus, kas paliks Taivānas uzņēmumā.",
+              "words": 24
+            },
+            {
+              "text": "Izvērtējumam jāattiecas uz konkrēto darījumu.",
+              "words": 5
+            },
+            {
+              "text": "Dokumenta nosaukums vai neizlasīts ziņojums datu telpā vēl nepierāda, kā reaģēts uz atklāto problēmu.",
+              "words": 14
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "opener": "sākotnējā",
+          "sentences": [
+            {
+              "text": "Sākotnējā ziņā caur biroja kontaktlapu angļu valodā var aprakstīt darījumu, Taivānas uzņēmumu un plānoto pārveduma vai darījuma noslēgšanas dienu.",
+              "words": 19
+            },
+            {
+              "text": "Sensitīvu darbinieku informāciju un tehniskos ziņojumus var nodot pēc atsevišķas vienošanās par piegādes veidu.",
+              "words": 14
+            },
+            {
+              "text": "Tiesas skaidrojums pārbaudīts 2026. gada 25. oktobrī, bet pašreizējais likums un politikas materiāls salīdzināti 26. oktobrī; konkrēta investora atbildības vērtējumam paliek vajadzīgi sākotnējie konstatējumi, turpmākie lēmumi un aktīvu pārvedumu apstiprinājumi.",
+              "words": 30
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Ziņojuma saņēmēji un viņu turpmākie lēmumi",
+        "Prasītāju grupām bija atšķirīgs procesuālais iznākums",
+        "Atbildības izņēmumam nepietiek ar vienu pazīmi",
+        "Ieguldījumu plāni un līdzekļi, kas paliek uzņēmumā"
+      ],
+      "excludedLists": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "9435794819327cd5e19a00b77963848c004b2a69a7a0d18a9cc48e256b32208f",
+      "bytes": 8338,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "--lang",
+        "lv"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/918-taiwan-presale-mortgage-notice-handover-judgment.md [lv] sentences=42 mean=12.4 cv=0.451 short=0.357 run3=0.025 opener_rep=0.083 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "lv",
+        "sentences": 42,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 12.4,
+        "len_cv": 0.451,
+        "short_share": 0.357,
+        "long_share": 0.0,
+        "para_cv": 0.194,
+        "even_run3": 0.025,
+        "top_end": "nodošanu",
+        "top_end_share": 0.095,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "taivānas",
+        "top_opener_n": 2,
+        "opener_rep": 0.083,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.04,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Vēstulē pircējam lūdza sazināties ar banku un paziņot, kā virzās mājokļa kredīta kārtošana",
+        "last": "Ja jau prasīts līgumsods vai kavējuma procenti, ziņā birojam var īsi norādīt apstrīdēto punktu, paziņojuma dienu un atbi",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "vēstulē",
+          "sentences": [
+            {
+              "text": "Vēstulē pircējam lūdza sazināties ar banku un paziņot, kā virzās mājokļa kredīta kārtošana.",
+              "words": 13
+            },
+            {
+              "text": "Par gatavību lietošanai tajā nebija teikts.",
+              "words": 6
+            },
+            {
+              "text": "Mājoklim tobrīd vēl nebija ūdens un elektrības pieslēguma, un vēlāk atļautā piekļuve remontam tiesai nepierādīja līgumā paredzēto nodošanu.",
+              "words": 18
+            },
+            {
+              "text": "Lietas materiāli atrodami Taivānas patērētāju aizsardzības iestādes spriedumu krājuma drukātajās 173.–187. lappusēs.",
+              "words": 13
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "taivānas",
+          "sentences": [
+            {
+              "text": "Taivānas Augstās tiesas Taidžunas nodaļa izskatīja lietu 109年度上易字第289號.",
+              "words": 8
+            },
+            {
+              "text": "Attīstītāja apelācijas sūdzību un papildu prasību tiesa noraidīja 2022. gada 9. februārī, saglabājot pienākumu maksāt kavējuma procentus.",
+              "words": 17
+            },
+            {
+              "text": "Spriedumā norādīts, ka tas nav pārsūdzams.",
+              "words": 6
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "vēstule",
+          "sentences": [
+            {
+              "text": "Vēstule bija datēta ar 2019. gada 23. februāri.",
+              "words": 8
+            },
+            {
+              "text": "Tā attiecās uz bankas procedūru.",
+              "words": 5
+            },
+            {
+              "text": "Ūdeni un elektrību pieslēdza vēlāk, bet jūlija sākotnējās apskates laikā joprojām bija labojami defekti un lifta uzstādīšana nebija pabeigta.",
+              "words": 19
+            },
+            {
+              "text": "Šo apstākļu dēļ tiesa nepieņēma attīstītāja argumentu, ka par nodošanu jau esot paziņots.",
+              "words": 13
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "augustā",
+          "sentences": [
+            {
+              "text": "Augustā parakstītā piekrišana ļāva pircējam iekļūt mājoklī iekšdarbiem un uzkopšanai.",
+              "words": 10
+            },
+            {
+              "text": "Tiesa to salīdzināja ar remontdarbu stāvokli un neatzina piekļuvi par līgumam atbilstošu nodošanu.",
+              "words": 13
+            },
+            {
+              "text": "Bankas līdzekļi attīstītāja kontā nonāca 5. novembrī.",
+              "words": 7
+            },
+            {
+              "text": "Garantijas dokumentā nodošanas datums bija 28. novembris.",
+              "words": 7
+            },
+            {
+              "text": "Pierādījumi aplūkoti sprieduma ceturtajā pamatojuma daļā, drukātajās 182.–186. lappusēs.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "kura",
+          "sentences": [
+            {
+              "text": "Kura saistība bija izpildīta, kad banka pārskaitīja naudu?",
+              "words": 8
+            },
+            {
+              "text": "Tiesa atsevišķi pārbaudīja kreditēšanu, maksājumus un nodošanu.",
+              "words": 7
+            },
+            {
+              "text": "Attīstītājs apgalvoja, ka pēc vēstules saņemšanas pircējam vajadzēja samaksāt visu cenu, taču maksājumu grafiks rādīja paredzēto iemaksu veikšanu un pilnu samaksu pirms nodošanas.",
+              "words": 23
+            },
+            {
+              "text": "Maksājumu pārkāpuma argumentu tiesa noraidīja.",
+              "words": 5
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "lietā",
+          "sentences": [
+            {
+              "text": "Lietā piemērotais līgums paredzēja paziņošanu četru mēnešu laikā no lietošanas atļaujas saņemšanas.",
+              "words": 12
+            },
+            {
+              "text": "Pašreizējo būvējamu mājokļu pārdošanas obligāto tipveida noteikumu 15. punkts paredz sešus mēnešus no tā paša sākuma notikuma.",
+              "words": 17
+            },
+            {
+              "text": "Tas ir termiņš paziņojumam par nodošanu.",
+              "words": 6
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "nodošanas",
+          "sentences": [
+            {
+              "text": "Nodošanas posmā noteikumi paredz arī defektu novēršanu, norēķinus un dokumentu izsniegšanu.",
+              "words": 11
+            },
+            {
+              "text": "Tādēļ viena mēnešu skaita pārrakstīšana no sveša sprieduma neatbild uz konkrētā pircēja jautājumu.",
+              "words": 13
+            },
+            {
+              "text": "Līguma redakciju un tā slēgšanas laikā piemērojamās prasības var salīdzināt ar faktiskās atļaujas saņemšanas dienu, paziņojuma saturu un saņemšanas laiku.",
+              "words": 20
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "pircējam",
+          "sentences": [
+            {
+              "text": "Pircējam ir arī savi pienākumi.",
+              "words": 5
+            },
+            {
+              "text": "Noteikumu 14. punkts aptver kredīta dokumentu iesniegšanu, nepieciešamās darbības un maksājumus pirms īpašumtiesību pārejas reģistrācijas.",
+              "words": 15
+            },
+            {
+              "text": "Iebildumi pret nodošanas paziņojumu automātiski neatceļ jau iestājušās maksājumu vai dokumentu iesniegšanas saistības.",
+              "words": 13
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "patērētāju",
+          "sentences": [
+            {
+              "text": "Patērētāju aizsardzības iestādes līgumu pārbaudes rezultātos par pārkāpumu atzīmēti nosacījumi, kas no nodošanas paziņojuma termiņa izslēdz bankas apstiprināšanas un kredīta izmaksas procedūru laiku.",
+              "words": 23
+            },
+            {
+              "text": "Rezultātus publicēja 2025. gada 25. augustā.",
+              "words": 6
+            },
+            {
+              "text": "Šī vēlākā pārbaude palīdz izvērtēt pašreizējos līgumus, bet neaizstāj tiesas analīzi par konkrēto agrāko vēstuli.",
+              "words": 15
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "taivānas",
+          "sentences": [
+            {
+              "text": "Taivānas centrālās bankas noteikumu par nekustamā īpašuma kredītiem grozījumi pieņemti 2026. gada 17. septembrī.",
+              "words": 14
+            },
+            {
+              "text": "Tie stājās spēkā nākamajā dienā.",
+              "words": 5
+            },
+            {
+              "text": "Jauna kredīta nosacījumus pircējs var precizēt bankā, salīdzinot paredzamo izmaksas dienu ar apskates un nodošanas plānu.",
+              "words": 16
+            },
+            {
+              "text": "Šo redakciju neattiecina atpakaļ uz aprakstīto darījumu un neizmanto kā solījumu, ka konkrēts ārvalstu pircējs saņems kredītu.",
+              "words": 17
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "ar",
+          "sentences": [
+            {
+              "text": "Ar vēstules virsrakstu nepietiek.",
+              "words": 4
+            },
+            {
+              "text": "Pilns teksts, aploksne vai e-pasta saņemšanas dati palīdz noteikt, kas un kad paziņots.",
+              "words": 14
+            },
+            {
+              "text": "Apskates akts, defektu fotogrāfijas, piekļuves piekrišana un garantijas dokuments savukārt rāda mājokļa stāvokli un vēlāk pabeigtās darbības.",
+              "words": 17
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "ja",
+          "sentences": [
+            {
+              "text": "Ja jau prasīts līgumsods vai kavējuma procenti, ziņā birojam var īsi norādīt apstrīdēto punktu, paziņojuma dienu un atbildes termiņu.",
+              "words": 19
+            },
+            {
+              "text": "Sprieduma pamatmateriāli pārbaudīti 2026. gada 25. oktobrī, saistītie spēkā esošie noteikumi un iestāžu paziņojumi salīdzināti 26. oktobrī.",
+              "words": 17
+            },
+            {
+              "text": "Lēmumam par maksājumu apturēšanu, atteikšanos pieņemt mājokli vai zaudējumu prasību vajadzīgs individuāls vērtējums, kurā bankas vēstule, apskates uzaicinājums un nodošanas paziņojums saglabā katrs savu saturu.",
+              "words": 25
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Ko parādīja vēstule, apskate un garantijas dokuments",
+        "Paziņošanas termiņš sākas ar lietošanas atļauju",
+        "Bankas grafiks līdzās mājokļa faktiskajam stāvoklim"
+      ],
+      "excludedLists": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "040cf22b6bee76079925f586c450964a45e7e78e4a589562ac32bdab9decba27",
+      "bytes": 8338,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "--lang",
+        "lv"
+      ],
+      "exit": 1,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [lv] sentences=41 mean=12.5 cv=0.444 short=0.195 run3=0.077 opener_rep=0.0 cite_end=0.0 cite_para=0.167 contrast=0 caveat=0 q=1\n  FAIL len_cv=0.444 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "lv",
+        "sentences": 41,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 12.5,
+        "len_cv": 0.444,
+        "short_share": 0.195,
+        "long_share": 0.0,
+        "para_cv": 0.223,
+        "even_run3": 0.077,
+        "top_end": "lietā",
+        "top_end_share": 0.024,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "taipejas",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.167,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.14,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Taipejas Augstā administratīvā tiesa atcēla vadītāja atbrīvošanu no amata mobinga lietā.",
+        "last": "Īsā e-pastā birojam var aprakstīt sūdzības stadiju, jau pieņemtos lēmumus un tuvāko termiņu, sākotnēji nesūtot visus sen",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "taipejas",
+          "sentences": [
+            {
+              "text": "Taipejas Augstā administratīvā tiesa atcēla vadītāja atbrīvošanu no amata mobinga lietā.",
+              "words": 11
+            },
+            {
+              "text": "Sākotnējais lēmums vienā reizē noteica divus smagus disciplināros pārkāpumu ierakstus, kuru rezultāts bija atlaišana.",
+              "words": 14
+            },
+            {
+              "text": "Tiesa atcēla arī administratīvās pārskatīšanas lēmumu, konstatējot problēmas iepriekš paziņotajā iznākumā, uzklausīšanā un izmeklēšanas materiālos.",
+              "words": 15
+            },
+            {
+              "text": "Iemesli izklāstīti tiesas oficiālajā paziņojumā.",
+              "words": 5
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "lieta",
+          "sentences": [
+            {
+              "text": "Lieta 114年度訴字第869號 attiecās uz valsts amatpersonas dienestu.",
+              "words": 7
+            },
+            {
+              "text": "Spriedums pieņemts 2026. gada 3. septembrī, un to var pārsūdzēt.",
+              "words": 10
+            },
+            {
+              "text": "Atcelšana nepierāda, ka visa pārmestā rīcība nav notikusi, un paziņojums neapstiprina personas faktisku atjaunošanu amatā.",
+              "words": 15
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "iestādes",
+          "sentences": [
+            {
+              "text": "Iestādes vadītājs par paredzēto disciplināro rezultātu publiski paziņoja, pirms jautājumu bija apspriedusi novērtēšanas komisija.",
+              "words": 14
+            },
+            {
+              "text": "Pēc tam augstākā iestāde pati sanāca pirms padotās iestādes apspriedes.",
+              "words": 10
+            },
+            {
+              "text": "Tiesas ieskatā šāda secība ierobežoja komisijas iespēju veikt patstāvīgu, saturisku izvērtējumu.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "iznākums",
+          "sentences": [
+            {
+              "text": "Iznākums jau bija izteikts publiski.",
+              "words": 5
+            },
+            {
+              "text": "Vai vēlākie dalībnieki, izvērtējot pierādījumus, varēja nonākt pie cita secinājuma?",
+              "words": 10
+            },
+            {
+              "text": "Sanāksmes protokola esamība vien neatbild uz šo jautājumu.",
+              "words": 8
+            },
+            {
+              "text": "Lietā nozīme bija tam, kā lēmuma pieņemšana patiesībā notika.",
+              "words": 9
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "arī",
+          "sentences": [
+            {
+              "text": "Arī uzklausīšana bija nepilnīga.",
+              "words": 4
+            },
+            {
+              "text": "Attiecīgā komisija nebija pienācīgi paziņojusi personai par iespēju ierasties un sniegt paskaidrojumus.",
+              "words": 12
+            },
+            {
+              "text": "Ziņojumā konstatējumi par mobinga pierādījumiem nesaskanēja ar ierosināto disciplināro rezultātu.",
+              "words": 10
+            },
+            {
+              "text": "Tiesas pamatojuma kopsavilkums norāda, ka vēlāka iebildumu sniegšana administratīvajā pārskatīšanā šīs lietas sākotnējās uzklausīšanas trūkumu nenovērsa.",
+              "words": 16
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "amatpersonas",
+          "sentences": [
+            {
+              "text": "Amatpersonas lietu vērtēja tās dienesta sistēmā, un attiecīgie notikumi bija pirms jaunajiem mobinga novēršanas noteikumiem.",
+              "words": 15
+            },
+            {
+              "text": "Privātiem darba devējiem piemērojamais darba drošības regulējums stājās spēkā 2026. gada 1. jūlijā.",
+              "words": 13
+            },
+            {
+              "text": "Tā laika tvērums redzams likuma grozījumu vēsturē un darba drošības iestādes skaidrojumā.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "darba",
+          "sentences": [
+            {
+              "text": "Darba drošības un veselības aizsardzības likuma 22-2. pants prasa objektīvu, neitrālu un taisnīgu izmeklēšanu vai pušu domstarpību saskaņošanu.",
+              "words": 19
+            },
+            {
+              "text": "Izmeklēšanā pusēm jādod pilnvērtīga iespēja izteikties un aizstāvēties, ievērojot arī atstatīšanās prasības interešu konflikta gadījumā.",
+              "words": 15
+            },
+            {
+              "text": "Publiski pasludināts pārkāpums pirms izmeklēšanas pabeigšanas var apgrūtināt šo prasību ievērošanu.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "aizsardzība",
+          "sentences": [
+            {
+              "text": "Aizsardzība var sākties uzreiz.",
+              "words": 4
+            },
+            {
+              "text": "Ja darba devējs saņem mobingam pakļautā darbinieka sūdzību, tam jāveic pasākumi, lai nepieļautu atkārtotu mobingu, jānodrošina vajadzībām atbilstošas konsultācijas, palīdzība un aizsardzība, kā arī jāizmeklē notikušais.",
+              "words": 26
+            },
+            {
+              "text": "Tie ir pasākumu veikšanas pienākumi, nevis iepriekš izšķirta sūdzība.",
+              "words": 9
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "ja",
+          "sentences": [
+            {
+              "text": "Ja sūdzības iesniedzējs piekrīt, var mēģināt panākt pušu vienošanos.",
+              "words": 9
+            },
+            {
+              "text": "Ja vienošanās neizdodas, izmeklēšana jāturpina.",
+              "words": 5
+            },
+            {
+              "text": "Aizsardzības pasākumi un iespēja atbildēt uz pārmetumiem tādējādi var pastāvēt vienlaikus; minētais administratīvās tiesas spriedums pats nenosaka privāta uzņēmuma soda spēkā esamību.",
+              "words": 22
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "personāla",
+          "sentences": [
+            {
+              "text": "Personāla darbinieks var salīdzināt, ko liecinieks teicis, kādi dati to atbalsta un kāds secinājums no tiem izdarīts.",
+              "words": 17
+            },
+            {
+              "text": "Pretrunīgu interviju gadījumā noder norāde, kuram pierādījumam dota priekšroka un kāpēc.",
+              "words": 11
+            },
+            {
+              "text": "Ja darba laika uzskaite, sarakste vai sanāksmes materiāli pārmetumu neatbalsta, šī neatbilstība arī ir daļa no izvērtējuma.",
+              "words": 17
+            },
+            {
+              "text": "Tas ir praktisks dokumentu sakārtošanas ieteikums, nevis jauna obligāta ziņojuma veidlapa.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "paskaidrojumam",
+          "sentences": [
+            {
+              "text": "Paskaidrojumam vajag saprotamu priekšmetu.",
+              "words": 4
+            },
+            {
+              "text": "Paziņojums par konkrēto rīcību, tās laiku un noskaidrojamajiem apstākļiem dod personai iespēju atbildēt precīzāk nekā vispārīgs lūgums raksturot vadības stilu.",
+              "words": 20
+            },
+            {
+              "text": "Šādi var pārbaudīt, vai uzaicinājums, intervija un gala secinājumi attiecas uz vienu notikumu.",
+              "words": 13
+            },
+            {
+              "text": "Publiskā paziņojumā nav jāievieto visi lietā esošie personas dati.",
+              "words": 9
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "īsā",
+          "sentences": [
+            {
+              "text": "Īsā e-pastā birojam var aprakstīt sūdzības stadiju, jau pieņemtos lēmumus un tuvāko termiņu, sākotnēji nesūtot visus sensitīvos materiālus.",
+              "words": 19
+            },
+            {
+              "text": "Tiesas publikācija pārbaudīta 2026. gada 25. oktobrī, spēkā esošie darba drošības noteikumi salīdzināti 26. oktobrī; vēlāks pārsūdzības iznākums šeit nav apstiprināts.",
+              "words": 21
+            },
+            {
+              "text": "Amatpersonas un darbinieka aizsardzības ceļi atkarīgi no viņu statusa un konkrētā lēmuma, bet izmeklēšanas mapē paliek pārbaudāms, kas bija paziņots, kas uzklausīts un kādēļ pierādījumiem ticēts.",
+              "words": 26
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Vai sanāksme vēl varēja ietekmēt rezultātu?",
+        "Uzņēmuma pienākumus nosaka tam piemērojamais likums",
+        "Ko var izlasīt izmeklēšanas ziņojuma pamatojumā"
+      ],
+      "excludedLists": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "9968f36a9b311f2023b9ea0ad00549f7696aec61afcb62ba9727e26e28bc1e7d",
+      "bytes": 8261,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "--lang",
+        "lv"
+      ],
+      "exit": 1,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/920-taiwan-apartment-ev-charger-common-area-judgment.md [lv] sentences=40 mean=13.4 cv=0.402 short=0.225 run3=0.026 opener_rep=0.0 cite_end=0.0 cite_para=0.308 contrast=0 caveat=0 q=1\n  FAIL len_cv=0.402 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "lv",
+        "sentences": 40,
+        "paras": 13,
+        "heads": 2,
+        "list_items": 0,
+        "mean_len": 13.4,
+        "len_cv": 0.402,
+        "short_share": 0.225,
+        "long_share": 0.0,
+        "para_cv": 0.197,
+        "even_run3": 0.026,
+        "top_end": "darbus",
+        "top_end_share": 0.05,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "uzlādes",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.308,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.79,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Uzlādes kaste atradās pie sienas aiz stāvvietas.",
+        "last": "Ja saņemts darbu apturēšanas vai demontāžas pieprasījums, e-pastā birojam var norādīt strīda būtību, mājas noteikumu pun",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "uzlādes",
+          "sentences": [
+            {
+              "text": "Uzlādes kaste atradās pie sienas aiz stāvvietas.",
+              "words": 7
+            },
+            {
+              "text": "Vadi pa griestiem sasniedza kopīgo elektrības sadalni un iedzīvotāja skaitītāju.",
+              "words": 10
+            },
+            {
+              "text": "Tādēļ tiesas pārbaudītais uzstādījums sniedzās ārpus uz grīdas iezīmētās vietas: bija jāvērtē arī tiesības izmantot šos kopīgos elementus.",
+              "words": 18
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "taivānas",
+          "sentences": [
+            {
+              "text": "Taivānas Augstās tiesas Gaosjunas nodaļa lietā 111年度上字第132號 noraidīja iedzīvotāja apelācijas sūdzību.",
+              "words": 11
+            },
+            {
+              "text": "Spriedumu pieņēma 2022. gada 22. jūnijā.",
+              "words": 6
+            },
+            {
+              "text": "Palika spēkā iekārtu demontāža un iepriekšējā stāvokļa atjaunošana, jo vajadzīgā piekrišana kopīgo daļu izmantošanai nebija saņemta.",
+              "words": 16
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "neapstrīdētie",
+          "sentences": [
+            {
+              "text": "Neapstrīdētie apstākļi ietvēra uzlādes kasti, pie griestu piekarēm stiprinātas vadu caurules un sadalnē pievienotu automātisko slēdzi.",
+              "words": 16
+            },
+            {
+              "text": "Savienojums veda līdz iedzīvotāja skaitītājam.",
+              "words": 5
+            },
+            {
+              "text": "Šī savienojuma vieta nemainīja kopīgās sienas, griestu un sadalnes tiesisko statusu.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "daudzdzīvokļu",
+          "sentences": [
+            {
+              "text": "Daudzdzīvokļu māju pārvaldīšanas likuma 11. pants prasa atsevišķo īpašumu īpašnieku sapulces lēmumu kopīgo daļu un saistīto iekārtu demontāžai, būtiskam remontam vai uzlabošanai.",
+              "words": 22
+            },
+            {
+              "text": "Pēc šīs normas tiesa vērtēja darbus.",
+              "words": 6
+            },
+            {
+              "text": "Konkrētās mājas noteikumu 15. punkts papildus prasīja pārvaldības komitejas atļauju jauniem vadiem un caurulēm, kā arī elektrības uzņēmuma drošības pārbaudi.",
+              "words": 20
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "nozīme",
+          "sentences": [
+            {
+              "text": "Nozīme bija abiem pamatiem.",
+              "words": 4
+            },
+            {
+              "text": "Likums noteica īpašnieku sapulces kompetenci, bet mājas noteikumi paredzēja konkrētos uzstādīšanas saskaņojumus.",
+              "words": 12
+            },
+            {
+              "text": "Drošības pārbaude pati par sevi neizšķīra tiesības izmantot attiecīgo sienu vai sadalni.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "tiesa",
+          "sentences": [
+            {
+              "text": "Tiesa sasaistīja likuma un mājas noteikumu pārkāpumu ar 6. panta pirmās daļas 5. punktā paredzēto pienākumu ievērot citas tiesību normas un mājas noteikumus.",
+              "words": 23
+            },
+            {
+              "text": "Komiteja bija nosūtījusi rakstisku paziņojumu un mēģinājusi panākt risinājumu, tomēr uzstādījums palika vietā.",
+              "words": 13
+            },
+            {
+              "text": "Pēc neveiksmīgās saskaņošanas un turpinātā pārkāpuma komiteja varēja vērsties tiesā saskaņā ar šā panta trešo daļu.",
+              "words": 16
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "panta",
+          "sentences": [
+            {
+              "text": "Panta pirmās daļas 4. punkts arī skar vadu ierīkošanu un vajadzības gadījumā kopīgo daļu izmantošanu.",
+              "words": 15
+            },
+            {
+              "text": "Tiesa atteicās kvalificēt konkrēto uzstādījumu kā šajā punktā aprakstīto situāciju.",
+              "words": 10
+            },
+            {
+              "text": "Sprieduma piektā un sestā pamatojuma daļa balstās faktiskajās darbu vietās un noteikumos; tās neievieš vienādu balsošanas kārtību visiem stāvvietu lādētājiem.",
+              "words": 20
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "iedzīvotājs",
+          "sentences": [
+            {
+              "text": "Iedzīvotājs apgalvoja, ka ir pievienojis slēdzi, pārtraucis ierīces lietošanu, to aizslēdzis un piedāvājis atslēgu komitejai.",
+              "words": 15
+            },
+            {
+              "text": "Pat ja apgalvojumi būtu patiesi, tiesas ieskatā tie neatceltu minēto pārkāpumu radīto demontāžas un atjaunošanas pienākumu.",
+              "words": 16
+            },
+            {
+              "text": "Tādējādi spriedums aptvēra arī tiesības veikt pašus darbus.",
+              "words": 8
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "vai",
+          "sentences": [
+            {
+              "text": "Vai piedāvājumā uzzīmēts tikai lādētājs vai arī tā savienojums ar mājas tīklu?",
+              "words": 12
+            },
+            {
+              "text": "Plānā var iezīmēt kasti, sienu un griestu šķērsojumus un izmantojamo sadalni, pēc tam salīdzinot katru posmu ar īpašuma dokumentiem, mājas noteikumiem un jau pieņemtajiem lēmumiem.",
+              "words": 25
+            },
+            {
+              "text": "Stāvvietas numurs viens pats šo maršrutu neparāda.",
+              "words": 7
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "komitejai",
+          "sentences": [
+            {
+              "text": "Komitejai iesniedzamajā aprakstā var norādīt darbu apjomu un lūgt paskaidrot piemērojamo mājas noteikumu punktu.",
+              "words": 14
+            },
+            {
+              "text": "Atbildē var precizēt, vai lēmums jāpieņem komitejai vai īpašnieku sapulcei un kādu ziņu vēl trūkst.",
+              "words": 15
+            },
+            {
+              "text": "Agrāku piekrišanu savukārt salīdzina ar tieši plānoto maršrutu, ierīci un nosacījumiem.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "gaosjunas",
+          "sentences": [
+            {
+              "text": "Gaosjunas pilsēta 2026. gada 29. maijā paziņoja par atbalstu, kas aptvēra elektroauto uzlādes kabeļu teknes māju koplietošanas zonās.",
+              "words": 18
+            },
+            {
+              "text": "Oficiālajā paziņojumā pieteikšanās beigas bija noteiktas 30. septembrī, paredzot iespēju pieņemšanu pārtraukt agrāk, ja finansējums izsmelts.",
+              "words": 16
+            },
+            {
+              "text": "Publicētais termiņš ir pagājis.",
+              "words": 4
+            },
+            {
+              "text": "Šis atbalsts neaizstāja piekrišanu kopīgo daļu izmantošanai vai konkrēto darbu atļaušanu.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "uzstādīšanas",
+          "sentences": [
+            {
+              "text": "Uzstādīšanas līgumā var atrunāt, vai darbi sāksies pirms piekrišanas saņemšanas un kā sadalīs izmaksas, ja atļauju nedos.",
+              "words": 17
+            },
+            {
+              "text": "Mainot vadu maršrutu, jāvērtē agrākās piekrišanas tvērums.",
+              "words": 7
+            },
+            {
+              "text": "Tas palīdz nodalīt uzstādītāja maksājuma prasījumu no iedzīvotāja tiesībām izmantot kopīgās daļas.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "ja",
+          "sentences": [
+            {
+              "text": "Ja saņemts darbu apturēšanas vai demontāžas pieprasījums, e-pastā birojam var norādīt strīda būtību, mājas noteikumu punktu un atbildes termiņu.",
+              "words": 20
+            },
+            {
+              "text": "Sprieduma pamatmateriāli pārbaudīti 2026. gada 25. oktobrī, saistītās normas un paziņojums salīdzināti 26. oktobrī.",
+              "words": 14
+            },
+            {
+              "text": "Vēlāki nolēmumi un šā sprieduma galīgums nav apstiprināti; citas mājas izvērtējumā ierīču izvietojums, tiesību apjoms un piekrišana jāsalīdzina ar tās pašas dokumentiem.",
+              "words": 22
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Likums un mājas noteikumi paredzēja dažādus saskaņojumus",
+        "Uzstādītāja plānā redzams viss vadu ceļš"
+      ],
+      "excludedLists": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "6634bb7957f6bd88e2c1072c6cf8fad761bd5eb38d263017409bfd6327921936",
+      "bytes": 9031,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md",
+        "--lang",
+        "lv"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md [lv] sentences=45 mean=12.3 cv=0.512 short=0.333 run3=0.0 opener_rep=0.143 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "lv",
+        "sentences": 45,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 12.3,
+        "len_cv": 0.512,
+        "short_share": 0.333,
+        "long_share": 0.0,
+        "para_cv": 0.188,
+        "even_run3": 0.0,
+        "top_end": "lappusēs",
+        "top_end_share": 0.044,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "taivānas",
+        "top_opener_n": 2,
+        "opener_rep": 0.143,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.14,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Spēlētājam kontā joprojām bija monētas, taču neizlietotu apmaksātu punktu vairs nebija.",
+        "last": "Sprieduma pamatmateriāli pārbaudīti 2026. gada 25. oktobrī, spēkā esošie noteikumi un statistikas publikācija salīdzināt",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "spēlētājam",
+          "sentences": [
+            {
+              "text": "Spēlētājam kontā joprojām bija monētas, taču neizlietotu apmaksātu punktu vairs nebija.",
+              "words": 11
+            },
+            {
+              "text": "Par to puses nestrīdējās.",
+              "words": 4
+            },
+            {
+              "text": "Viņš monētas pārrēķināja naudā un prasīja atmaksāt 243 548 Taivānas jaunos dolārus, bet tiesa prasījumu neapmierināja.",
+              "words": 16
+            },
+            {
+              "text": "Nolēmums publicēts patērētāju aizsardzības spriedumu krājuma drukātajās 140.–153. lappusēs.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "taivānas",
+          "sentences": [
+            {
+              "text": "Taivānas Dzjilunas apgabaltiesa izskatīja lietu 109年度消簡上字第1號.",
+              "words": 6
+            },
+            {
+              "text": "Spēlētāja apelācijas sūdzību tā noraidīja 2021. gada 13. septembrī.",
+              "words": 9
+            },
+            {
+              "text": "Spriedumā norādīts, ka tas nav pārsūdzams.",
+              "words": 6
+            },
+            {
+              "text": "Tiesa vērtēja konkrēto monētu funkciju un atmaksas noteikumus, nevis izslēdza visus virtuālos priekšmetus no patērētāju aizsardzības.",
+              "words": 16
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "līgums",
+          "sentences": [
+            {
+              "text": "Līgums ļāva vispirms iegādāties punktus un pēc tam tos izmantot spēles pakalpojumu vai preču saņemšanai.",
+              "words": 15
+            },
+            {
+              "text": "Atlikušās monētas kalpoja par žetoniem spēlētāju izspēlēs.",
+              "words": 7
+            },
+            {
+              "text": "Tiesa tās neatzina par līgumā paredzētajiem atmaksājamiem neizlietotiem apmaksātiem punktiem vai pakalpojuma sniedzēja iekasētu spēles maksu.",
+              "words": 16
+            },
+            {
+              "text": "Tādēļ prasītais pārrēķins naudā netika pieļauts.",
+              "words": 6
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "sprieduma",
+          "sentences": [
+            {
+              "text": "Sprieduma astotajā pamatojuma daļā tiesa arī saistīja šādu izspēles žetonu apmaiņu pret naudu ar azartspēlēm.",
+              "words": 15
+            },
+            {
+              "text": "Pamatojums atrodams drukātajās 148.–152. lappusēs.",
+              "words": 6
+            },
+            {
+              "text": "Šis apsvērums attiecās uz aprakstītās spēles darbību; citas spēles monētu iegūšana, lietojums un līgums jāvērtē pēc tās faktiskās sistēmas.",
+              "words": 19
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "kāpēc",
+          "sentences": [
+            {
+              "text": "Kāpēc līguma izbeigšana šajā lietā nedeva atmaksu?",
+              "words": 7
+            },
+            {
+              "text": "Pats spēlētājs bija paziņojis, ka līgumu izbeidz, tādēļ tiesa varēja atzīt izbeigšanas sekas un atsevišķi izvērtēt atlikušās monētas.",
+              "words": 18
+            },
+            {
+              "text": "Tas neapstiprināja visu pakalpojuma sniedzēja agrāk izmantoto bloķēšanas vai izbeigšanas pamatu tiesiskumu.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "obligāto",
+          "sentences": [
+            {
+              "text": "Obligāto tipveida noteikumu tiešsaistes spēļu pakalpojumiem 18. punkts ļauj patērētājam jebkurā laikā paziņot par līguma izbeigšanu.",
+              "words": 16
+            },
+            {
+              "text": "Pēc nepieciešamo izmaksu atskaitīšanas neizlietoto apmaksāto punktu vai neizmantotās spēles maksas atmaksa jāveic 30 dienu laikā no līguma izbeigšanas, ja vien abas puses nav vienojušās par citu kārtību.",
+              "words": 28
+            },
+            {
+              "text": "Pakalpojuma sniedzējs to nevar vienpusēji aizstāt ar savu izvēli.",
+              "words": 9
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "atskaitījumu",
+          "sentences": [
+            {
+              "text": "Atskaitījumu saturu var pārbaudīt.",
+              "words": 4
+            },
+            {
+              "text": "Atmaksas aprēķinā var lūgt atsevišķi uzrādīt neizlietoto atlikumu, atskaitāmās izmaksas un to pamatu.",
+              "words": 13
+            },
+            {
+              "text": "Pakalpojuma sniedzēja norādīts fiksēts procents pats par sevi nepierāda nepieciešamo izmaksu apmēru.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "noteikumi",
+          "sentences": [
+            {
+              "text": "Noteikumi grozīti 2022. gada 10. augustā.",
+              "words": 6
+            },
+            {
+              "text": "Attiecīgā redakcija stājās spēkā nākamā gada 1. janvārī, pēc aprakstītā tiesas sprieduma.",
+              "words": 12
+            },
+            {
+              "text": "Tādēļ vēsturiskās lietas līguma un toreiz piemērojamo prasību vērtējumu nodala no pašreizējās procedūras.",
+              "words": 13
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "ceturtajā",
+          "sentences": [
+            {
+              "text": "Ceturtajā punktā paredzēta arī iespēja septiņu kalendāra dienu laikā no spēles sākšanas rakstiski atkāpties no līguma bez pamatojuma un izmaksām, prasot atmaksāt neizlietotos apmaksātos punktus.",
+              "words": 25
+            },
+            {
+              "text": "Šim termiņam ir savs sākums.",
+              "words": 5
+            },
+            {
+              "text": "Pēc tā beigām joprojām paliek 18. punktā paredzētā līguma izbeigšana un neizlietotā atlikuma izvērtēšana.",
+              "words": 14
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "konta",
+          "sentences": [
+            {
+              "text": "Konta attēls rāda atlikumu vienā brīdī.",
+              "words": 6
+            },
+            {
+              "text": "Tas var neparādīt, kuri punkti pirkti, kad tie pārvērsti monētās un kā monētas izmantotas.",
+              "words": 14
+            },
+            {
+              "text": "Šīs saites palīdz atjaunot dažādi dokumenti:",
+              "words": 6
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "pakalpojuma",
+          "sentences": [
+            {
+              "text": "Pakalpojuma sniedzējam personīgā spēles vēsture jāglabā vismaz 30 dienas.",
+              "words": 9
+            },
+            {
+              "text": "Saņemot pieprasījumu, tā jāizsniedz septiņās dienās.",
+              "words": 6
+            },
+            {
+              "text": "Šie pienākumi noteikti obligāto noteikumu 9. punktā, savukārt aizliegto nosacījumu 6. punkts liedz noteikt tikai pakalpojuma sniedzēja vēsturi un elektroniskos datus par strīda izšķiršanas pamatu.",
+              "words": 25
+            },
+            {
+              "text": "Laikus iesniegts pieprasījums palīdz saglabāt vairāk nekā pēdējo atlikuma ekrānu.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "taivānas",
+          "sentences": [
+            {
+              "text": "Taivānas patērētāju aizsardzības iestādes statistikā par 2025. gadu tiešsaistes spēles bija otrajā vietā sākotnējo patērētāju sūdzību kategorijās, lai gan lietu skaits bija samazinājies pret iepriekšējo gadu.",
+              "words": 26
+            },
+            {
+              "text": "Publikācija aicināja pakalpojumu sniedzējus pienācīgi risināt kontu bloķēšanu, darbības apturēšanu un klientu apkalpošanu.",
+              "words": 13
+            },
+            {
+              "text": "Šī vieta sūdzību statistikā neraksturo spēļu tirgus daļu.",
+              "words": 8
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "atmaksu",
+          "sentences": [
+            {
+              "text": "Atmaksu vispirms var prasīt pakalpojuma sniedzējam un pēc tam izmantot valsts patērētāju sūdzību sistēmu.",
+              "words": 14
+            },
+            {
+              "text": "Ja strīds skar līguma interpretāciju vai pierādījumu noraidīšanu, e-pastā birojam var norādīt strīda priekšmetu un atbildes termiņu.",
+              "words": 18
+            },
+            {
+              "text": "Konta parole nav jāsūta.",
+              "words": 4
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "sprieduma",
+          "sentences": [
+            {
+              "text": "Sprieduma pamatmateriāli pārbaudīti 2026. gada 25. oktobrī, spēkā esošie noteikumi un statistikas publikācija salīdzināti 26. oktobrī.",
+              "words": 16
+            },
+            {
+              "text": "Citu spēļu punkti, priekšmeti un izbeigšanas iemesli jāvērtē pēc to faktiskās funkcijas; prasītās summas pamatu palīdz izskaidrot naudas iemaksas, punktu apmaiņas un izmantošanas secība.",
+              "words": 24
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "No nopirktiem punktiem līdz spēlē izmantojamiem žetoniem",
+        "Pašreizējā atmaksa aptver neizlietotos punktus un neizmantoto spēles maksu",
+        "Ekrānattēlu papildina maksājumu un izmantošanas vēsture"
+      ],
+      "excludedLists": []
+    }
+  ]
+}

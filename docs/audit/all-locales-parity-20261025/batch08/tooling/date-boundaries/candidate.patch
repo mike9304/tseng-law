@@ -1,0 +1,78 @@
+--- baseline/variety_expansion.py
++++ candidate/variety_expansion.py
+@@ -32,6 +32,44 @@
+ 
+ def visible_text(text, additional_terminal_punctuation='', unspaced_terminators=''):
+     """Remove destinations without swallowing the surrounding sentence end."""
++    # Block classification has already used the original Markdown. Decode
++    # ASCII punctuation escapes only now, retaining escaped markup literally.
++    # Inline code has no backslash escapes (CommonMark 2.4 and 6.1).
++    literals = []
++    prefix = '\ue100'
++    while prefix in text:
++        prefix += '\ue100'
++    if '\\' in text:
++        parts = []
++        i = 0
++        def literal(value):
++            literals.append(value)
++            return prefix + str(len(literals) - 1) + '\ue101'
++        while i < len(text):
++            if text[i] == '\\' and i + 1 < len(text) and (
++                    '!' <= text[i + 1] <= '/' or ':' <= text[i + 1] <= '@'
++                    or '[' <= text[i + 1] <= '`' or '{' <= text[i + 1] <= '~'):
++                parts.append(literal(text[i + 1]))
++                i += 2
++                continue
++            if text[i] == '`':
++                count = len(re.match(r'`+', text[i:]).group())
++                closing = next((m for m in re.finditer(r'`+', text[i + count:])
++                                if len(m.group()) == count), None)
++                if closing:
++                    end = i + count + closing.start()
++                    code = text[i + count:end].replace('\n', ' ')
++                    if code.startswith(' ') and code.endswith(' ') and code.strip(' '):
++                        code = code[1:-1]
++                    parts.append(literal(code))
++                    i = end + count
++                    continue
++                parts.append(text[i:i + count])
++                i += count
++                continue
++            parts.append(text[i])
++            i += 1
++        text = ''.join(parts)
+     text = re.sub(r'!\[[^\]]*\]\([^)]*\)', '', text)
+     text = re.sub(r'\[([^\]]+)\]\([^)]*\)', r'\1', text)
+     def omit_url(match):
+@@ -39,7 +77,11 @@
+         core = value.rstrip('.,;:!?' + additional_terminal_punctuation)
+         return value[len(core):]
+     text = url_pattern(unspaced_terminators).sub(omit_url, text)
+-    return re.sub(r'[*_`]', '', text)
++    text = re.sub(r'[*_`]', '', text)
++    if literals:
++        text = re.sub(re.escape(prefix) + r'(\d+)\ue101',
++                      lambda match: literals[int(match.group(1))], text)
++    return text
+ 
+ 
+ def characters(text):
+@@ -89,6 +131,17 @@
+                 return masked
+             raise SegmentationError('Khmer native abbreviation followed by prose has an ambiguous sentence boundary; reviewed segmentation required')
+         protected = re.sub(re.escape(abbreviation), protect_native, protected)
++
++    if lang == 'fi':
++        # A shared month completes coordinated dates, e.g. 7. ja 8. toukokuuta.
++        # A capitalized next-sentence connector is deliberately not protected.
++        months = r'tammikuuta|helmikuuta|maaliskuuta|huhtikuuta|toukokuuta|kesäkuuta|heinäkuuta|elokuuta|syyskuuta|lokakuuta|marraskuuta|joulukuuta'
++        day = r'(?:0?[1-9]|[12]\d|3[01])'
++        space = r'[^\S\r\n]+'
++        protected = re.sub(
++            r'(?<!\w)' + day + r'\.(?=(?:' + space + r'(?:ja|tai|vai)'
++            + space + day + r'\.)+' + space + r'(?i:' + months + r')\b)',
++            lambda match: match.group()[:-1] + marker, protected)
+ 
+     followers = data.get('ordinal_followers')
+     if followers:

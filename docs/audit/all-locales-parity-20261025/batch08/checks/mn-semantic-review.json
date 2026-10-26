@@ -1,0 +1,363 @@
+{
+  "at": "2026-10-26T08:11:45.503841+00:00",
+  "role": "author self-review, not independent review/native-speaker certification/legal approval",
+  "fact_checks": {
+    "915": [
+      "44,417,150 TWD arbitration award annulled; Supreme Court 106年度台上字第723號, 2017-07-12; not money actually received.",
+      "Money claim -> time extension -> recommendation/entity dissent -> unsuccessful mediation -> money claim gap preserved; no blanket rule barring every adjustment.",
+      "Current procurement Art85-1: construction OR technical services; recommendation OR proposal on dispute; entity dissent causes failure; supplier request; all required conditions linked. Separate agreed arbitration basis retained; Arbitration Act40(1)(2).",
+      "ITA 2026-09-30 forecast late2026/2027 procurement remains forecast for US suppliers; no opening/eligibility promise for Mongolian readers.",
+      "FAQ2 aligned to canonical question about whether every changed claim blocks arbitration, not a newly invented universal restart rule."
+    ],
+    "916": [
+      "Supreme Court107年度台上字第267號 2018-08-16:246 claimants portion vacated/remanded,262 appeals rejected; not all claims finally determined or all workers paid.",
+      "Historical factual control, received pollution findings, failed warning/remediation, asset/capital transfers linked to conduct; current154 explained separately.",
+      "Current154 cumulative abuse of separate corporate personality -> evident difficulty paying specific debt AND serious/necessary conditions; foreign ownership or subsidiary formation alone not enough.",
+      "USTR US actor and US private partners, conditional consideration under applicable law retained; no Mongolian/international automatic subsidy or treaty-entry promise.",
+      "FAQ3 restores acquisition team records including report recipients, follow-up questions, exposure/remediation, transfer approvals and financial analysis; practical advice, not legal prerequisite."
+    ],
+    "918": [
+      "Taichung High Court branch109年度上易字第289號,2022-02-09; builder appeal/additional claim denied; no further appeal.",
+      "2019-02-23 bank-process letter not handover notice; water/power later; July defects/elevator installation not complete; August access/renovation not contractual handover; November5 loan/November28 warranty handover separate.",
+      "Case four-month clause distinct from current clause15 six-month NOTICE from use permit; not all handover completion; current comparison belongs to author, not old court.",
+      "Clause14 buyer cooperation/payment preserved; 2025 bank verification/disbursement exclusion information and 2026CBC not retroactively the old judgment.",
+      "FAQ1 letter contents and readiness; FAQ2 historical/current notice clocks; FAQ3 pending loan does not justify ignoring every notice or stopping all payments."
+    ],
+    "919": [
+      "Taipei High Administrative Court114年度訴字第869號,2026-09-03 original dismissal and review disposition annulled; appeal possible, no verified reinstatement/no-bullying general finding.",
+      "One disciplinary action recording two major demerits; announced outcome before competent committee; upper body meeting first; own committee last.",
+      "Insufficient notice/hearing/defence and inconsistent report/evidence; later review response did not cure case.",
+      "Civil service framework separated from private-sector Art22-2 effective2026-07-01. Complaint received -> measures to protect against further harm/help/protect/investigate; no result guarantee.",
+      "May coordinate according to complainant wishes; unsuccessful coordination requires continued investigation. Objective/fair process, statement/defence opportunity and conflict recusal preserved; not mandatory formal mediation."
+    ],
+    "920": [
+      "Kaohsiung High Court branch111年度上字第132號,2022-06-22 appeal denied; removal/restoration upheld; later status/finality not claimed.",
+      "Walls,ceilings,common electrical box remain common areas; wiring connected to resident-associated meter, no unsupported ownership finding.",
+      "Art11 owners meeting; building bylaw15 committee permission AND power-company safety review; not universal interchangeable approvals.",
+      "Art6(1)(5), continued violation after coordination and Art6(3) court remedy linked; Art6(1)(4) inapplicable to scope without unsupported party attribution.",
+      "Switch off/stop use/locked/offering key are resident assertions and even-if-true reasoning, not court-found activity.",
+      "Kaohsiung2026-05-29 cable-tray program, announcedSeptember30deadline already past atOctober26; not all chargers and no automatic works permission."
+    ],
+    "921": [
+      "Keelung District Court109年度消簡上字第1號,2021-09-13 appeal denied/no further appeal;243,548TWD sought not awarded.",
+      "Game-specific coins function, undisputed no unused purchased points, conversion/play history and own termination retained; not every virtual currency already used/not every operator action lawful.",
+      "Current terms amended2022-08-10/effective2023-01-01 separated from2021court. Clause4 first7-day written no-reason/no-cost withdrawal distinct from clause18 anytime termination.",
+      "Clause18 unused paid points OR unused game-service fees; necessary cost;30days FROM termination OR mutually agreed method, not unilateral operator alternative.",
+      "Clause9 retain records at least30days/provide within7days FROM receiving request; prohibited6 bars contract making operator records sole decisive evidence, not excludes those records.",
+      "Practical purchase/conversion/use record reconstruction is advice, not statutory claimant duty.2025first-stage complaints ranked2 and declinedYOY; publication2026-05-07."
+    ]
+  },
+  "FAQ_questions": "All17 target Q/A reread against actual canonical17;19 fields across5files corrected in mn-faq-alignment.json.920FAQ remained aligned.",
+  "section5": {
+    "opening_types": {
+      "915": "amount",
+      "916": "reader question",
+      "918": "specific document fact",
+      "919": "case result fact",
+      "920": "case-grounded physical scene",
+      "921": "reader question"
+    },
+    "openings": "No stock hypothetical or invented first-person story. Two reader questions/two factual openings/one amount/one physical scene; starts differ from latest ARC704–706.",
+    "length": "At least two <=8-unit sentences per article; no paragraph contains two >=32-unit sentences. Long legal-condition sentences retain AND/OR relations rather than split into misleading independent requirements.",
+    "paragraph_starts": "Every normalized start checked manually in vertical lists; maximum repeated opener2 each, no triple repeated opener.",
+    "citations": "Source-tail excluded by existing declared profile, not retitled to hide body. Main paragraphs alternate facts, explanation, documents and law; no three consecutive claim+but templates.",
+    "contrast": "Machine0 not treated as native evidence. R2 removes unsolicited counterclaims and repeated not-X-but-Y framing. Ordinary legal negations (denied appeal, absence of agreement, not sole record) are substantively necessary; remaining few explicit distinctions explain current/historical or record rules.",
+    "endings": "Six distinct evidence-chain conclusions: application amendments, control timeline, handover dates, hearing sequence, physical wiring approvals, payment-conversion-use. Contact link/email appears only as scoped invitation; no Mongolian-language service promise.",
+    "form": "Mongolian Cyrillic informative prose; no bold, public author, native-lawyer approval, invented first-person, command checklist headings. Internal legal-ai-assistant retained.",
+    "preservation": "Exact reversible edits verified below; all23 source references (22 globally unique) in main body+source tail; dates, amounts, legal conditions and fictitious-image labels reviewed; no country-law substitution."
+  },
+  "MONOTONY": [
+    {
+      "item": "length and legal relation",
+      "problem": "Initial915 two similar medium conditional sentences separated recommendation from entity dissent.",
+      "direction": "Joined the cumulative statutory conditions into one31-unit sentence and retained the four-unit statement that all conditions combine.",
+      "evidence": "mn-self-edits-r1.json",
+      "meaning_preserved": true
+    },
+    {
+      "item": "unsolicited contrast",
+      "problem": "Өнөөгийн 154 дүгээр зүйлийг тайлбарлахдаа үйлдвэрийн түүхэн хэргийн бүх хариуцлагыг зөвхөн энэ заалтаас гарсан мэтээр үзэхгүй байх нь зүйтэй.",
+      "direction": "State the current154 investment-risk purpose and historical control/knowledge/conduct grounds positively in two sentences.",
+      "evidence": "mn-self-edits-r2.json",
+      "meaning_preserved": true
+    },
+    {
+      "item": "unsolicited caution",
+      "problem": "Generic counterclaims around919 evidence review and921 record collection repeated instructions rather than case information.",
+      "direction": "Remove hypothetical reader error and explain objective procedure/document use; keep actual law and record rights.",
+      "evidence": "mn-self-edits-r2.json",
+      "meaning_preserved": true
+    }
+  ],
+  "recent3": {
+    "selection": "published descending with filename tie-break, not highest identifier",
+    "files": [
+      {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/706-taiwan-arc-renewal-changes-reentry.md",
+        "published": "2026-10-26",
+        "sha256": "f3ced3a9c5be6948ce8ead66d0110be0a8e8309f39f414712f24bff50de965a4"
+      },
+      {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/705-taiwan-visa-residence-work-study-family.md",
+        "published": "2026-10-26",
+        "sha256": "d54e05e91c9d6e9da6ee536009c01b9d44d34b0a78e74dbe07b2e294dde261ac"
+      },
+      {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/704-taiwan-arc-first-application.md",
+        "published": "2026-10-26",
+        "sha256": "c33ec471bf92fd0d55977d3e5e40dde1fed5130d73645c3836c43895b1f918de"
+      }
+    ],
+    "comparison": "704 opens with the 30-day ARC timing;705 distinguishes specialist/student/family permissions;706 asks about a valid card after its residence basis ends. Their headings/endings concern documents, validity and reentry. New six open with case-specific money/report/letter/annulment/wiring/coins, organize each evidentiary dispute, and end with the relevant document chain; not a repeated ARC checklist."
+  },
+  "structure": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "1e23862809c2e415b3d7e4c415489149c93c212afe2a1bce19cf8786ca571b9a",
+      "FAQ_count": 2,
+      "metadata_and_no_bold_H1_checks": true,
+      "automated_audit_evidence": "mn-content-audit-faq-final.json",
+      "automated_errors": 0,
+      "source_urls": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "all_source_urls_in_body_and_tail": true,
+      "network_checked_by_audit": false,
+      "review_items": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "7c5660357f51831cae744ab792821292ddb07f96ddf5b5e61e00c4a8cf594972",
+      "FAQ_count": 3,
+      "metadata_and_no_bold_H1_checks": true,
+      "automated_audit_evidence": "mn-content-audit-faq-final.json",
+      "automated_errors": 0,
+      "source_urls": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "all_source_urls_in_body_and_tail": true,
+      "network_checked_by_audit": false,
+      "review_items": [
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "cross-language-link",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "250fe3852817e5ca19b81099832b60a9d6525356cd84d0405c628294cfdb165a",
+      "FAQ_count": 3,
+      "metadata_and_no_bold_H1_checks": true,
+      "automated_audit_evidence": "mn-content-audit-faq-final.json",
+      "automated_errors": 0,
+      "source_urls": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "all_source_urls_in_body_and_tail": true,
+      "network_checked_by_audit": false,
+      "review_items": [
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "44339c13b54715370c32139cd71a2c992fe686db9534a103d21a36168b1e46cd",
+      "FAQ_count": 3,
+      "metadata_and_no_bold_H1_checks": true,
+      "automated_audit_evidence": "mn-content-audit-faq-final.json",
+      "automated_errors": 0,
+      "source_urls": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+      ],
+      "all_source_urls_in_body_and_tail": true,
+      "network_checked_by_audit": false,
+      "review_items": [
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "b9568c63255df9b3b726a6a009c42ee51e4124548928121ac010367ea0394b69",
+      "FAQ_count": 3,
+      "metadata_and_no_bold_H1_checks": true,
+      "automated_audit_evidence": "mn-content-audit-r1.json",
+      "automated_errors": 0,
+      "source_urls": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "all_source_urls_in_body_and_tail": true,
+      "network_checked_by_audit": false,
+      "review_items": [
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "107b708d834f52311f18e129997b94f9daac058642245f9d451a98b9343bd10f",
+      "FAQ_count": 3,
+      "metadata_and_no_bold_H1_checks": true,
+      "automated_audit_evidence": "mn-content-audit-faq-final.json",
+      "automated_errors": 0,
+      "source_urls": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "all_source_urls_in_body_and_tail": true,
+      "network_checked_by_audit": false,
+      "review_items": [
+        {
+          "code": "public-output-and-native-prose",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "title-summary-faq",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "legal-conditions",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "numbers-dates-currencies",
+          "status": "REQUIRED"
+        },
+        {
+          "code": "nationality-jurisdiction",
+          "status": "REQUIRED"
+        }
+      ]
+    }
+  ],
+  "official_source_references_per_file_total": 23,
+  "official_source_urls_global_unique": 22,
+  "automated_required_items_retained": 33,
+  "public_rendering_unchecked": [
+    "Published title/summary/FAQ/caption/cards",
+    "HTML/JSON-LD/feed author leakage",
+    "Actual public URLs after root integration"
+  ],
+  "open_author_mandatory_findings": 0
+}

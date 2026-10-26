@@ -1,0 +1,433 @@
+{
+  "at": "2026-10-26T17:15:46.358058+09:00",
+  "scope": "Actual shared checks only for three changed source SHAs: FAQ-only916, body918, body/source-label920. Three unchanged files retain prior actual CLI records.",
+  "tools": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/hu.json",
+      "sha256": "cef85b13e94e3fd08f23d3aa4fba80ab51c116adf3c7d30cb8e4e59d00b1279b"
+    }
+  ],
+  "rows": [
+    {
+      "id": "916",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "cd2edf272341f53231e55246994f431a59da1f5ea83e7dda16c588a6928859ee",
+      "at": "2026-10-26T17:15:46.214714+09:00",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "--lang",
+        "hu"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/916-taiwan-parent-company-pollution-liability-us-investor.md [hu] sentences=41 mean=16.0 cv=0.484 short=0.22 run3=0.026 opener_rep=0.0 cite_end=0.0 cite_para=0.071 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "hu",
+        "sentences": 41,
+        "paras": 14,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 16.0,
+        "len_cv": 0.484,
+        "short_share": 0.22,
+        "long_share": 0.024,
+        "para_cv": 0.151,
+        "even_run3": 0.026,
+        "top_end": "perben",
+        "top_end_share": 0.024,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "a",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.071,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.67,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "A felvásárlás előtt készült környezeti jelentések később az anyavállalatokkal szembeni biz",
+        "last": "Forrásállapot: a bíróság hivatalos magyarázatának ellenőrzése 2026. október 25., a jelenlegi jogszabály és befektetési t",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "sentences": [
+        "A felvásárlás előtt készült környezeti jelentések később az anyavállalatokkal szembeni bizonyítékok közé kerültek egy tajvani gyárszennyezési perben.",
+        "A Legfelsőbb Bíróság a szennyezés ismeretét az üzemi irányítással, a veszélyre adott válasszal és a tajvani társaság vagyonát csökkentő átutalásokkal együtt értékelte.",
+        "Ezt a kapcsolatot mutatja be a 107年度台上字第267號 ítélet hivatalos magyarázata.",
+        "2018. augusztus 16-án született a döntés.",
+        "Egy elektronikai gyártó dolgozóinak vegyi anyagokkal való érintkezéséről és a vállalatot irányító társaságok felelősségéről szólt.",
+        "A külföldi tulajdonosi minőség önmagában nem alapozta meg a felelősséget.",
+        "Környezeti vizsgálatok jelezték a szennyezést, amelyről az irányító vállalatcsoportok tudtak a bíróság ismertetése szerint.",
+        "Az iratok a dolgozók tájékoztatásának és a probléma rendezésének elmaradását, továbbá a kötelezettségek elkerülését célzó tőkeleszállításokat és külföldi átutalásokat is feltárták.",
+        "A bíróság elfogadta azt az érvelést, amely az elkülönült jogi személyiség ellenére lehetővé tette az érintett igények érvényesítését az irányító társaságokkal szemben.",
+        "Ki kapta meg a műszaki megállapításokat?",
+        "A címzetti lista a tudomás megszerzését, az igazgatósági előterjesztés és az üzemi utasítás a döntési lehetőséget mutathatja.",
+        "Későbbi átutalási jóváhagyásokat ezekkel együtt érdemes olvasni, mert külön iratcsoportokban könnyen elveszik, hogyan kapcsolódott a veszély ismerete a vállalat erőforrásairól hozott döntésekhez.",
+        "Nyitott kérdés maradt a jelentésben?",
+        "Az átvilágítás után készült feljegyzés rögzítheti, ki vizsgálta tovább a dolgozók kitettségét, milyen új munkát rendelt meg, és ez hogyan hatott a társaság rendelkezésére álló eszközökre.",
+        "A megválaszolatlan kérdés maradjon látható.",
+        "Egy kedvező ügyletzárási összefoglaló nem pótolja a műszaki megállapításokra adott tényleges választ.",
+        "246 felperes tekintetében a Legfelsőbb Bíróság hatályon kívül helyezte az érintett ítéletrészeket, és az ügyet új eljárásra visszautalta.",
+        "A 262 felperest érintő jogorvoslatokat elutasította.",
+        "Az új eljárásra utalás okai között szerepeltek a sérelem, a bizonyítékok és az igényérvényesítési jogosultság vizsgálatának hiányosságai; a részletes megoszlást a hivatalos rendelkezőrészi összefoglaló közli.",
+        "Ettől nem szűnt meg valamennyi kapcsolódó per.",
+        "Az új eljárásra visszautalás nem állapította meg, hogy minden érintett igénye alaptalan lenne, az elutasított jogorvoslatok pedig csak az adott részeket érintették.",
+        "Egy felvásárlás kockázatértékeléséhez ezért az egyes eljárások tárgyát és állását is azonosítani kell, mielőtt a várható kötelezettséget megbecsülik.",
+        "Főszabály szerint a részvényes felelőssége a részvények ellenértékének megfizetésére korlátozódik a tajvani társasági törvény 154. cikke alapján.",
+        "A második bekezdés kivételt állít fel arra az esetre, amikor a részvényes visszaél a társaság jogi személyiségével, ezzel meghatározott tartozást idéz elő, amelynek visszafizetése nyilvánvalóan nehézzé válik, és a körülmények súlyossága miatt szükséges, hogy a tartozásért a részvényes helytálljon.",
+        "E feltételeknek együtt kell teljesülniük.",
+        "Egy ki nem fizetett tartozás vagy a szennyezés ténye önmagában nem adja ki a teljes törvényi tényállást.",
+        "A jelenlegi rendelkezés nem magyarázza egymagában a régebbi magatartás bírósági megítélését sem: az ismertetett döntés az irányító társaságok eljárását és a külön jogi személyiségen túlnyúló felelősség alapját vizsgálta.",
+        "Társasági forma választásához a tajvani leányvállalatról és fióktelepről szóló magyar nyelvű cikk ismerteti az alapvető különbségeket.",
+        "Ebben a szennyezési ügyben az alapító iratokon túl azt is fel kellett tárni, hogyan használta a vállalatcsoport az irányítási lehetőségét a kockázat megismerése után.",
+        "Az amerikai kereskedelmi képviselő hivatala, az USTR 2026. februári tájékoztatójában az Egyesült Államok és Tajvan határon átnyúló beruházásokat ösztönző szándékát ismerteti.",
+        "A tajvani magánberuházások finanszírozásához lehetséges amerikai támogatást is említ, az alkalmazandó jog feltételeivel.",
+        "Ez szándékot és lehetőséget jelez.",
+        "Egy konkrét befektető jogosultsága ebből még nem következik.",
+        "Osztalékfizetés, tőkeleszállítás vagy kivonuláshoz kapcsolódó átutalás jóváhagyása előtt a döntéshozók számára az azonosított kitettség, a rendezetlen követelések és a tajvani társaságnál maradó források felmérése adhat alapot az értékeléshez.",
+        "A jogi elemzésnek magára a tervezett ügyletre kell kiterjednie.",
+        "Egy irat elnevezése nem igazolja az átutalás jogszerűségét, és az olvasatlan jelentés sem bizonyít intézkedést.",
+        "Egyedi társasági vagy peres megkeresésben az ügylet, a tajvani társaság és a tervezett átutalási vagy zárási időpont rövid leírása közölhető az angol nyelvű kapcsolatfelvételi oldalon.",
+        "Műszaki jelentések és érzékeny munkavállalói adatok átadásához külön egyeztetés célszerű.",
+        "A megőrzendő iratok összekötik az eredeti megállapításokat, az azok nyomán hozott döntéseket és a későbbi vagyonmozgások jóváhagyását.",
+        "Forrásállapot: a bíróság hivatalos magyarázatának ellenőrzése 2026. október 25., a jelenlegi jogszabály és befektetési tájékoztató ellenőrzése október 26.",
+        "Ez az írás a megjelölt döntést tárgyalja, nem az összes kapcsolódó pert vagy egy konkrét befektető felelősségét."
+      ],
+      "paragraphs": [
+        "A felvásárlás előtt készült környezeti jelentések később az anyavállalatokkal szembeni bizonyítékok közé kerültek egy tajvani gyárszennyezési perben. A Legfelsőbb Bíróság a szennyezés ismeretét az üzemi irányítással, a veszélyre adott válasszal és a tajvani társaság vagyonát csökkentő átutalásokkal együtt értékelte. Ezt a kapcsolatot mutatja be a [107年度台上字第267號 ítélet hivatalos magyarázata](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523).",
+        "2018\\. augusztus 16-án született a döntés. Egy elektronikai gyártó dolgozóinak vegyi anyagokkal való érintkezéséről és a vállalatot irányító társaságok felelősségéről szólt. A külföldi tulajdonosi minőség önmagában nem alapozta meg a felelősséget.",
+        "Környezeti vizsgálatok jelezték a szennyezést, amelyről az irányító vállalatcsoportok tudtak a [bíróság ismertetése](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) szerint. Az iratok a dolgozók tájékoztatásának és a probléma rendezésének elmaradását, továbbá a kötelezettségek elkerülését célzó tőkeleszállításokat és külföldi átutalásokat is feltárták. A bíróság elfogadta azt az érvelést, amely az elkülönült jogi személyiség ellenére lehetővé tette az érintett igények érvényesítését az irányító társaságokkal szemben.",
+        "Ki kapta meg a műszaki megállapításokat? A címzetti lista a tudomás megszerzését, az igazgatósági előterjesztés és az üzemi utasítás a döntési lehetőséget mutathatja. Későbbi átutalási jóváhagyásokat ezekkel együtt érdemes olvasni, mert külön iratcsoportokban könnyen elveszik, hogyan kapcsolódott a veszély ismerete a vállalat erőforrásairól hozott döntésekhez.",
+        "Nyitott kérdés maradt a jelentésben? Az átvilágítás után készült feljegyzés rögzítheti, ki vizsgálta tovább a dolgozók kitettségét, milyen új munkát rendelt meg, és ez hogyan hatott a társaság rendelkezésére álló eszközökre. A megválaszolatlan kérdés maradjon látható. Egy kedvező ügyletzárási összefoglaló nem pótolja a műszaki megállapításokra adott tényleges választ.",
+        "246 felperes tekintetében a Legfelsőbb Bíróság hatályon kívül helyezte az érintett ítéletrészeket, és az ügyet új eljárásra visszautalta. A 262 felperest érintő jogorvoslatokat elutasította. Az új eljárásra utalás okai között szerepeltek a sérelem, a bizonyítékok és az igényérvényesítési jogosultság vizsgálatának hiányosságai; a részletes megoszlást a [hivatalos rendelkezőrészi összefoglaló](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) közli.",
+        "Ettől nem szűnt meg valamennyi kapcsolódó per. Az új eljárásra visszautalás nem állapította meg, hogy minden érintett igénye alaptalan lenne, az elutasított jogorvoslatok pedig csak az adott részeket érintették. Egy felvásárlás kockázatértékeléséhez ezért az egyes eljárások tárgyát és állását is azonosítani kell, mielőtt a várható kötelezettséget megbecsülik.",
+        "Főszabály szerint a részvényes felelőssége a részvények ellenértékének megfizetésére korlátozódik a [tajvani társasági törvény 154. cikke](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154) alapján. A második bekezdés kivételt állít fel arra az esetre, amikor a részvényes visszaél a társaság jogi személyiségével, ezzel meghatározott tartozást idéz elő, amelynek visszafizetése nyilvánvalóan nehézzé válik, és a körülmények súlyossága miatt szükséges, hogy a tartozásért a részvényes helytálljon.",
+        "E feltételeknek együtt kell teljesülniük. Egy ki nem fizetett tartozás vagy a szennyezés ténye önmagában nem adja ki a teljes törvényi tényállást. A jelenlegi rendelkezés nem magyarázza egymagában a régebbi magatartás bírósági megítélését sem: az ismertetett döntés az irányító társaságok eljárását és a külön jogi személyiségen túlnyúló felelősség alapját vizsgálta.",
+        "Társasági forma választásához a [tajvani leányvállalatról és fióktelepről szóló magyar nyelvű cikk](/hu/columns/hungarian-company-taiwan-subsidiary-branch-setup) ismerteti az alapvető különbségeket. Ebben a szennyezési ügyben az alapító iratokon túl azt is fel kellett tárni, hogyan használta a vállalatcsoport az irányítási lehetőségét a kockázat megismerése után.",
+        "Az amerikai kereskedelmi képviselő hivatala, az USTR [2026. februári tájékoztatójában](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) az Egyesült Államok és Tajvan határon átnyúló beruházásokat ösztönző szándékát ismerteti. A tajvani magánberuházások finanszírozásához lehetséges amerikai támogatást is említ, az alkalmazandó jog feltételeivel. Ez szándékot és lehetőséget jelez. Egy konkrét befektető jogosultsága ebből még nem következik.",
+        "Osztalékfizetés, tőkeleszállítás vagy kivonuláshoz kapcsolódó átutalás jóváhagyása előtt a döntéshozók számára az azonosított kitettség, a rendezetlen követelések és a tajvani társaságnál maradó források felmérése adhat alapot az értékeléshez. A jogi elemzésnek magára a tervezett ügyletre kell kiterjednie. Egy irat elnevezése nem igazolja az átutalás jogszerűségét, és az olvasatlan jelentés sem bizonyít intézkedést.",
+        "Egyedi társasági vagy peres megkeresésben az ügylet, a tajvani társaság és a tervezett átutalási vagy zárási időpont rövid leírása közölhető az [angol nyelvű kapcsolatfelvételi oldalon](/en/contact). Műszaki jelentések és érzékeny munkavállalói adatok átadásához külön egyeztetés célszerű. A megőrzendő iratok összekötik az eredeti megállapításokat, az azok nyomán hozott döntéseket és a későbbi vagyonmozgások jóváhagyását.",
+        "Forrásállapot: a bíróság hivatalos magyarázatának ellenőrzése 2026. október 25., a jelenlegi jogszabály és befektetési tájékoztató ellenőrzése október 26. Ez az írás a megjelölt döntést tárgyalja, nem az összes kapcsolódó pert vagy egy konkrét befektető felelősségét."
+      ],
+      "sentenceCountUnchanged": true,
+      "unchangedSentences": 41,
+      "sentenceDelta": [],
+      "tools": [
+        {
+          "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+        },
+        {
+          "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+          "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+        },
+        {
+          "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+          "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+        },
+        {
+          "path": "/Users/son7/tseng-lanes-shared/variety/profiles/hu.json",
+          "sha256": "cef85b13e94e3fd08f23d3aa4fba80ab51c116adf3c7d30cb8e4e59d00b1279b"
+        }
+      ]
+    },
+    {
+      "id": "918",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "44ce1490aeec719f4ec8ae26ec5654368939cfd689f7781f5b1f66d16c951f5e",
+      "at": "2026-10-26T17:15:46.281987+09:00",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "--lang",
+        "hu"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/918-taiwan-presale-mortgage-notice-handover-judgment.md [hu] sentences=37 mean=16.3 cv=0.484 short=0.216 run3=0.029 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "hu",
+        "sentences": 37,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 16.3,
+        "len_cv": 0.484,
+        "short_share": 0.216,
+        "long_share": 0.054,
+        "para_cv": 0.201,
+        "even_run3": 0.029,
+        "top_end": "oldalon",
+        "top_end_share": 0.054,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "a",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.32,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "A februári levél a lakáshitel intézéséről szólt, miközben az új lakásban még nem volt bekö",
+        "last": "Forrásállapot: a jogszabályok és hivatalos tájékoztatók 2026. október 26-i ellenőrzése, a megjelölt ítéleti oldalakra tá",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "sentences": [
+        "A februári levél a lakáshitel intézéséről szólt, miközben az új lakásban még nem volt bekötve a víz és az áram.",
+        "Hónapokkal később a vevő bejuthatott felújítani és takarítani, de a bíróság ebből sem állapította meg a szerződésszerű átadást.",
+        "A levelet és a bejutás engedélyét a lakás állapotával együtt vizsgálta a fogyasztóvédelmi hatóság gyűjteményében közölt ítélet, a nyomtatott oldalszámozás szerinti 173–187. oldalon.",
+        "2022. február 9-én a Tajvani Felsőbíróság taichungi kirendeltsége elutasította az építtető fellebbezését és utólag előterjesztett keresetét a 109年度上易字第289號 ügyben.",
+        "Fennmaradt a késedelmi kamat megfizetésének kötelezettsége.",
+        "Az ítélet szerint további fellebbezésnek nem volt helye.",
+        "2019. február 23-án az eladó arra kérte a vevőt, hogy keresse a hitelező bankot és jelezze az ügyintézés állását.",
+        "A levél nem közölte, hogy a lakás használható.",
+        "Víz és áram csak később lett.",
+        "A júliusi első átvizsgáláskor még javítandó hibák voltak, és a lift beépítése sem fejeződött be, ezért a bíróság nem fogadta el a korábbi szabályos értesítésre hivatkozó érvelést.",
+        "Augusztusban a vevő hozzájáruló nyilatkozatot írt alá a felújítás és takarítás céljából történő bejutáshoz.",
+        "Ennek tartalma és a javítások állása alapján a bejutás még nem igazolta az átadás teljesítését.",
+        "A hitelösszeg november 5-én érkezett az eladó számlájára, a jótállási dokumentum viszont november 28-át rögzítette átadási napként.",
+        "A bizonyítékokat az ítélet negyedik indokolási pontja tárgyalja, a nyomtatott 182–186. oldalon.",
+        "Melyik kötelezettséget teljesítette a hitel folyósítása?",
+        "Az eladó szerint a vevőnek már a levél után a teljes vételárat ki kellett volna fizetnie, a bíróság azonban a részletfizetési ütemezést is összevetette a befizetésekkel.",
+        "A vevő a szerződés szerinti részleteket teljesítette, és az átadás előtt mindent kifizetett.",
+        "Emiatt az eladó fizetési szerződésszegésre hivatkozását sem fogadták el.",
+        "Négy hónapot adott a szerződés a használatbavételi engedély megszerzésétől az átadási értesítésre.",
+        "A jelenlegi kötelező előértékesítési szerződési feltételek 15. pontja szerint az eladónak a használatbavételi engedély megszerzésétől számított hat hónapon belül kell értesítenie a vevőt az átadásról, a szabály pedig az átadáskori javításokat, pénzügyi elszámolást és iratátadást is rendezi.",
+        "Az engedély megszerzése indítja a határidőt.",
+        "Saját ügyben a szerződés és a megkötésekor irányadó szabály alapján lehet az engedély napját, az értesítés tartalmát és megérkezését összevetni.",
+        "A jelenlegi hat hónap értesítési határidő; nem írja át az egykori ügyben kikötött négy hónapot.",
+        "Hitelfelvételnél a vevő közreműködésére is szükség van.",
+        "Ugyanezen feltételek 14. pontja a hitelhez szükséges iratokat, eljárási lépéseket és a tulajdonátruházás bejegyzése előtt esedékes fizetést is szabályozza.",
+        "Vitatott átadási értesítés mellett ezért a lejárt fizetési és iratbenyújtási kötelezettségeket is rendezni kell, a saját szerződés szerint.",
+        "Jogellenes kikötésként jelölte meg a fogyasztóvédelmi hatóság a banki hitelmegerősítés és folyósítás idejének kivonását az átadási értesítés határidejéből a 2025. augusztus 25-i szerződésellenőrzési eredményben.",
+        "Ez a későbbi ellenőrzés a mai szerződések értékeléséhez ad támpontot; nem része a korábbi ítélet indokolásának.",
+        "Új hitelügyletnél a tajvani jegybank ingatlanfedezetű hitelezési szabályainak 2026. szeptember 18-án hatályba lépett módosítása is számít.",
+        "E mai szabályt nem lehet a régi ügyletre visszavetíteni.",
+        "A bank által jelzett folyósítási időt a lakás átvizsgálásának és átadásának tervezett időpontjával együtt, de külön eseményként célszerű feljegyezni.",
+        "Egy levél tárgysora kevés.",
+        "A teljes levél és boríték vagy az elektronikus megérkezés adata, az átvizsgálási lap, a javításokról készült képek, a bejutási nyilatkozat és a jótállási irat együtt mutathatja meg, mikor vált használhatóvá a lakás, és mely lépések fejeződtek be ténylegesen.",
+        "Késedelmi kamat vagy kötbér iránti igénynél az iroda e-mail-címére küldött rövid leírás tartalmazhatja a vitatott kikötést, az értesítés napját és a válaszadási határidőt.",
+        "Az iratrendezés során a hitelügyintézésről, az átvizsgálásról és az átadásról szóló leveleket saját tartalmuk szerint lehet az idővonalra illeszteni.",
+        "Forrásállapot: a jogszabályok és hivatalos tájékoztatók 2026. október 26-i ellenőrzése, a megjelölt ítéleti oldalakra támaszkodva.",
+        "Az ügy konkrét szerződésről és teljesítési bizonyítékokról szólt; nem helyettesíti egy fizetés, átvétel megtagadása vagy kárigény egyedi értékelését."
+      ],
+      "paragraphs": [
+        "A februári levél a lakáshitel intézéséről szólt, miközben az új lakásban még nem volt bekötve a víz és az áram. Hónapokkal később a vevő bejuthatott felújítani és takarítani, de a bíróság ebből sem állapította meg a szerződésszerű átadást. A levelet és a bejutás engedélyét a lakás állapotával együtt vizsgálta a [fogyasztóvédelmi hatóság gyűjteményében közölt ítélet](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), a nyomtatott oldalszámozás szerinti 173–187. oldalon.",
+        "2022\\. február 9-én a Tajvani Felsőbíróság taichungi kirendeltsége elutasította az építtető fellebbezését és utólag előterjesztett keresetét a 109年度上易字第289號 ügyben. Fennmaradt a késedelmi kamat megfizetésének kötelezettsége. Az ítélet szerint további fellebbezésnek nem volt helye.",
+        "2019\\. február 23-án az eladó arra kérte a vevőt, hogy keresse a hitelező bankot és jelezze az ügyintézés állását. A levél nem közölte, hogy a lakás használható. Víz és áram csak később lett. A júliusi első átvizsgáláskor még javítandó hibák voltak, és a lift beépítése sem fejeződött be, ezért a bíróság nem fogadta el a korábbi szabályos értesítésre hivatkozó érvelést.",
+        "Augusztusban a vevő hozzájáruló nyilatkozatot írt alá a felújítás és takarítás céljából történő bejutáshoz. Ennek tartalma és a javítások állása alapján a bejutás még nem igazolta az átadás teljesítését. A hitelösszeg november 5-én érkezett az eladó számlájára, a jótállási dokumentum viszont november 28-át rögzítette átadási napként. A bizonyítékokat az [ítélet negyedik indokolási pontja](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C) tárgyalja, a nyomtatott 182–186. oldalon.",
+        "Melyik kötelezettséget teljesítette a hitel folyósítása? Az eladó szerint a vevőnek már a levél után a teljes vételárat ki kellett volna fizetnie, a bíróság azonban a részletfizetési ütemezést is összevetette a befizetésekkel. A vevő a szerződés szerinti részleteket teljesítette, és az átadás előtt mindent kifizetett. Emiatt az eladó fizetési szerződésszegésre hivatkozását sem fogadták el.",
+        "Négy hónapot adott a szerződés a használatbavételi engedély megszerzésétől az átadási értesítésre. A jelenlegi [kötelező előértékesítési szerződési feltételek 15. pontja](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) szerint az eladónak a használatbavételi engedély megszerzésétől számított hat hónapon belül kell értesítenie a vevőt az átadásról, a szabály pedig az átadáskori javításokat, pénzügyi elszámolást és iratátadást is rendezi.",
+        "Az engedély megszerzése indítja a határidőt. Saját ügyben a szerződés és a megkötésekor irányadó szabály alapján lehet az engedély napját, az értesítés tartalmát és megérkezését összevetni. A jelenlegi hat hónap értesítési határidő; nem írja át az egykori ügyben kikötött négy hónapot.",
+        "Hitelfelvételnél a vevő közreműködésére is szükség van. Ugyanezen [feltételek 14. pontja](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) a hitelhez szükséges iratokat, eljárási lépéseket és a tulajdonátruházás bejegyzése előtt esedékes fizetést is szabályozza. Vitatott átadási értesítés mellett ezért a lejárt fizetési és iratbenyújtási kötelezettségeket is rendezni kell, a saját szerződés szerint.",
+        "Jogellenes kikötésként jelölte meg a fogyasztóvédelmi hatóság a banki hitelmegerősítés és folyósítás idejének kivonását az átadási értesítés határidejéből a [2025. augusztus 25-i szerződésellenőrzési eredményben](https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11). Ez a későbbi ellenőrzés a mai szerződések értékeléséhez ad támpontot; nem része a korábbi ítélet indokolásának.",
+        "Új hitelügyletnél a [tajvani jegybank ingatlanfedezetű hitelezési szabályainak](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html) 2026. szeptember 18-án hatályba lépett módosítása is számít. E mai szabályt nem lehet a régi ügyletre visszavetíteni. A bank által jelzett folyósítási időt a lakás átvizsgálásának és átadásának tervezett időpontjával együtt, de külön eseményként célszerű feljegyezni.",
+        "Egy levél tárgysora kevés. A teljes levél és boríték vagy az elektronikus megérkezés adata, az átvizsgálási lap, a javításokról készült képek, a bejutási nyilatkozat és a jótállási irat együtt mutathatja meg, mikor vált használhatóvá a lakás, és mely lépések fejeződtek be ténylegesen.",
+        "Késedelmi kamat vagy kötbér iránti igénynél az [iroda e-mail-címére](mailto:wei@hoveringlaw.com.tw) küldött rövid leírás tartalmazhatja a vitatott kikötést, az értesítés napját és a válaszadási határidőt. Az iratrendezés során a hitelügyintézésről, az átvizsgálásról és az átadásról szóló leveleket saját tartalmuk szerint lehet az idővonalra illeszteni.",
+        "Forrásállapot: a jogszabályok és hivatalos tájékoztatók 2026. október 26-i ellenőrzése, a megjelölt ítéleti oldalakra támaszkodva. Az ügy konkrét szerződésről és teljesítési bizonyítékokról szólt; nem helyettesíti egy fizetés, átvétel megtagadása vagy kárigény egyedi értékelését."
+      ],
+      "sentenceCountUnchanged": true,
+      "unchangedSentences": 36,
+      "sentenceDelta": [
+        {
+          "index": 4,
+          "before": "2022. február 9-én a Tajvani Felsőbíróság Taichungi Tanácsa elutasította az építtető fellebbezését és utólag előterjesztett keresetét a 109年度上易字第289號 ügyben.",
+          "after": "2022. február 9-én a Tajvani Felsőbíróság taichungi kirendeltsége elutasította az építtető fellebbezését és utólag előterjesztett keresetét a 109年度上易字第289號 ügyben.",
+          "beforeLength": 19,
+          "afterLength": 19
+        }
+      ],
+      "tools": [
+        {
+          "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+        },
+        {
+          "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+          "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+        },
+        {
+          "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+          "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+        },
+        {
+          "path": "/Users/son7/tseng-lanes-shared/variety/profiles/hu.json",
+          "sha256": "cef85b13e94e3fd08f23d3aa4fba80ab51c116adf3c7d30cb8e4e59d00b1279b"
+        }
+      ]
+    },
+    {
+      "id": "920",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "a0af0c0413587cf3bff740f7c42ac38f3177d4d7c65eb88d53947166576e4898",
+      "at": "2026-10-26T17:15:46.346985+09:00",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "--lang",
+        "hu"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/920-taiwan-apartment-ev-charger-common-area-judgment.md [hu] sentences=35 mean=16.1 cv=0.48 short=0.286 run3=0.061 opener_rep=0.0 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "hu",
+        "sentences": 35,
+        "paras": 12,
+        "heads": 2,
+        "list_items": 0,
+        "mean_len": 16.1,
+        "len_cv": 0.48,
+        "short_share": 0.286,
+        "long_share": 0.029,
+        "para_cv": 0.145,
+        "even_run3": 0.061,
+        "top_end": "munkát",
+        "top_end_share": 0.057,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "meddig",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 2,
+        "cite_para_share": 0.333,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.02,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Meddig terjed a parkolóhely kizárólagos használata, ha a töltő vezetéke a közös mennyezete",
+        "last": "Forrásállapot: az ítélet 2026. október 25-i, a jelenlegi jogszabályok és a városi közlemény október 26-i ellenőrzése. Ké",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "sentences": [
+        "Meddig terjed a parkolóhely kizárólagos használata, ha a töltő vezetéke a közös mennyezeten halad?",
+        "Egy tajvani lakó a beálló mögötti falra szerelt töltőszekrényt, majd a mennyezet felől a közös elektromos szekrényhez és a lakó mérőórájához vezette a kábeleket.",
+        "A közzétett ítélet ezért a felfestett parkolóhelyen túli területeket is vizsgálta.",
+        "2022. június 22-én a Tajvani Felsőbíróság kaohsiungi kirendeltsége elutasította a lakó fellebbezését a 111年度上字第132號 ügyben.",
+        "A leszerelési és helyreállítási kötelezettség fennmaradt.",
+        "A bíróság szerint az érintett közös falhoz, mennyezethez és elektromos szekrényhez szükséges előzetes hozzájárulás hiányzott.",
+        "Mennyezeti függesztőelemekre került a vezetékek védőcsöve, az elektromos szekrénybe pedig új megszakítót építettek be az ítéletben rögzített, nem vitatott tények szerint.",
+        "Innen vezették a csatlakozást a lakó mérőórájához.",
+        "Ezek a falak, mennyezeti részek és berendezések közösek voltak, így a kizárólagos használatú területen belüli munkára való hivatkozás nem fedte le a tényleges kivitelezést.",
+        "Két forrásból következett hozzájárulási követelmény.",
+        "A tajvani társasház-kezelési szabályozás 11. cikke a közös részek és kapcsolódó berendezések bontását, jelentős javítását vagy fejlesztését a tulajdonosi közgyűlés határozatához köti, a bíróság pedig e rendelkezés alapján vizsgálta a munkát.",
+        "A társasház saját szabályzatának 15. cikke ezenfelül a kezelőbizottság engedélyét és az áramszolgáltató biztonsági ellenőrzését is megkövetelte új vezetékek és védőcsövek felszereléséhez.",
+        "Mindkét előírás megsértését megállapította a bíróság.",
+        "A 6. cikk (1) bekezdésének 5. pontja más jogszabályok és a társasházi szabályzat betartására kötelez.",
+        "Miután a kezelőbizottság igazolható tartalmú levélben egyeztetést kezdeményezett, de a berendezés leszerelése elmaradt, ugyanazon cikk harmadik bekezdése alapján bírósághoz fordulhatott.",
+        "Vezetékek létesítéséről és a közös részek szükség szerinti használatáról a 6. cikk (1) bekezdésének 4. pontja is rendelkezik.",
+        "Az ítélet ötödik és hatodik indokolási pontja azonban kifejezetten kizárta, hogy ez a konkrét helyzet az említett pont alá tartozzon.",
+        "A vezetékút és a helyi szabályzat nélkül ebből nem vezethető le minden parkolói töltőre azonos szavazási eljárás.",
+        "Leállításra és lezárásra is hivatkozott a lakó.",
+        "Állítása szerint kapcsolót szerelt fel, felhagyott a használattal, lezárta a berendezést, és felajánlotta a kulcsot a kezelőbizottságnak.",
+        "A bíróság úgy ítélte meg, hogy még ezek valósága esetén is fennmaradna a leszerelés és helyreállítás kötelezettsége, mert a vita a közös területeken végzett munkára való jogosultságot is érintette.",
+        "Egy parkolóhelyszám nem írja le az egész munkát.",
+        "Árajánlat előtt a kivitelezőtől kérhető olyan rajz, amely feltünteti a töltő helyét, az érintett falakat és oszlopokat, a mennyezeti vezetést és a csatlakozási szekrényt.",
+        "Ezt a tulajdoni iratokkal, a társasházi szabályzattal és a meglévő határozatokkal összevetve látható, melyik szakasz milyen használati körbe esik.",
+        "Szóbeli válasz után is maradhat nyitott kérdés.",
+        "A benyújtott terv alapján megkérdezhető a kezelőbizottságtól, melyik szabályzati pont irányadó, ki dönthet a kérelemről, és milyen adat hiányzik; ha már van hozzájárulás, annak nyomvonalát, berendezését és feltételeit a kivitelező aktuális tervével érdemes összevetni.",
+        "Kaohsiung városa 2026 májusában támogatási programot hirdetett, amely a társasházak közös területein létesített elektromosautó-töltési kábeltálcákat is tartalmazta.",
+        "A meghirdetett benyújtási határidő szeptember 30. volt.",
+        "Ez már eltelt.",
+        "A városi közlemény szerinti támogatás nem váltja ki az adott közösség hozzájárulását vagy a munkák engedélyezési eljárását.",
+        "Leszerelési felszólítás vagy vitatott szabályzati értelmezés esetén az iroda e-mail-címére a vita rövid leírása, az érintett szabályzati pont és a válaszadás határideje küldhető.",
+        "Már a szerelési szerződésben érdemes rendezni, kezdődhet-e munka a hozzájárulás előtt, és mi lesz a költségekkel, ha a kérelmet nem fogadják el.",
+        "Forrásállapot: az ítélet 2026. október 25-i, a jelenlegi jogszabályok és a városi közlemény október 26-i ellenőrzése.",
+        "Későbbi döntést és a jogerőt nem sikerült igazolni.",
+        "Más társasházban az elrendezést, a használati jogokat és a helyi szabályzatot külön kell vizsgálni."
+      ],
+      "paragraphs": [
+        "Meddig terjed a parkolóhely kizárólagos használata, ha a töltő vezetéke a közös mennyezeten halad? Egy tajvani lakó a beálló mögötti falra szerelt töltőszekrényt, majd a mennyezet felől a közös elektromos szekrényhez és a lakó mérőórájához vezette a kábeleket. A [közzétett ítélet](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1) ezért a felfestett parkolóhelyen túli területeket is vizsgálta.",
+        "2022\\. június 22-én a Tajvani Felsőbíróság kaohsiungi kirendeltsége elutasította a lakó fellebbezését a 111年度上字第132號 ügyben. A leszerelési és helyreállítási kötelezettség fennmaradt. A bíróság szerint az érintett közös falhoz, mennyezethez és elektromos szekrényhez szükséges előzetes hozzájárulás hiányzott.",
+        "Mennyezeti függesztőelemekre került a vezetékek védőcsöve, az elektromos szekrénybe pedig új megszakítót építettek be az ítéletben rögzített, nem vitatott tények szerint. Innen vezették a csatlakozást a lakó mérőórájához. Ezek a falak, mennyezeti részek és berendezések közösek voltak, így a kizárólagos használatú területen belüli munkára való hivatkozás nem fedte le a tényleges kivitelezést.",
+        "Két forrásból következett hozzájárulási követelmény. A [tajvani társasház-kezelési szabályozás 11. cikke](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11) a közös részek és kapcsolódó berendezések bontását, jelentős javítását vagy fejlesztését a tulajdonosi közgyűlés határozatához köti, a bíróság pedig e rendelkezés alapján vizsgálta a munkát. A társasház saját szabályzatának 15. cikke ezenfelül a kezelőbizottság engedélyét és az áramszolgáltató biztonsági ellenőrzését is megkövetelte új vezetékek és védőcsövek felszereléséhez.",
+        "Mindkét előírás megsértését megállapította a bíróság. A [6. cikk (1) bekezdésének 5. pontja](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6) más jogszabályok és a társasházi szabályzat betartására kötelez. Miután a kezelőbizottság igazolható tartalmú levélben egyeztetést kezdeményezett, de a berendezés leszerelése elmaradt, ugyanazon cikk harmadik bekezdése alapján bírósághoz fordulhatott.",
+        "Vezetékek létesítéséről és a közös részek szükség szerinti használatáról a 6. cikk (1) bekezdésének 4. pontja is rendelkezik. Az [ítélet ötödik és hatodik indokolási pontja](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1) azonban kifejezetten kizárta, hogy ez a konkrét helyzet az említett pont alá tartozzon. A vezetékút és a helyi szabályzat nélkül ebből nem vezethető le minden parkolói töltőre azonos szavazási eljárás.",
+        "Leállításra és lezárásra is hivatkozott a lakó. Állítása szerint kapcsolót szerelt fel, felhagyott a használattal, lezárta a berendezést, és felajánlotta a kulcsot a kezelőbizottságnak. A bíróság úgy ítélte meg, hogy még ezek valósága esetén is fennmaradna a leszerelés és helyreállítás kötelezettsége, mert a vita a közös területeken végzett munkára való jogosultságot is érintette.",
+        "Egy parkolóhelyszám nem írja le az egész munkát. Árajánlat előtt a kivitelezőtől kérhető olyan rajz, amely feltünteti a töltő helyét, az érintett falakat és oszlopokat, a mennyezeti vezetést és a csatlakozási szekrényt. Ezt a tulajdoni iratokkal, a társasházi szabályzattal és a meglévő határozatokkal összevetve látható, melyik szakasz milyen használati körbe esik.",
+        "Szóbeli válasz után is maradhat nyitott kérdés. A benyújtott terv alapján megkérdezhető a kezelőbizottságtól, melyik szabályzati pont irányadó, ki dönthet a kérelemről, és milyen adat hiányzik; ha már van hozzájárulás, annak nyomvonalát, berendezését és feltételeit a kivitelező aktuális tervével érdemes összevetni.",
+        "Kaohsiung városa 2026 májusában támogatási programot hirdetett, amely a társasházak közös területein létesített elektromosautó-töltési kábeltálcákat is tartalmazta. A meghirdetett benyújtási határidő szeptember 30. volt. Ez már eltelt. A [városi közlemény](https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE) szerinti támogatás nem váltja ki az adott közösség hozzájárulását vagy a munkák engedélyezési eljárását.",
+        "Leszerelési felszólítás vagy vitatott szabályzati értelmezés esetén az [iroda e-mail-címére](mailto:wei@hoveringlaw.com.tw) a vita rövid leírása, az érintett szabályzati pont és a válaszadás határideje küldhető. Már a szerelési szerződésben érdemes rendezni, kezdődhet-e munka a hozzájárulás előtt, és mi lesz a költségekkel, ha a kérelmet nem fogadják el.",
+        "Forrásállapot: az ítélet 2026. október 25-i, a jelenlegi jogszabályok és a városi közlemény október 26-i ellenőrzése. Későbbi döntést és a jogerőt nem sikerült igazolni. Más társasházban az elrendezést, a használati jogokat és a helyi szabályzatot külön kell vizsgálni."
+      ],
+      "sentenceCountUnchanged": true,
+      "unchangedSentences": 33,
+      "sentenceDelta": [
+        {
+          "index": 2,
+          "before": "Egy tajvani lakó a beálló mögötti falra szerelt töltőszekrényt, majd a mennyezet felől a közös elektromos szekrényhez és a hozzá tartozó mérőórához vezette a kábeleket.",
+          "after": "Egy tajvani lakó a beálló mögötti falra szerelt töltőszekrényt, majd a mennyezet felől a közös elektromos szekrényhez és a lakó mérőórájához vezette a kábeleket.",
+          "beforeLength": 25,
+          "afterLength": 24
+        },
+        {
+          "index": 4,
+          "before": "2022. június 22-én a Tajvani Felsőbíróság Kaohsiungi Tanácsa elutasította a lakó fellebbezését a 111年度上字第132號 ügyben.",
+          "after": "2022. június 22-én a Tajvani Felsőbíróság kaohsiungi kirendeltsége elutasította a lakó fellebbezését a 111年度上字第132號 ügyben.",
+          "beforeLength": 15,
+          "afterLength": 15
+        }
+      ],
+      "tools": [
+        {
+          "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+        },
+        {
+          "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+          "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+        },
+        {
+          "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+          "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+        },
+        {
+          "path": "/Users/son7/tseng-lanes-shared/variety/profiles/hu.json",
+          "sha256": "cef85b13e94e3fd08f23d3aa4fba80ab51c116adf3c7d30cb8e4e59d00b1279b"
+        }
+      ]
+    }
+  ]
+}

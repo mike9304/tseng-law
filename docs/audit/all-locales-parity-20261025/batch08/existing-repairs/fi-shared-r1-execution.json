@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/columns-fi/704-taiwan-arc-first-application.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/columns-fi/706-taiwan-arc-renewal-changes-reentry.md",
+    "--lang",
+    "fi"
+  ],
+  "exitCode": 0
+}

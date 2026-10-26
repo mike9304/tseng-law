@@ -1,0 +1,64 @@
+{
+  "at": "2026-10-26T08:39:09.676695+00:00",
+  "old_918_source_sha256": "a318132eb11b543d32d7ac10a1eb25c572b1b244167ca0931282fc0bc6235dd7",
+  "new_918_source_sha256": "10f672535c34897a0c3c0caba3f08932058efb8c203c8fd3af1e75d1f07af41a",
+  "old_actual_cli_evidence": "km-variety-revised.json",
+  "new_actual_cli_evidence": "km-variety-review-r2.json",
+  "changed_sentence": [
+    {
+      "index": 5,
+      "old": {
+        "text": "នៅថ្ងៃទី 9 កុម្ភៈ 2022 តុលាការមិនទទួលយកបណ្តឹងឧទ្ធរណ៍របស់អ្នកសាងសង់ និងមិនអនុញ្ញាតសំណើទាមទារបន្ថែមរបស់ខ្លួន ដោយរក្សាកាតព្វកិច្ចបង់ការប្រាក់សម្រាប់ការយឺតយ៉ាវ។",
+        "units": 30
+      },
+      "new": {
+        "text": "នៅថ្ងៃទី 9 កុម្ភៈ 2022 តុលាការបានបដិសេធបណ្តឹងឧទ្ធរណ៍ និងការទាមទារបន្ថែមរបស់អ្នកសាងសង់ ហើយរក្សាកាតព្វកិច្ចបង់ការប្រាក់សម្រាប់ការយឺតយ៉ាវ។",
+        "units": 27
+      }
+    }
+  ],
+  "unchanged_918_segments": 38,
+  "new_918_segment_count": 39,
+  "total_current_segments": 236,
+  "unchanged_total_segments": 235,
+  "current_manuscripts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-km/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "f925dfd62505ed705895030ba159e116e53edbc14d2d79456bef0aa6d201dd00",
+      "changed": false
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-km/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "2cf0a993ebac8aafc2f0a16b25b8c91313f438bb2a3f3d9109ec78ae670c596b",
+      "changed": false
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-km/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "10f672535c34897a0c3c0caba3f08932058efb8c203c8fd3af1e75d1f07af41a",
+      "changed": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-km/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "65df5af65f28e6f7486a3ef26e349fc9e4a98b2e3b3f0064b5cc5eb06159b2e8",
+      "changed": false
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-km/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "33d39d9d764163bf7b7e8a7281bb387048e338ad09986e8fffb2c107b1761741",
+      "changed": false
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-km/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "238e63766846ce8a50a0da533141b362a65a483eec54be6036875cfa174ca7fb",
+      "changed": false
+    }
+  ],
+  "same_tools": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/km.json": "87c3558f74be7faaab25178d605a5dc332607046e64799ecbfd28cdbca688521"
+  },
+  "scope": "One actual changed Khmer sentence and neighboring same segments read; no full CLI rerun; Unicode punctuation/condition/IDs retained",
+  "original_author_and_independent_R1_bytes_preserved": true
+}

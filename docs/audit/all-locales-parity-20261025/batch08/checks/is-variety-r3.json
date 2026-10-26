@@ -1,0 +1,56 @@
+{
+  "createdAt": "2026-10-26T07:20:58.314474+00:00",
+  "results": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "09bab5c57eea037bd207f536090989cd76ad2e340f654d4ea63d3f3ffeb871ca",
+      "argv": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "--lang",
+        "is"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [is] sentences=36 mean=15.3 cv=0.458 short=0.222 run3=0.147 opener_rep=0.0 cite_end=0.0 cite_para=0.154 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "is",
+        "sentences": 36,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.3,
+        "len_cv": 0.458,
+        "short_share": 0.222,
+        "long_share": 0.028,
+        "para_cv": 0.25,
+        "even_run3": 0.147,
+        "top_end": "opinberlega",
+        "top_end_share": 0.028,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "hvaða",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.0,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Hvaða svigrúm hefur nefnd til að komast að niðurstöðu þegar yfirmaður hefur þegar tilkynnt",
+        "last": "Lög og gildistaka þeirra voru yfirfarin 26. október 2026; dómslýsingin byggist á opinberri skýringu sem var skoðuð 25. o",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    }
+  ]
+}

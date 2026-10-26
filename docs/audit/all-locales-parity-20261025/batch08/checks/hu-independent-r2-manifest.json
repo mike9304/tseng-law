@@ -1,0 +1,45 @@
+{
+  "at": "2026-10-26T17:22:33.252982+09:00",
+  "status": "TARGETED_CLOSURE_COMPLETE",
+  "mandatory_open": 0,
+  "optional_open": 0,
+  "review": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hu-independent-r2.md",
+    "sha256": "34d4832e1e76dfa9200859fcc31ddbf0c6b0c9b923a1d1d5d5b5c6d34c566e52"
+  },
+  "verification": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hu-independent-r2-verification.json",
+    "sha256": "1792fa0f5e1794523dcfb63947b5b461a07401d8902aeba72efc6de5531af7b7"
+  },
+  "R1_preserved": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hu-independent.md",
+    "sha256": "72c85b55bc27d2c3ccb901c355e2934625c52d565e5958dbf341e255ed47f287"
+  },
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "6659ae1fc0f21374b23de7592c07db1ea40e59c7d5c098c4576e134ac805887d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "cd2edf272341f53231e55246994f431a59da1f5ea83e7dda16c588a6928859ee"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "44ce1490aeec719f4ec8ae26ec5654368939cfd689f7781f5b1f66d16c951f5e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "1ac72ef840a1bd2b09b0462269afc8ca420cc6208bb99b350b52d91b414efb4a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "a0af0c0413587cf3bff740f7c42ac38f3177d4d7c65eb88d53947166576e4898"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "b1a400ffc4a2aae73c631a3851df2f2d86570beb59c1c18c0decc03ca56f5a09"
+    }
+  ],
+  "scope": "Exact five changes; six reverse hashes; 223 linked segments with three changed; no new CLI/browser/public claim"
+}

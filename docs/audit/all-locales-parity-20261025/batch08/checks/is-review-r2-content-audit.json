@@ -1,0 +1,2927 @@
+{
+  "atUTC": "2026-10-26T08:13:45.653Z",
+  "changedFileCount": 3,
+  "reports": [
+    {
+      "version": 1,
+      "generatedAt": "2026-10-26T08:13:45.598Z",
+      "repoRoot": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+      "selectedFiles": 1,
+      "automatedStatus": "PASS",
+      "semanticStatus": "REVIEW_REQUIRED",
+      "publicationReady": false,
+      "errors": 0,
+      "reviewItems": 6,
+      "policy": {
+        "minBodyLettersAndNumbers": 500,
+        "minUniqueParagraphLettersAndNumbers": 350,
+        "sourceLocale": "en",
+        "publicationDate": "2026-10-26",
+        "legacyPolicy": "Unselected files supply existence/duplicate context only; no content changes or audience changes are made.",
+        "sourceApproval": "The operator must select an accepted source; existence/hash is not evidence of legal approval."
+      },
+      "runtimeContractHashes": {
+        "src/lib/column-audience.ts": "a1cb781f1a787366199995b0312b0fa1556d850e0637eb5ea66cd2174680b760",
+        "src/data/market-column-curation.ts": "c42e22feed6e49e5f4915a48ad18a49d9b874c024824ddf53a74fd5ede8a8b94",
+        "src/lib/column-attribution.ts": "8111ea9feabcdc98f13485014da51d39c9aebd084cbb6a1e52d923624bb6dcc3",
+        "src/lib/columns.ts": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+        "src/lib/column-locales.ts": "26d8fe8de7a9703aa7b0d279f32938e84190d5199ce0c4ddee84e89bb934b535",
+        "src/lib/public-guidance.ts": "c00a193d0dd583145e544a2cc505efad75a4379f5c334a811655a689d6df8d85",
+        "src/lib/column-topics.ts": "3fb8e18ae18777481cb8a07c158ea1b6435cdab98da0ea4701a1b98bf3ba435a",
+        "src/lib/locales.ts": "38304dea2b15fc6d6d05cebafa6cc08fdac18d66da875da7c79b7a117e431c54",
+        "src/lib/public-route-policy.ts": "7a71128c423d76057bd50e791189533ab96789594aef994f4346f4ead2c6607c",
+        "src/app/[locale]/(legacy)/index.tsx": "5e485ee21bac81e7b8dc74778fba24d69e8541492010e791709a82373c3eb2da",
+        "src/app/[locale]/[[...slug]]/page.tsx": "3dab508b2dddb716fa84184335f4f62b3d35164d30abdb3ab30185a3bb6a4f03"
+      },
+      "inventory": {
+        "counts": {
+          "ko": 217,
+          "zh-hant": 296,
+          "en": 218,
+          "ja": 230,
+          "vi": 45,
+          "id": 33,
+          "th": 31,
+          "fil": 31,
+          "ar": 34,
+          "de": 32,
+          "es": 52,
+          "fr": 31,
+          "pt": 34,
+          "zh-hans": 29,
+          "ms": 30,
+          "ru": 30,
+          "tr": 24,
+          "it": 32,
+          "nl": 26,
+          "pl": 26,
+          "hi": 34,
+          "sv": 24,
+          "da": 30,
+          "nb": 24,
+          "fi": 24,
+          "cs": 26,
+          "hu": 24,
+          "ro": 24,
+          "uk": 24,
+          "el": 30,
+          "he": 26,
+          "bn": 30,
+          "ur": 24,
+          "fa": 30,
+          "my": 24,
+          "ta": 24,
+          "ne": 24,
+          "km": 24,
+          "mn": 24,
+          "sk": 24,
+          "bg": 30,
+          "hr": 24,
+          "sr": 24,
+          "sl": 24,
+          "lt": 26,
+          "lv": 24,
+          "et": 30,
+          "ca": 30,
+          "is": 30
+        },
+        "duplicateKeys": []
+      },
+      "files": [
+        {
+          "file": "../../tseng-all-language-columns-20261025/batch08/checks/is-audit-overlay/columns-is/916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "locale": "is",
+          "slug": "taiwan-parent-company-pollution-liability-us-investor",
+          "errors": [],
+          "reviews": [
+            {
+              "code": "cross-language-link",
+              "status": "REQUIRED",
+              "message": "Confirm that the label explicitly identifies the source language and that no same-language page is available",
+              "href": "/en/contact",
+              "text": "fyrirspurn um félaga- eða ágreiningsmál á ensku samskiptasíðunni",
+              "line": 58,
+              "kind": "body"
+            },
+            {
+              "code": "public-output-and-native-prose",
+              "status": "REQUIRED",
+              "message": "Inspect rendered title, summary, FAQ, captions, cards, JSON-LD and feeds for native language and author leakage; compare opening/headings/ending with the previous three same-language articles. Automated token checks cannot prove either.",
+              "targetFields": [
+                {
+                  "key": "title",
+                  "text": "Mengun í taívanskri verksmiðju: hvað gerðu móðurfélögin eftir að skýrslan barst?"
+                },
+                {
+                  "key": "seoTitle",
+                  "text": "Ábyrgð móðurfélags á mengun í verksmiðju á Taívan"
+                },
+                {
+                  "key": "summary",
+                  "text": "Dómur um verksmiðjumengun tengdi ábyrgð móðurfélaga við vitneskju, yfirráð og ráðstöfun eigna. Við fyrirtækjakaup geta gögn um viðbrögðin eftir umhverfiskönnun skýrt meira en skýrslan ein."
+                },
+                {
+                  "key": "featured_image_alt",
+                  "text": "Ílát með jarðvegssýni og minnisbók á felliborði utan við gamla verksmiðju."
+                },
+                {
+                  "key": "featured_image_caption",
+                  "text": "Skálduð mynd"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "Ber erlent móðurfélag ábyrgð á mengun vegna þess eins að það á dótturfélag á Taívan?"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "Eignarhald eitt var ekki grundvöllur niðurstöðunnar í þessu máli. Opinbera skýringin fjallar um yfirráð, vitneskju um mengun, skort á úrbótum eða upplýsingagjöf og eignatilfærslur í þeim tilgangi að komast undan ábyrgð. Meta þarf tiltekna háttsemi og viðeigandi réttarreglur."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "Lauk dómur Hæstaréttar frá 2018 öllum kröfum vegna verksmiðjumengunarinnar?"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "Nei. Dómurinn var felldur úr gildi og málinu vísað aftur til meðferðar að því marki sem varðaði 246 kröfuhafa, en áfrýjunum varðandi 262 var hafnað. Mismunandi hlutar málsins fengu ólíka niðurstöðu. Þetta þýðir hvorki að öllum upphaflegum kröfum síðari hópsins hafi verið hafnað né að öllum tengdum málum hafi lokið."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "Hvaða gögn nýtast eftir umhverfiskönnun við fyrirtækjakaup?"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "Skýrslan, viðtakendur hennar, eftirfylgnispurningar, ákvarðanir um áhættu starfsmanna og úrbætur, ásamt samþykktum og fjárhagsmati vegna síðari eignatilfærslna, geta sýnt vitneskju og háttsemi. Varsla gagnanna ein staðfestir þó ekki að farið hafi verið að lögum."
+                }
+              ]
+            },
+            {
+              "code": "title-summary-faq",
+              "status": "REQUIRED",
+              "message": "Compare legal subject and scope in title, summary and every FAQ; presence/count is not semantic preservation. Check translated category labels and captions too.",
+              "source": {
+                "title": "Taiwan Factory Pollution: What the Parent Companies Knew",
+                "seoTitle": "Taiwan Parent Liability for Pollution",
+                "summary": "A Taiwan pollution judgment linked parent-company liability to control, knowledge and asset transfers. Acquisition diligence needs a record of the response.",
+                "faq": [
+                  {
+                    "q": "Does owning a Taiwan subsidiary make its foreign parent liable for pollution claims?",
+                    "a": "Ownership alone was not the basis of the ruling discussed here. The court's explanation describes control, knowledge of contamination, failure to address or disclose it, and asset movements intended to evade liabilities. Liability requires analysis of the particular conduct and applicable law."
+                  },
+                  {
+                    "q": "Did the 2018 Supreme Court ruling end every claim in the factory-pollution litigation?",
+                    "a": "No. The court vacated and remanded the portions concerning 246 claimants and dismissed the appeals concerning 262. The ruling had different outcomes for different portions of the case; it was not the conclusion of all related litigation."
+                  },
+                  {
+                    "q": "What should an acquisition team retain after an environmental review?",
+                    "a": "Retain the report, its recipients, follow-up questions, decisions on worker exposure and remediation, and the approvals and financial analysis for later asset transfers. These records help assess knowledge and conduct; keeping a file alone does not establish compliance."
+                  }
+                ],
+                "categories": [
+                  "Taiwan Legal Information"
+                ],
+                "featured_image_caption": "Fictional scene"
+              },
+              "target": {
+                "title": "Mengun í taívanskri verksmiðju: hvað gerðu móðurfélögin eftir að skýrslan barst?",
+                "seoTitle": "Ábyrgð móðurfélags á mengun í verksmiðju á Taívan",
+                "summary": "Dómur um verksmiðjumengun tengdi ábyrgð móðurfélaga við vitneskju, yfirráð og ráðstöfun eigna. Við fyrirtækjakaup geta gögn um viðbrögðin eftir umhverfiskönnun skýrt meira en skýrslan ein.",
+                "faq": [
+                  {
+                    "q": "Ber erlent móðurfélag ábyrgð á mengun vegna þess eins að það á dótturfélag á Taívan?",
+                    "a": "Eignarhald eitt var ekki grundvöllur niðurstöðunnar í þessu máli. Opinbera skýringin fjallar um yfirráð, vitneskju um mengun, skort á úrbótum eða upplýsingagjöf og eignatilfærslur í þeim tilgangi að komast undan ábyrgð. Meta þarf tiltekna háttsemi og viðeigandi réttarreglur."
+                  },
+                  {
+                    "q": "Lauk dómur Hæstaréttar frá 2018 öllum kröfum vegna verksmiðjumengunarinnar?",
+                    "a": "Nei. Dómurinn var felldur úr gildi og málinu vísað aftur til meðferðar að því marki sem varðaði 246 kröfuhafa, en áfrýjunum varðandi 262 var hafnað. Mismunandi hlutar málsins fengu ólíka niðurstöðu. Þetta þýðir hvorki að öllum upphaflegum kröfum síðari hópsins hafi verið hafnað né að öllum tengdum málum hafi lokið."
+                  },
+                  {
+                    "q": "Hvaða gögn nýtast eftir umhverfiskönnun við fyrirtækjakaup?",
+                    "a": "Skýrslan, viðtakendur hennar, eftirfylgnispurningar, ákvarðanir um áhættu starfsmanna og úrbætur, ásamt samþykktum og fjárhagsmati vegna síðari eignatilfærslna, geta sýnt vitneskju og háttsemi. Varsla gagnanna ein staðfestir þó ekki að farið hafi verið að lögum."
+                  }
+                ],
+                "categories": [
+                  "Félagaréttur á Taívan",
+                  "Fyrirtækjakaup"
+                ],
+                "featured_image_caption": "Skálduð mynd"
+              }
+            },
+            {
+              "code": "legal-conditions",
+              "status": "REQUIRED",
+              "message": "Verify every source actor, must/may, AND/OR, exception, eligibility, starting date, period, amount, quotation and factual qualifier against the full target. Passage order/count need not match. No heuristic clears this item.",
+              "sourcePassages": [
+                {
+                  "text": "Environmental investigations before an acquisition became part of the evidence against parent companies in a Taiwan factory-pollution case. The Supreme Court connected knowledge of contamination with operational control, the response to the danger and transfers that depleted the Taiwan company's assets. Its official explanation of judgment 107年度台上字第267號 shows why an acquisition review cannot end when the consultant delivers a report.",
+                  "line": 26,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Issued on August 16, 2018, the decision concerned workers' chemical exposure at an electronics manufacturer and the responsibility of companies controlling that business. It did not impose liability merely because a foreign investor owned a Taiwan subsidiary.",
+                  "line": 28,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "According to the Supreme Court's explanation, the record included environmental surveys identifying contamination, knowledge within the controlling groups, failure to inform workers or remedy the problem, and capital reductions and offshore remittances intended to evade liabilities. The court upheld the reasoning that allowed the relevant claims to reach the controlling companies despite separate corporate identities.",
+                  "line": 32,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "That sequence matters to acquisition counsel. A report's distribution list can identify who knew about the problem. Board papers and operational instructions can show who could decide how to respond. Later remittance approvals may need to be read against both. Treating those records as unrelated workstreams makes the group's own decisions harder to reconstruct.",
+                  "line": 34,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "The report is a starting point. A useful review asks who investigated the exposure concern, what further work was commissioned and how the findings affected decisions about the operating company's resources. It should record unanswered questions as unanswered. An optimistic closing presentation should not erase the underlying technical findings or the people responsible for following them up.",
+                  "line": 36,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "For 246 claimants, the Supreme Court vacated the relevant portions and sent them back for further proceedings. Appeals concerning 262 claimants were dismissed. The remand included shortcomings in the analysis of injury, evidence and authority to pursue claims. Those figures and limits appear in the court's disposition summary.",
+                  "line": 40,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "The split prevents a broad reading of the case. Remand did not decide that all affected people lacked a claim, and the dismissed appeals did not resolve every part of the wider litigation. A transaction team assessing historical exposure needs to identify the particular proceedings and their status before estimating an obligation. A headline about a single court date cannot supply that assessment.",
+                  "line": 42,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Taiwan's Company Act Article 154 generally limits a shareholder's responsibility to payment for its shares. Paragraph 2 provides an exception where a shareholder abuses the company's legal personality, causes it to incur a specific debt that is clearly difficult to repay, and the circumstances are serious enough to make shareholder liability necessary.",
+                  "line": 46,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Each condition matters. A shareholder relationship, an unpaid debt or an environmental finding alone does not state the whole statutory test. Nor should the statute be treated as the sole explanation for the court's treatment of historical conduct in the 2018 case. That decision examined the controlling companies' conduct and the basis for looking beyond separate legal identity.",
+                  "line": 48,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Investors comparing entity structures can find the ordinary starting point in the subsidiary and branch article. The pollution dispute adds a question that incorporation documents cannot answer: how did the group actually use its control when it learned about the risk?",
+                  "line": 50,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "USTR's February 2026 fact sheet describes the two sides' intention to facilitate cross-border investment and possible US support for private investment financing in Taiwan, subject to applicable law.",
+                  "line": 54,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Before approving a distribution, capital reduction or exit transfer, the relevant decision-makers should have an assessment of identified exposure, unresolved claims and the resources that will remain in the Taiwan company. The legal review must address the proposed transaction itself. No document label establishes that a transfer is lawful, and a report sitting unread in a data room does not establish a response to its findings.",
+                  "line": 56,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "For a Taiwan corporate or disputes inquiry, the initial description can identify the transaction, the Taiwan entity and any scheduled transfer or closing date. Technical reports and sensitive worker information can be handled through an agreed delivery process. The immediate records to preserve are the original findings, the decisions they prompted and the approvals for any subsequent movement of assets.",
+                  "line": 58,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Official sources checked October 25, 2026. This article examines one identified 2018 ruling through the Supreme Court's explanation and the current statutory provision; it is not a history of every related case or an assessment of a particular investor's liability.",
+                  "line": 60,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Supreme Court explanation of 107年度台上字第267號, August 16, 2018: environmental knowledge, control, asset movements and the split disposition.",
+                  "line": 64,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Company Act, Article 154: limited shareholder liability and the statutory exception for abuse of corporate personality.",
+                  "line": 65,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "USTR, February 2026 reciprocal-trade fact sheet: stated intentions concerning cross-border investment.",
+                  "line": 66,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Knowledge, control and the movement of assets",
+                  "line": 30,
+                  "kind": "h2"
+                },
+                {
+                  "text": "The ruling had a divided outcome",
+                  "line": 38,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Limited liability and its conditions",
+                  "line": 44,
+                  "kind": "h2"
+                },
+                {
+                  "text": "A current investment plan needs a response record",
+                  "line": 52,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Official sources",
+                  "line": 62,
+                  "kind": "h2"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "Does owning a Taiwan subsidiary make its foreign parent liable for pollution claims?"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "Ownership alone was not the basis of the ruling discussed here. The court's explanation describes control, knowledge of contamination, failure to address or disclose it, and asset movements intended to evade liabilities. Liability requires analysis of the particular conduct and applicable law."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "Did the 2018 Supreme Court ruling end every claim in the factory-pollution litigation?"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "No. The court vacated and remanded the portions concerning 246 claimants and dismissed the appeals concerning 262. The ruling had different outcomes for different portions of the case; it was not the conclusion of all related litigation."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "What should an acquisition team retain after an environmental review?"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "Retain the report, its recipients, follow-up questions, decisions on worker exposure and remediation, and the approvals and financial analysis for later asset transfers. These records help assess knowledge and conduct; keeping a file alone does not establish compliance."
+                }
+              ],
+              "sourceConditionHints": [
+                {
+                  "text": "Environmental investigations before an acquisition became part of the evidence against parent companies in a Taiwan factory-pollution case. The Supreme Court connected knowledge of contamination with operational control, the response to the danger and transfers that depleted the Taiwan company's assets. Its official explanation of judgment 107年度台上字第267號 shows why an acquisition review cannot end when the consultant delivers a report.",
+                  "line": 26,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Issued on August 16, 2018, the decision concerned workers' chemical exposure at an electronics manufacturer and the responsibility of companies controlling that business. It did not impose liability merely because a foreign investor owned a Taiwan subsidiary.",
+                  "line": 28,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "According to the Supreme Court's explanation, the record included environmental surveys identifying contamination, knowledge within the controlling groups, failure to inform workers or remedy the problem, and capital reductions and offshore remittances intended to evade liabilities. The court upheld the reasoning that allowed the relevant claims to reach the controlling companies despite separate corporate identities.",
+                  "line": 32,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "That sequence matters to acquisition counsel. A report's distribution list can identify who knew about the problem. Board papers and operational instructions can show who could decide how to respond. Later remittance approvals may need to be read against both. Treating those records as unrelated workstreams makes the group's own decisions harder to reconstruct.",
+                  "line": 34,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "The report is a starting point. A useful review asks who investigated the exposure concern, what further work was commissioned and how the findings affected decisions about the operating company's resources. It should record unanswered questions as unanswered. An optimistic closing presentation should not erase the underlying technical findings or the people responsible for following them up.",
+                  "line": 36,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "For 246 claimants, the Supreme Court vacated the relevant portions and sent them back for further proceedings. Appeals concerning 262 claimants were dismissed. The remand included shortcomings in the analysis of injury, evidence and authority to pursue claims. Those figures and limits appear in the court's disposition summary.",
+                  "line": 40,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "The split prevents a broad reading of the case. Remand did not decide that all affected people lacked a claim, and the dismissed appeals did not resolve every part of the wider litigation. A transaction team assessing historical exposure needs to identify the particular proceedings and their status before estimating an obligation. A headline about a single court date cannot supply that assessment.",
+                  "line": 42,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Taiwan's Company Act Article 154 generally limits a shareholder's responsibility to payment for its shares. Paragraph 2 provides an exception where a shareholder abuses the company's legal personality, causes it to incur a specific debt that is clearly difficult to repay, and the circumstances are serious enough to make shareholder liability necessary.",
+                  "line": 46,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Each condition matters. A shareholder relationship, an unpaid debt or an environmental finding alone does not state the whole statutory test. Nor should the statute be treated as the sole explanation for the court's treatment of historical conduct in the 2018 case. That decision examined the controlling companies' conduct and the basis for looking beyond separate legal identity.",
+                  "line": 48,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Investors comparing entity structures can find the ordinary starting point in the subsidiary and branch article. The pollution dispute adds a question that incorporation documents cannot answer: how did the group actually use its control when it learned about the risk?",
+                  "line": 50,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "USTR's February 2026 fact sheet describes the two sides' intention to facilitate cross-border investment and possible US support for private investment financing in Taiwan, subject to applicable law.",
+                  "line": 54,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Before approving a distribution, capital reduction or exit transfer, the relevant decision-makers should have an assessment of identified exposure, unresolved claims and the resources that will remain in the Taiwan company. The legal review must address the proposed transaction itself. No document label establishes that a transfer is lawful, and a report sitting unread in a data room does not establish a response to its findings.",
+                  "line": 56,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "For a Taiwan corporate or disputes inquiry, the initial description can identify the transaction, the Taiwan entity and any scheduled transfer or closing date. Technical reports and sensitive worker information can be handled through an agreed delivery process. The immediate records to preserve are the original findings, the decisions they prompted and the approvals for any subsequent movement of assets.",
+                  "line": 58,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Official sources checked October 25, 2026. This article examines one identified 2018 ruling through the Supreme Court's explanation and the current statutory provision; it is not a history of every related case or an assessment of a particular investor's liability.",
+                  "line": 60,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Supreme Court explanation of 107年度台上字第267號, August 16, 2018: environmental knowledge, control, asset movements and the split disposition.",
+                  "line": 64,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Company Act, Article 154: limited shareholder liability and the statutory exception for abuse of corporate personality.",
+                  "line": 65,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Knowledge, control and the movement of assets",
+                  "line": 30,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Limited liability and its conditions",
+                  "line": 44,
+                  "kind": "h2"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "Ownership alone was not the basis of the ruling discussed here. The court's explanation describes control, knowledge of contamination, failure to address or disclose it, and asset movements intended to evade liabilities. Liability requires analysis of the particular conduct and applicable law."
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "No. The court vacated and remanded the portions concerning 246 claimants and dismissed the appeals concerning 262. The ruling had different outcomes for different portions of the case; it was not the conclusion of all related litigation."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "What should an acquisition team retain after an environmental review?"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "Retain the report, its recipients, follow-up questions, decisions on worker exposure and remediation, and the approvals and financial analysis for later asset transfers. These records help assess knowledge and conduct; keeping a file alone does not establish compliance."
+                }
+              ],
+              "targetPassages": [
+                {
+                  "text": "Umhverfiskannanir sem voru gerðar fyrir fyrirtækjakaup urðu síðar hluti sönnunargagna gegn móðurfélögum í taívönsku mengunarmáli. Opinber skýring á dómi Hæstaréttar í máli 107年度台上字第267號 tengir niðurstöður kannananna við yfirráð yfir rekstrinum og það sem félögin gerðu eftir að þeim varð kunnugt um hættuna. Eignir voru einnig færðar frá félaginu á Taívan.",
+                  "line": 26,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Dómurinn féll 16. ágúst 2018 og laut að váhrifum efna á starfsfólk raftækjaverksmiðju og ábyrgð félaga sem stjórnuðu starfseminni. Ábyrgðin var ekki byggð á því einu að erlendur fjárfestir ætti taívanskt dótturfélag.",
+                  "line": 28,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Samkvæmt skýringunni höfðu umhverfisrannsóknir leitt mengun í ljós og ráðandi félög þekktu vandann. Starfsfólk var ekki upplýst og úrbætur skorti. Við matið komu einnig til lækkun hlutafjár og greiðslur til útlanda sem áttu að koma eignum undan skuldbindingum vegna mengunarinnar. Dómstóllinn staðfesti rök fyrir því að viðkomandi kröfur næðu til ráðandi félaganna þrátt fyrir að þau væru sjálfstæðir lögaðilar.",
+                  "line": 32,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Hver fékk skýrsluna og gat ákveðið viðbrögð? Dreifingarlisti sýnir viðtakendur. Fundargerðir og fyrirmæli um rekstur geta skýrt hver hafði heimild til að bregðast við, en samþykktir um síðari millifærslur tengja vitneskjuna við ráðstöfun fjármuna. Að geyma þessi gögn í aðskildum möppum getur gert ákvörðunarferlið erfiðara að rekja.",
+                  "line": 34,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Við yfirferð fyrirtækjakaupa má kanna hver rannsakaði áhættu starfsmanna, hvaða frekari athugana var óskað og hvernig niðurstöðurnar höfðu áhrif á úthlutun fjármuna eða eignir rekstrarfélagsins. Jákvæð kynning fyrir lokun viðskiptanna ætti ekki að fela upprunalegar tæknilegar niðurstöður eða eftirfylgnina sem þær kölluðu á.",
+                  "line": 36,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Hæstiréttur felldi úr gildi þann hluta dómsins sem varðaði 246 kröfuhafa og vísaði honum aftur til meðferðar. Áfrýjunum varðandi 262 kröfuhafa var hafnað. Samantekt dómsniðurstöðunnar nefnir meðal annars annmarka á greiningu tjóns, sönnunargagna og heimildar til að reka kröfur í þeim hlutum sem fóru til nýrrar meðferðar.",
+                  "line": 40,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Endurmeðferðin útilokaði ekki kröfur alls hópsins. Höfnun áfrýjana varðandi síðari hópinn jafngilti heldur ekki höfnun allra upphaflegra krafna hans eða lokum allra tengdra mála. Þegar eldri skuldbinding er metin þarf því að greina tiltekið mál og stöðu þess áður en fjárhæð er áætluð.",
+                  "line": 42,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "154. grein félagalaga Taívan takmarkar almennt ábyrgð hluthafa við greiðslu hlutafjár. Undantekningin í annarri málsgrein er bundin skilyrðum. Hún tekur til þess þegar hluthafi misnotar sjálfstæði félagsins sem lögaðila, lætur það stofna til tiltekinnar skuldar sem augljóslega er erfitt að greiða og aðstæður eru svo alvarlegar að nauðsynlegt er að leggja greiðsluskylduna á hluthafann. Þá ber honum að greiða skuldina.",
+                  "line": 46,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Skilyrðin eiga að vera uppfyllt saman. Ógreidd skuld ein, eignarhald eða niðurstaða umhverfiskönnunar lýsir ekki öllu lagaprófinu. Núverandi ákvæði ætti heldur ekki að setja fram sem eina lagastoð dómsins um eldri háttsemi árið 2018; þar var metið hvernig ráðandi félögin höfðu hegðað sér og á hvaða grundvelli mætti líta fram hjá aðskilnaði lögaðilanna.",
+                  "line": 48,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Venjulegan mun á félagaformum má skoða í umfjöllun um dótturfélag og útibú á Taívan. Mengunarmálið kallar svo á gögn sem stofnskjöl ein veita ekki: hvernig voru yfirráðin notuð eftir að hættan varð þekkt?",
+                  "line": 50,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Upplýsingablað USTR frá febrúar 2026 lýsir vilja Bandaríkjanna og Taívan til að greiða fyrir fjárfestingum yfir landamæri og mögulegum bandarískum stuðningi við fjármögnun einkafjárfestinga á Taívan samkvæmt viðeigandi lögum. Þessi viljayfirlýsing veitir ekki sjálfkrafa rétt til fjármagns. Hún er heldur ekki staðfesting á gildistöku allra ákvæða samningsins.",
+                  "line": 54,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Tillaga um arðgreiðslu, lækkun hlutafjár eða flutning fjármuna úr félaginu getur verið borin saman við þekkta áhættu, óleystar kröfur og þær eignir sem verða eftir á Taívan. Sjálf ráðstöfunin þarfnast lagalegs mats. Heiti skjals staðfestir ekki lögmæti millifærslu og ólesin skýrsla í gagnaherbergi sýnir ekki viðbrögð við niðurstöðum hennar.",
+                  "line": 56,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Í fyrirspurn um félaga- eða ágreiningsmál á ensku samskiptasíðunni má tilgreina viðskiptin, taívanska félagið og fyrirhugaðan greiðslu- eða lokunardag. Tækniskýrslur og viðkvæmar upplýsingar um starfsfólk má senda síðar eftir samkomulagi um afhendingu. Fyrstu gögnin til að tengja saman eru upprunalegar niðurstöður, ákvarðanirnar sem fylgdu þeim og heimildir fyrir síðari eignatilfærslum.",
+                  "line": 58,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Núgildandi ákvæði og opinberar upplýsingar um fjárfestingu voru yfirfarin 26. október 2026. Dómslýsingin byggist á opinberri skýringu sem var skoðuð 25. október og tekur ekki saman sögu allra tengdra mála eða ábyrgð ákveðins fjárfestis.",
+                  "line": 60,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Hæstiréttur: skýring á máli 107年度台上字第267號, 16. ágúst 2018.",
+                  "line": 64,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Félagalög, 154. grein.",
+                  "line": 65,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "USTR: upplýsingablað um viðskiptasamning Bandaríkjanna og Taívan, febrúar 2026.",
+                  "line": 66,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Frá niðurstöðum könnunar að ákvörðunum stjórnenda",
+                  "line": 30,
+                  "kind": "h2"
+                },
+                {
+                  "text": "246 kröfuhafar í endurmeðferð, áfrýjunum varðandi 262 hafnað",
+                  "line": 38,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Takmörkuð ábyrgð og misnotkun félagsforms",
+                  "line": 44,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Fjárfestingaráform og eignir sem verða eftir",
+                  "line": 52,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Opinberar heimildir",
+                  "line": 62,
+                  "kind": "h2"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "Ber erlent móðurfélag ábyrgð á mengun vegna þess eins að það á dótturfélag á Taívan?"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "Eignarhald eitt var ekki grundvöllur niðurstöðunnar í þessu máli. Opinbera skýringin fjallar um yfirráð, vitneskju um mengun, skort á úrbótum eða upplýsingagjöf og eignatilfærslur í þeim tilgangi að komast undan ábyrgð. Meta þarf tiltekna háttsemi og viðeigandi réttarreglur."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "Lauk dómur Hæstaréttar frá 2018 öllum kröfum vegna verksmiðjumengunarinnar?"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "Nei. Dómurinn var felldur úr gildi og málinu vísað aftur til meðferðar að því marki sem varðaði 246 kröfuhafa, en áfrýjunum varðandi 262 var hafnað. Mismunandi hlutar málsins fengu ólíka niðurstöðu. Þetta þýðir hvorki að öllum upphaflegum kröfum síðari hópsins hafi verið hafnað né að öllum tengdum málum hafi lokið."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "Hvaða gögn nýtast eftir umhverfiskönnun við fyrirtækjakaup?"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "Skýrslan, viðtakendur hennar, eftirfylgnispurningar, ákvarðanir um áhættu starfsmanna og úrbætur, ásamt samþykktum og fjárhagsmati vegna síðari eignatilfærslna, geta sýnt vitneskju og háttsemi. Varsla gagnanna ein staðfestir þó ekki að farið hafi verið að lögum."
+                }
+              ],
+              "sourceMarkdown": "\nEnvironmental investigations before an acquisition became part of the evidence against parent companies in a Taiwan factory-pollution case. The Supreme Court connected knowledge of contamination with operational control, the response to the danger and transfers that depleted the Taiwan company's assets. Its [official explanation of judgment 107年度台上字第267號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) shows why an acquisition review cannot end when the consultant delivers a report.\n\nIssued on August 16, 2018, the decision concerned workers' chemical exposure at an electronics manufacturer and the responsibility of companies controlling that business. It did not impose liability merely because a foreign investor owned a Taiwan subsidiary.\n\n## Knowledge, control and the movement of assets\n\nAccording to the [Supreme Court's explanation](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523), the record included environmental surveys identifying contamination, knowledge within the controlling groups, failure to inform workers or remedy the problem, and capital reductions and offshore remittances intended to evade liabilities. The court upheld the reasoning that allowed the relevant claims to reach the controlling companies despite separate corporate identities.\n\nThat sequence matters to acquisition counsel. A report's distribution list can identify who knew about the problem. Board papers and operational instructions can show who could decide how to respond. Later remittance approvals may need to be read against both. Treating those records as unrelated workstreams makes the group's own decisions harder to reconstruct.\n\nThe report is a starting point. A useful review asks who investigated the exposure concern, what further work was commissioned and how the findings affected decisions about the operating company's resources. It should record unanswered questions as unanswered. An optimistic closing presentation should not erase the underlying technical findings or the people responsible for following them up.\n\n## The ruling had a divided outcome\n\nFor 246 claimants, the Supreme Court vacated the relevant portions and sent them back for further proceedings. Appeals concerning 262 claimants were dismissed. The remand included shortcomings in the analysis of injury, evidence and authority to pursue claims. Those figures and limits appear in the [court's disposition summary](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523).\n\nThe split prevents a broad reading of the case. Remand did not decide that all affected people lacked a claim, and the dismissed appeals did not resolve every part of the wider litigation. A transaction team assessing historical exposure needs to identify the particular proceedings and their status before estimating an obligation. A headline about a single court date cannot supply that assessment.\n\n## Limited liability and its conditions\n\nTaiwan's [Company Act Article 154](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154) generally limits a shareholder's responsibility to payment for its shares. Paragraph 2 provides an exception where a shareholder abuses the company's legal personality, causes it to incur a specific debt that is clearly difficult to repay, and the circumstances are serious enough to make shareholder liability necessary.\n\nEach condition matters. A shareholder relationship, an unpaid debt or an environmental finding alone does not state the whole statutory test. Nor should the statute be treated as the sole explanation for the court's treatment of historical conduct in the 2018 case. That decision examined the controlling companies' conduct and the basis for looking beyond separate legal identity.\n\nInvestors comparing entity structures can find the ordinary starting point in the [subsidiary and branch article](/en/columns/taiwan-company-subsidiary-vs-branch). The pollution dispute adds a question that incorporation documents cannot answer: how did the group actually use its control when it learned about the risk?\n\n## A current investment plan needs a response record\n\n[USTR's February 2026 fact sheet](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) describes the two sides' intention to facilitate cross-border investment and possible US support for private investment financing in Taiwan, subject to applicable law.\n\nBefore approving a distribution, capital reduction or exit transfer, the relevant decision-makers should have an assessment of identified exposure, unresolved claims and the resources that will remain in the Taiwan company. The legal review must address the proposed transaction itself. No document label establishes that a transfer is lawful, and a report sitting unread in a data room does not establish a response to its findings.\n\nFor a [Taiwan corporate or disputes inquiry](/en/contact), the initial description can identify the transaction, the Taiwan entity and any scheduled transfer or closing date. Technical reports and sensitive worker information can be handled through an agreed delivery process. The immediate records to preserve are the original findings, the decisions they prompted and the approvals for any subsequent movement of assets.\n\nOfficial sources checked October 25, 2026. This article examines one identified 2018 ruling through the Supreme Court's explanation and the current statutory provision; it is not a history of every related case or an assessment of a particular investor's liability.\n\n## Official sources\n\n- [Supreme Court explanation of 107年度台上字第267號, August 16, 2018](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523): environmental knowledge, control, asset movements and the split disposition.\n- [Company Act, Article 154](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154): limited shareholder liability and the statutory exception for abuse of corporate personality.\n- [USTR, February 2026 reciprocal-trade fact sheet](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade): stated intentions concerning cross-border investment.\n",
+              "targetMarkdown": "\nUmhverfiskannanir sem voru gerðar fyrir fyrirtækjakaup urðu síðar hluti sönnunargagna gegn móðurfélögum í taívönsku mengunarmáli. [Opinber skýring á dómi Hæstaréttar í máli 107年度台上字第267號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) tengir niðurstöður kannananna við yfirráð yfir rekstrinum og það sem félögin gerðu eftir að þeim varð kunnugt um hættuna. Eignir voru einnig færðar frá félaginu á Taívan.\n\nDómurinn féll 16. ágúst 2018 og laut að váhrifum efna á starfsfólk raftækjaverksmiðju og ábyrgð félaga sem stjórnuðu starfseminni. Ábyrgðin var ekki byggð á því einu að erlendur fjárfestir ætti taívanskt dótturfélag.\n\n## Frá niðurstöðum könnunar að ákvörðunum stjórnenda\n\nSamkvæmt skýringunni höfðu umhverfisrannsóknir leitt mengun í ljós og ráðandi félög þekktu vandann. Starfsfólk var ekki upplýst og úrbætur skorti. Við matið komu einnig til lækkun hlutafjár og greiðslur til útlanda sem áttu að koma eignum undan skuldbindingum vegna mengunarinnar. Dómstóllinn staðfesti rök fyrir því að viðkomandi kröfur næðu til ráðandi félaganna þrátt fyrir að þau væru sjálfstæðir lögaðilar.\n\nHver fékk skýrsluna og gat ákveðið viðbrögð? Dreifingarlisti sýnir viðtakendur. Fundargerðir og fyrirmæli um rekstur geta skýrt hver hafði heimild til að bregðast við, en samþykktir um síðari millifærslur tengja vitneskjuna við ráðstöfun fjármuna. Að geyma þessi gögn í aðskildum möppum getur gert ákvörðunarferlið erfiðara að rekja.\n\nVið yfirferð fyrirtækjakaupa má kanna hver rannsakaði áhættu starfsmanna, hvaða frekari athugana var óskað og hvernig niðurstöðurnar höfðu áhrif á úthlutun fjármuna eða eignir rekstrarfélagsins. Jákvæð kynning fyrir lokun viðskiptanna ætti ekki að fela upprunalegar tæknilegar niðurstöður eða eftirfylgnina sem þær kölluðu á.\n\n## 246 kröfuhafar í endurmeðferð, áfrýjunum varðandi 262 hafnað\n\nHæstiréttur felldi úr gildi þann hluta dómsins sem varðaði 246 kröfuhafa og vísaði honum aftur til meðferðar. Áfrýjunum varðandi 262 kröfuhafa var hafnað. [Samantekt dómsniðurstöðunnar](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) nefnir meðal annars annmarka á greiningu tjóns, sönnunargagna og heimildar til að reka kröfur í þeim hlutum sem fóru til nýrrar meðferðar.\n\nEndurmeðferðin útilokaði ekki kröfur alls hópsins. Höfnun áfrýjana varðandi síðari hópinn jafngilti heldur ekki höfnun allra upphaflegra krafna hans eða lokum allra tengdra mála. Þegar eldri skuldbinding er metin þarf því að greina tiltekið mál og stöðu þess áður en fjárhæð er áætluð.\n\n## Takmörkuð ábyrgð og misnotkun félagsforms\n\n[154. grein félagalaga Taívan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154) takmarkar almennt ábyrgð hluthafa við greiðslu hlutafjár. Undantekningin í annarri málsgrein er bundin skilyrðum. Hún tekur til þess þegar hluthafi misnotar sjálfstæði félagsins sem lögaðila, lætur það stofna til tiltekinnar skuldar sem augljóslega er erfitt að greiða og aðstæður eru svo alvarlegar að nauðsynlegt er að leggja greiðsluskylduna á hluthafann. Þá ber honum að greiða skuldina.\n\nSkilyrðin eiga að vera uppfyllt saman. Ógreidd skuld ein, eignarhald eða niðurstaða umhverfiskönnunar lýsir ekki öllu lagaprófinu. Núverandi ákvæði ætti heldur ekki að setja fram sem eina lagastoð dómsins um eldri háttsemi árið 2018; þar var metið hvernig ráðandi félögin höfðu hegðað sér og á hvaða grundvelli mætti líta fram hjá aðskilnaði lögaðilanna.\n\nVenjulegan mun á félagaformum má skoða í [umfjöllun um dótturfélag og útibú á Taívan](/is/columns/taiwan-company-subsidiary-vs-branch). Mengunarmálið kallar svo á gögn sem stofnskjöl ein veita ekki: hvernig voru yfirráðin notuð eftir að hættan varð þekkt?\n\n## Fjárfestingaráform og eignir sem verða eftir\n\n[Upplýsingablað USTR frá febrúar 2026](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) lýsir vilja Bandaríkjanna og Taívan til að greiða fyrir fjárfestingum yfir landamæri og mögulegum bandarískum stuðningi við fjármögnun einkafjárfestinga á Taívan samkvæmt viðeigandi lögum. Þessi viljayfirlýsing veitir ekki sjálfkrafa rétt til fjármagns. Hún er heldur ekki staðfesting á gildistöku allra ákvæða samningsins.\n\nTillaga um arðgreiðslu, lækkun hlutafjár eða flutning fjármuna úr félaginu getur verið borin saman við þekkta áhættu, óleystar kröfur og þær eignir sem verða eftir á Taívan. Sjálf ráðstöfunin þarfnast lagalegs mats. Heiti skjals staðfestir ekki lögmæti millifærslu og ólesin skýrsla í gagnaherbergi sýnir ekki viðbrögð við niðurstöðum hennar.\n\nÍ [fyrirspurn um félaga- eða ágreiningsmál á ensku samskiptasíðunni](/en/contact) má tilgreina viðskiptin, taívanska félagið og fyrirhugaðan greiðslu- eða lokunardag. Tækniskýrslur og viðkvæmar upplýsingar um starfsfólk má senda síðar eftir samkomulagi um afhendingu. Fyrstu gögnin til að tengja saman eru upprunalegar niðurstöður, ákvarðanirnar sem fylgdu þeim og heimildir fyrir síðari eignatilfærslum.\n\nNúgildandi ákvæði og opinberar upplýsingar um fjárfestingu voru yfirfarin 26. október 2026. Dómslýsingin byggist á opinberri skýringu sem var skoðuð 25. október og tekur ekki saman sögu allra tengdra mála eða ábyrgð ákveðins fjárfestis.\n\n## Opinberar heimildir\n\n- [Hæstiréttur: skýring á máli 107年度台上字第267號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523), 16. ágúst 2018.\n- [Félagalög, 154. grein](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154).\n- [USTR: upplýsingablað um viðskiptasamning Bandaríkjanna og Taívan](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade), febrúar 2026.\n"
+            },
+            {
+              "code": "numbers-dates-currencies",
+              "status": "REQUIRED",
+              "message": "Raw numeric-token differences require context review; locale separators, spelled-out numerals and era conversions are not automatically equivalent. Matching tokens also do not prove matching conditions. No values are synthesized or zero-filled.",
+              "sourceOnly": [
+                {
+                  "token": "2018",
+                  "count": 1
+                },
+                {
+                  "token": "2",
+                  "count": 1
+                }
+              ],
+              "targetOnly": [
+                {
+                  "token": "246",
+                  "count": 1
+                },
+                {
+                  "token": "262",
+                  "count": 1
+                },
+                {
+                  "token": "26",
+                  "count": 1
+                }
+              ],
+              "sourceEvidence": [
+                {
+                  "key": "faq[1].q",
+                  "text": "Did the 2018 Supreme Court ruling end every claim in the factory-pollution litigation?",
+                  "tokens": [
+                    "2018"
+                  ]
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "No. The court vacated and remanded the portions concerning 246 claimants and dismissed the appeals concerning 262. The ruling had different outcomes for different portions of the case; it was not the conclusion of all related litigation.",
+                  "tokens": [
+                    "246",
+                    "262"
+                  ]
+                },
+                {
+                  "text": "Environmental investigations before an acquisition became part of the evidence against parent companies in a Taiwan factory-pollution case. The Supreme Court connected knowledge of contamination with operational control, the response to the danger and transfers that depleted the Taiwan company's assets. Its official explanation of judgment 107年度台上字第267號 shows why an acquisition review cannot end when the consultant delivers a report.",
+                  "line": 26,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "107",
+                    "267"
+                  ]
+                },
+                {
+                  "text": "Issued on August 16, 2018, the decision concerned workers' chemical exposure at an electronics manufacturer and the responsibility of companies controlling that business. It did not impose liability merely because a foreign investor owned a Taiwan subsidiary.",
+                  "line": 28,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "16",
+                    "2018"
+                  ]
+                },
+                {
+                  "text": "For 246 claimants, the Supreme Court vacated the relevant portions and sent them back for further proceedings. Appeals concerning 262 claimants were dismissed. The remand included shortcomings in the analysis of injury, evidence and authority to pursue claims. Those figures and limits appear in the court's disposition summary.",
+                  "line": 40,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "246",
+                    "262"
+                  ]
+                },
+                {
+                  "text": "Taiwan's Company Act Article 154 generally limits a shareholder's responsibility to payment for its shares. Paragraph 2 provides an exception where a shareholder abuses the company's legal personality, causes it to incur a specific debt that is clearly difficult to repay, and the circumstances are serious enough to make shareholder liability necessary.",
+                  "line": 46,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "154",
+                    "2"
+                  ]
+                },
+                {
+                  "text": "Each condition matters. A shareholder relationship, an unpaid debt or an environmental finding alone does not state the whole statutory test. Nor should the statute be treated as the sole explanation for the court's treatment of historical conduct in the 2018 case. That decision examined the controlling companies' conduct and the basis for looking beyond separate legal identity.",
+                  "line": 48,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2018"
+                  ]
+                },
+                {
+                  "text": "USTR's February 2026 fact sheet describes the two sides' intention to facilitate cross-border investment and possible US support for private investment financing in Taiwan, subject to applicable law.",
+                  "line": 54,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026"
+                  ]
+                },
+                {
+                  "text": "Official sources checked October 25, 2026. This article examines one identified 2018 ruling through the Supreme Court's explanation and the current statutory provision; it is not a history of every related case or an assessment of a particular investor's liability.",
+                  "line": 60,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "25",
+                    "2026",
+                    "2018"
+                  ]
+                },
+                {
+                  "text": "Supreme Court explanation of 107年度台上字第267號, August 16, 2018: environmental knowledge, control, asset movements and the split disposition.",
+                  "line": 64,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "107",
+                    "267",
+                    "16",
+                    "2018"
+                  ]
+                },
+                {
+                  "text": "Company Act, Article 154: limited shareholder liability and the statutory exception for abuse of corporate personality.",
+                  "line": 65,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "154"
+                  ]
+                },
+                {
+                  "text": "USTR, February 2026 reciprocal-trade fact sheet: stated intentions concerning cross-border investment.",
+                  "line": 66,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026"
+                  ]
+                }
+              ],
+              "targetEvidence": [
+                {
+                  "key": "faq[1].q",
+                  "text": "Lauk dómur Hæstaréttar frá 2018 öllum kröfum vegna verksmiðjumengunarinnar?",
+                  "tokens": [
+                    "2018"
+                  ]
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "Nei. Dómurinn var felldur úr gildi og málinu vísað aftur til meðferðar að því marki sem varðaði 246 kröfuhafa, en áfrýjunum varðandi 262 var hafnað. Mismunandi hlutar málsins fengu ólíka niðurstöðu. Þetta þýðir hvorki að öllum upphaflegum kröfum síðari hópsins hafi verið hafnað né að öllum tengdum málum hafi lokið.",
+                  "tokens": [
+                    "246",
+                    "262"
+                  ]
+                },
+                {
+                  "text": "Umhverfiskannanir sem voru gerðar fyrir fyrirtækjakaup urðu síðar hluti sönnunargagna gegn móðurfélögum í taívönsku mengunarmáli. Opinber skýring á dómi Hæstaréttar í máli 107年度台上字第267號 tengir niðurstöður kannananna við yfirráð yfir rekstrinum og það sem félögin gerðu eftir að þeim varð kunnugt um hættuna. Eignir voru einnig færðar frá félaginu á Taívan.",
+                  "line": 26,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "107",
+                    "267"
+                  ]
+                },
+                {
+                  "text": "Dómurinn féll 16. ágúst 2018 og laut að váhrifum efna á starfsfólk raftækjaverksmiðju og ábyrgð félaga sem stjórnuðu starfseminni. Ábyrgðin var ekki byggð á því einu að erlendur fjárfestir ætti taívanskt dótturfélag.",
+                  "line": 28,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "16",
+                    "2018"
+                  ]
+                },
+                {
+                  "text": "Hæstiréttur felldi úr gildi þann hluta dómsins sem varðaði 246 kröfuhafa og vísaði honum aftur til meðferðar. Áfrýjunum varðandi 262 kröfuhafa var hafnað. Samantekt dómsniðurstöðunnar nefnir meðal annars annmarka á greiningu tjóns, sönnunargagna og heimildar til að reka kröfur í þeim hlutum sem fóru til nýrrar meðferðar.",
+                  "line": 40,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "246",
+                    "262"
+                  ]
+                },
+                {
+                  "text": "154. grein félagalaga Taívan takmarkar almennt ábyrgð hluthafa við greiðslu hlutafjár. Undantekningin í annarri málsgrein er bundin skilyrðum. Hún tekur til þess þegar hluthafi misnotar sjálfstæði félagsins sem lögaðila, lætur það stofna til tiltekinnar skuldar sem augljóslega er erfitt að greiða og aðstæður eru svo alvarlegar að nauðsynlegt er að leggja greiðsluskylduna á hluthafann. Þá ber honum að greiða skuldina.",
+                  "line": 46,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "154"
+                  ]
+                },
+                {
+                  "text": "Skilyrðin eiga að vera uppfyllt saman. Ógreidd skuld ein, eignarhald eða niðurstaða umhverfiskönnunar lýsir ekki öllu lagaprófinu. Núverandi ákvæði ætti heldur ekki að setja fram sem eina lagastoð dómsins um eldri háttsemi árið 2018; þar var metið hvernig ráðandi félögin höfðu hegðað sér og á hvaða grundvelli mætti líta fram hjá aðskilnaði lögaðilanna.",
+                  "line": 48,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2018"
+                  ]
+                },
+                {
+                  "text": "Upplýsingablað USTR frá febrúar 2026 lýsir vilja Bandaríkjanna og Taívan til að greiða fyrir fjárfestingum yfir landamæri og mögulegum bandarískum stuðningi við fjármögnun einkafjárfestinga á Taívan samkvæmt viðeigandi lögum. Þessi viljayfirlýsing veitir ekki sjálfkrafa rétt til fjármagns. Hún er heldur ekki staðfesting á gildistöku allra ákvæða samningsins.",
+                  "line": 54,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026"
+                  ]
+                },
+                {
+                  "text": "Núgildandi ákvæði og opinberar upplýsingar um fjárfestingu voru yfirfarin 26. október 2026. Dómslýsingin byggist á opinberri skýringu sem var skoðuð 25. október og tekur ekki saman sögu allra tengdra mála eða ábyrgð ákveðins fjárfestis.",
+                  "line": 60,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "26",
+                    "2026",
+                    "25"
+                  ]
+                },
+                {
+                  "text": "Hæstiréttur: skýring á máli 107年度台上字第267號, 16. ágúst 2018.",
+                  "line": 64,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "107",
+                    "267",
+                    "16",
+                    "2018"
+                  ]
+                },
+                {
+                  "text": "Félagalög, 154. grein.",
+                  "line": 65,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "154"
+                  ]
+                },
+                {
+                  "text": "USTR: upplýsingablað um viðskiptasamning Bandaríkjanna og Taívan, febrúar 2026.",
+                  "line": 66,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026"
+                  ]
+                },
+                {
+                  "text": "246 kröfuhafar í endurmeðferð, áfrýjunum varðandi 262 hafnað",
+                  "line": 38,
+                  "kind": "h2",
+                  "tokens": [
+                    "246",
+                    "262"
+                  ]
+                }
+              ],
+              "editorialMetadata": {
+                "source": {
+                  "published": "2026-10-25",
+                  "lastmod": "2026-10-25",
+                  "date_display": "October 25, 2026",
+                  "read_time": "5 min read"
+                },
+                "target": {
+                  "published": "2026-10-26",
+                  "lastmod": "2026-10-26",
+                  "date_display": "26. október 2026",
+                  "read_time": "5 mín. lestur"
+                }
+              },
+              "spelledOutNumerals": "Not completely parsed in 49 languages. Review the full source/target passages; absence from these arrays is not zero or PASS."
+            },
+            {
+              "code": "nationality-jurisdiction",
+              "status": "REQUIRED",
+              "message": "A language does not establish nationality. Verify Taiwan jurisdiction, immigration status, nationality qualifications and any foreign-law/consular claim throughout the text; the highlighted passages are incomplete hints, not a language classifier.",
+              "sourceHints": [
+                {
+                  "text": "Environmental investigations before an acquisition became part of the evidence against parent companies in a Taiwan factory-pollution case. The Supreme Court connected knowledge of contamination with operational control, the response to the danger and transfers that depleted the Taiwan company's assets. Its official explanation of judgment 107年度台上字第267號 shows why an acquisition review cannot end when the consultant delivers a report.",
+                  "line": 26,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Issued on August 16, 2018, the decision concerned workers' chemical exposure at an electronics manufacturer and the responsibility of companies controlling that business. It did not impose liability merely because a foreign investor owned a Taiwan subsidiary.",
+                  "line": 28,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Taiwan's Company Act Article 154 generally limits a shareholder's responsibility to payment for its shares. Paragraph 2 provides an exception where a shareholder abuses the company's legal personality, causes it to incur a specific debt that is clearly difficult to repay, and the circumstances are serious enough to make shareholder liability necessary.",
+                  "line": 46,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "USTR's February 2026 fact sheet describes the two sides' intention to facilitate cross-border investment and possible US support for private investment financing in Taiwan, subject to applicable law.",
+                  "line": 54,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Before approving a distribution, capital reduction or exit transfer, the relevant decision-makers should have an assessment of identified exposure, unresolved claims and the resources that will remain in the Taiwan company. The legal review must address the proposed transaction itself. No document label establishes that a transfer is lawful, and a report sitting unread in a data room does not establish a response to its findings.",
+                  "line": 56,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "For a Taiwan corporate or disputes inquiry, the initial description can identify the transaction, the Taiwan entity and any scheduled transfer or closing date. Technical reports and sensitive worker information can be handled through an agreed delivery process. The immediate records to preserve are the original findings, the decisions they prompted and the approvals for any subsequent movement of assets.",
+                  "line": 58,
+                  "kind": "paragraph"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "Does owning a Taiwan subsidiary make its foreign parent liable for pollution claims?"
+                }
+              ],
+              "targetHints": [],
+              "sourceLocale": "en",
+              "targetLocale": "is"
+            }
+          ],
+          "sha256": "0f51ecead9b78fa3a51ac4cfc6fea0a828fe24910fb69385cb37dc7e82c8d0db",
+          "source": {
+            "file": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+            "locale": "en",
+            "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+          },
+          "board": {
+            "visible": true,
+            "audience": [
+              "is"
+            ],
+            "marketBoard": true,
+            "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+          },
+          "bodyMetrics": {
+            "lettersAndNumbers": 3994,
+            "uniqueParagraphLettersAndNumbers": 3994,
+            "paragraphs": 17,
+            "h1": 0
+          },
+          "classification": {
+            "sourceCategory": "legal",
+            "targetCategory": "legal",
+            "topic": "company"
+          },
+          "sourceUrls": {
+            "expected": [
+              "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+              "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+              "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+            ],
+            "actual": [
+              "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+              "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+              "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+            ],
+            "networkChecked": false
+          }
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "generatedAt": "2026-10-26T08:13:45.651Z",
+      "repoRoot": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+      "selectedFiles": 2,
+      "automatedStatus": "PASS",
+      "semanticStatus": "REVIEW_REQUIRED",
+      "publicationReady": false,
+      "errors": 0,
+      "reviewItems": 10,
+      "policy": {
+        "minBodyLettersAndNumbers": 500,
+        "minUniqueParagraphLettersAndNumbers": 350,
+        "sourceLocale": "zh-hant",
+        "publicationDate": "2026-10-26",
+        "legacyPolicy": "Unselected files supply existence/duplicate context only; no content changes or audience changes are made.",
+        "sourceApproval": "The operator must select an accepted source; existence/hash is not evidence of legal approval."
+      },
+      "runtimeContractHashes": {
+        "src/lib/column-audience.ts": "a1cb781f1a787366199995b0312b0fa1556d850e0637eb5ea66cd2174680b760",
+        "src/data/market-column-curation.ts": "c42e22feed6e49e5f4915a48ad18a49d9b874c024824ddf53a74fd5ede8a8b94",
+        "src/lib/column-attribution.ts": "8111ea9feabcdc98f13485014da51d39c9aebd084cbb6a1e52d923624bb6dcc3",
+        "src/lib/columns.ts": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+        "src/lib/column-locales.ts": "26d8fe8de7a9703aa7b0d279f32938e84190d5199ce0c4ddee84e89bb934b535",
+        "src/lib/public-guidance.ts": "c00a193d0dd583145e544a2cc505efad75a4379f5c334a811655a689d6df8d85",
+        "src/lib/column-topics.ts": "3fb8e18ae18777481cb8a07c158ea1b6435cdab98da0ea4701a1b98bf3ba435a",
+        "src/lib/locales.ts": "38304dea2b15fc6d6d05cebafa6cc08fdac18d66da875da7c79b7a117e431c54",
+        "src/lib/public-route-policy.ts": "7a71128c423d76057bd50e791189533ab96789594aef994f4346f4ead2c6607c",
+        "src/app/[locale]/(legacy)/index.tsx": "5e485ee21bac81e7b8dc74778fba24d69e8541492010e791709a82373c3eb2da",
+        "src/app/[locale]/[[...slug]]/page.tsx": "3dab508b2dddb716fa84184335f4f62b3d35164d30abdb3ab30185a3bb6a4f03"
+      },
+      "inventory": {
+        "counts": {
+          "ko": 217,
+          "zh-hant": 296,
+          "en": 218,
+          "ja": 230,
+          "vi": 45,
+          "id": 33,
+          "th": 31,
+          "fil": 31,
+          "ar": 34,
+          "de": 32,
+          "es": 52,
+          "fr": 31,
+          "pt": 34,
+          "zh-hans": 29,
+          "ms": 30,
+          "ru": 30,
+          "tr": 24,
+          "it": 32,
+          "nl": 26,
+          "pl": 26,
+          "hi": 34,
+          "sv": 24,
+          "da": 30,
+          "nb": 24,
+          "fi": 24,
+          "cs": 26,
+          "hu": 24,
+          "ro": 24,
+          "uk": 24,
+          "el": 30,
+          "he": 26,
+          "bn": 30,
+          "ur": 24,
+          "fa": 30,
+          "my": 24,
+          "ta": 24,
+          "ne": 24,
+          "km": 24,
+          "mn": 24,
+          "sk": 24,
+          "bg": 30,
+          "hr": 24,
+          "sr": 24,
+          "sl": 24,
+          "lt": 26,
+          "lv": 24,
+          "et": 30,
+          "ca": 30,
+          "is": 30
+        },
+        "duplicateKeys": []
+      },
+      "files": [
+        {
+          "file": "../../tseng-all-language-columns-20261025/batch08/checks/is-audit-overlay/columns-is/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+          "locale": "is",
+          "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+          "errors": [],
+          "reviews": [
+            {
+              "code": "public-output-and-native-prose",
+              "status": "REQUIRED",
+              "message": "Inspect rendered title, summary, FAQ, captions, cards, JSON-LD and feeds for native language and author leakage; compare opening/headings/ending with the previous three same-language articles. Automated token checks cannot prove either.",
+              "targetFields": [
+                {
+                  "key": "title",
+                  "text": "Bréf um lán og aðgangur að íbúð sönnuðu ekki afhendingu á Taívan"
+                },
+                {
+                  "key": "seoTitle",
+                  "text": "Afhending íbúðar á Taívan: bréf um lán og tilkynningarfrestur"
+                },
+                {
+                  "key": "summary",
+                  "text": "Bréf um afgreiðslu láns og leyfi til að vinna inni í íbúð töldust ekki sanna afhendingu samkvæmt samningi. Fjögurra mánaða frestur málsins og núgildandi sex mánaða tilkynningarfrestur miðast við útgáfu notkunarleyfis."
+                },
+                {
+                  "key": "featured_image_alt",
+                  "text": "Skjalamappa, ómerkt umslag og einn kassi á borði í nýrri íbúð."
+                },
+                {
+                  "key": "featured_image_caption",
+                  "text": "Skálduð mynd"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "Er bréf byggingaraðila um íbúðarlán jafnframt tilkynning um afhendingu?"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "Það ræðst af efni bréfsins og ástandi íbúðarinnar á þeim tíma. Í þessu máli var spurt um gang lánamáls en ekki tilkynnt að íbúðin væri tilbúin til notkunar. Gögn um vatn, rafmagn og síðari úttekt studdu ekki heldur að samningsbundinni tilkynningarskyldu hefði verið fullnægt."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "Er fresturinn eftir notkunarleyfi fjórir eða sex mánuðir?"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "Fjórir mánuðir voru skilmáli samningsins í þessu máli. Núgildandi 15. liður skylduskilmála vegna sölu ófullbyggðra íbúða krefst þess að seljandi tilkynni kaupanda um afhendingu innan sex mánaða frá því að notkunarleyfi fæst. Við annað mál þarf að bera raunverulegan samning saman við þær reglur sem giltu þegar hann var undirritaður."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "Má ég hunsa tilkynningu seljanda meðan bankinn hefur ekki greitt lánið út?"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "Óafgreitt lán leysir ekki eitt og sér kaupanda undan því að bregðast við tilkynningu. Greiðslur, lánsgögn, úttekt og afhending hafa sín skilyrði. Efni tilkynningarinnar og umbeðinn frestur þarf að bera saman við gögn bankans og ástand íbúðarinnar; dómurinn veitir ekki öllum kaupendum almenna heimild til að stöðva greiðslur."
+                }
+              ]
+            },
+            {
+              "code": "title-summary-faq",
+              "status": "REQUIRED",
+              "message": "Compare legal subject and scope in title, summary and every FAQ; presence/count is not semantic preservation. Check translated category labels and captions too.",
+              "source": {
+                "title": "辦貸款、進場裝修，仍未完成交屋：預售屋遲延案",
+                "summary": "建商寄出辦貸款的信，是否已完成通知交屋？臺中高分院從信函內容、水電接通、驗收及交屋文件判斷，未採建商抗辯。判決中的四個月來自個別契約；現行應記載事項列的是六個月，買方須依自己的契約與履約紀錄核對。",
+                "faq": [
+                  {
+                    "q": "建商通知我辦房貸，就算通知交屋了嗎？",
+                    "a": "要看信函內容及當時房屋狀態。本案信函只詢問貸款事宜，沒有表示房屋已達可使用狀態，水電及後續驗收紀錄也不支持建商的說法，因此法院未認定它完成了契約上的交屋通知。"
+                  },
+                  {
+                    "q": "領到使用執照後，通知交屋期限是四個月還是六個月？",
+                    "a": "本案的四個月是當事人約定。現行預售屋買賣定型化契約應記載事項第十五點規定，賣方應在領得使用執照六個月內通知買方交屋。個案仍要核對簽約時適用的規範及實際約定，不能直接改寫成一律四個月。"
+                  },
+                  {
+                    "q": "房貸還沒撥下來，可以先不理建商的通知嗎？",
+                    "a": "不宜只因貸款仍在辦理就擱置通知。付款、貸款文件、驗收及交屋各有約定；應先辨認通知要求完成哪項義務、期限何時屆至，再用銀行及房屋狀態的紀錄處理爭議。本案不代表買方可一律停止付款。"
+                  }
+                ],
+                "categories": [
+                  "不動產",
+                  "台灣判決"
+                ],
+                "featured_image_caption": "虛構情境"
+              },
+              "target": {
+                "title": "Bréf um lán og aðgangur að íbúð sönnuðu ekki afhendingu á Taívan",
+                "seoTitle": "Afhending íbúðar á Taívan: bréf um lán og tilkynningarfrestur",
+                "summary": "Bréf um afgreiðslu láns og leyfi til að vinna inni í íbúð töldust ekki sanna afhendingu samkvæmt samningi. Fjögurra mánaða frestur málsins og núgildandi sex mánaða tilkynningarfrestur miðast við útgáfu notkunarleyfis.",
+                "faq": [
+                  {
+                    "q": "Er bréf byggingaraðila um íbúðarlán jafnframt tilkynning um afhendingu?",
+                    "a": "Það ræðst af efni bréfsins og ástandi íbúðarinnar á þeim tíma. Í þessu máli var spurt um gang lánamáls en ekki tilkynnt að íbúðin væri tilbúin til notkunar. Gögn um vatn, rafmagn og síðari úttekt studdu ekki heldur að samningsbundinni tilkynningarskyldu hefði verið fullnægt."
+                  },
+                  {
+                    "q": "Er fresturinn eftir notkunarleyfi fjórir eða sex mánuðir?",
+                    "a": "Fjórir mánuðir voru skilmáli samningsins í þessu máli. Núgildandi 15. liður skylduskilmála vegna sölu ófullbyggðra íbúða krefst þess að seljandi tilkynni kaupanda um afhendingu innan sex mánaða frá því að notkunarleyfi fæst. Við annað mál þarf að bera raunverulegan samning saman við þær reglur sem giltu þegar hann var undirritaður."
+                  },
+                  {
+                    "q": "Má ég hunsa tilkynningu seljanda meðan bankinn hefur ekki greitt lánið út?",
+                    "a": "Óafgreitt lán leysir ekki eitt og sér kaupanda undan því að bregðast við tilkynningu. Greiðslur, lánsgögn, úttekt og afhending hafa sín skilyrði. Efni tilkynningarinnar og umbeðinn frestur þarf að bera saman við gögn bankans og ástand íbúðarinnar; dómurinn veitir ekki öllum kaupendum almenna heimild til að stöðva greiðslur."
+                  }
+                ],
+                "categories": [
+                  "Íbúðakaup á Taívan",
+                  "Dómaframkvæmd"
+                ],
+                "featured_image_caption": "Skálduð mynd"
+              }
+            },
+            {
+              "code": "legal-conditions",
+              "status": "REQUIRED",
+              "message": "Verify every source actor, must/may, AND/OR, exception, eligibility, starting date, period, amount, quotation and factual qualifier against the full target. Passage order/count need not match. No heuristic clears this item.",
+              "sourcePassages": [
+                {
+                  "text": "建商在2月寄出辦理房貸的通知，房屋當時還沒接通水電。數月後，買方獲准進場裝修、清潔，法院仍未認定已依契約完成交屋。信件與進場紀錄各有作用，不能只憑其中一份文件決定交屋日（行政院消保處收錄的判決，紙本第173至187頁）。",
+                  "line": 25,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "臺灣高等法院臺中分院109年度上易字第289號判決，處理的就是建商與買方對這些履約節點的爭執。法院於2022年2月9日駁回建商的上訴及追加之訴，維持其應給付遲延利息的結果；判決載明不得上訴。",
+                  "line": 27,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "2019年2月23日的信函，主要請買方聯繫貸款銀行、告知辦理進度，沒有提到房屋已達可使用狀態。水電是後來才接通。直到同年7月初驗，仍有瑕疵待修，屋內電梯也未裝好；法院因此未採建商「早已通知交屋」的說法。",
+                  "line": 31,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "買方在8月簽署同意書，得以進場裝修、清潔。法院再核對修繕情況及同意書內容，認為這次進場還不足以證明完成契約約定的交屋。貸款在11月5日撥入建商帳戶，雙方的保固書則把交屋日記為11月28日。理由及相關證據見判決第四點，紙本第182至186頁。",
+                  "line": 33,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "貸款辦好，是哪一項義務完成了？本案法院分別檢查貸款、付款與交屋，沒有讓辦貸款的信取代交屋通知。建商主張買方收到信後就應付清全額，但法院對照分期付款明細，確認買方依各期約定繳款，且在交屋前已付清，因而沒有接受建商的付款違約主張。",
+                  "line": 35,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "判決中的通知期限是四個月，來自雙方契約。現行預售屋買賣定型化契約應記載事項第十五點則規定，賣方應在領得使用執照六個月內通知買方進行交屋，並列出交屋時的修繕、款項結清及文件交付義務。",
+                  "line": 39,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "起算點是領得使用執照。查自己的通知是否逾期，須先核對契約與簽約時適用的規範，再把實際領照日、通知內容及到達時間放在一起，不能只照抄別人案件的月數。",
+                  "line": 41,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "貸款協力也有要求。現行第十四點另列買方提出貸款文件、辦理相關手續，以及移轉登記前應繳款項等義務。因此，認為交屋通知有問題時，仍要分別處理已到期的付款與文件要求；本案沒有給所有買方停止履約的依據。",
+                  "line": 43,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "行政院消保處在2025年8月公布的契約查核中，已把「將對保、撥款時間排除於交屋通知期限計算」列為違規態樣。這使銀行作業與交屋期限的關係，更值得在簽約及收信時讀清楚（官方查核結果）。",
+                  "line": 45,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "央行不動產抵押貸款規定於2026年9月18日修正生效。正在重新確認貸款條件的買方，可把銀行預估撥款日與建商安排的驗收、交屋日期分開記錄；銀行的回覆，仍須與買賣契約的履約要求一起核對。",
+                  "line": 49,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "一封通知的標題不夠。保留完整信函及信封或電子郵件到達紀錄，連同驗收單、修繕照片、進場同意書與保固書，才能說明收到信時房屋能否使用，以及後來究竟完成了哪些手續。",
+                  "line": 51,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "已收到違約金或遲延利息要求時，可向事務所信箱簡述爭議條款、通知日期與回覆期限，再安排個別評估。整理資料時，將「通知辦貸款」、「通知驗收」與「通知交屋」按各自內容標示，爭議才不會只剩雙方口中的一個交屋日期。",
+                  "line": 53,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "資料確認日：2026年10月25日。本案依特定契約與履約證據判斷；本文不代替個別付款、拒絕交屋或損害請求的法律評估。",
+                  "line": 55,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "行政院消保處：消費者保護法判決函釋彙編（廿二），紙本第173至187頁，臺灣高等法院臺中分院109年度上易字第289號判決。",
+                  "line": 59,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "預售屋買賣定型化契約應記載及不得記載事項，第十四、十五點。",
+                  "line": 60,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "行政院消保處：預售屋契約查核結果，2025年8月25日。",
+                  "line": 61,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "中央銀行：不動產抵押貸款業務規定，2026年9月18日生效版本。",
+                  "line": 62,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "信裡談貸款，房屋卻還沒準備好",
+                  "line": 29,
+                  "kind": "h2"
+                },
+                {
+                  "text": "四個月的契約，不能直接套進今天的六個月規定",
+                  "line": 37,
+                  "kind": "h2"
+                },
+                {
+                  "text": "把銀行進度和房屋狀態放回同一條時間線",
+                  "line": 47,
+                  "kind": "h2"
+                },
+                {
+                  "text": "官方資料",
+                  "line": 57,
+                  "kind": "h2"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "建商通知我辦房貸，就算通知交屋了嗎？"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "要看信函內容及當時房屋狀態。本案信函只詢問貸款事宜，沒有表示房屋已達可使用狀態，水電及後續驗收紀錄也不支持建商的說法，因此法院未認定它完成了契約上的交屋通知。"
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "領到使用執照後，通知交屋期限是四個月還是六個月？"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "本案的四個月是當事人約定。現行預售屋買賣定型化契約應記載事項第十五點規定，賣方應在領得使用執照六個月內通知買方交屋。個案仍要核對簽約時適用的規範及實際約定，不能直接改寫成一律四個月。"
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "房貸還沒撥下來，可以先不理建商的通知嗎？"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "不宜只因貸款仍在辦理就擱置通知。付款、貸款文件、驗收及交屋各有約定；應先辨認通知要求完成哪項義務、期限何時屆至，再用銀行及房屋狀態的紀錄處理爭議。本案不代表買方可一律停止付款。"
+                }
+              ],
+              "sourceConditionHints": [
+                {
+                  "text": "臺灣高等法院臺中分院109年度上易字第289號判決，處理的就是建商與買方對這些履約節點的爭執。法院於2022年2月9日駁回建商的上訴及追加之訴，維持其應給付遲延利息的結果；判決載明不得上訴。",
+                  "line": 27,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "買方在8月簽署同意書，得以進場裝修、清潔。法院再核對修繕情況及同意書內容，認為這次進場還不足以證明完成契約約定的交屋。貸款在11月5日撥入建商帳戶，雙方的保固書則把交屋日記為11月28日。理由及相關證據見判決第四點，紙本第182至186頁。",
+                  "line": 33,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "貸款辦好，是哪一項義務完成了？本案法院分別檢查貸款、付款與交屋，沒有讓辦貸款的信取代交屋通知。建商主張買方收到信後就應付清全額，但法院對照分期付款明細，確認買方依各期約定繳款，且在交屋前已付清，因而沒有接受建商的付款違約主張。",
+                  "line": 35,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "判決中的通知期限是四個月，來自雙方契約。現行預售屋買賣定型化契約應記載事項第十五點則規定，賣方應在領得使用執照六個月內通知買方進行交屋，並列出交屋時的修繕、款項結清及文件交付義務。",
+                  "line": 39,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "起算點是領得使用執照。查自己的通知是否逾期，須先核對契約與簽約時適用的規範，再把實際領照日、通知內容及到達時間放在一起，不能只照抄別人案件的月數。",
+                  "line": 41,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "貸款協力也有要求。現行第十四點另列買方提出貸款文件、辦理相關手續，以及移轉登記前應繳款項等義務。因此，認為交屋通知有問題時，仍要分別處理已到期的付款與文件要求；本案沒有給所有買方停止履約的依據。",
+                  "line": 43,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "行政院消保處在2025年8月公布的契約查核中，已把「將對保、撥款時間排除於交屋通知期限計算」列為違規態樣。這使銀行作業與交屋期限的關係，更值得在簽約及收信時讀清楚（官方查核結果）。",
+                  "line": 45,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "央行不動產抵押貸款規定於2026年9月18日修正生效。正在重新確認貸款條件的買方，可把銀行預估撥款日與建商安排的驗收、交屋日期分開記錄；銀行的回覆，仍須與買賣契約的履約要求一起核對。",
+                  "line": 49,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "已收到違約金或遲延利息要求時，可向事務所信箱簡述爭議條款、通知日期與回覆期限，再安排個別評估。整理資料時，將「通知辦貸款」、「通知驗收」與「通知交屋」按各自內容標示，爭議才不會只剩雙方口中的一個交屋日期。",
+                  "line": 53,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "預售屋買賣定型化契約應記載及不得記載事項，第十四、十五點。",
+                  "line": 60,
+                  "kind": "paragraph"
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "領到使用執照後，通知交屋期限是四個月還是六個月？"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "本案的四個月是當事人約定。現行預售屋買賣定型化契約應記載事項第十五點規定，賣方應在領得使用執照六個月內通知買方交屋。個案仍要核對簽約時適用的規範及實際約定，不能直接改寫成一律四個月。"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "不宜只因貸款仍在辦理就擱置通知。付款、貸款文件、驗收及交屋各有約定；應先辨認通知要求完成哪項義務、期限何時屆至，再用銀行及房屋狀態的紀錄處理爭議。本案不代表買方可一律停止付款。"
+                }
+              ],
+              "targetPassages": [
+                {
+                  "text": "Þegar byggingaraðili sendi kaupanda bréf 23. febrúar 2019 voru vatn og rafmagn ekki enn tengd íbúðinni. Bréfið laut að gangi lánamáls hjá banka. Það sagði ekki að húsnæðið væri tilbúið til afhendingar, eins og fram kemur í opinberu safni dóma um neytendamál, prentuðum blaðsíðum 173–187.",
+                  "line": 26,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Taichung-deild æðri dómstóls Taívan, sem fór með áfrýjunina, hafnaði áfrýjun byggingaraðilans og viðbótarkröfu hans 9. febrúar 2022 í máli 109年度上易字第289號. Niðurstaðan um greiðslu dráttarvaxta stóð. Ekki var heimilt að áfrýja dóminum áfram.",
+                  "line": 28,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Febrúarbréfið óskaði þess að kaupandinn hefði samband við bankann og upplýsti um afgreiðslu lánsins. Vatns- og rafmagnstengingar komu síðar. Við fyrstu úttekt í júlí voru enn gallar og ólokin vinna, þar á meðal við uppsetningu lyftunnar.",
+                  "line": 32,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Í ágúst undirritaði kaupandinn heimild til að fara inn í íbúðina vegna innréttinga og þrifa. Eftirstandandi viðgerðir og efni skjalsins studdu ekki að þar með væri lokið þeirri úttekt og afhendingu sem samningurinn krafðist. Aðgangur var veittur í afmörkuðum tilgangi.",
+                  "line": 34,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Lánsféð barst byggingaraðilanum 5. nóvember. Á ábyrgðarskírteininu var hins vegar afhendingardagurinn 28. nóvember. Sönnunarmat fjórða hluta dómsins á prentuðum blaðsíðum 182–186 greinir á milli þessara dagsetninga og fyrri heimildar til að vinna inni í íbúðinni.",
+                  "line": 36,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Byggingaraðilinn hélt því fram að greiða hefði átt allt kaupverðið strax eftir febrúarbréfið. Kaupandinn hafði þó greitt samningsbundnar afborganir og lokið greiðslu fyrir afhendingu. Dómstóllinn féllst því ekki á þá kröfu um samningsbrot vegna greiðslna. Úrlausnin byggðist á þessum samningi og þessum atvikum.",
+                  "line": 38,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Samningur aðila krafðist tilkynningar um afhendingu innan fjögurra mánaða frá útgáfu notkunarleyfis. Sá frestur tilheyrði umræddum kaupum. Núgildandi 15. liður skylduskilmála við sölu íbúða sem ekki eru fullbyggðar krefst tilkynningar frá seljanda til kaupanda innan sex mánaða frá því að notkunarleyfið fæst.",
+                  "line": 42,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Við afhendingu gilda einnig skyldur um viðgerðir, uppgjör og afhendingu gagna. Sex mánaða tilkynningarfresturinn er því ekki sjálfkrafa almennur lokafrestur allra þátta afhendingarinnar. Upphafsdagurinn er heldur ekki samþykki láns eða útborgun þess.",
+                  "line": 44,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Fyrir annað ágreiningsmál má leggja samninginn við hlið útgáfudags notkunarleyfis, efnis tilkynningar og gagna um móttöku hennar. Reglurnar á undirritunardegi samningsins þurfa að fylgja þeirri yfirferð. Fjögurra mánaða skilmálinn í eldri málinu leysir ekki af hólmi núgildandi reglur.",
+                  "line": 46,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Kaupandinn hefur líka skyldur. Núgildandi 14. liður fjallar meðal annars um greiðslur sem samningur kveður á um fyrir skráningu eignayfirfærslu og nauðsynleg lánsgögn og samstarf við afgreiðslu þeirra. Ágreiningur um afhendingartilkynningu fellir ekki sjálfkrafa niður gjaldfallnar greiðslur eða skyldu til að leggja fram gögn.",
+                  "line": 48,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Í opinberri athugun á sölusamningum frá 25. ágúst 2025 voru gerðar athugasemdir við skilmála sem drógu tíma vegna staðfestingar bankans og útborgunar láns frá tilkynningarfrestinum. Væntanlegur afgreiðslutími banka lengir því ekki sjálfur samningsbundinn frest seljanda.",
+                  "line": 52,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Núverandi reglur seðlabankans um fasteignaveðtryggð lán tóku gildi 18. september 2026 eftir breytingu sama mánuð; sú útgáfa var aftur staðfest 26. október. Þær eru ekki færðar aftur á við sem bein viðmið við kaup ársins 2019. Bankadagsetning sem nú liggur fyrir má bera saman við fyrirhugaða úttekt og afhendingu samkvæmt samningnum sem er til skoðunar.",
+                  "line": 54,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Hvað krefst bréfið í raun að kaupandinn geri? Fyrirsögnin ein svarar því ekki. Bréfið í heild, umslag eða rafræn móttökugögn, úttektarskýrslur, gallamyndir, aðgangsheimild og ábyrgðarskírteini geta sýnt mismunandi skyldur og það hvenær hægt var að uppfylla þær.",
+                  "line": 56,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Ef krafist er samningsbundinnar greiðslu vegna brota eða dráttarvaxta má í fyrstu fyrirspurn til netfangs skrifstofunnar nefna ákvæðið, dagsetningu tilkynningar og svarfrestinn. Við röðun gagnanna nýtist að halda bréfi um lán, úttektarboði og afhendingartilkynningu aðgreindum eftir því hvaða athöfn hvert skjal kallaði á.",
+                  "line": 58,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Núgildandi reglur og opinberar heimildir voru yfirfarnar 26. október 2026. Dómurinn er lesinn úr opinberri endurbirtingu og leysir úr ákveðnum samningi; niðurstaðan ákveður ekki hvenær annar kaupandi má halda eftir greiðslu eða hafna afhendingu.",
+                  "line": 60,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Dómar og skýringar um neytendavernd, 22. bindi, prentaðar blaðsíður 173–187: mál 109年度上易字第289號.",
+                  "line": 64,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Skylduskilmálar og óheimilir skilmálar vegna sölu ófullbyggðra íbúða, 14. og 15. liður.",
+                  "line": 65,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Niðurstöður athugunar á íbúðasölusamningum, 25. ágúst 2025.",
+                  "line": 66,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Seðlabankinn: reglur um fasteignaveðtryggð lán, útgáfa sem tók gildi 18. september 2026.",
+                  "line": 67,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Lánsgreiðsla, innanhússvinna og afhending voru þrjú atvik",
+                  "line": 30,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Fresturinn byrjar þegar notkunarleyfið fæst",
+                  "line": 40,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Hvað bankinn var beðinn um og hvað seljandinn tilkynnti",
+                  "line": 50,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Opinberar heimildir",
+                  "line": 62,
+                  "kind": "h2"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "Er bréf byggingaraðila um íbúðarlán jafnframt tilkynning um afhendingu?"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "Það ræðst af efni bréfsins og ástandi íbúðarinnar á þeim tíma. Í þessu máli var spurt um gang lánamáls en ekki tilkynnt að íbúðin væri tilbúin til notkunar. Gögn um vatn, rafmagn og síðari úttekt studdu ekki heldur að samningsbundinni tilkynningarskyldu hefði verið fullnægt."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "Er fresturinn eftir notkunarleyfi fjórir eða sex mánuðir?"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "Fjórir mánuðir voru skilmáli samningsins í þessu máli. Núgildandi 15. liður skylduskilmála vegna sölu ófullbyggðra íbúða krefst þess að seljandi tilkynni kaupanda um afhendingu innan sex mánaða frá því að notkunarleyfi fæst. Við annað mál þarf að bera raunverulegan samning saman við þær reglur sem giltu þegar hann var undirritaður."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "Má ég hunsa tilkynningu seljanda meðan bankinn hefur ekki greitt lánið út?"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "Óafgreitt lán leysir ekki eitt og sér kaupanda undan því að bregðast við tilkynningu. Greiðslur, lánsgögn, úttekt og afhending hafa sín skilyrði. Efni tilkynningarinnar og umbeðinn frestur þarf að bera saman við gögn bankans og ástand íbúðarinnar; dómurinn veitir ekki öllum kaupendum almenna heimild til að stöðva greiðslur."
+                }
+              ],
+              "sourceMarkdown": "\n建商在2月寄出辦理房貸的通知，房屋當時還沒接通水電。數月後，買方獲准進場裝修、清潔，法院仍未認定已依契約完成交屋。信件與進場紀錄各有作用，不能只憑其中一份文件決定交屋日（[行政院消保處收錄的判決](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C)，紙本第173至187頁）。\n\n臺灣高等法院臺中分院109年度上易字第289號判決，處理的就是建商與買方對這些履約節點的爭執。法院於2022年2月9日駁回建商的上訴及追加之訴，維持其應給付遲延利息的結果；判決載明不得上訴。\n\n## 信裡談貸款，房屋卻還沒準備好\n\n2019年2月23日的信函，主要請買方聯繫貸款銀行、告知辦理進度，沒有提到房屋已達可使用狀態。水電是後來才接通。直到同年7月初驗，仍有瑕疵待修，屋內電梯也未裝好；法院因此未採建商「早已通知交屋」的說法。\n\n買方在8月簽署同意書，得以進場裝修、清潔。法院再核對修繕情況及同意書內容，認為這次進場還不足以證明完成契約約定的交屋。貸款在11月5日撥入建商帳戶，雙方的保固書則把交屋日記為11月28日。理由及相關證據見[判決第四點](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C)，紙本第182至186頁。\n\n貸款辦好，是哪一項義務完成了？本案法院分別檢查貸款、付款與交屋，沒有讓辦貸款的信取代交屋通知。建商主張買方收到信後就應付清全額，但法院對照分期付款明細，確認買方依各期約定繳款，且在交屋前已付清，因而沒有接受建商的付款違約主張。\n\n## 四個月的契約，不能直接套進今天的六個月規定\n\n判決中的通知期限是四個月，來自雙方契約。現行[預售屋買賣定型化契約應記載事項第十五點](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C)則規定，賣方應在領得使用執照六個月內通知買方進行交屋，並列出交屋時的修繕、款項結清及文件交付義務。\n\n起算點是領得使用執照。查自己的通知是否逾期，須先核對契約與簽約時適用的規範，再把實際領照日、通知內容及到達時間放在一起，不能只照抄別人案件的月數。\n\n貸款協力也有要求。現行第十四點另列買方提出貸款文件、辦理相關手續，以及移轉登記前應繳款項等義務。因此，認為交屋通知有問題時，仍要分別處理已到期的付款與文件要求；本案沒有給所有買方停止履約的依據。\n\n行政院消保處在2025年8月公布的契約查核中，已把「將對保、撥款時間排除於交屋通知期限計算」列為違規態樣。這使銀行作業與交屋期限的關係，更值得在簽約及收信時讀清楚（[官方查核結果](https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11)）。\n\n## 把銀行進度和房屋狀態放回同一條時間線\n\n[央行不動產抵押貸款規定](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html)於2026年9月18日修正生效。正在重新確認貸款條件的買方，可把銀行預估撥款日與建商安排的驗收、交屋日期分開記錄；銀行的回覆，仍須與買賣契約的履約要求一起核對。\n\n一封通知的標題不夠。保留完整信函及信封或電子郵件到達紀錄，連同驗收單、修繕照片、進場同意書與保固書，才能說明收到信時房屋能否使用，以及後來究竟完成了哪些手續。\n\n已收到違約金或遲延利息要求時，可向[事務所信箱](mailto:wei@hoveringlaw.com.tw)簡述爭議條款、通知日期與回覆期限，再安排個別評估。整理資料時，將「通知辦貸款」、「通知驗收」與「通知交屋」按各自內容標示，爭議才不會只剩雙方口中的一個交屋日期。\n\n資料確認日：2026年10月25日。本案依特定契約與履約證據判斷；本文不代替個別付款、拒絕交屋或損害請求的法律評估。\n\n## 官方資料\n\n- 行政院消保處：[消費者保護法判決函釋彙編（廿二）](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C)，紙本第173至187頁，臺灣高等法院臺中分院109年度上易字第289號判決。\n- [預售屋買賣定型化契約應記載及不得記載事項](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C)，第十四、十五點。\n- 行政院消保處：[預售屋契約查核結果](https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11)，2025年8月25日。\n- 中央銀行：[不動產抵押貸款業務規定](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html)，2026年9月18日生效版本。\n",
+              "targetMarkdown": "\nÞegar byggingaraðili sendi kaupanda bréf 23. febrúar 2019 voru vatn og rafmagn ekki enn tengd íbúðinni. Bréfið laut að gangi lánamáls hjá banka. Það sagði ekki að húsnæðið væri tilbúið til afhendingar, eins og fram kemur í [opinberu safni dóma um neytendamál, prentuðum blaðsíðum 173–187](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C).\n\nTaichung-deild æðri dómstóls Taívan, sem fór með áfrýjunina, hafnaði áfrýjun byggingaraðilans og viðbótarkröfu hans 9. febrúar 2022 í máli 109年度上易字第289號. Niðurstaðan um greiðslu dráttarvaxta stóð. Ekki var heimilt að áfrýja dóminum áfram.\n\n## Lánsgreiðsla, innanhússvinna og afhending voru þrjú atvik\n\nFebrúarbréfið óskaði þess að kaupandinn hefði samband við bankann og upplýsti um afgreiðslu lánsins. Vatns- og rafmagnstengingar komu síðar. Við fyrstu úttekt í júlí voru enn gallar og ólokin vinna, þar á meðal við uppsetningu lyftunnar.\n\nÍ ágúst undirritaði kaupandinn heimild til að fara inn í íbúðina vegna innréttinga og þrifa. Eftirstandandi viðgerðir og efni skjalsins studdu ekki að þar með væri lokið þeirri úttekt og afhendingu sem samningurinn krafðist. Aðgangur var veittur í afmörkuðum tilgangi.\n\nLánsféð barst byggingaraðilanum 5. nóvember. Á ábyrgðarskírteininu var hins vegar afhendingardagurinn 28. nóvember. Sönnunarmat fjórða hluta dómsins á prentuðum blaðsíðum 182–186 greinir á milli þessara dagsetninga og fyrri heimildar til að vinna inni í íbúðinni.\n\nByggingaraðilinn hélt því fram að greiða hefði átt allt kaupverðið strax eftir febrúarbréfið. Kaupandinn hafði þó greitt samningsbundnar afborganir og lokið greiðslu fyrir afhendingu. Dómstóllinn féllst því ekki á þá kröfu um samningsbrot vegna greiðslna. Úrlausnin byggðist á þessum samningi og þessum atvikum.\n\n## Fresturinn byrjar þegar notkunarleyfið fæst\n\nSamningur aðila krafðist tilkynningar um afhendingu innan fjögurra mánaða frá útgáfu notkunarleyfis. Sá frestur tilheyrði umræddum kaupum. Núgildandi [15. liður skylduskilmála við sölu íbúða sem ekki eru fullbyggðar](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) krefst tilkynningar frá seljanda til kaupanda innan sex mánaða frá því að notkunarleyfið fæst.\n\nVið afhendingu gilda einnig skyldur um viðgerðir, uppgjör og afhendingu gagna. Sex mánaða tilkynningarfresturinn er því ekki sjálfkrafa almennur lokafrestur allra þátta afhendingarinnar. Upphafsdagurinn er heldur ekki samþykki láns eða útborgun þess.\n\nFyrir annað ágreiningsmál má leggja samninginn við hlið útgáfudags notkunarleyfis, efnis tilkynningar og gagna um móttöku hennar. Reglurnar á undirritunardegi samningsins þurfa að fylgja þeirri yfirferð. Fjögurra mánaða skilmálinn í eldri málinu leysir ekki af hólmi núgildandi reglur.\n\nKaupandinn hefur líka skyldur. Núgildandi 14. liður fjallar meðal annars um greiðslur sem samningur kveður á um fyrir skráningu eignayfirfærslu og nauðsynleg lánsgögn og samstarf við afgreiðslu þeirra. Ágreiningur um afhendingartilkynningu fellir ekki sjálfkrafa niður gjaldfallnar greiðslur eða skyldu til að leggja fram gögn.\n\n## Hvað bankinn var beðinn um og hvað seljandinn tilkynnti\n\nÍ [opinberri athugun á sölusamningum frá 25. ágúst 2025](https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11) voru gerðar athugasemdir við skilmála sem drógu tíma vegna staðfestingar bankans og útborgunar láns frá tilkynningarfrestinum. Væntanlegur afgreiðslutími banka lengir því ekki sjálfur samningsbundinn frest seljanda.\n\n[Núverandi reglur seðlabankans um fasteignaveðtryggð lán](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html) tóku gildi 18. september 2026 eftir breytingu sama mánuð; sú útgáfa var aftur staðfest 26. október. Þær eru ekki færðar aftur á við sem bein viðmið við kaup ársins 2019. Bankadagsetning sem nú liggur fyrir má bera saman við fyrirhugaða úttekt og afhendingu samkvæmt samningnum sem er til skoðunar.\n\nHvað krefst bréfið í raun að kaupandinn geri? Fyrirsögnin ein svarar því ekki. Bréfið í heild, umslag eða rafræn móttökugögn, úttektarskýrslur, gallamyndir, aðgangsheimild og ábyrgðarskírteini geta sýnt mismunandi skyldur og það hvenær hægt var að uppfylla þær.\n\nEf krafist er samningsbundinnar greiðslu vegna brota eða dráttarvaxta má í fyrstu fyrirspurn til [netfangs skrifstofunnar](mailto:wei@hoveringlaw.com.tw) nefna ákvæðið, dagsetningu tilkynningar og svarfrestinn. Við röðun gagnanna nýtist að halda bréfi um lán, úttektarboði og afhendingartilkynningu aðgreindum eftir því hvaða athöfn hvert skjal kallaði á.\n\nNúgildandi reglur og opinberar heimildir voru yfirfarnar 26. október 2026. Dómurinn er lesinn úr opinberri endurbirtingu og leysir úr ákveðnum samningi; niðurstaðan ákveður ekki hvenær annar kaupandi má halda eftir greiðslu eða hafna afhendingu.\n\n## Opinberar heimildir\n\n- [Dómar og skýringar um neytendavernd, 22. bindi](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), prentaðar blaðsíður 173–187: mál 109年度上易字第289號.\n- [Skylduskilmálar og óheimilir skilmálar vegna sölu ófullbyggðra íbúða](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C), 14. og 15. liður.\n- [Niðurstöður athugunar á íbúðasölusamningum](https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11), 25. ágúst 2025.\n- [Seðlabankinn: reglur um fasteignaveðtryggð lán](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html), útgáfa sem tók gildi 18. september 2026.\n"
+            },
+            {
+              "code": "numbers-dates-currencies",
+              "status": "REQUIRED",
+              "message": "Raw numeric-token differences require context review; locale separators, spelled-out numerals and era conversions are not automatically equivalent. Matching tokens also do not prove matching conditions. No values are synthesized or zero-filled.",
+              "sourceOnly": [
+                {
+                  "token": "2",
+                  "count": 3
+                },
+                {
+                  "token": "173",
+                  "count": 2
+                },
+                {
+                  "token": "187",
+                  "count": 2
+                },
+                {
+                  "token": "9",
+                  "count": 2
+                },
+                {
+                  "token": "7",
+                  "count": 1
+                },
+                {
+                  "token": "8",
+                  "count": 3
+                },
+                {
+                  "token": "11",
+                  "count": 2
+                },
+                {
+                  "token": "182",
+                  "count": 1
+                },
+                {
+                  "token": "186",
+                  "count": 1
+                },
+                {
+                  "token": "10",
+                  "count": 1
+                }
+              ],
+              "targetOnly": [
+                {
+                  "token": "15",
+                  "count": 3
+                },
+                {
+                  "token": "2019",
+                  "count": 1
+                },
+                {
+                  "token": "173–187",
+                  "count": 2
+                },
+                {
+                  "token": "182–186",
+                  "count": 1
+                },
+                {
+                  "token": "14",
+                  "count": 2
+                },
+                {
+                  "token": "26",
+                  "count": 2
+                },
+                {
+                  "token": "22",
+                  "count": 1
+                }
+              ],
+              "sourceEvidence": [
+                {
+                  "text": "建商在2月寄出辦理房貸的通知，房屋當時還沒接通水電。數月後，買方獲准進場裝修、清潔，法院仍未認定已依契約完成交屋。信件與進場紀錄各有作用，不能只憑其中一份文件決定交屋日（行政院消保處收錄的判決，紙本第173至187頁）。",
+                  "line": 25,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2",
+                    "173",
+                    "187"
+                  ]
+                },
+                {
+                  "text": "臺灣高等法院臺中分院109年度上易字第289號判決，處理的就是建商與買方對這些履約節點的爭執。法院於2022年2月9日駁回建商的上訴及追加之訴，維持其應給付遲延利息的結果；判決載明不得上訴。",
+                  "line": 27,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "109",
+                    "289",
+                    "2022",
+                    "2",
+                    "9"
+                  ]
+                },
+                {
+                  "text": "2019年2月23日的信函，主要請買方聯繫貸款銀行、告知辦理進度，沒有提到房屋已達可使用狀態。水電是後來才接通。直到同年7月初驗，仍有瑕疵待修，屋內電梯也未裝好；法院因此未採建商「早已通知交屋」的說法。",
+                  "line": 31,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2019",
+                    "2",
+                    "23",
+                    "7"
+                  ]
+                },
+                {
+                  "text": "買方在8月簽署同意書，得以進場裝修、清潔。法院再核對修繕情況及同意書內容，認為這次進場還不足以證明完成契約約定的交屋。貸款在11月5日撥入建商帳戶，雙方的保固書則把交屋日記為11月28日。理由及相關證據見判決第四點，紙本第182至186頁。",
+                  "line": 33,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "8",
+                    "11",
+                    "5",
+                    "11",
+                    "28",
+                    "182",
+                    "186"
+                  ]
+                },
+                {
+                  "text": "行政院消保處在2025年8月公布的契約查核中，已把「將對保、撥款時間排除於交屋通知期限計算」列為違規態樣。這使銀行作業與交屋期限的關係，更值得在簽約及收信時讀清楚（官方查核結果）。",
+                  "line": 45,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2025",
+                    "8"
+                  ]
+                },
+                {
+                  "text": "央行不動產抵押貸款規定於2026年9月18日修正生效。正在重新確認貸款條件的買方，可把銀行預估撥款日與建商安排的驗收、交屋日期分開記錄；銀行的回覆，仍須與買賣契約的履約要求一起核對。",
+                  "line": 49,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026",
+                    "9",
+                    "18"
+                  ]
+                },
+                {
+                  "text": "資料確認日：2026年10月25日。本案依特定契約與履約證據判斷；本文不代替個別付款、拒絕交屋或損害請求的法律評估。",
+                  "line": 55,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026",
+                    "10",
+                    "25"
+                  ]
+                },
+                {
+                  "text": "行政院消保處：消費者保護法判決函釋彙編（廿二），紙本第173至187頁，臺灣高等法院臺中分院109年度上易字第289號判決。",
+                  "line": 59,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "173",
+                    "187",
+                    "109",
+                    "289"
+                  ]
+                },
+                {
+                  "text": "行政院消保處：預售屋契約查核結果，2025年8月25日。",
+                  "line": 61,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2025",
+                    "8",
+                    "25"
+                  ]
+                },
+                {
+                  "text": "中央銀行：不動產抵押貸款業務規定，2026年9月18日生效版本。",
+                  "line": 62,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026",
+                    "9",
+                    "18"
+                  ]
+                }
+              ],
+              "targetEvidence": [
+                {
+                  "key": "faq[1].a",
+                  "text": "Fjórir mánuðir voru skilmáli samningsins í þessu máli. Núgildandi 15. liður skylduskilmála vegna sölu ófullbyggðra íbúða krefst þess að seljandi tilkynni kaupanda um afhendingu innan sex mánaða frá því að notkunarleyfi fæst. Við annað mál þarf að bera raunverulegan samning saman við þær reglur sem giltu þegar hann var undirritaður.",
+                  "tokens": [
+                    "15"
+                  ]
+                },
+                {
+                  "text": "Þegar byggingaraðili sendi kaupanda bréf 23. febrúar 2019 voru vatn og rafmagn ekki enn tengd íbúðinni. Bréfið laut að gangi lánamáls hjá banka. Það sagði ekki að húsnæðið væri tilbúið til afhendingar, eins og fram kemur í opinberu safni dóma um neytendamál, prentuðum blaðsíðum 173–187.",
+                  "line": 26,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "23",
+                    "2019",
+                    "173–187"
+                  ]
+                },
+                {
+                  "text": "Taichung-deild æðri dómstóls Taívan, sem fór með áfrýjunina, hafnaði áfrýjun byggingaraðilans og viðbótarkröfu hans 9. febrúar 2022 í máli 109年度上易字第289號. Niðurstaðan um greiðslu dráttarvaxta stóð. Ekki var heimilt að áfrýja dóminum áfram.",
+                  "line": 28,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "9",
+                    "2022",
+                    "109",
+                    "289"
+                  ]
+                },
+                {
+                  "text": "Lánsféð barst byggingaraðilanum 5. nóvember. Á ábyrgðarskírteininu var hins vegar afhendingardagurinn 28. nóvember. Sönnunarmat fjórða hluta dómsins á prentuðum blaðsíðum 182–186 greinir á milli þessara dagsetninga og fyrri heimildar til að vinna inni í íbúðinni.",
+                  "line": 36,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "5",
+                    "28",
+                    "182–186"
+                  ]
+                },
+                {
+                  "text": "Samningur aðila krafðist tilkynningar um afhendingu innan fjögurra mánaða frá útgáfu notkunarleyfis. Sá frestur tilheyrði umræddum kaupum. Núgildandi 15. liður skylduskilmála við sölu íbúða sem ekki eru fullbyggðar krefst tilkynningar frá seljanda til kaupanda innan sex mánaða frá því að notkunarleyfið fæst.",
+                  "line": 42,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "15"
+                  ]
+                },
+                {
+                  "text": "Kaupandinn hefur líka skyldur. Núgildandi 14. liður fjallar meðal annars um greiðslur sem samningur kveður á um fyrir skráningu eignayfirfærslu og nauðsynleg lánsgögn og samstarf við afgreiðslu þeirra. Ágreiningur um afhendingartilkynningu fellir ekki sjálfkrafa niður gjaldfallnar greiðslur eða skyldu til að leggja fram gögn.",
+                  "line": 48,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "14"
+                  ]
+                },
+                {
+                  "text": "Í opinberri athugun á sölusamningum frá 25. ágúst 2025 voru gerðar athugasemdir við skilmála sem drógu tíma vegna staðfestingar bankans og útborgunar láns frá tilkynningarfrestinum. Væntanlegur afgreiðslutími banka lengir því ekki sjálfur samningsbundinn frest seljanda.",
+                  "line": 52,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "25",
+                    "2025"
+                  ]
+                },
+                {
+                  "text": "Núverandi reglur seðlabankans um fasteignaveðtryggð lán tóku gildi 18. september 2026 eftir breytingu sama mánuð; sú útgáfa var aftur staðfest 26. október. Þær eru ekki færðar aftur á við sem bein viðmið við kaup ársins 2019. Bankadagsetning sem nú liggur fyrir má bera saman við fyrirhugaða úttekt og afhendingu samkvæmt samningnum sem er til skoðunar.",
+                  "line": 54,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "18",
+                    "2026",
+                    "26",
+                    "2019"
+                  ]
+                },
+                {
+                  "text": "Núgildandi reglur og opinberar heimildir voru yfirfarnar 26. október 2026. Dómurinn er lesinn úr opinberri endurbirtingu og leysir úr ákveðnum samningi; niðurstaðan ákveður ekki hvenær annar kaupandi má halda eftir greiðslu eða hafna afhendingu.",
+                  "line": 60,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "26",
+                    "2026"
+                  ]
+                },
+                {
+                  "text": "Dómar og skýringar um neytendavernd, 22. bindi, prentaðar blaðsíður 173–187: mál 109年度上易字第289號.",
+                  "line": 64,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "22",
+                    "173–187",
+                    "109",
+                    "289"
+                  ]
+                },
+                {
+                  "text": "Skylduskilmálar og óheimilir skilmálar vegna sölu ófullbyggðra íbúða, 14. og 15. liður.",
+                  "line": 65,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "14",
+                    "15"
+                  ]
+                },
+                {
+                  "text": "Niðurstöður athugunar á íbúðasölusamningum, 25. ágúst 2025.",
+                  "line": 66,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "25",
+                    "2025"
+                  ]
+                },
+                {
+                  "text": "Seðlabankinn: reglur um fasteignaveðtryggð lán, útgáfa sem tók gildi 18. september 2026.",
+                  "line": 67,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "18",
+                    "2026"
+                  ]
+                }
+              ],
+              "editorialMetadata": {
+                "source": {
+                  "published": "2026-10-25",
+                  "lastmod": "2026-10-26",
+                  "date_display": "2026年10月25日",
+                  "read_time": "約5分鐘閱讀"
+                },
+                "target": {
+                  "published": "2026-10-26",
+                  "lastmod": "2026-10-26",
+                  "date_display": "26. október 2026",
+                  "read_time": "5 mín. lestur"
+                }
+              },
+              "spelledOutNumerals": "Not completely parsed in 49 languages. Review the full source/target passages; absence from these arrays is not zero or PASS."
+            },
+            {
+              "code": "nationality-jurisdiction",
+              "status": "REQUIRED",
+              "message": "A language does not establish nationality. Verify Taiwan jurisdiction, immigration status, nationality qualifications and any foreign-law/consular claim throughout the text; the highlighted passages are incomplete hints, not a language classifier.",
+              "sourceHints": [],
+              "targetHints": [],
+              "sourceLocale": "zh-hant",
+              "targetLocale": "is"
+            }
+          ],
+          "sha256": "2661e4c6163d28b727805c018a62516b9060dfda396ad86c7b30f4c631460af5",
+          "source": {
+            "file": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+            "locale": "zh-hant",
+            "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+          },
+          "board": {
+            "visible": true,
+            "audience": [
+              "is"
+            ],
+            "marketBoard": true,
+            "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+          },
+          "bodyMetrics": {
+            "lettersAndNumbers": 3851,
+            "uniqueParagraphLettersAndNumbers": 3851,
+            "paragraphs": 19,
+            "h1": 0
+          },
+          "classification": {
+            "sourceCategory": "legal",
+            "targetCategory": "legal",
+            "topic": "litigation"
+          },
+          "sourceUrls": {
+            "expected": [
+              "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+              "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+              "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+              "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+            ],
+            "actual": [
+              "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+              "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+              "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+              "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+            ],
+            "networkChecked": false
+          }
+        },
+        {
+          "file": "../../tseng-all-language-columns-20261025/batch08/checks/is-audit-overlay/columns-is/921-taiwan-online-game-coins-refund-judgment.md",
+          "locale": "is",
+          "slug": "taiwan-online-game-coins-refund-judgment",
+          "errors": [],
+          "reviews": [
+            {
+              "code": "public-output-and-native-prose",
+              "status": "REQUIRED",
+              "message": "Inspect rendered title, summary, FAQ, captions, cards, JSON-LD and feeds for native language and author leakage; compare opening/headings/ending with the previous three same-language articles. Automated token checks cannot prove either.",
+              "targetFields": [
+                {
+                  "key": "title",
+                  "text": "243.548 taívanskir dalir krafðir fyrir leikmynt: hvers vegna endurgreiðslan fékkst ekki"
+                },
+                {
+                  "key": "seoTitle",
+                  "text": "Leikmynt og endurgreiðsla á Taívan: ónotaðir punktar eða spilapeningar?"
+                },
+                {
+                  "key": "summary",
+                  "text": "Leikmaður fékk ekki eftirstöðvar leikmyntar endurgreiddar þar sem myntin gegndi hlutverki spilapeninga. Núgildandi taívanskar reglur vernda ónotaða keypta punkta og ónotuð leikgjöld; greiðslu- og notkunarskrár geta skýrt hvaða inneign er til skoðunar."
+                },
+                {
+                  "key": "featured_image_alt",
+                  "text": "Leikjastýring, óhlutbundin leikjamynd á skjá, ómerkt leikmynt og lokuð minnisbók."
+                },
+                {
+                  "key": "featured_image_caption",
+                  "text": "Skálduð mynd"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "Er endurgreiðsla útilokuð ef inneignin kallast gullpeningar í leiknum?"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "Heitið ræður því ekki eitt. Í þessu máli var myntin notuð sem spilapeningar í viðureignum og taldist hvorki ónotaðir keyptir punktar né leikgjald sem bæri að endurgreiða. Í öðrum leik þarf að skoða hvernig mynt fæst, hlutverk hennar, notkun og samningsskilmála."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "Má segja samningnum upp þegar meira en sjö dagar eru liðnir frá því að leikur hófst?"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "Núgildandi 18. liður heimilar neytanda að tilkynna uppsögn hvenær sem er. Ónotaða keypta punkta eða ónotaðan hluta greiddra leikgjalda skal endurgreiða að frádregnum nauðsynlegum kostnaði innan 30 daga frá samningslokum, nema aðilar semji um aðra tilhögun. Sérstök sjö daga heimild til að falla frá samningnum frá upphafi leiks hefur önnur skilyrði."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "Má ákveða í skilmálum að einungis gögn rekstraraðila gildi í ágreiningi?"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "Taívönsku reglurnar banna skilmála sem láta leikferils- og rafræn gögn rekstraraðila ein ráða niðurstöðu ágreinings. Greiðslukvittanir, skjámyndir og samskipti við þjónustuver geta einnig nýst. Leikmaður getur óskað eftir eigin leikferilsskrá og borið hana saman við þau gögn."
+                }
+              ]
+            },
+            {
+              "code": "title-summary-faq",
+              "status": "REQUIRED",
+              "message": "Compare legal subject and scope in title, summary and every FAQ; presence/count is not semantic preservation. Check translated category labels and captions too.",
+              "source": {
+                "title": "遊戲帳號還有金幣，終止契約為何仍拿不到退款？",
+                "summary": "一名玩家以帳號內剩餘金幣請求退費，基隆地院認定該案金幣是對局用籌碼，與未使用付費點數不同。現行規範仍保障終止契約後的未使用點數退費；判斷可退多少，要串起儲值、兌換及遊戲使用紀錄，不能只看畫面餘額。",
+                "faq": [
+                  {
+                    "q": "遊戲裡只要叫金幣，就不能申請退費嗎？",
+                    "a": "不能只憑名稱判斷。本案金幣供玩家對局使用，法院認為它不是未使用付費點數或應退的遊戲費用。其他遊戲仍須看金幣的取得方式、用途、使用情形及契約約定。"
+                  },
+                  {
+                    "q": "超過開始遊戲後七日，就不能終止契約嗎？",
+                    "a": "現行應記載事項另規定，消費者得隨時通知業者終止契約。終止時，未使用付費點數或遊戲費用，應在扣除必要成本後於三十日內退還，或依雙方同意的方式處理。七日解除與隨時終止的條件不同。"
+                  },
+                  {
+                    "q": "業者說只能以後台紀錄為準，這樣可以嗎？",
+                    "a": "現行不得記載事項禁止約定，發生糾紛時只能以業者保存的遊戲歷程及電子資料作為認定標準。玩家可保留付款憑證、截圖及客服往來，並申請自己的遊戲歷程，核對餘額如何形成。"
+                  }
+                ],
+                "categories": [
+                  "消費爭議",
+                  "台灣判決"
+                ],
+                "featured_image_caption": "虛構情境"
+              },
+              "target": {
+                "title": "243.548 taívanskir dalir krafðir fyrir leikmynt: hvers vegna endurgreiðslan fékkst ekki",
+                "seoTitle": "Leikmynt og endurgreiðsla á Taívan: ónotaðir punktar eða spilapeningar?",
+                "summary": "Leikmaður fékk ekki eftirstöðvar leikmyntar endurgreiddar þar sem myntin gegndi hlutverki spilapeninga. Núgildandi taívanskar reglur vernda ónotaða keypta punkta og ónotuð leikgjöld; greiðslu- og notkunarskrár geta skýrt hvaða inneign er til skoðunar.",
+                "faq": [
+                  {
+                    "q": "Er endurgreiðsla útilokuð ef inneignin kallast gullpeningar í leiknum?",
+                    "a": "Heitið ræður því ekki eitt. Í þessu máli var myntin notuð sem spilapeningar í viðureignum og taldist hvorki ónotaðir keyptir punktar né leikgjald sem bæri að endurgreiða. Í öðrum leik þarf að skoða hvernig mynt fæst, hlutverk hennar, notkun og samningsskilmála."
+                  },
+                  {
+                    "q": "Má segja samningnum upp þegar meira en sjö dagar eru liðnir frá því að leikur hófst?",
+                    "a": "Núgildandi 18. liður heimilar neytanda að tilkynna uppsögn hvenær sem er. Ónotaða keypta punkta eða ónotaðan hluta greiddra leikgjalda skal endurgreiða að frádregnum nauðsynlegum kostnaði innan 30 daga frá samningslokum, nema aðilar semji um aðra tilhögun. Sérstök sjö daga heimild til að falla frá samningnum frá upphafi leiks hefur önnur skilyrði."
+                  },
+                  {
+                    "q": "Má ákveða í skilmálum að einungis gögn rekstraraðila gildi í ágreiningi?",
+                    "a": "Taívönsku reglurnar banna skilmála sem láta leikferils- og rafræn gögn rekstraraðila ein ráða niðurstöðu ágreinings. Greiðslukvittanir, skjámyndir og samskipti við þjónustuver geta einnig nýst. Leikmaður getur óskað eftir eigin leikferilsskrá og borið hana saman við þau gögn."
+                  }
+                ],
+                "categories": [
+                  "Neytendamál á Taívan",
+                  "Dómaframkvæmd"
+                ],
+                "featured_image_caption": "Skálduð mynd"
+              }
+            },
+            {
+              "code": "legal-conditions",
+              "status": "REQUIRED",
+              "message": "Verify every source actor, must/may, AND/OR, exception, eligibility, starting date, period, amount, quotation and factual qualifier against the full target. Passage order/count need not match. No heuristic clears this item.",
+              "sourcePassages": [
+                {
+                  "text": "玩家把帳號內的剩餘金幣換算成新臺幣24萬3,548元，請求業者退還。法院沒有准許。帳號還有餘額，卻已沒有未使用的付費點數；這是該案兩造不爭執的事實（行政院消保處收錄的判決全文，紙本第140至153頁）。",
+                  "line": 25,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "臺灣基隆地方法院109年度消簡上字第1號判決，於2021年9月13日駁回玩家的上訴，並載明不得上訴。法院檢查的是該遊戲金幣的實際功能及退費條款，沒有把所有虛擬道具一概排除在消費者保護之外。",
+                  "line": 27,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "本案契約讓玩家先購買點數，再用點數取得遊戲服務或商品。剩下的金幣則供玩家在遊戲中對局，具有籌碼的功能。法院認為，這些金幣已不屬於契約約定應退的未使用付費點數，也不是業者收取的遊戲費用，因而未准許換算成現金返還。",
+                  "line": 31,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "法院還指出，若允許玩家把這種對局籌碼向業者兌成現金，會涉及賭博。這段理由與本案玩法相連；用在另一款遊戲時，仍須查清楚金幣如何取得、能換什麼、是否已經用於遊戲，不能只因畫面寫著「金幣」就拒絕退費。完整理由見判決第八點，紙本第148至152頁。",
+                  "line": 33,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "契約終止了，為何沒有退款？在這件案件，玩家自己也已表示終止契約，所以法院可以確認終止效果，再處理剩餘金幣是否屬於退費客體。這不等於法院認定業者原先的全部停權或終止理由都合法。",
+                  "line": 35,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "現行網路連線遊戲服務定型化契約應記載及不得記載事項第十八點，允許消費者隨時通知業者終止契約。未使用的付費點數或遊戲費用，須於扣除必要成本後，在終止契約後三十日內退還，或由雙方同意其他處理方式。並沒有一律不退的規則。",
+                  "line": 39,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "「必要成本」也要有內容。收到退費計算時，可要求業者分別列出未使用餘額、扣除項目與計算依據，再核對契約，不能僅從業者設定的固定比例推知它一定合理。",
+                  "line": 41,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "這份現行規範的最近修正自2023年1月1日生效，時間在上述判決之後；本案是以當時契約及適用規範判斷。現行第四點另保留開始遊戲後七日內以書面解除契約，並請求退還未使用付費點數的安排。已超過七日，也仍可依第十八點處理終止與剩餘費用。",
+                  "line": 43,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "只有一張帳號截圖，很難分辨原始購買點數、兌換所得金幣與遊玩後餘額。紀錄可以這樣對照：",
+                  "line": 47,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "資料",
+                  "line": 49,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "可釐清的問題",
+                  "line": 49,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "付款憑證與儲值明細",
+                  "line": 51,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "實際付了多少錢，取得哪種點數或服務？",
+                  "line": 51,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "點數兌換及遊戲歷程",
+                  "line": 52,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "點數何時轉換，轉換後的金幣如何使用？",
+                  "line": 52,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "終止通知與退費明細",
+                  "line": 53,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "何時終止，業者認列的未使用餘額及扣款理由為何？",
+                  "line": 53,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "業者至少須保存三十日的個人遊戲歷程，並依規範受理查詢；收到申請後，須在七日內提供。資料有保存期限。發生爭議後儘早申請，可減少只剩最後餘額畫面的情況。現行規範同時禁止約定，糾紛只能以業者保存的歷程及電子資料為準（應記載事項第九點、不得記載事項第六點）。",
+                  "line": 55,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "行政院消保處在2026年5月公布的2025年統計中，線上遊戲仍排在第一次消費申訴類型的第二位，案件數則較前一年減少。官方同時要求業者妥善處理帳號封鎖、停權及客服問題（統計與提醒事項）。",
+                  "line": 57,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "退費爭議可先向業者提出，再使用政府消費申訴管道。若爭點已涉及契約解釋或證據遭拒，可先寄信至事務所信箱，說明爭議項目與回覆期限，無須提供帳號密碼。要讓請求金額有依據，留下的是金錢如何進入帳號、又如何被使用的紀錄。",
+                  "line": 59,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "資料確認日：2026年10月25日。本文以特定遊戲退費判決說明契約與紀錄的判讀，其他遊戲的點數、道具及終止事由，須依其實際功能分別判斷。",
+                  "line": 61,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "行政院消保處：消費者保護法判決函釋彙編（廿二），紙本第140至153頁，臺灣基隆地方法院109年度消簡上字第1號判決。",
+                  "line": 65,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "網路連線遊戲服務定型化契約應記載及不得記載事項，第四、九、十八點及不得記載事項第六點。",
+                  "line": 66,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "行政院消保處：2025年度全國消費申訴及調解案件統計說明，2026年5月7日。",
+                  "line": 67,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "行政院消費者保護會：線上申訴系統。",
+                  "line": 68,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "儲值後，金幣被拿來做什麼",
+                  "line": 29,
+                  "kind": "h2"
+                },
+                {
+                  "text": "今天的退費規則仍保障未使用點數",
+                  "line": 37,
+                  "kind": "h2"
+                },
+                {
+                  "text": "畫面餘額，少了哪一段紀錄",
+                  "line": 45,
+                  "kind": "h2"
+                },
+                {
+                  "text": "官方資料",
+                  "line": 63,
+                  "kind": "h2"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "遊戲裡只要叫金幣，就不能申請退費嗎？"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "不能只憑名稱判斷。本案金幣供玩家對局使用，法院認為它不是未使用付費點數或應退的遊戲費用。其他遊戲仍須看金幣的取得方式、用途、使用情形及契約約定。"
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "超過開始遊戲後七日，就不能終止契約嗎？"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "現行應記載事項另規定，消費者得隨時通知業者終止契約。終止時，未使用付費點數或遊戲費用，應在扣除必要成本後於三十日內退還，或依雙方同意的方式處理。七日解除與隨時終止的條件不同。"
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "業者說只能以後台紀錄為準，這樣可以嗎？"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "現行不得記載事項禁止約定，發生糾紛時只能以業者保存的遊戲歷程及電子資料作為認定標準。玩家可保留付款憑證、截圖及客服往來，並申請自己的遊戲歷程，核對餘額如何形成。"
+                }
+              ],
+              "sourceConditionHints": [
+                {
+                  "text": "臺灣基隆地方法院109年度消簡上字第1號判決，於2021年9月13日駁回玩家的上訴，並載明不得上訴。法院檢查的是該遊戲金幣的實際功能及退費條款，沒有把所有虛擬道具一概排除在消費者保護之外。",
+                  "line": 27,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "本案契約讓玩家先購買點數，再用點數取得遊戲服務或商品。剩下的金幣則供玩家在遊戲中對局，具有籌碼的功能。法院認為，這些金幣已不屬於契約約定應退的未使用付費點數，也不是業者收取的遊戲費用，因而未准許換算成現金返還。",
+                  "line": 31,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "法院還指出，若允許玩家把這種對局籌碼向業者兌成現金，會涉及賭博。這段理由與本案玩法相連；用在另一款遊戲時，仍須查清楚金幣如何取得、能換什麼、是否已經用於遊戲，不能只因畫面寫著「金幣」就拒絕退費。完整理由見判決第八點，紙本第148至152頁。",
+                  "line": 33,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "現行網路連線遊戲服務定型化契約應記載及不得記載事項第十八點，允許消費者隨時通知業者終止契約。未使用的付費點數或遊戲費用，須於扣除必要成本後，在終止契約後三十日內退還，或由雙方同意其他處理方式。並沒有一律不退的規則。",
+                  "line": 39,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "只有一張帳號截圖，很難分辨原始購買點數、兌換所得金幣與遊玩後餘額。紀錄可以這樣對照：",
+                  "line": 47,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "實際付了多少錢，取得哪種點數或服務？",
+                  "line": 51,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "業者至少須保存三十日的個人遊戲歷程，並依規範受理查詢；收到申請後，須在七日內提供。資料有保存期限。發生爭議後儘早申請，可減少只剩最後餘額畫面的情況。現行規範同時禁止約定，糾紛只能以業者保存的歷程及電子資料為準（應記載事項第九點、不得記載事項第六點）。",
+                  "line": 55,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "退費爭議可先向業者提出，再使用政府消費申訴管道。若爭點已涉及契約解釋或證據遭拒，可先寄信至事務所信箱，說明爭議項目與回覆期限，無須提供帳號密碼。要讓請求金額有依據，留下的是金錢如何進入帳號、又如何被使用的紀錄。",
+                  "line": 59,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "資料確認日：2026年10月25日。本文以特定遊戲退費判決說明契約與紀錄的判讀，其他遊戲的點數、道具及終止事由，須依其實際功能分別判斷。",
+                  "line": 61,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "網路連線遊戲服務定型化契約應記載及不得記載事項，第四、九、十八點及不得記載事項第六點。",
+                  "line": 66,
+                  "kind": "paragraph"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "遊戲裡只要叫金幣，就不能申請退費嗎？"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "不能只憑名稱判斷。本案金幣供玩家對局使用，法院認為它不是未使用付費點數或應退的遊戲費用。其他遊戲仍須看金幣的取得方式、用途、使用情形及契約約定。"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "現行應記載事項另規定，消費者得隨時通知業者終止契約。終止時，未使用付費點數或遊戲費用，應在扣除必要成本後於三十日內退還，或依雙方同意的方式處理。七日解除與隨時終止的條件不同。"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "現行不得記載事項禁止約定，發生糾紛時只能以業者保存的遊戲歷程及電子資料作為認定標準。玩家可保留付款憑證、截圖及客服往來，並申請自己的遊戲歷程，核對餘額如何形成。"
+                }
+              ],
+              "targetPassages": [
+                {
+                  "text": "Leikmaður taldi myntina sem var eftir á reikningi hans jafngilda 243.548 taívönskum dölum (NT$) og krafðist þeirrar fjárhæðar frá rekstraraðilanum. Engir ónotaðir keyptir punktar voru þó eftir á reikningnum; um það voru aðilar sammála. Dómstóllinn hafnaði endurgreiðslukröfunni. Málið er birt í dómasafni neytendaverndarskrifstofu framkvæmdavaldsins, prentuðum síðum 140–153.",
+                  "line": 26,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Héraðsdómstóllinn í Keelung hafnaði áfrýjun leikmannsins 13. september 2021 í máli 109年度消簡上字第1號. Frekari áfrýjun var ekki heimil. Niðurstaðan byggðist á virkni myntarinnar í þessum leik og endurgreiðsluákvæðum samningsins, án almennrar útilokunar allra sýndarhluta frá neytendavernd.",
+                  "line": 28,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Fyrst keypti leikmaðurinn punkta. Þeim mátti samkvæmt samningnum skipta fyrir þjónustu eða vörur í leiknum. Eftirstöðvarnar gegndu öðru hlutverki: þær voru spilapeningar í viðureignum leikmanna, sem dómstóllinn taldi hvorki ónotaða keypta punkta samkvæmt endurgreiðsluákvæðinu né leikgjöld innheimt af rekstraraðilanum.",
+                  "line": 32,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Var hægt að fá spilapeningana greidda í reiðufé? Í rökstuðningi dómsins kemur fram að staðgreiðsla slíkrar myntar hjá rekstraraðilanum myndi tengjast fjárhættuspili. Þessi ályktun laut að viðureignunum í umræddum leik. Fyrir aðra leikmynt getur þurft að skoða hvernig hún fæst, hverju má skipta henni fyrir og hvað hefur þegar verið notað. Röksemdirnar eru í 8. hluta dómsins, á prentuðum síðum 148–152.",
+                  "line": 34,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Leikmaðurinn hafði sjálfur lýst yfir að hann segði samningnum upp. Dómstóllinn gat því gengið út frá samningslokum og fjallað um hvort myntin væri endurgreiðanleg. Það staðfesti ekki sjálfkrafa lögmæti allra fyrri raka rekstraraðilans fyrir lokun reiknings eða uppsögn.",
+                  "line": 36,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Samkvæmt 18. lið núgildandi reglna um staðlaða samninga fyrir netleiki má neytandi tilkynna rekstraraðila uppsögn hvenær sem er. Rekstraraðili skal innan 30 daga frá lokum samnings endurgreiða ónotaða keypta punkta eða ónotaðan hluta gjalda sem greidd hafa verið fyrir leikinn, að frádregnum nauðsynlegum kostnaði, nema báðir aðilar semji um aðra tilhögun.",
+                  "line": 40,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Frádrátturinn á að vera vegna nauðsynlegs kostnaðar. Við yfirferð endurgreiðsluútreiknings má biðja um sundurliðun á ónotaðri inneign, frádráttarliðum og reiknireglum og bera hana saman við samninginn. Föst prósenta í kerfi rekstraraðilans sýnir ekki ein og sér hvort frádrátturinn hafi þann grundvöll.",
+                  "line": 42,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Síðasta breyting núgildandi reglna tók gildi 1. janúar 2023, eftir dóminn. Í 4. lið er einnig heimild til að falla skriflega frá samningnum innan sjö daga frá upphafi leiks, án ástæðu og kostnaðar, og fá ónotaða keypta punkta endurgreidda. Eftir sjö daga stendur heimildin í 18. lið til uppsagnar og endurgreiðslu ónotaðrar inneignar áfram til boða.",
+                  "line": 44,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Skjámynd af lokastöðu getur sýnt fjárhæð en sleppt því hvort hún sé enn keyptir punktar eða mynt sem þegar hefur verið skipt fyrir leikjanotkun. Við undirbúning kröfu má tengja þrjú gagnasöfn:",
+                  "line": 48,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Gögn",
+                  "line": 50,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Spurning sem þau geta skýrt",
+                  "line": 50,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Greiðslukvittanir og innborganir",
+                  "line": 52,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Hvað var greitt og hvaða punktar eða þjónusta fengust?",
+                  "line": 52,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Punktaskipti og leikferilsskrá",
+                  "line": 53,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Hvenær breyttist inneignin og hvernig var myntin notuð?",
+                  "line": 53,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Uppsögn og endurgreiðsluútreikningur",
+                  "line": 54,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Hvenær lauk samningnum og hvaða inneign eða frádrátt viðurkennir rekstraraðilinn?",
+                  "line": 54,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Samkvæmt 9. lið ber rekstraraðila að varðveita einstaklingsbundinn leikferil í að minnsta kosti 30 daga. Berist beiðni um aðgang skal hann afhenda gögnin innan sjö daga frá móttöku hennar. Þrjátíu dagar eru lögbundið lágmark. Beiðni snemma í ágreiningi getur því bætt við gögnum um það sem gerðist áður en síðasta skjámynd var tekin.",
+                  "line": 56,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Reglurnar banna jafnframt að samið sé um að eingöngu leikferill og rafræn gögn rekstraraðilans ráði niðurstöðu ágreinings. Bannið útilokar ekki gögn hans sem sönnun. Það kemur í veg fyrir samningsbundna útilokun annarra gagna; þetta er skýrt í 6. lið bannaðra skilmála.",
+                  "line": 58,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Í opinberri tölfræði fyrir 2025, birtri 7. maí 2026, voru netleikir næststærsti flokkur fyrstu neytendakvartana á Taívan. Kvörtunum í þeim flokki hafði þó fækkað frá árinu áður. Yfirvöld hvöttu einnig rekstraraðila til að sinna ágreiningi um reikningslokun, aðgangssviptingu og þjónustuver.",
+                  "line": 60,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Endurgreiðslukröfu má fyrst senda rekstraraðila og síðan nýta opinbera neytendakvörtunarkerfið. Varði ágreiningur túlkun samnings eða höfnun gagna má senda lýsingu og svarfrest á netfang skrifstofunnar. Lykilorð að leikreikningi þarf ekki að fylgja. Greiðslur, skipti og notkun geta saman skýrt hvernig krafða fjárhæðin er reiknuð.",
+                  "line": 62,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Núgildandi reglur og opinberar upplýsingar voru yfirfarnar 26. október 2026; umfjöllunin um dóminn byggist á gögnum sem voru skoðuð 25. október. Dómurinn laut að tilteknum leik og samningi hans á þeim tíma. Virkni punkta, sýndarhluta og ástæður samningsloka þarf að meta fyrir hvert annað tilvik.",
+                  "line": 64,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Neytendaverndarskrifstofan: safn dóma og lögskýringa um neytendavernd, bindi 22, prentaðar síður 140–153; mál 109年度消簡上字第1號 frá Keelung.",
+                  "line": 68,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Skylduákvæði og bannaðir skilmálar í stöðluðum samningum um netleiki, skylduákvæði 4, 9 og 18 og bannákvæði 6.",
+                  "line": 69,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Opinber tölfræði um neytendakvartanir og sáttameðferð árið 2025, 7. maí 2026.",
+                  "line": 70,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Neytendaverndarnefndin: rafrænt kvörtunarkerfi.",
+                  "line": 71,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Hvað varð um punktana eftir kaupin?",
+                  "line": 30,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Uppsögn í dag og endurgreiðslufresturinn",
+                  "line": 38,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Skrárnar sýna hvernig eftirstöðvarnar urðu til",
+                  "line": 46,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Opinberar heimildir",
+                  "line": 66,
+                  "kind": "h2"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "Er endurgreiðsla útilokuð ef inneignin kallast gullpeningar í leiknum?"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "Heitið ræður því ekki eitt. Í þessu máli var myntin notuð sem spilapeningar í viðureignum og taldist hvorki ónotaðir keyptir punktar né leikgjald sem bæri að endurgreiða. Í öðrum leik þarf að skoða hvernig mynt fæst, hlutverk hennar, notkun og samningsskilmála."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "Má segja samningnum upp þegar meira en sjö dagar eru liðnir frá því að leikur hófst?"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "Núgildandi 18. liður heimilar neytanda að tilkynna uppsögn hvenær sem er. Ónotaða keypta punkta eða ónotaðan hluta greiddra leikgjalda skal endurgreiða að frádregnum nauðsynlegum kostnaði innan 30 daga frá samningslokum, nema aðilar semji um aðra tilhögun. Sérstök sjö daga heimild til að falla frá samningnum frá upphafi leiks hefur önnur skilyrði."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "Má ákveða í skilmálum að einungis gögn rekstraraðila gildi í ágreiningi?"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "Taívönsku reglurnar banna skilmála sem láta leikferils- og rafræn gögn rekstraraðila ein ráða niðurstöðu ágreinings. Greiðslukvittanir, skjámyndir og samskipti við þjónustuver geta einnig nýst. Leikmaður getur óskað eftir eigin leikferilsskrá og borið hana saman við þau gögn."
+                }
+              ],
+              "sourceMarkdown": "\n玩家把帳號內的剩餘金幣換算成新臺幣24萬3,548元，請求業者退還。法院沒有准許。帳號還有餘額，卻已沒有未使用的付費點數；這是該案兩造不爭執的事實（[行政院消保處收錄的判決全文](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C)，紙本第140至153頁）。\n\n臺灣基隆地方法院109年度消簡上字第1號判決，於2021年9月13日駁回玩家的上訴，並載明不得上訴。法院檢查的是該遊戲金幣的實際功能及退費條款，沒有把所有虛擬道具一概排除在消費者保護之外。\n\n## 儲值後，金幣被拿來做什麼\n\n本案契約讓玩家先購買點數，再用點數取得遊戲服務或商品。剩下的金幣則供玩家在遊戲中對局，具有籌碼的功能。法院認為，這些金幣已不屬於契約約定應退的未使用付費點數，也不是業者收取的遊戲費用，因而未准許換算成現金返還。\n\n法院還指出，若允許玩家把這種對局籌碼向業者兌成現金，會涉及賭博。這段理由與本案玩法相連；用在另一款遊戲時，仍須查清楚金幣如何取得、能換什麼、是否已經用於遊戲，不能只因畫面寫著「金幣」就拒絕退費。完整理由見[判決第八點](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C)，紙本第148至152頁。\n\n契約終止了，為何沒有退款？在這件案件，玩家自己也已表示終止契約，所以法院可以確認終止效果，再處理剩餘金幣是否屬於退費客體。這不等於法院認定業者原先的全部停權或終止理由都合法。\n\n## 今天的退費規則仍保障未使用點數\n\n現行[網路連線遊戲服務定型化契約應記載及不得記載事項](https://www.ey.gov.tw/File/C27658C15073FF69?A=C)第十八點，允許消費者隨時通知業者終止契約。未使用的付費點數或遊戲費用，須於扣除必要成本後，在終止契約後三十日內退還，或由雙方同意其他處理方式。並沒有一律不退的規則。\n\n「必要成本」也要有內容。收到退費計算時，可要求業者分別列出未使用餘額、扣除項目與計算依據，再核對契約，不能僅從業者設定的固定比例推知它一定合理。\n\n這份現行規範的最近修正自2023年1月1日生效，時間在上述判決之後；本案是以當時契約及適用規範判斷。現行第四點另保留開始遊戲後七日內以書面解除契約，並請求退還未使用付費點數的安排。已超過七日，也仍可依第十八點處理終止與剩餘費用。\n\n## 畫面餘額，少了哪一段紀錄\n\n只有一張帳號截圖，很難分辨原始購買點數、兌換所得金幣與遊玩後餘額。紀錄可以這樣對照：\n\n| 資料 | 可釐清的問題 |\n| --- | --- |\n| 付款憑證與儲值明細 | 實際付了多少錢，取得哪種點數或服務？ |\n| 點數兌換及遊戲歷程 | 點數何時轉換，轉換後的金幣如何使用？ |\n| 終止通知與退費明細 | 何時終止，業者認列的未使用餘額及扣款理由為何？ |\n\n業者至少須保存三十日的個人遊戲歷程，並依規範受理查詢；收到申請後，須在七日內提供。資料有保存期限。發生爭議後儘早申請，可減少只剩最後餘額畫面的情況。現行規範同時禁止約定，糾紛只能以業者保存的歷程及電子資料為準（[應記載事項第九點、不得記載事項第六點](https://www.ey.gov.tw/File/C27658C15073FF69?A=C)）。\n\n行政院消保處在2026年5月公布的2025年統計中，線上遊戲仍排在第一次消費申訴類型的第二位，案件數則較前一年減少。官方同時要求業者妥善處理帳號封鎖、停權及客服問題（[統計與提醒事項](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930)）。\n\n退費爭議可先向業者提出，再使用[政府消費申訴管道](https://appeal.cpc.ey.gov.tw/)。若爭點已涉及契約解釋或證據遭拒，可先寄信至[事務所信箱](mailto:wei@hoveringlaw.com.tw)，說明爭議項目與回覆期限，無須提供帳號密碼。要讓請求金額有依據，留下的是金錢如何進入帳號、又如何被使用的紀錄。\n\n資料確認日：2026年10月25日。本文以特定遊戲退費判決說明契約與紀錄的判讀，其他遊戲的點數、道具及終止事由，須依其實際功能分別判斷。\n\n## 官方資料\n\n- 行政院消保處：[消費者保護法判決函釋彙編（廿二）](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C)，紙本第140至153頁，臺灣基隆地方法院109年度消簡上字第1號判決。\n- [網路連線遊戲服務定型化契約應記載及不得記載事項](https://www.ey.gov.tw/File/C27658C15073FF69?A=C)，第四、九、十八點及不得記載事項第六點。\n- 行政院消保處：[2025年度全國消費申訴及調解案件統計說明](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930)，2026年5月7日。\n- 行政院消費者保護會：[線上申訴系統](https://appeal.cpc.ey.gov.tw/)。\n",
+              "targetMarkdown": "\nLeikmaður taldi myntina sem var eftir á reikningi hans jafngilda 243.548 taívönskum dölum (NT$) og krafðist þeirrar fjárhæðar frá rekstraraðilanum. Engir ónotaðir keyptir punktar voru þó eftir á reikningnum; um það voru aðilar sammála. Dómstóllinn hafnaði endurgreiðslukröfunni. Málið er birt í [dómasafni neytendaverndarskrifstofu framkvæmdavaldsins](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), prentuðum síðum 140–153.\n\nHéraðsdómstóllinn í Keelung hafnaði áfrýjun leikmannsins 13. september 2021 í máli 109年度消簡上字第1號. Frekari áfrýjun var ekki heimil. Niðurstaðan byggðist á virkni myntarinnar í þessum leik og endurgreiðsluákvæðum samningsins, án almennrar útilokunar allra sýndarhluta frá neytendavernd.\n\n## Hvað varð um punktana eftir kaupin?\n\nFyrst keypti leikmaðurinn punkta. Þeim mátti samkvæmt samningnum skipta fyrir þjónustu eða vörur í leiknum. Eftirstöðvarnar gegndu öðru hlutverki: þær voru spilapeningar í viðureignum leikmanna, sem dómstóllinn taldi hvorki ónotaða keypta punkta samkvæmt endurgreiðsluákvæðinu né leikgjöld innheimt af rekstraraðilanum.\n\nVar hægt að fá spilapeningana greidda í reiðufé? Í rökstuðningi dómsins kemur fram að staðgreiðsla slíkrar myntar hjá rekstraraðilanum myndi tengjast fjárhættuspili. Þessi ályktun laut að viðureignunum í umræddum leik. Fyrir aðra leikmynt getur þurft að skoða hvernig hún fæst, hverju má skipta henni fyrir og hvað hefur þegar verið notað. Röksemdirnar eru í 8. hluta dómsins, á prentuðum síðum 148–152.\n\nLeikmaðurinn hafði sjálfur lýst yfir að hann segði samningnum upp. Dómstóllinn gat því gengið út frá samningslokum og fjallað um hvort myntin væri endurgreiðanleg. Það staðfesti ekki sjálfkrafa lögmæti allra fyrri raka rekstraraðilans fyrir lokun reiknings eða uppsögn.\n\n## Uppsögn í dag og endurgreiðslufresturinn\n\nSamkvæmt 18. lið [núgildandi reglna um staðlaða samninga fyrir netleiki](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) má neytandi tilkynna rekstraraðila uppsögn hvenær sem er. Rekstraraðili skal innan 30 daga frá lokum samnings endurgreiða ónotaða keypta punkta eða ónotaðan hluta gjalda sem greidd hafa verið fyrir leikinn, að frádregnum nauðsynlegum kostnaði, nema báðir aðilar semji um aðra tilhögun.\n\nFrádrátturinn á að vera vegna nauðsynlegs kostnaðar. Við yfirferð endurgreiðsluútreiknings má biðja um sundurliðun á ónotaðri inneign, frádráttarliðum og reiknireglum og bera hana saman við samninginn. Föst prósenta í kerfi rekstraraðilans sýnir ekki ein og sér hvort frádrátturinn hafi þann grundvöll.\n\nSíðasta breyting núgildandi reglna tók gildi 1. janúar 2023, eftir dóminn. Í 4. lið er einnig heimild til að falla skriflega frá samningnum innan sjö daga frá upphafi leiks, án ástæðu og kostnaðar, og fá ónotaða keypta punkta endurgreidda. Eftir sjö daga stendur heimildin í 18. lið til uppsagnar og endurgreiðslu ónotaðrar inneignar áfram til boða.\n\n## Skrárnar sýna hvernig eftirstöðvarnar urðu til\n\nSkjámynd af lokastöðu getur sýnt fjárhæð en sleppt því hvort hún sé enn keyptir punktar eða mynt sem þegar hefur verið skipt fyrir leikjanotkun. Við undirbúning kröfu má tengja þrjú gagnasöfn:\n\n| Gögn | Spurning sem þau geta skýrt |\n| --- | --- |\n| Greiðslukvittanir og innborganir | Hvað var greitt og hvaða punktar eða þjónusta fengust? |\n| Punktaskipti og leikferilsskrá | Hvenær breyttist inneignin og hvernig var myntin notuð? |\n| Uppsögn og endurgreiðsluútreikningur | Hvenær lauk samningnum og hvaða inneign eða frádrátt viðurkennir rekstraraðilinn? |\n\nSamkvæmt 9. lið ber rekstraraðila að varðveita einstaklingsbundinn leikferil í að minnsta kosti 30 daga. Berist beiðni um aðgang skal hann afhenda gögnin innan sjö daga frá móttöku hennar. Þrjátíu dagar eru lögbundið lágmark. Beiðni snemma í ágreiningi getur því bætt við gögnum um það sem gerðist áður en síðasta skjámynd var tekin.\n\nReglurnar banna jafnframt að samið sé um að eingöngu leikferill og rafræn gögn rekstraraðilans ráði niðurstöðu ágreinings. Bannið útilokar ekki gögn hans sem sönnun. Það kemur í veg fyrir samningsbundna útilokun annarra gagna; þetta er skýrt í 6. lið bannaðra skilmála.\n\nÍ [opinberri tölfræði fyrir 2025](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930), birtri 7. maí 2026, voru netleikir næststærsti flokkur fyrstu neytendakvartana á Taívan. Kvörtunum í þeim flokki hafði þó fækkað frá árinu áður. Yfirvöld hvöttu einnig rekstraraðila til að sinna ágreiningi um reikningslokun, aðgangssviptingu og þjónustuver.\n\nEndurgreiðslukröfu má fyrst senda rekstraraðila og síðan nýta [opinbera neytendakvörtunarkerfið](https://appeal.cpc.ey.gov.tw/). Varði ágreiningur túlkun samnings eða höfnun gagna má senda lýsingu og svarfrest á [netfang skrifstofunnar](mailto:wei@hoveringlaw.com.tw). Lykilorð að leikreikningi þarf ekki að fylgja. Greiðslur, skipti og notkun geta saman skýrt hvernig krafða fjárhæðin er reiknuð.\n\nNúgildandi reglur og opinberar upplýsingar voru yfirfarnar 26. október 2026; umfjöllunin um dóminn byggist á gögnum sem voru skoðuð 25. október. Dómurinn laut að tilteknum leik og samningi hans á þeim tíma. Virkni punkta, sýndarhluta og ástæður samningsloka þarf að meta fyrir hvert annað tilvik.\n\n## Opinberar heimildir\n\n- [Neytendaverndarskrifstofan: safn dóma og lögskýringa um neytendavernd, bindi 22](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), prentaðar síður 140–153; mál 109年度消簡上字第1號 frá Keelung.\n- [Skylduákvæði og bannaðir skilmálar í stöðluðum samningum um netleiki](https://www.ey.gov.tw/File/C27658C15073FF69?A=C), skylduákvæði 4, 9 og 18 og bannákvæði 6.\n- [Opinber tölfræði um neytendakvartanir og sáttameðferð árið 2025](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930), 7. maí 2026.\n- [Neytendaverndarnefndin: rafrænt kvörtunarkerfi](https://appeal.cpc.ey.gov.tw/).\n"
+            },
+            {
+              "code": "numbers-dates-currencies",
+              "status": "REQUIRED",
+              "message": "Raw numeric-token differences require context review; locale separators, spelled-out numerals and era conversions are not automatically equivalent. Matching tokens also do not prove matching conditions. No values are synthesized or zero-filled.",
+              "sourceOnly": [
+                {
+                  "token": "24",
+                  "count": 1
+                },
+                {
+                  "token": "3,548",
+                  "count": 1
+                },
+                {
+                  "token": "140",
+                  "count": 2
+                },
+                {
+                  "token": "153",
+                  "count": 2
+                },
+                {
+                  "token": "1",
+                  "count": 1
+                },
+                {
+                  "token": "148",
+                  "count": 1
+                },
+                {
+                  "token": "152",
+                  "count": 1
+                },
+                {
+                  "token": "5",
+                  "count": 2
+                },
+                {
+                  "token": "10",
+                  "count": 1
+                }
+              ],
+              "targetOnly": [
+                {
+                  "token": "243.548",
+                  "count": 2
+                },
+                {
+                  "token": "18",
+                  "count": 4
+                },
+                {
+                  "token": "30",
+                  "count": 3
+                },
+                {
+                  "token": "140–153",
+                  "count": 2
+                },
+                {
+                  "token": "8",
+                  "count": 1
+                },
+                {
+                  "token": "148–152",
+                  "count": 1
+                },
+                {
+                  "token": "4",
+                  "count": 2
+                },
+                {
+                  "token": "9",
+                  "count": 1
+                },
+                {
+                  "token": "6",
+                  "count": 2
+                },
+                {
+                  "token": "7",
+                  "count": 1
+                },
+                {
+                  "token": "26",
+                  "count": 1
+                },
+                {
+                  "token": "22",
+                  "count": 1
+                }
+              ],
+              "sourceEvidence": [
+                {
+                  "text": "玩家把帳號內的剩餘金幣換算成新臺幣24萬3,548元，請求業者退還。法院沒有准許。帳號還有餘額，卻已沒有未使用的付費點數；這是該案兩造不爭執的事實（行政院消保處收錄的判決全文，紙本第140至153頁）。",
+                  "line": 25,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "24",
+                    "3,548",
+                    "140",
+                    "153"
+                  ]
+                },
+                {
+                  "text": "臺灣基隆地方法院109年度消簡上字第1號判決，於2021年9月13日駁回玩家的上訴，並載明不得上訴。法院檢查的是該遊戲金幣的實際功能及退費條款，沒有把所有虛擬道具一概排除在消費者保護之外。",
+                  "line": 27,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "109",
+                    "1",
+                    "2021",
+                    "9",
+                    "13"
+                  ]
+                },
+                {
+                  "text": "法院還指出，若允許玩家把這種對局籌碼向業者兌成現金，會涉及賭博。這段理由與本案玩法相連；用在另一款遊戲時，仍須查清楚金幣如何取得、能換什麼、是否已經用於遊戲，不能只因畫面寫著「金幣」就拒絕退費。完整理由見判決第八點，紙本第148至152頁。",
+                  "line": 33,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "148",
+                    "152"
+                  ]
+                },
+                {
+                  "text": "這份現行規範的最近修正自2023年1月1日生效，時間在上述判決之後；本案是以當時契約及適用規範判斷。現行第四點另保留開始遊戲後七日內以書面解除契約，並請求退還未使用付費點數的安排。已超過七日，也仍可依第十八點處理終止與剩餘費用。",
+                  "line": 43,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2023",
+                    "1",
+                    "1"
+                  ]
+                },
+                {
+                  "text": "行政院消保處在2026年5月公布的2025年統計中，線上遊戲仍排在第一次消費申訴類型的第二位，案件數則較前一年減少。官方同時要求業者妥善處理帳號封鎖、停權及客服問題（統計與提醒事項）。",
+                  "line": 57,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026",
+                    "5",
+                    "2025"
+                  ]
+                },
+                {
+                  "text": "資料確認日：2026年10月25日。本文以特定遊戲退費判決說明契約與紀錄的判讀，其他遊戲的點數、道具及終止事由，須依其實際功能分別判斷。",
+                  "line": 61,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026",
+                    "10",
+                    "25"
+                  ]
+                },
+                {
+                  "text": "行政院消保處：消費者保護法判決函釋彙編（廿二），紙本第140至153頁，臺灣基隆地方法院109年度消簡上字第1號判決。",
+                  "line": 65,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "140",
+                    "153",
+                    "109",
+                    "1"
+                  ]
+                },
+                {
+                  "text": "行政院消保處：2025年度全國消費申訴及調解案件統計說明，2026年5月7日。",
+                  "line": 67,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2025",
+                    "2026",
+                    "5",
+                    "7"
+                  ]
+                }
+              ],
+              "targetEvidence": [
+                {
+                  "key": "title",
+                  "text": "243.548 taívanskir dalir krafðir fyrir leikmynt: hvers vegna endurgreiðslan fékkst ekki",
+                  "tokens": [
+                    "243.548"
+                  ]
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "Núgildandi 18. liður heimilar neytanda að tilkynna uppsögn hvenær sem er. Ónotaða keypta punkta eða ónotaðan hluta greiddra leikgjalda skal endurgreiða að frádregnum nauðsynlegum kostnaði innan 30 daga frá samningslokum, nema aðilar semji um aðra tilhögun. Sérstök sjö daga heimild til að falla frá samningnum frá upphafi leiks hefur önnur skilyrði.",
+                  "tokens": [
+                    "18",
+                    "30"
+                  ]
+                },
+                {
+                  "text": "Leikmaður taldi myntina sem var eftir á reikningi hans jafngilda 243.548 taívönskum dölum (NT$) og krafðist þeirrar fjárhæðar frá rekstraraðilanum. Engir ónotaðir keyptir punktar voru þó eftir á reikningnum; um það voru aðilar sammála. Dómstóllinn hafnaði endurgreiðslukröfunni. Málið er birt í dómasafni neytendaverndarskrifstofu framkvæmdavaldsins, prentuðum síðum 140–153.",
+                  "line": 26,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "243.548",
+                    "140–153"
+                  ]
+                },
+                {
+                  "text": "Héraðsdómstóllinn í Keelung hafnaði áfrýjun leikmannsins 13. september 2021 í máli 109年度消簡上字第1號. Frekari áfrýjun var ekki heimil. Niðurstaðan byggðist á virkni myntarinnar í þessum leik og endurgreiðsluákvæðum samningsins, án almennrar útilokunar allra sýndarhluta frá neytendavernd.",
+                  "line": 28,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "13",
+                    "2021",
+                    "109",
+                    "1"
+                  ]
+                },
+                {
+                  "text": "Var hægt að fá spilapeningana greidda í reiðufé? Í rökstuðningi dómsins kemur fram að staðgreiðsla slíkrar myntar hjá rekstraraðilanum myndi tengjast fjárhættuspili. Þessi ályktun laut að viðureignunum í umræddum leik. Fyrir aðra leikmynt getur þurft að skoða hvernig hún fæst, hverju má skipta henni fyrir og hvað hefur þegar verið notað. Röksemdirnar eru í 8. hluta dómsins, á prentuðum síðum 148–152.",
+                  "line": 34,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "8",
+                    "148–152"
+                  ]
+                },
+                {
+                  "text": "Samkvæmt 18. lið núgildandi reglna um staðlaða samninga fyrir netleiki má neytandi tilkynna rekstraraðila uppsögn hvenær sem er. Rekstraraðili skal innan 30 daga frá lokum samnings endurgreiða ónotaða keypta punkta eða ónotaðan hluta gjalda sem greidd hafa verið fyrir leikinn, að frádregnum nauðsynlegum kostnaði, nema báðir aðilar semji um aðra tilhögun.",
+                  "line": 40,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "18",
+                    "30"
+                  ]
+                },
+                {
+                  "text": "Síðasta breyting núgildandi reglna tók gildi 1. janúar 2023, eftir dóminn. Í 4. lið er einnig heimild til að falla skriflega frá samningnum innan sjö daga frá upphafi leiks, án ástæðu og kostnaðar, og fá ónotaða keypta punkta endurgreidda. Eftir sjö daga stendur heimildin í 18. lið til uppsagnar og endurgreiðslu ónotaðrar inneignar áfram til boða.",
+                  "line": 44,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "1",
+                    "2023",
+                    "4",
+                    "18"
+                  ]
+                },
+                {
+                  "text": "Samkvæmt 9. lið ber rekstraraðila að varðveita einstaklingsbundinn leikferil í að minnsta kosti 30 daga. Berist beiðni um aðgang skal hann afhenda gögnin innan sjö daga frá móttöku hennar. Þrjátíu dagar eru lögbundið lágmark. Beiðni snemma í ágreiningi getur því bætt við gögnum um það sem gerðist áður en síðasta skjámynd var tekin.",
+                  "line": 56,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "9",
+                    "30"
+                  ]
+                },
+                {
+                  "text": "Reglurnar banna jafnframt að samið sé um að eingöngu leikferill og rafræn gögn rekstraraðilans ráði niðurstöðu ágreinings. Bannið útilokar ekki gögn hans sem sönnun. Það kemur í veg fyrir samningsbundna útilokun annarra gagna; þetta er skýrt í 6. lið bannaðra skilmála.",
+                  "line": 58,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "6"
+                  ]
+                },
+                {
+                  "text": "Í opinberri tölfræði fyrir 2025, birtri 7. maí 2026, voru netleikir næststærsti flokkur fyrstu neytendakvartana á Taívan. Kvörtunum í þeim flokki hafði þó fækkað frá árinu áður. Yfirvöld hvöttu einnig rekstraraðila til að sinna ágreiningi um reikningslokun, aðgangssviptingu og þjónustuver.",
+                  "line": 60,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2025",
+                    "7",
+                    "2026"
+                  ]
+                },
+                {
+                  "text": "Núgildandi reglur og opinberar upplýsingar voru yfirfarnar 26. október 2026; umfjöllunin um dóminn byggist á gögnum sem voru skoðuð 25. október. Dómurinn laut að tilteknum leik og samningi hans á þeim tíma. Virkni punkta, sýndarhluta og ástæður samningsloka þarf að meta fyrir hvert annað tilvik.",
+                  "line": 64,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "26",
+                    "2026",
+                    "25"
+                  ]
+                },
+                {
+                  "text": "Neytendaverndarskrifstofan: safn dóma og lögskýringa um neytendavernd, bindi 22, prentaðar síður 140–153; mál 109年度消簡上字第1號 frá Keelung.",
+                  "line": 68,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "22",
+                    "140–153",
+                    "109",
+                    "1"
+                  ]
+                },
+                {
+                  "text": "Skylduákvæði og bannaðir skilmálar í stöðluðum samningum um netleiki, skylduákvæði 4, 9 og 18 og bannákvæði 6.",
+                  "line": 69,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "4",
+                    "9",
+                    "18",
+                    "6"
+                  ]
+                },
+                {
+                  "text": "Opinber tölfræði um neytendakvartanir og sáttameðferð árið 2025, 7. maí 2026.",
+                  "line": 70,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2025",
+                    "7",
+                    "2026"
+                  ]
+                }
+              ],
+              "editorialMetadata": {
+                "source": {
+                  "published": "2026-10-25",
+                  "lastmod": "2026-10-26",
+                  "date_display": "2026年10月25日",
+                  "read_time": "約5分鐘閱讀"
+                },
+                "target": {
+                  "published": "2026-10-26",
+                  "lastmod": "2026-10-26",
+                  "date_display": "26. október 2026",
+                  "read_time": "5 mín. lestur"
+                }
+              },
+              "spelledOutNumerals": "Not completely parsed in 49 languages. Review the full source/target passages; absence from these arrays is not zero or PASS."
+            },
+            {
+              "code": "nationality-jurisdiction",
+              "status": "REQUIRED",
+              "message": "A language does not establish nationality. Verify Taiwan jurisdiction, immigration status, nationality qualifications and any foreign-law/consular claim throughout the text; the highlighted passages are incomplete hints, not a language classifier.",
+              "sourceHints": [],
+              "targetHints": [],
+              "sourceLocale": "zh-hant",
+              "targetLocale": "is"
+            }
+          ],
+          "sha256": "bbce5fdff033d02529be025515dba7af17bef00f429ec8bf41bc807873fd5e8b",
+          "source": {
+            "file": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+            "locale": "zh-hant",
+            "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+          },
+          "board": {
+            "visible": true,
+            "audience": [
+              "is"
+            ],
+            "marketBoard": true,
+            "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+          },
+          "bodyMetrics": {
+            "lettersAndNumbers": 4271,
+            "uniqueParagraphLettersAndNumbers": 4271,
+            "paragraphs": 26,
+            "h1": 0
+          },
+          "classification": {
+            "sourceCategory": "legal",
+            "targetCategory": "legal",
+            "topic": "litigation"
+          },
+          "sourceUrls": {
+            "expected": [
+              "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+              "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+              "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+              "https://appeal.cpc.ey.gov.tw/"
+            ],
+            "actual": [
+              "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+              "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+              "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+              "https://appeal.cpc.ey.gov.tw/"
+            ],
+            "networkChecked": false
+          }
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "0f51ecead9b78fa3a51ac4cfc6fea0a828fe24910fb69385cb37dc7e82c8d0db",
+      "metadataChangedFields": [],
+      "faqUnchanged": true,
+      "faqCount": 3,
+      "metadata": {
+        "title": "Mengun í taívanskri verksmiðju: hvað gerðu móðurfélögin eftir að skýrslan barst?",
+        "seoTitle": "Ábyrgð móðurfélags á mengun í verksmiðju á Taívan",
+        "summary": "Dómur um verksmiðjumengun tengdi ábyrgð móðurfélaga við vitneskju, yfirráð og ráðstöfun eigna. Við fyrirtækjakaup geta gögn um viðbrögðin eftir umhverfiskönnun skýrt meira en skýrslan ein.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. október 2026",
+        "read_time": "5 mín. lestur",
+        "categories": [
+          "Félagaréttur á Taívan",
+          "Fyrirtækjakaup"
+        ],
+        "topic": "company",
+        "tags": [
+          "móðurfélög",
+          "mengun",
+          "umhverfiskönnun",
+          "eignatilfærslur",
+          "fjárfesting"
+        ],
+        "audience": [
+          "is"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/916-case-trends-20261025.webp",
+        "featured_image_alt": "Ílát með jarðvegssýni og minnisbók á felliborði utan við gamla verksmiðju.",
+        "featured_image_caption": "Skálduð mynd",
+        "faq": [
+          {
+            "q": "Ber erlent móðurfélag ábyrgð á mengun vegna þess eins að það á dótturfélag á Taívan?",
+            "a": "Eignarhald eitt var ekki grundvöllur niðurstöðunnar í þessu máli. Opinbera skýringin fjallar um yfirráð, vitneskju um mengun, skort á úrbótum eða upplýsingagjöf og eignatilfærslur í þeim tilgangi að komast undan ábyrgð. Meta þarf tiltekna háttsemi og viðeigandi réttarreglur."
+          },
+          {
+            "q": "Lauk dómur Hæstaréttar frá 2018 öllum kröfum vegna verksmiðjumengunarinnar?",
+            "a": "Nei. Dómurinn var felldur úr gildi og málinu vísað aftur til meðferðar að því marki sem varðaði 246 kröfuhafa, en áfrýjunum varðandi 262 var hafnað. Mismunandi hlutar málsins fengu ólíka niðurstöðu. Þetta þýðir hvorki að öllum upphaflegum kröfum síðari hópsins hafi verið hafnað né að öllum tengdum málum hafi lokið."
+          },
+          {
+            "q": "Hvaða gögn nýtast eftir umhverfiskönnun við fyrirtækjakaup?",
+            "a": "Skýrslan, viðtakendur hennar, eftirfylgnispurningar, ákvarðanir um áhættu starfsmanna og úrbætur, ásamt samþykktum og fjárhagsmati vegna síðari eignatilfærslna, geta sýnt vitneskju og háttsemi. Varsla gagnanna ein staðfestir þó ekki að farið hafi verið að lögum."
+          }
+        ]
+      }
+    },
+    {
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "2661e4c6163d28b727805c018a62516b9060dfda396ad86c7b30f4c631460af5",
+      "metadataChangedFields": [
+        "seoTitle"
+      ],
+      "faqUnchanged": true,
+      "faqCount": 3,
+      "metadata": {
+        "title": "Bréf um lán og aðgangur að íbúð sönnuðu ekki afhendingu á Taívan",
+        "seoTitle": "Afhending íbúðar á Taívan: bréf um lán og tilkynningarfrestur",
+        "summary": "Bréf um afgreiðslu láns og leyfi til að vinna inni í íbúð töldust ekki sanna afhendingu samkvæmt samningi. Fjögurra mánaða frestur málsins og núgildandi sex mánaða tilkynningarfrestur miðast við útgáfu notkunarleyfis.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. október 2026",
+        "read_time": "5 mín. lestur",
+        "categories": [
+          "Íbúðakaup á Taívan",
+          "Dómaframkvæmd"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "ófullbyggðar íbúðir",
+          "afhendingartilkynning",
+          "íbúðarlán",
+          "tafir",
+          "dráttarbætur"
+        ],
+        "audience": [
+          "is"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/918-case-trends-20261025.webp",
+        "featured_image_alt": "Skjalamappa, ómerkt umslag og einn kassi á borði í nýrri íbúð.",
+        "featured_image_caption": "Skálduð mynd",
+        "faq": [
+          {
+            "q": "Er bréf byggingaraðila um íbúðarlán jafnframt tilkynning um afhendingu?",
+            "a": "Það ræðst af efni bréfsins og ástandi íbúðarinnar á þeim tíma. Í þessu máli var spurt um gang lánamáls en ekki tilkynnt að íbúðin væri tilbúin til notkunar. Gögn um vatn, rafmagn og síðari úttekt studdu ekki heldur að samningsbundinni tilkynningarskyldu hefði verið fullnægt."
+          },
+          {
+            "q": "Er fresturinn eftir notkunarleyfi fjórir eða sex mánuðir?",
+            "a": "Fjórir mánuðir voru skilmáli samningsins í þessu máli. Núgildandi 15. liður skylduskilmála vegna sölu ófullbyggðra íbúða krefst þess að seljandi tilkynni kaupanda um afhendingu innan sex mánaða frá því að notkunarleyfi fæst. Við annað mál þarf að bera raunverulegan samning saman við þær reglur sem giltu þegar hann var undirritaður."
+          },
+          {
+            "q": "Má ég hunsa tilkynningu seljanda meðan bankinn hefur ekki greitt lánið út?",
+            "a": "Óafgreitt lán leysir ekki eitt og sér kaupanda undan því að bregðast við tilkynningu. Greiðslur, lánsgögn, úttekt og afhending hafa sín skilyrði. Efni tilkynningarinnar og umbeðinn frestur þarf að bera saman við gögn bankans og ástand íbúðarinnar; dómurinn veitir ekki öllum kaupendum almenna heimild til að stöðva greiðslur."
+          }
+        ]
+      }
+    },
+    {
+      "file": "921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "bbce5fdff033d02529be025515dba7af17bef00f429ec8bf41bc807873fd5e8b",
+      "metadataChangedFields": [],
+      "faqUnchanged": true,
+      "faqCount": 3,
+      "metadata": {
+        "title": "243.548 taívanskir dalir krafðir fyrir leikmynt: hvers vegna endurgreiðslan fékkst ekki",
+        "seoTitle": "Leikmynt og endurgreiðsla á Taívan: ónotaðir punktar eða spilapeningar?",
+        "summary": "Leikmaður fékk ekki eftirstöðvar leikmyntar endurgreiddar þar sem myntin gegndi hlutverki spilapeninga. Núgildandi taívanskar reglur vernda ónotaða keypta punkta og ónotuð leikgjöld; greiðslu- og notkunarskrár geta skýrt hvaða inneign er til skoðunar.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. október 2026",
+        "read_time": "5 mín. lestur",
+        "categories": [
+          "Neytendamál á Taívan",
+          "Dómaframkvæmd"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "netleikir",
+          "endurgreiðsla",
+          "leikmynt",
+          "keyptir punktar",
+          "neytendasamningar"
+        ],
+        "audience": [
+          "is"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/921-case-trends-20261025.webp",
+        "featured_image_alt": "Leikjastýring, óhlutbundin leikjamynd á skjá, ómerkt leikmynt og lokuð minnisbók.",
+        "featured_image_caption": "Skálduð mynd",
+        "faq": [
+          {
+            "q": "Er endurgreiðsla útilokuð ef inneignin kallast gullpeningar í leiknum?",
+            "a": "Heitið ræður því ekki eitt. Í þessu máli var myntin notuð sem spilapeningar í viðureignum og taldist hvorki ónotaðir keyptir punktar né leikgjald sem bæri að endurgreiða. Í öðrum leik þarf að skoða hvernig mynt fæst, hlutverk hennar, notkun og samningsskilmála."
+          },
+          {
+            "q": "Má segja samningnum upp þegar meira en sjö dagar eru liðnir frá því að leikur hófst?",
+            "a": "Núgildandi 18. liður heimilar neytanda að tilkynna uppsögn hvenær sem er. Ónotaða keypta punkta eða ónotaðan hluta greiddra leikgjalda skal endurgreiða að frádregnum nauðsynlegum kostnaði innan 30 daga frá samningslokum, nema aðilar semji um aðra tilhögun. Sérstök sjö daga heimild til að falla frá samningnum frá upphafi leiks hefur önnur skilyrði."
+          },
+          {
+            "q": "Má ákveða í skilmálum að einungis gögn rekstraraðila gildi í ágreiningi?",
+            "a": "Taívönsku reglurnar banna skilmála sem láta leikferils- og rafræn gögn rekstraraðila ein ráða niðurstöðu ágreinings. Greiðslukvittanir, skjámyndir og samskipti við þjónustuver geta einnig nýst. Leikmaður getur óskað eftir eigin leikferilsskrá og borið hana saman við þau gögn."
+          }
+        ]
+      }
+    }
+  ],
+  "errors": 0,
+  "semanticStatus": "TARGETED_INDEPENDENT_CLOSURE_PENDING",
+  "allSixRepeated": false
+}

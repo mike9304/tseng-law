@@ -1,0 +1,490 @@
+{
+  "at": "2026-10-26T09:17:04.193782+00:00",
+  "sourceKind": "working-tree",
+  "baseCommit": "52617670983d522fcf5dd8ed8d7c36ff374a82e5",
+  "inventory": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-r-inventory.json",
+    "sha256": "b8337bc5abba536c178812e4c893a6483ef85cbcab64f24850c755fc20a0e2a9",
+    "bytes": 4511464
+  },
+  "baselineInventory": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-before-inventory.json",
+    "sha256": "60f8cdbde4149014eb89420f6ec70320b630a8a5546a04969e30c8a1a0a3f00c",
+    "bytes": 4473446
+  },
+  "benchmarkPerLocale": 286,
+  "supportedLocales": 49,
+  "before": {
+    "professional": 2235,
+    "issues": 131,
+    "boardVisibleLocal": 1968,
+    "distinctProfessionalSlugs": 674,
+    "coreUnion": 481,
+    "coreCommon": 141,
+    "allLocaleCommon": 21,
+    "countDeficitTo286": 11789,
+    "visibleDeficitTo286": 12056,
+    "other45MissingCoreCommon": 5348
+  },
+  "after": {
+    "professional": 2277,
+    "issues": 131,
+    "boardVisibleLocal": 2010,
+    "distinctProfessionalSlugs": 674,
+    "coreUnion": 481,
+    "coreCommon": 141,
+    "allLocaleCommon": 21,
+    "countDeficitTo286": 11747,
+    "visibleDeficitTo286": 12014,
+    "other45MissingCoreCommon": 5348
+  },
+  "added": [
+    "src/content/columns-fi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+    "src/content/columns-fi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns-fi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns-fi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns-fi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "src/content/columns-hr/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns-hr/921-taiwan-online-game-coins-refund-judgment.md",
+    "src/content/columns-hr/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns-hr/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns-hr/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns-hr/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "src/content/columns-hu/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns-hu/921-taiwan-online-game-coins-refund-judgment.md",
+    "src/content/columns-hu/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns-hu/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns-hu/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns-hu/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "src/content/columns-is/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns-is/921-taiwan-online-game-coins-refund-judgment.md",
+    "src/content/columns-is/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns-is/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns-is/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns-is/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "src/content/columns-km/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns-km/921-taiwan-online-game-coins-refund-judgment.md",
+    "src/content/columns-km/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns-km/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns-km/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns-km/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "src/content/columns-lv/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md",
+    "src/content/columns-lv/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns-lv/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns-lv/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns-lv/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "src/content/columns-mn/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns-mn/921-taiwan-online-game-coins-refund-judgment.md",
+    "src/content/columns-mn/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns-mn/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns-mn/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns-mn/919-taiwan-workplace-bullying-investigation-hearing-judgment.md"
+  ],
+  "changed": [
+    "src/content/columns-fi/704-taiwan-arc-first-application.md",
+    "src/content/columns-fi/706-taiwan-arc-renewal-changes-reentry.md",
+    "src/content/columns-is/704-taiwan-arc-first-application.md"
+  ],
+  "removed": [],
+  "locales": [
+    {
+      "locale": "ko",
+      "localColumnCount": 217,
+      "boardVisibleLocalCount": 217,
+      "issueCount": 30,
+      "missingToCountBenchmark": 69,
+      "missingToVisibleBenchmark": 69
+    },
+    {
+      "locale": "zh-hant",
+      "localColumnCount": 296,
+      "boardVisibleLocalCount": 296,
+      "issueCount": 5,
+      "missingToCountBenchmark": 0,
+      "missingToVisibleBenchmark": 0
+    },
+    {
+      "locale": "en",
+      "localColumnCount": 218,
+      "boardVisibleLocalCount": 218,
+      "issueCount": 32,
+      "missingToCountBenchmark": 68,
+      "missingToVisibleBenchmark": 68
+    },
+    {
+      "locale": "ja",
+      "localColumnCount": 230,
+      "boardVisibleLocalCount": 230,
+      "issueCount": 30,
+      "missingToCountBenchmark": 56,
+      "missingToVisibleBenchmark": 56
+    },
+    {
+      "locale": "vi",
+      "localColumnCount": 45,
+      "boardVisibleLocalCount": 45,
+      "issueCount": 30,
+      "missingToCountBenchmark": 241,
+      "missingToVisibleBenchmark": 241
+    },
+    {
+      "locale": "id",
+      "localColumnCount": 33,
+      "boardVisibleLocalCount": 23,
+      "issueCount": 0,
+      "missingToCountBenchmark": 253,
+      "missingToVisibleBenchmark": 263
+    },
+    {
+      "locale": "th",
+      "localColumnCount": 31,
+      "boardVisibleLocalCount": 20,
+      "issueCount": 0,
+      "missingToCountBenchmark": 255,
+      "missingToVisibleBenchmark": 266
+    },
+    {
+      "locale": "fil",
+      "localColumnCount": 31,
+      "boardVisibleLocalCount": 26,
+      "issueCount": 0,
+      "missingToCountBenchmark": 255,
+      "missingToVisibleBenchmark": 260
+    },
+    {
+      "locale": "ar",
+      "localColumnCount": 34,
+      "boardVisibleLocalCount": 22,
+      "issueCount": 0,
+      "missingToCountBenchmark": 252,
+      "missingToVisibleBenchmark": 264
+    },
+    {
+      "locale": "de",
+      "localColumnCount": 32,
+      "boardVisibleLocalCount": 18,
+      "issueCount": 0,
+      "missingToCountBenchmark": 254,
+      "missingToVisibleBenchmark": 268
+    },
+    {
+      "locale": "es",
+      "localColumnCount": 52,
+      "boardVisibleLocalCount": 47,
+      "issueCount": 2,
+      "missingToCountBenchmark": 234,
+      "missingToVisibleBenchmark": 239
+    },
+    {
+      "locale": "fr",
+      "localColumnCount": 31,
+      "boardVisibleLocalCount": 23,
+      "issueCount": 2,
+      "missingToCountBenchmark": 255,
+      "missingToVisibleBenchmark": 263
+    },
+    {
+      "locale": "pt",
+      "localColumnCount": 34,
+      "boardVisibleLocalCount": 23,
+      "issueCount": 0,
+      "missingToCountBenchmark": 252,
+      "missingToVisibleBenchmark": 263
+    },
+    {
+      "locale": "zh-hans",
+      "localColumnCount": 29,
+      "boardVisibleLocalCount": 24,
+      "issueCount": 0,
+      "missingToCountBenchmark": 257,
+      "missingToVisibleBenchmark": 262
+    },
+    {
+      "locale": "ms",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "ru",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "tr",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "it",
+      "localColumnCount": 32,
+      "boardVisibleLocalCount": 21,
+      "issueCount": 0,
+      "missingToCountBenchmark": 254,
+      "missingToVisibleBenchmark": 265
+    },
+    {
+      "locale": "nl",
+      "localColumnCount": 26,
+      "boardVisibleLocalCount": 21,
+      "issueCount": 0,
+      "missingToCountBenchmark": 260,
+      "missingToVisibleBenchmark": 265
+    },
+    {
+      "locale": "pl",
+      "localColumnCount": 26,
+      "boardVisibleLocalCount": 21,
+      "issueCount": 0,
+      "missingToCountBenchmark": 260,
+      "missingToVisibleBenchmark": 265
+    },
+    {
+      "locale": "hi",
+      "localColumnCount": 34,
+      "boardVisibleLocalCount": 24,
+      "issueCount": 0,
+      "missingToCountBenchmark": 252,
+      "missingToVisibleBenchmark": 262
+    },
+    {
+      "locale": "sv",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "da",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "nb",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "fi",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "cs",
+      "localColumnCount": 26,
+      "boardVisibleLocalCount": 21,
+      "issueCount": 0,
+      "missingToCountBenchmark": 260,
+      "missingToVisibleBenchmark": 265
+    },
+    {
+      "locale": "hu",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "ro",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "uk",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "el",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "he",
+      "localColumnCount": 26,
+      "boardVisibleLocalCount": 21,
+      "issueCount": 0,
+      "missingToCountBenchmark": 260,
+      "missingToVisibleBenchmark": 265
+    },
+    {
+      "locale": "bn",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "ur",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "fa",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "my",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "ta",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "ne",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "km",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "mn",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "sk",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "bg",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "hr",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "sr",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "sl",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "lt",
+      "localColumnCount": 26,
+      "boardVisibleLocalCount": 21,
+      "issueCount": 0,
+      "missingToCountBenchmark": 260,
+      "missingToVisibleBenchmark": 265
+    },
+    {
+      "locale": "lv",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "et",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "ca",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "is",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    }
+  ],
+  "hiddenBoardSlugsUnchanged": true,
+  "issuesUnchanged": true,
+  "newSubstantiveLocalFiles": 42,
+  "newBoardVisibleLocalFiles": 42,
+  "countingLimitation": "File-backed policies only; CMS overlays, built HTML and public delivery are not asserted. Per-locale excess does not offset another locale deficit."
+}

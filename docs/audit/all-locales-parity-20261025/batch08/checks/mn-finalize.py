@@ -1,0 +1,93 @@
+from pathlib import Path
+import collections, datetime, hashlib, json, re
+B=Path('/Users/son7/tseng-all-language-columns-20261025/batch08');C=B/'checks';R=Path('/Users/son7/Projects/tseng-law-all-locales-20261025')
+sha=lambda x:hashlib.sha256(x if isinstance(x,bytes) else x.encode()).hexdigest()
+read=lambda n:json.loads((C/n).read_text())
+at=datetime.datetime.now(datetime.timezone.utc).isoformat()
+def save(n,d):
+ p=C/n;assert not p.exists(),n;p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')
+def body(t):return t.split('\n---\n',1)[1]
+initial=read('mn-initial-drafts.json');states={r['file']:r['text'] for r in initial};initial_text=states.copy();chains=[]
+r1=read('mn-self-edits-r1.json')
+for r in r1['files']:
+ t=states[r['file']];old=t;assert sha(t)==r['before_sha256']
+ edits=[e for e in r1['edits'] if e['id']==Path(r['file']).name[:3]]
+ trace=[]
+ for e in edits:
+  assert t.count(e['old'])==1;trace.append((t.index(e['old']),e));t=t.replace(e['old'],e['new'],1)
+ assert sha(t)==r['after_sha256'];back=t
+ for offset,e in reversed(trace):
+  assert back[offset:offset+len(e['new'])]==e['new'];back=back[:offset]+e['old']+back[offset+len(e['new']):]
+ assert back==old;states[r['file']]=t;chains.append({'phase':'body-r1','file':r['file'],'edits':len(edits),'before':sha(old),'after':sha(t),'reverse_exact':True})
+for n in ['mn-self-edits-r2.json','mn-faq-alignment.json']:
+ for r in read(n)['rows']:
+  t=states[r['file']];old=t;assert sha(t)==r['before_sha256']
+  trace=[]
+  for e in r['edits']:
+   assert t.count(e['old'])==1;trace.append((t.index(e['old']),e));t=t.replace(e['old'],e['new'],1)
+  assert sha(t)==r['after_sha256'];back=t
+  for offset,e in reversed(trace):
+   assert back[offset:offset+len(e['new'])]==e['new'];back=back[:offset]+e['old']+back[offset+len(e['new']):]
+  assert back==old;states[r['file']]=t;chains.append({'phase':n,'file':r['file'],'edits':len(r['edits']),'before':sha(old),'after':sha(t),'reverse_exact':True,'body_identical':body(old)==body(t)})
+latest={r['file']:(r,'mn-variety-edited-r1.json') for r in read('mn-variety-edited-r1.json')['rows']}
+latest.update({r['file']:(r,'mn-variety-r2.json') for r in read('mn-variety-r2.json')['rows']})
+ini_metrics={r['file']:r for r in read('mn-variety-initial.json')['rows']}
+faq={r['file']:r for r in read('mn-faq-alignment.json')['rows']}
+audit={}
+for n in ['mn-content-audit-r1.json','mn-content-audit-faq-final.json']:
+ for g in read(n)['groups']:
+  for r in g['files']:audit[Path(r['file']).name]=(r,n)
+rows=[];struct=[];allurls=[]
+for f,t in sorted(states.items()):
+ p=Path(f);assert p.read_text()==t
+ r,n=latest[f];measured_text=faq[f]['before_text'] if f in faq else t
+ assert sha(measured_text)==r['sha256'];assert body(measured_text)==body(t);assert r['exit']==0;assert 'FAIL' not in r['stdout']
+ old_sent=[s['text'] for pp in ini_metrics[f]['paragraphs'] for s in pp['sentences']]
+ sent=[s for pp in r['paragraphs'] for s in pp['sentences']]
+ assert len(sent)==r['metrics']['sentences'];opens=collections.Counter(pp['opener'] for pp in r['paragraphs']);assert max(opens.values())<=2
+ assert sum(s['units']<=8 for s in sent)>=2
+ assert all(sum(s['units']>=32 for s in pp['sentences'])<=1 for pp in r['paragraphs'])
+ rows.append({'file':f,'sha256':sha(t),'body_sha256':sha(body(t)),'actual_cli_evidence':n,'measured_file_sha256':r['sha256'],'same_measured_body_bytes':True,'metadata_only_bridge':'mn-faq-alignment.json' if f in faq else None,'metrics':r['metrics'],'exit':r['exit'],'old_sentences':len(old_sent),'current_sentences':len(sent),'current_texts_identical_to_initial':sum(s['text'] in old_sent for s in sent),'current_texts_changed_from_initial':sum(s['text'] not in old_sent for s in sent),'paragraph_starts':dict(opens),'paragraphs':r['paragraphs'],'excluded_headings':r['excludedHeadings'],'excluded_list_items':r['excludedListItems']})
+ fm=t.split('\n---\n',1)[0];fs=re.findall(r'^  - q:',fm,re.M)
+ assert len(fs)==(2 if p.name.startswith('915') else 3)
+ for key,value in {'published':'2026-10-26','lastmod':'2026-10-26','date_display':'2026 оны 10 дугаар сарын 26','author':'legal-ai-assistant','featured_image_caption':'Зохиомол дүр зураг'}.items():assert f'{key}: "{value}"' in fm
+ assert 'audience: ["mn"]' in fm;assert f'featured_image: "/images/columns/{p.name[:3]}-case-trends-20261025.webp"' in fm
+ assert not re.search(r'\*\*|__|<\s*(?:strong|b)\b',t,re.I);assert not re.search(r'^# ',body(t),re.M)
+ ar,an=audit[p.name];assert ar['sha256']==sha(t);assert not ar['errors'];assert set(ar['sourceUrls']['expected'])==set(ar['sourceUrls']['actual'])
+ main,tail=body(t).split('## Албан ёсны эх сурвалж',1)
+ expected=ar['sourceUrls']['expected'];assert all(u in tail for u in expected);assert all(u in main for u in expected)
+ allurls+=expected
+ struct.append({'file':f,'sha256':sha(t),'FAQ_count':len(fs),'metadata_and_no_bold_H1_checks':True,'automated_audit_evidence':an,'automated_errors':0,'source_urls':expected,'all_source_urls_in_body_and_tail':True,'network_checked_by_audit':False,'review_items':[{'code':i['code'],'status':i['status']} for i in ar['reviews']]})
+assert sum(r['current_sentences'] for r in rows)==242
+save('mn-boundary-review.json',{'at':at,'scope':'Initial 248 extracted units were read in full; all final changed passages with their adjacent sentences, >=32-unit sentences and every paragraph start were read again. Final 242 units are linked to current SHA via exact same measured body bytes. Source tail, headings and FAQ reviewed separately; not hidden as rhythm prose.','method_limit':'Mongolian Cyrillic orthographic/whitespace units with explicit --lang mn. These are heuristic sentence/word units, not a native-language readability or legal approval. Machine contrast count 0 is supplemented by manual negative-versus-contrast reading.','all_rows':rows,'total_initial_sentences':sum(r['old_sentences'] for r in rows),'total_final_sentences':242,'all_exact_edit_chains':chains})
+checks={
+'915':['44,417,150 TWD arbitration award annulled; Supreme Court 106年度台上字第723號, 2017-07-12; not money actually received.','Money claim -> time extension -> recommendation/entity dissent -> unsuccessful mediation -> money claim gap preserved; no blanket rule barring every adjustment.','Current procurement Art85-1: construction OR technical services; recommendation OR proposal on dispute; entity dissent causes failure; supplier request; all required conditions linked. Separate agreed arbitration basis retained; Arbitration Act40(1)(2).','ITA 2026-09-30 forecast late2026/2027 procurement remains forecast for US suppliers; no opening/eligibility promise for Mongolian readers.','FAQ2 aligned to canonical question about whether every changed claim blocks arbitration, not a newly invented universal restart rule.'],
+'916':['Supreme Court107年度台上字第267號 2018-08-16:246 claimants portion vacated/remanded,262 appeals rejected; not all claims finally determined or all workers paid.','Historical factual control, received pollution findings, failed warning/remediation, asset/capital transfers linked to conduct; current154 explained separately.','Current154 cumulative abuse of separate corporate personality -> evident difficulty paying specific debt AND serious/necessary conditions; foreign ownership or subsidiary formation alone not enough.','USTR US actor and US private partners, conditional consideration under applicable law retained; no Mongolian/international automatic subsidy or treaty-entry promise.','FAQ3 restores acquisition team records including report recipients, follow-up questions, exposure/remediation, transfer approvals and financial analysis; practical advice, not legal prerequisite.'],
+'918':['Taichung High Court branch109年度上易字第289號,2022-02-09; builder appeal/additional claim denied; no further appeal.','2019-02-23 bank-process letter not handover notice; water/power later; July defects/elevator installation not complete; August access/renovation not contractual handover; November5 loan/November28 warranty handover separate.','Case four-month clause distinct from current clause15 six-month NOTICE from use permit; not all handover completion; current comparison belongs to author, not old court.','Clause14 buyer cooperation/payment preserved; 2025 bank verification/disbursement exclusion information and 2026CBC not retroactively the old judgment.','FAQ1 letter contents and readiness; FAQ2 historical/current notice clocks; FAQ3 pending loan does not justify ignoring every notice or stopping all payments.'],
+'919':['Taipei High Administrative Court114年度訴字第869號,2026-09-03 original dismissal and review disposition annulled; appeal possible, no verified reinstatement/no-bullying general finding.','One disciplinary action recording two major demerits; announced outcome before competent committee; upper body meeting first; own committee last.','Insufficient notice/hearing/defence and inconsistent report/evidence; later review response did not cure case.','Civil service framework separated from private-sector Art22-2 effective2026-07-01. Complaint received -> measures to protect against further harm/help/protect/investigate; no result guarantee.','May coordinate according to complainant wishes; unsuccessful coordination requires continued investigation. Objective/fair process, statement/defence opportunity and conflict recusal preserved; not mandatory formal mediation.'],
+'920':['Kaohsiung High Court branch111年度上字第132號,2022-06-22 appeal denied; removal/restoration upheld; later status/finality not claimed.','Walls,ceilings,common electrical box remain common areas; wiring connected to resident-associated meter, no unsupported ownership finding.','Art11 owners meeting; building bylaw15 committee permission AND power-company safety review; not universal interchangeable approvals.','Art6(1)(5), continued violation after coordination and Art6(3) court remedy linked; Art6(1)(4) inapplicable to scope without unsupported party attribution.','Switch off/stop use/locked/offering key are resident assertions and even-if-true reasoning, not court-found activity.','Kaohsiung2026-05-29 cable-tray program, announcedSeptember30deadline already past atOctober26; not all chargers and no automatic works permission.'],
+'921':['Keelung District Court109年度消簡上字第1號,2021-09-13 appeal denied/no further appeal;243,548TWD sought not awarded.','Game-specific coins function, undisputed no unused purchased points, conversion/play history and own termination retained; not every virtual currency already used/not every operator action lawful.','Current terms amended2022-08-10/effective2023-01-01 separated from2021court. Clause4 first7-day written no-reason/no-cost withdrawal distinct from clause18 anytime termination.','Clause18 unused paid points OR unused game-service fees; necessary cost;30days FROM termination OR mutually agreed method, not unilateral operator alternative.','Clause9 retain records at least30days/provide within7days FROM receiving request; prohibited6 bars contract making operator records sole decisive evidence, not excludes those records.','Practical purchase/conversion/use record reconstruction is advice, not statutory claimant duty.2025first-stage complaints ranked2 and declinedYOY; publication2026-05-07.']}
+style={
+'opening_types':{'915':'amount','916':'reader question','918':'specific document fact','919':'case result fact','920':'case-grounded physical scene','921':'reader question'},
+'openings':'No stock hypothetical or invented first-person story. Two reader questions/two factual openings/one amount/one physical scene; starts differ from latest ARC704–706.',
+'length':'At least two <=8-unit sentences per article; no paragraph contains two >=32-unit sentences. Long legal-condition sentences retain AND/OR relations rather than split into misleading independent requirements.',
+'paragraph_starts':'Every normalized start checked manually in vertical lists; maximum repeated opener2 each, no triple repeated opener.',
+'citations':'Source-tail excluded by existing declared profile, not retitled to hide body. Main paragraphs alternate facts, explanation, documents and law; no three consecutive claim+but templates.',
+'contrast':'Machine0 not treated as native evidence. R2 removes unsolicited counterclaims and repeated not-X-but-Y framing. Ordinary legal negations (denied appeal, absence of agreement, not sole record) are substantively necessary; remaining few explicit distinctions explain current/historical or record rules.',
+'endings':'Six distinct evidence-chain conclusions: application amendments, control timeline, handover dates, hearing sequence, physical wiring approvals, payment-conversion-use. Contact link/email appears only as scoped invitation; no Mongolian-language service promise.',
+'form':'Mongolian Cyrillic informative prose; no bold, public author, native-lawyer approval, invented first-person, command checklist headings. Internal legal-ai-assistant retained.',
+'preservation':'Exact reversible edits verified below; all23 source references (22 globally unique) in main body+source tail; dates, amounts, legal conditions and fictitious-image labels reviewed; no country-law substitution.'}
+recent={'selection':'published descending with filename tie-break, not highest identifier','files':read('mn-inputs.json')['recent_selection']['files'],'comparison':'704 opens with the 30-day ARC timing;705 distinguishes specialist/student/family permissions;706 asks about a valid card after its residence basis ends. Their headings/endings concern documents, validity and reentry. New six open with case-specific money/report/letter/annulment/wiring/coins, organize each evidentiary dispute, and end with the relevant document chain; not a repeated ARC checklist.'}
+monotony=[{'item':'length and legal relation','problem':'Initial915 two similar medium conditional sentences separated recommendation from entity dissent.','direction':'Joined the cumulative statutory conditions into one31-unit sentence and retained the four-unit statement that all conditions combine.','evidence':'mn-self-edits-r1.json','meaning_preserved':True},{'item':'unsolicited contrast','problem':'Өнөөгийн 154 дүгээр зүйлийг тайлбарлахдаа үйлдвэрийн түүхэн хэргийн бүх хариуцлагыг зөвхөн энэ заалтаас гарсан мэтээр үзэхгүй байх нь зүйтэй.','direction':'State the current154 investment-risk purpose and historical control/knowledge/conduct grounds positively in two sentences.','evidence':'mn-self-edits-r2.json','meaning_preserved':True},{'item':'unsolicited caution','problem':'Generic counterclaims around919 evidence review and921 record collection repeated instructions rather than case information.','direction':'Remove hypothetical reader error and explain objective procedure/document use; keep actual law and record rights.','evidence':'mn-self-edits-r2.json','meaning_preserved':True}]
+save('mn-semantic-review.json',{'at':at,'role':'author self-review, not independent review/native-speaker certification/legal approval','fact_checks':checks,'FAQ_questions':'All17 target Q/A reread against actual canonical17;19 fields across5files corrected in mn-faq-alignment.json.920FAQ remained aligned.','section5':style,'MONOTONY':monotony,'recent3':recent,'structure':struct,'official_source_references_per_file_total':len(allurls),'official_source_urls_global_unique':len(set(allurls)),'automated_required_items_retained':sum(len(r['review_items']) for r in struct),'public_rendering_unchecked':['Published title/summary/FAQ/caption/cards','HTML/JSON-LD/feed author leakage','Actual public URLs after root integration'],'open_author_mandatory_findings':0})
+images=[]
+visual={'915':'hard hat, plans, binders and bridge model on a table; no visible person','916':'soil sample jar, notebook, table and industrial site','918':'documents/plain envelope and box inside new housing','919':'round table, folder and three chairs','920':'mounted EV charger and cable path toward ceiling tray','921':'controller, laptop with abstract game, tokens and notebook'}
+for id,description in visual.items():
+ p=R/f'public/images/columns/{id}-case-trends-20261025.webp';images.append({'file':str(p),'sha256':sha(p.read_bytes()),'direct_tool':'view_image','observation':description,'target_alt_matches':True,'caption':'Зохиомол дүр зураг'})
+save('mn-images-viewed.json',{'at':at,'scope':'All six images actually opened via tools.view_image earlier in this continuous authoring task; updates the initial input manifest statement that only root observations were then available. No image edited.','rows':images})
+inputs=read('mn-inputs.json');guard=[]
+for r in inputs['files']:
+ p=Path(r['path']);h=sha(p.read_bytes());same=h==r['sha256'];assert same or p.name=='LESSONS.md';guard.append({'path':str(p),'initial_sha256':r['sha256'],'current_sha256':h,'unchanged':same})
+lesson=Path('/Users/son7/tseng-lanes-shared/LESSONS.md');assert sha(lesson.read_bytes())=='86710ef330b108a916a7bb92a75f1ffa62dea53412e8a75f38472d9fa9b33130'
+save('mn-input-refresh.json',{'at':at,'initial_input_manifest_preserved':True,'LESSONS_previous_full_read_SHA256':inputs['files'][17]['sha256'],'LESSONS_current_full_read_SHA256':sha(lesson.read_bytes()),'LESSONS_version':'2026-10-26 17:05 KST; entire text read before final author record. Same substantive Top25; new aggregate counts/example indexing do not replace legal contract.','files':guard,'planned_shared_update':'mn-tool-update.json; approved root installation before initial MN CLI, no profile/threshold change','home_editorial_voice_missing':True,'fallback':'Full project docs/columns/EDITORIAL-VOICE.md + COLUMN-VOICE-RULE.md + SENTENCE-VARIETY-RULE.md used; no claim of reading absent home file.'})
+print(json.dumps({'files':len(rows),'sentences':242,'FAQ':sum(r['FAQ_count'] for r in struct),'source_references':len(allurls),'required_items_retained':sum(len(r['review_items']) for r in struct),'all_current_bytes_reconstructed':True,'rows':[{'id':Path(r['file']).name[:3],'sha':r['sha256'],'CV':r['metrics']['len_cv'],'sentences':r['current_sentences'],'changed_vs_initial':r['current_texts_changed_from_initial']} for r in rows]},ensure_ascii=False,indent=2))

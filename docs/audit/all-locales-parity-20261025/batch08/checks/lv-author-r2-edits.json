@@ -1,0 +1,258 @@
+{
+  "at": "2026-10-26T08:16:38.626179+00:00",
+  "finding": "S01 optional accepted",
+  "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md",
+  "beforeSHA256": "6634bb7957f6bd88e2c1072c6cf8fad761bd5eb38d263017409bfd6327921936",
+  "currentSHA256": "f5e0e079f45df5fb1cdfdb4a37cdb7fd2cf2a6e72bf7f5b561be88f7fa8bf118",
+  "old": "Tiesa vērtēja konkrēto monētu funkciju un atmaksas noteikumus, nevis izslēdza visus virtuālos priekšmetus no patērētāju aizsardzības.",
+  "new": "Tiesa vērtēja konkrēto monētu funkciju un šai spēlei piemērojamos atmaksas noteikumus.",
+  "reason": "MONOTONY: removes an unprompted broad rebuttal and states the specific game refund rules actually assessed.",
+  "meaningPreserved": "Retains case-specific scope in the changed sentence, next body paragraph and FAQ1; unused paid points/game fees, dates, finality and refund conditions unchanged.",
+  "exactOneReplacement": true,
+  "inverseExact": true,
+  "frontmatterFAQUnchanged": true,
+  "numbersURLSequenceHeadingsListsUnchanged": true,
+  "unchangedOtherFive": true,
+  "priorEvidenceUnchangedCount": 41,
+  "priorEvidence": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-content-audit-final.json",
+      "sha256": "f3e3094eb4bdcca8292b5dd7c6cb893ef4263f77d8a58935d89a6aa7656f2e4c"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-content-audit-initial.json",
+      "sha256": "a1e6209e2c859ce7ba6b6fdddf62e4abbdc4c21b5915c83d05d666b5538aea3d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-content-audit-legal.json",
+      "sha256": "de7f3407b4683762f06e6984e3bcbf9f4e875bc2369a313ad649371e51b5810a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-content-audit-revised.json",
+      "sha256": "de6d2e89c353cba898b23755931a44fe8a7acb992424a90cd90038d61e30d274"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-content-audit.json",
+      "sha256": "a1e6209e2c859ce7ba6b6fdddf62e4abbdc4c21b5915c83d05d666b5538aea3d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-edits-final.json",
+      "sha256": "eb03ef87d74adeb7b07beec4d5ca1c73af552db0b2e7a5747c2089b56ea5a52e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-edits-legal.json",
+      "sha256": "d63a818b6bd9bcb886211e3647c4292f8c0d869efb3fa8b3d37a1e68e8a12064"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-edits-revised.json",
+      "sha256": "ccbfe17916df85d03c5840078d9994a82805ea8e54a6a49fd5ef8b6dc7d33194"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-final-manifest.json",
+      "sha256": "7b0ee0bbc5f7d9f302c2ffe67750ee7f8d8723c8222ca2da9e0271154c720469"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-final-validation.json",
+      "sha256": "ee865a69f7a577d8e6bf69e1e35e64766511f8f36ad98c81d96daded28634a45"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-freeze.py",
+      "sha256": "5b0e169a69323248d23e3a8d021b5c73b9edce6a310c828585ce056ac1ac75a3"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-findings.json",
+      "sha256": "ac536b1669123f34122e965ffc6d11014d6760fba03231b2df6faf906959261e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-freeze.py",
+      "sha256": "4a94ca84c4f363854c590aff5e8ae708b869a1633b709d1f12de8e3f569a2ad7"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-input-freeze.json",
+      "sha256": "9a1fef1939ce9b68a50ed2e4f9260ecc5c9a73c442e3fc1a5838e4716beae462"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-manifest.json",
+      "sha256": "e5369daec1a2f62980ecd9f6256daae8a47fd1c2b3668e65ae7b4d93c738452c"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-metadata.json",
+      "sha256": "1d272b509c1d66d81beee22beb217367e1b6bbab1857170387967e13e31993ba"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-metadata.mjs",
+      "sha256": "27dd3c500bd0152836d0af90f0a38382131662b0abbf0b110486f241f901d0ea"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-proof-before-tool-install.py",
+      "sha256": "29f8c17d63601ef2ad4e20750b3cf385fb44e941586a484473fdc848c19196fd"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-proof.json",
+      "sha256": "126b52fde8e01d3924963872ac02cbc752143ef1c24caf61ae0329777707c8fb"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-proof.py",
+      "sha256": "3f58bdda5bbac12efe236485d102e282bd6ddf83e67e657336cc9580029b49d6"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-tool-change.json",
+      "sha256": "240ae09dbc0ac1db7ab8640d8d9164bac7d293b73a978cd4f31a6c61fcc4b28c"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-initial-drafts.json",
+      "sha256": "00abf138e296d49f6cc7f219920d46fe3bcf40e9c184e19ed1b81a2fb4e0b216"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-inputs.json",
+      "sha256": "306bffe849e6656dc5f9418a445114f82ecf25ccd7559b9b3582459f35265ac5"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-measure.py",
+      "sha256": "408a70adb606e87a96cda0b0487e83365f856b3829c2a35b57bedf5a97e8a217"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-resume-20261026.json",
+      "sha256": "1047777de3dd62b6578fad5064c1ff1b398dd68ff77033b8c24b39adf1868408"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-semantic-review.json",
+      "sha256": "acd28a971f45ea6a9f3abd8610a08ef9555a1a986a1f862dd6f7f309c86bdcff"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-structure-final.json",
+      "sha256": "57bfbae4a2e013bc6b1196cd9a98cbf265f98e6f3871642ca2ad00c6438a7f19"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-structure-initial.json",
+      "sha256": "f828908f6f03a2fb9b4ea4fb79df5decac52d47888cb7c311ae302cb5796a7bc"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-structure-legal.json",
+      "sha256": "b7c142a9b83f2f59a8e247bc7bf13fa2fd1037127a85868a772555ee814f6628"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-structure-revised.json",
+      "sha256": "fe838c8c03a2c3de2c607b69afcc6518c7f06a820bb31369769d8c76925a8bf3"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-structure.json",
+      "sha256": "f828908f6f03a2fb9b4ea4fb79df5decac52d47888cb7c311ae302cb5796a7bc"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-final.json",
+      "sha256": "217ad7784b7b16e9ede0a929da299986c8bf14855a2bbfa558da5452b7553d3f"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-initial.json",
+      "sha256": "c0635fd71869bd5a97aea85c8646f46f0f0a2963783c7bf2db3ac44bc7ddf900"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-legal.json",
+      "sha256": "15424142ef6618b205c43ebb7fe055ec6d4407ad464b926b323a12a625057399"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-revised.json",
+      "sha256": "bdca19bd68b7605247a061ed90a89473149704a20e2dabfce3e9eb36d1c559ce"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-verify-final.mjs",
+      "sha256": "f468f9188e51b28c06433838bda257520cdd1e5cd365cc51fbff95f6de0729fb"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-verify-legal.mjs",
+      "sha256": "d6e548ee5915921f047537f0d11fa5c392416ab44af5066b8d7b31b35ca6167c"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-verify-revised.mjs",
+      "sha256": "d063e66472976652bec926658c7282ebf76d84d7d2fac4d9bd459da686fea314"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-verify.mjs",
+      "sha256": "bb9e3bf695eb7ed5ed1f85706e304e739c70f5e674e8c89f5400189b41cb6548"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/lv-author.md",
+      "sha256": "7ed15d4e1099776a019f9d69658681702441b1b454931f74567e45e39b4af3a5"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/lv-independent.md",
+      "sha256": "166c6c6b8d624f6d85a4dadc2641534159cebe3728d59e252dd17dd541c65ead"
+    }
+  ],
+  "boundaryDelta": [
+    "--- ",
+    "+++ ",
+    "@@ -6,5 +6,5 @@",
+    " Spēlētāja apelācijas sūdzību tā noraidīja 2021. gada 13. septembrī.",
+    " Spriedumā norādīts, ka tas nav pārsūdzams.",
+    "-Tiesa vērtēja konkrēto monētu funkciju un atmaksas noteikumus, nevis izslēdza visus virtuālos priekšmetus no patērētāju aizsardzības.",
+    "+Tiesa vērtēja konkrēto monētu funkciju un šai spēlei piemērojamos atmaksas noteikumus.",
+    " Līgums ļāva vispirms iegādāties punktus un pēc tam tos izmantot spēles pakalpojumu vai preču saņemšanai.",
+    " Atlikušās monētas kalpoja par žetoniem spēlētāju izspēlēs."
+  ],
+  "currentUnits": 45,
+  "unchangedUnits": 44,
+  "currentMetrics": {
+    "lang": "lv",
+    "sentences": 45,
+    "paras": 14,
+    "heads": 3,
+    "list_items": 0,
+    "mean_len": 12.2,
+    "len_cv": 0.515,
+    "short_share": 0.333,
+    "long_share": 0.0,
+    "para_cv": 0.196,
+    "even_run3": 0.0,
+    "top_end": "lappusēs",
+    "top_end_share": 0.044,
+    "ja_desu": 0,
+    "ja_da": 0,
+    "top_opener": "taivānas",
+    "top_opener_n": 2,
+    "opener_rep": 0.143,
+    "consec_same_start": 0,
+    "cite_para_share": 0.0,
+    "cite_end_share": 0.0,
+    "contrast": 0,
+    "caveat": 0,
+    "questions": 1,
+    "num_per100": 4.18,
+    "hypo_open": false,
+    "q_open": false,
+    "formula_close": false,
+    "first": "Spēlētājam kontā joprojām bija monētas, taču neizlietotu apmaksātu punktu vairs nebija.",
+    "last": "Sprieduma pamatmateriāli pārbaudīti 2026. gada 25. oktobrī, spēkā esošie noteikumi un statistikas publikācija salīdzināt",
+    "length_unit": "orthographic_words",
+    "short_threshold": 8,
+    "long_threshold": 32,
+    "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+  },
+  "actualCliExit": 0,
+  "tools": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/lv.json",
+      "sha256": "09dc74f01e20b3430b1bf00c1e9ae4c2b941e081505e63cd4f9d86fb8fdb836e"
+    }
+  ],
+  "structureErrors": 0,
+  "requiredSemanticItems": 5,
+  "semanticStatus": "REVIEW_REQUIRED",
+  "independentR2Closure": "pending",
+  "sourceRSharedOrOtherAgentFilesModified": false,
+  "humanNativeLegalApproval": false,
+  "publicDeployment": false
+}

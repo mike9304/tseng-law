@@ -1,0 +1,106 @@
+{
+  "at": "2026-10-26T08:35:34.649111+00:00",
+  "status": "REQUEST_CHANGES",
+  "mandatory": 3,
+  "optional": 1,
+  "manuscriptsModified": false,
+  "findings": [
+    {
+      "id": "M01",
+      "severity": "MUST",
+      "article": "915",
+      "kind": "case chronology / heading",
+      "edits": [
+        {
+          "old": "Мөнгө хүсээд, хугацаа сунгуулж, дахин мөнгө нэхэмжилсэн нь",
+          "new": "Хугацаа сунгуулах хүсэлтийн дараа мөнгө нэхэмжилсэн нь",
+          "line": 28
+        }
+      ],
+      "reason": "сунгуулж는 기간 연장을 실제 얻었다는 읽기를 만든다. 기록은 연장 요청·위원회 권고·기관 부동의이며 실제 연장 승인 사실을 말하지 않는다. 직후 본문이 정확해도 독립적으로 노출되는 소제목은 고쳐야 한다.",
+      "meaningPreserved": "기간 연장 요청 후 금전 청구로 되돌아간 흐름. 최초 금전 청구와 기관 부동의는 바로 아래 기존 본문에 그대로 남는다. 승인·지급·새 법적 의무를 추가하지 않는다.",
+      "source": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/en915-court-explanation.txt",
+        "originalLines": "L22, L24, L42–45",
+        "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "sha256": "210e5841b601c5f429979ffd6b418aee01783a78613791290d14ce3d589220d5"
+      },
+      "testScope": "소제목만 바꾸면 측정 본문 배열 불변을 확인하고 기존 CLI를 재사용할 수 있다.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/915-taiwan-public-contract-mediation-arbitration-same-claim.md"
+    },
+    {
+      "id": "M02",
+      "severity": "MUST",
+      "article": "916",
+      "kind": "current law cumulative conditions / causation",
+      "edits": [
+        {
+          "old": "Хувьцаа эзэмшигч компанийн тусдаа хуулийн этгээдийн байдлыг урвуулан ашигласнаас компани тодорхой өр төлбөрөө барагдуулахад илт хүндрэлтэй болсон бөгөөд нөхцөл байдал ноцтой, хариуцлага хүлээлгэх шаардлагатай бол тэр хувьцаа эзэмшигч уг өрийг төлөх үүрэг хүлээнэ.",
+          "new": "Хувьцаа эзэмшигч компанийн тусдаа хуулийн этгээдийн байдлыг урвуулан ашигласны улмаас компанид тодорхой өр үүсэж, түүнийг барагдуулах нь илт хүндрэлтэй болсон бөгөөд нөхцөл байдал ноцтой, хариуцлага хүлээлгэх шаардлагатай бол тэр хувьцаа эзэмшигч уг өрийг төлөх үүрэг хүлээнэ.",
+          "line": 44
+        }
+      ],
+      "reason": "현재 문장은 남용 때문에 특정 채무의 상환이 곤란해졌다는 인과로만 읽힌다. 회사법154(2)는 법인격 남용으로 회사가 특정 채무를 부담하게 됨 AND 청산의 현저한 곤란 AND 중대성·필요성을 요구한다. 특정 채무 발생의 인과가 빠지면 책임 범위가 달라진다.",
+      "meaningPreserved": "주주·법인격 남용·특정 채무 발생·현저한 상환 곤란·중대성·필요성·그 채무에 대한 변제 책임을 모두 연결한다. 기존 뒤 문장 Нөхцөлүүдийг хамтад нь үнэлнэ.와 과거 사건/현행법 구분을 유지한다.",
+      "source": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/recheck/official-03.json",
+        "originalLines": "MOJ154 L41–45",
+        "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "sha256": "f8446b63d8035e07a35c10ef61c44e2ca13fed0e53647cf4573c3f257d0003e4"
+      },
+      "testScope": "916 변경 본문만 실제 shared --lang mn 재검사, 경계와 인접 조건 검수.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/916-taiwan-parent-company-pollution-liability-us-investor.md"
+    },
+    {
+      "id": "M03",
+      "severity": "MUST",
+      "article": "918",
+      "kind": "official inspection finding / period object / heading",
+      "edits": [
+        {
+          "old": "Банкны хугацааг барилгын компанид шууд тооцохгүй байх нь",
+          "new": "Банкны ажиллагааны хугацааг хассан заалт",
+          "line": 48
+        },
+        {
+          "old": "[2025 оны 8 дугаар сарын 25-ны гэрээний шалгалтын мэдээлэл](https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11) банкны нягтлан шалгалт, зээл олголтод зарцуулсан хугацааг зөрчлийн хугацаанд тооцохгүй байх асуудлыг дурдсан тул талууд банкны саатал хэзээ эхэлсэн, барилгын компанийн бэлэн байдалтай хэрхэн давхцсан тухай баримтаа тулгаж болно.",
+          "new": "[2025 оны 8 дугаар сарын 25-ны гэрээний шалгалтын мэдээлэл](https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11) банкны нягтлан шалгалт, зээл олголтод зарцуулсан хугацааг хүлээлгэн өгөх тухай мэдэгдэх зургаан сарын хугацаанаас хассан гэрээний заалтуудыг зөрчил гэж тэмдэглэсэн. Талууд банкны саатал хэзээ эхэлсэн, барилгын компанийн бэлэн байдалтай хэрхэн давхцсан тухай баримтаа тулгаж болно.",
+          "line": 50
+        }
+      ],
+      "reason": "소제목은 은행 시간을 건설사에 산입하지 않는 것이 타당하다는 방향으로 읽히고, 본문은 공식 자료가 제외 문제를 언급했다는 중립 설명에 그친다. 공식 점검은 은행 대면 확인·대출 실행 시간을 사용허가 수령 후 6개월의 인도 통지 기간에서 제외한 계약 조항을 부당한 위반으로 적시했다. зөрчлийн хугацаа도 해당 통지 기간을 정확히 가리키지 않는다.",
+      "meaningPreserved": "2025년 점검의 실제 부정적 평가와 6개월 통지 기간을 복원한다. 2019년 사건의 계약4개월, 현행표준6개월, 은행 지연·준비상태의 사실 대조, 구매자 의무는 그대로다. 모든 은행 지연의 책임이나 2025년 자료의 소급적용을 단정하지 않는다.",
+      "source": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/zh-hant-presale-audit-primary-recovered.md",
+        "originalLines": "원 회신 L135 및 L159–160",
+        "url": "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "sha256": "7a85ffb86d8f2726af8ca216f89e1ad81982b8645e4fbf5ac41cab522f7a7bdb"
+      },
+      "testScope": "918 변경 본문만 실제 shared --lang mn 재검사, 4개월/6개월 기산·기존 다음 문장·은행 시간의 문맥 확인.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/918-taiwan-presale-mortgage-notice-handover-judgment.md"
+    },
+    {
+      "id": "S01",
+      "severity": "OPTIONAL",
+      "article": "916",
+      "kind": "MONOTONY / repeated remand explanation",
+      "edits": [
+        {
+          "old": " Буцаасан хэсэг дахин хэлэлцэгдэхээр үлджээ.",
+          "new": "",
+          "line": 34
+        }
+      ],
+      "reason": "같은 문단 첫 문장이 246명 부분을 다시 심리하도록 환송했다고 이미 설명하고, 다음 문단은 환송 부분의 미결 쟁점을 설명한다. 가운데 한 문장이 새 정보를 더하지 않고 다시 심리된다는 결론을 반복한다.",
+      "meaningPreserved": "첫 문장과 다음 문단에 환송·미확정 범위가 남고, 262명 상고 기각과 구별도 유지된다. 문체 선택안이며 채택하지 않아도 별도 법률 반려 사유가 아니다.",
+      "source": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/en916-court-explanation-lines24-40.txt",
+        "originalLines": "L25, L32–40",
+        "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "sha256": "47aa1634c01d5e037194f5aaf6389c8da43ddfe040c777c4044463d3d4f96e0e"
+      },
+      "testScope": "M02와 함께 916에 반영하면 같은 영향편 검사에서 확인. 기계 수치를 위해 의미 없는 새 문장을 넣지 않는다.",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/916-taiwan-parent-company-pollution-liability-us-investor.md"
+    }
+  ]
+}

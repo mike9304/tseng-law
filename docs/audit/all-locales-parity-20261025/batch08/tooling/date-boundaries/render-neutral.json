@@ -1,0 +1,112 @@
+{
+  "node": "v24.14.1",
+  "repository": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "componentSHA256": "2cac5ce63e26bb87369f522743fb22288144a08a4044e7d08e121f6fe77a3fe2",
+  "scope": "Installed ReactMarkdown + remarkGfm neutral rendering; not a whole component/build/public-page claim.",
+  "rows": [
+    {
+      "id": "escaped-ascii-punctuation",
+      "input": "\\!\\\"\\#\\$\\%\\&\\'\\(\\)\\*\\+\\,\\-\\.\\/\\:\\;\\<\\=\\>\\?\\@\\[\\\\\\]\\^\\_\\`\\{\\|\\}\\~",
+      "html": "<p>!&quot;#$%&amp;&#x27;()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~</p>",
+      "renderedText": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~",
+      "expected": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~",
+      "passed": true
+    },
+    {
+      "id": "literal-escape-pairs",
+      "input": "\\\\ \\A \\3 \\«",
+      "html": "<p>\\ \\A \\3 \\«</p>",
+      "renderedText": "\\ \\A \\3 \\«",
+      "expected": "\\ \\A \\3 \\«",
+      "passed": true
+    },
+    {
+      "id": "escaped-emphasis",
+      "input": "\\*jel\\* \\_szó\\_",
+      "html": "<p>*jel* _szó_</p>",
+      "renderedText": "*jel* _szó_",
+      "expected": "*jel* _szó_",
+      "passed": true
+    },
+    {
+      "id": "escaped-code-markers",
+      "input": "\\`jel\\`",
+      "html": "<p>`jel`</p>",
+      "renderedText": "`jel`",
+      "expected": "`jel`",
+      "passed": true
+    },
+    {
+      "id": "code-keeps-escapes",
+      "input": "`2018\\. augusztus`",
+      "html": "<p><code>2018\\. augusztus</code></p>",
+      "renderedText": "2018\\. augusztus",
+      "expected": "2018\\. augusztus",
+      "passed": true
+    },
+    {
+      "id": "code-multiple-ticks",
+      "input": "``2018\\. ` jel``",
+      "html": "<p><code>2018\\. ` jel</code></p>",
+      "renderedText": "2018\\. ` jel",
+      "expected": "2018\\. ` jel",
+      "passed": true
+    },
+    {
+      "id": "link-label-escape",
+      "input": "[2018\\. augusztus](https://example.test/a.pdf)",
+      "html": "<p><a href=\"https://example.test/a.pdf\">2018. augusztus</a></p>",
+      "renderedText": "2018. augusztus",
+      "expected": "2018. augusztus",
+      "passed": true
+    },
+    {
+      "id": "escaped-brackets",
+      "input": "\\[jel\\]",
+      "html": "<p>[jel]</p>",
+      "renderedText": "[jel]",
+      "expected": "[jel]",
+      "passed": true
+    },
+    {
+      "id": "unescaped-markup-stays",
+      "input": "*szó* és [jel](https://example.test/a.pdf).",
+      "html": "<p><em>szó</em> és <a href=\"https://example.test/a.pdf\">jel</a>.</p>",
+      "renderedText": "szó és jel.",
+      "expected": "szó és jel.",
+      "passed": true
+    },
+    {
+      "id": "hu-escaped-year",
+      "input": "2018\\. augusztus 16-án nyílt meg a könyvtár. Másnap új olvasókat fogadtak.",
+      "html": "<p>2018. augusztus 16-án nyílt meg a könyvtár. Másnap új olvasókat fogadtak.</p>",
+      "paragraphs": 1,
+      "lists": 0,
+      "passed": true
+    },
+    {
+      "id": "hu-raw-year-is-list",
+      "input": "2018. augusztus 16-án nyílt meg a könyvtár.",
+      "html": "<ol start=\"2018\">\n<li>augusztus 16-án nyílt meg a könyvtár.</li>\n</ol>",
+      "paragraphs": 0,
+      "lists": 1,
+      "passed": true
+    },
+    {
+      "id": "hu-actual-list",
+      "input": "1. Vegyen egy könyvet.",
+      "html": "<ol>\n<li>Vegyen egy könyvet.</li>\n</ol>",
+      "paragraphs": 0,
+      "lists": 1,
+      "passed": true
+    },
+    {
+      "id": "hu-possible-list",
+      "input": "2018. könyv",
+      "html": "<ol start=\"2018\">\n<li>könyv</li>\n</ol>",
+      "paragraphs": 0,
+      "lists": 1,
+      "passed": true
+    }
+  ]
+}

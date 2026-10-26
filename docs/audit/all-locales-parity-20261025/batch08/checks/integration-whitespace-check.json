@@ -1,0 +1,636 @@
+{
+  "at": "2026-10-26T09:23:54.397382+00:00",
+  "liveSourceAndToolCommands": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "src/content/columns-fi/704-taiwan-arc-first-application.md",
+        "src/content/columns-fi/706-taiwan-arc-renewal-changes-reentry.md",
+        "src/content/columns-is/704-taiwan-arc-first-application.md",
+        "src/lib/__tests__/case-translations-20261026.test.ts",
+        "src/lib/__tests__/native-locale-columns.ts",
+        "docs/audit/all-locales-parity-20261025/tooling/variety/variety_expansion.py"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fi/915-taiwan-public-contract-mediation-arbitration-same-claim.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fi/916-taiwan-parent-company-pollution-liability-us-investor.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fi/918-taiwan-presale-mortgage-notice-handover-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fi/920-taiwan-apartment-ev-charger-common-area-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hr/915-taiwan-public-contract-mediation-arbitration-same-claim.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hr/916-taiwan-parent-company-pollution-liability-us-investor.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hr/918-taiwan-presale-mortgage-notice-handover-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hr/919-taiwan-workplace-bullying-investigation-hearing-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hr/920-taiwan-apartment-ev-charger-common-area-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hr/921-taiwan-online-game-coins-refund-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hu/915-taiwan-public-contract-mediation-arbitration-same-claim.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hu/916-taiwan-parent-company-pollution-liability-us-investor.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hu/918-taiwan-presale-mortgage-notice-handover-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hu/919-taiwan-workplace-bullying-investigation-hearing-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hu/920-taiwan-apartment-ev-charger-common-area-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hu/921-taiwan-online-game-coins-refund-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-is/915-taiwan-public-contract-mediation-arbitration-same-claim.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-is/916-taiwan-parent-company-pollution-liability-us-investor.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-is/918-taiwan-presale-mortgage-notice-handover-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-is/919-taiwan-workplace-bullying-investigation-hearing-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-is/920-taiwan-apartment-ev-charger-common-area-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-is/921-taiwan-online-game-coins-refund-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-km/915-taiwan-public-contract-mediation-arbitration-same-claim.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-km/916-taiwan-parent-company-pollution-liability-us-investor.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-km/918-taiwan-presale-mortgage-notice-handover-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-km/919-taiwan-workplace-bullying-investigation-hearing-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-km/920-taiwan-apartment-ev-charger-common-area-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-km/921-taiwan-online-game-coins-refund-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/915-taiwan-public-contract-mediation-arbitration-same-claim.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/916-taiwan-parent-company-pollution-liability-us-investor.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/918-taiwan-presale-mortgage-notice-handover-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/919-taiwan-workplace-bullying-investigation-hearing-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/920-taiwan-apartment-ev-charger-common-area-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/915-taiwan-public-contract-mediation-arbitration-same-claim.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/916-taiwan-parent-company-pollution-liability-us-investor.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/918-taiwan-presale-mortgage-notice-handover-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/919-taiwan-workplace-bullying-investigation-hearing-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/920-taiwan-apartment-ev-charger-common-area-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-mn/921-taiwan-online-game-coins-refund-judgment.md"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/date-boundaries/run_neutral.py"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/date-boundaries/neutral-fixtures.json"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "liveSourceAndToolAllPass": true,
+  "auditsInspected": 233,
+  "rawAuditWarnings": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch",
+      "sha256": "4ee9a926631a18d1d460a15fb21cae76ba469ca8d038e76b86efcb881187c033",
+      "exitCode": 3,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:6: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:60: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:61: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:66: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:86: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:88: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:91: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:93: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:99: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:101: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:104: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:106: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:112: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:114: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:117: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:119: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:127: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:149: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:180: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-source-and-tool.patch:188: trailing whitespace.\n+ \n",
+      "stderr": ""
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-unit.stdout",
+      "sha256": "2328426e77cb646fd32ac8e77810727046d634170ee99f428dd58ac6faf3f0ca",
+      "exitCode": 3,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-unit.stdout:125: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-unit.stderr",
+      "sha256": "7b85c25119fe9e59403cef8c008fd0249ba0be5526943887625dd08871d3a142",
+      "exitCode": 3,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-unit.stderr:43: new blank line at EOF.\n",
+      "stderr": ""
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/km-author.md",
+      "sha256": "e46e9c960518d18894040426e9e4b631eabc8053778a2c54c450a415e92394f5",
+      "exitCode": 3,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/km-author.md:39: trailing whitespace.\n+- 원문: លទ្ធផលមិនដូចគ្នាគ្រប់ផ្នែកទេ។ \n",
+      "stderr": ""
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate.patch",
+      "sha256": "1ea392dca3d2e5719c01bfff757dabbac963ec917772b835f71a8653426d03d5",
+      "exitCode": 3,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate.patch:4: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate.patch:58: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate.patch:59: trailing whitespace.\n+ \n/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate.patch:76: trailing whitespace.\n+ \n",
+      "stderr": ""
+    }
+  ],
+  "rawWarningFileCount": 5,
+  "historicalBytesSanitized": false,
+  "meaning": "Live tracked deltas and untracked manuscript/tool additions passed git whitespace checks. No-index exit1 means a difference and is retained; only exit0/1 with empty diagnostics passes. Frozen audit patches, logs and historical evidence are checked separately and retained exactly, including their whitespace diagnostics. Later final report/index files are verified at freeze."
+}

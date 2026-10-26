@@ -1,0 +1,86 @@
+{
+  "atUTC": "2026-10-26T08:10:19.645482+00:00",
+  "status": "AUTHOR_R2_PENDING_INDEPENDENT_CLOSURE",
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "96b1fc09ff63d43fdedd07d82bcfce983ac8157a974b4ff55d1d206e1ae3edd7",
+      "priorSHA256": "96b1fc09ff63d43fdedd07d82bcfce983ac8157a974b4ff55d1d206e1ae3edd7",
+      "changed": false
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "ac862ed033d2d9c250efb4becf26f5fd0ff1b20dac94b9824fead66db2578546",
+      "priorSHA256": "ac862ed033d2d9c250efb4becf26f5fd0ff1b20dac94b9824fead66db2578546",
+      "changed": false
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "fbc0a177749bd8b4941cda63daf48e4fd7e465040b8121f53a82e274483b5c5d",
+      "priorSHA256": "fbc0a177749bd8b4941cda63daf48e4fd7e465040b8121f53a82e274483b5c5d",
+      "changed": false
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "ca661812f570ae6d872b53c81a464cd073113b824ba64ce07e07fa09d0628fde",
+      "priorSHA256": "ca661812f570ae6d872b53c81a464cd073113b824ba64ce07e07fa09d0628fde",
+      "changed": false
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "9c8634739beb39fc2a4e0288d106d2b7f38f73e8374ebddbc31eccaa6b342f38",
+      "priorSHA256": "9c8634739beb39fc2a4e0288d106d2b7f38f73e8374ebddbc31eccaa6b342f38",
+      "changed": false
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "41db82df9e378f70cda63273f1dc53295d076d3b88bda8796af3806398f9b381",
+      "priorSHA256": "48aa5debe29787ced8afc034f40ba3417dd20afbc7e80b3078b77543a368814a",
+      "changed": true
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-author-final-manifest.json",
+      "sha256": "dff84ef72df9ad78f90e80c52274e86a0db4e377008d33dbbf3d95d7ee5b42c9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/fi-author.md",
+      "sha256": "0b48ba3f404d3a4568082cc78380f417839c641c93dd62449cea9663eb0112e0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-independent-manifest.json",
+      "sha256": "3a195b46fc352ff2845abdeb172de24d61954f7946f4e004ddf91085f84ac475"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/fi-independent.md",
+      "sha256": "f6337b46cdf568d5f115c0b64ce094bb8a1134a18c1f06aaabb6a785275726df"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-independent-s01-edit.json",
+      "sha256": "249608132b6abab6ca03b4cd9083618d4c04ca6ba35740b1899e561dc07bb93c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-921-before-independent-edit.md",
+      "sha256": "48aa5debe29787ced8afc034f40ba3417dd20afbc7e80b3078b77543a368814a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-variety-independent-r2.json",
+      "sha256": "b75461aff627937d266bf71ab1c67930d66a8b8780e650a9c20cc89cb010a9e7"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-content-audit-independent-r2.json",
+      "sha256": "dfc1f150064eb33b1b425667363289282b44c1b09d8f4ad0af7208ee80166f81"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/fi-author-r2.md",
+      "sha256": "38f7d495128d13e0f2fda2fba2e5fbf923f885f7393f9246eaedc7608564975b"
+    }
+  ],
+  "mandatoryFindingsBeforeEdit": 0,
+  "optionalS01Applied": true,
+  "currentTotalSentences": 255,
+  "FAQ": 17,
+  "actualChangedFileSharedExit": 0,
+  "unchangedFiveExactSHAReuse": true
+}

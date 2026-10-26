@@ -1,0 +1,2284 @@
+{
+  "at": "2026-10-26T09:07:47.363Z",
+  "original": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-content-audit.json",
+    "sha256": "56f75e79ff6f3d6a882e83655183643f0c076a37a01b4efe32196b05f1eb9c37",
+    "bytes": 2790221
+  },
+  "selectedFiles": 42,
+  "errors": 0,
+  "reviewItems": 225,
+  "semanticStatus": "REVIEW_REQUIRED",
+  "publicationReady": false,
+  "files": [
+    {
+      "file": "src/content/columns-fi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "96b1fc09ff63d43fdedd07d82bcfce983ac8157a974b4ff55d1d206e1ae3edd7",
+      "locale": "fi",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "errors": [],
+      "reviewItemCount": 6,
+      "requiredReviewCodes": {
+        "cross-language-link": 1,
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "fi"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4420,
+        "uniqueParagraphLettersAndNumbers": 4420,
+        "paragraphs": 27,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "locale": "en",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+        ],
+        "actual": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-fi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "ac862ed033d2d9c250efb4becf26f5fd0ff1b20dac94b9824fead66db2578546",
+      "locale": "fi",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "errors": [],
+      "reviewItemCount": 6,
+      "requiredReviewCodes": {
+        "cross-language-link": 1,
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "fi"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "company"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4814,
+        "uniqueParagraphLettersAndNumbers": 4814,
+        "paragraphs": 17,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "locale": "en",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+        ],
+        "actual": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-hr/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "c13d8f57ce5732caf2c21022c7a18513615629612016598441be3a37b756d57f",
+      "locale": "hr",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "errors": [],
+      "reviewItemCount": 6,
+      "requiredReviewCodes": {
+        "cross-language-link": 1,
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "hr"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3863,
+        "uniqueParagraphLettersAndNumbers": 3863,
+        "paragraphs": 27,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "locale": "en",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+        ],
+        "actual": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-hr/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "7c90b1dfe5e9cfd0b5111e5296a88fd766a5add1ae191d892c5deeeddb7ce976",
+      "locale": "hr",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "errors": [],
+      "reviewItemCount": 6,
+      "requiredReviewCodes": {
+        "cross-language-link": 1,
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "hr"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "company"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4464,
+        "uniqueParagraphLettersAndNumbers": 4464,
+        "paragraphs": 18,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "locale": "en",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+        ],
+        "actual": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-hu/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "6659ae1fc0f21374b23de7592c07db1ea40e59c7d5c098c4576e134ac805887d",
+      "locale": "hu",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "errors": [],
+      "reviewItemCount": 6,
+      "requiredReviewCodes": {
+        "cross-language-link": 1,
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "hu"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4526,
+        "uniqueParagraphLettersAndNumbers": 4526,
+        "paragraphs": 26,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "locale": "en",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+        ],
+        "actual": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-hu/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "cd2edf272341f53231e55246994f431a59da1f5ea83e7dda16c588a6928859ee",
+      "locale": "hu",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "errors": [],
+      "reviewItemCount": 6,
+      "requiredReviewCodes": {
+        "cross-language-link": 1,
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "hu"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "company"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4796,
+        "uniqueParagraphLettersAndNumbers": 4796,
+        "paragraphs": 17,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "locale": "en",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+        ],
+        "actual": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-is/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "3ba7ba24c0ec9c31fbfb1b0686032d33c305488acb64d55bb9d1c0f104841f3d",
+      "locale": "is",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "errors": [],
+      "reviewItemCount": 6,
+      "requiredReviewCodes": {
+        "cross-language-link": 1,
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "is"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3754,
+        "uniqueParagraphLettersAndNumbers": 3754,
+        "paragraphs": 28,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "locale": "en",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+        ],
+        "actual": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-is/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "0f51ecead9b78fa3a51ac4cfc6fea0a828fe24910fb69385cb37dc7e82c8d0db",
+      "locale": "is",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "errors": [],
+      "reviewItemCount": 6,
+      "requiredReviewCodes": {
+        "cross-language-link": 1,
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "is"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "company"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3994,
+        "uniqueParagraphLettersAndNumbers": 3994,
+        "paragraphs": 17,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "locale": "en",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+        ],
+        "actual": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-km/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "f925dfd62505ed705895030ba159e116e53edbc14d2d79456bef0aa6d201dd00",
+      "locale": "km",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "errors": [],
+      "reviewItemCount": 6,
+      "requiredReviewCodes": {
+        "cross-language-link": 1,
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "km"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 2226,
+        "uniqueParagraphLettersAndNumbers": 2226,
+        "paragraphs": 26,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "locale": "en",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+        ],
+        "actual": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-km/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "2cf0a993ebac8aafc2f0a16b25b8c91313f438bb2a3f3d9109ec78ae670c596b",
+      "locale": "km",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "errors": [],
+      "reviewItemCount": 6,
+      "requiredReviewCodes": {
+        "cross-language-link": 1,
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "km"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "company"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 2463,
+        "uniqueParagraphLettersAndNumbers": 2463,
+        "paragraphs": 17,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "locale": "en",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+        ],
+        "actual": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-lv/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "7788c3d6594e7b8680cb30d31cc29cbdd5a92f07a40e0caf14a4c9d918c65eb6",
+      "locale": "lv",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "errors": [],
+      "reviewItemCount": 6,
+      "requiredReviewCodes": {
+        "cross-language-link": 1,
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "lv"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3952,
+        "uniqueParagraphLettersAndNumbers": 3952,
+        "paragraphs": 26,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "locale": "en",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+        ],
+        "actual": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-lv/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "7ca84ef9e0c02b161a2cac94d77258f679da88281877f1de45704f6b1322ae56",
+      "locale": "lv",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "errors": [],
+      "reviewItemCount": 6,
+      "requiredReviewCodes": {
+        "cross-language-link": 1,
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "lv"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "company"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4622,
+        "uniqueParagraphLettersAndNumbers": 4622,
+        "paragraphs": 18,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "locale": "en",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+        ],
+        "actual": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-mn/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "7cadf1bc5d121b06a1c8b4fe8d730f248e2363fee48a8f762d717c3b4daaaa2b",
+      "locale": "mn",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "errors": [],
+      "reviewItemCount": 6,
+      "requiredReviewCodes": {
+        "cross-language-link": 1,
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "mn"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3750,
+        "uniqueParagraphLettersAndNumbers": 3750,
+        "paragraphs": 17,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "locale": "en",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+        ],
+        "actual": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-mn/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "73634669e73ab6d6442900d339174badf0e7b078b4631e4efdf972e7ee49b5d0",
+      "locale": "mn",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "errors": [],
+      "reviewItemCount": 7,
+      "requiredReviewCodes": {
+        "cross-language-link": 2,
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "mn"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "company"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3856,
+        "uniqueParagraphLettersAndNumbers": 3856,
+        "paragraphs": 17,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "locale": "en",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+        ],
+        "actual": [
+          "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-fi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "fbc0a177749bd8b4941cda63daf48e4fd7e465040b8121f53a82e274483b5c5d",
+      "locale": "fi",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "fi"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4474,
+        "uniqueParagraphLettersAndNumbers": 4474,
+        "paragraphs": 17,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        ],
+        "actual": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-fi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "ca661812f570ae6d872b53c81a464cd073113b824ba64ce07e07fa09d0628fde",
+      "locale": "fi",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "fi"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "labor"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4039,
+        "uniqueParagraphLettersAndNumbers": 4039,
+        "paragraphs": 16,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        ],
+        "actual": [
+          "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-fi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "9c8634739beb39fc2a4e0288d106d2b7f38f73e8374ebddbc31eccaa6b342f38",
+      "locale": "fi",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "fi"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3858,
+        "uniqueParagraphLettersAndNumbers": 3858,
+        "paragraphs": 15,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        ],
+        "actual": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "41db82df9e378f70cda63273f1dc53295d076d3b88bda8796af3806398f9b381",
+      "locale": "fi",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "fi"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4902,
+        "uniqueParagraphLettersAndNumbers": 4902,
+        "paragraphs": 26,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "https://appeal.cpc.ey.gov.tw/"
+        ],
+        "actual": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "https://appeal.cpc.ey.gov.tw/"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-hr/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "c9766d01c05e314f6441a4b93b2cd6f0152eeab4f4c4238c1e84f5b2cd62a726",
+      "locale": "hr",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "hr"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3998,
+        "uniqueParagraphLettersAndNumbers": 3998,
+        "paragraphs": 17,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        ],
+        "actual": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-hr/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "3610f15af0275f9a83f962a2ac94929970f5f4cec69881c1d55487084e65dc3d",
+      "locale": "hr",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "hr"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "labor"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3812,
+        "uniqueParagraphLettersAndNumbers": 3812,
+        "paragraphs": 16,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        ],
+        "actual": [
+          "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-hr/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "5e59637b831b7c80b424b0e25288b19e8398fdb560f67110a9fd85b91e73a21d",
+      "locale": "hr",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "hr"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3795,
+        "uniqueParagraphLettersAndNumbers": 3795,
+        "paragraphs": 16,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        ],
+        "actual": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-hr/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "0db591eca4c9cb2d659709a3c8a32491924cb6a2a8b939b2c4312be8443a72ef",
+      "locale": "hr",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "hr"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4217,
+        "uniqueParagraphLettersAndNumbers": 4217,
+        "paragraphs": 26,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "https://appeal.cpc.ey.gov.tw/"
+        ],
+        "actual": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "https://appeal.cpc.ey.gov.tw/"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-hu/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "44ce1490aeec719f4ec8ae26ec5654368939cfd689f7781f5b1f66d16c951f5e",
+      "locale": "hu",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "hu"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4119,
+        "uniqueParagraphLettersAndNumbers": 4119,
+        "paragraphs": 17,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        ],
+        "actual": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-hu/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "1ac72ef840a1bd2b09b0462269afc8ca420cc6208bb99b350b52d91b414efb4a",
+      "locale": "hu",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "hu"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "labor"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4101,
+        "uniqueParagraphLettersAndNumbers": 4101,
+        "paragraphs": 16,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        ],
+        "actual": [
+          "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-hu/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "a0af0c0413587cf3bff740f7c42ac38f3177d4d7c65eb88d53947166576e4898",
+      "locale": "hu",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "hu"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3845,
+        "uniqueParagraphLettersAndNumbers": 3845,
+        "paragraphs": 15,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        ],
+        "actual": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-hu/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "b1a400ffc4a2aae73c631a3851df2f2d86570beb59c1c18c0decc03ca56f5a09",
+      "locale": "hu",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "hu"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4734,
+        "uniqueParagraphLettersAndNumbers": 4734,
+        "paragraphs": 26,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "https://appeal.cpc.ey.gov.tw/"
+        ],
+        "actual": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "https://appeal.cpc.ey.gov.tw/"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-is/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "2661e4c6163d28b727805c018a62516b9060dfda396ad86c7b30f4c631460af5",
+      "locale": "is",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "is"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3851,
+        "uniqueParagraphLettersAndNumbers": 3851,
+        "paragraphs": 19,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        ],
+        "actual": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-is/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "09bab5c57eea037bd207f536090989cd76ad2e340f654d4ea63d3f3ffeb871ca",
+      "locale": "is",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "is"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "labor"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3325,
+        "uniqueParagraphLettersAndNumbers": 3325,
+        "paragraphs": 17,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        ],
+        "actual": [
+          "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-is/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "b4b41ccba00179a1b54b5425964eebd992aff3076ba8646eafe90440ac9d27f8",
+      "locale": "is",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "is"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3236,
+        "uniqueParagraphLettersAndNumbers": 3236,
+        "paragraphs": 15,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        ],
+        "actual": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-is/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "bbce5fdff033d02529be025515dba7af17bef00f429ec8bf41bc807873fd5e8b",
+      "locale": "is",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "is"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4271,
+        "uniqueParagraphLettersAndNumbers": 4271,
+        "paragraphs": 26,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "https://appeal.cpc.ey.gov.tw/"
+        ],
+        "actual": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "https://appeal.cpc.ey.gov.tw/"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-km/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "10f672535c34897a0c3c0caba3f08932058efb8c203c8fd3af1e75d1f07af41a",
+      "locale": "km",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "km"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 2287,
+        "uniqueParagraphLettersAndNumbers": 2287,
+        "paragraphs": 17,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        ],
+        "actual": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-km/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "65df5af65f28e6f7486a3ef26e349fc9e4a98b2e3b3f0064b5cc5eb06159b2e8",
+      "locale": "km",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "km"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "labor"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 2220,
+        "uniqueParagraphLettersAndNumbers": 2220,
+        "paragraphs": 15,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        ],
+        "actual": [
+          "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-km/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "33d39d9d764163bf7b7e8a7281bb387048e338ad09986e8fffb2c107b1761741",
+      "locale": "km",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "km"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 2323,
+        "uniqueParagraphLettersAndNumbers": 2323,
+        "paragraphs": 16,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        ],
+        "actual": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-km/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "238e63766846ce8a50a0da533141b362a65a483eec54be6036875cfa174ca7fb",
+      "locale": "km",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "km"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 2800,
+        "uniqueParagraphLettersAndNumbers": 2800,
+        "paragraphs": 25,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "https://appeal.cpc.ey.gov.tw/"
+        ],
+        "actual": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "https://appeal.cpc.ey.gov.tw/"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-lv/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "9435794819327cd5e19a00b77963848c004b2a69a7a0d18a9cc48e256b32208f",
+      "locale": "lv",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "lv"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3837,
+        "uniqueParagraphLettersAndNumbers": 3837,
+        "paragraphs": 16,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        ],
+        "actual": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-lv/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b26bff2ba9bfad7ccd88bd9e3ee3bbc34458de838f157b9b9dec3f1211251323",
+      "locale": "lv",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "lv"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "labor"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3838,
+        "uniqueParagraphLettersAndNumbers": 3838,
+        "paragraphs": 15,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        ],
+        "actual": [
+          "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-lv/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "180f2341d274efee506c8164a1e49247058580b8aa5235e53c145aa5e9b28326",
+      "locale": "lv",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "lv"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3787,
+        "uniqueParagraphLettersAndNumbers": 3787,
+        "paragraphs": 16,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        ],
+        "actual": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "f5e0e079f45df5fb1cdfdb4a37cdb7fd2cf2a6e72bf7f5b561be88f7fa8bf118",
+      "locale": "lv",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "lv"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4343,
+        "uniqueParagraphLettersAndNumbers": 4343,
+        "paragraphs": 26,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "https://appeal.cpc.ey.gov.tw/"
+        ],
+        "actual": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "https://appeal.cpc.ey.gov.tw/"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-mn/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "762e76fac7e02d7a5ad105ff8931a17083a70c4fa10b52223370ea93d6c8b462",
+      "locale": "mn",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "mn"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3873,
+        "uniqueParagraphLettersAndNumbers": 3873,
+        "paragraphs": 18,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        ],
+        "actual": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-mn/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "44339c13b54715370c32139cd71a2c992fe686db9534a103d21a36168b1e46cd",
+      "locale": "mn",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "mn"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "labor"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3803,
+        "uniqueParagraphLettersAndNumbers": 3803,
+        "paragraphs": 18,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        ],
+        "actual": [
+          "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+          "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-mn/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "b9568c63255df9b3b726a6a009c42ee51e4124548928121ac010367ea0394b69",
+      "locale": "mn",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "mn"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 3907,
+        "uniqueParagraphLettersAndNumbers": 3907,
+        "paragraphs": 17,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        ],
+        "actual": [
+          "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+        ],
+        "networkChecked": false
+      }
+    },
+    {
+      "file": "src/content/columns-mn/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "107b708d834f52311f18e129997b94f9daac058642245f9d451a98b9343bd10f",
+      "locale": "mn",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "errors": [],
+      "reviewItemCount": 5,
+      "requiredReviewCodes": {
+        "public-output-and-native-prose": 1,
+        "title-summary-faq": 1,
+        "legal-conditions": 1,
+        "numbers-dates-currencies": 1,
+        "nationality-jurisdiction": 1
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "mn"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "classification": {
+        "sourceCategory": "legal",
+        "targetCategory": "legal",
+        "topic": "litigation"
+      },
+      "bodyMetrics": {
+        "lettersAndNumbers": 4254,
+        "uniqueParagraphLettersAndNumbers": 4254,
+        "paragraphs": 20,
+        "h1": 0
+      },
+      "source": {
+        "file": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "sourceUrls": {
+        "expected": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "https://appeal.cpc.ey.gov.tw/"
+        ],
+        "actual": [
+          "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "https://appeal.cpc.ey.gov.tw/"
+        ],
+        "networkChecked": false
+      }
+    }
+  ],
+  "interpretation": "Required semantic/public-output prompts remain separate from machine errors. Seven frozen independent closure chains are indexed in readiness; no build/browser/native-human/legal approval is inferred."
+}

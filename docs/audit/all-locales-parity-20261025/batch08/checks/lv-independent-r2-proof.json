@@ -1,0 +1,100 @@
+{
+  "at": "2026-10-26T08:19:12.080967+00:00",
+  "status": "S01_CLOSED",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSHA256": "7788c3d6594e7b8680cb30d31cc29cbdd5a92f07a40e0caf14a4c9d918c65eb6",
+      "sha256": "7788c3d6594e7b8680cb30d31cc29cbdd5a92f07a40e0caf14a4c9d918c65eb6",
+      "changed": false,
+      "inverseExact": true,
+      "FMFAQNumbersURLUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSHA256": "7ca84ef9e0c02b161a2cac94d77258f679da88281877f1de45704f6b1322ae56",
+      "sha256": "7ca84ef9e0c02b161a2cac94d77258f679da88281877f1de45704f6b1322ae56",
+      "changed": false,
+      "inverseExact": true,
+      "FMFAQNumbersURLUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSHA256": "9435794819327cd5e19a00b77963848c004b2a69a7a0d18a9cc48e256b32208f",
+      "sha256": "9435794819327cd5e19a00b77963848c004b2a69a7a0d18a9cc48e256b32208f",
+      "changed": false,
+      "inverseExact": true,
+      "FMFAQNumbersURLUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "b26bff2ba9bfad7ccd88bd9e3ee3bbc34458de838f157b9b9dec3f1211251323",
+      "sha256": "b26bff2ba9bfad7ccd88bd9e3ee3bbc34458de838f157b9b9dec3f1211251323",
+      "changed": false,
+      "inverseExact": true,
+      "FMFAQNumbersURLUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "180f2341d274efee506c8164a1e49247058580b8aa5235e53c145aa5e9b28326",
+      "sha256": "180f2341d274efee506c8164a1e49247058580b8aa5235e53c145aa5e9b28326",
+      "changed": false,
+      "inverseExact": true,
+      "FMFAQNumbersURLUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "6634bb7957f6bd88e2c1072c6cf8fad761bd5eb38d263017409bfd6327921936",
+      "sha256": "f5e0e079f45df5fb1cdfdb4a37cdb7fd2cf2a6e72bf7f5b561be88f7fa8bf118",
+      "changed": true,
+      "inverseExact": true,
+      "FMFAQNumbersURLUnchanged": true
+    }
+  ],
+  "exactOneReplacement": true,
+  "independentInverseRestoresR1": true,
+  "currentBoundariesEqualActualCLI": true,
+  "boundaryDelta": [
+    {
+      "tag": "replace",
+      "old": [
+        "Tiesa vērtēja konkrēto monētu funkciju un atmaksas noteikumus, nevis izslēdza visus virtuālos priekšmetus no patērētāju aizsardzības."
+      ],
+      "new": [
+        "Tiesa vērtēja konkrēto monētu funkciju un šai spēlei piemērojamos atmaksas noteikumus."
+      ],
+      "currentWithNeighbors": [
+        "Spriedumā norādīts, ka tas nav pārsūdzams.",
+        "Tiesa vērtēja konkrēto monētu funkciju un šai spēlei piemērojamos atmaksas noteikumus.",
+        "Līgums ļāva vispirms iegādāties punktus un pēc tam tos izmantot spēles pakalpojumu vai preču saņemšanai."
+      ]
+    }
+  ],
+  "unchangedSentences": 44,
+  "currentSentences": 45,
+  "totalSixSentences": 249,
+  "actualCLIExit": 0,
+  "actualCLIStdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md [lv] sentences=45 mean=12.2 cv=0.515 short=0.333 run3=0.0 opener_rep=0.143 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+  "actualCLIFile": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-author-r2.json",
+  "toolHashes": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/lv.json",
+      "sha256": "09dc74f01e20b3430b1bf00c1e9ae4c2b941e081505e63cd4f9d86fb8fdb836e"
+    }
+  ],
+  "changedStructureErrors": 0,
+  "priorIndependentArtifactsUnchanged": true,
+  "newCLIRerunByReviewer": false
+}

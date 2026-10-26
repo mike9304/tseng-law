@@ -1,0 +1,136 @@
+{
+  "at": "2026-10-26T08:55:24.486359+00:00",
+  "reviewer": "/root/column_voice_rules",
+  "scope": "Targeted O1 one-sentence closure",
+  "status": "O1_CLOSED",
+  "mandatoryRemaining": 0,
+  "optionalRemaining": 0,
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-km/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "oldSHA256": "f925dfd62505ed705895030ba159e116e53edbc14d2d79456bef0aa6d201dd00",
+      "currentSHA256": "f925dfd62505ed705895030ba159e116e53edbc14d2d79456bef0aa6d201dd00",
+      "changed": false,
+      "frontmatterFAQBytesUnchanged": true,
+      "URLSequenceUnchanged": true,
+      "numericDigitSequenceUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-km/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "oldSHA256": "2cf0a993ebac8aafc2f0a16b25b8c91313f438bb2a3f3d9109ec78ae670c596b",
+      "currentSHA256": "2cf0a993ebac8aafc2f0a16b25b8c91313f438bb2a3f3d9109ec78ae670c596b",
+      "changed": false,
+      "frontmatterFAQBytesUnchanged": true,
+      "URLSequenceUnchanged": true,
+      "numericDigitSequenceUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-km/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "oldSHA256": "a318132eb11b543d32d7ac10a1eb25c572b1b244167ca0931282fc0bc6235dd7",
+      "currentSHA256": "10f672535c34897a0c3c0caba3f08932058efb8c203c8fd3af1e75d1f07af41a",
+      "changed": true,
+      "frontmatterFAQBytesUnchanged": true,
+      "URLSequenceUnchanged": true,
+      "numericDigitSequenceUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-km/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "oldSHA256": "65df5af65f28e6f7486a3ef26e349fc9e4a98b2e3b3f0064b5cc5eb06159b2e8",
+      "currentSHA256": "65df5af65f28e6f7486a3ef26e349fc9e4a98b2e3b3f0064b5cc5eb06159b2e8",
+      "changed": false,
+      "frontmatterFAQBytesUnchanged": true,
+      "URLSequenceUnchanged": true,
+      "numericDigitSequenceUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-km/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "oldSHA256": "33d39d9d764163bf7b7e8a7281bb387048e338ad09986e8fffb2c107b1761741",
+      "currentSHA256": "33d39d9d764163bf7b7e8a7281bb387048e338ad09986e8fffb2c107b1761741",
+      "changed": false,
+      "frontmatterFAQBytesUnchanged": true,
+      "URLSequenceUnchanged": true,
+      "numericDigitSequenceUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-km/921-taiwan-online-game-coins-refund-judgment.md",
+      "oldSHA256": "238e63766846ce8a50a0da533141b362a65a483eec54be6036875cfa174ca7fb",
+      "currentSHA256": "238e63766846ce8a50a0da533141b362a65a483eec54be6036875cfa174ca7fb",
+      "changed": false,
+      "frontmatterFAQBytesUnchanged": true,
+      "URLSequenceUnchanged": true,
+      "numericDigitSequenceUnchanged": true
+    }
+  ],
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/km-independent-r2.md",
+    "sha256": "de2d096046852688f5765bd28fd681c863ce8ec7f0d59c17d20a5d2fd1ac5936"
+  },
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/km-independent-r2.md",
+      "sha256": "de2d096046852688f5765bd28fd681c863ce8ec7f0d59c17d20a5d2fd1ac5936"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/km-independent-r2-verify.py",
+      "sha256": "d786166e768ed8a974f3cc92d16a045b2e5feaf2fe1d807166254cf9745e5a1a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/km-independent-r2-initial-error.json",
+      "sha256": "ef31f9986ce8423c0be25e44222f54c961558fbd01bc58156924a43e41b22c01"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/km-independent-r2-verification.json",
+      "sha256": "d38f42560c11e49ea31765f642067b11405659b5d1b7b65f0d4aa7221e1f8d85"
+    }
+  ],
+  "authorR2": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/km-author-r2.md",
+    "sha256": "65d0c6b96178cce4fbf029dc57f1f35b2c97acefbc7cfbb54925d676dd113684"
+  },
+  "authorR2Manifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/km-author-final-manifest-r2.json",
+    "sha256": "fdcc558dee6d755383b48cea4e922191fc5d1ef49fb04291de034d18372d6e81"
+  },
+  "R1Report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/km-independent.md",
+    "sha256": "f73e8f040e4129c84f6c854714d188cfff37025ca0f0af91e78a41802bed9145"
+  },
+  "R1Manifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/km-independent-final-manifest.json",
+    "sha256": "45e27468c77141bcf2cc698ec2bc02941999c5f033f767ab5bc93b8feb008963"
+  },
+  "sourcesAndRules": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/six-source-facts.md",
+      "sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "86710ef330b108a916a7bb92a75f1ffa62dea53412e8a75f38472d9fa9b33130"
+    }
+  ],
+  "fourToolHashes": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/km.json": "87c3558f74be7faaab25178d605a5dc332607046e64799ecbfd28cdbca688521"
+  },
+  "guardedInputsUnchangedAtEnd": true,
+  "currentFileSHAsUnchangedAtEnd": true,
+  "newCLIInvocationsByReviewer": 0,
+  "authorActualCLICurrentSHAReused": true,
+  "totalSegments": 236,
+  "unchangedOrderedSegments": 235,
+  "forwardReverseWholeBytesIdentical": true,
+  "frontmatterFAQURLNumericDigitSequencePreserved": true,
+  "FAQCount": 17,
+  "limitations": [
+    "Model language/meaning review, not human native or legal approval.",
+    "The reviewer implemented the KM profile earlier; this is not independent validation of the tool itself.",
+    "No public-page, deployment or fresh official-source fetch in this targeted pass."
+  ]
+}

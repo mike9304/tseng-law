@@ -1,0 +1,287 @@
+{
+  "at": "2026-10-26T16:29:05.088537+09:00",
+  "shared_original_files_unchanged": 209,
+  "baseline_copy_files_unchanged": 209,
+  "candidate_production_matches_frozen": 50,
+  "candidate_original_files_unchanged_except_expansion": 208,
+  "frozen_corpus_all_sha_match": 2235,
+  "target_original_and_snapshot_all_sha_match": [
+    {
+      "lang": "fi",
+      "source_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "snapshot_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/target-inputs/src/content/columns-fi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "9c8634739beb39fc2a4e0288d106d2b7f38f73e8374ebddbc31eccaa6b342f38"
+    },
+    {
+      "lang": "fi",
+      "source_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "snapshot_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/target-inputs/src/content/columns-fi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "96b1fc09ff63d43fdedd07d82bcfce983ac8157a974b4ff55d1d206e1ae3edd7"
+    },
+    {
+      "lang": "fi",
+      "source_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "snapshot_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/target-inputs/src/content/columns-fi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "ac862ed033d2d9c250efb4becf26f5fd0ff1b20dac94b9824fead66db2578546"
+    },
+    {
+      "lang": "fi",
+      "source_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "snapshot_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/target-inputs/src/content/columns-fi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "71f3e0dbaf44515809fd70cd6382da9b548a95d2ae5f3b88aab4f468a45ff9f0"
+    },
+    {
+      "lang": "fi",
+      "source_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+      "snapshot_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/target-inputs/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "48aa5debe29787ced8afc034f40ba3417dd20afbc7e80b3078b77543a368814a"
+    },
+    {
+      "lang": "fi",
+      "source_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "snapshot_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/target-inputs/src/content/columns-fi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "fbc0a177749bd8b4941cda63daf48e4fd7e465040b8121f53a82e274483b5c5d"
+    },
+    {
+      "lang": "hu",
+      "source_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "snapshot_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/target-inputs/src/content/columns-hu/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "6659ae1fc0f21374b23de7592c07db1ea40e59c7d5c098c4576e134ac805887d"
+    },
+    {
+      "lang": "hu",
+      "source_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "snapshot_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/target-inputs/src/content/columns-hu/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "c9242a25ba5bdd6b37157958ecd9f9ac9e2c06b82fbca3f48e4814cf01d8eb79"
+    },
+    {
+      "lang": "hu",
+      "source_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "snapshot_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/target-inputs/src/content/columns-hu/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "ce4b8197e98d3772df2f907550e4c33f2fc9798faf39cd56e2c4835516c7f362"
+    },
+    {
+      "lang": "hu",
+      "source_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "snapshot_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/target-inputs/src/content/columns-hu/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "1ac72ef840a1bd2b09b0462269afc8ca420cc6208bb99b350b52d91b414efb4a"
+    },
+    {
+      "lang": "hu",
+      "source_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "snapshot_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/target-inputs/src/content/columns-hu/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "b2d8445a1c180c179672919a6f0eb5a5278ede6c2d518ca4009f6d960143ed5e"
+    },
+    {
+      "lang": "hu",
+      "source_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hu/921-taiwan-online-game-coins-refund-judgment.md",
+      "snapshot_path": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/target-inputs/src/content/columns-hu/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "b1a400ffc4a2aae73c631a3851df2f2d86570beb59c1c18c0decc03ca56f5a09"
+    }
+  ],
+  "R_current_tool_observation": {
+    "MULTILINGUAL-METHOD.md": {
+      "current_sha256": "6412888b4c98d41388af35ca4ebf84be2ea173cf99f36a4b6ecd5b59d615bb7e",
+      "same_as_shared_baseline": true
+    },
+    "build-rewrite-queue.py": {
+      "current_sha256": "510cc4881b562713699a0f208df96e1ecc5d01ca66f0add49e876c95c3a9ce59",
+      "same_as_shared_baseline": true
+    },
+    "profiles/ar.json": {
+      "current_sha256": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+      "same_as_shared_baseline": true
+    },
+    "profiles/bg.json": {
+      "current_sha256": "3462bfb1ef3eb72956a2b28b2dfdd9f3179d5c60472753e2ead4ccc3e6f1a442",
+      "same_as_shared_baseline": true
+    },
+    "profiles/bn.json": {
+      "current_sha256": "972bc2c11024f7eb8de6bc833671b98eea4ad7cbfa332671760ba114bb6bf506",
+      "same_as_shared_baseline": true
+    },
+    "profiles/ca.json": {
+      "current_sha256": "ff8b9474d63ab895cfcd4669fe3cf799045c03801107a1ded976c8e9b4b40822",
+      "same_as_shared_baseline": true
+    },
+    "profiles/cs.json": {
+      "current_sha256": "317385e4979f05808aad1a20af7793167550acf89ce2a8a303d7eab8d23f9e99",
+      "same_as_shared_baseline": true
+    },
+    "profiles/da.json": {
+      "current_sha256": "d97cb6ecf083d3a000d9e68c9aca35be606afcc262cf676723f9fc06ba3352df",
+      "same_as_shared_baseline": true
+    },
+    "profiles/de.json": {
+      "current_sha256": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+      "same_as_shared_baseline": true
+    },
+    "profiles/el.json": {
+      "current_sha256": "436a1dfae99477561e3acd7ca08b8f2fce6851bebaffe066acb1408de37f6d30",
+      "same_as_shared_baseline": true
+    },
+    "profiles/es.json": {
+      "current_sha256": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+      "same_as_shared_baseline": true
+    },
+    "profiles/et.json": {
+      "current_sha256": "1cb9d12e7653189b58cdc1f8fd480608d967f70db0fddc9951598610b35d0b5a",
+      "same_as_shared_baseline": true
+    },
+    "profiles/fa.json": {
+      "current_sha256": "d6be43d513d3fc6d3202e97022bbc094820e7ab87e950e711a00bb251757d82f",
+      "same_as_shared_baseline": true
+    },
+    "profiles/fi.json": {
+      "current_sha256": "87535d428aaf9613187c52adc3c387e365f419f423f693128fd77e08646b2629",
+      "same_as_shared_baseline": true
+    },
+    "profiles/fil.json": {
+      "current_sha256": "9daca5d186170f2025c576fbba8b65594732ef36f7cfb9a6bee719e091585e76",
+      "same_as_shared_baseline": true
+    },
+    "profiles/fr.json": {
+      "current_sha256": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+      "same_as_shared_baseline": true
+    },
+    "profiles/he.json": {
+      "current_sha256": "b1a18b7d290c158ac485ed18bc1a70f5db36c3a395439b3403394435d25b7615",
+      "same_as_shared_baseline": true
+    },
+    "profiles/hi.json": {
+      "current_sha256": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+      "same_as_shared_baseline": true
+    },
+    "profiles/hr.json": {
+      "current_sha256": "d139e9980abbcfc79177de7d87b0269d2e837f990e08691ba93fee35894cde71",
+      "same_as_shared_baseline": true
+    },
+    "profiles/hu.json": {
+      "current_sha256": "cef85b13e94e3fd08f23d3aa4fba80ab51c116adf3c7d30cb8e4e59d00b1279b",
+      "same_as_shared_baseline": true
+    },
+    "profiles/id.json": {
+      "current_sha256": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+      "same_as_shared_baseline": true
+    },
+    "profiles/is.json": {
+      "current_sha256": "d0594d70cbdca74a6d5a701665bb1c680f73d36fe8d90e2910f4923db4e00796",
+      "same_as_shared_baseline": true
+    },
+    "profiles/it.json": {
+      "current_sha256": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+      "same_as_shared_baseline": true
+    },
+    "profiles/km.json": {
+      "current_sha256": "87c3558f74be7faaab25178d605a5dc332607046e64799ecbfd28cdbca688521",
+      "same_as_shared_baseline": true
+    },
+    "profiles/lt.json": {
+      "current_sha256": "a91bc6f0a6d80aada83de9c463836b6c4c4d724eddc32ff18905b573642d3694",
+      "same_as_shared_baseline": true
+    },
+    "profiles/lv.json": {
+      "current_sha256": "09dc74f01e20b3430b1bf00c1e9ae4c2b941e081505e63cd4f9d86fb8fdb836e",
+      "same_as_shared_baseline": true
+    },
+    "profiles/mn.json": {
+      "current_sha256": "f55713d7239df7da1e2c86c8bc1698a36377fe36175b435383a16a26830d56f5",
+      "same_as_shared_baseline": true
+    },
+    "profiles/ms.json": {
+      "current_sha256": "88abb26243707cd9601ad80695494c1f951077a0d0f49a681d3ae639c9f60d00",
+      "same_as_shared_baseline": true
+    },
+    "profiles/my.json": {
+      "current_sha256": "82288e1fa3ad75d4ed185b6a6275cc9b02f56bfdd4f67150430a05107172426b",
+      "same_as_shared_baseline": true
+    },
+    "profiles/nb.json": {
+      "current_sha256": "d354bc18f20fe062ec564e90cf5a654b70038e91f1ca9047499a0acd16b8faa4",
+      "same_as_shared_baseline": true
+    },
+    "profiles/ne.json": {
+      "current_sha256": "f5aaba570b8c67d7aabb100857f39402a8c5e2c4c49da3273d3de47009d59c3b",
+      "same_as_shared_baseline": true
+    },
+    "profiles/nl.json": {
+      "current_sha256": "cedc9c648dded5d3619305c5f1fc1aa2d961ce34590bf85bcf21c468661db274",
+      "same_as_shared_baseline": true
+    },
+    "profiles/pl.json": {
+      "current_sha256": "00b4d91b84026bda2a8f76f963302865311f3ca3600fbd1d1a4267a7ff7dd0fa",
+      "same_as_shared_baseline": true
+    },
+    "profiles/pt.json": {
+      "current_sha256": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+      "same_as_shared_baseline": true
+    },
+    "profiles/ro.json": {
+      "current_sha256": "1fe2c5bb725e55a8aa38fcaafc0f52fc43d729c54fa9dfaaab5a6aafddee1474",
+      "same_as_shared_baseline": true
+    },
+    "profiles/ru.json": {
+      "current_sha256": "189438971f5e3572b48e5e9afe8a88ec7c25e5a3aeab5a637f44e9591b666206",
+      "same_as_shared_baseline": true
+    },
+    "profiles/sk.json": {
+      "current_sha256": "bdaceac0a3767ca53432736996a1d70f04af43d7bb1fef941b6b08cc746bb04a",
+      "same_as_shared_baseline": true
+    },
+    "profiles/sl.json": {
+      "current_sha256": "f7fdb543f7952d5e891a30fd5d167b3035a3933c982a01f6d70b03c5f554c040",
+      "same_as_shared_baseline": true
+    },
+    "profiles/sr.json": {
+      "current_sha256": "b82eac56b6e35c4a08e8029317975be46ee3930f2366633a704dd487a69d0419",
+      "same_as_shared_baseline": true
+    },
+    "profiles/sv.json": {
+      "current_sha256": "66703b741178befbfc04395ba29a4dddb42254772700c906d7bd233a1834680e",
+      "same_as_shared_baseline": true
+    },
+    "profiles/ta.json": {
+      "current_sha256": "5b9d203fa8409458d08690a810c509f7993d1d835f070aee68e9915b02329d92",
+      "same_as_shared_baseline": true
+    },
+    "profiles/th.json": {
+      "current_sha256": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+      "same_as_shared_baseline": true
+    },
+    "profiles/tr.json": {
+      "current_sha256": "1f44c794464be7750a83629be356d11b45ef9a4d174b3a7b13ef5478163c2bbc",
+      "same_as_shared_baseline": true
+    },
+    "profiles/uk.json": {
+      "current_sha256": "ed9e8025126b82dfd0385cf76bb8694efe731bcf0e63a7fb58d3c8ee520d6081",
+      "same_as_shared_baseline": true
+    },
+    "profiles/ur.json": {
+      "current_sha256": "e0b0d8fb72a8f6b594d51c3a37101fade000a6eb6a69161036f80da2c6076397",
+      "same_as_shared_baseline": true
+    },
+    "profiles/vi.json": {
+      "current_sha256": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+      "same_as_shared_baseline": true
+    },
+    "profiles/zh-hans.json": {
+      "current_sha256": "8ca5f5f884c3a1d2144ed5ce55b09b806088b5b0b66b4cf883067255fe153543",
+      "same_as_shared_baseline": true
+    },
+    "variety_expansion.py": {
+      "current_sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc",
+      "same_as_shared_baseline": true
+    },
+    "variety_metrics.py": {
+      "current_sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+      "same_as_shared_baseline": true
+    },
+    "variety_multilingual.py": {
+      "current_sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+      "same_as_shared_baseline": true
+    }
+  },
+  "R_current_head": "f66daa9f153537c000d23486e8be638472251012",
+  "R_working_corpus_drift_since_snapshot": [],
+  "R_scope_note": "R and shared were read-only. Other agents may integrate R; corpus regression uses the frozen working-byte snapshot, not current HEAD."
+}

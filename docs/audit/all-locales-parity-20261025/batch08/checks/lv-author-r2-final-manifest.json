@@ -1,0 +1,110 @@
+{
+  "at": "2026-10-26T08:17:39.349077+00:00",
+  "status": "AUTHOR_R2_FROZEN_PENDING_TARGETED_INDEPENDENT_CLOSURE",
+  "findings": {
+    "mandatoryBefore": 0,
+    "optionalS01Accepted": true
+  },
+  "manuscripts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "7788c3d6594e7b8680cb30d31cc29cbdd5a92f07a40e0caf14a4c9d918c65eb6",
+      "priorSHA256": "7788c3d6594e7b8680cb30d31cc29cbdd5a92f07a40e0caf14a4c9d918c65eb6",
+      "changed": false,
+      "actualCLI": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-initial.json",
+      "actualExit": 0,
+      "priorFiveCurrentExtractionEquivalence": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-proof.json"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "7ca84ef9e0c02b161a2cac94d77258f679da88281877f1de45704f6b1322ae56",
+      "priorSHA256": "7ca84ef9e0c02b161a2cac94d77258f679da88281877f1de45704f6b1322ae56",
+      "changed": false,
+      "actualCLI": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-legal.json",
+      "actualExit": 0,
+      "priorFiveCurrentExtractionEquivalence": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-proof.json"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "9435794819327cd5e19a00b77963848c004b2a69a7a0d18a9cc48e256b32208f",
+      "priorSHA256": "9435794819327cd5e19a00b77963848c004b2a69a7a0d18a9cc48e256b32208f",
+      "changed": false,
+      "actualCLI": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-initial.json",
+      "actualExit": 0,
+      "priorFiveCurrentExtractionEquivalence": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-proof.json"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b26bff2ba9bfad7ccd88bd9e3ee3bbc34458de838f157b9b9dec3f1211251323",
+      "priorSHA256": "b26bff2ba9bfad7ccd88bd9e3ee3bbc34458de838f157b9b9dec3f1211251323",
+      "changed": false,
+      "actualCLI": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-final.json",
+      "actualExit": 0,
+      "priorFiveCurrentExtractionEquivalence": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-proof.json"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "180f2341d274efee506c8164a1e49247058580b8aa5235e53c145aa5e9b28326",
+      "priorSHA256": "180f2341d274efee506c8164a1e49247058580b8aa5235e53c145aa5e9b28326",
+      "changed": false,
+      "actualCLI": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-final.json",
+      "actualExit": 0,
+      "priorFiveCurrentExtractionEquivalence": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-proof.json"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "f5e0e079f45df5fb1cdfdb4a37cdb7fd2cf2a6e72bf7f5b561be88f7fa8bf118",
+      "priorSHA256": "6634bb7957f6bd88e2c1072c6cf8fad761bd5eb38d263017409bfd6327921936",
+      "changed": true,
+      "actualCLI": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-author-r2.json",
+      "actualExit": 0,
+      "priorFiveCurrentExtractionEquivalence": null
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/lv-author-r2.md",
+      "sha256": "184d53ff2ed25f10faeb8e8ef8acaa376763ef3c47f385c9003b62caa855d0e2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-author-r2-before.json",
+      "sha256": "62e945d3c90cfaddd4884a5cc5a44faf3997151487ea34fb22fe6ff63e436d43"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-author-r2-edits.json",
+      "sha256": "54376223129e8cfc371d4ff49108bc06f1fc90f19228eb51f9814961cf9a7f0e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-author-r2.json",
+      "sha256": "59162afeb1eba62ee41614c05736a14aa45d5434d34f60c422d92669c4d971c4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-structure-author-r2.json",
+      "sha256": "1b0d2968f8121aabe2f70157baee3f4b8b92bc302459eec4acbffa6df9f0368c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-content-audit-author-r2.json",
+      "sha256": "a754cdceb07acd18971aaefdc1ead506271fe9a4d8d81d6603b31b077307bcf7"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-verify-author-r2.mjs",
+      "sha256": "4ff4ae06c1e176b3374b5f5e974a196f080cc4f44587303960912ff76a375385"
+    }
+  ],
+  "oldAuthorManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-final-manifest.json",
+    "sha256": "7b0ee0bbc5f7d9f302c2ffe67750ee7f8d8723c8222ca2da9e0271154c720469"
+  },
+  "independentR1Manifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-manifest.json",
+    "sha256": "e5369daec1a2f62980ecd9f6256daae8a47fd1c2b3668e65ae7b4d93c738452c"
+  },
+  "sixUnits": 249,
+  "FAQ": 17,
+  "changedActualExit": 0,
+  "changedStructureErrors": 0,
+  "changedRequiredSemanticItems": 5,
+  "publicationReady": false,
+  "humanNativeLegalApproval": false,
+  "sourceRSharedOrOtherAgentFilesModified": false
+}

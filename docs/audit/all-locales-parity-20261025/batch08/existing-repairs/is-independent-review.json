@@ -1,0 +1,110 @@
+{
+  "at": "2026-10-26T17:09:51.153221+09:00",
+  "verdict": "PASS_TARGETED_REPAIR",
+  "scope": "One IS704 enrollment-evidence sentence only; B8 IS6 review is separate. No R/manuscript/tool writes and no duplicate CLI.",
+  "sourceSHA": "46f91a4f964782286b4e79c443d53dcc1ab01a7f3a472846a8283ddc86474c70",
+  "currentSHA": "74b7895c6567f66598a847b14ddef5c8359da1ca9b1432f5210754d0b5de9871",
+  "rootEditSHA": "cc30d55cfc93d69b9a14a66d12b45817bfa5059a647af12eb1af7696256c7e52",
+  "exactSingleReplacement": true,
+  "inverseExactToInitialAndR": true,
+  "frontmatterIncludingFAQUnchanged": true,
+  "URLSequenceUnchanged": true,
+  "numberTokensUnchanged": true,
+  "currentSentences": 65,
+  "unchangedSentences": 64,
+  "sentenceDelta": [
+    {
+      "index": 20,
+      "before": "Eftir skráningu þarf nýlega staðfestingu skólans, útgefna innan síðasta mánaðar, ásamt gögnum um skráningu á yfirstandandi önn.",
+      "after": "Eftir skráningu þarf nýlega staðfestingu á námi, útgefna innan síðasta mánaðar.",
+      "beforeLength": 17,
+      "afterLength": 11
+    }
+  ],
+  "changedParagraph": "Ertu þegar skráður í skólann? Fyrir skráningu er inntökubréfið lagt fram. Eftir skráningu þarf nýlega staðfestingu á námi, útgefna innan síðasta mánaðar.",
+  "metrics": {
+    "lang": "is",
+    "sentences": 65,
+    "paras": 19,
+    "heads": 4,
+    "list_items": 0,
+    "mean_len": 14.0,
+    "len_cv": 0.466,
+    "short_share": 0.215,
+    "long_share": 0.031,
+    "para_cv": 0.371,
+    "even_run3": 0.016,
+    "top_end": "heimilisfang",
+    "top_end_share": 0.031,
+    "ja_desu": 0,
+    "ja_da": 0,
+    "top_opener": "í",
+    "top_opener_n": 2,
+    "opener_rep": 0.053,
+    "consec_same_start": 0,
+    "cite_para_share": 0.316,
+    "cite_end_share": 0.0,
+    "contrast": 0,
+    "caveat": 0,
+    "questions": 1,
+    "num_per100": 1.87,
+    "hypo_open": false,
+    "q_open": false,
+    "formula_close": false,
+    "first": "Í 22. gr. taívönsku útlendingalaganna er mælt fyrir um ARC-umsókn þess sem kemur með búset",
+    "last": "Heimildagrunnur var yfirfarinn 24. október 2026. Þetta er almenn lýsing á málsmeðferð fyrir erlenda ríkisborgara, ekki n",
+    "length_unit": "orthographic_words",
+    "short_threshold": 8,
+    "long_threshold": 32,
+    "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+  },
+  "rootActualCLIExit": 0,
+  "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/columns-is/704-taiwan-arc-first-application.md [is] sentences=65 mean=14.0 cv=0.466 short=0.215 run3=0.016 opener_rep=0.053 cite_end=0.0 cite_para=0.316 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+  "currentMetricsAndArraysMatchRoot": true,
+  "mandatoryUnresolved": 0,
+  "references": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/is-root-edit.json",
+      "sha256": "cc30d55cfc93d69b9a14a66d12b45817bfa5059a647af12eb1af7696256c7e52"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-is/704-taiwan-arc-first-application.md",
+      "sha256": "46f91a4f964782286b4e79c443d53dcc1ab01a7f3a472846a8283ddc86474c70"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/columns-is/704-taiwan-arc-first-application.md",
+      "sha256": "74b7895c6567f66598a847b14ddef5c8359da1ca9b1432f5210754d0b5de9871"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/is-initial/704-taiwan-arc-first-application.md",
+      "sha256": "46f91a4f964782286b4e79c443d53dcc1ab01a7f3a472846a8283ddc86474c70"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/is-shared-r1.stdout",
+      "sha256": "d3d81e61b32c6fc68ff6405a06e5b54937c246d27893de1c0ec8cb42f8ca0a6a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/is-shared-r1.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/is.json",
+      "sha256": "d0594d70cbdca74a6d5a701665bb1c680f73d36fe8d90e2910f4923db4e00796"
+    }
+  ],
+  "humanNativeApproval": false,
+  "lawyerApproval": false,
+  "published": false
+}

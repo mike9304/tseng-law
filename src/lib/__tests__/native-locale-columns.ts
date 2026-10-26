@@ -1279,12 +1279,21 @@ export const CASE_TRANSLATION_COLUMN_FILES_20261026: Partial<Record<string, read
   el: CASE_TRANSLATION_FILES_20261026,
   et: CASE_TRANSLATION_FILES_20261026,
   fa: CASE_TRANSLATION_FILES_20261026,
+  fi: CASE_TRANSLATION_FILES_20261026,
+  hr: CASE_TRANSLATION_FILES_20261026,
+  hu: CASE_TRANSLATION_FILES_20261026,
+  is: CASE_TRANSLATION_FILES_20261026,
+  km: CASE_TRANSLATION_FILES_20261026,
+  lv: CASE_TRANSLATION_FILES_20261026,
+  mn: CASE_TRANSLATION_FILES_20261026,
 };
 
 // These case locales already have ARC articles with later dates than the original ARC batch.
 const CASE_LOCALE_ARC_PUBLICATION_DATES: Partial<Record<string, string>> = {
   bg: '2026-10-26', bn: '2026-10-26', ca: '2026-10-26', da: '2026-10-25',
   el: '2026-10-26', et: '2026-10-26', fa: '2026-10-26',
+  fi: '2026-10-25', hr: '2026-10-26', hu: '2026-10-26', is: '2026-10-26',
+  km: '2026-10-26', lv: '2026-10-26', mn: '2026-10-26',
 };
 
 /** Country-specific market expansion, two original articles per selected locale. */

@@ -1,0 +1,99 @@
+{
+  "at": "2026-10-26T07:50:46.479518+00:00",
+  "status": "TARGETED_R2_CLOSED",
+  "closed": [
+    "M01",
+    "S01",
+    "S02"
+  ],
+  "remaining_must": 0,
+  "remaining_optional": 0,
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "r1_sha256": "87e697ee0603081c2a38d1a024933570cb2bea0134ec4cea4189cccd59349973",
+      "r2_sha256": "c13d8f57ce5732caf2c21022c7a18513615629612016598441be3a37b756d57f",
+      "changed": true,
+      "accepted_finding": "S01",
+      "exact_replacement_and_reverse": true,
+      "frontmatter_faq_numbers_url_order_unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "r1_sha256": "7c90b1dfe5e9cfd0b5111e5296a88fd766a5add1ae191d892c5deeeddb7ce976",
+      "r2_sha256": "7c90b1dfe5e9cfd0b5111e5296a88fd766a5add1ae191d892c5deeeddb7ce976",
+      "changed": false,
+      "accepted_finding": null,
+      "exact_replacement_and_reverse": true,
+      "frontmatter_faq_numbers_url_order_unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "r1_sha256": "c9766d01c05e314f6441a4b93b2cd6f0152eeab4f4c4238c1e84f5b2cd62a726",
+      "r2_sha256": "c9766d01c05e314f6441a4b93b2cd6f0152eeab4f4c4238c1e84f5b2cd62a726",
+      "changed": false,
+      "accepted_finding": null,
+      "exact_replacement_and_reverse": true,
+      "frontmatter_faq_numbers_url_order_unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "r1_sha256": "3610f15af0275f9a83f962a2ac94929970f5f4cec69881c1d55487084e65dc3d",
+      "r2_sha256": "3610f15af0275f9a83f962a2ac94929970f5f4cec69881c1d55487084e65dc3d",
+      "changed": false,
+      "accepted_finding": null,
+      "exact_replacement_and_reverse": true,
+      "frontmatter_faq_numbers_url_order_unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "r1_sha256": "4db2d93dbb20704102db9fc7c8f0c3ff3dfc66b33d34ce32b92423f5ef7fff95",
+      "r2_sha256": "5e59637b831b7c80b424b0e25288b19e8398fdb560f67110a9fd85b91e73a21d",
+      "changed": true,
+      "accepted_finding": "M01",
+      "exact_replacement_and_reverse": true,
+      "frontmatter_faq_numbers_url_order_unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/921-taiwan-online-game-coins-refund-judgment.md",
+      "r1_sha256": "07752d3062571c055c87382a2f9ab54c7e53fa70de0264b8e590a74fcf4a3837",
+      "r2_sha256": "0db591eca4c9cb2d659709a3c8a32491924cb6a2a8b939b2c4312be8443a72ef",
+      "changed": true,
+      "accepted_finding": "S02",
+      "exact_replacement_and_reverse": true,
+      "frontmatter_faq_numbers_url_order_unchanged": true
+    }
+  ],
+  "author_r2_sha256": "d375cbffdcd1ce41aa264a04c636d31ecad647cdc7d442fd4edc923a3e95c6e0",
+  "author_r2_manifest_sha256": "335d1dc625a09bab1703f2c8b99cb32cb69ab5ad65255ca5be44a101c2e52e76",
+  "r1_report_unchanged_sha256": "71831fac973c913735af33c27f24cf4b420e018f44ad0913c92faf41511195ba",
+  "r1_manifest_unchanged_sha256": "d49458e46e62654619a7d459d59e8a60e810325768180bee04911fff094b8a7f",
+  "actual_cli_evidence": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hr-variety-review-r2.json",
+    "sha256": "8d03098fa3ff0a32e96f69784e19d55f3d984680eda605061f2dafd3f1b66d9d",
+    "rerun_by_reviewer": false
+  },
+  "read_scope": "Three changed ranges and immediate context, independent exact diff/reverse against own R1 full originals; R1 full review reused for unchanged content.",
+  "summary": {
+    "six_current_sha_match": true,
+    "changed_files": 3,
+    "unchanged_files": 3,
+    "exact_replacements": 3,
+    "inverse_restores_six_originals": true,
+    "preserved_records_checked": 32,
+    "current_total_segments": 249,
+    "closed": [
+      "M01",
+      "S01",
+      "S02"
+    ],
+    "remaining_must": 0,
+    "remaining_optional": 0
+  },
+  "artifacts": {
+    "reviews/hr-independent-r2.md": "d8a379d7795b18547f795bff997fee301a3a274d3eca22b530c01309519fc43f",
+    "checks/hr-independent-r2-proof.json": "270357f37f671b090f7a317cd84c878cab02e762fb98da27a4265a5b589725be"
+  },
+  "rendered_or_deployed": false,
+  "human_native_or_legal_approval": false
+}

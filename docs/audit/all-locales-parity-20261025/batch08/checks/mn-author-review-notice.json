@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-26T08:15:16.135227+00:00",
+  "from": "/root/column_source_quality",
+  "stage": "Preliminary independent review in progress, not final R1",
+  "candidate_findings": [
+    {
+      "id": "915",
+      "text": "хугацаа сунгуулж",
+      "issue": "May imply obtained extension although only recommendation and public entity dissent are established."
+    },
+    {
+      "id": "916",
+      "text": "урвуулан ашигласнаас компани тодорхой өр төлбөрөө барагдуулахад илт хүндрэлтэй болсон",
+      "issue": "May omit abuse causing the specific debt, collapsing causation to difficulty paying."
+    },
+    {
+      "id": "918",
+      "text": "Банкны хугацааг барилгын компанид шууд тооцохгүй байх нь",
+      "issue": "Official2025inspection identifies excluding bank processing time from handover-notice deadline as a violation; heading and neutral body wording may obscure/reverse that finding."
+    }
+  ],
+  "author_action": "Keep all six current SHA unchanged, preserve initial self-review evidence, await exact independent R1 before edits. No claim that machine PASS resolves meaning."
+}

@@ -1,0 +1,46 @@
+{
+  "startedAt": "2026-10-26T09:06:27.599714+00:00",
+  "cwd": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "command": [
+    "python3",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/date-boundaries/run_neutral.py",
+    "--root",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety",
+    "--report",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-tool-neutral.json"
+  ],
+  "inputs": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/date-boundaries/run_neutral.py",
+      "sha256": "f722eb756c556cd15188c9c9d6a408086fe17904fec411eada191a9e977b0a64"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety/tests/date-boundaries/neutral-fixtures.json",
+      "sha256": "2b5e54ef073604c59bcf05014ae9a83c57de22228672dba266df90965f8d51e3"
+    }
+  ],
+  "endedAt": "2026-10-26T09:06:27.656127+00:00",
+  "elapsedSeconds": 0.056,
+  "exitCode": 0,
+  "stdout": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-neutral.stdout",
+    "sha256": "bafbf6a78e7687c39841ae5e6f56c30c0bd3ce8a7cfc8070ad19eaeabc151d08"
+  },
+  "stderr": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/integration-neutral.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "inputsUnchanged": true
+}

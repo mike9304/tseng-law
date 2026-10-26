@@ -1,0 +1,119 @@
+{
+  "atUTC": "2026-10-26T07:43:27.843709+00:00",
+  "status": "AUTHOR_REVIEW_COMPLETE_PENDING_INDEPENDENT",
+  "author": "root directly",
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "96b1fc09ff63d43fdedd07d82bcfce983ac8157a974b4ff55d1d206e1ae3edd7",
+      "initialSHA256": "96b1fc09ff63d43fdedd07d82bcfce983ac8157a974b4ff55d1d206e1ae3edd7",
+      "inverseExact": true,
+      "frontmatterFAQURLOrderUnchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "ac862ed033d2d9c250efb4becf26f5fd0ff1b20dac94b9824fead66db2578546",
+      "initialSHA256": "ac862ed033d2d9c250efb4becf26f5fd0ff1b20dac94b9824fead66db2578546",
+      "inverseExact": true,
+      "frontmatterFAQURLOrderUnchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "fbc0a177749bd8b4941cda63daf48e4fd7e465040b8121f53a82e274483b5c5d",
+      "initialSHA256": "749a219390c212f8534d62590ba4de795f78f0b37539d21f904c96975560571e",
+      "inverseExact": true,
+      "frontmatterFAQURLOrderUnchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "ca661812f570ae6d872b53c81a464cd073113b824ba64ce07e07fa09d0628fde",
+      "initialSHA256": "bff0bf0e3449cc9ce836e8156cffbf1e2b47427934754d557147ff546a834d24",
+      "inverseExact": true,
+      "frontmatterFAQURLOrderUnchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "9c8634739beb39fc2a4e0288d106d2b7f38f73e8374ebddbc31eccaa6b342f38",
+      "initialSHA256": "4e1c32e593ab24d4ee9aea3282aceaf70a14cb7637c2e322cbefe6f8163e237d",
+      "inverseExact": true,
+      "frontmatterFAQURLOrderUnchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "48aa5debe29787ced8afc034f40ba3417dd20afbc7e80b3078b77543a368814a",
+      "initialSHA256": "48aa5debe29787ced8afc034f40ba3417dd20afbc7e80b3078b77543a368814a",
+      "inverseExact": true,
+      "frontmatterFAQURLOrderUnchanged": true
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-author-inputs.json",
+      "sha256": "41c9d5d6a546893d1364a24e759b0e7dbb63483da8298efbe5f656b6470efaee"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-initial-sha.json",
+      "sha256": "4ea280422376d5e3cf44951b7122921e42e115b9c05a991b966fcbd4f49b7503"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-variety-initial.json",
+      "sha256": "65451382e85b9cbdbc5901c8df69f0c2a110242457ccc5c63e1fe77a797181c4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-variety-final.json",
+      "sha256": "c9901fd23be649afe0db2254ed6495e21876127cf60aba06ce4c636d72f98142"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-self-edits-r1.json",
+      "sha256": "b279c38fa6918b42af6d6ac921ee0972580982a5568b7220f7cf600712a88e07"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-self-edits-r2.json",
+      "sha256": "10325bd77e6af0fd88cf558ec18d9319ba9b758aa53906c7b4d3435a00220f99"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-boundary-review-final.json",
+      "sha256": "4a7df366b387095d985cf2abf096321b32a802047d273ad92cd9b96f7384ff0d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-content-audit-initial.json",
+      "sha256": "0b5785e6db15b0b37238ae7d3f156e6ab63ae6d9230a08abb59a8db15c724436"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-content-audit-final.json",
+      "sha256": "84075c87f3c80d4c11e9c15b6cb0d52a80e4817a151937320c85378066acd0a7"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/root-lessons-resume-20261026.json",
+      "sha256": "4d0437e016e65b5abc67a6b3b137be3b0e8fefcc1b465b377aa89796f0b55e62"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/fi-author.md",
+      "sha256": "0b48ba3f404d3a4568082cc78380f417839c641c93dd62449cea9663eb0112e0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/ROOT-INSTALL-RECEIPT.json",
+      "sha256": "b9618bb277abf32eb7bf767cc56400bb1af12ada154da431effd8b56dd68bf88"
+    }
+  ],
+  "initialInputCount": 23,
+  "documentedInputChanges": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "before": "9d3af531126f65057fa1ceea9785b6464e512c80ce25d922e822e01438e70486",
+      "current": "ca642a38c2b0a925c19ded6600b2f06901aed057bed44b71fab9c16f22c2b7ab"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "before": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc",
+      "current": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    }
+  ],
+  "freezePreparationNote": "Initial guard correctly stopped because newly installed expansion was absent from allowed drift list. Expanded guard to exact documented installation SHA; no manuscript change or unrecorded drift accepted.",
+  "sharedExitCode": 0,
+  "sentences": 256,
+  "FAQ": 17,
+  "structureErrors": 0,
+  "semanticStatus": "REVIEW_REQUIRED",
+  "humanNativeLegalOrPublicApproval": false
+}

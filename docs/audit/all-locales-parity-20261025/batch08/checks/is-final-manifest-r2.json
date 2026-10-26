@@ -1,0 +1,177 @@
+{
+  "createdAtUTC": "2026-10-26T08:15:33.813899+00:00",
+  "locale": "is",
+  "status": "AUTHOR_R2_FROZEN_FOR_TARGETED_INDEPENDENT_CLOSURE",
+  "publicationDate": "2026-10-26",
+  "baseManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-final-manifest.json",
+    "sha256": "b8320ebe977eb4b1aa64fb18a403e8c7aecbedf9b68c122b9549aad8d95d87e4"
+  },
+  "originalAuthor": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/is-author.md",
+    "sha256": "06941e50c3ea8d53956362f2ae00b184efb8a5c23a55cf922df7cea1a6eb85cc"
+  },
+  "authorAddendum": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-author-r2.md",
+    "sha256": "e02390ba633bf6c9503427b399aa1f588a750cd1a670554a7b5fe2aa7555de2f"
+  },
+  "files": [
+    {
+      "id": "915",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "3ba7ba24c0ec9c31fbfb1b0686032d33c305488acb64d55bb9d1c0f104841f3d",
+      "bytes": 7628,
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-variety-initial.json",
+      "exitCode": 0,
+      "lenCV": 0.471,
+      "sentences": 41,
+      "faqCount": 2,
+      "officialUrlCount": 4,
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "r1SHA256": "3ba7ba24c0ec9c31fbfb1b0686032d33c305488acb64d55bb9d1c0f104841f3d"
+    },
+    {
+      "id": "916",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "0f51ecead9b78fa3a51ac4cfc6fea0a828fe24910fb69385cb37dc7e82c8d0db",
+      "bytes": 8396,
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-variety-review-r2.json",
+      "exitCode": 0,
+      "lenCV": 0.517,
+      "sentences": 41,
+      "faqCount": 3,
+      "officialUrlCount": 3,
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "r1SHA256": "03d2248e93f7bad97d76e622f07575eaaafc2b555641ab68b80a0cdf76e3f5cd"
+    },
+    {
+      "id": "918",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "2661e4c6163d28b727805c018a62516b9060dfda396ad86c7b30f4c631460af5",
+      "bytes": 8114,
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-variety-review-r2.json",
+      "exitCode": 0,
+      "lenCV": 0.481,
+      "sentences": 43,
+      "faqCount": 3,
+      "officialUrlCount": 4,
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "r1SHA256": "3de83250611c1f1071803fb141c650446c65163ce32a06125485aa27e99b6c60"
+    },
+    {
+      "id": "919",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "09bab5c57eea037bd207f536090989cd76ad2e340f654d4ea63d3f3ffeb871ca",
+      "bytes": 7492,
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-variety-r3.json",
+      "exitCode": 0,
+      "lenCV": 0.458,
+      "sentences": 36,
+      "faqCount": 3,
+      "officialUrlCount": 4,
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "r1SHA256": "09bab5c57eea037bd207f536090989cd76ad2e340f654d4ea63d3f3ffeb871ca"
+    },
+    {
+      "id": "920",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "b4b41ccba00179a1b54b5425964eebd992aff3076ba8646eafe90440ac9d27f8",
+      "bytes": 7452,
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-variety-r1.json",
+      "exitCode": 0,
+      "lenCV": 0.496,
+      "sentences": 37,
+      "faqCount": 3,
+      "officialUrlCount": 4,
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "r1SHA256": "b4b41ccba00179a1b54b5425964eebd992aff3076ba8646eafe90440ac9d27f8"
+    },
+    {
+      "id": "921",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "bbce5fdff033d02529be025515dba7af17bef00f429ec8bf41bc807873fd5e8b",
+      "bytes": 8654,
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-variety-review-r2.json",
+      "exitCode": 0,
+      "lenCV": 0.452,
+      "sentences": 45,
+      "faqCount": 3,
+      "officialUrlCount": 4,
+      "source": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "r1SHA256": "af57a32c37bce920c808c59c5264a593d07058f10a87f9e1376d436e5e6103c2"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-review-r1-edits.json",
+      "sha256": "f7283668fe441b41f706d9ce3d4419cd7b8e22792a8348c406da5a5c63b7d199"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-review-r2-integrity.json",
+      "sha256": "36437ef09b1d2acc0c8f46be30668850f06896d8069cf1d07bffc8bb48774470"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-variety-review-r2.json",
+      "sha256": "887ddd32cd8ca5abf6066608e58476176a07f02f8899c9f318b85a71731e946f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-sentences-review-r2.json",
+      "sha256": "6fd8cfae99fa69808d64c47ec03df97a7ffc6c604a0f13a57b5b8b5a9c05e026"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-review-r2-content-audit.json",
+      "sha256": "2a2b88d8c4924b5f7ecd5bf4b7bc9d388e24e1fb64528acba08913ff442e73d7"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-review-r1-apply.py",
+      "sha256": "39d17f30aedd39af1944f173b03a61136c5f415bb89375752225dffb67097018"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-review-r2-structural.mjs",
+      "sha256": "2f8eb18cd9d4dc13dd839659b231a14b8fafcbc1a7896cd75fb9f2ebed3ff725"
+    }
+  ],
+  "toolHashes": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/is.json": "d0594d70cbdca74a6d5a701665bb1c680f73d36fe8d90e2910f4923db4e00796"
+  },
+  "summary": {
+    "changedManuscripts": 3,
+    "exactEdits": 3,
+    "actualAffectedCLIExit0": 3,
+    "currentAllSixCLIExit0": 6,
+    "varietyFAIL": 0,
+    "affectedStructuralErrors": 0,
+    "FAQ": 17,
+    "officialUniqueUrlsSummedPerArticle": 23,
+    "actualProseUnits": 243,
+    "unchangedR1Units": 242,
+    "newUnitsRead": 1,
+    "r1HashesReconstructed": 6
+  },
+  "limitations": [
+    "AI author correction; no native-human/lawyer approval",
+    "Independent targeted review pending",
+    "No renderer/publication/network recheck"
+  ]
+}

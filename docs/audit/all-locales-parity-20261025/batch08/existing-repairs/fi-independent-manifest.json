@@ -1,0 +1,87 @@
+{
+  "at": "2026-10-26T08:12:18.124666+00:00",
+  "status": "TARGETED_REPAIR_REVIEW_CLOSED",
+  "mustOpen": 0,
+  "optionalOpen": 0,
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/columns-fi/704-taiwan-arc-first-application.md",
+      "sha256": "5e054633c3f8c2d92ee9404e893a2277255cdcf44b2759ca0bed7c4382f4b172",
+      "source": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fi/704-taiwan-arc-first-application.md",
+      "sourceSHA256": "ab3d0231a3f1bf8c22c7bf22ef48142b9d2e9eb72d0e422082bec6fb076b395d",
+      "forwardAndReverseExact": true,
+      "frontmatterFAQUnchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/columns-fi/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "fe25a6ba9a1a86482f0c46df9ef95fc0b9349385f91a78611763ef01796d76c0",
+      "source": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fi/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSHA256": "9d8378231e7c024bfa49689cada7a7406837b5afed540fab217bd99f0e5a97ea",
+      "forwardAndReverseExact": true,
+      "frontmatterFAQUnchanged": true
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/fi-independent.md",
+      "sha256": "e562ee380323aef1d0c47f9009b67bc78f8d64760064a2474a6736ae94b83705"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/fi-independent-proof.json",
+      "sha256": "c1e2f86af20aa0a8cf2f3c2aa4678d30dad3baf0eec8a7265b59490b46f13254"
+    }
+  ],
+  "relatedEvidence": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/fi-root-edits.json",
+      "sha256": "01c7177a5f3f107b1702ea9fd749778cec88ec95349f4926f75228e9688d4e1e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/fi-boundary-review.json",
+      "sha256": "e8a7ddbab503291264931ff2fc533069f85d6a206b2c4a1a22c457fed2caa26d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/fi-boundary-review-unstripped-input.json",
+      "sha256": "fdbf849a49f147676d2136ddae5dd4b32509f543026d1a0bec978f88b0721e8a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/fi-shared-r1-execution.json",
+      "sha256": "032d8d7d912edb25d1daeba5be1f45b69fc4fce72ff9685febc343d95a9d59af"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/fi-shared-r1.stdout",
+      "sha256": "9d36c8f17bf0ea034e800da7836c84ee689dcca383bd43b21f71bc494939bc42"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/fi-shared-r1.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "tools": [
+    {
+      "file": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "recordedSHA256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "file": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "recordedSHA256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "file": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "recordedSHA256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "file": "/Users/son7/tseng-lanes-shared/variety/profiles/fi.json",
+      "recordedSHA256": "87535d428aaf9613187c52adc3c387e365f419f423f693128fd77e08646b2629",
+      "sha256": "87535d428aaf9613187c52adc3c387e365f419f423f693128fd77e08646b2629"
+    }
+  ],
+  "actualCliExit": 0,
+  "independentCliRerun": false,
+  "sourceRModified": false,
+  "integratedOrPublished": false,
+  "humanNativeLegalApproval": false
+}

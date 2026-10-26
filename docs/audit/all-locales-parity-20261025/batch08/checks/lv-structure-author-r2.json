@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-26T08:16:38.466Z",
+  "node": "v24.14.1",
+  "scope": "Structural and actual repository visibility checks. No browser/public rendering, human native-language approval or legal approval is asserted.",
+  "errors": 0,
+  "auditErrors": 0,
+  "automatedStatus": "PASS",
+  "semanticStatus": "REVIEW_REQUIRED",
+  "publicationReady": false,
+  "requiredSemanticItems": 5,
+  "visibleUnderRuntimeFilter": 1,
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "f5e0e079f45df5fb1cdfdb4a37cdb7fd2cf2a6e72bf7f5b561be88f7fa8bf118",
+      "bytes": 8980,
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sourceSHA256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "faqCount": 3,
+      "officialURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "missingSource": [],
+      "missingFooter": [],
+      "errors": []
+    }
+  ]
+}

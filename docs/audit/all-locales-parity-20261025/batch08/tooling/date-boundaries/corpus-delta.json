@@ -1,0 +1,446 @@
+{
+  "baseline_summary": {
+    "files": 2235,
+    "by_locale": {
+      "ko": 217,
+      "ja": 230,
+      "en": 218,
+      "zh-hant": 296,
+      "th": 31,
+      "id": 33,
+      "hi": 34,
+      "fr": 31,
+      "de": 32,
+      "it": 32,
+      "es": 52,
+      "pt": 34,
+      "ar": 34,
+      "vi": 45,
+      "ru": 30,
+      "ms": 30,
+      "fil": 31,
+      "tr": 24,
+      "nl": 26,
+      "zh-hans": 29,
+      "sv": 24,
+      "da": 30,
+      "nb": 24,
+      "fi": 24,
+      "pl": 26,
+      "cs": 26,
+      "ro": 24,
+      "uk": 24,
+      "bg": 30,
+      "ca": 30,
+      "el": 30,
+      "hr": 24,
+      "hu": 24,
+      "is": 24,
+      "sk": 24,
+      "he": 26,
+      "bn": 30,
+      "ur": 24,
+      "fa": 30,
+      "my": 24,
+      "ta": 24,
+      "ne": 24,
+      "km": 24,
+      "mn": 24,
+      "sr": 24,
+      "sl": 24,
+      "lt": 26,
+      "lv": 24,
+      "et": 30
+    },
+    "check_exits": {
+      "0": 1084,
+      "1": 1120,
+      "2": 31
+    },
+    "measurement_errors": 31
+  },
+  "candidate_summary": {
+    "files": 2235,
+    "by_locale": {
+      "ko": 217,
+      "ja": 230,
+      "en": 218,
+      "zh-hant": 296,
+      "th": 31,
+      "id": 33,
+      "hi": 34,
+      "fr": 31,
+      "de": 32,
+      "it": 32,
+      "es": 52,
+      "pt": 34,
+      "ar": 34,
+      "vi": 45,
+      "ru": 30,
+      "ms": 30,
+      "fil": 31,
+      "tr": 24,
+      "nl": 26,
+      "zh-hans": 29,
+      "sv": 24,
+      "da": 30,
+      "nb": 24,
+      "fi": 24,
+      "pl": 26,
+      "cs": 26,
+      "ro": 24,
+      "uk": 24,
+      "bg": 30,
+      "ca": 30,
+      "el": 30,
+      "hr": 24,
+      "hu": 24,
+      "is": 24,
+      "sk": 24,
+      "he": 26,
+      "bn": 30,
+      "ur": 24,
+      "fa": 30,
+      "my": 24,
+      "ta": 24,
+      "ne": 24,
+      "km": 24,
+      "mn": 24,
+      "sr": 24,
+      "sl": 24,
+      "lt": 26,
+      "lv": 24,
+      "et": 30
+    },
+    "check_exits": {
+      "0": 1082,
+      "1": 1122,
+      "2": 31
+    },
+    "measurement_errors": 31
+  },
+  "same_input_files": 2235,
+  "unchanged_rows": 2232,
+  "delta": [
+    {
+      "file": "columns-fi/704-taiwan-arc-first-application.md",
+      "lang": "fi",
+      "sha256": "ab3d0231a3f1bf8c22c7bf22ef48142b9d2e9eb72d0e422082bec6fb076b395d",
+      "changed_keys": [
+        "check_exit",
+        "check_stdout",
+        "metrics",
+        "score",
+        "sentences"
+      ],
+      "before_sentences": 69,
+      "after_sentences": 68,
+      "sentence_diff": [
+        "--- ",
+        "+++ ",
+        "@@ -63,7 +63,6 @@",
+        " Myöhemmät osoite- ja työmuutokset sekä matkat voivat vaatia uusia toimia; niitä käsitellään ARC:n jatkamista ja muutoksia koskevassa artikkelissa.",
+        " Saadun kortin nimi, passitiedot, osoite ja viimeinen voimassaolopäivä verrataan hyväksyttyihin tietoihin.",
+        " Päätös ja maksukuitti jäävät talteen samaan kansioon, josta seuraavan hakemuksen lähtötiedot löytyvät.",
+        "-Viranomaislähteet on tarkistettu 24.",
+        "-ja 25. lokakuuta 2026.",
+        "+Viranomaislähteet on tarkistettu 24. ja 25. lokakuuta 2026.",
+        " Kuvaus koskee ulkomaalaisten menettelyjä eikä ratkaise yksittäisen hakijan kelpoisuutta.",
+        " Manner-Kiinan, Hongkongin ja Macaon asukkaisiin sekä Taiwanin kansalaisiin, joilla ei ole kotitalousrekisteröintiä, sovelletaan erillisiä järjestelmiä."
+      ],
+      "metric_diff": {
+        "sentences": {
+          "before": 69,
+          "after": 68
+        },
+        "mean_len": {
+          "before": 11.0,
+          "after": 11.1
+        },
+        "len_cv": {
+          "before": 0.457,
+          "after": 0.441
+        },
+        "short_share": {
+          "before": 0.391,
+          "after": 0.382
+        },
+        "top_end_share": {
+          "before": 0.058,
+          "after": 0.059
+        }
+      },
+      "check_exit_before": 0,
+      "check_exit_after": 1,
+      "score_before": 7.5,
+      "score_after": 8.2
+    },
+    {
+      "file": "columns-fi/705-taiwan-visa-residence-work-study-family.md",
+      "lang": "fi",
+      "sha256": "c7f7d229342f780b467d09fc794f7c350dc61a65f7a11ad2b6d2f29fd0152efd",
+      "changed_keys": [
+        "check_stdout",
+        "metrics",
+        "score",
+        "sentences"
+      ],
+      "before_sentences": 75,
+      "after_sentences": 74,
+      "sentence_diff": [
+        "--- ",
+        "+++ ",
+        "@@ -69,7 +69,6 @@",
+        " Jo Taiwanissa asuvan uusi työ, opiskelupaikka tai perheperuste voi vaatia oleskeluperusteen muutosta.",
+        " Matkaa varten koottavista asiakirjoista pitäisi näkyä sekä aiottu toiminta että siihen sopiva maahantuloperuste.",
+        " Perheenjäsenen hakemuksessa näiden rinnalle tarvitaan selvitys juuri sen henkilön asemasta, jonka luokse hän muuttaa.",
+        "-Lähteet on tarkistettu 24.",
+        "-ja 25. lokakuuta 2026.",
+        "+Lähteet on tarkistettu 24. ja 25. lokakuuta 2026.",
+        " Kelpoisuus ratkaistaan hakijakohtaisesti.",
+        " Artikkeli käsittelee ulkomaalaisten reittejä; Manner-Kiinan, Hongkongin ja Macaon asukkaisiin sekä ilman kotitalousrekisteröintiä oleviin Taiwanin kansalaisiin sovelletaan erillisiä järjestelmiä."
+      ],
+      "metric_diff": {
+        "sentences": {
+          "before": 75,
+          "after": 74
+        },
+        "mean_len": {
+          "before": 10.8,
+          "after": 10.9
+        },
+        "len_cv": {
+          "before": 0.479,
+          "after": 0.466
+        },
+        "short_share": {
+          "before": 0.333,
+          "after": 0.324
+        },
+        "long_share": {
+          "before": 0.013,
+          "after": 0.014
+        },
+        "even_run3": {
+          "before": 0.137,
+          "after": 0.139
+        }
+      },
+      "check_exit_before": 0,
+      "check_exit_after": 0,
+      "score_before": 6.5,
+      "score_after": 7.1
+    },
+    {
+      "file": "columns-fi/706-taiwan-arc-renewal-changes-reentry.md",
+      "lang": "fi",
+      "sha256": "9d8378231e7c024bfa49689cada7a7406837b5afed540fab217bd99f0e5a97ea",
+      "changed_keys": [
+        "check_exit",
+        "check_stdout",
+        "metrics",
+        "score",
+        "sentences"
+      ],
+      "before_sentences": 86,
+      "after_sentences": 85,
+      "sentence_diff": [
+        "--- ",
+        "+++ ",
+        "@@ -80,7 +80,6 @@",
+        " Ensimmäistä hakemusta varten on ARC:n hakuohje, ja uuden oleskeluperusteen ehdot löytyvät työn, opiskelun ja perheen vertailusta.",
+        " Pysyvään oleskeluun liittyviä edellytyksiä käsittelee erillinen englanninkielinen APRC-artikkeli.",
+        " Paluupäivää verrataan passin, oleskeluoikeuden ja paluuluvan voimassaoloaikoihin jo ennen lähtöä.",
+        "-Oikeuslähteet on tarkistettu 24.",
+        "-ja 25. lokakuuta 2026.",
+        "+Oikeuslähteet on tarkistettu 24. ja 25. lokakuuta 2026.",
+        " Menettelykuvaus koskee ulkomaalaisia ja hakijaryhmäkohtaisia poikkeuksia; yksittäisen asian edellytykset tutkitaan erikseen.",
+        " Manner-Kiinan, Hongkongin ja Macaon asukkailla sekä ilman kotitalousrekisteröintiä olevilla Taiwanin kansalaisilla on omat järjestelmänsä."
+      ],
+      "metric_diff": {
+        "sentences": {
+          "before": 86,
+          "after": 85
+        },
+        "mean_len": {
+          "before": 11.5,
+          "after": 11.7
+        },
+        "len_cv": {
+          "before": 0.456,
+          "after": 0.444
+        },
+        "short_share": {
+          "before": 0.314,
+          "after": 0.306
+        },
+        "even_run3": {
+          "before": 0.071,
+          "after": 0.084
+        }
+      },
+      "check_exit_before": 0,
+      "check_exit_after": 1,
+      "score_before": 7.9,
+      "score_after": 8.4
+    }
+  ],
+  "same_language_medians": true,
+  "errors": [
+    {
+      "file": "columns-th/001-taiwan-company-establishment-basics.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/002-withdraw-capital-taiwan-company.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/003-taiwan-traffic-accident-procedure.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/004-taiwan-company-subsidiary-vs-branch.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/005-taiwan-company-establishment-advanced-2.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/006-taiwan-massage-history-law.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/007-taiwan-divorce-lawsuit-qna.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/008-taiwan-labor-severance-law.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/009-taiwan-voluntary-resignation-severance.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/010-taiwan-gym-injury-lawsuit.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/011-taiwan-cosmetics-market-entry-company-setup-pif-registration-legal-sales-guide.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/012-taiwan-overtaking-accident-liability.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/013-taiwan-company-establishment-advanced-1.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/014-taiwan-mandatory-employment-period.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/015-taiwan-company-setup-pitch-location.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/016-taiwan-inheritance-custody-analysis.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/017-taiwan-logistics-business-setup.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/018-taiwan-semiconductor-market-entry.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/019-taiwanese-spouse-divorce-agreement-registration.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/020-taiwanese-spouse-divorce-from-abroad.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/021-taiwanese-spouse-divorce-cross-border-parenting.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/022-marrying-taiwanese-national-registration-checklist.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/023-baby-taiwan-nationality-birth-registration.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/659-thai-worker-taiwan-payslip-deductions-unpaid-salary.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/660-thai-worker-taiwan-factory-closure-wage-fund.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/661-thai-worker-taiwan-bank-account-police-notice.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/662-thai-return-home-taiwan-traffic-injury-records.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/663-thai-supplier-taiwan-buyer-unpaid-invoice.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/704-taiwan-arc-first-application.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/705-taiwan-visa-residence-work-study-family.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    },
+    {
+      "file": "columns-th/706-taiwan-arc-renewal-changes-reentry.md",
+      "lang": "th",
+      "error": "Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback"
+    }
+  ]
+}

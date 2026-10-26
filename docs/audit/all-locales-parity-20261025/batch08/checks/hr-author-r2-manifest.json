@@ -1,0 +1,231 @@
+{
+  "at": "2026-10-26T07:47:50.282541+00:00",
+  "status": "AUTHOR_R2_FROZEN_PENDING_TARGETED_INDEPENDENT_CLOSURE",
+  "language": "hr",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "c13d8f57ce5732caf2c21022c7a18513615629612016598441be3a37b756d57f",
+      "bytes": 7252,
+      "faq_count": 2,
+      "source": {
+        "file": "src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "locale": "en",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "variety_evidence": "hr-variety-review-r2.json",
+      "variety_exit": 0,
+      "len_cv": 0.503,
+      "segments": 38,
+      "short_share": 0.211,
+      "top_opener_n": 1,
+      "structure_evidence": "hr-review-r2-content-audit.json",
+      "structure_errors": 0,
+      "semantic_review_items": 6,
+      "official_urls_in_body_and_tail": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "7c90b1dfe5e9cfd0b5111e5296a88fd766a5add1ae191d892c5deeeddb7ce976",
+      "bytes": 8542,
+      "faq_count": 3,
+      "source": {
+        "file": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "locale": "en",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "variety_evidence": "hr-variety-initial.json",
+      "variety_exit": 0,
+      "len_cv": 0.505,
+      "segments": 42,
+      "short_share": 0.262,
+      "top_opener_n": 1,
+      "structure_evidence": "hr-content-audit-initial.json",
+      "structure_errors": 0,
+      "semantic_review_items": 6,
+      "official_urls_in_body_and_tail": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "c9766d01c05e314f6441a4b93b2cd6f0152eeab4f4c4238c1e84f5b2cd62a726",
+      "bytes": 7982,
+      "faq_count": 3,
+      "source": {
+        "file": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "variety_evidence": "hr-variety-initial.json",
+      "variety_exit": 0,
+      "len_cv": 0.488,
+      "segments": 42,
+      "short_share": 0.19,
+      "top_opener_n": 2,
+      "structure_evidence": "hr-content-audit-initial.json",
+      "structure_errors": 0,
+      "semantic_review_items": 5,
+      "official_urls_in_body_and_tail": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11"
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "3610f15af0275f9a83f962a2ac94929970f5f4cec69881c1d55487084e65dc3d",
+      "bytes": 7754,
+      "faq_count": 3,
+      "source": {
+        "file": "src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "variety_evidence": "hr-variety-r1.json",
+      "variety_exit": 0,
+      "len_cv": 0.457,
+      "segments": 42,
+      "short_share": 0.167,
+      "top_opener_n": 2,
+      "structure_evidence": "hr-content-audit-final-changed.json",
+      "structure_errors": 0,
+      "semantic_review_items": 5,
+      "official_urls_in_body_and_tail": [
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt"
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "5e59637b831b7c80b424b0e25288b19e8398fdb560f67110a9fd85b91e73a21d",
+      "bytes": 7914,
+      "faq_count": 3,
+      "source": {
+        "file": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "variety_evidence": "hr-variety-review-r2.json",
+      "variety_exit": 0,
+      "len_cv": 0.458,
+      "segments": 43,
+      "short_share": 0.256,
+      "top_opener_n": 1,
+      "structure_evidence": "hr-review-r2-content-audit.json",
+      "structure_errors": 0,
+      "semantic_review_items": 5,
+      "official_urls_in_body_and_tail": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "0db591eca4c9cb2d659709a3c8a32491924cb6a2a8b939b2c4312be8443a72ef",
+      "bytes": 8322,
+      "faq_count": 3,
+      "source": {
+        "file": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "variety_evidence": "hr-variety-review-r2.json",
+      "variety_exit": 0,
+      "len_cv": 0.453,
+      "segments": 42,
+      "short_share": 0.167,
+      "top_opener_n": 2,
+      "structure_evidence": "hr-review-r2-content-audit.json",
+      "structure_errors": 0,
+      "semantic_review_items": 5,
+      "official_urls_in_body_and_tail": [
+        "https://appeal.cpc.ey.gov.tw/",
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C"
+      ]
+    }
+  ],
+  "FAQ_total": 17,
+  "body_segments_total": 249,
+  "automated_errors": 0,
+  "semantic_review_items_retained": 32,
+  "independent_review_completed": false,
+  "human_native_or_legal_approval": false,
+  "rendered_or_deployed": false,
+  "original_failures_preserved": true,
+  "R_shared_other_author_files_modified": false,
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hr-author-r2.md",
+      "sha256": "d375cbffdcd1ce41aa264a04c636d31ecad647cdc7d442fd4edc923a3e95c6e0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hr-review-r2-edits.json",
+      "sha256": "bcb4baa88b721c7e50d6ff7c974bd0fa091e89122ce0d2bdb38950be028fad2a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hr-review-r2-proof.json",
+      "sha256": "1276c3a810efbedd24282e9ff221d3ff2264b369aa89c01dc424a64cb9a2c5e8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hr-review-r2-proof.py",
+      "sha256": "6056874ecfd7d6c2552dbeaffed89cb1f75fbb863a25a0647ea3c9da1b8033e1"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hr-variety-review-r2.json",
+      "sha256": "8d03098fa3ff0a32e96f69784e19d55f3d984680eda605061f2dafd3f1b66d9d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hr-boundaries-review-r2.json",
+      "sha256": "df872c50f6925a9407d2efc1b49844e6dcfeb736ea59599e3bca8192139fb0dd"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hr-boundaries-review-r2-merged.json",
+      "sha256": "95bb1abebe35fa14a9dd83c94312b55dffb8f5ce863f2d803bbda21754f44611"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hr-review-r2-content-audit.mjs",
+      "sha256": "c8904af5d2191da520ec0e419b0db08edd13b0b292f4e5adda01cd9347210abd"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hr-review-r2-content-audit.json",
+      "sha256": "0c05f09d1952e5469c81e59f195d45f891cdee79c7ac4fa619ccce3d3b176eb0"
+    }
+  ],
+  "R1_findings_applied": [
+    "M01",
+    "S01",
+    "S02"
+  ],
+  "priorManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hr-author-manifest.json",
+    "sha256": "620671bf817e811c6f370d10dbb42b591b00efad2a55bc629a6aaeebd5f18381"
+  },
+  "actual_changed_file_checker_hashes": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/hr.json": "d139e9980abbcfc79177de7d87b0269d2e837f990e08691ba93fee35894cde71"
+  },
+  "oldRecordsPreserved": {
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hr-author.md": "8951b12f066e13e4a0b70f6725523b7287fe8e835202cdd96f76384e026b2418",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hr-author-manifest.json": "620671bf817e811c6f370d10dbb42b591b00efad2a55bc629a6aaeebd5f18381",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hr-independent.md": "71831fac973c913735af33c27f24cf4b420e018f44ad0913c92faf41511195ba",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hr-independent-manifest.json": "d49458e46e62654619a7d459d59e8a60e810325768180bee04911fff094b8a7f"
+  },
+  "scope": "Three exact strings across 915/920/921; three other manuscripts unchanged; inverse restores all six R1 hashes; current six metadata/FAQ/numbers/URL sequences unchanged"
+}

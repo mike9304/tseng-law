@@ -1,0 +1,283 @@
+{
+  "915-taiwan-public-contract-mediation-arbitration-same-claim.md": {
+    "sha256": "c13d8f57ce5732caf2c21022c7a18513615629612016598441be3a37b756d57f",
+    "paragraphs": [
+      "Može li izvođač nakon medijacije o duljem roku gradnje u arbitraži tražiti novac? U sporu o izgradnji tajvanske bolnice upravo je taj prijelaz ostao bez odgovarajuće preporuke povjerenstva. [Vrhovni sud u službenom objašnjenju odluke 106年度台上字第723號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693) povezuje ga s nedostatkom arbitražnog sporazuma za konkretni novčani spor.",
+      "Pravorijek je izvođaču dosudio 44.417.150 novih tajvanskih dolara (NTD). Zatim je poništen. Vrhovni sud odbio je izvođačev pravni lijek 12. srpnja 2017., pa je poništenje ostalo na snazi. Službeno objašnjenje izričito navodi da je predmet pravomoćno završen.",
+      "Dokumenti iz medijacije pokazuju četiri različita koraka:",
+      "Potvrda o neuspjeloj medijaciji nije nadomjestila posljednji korak. Prema [objašnjenju suda](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693), naručitelj je morao dobiti priliku prihvatiti ili odbiti preporuku o upravo onom sporu koji bi se poslije rješavao arbitražom. Vrhovni sud pritom je ispravio obrazloženje nižeg suda o primjenjivoj verziji zakona. Odluku o poništenju ipak je potvrdio.",
+      "[Članak 85-1. tajvanskog Zakona o javnoj nabavi](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) predviđa medijaciju pred Povjerenstvom za prigovore u javnoj nabavi za sporove o izvršenju ugovora u kojima stranke ne postignu sporazum. Javni naručitelj ne smije odbiti dobavljačev zahtjev za medijaciju.",
+      "Za nabavu građevinskih radova ili tehničkih usluga povjerenstvo mora dati preporuku ili prijedlog za medijaciju; ako medijacija ne uspije zato što naručitelj ne pristane na njega, naručitelj ne smije odbiti dobavljačevo upućivanje tog spora u arbitražu. Uvjeti su povezani. Neuspjeh iz nekog drugog razloga sam ne uspostavlja opisanu zakonsku osnovu.",
+      "U bolničkom predmetu sud nije utvrdio ni ugovorenu arbitražnu klauzulu ni činjenice potrebne za zakonski pretpostavljen pristanak. Kao razlog poništenja naveo je nepostojanje arbitražnog sporazuma prema [članku 40. stavku 1. točki 2. Zakona o arbitraži](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001). To je razlog primijenjen u tom predmetu.",
+      "Vrsta ugovora određuje može li se koristiti taj put. Samostalna kupnja opreme ili drugi javni ugovor ne pripadaju automatski kategoriji radova ili tehničkih usluga. Zasebno ugovorena arbitraža može pružati drugu osnovu, pa treba pročitati i ugovornu klauzulu o rješavanju sporova.",
+      "Američka Uprava za međunarodnu trgovinu (ITA) u [izvješću od 30. rujna 2026.](https://www.trade.gov/market-intelligence/taiwan-energy-industry) opisuje očekivane tajvanske nabave u energetici i elektroenergetskoj mreži krajem te godine i tijekom sljedeće. Materijal je namijenjen i američkim dobavljačima. Riječ je o planiranim prilikama, bez potvrde da je određeni natječaj otvoren, da konkretno društvo ispunjava uvjete ili da će ugovor pravno biti klasificiran kao radovi ili tehničke usluge.",
+      "Pri pripremi ponude korisno je zajedno čitati kategoriju nabave i odredbe o sporu. Tijekom gradnje pitanje postaje konkretnije: kašnjenje zbog kojeg se tražio dulji rok može prouzročiti dodatne troškove. Poslovni tim oba zahtjeva može povezivati s istim problemom, dok dokumentacija bilježi različito traženo rješenje.",
+      "Je li povjerenstvo razmotrilo plaćanje koje sada ulazi u arbitražni zahtjev? Odgovor daju početni zahtjev, njegove izmjene, preporuka ili prijedlog, odgovor naručitelja i nacrt zahtjeva za arbitražu. Sam broj projekta ne pokazuje njihov odnos. Promjena iznosa ili pravnog argumenta ne mora stvoriti novi spor; odlučuju stvarne činjenice i sadržaj zahtjeva.",
+      "Ako dokumenti ostavljaju prazninu, pravna procjena može obuhvatiti postojeći arbitražni sporazum ili potrebu za daljnjom medijacijom o predloženom zahtjevu. U [upitu o tajvanskom ugovornom sporu — obrazac na engleskom](/en/contact) mogu se navesti vrsta projekta, traženo rješenje i sljedeći postupovni datum. Niz izmjena i odgovora pokazuje koji je zahtjev doista prošao medijaciju.",
+      "Prikaz odluke temelji se na službenom sudskom objašnjenju provjerenom 25. listopada 2026.; važeći propisi i navedeni tržišni materijal dodatno su provjereni 26. listopada. Tekst razmatra taj određeni put u arbitražu, bez određivanja nadležnosti ili roka za pojedini ugovor."
+    ],
+    "sentences_by_paragraph": [
+      [
+        "Može li izvođač nakon medijacije o duljem roku gradnje u arbitraži tražiti novac?",
+        "U sporu o izgradnji tajvanske bolnice upravo je taj prijelaz ostao bez odgovarajuće preporuke povjerenstva.",
+        "Vrhovni sud u službenom objašnjenju odluke 106年度台上字第723號 povezuje ga s nedostatkom arbitražnog sporazuma za konkretni novčani spor."
+      ],
+      [
+        "Pravorijek je izvođaču dosudio 44.417.150 novih tajvanskih dolara (NTD).",
+        "Zatim je poništen.",
+        "Vrhovni sud odbio je izvođačev pravni lijek 12. srpnja 2017., pa je poništenje ostalo na snazi.",
+        "Službeno objašnjenje izričito navodi da je predmet pravomoćno završen."
+      ],
+      [
+        "Dokumenti iz medijacije pokazuju četiri različita koraka:"
+      ],
+      [
+        "Potvrda o neuspjeloj medijaciji nije nadomjestila posljednji korak.",
+        "Prema objašnjenju suda, naručitelj je morao dobiti priliku prihvatiti ili odbiti preporuku o upravo onom sporu koji bi se poslije rješavao arbitražom.",
+        "Vrhovni sud pritom je ispravio obrazloženje nižeg suda o primjenjivoj verziji zakona.",
+        "Odluku o poništenju ipak je potvrdio."
+      ],
+      [
+        "Članak 85-1. tajvanskog Zakona o javnoj nabavi predviđa medijaciju pred Povjerenstvom za prigovore u javnoj nabavi za sporove o izvršenju ugovora u kojima stranke ne postignu sporazum.",
+        "Javni naručitelj ne smije odbiti dobavljačev zahtjev za medijaciju."
+      ],
+      [
+        "Za nabavu građevinskih radova ili tehničkih usluga povjerenstvo mora dati preporuku ili prijedlog za medijaciju; ako medijacija ne uspije zato što naručitelj ne pristane na njega, naručitelj ne smije odbiti dobavljačevo upućivanje tog spora u arbitražu.",
+        "Uvjeti su povezani.",
+        "Neuspjeh iz nekog drugog razloga sam ne uspostavlja opisanu zakonsku osnovu."
+      ],
+      [
+        "U bolničkom predmetu sud nije utvrdio ni ugovorenu arbitražnu klauzulu ni činjenice potrebne za zakonski pretpostavljen pristanak.",
+        "Kao razlog poništenja naveo je nepostojanje arbitražnog sporazuma prema članku 40. stavku 1. točki 2. Zakona o arbitraži.",
+        "To je razlog primijenjen u tom predmetu."
+      ],
+      [
+        "Vrsta ugovora određuje može li se koristiti taj put.",
+        "Samostalna kupnja opreme ili drugi javni ugovor ne pripadaju automatski kategoriji radova ili tehničkih usluga.",
+        "Zasebno ugovorena arbitraža može pružati drugu osnovu, pa treba pročitati i ugovornu klauzulu o rješavanju sporova."
+      ],
+      [
+        "Američka Uprava za međunarodnu trgovinu (ITA) u izvješću od 30. rujna 2026. opisuje očekivane tajvanske nabave u energetici i elektroenergetskoj mreži krajem te godine i tijekom sljedeće.",
+        "Materijal je namijenjen i američkim dobavljačima.",
+        "Riječ je o planiranim prilikama, bez potvrde da je određeni natječaj otvoren, da konkretno društvo ispunjava uvjete ili da će ugovor pravno biti klasificiran kao radovi ili tehničke usluge."
+      ],
+      [
+        "Pri pripremi ponude korisno je zajedno čitati kategoriju nabave i odredbe o sporu.",
+        "Tijekom gradnje pitanje postaje konkretnije: kašnjenje zbog kojeg se tražio dulji rok može prouzročiti dodatne troškove.",
+        "Poslovni tim oba zahtjeva može povezivati s istim problemom, dok dokumentacija bilježi različito traženo rješenje."
+      ],
+      [
+        "Je li povjerenstvo razmotrilo plaćanje koje sada ulazi u arbitražni zahtjev?",
+        "Odgovor daju početni zahtjev, njegove izmjene, preporuka ili prijedlog, odgovor naručitelja i nacrt zahtjeva za arbitražu.",
+        "Sam broj projekta ne pokazuje njihov odnos.",
+        "Promjena iznosa ili pravnog argumenta ne mora stvoriti novi spor; odlučuju stvarne činjenice i sadržaj zahtjeva."
+      ],
+      [
+        "Ako dokumenti ostavljaju prazninu, pravna procjena može obuhvatiti postojeći arbitražni sporazum ili potrebu za daljnjom medijacijom o predloženom zahtjevu.",
+        "U upitu o tajvanskom ugovornom sporu — obrazac na engleskom mogu se navesti vrsta projekta, traženo rješenje i sljedeći postupovni datum.",
+        "Niz izmjena i odgovora pokazuje koji je zahtjev doista prošao medijaciju."
+      ],
+      [
+        "Prikaz odluke temelji se na službenom sudskom objašnjenju provjerenom 25. listopada 2026.; važeći propisi i navedeni tržišni materijal dodatno su provjereni 26. listopada.",
+        "Tekst razmatra taj određeni put u arbitražu, bez određivanja nadležnosti ili roka za pojedini ugovor."
+      ]
+    ],
+    "headings": [
+      "Kako se zahtjev mijenjao",
+      "Kada zakon zamjenjuje pristanak naručitelja",
+      "Američki dobavljači i planirani energetski projekti"
+    ],
+    "items": []
+  },
+  "920-taiwan-apartment-ev-charger-common-area-judgment.md": {
+    "sha256": "5e59637b831b7c80b424b0e25288b19e8398fdb560f67110a9fd85b91e73a21d",
+    "paragraphs": [
+      "Kuda prolazi kabel između punjača i brojila? U jednom tajvanskom predmetu oprema je bila na zidu iza parkirnog mjesta, vodovi su išli preko stropa, a spoj je zahvaćao zajednički električni ormarić. Sud je zato razmatrao prostor izvan iscrtanog parkirnog mjesta. Položaj opreme opisan je u [izvorniku presude](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1).",
+      "Odjel Visokog suda Tajvana u Kaohsiungu odbio je stanarevu žalbu u predmetu 111年度上字第132號, odlukom od 22. lipnja 2022. Ostala je obveza uklanjanja instalacije i vraćanja u prijašnje stanje. Sud je utvrdio korištenje zajedničkog zida, stropa i ormarića bez prethodno potrebne suglasnosti.",
+      "Među nespornim činjenicama presuda navodi kutiju za punjenje iza parkirnog mjesta, cijevi s vodovima pričvršćene pomoću stropnih nosača i dodatni prekidač u električnom ormariću. Instalacija je bila spojena na brojilo koje je koristio stanar. Ovlast zahvata u zajedničke dijelove sud je procijenio prema stvarnom opsegu radova.",
+      "Suglasnosti su se temeljile na dvama izvorima. Prema [članku 11. tajvanskog propisa o upravljanju višestambenim zgradama, 公寓大廈管理條例](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11), uklanjanje, veći popravci ili poboljšanja zajedničkih dijelova i povezanih objekata provode se prema odluci skupštine etažnih vlasnika. Sud je tom odredbom ispitao radove u predmetu.",
+      "Pravila same zgrade sadržavala su dodatni uvjet. Njihov članak 15. za dodatne električne vodove i cijevi tražio je dopuštenje upravnog odbora zgrade i sigurnosni pregled elektroenergetskog poduzeća. Oba su zahtjeva bila relevantna. To je odredba konkretnog pravilnika zgrade, uz zakonsku ulogu skupštine etažnih vlasnika.",
+      "Sud je povredu članka 11. i pravila zgrade povezao s obvezom poštovanja drugih propisa i pravila iz [članka 6. stavka 1. točke 5.](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6) Upravni odbor poslao je formalni dopis radi usuglašavanja, a oprema ni nakon toga nije uklonjena. Uz tu povredu i nastavljeno neispunjenje, odbor je prema stavku 3. istog članka mogao zatražiti sudsku zaštitu.",
+      "Članak 6. stavak 1. točka 4. također uređuje postavljanje instalacija za posebni dio uz nužno korištenje zajedničkih dijelova. Sud je izričito zaključio da opisana izvedba ne pripada toj situaciji. [Točke 5. i 6. obrazloženja](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1) polaze od stvarnih mjesta ugradnje i pravila zgrade; iz njih ne proizlazi da svaka ugradnja punjača zahtijeva potpuno isti postupak glasovanja.",
+      "Stanar je nadalje tvrdio da je dodao sklopku, prestao koristiti punjač, zaključao ga i bio spreman predati ključ odboru. Čak i da su ti navodi točni, ocijenio je sud, obveza uklanjanja i vraćanja u prijašnje stanje ostaje. Sud je razmatrao i ovlast stanara za izvedene radove.",
+      "Ponuda s brojem parkirnog mjesta ostavlja velik dio ovog spora nevidljivim. Crtež može prikazati kutiju punjača, zidove i stupove uz koje prolaze vodovi, stropne nosače te ormarić u koji ulaze. Svaki dio trase može zahvaćati drukčije pravo korištenja. Takav se nacrt može usporediti s vlasničkom dokumentacijom, pravilima zgrade i postojećim odlukama.",
+      "Tko odobrava upravo tu izvedbu? Zahtjev upravnom odboru može sadržavati nacrt radova i molbu da se utvrdi primjenjiva odredba, odlučuje li odbor ili skupština vlasnika te koja dokumentacija nedostaje. Ako suglasnost već postoji, korisno je provjeriti odgovaraju li odobrena trasa, uređaj i uvjeti verziji prema kojoj instalater namjerava raditi.",
+      "Kaohsiung je u svibnju 2026. objavio program subvencija koji uključuje kabelske nosače i trase za punjenje električnih vozila u zajedničkim prostorima višestambenih zgrada. [Službena objava](https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE) navodi rok do 30. rujna. Rok je prošao. Program ne zamjenjuje suglasnost za korištenje zajedničkih dijelova niti postupak odobravanja radova u konkretnoj zgradi.",
+      "Nakon zahtjeva za obustavu radova ili uklanjanje, upit na [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) može ukratko opisati trasu, spornu odredbu pravilnika i rok za odgovor. U ugovoru s instalaterom korisno je unaprijed urediti početak radova prije dobivanja suglasnosti i troškove ako se suglasnost ne dobije. Tako dokumentacija obuhvaća i ovlast za trasu i sudbinu već ugovorene cijene radova.",
+      "Prikaz počiva na navedenoj presudi provjerenoj 25. listopada 2026., uz dodatnu provjeru propisa i gradske objave 26. listopada. Naknadne odluke i pravomoćnost nisu potvrđene. Za drugu zgradu potrebno je zasebno utvrditi stvarna mjesta radova, prava korištenja i njezina pravila."
+    ],
+    "sentences_by_paragraph": [
+      [
+        "Kuda prolazi kabel između punjača i brojila?",
+        "U jednom tajvanskom predmetu oprema je bila na zidu iza parkirnog mjesta, vodovi su išli preko stropa, a spoj je zahvaćao zajednički električni ormarić.",
+        "Sud je zato razmatrao prostor izvan iscrtanog parkirnog mjesta.",
+        "Položaj opreme opisan je u izvorniku presude."
+      ],
+      [
+        "Odjel Visokog suda Tajvana u Kaohsiungu odbio je stanarevu žalbu u predmetu 111年度上字第132號, odlukom od 22. lipnja 2022.",
+        "Ostala je obveza uklanjanja instalacije i vraćanja u prijašnje stanje.",
+        "Sud je utvrdio korištenje zajedničkog zida, stropa i ormarića bez prethodno potrebne suglasnosti."
+      ],
+      [
+        "Među nespornim činjenicama presuda navodi kutiju za punjenje iza parkirnog mjesta, cijevi s vodovima pričvršćene pomoću stropnih nosača i dodatni prekidač u električnom ormariću.",
+        "Instalacija je bila spojena na brojilo koje je koristio stanar.",
+        "Ovlast zahvata u zajedničke dijelove sud je procijenio prema stvarnom opsegu radova."
+      ],
+      [
+        "Suglasnosti su se temeljile na dvama izvorima.",
+        "Prema članku 11. tajvanskog propisa o upravljanju višestambenim zgradama, 公寓大廈管理條例, uklanjanje, veći popravci ili poboljšanja zajedničkih dijelova i povezanih objekata provode se prema odluci skupštine etažnih vlasnika.",
+        "Sud je tom odredbom ispitao radove u predmetu."
+      ],
+      [
+        "Pravila same zgrade sadržavala su dodatni uvjet.",
+        "Njihov članak 15. za dodatne električne vodove i cijevi tražio je dopuštenje upravnog odbora zgrade i sigurnosni pregled elektroenergetskog poduzeća.",
+        "Oba su zahtjeva bila relevantna.",
+        "To je odredba konkretnog pravilnika zgrade, uz zakonsku ulogu skupštine etažnih vlasnika."
+      ],
+      [
+        "Sud je povredu članka 11. i pravila zgrade povezao s obvezom poštovanja drugih propisa i pravila iz članka 6. stavka 1. točke 5.",
+        "Upravni odbor poslao je formalni dopis radi usuglašavanja, a oprema ni nakon toga nije uklonjena.",
+        "Uz tu povredu i nastavljeno neispunjenje, odbor je prema stavku 3. istog članka mogao zatražiti sudsku zaštitu."
+      ],
+      [
+        "Članak 6. stavak 1. točka 4. također uređuje postavljanje instalacija za posebni dio uz nužno korištenje zajedničkih dijelova.",
+        "Sud je izričito zaključio da opisana izvedba ne pripada toj situaciji.",
+        "Točke 5. i 6. obrazloženja polaze od stvarnih mjesta ugradnje i pravila zgrade; iz njih ne proizlazi da svaka ugradnja punjača zahtijeva potpuno isti postupak glasovanja."
+      ],
+      [
+        "Stanar je nadalje tvrdio da je dodao sklopku, prestao koristiti punjač, zaključao ga i bio spreman predati ključ odboru.",
+        "Čak i da su ti navodi točni, ocijenio je sud, obveza uklanjanja i vraćanja u prijašnje stanje ostaje.",
+        "Sud je razmatrao i ovlast stanara za izvedene radove."
+      ],
+      [
+        "Ponuda s brojem parkirnog mjesta ostavlja velik dio ovog spora nevidljivim.",
+        "Crtež može prikazati kutiju punjača, zidove i stupove uz koje prolaze vodovi, stropne nosače te ormarić u koji ulaze.",
+        "Svaki dio trase može zahvaćati drukčije pravo korištenja.",
+        "Takav se nacrt može usporediti s vlasničkom dokumentacijom, pravilima zgrade i postojećim odlukama."
+      ],
+      [
+        "Tko odobrava upravo tu izvedbu?",
+        "Zahtjev upravnom odboru može sadržavati nacrt radova i molbu da se utvrdi primjenjiva odredba, odlučuje li odbor ili skupština vlasnika te koja dokumentacija nedostaje.",
+        "Ako suglasnost već postoji, korisno je provjeriti odgovaraju li odobrena trasa, uređaj i uvjeti verziji prema kojoj instalater namjerava raditi."
+      ],
+      [
+        "Kaohsiung je u svibnju 2026. objavio program subvencija koji uključuje kabelske nosače i trase za punjenje električnih vozila u zajedničkim prostorima višestambenih zgrada.",
+        "Službena objava navodi rok do 30. rujna.",
+        "Rok je prošao.",
+        "Program ne zamjenjuje suglasnost za korištenje zajedničkih dijelova niti postupak odobravanja radova u konkretnoj zgradi."
+      ],
+      [
+        "Nakon zahtjeva za obustavu radova ili uklanjanje, upit na wei@hoveringlaw.com.tw može ukratko opisati trasu, spornu odredbu pravilnika i rok za odgovor.",
+        "U ugovoru s instalaterom korisno je unaprijed urediti početak radova prije dobivanja suglasnosti i troškove ako se suglasnost ne dobije.",
+        "Tako dokumentacija obuhvaća i ovlast za trasu i sudbinu već ugovorene cijene radova."
+      ],
+      [
+        "Prikaz počiva na navedenoj presudi provjerenoj 25. listopada 2026., uz dodatnu provjeru propisa i gradske objave 26. listopada.",
+        "Naknadne odluke i pravomoćnost nisu potvrđene.",
+        "Za drugu zgradu potrebno je zasebno utvrditi stvarna mjesta radova, prava korištenja i njezina pravila."
+      ]
+    ],
+    "headings": [
+      "Put voda određuje opseg zahvata",
+      "Što bi trebala pokazati ponuda instalatera"
+    ],
+    "items": []
+  },
+  "921-taiwan-online-game-coins-refund-judgment.md": {
+    "sha256": "0db591eca4c9cb2d659709a3c8a32491924cb6a2a8b939b2c4312be8443a72ef",
+    "paragraphs": [
+      "243.548 novih tajvanskih dolara tražio je igrač nakon što je u taj iznos preračunao kovanice preostale na računu. Sud nije prihvatio zahtjev. Stranke nisu sporile da na računu više nema neiskorištenih plaćenih bodova, premda su kovanice ostale. To polazište prikazuje [presuda u službenoj zbirci za zaštitu potrošača](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), na tiskanim stranicama 140–153.",
+      "Okružni sud u Keelungu odbio je igračevu žalbu u predmetu 109年度消簡上字第1號, odlukom od 13. rujna 2021. Daljnja žalba nije dopuštena. Razlozi se odnose na funkciju kovanica i ugovor te konkretne igre, bez općeg isključivanja virtualnih predmeta iz zaštite potrošača.",
+      "Prema ugovoru, najprije se kupuju bodovi. Njima se zatim plaćaju usluge ili predmeti u igri. Preostale kovanice imale su funkciju žetona kojima su se igrači nadmetali. Sud ih zato nije svrstao među ugovorno povrative neiskorištene plaćene bodove ni naknade koje je operator naplatio za igranje.",
+      "U [točki 8. presude](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), na tiskanim stranicama 148–152, sud je razmotrio i vezu zamjene takvih žetona za gotovinu s kockanjem. Zaključak prati pravila te igre. U drugom sustavu treba utvrditi kako su kovanice stečene, što se njima dobiva i jesu li već korištene; sam natpis na zaslonu ne opravdava odbijanje svakog povrata.",
+      "Zašto prestanak ugovora nije doveo do povrata u tom sporu? Igrač je i sam izjavio da okončava ugovor, pa je sud mogao utvrditi prestanak i zatim odlučiti pripadaju li preostale kovanice onome što se vraća. Takav zaključak ne potvrđuje zakonitost svih prethodnih razloga kojima je operator opravdavao blokadu računa ili prestanak ugovora.",
+      "Prema [točki 18. važećih obveznih standardnih uvjeta za mrežne igre](https://www.ey.gov.tw/File/C27658C15073FF69?A=C), potrošač može u svako doba obavijestiti operatora da okončava ugovor. Operator mora, nakon odbitka nužnih troškova, vratiti vrijednost neiskorištenih plaćenih bodova ili neiskorišteni dio naknada za igru u roku od 30 dana od prestanka ugovora, odnosno postupiti na drugi način koji su obje stranke prihvatile. Druga mogućnost traži uzajamni dogovor.",
+      "Trošak treba moći objasniti. Kad primi obračun, potrošač može tražiti razradu neiskorištenog ostatka, odbitaka i osnove njihova izračuna, pa ih usporediti s ugovorom. Fiksni postotak koji je odredio operator sam ne dokazuje da je odbitak nužan ili razuman.",
+      "Posljednja izmjena navedenih standardnih uvjeta primjenjuje se od 1. siječnja 2023., nakon opisane presude. Predmet iz 2021. ocjenjivan je prema tadašnjem ugovoru i primjenjivim pravilima. Sadašnja točka 4. omogućuje pisano odustajanje u roku od sedam dana od početka igranja, bez navođenja razloga i bez troškova, uz zahtjev za povrat neiskorištenih plaćenih bodova. Nakon tog roka i dalje je dostupan prestanak ugovora prema točki 18.",
+      "Snimka zaslona bilježi broj u određenom trenutku. Za utvrđivanje povrativog iznosa korisno je povezati i način na koji je taj broj nastao:",
+      "[Točka 9.](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) nalaže operatoru da osobnu povijest igranja čuva najmanje 30 dana i postupa po zahtjevu za pristup u skladu s pravilima. Zapise mora dostaviti u roku od sedam dana od primitka zahtjeva. Kada se osporava pojedina kupnja ili pretvorba bodova, rani zahtjev za pristup može pomoći pribaviti povijest tih radnji prije nego što ostane samo posljednja snimka računa.",
+      "Zabranjena točka 6. istog dokumenta isključuje ugovornu odredbu prema kojoj su u sporu jedino mjerodavni operatorovi zapisi i elektronički podaci. Operatorovi zapisi mogu se usporediti s potvrdama o uplati, snimkama i odgovorima službe za podršku.",
+      "U [službenoj statistici za 2025., objavljenoj u svibnju 2026.](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930), mrežne igre bile su druga kategorija po broju prvih potrošačkih pritužbi. Broj tih predmeta ipak se smanjio u odnosu na prethodnu godinu. Tijelo za zaštitu potrošača ujedno je zatražilo primjereno rješavanje blokada računa, obustava pristupa i poteškoća s podrškom.",
+      "Prigovor o povratu može se prvo uputiti operatoru, a zatim koristiti [državni portal za potrošačke pritužbe](https://appeal.cpc.ey.gov.tw/). Ako je sporno tumačenje ugovora ili odbijanje dokaza, na [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) može se poslati sažetak spornog iznosa i roka za odgovor, bez lozinke računa. Za obrazložen zahtjev potrebna je veza između uplaćenog novca, pretvorbe bodova i preostale vrijednosti.",
+      "Prikaz presude temelji se na relevantnim stranicama službene zbirke, uz izvore provjerene 25. i 26. listopada 2026. U drugoj igri funkcija bodova i predmeta te razlozi prestanka ugovora mogu biti drukčiji, pa se iznos povrata utvrđuje prema njezinim podacima i uvjetima."
+    ],
+    "sentences_by_paragraph": [
+      [
+        "243.548 novih tajvanskih dolara tražio je igrač nakon što je u taj iznos preračunao kovanice preostale na računu.",
+        "Sud nije prihvatio zahtjev.",
+        "Stranke nisu sporile da na računu više nema neiskorištenih plaćenih bodova, premda su kovanice ostale.",
+        "To polazište prikazuje presuda u službenoj zbirci za zaštitu potrošača, na tiskanim stranicama 140–153."
+      ],
+      [
+        "Okružni sud u Keelungu odbio je igračevu žalbu u predmetu 109年度消簡上字第1號, odlukom od 13. rujna 2021.",
+        "Daljnja žalba nije dopuštena.",
+        "Razlozi se odnose na funkciju kovanica i ugovor te konkretne igre, bez općeg isključivanja virtualnih predmeta iz zaštite potrošača."
+      ],
+      [
+        "Prema ugovoru, najprije se kupuju bodovi.",
+        "Njima se zatim plaćaju usluge ili predmeti u igri.",
+        "Preostale kovanice imale su funkciju žetona kojima su se igrači nadmetali.",
+        "Sud ih zato nije svrstao među ugovorno povrative neiskorištene plaćene bodove ni naknade koje je operator naplatio za igranje."
+      ],
+      [
+        "U točki 8. presude, na tiskanim stranicama 148–152, sud je razmotrio i vezu zamjene takvih žetona za gotovinu s kockanjem.",
+        "Zaključak prati pravila te igre.",
+        "U drugom sustavu treba utvrditi kako su kovanice stečene, što se njima dobiva i jesu li već korištene; sam natpis na zaslonu ne opravdava odbijanje svakog povrata."
+      ],
+      [
+        "Zašto prestanak ugovora nije doveo do povrata u tom sporu?",
+        "Igrač je i sam izjavio da okončava ugovor, pa je sud mogao utvrditi prestanak i zatim odlučiti pripadaju li preostale kovanice onome što se vraća.",
+        "Takav zaključak ne potvrđuje zakonitost svih prethodnih razloga kojima je operator opravdavao blokadu računa ili prestanak ugovora."
+      ],
+      [
+        "Prema točki 18. važećih obveznih standardnih uvjeta za mrežne igre, potrošač može u svako doba obavijestiti operatora da okončava ugovor.",
+        "Operator mora, nakon odbitka nužnih troškova, vratiti vrijednost neiskorištenih plaćenih bodova ili neiskorišteni dio naknada za igru u roku od 30 dana od prestanka ugovora, odnosno postupiti na drugi način koji su obje stranke prihvatile.",
+        "Druga mogućnost traži uzajamni dogovor."
+      ],
+      [
+        "Trošak treba moći objasniti.",
+        "Kad primi obračun, potrošač može tražiti razradu neiskorištenog ostatka, odbitaka i osnove njihova izračuna, pa ih usporediti s ugovorom.",
+        "Fiksni postotak koji je odredio operator sam ne dokazuje da je odbitak nužan ili razuman."
+      ],
+      [
+        "Posljednja izmjena navedenih standardnih uvjeta primjenjuje se od 1. siječnja 2023., nakon opisane presude.",
+        "Predmet iz 2021. ocjenjivan je prema tadašnjem ugovoru i primjenjivim pravilima.",
+        "Sadašnja točka 4. omogućuje pisano odustajanje u roku od sedam dana od početka igranja, bez navođenja razloga i bez troškova, uz zahtjev za povrat neiskorištenih plaćenih bodova.",
+        "Nakon tog roka i dalje je dostupan prestanak ugovora prema točki 18."
+      ],
+      [
+        "Snimka zaslona bilježi broj u određenom trenutku.",
+        "Za utvrđivanje povrativog iznosa korisno je povezati i način na koji je taj broj nastao:"
+      ],
+      [
+        "Točka 9. nalaže operatoru da osobnu povijest igranja čuva najmanje 30 dana i postupa po zahtjevu za pristup u skladu s pravilima.",
+        "Zapise mora dostaviti u roku od sedam dana od primitka zahtjeva.",
+        "Kada se osporava pojedina kupnja ili pretvorba bodova, rani zahtjev za pristup može pomoći pribaviti povijest tih radnji prije nego što ostane samo posljednja snimka računa."
+      ],
+      [
+        "Zabranjena točka 6. istog dokumenta isključuje ugovornu odredbu prema kojoj su u sporu jedino mjerodavni operatorovi zapisi i elektronički podaci.",
+        "Operatorovi zapisi mogu se usporediti s potvrdama o uplati, snimkama i odgovorima službe za podršku."
+      ],
+      [
+        "U službenoj statistici za 2025., objavljenoj u svibnju 2026., mrežne igre bile su druga kategorija po broju prvih potrošačkih pritužbi.",
+        "Broj tih predmeta ipak se smanjio u odnosu na prethodnu godinu.",
+        "Tijelo za zaštitu potrošača ujedno je zatražilo primjereno rješavanje blokada računa, obustava pristupa i poteškoća s podrškom."
+      ],
+      [
+        "Prigovor o povratu može se prvo uputiti operatoru, a zatim koristiti državni portal za potrošačke pritužbe.",
+        "Ako je sporno tumačenje ugovora ili odbijanje dokaza, na wei@hoveringlaw.com.tw može se poslati sažetak spornog iznosa i roka za odgovor, bez lozinke računa.",
+        "Za obrazložen zahtjev potrebna je veza između uplaćenog novca, pretvorbe bodova i preostale vrijednosti."
+      ],
+      [
+        "Prikaz presude temelji se na relevantnim stranicama službene zbirke, uz izvore provjerene 25. i 26. listopada 2026.",
+        "U drugoj igri funkcija bodova i predmeta te razlozi prestanka ugovora mogu biti drukčiji, pa se iznos povrata utvrđuje prema njezinim podacima i uvjetima."
+      ]
+    ],
+    "headings": [
+      "Od kupljenih bodova do žetona za nadmetanje",
+      "Što se sada mora vratiti",
+      "Evidencija koja objašnjava ostatak na zaslonu"
+    ],
+    "items": []
+  }
+}

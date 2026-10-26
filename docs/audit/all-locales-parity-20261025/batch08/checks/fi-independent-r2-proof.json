@@ -1,0 +1,182 @@
+{
+  "at": "2026-10-26T08:13:34.501109+00:00",
+  "finding": "S01",
+  "status": "CLOSED",
+  "mustOpen": 0,
+  "optionalOpen": 0,
+  "sourceIndependentSnapshot": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-independent-r1-originals.json",
+    "sha256": "345f793188e94620adfd09199e3ac085c1d5dff5c5e98fdaa013bde1f4dc50e4"
+  },
+  "changedFile": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+    "beforeSHA256": "48aa5debe29787ced8afc034f40ba3417dd20afbc7e80b3078b77543a368814a",
+    "currentSHA256": "41db82df9e378f70cda63273f1dc53295d076d3b88bda8796af3806398f9b381",
+    "old": "Säännös ei tee yrityksen aineistosta käyttökelvotonta. Sen rinnalle voidaan esittää maksukuitteja ja tukiviestejä, jotka kuvaavat rahan ja pisteiden kulkua.",
+    "new": "Yrityksen aineiston rinnalle voidaan esittää maksukuitteja ja tukiviestejä, jotka kuvaavat rahan ja pisteiden kulkua.",
+    "exactReplacementOnly": true,
+    "inverseExact": true,
+    "frontmatterFAQUnchanged": true,
+    "numbersURLsHeadingsListsUnchanged": true,
+    "beforeUnits": 46,
+    "currentUnits": 45,
+    "boundaryDelta": [
+      "--- ",
+      "+++ ",
+      "@@ -35,6 +35,5 @@",
+      " Velvoitteet ilmenevät pakollisten ehtojen 9 kohdasta.",
+      " Samojen sääntöjen kiellettyjen ehtojen 6 kohta estää sopimusehdon, joka tekisi yrityksen säilyttämästä pelihistoriasta ja sähköisistä tiedoista ainoan riidan arviointiperusteen.",
+      "-Säännös ei tee yrityksen aineistosta käyttökelvotonta.",
+      "-Sen rinnalle voidaan esittää maksukuitteja ja tukiviestejä, jotka kuvaavat rahan ja pisteiden kulkua.",
+      "+Yrityksen aineiston rinnalle voidaan esittää maksukuitteja ja tukiviestejä, jotka kuvaavat rahan ja pisteiden kulkua.",
+      " Vuoden 2025 virallisissa kuluttajavalitustilastoissa verkkopelit olivat toiseksi suurin ensimmäisen vaiheen valitusten aihealue, vaikka tämän ryhmän tapausmäärä väheni edellisvuodesta.",
+      " Tilastot julkaistiin 7. toukokuuta 2026."
+    ],
+    "actualMetrics": {
+      "lang": "fi",
+      "sentences": 45,
+      "paras": 14,
+      "heads": 4,
+      "list_items": 4,
+      "mean_len": 11.9,
+      "len_cv": 0.534,
+      "short_share": 0.356,
+      "long_share": 0.0,
+      "para_cv": 0.23,
+      "even_run3": 0.0,
+      "top_end": "takaisin",
+      "top_end_share": 0.022,
+      "ja_desu": 0,
+      "ja_da": 0,
+      "top_opener": "antaako",
+      "top_opener_n": 1,
+      "opener_rep": 0.0,
+      "consec_same_start": 1,
+      "cite_para_share": 0.0,
+      "cite_end_share": 0.0,
+      "contrast": 0,
+      "caveat": 0,
+      "questions": 2,
+      "num_per100": 4.87,
+      "hypo_open": false,
+      "q_open": true,
+      "formula_close": false,
+      "first": "Antaako pelitilille jäänyt kolikkosaldo oikeuden saada rahaa takaisin?",
+      "last": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026; tapaus on luettu virallisen kokoelman kyseisiltä sivuilta. Toisen peli",
+      "length_unit": "orthographic_words",
+      "short_threshold": 8,
+      "long_threshold": 32,
+      "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+    }
+  },
+  "unchangedOtherFiveExact": true,
+  "r1ArtifactsUnchanged": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/fi-independent.md",
+      "sha256": "f6337b46cdf568d5f115c0b64ce094bb8a1134a18c1f06aaabb6a785275726df",
+      "bytes": 14163
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-independent-preparation.json",
+      "sha256": "91021b0a2cef743494c5c8bd4a6959e121f2098c95c6e4d938370649a9022952",
+      "bytes": 10334
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-independent-r1-originals.json",
+      "sha256": "345f793188e94620adfd09199e3ac085c1d5dff5c5e98fdaa013bde1f4dc50e4",
+      "bytes": 52755
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-independent-proof.json",
+      "sha256": "20376fe40a6ac08ac83e7dfca94865253114c66563cf055377f694fbd614c599",
+      "bytes": 34178
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-independent-metadata.json",
+      "sha256": "341281ef3bb4887b672c53c65e67ebfb92facc1f179196f6bae218fef690bd7f",
+      "bytes": 39596
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-independent-findings.json",
+      "sha256": "df803bb6ffdd29bca8433ee77578cfa39aabd2ee5afbca3ba09a4afe5f807cba",
+      "bytes": 1250
+    }
+  ],
+  "r2InputChecks": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "96b1fc09ff63d43fdedd07d82bcfce983ac8157a974b4ff55d1d206e1ae3edd7"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "ac862ed033d2d9c250efb4becf26f5fd0ff1b20dac94b9824fead66db2578546"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "fbc0a177749bd8b4941cda63daf48e4fd7e465040b8121f53a82e274483b5c5d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "ca661812f570ae6d872b53c81a464cd073113b824ba64ce07e07fa09d0628fde"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "9c8634739beb39fc2a4e0288d106d2b7f38f73e8374ebddbc31eccaa6b342f38"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "41db82df9e378f70cda63273f1dc53295d076d3b88bda8796af3806398f9b381"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-author-final-manifest.json",
+      "sha256": "dff84ef72df9ad78f90e80c52274e86a0db4e377008d33dbbf3d95d7ee5b42c9"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/fi-author.md",
+      "sha256": "0b48ba3f404d3a4568082cc78380f417839c641c93dd62449cea9663eb0112e0"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-independent-manifest.json",
+      "sha256": "3a195b46fc352ff2845abdeb172de24d61954f7946f4e004ddf91085f84ac475"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/fi-independent.md",
+      "sha256": "f6337b46cdf568d5f115c0b64ce094bb8a1134a18c1f06aaabb6a785275726df"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-independent-s01-edit.json",
+      "sha256": "249608132b6abab6ca03b4cd9083618d4c04ca6ba35740b1899e561dc07bb93c"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-921-before-independent-edit.md",
+      "sha256": "48aa5debe29787ced8afc034f40ba3417dd20afbc7e80b3078b77543a368814a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-variety-independent-r2.json",
+      "sha256": "b75461aff627937d266bf71ab1c67930d66a8b8780e650a9c20cc89cb010a9e7"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/fi-content-audit-independent-r2.json",
+      "sha256": "dfc1f150064eb33b1b425667363289282b44c1b09d8f4ad0af7208ee80166f81"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/fi-author-r2.md",
+      "sha256": "38f7d495128d13e0f2fda2fba2e5fbf923f885f7393f9246eaedc7608564975b"
+    }
+  ],
+  "tools": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/fi.json": "87535d428aaf9613187c52adc3c387e365f419f423f693128fd77e08646b2629"
+  },
+  "actualCliExit": 0,
+  "independentFullCliRerun": false,
+  "structureErrors": 0,
+  "semanticStatus": "REVIEW_REQUIRED",
+  "currentSixTotalUnits": 255,
+  "FAQ": 17,
+  "sourceRSharedOrOthersModified": false,
+  "humanNativeLegalApproval": false,
+  "publicDeployment": false
+}

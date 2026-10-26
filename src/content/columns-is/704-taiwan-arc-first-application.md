@@ -44,7 +44,7 @@ Fyrir umsókn á grundvelli búsetuáritunar þarf umsóknareyðublað, nýlega 
 
 Fylgigögn vegna vinnu eru viðeigandi atvinnuheimild og staðfesting á starfi, gefin út innan síðasta mánaðar, eða gögn um undanþágu frá atvinnuleyfi.
 
-Ertu þegar skráður í skólann? Fyrir skráningu er inntökubréfið lagt fram. Eftir skráningu þarf nýlega staðfestingu skólans, útgefna innan síðasta mánaðar, ásamt gögnum um skráningu á yfirstandandi önn.
+Ertu þegar skráður í skólann? Fyrir skráningu er inntökubréfið lagt fram. Eftir skráningu þarf nýlega staðfestingu á námi, útgefna innan síðasta mánaðar.
 
 Fjölskyldutengsl eru staðfest með til dæmis hjúskapar- eða fæðingarvottorði. Við bætast viðeigandi persónu- eða dvalarskilríki þess fjölskyldumeðlims sem umsóknin byggist á. Nákvæm gögn ráðast af stöðu hans; vegabréf þess aðila er ekki algilt fylgiskjal fyrir alla fjölskylduflokka.
 

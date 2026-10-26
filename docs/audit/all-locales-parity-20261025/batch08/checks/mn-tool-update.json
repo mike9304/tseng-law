@@ -1,0 +1,7 @@
+{
+  "at": "2026-10-26T16:39:40.300424+09:00",
+  "reason": "Root installed reviewed FI calendar and Markdown display escape candidate before first MN measurement. No MN-target-score fitting or profile/word/threshold/HARD change. Initial mn-inputs preserved.",
+  "shared_expansion_sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+  "installation_receipt": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/ROOT-INSTALL-RECEIPT.json",
+  "installation_receipt_sha256": "b9618bb277abf32eb7bf767cc56400bb1af12ada154da431effd8b56dd68bf88"
+}

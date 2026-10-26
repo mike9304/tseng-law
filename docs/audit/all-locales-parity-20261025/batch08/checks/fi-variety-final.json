@@ -1,0 +1,1872 @@
+{
+  "atUTC": "2026-10-26T07:37:26.475719+00:00",
+  "command": [
+    "python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+    "--lang",
+    "fi"
+  ],
+  "exitCode": 0,
+  "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/915-taiwan-public-contract-mediation-arbitration-same-claim.md [fi] sentences=40 mean=11.1 cv=0.469 short=0.4 run3=0.026 opener_rep=0.0 cite_end=0.0 cite_para=0.231 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/916-taiwan-parent-company-pollution-liability-us-investor.md [fi] sentences=46 mean=11.7 cv=0.53 short=0.391 run3=0.045 opener_rep=0.0 cite_end=0.0 cite_para=0.071 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/918-taiwan-presale-mortgage-notice-handover-judgment.md [fi] sentences=44 mean=11.4 cv=0.479 short=0.409 run3=0.048 opener_rep=0.077 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [fi] sentences=40 mean=11.3 cv=0.486 short=0.375 run3=0.053 opener_rep=0.0 cite_end=0.0 cite_para=0.154 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/920-taiwan-apartment-ev-charger-common-area-judgment.md [fi] sentences=40 mean=11.6 cv=0.47 short=0.325 run3=0.053 opener_rep=0.0 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md [fi] sentences=46 mean=11.7 cv=0.539 short=0.37 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+  "stderr": "",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "96b1fc09ff63d43fdedd07d82bcfce983ac8157a974b4ff55d1d206e1ae3edd7"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "ac862ed033d2d9c250efb4becf26f5fd0ff1b20dac94b9824fead66db2578546"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "fbc0a177749bd8b4941cda63daf48e4fd7e465040b8121f53a82e274483b5c5d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "ca661812f570ae6d872b53c81a464cd073113b824ba64ce07e07fa09d0628fde"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "9c8634739beb39fc2a4e0288d106d2b7f38f73e8374ebddbc31eccaa6b342f38"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "48aa5debe29787ced8afc034f40ba3417dd20afbc7e80b3078b77543a368814a"
+    }
+  ],
+  "toolHashes": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/fi.json": "87535d428aaf9613187c52adc3c387e365f419f423f693128fd77e08646b2629"
+  },
+  "extraction": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "96b1fc09ff63d43fdedd07d82bcfce983ac8157a974b4ff55d1d206e1ae3edd7",
+      "metrics": {
+        "lang": "fi",
+        "sentences": 40,
+        "paras": 13,
+        "heads": 4,
+        "list_items": 4,
+        "mean_len": 11.1,
+        "len_cv": 0.469,
+        "short_share": 0.4,
+        "long_share": 0.0,
+        "para_cv": 0.306,
+        "even_run3": 0.026,
+        "top_end": "2026",
+        "top_end_share": 0.05,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "44",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.231,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.73,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "44 417 150 Taiwanin dollarin välitystuomio kumottiin sairaalaurakkaa koskeneessa riidassa.",
+        "last": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026. Tapauskuvaus perustuu korkeimman oikeuden viralliseen selosteeseen; yk",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "44",
+          "sentences": [
+            {
+              "text": "44 417 150 Taiwanin dollarin välitystuomio kumottiin sairaalaurakkaa koskeneessa riidassa.",
+              "units": 10
+            },
+            {
+              "text": "Urakoitsija oli saanut sovittelusuosituksen lisäajasta mutta vaati välimiehiltä rahaa.",
+              "units": 9
+            },
+            {
+              "text": "Tälle rahavaatimukselle ei ollut annettu vastaavaa suositusta.",
+              "units": 7
+            },
+            {
+              "text": "Taiwanin korkeimman oikeuden ratkaisuseloste 106年度台上字第723號 kuvaa, miten vaatimuksen vaihtuminen vaikutti menettelyn perusteeseen.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "korkein",
+          "sentences": [
+            {
+              "text": "Korkein oikeus hylkäsi urakoitsijan muutoksenhaun 12. heinäkuuta 2017.",
+              "units": 8
+            },
+            {
+              "text": "Välitystuomion kumoaminen jäi voimaan.",
+              "units": 4
+            },
+            {
+              "text": "Virallinen seloste toteaa tämän oikeusasian päättyneen lainvoimaisesti: konkreettisesta rahariidasta puuttui sekä osapuolten sopima että lain nojalla syntyvä välityssopimus.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "urakoitsijan",
+          "sentences": [
+            {
+              "text": "Urakoitsijan pyytämä hyvitys muuttui seuraavasti:",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "todistus",
+          "sentences": [
+            {
+              "text": "Todistus sovittelun epäonnistumisesta jäi asiakirjoihin.",
+              "units": 5
+            },
+            {
+              "text": "Sen sisältö ei kuitenkaan täyttänyt puuttuvaa vaihetta, sillä hankintayksikölle piti antaa tilaisuus hyväksyä tai hylätä juuri kyseistä riitaa koskeva suositus.",
+              "units": 20
+            },
+            {
+              "text": "Korkeimman oikeuden selosteen mukaan alemman oikeuden perusteluja sovellettavasta lain versiosta oikaistiin, mutta välitystuomion kumoamisen lopputulos säilyi.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "taiwanin",
+          "sentences": [
+            {
+              "text": "Taiwanin julkisia hankintoja koskevan lain 85-1 § mahdollistaa hankintasopimuksen täyttämistä koskevan riidan viemisen hankintojen muutoksenhakulautakunnan sovitteluun.",
+              "units": 16
+            },
+            {
+              "text": "Hankintayksikkö ei saa kieltäytyä toimittajan pyytämästä sovittelusta.",
+              "units": 7
+            },
+            {
+              "text": "Rakennusurakassa tai teknisiä palveluja koskevassa sopimuksessa lautakunnan on annettava sovittelusuositus tai ehdotus; jos sovittelu epäonnistuu hankintayksikön vastustaessa sitä, yksikkö ei saa kieltäytyä toimittajan vaatimasta välimiesmenettelystä.",
+              "units": 25
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "ehdot",
+          "sentences": [
+            {
+              "text": "Ehdot liittyvät toisiinsa.",
+              "units": 3
+            },
+            {
+              "text": "Sairaalaurakassa rahavaatimusta ei kattanut sovittu välityslauseke eikä sellainen menettelyketju, jolla laki olisi korvannut suostumuksen.",
+              "units": 14
+            },
+            {
+              "text": "Tuomioistuin katsoi välityssopimuksen puuttumisen olevan välimiesmenettelylain 40 §:n 1 momentin 2 kohdan mukainen kumoamisperuste.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "sopimuksen",
+          "sentences": [
+            {
+              "text": "Sopimuksen luokittelu vaikuttaa reitin käyttöön.",
+              "units": 5
+            },
+            {
+              "text": "Nykyinen 85-1 § koskee tältä osin rakennusurakoita ja teknisiä palveluja, joten esimerkiksi laitehankinta ei kuulu siihen vain julkisen ostajan vuoksi.",
+              "units": 20
+            },
+            {
+              "text": "Sopimukseen voi silti sisältyä erillinen välityslauseke.",
+              "units": 6
+            },
+            {
+              "text": "Sen sanamuoto ja kattama riita on silloin arvioitava omana toimivaltaperusteenaan.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "yhdysvaltain",
+          "sentences": [
+            {
+              "text": "Yhdysvaltain International Trade Administrationin Taiwanin energiasektoria koskeva katsaus julkaistiin 30. syyskuuta 2026.",
+              "units": 12
+            },
+            {
+              "text": "Se kuvaa loppuvuodelle ja vuodelle 2027 suunniteltuja sähköntuotannon ja verkkoinfrastruktuurin hankintoja myös yhdysvaltalaisten toimittajien näkökulmasta.",
+              "units": 15
+            },
+            {
+              "text": "Kyse on ennakoiduista mahdollisuuksista.",
+              "units": 4
+            },
+            {
+              "text": "Katsaus ei ratkaise tarjouskilpailun avautumista, yksittäisen yrityksen kelpoisuutta tai tulevan sopimuksen oikeudellista luokkaa.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "urakan",
+          "sentences": [
+            {
+              "text": "Urakan viivästyessä sama tapahtuma voi ensin johtaa lisäaikapyyntöön ja myöhemmin ylimääräisten kustannusten vaatimiseen.",
+              "units": 13
+            },
+            {
+              "text": "Projektiryhmälle kyse saattaa olla yhdestä kaupallisesta ongelmasta.",
+              "units": 7
+            },
+            {
+              "text": "Menettelyasiakirjoissa vaadittu seuraamus on silti voinut vaihtua, kuten sairaalaurakan sovittelussa tapahtui.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "käsittelikö",
+          "sentences": [
+            {
+              "text": "Käsittelikö lautakunta rahavaatimuksen, jota nyt valmistellaan välimiehille?",
+              "units": 7
+            },
+            {
+              "text": "Hakemuksen, sen muutosten, suosituksen tai ehdotuksen ja hankintayksikön vastauksen rinnalle voidaan asettaa suunniteltu välimiesmenettelyn vaatimus.",
+              "units": 15
+            },
+            {
+              "text": "Vertailu osoittaa, mihin konkreettiseen riitaan kukin asiakirja vastaa.",
+              "units": 8
+            },
+            {
+              "text": "Pelkkä hankenumero ei kerro tätä.",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "summan",
+          "sentences": [
+            {
+              "text": "Summan muuttaminen tai oikeudellisen perustelun tarkentaminen ei itsessään ratkaise riidan samuutta.",
+              "units": 11
+            },
+            {
+              "text": "Arvioinnissa luetaan tapahtumat ja vaadittu oikeussuoja yhdessä.",
+              "units": 7
+            },
+            {
+              "text": "Vuoden 2017 tuomiossa ratkaiseva tapahtumaketju koski siirtymistä rahakorvauksesta lisäaikaan ja takaisin rahaan, eikä ratkaisua voi laajentaa kaikkien muutosten kielloksi.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "jos",
+          "sentences": [
+            {
+              "text": "Jos asiakirjoihin jää aukko, yksilöllisessä arviossa voidaan selvittää erillisen välityssopimuksen olemassaolo ja uuden sovittelun tarve aiotulle vaatimukselle.",
+              "units": 17
+            },
+            {
+              "text": "Englanninkielisen yhteydenottosivun kautta voi kuvata urakan tyypin, vaatimuksen ja seuraavan menettelypäivän.",
+              "units": 11
+            },
+            {
+              "text": "Arvion taustaksi tarvitaan hakemusten ja vastausten ketju, josta vaatimuksen muuttuminen näkyy.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "lähteet",
+          "sentences": [
+            {
+              "text": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026.",
+              "units": 8
+            },
+            {
+              "text": "Tapauskuvaus perustuu korkeimman oikeuden viralliseen selosteeseen; yksittäisen sopimuksen riidanratkaisupaikka ja määräajat jäävät sopimus- ja asiakirjakohtaisesti arvioitaviksi.",
+              "units": 16
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Sovittelun aikana vaihtunut vaatimus",
+        "Milloin laki korvaa hankintayksikön suostumuksen",
+        "Aikatauluriidasta voi kehittyä kustannusriita",
+        "Viranomaislähteet"
+      ],
+      "listItems": [
+        "- [Korkeimman oikeuden seloste 106年度台上字第723號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693), 12. heinäkuuta 2017: vaatimuksen muuttuminen ja välitystuomion lainvoimainen kumoaminen.",
+        "- [Julkisia hankintoja koskeva laki, 85-1 §](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057): sopimuksen täyttämistä koskevien riitojen sovittelu ja välimiesmenettely.",
+        "- [Välimiesmenettelylaki, 40 §:n 1 momentin 2 kohta](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001): välityssopimuksen puuttumiseen liittyvä kumoamisperuste.",
+        "- [International Trade Administration: Taiwan Energy Industry](https://www.trade.gov/market-intelligence/taiwan-energy-industry), 30. syyskuuta 2026: ennakoidut energia- ja verkkohankinnat."
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "ac862ed033d2d9c250efb4becf26f5fd0ff1b20dac94b9824fead66db2578546",
+      "metrics": {
+        "lang": "fi",
+        "sentences": 46,
+        "paras": 14,
+        "heads": 5,
+        "list_items": 3,
+        "mean_len": 11.7,
+        "len_cv": 0.53,
+        "short_share": 0.391,
+        "long_share": 0.022,
+        "para_cv": 0.197,
+        "even_run3": 0.045,
+        "top_end": "tehtiin",
+        "top_end_share": 0.022,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "kuka",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.071,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.24,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Kuka sai tiedon tehtaan saastumisesta, ja mitä sen jälkeen tehtiin?",
+        "last": "Viranomaislähteet on tarkistettu 25. ja 26. lokakuuta 2026. Kuvaus käsittelee yhtä yksilöityä ratkaisua korkeimman oikeu",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "kuka",
+          "sentences": [
+            {
+              "text": "Kuka sai tiedon tehtaan saastumisesta, ja mitä sen jälkeen tehtiin?",
+              "units": 10
+            },
+            {
+              "text": "Taiwanilaisen elektroniikkatehtaan työntekijöiden kemikaalialtistusta koskeneessa riidassa yrityskauppaa edeltäneet ympäristötutkimukset kuuluivat emoyhtiöitä vastaan esitettyyn näyttöön.",
+              "units": 14
+            },
+            {
+              "text": "Korkein oikeus tarkasteli saastumisesta tietämistä yhdessä määräysvallan, vaaratilanteeseen reagoinnin ja taiwanilaisen yhtiön varoja vähentäneiden siirtojen kanssa.",
+              "units": 16
+            },
+            {
+              "text": "Tämä yhteys kuvataan ratkaisun 107年度台上字第267號 virallisessa selosteessa.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "ratkaisu",
+          "sentences": [
+            {
+              "text": "Ratkaisu annettiin 16. elokuuta 2018.",
+              "units": 5
+            },
+            {
+              "text": "Emoyhtiöiden vastuun perusteena oli niiden toiminta.",
+              "units": 6
+            },
+            {
+              "text": "Pelkkää ulkomaista omistusta ei käsitelty riittävänä syynä vastata tytäryhtiön kaikista velvoitteista.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "korkeimman",
+          "sentences": [
+            {
+              "text": "Korkeimman oikeuden selosteessa kuvataan saastumisen osoittaneita tutkimuksia ja määräysvaltaa käyttäneiden ryhmien tietoa löydöksistä.",
+              "units": 13
+            },
+            {
+              "text": "Työntekijöille ei tiedotettu eikä ongelmaan puututtu.",
+              "units": 6
+            },
+            {
+              "text": "Myös pääoman alentamista ja ulkomaille tehtyjä rahansiirtoja arvioitiin vastuiden välttämiseen tähdänneinä toimina.",
+              "units": 12
+            },
+            {
+              "text": "Tuomioistuin hyväksyi perustelut, joilla vastuu saattoi ulottua määräysvaltaa käyttäneisiin yhtiöihin oikeushenkilöiden erillisyydestä huolimatta.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "raportin",
+          "sentences": [
+            {
+              "text": "Raportin jakelulista auttaa selvittämään tiedonkulkua.",
+              "units": 5
+            },
+            {
+              "text": "Hallituksen aineistot ja toimintaohjeet puolestaan voivat osoittaa, kenellä oli valta päättää vastauksesta havaittuun vaaraan.",
+              "units": 14
+            },
+            {
+              "text": "Kun myöhemmät siirtopäätökset asetetaan samalle aikajanalle, näkyviin tulee myös se, mitä velvoitteita ja selvittämättömiä riskejä päätöksentekijöiden tiedossa silloin oli.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "yrityskaupan",
+          "sentences": [
+            {
+              "text": "Yrityskaupan tarkastuksessa löydöstä voi seurata uusi tutkimuspyyntö, korjauspäätös tai avoimeksi jäävä kysymys.",
+              "units": 12
+            },
+            {
+              "text": "Näistä jokaiselle on oma paikkansa päätösaineistossa.",
+              "units": 6
+            },
+            {
+              "text": "Jos tekninen huoli jää ratkaisematta, myönteinen yhteenveto kaupasta ei saa häivyttää alkuperäistä havaintoa tai sitä, kenelle jatkoselvitys kuului.",
+              "units": 18
+            },
+            {
+              "text": "Tällainen asiakirjaketju auttaa myöhemmin arvioimaan tietoa ja tekoja.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "246",
+          "sentences": [
+            {
+              "text": "246 kantajan osalta korkein oikeus kumosi ratkaisun asianomaiset osat ja palautti ne uudelleen käsiteltäviksi.",
+              "units": 14
+            },
+            {
+              "text": "Palautukseen liittyi puutteita vahingon, näytön ja vaatimusten ajamista koskevan valtuuden arvioinnissa.",
+              "units": 11
+            },
+            {
+              "text": "262 kantajaa koskeneet muutoksenhaut hylättiin.",
+              "units": 5
+            },
+            {
+              "text": "Virallinen lopputuloksen kuvaus erottaa nämä ryhmät.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "palautetuissa",
+          "sentences": [
+            {
+              "text": "Palautetuissa osissa käsittely jatkui.",
+              "units": 4
+            },
+            {
+              "text": "Palautus ei tarkoittanut kaikkien vahinkovaatimusten perusteettomuutta, eikä toisia osia koskenut muutoksenhakujen hylkääminen ratkaissut koko laajaa oikeudenkäyntikokonaisuutta.",
+              "units": 16
+            },
+            {
+              "text": "Historiallista vastuuta arvioivan sijoittajan on siksi tunnistettava täsmällinen oikeusasia ja sen käsittelyvaihe ennen velvoitteen suuruuden arvioimista.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "taiwanin",
+          "sentences": [
+            {
+              "text": "Taiwanin yhtiölain 154 §:n lähtökohtana on osakkeenomistajan vastuun rajoittuminen osakkeista maksettavaan määrään.",
+              "units": 12
+            },
+            {
+              "text": "Säännöksen toinen momentti koskee tilannetta, jossa osakas käyttää väärin yhtiön oikeushenkilöllisyyttä ja aiheuttaa näin tietyn velan, jonka maksaminen on yhtiölle selvästi vaikeaa, ja olosuhteet ovat niin vakavat, että osakkaan vastuu on tarpeen.",
+              "units": 32
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "edellytykset",
+          "sentences": [
+            {
+              "text": "Edellytykset ovat kumulatiivisia.",
+              "units": 3
+            },
+            {
+              "text": "Omistus, maksamaton velka tai ympäristöhavainto yksin ei kuvaa koko poikkeussäännöstä.",
+              "units": 10
+            },
+            {
+              "text": "Nykyistä pykälää ei myöskään voi esittää vuoden 2018 ratkaisun historiallisten tekojen ainoaksi oikeusperusteeksi: tuomioistuin tarkasteli määräysvaltaa käyttäneiden yhtiöiden konkreettista menettelyä ja perusteita ulottaa vastuu niiden erillisten oikeushenkilöiden yli.",
+              "units": 28
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "tavanomaisia",
+          "sentences": [
+            {
+              "text": "Tavanomaisia yhtiörakenteita käsitellään tytäryhtiön ja sivuliikkeen vertailussa.",
+              "units": 7
+            },
+            {
+              "text": "Saastumisriita tuo rakennevalinnan rinnalle käytännön kysymyksen.",
+              "units": 6
+            },
+            {
+              "text": "Miten konserni käytti valtaansa saatuaan tiedon riskistä?",
+              "units": 7
+            },
+            {
+              "text": "Perustamisasiakirjat eivät yksin kuvaa myöhempiä päätöksiä.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "yhdysvaltain",
+          "sentences": [
+            {
+              "text": "Yhdysvaltain kauppaedustajan toimiston helmikuun 2026 USTR-tietolehti kuvaa aikomusta helpottaa rajat ylittäviä investointeja.",
+              "units": 12
+            },
+            {
+              "text": "Siinä käsitellään myös Yhdysvaltain mahdollista tukea yksityisten investointien rahoitukseen Taiwanissa yhteistyössä yhdysvaltalaisten yksityisten kumppanien kanssa ja sovellettavan lain rajoissa.",
+              "units": 19
+            },
+            {
+              "text": "Tietolehti ei anna yksittäiselle sijoittajalle automaattista oikeutta rahoitukseen.",
+              "units": 8
+            },
+            {
+              "text": "Siitä ei tässä myöskään päätellä koko sopimuksen tulleen voimaan.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "ennen",
+          "sentences": [
+            {
+              "text": "Ennen varojenjakoa, pääoman alentamista tai irtautumiseen liittyvää siirtoa päätöksentekijöille on hyödyllistä koota arvio tunnetuista altistumisista, avoimista vaatimuksista ja Taiwanin yhtiöön jäävistä varoista.",
+              "units": 22
+            },
+            {
+              "text": "Oikeudellinen arvio kohdistuu suunniteltuun järjestelyyn.",
+              "units": 5
+            },
+            {
+              "text": "Asiakirjan nimi tai datahuoneessa oleva lukematon raportti ei osoita, miten riskiin on tosiasiassa vastattu.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "englanninkielisellä",
+          "sentences": [
+            {
+              "text": "Englanninkielisellä yhteydenottosivulla asian voi aloittaa kertomalla järjestelyn, siihen liittyvän Taiwanin yhtiön ja suunnitellun siirto- tai kaupantekopäivän.",
+              "units": 16
+            },
+            {
+              "text": "Teknisille raporteille ja työntekijöiden arkaluonteisille tiedoille voidaan sopia erillinen toimitustapa.",
+              "units": 10
+            },
+            {
+              "text": "Arvioinnin kannalta yhteen kuuluvat alkuperäiset löydökset, niiden johdosta tehdyt päätökset ja myöhempien varojensiirtojen hyväksynnät.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "viranomaislähteet",
+          "sentences": [
+            {
+              "text": "Viranomaislähteet on tarkistettu 25. ja 26. lokakuuta 2026.",
+              "units": 8
+            },
+            {
+              "text": "Kuvaus käsittelee yhtä yksilöityä ratkaisua korkeimman oikeuden selosteen perusteella sekä nykyistä yhtiölain säännöstä; se ei kata kaikkien asiaan liittyvien oikeudenkäyntien historiaa.",
+              "units": 21
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Raportin vastaanottajat ja myöhemmät päätökset",
+        "Ratkaisun eri osat etenivät eri tavoin",
+        "Osakkaan rajoitettu vastuu ja väärinkäytön ehdot",
+        "Varojen jakamista edeltävä arvio",
+        "Viranomaislähteet"
+      ],
+      "listItems": [
+        "- [Korkeimman oikeuden seloste 107年度台上字第267號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523), 16. elokuuta 2018: ympäristötieto, määräysvalta, varojensiirrot ja ratkaisun jakautunut lopputulos.",
+        "- [Yhtiölain 154 §](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154): osakkeenomistajan vastuu ja oikeushenkilöllisyyden väärinkäyttöä koskeva poikkeus.",
+        "- [USTR:n tietolehti vastavuoroista kauppaa koskevasta sopimuksesta](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade), helmikuu 2026: ilmoitetut investointeihin liittyvät aikomukset."
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "fbc0a177749bd8b4941cda63daf48e4fd7e465040b8121f53a82e274483b5c5d",
+      "metrics": {
+        "lang": "fi",
+        "sentences": 44,
+        "paras": 13,
+        "heads": 4,
+        "list_items": 4,
+        "mean_len": 11.4,
+        "len_cv": 0.479,
+        "short_share": 0.409,
+        "long_share": 0.0,
+        "para_cv": 0.124,
+        "even_run3": 0.048,
+        "top_end": "2026",
+        "top_end_share": 0.045,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "taiwanin",
+        "top_opener_n": 2,
+        "opener_rep": 0.077,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.39,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Asunnosta puuttuivat vielä vesi- ja sähköliitännät, kun rakennuttaja lähetti ostajalle asu",
+        "last": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026. Ratkaisu on luettu virallisen kokoelman sitä koskevilta osin. Tapaukse",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "asunnosta",
+          "sentences": [
+            {
+              "text": "Asunnosta puuttuivat vielä vesi- ja sähköliitännät, kun rakennuttaja lähetti ostajalle asuntolainaa koskevan kirjeen.",
+              "units": 13
+            },
+            {
+              "text": "Kuukausia myöhemmin ostaja sai tulla sisään kunnostamaan ja siivoamaan.",
+              "units": 9
+            },
+            {
+              "text": "Tuomioistuin ei pitänyt tätä sopimuksen mukaisena luovutuksena.",
+              "units": 7
+            },
+            {
+              "text": "Kirjeen ja asuntoon pääsyn merkitystä arvioitiin muun näytön kanssa kuluttajansuojaviranomaisen julkaisemassa ratkaisussa, painetuilla sivuilla 173–187.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "taiwanin",
+          "sentences": [
+            {
+              "text": "Taiwanin ylioikeuden Taichungin jaoston asia oli 109年度上易字第289號.",
+              "units": 7
+            },
+            {
+              "text": "Tuomioistuin hylkäsi rakennuttajan muutoksenhaun ja lisävaatimuksen perusteettomina 9. helmikuuta 2022.",
+              "units": 10
+            },
+            {
+              "text": "Velvollisuus maksaa luovutuksen viivästymiseen liittyviä korkoja jäi voimaan.",
+              "units": 8
+            },
+            {
+              "text": "Ratkaisuun ei voinut hakea edelleen muutosta.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "rakennuttaja",
+          "sentences": [
+            {
+              "text": "Rakennuttaja pyysi 23. helmikuuta 2019 lähetetyssä kirjeessä ostajaa ottamaan yhteyttä lainapankkiin ja kertomaan lainajärjestelyjen etenemisestä.",
+              "units": 15
+            },
+            {
+              "text": "Asunnon käyttövalmiudesta kirje ei kertonut.",
+              "units": 5
+            },
+            {
+              "text": "Vesi ja sähkö kytkettiin myöhemmin, ja heinäkuun ensimmäisessä tarkastuksessa havaittiin vielä korjattavia puutteita.",
+              "units": 13
+            },
+            {
+              "text": "Myöskään asunnon hissin asennus ei ollut valmis.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "elokuussa",
+          "sentences": [
+            {
+              "text": "Elokuussa allekirjoitettu suostumus antoi ostajalle pääsyn asuntoon kunnostus- ja siivoustöitä varten, mutta tuomioistuin katsoi suostumuksen sisällön ja korjaustilanteen perusteella, ettei sopimuksen mukaista luovutusta ollut osoitettu.",
+              "units": 25
+            },
+            {
+              "text": "Lainavarat maksettiin rakennuttajan tilille 5. marraskuuta.",
+              "units": 6
+            },
+            {
+              "text": "Takuutodistukseen merkittiin luovutuspäiväksi 28. marraskuuta; asiakirjoja käsitellään ratkaisun neljännessä kohdassa, painetuilla sivuilla 182–186.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "mikä",
+          "sentences": [
+            {
+              "text": "Mikä velvoite täyttyi lainavarojen maksamisella?",
+              "units": 5
+            },
+            {
+              "text": "Tuomioistuin arvioi laina-asioita, maksamista ja asunnon luovutusta erikseen.",
+              "units": 8
+            },
+            {
+              "text": "Rakennuttaja katsoi kirjeen velvoittaneen ostajan maksamaan koko hinnan, mutta tuomioistuin totesi maksueräluettelosta, että ostaja oli suorittanut erät sopimuksen mukaisesti ja maksanut hinnan kokonaan ennen luovutusta.",
+              "units": 25
+            },
+            {
+              "text": "Maksulaiminlyöntiä ei todettu.",
+              "units": 3
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "tapauksen",
+          "sentences": [
+            {
+              "text": "Tapauksen neljän kuukauden ilmoitusaika käyttöluvan saamisesta tuli osapuolten sopimuksesta.",
+              "units": 9
+            },
+            {
+              "text": "Nykyisten ennakkomyytyjen asuntojen pakollisten vakioehtojen 15 kohta edellyttää myyjää ilmoittamaan ostajalle luovutuksesta kuuden kuukauden kuluessa käyttöluvan saamisesta.",
+              "units": 17
+            },
+            {
+              "text": "Kohta sisältää myös luovutukseen liittyviä korjaus-, maksujen selvitys- ja asiakirjavelvoitteita.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "laskenta",
+          "sentences": [
+            {
+              "text": "Laskenta alkaa käyttöluvasta.",
+              "units": 3
+            },
+            {
+              "text": "Oman ilmoituksen ajankohtaa arvioitaessa sopimuksen tekohetken säännöt ja sovitut ehdot asetetaan käyttöluvan saamispäivän, ilmoituksen sisällön ja vastaanottotiedon rinnalle.",
+              "units": 18
+            },
+            {
+              "text": "Neljän ja kuuden kuukauden vertailu on tässä nykyisten sääntöjen vertailua vanhaan sopimukseen.",
+              "units": 12
+            },
+            {
+              "text": "Vuoden 2022 tuomioistuin ei soveltanut myöhempiä sääntömuutoksia ennakolta.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "ostajalle",
+          "sentences": [
+            {
+              "text": "Ostajalle jää omia tehtäviä.",
+              "units": 4
+            },
+            {
+              "text": "Samojen nykyisten vakioehtojen 14 kohta käsittelee laina-asiakirjojen toimittamista, menettelyihin osallistumista ja ennen omistuksen siirtorekisteröintiä maksettavia eriä.",
+              "units": 16
+            },
+            {
+              "text": "Vaikka luovutusilmoituksesta syntyisi riita, erääntyneiden maksu- ja asiakirjavelvoitteiden käsittelyä ei voi tämän tuomion perusteella yleisesti jättää sikseen.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "kuluttajansuojaviranomaisen",
+          "sentences": [
+            {
+              "text": "Kuluttajansuojaviranomaisen elokuussa 2025 julkaisema sopimustarkastus tunnisti sääntöjen vastaiseksi ehdon, jolla pankin lainavahvistukseen ja varojen maksamiseen kuluva aika jätettiin luovutusilmoituksen määräajan ulkopuolelle.",
+              "units": 21
+            },
+            {
+              "text": "Siksi pankkivaihetta koskevan ehdon sanamuodolla on merkitystä jo sopimusta luettaessa.",
+              "units": 10
+            },
+            {
+              "text": "Pankin käsittelyaika on voitava yhdistää siihen määräaikaan, jonka myyjä on sitoutunut noudattamaan.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "taiwanin",
+          "sentences": [
+            {
+              "text": "Taiwanin keskuspankin kiinteistövakuudellista luotonantoa koskevien sääntöjen nykyinen muutos tuli voimaan 18. syyskuuta 2026.",
+              "units": 13
+            },
+            {
+              "text": "Uutta lainajärjestelyä selvittävä ostaja voi kirjata pankin arvioiman maksupäivän sekä rakennuttajan suunnitteleman tarkastus- ja luovutuspäivän.",
+              "units": 15
+            },
+            {
+              "text": "Nykyinen sääntömuutos ei ratkaise takautuvasti vuoden 2019 sopimustapahtumia.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "ilmoituksen",
+          "sentences": [
+            {
+              "text": "Ilmoituksen otsikko kertoo vain osan.",
+              "units": 5
+            },
+            {
+              "text": "Koko kirje ja kirjekuori tai sähköpostin vastaanottotieto auttavat osoittamaan, mitä ostajalta pyydettiin ja milloin.",
+              "units": 14
+            },
+            {
+              "text": "Tarkastuspöytäkirjat, korjauskuvat, sisäänpääsyä koskeva suostumus ja takuutodistus täydentävät kuvaa asunnon kunnosta ja myöhemmin tehdyistä toimista.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "jos",
+          "sentences": [
+            {
+              "text": "Jos asiassa on jo esitetty sopimussakko- tai korkovaatimus, toimiston sähköpostiin voi lähettää kuvauksen riitaisesta ehdosta, ilmoituspäivästä ja vastausajasta yksilöllisen arvion järjestämiseksi.",
+              "units": 21
+            },
+            {
+              "text": "Aineistossa lainajärjestelyä, tarkastusta ja luovutusta koskevat ilmoitukset voidaan merkitä niiden todellisen sisällön mukaan.",
+              "units": 13
+            },
+            {
+              "text": "Näin väitetyn luovutuspäivän taustalla olevat tapahtumat pysyvät näkyvissä.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "lähteet",
+          "sentences": [
+            {
+              "text": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026.",
+              "units": 8
+            },
+            {
+              "text": "Ratkaisu on luettu virallisen kokoelman sitä koskevilta osin.",
+              "units": 8
+            },
+            {
+              "text": "Tapauksen sopimus ja suoritusnäyttö eivät ratkaise toisen ostajan maksun pidättämistä, luovutuksesta kieltäytymistä tai korvausvaatimusta.",
+              "units": 14
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Kirjeessä pyydettiin tietoa lainasta",
+        "Sopimuksen määräaika ja nykyiset vakioehdot",
+        "Pankin päivämäärät ja asunnon kunto samassa aineistossa",
+        "Viranomaislähteet"
+      ],
+      "listItems": [
+        "- [Kuluttajansuojaviranomaisen ratkaisukokoelma, osa 22](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), painetut sivut 173–187: Taichungin jaoston ratkaisu 109年度上易字第289號.",
+        "- [Ennakkomyytyjen asuntojen pakolliset ja kielletyt vakioehdot](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C), kohdat 14 ja 15.",
+        "- [Kuluttajansuojaviranomaisen sopimustarkastuksen tulokset](https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11), 25. elokuuta 2025.",
+        "- [Keskuspankin kiinteistövakuudellista luotonantoa koskevat säännöt](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html), 18. syyskuuta 2026 voimaan tullut versio."
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "ca661812f570ae6d872b53c81a464cd073113b824ba64ce07e07fa09d0628fde",
+      "metrics": {
+        "lang": "fi",
+        "sentences": 40,
+        "paras": 13,
+        "heads": 4,
+        "list_items": 3,
+        "mean_len": 11.3,
+        "len_cv": 0.486,
+        "short_share": 0.375,
+        "long_share": 0.0,
+        "para_cv": 0.136,
+        "even_run3": 0.053,
+        "top_end": "2026",
+        "top_end_share": 0.075,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "kurinpitotulos",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.44,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Kurinpitotulos oli ilmoitettu julkisuuteen jo ennen toimivaltaisen komitean käsittelyä.",
+        "last": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026. Tapauskuvaus perustuu tuomioistuimen julkiseen selosteeseen, eikä myöh",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "kurinpitotulos",
+          "sentences": [
+            {
+              "text": "Kurinpitotulos oli ilmoitettu julkisuuteen jo ennen toimivaltaisen komitean käsittelyä.",
+              "units": 9
+            },
+            {
+              "text": "Tuomioistuin kumosi myöhemmin sekä esimiehen viraltapanon että sitä koskeneen hallinnollisen muutoksenhakupäätöksen arvioituaan ennalta julkistettua lopputulosta, kuulemisen puutteita ja tutkintaraportin ristiriitoja.",
+              "units": 20
+            },
+            {
+              "text": "Taipein ylemmän hallintotuomioistuimen tiedote kuvaa päätöksenteon järjestystä.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "ratkaisu",
+          "sentences": [
+            {
+              "text": "Ratkaisu 114年度訴字第869號 annettiin 3. syyskuuta 2026.",
+              "units": 6
+            },
+            {
+              "text": "Virkamiehelle oli määrätty yhdellä kertaa kaksi vakavaa kurinpidollista miinusmerkintää, mikä johti viraltapanoon.",
+              "units": 12
+            },
+            {
+              "text": "Tiedotteen mukaan ratkaisuun voi hakea muutosta.",
+              "units": 6
+            },
+            {
+              "text": "Se ei osoita kaikkien kiusaamisväitteiden olleen vääriä tai henkilön jo palanneen virkaansa.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "viranomaisen",
+          "sentences": [
+            {
+              "text": "Viranomaisen johtaja oli kertonut suunnitellusta seuraamuksesta ennen arviointikomitean keskustelua.",
+              "units": 9
+            },
+            {
+              "text": "Sen jälkeen ylempi viranomainen piti ensin oman kokouksensa ja siirsi asian vasta tämän jälkeen alaisensa viranomaisen käsiteltäväksi.",
+              "units": 17
+            },
+            {
+              "text": "Tuomioistuin katsoi järjestyksen vaikeuttavan komitean todellista arviointitehtävää.",
+              "units": 7
+            },
+            {
+              "text": "Lopputulos oli jo lausuttu ääneen.",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "voiko",
+          "sentences": [
+            {
+              "text": "Voiko myöhempi kokous vielä muuttaa arviota näytön perusteella?",
+              "units": 8
+            },
+            {
+              "text": "Tapauksessa kysymys liittyi menettelyn todelliseen avoimuuteen.",
+              "units": 6
+            },
+            {
+              "text": "Kokouspöytäkirjan olemassaolo ei yksin kerro, oliko komitealla mahdollisuus päätyä julkisuudessa ilmoitetusta poikkeavaan johtopäätökseen.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "asianosaista",
+          "sentences": [
+            {
+              "text": "Asianosaista ei myöskään ollut kutsuttu asianmukaisesti esittämään kantaansa.",
+              "units": 8
+            },
+            {
+              "text": "Lisäksi tutkintaraportin arviot kiusaamista tukevasta näytöstä ja lopullinen seuraamussuositus olivat ristiriidassa keskenään.",
+              "units": 12
+            },
+            {
+              "text": "Tuomioistuimen perusteluselosteen mukaan myöhempi vastaamismahdollisuus hallinnollisessa muutoksenhaussa ei korjannut tässä asiassa alun perin puuttunutta kuulemista.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "virkamiehen",
+          "sentences": [
+            {
+              "text": "Virkamiehen tapausta arvioitiin hänen kurinpitojärjestelmänsä mukaan, ja tapahtumat olivat uusia työpaikkakiusaamisen torjuntasääntöjä varhaisempia.",
+              "units": 13
+            },
+            {
+              "text": "Yksityisten työnantajien toimintaa koskeva uusi työturvallisuuslain järjestelmä tuli voimaan 1. heinäkuuta 2026.",
+              "units": 12
+            },
+            {
+              "text": "Voimaantulo ilmenee lain historiasta, ja järjestelmää selitetään työturvallisuusviranomaisen tiedotteessa.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "työturvallisuuslain",
+          "sentences": [
+            {
+              "text": "Työturvallisuuslain 22-2 § edellyttää tutkinnan tai osapuolten välisen sovittelun olevan objektiivista, puolueetonta ja tasapuolista.",
+              "units": 14
+            },
+            {
+              "text": "Tutkinnassa asianosaisille on annettava riittävä mahdollisuus esittää kantansa ja vastata väitteisiin, ja esteellisyyttä koskevia vaatimuksia on noudatettava.",
+              "units": 17
+            },
+            {
+              "text": "Ennen tutkinnan valmistumista julkaistu syyllistävä lausunto voi vaikeuttaa näiden velvollisuuksien toteuttamista.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "suojatoimet",
+          "sentences": [
+            {
+              "text": "Suojatoimet voivat alkaa heti.",
+              "units": 4
+            },
+            {
+              "text": "Saatuaan kiusatun työntekijän ilmoituksen työnantajan on ryhdyttävä toimiin kiusaamisen uusiutumisen ehkäisemiseksi, tarjottava tarpeen mukaista neuvontaa, apua ja suojelua sekä tutkittava asia.",
+              "units": 21
+            },
+            {
+              "text": "Velvollisuus koskee ehkäiseviä toimia.",
+              "units": 4
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "ilmoittajan",
+          "sentences": [
+            {
+              "text": "Ilmoittajan toivomuksesta työnantaja voi pyrkiä sovittelemaan asiaa osapuolten kesken; jos yhteistä ratkaisua ei synny, sen on jatkettava tutkintaa.",
+              "units": 18
+            },
+            {
+              "text": "Virkamiehen hallintotuomio ei sellaisenaan ratkaise yksityisen yrityksen kurinpitotoimen pätevyyttä.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "mikä",
+          "sentences": [
+            {
+              "text": "Mikä asiakirja tukee mitäkin lausumaa?",
+              "units": 5
+            },
+            {
+              "text": "Kun kertomukset eroavat toisistaan, henkilöstöhallinnon raportissa voidaan yhdistää haastattelussa kuvattu tapahtuma sitä tukeviin tai vastaan puhuviin työaika-, viesti- ja kokoustietoihin sekä perustella, miksi tietty näyttö painaa johtopäätöksessä enemmän.",
+              "units": 28
+            },
+            {
+              "text": "Myös näytön aukot kuuluvat arvioon.",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "kuulemisen",
+          "sentences": [
+            {
+              "text": "Kuulemisen kohteen on oltava ymmärrettävä.",
+              "units": 5
+            },
+            {
+              "text": "Yleinen pyyntö selittää johtamistyyliä antaa erilaiset vastausmahdollisuudet kuin ilmoitus yksilöidystä teosta, ajankohdasta ja selvitettävästä ristiriidasta.",
+              "units": 15
+            },
+            {
+              "text": "Tämän tapauksen pohjalta tutkija voi verrata kutsua, haastattelumuistiinpanoja ja lopputulosta selvittääkseen, koskevatko ne samaa tapahtumaa.",
+              "units": 15
+            },
+            {
+              "text": "Kyse on dokumentointia tukevasta käytännön menetelmästä.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "taiwanin",
+          "sentences": [
+            {
+              "text": "Taiwanin työriidan yksilöllistä arviota varten toimiston sähköpostiin voi kuvata ilmoituksen käsittelyvaiheen, tehdyt päätökset ja lähimmän määräajan lähettämättä aluksi koko arkaluonteista aineistoa.",
+              "units": 21
+            },
+            {
+              "text": "Ennen tuloksen julkaisemista säilytetyt kutsut, vastaukset ja näytön arviointiperusteet osoittavat, miten eri kertomukset todella tulivat kuulluiksi.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "lähteet",
+          "sentences": [
+            {
+              "text": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026.",
+              "units": 8
+            },
+            {
+              "text": "Tapauskuvaus perustuu tuomioistuimen julkiseen selosteeseen, eikä myöhemmän muutoksenhaun tulosta ole vahvistettu.",
+              "units": 11
+            },
+            {
+              "text": "Virkamiehen ja yksityisen työntekijän oikeussuojakeinot määräytyvät heidän asemansa ja kyseisen päätöksen mukaan.",
+              "units": 12
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Pystyikö komitea enää arvioimaan tulosta",
+        "Yksityisen työnantajan nykyiset velvollisuudet",
+        "Raportin perustelut syntyvät lausuman ja näytön yhteydestä",
+        "Viranomaislähteet"
+      ],
+      "listItems": [
+        "- [Taipein ylemmän hallintotuomioistuimen tiedote 114年度訴字第869號](https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html), 3. syyskuuta 2026.",
+        "- [Työturvallisuuslain 22-2 §](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2) ja [muutos- ja voimaantulohistoria](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001).",
+        "- [Työturvallisuusviranomaisen selvitys työpaikkakiusaamisen torjunnan uudistuksesta](https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt), 23. kesäkuuta 2026."
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "9c8634739beb39fc2a4e0288d106d2b7f38f73e8374ebddbc31eccaa6b342f38",
+      "metrics": {
+        "lang": "fi",
+        "sentences": 40,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 3,
+        "mean_len": 11.6,
+        "len_cv": 0.47,
+        "short_share": 0.325,
+        "long_share": 0.0,
+        "para_cv": 0.163,
+        "even_run3": 0.053,
+        "top_end": "nojalla",
+        "top_end_share": 0.05,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "latauslaatikko",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.333,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.87,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Latauslaatikko oli autopaikan takana seinällä, ja johdot kulkivat katon kautta yhteiseen s",
+        "last": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026. Kuvaus perustuu tähän Kaohsiungin ratkaisuun; myöhempiä ratkaisuja tai",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "latauslaatikko",
+          "sentences": [
+            {
+              "text": "Latauslaatikko oli autopaikan takana seinällä, ja johdot kulkivat katon kautta yhteiseen sähkökeskukseen ja asukkaan sähkömittarille.",
+              "units": 15
+            },
+            {
+              "text": "Asennus ulottui pysäköintiruudun rajojen yli.",
+              "units": 5
+            },
+            {
+              "text": "Tuomioistuin tarkasteli juuri seinän, katon ja sähkökeskuksen käyttöä Kaohsiungin jaoston ratkaisussa.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "taiwanin",
+          "sentences": [
+            {
+              "text": "Taiwanin ylioikeuden Kaohsiungin jaosto hylkäsi asukkaan muutoksenhaun 22. kesäkuuta 2022 asiassa 111年度上字第132號.",
+              "units": 12
+            },
+            {
+              "text": "Laitteiston poistamista ja alkuperäisen tilan palauttamista koskeva lopputulos jäi voimaan.",
+              "units": 10
+            },
+            {
+              "text": "Tuomioistuin katsoi asennuksen käyttävän yhteisiä osia, joiden käyttöön tarvittavia suostumuksia ei ollut hankittu etukäteen.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "riidan",
+          "sentences": [
+            {
+              "text": "Riidan osapuolet eivät kiistäneet latauslaatikon sijaintia kellarin autopaikan takana.",
+              "units": 9
+            },
+            {
+              "text": "Johtoputkia oli kiinnitetty katon ripustimiin ja sähkökeskukseen lisätty katkaisija, josta yhteys jatkui asukkaan mittarille.",
+              "units": 14
+            },
+            {
+              "text": "Nämä asennuspaikat kuuluivat yhteisiin osiin ja laitteisiin.",
+              "units": 7
+            },
+            {
+              "text": "Mittarille johtava yhteys ei muuttanut niiden oikeudellista asemaa.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "suostumusmenettelyllä",
+          "sentences": [
+            {
+              "text": "Suostumusmenettelyllä oli kaksi perustaa.",
+              "units": 4
+            },
+            {
+              "text": "Taiwanin yhteisomisteisten rakennusten hallintolain 11 § edellyttää yhteisten osien ja niihin liittyvien laitteiden purkamisen, merkittävän korjaamisen tai parantamisen perustuvan huoneistojen omistajien kokouksen päätökseen.",
+              "units": 22
+            },
+            {
+              "text": "Tässä asiassa tuomioistuin arvioi asennusta sen nojalla.",
+              "units": 7
+            },
+            {
+              "text": "Lisäksi yhteisön sääntöjen 15 kohta vaati sähköjohtojen ja johtoputkien lisäämiselle hallintokomitean luvan sekä sähköyhtiön turvallisuustarkastuksen.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "säännöt",
+          "sentences": [
+            {
+              "text": "Säännöt sitoivat asukasta.",
+              "units": 3
+            },
+            {
+              "text": "Tuomioistuin katsoi hänen rikkoneen lain ja yhteisön sääntöjen noudattamista koskevaa 6 §:n 1 momentin 5 kohdan velvollisuutta.",
+              "units": 17
+            },
+            {
+              "text": "Hallintokomitea oli yrittänyt selvittää asiaa todisteellisesti lähetetyllä kirjeellä, mutta laitteistoa ei poistettu, joten komitea saattoi saattaa asian tuomioistuimen ratkaistavaksi saman pykälän 3 momentin nojalla.",
+              "units": 24
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "lain",
+          "sentences": [
+            {
+              "text": "Lain 6 §:n 1 momentin 4 kohdassa säädetään myös johdotuksista ja yhteisten osien tarpeellisesta käytöstä.",
+              "units": 15
+            },
+            {
+              "text": "Tuomioistuin katsoi, ettei nyt käsitelty asennus ollut siinä tarkoitettu tilanne.",
+              "units": 10
+            },
+            {
+              "text": "Ratkaisun viides ja kuudes kohta sitovat arvion konkreettisiin asennuspaikkoihin ja yhteisön sääntöihin.",
+              "units": 12
+            },
+            {
+              "text": "Niistä ei voi irrottaa kaikkiin latauslaitteisiin sopivaa äänestysmenettelyä.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "tuomioistuin",
+          "sentences": [
+            {
+              "text": "Tuomioistuin katsoi, että vaikka asukas olisi lisännyt kytkimen, lopettanut käytön, lukinnut laitteiston ja tarjoutunut luovuttamaan avaimet komitealle, poistamis- ja ennallistamisvelvollisuus silti säilyisi yhteisten rakenteiden luvattoman käytön vuoksi.",
+              "units": 27
+            },
+            {
+              "text": "Kyse oli asukkaan esittämistä väitteistä.",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "mihin",
+          "sentences": [
+            {
+              "text": "Mihin kohtaan yhteistä sähkökeskusta liitäntä tehdään?",
+              "units": 6
+            },
+            {
+              "text": "Pelkän autopaikkanumeron sisältävä tarjous ei vastaa tähän.",
+              "units": 7
+            },
+            {
+              "text": "Suunnittelussa asentajalta voi pyytää piirustuksen latauslaatikosta, johdotuksen seinä- ja kattoreiteistä sekä liitettävästä sähkökeskuksesta.",
+              "units": 13
+            },
+            {
+              "text": "Piirustusta voidaan verrata omistustietoihin, yhteisön sääntöihin ja jo tehtyihin päätöksiin.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "suullisesta",
+          "sentences": [
+            {
+              "text": "Suullisesta vastauksesta voi puuttua asennuksen rajaus.",
+              "units": 6
+            },
+            {
+              "text": "Komitealle tehtävässä hakemuksessa voidaan kuvata työ ja pyytää selvitystä siitä, mikä sääntö soveltuu, kuuluuko päätös komitealle vai omistajien kokoukselle ja mitä lisätietoja tarvitaan.",
+              "units": 23
+            },
+            {
+              "text": "Jos hyväksyntä on jo annettu, reitti, laitteisto ja ehdot verrataan asentajan käyttämään piirustusversioon.",
+              "units": 13
+            },
+            {
+              "text": "Hyväksytyn työn laajuus jää näin näkyviin.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "kaohsiungin",
+          "sentences": [
+            {
+              "text": "Kaohsiungin toukokuussa 2026 julkistettu tukiohjelma sisälsi rakennusyhteisöjen yhteisten alueiden sähköautojen latauskaapelihyllyjä.",
+              "units": 11
+            },
+            {
+              "text": "Ilmoitettu hakuaika päättyi 30. syyskuuta ja on nyt ohi.",
+              "units": 9
+            },
+            {
+              "text": "Ohjelma koski yhteisen johdotuksen suunnittelua; se ei antanut yksittäiselle asukkaalle yhteisön hyväksynnän korvaavaa rakentamisoikeutta.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "jos",
+          "sentences": [
+            {
+              "text": "Jos asennuksesta on jo annettu keskeyttämis- tai poistamisvaatimus, toimiston sähköpostiin voi kuvata erimielisyyden, sovelletun sääntökohdan ja vastausajan.",
+              "units": 17
+            },
+            {
+              "text": "Asennussopimuksessa voidaan myös sopia, saako työ alkaa ennen hyväksyntää ja miten kuluja käsitellään hyväksynnän puuttuessa.",
+              "units": 15
+            },
+            {
+              "text": "Silloin keskeneräinen johtoreitin hyväksyntä ei jää piiloon jo maksetun asennuslaskun taakse.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "lähteet",
+          "sentences": [
+            {
+              "text": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026.",
+              "units": 8
+            },
+            {
+              "text": "Kuvaus perustuu tähän Kaohsiungin ratkaisuun; myöhempiä ratkaisuja tai lainvoimaisuutta ei ole vahvistettu.",
+              "units": 12
+            },
+            {
+              "text": "Toisen rakennuksen asennuspaikat, oikeudet ja säännöt voivat johtaa erilaiseen arvioon.",
+              "units": 10
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Reitti sähkömittarille kulki yhteisten rakenteiden kautta",
+        "Asennuspiirustuksesta näkyvät päätöstä tarvitsevat kohdat",
+        "Viranomaislähteet"
+      ],
+      "listItems": [
+        "- [Taiwanin ylioikeuden Kaohsiungin jaoston ratkaisu 111年度上字第132號](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1), 22. kesäkuuta 2022.",
+        "- Yhteisomisteisten rakennusten hallintolain [6 §](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6) ja [11 §](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11).",
+        "- [Kaohsiungin ilmoitus yhteisten latauskaapelihyllyjen tukiohjelmasta](https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE), 29. toukokuuta 2026; ilmoitettu hakuaika on päättynyt."
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "48aa5debe29787ced8afc034f40ba3417dd20afbc7e80b3078b77543a368814a",
+      "metrics": {
+        "lang": "fi",
+        "sentences": 46,
+        "paras": 14,
+        "heads": 4,
+        "list_items": 4,
+        "mean_len": 11.7,
+        "len_cv": 0.539,
+        "short_share": 0.37,
+        "long_share": 0.0,
+        "para_cv": 0.225,
+        "even_run3": 0.0,
+        "top_end": "takaisin",
+        "top_end_share": 0.022,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "antaako",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 4.82,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Antaako pelitilille jäänyt kolikkosaldo oikeuden saada rahaa takaisin?",
+        "last": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026; tapaus on luettu virallisen kokoelman kyseisiltä sivuilta. Toisen peli",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "antaako",
+          "sentences": [
+            {
+              "text": "Antaako pelitilille jäänyt kolikkosaldo oikeuden saada rahaa takaisin?",
+              "units": 8
+            },
+            {
+              "text": "Yksi pelaaja arvioi jäljellä olevien kolikoidensa arvoksi 243 548 Taiwanin dollaria ja vaati summaa peliyritykseltä.",
+              "units": 15
+            },
+            {
+              "text": "Tuomioistuin hylkäsi vaatimuksen.",
+              "units": 3
+            },
+            {
+              "text": "Tilillä oli kolikoita, mutta käyttämättömiä maksullisia pisteitä ei enää ollut; osapuolet olivat tästä tosiseikasta yhtä mieltä (virallinen ratkaisukokoelma, painetut sivut 140–153).",
+              "units": 22
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "keelungin",
+          "sentences": [
+            {
+              "text": "Keelungin alioikeus hylkäsi pelaajan muutoksenhaun 13. syyskuuta 2021 asiassa 109年度消簡上字第1號.",
+              "units": 10
+            },
+            {
+              "text": "Ratkaisuun ei voinut hakea edelleen muutosta.",
+              "units": 6
+            },
+            {
+              "text": "Arvio koski kyseisen pelin kolikoiden toimintaa ja palautusehtoja, eikä lopputulos poistanut kaikkea virtuaalista omaisuutta kuluttajansuojan piiristä.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "pelaaja",
+          "sentences": [
+            {
+              "text": "Pelaaja osti ensin pisteitä, joilla saattoi hankkia pelipalveluja tai tavaroita.",
+              "units": 10
+            },
+            {
+              "text": "Tilille jääneet kolikot toimivat pelaajien välisissä otteluissa pelimerkkeinä.",
+              "units": 8
+            },
+            {
+              "text": "Tuomioistuin ei katsonut niitä sopimuksen perusteella palautettaviksi käyttämättömiksi maksullisiksi pisteiksi eikä yrityksen perimiksi pelimaksuiksi.",
+              "units": 14
+            },
+            {
+              "text": "Kolikoiden rahaksi muuttamiseen perustunut vaatimus jäi siksi hyväksymättä.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "kolikoiden",
+          "sentences": [
+            {
+              "text": "Kolikoiden käyttötarkoitus vaikutti arvioon.",
+              "units": 4
+            },
+            {
+              "text": "Tuomioistuin totesi, että tällaisten ottelumerkkien vaihtaminen yrityksessä rahaksi nostaisi esiin rahapelaamisen kysymyksen.",
+              "units": 12
+            },
+            {
+              "text": "Perustelu liittyi juuri tämän pelin toimintatapaan.",
+              "units": 6
+            },
+            {
+              "text": "Toisessa pelissä on selvitettävä, miten kolikot on saatu, mitä niillä saa ja miten niitä on käytetty; tämän ratkaisun kahdeksannessa kohdassa, painetuilla sivuilla 148–152, kuvataan yksityiskohtaiset perusteet.",
+              "units": 27
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "myös",
+          "sentences": [
+            {
+              "text": "Myös pelaaja oli ilmoittanut haluavansa päättää sopimuksen.",
+              "units": 7
+            },
+            {
+              "text": "Tuomioistuin saattoi siten todeta päättymisen vaikutuksen ja arvioida jäljellä olevien kolikoiden palautuskelpoisuutta.",
+              "units": 12
+            },
+            {
+              "text": "Tämä ei vahvistanut kaikkia yrityksen aikaisempia tilin sulkemisen tai sopimuksen päättämisen perusteita lainmukaisiksi.",
+              "units": 13
+            },
+            {
+              "text": "Palautusvaatimus ratkaistiin kolikoiden todellisen tehtävän perusteella.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "nykyisten",
+          "sentences": [
+            {
+              "text": "Nykyisten verkkopelipalvelujen pakollisten vakioehtojen 18 kohta sallii kuluttajan ilmoittaa yritykselle sopimuksen päättämisestä milloin tahansa.",
+              "units": 14
+            },
+            {
+              "text": "Käyttämättömät maksulliset pisteet tai käyttämättömät pelimaksut on palautettava välttämättömien kustannusten vähentämisen jälkeen 30 päivän kuluessa sopimuksen päättymisestä, tai ne voidaan käsitellä osapuolten yhdessä sopimalla tavalla.",
+              "units": 25
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "mistä",
+          "sentences": [
+            {
+              "text": "Mistä vähennys koostuu?",
+              "units": 3
+            },
+            {
+              "text": "Palautuslaskelmasta voi pyytää erittelyn käyttämättömästä määrästä, vähennettävistä kuluista ja laskentaperusteesta ja verrata sitä sopimukseen.",
+              "units": 14
+            },
+            {
+              "text": "Yrityksen valitsema kiinteä prosentti ei yksin osoita vähennystä kohtuulliseksi.",
+              "units": 9
+            },
+            {
+              "text": "Tietojen avulla voidaan täsmentää, mistä laskelman osasta osapuolet ovat eri mieltä.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "nykyinen",
+          "sentences": [
+            {
+              "text": "Nykyinen sääntömuutos tuli voimaan 1. tammikuuta 2023.",
+              "units": 7
+            },
+            {
+              "text": "Se on käsiteltyä tuomiota myöhempi.",
+              "units": 5
+            },
+            {
+              "text": "Vuoden 2021 ratkaisu perustui silloiseen sopimukseen ja sovellettaviin sääntöihin, kun taas nykyisten ehtojen 4 kohta säilyttää mahdollisuuden peruuttaa sopimus kirjallisesti seitsemän päivän kuluessa pelaamisen aloittamisesta ja pyytää käyttämättömien maksullisten pisteiden palauttamista.",
+              "units": 31
+            },
+            {
+              "text": "Tämän ajan jälkeenkin 18 kohdan mukainen päättäminen ja käyttämättömän määrän selvittäminen ovat mahdollisia.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "viimeinen",
+          "sentences": [
+            {
+              "text": "Viimeinen kuvakaappaus ei välttämättä erota ostettuja pisteitä, niistä muunnettuja kolikoita ja pelaamisen jälkeistä saldoa.",
+              "units": 14
+            },
+            {
+              "text": "Eri aineistot vastaavat eri vaiheisiin:",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "yrityksen",
+          "sentences": [
+            {
+              "text": "Yrityksen on säilytettävä henkilökohtaista pelihistoriaa vähintään 30 päivää ja annettava pyydetyt tiedot seitsemän päivän kuluessa pyynnön vastaanottamisesta.",
+              "units": 17
+            },
+            {
+              "text": "Tiedoilla on säilytysaika.",
+              "units": 3
+            },
+            {
+              "text": "Riidan synnyttyä ajoissa esitetty pyyntö voi auttaa saamaan muutakin aineistoa kuin tilin viimeisen saldon.",
+              "units": 14
+            },
+            {
+              "text": "Velvoitteet ilmenevät pakollisten ehtojen 9 kohdasta.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "samojen",
+          "sentences": [
+            {
+              "text": "Samojen sääntöjen kiellettyjen ehtojen 6 kohta estää sopimusehdon, joka tekisi yrityksen säilyttämästä pelihistoriasta ja sähköisistä tiedoista ainoan riidan arviointiperusteen.",
+              "units": 19
+            },
+            {
+              "text": "Säännös ei tee yrityksen aineistosta käyttökelvotonta.",
+              "units": 6
+            },
+            {
+              "text": "Sen rinnalle voidaan esittää maksukuitteja ja tukiviestejä, jotka kuvaavat rahan ja pisteiden kulkua.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "vuoden",
+          "sentences": [
+            {
+              "text": "Vuoden 2025 virallisissa kuluttajavalitustilastoissa verkkopelit olivat toiseksi suurin ensimmäisen vaiheen valitusten aihealue, vaikka tämän ryhmän tapausmäärä väheni edellisvuodesta.",
+              "units": 18
+            },
+            {
+              "text": "Tilastot julkaistiin 7. toukokuuta 2026.",
+              "units": 5
+            },
+            {
+              "text": "Viranomainen kehotti samalla yrityksiä käsittelemään asianmukaisesti tilien sulkemiseen, käyttöoikeuden keskeyttämiseen ja asiakastukeen liittyviä ongelmia.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "palautusvaatimuksen",
+          "sentences": [
+            {
+              "text": "Palautusvaatimuksen voi ensin esittää yritykselle ja tarvittaessa käyttää viranomaisen kuluttajavalituspalvelua.",
+              "units": 10
+            },
+            {
+              "text": "Jos erimielisyys koskee sopimuksen tulkintaa tai aineiston torjumista, toimiston sähköpostiin voi kuvata riitaisen erän ja vastausajan ilman tilin salasanaa.",
+              "units": 19
+            },
+            {
+              "text": "Rahavaatimusta tukee tapahtumaketju alkuperäisestä maksusta pisteiden muuntamiseen ja käyttöön.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "lähteet",
+          "sentences": [
+            {
+              "text": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026; tapaus on luettu virallisen kokoelman kyseisiltä sivuilta.",
+              "units": 15
+            },
+            {
+              "text": "Toisen pelin palautusarvio riippuu sen pisteiden ja virtuaaliesineiden tehtävästä sekä sopimuksen päättämisen perusteesta.",
+              "units": 13
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Ostetuista pisteistä ottelujen pelimerkeiksi",
+        "Nykyinen päättämisoikeus ja palautuksen laskenta",
+        "Saldon taakse jäävä tapahtumaketju",
+        "Viranomaislähteet"
+      ],
+      "listItems": [
+        "- [Kuluttajansuojaviranomaisen ratkaisukokoelma, osa 22](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), painetut sivut 140–153: Keelungin ratkaisu 109年度消簡上字第1號.",
+        "- [Verkkopelipalvelujen pakolliset ja kielletyt vakioehdot](https://www.ey.gov.tw/File/C27658C15073FF69?A=C), pakollisten ehtojen kohdat 4, 9 ja 18 sekä kiellettyjen ehtojen kohta 6.",
+        "- [Vuoden 2025 kuluttajavalituksia ja sovittelua koskeva tilasto](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930), 7. toukokuuta 2026.",
+        "- [Kuluttajansuojakomission sähköinen valituspalvelu](https://appeal.cpc.ey.gov.tw/)."
+      ]
+    }
+  ]
+}

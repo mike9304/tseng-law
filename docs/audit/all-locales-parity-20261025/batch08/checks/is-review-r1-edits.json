@@ -1,0 +1,82 @@
+{
+  "atUTC": "2026-10-26T08:12:23.791815+00:00",
+  "reviewSHA256": "91fd87ea6dfbcef01d8b1108f7b3f4f6673cc1a2de227fdbd68c76e184841980",
+  "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/is-review-r1-snapshot",
+  "exactEdits": 3,
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSHA256": "3ba7ba24c0ec9c31fbfb1b0686032d33c305488acb64d55bb9d1c0f104841f3d",
+      "afterSHA256": "3ba7ba24c0ec9c31fbfb1b0686032d33c305488acb64d55bb9d1c0f104841f3d",
+      "changed": false,
+      "edit": null,
+      "diff": ""
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSHA256": "03d2248e93f7bad97d76e622f07575eaaafc2b555641ab68b80a0cdf76e3f5cd",
+      "afterSHA256": "0f51ecead9b78fa3a51ac4cfc6fea0a828fe24910fb69385cb37dc7e82c8d0db",
+      "changed": true,
+      "edit": {
+        "issue": "S02",
+        "old": " Ósvöruð spurning getur staðið opin í yfirferðinni.",
+        "new": "",
+        "offset": 3639,
+        "reason": "Remove repetitive short sentence; concrete investigations and technical findings/follow-up remain",
+        "meaningPreserved": true,
+        "reverseExact": true
+      },
+      "diff": "--- 916-taiwan-parent-company-pollution-liability-us-investor.md@R1\n+++ 916-taiwan-parent-company-pollution-liability-us-investor.md@R2\n@@ -33,7 +33,7 @@\n \n Hver fékk skýrsluna og gat ákveðið viðbrögð? Dreifingarlisti sýnir viðtakendur. Fundargerðir og fyrirmæli um rekstur geta skýrt hver hafði heimild til að bregðast við, en samþykktir um síðari millifærslur tengja vitneskjuna við ráðstöfun fjármuna. Að geyma þessi gögn í aðskildum möppum getur gert ákvörðunarferlið erfiðara að rekja.\n \n-Við yfirferð fyrirtækjakaupa má kanna hver rannsakaði áhættu starfsmanna, hvaða frekari athugana var óskað og hvernig niðurstöðurnar höfðu áhrif á úthlutun fjármuna eða eignir rekstrarfélagsins. Ósvöruð spurning getur staðið opin í yfirferðinni. Jákvæð kynning fyrir lokun viðskiptanna ætti ekki að fela upprunalegar tæknilegar niðurstöður eða eftirfylgnina sem þær kölluðu á.\n+Við yfirferð fyrirtækjakaupa má kanna hver rannsakaði áhættu starfsmanna, hvaða frekari athugana var óskað og hvernig niðurstöðurnar höfðu áhrif á úthlutun fjármuna eða eignir rekstrarfélagsins. Jákvæð kynning fyrir lokun viðskiptanna ætti ekki að fela upprunalegar tæknilegar niðurstöður eða eftirfylgnina sem þær kölluðu á.\n \n ## 246 kröfuhafar í endurmeðferð, áfrýjunum varðandi 262 hafnað\n \n"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSHA256": "3de83250611c1f1071803fb141c650446c65163ce32a06125485aa27e99b6c60",
+      "afterSHA256": "2661e4c6163d28b727805c018a62516b9060dfda396ad86c7b30f4c631460af5",
+      "changed": true,
+      "edit": {
+        "issue": "S01",
+        "old": "Afhending íbúðar á Taívan: lánabréf og tilkynningarfrestur",
+        "new": "Afhending íbúðar á Taívan: bréf um lán og tilkynningarfrestur",
+        "offset": 89,
+        "reason": "SEO document terminology aligned with actual loan-related letter; body and FAQ unchanged",
+        "meaningPreserved": true,
+        "reverseExact": true
+      },
+      "diff": "--- 918-taiwan-presale-mortgage-notice-handover-judgment.md@R1\n+++ 918-taiwan-presale-mortgage-notice-handover-judgment.md@R2\n@@ -1,6 +1,6 @@\n ---\n title: \"Bréf um lán og aðgangur að íbúð sönnuðu ekki afhendingu á Taívan\"\n-seoTitle: \"Afhending íbúðar á Taívan: lánabréf og tilkynningarfrestur\"\n+seoTitle: \"Afhending íbúðar á Taívan: bréf um lán og tilkynningarfrestur\"\n summary: \"Bréf um afgreiðslu láns og leyfi til að vinna inni í íbúð töldust ekki sanna afhendingu samkvæmt samningi. Fjögurra mánaða frestur málsins og núgildandi sex mánaða tilkynningarfrestur miðast við útgáfu notkunarleyfis.\"\n published: \"2026-10-26\"\n lastmod: \"2026-10-26\"\n"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "09bab5c57eea037bd207f536090989cd76ad2e340f654d4ea63d3f3ffeb871ca",
+      "afterSHA256": "09bab5c57eea037bd207f536090989cd76ad2e340f654d4ea63d3f3ffeb871ca",
+      "changed": false,
+      "edit": null,
+      "diff": ""
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "b4b41ccba00179a1b54b5425964eebd992aff3076ba8646eafe90440ac9d27f8",
+      "afterSHA256": "b4b41ccba00179a1b54b5425964eebd992aff3076ba8646eafe90440ac9d27f8",
+      "changed": false,
+      "edit": null,
+      "diff": ""
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-is/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "af57a32c37bce920c808c59c5264a593d07058f10a87f9e1376d436e5e6103c2",
+      "afterSHA256": "bbce5fdff033d02529be025515dba7af17bef00f429ec8bf41bc807873fd5e8b",
+      "changed": true,
+      "edit": {
+        "issue": "S03",
+        "old": "Varðveislutíminn er takmarkaður.",
+        "new": "Þrjátíu dagar eru lögbundið lágmark.",
+        "offset": 5848,
+        "reason": "Express statutory minimum, without adding a maximum or permission to delete; receipt-based seven-day disclosure unchanged",
+        "meaningPreserved": true,
+        "reverseExact": true
+      },
+      "diff": "--- 921-taiwan-online-game-coins-refund-judgment.md@R1\n+++ 921-taiwan-online-game-coins-refund-judgment.md@R2\n@@ -53,7 +53,7 @@\n | Punktaskipti og leikferilsskrá | Hvenær breyttist inneignin og hvernig var myntin notuð? |\n | Uppsögn og endurgreiðsluútreikningur | Hvenær lauk samningnum og hvaða inneign eða frádrátt viðurkennir rekstraraðilinn? |\n \n-Samkvæmt 9. lið ber rekstraraðila að varðveita einstaklingsbundinn leikferil í að minnsta kosti 30 daga. Berist beiðni um aðgang skal hann afhenda gögnin innan sjö daga frá móttöku hennar. Varðveislutíminn er takmarkaður. Beiðni snemma í ágreiningi getur því bætt við gögnum um það sem gerðist áður en síðasta skjámynd var tekin.\n+Samkvæmt 9. lið ber rekstraraðila að varðveita einstaklingsbundinn leikferil í að minnsta kosti 30 daga. Berist beiðni um aðgang skal hann afhenda gögnin innan sjö daga frá móttöku hennar. Þrjátíu dagar eru lögbundið lágmark. Beiðni snemma í ágreiningi getur því bætt við gögnum um það sem gerðist áður en síðasta skjámynd var tekin.\n \n Reglurnar banna jafnframt að samið sé um að eingöngu leikferill og rafræn gögn rekstraraðilans ráði niðurstöðu ágreinings. Bannið útilokar ekki gögn hans sem sönnun. Það kemur í veg fyrir samningsbundna útilokun annarra gagna; þetta er skýrt í 6. lið bannaðra skilmála.\n \n"
+    }
+  ],
+  "originalAuthorAndReviewUnchanged": true,
+  "latestLessonsSHA256": "86710ef330b108a916a7bb92a75f1ffa62dea53412e8a75f38472d9fa9b33130"
+}

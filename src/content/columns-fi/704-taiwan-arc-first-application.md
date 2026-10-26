@@ -68,7 +68,7 @@ Tavallisen ARC:n lakisääteinen enimmäiskesto on kolme vuotta. Työhön palkat
 
 ## Käsittelystä kortin noutamiseen
 
-Yleisen menettelyn ilmoitettu käsittelyaika on kymmenen työpäivää. Siihen ei lasketa asiakirjojen palauttamista, täydentämistä eikä haastattelua. Kun pyydetyt täydennykset on toimitettu, kymmenen työpäivän käsittely alkaa uudelleen ([NIA:n yleisohje](https://www.immigration.gov.tw/5475/5478/141465/141808/141970); [täydennysmenettelyn täsmennys](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/)). Tämä arvio ei takaa, että kortti olisi tiettynä matkapäivänä valmis.
+Jos NIA pyytää puuttuvia asiakirjoja, yleisen menettelyn kymmenen työpäivän käsittely alkaa uudelleen vasta, kun hakija on toimittanut pyydetyt täydennykset; tähän käsittelyaikaan eivät sisälly asiakirjojen palauttaminen, täydentäminen tai haastattelu ([NIA:n yleisohje](https://www.immigration.gov.tw/5475/5478/141465/141808/141970); [täydennysmenettelyn täsmennys](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/)). Kyse on käsittelyaika-arviosta. Se ei takaa kortin valmistumista tiettyyn matkapäivään.
 
 [Opiskelijoiden verkkomenettelyssä](https://www.immigration.gov.tw/5475/5478/141465/141808/417829/cp_news) käsittelyajaksi ilmoitetaan viisi työpäivää, ja aika alkaa uudelleen täydennysten jälkeen. Maksu on suoritettava viiden työpäivän kuluessa hyväksymisestä. Enintään kuudeksi kuukaudeksi myönnetty sähköinen ARC ladataan ja tulostetaan maksamisen jälkeen. Sirukorttia noudettaessa tulostettu verkkopalvelun maksukuitti viedään valittuun NIA:n palvelukeskukseen kolmen työpäivän kuluttua maksusta. Muiden hakijaryhmien on seurattava oman hyväksymis- tai noutoilmoituksensa ohjeita.
 

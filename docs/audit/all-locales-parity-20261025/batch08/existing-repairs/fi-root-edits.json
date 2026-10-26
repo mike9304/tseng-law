@@ -1,0 +1,32 @@
+{
+  "atUTC": "2026-10-26T07:59:12.512476+00:00",
+  "sourceRepositoryUnchanged": true,
+  "rootAuthor": true,
+  "originalTrueFailures": "corrected date boundaries yield .441 and .444; stored in date-boundaries corpus delta",
+  "edits": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/columns-fi/704-taiwan-arc-first-application.md",
+      "source": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fi/704-taiwan-arc-first-application.md",
+      "sourceSHA256": "ab3d0231a3f1bf8c22c7bf22ef48142b9d2e9eb72d0e422082bec6fb076b395d",
+      "currentSHA256": "5e054633c3f8c2d92ee9404e893a2277255cdcf44b2759ca0bed7c4382f4b172",
+      "old": "Yleisen menettelyn ilmoitettu käsittelyaika on kymmenen työpäivää. Siihen ei lasketa asiakirjojen palauttamista, täydentämistä eikä haastattelua. Kun pyydetyt täydennykset on toimitettu, kymmenen työpäivän käsittely alkaa uudelleen ([NIA:n yleisohje](https://www.immigration.gov.tw/5475/5478/141465/141808/141970); [täydennysmenettelyn täsmennys](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/)). Tämä arvio ei takaa, että kortti olisi tiettynä matkapäivänä valmis.",
+      "new": "Jos NIA pyytää puuttuvia asiakirjoja, yleisen menettelyn kymmenen työpäivän käsittely alkaa uudelleen vasta, kun hakija on toimittanut pyydetyt täydennykset; tähän käsittelyaikaan eivät sisälly asiakirjojen palauttaminen, täydentäminen tai haastattelu ([NIA:n yleisohje](https://www.immigration.gov.tw/5475/5478/141465/141808/141970); [täydennysmenettelyn täsmennys](https://www.immigration.gov.tw/5385/7244/7250/7317/%E5%B1%85%E7%95%99/29996/)). Kyse on käsittelyaika-arviosta. Se ei takaa kortin valmistumista tiettyyn matkapäivään.",
+      "reason": "MONOTONY: erilliset samankokoiset selitykset yhdistyvät hakijan toiminnan ja sen oikeusvaikutuksen yhteydeksi; lyhyt loppulause rajaa vaikutuksen.",
+      "meaningPreserved": true,
+      "frontmatterFAQUnchanged": true,
+      "inverseExact": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/existing-repairs/columns-fi/706-taiwan-arc-renewal-changes-reentry.md",
+      "source": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fi/706-taiwan-arc-renewal-changes-reentry.md",
+      "sourceSHA256": "9d8378231e7c024bfa49689cada7a7406837b5afed540fab217bd99f0e5a97ea",
+      "currentSHA256": "fe25a6ba9a1a86482f0c46df9ef95fc0b9349385f91a78611763ef01796d76c0",
+      "old": "Työnantajan vaihtuminen tai lisätyö voi vaatia uuden luvan ennen työn alkua. [Työllisyyspalvelulain 53 §:n](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) ehdot vaihtelevat työntekijäluokittain. Uuden työn on kuuluttava soveltuvan työluvan tai lupavapautuksen piiriin; pelkkä NIA:n rekisteritietojen muuttaminen ei anna tätä oikeutta.",
+      "new": "Työnantajan vaihtuminen tai lisätyö voi edellyttää uutta lupaa jo ennen työn aloittamista, sillä [työllisyyspalvelulain 53 §:n](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001) ehdot riippuvat työntekijäluokasta ja uuden työn on kuuluttava soveltuvan työluvan tai lupavapautuksen piiriin. NIA:n rekisterimuutos ei yksin anna työnteko-oikeutta.",
+      "reason": "MONOTONY: erilliset samankokoiset selitykset yhdistyvät hakijan toiminnan ja sen oikeusvaikutuksen yhteydeksi; lyhyt loppulause rajaa vaikutuksen.",
+      "meaningPreserved": true,
+      "frontmatterFAQUnchanged": true,
+      "inverseExact": true
+    }
+  ]
+}

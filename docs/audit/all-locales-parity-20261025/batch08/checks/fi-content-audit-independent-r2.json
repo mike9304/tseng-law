@@ -1,0 +1,994 @@
+{
+  "atUTC": "2026-10-26T08:09:42.623Z",
+  "selected": 1,
+  "errors": 0,
+  "semanticStatus": "REVIEW_REQUIRED",
+  "groups": [
+    {
+      "version": 1,
+      "generatedAt": "2026-10-26T08:09:42.623Z",
+      "repoRoot": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+      "selectedFiles": 1,
+      "automatedStatus": "PASS",
+      "semanticStatus": "REVIEW_REQUIRED",
+      "publicationReady": false,
+      "errors": 0,
+      "reviewItems": 5,
+      "policy": {
+        "minBodyLettersAndNumbers": 500,
+        "minUniqueParagraphLettersAndNumbers": 350,
+        "sourceLocale": "zh-hant",
+        "publicationDate": "2026-10-26",
+        "legacyPolicy": "Unselected files supply existence/duplicate context only; no content changes or audience changes are made.",
+        "sourceApproval": "The operator must select an accepted source; existence/hash is not evidence of legal approval."
+      },
+      "runtimeContractHashes": {
+        "src/lib/column-audience.ts": "a1cb781f1a787366199995b0312b0fa1556d850e0637eb5ea66cd2174680b760",
+        "src/data/market-column-curation.ts": "c42e22feed6e49e5f4915a48ad18a49d9b874c024824ddf53a74fd5ede8a8b94",
+        "src/lib/column-attribution.ts": "8111ea9feabcdc98f13485014da51d39c9aebd084cbb6a1e52d923624bb6dcc3",
+        "src/lib/columns.ts": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+        "src/lib/column-locales.ts": "26d8fe8de7a9703aa7b0d279f32938e84190d5199ce0c4ddee84e89bb934b535",
+        "src/lib/public-guidance.ts": "c00a193d0dd583145e544a2cc505efad75a4379f5c334a811655a689d6df8d85",
+        "src/lib/column-topics.ts": "3fb8e18ae18777481cb8a07c158ea1b6435cdab98da0ea4701a1b98bf3ba435a",
+        "src/lib/locales.ts": "38304dea2b15fc6d6d05cebafa6cc08fdac18d66da875da7c79b7a117e431c54",
+        "src/lib/public-route-policy.ts": "7a71128c423d76057bd50e791189533ab96789594aef994f4346f4ead2c6607c",
+        "src/app/[locale]/(legacy)/index.tsx": "5e485ee21bac81e7b8dc74778fba24d69e8541492010e791709a82373c3eb2da",
+        "src/app/[locale]/[[...slug]]/page.tsx": "3dab508b2dddb716fa84184335f4f62b3d35164d30abdb3ab30185a3bb6a4f03"
+      },
+      "inventory": {
+        "counts": {
+          "ko": 217,
+          "zh-hant": 296,
+          "en": 218,
+          "ja": 230,
+          "vi": 45,
+          "id": 33,
+          "th": 31,
+          "fil": 31,
+          "ar": 34,
+          "de": 32,
+          "es": 52,
+          "fr": 31,
+          "pt": 34,
+          "zh-hans": 29,
+          "ms": 30,
+          "ru": 30,
+          "tr": 24,
+          "it": 32,
+          "nl": 26,
+          "pl": 26,
+          "hi": 34,
+          "sv": 24,
+          "da": 30,
+          "nb": 24,
+          "fi": 30,
+          "cs": 26,
+          "hu": 24,
+          "ro": 24,
+          "uk": 24,
+          "el": 30,
+          "he": 26,
+          "bn": 30,
+          "ur": 24,
+          "fa": 30,
+          "my": 24,
+          "ta": 24,
+          "ne": 24,
+          "km": 24,
+          "mn": 24,
+          "sk": 24,
+          "bg": 30,
+          "hr": 24,
+          "sr": 24,
+          "sl": 24,
+          "lt": 26,
+          "lv": 24,
+          "et": 30,
+          "ca": 30,
+          "is": 24
+        },
+        "duplicateKeys": []
+      },
+      "files": [
+        {
+          "file": "../../tseng-all-language-columns-20261025/batch08/checks/fi-overlay-content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+          "locale": "fi",
+          "slug": "taiwan-online-game-coins-refund-judgment",
+          "errors": [],
+          "reviews": [
+            {
+              "code": "public-output-and-native-prose",
+              "status": "REQUIRED",
+              "message": "Inspect rendered title, summary, FAQ, captions, cards, JSON-LD and feeds for native language and author leakage; compare opening/headings/ending with the previous three same-language articles. Automated token checks cannot prove either.",
+              "targetFields": [
+                {
+                  "key": "title",
+                  "text": "Tilillä oli pelikolikoita, mutta tuomioistuin hylkäsi palautusvaatimuksen"
+                },
+                {
+                  "key": "summary",
+                  "text": "Keelungin tuomioistuin arvioi tilille jääneiden kolikoiden toimivan pelimerkkeinä ja hylkäsi niihin perustuneen rahavaatimuksen. Nykyisten sääntöjen mukaan käyttämättömiin maksullisiin pisteisiin ja käyttämättömiin pelimaksuihin voi liittyä palautusvelvollisuus. Maksu- ja pelihistoria auttaa selvittämään saldon muodostumista."
+                },
+                {
+                  "key": "featured_image_alt",
+                  "text": "Peliohjain, abstrakti pelikuva näytöllä, kuviottomia pelimerkkejä ja suljettu muistikirja pöydällä."
+                },
+                {
+                  "key": "featured_image_caption",
+                  "text": "Kuvitteellinen kohtaus"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "Voidaanko rahapalautus aina evätä, jos virtuaaliesinettä kutsutaan kolikoksi?"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "Pelkkä nimi ei ratkaise. Tässä pelissä kolikot toimivat pelaajien välisten ottelujen pelimerkkeinä, eikä tuomioistuin pitänyt niitä käyttämättöminä maksullisina pisteinä tai palautettavina pelimaksuina. Toisen pelin arvioinnissa selvitetään hankintatapa, käyttötarkoitus, todellinen käyttö ja sopimusehdot."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "Voiko sopimuksen päättää vielä seitsemän päivän jälkeen?"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "Nykyiset ehdot antavat kuluttajalle oikeuden ilmoittaa sopimuksen päättämisestä milloin tahansa. Käyttämättömien maksullisten pisteiden tai käyttämättömien pelimaksujen määrä on välttämättömien kustannusten vähentämisen jälkeen palautettava 30 päivän kuluessa päättymisestä tai käsiteltävä osapuolten yhdessä sopimalla tavalla. Pelaamisen aloittamisesta laskettava seitsemän päivän kirjallinen peruuttamisoikeus on erillinen menettely."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "Saako yritys vaatia, että riita ratkaistaan vain sen omien tietojen perusteella?"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "Nykyiset kiellettyjä vakioehtoja koskevat säännöt estävät ehdon, jonka mukaan yrityksen säilyttämä pelihistoria ja sähköiset tiedot olisivat riidan ainoa arviointiperuste. Pelaaja voi säilyttää maksukuitit, kuvakaappaukset ja tukiviestit sekä pyytää oman pelihistoriansa saldon muodostumisen selvittämiseksi."
+                }
+              ]
+            },
+            {
+              "code": "title-summary-faq",
+              "status": "REQUIRED",
+              "message": "Compare legal subject and scope in title, summary and every FAQ; presence/count is not semantic preservation. Check translated category labels and captions too.",
+              "source": {
+                "title": "遊戲帳號還有金幣，終止契約為何仍拿不到退款？",
+                "summary": "一名玩家以帳號內剩餘金幣請求退費，基隆地院認定該案金幣是對局用籌碼，與未使用付費點數不同。現行規範仍保障終止契約後的未使用點數退費；判斷可退多少，要串起儲值、兌換及遊戲使用紀錄，不能只看畫面餘額。",
+                "faq": [
+                  {
+                    "q": "遊戲裡只要叫金幣，就不能申請退費嗎？",
+                    "a": "不能只憑名稱判斷。本案金幣供玩家對局使用，法院認為它不是未使用付費點數或應退的遊戲費用。其他遊戲仍須看金幣的取得方式、用途、使用情形及契約約定。"
+                  },
+                  {
+                    "q": "超過開始遊戲後七日，就不能終止契約嗎？",
+                    "a": "現行應記載事項另規定，消費者得隨時通知業者終止契約。終止時，未使用付費點數或遊戲費用，應在扣除必要成本後於三十日內退還，或依雙方同意的方式處理。七日解除與隨時終止的條件不同。"
+                  },
+                  {
+                    "q": "業者說只能以後台紀錄為準，這樣可以嗎？",
+                    "a": "現行不得記載事項禁止約定，發生糾紛時只能以業者保存的遊戲歷程及電子資料作為認定標準。玩家可保留付款憑證、截圖及客服往來，並申請自己的遊戲歷程，核對餘額如何形成。"
+                  }
+                ],
+                "categories": [
+                  "消費爭議",
+                  "台灣判決"
+                ],
+                "featured_image_caption": "虛構情境"
+              },
+              "target": {
+                "title": "Tilillä oli pelikolikoita, mutta tuomioistuin hylkäsi palautusvaatimuksen",
+                "summary": "Keelungin tuomioistuin arvioi tilille jääneiden kolikoiden toimivan pelimerkkeinä ja hylkäsi niihin perustuneen rahavaatimuksen. Nykyisten sääntöjen mukaan käyttämättömiin maksullisiin pisteisiin ja käyttämättömiin pelimaksuihin voi liittyä palautusvelvollisuus. Maksu- ja pelihistoria auttaa selvittämään saldon muodostumista.",
+                "faq": [
+                  {
+                    "q": "Voidaanko rahapalautus aina evätä, jos virtuaaliesinettä kutsutaan kolikoksi?",
+                    "a": "Pelkkä nimi ei ratkaise. Tässä pelissä kolikot toimivat pelaajien välisten ottelujen pelimerkkeinä, eikä tuomioistuin pitänyt niitä käyttämättöminä maksullisina pisteinä tai palautettavina pelimaksuina. Toisen pelin arvioinnissa selvitetään hankintatapa, käyttötarkoitus, todellinen käyttö ja sopimusehdot."
+                  },
+                  {
+                    "q": "Voiko sopimuksen päättää vielä seitsemän päivän jälkeen?",
+                    "a": "Nykyiset ehdot antavat kuluttajalle oikeuden ilmoittaa sopimuksen päättämisestä milloin tahansa. Käyttämättömien maksullisten pisteiden tai käyttämättömien pelimaksujen määrä on välttämättömien kustannusten vähentämisen jälkeen palautettava 30 päivän kuluessa päättymisestä tai käsiteltävä osapuolten yhdessä sopimalla tavalla. Pelaamisen aloittamisesta laskettava seitsemän päivän kirjallinen peruuttamisoikeus on erillinen menettely."
+                  },
+                  {
+                    "q": "Saako yritys vaatia, että riita ratkaistaan vain sen omien tietojen perusteella?",
+                    "a": "Nykyiset kiellettyjä vakioehtoja koskevat säännöt estävät ehdon, jonka mukaan yrityksen säilyttämä pelihistoria ja sähköiset tiedot olisivat riidan ainoa arviointiperuste. Pelaaja voi säilyttää maksukuitit, kuvakaappaukset ja tukiviestit sekä pyytää oman pelihistoriansa saldon muodostumisen selvittämiseksi."
+                  }
+                ],
+                "categories": [
+                  "Kuluttajansuoja Taiwanissa",
+                  "Verkkopelit"
+                ],
+                "featured_image_caption": "Kuvitteellinen kohtaus"
+              }
+            },
+            {
+              "code": "legal-conditions",
+              "status": "REQUIRED",
+              "message": "Verify every source actor, must/may, AND/OR, exception, eligibility, starting date, period, amount, quotation and factual qualifier against the full target. Passage order/count need not match. No heuristic clears this item.",
+              "sourcePassages": [
+                {
+                  "text": "玩家把帳號內的剩餘金幣換算成新臺幣24萬3,548元，請求業者退還。法院沒有准許。帳號還有餘額，卻已沒有未使用的付費點數；這是該案兩造不爭執的事實（行政院消保處收錄的判決全文，紙本第140至153頁）。",
+                  "line": 25,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "臺灣基隆地方法院109年度消簡上字第1號判決，於2021年9月13日駁回玩家的上訴，並載明不得上訴。法院檢查的是該遊戲金幣的實際功能及退費條款，沒有把所有虛擬道具一概排除在消費者保護之外。",
+                  "line": 27,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "本案契約讓玩家先購買點數，再用點數取得遊戲服務或商品。剩下的金幣則供玩家在遊戲中對局，具有籌碼的功能。法院認為，這些金幣已不屬於契約約定應退的未使用付費點數，也不是業者收取的遊戲費用，因而未准許換算成現金返還。",
+                  "line": 31,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "法院還指出，若允許玩家把這種對局籌碼向業者兌成現金，會涉及賭博。這段理由與本案玩法相連；用在另一款遊戲時，仍須查清楚金幣如何取得、能換什麼、是否已經用於遊戲，不能只因畫面寫著「金幣」就拒絕退費。完整理由見判決第八點，紙本第148至152頁。",
+                  "line": 33,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "契約終止了，為何沒有退款？在這件案件，玩家自己也已表示終止契約，所以法院可以確認終止效果，再處理剩餘金幣是否屬於退費客體。這不等於法院認定業者原先的全部停權或終止理由都合法。",
+                  "line": 35,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "現行網路連線遊戲服務定型化契約應記載及不得記載事項第十八點，允許消費者隨時通知業者終止契約。未使用的付費點數或遊戲費用，須於扣除必要成本後，在終止契約後三十日內退還，或由雙方同意其他處理方式。並沒有一律不退的規則。",
+                  "line": 39,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "「必要成本」也要有內容。收到退費計算時，可要求業者分別列出未使用餘額、扣除項目與計算依據，再核對契約，不能僅從業者設定的固定比例推知它一定合理。",
+                  "line": 41,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "這份現行規範的最近修正自2023年1月1日生效，時間在上述判決之後；本案是以當時契約及適用規範判斷。現行第四點另保留開始遊戲後七日內以書面解除契約，並請求退還未使用付費點數的安排。已超過七日，也仍可依第十八點處理終止與剩餘費用。",
+                  "line": 43,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "只有一張帳號截圖，很難分辨原始購買點數、兌換所得金幣與遊玩後餘額。紀錄可以這樣對照：",
+                  "line": 47,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "資料",
+                  "line": 49,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "可釐清的問題",
+                  "line": 49,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "付款憑證與儲值明細",
+                  "line": 51,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "實際付了多少錢，取得哪種點數或服務？",
+                  "line": 51,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "點數兌換及遊戲歷程",
+                  "line": 52,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "點數何時轉換，轉換後的金幣如何使用？",
+                  "line": 52,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "終止通知與退費明細",
+                  "line": 53,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "何時終止，業者認列的未使用餘額及扣款理由為何？",
+                  "line": 53,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "業者至少須保存三十日的個人遊戲歷程，並依規範受理查詢；收到申請後，須在七日內提供。資料有保存期限。發生爭議後儘早申請，可減少只剩最後餘額畫面的情況。現行規範同時禁止約定，糾紛只能以業者保存的歷程及電子資料為準（應記載事項第九點、不得記載事項第六點）。",
+                  "line": 55,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "行政院消保處在2026年5月公布的2025年統計中，線上遊戲仍排在第一次消費申訴類型的第二位，案件數則較前一年減少。官方同時要求業者妥善處理帳號封鎖、停權及客服問題（統計與提醒事項）。",
+                  "line": 57,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "退費爭議可先向業者提出，再使用政府消費申訴管道。若爭點已涉及契約解釋或證據遭拒，可先寄信至事務所信箱，說明爭議項目與回覆期限，無須提供帳號密碼。要讓請求金額有依據，留下的是金錢如何進入帳號、又如何被使用的紀錄。",
+                  "line": 59,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "資料確認日：2026年10月25日。本文以特定遊戲退費判決說明契約與紀錄的判讀，其他遊戲的點數、道具及終止事由，須依其實際功能分別判斷。",
+                  "line": 61,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "行政院消保處：消費者保護法判決函釋彙編（廿二），紙本第140至153頁，臺灣基隆地方法院109年度消簡上字第1號判決。",
+                  "line": 65,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "網路連線遊戲服務定型化契約應記載及不得記載事項，第四、九、十八點及不得記載事項第六點。",
+                  "line": 66,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "行政院消保處：2025年度全國消費申訴及調解案件統計說明，2026年5月7日。",
+                  "line": 67,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "行政院消費者保護會：線上申訴系統。",
+                  "line": 68,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "儲值後，金幣被拿來做什麼",
+                  "line": 29,
+                  "kind": "h2"
+                },
+                {
+                  "text": "今天的退費規則仍保障未使用點數",
+                  "line": 37,
+                  "kind": "h2"
+                },
+                {
+                  "text": "畫面餘額，少了哪一段紀錄",
+                  "line": 45,
+                  "kind": "h2"
+                },
+                {
+                  "text": "官方資料",
+                  "line": 63,
+                  "kind": "h2"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "遊戲裡只要叫金幣，就不能申請退費嗎？"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "不能只憑名稱判斷。本案金幣供玩家對局使用，法院認為它不是未使用付費點數或應退的遊戲費用。其他遊戲仍須看金幣的取得方式、用途、使用情形及契約約定。"
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "超過開始遊戲後七日，就不能終止契約嗎？"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "現行應記載事項另規定，消費者得隨時通知業者終止契約。終止時，未使用付費點數或遊戲費用，應在扣除必要成本後於三十日內退還，或依雙方同意的方式處理。七日解除與隨時終止的條件不同。"
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "業者說只能以後台紀錄為準，這樣可以嗎？"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "現行不得記載事項禁止約定，發生糾紛時只能以業者保存的遊戲歷程及電子資料作為認定標準。玩家可保留付款憑證、截圖及客服往來，並申請自己的遊戲歷程，核對餘額如何形成。"
+                }
+              ],
+              "sourceConditionHints": [
+                {
+                  "text": "臺灣基隆地方法院109年度消簡上字第1號判決，於2021年9月13日駁回玩家的上訴，並載明不得上訴。法院檢查的是該遊戲金幣的實際功能及退費條款，沒有把所有虛擬道具一概排除在消費者保護之外。",
+                  "line": 27,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "本案契約讓玩家先購買點數，再用點數取得遊戲服務或商品。剩下的金幣則供玩家在遊戲中對局，具有籌碼的功能。法院認為，這些金幣已不屬於契約約定應退的未使用付費點數，也不是業者收取的遊戲費用，因而未准許換算成現金返還。",
+                  "line": 31,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "法院還指出，若允許玩家把這種對局籌碼向業者兌成現金，會涉及賭博。這段理由與本案玩法相連；用在另一款遊戲時，仍須查清楚金幣如何取得、能換什麼、是否已經用於遊戲，不能只因畫面寫著「金幣」就拒絕退費。完整理由見判決第八點，紙本第148至152頁。",
+                  "line": 33,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "現行網路連線遊戲服務定型化契約應記載及不得記載事項第十八點，允許消費者隨時通知業者終止契約。未使用的付費點數或遊戲費用，須於扣除必要成本後，在終止契約後三十日內退還，或由雙方同意其他處理方式。並沒有一律不退的規則。",
+                  "line": 39,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "只有一張帳號截圖，很難分辨原始購買點數、兌換所得金幣與遊玩後餘額。紀錄可以這樣對照：",
+                  "line": 47,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "實際付了多少錢，取得哪種點數或服務？",
+                  "line": 51,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "業者至少須保存三十日的個人遊戲歷程，並依規範受理查詢；收到申請後，須在七日內提供。資料有保存期限。發生爭議後儘早申請，可減少只剩最後餘額畫面的情況。現行規範同時禁止約定，糾紛只能以業者保存的歷程及電子資料為準（應記載事項第九點、不得記載事項第六點）。",
+                  "line": 55,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "退費爭議可先向業者提出，再使用政府消費申訴管道。若爭點已涉及契約解釋或證據遭拒，可先寄信至事務所信箱，說明爭議項目與回覆期限，無須提供帳號密碼。要讓請求金額有依據，留下的是金錢如何進入帳號、又如何被使用的紀錄。",
+                  "line": 59,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "資料確認日：2026年10月25日。本文以特定遊戲退費判決說明契約與紀錄的判讀，其他遊戲的點數、道具及終止事由，須依其實際功能分別判斷。",
+                  "line": 61,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "網路連線遊戲服務定型化契約應記載及不得記載事項，第四、九、十八點及不得記載事項第六點。",
+                  "line": 66,
+                  "kind": "paragraph"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "遊戲裡只要叫金幣，就不能申請退費嗎？"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "不能只憑名稱判斷。本案金幣供玩家對局使用，法院認為它不是未使用付費點數或應退的遊戲費用。其他遊戲仍須看金幣的取得方式、用途、使用情形及契約約定。"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "現行應記載事項另規定，消費者得隨時通知業者終止契約。終止時，未使用付費點數或遊戲費用，應在扣除必要成本後於三十日內退還，或依雙方同意的方式處理。七日解除與隨時終止的條件不同。"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "現行不得記載事項禁止約定，發生糾紛時只能以業者保存的遊戲歷程及電子資料作為認定標準。玩家可保留付款憑證、截圖及客服往來，並申請自己的遊戲歷程，核對餘額如何形成。"
+                }
+              ],
+              "targetPassages": [
+                {
+                  "text": "Antaako pelitilille jäänyt kolikkosaldo oikeuden saada rahaa takaisin? Yksi pelaaja arvioi jäljellä olevien kolikoidensa arvoksi 243 548 Taiwanin dollaria ja vaati summaa peliyritykseltä. Tuomioistuin hylkäsi vaatimuksen. Tilillä oli kolikoita, mutta käyttämättömiä maksullisia pisteitä ei enää ollut; osapuolet olivat tästä tosiseikasta yhtä mieltä (virallinen ratkaisukokoelma, painetut sivut 140–153).",
+                  "line": 25,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Keelungin alioikeus hylkäsi pelaajan muutoksenhaun 13. syyskuuta 2021 asiassa 109年度消簡上字第1號. Ratkaisuun ei voinut hakea edelleen muutosta. Arvio koski kyseisen pelin kolikoiden toimintaa ja palautusehtoja, eikä lopputulos poistanut kaikkea virtuaalista omaisuutta kuluttajansuojan piiristä.",
+                  "line": 27,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Pelaaja osti ensin pisteitä, joilla saattoi hankkia pelipalveluja tai tavaroita. Tilille jääneet kolikot toimivat pelaajien välisissä otteluissa pelimerkkeinä. Tuomioistuin ei katsonut niitä sopimuksen perusteella palautettaviksi käyttämättömiksi maksullisiksi pisteiksi eikä yrityksen perimiksi pelimaksuiksi. Kolikoiden rahaksi muuttamiseen perustunut vaatimus jäi siksi hyväksymättä.",
+                  "line": 31,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Kolikoiden käyttötarkoitus vaikutti arvioon. Tuomioistuin totesi, että tällaisten ottelumerkkien vaihtaminen yrityksessä rahaksi nostaisi esiin rahapelaamisen kysymyksen. Perustelu liittyi juuri tämän pelin toimintatapaan. Toisessa pelissä on selvitettävä, miten kolikot on saatu, mitä niillä saa ja miten niitä on käytetty; tämän ratkaisun kahdeksannessa kohdassa, painetuilla sivuilla 148–152, kuvataan yksityiskohtaiset perusteet.",
+                  "line": 33,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Myös pelaaja oli ilmoittanut haluavansa päättää sopimuksen. Tuomioistuin saattoi siten todeta päättymisen vaikutuksen ja arvioida jäljellä olevien kolikoiden palautuskelpoisuutta. Tämä ei vahvistanut kaikkia yrityksen aikaisempia tilin sulkemisen tai sopimuksen päättämisen perusteita lainmukaisiksi. Palautusvaatimus ratkaistiin kolikoiden todellisen tehtävän perusteella.",
+                  "line": 35,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Nykyisten verkkopelipalvelujen pakollisten vakioehtojen 18 kohta sallii kuluttajan ilmoittaa yritykselle sopimuksen päättämisestä milloin tahansa. Käyttämättömät maksulliset pisteet tai käyttämättömät pelimaksut on palautettava välttämättömien kustannusten vähentämisen jälkeen 30 päivän kuluessa sopimuksen päättymisestä, tai ne voidaan käsitellä osapuolten yhdessä sopimalla tavalla.",
+                  "line": 39,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Mistä vähennys koostuu? Palautuslaskelmasta voi pyytää erittelyn käyttämättömästä määrästä, vähennettävistä kuluista ja laskentaperusteesta ja verrata sitä sopimukseen. Yrityksen valitsema kiinteä prosentti ei yksin osoita vähennystä kohtuulliseksi. Tietojen avulla voidaan täsmentää, mistä laskelman osasta osapuolet ovat eri mieltä.",
+                  "line": 41,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Nykyinen sääntömuutos tuli voimaan 1. tammikuuta 2023. Se on käsiteltyä tuomiota myöhempi. Vuoden 2021 ratkaisu perustui silloiseen sopimukseen ja sovellettaviin sääntöihin, kun taas nykyisten ehtojen 4 kohta säilyttää mahdollisuuden peruuttaa sopimus kirjallisesti seitsemän päivän kuluessa pelaamisen aloittamisesta ja pyytää käyttämättömien maksullisten pisteiden palauttamista. Tämän ajan jälkeenkin 18 kohdan mukainen päättäminen ja käyttämättömän määrän selvittäminen ovat mahdollisia.",
+                  "line": 43,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Viimeinen kuvakaappaus ei välttämättä erota ostettuja pisteitä, niistä muunnettuja kolikoita ja pelaamisen jälkeistä saldoa. Eri aineistot vastaavat eri vaiheisiin:",
+                  "line": 47,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Aineisto",
+                  "line": 49,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Selvitettävä tapahtuma",
+                  "line": 49,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Maksukuitit ja tilille tehdyt lataukset",
+                  "line": 51,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Maksettu summa ja sitä vastaan saadut pisteet tai palvelut.",
+                  "line": 51,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Pisteiden muuntaminen ja pelihistoria",
+                  "line": 52,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Muuntamisen ajankohta ja saatujen kolikoiden käyttö.",
+                  "line": 52,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Päättämisilmoitus ja palautuslaskelma",
+                  "line": 53,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Sopimuksen päättymispäivä, hyväksytty käyttämätön määrä ja vähennykset.",
+                  "line": 53,
+                  "kind": "tableCell"
+                },
+                {
+                  "text": "Yrityksen on säilytettävä henkilökohtaista pelihistoriaa vähintään 30 päivää ja annettava pyydetyt tiedot seitsemän päivän kuluessa pyynnön vastaanottamisesta. Tiedoilla on säilytysaika. Riidan synnyttyä ajoissa esitetty pyyntö voi auttaa saamaan muutakin aineistoa kuin tilin viimeisen saldon. Velvoitteet ilmenevät pakollisten ehtojen 9 kohdasta.",
+                  "line": 55,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Samojen sääntöjen kiellettyjen ehtojen 6 kohta estää sopimusehdon, joka tekisi yrityksen säilyttämästä pelihistoriasta ja sähköisistä tiedoista ainoan riidan arviointiperusteen. Yrityksen aineiston rinnalle voidaan esittää maksukuitteja ja tukiviestejä, jotka kuvaavat rahan ja pisteiden kulkua.",
+                  "line": 57,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Vuoden 2025 virallisissa kuluttajavalitustilastoissa verkkopelit olivat toiseksi suurin ensimmäisen vaiheen valitusten aihealue, vaikka tämän ryhmän tapausmäärä väheni edellisvuodesta. Tilastot julkaistiin 7. toukokuuta 2026. Viranomainen kehotti samalla yrityksiä käsittelemään asianmukaisesti tilien sulkemiseen, käyttöoikeuden keskeyttämiseen ja asiakastukeen liittyviä ongelmia.",
+                  "line": 59,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Palautusvaatimuksen voi ensin esittää yritykselle ja tarvittaessa käyttää viranomaisen kuluttajavalituspalvelua. Jos erimielisyys koskee sopimuksen tulkintaa tai aineiston torjumista, toimiston sähköpostiin voi kuvata riitaisen erän ja vastausajan ilman tilin salasanaa. Rahavaatimusta tukee tapahtumaketju alkuperäisestä maksusta pisteiden muuntamiseen ja käyttöön.",
+                  "line": 61,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026; tapaus on luettu virallisen kokoelman kyseisiltä sivuilta. Toisen pelin palautusarvio riippuu sen pisteiden ja virtuaaliesineiden tehtävästä sekä sopimuksen päättämisen perusteesta.",
+                  "line": 63,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Kuluttajansuojaviranomaisen ratkaisukokoelma, osa 22, painetut sivut 140–153: Keelungin ratkaisu 109年度消簡上字第1號.",
+                  "line": 67,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Verkkopelipalvelujen pakolliset ja kielletyt vakioehdot, pakollisten ehtojen kohdat 4, 9 ja 18 sekä kiellettyjen ehtojen kohta 6.",
+                  "line": 68,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Vuoden 2025 kuluttajavalituksia ja sovittelua koskeva tilasto, 7. toukokuuta 2026.",
+                  "line": 69,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Kuluttajansuojakomission sähköinen valituspalvelu.",
+                  "line": 70,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Ostetuista pisteistä ottelujen pelimerkeiksi",
+                  "line": 29,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Nykyinen päättämisoikeus ja palautuksen laskenta",
+                  "line": 37,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Saldon taakse jäävä tapahtumaketju",
+                  "line": 45,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Viranomaislähteet",
+                  "line": 65,
+                  "kind": "h2"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "Voidaanko rahapalautus aina evätä, jos virtuaaliesinettä kutsutaan kolikoksi?"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "Pelkkä nimi ei ratkaise. Tässä pelissä kolikot toimivat pelaajien välisten ottelujen pelimerkkeinä, eikä tuomioistuin pitänyt niitä käyttämättöminä maksullisina pisteinä tai palautettavina pelimaksuina. Toisen pelin arvioinnissa selvitetään hankintatapa, käyttötarkoitus, todellinen käyttö ja sopimusehdot."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "Voiko sopimuksen päättää vielä seitsemän päivän jälkeen?"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "Nykyiset ehdot antavat kuluttajalle oikeuden ilmoittaa sopimuksen päättämisestä milloin tahansa. Käyttämättömien maksullisten pisteiden tai käyttämättömien pelimaksujen määrä on välttämättömien kustannusten vähentämisen jälkeen palautettava 30 päivän kuluessa päättymisestä tai käsiteltävä osapuolten yhdessä sopimalla tavalla. Pelaamisen aloittamisesta laskettava seitsemän päivän kirjallinen peruuttamisoikeus on erillinen menettely."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "Saako yritys vaatia, että riita ratkaistaan vain sen omien tietojen perusteella?"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "Nykyiset kiellettyjä vakioehtoja koskevat säännöt estävät ehdon, jonka mukaan yrityksen säilyttämä pelihistoria ja sähköiset tiedot olisivat riidan ainoa arviointiperuste. Pelaaja voi säilyttää maksukuitit, kuvakaappaukset ja tukiviestit sekä pyytää oman pelihistoriansa saldon muodostumisen selvittämiseksi."
+                }
+              ],
+              "sourceMarkdown": "\n玩家把帳號內的剩餘金幣換算成新臺幣24萬3,548元，請求業者退還。法院沒有准許。帳號還有餘額，卻已沒有未使用的付費點數；這是該案兩造不爭執的事實（[行政院消保處收錄的判決全文](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C)，紙本第140至153頁）。\n\n臺灣基隆地方法院109年度消簡上字第1號判決，於2021年9月13日駁回玩家的上訴，並載明不得上訴。法院檢查的是該遊戲金幣的實際功能及退費條款，沒有把所有虛擬道具一概排除在消費者保護之外。\n\n## 儲值後，金幣被拿來做什麼\n\n本案契約讓玩家先購買點數，再用點數取得遊戲服務或商品。剩下的金幣則供玩家在遊戲中對局，具有籌碼的功能。法院認為，這些金幣已不屬於契約約定應退的未使用付費點數，也不是業者收取的遊戲費用，因而未准許換算成現金返還。\n\n法院還指出，若允許玩家把這種對局籌碼向業者兌成現金，會涉及賭博。這段理由與本案玩法相連；用在另一款遊戲時，仍須查清楚金幣如何取得、能換什麼、是否已經用於遊戲，不能只因畫面寫著「金幣」就拒絕退費。完整理由見[判決第八點](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C)，紙本第148至152頁。\n\n契約終止了，為何沒有退款？在這件案件，玩家自己也已表示終止契約，所以法院可以確認終止效果，再處理剩餘金幣是否屬於退費客體。這不等於法院認定業者原先的全部停權或終止理由都合法。\n\n## 今天的退費規則仍保障未使用點數\n\n現行[網路連線遊戲服務定型化契約應記載及不得記載事項](https://www.ey.gov.tw/File/C27658C15073FF69?A=C)第十八點，允許消費者隨時通知業者終止契約。未使用的付費點數或遊戲費用，須於扣除必要成本後，在終止契約後三十日內退還，或由雙方同意其他處理方式。並沒有一律不退的規則。\n\n「必要成本」也要有內容。收到退費計算時，可要求業者分別列出未使用餘額、扣除項目與計算依據，再核對契約，不能僅從業者設定的固定比例推知它一定合理。\n\n這份現行規範的最近修正自2023年1月1日生效，時間在上述判決之後；本案是以當時契約及適用規範判斷。現行第四點另保留開始遊戲後七日內以書面解除契約，並請求退還未使用付費點數的安排。已超過七日，也仍可依第十八點處理終止與剩餘費用。\n\n## 畫面餘額，少了哪一段紀錄\n\n只有一張帳號截圖，很難分辨原始購買點數、兌換所得金幣與遊玩後餘額。紀錄可以這樣對照：\n\n| 資料 | 可釐清的問題 |\n| --- | --- |\n| 付款憑證與儲值明細 | 實際付了多少錢，取得哪種點數或服務？ |\n| 點數兌換及遊戲歷程 | 點數何時轉換，轉換後的金幣如何使用？ |\n| 終止通知與退費明細 | 何時終止，業者認列的未使用餘額及扣款理由為何？ |\n\n業者至少須保存三十日的個人遊戲歷程，並依規範受理查詢；收到申請後，須在七日內提供。資料有保存期限。發生爭議後儘早申請，可減少只剩最後餘額畫面的情況。現行規範同時禁止約定，糾紛只能以業者保存的歷程及電子資料為準（[應記載事項第九點、不得記載事項第六點](https://www.ey.gov.tw/File/C27658C15073FF69?A=C)）。\n\n行政院消保處在2026年5月公布的2025年統計中，線上遊戲仍排在第一次消費申訴類型的第二位，案件數則較前一年減少。官方同時要求業者妥善處理帳號封鎖、停權及客服問題（[統計與提醒事項](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930)）。\n\n退費爭議可先向業者提出，再使用[政府消費申訴管道](https://appeal.cpc.ey.gov.tw/)。若爭點已涉及契約解釋或證據遭拒，可先寄信至[事務所信箱](mailto:wei@hoveringlaw.com.tw)，說明爭議項目與回覆期限，無須提供帳號密碼。要讓請求金額有依據，留下的是金錢如何進入帳號、又如何被使用的紀錄。\n\n資料確認日：2026年10月25日。本文以特定遊戲退費判決說明契約與紀錄的判讀，其他遊戲的點數、道具及終止事由，須依其實際功能分別判斷。\n\n## 官方資料\n\n- 行政院消保處：[消費者保護法判決函釋彙編（廿二）](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C)，紙本第140至153頁，臺灣基隆地方法院109年度消簡上字第1號判決。\n- [網路連線遊戲服務定型化契約應記載及不得記載事項](https://www.ey.gov.tw/File/C27658C15073FF69?A=C)，第四、九、十八點及不得記載事項第六點。\n- 行政院消保處：[2025年度全國消費申訴及調解案件統計說明](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930)，2026年5月7日。\n- 行政院消費者保護會：[線上申訴系統](https://appeal.cpc.ey.gov.tw/)。\n",
+              "targetMarkdown": "\nAntaako pelitilille jäänyt kolikkosaldo oikeuden saada rahaa takaisin? Yksi pelaaja arvioi jäljellä olevien kolikoidensa arvoksi 243 548 Taiwanin dollaria ja vaati summaa peliyritykseltä. Tuomioistuin hylkäsi vaatimuksen. Tilillä oli kolikoita, mutta käyttämättömiä maksullisia pisteitä ei enää ollut; osapuolet olivat tästä tosiseikasta yhtä mieltä ([virallinen ratkaisukokoelma](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), painetut sivut 140–153).\n\nKeelungin alioikeus hylkäsi pelaajan muutoksenhaun 13. syyskuuta 2021 asiassa 109年度消簡上字第1號. Ratkaisuun ei voinut hakea edelleen muutosta. Arvio koski kyseisen pelin kolikoiden toimintaa ja palautusehtoja, eikä lopputulos poistanut kaikkea virtuaalista omaisuutta kuluttajansuojan piiristä.\n\n## Ostetuista pisteistä ottelujen pelimerkeiksi\n\nPelaaja osti ensin pisteitä, joilla saattoi hankkia pelipalveluja tai tavaroita. Tilille jääneet kolikot toimivat pelaajien välisissä otteluissa pelimerkkeinä. Tuomioistuin ei katsonut niitä sopimuksen perusteella palautettaviksi käyttämättömiksi maksullisiksi pisteiksi eikä yrityksen perimiksi pelimaksuiksi. Kolikoiden rahaksi muuttamiseen perustunut vaatimus jäi siksi hyväksymättä.\n\nKolikoiden käyttötarkoitus vaikutti arvioon. Tuomioistuin totesi, että tällaisten ottelumerkkien vaihtaminen yrityksessä rahaksi nostaisi esiin rahapelaamisen kysymyksen. Perustelu liittyi juuri tämän pelin toimintatapaan. Toisessa pelissä on selvitettävä, miten kolikot on saatu, mitä niillä saa ja miten niitä on käytetty; tämän ratkaisun [kahdeksannessa kohdassa](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), painetuilla sivuilla 148–152, kuvataan yksityiskohtaiset perusteet.\n\nMyös pelaaja oli ilmoittanut haluavansa päättää sopimuksen. Tuomioistuin saattoi siten todeta päättymisen vaikutuksen ja arvioida jäljellä olevien kolikoiden palautuskelpoisuutta. Tämä ei vahvistanut kaikkia yrityksen aikaisempia tilin sulkemisen tai sopimuksen päättämisen perusteita lainmukaisiksi. Palautusvaatimus ratkaistiin kolikoiden todellisen tehtävän perusteella.\n\n## Nykyinen päättämisoikeus ja palautuksen laskenta\n\nNykyisten [verkkopelipalvelujen pakollisten vakioehtojen 18 kohta](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) sallii kuluttajan ilmoittaa yritykselle sopimuksen päättämisestä milloin tahansa. Käyttämättömät maksulliset pisteet tai käyttämättömät pelimaksut on palautettava välttämättömien kustannusten vähentämisen jälkeen 30 päivän kuluessa sopimuksen päättymisestä, tai ne voidaan käsitellä osapuolten yhdessä sopimalla tavalla.\n\nMistä vähennys koostuu? Palautuslaskelmasta voi pyytää erittelyn käyttämättömästä määrästä, vähennettävistä kuluista ja laskentaperusteesta ja verrata sitä sopimukseen. Yrityksen valitsema kiinteä prosentti ei yksin osoita vähennystä kohtuulliseksi. Tietojen avulla voidaan täsmentää, mistä laskelman osasta osapuolet ovat eri mieltä.\n\nNykyinen sääntömuutos tuli voimaan 1. tammikuuta 2023. Se on käsiteltyä tuomiota myöhempi. Vuoden 2021 ratkaisu perustui silloiseen sopimukseen ja sovellettaviin sääntöihin, kun taas nykyisten ehtojen 4 kohta säilyttää mahdollisuuden peruuttaa sopimus kirjallisesti seitsemän päivän kuluessa pelaamisen aloittamisesta ja pyytää käyttämättömien maksullisten pisteiden palauttamista. Tämän ajan jälkeenkin 18 kohdan mukainen päättäminen ja käyttämättömän määrän selvittäminen ovat mahdollisia.\n\n## Saldon taakse jäävä tapahtumaketju\n\nViimeinen kuvakaappaus ei välttämättä erota ostettuja pisteitä, niistä muunnettuja kolikoita ja pelaamisen jälkeistä saldoa. Eri aineistot vastaavat eri vaiheisiin:\n\n| Aineisto | Selvitettävä tapahtuma |\n|---|---|\n| Maksukuitit ja tilille tehdyt lataukset | Maksettu summa ja sitä vastaan saadut pisteet tai palvelut. |\n| Pisteiden muuntaminen ja pelihistoria | Muuntamisen ajankohta ja saatujen kolikoiden käyttö. |\n| Päättämisilmoitus ja palautuslaskelma | Sopimuksen päättymispäivä, hyväksytty käyttämätön määrä ja vähennykset. |\n\nYrityksen on säilytettävä henkilökohtaista pelihistoriaa vähintään 30 päivää ja annettava pyydetyt tiedot seitsemän päivän kuluessa pyynnön vastaanottamisesta. Tiedoilla on säilytysaika. Riidan synnyttyä ajoissa esitetty pyyntö voi auttaa saamaan muutakin aineistoa kuin tilin viimeisen saldon. Velvoitteet ilmenevät [pakollisten ehtojen 9 kohdasta](https://www.ey.gov.tw/File/C27658C15073FF69?A=C).\n\nSamojen sääntöjen kiellettyjen ehtojen 6 kohta estää sopimusehdon, joka tekisi yrityksen säilyttämästä pelihistoriasta ja sähköisistä tiedoista ainoan riidan arviointiperusteen. Yrityksen aineiston rinnalle voidaan esittää maksukuitteja ja tukiviestejä, jotka kuvaavat rahan ja pisteiden kulkua.\n\n[Vuoden 2025 virallisissa kuluttajavalitustilastoissa](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930) verkkopelit olivat toiseksi suurin ensimmäisen vaiheen valitusten aihealue, vaikka tämän ryhmän tapausmäärä väheni edellisvuodesta. Tilastot julkaistiin 7. toukokuuta 2026. Viranomainen kehotti samalla yrityksiä käsittelemään asianmukaisesti tilien sulkemiseen, käyttöoikeuden keskeyttämiseen ja asiakastukeen liittyviä ongelmia.\n\nPalautusvaatimuksen voi ensin esittää yritykselle ja tarvittaessa käyttää [viranomaisen kuluttajavalituspalvelua](https://appeal.cpc.ey.gov.tw/). Jos erimielisyys koskee sopimuksen tulkintaa tai aineiston torjumista, [toimiston sähköpostiin](mailto:wei@hoveringlaw.com.tw) voi kuvata riitaisen erän ja vastausajan ilman tilin salasanaa. Rahavaatimusta tukee tapahtumaketju alkuperäisestä maksusta pisteiden muuntamiseen ja käyttöön.\n\nLähteet on tarkistettu 25. ja 26. lokakuuta 2026; tapaus on luettu virallisen kokoelman kyseisiltä sivuilta. Toisen pelin palautusarvio riippuu sen pisteiden ja virtuaaliesineiden tehtävästä sekä sopimuksen päättämisen perusteesta.\n\n## Viranomaislähteet\n\n- [Kuluttajansuojaviranomaisen ratkaisukokoelma, osa 22](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), painetut sivut 140–153: Keelungin ratkaisu 109年度消簡上字第1號.\n- [Verkkopelipalvelujen pakolliset ja kielletyt vakioehdot](https://www.ey.gov.tw/File/C27658C15073FF69?A=C), pakollisten ehtojen kohdat 4, 9 ja 18 sekä kiellettyjen ehtojen kohta 6.\n- [Vuoden 2025 kuluttajavalituksia ja sovittelua koskeva tilasto](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930), 7. toukokuuta 2026.\n- [Kuluttajansuojakomission sähköinen valituspalvelu](https://appeal.cpc.ey.gov.tw/).\n"
+            },
+            {
+              "code": "numbers-dates-currencies",
+              "status": "REQUIRED",
+              "message": "Raw numeric-token differences require context review; locale separators, spelled-out numerals and era conversions are not automatically equivalent. Matching tokens also do not prove matching conditions. No values are synthesized or zero-filled.",
+              "sourceOnly": [
+                {
+                  "token": "24",
+                  "count": 1
+                },
+                {
+                  "token": "3,548",
+                  "count": 1
+                },
+                {
+                  "token": "140",
+                  "count": 2
+                },
+                {
+                  "token": "153",
+                  "count": 2
+                },
+                {
+                  "token": "1",
+                  "count": 1
+                },
+                {
+                  "token": "148",
+                  "count": 1
+                },
+                {
+                  "token": "152",
+                  "count": 1
+                },
+                {
+                  "token": "5",
+                  "count": 2
+                },
+                {
+                  "token": "10",
+                  "count": 1
+                }
+              ],
+              "targetOnly": [
+                {
+                  "token": "30",
+                  "count": 3
+                },
+                {
+                  "token": "243 548",
+                  "count": 1
+                },
+                {
+                  "token": "140–153",
+                  "count": 2
+                },
+                {
+                  "token": "2021",
+                  "count": 1
+                },
+                {
+                  "token": "148–152",
+                  "count": 1
+                },
+                {
+                  "token": "18",
+                  "count": 3
+                },
+                {
+                  "token": "4",
+                  "count": 2
+                },
+                {
+                  "token": "9",
+                  "count": 1
+                },
+                {
+                  "token": "6",
+                  "count": 2
+                },
+                {
+                  "token": "7",
+                  "count": 1
+                },
+                {
+                  "token": "26",
+                  "count": 1
+                },
+                {
+                  "token": "22",
+                  "count": 1
+                }
+              ],
+              "sourceEvidence": [
+                {
+                  "text": "玩家把帳號內的剩餘金幣換算成新臺幣24萬3,548元，請求業者退還。法院沒有准許。帳號還有餘額，卻已沒有未使用的付費點數；這是該案兩造不爭執的事實（行政院消保處收錄的判決全文，紙本第140至153頁）。",
+                  "line": 25,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "24",
+                    "3,548",
+                    "140",
+                    "153"
+                  ]
+                },
+                {
+                  "text": "臺灣基隆地方法院109年度消簡上字第1號判決，於2021年9月13日駁回玩家的上訴，並載明不得上訴。法院檢查的是該遊戲金幣的實際功能及退費條款，沒有把所有虛擬道具一概排除在消費者保護之外。",
+                  "line": 27,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "109",
+                    "1",
+                    "2021",
+                    "9",
+                    "13"
+                  ]
+                },
+                {
+                  "text": "法院還指出，若允許玩家把這種對局籌碼向業者兌成現金，會涉及賭博。這段理由與本案玩法相連；用在另一款遊戲時，仍須查清楚金幣如何取得、能換什麼、是否已經用於遊戲，不能只因畫面寫著「金幣」就拒絕退費。完整理由見判決第八點，紙本第148至152頁。",
+                  "line": 33,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "148",
+                    "152"
+                  ]
+                },
+                {
+                  "text": "這份現行規範的最近修正自2023年1月1日生效，時間在上述判決之後；本案是以當時契約及適用規範判斷。現行第四點另保留開始遊戲後七日內以書面解除契約，並請求退還未使用付費點數的安排。已超過七日，也仍可依第十八點處理終止與剩餘費用。",
+                  "line": 43,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2023",
+                    "1",
+                    "1"
+                  ]
+                },
+                {
+                  "text": "行政院消保處在2026年5月公布的2025年統計中，線上遊戲仍排在第一次消費申訴類型的第二位，案件數則較前一年減少。官方同時要求業者妥善處理帳號封鎖、停權及客服問題（統計與提醒事項）。",
+                  "line": 57,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026",
+                    "5",
+                    "2025"
+                  ]
+                },
+                {
+                  "text": "資料確認日：2026年10月25日。本文以特定遊戲退費判決說明契約與紀錄的判讀，其他遊戲的點數、道具及終止事由，須依其實際功能分別判斷。",
+                  "line": 61,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026",
+                    "10",
+                    "25"
+                  ]
+                },
+                {
+                  "text": "行政院消保處：消費者保護法判決函釋彙編（廿二），紙本第140至153頁，臺灣基隆地方法院109年度消簡上字第1號判決。",
+                  "line": 65,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "140",
+                    "153",
+                    "109",
+                    "1"
+                  ]
+                },
+                {
+                  "text": "行政院消保處：2025年度全國消費申訴及調解案件統計說明，2026年5月7日。",
+                  "line": 67,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2025",
+                    "2026",
+                    "5",
+                    "7"
+                  ]
+                }
+              ],
+              "targetEvidence": [
+                {
+                  "key": "faq[1].a",
+                  "text": "Nykyiset ehdot antavat kuluttajalle oikeuden ilmoittaa sopimuksen päättämisestä milloin tahansa. Käyttämättömien maksullisten pisteiden tai käyttämättömien pelimaksujen määrä on välttämättömien kustannusten vähentämisen jälkeen palautettava 30 päivän kuluessa päättymisestä tai käsiteltävä osapuolten yhdessä sopimalla tavalla. Pelaamisen aloittamisesta laskettava seitsemän päivän kirjallinen peruuttamisoikeus on erillinen menettely.",
+                  "tokens": [
+                    "30"
+                  ]
+                },
+                {
+                  "text": "Antaako pelitilille jäänyt kolikkosaldo oikeuden saada rahaa takaisin? Yksi pelaaja arvioi jäljellä olevien kolikoidensa arvoksi 243 548 Taiwanin dollaria ja vaati summaa peliyritykseltä. Tuomioistuin hylkäsi vaatimuksen. Tilillä oli kolikoita, mutta käyttämättömiä maksullisia pisteitä ei enää ollut; osapuolet olivat tästä tosiseikasta yhtä mieltä (virallinen ratkaisukokoelma, painetut sivut 140–153).",
+                  "line": 25,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "243 548",
+                    "140–153"
+                  ]
+                },
+                {
+                  "text": "Keelungin alioikeus hylkäsi pelaajan muutoksenhaun 13. syyskuuta 2021 asiassa 109年度消簡上字第1號. Ratkaisuun ei voinut hakea edelleen muutosta. Arvio koski kyseisen pelin kolikoiden toimintaa ja palautusehtoja, eikä lopputulos poistanut kaikkea virtuaalista omaisuutta kuluttajansuojan piiristä.",
+                  "line": 27,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "13",
+                    "2021",
+                    "109",
+                    "1"
+                  ]
+                },
+                {
+                  "text": "Kolikoiden käyttötarkoitus vaikutti arvioon. Tuomioistuin totesi, että tällaisten ottelumerkkien vaihtaminen yrityksessä rahaksi nostaisi esiin rahapelaamisen kysymyksen. Perustelu liittyi juuri tämän pelin toimintatapaan. Toisessa pelissä on selvitettävä, miten kolikot on saatu, mitä niillä saa ja miten niitä on käytetty; tämän ratkaisun kahdeksannessa kohdassa, painetuilla sivuilla 148–152, kuvataan yksityiskohtaiset perusteet.",
+                  "line": 33,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "148–152"
+                  ]
+                },
+                {
+                  "text": "Nykyisten verkkopelipalvelujen pakollisten vakioehtojen 18 kohta sallii kuluttajan ilmoittaa yritykselle sopimuksen päättämisestä milloin tahansa. Käyttämättömät maksulliset pisteet tai käyttämättömät pelimaksut on palautettava välttämättömien kustannusten vähentämisen jälkeen 30 päivän kuluessa sopimuksen päättymisestä, tai ne voidaan käsitellä osapuolten yhdessä sopimalla tavalla.",
+                  "line": 39,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "18",
+                    "30"
+                  ]
+                },
+                {
+                  "text": "Nykyinen sääntömuutos tuli voimaan 1. tammikuuta 2023. Se on käsiteltyä tuomiota myöhempi. Vuoden 2021 ratkaisu perustui silloiseen sopimukseen ja sovellettaviin sääntöihin, kun taas nykyisten ehtojen 4 kohta säilyttää mahdollisuuden peruuttaa sopimus kirjallisesti seitsemän päivän kuluessa pelaamisen aloittamisesta ja pyytää käyttämättömien maksullisten pisteiden palauttamista. Tämän ajan jälkeenkin 18 kohdan mukainen päättäminen ja käyttämättömän määrän selvittäminen ovat mahdollisia.",
+                  "line": 43,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "1",
+                    "2023",
+                    "2021",
+                    "4",
+                    "18"
+                  ]
+                },
+                {
+                  "text": "Yrityksen on säilytettävä henkilökohtaista pelihistoriaa vähintään 30 päivää ja annettava pyydetyt tiedot seitsemän päivän kuluessa pyynnön vastaanottamisesta. Tiedoilla on säilytysaika. Riidan synnyttyä ajoissa esitetty pyyntö voi auttaa saamaan muutakin aineistoa kuin tilin viimeisen saldon. Velvoitteet ilmenevät pakollisten ehtojen 9 kohdasta.",
+                  "line": 55,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "30",
+                    "9"
+                  ]
+                },
+                {
+                  "text": "Samojen sääntöjen kiellettyjen ehtojen 6 kohta estää sopimusehdon, joka tekisi yrityksen säilyttämästä pelihistoriasta ja sähköisistä tiedoista ainoan riidan arviointiperusteen. Yrityksen aineiston rinnalle voidaan esittää maksukuitteja ja tukiviestejä, jotka kuvaavat rahan ja pisteiden kulkua.",
+                  "line": 57,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "6"
+                  ]
+                },
+                {
+                  "text": "Vuoden 2025 virallisissa kuluttajavalitustilastoissa verkkopelit olivat toiseksi suurin ensimmäisen vaiheen valitusten aihealue, vaikka tämän ryhmän tapausmäärä väheni edellisvuodesta. Tilastot julkaistiin 7. toukokuuta 2026. Viranomainen kehotti samalla yrityksiä käsittelemään asianmukaisesti tilien sulkemiseen, käyttöoikeuden keskeyttämiseen ja asiakastukeen liittyviä ongelmia.",
+                  "line": 59,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2025",
+                    "7",
+                    "2026"
+                  ]
+                },
+                {
+                  "text": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026; tapaus on luettu virallisen kokoelman kyseisiltä sivuilta. Toisen pelin palautusarvio riippuu sen pisteiden ja virtuaaliesineiden tehtävästä sekä sopimuksen päättämisen perusteesta.",
+                  "line": 63,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "25",
+                    "26",
+                    "2026"
+                  ]
+                },
+                {
+                  "text": "Kuluttajansuojaviranomaisen ratkaisukokoelma, osa 22, painetut sivut 140–153: Keelungin ratkaisu 109年度消簡上字第1號.",
+                  "line": 67,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "22",
+                    "140–153",
+                    "109",
+                    "1"
+                  ]
+                },
+                {
+                  "text": "Verkkopelipalvelujen pakolliset ja kielletyt vakioehdot, pakollisten ehtojen kohdat 4, 9 ja 18 sekä kiellettyjen ehtojen kohta 6.",
+                  "line": 68,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "4",
+                    "9",
+                    "18",
+                    "6"
+                  ]
+                },
+                {
+                  "text": "Vuoden 2025 kuluttajavalituksia ja sovittelua koskeva tilasto, 7. toukokuuta 2026.",
+                  "line": 69,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2025",
+                    "7",
+                    "2026"
+                  ]
+                }
+              ],
+              "editorialMetadata": {
+                "source": {
+                  "published": "2026-10-25",
+                  "lastmod": "2026-10-26",
+                  "date_display": "2026年10月25日",
+                  "read_time": "約5分鐘閱讀"
+                },
+                "target": {
+                  "published": "2026-10-26",
+                  "lastmod": "2026-10-26",
+                  "date_display": "26. lokakuuta 2026",
+                  "read_time": "5 min lukuaika"
+                }
+              },
+              "spelledOutNumerals": "Not completely parsed in 49 languages. Review the full source/target passages; absence from these arrays is not zero or PASS."
+            },
+            {
+              "code": "nationality-jurisdiction",
+              "status": "REQUIRED",
+              "message": "A language does not establish nationality. Verify Taiwan jurisdiction, immigration status, nationality qualifications and any foreign-law/consular claim throughout the text; the highlighted passages are incomplete hints, not a language classifier.",
+              "sourceHints": [],
+              "targetHints": [],
+              "sourceLocale": "zh-hant",
+              "targetLocale": "fi"
+            }
+          ],
+          "sha256": "41db82df9e378f70cda63273f1dc53295d076d3b88bda8796af3806398f9b381",
+          "source": {
+            "file": "../../tseng-all-language-columns-20261025/batch08/checks/fi-frozen-source-aliases/921-taiwan-online-game-coins-refund-judgment.md",
+            "locale": "zh-hant",
+            "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+          },
+          "board": {
+            "visible": true,
+            "audience": [
+              "fi"
+            ],
+            "marketBoard": true,
+            "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+          },
+          "bodyMetrics": {
+            "lettersAndNumbers": 4902,
+            "uniqueParagraphLettersAndNumbers": 4902,
+            "paragraphs": 26,
+            "h1": 0
+          },
+          "classification": {
+            "sourceCategory": "legal",
+            "targetCategory": "legal",
+            "topic": "litigation"
+          },
+          "sourceUrls": {
+            "expected": [
+              "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+              "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+              "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+              "https://appeal.cpc.ey.gov.tw/"
+            ],
+            "actual": [
+              "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+              "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+              "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+              "https://appeal.cpc.ey.gov.tw/"
+            ],
+            "networkChecked": false
+          }
+        }
+      ]
+    }
+  ]
+}

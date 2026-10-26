@@ -1,0 +1,606 @@
+{
+  "at": "2026-10-26T16:16:07.592209+09:00",
+  "source_urls": [
+    "https://kielitoimistonohjepankki.fi/ohje/ajanilmaukset-paivays-ja-vuosiluku/",
+    "https://kielitoimistonohjepankki.fi/ohje/luvut-ja-numerot-jarjestysluvut/",
+    "https://spec.commonmark.org/0.31.2/#backslash-escapes",
+    "https://spec.commonmark.org/0.31.2/#code-spans"
+  ],
+  "notes": [
+    "Literal expectations fixed before candidate production changes. Dates/library examples are neutral, not target column fitting.",
+    "Reported FI footer and HU escape fragments already seen; target full manuscripts/scores not used to choose conditions.",
+    "FI complete day + lower-case ja/tai/vai + day + known month; ordinary real next sentences kept. Grammar inference for tai/vai is not a quotation of a splitter rule.",
+    "CommonMark ASCII punctuation escapes, literal backslashes and code spans; existing lightweight Markdown stripping is not a full CommonMark implementation. No ordered-list rule change."
+  ],
+  "sentences": [
+    {
+      "id": "fi-ja-tammikuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. ja 8. tammikuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. ja 8. tammikuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-tai-tammikuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. tai 8. tammikuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. tai 8. tammikuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-vai-tammikuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. vai 8. tammikuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. vai 8. tammikuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-ja-helmikuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. ja 8. helmikuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. ja 8. helmikuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-tai-helmikuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. tai 8. helmikuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. tai 8. helmikuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-vai-helmikuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. vai 8. helmikuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. vai 8. helmikuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-ja-maaliskuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. ja 8. maaliskuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. ja 8. maaliskuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-tai-maaliskuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. tai 8. maaliskuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. tai 8. maaliskuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-vai-maaliskuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. vai 8. maaliskuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. vai 8. maaliskuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-ja-huhtikuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. ja 8. huhtikuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. ja 8. huhtikuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-tai-huhtikuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. tai 8. huhtikuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. tai 8. huhtikuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-vai-huhtikuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. vai 8. huhtikuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. vai 8. huhtikuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-ja-toukokuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. ja 8. toukokuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. ja 8. toukokuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-tai-toukokuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. tai 8. toukokuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. tai 8. toukokuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-vai-toukokuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. vai 8. toukokuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. vai 8. toukokuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-ja-kesäkuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. ja 8. kesäkuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. ja 8. kesäkuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-tai-kesäkuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. tai 8. kesäkuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. tai 8. kesäkuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-vai-kesäkuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. vai 8. kesäkuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. vai 8. kesäkuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-ja-heinäkuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. ja 8. heinäkuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. ja 8. heinäkuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-tai-heinäkuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. tai 8. heinäkuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. tai 8. heinäkuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-vai-heinäkuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. vai 8. heinäkuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. vai 8. heinäkuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-ja-elokuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. ja 8. elokuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. ja 8. elokuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-tai-elokuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. tai 8. elokuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. tai 8. elokuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-vai-elokuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. vai 8. elokuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. vai 8. elokuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-ja-syyskuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. ja 8. syyskuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. ja 8. syyskuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-tai-syyskuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. tai 8. syyskuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. tai 8. syyskuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-vai-syyskuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. vai 8. syyskuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. vai 8. syyskuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-ja-lokakuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. ja 8. lokakuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. ja 8. lokakuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-tai-lokakuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. tai 8. lokakuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. tai 8. lokakuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-vai-lokakuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. vai 8. lokakuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. vai 8. lokakuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-ja-marraskuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. ja 8. marraskuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. ja 8. marraskuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-tai-marraskuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. tai 8. marraskuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. tai 8. marraskuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-vai-marraskuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. vai 8. marraskuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. vai 8. marraskuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-ja-joulukuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. ja 8. joulukuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. ja 8. joulukuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-tai-joulukuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. tai 8. joulukuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. tai 8. joulukuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-vai-joulukuuta",
+      "lang": "fi",
+      "input": "Kirjasto on auki 7. vai 8. joulukuuta. Ovi suljetaan illalla.",
+      "expected_sentences": [
+        "Kirjasto on auki 7. vai 8. joulukuuta.",
+        "Ovi suljetaan illalla."
+      ]
+    },
+    {
+      "id": "fi-chain",
+      "lang": "fi",
+      "input": "Koulu on auki 2. ja 5. ja 8. huhtikuuta. Retki alkaa myöhemmin.",
+      "expected_sentences": [
+        "Koulu on auki 2. ja 5. ja 8. huhtikuuta.",
+        "Retki alkaa myöhemmin."
+      ]
+    },
+    {
+      "id": "fi-comma-list",
+      "lang": "fi",
+      "input": "Koulu on auki 2., 5. ja 8. huhtikuuta. Retki alkaa myöhemmin.",
+      "expected_sentences": [
+        "Koulu on auki 2., 5. ja 8. huhtikuuta.",
+        "Retki alkaa myöhemmin."
+      ]
+    },
+    {
+      "id": "fi-nbsp",
+      "lang": "fi",
+      "input": "Koulu on auki 2. ja 5. huhtikuuta. Retki alkaa myöhemmin.",
+      "expected_sentences": [
+        "Koulu on auki 2. ja 5. huhtikuuta.",
+        "Retki alkaa myöhemmin."
+      ]
+    },
+    {
+      "id": "fi-quoted",
+      "lang": "fi",
+      "input": "”Koulu on auki 2. ja 5. huhtikuuta.” Retki alkaa myöhemmin.",
+      "expected_sentences": [
+        "”Koulu on auki 2. ja 5. huhtikuuta.”",
+        "Retki alkaa myöhemmin."
+      ]
+    },
+    {
+      "id": "fi-uppercase-next",
+      "lang": "fi",
+      "input": "Numero on 7. Ja 8. huhtikuuta alkaa retki.",
+      "expected_sentences": [
+        "Numero on 7.",
+        "Ja 8. huhtikuuta alkaa retki."
+      ]
+    },
+    {
+      "id": "fi-uppercase-tai",
+      "lang": "fi",
+      "input": "Numero on 7. Tai 8. huhtikuuta alkaa retki.",
+      "expected_sentences": [
+        "Numero on 7.",
+        "Tai 8. huhtikuuta alkaa retki."
+      ]
+    },
+    {
+      "id": "fi-no-month",
+      "lang": "fi",
+      "input": "Numero on 7. Ja seuraava numero on 8.",
+      "expected_sentences": [
+        "Numero on 7.",
+        "Ja seuraava numero on 8."
+      ]
+    },
+    {
+      "id": "fi-month-boundary",
+      "lang": "fi",
+      "input": "Numero on 7. Ja 8. huhtikuutapahtumaa odotetaan.",
+      "expected_sentences": [
+        "Numero on 7.",
+        "Ja 8.",
+        "huhtikuutapahtumaa odotetaan."
+      ],
+      "scope": "lexical negative: no month token; fragment is not certified native prose"
+    },
+    {
+      "id": "fi-date-end",
+      "lang": "fi",
+      "input": "Retki päättyy 8. huhtikuuta 2024. Huomenna opiskellaan.",
+      "expected_sentences": [
+        "Retki päättyy 8. huhtikuuta 2024.",
+        "Huomenna opiskellaan."
+      ]
+    },
+    {
+      "id": "fi-ordinal-end",
+      "lang": "fi",
+      "input": "Sijoitus on 7. Huomenna jatketaan.",
+      "expected_sentences": [
+        "Sijoitus on 7.",
+        "Huomenna jatketaan."
+      ]
+    },
+    {
+      "id": "fi-decimal-url",
+      "lang": "fi",
+      "input": "Arvo on 3.5. Katso https://example.test/a.pdf. Retki alkaa.",
+      "expected_sentences": [
+        "Arvo on 3.5.",
+        "Katso .",
+        "Retki alkaa."
+      ]
+    },
+    {
+      "id": "hu-escaped-year",
+      "lang": "hu",
+      "input": "2018\\. augusztus 16-án nyílt meg a könyvtár. Másnap új olvasókat fogadtak.",
+      "expected_sentences": [
+        "2018. augusztus 16-án nyílt meg a könyvtár.",
+        "Másnap új olvasókat fogadtak."
+      ],
+      "expected_lengths": [
+        7,
+        4
+      ],
+      "expected_paragraph_count": 1,
+      "expected_list_count": 0
+    },
+    {
+      "id": "hu-escaped-february",
+      "lang": "hu",
+      "input": "2022\\. február 9-én kinyitott a múzeum. A terem üres volt.",
+      "expected_sentences": [
+        "2022. február 9-én kinyitott a múzeum.",
+        "A terem üres volt."
+      ]
+    },
+    {
+      "id": "hu-escaped-abbreviation",
+      "lang": "hu",
+      "input": "Dr\\. Kovács könyvet olvas. A terem csendes.",
+      "expected_sentences": [
+        "Dr. Kovács könyvet olvas.",
+        "A terem csendes."
+      ]
+    },
+    {
+      "id": "hu-escaped-real-stop",
+      "lang": "hu",
+      "input": "A szám 12\\. Ez az utolsó adat.",
+      "expected_sentences": [
+        "A szám 12.",
+        "Ez az utolsó adat."
+      ]
+    },
+    {
+      "id": "hu-escaped-decimal",
+      "lang": "hu",
+      "input": "Az érték 3\\.5. Ez kevés.",
+      "expected_sentences": [
+        "Az érték 3.5.",
+        "Ez kevés."
+      ]
+    },
+    {
+      "id": "hu-raw-year-is-list",
+      "lang": "hu",
+      "input": "2018. augusztus 16-án nyílt meg a könyvtár.",
+      "expected_sentences": [],
+      "expected_paragraph_count": 0,
+      "expected_list_count": 1
+    },
+    {
+      "id": "hu-actual-list",
+      "lang": "hu",
+      "input": "1. Vegyen egy könyvet.",
+      "expected_sentences": [],
+      "expected_paragraph_count": 0,
+      "expected_list_count": 1
+    },
+    {
+      "id": "hu-possible-list",
+      "lang": "hu",
+      "input": "2018. könyv",
+      "expected_sentences": [],
+      "expected_paragraph_count": 0,
+      "expected_list_count": 1
+    },
+    {
+      "id": "hu-literal-double-backslash",
+      "lang": "hu",
+      "input": "2018\\\\. augusztus elején nyitott. Másnap esett.",
+      "expected_sentences": [
+        "2018\\.",
+        "augusztus elején nyitott.",
+        "Másnap esett."
+      ],
+      "scope": "literal rendered backslash must not be erased as a date escape"
+    },
+    {
+      "id": "hu-three-backslashes",
+      "lang": "hu",
+      "input": "2018\\\\\\. augusztus elején nyitott. Másnap esett.",
+      "expected_sentences": [
+        "2018\\.",
+        "augusztus elején nyitott.",
+        "Másnap esett."
+      ]
+    },
+    {
+      "id": "hu-inline-code-backslash",
+      "lang": "hu",
+      "input": "A minta `2018\\. augusztus`. Ez kód.",
+      "expected_sentences": [
+        "A minta 2018\\.",
+        "augusztus.",
+        "Ez kód."
+      ],
+      "scope": "display preserves code backslash; current heuristic may split code punctuation"
+    },
+    {
+      "id": "hu-literal-letter-backslash",
+      "lang": "hu",
+      "input": "A jel \\A marad. Ez látható.",
+      "expected_sentences": [
+        "A jel \\A marad.",
+        "Ez látható."
+      ]
+    }
+  ],
+  "visible_text": [
+    {
+      "id": "escaped-ascii-punctuation",
+      "input": "\\!\\\"\\#\\$\\%\\&\\'\\(\\)\\*\\+\\,\\-\\.\\/\\:\\;\\<\\=\\>\\?\\@\\[\\\\\\]\\^\\_\\`\\{\\|\\}\\~",
+      "expected": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+    },
+    {
+      "id": "literal-escape-pairs",
+      "input": "\\\\ \\A \\3 \\«",
+      "expected": "\\ \\A \\3 \\«"
+    },
+    {
+      "id": "escaped-emphasis",
+      "input": "\\*jel\\* \\_szó\\_",
+      "expected": "*jel* _szó_"
+    },
+    {
+      "id": "escaped-code-markers",
+      "input": "\\`jel\\`",
+      "expected": "`jel`"
+    },
+    {
+      "id": "code-keeps-escapes",
+      "input": "`2018\\. augusztus`",
+      "expected": "2018\\. augusztus"
+    },
+    {
+      "id": "code-multiple-ticks",
+      "input": "``2018\\. ` jel``",
+      "expected": "2018\\. ` jel"
+    },
+    {
+      "id": "link-label-escape",
+      "input": "[2018\\. augusztus](https://example.test/a.pdf)",
+      "expected": "2018. augusztus"
+    },
+    {
+      "id": "escaped-brackets",
+      "input": "\\[jel\\]",
+      "expected": "[jel]"
+    },
+    {
+      "id": "unescaped-markup-stays",
+      "input": "*szó* és [jel](https://example.test/a.pdf).",
+      "expected": "szó és jel."
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "atUTC": "2026-10-26T08:09:42.338292+00:00",
+  "command": [
+    "python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+    "--lang",
+    "fi"
+  ],
+  "exitCode": 0,
+  "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md [fi] sentences=45 mean=11.9 cv=0.534 short=0.356 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+  "stderr": "",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "41db82df9e378f70cda63273f1dc53295d076d3b88bda8796af3806398f9b381"
+    }
+  ],
+  "toolHashes": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/fi.json": "87535d428aaf9613187c52adc3c387e365f419f423f693128fd77e08646b2629"
+  },
+  "extraction": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "41db82df9e378f70cda63273f1dc53295d076d3b88bda8796af3806398f9b381",
+      "metrics": {
+        "lang": "fi",
+        "sentences": 45,
+        "paras": 14,
+        "heads": 4,
+        "list_items": 4,
+        "mean_len": 11.9,
+        "len_cv": 0.534,
+        "short_share": 0.356,
+        "long_share": 0.0,
+        "para_cv": 0.23,
+        "even_run3": 0.0,
+        "top_end": "takaisin",
+        "top_end_share": 0.022,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "antaako",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 4.87,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Antaako pelitilille jäänyt kolikkosaldo oikeuden saada rahaa takaisin?",
+        "last": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026; tapaus on luettu virallisen kokoelman kyseisiltä sivuilta. Toisen peli",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "antaako",
+          "sentences": [
+            {
+              "text": "Antaako pelitilille jäänyt kolikkosaldo oikeuden saada rahaa takaisin?",
+              "units": 8
+            },
+            {
+              "text": "Yksi pelaaja arvioi jäljellä olevien kolikoidensa arvoksi 243 548 Taiwanin dollaria ja vaati summaa peliyritykseltä.",
+              "units": 15
+            },
+            {
+              "text": "Tuomioistuin hylkäsi vaatimuksen.",
+              "units": 3
+            },
+            {
+              "text": "Tilillä oli kolikoita, mutta käyttämättömiä maksullisia pisteitä ei enää ollut; osapuolet olivat tästä tosiseikasta yhtä mieltä (virallinen ratkaisukokoelma, painetut sivut 140–153).",
+              "units": 22
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "keelungin",
+          "sentences": [
+            {
+              "text": "Keelungin alioikeus hylkäsi pelaajan muutoksenhaun 13. syyskuuta 2021 asiassa 109年度消簡上字第1號.",
+              "units": 10
+            },
+            {
+              "text": "Ratkaisuun ei voinut hakea edelleen muutosta.",
+              "units": 6
+            },
+            {
+              "text": "Arvio koski kyseisen pelin kolikoiden toimintaa ja palautusehtoja, eikä lopputulos poistanut kaikkea virtuaalista omaisuutta kuluttajansuojan piiristä.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "pelaaja",
+          "sentences": [
+            {
+              "text": "Pelaaja osti ensin pisteitä, joilla saattoi hankkia pelipalveluja tai tavaroita.",
+              "units": 10
+            },
+            {
+              "text": "Tilille jääneet kolikot toimivat pelaajien välisissä otteluissa pelimerkkeinä.",
+              "units": 8
+            },
+            {
+              "text": "Tuomioistuin ei katsonut niitä sopimuksen perusteella palautettaviksi käyttämättömiksi maksullisiksi pisteiksi eikä yrityksen perimiksi pelimaksuiksi.",
+              "units": 14
+            },
+            {
+              "text": "Kolikoiden rahaksi muuttamiseen perustunut vaatimus jäi siksi hyväksymättä.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "kolikoiden",
+          "sentences": [
+            {
+              "text": "Kolikoiden käyttötarkoitus vaikutti arvioon.",
+              "units": 4
+            },
+            {
+              "text": "Tuomioistuin totesi, että tällaisten ottelumerkkien vaihtaminen yrityksessä rahaksi nostaisi esiin rahapelaamisen kysymyksen.",
+              "units": 12
+            },
+            {
+              "text": "Perustelu liittyi juuri tämän pelin toimintatapaan.",
+              "units": 6
+            },
+            {
+              "text": "Toisessa pelissä on selvitettävä, miten kolikot on saatu, mitä niillä saa ja miten niitä on käytetty; tämän ratkaisun kahdeksannessa kohdassa, painetuilla sivuilla 148–152, kuvataan yksityiskohtaiset perusteet.",
+              "units": 27
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "myös",
+          "sentences": [
+            {
+              "text": "Myös pelaaja oli ilmoittanut haluavansa päättää sopimuksen.",
+              "units": 7
+            },
+            {
+              "text": "Tuomioistuin saattoi siten todeta päättymisen vaikutuksen ja arvioida jäljellä olevien kolikoiden palautuskelpoisuutta.",
+              "units": 12
+            },
+            {
+              "text": "Tämä ei vahvistanut kaikkia yrityksen aikaisempia tilin sulkemisen tai sopimuksen päättämisen perusteita lainmukaisiksi.",
+              "units": 13
+            },
+            {
+              "text": "Palautusvaatimus ratkaistiin kolikoiden todellisen tehtävän perusteella.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "nykyisten",
+          "sentences": [
+            {
+              "text": "Nykyisten verkkopelipalvelujen pakollisten vakioehtojen 18 kohta sallii kuluttajan ilmoittaa yritykselle sopimuksen päättämisestä milloin tahansa.",
+              "units": 14
+            },
+            {
+              "text": "Käyttämättömät maksulliset pisteet tai käyttämättömät pelimaksut on palautettava välttämättömien kustannusten vähentämisen jälkeen 30 päivän kuluessa sopimuksen päättymisestä, tai ne voidaan käsitellä osapuolten yhdessä sopimalla tavalla.",
+              "units": 25
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "mistä",
+          "sentences": [
+            {
+              "text": "Mistä vähennys koostuu?",
+              "units": 3
+            },
+            {
+              "text": "Palautuslaskelmasta voi pyytää erittelyn käyttämättömästä määrästä, vähennettävistä kuluista ja laskentaperusteesta ja verrata sitä sopimukseen.",
+              "units": 14
+            },
+            {
+              "text": "Yrityksen valitsema kiinteä prosentti ei yksin osoita vähennystä kohtuulliseksi.",
+              "units": 9
+            },
+            {
+              "text": "Tietojen avulla voidaan täsmentää, mistä laskelman osasta osapuolet ovat eri mieltä.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "nykyinen",
+          "sentences": [
+            {
+              "text": "Nykyinen sääntömuutos tuli voimaan 1. tammikuuta 2023.",
+              "units": 7
+            },
+            {
+              "text": "Se on käsiteltyä tuomiota myöhempi.",
+              "units": 5
+            },
+            {
+              "text": "Vuoden 2021 ratkaisu perustui silloiseen sopimukseen ja sovellettaviin sääntöihin, kun taas nykyisten ehtojen 4 kohta säilyttää mahdollisuuden peruuttaa sopimus kirjallisesti seitsemän päivän kuluessa pelaamisen aloittamisesta ja pyytää käyttämättömien maksullisten pisteiden palauttamista.",
+              "units": 31
+            },
+            {
+              "text": "Tämän ajan jälkeenkin 18 kohdan mukainen päättäminen ja käyttämättömän määrän selvittäminen ovat mahdollisia.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "viimeinen",
+          "sentences": [
+            {
+              "text": "Viimeinen kuvakaappaus ei välttämättä erota ostettuja pisteitä, niistä muunnettuja kolikoita ja pelaamisen jälkeistä saldoa.",
+              "units": 14
+            },
+            {
+              "text": "Eri aineistot vastaavat eri vaiheisiin:",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "yrityksen",
+          "sentences": [
+            {
+              "text": "Yrityksen on säilytettävä henkilökohtaista pelihistoriaa vähintään 30 päivää ja annettava pyydetyt tiedot seitsemän päivän kuluessa pyynnön vastaanottamisesta.",
+              "units": 17
+            },
+            {
+              "text": "Tiedoilla on säilytysaika.",
+              "units": 3
+            },
+            {
+              "text": "Riidan synnyttyä ajoissa esitetty pyyntö voi auttaa saamaan muutakin aineistoa kuin tilin viimeisen saldon.",
+              "units": 14
+            },
+            {
+              "text": "Velvoitteet ilmenevät pakollisten ehtojen 9 kohdasta.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "samojen",
+          "sentences": [
+            {
+              "text": "Samojen sääntöjen kiellettyjen ehtojen 6 kohta estää sopimusehdon, joka tekisi yrityksen säilyttämästä pelihistoriasta ja sähköisistä tiedoista ainoan riidan arviointiperusteen.",
+              "units": 19
+            },
+            {
+              "text": "Yrityksen aineiston rinnalle voidaan esittää maksukuitteja ja tukiviestejä, jotka kuvaavat rahan ja pisteiden kulkua.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "vuoden",
+          "sentences": [
+            {
+              "text": "Vuoden 2025 virallisissa kuluttajavalitustilastoissa verkkopelit olivat toiseksi suurin ensimmäisen vaiheen valitusten aihealue, vaikka tämän ryhmän tapausmäärä väheni edellisvuodesta.",
+              "units": 18
+            },
+            {
+              "text": "Tilastot julkaistiin 7. toukokuuta 2026.",
+              "units": 5
+            },
+            {
+              "text": "Viranomainen kehotti samalla yrityksiä käsittelemään asianmukaisesti tilien sulkemiseen, käyttöoikeuden keskeyttämiseen ja asiakastukeen liittyviä ongelmia.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "palautusvaatimuksen",
+          "sentences": [
+            {
+              "text": "Palautusvaatimuksen voi ensin esittää yritykselle ja tarvittaessa käyttää viranomaisen kuluttajavalituspalvelua.",
+              "units": 10
+            },
+            {
+              "text": "Jos erimielisyys koskee sopimuksen tulkintaa tai aineiston torjumista, toimiston sähköpostiin voi kuvata riitaisen erän ja vastausajan ilman tilin salasanaa.",
+              "units": 19
+            },
+            {
+              "text": "Rahavaatimusta tukee tapahtumaketju alkuperäisestä maksusta pisteiden muuntamiseen ja käyttöön.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "lähteet",
+          "sentences": [
+            {
+              "text": "Lähteet on tarkistettu 25. ja 26. lokakuuta 2026; tapaus on luettu virallisen kokoelman kyseisiltä sivuilta.",
+              "units": 15
+            },
+            {
+              "text": "Toisen pelin palautusarvio riippuu sen pisteiden ja virtuaaliesineiden tehtävästä sekä sopimuksen päättämisen perusteesta.",
+              "units": 13
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Ostetuista pisteistä ottelujen pelimerkeiksi",
+        "Nykyinen päättämisoikeus ja palautuksen laskenta",
+        "Saldon taakse jäävä tapahtumaketju",
+        "Viranomaislähteet"
+      ],
+      "listItems": [
+        "- [Kuluttajansuojaviranomaisen ratkaisukokoelma, osa 22](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), painetut sivut 140–153: Keelungin ratkaisu 109年度消簡上字第1號.",
+        "- [Verkkopelipalvelujen pakolliset ja kielletyt vakioehdot](https://www.ey.gov.tw/File/C27658C15073FF69?A=C), pakollisten ehtojen kohdat 4, 9 ja 18 sekä kiellettyjen ehtojen kohta 6.",
+        "- [Vuoden 2025 kuluttajavalituksia ja sovittelua koskeva tilasto](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930), 7. toukokuuta 2026.",
+        "- [Kuluttajansuojakomission sähköinen valituspalvelu](https://appeal.cpc.ey.gov.tw/)."
+      ]
+    }
+  ]
+}

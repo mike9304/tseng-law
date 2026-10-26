@@ -1,0 +1,352 @@
+{
+  "checkedAt": "2026-10-26T07:02:11.919465+00:00",
+  "phase": "legal",
+  "locale": "lv",
+  "checkerInputs": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "c8f5368fa0d8747e96ac9483c37227155083cb10a3e687fca2b10bca7add82bc"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/lv.json",
+      "sha256": "09dc74f01e20b3430b1bf00c1e9ae4c2b941e081505e63cd4f9d86fb8fdb836e"
+    }
+  ],
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "7ca84ef9e0c02b161a2cac94d77258f679da88281877f1de45704f6b1322ae56",
+      "bytes": 9232,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "--lang",
+        "lv"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/916-taiwan-parent-company-pollution-liability-us-investor.md [lv] sentences=44 mean=13.8 cv=0.51 short=0.25 run3=0.048 opener_rep=0.0 cite_end=0.0 cite_para=0.067 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "lv",
+        "sentences": 44,
+        "paras": 15,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 13.8,
+        "len_cv": 0.51,
+        "short_share": 0.25,
+        "long_share": 0.023,
+        "para_cv": 0.222,
+        "even_run3": 0.048,
+        "top_end": "personas",
+        "top_end_share": 0.045,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "kas",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.067,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.82,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Kas notika pēc tam, kad uzņēmumu grupa saņēma ziņojumu par rūpnīcas piesārņojumu?",
+        "last": "Sākotnējā ziņā caur biroja kontaktlapu angļu valodā var aprakstīt darījumu, Taivānas uzņēmumu un plānoto pārveduma vai d",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "kas",
+          "sentences": [
+            {
+              "text": "Kas notika pēc tam, kad uzņēmumu grupa saņēma ziņojumu par rūpnīcas piesārņojumu?",
+              "words": 12
+            },
+            {
+              "text": "Taivānas elektronikas ražotāja darbinieku lietā izpēte pirms uzņēmuma iegādes kļuva par pierādījumu pret mātesuzņēmumiem.",
+              "words": 14
+            },
+            {
+              "text": "Augstākās tiesas skaidrojums lietā 107年度台上字第267號 saista zināšanas par piesārņojumu ar kontroli, reakciju uz apdraudējumu un darījumiem, kas samazināja Taivānas uzņēmuma aktīvus.",
+              "words": 21
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "spriedumu",
+          "sentences": [
+            {
+              "text": "Spriedumu pieņēma 2018. gada 16. augustā.",
+              "words": 6
+            },
+            {
+              "text": "Strīds attiecās uz rūpnīcas darbinieku pakļautību ķīmisko vielu iedarbībai un uzņēmumu, kuri kontrolēja ražotāju, atbildību.",
+              "words": 15
+            },
+            {
+              "text": "Ar ārvalsts investora līdzdalību vien nepietika.",
+              "words": 6
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "tiesas",
+          "sentences": [
+            {
+              "text": "Tiesas oficiālajā skaidrojumā aplūkota piesārņojuma atklāšana vides izpētē, kontrolējošo grupu informētība, problēmas nenovēršana un darbinieku neinformēšana, kā arī kapitāla samazināšana un naudas pārvedumi uz ārvalstīm nolūkā izvairīties no saistībām.",
+              "words": 29
+            },
+            {
+              "text": "Tiesa atbalstīja pamatojumu, kas ļāva attiecīgās prasības vērst pret kontrolējošajiem uzņēmumiem, lai gan tie bija atsevišķas juridiskas personas.",
+              "words": 18
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "saņēmēju",
+          "sentences": [
+            {
+              "text": "Saņēmēju saraksts var parādīt, kurš zināja par apdraudējumu.",
+              "words": 8
+            },
+            {
+              "text": "Valdes materiāli un darba organizācijas norādījumi palīdz noskaidrot, kurš varēja lemt par reakciju.",
+              "words": 13
+            },
+            {
+              "text": "Vēlāko pārvedumu apstiprinājumi papildina šo secību.",
+              "words": 6
+            },
+            {
+              "text": "Vienas grupas lēmumi var būt izkaisīti vairākās dokumentu mapēs.",
+              "words": 9
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "kurš",
+          "sentences": [
+            {
+              "text": "Kurš pasūtīja papildu izpēti, un kā tās rezultāti ietekmēja darbinieku aizsardzību vai piesārņojuma novēršanu?",
+              "words": 14
+            },
+            {
+              "text": "Iegādes izvērtējumā atbildēm var pievienot attiecīgos lēmumus un atbildīgās personas.",
+              "words": 10
+            },
+            {
+              "text": "Neatbildētie jautājumi jāatstāj redzami.",
+              "words": 4
+            },
+            {
+              "text": "Optimistisks darījuma noslēguma pārskats nedrīkst aizstāt sākotnējos tehniskos konstatējumus vai pasākumus, kas bija paredzēti to risināšanai.",
+              "words": 16
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "šāda",
+          "sentences": [
+            {
+              "text": "Šāda dokumentu salīdzināšana ir praktiska izvērtēšanas metode.",
+              "words": 7
+            },
+            {
+              "text": "Tā neaizstāj apdraudējuma prasīto rīcību un pati par sevi neapliecina darījuma tiesiskumu.",
+              "words": 12
+            },
+            {
+              "text": "Saglabāts ziņojums rāda, kāda informācija bija pieejama; uzņēmuma reakciju atklāj turpmākie notikumi.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "attiecībā",
+          "sentences": [
+            {
+              "text": "Attiecībā uz 246 prasītājiem tiesa atcēla sprieduma daļas un nodeva tās jaunai izskatīšanai.",
+              "words": 13
+            },
+            {
+              "text": "Kasācijas sūdzības par 262 prasītājiem noraidīja.",
+              "words": 6
+            },
+            {
+              "text": "Tiesas iznākuma kopsavilkums saista lietas daļu nodošanu atpakaļ arī ar trūkumiem kaitējuma, pierādījumu un pilnvarojuma celt prasības izvērtēšanā.",
+              "words": 18
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "jauna",
+          "sentences": [
+            {
+              "text": "Jauna izskatīšana atstāja attiecīgos jautājumus atvērtus.",
+              "words": 6
+            },
+            {
+              "text": "Šis lēmums nenozīmēja, ka visiem cietušajiem trūkst prasījuma, un pārējo kasācijas sūdzību noraidīšana neizbeidza visu plašāko tiesvedību.",
+              "words": 17
+            },
+            {
+              "text": "Iepriekšējo notikumu riska aprēķinam jānoskaidro, par kuru procesu un kuru tā stadiju ir runa.",
+              "words": 14
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "vienas",
+          "sentences": [
+            {
+              "text": "Vienas tiesas sēdes vai sprieduma datums nepasaka iespējamo saistību summu.",
+              "words": 10
+            },
+            {
+              "text": "Vērtējumu var mainīt prasītāju grupas, atsevišķās sprieduma daļas un vēlākas tiesvedības.",
+              "words": 11
+            },
+            {
+              "text": "Šeit aplūkots konkrētais nolēmums, nevis atjaunota visas rūpnīcas strīdu vēsture.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "taivānas",
+          "sentences": [
+            {
+              "text": "Taivānas Uzņēmumu likuma 154. pants parasti ierobežo akcionāra atbildību ar samaksu par akcijām.",
+              "words": 13
+            },
+            {
+              "text": "Otrās daļas izņēmums attiecas uz akcionāru, kurš ļaunprātīgi izmanto sabiedrības juridisko personību un tā izraisa konkrēta sabiedrības parāda rašanos ar acīmredzamām atmaksas grūtībām; apstākļiem turklāt jābūt tik smagiem, ka nepieciešama akcionāra atbildība.",
+              "words": 32
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "šie",
+          "sentences": [
+            {
+              "text": "Šie priekšnoteikumi ir kumulatīvi.",
+              "words": 4
+            },
+            {
+              "text": "Līdzdalība uzņēmumā, nesamaksāts parāds vai piesārņojuma konstatējums atsevišķi neaptver visu likuma pārbaudi.",
+              "words": 12
+            },
+            {
+              "text": "Spēkā esošo pantu arī nevar pasniegt kā vienīgo pamatojumu vēsturiskās rīcības vērtējumam aprakstītajā lietā: tiesa analizēja kontrolējošo uzņēmumu rīcību un pamatu atkāpties no atsevišķas juridiskās personības aizsardzības.",
+              "words": 27
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "par",
+          "sentences": [
+            {
+              "text": "Par parasto uzņēmumu struktūras atšķirību var lasīt meitasuzņēmuma un filiāles salīdzinājumā.",
+              "words": 11
+            },
+            {
+              "text": "Piesārņojuma strīdā ar reģistrācijas dokumentiem nepietiek, lai noskaidrotu, kā grupa izmantoja kontroli pēc tam, kad uzzināja par apdraudējumu.",
+              "words": 18
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "asv",
+          "sentences": [
+            {
+              "text": "ASV tirdzniecības pārstāvja USTR 2026. gada februāra faktu lapā aprakstīta abu pušu iecere veicināt pārrobežu ieguldījumus.",
+              "words": 16
+            },
+            {
+              "text": "Tajā paredzēts, ka ASV atbilstošos gadījumos apsvērs finansējuma atbalstu ieguldījumiem Taivānas kritiskajās nozarēs kopā ar ASV privātajiem partneriem un saskaņā ar piemērojamiem tiesību aktiem.",
+              "words": 24
+            },
+            {
+              "text": "Tā nav automātiska finansējuma piešķiršana investoram.",
+              "words": 6
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "pirms",
+          "sentences": [
+            {
+              "text": "Pirms peļņas sadales, kapitāla samazināšanas vai līdzekļu pārveduma, izbeidzot ieguldījumu, lēmuma pieņēmēji var salīdzināt konstatētos riskus, neatrisinātās prasības un resursus, kas paliks Taivānas uzņēmumā.",
+              "words": 24
+            },
+            {
+              "text": "Izvērtējumam jāattiecas uz konkrēto darījumu.",
+              "words": 5
+            },
+            {
+              "text": "Dokumenta nosaukums vai neizlasīts ziņojums datu telpā vēl nepierāda, kā reaģēts uz atklāto problēmu.",
+              "words": 14
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "opener": "sākotnējā",
+          "sentences": [
+            {
+              "text": "Sākotnējā ziņā caur biroja kontaktlapu angļu valodā var aprakstīt darījumu, Taivānas uzņēmumu un plānoto pārveduma vai darījuma noslēgšanas dienu.",
+              "words": 19
+            },
+            {
+              "text": "Sensitīvu darbinieku informāciju un tehniskos ziņojumus var nodot pēc atsevišķas vienošanās par piegādes veidu.",
+              "words": 14
+            },
+            {
+              "text": "Tiesas skaidrojums pārbaudīts 2026. gada 25. oktobrī, bet pašreizējais likums un politikas materiāls salīdzināti 26. oktobrī; konkrēta investora atbildības vērtējumam paliek vajadzīgi sākotnējie konstatējumi, turpmākie lēmumi un aktīvu pārvedumu apstiprinājumi.",
+              "words": 30
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Ziņojuma saņēmēji un viņu turpmākie lēmumi",
+        "Prasītāju grupām bija atšķirīgs procesuālais iznākums",
+        "Atbildības izņēmumam nepietiek ar vienu pazīmi",
+        "Ieguldījumu plāni un līdzekļi, kas paliek uzņēmumā"
+      ],
+      "excludedLists": []
+    }
+  ]
+}

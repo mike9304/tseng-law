@@ -1,0 +1,349 @@
+{
+  "checkedAt": "2026-10-26T08:15:57.479076+00:00",
+  "phase": "author-r2",
+  "locale": "lv",
+  "checkerInputs": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/lv.json",
+      "sha256": "09dc74f01e20b3430b1bf00c1e9ae4c2b941e081505e63cd4f9d86fb8fdb836e"
+    }
+  ],
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "f5e0e079f45df5fb1cdfdb4a37cdb7fd2cf2a6e72bf7f5b561be88f7fa8bf118",
+      "bytes": 8980,
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md",
+        "--lang",
+        "lv"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md [lv] sentences=45 mean=12.2 cv=0.515 short=0.333 run3=0.0 opener_rep=0.143 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "lv",
+        "sentences": 45,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 12.2,
+        "len_cv": 0.515,
+        "short_share": 0.333,
+        "long_share": 0.0,
+        "para_cv": 0.196,
+        "even_run3": 0.0,
+        "top_end": "lappusēs",
+        "top_end_share": 0.044,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "taivānas",
+        "top_opener_n": 2,
+        "opener_rep": 0.143,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.18,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Spēlētājam kontā joprojām bija monētas, taču neizlietotu apmaksātu punktu vairs nebija.",
+        "last": "Sprieduma pamatmateriāli pārbaudīti 2026. gada 25. oktobrī, spēkā esošie noteikumi un statistikas publikācija salīdzināt",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "spēlētājam",
+          "sentences": [
+            {
+              "text": "Spēlētājam kontā joprojām bija monētas, taču neizlietotu apmaksātu punktu vairs nebija.",
+              "words": 11
+            },
+            {
+              "text": "Par to puses nestrīdējās.",
+              "words": 4
+            },
+            {
+              "text": "Viņš monētas pārrēķināja naudā un prasīja atmaksāt 243 548 Taivānas jaunos dolārus, bet tiesa prasījumu neapmierināja.",
+              "words": 16
+            },
+            {
+              "text": "Nolēmums publicēts patērētāju aizsardzības spriedumu krājuma drukātajās 140.–153. lappusēs.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "taivānas",
+          "sentences": [
+            {
+              "text": "Taivānas Dzjilunas apgabaltiesa izskatīja lietu 109年度消簡上字第1號.",
+              "words": 6
+            },
+            {
+              "text": "Spēlētāja apelācijas sūdzību tā noraidīja 2021. gada 13. septembrī.",
+              "words": 9
+            },
+            {
+              "text": "Spriedumā norādīts, ka tas nav pārsūdzams.",
+              "words": 6
+            },
+            {
+              "text": "Tiesa vērtēja konkrēto monētu funkciju un šai spēlei piemērojamos atmaksas noteikumus.",
+              "words": 11
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "līgums",
+          "sentences": [
+            {
+              "text": "Līgums ļāva vispirms iegādāties punktus un pēc tam tos izmantot spēles pakalpojumu vai preču saņemšanai.",
+              "words": 15
+            },
+            {
+              "text": "Atlikušās monētas kalpoja par žetoniem spēlētāju izspēlēs.",
+              "words": 7
+            },
+            {
+              "text": "Tiesa tās neatzina par līgumā paredzētajiem atmaksājamiem neizlietotiem apmaksātiem punktiem vai pakalpojuma sniedzēja iekasētu spēles maksu.",
+              "words": 16
+            },
+            {
+              "text": "Tādēļ prasītais pārrēķins naudā netika pieļauts.",
+              "words": 6
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "sprieduma",
+          "sentences": [
+            {
+              "text": "Sprieduma astotajā pamatojuma daļā tiesa arī saistīja šādu izspēles žetonu apmaiņu pret naudu ar azartspēlēm.",
+              "words": 15
+            },
+            {
+              "text": "Pamatojums atrodams drukātajās 148.–152. lappusēs.",
+              "words": 6
+            },
+            {
+              "text": "Šis apsvērums attiecās uz aprakstītās spēles darbību; citas spēles monētu iegūšana, lietojums un līgums jāvērtē pēc tās faktiskās sistēmas.",
+              "words": 19
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "kāpēc",
+          "sentences": [
+            {
+              "text": "Kāpēc līguma izbeigšana šajā lietā nedeva atmaksu?",
+              "words": 7
+            },
+            {
+              "text": "Pats spēlētājs bija paziņojis, ka līgumu izbeidz, tādēļ tiesa varēja atzīt izbeigšanas sekas un atsevišķi izvērtēt atlikušās monētas.",
+              "words": 18
+            },
+            {
+              "text": "Tas neapstiprināja visu pakalpojuma sniedzēja agrāk izmantoto bloķēšanas vai izbeigšanas pamatu tiesiskumu.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "obligāto",
+          "sentences": [
+            {
+              "text": "Obligāto tipveida noteikumu tiešsaistes spēļu pakalpojumiem 18. punkts ļauj patērētājam jebkurā laikā paziņot par līguma izbeigšanu.",
+              "words": 16
+            },
+            {
+              "text": "Pēc nepieciešamo izmaksu atskaitīšanas neizlietoto apmaksāto punktu vai neizmantotās spēles maksas atmaksa jāveic 30 dienu laikā no līguma izbeigšanas, ja vien abas puses nav vienojušās par citu kārtību.",
+              "words": 28
+            },
+            {
+              "text": "Pakalpojuma sniedzējs to nevar vienpusēji aizstāt ar savu izvēli.",
+              "words": 9
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "atskaitījumu",
+          "sentences": [
+            {
+              "text": "Atskaitījumu saturu var pārbaudīt.",
+              "words": 4
+            },
+            {
+              "text": "Atmaksas aprēķinā var lūgt atsevišķi uzrādīt neizlietoto atlikumu, atskaitāmās izmaksas un to pamatu.",
+              "words": 13
+            },
+            {
+              "text": "Pakalpojuma sniedzēja norādīts fiksēts procents pats par sevi nepierāda nepieciešamo izmaksu apmēru.",
+              "words": 12
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "noteikumi",
+          "sentences": [
+            {
+              "text": "Noteikumi grozīti 2022. gada 10. augustā.",
+              "words": 6
+            },
+            {
+              "text": "Attiecīgā redakcija stājās spēkā nākamā gada 1. janvārī, pēc aprakstītā tiesas sprieduma.",
+              "words": 12
+            },
+            {
+              "text": "Tādēļ vēsturiskās lietas līguma un toreiz piemērojamo prasību vērtējumu nodala no pašreizējās procedūras.",
+              "words": 13
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "ceturtajā",
+          "sentences": [
+            {
+              "text": "Ceturtajā punktā paredzēta arī iespēja septiņu kalendāra dienu laikā no spēles sākšanas rakstiski atkāpties no līguma bez pamatojuma un izmaksām, prasot atmaksāt neizlietotos apmaksātos punktus.",
+              "words": 25
+            },
+            {
+              "text": "Šim termiņam ir savs sākums.",
+              "words": 5
+            },
+            {
+              "text": "Pēc tā beigām joprojām paliek 18. punktā paredzētā līguma izbeigšana un neizlietotā atlikuma izvērtēšana.",
+              "words": 14
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "konta",
+          "sentences": [
+            {
+              "text": "Konta attēls rāda atlikumu vienā brīdī.",
+              "words": 6
+            },
+            {
+              "text": "Tas var neparādīt, kuri punkti pirkti, kad tie pārvērsti monētās un kā monētas izmantotas.",
+              "words": 14
+            },
+            {
+              "text": "Šīs saites palīdz atjaunot dažādi dokumenti:",
+              "words": 6
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "pakalpojuma",
+          "sentences": [
+            {
+              "text": "Pakalpojuma sniedzējam personīgā spēles vēsture jāglabā vismaz 30 dienas.",
+              "words": 9
+            },
+            {
+              "text": "Saņemot pieprasījumu, tā jāizsniedz septiņās dienās.",
+              "words": 6
+            },
+            {
+              "text": "Šie pienākumi noteikti obligāto noteikumu 9. punktā, savukārt aizliegto nosacījumu 6. punkts liedz noteikt tikai pakalpojuma sniedzēja vēsturi un elektroniskos datus par strīda izšķiršanas pamatu.",
+              "words": 25
+            },
+            {
+              "text": "Laikus iesniegts pieprasījums palīdz saglabāt vairāk nekā pēdējo atlikuma ekrānu.",
+              "words": 10
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "taivānas",
+          "sentences": [
+            {
+              "text": "Taivānas patērētāju aizsardzības iestādes statistikā par 2025. gadu tiešsaistes spēles bija otrajā vietā sākotnējo patērētāju sūdzību kategorijās, lai gan lietu skaits bija samazinājies pret iepriekšējo gadu.",
+              "words": 26
+            },
+            {
+              "text": "Publikācija aicināja pakalpojumu sniedzējus pienācīgi risināt kontu bloķēšanu, darbības apturēšanu un klientu apkalpošanu.",
+              "words": 13
+            },
+            {
+              "text": "Šī vieta sūdzību statistikā neraksturo spēļu tirgus daļu.",
+              "words": 8
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "atmaksu",
+          "sentences": [
+            {
+              "text": "Atmaksu vispirms var prasīt pakalpojuma sniedzējam un pēc tam izmantot valsts patērētāju sūdzību sistēmu.",
+              "words": 14
+            },
+            {
+              "text": "Ja strīds skar līguma interpretāciju vai pierādījumu noraidīšanu, e-pastā birojam var norādīt strīda priekšmetu un atbildes termiņu.",
+              "words": 18
+            },
+            {
+              "text": "Konta parole nav jāsūta.",
+              "words": 4
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "sprieduma",
+          "sentences": [
+            {
+              "text": "Sprieduma pamatmateriāli pārbaudīti 2026. gada 25. oktobrī, spēkā esošie noteikumi un statistikas publikācija salīdzināti 26. oktobrī.",
+              "words": 16
+            },
+            {
+              "text": "Citu spēļu punkti, priekšmeti un izbeigšanas iemesli jāvērtē pēc to faktiskās funkcijas; prasītās summas pamatu palīdz izskaidrot naudas iemaksas, punktu apmaiņas un izmantošanas secība.",
+              "words": 24
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "No nopirktiem punktiem līdz spēlē izmantojamiem žetoniem",
+        "Pašreizējā atmaksa aptver neizlietotos punktus un neizmantoto spēles maksu",
+        "Ekrānattēlu papildina maksājumu un izmantošanas vēsture"
+      ],
+      "excludedLists": []
+    }
+  ]
+}

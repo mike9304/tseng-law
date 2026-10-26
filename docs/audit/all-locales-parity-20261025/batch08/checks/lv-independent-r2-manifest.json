@@ -1,0 +1,95 @@
+{
+  "at": "2026-10-26T08:20:18.144443+00:00",
+  "status": "APPROVE",
+  "reviewer": "/root/column_source_quality",
+  "scope": "R1 S01 single replacement; prior R1 full review preserved",
+  "mandatoryOpen": 0,
+  "optionalOpen": 0,
+  "closed": [
+    "S01"
+  ],
+  "manuscripts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "7788c3d6594e7b8680cb30d31cc29cbdd5a92f07a40e0caf14a4c9d918c65eb6",
+      "priorSHA256": "7788c3d6594e7b8680cb30d31cc29cbdd5a92f07a40e0caf14a4c9d918c65eb6",
+      "changed": false,
+      "actualCLI": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-initial.json",
+      "actualExit": 0,
+      "priorFiveCurrentExtractionEquivalence": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-proof.json"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "7ca84ef9e0c02b161a2cac94d77258f679da88281877f1de45704f6b1322ae56",
+      "priorSHA256": "7ca84ef9e0c02b161a2cac94d77258f679da88281877f1de45704f6b1322ae56",
+      "changed": false,
+      "actualCLI": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-legal.json",
+      "actualExit": 0,
+      "priorFiveCurrentExtractionEquivalence": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-proof.json"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "9435794819327cd5e19a00b77963848c004b2a69a7a0d18a9cc48e256b32208f",
+      "priorSHA256": "9435794819327cd5e19a00b77963848c004b2a69a7a0d18a9cc48e256b32208f",
+      "changed": false,
+      "actualCLI": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-initial.json",
+      "actualExit": 0,
+      "priorFiveCurrentExtractionEquivalence": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-proof.json"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b26bff2ba9bfad7ccd88bd9e3ee3bbc34458de838f157b9b9dec3f1211251323",
+      "priorSHA256": "b26bff2ba9bfad7ccd88bd9e3ee3bbc34458de838f157b9b9dec3f1211251323",
+      "changed": false,
+      "actualCLI": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-final.json",
+      "actualExit": 0,
+      "priorFiveCurrentExtractionEquivalence": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-proof.json"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "180f2341d274efee506c8164a1e49247058580b8aa5235e53c145aa5e9b28326",
+      "priorSHA256": "180f2341d274efee506c8164a1e49247058580b8aa5235e53c145aa5e9b28326",
+      "changed": false,
+      "actualCLI": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-final.json",
+      "actualExit": 0,
+      "priorFiveCurrentExtractionEquivalence": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-proof.json"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "f5e0e079f45df5fb1cdfdb4a37cdb7fd2cf2a6e72bf7f5b561be88f7fa8bf118",
+      "priorSHA256": "6634bb7957f6bd88e2c1072c6cf8fad761bd5eb38d263017409bfd6327921936",
+      "changed": true,
+      "actualCLI": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-variety-author-r2.json",
+      "actualExit": 0,
+      "priorFiveCurrentExtractionEquivalence": null
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/lv-independent-r2.md",
+      "sha256": "d4992ca97234f2c7984482d11e9812b398ccadde6b41236e53299f7273592817"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-r2-proof.json",
+      "sha256": "fd92831299392374b4808015c82e5ec22de2cc1a4ab3fc713049565c6e3cc12e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-r2-proof.py",
+      "sha256": "6c6b5a3b5d0753b87ab59cd56637092acc2e4335e9ed82a2e431d23e8f962bba"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-author-r2-final-manifest.json",
+      "sha256": "eea5584b04dc78a1ac97f7d26f1c507668894de3fcc970915089dbd61687c792"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/lv-independent-manifest.json",
+      "sha256": "e5369daec1a2f62980ecd9f6256daae8a47fd1c2b3668e65ae7b4d93c738452c"
+    }
+  ],
+  "inverseR1": true,
+  "actualSharedCLI": "author actual exit0/FAIL0 at currentSHA; reviewer direct extraction matches",
+  "bodyUnits": 249,
+  "FAQ17Unchanged": true,
+  "nativeHumanLegalApproval": false,
+  "publicDeployment": false
+}

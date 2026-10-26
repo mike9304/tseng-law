@@ -1,0 +1,202 @@
+{
+  "at": "2026-10-26T07:45:49.041124+00:00",
+  "scope": "Three exact R1 edits only; no additional source or language policy changes",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSHA256": "87e697ee0603081c2a38d1a024933570cb2bea0134ec4cea4189cccd59349973",
+      "sha256": "c13d8f57ce5732caf2c21022c7a18513615629612016598441be3a37b756d57f",
+      "bytes": 7252,
+      "exactReverseRestoresR1": true,
+      "frontmatterIncludingFAQUnchanged": true,
+      "URLSequenceUnchanged": true,
+      "NumericSequenceUnchanged": true,
+      "changed": true,
+      "boundaryDelta": [
+        {
+          "op": "replace",
+          "oldRange": [
+            32,
+            33
+          ],
+          "newRange": [
+            32,
+            33
+          ],
+          "old": [
+            "Ni svako popravljanje iznosa ili pravnog argumenta nužno ne stvara novi spor; odlučuju stvarne činjenice i sadržaj zahtjeva."
+          ],
+          "new": [
+            "Promjena iznosa ili pravnog argumenta ne mora stvoriti novi spor; odlučuju stvarne činjenice i sadržaj zahtjeva."
+          ],
+          "oldWithNeighbors": [
+            "Sam broj projekta ne pokazuje njihov odnos.",
+            "Ni svako popravljanje iznosa ili pravnog argumenta nužno ne stvara novi spor; odlučuju stvarne činjenice i sadržaj zahtjeva.",
+            "Ako dokumenti ostavljaju prazninu, pravna procjena može obuhvatiti postojeći arbitražni sporazum ili potrebu za daljnjom medijacijom o predloženom zahtjevu."
+          ],
+          "newWithNeighbors": [
+            "Sam broj projekta ne pokazuje njihov odnos.",
+            "Promjena iznosa ili pravnog argumenta ne mora stvoriti novi spor; odlučuju stvarne činjenice i sadržaj zahtjeva.",
+            "Ako dokumenti ostavljaju prazninu, pravna procjena može obuhvatiti postojeći arbitražni sporazum ili potrebu za daljnjom medijacijom o predloženom zahtjevu."
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSHA256": "7c90b1dfe5e9cfd0b5111e5296a88fd766a5add1ae191d892c5deeeddb7ce976",
+      "sha256": "7c90b1dfe5e9cfd0b5111e5296a88fd766a5add1ae191d892c5deeeddb7ce976",
+      "bytes": 8542,
+      "exactReverseRestoresR1": true,
+      "frontmatterIncludingFAQUnchanged": true,
+      "URLSequenceUnchanged": true,
+      "NumericSequenceUnchanged": true,
+      "changed": false,
+      "boundaryDelta": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSHA256": "c9766d01c05e314f6441a4b93b2cd6f0152eeab4f4c4238c1e84f5b2cd62a726",
+      "sha256": "c9766d01c05e314f6441a4b93b2cd6f0152eeab4f4c4238c1e84f5b2cd62a726",
+      "bytes": 7982,
+      "exactReverseRestoresR1": true,
+      "frontmatterIncludingFAQUnchanged": true,
+      "URLSequenceUnchanged": true,
+      "NumericSequenceUnchanged": true,
+      "changed": false,
+      "boundaryDelta": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "3610f15af0275f9a83f962a2ac94929970f5f4cec69881c1d55487084e65dc3d",
+      "sha256": "3610f15af0275f9a83f962a2ac94929970f5f4cec69881c1d55487084e65dc3d",
+      "bytes": 7754,
+      "exactReverseRestoresR1": true,
+      "frontmatterIncludingFAQUnchanged": true,
+      "URLSequenceUnchanged": true,
+      "NumericSequenceUnchanged": true,
+      "changed": false,
+      "boundaryDelta": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "4db2d93dbb20704102db9fc7c8f0c3ff3dfc66b33d34ce32b92423f5ef7fff95",
+      "sha256": "5e59637b831b7c80b424b0e25288b19e8398fdb560f67110a9fd85b91e73a21d",
+      "bytes": 7914,
+      "exactReverseRestoresR1": true,
+      "frontmatterIncludingFAQUnchanged": true,
+      "URLSequenceUnchanged": true,
+      "NumericSequenceUnchanged": true,
+      "changed": true,
+      "boundaryDelta": [
+        {
+          "op": "replace",
+          "oldRange": [
+            25,
+            26
+          ],
+          "newRange": [
+            25,
+            26
+          ],
+          "old": [
+            "Naknadne sigurnosne mjere nisu otklonile pitanje ovlasti za izvedene radove."
+          ],
+          "new": [
+            "Sud je razmatrao i ovlast stanara za izvedene radove."
+          ],
+          "oldWithNeighbors": [
+            "Čak i da su ti navodi točni, ocijenio je sud, obveza uklanjanja i vraćanja u prijašnje stanje ostaje.",
+            "Naknadne sigurnosne mjere nisu otklonile pitanje ovlasti za izvedene radove.",
+            "Ponuda s brojem parkirnog mjesta ostavlja velik dio ovog spora nevidljivim."
+          ],
+          "newWithNeighbors": [
+            "Čak i da su ti navodi točni, ocijenio je sud, obveza uklanjanja i vraćanja u prijašnje stanje ostaje.",
+            "Sud je razmatrao i ovlast stanara za izvedene radove.",
+            "Ponuda s brojem parkirnog mjesta ostavlja velik dio ovog spora nevidljivim."
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "07752d3062571c055c87382a2f9ab54c7e53fa70de0264b8e590a74fcf4a3837",
+      "sha256": "0db591eca4c9cb2d659709a3c8a32491924cb6a2a8b939b2c4312be8443a72ef",
+      "bytes": 8322,
+      "exactReverseRestoresR1": true,
+      "frontmatterIncludingFAQUnchanged": true,
+      "URLSequenceUnchanged": true,
+      "NumericSequenceUnchanged": true,
+      "changed": true,
+      "boundaryDelta": [
+        {
+          "op": "replace",
+          "oldRange": [
+            33,
+            35
+          ],
+          "newRange": [
+            33,
+            34
+          ],
+          "old": [
+            "Njegovi podaci time ne postaju bezvrijedni.",
+            "Mogu se usporediti s potvrdama o uplati, snimkama i odgovorima službe za podršku."
+          ],
+          "new": [
+            "Operatorovi zapisi mogu se usporediti s potvrdama o uplati, snimkama i odgovorima službe za podršku."
+          ],
+          "oldWithNeighbors": [
+            "Zabranjena točka 6. istog dokumenta isključuje ugovornu odredbu prema kojoj su u sporu jedino mjerodavni operatorovi zapisi i elektronički podaci.",
+            "Njegovi podaci time ne postaju bezvrijedni.",
+            "Mogu se usporediti s potvrdama o uplati, snimkama i odgovorima službe za podršku.",
+            "U službenoj statistici za 2025., objavljenoj u svibnju 2026., mrežne igre bile su druga kategorija po broju prvih potrošačkih pritužbi."
+          ],
+          "newWithNeighbors": [
+            "Zabranjena točka 6. istog dokumenta isključuje ugovornu odredbu prema kojoj su u sporu jedino mjerodavni operatorovi zapisi i elektronički podaci.",
+            "Operatorovi zapisi mogu se usporediti s potvrdama o uplati, snimkama i odgovorima službe za podršku.",
+            "U službenoj statistici za 2025., objavljenoj u svibnju 2026., mrežne igre bile su druga kategorija po broju prvih potrošačkih pritužbi."
+          ]
+        }
+      ]
+    }
+  ],
+  "preservedOriginalRecords": {
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hr-author.md": "8951b12f066e13e4a0b70f6725523b7287fe8e835202cdd96f76384e026b2418",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hr-author-manifest.json": "620671bf817e811c6f370d10dbb42b591b00efad2a55bc629a6aaeebd5f18381",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/reviews/hr-independent.md": "71831fac973c913735af33c27f24cf4b420e018f44ad0913c92faf41511195ba",
+    "/Users/son7/tseng-all-language-columns-20261025/batch08/checks/hr-independent-manifest.json": "d49458e46e62654619a7d459d59e8a60e810325768180bee04911fff094b8a7f"
+  },
+  "currentBodySegments": 249,
+  "actualChangedFileCLI": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "c13d8f57ce5732caf2c21022c7a18513615629612016598441be3a37b756d57f",
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/915-taiwan-public-contract-mediation-arbitration-same-claim.md [hr] sentences=38 mean=14.5 cv=0.503 short=0.211 run3=0.056 opener_rep=0.0 cite_end=0.0 cite_para=0.154 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "5e59637b831b7c80b424b0e25288b19e8398fdb560f67110a9fd85b91e73a21d",
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/920-taiwan-apartment-ev-charger-common-area-judgment.md [hr] sentences=43 mean=14.4 cv=0.458 short=0.256 run3=0.049 opener_rep=0.0 cite_end=0.0 cite_para=0.385 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "0db591eca4c9cb2d659709a3c8a32491924cb6a2a8b939b2c4312be8443a72ef",
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-hr/921-taiwan-online-game-coins-refund-judgment.md [hr] sentences=42 mean=15.8 cv=0.453 short=0.167 run3=0.025 opener_rep=0.143 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n"
+    }
+  ],
+  "actualCLIToolHashes": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/hr.json": "d139e9980abbcfc79177de7d87b0269d2e837f990e08691ba93fee35894cde71"
+  },
+  "contentAuditSHA256": "0c05f09d1952e5469c81e59f195d45f891cdee79c7ac4fa619ccce3d3b176eb0",
+  "contentErrors": 0,
+  "semanticReviewItemsRetained": 16,
+  "manualChangedAndNeighborBoundariesRead": true,
+  "sourceL44ConditionalClaimReRead": true
+}

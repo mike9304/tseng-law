@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-26T08:08:59.124810+00:00",
+  "status": "PRELIMINARY_READ_GUARD_AUTHOR_MANIFEST_PENDING",
+  "authorMessage": "Author explicitly reported final manuscript wording fixed; author/manifest linking still being written. This does not establish approval.",
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "1e23862809c2e415b3d7e4c415489149c93c212afe2a1bce19cf8786ca571b9a",
+      "bytes": 12158
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "7c5660357f51831cae744ab792821292ddb07f96ddf5b5e61e00c4a8cf594972",
+      "bytes": 13072
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "250fe3852817e5ca19b81099832b60a9d6525356cd84d0405c628294cfdb165a",
+      "bytes": 13165
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "44339c13b54715370c32139cd71a2c992fe686db9534a103d21a36168b1e46cd",
+      "bytes": 12903
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "b9568c63255df9b3b726a6a009c42ee51e4124548928121ac010367ea0394b69",
+      "bytes": 13139
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/src/content/columns-mn/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "107b708d834f52311f18e129997b94f9daac058642245f9d451a98b9343bd10f",
+      "bytes": 14014
+    }
+  ]
+}

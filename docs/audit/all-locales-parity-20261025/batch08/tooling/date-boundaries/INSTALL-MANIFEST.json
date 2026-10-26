@@ -1,0 +1,424 @@
+{
+  "at": "2026-10-26T16:29:05.153460+09:00",
+  "status": "candidate frozen for root review; not installed",
+  "production_files": [
+    {
+      "relative_path": "MULTILINGUAL-METHOD.md",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/MULTILINGUAL-METHOD.md",
+      "sha256": "6412888b4c98d41388af35ca4ebf84be2ea173cf99f36a4b6ecd5b59d615bb7e",
+      "changed": false
+    },
+    {
+      "relative_path": "build-rewrite-queue.py",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/build-rewrite-queue.py",
+      "sha256": "510cc4881b562713699a0f208df96e1ecc5d01ca66f0add49e876c95c3a9ce59",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/ar.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/ar.json",
+      "sha256": "972061a6c428c55f0a8b8a720e9e9b33eee0cf6e37228598d0e112ebb247e07b",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/bg.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/bg.json",
+      "sha256": "3462bfb1ef3eb72956a2b28b2dfdd9f3179d5c60472753e2ead4ccc3e6f1a442",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/bn.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/bn.json",
+      "sha256": "972bc2c11024f7eb8de6bc833671b98eea4ad7cbfa332671760ba114bb6bf506",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/ca.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/ca.json",
+      "sha256": "ff8b9474d63ab895cfcd4669fe3cf799045c03801107a1ded976c8e9b4b40822",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/cs.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/cs.json",
+      "sha256": "317385e4979f05808aad1a20af7793167550acf89ce2a8a303d7eab8d23f9e99",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/da.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/da.json",
+      "sha256": "d97cb6ecf083d3a000d9e68c9aca35be606afcc262cf676723f9fc06ba3352df",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/de.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/de.json",
+      "sha256": "fe35834b10fa49f52d71f19ab8156a8eb50f2e9d06eba96cc881ad9197d19ecc",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/el.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/el.json",
+      "sha256": "436a1dfae99477561e3acd7ca08b8f2fce6851bebaffe066acb1408de37f6d30",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/es.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/es.json",
+      "sha256": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/et.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/et.json",
+      "sha256": "1cb9d12e7653189b58cdc1f8fd480608d967f70db0fddc9951598610b35d0b5a",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/fa.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/fa.json",
+      "sha256": "d6be43d513d3fc6d3202e97022bbc094820e7ab87e950e711a00bb251757d82f",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/fi.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/fi.json",
+      "sha256": "87535d428aaf9613187c52adc3c387e365f419f423f693128fd77e08646b2629",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/fil.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/fil.json",
+      "sha256": "9daca5d186170f2025c576fbba8b65594732ef36f7cfb9a6bee719e091585e76",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/fr.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/fr.json",
+      "sha256": "335b1d64efbcf137a86525a90e19e59b68d77082c010ca5aa19186ab9c10702b",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/he.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/he.json",
+      "sha256": "b1a18b7d290c158ac485ed18bc1a70f5db36c3a395439b3403394435d25b7615",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/hi.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/hi.json",
+      "sha256": "6c9b7d7e2a9e8abb0972b9fdac5af45ab30d8fbd36b28172ccb15c6d2694faf9",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/hr.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/hr.json",
+      "sha256": "d139e9980abbcfc79177de7d87b0269d2e837f990e08691ba93fee35894cde71",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/hu.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/hu.json",
+      "sha256": "cef85b13e94e3fd08f23d3aa4fba80ab51c116adf3c7d30cb8e4e59d00b1279b",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/id.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/id.json",
+      "sha256": "5ce17a1afc1bba0dd8c5c64e81b72be2100c3e0ce244f4d99db5da4fe22c43a1",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/is.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/is.json",
+      "sha256": "d0594d70cbdca74a6d5a701665bb1c680f73d36fe8d90e2910f4923db4e00796",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/it.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/it.json",
+      "sha256": "ef2a26fa53ee93118d5e7b24e59b3cbc99d6052846acde1b33273c590a19de35",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/km.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/km.json",
+      "sha256": "87c3558f74be7faaab25178d605a5dc332607046e64799ecbfd28cdbca688521",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/lt.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/lt.json",
+      "sha256": "a91bc6f0a6d80aada83de9c463836b6c4c4d724eddc32ff18905b573642d3694",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/lv.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/lv.json",
+      "sha256": "09dc74f01e20b3430b1bf00c1e9ae4c2b941e081505e63cd4f9d86fb8fdb836e",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/mn.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/mn.json",
+      "sha256": "f55713d7239df7da1e2c86c8bc1698a36377fe36175b435383a16a26830d56f5",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/ms.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/ms.json",
+      "sha256": "88abb26243707cd9601ad80695494c1f951077a0d0f49a681d3ae639c9f60d00",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/my.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/my.json",
+      "sha256": "82288e1fa3ad75d4ed185b6a6275cc9b02f56bfdd4f67150430a05107172426b",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/nb.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/nb.json",
+      "sha256": "d354bc18f20fe062ec564e90cf5a654b70038e91f1ca9047499a0acd16b8faa4",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/ne.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/ne.json",
+      "sha256": "f5aaba570b8c67d7aabb100857f39402a8c5e2c4c49da3273d3de47009d59c3b",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/nl.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/nl.json",
+      "sha256": "cedc9c648dded5d3619305c5f1fc1aa2d961ce34590bf85bcf21c468661db274",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/pl.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/pl.json",
+      "sha256": "00b4d91b84026bda2a8f76f963302865311f3ca3600fbd1d1a4267a7ff7dd0fa",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/pt.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/pt.json",
+      "sha256": "f963d707450b0eb85408e8ca916e11f02d858545eac3b316baa2f4934ed293b9",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/ro.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/ro.json",
+      "sha256": "1fe2c5bb725e55a8aa38fcaafc0f52fc43d729c54fa9dfaaab5a6aafddee1474",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/ru.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/ru.json",
+      "sha256": "189438971f5e3572b48e5e9afe8a88ec7c25e5a3aeab5a637f44e9591b666206",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/sk.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/sk.json",
+      "sha256": "bdaceac0a3767ca53432736996a1d70f04af43d7bb1fef941b6b08cc746bb04a",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/sl.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/sl.json",
+      "sha256": "f7fdb543f7952d5e891a30fd5d167b3035a3933c982a01f6d70b03c5f554c040",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/sr.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/sr.json",
+      "sha256": "b82eac56b6e35c4a08e8029317975be46ee3930f2366633a704dd487a69d0419",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/sv.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/sv.json",
+      "sha256": "66703b741178befbfc04395ba29a4dddb42254772700c906d7bd233a1834680e",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/ta.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/ta.json",
+      "sha256": "5b9d203fa8409458d08690a810c509f7993d1d835f070aee68e9915b02329d92",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/th.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/th.json",
+      "sha256": "8410261b606d60f367bb43ec9588d6b90d916abc4f877aeb2bec4587b62c4254",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/tr.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/tr.json",
+      "sha256": "1f44c794464be7750a83629be356d11b45ef9a4d174b3a7b13ef5478163c2bbc",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/uk.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/uk.json",
+      "sha256": "ed9e8025126b82dfd0385cf76bb8694efe731bcf0e63a7fb58d3c8ee520d6081",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/ur.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/ur.json",
+      "sha256": "e0b0d8fb72a8f6b594d51c3a37101fade000a6eb6a69161036f80da2c6076397",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/vi.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/vi.json",
+      "sha256": "3565e97c189498fc28f07a814d60b1548bb21e2e091d48ef1a926a7068be43df",
+      "changed": false
+    },
+    {
+      "relative_path": "profiles/zh-hans.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/profiles/zh-hans.json",
+      "sha256": "8ca5f5f884c3a1d2144ed5ce55b09b806088b5b0b66b4cf883067255fe153543",
+      "changed": false
+    },
+    {
+      "relative_path": "variety_expansion.py",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+      "changed": true
+    },
+    {
+      "relative_path": "variety_metrics.py",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+      "changed": false
+    },
+    {
+      "relative_path": "variety_multilingual.py",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+      "changed": false
+    }
+  ],
+  "changed_production_files": [
+    {
+      "relative_path": "variety_expansion.py",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/candidate/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+      "changed": true
+    }
+  ],
+  "neutral_test_files": [
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/run_neutral.py",
+      "suggested_destination": "tests/date-boundaries/run_neutral.py",
+      "sha256": "f722eb756c556cd15188c9c9d6a408086fe17904fec411eada191a9e977b0a64"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch08/tooling/date-boundaries/neutral-fixtures.json",
+      "suggested_destination": "tests/date-boundaries/neutral-fixtures.json",
+      "sha256": "2b5e54ef073604c59bcf05014ae9a83c57de22228672dba266df90965f8d51e3"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "CANDIDATE-FREEZE.json",
+      "sha256": "22c54c94bf0ed134be0cc6a2d98f476c96055f34a231562f28edbf77d8a98ec1"
+    },
+    {
+      "path": "FINAL-INTEGRITY.json",
+      "sha256": "b5af0d2e8ba6229475cfa2b60eb1716114831417771d72ad816b80cd33ec3ba1"
+    },
+    {
+      "path": "INPUT-FREEZE.json",
+      "sha256": "36efe4086ac4fccd7f7db9ab942620a2b5591e94fe7651c18c9fbaaba836d799"
+    },
+    {
+      "path": "REPORT.md",
+      "sha256": "4ef2332df8e444a7e68b2c4caf1717988e30bd0d56dc88777866889a5c4270b0"
+    },
+    {
+      "path": "TARGET-INPUTS.json",
+      "sha256": "9b1ac8355eb17c5f22f964ebfece873a7f827c1c5acc663eae7277f9030da6e3"
+    },
+    {
+      "path": "baseline-corpus.json",
+      "sha256": "8e573faa06e3e38d3bb92f47f0cfb04e96149e57b6c517467267e29d5f3c7724"
+    },
+    {
+      "path": "baseline-targets.json",
+      "sha256": "ced59aa137ff5eb31597319611163401b1410f106a879c648db8b07306d3d8fd"
+    },
+    {
+      "path": "candidate-corpus.json",
+      "sha256": "6318260be11c439b756b404cb7aaa038ea80b4baa32ec174f7b25573a614d43d"
+    },
+    {
+      "path": "candidate-targets.json",
+      "sha256": "2e2ef1670843b12d08348101e01ed5806e071ad8e55a6dac9b34c2613f281177"
+    },
+    {
+      "path": "candidate.patch",
+      "sha256": "1ea392dca3d2e5719c01bfff757dabbac963ec917772b835f71a8653426d03d5"
+    },
+    {
+      "path": "corpus-delta.json",
+      "sha256": "b006d413e1ce665ec2c19dd36310c9edd0680110251397033f848c574e1c1d98"
+    },
+    {
+      "path": "de-regression-neutral.json",
+      "sha256": "7332f751aecebf48613641743ac7be75d3a47bb02b6d57d0acce9925d0d60234"
+    },
+    {
+      "path": "error-contracts.json",
+      "sha256": "7a8f36e1fc9ef59cd2c2ce735937878ea9f2d54e16cbdfd2a0c0c1583b3746e1"
+    },
+    {
+      "path": "existing-tests.json",
+      "sha256": "2015e88e1ca039217b633c0eaac3e939079780c18f61aa9d1a8c18cf425752c2"
+    },
+    {
+      "path": "green-neutral.json",
+      "sha256": "cc222333eb1b219e94c9cb128339f9f7f15445bab2f42c198d98d4087e7a784a"
+    },
+    {
+      "path": "measure_frozen.py",
+      "sha256": "3bfaa93a4b3744af8200fe435ac91f58caf3372d7a371b1b53f071d7b66e47a3"
+    },
+    {
+      "path": "measure_targets.py",
+      "sha256": "2f34010e1c13457f7416389739b2827c37da19762760ef2f3bec73188f05055c"
+    },
+    {
+      "path": "neutral-fixtures.json",
+      "sha256": "2b5e54ef073604c59bcf05014ae9a83c57de22228672dba266df90965f8d51e3"
+    },
+    {
+      "path": "red-neutral.json",
+      "sha256": "088a8ce4bb80dbe6474de21100c0f706ecd82a202f7987573650fc834f0e6cbc"
+    },
+    {
+      "path": "render-neutral.json",
+      "sha256": "93a2f328032d7a65fffb1cabead0759e52270a5ba495eed481c4fb89038f870d"
+    },
+    {
+      "path": "render_neutral.mjs",
+      "sha256": "1ea6e9b20ca21fe4652cf58c4751eeee2423d00f3e6de0136b533d64b06ea58d"
+    },
+    {
+      "path": "run_neutral.py",
+      "sha256": "f722eb756c556cd15188c9c9d6a408086fe17904fec411eada191a9e977b0a64"
+    },
+    {
+      "path": "target-delta.json",
+      "sha256": "42c04f7dbec11522d22917033302ea44e972674caea69dca4e1850214cc3d7ed"
+    },
+    {
+      "path": "unknown-name.md",
+      "sha256": "ea8d8a9e0b20ac96b796d16e4426a8bba5fc2d6645c993eb4435ae0aef4ce0ac"
+    }
+  ]
+}

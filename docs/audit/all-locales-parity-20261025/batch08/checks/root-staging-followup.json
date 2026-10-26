@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-26T09:43:44.325877+00:00",
+  "contentCommit": "9261eb4aa9cce131580ba29c6b4a08bbfc9fe2fd",
+  "initialNonRawWhitespaceExit": 1,
+  "initialDiagnostic": "PUBLICATION.md:51: new blank line at EOF",
+  "sequencingError": "The following commit command ran despite the preceding Python assertion failure. This receipt preserves that failure; only the extra EOF blank line was removed.",
+  "sourceChange": false,
+  "correctionDiffCheckExit": 0
+}

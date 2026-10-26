@@ -2661,6 +2661,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect"
     }
   ]
 }

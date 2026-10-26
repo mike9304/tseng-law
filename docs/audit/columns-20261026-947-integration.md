@@ -16,3 +16,7 @@ Mechanical changes: set the shared image path, replace the descriptive alt and a
 
 - seoTitle: Hacked Offshore Forex Account in Taiwan: Complaint, Forum, Law → Hacked Offshore Forex Account and Taiwan Law
 - summary: Taiwan treats unauthorized access and tampering with electronic records as complaint-only offenses, so a criminal complaint must be filed within six months of learning who the offender is. Claims against the broker or server host start with the contract's choice-of-law and forum terms, and trading through a firm Taiwan never licensed raises a separate Futures Trading Act question. → Taiwan treats unauthorized access and tampering with electronic records as complaint-only offenses, with six months to file after learning who the offender is.
+
+## Criminal board membership
+
+947 has topic `criminal`, so the archive’s criminal topic lists it; the /criminal-litigation board selects by the `criminal-litigation` tag. As with 644 (675f52974), the tag is prepended in ko/zh-hant/ja/en and the writer’s tags are kept after it; es has no criminal board and is unchanged. Body bytes remain identical to the gate-passed source.

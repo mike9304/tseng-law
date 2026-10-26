@@ -177,7 +177,8 @@ describe('/[locale]/llms.txt', () => {
     expect(body).not.toMatch(/https:\/\/tseng-law\.com\/(?:[a-z-]+\/)?(?:admin(?:-[\w-]+)?|login|account|api|private)(?:[/?#)]|$)/iu);
     expect(body).not.toContain('mailto:');
     expect(body).not.toMatch(/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/u);
-    expect(body).not.toMatch(/(?:\+?\d[\d ().-]{7,}\d)/u);
+    // Official document numbers such as 台財稅第871980772號 are citations, not phone numbers.
+    expect(body.replace(/第\d+號/gu, '第號')).not.toMatch(/(?:\+?\d[\d ().-]{7,}\d)/u);
     expect(body).not.toMatch(/https?:\/\/(?!tseng-law\.com(?:\/|\)))/u);
   });
 

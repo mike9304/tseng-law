@@ -16,3 +16,7 @@ Mechanical changes: set the shared image path, replace the descriptive alt and a
 
 - seoTitle: Police Interpreters in Taiwan Without an Oath Rule: Record, Recording, Challenges → Police Interpreters in Taiwan: No Oath Rule
 - summary: Interpreters who work for Taiwan prosecutors and judges swear to interpret fairly and honestly, and false interpretation under that oath is a crime. The provisions that govern police questioning carry no such oath. What the statement record, the audio recording and a later challenge to the interpreter can each repair, and where each one stops. → Interpreters who work for Taiwan prosecutors and judges swear to interpret fairly and honestly. The rules that govern police questioning carry no such oath.
+
+## Criminal board membership
+
+948 already carries the writer’s `criminal-litigation` tag; it is registered in `criminal-coverage-column-files.ts` with 947 for ko/zh-hant/ja/en. No front matter change.

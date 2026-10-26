@@ -2697,6 +2697,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-estate-tax-listed-shares-closing-price-valuation"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-construction-subcontractor-fall-principal-contractor-liability"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-construction-subcontractor-fall-principal-contractor-liability"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-construction-subcontractor-fall-principal-contractor-liability"
     }
   ]
 }

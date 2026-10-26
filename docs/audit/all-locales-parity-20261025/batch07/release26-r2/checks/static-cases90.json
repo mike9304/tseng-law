@@ -1,0 +1,3295 @@
+{
+  "startedFromCommit": "51286ef9817aab5178b9237fa2041877d4df7c4a",
+  "finishedAt": "2026-10-26T08:05:12.262Z",
+  "scope": "All90 case pages (42 new B7 translations,42 earlier B6 translations and six original source-language pages): metadata/FAQ, ordered source-body blocks, hero identity, table count, exact15 HTML/footer/sitemap reciprocal cluster. Static parsing is not a browser, legal or native-language review. Core title/date expectations follow unchanged existing layout/builder contracts.",
+  "parser": {
+    "htmlparser2": "6.1.0",
+    "cssSelect": "4.3.0"
+  },
+  "buildInfo": {
+    "commit": "51286ef9817aab5178b9237fa2041877d4df7c4a",
+    "builtAt": "2026-10-26T08:03:00.206Z"
+  },
+  "mediaContract": {
+    "origin": "https://media.tseng-law.com",
+    "mediaFiles": 2164,
+    "missingReferences": [],
+    "heroSourceHashes": {
+      "images/columns/915-case-trends-20261025.webp": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95",
+      "images/columns/916-case-trends-20261025.webp": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+      "images/columns/918-case-trends-20261025.webp": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+      "images/columns/919-case-trends-20261025.webp": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+      "images/columns/920-case-trends-20261025.webp": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+      "images/columns/921-case-trends-20261025.webp": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933"
+    }
+  },
+  "inputHashes": {
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/seo.ts": "c53f1a54564ef810f39d76dfd952eea3c23ce5debad61b3f3170d6937115c0d4",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/layout.tsx": "2062a9982bb7a38cbdd2660fd407300e6ea30b744894214a18fe0791139f698a",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/columns/[slug]/page.tsx": "1ab62d68f2dd9725e0bbb31def3b43ecba95bb20c6bfed05de6643cf7c3ef090",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/columns.ts": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/builder/columns/storage.ts": "042a9cf508dcd78974d4cab668fd49e62d8a948f729fdc9aa7712d5cfd553ba2",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/consultation/columns-blob-reader.ts": "4fbcceb3125213b7f281bbcb3657b5facfcb6877bdcef67bdbfd12b4ec15320f",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/column-locales.ts": "26d8fe8de7a9703aa7b0d279f32938e84190d5199ce0c4ddee84e89bb934b535",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/build-info.json": "8357f217aee9bc6726e002e00edef9ed8eaa15475080929c68f1e128c3dc52f7",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/sitemap.xml": "c88f5956987ef440d5180d7b950fe47b66ad6fe4629a75d1fc73bd287bd2d1ea",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/static-build-release26-r2-media.json": "b5cf05e7f34e991967689c9b10faf8b677ef4a6885987930e8dff00303a49354",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/scripts/static-site/assemble.mjs": "e0f527322c6f264ff3fc59f1c26fd67f9b4fb45fbb65dda78046ba3d7caaf61e",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/sitemap.ts": "d810e1753ff08ee79b09942a35b6121586074a5d92a40bd1207b0c9b87f6e939",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/en/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "b309b71567594a71dfe0cc5cdc435261097c51617367b282aadb842e6a7744a7",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/915-case-trends-20261025.webp": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-de/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "cc4d26cb0501458b2565a864cbff0e09554eb9f67b2a74c64fd12a4e1fc79902",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/de/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "22cc3ecfd7451f4b6542abd522d795ee4650bbc9fc905b9aa1172bf80fe5a732",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-it/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "35dac07dacd8bbec1a7485e1d4ac91ade04114dc8d0e73748c658396244a9cf8",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/it/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "ac3c5bc16b483a2a5961dbb83e7dde23d182b4b1d2baa8c5da7e5f618ab43d86",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ar/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "231ce90371cf3783a60811a96edd45ed07271ecfc51a62c3c0000855183f9132",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ar/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "ae3a210d244aa0314f899c8a4ca12fceee4a0e87a290df48f8ee51e51155d2d0",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-pt/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "e40fa586ea8b835e6bdcb070fc0193bbea80e263df88aafa86d2f951f9894353",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/pt/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "ba678c386a9d3fd0395e4203a2270e1460ef193f7cda8048d5b8f51f56f4ab19",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hi/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "7774b7c684516ceff0d8f7384634c97cb0b2ed0eda235499e409f55a0b58e9ba",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/hi/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "2ac026c82805dc8ac199c821731f5300341c08e1efab2e1d6f1b866840e08bb0",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ms/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "a84831b3f245c2eb8bb1f3333f75058ef8716e53f346e08db45347fa9c4ae103",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ms/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "d836f6e9a1577be2fc6e4906c20edcc50c066291dda3a0450271557c7623054e",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ru/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "0d332f323ff63eb0bd79fb3b02383499f23bc5375c17a8177ef637f567d1e50b",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ru/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "39643565515e7748c699b9fdda2d75ba550a69202ad6383bec0d445167ca58f4",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "b2b058966c26f084e38969656625cbd642fc9f71dbb14bcbf7f30f9ecc28387f",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/bg/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "9558984150472fa5252f62b4fac61658462e3cc0615891969425de941473f902",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "ee32fe88b941adfb66db43282eeba14fadd8cb9c2049aab64c224d2cdd1fd5cc",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/bn/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "38fa6046cd6e7b7915662697a73836fa2ea6d8ab9a4942c5df275844d0f41760",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "183c8045ea1d1d443672376af9f8866b3771c2ed429aae6d24f47398eaccb5d9",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ca/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "73e5e89144f6b6b13472943a0f22c8818e6a73292a3b813d7128dbc59b7b3afa",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-da/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "f0350644b9a9a644a26f7c3cce16a2009651f083ea7b2ff92ea6687d7d6e706c",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/da/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "e6148ca38c50725547480bc9ee359d841cc56f707797b7c622af16a68dbbf33f",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-el/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "a0db3a7ac11ed580969d9a5cd15cce8729d4480cdd241e99a9bdea839c2301fc",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/el/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "b3db73f91dc53b9c08c02aea39e2eb52c7b9e760cf2ddce4e193eaed53eeb5e2",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "71965945cfaaa67695b54df22fff330e988a96a64f8b1416e7be00df3f13ebb2",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/et/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "7cc2d4b884f2d24d834439223aa132b0303175b81556c1b8379fdca62893b19c",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/915-taiwan-public-contract-mediation-arbitration-same-claim.md": "0210db2a1ad6a56b7c2eb9d069aa3c2a0e8c8c977001ce2b367ac84c72788543",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/fa/columns/taiwan-public-contract-mediation-arbitration-same-claim.html": "a0357f8a3c92a98dd63c21fbab3ae6d007757121fb4767d9c81f69cd9e91c563",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/en/columns/taiwan-parent-company-pollution-liability-us-investor.html": "cbdb178849c723a972cbdb78bc5521fa64619f07269fbeca8690dbbf2f465b4c",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/916-case-trends-20261025.webp": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-de/916-taiwan-parent-company-pollution-liability-us-investor.md": "7e68c5bb750057a8be218b6dfceb8572997825643b82efb9ea66b76461d2b49f",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/de/columns/taiwan-parent-company-pollution-liability-us-investor.html": "efe646706687da4e25ebb27c52ea360b18978ad771c53e8a16b490922e3714e7",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-it/916-taiwan-parent-company-pollution-liability-us-investor.md": "5cf2e361a6092205a2ae6e93977391be436a42e2916f8c9d6b3225acc9f80bab",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/it/columns/taiwan-parent-company-pollution-liability-us-investor.html": "2334cd2a5abc378804ae737c7411ad67503503545382d94356687c5aba5aafa8",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ar/916-taiwan-parent-company-pollution-liability-us-investor.md": "43da02d79088d4bf15201a87d73ac399f9b69491885b8694300218a735b6f084",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ar/columns/taiwan-parent-company-pollution-liability-us-investor.html": "ace83658a273ea23ee683ecd5e2500c044ce5b2448cc760f97c68504ab4de38f",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-pt/916-taiwan-parent-company-pollution-liability-us-investor.md": "177be7395ee02cad28462e119942e229cd30542602f4687889adc7a79ca9eeac",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/pt/columns/taiwan-parent-company-pollution-liability-us-investor.html": "a2a24a9baca1120ee2d6c6c55bbd3543657df12d49616c0e4ee5e3cc43342434",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hi/916-taiwan-parent-company-pollution-liability-us-investor.md": "347b9d36770424f382e8c9365a9fc7f920982aeea434c60e0accc70f50878545",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/hi/columns/taiwan-parent-company-pollution-liability-us-investor.html": "8c091bb92f21d7ccb0cffde75412156b10216e10d7e87bf3bc4bbfb94cdfed79",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ms/916-taiwan-parent-company-pollution-liability-us-investor.md": "e8de772156076b020564e30955075e84a2ba0b6388ffbd99366c304829c38d86",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ms/columns/taiwan-parent-company-pollution-liability-us-investor.html": "5e69615088c0a5c856d876268004b873ffbd597ef7e1d210ba9a06b3ce086d75",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ru/916-taiwan-parent-company-pollution-liability-us-investor.md": "a5e367a361efa6bc898ce8a47d7bd47d9cc25e62cc6a094ee37adf6ebd310b00",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ru/columns/taiwan-parent-company-pollution-liability-us-investor.html": "1f64a715ac713ead9171034c399c8cf564bf46cf623e8e962646ec1ded98c508",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/916-taiwan-parent-company-pollution-liability-us-investor.md": "cb3f84123bfd34d8c9587088875d7b7820e630afa5621c4e3a0fe6245f151cfa",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/bg/columns/taiwan-parent-company-pollution-liability-us-investor.html": "58446b02d5f6bf6a82b40150b7b1cf9e5e7e8cc7fd68728b6966a724f1db7c35",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/916-taiwan-parent-company-pollution-liability-us-investor.md": "2db801a857692db09fbe7e32ed76f301c5a792057eb795b3a5a0f066a963c0d3",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/bn/columns/taiwan-parent-company-pollution-liability-us-investor.html": "5a265ae0f9e9264ded419dedd06875ec29eadd56a92d872688eaf70a716d679a",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/916-taiwan-parent-company-pollution-liability-us-investor.md": "4971777565edde14f6e41cef422d252b251a527d48f7bdcdf62169ede5034506",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ca/columns/taiwan-parent-company-pollution-liability-us-investor.html": "1679e908f771e875726425e4f4bb2811faa2c3a5f994c97d7824f12991928386",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-da/916-taiwan-parent-company-pollution-liability-us-investor.md": "e84f9c194992ef65dfccf4d7b4ecde21adb0fc4f6072d27e560502aa73070b91",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/da/columns/taiwan-parent-company-pollution-liability-us-investor.html": "6dadde220c86e9d2974211edaee21e5bc80ec7c2ee44c0a3bc49553e38fa6c90",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-el/916-taiwan-parent-company-pollution-liability-us-investor.md": "76b55da4d3569872e2c4be4423bfcb4e4dce4ebde5935a0ffdcecbc166f76e9b",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/el/columns/taiwan-parent-company-pollution-liability-us-investor.html": "4b14bd3b4923833be608c2ad41921d18ee4e371b18969cd290fb78c85f3b0e3a",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/916-taiwan-parent-company-pollution-liability-us-investor.md": "d82fd20cc58e146613730221dacd28948a3f2b1aa92177ce8a916accf8a0b12f",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/et/columns/taiwan-parent-company-pollution-liability-us-investor.html": "7500cd68dc90b0c292c6d2ddc07d6a74f9b2d1177b0ea551c4a654537a1e7077",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/916-taiwan-parent-company-pollution-liability-us-investor.md": "cebe40e77b1e448c5d70cd27adeb3e1c478beab240e739b73f36ad73e44cf59e",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/fa/columns/taiwan-parent-company-pollution-liability-us-investor.html": "1679454318bde5b40e23484999b0a7914bc21b7eea11c9f84fe7dcf0ebdbb118",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/zh-hant/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "f33a377069e5be859d6d09f0b572cd255d5cd16b54ca7919f2ce3d7a842119d2",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/918-case-trends-20261025.webp": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-de/918-taiwan-presale-mortgage-notice-handover-judgment.md": "1309324c33e0e163f942615b9748179ffb644e6a3b5ef509a10980c601eac8ba",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/de/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "c2d63058146b542ec1e22be4e3398e43e237d56fd7306dc9e6b2f83b2a3e9527",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-it/918-taiwan-presale-mortgage-notice-handover-judgment.md": "575603a4fb63eb582dd0ed076f3f1a50af4aea796bb8140855728d98df691f66",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/it/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "a3aacfca10af83f86f5f47dbd99d006c8578666fc6117bc6cae3d998a559e1a1",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ar/918-taiwan-presale-mortgage-notice-handover-judgment.md": "14b8aa81db02c1a6d2ad8bd722be92b937145ab2b7817c0054f7f7cb3cbfdaa8",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ar/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "aa218a97b125445f92f5945b4d19f8e2fd0af2b6766d622b4580900390f990da",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-pt/918-taiwan-presale-mortgage-notice-handover-judgment.md": "70f1c01c0ce95f4f660726a6c747c80bc7115972a7f331d1fd46269782310dfc",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/pt/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "4c2bfef072ba9d9cd20ec82b7a13aeb4485a7657d4ed3105c4e04fc00d2bc1e5",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hi/918-taiwan-presale-mortgage-notice-handover-judgment.md": "302a1aa063340a2d00cf786bf7f2ee009080675cd5227b47ddea9f767010fc49",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/hi/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "04c22b5ab1cb265972d43236105c0067598dc822ef515d8aaebaf031f975158f",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ms/918-taiwan-presale-mortgage-notice-handover-judgment.md": "bb55a0db717c9eafbcdc5c8b64a475dfec3f8d208c629e711e8ce8e9a4069ef0",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ms/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "9a80f5fe28f2609a6c4c57a88fa1eecabfafdea2a116c398308e41f862eba5d7",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ru/918-taiwan-presale-mortgage-notice-handover-judgment.md": "63ac4498dccfa6d3027dc7b91b180a8a8ada6e7dc885340cfe09a25928143862",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ru/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "e9f0dce0c702549d9eff030f2430eea4177944b5b5d41b7a51b17f1e35a72fcf",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/918-taiwan-presale-mortgage-notice-handover-judgment.md": "783fdbb7d7b80a6fb580bbe6a94da36b85f6d35109bb23d6c9370d813de95985",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/bg/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "d7572c4f7fc5258bfde87c7c584ddd9b76074cc92c46a897dbcfe8681b952a22",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/918-taiwan-presale-mortgage-notice-handover-judgment.md": "54f6aed17c28b35ea8a4d042f8f4112ba229f8cfd04c120f73728cf362d58ef7",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/bn/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "7852fd77ba4fc4725b4e7332fad47a830a5817f957fd76c3a141a86aa2110b62",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/918-taiwan-presale-mortgage-notice-handover-judgment.md": "89bc806c446b85e4cd7f8dc7b6231bb74345b6c985124b13af100aaca4deaeb1",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ca/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "4f91ab1f2b4b1ac6c386acc84af45cd2bc75a099cc2cc75558db848bc57809aa",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-da/918-taiwan-presale-mortgage-notice-handover-judgment.md": "d299a5c57d3abdae34705a859bfbb56cf68b4a9254c7053dfbb148587261211c",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/da/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "a1398f5db65ef1e5ed768b3410af054bfc4f79bd84f1b1ffa777d7799e9f943b",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-el/918-taiwan-presale-mortgage-notice-handover-judgment.md": "27973631f8eaad94e106f70fbf556da40efc978f10ce0f1e28c80562ddb3cf76",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/el/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "3c4ca9544b508df7423475770bc4cb9547de8f0ca96922654961effa586e8fbe",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md": "18706d6b788879e3f3d6dff97136cee18f65321163adadb58d6bd23215fc4a05",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/et/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "5678d02b46b5b55019622c7859c2d088bc384791cd44ebd97f13ad1f0e2b392b",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/918-taiwan-presale-mortgage-notice-handover-judgment.md": "9088ef6d1791a04d500e33d9c567433bd830200106b17b56fc102cca5c2d09a6",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/fa/columns/taiwan-presale-mortgage-notice-handover-judgment.html": "2a53da1c5c52239652f548a9dbff18f60c28b1490a63bf749a9a6888b30171dd",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/zh-hant/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "a4d456c79a8596cce5ed5557185ec7bf766d94c93f7115742dba7c15a6bd5750",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/919-case-trends-20261025.webp": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-de/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "deaa2b344be1dac722a028989f24a34cc911255737a671613bdf62c05de66c8f",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/de/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "6069cdba1dd7ad1291e44b1bf4a41127308724e809cea7736a29464bb08e4c3e",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-it/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "8242040c97d1f4aac945306fcde2614b77e03e7e93cdacebacf61986fcd68fd9",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/it/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "1ebeef1111bf90989e0abad39c5ed1ed6626aa5a9055243b5b02c35c45bad661",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ar/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "8d496fab0ff7a2ede0664c6fcf52ad07126b37e38860e64d437aae59ce359408",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ar/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "86176f875621909fd88ff5acac2696b9d8129c72c45042248796b7119792fbc4",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-pt/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "77305593ff192c54b86fe07898e6cee983366cd077a73b9a3667f80b7e2817b5",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/pt/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "94f3c2acbb1d4ae9cd0dbf1ca4164b5e038821acd864ad4d7a5d3b247514642c",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "06b50e30ebe32f00908faa1ab9d4a7e87d31a74f8c87b401af9211b3c8726ce9",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/hi/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "896d15195540f0f8fb9c9f673565d8209e1f19ef51e58b4eea41757ecf8f8fb2",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ms/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "1247ec843684dd22111d51a5478876f7c2e786cbce07a6a4964b85b47faba871",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ms/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "4d0d5cbdfdc954de37efbb22ed528a2719bfafe694541048a964ac44f248910b",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ru/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "548b8ca01b038849253985b6acaacd427b9791f19a1dd034a4a0af0684271906",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ru/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "21d885b368afb5eb4e2ec83f6b6a0cd1deff278207cd32d0149dd7f64cbc9cd0",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "b94e2e414de8359fd969af0fdf6d1af61722ff08126f7fe44f083bd14e82b8af",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/bg/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "ef71d09e1dce73cec03a16107fc32688f418bdf01c08ee5268f0b8150ffe4742",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "320be4966948f532d062f8fd0c4a1ccfea42d858070847d9846d3f30bcbc8d53",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/bn/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "0b0186be113bb5acc14f6189b0b56d6e4a964d5f7b99985d6c18f0993dffddbd",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "5047e951b20e1dc6d3914692c69f9a9b62c323e519418221f153bc0a60fa9d2a",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ca/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "79bf20b450ddf983a9b8f1617b9c631f3eca242e0ba5c0c9a39b082b64bdb842",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-da/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "733c4ffb57a6f4c77dab0f149d7e2f5b44a0a9a5c9972567bd66e6d132242063",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/da/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "d15b01aa60fe7135d1054c0fa9b7e4d8490966df16b9732ca719ce22903da8af",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-el/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "ddecc74e8ef307a0964fac3b560933605d347f7bad5fea67e7a8b68efcfd0325",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/el/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "51297ed7a3e4c57212888f90d8dbc87be5fae3691a638adba60212cb0d7f7ee7",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "da1ba752fc6193222b844e5be491cb382ab55f49b3a714b49b27b5849825c3aa",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/et/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "93cfe90cab1a7dd004af2b6d367c6b07092869f9d6dc1b1f77195ed5ecf196d8",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/919-taiwan-workplace-bullying-investigation-hearing-judgment.md": "7e8b3785a68b9157b9f5719fbc9409ac21fd54cf8d3c460126a19baf524c6561",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/fa/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html": "954aa0005a10c7b3d7037f22f36ce88e54be9c4989b0b8866374e827d53510d4",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/zh-hant/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "7d88d0a4b671ff30416b2de8eceae7ffa36ca70979e7868b90b207daa974ba1d",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/920-case-trends-20261025.webp": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-de/920-taiwan-apartment-ev-charger-common-area-judgment.md": "96d2f80c44c8911fc25ad03ff1cec6c88277d9e736ef4fd538f723c041a2bf7a",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/de/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "1a92fbee546d03071404dbde2f312e59a7b6b03d19dd97b0e2a3d769be740503",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-it/920-taiwan-apartment-ev-charger-common-area-judgment.md": "7755edb8d8d4eb7d1d0035b22e53936e5b941dedc6210ab4ab617e9cd3bfd1cf",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/it/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "30df612aa515226d8666c225551bb3c852c3639ae6f5704e842989fc81b1232c",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ar/920-taiwan-apartment-ev-charger-common-area-judgment.md": "7a5ac7a800b3f2ff3d106e0ae1a5d308f91485ac059005ded515013541abdd22",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ar/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "dd7c10b11edd93727036d22a98b82455f2f4a5686e701b12c9ce4377248f03ed",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-pt/920-taiwan-apartment-ev-charger-common-area-judgment.md": "0e3c9f74b6c48427841020e5381528ce8a7406702352a45a254bbfd403ba4dca",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/pt/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "88c419ec21136fb6c33bd9c648952c1417358834fd1b2c5bbd1c26cb5090a402",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hi/920-taiwan-apartment-ev-charger-common-area-judgment.md": "31c86181c1fe6b2315b23a0b117fb5adb09d5174250a00d2817a334635a42bad",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/hi/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "6888acd1603ab37b5fa523f74745ae7967313cb31c959515d3af7bbb47b18ab7",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ms/920-taiwan-apartment-ev-charger-common-area-judgment.md": "de6df23563ef5d7387180836408e3b20a5e6c7ea20ba4a9a30c36421e244a635",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ms/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "c32ac7fc4a9137929c5caf03e71f77fee700aa4bd2c2c6e1419f222ef0417bf3",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ru/920-taiwan-apartment-ev-charger-common-area-judgment.md": "0245e109b5976dce38bd36c60235aa90cd2a3acdadebd87ab8887f4d11e01435",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ru/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "b2e53645039555535e73224b00a89639b11a1012403afb8932e64c899df82b12",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/920-taiwan-apartment-ev-charger-common-area-judgment.md": "0f2f518c48f2ab988d2c66dab1791a8478cf3b146fa7d0ad9a3f36579bcb6bfe",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/bg/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "8b806e63adbad16836b3de7c023dc74b426f8548914fdcdbf1445b7da827748f",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/920-taiwan-apartment-ev-charger-common-area-judgment.md": "8b4f7d05978161b0843dc6e21a29ed36b56b3a0ab5e62598a82698be96c4a93e",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/bn/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "4069c08032d3987c23a26bc93506191dd0f6dd67cec03957e5a7692e4ef2a678",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/920-taiwan-apartment-ev-charger-common-area-judgment.md": "cd071bb9bda0be5353eb0df7f1ac9a8b892a3dfa4fff701735ce893e43a48999",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ca/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "09eb608c05bfaae9d0bcb840fb7326316581809fa63f3a12dd4c4c7584f90f75",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-da/920-taiwan-apartment-ev-charger-common-area-judgment.md": "1c0bed7a12c7d725a915e7fa72626fc490f4149749edf48f3f7dce5281c8e32f",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/da/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "938cef9086b54e9eef929fc1c4a66b7d3a8ca58ace5c0e4f18eae990787f6317",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-el/920-taiwan-apartment-ev-charger-common-area-judgment.md": "7897ed03d257814fd770a4527992ae9433b9cbef5b12ce2f8ee97bf6e461a802",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/el/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "1978074e1df8b69ab957a903f70f46de7968d361a505e03ea6006b4a0bcc704b",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md": "cc59c5a7212683e20fcdf9fbccdf686ceb870db8de7447303dc4c04c74a8028a",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/et/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "2f2e523e917cba50cf4e10c6f646372f355007a9ec70f8b62c25e4ec2f8eea9a",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/920-taiwan-apartment-ev-charger-common-area-judgment.md": "3ac5e23ff82197cfed9c68da8e93bd7b4e6f7a9bcecd6290c9e4ed4f49056cad",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/fa/columns/taiwan-apartment-ev-charger-common-area-judgment.html": "3055c40ccb5d1f52bbbe0d53e5e5486acda4a9543e317bdad4df9c3bbb5de764",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/zh-hant/columns/taiwan-online-game-coins-refund-judgment.html": "af324ed90cc829d39f6987d8e93523e705aa14a6aaafdc3ca7e96a209fd6d36e",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/921-case-trends-20261025.webp": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-de/921-taiwan-online-game-coins-refund-judgment.md": "17605ada0c21df3071a432a2b1e12f3ff62d4f10444ea41418a1c9722ae0d6cd",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/de/columns/taiwan-online-game-coins-refund-judgment.html": "7aca26535a769cce7eda10e21523905ff8d416d155ae6e3fd1fcbec2b38b769f",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-it/921-taiwan-online-game-coins-refund-judgment.md": "2e92a5de5a50c3bd2bddd8f7ac40077a6ee620a7c04ecdfb39ffa9862c93b0da",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/it/columns/taiwan-online-game-coins-refund-judgment.html": "a7bb8b2e0f52ba7c7c782bbc4c971799f9d8e3229cf003f3c9c5d859e3a2866b",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ar/921-taiwan-online-game-coins-refund-judgment.md": "419bb7bdfcd0c9652d88fc250c401d5b729974d2781d7849307f12ed27854723",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ar/columns/taiwan-online-game-coins-refund-judgment.html": "30ca971d78b23f04835c45d70ea8bcd54216eeb0283008f70b70145c337035a5",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-pt/921-taiwan-online-game-coins-refund-judgment.md": "1dba99a240d62a669a3d553e192431d7670faa64c0788f079cede63e7af00af6",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/pt/columns/taiwan-online-game-coins-refund-judgment.html": "f8f4bc43f5caa5db0f54c0033ec3f2c5f925fcb5e86bb02481a9e035e24e7f38",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-hi/921-taiwan-online-game-coins-refund-judgment.md": "d3fe078af72657bba8fa660486fbec0776b9a9d8e585f805f44f2c6808a937c3",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/hi/columns/taiwan-online-game-coins-refund-judgment.html": "4e63e89765b1cb87900bc3e2619f30b3cb980505ebd3b4ceda9719ac87a70e77",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ms/921-taiwan-online-game-coins-refund-judgment.md": "74db4d0b549a770c8c916b38047abfb0ef89391788f2cabe5f9050714e725889",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ms/columns/taiwan-online-game-coins-refund-judgment.html": "04660e9e150956e29285325f40ed9a19486e90e4f17797b0360faad91c0320eb",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ru/921-taiwan-online-game-coins-refund-judgment.md": "cd67ec2c2e63c22704b7f0c2a210ff6cfe5a4209898bbd578802af30b770e4a4",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ru/columns/taiwan-online-game-coins-refund-judgment.html": "8a58fd5cf42be51ddf780b5a729d0934bf6e7cf9ae2f1f8f7ea3547348224bbf",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md": "a7e85faf8bd43c50827620fbc8e3e92e1b7eb18b825254bd4ca98fb712392013",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/bg/columns/taiwan-online-game-coins-refund-judgment.html": "b72cd8c632f3e4070380c4b693a4e10e4d05206bfee85ce3dc9e58caebbc2c98",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-bn/921-taiwan-online-game-coins-refund-judgment.md": "a54de3500f6f831efbaaeb32e6be9bbb7866b4fe32ec39755e7c0852ebdba770",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/bn/columns/taiwan-online-game-coins-refund-judgment.html": "03bf45883a2664a4fc7a86a267cefdb0fbb5e31d741a4c29d2f55a2fe81a8f52",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ca/921-taiwan-online-game-coins-refund-judgment.md": "f6b34469c5dcd72ef92ee65d8a857b46ba3333a955c955a0d365cbb3849b0c07",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/ca/columns/taiwan-online-game-coins-refund-judgment.html": "fc1d1eb5b2d08d08a86a1f4b2a231acfd190974f4d2eb96d2049cbcc397bee1f",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-da/921-taiwan-online-game-coins-refund-judgment.md": "c9215fdddee3e73f4c3b483ba04e012dd123eab95e35bc4f746396b0ecbcf540",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/da/columns/taiwan-online-game-coins-refund-judgment.html": "2387510b01ee51ff0dca771f55f4000992c9802b3cc401aeec7c69e194584de6",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-el/921-taiwan-online-game-coins-refund-judgment.md": "5dd4cd90e02a242fdb672be29acd837888fd5564a34823c0220f62b648843cb4",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/el/columns/taiwan-online-game-coins-refund-judgment.html": "f8eb53fb09fc5e346c9a80ace08bf877610df81dcf9b774446c8f6979131bd16",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-et/921-taiwan-online-game-coins-refund-judgment.md": "e058c5964d75cfad256f5fd99b6c474b9acbd80408a5e06229652116e3d38094",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/et/columns/taiwan-online-game-coins-refund-judgment.html": "fdfa2205ed07a6bc2f543e69add57e9f5a5278b99eecfc163a6ef57c38bbac04",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/921-taiwan-online-game-coins-refund-judgment.md": "6e1bf2a8ffa06f66533173b1e6636a008da1c92b7373d2adc15007e572883d44",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2/fa/columns/taiwan-online-game-coins-refund-judgment.html": "d01048bb088d2441a29beba03686ff2b7a6359760e31e28253d2ab145393eedc"
+  },
+  "inputsUnchanged": true,
+  "rows": [
+    {
+      "locale": "en",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "artifact": {
+        "file": "en/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 109979,
+        "sha256": "b309b71567594a71dfe0cc5cdc435261097c51617367b282aadb842e6a7744a7"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan Public-Contract Arbitration | Hovering Law",
+        "canonical": "https://tseng-law.com/en/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-25",
+          "modified": "2026-10-25T00:00:00.000Z"
+        },
+        "bodySegmentCount": 31,
+        "bodySegmentSHA256": "1c3107f8a0d39c9ed19eef704a34980b7dcdc21247b86354aba2151dab134540",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-25",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-de/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "cc4d26cb0501458b2565a864cbff0e09554eb9f67b2a74c64fd12a4e1fc79902"
+      },
+      "artifact": {
+        "file": "de/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 97057,
+        "sha256": "22cc3ecfd7451f4b6542abd522d795ee4650bbc9fc905b9aa1172bf80fe5a732"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: Anspruchswechsel vor dem Schiedsverfahren",
+        "canonical": "https://tseng-law.com/de/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 32,
+        "bodySegmentSHA256": "21acabd5a43b94306bd42be1cb0c51b9a7fde639cfb245fae4e690b447fa02ac",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "it",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-it/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "35dac07dacd8bbec1a7485e1d4ac91ade04114dc8d0e73748c658396244a9cf8"
+      },
+      "artifact": {
+        "file": "it/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 97345,
+        "sha256": "ac3c5bc16b483a2a5961dbb83e7dde23d182b4b1d2baa8c5da7e5f618ab43d86"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Appalti a Taiwan: quale domanda è passata dalla mediazione?",
+        "canonical": "https://tseng-law.com/it/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 33,
+        "bodySegmentSHA256": "c88d762685333994e2ee79257ef383ec9e0c74435baa994c56c862229050c0fa",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-ar/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "231ce90371cf3783a60811a96edd45ed07271ecfc51a62c3c0000855183f9132"
+      },
+      "artifact": {
+        "file": "ar/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 113179,
+        "sha256": "ae3a210d244aa0314f899c8a4ca12fceee4a0e87a290df48f8ee51e51155d2d0"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "تغير المطالبة والتحكيم في العقود العامة التايوانية",
+        "canonical": "https://tseng-law.com/ar/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 31,
+        "bodySegmentSHA256": "8435dccaec5930563c2f6222188ba5bfd11b1e136d44df78aa862c155540d6a1",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "pt",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-pt/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "e40fa586ea8b835e6bdcb070fc0193bbea80e263df88aafa86d2f951f9894353"
+      },
+      "artifact": {
+        "file": "pt/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 96483,
+        "sha256": "ba678c386a9d3fd0395e4203a2270e1460ef193f7cda8048d5b8f51f56f4ab19"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: mediação e arbitragem em contratos públicos",
+        "canonical": "https://tseng-law.com/pt/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 32,
+        "bodySegmentSHA256": "de433fe03e21558a4d0178d61977ee4268c18b6a7ac7c5c9161a53e93115aee3",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "hi",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-hi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "7774b7c684516ceff0d8f7384634c97cb0b2ed0eda235499e409f55a0b58e9ba"
+      },
+      "artifact": {
+        "file": "hi/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 133203,
+        "sha256": "2ac026c82805dc8ac199c821731f5300341c08e1efab2e1d6f1b866840e08bb0"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "ताइवान में सरकारी ठेके की सुलह और आर्बिट्रेशन का दावा",
+        "canonical": "https://tseng-law.com/hi/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 33,
+        "bodySegmentSHA256": "ec24369aec0bbd2d2b389ab53dee169d73a97eb83d08b67a3e04af550a3ba866",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ms",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-ms/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "a84831b3f245c2eb8bb1f3333f75058ef8716e53f346e08db45347fa9c4ae103"
+      },
+      "artifact": {
+        "file": "ms/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 97776,
+        "sha256": "d836f6e9a1577be2fc6e4906c20edcc50c066291dda3a0450271557c7623054e"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Mediasi dan timbang tara kontrak awam Taiwan",
+        "canonical": "https://tseng-law.com/ms/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 31,
+        "bodySegmentSHA256": "fce019dd8965d9386a4ec911c8711e477cb3bc009e1d55ef6ae1f7607b75df45",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-ru/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "0d332f323ff63eb0bd79fb3b02383499f23bc5375c17a8177ef637f567d1e50b"
+      },
+      "artifact": {
+        "file": "ru/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 117802,
+        "sha256": "39643565515e7748c699b9fdda2d75ba550a69202ad6383bec0d445167ca58f4"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Изменение требования и арбитраж по госконтракту на Тайване",
+        "canonical": "https://tseng-law.com/ru/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 31,
+        "bodySegmentSHA256": "be9390d9b3c4121996adf8d7ac00f25b60d6981cd221daac4278dda3c0236d40",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "bg",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-bg/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "b2b058966c26f084e38969656625cbd642fc9f71dbb14bcbf7f30f9ecc28387f"
+      },
+      "artifact": {
+        "file": "bg/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 113533,
+        "sha256": "9558984150472fa5252f62b4fac61658462e3cc0615891969425de941473f902"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Медиация и арбитраж по обществен договор в Тайван",
+        "canonical": "https://tseng-law.com/bg/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 23,
+        "bodySegmentSHA256": "a8d1a4fc6b891573d8ecb97c5b7f7c96db0109c65d3717177830285264b4bb2c",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "bn",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-bn/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "ee32fe88b941adfb66db43282eeba14fadd8cb9c2049aab64c224d2cdd1fd5cc"
+      },
+      "artifact": {
+        "file": "bn/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 131746,
+        "sha256": "38fa6046cd6e7b7915662697a73836fa2ea6d8ab9a4942c5df275844d0f41760"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "তাইওয়ানের সরকারি চুক্তি: মধ্যস্থতা থেকে সালিশ",
+        "canonical": "https://tseng-law.com/bn/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 32,
+        "bodySegmentSHA256": "5632c0ec2a10ada5bb2796cf1e578eaaf6fc4e7a5e6c42ca27e90d200d025381",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ca",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-ca/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "183c8045ea1d1d443672376af9f8866b3771c2ed429aae6d24f47398eaccb5d9"
+      },
+      "artifact": {
+        "file": "ca/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 97655,
+        "sha256": "73e5e89144f6b6b13472943a0f22c8818e6a73292a3b813d7128dbc59b7b3afa"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: canvi de reclamació entre mediació i arbitratge",
+        "canonical": "https://tseng-law.com/ca/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 33,
+        "bodySegmentSHA256": "50e5d9dcc04683e4c57addecee467e3d19ba173b760cd3c03839fc85b688637c",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "da",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-da/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "f0350644b9a9a644a26f7c3cce16a2009651f083ea7b2ff92ea6687d7d6e706c"
+      },
+      "artifact": {
+        "file": "da/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 94267,
+        "sha256": "e6148ca38c50725547480bc9ee359d841cc56f707797b7c622af16a68dbbf33f"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Offentlige kontrakter i Taiwan: mægling før voldgift",
+        "canonical": "https://tseng-law.com/da/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 31,
+        "bodySegmentSHA256": "3502e0624e90255cee62f2c777c58c2bd8c1e6e20023e9c57f64a1a98338d2be",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "el",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-el/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "a0db3a7ac11ed580969d9a5cd15cce8729d4480cdd241e99a9bdea839c2301fc"
+      },
+      "artifact": {
+        "file": "el/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 117430,
+        "sha256": "b3db73f91dc53b9c08c02aea39e2eb52c7b9e760cf2ddce4e193eaed53eeb5e2"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Ταϊβάν: αλλαγή αξίωσης πριν από τη διαιτησία",
+        "canonical": "https://tseng-law.com/el/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 32,
+        "bodySegmentSHA256": "1dd06deb77341cd2cff534a1b1efc92792ca36da14f0c7b4ae55e38e98cf5d58",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "et",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-et/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "71965945cfaaa67695b54df22fff330e988a96a64f8b1416e7be00df3f13ebb2"
+      },
+      "artifact": {
+        "file": "et/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 94192,
+        "sha256": "7cc2d4b884f2d24d834439223aa132b0303175b81556c1b8379fdca62893b19c"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwani riigihange: lepitus ja muutunud vahekohtunõue",
+        "canonical": "https://tseng-law.com/et/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 31,
+        "bodySegmentSHA256": "e22a301252acd6718d93755ec92d31e56cc171836568b5d3aec0cda126b8354a",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "fa",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "source": {
+        "file": "src/content/columns-fa/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "0210db2a1ad6a56b7c2eb9d069aa3c2a0e8c8c977001ce2b367ac84c72788543"
+      },
+      "artifact": {
+        "file": "fa/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+        "bytes": 114118,
+        "sha256": "a0357f8a3c92a98dd63c21fbab3ae6d007757121fb4767d9c81f69cd9e91c563"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "از تمدید مهلت تا مطالبهٔ پول؛ تغییر خواسته پیش از داوری در تایوان",
+        "canonical": "https://tseng-law.com/fa/columns/taiwan-public-contract-mediation-arbitration-same-claim",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 32,
+        "bodySegmentSHA256": "77f7431be35d260a54f1367eade4fcb95dcf8993a2264b8a5123c9f4af70d961",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 2,
+        "imagePath": "/images/columns/915-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "artifact": {
+        "file": "en/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 111425,
+        "sha256": "cbdb178849c723a972cbdb78bc5521fa64619f07269fbeca8690dbbf2f465b4c"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan Parent Liability for Pollution | Hovering Law",
+        "canonical": "https://tseng-law.com/en/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-25",
+          "modified": "2026-10-25T00:00:00.000Z"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "7a63b08365620e5af247d1b8348c0578b5b900176ab3172b7f333f2c12df9c0f",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-25",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-de/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "7e68c5bb750057a8be218b6dfceb8572997825643b82efb9ea66b76461d2b49f"
+      },
+      "artifact": {
+        "file": "de/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 100526,
+        "sha256": "efe646706687da4e25ebb27c52ea360b18978ad771c53e8a16b490922e3714e7"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: Konzernhaftung bei Fabrikbelastungen",
+        "canonical": "https://tseng-law.com/de/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 23,
+        "bodySegmentSHA256": "eafa1adb00f22cae99ce739a88b3e2aa9123b2ab8f148432cfe6f397fa3a2d23",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "it",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-it/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "5cf2e361a6092205a2ae6e93977391be436a42e2916f8c9d6b3225acc9f80bab"
+      },
+      "artifact": {
+        "file": "it/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 101399,
+        "sha256": "2334cd2a5abc378804ae737c7411ad67503503545382d94356687c5aba5aafa8"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Inquinamento a Taiwan e responsabilità della controllante",
+        "canonical": "https://tseng-law.com/it/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 23,
+        "bodySegmentSHA256": "5f09f32cea75aa73046310459f87273ce70fe748d535bf1b94819f389e1efe3b",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-ar/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "43da02d79088d4bf15201a87d73ac399f9b69491885b8694300218a735b6f084"
+      },
+      "artifact": {
+        "file": "ar/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 117527,
+        "sha256": "ace83658a273ea23ee683ecd5e2500c044ce5b2448cc760f97c68504ab4de38f"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "مسؤولية الشركة الأم عن تلوث مصنع في تايوان",
+        "canonical": "https://tseng-law.com/ar/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "793c11e05fe7e809e6406953ab0b6baf3e82519df65c2c0bf24669bcfce2d3a0",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "pt",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-pt/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "177be7395ee02cad28462e119942e229cd30542602f4687889adc7a79ca9eeac"
+      },
+      "artifact": {
+        "file": "pt/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 100435,
+        "sha256": "a2a24a9baca1120ee2d6c6c55bbd3543657df12d49616c0e4ee5e3cc43342434"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: poluição e responsabilidade da sociedade-mãe",
+        "canonical": "https://tseng-law.com/pt/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "3f1215ba330b27a5f1620bfa7b6e78695af64e1b83f9892905a385b2cd4f8d3b",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "hi",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-hi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "347b9d36770424f382e8c9365a9fc7f920982aeea434c60e0accc70f50878545"
+      },
+      "artifact": {
+        "file": "hi/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 141080,
+        "sha256": "8c091bb92f21d7ccb0cffde75412156b10216e10d7e87bf3bc4bbfb94cdfed79"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "ताइवान में प्रदूषण और मूल कंपनी की जिम्मेदारी",
+        "canonical": "https://tseng-law.com/hi/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 23,
+        "bodySegmentSHA256": "bbc54f888d59a8b4c3169defd6145a31998b7cefc22cb33c7a50922ce91cc72c",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ms",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-ms/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "e8de772156076b020564e30955075e84a2ba0b6388ffbd99366c304829c38d86"
+      },
+      "artifact": {
+        "file": "ms/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 101804,
+        "sha256": "5e69615088c0a5c856d876268004b873ffbd597ef7e1d210ba9a06b3ce086d75"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Liabiliti syarikat induk bagi pencemaran di Taiwan",
+        "canonical": "https://tseng-law.com/ms/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 23,
+        "bodySegmentSHA256": "3340d66a8c5f59d279fe34d2abf186e62df530b534cdc551186d7d09c1d13c56",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-ru/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "a5e367a361efa6bc898ce8a47d7bd47d9cc25e62cc6a094ee37adf6ebd310b00"
+      },
+      "artifact": {
+        "file": "ru/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 124482,
+        "sha256": "1f64a715ac713ead9171034c399c8cf564bf46cf623e8e962646ec1ded98c508"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Ответственность материнских компаний за загрязнение на Тайване",
+        "canonical": "https://tseng-law.com/ru/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "dac08df83e5de27219ef7c8e596e265ea07cbb13f5a2a43262fde1c67b788e9f",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "bg",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-bg/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "cb3f84123bfd34d8c9587088875d7b7820e630afa5621c4e3a0fe6245f151cfa"
+      },
+      "artifact": {
+        "file": "bg/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 117652,
+        "sha256": "58446b02d5f6bf6a82b40150b7b1cf9e5e7e8cc7fd68728b6966a724f1db7c35"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Отговорност на дружество майка за замърсяване в Тайван",
+        "canonical": "https://tseng-law.com/bg/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "4440e7e03401a1ca89fe1f994f3d9a50654887558fdbf2da95812d2206c3f161",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "bn",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-bn/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "2db801a857692db09fbe7e32ed76f301c5a792057eb795b3a5a0f066a963c0d3"
+      },
+      "artifact": {
+        "file": "bn/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 135052,
+        "sha256": "5a265ae0f9e9264ded419dedd06875ec29eadd56a92d872688eaf70a716d679a"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "তাইওয়ানে দূষণের দায় ও মূল কোম্পানির ভূমিকা",
+        "canonical": "https://tseng-law.com/bn/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "f221aeebfe3065f238e7ebd0bd3ec588cd9fa4683c816d2b0a1b00c8276f13ba",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ca",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-ca/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "4971777565edde14f6e41cef422d252b251a527d48f7bdcdf62169ede5034506"
+      },
+      "artifact": {
+        "file": "ca/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 99448,
+        "sha256": "1679e908f771e875726425e4f4bb2811faa2c3a5f994c97d7824f12991928386"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: contaminació, control empresarial i responsabilitat de la matriu",
+        "canonical": "https://tseng-law.com/ca/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "95ac8aec2c36fd1b766dbef1ed512ea98dddd7396f63d7cc755ceca91fe43fe0",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "da",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-da/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "e84f9c194992ef65dfccf4d7b4ecde21adb0fc4f6072d27e560502aa73070b91"
+      },
+      "artifact": {
+        "file": "da/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 97551,
+        "sha256": "6dadde220c86e9d2974211edaee21e5bc80ec7c2ee44c0a3bc49553e38fa6c90"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: moderselskabers ansvar for fabriksforurening",
+        "canonical": "https://tseng-law.com/da/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "47c911aeee38b07f99185032dd1ee618d95de22d825e94229118f9a007521a39",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "el",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-el/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "76b55da4d3569872e2c4be4423bfcb4e4dce4ebde5935a0ffdcecbc166f76e9b"
+      },
+      "artifact": {
+        "file": "el/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 123722,
+        "sha256": "4b14bd3b4923833be608c2ad41921d18ee4e371b18969cd290fb78c85f3b0e3a"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Ταϊβάν: ρύπανση και ευθύνη μητρικής εταιρείας",
+        "canonical": "https://tseng-law.com/el/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 23,
+        "bodySegmentSHA256": "080aba581df8069b790966a8c8c087fc1a470888bcf1cab5cf0de2a906f79337",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "et",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-et/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "d82fd20cc58e146613730221dacd28948a3f2b1aa92177ce8a916accf8a0b12f"
+      },
+      "artifact": {
+        "file": "et/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 96883,
+        "sha256": "7500cd68dc90b0c292c6d2ddc07d6a74f9b2d1177b0ea551c4a654537a1e7077"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwani tehasesaaste ja emaettevõtte vastutus",
+        "canonical": "https://tseng-law.com/et/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 24,
+        "bodySegmentSHA256": "31033bdff69b6579c0a99720e1abaa6b01dff375494fb4823cde2fab6e4d94e8",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "fa",
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "source": {
+        "file": "src/content/columns-fa/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "cebe40e77b1e448c5d70cd27adeb3e1c478beab240e739b73f36ad73e44cf59e"
+      },
+      "artifact": {
+        "file": "fa/columns/taiwan-parent-company-pollution-liability-us-investor.html",
+        "bytes": 118916,
+        "sha256": "1679454318bde5b40e23484999b0a7914bc21b7eea11c9f84fe7dcf0ebdbb118"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "گزارش آلودگی کارخانه به چه کسانی رسید؟ مسئولیت شرکت‌های مادر در تایوان",
+        "canonical": "https://tseng-law.com/fa/columns/taiwan-parent-company-pollution-liability-us-investor",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 23,
+        "bodySegmentSHA256": "86701d4f990e0252d3ea87b0e7b24eed176fb5239062316cb22cb3f46156f3de",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/916-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "artifact": {
+        "file": "zh-hant/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 122837,
+        "sha256": "f33a377069e5be859d6d09f0b572cd255d5cd16b54ca7919f2ce3d7a842119d2"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "辦貸款、進場裝修，仍未完成交屋：預售屋遲延案 | 昊鼎國際法律事務所",
+        "canonical": "https://tseng-law.com/zh-hant/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-25",
+          "modified": "2026-10-26T00:00:00.000Z"
+        },
+        "bodySegmentCount": 21,
+        "bodySegmentSHA256": "aa7a62df0096ac40a5754ee69663ded244cd38635536439644fd5862198017d3",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-de/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "1309324c33e0e163f942615b9748179ffb644e6a3b5ef509a10980c601eac8ba"
+      },
+      "artifact": {
+        "file": "de/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 99535,
+        "sha256": "c2d63058146b542ec1e22be4e3398e43e237d56fd7306dc9e6b2f83b2a3e9527"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Kreditbrief und früher Zutritt: Wann eine Neubauwohnung in Taiwan übergeben war",
+        "canonical": "https://tseng-law.com/de/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "2ada7fea16eb16e7ff6cf22cdc79bf8385a26e8cf182d648bd4c4cc7468a721e",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "it",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-it/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "575603a4fb63eb582dd0ed076f3f1a50af4aea796bb8140855728d98df691f66"
+      },
+      "artifact": {
+        "file": "it/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 99805,
+        "sha256": "a3aacfca10af83f86f5f47dbd99d006c8578666fc6117bc6cae3d998a559e1a1"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Casa in costruzione a Taiwan: mutuo e avviso di consegna",
+        "canonical": "https://tseng-law.com/it/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "288f0ed1076d827cf92ccc396672c63e85b6da944951ecaa6f7eea4554cc875d",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-ar/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "14b8aa81db02c1a6d2ad8bd722be92b937145ab2b7817c0054f7f7cb3cbfdaa8"
+      },
+      "artifact": {
+        "file": "ar/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 116398,
+        "sha256": "aa218a97b125445f92f5945b4d19f8e2fd0af2b6766d622b4580900390f990da"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "تأخر تسليم منزل في تايوان رغم رسالة القرض والسماح بالدخول",
+        "canonical": "https://tseng-law.com/ar/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 21,
+        "bodySegmentSHA256": "6db30f893a38806684c84d7bb2962072a28091d2f8a7abd5c62a746cf63ce7be",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "pt",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-pt/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "70f1c01c0ce95f4f660726a6c747c80bc7115972a7f331d1fd46269782310dfc"
+      },
+      "artifact": {
+        "file": "pt/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 99001,
+        "sha256": "4c2bfef072ba9d9cd20ec82b7a13aeb4485a7657d4ed3105c4e04fc00d2bc1e5"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: crédito, aviso de entrega e atraso do imóvel",
+        "canonical": "https://tseng-law.com/pt/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 21,
+        "bodySegmentSHA256": "2289515e596c7511652ce407ed63bea8653c252de63236e5ef2a3803554726ac",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "hi",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-hi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "302a1aa063340a2d00cf786bf7f2ee009080675cd5227b47ddea9f767010fc49"
+      },
+      "artifact": {
+        "file": "hi/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 138846,
+        "sha256": "04c22b5ab1cb265972d43236105c0067598dc822ef515d8aaebaf031f975158f"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "ताइवान के पूर्व-बिक्री आवास में देरी और घर सौंपने की सूचना",
+        "canonical": "https://tseng-law.com/hi/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 21,
+        "bodySegmentSHA256": "58c320ed89c49b02dfff54fe5354d95a7669afb07268d9ca7dc35ba9c0b233a6",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ms",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-ms/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "bb55a0db717c9eafbcdc5c8b64a475dfec3f8d208c629e711e8ce8e9a4069ef0"
+      },
+      "artifact": {
+        "file": "ms/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 101103,
+        "sha256": "9a80f5fe28f2609a6c4c57a88fa1eecabfafdea2a116c398308e41f862eba5d7"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Surat pinjaman dan izin masuk rumah belum semestinya penyerahan: kes prajualan Taiwan",
+        "canonical": "https://tseng-law.com/ms/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 21,
+        "bodySegmentSHA256": "c1ace4bf499575c2fef62566cd9d0b85fd2e1696ba2e2cd7fd9b266326e03f8a",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-ru/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "63ac4498dccfa6d3027dc7b91b180a8a8ada6e7dc885340cfe09a25928143862"
+      },
+      "artifact": {
+        "file": "ru/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 123647,
+        "sha256": "e9f0dce0c702549d9eff030f2430eea4177944b5b5d41b7a51b17f1e35a72fcf"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Письмо о кредите и допуск к ремонту: когда новостройку на Тайване ещё не передали",
+        "canonical": "https://tseng-law.com/ru/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 21,
+        "bodySegmentSHA256": "7bf8ae062bbbff28f2c9dc37eebc8811f1d1550b78a364571d240dda7fcf098b",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "bg",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-bg/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "783fdbb7d7b80a6fb580bbe6a94da36b85f6d35109bb23d6c9370d813de95985"
+      },
+      "artifact": {
+        "file": "bg/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 116786,
+        "sha256": "d7572c4f7fc5258bfde87c7c584ddd9b76074cc92c46a897dbcfe8681b952a22"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Предаване на жилище в Тайван: писмо, кредит и срок",
+        "canonical": "https://tseng-law.com/bg/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "0402e6ab176fbe54f915b3f3bb53b39e9ab635165732ecbe5689747bc6ab6f41",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "bn",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-bn/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "54f6aed17c28b35ea8a4d042f8f4112ba229f8cfd04c120f73728cf362d58ef7"
+      },
+      "artifact": {
+        "file": "bn/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 137053,
+        "sha256": "7852fd77ba4fc4725b4e7332fad47a830a5817f957fd76c3a141a86aa2110b62"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "তাইওয়ানে বাড়ি হস্তান্তরের নোটিশ ও ঋণের চিঠি",
+        "canonical": "https://tseng-law.com/bn/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "67017743ce4e6dd6fe67d5854cffbc6260d5a22b56f6c556b328f0b0316d3606",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ca",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-ca/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "89bc806c446b85e4cd7f8dc7b6231bb74345b6c985124b13af100aaca4deaeb1"
+      },
+      "artifact": {
+        "file": "ca/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 99803,
+        "sha256": "4f91ab1f2b4b1ac6c386acc84af45cd2bc75a099cc2cc75558db848bc57809aa"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: avís de lliurament i retard en un habitatge no acabat",
+        "canonical": "https://tseng-law.com/ca/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "11baf2d292b3f2c5d7ef260ea08e7ddb8e24b44ac6c2af6a6c5db0abaab2828d",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "da",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-da/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "d299a5c57d3abdae34705a859bfbb56cf68b4a9254c7053dfbb148587261211c"
+      },
+      "artifact": {
+        "file": "da/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 96627,
+        "sha256": "a1398f5db65ef1e5ed768b3410af054bfc4f79bd84f1b1ffa777d7799e9f943b"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: boliglån, overdragelsesmeddelelse og forsinkelse",
+        "canonical": "https://tseng-law.com/da/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "37b751c7ae6cc513730993a9c11d73cb4401e40a0b1bf2f8d111e3891236dd75",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "el",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-el/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "27973631f8eaad94e106f70fbf556da40efc978f10ce0f1e28c80562ddb3cf76"
+      },
+      "artifact": {
+        "file": "el/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 123199,
+        "sha256": "3c4ca9544b508df7423475770bc4cb9547de8f0ca96922654961effa586e8fbe"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Ταϊβάν: στεγαστικό δάνειο και ειδοποίηση παράδοσης κατοικίας",
+        "canonical": "https://tseng-law.com/el/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "87a69a01453fa1bda1e3a0e14c5bcac15522dc6051b919ef47088521d1bb659a",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "et",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-et/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "18706d6b788879e3f3d6dff97136cee18f65321163adadb58d6bd23215fc4a05"
+      },
+      "artifact": {
+        "file": "et/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 95833,
+        "sha256": "5678d02b46b5b55019622c7859c2d088bc384791cd44ebd97f13ad1f0e2b392b"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwani ehitatav eluase: laen ja üleandmisteade",
+        "canonical": "https://tseng-law.com/et/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "94b428ae9dfa6c64ed9d29dbdb5c6b6a1ed58b88b47b26e565fd62394eaadaae",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "fa",
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "source": {
+        "file": "src/content/columns-fa/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "9088ef6d1791a04d500e33d9c567433bd830200106b17b56fc102cca5c2d09a6"
+      },
+      "artifact": {
+        "file": "fa/columns/taiwan-presale-mortgage-notice-handover-judgment.html",
+        "bytes": 115731,
+        "sha256": "2a53da1c5c52239652f548a9dbff18f60c28b1490a63bf749a9a6888b30171dd"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "نامهٔ وام و اجازهٔ ورود، تحویل خانه نبود؛ اختلاف پیش‌فروش در تایوان",
+        "canonical": "https://tseng-law.com/fa/columns/taiwan-presale-mortgage-notice-handover-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 21,
+        "bodySegmentSHA256": "787e8a80e4f0ffdf8a1295b41038022d06bee8995b39b12d5aafd53ee9567544",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/918-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "artifact": {
+        "file": "zh-hant/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 122426,
+        "sha256": "a4d456c79a8596cce5ed5557185ec7bf766d94c93f7115742dba7c15a6bd5750"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "先宣布懲處，再開會審議：職場霸凌免職案為何被撤銷 | 昊鼎國際法律事務所",
+        "canonical": "https://tseng-law.com/zh-hant/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-25",
+          "modified": "2026-10-25T00:00:00.000Z"
+        },
+        "bodySegmentCount": 19,
+        "bodySegmentSHA256": "6f7795f5fe1a008750c0bb8940f8edb3c2a8906536da2dde4d36aad0c96cf882",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-25",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-de/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "deaa2b344be1dac722a028989f24a34cc911255737a671613bdf62c05de66c8f"
+      },
+      "artifact": {
+        "file": "de/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 99896,
+        "sha256": "6069cdba1dd7ad1291e44b1bf4a41127308724e809cea7736a29464bb08e4c3e"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Die Entlassung war schon angekündigt: Mängel einer Mobbinguntersuchung in Taiwan",
+        "canonical": "https://tseng-law.com/de/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 20,
+        "bodySegmentSHA256": "0048bbcf010c28fdd66ac7780c37bd4d82a82a485244b22cdfed93a5b75b1100",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "it",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-it/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "8242040c97d1f4aac945306fcde2614b77e03e7e93cdacebacf61986fcd68fd9"
+      },
+      "artifact": {
+        "file": "it/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 99577,
+        "sha256": "1ebeef1111bf90989e0abad39c5ed1ed6626aa5a9055243b5b02c35c45bad661"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Indagini sulle vessazioni e diritto di essere ascoltati",
+        "canonical": "https://tseng-law.com/it/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 20,
+        "bodySegmentSHA256": "415c096374ab0e24e938ff2d363355944d277456870fdc9c99acf26cd963bcd3",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-ar/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "8d496fab0ff7a2ede0664c6fcf52ad07126b37e38860e64d437aae59ce359408"
+      },
+      "artifact": {
+        "file": "ar/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 114884,
+        "sha256": "86176f875621909fd88ff5acac2696b9d8129c72c45042248796b7119792fbc4"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "إعلان عقوبة التنمر قبل سماع الدفاع: إلغاء فصل موظف عام في تايوان",
+        "canonical": "https://tseng-law.com/ar/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 18,
+        "bodySegmentSHA256": "7109d62baabc9671f1b7b91f7e22de41353fb999c6c113061175937080bab312",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "pt",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-pt/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "77305593ff192c54b86fe07898e6cee983366cd077a73b9a3667f80b7e2817b5"
+      },
+      "artifact": {
+        "file": "pt/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 99173,
+        "sha256": "94f3c2acbb1d4ae9cd0dbf1ca4164b5e038821acd864ad4d7a5d3b247514642c"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Assédio e falhas na investigação em Taiwan",
+        "canonical": "https://tseng-law.com/pt/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 21,
+        "bodySegmentSHA256": "437dbecd20f465138f10695f9e0277a496c0df8475997e9fd7b2d58bce9cf085",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "hi",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-hi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "06b50e30ebe32f00908faa1ab9d4a7e87d31a74f8c87b401af9211b3c8726ce9"
+      },
+      "artifact": {
+        "file": "hi/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 138314,
+        "sha256": "896d15195540f0f8fb9c9f673565d8209e1f19ef51e58b4eea41757ecf8f8fb2"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "कार्यस्थल प्रताड़ना की जाँच और सुनवाई: ताइवान का फैसला",
+        "canonical": "https://tseng-law.com/hi/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 21,
+        "bodySegmentSHA256": "6b460ed09768bd57c54aa901b4fa1d5d3c47ca4f3e16a361bc739842fbda76b1",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ms",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-ms/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "1247ec843684dd22111d51a5478876f7c2e786cbce07a6a4964b85b47faba871"
+      },
+      "artifact": {
+        "file": "ms/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 100976,
+        "sha256": "4d0d5cbdfdc954de37efbb22ed528a2719bfafe694541048a964ac44f248910b"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Pemecatan kerana buli di Taiwan: pengumuman hukuman mendahului pertimbangan jawatankuasa",
+        "canonical": "https://tseng-law.com/ms/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 20,
+        "bodySegmentSHA256": "42e9543b8fea6918859a4e45d560cc776f8aae4789e73e949e181996351b54c4",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-ru/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "548b8ca01b038849253985b6acaacd427b9791f19a1dd034a4a0af0684271906"
+      },
+      "artifact": {
+        "file": "ru/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 122792,
+        "sha256": "21d885b368afb5eb4e2ec83f6b6a0cd1deff278207cd32d0149dd7f64cbc9cd0"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Увольнение объявили до заседания: тайваньское дело о травле на работе",
+        "canonical": "https://tseng-law.com/ru/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 19,
+        "bodySegmentSHA256": "a985be7b2292fd36308e63ba5109aff77d1c2d4ce72308d9a2b309978832acdf",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "bg",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-bg/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "b94e2e414de8359fd969af0fdf6d1af61722ff08126f7fe44f083bd14e82b8af"
+      },
+      "artifact": {
+        "file": "bg/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 117902,
+        "sha256": "ef71d09e1dce73cec03a16107fc32688f418bdf01c08ee5268f0b8150ffe4742"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Тормоз на работното място в Тайван: разследване и защита",
+        "canonical": "https://tseng-law.com/bg/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "7c7e507543e06f12300847eb2bf386ba88b10d34b4d268235629a407c9f19eaa",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "bn",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-bn/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "320be4966948f532d062f8fd0c4a1ccfea42d858070847d9846d3f30bcbc8d53"
+      },
+      "artifact": {
+        "file": "bn/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 137714,
+        "sha256": "0b0186be113bb5acc14f6189b0b56d6e4a964d5f7b99985d6c18f0993dffddbd"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "তাইওয়ানে কর্মস্থলের নিপীড়ন তদন্ত ও জবাব দেওয়ার সুযোগ",
+        "canonical": "https://tseng-law.com/bn/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 21,
+        "bodySegmentSHA256": "2cbad5bb0c708cc91554fe01320882cb6a9fe9554812bb39ac01e5fb25175eaf",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ca",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-ca/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "5047e951b20e1dc6d3914692c69f9a9b62c323e519418221f153bc0a60fa9d2a"
+      },
+      "artifact": {
+        "file": "ca/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 100296,
+        "sha256": "79bf20b450ddf983a9b8f1617b9c631f3eca242e0ba5c0c9a39b082b64bdb842"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: investigació d’assetjament laboral i dret a ser escoltat",
+        "canonical": "https://tseng-law.com/ca/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 21,
+        "bodySegmentSHA256": "e5d844bce15426ed234475be50771ef29729a00c1d086fa6db34e2d4bfd47f95",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "da",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-da/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "733c4ffb57a6f4c77dab0f149d7e2f5b44a0a9a5c9972567bd66e6d132242063"
+      },
+      "artifact": {
+        "file": "da/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 97488,
+        "sha256": "d15b01aa60fe7135d1054c0fa9b7e4d8490966df16b9732ca719ce22903da8af"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: mobning, partshøring og en ophævet afskedigelse",
+        "canonical": "https://tseng-law.com/da/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 20,
+        "bodySegmentSHA256": "2421240c760c9b5d554b5739e9b3ad40d2d8097135ed9e7a19a9e81217a1d64b",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "el",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-el/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "ddecc74e8ef307a0964fac3b560933605d347f7bad5fea67e7a8b68efcfd0325"
+      },
+      "artifact": {
+        "file": "el/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 124931,
+        "sha256": "51297ed7a3e4c57212888f90d8dbc87be5fae3691a638adba60212cb0d7f7ee7"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Η απόλυση ανακοινώθηκε πριν συνεδριάσει η επιτροπή: υπόθεση εργασιακού εκφοβισμού στην Ταϊβάν",
+        "canonical": "https://tseng-law.com/el/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 20,
+        "bodySegmentSHA256": "a4d358cd483db3263546aabd63f421bf93629c76b4d2e9bac3f905ad9594bb50",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "et",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-et/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "da1ba752fc6193222b844e5be491cb382ab55f49b3a714b49b27b5849825c3aa"
+      },
+      "artifact": {
+        "file": "et/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 95665,
+        "sha256": "93cfe90cab1a7dd004af2b6d367c6b07092869f9d6dc1b1f77195ed5ecf196d8"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Töökiusu uurimine Taiwanis ja õigus vastata",
+        "canonical": "https://tseng-law.com/et/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 20,
+        "bodySegmentSHA256": "4a98ea189ef5bd7bd0dba802ad86b43143f043aa83bc91f96d440288e8b2cb33",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "fa",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "source": {
+        "file": "src/content/columns-fa/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "7e8b3785a68b9157b9f5719fbc9409ac21fd54cf8d3c460126a19baf524c6561"
+      },
+      "artifact": {
+        "file": "fa/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+        "bytes": 116418,
+        "sha256": "954aa0005a10c7b3d7037f22f36ce88e54be9c4989b0b8866374e827d53510d4"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "اعلام مجازات پیش از رسیدگی؛ لغو حکم عزل در پروندهٔ آزار محیط کار تایوان",
+        "canonical": "https://tseng-law.com/fa/columns/taiwan-workplace-bullying-investigation-hearing-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 21,
+        "bodySegmentSHA256": "15dfc6ac72303399e90250ce9e439f64ff5f9f967fc667f03943fc9a4946773e",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/919-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "artifact": {
+        "file": "zh-hant/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 122710,
+        "sha256": "7d88d0a4b671ff30416b2de8eceae7ffa36ca70979e7868b90b207daa974ba1d"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "充電器裝在自己的車位，為何仍被判拆除？社區管線的同意問題 | 昊鼎國際法律事務所",
+        "canonical": "https://tseng-law.com/zh-hant/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-25",
+          "modified": "2026-10-26T00:00:00.000Z"
+        },
+        "bodySegmentCount": 18,
+        "bodySegmentSHA256": "2ef2727259636cbca88346ea1dd2490ee39cb59447e1c58f7d64bf1df6e4856b",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-de/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "96d2f80c44c8911fc25ad03ff1cec6c88277d9e736ef4fd538f723c041a2bf7a"
+      },
+      "artifact": {
+        "file": "de/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 99529,
+        "sha256": "1a92fbee546d03071404dbde2f312e59a7b6b03d19dd97b0e2a3d769be740503"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Eigener Stellplatz, gemeinsame Leitungswege: Rückbau einer Ladestation in Taiwan",
+        "canonical": "https://tseng-law.com/de/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 21,
+        "bodySegmentSHA256": "ecd342ce06b1132876431102bd6f3ac3842625fba78c26e443bc6c6606dacfa5",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "it",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-it/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "7755edb8d8d4eb7d1d0035b22e53936e5b941dedc6210ab4ab617e9cd3bfd1cf"
+      },
+      "artifact": {
+        "file": "it/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 99109,
+        "sha256": "30df612aa515226d8666c225551bb3c852c3639ae6f5704e842989fc81b1232c"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Ricarica elettrica e parti comuni nei condomìni di Taiwan",
+        "canonical": "https://tseng-law.com/it/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 20,
+        "bodySegmentSHA256": "b283eb53cbb150a163846ec4e2d97c34fcd3def1f047553f9d83cac11c9b90e0",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-ar/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "7a5ac7a800b3f2ff3d106e0ae1a5d308f91485ac059005ded515013541abdd22"
+      },
+      "artifact": {
+        "file": "ar/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 116346,
+        "sha256": "dd7c10b11edd93727036d22a98b82455f2f4a5686e701b12c9ce4377248f03ed"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "شاحن في موقف خاص وأسلاك في أجزاء مشتركة: حكم بإزالة تركيب في تايوان",
+        "canonical": "https://tseng-law.com/ar/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 18,
+        "bodySegmentSHA256": "1c8b481954a7889968c0dc824786b1879f215d2573cd2d2f57dbc85f21de4364",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "pt",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-pt/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "0e3c9f74b6c48427841020e5381528ce8a7406702352a45a254bbfd403ba4dca"
+      },
+      "artifact": {
+        "file": "pt/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 98575,
+        "sha256": "88c419ec21136fb6c33bd9c648952c1417358834fd1b2c5bbd1c26cb5090a402"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: carregadores e partes comuns do condomínio",
+        "canonical": "https://tseng-law.com/pt/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 19,
+        "bodySegmentSHA256": "80322a4b151dbb9eb4ee7427d78aca4202137f7416a291452fba3ac99f27e530",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "hi",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-hi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "31c86181c1fe6b2315b23a0b117fb5adb09d5174250a00d2817a334635a42bad"
+      },
+      "artifact": {
+        "file": "hi/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 137885,
+        "sha256": "6888acd1603ab37b5fa523f74745ae7967313cb31c959515d3af7bbb47b18ab7"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "ताइवान के अपार्टमेंट में EV चार्जर और साझा हिस्सों की सहमति",
+        "canonical": "https://tseng-law.com/hi/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 20,
+        "bodySegmentSHA256": "5700621b1212ca855bb4ed9bd73129d1ab4e762489a03622017a4c881059e479",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ms",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-ms/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "de6df23563ef5d7387180836408e3b20a5e6c7ea20ba4a9a30c36421e244a635"
+      },
+      "artifact": {
+        "file": "ms/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 100794,
+        "sha256": "c32ac7fc4a9137929c5caf03e71f77fee700aa4bd2c2c6e1419f222ef0417bf3"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Pengecas di petak sendiri, pendawaian di bahagian bersama: pertikaian pangsapuri Taiwan",
+        "canonical": "https://tseng-law.com/ms/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 18,
+        "bodySegmentSHA256": "cac6ce2ebc8ac458a2b5f467a9b324a347a721a4ad8e65c2f8d9e6170225d32a",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-ru/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "0245e109b5976dce38bd36c60235aa90cd2a3acdadebd87ab8887f4d11e01435"
+      },
+      "artifact": {
+        "file": "ru/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 121847,
+        "sha256": "b2e53645039555535e73224b00a89639b11a1012403afb8932e64c899df82b12"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Зарядка у своего парковочного места: почему суд на Тайване потребовал демонтаж",
+        "canonical": "https://tseng-law.com/ru/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 18,
+        "bodySegmentSHA256": "5962e4ef91af92ee00b023272d168359d10fe651e7e3609d120be36fc401a54f",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "bg",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-bg/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "0f2f518c48f2ab988d2c66dab1791a8478cf3b146fa7d0ad9a3f36579bcb6bfe"
+      },
+      "artifact": {
+        "file": "bg/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 117852,
+        "sha256": "8b806e63adbad16836b3de7c023dc74b426f8548914fdcdbf1445b7da827748f"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Зарядна станция в тайванска сграда: съгласие и общи части",
+        "canonical": "https://tseng-law.com/bg/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 22,
+        "bodySegmentSHA256": "c787813eec966de1af27ffccf91e28fec2dc337da700f8493ee0da65c12c8d60",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "bn",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-bn/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "8b4f7d05978161b0843dc6e21a29ed36b56b3a0ab5e62598a82698be96c4a93e"
+      },
+      "artifact": {
+        "file": "bn/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 134991,
+        "sha256": "4069c08032d3987c23a26bc93506191dd0f6dd67cec03957e5a7692e4ef2a678"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "তাইওয়ানের যৌথ ভবনে চার্জার স্থাপনের অনুমতি",
+        "canonical": "https://tseng-law.com/bn/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 20,
+        "bodySegmentSHA256": "37dba31e2843d585bf34307515ea9c620fe855f43b5067a304e134fde2b2e2b4",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ca",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-ca/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "cd071bb9bda0be5353eb0df7f1ac9a8b892a3dfa4fff701735ce893e43a48999"
+      },
+      "artifact": {
+        "file": "ca/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 99500,
+        "sha256": "09eb608c05bfaae9d0bcb840fb7326316581809fa63f3a12dd4c4c7584f90f75"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: carregadors de vehicles elèctrics i obres en elements comuns",
+        "canonical": "https://tseng-law.com/ca/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 19,
+        "bodySegmentSHA256": "a5cb3036dece0f072ec5edbd987288ba0ff4d483ae0d05947787ec0185aa40c7",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "da",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-da/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "1c0bed7a12c7d725a915e7fa72626fc490f4149749edf48f3f7dce5281c8e32f"
+      },
+      "artifact": {
+        "file": "da/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 95534,
+        "sha256": "938cef9086b54e9eef929fc1c4a66b7d3a8ca58ace5c0e4f18eae990787f6317"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: ladeboks, fællesarealer og ejerforeningens samtykke",
+        "canonical": "https://tseng-law.com/da/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 18,
+        "bodySegmentSHA256": "bbee2e67bede6433216d40df866a7af2dbc50b1196b74222a7f4cf9104532c9d",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "el",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-el/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "7897ed03d257814fd770a4527992ae9433b9cbef5b12ce2f8ee97bf6e461a802"
+      },
+      "artifact": {
+        "file": "el/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 122811,
+        "sha256": "1978074e1df8b69ab957a903f70f46de7968d361a505e03ea6006b4a0bcc704b"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Ταϊβάν: φορτιστής οχήματος και κοινόχρηστη καλωδίωση",
+        "canonical": "https://tseng-law.com/el/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 19,
+        "bodySegmentSHA256": "3cc0eabd497f78609ef789e23117441924370952ea134fa6f0b5686f7e6ab3af",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "et",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-et/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "cc59c5a7212683e20fcdf9fbccdf686ceb870db8de7447303dc4c04c74a8028a"
+      },
+      "artifact": {
+        "file": "et/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 96308,
+        "sha256": "2f2e523e917cba50cf4e10c6f646372f355007a9ec70f8b62c25e4ec2f8eea9a"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Elektriauto laadija Taiwanis ja ühiste ruumide nõusolek",
+        "canonical": "https://tseng-law.com/et/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 20,
+        "bodySegmentSHA256": "38a19e66ca32182749bd7694fbe170d8f639d0d28424268000972c43abc07106",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "fa",
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "source": {
+        "file": "src/content/columns-fa/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "3ac5e23ff82197cfed9c68da8e93bd7b4e6f7a9bcecd6290c9e4ed4f49056cad"
+      },
+      "artifact": {
+        "file": "fa/columns/taiwan-apartment-ev-charger-common-area-judgment.html",
+        "bytes": 115494,
+        "sha256": "3055c40ccb5d1f52bbbe0d53e5e5486acda4a9543e317bdad4df9c3bbb5de764"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "شارژر در جای پارک شخصی، کابل در مشاعات؛ حکم جمع‌آوری تجهیزات در تایوان",
+        "canonical": "https://tseng-law.com/fa/columns/taiwan-apartment-ev-charger-common-area-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 19,
+        "bodySegmentSHA256": "6c54a6b9439dbeeaf6f66ebf987602e688154e807f336c7b273e547e96bbc9f6",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/920-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "artifact": {
+        "file": "zh-hant/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 123068,
+        "sha256": "af324ed90cc829d39f6987d8e93523e705aa14a6aaafdc3ca7e96a209fd6d36e"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "遊戲帳號還有金幣，終止契約為何仍拿不到退款？ | 昊鼎國際法律事務所",
+        "canonical": "https://tseng-law.com/zh-hant/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-25",
+          "modified": "2026-10-26T00:00:00.000Z"
+        },
+        "bodySegmentCount": 29,
+        "bodySegmentSHA256": "217d922450fc91eb9be6dc99773cf8a7acfb2af9fc2663fec41725feb956e07b",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "de",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-de/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "17605ada0c21df3071a432a2b1e12f3ff62d4f10444ea41418a1c9722ae0d6cd"
+      },
+      "artifact": {
+        "file": "de/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 99599,
+        "sha256": "7aca26535a769cce7eda10e21523905ff8d416d155ae6e3fd1fcbec2b38b769f"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Spielmünzen im Konto, aber kein Erstattungsanspruch: ein Urteil aus Taiwan",
+        "canonical": "https://tseng-law.com/de/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 31,
+        "bodySegmentSHA256": "dd7c9d6d177a6e7f4ddf34c591b52a2882e89725046060bbaa959c84c89a590d",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "it",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-it/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "2e92a5de5a50c3bd2bddd8f7ac40077a6ee620a7c04ecdfb39ffa9862c93b0da"
+      },
+      "artifact": {
+        "file": "it/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 99473,
+        "sha256": "a7bb8b2e0f52ba7c7c782bbc4c971799f9d8e3229cf003f3c9c5d859e3a2866b"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Giochi online a Taiwan: monete, punti e rimborsi",
+        "canonical": "https://tseng-law.com/it/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 29,
+        "bodySegmentSHA256": "c62dfb99f04dbb4659d778fd513a8cbf25ab3a68720e155eb0aecb80732a3b9d",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ar",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-ar/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "419bb7bdfcd0c9652d88fc250c401d5b729974d2781d7849307f12ed27854723"
+      },
+      "artifact": {
+        "file": "ar/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 117539,
+        "sha256": "30ca971d78b23f04835c45d70ea8bcd54216eeb0283008f70b70145c337035a5"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "رصيد العملات داخل اللعبة والمبلغ القابل للاسترداد: حكم تايواني",
+        "canonical": "https://tseng-law.com/ar/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 29,
+        "bodySegmentSHA256": "afa4b12ea84db821b40fcf6d5140fe63b4b8538c0ec82f689ea8c6cd81ae1133",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "pt",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-pt/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "1dba99a240d62a669a3d553e192431d7670faa64c0788f079cede63e7af00af6"
+      },
+      "artifact": {
+        "file": "pt/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 98687,
+        "sha256": "f8f4bc43f5caa5db0f54c0033ec3f2c5f925fcb5e86bb02481a9e035e24e7f38"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: reembolso de moedas e pontos de jogos online",
+        "canonical": "https://tseng-law.com/pt/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 30,
+        "bodySegmentSHA256": "900e9764cb074eebebfc748247cc74339ee3bbbc23d6c3097a8e036ad51ca276",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "hi",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-hi/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "d3fe078af72657bba8fa660486fbec0776b9a9d8e585f805f44f2c6808a937c3"
+      },
+      "artifact": {
+        "file": "hi/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 139295,
+        "sha256": "4e63e89765b1cb87900bc3e2619f30b3cb980505ebd3b4ceda9719ac87a70e77"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "ताइवान में गेम कॉइन और बचे हुए भुगतान वाले पॉइंट का रिफंड",
+        "canonical": "https://tseng-law.com/hi/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 30,
+        "bodySegmentSHA256": "32cc275366b08bb6a129825ee2d76c364ae0fde3d65d04aa1b82bd47a4f3b1ba",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ms",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-ms/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "74db4d0b549a770c8c916b38047abfb0ef89391788f2cabe5f9050714e725889"
+      },
+      "artifact": {
+        "file": "ms/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 100750,
+        "sha256": "04660e9e150956e29285325f40ed9a19486e90e4f17797b0360faad91c0320eb"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Baki syiling permainan masih ada, mengapa bayaran balik ditolak?",
+        "canonical": "https://tseng-law.com/ms/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 29,
+        "bodySegmentSHA256": "a88ec96d822d95c86c093794408880560093b57d74d9e005afcd6f0c8206187d",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-ru/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "cd67ec2c2e63c22704b7f0c2a210ff6cfe5a4209898bbd578802af30b770e4a4"
+      },
+      "artifact": {
+        "file": "ru/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 123015,
+        "sha256": "8a58fd5cf42be51ddf780b5a729d0934bf6e7cf9ae2f1f8f7ea3547348224bbf"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Игровые монеты остались, а возврата нет: спор о балансе аккаунта на Тайване",
+        "canonical": "https://tseng-law.com/ru/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 29,
+        "bodySegmentSHA256": "34fd35f2317e3316bf073d99d69393abe84dc833b1de4837f19a1c6f2f40889c",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "bg",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-bg/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "a7e85faf8bd43c50827620fbc8e3e92e1b7eb18b825254bd4ca98fb712392013"
+      },
+      "artifact": {
+        "file": "bg/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 116202,
+        "sha256": "b72cd8c632f3e4070380c4b693a4e10e4d05206bfee85ce3dc9e58caebbc2c98"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Онлайн игри в Тайван: монети, прекратяване и възстановяване",
+        "canonical": "https://tseng-law.com/bg/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 23,
+        "bodySegmentSHA256": "8f5e128b71eb36578deb33a0ff769fdf87f381fbd7d48b7c6bc144ebe8919170",
+        "missingBodySegments": [],
+        "sourceTableCount": 0,
+        "renderedTableCount": 0,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "bn",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-bn/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "a54de3500f6f831efbaaeb32e6be9bbb7866b4fe32ec39755e7c0852ebdba770"
+      },
+      "artifact": {
+        "file": "bn/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 137444,
+        "sha256": "03bf45883a2664a4fc7a86a267cefdb0fbb5e31d741a4c29d2f55a2fe81a8f52"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "তাইওয়ানে গেমের পয়েন্ট, মুদ্রা ও টাকা ফেরত",
+        "canonical": "https://tseng-law.com/bn/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 31,
+        "bodySegmentSHA256": "c0ba6562d08a234d98e197eca26765d5ba2718410855217cdb31fcff764763e5",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "ca",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-ca/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "f6b34469c5dcd72ef92ee65d8a857b46ba3333a955c955a0d365cbb3849b0c07"
+      },
+      "artifact": {
+        "file": "ca/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 101028,
+        "sha256": "fc1d1eb5b2d08d08a86a1f4b2a231acfd190974f4d2eb96d2049cbcc397bee1f"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: monedes de joc, punts no utilitzats i reemborsament",
+        "canonical": "https://tseng-law.com/ca/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 32,
+        "bodySegmentSHA256": "d31aac1d8bc5000eb7669900d657e756aefcb44b5e4984c1ad423b3e49902578",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "da",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-da/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "c9215fdddee3e73f4c3b483ba04e012dd123eab95e35bc4f746396b0ecbcf540"
+      },
+      "artifact": {
+        "file": "da/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 97355,
+        "sha256": "2387510b01ee51ff0dca771f55f4000992c9802b3cc401aeec7c69e194584de6"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Taiwan: spilmønter, ubrugte point og tilbagebetaling",
+        "canonical": "https://tseng-law.com/da/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 30,
+        "bodySegmentSHA256": "7fafe53d26751a10262a54ae8f67865da1609cc8ce923b459976dceab57a7880",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "el",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-el/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "5dd4cd90e02a242fdb672be29acd837888fd5564a34823c0220f62b648843cb4"
+      },
+      "artifact": {
+        "file": "el/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 125645,
+        "sha256": "f8eb53fb09fc5e346c9a80ace08bf877610df81dcf9b774446c8f6979131bd16"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Ταϊβάν: πόντοι, νομίσματα παιχνιδιού και επιστροφή χρημάτων",
+        "canonical": "https://tseng-law.com/el/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 30,
+        "bodySegmentSHA256": "7dc617ecbbf04878fc94048943be9dcc2c553004418854a462df4b3349e7171d",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "et",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-et/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "e058c5964d75cfad256f5fd99b6c474b9acbd80408a5e06229652116e3d38094"
+      },
+      "artifact": {
+        "file": "et/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 97365,
+        "sha256": "fdfa2205ed07a6bc2f543e69add57e9f5a5278b99eecfc163a6ef57c38bbac04"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "Veebimängud Taiwanis: mündid, punktid ja tagasimakse",
+        "canonical": "https://tseng-law.com/et/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 31,
+        "bodySegmentSHA256": "b4db3beacc6b23fe3d8c8aecff6acb0d8f4e1b6d718af9cd0675bc4452e9e56a",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    },
+    {
+      "locale": "fa",
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "source": {
+        "file": "src/content/columns-fa/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "6e1bf2a8ffa06f66533173b1e6636a008da1c92b7373d2adc15007e572883d44"
+      },
+      "artifact": {
+        "file": "fa/columns/taiwan-online-game-coins-refund-judgment.html",
+        "bytes": 118523,
+        "sha256": "d01048bb088d2441a29beba03686ff2b7a6359760e31e28253d2ab145393eedc"
+      },
+      "failures": [],
+      "observed": {
+        "documentTitle": "سکه در حساب مانده بود، دادگاه بازپرداخت را نپذیرفت؛ اختلاف بازی آنلاین در تایوان",
+        "canonical": "https://tseng-law.com/fa/columns/taiwan-online-game-coins-refund-judgment",
+        "alternateCount": 16,
+        "footerCount": 15,
+        "articleDates": {
+          "published": "2026-10-26",
+          "modified": "2026-10-26"
+        },
+        "bodySegmentCount": 30,
+        "bodySegmentSHA256": "d3c120c7bf0f4c2b4ced5f81e4eba705e117969c4ab22fb56333909431cdb00c",
+        "missingBodySegments": [],
+        "sourceTableCount": 1,
+        "renderedTableCount": 1,
+        "faqCount": 3,
+        "imagePath": "/images/columns/921-case-trends-20261025.webp",
+        "sitemapLastmod": "2026-10-26",
+        "sitemapAlternateCount": 16
+      },
+      "pass": true
+    }
+  ],
+  "summary": {
+    "total": 90,
+    "passed": 90,
+    "failed": 0,
+    "bodySegments": 2164
+  }
+}

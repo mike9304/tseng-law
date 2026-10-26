@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-26T08:13:03.439354+00:00",
+  "originalScriptSHA256": "980458ce2e3b0de74afe8011b71f1b83c84ef85dcf1c6a3eb6a1f3409fd0ee4f",
+  "correctedScriptSHA256": "fa1d77af38bfe7f8d5caf1c9c5b5df1e1fc998f51af917540a79742ac0572ec5",
+  "onlyChanges": [
+    "serialize the same text child instead of injecting raw Unicode into entity-encoded serialized markup",
+    "separate corrected result path"
+  ],
+  "exactReverseToOriginal": true,
+  "firstComparison": {
+    "total": 237,
+    "passed": 235,
+    "failed": 2,
+    "pagesWithBDI": 59,
+    "isolatedIdentifiers": 126
+  },
+  "correctedComparison": {
+    "total": 237,
+    "passed": 237,
+    "failed": 0,
+    "pagesWithBDI": 59,
+    "isolatedIdentifiers": 126
+  },
+  "neutralFixtureSHA256": "853ca608bce8f8fc58ade81209a734c7fd843702559399ca8d451354d65d4bdb",
+  "patchSHA256": "5c9f1f520fc75bdefcca6e63e3aa1b85b78932f07c0af809ce3cd6f86912b4f5",
+  "comparisonCriteriaUnchanged": [
+    "exact bdi dir=ltr numeric wrapper",
+    "body text",
+    "FAQ DOM",
+    "href",
+    "metadata",
+    "manuscript SHA"
+  ],
+  "originalFailurePreserved": true
+}

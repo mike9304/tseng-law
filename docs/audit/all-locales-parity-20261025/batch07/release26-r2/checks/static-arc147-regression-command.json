@@ -1,0 +1,13 @@
+{
+  "startedAt": "2026-10-26T08:05:11.769412+00:00",
+  "cwd": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "expectedCommit": "51286ef9817aab5178b9237fa2041877d4df7c4a",
+  "command": [
+    "node",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/static-arc147-regression.mjs"
+  ],
+  "exitCode": 0,
+  "scriptSHA256": "cbbcd5f054e56db0a93d00afca8de95bb5a28f592950e91342d1ca5c3b205bfc",
+  "finishedAt": "2026-10-26T08:05:12.711518+00:00",
+  "logSHA256": "6bb37baed93848aeb5b098b33a469e07857ebc17dc21a70c606279a441a453b7"
+}

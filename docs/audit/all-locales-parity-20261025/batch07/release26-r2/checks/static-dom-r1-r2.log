@@ -1,0 +1,70 @@
+{
+  "summary": {
+    "total": 237,
+    "passed": 235,
+    "failed": 2,
+    "pagesWithBDI": 59,
+    "isolatedIdentifiers": 126
+  },
+  "inputsUnchanged": true,
+  "failures": [
+    {
+      "file": "fa/columns/taiwan-public-contract-mediation-arbitration-same-claim.html",
+      "locale": "fa",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "beforeSHA256": "c09abe18929774f374de379e02effb2255cab352714a9a9a6d1860ef291ab9f4",
+      "afterSHA256": "a0357f8a3c92a98dd63c21fbab3ae6d007757121fb4767d9c81f69cd9e91c563",
+      "failures": [
+        "body DOM changed beyond exact bdi wrappers"
+      ],
+      "isolatedIdentifiers": [
+        {
+          "token": "۸۵-۱",
+          "href": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057"
+        },
+        {
+          "token": "۸۵-۱",
+          "href": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057"
+        }
+      ],
+      "bodyDOMAfterRemovingOnlyBDISHA256": "ca35eac2c1fdf239901daadd669109ca0b1aa4213c7c08a46867591e6f8ef7ce",
+      "bodyTextSHA256": "d8ecb4859333a6eb695be8ecd4b24444b1c5dbe0105a22f59e355a827d51eb81",
+      "faqCount": 2,
+      "firstDOMDifference": {
+        "index": 8572,
+        "before": "noopener noreferrer\" class=\"link-underline\">&#x645;&#x627;&#x62F;&#x647;&#x654; &#x6F8;&#x6F5;-&#x6F1; &#x642;&#x627;&#x646;&#x648;&#x646; &#x62A;&#x62F;&#x627;&#x631;&#x6A9;&#x627;&#x62A; &#x62F;&#x648;&#x644;&#x62A;&#x6CC;</a> &#x628;&#x631;&#x627;&#x6CC; &#",
+        "after": "noopener noreferrer\" class=\"link-underline\">&#x645;&#x627;&#x62F;&#x647;&#x654; ۸۵-۱ &#x642;&#x627;&#x646;&#x648;&#x646; &#x62A;&#x62F;&#x627;&#x631;&#x6A9;&#x627;&#x62A; &#x62F;&#x648;&#x644;&#x62A;&#x6CC;</a> &#x628;&#x631;&#x627;&#x6CC; &#x627;&#x62E;&#x62A"
+      },
+      "pass": false
+    },
+    {
+      "file": "fa/columns/taiwan-workplace-bullying-investigation-hearing-judgment.html",
+      "locale": "fa",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "beforeSHA256": "f68b18df53ba4f17b2ae58afc210f1a6a1988e17a62254c3467b25d09cb7c0ae",
+      "afterSHA256": "954aa0005a10c7b3d7037f22f36ce88e54be9c4989b0b8866374e827d53510d4",
+      "failures": [
+        "body DOM changed beyond exact bdi wrappers"
+      ],
+      "isolatedIdentifiers": [
+        {
+          "token": "۲۲-۲",
+          "href": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        },
+        {
+          "token": "۲۲-۲",
+          "href": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        }
+      ],
+      "bodyDOMAfterRemovingOnlyBDISHA256": "2a5663ca24c7ba89d276cf8099c4a371ff55a3efcbbfdb346bac730c9c2e6440",
+      "bodyTextSHA256": "4ad9f2a7650a59f9523cc8b4aedd22838fd7f4bd8432b65d16c431264e9034cd",
+      "faqCount": 3,
+      "firstDOMDifference": {
+        "index": 12198,
+        "before": "noopener noreferrer\" class=\"link-underline\">&#x645;&#x627;&#x62F;&#x647;&#x654; &#x6F2;&#x6F2;-&#x6F2; &#x642;&#x627;&#x646;&#x648;&#x646; &#x627;&#x6CC;&#x645;&#x646;&#x6CC; &#x648; &#x628;&#x647;&#x62F;&#x627;&#x634;&#x62A; &#x634;&#x63A;&#x644;&#x6CC;</a> &",
+        "after": "noopener noreferrer\" class=\"link-underline\">&#x645;&#x627;&#x62F;&#x647;&#x654; ۲۲-۲ &#x642;&#x627;&#x646;&#x648;&#x646; &#x627;&#x6CC;&#x645;&#x646;&#x6CC; &#x648; &#x628;&#x647;&#x62F;&#x627;&#x634;&#x62A; &#x634;&#x63A;&#x644;&#x6CC;</a> &#x628;&#x631; &#x6"
+      },
+      "pass": false
+    }
+  ]
+}

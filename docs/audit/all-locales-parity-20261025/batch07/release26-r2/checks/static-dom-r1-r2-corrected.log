@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "total": 237,
+    "passed": 237,
+    "failed": 0,
+    "pagesWithBDI": 59,
+    "isolatedIdentifiers": 126
+  },
+  "inputsUnchanged": true,
+  "failures": []
+}

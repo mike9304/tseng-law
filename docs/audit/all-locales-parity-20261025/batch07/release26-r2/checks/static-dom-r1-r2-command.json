@@ -1,0 +1,13 @@
+{
+  "startedAt": "2026-10-26T08:05:11.769382+00:00",
+  "cwd": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "expectedCommit": "51286ef9817aab5178b9237fa2041877d4df7c4a",
+  "command": [
+    "node",
+    "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/static-dom-r1-r2.mjs"
+  ],
+  "exitCode": 1,
+  "scriptSHA256": "980458ce2e3b0de74afe8011b71f1b83c84ef85dcf1c6a3eb6a1f3409fd0ee4f",
+  "finishedAt": "2026-10-26T08:05:12.668586+00:00",
+  "logSHA256": "1b3b5b6a907170aefdd5112d705bc5fa24d9acbd6a226506d43776f6349e4085"
+}

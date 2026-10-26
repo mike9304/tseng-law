@@ -1,0 +1,20 @@
+--- static-dom-r1-r2.mjs
++++ static-dom-r1-r2-corrected.mjs
+@@ -13,7 +13,7 @@
+ const beforeBuild=JSON.parse(fs.readFileSync(path.join(beforeOut,'build-info.json')));
+ const afterBuild=JSON.parse(fs.readFileSync(path.join(afterOut,'build-info.json')));
+ if(beforeBuild.commit!=='5848aa6c9494b09590b39ca5b0c117dd295e9beb'||afterBuild.commit!==expected)throw Error('Unexpected artifact pair');
+-const reportFile=path.join(D,'checks/static-dom-r1-r2.json');
++const reportFile=path.join(D,'checks/static-dom-r1-r2-corrected.json');
+ if(fs.existsSync(reportFile))throw Error('Preserve first DOM comparison evidence');
+ const require=createRequire(path.join(R,'package.json'));
+ const {parseDocument}=require('htmlparser2');
+@@ -40,7 +40,7 @@
+   const token=textContent(node);
+   const valid=JSON.stringify(node.attribs)==='{"dir":"ltr"}'&&node.children.length===1&&node.children[0].type==='text'&&/^[0-9٠-٩۰-۹]+(?:-[0-9٠-٩۰-۹]+)+$/u.test(token);
+   check(valid,'bdi is not an exact numeric legal-identifier wrapper');
+-  if(valid)normalizedAfterHTML=normalizedAfterHTML.replaceAll(getOuterHTML(node),token);
++  if(valid)normalizedAfterHTML=normalizedAfterHTML.replaceAll(getOuterHTML(node),getOuterHTML(node.children[0]));
+   let anchor=node.parent;while(anchor&&anchor.name!=='a')anchor=anchor.parent;
+   check(!!anchor,'bdi legal identifier is outside a link');
+   row.isolatedIdentifiers.push({token,href:anchor?.attribs?.href??null});

@@ -1,0 +1,161 @@
+{
+  "at": "2026-10-26T07:52:02.326835+00:00",
+  "status": "INITIAL_QA_NOT_RELEASE_READY_FA_LEGAL_IDENTIFIER_DIRECTION",
+  "contentCommit": "5848aa6c9494b09590b39ca5b0c117dd295e9beb",
+  "buildInfo": {
+    "commit": "5848aa6c9494b09590b39ca5b0c117dd295e9beb",
+    "builtAt": "2026-10-26T07:39:29.587Z"
+  },
+  "artifact": "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26",
+  "artifactCount": 5505,
+  "artifactBytes": 484597431,
+  "artifactTreeSHA256": "12fbd1c3776bc1574f63d32fd5c99f20fc2a6732b56b46daaed6867a34df1684",
+  "sourceTreeSHA256": "8677aa9b34121952ce1d89329b8668cfd720ddef5417002757882b7cdcfb86b9",
+  "sourceMarkdownCount": 2370,
+  "buildExitCode": 0,
+  "buildDataMode": "local fallback; --data intentionally omitted, not Air production CMS mirror parity",
+  "mediaOrigin": "https://media.tseng-law.com",
+  "buildBaselineTrackedSourceAndScriptsUnchanged": true,
+  "snapshotComparisons": {
+    "head": true,
+    "buildInfo": true,
+    "selected42": true,
+    "canonical6": true,
+    "allSources": true,
+    "artifacts": true
+  },
+  "separateParentAdditionAtSnapshot": [
+    {
+      "path": "src/components/__tests__/column-legal-identifiers-bidi.test.tsx",
+      "bytes": 2049,
+      "sha256": "36e82b12b00e6dfa9524b6644d552dc7c827f44f4c008a6cab88f1fa1a6c719e"
+    }
+  ],
+  "caseStatic": {
+    "total": 90,
+    "passed": 90,
+    "failed": 0,
+    "bodySegments": 2164
+  },
+  "ARCStatic": {
+    "total": 147,
+    "passed": 147,
+    "failed": 0,
+    "bodySegments": 6553
+  },
+  "primaryBrowser": {
+    "total": 104,
+    "passed": 98,
+    "failed": 6,
+    "fatal": false
+  },
+  "HE706Browser": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "fatal": false
+  },
+  "failures": [
+    {
+      "mode": "desktop",
+      "locale": "fa",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "failures": [
+        "Mixed-script number or identifier has hidden, wrapped or reversed character geometry"
+      ]
+    },
+    {
+      "mode": "desktop",
+      "locale": "fa",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "failures": [
+        "Mixed-script number or identifier has hidden, wrapped or reversed character geometry"
+      ]
+    },
+    {
+      "mode": "mobile",
+      "locale": "fa",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "failures": [
+        "Mixed-script number or identifier has hidden, wrapped or reversed character geometry"
+      ]
+    },
+    {
+      "mode": "mobile",
+      "locale": "fa",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "failures": [
+        "Mixed-script number or identifier has hidden, wrapped or reversed character geometry"
+      ]
+    },
+    {
+      "mode": "slow",
+      "locale": "fa",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "failures": [
+        "Mixed-script number or identifier has hidden, wrapped or reversed character geometry"
+      ]
+    },
+    {
+      "mode": "nojs",
+      "locale": "fa",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "failures": [
+        "Mixed-script number or identifier has hidden, wrapped or reversed character geometry"
+      ]
+    }
+  ],
+  "browserErrors": {
+    "pageErrors": 0,
+    "consoleErrors": 0,
+    "failedRequests": 0,
+    "rscRequests": 0,
+    "expectedDisabledScriptBlocks": 7
+  },
+  "package": {
+    "pages": 3136,
+    "assets": 2366,
+    "packedFileCount": 5506,
+    "expandedBytes": 171588752,
+    "expandedMiB": 163.63978576660156,
+    "headroomBytes": 96846704,
+    "headroomMiB": 92.36021423339844,
+    "gzipHtmlRoundTrips": 3136,
+    "unchangedAssets": 2366,
+    "verificationFailures": 0,
+    "packerSha256": "c983e275e92ef2aff523f6307069ca54121fc79400e9c247fa02f7c1b73d85e7",
+    "workerTemplateSha256": "1d822b535ea1011a27fd037cfb2f9cef9245aacb0cc541b26d926c55923998b9",
+    "packedWorkerSha256": "84711e76427f7a5ae35a8be8e2c872adfba9b7291f76566eac99ffe4836d74ff",
+    "wranglerSha256": "5b4cb5e98934bf6b8df0273cb93eed501b3dfe4eadcab2ad075b61e90e85dbe3"
+  },
+  "packageTreeSHA256": "83bd161cd5639e2017f0f1c75cc539252f51ae4e8ed509537f211d61c6bb25f0",
+  "defaultWorkerConfigExact": true,
+  "DOMPreview": {
+    "status": "DOM_ONLY_HYPOTHESIS_CONFIRMED_NOT_PRODUCTION_FIX",
+    "observations": 8,
+    "allCharactersLTRAndSingleLine": true,
+    "sourceTextURLsAndArtifactUnchanged": true
+  },
+  "bindings": {
+    "checks/snapshot-before.json": "71b5088547d2c939078ee9c1b3aed881236b8901bfdc86d979495c9f9ae046cc",
+    "checks/snapshot-after.json": "1313c367a44aad8ce11ea283d770e0d7272c52ff1607f2f41e91f85ec6f01026",
+    "checks/static-cases90.json": "26ad9df1002a7767cc7007d2d3078d4d6d23c0886f51a3c565d8c426d274847c",
+    "checks/static-arc147-regression.json": "783f111830ecd29415d97425a2aba2a993bea7301cf760cf8db4997eb84e59ef",
+    "checks/browser-case-results.json": "c3a76475dcd54a5d6a89dace3c62cf1355b81af94427b88b708ead5d508b58b7",
+    "checks/browser-he706-results.json": "c5dc086bb919dd175b89bb4c19ece438f97d474a2c6538b10490984ca2ab35f4",
+    "checks/browser-pack-report.json": "486be6c014b1ad7cc0d38e1a07c157b4a56f8d10e46013a0d1315c839848b9f8",
+    "checks/pack-config-verify.json": "8d805659b9b6d4330295a6466ed846abee348024dbd08c505a36a3281d5f8b98",
+    "checks/pack-manifest.json": "37bc77fabff874cfb088c058f2684aea0f385393a7996f6cb64b0699abf5906c",
+    "checks/fa-identifier-diagnostic/observations.json": "8e6066da27d5eaf8f198d84f2f353a256563780ae25a402ef3bf51adb3524053",
+    "checks/fa-identifier-preview/observations.json": "c2053faf23a664e7ef7baafda982b5d9f11c5b2e89561544fddf85578b666569",
+    "checks/fa-identifier-preview-comparison.json": "c6cd91b905f5310802216b423fda1b61614e52264ef9ce99188d24c4b3159420"
+  },
+  "limits": [
+    "This initial artifact has six real browser validation failures; no all-pass release claim.",
+    "DOM bdi preview does not change the existing artifact and does not validate a production renderer patch.",
+    "Static/local browser/package checks are not a deployment, Air CMS mirror parity, native-language approval or legal approval.",
+    "The unchanged default package passes256MiB for this artifact only; full49x286 capacity remains unproven.",
+    "Existing build warnings retained; no app/manuscript/shared-tool edit by this agent."
+  ],
+  "noPushDeployOrInfrastructureChange": true
+}

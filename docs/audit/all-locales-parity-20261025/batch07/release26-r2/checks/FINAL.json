@@ -1,0 +1,175 @@
+{
+  "at": "2026-10-26T08:13:03.463162+00:00",
+  "status": "LOCAL_R2_QA_PASS_READY_FOR_ROOT_REVIEW",
+  "contentCommit": "51286ef9817aab5178b9237fa2041877d4df7c4a",
+  "buildInfo": {
+    "commit": "51286ef9817aab5178b9237fa2041877d4df7c4a",
+    "builtAt": "2026-10-26T08:03:00.206Z"
+  },
+  "buildExitCode": 0,
+  "buildSeconds": 150.745567,
+  "dataMode": "local fallback; --data intentionally omitted, not Air production CMS mirror parity",
+  "artifact": "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2",
+  "artifactCount": 5509,
+  "artifactBytes": 485401297,
+  "artifactTreeSHA256": "4b250bc6f2ed758cd51e0de0589897cd0f11c7255fc282e9b2d127222a8209f6",
+  "sourceTreeSHA256": "8677aa9b34121952ce1d89329b8668cfd720ddef5417002757882b7cdcfb86b9",
+  "sourceMarkdownCount": 2370,
+  "buildVerification": {
+    "files": 5509,
+    "bytes": 485401297,
+    "htmlPages": 3136,
+    "oversize": [],
+    "sitemapUrls": 2939,
+    "sitemapMissing": [],
+    "brokenRefs": {},
+    "serverOnlyRefs": {},
+    "apiStrings": {},
+    "flightErrors": {}
+  },
+  "media": {
+    "origin": "https://media.tseng-law.com",
+    "files": 2164,
+    "bytes": 3110120312,
+    "referenced": 1346,
+    "missingReferences": []
+  },
+  "crawlPages": 2944,
+  "caseStatic": {
+    "total": 90,
+    "passed": 90,
+    "failed": 0,
+    "bodySegments": 2164
+  },
+  "ARCStatic": {
+    "total": 147,
+    "passed": 147,
+    "failed": 0,
+    "bodySegments": 6553
+  },
+  "primaryBrowser": {
+    "total": 104,
+    "passed": 104,
+    "failed": 0,
+    "fatal": false
+  },
+  "HE706Browser": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "fatal": false
+  },
+  "browserErrors": {
+    "pageErrors": 0,
+    "consoleErrors": 0,
+    "failedRequests": 0,
+    "rscRequests": 0,
+    "expectedDisabledScriptBlocks": 7
+  },
+  "browser": {
+    "engine": "Chromium",
+    "version": "156.0.8078.4",
+    "playwright": "1.59.1",
+    "executablePath": "/Users/son7/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+    "headless": true,
+    "isolatedTemporaryProfiles": true
+  },
+  "crossArtifactDOM": {
+    "total": 237,
+    "passed": 237,
+    "failed": 0,
+    "pagesWithBDI": 59,
+    "isolatedIdentifiers": 126
+  },
+  "crossArtifactDOMCriteria": "Only exact bdi dir=ltr wrappers around original numeric legal identifiers may differ; body text,FAQ DOM,hrefs,metadata and237 manuscript hashes unchanged.",
+  "actualFAIdentifierObservations": {
+    "count": 8,
+    "viewports": [
+      1440,
+      390
+    ],
+    "allExactLogicalOrderLTRAndOneLine": true,
+    "bodyDocumentMutated": false,
+    "sameSourceAndLinkTextAndURLsAsFirstArtifact": true
+  },
+  "package": {
+    "pages": 3136,
+    "assets": 2370,
+    "packedFileCount": 5510,
+    "expandedBytes": 171814908,
+    "expandedMiB": 163.85546493530273,
+    "headroomBytes": 96620548,
+    "headroomMiB": 92.14453506469727,
+    "gzipHtmlRoundTrips": 3136,
+    "unchangedAssets": 2370,
+    "verificationFailures": 0,
+    "packerSha256": "c983e275e92ef2aff523f6307069ca54121fc79400e9c247fa02f7c1b73d85e7",
+    "workerTemplateSha256": "1d822b535ea1011a27fd037cfb2f9cef9245aacb0cc541b26d926c55923998b9",
+    "packedWorkerSha256": "84711e76427f7a5ae35a8be8e2c872adfba9b7291f76566eac99ffe4836d74ff",
+    "wranglerSha256": "5b4cb5e98934bf6b8df0273cb93eed501b3dfe4eadcab2ad075b61e90e85dbe3"
+  },
+  "packageTreeSHA256": "f8ae37d63482c87c3db078151c233861bfb29b8994596590d65e3c54dd393b31",
+  "defaultWorkerConfigExact": true,
+  "finalSnapshotComparisons": {
+    "head": true,
+    "buildInfo": true,
+    "selected42": true,
+    "canonical6": true,
+    "allSources": true,
+    "artifacts": true
+  },
+  "trackedSourceAndScriptsUnchanged": true,
+  "originalManuscriptsUnchangedAcrossRendererFix": true,
+  "finalGitStatus": "",
+  "initialEvidencePreserved": {
+    "at": "2026-10-26T08:13:02.606399+00:00",
+    "firstArtifactUnchanged": true,
+    "firstArtifactTreeSHA256": "12fbd1c3776bc1574f63d32fd5c99f20fc2a6732b56b46daaed6867a34df1684",
+    "firstPackageUnchanged": true,
+    "firstPackageTreeSHA256": "83bd161cd5639e2017f0f1c75cc539252f51ae4e8ed509537f211d61c6bb25f0",
+    "firstBoundEvidenceUnchanged": true,
+    "firstReportSHA256": "a74b214d73d40ca534e876cd64183a15a87dbe87e5c241296b12bc7035cc50d2",
+    "firstSummarySHA256": "1bb7de5b26df8bbed55294e320e739270c508513e530686b78c953fb9ffed511"
+  },
+  "retainedFailures": [
+    {
+      "phase": "initial release26 browser",
+      "passed": 98,
+      "total": 104,
+      "failed": 6,
+      "resolution": "Root legal-identifier renderer fix; R2 same104 pass."
+    },
+    {
+      "phase": "R2 initial DOM comparator",
+      "passed": 235,
+      "total": 237,
+      "failed": 2,
+      "resolution": "Unicode/entity serializer mismatch fixed only in separate comparator; neutral fixture and exact reverse proof preserved."
+    }
+  ],
+  "bindings": {
+    "checks/snapshot-before.json": "b2d7f9ee7acc1057975b02273ccb78df4e7796890560ffd5e70fa6302a53c8f0",
+    "checks/snapshot-after.json": "57a2ee59e3d2ee0b0c4167e7a59078526fb33fd1fbf02fcf802b25e73ef9f277",
+    "checks/static-cases90.json": "4192763bb9480b6805072443445e3692f2e8e0a0cfd50cf083e34ba1bc3109ce",
+    "checks/static-arc147-regression.json": "7dadfa4afb4658092820bb4a589f98e1305928d71d67599a68902528884a65ec",
+    "checks/browser-case-results.json": "2acd1c8548599ed139eb6362b007d9075eb239347cd56681259e215b811ff0d0",
+    "checks/browser-he706-results.json": "71535e01aa3134f0cc4ad1a3c2f65e34deeac884410d91b62bbb0ce50ec93930",
+    "checks/browser-pack-report.json": "93ab9dfdf7b4dc11a54e72534add6817c0d5bb7740b2640c02783a1214098ab6",
+    "checks/pack-config-verify.json": "87343c8c94594be8ac2f8eaa12a71199fe68495dd099784f28a360c710e20801",
+    "checks/pack-manifest.json": "2fbf78db129107a95c7208b1fdff2590017ded1b62dfb725a33f47ba3340fdd0",
+    "checks/static-dom-r1-r2.json": "939891fcf569091cffd323658896b2c5f44e8aa931eb32f85af1408aeed1610f",
+    "checks/static-dom-r1-r2-corrected.json": "d30af33332fb5a63ce6c062781e38fde90363e945eadc857f2855f0a24cfb57f",
+    "checks/dom-comparator-correction.json": "a56ea8944dac00c76e2d8663fd2d4e8c989e77c7ddf38bb9266340d9046cc4c8",
+    "checks/dom-serializer-neutral-fixture.json": "853ca608bce8f8fc58ade81209a734c7fd843702559399ca8d451354d65d4bdb",
+    "checks/fa-identifier-diagnostic/observations.json": "b0bfd9f1898c4a1584991ba2e4b156aaef865c51d3c3e924627dd6514d1dd620",
+    "checks/first-artifact-preservation.json": "59476f348a9ab4322d7dddc37343e74891bde03b5aac6c09de6b20e308fd26eb"
+  },
+  "limits": [
+    "Local fallback is not Air production CMS mirror parity.",
+    "The body DOM comparison covers90 case and147 ARC pages, not every site page.",
+    "Default package size proves this artifact only, not final49x286 capacity.",
+    "No human native-language or legal approval is asserted.",
+    "No push, deployment, infrastructure change or source edit by this QA agent."
+  ],
+  "noPushDeployOrInfrastructureChange": true
+}

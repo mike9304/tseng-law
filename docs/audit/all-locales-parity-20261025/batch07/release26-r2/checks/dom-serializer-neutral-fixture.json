@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-26T08:06:46.511Z",
+  "scope": "Three neutral number tokens; no target manuscript input. Only compare serializer output to serializer output.",
+  "rows": [
+    {
+      "token": "۱۲۳-۴",
+      "beforeHTML": "<p>prefix &#x6F1;&#x6F2;&#x6F3;-&#x6F4; suffix</p>",
+      "originalReplacement": "<p>prefix ۱۲۳-۴ suffix</p>",
+      "correctedReplacement": "<p>prefix &#x6F1;&#x6F2;&#x6F3;-&#x6F4; suffix</p>",
+      "originalComparisonEqual": false,
+      "correctedComparisonEqual": true
+    },
+    {
+      "token": "١٢٣-٤",
+      "beforeHTML": "<p>prefix &#x661;&#x662;&#x663;-&#x664; suffix</p>",
+      "originalReplacement": "<p>prefix ١٢٣-٤ suffix</p>",
+      "correctedReplacement": "<p>prefix &#x661;&#x662;&#x663;-&#x664; suffix</p>",
+      "originalComparisonEqual": false,
+      "correctedComparisonEqual": true
+    },
+    {
+      "token": "123-4",
+      "beforeHTML": "<p>prefix 123-4 suffix</p>",
+      "originalReplacement": "<p>prefix 123-4 suffix</p>",
+      "correctedReplacement": "<p>prefix 123-4 suffix</p>",
+      "originalComparisonEqual": true,
+      "correctedComparisonEqual": true
+    }
+  ]
+}

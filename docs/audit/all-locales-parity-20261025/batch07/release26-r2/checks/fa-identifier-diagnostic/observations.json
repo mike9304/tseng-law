@@ -1,0 +1,515 @@
+{
+  "startedAt": "2026-10-26T08:08:36.535Z",
+  "expectedCommit": "51286ef9817aab5178b9237fa2041877d4df7c4a",
+  "artifact": "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch07-release26-r2",
+  "documentModified": false,
+  "sourceModified": false,
+  "rows": [
+    {
+      "number": 915,
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "token": "۸۵-۱",
+      "officialIdentifier": "85-1",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "source": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sourceSHA256": "0210db2a1ad6a56b7c2eb9d069aa3c2a0e8c8c977001ce2b367ac84c72788543",
+      "artifactSHA256": "a0357f8a3c92a98dd63c21fbab3ae6d007757121fb4767d9c81f69cd9e91c563",
+      "sourceLines": [
+        {
+          "line": 42,
+          "text": "[مادهٔ ۸۵-۱ قانون تدارکات دولتی](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) برای اختلاف‌های اجرای قرارداد، مراجعه به هیئت رسیدگی به اعتراض‌های تدارکات دولتی و درخواست میانجی‌گری را پیش‌بینی می‌کند. نهاد عمومی حق ندارد درخواست میانجی‌گری تأمین‌کننده را رد کند."
+        },
+        {
+          "line": 67,
+          "text": "- [قانون تدارکات دولتی، مادهٔ ۸۵-۱](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057): میانجی‌گری و مسیر قانونی داوری در اختلاف اجرای قرارداد."
+        }
+      ],
+      "links": [
+        {
+          "text": "مادهٔ ۸۵-۱ قانون تدارکات دولتی",
+          "href": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "outerHTML": "<a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"link-underline\">مادهٔ <bdi dir=\"ltr\">۸۵-۱</bdi> قانون تدارکات دولتی</a>",
+          "direction": "rtl",
+          "unicodeBidi": "normal",
+          "lang": "fa",
+          "htmlDir": "rtl",
+          "matches": [
+            {
+              "logicalText": "۸۵-۱",
+              "visualLeftToRight": "۸۵-۱",
+              "sameLine": true,
+              "chars": [
+                {
+                  "char": "۸",
+                  "x": 1248.4609375,
+                  "y": 568.921875,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "۵",
+                  "x": 1258.1796875,
+                  "y": 568.921875,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "-",
+                  "x": 1265.78125,
+                  "y": 568.921875,
+                  "width": 5.5,
+                  "height": 36
+                },
+                {
+                  "char": "۱",
+                  "x": 1273.3828125,
+                  "y": 568.921875,
+                  "width": 9.734375,
+                  "height": 36
+                }
+              ]
+            }
+          ],
+          "screenshot": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/1440-fa-915-link1.png",
+          "screenshotSHA256": "b8ed1b64b475e962d7f56ac83b92ea873ba1ddfed1b07501fca35ed9365db826"
+        },
+        {
+          "text": "قانون تدارکات دولتی، مادهٔ ۸۵-۱",
+          "href": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "outerHTML": "<a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"link-underline\">قانون تدارکات دولتی، مادهٔ <bdi dir=\"ltr\">۸۵-۱</bdi></a>",
+          "direction": "rtl",
+          "unicodeBidi": "normal",
+          "lang": "fa",
+          "htmlDir": "rtl",
+          "matches": [
+            {
+              "logicalText": "۸۵-۱",
+              "visualLeftToRight": "۸۵-۱",
+              "sameLine": true,
+              "chars": [
+                {
+                  "char": "۸",
+                  "x": 1073.5859375,
+                  "y": 568.640625,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "۵",
+                  "x": 1083.3046875,
+                  "y": 568.640625,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "-",
+                  "x": 1090.90625,
+                  "y": 568.640625,
+                  "width": 5.5,
+                  "height": 36
+                },
+                {
+                  "char": "۱",
+                  "x": 1098.5078125,
+                  "y": 568.640625,
+                  "width": 9.734375,
+                  "height": 36
+                }
+              ]
+            }
+          ],
+          "screenshot": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/1440-fa-915-link2.png",
+          "screenshotSHA256": "16f7474c7e47f0a6faff453f763c5058e23a6767aab0efd116912738bd9f8449"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "status": 200,
+      "sourceUnchanged": true,
+      "artifactUnchanged": true
+    },
+    {
+      "number": 919,
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "token": "۲۲-۲",
+      "officialIdentifier": "22-2",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "source": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sourceSHA256": "7e8b3785a68b9157b9f5719fbc9409ac21fd54cf8d3c460126a19baf524c6561",
+      "artifactSHA256": "954aa0005a10c7b3d7037f22f36ce88e54be9c4989b0b8866374e827d53510d4",
+      "sourceLines": [
+        {
+          "line": 43,
+          "text": "[مادهٔ ۲۲-۲ قانون ایمنی و بهداشت شغلی](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2) بر عینی، بی‌طرفانه و منصفانه بودن تحقیق یا فرایند حل‌وفصل تأکید دارد. هنگام تحقیق، طرف‌ها باید فرصت کافی برای بیان موضع و پاسخ داشته باشند و قواعد کناره‌گیری در موارد تعارض منافع رعایت شود. اعلام زودهنگامِ تخلف می‌تواند اجرای این الزامات را دشوار کند."
+        },
+        {
+          "line": 62,
+          "text": "- [قانون ایمنی و بهداشت شغلی، مادهٔ ۲۲-۲](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2) و [سابقهٔ اصلاح و لازم‌الاجرا شدن](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001)."
+        }
+      ],
+      "links": [
+        {
+          "text": "مادهٔ ۲۲-۲ قانون ایمنی و بهداشت شغلی",
+          "href": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+          "outerHTML": "<a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&amp;flno=22-2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"link-underline\">مادهٔ <bdi dir=\"ltr\">۲۲-۲</bdi> قانون ایمنی و بهداشت شغلی</a>",
+          "direction": "rtl",
+          "unicodeBidi": "normal",
+          "lang": "fa",
+          "htmlDir": "rtl",
+          "matches": [
+            {
+              "logicalText": "۲۲-۲",
+              "visualLeftToRight": "۲۲-۲",
+              "sameLine": true,
+              "chars": [
+                {
+                  "char": "۲",
+                  "x": 1248.4609375,
+                  "y": 568.9375,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "۲",
+                  "x": 1258.1796875,
+                  "y": 568.9375,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "-",
+                  "x": 1265.78125,
+                  "y": 568.9375,
+                  "width": 5.5,
+                  "height": 36
+                },
+                {
+                  "char": "۲",
+                  "x": 1273.3828125,
+                  "y": 568.9375,
+                  "width": 9.734375,
+                  "height": 36
+                }
+              ]
+            }
+          ],
+          "screenshot": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/1440-fa-919-link1.png",
+          "screenshotSHA256": "9a3e2246f51c17266744d0ea1b4739aa21986b0383c8d6a0402283de8b2dfd9f"
+        },
+        {
+          "text": "قانون ایمنی و بهداشت شغلی، مادهٔ ۲۲-۲",
+          "href": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+          "outerHTML": "<a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&amp;flno=22-2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"link-underline\">قانون ایمنی و بهداشت شغلی، مادهٔ <bdi dir=\"ltr\">۲۲-۲</bdi></a>",
+          "direction": "rtl",
+          "unicodeBidi": "normal",
+          "lang": "fa",
+          "htmlDir": "rtl",
+          "matches": [
+            {
+              "logicalText": "۲۲-۲",
+              "visualLeftToRight": "۲۲-۲",
+              "sameLine": true,
+              "chars": [
+                {
+                  "char": "۲",
+                  "x": 1010.8984375,
+                  "y": 568.6875,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "۲",
+                  "x": 1020.6171875,
+                  "y": 568.6875,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "-",
+                  "x": 1028.21875,
+                  "y": 568.6875,
+                  "width": 5.5,
+                  "height": 36
+                },
+                {
+                  "char": "۲",
+                  "x": 1035.8203125,
+                  "y": 568.6875,
+                  "width": 9.734375,
+                  "height": 36
+                }
+              ]
+            }
+          ],
+          "screenshot": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/1440-fa-919-link2.png",
+          "screenshotSHA256": "cbb70ba91abc11c4d98b604208da64bb31896a57bff7747f07861a18e6207942"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "status": 200,
+      "sourceUnchanged": true,
+      "artifactUnchanged": true
+    },
+    {
+      "number": 915,
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "token": "۸۵-۱",
+      "officialIdentifier": "85-1",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "source": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sourceSHA256": "0210db2a1ad6a56b7c2eb9d069aa3c2a0e8c8c977001ce2b367ac84c72788543",
+      "artifactSHA256": "a0357f8a3c92a98dd63c21fbab3ae6d007757121fb4767d9c81f69cd9e91c563",
+      "sourceLines": [
+        {
+          "line": 42,
+          "text": "[مادهٔ ۸۵-۱ قانون تدارکات دولتی](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) برای اختلاف‌های اجرای قرارداد، مراجعه به هیئت رسیدگی به اعتراض‌های تدارکات دولتی و درخواست میانجی‌گری را پیش‌بینی می‌کند. نهاد عمومی حق ندارد درخواست میانجی‌گری تأمین‌کننده را رد کند."
+        },
+        {
+          "line": 67,
+          "text": "- [قانون تدارکات دولتی، مادهٔ ۸۵-۱](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057): میانجی‌گری و مسیر قانونی داوری در اختلاف اجرای قرارداد."
+        }
+      ],
+      "links": [
+        {
+          "text": "مادهٔ ۸۵-۱ قانون تدارکات دولتی",
+          "href": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "outerHTML": "<a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"link-underline\">مادهٔ <bdi dir=\"ltr\">۸۵-۱</bdi> قانون تدارکات دولتی</a>",
+          "direction": "rtl",
+          "unicodeBidi": "normal",
+          "lang": "fa",
+          "htmlDir": "rtl",
+          "matches": [
+            {
+              "logicalText": "۸۵-۱",
+              "visualLeftToRight": "۸۵-۱",
+              "sameLine": true,
+              "chars": [
+                {
+                  "char": "۸",
+                  "x": 293.3671875,
+                  "y": 482.96875,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "۵",
+                  "x": 303.0859375,
+                  "y": 482.96875,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "-",
+                  "x": 310.6875,
+                  "y": 482.96875,
+                  "width": 5.5,
+                  "height": 36
+                },
+                {
+                  "char": "۱",
+                  "x": 318.2890625,
+                  "y": 482.96875,
+                  "width": 9.734375,
+                  "height": 36
+                }
+              ]
+            }
+          ],
+          "screenshot": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/390-fa-915-link1.png",
+          "screenshotSHA256": "ac7e09482f993ada3c1550ffbf022b93ca8f01cebf8234e4ade514b2dae62979"
+        },
+        {
+          "text": "قانون تدارکات دولتی، مادهٔ ۸۵-۱",
+          "href": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "outerHTML": "<a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"link-underline\">قانون تدارکات دولتی، مادهٔ <bdi dir=\"ltr\">۸۵-۱</bdi></a>",
+          "direction": "rtl",
+          "unicodeBidi": "normal",
+          "lang": "fa",
+          "htmlDir": "rtl",
+          "matches": [
+            {
+              "logicalText": "۸۵-۱",
+              "visualLeftToRight": "۸۵-۱",
+              "sameLine": true,
+              "chars": [
+                {
+                  "char": "۸",
+                  "x": 118.4921875,
+                  "y": 482.71875,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "۵",
+                  "x": 128.2109375,
+                  "y": 482.71875,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "-",
+                  "x": 135.8125,
+                  "y": 482.71875,
+                  "width": 5.5,
+                  "height": 36
+                },
+                {
+                  "char": "۱",
+                  "x": 143.4140625,
+                  "y": 482.71875,
+                  "width": 9.734375,
+                  "height": 36
+                }
+              ]
+            }
+          ],
+          "screenshot": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/390-fa-915-link2.png",
+          "screenshotSHA256": "7540ac2c911323dfe065dc18dfb090b9a80d85c75a30188dfa70a90931fb3647"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "status": 200,
+      "sourceUnchanged": true,
+      "artifactUnchanged": true
+    },
+    {
+      "number": 919,
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "token": "۲۲-۲",
+      "officialIdentifier": "22-2",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "source": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-fa/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sourceSHA256": "7e8b3785a68b9157b9f5719fbc9409ac21fd54cf8d3c460126a19baf524c6561",
+      "artifactSHA256": "954aa0005a10c7b3d7037f22f36ce88e54be9c4989b0b8866374e827d53510d4",
+      "sourceLines": [
+        {
+          "line": 43,
+          "text": "[مادهٔ ۲۲-۲ قانون ایمنی و بهداشت شغلی](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2) بر عینی، بی‌طرفانه و منصفانه بودن تحقیق یا فرایند حل‌وفصل تأکید دارد. هنگام تحقیق، طرف‌ها باید فرصت کافی برای بیان موضع و پاسخ داشته باشند و قواعد کناره‌گیری در موارد تعارض منافع رعایت شود. اعلام زودهنگامِ تخلف می‌تواند اجرای این الزامات را دشوار کند."
+        },
+        {
+          "line": 62,
+          "text": "- [قانون ایمنی و بهداشت شغلی، مادهٔ ۲۲-۲](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2) و [سابقهٔ اصلاح و لازم‌الاجرا شدن](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001)."
+        }
+      ],
+      "links": [
+        {
+          "text": "مادهٔ ۲۲-۲ قانون ایمنی و بهداشت شغلی",
+          "href": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+          "outerHTML": "<a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&amp;flno=22-2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"link-underline\">مادهٔ <bdi dir=\"ltr\">۲۲-۲</bdi> قانون ایمنی و بهداشت شغلی</a>",
+          "direction": "rtl",
+          "unicodeBidi": "normal",
+          "lang": "fa",
+          "htmlDir": "rtl",
+          "matches": [
+            {
+              "logicalText": "۲۲-۲",
+              "visualLeftToRight": "۲۲-۲",
+              "sameLine": true,
+              "chars": [
+                {
+                  "char": "۲",
+                  "x": 293.3671875,
+                  "y": 482.125,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "۲",
+                  "x": 303.0859375,
+                  "y": 482.125,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "-",
+                  "x": 310.6875,
+                  "y": 482.125,
+                  "width": 5.5,
+                  "height": 36
+                },
+                {
+                  "char": "۲",
+                  "x": 318.2890625,
+                  "y": 482.125,
+                  "width": 9.734375,
+                  "height": 36
+                }
+              ]
+            }
+          ],
+          "screenshot": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/390-fa-919-link1.png",
+          "screenshotSHA256": "fb032ede46ce819631e1d568e0dac296b4cb320b63fe953cb627afd182885edb"
+        },
+        {
+          "text": "قانون ایمنی و بهداشت شغلی، مادهٔ ۲۲-۲",
+          "href": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+          "outerHTML": "<a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&amp;flno=22-2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"link-underline\">قانون ایمنی و بهداشت شغلی، مادهٔ <bdi dir=\"ltr\">۲۲-۲</bdi></a>",
+          "direction": "rtl",
+          "unicodeBidi": "normal",
+          "lang": "fa",
+          "htmlDir": "rtl",
+          "matches": [
+            {
+              "logicalText": "۲۲-۲",
+              "visualLeftToRight": "۲۲-۲",
+              "sameLine": true,
+              "chars": [
+                {
+                  "char": "۲",
+                  "x": 55.8046875,
+                  "y": 482.84375,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "۲",
+                  "x": 65.5234375,
+                  "y": 482.84375,
+                  "width": 9.734375,
+                  "height": 36
+                },
+                {
+                  "char": "-",
+                  "x": 73.125,
+                  "y": 482.84375,
+                  "width": 5.5,
+                  "height": 36
+                },
+                {
+                  "char": "۲",
+                  "x": 80.7265625,
+                  "y": 482.84375,
+                  "width": 9.734375,
+                  "height": 36
+                }
+              ]
+            }
+          ],
+          "screenshot": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/390-fa-919-link2.png",
+          "screenshotSHA256": "efc36d1e544da3b3279c33dccfa40de12aa44efe30029053a7dd0bc35ecc26e6"
+        }
+      ],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "status": 200,
+      "sourceUnchanged": true,
+      "artifactUnchanged": true
+    }
+  ],
+  "browserVersion": "156.0.8078.4",
+  "finishedAt": "2026-10-26T08:08:41.264Z"
+}

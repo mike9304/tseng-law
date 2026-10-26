@@ -1,0 +1,61 @@
+{
+  "expectedCommit": "51286ef9817aab5178b9237fa2041877d4df7c4a",
+  "scripts": [
+    {
+      "file": "browser-cases.mjs",
+      "sha256": "3b249c7e7c49627b6c8cd7f3c6401010a0cc428c558ba6e3b7aa2be7c3f80862",
+      "syntax": "PASS"
+    },
+    {
+      "file": "inspect-fa-identifiers.mjs",
+      "sha256": "fd0d8b1ffb3ecafaa993f4da94f79262900a01c100df972a332d12b438d13296",
+      "syntax": "PASS"
+    },
+    {
+      "file": "pack-config-verify.mjs",
+      "sha256": "21b00a20c9bfd58ef0d2e908d83a30cab2c2f0bdf95ffaba8434e80c57395bbb",
+      "syntax": "PASS"
+    },
+    {
+      "file": "pack-verify.mjs",
+      "sha256": "573d0986e5740776e40c3aba38f3e88c55223036f0c7dc2ac21eed01c0bff721",
+      "syntax": "PASS"
+    },
+    {
+      "file": "run-browser.py",
+      "sha256": "4441434b92912503c17d414dc7ef9189b284f6f75b88bd805d319119f478089a",
+      "syntax": "PASS"
+    },
+    {
+      "file": "run-full-build.py",
+      "sha256": "c15c4857fe60c5bb73c1d1cea0b05a6bae1b9f5adb5f7d6ec853c3cd90ee72be",
+      "syntax": "PASS"
+    },
+    {
+      "file": "run-pack.py",
+      "sha256": "d3c03e6c7cc2de829b9af26de95ed28f0f0f1e25e87adc96272bc1e36da5453f",
+      "syntax": "PASS"
+    },
+    {
+      "file": "run-static.py",
+      "sha256": "908585596c5ff2a9af1f30576f6bada2d6ce5d1646fb812d19bd29124894b0aa",
+      "syntax": "PASS"
+    },
+    {
+      "file": "snapshot.py",
+      "sha256": "7679cc7ec475cb48d421307a682ae98a08599c60a67ba00bcfd4f87f861179c4",
+      "syntax": "PASS"
+    },
+    {
+      "file": "static-arc147-regression.mjs",
+      "sha256": "cbbcd5f054e56db0a93d00afca8de95bb5a28f592950e91342d1ca5c3b205bfc",
+      "syntax": "PASS"
+    },
+    {
+      "file": "static-cases90.mjs",
+      "sha256": "4abbd84a654bcdc8428c255bf7958829202787b419f07a2d1a3cd77521f76656",
+      "syntax": "PASS"
+    }
+  ],
+  "priorArtifactAndFirstFailureEvidencePreserved": true
+}

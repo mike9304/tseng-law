@@ -1,0 +1,51 @@
+{
+  "atUTC": "2026-10-26T08:18:42.077660+00:00",
+  "reviewedContentCommit": "51286ef9817aab5178b9237fa2041877d4df7c4a",
+  "readFull": [
+    "REPORT.md",
+    "checks/FINAL.json"
+  ],
+  "evidenceFileHashesVerified": 247,
+  "finalBindingHashesVerified": 15,
+  "currentSourceFilesVerified": 2370,
+  "artifactFilesVerified": 5509,
+  "selectedAuthorCopiesVerified": 42,
+  "mismatches": 0,
+  "directlyViewedActualR2Screens": [
+    "checks/fa-identifier-diagnostic/390-fa-915-link1.png",
+    "checks/fa-identifier-diagnostic/390-fa-919-link1.png",
+    "checks/browser-screenshots/mobile-he-706-rtl-table.png"
+  ],
+  "visualAssessment": "FA85-1 and22-2 now display the original logical number group order; Persian surrounding prose and links remain intact. HE706 table fits viewport with23-1 visible; English shared scroll hint remains. No blanket native-language certification.",
+  "staticCases": 90,
+  "ARC": 147,
+  "browserCases": 105,
+  "DOMComparisonPages": 237,
+  "packageMiB": 163.85546493530273,
+  "headroomMiB": 92.14453506469727,
+  "preservedFailures": [
+    {
+      "phase": "initial release26 browser",
+      "passed": 98,
+      "total": 104,
+      "failed": 6,
+      "resolution": "Root legal-identifier renderer fix; R2 same104 pass."
+    },
+    {
+      "phase": "R2 initial DOM comparator",
+      "passed": 235,
+      "total": 237,
+      "failed": 2,
+      "resolution": "Unicode/entity serializer mismatch fixed only in separate comparator; neutral fixture and exact reverse proof preserved."
+    }
+  ],
+  "limits": [
+    "Local fallback is not Air production CMS mirror parity.",
+    "The body DOM comparison covers90 case and147 ARC pages, not every site page.",
+    "Default package size proves this artifact only, not final49x286 capacity.",
+    "No human native-language or legal approval is asserted.",
+    "No push, deployment, infrastructure change or source edit by this QA agent."
+  ],
+  "status": "LOCAL_REVIEW_COMPLETE_READY_FOR_ALREADY_AUTHORIZED_NONFORCE_MAIN_PUSH",
+  "publicB7Verified": false
+}

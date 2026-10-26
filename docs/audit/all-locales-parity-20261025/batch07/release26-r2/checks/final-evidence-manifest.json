@@ -1,0 +1,1246 @@
+{
+  "at": "2026-10-26T08:15:37.067487+00:00",
+  "head": "51286ef9817aab5178b9237fa2041877d4df7c4a",
+  "gitClean": true,
+  "scope": "R2 verification evidence and actual full-build receipts; packed files have their own complete manifest.",
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/README.md",
+      "bytes": 3885,
+      "sha256": "204e860fc8cf4875ae3018b254a1aa9f4576a14db2e5dd3d19c7f41e53de14ea"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/REPORT.md",
+      "bytes": 5635,
+      "sha256": "ce1ca87739afe44c1126fd4402b171acac2e783186ac650fa6a7a40b380247f2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/FINAL.json",
+      "bytes": 6972,
+      "sha256": "b36b877692c9d23bec7267f4a180bca89f9a419af4f56c34176b8ec9a3ea6711"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-case-results.json",
+      "bytes": 2505451,
+      "sha256": "2acd1c8548599ed139eb6362b007d9075eb239347cd56681259e215b811ff0d0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-he706-command.json",
+      "bytes": 688,
+      "sha256": "7aa3ef650582f5b030707fe979e7fbbe631b31da7bd78e6c738b3ac98543f1e9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-he706-results.json",
+      "bytes": 696121,
+      "sha256": "71535e01aa3134f0cc4ad1a3c2f65e34deeac884410d91b62bbb0ce50ec93930"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-he706.log",
+      "bytes": 98,
+      "sha256": "49ad07f71ca21afbac21efbd6e016914f2a9f1c25ff67926729d53e99b5d53a7"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-pack-report.json",
+      "bytes": 1421588,
+      "sha256": "93ab9dfdf7b4dc11a54e72534add6817c0d5bb7740b2640c02783a1214098ab6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-primary104-command.json",
+      "bytes": 548,
+      "sha256": "0b58480e7c09ccb8128f079c6f0f3e31d9bf1d5a2ed463261b83fb18fcb9da8e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-primary104.log",
+      "bytes": 6782,
+      "sha256": "add9d969176b6aa89b3f206a57d3850010664802e5ab711c7e79ecb87c379a27"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bg-915-body.png",
+      "bytes": 616397,
+      "sha256": "af6087f876994c396f38a4ea60d4458709979688a5f83bad43332795d6979b5a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bg-915-hero.png",
+      "bytes": 695551,
+      "sha256": "7e790af00766579b4975a0b22005d0aaebca5bb98e252a7045f6885aa1f01a90"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bg-916-body.png",
+      "bytes": 926502,
+      "sha256": "dc6ecfc38b9e896db57375ca8b0603baf5231a2597df55c2588286ef276dfba8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bg-916-hero.png",
+      "bytes": 778070,
+      "sha256": "f5375e1c20bd46fc1a4de2a9eab45718eef49d405cce131dc2af7e3c66dc6813"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bg-918-body.png",
+      "bytes": 568438,
+      "sha256": "f25e8c0c9dcab5d1914920d894b280d9f818c98bb72b5ff43d2fd3bf1a50acb0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bg-918-hero.png",
+      "bytes": 571013,
+      "sha256": "51d438229b666eba087fd9ffe92cf1d4fb4fe71c5b901e2ff95279d2977280bc"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bg-919-body.png",
+      "bytes": 633072,
+      "sha256": "0fbb799ad177032265c6d710961b43217c507357fd7e4c0a4af1de1cdc9e75bf"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bg-919-hero.png",
+      "bytes": 475428,
+      "sha256": "75e4e1fbccd87e9540c588a2f9af549b48ae4a2f7fbb157b430b53529053ee91"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bg-920-body.png",
+      "bytes": 663174,
+      "sha256": "a884f58693e8b3998bd5781ba84c7410adb446b5c525061b489c370278f9d894"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bg-920-hero.png",
+      "bytes": 747217,
+      "sha256": "82b34af58b98fb54ac0e69c0e7f53e08eaeb8a55a0fc57206b7336ceae6b2b99"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bg-921-body.png",
+      "bytes": 637746,
+      "sha256": "8c73cac71f34f955e0763cacb54ac77e12c3e8f6bf08b2daa424c0629ac36532"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bg-921-hero.png",
+      "bytes": 697981,
+      "sha256": "a1ffe5889e2f1bc42852376a2af28d9c25ac1bbcc3c4d30bdf7c17c649ca439a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bn-915-body.png",
+      "bytes": 586688,
+      "sha256": "e2f220836ad1593d161609e58a6c52ace0d82e53ef238d99d84fcf6ebc8753cd"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bn-915-hero.png",
+      "bytes": 586688,
+      "sha256": "e2f220836ad1593d161609e58a6c52ace0d82e53ef238d99d84fcf6ebc8753cd"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bn-916-body.png",
+      "bytes": 670193,
+      "sha256": "85fb5877b32d8fb1548682607a702ae83eb4f7a4bed7e219551b0a71796deb8a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bn-916-hero.png",
+      "bytes": 670193,
+      "sha256": "85fb5877b32d8fb1548682607a702ae83eb4f7a4bed7e219551b0a71796deb8a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bn-918-body.png",
+      "bytes": 540903,
+      "sha256": "fe2d54cc2cb3e2fd3c2fe9a79bbf92a0c886ed682fd70061005d1457629824f6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bn-918-hero.png",
+      "bytes": 540903,
+      "sha256": "fe2d54cc2cb3e2fd3c2fe9a79bbf92a0c886ed682fd70061005d1457629824f6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bn-919-body.png",
+      "bytes": 560786,
+      "sha256": "83e5c045d78a7e46a83b521919cfff898d8944e4282a88bcc93a790e4370ccf9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bn-919-hero.png",
+      "bytes": 560786,
+      "sha256": "83e5c045d78a7e46a83b521919cfff898d8944e4282a88bcc93a790e4370ccf9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bn-920-body.png",
+      "bytes": 606947,
+      "sha256": "1de69090fbed2233758f5022cf8d35efa887d34f769109dd9eddba1926165a4d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bn-920-hero.png",
+      "bytes": 606947,
+      "sha256": "1de69090fbed2233758f5022cf8d35efa887d34f769109dd9eddba1926165a4d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bn-921-body.png",
+      "bytes": 583465,
+      "sha256": "f242d0f63eb0665a72119ce14e8b8913d3d1a5251350f74242b0008699b8fef6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-bn-921-hero.png",
+      "bytes": 583465,
+      "sha256": "f242d0f63eb0665a72119ce14e8b8913d3d1a5251350f74242b0008699b8fef6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-ca-915-body.png",
+      "bytes": 621034,
+      "sha256": "15bb083429a922d16d57e50c451ad7c9329e8068e2964fb17cd2b7faf54bcc77"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-ca-915-hero.png",
+      "bytes": 766040,
+      "sha256": "67f39e0114888253805b031f94f53488ed2649e511e67cbcb00d33bccb278ca1"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-ca-916-body.png",
+      "bytes": 936639,
+      "sha256": "39b03a98babb9b1f5d066fad9d69eebab2558db26577feca8efd54761f89389e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-ca-916-hero.png",
+      "bytes": 858982,
+      "sha256": "35bc2ebc06eb5aefa8d26c2cc987289180c92e834dce56b8b1263c8972c9f4e1"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-ca-918-body.png",
+      "bytes": 530425,
+      "sha256": "d5e26929081b9ce82671d94cdba75073b1a2e96d3009866034e8e60456e8891c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-ca-918-hero.png",
+      "bytes": 575603,
+      "sha256": "3791bf356bfea83ee57c7e84b34c25207075c780d5d950432c92b6c2fba92571"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-ca-919-body.png",
+      "bytes": 630999,
+      "sha256": "87b75b7bcc76dc587f8c9cd9b0379a2958026d906bdb44df4fbe245e984a70af"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-ca-919-hero.png",
+      "bytes": 533475,
+      "sha256": "f6d5bfdb006bd1944dff4cbee4777348506882fbedf6da27b93e884e6ac9586b"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-ca-920-body.png",
+      "bytes": 669492,
+      "sha256": "485a67e5141187c08fb7114f9811e35b5b3e1ce9b7c57e9a96b3a06ff23a4886"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-ca-920-hero.png",
+      "bytes": 751075,
+      "sha256": "91b50b0c0e8107255bcfd8992d2d830e1b74e266b62886feef72c82f88d2520f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-ca-921-body.png",
+      "bytes": 657627,
+      "sha256": "ef46c723bf5b7f15f5a1d6096b2cbcbb9a962041241402e9312aac8a4179e1d5"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-ca-921-hero.png",
+      "bytes": 697491,
+      "sha256": "9edb4510e09479be528c517285c22f100fdf0648b9519c456ab6d843b3d97a3b"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-da-915-body.png",
+      "bytes": 649745,
+      "sha256": "5d0a0fddc8088fef639c6606c4dec9cbc9e6e3a127aa654514d1a272aba18a75"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-da-915-hero.png",
+      "bytes": 766485,
+      "sha256": "7391c1273569e41e53ec733b87d9892b180f58fb00e438dca9a0ed7e4d409e21"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-da-916-body.png",
+      "bytes": 916583,
+      "sha256": "a9acd5497a3dca4cf32f64ebbafca9b9930afebe2395daececece273bf4e23e9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-da-916-hero.png",
+      "bytes": 778398,
+      "sha256": "a7f93b40d1426b8a9dafbcb0c53405b9c48c6b7b4e4b05777726bb8d1af88644"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-da-918-body.png",
+      "bytes": 587633,
+      "sha256": "eb8607f7113f146c043dc085f256eb960d697fbc51b4d81163711de8d30cf4ae"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-da-918-hero.png",
+      "bytes": 575670,
+      "sha256": "a80855f8d6647ef13eabab8fc2ca75390461d0c0c77a8432f1279bb73fe28ecb"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-da-919-body.png",
+      "bytes": 624030,
+      "sha256": "3e61632bce05c18192c92f8169d6c6f7e53392b43435e24fb6d5f50e8ba18fc8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-da-919-hero.png",
+      "bytes": 535619,
+      "sha256": "166a1b9405081eb85f1642ac781d9a74eae0c33348edea0a864fe9ddccf84c39"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-da-920-body.png",
+      "bytes": 707001,
+      "sha256": "7ac0066218c452e80a4b34f1df3f83270104567c60b0a505d98a8a64360228ff"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-da-920-hero.png",
+      "bytes": 749611,
+      "sha256": "581a2845ba1ddea61e8110c4eb93b2689e98d2d7c124ca1b557d41e17e60e52d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-da-921-body.png",
+      "bytes": 645368,
+      "sha256": "0e0ba164421452a09df3daf08ab659f75d6fc668ede208d6f66c27bb23fd8f7f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-da-921-hero.png",
+      "bytes": 696730,
+      "sha256": "f532fd0f152ff504b8e08102c0ef4f31934f71b1c533f64b70037faf32a99474"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-el-915-body.png",
+      "bytes": 651509,
+      "sha256": "1d118cb8effc1129b55d9d43b12bfdd9404880e9103c4cbb42c3a16087ec2b24"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-el-915-hero.png",
+      "bytes": 698749,
+      "sha256": "01c75100e83ac1ad25734f207629252585c379d89e19d78e59382a9b9f2ca1ae"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-el-916-body.png",
+      "bytes": 971664,
+      "sha256": "f8ee97d4b1b8b41f4222d18677f999fbfc5a1a2e96d5f22949e66c0f0dab3933"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-el-916-hero.png",
+      "bytes": 780003,
+      "sha256": "ed6a794eccd841d7d88d78f792813d945526d05e7ba175f4c8c52be4137b93b7"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-el-918-body.png",
+      "bytes": 588791,
+      "sha256": "c070095a27d43ecd8e3f72a35ba6e5709b7b62301e318c8e67c4955ade902149"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-el-918-hero.png",
+      "bytes": 525701,
+      "sha256": "344d90e8547305f019e3c448f571639bbcab4c97fa85860830f22c22c02af8c0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-el-919-body.png",
+      "bytes": 662496,
+      "sha256": "a6905b079c21ae71dc4d69ce9a02589122d3a8677ee2c177111e7c7b6fc7950e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-el-919-hero.png",
+      "bytes": 492409,
+      "sha256": "08fd47b36266442dc44a87d0b0a3fe6c72276695bf74d962cbcb28ca751422fa"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-el-920-body.png",
+      "bytes": 700409,
+      "sha256": "ddc174d48cdec8c4d723445a51371ae7301a368d924eadd303584e8fed5199c1"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-el-920-hero.png",
+      "bytes": 705381,
+      "sha256": "4f3f8eab7aef379b284d1ca9bec074545c9b68519706916c06e8bc0ae8275215"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-el-921-body.png",
+      "bytes": 678359,
+      "sha256": "3ff0d072f91a7ab0107d685b1e410308778564eba6c3fe4342c8fc79fd7f8845"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-el-921-hero.png",
+      "bytes": 639924,
+      "sha256": "d069ca04f68943d4aed8f97f2fb77d0fa859000404d1326fdcf70d15b889ccf0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-et-915-body.png",
+      "bytes": 639325,
+      "sha256": "f133a6785597648c18bb08b43e52a3d84e70f9c39d208c3d3e9690e0f937504d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-et-915-hero.png",
+      "bytes": 693204,
+      "sha256": "c06808241bcfa61ce6cdfad75224b831af3e2cde22539fe234228e561a6b9832"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-et-916-body.png",
+      "bytes": 939947,
+      "sha256": "a075ed47add5bb3c465abba7fd94059e5735a2694b76aa9f51fd260b8c91a9f7"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-et-916-hero.png",
+      "bytes": 857710,
+      "sha256": "8a809ee63d2a43463ddd72c8b64a0b10c018e97622d3d693d770bd30538c182a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-et-918-body.png",
+      "bytes": 566888,
+      "sha256": "8ea6ef71e96b7b27260d5d490a9f07dbd518186ba27ea71291fdc94302498b48"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-et-918-hero.png",
+      "bytes": 572781,
+      "sha256": "82ec1a4f6d04c6e324f8ba1b62210286ed7e75c85c22350a555cb89575abbdcd"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-et-919-body.png",
+      "bytes": 657746,
+      "sha256": "3f7a1152cd8fe7b5e2bb7081589433ba11fb4b453a7809995769183bc3553a75"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-et-919-hero.png",
+      "bytes": 471054,
+      "sha256": "23f71e3a1c70191fd5999d0a7c95ebb5ee4ebcffc71703f387c3c50ddeade729"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-et-920-body.png",
+      "bytes": 683349,
+      "sha256": "ae232788391580bcc67d18c8d8a1955e14879757473cd639648b62c18e7ced24"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-et-920-hero.png",
+      "bytes": 748861,
+      "sha256": "af93268e11e11e4f5ac7fd19cc6ef32334334f77008a8d79963416a5f75073a2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-et-921-body.png",
+      "bytes": 665000,
+      "sha256": "033d35566e03d823b258916994837be4194e81fe4646a46cf896be2b690ad405"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-et-921-hero.png",
+      "bytes": 698301,
+      "sha256": "61b71571264b8ace3f4c9dd239f71846238c816fb89fe0f4b3799ac8cb7c3a9b"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-fa-915-body.png",
+      "bytes": 580578,
+      "sha256": "b42361a165d3a71627cc49dc26f03a9748fd9011bec176740867478c4405eac3"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-fa-915-hero.png",
+      "bytes": 580578,
+      "sha256": "b42361a165d3a71627cc49dc26f03a9748fd9011bec176740867478c4405eac3"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-fa-915-rtl-table.png",
+      "bytes": 278424,
+      "sha256": "a1a0f0feec68881ab452b19a4e0d32fd200a027dd5f6264abaa5aa2930444778"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-fa-916-body.png",
+      "bytes": 662902,
+      "sha256": "d342d2ae46da4d728c11f2ea22e72399acf894aba0f8330427a07b2f5ee2d08f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-fa-916-hero.png",
+      "bytes": 662902,
+      "sha256": "d342d2ae46da4d728c11f2ea22e72399acf894aba0f8330427a07b2f5ee2d08f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-fa-918-body.png",
+      "bytes": 566938,
+      "sha256": "9b50cfa27deddfdc63381b5f66dc6fc7e10a26754dd0bfa23c81531bd8cd4a58"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-fa-918-hero.png",
+      "bytes": 566938,
+      "sha256": "9b50cfa27deddfdc63381b5f66dc6fc7e10a26754dd0bfa23c81531bd8cd4a58"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-fa-919-body.png",
+      "bytes": 569137,
+      "sha256": "ddd1a29e7da2d342fe42914946f7ae9dee27c4cca82193467d49be422541ccb5"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-fa-919-hero.png",
+      "bytes": 569137,
+      "sha256": "ddd1a29e7da2d342fe42914946f7ae9dee27c4cca82193467d49be422541ccb5"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-fa-920-body.png",
+      "bytes": 599752,
+      "sha256": "d48dfee19afa25c4937e2c0b149fb9235fed8456ba06a2d9fc8d1f60273078fd"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-fa-920-hero.png",
+      "bytes": 599752,
+      "sha256": "d48dfee19afa25c4937e2c0b149fb9235fed8456ba06a2d9fc8d1f60273078fd"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-fa-921-body.png",
+      "bytes": 592047,
+      "sha256": "d7dac29bc64612491452ee6a3b8ce3b840baef65f58d5ccad57544bfbf89824e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-fa-921-hero.png",
+      "bytes": 592047,
+      "sha256": "d7dac29bc64612491452ee6a3b8ce3b840baef65f58d5ccad57544bfbf89824e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-fa-921-rtl-table.png",
+      "bytes": 320683,
+      "sha256": "d6106800e983e248e5da785dee01b846389207adc3a611bdbf5303d292879df6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-home-navigation.png",
+      "bytes": 443843,
+      "sha256": "271955bb2cab353ea625086462f058c1dd245bab5064f7619782f2fdcfc012c5"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/desktop-ko051-navigation.png",
+      "bytes": 452514,
+      "sha256": "be107bf00c5cffd58e95a7800792d18f8ac47441be0c1d919f8c3f801c1d9f43"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bg-915-body.png",
+      "bytes": 209260,
+      "sha256": "9a5b284056803a5956e695681ab1397cc418fc256d3cb388ec74ca32d3b05056"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bg-915-hero.png",
+      "bytes": 192905,
+      "sha256": "91001655789f1065e47ee117d5a236f24183f927a32dd7ff0996d08a480b197d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bg-916-body.png",
+      "bytes": 241556,
+      "sha256": "2df648df8ddaea1d87822224c5c92b29bbde571233e6042ba01a0db1ff4b2a09"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bg-916-hero.png",
+      "bytes": 222124,
+      "sha256": "eff0c61514ee5d61b5106a61d9400ee4c3e33a3d12697f3cfc31bd90f00ee014"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bg-918-body.png",
+      "bytes": 171591,
+      "sha256": "0c2ef883df42b25f1fa74c6c6a767229003a76c3ed6e32513b6a7be8668bd667"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bg-918-hero.png",
+      "bytes": 168296,
+      "sha256": "28785612a3b2ba83186a3efc481ba75dd27a8c2a7839cc7f3e6316ca79a8e4d0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bg-919-body.png",
+      "bytes": 177924,
+      "sha256": "5c0018cff44f52d63518bc2e49622d0af96624ae556a167492770354418053c5"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bg-919-hero.png",
+      "bytes": 165594,
+      "sha256": "7648114626ac06a4e61b17262ab479e0bd039614875d9ece5d8e598d08b28871"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bg-920-body.png",
+      "bytes": 196433,
+      "sha256": "f3583316c83cc01faa244af1a6006486ce5acd813f30a1a3b5b16b5d0f4f3c51"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bg-920-hero.png",
+      "bytes": 189540,
+      "sha256": "a78f7dcba1a4cff059e563089ff6f3c3c48c224aa87d355b4292124a95b0344a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bg-921-body.png",
+      "bytes": 204487,
+      "sha256": "f155fb0cabe6640d1edb53e6e79b64377b62bbd1f748ebc35f9000b7917f4892"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bg-921-hero.png",
+      "bytes": 190298,
+      "sha256": "22ce896ac3f682287f2db1a9044602de30c8648f2934ca2a96aeed90358dfdb0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bn-915-body.png",
+      "bytes": 204246,
+      "sha256": "79945535e8631d2fbbc77c01f9f2dce07bbdacc38bcd5efa345780b5355da17b"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bn-915-hero.png",
+      "bytes": 204246,
+      "sha256": "79945535e8631d2fbbc77c01f9f2dce07bbdacc38bcd5efa345780b5355da17b"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bn-916-body.png",
+      "bytes": 230473,
+      "sha256": "ababdc427d4cb34dfee855c7b68221b99c6e874064dcb2ea6a135dc724d15cf7"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bn-916-hero.png",
+      "bytes": 230473,
+      "sha256": "ababdc427d4cb34dfee855c7b68221b99c6e874064dcb2ea6a135dc724d15cf7"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bn-918-body.png",
+      "bytes": 200857,
+      "sha256": "39a08c4573ad1a769c8e0cb8d1bb830b64293dfaf57d4b8a29608324465b523a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bn-918-hero.png",
+      "bytes": 200857,
+      "sha256": "39a08c4573ad1a769c8e0cb8d1bb830b64293dfaf57d4b8a29608324465b523a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bn-919-body.png",
+      "bytes": 193821,
+      "sha256": "676eadcdc8d26d1678b5d85d2f35adbc8d5c2d5197e7b20c1ef7e67435acad70"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bn-919-hero.png",
+      "bytes": 193821,
+      "sha256": "676eadcdc8d26d1678b5d85d2f35adbc8d5c2d5197e7b20c1ef7e67435acad70"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bn-920-body.png",
+      "bytes": 201511,
+      "sha256": "133f2e2b8bc4d440c044dae62a44a6e14f727d142bbc5421985df940b10141ef"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bn-920-hero.png",
+      "bytes": 201511,
+      "sha256": "133f2e2b8bc4d440c044dae62a44a6e14f727d142bbc5421985df940b10141ef"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bn-921-body.png",
+      "bytes": 208194,
+      "sha256": "f43ffdfe28e0f1589b12a3772b5e5b9599b95932e74a409421b1802429a979f0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-bn-921-hero.png",
+      "bytes": 208194,
+      "sha256": "f43ffdfe28e0f1589b12a3772b5e5b9599b95932e74a409421b1802429a979f0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-ca-915-body.png",
+      "bytes": 202132,
+      "sha256": "57993617aad29045ab8b6789bb97b00c20677c62502bbbaef06e112566a809d2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-ca-915-hero.png",
+      "bytes": 189361,
+      "sha256": "19ee770cb1df06f7eeb6d653e521675ba0acaa136b7af5576f15b96083a08d7e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-ca-916-body.png",
+      "bytes": 229193,
+      "sha256": "042f4a7d21a0d16202503a9293404295a014a6e7d50bf9d64095b9325a8c85f3"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-ca-916-hero.png",
+      "bytes": 220534,
+      "sha256": "e95e02f3150780b89a137268c5f759d7aabdb136ab6888abc3abf14ffa43c580"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-ca-918-body.png",
+      "bytes": 182974,
+      "sha256": "f85cb12ce8744d812af22ad8cda667fd080ff41d0b78244132bb9cc4437fa6c7"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-ca-918-hero.png",
+      "bytes": 169916,
+      "sha256": "13ca2ed5ca86d415bef3c7dc6791eed4711a0c0b8e4acef19dd8b35aaa1069c1"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-ca-919-body.png",
+      "bytes": 177415,
+      "sha256": "2bb8a4b3ce10b4463c67e1d8240481a7521e2d71b86a3ae0c7e7781f6c648e70"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-ca-919-hero.png",
+      "bytes": 165113,
+      "sha256": "c1775ce83fee05570020496bed94e43a421462df72ca4ff9bb5e2dbe9c18c991"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-ca-920-body.png",
+      "bytes": 193727,
+      "sha256": "663cecfc2225067d090af1ede3833f5ad65e6bb55596ceb03d480074db0436cd"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-ca-920-hero.png",
+      "bytes": 184017,
+      "sha256": "bc40bb6320d16dc468eda759fb59e6cb83990c4232969071632f6ecc57cff088"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-ca-921-body.png",
+      "bytes": 196180,
+      "sha256": "36e22bfd9425291ad9f2b7f701c83f2bc8533523fa3b5776f9dbcd4b2fe9aed3"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-ca-921-hero.png",
+      "bytes": 189353,
+      "sha256": "da3734983d39dd51279e351955d6c7ae88facd5713254443f06f05295f87bdf9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-da-915-body.png",
+      "bytes": 205668,
+      "sha256": "0209c0094017dc6c662c0f8458051f0e24595057c3be58094bc9862ce62a6ef6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-da-915-hero.png",
+      "bytes": 189675,
+      "sha256": "51bd572ca77e9f4be3de2439bf9a033ce9a85969216275392682a9d6dc3c1ecc"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-da-916-body.png",
+      "bytes": 235452,
+      "sha256": "ea23227474643a3d2d4c00e5aae0533ac1f81def90a0cdb5cb280c77d8f3885c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-da-916-hero.png",
+      "bytes": 217114,
+      "sha256": "8df4ad394cbccf2488ffcb80af388fa8488ecbec6b972a12789947cf99fdd638"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-da-918-body.png",
+      "bytes": 172426,
+      "sha256": "b4430869448da42f5588022ff718b28a0b9076eeac37a49189c65d7df00f5c29"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-da-918-hero.png",
+      "bytes": 169317,
+      "sha256": "b5b22abd1644f82070bc6d916afe3514a4ae651c9897c0139b43dfc7bf3a1884"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-da-919-body.png",
+      "bytes": 183630,
+      "sha256": "ccccf7d3ffecf1815cdab1f04a812a260acc609797dd5e8b6c73f7b7d90f9de5"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-da-919-hero.png",
+      "bytes": 168017,
+      "sha256": "248f7607c5b891d74f3d8aef376e2c60ed00cffad2d7bb8604f85d8fff9f5397"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-da-920-body.png",
+      "bytes": 182521,
+      "sha256": "2a4f9d0ee32fefc76d6e484de9eeb65fd08838e1434011e68970fff63632764a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-da-920-hero.png",
+      "bytes": 182515,
+      "sha256": "6bfc21a5bcb3463cc1e00ee827ed467ff479ff9e999f100524a703aec83215aa"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-da-921-body.png",
+      "bytes": 195548,
+      "sha256": "c5ea7d09dd8134e0c4f57fc246e661e6eb3b60f89824d548794e322ad66dd0e9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-da-921-hero.png",
+      "bytes": 187373,
+      "sha256": "b34aa4bafaeb850a28784e014d1a0b0bd7ff2d0b588523d8758cae64be113a51"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-el-915-body.png",
+      "bytes": 210984,
+      "sha256": "e7b4301d2ab410755e36d2117f7a6f54f42fa7a41a71eb2e28c31533852d5acd"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-el-915-hero.png",
+      "bytes": 197000,
+      "sha256": "44fe8d6ea3d7dd89244c65c1430bfad07f1092ea6ca9ffb0ed850b3c77b8d7f6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-el-916-body.png",
+      "bytes": 240429,
+      "sha256": "d8b7eb63649606cd509a393810fb84aa0c5e9d2a8ba9648437c24a90937ac7e9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-el-916-hero.png",
+      "bytes": 224209,
+      "sha256": "c5a8f1106fcbcf19426b5016d5e009e78e6b9b67b25bffcd53f04740e1e75b2d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-el-918-body.png",
+      "bytes": 190594,
+      "sha256": "f185696955a176ba002f063f4ae98d5c3f124dab9331b092c9b7b17e2241871a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-el-918-hero.png",
+      "bytes": 175891,
+      "sha256": "8b80bfa325be84b60e1b3433afbad6a42eb7c3818d6dadd68731d7f94a8f2195"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-el-919-body.png",
+      "bytes": 190620,
+      "sha256": "488b6a4ea9d984ff1963208da866956ab47836d442f466ec8ab8d14494d7c9d6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-el-919-hero.png",
+      "bytes": 174171,
+      "sha256": "c291c751930242cfd2bc2e1803db25e3a585220d0df76fe324386b5219f830a4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-el-920-body.png",
+      "bytes": 205197,
+      "sha256": "5f6140bff7e4b3ff65b6d1208e26dade552c013783cbe329d46f804595c39a74"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-el-920-hero.png",
+      "bytes": 196457,
+      "sha256": "f760ace6f91f418e204b11a7ed1dcceb950ff84d97977bad339a3455c11a5e34"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-el-921-body.png",
+      "bytes": 212921,
+      "sha256": "ddaef2575a876f92424133c3c37c2f4328d37923dae850bf27cba837d0b3767a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-el-921-hero.png",
+      "bytes": 199919,
+      "sha256": "9903db2d58ea5269194f2e7187ddd418152e11132d28f989c4327177c490ca69"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-et-915-body.png",
+      "bytes": 207002,
+      "sha256": "1b857846b3e0952596878356fe69cfe46651846949f731ed63c42a5544b20d14"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-et-915-hero.png",
+      "bytes": 192661,
+      "sha256": "b382fd9c545febd1c9a1a9bd2c6701ef4efeafe54c6aea3a94ade1c307e7b20c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-et-916-body.png",
+      "bytes": 230380,
+      "sha256": "3670aa2b0cba648805fe3efbfd023b4a9a1a4b53285051bb4eea69662d543583"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-et-916-hero.png",
+      "bytes": 222093,
+      "sha256": "2e0f8f1ada29f360941b41ac2f4a8e4271910fa5c00d84b1b0234ee59a4a2058"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-et-918-body.png",
+      "bytes": 177060,
+      "sha256": "6aa54a4b7e12e8e1557bc1eb7c98bf66022432459d6fba5aab6b2836a8576e1d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-et-918-hero.png",
+      "bytes": 170115,
+      "sha256": "010f46690c66a0dbbebc4588b71812eabb8367d94c38045d2cb96243e9859a03"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-et-919-body.png",
+      "bytes": 174073,
+      "sha256": "5ff35606c3ec3e159a1343f3831ea73ea13869d66d6f122a5fa0370805e00316"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-et-919-hero.png",
+      "bytes": 166547,
+      "sha256": "b7165df685285e553c19989fc419d4563883231f30048f21b1ae431b6f50c5cc"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-et-920-body.png",
+      "bytes": 189174,
+      "sha256": "3ec92a0c8d364384ecfe94bd4101b768e4ab7ee781e2ac86fc29382e023416a6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-et-920-hero.png",
+      "bytes": 184147,
+      "sha256": "08a8269c7bf7fd96350e159011fb4905dda549683ab18f75784252b261fc507a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-et-921-body.png",
+      "bytes": 195130,
+      "sha256": "6ecf03dde26531b592094c83469df01ef8e022f72b7324adea99a8ea0e21eaa6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-et-921-hero.png",
+      "bytes": 188624,
+      "sha256": "0037aebb0626378bdff40ec7b1a7984d5be01b9d327a17f2493a497500d5b7b1"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-fa-915-body.png",
+      "bytes": 206400,
+      "sha256": "f2e9957df03e3877aacfc6333ac873a42885b4485a8912c3325911cd2ea388de"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-fa-915-hero.png",
+      "bytes": 206400,
+      "sha256": "f2e9957df03e3877aacfc6333ac873a42885b4485a8912c3325911cd2ea388de"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-fa-915-rtl-table.png",
+      "bytes": 81345,
+      "sha256": "78b5f2940c956c63049cad36fe224e82ecd45631dde1fc42b9b779e2e14efca5"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-fa-916-body.png",
+      "bytes": 229107,
+      "sha256": "6186ccef71246e6f2c0dfbbd9fa7fa96ce1945a9752574070f732a2370dc2148"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-fa-916-hero.png",
+      "bytes": 229107,
+      "sha256": "6186ccef71246e6f2c0dfbbd9fa7fa96ce1945a9752574070f732a2370dc2148"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-fa-918-body.png",
+      "bytes": 197719,
+      "sha256": "21210eb5c92891e48c7514b11cab6e0beeb6cfc025813e2d57da7aafe2facd10"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-fa-918-hero.png",
+      "bytes": 197719,
+      "sha256": "21210eb5c92891e48c7514b11cab6e0beeb6cfc025813e2d57da7aafe2facd10"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-fa-919-body.png",
+      "bytes": 196755,
+      "sha256": "0dc0071cf8ff42d246a4d738d7cfccf0c38799cb37ab25ee5966f04726e8ff54"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-fa-919-hero.png",
+      "bytes": 196755,
+      "sha256": "0dc0071cf8ff42d246a4d738d7cfccf0c38799cb37ab25ee5966f04726e8ff54"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-fa-920-body.png",
+      "bytes": 201700,
+      "sha256": "8ff9b372a373ed35063b098f68f13d701e6e6824c1eee6cd1a31beed79543373"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-fa-920-hero.png",
+      "bytes": 201700,
+      "sha256": "8ff9b372a373ed35063b098f68f13d701e6e6824c1eee6cd1a31beed79543373"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-fa-921-body.png",
+      "bytes": 202046,
+      "sha256": "c3cbc62b4d3fa9d1275e83db7c1685cca009ea27ceefea8c5bd89f7c687f7f96"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-fa-921-hero.png",
+      "bytes": 202046,
+      "sha256": "c3cbc62b4d3fa9d1275e83db7c1685cca009ea27ceefea8c5bd89f7c687f7f96"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-fa-921-rtl-table.png",
+      "bytes": 96539,
+      "sha256": "d54f8df123e78c299981c0f69f2cae05ae205a24b378ac008e2b809647c9392c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-he-706-body.png",
+      "bytes": 195299,
+      "sha256": "fae2fc0c5e6f479f0baeb59512ebd7f3fc1604c3a296ce84eb1e314489c550c4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-he-706-hero.png",
+      "bytes": 195299,
+      "sha256": "fae2fc0c5e6f479f0baeb59512ebd7f3fc1604c3a296ce84eb1e314489c550c4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-he-706-rtl-identifier.png",
+      "bytes": 96808,
+      "sha256": "587e09afea7dc2cbc3ecb1d0f7fd7765aacbcb386b19ef29dc532c6745c9ad7f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-he-706-rtl-table.png",
+      "bytes": 76647,
+      "sha256": "67238eabe998e358f8da5586eebb2c484c4a32ccd756697980317140dbef0774"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-home-navigation.png",
+      "bytes": 172421,
+      "sha256": "e9fb37b4646d65c5a3ab2ef4b801bc531880aa9df6269a23d2bfa7e79e8f49af"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/mobile-ko051-navigation.png",
+      "bytes": 166917,
+      "sha256": "c8735012e667bf3641cebac5f99fa0832a1fa341769b81ecfd700ab10c947090"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/slow-home-navigation.png",
+      "bytes": 172421,
+      "sha256": "e9fb37b4646d65c5a3ab2ef4b801bc531880aa9df6269a23d2bfa7e79e8f49af"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/browser-screenshots/slow-ko051-navigation.png",
+      "bytes": 165285,
+      "sha256": "438a0c10b5b981d5d1be5d731ddb90e360b92ecfd0e32b89b55845efca6b631c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/dom-comparator-correction.diff",
+      "bytes": 1441,
+      "sha256": "5c9f1f520fc75bdefcca6e63e3aa1b85b78932f07c0af809ce3cd6f86912b4f5"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/dom-comparator-correction.json",
+      "bytes": 1094,
+      "sha256": "a56ea8944dac00c76e2d8663fd2d4e8c989e77c7ddf38bb9266340d9046cc4c8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/dom-serializer-neutral-fixture.json",
+      "bytes": 1145,
+      "sha256": "853ca608bce8f8fc58ade81209a734c7fd843702559399ca8d451354d65d4bdb"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/1440-fa-915-link1.png",
+      "bytes": 308839,
+      "sha256": "b8ed1b64b475e962d7f56ac83b92ea873ba1ddfed1b07501fca35ed9365db826"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/1440-fa-915-link2.png",
+      "bytes": 324060,
+      "sha256": "16f7474c7e47f0a6faff453f763c5058e23a6767aab0efd116912738bd9f8449"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/1440-fa-919-link1.png",
+      "bytes": 355657,
+      "sha256": "9a3e2246f51c17266744d0ea1b4739aa21986b0383c8d6a0402283de8b2dfd9f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/1440-fa-919-link2.png",
+      "bytes": 324120,
+      "sha256": "cbb70ba91abc11c4d98b604208da64bb31896a57bff7747f07861a18e6207942"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/390-fa-915-link1.png",
+      "bytes": 111081,
+      "sha256": "ac7e09482f993ada3c1550ffbf022b93ca8f01cebf8234e4ade514b2dae62979"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/390-fa-915-link2.png",
+      "bytes": 103202,
+      "sha256": "7540ac2c911323dfe065dc18dfb090b9a80d85c75a30188dfa70a90931fb3647"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/390-fa-919-link1.png",
+      "bytes": 116661,
+      "sha256": "fb032ede46ce819631e1d568e0dac296b4cb320b63fe953cb627afd182885edb"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/390-fa-919-link2.png",
+      "bytes": 109555,
+      "sha256": "efc36d1e544da3b3279c33dccfa40de12aa44efe30029053a7dd0bc35ecc26e6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/fa-identifier-diagnostic/observations.json",
+      "bytes": 22037,
+      "sha256": "b0bfd9f1898c4a1584991ba2e4b156aaef865c51d3c3e924627dd6514d1dd620"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/first-artifact-preservation.json",
+      "bytes": 529,
+      "sha256": "59476f348a9ab4322d7dddc37343e74891bde03b5aac6c09de6b20e308fd26eb"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/harness-adaptation.json",
+      "bytes": 4962,
+      "sha256": "6465b847dd4f9505dc90bddadb7a76528f5ceb67e5f58cb60d56cb1479c6666e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/pack-command.json",
+      "bytes": 982,
+      "sha256": "00c928c61c516b888b44dff35ff3597552c2a8137fe36742c9377df3a79181e8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/pack-config-verify.json",
+      "bytes": 3295,
+      "sha256": "87343c8c94594be8ac2f8eaa12a71199fe68495dd099784f28a360c710e20801"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/pack-config-verify.log",
+      "bytes": 212,
+      "sha256": "5a5d871cfd8dbdebce2dabe3c9134daaadf7e0a52b856884c44591fb70820755"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/pack-manifest.json",
+      "bytes": 1114629,
+      "sha256": "2fbf78db129107a95c7208b1fdff2590017ded1b62dfb725a33f47ba3340fdd0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/pack-verification-commands.json",
+      "bytes": 796,
+      "sha256": "b5ca464515c6df06c66b896c0e233d51f92daa3acaba014282fbb4ff6afefff7"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/pack-verify.log",
+      "bytes": 1209,
+      "sha256": "b2f9587cac497db54f2ed14f030f35b6884002ced40e5a4db911e33177b61ef9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/pack.log",
+      "bytes": 608,
+      "sha256": "9ef5b8fb6e6852791cec6d94382858b4fc2d4e3022069e7eb92d3fecad6a932f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/preparation.json",
+      "bytes": 1853,
+      "sha256": "40a24cf7df8144ac80b45c1fecde37bd8e84136926af74136a4aad3764f66be8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/snapshot-after.json",
+      "bytes": 1564250,
+      "sha256": "57a2ee59e3d2ee0b0c4167e7a59078526fb33fd1fbf02fcf802b25e73ef9f277"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/snapshot-before.json",
+      "bytes": 1563913,
+      "sha256": "b2d7f9ee7acc1057975b02273ccb78df4e7796890560ffd5e70fa6302a53c8f0"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/static-arc147-regression-command.json",
+      "bytes": 569,
+      "sha256": "69f69d7ad53535bc92009bd4bfbc9baa0430e8afb84062229e1f13aa56ae33b8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/static-arc147-regression.json",
+      "bytes": 260502,
+      "sha256": "7dadfa4afb4658092820bb4a589f98e1305928d71d67599a68902528884a65ec"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/static-arc147-regression.log",
+      "bytes": 147,
+      "sha256": "6bb37baed93848aeb5b098b33a469e07857ebc17dc21a70c606279a441a453b7"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/static-cases90-command.json",
+      "bytes": 559,
+      "sha256": "0b79ffabb2580994095a5dfbdadb118476b2af52fbb9a5421365cae0f60af47f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/static-cases90.json",
+      "bytes": 170369,
+      "sha256": "4192763bb9480b6805072443445e3692f2e8e0a0cfd50cf083e34ba1bc3109ce"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/static-cases90.log",
+      "bytes": 145,
+      "sha256": "827fde82aff6d6bf70adfe5b99c001f6190bab3f115bfe04475db7d66153f463"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/static-dom-r1-r2-command.json",
+      "bytes": 561,
+      "sha256": "80565c8036765a5959b93364bf752c8fb53b5177d7ac8047b45623a8e45bbd50"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/static-dom-r1-r2-corrected-command.json",
+      "bytes": 571,
+      "sha256": "57525d481703280ab3b504beb24f95b63f44d1ac3df8a9239e11f2a27d8f0462"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/static-dom-r1-r2-corrected.json",
+      "bytes": 322647,
+      "sha256": "d30af33332fb5a63ce6c062781e38fde90363e945eadc857f2855f0a24cfb57f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/static-dom-r1-r2-corrected.log",
+      "bytes": 177,
+      "sha256": "f54b6fad006cfa32609216c7233356783dc1c8cd9d53466a3f44c3fd1a3e2540"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/static-dom-r1-r2.json",
+      "bytes": 324036,
+      "sha256": "939891fcf569091cffd323658896b2c5f44e8aa931eb32f85af1408aeed1610f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/checks/static-dom-r1-r2.log",
+      "bytes": 3484,
+      "sha256": "1b3b5b6a907170aefdd5112d705bc5fa24d9acbd6a226506d43776f6349e4085"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/browser-cases.mjs",
+      "bytes": 32895,
+      "sha256": "3b249c7e7c49627b6c8cd7f3c6401010a0cc428c558ba6e3b7aa2be7c3f80862"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/check-dom-serializer-fixture.mjs",
+      "bytes": 1768,
+      "sha256": "03cd7ad7c1901cdac64a784c68fa6a291d906f14f7c3f68b212df1ddf958d74c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/inspect-fa-identifiers.mjs",
+      "bytes": 5156,
+      "sha256": "fd0d8b1ffb3ecafaa993f4da94f79262900a01c100df972a332d12b438d13296"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/pack-config-verify.mjs",
+      "bytes": 3519,
+      "sha256": "21b00a20c9bfd58ef0d2e908d83a30cab2c2f0bdf95ffaba8434e80c57395bbb"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/pack-verify.mjs",
+      "bytes": 3339,
+      "sha256": "573d0986e5740776e40c3aba38f3e88c55223036f0c7dc2ac21eed01c0bff721"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/run-browser.py",
+      "bytes": 1681,
+      "sha256": "4441434b92912503c17d414dc7ef9189b284f6f75b88bd805d319119f478089a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/run-full-build.py",
+      "bytes": 3124,
+      "sha256": "c15c4857fe60c5bb73c1d1cea0b05a6bae1b9f5adb5f7d6ec853c3cd90ee72be"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/run-pack.py",
+      "bytes": 3131,
+      "sha256": "d3c03e6c7cc2de829b9af26de95ed28f0f0f1e25e87adc96272bc1e36da5453f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/run-static.py",
+      "bytes": 1629,
+      "sha256": "d2ebfab23d4c202cd3fdb9efb8a3d7b3b1d65bf4cc3dbd80d5508949c89f288f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/snapshot.py",
+      "bytes": 3921,
+      "sha256": "7679cc7ec475cb48d421307a682ae98a08599c60a67ba00bcfd4f87f861179c4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/static-arc147-regression.mjs",
+      "bytes": 12111,
+      "sha256": "cbbcd5f054e56db0a93d00afca8de95bb5a28f592950e91342d1ca5c3b205bfc"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/static-cases90.mjs",
+      "bytes": 12868,
+      "sha256": "4abbd84a654bcdc8428c255bf7958829202787b419f07a2d1a3cd77521f76656"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/static-dom-r1-r2-corrected.mjs",
+      "bytes": 5886,
+      "sha256": "fa1d77af38bfe7f8d5caf1c9c5b5df1e1fc998f51af917540a79742ac0572ec5"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/static-dom-r1-r2.mjs",
+      "bytes": 5851,
+      "sha256": "980458ce2e3b0de74afe8011b71f1b83c84ef85dcf1c6a3eb6a1f3409fd0ee4f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/static-build-release26-r2-command.json",
+      "bytes": 1310350,
+      "sha256": "a8d00eca39f6437d91ec8f953e17531883bfd195698308d69c1560dc9e0ea886"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/static-build-release26-r2-full.log",
+      "bytes": 85933,
+      "sha256": "654a92543c71c60833ced9e78435b6dfdcc09838c2196274860e3cddf074fe00"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/static-build-release26-r2-media.json",
+      "bytes": 550654,
+      "sha256": "b5cf05e7f34e991967689c9b10faf8b677ef4a6885987930e8dff00303a49354"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/static-build-release26-r2-report.json",
+      "bytes": 3439,
+      "sha256": "0a3eae660cb03a279ab834ac9b8af7a1d0eb0cfab2479acb792b3c362f8fc7e1"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/checks/static-build-release26-r2-server.log",
+      "bytes": 143,
+      "sha256": "57bb198c4cf252eb365611d285ddad76c45f920122186cf025553323ded5b842"
+    }
+  ],
+  "count": 247,
+  "REPORT_SHA256": "ce1ca87739afe44c1126fd4402b171acac2e783186ac650fa6a7a40b380247f2",
+  "FINAL_SHA256": "b36b877692c9d23bec7267f4a180bca89f9a419af4f56c34176b8ec9a3ea6711"
+}

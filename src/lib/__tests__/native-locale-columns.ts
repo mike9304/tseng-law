@@ -1331,23 +1331,28 @@ export const COUNTRY_COLUMN_FILES_20261026 = {
   'ko': [
     '947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md', // ship-20261026-G2
     '948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md', // ship-20261026-G3
+    '949-taiwan-national-park-filming-fine-administrative-appeal.md', // ship-20261026-G4
   ],
   'zh-hant': [
     '947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md', // ship-20261026-G2
     '948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md', // ship-20261026-G3
+    '949-taiwan-national-park-filming-fine-administrative-appeal.md', // ship-20261026-G4
   ],
   'ja': [
     '947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md', // ship-20261026-G2
     '948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md', // ship-20261026-G3
+    '949-taiwan-national-park-filming-fine-administrative-appeal.md', // ship-20261026-G4
   ],
   'en': [
     '947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md', // ship-20261026-G2
     '948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md', // ship-20261026-G3
+    '949-taiwan-national-park-filming-fine-administrative-appeal.md', // ship-20261026-G4
   ],
   'es': [
     '946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md', // ship-20261026-G1
     '947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md', // ship-20261026-G2
     '948-taiwan-police-prosecutor-interpreter-oath-challenge-foreign-suspect.md', // ship-20261026-G3
+    '949-taiwan-national-park-filming-fine-administrative-appeal.md', // ship-20261026-G4
   ],
 } as const;
 

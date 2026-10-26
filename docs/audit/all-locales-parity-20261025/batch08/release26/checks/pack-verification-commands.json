@@ -1,0 +1,21 @@
+[
+  {
+    "command": [
+      "node",
+      "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/pack-verify.mjs",
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch08-release26"
+    ],
+    "exitCode": 0,
+    "scriptSHA256": "cf88256fb1d1f24ad6a79149cd78382effa1b674d12dde07931ce347d8f0a724",
+    "logSHA256": "3ed15840fb7a09725fbe57e7484ea255b469c7b735b176eb4f9c835b27daa010"
+  },
+  {
+    "command": [
+      "node",
+      "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/pack-config-verify.mjs"
+    ],
+    "exitCode": 0,
+    "scriptSHA256": "34f35f4ec94a509517848dd92d2e62c2220ff6112cddf01a0d6359189c05230d",
+    "logSHA256": "5a5d871cfd8dbdebce2dabe3c9134daaadf7e0a52b856884c44591fb70820755"
+  }
+]

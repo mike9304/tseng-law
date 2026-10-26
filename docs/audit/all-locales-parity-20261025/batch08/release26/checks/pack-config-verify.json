@@ -1,0 +1,140 @@
+{
+  "at": "2026-10-26T09:51:48.322Z",
+  "sourceArtifact": "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch08-release26",
+  "packedArtifact": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/pack",
+  "buildInfo": {
+    "commit": "2beb91021d8a34cb91971973611c0c817b6ee06d",
+    "builtAt": "2026-10-26T09:48:49.237Z"
+  },
+  "rootLocales": [
+    "ar",
+    "bg",
+    "bn",
+    "ca",
+    "cs",
+    "da",
+    "de",
+    "el",
+    "en",
+    "es",
+    "et",
+    "fa",
+    "fi",
+    "fil",
+    "fr",
+    "he",
+    "hi",
+    "hr",
+    "hu",
+    "id",
+    "is",
+    "it",
+    "ja",
+    "km",
+    "ko",
+    "lt",
+    "lv",
+    "mn",
+    "ms",
+    "my",
+    "nb",
+    "ne",
+    "nl",
+    "pl",
+    "pt",
+    "ro",
+    "ru",
+    "sk",
+    "sl",
+    "sr",
+    "sv",
+    "ta",
+    "th",
+    "tr",
+    "uk",
+    "ur",
+    "vi",
+    "zh-hans",
+    "zh-hant"
+  ],
+  "rootCount": 49,
+  "redirectExact": 155,
+  "redirectPatterns": 7,
+  "securityHeaders": [
+    [
+      "Content-Security-Policy",
+      "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://plausible.io https://*.vercel-insights.com https://js.stripe.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://media.tseng-law.com https://api.openai.com https://api.stripe.com https://*.vercel-storage.com https://*.public.blob.vercel-storage.com https://www.google-analytics.com; frame-src 'self' https://www.youtube.com https://player.vimeo.com https://www.google.com https://maps.google.com https://lottie.host https://lottiefiles.com https://js.stripe.com https://hooks.stripe.com; media-src 'self' https://media.tseng-law.com blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+    ],
+    [
+      "X-Frame-Options",
+      "SAMEORIGIN"
+    ],
+    [
+      "X-Content-Type-Options",
+      "nosniff"
+    ],
+    [
+      "Referrer-Policy",
+      "strict-origin-when-cross-origin"
+    ],
+    [
+      "Cross-Origin-Opener-Policy",
+      "same-origin-allow-popups"
+    ],
+    [
+      "Cross-Origin-Resource-Policy",
+      "same-site"
+    ],
+    [
+      "Permissions-Policy",
+      "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    ],
+    [
+      "Strict-Transport-Security",
+      "max-age=31536000"
+    ]
+  ],
+  "notFoundLocales": [
+    "bg",
+    "ca",
+    "cs",
+    "da",
+    "de",
+    "el",
+    "en",
+    "es",
+    "et",
+    "fi",
+    "fr",
+    "hr",
+    "hu",
+    "id",
+    "is",
+    "it",
+    "ja",
+    "ko",
+    "lt",
+    "lv",
+    "nb",
+    "nl",
+    "pl",
+    "pt",
+    "ro",
+    "ru",
+    "sk",
+    "sl",
+    "sr",
+    "sv",
+    "th",
+    "uk",
+    "zh-hant"
+  ],
+  "canonicalHost": "tseng-law.com",
+  "rootFallback": "ko",
+  "packedWorkerEqualsUnmodifiedTemplateAndArtifactConfig": true,
+  "workerSHA256": "84711e76427f7a5ae35a8be8e2c872adfba9b7291f76566eac99ffe4836d74ff",
+  "configSHA256": "b36178ba3a3cf6698f399abdf7a59e9bf44b7aec4f8691bdd08857c6cd27611a",
+  "wranglerMatchesExistingContract": true,
+  "headersByteEqual": true,
+  "runtimeExecution": "No Cloudflare invocation; compares every packed Worker/template/config byte and existing asset binding to the same artifact inputs."
+}

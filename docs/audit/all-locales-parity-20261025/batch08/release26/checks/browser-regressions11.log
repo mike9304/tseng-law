@@ -1,0 +1,12 @@
+PASS desktop fa/taiwan-workplace-bullying-investigation-hearing-judgment
+PASS desktop fa/taiwan-public-contract-mediation-arbitration-same-claim
+PASS desktop fi/taiwan-arc-renewal-changes-reentry
+PASS desktop fi/taiwan-arc-first-application
+PASS mobile fa/taiwan-public-contract-mediation-arbitration-same-claim
+PASS desktop is/taiwan-arc-first-application
+PASS mobile fa/taiwan-workplace-bullying-investigation-hearing-judgment
+PASS mobile he/taiwan-arc-renewal-changes-reentry
+PASS mobile fi/taiwan-arc-first-application
+PASS mobile fi/taiwan-arc-renewal-changes-reentry
+PASS mobile is/taiwan-arc-first-application
+{"total":11,"passed":11,"failed":0,"fatal":false}

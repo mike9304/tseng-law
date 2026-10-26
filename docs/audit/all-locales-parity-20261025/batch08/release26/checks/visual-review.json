@@ -1,0 +1,50 @@
+{
+  "at": "2026-10-26T09:58:59.696583+00:00",
+  "reviewer": "AI visual inspection",
+  "sourceUnchanged": true,
+  "screenshots": [
+    {
+      "path": "checks/browser-screenshots/desktop-fi-915-body.png",
+      "sha256": "abe77a5119684502ffd22c18c6fe700a0c2c1d0a7a4b9f741557cd4d9117ce97"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-fi-915-body.png",
+      "sha256": "53500d04874cd2c2a2e0a56b4845ff66e65ed0cf8cc43719fba1798f9452f0e9"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-km-920-body.png",
+      "sha256": "5f25d142d989a87e7ef0d34ca45df227d541380912395d3a590a50ed11ba7208"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-is-919-body.png",
+      "sha256": "072875ee440841fe6368501379e391ebe49a09ce0cd3c8ebfaadb7d0340763bd"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-mn-915-body.png",
+      "sha256": "1cfa920a2fdb65cf2e34ff2ad128ef4fc2a3963a05d47d4abe51e8d249d0ffe9"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-he-706-rtl-table.png",
+      "sha256": "67238eabe998e358f8da5586eebb2c484c4a32ccd756697980317140dbef0774"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-fa-915-rtl-table.png",
+      "sha256": "4f19f06ce86b523c59672d764df816efb17382a69c31e824ac10e4aeea865e5f"
+    },
+    {
+      "path": "checks/browser-screenshots/mobile-fa-919-body.png",
+      "sha256": "0dc0071cf8ff42d246a4d738d7cfccf0c38799cb37ab25ee5966f04726e8ff54"
+    }
+  ],
+  "observations": [
+    "FI915 desktop/mobile title,hero,caption and initial amount44 417150 match the actual source; the source first character uses the existing drop-cap styling.",
+    "KM920,IS919 andMN915 mobile body/title glyphs render without visible clipping or horizontal overflow in the inspected frames.",
+    "HE706 mobile table keeps each23-1 identifier intact on one line; RTL columns remain in order.",
+    "FA915 mobile table andFA919 mobile body render in RTL; four regression rows additionally measured every mixed-script token and two actual bdi legal identifiers per page."
+  ],
+  "limits": [
+    "These8 inspected images are representative, not visual inspection of every frame.",
+    "This is not native-language or human legal review.",
+    "Existing shared UI such as table-scroll help can remain English; full shared-UI localization is not asserted."
+  ]
+}

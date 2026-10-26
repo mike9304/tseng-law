@@ -1,0 +1,374 @@
+{
+  "at": "2026-10-26T09:59:00.350626+00:00",
+  "status": "LOCAL_B8_QA_PASS_READY_FOR_ROOT_REVIEW",
+  "contentCommit": "2beb91021d8a34cb91971973611c0c817b6ee06d",
+  "buildInfo": {
+    "commit": "2beb91021d8a34cb91971973611c0c817b6ee06d",
+    "builtAt": "2026-10-26T09:48:49.237Z"
+  },
+  "buildExitCode": 0,
+  "buildSeconds": 145.211641,
+  "dataMode": "local fallback; --data intentionally omitted, not Air production CMS mirror parity",
+  "artifact": "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch08-release26",
+  "artifactCount": 5547,
+  "artifactBytes": 489977172,
+  "artifactTreeSHA256": "c37aac4ffaa638e99fd8731b38d666a9e01241cf923b5c44c32279b76fd1efba",
+  "sourceTreeSHA256": "4ec18bbfa87f43adb2dbb0fb72f01a3e86afc130d08ee3f900873ed0e61ff0fb",
+  "sourceMarkdownCount": 2412,
+  "buildVerification": {
+    "files": 5547,
+    "bytes": 489977172,
+    "htmlPages": 3178,
+    "oversize": [],
+    "sitemapUrls": 2981,
+    "sitemapMissing": [],
+    "brokenRefs": {},
+    "serverOnlyRefs": {},
+    "apiStrings": {},
+    "flightErrors": {}
+  },
+  "crawl": {
+    "pages": 2986,
+    "files": [
+      {
+        "path": "/manifest.webmanifest",
+        "file": "manifest.webmanifest",
+        "contentType": "application/manifest+json"
+      },
+      {
+        "path": "/icon.png",
+        "file": "icon.png",
+        "contentType": "image/png"
+      },
+      {
+        "path": "/apple-icon.png",
+        "file": "apple-icon.png",
+        "contentType": "image/png"
+      },
+      {
+        "path": "/sitemap.xml",
+        "file": "sitemap.xml",
+        "contentType": "application/xml"
+      },
+      {
+        "path": "/robots.txt",
+        "file": "robots.txt",
+        "contentType": "text/plain"
+      },
+      {
+        "path": "/ko/llms.txt",
+        "file": "ko/llms.txt",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "/en/llms.txt",
+        "file": "en/llms.txt",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "/zh-hant/llms.txt",
+        "file": "zh-hant/llms.txt",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "/ja/llms.txt",
+        "file": "ja/llms.txt",
+        "contentType": "text/plain; charset=utf-8"
+      }
+    ],
+    "redirects": [],
+    "missing": [],
+    "serverOnlyLinks": {},
+    "notFoundPages": {
+      "ko": "ko/404.html",
+      "zh-hant": "zh-hant/404.html",
+      "en": "en/404.html",
+      "ja": "ja/404.html",
+      "id": "id/404.html",
+      "th": "th/404.html",
+      "de": "de/404.html",
+      "es": "es/404.html",
+      "fr": "fr/404.html",
+      "it": "it/404.html",
+      "pt": "pt/404.html",
+      "nl": "nl/404.html",
+      "pl": "pl/404.html",
+      "ru": "ru/404.html",
+      "uk": "uk/404.html",
+      "el": "el/404.html",
+      "sv": "sv/404.html",
+      "da": "da/404.html",
+      "nb": "nb/404.html",
+      "fi": "fi/404.html",
+      "cs": "cs/404.html",
+      "hu": "hu/404.html",
+      "ro": "ro/404.html",
+      "sk": "sk/404.html",
+      "bg": "bg/404.html",
+      "hr": "hr/404.html",
+      "sr": "sr/404.html",
+      "sl": "sl/404.html",
+      "lt": "lt/404.html",
+      "lv": "lv/404.html",
+      "et": "et/404.html",
+      "ca": "ca/404.html",
+      "is": "is/404.html",
+      "/": "404.html"
+    }
+  },
+  "media": {
+    "mediaOrigin": "https://media.tseng-law.com",
+    "files": 2164,
+    "missingReferences": []
+  },
+  "caseStatic": {
+    "total": 132,
+    "passed": 132,
+    "failed": 0,
+    "bodySegments": 3149,
+    "sourceLinks": 1321
+  },
+  "ARCStatic": {
+    "total": 147,
+    "passed": 147,
+    "failed": 0,
+    "bodySegments": 6553,
+    "sourceLinks": 5593
+  },
+  "primaryBrowser": {
+    "total": 104,
+    "passed": 104,
+    "failed": 0,
+    "fatal": false
+  },
+  "regressionBrowser": {
+    "total": 11,
+    "passed": 11,
+    "failed": 0,
+    "fatal": false
+  },
+  "browserErrors": {
+    "pageErrors": 0,
+    "consoleErrors": 0,
+    "failedRequests": 0,
+    "rscRequests": 0
+  },
+  "browser": {
+    "engine": "Chromium",
+    "version": "156.0.8078.4",
+    "playwright": "1.59.1",
+    "executablePath": "/Users/son7/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+    "headless": true,
+    "isolatedTemporaryProfiles": true
+  },
+  "regressionScope": {
+    "changedARCDesktopMobile": 6,
+    "unchangedFALegalIdentifiersDesktopMobile": 4,
+    "HE706Mobile": 1
+  },
+  "actualFALegalIdentifierChecks": [
+    {
+      "locale": "fa",
+      "mode": "desktop",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "bdi": [
+        {
+          "text": "۸۵-۱",
+          "dir": "ltr",
+          "parentHref": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057"
+        },
+        {
+          "text": "۸۵-۱",
+          "dir": "ltr",
+          "parentHref": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057"
+        }
+      ],
+      "mixedTokens": 22,
+      "allGeometryPass": true
+    },
+    {
+      "locale": "fa",
+      "mode": "desktop",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "bdi": [
+        {
+          "text": "۲۲-۲",
+          "dir": "ltr",
+          "parentHref": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        },
+        {
+          "text": "۲۲-۲",
+          "dir": "ltr",
+          "parentHref": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        }
+      ],
+      "mixedTokens": 14,
+      "allGeometryPass": true
+    },
+    {
+      "locale": "fa",
+      "mode": "mobile",
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "bdi": [
+        {
+          "text": "۸۵-۱",
+          "dir": "ltr",
+          "parentHref": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057"
+        },
+        {
+          "text": "۸۵-۱",
+          "dir": "ltr",
+          "parentHref": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057"
+        }
+      ],
+      "mixedTokens": 22,
+      "allGeometryPass": true
+    },
+    {
+      "locale": "fa",
+      "mode": "mobile",
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "bdi": [
+        {
+          "text": "۲۲-۲",
+          "dir": "ltr",
+          "parentHref": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        },
+        {
+          "text": "۲۲-۲",
+          "dir": "ltr",
+          "parentHref": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+        }
+      ],
+      "mixedTokens": 14,
+      "allGeometryPass": true
+    }
+  ],
+  "package": {
+    "at": "2026-10-26T09:51:48.285Z",
+    "node": "v24.14.1",
+    "zlib": "1.3.1-e00f703",
+    "buildInfo": {
+      "commit": "2beb91021d8a34cb91971973611c0c817b6ee06d",
+      "builtAt": "2026-10-26T09:48:49.237Z"
+    },
+    "sourceArtifact": "/Users/son7/Projects/tseng-law-all-locales-20261025/out-all-locales-batch08-release26",
+    "packedArtifact": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/pack",
+    "pages": 3178,
+    "pageBytes": 401558216,
+    "pageGzipBytes": 84446013,
+    "assets": 2366,
+    "assetBytes": 88404330,
+    "expandedBytes": 172876306,
+    "limitBytes": 268435456,
+    "headroomBytes": 95559150,
+    "expandedMiB": 164.8676929473877,
+    "headroomMiB": 91.1323070526123,
+    "packedFileCount": 5548,
+    "gzipHtmlRoundTrips": 3178,
+    "unchangedAssets": 2366,
+    "verificationFailures": 0,
+    "failures": [],
+    "headersEqual": true,
+    "packerSha256": "c983e275e92ef2aff523f6307069ca54121fc79400e9c247fa02f7c1b73d85e7",
+    "workerTemplateSha256": "1d822b535ea1011a27fd037cfb2f9cef9245aacb0cc541b26d926c55923998b9",
+    "packedWorkerSha256": "84711e76427f7a5ae35a8be8e2c872adfba9b7291f76566eac99ffe4836d74ff",
+    "wranglerSha256": "5b4cb5e98934bf6b8df0273cb93eed501b3dfe4eadcab2ad075b61e90e85dbe3"
+  },
+  "packageTreeSHA256": "1835931c27a7a2723a830c093e8da91ef6eb25ce3499e0e46af2b4b8304af592",
+  "defaultWorkerConfigExact": true,
+  "sourceAndArtifactAfterQAMatchBefore": {
+    "head": true,
+    "buildInfo": true,
+    "selected42": true,
+    "approvedRepairs3": true,
+    "canonical6": true,
+    "allSources": true,
+    "artifacts": true
+  },
+  "trackedSourceAndScriptsUnchanged": true,
+  "exactMarkdownDeltaFromB7": {
+    "added": [
+      "src/content/columns-fi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-fi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-fi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-fi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-fi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-fi/921-taiwan-online-game-coins-refund-judgment.md",
+      "src/content/columns-hr/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-hr/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-hr/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-hr/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-hr/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-hr/921-taiwan-online-game-coins-refund-judgment.md",
+      "src/content/columns-hu/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-hu/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-hu/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-hu/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-hu/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-hu/921-taiwan-online-game-coins-refund-judgment.md",
+      "src/content/columns-is/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-is/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-is/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-is/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-is/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-is/921-taiwan-online-game-coins-refund-judgment.md",
+      "src/content/columns-km/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-km/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-km/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-km/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-km/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-km/921-taiwan-online-game-coins-refund-judgment.md",
+      "src/content/columns-lv/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-lv/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-lv/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-lv/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-lv/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-lv/921-taiwan-online-game-coins-refund-judgment.md",
+      "src/content/columns-mn/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-mn/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-mn/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-mn/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-mn/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-mn/921-taiwan-online-game-coins-refund-judgment.md"
+    ],
+    "removed": [],
+    "changed": [
+      "src/content/columns-fi/704-taiwan-arc-first-application.md",
+      "src/content/columns-fi/706-taiwan-arc-renewal-changes-reentry.md",
+      "src/content/columns-is/704-taiwan-arc-first-application.md"
+    ]
+  },
+  "finalGitStatus": "",
+  "firstExecutionFailures": [],
+  "sourceOrRuntimeChangesByVerifier": false,
+  "previousArtifactPolicy": "New out path and new B8 evidence only; no prior B7/B6 artifact or evidence writes. Prior artifacts were not redundantly revalidated.",
+  "limits": [
+    "Local fallback build, not an Air production CMS mirror reproduction.",
+    "No B8 public verification, push or deployment performed by this worker.",
+    "This delivery QA does not replace prior author/independent language/legal review.",
+    "No full49x286 completion or future capacity claim.",
+    "Existing nonfatal CSS autoprefixer warnings retained in the full-build log."
+  ],
+  "bindings": {
+    "static-build-release26-command.json": "e84b78ce00f5c5cde9df4d3a5c06fb4389f5f634a4bebf7320e5e6f0a416c2ad",
+    "static-build-release26-report.json": "1fc8647f02fe30ffd156bf1c2c5654d13557ac9a14f00ab1d573d4f51a676edb",
+    "static-build-release26-media.json": "b5cf05e7f34e991967689c9b10faf8b677ef4a6885987930e8dff00303a49354",
+    "static-cases132.json": "2c2380741b38402255a17ae3f8617b7efc29abd060a20cbc5a7a8663aeb63534",
+    "static-arc147-regression.json": "6e332afc474cfbabd5829f0cb50363b32e4da19925da67c0cfc15f1858b9d2e6",
+    "browser-primary104-command.json": "eee7d1d7d3bec68f353cd4030fdba51e36770da37c4695e92b4f1e09a437e175",
+    "browser-case-results.json": "decf7dfe9ef618217471e1de8338f881e62d89d87ab1aa16abafbd5cbcb4dd97",
+    "browser-regressions11-command.json": "7aae03c6ca9da7fcb928bccbc67cb56f4fd4e29c722455ab32fe8551effdcf56",
+    "browser-regressions-results.json": "eda16a778c7acac8a8d41fca9b638be6a74266fd694e5b70c78971ab55a105c9",
+    "pack-command.json": "b32499cdd73c9408abc56fa38b2b3c540b4d21639f13e57d9184c0c8866cc028",
+    "browser-pack-report.json": "3685da642e2847a1bcbeb38a95d6d558e07be96118e3ae432d4dcf8d021714ef",
+    "pack-config-verify.json": "770a520257be18072d0f029cb914e87434deeee1d2a374189b99b050d49e8c6b",
+    "pack-manifest.json": "2429e4bf304b5f2fc72a234860fef573607192f2886fec54e3cc55fbf5c5e734",
+    "snapshot-before.json": "b5d6f60e613cc2f79bf072751d8cb3d51e43fb7ef83ef6c944cd77012c1a7665",
+    "snapshot-after.json": "bc1e4ecdb7e3f872c8928c984db346046703c0224e31fcc316e11a8d4f878bc8",
+    "visual-review.json": "4ddf101275546933dcdb3607c360012097203ec4a5df20bde9378333fa20fc15"
+  },
+  "noPushDeployOrInfrastructureChange": true,
+  "expectedJavaScriptDisabledPreloadBlocks": 7,
+  "totalFAQItems": 815
+}

@@ -1,0 +1,67 @@
+{
+  "base": "B7 final verified artifact machinery",
+  "targetHead": "2beb91021d8a34cb91971973611c0c817b6ee06d",
+  "scope": {
+    "staticCase": 132,
+    "staticARC": 147,
+    "primaryBrowser": 104,
+    "additionalRegressionBrowser": 11
+  },
+  "files": [
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/snapshot.py",
+      "sourceSHA256": "7679cc7ec475cb48d421307a682ae98a08599c60a67ba00bcfd4f87f861179c4",
+      "destination": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/snapshot.py",
+      "sha256": "c39ccba628e109ca782125e3d7d54a03416cddf7681872c9d779285b67c9920c"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/run-static.py",
+      "sourceSHA256": "d2ebfab23d4c202cd3fdb9efb8a3d7b3b1d65bf4cc3dbd80d5508949c89f288f",
+      "destination": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/run-static.py",
+      "sha256": "2049cad057d6ded4f1e9f2f0c58b0e95114379b4fbbafa8ebfdacfe7757b68d0"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/run-browser.py",
+      "sourceSHA256": "4441434b92912503c17d414dc7ef9189b284f6f75b88bd805d319119f478089a",
+      "destination": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/run-browser.py",
+      "sha256": "1c2cfd2a465a0ebc4e9d25e78f21b6902e7e16b0460a7b6ed196a051aa8765e8"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/run-pack.py",
+      "sourceSHA256": "d3c03e6c7cc2de829b9af26de95ed28f0f0f1e25e87adc96272bc1e36da5453f",
+      "destination": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/run-pack.py",
+      "sha256": "a12525e3ae57fbfcde0268b90f2886704bc8c56018758d97f2ca5ca2eae1c032"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/pack-verify.mjs",
+      "sourceSHA256": "573d0986e5740776e40c3aba38f3e88c55223036f0c7dc2ac21eed01c0bff721",
+      "destination": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/pack-verify.mjs",
+      "sha256": "cf88256fb1d1f24ad6a79149cd78382effa1b674d12dde07931ce347d8f0a724"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/pack-config-verify.mjs",
+      "sourceSHA256": "21b00a20c9bfd58ef0d2e908d83a30cab2c2f0bdf95ffaba8434e80c57395bbb",
+      "destination": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/pack-config-verify.mjs",
+      "sha256": "34f35f4ec94a509517848dd92d2e62c2220ff6112cddf01a0d6359189c05230d"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/static-cases90.mjs",
+      "sourceSHA256": "4abbd84a654bcdc8428c255bf7958829202787b419f07a2d1a3cd77521f76656",
+      "destination": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/static-cases132.mjs",
+      "sha256": "988c5c5c3fc89ffebb14ccc7933ffae0240d7dbb900ee3da4a90033386d26736"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/static-arc147-regression.mjs",
+      "sourceSHA256": "cbbcd5f054e56db0a93d00afca8de95bb5a28f592950e91342d1ca5c3b205bfc",
+      "destination": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/static-arc147-regression.mjs",
+      "sha256": "78dc371957a19e4f7d19ecf10120a4f3b89ab4cc5655c18cba89337c57e23868"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch07/release26-r2/verification/browser-cases.mjs",
+      "sourceSHA256": "3b249c7e7c49627b6c8cd7f3c6401010a0cc428c558ba6e3b7aa2be7c3f80862",
+      "destination": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/browser-cases.mjs",
+      "sha256": "b015b3cc0b74b537198ae25e4a9b9013d3102041eb315240f891699acffd869e"
+    }
+  ],
+  "priorEvidenceModified": false
+}

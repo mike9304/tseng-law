@@ -1,0 +1,57 @@
+[
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/browser-cases.mjs",
+    "type": "node --check",
+    "exitCode": 0,
+    "stderr": ""
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/pack-config-verify.mjs",
+    "type": "node --check",
+    "exitCode": 0,
+    "stderr": ""
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/pack-verify.mjs",
+    "type": "node --check",
+    "exitCode": 0,
+    "stderr": ""
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/run-browser.py",
+    "type": "python AST",
+    "pass": true
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/run-full-build.py",
+    "type": "python AST",
+    "pass": true
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/run-pack.py",
+    "type": "python AST",
+    "pass": true
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/run-static.py",
+    "type": "python AST",
+    "pass": true
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/snapshot.py",
+    "type": "python AST",
+    "pass": true
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/static-arc147-regression.mjs",
+    "type": "node --check",
+    "exitCode": 0,
+    "stderr": ""
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/release26/verification/static-cases132.mjs",
+    "type": "node --check",
+    "exitCode": 0,
+    "stderr": ""
+  }
+]

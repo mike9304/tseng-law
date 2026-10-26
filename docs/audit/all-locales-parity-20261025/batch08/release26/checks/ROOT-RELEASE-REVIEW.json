@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-26T10:13:38.230469+00:00",
+  "reviewer": "root AI coordinator",
+  "contentCommit": "2beb91021d8a34cb91971973611c0c817b6ee06d",
+  "actualEvidenceHashes": 242,
+  "directFinalBindings": 16,
+  "sourceHashes": 2412,
+  "artifactHashes": 5547,
+  "packageHashes": 5548,
+  "reportFullyRead": true,
+  "viewedActualScreenshots": [
+    "checks/browser-screenshots/mobile-km-920-body.png",
+    "checks/browser-screenshots/mobile-mn-915-body.png",
+    "checks/browser-screenshots/mobile-fa-915-rtl-table.png"
+  ],
+  "visualFindings": "KM/MN readable wrapping and fictional captions; FA table within mobile width and text legible. Existing English table scroll helper remains. These3screens only visually reviewed by root.",
+  "fullBuildExit": 0,
+  "staticArticles": 279,
+  "browserPasses": 115,
+  "packageMiB": 164.8676929473877,
+  "headroomMiB": 91.1323070526123,
+  "publicVerificationPending": true,
+  "capacityIncluded": false,
+  "goal49x286Complete": false
+}

@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-26T10:14:17.657932+00:00",
+  "fullStagedWhitespaceExit": 2,
+  "diagnostics": "Four preserved raw build-log whitespace entries, eight output lines. Log bytes intentionally unchanged.",
+  "excludedFromNonRawCheck": [
+    "docs/audit/all-locales-parity-20261025/batch08/release26/checks/static-build-release26-full.log"
+  ],
+  "nonRawWhitespaceExit": 0,
+  "stagedAuditOnlyFilesBeforeReceipt": 48,
+  "sourceUnchanged": true
+}

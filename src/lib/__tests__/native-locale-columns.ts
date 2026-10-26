@@ -1329,15 +1329,20 @@ export const MARKET_EXPANSION_COLUMN_FILES_20261025 = {
 /** Weekday expert columns published 2026-10-26, in source order. */
 export const COUNTRY_COLUMN_FILES_20261026 = {
   'ko': [
+    '947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md', // ship-20261026-G2
   ],
   'zh-hant': [
+    '947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md', // ship-20261026-G2
   ],
   'ja': [
+    '947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md', // ship-20261026-G2
   ],
   'en': [
+    '947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md', // ship-20261026-G2
   ],
   'es': [
     '946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md', // ship-20261026-G1
+    '947-taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction.md', // ship-20261026-G2
   ],
 } as const;
 

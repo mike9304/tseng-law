@@ -2649,6 +2649,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-crypto-tax-audit-letter-exchange-location-cost-basis"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-overseas-fx-broker-account-hacked-criminal-complaint-jurisdiction"
     }
   ]
 }

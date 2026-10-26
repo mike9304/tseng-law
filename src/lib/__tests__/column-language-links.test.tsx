@@ -284,12 +284,14 @@ describe('a builder/Blob-only column (no markdown file in any language)', () => 
 describe('issue-board columns', () => {
   it('list only their own language, since each is written for one language', () => {
     let checked = 0;
+    // Parse each issue board once; re-reading every board per post outgrew the default timeout.
+    const issuePostsByLocale = new Map(ISSUE_BOARD_LOCALES.map((locale) => [locale, getAllIssuePosts(locale)]));
     for (const locale of ISSUE_BOARD_LOCALES) {
       const { index } = publicColumnSwitcherData(locale);
-      for (const post of getAllIssuePosts(locale)) {
+      for (const post of issuePostsByLocale.get(locale) ?? []) {
         const pathname = `/${locale}/columns/issues/${post.slug}`;
         const others = ISSUE_BOARD_LOCALES.filter(
-          (other) => other !== locale && getAllIssuePosts(other).some((candidate) => candidate.slug === post.slug),
+          (other) => other !== locale && (issuePostsByLocale.get(other) ?? []).some((candidate) => candidate.slug === post.slug),
         );
         expect(others, pathname).toEqual([]);
 
@@ -300,7 +302,7 @@ describe('issue-board columns', () => {
       }
     }
     expect(checked).toBeGreaterThan(0);
-  });
+  }, 30_000); // renders every issue article in seven languages; grows with the issue boards
 });
 
 describe('pages that are not column articles', () => {

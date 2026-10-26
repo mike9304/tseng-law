@@ -1,0 +1,51 @@
+{
+  "atUTC": "2026-10-26T09:16:11.391242+00:00",
+  "status": "APPROVE_WITH_OPTIONAL_EDITS",
+  "mandatoryCount": 0,
+  "optionalCount": 2,
+  "newCLIRuns": 0,
+  "findings": [
+    {
+      "id": "O01",
+      "article": "916",
+      "severity": "OPTIONAL_PRECISION",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "line": 56,
+      "sha256": "f1a83d6168304647b8969bc70056cfa301fb91f9b4e5c754465bd61b7086cadb",
+      "before": "[Informativni list USTR iz februarja 2026](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje namere ZDA in Tajvana glede čezmejnih naložb ter možnost ameriške podpore financiranju zasebnih naložb na Tajvanu po veljavnih predpisih.",
+      "after": "[Informativni list USTR iz februarja 2026](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje namere ZDA in Tajvana glede čezmejnih naložb. Ameriška stran je napovedala, da bo, kadar je to primerno, razmislila o podpori financiranju naložb v ključnih sektorjih na Tajvanu v sodelovanju z ameriškimi zasebnimi partnerji in po veljavnih predpisih.",
+      "applied": false,
+      "reason": "Short current paragraph faithfully summarizes the accepted EN source as a possibility, does not promise all-investor eligibility, and immediately denies individual approval/full treaty entry into force. Therefore missing detail alone is not a blocking error. The official February statement is more specific about appropriate consideration, critical sectors and US private-sector collaboration; the optional wording makes those bounds visible.",
+      "meaningPreserved": "Keep the dated intention, consideration rather than approved funding, Taiwan as investment location, US side/US private partners, applicable law, and both following disclaimer sentences. No Slovenian eligibility or consultation promise.",
+      "source": "batch06 facts916-M1/S27; retained actual official-04 USTR L23; canonicalEN916 narrower-length summary",
+      "reclassification": "Initially sent as mandatory candidate; after full paragraph/EN-source comparison and author explanation, reviewer withdrew that mandatory classification and notified root. This is optional precision."
+    },
+    {
+      "id": "O02",
+      "article": "920",
+      "severity": "OPTIONAL_CLARITY",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "line": 48,
+      "sha256": "1c32172e527dffcb2934a468dfea0c5375f5d1145fbf168d9df3a6ccf8450c4d",
+      "before": "Tudi pogodba z monterjem lahko določi, ali sme delo začeti pred pridobitvijo soglasij in kdo nosi stroške, če je prošnja zavrnjena.",
+      "after": "Tudi pogodba z monterjem lahko začetek del veže na pridobitev potrebnih soglasij in določi, kdo nosi stroške, če je prošnja zavrnjena.",
+      "applied": false,
+      "reason": "The next sentence already says the contract cannot replace the competent building body decision, and the ZH source similarly discusses whether work may start before approval. No authorization to ignore statutory consent is established. Linking commencement directly to required consent would reduce an avoidable isolated-sentence reading.",
+      "meaningPreserved": "Retain required consents, conditional cost allocation if the application is rejected, practical contract advice, and the immediately following statement that a private agreement does not replace the building decision. No new universal consent procedure."
+    }
+  ],
+  "nonFindings": [
+    {
+      "topic": "920 article6(3)",
+      "reason": "The actual case describes a formal written coordination request followed by continued nonremoval. Current wording preserves that case sequence and may seek judicial relief, rather than requiring automatic removal for any complaint."
+    },
+    {
+      "topic": "919 兩大過",
+      "reason": "The two heavy demerits are explicitly one decision leading to dismissal, with the Chinese label retained. It is not presented as two separate disciplinary cases."
+    },
+    {
+      "topic": "all source-status tails",
+      "reason": "Necessary verification date and known appeal/finality limits follow six article-specific substantive conclusions; no mechanical monotony failure solely for these tails."
+    }
+  ]
+}

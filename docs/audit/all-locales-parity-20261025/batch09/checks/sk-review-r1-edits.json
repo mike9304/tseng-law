@@ -1,0 +1,139 @@
+{
+  "atUTC": "2026-10-26T10:02:30.695304+00:00",
+  "accepted": [
+    "M01",
+    "O01",
+    "O02"
+  ],
+  "changes": [
+    {
+      "id": "M01",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "old": "Prísľub budúceho odpojenia neriešil pôvodný nedostatok súhlasu.",
+      "new": "Tvrdené nepoužívanie zariadenia chýbajúci súhlas nenahradilo.",
+      "reason": "장래에 분리하겠다는 약속으로 사건의 주장·시점을 바꾼다. 앞 문단과 정본은 이미 사용을 중지하고 잠갔다는 주장 및 열쇠를 위원회에 넘길 의향이다.",
+      "meaningPreservation": "주장이라는 지위와 사용중지 행위, 필요한 동의 부재를 보존한다. 바로 앞의 설령 사실이어도 철거·복구 의무가 남는다는 판단은 그대로 두며 새로운 의무·시점·실제 사실을 만들지 않는다.",
+      "beforeSHA256": "001bd26dd4f6488e6e8a2413f401c1afa458652541b0396fcf248f29910fe3b1",
+      "afterSHA256": "5bfa0f4c167c6fda6547eefa6baf2eb527b572f6c0852ac9fca9e0323ddbf48e"
+    },
+    {
+      "id": "O01",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "old": "Obyvateľ tvrdil, že zariadenie nepoužíva, uzamkol ho a môže odovzdať kľúč.",
+      "new": "Obyvateľ tvrdil, že zariadenie nepoužíva a uzamkol ho, a ponúkal odovzdanie kľúča výboru.",
+      "reason": "môže는 가능성으로 읽힌다. 본문의 ponúkal...výboru를 FAQ에도 쓰면 열쇠 인도의 의향·수령인을 독립적인 FAQ에서 더 명확히 알 수 있다.",
+      "meaningPreservation": "이미 넘겼다고 바꾸지 않으며 주민 주장/위원회 인도 의향/설령 사실이어도라는 뒤 문장은 보존한다. 현재 본문이 정확하므로 새 필수 오류로 확대하지 않는다.",
+      "beforeSHA256": "5bfa0f4c167c6fda6547eefa6baf2eb527b572f6c0852ac9fca9e0323ddbf48e",
+      "afterSHA256": "ecf263bf7b469ba2e3de619460d7e3945a0275dd9dd72d5261298bc58937f576"
+    },
+    {
+      "id": "O02",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+      "old": "Dohoda vyžaduje obe strany. Samotná jednostranná informácia prevádzkovateľa ju nenahrádza.",
+      "new": "Jednostranné oznámenie prevádzkovateľa takú dohodu nenahrádza.",
+      "reason": "직전 dohodnutým oboma stranami에 이어 양쪽이라는 설명을 짧게 두 번 반복한다. 구체적인 일방 통지의 한계만 남기면 문단의 반복을 줄일 수 있다.",
+      "meaningPreservation": "바로 앞의 미사용 두 대상 OR, 필요비용 공제, 종료 후30일 must와 양자 합의의 대안을 모두 유지한다. 본래 문장의 정확성 오류가 아닌 선택적 리듬 개선이다.",
+      "beforeSHA256": "60cb072f1ef19f7a1391d22cb2973597b602076752b3f5b387fc81e0b98e8d92",
+      "afterSHA256": "1d3574bf42e024b1c9a6c2bd3005d1ed452dbb13fc5015ba0a6e7556f15c1b6a"
+    }
+  ],
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSHA256": "dd5ba0865b06900c6cf13dca431a93c0b6a9d86c0e5c8ca6cc136ec7170deaa3",
+      "sha256": "dd5ba0865b06900c6cf13dca431a93c0b6a9d86c0e5c8ca6cc136ec7170deaa3",
+      "exactForward": true,
+      "exactInverse": true,
+      "numbersUnchanged": true,
+      "URLsUnchanged": true,
+      "diff": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSHA256": "dea3c656ac58e2542b9f8343fbccd95d01f811ff47653a67d9225a0948a79e82",
+      "sha256": "dea3c656ac58e2542b9f8343fbccd95d01f811ff47653a67d9225a0948a79e82",
+      "exactForward": true,
+      "exactInverse": true,
+      "numbersUnchanged": true,
+      "URLsUnchanged": true,
+      "diff": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSHA256": "ccf6a8391b9462f571188e5467f530b20e659bae1898cf6f9b6b63a12fb5f14d",
+      "sha256": "ccf6a8391b9462f571188e5467f530b20e659bae1898cf6f9b6b63a12fb5f14d",
+      "exactForward": true,
+      "exactInverse": true,
+      "numbersUnchanged": true,
+      "URLsUnchanged": true,
+      "diff": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "7a9bda014da027ab57152f645835f429ce5802446c9badea6231d1beb8bf8569",
+      "sha256": "7a9bda014da027ab57152f645835f429ce5802446c9badea6231d1beb8bf8569",
+      "exactForward": true,
+      "exactInverse": true,
+      "numbersUnchanged": true,
+      "URLsUnchanged": true,
+      "diff": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "001bd26dd4f6488e6e8a2413f401c1afa458652541b0396fcf248f29910fe3b1",
+      "sha256": "ecf263bf7b469ba2e3de619460d7e3945a0275dd9dd72d5261298bc58937f576",
+      "exactForward": true,
+      "exactInverse": true,
+      "numbersUnchanged": true,
+      "URLsUnchanged": true,
+      "diff": "--- R1/920-taiwan-apartment-ev-charger-common-area-judgment.md\n+++ R2/920-taiwan-apartment-ev-charger-common-area-judgment.md\n@@ -18,7 +18,7 @@\n   - q: \"Môžem si osadiť nabíjačku a viesť káble podľa vlastného rozhodnutia, ak smiem používať parkovacie miesto?\"\n     a: \"Treba preveriť celú trasu zariadenia a vedení. V tomto prípade boli dotknuté spoločná stena, strop a elektrická skriňa. Súd posudzoval rozsah prác, zákon a pravidlá konkrétneho domu; iné domy potrebujú posúdenie vlastných priestorov a pravidiel.\"\n   - q: \"Zanikne povinnosť odstrániť nabíjačku, keď ju odpojím a uzamknem?\"\n-    a: \"Obyvateľ tvrdil, že zariadenie nepoužíva, uzamkol ho a môže odovzdať kľúč. Súd vysvetlil, že ani pravdivosť týchto tvrdení by neodstránila povinnosť vyplývajúcu z prác bez potrebného súhlasu. Nejde o záver, že odstránenie je vždy jediným riešením každej inštalácie.\"\n+    a: \"Obyvateľ tvrdil, že zariadenie nepoužíva a uzamkol ho, a ponúkal odovzdanie kľúča výboru. Súd vysvetlil, že ani pravdivosť týchto tvrdení by neodstránila povinnosť vyplývajúcu z prác bez potrebného súhlasu. Nejde o záver, že odstránenie je vždy jediným riešením každej inštalácie.\"\n   - q: \"Nahrádza mestská podpora súhlas s prácami v spoločných častiach?\"\n     a: \"Nie. Podmienky podpory a oprávnenie zasiahnuť do spoločných častí sa posudzujú osobitne. Kaohsiung v roku 2026 podporoval káblové žľaby v spoločných častiach bytových domov, no oznámená lehota do 30. septembra už uplynula. Podpora sama nedáva obyvateľovi právo vykonať práce.\"\n ---\n@@ -47,7 +47,7 @@\n \n Obyvateľ tvrdil, že osadil vypínač, zariadenie nepoužíva a uzamkol ho; ponúkal aj odovzdanie kľúča výboru. Súd posudzoval právny účinok týchto tvrdení za predpokladu, že by boli pravdivé. Ani vtedy by nezanikla povinnosť odstrániť zariadenie a obnoviť pôvodný stav.\n \n-Spor sa týkal oprávnenia vykonať práce na dotknutých miestach, nielen okamžitej prevádzkovej bezpečnosti nabíjačky. Prísľub budúceho odpojenia neriešil pôvodný nedostatok súhlasu.\n+Spor sa týkal oprávnenia vykonať práce na dotknutých miestach, nielen okamžitej prevádzkovej bezpečnosti nabíjačky. Tvrdené nepoužívanie zariadenia chýbajúci súhlas nenahradilo.\n \n Kde presne prejde navrhované vedenie? Cenová ponuka s číslom parkovacieho miesta na to nemusí odpovedať. Náčrt môže spojiť polohu boxu, steny a stropu, ktorými vedenie prechádza, aj bod pripojenia v elektrickej skrini; následne sa porovná s právami k priestorom a platnými rozhodnutiami domu.\n \n"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "60cb072f1ef19f7a1391d22cb2973597b602076752b3f5b387fc81e0b98e8d92",
+      "sha256": "1d3574bf42e024b1c9a6c2bd3005d1ed452dbb13fc5015ba0a6e7556f15c1b6a",
+      "exactForward": true,
+      "exactInverse": true,
+      "numbersUnchanged": true,
+      "URLsUnchanged": true,
+      "diff": "--- R1/921-taiwan-online-game-coins-refund-judgment.md\n+++ R2/921-taiwan-online-game-coins-refund-judgment.md\n@@ -41,7 +41,7 @@\n \n Súčasné [povinné a zakázané podmienky zmlúv o online hrách](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) nadobudli v citovanom znení účinnosť 1. januára 2023, teda po tomto rozsudku. Spor z roku 2021 sa posudzoval podľa vtedajšej zmluvy a vtedy platných pravidiel.\n \n-Bod 18 umožňuje spotrebiteľovi kedykoľvek oznámiť ukončenie zmluvy. Prevádzkovateľ musí po odpočítaní nevyhnutných nákladov vrátiť nevyužité zakúpené body alebo nevyužité platby za hru do 30 dní od ukončenia, prípadne postupovať iným spôsobom dohodnutým oboma stranami. Dohoda vyžaduje obe strany. Samotná jednostranná informácia prevádzkovateľa ju nenahrádza.\n+Bod 18 umožňuje spotrebiteľovi kedykoľvek oznámiť ukončenie zmluvy. Prevádzkovateľ musí po odpočítaní nevyhnutných nákladov vrátiť nevyužité zakúpené body alebo nevyužité platby za hru do 30 dní od ukončenia, prípadne postupovať iným spôsobom dohodnutým oboma stranami. Jednostranné oznámenie prevádzkovateľa takú dohodu nenahrádza.\n \n Ako sa vypočíta vracaná suma? Hráč môže požiadať o rozpis nevyužitej hodnoty, odpočítaných nákladov a spôsobu výpočtu a porovnať ho so zmluvou. Pevné percento nastavené v systéme samo nepreukazuje, že každý taký odpočet je odôvodnený.\n \n"
+    }
+  ],
+  "protected": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sk-author.md",
+      "sha256": "cae0c14f3f59115d497a03f2676128eca402a0dfe1c6fc56141ac06606009560",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-final-manifest.json",
+      "sha256": "fd375bf4ea6fa683f29c4a17f4627a7a2a8ebc2ba8830648326b4a5dd47a10b5",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sk-independent.md",
+      "sha256": "48cbc86564f575411666d3bda1b03ae45fd8c5c6a4a7a95e4eba52fdd6843025",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-independent-final-manifest.json",
+      "sha256": "9be894d9b93f84bc19ecba087290867bc2beff4161b7386163d230815fcf664a",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-independent-findings.json",
+      "sha256": "7d4a73dcb3914d09e8deb1e865516b4c8034764708026a44732c2ca4947ca3db",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-variety-final.json",
+      "sha256": "fd5779112ee32dfb0146b9ce34af151ee2ae70e57dabbdc28823ebc05d8e5d77",
+      "unchanged": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-sentences-final.json",
+      "sha256": "cdb962a531839dcac8db0e6c48820c8dfc7e07ebde7b9085fbf04ad8bfae0c8c",
+      "unchanged": true
+    }
+  ]
+}

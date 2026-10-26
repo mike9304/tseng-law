@@ -1,0 +1,229 @@
+{
+  "atUTC": "2026-10-26T09:49:22.952177+00:00",
+  "toolGuard": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-tool-guard-final.json",
+    "sha256": "420b52743d2cf22b31f1298493b18641cb225943650eae5d1ec160a658868cf3"
+  },
+  "actualExtraction": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-sentences-final.json",
+    "sha256": "cdb962a531839dcac8db0e6c48820c8dfc7e07ebde7b9085fbf04ad8bfae0c8c"
+  },
+  "scope": "All 260 current shared extracted sentences, paragraph openers and headings actually read by AI author; not human native/legal approval",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dd5ba0865b06900c6cf13dca431a93c0b6a9d86c0e5c8ca6cc136ec7170deaa3",
+      "sentencesRead": 38,
+      "headsRead": [
+        "Od peňazí k dlhšej lehote a späť",
+        "Zákonná cesta vyžaduje nesúhlas s príslušným odporúčaním",
+        "Taiwanské energetické zákazky a americkí dodávatelia"
+      ],
+      "paragraphOpenersRead": [
+        "44",
+        "najvyšší",
+        "v",
+        "potvrdenie",
+        "dôvod",
+        "ak",
+        "pri",
+        "dôležitá",
+        "správa",
+        "projektový",
+        "posudzovala",
+        "pri",
+        "oficiálne"
+      ],
+      "veryShortAtMost8": 10,
+      "longAtLeast32": [
+        {
+          "index": 16,
+          "length": 32,
+          "text": "Ak sa strany nedohodnú na riešení sporu o plnenie zmluvy, článok 85-1 zákona o verejnom obstarávaní umožňuje obrátiť sa na komisiu pre preskúmanie sťažností vo verejnom obstarávaní so žiadosťou o mediáciu."
+        }
+      ],
+      "allExtractedSentencesActuallyRead": true,
+      "FAQAndTables": "Read separately in manuscript; metrics arrays exclude metadata and tables; FAQ17, tables and URLs checked independently"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "dea3c656ac58e2542b9f8343fbccd95d01f811ff47653a67d9225a0948a79e82",
+      "sentencesRead": 45,
+      "headsRead": [
+        "Od zistenia rizika k prevodom majetku",
+        "Rozdielny výsledok pre časti týkajúce sa 246 a 262 osôb",
+        "Súčasný článok 154 má kumulatívne podmienky",
+        "Investičný zámer neodstraňuje staršie záväzky"
+      ],
+      "paragraphOpenersRead": [
+        "environmentálne",
+        "najvyšší",
+        "súd",
+        "tieto",
+        "kto",
+        "pri",
+        "najvyšší",
+        "opravné",
+        "pri",
+        "taiwanský",
+        "podmienky",
+        "bežné",
+        "faktografický",
+        "pred",
+        "prvá",
+        "oficiálne"
+      ],
+      "veryShortAtMost8": 14,
+      "longAtLeast32": [],
+      "allExtractedSentencesActuallyRead": true,
+      "FAQAndTables": "Read separately in manuscript; metrics arrays exclude metadata and tables; FAQ17, tables and URLs checked independently"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "ccf6a8391b9462f571188e5467f530b20e659bae1898cf6f9b6b63a12fb5f14d",
+      "sentencesRead": 45,
+      "headsRead": [
+        "Čo sa dalo zistiť z listu a stavu bytu",
+        "Zmluvné štyri mesiace a dnešná oznamovacia lehota",
+        "Bankový postup nepredlžuje zmluvu sám od seba"
+      ],
+      "paragraphOpenersRead": [
+        "list",
+        "taiwanský",
+        "obsah",
+        "v",
+        "úverové",
+        "developer",
+        "zmluva",
+        "od",
+        "súčasný",
+        "kontrola",
+        "aktuálne",
+        "názov",
+        "ak",
+        "oficiálne"
+      ],
+      "veryShortAtMost8": 13,
+      "longAtLeast32": [],
+      "allExtractedSentencesActuallyRead": true,
+      "FAQAndTables": "Read separately in manuscript; metrics arrays exclude metadata and tables; FAQ17, tables and URLs checked independently"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "7a9bda014da027ab57152f645835f429ce5802446c9badea6231d1beb8bf8569",
+      "sentencesRead": 41,
+      "headsRead": [
+        "Poradie krokov obmedzilo priestor na rozhodovanie",
+        "Súkromné pracovisko má od júla vlastnú úpravu",
+        "Čo ukazuje pozvánka, výpoveď a záver správy"
+      ],
+      "paragraphOpenersRead": [
+        "môže",
+        "taipei",
+        "vedúci",
+        "samotné",
+        "ďalšie",
+        "neskoršie",
+        "prípad",
+        "vyšetrovanie",
+        "ochrana",
+        "na",
+        "dostala",
+        "ak",
+        "ide",
+        "pri",
+        "oficiálne"
+      ],
+      "veryShortAtMost8": 10,
+      "longAtLeast32": [],
+      "allExtractedSentencesActuallyRead": true,
+      "FAQAndTables": "Read separately in manuscript; metrics arrays exclude metadata and tables; FAQ17, tables and URLs checked independently"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "001bd26dd4f6488e6e8a2413f401c1afa458652541b0396fcf248f29910fe3b1",
+      "sentencesRead": 45,
+      "headsRead": [
+        "Parkovacie miesto nezachytí celú trasu",
+        "Zákon a pravidlá domu určovali rozdielne požiadavky",
+        "Odpojenie zariadenia nenahradilo chýbajúci súhlas",
+        "Mestská podpora a termín montáže"
+      ],
+      "paragraphOpenersRead": [
+        "nabíjací",
+        "taiwanský",
+        "medzi",
+        "pripojenie",
+        "článok",
+        "ich",
+        "porušenie",
+        "ustanovenie",
+        "obyvateľ",
+        "spor",
+        "kde",
+        "písomná",
+        "kaohsiunské",
+        "ak",
+        "oficiálne"
+      ],
+      "veryShortAtMost8": 11,
+      "longAtLeast32": [],
+      "allExtractedSentencesActuallyRead": true,
+      "FAQAndTables": "Read separately in manuscript; metrics arrays exclude metadata and tables; FAQ17, tables and URLs checked independently"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "60cb072f1ef19f7a1391d22cb2973597b602076752b3f5b387fc81e0b98e8d92",
+      "sentencesRead": 46,
+      "headsRead": [
+        "Za čo sa zaplatilo a čo zostalo na účte",
+        "Dnešné pravidlá zachovávajú vrátenie nevyužitých plnení",
+        "História účtu dopĺňa poslednú snímku obrazovky"
+      ],
+      "paragraphOpenersRead": [
+        "zostatok",
+        "keelung",
+        "podľa",
+        "súd",
+        "ôsma",
+        "pri",
+        "súčasné",
+        "bod",
+        "ako",
+        "do",
+        "snímka",
+        "bod",
+        "zakázaná",
+        "v",
+        "spotrebiteľ",
+        "oficiálne"
+      ],
+      "veryShortAtMost8": 14,
+      "longAtLeast32": [],
+      "allExtractedSentencesActuallyRead": true,
+      "FAQAndTables": "Read separately in manuscript; metrics arrays exclude metadata and tables; FAQ17, tables and URLs checked independently"
+    }
+  ],
+  "resolvedExamples": [
+    {
+      "id": "918",
+      "sentence": "Záručný doklad však ako deň odovzdania označoval 28. november.",
+      "finding": "Day and nominative month remain one sentence; normal spelling retained."
+    },
+    {
+      "id": "920",
+      "sentence": "Zverejnený termín podania bol 30. september.",
+      "finding": "Day and nominative month remain one sentence; following Lehota už uplynula. is a separate sentence."
+    },
+    {
+      "ids": [
+        "915",
+        "919",
+        "920"
+      ],
+      "finding": "Oficiálne zdroje boli overované 25.–26. októbra 2026. is separated from the genuine following Článok sentence."
+    }
+  ],
+  "otherBoundaryReview": "Ordinal day/month dates, Article 40 ods. 1 bodu 2, Article 85-1, Article 22-2, Article 6 ods. 1 bodu 5, abbreviations and email preserved without invented short fragments. No consecutive >=32-unit sentences. No tool change by author.",
+  "remainingMachineLimitations": "Word/sentence heuristics do not establish legal or native fluency. Body arrays do not replace independent metadata, table, FAQ or legal review."
+}

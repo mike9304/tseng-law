@@ -1,0 +1,103 @@
+{
+  "atUTC": "2026-10-26T11:03:20.101639+00:00",
+  "status": "author-freeze-copy-only",
+  "authorReport": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sk-existing-repairs.md",
+    "sha256": "f1f80d653241f28e716491186f9a4f1de66410efe13bab0bb5e53d32e2e57bc9"
+  },
+  "currentFiles": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/existing-repairs/src/content/columns-sk/014-taiwan-mandatory-employment-period.md",
+      "sha256": "631c8e1ba003b6bc0268a09e76e67af95fea57384be4826484850c3399a68ef6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/existing-repairs/src/content/columns-sk/877-slovak-exporter-taiwan-unpaid-invoice-recovery.md",
+      "sha256": "60638adf443098093688db12bb8be6374d858783382548fb91afd5a0e963d911"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/existing-repairs/src/content/columns-sk/878-slovak-business-taiwan-subsidiary-branch-office.md",
+      "sha256": "f9998228d7d54128519262cc1884a86e8d62906e66db27189b515c9cba7d9da2"
+    }
+  ],
+  "references": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sk-existing-repairs.md",
+      "sha256": "f1f80d653241f28e716491186f9a4f1de66410efe13bab0bb5e53d32e2e57bc9"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-inputs.json",
+      "sha256": "4c9ff8f33f2f412305afe187a810f6f0e9e3f1016e0375ded1f2b602cef20ae4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-final-integrity.json",
+      "sha256": "203348a5de6b91f548e10631378208e9a2444269aaba364dea1182801b734786"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-final-structure.json",
+      "sha256": "9082dd1e7c5ab714cf07c9b9633909be50d01ba1c7a975d10cadba3be89784f2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-final-boundary-review.json",
+      "sha256": "3bd5552de3167b10a27d7c65c9715d7bc5fcab484849d2fbd162da3bf5275157"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-boundary-issues.json",
+      "sha256": "be3227e3d42e4a31aff45f45df99bee87935208123859d42f8ca157ac398da55"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-r3-attempt-note.json",
+      "sha256": "ec3f1f758768aeea63c3becda1d64f2b674f6cdd48771f75cd93ddbab970fcc6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-edits-r1.json",
+      "sha256": "ab13ae5eb8a5f63f1d10790fbc11a6140a9c261719d22b393b36f2ac47d30096"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-edits-r2.json",
+      "sha256": "3d94630a7c80e166be260c68b5609d84d0b41b4fab2d700ea8d26440570e7822"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-edits-r3.json",
+      "sha256": "863f962b65e96f60e418e99912cb32b5e31f4c0b65e1971448eb69231edc39c2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-variety-initial.json",
+      "sha256": "03d594c76f7bffc80242a14132b07dd6c486d1d9a63a6003285afef6ba50eff4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-variety-r1.json",
+      "sha256": "540b359fc898173d17048d7d17215a5293ffeda1fdfc78a676196b092d181b04"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-variety-r2.json",
+      "sha256": "fbf8f0cbc90156c8c940402e93f87758851f8bc9264b86749c9b745d499df99e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-variety-installed-before.json",
+      "sha256": "fa03e036e53f55829376ec7b8a2d01010464528e360ed3016bead3b538a67494"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-variety-r3.json",
+      "sha256": "3b61d2c0cf6d800b70f3adfc6efbfa32fb740698df3da3a8f7e6a0330fb177c6"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-variety-r3-applied.json",
+      "sha256": "f08ebfed1d7f19c5dd4071453ca510ef1344ff6f286749f9e7f33549e82d3a0c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-existing-variety-final.json",
+      "sha256": "13a007b1213f79524ff53148de8f3e3ddfd91f981cec11e570e3e585081cc204"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/sk-tr-root-install/ROOT-INSTALLATION.json",
+      "sha256": "4a71e4966c7eabc64828cda77ca6161b007a8a794525c88e1fda1d8dd192fbe9"
+    }
+  ],
+  "unresolvedMandatoryChanges": 0,
+  "limits": [
+    "Not independent review",
+    "Not fresh legal-source research",
+    "Legacy metadata retained",
+    "No R edits, git, deployment, browser/SSR or public verification"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "at": "2026-10-26T10:49:41.702244+00:00",
+  "status": "INSTALLED_COMBINED_TEST_PASS",
+  "prepared": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/sk-tr-root-install/PREPARED.json",
+    "sha256": "661e111480515eeab7b0a7931b87e948336173b5d5a69bebc7fcc44087a574f6"
+  },
+  "files": [
+    {
+      "relativePath": "profiles/sk.json",
+      "beforeSHA": "9c1b41e0373934c758fe139bdfdb3ea229d9fe628d967d01faaf8c251968ef8c",
+      "afterSHA": "2ea68f2ea8e9a6876c35ea895d8469bcf2c9e6091bb9c64f5bf0270c015bd9af",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/sk-tr-root-install/candidate/profiles/sk.json",
+      "candidateSources": [
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/sk-numeric-date/candidate/profiles/sk.json"
+      ]
+    },
+    {
+      "relativePath": "tests/test_batch04.py",
+      "beforeSHA": "5d5bca34e6abe04d85ce63f10e82d7e924b8006200a43df08c357bf0dddc6602",
+      "afterSHA": "caec7d6010ac73a17e71d20dac44d7c8bd4e4eae14a773239e8035cda9bf5286",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/sk-tr-root-install/candidate/tests/test_batch04.py",
+      "candidateSources": [
+        "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/tr-ordinal-boundaries/pl-candidate/tests/test_batch04.py",
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/sk-numeric-date/candidate/tests/test_batch04.py"
+      ]
+    },
+    {
+      "relativePath": "tests/test_batch05.py",
+      "beforeSHA": "a7cbbd6d4378ef45342bbba4be559f31a6885900303242dfd0ef6ee163be90e3",
+      "afterSHA": "6fd92be015f025d2b86c195f79e01380e9b8c2c4cee5fefbe765276dbee2ca14",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/sk-tr-root-install/candidate/tests/test_batch05.py",
+      "candidateSources": [
+        "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/tr-ordinal-boundaries/pl-candidate/tests/test_batch05.py",
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/sk-numeric-date/candidate/tests/test_batch05.py"
+      ]
+    },
+    {
+      "relativePath": "tests/test_sk_numeric_dates.py",
+      "beforeSHA": null,
+      "afterSHA": "d589e0b40523c415ea14c121ab269c78f64504934db540adb9607231b633110a",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/sk-tr-root-install/candidate/tests/test_sk_numeric_dates.py",
+      "candidateSources": [
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/sk-numeric-date/candidate/tests/test_sk_numeric_dates.py"
+      ]
+    },
+    {
+      "relativePath": "tests/sk-numeric-date/neutral-fixtures.json",
+      "beforeSHA": null,
+      "afterSHA": "76b54aebf2ad6f95588befe4ee33cbd3ca4b1ccd2b3e87f6aabac17ca1b26856",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/sk-tr-root-install/candidate/tests/sk-numeric-date/neutral-fixtures.json",
+      "candidateSources": [
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/sk-numeric-date/candidate/tests/sk-numeric-date/neutral-fixtures.json"
+      ]
+    },
+    {
+      "relativePath": "profiles/tr.json",
+      "beforeSHA": "1f44c794464be7750a83629be356d11b45ef9a4d174b3a7b13ef5478163c2bbc",
+      "afterSHA": "ac0f3d212c39e794053ec72fb742c74ebeb29f4111700540746a4feb32797423",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/sk-tr-root-install/candidate/profiles/tr.json",
+      "candidateSources": [
+        "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/tr-ordinal-boundaries/pl-candidate/profiles/tr.json"
+      ]
+    },
+    {
+      "relativePath": "tests/test_tr_ordinal_boundaries.py",
+      "beforeSHA": null,
+      "afterSHA": "29ffec2d74cc5f520bae4e9621d43bf2b6e1a53a14b213f294ee9fd70ccf1624",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/sk-tr-root-install/candidate/tests/test_tr_ordinal_boundaries.py",
+      "candidateSources": [
+        "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/tr-ordinal-boundaries/pl-candidate/tests/test_tr_ordinal_boundaries.py"
+      ]
+    },
+    {
+      "relativePath": "tests/tr-ordinal-boundaries/neutral-fixtures.json",
+      "beforeSHA": null,
+      "afterSHA": "a986366914d33de1ecbd3c78927221affe960b344a1af95bacc3060ec5832905",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/sk-tr-root-install/candidate/tests/tr-ordinal-boundaries/neutral-fixtures.json",
+      "candidateSources": [
+        "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/tr-ordinal-boundaries/pl-candidate/tests/tr-ordinal-boundaries/neutral-fixtures.json"
+      ]
+    },
+    {
+      "relativePath": "tests/tr-ordinal-boundaries/neutral-relative-fixtures.json",
+      "beforeSHA": null,
+      "afterSHA": "1652fdc6c87664ad73953816a2e6497b5c2c566f5b80dcf69965fbfadbf83f56",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/sk-tr-root-install/candidate/tests/tr-ordinal-boundaries/neutral-relative-fixtures.json",
+      "candidateSources": [
+        "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/tr-ordinal-boundaries/pl-candidate/tests/tr-ordinal-boundaries/neutral-relative-fixtures.json"
+      ]
+    }
+  ],
+  "independentReviews": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/tr-checker-independent-final-manifest.json",
+      "sha256": "7c0bace2b16025d7280d2177db351fbe95791db733bdd10e57b8b69e60aa0391",
+      "verifiedEvidence": 19
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-numeric-checker-independent-final-manifest.json",
+      "sha256": "3ee9920c9b2325666522f77c64046b68bb59f5222fa443c860b2050b5869d3ed",
+      "verifiedEvidence": 20
+    }
+  ],
+  "unchangedProduction": 48,
+  "note": "Only9 bounded files copied. Shared PL engines/MULTILINGUAL-METHOD and all other profiles unchanged. R not modified. Initial preparation wrong METHOD path error retained.",
+  "combinedTest": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/tooling/sk-tr-root-install/combined-unittest.json",
+    "sha256": "4298bed1528c9838917df7ad5a83ef9e04caf66e0588fe9f8e45e1a072b666cb",
+    "exitCode": 0
+  }
+}

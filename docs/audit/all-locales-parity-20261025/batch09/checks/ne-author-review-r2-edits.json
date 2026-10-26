@@ -1,0 +1,149 @@
+{
+  "atUTC": "2026-10-26T09:26:29.903627+00:00",
+  "mandatoryClosedByAuthor": [
+    "M01",
+    "M02",
+    "M03"
+  ],
+  "optionalAdopted": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05"
+  ],
+  "edits": [
+    {
+      "id": "M01",
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "old_string": "9 फेब्रुअरी 2022 को फैसलाले निर्माण व्यवसायीको पुनरावेदन र पुनरावेदनकै क्रममा थपिएको दाबी दुवै आधारहीन ठहर गरी अस्वीकार गर्‍यो। यो दाबीको गुणदोष हेरेर गरिएको निर्णय थियो। फैसलामा थप पुनरावेदन गर्न नपाइने उल्लेख छ।",
+      "new_string": "9 फेब्रुअरी 2022 को फैसलाले निर्माण व्यवसायीको पुनरावेदन र पुनरावेदनकै क्रममा थपिएको दाबी दुवै आधारहीन ठहर गरी अस्वीकार गर्‍यो। निर्माण व्यवसायीले ढिलाइबापत ब्याज तिर्नुपर्ने निर्णय कायम रह्यो। यो दाबीको गुणदोष हेरेर गरिएको निर्णय थियो। फैसलामा थप पुनरावेदन गर्न नपाइने उल्लेख छ।",
+      "reason": "Appeal/additional-claim dismissal and no further appeal are present, but the maintained obligation to pay delay interest is absent throughout body, summary and FAQ. This is the concrete outcome of canonical 918-C1, not a new optional official-law detail.",
+      "meaning_preserved": "Restore the existing canonical outcome without inventing the potentially inconsistent amount in the reprinted judgment; preserve court/date/finality."
+    },
+    {
+      "id": "M02",
+      "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "old_string": "  - q: \"निर्णयपछि पुनरावलोकनमा जवाफ दिन पाए पहिलेको सुनुवाइको कमी पूरा हुन्छ?\"",
+      "new_string": "  - q: \"अनुसन्धान सकिएपछि मात्र कामदारलाई सुरक्षा दिनुपर्ने हो?\"",
+      "reason": "FAQ2 substitutes the later-review-hearing issue for the prescribed concurrent protection/fair-investigation question; FAQ3 presents an omnibus private-employer duty answer but omits the required public-service/private-law transfer boundary. The body retains much of this content, so this is a FAQ contract/scope omission rather than a claim that the entire article states the wrong law.",
+      "meaning_preserved": "Keep three FAQ items. Preserve victim-worker complaint trigger, needs/circumstances for help/protection, investigation duty and concurrent protection; keep coordination may and continued investigation must in existing body; later-review-hearing defect already remains in body."
+    },
+    {
+      "id": "M02",
+      "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "old_string": "    a: \"यस मुद्दामा भएन। पछिको पुनरावलोकनमा दिएको जवाफले पहिले अनुशासन निर्णय गर्नुअघि दिनुपर्ने वैध सूचना र आफ्नो भनाइ तथा प्रतिरक्षा राख्ने अवसरको कमी सुधार्न नसकेको अदालतले भन्यो।\"",
+      "new_string": "    a: \"पीडित कामदारको उजुरीबाट जानकारी पाएपछि रोजगारदाताले पुनरावृत्ति रोक्ने कदम चाल्नुपर्छ, आवश्यकता र घटनाअनुसार परामर्श, सहायता तथा सुरक्षा दिनुपर्छ र अनुसन्धान अघि बढाउनुपर्छ। सुरक्षा र निष्पक्ष अनुसन्धान सँगै चल्न सक्छन्।\"",
+      "reason": "FAQ2 substitutes the later-review-hearing issue for the prescribed concurrent protection/fair-investigation question; FAQ3 presents an omnibus private-employer duty answer but omits the required public-service/private-law transfer boundary. The body retains much of this content, so this is a FAQ contract/scope omission rather than a claim that the entire article states the wrong law.",
+      "meaning_preserved": "Keep three FAQ items. Preserve victim-worker complaint trigger, needs/circumstances for help/protection, investigation duty and concurrent protection; keep coordination may and continued investigation must in existing body; later-review-hearing defect already remains in body."
+    },
+    {
+      "id": "M02",
+      "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "old_string": "  - q: \"निजी रोजगारदाताले दुर्व्यवहारको उजुरी पाए के गर्नुपर्छ?\"",
+      "new_string": "  - q: \"निजी कम्पनीले निजामती कर्मचारीको यही अनुशासन प्रक्रिया अपनाउन सक्छ?\"",
+      "reason": "FAQ2 substitutes the later-review-hearing issue for the prescribed concurrent protection/fair-investigation question; FAQ3 presents an omnibus private-employer duty answer but omits the required public-service/private-law transfer boundary. The body retains much of this content, so this is a FAQ contract/scope omission rather than a claim that the entire article states the wrong law.",
+      "meaning_preserved": "Keep three FAQ items. Preserve victim-worker complaint trigger, needs/circumstances for help/protection, investigation duty and concurrent protection; keep coordination may and continued investigation must in existing body; later-review-hearing defect already remains in body."
+    },
+    {
+      "id": "M02",
+      "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "old_string": "    a: \"पुनरावृत्ति रोक्ने कदम, आवश्यकता र घटनाअनुसार परामर्श, सहायता तथा सुरक्षा र अनुसन्धान अघि बढाउनुपर्छ। अनुसन्धान र समन्वय वस्तुगत, निष्पक्ष र न्यायोचित हुनुपर्छ; अनुसन्धानमा पर्याप्त भनाइ तथा प्रतिरक्षाको अवसर र स्वार्थ बाझिने अवस्थाबाट अलग रहने नियम पालना गर्नुपर्छ। उजुरीकर्ताको इच्छाअनुसार समन्वय गर्न सकिन्छ, तर सहमति नभए अनुसन्धान जारी राख्नुपर्छ।\"",
+      "new_string": "    a: \"यो फैसला निजामती कर्मचारीको मूल्याङ्कन र बर्खास्तगीसम्बन्धी हो। निजी कम्पनीले आफूमाथि लागू व्यावसायिक सुरक्षा तथा स्वास्थ्य, श्रम कानुन र सम्झौताका नियम हेर्नुपर्छ। समयअघि निर्णय नतोक्ने, भनाइ र प्रतिरक्षाको अवसर दिने तथा विरोधाभासी प्रमाण जाँच्ने कुराले समीक्षा गर्न मद्दत गर्छ, तर फरक कानुनी आधार प्रतिस्थापन गर्दैन।\"",
+      "reason": "FAQ2 substitutes the later-review-hearing issue for the prescribed concurrent protection/fair-investigation question; FAQ3 presents an omnibus private-employer duty answer but omits the required public-service/private-law transfer boundary. The body retains much of this content, so this is a FAQ contract/scope omission rather than a claim that the entire article states the wrong law.",
+      "meaning_preserved": "Keep three FAQ items. Preserve victim-worker complaint trigger, needs/circumstances for help/protection, investigation duty and concurrent protection; keep coordination may and continued investigation must in existing body; later-review-hearing defect already remains in body."
+    },
+    {
+      "id": "M03",
+      "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "old_string": "चार्जर बन्द गरेको, ताल्चा लगाएको र साँचो आफूसँग राखेको भन्ने दाबी सत्य मान्दा पनि आवश्यक सहमति र सुरक्षा जाँचको कमी पूरा नहुने अदालतको निष्कर्ष रह्यो। उपकरण अहिले नचल्नु र साझा भागमा राख्न मिल्ने स्वीकृति हुनु अलग प्रश्न हुन्।",
+      "new_string": "चार्जर बन्द गरेको, ताल्चा लगाएको र साँचो व्यवस्थापन समितिलाई बुझाउन तयार रहेको भन्ने दाबी सत्य मान्दा पनि आवश्यक सहमति र सुरक्षा जाँचको कमी पूरा नहुने अदालतको निष्कर्ष रह्यो। उपकरण अहिले नचल्नु र साझा भागमा राख्न मिल्ने स्वीकृति हुनु अलग प्रश्न हुन्।",
+      "reason": "आफूसँग राखेको means the resident kept the key themselves; the source says the resident was willing to hand it to the management committee. FAQ also says keeping, not handing over. Conditional judicial reasoning is otherwise retained.",
+      "meaning_preserved": "Preserve stopped/locked assertions and even-if-true reasoning; change only the offered recipient/action, without turning a party assertion into an established fact."
+    },
+    {
+      "id": "M03",
+      "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "old_string": "    a: \"यस मुद्दामा त्यस्तो तर्क सफल भएन। बन्द गरेको, ताल्चा लगाएको र साँचो राखेको भन्ने दाबी सत्य माने पनि अदालतले आवश्यक सहमति र सुरक्षा जाँचको कमी हटेको मानेन। अदालतको उक्त विश्लेषणले ती दाबीलाई स्थापित तथ्य मानेको होइन।\"",
+      "new_string": "    a: \"यस मुद्दामा त्यस्तो तर्क सफल भएन। बन्द गरेको, ताल्चा लगाएको र साँचो व्यवस्थापन समितिलाई बुझाउन तयार रहेको भन्ने दाबी सत्य माने पनि अदालतले आवश्यक सहमति र सुरक्षा जाँचको कमी हटेको मानेन। अदालतको उक्त विश्लेषणले ती दाबीलाई स्थापित तथ्य मानेको होइन।\"",
+      "reason": "आफूसँग राखेको means the resident kept the key themselves; the source says the resident was willing to hand it to the management committee. FAQ also says keeping, not handing over. Conditional judicial reasoning is otherwise retained.",
+      "meaning_preserved": "Preserve stopped/locked assertions and even-if-true reasoning; change only the offered recipient/action, without turning a party assertion into an established fact."
+    },
+    {
+      "id": "S01",
+      "file": "915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "old_string": "NT$44,417,150 अस्पताल निर्माणको ठेकेदारले मध्यस्थताबाट पाएको रकम थियो। सार्वजनिक खरिद गर्ने निकायले त्यस निर्णयलाई रद्द गराउन मुद्दा दियो र सफल भयो। ठेकेदारको पुनरावेदन पनि सर्वोच्च अदालतले 12 जुलाई 2017 मा अस्वीकार गर्‍यो; [106年度台上字第723號 को आधिकारिक विवरण](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693) ले निर्णय रद्द भएको परिणाम अन्तिम भएको बताउँछ।",
+      "new_string": "NT$44,417,150 मध्यस्थ निर्णयमा अस्पताल निर्माणको ठेकेदारको पक्षमा तोकिएको रकम थियो। सार्वजनिक खरिद गर्ने निकायले त्यस निर्णयलाई रद्द गराउन मुद्दा दियो र सफल भयो। ठेकेदारको पुनरावेदन पनि सर्वोच्च अदालतले 12 जुलाई 2017 मा अस्वीकार गर्‍यो; [106年度台上字第723號 को आधिकारिक विवरण](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693) ले निर्णय रद्द भएको परिणाम अन्तिम भएको बताउँछ।",
+      "reason": "पाएको रकम can be read as money actually received. Context and summary already identify an award, so this is a precision improvement rather than proof of a false cash-payment statement.",
+      "meaning_preserved": "Distinguish awarded amount from verified actual payment; no amount/result change."
+    },
+    {
+      "id": "S02",
+      "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "old_string": "    a: \"प्रतिवेदन कसले पायो, त्यसपछि के सोधियो, कामदारको सम्पर्क र सफाइबारे के निर्णय भयो, सञ्चालक समितिले के भन्यो तथा सम्पत्ति हस्तान्तरण कसले स्वीकृत गर्‍यो भन्ने अभिलेख उपयोगी हुन्छन्। बाँकी आर्थिक स्रोत पनि सँगै हेर्नुपर्छ। कागज राखेकै कारण आवश्यक सुधार वा जानकारी दिने दायित्व पूरा भएको मानिँदैन।\"",
+      "new_string": "    a: \"प्रतिवेदन कसले पायो, त्यसपछि के सोधियो, कामदार रसायनको सम्पर्कमा परेको अवस्था र प्रदूषण हटाउने कामबारे के निर्णय भयो, सञ्चालक समितिले के भन्यो तथा सम्पत्ति हस्तान्तरण कसले स्वीकृत गर्‍यो भन्ने अभिलेख उपयोगी हुन्छन्। बाँकी आर्थिक स्रोत पनि सँगै हेर्नुपर्छ। कागज राखेकै कारण आवश्यक सुधार वा जानकारी दिने दायित्व पूरा भएको मानिँदैन।\"",
+      "reason": "Standalone FAQ contact and cleaning terms are vague for chemical exposure and remediation. The body already provides the pollution/chemical context, so no new liability requirement is demanded.",
+      "meaning_preserved": "Clarify what exposure and remediation records refer to; preserve documentary usefulness rather than making a new mandatory checklist."
+    },
+    {
+      "id": "S02",
+      "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "old_string": "खरिदअघि उठेका प्रश्न र त्यसका उत्तर एउटै अभिलेखमा हुँदा पछि कसले कुन जोखिम स्वीकार गरेको थियो भन्ने देखिन्छ। कामदारको रासायनिक सम्पर्क, सफाइको योजना र सम्पत्ति हस्तान्तरणका स्वीकृति छुट्टाछुट्टै फाइलमा मात्र रहेमा निर्णयको क्रम पुनः बनाउन कठिन हुन्छ। मिति जोडेर तुलना गर्दा त्यो अन्तर खुल्छ।",
+      "new_string": "खरिदअघि उठेका प्रश्न र त्यसका उत्तर एउटै अभिलेखमा हुँदा पछि कसले कुन जोखिम स्वीकार गरेको थियो भन्ने देखिन्छ। कामदार रसायनको सम्पर्कमा परेको अवस्था, प्रदूषण हटाउने योजना र सम्पत्ति हस्तान्तरणका स्वीकृति छुट्टाछुट्टै फाइलमा मात्र रहेमा निर्णयको क्रम पुनः बनाउन कठिन हुन्छ। मिति जोडेर तुलना गर्दा त्यो अन्तर खुल्छ।",
+      "reason": "Standalone FAQ contact and cleaning terms are vague for chemical exposure and remediation. The body already provides the pollution/chemical context, so no new liability requirement is demanded.",
+      "meaning_preserved": "Clarify what exposure and remediation records refer to; preserve documentary usefulness rather than making a new mandatory checklist."
+    },
+    {
+      "id": "S03",
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "old_string": "seoTitle: \"ताइवानको निर्माणाधीन घर खरिद: ऋणपत्र र हस्तान्तरणको म्याद\"",
+      "new_string": "seoTitle: \"ताइवानको निर्माणाधीन घर खरिद: ऋणसम्बन्धी पत्र र हस्तान्तरणको म्याद\"",
+      "reason": "A compressed financial-instrument term can distract from the actual bank-progress letter. Main title and body context are clear, so classify as optional wording clarification, not a new holding.",
+      "meaning_preserved": "Both SEO title and later first-letter reference describe correspondence concerning the loan, not a different financing instrument."
+    },
+    {
+      "id": "S03",
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "old_string": "खरिदकर्ताले सम्झौताका किस्ताहरू पालना गरेको र वास्तविक हस्तान्तरणअघि रकम तिरेको अवस्था अदालतले हेर्‍यो। पहिलो ऋणपत्रपछि तुरुन्तै सबै रकम तिर्नुपर्ने थियो भन्ने निर्माण व्यवसायीको तर्क स्वीकार भएन। यस परिणामले हरेक खरिदकर्तालाई भुक्तानी रोक्ने सामान्य अधिकार दिँदैन।",
+      "new_string": "खरिदकर्ताले सम्झौताका किस्ताहरू पालना गरेको र वास्तविक हस्तान्तरणअघि रकम तिरेको अवस्था अदालतले हेर्‍यो। पहिलो ऋणसम्बन्धी पत्रपछि तुरुन्तै सबै रकम तिर्नुपर्ने थियो भन्ने निर्माण व्यवसायीको तर्क स्वीकार भएन। यस परिणामले हरेक खरिदकर्तालाई भुक्तानी रोक्ने सामान्य अधिकार दिँदैन।",
+      "reason": "A compressed financial-instrument term can distract from the actual bank-progress letter. Main title and body context are clear, so classify as optional wording clarification, not a new holding.",
+      "meaning_preserved": "Both SEO title and later first-letter reference describe correspondence concerning the loan, not a different financing instrument."
+    },
+    {
+      "id": "S05",
+      "file": "921-taiwan-online-game-coins-refund-judgment.md",
+      "old_string": "    a: \"प्रयोग नभएका सशुल्क पोइन्ट वा प्रयोग नभएको खेल शुल्कबाट आवश्यक लागत घटाएर सम्झौता अन्त्य भएको 30 दिनभित्र फिर्ता गर्नुपर्छ, वा पक्षहरूले सहमति गरेको अर्को तरिका अपनाउन सक्छन्। खेल सुरु गरेको सात दिनभित्र लिखित रूपमा सम्झौताबाट पछि हट्ने व्यवस्था छुट्टै छ।\"",
+      "new_string": "    a: \"उपभोक्ताले कुनै पनि समयमा सम्झौता अन्त्य गर्न सक्छ। प्रयोग नभएका सशुल्क पोइन्ट वा प्रयोग नभएको खेल शुल्कबाट आवश्यक लागत घटाएर सम्झौता अन्त्य भएको 30 दिनभित्र फिर्ता गर्नुपर्छ, वा पक्षहरूले सहमति गरेको अर्को तरिका अपनाउन सक्छन्। खेल सुरु गरेको सात दिनभित्र लिखित रूपमा सम्झौताबाट पछि हट्ने व्यवस्था छुट्टै छ।\"",
+      "reason": "FAQ2 distinguishes the seven-day written route but does not itself state that ordinary termination is available at any time; the body already does. Add that existing premise for FAQ self-containment without expanding rights.",
+      "meaning_preserved": "Preserve unused paid points OR unused game fees, necessary-cost deduction, termination-based30days OR bilateral agreement; no anytime full-refund promise."
+    },
+    {
+      "id": "S04",
+      "file": "915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "old_string": "निर्माण, प्राविधिक सेवा र सामान आपूर्तिको सीमा सम्झौताका कागजातबाट खुल्छ। प्रारम्भिक कानुनी सोधपुछमा परियोजनाको प्रकार, मागिएको उपचार र अर्को प्रक्रियाको मिति उल्लेख गर्दा समीक्षा केन्द्रित हुन्छ। [सम्पर्क पृष्ठ अंग्रेजीमा छ](/en/contact)।",
+      "new_string": "[सम्पर्क पृष्ठ अंग्रेजीमा छ](/en/contact)। प्रारम्भिक कानुनी सोधपुछमा परियोजनाको प्रकार, मागिएको उपचार र अर्को प्रक्रियाको मिति उल्लेख गर्दा समीक्षा केन्द्रित हुन्छ। निर्माण, प्राविधिक सेवा र सामान आपूर्तिको सीमा सम्झौताका कागजातबाट खुल्छ।",
+      "reason": "Move the existing English-contact/email sentence earlier in the same paragraph; finish with the existing contract-type, transaction/transfer date, or payment/termination/balance/response comparison sentence. No new legal command or contact channel.",
+      "meaning_preserved": true
+    },
+    {
+      "id": "S04",
+      "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "old_string": "कुनै कारोबारको समीक्षा सुरु गर्दा ताइवानको सम्बन्धित कम्पनी, खरिदको स्वरूप र प्रस्तावित हस्तान्तरण वा कारोबार पूरा गर्ने मिति उपयोगी हुन्छन्। प्राविधिक प्रतिवेदन र संवेदनशील कामदार विवरण पठाउने तरिका पहिले तय गर्न सकिन्छ। [सोधपुछको पृष्ठ अंग्रेजीमा उपलब्ध छ](/en/contact)।",
+      "new_string": "[सोधपुछको पृष्ठ अंग्रेजीमा उपलब्ध छ](/en/contact)। प्राविधिक प्रतिवेदन र संवेदनशील कामदार विवरण पठाउने तरिका पहिले तय गर्न सकिन्छ। कुनै कारोबारको समीक्षा सुरु गर्दा ताइवानको सम्बन्धित कम्पनी, खरिदको स्वरूप र प्रस्तावित हस्तान्तरण वा कारोबार पूरा गर्ने मिति उपयोगी हुन्छन्।",
+      "reason": "Move the existing English-contact/email sentence earlier in the same paragraph; finish with the existing contract-type, transaction/transfer date, or payment/termination/balance/response comparison sentence. No new legal command or contact channel.",
+      "meaning_preserved": true
+    },
+    {
+      "id": "S04",
+      "file": "921-taiwan-online-game-coins-refund-judgment.md",
+      "old_string": "गुनासो अघि बढाउन [आधिकारिक अनलाइन प्रणाली](https://appeal.cpc.ey.gov.tw/) उपलब्ध छ। रकम, अन्त्यको सूचना, बाँकी मूल्यको विवरण र कम्पनीको जवाफ एकै क्रममा राख्दा विवादको विषय स्पष्ट हुन्छ। कानुनी सोधपुछका लागि चरण र मिति [इमेलमा](mailto:wei@hoveringlaw.com.tw) संक्षेप गर्न सकिन्छ।",
+      "new_string": "गुनासो अघि बढाउन [आधिकारिक अनलाइन प्रणाली](https://appeal.cpc.ey.gov.tw/) उपलब्ध छ। कानुनी सोधपुछका लागि चरण र मिति [इमेलमा](mailto:wei@hoveringlaw.com.tw) संक्षेप गर्न सकिन्छ। रकम, अन्त्यको सूचना, बाँकी मूल्यको विवरण र कम्पनीको जवाफ एकै क्रममा राख्दा विवादको विषय स्पष्ट हुन्छ।",
+      "reason": "Move the existing English-contact/email sentence earlier in the same paragraph; finish with the existing contract-type, transaction/transfer date, or payment/termination/balance/response comparison sentence. No new legal command or contact channel.",
+      "meaning_preserved": true
+    }
+  ],
+  "exactContextualReplacements": 16,
+  "forwardAndInverseVerified6of6": true,
+  "sourceChangedByThisProofRun": false,
+  "independentRecheck": "pending"
+}

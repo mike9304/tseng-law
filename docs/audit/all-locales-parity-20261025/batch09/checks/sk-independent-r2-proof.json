@@ -1,0 +1,395 @@
+{
+  "atUTC": "2026-10-26T10:06:10.793520+00:00",
+  "status": "TARGETED_PROOF_COMPLETE",
+  "rows": [
+    {
+      "id": 915,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSHA256": "dd5ba0865b06900c6cf13dca431a93c0b6a9d86c0e5c8ca6cc136ec7170deaa3",
+      "sha256": "dd5ba0865b06900c6cf13dca431a93c0b6a9d86c0e5c8ca6cc136ec7170deaa3",
+      "exactForwardAndReverseToIndependentR1": true,
+      "changes": [],
+      "numbersUnchanged": true,
+      "URLsUnchanged": true,
+      "sentenceCount": 38,
+      "unchangedR1Sentences": 38,
+      "newSentences": []
+    },
+    {
+      "id": 916,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSHA256": "dea3c656ac58e2542b9f8343fbccd95d01f811ff47653a67d9225a0948a79e82",
+      "sha256": "dea3c656ac58e2542b9f8343fbccd95d01f811ff47653a67d9225a0948a79e82",
+      "exactForwardAndReverseToIndependentR1": true,
+      "changes": [],
+      "numbersUnchanged": true,
+      "URLsUnchanged": true,
+      "sentenceCount": 45,
+      "unchangedR1Sentences": 45,
+      "newSentences": []
+    },
+    {
+      "id": 918,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSHA256": "ccf6a8391b9462f571188e5467f530b20e659bae1898cf6f9b6b63a12fb5f14d",
+      "sha256": "ccf6a8391b9462f571188e5467f530b20e659bae1898cf6f9b6b63a12fb5f14d",
+      "exactForwardAndReverseToIndependentR1": true,
+      "changes": [],
+      "numbersUnchanged": true,
+      "URLsUnchanged": true,
+      "sentenceCount": 45,
+      "unchangedR1Sentences": 45,
+      "newSentences": []
+    },
+    {
+      "id": 919,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "7a9bda014da027ab57152f645835f429ce5802446c9badea6231d1beb8bf8569",
+      "sha256": "7a9bda014da027ab57152f645835f429ce5802446c9badea6231d1beb8bf8569",
+      "exactForwardAndReverseToIndependentR1": true,
+      "changes": [],
+      "numbersUnchanged": true,
+      "URLsUnchanged": true,
+      "sentenceCount": 41,
+      "unchangedR1Sentences": 41,
+      "newSentences": []
+    },
+    {
+      "id": 920,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "001bd26dd4f6488e6e8a2413f401c1afa458652541b0396fcf248f29910fe3b1",
+      "sha256": "ecf263bf7b469ba2e3de619460d7e3945a0275dd9dd72d5261298bc58937f576",
+      "exactForwardAndReverseToIndependentR1": true,
+      "changes": [
+        "M01",
+        "O01"
+      ],
+      "numbersUnchanged": true,
+      "URLsUnchanged": true,
+      "sentences": [
+        "Nabíjací box bol na stene za parkovacím miestom, káble pokračovali po strope a nový istič sa nachádzal v spoločnej elektrickej skrini.",
+        "Vedenie sa pripájalo k meraču používanému obyvateľom.",
+        "Rozsah prác tak presiahol plochu, na ktorej parkovalo auto.",
+        "Taiwanský vrchný súd, pobočka Kaohsiung, 22. júna 2022 zamietol odvolanie obyvateľa vo veci 111年度上字第132號.",
+        "Zachoval odstránenie zariadenia a uvedenie dotknutých častí do pôvodného stavu.",
+        "Podľa rozsudku išlo o spoločné časti a zariadenia, na ktorých zmenu chýbal potrebný predchádzajúci súhlas.",
+        "Neskorší opravný prostriedok ani právoplatnosť tu nie sú potvrdené.",
+        "Medzi nespornými zisteniami bol box za miestom v suteréne, rúry prichytené k závesným prvkom v strope a nový istič v elektrickej skrini.",
+        "Súd posúdil stenu, strop aj skriňu ako spoločné časti alebo spoločné zariadenia.",
+        "Tvrdenie, že vedenie zostalo len v priestore osobitného užívania, sa s týmito zisteniami nezhodovalo.",
+        "Pripojenie k meraču používanému konkrétnym obyvateľom nevysvetľuje oprávnenie viesť káble po spoločnej stene.",
+        "Pre súd bolo podstatné, do ktorých častí domu montáž zasiahla a aký súhlas vyžadovala.",
+        "Článok 11 taiwanského zákona o správe bytových domov vyžaduje rozhodnutie zhromaždenia vlastníkov pri búraní, závažných opravách alebo zlepšeniach spoločných častí a súvisiacich zariadení.",
+        "Súd ho použil aj v tomto spore.",
+        "Samostatne posudzoval pravidlá konkrétneho domu.",
+        "Ich článok 15 vyžadoval pred doplnením elektrických vedení a potrubí súhlas správneho výboru a bezpečnostnú kontrolu energetickej spoločnosti.",
+        "Obe požiadavky mali byť splnené.",
+        "Výbor sa tým nestal univerzálnou náhradou zhromaždenia vlastníkov pri všetkých prácach podľa zákona.",
+        "Porušenie článku 11 a pravidiel domu súd spojil s povinnosťou dodržiavať ostatné predpisy a pravidlá podľa článku 6 ods. 1 bodu 5.",
+        "Výbor zaslal formálne oznámenie a pokúsil sa s obyvateľom dosiahnuť dohodu.",
+        "Keď obyvateľ povinnosť naďalej nesplnil, výbor mohol žiadať súdnu ochranu podľa tretieho odseku toho istého článku.",
+        "Ustanovenie článku 6 ods. 1 bodu 4 upravuje aj vedenia a nevyhnutné použitie spoločných častí.",
+        "Súd však túto inštaláciu pod dané ustanovenie nezaradil.",
+        "Piaty a šiesty bod odôvodnenia vychádzajú z konkrétnej trasy a pravidiel domu, nie zo všeobecného tvrdenia, že každá nabíjačka všade potrebuje totožný postup hlasovania.",
+        "Obyvateľ tvrdil, že osadil vypínač, zariadenie nepoužíva a uzamkol ho; ponúkal aj odovzdanie kľúča výboru.",
+        "Súd posudzoval právny účinok týchto tvrdení za predpokladu, že by boli pravdivé.",
+        "Ani vtedy by nezanikla povinnosť odstrániť zariadenie a obnoviť pôvodný stav.",
+        "Spor sa týkal oprávnenia vykonať práce na dotknutých miestach, nielen okamžitej prevádzkovej bezpečnosti nabíjačky.",
+        "Tvrdené nepoužívanie zariadenia chýbajúci súhlas nenahradilo.",
+        "Kde presne prejde navrhované vedenie?",
+        "Cenová ponuka s číslom parkovacieho miesta na to nemusí odpovedať.",
+        "Náčrt môže spojiť polohu boxu, steny a stropu, ktorými vedenie prechádza, aj bod pripojenia v elektrickej skrini; následne sa porovná s právami k priestorom a platnými rozhodnutiami domu.",
+        "Písomná žiadosť výboru môže obsahovať rozsah prác a otázku, kto má podľa príslušných pravidiel rozhodnúť.",
+        "Už udelený súhlas je vhodné porovnať s verziou návrhu, ktorú chce montážnik skutočne vykonať.",
+        "Iná trasa môže zasiahnuť iné práva.",
+        "Kaohsiunské oznámenie z mája 2026 zahŕňalo podporu káblových žľabov pre nabíjanie v spoločných častiach bytových domov.",
+        "Zverejnený termín podania bol 30. september.",
+        "Lehota už uplynula.",
+        "Program ilustruje potrebu spoločného plánovania vedení, ale neudeľuje súkromnoprávny súhlas na jednotlivú montáž.",
+        "Ak sa už žiada zastavenie prác alebo odstránenie zariadenia, prvý e-mail na wei@hoveringlaw.com.tw môže zhrnúť sporné pravidlo, polohu vedenia a termín na odpoveď.",
+        "Pred podpisom montážnej zmluvy má zmysel určiť, či sa začne až po získaní súhlasu a kto zaplatí náklady pri jeho nezískaní.",
+        "Inak môže k sporu o káblovú trasu pribudnúť spor o zaplatenú montáž.",
+        "Oficiálne zdroje boli overované 25.–26. októbra 2026.",
+        "Článok opisuje uvedený kaohsiunský rozsudok bez potvrdenia neskoršieho vývoja alebo právoplatnosti.",
+        "Rozsah prác a pravidlá iného domu sa posudzujú podľa jeho vlastných podkladov."
+      ],
+      "sentenceCount": 45,
+      "unchangedR1Sentences": 44,
+      "actualCLI": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "ecf263bf7b469ba2e3de619460d7e3945a0275dd9dd72d5261298bc58937f576",
+        "argv": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "--lang",
+          "sk"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md [sk] sentences=45 mean=13.1 cv=0.453 short=0.244 run3=0.047 opener_rep=0.0 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": "",
+        "metrics": {
+          "lang": "sk",
+          "sentences": 45,
+          "paras": 15,
+          "heads": 4,
+          "list_items": 0,
+          "mean_len": 13.1,
+          "len_cv": 0.453,
+          "short_share": 0.244,
+          "long_share": 0.0,
+          "para_cv": 0.241,
+          "even_run3": 0.047,
+          "top_end": "skrini",
+          "top_end_share": 0.044,
+          "ja_desu": 0,
+          "ja_da": 0,
+          "top_opener": "nabíjací",
+          "top_opener_n": 1,
+          "opener_rep": 0.0,
+          "consec_same_start": 0,
+          "cite_para_share": 0.333,
+          "cite_end_share": 0.0,
+          "contrast": 0,
+          "caveat": 0,
+          "questions": 1,
+          "num_per100": 3.05,
+          "hypo_open": false,
+          "q_open": false,
+          "formula_close": false,
+          "first": "Nabíjací box bol na stene za parkovacím miestom, káble pokračovali po strope a nový istič ",
+          "last": "Oficiálne zdroje boli overované 25.–26. októbra 2026. Článok opisuje uvedený kaohsiunský rozsudok bez potvrdenia neskorš",
+          "length_unit": "orthographic_words",
+          "short_threshold": 8,
+          "long_threshold": 32,
+          "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+        }
+      },
+      "newSentences": [
+        "Tvrdené nepoužívanie zariadenia chýbajúci súhlas nenahradilo."
+      ]
+    },
+    {
+      "id": 921,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "60cb072f1ef19f7a1391d22cb2973597b602076752b3f5b387fc81e0b98e8d92",
+      "sha256": "1d3574bf42e024b1c9a6c2bd3005d1ed452dbb13fc5015ba0a6e7556f15c1b6a",
+      "exactForwardAndReverseToIndependentR1": true,
+      "changes": [
+        "O02"
+      ],
+      "numbersUnchanged": true,
+      "URLsUnchanged": true,
+      "sentences": [
+        "Zostatok na hernom účte nemusí predstavovať nevyužité body kúpené za peniaze.",
+        "V keelunskom spore si hráč zostávajúce mince prepočítal na 243 548 NT$ a žiadal vyplatenie tejto sumy.",
+        "Súd mu nevyhovel.",
+        "Nesporné bolo, že nevyužité zakúpené body už nemal, kým zostávajúce mince plnili funkciu žetónov pri herných súbojoch.",
+        "Keelung District Court rozhodol 13. septembra 2021 vo veci 109年度消簡上字第1號.",
+        "Odvolanie hráča zamietol a rozsudok uvádzal, že ďalší opravný prostriedok nie je prípustný.",
+        "Uvedená suma bola nárokom hráča, nie priznanou platbou; rozhodnutie je v oficiálnej zbierke spotrebiteľských rozsudkov na tlačených stranách 140–153.",
+        "Podľa zmluvy si hráč najprv kúpil body a potom ich mohol použiť na herné služby alebo predmety.",
+        "Zostávajúce mince slúžili pri samotnej hre ako žetóny.",
+        "Súd ich podľa funkcie a zmluvnej klauzuly nepovažoval za nevyužité zakúpené body ani za herné poplatky prijaté prevádzkovateľom, ktoré by mal vrátiť.",
+        "Súd takisto spojil možnosť meniť tieto herné žetóny späť na hotovosť s rizikom zavedenia hazardného prvku do danej hry; nešlo o všeobecný zákaz refundácie všetkých virtuálnych hodnôt.",
+        "Ôsma časť odôvodnenia, na tlačených stranách 148–152, rozoberá aj ukončenie zmluvy.",
+        "Hráč sám prejavil vôľu skončiť zmluvný vzťah, takže súd mohol vychádzať z jeho ukončenia a posúdiť predmet požadovanej refundácie.",
+        "Tým neschválil všetky skoršie dôvody, pre ktoré prevádzkovateľ účet zablokoval alebo zmluvu ukončoval.",
+        "Pri inom type hry je potrebné rozlíšiť nákup, výmenu, použitie a zostatok.",
+        "Rovnaké slovo na obrazovke môže označovať rôzne plnenia.",
+        "Rozhodujúca je funkcia konkrétnej položky a zmluva, podľa ktorej vznikla.",
+        "Súčasné povinné a zakázané podmienky zmlúv o online hrách nadobudli v citovanom znení účinnosť 1. januára 2023, teda po tomto rozsudku.",
+        "Spor z roku 2021 sa posudzoval podľa vtedajšej zmluvy a vtedy platných pravidiel.",
+        "Bod 18 umožňuje spotrebiteľovi kedykoľvek oznámiť ukončenie zmluvy.",
+        "Prevádzkovateľ musí po odpočítaní nevyhnutných nákladov vrátiť nevyužité zakúpené body alebo nevyužité platby za hru do 30 dní od ukončenia, prípadne postupovať iným spôsobom dohodnutým oboma stranami.",
+        "Jednostranné oznámenie prevádzkovateľa takú dohodu nenahrádza.",
+        "Ako sa vypočíta vracaná suma?",
+        "Hráč môže požiadať o rozpis nevyužitej hodnoty, odpočítaných nákladov a spôsobu výpočtu a porovnať ho so zmluvou.",
+        "Pevné percento nastavené v systéme samo nepreukazuje, že každý taký odpočet je odôvodnený.",
+        "Do siedmich dní od začiatku hry možno podľa bodu 4 písomne odstúpiť od zmluvy bez uvedenia dôvodu a bez poplatku a žiadať vrátenie nevyužitých zakúpených bodov.",
+        "Začiatkom lehoty je začiatok hry.",
+        "Uplynutie siedmich dní neodstraňuje samostatnú možnosť oznámiť ukončenie podľa bodu 18 a riešiť zostávajúce nevyužité plnenia.",
+        "Snímka konečného zostatku nemusí ukázať, či ide o kúpené body, vymenené mince alebo výsledok odohraných súbojov.",
+        "Užitočné sú preto podklady, ktoré tieto etapy spájajú.",
+        "Bod 9 vyžaduje uchovávanie individuálnej hernej histórie najmenej 30 dní.",
+        "Pri žiadosti o prístup ju musí prevádzkovateľ poskytnúť do siedmich dní od prijatia žiadosti.",
+        "Včasné vyžiadanie môže doplniť údaje, ktoré na poslednej snímke chýbajú.",
+        "Zakázaná podmienka číslo 6 nedovoľuje, aby sa zmluvou určili za jediný podklad rozhodnutia sporu len história a elektronické údaje prevádzkovateľa.",
+        "Iné dôkazy nemajú byť vopred vylúčené.",
+        "Samotným firemným údajom tým nezaniká dôkazná hodnota.",
+        "V štatistike zverejnenej v máji 2026 boli online hry druhou najväčšou kategóriou prvotných spotrebiteľských sťažností za rok 2025.",
+        "Ich počet oproti predchádzajúcemu roku klesol.",
+        "Úrad zároveň pripomenul riadne vybavovanie zablokovaných účtov, zákazov vstupu a zákazníckych podnetov.",
+        "Spotrebiteľ sa môže najprv obrátiť na prevádzkovateľa a následne použiť vládny portál spotrebiteľských podnetov.",
+        "Ak ide o výklad klauzuly alebo odmietnutý prístup k dôkazom, prvý e-mail na wei@hoveringlaw.com.tw môže opísať sporný bod a termín odpovede bez prihlasovacieho hesla.",
+        "Pre doloženie požadovanej sumy pomôže spojiť platby na účet s výmenou a neskorším použitím získaných hodnôt.",
+        "Oficiálne zdroje boli overované 25.–26. októbra 2026.",
+        "Opis rozsudku vychádza z príslušných strán oficiálnej zbierky.",
+        "Pri inej hre závisí posúdenie bodov, predmetov a dôvodov ukončenia od ich skutočnej funkcie a zmluvy."
+      ],
+      "sentenceCount": 45,
+      "unchangedR1Sentences": 44,
+      "actualCLI": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "1d3574bf42e024b1c9a6c2bd3005d1ed452dbb13fc5015ba0a6e7556f15c1b6a",
+        "argv": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+          "--lang",
+          "sk"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md [sk] sentences=45 mean=13.6 cv=0.459 short=0.289 run3=0.0 opener_rep=0.062 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": "",
+        "metrics": {
+          "lang": "sk",
+          "sentences": 45,
+          "paras": 16,
+          "heads": 3,
+          "list_items": 0,
+          "mean_len": 13.6,
+          "len_cv": 0.459,
+          "short_share": 0.289,
+          "long_share": 0.0,
+          "para_cv": 0.224,
+          "even_run3": 0.0,
+          "top_end": "zmluvy",
+          "top_end_share": 0.067,
+          "ja_desu": 0,
+          "ja_da": 0,
+          "top_opener": "bod",
+          "top_opener_n": 2,
+          "opener_rep": 0.062,
+          "consec_same_start": 1,
+          "cite_para_share": 0.0,
+          "cite_end_share": 0.0,
+          "contrast": 0,
+          "caveat": 0,
+          "questions": 1,
+          "num_per100": 4.08,
+          "hypo_open": false,
+          "q_open": false,
+          "formula_close": false,
+          "first": "Zostatok na hernom účte nemusí predstavovať nevyužité body kúpené za peniaze.",
+          "last": "Oficiálne zdroje boli overované 25.–26. októbra 2026. Opis rozsudku vychádza z príslušných strán oficiálnej zbierky. Pri",
+          "length_unit": "orthographic_words",
+          "short_threshold": 8,
+          "long_threshold": 32,
+          "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+        }
+      },
+      "newSentences": [
+        "Jednostranné oznámenie prevádzkovateľa takú dohodu nenahrádza."
+      ]
+    }
+  ],
+  "actualNewContexts": [
+    {
+      "id": 920,
+      "text": "---\ntitle: \"Nabíjačka pri vlastnom parkovacom mieste zasiahla spoločné časti domu\"\nseoTitle: \"Nabíjačka elektromobilu na Taiwane: vedenie káblov a súhlas vlastníkov\"\nsummary: \"V kaohsiunskom prípade viedla inštalácia cez spoločnú stenu, strop a elektrickú skriňu. Odvolanie obyvateľa neuspelo a odstránenie zariadenia s obnovou pôvodného stavu zostalo zachované. Podpora káblových trás nenahrádza potrebný súhlas.\"\npublished: \"2026-10-26\"\nlastmod: \"2026-10-26\"\ndate_display: \"26. októbra 2026\"\nread_time: \"5 min čítania\"\ncategories: [\"Nehnuteľnosti\", \"Taiwanské rozsudky\"]\ntopic: \"litigation\"\ntags: [\"elektromobil\", \"nabíjacie zariadenie\", \"spoločné časti domu\", \"správa bytového domu\", \"súhlas vlastníkov\"]\naudience: [\"sk\"]\nauthor: \"legal-ai-assistant\"\nfeatured_image: \"/images/columns/920-case-trends-20261025.webp\"\nfeatured_image_alt: \"Elektromobil pripojený k nabíjačke na stĺpe a vedenie smerujúce k stropnej káblovej trase\"\nfeatured_image_caption: \"Vymyslená scéna\"\nfaq:\n  - q: \"Môžem si osadiť nabíjačku a viesť káble podľa vlastného rozhodnutia, ak smiem používať parkovacie miesto?\"\n    a: \"Treba preveriť celú trasu zariadenia a vedení. V tomto prípade boli dotknuté spoločná stena, strop a elektrická skriňa. Súd posudzoval rozsah prác, zákon a pravidlá konkrétneho domu; iné domy potrebujú posúdenie vlastných priestorov a pravidiel.\"\n  - q: \"Zanikne povinnosť odstrániť nabíjačku, keď ju odpojím a uzamknem?\"\n    a: \"Obyvateľ tvrdil, že zariadenie nepoužíva a uzamkol ho, a ponúkal odovzdanie kľúča výboru. Súd vysvetlil, že ani pravdivosť týchto tvrdení by neodstránila povinnosť vyplývajúcu z prác bez potrebného súhlasu. Nejde o záver, že odstránenie je vždy jediným riešením každej inštalácie.\"\n  - q: \"Nahrádza mestská podpora súhlas s prácami v spoločných častiach?\"\n    a: \"Nie. Podmienky podpory a oprávnenie zasiahnuť do spoločných častí sa posudzujú osobitne. Kaohsiung v roku 2026 podporoval káblové žľaby v spoločných častiach bytových domov, no oznámená lehota do 30. septembra už uplynula. Podpora sama nedáva obyvateľovi právo vykonať práce.\"\n---"
+    },
+    {
+      "id": 920,
+      "text": "Spor sa týkal oprávnenia vykonať práce na dotknutých miestach, nielen okamžitej prevádzkovej bezpečnosti nabíjačky. Tvrdené nepoužívanie zariadenia chýbajúci súhlas nenahradilo."
+    },
+    {
+      "id": 921,
+      "text": "Bod 18 umožňuje spotrebiteľovi kedykoľvek oznámiť ukončenie zmluvy. Prevádzkovateľ musí po odpočítaní nevyhnutných nákladov vrátiť nevyužité zakúpené body alebo nevyužité platby za hru do 30 dní od ukončenia, prípadne postupovať iným spôsobom dohodnutým oboma stranami. Jednostranné oznámenie prevádzkovateľa takú dohodu nenahrádza."
+    }
+  ],
+  "exactEdits": 3,
+  "allSixForwardReverse": true,
+  "unchangedR1BodySentences": 257,
+  "totalBodySentences": 259,
+  "newCLIRuns": 0,
+  "newFullPassClaim": false,
+  "refs": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-author-r2.md",
+      "sha256": "1f2e3373c23bd30a32a288e823f00e748112fd37f21b7174eccb03f9b503010a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-review-r1-edits.json",
+      "sha256": "ab71459b56a8a07f54434073a829b31264d240e1d0cd260b5c015d876d00ef1a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-variety-review-r2.json",
+      "sha256": "b15709593143a3b06cd0c325daa3d641a36d1f89cc78b0ab9ab360a2270aaa98"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-sentences-review-r2.json",
+      "sha256": "70872e11e8df83115cca302e026e8070b679234f4571e5575cc1101c0d8610d0"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-content-audit-review-r2.json",
+      "sha256": "2753f80a91861c5163a9138fa6143b92a60975172f2a4fef5ac886bbbdbc8cdd"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-metadata-review-r2.json",
+      "sha256": "4bbea3405716c10386a5a4a903e30c9ff348214b83d10f30c625c21fbdd665ed"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-review-r2-boundary-delta.json",
+      "sha256": "39d9e25c5d473eac4d9b13b9f6ffb1d658fd0ec9044dff30892e0955bf243484"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-final-manifest.json",
+      "sha256": "fd375bf4ea6fa683f29c4a17f4627a7a2a8ebc2ba8830648326b4a5dd47a10b5"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sk-independent.md",
+      "sha256": "48cbc86564f575411666d3bda1b03ae45fd8c5c6a4a7a95e4eba52fdd6843025"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-independent-final-manifest.json",
+      "sha256": "9be894d9b93f84bc19ecba087290867bc2beff4161b7386163d230815fcf664a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-final-manifest-r2.json",
+      "sha256": "dc63963bab8b96c74e970c7e1a73aa50f601eba98b2f100a4bc4538f0158892a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dd5ba0865b06900c6cf13dca431a93c0b6a9d86c0e5c8ca6cc136ec7170deaa3"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "dea3c656ac58e2542b9f8343fbccd95d01f811ff47653a67d9225a0948a79e82"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "ccf6a8391b9462f571188e5467f530b20e659bae1898cf6f9b6b63a12fb5f14d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "7a9bda014da027ab57152f645835f429ce5802446c9badea6231d1beb8bf8569"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "ecf263bf7b469ba2e3de619460d7e3945a0275dd9dd72d5261298bc58937f576"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "1d3574bf42e024b1c9a6c2bd3005d1ed452dbb13fc5015ba0a6e7556f15c1b6a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sk-author.md",
+      "sha256": "cae0c14f3f59115d497a03f2676128eca402a0dfe1c6fc56141ac06606009560"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-independent-findings.json",
+      "sha256": "7d4a73dcb3914d09e8deb1e865516b4c8034764708026a44732c2ca4947ca3db"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-variety-final.json",
+      "sha256": "fd5779112ee32dfb0146b9ce34af151ee2ae70e57dabbdc28823ebc05d8e5d77"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-sentences-final.json",
+      "sha256": "cdb962a531839dcac8db0e6c48820c8dfc7e07ebde7b9085fbf04ad8bfae0c8c"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+stderr | src/lib/__tests__/column-no-public-authors.test.tsx > all public columns omit author attribution (2026-10-20) > fr guidance home cards have no attribution
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at img
+    at div
+    at figure
+    at IntlHeroPlate (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/intl-design/IntlHeroPlate.tsx:8:26)
+    at section
+    at GuidanceHero (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:101:25)
+    at div
+    at GuidanceHomeBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:753:3)
+
+stderr | src/components/__tests__/home-latest-columns.test.tsx > home columns lead with the latest publication batch > ko shows its newest columns before older curated picks
+Warning: Received `true` for a non-boolean attribute `inert`.
+
+If you want to write it to the DOM, pass a string instead: inert="true" or inert={value.toString()}.
+    at nav
+    at KoMobileCta (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/ko-home/KoMobileCta.tsx:12:75)
+    at div
+    at KoHomeBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/KoHomeBody.tsx:24:23)
+    at LegacyHomePageBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/(legacy)/home-legacy.tsx:87:3)
+
+stderr | src/components/__tests__/home-latest-columns.test.tsx > home columns lead with the latest publication batch > es shows its newest columns before older curated picks
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at img
+    at div
+    at figure
+    at IntlHeroPlate (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/intl-design/IntlHeroPlate.tsx:8:26)
+    at section
+    at GuidanceHero (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:101:25)
+    at div
+    at GuidanceHomeBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:753:3)
+
+stderr | src/app/[locale]/columns/__tests__/market-boards-20261024.test.tsx > market boards render only their columns (2026-10-24) > th home: no hidden column links
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at img
+    at div
+    at figure
+    at IntlHeroPlate (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/intl-design/IntlHeroPlate.tsx:8:26)
+    at section
+    at GuidanceHero (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:101:25)
+    at div
+    at GuidanceHomeBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:753:3)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit| src/lib/__tests__/column-image-caption-label.test.ts > column image caption label > every caption is the locale fictional-scene label
+AssertionError: expected [ …(6) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "columns-nb/915-taiwan-public-contract-mediation-arbitration-same-claim.md: Fiktiv scene",
++   "columns-nb/916-taiwan-parent-company-pollution-liability-us-investor.md: Fiktiv scene",
++   "columns-nb/918-taiwan-presale-mortgage-notice-handover-judgment.md: Fiktiv scene",
++   "columns-nb/919-taiwan-workplace-bullying-investigation-hearing-judgment.md: Fiktiv scene",
++   "columns-nb/920-taiwan-apartment-ev-charger-common-area-judgment.md: Fiktiv scene",
++   "columns-nb/921-taiwan-online-game-coins-refund-judgment.md: Fiktiv scene",
++ ]
+
+ ❯ src/lib/__tests__/column-image-caption-label.test.ts:72:17
+     70|       if (m && m[1] !== LABEL[locale]) bad.push(`${file}: ${m[1]}`);
+     71|     }
+     72|     expect(bad).toEqual([]);
+       |                 ^
+     73|   });
+     74| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

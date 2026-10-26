@@ -1,0 +1,7 @@
+{
+  "originalScript": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/integration-preserve.py",
+  "originalSHA256": "240dbb2bdcedb6b177e63c08b7cb74c74bc3f67be2f0e001b1263fbd3879ec3b",
+  "originalModified": false,
+  "newScript": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/integration-preserve-r2.py",
+  "reason": "Root approved exact six-file NB caption expectation. Add only caption test to allowed scope; preserve initial source proof/count result and emit separately named R2 records."
+}

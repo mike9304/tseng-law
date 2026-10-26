@@ -1,0 +1,54 @@
+{
+  "at": "2026-10-26T10:22:43.730623+00:00",
+  "reviewer": "root AI coordinator",
+  "fullProductionDiffAndNewTestsRead": true,
+  "candidateManifestSHA256": "f1075a32564b225f5e49490b6eb93889f87a2013f411288f395d9db91c17461d",
+  "installed": [
+    {
+      "file": "variety_metrics.py",
+      "sha256": "c96c303b9af9be1a8a8965f9a503cf0617a4a36716109af3184cfff8464c81ec",
+      "baselineSHA256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "file": "variety_multilingual.py",
+      "sha256": "0b4af8c41031e6c33bc2c6518caa8875f1f2b097f44c454161100aee07ab3ab9",
+      "baselineSHA256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "file": "variety_expansion.py",
+      "sha256": "ae6cca9ef98daed82fd578e6cf0442124ecb6e43215837e1cdb0a89e4198a4e2",
+      "baselineSHA256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "file": "MULTILINGUAL-METHOD.md",
+      "sha256": "2317483892bef98c9bb2f02819cf4c8407c2e80bde96216c07a8b581bb9b0152",
+      "baselineSHA256": "e5353158512b5a0e628b99afe69956f854a2fbc471f0b7c90a5d341146e66d22"
+    },
+    {
+      "file": "tests/test_pl_reviewed_boundaries.py",
+      "sha256": "9342ee63d88aa6037515e53d2c8815aa40caa3522b1b7de2ef3e92685c2b3b04"
+    }
+  ],
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_*.py"
+  ],
+  "exitCode": 0,
+  "testStderr": "....................................................................................\n----------------------------------------------------------------------\nRan 84 tests in 3.952s\n\nOK\n",
+  "reviewedMapsCopiedToShared": false,
+  "mapsRemainBoundAtOriginalPaths": true,
+  "RUnchanged": true,
+  "articleBytesUnchanged": true,
+  "PL918StillRequiresAuthorRevision": true,
+  "knownLimits": [
+    "bounded ambiguity detector, not full Polish parser",
+    "we wrześniu and existing common NFD abbreviation boundary remain outside scope",
+    "raw approval paths require explicit rebinding for cross-machine audit portability"
+  ]
+}

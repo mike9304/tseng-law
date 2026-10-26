@@ -1,0 +1,269 @@
+{
+  "atUTC": "2026-10-26T09:43:02.086Z",
+  "rows": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "688c9eaa19ea1fa85cd2940f0294aa1beb6a1a6868fa655207b1053acb122fd2",
+      "beforeSHA256": "eb47204940b6bbbf46cafd1304257b96103ee4ae7e0bd52530d961d12ca63abb",
+      "metadataChanges": [],
+      "faqBefore": [
+        {
+          "q": "Medierea nereușită permite automat arbitrajul împotriva unei instituții publice din Taiwan?",
+          "a": "Nu. Calea legală pentru lucrări de construcție sau servicii tehnice presupune o recomandare ori o propunere a comisiei și eșecul medierii din cauza dezacordului instituției. Litigiul concret supus arbitrajului trebuie comparat cu acel dosar de mediere. O convenție arbitrală separată poate oferi un alt temei."
+        },
+        {
+          "q": "Curtea Supremă a decis că orice modificare a pretenției împiedică arbitrajul?",
+          "a": "Nu. În această cauză, constructorul a revenit la o pretenție bănească după o recomandare privind prelungirea duratei lucrărilor. O sumă revizuită sau un argument juridic precizat nu creează neapărat un litigiu diferit. Se compară faptele, rezultatul cerut și documentele procedurale."
+        }
+      ],
+      "faqAfter": [
+        {
+          "q": "Medierea nereușită permite automat arbitrajul împotriva unei instituții publice din Taiwan?",
+          "a": "Nu. Calea legală pentru lucrări de construcție sau servicii tehnice presupune o recomandare ori o propunere a comisiei și eșecul medierii din cauza dezacordului instituției. Litigiul concret supus arbitrajului trebuie comparat cu acel dosar de mediere. O convenție arbitrală separată poate oferi un alt temei."
+        },
+        {
+          "q": "Curtea Supremă a decis că orice modificare a pretenției împiedică arbitrajul?",
+          "a": "Nu. În această cauză, constructorul a revenit la o pretenție bănească după o recomandare privind prelungirea duratei lucrărilor. O sumă revizuită sau un argument juridic precizat nu creează neapărat un litigiu diferit. Se compară faptele, rezultatul cerut și documentele procedurale."
+        }
+      ],
+      "bodyBytesIdentical": false,
+      "beforeBodySHA256": "fcb218bb53ba1d517dcd53f1da653e170f25948380140b08d3832363d964fb5d",
+      "afterBodySHA256": "cea9e4b83d78f717a24e8d4d45b480be47f0222efac918624a6e941425b13cc2",
+      "dates": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 octombrie 2026"
+      },
+      "author": "legal-ai-assistant",
+      "caption": "Scenă fictivă"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "a155be35ec16384685cba6654957720f4e3f2bff222dda12e3f775c36d3b28b4",
+      "beforeSHA256": "a155be35ec16384685cba6654957720f4e3f2bff222dda12e3f775c36d3b28b4",
+      "metadataChanges": [],
+      "faqBefore": [
+        {
+          "q": "Deținerea unei filiale taiwaneze face societatea-mamă străină răspunzătoare pentru poluare?",
+          "a": "Simpla deținere nu a fost temeiul hotărârii descrise. Explicația Curții tratează controlul, cunoașterea contaminării, lipsa informării sau remedierii și mișcări de active menite să evite răspunderea. Se analizează conduita concretă și legea aplicabilă."
+        },
+        {
+          "q": "Hotărârea Curții Supreme din 2018 a încheiat toate litigiile privind poluarea fabricii?",
+          "a": "Nu. Părțile privind 246 de reclamanți au fost casate și trimise spre rejudecare, iar recursurile privind 262 de reclamanți au fost respinse. Rezultatele diferă între părțile dosarului și nu reprezintă încheierea tuturor litigiilor conexe."
+        },
+        {
+          "q": "Ce documente sunt utile după verificarea de mediu a unei societăți care urmează să fie cumpărată?",
+          "a": "Raportul, lista destinatarilor, întrebările ulterioare, deciziile privind expunerea lucrătorilor și remedierea, precum și aprobările și analiza financiară pentru transferurile ulterioare de active. Ele permit evaluarea informațiilor cunoscute și a conduitei; simpla păstrare a unui dosar nu dovedește conformitatea."
+        }
+      ],
+      "faqAfter": [
+        {
+          "q": "Deținerea unei filiale taiwaneze face societatea-mamă străină răspunzătoare pentru poluare?",
+          "a": "Simpla deținere nu a fost temeiul hotărârii descrise. Explicația Curții tratează controlul, cunoașterea contaminării, lipsa informării sau remedierii și mișcări de active menite să evite răspunderea. Se analizează conduita concretă și legea aplicabilă."
+        },
+        {
+          "q": "Hotărârea Curții Supreme din 2018 a încheiat toate litigiile privind poluarea fabricii?",
+          "a": "Nu. Părțile privind 246 de reclamanți au fost casate și trimise spre rejudecare, iar recursurile privind 262 de reclamanți au fost respinse. Rezultatele diferă între părțile dosarului și nu reprezintă încheierea tuturor litigiilor conexe."
+        },
+        {
+          "q": "Ce documente sunt utile după verificarea de mediu a unei societăți care urmează să fie cumpărată?",
+          "a": "Raportul, lista destinatarilor, întrebările ulterioare, deciziile privind expunerea lucrătorilor și remedierea, precum și aprobările și analiza financiară pentru transferurile ulterioare de active. Ele permit evaluarea informațiilor cunoscute și a conduitei; simpla păstrare a unui dosar nu dovedește conformitatea."
+        }
+      ],
+      "bodyBytesIdentical": true,
+      "beforeBodySHA256": "16893b9bef0b25427ca913a2e9482f7c12aea830346cbeee08b2e6fa1862e995",
+      "afterBodySHA256": "16893b9bef0b25427ca913a2e9482f7c12aea830346cbeee08b2e6fa1862e995",
+      "dates": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 octombrie 2026"
+      },
+      "author": "legal-ai-assistant",
+      "caption": "Scenă fictivă"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "3d20ec40f6fdd4ea65f2ec8e58d18c2a0d1c88ff65f9cbd0b58589da6f94bdcb",
+      "beforeSHA256": "3d20ec40f6fdd4ea65f2ec8e58d18c2a0d1c88ff65f9cbd0b58589da6f94bdcb",
+      "metadataChanges": [],
+      "faqBefore": [
+        {
+          "q": "Scrisoarea prin care dezvoltatorul îmi cere să rezolv creditul este și notificare de predare?",
+          "a": "Depinde de conținutul ei și de starea locuinței la acel moment. În cauza descrisă, scrisoarea cerea informații despre credit, fără să anunțe că locuința putea fi folosită. Utilitățile și inspecțiile ulterioare nu susțineau poziția dezvoltatorului, astfel că instanța nu a considerat îndeplinită notificarea contractuală de predare."
+        },
+        {
+          "q": "Termenul de notificare este de patru sau de șase luni de la autorizația de utilizare?",
+          "a": "Cele patru luni proveneau din contractul acestei cauze. Punctul 15 al clauzelor obligatorii actuale pentru vânzarea locuințelor înainte de finalizare cere notificarea cumpărătorului în șase luni de la obținerea autorizației de utilizare. Pentru un contract concret se verifică normele aplicabile la încheiere și clauzele convenite."
+        },
+        {
+          "q": "Pot ignora notificarea dezvoltatorului cât timp banca nu a virat creditul?",
+          "a": "Întârzierea creditului nu justifică, singură, ignorarea notificării. Plata, documentele pentru credit, verificarea locuinței și predarea au obligații și termene proprii. Conținutul notificării trebuie comparat cu contractul și cu documentele băncii și ale locuinței. Hotărârea nu acordă tuturor cumpărătorilor dreptul de a opri plățile."
+        }
+      ],
+      "faqAfter": [
+        {
+          "q": "Scrisoarea prin care dezvoltatorul îmi cere să rezolv creditul este și notificare de predare?",
+          "a": "Depinde de conținutul ei și de starea locuinței la acel moment. În cauza descrisă, scrisoarea cerea informații despre credit, fără să anunțe că locuința putea fi folosită. Utilitățile și inspecțiile ulterioare nu susțineau poziția dezvoltatorului, astfel că instanța nu a considerat îndeplinită notificarea contractuală de predare."
+        },
+        {
+          "q": "Termenul de notificare este de patru sau de șase luni de la autorizația de utilizare?",
+          "a": "Cele patru luni proveneau din contractul acestei cauze. Punctul 15 al clauzelor obligatorii actuale pentru vânzarea locuințelor înainte de finalizare cere notificarea cumpărătorului în șase luni de la obținerea autorizației de utilizare. Pentru un contract concret se verifică normele aplicabile la încheiere și clauzele convenite."
+        },
+        {
+          "q": "Pot ignora notificarea dezvoltatorului cât timp banca nu a virat creditul?",
+          "a": "Întârzierea creditului nu justifică, singură, ignorarea notificării. Plata, documentele pentru credit, verificarea locuinței și predarea au obligații și termene proprii. Conținutul notificării trebuie comparat cu contractul și cu documentele băncii și ale locuinței. Hotărârea nu acordă tuturor cumpărătorilor dreptul de a opri plățile."
+        }
+      ],
+      "bodyBytesIdentical": true,
+      "beforeBodySHA256": "9f20535a35df4b96684be86a7a682c3b0470350aa9bf6e851843768ce89f30e0",
+      "afterBodySHA256": "9f20535a35df4b96684be86a7a682c3b0470350aa9bf6e851843768ce89f30e0",
+      "dates": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 octombrie 2026"
+      },
+      "author": "legal-ai-assistant",
+      "caption": "Scenă fictivă"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "ac559acc2d867931be628dd9043cf6b26feab5197b16e3f00041d8370fcf2df5",
+      "beforeSHA256": "ac559acc2d867931be628dd9043cf6b26feab5197b16e3f00041d8370fcf2df5",
+      "metadataChanges": [],
+      "faqBefore": [
+        {
+          "q": "Anularea destituirii înseamnă că instanța a constatat inexistența hărțuirii?",
+          "a": "Nu se poate trage această concluzie. Instanța a identificat deficiențe în deliberare, posibilitatea de a prezenta explicații și stabilirea faptelor, anulând actul inițial și decizia de reexaminare. Rezultatul nu neagă toate comportamentele reclamate, iar comunicatul arată că hotărârea putea fi atacată."
+        },
+        {
+          "q": "Angajatorul trebuie să aștepte terminarea investigației înainte să ia măsuri?",
+          "a": "Legea cere măsuri potrivite modului în care angajatorul află despre situație. Când primește plângerea lucrătorului hărțuit, trebuie să ia măsuri împotriva repetării hărțuirii, să ofere asistență și protecție potrivit nevoilor și să investigheze. Protecția și examinarea echitabilă pot avea loc în paralel."
+        },
+        {
+          "q": "O echipă de resurse umane poate aplica direct procedura din acest dosar al unui funcționar?",
+          "a": "Cauza privea evaluarea și destituirea unui funcționar. O societate privată aplică propriile norme relevante de securitate a muncii, dreptul muncii și contractele. Observațiile despre concluzii prestabilite, apărare și contradicțiile probelor pot ajuta la verificarea calității investigației, fără a înlocui identificarea regimului aplicabil."
+        }
+      ],
+      "faqAfter": [
+        {
+          "q": "Anularea destituirii înseamnă că instanța a constatat inexistența hărțuirii?",
+          "a": "Nu se poate trage această concluzie. Instanța a identificat deficiențe în deliberare, posibilitatea de a prezenta explicații și stabilirea faptelor, anulând actul inițial și decizia de reexaminare. Rezultatul nu neagă toate comportamentele reclamate, iar comunicatul arată că hotărârea putea fi atacată."
+        },
+        {
+          "q": "Angajatorul trebuie să aștepte terminarea investigației înainte să ia măsuri?",
+          "a": "Legea cere măsuri potrivite modului în care angajatorul află despre situație. Când primește plângerea lucrătorului hărțuit, trebuie să ia măsuri împotriva repetării hărțuirii, să ofere asistență și protecție potrivit nevoilor și să investigheze. Protecția și examinarea echitabilă pot avea loc în paralel."
+        },
+        {
+          "q": "O echipă de resurse umane poate aplica direct procedura din acest dosar al unui funcționar?",
+          "a": "Cauza privea evaluarea și destituirea unui funcționar. O societate privată aplică propriile norme relevante de securitate a muncii, dreptul muncii și contractele. Observațiile despre concluzii prestabilite, apărare și contradicțiile probelor pot ajuta la verificarea calității investigației, fără a înlocui identificarea regimului aplicabil."
+        }
+      ],
+      "bodyBytesIdentical": true,
+      "beforeBodySHA256": "7c220a7549c3ea86be1981e00a49c299f97c3dd90651a5b080be4520416b0747",
+      "afterBodySHA256": "7c220a7549c3ea86be1981e00a49c299f97c3dd90651a5b080be4520416b0747",
+      "dates": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 octombrie 2026"
+      },
+      "author": "legal-ai-assistant",
+      "caption": "Scenă fictivă"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "80886af9d8ef1327eaabe2fd0a9de1ce44aa9dac2f595e36930e8c04a1807adf",
+      "beforeSHA256": "40d60abd6b530054c24da0ae3847bf3b77abf966f89ad910bcee6f8a40cd4820",
+      "metadataChanges": [
+        {
+          "field": "faq.1.a",
+          "before": "Locatarul a invocat oprirea, încuierea și predarea cheii. Instanța a considerat că, chiar dacă aceste susțineri ar fi adevărate, ele nu înlăturau obligația de demontare rezultată din încălcarea normelor și regulamentului privind părțile comune. Această soluție nu înseamnă că orice litigiu despre un încărcător se rezolvă numai prin demontare.",
+          "after": "Locatarul a invocat oprirea și încuierea echipamentului, precum și disponibilitatea de a preda cheia comitetului. Instanța a considerat că, chiar dacă aceste susțineri ar fi adevărate, ele nu înlăturau obligația de demontare rezultată din încălcarea normelor și regulamentului privind părțile comune. Această soluție nu înseamnă că orice litigiu despre un încărcător se rezolvă numai prin demontare."
+        }
+      ],
+      "faqBefore": [
+        {
+          "q": "Pot instala cabluri pentru încărcător dacă locul de parcare este folosit numai de mine?",
+          "a": "Trebuie identificat traseul complet al echipamentului și cablurilor. În această cauză erau folosite peretele, plafonul și tabloul electric comune. Instanța a aplicat legea și regulamentul ansamblului în raport cu lucrările concrete, fără a le considera doar cabluri adăugate într-o parte exclusivă. Alte clădiri cer verificarea configurației și regulilor proprii."
+        },
+        {
+          "q": "Oprirea și încuierea încărcătorului înlătură obligația de demontare?",
+          "a": "Locatarul a invocat oprirea, încuierea și predarea cheii. Instanța a considerat că, chiar dacă aceste susțineri ar fi adevărate, ele nu înlăturau obligația de demontare rezultată din încălcarea normelor și regulamentului privind părțile comune. Această soluție nu înseamnă că orice litigiu despre un încărcător se rezolvă numai prin demontare."
+        },
+        {
+          "q": "Subvenția publică pentru infrastructura de încărcare poate înlocui aprobarea ansamblului?",
+          "a": "Eligibilitatea pentru subvenție și permisiunea de folosire a părților comune se examinează separat. Programul Kaohsiung din 2026 menționat aici includea tăvi pentru cablurile de încărcare din zonele comune, iar termenul anunțat, 30 septembrie, a trecut. Politica de sprijin nu acordă singură unui locatar dreptul de a executa lucrări în spațiile comune."
+        }
+      ],
+      "faqAfter": [
+        {
+          "q": "Pot instala cabluri pentru încărcător dacă locul de parcare este folosit numai de mine?",
+          "a": "Trebuie identificat traseul complet al echipamentului și cablurilor. În această cauză erau folosite peretele, plafonul și tabloul electric comune. Instanța a aplicat legea și regulamentul ansamblului în raport cu lucrările concrete, fără a le considera doar cabluri adăugate într-o parte exclusivă. Alte clădiri cer verificarea configurației și regulilor proprii."
+        },
+        {
+          "q": "Oprirea și încuierea încărcătorului înlătură obligația de demontare?",
+          "a": "Locatarul a invocat oprirea și încuierea echipamentului, precum și disponibilitatea de a preda cheia comitetului. Instanța a considerat că, chiar dacă aceste susțineri ar fi adevărate, ele nu înlăturau obligația de demontare rezultată din încălcarea normelor și regulamentului privind părțile comune. Această soluție nu înseamnă că orice litigiu despre un încărcător se rezolvă numai prin demontare."
+        },
+        {
+          "q": "Subvenția publică pentru infrastructura de încărcare poate înlocui aprobarea ansamblului?",
+          "a": "Eligibilitatea pentru subvenție și permisiunea de folosire a părților comune se examinează separat. Programul Kaohsiung din 2026 menționat aici includea tăvi pentru cablurile de încărcare din zonele comune, iar termenul anunțat, 30 septembrie, a trecut. Politica de sprijin nu acordă singură unui locatar dreptul de a executa lucrări în spațiile comune."
+        }
+      ],
+      "bodyBytesIdentical": true,
+      "beforeBodySHA256": "7970b33029e80d9971718f20937fa4e68033e70b867aef48044d853ca36f4324",
+      "afterBodySHA256": "7970b33029e80d9971718f20937fa4e68033e70b867aef48044d853ca36f4324",
+      "dates": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 octombrie 2026"
+      },
+      "author": "legal-ai-assistant",
+      "caption": "Scenă fictivă"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "bb70cb4089ad9bf470a52da6b41fd7807a2d56c1ec3ffe2ddbed4224f52bcfc9",
+      "beforeSHA256": "bb70cb4089ad9bf470a52da6b41fd7807a2d56c1ec3ffe2ddbed4224f52bcfc9",
+      "metadataChanges": [],
+      "faqBefore": [
+        {
+          "q": "Orice sold numit monede virtuale este exclus de la rambursare?",
+          "a": "Denumirea nu decide singură. În această cauză, monedele funcționau ca jetoane pentru confruntări, iar instanța nu le-a considerat puncte plătite nefolosite sau taxe de joc rambursabile. Pentru alt joc se verifică modul de obținere, funcția, utilizarea și contractul."
+        },
+        {
+          "q": "După primele șapte zile de joc nu mai pot înceta contractul?",
+          "a": "Regulile actuale permit notificarea încetării în orice moment. Punctele plătite nefolosite sau taxele de joc neutilizate se restituie după deducerea costurilor necesare, în 30 de zile de la încetare, ori se tratează într-un alt mod convenit de ambele părți. Retragerea din primele șapte zile și încetarea ulterioară au condiții distincte."
+        },
+        {
+          "q": "Operatorul poate impune ca numai propriile înregistrări să conteze într-un litigiu?",
+          "a": "Clauzele actuale interzic stabilirea exclusivă a situației pe baza istoricului și datelor electronice păstrate de operator. Jucătorul poate păstra plățile, capturile de ecran și corespondența și poate solicita istoricul propriu pentru a verifica formarea soldului."
+        }
+      ],
+      "faqAfter": [
+        {
+          "q": "Orice sold numit monede virtuale este exclus de la rambursare?",
+          "a": "Denumirea nu decide singură. În această cauză, monedele funcționau ca jetoane pentru confruntări, iar instanța nu le-a considerat puncte plătite nefolosite sau taxe de joc rambursabile. Pentru alt joc se verifică modul de obținere, funcția, utilizarea și contractul."
+        },
+        {
+          "q": "După primele șapte zile de joc nu mai pot înceta contractul?",
+          "a": "Regulile actuale permit notificarea încetării în orice moment. Punctele plătite nefolosite sau taxele de joc neutilizate se restituie după deducerea costurilor necesare, în 30 de zile de la încetare, ori se tratează într-un alt mod convenit de ambele părți. Retragerea din primele șapte zile și încetarea ulterioară au condiții distincte."
+        },
+        {
+          "q": "Operatorul poate impune ca numai propriile înregistrări să conteze într-un litigiu?",
+          "a": "Clauzele actuale interzic stabilirea exclusivă a situației pe baza istoricului și datelor electronice păstrate de operator. Jucătorul poate păstra plățile, capturile de ecran și corespondența și poate solicita istoricul propriu pentru a verifica formarea soldului."
+        }
+      ],
+      "bodyBytesIdentical": true,
+      "beforeBodySHA256": "816dd371aadd5fc7dd479e4d00959905e6c72d33f374cedd6969fe852149dd3b",
+      "afterBodySHA256": "816dd371aadd5fc7dd479e4d00959905e6c72d33f374cedd6969fe852149dd3b",
+      "dates": {
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26 octombrie 2026"
+      },
+      "author": "legal-ai-assistant",
+      "caption": "Scenă fictivă"
+    }
+  ],
+  "totalFAQ": 17,
+  "exactMetadataChangedFields": 1
+}

@@ -1,0 +1,85 @@
+{
+  "at": "2026-10-26T18:12:20.666464+09:00",
+  "changeCount": 4,
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSHA256": "dd5ba0865b06900c6cf13dca431a93c0b6a9d86c0e5c8ca6cc136ec7170deaa3",
+      "afterSHA256": "dd5ba0865b06900c6cf13dca431a93c0b6a9d86c0e5c8ca6cc136ec7170deaa3",
+      "changes": [],
+      "exactInverse": true,
+      "diff": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSHA256": "557db7e5290391e057982262d0578663bdbde12fdda2fcdd2178219bed5bce02",
+      "afterSHA256": "cea9bc50a326b9aaf3b6f9cd9c3c26ed4879f97ac42f05e2408212c6e4f8447b",
+      "changes": [
+        {
+          "old": "Správy zachytávali znečistenie, no príbeh sa neskončil ich odovzdaním.",
+          "new": "Správy zachytávali znečistenie.",
+          "startBeforeEdit": 2139,
+          "reason": "추상적인 이야기의 끝 대비를 실제 보고 내용으로 직접 서술. 다음 문장이 이후 결정을 그대로 설명하므로 사건 흐름 보존.",
+          "meaningPreserved": true
+        },
+        {
+          "old": "Súd opísal environmentálne prieskumy, ktoré odhalili znečistenie, aj vedomosť ovládajúcich skupín o tomto stave. Zaoberal sa ich skutočným riadením prevádzky a tým, že problém nenapravili alebo o ňom neinformovali pracovníkov.",
+          "new": "Súd spojil zistenia environmentálnych prieskumov a vedomosť ovládajúcich skupín o znečistení s ich skutočným riadením prevádzky a s tým, že problém nenapravili alebo o ňom neinformovali pracovníkov.",
+          "startBeforeEdit": 2620,
+          "reason": "같은길이 반복을 인지·지배·미개선/미고지의 연결 관계로 재구성. 원문 EN과 같은 책임 판단 요인 모두 보존.",
+          "meaningPreserved": true
+        }
+      ],
+      "exactInverse": true,
+      "diff": "--- self-r1/916-taiwan-parent-company-pollution-liability-us-investor.md\n+++ self-r2/916-taiwan-parent-company-pollution-liability-us-investor.md\n@@ -23,13 +23,13 @@\n     a: \"Správu a jej adresátov, doplňujúce otázky, rozhodnutia o expozícii pracovníkov a náprave, ako aj schválenia a finančné posúdenia neskorších presunov majetku. Pomáhajú rekonštruovať vedomosť a konanie. Samotná existencia priečinka nepreukazuje dodržanie povinností.\"\n ---\n \n-Environmentálne previerky vykonané pred akvizíciou sa neskôr stali dôkazmi proti spoločnostiam ovládajúcim taiwanskú továreň. Správy zachytávali znečistenie, no príbeh sa neskončil ich odovzdaním. Nasledovali rozhodnutia o prevádzke, informovaní pracovníkov a majetku podniku.\n+Environmentálne previerky vykonané pred akvizíciou sa neskôr stali dôkazmi proti spoločnostiam ovládajúcim taiwanskú továreň. Správy zachytávali znečistenie. Nasledovali rozhodnutia o prevádzke, informovaní pracovníkov a majetku podniku.\n \n Najvyšší súd sa k nim vyjadril 16. augusta 2018 vo veci 107年度台上字第267號. Jeho [oficiálne vysvetlenie](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) spája dlhodobú expozíciu pracovníkov chemickým látkam s vedomosťou a správaním ovládajúcich spoločností. Zahraničné vlastníctvo samo o sebe zodpovednosť nezakladalo.\n \n ## Od zistenia rizika k prevodom majetku\n \n-Súd opísal environmentálne prieskumy, ktoré odhalili znečistenie, aj vedomosť ovládajúcich skupín o tomto stave. Zaoberal sa ich skutočným riadením prevádzky a tým, že problém nenapravili alebo o ňom neinformovali pracovníkov. Do obrazu patrilo znižovanie základného imania a prevody do zahraničia uskutočňované na únik pred záväzkami.\n+Súd spojil zistenia environmentálnych prieskumov a vedomosť ovládajúcich skupín o znečistení s ich skutočným riadením prevádzky a s tým, že problém nenapravili alebo o ňom neinformovali pracovníkov. Do obrazu patrilo znižovanie základného imania a prevody do zahraničia uskutočňované na únik pred záväzkami.\n \n Tieto skutočnosti posudzoval vo vzájomnej súvislosti. Zachoval dôvody, pre ktoré príslušné nároky mohli zasiahnuť ovládajúce spoločnosti napriek ich samostatnej právnej subjektivite. Pre kupujúceho podniku je preto užitočné sledovať aj to, čo sa so správou stalo po jej doručení.\n \n"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSHA256": "ddbbc40f36421c9f07b1d3d90c4304f4b59d28156429332980d60857457209d2",
+      "afterSHA256": "ddbbc40f36421c9f07b1d3d90c4304f4b59d28156429332980d60857457209d2",
+      "changes": [],
+      "exactInverse": true,
+      "diff": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "7a9bda014da027ab57152f645835f429ce5802446c9badea6231d1beb8bf8569",
+      "afterSHA256": "7a9bda014da027ab57152f645835f429ce5802446c9badea6231d1beb8bf8569",
+      "changes": [],
+      "exactInverse": true,
+      "diff": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "3670617bbbc732d371d73f15b533f5cc2ad2ce5cc21e056aa87f9248e85bea8d",
+      "afterSHA256": "001bd26dd4f6488e6e8a2413f401c1afa458652541b0396fcf248f29910fe3b1",
+      "changes": [
+        {
+          "old": "Tieto tvrdenia preto nemožno opisovať ako súdom dokázané udalosti. ",
+          "new": "",
+          "startBeforeEdit": 5159,
+          "reason": "바로 앞의 za predpokladu, že by boli pravdivé가 법원의 가정적 판단을 명시하므로 중복 집필 지시문만 삭제. 주장·확정사실 구분 불변.",
+          "meaningPreserved": true
+        }
+      ],
+      "exactInverse": true,
+      "diff": "--- self-r1/920-taiwan-apartment-ev-charger-common-area-judgment.md\n+++ self-r2/920-taiwan-apartment-ev-charger-common-area-judgment.md\n@@ -47,7 +47,7 @@\n \n Obyvateľ tvrdil, že osadil vypínač, zariadenie nepoužíva a uzamkol ho; ponúkal aj odovzdanie kľúča výboru. Súd posudzoval právny účinok týchto tvrdení za predpokladu, že by boli pravdivé. Ani vtedy by nezanikla povinnosť odstrániť zariadenie a obnoviť pôvodný stav.\n \n-Tieto tvrdenia preto nemožno opisovať ako súdom dokázané udalosti. Spor sa týkal oprávnenia vykonať práce na dotknutých miestach, nielen okamžitej prevádzkovej bezpečnosti nabíjačky. Prísľub budúceho odpojenia neriešil pôvodný nedostatok súhlasu.\n+Spor sa týkal oprávnenia vykonať práce na dotknutých miestach, nielen okamžitej prevádzkovej bezpečnosti nabíjačky. Prísľub budúceho odpojenia neriešil pôvodný nedostatok súhlasu.\n \n Kde presne prejde navrhované vedenie? Cenová ponuka s číslom parkovacieho miesta na to nemusí odpovedať. Náčrt môže spojiť polohu boxu, steny a stropu, ktorými vedenie prechádza, aj bod pripojenia v elektrickej skrini; následne sa porovná s právami k priestorom a platnými rozhodnutiami domu.\n \n"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "3b1966ebdb663611cc327f14e5194109afb5e77ab543078cc582365cfc339775",
+      "afterSHA256": "60cb072f1ef19f7a1391d22cb2973597b602076752b3f5b387fc81e0b98e8d92",
+      "changes": [
+        {
+          "old": "Rozhodnutie z roku 2021 nemožno opisovať ako použitie neskoršej novely.",
+          "new": "Spor z roku 2021 sa posudzoval podľa vtedajšej zmluvy a vtedy platných pravidiel.",
+          "startBeforeEdit": 4221,
+          "reason": "집필자에게 부정확하게 쓰지 말라고 지시하는 문장을 실제 사건의 준거로 바꿈.2021/2023 구분과 비소급 의미·숫자 보존.",
+          "meaningPreserved": true
+        }
+      ],
+      "exactInverse": true,
+      "diff": "--- self-r1/921-taiwan-online-game-coins-refund-judgment.md\n+++ self-r2/921-taiwan-online-game-coins-refund-judgment.md\n@@ -39,7 +39,7 @@\n \n ## Dnešné pravidlá zachovávajú vrátenie nevyužitých plnení\n \n-Súčasné [povinné a zakázané podmienky zmlúv o online hrách](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) nadobudli v citovanom znení účinnosť 1. januára 2023, teda po tomto rozsudku. Rozhodnutie z roku 2021 nemožno opisovať ako použitie neskoršej novely.\n+Súčasné [povinné a zakázané podmienky zmlúv o online hrách](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) nadobudli v citovanom znení účinnosť 1. januára 2023, teda po tomto rozsudku. Spor z roku 2021 sa posudzoval podľa vtedajšej zmluvy a vtedy platných pravidiel.\n \n Bod 18 umožňuje spotrebiteľovi kedykoľvek oznámiť ukončenie zmluvy. Prevádzkovateľ musí po odpočítaní nevyhnutných nákladov vrátiť nevyužité zakúpené body alebo nevyužité platby za hru do 30 dní od ukončenia, prípadne postupovať iným spôsobom dohodnutým oboma stranami. Dohoda vyžaduje obe strany. Samotná jednostranná informácia prevádzkovateľa ju nenahrádza.\n \n"
+    }
+  ]
+}

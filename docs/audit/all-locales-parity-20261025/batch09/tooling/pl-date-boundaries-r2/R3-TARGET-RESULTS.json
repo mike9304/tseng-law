@@ -1,0 +1,1373 @@
+{
+  "atUTC": "2026-10-26T10:09:57.299571+00:00",
+  "scope": "Actual isolated candidate CLI on frozen R3 source bytes, both without map and with independently approved complete map. Not installed shared result or source/native/legal approval.",
+  "toolSHA256": {
+    "variety_metrics.py": "c96c303b9af9be1a8a8965f9a503cf0617a4a36716109af3184cfff8464c81ec",
+    "variety_multilingual.py": "0b4af8c41031e6c33bc2c6518caa8875f1f2b097f44c454161100aee07ab3ab9",
+    "variety_expansion.py": "ae6cca9ef98daed82fd578e6cf0442124ecb6e43215837e1cdb0a89e4198a4e2",
+    "profiles/pl.json": "00b4d91b84026bda2a8f76f963302865311f3ca3600fbd1d1a4267a7ff7dd0fa"
+  },
+  "nodeDirectory": "/Users/son7/.nvm/versions/node/v24.14.1/bin",
+  "files": [
+    {
+      "file": "r3-inputs/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sourceSHA256": "a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791",
+      "mapSHA256": "0de93775a9337552ae7bbf32b41acc5178b32c5f05283367db924191f9dc0c12",
+      "approvalSHA256": "ec3e7f0db7c6bd3d58fd84695dbb3be6ba968befa574c92363ad3fdca964f937",
+      "runs": {
+        "unmapped": {
+          "command": [
+            "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+            "--lang",
+            "pl"
+          ],
+          "exitCode": 2,
+          "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/915-taiwan-public-contract-mediation-arbitration-same-claim.md: ERROR measurement unavailable: Polish fronted date before capital text has an ambiguous sentence boundary; a reviewed, source-SHA-bound Polish sentence map is required\n",
+          "stderr": ""
+        },
+        "approved-map": {
+          "command": [
+            "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+            "--lang",
+            "pl",
+            "--sentences",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/maps-approved/915-taiwan-public-contract-mediation-arbitration-same-claim.sentences.json"
+          ],
+          "exitCode": 0,
+          "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/915-taiwan-public-contract-mediation-arbitration-same-claim.md [pl] sentences=36 mean=15.2 cv=0.486 short=0.111 run3=0.059 opener_rep=0.077 cite_end=0.0 cite_para=0.231 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+          "stderr": ""
+        }
+      },
+      "arrays": [
+        [
+          "44 417 150 NTD — tyle wynosiło przyznane wykonawcy szpitala roszczenie objęte później uchylonym wyrokiem arbitrażowym.",
+          "Podczas mediacji uzyskano zalecenie dotyczące dodatkowego czasu, lecz arbitraż dotyczył pieniędzy, dla których takiego zalecenia nie wydano.",
+          "W oficjalnym omówieniu wyroku 106年度台上字第723號 Sąd Najwyższy wskazał tę lukę jako rozstrzygającą."
+        ],
+        [
+          "Podmiot zamawiający wystąpił o uchylenie wyroku, a 12 lipca 2017 r. Sąd Najwyższy oddalił apelację wykonawcy, więc orzeczenie o uchyleniu pozostało w mocy, co omówienie wyraźnie odnotowuje jako prawomocne zakończenie sprawy.",
+          "W konkretnym sporze pieniężnym nie istniała ani uzgodniona klauzula arbitrażowa, ani podstawa do uznania zgody na arbitraż za udzieloną na mocy ustawy."
+        ],
+        [
+          "Przebieg postępowania pokazuje, dlaczego samo zaświadczenie o bezskutecznej mediacji nie wystarczyło:"
+        ],
+        [
+          "Podmiot publiczny musi mieć możliwość przyjęcia albo odrzucenia rozwiązania konkretnego sporu.",
+          "Jak wyjaśnił Sąd Najwyższy, dokument o ogólnym niepowodzeniu mediacji nie zastępował takiej możliwości.",
+          "Sąd skorygował rozumowanie niższej instancji co do właściwej wersji przepisu, ale utrzymał wynik: uchylenie wyroku."
+        ],
+        [
+          "Art. 85-1 ustawy o zamówieniach publicznych pozwala kierować spory o wykonanie umowy do mediacji przed Complaint Review Board for Government Procurement, a podmiot zamawiający nie może odmówić udziału w mediacji wszczętej na wniosek dostawcy."
+        ],
+        [
+          "Dla robót budowlanych lub usług technicznych komisja przedstawia zalecenie mediacyjne albo propozycję rozwiązania sporu.",
+          "Jeżeli mediacja nie powiedzie się z powodu braku zgody podmiotu zamawiającego na takie zalecenie lub propozycję, nie może on odmówić skierowania sprawy do arbitrażu przez dostawcę.",
+          "Przyczyna niepowodzenia ma zatem znaczenie."
+        ],
+        [
+          "W sprawie szpitala nie było również umownego zapisu arbitrażowego, a brak umowy arbitrażowej w rozumieniu art. 40 ust. 1 pkt 2 ustawy o arbitrażu stanowił podstawę uchylenia wyroku.",
+          "Osobny zapis w umowie może jednak niezależnie dostarczyć podstawy arbitrażu.",
+          "Wtedy analiza nie kończy się na art. 85-1."
+        ],
+        [
+          "Kwalifikacja kontraktu pozostaje odrębnym pytaniem.",
+          "Obecny art. 85-1 obejmuje roboty budowlane i usługi techniczne, nie każdy zakup sprzętu ani każdą umowę z sektorem publicznym.",
+          "Nie wolno przenosić szczególnej reguły na inny kontrakt tylko dlatego, że zamawiającym jest podmiot publiczny."
+        ],
+        [
+          "Raport amerykańskiego International Trade Administration z 30 września 2026 r. opisuje przewidywane pod koniec 2026 r. i w 2027 r. zamówienia tajwańskie na energię i sieci, w tym możliwości dla dostawców z USA.",
+          "Są to planowane okazje, jak wynika z raportu ITA.",
+          "Nie potwierdza on otwarcia konkretnego przetargu, kwalifikacji danej firmy ani zakwalifikowania przyszłej umowy jako robót lub usług technicznych."
+        ],
+        [
+          "Zespół zajmujący się opóźnieniem projektu może traktować czas i koszty jako jeden problem handlowy.",
+          "Dokumentacja postępowania musi jednak pokazać, jakiego środka żądano.",
+          "Czy komisja zajęła się roszczeniem pieniężnym, które ma trafić do arbitrażu?",
+          "Odpowiedź wymaga zestawienia wniosku i jego zmian, zalecenia lub propozycji, odpowiedzi podmiotu publicznego oraz projektu żądania arbitrażowego."
+        ],
+        [
+          "Nie każda korekta kwoty tworzy nowy spór.",
+          "Doprecyzowanie argumentu prawnego również nie przesądza o jego odrębności.",
+          "Z kolei ten sam numer projektu nie dowodzi tożsamości żądań.",
+          "Porównanie dokumentów jest praktyczną metodą oceny zakresu sporu, a nie dodatkowym ustawowym warunkiem dopuszczalności arbitrażu."
+        ],
+        [
+          "Jeżeli dokumenty ujawniają lukę, trzeba sprawdzić odrębną podstawę umowną albo potrzebę dalszej mediacji planowanego roszczenia.",
+          "We wstępnym kontakcie w języku angielskim można wskazać kategorię projektu, dotychczasowe i zamierzone żądanie oraz najbliższy termin.",
+          "Podstawą takiej oceny będzie sekwencja wniosków, zmian i odpowiedzi prowadzących do nieskutecznej mediacji."
+        ],
+        [
+          "Źródła i aktualne brzmienie przepisów sprawdzono 25–26 października 2026 r.",
+          "Opis sprawy opiera się na oficjalnym omówieniu Sądu Najwyższego.",
+          "Artykuł dotyczy jednej drogi do arbitrażu i nie rozstrzyga właściwości forum ani terminów dla konkretnej umowy."
+        ]
+      ],
+      "sentenceUnits": [
+        [
+          15,
+          17,
+          12
+        ],
+        [
+          31,
+          22
+        ],
+        [
+          11
+        ],
+        [
+          11,
+          13,
+          15
+        ],
+        [
+          35
+        ],
+        [
+          14,
+          26,
+          5
+        ],
+        [
+          28,
+          10,
+          9
+        ],
+        [
+          5,
+          20,
+          15
+        ],
+        [
+          33,
+          9,
+          18
+        ],
+        [
+          14,
+          8,
+          11,
+          17
+        ],
+        [
+          7,
+          9,
+          10,
+          15
+        ],
+        [
+          15,
+          17,
+          13
+        ],
+        [
+          11,
+          9,
+          16
+        ]
+      ],
+      "paragraphs": [
+        "44 417 150 NTD — tyle wynosiło przyznane wykonawcy szpitala roszczenie objęte później uchylonym wyrokiem arbitrażowym. Podczas mediacji uzyskano zalecenie dotyczące dodatkowego czasu, lecz arbitraż dotyczył pieniędzy, dla których takiego zalecenia nie wydano. W [oficjalnym omówieniu wyroku 106年度台上字第723號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693) Sąd Najwyższy wskazał tę lukę jako rozstrzygającą.",
+        "Podmiot zamawiający wystąpił o uchylenie wyroku, a 12 lipca 2017 r. Sąd Najwyższy oddalił apelację wykonawcy, więc orzeczenie o uchyleniu pozostało w mocy, co omówienie wyraźnie odnotowuje jako prawomocne zakończenie sprawy. W konkretnym sporze pieniężnym nie istniała ani uzgodniona klauzula arbitrażowa, ani podstawa do uznania zgody na arbitraż za udzieloną na mocy ustawy.",
+        "Przebieg postępowania pokazuje, dlaczego samo zaświadczenie o bezskutecznej mediacji nie wystarczyło:",
+        "Podmiot publiczny musi mieć możliwość przyjęcia albo odrzucenia rozwiązania konkretnego sporu. Jak wyjaśnił [Sąd Najwyższy](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693), dokument o ogólnym niepowodzeniu mediacji nie zastępował takiej możliwości. Sąd skorygował rozumowanie niższej instancji co do właściwej wersji przepisu, ale utrzymał wynik: uchylenie wyroku.",
+        "[Art. 85-1 ustawy o zamówieniach publicznych](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) pozwala kierować spory o wykonanie umowy do mediacji przed Complaint Review Board for Government Procurement, a podmiot zamawiający nie może odmówić udziału w mediacji wszczętej na wniosek dostawcy.",
+        "Dla robót budowlanych lub usług technicznych komisja przedstawia zalecenie mediacyjne albo propozycję rozwiązania sporu. Jeżeli mediacja nie powiedzie się z powodu braku zgody podmiotu zamawiającego na takie zalecenie lub propozycję, nie może on odmówić skierowania sprawy do arbitrażu przez dostawcę. Przyczyna niepowodzenia ma zatem znaczenie.",
+        "W sprawie szpitala nie było również umownego zapisu arbitrażowego, a brak umowy arbitrażowej w rozumieniu [art. 40 ust. 1 pkt 2 ustawy o arbitrażu](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001) stanowił podstawę uchylenia wyroku. Osobny zapis w umowie może jednak niezależnie dostarczyć podstawy arbitrażu. Wtedy analiza nie kończy się na art. 85-1.",
+        "Kwalifikacja kontraktu pozostaje odrębnym pytaniem. Obecny art. 85-1 obejmuje roboty budowlane i usługi techniczne, nie każdy zakup sprzętu ani każdą umowę z sektorem publicznym. Nie wolno przenosić szczególnej reguły na inny kontrakt tylko dlatego, że zamawiającym jest podmiot publiczny.",
+        "Raport amerykańskiego International Trade Administration z 30 września 2026 r. opisuje przewidywane pod koniec 2026 r. i w 2027 r. zamówienia tajwańskie na energię i sieci, w tym możliwości dla dostawców z USA. Są to planowane okazje, jak wynika z [raportu ITA](https://www.trade.gov/market-intelligence/taiwan-energy-industry). Nie potwierdza on otwarcia konkretnego przetargu, kwalifikacji danej firmy ani zakwalifikowania przyszłej umowy jako robót lub usług technicznych.",
+        "Zespół zajmujący się opóźnieniem projektu może traktować czas i koszty jako jeden problem handlowy. Dokumentacja postępowania musi jednak pokazać, jakiego środka żądano. Czy komisja zajęła się roszczeniem pieniężnym, które ma trafić do arbitrażu? Odpowiedź wymaga zestawienia wniosku i jego zmian, zalecenia lub propozycji, odpowiedzi podmiotu publicznego oraz projektu żądania arbitrażowego.",
+        "Nie każda korekta kwoty tworzy nowy spór. Doprecyzowanie argumentu prawnego również nie przesądza o jego odrębności. Z kolei ten sam numer projektu nie dowodzi tożsamości żądań. Porównanie dokumentów jest praktyczną metodą oceny zakresu sporu, a nie dodatkowym ustawowym warunkiem dopuszczalności arbitrażu.",
+        "Jeżeli dokumenty ujawniają lukę, trzeba sprawdzić odrębną podstawę umowną albo potrzebę dalszej mediacji planowanego roszczenia. We wstępnym [kontakcie w języku angielskim](/en/contact) można wskazać kategorię projektu, dotychczasowe i zamierzone żądanie oraz najbliższy termin. Podstawą takiej oceny będzie sekwencja wniosków, zmian i odpowiedzi prowadzących do nieskutecznej mediacji.",
+        "Źródła i aktualne brzmienie przepisów sprawdzono 25–26 października 2026 r. Opis sprawy opiera się na oficjalnym omówieniu Sądu Najwyższego. Artykuł dotyczy jednej drogi do arbitrażu i nie rozstrzyga właściwości forum ani terminów dla konkretnej umowy."
+      ],
+      "metrics": {
+        "lang": "pl",
+        "sentences": 36,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.2,
+        "len_cv": 0.486,
+        "short_share": 0.111,
+        "long_share": 0.056,
+        "para_cv": 0.265,
+        "even_run3": 0.059,
+        "top_end": "arbitrażu",
+        "top_end_share": 0.083,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "podmiot",
+        "top_opener_n": 2,
+        "opener_rep": 0.077,
+        "consec_same_start": 0,
+        "cite_para_share": 0.231,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 4.21,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "44 417 150 NTD — tyle wynosiło przyznane wykonawcy szpitala roszczenie objęte później uchy",
+        "last": "Źródła i aktualne brzmienie przepisów sprawdzono 25–26 października 2026 r. Opis sprawy opiera się na oficjalnym omówien",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "reviewed_sha_bound_map"
+      },
+      "exactReviewedArraysAndUnits": true
+    },
+    {
+      "file": "r3-inputs/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sourceSHA256": "67e1a4bd4123dd6de01e1a0e66586cf6d22903063ffb568b999a24301b6c536f",
+      "mapSHA256": "81e73811a1e56c8c7d53482815bb387878ed85c2064a121b27c06e36ace9dff0",
+      "approvalSHA256": "ec3e7f0db7c6bd3d58fd84695dbb3be6ba968befa574c92363ad3fdca964f937",
+      "runs": {
+        "unmapped": {
+          "command": [
+            "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/916-taiwan-parent-company-pollution-liability-us-investor.md",
+            "--lang",
+            "pl"
+          ],
+          "exitCode": 0,
+          "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/916-taiwan-parent-company-pollution-liability-us-investor.md [pl] sentences=36 mean=17.1 cv=0.522 short=0.139 run3=0.0 opener_rep=0.071 cite_end=0.0 cite_para=0.143 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n",
+          "stderr": ""
+        },
+        "approved-map": {
+          "command": [
+            "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/916-taiwan-parent-company-pollution-liability-us-investor.md",
+            "--lang",
+            "pl",
+            "--sentences",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/maps-approved/916-taiwan-parent-company-pollution-liability-us-investor.sentences.json"
+          ],
+          "exitCode": 0,
+          "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/916-taiwan-parent-company-pollution-liability-us-investor.md [pl] sentences=36 mean=17.1 cv=0.522 short=0.139 run3=0.0 opener_rep=0.071 cite_end=0.0 cite_para=0.143 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n",
+          "stderr": ""
+        }
+      },
+      "arrays": [
+        [
+          "Badania środowiskowe przeprowadzone przed przejęciem stały się częścią materiału dowodowego przeciwko spółkom dominującym w tajwańskiej sprawie skażenia fabryki, w której Sąd Najwyższy powiązał wiedzę o zanieczyszczeniu z kontrolą operacyjną, reakcją na zagrożenie i transferami uszczuplającymi majątek tajwańskiej spółki.",
+          "Oficjalne omówienie wyroku 107年度台上字第267號 pokazuje, dlaczego audyt przed przejęciem nie kończy się na dostarczeniu raportu."
+        ],
+        [
+          "Orzeczenie z 16 sierpnia 2018 r. dotyczyło narażenia pracowników producenta elektroniki na substancje chemiczne oraz odpowiedzialności spółek kontrolujących działalność.",
+          "Sąd nie nałożył odpowiedzialności tylko z powodu posiadania tajwańskiej spółki zależnej przez zagranicznego inwestora."
+        ],
+        [
+          "Według omówienia Sądu Najwyższego materiał sprawy obejmował badania wykazujące skażenie, wiedzę w grupach kontrolujących, niepoinformowanie pracowników i brak usunięcia problemu, a także redukcje kapitału oraz przelewy za granicę zmierzające do uchylenia się od zobowiązań.",
+          "Sąd zaakceptował rozumowanie pozwalające objąć odpowiednimi roszczeniami spółki kontrolujące mimo odrębnych osobowości prawnych."
+        ],
+        [
+          "Dla zespołu przejęciowego istotna jest kolejność tych zdarzeń.",
+          "Lista dystrybucji raportu pomaga ustalić, kto wiedział o problemie.",
+          "Dokumenty zarządu i instrukcje operacyjne mogą wskazać, kto decydował o reakcji, a późniejsze zatwierdzenia przelewów trzeba czasem odczytać razem z obiema grupami dokumentów."
+        ],
+        [
+          "Sam raport jest początkiem analizy.",
+          "Należy ustalić, kto badał narażenie pracowników, jakie dodatkowe prace zlecono i jak ustalenia wpłynęły na decyzje o zasobach spółki operacyjnej.",
+          "W raporcie warto oznaczyć pytania, które nadal wymagają wyjaśnienia.",
+          "Optymistyczna prezentacja końcowa nie usuwa wniosków technicznych ani odpowiedzialności za ich dalsze wyjaśnienie."
+        ],
+        [
+          "W częściach dotyczących 246 powodów Sąd Najwyższy uchylił zaskarżone rozstrzygnięcia i przekazał sprawę do ponownego rozpoznania.",
+          "Oddalił natomiast apelacje dotyczące 262 powodów.",
+          "Przy ponownym rozpoznaniu chodziło między innymi o braki w analizie urazów, dowodów i uprawnienia do dochodzenia roszczeń, co wynika z urzędowego omówienia rozstrzygnięcia."
+        ],
+        [
+          "Oddalenie apelacji dotyczących danej grupy nie oznacza, że wszystkie ich roszczenia zostały ostatecznie rozstrzygnięte, ani że apelacje złożyli wyłącznie ci powodowie.",
+          "Ponowne rozpoznanie nie przesądzało z kolei o braku roszczeń.",
+          "Inwestor oceniający historyczne ryzyko musi zidentyfikować konkretne postępowania i ich stan, zamiast opierać wyliczenie na jednej dacie wyroku."
+        ],
+        [
+          "Art. 154 tajwańskiej ustawy o spółkach co do zasady ogranicza odpowiedzialność wspólnika do zapłaty za objęte udziały, ale ust. 2 przewiduje wyjątek, gdy wspólnik nadużywa osobowości prawnej spółki i powoduje powstanie przez nią konkretnego długu, którego spłata jest oczywiście utrudniona.",
+          "Muszą też zaistnieć okoliczności na tyle poważne, że odpowiedzialność wspólnika jest konieczna."
+        ],
+        [
+          "Te przesłanki są łączne.",
+          "Relacja wspólnikowa, niespłacony dług czy samo stwierdzenie skażenia nie wypełnia całego testu.",
+          "Obecnego art. 154 nie należy ponadto przedstawiać jako jedynej historycznej podstawy rozstrzygnięcia z 2018 r.; tamta sprawa wymagała oceny zachowania spółek kontrolujących i podstaw wyjścia poza odrębną osobowość prawną."
+        ],
+        [
+          "Zwykły punkt wyjścia przy wyborze formy obecności opisuje artykuł o spółce zależnej i oddziale.",
+          "Spór o skażenie dodaje pytanie, na które dokumenty rejestrowe nie odpowiadają: jak grupa wykorzystała kontrolę po uzyskaniu informacji o ryzyku?"
+        ],
+        [
+          "Lutowy informator USTR z 2026 r. opisuje zamiar stron wspierania inwestycji transgranicznych i wskazuje potencjalne wsparcie USA dla finansowania prywatnych inwestycji na Tajwanie z udziałem amerykańskich partnerów prywatnych, z zastrzeżeniem właściwych przepisów.",
+          "Jest to warunkowa deklaracja zamiaru, nie automatyczne prawo do finansowania ani potwierdzenie, że cała umowa już obowiązuje."
+        ],
+        [
+          "Przed zatwierdzeniem dystrybucji, redukcji kapitału albo transferu przy wyjściu z inwestycji decydenci powinni dysponować oceną stwierdzonej ekspozycji, nierozstrzygniętych roszczeń i zasobów pozostających w tajwańskiej spółce.",
+          "Osobnej analizy wymaga sama planowana transakcja.",
+          "Nazwa dokumentu nie przesądza legalności transferu, a nieprzeczytany raport w repozytorium nie stanowi reakcji na jego ustalenia."
+        ],
+        [
+          "W kontakcie w języku angielskim można na wstępie wskazać rodzaj transakcji, tajwański podmiot i planowaną datę transferu lub zamknięcia.",
+          "Sposób przekazania raportów technicznych i danych pracowników warto uzgodnić osobno.",
+          "Natychmiastowego zabezpieczenia wymagają pierwotne ustalenia, decyzje, które wywołały, oraz zatwierdzenia późniejszych ruchów aktywów."
+        ],
+        [
+          "Źródła urzędowe i aktualny przepis sprawdzono 25–26 października 2026 r.",
+          "Artykuł omawia wskazany wyrok z 2018 r. na podstawie oficjalnego omówienia; nie przedstawia historii każdej powiązanej sprawy ani nie ocenia odpowiedzialności konkretnego inwestora."
+        ]
+      ],
+      "sentenceUnits": [
+        [
+          38,
+          15
+        ],
+        [
+          19,
+          14
+        ],
+        [
+          34,
+          13
+        ],
+        [
+          8,
+          9,
+          23
+        ],
+        [
+          5,
+          20,
+          9,
+          13
+        ],
+        [
+          16,
+          6,
+          23
+        ],
+        [
+          21,
+          9,
+          18
+        ],
+        [
+          40,
+          12
+        ],
+        [
+          4,
+          12,
+          29
+        ],
+        [
+          14,
+          20
+        ],
+        [
+          32,
+          17
+        ],
+        [
+          25,
+          6,
+          17
+        ],
+        [
+          19,
+          10,
+          13
+        ],
+        [
+          11,
+          23
+        ]
+      ],
+      "paragraphs": [
+        "Badania środowiskowe przeprowadzone przed przejęciem stały się częścią materiału dowodowego przeciwko spółkom dominującym w tajwańskiej sprawie skażenia fabryki, w której Sąd Najwyższy powiązał wiedzę o zanieczyszczeniu z kontrolą operacyjną, reakcją na zagrożenie i transferami uszczuplającymi majątek tajwańskiej spółki. [Oficjalne omówienie wyroku 107年度台上字第267號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) pokazuje, dlaczego audyt przed przejęciem nie kończy się na dostarczeniu raportu.",
+        "Orzeczenie z 16 sierpnia 2018 r. dotyczyło narażenia pracowników producenta elektroniki na substancje chemiczne oraz odpowiedzialności spółek kontrolujących działalność. Sąd nie nałożył odpowiedzialności tylko z powodu posiadania tajwańskiej spółki zależnej przez zagranicznego inwestora.",
+        "Według [omówienia Sądu Najwyższego](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) materiał sprawy obejmował badania wykazujące skażenie, wiedzę w grupach kontrolujących, niepoinformowanie pracowników i brak usunięcia problemu, a także redukcje kapitału oraz przelewy za granicę zmierzające do uchylenia się od zobowiązań. Sąd zaakceptował rozumowanie pozwalające objąć odpowiednimi roszczeniami spółki kontrolujące mimo odrębnych osobowości prawnych.",
+        "Dla zespołu przejęciowego istotna jest kolejność tych zdarzeń. Lista dystrybucji raportu pomaga ustalić, kto wiedział o problemie. Dokumenty zarządu i instrukcje operacyjne mogą wskazać, kto decydował o reakcji, a późniejsze zatwierdzenia przelewów trzeba czasem odczytać razem z obiema grupami dokumentów.",
+        "Sam raport jest początkiem analizy. Należy ustalić, kto badał narażenie pracowników, jakie dodatkowe prace zlecono i jak ustalenia wpłynęły na decyzje o zasobach spółki operacyjnej. W raporcie warto oznaczyć pytania, które nadal wymagają wyjaśnienia. Optymistyczna prezentacja końcowa nie usuwa wniosków technicznych ani odpowiedzialności za ich dalsze wyjaśnienie.",
+        "W częściach dotyczących 246 powodów Sąd Najwyższy uchylił zaskarżone rozstrzygnięcia i przekazał sprawę do ponownego rozpoznania. Oddalił natomiast apelacje dotyczące 262 powodów. Przy ponownym rozpoznaniu chodziło między innymi o braki w analizie urazów, dowodów i uprawnienia do dochodzenia roszczeń, co wynika z [urzędowego omówienia rozstrzygnięcia](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523).",
+        "Oddalenie apelacji dotyczących danej grupy nie oznacza, że wszystkie ich roszczenia zostały ostatecznie rozstrzygnięte, ani że apelacje złożyli wyłącznie ci powodowie. Ponowne rozpoznanie nie przesądzało z kolei o braku roszczeń. Inwestor oceniający historyczne ryzyko musi zidentyfikować konkretne postępowania i ich stan, zamiast opierać wyliczenie na jednej dacie wyroku.",
+        "[Art. 154 tajwańskiej ustawy o spółkach](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154) co do zasady ogranicza odpowiedzialność wspólnika do zapłaty za objęte udziały, ale ust. 2 przewiduje wyjątek, gdy wspólnik nadużywa osobowości prawnej spółki i powoduje powstanie przez nią konkretnego długu, którego spłata jest oczywiście utrudniona. Muszą też zaistnieć okoliczności na tyle poważne, że odpowiedzialność wspólnika jest konieczna.",
+        "Te przesłanki są łączne. Relacja wspólnikowa, niespłacony dług czy samo stwierdzenie skażenia nie wypełnia całego testu. Obecnego art. 154 nie należy ponadto przedstawiać jako jedynej historycznej podstawy rozstrzygnięcia z 2018 r.; tamta sprawa wymagała oceny zachowania spółek kontrolujących i podstaw wyjścia poza odrębną osobowość prawną.",
+        "Zwykły punkt wyjścia przy wyborze formy obecności opisuje [artykuł o spółce zależnej i oddziale](/pl/columns/taiwan-company-subsidiary-vs-branch). Spór o skażenie dodaje pytanie, na które dokumenty rejestrowe nie odpowiadają: jak grupa wykorzystała kontrolę po uzyskaniu informacji o ryzyku?",
+        "[Lutowy informator USTR z 2026 r.](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje zamiar stron wspierania inwestycji transgranicznych i wskazuje potencjalne wsparcie USA dla finansowania prywatnych inwestycji na Tajwanie z udziałem amerykańskich partnerów prywatnych, z zastrzeżeniem właściwych przepisów. Jest to warunkowa deklaracja zamiaru, nie automatyczne prawo do finansowania ani potwierdzenie, że cała umowa już obowiązuje.",
+        "Przed zatwierdzeniem dystrybucji, redukcji kapitału albo transferu przy wyjściu z inwestycji decydenci powinni dysponować oceną stwierdzonej ekspozycji, nierozstrzygniętych roszczeń i zasobów pozostających w tajwańskiej spółce. Osobnej analizy wymaga sama planowana transakcja. Nazwa dokumentu nie przesądza legalności transferu, a nieprzeczytany raport w repozytorium nie stanowi reakcji na jego ustalenia.",
+        "W [kontakcie w języku angielskim](/en/contact) można na wstępie wskazać rodzaj transakcji, tajwański podmiot i planowaną datę transferu lub zamknięcia. Sposób przekazania raportów technicznych i danych pracowników warto uzgodnić osobno. Natychmiastowego zabezpieczenia wymagają pierwotne ustalenia, decyzje, które wywołały, oraz zatwierdzenia późniejszych ruchów aktywów.",
+        "Źródła urzędowe i aktualny przepis sprawdzono 25–26 października 2026 r. Artykuł omawia wskazany wyrok z 2018 r. na podstawie oficjalnego omówienia; nie przedstawia historii każdej powiązanej sprawy ani nie ocenia odpowiedzialności konkretnego inwestora."
+      ],
+      "metrics": {
+        "lang": "pl",
+        "sentences": 36,
+        "paras": 14,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 17.1,
+        "len_cv": 0.522,
+        "short_share": 0.139,
+        "long_share": 0.111,
+        "para_cv": 0.144,
+        "even_run3": 0.0,
+        "top_end": "inwestora",
+        "top_end_share": 0.056,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "w",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.0,
+        "contrast": 1,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.43,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Badania środowiskowe przeprowadzone przed przejęciem stały się częścią materiału dowodoweg",
+        "last": "Źródła urzędowe i aktualny przepis sprawdzono 25–26 października 2026 r. Artykuł omawia wskazany wyrok z 2018 r. na pods",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "reviewed_sha_bound_map"
+      },
+      "exactReviewedArraysAndUnits": true
+    },
+    {
+      "file": "r3-inputs/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sourceSHA256": "8d106bbd5e0328f445cfdcd7cf5255efd498a78422550eb498158381411d32b3",
+      "mapSHA256": "c632a7b3c2664dbd921fcb153a30f1d1216ae78d2e0c4efdeadd1639391507f1",
+      "approvalSHA256": "ec3e7f0db7c6bd3d58fd84695dbb3be6ba968befa574c92363ad3fdca964f937",
+      "runs": {
+        "unmapped": {
+          "command": [
+            "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+            "--lang",
+            "pl"
+          ],
+          "exitCode": 2,
+          "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/918-taiwan-presale-mortgage-notice-handover-judgment.md: ERROR measurement unavailable: Polish fronted date before capital text has an ambiguous sentence boundary; a reviewed, source-SHA-bound Polish sentence map is required\n",
+          "stderr": ""
+        },
+        "approved-map": {
+          "command": [
+            "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+            "--lang",
+            "pl",
+            "--sentences",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/maps-approved/918-taiwan-presale-mortgage-notice-handover-judgment.sentences.json"
+          ],
+          "exitCode": 1,
+          "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/918-taiwan-presale-mortgage-notice-handover-judgment.md [pl] sentences=42 mean=15.0 cv=0.428 short=0.214 run3=0.05 opener_rep=0.143 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  FAIL len_cv=0.428 (limit >= 0.45): sentence-length variation (stdev/mean) too low — mix very short and long sentences\n",
+          "stderr": ""
+        }
+      },
+      "arrays": [
+        [
+          "Na biurku w nowym domu leżą pismo o kredycie, gładka koperta i dokumenty odbioru; obok stoi jeszcze jeden nieotwarty karton (scena fikcyjna).",
+          "W opisanym poniżej tajwańskim sporze datę wydania ustalano na podstawie treści pism i rzeczywistego stanu lokalu.",
+          "Deweloper wysłał w lutym zawiadomienie o kredycie, gdy lokal nie miał jeszcze wody ani energii, a późniejsza zgoda na wejście w celu remontu i sprzątania również nie zastąpiła wydania.",
+          "Sprawę opisano w orzeczeniu zgromadzonym przez Radę Ochrony Konsumentów Yuanu Wykonawczego, na stronach drukowanych 173–187."
+        ],
+        [
+          "9 lutego 2022 r. oddział Tajwańskiego Sądu Wysokiego w Taichungu wydał wyrok 109年度上易字第289號.",
+          "Oddalił jako nieuzasadnione apelację dewelopera i rozszerzone powództwo, utrzymując obowiązek zapłaty odsetek za opóźnienie.",
+          "Nie było to odrzucenie z przyczyn proceduralnych.",
+          "Wyrok wskazywał, że dalsza apelacja jest niedopuszczalna."
+        ],
+        [
+          "Pismo z 23 lutego 2019 r. prosiło nabywców o kontakt z bankiem kredytującym i informację o postępie.",
+          "Nie stwierdzało, że dom nadaje się do używania.",
+          "Woda i energia zostały podłączone później."
+        ],
+        [
+          "Na początku lipca podczas odbioru nadal istniały usterki wymagające naprawy, a instalacja windy w budynku nie została jeszcze zakończona.",
+          "Nie oznacza to, że nie zamontowano żadnych elementów; chodziło o niedokończoną instalację.",
+          "Sąd nie przyjął twierdzenia dewelopera, że wydanie zawiadomiono już wcześniej."
+        ],
+        [
+          "W sierpniu nabywcy podpisali zgodę umożliwiającą wejście w celu remontu i sprzątania.",
+          "Po porównaniu jej treści z przebiegiem napraw sąd uznał, że samo wejście nie dowodzi wykonania umownego obowiązku wydania.",
+          "Kredyt wpłynął na rachunek dewelopera 5 listopada, natomiast dokument gwarancyjny stron wskazywał 28 listopada jako datę wydania.",
+          "Omówienie tych dowodów znajduje się w punkcie czwartym wyroku, na stronach drukowanych 182–186."
+        ],
+        [
+          "Który obowiązek wykonano przez uzyskanie finansowania?",
+          "Sąd rozdzielił kredyt, płatność i wydanie.",
+          "Wbrew stanowisku dewelopera harmonogram rat potwierdzał, że nabywcy płacili zgodnie z kolejnymi terminami i przed wydaniem uregulowali całość, dlatego zarzut zwłoki w płatności nie został uwzględniony."
+        ],
+        [
+          "Termin czterech miesięcy w wyroku wynikał z konkretnej umowy.",
+          "Obecny punkt 15 obowiązkowych postanowień wzorcowej umowy sprzedaży lokalu przed budową nakazuje sprzedawcy zawiadomić nabywcę o wydaniu w ciągu sześciu miesięcy od uzyskania pozwolenia na użytkowanie.",
+          "Określa także obowiązki dotyczące napraw, rozliczenia płatności i przekazania dokumentów przy wydaniu."
+        ],
+        [
+          "Sześć miesięcy dotyczy zawiadomienia, nie powszechnego terminu fizycznego zakończenia każdego wydania.",
+          "Początkiem okresu jest uzyskanie pozwolenia na użytkowanie.",
+          "W konkretnej umowie trzeba sprawdzić przepisy obowiązujące przy jej zawarciu, właściwe postanowienie, datę pozwolenia oraz treść i doręczenie pisma."
+        ],
+        [
+          "Obecny punkt 14 nadal wymaga od nabywcy przedłożenia dokumentów kredytowych, wykonania powiązanych czynności i zapłaty należności przed przeniesieniem własności.",
+          "Zakwestionowanie zawiadomienia o wydaniu nie usuwa więc automatycznie wymagalnych płatności ani obowiązków dokumentacyjnych."
+        ],
+        [
+          "W sierpniu 2025 r. Rada Ochrony Konsumentów opublikowała wyniki kontroli umów.",
+          "Za naruszenie przepisów uznała wyłączanie czasu potrzebnego na czynności i wypłatę przez bank z terminu na zawiadomienie o wydaniu, jak wskazano w oficjalnych wynikach kontroli."
+        ],
+        [
+          "Regulacje banku centralnego dotyczące kredytów hipotecznych obowiązują w wersji zmienionej od 18 września 2026 r.",
+          "Ta zmiana nie ma zastosowania wstecz do wykonania umowy w 2019 r.",
+          "Nabywca ponownie ustalający warunki finansowania powinien osobno zapisać przewidywaną wypłatę banku, odbiór i planowane wydanie, a następnie zestawić te daty z obowiązkami umownymi."
+        ],
+        [
+          "Tytuł pisma nie wystarcza.",
+          "Pełną korespondencję i dowód jej doręczenia warto zachować z kartą odbioru, zdjęciami usterek, zgodą na wejście i dokumentem gwarancyjnym.",
+          "Dopiero zestawienie pokazuje, czy lokal nadawał się do używania przy otrzymaniu wiadomości i jakie czynności wykonano później."
+        ],
+        [
+          "Przy wezwaniu do zapłaty kary lub odsetek za opóźnienie można przesłać na adres kancelarii opis spornego postanowienia, daty zawiadomień i termin odpowiedzi.",
+          "W dokumentach należy rozróżnić „zawiadomienie o kredycie”, „zawiadomienie o odbiorze” i „zawiadomienie o wydaniu”; wynik nie powinien zależeć od przypisania wszystkim tym pismom jednej daty."
+        ],
+        [
+          "Źródła sprawdzono 25–26 października 2026 r.",
+          "Opis wyroku opiera się na wybranych częściach orzeczenia zgromadzonego w oficjalnym zbiorze, zwłaszcza wskazanych stronach i uzasadnieniu.",
+          "Sprawa zależała od konkretnej umowy i dowodów wykonania; artykuł nie zastępuje oceny płatności, odmowy wydania lub roszczeń w indywidualnej sprawie."
+        ]
+      ],
+      "sentenceUnits": [
+        [
+          22,
+          16,
+          29,
+          16
+        ],
+        [
+          13,
+          14,
+          7,
+          7
+        ],
+        [
+          17,
+          8,
+          6
+        ],
+        [
+          19,
+          12,
+          10
+        ],
+        [
+          12,
+          18,
+          17,
+          14
+        ],
+        [
+          6,
+          6,
+          26
+        ],
+        [
+          9,
+          26,
+          12
+        ],
+        [
+          11,
+          7,
+          19
+        ],
+        [
+          19,
+          13
+        ],
+        [
+          11,
+          25
+        ],
+        [
+          15,
+          12,
+          23
+        ],
+        [
+          4,
+          19,
+          17
+        ],
+        [
+          22,
+          25
+        ],
+        [
+          7,
+          17,
+          20
+        ]
+      ],
+      "paragraphs": [
+        "Na biurku w nowym domu leżą pismo o kredycie, gładka koperta i dokumenty odbioru; obok stoi jeszcze jeden nieotwarty karton (scena fikcyjna). W opisanym poniżej tajwańskim sporze datę wydania ustalano na podstawie treści pism i rzeczywistego stanu lokalu. Deweloper wysłał w lutym zawiadomienie o kredycie, gdy lokal nie miał jeszcze wody ani energii, a późniejsza zgoda na wejście w celu remontu i sprzątania również nie zastąpiła wydania. Sprawę opisano w [orzeczeniu zgromadzonym przez Radę Ochrony Konsumentów Yuanu Wykonawczego](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), na stronach drukowanych 173–187.",
+        "9 lutego 2022 r. oddział Tajwańskiego Sądu Wysokiego w Taichungu wydał wyrok 109年度上易字第289號. Oddalił jako nieuzasadnione apelację dewelopera i rozszerzone powództwo, utrzymując obowiązek zapłaty odsetek za opóźnienie. Nie było to odrzucenie z przyczyn proceduralnych. Wyrok wskazywał, że dalsza apelacja jest niedopuszczalna.",
+        "Pismo z 23 lutego 2019 r. prosiło nabywców o kontakt z bankiem kredytującym i informację o postępie. Nie stwierdzało, że dom nadaje się do używania. Woda i energia zostały podłączone później.",
+        "Na początku lipca podczas odbioru nadal istniały usterki wymagające naprawy, a instalacja windy w budynku nie została jeszcze zakończona. Nie oznacza to, że nie zamontowano żadnych elementów; chodziło o niedokończoną instalację. Sąd nie przyjął twierdzenia dewelopera, że wydanie zawiadomiono już wcześniej.",
+        "W sierpniu nabywcy podpisali zgodę umożliwiającą wejście w celu remontu i sprzątania. Po porównaniu jej treści z przebiegiem napraw sąd uznał, że samo wejście nie dowodzi wykonania umownego obowiązku wydania. Kredyt wpłynął na rachunek dewelopera 5 listopada, natomiast dokument gwarancyjny stron wskazywał 28 listopada jako datę wydania. Omówienie tych dowodów znajduje się w [punkcie czwartym wyroku](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), na stronach drukowanych 182–186.",
+        "Który obowiązek wykonano przez uzyskanie finansowania? Sąd rozdzielił kredyt, płatność i wydanie. Wbrew stanowisku dewelopera harmonogram rat potwierdzał, że nabywcy płacili zgodnie z kolejnymi terminami i przed wydaniem uregulowali całość, dlatego zarzut zwłoki w płatności nie został uwzględniony.",
+        "Termin czterech miesięcy w wyroku wynikał z konkretnej umowy. Obecny [punkt 15 obowiązkowych postanowień wzorcowej umowy sprzedaży lokalu przed budową](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) nakazuje sprzedawcy zawiadomić nabywcę o wydaniu w ciągu sześciu miesięcy od uzyskania pozwolenia na użytkowanie. Określa także obowiązki dotyczące napraw, rozliczenia płatności i przekazania dokumentów przy wydaniu.",
+        "Sześć miesięcy dotyczy zawiadomienia, nie powszechnego terminu fizycznego zakończenia każdego wydania. Początkiem okresu jest uzyskanie pozwolenia na użytkowanie. W konkretnej umowie trzeba sprawdzić przepisy obowiązujące przy jej zawarciu, właściwe postanowienie, datę pozwolenia oraz treść i doręczenie pisma.",
+        "Obecny punkt 14 nadal wymaga od nabywcy przedłożenia dokumentów kredytowych, wykonania powiązanych czynności i zapłaty należności przed przeniesieniem własności. Zakwestionowanie zawiadomienia o wydaniu nie usuwa więc automatycznie wymagalnych płatności ani obowiązków dokumentacyjnych.",
+        "W sierpniu 2025 r. Rada Ochrony Konsumentów opublikowała wyniki kontroli umów. Za naruszenie przepisów uznała wyłączanie czasu potrzebnego na czynności i wypłatę przez bank z terminu na zawiadomienie o wydaniu, jak wskazano w [oficjalnych wynikach kontroli](https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11).",
+        "[Regulacje banku centralnego dotyczące kredytów hipotecznych](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html) obowiązują w wersji zmienionej od 18 września 2026 r. Ta zmiana nie ma zastosowania wstecz do wykonania umowy w 2019 r. Nabywca ponownie ustalający warunki finansowania powinien osobno zapisać przewidywaną wypłatę banku, odbiór i planowane wydanie, a następnie zestawić te daty z obowiązkami umownymi.",
+        "Tytuł pisma nie wystarcza. Pełną korespondencję i dowód jej doręczenia warto zachować z kartą odbioru, zdjęciami usterek, zgodą na wejście i dokumentem gwarancyjnym. Dopiero zestawienie pokazuje, czy lokal nadawał się do używania przy otrzymaniu wiadomości i jakie czynności wykonano później.",
+        "Przy wezwaniu do zapłaty kary lub odsetek za opóźnienie można przesłać na [adres kancelarii](mailto:wei@hoveringlaw.com.tw) opis spornego postanowienia, daty zawiadomień i termin odpowiedzi. W dokumentach należy rozróżnić „zawiadomienie o kredycie”, „zawiadomienie o odbiorze” i „zawiadomienie o wydaniu”; wynik nie powinien zależeć od przypisania wszystkim tym pismom jednej daty.",
+        "Źródła sprawdzono 25–26 października 2026 r. Opis wyroku opiera się na wybranych częściach orzeczenia zgromadzonego w oficjalnym zbiorze, zwłaszcza wskazanych stronach i uzasadnieniu. Sprawa zależała od konkretnej umowy i dowodów wykonania; artykuł nie zastępuje oceny płatności, odmowy wydania lub roszczeń w indywidualnej sprawie."
+      ],
+      "metrics": {
+        "lang": "pl",
+        "sentences": 42,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.0,
+        "len_cv": 0.428,
+        "short_share": 0.214,
+        "long_share": 0.0,
+        "para_cv": 0.289,
+        "even_run3": 0.05,
+        "top_end": "wydania",
+        "top_end_share": 0.095,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "na",
+        "top_opener_n": 2,
+        "opener_rep": 0.143,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.34,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Na biurku w nowym domu leżą pismo o kredycie, gładka koperta i dokumenty odbioru; obok sto",
+        "last": "Źródła sprawdzono 25–26 października 2026 r. Opis wyroku opiera się na wybranych częściach orzeczenia zgromadzonego w of",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "reviewed_sha_bound_map"
+      },
+      "exactReviewedArraysAndUnits": true
+    },
+    {
+      "file": "r3-inputs/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sourceSHA256": "a48b8191ba92a6a386c2108fd12c6966484ef86fd2af8941b40c3ae1a38e9628",
+      "mapSHA256": "e40b092e9ad41c30a9f57643d181fd8a6da9e983588d97b52317ab8563729e05",
+      "approvalSHA256": "ec3e7f0db7c6bd3d58fd84695dbb3be6ba968befa574c92363ad3fdca964f937",
+      "runs": {
+        "unmapped": {
+          "command": [
+            "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+            "--lang",
+            "pl"
+          ],
+          "exitCode": 0,
+          "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [pl] sentences=41 mean=14.5 cv=0.463 short=0.22 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.154 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+          "stderr": ""
+        },
+        "approved-map": {
+          "command": [
+            "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+            "--lang",
+            "pl",
+            "--sentences",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/maps-approved/919-taiwan-workplace-bullying-investigation-hearing-judgment.sentences.json"
+          ],
+          "exitCode": 0,
+          "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [pl] sentences=41 mean=14.5 cv=0.463 short=0.22 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.154 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+          "stderr": ""
+        }
+      },
+      "arrays": [
+        [
+          "Zwolnienie kierownika po jednorazowym nałożeniu dwóch surowych nagan zostało uchylone razem z decyzją po ponownym rozpatrzeniu.",
+          "Przed obradami ogłoszono przewidywany wynik, zainteresowany nie otrzymał odpowiedniej możliwości przedstawienia stanowiska, a raport z dochodzenia nie zgadzał się z późniejszymi ustaleniami dyscyplinarnymi.",
+          "Te problemy opisano w oficjalnym komunikacie Tajpejskiego Wysokiego Sądu Administracyjnego."
+        ],
+        [
+          "Chodzi o wyrok Wydziału Wysokiego Sądownictwa Administracyjnego 114年度訴字第869號 z 3 września 2026 r. w sporze o zwolnienie urzędnika.",
+          "Komunikat wskazuje, że wyrok można zaskarżyć.",
+          "Uchylenie decyzji nie przesądza, że żadne z zarzucanych zachowań nie miało miejsca, ani nie dowodzi faktycznego przywrócenia zainteresowanego do pracy."
+        ],
+        [
+          "Według opublikowanych motywów kierownik organu nadzorującego publicznie zapowiedział dwie surowe nagany, zanim komisja oceny pracowniczej rozpoczęła obrady.",
+          "Następnie organ wyższego szczebla najpierw przeprowadził posiedzenie, po czym polecił rozpatrzenie sprawy podległej jednostce.",
+          "Sąd uznał, że taka kolejność utrudniała komisji rzeczywistą ocenę."
+        ],
+        [
+          "Zapowiedź padła wcześniej.",
+          "Sam protokół późniejszego spotkania nie odpowiada, czy uczestnicy mogli jeszcze swobodnie dojść do innego wniosku na podstawie dowodów."
+        ],
+        [
+          "Dwa pozostałe problemy dotyczyły samego dochodzenia.",
+          "Zainteresowanego nie zawiadomiono we właściwy sposób o posiedzeniu i nie zapewniono mu stosownej możliwości przemówienia.",
+          "Raport będący podstawą kary był sprzeczny co do tego, czy mobbing znajduje oparcie w dowodach, oraz co do zalecanego rozstrzygnięcia.",
+          "Sąd dodał, że późniejsza możliwość obrony przy ponownym rozpatrzeniu nie naprawiła pierwotnego braku.",
+          "Motywy zawiera komunikat sądu."
+        ],
+        [
+          "Postępowanie dotyczyło systemu oceny urzędników, a zdarzenia poprzedzały nowe reguły przeciwdziałania mobbingowi.",
+          "Dla firm bezpośrednie podstawy obejmują przepisy obowiązujące od 1 lipca 2026 r., co wynika z historii zmian ustawy i objaśnień Ministerstwa Pracy.",
+          "Obu procedur nie należy łączyć."
+        ],
+        [
+          "Art. 22-2 ustawy o bezpieczeństwie i higienie pracy wymaga, aby dochodzenie oraz ewentualne próby uzgodnienia rozwiązania ze stronami były prowadzone obiektywnie, bezstronnie i rzetelnie.",
+          "Podczas dochodzenia strony muszą otrzymać odpowiednią możliwość przedstawienia stanowiska i obrony, a osoby mające konflikt interesów muszą zostać wyłączone.",
+          "Publiczne uznawanie winy przed ustaleniem wyniku utrudnia wykonanie tych obowiązków; jest to wniosek dla jakości procedury firmy, nie skutek tego wyroku dla ważności kar w prywatnych przedsiębiorstwach."
+        ],
+        [
+          "Ochrona nie czeka na końcowy raport.",
+          "Gdy pracownik dotknięty mobbingiem składa skargę, ten sam przepis nakazuje pracodawcy podjąć środki zapobiegające ponownemu mobbingowi, zapewnić stosownie do potrzeb doradztwo, pomoc i ochronę oraz przeprowadzić dochodzenie.",
+          "Przepis nie gwarantuje, że naruszenie nigdy się nie powtórzy; wymaga działań pracodawcy."
+        ],
+        [
+          "Zgodnie z wolą skarżącego pracodawca może podjąć ze stronami próbę uzgodnienia rozwiązania sprawy.",
+          "Jeśli próba nie przyniesie porozumienia, pracodawca musi kontynuować dochodzenie.",
+          "Natychmiastowa ochrona i wysłuchanie drugiej strony nie są alternatywami."
+        ],
+        [
+          "Dla działu HR praktyczna wskazówka jest konkretna: zapis „świadek tak twierdzi”, zestaw materiałów i ostateczne ustalenie powinny dać się ze sobą powiązać.",
+          "Przy sprzecznych relacjach trzeba odnotować, któremu dowodowi przyznano wagę i dlaczego.",
+          "Jeżeli obecność w pracy, wiadomości albo protokoły nie potwierdzają zarzutu, ta luka także powinna pozostać widoczna.",
+          "Są to zalecenia dotyczące dokumentacji wyciągnięte z problemów wskazanych przez sąd, a nie nowe ustawowe formalności."
+        ],
+        [
+          "Obrona wymaga określonego przedmiotu.",
+          "Wezwanie do wyjaśnienia „stylu zarządzania” daje mniej precyzyjny punkt odniesienia niż opisanie zarzucanego zachowania, jego czasu i kwestii wymagających wyjaśnienia.",
+          "Porównanie zawiadomienia, notatek z rozmów i końcowych ustaleń pozwala sprawdzić, czy wszystkie dokumenty dotyczą tego samego zdarzenia.",
+          "Nie trzeba ujawniać w komunikacie pełnych danych osobowych."
+        ],
+        [
+          "W sprawie tajwańskiego sporu pracowniczego można przesłać na adres kancelarii etap skargi, już podjęte decyzje i najbliższy termin, bez pełnych wrażliwych akt przy pierwszym kontakcie.",
+          "Przed ogłoszeniem wyniku warto mieć komplet zawiadomień, zapisów wysłuchania i motywów przyjęcia dowodów, aby można było sprawdzić, czy dochodzenie rzeczywiście uwzględniło różne wersje."
+        ],
+        [
+          "Źródła sprawdzono 25–26 października 2026 r.",
+          "Opis sprawy opiera się na publicznym komunikacie sądu; późniejszego wyniku apelacji na tej podstawie nie ustalono.",
+          "Środki odwoławcze urzędnika i pracownika zależą od ich statusu oraz rodzaju decyzji."
+        ]
+      ],
+      "sentenceUnits": [
+        [
+          16,
+          23,
+          10
+        ],
+        [
+          18,
+          6,
+          20
+        ],
+        [
+          17,
+          14,
+          9
+        ],
+        [
+          3,
+          18
+        ],
+        [
+          6,
+          15,
+          20,
+          13,
+          4
+        ],
+        [
+          12,
+          22,
+          5
+        ],
+        [
+          25,
+          19,
+          27
+        ],
+        [
+          6,
+          27,
+          12
+        ],
+        [
+          13,
+          9,
+          9
+        ],
+        [
+          22,
+          11,
+          16,
+          16
+        ],
+        [
+          4,
+          20,
+          17,
+          8
+        ],
+        [
+          25,
+          23
+        ],
+        [
+          7,
+          16,
+          12
+        ]
+      ],
+      "paragraphs": [
+        "Zwolnienie kierownika po jednorazowym nałożeniu dwóch surowych nagan zostało uchylone razem z decyzją po ponownym rozpatrzeniu. Przed obradami ogłoszono przewidywany wynik, zainteresowany nie otrzymał odpowiedniej możliwości przedstawienia stanowiska, a raport z dochodzenia nie zgadzał się z późniejszymi ustaleniami dyscyplinarnymi. Te problemy opisano w [oficjalnym komunikacie Tajpejskiego Wysokiego Sądu Administracyjnego](https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html).",
+        "Chodzi o wyrok Wydziału Wysokiego Sądownictwa Administracyjnego 114年度訴字第869號 z 3 września 2026 r. w sporze o zwolnienie urzędnika. Komunikat wskazuje, że wyrok można zaskarżyć. Uchylenie decyzji nie przesądza, że żadne z zarzucanych zachowań nie miało miejsca, ani nie dowodzi faktycznego przywrócenia zainteresowanego do pracy.",
+        "Według opublikowanych motywów kierownik organu nadzorującego publicznie zapowiedział dwie surowe nagany, zanim komisja oceny pracowniczej rozpoczęła obrady. Następnie organ wyższego szczebla najpierw przeprowadził posiedzenie, po czym polecił rozpatrzenie sprawy podległej jednostce. Sąd uznał, że taka kolejność utrudniała komisji rzeczywistą ocenę.",
+        "Zapowiedź padła wcześniej. Sam protokół późniejszego spotkania nie odpowiada, czy uczestnicy mogli jeszcze swobodnie dojść do innego wniosku na podstawie dowodów.",
+        "Dwa pozostałe problemy dotyczyły samego dochodzenia. Zainteresowanego nie zawiadomiono we właściwy sposób o posiedzeniu i nie zapewniono mu stosownej możliwości przemówienia. Raport będący podstawą kary był sprzeczny co do tego, czy mobbing znajduje oparcie w dowodach, oraz co do zalecanego rozstrzygnięcia. Sąd dodał, że późniejsza możliwość obrony przy ponownym rozpatrzeniu nie naprawiła pierwotnego braku. Motywy zawiera [komunikat sądu](https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html).",
+        "Postępowanie dotyczyło systemu oceny urzędników, a zdarzenia poprzedzały nowe reguły przeciwdziałania mobbingowi. Dla firm bezpośrednie podstawy obejmują przepisy obowiązujące od 1 lipca 2026 r., co wynika z [historii zmian ustawy](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001) i [objaśnień Ministerstwa Pracy](https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt). Obu procedur nie należy łączyć.",
+        "[Art. 22-2 ustawy o bezpieczeństwie i higienie pracy](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2) wymaga, aby dochodzenie oraz ewentualne próby uzgodnienia rozwiązania ze stronami były prowadzone obiektywnie, bezstronnie i rzetelnie. Podczas dochodzenia strony muszą otrzymać odpowiednią możliwość przedstawienia stanowiska i obrony, a osoby mające konflikt interesów muszą zostać wyłączone. Publiczne uznawanie winy przed ustaleniem wyniku utrudnia wykonanie tych obowiązków; jest to wniosek dla jakości procedury firmy, nie skutek tego wyroku dla ważności kar w prywatnych przedsiębiorstwach.",
+        "Ochrona nie czeka na końcowy raport. Gdy pracownik dotknięty mobbingiem składa skargę, ten sam przepis nakazuje pracodawcy podjąć środki zapobiegające ponownemu mobbingowi, zapewnić stosownie do potrzeb doradztwo, pomoc i ochronę oraz przeprowadzić dochodzenie. Przepis nie gwarantuje, że naruszenie nigdy się nie powtórzy; wymaga działań pracodawcy.",
+        "Zgodnie z wolą skarżącego pracodawca może podjąć ze stronami próbę uzgodnienia rozwiązania sprawy. Jeśli próba nie przyniesie porozumienia, pracodawca musi kontynuować dochodzenie. Natychmiastowa ochrona i wysłuchanie drugiej strony nie są alternatywami.",
+        "Dla działu HR praktyczna wskazówka jest konkretna: zapis „świadek tak twierdzi”, zestaw materiałów i ostateczne ustalenie powinny dać się ze sobą powiązać. Przy sprzecznych relacjach trzeba odnotować, któremu dowodowi przyznano wagę i dlaczego. Jeżeli obecność w pracy, wiadomości albo protokoły nie potwierdzają zarzutu, ta luka także powinna pozostać widoczna. Są to zalecenia dotyczące dokumentacji wyciągnięte z problemów wskazanych przez sąd, a nie nowe ustawowe formalności.",
+        "Obrona wymaga określonego przedmiotu. Wezwanie do wyjaśnienia „stylu zarządzania” daje mniej precyzyjny punkt odniesienia niż opisanie zarzucanego zachowania, jego czasu i kwestii wymagających wyjaśnienia. Porównanie zawiadomienia, notatek z rozmów i końcowych ustaleń pozwala sprawdzić, czy wszystkie dokumenty dotyczą tego samego zdarzenia. Nie trzeba ujawniać w komunikacie pełnych danych osobowych.",
+        "W sprawie tajwańskiego sporu pracowniczego można przesłać na [adres kancelarii](mailto:wei@hoveringlaw.com.tw) etap skargi, już podjęte decyzje i najbliższy termin, bez pełnych wrażliwych akt przy pierwszym kontakcie. Przed ogłoszeniem wyniku warto mieć komplet zawiadomień, zapisów wysłuchania i motywów przyjęcia dowodów, aby można było sprawdzić, czy dochodzenie rzeczywiście uwzględniło różne wersje.",
+        "Źródła sprawdzono 25–26 października 2026 r. Opis sprawy opiera się na publicznym komunikacie sądu; późniejszego wyniku apelacji na tej podstawie nie ustalono. Środki odwoławcze urzędnika i pracownika zależą od ich statusu oraz rodzaju decyzji."
+      ],
+      "metrics": {
+        "lang": "pl",
+        "sentences": 41,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.5,
+        "len_cv": 0.463,
+        "short_share": 0.22,
+        "long_share": 0.0,
+        "para_cv": 0.285,
+        "even_run3": 0.0,
+        "top_end": "pracy",
+        "top_end_share": 0.049,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "zwolnienie",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.85,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Zwolnienie kierownika po jednorazowym nałożeniu dwóch surowych nagan zostało uchylone raze",
+        "last": "Źródła sprawdzono 25–26 października 2026 r. Opis sprawy opiera się na publicznym komunikacie sądu; późniejszego wyniku ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "reviewed_sha_bound_map"
+      },
+      "exactReviewedArraysAndUnits": true
+    },
+    {
+      "file": "r3-inputs/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sourceSHA256": "1ae0a5c6dd50d985378f533d266248349d164314bd39cfdf13fefd4b26ef5b30",
+      "mapSHA256": "b8201b47ebb5873841b8735ff30081c511a26e5c8d4cd51fcf40305616a5f12d",
+      "approvalSHA256": "ec3e7f0db7c6bd3d58fd84695dbb3be6ba968befa574c92363ad3fdca964f937",
+      "runs": {
+        "unmapped": {
+          "command": [
+            "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+            "--lang",
+            "pl"
+          ],
+          "exitCode": 0,
+          "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/920-taiwan-apartment-ev-charger-common-area-judgment.md [pl] sentences=39 mean=15.1 cv=0.545 short=0.154 run3=0.054 opener_rep=0.0 cite_end=0.0 cite_para=0.308 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+          "stderr": ""
+        },
+        "approved-map": {
+          "command": [
+            "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+            "--lang",
+            "pl",
+            "--sentences",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/maps-approved/920-taiwan-apartment-ev-charger-common-area-judgment.sentences.json"
+          ],
+          "exitCode": 0,
+          "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/920-taiwan-apartment-ev-charger-common-area-judgment.md [pl] sentences=39 mean=15.1 cv=0.545 short=0.154 run3=0.054 opener_rep=0.0 cite_end=0.0 cite_para=0.308 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+          "stderr": ""
+        }
+      },
+      "arrays": [
+        [
+          "Czy ładowarkę na własnym miejscu parkingowym można podłączyć według własnego projektu?",
+          "Mieszkaniec zamontował skrzynkę na ścianie za stanowiskiem, poprowadził instalację pod sufitem i połączył ją ze wspólną rozdzielnią oraz licznikiem używanym przez mieszkańca, jak wynika z urzędowego tekstu wyroku.",
+          "Spór wykraczał poza samo miejsce parkingowe."
+        ],
+        [
+          "Oddział Tajwańskiego Sądu Wysokiego w Kaohsiungu w wyroku 111年度上字第132號 z 22 czerwca 2022 r. oddalił apelację mieszkańca i utrzymał obowiązek usunięcia instalacji oraz przywrócenia stanu poprzedniego, ponieważ urządzenia znajdowały się we wspólnej ścianie, suficie i rozdzielni, a mieszkaniec nie uzyskał wcześniej wymaganych zgód.",
+          "Późniejszych orzeczeń ani prawomocnego zakończenia sprawy w źródle nie potwierdzono."
+        ],
+        [
+          "Bezsporne ustalenia opisywały skrzynkę ładującą za miejscem w garażu podziemnym, rury elektryczne na wieszakach sufitowych oraz nowy wyłącznik w rozdzielni.",
+          "Instalację połączono z licznikiem mieszkańca.",
+          "Orzeczenie nie rozstrzygało prawnego tytułu własności do samego licznika; dotyczyło miejsc i urządzeń wykorzystanych przez instalację."
+        ],
+        [
+          "Ściana, sufit i rozdzielnia należały do części lub urządzeń wspólnych.",
+          "Twierdzenie o prowadzeniu przewodów wyłącznie w części do wyłącznego użytku nie odpowiadało ustalonemu zakresowi robót."
+        ],
+        [
+          "Procedura zgody miała dwa źródła.",
+          "Art. 11 ustawy o zarządzie budynkami mieszkalnymi wymaga uchwały zebrania właścicieli dla rozbiórki, istotnego remontu lub ulepszenia części wspólnych i powiązanych urządzeń; sąd zastosował tę regułę do prac mieszkańca.",
+          "Punkt 15 regulaminu wspólnoty dodatkowo wymagał zgody zarządu oraz kontroli bezpieczeństwa zakładu energetycznego przy dodawaniu przewodów i rur elektrycznych.",
+          "Obie przesłanki regulaminowe były łączne."
+        ],
+        [
+          "Naruszenie art. 11 i regulaminu sąd uznał za niewykonanie obowiązku przestrzegania innych przepisów lub regulaminu z art. 6 ust. 1 pkt 5.",
+          "Zarząd wysłał formalne pismo i podjął koordynację, lecz instalacja pozostała.",
+          "Trwające niewykonanie obowiązku pozwalało zatem wystąpić do sądu na podstawie ust. 3 tego artykułu."
+        ],
+        [
+          "Art. 6 ust. 1 pkt 4 odnosi się z kolei do instalowania przewodów i koniecznego korzystania z części wspólnych.",
+          "Sąd stwierdził, że ta sprawa nie należała do sytuacji objętej tym punktem.",
+          "Kluczowe motywy znajdują się w punktach 5 i 6 wyroku.",
+          "Wynik nie uzasadnia stwierdzenia, że każda ładowarka przy miejscu parkingowym podlega identycznej procedurze głosowania."
+        ],
+        [
+          "Mieszkaniec twierdził ponadto, że dodał wyłącznik, zaprzestał używania i zamknął urządzenie, a klucze może przekazać zarządowi.",
+          "Sąd rozpatrzył te argumenty przy założeniu „nawet jeśli są prawdziwe”, nie jako udowodnione fakty.",
+          "Przy takim założeniu nie usuwały one obowiązku demontażu i przywrócenia stanu poprzedniego.",
+          "Spór dotyczył uprawnienia do prac, nie tylko dopływu prądu."
+        ],
+        [
+          "Oferta wskazująca jedynie numer miejsca nie pokazuje przedmiotu sporu.",
+          "Instalator powinien oznaczyć położenie skrzynki, każdą ścianę, filar i sufit z przewodami oraz rozdzielnię przyłączeniową.",
+          "Ten rysunek trzeba porównać z dokumentami praw, regulaminem i istniejącymi uchwałami."
+        ],
+        [
+          "Odpowiedź ustna nie precyzuje wystarczająco procedury.",
+          "Wniosek do zarządu powinien opisywać prace i pozwolić wskazać właściwy punkt regulaminu, organ uprawniony do zgody oraz brakujące załączniki, a jeżeli zebranie już wyraziło zgodę, jej trasa, urządzenia i warunki muszą odpowiadać wersji, którą instalator rzeczywiście zamierza wykonać."
+        ],
+        [
+          "Program dotacyjny ogłoszony przez Kaohsiung w maju 2026 r. obejmował korytka kablowe dla ładowarek EV w częściach wspólnych budynków mieszkalnych.",
+          "Zgłoszenia przyjmowano do 30 września, więc termin już upłynął.",
+          "Jak wynika z komunikatu miasta, był to program wsparcia publicznego okablowania, nie zgoda na instalację ani zastępstwo procedury wspólnoty."
+        ],
+        [
+          "Przy żądaniu wstrzymania prac lub demontażu można przesłać na adres kancelarii opis sporu, numery postanowień regulaminu i termin odpowiedzi.",
+          "Przed podpisaniem umowy instalacyjnej warto ustalić, czy prace mogą ruszyć przed zgodą i kto poniesie koszty przy jej odmowie.",
+          "Pierwszym dokumentem powinien być zatwierdzony przebieg trasy, a nie rachunek za instalację bez takiej zgody."
+        ],
+        [
+          "Źródła sprawdzono 25–26 października 2026 r.",
+          "Artykuł opisuje wskazany wyrok oddziału Tajwańskiego Sądu Wysokiego w Kaohsiungu bez potwierdzenia dalszego postępowania lub prawomocności.",
+          "W innej wspólnocie trzeba osobno ustalić położenie urządzeń, zakres praw i treść regulaminu."
+        ]
+      ],
+      "sentenceUnits": [
+        [
+          11,
+          28,
+          6
+        ],
+        [
+          43,
+          10
+        ],
+        [
+          20,
+          5,
+          16
+        ],
+        [
+          10,
+          15
+        ],
+        [
+          5,
+          29,
+          19,
+          5
+        ],
+        [
+          22,
+          10,
+          14
+        ],
+        [
+          19,
+          12,
+          10,
+          14
+        ],
+        [
+          16,
+          14,
+          12,
+          9
+        ],
+        [
+          9,
+          15,
+          11
+        ],
+        [
+          6,
+          38
+        ],
+        [
+          20,
+          9,
+          19
+        ],
+        [
+          19,
+          19,
+          15
+        ],
+        [
+          7,
+          16,
+          13
+        ]
+      ],
+      "paragraphs": [
+        "Czy ładowarkę na własnym miejscu parkingowym można podłączyć według własnego projektu? Mieszkaniec zamontował skrzynkę na ścianie za stanowiskiem, poprowadził instalację pod sufitem i połączył ją ze wspólną rozdzielnią oraz licznikiem używanym przez mieszkańca, jak wynika z [urzędowego tekstu wyroku](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1). Spór wykraczał poza samo miejsce parkingowe.",
+        "Oddział Tajwańskiego Sądu Wysokiego w Kaohsiungu w wyroku 111年度上字第132號 z 22 czerwca 2022 r. oddalił apelację mieszkańca i utrzymał obowiązek usunięcia instalacji oraz przywrócenia stanu poprzedniego, ponieważ urządzenia znajdowały się we wspólnej ścianie, suficie i rozdzielni, a mieszkaniec nie uzyskał wcześniej wymaganych zgód. Późniejszych orzeczeń ani prawomocnego zakończenia sprawy w źródle nie potwierdzono.",
+        "Bezsporne ustalenia opisywały skrzynkę ładującą za miejscem w garażu podziemnym, rury elektryczne na wieszakach sufitowych oraz nowy wyłącznik w rozdzielni. Instalację połączono z licznikiem mieszkańca. Orzeczenie nie rozstrzygało prawnego tytułu własności do samego licznika; dotyczyło miejsc i urządzeń wykorzystanych przez instalację.",
+        "Ściana, sufit i rozdzielnia należały do części lub urządzeń wspólnych. Twierdzenie o prowadzeniu przewodów wyłącznie w części do wyłącznego użytku nie odpowiadało ustalonemu zakresowi robót.",
+        "Procedura zgody miała dwa źródła. [Art. 11 ustawy o zarządzie budynkami mieszkalnymi](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11) wymaga uchwały zebrania właścicieli dla rozbiórki, istotnego remontu lub ulepszenia części wspólnych i powiązanych urządzeń; sąd zastosował tę regułę do prac mieszkańca. Punkt 15 regulaminu wspólnoty dodatkowo wymagał zgody zarządu oraz kontroli bezpieczeństwa zakładu energetycznego przy dodawaniu przewodów i rur elektrycznych. Obie przesłanki regulaminowe były łączne.",
+        "Naruszenie art. 11 i regulaminu sąd uznał za niewykonanie obowiązku przestrzegania innych przepisów lub regulaminu z [art. 6 ust. 1 pkt 5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6). Zarząd wysłał formalne pismo i podjął koordynację, lecz instalacja pozostała. Trwające niewykonanie obowiązku pozwalało zatem wystąpić do sądu na podstawie ust. 3 tego artykułu.",
+        "Art. 6 ust. 1 pkt 4 odnosi się z kolei do instalowania przewodów i koniecznego korzystania z części wspólnych. Sąd stwierdził, że ta sprawa nie należała do sytuacji objętej tym punktem. Kluczowe motywy znajdują się w [punktach 5 i 6 wyroku](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1). Wynik nie uzasadnia stwierdzenia, że każda ładowarka przy miejscu parkingowym podlega identycznej procedurze głosowania.",
+        "Mieszkaniec twierdził ponadto, że dodał wyłącznik, zaprzestał używania i zamknął urządzenie, a klucze może przekazać zarządowi. Sąd rozpatrzył te argumenty przy założeniu „nawet jeśli są prawdziwe”, nie jako udowodnione fakty. Przy takim założeniu nie usuwały one obowiązku demontażu i przywrócenia stanu poprzedniego. Spór dotyczył uprawnienia do prac, nie tylko dopływu prądu.",
+        "Oferta wskazująca jedynie numer miejsca nie pokazuje przedmiotu sporu. Instalator powinien oznaczyć położenie skrzynki, każdą ścianę, filar i sufit z przewodami oraz rozdzielnię przyłączeniową. Ten rysunek trzeba porównać z dokumentami praw, regulaminem i istniejącymi uchwałami.",
+        "Odpowiedź ustna nie precyzuje wystarczająco procedury. Wniosek do zarządu powinien opisywać prace i pozwolić wskazać właściwy punkt regulaminu, organ uprawniony do zgody oraz brakujące załączniki, a jeżeli zebranie już wyraziło zgodę, jej trasa, urządzenia i warunki muszą odpowiadać wersji, którą instalator rzeczywiście zamierza wykonać.",
+        "Program dotacyjny ogłoszony przez Kaohsiung w maju 2026 r. obejmował korytka kablowe dla ładowarek EV w częściach wspólnych budynków mieszkalnych. Zgłoszenia przyjmowano do 30 września, więc termin już upłynął. Jak wynika z [komunikatu miasta](https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE), był to program wsparcia publicznego okablowania, nie zgoda na instalację ani zastępstwo procedury wspólnoty.",
+        "Przy żądaniu wstrzymania prac lub demontażu można przesłać na [adres kancelarii](mailto:wei@hoveringlaw.com.tw) opis sporu, numery postanowień regulaminu i termin odpowiedzi. Przed podpisaniem umowy instalacyjnej warto ustalić, czy prace mogą ruszyć przed zgodą i kto poniesie koszty przy jej odmowie. Pierwszym dokumentem powinien być zatwierdzony przebieg trasy, a nie rachunek za instalację bez takiej zgody.",
+        "Źródła sprawdzono 25–26 października 2026 r. Artykuł opisuje wskazany wyrok oddziału Tajwańskiego Sądu Wysokiego w Kaohsiungu bez potwierdzenia dalszego postępowania lub prawomocności. W innej wspólnocie trzeba osobno ustalić położenie urządzeń, zakres praw i treść regulaminu."
+      ],
+      "metrics": {
+        "lang": "pl",
+        "sentences": 39,
+        "paras": 13,
+        "heads": 2,
+        "list_items": 0,
+        "mean_len": 15.1,
+        "len_cv": 0.545,
+        "short_share": 0.154,
+        "long_share": 0.051,
+        "para_cv": 0.197,
+        "even_run3": 0.054,
+        "top_end": "wyroku",
+        "top_end_share": 0.051,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "czy",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.308,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.56,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Czy ładowarkę na własnym miejscu parkingowym można podłączyć według własnego projektu?",
+        "last": "Źródła sprawdzono 25–26 października 2026 r. Artykuł opisuje wskazany wyrok oddziału Tajwańskiego Sądu Wysokiego w Kaohs",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "reviewed_sha_bound_map"
+      },
+      "exactReviewedArraysAndUnits": true
+    },
+    {
+      "file": "r3-inputs/921-taiwan-online-game-coins-refund-judgment.md",
+      "sourceSHA256": "c29911404cc6477949d269efbbc26946512b5fd477ded9ed1a4f655145c3551b",
+      "mapSHA256": "f8192ca8dcf3f64605770fe684e805bd5e1bf34eca671cc68e85ee05bdffbafa",
+      "approvalSHA256": "ec3e7f0db7c6bd3d58fd84695dbb3be6ba968befa574c92363ad3fdca964f937",
+      "runs": {
+        "unmapped": {
+          "command": [
+            "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/921-taiwan-online-game-coins-refund-judgment.md",
+            "--lang",
+            "pl"
+          ],
+          "exitCode": 0,
+          "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/921-taiwan-online-game-coins-refund-judgment.md [pl] sentences=43 mean=15 cv=0.546 short=0.233 run3=0.0 opener_rep=0.133 cite_end=0.0 cite_para=0.0 contrast=2 caveat=0 q=1\n  OK — no variety limit violated\n",
+          "stderr": ""
+        },
+        "approved-map": {
+          "command": [
+            "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/candidate/variety_metrics.py",
+            "check",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/921-taiwan-online-game-coins-refund-judgment.md",
+            "--lang",
+            "pl",
+            "--sentences",
+            "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/maps-approved/921-taiwan-online-game-coins-refund-judgment.sentences.json"
+          ],
+          "exitCode": 0,
+          "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/r3-inputs/921-taiwan-online-game-coins-refund-judgment.md [pl] sentences=43 mean=15 cv=0.546 short=0.233 run3=0.0 opener_rep=0.133 cite_end=0.0 cite_para=0.0 contrast=2 caveat=0 q=1\n  OK — no variety limit violated\n",
+          "stderr": ""
+        }
+      },
+      "arrays": [
+        [
+          "Gracz przeliczył pozostałe na koncie monety na 243 548 NTD i zażądał takiej kwoty od przedsiębiorcy.",
+          "Sąd nie przyznał roszczenia; była to kwota żądania, nie wysokość zasądzonego zwrotu.",
+          "Strony nie spierały się o brak niewykorzystanych płatnych punktów na koncie.",
+          "Orzeczenie znajduje się w oficjalnym zbiorze Rady Ochrony Konsumentów, na stronach drukowanych 140–153."
+        ],
+        [
+          "Sąd Rejonowy w Keelungu w wyroku 109年度消簡上字第1號 z 13 września 2021 r. oddalił apelację gracza, a dalsza apelacja była niedopuszczalna.",
+          "Sąd badał rzeczywistą funkcję monet i warunki zwrotu.",
+          "Nie wprowadził zakazu ochrony wszystkich wirtualnych aktywów."
+        ],
+        [
+          "Umowa pozwalała najpierw kupić punkty, a następnie wymieniać je na usługi lub towary w grze.",
+          "Pozostałe monety służyły graczom do rywalizacji i pełniły funkcję żetonów.",
+          "Nie chodziło o stwierdzenie, że wszystkie zakupione wartości już zużyto; saldo monet nadal istniało, ale miało inną funkcję."
+        ],
+        [
+          "Sąd uznał, że te monety nie były niewykorzystanymi płatnymi punktami podlegającymi zwrotowi według umowy ani opłatą za grę pobraną przez przedsiębiorcę.",
+          "Odmówił ich przeliczenia na gotówkę."
+        ],
+        [
+          "W motywach znalazło się także zastrzeżenie, że możliwość wymiany takich żetonów do rywalizacji na pieniądze u przedsiębiorcy rodziłaby zagadnienie hazardu.",
+          "To rozumowanie łączyło się ze sposobem działania tej gry.",
+          "Przy innym produkcie trzeba ustalić, skąd pochodzą monety, co można za nie uzyskać i jak je wykorzystano.",
+          "Pełniejsze motywy zawiera punkt ósmy wyroku, strony drukowane 148–152."
+        ],
+        [
+          "Dlaczego wypowiedzenie umowy nie doprowadziło do zwrotu?",
+          "Gracz sam oświadczył, że umowę wypowiada, więc sąd mógł przyjąć skutek wypowiedzenia i przejść do oceny przedmiotu ewentualnego zwrotu.",
+          "Nie oznaczało to uznania wszystkich wcześniejszych powodów blokady konta lub wypowiedzenia przez przedsiębiorcę za zgodne z prawem."
+        ],
+        [
+          "Punkt 18 obecnych obowiązkowych postanowień wzorcowej umowy o usługi gier online pozwala konsumentowi wypowiedzieć umowę w każdym czasie przez zawiadomienie przedsiębiorcy, a niewykorzystane płatne punkty albo niewykorzystane opłaty za grę trzeba zwrócić po odliczeniu niezbędnych kosztów w ciągu 30 dni od wypowiedzenia.",
+          "Strony mogą zamiast tego uzgodnić inny sposób rozliczenia."
+        ],
+        [
+          "„Niezbędne koszty” powinny mieć wykaz.",
+          "Przy otrzymaniu kalkulacji można zażądać rozdzielenia niewykorzystanego salda, potrąceń i ich podstawy, a następnie porównać wyliczenie z umową.",
+          "Stały procent ustalony przez przedsiębiorcę nie dowodzi sam zasadności potrącenia."
+        ],
+        [
+          "Ostatnia zmiana tych reguł weszła w życie 1 stycznia 2023 r., po omawianym wyroku.",
+          "Sprawę rozstrzygnięto według wcześniejszej umowy i właściwych wtedy przepisów.",
+          "Obecny punkt 4 przewiduje odrębnie pisemne odstąpienie od umowy w ciągu siedmiu dni od rozpoczęcia gry oraz zwrot niewykorzystanych płatnych punktów, ale po upływie tego okresu nadal istnieje droga wypowiedzenia z punktu 18."
+        ],
+        [
+          "Pojedynczy zrzut konta nie rozróżnia pierwotnie kupionych punktów, monet uzyskanych przy wymianie i pozostałości po rozgrywce.",
+          "Potrzebne są trzy powiązane grupy danych:"
+        ],
+        [
+          "Przedsiębiorca musi przechowywać osobistą historię gry co najmniej przez 30 dni, a po otrzymaniu żądania udostępnić ją w ciągu siedmiu dni.",
+          "Trzydzieści dni to ustawowe minimum.",
+          "Wczesny wniosek może pomóc uzyskać dane, których końcowy zrzut salda nie pokazuje."
+        ],
+        [
+          "Obecne reguły zabraniają też postanowienia, że przy sporze jedynym kryterium będą historia gry i dane elektroniczne przechowywane przez przedsiębiorcę.",
+          "Nie oznacza to, że dane firmy są zawsze nieważne lub bezużyteczne.",
+          "Ograniczenie dotyczy ich wyłączności jako kontraktowego kryterium, co wynika z punktu 9 obowiązkowych postanowień i punktu 6 postanowień zakazanych."
+        ],
+        [
+          "W statystykach za 2025 r., opublikowanych w maju 2026 r., gry online zajęły drugie miejsce wśród kategorii reklamacji konsumenckich pierwszego etapu.",
+          "Liczba spraw zmalała rok do roku.",
+          "Rada Ochrony Konsumentów wezwała jednocześnie przedsiębiorców do właściwego załatwiania blokad kont, zawieszeń i obsługi klienta, jak wskazano w oficjalnych statystykach i uwagach."
+        ],
+        [
+          "Spór o zwrot można najpierw zgłosić przedsiębiorcy, a następnie skorzystać z rządowego systemu reklamacji konsumenckich, a jeżeli problem dotyczy wykładni umowy albo odmowy udostępnienia dowodów, na adres kancelarii można przesłać opis pozycji i termin odpowiedzi, bez hasła do konta.",
+          "Kwota roszczenia powinna wynikać z zapisów pokazujących zarówno napływ pieniędzy, jak i sposób ich wykorzystania w grze."
+        ],
+        [
+          "Źródła sprawdzono 25–26 października 2026 r.",
+          "Opis wyroku opiera się na wybranych częściach orzeczenia zgromadzonego w oficjalnym zbiorze.",
+          "Funkcję punktów, przedmiotów i podstaw wypowiedzenia w innych grach trzeba oceniać według ich rzeczywistych zasad i umowy."
+        ]
+      ],
+      "sentenceUnits": [
+        [
+          16,
+          12,
+          11,
+          14
+        ],
+        [
+          20,
+          8,
+          7
+        ],
+        [
+          15,
+          10,
+          18
+        ],
+        [
+          21,
+          5
+        ],
+        [
+          20,
+          9,
+          17,
+          10
+        ],
+        [
+          7,
+          19,
+          17
+        ],
+        [
+          42,
+          8
+        ],
+        [
+          5,
+          18,
+          10
+        ],
+        [
+          14,
+          9,
+          33
+        ],
+        [
+          16,
+          6
+        ],
+        [
+          21,
+          5,
+          12
+        ],
+        [
+          19,
+          11,
+          19
+        ],
+        [
+          21,
+          6,
+          22
+        ],
+        [
+          39,
+          17
+        ],
+        [
+          7,
+          12,
+          17
+        ]
+      ],
+      "paragraphs": [
+        "Gracz przeliczył pozostałe na koncie monety na 243 548 NTD i zażądał takiej kwoty od przedsiębiorcy. Sąd nie przyznał roszczenia; była to kwota żądania, nie wysokość zasądzonego zwrotu. Strony nie spierały się o brak niewykorzystanych płatnych punktów na koncie. Orzeczenie znajduje się w [oficjalnym zbiorze Rady Ochrony Konsumentów](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), na stronach drukowanych 140–153.",
+        "Sąd Rejonowy w Keelungu w wyroku 109年度消簡上字第1號 z 13 września 2021 r. oddalił apelację gracza, a dalsza apelacja była niedopuszczalna. Sąd badał rzeczywistą funkcję monet i warunki zwrotu. Nie wprowadził zakazu ochrony wszystkich wirtualnych aktywów.",
+        "Umowa pozwalała najpierw kupić punkty, a następnie wymieniać je na usługi lub towary w grze. Pozostałe monety służyły graczom do rywalizacji i pełniły funkcję żetonów. Nie chodziło o stwierdzenie, że wszystkie zakupione wartości już zużyto; saldo monet nadal istniało, ale miało inną funkcję.",
+        "Sąd uznał, że te monety nie były niewykorzystanymi płatnymi punktami podlegającymi zwrotowi według umowy ani opłatą za grę pobraną przez przedsiębiorcę. Odmówił ich przeliczenia na gotówkę.",
+        "W motywach znalazło się także zastrzeżenie, że możliwość wymiany takich żetonów do rywalizacji na pieniądze u przedsiębiorcy rodziłaby zagadnienie hazardu. To rozumowanie łączyło się ze sposobem działania tej gry. Przy innym produkcie trzeba ustalić, skąd pochodzą monety, co można za nie uzyskać i jak je wykorzystano. Pełniejsze motywy zawiera [punkt ósmy wyroku](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), strony drukowane 148–152.",
+        "Dlaczego wypowiedzenie umowy nie doprowadziło do zwrotu? Gracz sam oświadczył, że umowę wypowiada, więc sąd mógł przyjąć skutek wypowiedzenia i przejść do oceny przedmiotu ewentualnego zwrotu. Nie oznaczało to uznania wszystkich wcześniejszych powodów blokady konta lub wypowiedzenia przez przedsiębiorcę za zgodne z prawem.",
+        "[Punkt 18 obecnych obowiązkowych postanowień wzorcowej umowy o usługi gier online](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) pozwala konsumentowi wypowiedzieć umowę w każdym czasie przez zawiadomienie przedsiębiorcy, a niewykorzystane płatne punkty albo niewykorzystane opłaty za grę trzeba zwrócić po odliczeniu niezbędnych kosztów w ciągu 30 dni od wypowiedzenia. Strony mogą zamiast tego uzgodnić inny sposób rozliczenia.",
+        "„Niezbędne koszty” powinny mieć wykaz. Przy otrzymaniu kalkulacji można zażądać rozdzielenia niewykorzystanego salda, potrąceń i ich podstawy, a następnie porównać wyliczenie z umową. Stały procent ustalony przez przedsiębiorcę nie dowodzi sam zasadności potrącenia.",
+        "Ostatnia zmiana tych reguł weszła w życie 1 stycznia 2023 r., po omawianym wyroku. Sprawę rozstrzygnięto według wcześniejszej umowy i właściwych wtedy przepisów. Obecny punkt 4 przewiduje odrębnie pisemne odstąpienie od umowy w ciągu siedmiu dni od rozpoczęcia gry oraz zwrot niewykorzystanych płatnych punktów, ale po upływie tego okresu nadal istnieje droga wypowiedzenia z punktu 18.",
+        "Pojedynczy zrzut konta nie rozróżnia pierwotnie kupionych punktów, monet uzyskanych przy wymianie i pozostałości po rozgrywce. Potrzebne są trzy powiązane grupy danych:",
+        "Przedsiębiorca musi przechowywać osobistą historię gry co najmniej przez 30 dni, a po otrzymaniu żądania udostępnić ją w ciągu siedmiu dni. Trzydzieści dni to ustawowe minimum. Wczesny wniosek może pomóc uzyskać dane, których końcowy zrzut salda nie pokazuje.",
+        "Obecne reguły zabraniają też postanowienia, że przy sporze jedynym kryterium będą historia gry i dane elektroniczne przechowywane przez przedsiębiorcę. Nie oznacza to, że dane firmy są zawsze nieważne lub bezużyteczne. Ograniczenie dotyczy ich wyłączności jako kontraktowego kryterium, co wynika z [punktu 9 obowiązkowych postanowień i punktu 6 postanowień zakazanych](https://www.ey.gov.tw/File/C27658C15073FF69?A=C).",
+        "W statystykach za 2025 r., opublikowanych w maju 2026 r., gry online zajęły drugie miejsce wśród kategorii reklamacji konsumenckich pierwszego etapu. Liczba spraw zmalała rok do roku. Rada Ochrony Konsumentów wezwała jednocześnie przedsiębiorców do właściwego załatwiania blokad kont, zawieszeń i obsługi klienta, jak wskazano w [oficjalnych statystykach i uwagach](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930).",
+        "Spór o zwrot można najpierw zgłosić przedsiębiorcy, a następnie skorzystać z [rządowego systemu reklamacji konsumenckich](https://appeal.cpc.ey.gov.tw/), a jeżeli problem dotyczy wykładni umowy albo odmowy udostępnienia dowodów, na [adres kancelarii](mailto:wei@hoveringlaw.com.tw) można przesłać opis pozycji i termin odpowiedzi, bez hasła do konta. Kwota roszczenia powinna wynikać z zapisów pokazujących zarówno napływ pieniędzy, jak i sposób ich wykorzystania w grze.",
+        "Źródła sprawdzono 25–26 października 2026 r. Opis wyroku opiera się na wybranych częściach orzeczenia zgromadzonego w oficjalnym zbiorze. Funkcję punktów, przedmiotów i podstaw wypowiedzenia w innych grach trzeba oceniać według ich rzeczywistych zasad i umowy."
+      ],
+      "metrics": {
+        "lang": "pl",
+        "sentences": 43,
+        "paras": 15,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15,
+        "len_cv": 0.546,
+        "short_share": 0.233,
+        "long_share": 0.07,
+        "para_cv": 0.247,
+        "even_run3": 0.0,
+        "top_end": "zwrotu",
+        "top_end_share": 0.093,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "sąd",
+        "top_opener_n": 2,
+        "opener_rep": 0.133,
+        "consec_same_start": 1,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 2,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.72,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Gracz przeliczył pozostałe na koncie monety na 243 548 NTD i zażądał takiej kwoty od przed",
+        "last": "Źródła sprawdzono 25–26 października 2026 r. Opis wyroku opiera się na wybranych częściach orzeczenia zgromadzonego w of",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "reviewed_sha_bound_map"
+      },
+      "exactReviewedArraysAndUnits": true
+    }
+  ],
+  "totalReviewedSentences": 237,
+  "allExactReviewedArraysAndUnits": true
+}

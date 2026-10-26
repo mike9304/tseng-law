@@ -1,0 +1,1181 @@
+{
+  "root": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/variety",
+  "fixture_sha256": "2b5e54ef073604c59bcf05014ae9a83c57de22228672dba266df90965f8d51e3",
+  "production_sha256": {
+    "build-rewrite-queue.py": "510cc4881b562713699a0f208df96e1ecc5d01ca66f0add49e876c95c3a9ce59",
+    "variety_expansion.py": "ae6cca9ef98daed82fd578e6cf0442124ecb6e43215837e1cdb0a89e4198a4e2",
+    "variety_metrics.py": "c96c303b9af9be1a8a8965f9a503cf0617a4a36716109af3184cfff8464c81ec",
+    "variety_multilingual.py": "0b4af8c41031e6c33bc2c6518caa8875f1f2b097f44c454161100aee07ab3ab9"
+  },
+  "cases": 68,
+  "passed": 68,
+  "results": [
+    {
+      "id": "fi-ja-tammikuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. ja 8. tammikuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. ja 8. tammikuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-tai-tammikuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. tai 8. tammikuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. tai 8. tammikuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-vai-tammikuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. vai 8. tammikuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. vai 8. tammikuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-ja-helmikuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. ja 8. helmikuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. ja 8. helmikuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-tai-helmikuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. tai 8. helmikuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. tai 8. helmikuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-vai-helmikuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. vai 8. helmikuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. vai 8. helmikuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-ja-maaliskuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. ja 8. maaliskuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. ja 8. maaliskuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-tai-maaliskuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. tai 8. maaliskuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. tai 8. maaliskuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-vai-maaliskuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. vai 8. maaliskuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. vai 8. maaliskuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-ja-huhtikuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. ja 8. huhtikuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. ja 8. huhtikuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-tai-huhtikuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. tai 8. huhtikuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. tai 8. huhtikuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-vai-huhtikuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. vai 8. huhtikuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. vai 8. huhtikuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-ja-toukokuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. ja 8. toukokuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. ja 8. toukokuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-tai-toukokuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. tai 8. toukokuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. tai 8. toukokuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-vai-toukokuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. vai 8. toukokuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. vai 8. toukokuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-ja-kesäkuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. ja 8. kesäkuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. ja 8. kesäkuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-tai-kesäkuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. tai 8. kesäkuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. tai 8. kesäkuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-vai-kesäkuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. vai 8. kesäkuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. vai 8. kesäkuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-ja-heinäkuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. ja 8. heinäkuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. ja 8. heinäkuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-tai-heinäkuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. tai 8. heinäkuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. tai 8. heinäkuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-vai-heinäkuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. vai 8. heinäkuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. vai 8. heinäkuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-ja-elokuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. ja 8. elokuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. ja 8. elokuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-tai-elokuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. tai 8. elokuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. tai 8. elokuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-vai-elokuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. vai 8. elokuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. vai 8. elokuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-ja-syyskuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. ja 8. syyskuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. ja 8. syyskuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-tai-syyskuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. tai 8. syyskuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. tai 8. syyskuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-vai-syyskuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. vai 8. syyskuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. vai 8. syyskuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-ja-lokakuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. ja 8. lokakuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. ja 8. lokakuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-tai-lokakuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. tai 8. lokakuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. tai 8. lokakuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-vai-lokakuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. vai 8. lokakuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. vai 8. lokakuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-ja-marraskuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. ja 8. marraskuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. ja 8. marraskuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-tai-marraskuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. tai 8. marraskuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. tai 8. marraskuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-vai-marraskuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. vai 8. marraskuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. vai 8. marraskuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-ja-joulukuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. ja 8. joulukuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. ja 8. joulukuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-tai-joulukuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. tai 8. joulukuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. tai 8. joulukuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-vai-joulukuuta",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Kirjasto on auki 7. vai 8. joulukuuta.",
+        "Ovi suljetaan illalla."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Kirjasto on auki 7. vai 8. joulukuuta. Ovi suljetaan illalla."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-chain",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Koulu on auki 2. ja 5. ja 8. huhtikuuta.",
+        "Retki alkaa myöhemmin."
+      ],
+      "lengths": [
+        9,
+        3
+      ],
+      "paragraphs": [
+        "Koulu on auki 2. ja 5. ja 8. huhtikuuta. Retki alkaa myöhemmin."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-comma-list",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Koulu on auki 2., 5. ja 8. huhtikuuta.",
+        "Retki alkaa myöhemmin."
+      ],
+      "lengths": [
+        8,
+        3
+      ],
+      "paragraphs": [
+        "Koulu on auki 2., 5. ja 8. huhtikuuta. Retki alkaa myöhemmin."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-nbsp",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Koulu on auki 2. ja 5. huhtikuuta.",
+        "Retki alkaa myöhemmin."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "Koulu on auki 2. ja 5. huhtikuuta. Retki alkaa myöhemmin."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-quoted",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "”Koulu on auki 2. ja 5. huhtikuuta.”",
+        "Retki alkaa myöhemmin."
+      ],
+      "lengths": [
+        7,
+        3
+      ],
+      "paragraphs": [
+        "”Koulu on auki 2. ja 5. huhtikuuta.” Retki alkaa myöhemmin."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-uppercase-next",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Numero on 7.",
+        "Ja 8. huhtikuuta alkaa retki."
+      ],
+      "lengths": [
+        3,
+        5
+      ],
+      "paragraphs": [
+        "Numero on 7. Ja 8. huhtikuuta alkaa retki."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-uppercase-tai",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Numero on 7.",
+        "Tai 8. huhtikuuta alkaa retki."
+      ],
+      "lengths": [
+        3,
+        5
+      ],
+      "paragraphs": [
+        "Numero on 7. Tai 8. huhtikuuta alkaa retki."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-no-month",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Numero on 7.",
+        "Ja seuraava numero on 8."
+      ],
+      "lengths": [
+        3,
+        5
+      ],
+      "paragraphs": [
+        "Numero on 7. Ja seuraava numero on 8."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-month-boundary",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Numero on 7.",
+        "Ja 8.",
+        "huhtikuutapahtumaa odotetaan."
+      ],
+      "lengths": [
+        3,
+        2,
+        2
+      ],
+      "paragraphs": [
+        "Numero on 7. Ja 8. huhtikuutapahtumaa odotetaan."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-date-end",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Retki päättyy 8. huhtikuuta 2024.",
+        "Huomenna opiskellaan."
+      ],
+      "lengths": [
+        5,
+        2
+      ],
+      "paragraphs": [
+        "Retki päättyy 8. huhtikuuta 2024. Huomenna opiskellaan."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-ordinal-end",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Sijoitus on 7.",
+        "Huomenna jatketaan."
+      ],
+      "lengths": [
+        3,
+        2
+      ],
+      "paragraphs": [
+        "Sijoitus on 7. Huomenna jatketaan."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "fi-decimal-url",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Arvo on 3.5.",
+        "Katso .",
+        "Retki alkaa."
+      ],
+      "lengths": [
+        3,
+        1,
+        2
+      ],
+      "paragraphs": [
+        "Arvo on 3.5. Katso https://example.test/a.pdf. Retki alkaa."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "hu-escaped-year",
+      "checks": {
+        "sentences": true,
+        "paragraph_count": true,
+        "list_count": true,
+        "lengths": true
+      },
+      "passed": true,
+      "actual": [
+        "2018. augusztus 16-án nyílt meg a könyvtár.",
+        "Másnap új olvasókat fogadtak."
+      ],
+      "lengths": [
+        7,
+        4
+      ],
+      "paragraphs": [
+        "2018\\. augusztus 16-án nyílt meg a könyvtár. Másnap új olvasókat fogadtak."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "hu-escaped-february",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "2022. február 9-én kinyitott a múzeum.",
+        "A terem üres volt."
+      ],
+      "lengths": [
+        6,
+        4
+      ],
+      "paragraphs": [
+        "2022\\. február 9-én kinyitott a múzeum. A terem üres volt."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "hu-escaped-abbreviation",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Dr. Kovács könyvet olvas.",
+        "A terem csendes."
+      ],
+      "lengths": [
+        4,
+        3
+      ],
+      "paragraphs": [
+        "Dr\\. Kovács könyvet olvas. A terem csendes."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "hu-escaped-real-stop",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "A szám 12.",
+        "Ez az utolsó adat."
+      ],
+      "lengths": [
+        3,
+        4
+      ],
+      "paragraphs": [
+        "A szám 12\\. Ez az utolsó adat."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "hu-escaped-decimal",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "Az érték 3.5.",
+        "Ez kevés."
+      ],
+      "lengths": [
+        3,
+        2
+      ],
+      "paragraphs": [
+        "Az érték 3\\.5. Ez kevés."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "hu-raw-year-is-list",
+      "checks": {
+        "sentences": true,
+        "paragraph_count": true,
+        "list_count": true
+      },
+      "passed": true,
+      "actual": [],
+      "lengths": [],
+      "paragraphs": [],
+      "list_items": [
+        "2018. augusztus 16-án nyílt meg a könyvtár."
+      ]
+    },
+    {
+      "id": "hu-actual-list",
+      "checks": {
+        "sentences": true,
+        "paragraph_count": true,
+        "list_count": true
+      },
+      "passed": true,
+      "actual": [],
+      "lengths": [],
+      "paragraphs": [],
+      "list_items": [
+        "1. Vegyen egy könyvet."
+      ]
+    },
+    {
+      "id": "hu-possible-list",
+      "checks": {
+        "sentences": true,
+        "paragraph_count": true,
+        "list_count": true
+      },
+      "passed": true,
+      "actual": [],
+      "lengths": [],
+      "paragraphs": [],
+      "list_items": [
+        "2018. könyv"
+      ]
+    },
+    {
+      "id": "hu-literal-double-backslash",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "2018\\.",
+        "augusztus elején nyitott.",
+        "Másnap esett."
+      ],
+      "lengths": [
+        1,
+        3,
+        2
+      ],
+      "paragraphs": [
+        "2018\\\\. augusztus elején nyitott. Másnap esett."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "hu-three-backslashes",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "2018\\.",
+        "augusztus elején nyitott.",
+        "Másnap esett."
+      ],
+      "lengths": [
+        1,
+        3,
+        2
+      ],
+      "paragraphs": [
+        "2018\\\\\\. augusztus elején nyitott. Másnap esett."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "hu-inline-code-backslash",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "A minta 2018\\.",
+        "augusztus.",
+        "Ez kód."
+      ],
+      "lengths": [
+        3,
+        1,
+        2
+      ],
+      "paragraphs": [
+        "A minta `2018\\. augusztus`. Ez kód."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "hu-literal-letter-backslash",
+      "checks": {
+        "sentences": true
+      },
+      "passed": true,
+      "actual": [
+        "A jel \\A marad.",
+        "Ez látható."
+      ],
+      "lengths": [
+        4,
+        2
+      ],
+      "paragraphs": [
+        "A jel \\A marad. Ez látható."
+      ],
+      "list_items": []
+    },
+    {
+      "id": "escaped-ascii-punctuation",
+      "passed": true,
+      "actual": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+    },
+    {
+      "id": "literal-escape-pairs",
+      "passed": true,
+      "actual": "\\ \\A \\3 \\«"
+    },
+    {
+      "id": "escaped-emphasis",
+      "passed": true,
+      "actual": "*jel* _szó_"
+    },
+    {
+      "id": "escaped-code-markers",
+      "passed": true,
+      "actual": "`jel`"
+    },
+    {
+      "id": "code-keeps-escapes",
+      "passed": true,
+      "actual": "2018\\. augusztus"
+    },
+    {
+      "id": "code-multiple-ticks",
+      "passed": true,
+      "actual": "2018\\. ` jel"
+    },
+    {
+      "id": "link-label-escape",
+      "passed": true,
+      "actual": "2018. augusztus"
+    },
+    {
+      "id": "escaped-brackets",
+      "passed": true,
+      "actual": "[jel]"
+    },
+    {
+      "id": "unescaped-markup-stays",
+      "passed": true,
+      "actual": "szó és jel."
+    }
+  ]
+}

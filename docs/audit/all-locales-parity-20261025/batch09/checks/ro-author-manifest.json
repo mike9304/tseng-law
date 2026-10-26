@@ -1,0 +1,538 @@
+{
+  "at": "2026-10-26T09:11:01.030019+00:00",
+  "owner": "/root/column_source_quality",
+  "status": "AUTHOR_FROZEN_AWAITING_INDEPENDENT_REVIEW",
+  "author": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/ro-author.md",
+    "sha256": "05cdc0663f02e7d81c707033b62aac5f149f518cc643958085d3f872abfa06b3"
+  },
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "eb47204940b6bbbf46cafd1304257b96103ee4ae7e0bd52530d961d12ca63abb",
+      "metrics": {
+        "lang": "ro",
+        "sentences": 39,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.8,
+        "len_cv": 0.536,
+        "short_share": 0.205,
+        "long_share": 0.026,
+        "para_cv": 0.16,
+        "even_run3": 0.0,
+        "top_end": "arbitrajului",
+        "top_end_share": 0.051,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "44.417.150",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.167,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.95,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "44.417.150 NT$.",
+        "last": "O echipă care pregătește oferta poate verifica din timp categoria achiziției și clauza de soluționare a disputelor. Pent",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "measuredFileSHA256": "eb47204940b6bbbf46cafd1304257b96103ee4ae7e0bd52530d961d12ca63abb",
+      "actualCLIEvidence": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-edited-r1.json",
+      "measurementBridge": null
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "a155be35ec16384685cba6654957720f4e3f2bff222dda12e3f775c36d3b28b4",
+      "metrics": {
+        "lang": "ro",
+        "sentences": 37,
+        "paras": 13,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 16.5,
+        "len_cv": 0.506,
+        "short_share": 0.189,
+        "long_share": 0.027,
+        "para_cv": 0.153,
+        "even_run3": 0.029,
+        "top_end": "taiwan",
+        "top_end_share": 0.054,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "cine",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.077,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 1.48,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Cine a primit raportul de poluare și ce a decis după aceea?",
+        "last": "Pentru o evaluare individuală, pagina de contact în limba engleză permite descrierea tranzacției, a entității taiwaneze ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "measuredFileSHA256": "a155be35ec16384685cba6654957720f4e3f2bff222dda12e3f775c36d3b28b4",
+      "actualCLIEvidence": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-edited-r1.json",
+      "measurementBridge": null
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "3d20ec40f6fdd4ea65f2ec8e58d18c2a0d1c88ff65f9cbd0b58589da6f94bdcb",
+      "metrics": {
+        "lang": "ro",
+        "sentences": 41,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.1,
+        "len_cv": 0.48,
+        "short_share": 0.293,
+        "long_share": 0.0,
+        "para_cv": 0.151,
+        "even_run3": 0.026,
+        "top_end": "predare",
+        "top_end_share": 0.073,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "scrisoarea",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.45,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Scrisoarea din februarie cerea cumpărătorului să discute cu banca despre credit.",
+        "last": "Dacă există deja o cerere de penalități sau dobânzi pentru întârziere, un mesaj la wei@hoveringlaw.com.tw poate descrie ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "measuredFileSHA256": "e4f5e8bc3fe49a15ee0d52863d6316091484e9caf38e0435e04c4dc52c1f1c8f",
+      "actualCLIEvidence": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-first-cli.json",
+      "measurementBridge": "Source-footer-only change; current extracted paragraphs/sentences/metrics exactly same as initial actualCLI. Raw body bytes differ."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "ac559acc2d867931be628dd9043cf6b26feab5197b16e3f00041d8370fcf2df5",
+      "metrics": {
+        "lang": "ro",
+        "sentences": 36,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.3,
+        "len_cv": 0.46,
+        "short_share": 0.222,
+        "long_share": 0.028,
+        "para_cv": 0.19,
+        "even_run3": 0.147,
+        "top_end": "amiabilă",
+        "top_end_share": 0.056,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "instanța",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.167,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 1.45,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Instanța a anulat destituirea și decizia de reexaminare.",
+        "last": "Pentru o evaluare individuală a unui conflict de muncă din Taiwan, mesajul către wei@hoveringlaw.com.tw poate indica sta",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "measuredFileSHA256": "ac559acc2d867931be628dd9043cf6b26feab5197b16e3f00041d8370fcf2df5",
+      "actualCLIEvidence": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-edited-r1.json",
+      "measurementBridge": null
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "40d60abd6b530054c24da0ae3847bf3b77abf966f89ad910bcee6f8a40cd4820",
+      "metrics": {
+        "lang": "ro",
+        "sentences": 36,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.5,
+        "len_cv": 0.45,
+        "short_share": 0.194,
+        "long_share": 0.0,
+        "para_cv": 0.189,
+        "even_run3": 0.147,
+        "top_end": "comune",
+        "top_end_share": 0.056,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "cutia",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.333,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.58,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Cutia de încărcare era pe peretele din spatele locului de parcare, iar cablurile treceau p",
+        "last": "Pentru o cerere de oprire sau demontare ori o neînțelegere asupra regulamentului, mesajul la wei@hoveringlaw.com.tw poat",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "measuredFileSHA256": "40d60abd6b530054c24da0ae3847bf3b77abf966f89ad910bcee6f8a40cd4820",
+      "actualCLIEvidence": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-edited-r1.json",
+      "measurementBridge": null
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "bb70cb4089ad9bf470a52da6b41fd7807a2d56c1ec3ffe2ddbed4224f52bcfc9",
+      "metrics": {
+        "lang": "ro",
+        "sentences": 39,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.8,
+        "len_cv": 0.477,
+        "short_share": 0.231,
+        "long_share": 0.026,
+        "para_cv": 0.234,
+        "even_run3": 0.0,
+        "top_end": "joc",
+        "top_end_share": 0.077,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "punctul",
+        "top_opener_n": 2,
+        "opener_rep": 0.143,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.89,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "De ce un sold vizibil în cont nu a dus la rambursare după încetarea contractului?",
+        "last": "O solicitare de rambursare poate fi adresată operatorului, iar ulterior poate fi folosit sistemul public de reclamații. ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "measuredFileSHA256": "bb70cb4089ad9bf470a52da6b41fd7807a2d56c1ec3ffe2ddbed4224f52bcfc9",
+      "actualCLIEvidence": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-edited-r1.json",
+      "measurementBridge": null
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-content-audit-r1.json",
+      "sha256": "f8bc32c255d5e40d3e16511710a289292d967d2310dae659ea7a4e71b36c05bd"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-content-audit.mjs",
+      "sha256": "4a391a2672b07815951f94414bb347a646226ea83634fb96e89a33f7d4823ada"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-final-proof.json",
+      "sha256": "0cd9be4a2c57fe5fd943292c71f58fd2b7538a93f1995a15d3bf43eca81f55f2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-finalize.py",
+      "sha256": "b232539630eb685a4009a100a1ffd3a09226dfcdd4277c734ba89dc3d4db59f4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-initial-drafts.json",
+      "sha256": "aac2507e69aefd1394cfe4ca837d9b3332db44fe9a31cafb8ef779b88a37e465"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-inputs.json",
+      "sha256": "e9fe962fd0f7d8fe42653b54e0fdca2303788dfe970abcc494b0d74b563e26e8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-measure-initial-error.json",
+      "sha256": "fe1b79020c3bfed86211fb79bfa3ab024758d8f3d6b89fbaa2f5b4cd64e0561d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-measure.py",
+      "sha256": "de706f874ebe88bc44f275b2c7ddd5237c3e44ce3bfa29b338ca9ec9c997fa35"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-preparation-error.json",
+      "sha256": "04bdbba8ce98a20fb4ec33f54db8d7c00df8433c6466af640e1cd158b1e92ac3"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-prepare.py",
+      "sha256": "28c40a658d9bba5c8e61d703f545129f3571b5a5a0029b0968ec519d14039670"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-reading-completion.json",
+      "sha256": "6f76550579ed71adb9ba41399c991e95b4cb4f27a6cf9e74f6c5db1caa3c4d51"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-self-edit-r1.py",
+      "sha256": "dbd67d54392489cb35e1a67b416c3097c16471be3cf577fa76af97efa9ebe9eb"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-self-edit-wrapper-error.json",
+      "sha256": "fda0611281e169e3cf16f2b35760f266ac500ef35fe011a6c143313fbdf431cb"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-self-edits-r1.json",
+      "sha256": "727afab5503177812acc9699cae5be56ae620d9ab6b2dab1bb3cd00ec27304c3"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-edited-r1.json",
+      "sha256": "7d19b9e45fecb75ae4a18343b4e3400282942f16abc298f911ec3417c1608e78"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-first-cli.json",
+      "sha256": "0cac0ce402a5924837aeb04d72fa20997647af993ef14f8082fbd0430ce64e37"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-initial.json",
+      "sha256": "b817dd54871acd3407c214e8df87be621a7c8b67b126b076f078ada44371f39b"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-r1.json",
+      "sha256": "4b7bec362f812a105da9c1e4113ae1b33c50a877f3dcee07a683c67927adf61d"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/BRIEF.md",
+      "sha256": "f04f1d70c375c3e65a88e42dcaedbc453fda2c6e74882a7b82fba17d109290f4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/BRIEF.md",
+      "sha256": "e7f781375d583d0647ca32bbeafd372f3ce802a2837d17a59b6225409d55dc8c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/BRIEF.md",
+      "sha256": "8103ae1441fe0abbdb76362d6086a267014664f31997f5676b37c6962cfcd306"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3"
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "86710ef330b108a916a7bb92a75f1ffa62dea53412e8a75f38472d9fa9b33130"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/authoring-contract-draft.md",
+      "sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/six-source-facts.md",
+      "sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-register.md",
+      "sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-freeze.json",
+      "sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127"
+    }
+  ],
+  "canonical": [
+    {
+      "snapshot": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "R": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sameSHAAsPriorFullRead": true
+    },
+    {
+      "snapshot": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "R": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/921-taiwan-online-game-coins-refund-judgment.md",
+      "sameSHAAsPriorFullRead": true
+    },
+    {
+      "snapshot": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "R": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sameSHAAsPriorFullRead": true
+    },
+    {
+      "snapshot": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "R": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sameSHAAsPriorFullRead": true
+    },
+    {
+      "snapshot": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "R": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sameSHAAsPriorFullRead": true
+    },
+    {
+      "snapshot": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "R": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sameSHAAsPriorFullRead": true
+    }
+  ],
+  "recent": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ro/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1d39394a43fb41b390ff7483caca02d0bcbfa2cb8eb8b8664bb0a5bc04a3d635",
+      "published": "2026-10-25"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ro/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "3e999c705f6a2cfca52dc7eea0453b9515e1e1d2bd2ccdb216b76594f2720230",
+      "published": "2026-10-25"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ro/704-taiwan-arc-first-application.md",
+      "sha256": "15d32900d2bf701fc6b9900d0f8e4cfce447495629d9b658e6d1973a69374b4b",
+      "published": "2026-10-25"
+    }
+  ],
+  "images": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/915-case-trends-20261025.webp",
+      "sha256": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95",
+      "viewImageActuallyOpenedThisAuthorTask": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/916-case-trends-20261025.webp",
+      "sha256": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+      "viewImageActuallyOpenedThisAuthorTask": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/918-case-trends-20261025.webp",
+      "sha256": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+      "viewImageActuallyOpenedThisAuthorTask": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/919-case-trends-20261025.webp",
+      "sha256": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+      "viewImageActuallyOpenedThisAuthorTask": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/920-case-trends-20261025.webp",
+      "sha256": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+      "viewImageActuallyOpenedThisAuthorTask": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/921-case-trends-20261025.webp",
+      "sha256": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933",
+      "viewImageActuallyOpenedThisAuthorTask": true
+    }
+  ],
+  "tools": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/ro.json",
+      "sha256": "1fe2c5bb725e55a8aa38fcaafc0f52fc43d729c54fa9dfaaab5a6aafddee1474"
+    }
+  ],
+  "FAQ": 17,
+  "actualCurrentSegments": 228,
+  "automatedErrors": 0,
+  "requiredItemsPreserved": 32,
+  "inputAndFileHashesUnchangedAtEnd": true,
+  "humanNativeLegalApproval": false,
+  "publicOutputInspected": false,
+  "RSharedOtherFilesChanged": false
+}

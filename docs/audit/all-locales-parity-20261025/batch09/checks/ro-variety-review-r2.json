@@ -1,0 +1,313 @@
+{
+  "at_utc": "2026-10-26T09:41:51.956630+00:00",
+  "phase": "review-r2",
+  "locale": "ro",
+  "method": "Actual shared CLI with explicit ro; arrays from unchanged shared functions. Metadata/FAQ/tables/headings/source list separately reviewed; not human-native/legal approval.",
+  "tool_inputs": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/ro.json",
+      "sha256": "1fe2c5bb725e55a8aa38fcaafc0f52fc43d729c54fa9dfaaab5a6aafddee1474"
+    }
+  ],
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "688c9eaa19ea1fa85cd2940f0294aa1beb6a1a6868fa655207b1053acb122fd2",
+      "command": [
+        "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "--lang",
+        "ro"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/915-taiwan-public-contract-mediation-arbitration-same-claim.md [ro] sentences=39 mean=14.8 cv=0.545 short=0.205 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.167 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stderr": "",
+      "metrics": {
+        "lang": "ro",
+        "sentences": 39,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.8,
+        "len_cv": 0.545,
+        "short_share": 0.205,
+        "long_share": 0.051,
+        "para_cv": 0.164,
+        "even_run3": 0.0,
+        "top_end": "arbitrajului",
+        "top_end_share": 0.051,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "44.417.150",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.167,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.94,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "44.417.150 NT$.",
+        "last": "O echipă care pregătește oferta poate verifica din timp categoria achiziției și clauza de soluționare a disputelor. Pent",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "opener": "44.417.150",
+          "sentences": [
+            {
+              "text": "44.417.150 NT$.",
+              "units": 2
+            },
+            {
+              "text": "Aceasta era suma acordată prin arbitraj unui constructor care executase lucrări pentru un spital din Taiwan.",
+              "units": 16
+            },
+            {
+              "text": "Hotărârea arbitrală a fost ulterior anulată, deoarece recomandarea obținută în mediere privea prelungirea duratei lucrărilor, iar pretenția bănească ajunsese în arbitraj fără o recomandare asupra ei.",
+              "units": 26
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "explicația",
+          "sentences": [
+            {
+              "text": "Explicația Curții Supreme pentru dosarul 106年度台上字第723號 consemnează respingerea recursului constructorului la 12 iulie 2017.",
+              "units": 14
+            },
+            {
+              "text": "Anularea a rămas în vigoare.",
+              "units": 5
+            },
+            {
+              "text": "Instituția publică introdusese acțiunea în anulare, iar explicația oficială arată că acest proces era definitiv încheiat.",
+              "units": 16
+            },
+            {
+              "text": "Pentru pretenția bănească în cauză nu exista nicio convenție arbitrală încheiată de părți, nici consimțământul considerat dat în condițiile legii.",
+              "units": 20
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "cererea",
+          "sentences": [
+            {
+              "text": "Cererea inițială de mediere urmărea o despăgubire bănească.",
+              "units": 8
+            },
+            {
+              "text": "Constructorul a schimbat-o într-o cerere de prelungire a duratei lucrărilor.",
+              "units": 10
+            },
+            {
+              "text": "Comisia a recomandat prelungirea, dar spitalul nu a fost de acord.",
+              "units": 11
+            },
+            {
+              "text": "Constructorul a revenit apoi la bani.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "asupra",
+          "sentences": [
+            {
+              "text": "Asupra acestei ultime pretenții nu fusese formulată o recomandare sau o propunere înaintea arbitrajului.",
+              "units": 14
+            },
+            {
+              "text": "Certificatul de mediere nereușită nu a înlocuit etapa lipsă.",
+              "units": 9
+            },
+            {
+              "text": "Potrivit motivării explicate de Curte, instituția trebuia să poată accepta sau respinge o soluție referitoare la litigiul concret pentru care era invocat consimțământul legal la arbitraj.",
+              "units": 26
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "curtea",
+          "sentences": [
+            {
+              "text": "Curtea Supremă a corectat o parte din raționamentul instanței inferioare privind versiunea legii aplicabile, păstrând însă soluția de anulare.",
+              "units": 19
+            },
+            {
+              "text": "Lipsa convenției arbitrale a constituit temeiul prevăzut de articolul 40 alineatul 1 punctul 2 din Legea arbitrajului.",
+              "units": 17
+            },
+            {
+              "text": "Respingerea recursului nu a însemnat aprobarea fiecărui argument al instanței anterioare.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "articolul",
+          "sentences": [
+            {
+              "text": "Articolul 85-1 din Legea achizițiilor publice permite medierea litigiilor privind executarea contractului în fața comisiei de examinare a contestațiilor în achiziții publice.",
+              "units": 23
+            },
+            {
+              "text": "Instituția nu poate refuza cererea de mediere formulată de furnizor.",
+              "units": 10
+            },
+            {
+              "text": "Accesul la această procedură și temeiul arbitrajului se examinează în etape distincte.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "pentru",
+          "sentences": [
+            {
+              "text": "Pentru achiziții de lucrări de construcție sau servicii tehnice, comisia trebuie să formuleze o recomandare ori o propunere de mediere; dacă medierea eșuează deoarece instituția nu este de acord, aceasta nu poate refuza sesizarea arbitrajului de către furnizor.",
+              "units": 38
+            },
+            {
+              "text": "Condițiile sunt cumulative.",
+              "units": 3
+            },
+            {
+              "text": "Recomandarea trebuie să privească tocmai litigiul pentru care este folosită această cale.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "încadrarea",
+          "sentences": [
+            {
+              "text": "Încadrarea contractului contează de la început.",
+              "units": 6
+            },
+            {
+              "text": "O achiziție de echipamente nu intră automat în categoria lucrărilor sau a serviciilor tehnice.",
+              "units": 14
+            },
+            {
+              "text": "Conținutul prestației și clauza de soluționare a disputelor pot arăta și existența unei convenții arbitrale separate.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "comisia",
+          "sentences": [
+            {
+              "text": "Comisia a examinat plata care urmează să fie cerută în arbitraj?",
+              "units": 11
+            },
+            {
+              "text": "Cererea inițială, modificările ei, recomandarea sau propunerea, răspunsul instituției și proiectul cererii arbitrale permit această comparație.",
+              "units": 16
+            },
+            {
+              "text": "Numărul comun al proiectului nu lămurește singur ce rezultat a fost solicitat în fiecare etapă.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "revizuirea",
+          "sentences": [
+            {
+              "text": "Revizuirea unei sume nu creează neapărat un litigiu nou.",
+              "units": 9
+            },
+            {
+              "text": "Nici precizarea unui argument juridic.",
+              "units": 5
+            },
+            {
+              "text": "Evaluarea privește faptele și pretențiile efective; hotărârea discutată tratează trecerea documentată între bani și timp suplimentar.",
+              "units": 16
+            },
+            {
+              "text": "Dacă dosarul arată un gol procedural, se poate analiza un alt temei convențional de arbitraj sau necesitatea unei noi medieri pentru pretenția avută în vedere.",
+              "units": 25
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "raportul",
+          "sentences": [
+            {
+              "text": "Raportul din 30 septembrie 2026 al administrației americane pentru comerț internațional, ITA prezintă achiziții pentru infrastructura energetică și rețelele electrice din Taiwan, anticipate pentru sfârșitul anului și pentru 2027, inclusiv oportunități pentru furnizori americani.",
+              "units": 34
+            },
+            {
+              "text": "Sunt perspective de piață.",
+              "units": 4
+            },
+            {
+              "text": "Raportul nu confirmă deschiderea unei anumite licitații, eligibilitatea unei companii sau încadrarea viitorului contract în categoriile articolului 85-1.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "o",
+          "sentences": [
+            {
+              "text": "O echipă care pregătește oferta poate verifica din timp categoria achiziției și clauza de soluționare a disputelor.",
+              "units": 17
+            },
+            {
+              "text": "Pentru o evaluare a unui litigiu deja apărut, pagina de contact în limba engleză poate fi folosită pentru a descrie categoria proiectului, pretenția și următoarea dată procedurală.",
+              "units": 27
+            },
+            {
+              "text": "Documentele utile sunt cele care arată cum s-au schimbat cererile și la ce recomandare a răspuns instituția.",
+              "units": 17
+            }
+          ]
+        }
+      ],
+      "excludedHeadings": [
+        "Ce s-a cerut în fiecare etapă",
+        "Condițiile în care instituția nu poate refuza arbitrajul",
+        "Compararea cererii de plată cu dosarul de mediere"
+      ],
+      "excludedListItems": []
+    }
+  ]
+}

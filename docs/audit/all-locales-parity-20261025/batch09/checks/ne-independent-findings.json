@@ -1,0 +1,238 @@
+{
+  "at": "2026-10-26T18:18:18.507164+09:00",
+  "status": "REQUEST_CHANGES",
+  "mandatoryCount": 3,
+  "optionalCount": 5,
+  "mandatory": [
+    {
+      "id": "M01",
+      "article": "918",
+      "category": "Missing preserved merits result",
+      "actual": "9 फेब्रुअरी 2022 को फैसलाले निर्माण व्यवसायीको पुनरावेदन र पुनरावेदनकै क्रममा थपिएको दाबी दुवै आधारहीन ठहर गरी अस्वीकार गर्‍यो।",
+      "problem": "Appeal/additional-claim dismissal and no further appeal are present, but the maintained obligation to pay delay interest is absent throughout body, summary and FAQ. This is the concrete outcome of canonical 918-C1, not a new optional official-law detail.",
+      "source": "Frozen ZH918 line27; six-source-facts 918-C1; authoring contract requires which outcome an appeal dismissal maintained.",
+      "proposedEdits": [
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+          "old": "9 फेब्रुअरी 2022 को फैसलाले निर्माण व्यवसायीको पुनरावेदन र पुनरावेदनकै क्रममा थपिएको दाबी दुवै आधारहीन ठहर गरी अस्वीकार गर्‍यो।",
+          "new": "9 फेब्रुअरी 2022 को फैसलाले निर्माण व्यवसायीको पुनरावेदन र पुनरावेदनकै क्रममा थपिएको दाबी दुवै आधारहीन ठहर गरी अस्वीकार गर्‍यो। निर्माण व्यवसायीले ढिलाइबापत ब्याज तिर्नुपर्ने निर्णय कायम रह्यो।",
+          "occurrences": 1,
+          "lines": [
+            28
+          ]
+        }
+      ],
+      "meaningPreserved": "Restore the existing canonical outcome without inventing the potentially inconsistent amount in the reprinted judgment; preserve court/date/finality."
+    },
+    {
+      "id": "M02",
+      "article": "919",
+      "category": "Canonical FAQ scope not retained",
+      "actual": [
+        {
+          "q": "निर्णयपछि पुनरावलोकनमा जवाफ दिन पाए पहिलेको सुनुवाइको कमी पूरा हुन्छ?",
+          "a": "यस मुद्दामा भएन। पछिको पुनरावलोकनमा दिएको जवाफले पहिले अनुशासन निर्णय गर्नुअघि दिनुपर्ने वैध सूचना र आफ्नो भनाइ तथा प्रतिरक्षा राख्ने अवसरको कमी सुधार्न नसकेको अदालतले भन्यो।"
+        },
+        {
+          "q": "निजी रोजगारदाताले दुर्व्यवहारको उजुरी पाए के गर्नुपर्छ?",
+          "a": "पुनरावृत्ति रोक्ने कदम, आवश्यकता र घटनाअनुसार परामर्श, सहायता तथा सुरक्षा र अनुसन्धान अघि बढाउनुपर्छ। अनुसन्धान र समन्वय वस्तुगत, निष्पक्ष र न्यायोचित हुनुपर्छ; अनुसन्धानमा पर्याप्त भनाइ तथा प्रतिरक्षाको अवसर र स्वार्थ बाझिने अवस्थाबाट अलग रहने नियम पालना गर्नुपर्छ। उजुरीकर्ताको इच्छाअनुसार समन्वय गर्न सकिन्छ, तर सहमति नभए अनुसन्धान जारी राख्नुपर्छ।"
+        }
+      ],
+      "problem": "FAQ2 substitutes the later-review-hearing issue for the prescribed concurrent protection/fair-investigation question; FAQ3 presents an omnibus private-employer duty answer but omits the required public-service/private-law transfer boundary. The body retains much of this content, so this is a FAQ contract/scope omission rather than a claim that the entire article states the wrong law.",
+      "source": "six-source-facts line23 explicitly fixes the three FAQ meanings; current frozen ZH919 FAQ2/3; authoring contract summary/FAQ scope.",
+      "proposedEdits": [
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+          "old": "निर्णयपछि पुनरावलोकनमा जवाफ दिन पाए पहिलेको सुनुवाइको कमी पूरा हुन्छ?",
+          "new": "अनुसन्धान सकिएपछि मात्र कामदारलाई सुरक्षा दिनुपर्ने हो?",
+          "occurrences": 1,
+          "lines": [
+            20
+          ]
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+          "old": "यस मुद्दामा भएन। पछिको पुनरावलोकनमा दिएको जवाफले पहिले अनुशासन निर्णय गर्नुअघि दिनुपर्ने वैध सूचना र आफ्नो भनाइ तथा प्रतिरक्षा राख्ने अवसरको कमी सुधार्न नसकेको अदालतले भन्यो।",
+          "new": "पीडित कामदारको उजुरीबाट जानकारी पाएपछि रोजगारदाताले पुनरावृत्ति रोक्ने कदम चाल्नुपर्छ, आवश्यकता र घटनाअनुसार परामर्श, सहायता तथा सुरक्षा दिनुपर्छ र अनुसन्धान अघि बढाउनुपर्छ। सुरक्षा र निष्पक्ष अनुसन्धान सँगै चल्न सक्छन्।",
+          "occurrences": 1,
+          "lines": [
+            21
+          ]
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+          "old": "निजी रोजगारदाताले दुर्व्यवहारको उजुरी पाए के गर्नुपर्छ?",
+          "new": "निजी कम्पनीले निजामती कर्मचारीको यही अनुशासन प्रक्रिया अपनाउन सक्छ?",
+          "occurrences": 1,
+          "lines": [
+            22
+          ]
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+          "old": "पुनरावृत्ति रोक्ने कदम, आवश्यकता र घटनाअनुसार परामर्श, सहायता तथा सुरक्षा र अनुसन्धान अघि बढाउनुपर्छ। अनुसन्धान र समन्वय वस्तुगत, निष्पक्ष र न्यायोचित हुनुपर्छ; अनुसन्धानमा पर्याप्त भनाइ तथा प्रतिरक्षाको अवसर र स्वार्थ बाझिने अवस्थाबाट अलग रहने नियम पालना गर्नुपर्छ। उजुरीकर्ताको इच्छाअनुसार समन्वय गर्न सकिन्छ, तर सहमति नभए अनुसन्धान जारी राख्नुपर्छ।",
+          "new": "यो फैसला निजामती कर्मचारीको मूल्याङ्कन र बर्खास्तगीसम्बन्धी हो। निजी कम्पनीले आफूमाथि लागू व्यावसायिक सुरक्षा तथा स्वास्थ्य, श्रम कानुन र सम्झौताका नियम हेर्नुपर्छ। समयअघि निर्णय नतोक्ने, भनाइ र प्रतिरक्षाको अवसर दिने तथा विरोधाभासी प्रमाण जाँच्ने कुराले समीक्षा गर्न मद्दत गर्छ, तर फरक कानुनी आधार प्रतिस्थापन गर्दैन।",
+          "occurrences": 1,
+          "lines": [
+            23
+          ]
+        }
+      ],
+      "meaningPreserved": "Keep three FAQ items. Preserve victim-worker complaint trigger, needs/circumstances for help/protection, investigation duty and concurrent protection; keep coordination may and continued investigation must in existing body; later-review-hearing defect already remains in body."
+    },
+    {
+      "id": "M03",
+      "article": "920",
+      "category": "Actor and action changed",
+      "actual": [
+        "चार्जर बन्द गरेको, ताल्चा लगाएको र साँचो आफूसँग राखेको भन्ने दाबी सत्य मान्दा पनि आवश्यक सहमति र सुरक्षा जाँचको कमी पूरा नहुने अदालतको निष्कर्ष रह्यो।",
+        "यस मुद्दामा त्यस्तो तर्क सफल भएन। बन्द गरेको, ताल्चा लगाएको र साँचो राखेको भन्ने दाबी सत्य माने पनि अदालतले आवश्यक सहमति र सुरक्षा जाँचको कमी हटेको मानेन। अदालतको उक्त विश्लेषणले ती दाबीलाई स्थापित तथ्य मानेको होइन।"
+      ],
+      "problem": "आफूसँग राखेको means the resident kept the key themselves; the source says the resident was willing to hand it to the management committee. FAQ also says keeping, not handing over. Conditional judicial reasoning is otherwise retained.",
+      "source": "Frozen ZH920 body line39: 也願意把鑰匙交給管理委員會; FAQ2 line20 交付鑰匙; facts920-C4.",
+      "proposedEdits": [
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "old": "साँचो आफूसँग राखेको",
+          "new": "साँचो व्यवस्थापन समितिलाई बुझाउन तयार रहेको",
+          "occurrences": 1,
+          "lines": [
+            50
+          ]
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "old": "साँचो राखेको",
+          "new": "साँचो व्यवस्थापन समितिलाई बुझाउन तयार रहेको",
+          "occurrences": 1,
+          "lines": [
+            21
+          ]
+        }
+      ],
+      "meaningPreserved": "Preserve stopped/locked assertions and even-if-true reasoning; change only the offered recipient/action, without turning a party assertion into an established fact."
+    }
+  ],
+  "optional": [
+    {
+      "id": "S01",
+      "article": "915",
+      "actual": "NT$44,417,150 अस्पताल निर्माणको ठेकेदारले मध्यस्थताबाट पाएको रकम थियो।",
+      "problem": "पाएको रकम can be read as money actually received. Context and summary already identify an award, so this is a precision improvement rather than proof of a false cash-payment statement.",
+      "proposedEdits": [
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+          "old": "NT$44,417,150 अस्पताल निर्माणको ठेकेदारले मध्यस्थताबाट पाएको रकम थियो।",
+          "new": "NT$44,417,150 मध्यस्थ निर्णयमा अस्पताल निर्माणको ठेकेदारको पक्षमा तोकिएको रकम थियो।",
+          "occurrences": 1,
+          "lines": [
+            24
+          ]
+        }
+      ],
+      "meaningPreserved": "Distinguish awarded amount from verified actual payment; no amount/result change."
+    },
+    {
+      "id": "S02",
+      "article": "916",
+      "actual": [
+        "कामदारको सम्पर्क र सफाइबारे",
+        "कामदारको रासायनिक सम्पर्क, सफाइको योजना"
+      ],
+      "problem": "Standalone FAQ contact and cleaning terms are vague for chemical exposure and remediation. The body already provides the pollution/chemical context, so no new liability requirement is demanded.",
+      "proposedEdits": [
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "old": "कामदारको सम्पर्क र सफाइबारे",
+          "new": "कामदार रसायनको सम्पर्कमा परेको अवस्था र प्रदूषण हटाउने कामबारे",
+          "occurrences": 1,
+          "lines": [
+            23
+          ]
+        },
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "old": "कामदारको रासायनिक सम्पर्क, सफाइको योजना",
+          "new": "कामदार रसायनको सम्पर्कमा परेको अवस्था, प्रदूषण हटाउने योजना",
+          "occurrences": 1,
+          "lines": [
+            52
+          ]
+        }
+      ],
+      "meaningPreserved": "Clarify what exposure and remediation records refer to; preserve documentary usefulness rather than making a new mandatory checklist."
+    },
+    {
+      "id": "S03",
+      "article": "918",
+      "actual": "ऋणपत्र",
+      "problem": "A compressed financial-instrument term can distract from the actual bank-progress letter. Main title and body context are clear, so classify as optional wording clarification, not a new holding.",
+      "proposedEdits": [
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+          "old": "ऋणपत्र",
+          "new": "ऋणसम्बन्धी पत्र",
+          "occurrences": 2,
+          "lines": [
+            3,
+            42
+          ]
+        }
+      ],
+      "meaningPreserved": "Both SEO title and later first-letter reference describe correspondence concerning the loan, not a different financing instrument."
+    },
+    {
+      "id": "S04",
+      "articles": [
+        "915",
+        "916",
+        "921"
+      ],
+      "category": "MONOTONY — practical ending before source note",
+      "actual": [
+        {
+          "article": "915",
+          "actual": "निर्माण, प्राविधिक सेवा र सामान आपूर्तिको सीमा सम्झौताका कागजातबाट खुल्छ। प्रारम्भिक कानुनी सोधपुछमा परियोजनाको प्रकार, मागिएको उपचार र अर्को प्रक्रियाको मिति उल्लेख गर्दा समीक्षा केन्द्रित हुन्छ। [सम्पर्क पृष्ठ अंग्रेजीमा छ](/en/contact)।",
+          "direction": "Move the existing English-contact/email sentence earlier in the same paragraph; finish with the existing contract-type, transaction/transfer date, or payment/termination/balance/response comparison sentence. No new legal command or contact channel."
+        },
+        {
+          "article": "916",
+          "actual": "कुनै कारोबारको समीक्षा सुरु गर्दा ताइवानको सम्बन्धित कम्पनी, खरिदको स्वरूप र प्रस्तावित हस्तान्तरण वा कारोबार पूरा गर्ने मिति उपयोगी हुन्छन्। प्राविधिक प्रतिवेदन र संवेदनशील कामदार विवरण पठाउने तरिका पहिले तय गर्न सकिन्छ। [सोधपुछको पृष्ठ अंग्रेजीमा उपलब्ध छ](/en/contact)।",
+          "direction": "Move the existing English-contact/email sentence earlier in the same paragraph; finish with the existing contract-type, transaction/transfer date, or payment/termination/balance/response comparison sentence. No new legal command or contact channel."
+        },
+        {
+          "article": "921",
+          "actual": "गुनासो अघि बढाउन [आधिकारिक अनलाइन प्रणाली](https://appeal.cpc.ey.gov.tw/) उपलब्ध छ। रकम, अन्त्यको सूचना, बाँकी मूल्यको विवरण र कम्पनीको जवाफ एकै क्रममा राख्दा विवादको विषय स्पष्ट हुन्छ। कानुनी सोधपुछका लागि चरण र मिति [इमेलमा](mailto:wei@hoveringlaw.com.tw) संक्षेप गर्न सकिन्छ।",
+          "direction": "Move the existing English-contact/email sentence earlier in the same paragraph; finish with the existing contract-type, transaction/transfer date, or payment/termination/balance/response comparison sentence. No new legal command or contact channel."
+        }
+      ],
+      "problem": "915 and916 end their substantive paragraph with an English contact-page announcement;921 ends with email logistics. A repeated contact ending weakens §5.7 even though required channels and source notes are valid.",
+      "meaningPreserved": "Keep every link and contact statement; reorder the existing article-specific practical sentence to be last. This is one style finding, not a legal defect or an instruction to remove source/date tails."
+    },
+    {
+      "id": "S05",
+      "article": "921",
+      "actual": "प्रयोग नभएका सशुल्क पोइन्ट वा प्रयोग नभएको खेल शुल्कबाट आवश्यक लागत घटाएर सम्झौता अन्त्य भएको 30 दिनभित्र फिर्ता गर्नुपर्छ, वा पक्षहरूले सहमति गरेको अर्को तरिका अपनाउन सक्छन्। खेल सुरु गरेको सात दिनभित्र लिखित रूपमा सम्झौताबाट पछि हट्ने व्यवस्था छुट्टै छ।",
+      "problem": "FAQ2 distinguishes the seven-day written route but does not itself state that ordinary termination is available at any time; the body already does. Add that existing premise for FAQ self-containment without expanding rights.",
+      "proposedEdits": [
+        {
+          "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/921-taiwan-online-game-coins-refund-judgment.md",
+          "old": "प्रयोग नभएका सशुल्क पोइन्ट वा प्रयोग नभएको खेल शुल्कबाट आवश्यक लागत घटाएर सम्झौता अन्त्य भएको 30 दिनभित्र फिर्ता गर्नुपर्छ, वा पक्षहरूले सहमति गरेको अर्को तरिका अपनाउन सक्छन्। खेल सुरु गरेको सात दिनभित्र लिखित रूपमा सम्झौताबाट पछि हट्ने व्यवस्था छुट्टै छ।",
+          "new": "उपभोक्ताले कुनै पनि समयमा सम्झौता अन्त्य गर्न सक्छ। प्रयोग नभएका सशुल्क पोइन्ट वा प्रयोग नभएको खेल शुल्कबाट आवश्यक लागत घटाएर सम्झौता अन्त्य भएको 30 दिनभित्र फिर्ता गर्नुपर्छ, वा पक्षहरूले सहमति गरेको अर्को तरिका अपनाउन सक्छन्। खेल सुरु गरेको सात दिनभित्र लिखित रूपमा सम्झौताबाट पछि हट्ने व्यवस्था छुट्टै छ।",
+          "occurrences": 1,
+          "lines": [
+            21
+          ]
+        }
+      ],
+      "meaningPreserved": "Preserve unused paid points OR unused game fees, necessary-cost deduction, termination-based30days OR bilateral agreement; no anytime full-refund promise."
+    }
+  ],
+  "scopeNotes": [
+    "Do not require every additional officially confirmed detail absent from an accurate canonical summary.",
+    "USTR critical-sector detail is not made mandatory: current NE text states conditional possibility with US private partners and law, not universal funding eligibility.",
+    "The seven-day no-reason/no-cost detail appears in supplementary facts but not the concise canonical paragraph; omission alone is not a mandatory rejection.",
+    "The historical player-initiated termination discussion is compressed out of NE921; current prose does not affirm the operator's historical grounds. Optional contextual restoration is possible, but no invented statement is inferred from its absence.",
+    "918 generic moving-box conditional is hypothetical, not asserted as an adjudicated fact; caption remains fictional. A clearer body label may be chosen without requiring a scene rewrite."
+  ]
+}

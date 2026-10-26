@@ -1,0 +1,1759 @@
+{
+  "at": "2026-10-26T09:05:59.480500+00:00",
+  "scope": "Author self-check, not independent review",
+  "rows": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "eb47204940b6bbbf46cafd1304257b96103ee4ae7e0bd52530d961d12ca63abb",
+      "initialSHA256": "2e596bf2f364bd493aac70dd01ad66d196a8e9681712c126adcfafaf7e9bbff2",
+      "canonicalSHA256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "exactEditReplayInverse": true,
+      "actualCLIPath": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-edited-r1.json",
+      "measuredFileSHA256": "eb47204940b6bbbf46cafd1304257b96103ee4ae7e0bd52530d961d12ca63abb",
+      "currentFileMeasuredDirectly": true,
+      "measurementBridge": null,
+      "actualCLIExit": 0,
+      "actualCLIStdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/915-taiwan-public-contract-mediation-arbitration-same-claim.md [ro] sentences=39 mean=14.8 cv=0.536 short=0.205 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.167 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "metrics": {
+        "lang": "ro",
+        "sentences": 39,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.8,
+        "len_cv": 0.536,
+        "short_share": 0.205,
+        "long_share": 0.026,
+        "para_cv": 0.16,
+        "even_run3": 0.0,
+        "top_end": "arbitrajului",
+        "top_end_share": 0.051,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "44.417.150",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.167,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.95,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "44.417.150 NT$.",
+        "last": "O echipă care pregătește oferta poate verifica din timp categoria achiziției și clauza de soluționare a disputelor. Pent",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        "44.417.150 NT$. Aceasta era suma acordată prin arbitraj unui constructor care executase lucrări pentru un spital din Taiwan. Hotărârea arbitrală a fost ulterior anulată, deoarece recomandarea obținută în mediere privea prelungirea duratei lucrărilor, iar pretenția bănească ajunsese în arbitraj fără o recomandare asupra ei.",
+        "[Explicația Curții Supreme pentru dosarul 106年度台上字第723號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693) consemnează respingerea recursului constructorului la 12 iulie 2017. Anularea a rămas în vigoare. Instituția publică introdusese acțiunea în anulare, iar explicația oficială arată că acest proces era definitiv încheiat. Pentru pretenția bănească în cauză nu exista nicio convenție arbitrală încheiată de părți, nici consimțământul considerat dat în condițiile legii.",
+        "Cererea inițială de mediere urmărea o despăgubire bănească. Constructorul a schimbat-o într-o cerere de prelungire a duratei lucrărilor. Comisia a recomandat prelungirea, dar spitalul nu a fost de acord. Constructorul a revenit apoi la bani.",
+        "Asupra acestei ultime pretenții nu fusese formulată o recomandare sau o propunere înaintea arbitrajului. Certificatul de mediere nereușită nu a înlocuit etapa lipsă. Potrivit [motivării explicate de Curte](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693), instituția trebuia să poată accepta sau respinge o soluție referitoare la litigiul concret pentru care era invocat consimțământul legal la arbitraj.",
+        "Curtea Supremă a corectat o parte din raționamentul instanței inferioare privind versiunea legii aplicabile, păstrând însă soluția de anulare. Lipsa convenției arbitrale a constituit temeiul prevăzut de [articolul 40 alineatul 1 punctul 2 din Legea arbitrajului](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001). Respingerea recursului nu a însemnat aprobarea fiecărui argument al instanței anterioare.",
+        "[Articolul 85-1 din Legea achizițiilor publice](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) permite medierea litigiilor privind executarea contractului în fața comisiei de examinare a contestațiilor în achiziții publice. Instituția nu poate refuza cererea de mediere formulată de furnizor. Accesul la această procedură și temeiul arbitrajului se examinează în etape distincte.",
+        "Pentru achiziții de lucrări de construcție sau servicii tehnice, comisia trebuie să formuleze o recomandare ori o propunere de mediere; dacă medierea eșuează deoarece instituția nu este de acord, aceasta nu poate refuza sesizarea arbitrajului de către furnizor. Condițiile sunt cumulative. Recomandarea trebuie să privească tocmai litigiul pentru care este folosită această cale.",
+        "Încadrarea contractului contează de la început. O achiziție de echipamente nu intră automat în categoria lucrărilor sau a serviciilor tehnice. Conținutul prestației și clauza de soluționare a disputelor pot arăta și existența unei convenții arbitrale separate.",
+        "Comisia a examinat plata care urmează să fie cerută în arbitraj? Cererea inițială, modificările ei, recomandarea sau propunerea, răspunsul instituției și proiectul cererii arbitrale permit această comparație. Numărul comun al proiectului nu lămurește singur ce rezultat a fost solicitat în fiecare etapă.",
+        "Revizuirea unei sume nu creează neapărat un litigiu nou. Nici precizarea unui argument juridic. Evaluarea privește faptele și pretențiile efective; hotărârea discutată tratează trecerea documentată între bani și timp suplimentar. Dacă dosarul arată un gol procedural, se poate analiza un alt temei convențional de arbitraj sau necesitatea unei noi medieri pentru pretenția avută în vedere.",
+        "[Raportul din 30 septembrie 2026 al administrației americane pentru comerț internațional, ITA](https://www.trade.gov/market-intelligence/taiwan-energy-industry), prezintă achiziții taiwaneze de energie și rețele anticipate pentru sfârșitul anului și pentru 2027, inclusiv oportunități pentru furnizori americani. Sunt perspective de piață. Raportul nu confirmă deschiderea unei anumite licitații, eligibilitatea unei companii sau încadrarea viitorului contract în categoriile articolului 85-1.",
+        "O echipă care pregătește oferta poate verifica din timp categoria achiziției și clauza de soluționare a disputelor. Pentru o evaluare a unui litigiu deja apărut, [pagina de contact în limba engleză](/en/contact) poate fi folosită pentru a descrie categoria proiectului, pretenția și următoarea dată procedurală. Documentele utile sunt cele care arată cum s-au schimbat cererile și la ce recomandare a răspuns instituția."
+      ],
+      "sentencesByParagraph": [
+        [
+          {
+            "text": "44.417.150 NT$.",
+            "units": 2
+          },
+          {
+            "text": "Aceasta era suma acordată prin arbitraj unui constructor care executase lucrări pentru un spital din Taiwan.",
+            "units": 16
+          },
+          {
+            "text": "Hotărârea arbitrală a fost ulterior anulată, deoarece recomandarea obținută în mediere privea prelungirea duratei lucrărilor, iar pretenția bănească ajunsese în arbitraj fără o recomandare asupra ei.",
+            "units": 26
+          }
+        ],
+        [
+          {
+            "text": "Explicația Curții Supreme pentru dosarul 106年度台上字第723號 consemnează respingerea recursului constructorului la 12 iulie 2017.",
+            "units": 14
+          },
+          {
+            "text": "Anularea a rămas în vigoare.",
+            "units": 5
+          },
+          {
+            "text": "Instituția publică introdusese acțiunea în anulare, iar explicația oficială arată că acest proces era definitiv încheiat.",
+            "units": 16
+          },
+          {
+            "text": "Pentru pretenția bănească în cauză nu exista nicio convenție arbitrală încheiată de părți, nici consimțământul considerat dat în condițiile legii.",
+            "units": 20
+          }
+        ],
+        [
+          {
+            "text": "Cererea inițială de mediere urmărea o despăgubire bănească.",
+            "units": 8
+          },
+          {
+            "text": "Constructorul a schimbat-o într-o cerere de prelungire a duratei lucrărilor.",
+            "units": 10
+          },
+          {
+            "text": "Comisia a recomandat prelungirea, dar spitalul nu a fost de acord.",
+            "units": 11
+          },
+          {
+            "text": "Constructorul a revenit apoi la bani.",
+            "units": 6
+          }
+        ],
+        [
+          {
+            "text": "Asupra acestei ultime pretenții nu fusese formulată o recomandare sau o propunere înaintea arbitrajului.",
+            "units": 14
+          },
+          {
+            "text": "Certificatul de mediere nereușită nu a înlocuit etapa lipsă.",
+            "units": 9
+          },
+          {
+            "text": "Potrivit motivării explicate de Curte, instituția trebuia să poată accepta sau respinge o soluție referitoare la litigiul concret pentru care era invocat consimțământul legal la arbitraj.",
+            "units": 26
+          }
+        ],
+        [
+          {
+            "text": "Curtea Supremă a corectat o parte din raționamentul instanței inferioare privind versiunea legii aplicabile, păstrând însă soluția de anulare.",
+            "units": 19
+          },
+          {
+            "text": "Lipsa convenției arbitrale a constituit temeiul prevăzut de articolul 40 alineatul 1 punctul 2 din Legea arbitrajului.",
+            "units": 17
+          },
+          {
+            "text": "Respingerea recursului nu a însemnat aprobarea fiecărui argument al instanței anterioare.",
+            "units": 11
+          }
+        ],
+        [
+          {
+            "text": "Articolul 85-1 din Legea achizițiilor publice permite medierea litigiilor privind executarea contractului în fața comisiei de examinare a contestațiilor în achiziții publice.",
+            "units": 23
+          },
+          {
+            "text": "Instituția nu poate refuza cererea de mediere formulată de furnizor.",
+            "units": 10
+          },
+          {
+            "text": "Accesul la această procedură și temeiul arbitrajului se examinează în etape distincte.",
+            "units": 12
+          }
+        ],
+        [
+          {
+            "text": "Pentru achiziții de lucrări de construcție sau servicii tehnice, comisia trebuie să formuleze o recomandare ori o propunere de mediere; dacă medierea eșuează deoarece instituția nu este de acord, aceasta nu poate refuza sesizarea arbitrajului de către furnizor.",
+            "units": 38
+          },
+          {
+            "text": "Condițiile sunt cumulative.",
+            "units": 3
+          },
+          {
+            "text": "Recomandarea trebuie să privească tocmai litigiul pentru care este folosită această cale.",
+            "units": 12
+          }
+        ],
+        [
+          {
+            "text": "Încadrarea contractului contează de la început.",
+            "units": 6
+          },
+          {
+            "text": "O achiziție de echipamente nu intră automat în categoria lucrărilor sau a serviciilor tehnice.",
+            "units": 14
+          },
+          {
+            "text": "Conținutul prestației și clauza de soluționare a disputelor pot arăta și existența unei convenții arbitrale separate.",
+            "units": 16
+          }
+        ],
+        [
+          {
+            "text": "Comisia a examinat plata care urmează să fie cerută în arbitraj?",
+            "units": 11
+          },
+          {
+            "text": "Cererea inițială, modificările ei, recomandarea sau propunerea, răspunsul instituției și proiectul cererii arbitrale permit această comparație.",
+            "units": 16
+          },
+          {
+            "text": "Numărul comun al proiectului nu lămurește singur ce rezultat a fost solicitat în fiecare etapă.",
+            "units": 15
+          }
+        ],
+        [
+          {
+            "text": "Revizuirea unei sume nu creează neapărat un litigiu nou.",
+            "units": 9
+          },
+          {
+            "text": "Nici precizarea unui argument juridic.",
+            "units": 5
+          },
+          {
+            "text": "Evaluarea privește faptele și pretențiile efective; hotărârea discutată tratează trecerea documentată între bani și timp suplimentar.",
+            "units": 16
+          },
+          {
+            "text": "Dacă dosarul arată un gol procedural, se poate analiza un alt temei convențional de arbitraj sau necesitatea unei noi medieri pentru pretenția avută în vedere.",
+            "units": 25
+          }
+        ],
+        [
+          {
+            "text": "Raportul din 30 septembrie 2026 al administrației americane pentru comerț internațional, ITA, prezintă achiziții taiwaneze de energie și rețele anticipate pentru sfârșitul anului și pentru 2027, inclusiv oportunități pentru furnizori americani.",
+            "units": 31
+          },
+          {
+            "text": "Sunt perspective de piață.",
+            "units": 4
+          },
+          {
+            "text": "Raportul nu confirmă deschiderea unei anumite licitații, eligibilitatea unei companii sau încadrarea viitorului contract în categoriile articolului 85-1.",
+            "units": 19
+          }
+        ],
+        [
+          {
+            "text": "O echipă care pregătește oferta poate verifica din timp categoria achiziției și clauza de soluționare a disputelor.",
+            "units": 17
+          },
+          {
+            "text": "Pentru o evaluare a unui litigiu deja apărut, pagina de contact în limba engleză poate fi folosită pentru a descrie categoria proiectului, pretenția și următoarea dată procedurală.",
+            "units": 27
+          },
+          {
+            "text": "Documentele utile sunt cele care arată cum s-au schimbat cererile și la ce recomandare a răspuns instituția.",
+            "units": 17
+          }
+        ]
+      ],
+      "heads": [
+        "Ce s-a cerut în fiecare etapă",
+        "Condițiile în care instituția nu poate refuza arbitrajul",
+        "Compararea cererii de plată cu dosarul de mediere"
+      ],
+      "items": [],
+      "boundaryDelta": [
+        {
+          "kind": "replace",
+          "before": [
+            "Pentru pretenția bănească în cauză nu exista nici o convenție arbitrală încheiată de părți, nici consimțământul considerat dat în condițiile legii."
+          ],
+          "after": [
+            "Pentru pretenția bănească în cauză nu exista nicio convenție arbitrală încheiată de părți, nici consimțământul considerat dat în condițiile legii."
+          ],
+          "contextAfter": [
+            "Instituția publică introdusese acțiunea în anulare, iar explicația oficială arată că acest proces era definitiv încheiat.",
+            "Pentru pretenția bănească în cauză nu exista nicio convenție arbitrală încheiată de părți, nici consimțământul considerat dat în condițiile legii.",
+            "Cererea inițială de mediere urmărea o despăgubire bănească."
+          ]
+        }
+      ],
+      "FMFAQUnchanged": true,
+      "FAQCount": 2,
+      "sourceURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "sameSourceURLsInBodyAndFooter": true,
+      "autoErrors": 0,
+      "requiredItems": 6,
+      "initialParagraphsRead": 12
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "a155be35ec16384685cba6654957720f4e3f2bff222dda12e3f775c36d3b28b4",
+      "initialSHA256": "4ded124182c3ec68eff4f1648fa47d5f4ae5c28087c3a39680bbf63c30f482af",
+      "canonicalSHA256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "exactEditReplayInverse": true,
+      "actualCLIPath": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-edited-r1.json",
+      "measuredFileSHA256": "a155be35ec16384685cba6654957720f4e3f2bff222dda12e3f775c36d3b28b4",
+      "currentFileMeasuredDirectly": true,
+      "measurementBridge": null,
+      "actualCLIExit": 0,
+      "actualCLIStdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/916-taiwan-parent-company-pollution-liability-us-investor.md [ro] sentences=37 mean=16.5 cv=0.506 short=0.189 run3=0.029 opener_rep=0.0 cite_end=0.0 cite_para=0.077 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "metrics": {
+        "lang": "ro",
+        "sentences": 37,
+        "paras": 13,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 16.5,
+        "len_cv": 0.506,
+        "short_share": 0.189,
+        "long_share": 0.027,
+        "para_cv": 0.153,
+        "even_run3": 0.029,
+        "top_end": "taiwan",
+        "top_end_share": 0.054,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "cine",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.077,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 1.48,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Cine a primit raportul de poluare și ce a decis după aceea?",
+        "last": "Pentru o evaluare individuală, pagina de contact în limba engleză permite descrierea tranzacției, a entității taiwaneze ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        "Cine a primit raportul de poluare și ce a decis după aceea? Într-un dosar privind lucrătorii unei fabrici taiwaneze de produse electronice, răspunsul a legat investigațiile de mediu de controlul societăților-mamă și de transferurile care au redus activele societății locale. Raportul a devenit probă.",
+        "[Explicația Curții Supreme pentru dosarul 107年度台上字第267號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) prezintă hotărârea din 16 august 2018. Litigiul privea prejudicii legate de expunerea lucrătorilor la substanțe chimice. Instanța a examinat conduita companiilor care controlau activitatea, nu a atribuit răspundere tuturor investitorilor străini care dețin o filială în Taiwan.",
+        "Documentele descrise de [Curte](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) includeau studii care identificaseră contaminarea și dovada cunoașterii ei în grupurile de control. Au contat lipsa informării lucrătorilor și a remedierii, alături de reduceri de capital și remiteri de fonduri în străinătate destinate evitării răspunderii. Raționamentul care permitea angajarea răspunderii companiilor de control a fost menținut.",
+        "Lista destinatarilor poate arăta cine cunoștea riscul. Procesele-verbale ale conducerii și instrucțiunile operaționale pot arăta cine putea hotărî măsurile necesare, iar aprobările transferurilor ulterioare trebuie citite în raport cu aceste informații. Cronologia leagă documentele.",
+        "După primirea unui raport, întrebările rămase fără răspuns merită păstrate ca atare. Se poate urmări cine a cerut investigații suplimentare, ce s-a decis despre expunerea lucrătorilor și cum au fost alocate resursele pentru remediere. O prezentare favorabilă încheierii tranzacției nu înlocuiește constatările tehnice și deciziile luate în legătură cu ele.",
+        "Curtea Supremă a casat părțile hotărârii referitoare la 246 de reclamanți și a trimis acele părți spre rejudecare. Recursurile privind 262 de reclamanți au fost respinse. Problemele care au justificat rejudecarea priveau, între altele, prejudiciul, probele și dreptul de a susține pretențiile în proces, conform [explicației soluției](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523).",
+        "Rejudecarea a lăsat chestiuni deschise. Respingerea recursurilor privind celălalt grup nu înseamnă respingerea tuturor cererilor sale inițiale și nici încheierea întregii serii de procese. Pentru evaluarea unei expuneri istorice, sunt necesare identificarea procedurii relevante și stadiul ei, înainte de estimarea unei obligații.",
+        "[Articolul 154 din Legea societăților](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154) limitează, ca regulă, răspunderea acționarului la plata acțiunilor sale. Alineatul 2 prevede răspunderea pentru o anumită datorie dacă acționarul abuzează de personalitatea juridică a societății, determinând societatea să își asume acea datorie, achitarea ei este în mod evident dificilă, iar împrejurările sunt grave și fac necesară răspunderea acționarului.",
+        "Condițiile se cumulează. Participația la capital, o datorie neplătită sau constatarea unei probleme de mediu nu înlocuiesc acest ansamblu. Regula actuală este utilă evaluării unei investiții de astăzi; ea nu trebuie prezentată drept explicația unică a modului în care instanța a tratat conduita istorică din dosarul fabricii.",
+        "Structura obișnuită poate fi comparată în [articolul despre filială și sucursală](/ro/columns/taiwan-company-subsidiary-vs-branch). În cauza de poluare, evaluarea a mers până la exercitarea efectivă a controlului: ce putea decide grupul, ce știa și ce a făcut când riscul a devenit cunoscut.",
+        "Înaintea unei distribuiri, reduceri de capital sau remiteri legate de ieșirea din investiție, decidenții pot confrunta riscurile identificate și cererile nerezolvate cu resursele care vor rămâne în societatea taiwaneză. Evaluarea juridică privește tranzacția propusă. Denumirea documentului de aprobare nu stabilește singură legalitatea transferului.",
+        "[Fișa USTR din februarie 2026](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) descrie intenții de facilitare a investițiilor între Statele Unite și Taiwan. Partea americană urma să analizeze, după caz și potrivit legii aplicabile, sprijinirea finanțării investițiilor în sectoare esențiale din Taiwan, împreună cu parteneri privați americani. Această prezentare de politică nu promite finanțare oricărui investitor și nu stabilește, prin ea însăși, intrarea în vigoare a fiecărei componente a acordului.",
+        "Pentru o evaluare individuală, [pagina de contact în limba engleză](/en/contact) permite descrierea tranzacției, a entității taiwaneze și a datei prevăzute pentru transfer sau finalizare. Rapoartele tehnice și datele sensibile despre lucrători pot fi transmise printr-o modalitate convenită. Primele documente de păstrat sunt constatările inițiale, deciziile pe care le-au provocat și aprobările mișcărilor ulterioare de active."
+      ],
+      "sentencesByParagraph": [
+        [
+          {
+            "text": "Cine a primit raportul de poluare și ce a decis după aceea?",
+            "units": 12
+          },
+          {
+            "text": "Într-un dosar privind lucrătorii unei fabrici taiwaneze de produse electronice, răspunsul a legat investigațiile de mediu de controlul societăților-mamă și de transferurile care au redus activele societății locale.",
+            "units": 28
+          },
+          {
+            "text": "Raportul a devenit probă.",
+            "units": 4
+          }
+        ],
+        [
+          {
+            "text": "Explicația Curții Supreme pentru dosarul 107年度台上字第267號 prezintă hotărârea din 16 august 2018.",
+            "units": 12
+          },
+          {
+            "text": "Litigiul privea prejudicii legate de expunerea lucrătorilor la substanțe chimice.",
+            "units": 10
+          },
+          {
+            "text": "Instanța a examinat conduita companiilor care controlau activitatea, nu a atribuit răspundere tuturor investitorilor străini care dețin o filială în Taiwan.",
+            "units": 21
+          }
+        ],
+        [
+          {
+            "text": "Documentele descrise de Curte includeau studii care identificaseră contaminarea și dovada cunoașterii ei în grupurile de control.",
+            "units": 17
+          },
+          {
+            "text": "Au contat lipsa informării lucrătorilor și a remedierii, alături de reduceri de capital și remiteri de fonduri în străinătate destinate evitării răspunderii.",
+            "units": 22
+          },
+          {
+            "text": "Raționamentul care permitea angajarea răspunderii companiilor de control a fost menținut.",
+            "units": 11
+          }
+        ],
+        [
+          {
+            "text": "Lista destinatarilor poate arăta cine cunoștea riscul.",
+            "units": 7
+          },
+          {
+            "text": "Procesele-verbale ale conducerii și instrucțiunile operaționale pot arăta cine putea hotărî măsurile necesare, iar aprobările transferurilor ulterioare trebuie citite în raport cu aceste informații.",
+            "units": 24
+          },
+          {
+            "text": "Cronologia leagă documentele.",
+            "units": 3
+          }
+        ],
+        [
+          {
+            "text": "După primirea unui raport, întrebările rămase fără răspuns merită păstrate ca atare.",
+            "units": 12
+          },
+          {
+            "text": "Se poate urmări cine a cerut investigații suplimentare, ce s-a decis despre expunerea lucrătorilor și cum au fost alocate resursele pentru remediere.",
+            "units": 22
+          },
+          {
+            "text": "O prezentare favorabilă încheierii tranzacției nu înlocuiește constatările tehnice și deciziile luate în legătură cu ele.",
+            "units": 16
+          }
+        ],
+        [
+          {
+            "text": "Curtea Supremă a casat părțile hotărârii referitoare la 246 de reclamanți și a trimis acele părți spre rejudecare.",
+            "units": 18
+          },
+          {
+            "text": "Recursurile privind 262 de reclamanți au fost respinse.",
+            "units": 8
+          },
+          {
+            "text": "Problemele care au justificat rejudecarea priveau, între altele, prejudiciul, probele și dreptul de a susține pretențiile în proces, conform explicației soluției.",
+            "units": 21
+          }
+        ],
+        [
+          {
+            "text": "Rejudecarea a lăsat chestiuni deschise.",
+            "units": 5
+          },
+          {
+            "text": "Respingerea recursurilor privind celălalt grup nu înseamnă respingerea tuturor cererilor sale inițiale și nici încheierea întregii serii de procese.",
+            "units": 19
+          },
+          {
+            "text": "Pentru evaluarea unei expuneri istorice, sunt necesare identificarea procedurii relevante și stadiul ei, înainte de estimarea unei obligații.",
+            "units": 18
+          }
+        ],
+        [
+          {
+            "text": "Articolul 154 din Legea societăților limitează, ca regulă, răspunderea acționarului la plata acțiunilor sale.",
+            "units": 14
+          },
+          {
+            "text": "Alineatul 2 prevede răspunderea pentru o anumită datorie dacă acționarul abuzează de personalitatea juridică a societății, determinând societatea să își asume acea datorie, achitarea ei este în mod evident dificilă, iar împrejurările sunt grave și fac necesară răspunderea acționarului.",
+            "units": 39
+          }
+        ],
+        [
+          {
+            "text": "Condițiile se cumulează.",
+            "units": 3
+          },
+          {
+            "text": "Participația la capital, o datorie neplătită sau constatarea unei probleme de mediu nu înlocuiesc acest ansamblu.",
+            "units": 16
+          },
+          {
+            "text": "Regula actuală este utilă evaluării unei investiții de astăzi; ea nu trebuie prezentată drept explicația unică a modului în care instanța a tratat conduita istorică din dosarul fabricii.",
+            "units": 28
+          }
+        ],
+        [
+          {
+            "text": "Structura obișnuită poate fi comparată în articolul despre filială și sucursală.",
+            "units": 11
+          },
+          {
+            "text": "În cauza de poluare, evaluarea a mers până la exercitarea efectivă a controlului: ce putea decide grupul, ce știa și ce a făcut când riscul a devenit cunoscut.",
+            "units": 28
+          }
+        ],
+        [
+          {
+            "text": "Înaintea unei distribuiri, reduceri de capital sau remiteri legate de ieșirea din investiție, decidenții pot confrunta riscurile identificate și cererile nerezolvate cu resursele care vor rămâne în societatea taiwaneză.",
+            "units": 29
+          },
+          {
+            "text": "Evaluarea juridică privește tranzacția propusă.",
+            "units": 5
+          },
+          {
+            "text": "Denumirea documentului de aprobare nu stabilește singură legalitatea transferului.",
+            "units": 9
+          }
+        ],
+        [
+          {
+            "text": "Fișa USTR din februarie 2026 descrie intenții de facilitare a investițiilor între Statele Unite și Taiwan.",
+            "units": 16
+          },
+          {
+            "text": "Partea americană urma să analizeze, după caz și potrivit legii aplicabile, sprijinirea finanțării investițiilor în sectoare esențiale din Taiwan, împreună cu parteneri privați americani.",
+            "units": 24
+          },
+          {
+            "text": "Această prezentare de politică nu promite finanțare oricărui investitor și nu stabilește, prin ea însăși, intrarea în vigoare a fiecărei componente a acordului.",
+            "units": 23
+          }
+        ],
+        [
+          {
+            "text": "Pentru o evaluare individuală, pagina de contact în limba engleză permite descrierea tranzacției, a entității taiwaneze și a datei prevăzute pentru transfer sau finalizare.",
+            "units": 24
+          },
+          {
+            "text": "Rapoartele tehnice și datele sensibile despre lucrători pot fi transmise printr-o modalitate convenită.",
+            "units": 13
+          },
+          {
+            "text": "Primele documente de păstrat sunt constatările inițiale, deciziile pe care le-au provocat și aprobările mișcărilor ulterioare de active.",
+            "units": 18
+          }
+        ]
+      ],
+      "heads": [
+        "Informația cunoscută și deciziile grupului",
+        "Ce s-a întâmplat cu cele două grupuri de reclamanți",
+        "Excepția actuală de la răspunderea limitată",
+        "Transferul de active după identificarea unui risc"
+      ],
+      "items": [],
+      "boundaryDelta": [
+        {
+          "kind": "replace",
+          "before": [
+            "Alineatul 2 prevede răspunderea pentru o anumită datorie dacă acționarul abuzează de personalitatea juridică a societății, cauzând asumarea acelei datorii, achitarea ei este în mod evident dificilă, iar împrejurările sunt grave și fac necesară răspunderea acționarului."
+          ],
+          "after": [
+            "Alineatul 2 prevede răspunderea pentru o anumită datorie dacă acționarul abuzează de personalitatea juridică a societății, determinând societatea să își asume acea datorie, achitarea ei este în mod evident dificilă, iar împrejurările sunt grave și fac necesară răspunderea acționarului."
+          ],
+          "contextAfter": [
+            "Articolul 154 din Legea societăților limitează, ca regulă, răspunderea acționarului la plata acțiunilor sale.",
+            "Alineatul 2 prevede răspunderea pentru o anumită datorie dacă acționarul abuzează de personalitatea juridică a societății, determinând societatea să își asume acea datorie, achitarea ei este în mod evident dificilă, iar împrejurările sunt grave și fac necesară răspunderea acționarului.",
+            "Condițiile se cumulează."
+          ]
+        }
+      ],
+      "FMFAQUnchanged": true,
+      "FAQCount": 3,
+      "sourceURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "sameSourceURLsInBodyAndFooter": true,
+      "autoErrors": 0,
+      "requiredItems": 6,
+      "initialParagraphsRead": 13
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "3d20ec40f6fdd4ea65f2ec8e58d18c2a0d1c88ff65f9cbd0b58589da6f94bdcb",
+      "initialSHA256": "e4f5e8bc3fe49a15ee0d52863d6316091484e9caf38e0435e04c4dc52c1f1c8f",
+      "canonicalSHA256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "exactEditReplayInverse": true,
+      "actualCLIPath": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-first-cli.json",
+      "measuredFileSHA256": "e4f5e8bc3fe49a15ee0d52863d6316091484e9caf38e0435e04c4dc52c1f1c8f",
+      "currentFileMeasuredDirectly": false,
+      "measurementBridge": "Source-footer-only change; current extracted paragraphs/sentences/metrics exactly same as initial actualCLI. Raw body bytes differ.",
+      "actualCLIExit": 0,
+      "actualCLIStdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/918-taiwan-presale-mortgage-notice-handover-judgment.md [ro] sentences=41 mean=14.1 cv=0.48 short=0.293 run3=0.026 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "metrics": {
+        "lang": "ro",
+        "sentences": 41,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.1,
+        "len_cv": 0.48,
+        "short_share": 0.293,
+        "long_share": 0.0,
+        "para_cv": 0.151,
+        "even_run3": 0.026,
+        "top_end": "predare",
+        "top_end_share": 0.073,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "scrisoarea",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.45,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Scrisoarea din februarie cerea cumpărătorului să discute cu banca despre credit.",
+        "last": "Dacă există deja o cerere de penalități sau dobânzi pentru întârziere, un mesaj la wei@hoveringlaw.com.tw poate descrie ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        "Scrisoarea din februarie cerea cumpărătorului să discute cu banca despre credit. Locuința nu avea încă apă și electricitate. Câteva luni mai târziu, accesul permis pentru amenajare și curățenie tot nu a dovedit îndeplinirea predării convenite, potrivit [hotărârii reproduse de autoritatea taiwaneză pentru protecția consumatorilor](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C).",
+        "Filiala Taichung a Înaltei Curți din Taiwan a pronunțat hotărârea 109年度上易字第289號 la 9 februarie 2022. A respins apelul dezvoltatorului și cererea sa suplimentară, menținând obligația de plată a dobânzii pentru întârziere. Hotărârea precizează că nu poate fi atacată. Textul se află la paginile tipărite 173–187 ale culegerii oficiale.",
+        "La 23 februarie 2019, dezvoltatorul îi ceruse cumpărătorului să contacteze banca și să comunice stadiul creditului. Scrisoarea nu anunța că locuința ajunsese într-o stare care permitea folosirea ei. Utilitățile au fost conectate ulterior.",
+        "Nici prima inspecție, din iulie, nu arăta o locuință complet pregătită: existau defecte de remediat, iar instalarea liftului nu era terminată. Instanța a analizat împreună aceste împrejurări și conținutul scrisorii, respingând susținerea că notificarea de predare fusese deja făcută.",
+        "În august, cumpărătorul a semnat acordul de acces pentru amenajare, curățenie și intervenții. Din acord și situația reparațiilor, instanța nu a dedus că se realizase predarea prevăzută după verificarea locuinței. Creditul a fost virat dezvoltatorului la 5 noiembrie. Documentul de garanție consemna predarea la 28 noiembrie. [Motivarea și probele relevante](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C) apar la paginile tipărite 182–186.",
+        "Ce obligație fusese îndeplinită prin virarea creditului? Pentru instanță, plata și predarea aveau repere proprii. Dezvoltatorul susținuse că întregul preț trebuia plătit după prima scrisoare, însă evidența ratelor arăta respectarea plăților convenite și achitarea prețului înainte de predare. Susținerea încălcării obligației de plată a cumpărătorului a fost respinsă.",
+        "Contractul prevedea notificarea predării în patru luni de la obținerea autorizației de utilizare. Astăzi, [punctul 15 al clauzelor obligatorii pentru vânzarea locuințelor înainte de finalizare](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) cere vânzătorului să notifice cumpărătorul în șase luni de la obținerea acelei autorizații. Sunt prevăzute și obligații privind reparațiile, regularizarea plăților și remiterea documentelor la predare.",
+        "Acela este momentul de început al termenului. Data contractului, aprobarea creditului sau viramentul nu îl înlocuiesc. Pentru evaluarea întârzierii se confruntă norma aplicabilă la încheiere, clauza concretă, data autorizației și conținutul și primirea notificării. Comparația cu regula actuală nu reprezintă o aplicare de către instanța din 2022 a unor norme ulterioare.",
+        "Cumpărătorul are, la rândul său, obligații. Punctul 14 reglementează documentele și formalitățile pentru credit, precum și plățile datorate înaintea transferului proprietății. Un dezacord asupra notificării de predare nu înlătură automat cerințele scadente de plată sau cooperare.",
+        "[Controlul oficial publicat la 25 august 2025](https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11) a identificat drept încălcări clauzele care excludeau timpul necesar verificărilor bancare și virării creditului din cele șase luni pentru notificarea predării. Constatarea privește acele clauze contractuale. Ea trebuie deosebită de aprecierea scrisorii concrete din dosarul din 2019.",
+        "Versiunea actuală a [regulilor Băncii Centrale pentru creditele garantate cu imobile](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html) a intrat în vigoare la 18 septembrie 2026. Cumpărătorii care discută acum condițiile creditului pot nota separat data estimată de bancă și datele de inspecție și predare propuse de dezvoltator. Prognoza băncii nu prelungește automat termenul contractual.",
+        "Titlul unei notificări nu spune totul. Scrisoarea completă și dovada primirii, fișele de verificare, fotografiile reparațiilor, acordul de acces și garanția pot arăta ce se putea folosi și ce formalități fuseseră îndeplinite la fiecare dată.",
+        "Dacă există deja o cerere de penalități sau dobânzi pentru întârziere, un mesaj la [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) poate descrie clauza, data notificării și termenul de răspuns. În dosar, fiecare document poate fi identificat după ceea ce cere efectiv: formalități de credit, inspecție sau predare."
+      ],
+      "sentencesByParagraph": [
+        [
+          {
+            "text": "Scrisoarea din februarie cerea cumpărătorului să discute cu banca despre credit.",
+            "units": 11
+          },
+          {
+            "text": "Locuința nu avea încă apă și electricitate.",
+            "units": 7
+          },
+          {
+            "text": "Câteva luni mai târziu, accesul permis pentru amenajare și curățenie tot nu a dovedit îndeplinirea predării convenite, potrivit hotărârii reproduse de autoritatea taiwaneză pentru protecția consumatorilor.",
+            "units": 26
+          }
+        ],
+        [
+          {
+            "text": "Filiala Taichung a Înaltei Curți din Taiwan a pronunțat hotărârea 109年度上易字第289號 la 9 februarie 2022.",
+            "units": 15
+          },
+          {
+            "text": "A respins apelul dezvoltatorului și cererea sa suplimentară, menținând obligația de plată a dobânzii pentru întârziere.",
+            "units": 16
+          },
+          {
+            "text": "Hotărârea precizează că nu poate fi atacată.",
+            "units": 7
+          },
+          {
+            "text": "Textul se află la paginile tipărite 173–187 ale culegerii oficiale.",
+            "units": 11
+          }
+        ],
+        [
+          {
+            "text": "La 23 februarie 2019, dezvoltatorul îi ceruse cumpărătorului să contacteze banca și să comunice stadiul creditului.",
+            "units": 16
+          },
+          {
+            "text": "Scrisoarea nu anunța că locuința ajunsese într-o stare care permitea folosirea ei.",
+            "units": 12
+          },
+          {
+            "text": "Utilitățile au fost conectate ulterior.",
+            "units": 5
+          }
+        ],
+        [
+          {
+            "text": "Nici prima inspecție, din iulie, nu arăta o locuință complet pregătită: existau defecte de remediat, iar instalarea liftului nu era terminată.",
+            "units": 21
+          },
+          {
+            "text": "Instanța a analizat împreună aceste împrejurări și conținutul scrisorii, respingând susținerea că notificarea de predare fusese deja făcută.",
+            "units": 18
+          }
+        ],
+        [
+          {
+            "text": "În august, cumpărătorul a semnat acordul de acces pentru amenajare, curățenie și intervenții.",
+            "units": 13
+          },
+          {
+            "text": "Din acord și situația reparațiilor, instanța nu a dedus că se realizase predarea prevăzută după verificarea locuinței.",
+            "units": 17
+          },
+          {
+            "text": "Creditul a fost virat dezvoltatorului la 5 noiembrie.",
+            "units": 8
+          },
+          {
+            "text": "Documentul de garanție consemna predarea la 28 noiembrie.",
+            "units": 8
+          },
+          {
+            "text": "Motivarea și probele relevante apar la paginile tipărite 182–186.",
+            "units": 10
+          }
+        ],
+        [
+          {
+            "text": "Ce obligație fusese îndeplinită prin virarea creditului?",
+            "units": 7
+          },
+          {
+            "text": "Pentru instanță, plata și predarea aveau repere proprii.",
+            "units": 8
+          },
+          {
+            "text": "Dezvoltatorul susținuse că întregul preț trebuia plătit după prima scrisoare, însă evidența ratelor arăta respectarea plăților convenite și achitarea prețului înainte de predare.",
+            "units": 23
+          },
+          {
+            "text": "Susținerea încălcării obligației de plată a cumpărătorului a fost respinsă.",
+            "units": 10
+          }
+        ],
+        [
+          {
+            "text": "Contractul prevedea notificarea predării în patru luni de la obținerea autorizației de utilizare.",
+            "units": 13
+          },
+          {
+            "text": "Astăzi, punctul 15 al clauzelor obligatorii pentru vânzarea locuințelor înainte de finalizare cere vânzătorului să notifice cumpărătorul în șase luni de la obținerea acelei autorizații.",
+            "units": 25
+          },
+          {
+            "text": "Sunt prevăzute și obligații privind reparațiile, regularizarea plăților și remiterea documentelor la predare.",
+            "units": 13
+          }
+        ],
+        [
+          {
+            "text": "Acela este momentul de început al termenului.",
+            "units": 7
+          },
+          {
+            "text": "Data contractului, aprobarea creditului sau viramentul nu îl înlocuiesc.",
+            "units": 9
+          },
+          {
+            "text": "Pentru evaluarea întârzierii se confruntă norma aplicabilă la încheiere, clauza concretă, data autorizației și conținutul și primirea notificării.",
+            "units": 18
+          },
+          {
+            "text": "Comparația cu regula actuală nu reprezintă o aplicare de către instanța din 2022 a unor norme ulterioare.",
+            "units": 17
+          }
+        ],
+        [
+          {
+            "text": "Cumpărătorul are, la rândul său, obligații.",
+            "units": 6
+          },
+          {
+            "text": "Punctul 14 reglementează documentele și formalitățile pentru credit, precum și plățile datorate înaintea transferului proprietății.",
+            "units": 15
+          },
+          {
+            "text": "Un dezacord asupra notificării de predare nu înlătură automat cerințele scadente de plată sau cooperare.",
+            "units": 15
+          }
+        ],
+        [
+          {
+            "text": "Controlul oficial publicat la 25 august 2025 a identificat drept încălcări clauzele care excludeau timpul necesar verificărilor bancare și virării creditului din cele șase luni pentru notificarea predării.",
+            "units": 28
+          },
+          {
+            "text": "Constatarea privește acele clauze contractuale.",
+            "units": 5
+          },
+          {
+            "text": "Ea trebuie deosebită de aprecierea scrisorii concrete din dosarul din 2019.",
+            "units": 11
+          }
+        ],
+        [
+          {
+            "text": "Versiunea actuală a regulilor Băncii Centrale pentru creditele garantate cu imobile a intrat în vigoare la 18 septembrie 2026.",
+            "units": 19
+          },
+          {
+            "text": "Cumpărătorii care discută acum condițiile creditului pot nota separat data estimată de bancă și datele de inspecție și predare propuse de dezvoltator.",
+            "units": 22
+          },
+          {
+            "text": "Prognoza băncii nu prelungește automat termenul contractual.",
+            "units": 7
+          }
+        ],
+        [
+          {
+            "text": "Titlul unei notificări nu spune totul.",
+            "units": 6
+          },
+          {
+            "text": "Scrisoarea completă și dovada primirii, fișele de verificare, fotografiile reparațiilor, acordul de acces și garanția pot arăta ce se putea folosi și ce formalități fuseseră îndeplinite la fiecare dată.",
+            "units": 29
+          }
+        ],
+        [
+          {
+            "text": "Dacă există deja o cerere de penalități sau dobânzi pentru întârziere, un mesaj la wei@hoveringlaw.com.tw poate descrie clauza, data notificării și termenul de răspuns.",
+            "units": 27
+          },
+          {
+            "text": "În dosar, fiecare document poate fi identificat după ceea ce cere efectiv: formalități de credit, inspecție sau predare.",
+            "units": 18
+          }
+        ]
+      ],
+      "heads": [
+        "Ce spunea scrisoarea și ce arăta inspecția",
+        "Patru luni în contractul cauzei, șase în regula actuală",
+        "Documentele care fixează fiecare dată"
+      ],
+      "items": [],
+      "boundaryDelta": [],
+      "FMFAQUnchanged": true,
+      "FAQCount": 3,
+      "sourceURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11"
+      ],
+      "sameSourceURLsInBodyAndFooter": true,
+      "autoErrors": 0,
+      "requiredItems": 5,
+      "initialParagraphsRead": 13
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "ac559acc2d867931be628dd9043cf6b26feab5197b16e3f00041d8370fcf2df5",
+      "initialSHA256": "3ce2dd5475cd67df8e2716db9f959c06384bb06d78e9ee1341d5b0256ff4209f",
+      "canonicalSHA256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "exactEditReplayInverse": true,
+      "actualCLIPath": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-edited-r1.json",
+      "measuredFileSHA256": "ac559acc2d867931be628dd9043cf6b26feab5197b16e3f00041d8370fcf2df5",
+      "currentFileMeasuredDirectly": true,
+      "measurementBridge": null,
+      "actualCLIExit": 0,
+      "actualCLIStdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [ro] sentences=36 mean=15.3 cv=0.46 short=0.222 run3=0.147 opener_rep=0.0 cite_end=0.0 cite_para=0.167 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "metrics": {
+        "lang": "ro",
+        "sentences": 36,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.3,
+        "len_cv": 0.46,
+        "short_share": 0.222,
+        "long_share": 0.028,
+        "para_cv": 0.19,
+        "even_run3": 0.147,
+        "top_end": "amiabilă",
+        "top_end_share": 0.056,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "instanța",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.167,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 1.45,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Instanța a anulat destituirea și decizia de reexaminare.",
+        "last": "Pentru o evaluare individuală a unui conflict de muncă din Taiwan, mesajul către wei@hoveringlaw.com.tw poate indica sta",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        "Instanța a anulat destituirea și decizia de reexaminare. Funcționarul cu funcție de conducere fusese destituit în urma a două penalizări disciplinare majore, dispuse printr-o singură măsură și denumite 記兩大過 în sistemul taiwanez. Anunțarea rezultatului înainte de deliberare, audierea necorespunzătoare și contradicțiile raportului au contat în controlul judiciar, potrivit [explicației oficiale a instanței](https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html).",
+        "Hotărârea 114年度訴字第869號 a fost pronunțată la 3 septembrie 2026 de secția de contencios administrativ superior a Înaltei Curți Administrative din Taipei. Comunicatul precizează că putea fi atacată. Anularea nu dovedește că persoana fusese deja reintegrată și nici că toate comportamentele reclamate fuseseră declarate inexistente.",
+        "Conducătorul autorității anunțase public sancțiunea înainte ca organismul de evaluare să o discute. Apoi, instituția superioară s-a întrunit înaintea instituției de care aparținea funcționarul. Curtea a considerat că această ordine afecta posibilitatea unei evaluări efective.",
+        "Mai putea ședința să schimbe rezultatul? Problema privea capacitatea de a decide pe baza probelor, după ce concluzia fusese deja comunicată în exterior. Existența unui proces-verbal nu demonstra singură că deliberarea rămăsese deschisă.",
+        "Potrivit [motivelor publicate de instanță](https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html), persoana vizată nu fusese convocată legal pentru a-și prezenta poziția. Raportul folosit pentru sancționare avea, de asemenea, contradicții între constatările privind susținerea acuzațiilor de hărțuire și măsura recomandată. Răspunsurile date ulterior în reexaminare nu au remediat lipsa oportunității de a fi ascultat la momentul necesar.",
+        "Dosarul privea regimul funcției publice și fapte anterioare noului sistem de prevenire a hărțuirii. Pentru angajatorii privați, normele actuale ale Legii securității și sănătății în muncă au intrat în vigoare la 1 iulie 2026, conform [istoricului legislativ](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001) și [prezentării autorității pentru securitate în muncă](https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt). Regimul aplicabil trebuie identificat în funcție de raportul de muncă și de actul examinat.",
+        "[Articolul 22-2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2) cere obiectivitate, imparțialitate și echitate în investigație sau în încercarea de soluționare amiabilă. În cursul investigației, părțile trebuie să aibă posibilitatea deplină de a prezenta explicații și apărări. Se respectă și regulile privind conflictele de interese. O declarație publică ce atribuie deja vinovăția poate îngreuna îndeplinirea acestor cerințe.",
+        "Protecția poate începe imediat. Când află despre caz prin plângerea lucrătorului hărțuit, angajatorul trebuie să ia măsuri pentru prevenirea repetării hărțuirii, să ofere consiliere, asistență și protecție potrivit nevoilor și împrejurărilor și să desfășoare investigația. Dacă reclamantul dorește, angajatorul poate încerca soluționarea amiabilă. În lipsa unei înțelegeri, investigația trebuie continuată.",
+        "Aceste obligații permit intervenția și examinarea echitabilă în paralel. Hotărârea administrativă oferă repere pentru calitatea procedurii, dar nu decide direct valabilitatea unei sancțiuni aplicate de o societate privată.",
+        "Într-un raport, afirmația unei persoane, documentul care o susține și concluzia investigatorului au roluri diferite. Când interviurile se contrazic, consemnarea motivului pentru care este preferată o probă poate face raționamentul verificabil. Aceeași atenție este utilă când prezența la lucru, mesajele sau documentele de ședință nu confirmă o acuzație.",
+        "Apărarea are nevoie de un obiect clar. O invitație care precizează comportamentul contestat, momentul și punctele de lămurit permite un răspuns mai concret decât o solicitare generală despre stilul de conducere. Aceasta este o recomandare practică pornită de la problemele dosarului, fără a crea un formular obligatoriu sau cerința publicării tuturor datelor personale.",
+        "Pentru o evaluare individuală a unui conflict de muncă din Taiwan, mesajul către [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) poate indica stadiul plângerii, deciziile luate și termenul apropiat, fără întregul dosar sensibil la primul contact. Notificările, explicațiile primite și motivele alegerii probelor pot arăta dacă investigația a ascultat efectiv pozițiile diferite."
+      ],
+      "sentencesByParagraph": [
+        [
+          {
+            "text": "Instanța a anulat destituirea și decizia de reexaminare.",
+            "units": 8
+          },
+          {
+            "text": "Funcționarul cu funcție de conducere fusese destituit în urma a două penalizări disciplinare majore, dispuse printr-o singură măsură și denumite 記兩大過 în sistemul taiwanez.",
+            "units": 24
+          },
+          {
+            "text": "Anunțarea rezultatului înainte de deliberare, audierea necorespunzătoare și contradicțiile raportului au contat în controlul judiciar, potrivit explicației oficiale a instanței.",
+            "units": 20
+          }
+        ],
+        [
+          {
+            "text": "Hotărârea 114年度訴字第869號 a fost pronunțată la 3 septembrie 2026 de secția de contencios administrativ superior a Înaltei Curți Administrative din Taipei.",
+            "units": 21
+          },
+          {
+            "text": "Comunicatul precizează că putea fi atacată.",
+            "units": 6
+          },
+          {
+            "text": "Anularea nu dovedește că persoana fusese deja reintegrată și nici că toate comportamentele reclamate fuseseră declarate inexistente.",
+            "units": 17
+          }
+        ],
+        [
+          {
+            "text": "Conducătorul autorității anunțase public sancțiunea înainte ca organismul de evaluare să o discute.",
+            "units": 13
+          },
+          {
+            "text": "Apoi, instituția superioară s-a întrunit înaintea instituției de care aparținea funcționarul.",
+            "units": 11
+          },
+          {
+            "text": "Curtea a considerat că această ordine afecta posibilitatea unei evaluări efective.",
+            "units": 11
+          }
+        ],
+        [
+          {
+            "text": "Mai putea ședința să schimbe rezultatul?",
+            "units": 6
+          },
+          {
+            "text": "Problema privea capacitatea de a decide pe baza probelor, după ce concluzia fusese deja comunicată în exterior.",
+            "units": 17
+          },
+          {
+            "text": "Existența unui proces-verbal nu demonstra singură că deliberarea rămăsese deschisă.",
+            "units": 10
+          }
+        ],
+        [
+          {
+            "text": "Potrivit motivelor publicate de instanță, persoana vizată nu fusese convocată legal pentru a-și prezenta poziția.",
+            "units": 15
+          },
+          {
+            "text": "Raportul folosit pentru sancționare avea, de asemenea, contradicții între constatările privind susținerea acuzațiilor de hărțuire și măsura recomandată.",
+            "units": 18
+          },
+          {
+            "text": "Răspunsurile date ulterior în reexaminare nu au remediat lipsa oportunității de a fi ascultat la momentul necesar.",
+            "units": 17
+          }
+        ],
+        [
+          {
+            "text": "Dosarul privea regimul funcției publice și fapte anterioare noului sistem de prevenire a hărțuirii.",
+            "units": 14
+          },
+          {
+            "text": "Pentru angajatorii privați, normele actuale ale Legii securității și sănătății în muncă au intrat în vigoare la 1 iulie 2026, conform istoricului legislativ și prezentării autorității pentru securitate în muncă.",
+            "units": 30
+          },
+          {
+            "text": "Regimul aplicabil trebuie identificat în funcție de raportul de muncă și de actul examinat.",
+            "units": 14
+          }
+        ],
+        [
+          {
+            "text": "Articolul 22-2 cere obiectivitate, imparțialitate și echitate în investigație sau în încercarea de soluționare amiabilă.",
+            "units": 16
+          },
+          {
+            "text": "În cursul investigației, părțile trebuie să aibă posibilitatea deplină de a prezenta explicații și apărări.",
+            "units": 15
+          },
+          {
+            "text": "Se respectă și regulile privind conflictele de interese.",
+            "units": 8
+          },
+          {
+            "text": "O declarație publică ce atribuie deja vinovăția poate îngreuna îndeplinirea acestor cerințe.",
+            "units": 12
+          }
+        ],
+        [
+          {
+            "text": "Protecția poate începe imediat.",
+            "units": 4
+          },
+          {
+            "text": "Când află despre caz prin plângerea lucrătorului hărțuit, angajatorul trebuie să ia măsuri pentru prevenirea repetării hărțuirii, să ofere consiliere, asistență și protecție potrivit nevoilor și împrejurărilor și să desfășoare investigația.",
+            "units": 31
+          },
+          {
+            "text": "Dacă reclamantul dorește, angajatorul poate încerca soluționarea amiabilă.",
+            "units": 8
+          },
+          {
+            "text": "În lipsa unei înțelegeri, investigația trebuie continuată.",
+            "units": 7
+          }
+        ],
+        [
+          {
+            "text": "Aceste obligații permit intervenția și examinarea echitabilă în paralel.",
+            "units": 9
+          },
+          {
+            "text": "Hotărârea administrativă oferă repere pentru calitatea procedurii, dar nu decide direct valabilitatea unei sancțiuni aplicate de o societate privată.",
+            "units": 19
+          }
+        ],
+        [
+          {
+            "text": "Într-un raport, afirmația unei persoane, documentul care o susține și concluzia investigatorului au roluri diferite.",
+            "units": 15
+          },
+          {
+            "text": "Când interviurile se contrazic, consemnarea motivului pentru care este preferată o probă poate face raționamentul verificabil.",
+            "units": 16
+          },
+          {
+            "text": "Aceeași atenție este utilă când prezența la lucru, mesajele sau documentele de ședință nu confirmă o acuzație.",
+            "units": 17
+          }
+        ],
+        [
+          {
+            "text": "Apărarea are nevoie de un obiect clar.",
+            "units": 7
+          },
+          {
+            "text": "O invitație care precizează comportamentul contestat, momentul și punctele de lămurit permite un răspuns mai concret decât o solicitare generală despre stilul de conducere.",
+            "units": 24
+          },
+          {
+            "text": "Aceasta este o recomandare practică pornită de la problemele dosarului, fără a crea un formular obligatoriu sau cerința publicării tuturor datelor personale.",
+            "units": 22
+          }
+        ],
+        [
+          {
+            "text": "Pentru o evaluare individuală a unui conflict de muncă din Taiwan, mesajul către wei@hoveringlaw.com.tw poate indica stadiul plângerii, deciziile luate și termenul apropiat, fără întregul dosar sensibil la primul contact.",
+            "units": 33
+          },
+          {
+            "text": "Notificările, explicațiile primite și motivele alegerii probelor pot arăta dacă investigația a ascultat efectiv pozițiile diferite.",
+            "units": 16
+          }
+        ]
+      ],
+      "heads": [
+        "Deliberarea după anunțarea rezultatului",
+        "Protecția și investigația în sectorul privat",
+        "Legătura dintre declarație, probă și constatare"
+      ],
+      "items": [],
+      "boundaryDelta": [
+        {
+          "kind": "replace",
+          "before": [
+            "Instanța a anulat atât destituirea unui funcționar cu funcție de conducere, cât și decizia care o menținuse la reexaminare.",
+            "Sancțiunea constase în înscrierea, printr-o singură măsură, a două abateri disciplinare majore, denumite 記兩大過 în sistemul taiwanez, cu consecința destituirii."
+          ],
+          "after": [
+            "Instanța a anulat destituirea și decizia de reexaminare.",
+            "Funcționarul cu funcție de conducere fusese destituit în urma a două penalizări disciplinare majore, dispuse printr-o singură măsură și denumite 記兩大過 în sistemul taiwanez."
+          ],
+          "contextAfter": [
+            "Instanța a anulat destituirea și decizia de reexaminare.",
+            "Funcționarul cu funcție de conducere fusese destituit în urma a două penalizări disciplinare majore, dispuse printr-o singură măsură și denumite 記兩大過 în sistemul taiwanez.",
+            "Anunțarea rezultatului înainte de deliberare, audierea necorespunzătoare și contradicțiile raportului au contat în controlul judiciar, potrivit explicației oficiale a instanței."
+          ]
+        },
+        {
+          "kind": "replace",
+          "before": [
+            "Dacă reclamantul dorește, poate încerca soluționarea amiabilă."
+          ],
+          "after": [
+            "Dacă reclamantul dorește, angajatorul poate încerca soluționarea amiabilă."
+          ],
+          "contextAfter": [
+            "Când află despre caz prin plângerea lucrătorului hărțuit, angajatorul trebuie să ia măsuri pentru prevenirea repetării hărțuirii, să ofere consiliere, asistență și protecție potrivit nevoilor și împrejurărilor și să desfășoare investigația.",
+            "Dacă reclamantul dorește, angajatorul poate încerca soluționarea amiabilă.",
+            "În lipsa unei înțelegeri, investigația trebuie continuată."
+          ]
+        }
+      ],
+      "FMFAQUnchanged": true,
+      "FAQCount": 3,
+      "sourceURLs": [
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt"
+      ],
+      "sameSourceURLsInBodyAndFooter": true,
+      "autoErrors": 0,
+      "requiredItems": 5,
+      "initialParagraphsRead": 12
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "40d60abd6b530054c24da0ae3847bf3b77abf966f89ad910bcee6f8a40cd4820",
+      "initialSHA256": "cd01f1e5023867f0206351fc7ff7fb8725e01b1a5977631d7f114919f61bff23",
+      "canonicalSHA256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "exactEditReplayInverse": true,
+      "actualCLIPath": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-edited-r1.json",
+      "measuredFileSHA256": "40d60abd6b530054c24da0ae3847bf3b77abf966f89ad910bcee6f8a40cd4820",
+      "currentFileMeasuredDirectly": true,
+      "measurementBridge": null,
+      "actualCLIExit": 0,
+      "actualCLIStdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/920-taiwan-apartment-ev-charger-common-area-judgment.md [ro] sentences=36 mean=15.5 cv=0.45 short=0.194 run3=0.147 opener_rep=0.0 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "metrics": {
+        "lang": "ro",
+        "sentences": 36,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.5,
+        "len_cv": 0.45,
+        "short_share": 0.194,
+        "long_share": 0.0,
+        "para_cv": 0.189,
+        "even_run3": 0.147,
+        "top_end": "comune",
+        "top_end_share": 0.056,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "cutia",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.333,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.58,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Cutia de încărcare era pe peretele din spatele locului de parcare, iar cablurile treceau p",
+        "last": "Pentru o cerere de oprire sau demontare ori o neînțelegere asupra regulamentului, mesajul la wei@hoveringlaw.com.tw poat",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        "Cutia de încărcare era pe peretele din spatele locului de parcare, iar cablurile treceau prin plafon spre tabloul electric comun și contorul locatarului. Traseul folosea părți comune. [Hotărârea taiwaneză](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1) a examinat dacă locatarul obținuse aprobările pentru aceste lucrări.",
+        "Filiala Kaohsiung a Înaltei Curți din Taiwan a respins apelul locatarului la 22 iunie 2022, în dosarul 111年度上字第132號. A fost menținută soluția de demontare și readucere la starea anterioară. Curtea a constatat folosirea unor părți și instalații comune fără obținerea prealabilă a acordurilor necesare.",
+        "Faptele necontestate din hotărâre arătau montarea cutiei în spatele locului de parcare din subsol, a conductelor electrice pe elementele de suspendare ale plafonului și a unui întrerupător în tabloul comun. Conectarea la contorul locatarului era un fapt al instalației. Ea nu soluționa dreptul de a interveni asupra tuturor suprafețelor traversate.",
+        "Aprobările aveau două surse. [Articolul 11 din legea taiwaneză privind administrarea clădirilor în condominiu, 公寓大廈管理條例](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11), supune demolarea, reparațiile importante sau îmbunătățirile părților și instalațiilor comune hotărârii adunării proprietarilor. Curtea a examinat lucrările prin această regulă. Articolul 15 al regulamentului ansamblului cerea, pentru adăugarea cablurilor și conductelor, permisiunea comitetului de administrare și verificarea de siguranță a companiei de electricitate.",
+        "Regulamentul acelui ansamblu era un temei suplimentar. În acest dosar, încălcarea articolului 11 al legii și a regulamentului intra sub obligația din [articolul 6 alineatul 1 punctul 5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6) de a respecta celelalte norme și reguli aplicabile.",
+        "Comitetul încercase soluționarea printr-o notificare formală, dar echipamentul nu fusese demontat. Pentru încălcarea continuată după aceste demersuri, alineatul 3 al articolului 6 permitea solicitarea unei măsuri în instanță.",
+        "[Articolul 6 alineatul 1 punctul 4](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6) privește și instalarea unor conducte, cu folosirea necesară a părților comune în anumite situații. Curtea a arătat că lucrările din acest dosar nu intrau în acea ipoteză. Poziția instalației și regulamentul concret au fundamentat analiza, prezentată în [punctele 5 și 6 ale motivării](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1).",
+        "Locatarul susținea că adăugase un întrerupător, oprise utilizarea și încuiase echipamentul, fiind dispus să predea cheia comitetului. Instanța a apreciat că, și dacă aceste afirmații erau adevărate, obligația de demontare și refacere rămânea. Dreptul de a executa lucrările în acele locuri făcea parte din litigiu, alături de chestiunea alimentării cu energie.",
+        "Înaintea instalării, o schiță completă poate arăta cutia de încărcare, fiecare perete sau stâlp traversat, plafonul și tabloul de racordare. Compararea ei cu documentele privind drepturile asupra imobilului, regulamentul și hotărârile existente ajută la identificarea aprobării necesare. Numărul locului de parcare nu descrie traseul.",
+        "Ce variantă a lucrării a fost aprobată? Cererea către comitet poate preciza echipamentul și traseul, cerând lămurirea regulii aplicabile, a organului care decide și a documentelor lipsă. Dacă există deja un acord, condițiile și planul aprobat pot fi comparate cu versiunea pe care instalatorul urmează să o execute.",
+        "[Anunțul municipalității Kaohsiung din 29 mai 2026](https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE) includea sprijin pentru tăvi de cabluri destinate încărcării vehiculelor electrice în zonele comune ale condominiilor. Termenul anunțat era 30 septembrie. La data acestui articol, termenul a trecut; programul prevedea și posibilitatea închiderii mai devreme la epuizarea bugetului. Sprijinul financiar nu înlocuiește acordul pentru folosirea părților comune.",
+        "Pentru o cerere de oprire sau demontare ori o neînțelegere asupra regulamentului, mesajul la [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) poate indica traseul lucrărilor, clauza invocată și termenul de răspuns. Contractul cu instalatorul poate preciza dacă lucrările încep înaintea aprobării și cum sunt suportate costurile când acordul nu este obținut. Aceste clauze leagă plata de planul pentru care se solicită efectiv permisiunea."
+      ],
+      "sentencesByParagraph": [
+        [
+          {
+            "text": "Cutia de încărcare era pe peretele din spatele locului de parcare, iar cablurile treceau prin plafon spre tabloul electric comun și contorul locatarului.",
+            "units": 23
+          },
+          {
+            "text": "Traseul folosea părți comune.",
+            "units": 4
+          },
+          {
+            "text": "Hotărârea taiwaneză a examinat dacă locatarul obținuse aprobările pentru aceste lucrări.",
+            "units": 11
+          }
+        ],
+        [
+          {
+            "text": "Filiala Kaohsiung a Înaltei Curți din Taiwan a respins apelul locatarului la 22 iunie 2022, în dosarul 111年度上字第132號.",
+            "units": 18
+          },
+          {
+            "text": "A fost menținută soluția de demontare și readucere la starea anterioară.",
+            "units": 11
+          },
+          {
+            "text": "Curtea a constatat folosirea unor părți și instalații comune fără obținerea prealabilă a acordurilor necesare.",
+            "units": 15
+          }
+        ],
+        [
+          {
+            "text": "Faptele necontestate din hotărâre arătau montarea cutiei în spatele locului de parcare din subsol, a conductelor electrice pe elementele de suspendare ale plafonului și a unui întrerupător în tabloul comun.",
+            "units": 30
+          },
+          {
+            "text": "Conectarea la contorul locatarului era un fapt al instalației.",
+            "units": 9
+          },
+          {
+            "text": "Ea nu soluționa dreptul de a interveni asupra tuturor suprafețelor traversate.",
+            "units": 11
+          }
+        ],
+        [
+          {
+            "text": "Aprobările aveau două surse.",
+            "units": 4
+          },
+          {
+            "text": "Articolul 11 din legea taiwaneză privind administrarea clădirilor în condominiu, 公寓大廈管理條例, supune demolarea, reparațiile importante sau îmbunătățirile părților și instalațiilor comune hotărârii adunării proprietarilor.",
+            "units": 24
+          },
+          {
+            "text": "Curtea a examinat lucrările prin această regulă.",
+            "units": 7
+          },
+          {
+            "text": "Articolul 15 al regulamentului ansamblului cerea, pentru adăugarea cablurilor și conductelor, permisiunea comitetului de administrare și verificarea de siguranță a companiei de electricitate.",
+            "units": 23
+          }
+        ],
+        [
+          {
+            "text": "Regulamentul acelui ansamblu era un temei suplimentar.",
+            "units": 7
+          },
+          {
+            "text": "În acest dosar, încălcarea articolului 11 al legii și a regulamentului intra sub obligația din articolul 6 alineatul 1 punctul 5 de a respecta celelalte norme și reguli aplicabile.",
+            "units": 29
+          }
+        ],
+        [
+          {
+            "text": "Comitetul încercase soluționarea printr-o notificare formală, dar echipamentul nu fusese demontat.",
+            "units": 11
+          },
+          {
+            "text": "Pentru încălcarea continuată după aceste demersuri, alineatul 3 al articolului 6 permitea solicitarea unei măsuri în instanță.",
+            "units": 17
+          }
+        ],
+        [
+          {
+            "text": "Articolul 6 alineatul 1 punctul 4 privește și instalarea unor conducte, cu folosirea necesară a părților comune în anumite situații.",
+            "units": 20
+          },
+          {
+            "text": "Curtea a arătat că lucrările din acest dosar nu intrau în acea ipoteză.",
+            "units": 13
+          },
+          {
+            "text": "Poziția instalației și regulamentul concret au fundamentat analiza, prezentată în punctele 5 și 6 ale motivării.",
+            "units": 16
+          }
+        ],
+        [
+          {
+            "text": "Locatarul susținea că adăugase un întrerupător, oprise utilizarea și încuiase echipamentul, fiind dispus să predea cheia comitetului.",
+            "units": 17
+          },
+          {
+            "text": "Instanța a apreciat că, și dacă aceste afirmații erau adevărate, obligația de demontare și refacere rămânea.",
+            "units": 16
+          },
+          {
+            "text": "Dreptul de a executa lucrările în acele locuri făcea parte din litigiu, alături de chestiunea alimentării cu energie.",
+            "units": 18
+          }
+        ],
+        [
+          {
+            "text": "Înaintea instalării, o schiță completă poate arăta cutia de încărcare, fiecare perete sau stâlp traversat, plafonul și tabloul de racordare.",
+            "units": 20
+          },
+          {
+            "text": "Compararea ei cu documentele privind drepturile asupra imobilului, regulamentul și hotărârile existente ajută la identificarea aprobării necesare.",
+            "units": 17
+          },
+          {
+            "text": "Numărul locului de parcare nu descrie traseul.",
+            "units": 7
+          }
+        ],
+        [
+          {
+            "text": "Ce variantă a lucrării a fost aprobată?",
+            "units": 7
+          },
+          {
+            "text": "Cererea către comitet poate preciza echipamentul și traseul, cerând lămurirea regulii aplicabile, a organului care decide și a documentelor lipsă.",
+            "units": 20
+          },
+          {
+            "text": "Dacă există deja un acord, condițiile și planul aprobat pot fi comparate cu versiunea pe care instalatorul urmează să o execute.",
+            "units": 21
+          }
+        ],
+        [
+          {
+            "text": "Anunțul municipalității Kaohsiung din 29 mai 2026 includea sprijin pentru tăvi de cabluri destinate încărcării vehiculelor electrice în zonele comune ale condominiilor.",
+            "units": 22
+          },
+          {
+            "text": "Termenul anunțat era 30 septembrie.",
+            "units": 5
+          },
+          {
+            "text": "La data acestui articol, termenul a trecut; programul prevedea și posibilitatea închiderii mai devreme la epuizarea bugetului.",
+            "units": 17
+          },
+          {
+            "text": "Sprijinul financiar nu înlocuiește acordul pentru folosirea părților comune.",
+            "units": 9
+          }
+        ],
+        [
+          {
+            "text": "Pentru o cerere de oprire sau demontare ori o neînțelegere asupra regulamentului, mesajul la wei@hoveringlaw.com.tw poate indica traseul lucrărilor, clauza invocată și termenul de răspuns.",
+            "units": 28
+          },
+          {
+            "text": "Contractul cu instalatorul poate preciza dacă lucrările încep înaintea aprobării și cum sunt suportate costurile când acordul nu este obținut.",
+            "units": 20
+          },
+          {
+            "text": "Aceste clauze leagă plata de planul pentru care se solicită efectiv permisiunea.",
+            "units": 12
+          }
+        ]
+      ],
+      "heads": [
+        "Traseul cablurilor stabilește ce drepturi sunt implicate",
+        "Oprirea alimentării și acordul pentru lucrări",
+        "Programul de subvenții avea propriul termen"
+      ],
+      "items": [],
+      "boundaryDelta": [
+        {
+          "kind": "replace",
+          "before": [
+            "Cutia de încărcare era pe peretele din spatele locului de parcare.",
+            "Cablurile urcau prin plafon spre tabloul electric comun și contorul locatarului.",
+            "Acesta este traseul descris în hotărârea taiwaneză, care a obligat instanța să examineze mai mult decât suprafața delimitată pentru mașină."
+          ],
+          "after": [
+            "Cutia de încărcare era pe peretele din spatele locului de parcare, iar cablurile treceau prin plafon spre tabloul electric comun și contorul locatarului.",
+            "Traseul folosea părți comune.",
+            "Hotărârea taiwaneză a examinat dacă locatarul obținuse aprobările pentru aceste lucrări."
+          ],
+          "contextAfter": [
+            "Cutia de încărcare era pe peretele din spatele locului de parcare, iar cablurile treceau prin plafon spre tabloul electric comun și contorul locatarului.",
+            "Traseul folosea părți comune.",
+            "Hotărârea taiwaneză a examinat dacă locatarul obținuse aprobările pentru aceste lucrări.",
+            "Filiala Kaohsiung a Înaltei Curți din Taiwan a respins apelul locatarului la 22 iunie 2022, în dosarul 111年度上字第132號."
+          ]
+        },
+        {
+          "kind": "replace",
+          "before": [
+            "Acela era regulamentul clădirii.",
+            "Articolul 15 invocat nu era o regulă națională identică pentru orice parcare."
+          ],
+          "after": [
+            "Regulamentul acelui ansamblu era un temei suplimentar."
+          ],
+          "contextAfter": [
+            "Articolul 15 al regulamentului ansamblului cerea, pentru adăugarea cablurilor și conductelor, permisiunea comitetului de administrare și verificarea de siguranță a companiei de electricitate.",
+            "Regulamentul acelui ansamblu era un temei suplimentar.",
+            "În acest dosar, încălcarea articolului 11 al legii și a regulamentului intra sub obligația din articolul 6 alineatul 1 punctul 5 de a respecta celelalte norme și reguli aplicabile."
+          ]
+        },
+        {
+          "kind": "delete",
+          "before": [
+            "Exista astfel o legătură între obligația încălcată, încercarea de coordonare și cererea judiciară."
+          ],
+          "after": [],
+          "contextAfter": [
+            "Pentru încălcarea continuată după aceste demersuri, alineatul 3 al articolului 6 permitea solicitarea unei măsuri în instanță.",
+            "Articolul 6 alineatul 1 punctul 4 privește și instalarea unor conducte, cu folosirea necesară a părților comune în anumite situații."
+          ]
+        }
+      ],
+      "FMFAQUnchanged": true,
+      "FAQCount": 3,
+      "sourceURLs": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "sameSourceURLsInBodyAndFooter": true,
+      "autoErrors": 0,
+      "requiredItems": 5,
+      "initialParagraphsRead": 12
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "bb70cb4089ad9bf470a52da6b41fd7807a2d56c1ec3ffe2ddbed4224f52bcfc9",
+      "initialSHA256": "4acd7b7b57ce1380fc459eaa5fe85a5da18dc8aa01d61e4ddb487de9ee6587de",
+      "canonicalSHA256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "exactEditReplayInverse": true,
+      "actualCLIPath": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-edited-r1.json",
+      "measuredFileSHA256": "bb70cb4089ad9bf470a52da6b41fd7807a2d56c1ec3ffe2ddbed4224f52bcfc9",
+      "currentFileMeasuredDirectly": true,
+      "measurementBridge": null,
+      "actualCLIExit": 0,
+      "actualCLIStdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/921-taiwan-online-game-coins-refund-judgment.md [ro] sentences=39 mean=15.8 cv=0.477 short=0.231 run3=0.0 opener_rep=0.143 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "metrics": {
+        "lang": "ro",
+        "sentences": 39,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.8,
+        "len_cv": 0.477,
+        "short_share": 0.231,
+        "long_share": 0.026,
+        "para_cv": 0.234,
+        "even_run3": 0.0,
+        "top_end": "joc",
+        "top_end_share": 0.077,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "punctul",
+        "top_opener_n": 2,
+        "opener_rep": 0.143,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.89,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "De ce un sold vizibil în cont nu a dus la rambursare după încetarea contractului?",
+        "last": "O solicitare de rambursare poate fi adresată operatorului, iar ulterior poate fi folosit sistemul public de reclamații. ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "paragraphs": [
+        "De ce un sold vizibil în cont nu a dus la rambursare după încetarea contractului? Un jucător evaluase monedele rămase la 243.548 NT$. Cererea sa a fost respinsă. Părțile nu contestau că, deși existau monede, nu mai rămăseseră puncte plătite și nefolosite, potrivit [hotărârii din culegerea oficială pentru protecția consumatorilor](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C).",
+        "Tribunalul Districtual Keelung a respins apelul jucătorului la 13 septembrie 2021, în dosarul 109年度消簡上字第1號. Hotărârea precizează că nu poate fi atacată. Analiza privea funcția monedelor și clauzele acelui joc; textul integral se află la paginile tipărite 140–153 ale culegerii.",
+        "Contractul permitea cumpărarea punctelor și folosirea lor pentru servicii sau bunuri din joc. Monedele rămase erau destinate confruntărilor dintre jucători și aveau funcția unor jetoane. Curtea nu le-a încadrat în punctele plătite nefolosite care trebuiau restituite și nici în taxele de joc încasate de operator.",
+        "Funcția monedelor a determinat rezultatul. [Motivarea de la paginile tipărite 148–152](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C) arată că transformarea în numerar, la operator, a acelor jetoane de confruntare ar fi implicat jocuri de noroc. Pentru un alt produs, analiza trebuie să urmărească achiziția, utilizările permise și utilizarea efectivă; simpla etichetă „monede” nu stabilește regimul rambursării.",
+        "Jucătorul însuși notificase încetarea contractului. Instanța a putut, așadar, examina efectele încetării și natura soldului fără să valideze toate motivele pe care operatorul le invocase anterior pentru suspendarea sau închiderea contului. Existența unui sold și dreptul la suma cerută au fost analizate prin contract și funcția activelor din joc.",
+        "[Punctul 18 al clauzelor obligatorii pentru serviciile de jocuri online](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) permite consumatorului să notifice încetarea contractului oricând. Operatorul trebuie să restituie punctele plătite nefolosite sau taxele de joc neutilizate, după deducerea costurilor necesare, în 30 de zile de la încetare, ori să procedeze într-un alt mod acceptat de ambele părți.",
+        "Calculul merită descompus. Consumatorul poate cere precizarea soldului neutilizat, a fiecărei deduceri și a bazei de calcul, apoi le poate compara cu contractul. Un procent stabilit de operator nu dovedește, singur, că toate costurile reținute sunt necesare.",
+        "Actuala versiune a regulilor a fost modificată la 10 august 2022 și se aplică din 1 ianuarie 2023. Hotărârea din 2021 a evaluat contractul și normele aplicabile atunci. Prezentarea regulii actuale nu schimbă temeiul istoric al soluției.",
+        "Punctul 4 permite și retragerea în scris din contract în primele șapte zile de la începerea jocului, fără motiv și fără costuri, cu restituirea punctelor plătite nefolosite. Cele șapte zile nu epuizează dreptul de încetare. După acest interval, punctul 18 continuă să reglementeze notificarea încetării și tratarea soldurilor eligibile.",
+        "O captură finală poate arăta câte monede rămân. Chitanțele și istoricul conversiilor arată însă cum s-a ajuns la ele. Compararea documentelor permite separarea punctelor cumpărate, a monedelor obținute prin conversie și a soldului rezultat după joc.",
+        "Operatorul trebuie să păstreze cel puțin 30 de zile istoricul individual al jocului și să îl furnizeze în șapte zile de la primirea cererii, în condițiile [punctului 9](https://www.ey.gov.tw/File/C27658C15073FF69?A=C). Punctul 6 al clauzelor interzise exclude stipularea potrivit căreia numai istoricul și datele electronice ale operatorului pot constitui baza stabilirii situației într-un litigiu. Probele consumatorului rămân relevante.",
+        "Solicitarea istoricului fără întârziere poate păstra explicații care nu apar în ultima captură de ecran.",
+        "[Statisticile pentru 2025, publicate în mai 2026](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930), plasează jocurile online pe locul al doilea între categoriile primelor reclamații ale consumatorilor, cu mai puține cazuri decât în anul precedent. Autoritatea a cerut și tratarea corespunzătoare a problemelor privind blocarea conturilor, suspendarea și serviciul de relații cu clienții.",
+        "O solicitare de rambursare poate fi adresată operatorului, iar ulterior poate fi folosit [sistemul public de reclamații](https://appeal.cpc.ey.gov.tw/). Dacă neînțelegerea privește interpretarea contractului sau refuzul probelor, mesajul către [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) poate descrie punctul disputat și termenul de răspuns, fără parola contului. Suma cerută poate fi explicată prin traseul banilor de la plată la conversie și folosire."
+      ],
+      "sentencesByParagraph": [
+        [
+          {
+            "text": "De ce un sold vizibil în cont nu a dus la rambursare după încetarea contractului?",
+            "units": 15
+          },
+          {
+            "text": "Un jucător evaluase monedele rămase la 243.548 NT$.",
+            "units": 8
+          },
+          {
+            "text": "Cererea sa a fost respinsă.",
+            "units": 5
+          },
+          {
+            "text": "Părțile nu contestau că, deși existau monede, nu mai rămăseseră puncte plătite și nefolosite, potrivit hotărârii din culegerea oficială pentru protecția consumatorilor.",
+            "units": 22
+          }
+        ],
+        [
+          {
+            "text": "Tribunalul Districtual Keelung a respins apelul jucătorului la 13 septembrie 2021, în dosarul 109年度消簡上字第1號.",
+            "units": 14
+          },
+          {
+            "text": "Hotărârea precizează că nu poate fi atacată.",
+            "units": 7
+          },
+          {
+            "text": "Analiza privea funcția monedelor și clauzele acelui joc; textul integral se află la paginile tipărite 140–153 ale culegerii.",
+            "units": 19
+          }
+        ],
+        [
+          {
+            "text": "Contractul permitea cumpărarea punctelor și folosirea lor pentru servicii sau bunuri din joc.",
+            "units": 13
+          },
+          {
+            "text": "Monedele rămase erau destinate confruntărilor dintre jucători și aveau funcția unor jetoane.",
+            "units": 12
+          },
+          {
+            "text": "Curtea nu le-a încadrat în punctele plătite nefolosite care trebuiau restituite și nici în taxele de joc încasate de operator.",
+            "units": 20
+          }
+        ],
+        [
+          {
+            "text": "Funcția monedelor a determinat rezultatul.",
+            "units": 5
+          },
+          {
+            "text": "Motivarea de la paginile tipărite 148–152 arată că transformarea în numerar, la operator, a acelor jetoane de confruntare ar fi implicat jocuri de noroc.",
+            "units": 25
+          },
+          {
+            "text": "Pentru un alt produs, analiza trebuie să urmărească achiziția, utilizările permise și utilizarea efectivă; simpla etichetă „monede” nu stabilește regimul rambursării.",
+            "units": 21
+          }
+        ],
+        [
+          {
+            "text": "Jucătorul însuși notificase încetarea contractului.",
+            "units": 5
+          },
+          {
+            "text": "Instanța a putut, așadar, examina efectele încetării și natura soldului fără să valideze toate motivele pe care operatorul le invocase anterior pentru suspendarea sau închiderea contului.",
+            "units": 26
+          },
+          {
+            "text": "Existența unui sold și dreptul la suma cerută au fost analizate prin contract și funcția activelor din joc.",
+            "units": 18
+          }
+        ],
+        [
+          {
+            "text": "Punctul 18 al clauzelor obligatorii pentru serviciile de jocuri online permite consumatorului să notifice încetarea contractului oricând.",
+            "units": 17
+          },
+          {
+            "text": "Operatorul trebuie să restituie punctele plătite nefolosite sau taxele de joc neutilizate, după deducerea costurilor necesare, în 30 de zile de la încetare, ori să procedeze într-un alt mod acceptat de ambele părți.",
+            "units": 33
+          }
+        ],
+        [
+          {
+            "text": "Calculul merită descompus.",
+            "units": 3
+          },
+          {
+            "text": "Consumatorul poate cere precizarea soldului neutilizat, a fiecărei deduceri și a bazei de calcul, apoi le poate compara cu contractul.",
+            "units": 20
+          },
+          {
+            "text": "Un procent stabilit de operator nu dovedește, singur, că toate costurile reținute sunt necesare.",
+            "units": 14
+          }
+        ],
+        [
+          {
+            "text": "Actuala versiune a regulilor a fost modificată la 10 august 2022 și se aplică din 1 ianuarie 2023.",
+            "units": 18
+          },
+          {
+            "text": "Hotărârea din 2021 a evaluat contractul și normele aplicabile atunci.",
+            "units": 10
+          },
+          {
+            "text": "Prezentarea regulii actuale nu schimbă temeiul istoric al soluției.",
+            "units": 9
+          }
+        ],
+        [
+          {
+            "text": "Punctul 4 permite și retragerea în scris din contract în primele șapte zile de la începerea jocului, fără motiv și fără costuri, cu restituirea punctelor plătite nefolosite.",
+            "units": 27
+          },
+          {
+            "text": "Cele șapte zile nu epuizează dreptul de încetare.",
+            "units": 8
+          },
+          {
+            "text": "După acest interval, punctul 18 continuă să reglementeze notificarea încetării și tratarea soldurilor eligibile.",
+            "units": 14
+          }
+        ],
+        [
+          {
+            "text": "O captură finală poate arăta câte monede rămân.",
+            "units": 8
+          },
+          {
+            "text": "Chitanțele și istoricul conversiilor arată însă cum s-a ajuns la ele.",
+            "units": 11
+          },
+          {
+            "text": "Compararea documentelor permite separarea punctelor cumpărate, a monedelor obținute prin conversie și a soldului rezultat după joc.",
+            "units": 17
+          }
+        ],
+        [
+          {
+            "text": "Operatorul trebuie să păstreze cel puțin 30 de zile istoricul individual al jocului și să îl furnizeze în șapte zile de la primirea cererii, în condițiile punctului 9.",
+            "units": 28
+          },
+          {
+            "text": "Punctul 6 al clauzelor interzise exclude stipularea potrivit căreia numai istoricul și datele electronice ale operatorului pot constitui baza stabilirii situației într-un litigiu.",
+            "units": 23
+          },
+          {
+            "text": "Probele consumatorului rămân relevante.",
+            "units": 4
+          }
+        ],
+        [
+          {
+            "text": "Solicitarea istoricului fără întârziere poate păstra explicații care nu apar în ultima captură de ecran.",
+            "units": 15
+          }
+        ],
+        [
+          {
+            "text": "Statisticile pentru 2025, publicate în mai 2026, plasează jocurile online pe locul al doilea între categoriile primelor reclamații ale consumatorilor, cu mai puține cazuri decât în anul precedent.",
+            "units": 28
+          },
+          {
+            "text": "Autoritatea a cerut și tratarea corespunzătoare a problemelor privind blocarea conturilor, suspendarea și serviciul de relații cu clienții.",
+            "units": 18
+          }
+        ],
+        [
+          {
+            "text": "O solicitare de rambursare poate fi adresată operatorului, iar ulterior poate fi folosit sistemul public de reclamații.",
+            "units": 17
+          },
+          {
+            "text": "Dacă neînțelegerea privește interpretarea contractului sau refuzul probelor, mesajul către wei@hoveringlaw.com.tw poate descrie punctul disputat și termenul de răspuns, fără parola contului.",
+            "units": 25
+          },
+          {
+            "text": "Suma cerută poate fi explicată prin traseul banilor de la plată la conversie și folosire.",
+            "units": 15
+          }
+        ]
+      ],
+      "heads": [
+        "Din puncte cumpărate în jetoane pentru confruntări",
+        "Soldurile nefolosite în regulile actuale",
+        "Ce poate explica istoricul contului"
+      ],
+      "items": [],
+      "boundaryDelta": [
+        {
+          "kind": "replace",
+          "before": [
+            "Un jucător a convertit monedele rămase într-o cerere de 243.548 NT$, pe care instanța nu a admis-o."
+          ],
+          "after": [
+            "Un jucător evaluase monedele rămase la 243.548 NT$.",
+            "Cererea sa a fost respinsă."
+          ],
+          "contextAfter": [
+            "De ce un sold vizibil în cont nu a dus la rambursare după încetarea contractului?",
+            "Un jucător evaluase monedele rămase la 243.548 NT$.",
+            "Cererea sa a fost respinsă.",
+            "Părțile nu contestau că, deși existau monede, nu mai rămăseseră puncte plătite și nefolosite, potrivit hotărârii din culegerea oficială pentru protecția consumatorilor."
+          ]
+        },
+        {
+          "kind": "delete",
+          "before": [
+            "Este o măsură practică de pregătire a probelor, nu o nouă condiție legală generală pentru orice rambursare."
+          ],
+          "after": [],
+          "contextAfter": [
+            "Solicitarea istoricului fără întârziere poate păstra explicații care nu apar în ultima captură de ecran.",
+            "Statisticile pentru 2025, publicate în mai 2026, plasează jocurile online pe locul al doilea între categoriile primelor reclamații ale consumatorilor, cu mai puține cazuri decât în anul precedent."
+          ]
+        }
+      ],
+      "FMFAQUnchanged": true,
+      "FAQCount": 3,
+      "sourceURLs": [
+        "https://appeal.cpc.ey.gov.tw/",
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C"
+      ],
+      "sameSourceURLsInBodyAndFooter": true,
+      "autoErrors": 0,
+      "requiredItems": 5,
+      "initialParagraphsRead": 14
+    }
+  ],
+  "totalFAQ": 17,
+  "initialSegments": 230,
+  "currentSegments": 228,
+  "identicalOrderedSegments": 217,
+  "newCurrentSegments": 11,
+  "fullInitial230Read": true,
+  "new11AndAllChangedAdjacentRead": true,
+  "allCurrentCoveredByActualArrayReading": true,
+  "sourceURLsPerFileTotal": 23,
+  "uniqueOfficialURLs": 22,
+  "autoErrors": 0,
+  "requiredItems": 32,
+  "inputsAtEndUnchanged": true,
+  "tools": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/ro.json",
+      "sha256": "1fe2c5bb725e55a8aa38fcaafc0f52fc43d729c54fa9dfaaab5a6aafddee1474"
+    }
+  ],
+  "initialFailures": {
+    "919": "len_cv0.445",
+    "920": "len_cv0.433",
+    "921": "len_cv0.442"
+  },
+  "ignoredAsPostEditEvidence": [
+    "ro-variety-initial.json: empty wrapper output, noCLI",
+    "ro-variety-r1.json: same initial five after edit-wrapper failure"
+  ],
+  "errorsRetained": [
+    "ro-preparation-error.json",
+    "ro-measure-initial-error.json",
+    "ro-self-edit-wrapper-error.json"
+  ],
+  "numericOccurrenceChange": "920 deletes one redundant duplicate Art15 mention; original full Article15 condition remains. Other numeric sequences unchanged."
+}

@@ -9,6 +9,8 @@ Missing measurement support is an error, never an editorial PASS.
 """
 from functools import lru_cache
 from pathlib import Path
+from dataclasses import dataclass
+from types import MappingProxyType
 import hashlib
 import json
 import re
@@ -277,60 +279,100 @@ def _bound_artifact(binding, base, description):
     return path, payload
 
 
-def _validate_sentence_review(record, found, source_hash):
+def _validate_sentence_review(record, found, source_hash, lang='th'):
+    label = 'Thai' if lang == 'th' else 'Polish'
     method = record.get('method')
     allowed = {'independent_review', 'independent_review_with_author_boundary_adjudication'}
     if method not in allowed or record.get('unresolved_boundaries') != []:
-        raise MeasurementError(f'missing or unresolved Thai sentence review: {found}')
+        raise MeasurementError(f'missing or unresolved {label} sentence review: {found}')
     approval_path, payload = _bound_artifact(record.get('approval_record'), found.parent,
-                                             'Thai boundary approval')
+                                             f'{label} boundary approval')
     try:
         approval = json.loads(payload)
     except (ValueError, UnicodeError) as error:
-        raise MeasurementError(f'invalid Thai boundary approval: {approval_path}') from error
-    if not isinstance(approval, dict) or approval.get('schema_version') != 1 or approval.get('locale') != 'th' or approval.get('status') != 'approved' or not isinstance(approval.get('reviewer'), str) or not approval['reviewer'].strip():
-        raise MeasurementError(f'unapproved Thai boundary record: {approval_path}')
+        raise MeasurementError(f'invalid {label} boundary approval: {approval_path}') from error
+    if not isinstance(approval, dict) or approval.get('schema_version') != 1 or approval.get('locale') != lang or approval.get('status') != 'approved' or not isinstance(approval.get('reviewer'), str) or not approval['reviewer'].strip():
+        raise MeasurementError(f'unapproved {label} boundary record: {approval_path}')
     entries = approval.get('entries')
     if not isinstance(entries, list) or not all(isinstance(x, dict) for x in entries):
-        raise MeasurementError(f'invalid Thai approval entries: {approval_path}')
+        raise MeasurementError(f'invalid {label} approval entries: {approval_path}')
     matches = [x for x in entries if x.get('source_sha256') == source_hash]
     if len(matches) != 1:
-        raise MeasurementError(f'Thai source is not uniquely approved: {found}')
+        raise MeasurementError(f'{label} source is not uniquely approved: {found}')
     entry = matches[0]
     if entry.get('method') != method or entry.get('unresolved_boundaries') != [] or entry.get('paragraphs_sha256') != paragraphs_sha256(record.get('paragraphs')):
-        raise MeasurementError(f'Thai sentence map differs from approved boundaries: {found}')
+        raise MeasurementError(f'{label} sentence map differs from approved boundaries: {found}')
     evidence = approval.get('evidence')
     if not isinstance(evidence, list) or not all(isinstance(x, dict) for x in evidence):
-        raise MeasurementError(f'missing Thai review evidence: {approval_path}')
+        raise MeasurementError(f'missing {label} review evidence: {approval_path}')
     roles = [x.get('role') for x in evidence]
     if roles.count('independent-review') != 1 or (method.endswith('author_boundary_adjudication') and roles.count('author-adjudication') != 1):
-        raise MeasurementError(f'incomplete Thai review evidence: {approval_path}')
+        raise MeasurementError(f'incomplete {label} review evidence: {approval_path}')
     for binding in evidence:
-        _bound_artifact(binding, approval_path.parent, 'Thai review evidence')
+        _bound_artifact(binding, approval_path.parent, f'{label} review evidence')
+
+
+@dataclass(frozen=True)
+class ReviewedPolishMap:
+    """Validated, immutable boundary data, with complete source/paragraph binding."""
+    text_sha256: str
+    paragraph_sequence: tuple
+    sentences: object
+
+
+def validate_polish_map(mapping, text, paragraphs):
+    if not isinstance(mapping, ReviewedPolishMap):
+        raise MeasurementError('Polish sentence map has not passed source and review validation')
+    if hashlib.sha256(text.encode('utf-8')).hexdigest() != mapping.text_sha256:
+        raise MeasurementError('Polish measurement text differs from reviewed sentence map')
+    data = profile('pl')
+    visible = tuple(normalized(expansion.visible_text(p,
+                    data.get('additional_sentence_terminators', ''),
+                    data.get('unspaced_sentence_terminators', ''))) for p in paragraphs)
+    if visible != mapping.paragraph_sequence:
+        raise MeasurementError('Polish sentence map must cover every visible body paragraph in source order')
+
+
+def _sentence_map_candidates(path, override):
+    if override:
+        return [Path(override)]
+    source = Path(path).resolve()
+    candidates = [source.with_suffix('.sentences.json')]
+    for parent in source.parents:
+        if (parent / '.git').exists():
+            # The source SHA filename is appended by sentence_map, after read.
+            candidates.append(parent / 'docs/audit/variety-segments')
+            break
+    return candidates
 
 
 def sentence_map(path, text, lang, override=None):
-    if lang != 'th':
+    if lang not in ('th', 'pl'):
         return None
+    label = 'Thai' if lang == 'th' else 'Polish'
+    if lang == 'pl' and not override:
+        candidates = _sentence_map_candidates(path, None)
+        # Avoid adding file-read errors to ordinary PL when no map was offered.
+        # Hash-directory discovery needs source bytes and is handled below.
+        if not candidates[0].is_file() and not any(p.is_dir() for p in candidates[1:]):
+            return None
     try:
         raw = Path(path).read_bytes()
         original = raw.decode('utf-8')
     except (OSError, UnicodeError) as error:
-        raise MeasurementError(f'unreadable Thai source: {path}') from error
+        raise MeasurementError(f'unreadable {label} source: {path}') from error
     if text not in (original, original.replace('\r\n', '\n').replace('\r', '\n')):
-        raise MeasurementError(f'Thai measurement text differs from source: {path}')
+        raise MeasurementError(f'{label} measurement text differs from source: {path}')
     source_hash = hashlib.sha256(raw).hexdigest()
-    if override:
-        candidates = [Path(override)]
-    else:
-        source = Path(path).resolve()
-        candidates = [source.with_suffix('.sentences.json')]
-        for parent in source.parents:
-            if (parent / '.git').exists():
-                candidates.append(parent / 'docs/audit/variety-segments' / f'{source_hash}.json')
-                break
+    candidates = _sentence_map_candidates(path, override)
+    if not override and len(candidates) > 1:
+        candidates[1] = candidates[1] / f'{source_hash}.json'
     found = next((p for p in candidates if p.is_file()), None)
     if found is None:
+        if lang == 'pl':
+            if override:
+                raise MeasurementError(f'missing Polish sentence map: {override}')
+            return None
         raise MeasurementError('Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback')
     try:
         record = json.loads(found.read_text(encoding='utf-8'))
@@ -338,9 +380,11 @@ def sentence_map(path, text, lang, override=None):
         raise MeasurementError(f'invalid sentence map: {found}') from error
     if not isinstance(record, dict):
         raise MeasurementError(f'invalid sentence map object: {found}')
+    if lang == 'pl' and record.get('locale') != 'pl':
+        raise MeasurementError(f'invalid Polish sentence map locale: {found}')
     if record.get('source_sha256') != source_hash:
-        raise MeasurementError(f'stale Thai sentence map: {found}')
-    _validate_sentence_review(record, found, source_hash)
+        raise MeasurementError(f'stale {label} sentence map: {found}')
+    _validate_sentence_review(record, found, source_hash, lang)
     mapping = {}
     rows = record.get('paragraphs')
     if not isinstance(rows, list) or not all(isinstance(row, dict) for row in rows):
@@ -360,6 +404,10 @@ def sentence_map(path, text, lang, override=None):
         mapping[key] = slices
     if not mapping:
         raise MeasurementError(f'empty sentence map: {found}')
+    if lang == 'pl':
+        return ReviewedPolishMap(hashlib.sha256(text.encode('utf-8')).hexdigest(),
+                                 tuple(normalized(row['text']) for row in rows),
+                                 MappingProxyType({key: tuple(value) for key, value in mapping.items()}))
     return mapping
 
 
@@ -369,6 +417,13 @@ def split_sentences(text, lang, mapping=None):
 Thai prose has no reliable punctuation-only boundary rule. Its complete,
 independently reviewed sentence map is required instead.
 """
+    if lang == 'pl' and mapping is not None:
+        if not isinstance(mapping, ReviewedPolishMap):
+            raise MeasurementError('Polish sentence map has not passed source and review validation')
+        key = normalized(text)
+        if key not in mapping.sentences:
+            raise MeasurementError('Polish paragraph missing from reviewed sentence map')
+        return list(mapping.sentences[key])
     if lang in expansion.LANGUAGES:
         try:
             return expansion.split_sentences(text, lang, profile(lang))

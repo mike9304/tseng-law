@@ -25,7 +25,7 @@ author: "legal-ai-assistant"
 
 Má pracovník na Taiwane iba dohadovať skúšky zariadenia, alebo aj predávať náhradné diely a fakturovať servis? Slovenská firma potrebuje odpoveď ešte pred výberom formy miestneho zastúpenia. V návrhu prevádzky určte aj firmu, ktorá uzavrie zmluvu so zákazníkom, príjemcu platieb a osobu oprávnenú podpisovať servisné objednávky.
 
-[Invest Taiwan porovnáva](https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01) dcérsku spoločnosť a pobočku, ktoré môžu obchodovať, so zastupiteľskou kanceláriou určenou na právne a kontaktné úkony. Plán miestneho predaja a plateného servisu preto vyžaduje inú úvahu než samotné prepájanie taiwanských zákazníkov so slovenskou centrálou.
+Podľa [Invest Taiwan](https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01) môžu dcérska spoločnosť a pobočka obchodovať, kým zastupiteľská kancelária slúži na právne a kontaktné úkony; miestny predaj a platený servis preto treba plánovať odlišne od prepájania taiwanských zákazníkov so slovenskou centrálou.
 
 ## Predaj a zodpovednosť určujú vhodnú formu
 
@@ -35,7 +35,7 @@ Pobočka je súčasťou zahraničnej spoločnosti, ako vyplýva z [článku 3](h
 
 Pred podnikaním vo vlastnom mene na Taiwane musí zahraničná spoločnosť zaregistrovať pobočku podľa [článku 371](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=371). [Článok 372](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=372) vyžaduje vyčlenenie prevádzkových prostriedkov a určenie zodpovedného zástupcu na Taiwane. Pobočka má vlastný registračný postup; pri regulovanej činnosti treba preveriť aj osobitné povolenia podľa [pokynov obchodného registra](https://gcis.nat.gov.tw/mainNew/subclassNAction.do?method=getFile&pk=5).
 
-Dcérska spoločnosť založená na Taiwane je samostatnou právnickou osobou podľa [článku 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=1). Forma 有限公司 môže mať jediného spoločníka ([článok 98](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=98)). [Článok 99](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=99) spravidla obmedzuje zodpovednosť spoločníka výškou jeho vkladu. Výnimka sa týka spoločníka, ktorý zneužitím právnej subjektivity spôsobí spoločnosti konkrétny dlh, s ktorého splatením má spoločnosť zjavné ťažkosti. Spoločník musí tento dlh uhradiť, ak sú zároveň okolnosti závažné a uloženie takej povinnosti nevyhnutné.
+Dcérska spoločnosť založená na Taiwane je samostatnou právnickou osobou podľa [článku 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=1). Forma 有限公司 môže mať jediného spoločníka ([článok 98](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=98)). [Článok 99](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=99) spravidla obmedzuje zodpovednosť spoločníka výškou jeho vkladu. Výnimka zaväzuje spoločníka uhradiť konkrétny dlh, ktorý spoločnosti spôsobil zneužitím jej právnej subjektivity, ak má spoločnosť so splatením zjavné ťažkosti a zároveň sú okolnosti závažné a uloženie tejto povinnosti nevyhnutné.
 
 Ak má do podniku vstúpiť taiwanský partner, ešte pred podaním žiadostí dohodnite podiely, rozhodovanie a prístup k prevádzkovým údajom. Kto bude schvaľovať zľavu zákazníkovi? Kto dostane mesačný prehľad nákladov? Odpovede patria do konkrétnych dohôd; samotný názov právnej formy ich nevyrieši.
 

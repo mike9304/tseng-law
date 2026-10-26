@@ -1,0 +1,137 @@
+{
+  "edits": [
+    {
+      "filename": "taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "old_string": "En entreprenør fikk opphevet en voldgiftsdom etter å ha gått fra et krav om forlenget frist tilbake til et pengekrav.",
+      "new_string": "Den offentlige oppdragsgiveren fikk opphevet en voldgiftsavgjørelse i entreprenørens favør etter at kravet om mer tid igjen var blitt et pengekrav.",
+      "reason": "Correct the summary to identify the public procuring agency as the party that obtained annulment of the award in the contractor's favor.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-parent-company-pollution-liability-us-investor.md",
+      "old_string": "Ved oppkjøp må undersøkelsene følges av dokumenterte beslutninger.",
+      "new_string": "Ved oppkjøp viser dokumenterte beslutninger hvordan funnene ble fulgt opp.",
+      "reason": "Describe the practical evidentiary role of documented decisions without implying a new statutory documentation obligation.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-presale-mortgage-notice-handover-judgment.md",
+      "old_string": "Domstolen avviste utbyggerens anke og det tilleggskravet som ble fremsatt under anken, som ubegrunnede.",
+      "new_string": "Domstolen forkastet utbyggerens anke og tok ikke tilleggskravet fremsatt under anken til følge, ettersom begge var ubegrunnede.",
+      "reason": "State that the appeal and additional claim failed on their merits rather than implying procedural inadmissibility.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "old_string": "Denne rekkefølgjen gjorde det etter domstolens syn vanskelig for komiteen å utføre en reell vurdering.",
+      "new_string": "Denne rekkefølgen gjorde det etter domstolens syn vanskelig for komiteen å utføre en reell vurdering.",
+      "reason": "Use standard Bokmål spelling without changing the procedural analysis.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-apartment-ev-charger-common-area-judgment.md",
+      "old_string": "på parkeringsdekke.",
+      "new_string": "på parkeringsdekket.",
+      "reason": "Correct the definite form in standard Bokmål.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-online-game-coins-refund-judgment.md",
+      "old_string": "summary: \"En spiller krevde NT$243 548 for mynter på kontoen, men fikk ikke medhold. Mynterne fungerte som sjetonger i spillene og var ikke ubrukte betalte poeng. Dagens regler beskytter fortsatt ubrukte betalte poeng eller spillavgifter etter oppsigelse.\"",
+      "new_string": "summary: \"En spiller krevde NT$243 548 for mynter på kontoen, men fikk ikke medhold. Myntene fungerte som sjetonger i spillene og var ikke ubrukte betalte poeng. Dagens regler beskytter fortsatt ubrukte betalte poeng eller ubrukte spillavgifter etter oppsigelse.\"",
+      "reason": "Use standard Bokmål spelling and make 'ubrukte' expressly apply to both paid points and game fees.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "old_string": "En voldgiftsavgjørelse på NT$44 417 150 ble opphevet etter søksmål fra en entreprenør som hadde en sykehuskontrakt i Taiwan.",
+      "new_string": "NT$44 417 150 var beløpet en entreprenør ble tilkjent ved voldgift om en sykehuskontrakt i Taiwan. Den offentlige oppdragsgiveren gikk til sak og fikk voldgiftsavgjørelsen opphevet.",
+      "reason": "Correct the party that brought the annulment suit and state that the award had favored the contractor.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-parent-company-pollution-liability-us-investor.md",
+      "old_string": "Nei. Domstolen opphevet og tilbakeviste delene som gjaldt 246 klagere, og ankene som gjaldt 262 klagere fikk ikke fremme. Ulike deler av saken fikk dermed ulike utfall; avgjørelsen avsluttet ikke hele den tilknyttede tvisten.",
+      "new_string": "Nei. Domstolen opphevet de delene av avgjørelsen som gjaldt 246 klagere, og sendte dem tilbake til ny behandling. Ankene som gjaldt 262 klagere, førte ikke frem. Ulike deler av saken fikk dermed ulike utfall; avgjørelsen avsluttet ikke hele den tilknyttede tvisten.",
+      "reason": "Distinguish remand from refuting an argument and use neutral wording for the unsuccessful appeals in FAQ2.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-presale-mortgage-notice-handover-judgment.md",
+      "old_string": "Påstanden om betalingsmislighold fikk derfor ikke fremme.",
+      "new_string": "Påstanden om betalingsmislighold førte derfor ikke frem.",
+      "reason": "Use natural Bokmål for the unsuccessful payment-default assertion.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-apartment-ev-charger-common-area-judgment.md",
+      "old_string": "Taiwan High Court, Kaohsiung-avdelingen, avviste den 22. juni 2022 beboerens anke i saken 111年度上字第132號.",
+      "new_string": "Taiwan High Court, Kaohsiung-avdelingen, forkastet den 22. juni 2022 beboerens anke i saken 111年度上字第132號.",
+      "reason": "Describe the merits outcome without implying procedural inadmissibility, while preserving the court, date, and case identifier.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-online-game-coins-refund-judgment.md",
+      "old_string": "I denne saken ble myntene brukt som sjetonger i spillene",
+      "new_string": "I denne saken hadde myntene funksjon som sjetonger i spillene",
+      "reason": "Describe the remaining coins by their function in FAQ1 without implying that all were consumed.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "old_string": "Den 12. juli 2017 avviste Høyesterett entreprenørens anke.",
+      "new_string": "Den 12. juli 2017 forkastet Høyesterett entreprenørens anke.",
+      "reason": "Use neutral merits-outcome wording for the contractor's unsuccessful appeal.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-parent-company-pollution-liability-us-investor.md",
+      "old_string": "Rekkefølgjen er relevant for juridisk arbeid med oppkjøp. Rapportens mottakerliste kan vise hvem som kjente til problemet. Styrepapirer og operasjonelle instrukser kan vise hvem som kunne bestemme tiltakene. Senere godkjenninger av overføringer må kanskje leses sammen med begge. Når dokumentene holdes i adskilte arbeidsspor, blir konsernets egne beslutninger vanskeligere å rekonstruere.",
+      "new_string": "Rapportens mottakerliste kan vise hvem som kjente til problemet, mens styrepapirer og operasjonelle instrukser kan vise hvem som kunne bestemme tiltakene. Senere godkjenninger av overføringer kan måtte ses i sammenheng med begge dokumenttypene. Når dokumentene holdes i adskilte arbeidsspor, blir konsernets egne beslutninger vanskeligere å rekonstruere.",
+      "reason": "Combine the knowledge and authority analysis, vary the repetitive paragraph, and retain transfer approvals as practical evidence rather than a mandatory record duty.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-apartment-ev-charger-common-area-judgment.md",
+      "old_string": "Domstolen slo nøytralt fast at denne saken ikke falt inn under den bestemmelsen.",
+      "new_string": "Domstolen slo fast at denne saken ikke falt inn under den bestemmelsen.",
+      "reason": "Remove the unnecessary editorial qualifier while retaining the court's non-applicability conclusion without attributing an argument to an unidentified party.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-online-game-coins-refund-judgment.md",
+      "old_string": "Kontrakten lot spilleren først kjøpe poeng og deretter bruke dem på spilltjenester eller varer. Fordi de gjenværende myntene ble brukt som sjetonger i selve spillrundene, fant domstolen at de ikke lenger var ubrukte betalte poeng som kunne refunderes etter kontrakten, og heller ikke spillavgifter som operatøren hadde mottatt. Kravet om kontant refusjon fikk ikke fremme.",
+      "new_string": "Kontrakten lot spilleren først kjøpe poeng og deretter bruke dem på spilltjenester eller varer. Fordi de gjenværende myntene hadde funksjon som sjetonger i selve spillrundene, fant domstolen at de ikke lenger var ubrukte betalte poeng som kunne refunderes etter kontrakten, og heller ikke spillavgifter som operatøren hadde mottatt. Kravet om kontant refusjon førte ikke frem.",
+      "reason": "Describe the remaining coins by function without implying consumption and use natural Bokmål for the unsuccessful cash-refund claim.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "old_string": "## Planlagte amerikanske prosjekter gjør dokumentrekken aktuell",
+      "new_string": "## Planlagte taiwanske anskaffelser og amerikanske leverandører",
+      "reason": "Locate the planned procurements in Taiwan while retaining the separate reference to US suppliers.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-parent-company-pollution-liability-us-investor.md",
+      "old_string": "For 246 klagere opphevet Høyesterett de relevante delene og tilbakeviste dem til ny behandling. Ankene som gjaldt 262 klagere fikk ikke fremme. Tilbakevisningen omfattet blant annet mangler i vurderingen av skade, bevis og adgangen til å fremme krav.",
+      "new_string": "For 246 klagere opphevet Høyesterett de relevante delene av avgjørelsen og sendte dem tilbake til ny behandling. Ankene som gjaldt 262 klagere, førte ikke frem. Ny behandling var nødvendig blant annet på grunn av mangler i vurderingen av skade, bevis og adgangen til å fremme krav.",
+      "reason": "Describe the 246-claimant portions as vacated and remanded, state the 262-claimant appeals' failure neutrally, and explain why further proceedings were needed.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-online-game-coins-refund-judgment.md",
+      "old_string": "Spillerens anke ble avvist, og dommen oppga at videre anke ikke var tillatt.",
+      "new_string": "Spillerens anke førte ikke frem, og dommen oppga at videre anke ikke var tillatt.",
+      "reason": "Use neutral wording for the unsuccessful appeal without suggesting a procedural ground, and preserve the no-further-appeal statement.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-parent-company-pollution-liability-us-investor.md",
+      "old_string": "Tilbakevisningen avgjorde ikke at alle berørte manglet krav. Avgjørelsen om anker som gjaldt 262 klagere, betyr heller ikke at alle kravene deres eller hele den bredere tvisten var avgjort, og teksten sier ikke at alle anker var fremsatt bare av disse klagerne.",
+      "new_string": "At disse delene ble sendt tilbake til ny behandling, innebar ikke at alle berørte manglet krav. Avgjørelsen om anker som gjaldt 262 klagere, betyr heller ikke at alle kravene deres eller hele den bredere tvisten var avgjort.",
+      "reason": "Use express remand wording and remove only the trailing claimant-filing clause while retaining the limits on the broader dispute and underlying claims.",
+      "meaning_preserved": true
+    }
+  ]
+}

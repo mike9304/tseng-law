@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-26T09:11:01.027298+00:00",
+  "canonicalSixFullTextReadAgainThisAuthorTask": true,
+  "factsRegisterContractFreeze": "Earlier full reading at same SHA reused; partial fresh combined reads not mislabeled full",
+  "recentROThreeFullTextRead": true,
+  "currentExtractedBodyCoverage": {
+    "initialFullRead": 230,
+    "unchangedOrdered": 217,
+    "newReadWithNeighbors": 11,
+    "currentTotal": 228
+  },
+  "FAQ17AndMetadataFullRead": true,
+  "imageSixActuallyViewed": true,
+  "independentApproval": false
+}

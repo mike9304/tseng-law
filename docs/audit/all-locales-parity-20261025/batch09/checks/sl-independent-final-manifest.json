@@ -1,0 +1,99 @@
+{
+  "atUTC": "2026-10-26T09:16:11.391242+00:00",
+  "status": "APPROVE_WITH_OPTIONAL_EDITS",
+  "mandatory": 0,
+  "optional": 2,
+  "reviewer": "column_live_audit model, independent from SL author; not human/native/lawyer approval",
+  "authorReport": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sl-author.md",
+    "sha256": "48908dded259c081160b071874338fbbe406209d51c821f83ce008b7fa2d65aa"
+  },
+  "authorFinalManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-final-manifest.json",
+    "sha256": "2cd9beef95e3cf003e13c93758668e8d030f645222b78b4a26bda39f4142fc09"
+  },
+  "manuscripts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "649eaa92c45bf3f3a708805011aa7f28f88553c70b8dd13985e03b2c4f964f0f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "f1a83d6168304647b8969bc70056cfa301fb91f9b4e5c754465bd61b7086cadb"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "78ddaf97bff0d6eb30dad29ed60be5292363744fefd3eb0266ff8316ced5f858"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "cbc5c8726046e43b8438f4c4147938cb3c53806a6c234e9c6d6f2f3ba991a98c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "1c32172e527dffcb2934a468dfea0c5375f5d1145fbf168d9df3a6ccf8450c4d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "96ce40ffc9daf2c997e2698a0c6ba8ef9ebc3a9a5f253313c9053bae0f5a9281"
+    }
+  ],
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sl-independent.md",
+    "sha256": "a52d61c75547b82f1ba3d9a8b27341cd354b90622610a635dc3173bb3109a505"
+  },
+  "reviewEvidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sl-independent.md",
+      "sha256": "a52d61c75547b82f1ba3d9a8b27341cd354b90622610a635dc3173bb3109a505",
+      "bytes": 21319
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-independent-proof.json",
+      "sha256": "bf06b6806994e382c8aeb2706eca628c1e4bbe0700bc286e35341231ec1ed89b",
+      "bytes": 94249
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-independent-findings.json",
+      "sha256": "be52cffada336d5cf1e0e714c041c17f026e4747964ed7383a28586db0290b85",
+      "bytes": 4540
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-independent-verify.py",
+      "sha256": "f7027859e5998d46c4c6b366ecd3d8e1db247c8ed7d497ce456c9aa254e7ea91",
+      "bytes": 8543
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-independent-write-report.py",
+      "sha256": "e75d4351557ab112b4a6132aa6f0fc74ef159b5739210f0deb25e41d3c85c1a5",
+      "bytes": 26585
+    }
+  ],
+  "retainedOfficialRead": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/recheck/official-04.json",
+    "sha256": "151502199d4109a8aecb1e4a95b755f1e8171b96550e86b1753d9b0cfb7f9d58",
+    "scope": "Stored USTR section L20–32, especiallyL23; no new fetch"
+  },
+  "sourceInputs": "Same frozen source hashes as independent-proof hashRows; EN916/ZH920 and USTR reread in this review",
+  "LESSONS": {
+    "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+    "sha256": "86710ef330b108a916a7bb92a75f1ffa62dea53412e8a75f38472d9fa9b33130",
+    "full_read": true
+  },
+  "authorBoundHashesRechecked": 77,
+  "exactForwardReverseFiles": 6,
+  "literalEditLocations": 18,
+  "actualCurrentSentences": 251,
+  "FAQ": 17,
+  "tables": 2,
+  "requiredOfficialURLsum": 23,
+  "reviewerVarietyCLIRuns": 0,
+  "newWebRequests": 0,
+  "manuscriptWrites": 0,
+  "sourceAndSharedWrites": 0,
+  "limits": [
+    "No newly rendered browser/full-app/card/JSON-LD/feed/public check",
+    "No newly fetched official source; historical official04 response checked as stored",
+    "Machine evidence is neither legal nor native-language approval"
+  ]
+}

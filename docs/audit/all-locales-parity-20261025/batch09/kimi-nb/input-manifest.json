@@ -1,0 +1,97 @@
+{
+  "atUTC": "2026-10-26T06:55:02.586758+00:00",
+  "modelAlias": "kimi-code/k3.1-pro",
+  "workspace": "/private/tmp/tseng-kimi-nb-cases-20261026",
+  "exclusiveOutput": "/private/tmp/tseng-kimi-nb-cases-20261026/output",
+  "publicCommit": "f0dd7cb36088d9108e239eafdcb2278d4f6d1093",
+  "approvedRuleManifestSHA256": "50618882d83894e85796c6eb810f6ecbc5588c525e18d1d8ae26ff4e3a0ac82c",
+  "files": [
+    {
+      "file": "inputs/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "classification": "unchanged user-approved rule packet"
+    },
+    {
+      "file": "inputs/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "classification": "unchanged user-approved rule packet"
+    },
+    {
+      "file": "inputs/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "classification": "unchanged user-approved rule packet"
+    },
+    {
+      "file": "inputs/LESSONS.md",
+      "sha256": "adcb20ff50cd7cbb682fda48efbb253b1f152857cc4ecd52c0c3658d5fda157b",
+      "classification": "unchanged user-approved rule packet"
+    },
+    {
+      "file": "inputs/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "classification": "published professional column; exact public commit bytes",
+      "publicCommit": "f0dd7cb36088d9108e239eafdcb2278d4f6d1093",
+      "publicPath": "src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md"
+    },
+    {
+      "file": "inputs/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "classification": "published professional column; exact public commit bytes",
+      "publicCommit": "f0dd7cb36088d9108e239eafdcb2278d4f6d1093",
+      "publicPath": "src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md"
+    },
+    {
+      "file": "inputs/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "classification": "published professional column; exact public commit bytes",
+      "publicCommit": "f0dd7cb36088d9108e239eafdcb2278d4f6d1093",
+      "publicPath": "src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md"
+    },
+    {
+      "file": "inputs/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "classification": "published professional column; exact public commit bytes",
+      "publicCommit": "f0dd7cb36088d9108e239eafdcb2278d4f6d1093",
+      "publicPath": "src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md"
+    },
+    {
+      "file": "inputs/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "classification": "published professional column; exact public commit bytes",
+      "publicCommit": "f0dd7cb36088d9108e239eafdcb2278d4f6d1093",
+      "publicPath": "src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md"
+    },
+    {
+      "file": "inputs/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "classification": "published professional column; exact public commit bytes",
+      "publicCommit": "f0dd7cb36088d9108e239eafdcb2278d4f6d1093",
+      "publicPath": "src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md"
+    },
+    {
+      "file": "inputs/recent-nb-704-taiwan-arc-first-application.md",
+      "sha256": "cba566d0784ea956b38847832ce22be370c76831194873328c900de2858c5340",
+      "classification": "published Norwegian style example; exact public commit bytes"
+    },
+    {
+      "file": "inputs/recent-nb-705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "cc836d5c7d11066b328cad6c725334a596e1463d1af290af0779b6575e1f6b88",
+      "classification": "published Norwegian style example; exact public commit bytes"
+    },
+    {
+      "file": "inputs/recent-nb-706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "2c39c9657f8f8d704afbeb4b7640bd5faaf63debb0384a546966652128bbbea1",
+      "classification": "published Norwegian style example; exact public commit bytes"
+    },
+    {
+      "file": "TASK.md",
+      "sha256": "f1a02239fcee0d5a1d47503de7274ce1825d77c023f39d244bbe1749dddc60fc",
+      "classification": "bounded author work order; public legal facts and previously approved editorial constraints"
+    }
+  ],
+  "noSecretsOrClientData": true,
+  "quotaProbeSession": 56791,
+  "quotaProbeActualExitCode": 0,
+  "quotaProbeResponse": "KIMI_OK",
+  "status": "PREPARED_NOT_YET_SENT"
+}

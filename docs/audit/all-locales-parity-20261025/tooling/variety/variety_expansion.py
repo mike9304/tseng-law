@@ -105,6 +105,26 @@ def ending(text, lang, tokens):
     return text[-2:]
 
 
+def _polish_fronted_date(prefix, remaining):
+    """Detect a bounded date context; it does not decide its sentence reading.
+
+    A fronted date before capital text can introduce a full sentence or be a
+    standalone answer. The caller must report ambiguity, never infer a merge.
+    NFC is used only for classification, preserving original offsets/text.
+    """
+    if not re.match(r'[^\S\r\n]+[^\W\d_]', remaining):
+        return False
+    space = r'[^\S\r\n]+'
+    genitive = r'stycznia|lutego|marca|kwietnia|maja|czerwca|lipca|sierpnia|września|października|listopada|grudnia'
+    locative = r'styczniu|lutym|marcu|kwietniu|maju|czerwcu|lipcu|sierpniu|wrześniu|październiku|listopadzie|grudniu'
+    day = r'(?:0?[1-9]|[12]\d|3[01])'
+    year = r'\d{4}'
+    day_date = r'(?:(?:dnia|w' + space + r'dniu)' + space + r')?' + day + space + r'(?:' + genitive + r')' + space + year
+    month_or_year = r'w' + space + r'(?:(?:' + locative + r')' + space + r')?' + year
+    start = r'(?:^|[.!?]' + space + r'|[,;]' + space + r'(?:a|ale|natomiast|zaś)' + space + r')'
+    return bool(re.search(start + r'(?:' + day_date + r'|' + month_or_year + r')' + space + r'$', unicodedata.normalize('NFC', prefix), re.I))
+
+
 def split_sentences(text, lang, data):
     marker = '\ue000'
     terminal_marker = '\ue001'
@@ -185,6 +205,10 @@ def split_sentences(text, lang, data):
             can_end = key in terminal
             if key in contextual:
                 can_end = bool(re.search(contextual[key], protected[:match.start()]))
+            if (lang == 'pl' and key == 'r' and can_end
+                    and remaining[:1].isupper()
+                    and _polish_fronted_date(protected[:match.start()], protected[match.end():])):
+                raise SegmentationError('Polish fronted date before capital text has an ambiguous sentence boundary; a reviewed, source-SHA-bound Polish sentence map is required')
             follower = data.get('nonterminal_abbreviation_followers', {}).get(key)
             if follower and re.match(follower, unicodedata.normalize('NFC', remaining)):
                 can_end = False

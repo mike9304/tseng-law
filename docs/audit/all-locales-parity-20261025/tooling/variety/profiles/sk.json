@@ -45,8 +45,8 @@
   "context_terminal_abbreviations": {
     "r": "\\d{4}\\s*$"
   },
-  "ordinal_followers": "poschodie|poschodí|kapitola|kapitolu|kapitoly|trieda|triede|ročník|odsek|odseku|článok|bod|januára|februára|marca|apríla|mája|júna|júla|augusta|septembra|októbra|novembra|decembra",
-  "ordinal_pattern": "(?<!\\w)(?:[IVXLCDM]+\\.(?=\\s+(?:kapitola|kapitolu|kapitoly|zjazd|storočie|storočia)\\b)|\\d+\\.(?=\\s*§))",
+  "ordinal_followers": "(?-i:poschodie|poschodí|kapitola|kapitolu|kapitoly|trieda|triede|ročník|odsek|odseku|článok|bod)",
+  "ordinal_pattern": "(?:(?<!\\w)(?:[IVXLCDM]+\\.(?=\\s+(?:kapitola|kapitolu|kapitoly|zjazd|storočie|storočia)\\b)|\\d+\\.(?=\\s*§)|(?-i:(?:0?[1-9]|[12]\\d|3[01])\\.(?=\\s+(?:január|januára|február|februára|marec|marca|apríl|apríla|máj|mája|jún|júna|júl|júla|august|augusta|september|septembra|október|októbra|november|novembra|december|decembra)\\b))))|(?:(?<![\\w.\\ue000])(?:0?[1-9]|[12][0-9]|3[01])(?:\\.|\\ue000)[^\\S\\r\\n]*(?:0?[1-9]|1[0-2])(?:\\.|\\ue000)[^\\S\\r\\n]*[0-9]{4}(?![\\w\\ue000]))",
   "additional_closing_quotes": "“",
   "contrast_patterns": [
     "(?i:\\bnie\\b[^.!?\\n;;]{0,180}\\b(?:ale|lež)\\b)",

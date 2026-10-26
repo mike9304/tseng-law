@@ -1,0 +1,91 @@
+{
+  "at": "2026-10-26T09:44:48.959730+00:00",
+  "reviewer": "root AI coordinator",
+  "manifestSHA256": "56c80401c19b055308e88a8e05f387f09b2df5497763c3c3bf45bac89eee2c48",
+  "installed": [
+    {
+      "relative_path": "MULTILINGUAL-METHOD.md",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/sk-date-boundaries/candidate/MULTILINGUAL-METHOD.md",
+      "before_sha256": "6412888b4c98d41388af35ca4ebf84be2ea173cf99f36a4b6ecd5b59d615bb7e",
+      "sha256": "e5353158512b5a0e628b99afe69956f854a2fbc471f0b7c90a5d341146e66d22",
+      "changed": true,
+      "destination": "/Users/son7/tseng-lanes-shared/variety/MULTILINGUAL-METHOD.md"
+    },
+    {
+      "relative_path": "profiles/sk.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/sk-date-boundaries/candidate/profiles/sk.json",
+      "before_sha256": "bdaceac0a3767ca53432736996a1d70f04af43d7bb1fef941b6b08cc746bb04a",
+      "sha256": "9c1b41e0373934c758fe139bdfdb3ea229d9fe628d967d01faaf8c251968ef8c",
+      "changed": true,
+      "destination": "/Users/son7/tseng-lanes-shared/variety/profiles/sk.json"
+    },
+    {
+      "relative_path": "tests/test_batch04.py",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/sk-date-boundaries/candidate/tests/test_batch04.py",
+      "sha256": "5d5bca34e6abe04d85ce63f10e82d7e924b8006200a43df08c357bf0dddc6602",
+      "before_sha256": "abfa872dd3f3792a08e6c831e0ba7741c7df47b18b85c7da97685ed0e7cb7a2c",
+      "destination": "/Users/son7/tseng-lanes-shared/variety/tests/test_batch04.py"
+    },
+    {
+      "relative_path": "tests/test_batch05.py",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/sk-date-boundaries/candidate/tests/test_batch05.py",
+      "sha256": "a7cbbd6d4378ef45342bbba4be559f31a6885900303242dfd0ef6ee163be90e3",
+      "before_sha256": "bda614ecbf8353ce588bd9fcab57183cdc2e6fbcdae6062fcfbccc3fface2a4c",
+      "destination": "/Users/son7/tseng-lanes-shared/variety/tests/test_batch05.py"
+    },
+    {
+      "relative_path": "tests/test_sk_date_boundaries.py",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/sk-date-boundaries/candidate/tests/test_sk_date_boundaries.py",
+      "sha256": "e3ba26bc28b3290496f02d4864bb9d25651638a3404f8ac1c686c99f4fabf981",
+      "before_sha256": null,
+      "destination": "/Users/son7/tseng-lanes-shared/variety/tests/test_sk_date_boundaries.py"
+    },
+    {
+      "relative_path": "tests/sk-date-boundaries/neutral-fixtures.json",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/sk-date-boundaries/candidate/tests/sk-date-boundaries/neutral-fixtures.json",
+      "sha256": "5c505d69037bf11df3e8c58fd7772b29f889689a97bbb83f381e709fc30d7ba5",
+      "before_sha256": null,
+      "destination": "/Users/son7/tseng-lanes-shared/variety/tests/sk-date-boundaries/neutral-fixtures.json"
+    },
+    {
+      "relative_path": "tests/sk-date-boundaries/run_neutral.py",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/sk-date-boundaries/candidate/tests/sk-date-boundaries/run_neutral.py",
+      "sha256": "445583e7bf998ac9183cc9a4e913aa42dcd5ec347d9c7d76993bb0322c2e256a",
+      "before_sha256": null,
+      "destination": "/Users/son7/tseng-lanes-shared/variety/tests/sk-date-boundaries/run_neutral.py"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tests/sk-date-boundaries/run_neutral.py",
+        "--root",
+        "/Users/son7/tseng-lanes-shared/variety",
+        "--fixtures",
+        "/Users/son7/tseng-lanes-shared/variety/tests/sk-date-boundaries/neutral-fixtures.json",
+        "--report",
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/sk-date-boundaries/root-installed-neutral.json"
+      ],
+      "exit": 0
+    }
+  ],
+  "sharedExpansionUnchanged": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+  "RToolUnchanged": true,
+  "sourceArticlesChanged": false,
+  "PLInstalled": false,
+  "priorAttempt": "Root first used a mistyped manifest hash, failing before any mutation; corrected to actual frozen hash."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "locale": "pl",
+  "status": "approved",
+  "reviewer": "/root/column_existing_drafts (independent AI boundary reviewer)",
+  "atUTC": "2026-10-26T10:35:41.801287+00:00",
+  "scope": "Only the complete 918 source-SHA-bound 14-paragraph/38-boundary array has been independently read and approved. No machine metric pass, human/native/legal approval, browser rendering or publication is asserted. The other five R3 maps and approvals remain unchanged.",
+  "entries": [
+    {
+      "source_sha256": "d3ed3720492f1acc5703d8e361373eb9f958105da46034c064a17564e7ebfc55",
+      "method": "independent_review",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "8e5fa3c16ffc4e935bea5e6cc8229f8c5b1e7538c0658d32554a9ef9b8c99e9a"
+    }
+  ],
+  "evidence": [
+    {
+      "role": "independent-review",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-independent-r4-reviewed-boundaries.json",
+      "sha256": "84e16aa66742031dc97655016dcc95b8a75ed8d7c4a9b1296d0bd2c0b6b7c1f5"
+    },
+    {
+      "role": "exact-reconstruction",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r4-intake-manifest.json",
+      "sha256": "ab7d3efff8cc3cdd211fd619f9737688d2cd6b8c67bd4fdc406ecf67dfb92987"
+    },
+    {
+      "role": "prior-meaning-closure",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/pl-independent-r3.md",
+      "sha256": "764893baa250d37c15793431094d1f3f133106fe20c459ba9d1a230212a3c9d0"
+    }
+  ]
+}

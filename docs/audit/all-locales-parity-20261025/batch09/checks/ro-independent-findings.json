@@ -1,0 +1,38 @@
+{
+  "atUTC": "2026-10-26T09:35:06.662294+00:00",
+  "mandatory": [],
+  "optional": [
+    {
+      "id": "O01",
+      "severity": "optional",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "line": 21,
+      "scope": "FAQ2 first sentence only",
+      "old": "Locatarul a invocat oprirea, încuierea și predarea cheii.",
+      "new": "Locatarul a invocat oprirea și încuierea echipamentului, precum și disponibilitatea de a preda cheia comitetului.",
+      "reason": "본문은 이미 위원회에 열쇠를 넘길 의향으로 정확하다. FAQ의 명사형 predarea는 실제 인도 완료를 주장한 것으로도 읽힐 수 있어 동일한 주체·의향·수령자를 명시하면 독립 FAQ의 정확성이 높아진다.",
+      "whyNotMandatory": "FAQ는 주장 소개 뒤 가정적 판단을 설명하며, 정본 FAQ도 인도라는 요약 명사형을 사용한다. 본문의 명시적 의향과 법원의 조건부 판단을 함께 읽으면 권리·의무 또는 판결 결과의 역전이 없다.",
+      "meaningPreserved": "정지·잠금, 위원회에 인도할 의향, 사실이라고 가정해도 철거·원상회복 의무는 남는다는 결과, 모든 충전기 분쟁으로 확대하지 않는 범위를 보존한다.",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/zh-hant-ev-primary-recovered.md",
+      "sourceStoredLines": "L32 and L44",
+      "verificationIfAdopted": "FAQ/frontmatter only. Preserve the 920 measured body byte SHA and reuse existing body CLI/arrays; parse the changed FAQ and verify full-file reversal."
+    },
+    {
+      "id": "O02",
+      "severity": "optional",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "line": 50,
+      "scope": "ITA paragraph first sentence only",
+      "old": "[Raportul din 30 septembrie 2026 al administrației americane pentru comerț internațional, ITA](https://www.trade.gov/market-intelligence/taiwan-energy-industry), prezintă achiziții taiwaneze de energie și rețele anticipate pentru sfârșitul anului și pentru 2027, inclusiv oportunități pentru furnizori americani.",
+      "new": "[Raportul din 30 septembrie 2026 al administrației americane pentru comerț internațional, ITA](https://www.trade.gov/market-intelligence/taiwan-energy-industry) prezintă achiziții pentru infrastructura energetică și rețelele electrice din Taiwan, anticipate pentru sfârșitul anului și pentru 2027, inclusiv oportunități pentru furnizori americani.",
+      "reason": "achiziții ... de energie și rețele는 에너지 자체와 망의 매입으로도 읽힌다. 공식 자료가 설명하는 전력 인프라·발전설비·망 관련 조달의 대상을 명시하고 주어와 동사 사이 불필요한 쉼표도 제거한다.",
+      "whyNotMandatory": "같은 문단은 전망이라는 점과 특정 입찰 개시·회사 자격·85-1 분류를 보장하지 않는다는 제한을 명시한다. 현재 요약을 실제 입찰이나 자격 보장으로 단정하지 않는다.",
+      "meaningPreserved": "2026-09-30 자료, 연말/2027 전망, 미국 공급자 기회, 뒤 두 문장의 전망·범위 제한, 공식 URL을 보존한다.",
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/recheck/official-04.json",
+      "sourceStoredLines": "ITA response L13–15, L19",
+      "verificationIfAdopted": "Only 915 body changes. Run the shared ro CLI for 915 once, inspect the changed paragraph, and verify exact reversal/metadata/FAQ/URL/numbers. Other five CLI results can be reused."
+    }
+  ],
+  "decision": "ACCEPT_WITH_OPTIONAL_CLARIFICATIONS",
+  "manuscriptsChangedByReviewer": false
+}

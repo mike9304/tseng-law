@@ -1,0 +1,60 @@
+{
+  "at": "2026-10-26T17:51:39.181722+09:00",
+  "observedCurrentSharedDefects": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "4ce927d964515ae9a1bda9479243f7014d6a0832605589a33e8736ad364305ed",
+      "paragraph": 13,
+      "actualSegments": [
+        "Oficiálne zdroje boli overované 25.–26. októbra 2026. Článok vychádza z vysvetlenia konkrétneho rozsudku a súčasných zákonných podmienok; neurčuje právomoc ani lehotu podania v jednotlivom spore."
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "ddbbc40f36421c9f07b1d3d90c4304f4b59d28156429332980d60857457209d2",
+      "paragraph": 5,
+      "actualSegments": [
+        "Úverové peniaze developer dostal 5. novembra.",
+        "Záručný doklad však ako deň odovzdania označoval 28.",
+        "november.",
+        "Odôvodnenie rozsudku, najmä jeho štvrtá časť na tlačených stranách 182–186, tieto udalosti posudzuje oddelene."
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "30bb9e640d5ce6586cba4e177185d8adc98f50761470188db6afeb17d6aa0ed5",
+      "paragraph": 15,
+      "actualSegments": [
+        "Oficiálne zdroje boli overované 25.–26. októbra 2026. Článok vychádza z verejného vysvetlenia súdu; neskorší výsledok prípadného opravného prostriedku nebol potvrdený."
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "fc0e5af503c6a8205a3b9bd62b257dccefd10de1f732fd5c7c04a1186f89089e",
+      "paragraph": 13,
+      "actualSegments": [
+        "Kaohsiunské oznámenie z mája 2026 zahŕňalo podporu káblových žľabov pre nabíjanie v spoločných častiach bytových domov.",
+        "Zverejnený termín podania bol 30.",
+        "september.",
+        "Lehota už uplynula.",
+        "Program ilustruje potrebu spoločného plánovania vedení, ale neudeľuje súkromnoprávny súhlas na jednotlivú montáž."
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "fc0e5af503c6a8205a3b9bd62b257dccefd10de1f732fd5c7c04a1186f89089e",
+      "paragraph": 15,
+      "actualSegments": [
+        "Oficiálne zdroje boli overované 25.–26. októbra 2026. Článok opisuje uvedený kaohsiunský rozsudok bez potvrdenia neskoršieho vývoja alebo právoplatnosti.",
+        "Rozsah prác a pravidlá iného domu sa posudzujú podľa jeho vlastných podkladov."
+      ]
+    }
+  ],
+  "guard": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/sk.json": "bdaceac0a3767ca53432736996a1d70f04af43d7bb1fef941b6b08cc746bb04a"
+  },
+  "scope": "read-only extraction; no shared mutation; normal source dates retained; false splits/joins must not justify PASS"
+}

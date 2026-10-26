@@ -127,6 +127,8 @@ def metrics(text, lang, sentence_map=None):
     language_profile = multilingual.profile(lang) if extended else None
     fm, t = strip_fm(text)
     paras, heads, items = body_blocks(t, lang)
+    if lang == 'pl' and sentence_map is not None:
+        multilingual.validate_polish_map(sentence_map, text, paras)
     if not paras: return None
     S = [s for p in paras for s in sentences(p, lang, sentence_map)]
     if extended:
@@ -200,7 +202,7 @@ def metrics(text, lang, sentence_map=None):
              first=first[:90], last=last[:120])
     if extended:
         m.update(length_unit=language_profile.get('length_unit', 'orthographic_words'), short_threshold=short_th,
-                 long_threshold=long_th, sentence_boundary_method='reviewed_sha_bound_map' if lang == 'th' else 'unicode_punctuation_with_locale_abbreviations')
+                 long_threshold=long_th, sentence_boundary_method='reviewed_sha_bound_map' if lang == 'th' or (lang == 'pl' and sentence_map is not None) else 'unicode_punctuation_with_locale_abbreviations')
         if lang == 'vi':
             m['length_unit'] = 'orthographic_syllabic_units'
         if lang == 'th':
@@ -278,7 +280,7 @@ def guess_lang(path):
     raise multilingual.MeasurementError(f'cannot infer language for {path}; supply --lang')
 
 if __name__ == '__main__':
-    ap = argparse.ArgumentParser(); ap.add_argument('mode', choices=('check', 'corpus')); ap.add_argument('path', nargs='+'); ap.add_argument('--lang', choices=SUPPORTED); ap.add_argument('--out'); ap.add_argument('--sentences', help='reviewed source-SHA-bound Thai sentence map')
+    ap = argparse.ArgumentParser(); ap.add_argument('mode', choices=('check', 'corpus')); ap.add_argument('path', nargs='+'); ap.add_argument('--lang', choices=SUPPORTED); ap.add_argument('--out'); ap.add_argument('--sentences', help='reviewed source-SHA-bound Thai or Polish sentence map')
     a = ap.parse_args()
     if a.mode == 'check':
         rc = 0

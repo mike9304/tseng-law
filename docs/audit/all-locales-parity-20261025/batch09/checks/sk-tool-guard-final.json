@@ -1,0 +1,45 @@
+{
+  "atUTC": "2026-10-26T09:46:16.458071+00:00",
+  "installationReceipt": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/sk-date-boundaries/ROOT-INSTALLATION.json",
+    "sha256": "ef2d94699971a209afbc0f935fb7c233c6ded39c6be0f5be012f3d897f1d787a",
+    "readFull": true
+  },
+  "actualCommand": [
+    "python3",
+    "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-check.py",
+    "final",
+    "915",
+    "916",
+    "918",
+    "919",
+    "920",
+    "921"
+  ],
+  "wrapperExitCode": 0,
+  "individualCLIExitCodes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "toolBefore": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/sk.json": "9c1b41e0373934c758fe139bdfdb3ea229d9fe628d967d01faaf8c251968ef8c",
+    "/Users/son7/tseng-lanes-shared/variety/MULTILINGUAL-METHOD.md": "e5353158512b5a0e628b99afe69956f854a2fbc471f0b7c90a5d341146e66d22"
+  },
+  "toolAfter": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/sk.json": "9c1b41e0373934c758fe139bdfdb3ea229d9fe628d967d01faaf8c251968ef8c",
+    "/Users/son7/tseng-lanes-shared/variety/MULTILINGUAL-METHOD.md": "e5353158512b5a0e628b99afe69956f854a2fbc471f0b7c90a5d341146e66d22"
+  },
+  "unchangedDuringChecks": true,
+  "approvedChangesSinceInitial": "Only installed root SK profile and method change; metrics thresholds/engine unchanged. PL not installed in this receipt.",
+  "evidenceSHA256": "fd5779112ee32dfb0146b9ce34af151ee2ae70e57dabbdc28823ebc05d8e5d77"
+}

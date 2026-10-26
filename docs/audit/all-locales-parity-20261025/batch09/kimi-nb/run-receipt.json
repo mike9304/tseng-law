@@ -1,0 +1,82 @@
+{
+  "atUTC": "2026-10-26T07:18:29.449218+00:00",
+  "modelAlias": "kimi-code/k3.1-pro",
+  "actualExecSessionId": 71450,
+  "actualExitCode": 0,
+  "quotaProbeSession": 56791,
+  "quotaProbeExitCode": 0,
+  "firstInvocationExitCode": 1,
+  "firstInvocationReason": "CLI rejected --prompt plus --auto before any model call; original stderr retained. Corrected invocation removed --auto.",
+  "inputManifestSHA256": "473c388a7fba84e8d2c8118f374be0483f527ce91cf53402c6bfa11ee2b1322f",
+  "all14InputHashesUnchanged": true,
+  "outputFiles": [
+    {
+      "kimiOutputFilename": "taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "canonicalFilename": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "source": "/private/tmp/tseng-kimi-nb-cases-20261026/output/taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-nb/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b0ad7cd2cf160416f0450373638752e28327f0e8864524d51c6a2a0474b9231a",
+      "bytes": 8554,
+      "bytesChanged": false,
+      "filenameNormalization": "Restored required numeric ID prefix omitted by Kimi; content bytes unchanged."
+    },
+    {
+      "kimiOutputFilename": "taiwan-online-game-coins-refund-judgment.md",
+      "canonicalFilename": "921-taiwan-online-game-coins-refund-judgment.md",
+      "source": "/private/tmp/tseng-kimi-nb-cases-20261026/output/taiwan-online-game-coins-refund-judgment.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-nb/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "0c70443977e59d6e1a7b746a5edf4495e06caef1904f0eb1fc226dcf6fff6b50",
+      "bytes": 8958,
+      "bytesChanged": false,
+      "filenameNormalization": "Restored required numeric ID prefix omitted by Kimi; content bytes unchanged."
+    },
+    {
+      "kimiOutputFilename": "taiwan-apartment-ev-charger-common-area-judgment.md",
+      "canonicalFilename": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "source": "/private/tmp/tseng-kimi-nb-cases-20261026/output/taiwan-apartment-ev-charger-common-area-judgment.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-nb/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "62b15f4e36ada306a9665491a2df56a7fa0dc0ff723129c6c55a55e72bc5a379",
+      "bytes": 8406,
+      "bytesChanged": false,
+      "filenameNormalization": "Restored required numeric ID prefix omitted by Kimi; content bytes unchanged."
+    },
+    {
+      "kimiOutputFilename": "taiwan-presale-mortgage-notice-handover-judgment.md",
+      "canonicalFilename": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "source": "/private/tmp/tseng-kimi-nb-cases-20261026/output/taiwan-presale-mortgage-notice-handover-judgment.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-nb/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "5d7217db88a4bf1d16e2745fd1ef2ca6be2b07bfdbd4391a4e38978e89b230a8",
+      "bytes": 8691,
+      "bytesChanged": false,
+      "filenameNormalization": "Restored required numeric ID prefix omitted by Kimi; content bytes unchanged."
+    },
+    {
+      "kimiOutputFilename": "taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "canonicalFilename": "915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "source": "/private/tmp/tseng-kimi-nb-cases-20261026/output/taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-nb/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "d9f48949020f641137863061dfee6c33231ab5abffec04dc81c247c7d067568b",
+      "bytes": 7715,
+      "bytesChanged": false,
+      "filenameNormalization": "Restored required numeric ID prefix omitted by Kimi; content bytes unchanged."
+    },
+    {
+      "kimiOutputFilename": "taiwan-parent-company-pollution-liability-us-investor.md",
+      "canonicalFilename": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "source": "/private/tmp/tseng-kimi-nb-cases-20261026/output/taiwan-parent-company-pollution-liability-us-investor.md",
+      "target": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-nb/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "dd7681bb91a0446e08e45f0dc1d47d005f01ba2db1bbc8f732de7e1a37d134f8",
+      "bytes": 8905,
+      "bytesChanged": false,
+      "filenameNormalization": "Restored required numeric ID prefix omitted by Kimi; content bytes unchanged."
+    }
+  ],
+  "rawAuthorReview": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-nb/raw-output/author-review.md",
+    "sha256": "0fc5d0bec05c17b440e90dcbe9d501af9521f14fa514dbcba56e5449253a2c17"
+  },
+  "status": "KIMI_SIX_DRAFTS_RECEIVED_NOT_INDEPENDENTLY_APPROVED",
+  "sharedVarietyRun": false,
+  "publiclyDeployed": false,
+  "note": "Kimi local checks and claimed reading scope are author assertions, not primary verification; full legal and language review still required. Primary supplied source research, Kimi did not newly read official judgment pages. Current local LESSONS rollup will be applied by primary/reviewer."
+}

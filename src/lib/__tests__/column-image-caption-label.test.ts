@@ -55,6 +55,17 @@ const LABEL: Record<string, string> = {
   'my': 'စိတ်ကူးယဉ် မြင်ကွင်း',
 };
 
+// These six reviewed B9 articles use the exact label frozen in their authoring brief.
+// Keep the established label for every other Norwegian article.
+const BATCH09_NB_FILES = new Set([
+  '915-taiwan-public-contract-mediation-arbitration-same-claim.md',
+  '916-taiwan-parent-company-pollution-liability-us-investor.md',
+  '918-taiwan-presale-mortgage-notice-handover-judgment.md',
+  '919-taiwan-workplace-bullying-investigation-hearing-judgment.md',
+  '920-taiwan-apartment-ev-charger-common-area-judgment.md',
+  '921-taiwan-online-game-coins-refund-judgment.md',
+]);
+
 const root = path.join(process.cwd(), 'src/content');
 const files = fs.readdirSync(root)
   .filter((dir) => dir === 'columns' || dir.startsWith('columns-'))
@@ -67,7 +78,10 @@ describe('column image caption label', () => {
     for (const { locale, file } of files) {
       const head = fs.readFileSync(path.join(root, file), 'utf8').split('\n---')[0];
       const m = head.match(/^featured_image_caption: "(.*)"$/m);
-      if (m && m[1] !== LABEL[locale]) bad.push(`${file}: ${m[1]}`);
+      const expected = locale === 'nb' && BATCH09_NB_FILES.has(path.basename(file))
+        ? 'Fiktiv scene'
+        : LABEL[locale];
+      if (m && m[1] !== expected) bad.push(`${file}: ${m[1]}`);
     }
     expect(bad).toEqual([]);
   });

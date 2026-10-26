@@ -1,0 +1,41 @@
+{
+  "atUTC": "2026-10-26T11:56:11.171557+00:00",
+  "verdict": "READY_FOR_LOCAL_RELEASE_BUILD_AFTER_COMMIT",
+  "baseCommit": "35cc5d32cb5a4394d674f1f767b5f32eedd5cee7",
+  "reviewedIntegrationReport": {
+    "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch09/checks/integration-report.md",
+    "sha256": "3034ffb562aa22e39fb551ab5926d864c6679ee4cf70b5553f371346da207f7a"
+  },
+  "freezeSHA256": "ad090d1768f4da651c178c9671330362f14d618b602b62a50c9d7f0d69e85686",
+  "verifiedBoundFiles": 151,
+  "copiesVerified": 62,
+  "auditCopiesVerified": 283,
+  "trackedChanges": [
+    "docs/audit/all-locales-parity-20261025/tooling/variety/MULTILINGUAL-METHOD.md",
+    "docs/audit/all-locales-parity-20261025/tooling/variety/profiles/sk.json",
+    "docs/audit/all-locales-parity-20261025/tooling/variety/profiles/tr.json",
+    "docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_batch04.py",
+    "docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_batch05.py",
+    "docs/audit/all-locales-parity-20261025/tooling/variety/variety_expansion.py",
+    "docs/audit/all-locales-parity-20261025/tooling/variety/variety_metrics.py",
+    "docs/audit/all-locales-parity-20261025/tooling/variety/variety_multilingual.py",
+    "src/content/columns-sk/014-taiwan-mandatory-employment-period.md",
+    "src/content/columns-sk/877-slovak-exporter-taiwan-unpaid-invoice-recovery.md",
+    "src/content/columns-sk/878-slovak-business-taiwan-subsidiary-branch-office.md",
+    "src/lib/__tests__/case-translations-20261026.test.ts",
+    "src/lib/__tests__/column-image-caption-label.test.ts",
+    "src/lib/__tests__/native-locale-columns.ts"
+  ],
+  "untrackedFiles": 358,
+  "directlyRead": "Full integration report, actual validation summary, all three test diffs and eight SK prose edits; previously reviewed tool implementations bound to exact installed bytes. Did not claim rereading all 42 articles or entire 104KB aggregate patch.",
+  "toolBytesMatchApprovedInstalledBaseline": true,
+  "CSCurrentSharedExcludedFromThisRBatch": true,
+  "knownOptionalPLFindingUnchanged": true,
+  "currentArticleCLI45Exit0": true,
+  "currentCoverage": "780 original passing tests + 1 targeted NB caption test; initial batch exit1 preserved",
+  "liveTrackedWhitespaceExit": 0,
+  "rawAuditWhitespaceWarningsPreserved": 6,
+  "publicationReady": false,
+  "capacityIncluded": false,
+  "allLanguageGoalComplete": false
+}

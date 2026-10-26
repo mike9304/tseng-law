@@ -1,0 +1,104 @@
+{
+  "atUTC": "2026-10-26T09:54:58.911853+00:00",
+  "status": "Meaning M01-M03 and S01-S06 closed; shared PL date-boundary final measurement pending, no final machine-boundary PASS",
+  "report": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/pl-independent-r3.md",
+    "sha256": "764893baa250d37c15793431094d1f3f133106fe20c459ba9d1a230212a3c9d0"
+  },
+  "manuscripts": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "67e1a4bd4123dd6de01e1a0e66586cf6d22903063ffb568b999a24301b6c536f"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "8d106bbd5e0328f445cfdcd7cf5255efd498a78422550eb498158381411d32b3"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "a48b8191ba92a6a386c2108fd12c6966484ef86fd2af8941b40c3ae1a38e9628"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "1ae0a5c6dd50d985378f533d266248349d164314bd39cfdf13fefd4b26ef5b30"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "c29911404cc6477949d269efbbc26946512b5fd477ded9ed1a4f655145c3551b"
+    }
+  ],
+  "refs": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/pl-independent-r3.md",
+      "sha256": "764893baa250d37c15793431094d1f3f133106fe20c459ba9d1a230212a3c9d0"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/pl-independent-r2.md",
+      "sha256": "8fd049376e4c0a587131d5b40ac9dea1172306523ac7d32f9d468453cc32781a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r3-intake-manifest.json",
+      "sha256": "b15c6b2568a6af7c86f8f1f9c9ae6850252e18db1d140720bc691d90dea96ae7"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/author-review-r3.md",
+      "sha256": "c46e2cf23769e498bf1ba3b34f4032819d86a399f09b499ece8e80b9a797c37b"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/edits-r3.json",
+      "sha256": "3ad0426b76b5217a988bf01600f7d0ccd5615d80228510105a8deffd1f46c6b1"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-intake-r3-attempt-error.json",
+      "sha256": "42bbdd3a6cfa0bc37c7d8de98882d5e37c80b6e75887586f9cf3dd05e7fa2044"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-variety-kimi-r3-provisional.json",
+      "sha256": "aa21b64318604475a13e50ea43f1030044308aaa57f33e15fb3095ceab82bf54"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-content-audit-kimi-r3.json",
+      "sha256": "6ce40594af676151e1b7e22e17183b5d2e100f19d820d7fce782aa34e6c3c6aa"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-independent-structure-r3.json",
+      "sha256": "484600ea372a9651177ca0bd5f8fd3163e11b7dc6d07b2d28e16306301db5568"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-independent-r3-boundary-delta.json",
+      "sha256": "4e49cbfdceee120c1075eb4d9e38e68773a02199014167660ba9dfc7e78c9014"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-independent-r3-reviewed-boundaries.json",
+      "sha256": "75763fa56ec70c53e9263cca7cb9c1e796c8d954c987ebe17ad36ca9636b513f"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-independent-boundary-issues-r2.json",
+      "sha256": "66a763ebd6e54e01684504d1335ba5e52a139961b09b283d02edebe55a98e2c6"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-independent-final-manifest-r2.json",
+      "sha256": "3528ec10f26f95c3a809a7ac08ef8b31eff5ca2ce52febf96cb37b884919fdba"
+    }
+  ],
+  "approvedInputHashMatches": 17,
+  "exactForwardAndInverseMatches": 6,
+  "actualEdits": 12,
+  "mandatoryRemaining": 0,
+  "optionalRemaining": 0,
+  "technicalRemaining": [
+    "T01: two known r. false boundaries; reviewed exact 237-sentence arrays supplied to tool maintainer"
+  ],
+  "provisionalSharedCLI": {
+    "actualExit": 0,
+    "FAIL": 0,
+    "segments": 239,
+    "normalBoundaryApproval": false
+  },
+  "independentReviewedSentenceCount": 237,
+  "sourceAndHumanApprovalLimits": "Targeted AI meaning review; unchanged source constraints reused; no new full PDF, human native/legal, rendering or publication approval."
+}

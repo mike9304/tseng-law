@@ -1,0 +1,129 @@
+{
+  "at": "2026-10-26T17:15:43.847116+09:00",
+  "ownership": "B9 columns-sr six files; reviews/sr-author*; checks/sr-* only",
+  "inputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/BRIEF.md",
+      "sha256": "f04f1d70c375c3e65a88e42dcaedbc453fda2c6e74882a7b82fba17d109290f4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/BRIEF.md",
+      "sha256": "e7f781375d583d0647ca32bbeafd372f3ce802a2837d17a59b6225409d55dc8c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/BRIEF.md",
+      "sha256": "8103ae1441fe0abbdb76362d6086a267014664f31997f5676b37c6962cfcd306"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/BRIEF.md",
+      "sha256": "f6c2579b6255705ece341a356d3a4d527ca74a869916785d51edb9c0f05ee1a8"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/AGENTS.md",
+      "sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3"
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "86710ef330b108a916a7bb92a75f1ffa62dea53412e8a75f38472d9fa9b33130"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-freeze.json",
+      "sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/bundle-manifest.json",
+      "sha256": "d56dfa2dd03c0e93c5f3576ee119c508f07daf24eb7412123aadc42e49bf3192"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/six-source-facts.md",
+      "sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-register.md",
+      "sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/authoring-contract-draft.md",
+      "sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/704-taiwan-arc-first-application.md",
+      "sha256": "15229f8e599464d507976f6d91818d441c6a1c8be1448af31f79fd79b8730dac"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "9057c2a83ef6e71ab6f576702943fdf604ae345b627b94d98986baf4a6b7d6b2"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1e5a3547ce8437f9ddb4f3a3b61dd62261a4a1dccaa63683d43d9692b73331d9"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/sr.json",
+      "sha256": "b82eac56b6e35c4a08e8029317975be46ee3930f2366633a704dd487a69d0419"
+    }
+  ],
+  "full_read_now": [
+    "B9/B8/B7 BRIEF",
+    "R AGENTS",
+    "recent SR704/705/706",
+    "17:05 LESSONS"
+  ],
+  "same_sha_continuous_full_read_reused": [
+    "frozen six canonicals",
+    "B6 facts/source-register/contract/freeze",
+    "editorial/variety rules"
+  ],
+  "home_editorial_voice_exists": false,
+  "no_new_web": true,
+  "language": "Serbian Latin script",
+  "native_human_or_lawyer_approval": false
+}

@@ -1,0 +1,49 @@
+{
+  "atUTC": "2026-10-26T09:56:13.162225+00:00",
+  "status": "REQUEST_CHANGES",
+  "mandatory": 1,
+  "optional": 2,
+  "findings": [
+    {
+      "id": "M01",
+      "severity": "MUST",
+      "article": 920,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "001bd26dd4f6488e6e8a2413f401c1afa458652541b0396fcf248f29910fe3b1",
+      "location": "## Odpojenie zariadenia nenahradilo chýbajúci súhlas; paragraph 10, extracted sentence 29",
+      "old": "Prísľub budúceho odpojenia neriešil pôvodný nedostatok súhlasu.",
+      "new": "Tvrdené nepoužívanie zariadenia chýbajúci súhlas nenahradilo.",
+      "problem": "장래에 분리하겠다는 약속으로 사건의 주장·시점을 바꾼다. 앞 문단과 정본은 이미 사용을 중지하고 잠갔다는 주장 및 열쇠를 위원회에 넘길 의향이다.",
+      "basis": "Frozen ZH920 body; retained/zh-hant-ev-primary-recovered.md L32/L44: 已關閉充電設備及上鎖 / 願意將鑰匙交予被上訴人保管 / 縱然屬實.",
+      "meaningPreservation": "주장이라는 지위와 사용중지 행위, 필요한 동의 부재를 보존한다. 바로 앞의 설령 사실이어도 철거·복구 의무가 남는다는 판단은 그대로 두며 새로운 의무·시점·실제 사실을 만들지 않는다.",
+      "proposalNote": "앞서 전한 긴 교정안과 같은 의미를 이 문단에 맞게 간결하게 썼다. 법적 이유·인용·숫자를 삭제하지 않는다."
+    },
+    {
+      "id": "O01",
+      "severity": "OPTIONAL",
+      "article": 920,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "001bd26dd4f6488e6e8a2413f401c1afa458652541b0396fcf248f29910fe3b1",
+      "location": "frontmatter FAQ 2 answer, first sentence",
+      "old": "Obyvateľ tvrdil, že zariadenie nepoužíva, uzamkol ho a môže odovzdať kľúč.",
+      "new": "Obyvateľ tvrdil, že zariadenie nepoužíva a uzamkol ho, a ponúkal odovzdanie kľúča výboru.",
+      "problem": "môže는 가능성으로 읽힌다. 본문의 ponúkal...výboru를 FAQ에도 쓰면 열쇠 인도의 의향·수령인을 독립적인 FAQ에서 더 명확히 알 수 있다.",
+      "basis": "Frozen ZH920 body and retained court L32/L44; current SK body already accurate.",
+      "meaningPreservation": "이미 넘겼다고 바꾸지 않으며 주민 주장/위원회 인도 의향/설령 사실이어도라는 뒤 문장은 보존한다. 현재 본문이 정확하므로 새 필수 오류로 확대하지 않는다."
+    },
+    {
+      "id": "O02",
+      "severity": "OPTIONAL",
+      "article": 921,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "60cb072f1ef19f7a1391d22cb2973597b602076752b3f5b387fc81e0b98e8d92",
+      "location": "## Dnešné pravidlá zachovávajú vrátenie nevyužitých plnení; paragraph 8, extracted sentences 22–23",
+      "old": "Dohoda vyžaduje obe strany. Samotná jednostranná informácia prevádzkovateľa ju nenahrádza.",
+      "new": "Jednostranné oznámenie prevádzkovateľa takú dohodu nenahrádza.",
+      "problem": "직전 dohodnutým oboma stranami에 이어 양쪽이라는 설명을 짧게 두 번 반복한다. 구체적인 일방 통지의 한계만 남기면 문단의 반복을 줄일 수 있다.",
+      "basis": "Current SK921 full paragraph, canonical point 18 bilateral agreement alternative.",
+      "meaningPreservation": "바로 앞의 미사용 두 대상 OR, 필요비용 공제, 종료 후30일 must와 양자 합의의 대안을 모두 유지한다. 본래 문장의 정확성 오류가 아닌 선택적 리듬 개선이다."
+    }
+  ],
+  "notMandatory": "Accurate concise USTR possibility summary is not rejected merely for omitting critical-sectors detail; no universal entitlement or non-US nationality substitution is asserted. No new required law detail is inferred from unused supplemental facts."
+}

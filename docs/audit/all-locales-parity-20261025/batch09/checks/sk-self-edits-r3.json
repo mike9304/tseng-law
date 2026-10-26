@@ -1,0 +1,72 @@
+{
+  "at": "2026-10-26T18:27:24.422688+09:00",
+  "changeCount": 2,
+  "profileCandidateSnapshotAlreadyFrozen": true,
+  "sharedInstallationNotYetClaimed": true,
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSHA256": "dd5ba0865b06900c6cf13dca431a93c0b6a9d86c0e5c8ca6cc136ec7170deaa3",
+      "afterSHA256": "dd5ba0865b06900c6cf13dca431a93c0b6a9d86c0e5c8ca6cc136ec7170deaa3",
+      "changes": [],
+      "exactInverse": true,
+      "diff": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSHA256": "cea9bc50a326b9aaf3b6f9cd9c3c26ed4879f97ac42f05e2408212c6e4f8447b",
+      "afterSHA256": "dea3c656ac58e2542b9f8343fbccd95d01f811ff47653a67d9225a0948a79e82",
+      "changes": [
+        {
+          "old": "Znečistenie továrne na Taiwane: čo vedeli a rozhodli materské spoločnosti",
+          "new": "Znečistenie továrne na Taiwane: čo vedeli materské spoločnosti",
+          "startBeforeEdit": 12,
+          "reason": "제목의 서로 다른 목적어를 요구하는 vedeli a rozhodli 연결을 자연스럽게 정리. 실제 결정·후속 행위 설명은 summary/본문에 유지하며 제목을 확장하지 않음.",
+          "meaningPreserved": true
+        }
+      ],
+      "exactInverse": true,
+      "diff": "--- self-r2/916-taiwan-parent-company-pollution-liability-us-investor.md\n+++ self-r3/916-taiwan-parent-company-pollution-liability-us-investor.md\n@@ -1,5 +1,5 @@\n ---\n-title: \"Znečistenie továrne na Taiwane: čo vedeli a rozhodli materské spoločnosti\"\n+title: \"Znečistenie továrne na Taiwane: čo vedeli materské spoločnosti\"\n seoTitle: \"Zodpovednosť materskej spoločnosti za znečistenie na Taiwane\"\n summary: \"V taiwanskom spore o znečistenie súd skúmal vedomosť, riadenie podniku, nečinnosť a prevody majetku na únik pred zodpovednosťou. Rozhodnutia prijaté po environmentálnej previerke môžu ukázať, ako skupina naložila so zisteným rizikom.\"\n published: \"2026-10-26\"\n"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSHA256": "ddbbc40f36421c9f07b1d3d90c4304f4b59d28156429332980d60857457209d2",
+      "afterSHA256": "ccf6a8391b9462f571188e5467f530b20e659bae1898cf6f9b6b63a12fb5f14d",
+      "changes": [
+        {
+          "old": "Zmluva v tejto veci určovala oznámenie odovzdania do štyroch mesiacov od získania povolenia na užívanie. Súčasný [bod 15 povinných podmienok predaja rozostavaných nehnuteľností](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) stanovuje šesť mesiacov od získania takého povolenia.",
+          "new": "Zmluva v tejto veci určovala oznámenie odovzdania do štyroch mesiacov od získania povolenia na užívanie, kým súčasný [bod 15 povinných podmienok predaja rozostavaných nehnuteľností](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) stanovuje šesť mesiacov od získania takého povolenia.",
+          "startBeforeEdit": 3980,
+          "reason": "날짜 경계 후보의 실제CV .437을 인정하고 15/15단어의 과거/현재 두 문장을 동일 기산점에 연결한 설명으로 재구성.4개월계약/6개월현행과사용허가취득·통지의무·링크 모두 유지.다음 짧은 통지대상 문장도 유지.정상날짜와조문·임계값 변경없음.",
+          "meaningPreserved": true
+        }
+      ],
+      "exactInverse": true,
+      "diff": "--- self-r2/918-taiwan-presale-mortgage-notice-handover-judgment.md\n+++ self-r3/918-taiwan-presale-mortgage-notice-handover-judgment.md\n@@ -39,7 +39,7 @@\n \n ## Zmluvné štyri mesiace a dnešná oznamovacia lehota\n \n-Zmluva v tejto veci určovala oznámenie odovzdania do štyroch mesiacov od získania povolenia na užívanie. Súčasný [bod 15 povinných podmienok predaja rozostavaných nehnuteľností](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) stanovuje šesť mesiacov od získania takého povolenia. Povinnosť smeruje k oznámeniu kupujúcemu. Nejde o bezpodmienečnú všeobecnú lehotu na dokončenie každého odovzdania.\n+Zmluva v tejto veci určovala oznámenie odovzdania do štyroch mesiacov od získania povolenia na užívanie, kým súčasný [bod 15 povinných podmienok predaja rozostavaných nehnuteľností](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) stanovuje šesť mesiacov od získania takého povolenia. Povinnosť smeruje k oznámeniu kupujúcemu. Nejde o bezpodmienečnú všeobecnú lehotu na dokončenie každého odovzdania.\n \n Od ktorého dokumentu teda počítať mesiace? Pri konkrétnom spore sú potrebné pravidlá použiteľné pri podpise zmluvy, samotná zmluva a deň získania povolenia na užívanie. K nim sa pripája obsah oznámenia a dôkaz, kedy ho kupujúci dostal. Dátum schválenia úveru tento začiatok automaticky nenahrádza.\n \n"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "7a9bda014da027ab57152f645835f429ce5802446c9badea6231d1beb8bf8569",
+      "afterSHA256": "7a9bda014da027ab57152f645835f429ce5802446c9badea6231d1beb8bf8569",
+      "changes": [],
+      "exactInverse": true,
+      "diff": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "001bd26dd4f6488e6e8a2413f401c1afa458652541b0396fcf248f29910fe3b1",
+      "afterSHA256": "001bd26dd4f6488e6e8a2413f401c1afa458652541b0396fcf248f29910fe3b1",
+      "changes": [],
+      "exactInverse": true,
+      "diff": ""
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "60cb072f1ef19f7a1391d22cb2973597b602076752b3f5b387fc81e0b98e8d92",
+      "afterSHA256": "60cb072f1ef19f7a1391d22cb2973597b602076752b3f5b387fc81e0b98e8d92",
+      "changes": [],
+      "exactInverse": true,
+      "diff": ""
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "edits": [
+    {
+      "filename": "taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "old_string": "Entreprenøren hadde fått en meklingsanbefaling om mer tid, men krevde senere penger ved voldgift uten en anbefaling om det endrede kravet. I Høyesteretts [forklaring til dom 106年度台上字第723號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693) var nettopp dette gapet avgjørende.",
+      "new_string": "Entreprenøren hadde fått en meklingsanbefaling om mer tid, men krevde senere penger ved voldgift uten at dette pengekravet hadde fått noen anbefaling eller noe forslag, et gap som var avgjørende i Høyesteretts [forklaring til dom 106年度台上字第723號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693).",
+      "reason": "Connect the missing recommendation or proposal for the money claim to the court's reasoning in a longer explanatory sentence, addressing the initial shared CV failure without dropping the citation.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-parent-company-pollution-liability-us-investor.md",
+      "old_string": "Nei. Domstolen opphevet og tilbakeviste delene som gjaldt 246 klagere, og avviste anker som gjaldt 262 klagere. Ulike deler av saken fikk dermed ulike utfall; avgjørelsen avsluttet ikke hele den tilknyttede tvisten.",
+      "new_string": "Nei. Domstolen opphevet og tilbakeviste delene som gjaldt 246 klagere, og ankene som gjaldt 262 klagere fikk ikke fremme. Ulike deler av saken fikk dermed ulike utfall; avgjørelsen avsluttet ikke hele den tilknyttede tvisten.",
+      "reason": "Describe the failure of the appeals concerning 262 claimants without suggesting an unprovided procedural-inadmissibility basis in the FAQ.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-presale-mortgage-notice-handover-judgment.md",
+      "old_string": "Ved den første inspeksjonen i juli samme år gjensto det fortsatt feil som skulle utbedres, og installasjonen av heisen i boligen var ikke fullført. Det betyr ikke at ingen heis var montert, men arbeidet var ikke ferdig. Domstolen avviste derfor utbyggerens påstand om at overtakelsen allerede var varslet.",
+      "new_string": "Ved den første inspeksjonen i juli samme år gjensto det fortsatt feil som skulle utbedres, og installasjonen av heisen i boligen var ikke fullført, slik at opplysningene om boligens tilstand ikke støttet utbyggerens påstand om at overtakelsen allerede var varslet.",
+      "reason": "Use one connected explanatory sentence for the inspection evidence and its consequence, addressing the initial shared CV failure while keeping the installation expressly incomplete.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "old_string": "Primærkontrollen av kildene ble utført 25.–26. oktober 2026. Enkelte nye oppslag mot domstolenes sider 26. oktober mislyktes, og lagrede offisielle svar fra 25. oktober ble brukt. Artikkelen bygger på domstolens offentlige forklaring og bekrefter ikke et senere ankeutfall. Rettsmidlene for offentlig ansatte og arbeidstakere må vurderes etter status og den konkrete avgjørelsen.",
+      "new_string": "Primærkontrollen av kildene ble utført 25.–26. oktober 2026. Artikkelen bygger på domstolens offentlige forklaring og bekrefter ikke et senere ankeutfall. Rettsmidlene for offentlig ansatte og arbeidstakere må vurderes etter status og den konkrete avgjørelsen.",
+      "reason": "Move webpage-retry implementation details out of the public article while retaining check dates, official court explanation, and appellate uncertainty.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-apartment-ev-charger-common-area-judgment.md",
+      "old_string": "Primærkontrollen av kildene ble utført 25.–26. oktober 2026. Enkelte nye oppslag mot domstolenes sider 26. oktober mislyktes, og lagrede offisielle svar fra 25. oktober ble brukt. Artikkelen beskriver Kaohsiung-dommen uten å bekrefte senere avgjørelser eller endelig rettskraft. Utstyrsplassering, bruksrettigheter og vedtekter må kontrolleres for hvert sameie.",
+      "new_string": "Primærkontrollen av kildene ble utført 25.–26. oktober 2026. Artikkelen beskriver Kaohsiung-dommen uten å bekrefte senere avgjørelser eller endelig rettskraft. Utstyrsplassering, bruksrettigheter og vedtekter må kontrolleres for hvert sameie.",
+      "reason": "Remove webpage-retry implementation details from the public source note while preserving check dates and the express limit on later proceedings and finality.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-online-game-coins-refund-judgment.md",
+      "old_string": "Kontrakten lot spilleren først kjøpe poeng og deretter bruke dem på spilltjenester eller varer. De gjenværende myntene ble brukt i selve spillrundene og hadde funksjon som sjetonger. Domstolen fant at de derfor ikke lenger var ubrukte betalte poeng som kunne refunderes etter kontrakten, og heller ikke spillavgifter operatøren hadde mottatt. Kravet om kontant refusjon fikk ikke fremme.",
+      "new_string": "Kontrakten lot spilleren først kjøpe poeng og deretter bruke dem på spilltjenester eller varer. Fordi de gjenværende myntene ble brukt som sjetonger i selve spillrundene, fant domstolen at de ikke lenger var ubrukte betalte poeng som kunne refunderes etter kontrakten, og heller ikke spillavgifter som operatøren hadde mottatt. Kravet om kontant refusjon fikk ikke fremme.",
+      "reason": "Connect the chip function to the court's legal classification in a longer sentence and retain the direct result separately, addressing the initial shared CV failure.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "old_string": "Den 12. juli 2017 avviste Høyesterett entreprenørens anke. Opphevelsen sto dermed fast, og domstolen opplyste uttrykkelig at saken var endelig avgjort. Det manglet både en avtalt og en lovbestemt voldgiftsavtale for den konkrete pengetvisten.",
+      "new_string": "Den 12. juli 2017 avviste Høyesterett entreprenørens anke. Opphevelsen sto fast. Domstolen opplyste uttrykkelig at saken var endelig avgjort. Det manglet både en avtalt og en lovbestemt voldgiftsavtale for den konkrete pengetvisten.",
+      "reason": "Give the annulment result in a direct short sentence before the separate finality and arbitration-basis explanations.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-parent-company-pollution-liability-us-investor.md",
+      "old_string": "Anker som gjaldt 262 klagere, ble avvist.",
+      "new_string": "Ankene som gjaldt 262 klagere fikk ikke fremme.",
+      "reason": "State the failure of the appeals concerning 262 claimants without adding a procedural basis or changing the disposition.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-presale-mortgage-notice-handover-judgment.md",
+      "old_string": "Primærkontrollen av kildene ble utført 25.–26. oktober 2026. Enkelte nye oppslag mot domstolenes sider 26. oktober mislyktes, og lagrede offisielle svar fra 25. oktober ble brukt. Dommen ble lest i utvalgte deler av den offisielle samlingen. Artikkelen erstatter ikke en individuell vurdering av betaling, avvisning av overtakelse eller erstatningskrav.",
+      "new_string": "Primærkontrollen av kildene ble utført 25.–26. oktober 2026. Gjengivelsen av dommen bygger på relevante sider i den offisielle samlingen. Artikkelen erstatter ikke en individuell vurdering av betaling, avvisning av overtakelse eller erstatningskrav.",
+      "reason": "Remove retrieval implementation details and describe the supplied selected-page provenance as the basis of the account without claiming new judgment reading.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-online-game-coins-refund-judgment.md",
+      "old_string": "Primærkontrollen av kildene ble utført 25.–26. oktober 2026. Enkelte nye oppslag mot domstolenes sider 26. oktober mislyktes, og lagrede offisielle svar fra 25. oktober ble brukt. Dommen ble lest i utvalgte deler av den offisielle samlingen. Andre spills poeng, gjenstander og oppsigelsesgrunner må vurderes etter deres faktiske funksjon og kontrakt.",
+      "new_string": "Primærkontrollen av kildene ble utført 25.–26. oktober 2026. Gjengivelsen av dommen bygger på relevante sider i den offisielle samlingen. Andre spills poeng, gjenstander og oppsigelsesgrunner må vurderes etter deres faktiske funksjon og kontrakt.",
+      "reason": "Remove retrieval implementation details and retain reliance on relevant official-collection pages without suggesting a new full-document reading.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "old_string": "Primærkontrollen av kildene ble utført 25.–26. oktober 2026. Enkelte nye oppslag mot domstolenes sider 26. oktober mislyktes; lagrede offisielle svar fra 25. oktober ble derfor brukt. Artikkelen behandler én vei til voldgift og avgjør ikke forum eller frister for en bestemt kontrakt.",
+      "new_string": "Primærkontrollen av kildene ble utført 25.–26. oktober 2026. Artikkelen behandler én vei til voldgift og avgjør ikke forum eller frister for en bestemt kontrakt.",
+      "reason": "Move webpage-retry implementation details out of the public article while retaining source-check dates and the article's legal scope.",
+      "meaning_preserved": true
+    },
+    {
+      "filename": "taiwan-parent-company-pollution-liability-us-investor.md",
+      "old_string": "Primærkontrollen av de offisielle kildene ble utført 25.–26. oktober 2026. Enkelte nye oppslag mot domstolenes sider 26. oktober mislyktes, slik at lagrede offisielle svar fra 25. oktober ble brukt. Artikkelen bygger på Høyesteretts forklaring av én identifisert avgjørelse fra 2018 og den nåværende lovbestemmelsen; den er verken en historikk over alle tilknyttede saker eller en vurdering av en bestemt investors ansvar.",
+      "new_string": "Primærkontrollen av de offisielle kildene ble utført 25.–26. oktober 2026. Artikkelen bygger på Høyesteretts forklaring av én identifisert avgjørelse fra 2018 og den nåværende lovbestemmelsen; den er verken en historikk over alle tilknyttede saker eller en vurdering av en bestemt investors ansvar.",
+      "reason": "Remove retrieval implementation details from the public note while retaining check dates, official court explanation, current statute, and liability scope.",
+      "meaning_preserved": true
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "atUTC": "2026-10-26T10:34:48.887036+00:00",
+  "sourceSHA256": "d3ed3720492f1acc5703d8e361373eb9f958105da46034c064a17564e7ebfc55",
+  "runs": [
+    {
+      "label": "no-map",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "--lang",
+        "pl"
+      ],
+      "actualExit": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/918-taiwan-presale-mortgage-notice-handover-judgment.md: ERROR measurement unavailable: Polish fronted date before capital text has an ambiguous sentence boundary; a reviewed, source-SHA-bound Polish sentence map is required\n",
+      "stderr": ""
+    },
+    {
+      "label": "stale-r3-map",
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "--lang",
+        "pl",
+        "--sentences",
+        "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/maps-approved/918-taiwan-presale-mortgage-notice-handover-judgment.sentences.json"
+      ],
+      "actualExit": 2,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/918-taiwan-presale-mortgage-notice-handover-judgment.md: ERROR measurement unavailable: stale Polish sentence map: /Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/maps-approved/918-taiwan-presale-mortgage-notice-handover-judgment.sentences.json\n",
+      "stderr": ""
+    }
+  ]
+}

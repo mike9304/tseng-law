@@ -1,0 +1,554 @@
+{
+  "atUTC": "2026-10-26T08:35:47.789607+00:00",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-nb/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSHA256": "4e56cf9fae3406026a2d92a9a6580255541324ddfc4697e81dba01b559e8c3be",
+      "afterSHA256": "a72f685bc3a416036ac56d38f0c9d4152ab7b9931179056db0307dff7ac6f95c",
+      "oldUnits": 39,
+      "newUnits": 40,
+      "unchangedUnits": 37,
+      "delta": [
+        {
+          "op": "replace",
+          "old": [
+            "En voldgiftsavgjørelse på NT$44 417 150 ble opphevet etter søksmål fra en entreprenør som hadde en sykehuskontrakt i Taiwan."
+          ],
+          "new": [
+            "NT$44 417 150 var beløpet en entreprenør ble tilkjent ved voldgift om en sykehuskontrakt i Taiwan.",
+            "Den offentlige oppdragsgiveren gikk til sak og fikk voldgiftsavgjørelsen opphevet."
+          ]
+        },
+        {
+          "op": "replace",
+          "old": [
+            "Den 12. juli 2017 avviste Høyesterett entreprenørens anke."
+          ],
+          "new": [
+            "Den 12. juli 2017 forkastet Høyesterett entreprenørens anke."
+          ]
+        }
+      ],
+      "changedParagraphs": [
+        {
+          "index": 1,
+          "opener": "nt",
+          "sentences": [
+            {
+              "text": "NT$44 417 150 var beløpet en entreprenør ble tilkjent ved voldgift om en sykehuskontrakt i Taiwan.",
+              "units": 17
+            },
+            {
+              "text": "Den offentlige oppdragsgiveren gikk til sak og fikk voldgiftsavgjørelsen opphevet.",
+              "units": 10
+            },
+            {
+              "text": "Entreprenøren hadde fått en meklingsanbefaling om mer tid, men krevde senere penger ved voldgift uten at dette pengekravet hadde fått noen anbefaling eller noe forslag, et gap som var avgjørende i Høyesteretts forklaring til dom 106年度台上字第723號.",
+              "units": 36
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "den",
+          "sentences": [
+            {
+              "text": "Den 12. juli 2017 forkastet Høyesterett entreprenørens anke.",
+              "units": 8
+            },
+            {
+              "text": "Opphevelsen sto fast.",
+              "units": 3
+            },
+            {
+              "text": "Domstolen opplyste uttrykkelig at saken var endelig avgjort.",
+              "units": 8
+            },
+            {
+              "text": "Det manglet både en avtalt og en lovbestemt voldgiftsavtale for den konkrete pengetvisten.",
+              "units": 13
+            }
+          ]
+        }
+      ],
+      "headingsBefore": [
+        "Penger, mer tid og deretter penger igjen",
+        "Den nåværende lovbestemte veien har klare vilkår",
+        "Planlagte amerikanske prosjekter gjør dokumentrekken aktuell"
+      ],
+      "headingsAfter": [
+        "Penger, mer tid og deretter penger igjen",
+        "Den nåværende lovbestemte veien har klare vilkår",
+        "Planlagte taiwanske anskaffelser og amerikanske leverandører"
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-nb/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSHA256": "7924cb9eb1f80d7289ef6d50b9b1b930f5a118586694963d181207465f1e0620",
+      "afterSHA256": "c4149a6ea6eeb51e16dc36ca8835def4c673fca03b988d6ba60df82725870fef",
+      "oldUnits": 44,
+      "newUnits": 42,
+      "unchangedUnits": 35,
+      "delta": [
+        {
+          "op": "replace",
+          "old": [
+            "Rekkefølgjen er relevant for juridisk arbeid med oppkjøp.",
+            "Rapportens mottakerliste kan vise hvem som kjente til problemet.",
+            "Styrepapirer og operasjonelle instrukser kan vise hvem som kunne bestemme tiltakene.",
+            "Senere godkjenninger av overføringer må kanskje leses sammen med begge."
+          ],
+          "new": [
+            "Rapportens mottakerliste kan vise hvem som kjente til problemet, mens styrepapirer og operasjonelle instrukser kan vise hvem som kunne bestemme tiltakene.",
+            "Senere godkjenninger av overføringer kan måtte ses i sammenheng med begge dokumenttypene."
+          ]
+        },
+        {
+          "op": "replace",
+          "old": [
+            "For 246 klagere opphevet Høyesterett de relevante delene og tilbakeviste dem til ny behandling.",
+            "Ankene som gjaldt 262 klagere fikk ikke fremme.",
+            "Tilbakevisningen omfattet blant annet mangler i vurderingen av skade, bevis og adgangen til å fremme krav."
+          ],
+          "new": [
+            "For 246 klagere opphevet Høyesterett de relevante delene av avgjørelsen og sendte dem tilbake til ny behandling.",
+            "Ankene som gjaldt 262 klagere, førte ikke frem.",
+            "Ny behandling var nødvendig blant annet på grunn av mangler i vurderingen av skade, bevis og adgangen til å fremme krav."
+          ]
+        },
+        {
+          "op": "replace",
+          "old": [
+            "Tilbakevisningen avgjorde ikke at alle berørte manglet krav.",
+            "Avgjørelsen om anker som gjaldt 262 klagere, betyr heller ikke at alle kravene deres eller hele den bredere tvisten var avgjort, og teksten sier ikke at alle anker var fremsatt bare av disse klagerne."
+          ],
+          "new": [
+            "At disse delene ble sendt tilbake til ny behandling, innebar ikke at alle berørte manglet krav.",
+            "Avgjørelsen om anker som gjaldt 262 klagere, betyr heller ikke at alle kravene deres eller hele den bredere tvisten var avgjort."
+          ]
+        }
+      ],
+      "changedParagraphs": [
+        {
+          "index": 4,
+          "opener": "rapportens",
+          "sentences": [
+            {
+              "text": "Rapportens mottakerliste kan vise hvem som kjente til problemet, mens styrepapirer og operasjonelle instrukser kan vise hvem som kunne bestemme tiltakene.",
+              "units": 21
+            },
+            {
+              "text": "Senere godkjenninger av overføringer kan måtte ses i sammenheng med begge dokumenttypene.",
+              "units": 12
+            },
+            {
+              "text": "Når dokumentene holdes i adskilte arbeidsspor, blir konsernets egne beslutninger vanskeligere å rekonstruere.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "for",
+          "sentences": [
+            {
+              "text": "For 246 klagere opphevet Høyesterett de relevante delene av avgjørelsen og sendte dem tilbake til ny behandling.",
+              "units": 17
+            },
+            {
+              "text": "Ankene som gjaldt 262 klagere, førte ikke frem.",
+              "units": 8
+            },
+            {
+              "text": "Ny behandling var nødvendig blant annet på grunn av mangler i vurderingen av skade, bevis og adgangen til å fremme krav.",
+              "units": 21
+            },
+            {
+              "text": "Tallene og avgrensningene fremgår av domstolens sammendrag av avgjørelsen.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "det",
+          "sentences": [
+            {
+              "text": "Det delte utfallet hindrer en altfor vid lesning.",
+              "units": 8
+            },
+            {
+              "text": "At disse delene ble sendt tilbake til ny behandling, innebar ikke at alle berørte manglet krav.",
+              "units": 16
+            },
+            {
+              "text": "Avgjørelsen om anker som gjaldt 262 klagere, betyr heller ikke at alle kravene deres eller hele den bredere tvisten var avgjort.",
+              "units": 21
+            },
+            {
+              "text": "Et transaksjonsteam som vurderer historisk eksponering, må identifisere de konkrete prosessene og deres status før en forpliktelse anslås.",
+              "units": 18
+            },
+            {
+              "text": "En overskrift om én domsdato er ikke nok.",
+              "units": 8
+            }
+          ]
+        }
+      ],
+      "headingsBefore": [
+        "Kunnskap, kontroll og bevegelser i eiendelene",
+        "Dommen hadde delt utfall",
+        "Begrenset ansvar og vilkårene for unntak",
+        "En aktuell investeringsplan trenger dokumenterte tiltak"
+      ],
+      "headingsAfter": [
+        "Kunnskap, kontroll og bevegelser i eiendelene",
+        "Dommen hadde delt utfall",
+        "Begrenset ansvar og vilkårene for unntak",
+        "En aktuell investeringsplan trenger dokumenterte tiltak"
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-nb/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSHA256": "8ac7ad4fc347c61a6f3704a9fd3219c88b38250bfd07d8eb5b406a3e20c1887f",
+      "afterSHA256": "dffad3771742df0e504cf0169df8278a858986f7189a74f7c7ca5f968e6ff4cf",
+      "oldUnits": 46,
+      "newUnits": 46,
+      "unchangedUnits": 44,
+      "delta": [
+        {
+          "op": "replace",
+          "old": [
+            "Domstolen avviste utbyggerens anke og det tilleggskravet som ble fremsatt under anken, som ubegrunnede."
+          ],
+          "new": [
+            "Domstolen forkastet utbyggerens anke og tok ikke tilleggskravet fremsatt under anken til følge, ettersom begge var ubegrunnede."
+          ]
+        },
+        {
+          "op": "replace",
+          "old": [
+            "Påstanden om betalingsmislighold fikk derfor ikke fremme."
+          ],
+          "new": [
+            "Påstanden om betalingsmislighold førte derfor ikke frem."
+          ]
+        }
+      ],
+      "changedParagraphs": [
+        {
+          "index": 2,
+          "opener": "taiwan",
+          "sentences": [
+            {
+              "text": "Taiwan High Court, Taichung-avdelingen, avgjorde saken 109年度上易字第289號 den 9. februar 2022.",
+              "units": 11
+            },
+            {
+              "text": "Domstolen forkastet utbyggerens anke og tok ikke tilleggskravet fremsatt under anken til følge, ettersom begge var ubegrunnede.",
+              "units": 17
+            },
+            {
+              "text": "Utbyggeren måtte fortsatt betale forsinkelsesrenter.",
+              "units": 5
+            },
+            {
+              "text": "Dommen oppga at videre anke ikke var tillatt.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "hvilken",
+          "sentences": [
+            {
+              "text": "Hvilken forpliktelse ble oppfylt da lånet kom på plass?",
+              "units": 9
+            },
+            {
+              "text": "Domstolen holdt lån, betaling og overtakelse fra hverandre og lot ikke lånebrevet erstatte overtakelsesvarselet.",
+              "units": 14
+            },
+            {
+              "text": "Utbyggeren hevdet at kjøperen skulle ha betalt hele beløpet etter brevet.",
+              "units": 11
+            },
+            {
+              "text": "Sammenligningen med avdragsplanen viste derimot at kjøperen hadde betalt hver termin etter avtalen og hadde fullført betalingen før overtakelsen.",
+              "units": 19
+            },
+            {
+              "text": "Påstanden om betalingsmislighold førte derfor ikke frem.",
+              "units": 7
+            }
+          ]
+        }
+      ],
+      "headingsBefore": [
+        "Brevet gjaldt lån, og boligen var ikke klar",
+        "Fire måneder i kontrakten og seks måneder i dagens regler",
+        "Bankfremdrift og boligens tilstand hører til samme tidslinje"
+      ],
+      "headingsAfter": [
+        "Brevet gjaldt lån, og boligen var ikke klar",
+        "Fire måneder i kontrakten og seks måneder i dagens regler",
+        "Bankfremdrift og boligens tilstand hører til samme tidslinje"
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-nb/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "f3fe7f818a8bc84de97cd2fc27250748c72541b3055cfaecb65c3675fd2a0f81",
+      "afterSHA256": "e3df80405b1266e4940c047945947fc12a4be5247491eb13b410b52d18d4804b",
+      "oldUnits": 44,
+      "newUnits": 44,
+      "unchangedUnits": 43,
+      "delta": [
+        {
+          "op": "replace",
+          "old": [
+            "Denne rekkefølgjen gjorde det etter domstolens syn vanskelig for komiteen å utføre en reell vurdering."
+          ],
+          "new": [
+            "Denne rekkefølgen gjorde det etter domstolens syn vanskelig for komiteen å utføre en reell vurdering."
+          ]
+        }
+      ],
+      "changedParagraphs": [
+        {
+          "index": 3,
+          "opener": "ifølge",
+          "sentences": [
+            {
+              "text": "Ifølge domstolens publiserte begrunnelse uttalte lederen av den overordnede myndigheten offentlig at det ville bli gitt to store anmerkninger før tjenestevurderingskomiteen diskuterte saken.",
+              "units": 23
+            },
+            {
+              "text": "Den overordnede myndigheten holdt deretter møte før den underordnede enheten behandlet saken.",
+              "units": 12
+            },
+            {
+              "text": "Denne rekkefølgen gjorde det etter domstolens syn vanskelig for komiteen å utføre en reell vurdering.",
+              "units": 15
+            }
+          ]
+        }
+      ],
+      "headingsBefore": [
+        "Kunne behandlingen fortsatt endre utfallet?",
+        "Private arbeidsgivere må bruke arbeidsmiljøreglene",
+        "Undersøkelsesrapporten må vise hvorfor bevisene ble tillagt vekt"
+      ],
+      "headingsAfter": [
+        "Kunne behandlingen fortsatt endre utfallet?",
+        "Private arbeidsgivere må bruke arbeidsmiljøreglene",
+        "Undersøkelsesrapporten må vise hvorfor bevisene ble tillagt vekt"
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-nb/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "973ba3ba4375b5b789d32f0ffd246e0d15aeb8482d8cf92eb3be3267579806a8",
+      "afterSHA256": "9d7d42b506b9f29bd34097c98ea2fca5a8702adf86ed7aa306c2fcdbd2b8da86",
+      "oldUnits": 46,
+      "newUnits": 46,
+      "unchangedUnits": 43,
+      "delta": [
+        {
+          "op": "replace",
+          "old": [
+            "Domstolens vurdering strakte seg derfor langt utenfor linjene på parkeringsdekke."
+          ],
+          "new": [
+            "Domstolens vurdering strakte seg derfor langt utenfor linjene på parkeringsdekket."
+          ]
+        },
+        {
+          "op": "replace",
+          "old": [
+            "Taiwan High Court, Kaohsiung-avdelingen, avviste den 22. juni 2022 beboerens anke i saken 111年度上字第132號."
+          ],
+          "new": [
+            "Taiwan High Court, Kaohsiung-avdelingen, forkastet den 22. juni 2022 beboerens anke i saken 111年度上字第132號."
+          ]
+        },
+        {
+          "op": "replace",
+          "old": [
+            "Domstolen slo nøytralt fast at denne saken ikke falt inn under den bestemmelsen."
+          ],
+          "new": [
+            "Domstolen slo fast at denne saken ikke falt inn under den bestemmelsen."
+          ]
+        }
+      ],
+      "changedParagraphs": [
+        {
+          "index": 1,
+          "opener": "kan",
+          "sentences": [
+            {
+              "text": "Kan laderen plasseres fritt når parkeringsplassen allerede er til beboerens bruk?",
+              "units": 11
+            },
+            {
+              "text": "En beboer monterte ladeboksen på veggen bak plassen, førte kabler over himlingen og koblet dem til et felles elskap og sin egen måler.",
+              "units": 23
+            },
+            {
+              "text": "Domstolens vurdering strakte seg derfor langt utenfor linjene på parkeringsdekket.",
+              "units": 10
+            },
+            {
+              "text": "Se domstolens offisielle domstekst.",
+              "units": 4
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "taiwan",
+          "sentences": [
+            {
+              "text": "Taiwan High Court, Kaohsiung-avdelingen, forkastet den 22. juni 2022 beboerens anke i saken 111年度上字第132號.",
+              "units": 14
+            },
+            {
+              "text": "Kravet om å fjerne utstyret og gjenopprette den tidligere tilstanden sto fast.",
+              "units": 12
+            },
+            {
+              "text": "Domstolen fant at installasjonen lå i felles vegger, himling og elskap, og at beboeren ikke hadde innhentet nødvendig samtykke på forhånd.",
+              "units": 21
+            },
+            {
+              "text": "Om det foreligger senere avgjørelser eller endelig rettskraft, er ikke bekreftet her.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "artikkel",
+          "sentences": [
+            {
+              "text": "Artikkel 6, første ledd nr. 4, regulerer også kabel- og røranlegg og nødvendig bruk av fellesarealer.",
+              "units": 16
+            },
+            {
+              "text": "Domstolen slo fast at denne saken ikke falt inn under den bestemmelsen.",
+              "units": 12
+            },
+            {
+              "text": "Begrunnelsen bygget på de konkrete arbeidsstedene og vedtektene.",
+              "units": 8
+            },
+            {
+              "text": "Den gir ikke grunnlag for å fastslå at samme avstemningsprosedyre alltid gjelder for enhver lader på en parkeringsplass.",
+              "units": 18
+            },
+            {
+              "text": "De sentrale punktene står i dommens femte og sjette avsnitt.",
+              "units": 10
+            }
+          ]
+        }
+      ],
+      "headingsBefore": [
+        "Hvilke fellesarealer ble brukt?",
+        "Tilbudet bør følges av en komplett kabelrute"
+      ],
+      "headingsAfter": [
+        "Hvilke fellesarealer ble brukt?",
+        "Tilbudet bør følges av en komplett kabelrute"
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-nb/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "3ad11e81ca25562fed802add762e9e174e7c283563d473fe3167b8fee4851bf5",
+      "afterSHA256": "3fae184bc6a474ce05d9f4d6ad0ed39e992a3c1db00091213bff239a1be0c96b",
+      "oldUnits": 50,
+      "newUnits": 50,
+      "unchangedUnits": 47,
+      "delta": [
+        {
+          "op": "replace",
+          "old": [
+            "Spillerens anke ble avvist, og dommen oppga at videre anke ikke var tillatt."
+          ],
+          "new": [
+            "Spillerens anke førte ikke frem, og dommen oppga at videre anke ikke var tillatt."
+          ]
+        },
+        {
+          "op": "replace",
+          "old": [
+            "Fordi de gjenværende myntene ble brukt som sjetonger i selve spillrundene, fant domstolen at de ikke lenger var ubrukte betalte poeng som kunne refunderes etter kontrakten, og heller ikke spillavgifter som operatøren hadde mottatt.",
+            "Kravet om kontant refusjon fikk ikke fremme."
+          ],
+          "new": [
+            "Fordi de gjenværende myntene hadde funksjon som sjetonger i selve spillrundene, fant domstolen at de ikke lenger var ubrukte betalte poeng som kunne refunderes etter kontrakten, og heller ikke spillavgifter som operatøren hadde mottatt.",
+            "Kravet om kontant refusjon førte ikke frem."
+          ]
+        }
+      ],
+      "changedParagraphs": [
+        {
+          "index": 2,
+          "opener": "keelung",
+          "sentences": [
+            {
+              "text": "Keelung District Court avgjorde saken 109年度消簡上字第1號 den 13. september 2021.",
+              "units": 10
+            },
+            {
+              "text": "Spillerens anke førte ikke frem, og dommen oppga at videre anke ikke var tillatt.",
+              "units": 14
+            },
+            {
+              "text": "Beløpet var spillerens krav, ikke en tilkjennelse.",
+              "units": 7
+            },
+            {
+              "text": "Domstolen undersøkte myntenes faktiske funksjon og refusjonsklausulen uten å gi et generelt forbud mot refusjon av virtuelle verdier.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "kontrakten",
+          "sentences": [
+            {
+              "text": "Kontrakten lot spilleren først kjøpe poeng og deretter bruke dem på spilltjenester eller varer.",
+              "units": 14
+            },
+            {
+              "text": "Fordi de gjenværende myntene hadde funksjon som sjetonger i selve spillrundene, fant domstolen at de ikke lenger var ubrukte betalte poeng som kunne refunderes etter kontrakten, og heller ikke spillavgifter som operatøren hadde mottatt.",
+              "units": 34
+            },
+            {
+              "text": "Kravet om kontant refusjon førte ikke frem.",
+              "units": 7
+            }
+          ]
+        }
+      ],
+      "headingsBefore": [
+        "Hva ble myntene brukt til etter innkjøpet?",
+        "Dagens regler beskytter ubrukte poeng",
+        "Hvilken del av historikken mangler på et skjermbilde?"
+      ],
+      "headingsAfter": [
+        "Hva ble myntene brukt til etter innkjøpet?",
+        "Dagens regler beskytter ubrukte poeng",
+        "Hvilken del av historikken mangler på et skjermbilde?"
+      ]
+    }
+  ],
+  "oldTotal": 269,
+  "newTotal": 268,
+  "unchangedTotal": 249,
+  "changedParagraphs": 13,
+  "readScope": "All old269 units read in R1; all changed R3 paragraphs and changed heading are displayed for direct targeted reading; FAQ and summaries separate"
+}

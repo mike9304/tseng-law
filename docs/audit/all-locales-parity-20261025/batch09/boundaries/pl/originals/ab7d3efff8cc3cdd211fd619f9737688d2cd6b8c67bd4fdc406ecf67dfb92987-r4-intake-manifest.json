@@ -1,0 +1,390 @@
+{
+  "atUTC": "2026-10-26T10:33:13.663486+00:00",
+  "execution": {
+    "primaryRecoveredSession": 62060,
+    "actualExitCodeReportedByPrimary": 0,
+    "independentReviewerDidNotRunKimi": true,
+    "startRecord": {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r4-run-start.json",
+      "sha256": "dd627fb64669bcaf8cbcc05d63e9e4608ec4ad7cc6d64dbc1d74746bb490384a"
+    }
+  },
+  "inputGuard": [
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/TASK-R4.md",
+      "expectedSHA256": "37329538bb5e6c2a2d60deaa4ee3897e3cb40fe39cb233b8f7f50b516c7a44c5",
+      "sha256": "37329538bb5e6c2a2d60deaa4ee3897e3cb40fe39cb233b8f7f50b516c7a44c5",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/COLUMN-VOICE-RULE.md",
+      "expectedSHA256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/EDITORIAL-VOICE.md",
+      "expectedSHA256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/LESSONS.md",
+      "expectedSHA256": "adcb20ff50cd7cbb682fda48efbb253b1f152857cc4ecd52c0c3658d5fda157b",
+      "sha256": "adcb20ff50cd7cbb682fda48efbb253b1f152857cc4ecd52c0c3658d5fda157b",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/SENTENCE-VARIETY-RULE.md",
+      "expectedSHA256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "expectedSHA256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "expectedSHA256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/recent-pl-706-taiwan-arc-renewal-changes-reentry.md",
+      "expectedSHA256": "1e6671e104c15ff573fb69434280258c57583e77d3a30f999da38d63d2e038bc",
+      "sha256": "1e6671e104c15ff573fb69434280258c57583e77d3a30f999da38d63d2e038bc",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/recent-pl-940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "expectedSHA256": "06813fc5597240ed39d513e1e88df483dec85cd8f277f89d1baaa41003b6f4ca",
+      "sha256": "06813fc5597240ed39d513e1e88df483dec85cd8f277f89d1baaa41003b6f4ca",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/recent-pl-941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "expectedSHA256": "17382511050d47b947e9ff81276b2b5f8cb5999ebe62aa86f679eb0546c580e7",
+      "sha256": "17382511050d47b947e9ff81276b2b5f8cb5999ebe62aa86f679eb0546c580e7",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/shared-feedback-r2.json",
+      "expectedSHA256": "f764fd99da288c152cf2bc4de6915b73cc78ef5d474f767967e8645661eed398",
+      "sha256": "f764fd99da288c152cf2bc4de6915b73cc78ef5d474f767967e8645661eed398",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "expectedSHA256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "expectedSHA256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "expectedSHA256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "expectedSHA256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/TASK.md",
+      "expectedSHA256": "8b10926478b443af15cc2176f9d046308e204b7f60daf4ac2bcc8d71539c7e38",
+      "sha256": "8b10926478b443af15cc2176f9d046308e204b7f60daf4ac2bcc8d71539c7e38",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/TASK-R2.md",
+      "expectedSHA256": "5c8dff3d3bc5e67b2ffd9f0261f4541d0ce6f7be67ce184754296ca435612601",
+      "sha256": "5c8dff3d3bc5e67b2ffd9f0261f4541d0ce6f7be67ce184754296ca435612601",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/TASK-R3.md",
+      "expectedSHA256": "a95df2ac10b667174afe4b3a7feabdad72047d39899f9aeec076cd87648f471b",
+      "sha256": "a95df2ac10b667174afe4b3a7feabdad72047d39899f9aeec076cd87648f471b",
+      "unchanged": true
+    }
+  ],
+  "previousKimiRecordsUnchanged": [
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "67e1a4bd4123dd6de01e1a0e66586cf6d22903063ffb568b999a24301b6c536f",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "a48b8191ba92a6a386c2108fd12c6966484ef86fd2af8941b40c3ae1a38e9628",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "1ae0a5c6dd50d985378f533d266248349d164314bd39cfdf13fefd4b26ef5b30",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/921-taiwan-online-game-coins-refund-judgment.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "c29911404cc6477949d269efbbc26946512b5fd477ded9ed1a4f655145c3551b",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/author-review-r2.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/author-review-r2.md",
+      "sha256": "34595b187df996191970fc66424c79063f3e27345a99682a72926d2c7beb4d4f",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/author-review-r3.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/author-review-r3.md",
+      "sha256": "c46e2cf23769e498bf1ba3b34f4032819d86a399f09b499ece8e80b9a797c37b",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/author-review.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/author-review.md",
+      "sha256": "29b3dd47554c933c5cd008a50b6bd47f3258222fec837adcf314f4357f087c40",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/edits-r2.json",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/edits-r2.json",
+      "sha256": "f739b9463aeb256846e061dda77ce76c45641d3f89eb6ed31cae7edc5c17ab6c",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/edits-r3.json",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/edits-r3.json",
+      "sha256": "3ad0426b76b5217a988bf01600f7d0ccd5615d80228510105a8deffd1f46c6b1",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/initial-preserved/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/initial-preserved/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "b1a2647e93e5fa55dc3036c781bd6a16fbfbfd28d8ef9fa5babf8fa7adc5f3d0",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/initial-preserved/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/initial-preserved/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "4efa898d3eb097497d91354ab6f5e0f2be2c1f537d94145485a60cbd00b59014",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/initial-preserved/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/initial-preserved/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "f12c1c38e60d4025937be07cf8e1655246549a2e8444b8e0306552f463090f69",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/initial-preserved/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/initial-preserved/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "359b6773f449085ba6264eb0a548df07efdb6ab6c76ee3eb8166a76d31d079f9",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/initial-preserved/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/initial-preserved/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "20ba1a7323d4d0da453a5f4084b2c53964a984538e6f46d24c5447d1c85dea64",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/initial-preserved/921-taiwan-online-game-coins-refund-judgment.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/initial-preserved/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "cf3eb017f24a719b0c7cab4a41633236a62efea1a90bd1befca8820e9cd922aa",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/r2-preserved/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/r2-preserved/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/r2-preserved/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/r2-preserved/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "26a51d48c0db0e4e1a4eb7ac421ddc61f3f6ba7108bdf709aafa6c6ecf236da7",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/r2-preserved/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/r2-preserved/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "5a96879936dc4fa4e61226afd0cacd0b089177044945f8cc85cf996bf374c567",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/r2-preserved/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/r2-preserved/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "effc9883d2591a5ecd11ed8764279e7d815575db49bbd9dec0faeb56f81b62e7",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/r2-preserved/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/r2-preserved/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "452cb645981a3c790542f9c219c65eea879bf3d1ba584bd2f22f3edcb1aaf2da",
+      "unchanged": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/output/r2-preserved/921-taiwan-online-game-coins-refund-judgment.md",
+      "reference": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r3/r2-preserved/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "bdebbbdd5368437bd80c9630f8b5ca3abd9272dec4c2757e0c3ea739dcd61fae",
+      "unchanged": true
+    }
+  ],
+  "previousIndependentRecordsUnchanged": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/pl-independent-r2.md",
+      "sha256": "8fd049376e4c0a587131d5b40ac9dea1172306523ac7d32f9d468453cc32781a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/pl-independent-r3.md",
+      "sha256": "764893baa250d37c15793431094d1f3f133106fe20c459ba9d1a230212a3c9d0"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-independent-r3-manifest.json",
+      "sha256": "8384c14f64c06370b5c5ab4b14f67f45f6861f731d43956dee84ed979b8cf66d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-independent-r3-reviewed-boundaries.json",
+      "sha256": "75763fa56ec70c53e9263cca7cb9c1e796c8d954c987ebe17ad36ca9636b513f"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-independent-r3-boundary-approval.json",
+      "sha256": "ec3e7f0db7c6bd3d58fd84695dbb3be6ba968befa574c92363ad3fdca964f937"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-intake-manifest.json",
+      "sha256": "ee23ce6892ccd179f20721f68d15e1c0bda0015d9aa40b4482d8a9f24b02a902"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r3-intake-manifest.json",
+      "sha256": "b15c6b2568a6af7c86f8f1f9c9ae6850252e18db1d140720bc691d90dea96ae7"
+    }
+  ],
+  "sourceGuard": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "r3SHA256": "a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791",
+      "unchangedOtherFive": true,
+      "r4SHA256": "a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "r3SHA256": "67e1a4bd4123dd6de01e1a0e66586cf6d22903063ffb568b999a24301b6c536f",
+      "unchangedOtherFive": true,
+      "r4SHA256": "67e1a4bd4123dd6de01e1a0e66586cf6d22903063ffb568b999a24301b6c536f"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "r3SHA256": "8d106bbd5e0328f445cfdcd7cf5255efd498a78422550eb498158381411d32b3",
+      "unchangedOtherFive": false,
+      "r4SHA256": "d3ed3720492f1acc5703d8e361373eb9f958105da46034c064a17564e7ebfc55"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "r3SHA256": "a48b8191ba92a6a386c2108fd12c6966484ef86fd2af8941b40c3ae1a38e9628",
+      "unchangedOtherFive": true,
+      "r4SHA256": "a48b8191ba92a6a386c2108fd12c6966484ef86fd2af8941b40c3ae1a38e9628"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "r3SHA256": "1ae0a5c6dd50d985378f533d266248349d164314bd39cfdf13fefd4b26ef5b30",
+      "unchangedOtherFive": true,
+      "r4SHA256": "1ae0a5c6dd50d985378f533d266248349d164314bd39cfdf13fefd4b26ef5b30"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/921-taiwan-online-game-coins-refund-judgment.md",
+      "r3SHA256": "c29911404cc6477949d269efbbc26946512b5fd477ded9ed1a4f655145c3551b",
+      "unchangedOtherFive": true,
+      "r4SHA256": "c29911404cc6477949d269efbbc26946512b5fd477ded9ed1a4f655145c3551b"
+    }
+  ],
+  "rawOutputFiles": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r4/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "d3ed3720492f1acc5703d8e361373eb9f958105da46034c064a17564e7ebfc55"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r4/author-review-r4.md",
+      "sha256": "6687dd67f35da5e22271b117da7dcbb999d3babee9217aeae97127bcaf71c68d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r4/edits-r4.json",
+      "sha256": "6ab7ed708c1d930557246ebf7ad35307a21cc67a926b0074aef3c3c26541dca7"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r4/r4-preserved/918-before-r4.md",
+      "sha256": "8d106bbd5e0328f445cfdcd7cf5255efd498a78422550eb498158381411d32b3"
+    }
+  ],
+  "exactChanges": [
+    {
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "old_string": "9 lutego 2022 r. oddział Tajwańskiego Sądu Wysokiego w Taichungu wydał wyrok 109年度上易字第289號. Oddalił jako nieuzasadnione apelację dewelopera i rozszerzone powództwo, utrzymując obowiązek zapłaty odsetek za opóźnienie.",
+      "new_string": "9 lutego 2022 r. oddział Tajwańskiego Sądu Wysokiego w Taichungu wydał wyrok 109年度上易字第289號, którym oddalił jako nieuzasadnione apelację dewelopera i rozszerzone powództwo, utrzymując obowiązek zapłaty odsetek za opóźnienie.",
+      "reason": "Połączono datę i oznaczenie wyroku z jego rozstrzygnięciem w jedno naturalne zdanie, zachowując oddalenie merytoryczne i odsetki za opóźnienie.",
+      "meaning_preserved": true
+    },
+    {
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "old_string": "Obecny [punkt 15 obowiązkowych postanowień wzorcowej umowy sprzedaży lokalu przed budową](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) nakazuje sprzedawcy zawiadomić nabywcę o wydaniu w ciągu sześciu miesięcy od uzyskania pozwolenia na użytkowanie. Określa także obowiązki dotyczące napraw, rozliczenia płatności i przekazania dokumentów przy wydaniu.",
+      "new_string": "Obecny [punkt 15 obowiązkowych postanowień wzorcowej umowy sprzedaży lokalu przed budową](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) nakazuje sprzedawcy zawiadomić nabywcę o wydaniu w ciągu sześciu miesięcy od uzyskania pozwolenia na użytkowanie, a także określa obowiązki dotyczące napraw, rozliczenia płatności i przekazania dokumentów przy wydaniu.",
+      "reason": "Usunięto powtarzalny podmiot i połączono dwie funkcje tego samego punktu przepisów bez zmiany terminu ani obowiązków przy wydaniu.",
+      "meaning_preserved": true
+    },
+    {
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "old_string": "Obecny punkt 14 nadal wymaga od nabywcy przedłożenia dokumentów kredytowych, wykonania powiązanych czynności i zapłaty należności przed przeniesieniem własności. Zakwestionowanie zawiadomienia o wydaniu nie usuwa więc automatycznie wymagalnych płatności ani obowiązków dokumentacyjnych.",
+      "new_string": "Choć obecny punkt 14 nadal wymaga od nabywcy przedłożenia dokumentów kredytowych, wykonania powiązanych czynności i zapłaty należności przed przeniesieniem własności, zakwestionowanie zawiadomienia o wydaniu nie usuwa automatycznie wymagalnych płatności ani obowiązków dokumentacyjnych.",
+      "reason": "Połączono trwające obowiązki nabywcy i brak skutku zakwestionowania zawiadomienia w jeden związek warunkowy bez złagodzenia tych obowiązków.",
+      "meaning_preserved": true
+    },
+    {
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "old_string": "[Regulacje banku centralnego dotyczące kredytów hipotecznych](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html) obowiązują w wersji zmienionej od 18 września 2026 r. Ta zmiana nie ma zastosowania wstecz do wykonania umowy w 2019 r.",
+      "new_string": "[Regulacje banku centralnego dotyczące kredytów hipotecznych](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html) obowiązują w wersji zmienionej od 18 września 2026 r., ale ta zmiana nie ma zastosowania wstecz do wykonania umowy w 2019 r.",
+      "reason": "Zestawiono obecną datę wejścia w życie z brakiem zastosowania wstecz w jednym zdaniu kontrastowym, zachowując obie daty i ograniczenie czasowe.",
+      "meaning_preserved": true
+    }
+  ],
+  "exactForward": true,
+  "exactReverse": true,
+  "frontmatterFAQBytesUnchanged": true,
+  "URLSequenceUnchanged": true,
+  "numericSequenceUnchanged": true,
+  "diff": "--- R3/918-taiwan-presale-mortgage-notice-handover-judgment.md\n+++ R4/918-taiwan-presale-mortgage-notice-handover-judgment.md\n@@ -25,7 +25,7 @@\n \n Na biurku w nowym domu leżą pismo o kredycie, gładka koperta i dokumenty odbioru; obok stoi jeszcze jeden nieotwarty karton (scena fikcyjna). W opisanym poniżej tajwańskim sporze datę wydania ustalano na podstawie treści pism i rzeczywistego stanu lokalu. Deweloper wysłał w lutym zawiadomienie o kredycie, gdy lokal nie miał jeszcze wody ani energii, a późniejsza zgoda na wejście w celu remontu i sprzątania również nie zastąpiła wydania. Sprawę opisano w [orzeczeniu zgromadzonym przez Radę Ochrony Konsumentów Yuanu Wykonawczego](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), na stronach drukowanych 173–187.\n \n-9 lutego 2022 r. oddział Tajwańskiego Sądu Wysokiego w Taichungu wydał wyrok 109年度上易字第289號. Oddalił jako nieuzasadnione apelację dewelopera i rozszerzone powództwo, utrzymując obowiązek zapłaty odsetek za opóźnienie. Nie było to odrzucenie z przyczyn proceduralnych. Wyrok wskazywał, że dalsza apelacja jest niedopuszczalna.\n+9 lutego 2022 r. oddział Tajwańskiego Sądu Wysokiego w Taichungu wydał wyrok 109年度上易字第289號, którym oddalił jako nieuzasadnione apelację dewelopera i rozszerzone powództwo, utrzymując obowiązek zapłaty odsetek za opóźnienie. Nie było to odrzucenie z przyczyn proceduralnych. Wyrok wskazywał, że dalsza apelacja jest niedopuszczalna.\n \n ## Pismo o banku, a stan domu\n \n@@ -39,17 +39,17 @@\n \n ## Cztery miesiące z umowy i obecne sześć miesięcy\n \n-Termin czterech miesięcy w wyroku wynikał z konkretnej umowy. Obecny [punkt 15 obowiązkowych postanowień wzorcowej umowy sprzedaży lokalu przed budową](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) nakazuje sprzedawcy zawiadomić nabywcę o wydaniu w ciągu sześciu miesięcy od uzyskania pozwolenia na użytkowanie. Określa także obowiązki dotyczące napraw, rozliczenia płatności i przekazania dokumentów przy wydaniu.\n+Termin czterech miesięcy w wyroku wynikał z konkretnej umowy. Obecny [punkt 15 obowiązkowych postanowień wzorcowej umowy sprzedaży lokalu przed budową](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) nakazuje sprzedawcy zawiadomić nabywcę o wydaniu w ciągu sześciu miesięcy od uzyskania pozwolenia na użytkowanie, a także określa obowiązki dotyczące napraw, rozliczenia płatności i przekazania dokumentów przy wydaniu.\n \n Sześć miesięcy dotyczy zawiadomienia, nie powszechnego terminu fizycznego zakończenia każdego wydania. Początkiem okresu jest uzyskanie pozwolenia na użytkowanie. W konkretnej umowie trzeba sprawdzić przepisy obowiązujące przy jej zawarciu, właściwe postanowienie, datę pozwolenia oraz treść i doręczenie pisma.\n \n-Obecny punkt 14 nadal wymaga od nabywcy przedłożenia dokumentów kredytowych, wykonania powiązanych czynności i zapłaty należności przed przeniesieniem własności. Zakwestionowanie zawiadomienia o wydaniu nie usuwa więc automatycznie wymagalnych płatności ani obowiązków dokumentacyjnych.\n+Choć obecny punkt 14 nadal wymaga od nabywcy przedłożenia dokumentów kredytowych, wykonania powiązanych czynności i zapłaty należności przed przeniesieniem własności, zakwestionowanie zawiadomienia o wydaniu nie usuwa automatycznie wymagalnych płatności ani obowiązków dokumentacyjnych.\n \n W sierpniu 2025 r. Rada Ochrony Konsumentów opublikowała wyniki kontroli umów. Za naruszenie przepisów uznała wyłączanie czasu potrzebnego na czynności i wypłatę przez bank z terminu na zawiadomienie o wydaniu, jak wskazano w [oficjalnych wynikach kontroli](https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11).\n \n ## Jedna oś czasu dla banku i stanu lokalu\n \n-[Regulacje banku centralnego dotyczące kredytów hipotecznych](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html) obowiązują w wersji zmienionej od 18 września 2026 r. Ta zmiana nie ma zastosowania wstecz do wykonania umowy w 2019 r. Nabywca ponownie ustalający warunki finansowania powinien osobno zapisać przewidywaną wypłatę banku, odbiór i planowane wydanie, a następnie zestawić te daty z obowiązkami umownymi.\n+[Regulacje banku centralnego dotyczące kredytów hipotecznych](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html) obowiązują w wersji zmienionej od 18 września 2026 r., ale ta zmiana nie ma zastosowania wstecz do wykonania umowy w 2019 r. Nabywca ponownie ustalający warunki finansowania powinien osobno zapisać przewidywaną wypłatę banku, odbiór i planowane wydanie, a następnie zestawić te daty z obowiązkami umownymi.\n \n Tytuł pisma nie wystarcza. Pełną korespondencję i dowód jej doręczenia warto zachować z kartą odbioru, zdjęciami usterek, zgodą na wejście i dokumentem gwarancyjnym. Dopiero zestawienie pokazuje, czy lokal nadawał się do używania przy otrzymaniu wiadomości i jakie czynności wykonano później.\n \n",
+  "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r4-r3-snapshot",
+  "logs": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/run-r4.stdout",
+      "sha256": "c42cfb9bf4014f4b0024868553c44220b011f27620ca7f1ec1475f4f5da07f7b"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/run-r4.stderr",
+      "sha256": "efd1ed7849a06b1fd59b1e10a24bb8b0ad0397f7d0bfb17340167836608e03f6"
+    }
+  ],
+  "status": "Exact R4 bytes imported; targeted meaning/boundary review and actual shared metrics remain separate."
+}

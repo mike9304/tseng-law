@@ -1,0 +1,435 @@
+{
+  "atUTC": "2026-10-26T11:38:11.553576+00:00",
+  "baseCommit": "35cc5d32cb5a4394d674f1f767b5f32eedd5cee7",
+  "before": {
+    "professional": 2277,
+    "issues": 131,
+    "boardVisibleLocal": 2010,
+    "distinctProfessionalSlugs": 674,
+    "coreUnion": 481,
+    "coreCommon": 141,
+    "allLocaleCommon": 21,
+    "countDeficitTo286": 11747,
+    "visibleDeficitTo286": 12014,
+    "other45MissingCoreCommon": 5348
+  },
+  "after": {
+    "professional": 2319,
+    "issues": 131,
+    "boardVisibleLocal": 2052,
+    "distinctProfessionalSlugs": 674,
+    "coreUnion": 481,
+    "coreCommon": 141,
+    "allLocaleCommon": 21,
+    "countDeficitTo286": 11705,
+    "visibleDeficitTo286": 11972,
+    "other45MissingCoreCommon": 5348
+  },
+  "benchmarkPerLocale": 286,
+  "supportedLocales": 49,
+  "locales": [
+    {
+      "locale": "ko",
+      "localColumnCount": 217,
+      "boardVisibleLocalCount": 217,
+      "issueCount": 30,
+      "missingToCountBenchmark": 69,
+      "missingToVisibleBenchmark": 69
+    },
+    {
+      "locale": "zh-hant",
+      "localColumnCount": 296,
+      "boardVisibleLocalCount": 296,
+      "issueCount": 5,
+      "missingToCountBenchmark": 0,
+      "missingToVisibleBenchmark": 0
+    },
+    {
+      "locale": "en",
+      "localColumnCount": 218,
+      "boardVisibleLocalCount": 218,
+      "issueCount": 32,
+      "missingToCountBenchmark": 68,
+      "missingToVisibleBenchmark": 68
+    },
+    {
+      "locale": "ja",
+      "localColumnCount": 230,
+      "boardVisibleLocalCount": 230,
+      "issueCount": 30,
+      "missingToCountBenchmark": 56,
+      "missingToVisibleBenchmark": 56
+    },
+    {
+      "locale": "vi",
+      "localColumnCount": 45,
+      "boardVisibleLocalCount": 45,
+      "issueCount": 30,
+      "missingToCountBenchmark": 241,
+      "missingToVisibleBenchmark": 241
+    },
+    {
+      "locale": "id",
+      "localColumnCount": 33,
+      "boardVisibleLocalCount": 23,
+      "issueCount": 0,
+      "missingToCountBenchmark": 253,
+      "missingToVisibleBenchmark": 263
+    },
+    {
+      "locale": "th",
+      "localColumnCount": 31,
+      "boardVisibleLocalCount": 20,
+      "issueCount": 0,
+      "missingToCountBenchmark": 255,
+      "missingToVisibleBenchmark": 266
+    },
+    {
+      "locale": "fil",
+      "localColumnCount": 31,
+      "boardVisibleLocalCount": 26,
+      "issueCount": 0,
+      "missingToCountBenchmark": 255,
+      "missingToVisibleBenchmark": 260
+    },
+    {
+      "locale": "ar",
+      "localColumnCount": 34,
+      "boardVisibleLocalCount": 22,
+      "issueCount": 0,
+      "missingToCountBenchmark": 252,
+      "missingToVisibleBenchmark": 264
+    },
+    {
+      "locale": "de",
+      "localColumnCount": 32,
+      "boardVisibleLocalCount": 18,
+      "issueCount": 0,
+      "missingToCountBenchmark": 254,
+      "missingToVisibleBenchmark": 268
+    },
+    {
+      "locale": "es",
+      "localColumnCount": 52,
+      "boardVisibleLocalCount": 47,
+      "issueCount": 2,
+      "missingToCountBenchmark": 234,
+      "missingToVisibleBenchmark": 239
+    },
+    {
+      "locale": "fr",
+      "localColumnCount": 31,
+      "boardVisibleLocalCount": 23,
+      "issueCount": 2,
+      "missingToCountBenchmark": 255,
+      "missingToVisibleBenchmark": 263
+    },
+    {
+      "locale": "pt",
+      "localColumnCount": 34,
+      "boardVisibleLocalCount": 23,
+      "issueCount": 0,
+      "missingToCountBenchmark": 252,
+      "missingToVisibleBenchmark": 263
+    },
+    {
+      "locale": "zh-hans",
+      "localColumnCount": 29,
+      "boardVisibleLocalCount": 24,
+      "issueCount": 0,
+      "missingToCountBenchmark": 257,
+      "missingToVisibleBenchmark": 262
+    },
+    {
+      "locale": "ms",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "ru",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "tr",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "it",
+      "localColumnCount": 32,
+      "boardVisibleLocalCount": 21,
+      "issueCount": 0,
+      "missingToCountBenchmark": 254,
+      "missingToVisibleBenchmark": 265
+    },
+    {
+      "locale": "nl",
+      "localColumnCount": 26,
+      "boardVisibleLocalCount": 21,
+      "issueCount": 0,
+      "missingToCountBenchmark": 260,
+      "missingToVisibleBenchmark": 265
+    },
+    {
+      "locale": "pl",
+      "localColumnCount": 32,
+      "boardVisibleLocalCount": 27,
+      "issueCount": 0,
+      "missingToCountBenchmark": 254,
+      "missingToVisibleBenchmark": 259
+    },
+    {
+      "locale": "hi",
+      "localColumnCount": 34,
+      "boardVisibleLocalCount": 24,
+      "issueCount": 0,
+      "missingToCountBenchmark": 252,
+      "missingToVisibleBenchmark": 262
+    },
+    {
+      "locale": "sv",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "da",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "nb",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "fi",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "cs",
+      "localColumnCount": 26,
+      "boardVisibleLocalCount": 21,
+      "issueCount": 0,
+      "missingToCountBenchmark": 260,
+      "missingToVisibleBenchmark": 265
+    },
+    {
+      "locale": "hu",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "ro",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "uk",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "el",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "he",
+      "localColumnCount": 26,
+      "boardVisibleLocalCount": 21,
+      "issueCount": 0,
+      "missingToCountBenchmark": 260,
+      "missingToVisibleBenchmark": 265
+    },
+    {
+      "locale": "bn",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "ur",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "fa",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "my",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "ta",
+      "localColumnCount": 24,
+      "boardVisibleLocalCount": 19,
+      "issueCount": 0,
+      "missingToCountBenchmark": 262,
+      "missingToVisibleBenchmark": 267
+    },
+    {
+      "locale": "ne",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "km",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "mn",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "sk",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "bg",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "hr",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "sr",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "sl",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "lt",
+      "localColumnCount": 26,
+      "boardVisibleLocalCount": 21,
+      "issueCount": 0,
+      "missingToCountBenchmark": 260,
+      "missingToVisibleBenchmark": 265
+    },
+    {
+      "locale": "lv",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "et",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "ca",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    },
+    {
+      "locale": "is",
+      "localColumnCount": 30,
+      "boardVisibleLocalCount": 25,
+      "issueCount": 0,
+      "missingToCountBenchmark": 256,
+      "missingToVisibleBenchmark": 261
+    }
+  ],
+  "newSubstantiveFiles": 42,
+  "newBoardVisibleFiles": 42,
+  "changedExistingFiles": [
+    "src/content/columns-sk/014-taiwan-mandatory-employment-period.md",
+    "src/content/columns-sk/877-slovak-exporter-taiwan-unpaid-invoice-recovery.md",
+    "src/content/columns-sk/878-slovak-business-taiwan-subsidiary-branch-office.md"
+  ],
+  "removed": [],
+  "boardHiddenSlugsAndIssuesUnchanged": true,
+  "sourceKind": "working-tree",
+  "CMSBuildAndPublicDeliveryAsserted": false
+}

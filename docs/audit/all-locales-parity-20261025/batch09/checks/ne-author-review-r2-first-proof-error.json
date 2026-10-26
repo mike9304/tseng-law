@@ -1,0 +1,8 @@
+{
+  "recordedAt": "2026-10-26T09:26:29.901977+00:00",
+  "actualToolChunk": "51f96f",
+  "error": "AssertionError in first reverse-proof attempt after all intended source changes were applied. Two key-recipient edits have identical short new text in different locations; the loan-letter replacement also shares new wording with pre-existing text. A global reverse replacement cannot distinguish locations.",
+  "sourceDamage": false,
+  "resolution": "Rebuild exact edits with full-line context from preserved R1 source, verify against current files before any new mutation.",
+  "actualCLIAfterError": "The following shell command did run; new shared6 actual exit0/FAIL0 was preserved separately. Compound shell exit0 is not a successful first proof claim."
+}

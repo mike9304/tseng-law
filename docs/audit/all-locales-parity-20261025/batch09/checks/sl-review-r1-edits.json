@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-26T18:24:53.072877+09:00",
+  "sourceFindingsSHA": "be52cffada336d5cf1e0e714c041c17f026e4747964ed7383a28586db0290b85",
+  "rootAuthorization": "Adopted O01/O02 optional precision/clarity; no mandatory-error reclassification.",
+  "edits": [
+    {
+      "id": "O01",
+      "article": "916",
+      "severity": "OPTIONAL_PRECISION",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "before": "[Informativni list USTR iz februarja 2026](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje namere ZDA in Tajvana glede čezmejnih naložb ter možnost ameriške podpore financiranju zasebnih naložb na Tajvanu po veljavnih predpisih.",
+      "after": "[Informativni list USTR iz februarja 2026](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje namere ZDA in Tajvana glede čezmejnih naložb. Ameriška stran je napovedala, da bo, kadar je to primerno, razmislila o podpori financiranju naložb v ključnih sektorjih na Tajvanu v sodelovanju z ameriškimi zasebnimi partnerji in po veljavnih predpisih.",
+      "offset": 5539,
+      "beforeSHA": "f1a83d6168304647b8969bc70056cfa301fb91f9b4e5c754465bd61b7086cadb",
+      "afterSHA": "a6589e8395d4f32408c1c194a26f54a9b87f5aaa944db14e6a1f7f1d64858957",
+      "reason": "Short current paragraph faithfully summarizes the accepted EN source as a possibility, does not promise all-investor eligibility, and immediately denies individual approval/full treaty entry into force. Therefore missing detail alone is not a blocking error. The official February statement is more specific about appropriate consideration, critical sectors and US private-sector collaboration; the optional wording makes those bounds visible.",
+      "meaningPreserved": "Keep the dated intention, consideration rather than approved funding, Taiwan as investment location, US side/US private partners, applicable law, and both following disclaimer sentences. No Slovenian eligibility or consultation promise.",
+      "reverseExact": true,
+      "diff": "--- r1/916-taiwan-parent-company-pollution-liability-us-investor.md\n+++ r2/916-taiwan-parent-company-pollution-liability-us-investor.md\n@@ -53,7 +53,7 @@\n \n ## Naložbeni načrt in sredstva, ki ostanejo družbi\n \n-[Informativni list USTR iz februarja 2026](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje namere ZDA in Tajvana glede čezmejnih naložb ter možnost ameriške podpore financiranju zasebnih naložb na Tajvanu po veljavnih predpisih. Namere niso individualna odobritev financiranja. Objave tudi ni mogoče šteti za dokaz začetka veljavnosti vseh določb sporazuma.\n+[Informativni list USTR iz februarja 2026](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje namere ZDA in Tajvana glede čezmejnih naložb. Ameriška stran je napovedala, da bo, kadar je to primerno, razmislila o podpori financiranju naložb v ključnih sektorjih na Tajvanu v sodelovanju z ameriškimi zasebnimi partnerji in po veljavnih predpisih. Namere niso individualna odobritev financiranja. Objave tudi ni mogoče šteti za dokaz začetka veljavnosti vseh določb sporazuma.\n \n Predlagano dividendo, zmanjšanje kapitala ali prenos denarja iz družbe je mogoče primerjati z znanimi tveganji, nerešenimi zahtevki in premoženjem, ki ostaja na Tajvanu. Sklepi o prenosih lahko pojasnijo njihove zneske in razloge. Ime dokumenta ali shranjeno poročilo samo ne pokaže, ali je bil prenos zakonit.\n \n"
+    },
+    {
+      "id": "O02",
+      "article": "920",
+      "severity": "OPTIONAL_CLARITY",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "before": "Tudi pogodba z monterjem lahko določi, ali sme delo začeti pred pridobitvijo soglasij in kdo nosi stroške, če je prošnja zavrnjena.",
+      "after": "Tudi pogodba z monterjem lahko začetek del veže na pridobitev potrebnih soglasij in določi, kdo nosi stroške, če je prošnja zavrnjena.",
+      "offset": 5113,
+      "beforeSHA": "1c32172e527dffcb2934a468dfea0c5375f5d1145fbf168d9df3a6ccf8450c4d",
+      "afterSHA": "dbe66f18a0c146e1f6dbfba0addbf78585cc0c6be8c5d246a5d04bd0cb2bb55e",
+      "reason": "The next sentence already says the contract cannot replace the competent building body decision, and the ZH source similarly discusses whether work may start before approval. No authorization to ignore statutory consent is established. Linking commencement directly to required consent would reduce an avoidable isolated-sentence reading.",
+      "meaningPreserved": "Retain required consents, conditional cost allocation if the application is rejected, practical contract advice, and the immediately following statement that a private agreement does not replace the building decision. No new universal consent procedure.",
+      "reverseExact": true,
+      "diff": "--- r1/920-taiwan-apartment-ev-charger-common-area-judgment.md\n+++ r2/920-taiwan-apartment-ev-charger-common-area-judgment.md\n@@ -45,7 +45,7 @@\n \n Vloga odboru se lahko opre na isti načrt in zahteva pojasnilo, kdo sme odločiti o predlogu ter katera dokumentacija manjka. Če soglasje že obstaja, je koristna primerjava odobrene trase in opreme z različico, ki jo namerava namestiti izvajalec. Ustni odgovor lahko pusti obseg odobritve nejasen.\n \n-Tudi pogodba z monterjem lahko določi, ali sme delo začeti pred pridobitvijo soglasij in kdo nosi stroške, če je prošnja zavrnjena. Tak dogovor ne nadomesti odločitve pristojnega organa stavbe. Poveže pa tehnični predlog s stroški njegove izvedbe.\n+Tudi pogodba z monterjem lahko začetek del veže na pridobitev potrebnih soglasij in določi, kdo nosi stroške, če je prošnja zavrnjena. Tak dogovor ne nadomesti odločitve pristojnega organa stavbe. Poveže pa tehnični predlog s stroški njegove izvedbe.\n \n ## Objavljeni rok za podporo je že potekel\n \n"
+    }
+  ]
+}

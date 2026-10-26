@@ -1,0 +1,419 @@
+{
+  "at": "2026-10-26T18:26:19.741672+09:00",
+  "adoptedOptionalFindings": [
+    "O01",
+    "O02"
+  ],
+  "mandatoryFindings": 0,
+  "rows": [
+    {
+      "id": "915",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "649eaa92c45bf3f3a708805011aa7f28f88553c70b8dd13985e03b2c4f964f0f",
+      "r1SHA": "649eaa92c45bf3f3a708805011aa7f28f88553c70b8dd13985e03b2c4f964f0f",
+      "reverseToR1Exact": true,
+      "frontmatterAndFAQBytesUnchanged": true,
+      "urlValueAndOrderUnchanged": true,
+      "numericTokensAndOrderUnchanged": true,
+      "metrics": {
+        "lang": "sl",
+        "sentences": 41,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 13.4,
+        "len_cv": 0.527,
+        "short_share": 0.317,
+        "long_share": 0.024,
+        "para_cv": 0.236,
+        "even_run3": 0.077,
+        "top_end": "arbitraži",
+        "top_end_share": 0.049,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "arbitražna",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.27,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Arbitražna odločba je izvajalcu pri gradnji bolnišnice prisodila NT$44.417.150.",
+        "last": "Veljavni predpisi in tržne informacije so bili preverjeni 26. oktobra 2026; opis sodbe temelji na uradnem pojasnilu, pre",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-initial.json",
+      "actualCLIRecordSHA": "c3c280517a856bd64508c2e8da4019fe6dfd1e7df898a96593da59b654d19048",
+      "actualExit": 0,
+      "sameSentences": 41,
+      "delta": [],
+      "changedParagraphs": [],
+      "allCurrentRenderedStringsEqual": true
+    },
+    {
+      "id": "916",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "a6589e8395d4f32408c1c194a26f54a9b87f5aaa944db14e6a1f7f1d64858957",
+      "r1SHA": "f1a83d6168304647b8969bc70056cfa301fb91f9b4e5c754465bd61b7086cadb",
+      "reverseToR1Exact": true,
+      "frontmatterAndFAQBytesUnchanged": true,
+      "urlValueAndOrderUnchanged": true,
+      "numericTokensAndOrderUnchanged": true,
+      "metrics": {
+        "lang": "sl",
+        "sentences": 43,
+        "paras": 15,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 14.6,
+        "len_cv": 0.47,
+        "short_share": 0.163,
+        "long_share": 0.023,
+        "para_cv": 0.229,
+        "even_run3": 0.024,
+        "top_end": "tovarni",
+        "top_end_share": 0.047,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "kdo",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.067,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.91,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Kdo je lahko ukrepal po ugotovitvah onesnaženja v tovarni?",
+        "last": "Veljavni predpis in uradne naložbene informacije so bili preverjeni 26. oktobra 2026. Opis sodbe temelji na uradnem poja",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-review-r2.json",
+      "actualCLIRecordSHA": "0441d2817c977cfe9dc1cbeb95dfa9a072e37e85f9b1f3ced007c879016fae8f",
+      "actualExit": 0,
+      "sameSentences": 41,
+      "delta": [
+        {
+          "kind": "replace",
+          "old": [
+            "Informativni list USTR iz februarja 2026 opisuje namere ZDA in Tajvana glede čezmejnih naložb ter možnost ameriške podpore financiranju zasebnih naložb na Tajvanu po veljavnih predpisih."
+          ],
+          "new": [
+            "Informativni list USTR iz februarja 2026 opisuje namere ZDA in Tajvana glede čezmejnih naložb.",
+            "Ameriška stran je napovedala, da bo, kadar je to primerno, razmislila o podpori financiranju naložb v ključnih sektorjih na Tajvanu v sodelovanju z ameriškimi zasebnimi partnerji in po veljavnih predpisih."
+          ]
+        }
+      ],
+      "changedParagraphs": [
+        {
+          "index": 12,
+          "before": "[Informativni list USTR iz februarja 2026](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje namere ZDA in Tajvana glede čezmejnih naložb ter možnost ameriške podpore financiranju zasebnih naložb na Tajvanu po veljavnih predpisih. Namere niso individualna odobritev financiranja. Objave tudi ni mogoče šteti za dokaz začetka veljavnosti vseh določb sporazuma.",
+          "after": "[Informativni list USTR iz februarja 2026](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje namere ZDA in Tajvana glede čezmejnih naložb. Ameriška stran je napovedala, da bo, kadar je to primerno, razmislila o podpori financiranju naložb v ključnih sektorjih na Tajvanu v sodelovanju z ameriškimi zasebnimi partnerji in po veljavnih predpisih. Namere niso individualna odobritev financiranja. Objave tudi ni mogoče šteti za dokaz začetka veljavnosti vseh določb sporazuma.",
+          "sentences": [
+            {
+              "text": "Informativni list USTR iz februarja 2026 opisuje namere ZDA in Tajvana glede čezmejnih naložb.",
+              "units": 14
+            },
+            {
+              "text": "Ameriška stran je napovedala, da bo, kadar je to primerno, razmislila o podpori financiranju naložb v ključnih sektorjih na Tajvanu v sodelovanju z ameriškimi zasebnimi partnerji in po veljavnih predpisih.",
+              "units": 30
+            },
+            {
+              "text": "Namere niso individualna odobritev financiranja.",
+              "units": 5
+            },
+            {
+              "text": "Objave tudi ni mogoče šteti za dokaz začetka veljavnosti vseh določb sporazuma.",
+              "units": 12
+            }
+          ]
+        }
+      ],
+      "allCurrentRenderedStringsEqual": true
+    },
+    {
+      "id": "918",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "78ddaf97bff0d6eb30dad29ed60be5292363744fefd3eb0266ff8316ced5f858",
+      "r1SHA": "78ddaf97bff0d6eb30dad29ed60be5292363744fefd3eb0266ff8316ced5f858",
+      "reverseToR1Exact": true,
+      "frontmatterAndFAQBytesUnchanged": true,
+      "urlValueAndOrderUnchanged": true,
+      "numericTokensAndOrderUnchanged": true,
+      "metrics": {
+        "lang": "sl",
+        "sentences": 43,
+        "paras": 15,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.1,
+        "len_cv": 0.479,
+        "short_share": 0.256,
+        "long_share": 0.0,
+        "para_cv": 0.14,
+        "even_run3": 0.049,
+        "top_end": "posojila",
+        "top_end_share": 0.07,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "voda",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 1,
+        "questions": 1,
+        "num_per100": 3.8,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Voda in elektrika še nista bili priključeni, ko je gradbeni investitor 23. februarja 2019 ",
+        "last": "Veljavni predpisi in uradne informacije so bili preverjeni 26. oktobra 2026. Sodba je obravnavana po uradni ponovni obja",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-initial.json",
+      "actualCLIRecordSHA": "c3c280517a856bd64508c2e8da4019fe6dfd1e7df898a96593da59b654d19048",
+      "actualExit": 0,
+      "sameSentences": 43,
+      "delta": [],
+      "changedParagraphs": [],
+      "allCurrentRenderedStringsEqual": true
+    },
+    {
+      "id": "919",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "cbc5c8726046e43b8438f4c4147938cb3c53806a6c234e9c6d6f2f3ba991a98c",
+      "r1SHA": "cbc5c8726046e43b8438f4c4147938cb3c53806a6c234e9c6d6f2f3ba991a98c",
+      "reverseToR1Exact": true,
+      "frontmatterAndFAQBytesUnchanged": true,
+      "urlValueAndOrderUnchanged": true,
+      "numericTokensAndOrderUnchanged": true,
+      "metrics": {
+        "lang": "sl",
+        "sentences": 41,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.0,
+        "len_cv": 0.462,
+        "short_share": 0.22,
+        "long_share": 0.0,
+        "para_cv": 0.256,
+        "even_run3": 0.051,
+        "top_end": "sankcije",
+        "top_end_share": 0.024,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "komisija",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 1.92,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Komisija je zadevo dobila na mizo po javni napovedi sankcije.",
+        "last": "Predpisi in njihova veljavnost so bili preverjeni 26. oktobra 2026; opis sodbe temelji na uradnem pojasnilu, pregledanem",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r2.json",
+      "actualCLIRecordSHA": "1a25f25eea3058837e61a7f1853368f8c4e7f831fd4775fb642e45c340ec5817",
+      "actualExit": 0,
+      "sameSentences": 41,
+      "delta": [],
+      "changedParagraphs": [],
+      "allCurrentRenderedStringsEqual": true
+    },
+    {
+      "id": "920",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "dbe66f18a0c146e1f6dbfba0addbf78585cc0c6be8c5d246a5d04bd0cb2bb55e",
+      "r1SHA": "1c32172e527dffcb2934a468dfea0c5375f5d1145fbf168d9df3a6ccf8450c4d",
+      "reverseToR1Exact": true,
+      "frontmatterAndFAQBytesUnchanged": true,
+      "urlValueAndOrderUnchanged": true,
+      "numericTokensAndOrderUnchanged": true,
+      "metrics": {
+        "lang": "sl",
+        "sentences": 41,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.3,
+        "len_cv": 0.478,
+        "short_share": 0.317,
+        "long_share": 0.0,
+        "para_cv": 0.157,
+        "even_run3": 0.0,
+        "top_end": "omarici",
+        "top_end_share": 0.049,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "polnilna",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.308,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.56,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Polnilna omarica je bila na steni za parkirnim mestom, napeljava je potekala po stropu, no",
+        "last": "Predpisi in mestna objava so bili preverjeni 26. oktobra 2026; opis sodbe temelji na besedilu, pregledanem 25. oktobra. ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-review-r2.json",
+      "actualCLIRecordSHA": "0441d2817c977cfe9dc1cbeb95dfa9a072e37e85f9b1f3ced007c879016fae8f",
+      "actualExit": 0,
+      "sameSentences": 40,
+      "delta": [
+        {
+          "kind": "replace",
+          "old": [
+            "Tudi pogodba z monterjem lahko določi, ali sme delo začeti pred pridobitvijo soglasij in kdo nosi stroške, če je prošnja zavrnjena."
+          ],
+          "new": [
+            "Tudi pogodba z monterjem lahko začetek del veže na pridobitev potrebnih soglasij in določi, kdo nosi stroške, če je prošnja zavrnjena."
+          ]
+        }
+      ],
+      "changedParagraphs": [
+        {
+          "index": 10,
+          "before": "Tudi pogodba z monterjem lahko določi, ali sme delo začeti pred pridobitvijo soglasij in kdo nosi stroške, če je prošnja zavrnjena. Tak dogovor ne nadomesti odločitve pristojnega organa stavbe. Poveže pa tehnični predlog s stroški njegove izvedbe.",
+          "after": "Tudi pogodba z monterjem lahko začetek del veže na pridobitev potrebnih soglasij in določi, kdo nosi stroške, če je prošnja zavrnjena. Tak dogovor ne nadomesti odločitve pristojnega organa stavbe. Poveže pa tehnični predlog s stroški njegove izvedbe.",
+          "sentences": [
+            {
+              "text": "Tudi pogodba z monterjem lahko začetek del veže na pridobitev potrebnih soglasij in določi, kdo nosi stroške, če je prošnja zavrnjena.",
+              "units": 21
+            },
+            {
+              "text": "Tak dogovor ne nadomesti odločitve pristojnega organa stavbe.",
+              "units": 8
+            },
+            {
+              "text": "Poveže pa tehnični predlog s stroški njegove izvedbe.",
+              "units": 8
+            }
+          ]
+        }
+      ],
+      "allCurrentRenderedStringsEqual": true
+    },
+    {
+      "id": "921",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "96ce40ffc9daf2c997e2698a0c6ba8ef9ebc3a9a5f253313c9053bae0f5a9281",
+      "r1SHA": "96ce40ffc9daf2c997e2698a0c6ba8ef9ebc3a9a5f253313c9053bae0f5a9281",
+      "reverseToR1Exact": true,
+      "frontmatterAndFAQBytesUnchanged": true,
+      "urlValueAndOrderUnchanged": true,
+      "numericTokensAndOrderUnchanged": true,
+      "metrics": {
+        "lang": "sl",
+        "sentences": 43,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.0,
+        "len_cv": 0.468,
+        "short_share": 0.186,
+        "long_share": 0.023,
+        "para_cv": 0.223,
+        "even_run3": 0.024,
+        "top_end": "pogodbo",
+        "top_end_share": 0.07,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "po",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.65,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Ali je mogoče preostale igralne kovance izplačati v denarju?",
+        "last": "Veljavna pravila in uradne informacije so bili preverjeni 26. oktobra 2026; sodba je obravnavana po gradivu, pregledanem",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r2.json",
+      "actualCLIRecordSHA": "1a25f25eea3058837e61a7f1853368f8c4e7f831fd4775fb642e45c340ec5817",
+      "actualExit": 0,
+      "sameSentences": 43,
+      "delta": [],
+      "changedParagraphs": [],
+      "allCurrentRenderedStringsEqual": true
+    }
+  ],
+  "totalCurrentSentences": 252,
+  "sameSentencesFromR1": 249,
+  "preservedR1References": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sl-author.md",
+      "sha256": "48908dded259c081160b071874338fbbe406209d51c821f83ce008b7fa2d65aa"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-final-manifest.json",
+      "sha256": "2cd9beef95e3cf003e13c93758668e8d030f645222b78b4a26bda39f4142fc09"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sl-independent.md",
+      "sha256": "a52d61c75547b82f1ba3d9a8b27341cd354b90622610a635dc3173bb3109a505"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-independent-final-manifest.json",
+      "sha256": "d62b58291c2ace2cc922c5e08ad31e83fcab0adcfb1618780859c58eff65419f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-independent-findings.json",
+      "sha256": "be52cffada336d5cf1e0e714c041c17f026e4747964ed7383a28586db0290b85"
+    }
+  ],
+  "allSixReverseToR1Exact": true,
+  "originalAuthorIndependentR1ManifestBytesUnchanged": true
+}

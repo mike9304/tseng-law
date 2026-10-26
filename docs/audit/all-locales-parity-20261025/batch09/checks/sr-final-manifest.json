@@ -1,0 +1,576 @@
+{
+  "atUTC": "2026-10-26T08:56:44.330395+00:00",
+  "locale": "sr",
+  "status": "AUTHOR_FROZEN_PENDING_INDEPENDENT_REVIEW",
+  "native_human_or_lawyer_approval": false,
+  "publication_status": "NOT_DEPLOYED_BY_THIS_WORK",
+  "author": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sr-author.md",
+    "sha256": "0520baa492ca270252fa4161faa9f399dd0ddfa33a3ff76a79a160f68c3a1f41",
+    "bytes": 22905
+  },
+  "manuscripts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "ddee0de08627d6fb79dcd96cf594cdd590962268d107c5c173ea8ce682017621",
+      "initial_sha256": "e4651fa794db90c5e12d972714ab718ccce2b872f6bfdf04ef4109baad9fc9dc",
+      "metrics": {
+        "lang": "sr",
+        "sentences": 37,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.6,
+        "len_cv": 0.512,
+        "short_share": 0.216,
+        "long_share": 0.054,
+        "para_cv": 0.27,
+        "even_run3": 0.0,
+        "top_end": "novac",
+        "top_end_share": 0.054,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "da",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.25,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 3.63,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Da li preporuka za dodatno vreme pokriva i zahtev da naručilac plati dodatne troškove?",
+        "last": "Stanje izvora: zvanično sudsko objašnjenje provereno 25. oktobra 2026, a važeći propisi i tržišni izveštaj 26. oktobra. ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_cli_evidence": "sr-variety-revised.json",
+      "observed_batch_exit": 0,
+      "observed_file_status": "OK — no variety limit violated"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "8784312ab5e99542024568fde997318bb6ab6b1bdada863a39c499d505fce6bb",
+      "initial_sha256": "3d2e9b8979e61342cfc57ad585d8abf215f013fffa6fb71ba88f43102d121f19",
+      "metrics": {
+        "lang": "sr",
+        "sentences": 38,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 16.5,
+        "len_cv": 0.504,
+        "short_share": 0.158,
+        "long_share": 0.079,
+        "para_cv": 0.176,
+        "even_run3": 0.028,
+        "top_end": "znalo",
+        "top_end_share": 0.026,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "ekološki",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.08,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Ekološki izveštaj pribavljen pre preuzimanja fabrike može kasnije pokazati šta je matično ",
+        "last": "Stanje izvora: sudsko objašnjenje provereno 25. oktobra 2026, a sadašnji propis i investicioni dokument 26. oktobra. Tek",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_cli_evidence": "sr-variety-revised.json",
+      "observed_batch_exit": 0,
+      "observed_file_status": "OK — no variety limit violated"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "6c7510a2e0bc76125be434f3565c68a9ab2d1b074969de73f367b07a04b43801",
+      "initial_sha256": "d3b998241da193521414a833b3fefe87f31108cc56d46badb64a0df6cfcb8635",
+      "metrics": {
+        "lang": "sr",
+        "sentences": 42,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.6,
+        "len_cv": 0.491,
+        "short_share": 0.238,
+        "long_share": 0.024,
+        "para_cv": 0.161,
+        "even_run3": 0.025,
+        "top_end": "dozvole",
+        "top_end_share": 0.071,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "u",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.43,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "U stanu još nije bilo priključene vode i struje kada je kupcu stiglo pismo o stambenom kre",
+        "last": "Stanje izvora: navedeni delovi sudske zbirke, važeće odredbe i zvanična saopštenja provereni su 26. oktobra 2026. Predme",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_cli_evidence": "sr-variety-revised.json",
+      "observed_batch_exit": 0,
+      "observed_file_status": "OK — no variety limit violated"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "f408862fb5d8c925e4f88400bacc8dfd7d514bec78e17215bc62491983295487",
+      "initial_sha256": "84d879dc2da18d0cb2eaebd1bf59ec4c1f836ea02d85501ba238d0c4b19ac80e",
+      "metrics": {
+        "lang": "sr",
+        "sentences": 36,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.5,
+        "len_cv": 0.476,
+        "short_share": 0.222,
+        "long_share": 0.028,
+        "para_cv": 0.191,
+        "even_run3": 0.0,
+        "top_end": "radu",
+        "top_end_share": 0.056,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "sud",
+        "top_opener_n": 2,
+        "opener_rep": 0.077,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 1.97,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Sud je poništio otkaz rukovodiocu u tajvanskoj javnoj službi i odluku kojom je taj otkaz p",
+        "last": "Stanje izvora: sudsko saopštenje provereno 25. oktobra 2026, a važeći propisi 26. oktobra. Kasniji žalbeni ishod nije po",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_cli_evidence": "sr-variety-revised.json",
+      "observed_batch_exit": 0,
+      "observed_file_status": "OK — no variety limit violated"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "349fc3fcab177b5c4908c729e1ad84697d1379da74bac79c7d165065e7d7bf8e",
+      "initial_sha256": "1a3d3dafac438e4425233cf27d6fe17cd27adc05182e9572f65dc3492ee7d497",
+      "metrics": {
+        "lang": "sr",
+        "sentences": 41,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.0,
+        "len_cv": 0.462,
+        "short_share": 0.244,
+        "long_share": 0.0,
+        "para_cv": 0.182,
+        "even_run3": 0.026,
+        "top_end": "odredbi",
+        "top_end_share": 0.049,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "član",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.286,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.92,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Kablovi su sa zida iza parking mesta išli preko plafona do zajedničkog elektroormara, a za",
+        "last": "Stanje izvora: presuda proverena 25. oktobra 2026, a važeći propisi i gradsko saopštenje 26. oktobra. Kasnije odluke i p",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_cli_evidence": "sr-variety-revised.json",
+      "observed_batch_exit": 0,
+      "observed_file_status": "OK — no variety limit violated"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "59dc73e80c5fa3dfd7d37bfbda4af66ceba80168ace8c48cbbdcd97d3cb0f8d4",
+      "initial_sha256": "59dc73e80c5fa3dfd7d37bfbda4af66ceba80168ace8c48cbbdcd97d3cb0f8d4",
+      "metrics": {
+        "lang": "sr",
+        "sentences": 44,
+        "paras": 15,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.8,
+        "len_cv": 0.506,
+        "short_share": 0.273,
+        "long_share": 0.023,
+        "para_cv": 0.24,
+        "even_run3": 0.024,
+        "top_end": "igrača",
+        "top_end_share": 0.045,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "igrač",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.68,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Igrač je tražio 243.548 novih tajvanskih dolara za zlatnike koji su ostali na njegovom nal",
+        "last": "Stanje izvora: navedeni delovi sudske zbirke, važeći uslovi i zvanična saopštenja provereni su 26. oktobra 2026. Bodovi,",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_cli_evidence": "sr-variety-initial.json",
+      "observed_batch_exit": 1,
+      "observed_file_status": "OK — no variety limit violated"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/BRIEF.md",
+      "sha256": "f04f1d70c375c3e65a88e42dcaedbc453fda2c6e74882a7b82fba17d109290f4",
+      "current_sha256": "f04f1d70c375c3e65a88e42dcaedbc453fda2c6e74882a7b82fba17d109290f4",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/BRIEF.md",
+      "sha256": "e7f781375d583d0647ca32bbeafd372f3ce802a2837d17a59b6225409d55dc8c",
+      "current_sha256": "e7f781375d583d0647ca32bbeafd372f3ce802a2837d17a59b6225409d55dc8c",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/BRIEF.md",
+      "sha256": "8103ae1441fe0abbdb76362d6086a267014664f31997f5676b37c6962cfcd306",
+      "current_sha256": "8103ae1441fe0abbdb76362d6086a267014664f31997f5676b37c6962cfcd306",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/BRIEF.md",
+      "sha256": "f6c2579b6255705ece341a356d3a4d527ca74a869916785d51edb9c0f05ee1a8",
+      "current_sha256": "f6c2579b6255705ece341a356d3a4d527ca74a869916785d51edb9c0f05ee1a8",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/AGENTS.md",
+      "sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19",
+      "current_sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "current_sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "current_sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "current_sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "86710ef330b108a916a7bb92a75f1ffa62dea53412e8a75f38472d9fa9b33130",
+      "current_sha256": "86710ef330b108a916a7bb92a75f1ffa62dea53412e8a75f38472d9fa9b33130",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-freeze.json",
+      "sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "current_sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/bundle-manifest.json",
+      "sha256": "d56dfa2dd03c0e93c5f3576ee119c508f07daf24eb7412123aadc42e49bf3192",
+      "current_sha256": "d56dfa2dd03c0e93c5f3576ee119c508f07daf24eb7412123aadc42e49bf3192",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/six-source-facts.md",
+      "sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a",
+      "current_sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-register.md",
+      "sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d",
+      "current_sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/authoring-contract-draft.md",
+      "sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e",
+      "current_sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "current_sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "current_sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "current_sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "current_sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "current_sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "current_sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/704-taiwan-arc-first-application.md",
+      "sha256": "15229f8e599464d507976f6d91818d441c6a1c8be1448af31f79fd79b8730dac",
+      "current_sha256": "15229f8e599464d507976f6d91818d441c6a1c8be1448af31f79fd79b8730dac",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "9057c2a83ef6e71ab6f576702943fdf604ae345b627b94d98986baf4a6b7d6b2",
+      "current_sha256": "9057c2a83ef6e71ab6f576702943fdf604ae345b627b94d98986baf4a6b7d6b2",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sr/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "1e5a3547ce8437f9ddb4f3a3b61dd62261a4a1dccaa63683d43d9692b73331d9",
+      "current_sha256": "1e5a3547ce8437f9ddb4f3a3b61dd62261a4a1dccaa63683d43d9692b73331d9",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+      "current_sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+      "current_sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+      "current_sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+      "same": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/sr.json",
+      "sha256": "b82eac56b6e35c4a08e8029317975be46ee3930f2366633a704dd487a69d0419",
+      "current_sha256": "b82eac56b6e35c4a08e8029317975be46ee3930f2366633a704dd487a69d0419",
+      "same": true
+    }
+  ],
+  "structure_tool": {
+    "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/tooling/content-audit.mjs",
+    "sha256": "3926a274bf544fed7e34339aa8b2636d41a4be79c0aaff898f46fc65595faf4b"
+  },
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-apply-self-edits.py",
+      "sha256": "0a46c1e68ead1f4f638fe768cfee83b09382407daa4b16bf46627f9737ae49ae",
+      "bytes": 6052
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-audit.mjs",
+      "sha256": "8d9f73d40b65444825da66625747c578f0f9c958eb04c242e124d7e49a511b0d",
+      "bytes": 3562
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-content-audit-final.json",
+      "sha256": "f1cad8ea79f9883c232c81f5ab2c95652c95a6f2c849397e369fb7b3712ab66f",
+      "bytes": 365789
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-final-proof-current.json",
+      "sha256": "ea33dec781c8da8c3c6d1ccda1dcba8071e78e6a3bcfcd0cf78fcc4e61dfdb67",
+      "bytes": 161952
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-final-proof.json",
+      "sha256": "1e0e1f76651fedc33322d11eba8904e98140d3a271c6dfefb590b6975b4bc941",
+      "bytes": 161555
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-final-proof.py",
+      "sha256": "adab4dbf31cffd040bcfc3fa67c0623b467adb0c543d78d593b329f31a424812",
+      "bytes": 5682
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-initial-manuscripts.json",
+      "sha256": "49b19310dd205d5b72c23586d6e2ad1bc9a1aec2e24c4832286cfc877c520ff9",
+      "bytes": 48307
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-inputs.json",
+      "sha256": "dc6cb5af469c963fb4216ff8b8b1c406623da052d17aeecbe24dd0b6692b8b8a",
+      "bytes": 6060
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-metadata-render.json",
+      "sha256": "903ea4a19a75ef0631d4f8755bb8bc10abac4c57c880387f9daae089a6f21ea9",
+      "bytes": 62870
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-metadata-render.mjs",
+      "sha256": "dcbf1255c3830d57d4245ab42bc8176fea3fda40f3e7a01552dc2ad13a5f6642",
+      "bytes": 4292
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-run-variety.py",
+      "sha256": "02232c0365a8a1b017ebf2581346ef73ddd0e545448d4748d0de9b1915fd45f6",
+      "bytes": 2023
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-self-edits.json",
+      "sha256": "04b3ffdec82e53259866f3051bf8c399242ea9d94d61b97886f332030d7ab981",
+      "bytes": 19659
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-variety-initial.json",
+      "sha256": "b2eb58a540e23106075f25702ead406266e71c4290345f28b81ced4ed48da47a",
+      "bytes": 68838
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-variety-revised.json",
+      "sha256": "e47c982528e78fce9678ebfe954fee64c17956b5e0666e63abb25bf8ec985b2e",
+      "bytes": 56573
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sr-write-author.py",
+      "sha256": "a7b97f5b826b0205831e602ecd1f83796592bdd46ede230b0566f48cf3673d8c",
+      "bytes": 21641
+    }
+  ],
+  "current_proof": "checks/sr-final-proof-current.json",
+  "actual_cli_invocations": 2,
+  "actual_cli_file_measurements": 11,
+  "current_FAIL_files": 0,
+  "structural_errors": 0,
+  "semantic_tool_status": "REVIEW_REQUIRED",
+  "actual_render_segments": 238,
+  "FAQ_total": 17,
+  "exact_inverse_files": 6,
+  "actual_self_edits": 7,
+  "source_images": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/915-case-trends-20261025.webp",
+      "sha256": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95",
+      "bytes": 157754,
+      "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/916-case-trends-20261025.webp",
+      "sha256": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+      "bytes": 299298,
+      "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/918-case-trends-20261025.webp",
+      "sha256": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+      "bytes": 103074,
+      "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/919-case-trends-20261025.webp",
+      "sha256": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+      "bytes": 146756,
+      "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/920-case-trends-20261025.webp",
+      "sha256": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+      "bytes": 183782,
+      "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/921-case-trends-20261025.webp",
+      "sha256": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933",
+      "bytes": 122822,
+      "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+    }
+  ],
+  "limits": [
+    "Model author self-review; no native human or legal approval",
+    "Direct full original image viewing reused from continuous B6 work by unchanged byte hashes",
+    "Only parser HTML/prose arrays verified; no full browser/card/JSON-LD/feed/public deployment claim"
+  ]
+}

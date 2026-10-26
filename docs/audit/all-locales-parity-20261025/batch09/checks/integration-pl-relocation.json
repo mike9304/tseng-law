@@ -1,0 +1,140 @@
+{
+  "atUTC": "2026-10-26T11:38:06.201522+00:00",
+  "isolatedFixture": "/private/tmp/tseng-b9-pl-portable-d18_1l69",
+  "sourceAndArtifactsCopiedByteExactly": [
+    {
+      "sha256": "a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791",
+      "relativePath": "src/content/columns-pl/915-taiwan-public-contract-mediation-arbitration-same-claim.md"
+    },
+    {
+      "sha256": "0d8c4e51ae6105bdfccb1b2dbda51eb89b09201c60e77f97b3caad028a3c3c2e",
+      "relativePath": "docs/audit/variety-segments/a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791.json"
+    },
+    {
+      "sha256": "4a66c3324fd412a21a36092dbb64d2c87932257353737f314cc7914d4c31c2f4",
+      "relativePath": "docs/audit/all-locales-parity-20261025/batch09/boundaries/pl/approvals/ec3e7f0db7c6bd3d58fd84695dbb3be6ba968befa574c92363ad3fdca964f937.json"
+    },
+    {
+      "sha256": "75763fa56ec70c53e9263cca7cb9c1e796c8d954c987ebe17ad36ca9636b513f",
+      "relativePath": "docs/audit/all-locales-parity-20261025/batch09/boundaries/pl/originals/75763fa56ec70c53e9263cca7cb9c1e796c8d954c987ebe17ad36ca9636b513f-pl-independent-r3-reviewed-boundaries.json"
+    },
+    {
+      "sha256": "8fd049376e4c0a587131d5b40ac9dea1172306523ac7d32f9d468453cc32781a",
+      "relativePath": "docs/audit/all-locales-parity-20261025/batch09/boundaries/pl/originals/8fd049376e4c0a587131d5b40ac9dea1172306523ac7d32f9d468453cc32781a-pl-independent-r2.md"
+    },
+    {
+      "sha256": "4e49cbfdceee120c1075eb4d9e38e68773a02199014167660ba9dfc7e78c9014",
+      "relativePath": "docs/audit/all-locales-parity-20261025/batch09/boundaries/pl/originals/4e49cbfdceee120c1075eb4d9e38e68773a02199014167660ba9dfc7e78c9014-pl-independent-r3-boundary-delta.json"
+    },
+    {
+      "sha256": "764893baa250d37c15793431094d1f3f133106fe20c459ba9d1a230212a3c9d0",
+      "relativePath": "docs/audit/all-locales-parity-20261025/batch09/boundaries/pl/originals/764893baa250d37c15793431094d1f3f133106fe20c459ba9d1a230212a3c9d0-pl-independent-r3.md"
+    },
+    {
+      "sha256": "67e1a4bd4123dd6de01e1a0e66586cf6d22903063ffb568b999a24301b6c536f",
+      "relativePath": "src/content/columns-pl/916-taiwan-parent-company-pollution-liability-us-investor.md"
+    },
+    {
+      "sha256": "0378dba7b9c20f12c7b7051e55e22bcd521cab3f789cb20cc5b61ef594e29f42",
+      "relativePath": "docs/audit/variety-segments/67e1a4bd4123dd6de01e1a0e66586cf6d22903063ffb568b999a24301b6c536f.json"
+    },
+    {
+      "sha256": "d3ed3720492f1acc5703d8e361373eb9f958105da46034c064a17564e7ebfc55",
+      "relativePath": "src/content/columns-pl/918-taiwan-presale-mortgage-notice-handover-judgment.md"
+    },
+    {
+      "sha256": "f2a255d03528949ee0f9561168b72973d5f2a3a3700c11c543cd7e3c5462b63b",
+      "relativePath": "docs/audit/variety-segments/d3ed3720492f1acc5703d8e361373eb9f958105da46034c064a17564e7ebfc55.json"
+    },
+    {
+      "sha256": "3178fe2341264eae69b9c68b3a4ac9c9902d1da1fe77c904207351ffac847ed7",
+      "relativePath": "docs/audit/all-locales-parity-20261025/batch09/boundaries/pl/approvals/c994ec69b751e01210a09c202b009772c444c64200fd860fa803f844b2cf9335.json"
+    },
+    {
+      "sha256": "84e16aa66742031dc97655016dcc95b8a75ed8d7c4a9b1296d0bd2c0b6b7c1f5",
+      "relativePath": "docs/audit/all-locales-parity-20261025/batch09/boundaries/pl/originals/84e16aa66742031dc97655016dcc95b8a75ed8d7c4a9b1296d0bd2c0b6b7c1f5-pl-independent-r4-reviewed-boundaries.json"
+    },
+    {
+      "sha256": "ab7d3efff8cc3cdd211fd619f9737688d2cd6b8c67bd4fdc406ecf67dfb92987",
+      "relativePath": "docs/audit/all-locales-parity-20261025/batch09/boundaries/pl/originals/ab7d3efff8cc3cdd211fd619f9737688d2cd6b8c67bd4fdc406ecf67dfb92987-r4-intake-manifest.json"
+    },
+    {
+      "sha256": "a48b8191ba92a6a386c2108fd12c6966484ef86fd2af8941b40c3ae1a38e9628",
+      "relativePath": "src/content/columns-pl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md"
+    },
+    {
+      "sha256": "4e5e804e6e65cc050b18c90936774837603f37be651f9b7c134a9feed299dac5",
+      "relativePath": "docs/audit/variety-segments/a48b8191ba92a6a386c2108fd12c6966484ef86fd2af8941b40c3ae1a38e9628.json"
+    },
+    {
+      "sha256": "1ae0a5c6dd50d985378f533d266248349d164314bd39cfdf13fefd4b26ef5b30",
+      "relativePath": "src/content/columns-pl/920-taiwan-apartment-ev-charger-common-area-judgment.md"
+    },
+    {
+      "sha256": "96124d1a85b7a3017cb98628f2276590287681e54ef78e919976cada4b4801f9",
+      "relativePath": "docs/audit/variety-segments/1ae0a5c6dd50d985378f533d266248349d164314bd39cfdf13fefd4b26ef5b30.json"
+    },
+    {
+      "sha256": "c29911404cc6477949d269efbbc26946512b5fd477ded9ed1a4f655145c3551b",
+      "relativePath": "src/content/columns-pl/921-taiwan-online-game-coins-refund-judgment.md"
+    },
+    {
+      "sha256": "52d973775032861e033e30de235921b99f48fce0f9848b43077abe98ac8f7b78",
+      "relativePath": "docs/audit/variety-segments/c29911404cc6477949d269efbbc26946512b5fd477ded9ed1a4f655145c3551b.json"
+    }
+  ],
+  "rows": [
+    {
+      "sourceRelativePath": "src/content/columns-pl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sourceSHA256": "a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791",
+      "mapSHA256": "0d8c4e51ae6105bdfccb1b2dbda51eb89b09201c60e77f97b3caad028a3c3c2e",
+      "sentences": 36,
+      "cv": 0.486,
+      "automaticDiscovery": true
+    },
+    {
+      "sourceRelativePath": "src/content/columns-pl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sourceSHA256": "67e1a4bd4123dd6de01e1a0e66586cf6d22903063ffb568b999a24301b6c536f",
+      "mapSHA256": "0378dba7b9c20f12c7b7051e55e22bcd521cab3f789cb20cc5b61ef594e29f42",
+      "sentences": 36,
+      "cv": 0.522,
+      "automaticDiscovery": true
+    },
+    {
+      "sourceRelativePath": "src/content/columns-pl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sourceSHA256": "d3ed3720492f1acc5703d8e361373eb9f958105da46034c064a17564e7ebfc55",
+      "mapSHA256": "f2a255d03528949ee0f9561168b72973d5f2a3a3700c11c543cd7e3c5462b63b",
+      "sentences": 38,
+      "cv": 0.504,
+      "automaticDiscovery": true
+    },
+    {
+      "sourceRelativePath": "src/content/columns-pl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sourceSHA256": "a48b8191ba92a6a386c2108fd12c6966484ef86fd2af8941b40c3ae1a38e9628",
+      "mapSHA256": "4e5e804e6e65cc050b18c90936774837603f37be651f9b7c134a9feed299dac5",
+      "sentences": 41,
+      "cv": 0.463,
+      "automaticDiscovery": true
+    },
+    {
+      "sourceRelativePath": "src/content/columns-pl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sourceSHA256": "1ae0a5c6dd50d985378f533d266248349d164314bd39cfdf13fefd4b26ef5b30",
+      "mapSHA256": "96124d1a85b7a3017cb98628f2276590287681e54ef78e919976cada4b4801f9",
+      "sentences": 39,
+      "cv": 0.545,
+      "automaticDiscovery": true
+    },
+    {
+      "sourceRelativePath": "src/content/columns-pl/921-taiwan-online-game-coins-refund-judgment.md",
+      "sourceSHA256": "c29911404cc6477949d269efbbc26946512b5fd477ded9ed1a4f655145c3551b",
+      "mapSHA256": "52d973775032861e033e30de235921b99f48fce0f9848b43077abe98ac8f7b78",
+      "sentences": 43,
+      "cv": 0.546,
+      "automaticDiscovery": true
+    }
+  ],
+  "externalBaseEvidenceReadsRequired": false,
+  "artifactGraphAllRelativeWithinRelocatedRepository": true,
+  "measurement": "Actual checker API; CLI evidence remains the separate45 real R executions.",
+  "productionOrManuscriptChanges": false
+}

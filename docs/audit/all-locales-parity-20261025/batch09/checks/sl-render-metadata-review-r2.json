@@ -1,0 +1,509 @@
+{
+  "at": "2026-10-26T09:25:12.422Z",
+  "scope": "Changed 916/920 rendered; other four reused by exact SHA; author and independent R1 evidence preserved",
+  "rows": [
+    {
+      "id": "915",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "649eaa92c45bf3f3a708805011aa7f28f88553c70b8dd13985e03b2c4f964f0f",
+      "frontmatter": {
+        "title": "Podaljšanje gradbenega roka in denarni zahtevek v tajvanski arbitraži",
+        "seoTitle": "Javna naročila na Tajvanu: isti spor pred mediacijo in arbitražo",
+        "summary": "Izvajalec je po predlogu za podaljšanje gradbenega roka znova zahteval denar. O tej zahtevi ni bilo mediacijskega priporočila, zato ni bilo podlage za arbitražo. Razveljavitev arbitražne odločbe je ostala v veljavi.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "read_time": "5 min branja",
+        "categories": [
+          "Javna naročila na Tajvanu",
+          "Sodna praksa"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "gradbena pogodba",
+          "mediacija",
+          "arbitraža",
+          "denarni zahtevek",
+          "ameriški dobavitelji"
+        ],
+        "audience": [
+          "sl"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/915-case-trends-20261025.webp",
+        "featured_image_alt": "Zaščitna čelada, načrti in registratorja na mizi ob maketi mostu.",
+        "featured_image_caption": "Izmišljen prizor",
+        "faq": [
+          {
+            "q": "Ali neuspešna mediacija vedno omogoča arbitražo proti tajvanskemu javnemu naročniku?",
+            "a": "Ne. Zakonska pot za gradnjo ali tehnične storitve zahteva, da mediacija ne uspe zaradi naročnikovega nesoglasja s priporočilom ali predlogom pristojne komisije. Konkretni arbitražni zahtevek mora biti povezan s sporom, o katerem je komisija obravnavala takšno rešitev. Druga podlaga je lahko ločen arbitražni sporazum strank."
+          },
+          {
+            "q": "Ali vsaka sprememba zneska ali pravnih argumentov pomeni nov spor?",
+            "a": "Sodba tega ne določa na splošno. Obravnavala je vrnitev k denarnemu zahtevku po predlogu o podaljšanju roka. Primerjati je treba dejstva, zahtevano pravno varstvo ter vloge, spremembe in predloge iz mediacije."
+          }
+        ]
+      },
+      "frontmatterChangedKeys": [],
+      "faqUnchanged": true,
+      "renderedParagraphs": [
+        "Arbitražna odločba je izvajalcu pri gradnji bolnišnice prisodila NT$44.417.150. Pozneje je bila razveljavljena. Kot pojasnjuje tajvansko vrhovno sodišče v zadevi 106年度台上字第723號, se je mediacijski predlog nanašal na daljši rok za izvedbo, denarni zahtevek iz arbitraže pa ni imel enake procesne podlage.",
+        "Vrhovno sodišče je 12. julija 2017 zavrnilo izvajalčevo pritožbo in ohranilo razveljavitev arbitražne odločbe. Uradno pojasnilo izrecno navaja pravnomočen konec tega postopka. Za konkretni denarni spor ni bilo ne dogovorjenega arbitražnega sporazuma ne izpolnjenih pogojev, po katerih bi se tak sporazum štel za sklenjenega po zakonu.",
+        "Zamuda pri istem projektu lahko povzroči več zahtev. V obravnavanem postopku se je spreminjalo prav to, kaj naj naročnik izpolni:",
+        "Potrdilo o neuspešni mediaciji ni zapolnilo vrzeli. Naročnik bi moral imeti možnost sprejeti ali zavrniti rešitev prav tistega spora, ki naj bi šel v arbitražo. Njegovo nasprotovanje daljšemu roku samo ni izkazovalo odnosa do denarnega zahtevka.",
+        "Izid je ostal, razlogi pa so bili popravljeni. Vrhovno sodišče je popravilo razlago nižjega sodišča glede uporabljene različice zakona, vendar to ni spremenilo razveljavitve. Zavrnitev pritožbe zato ni pomenila potrditve vseh razlogov prejšnje sodbe.",
+        "85-1. člen tajvanskega zakona o javnem naročanju ureja spore pri izpolnjevanju pogodbe, ki jih stranki ne rešita sporazumno. Dobavitelj lahko zaprosi za mediacijo pri pristojni pritožbeni komisiji za javna naročila. Naročnik te zahteve ne sme zavrniti.",
+        "Pri gradnji ali tehničnih storitvah mora komisija podati priporočilo ali predlog; če mediacija ne uspe zato, ker naročnik z njim ne soglaša, naročnik ne sme zavrniti dobaviteljeve predložitve zadevnega spora arbitraži. Pomemben je torej tudi razlog neuspeha. Predlog mora zadevati konkretno sporno zahtevo.",
+        "V bolnišničnem primeru je ta podlaga za denarni zahtevek manjkala. Sodišče je uporabilo razlog za razveljavitev zaradi neobstoja arbitražnega sporazuma iz 2. točke prvega odstavka 40. člena zakona o arbitraži. To je bil odločilni razlog v tej zadevi.",
+        "Običajen nakup opreme še ni samodejno gradnja ali tehnična storitev. Razvrstitev pogodbe zato vpliva na uporabo te zakonske poti. Če obstaja posebej sklenjen arbitražni sporazum, je treba njegovo veljavnost in obseg presoditi zase.",
+        "ITA, ameriška uprava za mednarodno trgovino, je 30. septembra 2026 opisala predvidena naročila v tajvanskem energetskem in elektroenergetskem sektorju konec leta 2026 in leta 2027, tudi kot morebitne priložnosti za ameriške dobavitelje. Gre za načrte. Objava ne potrjuje, da je konkretni razpis odprt, da je določeni ponudnik upravičen ali da njegova pogodba spada pod navedeno arbitražno pot.",
+        "Ponudbena ekipa lahko razvrstitev pogodbe in določbe o reševanju sporov pregleda že pred začetkom izvedbe. Ko se zahtevi po dodatnem času pridruži plačilo, naj dokumentacija pokaže, kako je bila sprememba predstavljena komisiji. Ista oznaka projekta še ne pove, katera izpolnitev je bila predmet predloga.",
+        "Je komisija obravnavala plačilo, ki se zdaj zahteva? Odgovor lahko pokažejo prvotna vloga, njene spremembe, priporočilo ali predlog ter naročnikov odgovor. Sam znesek ni odločilen. Enako velja za drugače oblikovane pravne argumente.",
+        "Za del zahtevka, ki ni bil zajet, se lahko ob pravnem pregledu odpre vprašanje dodatne mediacije ali ločenega arbitražnega dogovora. V prvem vprašanju na kontaktni strani v angleščini je mogoče navesti vrsto projekta, zahtevek in naslednji pomembni datum. Časovnica naj poveže zahtevo po daljšem roku, nastanek denarne zahteve in predlog, ki ga je naročnik zavrnil.",
+        "Veljavni predpisi in tržne informacije so bili preverjeni 26. oktobra 2026; opis sodbe temelji na uradnem pojasnilu, pregledanem 25. oktobra. Besedilo ne določa pristojnosti ali zadnjega dne za vložitev zahtevka po drugi pogodbi."
+      ],
+      "html": "<p>Arbitražna odločba je izvajalcu pri gradnji bolnišnice prisodila NT$44.417.150. Pozneje je bila razveljavljena. Kot pojasnjuje <a href=\"https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693\">tajvansko vrhovno sodišče v zadevi 106年度台上字第723號</a>, se je mediacijski predlog nanašal na daljši rok za izvedbo, denarni zahtevek iz arbitraže pa ni imel enake procesne podlage.</p>\n<p>Vrhovno sodišče je 12. julija 2017 zavrnilo izvajalčevo pritožbo in ohranilo razveljavitev arbitražne odločbe. Uradno pojasnilo izrecno navaja pravnomočen konec tega postopka. Za konkretni denarni spor ni bilo ne dogovorjenega arbitražnega sporazuma ne izpolnjenih pogojev, po katerih bi se tak sporazum štel za sklenjenega po zakonu.</p>\n<h2>Od denarja k roku in nato nazaj</h2>\n<p>Zamuda pri istem projektu lahko povzroči več zahtev. V obravnavanem postopku se je spreminjalo prav to, kaj naj naročnik izpolni:</p>\n<table><thead><tr><th>Korak</th><th>Zahtevek in odziv</th></tr></thead><tbody><tr><td>Prvotna vloga</td><td>Izvajalec je zahteval denarno povračilo.</td></tr><tr><td>Spremenjena vloga</td><td>Namesto tega je predlagal podaljšanje izvedbenega roka.</td></tr><tr><td>Obravnava komisije</td><td>Priporočilo se je nanašalo na podaljšanje, s katerim naročnik ni soglašal.</td></tr><tr><td>Ponovni denarni zahtevek</td><td>Izvajalec se je vrnil k plačilu, vendar o njem ni bilo novega priporočila ali predloga pred arbitražo.</td></tr></tbody></table>\n<p>Potrdilo o neuspešni mediaciji ni zapolnilo vrzeli. Naročnik bi moral imeti možnost sprejeti ali zavrniti rešitev prav tistega spora, ki naj bi šel v arbitražo. Njegovo nasprotovanje daljšemu roku samo ni izkazovalo odnosa do denarnega zahtevka.</p>\n<p>Izid je ostal, razlogi pa so bili popravljeni. Vrhovno sodišče je popravilo razlago nižjega sodišča glede uporabljene različice zakona, vendar to ni spremenilo razveljavitve. Zavrnitev pritožbe zato ni pomenila potrditve vseh razlogov prejšnje sodbe.</p>\n<h2>Kdaj naročnik arbitraže ne sme zavrniti</h2>\n<p><a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057\">85-1. člen tajvanskega zakona o javnem naročanju</a> ureja spore pri izpolnjevanju pogodbe, ki jih stranki ne rešita sporazumno. Dobavitelj lahko zaprosi za mediacijo pri pristojni pritožbeni komisiji za javna naročila. Naročnik te zahteve ne sme zavrniti.</p>\n<p>Pri gradnji ali tehničnih storitvah mora komisija podati priporočilo ali predlog; če mediacija ne uspe zato, ker naročnik z njim ne soglaša, naročnik ne sme zavrniti dobaviteljeve predložitve zadevnega spora arbitraži. Pomemben je torej tudi razlog neuspeha. Predlog mora zadevati konkretno sporno zahtevo.</p>\n<p>V bolnišničnem primeru je ta podlaga za denarni zahtevek manjkala. Sodišče je uporabilo razlog za razveljavitev zaradi neobstoja arbitražnega sporazuma iz <a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001\">2. točke prvega odstavka 40. člena zakona o arbitraži</a>. To je bil odločilni razlog v tej zadevi.</p>\n<p>Običajen nakup opreme še ni samodejno gradnja ali tehnična storitev. Razvrstitev pogodbe zato vpliva na uporabo te zakonske poti. Če obstaja posebej sklenjen arbitražni sporazum, je treba njegovo veljavnost in obseg presoditi zase.</p>\n<h2>Predvidena naročila in sled sprememb zahtevka</h2>\n<p><a href=\"https://www.trade.gov/market-intelligence/taiwan-energy-industry\">ITA, ameriška uprava za mednarodno trgovino, je 30. septembra 2026</a> opisala predvidena naročila v tajvanskem energetskem in elektroenergetskem sektorju konec leta 2026 in leta 2027, tudi kot morebitne priložnosti za ameriške dobavitelje. Gre za načrte. Objava ne potrjuje, da je konkretni razpis odprt, da je določeni ponudnik upravičen ali da njegova pogodba spada pod navedeno arbitražno pot.</p>\n<p>Ponudbena ekipa lahko razvrstitev pogodbe in določbe o reševanju sporov pregleda že pred začetkom izvedbe. Ko se zahtevi po dodatnem času pridruži plačilo, naj dokumentacija pokaže, kako je bila sprememba predstavljena komisiji. Ista oznaka projekta še ne pove, katera izpolnitev je bila predmet predloga.</p>\n<p>Je komisija obravnavala plačilo, ki se zdaj zahteva? Odgovor lahko pokažejo prvotna vloga, njene spremembe, priporočilo ali predlog ter naročnikov odgovor. Sam znesek ni odločilen. Enako velja za drugače oblikovane pravne argumente.</p>\n<p>Za del zahtevka, ki ni bil zajet, se lahko ob pravnem pregledu odpre vprašanje dodatne mediacije ali ločenega arbitražnega dogovora. V <a href=\"/en/contact\">prvem vprašanju na kontaktni strani v angleščini</a> je mogoče navesti vrsto projekta, zahtevek in naslednji pomembni datum. Časovnica naj poveže zahtevo po daljšem roku, nastanek denarne zahteve in predlog, ki ga je naročnik zavrnil.</p>\n<p>Veljavni predpisi in tržne informacije so bili preverjeni 26. oktobra 2026; opis sodbe temelji na uradnem pojasnilu, pregledanem 25. oktobra. Besedilo ne določa pristojnosti ali zadnjega dne za vložitev zahtevka po drugi pogodbi.</p>\n<h2>Uradni viri</h2>\n<ul>\n<li><a href=\"https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693\">Vrhovno sodišče: pojasnilo zadeve 106年度台上字第723號</a>, 12. julija 2017.</li>\n<li><a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057\">Zakon o javnem naročanju</a>, 85-1. člen.</li>\n<li><a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001\">Zakon o arbitraži</a>, 40. člen, prvi odstavek, 2. točka.</li>\n<li><a href=\"https://www.trade.gov/market-intelligence/taiwan-energy-industry\">ITA: tajvanski energetski sektor</a>, 30. septembra 2026.</li>\n</ul>",
+      "orderedListCount": 0,
+      "tableCount": 1,
+      "officialUniqueURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "sourceURLMissing": [],
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sourceSHA": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "internalLinks": [
+        {
+          "url": "/en/contact",
+          "scope": "Existing English contact route; validated in production audit; no HTTP claim."
+        }
+      ],
+      "imageSHA": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95",
+      "boldMarkupFound": false,
+      "renderExecution": "Reused exact unchanged source SHA from original render"
+    },
+    {
+      "id": "916",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "a6589e8395d4f32408c1c194a26f54a9b87f5aaa944db14e6a1f7f1d64858957",
+      "frontmatter": {
+        "title": "Okoljsko poročilo pred prevzemom in odgovornost matične družbe na Tajvanu",
+        "seoTitle": "Onesnaženje na Tajvanu: nadzor, vednost in prenosi premoženja",
+        "summary": "Poročila iz časa pred prevzemom so pomagala pokazati, kaj so obvladujoče družbe vedele o onesnaženju in kako so ravnale pozneje. Sodišče je povezalo nadzor, opustitev ukrepov in prenose premoženja; tuje lastništvo samo ni bilo dovolj.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "read_time": "5 min branja",
+        "categories": [
+          "Gospodarsko pravo na Tajvanu",
+          "Prevzemi podjetij"
+        ],
+        "topic": "company",
+        "tags": [
+          "matična družba",
+          "onesnaženje",
+          "skrbni pregled",
+          "premiki premoženja",
+          "naložbe"
+        ],
+        "audience": [
+          "sl"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/916-case-trends-20261025.webp",
+        "featured_image_alt": "Posoda z vzorcem zemlje in zvezek na zložljivi mizi pred staro tovarno.",
+        "featured_image_caption": "Izmišljen prizor",
+        "faq": [
+          {
+            "q": "Ali tuja matična družba odgovarja že zato, ker ima tajvansko hčerinsko družbo?",
+            "a": "V tej zadevi lastništvo samo ni bilo podlaga odgovornosti. Uradno pojasnilo povezuje dejanski nadzor, vednost o onesnaženju, opustitev obveščanja in sanacije ter prenose premoženja zaradi izogibanja odgovornosti. Presojati je treba konkretno ravnanje in pravno podlago."
+          },
+          {
+            "q": "Ali je vrhovno sodišče leta 2018 zaključilo vse zahtevke zaradi tovarniškega onesnaženja?",
+            "a": "Ne. Del glede 246 oseb je razveljavilo in vrnilo v ponovno odločanje, pritožbe glede 262 oseb pa zavrnilo. To ni enako zavrnitvi vseh prvotnih zahtevkov druge skupine niti zaključku vseh povezanih postopkov."
+          },
+          {
+            "q": "Katere listine so koristne po okoljskem skrbnem pregledu?",
+            "a": "Poročilo, podatki o njegovih prejemnikih, dodatna vprašanja, odločitve o izpostavljenosti delavcev kemikalijam in sanaciji ter odobritve in finančne ocene poznejših prenosov premoženja lahko pokažejo vednost in ravnanje. Hramba dokumentov sama ne dokazuje zakonitosti ravnanja."
+          }
+        ]
+      },
+      "frontmatterChangedKeys": [
+        "faq"
+      ],
+      "faqUnchanged": false,
+      "renderedParagraphs": [
+        "Kdo je lahko ukrepal po ugotovitvah onesnaženja v tovarni? Poročilo, naročeno pred prevzemom podjetja, lahko pozneje pokaže, kdo je vedel za nevarnost v tovarni. V uradnem pojasnilu tajvanskega vrhovnega sodišča o zadevi 107年度台上字第267號 so okoljske ugotovitve povezane z dejanskim nadzorom družb in njihovimi poznejšimi odločitvami. Iz tajvanske družbe je bilo preneseno tudi premoženje.",
+        "Sodba z dne 16. avgusta 2018 je obravnavala izpostavljenost delavcev kemikalijam v tovarni elektronike in odgovornost obvladujočih družb. Podlaga ni bila zgolj tuja udeležba v kapitalu. Sodišče je presojalo, kaj so družbe vedele in kako so uporabile svoj vpliv.",
+        "Okoljske preiskave pred prevzemi so razkrile onesnaženje, s katerim so bile obvladujoče družbe seznanjene. Delavci niso bili obveščeni. Manjkali so tudi ustrezni sanacijski ukrepi, pri presoji pa so bili pomembni zmanjšanje kapitala in nakazila v tujino, namenjena umiku premoženja pred obveznostmi zaradi onesnaženja.",
+        "Sodišče je potrdilo razloge za spregled ločene pravne osebnosti družb v obravnavanem položaju. Lastniška povezava tega ne pojasni v celoti. Dokazi o nadzoru so dobili pomen skupaj z vednostjo, opustitvami in premiki sredstev.",
+        "Seznam prejemnikov pokaže, komu je bilo poročilo poslano, zapisniki in navodila pa lahko pojasnijo pristojnost za odziv. Odobritve poznejših prenosov nato povežejo ta odziv z denarjem in premoženjem.",
+        "Pri skrbnem pregledu je mogoče slediti tudi neodgovorjenim vprašanjem: kdo je preverjal tveganja za zaposlene, katere dodatne preiskave so bile naročene in kaj se je zgodilo z njihovimi ugotovitvami. Povzetek za zaključek prevzema naj ne zabriše prvotnih tehničnih ugotovitev. Te je treba brati skupaj z odločitvami, ki so jim sledile.",
+        "Vrhovno sodišče je razveljavilo del odločitve glede 246 oseb in ga vrnilo v ponovno odločanje. Pritožbe glede 262 oseb je zavrnilo. Pojasnilo izreka pri vrnjenih delih med drugim navaja pomanjkljivo presojo škode, dokazov in upravičenja za uveljavljanje zahtevkov.",
+        "Vrnitev v ponovno odločanje ni pomenila zavrnitve celotne skupine. Tudi zavrnitev pritožb glede drugih 262 ni pomenila zavrnitve vseh njihovih prvotnih zahtevkov ali konca vseh povezanih zadev. Ocena stare obveznosti zato zahteva identifikacijo konkretnega zahtevka in njegovega procesnega položaja.",
+        "154. člen tajvanskega zakona o družbah praviloma omejuje odgovornost delničarja na vplačilo delnic. Drugi odstavek določa izjemo: če delničar zlorabi samostojno pravno osebnost družbe, zaradi česar nastane določen dolg, ki ga družba očitno težko poravna, in so okoliščine tako resne, da je njegova odgovornost nujna, mora ta dolg poravnati delničar.",
+        "Pogoji so kumulativni. Neplačan dolg, delež v družbi ali neugodno poročilo vsak zase ne zajamejo celotne zakonske presoje. Sedanjega besedila tudi ni primerno predstavljati kot edino zgodovinsko podlago sodbe o preteklem ravnanju.",
+        "Običajno razliko med organizacijskima oblikama pojasnjuje primerjava hčerinske družbe in podružnice na Tajvanu. Okoljska zadeva pa zahteva podatke, ki presegajo ustanovitvene listine: kdo je uporabljal nadzor, ko je nevarnost že poznal?",
+        "Informativni list USTR iz februarja 2026 opisuje namere ZDA in Tajvana glede čezmejnih naložb. Ameriška stran je napovedala, da bo, kadar je to primerno, razmislila o podpori financiranju naložb v ključnih sektorjih na Tajvanu v sodelovanju z ameriškimi zasebnimi partnerji in po veljavnih predpisih. Namere niso individualna odobritev financiranja. Objave tudi ni mogoče šteti za dokaz začetka veljavnosti vseh določb sporazuma.",
+        "Predlagano dividendo, zmanjšanje kapitala ali prenos denarja iz družbe je mogoče primerjati z znanimi tveganji, nerešenimi zahtevki in premoženjem, ki ostaja na Tajvanu. Sklepi o prenosih lahko pojasnijo njihove zneske in razloge. Ime dokumenta ali shranjeno poročilo samo ne pokaže, ali je bil prenos zakonit.",
+        "V vprašanju o tajvanski družbi na kontaktni strani v angleščini lahko navedete posel, zadevno družbo in predvideni datum plačila ali zaključka. Tehnična poročila ter občutljive podatke o zaposlenih je mogoče predložiti pozneje po dogovoru o varni predaji. Prvotne ugotovitve, odločitve o odzivu in pooblastila za premike premoženja skupaj pokažejo, kaj je sledilo pregledu.",
+        "Veljavni predpis in uradne naložbene informacije so bili preverjeni 26. oktobra 2026. Opis sodbe temelji na uradnem pojasnilu, pregledanem 25. oktobra; ne povzema vseh povezanih postopkov in ne določa odgovornosti posameznega vlagatelja."
+      ],
+      "html": "<p>Kdo je lahko ukrepal po ugotovitvah onesnaženja v tovarni? Poročilo, naročeno pred prevzemom podjetja, lahko pozneje pokaže, kdo je vedel za nevarnost v tovarni. V <a href=\"https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523\">uradnem pojasnilu tajvanskega vrhovnega sodišča o zadevi 107年度台上字第267號</a> so okoljske ugotovitve povezane z dejanskim nadzorom družb in njihovimi poznejšimi odločitvami. Iz tajvanske družbe je bilo preneseno tudi premoženje.</p>\n<p>Sodba z dne 16. avgusta 2018 je obravnavala izpostavljenost delavcev kemikalijam v tovarni elektronike in odgovornost obvladujočih družb. Podlaga ni bila zgolj tuja udeležba v kapitalu. Sodišče je presojalo, kaj so družbe vedele in kako so uporabile svoj vpliv.</p>\n<h2>Kdo je prejel poročilo in kdo je odločal</h2>\n<p>Okoljske preiskave pred prevzemi so razkrile onesnaženje, s katerim so bile obvladujoče družbe seznanjene. Delavci niso bili obveščeni. Manjkali so tudi ustrezni sanacijski ukrepi, pri presoji pa so bili pomembni zmanjšanje kapitala in nakazila v tujino, namenjena umiku premoženja pred obveznostmi zaradi onesnaženja.</p>\n<p>Sodišče je potrdilo razloge za spregled ločene pravne osebnosti družb v obravnavanem položaju. Lastniška povezava tega ne pojasni v celoti. Dokazi o nadzoru so dobili pomen skupaj z vednostjo, opustitvami in premiki sredstev.</p>\n<p>Seznam prejemnikov pokaže, komu je bilo poročilo poslano, zapisniki in navodila pa lahko pojasnijo pristojnost za odziv. Odobritve poznejših prenosov nato povežejo ta odziv z denarjem in premoženjem.</p>\n<p>Pri skrbnem pregledu je mogoče slediti tudi neodgovorjenim vprašanjem: kdo je preverjal tveganja za zaposlene, katere dodatne preiskave so bile naročene in kaj se je zgodilo z njihovimi ugotovitvami. Povzetek za zaključek prevzema naj ne zabriše prvotnih tehničnih ugotovitev. Te je treba brati skupaj z odločitvami, ki so jim sledile.</p>\n<h2>Različna izida za dela glede 246 in 262 oseb</h2>\n<p>Vrhovno sodišče je razveljavilo del odločitve glede 246 oseb in ga vrnilo v ponovno odločanje. Pritožbe glede 262 oseb je zavrnilo. <a href=\"https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523\">Pojasnilo izreka</a> pri vrnjenih delih med drugim navaja pomanjkljivo presojo škode, dokazov in upravičenja za uveljavljanje zahtevkov.</p>\n<p>Vrnitev v ponovno odločanje ni pomenila zavrnitve celotne skupine. Tudi zavrnitev pritožb glede drugih 262 ni pomenila zavrnitve vseh njihovih prvotnih zahtevkov ali konca vseh povezanih zadev. Ocena stare obveznosti zato zahteva identifikacijo konkretnega zahtevka in njegovega procesnega položaja.</p>\n<h2>Kdaj delničar odgovarja za dolg družbe</h2>\n<p><a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&amp;flno=154\">154. člen tajvanskega zakona o družbah</a> praviloma omejuje odgovornost delničarja na vplačilo delnic. Drugi odstavek določa izjemo: če delničar zlorabi samostojno pravno osebnost družbe, zaradi česar nastane določen dolg, ki ga družba očitno težko poravna, in so okoliščine tako resne, da je njegova odgovornost nujna, mora ta dolg poravnati delničar.</p>\n<p>Pogoji so kumulativni. Neplačan dolg, delež v družbi ali neugodno poročilo vsak zase ne zajamejo celotne zakonske presoje. Sedanjega besedila tudi ni primerno predstavljati kot edino zgodovinsko podlago sodbe o preteklem ravnanju.</p>\n<p>Običajno razliko med organizacijskima oblikama pojasnjuje <a href=\"/sl/columns/taiwan-company-subsidiary-vs-branch\">primerjava hčerinske družbe in podružnice na Tajvanu</a>. Okoljska zadeva pa zahteva podatke, ki presegajo ustanovitvene listine: kdo je uporabljal nadzor, ko je nevarnost že poznal?</p>\n<h2>Naložbeni načrt in sredstva, ki ostanejo družbi</h2>\n<p><a href=\"https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade\">Informativni list USTR iz februarja 2026</a> opisuje namere ZDA in Tajvana glede čezmejnih naložb. Ameriška stran je napovedala, da bo, kadar je to primerno, razmislila o podpori financiranju naložb v ključnih sektorjih na Tajvanu v sodelovanju z ameriškimi zasebnimi partnerji in po veljavnih predpisih. Namere niso individualna odobritev financiranja. Objave tudi ni mogoče šteti za dokaz začetka veljavnosti vseh določb sporazuma.</p>\n<p>Predlagano dividendo, zmanjšanje kapitala ali prenos denarja iz družbe je mogoče primerjati z znanimi tveganji, nerešenimi zahtevki in premoženjem, ki ostaja na Tajvanu. Sklepi o prenosih lahko pojasnijo njihove zneske in razloge. Ime dokumenta ali shranjeno poročilo samo ne pokaže, ali je bil prenos zakonit.</p>\n<p>V <a href=\"/en/contact\">vprašanju o tajvanski družbi na kontaktni strani v angleščini</a> lahko navedete posel, zadevno družbo in predvideni datum plačila ali zaključka. Tehnična poročila ter občutljive podatke o zaposlenih je mogoče predložiti pozneje po dogovoru o varni predaji. Prvotne ugotovitve, odločitve o odzivu in pooblastila za premike premoženja skupaj pokažejo, kaj je sledilo pregledu.</p>\n<p>Veljavni predpis in uradne naložbene informacije so bili preverjeni 26. oktobra 2026. Opis sodbe temelji na uradnem pojasnilu, pregledanem 25. oktobra; ne povzema vseh povezanih postopkov in ne določa odgovornosti posameznega vlagatelja.</p>\n<h2>Uradni viri</h2>\n<ul>\n<li><a href=\"https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523\">Vrhovno sodišče: pojasnilo zadeve 107年度台上字第267號</a>, 16. avgusta 2018.</li>\n<li><a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&amp;flno=154\">Zakon o družbah, 154. člen</a>.</li>\n<li><a href=\"https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade\">USTR: informativni list o sporazumu med ZDA in Tajvanom</a>, februarja 2026.</li>\n</ul>",
+      "orderedListCount": 0,
+      "tableCount": 0,
+      "officialUniqueURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "sourceURLMissing": [],
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sourceSHA": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "internalLinks": [
+        {
+          "url": "/sl/columns/taiwan-company-subsidiary-vs-branch",
+          "matchingFiles": [
+            "004-taiwan-company-subsidiary-vs-branch.md"
+          ]
+        },
+        {
+          "url": "/en/contact",
+          "scope": "Existing English contact route; validated in production audit; no HTTP claim."
+        }
+      ],
+      "imageSHA": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+      "boldMarkupFound": false,
+      "renderExecution": "Actual ReactMarkdown and remarkGfm server render of changed source; not a browser/build/deployment"
+    },
+    {
+      "id": "918",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "78ddaf97bff0d6eb30dad29ed60be5292363744fefd3eb0266ff8316ced5f858",
+      "frontmatter": {
+        "title": "Pismo o posojilu še ni bilo obvestilo o predaji stanovanja na Tajvanu",
+        "seoTitle": "Predaja stanovanja na Tajvanu: posojilo, uporabno dovoljenje in rok",
+        "summary": "Prodajalčevo pismo je spraševalo o bančnem posojilu, stanovanje pa še ni imelo vode in elektrike. Sodišče je ločilo bančne korake, vstop zaradi notranjih del in pogodbeno predajo. Rok se je začel pri uporabnem dovoljenju.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "read_time": "5 min branja",
+        "categories": [
+          "Nakup stanovanja na Tajvanu",
+          "Sodna praksa"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "stanovanje v gradnji",
+          "obvestilo o predaji",
+          "stanovanjsko posojilo",
+          "zamuda",
+          "uporabno dovoljenje"
+        ],
+        "audience": [
+          "sl"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/918-case-trends-20261025.webp",
+        "featured_image_alt": "Mapa z listinami, prazna ovojnica in ena škatla na mizi v novem stanovanju.",
+        "featured_image_caption": "Izmišljen prizor",
+        "faq": [
+          {
+            "q": "Ali je prodajalčev dopis o posojilu hkrati obvestilo o predaji stanovanja?",
+            "a": "Odločilna sta vsebina dopisa in tedanje stanje stanovanja. V tej zadevi je dopis spraševal o postopku pri banki, ni pa obvestil o pripravljenosti za uporabo. Dokazi o vodi, elektriki in poznejšem pregledu prav tako niso potrjevali izpolnitve pogodbene obveznosti obveščanja."
+          },
+          {
+            "q": "Ali rok po uporabnem dovoljenju traja štiri ali šest mesecev?",
+            "a": "Pogodba v tej zadevi je določala štiri mesece. Sedanja 15. točka obveznih pogojev za prodajo še nedokončanih stanovanj zahteva obvestilo kupcu o predaji v šestih mesecih od pridobitve uporabnega dovoljenja. Za drug spor je treba pregledati njegovo pogodbo in predpise, veljavne ob podpisu."
+          },
+          {
+            "q": "Ali lahko prezrem prodajalčev poziv, dokler banka ne izplača posojila?",
+            "a": "Nedokončan bančni postopek sam po sebi ne odpravi potrebe po odzivu. Plačila, bančna dokumentacija, pregled in predaja imajo svoje pogoje. Vsebino poziva in navedeni rok je treba povezati s podatki banke ter stanjem stanovanja; sodba ne daje vsem kupcem splošne pravice do ustavitve plačil."
+          }
+        ]
+      },
+      "frontmatterChangedKeys": [],
+      "faqUnchanged": true,
+      "renderedParagraphs": [
+        "Voda in elektrika še nista bili priključeni, ko je gradbeni investitor 23. februarja 2019 kupcu poslal pismo o napredovanju bančnega posojila. Pismo ni sporočalo, da je stanovanje pripravljeno za predajo. Njegovo vsebino in poznejše stanje prostorov obravnava uradna zbirka potrošniških sodb, natisnjene strani 173–187.",
+        "Višje sodišče Tajvana je v svoji izpostavi v Taichungu 9. februarja 2022 odločilo o zadevi 109年度上易字第289號. Zavrnilo je investitorjevo pritožbo in dodatni tožbeni zahtevek. Obveznost plačila zamudnih obresti je ostala v veljavi, nadaljnja pritožba pa po sodbi ni bila dovoljena.",
+        "Februarski dopis je kupca pozival, naj stopi v stik z banko in sporoči stanje posojila. Priključki so sledili pozneje. Ob prvem pregledu julija so še obstajale napake in nedokončana dela, med njimi montaža dvigala.",
+        "Kupec je avgusta podpisal dovoljenje za vstop zaradi notranje ureditve in čiščenja. Preostala popravila ter vsebina listine niso potrjevali, da sta bila s tem opravljena pogodbeno zahtevani pregled in predaja. Dostop je imel določen namen.",
+        "Posojilo je bilo investitorju nakazano 5. novembra. Garancijska listina pa je kot dan predaje navajala 28. november. Četrti del obrazložitve na natisnjenih straneh 182–186 te dogodke presoja ločeno, tudi v razmerju do avgustovskega dovoljenja za notranja dela.",
+        "Investitor je menil, da bi moral kupec po februarskem pismu plačati celotno kupnino. Toda kupec je izpolnjeval dogovorjena obročna plačila in pred predajo dokončal plačilo. Sodišče zato ni sprejelo zahteve, ki je izhajala iz očitane plačilne kršitve. Presoja je bila vezana na konkretno pogodbo.",
+        "Pogodba je zahtevala obvestilo o predaji v štirih mesecih od pridobitve uporabnega dovoljenja. To je bil rok teh strank. Sedanji obvezni pogoji za prodajo še nedokončanih stanovanj v 15. točki prodajalcu nalagajo obvestilo kupcu v šestih mesecih od pridobitve uporabnega dovoljenja.",
+        "Predaja vključuje tudi odpravo napak, obračun in izročitev dokumentacije. Šestmesečni rok za obvestilo zato ni avtomatično splošni rok za dokončanje vseh teh korakov. Odobritev ali izplačilo posojila prav tako ne nadomestita zakonsko določenega začetnega dogodka.",
+        "Pri drugem stanovanju se pogodbeni rok primerja z datumom uporabnega dovoljenja, vsebino obvestila in dokazom o prejemu, ob tem pa se uporabi različica pravil, ki je veljala ob sklenitvi pogodbe. Starejši štirimesečni dogovor ne zamenja sedanjih pravil.",
+        "Obveznosti ima tudi kupec. Sedanja 14. točka med drugim obravnava pogodbena plačila pred vpisom prenosa lastninske pravice in potrebne listine ter sodelovanje pri urejanju posojila. Spor o pravilnosti obvestila sam po sebi ne izniči zapadlega plačila ali dokumentacijske obveznosti.",
+        "Uradni pregled prodajnih pogodb z dne 25. avgusta 2025 je kot neustrezne izpostavil določbe, ki so iz roka za obvestilo izvzemale čas bančne potrditve in izplačila. Bančni postopek prodajalcu sam ne podaljša roka. Listine o njem lahko pokažejo potek financiranja, ne da bi dokazovale pripravljenost nepremičnine za predajo.",
+        "Veljavna pravila tajvanske centralne banke o nepremičninskih posojilih so po septembrski spremembi začela veljati 18. septembra 2026; ta različica je bila potrjena 26. oktobra. Niso neposredna podlaga, ki bi se za nazaj prenesla na nakup iz leta 2019. Današnje bančne datume je treba povezati s pogodbo, ki se dejansko uporablja.",
+        "Kaj mora kupec storiti po prejetem pismu? Naslov dopisa ne pove vsega. Celotno pismo, ovojnica ali elektronsko dokazilo o dostavi, zapisnik pregleda, fotografije napak, dovoljenje za vstop in garancijska listina lahko kažejo različne obveznosti in različne datume.",
+        "Če prodajalec zahteva pogodbeno plačilo zaradi kršitve ali obresti, lahko prvo vprašanje pisarni pošljete po elektronski pošti z navedbo določbe, datuma dopisa in roka za odgovor. Pri urejanju spisa je koristno ločiti poizvedbo o posojilu, vabilo na pregled in obvestilo o predaji glede na dejanje, ki ga vsaka listina zahteva.",
+        "Veljavni predpisi in uradne informacije so bili preverjeni 26. oktobra 2026. Sodba je obravnavana po uradni ponovni objavi, pregledani 25. oktobra; ne določa, kdaj sme drug kupec zadržati plačilo ali zavrniti predajo."
+      ],
+      "html": "<p>Voda in elektrika še nista bili priključeni, ko je gradbeni investitor 23. februarja 2019 kupcu poslal pismo o napredovanju bančnega posojila. Pismo ni sporočalo, da je stanovanje pripravljeno za predajo. Njegovo vsebino in poznejše stanje prostorov obravnava <a href=\"https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C\">uradna zbirka potrošniških sodb, natisnjene strani 173–187</a>.</p>\n<p>Višje sodišče Tajvana je v svoji izpostavi v Taichungu 9. februarja 2022 odločilo o zadevi 109年度上易字第289號. Zavrnilo je investitorjevo pritožbo in dodatni tožbeni zahtevek. Obveznost plačila zamudnih obresti je ostala v veljavi, nadaljnja pritožba pa po sodbi ni bila dovoljena.</p>\n<h2>Vstop zaradi del in pogodbeni prevzem</h2>\n<p>Februarski dopis je kupca pozival, naj stopi v stik z banko in sporoči stanje posojila. Priključki so sledili pozneje. Ob prvem pregledu julija so še obstajale napake in nedokončana dela, med njimi montaža dvigala.</p>\n<p>Kupec je avgusta podpisal dovoljenje za vstop zaradi notranje ureditve in čiščenja. Preostala popravila ter vsebina listine niso potrjevali, da sta bila s tem opravljena pogodbeno zahtevani pregled in predaja. Dostop je imel določen namen.</p>\n<p>Posojilo je bilo investitorju nakazano 5. novembra. Garancijska listina pa je kot dan predaje navajala 28. november. Četrti del obrazložitve na natisnjenih straneh 182–186 te dogodke presoja ločeno, tudi v razmerju do avgustovskega dovoljenja za notranja dela.</p>\n<p>Investitor je menil, da bi moral kupec po februarskem pismu plačati celotno kupnino. Toda kupec je izpolnjeval dogovorjena obročna plačila in pred predajo dokončal plačilo. Sodišče zato ni sprejelo zahteve, ki je izhajala iz očitane plačilne kršitve. Presoja je bila vezana na konkretno pogodbo.</p>\n<h2>Obvestilo po uporabnem dovoljenju</h2>\n<p>Pogodba je zahtevala obvestilo o predaji v štirih mesecih od pridobitve uporabnega dovoljenja. To je bil rok teh strank. Sedanji <a href=\"https://www.ey.gov.tw/File/17FD66C7511F7121?A=C\">obvezni pogoji za prodajo še nedokončanih stanovanj</a> v 15. točki prodajalcu nalagajo obvestilo kupcu v šestih mesecih od pridobitve uporabnega dovoljenja.</p>\n<p>Predaja vključuje tudi odpravo napak, obračun in izročitev dokumentacije. Šestmesečni rok za obvestilo zato ni avtomatično splošni rok za dokončanje vseh teh korakov. Odobritev ali izplačilo posojila prav tako ne nadomestita zakonsko določenega začetnega dogodka.</p>\n<p>Pri drugem stanovanju se pogodbeni rok primerja z datumom uporabnega dovoljenja, vsebino obvestila in dokazom o prejemu, ob tem pa se uporabi različica pravil, ki je veljala ob sklenitvi pogodbe. Starejši štirimesečni dogovor ne zamenja sedanjih pravil.</p>\n<p>Obveznosti ima tudi kupec. Sedanja 14. točka med drugim obravnava pogodbena plačila pred vpisom prenosa lastninske pravice in potrebne listine ter sodelovanje pri urejanju posojila. Spor o pravilnosti obvestila sam po sebi ne izniči zapadlega plačila ali dokumentacijske obveznosti.</p>\n<h2>Kaj dokazuje banka in kaj prodajalec</h2>\n<p><a href=\"https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11\">Uradni pregled prodajnih pogodb z dne 25. avgusta 2025</a> je kot neustrezne izpostavil določbe, ki so iz roka za obvestilo izvzemale čas bančne potrditve in izplačila. Bančni postopek prodajalcu sam ne podaljša roka. Listine o njem lahko pokažejo potek financiranja, ne da bi dokazovale pripravljenost nepremičnine za predajo.</p>\n<p><a href=\"https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html\">Veljavna pravila tajvanske centralne banke o nepremičninskih posojilih</a> so po septembrski spremembi začela veljati 18. septembra 2026; ta različica je bila potrjena 26. oktobra. Niso neposredna podlaga, ki bi se za nazaj prenesla na nakup iz leta 2019. Današnje bančne datume je treba povezati s pogodbo, ki se dejansko uporablja.</p>\n<p>Kaj mora kupec storiti po prejetem pismu? Naslov dopisa ne pove vsega. Celotno pismo, ovojnica ali elektronsko dokazilo o dostavi, zapisnik pregleda, fotografije napak, dovoljenje za vstop in garancijska listina lahko kažejo različne obveznosti in različne datume.</p>\n<p>Če prodajalec zahteva pogodbeno plačilo zaradi kršitve ali obresti, lahko prvo vprašanje <a href=\"mailto:wei@hoveringlaw.com.tw\">pisarni pošljete po elektronski pošti</a> z navedbo določbe, datuma dopisa in roka za odgovor. Pri urejanju spisa je koristno ločiti poizvedbo o posojilu, vabilo na pregled in obvestilo o predaji glede na dejanje, ki ga vsaka listina zahteva.</p>\n<p>Veljavni predpisi in uradne informacije so bili preverjeni 26. oktobra 2026. Sodba je obravnavana po uradni ponovni objavi, pregledani 25. oktobra; ne določa, kdaj sme drug kupec zadržati plačilo ali zavrniti predajo.</p>\n<h2>Uradni viri</h2>\n<ul>\n<li><a href=\"https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C\">Zbirka potrošniških sodb in pravnih pojasnil, 22. zvezek</a>, natisnjene strani 173–187, zadeva 109年度上易字第289號.</li>\n<li><a href=\"https://www.ey.gov.tw/File/17FD66C7511F7121?A=C\">Obvezni in prepovedani pogoji za prodajo še nedokončanih stanovanj</a>, 14. in 15. točka.</li>\n<li><a href=\"https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11\">Uradni pregled pogodb za prodajo stanovanj</a>, 25. avgusta 2025.</li>\n<li><a href=\"https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html\">Centralna banka: pravila za nepremičninska posojila</a>, različica z začetkom veljavnosti 18. septembra 2026.</li>\n</ul>",
+      "orderedListCount": 0,
+      "tableCount": 0,
+      "officialUniqueURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "sourceURLMissing": [],
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sourceSHA": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "internalLinks": [],
+      "imageSHA": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+      "boldMarkupFound": false,
+      "renderExecution": "Reused exact unchanged source SHA from original render"
+    },
+    {
+      "id": "919",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "cbc5c8726046e43b8438f4c4147938cb3c53806a6c234e9c6d6f2f3ba991a98c",
+      "frontmatter": {
+        "title": "Napoved odpustitve pred sejo komisije: tajvanska sodba o preiskavi trpinčenja",
+        "seoTitle": "Preiskava trpinčenja na Tajvanu in možnost izjave zaposlenega",
+        "summary": "Vodja je sankcijo javno naznanil, preden jo je obravnavala pristojna komisija. Sodišče je odpravilo odpustitev javnega uslužbenca zaradi napak v presoji in postopku. Zasebni delodajalci imajo drugačno pravno podlago za preiskavo in zaščito.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "read_time": "5 min branja",
+        "categories": [
+          "Delovno pravo na Tajvanu",
+          "Sodna praksa"
+        ],
+        "topic": "labor",
+        "tags": [
+          "trpinčenje na delovnem mestu",
+          "preiskava prijave",
+          "pravica do izjave",
+          "javni uslužbenci",
+          "odpustitev"
+        ],
+        "audience": [
+          "sl"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/919-case-trends-20261025.webp",
+        "featured_image_alt": "Ena mapa na okrogli mizi in trije stoli v prazni sejni sobi.",
+        "featured_image_caption": "Izmišljen prizor",
+        "faq": [
+          {
+            "q": "Ali odprava odpustitve pomeni, da je sodišče ugotovilo, da trpinčenja ni bilo?",
+            "a": "V tej zadevi ne. Sodišče je ugotovilo napake v postopku in presoji dejstev ter nezadostno možnost izjave, zato je odpravilo odpustitev in odločitev o upravni pritožbi. To ne potrjuje neresničnosti vseh očitkov. Uradno pojasnilo je navajalo tudi možnost pritožbe."
+          },
+          {
+            "q": "Ali mora podjetje počakati na končano preiskavo, preden zaščiti zaposlenega?",
+            "a": "Odziv po tajvanskem zakonu je odvisen tudi od načina seznanitve. Ob prijavi prizadetega delavca mora delodajalec sprejeti ukrepe proti ponovitvi, zagotoviti ustrezno pomoč in zaščito glede na potrebe ter preiskati primer. Zaščita lahko poteka hkrati s pošteno preiskavo."
+          },
+          {
+            "q": "Ali lahko kadrovska služba zasebnega podjetja uporabi isti postopek kot javni organ?",
+            "a": "Sodba se nanaša na ocenjevanje in odpustitev v javni službi. Zasebno podjetje mora uporabiti svoj veljavni okvir varnosti pri delu, delovnega prava in pogodb. Presoja vnaprejšnje odločitve, možnosti izjave in protislovnih dokazov je lahko koristna, ne zamenja pa ustrezne pravne podlage."
+          }
+        ]
+      },
+      "frontmatterChangedKeys": [
+        "title",
+        "faq"
+      ],
+      "faqUnchanged": false,
+      "renderedParagraphs": [
+        "Komisija je zadevo dobila na mizo po javni napovedi sankcije. V postopku zaradi domnevnega trpinčenja pri tajvanskem javnem organu je bilo zato sporno tudi, koliko prostora je sploh še imela za samostojno presojo. Pojasnilo višjega upravnega sodišča v Tajpeju poleg zaporedja odločanja obravnava omejeno možnost izjave zaposlenega in protislovje v preiskovalnem poročilu.",
+        "Sodišče je 3. septembra 2026 v zadevi 114年度訴字第869號 odpravilo prvotno odpustitev in odločitev o upravni pritožbi. Uslužbencu sta bili z eno odločitvijo izrečeni dve težji disciplinski sankciji, 兩大過, ki sta vodili v odpustitev. Pritožba je bila dovoljena. Iz sodbe ne izhaja, da so bili vsi očitki neresnični ali da se je uslužbenec že dejansko vrnil na delo.",
+        "Najprej je vodja naznanil sankcijo. Sledila je obravnava pri nadrejenem organu, šele nato pri ocenjevalni komisiji organa, v katerem je bil uslužbenec zaposlen. Sodišče je v tem zaporedju prepoznalo oviro za resnično razpravo in samostojno odločanje komisije.",
+        "Bi komisija lahko odločila drugače? Zapisnik, razpoložljivi dokazi in vprašanja članov lahko pokažejo, ali je bila napovedana sankcija še predmet odprte presoje. Datum seje sam tega ne potrdi.",
+        "Pred izrekom sankcije zaposleni ni dobil zakonitega in zadostnega poziva, da se izjavi, odločitev pa je temeljila na poročilu, v katerem presoja dokazanosti trpinčenja ni bila skladna s predlagano disciplinsko posledico. Poznejša možnost izjave v postopku z upravno pritožbo ni odpravila prejšnje kršitve.",
+        "Primer je izhajal iz posebnega sistema javnih uslužbencev in iz dogodkov pred začetkom veljavnosti novih pravil. Nova tajvanska ureditev trpinčenja v zakonu o varnosti in zdravju pri delu velja od 1. julija 2026. To izkazujeta zgodovina zakona in pojasnilo pristojnega organa. Za zasebno delovno okolje jo je treba obravnavati posebej.",
+        "Po 22-2. členu morata biti preiskava in poskus sporazumne rešitve objektivna, poštena in nepristranska. Med preiskavo morajo stranke dobiti dovolj možnosti za izjavo in zagovor, upoštevati pa je treba tudi pravila o izločitvi zaradi nasprotja interesov. Javna razglasitev krivde pred tem lahko oteži izpolnitev teh obveznosti.",
+        "Ko delodajalec prejme prijavo prizadetega delavca, mora sprejeti ukrepe za preprečevanje ponovitve, začeti preiskavo ter glede na potrebe in okoliščine zagotoviti svetovanje, pomoč in zaščito. Zaščita lahko steče že med preiskavo. Dolžnost ukrepanja ne zahteva čakanja na končno poročilo.",
+        "Če je prijavitelj pripravljen na sporazumno reševanje, se ta pot lahko poskusi. Če dogovor ni dosežen, se mora preiskava nadaljevati. Privolitev v pogovor zato ni razlog, da bi nerešena prijava preprosto ostala brez nadaljnje obravnave.",
+        "Nasprotujoče si izjave zahtevajo razlago, kateri dokazi so bili sprejeti in zakaj. Sporočila, evidence navzočnosti in zapisniki lahko podpirajo ali slabijo posamezno trditev. V presojo sodijo tudi podatki, ki se s prijavo ne ujemajo.",
+        "Poziv k izjavi lahko konkretno navede očitano ravnanje, obdobje in še odprta vprašanja, da zaposleni odgovarja na dejanske očitke, ne zgolj na splošno oceno svojega načina vodenja. Besedilo poziva je zato smiselno brati ob zapisu razgovora. Tako postane razvidno, kaj je bilo pojasnjeno pred odločitvijo.",
+        "Pri sestavljanju poročila se lahko preveri, ali predlagani ukrep sledi ugotovljenim dejstvom in izbrani pravni podlagi.",
+        "Prvo vprašanje o tajvanskem delovnem sporu je mogoče poslati pisarni po elektronski pošti z navedbo faze prijave, že sprejete odločitve in naslednjega roka. Celotne občutljive spise je mogoče posredovati pozneje po dogovoru. Pred objavo izida naj se povežejo poziv, odgovor zaposlenega in razlogi, zaradi katerih so bili posamezni dokazi sprejeti ali zavrnjeni.",
+        "Predpisi in njihova veljavnost so bili preverjeni 26. oktobra 2026; opis sodbe temelji na uradnem pojasnilu, pregledanem 25. oktobra. Izid morebitne poznejše pritožbe ni potrjen. Pravna sredstva javnega uslužbenca in zaposlenega pri zasebniku se presojajo po različnih pravilih."
+      ],
+      "html": "<p>Komisija je zadevo dobila na mizo po javni napovedi sankcije. V postopku zaradi domnevnega trpinčenja pri tajvanskem javnem organu je bilo zato sporno tudi, koliko prostora je sploh še imela za samostojno presojo. <a href=\"https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html\">Pojasnilo višjega upravnega sodišča v Tajpeju</a> poleg zaporedja odločanja obravnava omejeno možnost izjave zaposlenega in protislovje v preiskovalnem poročilu.</p>\n<p>Sodišče je 3. septembra 2026 v zadevi 114年度訴字第869號 odpravilo prvotno odpustitev in odločitev o upravni pritožbi. Uslužbencu sta bili z eno odločitvijo izrečeni dve težji disciplinski sankciji, 兩大過, ki sta vodili v odpustitev. Pritožba je bila dovoljena. Iz sodbe ne izhaja, da so bili vsi očitki neresnični ali da se je uslužbenec že dejansko vrnil na delo.</p>\n<h2>Javna napoved pred samostojno presojo</h2>\n<p>Najprej je vodja naznanil sankcijo. Sledila je obravnava pri nadrejenem organu, šele nato pri ocenjevalni komisiji organa, v katerem je bil uslužbenec zaposlen. Sodišče je v tem zaporedju prepoznalo oviro za resnično razpravo in samostojno odločanje komisije.</p>\n<p>Bi komisija lahko odločila drugače? Zapisnik, razpoložljivi dokazi in vprašanja članov lahko pokažejo, ali je bila napovedana sankcija še predmet odprte presoje. Datum seje sam tega ne potrdi.</p>\n<p>Pred izrekom sankcije zaposleni ni dobil zakonitega in zadostnega poziva, da se izjavi, odločitev pa je temeljila na poročilu, v katerem presoja dokazanosti trpinčenja ni bila skladna s predlagano disciplinsko posledico. Poznejša možnost izjave v postopku z upravno pritožbo ni odpravila prejšnje kršitve.</p>\n<h2>Zasebni delodajalec uporabi veljavni delovnopravni okvir</h2>\n<p>Primer je izhajal iz posebnega sistema javnih uslužbencev in iz dogodkov pred začetkom veljavnosti novih pravil. Nova tajvanska ureditev trpinčenja v zakonu o varnosti in zdravju pri delu velja od 1. julija 2026. To izkazujeta <a href=\"https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001\">zgodovina zakona</a> in <a href=\"https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt\">pojasnilo pristojnega organa</a>. Za zasebno delovno okolje jo je treba obravnavati posebej.</p>\n<p>Po <a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&amp;flno=22-2\">22-2. členu</a> morata biti preiskava in poskus sporazumne rešitve objektivna, poštena in nepristranska. Med preiskavo morajo stranke dobiti dovolj možnosti za izjavo in zagovor, upoštevati pa je treba tudi pravila o izločitvi zaradi nasprotja interesov. Javna razglasitev krivde pred tem lahko oteži izpolnitev teh obveznosti.</p>\n<p>Ko delodajalec prejme prijavo prizadetega delavca, mora sprejeti ukrepe za preprečevanje ponovitve, začeti preiskavo ter glede na potrebe in okoliščine zagotoviti svetovanje, pomoč in zaščito. Zaščita lahko steče že med preiskavo. Dolžnost ukrepanja ne zahteva čakanja na končno poročilo.</p>\n<p>Če je prijavitelj pripravljen na sporazumno reševanje, se ta pot lahko poskusi. Če dogovor ni dosežen, se mora preiskava nadaljevati. Privolitev v pogovor zato ni razlog, da bi nerešena prijava preprosto ostala brez nadaljnje obravnave.</p>\n<h2>Od izjav do obrazložene odločitve</h2>\n<p>Nasprotujoče si izjave zahtevajo razlago, kateri dokazi so bili sprejeti in zakaj. Sporočila, evidence navzočnosti in zapisniki lahko podpirajo ali slabijo posamezno trditev. V presojo sodijo tudi podatki, ki se s prijavo ne ujemajo.</p>\n<p>Poziv k izjavi lahko konkretno navede očitano ravnanje, obdobje in še odprta vprašanja, da zaposleni odgovarja na dejanske očitke, ne zgolj na splošno oceno svojega načina vodenja. Besedilo poziva je zato smiselno brati ob zapisu razgovora. Tako postane razvidno, kaj je bilo pojasnjeno pred odločitvijo.</p>\n<p>Pri sestavljanju poročila se lahko preveri, ali predlagani ukrep sledi ugotovljenim dejstvom in izbrani pravni podlagi.</p>\n<p>Prvo vprašanje o tajvanskem delovnem sporu je mogoče poslati <a href=\"mailto:wei@hoveringlaw.com.tw\">pisarni po elektronski pošti</a> z navedbo faze prijave, že sprejete odločitve in naslednjega roka. Celotne občutljive spise je mogoče posredovati pozneje po dogovoru. Pred objavo izida naj se povežejo poziv, odgovor zaposlenega in razlogi, zaradi katerih so bili posamezni dokazi sprejeti ali zavrnjeni.</p>\n<p>Predpisi in njihova veljavnost so bili preverjeni 26. oktobra 2026; opis sodbe temelji na uradnem pojasnilu, pregledanem 25. oktobra. Izid morebitne poznejše pritožbe ni potrjen. Pravna sredstva javnega uslužbenca in zaposlenega pri zasebniku se presojajo po različnih pravilih.</p>\n<h2>Uradni viri</h2>\n<ul>\n<li><a href=\"https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html\">Višje upravno sodišče v Tajpeju: zadeva 114年度訴字第869號</a>, 3. septembra 2026.</li>\n<li><a href=\"https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001\">Zgodovina zakona o varnosti in zdravju pri delu</a>.</li>\n<li><a href=\"https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt\">Pojasnilo pristojnega organa o novi ureditvi</a>, veljavnost od 1. julija 2026.</li>\n<li><a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&amp;flno=22-2\">Zakon o varnosti in zdravju pri delu, 22-2. člen</a>.</li>\n</ul>",
+      "orderedListCount": 0,
+      "tableCount": 0,
+      "officialUniqueURLs": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+      ],
+      "sourceURLMissing": [],
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sourceSHA": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "internalLinks": [],
+      "imageSHA": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+      "boldMarkupFound": false,
+      "renderExecution": "Reused exact unchanged source SHA from original render"
+    },
+    {
+      "id": "920",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "dbe66f18a0c146e1f6dbfba0addbf78585cc0c6be8c5d246a5d04bd0cb2bb55e",
+      "frontmatter": {
+        "title": "Kabel do polnilnice je segal v skupne dele tajvanske stavbe",
+        "seoTitle": "Polnilnica v tajvanski večstanovanjski stavbi: čigavo soglasje?",
+        "summary": "Pravica do uporabe parkirnega mesta ni rešila vprašanja napeljave po skupni steni, stropu in električni omarici. Sodišče je odredilo odstranitev opreme ob uporabi zakona in pravil konkretne stavbe.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "read_time": "5 min branja",
+        "categories": [
+          "Nepremičnine na Tajvanu",
+          "Sodna praksa"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "električna vozila",
+          "polnilnica",
+          "skupni deli",
+          "etažni lastniki",
+          "električna napeljava"
+        ],
+        "audience": [
+          "sl"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/920-case-trends-20261025.webp",
+        "featured_image_alt": "Električni avtomobil ob polnilnici na stebru v garaži, z napeljavo do kabelske police pod stropom.",
+        "featured_image_caption": "Izmišljen prizor",
+        "faq": [
+          {
+            "q": "Ali smem napeljati kabel do polnilnice, če smem uporabljati parkirno mesto?",
+            "a": "Pregledati je treba celotno traso in mesta namestitve. V tej zadevi je oprema posegala v skupno steno, strop in električno omarico. Uporaba parkirnega mesta sama ni dala potrebnega dovoljenja. Za drugo stavbo je treba presoditi njena dejstva, pravice in pravila."
+          },
+          {
+            "q": "Ali oprema lahko ostane, če jo izklopim in zaklenem?",
+            "a": "Stanovalec je trdil, da opreme ne uporablja, da jo je zaklenil in da je pripravljen izročiti ključ odboru. Sodišče je presodilo, da ga niti ob resničnosti teh navedb to ne razbremeni odstranitve in vzpostavitve prejšnjega stanja. Sklep je bil vezan na ugotovljene kršitve tega primera."
+          },
+          {
+            "q": "Ali javna subvencija nadomesti soglasje za poseg v skupne dele?",
+            "a": "Pogoji subvencije in dovoljenje za poseg sta ločeni vprašanji. Program Kaohsiunga za leto 2026 je med drugim zajemal kabelske police za polnjenje električnih vozil v skupnih delih večstanovanjskih stavb. Objavljeni rok 30. septembra je že potekel. Program posameznemu stanovalcu ni samodejno dovolil posega."
+          }
+        ]
+      },
+      "frontmatterChangedKeys": [],
+      "faqUnchanged": true,
+      "renderedParagraphs": [
+        "Polnilna omarica je bila na steni za parkirnim mestom, napeljava je potekala po stropu, nov odklopnik pa je bil v skupni električni omarici. Izvedba je zato segala dlje od površine, ki jo je stanovalec uporabljal za parkiranje. Te lokacije opisuje objavljena sodba v zadevi 111年度上字第132號.",
+        "Višje sodišče Tajvana je v svoji izpostavi v Kaohsiungu 22. junija 2022 zavrnilo stanovalčevo pritožbo. Odstraniti je moral opremo in vzpostaviti prejšnje stanje. Potrebno predhodno soglasje ni bilo pridobljeno, čeprav je bila napeljava povezana z električnim števcem, ki ga je uporabljal stanovalec.",
+        "Nesporna dejstva so zajemala polnilno omarico na zadnji steni, napeljavo na stropnih nosilcih ter odklopnik v električni omarici. Lastništvo ali uporaba parkirnega mesta ne opisujeta vseh teh površin. Sodišče je moralo obravnavati tudi skupne dele.",
+        "Pri dovoljenju sta bili pomembni dve ravni. 11. člen tajvanskega zakona o upravljanju večstanovanjskih stavb za rušitev, večja popravila ali izboljšave skupnih delov in pripadajoče opreme zahteva odločitev zbora etažnih lastnikov. Sodišče je določbo uporabilo za obravnavani poseg. Pravilo 15 te stavbe je za dodajanje napeljave in vodov zahtevalo še dovoljenje upravnega odbora in varnostni pregled elektrodistributerja.",
+        "Oboje je bilo del presoje. Kršitev 11. člena in pravil stavbe je pomenila tudi kršitev obveznosti spoštovanja drugih predpisov ter pravil skupnosti po 5. točki prvega odstavka 6. člena. Ker oprema po formalnem pozivu odbora k uskladitvi še vedno ni bila odstranjena, je odbor lahko zahteval sodno varstvo po tretjem odstavku istega člena.",
+        "Četrta točka prvega odstavka 6. člena ureja napeljavo in potrebno uporabo skupnih delov. Sodišče je ugotovilo, da ta določba za konkretna dejstva ne velja. Peti in šesti del obrazložitve povezujeta položaj opreme s pravili stavbe; iz sodbe zato ne izhaja enak postopek glasovanja za vsako polnilnico v vsaki stavbi.",
+        "Stanovalec se je skliceval tudi na dodano stikalo, prenehanje uporabe in zaklepanje ter ponudbo, da odboru izroči ključ. To so bile njegove navedbe. Po presoji sodišča bi odstranitev in vzpostavitev prejšnjega stanja ostali obvezni tudi, če bi vse navedeno držalo.",
+        "Kje natančno bo potekal kabel? Načrt lahko označi polnilno omarico, pot po stenah in stropu ter električno omarico, da je mogoče celotno izvedbo primerjati s pravicami na površinah, pravili stavbe in že izdanimi soglasji. Številka parkirnega mesta ne pokaže celotne trase.",
+        "Vloga odboru se lahko opre na isti načrt in zahteva pojasnilo, kdo sme odločiti o predlogu ter katera dokumentacija manjka. Če soglasje že obstaja, je koristna primerjava odobrene trase in opreme z različico, ki jo namerava namestiti izvajalec. Ustni odgovor lahko pusti obseg odobritve nejasen.",
+        "Tudi pogodba z monterjem lahko začetek del veže na pridobitev potrebnih soglasij in določi, kdo nosi stroške, če je prošnja zavrnjena. Tak dogovor ne nadomesti odločitve pristojnega organa stavbe. Poveže pa tehnični predlog s stroški njegove izvedbe.",
+        "Kaohsiung je maja 2026 predstavil program pomoči za kabelske police, namenjene polnjenju električnih vozil v skupnih delih večstanovanjskih stavb. Mestna objava je določala rok za prijavo 30. septembra. Ta datum je že mimo. Objava opisuje podporo skupni napeljavi, ne daje pa posameznemu stanovalcu samodejnega dovoljenja za predlagani poseg.",
+        "Če prejmete zahtevo za ustavitev ali odstranitev opreme, lahko pisarni po elektronski pošti pošljete kratek opis, sporno določbo pravil stavbe in rok za odgovor. Za pregled nato pripravite načrt, sklep ali soglasje ter pogodbo z monterjem. Iz teh listin naj bo mogoče razbrati, kje je oprema dovoljena, kdo je to odobril in kdo nosi stroške drugačne izvedbe.",
+        "Predpisi in mestna objava so bili preverjeni 26. oktobra 2026; opis sodbe temelji na besedilu, pregledanem 25. oktobra. Poznejša sodna odločitev ali pravnomočnost te zadeve ni potrjena. Dejstva in pravila druge stavbe lahko privedejo do drugačne presoje."
+      ],
+      "html": "<p>Polnilna omarica je bila na steni za parkirnim mestom, napeljava je potekala po stropu, nov odklopnik pa je bil v skupni električni omarici. Izvedba je zato segala dlje od površine, ki jo je stanovalec uporabljal za parkiranje. Te lokacije opisuje <a href=\"https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1\">objavljena sodba v zadevi 111年度上字第132號</a>.</p>\n<p>Višje sodišče Tajvana je v svoji izpostavi v Kaohsiungu 22. junija 2022 zavrnilo stanovalčevo pritožbo. Odstraniti je moral opremo in vzpostaviti prejšnje stanje. Potrebno predhodno soglasje ni bilo pridobljeno, čeprav je bila napeljava povezana z električnim števcem, ki ga je uporabljal stanovalec.</p>\n<h2>Parkirno mesto in trasa kabla</h2>\n<p>Nesporna dejstva so zajemala polnilno omarico na zadnji steni, napeljavo na stropnih nosilcih ter odklopnik v električni omarici. Lastništvo ali uporaba parkirnega mesta ne opisujeta vseh teh površin. Sodišče je moralo obravnavati tudi skupne dele.</p>\n<p>Pri dovoljenju sta bili pomembni dve ravni. <a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&amp;flno=11\">11. člen tajvanskega zakona o upravljanju večstanovanjskih stavb</a> za rušitev, večja popravila ali izboljšave skupnih delov in pripadajoče opreme zahteva odločitev zbora etažnih lastnikov. Sodišče je določbo uporabilo za obravnavani poseg. Pravilo 15 te stavbe je za dodajanje napeljave in vodov zahtevalo še dovoljenje upravnega odbora in varnostni pregled elektrodistributerja.</p>\n<p>Oboje je bilo del presoje. Kršitev 11. člena in pravil stavbe je pomenila tudi kršitev obveznosti spoštovanja drugih predpisov ter pravil skupnosti po <a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&amp;flno=6\">5. točki prvega odstavka 6. člena</a>. Ker oprema po formalnem pozivu odbora k uskladitvi še vedno ni bila odstranjena, je odbor lahko zahteval sodno varstvo po tretjem odstavku istega člena.</p>\n<p>Četrta točka prvega odstavka 6. člena ureja napeljavo in potrebno uporabo skupnih delov. Sodišče je ugotovilo, da ta določba za konkretna dejstva ne velja. Peti in šesti del obrazložitve povezujeta položaj opreme s pravili stavbe; iz sodbe zato ne izhaja enak postopek glasovanja za vsako polnilnico v vsaki stavbi.</p>\n<p>Stanovalec se je skliceval tudi na dodano stikalo, prenehanje uporabe in zaklepanje ter ponudbo, da odboru izroči ključ. To so bile njegove navedbe. Po presoji sodišča bi odstranitev in vzpostavitev prejšnjega stanja ostali obvezni tudi, če bi vse navedeno držalo.</p>\n<h2>Načrt od polnilnice do električne omarice</h2>\n<p>Kje natančno bo potekal kabel? Načrt lahko označi polnilno omarico, pot po stenah in stropu ter električno omarico, da je mogoče celotno izvedbo primerjati s pravicami na površinah, pravili stavbe in že izdanimi soglasji. Številka parkirnega mesta ne pokaže celotne trase.</p>\n<p>Vloga odboru se lahko opre na isti načrt in zahteva pojasnilo, kdo sme odločiti o predlogu ter katera dokumentacija manjka. Če soglasje že obstaja, je koristna primerjava odobrene trase in opreme z različico, ki jo namerava namestiti izvajalec. Ustni odgovor lahko pusti obseg odobritve nejasen.</p>\n<p>Tudi pogodba z monterjem lahko začetek del veže na pridobitev potrebnih soglasij in določi, kdo nosi stroške, če je prošnja zavrnjena. Tak dogovor ne nadomesti odločitve pristojnega organa stavbe. Poveže pa tehnični predlog s stroški njegove izvedbe.</p>\n<h2>Objavljeni rok za podporo je že potekel</h2>\n<p>Kaohsiung je maja 2026 predstavil program pomoči za kabelske police, namenjene polnjenju električnih vozil v skupnih delih večstanovanjskih stavb. <a href=\"https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&amp;ss=3C51D0007BD33CFE\">Mestna objava</a> je določala rok za prijavo 30. septembra. Ta datum je že mimo. Objava opisuje podporo skupni napeljavi, ne daje pa posameznemu stanovalcu samodejnega dovoljenja za predlagani poseg.</p>\n<p>Če prejmete zahtevo za ustavitev ali odstranitev opreme, lahko <a href=\"mailto:wei@hoveringlaw.com.tw\">pisarni po elektronski pošti</a> pošljete kratek opis, sporno določbo pravil stavbe in rok za odgovor. Za pregled nato pripravite načrt, sklep ali soglasje ter pogodbo z monterjem. Iz teh listin naj bo mogoče razbrati, kje je oprema dovoljena, kdo je to odobril in kdo nosi stroške drugačne izvedbe.</p>\n<p>Predpisi in mestna objava so bili preverjeni 26. oktobra 2026; opis sodbe temelji na besedilu, pregledanem 25. oktobra. Poznejša sodna odločitev ali pravnomočnost te zadeve ni potrjena. Dejstva in pravila druge stavbe lahko privedejo do drugačne presoje.</p>\n<h2>Uradni viri</h2>\n<ul>\n<li><a href=\"https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1\">Višje sodišče Tajvana, izpostava v Kaohsiungu: zadeva 111年度上字第132號</a>, 22. junija 2022.</li>\n<li>Zakon o upravljanju večstanovanjskih stavb: <a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&amp;flno=6\">6. člen</a> in <a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&amp;flno=11\">11. člen</a>.</li>\n<li><a href=\"https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&amp;ss=3C51D0007BD33CFE\">Kaohsiung: pomoč za skupne kabelske police za polnjenje vozil</a>, 29. maja 2026; objavljeni prijavni rok je potekel.</li>\n</ul>",
+      "orderedListCount": 0,
+      "tableCount": 0,
+      "officialUniqueURLs": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "sourceURLMissing": [],
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sourceSHA": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "internalLinks": [],
+      "imageSHA": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+      "boldMarkupFound": false,
+      "renderExecution": "Actual ReactMarkdown and remarkGfm server render of changed source; not a browser/build/deployment"
+    },
+    {
+      "id": "921",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "96ce40ffc9daf2c997e2698a0c6ba8ef9ebc3a9a5f253313c9053bae0f5a9281",
+      "frontmatter": {
+        "title": "Zahtevanih NT$243.548 za igralne kovance: zakaj vračilo ni uspelo",
+        "seoTitle": "Vračilo denarja za spletno igro na Tajvanu: točke in igralni žetoni",
+        "summary": "Preostali kovanci v konkretnem primeru niso bili neporabljene kupljene točke, temveč žetoni za dvoboje. Veljavna tajvanska pravila urejajo vračilo neporabljenih plačil in dostop do igralnih evidenc.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026",
+        "read_time": "5 min branja",
+        "categories": [
+          "Potrošniško pravo na Tajvanu",
+          "Sodna praksa"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "spletne igre",
+          "vračilo plačil",
+          "igralni kovanci",
+          "kupljene točke",
+          "potrošniška pogodba"
+        ],
+        "audience": [
+          "sl"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/921-case-trends-20261025.webp",
+        "featured_image_alt": "Igralni krmilnik, prenosnik s prizorom igre, neoznačeni žetoni in zaprt zvezek na mizi.",
+        "featured_image_caption": "Izmišljen prizor",
+        "faq": [
+          {
+            "q": "Ali vračilo ni mogoče, če se dobroimetje v igri imenuje zlati kovanci?",
+            "a": "Ime samo ne odloča. V tej zadevi so kovanci služili kot žetoni pri dvobojih in niso bili neporabljene kupljene točke ali nadomestilo za igranje, ki bi ga bilo treba vrniti. V drugi igri je treba presoditi način pridobitve, uporabo, funkcijo kovancev in pogodbene pogoje."
+          },
+          {
+            "q": "Ali lahko pogodbo končam, ko je od začetka igranja minilo več kot sedem dni?",
+            "a": "Sedanja 18. točka dovoljuje obvestilo o prenehanju pogodbe kadar koli. Neporabljene kupljene točke ali neporabljeni del plačanih nadomestil za igranje se po odštetju potrebnih stroškov vrnejo v 30 dneh od prenehanja pogodbe, razen če se stranki dogovorita drugače. Posebni sedemdnevni pisni odstop od začetka igranja ima svoje pogoje."
+          },
+          {
+            "q": "Ali lahko ponudnik določi, da v sporu veljajo samo njegove evidence?",
+            "a": "Tajvanska pravila prepovedujejo pogodbeni pogoj, po katerem so ponudnikove igralne in elektronske evidence edino merilo v sporu. Pomagajo lahko tudi potrdila o plačilu, posnetki zaslona in komunikacija s podporo. Igralec lahko zahteva svoje igralne evidence in jih primerja s temi dokazi."
+          }
+        ]
+      },
+      "frontmatterChangedKeys": [],
+      "faqUnchanged": true,
+      "renderedParagraphs": [
+        "Ali je mogoče preostale igralne kovance izplačati v denarju? Na računu so bili še kovanci, ne pa tudi neporabljene kupljene točke. Igralec je od ponudnika zahteval NT$243.548, kolikor naj bi bilo vredno preostalo dobroimetje. Sodišče mu zneska ni prisodilo. Primer je objavljen v uradni zbirki potrošniških sodb, na natisnjenih straneh 140–153.",
+        "Okrožno sodišče v Keelungu je 13. septembra 2021 v zadevi 109年度消簡上字第1號 zavrnilo igralčevo pritožbo. Nadaljnja pritožba ni bila dovoljena. Odločitev je izhajala iz funkcije kovancev v tej igri in njenih pogodbenih pravil; ne pomeni, da so vsi virtualni predmeti izključeni iz potrošniškega varstva.",
+        "Stranki sta se strinjali, da neporabljenih kupljenih točk ni več. Po pogodbi jih je bilo mogoče zamenjati za storitve ali predmete v igri. Preostali kovanci so delovali drugače: sodišče jih je opredelilo kot žetone za tekmovanje med igralci, ne kot neporabljene kupljene točke ali nadomestila, ki jih je za igranje zaračunal ponudnik.",
+        "Sodišče je opozorilo na povezavo med ponudnikovim izplačevanjem takšnih kovancev in igrami na srečo. Presoja je bila vezana na te dvoboje. Za drugo vrsto dobroimetja je treba pogledati, kako nastane, za kaj se menja in koliko je bilo dejansko uporabljeno. Osmi del obrazložitve je na natisnjenih straneh 148–152.",
+        "Igralec je sam izjavil, da pogodbo končuje. Sodišče je zato lahko presojalo vračilo ob prenehanju, ne da bi s tem potrdilo zakonitost vseh prejšnjih ponudnikovih razlogov za zaprtje računa ali odpoved pogodbe.",
+        "Po 18. točki veljavnih pravil za standardne pogodbe o spletnih igrah lahko potrošnik ponudnika kadar koli obvesti, da končuje pogodbo. Ponudnik mora v 30 dneh od prenehanja pogodbe vrniti neporabljene kupljene točke ali neporabljeni del plačanih nadomestil za igranje po odštetju potrebnih stroškov, razen če se obe stranki dogovorita za drugačen način.",
+        "Odbitek se nanaša na potrebne stroške. Pri obračunu je mogoče zahtevati razčlenitev neporabljenega dobroimetja, odbitkov in uporabljene formule ter jo primerjati s pogodbo. Vnaprej nastavljeni odstotek sam ne pojasni pravne podlage za vsak odbitek.",
+        "Sedanja sprememba pravil je začela veljati 1. januarja 2023, po obravnavani sodbi. Četrta točka potrošniku omogoča tudi pisni odstop v sedmih dneh od začetka igranja, brez razloga in stroškov, z vračilom neporabljenih kupljenih točk. Potek sedmih dni ne ukine možnosti prenehanja in ustreznega vračila po 18. točki.",
+        "Posnetek zaslona pokaže stanje, pogosto pa ne pokaže poti do njega. Za razumevanje zahtevka je mogoče povezati tri sklope podatkov:",
+        "Deveta točka ponudniku nalaga, da posameznikove igralne evidence hrani najmanj 30 dni in jih na zahtevo posreduje v sedmih dneh od prejema zahteve. Trideset dni je zakonski minimum. Zgodnja zahteva lahko pomaga pridobiti zapis sprememb, ki jih zadnja slika računa ne pokaže.",
+        "Pravila prepovedujejo tudi dogovor, po katerem bi bile ponudnikove igralne in elektronske evidence edino merilo pri reševanju spora. Njegovi podatki niso zato nedopusten dokaz. Šesta točka prepovedanih pogojev preprečuje pogodbeno izključitev drugih dokazov.",
+        "Po uradnih podatkih za leto 2025, objavljenih 7. maja 2026, so bile spletne igre drugi največji razred prvih potrošniških pritožb na Tajvanu. Število pritožb v tem razredu je kljub temu upadlo glede na leto prej. Oblasti so ponudnike opozorile tudi na obravnavo sporov o zapiranju računov, blokadah in podpori uporabnikom.",
+        "Zahtevo za vračilo je mogoče najprej poslati ponudniku, nato pa uporabiti uradni sistem potrošniških pritožb. Če je sporna razlaga pogodbe ali zavračanje dokazov, je mogoče pisarni poslati opis po elektronski pošti z rokom za odgovor. Geslo igralnega računa ni potrebno. Pot plačil, menjav in uporabe naj pokaže, iz česa je sestavljen zahtevani znesek.",
+        "Veljavna pravila in uradne informacije so bili preverjeni 26. oktobra 2026; sodba je obravnavana po gradivu, pregledanem 25. oktobra. Odločitev se nanaša na konkretno igro in tedanjo pogodbo. Pri drugi igri je treba posebej presoditi funkcijo točk in predmetov ter razloge za prenehanje."
+      ],
+      "html": "<p>Ali je mogoče preostale igralne kovance izplačati v denarju? Na računu so bili še kovanci, ne pa tudi neporabljene kupljene točke. Igralec je od ponudnika zahteval NT$243.548, kolikor naj bi bilo vredno preostalo dobroimetje. Sodišče mu zneska ni prisodilo. Primer je objavljen v <a href=\"https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C\">uradni zbirki potrošniških sodb</a>, na natisnjenih straneh 140–153.</p>\n<p>Okrožno sodišče v Keelungu je 13. septembra 2021 v zadevi 109年度消簡上字第1號 zavrnilo igralčevo pritožbo. Nadaljnja pritožba ni bila dovoljena. Odločitev je izhajala iz funkcije kovancev v tej igri in njenih pogodbenih pravil; ne pomeni, da so vsi virtualni predmeti izključeni iz potrošniškega varstva.</p>\n<h2>Kupljene točke in žetoni za dvoboje</h2>\n<p>Stranki sta se strinjali, da neporabljenih kupljenih točk ni več. Po pogodbi jih je bilo mogoče zamenjati za storitve ali predmete v igri. Preostali kovanci so delovali drugače: sodišče jih je opredelilo kot žetone za tekmovanje med igralci, ne kot neporabljene kupljene točke ali nadomestila, ki jih je za igranje zaračunal ponudnik.</p>\n<p>Sodišče je opozorilo na povezavo med ponudnikovim izplačevanjem takšnih kovancev in igrami na srečo. Presoja je bila vezana na te dvoboje. Za drugo vrsto dobroimetja je treba pogledati, kako nastane, za kaj se menja in koliko je bilo dejansko uporabljeno. Osmi del obrazložitve je na natisnjenih straneh 148–152.</p>\n<p>Igralec je sam izjavil, da pogodbo končuje. Sodišče je zato lahko presojalo vračilo ob prenehanju, ne da bi s tem potrdilo zakonitost vseh prejšnjih ponudnikovih razlogov za zaprtje računa ali odpoved pogodbe.</p>\n<h2>Sedanja pravila za prenehanje pogodbe</h2>\n<p>Po 18. točki <a href=\"https://www.ey.gov.tw/File/C27658C15073FF69?A=C\">veljavnih pravil za standardne pogodbe o spletnih igrah</a> lahko potrošnik ponudnika kadar koli obvesti, da končuje pogodbo. Ponudnik mora v 30 dneh od prenehanja pogodbe vrniti neporabljene kupljene točke ali neporabljeni del plačanih nadomestil za igranje po odštetju potrebnih stroškov, razen če se obe stranki dogovorita za drugačen način.</p>\n<p>Odbitek se nanaša na potrebne stroške. Pri obračunu je mogoče zahtevati razčlenitev neporabljenega dobroimetja, odbitkov in uporabljene formule ter jo primerjati s pogodbo. Vnaprej nastavljeni odstotek sam ne pojasni pravne podlage za vsak odbitek.</p>\n<p>Sedanja sprememba pravil je začela veljati 1. januarja 2023, po obravnavani sodbi. Četrta točka potrošniku omogoča tudi pisni odstop v sedmih dneh od začetka igranja, brez razloga in stroškov, z vračilom neporabljenih kupljenih točk. Potek sedmih dni ne ukine možnosti prenehanja in ustreznega vračila po 18. točki.</p>\n<h2>Od plačila do končnega stanja računa</h2>\n<p>Posnetek zaslona pokaže stanje, pogosto pa ne pokaže poti do njega. Za razumevanje zahtevka je mogoče povezati tri sklope podatkov:</p>\n<table><thead><tr><th>Podatki</th><th>Kaj lahko pojasnijo</th></tr></thead><tbody><tr><td>Potrdila o plačilih in vplačilih</td><td>Kaj je bilo plačano in katere točke ali storitve so bile pridobljene?</td></tr><tr><td>Menjave točk in igralne evidence</td><td>Kdaj se je dobroimetje spremenilo in kakšno vlogo so imeli kovanci?</td></tr><tr><td>Obvestilo o prenehanju in obračun vračila</td><td>Kdaj je pogodba prenehala ter katero stanje in odbitke priznava ponudnik?</td></tr></tbody></table>\n<p>Deveta točka ponudniku nalaga, da posameznikove igralne evidence hrani najmanj 30 dni in jih na zahtevo posreduje v sedmih dneh od prejema zahteve. Trideset dni je zakonski minimum. Zgodnja zahteva lahko pomaga pridobiti zapis sprememb, ki jih zadnja slika računa ne pokaže.</p>\n<p>Pravila prepovedujejo tudi dogovor, po katerem bi bile ponudnikove igralne in elektronske evidence edino merilo pri reševanju spora. Njegovi podatki niso zato nedopusten dokaz. Šesta točka prepovedanih pogojev preprečuje pogodbeno izključitev drugih dokazov.</p>\n<p>Po <a href=\"https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930\">uradnih podatkih za leto 2025</a>, objavljenih 7. maja 2026, so bile spletne igre drugi največji razred prvih potrošniških pritožb na Tajvanu. Število pritožb v tem razredu je kljub temu upadlo glede na leto prej. Oblasti so ponudnike opozorile tudi na obravnavo sporov o zapiranju računov, blokadah in podpori uporabnikom.</p>\n<p>Zahtevo za vračilo je mogoče najprej poslati ponudniku, nato pa uporabiti <a href=\"https://appeal.cpc.ey.gov.tw/\">uradni sistem potrošniških pritožb</a>. Če je sporna razlaga pogodbe ali zavračanje dokazov, je mogoče <a href=\"mailto:wei@hoveringlaw.com.tw\">pisarni poslati opis po elektronski pošti</a> z rokom za odgovor. Geslo igralnega računa ni potrebno. Pot plačil, menjav in uporabe naj pokaže, iz česa je sestavljen zahtevani znesek.</p>\n<p>Veljavna pravila in uradne informacije so bili preverjeni 26. oktobra 2026; sodba je obravnavana po gradivu, pregledanem 25. oktobra. Odločitev se nanaša na konkretno igro in tedanjo pogodbo. Pri drugi igri je treba posebej presoditi funkcijo točk in predmetov ter razloge za prenehanje.</p>\n<h2>Uradni viri</h2>\n<ul>\n<li><a href=\"https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C\">Urad za varstvo potrošnikov: zbirka sodb in pravnih pojasnil, 22. zvezek</a>, natisnjene strani 140–153, zadeva 109年度消簡上字第1號.</li>\n<li><a href=\"https://www.ey.gov.tw/File/C27658C15073FF69?A=C\">Obvezni in prepovedani pogoji standardnih pogodb o spletnih igrah</a>, obvezne točke 4, 9 in 18 ter prepovedana točka 6.</li>\n<li><a href=\"https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930\">Statistika potrošniških pritožb in mediacije za leto 2025</a>, 7. maja 2026.</li>\n<li><a href=\"https://appeal.cpc.ey.gov.tw/\">Uradni spletni sistem potrošniških pritožb</a>.</li>\n</ul>",
+      "orderedListCount": 0,
+      "tableCount": 1,
+      "officialUniqueURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "sourceURLMissing": [],
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+      "sourceSHA": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "internalLinks": [],
+      "imageSHA": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933",
+      "boldMarkupFound": false,
+      "renderExecution": "Reused exact unchanged source SHA from original render"
+    }
+  ]
+}

@@ -1,0 +1,685 @@
+{
+  "at": "2026-10-26T17:59:05.482398+09:00",
+  "status": "AUTHOR_REVIEW_COMPLETE_FROZEN_AWAITING_INDEPENDENT",
+  "locale": "sl",
+  "publicationDate": "2026-10-26",
+  "caption": "Izmišljen prizor",
+  "authorReport": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sl-author.md",
+    "sha256": "48908dded259c081160b071874338fbbe406209d51c821f83ce008b7fa2d65aa"
+  },
+  "files": [
+    {
+      "id": "915",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "649eaa92c45bf3f3a708805011aa7f28f88553c70b8dd13985e03b2c4f964f0f",
+      "bytes": 6991,
+      "sourceLocale": "en",
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sourceSHA": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-initial.json",
+      "actualCLIRecordSHA": "c3c280517a856bd64508c2e8da4019fe6dfd1e7df898a96593da59b654d19048",
+      "actualExit": 0,
+      "metrics": {
+        "lang": "sl",
+        "sentences": 41,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 13.4,
+        "len_cv": 0.527,
+        "short_share": 0.317,
+        "long_share": 0.024,
+        "para_cv": 0.236,
+        "even_run3": 0.077,
+        "top_end": "arbitraži",
+        "top_end_share": 0.049,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "arbitražna",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.27,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Arbitražna odločba je izvajalcu pri gradnji bolnišnice prisodila NT$44.417.150.",
+        "last": "Veljavni predpisi in tržne informacije so bili preverjeni 26. oktobra 2026; opis sodbe temelji na uradnem pojasnilu, pre",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "faqCount": 2
+    },
+    {
+      "id": "916",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "f1a83d6168304647b8969bc70056cfa301fb91f9b4e5c754465bd61b7086cadb",
+      "bytes": 7575,
+      "sourceLocale": "en",
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sourceSHA": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r2.json",
+      "actualCLIRecordSHA": "1a25f25eea3058837e61a7f1853368f8c4e7f831fd4775fb642e45c340ec5817",
+      "actualExit": 0,
+      "metrics": {
+        "lang": "sl",
+        "sentences": 42,
+        "paras": 15,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 14.5,
+        "len_cv": 0.466,
+        "short_share": 0.167,
+        "long_share": 0.024,
+        "para_cv": 0.199,
+        "even_run3": 0.025,
+        "top_end": "tovarni",
+        "top_end_share": 0.048,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "kdo",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.067,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.97,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Kdo je lahko ukrepal po ugotovitvah onesnaženja v tovarni?",
+        "last": "Veljavni predpis in uradne naložbene informacije so bili preverjeni 26. oktobra 2026. Opis sodbe temelji na uradnem poja",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "faqCount": 3
+    },
+    {
+      "id": "918",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "78ddaf97bff0d6eb30dad29ed60be5292363744fefd3eb0266ff8316ced5f858",
+      "bytes": 7508,
+      "sourceLocale": "zh-hant",
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sourceSHA": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-initial.json",
+      "actualCLIRecordSHA": "c3c280517a856bd64508c2e8da4019fe6dfd1e7df898a96593da59b654d19048",
+      "actualExit": 0,
+      "metrics": {
+        "lang": "sl",
+        "sentences": 43,
+        "paras": 15,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.1,
+        "len_cv": 0.479,
+        "short_share": 0.256,
+        "long_share": 0.0,
+        "para_cv": 0.14,
+        "even_run3": 0.049,
+        "top_end": "posojila",
+        "top_end_share": 0.07,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "voda",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 1,
+        "questions": 1,
+        "num_per100": 3.8,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Voda in elektrika še nista bili priključeni, ko je gradbeni investitor 23. februarja 2019 ",
+        "last": "Veljavni predpisi in uradne informacije so bili preverjeni 26. oktobra 2026. Sodba je obravnavana po uradni ponovni obja",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "faqCount": 3
+    },
+    {
+      "id": "919",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "cbc5c8726046e43b8438f4c4147938cb3c53806a6c234e9c6d6f2f3ba991a98c",
+      "bytes": 7216,
+      "sourceLocale": "zh-hant",
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sourceSHA": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r2.json",
+      "actualCLIRecordSHA": "1a25f25eea3058837e61a7f1853368f8c4e7f831fd4775fb642e45c340ec5817",
+      "actualExit": 0,
+      "metrics": {
+        "lang": "sl",
+        "sentences": 41,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.0,
+        "len_cv": 0.462,
+        "short_share": 0.22,
+        "long_share": 0.0,
+        "para_cv": 0.256,
+        "even_run3": 0.051,
+        "top_end": "sankcije",
+        "top_end_share": 0.024,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "komisija",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 1.92,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Komisija je zadevo dobila na mizo po javni napovedi sankcije.",
+        "last": "Predpisi in njihova veljavnost so bili preverjeni 26. oktobra 2026; opis sodbe temelji na uradnem pojasnilu, pregledanem",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "faqCount": 3
+    },
+    {
+      "id": "920",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "1c32172e527dffcb2934a468dfea0c5375f5d1145fbf168d9df3a6ccf8450c4d",
+      "bytes": 7262,
+      "sourceLocale": "zh-hant",
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sourceSHA": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r1.json",
+      "actualCLIRecordSHA": "e0759acce677f499e40bee624030f423ec30df900a7161f62fb6099c255439d4",
+      "actualExit": 0,
+      "metrics": {
+        "lang": "sl",
+        "sentences": 41,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.3,
+        "len_cv": 0.478,
+        "short_share": 0.317,
+        "long_share": 0.0,
+        "para_cv": 0.157,
+        "even_run3": 0.0,
+        "top_end": "omarici",
+        "top_end_share": 0.049,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "polnilna",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.308,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.56,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Polnilna omarica je bila na steni za parkirnim mestom, napeljava je potekala po stropu, no",
+        "last": "Predpisi in mestna objava so bili preverjeni 26. oktobra 2026; opis sodbe temelji na besedilu, pregledanem 25. oktobra. ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "faqCount": 3
+    },
+    {
+      "id": "921",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "96ce40ffc9daf2c997e2698a0c6ba8ef9ebc3a9a5f253313c9053bae0f5a9281",
+      "bytes": 7791,
+      "sourceLocale": "zh-hant",
+      "sourcePath": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+      "sourceSHA": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "actualCLIRecord": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r2.json",
+      "actualCLIRecordSHA": "1a25f25eea3058837e61a7f1853368f8c4e7f831fd4775fb642e45c340ec5817",
+      "actualExit": 0,
+      "metrics": {
+        "lang": "sl",
+        "sentences": 43,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.0,
+        "len_cv": 0.468,
+        "short_share": 0.186,
+        "long_share": 0.023,
+        "para_cv": 0.223,
+        "even_run3": 0.024,
+        "top_end": "pogodbo",
+        "top_end_share": 0.07,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "po",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.65,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Ali je mogoče preostale igralne kovance izplačati v denarju?",
+        "last": "Veljavna pravila in uradne informacije so bili preverjeni 26. oktobra 2026; sodba je obravnavana po gradivu, pregledanem",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "faqCount": 3
+    }
+  ],
+  "totalSentences": 251,
+  "totalFAQ": 17,
+  "totalTables": 2,
+  "requiredOfficialUniqueURLSumByArticle": 23,
+  "totalFAIL": 0,
+  "structuralErrors": 0,
+  "inputsRechecked": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/BRIEF.md",
+      "sha256": "e7f781375d583d0647ca32bbeafd372f3ce802a2837d17a59b6225409d55dc8c",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/BRIEF.md",
+      "sha256": "8103ae1441fe0abbdb76362d6086a267014664f31997f5676b37c6962cfcd306",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/BRIEF.md",
+      "sha256": "f6c2579b6255705ece341a356d3a4d527ca74a869916785d51edb9c0f05ee1a8",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-freeze.json",
+      "sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/authoring-contract-draft.md",
+      "sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/six-source-facts.md",
+      "sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-register.md",
+      "sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/bundle-manifest.json",
+      "sha256": "d56dfa2dd03c0e93c5f3576ee119c508f07daf24eb7412123aadc42e49bf3192",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/AGENTS.md",
+      "sha256": "fde1152de13f36b3d5703c1e7fa3f3eae7c5b43632d090c528dd8e5d6a856e19",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "86710ef330b108a916a7bb92a75f1ffa62dea53412e8a75f38472d9fa9b33130",
+      "readScope": "17:05 full text freshly read during preceding IS6 review; reused unchanged for SL."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "readScope": "Full text read during continuous B8 preparation; exact SHA unchanged and reused under B9 contract."
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/BRIEF.md",
+      "sha256": "f04f1d70c375c3e65a88e42dcaedbc453fda2c6e74882a7b82fba17d109290f4",
+      "readScope": "Full current B9 BRIEF including 17:05 LESSONS update read."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "d5b7581f6dcff33cdcb5b65e1b46bd0654e050acb94434bbdaab68222c0aca5b",
+      "readScope": "Full recent SL published2026-10-26 text read; selected by published date then filename descending."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "90d5e07a124a7b1c6aeb46a5be8293a44007a58f6e2dad2593c96b1067834932",
+      "readScope": "Full recent SL published2026-10-26 text read; selected by published date then filename descending."
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-sl/704-taiwan-arc-first-application.md",
+      "sha256": "a87a3ac1137b0012120a56629dccc0e0d64dcbb55a2e2a6110e2be213cde6bd6",
+      "readScope": "Full recent SL published2026-10-26 text read; selected by published date then filename descending."
+    }
+  ],
+  "imagesRechecked": [
+    {
+      "id": 915,
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/915-case-trends-20261025.webp",
+      "sha256": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95",
+      "viewedActualPixels": true
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/916-case-trends-20261025.webp",
+      "sha256": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+      "viewedActualPixels": true
+    },
+    {
+      "id": 918,
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/918-case-trends-20261025.webp",
+      "sha256": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+      "viewedActualPixels": true
+    },
+    {
+      "id": 919,
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/919-case-trends-20261025.webp",
+      "sha256": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+      "viewedActualPixels": true
+    },
+    {
+      "id": 920,
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/920-case-trends-20261025.webp",
+      "sha256": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+      "viewedActualPixels": true
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/921-case-trends-20261025.webp",
+      "sha256": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933",
+      "viewedActualPixels": true
+    }
+  ],
+  "tools": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/sl.json",
+      "sha256": "f7fdb543f7952d5e891a30fd5d167b3035a3933c982a01f6d70b03c5f554c040"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-inputs.json",
+      "sha256": "e20566dcd3949e401c0f023ff36a203dc7f031377d10fbb2f38519119446382b",
+      "bytes": 14522
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-initial-manifest.json",
+      "sha256": "2a04a30d2795312ece9a89e015cf7d8e1a405e226436bc42a6116ef5753c6698",
+      "bytes": 2753
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-self-review-edits-r1.json",
+      "sha256": "315feb5772607643f27db0e8ccad2de1d13a1f9eac7cc12e0fafdd205a418999",
+      "bytes": 14701
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-self-review-edits-r2.json",
+      "sha256": "a4e6543e88d7a71bb84f70550396716ba5d07e864f5a3114ffcf6d3512558050",
+      "bytes": 19928
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-initial.json",
+      "sha256": "c3c280517a856bd64508c2e8da4019fe6dfd1e7df898a96593da59b654d19048",
+      "bytes": 108828
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r1.json",
+      "sha256": "e0759acce677f499e40bee624030f423ec30df900a7161f62fb6099c255439d4",
+      "bytes": 72510
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r2.json",
+      "sha256": "1a25f25eea3058837e61a7f1853368f8c4e7f831fd4775fb642e45c340ec5817",
+      "bytes": 55059
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-final-checks.json",
+      "sha256": "d47ffc1ffc29fdefd974f0551ae0de4adcb17cbcaabd365a574810111c2f7397",
+      "bytes": 126069
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-final-checks-r2.json",
+      "sha256": "80a697f79f20196e79d061fda7a85f52241f17d2904625ad42603981c9b7e148",
+      "bytes": 126735
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-render-metadata-final.json",
+      "sha256": "4d266ad088fe37b883eff227fa2ab9b21d455c0752730b2f2678f65816cfc661",
+      "bytes": 82856
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-render-metadata-r2.json",
+      "sha256": "e6c760a2f03446c8f991d34d0fb2f5b27ec9d1f4a06d79cfe810e53bb557cee9",
+      "bytes": 83548
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-content-audit-final.json",
+      "sha256": "70fc1dee9487d1a72b8d4dd6ae8aa53ee20e4ef910565fa9a7b42203551d1bf9",
+      "bytes": 360447
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-content-audit-r2.json",
+      "sha256": "5a21b3871f8bdc496916aef4a36aa9a66ac0687813540d65bce661c55b50a33d",
+      "bytes": 186329
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-final-integrity.json",
+      "sha256": "71ee504f77ff960b6cd22bf302883d514975bb5c7669130254961e1da3bf14f4",
+      "bytes": 10732
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-check.py",
+      "sha256": "22b0f98ab592a0c6053a86d3d746bcbcc0d24aa7a5b7330e414c2e7afe13d4dc",
+      "bytes": 3552
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-content-audit.mjs",
+      "sha256": "c855b7c738b4e410669b935ce31007a025146d834f878fec0e7ca6ad508d3603",
+      "bytes": 3398
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-content-audit-r2.mjs",
+      "sha256": "ecd69ad651eec74d095cf8351a9a6c983f382860f98c8bc56fcbfb92b47fa72d",
+      "bytes": 3393
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-render-r2.mjs",
+      "sha256": "e8d1398f48de3d955c243dfd0f285337ed79de5bd645b1dd5826873ed0277eb9",
+      "bytes": 3710
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sl-author.md",
+      "sha256": "48908dded259c081160b071874338fbbe406209d51c821f83ce008b7fa2d65aa",
+      "bytes": 18100
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-initial-snapshot/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "649eaa92c45bf3f3a708805011aa7f28f88553c70b8dd13985e03b2c4f964f0f",
+      "bytes": 6991
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-initial-snapshot/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "768499c0065ada3e373e380c7f877a3b701075ea42eaba61e9c2c077f36b94c1",
+      "bytes": 7574
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-initial-snapshot/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "78ddaf97bff0d6eb30dad29ed60be5292363744fefd3eb0266ff8316ced5f858",
+      "bytes": 7508
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-initial-snapshot/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "edccbb1ded5cfd1da4aeba56cfc284a70fb6e9f48a33c4592ce6b8be9fa6d220",
+      "bytes": 7375
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-initial-snapshot/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "0a16bf0bdb985b9c01b2e121e3bc91a0f2168646b08a2f8daefc7a4b540cae03",
+      "bytes": 7254
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-initial-snapshot/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "54acf5854ebe989e9b7f93cca153f73f757741d7cc8eacb23aafd6bd23a9a3d5",
+      "bytes": 7823
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-initial-915.json",
+      "sha256": "041261e23381913982ee3c209786283c2897b1a004a56e7559013892c6a9e496",
+      "bytes": 15844
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-initial-916.json",
+      "sha256": "7f720ddb431fc310bc3afa73b9e1ad3ac0c03f063cca52c2f9cc2317690debaf",
+      "bytes": 17203
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-initial-918.json",
+      "sha256": "2a0922e0c64f1fbb4162a5e07bcfbf27f57ebe2ba5ddb3b148e6975698d083c3",
+      "bytes": 16725
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-initial-919.json",
+      "sha256": "e01d2d8391d7583db23718618dbd21384d555ac558bd33420f3771231a5f78d5",
+      "bytes": 16627
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-initial-920.json",
+      "sha256": "b6169ed413bd92664bc159d00ebd9951349cee4d741f2a481e7be82afd564026",
+      "bytes": 16030
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-initial-921.json",
+      "sha256": "6459c1143d417ee3f59dbf2725edf177c586048ebc485e84a7ec8e855140041c",
+      "bytes": 16554
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r1-916.json",
+      "sha256": "25c19ac2c21fbd882b99ad875d247f5fc0b9b9819409a3e5c602b735be051a32",
+      "bytes": 17194
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r1-919.json",
+      "sha256": "5f27d56b0e9a1347cb06ebd0ee4b3a72cc859751370ea37d3a8219e0b1bccfe1",
+      "bytes": 16143
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r1-920.json",
+      "sha256": "598a1b5b23e042f4d0f36b8dbecd30e9be7294b5e90ff846c7c8d7cd4f5c407f",
+      "bytes": 16038
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r1-921.json",
+      "sha256": "9b8d42e6793158f4569c1ae09d92d037e2027d369e941ee5b260007295da4cff",
+      "bytes": 16360
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r2-916.json",
+      "sha256": "7279db8e05bc950f8700d3febdbf0f11ec2ce47967242ce26cc7a36339d7e5b5",
+      "bytes": 17209
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r2-919.json",
+      "sha256": "56f75d9035846ebcd960d7a7366012a69fd9f9684da9089e4d5ae88fa9708947",
+      "bytes": 16133
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sl-variety-r2-921.json",
+      "sha256": "76931e6e24909da3861bd11413dbf0daa9bcb8f3eb74e261d8c3c8dd8a95d38e",
+      "bytes": 16391
+    }
+  ],
+  "integrity": "All six current files reverse exactly through both real-edit journals to original saved bytes; all numeric tokens and URL sequences unchanged; explicit FAQ/title differences retained.",
+  "manualReading": "All 251 pre-r2 actual units read; 246 remain identical; 5 new units and seven changed paragraphs plus title/FAQ read in context; all 251 current units equal actual rendered visible-text arrays.",
+  "limitations": [
+    "Model self-review; no human native-language or lawyer approval.",
+    "Independent review pending.",
+    "No browser visual review, R integration, build or deployment."
+  ]
+}

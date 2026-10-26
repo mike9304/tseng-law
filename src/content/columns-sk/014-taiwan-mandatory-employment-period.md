@@ -22,7 +22,7 @@ faq:
 
 ![Snímka vysvetľujúca minimálnu dobu trvania pracovného pomeru v pracovnej zmluve a otázku vrátenia nákladov](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
 
-Dohoda o minimálnej dobe trvania pracovného pomeru (最低服務年限約定) v pracovnej zmluve (勞動契約) na Taiwane upravuje záväzok pracovníka zotrvať po určitú dobu, otázku, či pri predčasnom odchode vzniká povinnosť vrátiť náklady na školenie, podpisovú prémiu (簽約金) alebo prémiu za zotrvanie (留任獎金), a otázku, či možno osobitne žiadať zmluvnú pokutu (違約金). Samotná skutočnosť, že existuje podpísaný text, však neurčuje platnosť dohody ani sumu na vrátenie. Viac než názov zmluvy treba po krokoch overiť zákonné predpoklady a skutočný priebeh výplat, školenia a skončenia.
+Dohoda o minimálnej dobe trvania pracovného pomeru (最低服務年限約定) v pracovnej zmluve (勞動契約) na Taiwane upravuje záväzok pracovníka zotrvať po určitú dobu, otázku, či pri predčasnom odchode vzniká povinnosť vrátiť náklady na školenie, podpisovú prémiu (簽約金) alebo prémiu za zotrvanie (留任獎金), a otázku, či možno osobitne žiadať zmluvnú pokutu (違約金). Podpísaný text ešte neurčuje platnosť dohody. Rovnako neurčuje sumu na vrátenie. Viac než názov zmluvy treba po krokoch overiť zákonné predpoklady a skutočný priebeh výplat, školenia a skončenia.
 
 Pri preskúmaní je dôležité nezmiešavať nasledujúce štyri otázky.
 
@@ -35,7 +35,7 @@ Aj keď tieto štyri otázky figurujú spoločne v tej istej zmluve, uplatniteľ
 
 ## 1. Kedy nadobúda dohoda o minimálnej dobe trvania pracovného pomeru účinky?
 
-Dohoda nie je automaticky neplatná. Podľa článku 15-1 taiwanského zákona o pracovných normách (勞動基準法) môže splniť zákonné predpoklady, ak zamestnávateľ poskytne špecializované technické školenie (專業技術培訓) a nesie jeho náklady, alebo poskytne primeranú náhradu (合理補償), aby pracovník dodržal minimálnu dobu trvania pracovného pomeru. Nie je nutné splniť oba predpoklady zároveň, avšak aj keď existuje jeden, dohoda nesmie prekročiť primeraný rozsah vo svetle všetkých okolností, ako sú doba a náklady školenia, možnosť nahradiť personál (人力替補可能性) a výška a rozsah náhrady.
+Dohoda nie je automaticky neplatná. Podľa článku 15-1 taiwanského zákona o pracovných normách (勞動基準法) môže splniť zákonné predpoklady, ak zamestnávateľ poskytne špecializované technické školenie (專業技術培訓) a nesie jeho náklady, alebo poskytne primeranú náhradu (合理補償), aby pracovník dodržal minimálnu dobu trvania pracovného pomeru. Oba predpoklady nemusia byť splnené súčasne. Aj pri splnení jedného však dohoda musí zostať primeraná všetkým okolnostiam vrátane doby a nákladov školenia, možnosti nahradiť personál (人力替補可能性) a výšky a rozsahu náhrady.
 
 Článok 15-1 odsek 1 upravuje alternatívne dva zákonné predpoklady. Prvý je, že zamestnávateľ poskytol pracovníkovi špecializované technické školenie a niesol jeho náklady; druhý, že poskytol primeranú náhradu výmenou za dodržanie minimálnej doby trvania pracovného pomeru. Treba overiť nie to, ako sa tento základ v zmluve nazýva, ale aký základ skutočne existuje.
 
@@ -43,7 +43,7 @@ Dohoda nie je automaticky neplatná. Podľa článku 15-1 taiwanského zákona o
 
 Po potvrdení zákonného predpokladu sa podľa odseku 2 osobitne posudzuje, či dohodnutá doba a rozsah zodpovednosti sú primerané. Dohoda, ktorá poruší zákonný predpoklad odseku 1 alebo kritérium primeranosti odseku 2, je podľa odseku 3 neplatná. Táto norma je však kritériom na posúdenie obsahu a skutkových okolností každej dohody, nie normou, ktorá od začiatku vyhlasuje všetky dohody o minimálnej dobe trvania pracovného pomeru za platné alebo neplatné.
 
-Okolnosť, že pracovník zmluvu podpísal, môže byť podkladom, ktorý potvrdzuje existenciu dohody, ale nenahrádza zákonné predpoklady. Naopak, dĺžka dohodnutej doby sama osebe neurčuje výsledok; treba overiť, aká investícia alebo náhrada existovala a prečo bola táto doba stanovená.
+Podpis môže preukazovať, že dohoda existuje. Zákonné predpoklady však nenahrádza. Naopak, dĺžka dohodnutej doby sama osebe neurčuje výsledok; treba overiť, aká investícia alebo náhrada existovala a prečo bola táto doba stanovená.
 
 ## 2. Prvý zákonný predpoklad: špecializované technické školenie a nesenie nákladov
 
@@ -130,7 +130,7 @@ Posúdenie dôvodu skončenia ovplyvňuje priamo i rozsah vrátenia. Ak sa uplat
 
 Dohoda o minimálnej dobe trvania pracovného pomeru nie je inštitútom, ktorý by fyzicky alebo právne bránil odchodu pracovníka. Výpoveď a výpovedná doba (預告期間) sú otázkou, kedy končí pracovný vzťah; platnosť dohody o minimálnej dobe trvania pracovného pomeru a zodpovednosť za vrátenie nákladov sú otázkou, či existuje majetková zodpovednosť odvodená zo skončenia.
 
-Keď pracovník skončí pracovnú zmluvu na neurčitý čas (不定期契約), podľa článku 15 taiwanského zákona o pracovných normách sa primerane uplatní výpovedná doba článku 16 odseku 1. Článok 16 je ustanovenie o skončení zmluvy zamestnávateľom a na odchod pracovníka sa táto výpovedná doba uplatní prostredníctvom článku 15.
+Keď pracovník skončí pracovnú zmluvu na neurčitý čas (不定期契約), podľa článku 15 taiwanského zákona o pracovných normách sa primerane uplatní výpovedná doba článku 16 odseku 1. Článok 16 upravuje skončenie zo strany zamestnávateľa. Na výpoveď pracovníka sa príslušná lehota vzťahuje prostredníctvom článku 15.
 
 Výpovedná doba podľa súvislej doby práce je nasledujúca.
 

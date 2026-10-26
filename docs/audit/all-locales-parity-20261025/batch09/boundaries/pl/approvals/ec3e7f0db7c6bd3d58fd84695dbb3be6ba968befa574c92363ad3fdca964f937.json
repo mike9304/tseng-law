@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "locale": "pl",
+  "status": "approved",
+  "reviewer": "/root/column_existing_drafts (independent AI boundary reviewer)",
+  "atUTC": "2026-10-26T10:07:05.185395+00:00",
+  "scope": "Approval only of the exact 237 Polish sentence boundaries and complete source paragraph arrays independently read for these six source SHA values. This is NOT a shared metric PASS, human/native or legal approval, rendering or publication approval. Two r. false boundaries were manually joined; all other reviewed text/order is unchanged. Candidate neutral-test approval was not reused.",
+  "entries": [
+    {
+      "source_sha256": "a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791",
+      "method": "independent_review",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "f8819167f8063e6ac06c16f33b6fcfc16945de06d424b553ddcf4d5272ae5229"
+    },
+    {
+      "source_sha256": "67e1a4bd4123dd6de01e1a0e66586cf6d22903063ffb568b999a24301b6c536f",
+      "method": "independent_review",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "d3e5d096673af4a5188adc3ca698acb6e78b18c614948bec7378dfe92b49cd12"
+    },
+    {
+      "source_sha256": "8d106bbd5e0328f445cfdcd7cf5255efd498a78422550eb498158381411d32b3",
+      "method": "independent_review",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "2eace43b97688317be100a12ea5b920378853a2d76a25b6464829b0a6c9cc951"
+    },
+    {
+      "source_sha256": "a48b8191ba92a6a386c2108fd12c6966484ef86fd2af8941b40c3ae1a38e9628",
+      "method": "independent_review",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "5d9ed378921b7d8422f4751b7b2f504001a9d9ef77aa76560b1cde063b72c55d"
+    },
+    {
+      "source_sha256": "1ae0a5c6dd50d985378f533d266248349d164314bd39cfdf13fefd4b26ef5b30",
+      "method": "independent_review",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "0fdcee2b1fefd4592aade2198de51ba3a91e5819d4550e77e283049fdf76b8dd"
+    },
+    {
+      "source_sha256": "c29911404cc6477949d269efbbc26946512b5fd477ded9ed1a4f655145c3551b",
+      "method": "independent_review",
+      "unresolved_boundaries": [],
+      "paragraphs_sha256": "0a7d4b1f88c270c06d39182c83e0f20d077e75d28cf1d50e76c1bb020239ffe0"
+    }
+  ],
+  "evidence": [
+    {
+      "role": "independent-review",
+      "path": "../originals/75763fa56ec70c53e9263cca7cb9c1e796c8d954c987ebe17ad36ca9636b513f-pl-independent-r3-reviewed-boundaries.json",
+      "sha256": "75763fa56ec70c53e9263cca7cb9c1e796c8d954c987ebe17ad36ca9636b513f"
+    },
+    {
+      "role": "prior-full-read",
+      "path": "../originals/8fd049376e4c0a587131d5b40ac9dea1172306523ac7d32f9d468453cc32781a-pl-independent-r2.md",
+      "sha256": "8fd049376e4c0a587131d5b40ac9dea1172306523ac7d32f9d468453cc32781a"
+    },
+    {
+      "role": "current-delta-read",
+      "path": "../originals/4e49cbfdceee120c1075eb4d9e38e68773a02199014167660ba9dfc7e78c9014-pl-independent-r3-boundary-delta.json",
+      "sha256": "4e49cbfdceee120c1075eb4d9e38e68773a02199014167660ba9dfc7e78c9014"
+    },
+    {
+      "role": "meaning-closure",
+      "path": "../originals/764893baa250d37c15793431094d1f3f133106fe20c459ba9d1a230212a3c9d0-pl-independent-r3.md",
+      "sha256": "764893baa250d37c15793431094d1f3f133106fe20c459ba9d1a230212a3c9d0"
+    }
+  ],
+  "draftArrayVerification": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sourceSHA256": "a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791",
+      "mapDraft": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/maps-draft/915-taiwan-public-contract-mediation-arbitration-same-claim.sentences.json",
+      "mapDraftSHA256": "3414dc86c76d0c66082122bd017bbbfec82f4b69021d71a98c9d3a5f05a2557a",
+      "paragraphCount": 13,
+      "reviewedSentenceCount": 36,
+      "exactIndependentArrayMatch": true,
+      "sourceRawParagraphsEqualIndependentEvidence": true,
+      "mapTextEqualsVisibleReviewedJoin": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sourceSHA256": "67e1a4bd4123dd6de01e1a0e66586cf6d22903063ffb568b999a24301b6c536f",
+      "mapDraft": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/maps-draft/916-taiwan-parent-company-pollution-liability-us-investor.sentences.json",
+      "mapDraftSHA256": "3577b1c0ec8987e921f0340e547bf1068866037a5765b7d0c9ce56fae9843343",
+      "paragraphCount": 14,
+      "reviewedSentenceCount": 36,
+      "exactIndependentArrayMatch": true,
+      "sourceRawParagraphsEqualIndependentEvidence": true,
+      "mapTextEqualsVisibleReviewedJoin": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sourceSHA256": "8d106bbd5e0328f445cfdcd7cf5255efd498a78422550eb498158381411d32b3",
+      "mapDraft": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/maps-draft/918-taiwan-presale-mortgage-notice-handover-judgment.sentences.json",
+      "mapDraftSHA256": "2691d98bee58300789f0588854cb256905724636dcfe68f52130318621616ce9",
+      "paragraphCount": 14,
+      "reviewedSentenceCount": 42,
+      "exactIndependentArrayMatch": true,
+      "sourceRawParagraphsEqualIndependentEvidence": true,
+      "mapTextEqualsVisibleReviewedJoin": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sourceSHA256": "a48b8191ba92a6a386c2108fd12c6966484ef86fd2af8941b40c3ae1a38e9628",
+      "mapDraft": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/maps-draft/919-taiwan-workplace-bullying-investigation-hearing-judgment.sentences.json",
+      "mapDraftSHA256": "ed080f9ac0baea5dd16d4c066c764a73955f3a78817d3b3283f341cfe0c00d3b",
+      "paragraphCount": 13,
+      "reviewedSentenceCount": 41,
+      "exactIndependentArrayMatch": true,
+      "sourceRawParagraphsEqualIndependentEvidence": true,
+      "mapTextEqualsVisibleReviewedJoin": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sourceSHA256": "1ae0a5c6dd50d985378f533d266248349d164314bd39cfdf13fefd4b26ef5b30",
+      "mapDraft": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/maps-draft/920-taiwan-apartment-ev-charger-common-area-judgment.sentences.json",
+      "mapDraftSHA256": "0ca015e013ef0964fc2ddd83e8b883d7c68ac3ad953f6c6dc95fa02acd740a8a",
+      "paragraphCount": 13,
+      "reviewedSentenceCount": 39,
+      "exactIndependentArrayMatch": true,
+      "sourceRawParagraphsEqualIndependentEvidence": true,
+      "mapTextEqualsVisibleReviewedJoin": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/921-taiwan-online-game-coins-refund-judgment.md",
+      "sourceSHA256": "c29911404cc6477949d269efbbc26946512b5fd477ded9ed1a4f655145c3551b",
+      "mapDraft": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/maps-draft/921-taiwan-online-game-coins-refund-judgment.sentences.json",
+      "mapDraftSHA256": "3c6594d815b97ca83acd4efb2477e7132b75b574c92d9e775fc49d03c155feda",
+      "paragraphCount": 15,
+      "reviewedSentenceCount": 43,
+      "exactIndependentArrayMatch": true,
+      "sourceRawParagraphsEqualIndependentEvidence": true,
+      "mapTextEqualsVisibleReviewedJoin": true
+    }
+  ],
+  "draftSpecification": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/tooling/pl-date-boundaries-r2/R3-MAP-DRAFTS.json",
+    "sha256": "3751bd8b9e09f829272a725a0ea6fb81d22829e7d8ccfeffe26be3b4a364fed4"
+  },
+  "validationNote": "Initial nonmutating comparison treated map visible text as raw Markdown and rejected before writing. Final validation separately checks exact source raw paragraphs and normalized visible sentence join; Markdown link markup is preserved in the bound source, not falsely claimed to exist in map display text."
+}

@@ -1,0 +1,635 @@
+{
+  "atUTC": "2026-10-26T08:42:24.541Z",
+  "rows": [
+    {
+      "id": 915,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "ddee0de08627d6fb79dcd96cf594cdd590962268d107c5c173ea8ce682017621",
+      "bodySHA256": "29e2c1ebd01b6e5e118a9af63fefc182c472e2b5056ef0768f4e2694aa6a1de7",
+      "metadata": {
+        "title": "Od produženja roka do novčanog zahteva: poništena arbitražna odluka na Tajvanu",
+        "seoTitle": "Tajvanske javne nabavke: medijacija pre arbitraže o istom zahtevu",
+        "summary": "Izvođač je posle preporuke o produženju roka pokrenuo arbitražu radi novčane naknade. Tajvanski Vrhovni sud je utvrdio da za taj konkretan novčani spor nije postojao ugovoreni ni zakonski pretpostavljen sporazum o arbitraži.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "read_time": "5 min čitanja",
+        "categories": [
+          "Pravne informacije o Tajvanu"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "javne nabavke",
+          "medijacija",
+          "arbitraža",
+          "građevinski spor",
+          "Tajvan"
+        ],
+        "audience": [
+          "sr"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/915-case-trends-20261025.webp",
+        "featured_image_alt": "Zaštitni šlem, građevinski planovi i registratori pored makete mosta",
+        "featured_image_caption": "Izmišljeni prizor",
+        "faq": [
+          {
+            "q": "Da li neuspešna medijacija automatski otvara arbitražu protiv tajvanskog javnog naručioca?",
+            "a": "Ne. Za građevinske radove ili tehničke usluge, ovaj zakonski put zahteva preporuku ili predlog nadležne komisije i neuspeh medijacije zbog nesaglasnosti naručioca. Dokumentacija mora obuhvatati konkretan spor koji se upućuje arbitraži. Poseban sporazum o arbitraži može dati drugi osnov."
+          },
+          {
+            "q": "Da li svaka promena iznosa ili pravnog obrazloženja znači novi spor?",
+            "a": "Ne nužno. U ovom predmetu izvođač je od novčanog zahteva prešao na produženje roka, pa se posle preporuke o roku vratio novcu. Da li je zahtev ostao isti procenjuje se prema činjenicama, traženoj pravnoj zaštiti i spisima postupka, a ne samo prema broju projekta."
+          }
+        ]
+      },
+      "checks": {
+        "date": true,
+        "audience": true,
+        "author": true,
+        "topic": true,
+        "FAQ": true,
+        "FAQUnchangedFromInitial": true,
+        "image": true,
+        "caption": true,
+        "noBold": true,
+        "noInternalAuthorInBody": true,
+        "officialSources": true
+      },
+      "sourceFile": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sourceSHA256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "sourceChecks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://www.trade.gov/market-intelligence/taiwan-energy-industry",
+          "inBody": true,
+          "inFooter": true
+        }
+      ],
+      "inlineLinks": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry",
+        "/en/contact"
+      ],
+      "sourceLinks": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/915-case-trends-20261025.webp",
+        "sha256": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95",
+        "bytes": 157754,
+        "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+      },
+      "renderedBodyHTML": "<p>Da li preporuka za dodatno vreme pokriva i zahtev da naručilac plati dodatne troškove? U sporu oko tajvanskog bolničkog projekta izvođač je dobio preporuku o produženju roka, a zatim u arbitraži tražio novac. Prema <a href=\"https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693\">objašnjenju Vrhovnog suda</a>, za taj konkretan novčani zahtev nedostajao je sporazum o arbitraži, uključujući osnov po kojem bi se saglasnost smatrala datom po zakonu.</p>\n<p>Arbitražom je bilo dosuđeno 44.417.150 novih tajvanskih dolara. Odluka je kasnije poništena. Vrhovni sud je 12. jula 2017. odbio pravni lek izvođača u predmetu 106年度台上字第723號, pa je poništenje ostalo na snazi. Zvanično objašnjenje izričito navodi da je predmet pravnosnažno okončan.</p>\n<h2>Koji zahtev je komisija razmatrala</h2>\n<p>Izvođač je tokom medijacije menjao ono što traži od naručioca. Redosled iz spisa objašnjava zašto potvrda o neuspehu tog postupka nije bila dovoljna.</p>\n<table><thead><tr><th>Korak</th><th>Zahtev i odgovor</th></tr></thead><tbody><tr><td>Prvobitna prijava</td><td>Novčana naknada.</td></tr><tr><td>Izmenjena prijava</td><td>Produženje roka za izvršenje.</td></tr><tr><td>Preporuka komisije</td><td>Odnosila se na produženje; javni naručilac je nije prihvatio.</td></tr><tr><td>Kasnija arbitraža</td><td>Ponovo je tražen novac, bez prethodne preporuke ili predloga o tom zahtevu.</td></tr></tbody></table>\n<p>Potvrda je beležila neuspeh medijacije. Nije nadomestila preporuku o drugom predmetu spora. <a href=\"https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693\">Sud je objasnio</a> da je naručilac morao dobiti priliku da prihvati ili odbije preporuku koja se odnosi upravo na zahtev kasnije iznet pred arbitražu. Vrhovni sud je ispravio obrazloženje nižeg suda o merodavnoj verziji zakona, ali je održao odluku o poništenju.</p>\n<h2>Kada zakon zamenjuje saglasnost naručioca</h2>\n<p><a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057\">Član 85-1 tajvanskog Zakona o javnim nabavkama</a> dopušta da se spor o izvršenju ugovora uputi komisiji za razmatranje prigovora u javnim nabavkama radi medijacije. Javni naručilac ne može odbiti prijavu dobavljača za medijaciju. Za građevinske radove ili tehničke usluge komisija mora dati preporuku ili predlog, a ako medijacija ne uspe zato što se naručilac s tim ne slaže, naručilac ne može odbiti upućivanje spora na arbitražu koje traži dobavljač.</p>\n<p>Za bolnički projekat nije postojao ni poseban ugovoreni osnov za arbitražu o novcu. Sud je utvrdio i da nisu ispunjene pretpostavke zakonski zasnovane saglasnosti. Odsustvo arbitražnog sporazuma bilo je osnov poništenja iz <a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001\">člana 40 stav 1 tačka 2 Zakona o arbitraži</a>.</p>\n<p>Vrsta nabavke utiče na izbor postupka. Sadašnji član 85-1 u navedenom delu obuhvata radove ili tehničke usluge; kupovina opreme i drugi ugovori javnog sektora ne ulaze automatski u taj put. Ugovor, međutim, može već sadržati zasebnu arbitražnu klauzulu.</p>\n<h2>Ponuda, kašnjenje i sadržaj budućeg zahteva</h2>\n<p>Američka Uprava za međunarodnu trgovinu, ITA, u <a href=\"https://www.trade.gov/market-intelligence/taiwan-energy-industry\">izveštaju o tajvanskoj energetici od 30. septembra 2026.</a> opisuje očekivane nabavke za tajvanski elektroenergetski sektor i mrežu krajem 2026. i tokom 2027, uključujući prilike za američke dobavljače. Nabavke su planirane. Sam izveštaj ne potvrđuje da je određeni tender otvoren, da konkretna firma ispunjava uslove ili da će ugovor pripadati građevinskim radovima ili tehničkim uslugama.</p>\n<p>Ponuđaču je korisno da pri početnom pregledu ugovora poveže vrstu nabavke sa klauzulom o sporovima. Kod već započetih radova isti problem postaje vidljiv kada se zahtev za dodatno vreme pretvori u zahtev za troškove kašnjenja. Poslovni povod može ostati isti, dok se tražena pravna zaštita promeni.</p>\n<p>Šta je komisija zaista razmatrala? Odgovor se traži u prvobitnoj prijavi, njenim izmenama, preporuci ili predlogu, odgovoru naručioca i nacrtu arbitražnog zahteva. Promena iznosa ili preciznije pravno obrazloženje sama po sebi ne stvara nužno novi spor. Ni isti broj projekta ne dokazuje da je predmet zahteva ostao nepromenjen.</p>\n<p>Ako se ti dokumenti ne poklapaju, pojedinačna pravna procena može razjasniti postoji li poseban arbitražni sporazum ili je potrebna dalja medijacija. Preko <a href=\"/en/contact\">kontakt stranice na engleskom</a> mogu se navesti kategorija projekta, tražena zaštita i sledeći procesni datum. Prijave, njihove izmene i odgovore naručioca treba složiti po redosledu kojim su nastali, tako da se vidi kada je zahtev za vreme ponovo postao zahtev za novac.</p>\n<p>Stanje izvora: zvanično sudsko objašnjenje provereno 25. oktobra 2026, a važeći propisi i tržišni izveštaj 26. oktobra. Tekst razmatra jedan put do arbitraže; ne utvrđuje nadležni forum ili rok za podnošenje zahteva u pojedinačnom ugovoru.</p>",
+      "orderedListCount": 0,
+      "tableCount": 1
+    },
+    {
+      "id": 916,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "8784312ab5e99542024568fde997318bb6ab6b1bdada863a39c499d505fce6bb",
+      "bodySHA256": "d24bc709a2e94c54510736fb610c23df5d3f4fdb1fc02464f05c98fb9e2efce7",
+      "metadata": {
+        "title": "Zagađenje tajvanske fabrike: šta su matična društva znala i preduzela",
+        "seoTitle": "Odgovornost matičnog društva za zagađenje na Tajvanu",
+        "summary": "Izveštaji o zagađenju, upravljanje fabrikom i kasniji prenosi imovine zajedno su bili važni u tajvanskom sporu radnika. Vlasnički odnos sam nije objašnjavao odgovornost; značaj su imali saznanje i postupci društava koja su kontrolisala poslovanje.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "read_time": "5 min čitanja",
+        "categories": [
+          "Pravne informacije o Tajvanu"
+        ],
+        "topic": "company",
+        "tags": [
+          "matično društvo",
+          "zagađenje",
+          "pravna ličnost",
+          "prenos imovine",
+          "Tajvan"
+        ],
+        "audience": [
+          "sr"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/916-case-trends-20261025.webp",
+        "featured_image_alt": "Tegla sa uzorkom zemlje i beležnica na sklopivom stolu ispred stare fabrike",
+        "featured_image_caption": "Izmišljeni prizor",
+        "faq": [
+          {
+            "q": "Da li vlasništvo nad tajvanskim društvom samo po sebi čini strano matično društvo odgovornim za zagađenje?",
+            "a": "Ova odluka se nije zasnivala samo na vlasništvu. Zvanično objašnjenje povezuje kontrolu poslovanja, saznanje o zagađenju, izostanak obaveštavanja ili mera i prenose imovine radi izbegavanja odgovornosti. Potrebno je proceniti konkretno postupanje i merodavno pravo."
+          },
+          {
+            "q": "Da li je Vrhovni sud 2018. okončao sve povezane sporove za naknadu štete?",
+            "a": "Nije. Delovi koji se odnose na 246 tužilaca ukinuti su i vraćeni na ponovno suđenje, dok su pravni lekovi u vezi sa 262 tužioca odbijeni. Različiti delovi postupka imali su različit ishod; to ne znači da su svi povezani sporovi završeni."
+          },
+          {
+            "q": "Koje dokumente čuvati posle provere ekoloških rizika pri preuzimanju društva?",
+            "a": "Izveštaje i podatke o njihovim primaocima, naknadna pitanja, odluke o izloženosti radnika hemikalijama i sanaciji, kao i odobrenja kasnijih prenosa imovine i pripadajuće finansijske analize. Oni pomažu da se procene saznanje i postupanje. Samo postojanje arhive ne dokazuje zakonitost."
+          }
+        ]
+      },
+      "checks": {
+        "date": true,
+        "audience": true,
+        "author": true,
+        "topic": true,
+        "FAQ": true,
+        "FAQUnchangedFromInitial": true,
+        "image": true,
+        "caption": true,
+        "noBold": true,
+        "noInternalAuthorInBody": true,
+        "officialSources": true
+      },
+      "sourceFile": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sourceSHA256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "sourceChecks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade",
+          "inBody": true,
+          "inFooter": true
+        }
+      ],
+      "inlineLinks": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "/sr/columns/taiwan-company-subsidiary-vs-branch",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade",
+        "/en/contact"
+      ],
+      "sourceLinks": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/916-case-trends-20261025.webp",
+        "sha256": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+        "bytes": 299298,
+        "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+      },
+      "renderedBodyHTML": "<p>Ekološki izveštaj pribavljen pre preuzimanja fabrike može kasnije pokazati šta je matično društvo znalo. U tajvanskom sporu radnika elektronske fabrike sud je takva saznanja povezao sa kontrolom poslovanja, izostankom odgovarajućeg reagovanja i kasnijim smanjenjem imovine tajvanskog društva. Te veze opisuje <a href=\"https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523\">zvanično objašnjenje Vrhovnog suda za predmet 107年度台上字第267號</a>.</p>\n<p>Odluka je doneta 16. avgusta 2018. Predmet se odnosio na izloženost radnika hemikalijama i odgovornost društava koja su upravljala poslovanjem. Sama činjenica da je vlasnik iz inostranstva nije bila dovoljan osnov te odgovornosti.</p>\n<h2>Od nalaza o zagađenju do odluka o imovini</h2>\n<p>Prema sudskom objašnjenju, ekološke provere ukazivale su na zagađenje za koje su kontrolna društva znala. Razmatrani su njihova kontrola nad poslovanjem, propuštanje da se radnici obaveste i problem otkloni, kao i smanjenja kapitala i prenosi novca u inostranstvo radi izbegavanja obaveza. Sud je prihvatio razloge za odgovornost tih društava uprkos odvojenoj pravnoj ličnosti tajvanske kompanije.</p>\n<p>Ko je dobio tehnički izveštaj? Spisak primalaca može pokazati put informacije, dok zapisnici i operativni nalozi otkrivaju ko je mogao da reaguje. Kada se tome pridruže kasnija odobrenja prenosa sredstava, vidi se veza između poznatog rizika i odluka o novcu.</p>\n<p>Nerešeno pitanje iz izveštaja ostaje važno i posle zaključenja transakcije. Naknadna beleška može zabeležiti ko je proverio izloženost zaposlenih, koje mere sanacije su razmatrane i kako su te odluke uticale na raspoloživu imovinu. Povoljan sažetak pri zaključenju posla sam ne pokazuje kako je odgovoreno na tehničke nalaze.</p>\n<h2>Dva ishoda u istoj odluci</h2>\n<p>Delove presude u vezi sa 246 tužilaca Vrhovni sud je ukinuo i vratio na ponovno suđenje. Pravni lekovi koji su se odnosili na 262 tužioca bili su odbijeni. Razlozi za vraćanje uključivali su nedovoljno razjašnjena pitanja štete, dokaza i ovlašćenja za ostvarivanje zahteva; precizna podela nalazi se u <a href=\"https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523\">zvaničnom prikazu izreke</a>.</p>\n<p>Povezani sporovi time nisu svi završeni. Vraćanje na ponovno suđenje nije značilo da svih 246 tužilaca nema osnovan zahtev, a odbijanje pravnog leka nije isto što i odbijanje svakog prvobitnog zahteva preostalih tužilaca. Za procenu obaveza pri preuzimanju društva potrebno je utvrditi koji postupak i koji njegov deo još traju.</p>\n<h2>Granice odvojene pravne ličnosti</h2>\n<p>Polazno pravilo <a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&amp;flno=154\">člana 154 tajvanskog Zakona o privrednim društvima</a> ograničava odgovornost akcionara na uplatu iznosa za njegove akcije. Drugi stav predviđa izuzetak kada akcionar zloupotrebom pravne ličnosti dovede do određenog duga društva koji je očigledno teško izmiriti, a okolnosti su toliko ozbiljne da je potrebno da akcionar za taj dug odgovara.</p>\n<p>Uslovi se primenjuju zajedno. Sam neplaćeni dug ili nalaz o zagađenju ne ispunjava čitav zakonski test. Sadašnji član 154 takođe ne objašnjava samostalno pravni osnov svih ranijih radnji iz ovog spora: sud je ispitivao konkretno ponašanje kontrolnih društava i razloge za probijanje granice odvojene pravne ličnosti.</p>\n<p>Osnovne razlike između organizacionih oblika obrađuje tekst o <a href=\"/sr/columns/taiwan-company-subsidiary-vs-branch\">tajvanskom zavisnom društvu i ogranku</a>. U ovom sporu, pored osnivačkih isprava, važni su bili dokazi o tome kako je grupa koristila kontrolu nakon saznanja za opasnost.</p>\n<p>Kancelarija američkog trgovinskog predstavnika, USTR, u <a href=\"https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade\">informativnom dokumentu iz februara 2026.</a> opisuje nameru SAD i Tajvana da podstiču prekogranična ulaganja, kao i razmatranje podrške finansiranju tajvanskih privatnih ulaganja uz američke privatne partnere i u skladu sa merodavnim pravom. Reč je o nameri i mogućoj podršci. Dokument ne daje svakom pojedinačnom investitoru pravo na finansiranje.</p>\n<p>Pre odobrenja dividende, smanjenja kapitala ili prenosa sredstava pri izlasku iz ulaganja, donosiocima odluke može pomoći pregled poznate izloženosti, nerešenih zahteva i sredstava koja ostaju tajvanskom društvu. Procena mora obuhvatiti stvarno planiranu transakciju. Naziv dokumenta i uredno složeni izveštaji sami ne potvrđuju zakonitost prenosa.</p>\n<p>Za pojedinačni upit preko <a href=\"/en/contact\">kontakt stranice na engleskom</a> dovoljno je opisati transakciju, tajvansko društvo i planirani datum prenosa ili zaključenja; način dostavljanja tehničkih izveštaja i osetljivih podataka zaposlenih može se posebno dogovoriti. Koristan dosije povezuje prvobitni nalaz, odluku donetu povodom njega i kasnije odobrenje raspolaganja imovinom.</p>\n<p>Stanje izvora: sudsko objašnjenje provereno 25. oktobra 2026, a sadašnji propis i investicioni dokument 26. oktobra. Tekst obrađuje navedenu odluku, ne sve povezane parnice niti odgovornost konkretnog investitora.</p>",
+      "orderedListCount": 0,
+      "tableCount": 0
+    },
+    {
+      "id": 918,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "6c7510a2e0bc76125be434f3565c68a9ab2d1b074969de73f367b07a04b43801",
+      "bodySHA256": "cb63097962e9cf538ba3e26431bdccd96f2615e9344ce56f5213af0c95e69c97",
+      "metadata": {
+        "title": "Pismo o stambenom kreditu i nedovršen stan: tajvanski spor o primopredaji",
+        "seoTitle": "Tajvanski stan u izgradnji: kredit, obaveštenje i kašnjenje predaje",
+        "summary": "Poziv da se kupac javi banci i kasniji pristup radi uređenja nisu dokazali urednu predaju stana. Sud je ispitao sadržaj pisma, priključke i dokumente o primopredaji. Ugovorna četiri meseca iz tog spora treba razlikovati od današnjeg roka od šest meseci za obaveštenje.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "read_time": "5 min čitanja",
+        "categories": [
+          "Pravne informacije o Tajvanu"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "stan u izgradnji",
+          "stambeni kredit",
+          "primopredaja",
+          "kašnjenje",
+          "Tajvan"
+        ],
+        "audience": [
+          "sr"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/918-case-trends-20261025.webp",
+        "featured_image_alt": "Dokumenti, koverta bez natpisa i jedna kutija za selidbu u novom stanu",
+        "featured_image_caption": "Izmišljeni prizor",
+        "faq": [
+          {
+            "q": "Da li pismo kojim prodavac traži da završim kredit već predstavlja obaveštenje o primopredaji?",
+            "a": "Važni su sadržaj pisma i tadašnje stanje stana. U ovom predmetu pismo se odnosilo na obradu kredita i nije saopštavalo da je stan spreman za upotrebu. Podaci o priključcima i kasnijem pregledu nisu podržali tvrdnju prodavca da je uredno obavestio kupca o predaji."
+          },
+          {
+            "q": "Da li rok za obaveštenje od dobijanja upotrebne dozvole iznosi četiri ili šest meseci?",
+            "a": "U prikazanom sporu ugovoreno je četiri meseca. Današnja tačka 15 obaveznih odredaba za prodaju još nezavršenih stanova traži da prodavac obavesti kupca o primopredaji u roku od šest meseci od dobijanja upotrebne dozvole. Za konkretan ugovor proveravaju se njegova sadržina i pravila primenljiva u vreme zaključenja."
+          },
+          {
+            "q": "Mogu li ignorisati prodavčevo pismo dok banka ne isplati kredit?",
+            "a": "Sama obrada kredita ne opravdava zanemarivanje obaveštenja. Plaćanje, dokumentacija za kredit, pregled i predaja mogu imati odvojene ugovorne uslove. Treba utvrditi šta pismo zahteva i do kada, uz bankarske podatke i stanje stana. Ova presuda ne daje svim kupcima pravo da obustave plaćanje."
+          }
+        ]
+      },
+      "checks": {
+        "date": true,
+        "audience": true,
+        "author": true,
+        "topic": true,
+        "FAQ": true,
+        "FAQUnchangedFromInitial": true,
+        "image": true,
+        "caption": true,
+        "noBold": true,
+        "noInternalAuthorInBody": true,
+        "officialSources": true
+      },
+      "sourceFile": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sourceSHA256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "sourceChecks": [
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+          "inBody": true,
+          "inFooter": true
+        }
+      ],
+      "inlineLinks": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+        "mailto:wei@hoveringlaw.com.tw"
+      ],
+      "sourceLinks": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/918-case-trends-20261025.webp",
+        "sha256": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+        "bytes": 103074,
+        "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+      },
+      "renderedBodyHTML": "<p>U stanu još nije bilo priključene vode i struje kada je kupcu stiglo pismo o stambenom kreditu. Nekoliko meseci kasnije dobio je pristup radi uređenja i čišćenja, ali sud ni u tome nije video završenu ugovornu predaju. Sadržaj pisma i stanje stana razmotreni su u <a href=\"https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C\">presudi objavljenoj u zbirci tajvanskog organa za zaštitu potrošača</a>, na štampanim stranama 173–187.</p>\n<p>Ogranak Visokog suda Tajvana u Tajčungu je 9. februara 2022. odbio žalbu investitora i njegov naknadno postavljeni tužbeni zahtev u predmetu 109年度上易字第289號. Obaveza plaćanja kamate zbog kašnjenja ostala je na snazi. Protiv presude nije bila dopuštena dalja žalba.</p>\n<h2>Šta je pismo saopštavalo o stanu</h2>\n<p>Prodavac je 23. februara 2019. tražio da kupac kontaktira banku i izvesti ga o postupku kreditiranja. U pismu nije pisalo da je stan osposobljen za korišćenje. Priključci su stigli kasnije. Pri prvom pregledu u julu postojali su nedostaci, a ugradnja lifta nije bila završena.</p>\n<p>U avgustu je kupac potpisao saglasnost za ulazak radi unutrašnjeg uređenja i čišćenja. Sud je tu izjavu čitao zajedno sa stanjem popravki, pa pristup nije izjednačio sa predajom nakon ugovorenog pregleda. Novac iz kredita uplaćen je prodavcu 5. novembra. Garantni dokument je kao datum predaje beležio 28. novembar.</p>\n<p>Ti događaji imaju različitu dokaznu ulogu. Četvrta tačka obrazloženja, na štampanim stranama 182–186, povezuje sadržaj dokumentacije sa stvarnim napretkom radova. Datum bankarske uplate sam ne govori da li je stan pregledan i predat.</p>\n<p>Koju obavezu je kupac već izvršio? Prodavac je tvrdio da je posle pisma trebalo odmah platiti ceo iznos, ali je sud uporedio uplate sa ugovorenim ratama. Kupac je te rate podmirio i pre predaje isplatio cenu u celini. Zbog toga nije prihvaćena ni tvrdnja o njegovoj povredi obaveze plaćanja.</p>\n<h2>Četiri meseca iz ugovora i šest iz današnjih pravila</h2>\n<p>Ugovor u tom sporu zahtevao je obaveštenje o primopredaji u roku od četiri meseca od dobijanja upotrebne dozvole. Prema sadašnjoj <a href=\"https://www.ey.gov.tw/File/17FD66C7511F7121?A=C\">tački 15 obaveznih ugovornih odredaba za prodaju stanova pre završetka izgradnje</a>, prodavac mora obavestiti kupca o primopredaji u roku od šest meseci od dobijanja te dozvole. Ista odredba uređuje popravke, obračun i predaju dokumenata pri primopredaji.</p>\n<p>Rok počinje dobijanjem dozvole. Za sopstveni slučaj treba povezati ugovor i tada merodavna pravila sa datumom dozvole, sadržajem obaveštenja i njegovim prijemom. Današnjih šest meseci predstavlja rok za obaveštenje; ne menja ugovorna četiri meseca iz ranijeg predmeta.</p>\n<p>Kupac ima i obaveze saradnje. Tačka 14 istog dokumenta uređuje kreditne isprave, potrebne postupke i uplate dospele pre upisa prenosa svojine. Čak i kada je obaveštenje sporno, dospele obaveze plaćanja i dostavljanja dokumentacije treba razmotriti prema sopstvenom ugovoru.</p>\n<p>Potrošački organ je u <a href=\"https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11\">rezultatima kontrole ugovora objavljenim 25. avgusta 2025.</a> označio kao nedopuštenu klauzulu koja iz roka za obaveštenje izuzima vreme bankarske potvrde kredita i isplate. To je kasnija kontrola ugovornih uslova. Ona nije deo obrazloženja presude iz 2022.</p>\n<h2>Dokumenti za kredit i dokumenti za predaju</h2>\n<p>Kod novog kredita relevantna je i <a href=\"https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html\">izmena propisa tajvanske centralne banke o kreditima obezbeđenim nepokretnostima</a>, koja se primenjuje od 18. septembra 2026. Današnji uslovi ne prenose se retroaktivno na raniju transakciju. Bankarski plan isplate može se uporediti sa zakazanim pregledom i predajom, uz beleženje svakog događaja zasebno.</p>\n<p>Naslov pisma nije dovoljan dokaz. Celokupno pismo i koverta ili elektronski podatak o dostavi, zapisnik pregleda, fotografije popravki, saglasnost za pristup i garantni list mogu zajedno pokazati kada je stan postao upotrebljiv i šta je tada još ostalo nedovršeno.</p>\n<p>Za upit o kamati zbog kašnjenja ili ugovornoj kazni, na <a href=\"mailto:wei@hoveringlaw.com.tw\">adresu kancelarije</a> mogu se poslati kratak opis sporne odredbe, datum obaveštenja i rok za odgovor. U pripremljenom dosijeu odvojeno označite poziv banci, poziv na pregled i obaveštenje o predaji, prema sadržaju svakog dokumenta.</p>\n<p>Stanje izvora: navedeni delovi sudske zbirke, važeće odredbe i zvanična saopštenja provereni su 26. oktobra 2026. Predmet se odnosio na određen ugovor i dokaze o izvršenju; tekst ne zamenjuje procenu pojedinačne odluke o plaćanju, odbijanju predaje ili zahtevu za naknadu.</p>",
+      "orderedListCount": 0,
+      "tableCount": 0
+    },
+    {
+      "id": 919,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "f408862fb5d8c925e4f88400bacc8dfd7d514bec78e17215bc62491983295487",
+      "bodySHA256": "b3bc4f45a5e4c6683d51af031869c27bd8e964cb3f820c483261961ebb47776f",
+      "metadata": {
+        "title": "Otkaz najavljen pre rasprave: tajvanska presuda o ispitivanju zlostavljanja na radu",
+        "seoTitle": "Zlostavljanje na radu na Tajvanu: saslušanje i unapred određena sankcija",
+        "summary": "Upravni sud je u javnoj službi poništio otkaz zbog nedostataka u odlučivanju, saslušanju i oceni dokaza. Za privatne poslodavce važe zasebni propisi o pravičnom ispitivanju pritužbi i zaštitnim merama; poništenje ovog otkaza nije utvrđenje da nijedna optužba nije osnovana.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "read_time": "5 min čitanja",
+        "categories": [
+          "Pravne informacije o Tajvanu"
+        ],
+        "topic": "labor",
+        "tags": [
+          "zlostavljanje na radu",
+          "pravo na izjašnjenje",
+          "disciplinski postupak",
+          "radni spor",
+          "Tajvan"
+        ],
+        "audience": [
+          "sr"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/919-case-trends-20261025.webp",
+        "featured_image_alt": "Okrugli sto, jedna fascikla bez natpisa i tri stolice u praznoj sali za sastanke",
+        "featured_image_caption": "Izmišljeni prizor",
+        "faq": [
+          {
+            "q": "Da li poništenje otkaza znači da zlostavljanja nije bilo?",
+            "a": "Ne može se izvesti takav zaključak. Sud je poništio prvobitnu meru i odluku u upravnom postupku preispitivanja zbog nedostataka u stvarnom razmatranju, saslušanju i utvrđivanju činjenica. Nije utvrdio da nijedno prijavljeno ponašanje nije postojalo. Prema saopštenju, protiv presude je bila moguća žalba."
+          },
+          {
+            "q": "Mora li poslodavac da čeka kraj istrage pre nego što zaštiti zaposlenog?",
+            "a": "Ne. Odgovarajuće mere zavise i od načina na koji je poslodavac saznao za događaj. Kada primi pritužbu pogođenog radnika, mora preduzeti mere radi sprečavanja ponavljanja, pružiti savetovanje, pomoć i zaštitu prema potrebama i sprovesti istragu. Zaštita može teći paralelno sa pravičnim postupkom."
+          },
+          {
+            "q": "Može li privatna kompanija jednostavno preuzeti postupak iz ove presude?",
+            "a": "Predmet se odnosio na ocenjivanje i otkaz u javnoj službi. Privatni poslodavac mora utvrditi primenljive propise o bezbednosti na radu, radnom odnosu i ugovoru. Provera unapred određenog ishoda, uskraćenog izjašnjenja i protivrečnih dokaza korisna je za poređenje, ali ne zamenjuje izbor odgovarajućeg pravnog osnova."
+          }
+        ]
+      },
+      "checks": {
+        "date": true,
+        "audience": true,
+        "author": true,
+        "topic": true,
+        "FAQ": true,
+        "FAQUnchangedFromInitial": true,
+        "image": true,
+        "caption": true,
+        "noBold": true,
+        "noInternalAuthorInBody": true,
+        "officialSources": true
+      },
+      "sourceFile": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sourceSHA256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "sourceChecks": [
+        {
+          "url": "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+          "inBody": true,
+          "inFooter": true
+        }
+      ],
+      "inlineLinks": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+        "mailto:wei@hoveringlaw.com.tw"
+      ],
+      "sourceLinks": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt"
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/919-case-trends-20261025.webp",
+        "sha256": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+        "bytes": 146756,
+        "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+      },
+      "renderedBodyHTML": "<p>Sud je poništio otkaz rukovodiocu u tajvanskoj javnoj službi i odluku kojom je taj otkaz potvrđen u upravnom preispitivanju. Otkaz je bio izrečen uz istovremeni upis dve teške disciplinske zabeleške. Prema <a href=\"https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html\">objašnjenju Visokog upravnog suda u Tajpeju</a>, problem su bili unapred najavljena sankcija, nedovoljna prilika za izjašnjenje i protivrečnosti u nalazima istrage.</p>\n<p>Presuda 114年度訴字第869號 doneta je 3. septembra 2026. u odeljenju tog suda za upravne sporove višeg stepena. Žalba je bila dopuštena. Iz poništenja se ne može zaključiti da nije bilo zlostavljanja niti da je rukovodilac zaista vraćen na posao.</p>\n<h2>Redosled odlučivanja pokazao je problem</h2>\n<p>Rukovodilac organa javno je najavio dve teške disciplinske zabeleške pre rasprave nadležne komisije, a zatim je nadređeni organ razmatrao slučaj pre komisije organizacije u kojoj je zaposleni radio. Sud je u tom redosledu video narušavanje stvarne uloge komisije.</p>\n<p>Da li je rasprava još mogla promeniti ishod? Najava sankcije prethodila joj je. Naknadni zapisnik sa sastanka sam po sebi ne pokazuje da su članovi imali stvarnu mogućnost da dokaze ocene drugačije.</p>\n<p>Sud je zasebno ukazao na izostanak urednog poziva da se zaposleni izjasni. Postojala je i protivrečnost između nalaza o dokazima zlostavljanja i konačnog predloga mera iz izveštaja, koju je trebalo razjasniti pri odlučivanju o otkazu. Odbrana izneta kasnije, u postupku upravnog preispitivanja, u ovom slučaju nije otklonila raniji nedostatak mogućnosti izjašnjenja.</p>\n<h2>Privatni poslodavac primenjuje drugi pravni osnov</h2>\n<p>Ovaj spor vođen je prema pravilima ocenjivanja u javnoj službi, za događaje pre novih pravila o zlostavljanju na radu. U privatnom radnom odnosu relevantne su i odredbe o bezbednosti i zdravlju na radu koje se primenjuju od 1. jula 2026. Datum primene potvrđuju <a href=\"https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001\">zakonodavna istorija</a> i <a href=\"https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt\">saopštenje organa za bezbednost na radu</a>.</p>\n<p><a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&amp;flno=22-2\">Član 22-2 tajvanskog Zakona o bezbednosti i zdravlju na radu</a> nalaže objektivnu, pravičnu i nepristrasnu istragu ili postupak usaglašavanja; pri istrazi strane moraju dobiti odgovarajuću priliku za izjavu i odbranu, uz poštovanje pravila o izuzeću. Javno utvrđivanje odgovornosti pre završetka istrage otežava poštovanje tih pravila.</p>\n<p>Zaštitne mere mogu početi odmah. Kada poslodavac primi pritužbu pogođenog radnika, po istom članu mora preduzeti mere za sprečavanje ponavljanja zlostavljanja, pružiti savetovanje, pomoć i zaštitu prema potrebama i sprovesti istragu. Ako podnosilac to želi, može se pristupiti usaglašavanju; ako dogovor izostane, istraga mora da se nastavi.</p>\n<p>Brza zaštita i mogućnost odbrane mogu postojati zajedno. Procesni problemi iz javnoslužbeničke presude pomažu u njihovom sagledavanju, ali ta presuda ne odlučuje neposredno o valjanosti sankcije u privatnoj kompaniji.</p>\n<h2>Od tvrdnje svedoka do konačnog nalaza</h2>\n<p>Izveštaj je lakše proveriti kada povezuje svaku tvrdnju, podatak koji je podupire i izvedeni zaključak. Kod protivrečnih iskaza korisno je navesti koji je dokaz prihvaćen i zašto, kao i šta poruke, evidencije prisustva ili zapisnici nisu potvrdili. To je način organizovanja spisa zasnovan na problemima koje je sud uočio.</p>\n<p>Predmet izjašnjenja mora biti razumljiv. Opšti poziv zaposlenom da opiše svoj stil rukovođenja ne daje isti prostor za odgovor kao obaveštenje koje određuje ponašanje, vreme i okolnosti koje treba razjasniti. Istražitelj može uporediti poziv, zapisnik saslušanja i konačan nalaz, bez nepotrebnog javnog otkrivanja ličnih podataka.</p>\n<p>Za pojedinačnu procenu tajvanskog radnog spora, na <a href=\"mailto:wei@hoveringlaw.com.tw\">adresu kancelarije</a> može se poslati kratak opis faze pritužbe, već donete odluke i najbližeg roka. Ceo osetljivi dosije nije potreban u prvom obraćanju. U samom spisu treba da ostane vidljivo kako su obaveštenje, odgovori učesnika i razlozi prihvatanja dokaza doveli do konačnog zaključka.</p>\n<p>Stanje izvora: sudsko saopštenje provereno 25. oktobra 2026, a važeći propisi 26. oktobra. Kasniji žalbeni ishod nije potvrđen. Pravni lekovi u javnoj službi i privatnom radnom odnosu utvrđuju se zasebno.</p>",
+      "orderedListCount": 0,
+      "tableCount": 0
+    },
+    {
+      "id": 920,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "349fc3fcab177b5c4908c729e1ad84697d1379da74bac79c7d165065e7d7bf8e",
+      "bodySHA256": "dc231dc6e1fac760ea26897fe55b7e202a64ba946eaa1352907a0a6eb09206a1",
+      "metadata": {
+        "title": "Punjač uz sopstveno parking mesto, kablovi kroz zajedničke delove zgrade",
+        "seoTitle": "Punjač u tajvanskoj zgradi: saglasnost za zajedničke zidove i instalacije",
+        "summary": "U jednom tajvanskom sporu punjač je koristio zajednički zid, plafon i elektroormar. Sud je održao obavezu uklanjanja opreme i vraćanja u prethodno stanje, prema stvarnoj trasi instalacije, zakonu i pravilima te zgrade.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "read_time": "5 min čitanja",
+        "categories": [
+          "Pravne informacije o Tajvanu"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "punjač za električno vozilo",
+          "zajednički delovi zgrade",
+          "saglasnost",
+          "parking",
+          "Tajvan"
+        ],
+        "audience": [
+          "sr"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/920-case-trends-20261025.webp",
+        "featured_image_alt": "Električni automobil uz punjač pričvršćen na stub u garaži, sa kablovima prema gornjem nosaču instalacija",
+        "featured_image_caption": "Izmišljeni prizor",
+        "faq": [
+          {
+            "q": "Ako samo ja koristim parking mesto, mogu li slobodno da postavim punjač?",
+            "a": "Treba proveriti i gde će biti oprema i kablovi. U ovom predmetu korišćeni su zajednički zid, plafon i elektroormar. Sud je primenio propise i pravila konkretne zgrade na stvarni obim radova, pa nije prihvatio samo pozivanje na instalaciju u delu za isključivo korišćenje. Druga zgrada zahteva proveru sopstvenog rasporeda i pravila."
+          },
+          {
+            "q": "Da li gašenjem i zaključavanjem punjača izbegavam uklanjanje?",
+            "a": "Stanar je tvrdio da je obustavio korišćenje, zaključao opremu i ponudio ključ upravnom odboru zgrade. Sud je ocenio da, čak i ako je to tačno, ostaje obaveza uklanjanja zbog povrede pravila o zajedničkim delovima i internog pravilnika. To je zaključak tog predmeta, ne univerzalno rešenje svih sporova o punjačima."
+          },
+          {
+            "q": "Da li subvencija za infrastrukturu punjenja zamenjuje saglasnost zgrade?",
+            "a": "Ne. Uslovi subvencije i ovlašćenje za korišćenje zajedničkih delova proveravaju se zasebno. Pomenuti program grada Kaosjunga za 2026. obuhvatao je i kablovske nosače za punjenje u zajedničkim prostorima, ali je objavljeni rok 30. septembra već prošao. Sam program ne ovlašćuje stanara da izvodi radove na zajedničkim delovima."
+          }
+        ]
+      },
+      "checks": {
+        "date": true,
+        "audience": true,
+        "author": true,
+        "topic": true,
+        "FAQ": true,
+        "FAQUnchangedFromInitial": true,
+        "image": true,
+        "caption": true,
+        "noBold": true,
+        "noInternalAuthorInBody": true,
+        "officialSources": true
+      },
+      "sourceFile": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sourceSHA256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "sourceChecks": [
+        {
+          "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE",
+          "inBody": true,
+          "inFooter": true
+        }
+      ],
+      "inlineLinks": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE",
+        "mailto:wei@hoveringlaw.com.tw"
+      ],
+      "sourceLinks": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/920-case-trends-20261025.webp",
+        "sha256": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+        "bytes": 183782,
+        "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+      },
+      "renderedBodyHTML": "<p>Kablovi su sa zida iza parking mesta išli preko plafona do zajedničkog elektroormara, a zatim do brojila koje koristi stanar. Punjač je tako zahvatio više od prostora označenog linijama na podu. Upravo je tu trasu razmatrao sud u <a href=\"https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1\">predmetu 111年度上字第132號</a>.</p>\n<p>Ogranak Visokog suda Tajvana u Kaosjungu je 22. juna 2022. odbio žalbu stanara. Obaveza uklanjanja opreme i vraćanja u prethodno stanje ostala je na snazi. Sud je utvrdio da za radove na zajedničkom zidu, plafonu i elektroormaru nije prethodno pribavljena potrebna saglasnost.</p>\n<h2>Gde je instalacija prešla granicu parking mesta</h2>\n<p>Prema nespornim činjenicama navedenim u presudi, vodovi u zaštitnim cevima bili su postavljeni na plafonske nosače, a u zajedničkom elektroormaru ugrađen je dodatni prekidač. Odatle je veza vodila do stanarevog brojila. Zid, delovi plafona i elektroormar bili su zajednički.</p>\n<p>Isključivo korišćenje parking mesta zato nije obuhvatalo ceo izvedeni zahvat. Za pitanje saglasnosti bilo je potrebno ispitati sve zajedničke delove kroz koje je instalacija prošla, a ne samo mesto na kojem se vozilo parkira.</p>\n<h2>Zakon i pravilnik zgrade zahtevali su saglasnost</h2>\n<p><a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&amp;flno=11\">Član 11 tajvanskog propisa o upravljanju zgradama u etažnoj svojini</a> vezuje rušenje, velike popravke ili unapređenje zajedničkih delova i povezanih uređaja za odluku skupštine etažnih vlasnika. Sud je radove ocenio prema toj odredbi. Član 15 pravilnika te zgrade dodatno je zahtevao odobrenje upravnog odbora i bezbednosnu proveru elektrodistributera za nove vodove i cevi.</p>\n<p>Potrebna su bila oba uslova iz pravilnika. Presuda je utvrdila i povredu zakonskog zahteva za odlukom skupštine. Ti organi i pravni osnovi ne mogu se proizvoljno zameniti jedni drugima.</p>\n<p><a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&amp;flno=6\">Član 6 stav 1 tačka 5 istog propisa</a> nalaže poštovanje drugih propisa i pravilnika zgrade. Upravni odbor je pokušao da reši problem pismom čiji je sadržaj mogao biti dokazan, ali oprema nije uklonjena, pa je po stavu 3 mogao da traži odgovarajuću odluku suda. Taj sled povezuje utvrđenu povredu, pokušaj dogovora i dalje nepostupanje.</p>\n<p>Tačka 4 prvog stava člana 6 uređuje i određeno postavljanje vodova i korišćenje zajedničkih delova kada je potrebno. Sud je u petoj i šestoj tački obrazloženja izričito ocenio da ovaj slučaj ne pripada toj odredbi. Bez stvarne trase i pravilnika ne može se iz presude izvesti isti postupak glasanja za svaki punjač u svakoj zgradi.</p>\n<p>Stanar se pozivao i na naknadne mere. Tvrdio je da je dodao prekidač, prestao da koristi punjač, zaključao ga i ponudio ključ upravnom odboru. Čak i da su te tvrdnje tačne, prema sudu bi obaveza uklanjanja i vraćanja u prethodno stanje ostala, jer mere nisu otklonile povredu pravila za radove na zajedničkim delovima.</p>\n<h2>Crtež trase pre ugovaranja radova</h2>\n<p>Broj parking mesta ne opisuje celu instalaciju. Od izvođača se pre ponude može tražiti crtež sa položajem punjača, zidovima i stubovima koje koristi, plafonskim vodovima i mestom priključenja. Poređenje sa svojinskim ispravama, pravilnikom i postojećim odlukama pokazuje kakvo pravo korišćenja postoji na svakom delu trase.</p>\n<p>Ko još treba da odluči o toj trasi? Upravnom odboru može se dostaviti konkretan plan i zatražiti da odredi merodavnu odredbu, nadležni organ i dokument koji nedostaje. Ako saglasnost već postoji, njeni uslovi, oprema i putanja porede se sa verzijom koju izvođač namerava da izvede.</p>\n<p>Grad Kaosjung je u <a href=\"https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&amp;ss=3C51D0007BD33CFE\">saopštenju od 29. maja 2026.</a> objavio program koji je obuhvatao i kablovske nosače za punjenje električnih vozila u zajedničkim prostorima zgrada. Objavljeni rok za prijavu bio je 30. septembar. Rok je prošao. Subvencija ne zamenjuje saglasnost konkretne zajednice niti postupak odobravanja radova.</p>\n<p>Ako je primljen zahtev za uklanjanje ili je tumačenje pravilnika sporno, na <a href=\"mailto:wei@hoveringlaw.com.tw\">adresu kancelarije</a> može se poslati opis trase, sporna odredba i rok za odgovor. U ugovoru sa izvođačem može se jasno vezati početak radova za potrebnu saglasnost i odrediti ko snosi troškove ako zahtev ne bude prihvaćen.</p>\n<p>Stanje izvora: presuda proverena 25. oktobra 2026, a važeći propisi i gradsko saopštenje 26. oktobra. Kasnije odluke i pravnosnažnost nisu potvrđene. U drugoj zgradi posebno se proveravaju raspored, prava korišćenja i njen pravilnik.</p>",
+      "orderedListCount": 0,
+      "tableCount": 0
+    },
+    {
+      "id": 921,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "59dc73e80c5fa3dfd7d37bfbda4af66ceba80168ace8c48cbbdcd97d3cb0f8d4",
+      "bodySHA256": "eb8ec9462a5a74049afda3bd1e4131d3b91e7d5c50e30b72c36220e42c756b86",
+      "metadata": {
+        "title": "Tražio je novac za preostale zlatnike u igri: zašto je tajvanski sud odbio zahtev",
+        "seoTitle": "Tajvanske onlajn igre: zlatnici, neiskorišćeni bodovi i povraćaj novca",
+        "summary": "Sud je preostale zlatnike u jednoj igri posmatrao kao žetone za nadmetanje, pa zahtev za novac nije prihvaćen. Današnja pravila štite neiskorišćene plaćene bodove i neiskorišćene naknade za igru; kupovine, konverzije i korišćenje pomažu da se objasni stanje naloga.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "read_time": "5 min čitanja",
+        "categories": [
+          "Pravne informacije o Tajvanu"
+        ],
+        "topic": "litigation",
+        "tags": [
+          "onlajn igra",
+          "virtuelni zlatnici",
+          "povraćaj novca",
+          "potrošački spor",
+          "Tajvan"
+        ],
+        "audience": [
+          "sr"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/921-case-trends-20261025.webp",
+        "featured_image_alt": "Kontroler za igru, ekran sa apstraktnom igrom, žetoni bez oznaka i zatvorena beležnica",
+        "featured_image_caption": "Izmišljeni prizor",
+        "faq": [
+          {
+            "q": "Da li naziv zlatnici znači da za taj saldo nikad nema povraćaja novca?",
+            "a": "Naziv nije presudan. U ovom predmetu zlatnici su služili kao žetoni za nadmetanje među igračima i nisu svrstani u neiskorišćene plaćene bodove ili naknade koje treba vratiti. Kod druge igre ispituju se način sticanja, funkcija, korišćenje i ugovor."
+          },
+          {
+            "q": "Da li posle sedam dana od početka igranja više ne mogu da raskinem ugovor?",
+            "a": "Možete. Današnji uslovi dopuštaju potrošaču da u svako doba obavesti pružaoca usluge o raskidu. Neiskorišćeni plaćeni bodovi ili neiskorišćene naknade za igru vraćaju se posle odbitka potrebnih troškova, u roku od 30 dana od prestanka ugovora ili na drugi zajednički dogovoren način. Sedmodnevno odustajanje i raskid u bilo kom trenutku imaju različite uslove."
+          },
+          {
+            "q": "Može li pružalac usluge propisati da u sporu važi samo njegova evidencija?",
+            "a": "Važeća pravila zabranjuju klauzulu koja kao isključivi osnov rešavanja spora određuje zapise o igranju i elektronske podatke koje čuva pružalac usluge. Igrač može sačuvati potvrde uplata, snimke ekrana i prepisku sa podrškom, a može zatražiti i sopstvenu evidenciju igranja radi provere promena salda."
+          }
+        ]
+      },
+      "checks": {
+        "date": true,
+        "audience": true,
+        "author": true,
+        "topic": true,
+        "FAQ": true,
+        "FAQUnchangedFromInitial": true,
+        "image": true,
+        "caption": true,
+        "noBold": true,
+        "noInternalAuthorInBody": true,
+        "officialSources": true
+      },
+      "sourceFile": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sourceSHA256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "sourceChecks": [
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://appeal.cpc.ey.gov.tw/",
+          "inBody": true,
+          "inFooter": true
+        }
+      ],
+      "inlineLinks": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/",
+        "mailto:wei@hoveringlaw.com.tw"
+      ],
+      "sourceLinks": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/921-case-trends-20261025.webp",
+        "sha256": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933",
+        "bytes": 122822,
+        "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+      },
+      "renderedBodyHTML": "<p>Igrač je tražio 243.548 novih tajvanskih dolara za zlatnike koji su ostali na njegovom nalogu. Zahtev nije usvojen. Strane nisu sporile da na nalogu više nema neiskorišćenih bodova kupljenih novcem, iako je ostao saldo zlatnika, prema <a href=\"https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C\">presudi u zvaničnoj zbirci zaštite potrošača</a>, na štampanim stranama 140–153.</p>\n<p>Okružni sud u Kilungu je 13. septembra 2021. odbio žalbu igrača u predmetu 109年度消簡上字第1號. Dalja žalba nije bila dopuštena. Odluka se zasnivala na funkciji zlatnika i ugovoru ove igre; ne isključuje sve virtuelne predmete iz potrošačke zaštite.</p>\n<h2>Kupljeni bodovi i žetoni za nadmetanje</h2>\n<p>Ugovor je dopuštao kupovinu bodova, a zatim njihovu zamenu za usluge ili proizvode u igri. Preostali zlatnici služili su kao žetoni u nadmetanju igrača. Zbog te funkcije sud ih nije smatrao neiskorišćenim plaćenim bodovima ili naplaćenim naknadama za igru koje je po ugovoru trebalo vratiti.</p>\n<p>Sud je razmatrao i posledicu gotovinske konverzije. Kada bi se takvi žetoni iz nadmetanja mogli unovčiti, nastalo bi i pitanje kockanja. To obrazloženje vezano je za konkretan način igranja. Druga igra zahteva proveru kako su njeni zlatnici stečeni, za šta se menjaju i da li su korišćeni; sam naziv ne daje odgovor.</p>\n<p>Pojedinosti su u osmoj tački obrazloženja, na štampanim stranama 148–152. Sud nije morao da prihvati novčani zahtev samo zato što je ugovor prestao. U ovom predmetu i igrač je izjavio da želi raskid, pa je sud mogao utvrditi njegov učinak i zatim ispitati preostale zlatnike. Time nije potvrđena valjanost svakog ranijeg razloga pružaoca usluge za suspenziju ili raskid.</p>\n<h2>Današnji povraćaj zavisi od neiskorišćenog iznosa</h2>\n<p>Prema <a href=\"https://www.ey.gov.tw/File/C27658C15073FF69?A=C\">tački 18 obaveznih uslova za onlajn igre</a>, potrošač može u bilo kom trenutku obavestiti pružaoca usluge o raskidu ugovora. Posle odbitka potrebnih troškova moraju se vratiti neiskorišćeni plaćeni bodovi ili neiskorišćene naknade za igru, u roku od 30 dana od prestanka ugovora, ili se povraćaj rešava na drugi način o kojem su se strane sporazumele.</p>\n<p>Drugo rešenje zahteva saglasnost obe strane. Jednostrana odluka pružaoca usluge nije takav dogovor. Za proveru obračuna može se tražiti da se odvojeno prikažu neiskorišćeni iznos, potrebni troškovi koji se odbijaju i osnov njihovog izračunavanja.</p>\n<p>Sadašnja verzija tih uslova primenjuje se od 1. januara 2023, posle prikazane presude. Raniji predmet ocenjivan je prema tadašnjem ugovoru i merodavnim pravilima. Današnja tačka 4 dopušta pisano odustajanje bez obrazloženja i troškova u roku od sedam dana od početka igranja, uz povraćaj neiskorišćenih plaćenih bodova.</p>\n<p>Šta ostaje posle sedmog dana? Potrošač i dalje ima mogućnost raskida iz tačke 18. Pri tom se utvrđuje šta je ostalo neiskorišćeno i kako se iznos može vratiti.</p>\n<h2>Kako se prati promena stanja naloga</h2>\n<p>Snimak ekrana pokazuje saldo u jednom trenutku. Za vezu između uplate, zamene bodova za zlatnike i njihovog korišćenja potrebni su podaci o prethodnim koracima. Dokumenti zato imaju različite uloge.</p>\n<table><thead><tr><th>Podatak</th><th>Šta pomaže da se utvrdi</th></tr></thead><tbody><tr><td>Potvrda kupovine bodova</td><td>Koliko je novca uplaćeno i kada.</td></tr><tr><td>Evidencija konverzije i igranja</td><td>Kako su bodovi pretvoreni i za šta je korišćen saldo.</td></tr><tr><td>Stanje naloga i prepiska sa podrškom</td><td>Šta je preostalo i kako pružalac objašnjava odbitak ili odbijanje povraćaja.</td></tr></tbody></table>\n<p>Tačka 9 istih obaveznih uslova nalaže pružaocu da čuva najmanje 30 dana lične evidencije igranja i da je dostavi u roku od sedam dana od prijema zahteva igrača. Trideset dana je minimum. Ranije traženje evidencije može smanjiti rizik da za sporni period ostane samo poslednji snimak salda.</p>\n<p>Evidencija pružaoca nije jedini dopušteni dokaz. Tačka 6 zabranjenih odredaba u istom dokumentu isključuje ugovaranje da se spor rešava isključivo prema njegovim zapisima o igri i elektronskim podacima. Njihova upotreba kao dokaza i dalje je moguća.</p>\n<p>Onlajn igre bile su druge po broju prvih potrošačkih pritužbi u statistici za 2025, uz pad u odnosu na prethodnu godinu. U <a href=\"https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930\">zvaničnom prikazu od 7. maja 2026.</a> pružaoci su pozvani da pažljivije postupaju sa blokadama naloga, suspenzijama i korisničkom podrškom.</p>\n<p>Spor o povraćaju može se prvo izneti pružaocu usluge, a zatim preko <a href=\"https://appeal.cpc.ey.gov.tw/\">državnog portala za potrošačke pritužbe</a>. Za pravnu procenu ugovora ili dokaza, na <a href=\"mailto:wei@hoveringlaw.com.tw\">adresu kancelarije</a> može se poslati kratak opis spornog iznosa i roka za odgovor, bez lozinke naloga. Traženi iznos lakše je objasniti kada podaci pokazuju kako je novac ušao na nalog, kako je pretvoren i šta je od toga korišćeno.</p>\n<p>Stanje izvora: navedeni delovi sudske zbirke, važeći uslovi i zvanična saopštenja provereni su 26. oktobra 2026. Bodovi, predmeti i razlozi prestanka ugovora u drugoj igri procenjuju se prema njenom stvarnom funkcionisanju i ugovoru.</p>",
+      "orderedListCount": 0,
+      "tableCount": 1
+    }
+  ],
+  "errors": [],
+  "scope": "Actual ReactMarkdown+remarkGfm prose HTML and source metadata only; not browser layout, website cards, JSON-LD, feeds or deployment."
+}

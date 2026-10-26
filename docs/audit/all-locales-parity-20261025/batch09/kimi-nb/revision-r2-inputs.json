@@ -1,0 +1,15 @@
+{
+  "atUTC": "2026-10-26T07:22:57.985003+00:00",
+  "scope": "same Kimi-authored six drafts; actual feedback and bounded author revision",
+  "files": [
+    {
+      "file": "inputs/primary-revision-feedback.json",
+      "sha256": "b37c4d15520f72fe8e65fdf9a13aaf7b689cf42a0a15b693944d951df522dce0"
+    },
+    {
+      "file": "TASK-R2.md",
+      "sha256": "6c99eb36d93d414f47948ce6d6921a7000f1edf40ae816c7667ce68a29cfe38d"
+    }
+  ],
+  "notSecretsOrClientData": true
+}

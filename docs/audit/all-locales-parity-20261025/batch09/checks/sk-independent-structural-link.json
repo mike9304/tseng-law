@@ -1,0 +1,170 @@
+{
+  "atUTC": "2026-10-26T10:00:02.691340+00:00",
+  "rows": [
+    {
+      "id": 915,
+      "sha256": "dd5ba0865b06900c6cf13dca431a93c0b6a9d86c0e5c8ca6cc136ec7170deaa3",
+      "artifact": "sk-content-audit-self-review.json",
+      "errors": 0,
+      "reviewCodes": [
+        "cross-language-link",
+        "public-output-and-native-prose",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ],
+      "source": {
+        "file": "../../tseng-all-language-columns-20261025/batch09/checks/sk-frozen-source-aliases/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "locale": "en",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "sk"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "semanticStatus": "REVIEW_REQUIRED in structure tool; independently reviewed in sk-independent.md; M01 pending"
+    },
+    {
+      "id": 916,
+      "sha256": "dea3c656ac58e2542b9f8343fbccd95d01f811ff47653a67d9225a0948a79e82",
+      "artifact": "sk-content-audit-final.json",
+      "errors": 0,
+      "reviewCodes": [
+        "cross-language-link",
+        "public-output-and-native-prose",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ],
+      "source": {
+        "file": "../../tseng-all-language-columns-20261025/batch09/checks/sk-frozen-source-aliases/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "locale": "en",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "sk"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "semanticStatus": "REVIEW_REQUIRED in structure tool; independently reviewed in sk-independent.md; M01 pending"
+    },
+    {
+      "id": 918,
+      "sha256": "ccf6a8391b9462f571188e5467f530b20e659bae1898cf6f9b6b63a12fb5f14d",
+      "artifact": "sk-content-audit-final.json",
+      "errors": 0,
+      "reviewCodes": [
+        "public-output-and-native-prose",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ],
+      "source": {
+        "file": "../../tseng-all-language-columns-20261025/batch09/checks/sk-frozen-source-aliases/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "sk"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "semanticStatus": "REVIEW_REQUIRED in structure tool; independently reviewed in sk-independent.md; M01 pending"
+    },
+    {
+      "id": 919,
+      "sha256": "7a9bda014da027ab57152f645835f429ce5802446c9badea6231d1beb8bf8569",
+      "artifact": "sk-content-audit-self-review.json",
+      "errors": 0,
+      "reviewCodes": [
+        "public-output-and-native-prose",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ],
+      "source": {
+        "file": "../../tseng-all-language-columns-20261025/batch09/checks/sk-frozen-source-aliases/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "sk"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "semanticStatus": "REVIEW_REQUIRED in structure tool; independently reviewed in sk-independent.md; M01 pending"
+    },
+    {
+      "id": 920,
+      "sha256": "001bd26dd4f6488e6e8a2413f401c1afa458652541b0396fcf248f29910fe3b1",
+      "artifact": "sk-content-audit-self-review.json",
+      "errors": 0,
+      "reviewCodes": [
+        "public-output-and-native-prose",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ],
+      "source": {
+        "file": "../../tseng-all-language-columns-20261025/batch09/checks/sk-frozen-source-aliases/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "sk"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "semanticStatus": "REVIEW_REQUIRED in structure tool; independently reviewed in sk-independent.md; M01 pending"
+    },
+    {
+      "id": 921,
+      "sha256": "60cb072f1ef19f7a1391d22cb2973597b602076752b3f5b387fc81e0b98e8d92",
+      "artifact": "sk-content-audit-self-review.json",
+      "errors": 0,
+      "reviewCodes": [
+        "public-output-and-native-prose",
+        "title-summary-faq",
+        "legal-conditions",
+        "numbers-dates-currencies",
+        "nationality-jurisdiction"
+      ],
+      "source": {
+        "file": "../../tseng-all-language-columns-20261025/batch09/checks/sk-frozen-source-aliases/921-taiwan-online-game-coins-refund-judgment.md",
+        "locale": "zh-hant",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "board": {
+        "visible": true,
+        "audience": [
+          "sk"
+        ],
+        "marketBoard": true,
+        "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+      },
+      "semanticStatus": "REVIEW_REQUIRED in structure tool; independently reviewed in sk-independent.md; M01 pending"
+    }
+  ],
+  "newStructureCLI": 0
+}

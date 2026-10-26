@@ -1,0 +1,98 @@
+{
+  "atUTC": "2026-10-26T11:47:02.421755+00:00",
+  "initialUnitBatch": {
+    "files": 28,
+    "passedFiles": 27,
+    "failedFiles": 1,
+    "passedTests": 780,
+    "failedTests": 1,
+    "exitCode": 1,
+    "execution": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/integration-unit-execution.json",
+      "sha256": "be9447090b99d8da409eccfd6ef01626724e827ae31dbf9f1053273427f0eafe",
+      "bytes": 8781
+    },
+    "failure": "Exactly six NB source captions Fiktiv scene differ from old global expectation Oppdiktet scene."
+  },
+  "targetedCaptionR2": {
+    "files": 1,
+    "tests": 1,
+    "exitCode": 0,
+    "execution": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/integration-caption-r2-execution.json",
+      "sha256": "cee93893ace326a6241ce3e27d5dda39532afc2237158381de0b73202f73dd01",
+      "bytes": 1186
+    },
+    "scope": "Exact six B9 filenames only; old NB expectation and all source bytes retained."
+  },
+  "currentCoverage": {
+    "files": 28,
+    "tests": 781,
+    "remainingKnownFailures": 0,
+    "basis": "27 unchanged suites and 780 tests passed in original batch; only modified caption suite rerun, 1 test passed. No claim that initial batch exit became zero.",
+    "onlyChangedInitialTestInput": [
+      "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/column-image-caption-label.test.ts"
+    ]
+  },
+  "copiedChecker": {
+    "tests": 88,
+    "exitCode": 0,
+    "execution": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/integration-checker-execution.json",
+      "sha256": "edfb33475bc0aadd76ce3866b32695af35443de55bdabc7367da6d6a2c15c07a",
+      "bytes": 64539
+    }
+  },
+  "neutral": {
+    "cases": 68,
+    "exitCode": 0,
+    "execution": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/integration-neutral-execution.json",
+      "sha256": "c429475e16c1563aec8cc5e99c26268e57f6df99d3313cddeee868ef0db2291d",
+      "bytes": 64841
+    }
+  },
+  "actualArticleCLI": {
+    "files": 45,
+    "exit0": 45,
+    "FAIL": 0,
+    "totalUnits": 1944,
+    "newArticleUnits": 1713,
+    "record": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/integration-variety.json",
+      "sha256": "8af2c55ba5aad632d2bb4d21211f4e5d2188879e3e9d69685208e33c1963b4a6",
+      "bytes": 861867
+    }
+  },
+  "automatedContent": {
+    "files": 42,
+    "errors": 0,
+    "REQUIRED": 224,
+    "semanticStatus": "REVIEW_REQUIRED",
+    "publicationReady": false
+  },
+  "metadata": {
+    "errors": 0,
+    "faq": 119,
+    "record": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/integration-metadata.json",
+      "sha256": "e43c70e3d0fff597e1595371215563a9e4ecfa82a8c09af77d2167062118a439",
+      "bytes": 62061
+    }
+  },
+  "warnings": {
+    "count": 4,
+    "distinct": [
+      "Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.",
+      "Warning: Received `true` for a non-boolean attribute `inert`."
+    ],
+    "sameTextInPriorB8": true,
+    "priorLog": {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/batch08/checks/integration-unit.stderr",
+      "sha256": "7b85c25119fe9e59403cef8c008fd0249ba0be5526943887625dd08871d3a142",
+      "bytes": 3344
+    }
+  },
+  "wholeProjectTestRun": false,
+  "buildBrowserDeployment": false
+}

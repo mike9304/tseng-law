@@ -1,0 +1,185 @@
+from pathlib import Path
+from hashlib import sha256
+from datetime import datetime, timezone
+import json
+
+B = Path('/Users/son7/tseng-all-language-columns-20261025/batch09')
+C = B / 'checks'
+P = Path('/Users/son7/tseng-all-language-columns-20261025/batch06/research')
+def h(p):
+    return sha256(p.read_bytes()).hexdigest()
+def j(p):
+    return json.loads(p.read_text())
+proof = j(C / 'ro-independent-proof.json')
+author_manifest = j(C / 'ro-author-manifest.json')
+paths = {Path(r['path']).name[:3]: Path(r['path']) for r in proof['rows']}
+old_920 = 'Locatarul a invocat oprirea, încuierea și predarea cheii.'
+new_920 = 'Locatarul a invocat oprirea și încuierea echipamentului, precum și disponibilitatea de a preda cheia comitetului.'
+old_915 = '[Raportul din 30 septembrie 2026 al administrației americane pentru comerț internațional, ITA](https://www.trade.gov/market-intelligence/taiwan-energy-industry), prezintă achiziții taiwaneze de energie și rețele anticipate pentru sfârșitul anului și pentru 2027, inclusiv oportunități pentru furnizori americani.'
+new_915 = '[Raportul din 30 septembrie 2026 al administrației americane pentru comerț internațional, ITA](https://www.trade.gov/market-intelligence/taiwan-energy-industry) prezintă achiziții pentru infrastructura energetică și rețelele electrice din Taiwan, anticipate pentru sfârșitul anului și pentru 2027, inclusiv oportunități pentru furnizori americani.'
+for ident, old in [('920', old_920), ('915', old_915)]:
+    assert paths[ident].read_text().count(old) == 1
+findings = [
+    {'id': 'O01', 'severity': 'optional', 'file': str(paths['920']), 'line': 21, 'scope': 'FAQ2 first sentence only',
+     'old': old_920, 'new': new_920,
+     'reason': '본문은 이미 위원회에 열쇠를 넘길 의향으로 정확하다. FAQ의 명사형 predarea는 실제 인도 완료를 주장한 것으로도 읽힐 수 있어 동일한 주체·의향·수령자를 명시하면 독립 FAQ의 정확성이 높아진다.',
+     'whyNotMandatory': 'FAQ는 주장 소개 뒤 가정적 판단을 설명하며, 정본 FAQ도 인도라는 요약 명사형을 사용한다. 본문의 명시적 의향과 법원의 조건부 판단을 함께 읽으면 권리·의무 또는 판결 결과의 역전이 없다.',
+     'meaningPreserved': '정지·잠금, 위원회에 인도할 의향, 사실이라고 가정해도 철거·원상회복 의무는 남는다는 결과, 모든 충전기 분쟁으로 확대하지 않는 범위를 보존한다.',
+     'source': str(P / 'retained/zh-hant-ev-primary-recovered.md'), 'sourceStoredLines': 'L32 and L44',
+     'verificationIfAdopted': 'FAQ/frontmatter only. Preserve the 920 measured body byte SHA and reuse existing body CLI/arrays; parse the changed FAQ and verify full-file reversal.'},
+    {'id': 'O02', 'severity': 'optional', 'file': str(paths['915']), 'line': 50, 'scope': 'ITA paragraph first sentence only',
+     'old': old_915, 'new': new_915,
+     'reason': 'achiziții ... de energie și rețele는 에너지 자체와 망의 매입으로도 읽힌다. 공식 자료가 설명하는 전력 인프라·발전설비·망 관련 조달의 대상을 명시하고 주어와 동사 사이 불필요한 쉼표도 제거한다.',
+     'whyNotMandatory': '같은 문단은 전망이라는 점과 특정 입찰 개시·회사 자격·85-1 분류를 보장하지 않는다는 제한을 명시한다. 현재 요약을 실제 입찰이나 자격 보장으로 단정하지 않는다.',
+     'meaningPreserved': '2026-09-30 자료, 연말/2027 전망, 미국 공급자 기회, 뒤 두 문장의 전망·범위 제한, 공식 URL을 보존한다.',
+     'source': str(P / 'recheck/official-04.json'), 'sourceStoredLines': 'ITA response L13–15, L19',
+     'verificationIfAdopted': 'Only 915 body changes. Run the shared ro CLI for 915 once, inspect the changed paragraph, and verify exact reversal/metadata/FAQ/URL/numbers. Other five CLI results can be reused.'}
+]
+fout = C / 'ro-independent-findings.json'
+assert not fout.exists()
+fout.write_text(json.dumps({'atUTC': datetime.now(timezone.utc).isoformat(), 'mandatory': [], 'optional': findings,
+                          'decision': 'ACCEPT_WITH_OPTIONAL_CLARIFICATIONS', 'manuscriptsChangedByReviewer': False}, ensure_ascii=False, indent=2) + '\n')
+sha_table = '\n'.join(f'| {Path(r["path"]).name[:3]} | `{r["sha256"]}` |' for r in proof['rows'])
+metrics_table = '\n'.join(f'| {Path(r["path"]).name[:3]} | {r["currentSentenceCount"]} | {r["metrics"]["len_cv"]:.3f} | {r["metrics"]["short_share"]:.3f} | {r["metrics"]["even_run3"]:.3f} | {r["metrics"]["top_opener_n"]} / {r["metrics"]["consec_same_start"]} | {"first-cli: source-footer bridge" if Path(r["path"]).name.startswith("918") else "edited-r1: current SHA"} |' for r in proof['rows'])
+report = f'''# RO6 독립 의미·문체 검수 — R1
+
+검수 시각: {datetime.now(timezone.utc).isoformat()}. 검수자: column_live_audit, 모델 기반 독립 검수. 사람 원어민 또는 변호사의 감수로 표시하지 않는다.
+
+판정: 필수 수정 0건, 선택 명료화 2건. 현재 6편을 의미·문체 기준으로 수용한다. 두 선택안을 필수 오류나 배포 차단으로 바꾸지 않는다. 원고·저자 증거·R·공유 검사기를 수정하지 않았으며 공개 배포나 공개 렌더 검증도 수행하지 않았다.
+
+## 동결 입력과 검수 범위
+
+원고 6편의 본문·제목·요약·FAQ17개·이미지 설명/캡션·공식 출처 꼬리를 전문 대조했다. 현재 실제 추출 228개 문장을 읽었고 숫자 내부 점, NT$, 판결번호, 법조문, 링크 뒤 마침표와 문단 경계를 확인했다. 최근 RO706·705·704 전문은 published 2026-10-25를 기준으로 직접 읽었다. 제목 숫자로 최근 글을 추정하지 않았다. 기존 RO 중 published가 없는18편은 빈 날짜로 정렬했으며 내용을 고치지 않았다.
+
+동결 저자 기록: `reviews/ro-author.md`, SHA `05cdc0663f02e7d81c707033b62aac5f149f518cc643958085d3f872abfa06b3`.
+저자 manifest: `checks/ro-author-manifest.json`, SHA `86b3bc5d29b0142a79d10e9d0f02c355b923945207cc30b17690d3b0748b09bd`.
+
+| 원고 | 현재 SHA256 |
+|---|---|
+{sha_table}
+
+B9/B8/B7 계약, B6 동결 EN915/916·ZH918/919/920/921 정본6, facts·source-register·source-freeze·authoring-contract, 프로젝트 문체2종 및 공통 문장 규칙은 이 검수자가 계속 작업하면서 전문을 읽었던 동일 SHA 입력을 재사용했다. 현재 LESSONS 17:05판 `86710ef330b108a916a7bb92a75f1ffa62dea53412e8a75f38472d9fa9b33130`은 바로 앞 SL 검수에서 전문을 읽었고 현재 해시도 같았다. §5는 이번 RO 검수에서도 직접 재확인했다. 기독서를 새 전문독서로 과장하지 않는다.
+
+홈 `~/agent-library/knowledge/editorial-voice.md`와 `mac-studio-macbook-air-sync.md`는 없었다. 읽었다고 표시하지 않으며 존재하는 프로젝트 문체 정본을 적용했다. 공식 자료는 제공된 동결 내용으로 충분해 새 웹 요청은0회다. 선택 O01의 S09 보관 응답 L32/L44와 O02의 ITA 보관 응답 L13–15/L19는 이번 검수에서 직접 다시 읽었다.
+
+## 선택 명료화 — 문제 문장·이유·수정안·의미 보존
+
+### O01 — 920 FAQ2의 열쇠 인도 의향과 수령자
+
+위치: `{paths['920']}:21`.
+
+현재 문장: `{old_920}`
+
+수정안: `{new_920}`
+
+이유: `predarea`는 실제로 열쇠를 넘겼다는 주장으로 읽힐 여지가 있다. 본문44행은 `fiind dispus să predea cheia comitetului`로 이미 정확하다. FAQ도 같은 의향과 수령자를 명시하면 단독 노출될 때 더 명료하다.
+
+필수로 분류하지 않은 이유: 현재 FAQ는 당사자의 주장을 소개하고 다음 문장에서 사실이라 하더라도 철거 의무가 남는다는 조건부 판단을 명시한다. 동결 ZH FAQ도 인도라는 요약 명사형을 쓰므로, 본문에 분명한 의향이 있는 현행 문장을 판결 결과의 역전이라고 단정하지 않는다.
+
+의미 보존: 정지·잠금, 위원회에 열쇠를 넘길 의향, 가정적으로 사실이어도 남는 철거·원상회복 의무, 다른 분쟁에 일괄 확대하지 않는 범위를 보존한다. 근거는 [고등법원 가오슝 분원 판결](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1)의 실제 보관 응답 `batch06/research/retained/zh-hant-ev-primary-recovered.md` L32/L44다. 전체 판결을 이번에 새 HTTP로 확보했다는 뜻은 아니다.
+
+### O02 — 915 ITA 조달 대상과 주어 뒤 쉼표
+
+위치: `{paths['915']}:50`.
+
+현재 문장:
+
+> {old_915}
+
+수정안:
+
+> {new_915}
+
+이유: `achiziții ... de energie și rețele`보다 인프라·전력망용 조달이라는 표현이 설비와 사업을 다루는 공식 자료에 가깝다. 주어인 자료 제목 뒤의 쉼표도 제거한다. 현행 문단은 전망·특정 입찰/자격/법정 분류의 비보장 범위를 이미 명시하므로 이 부분을 보장 오류로 분류하지 않는다.
+
+의미 보존: 자료 날짜, 연말·2027 전망, 미국 공급자 기회, 뒤 두 문장의 법적 제한과 공식 링크를 그대로 둔다. 근거는 [ITA의 Taiwan Energy Industry 자료](https://www.trade.gov/market-intelligence/taiwan-energy-industry), 실제 보관 파일 `batch06/research/recheck/official-04.json`의 ITA 응답 L13–15/L19다.
+
+두 선택안의 정확한 old/new는 `checks/ro-independent-findings.json`에 있다. 채택 시 O01은 FAQ만 바뀌므로 본문 SHA/배열이 같으면 기존920 CLI를 재사용할 수 있다. O02는915 본문 한 문장에만 영향이 있으므로915만 실제 CLI와 변경 문단을 확인하면 된다.
+
+## 6편 법률 의미와 FAQ 대조
+
+| 원고 | 직접 확인한 조건과 결과 | 판정 |
+|---|---|---|
+| 915 | 44.417.150 NT$는 중재판정 금액, 취소 청구 주체는 공공기관, 대법원에서 기각된 상고 주체는 시공사. 금전→공기 연장→금전의 변경을 보존했다.85-1은 공사 또는 기술서비스, 권고 또는 조정안, 기관 부동의에 따른 조정 불성립, 같은 구체적 분쟁의 누적 요건이다. 별도 중재합의 가능성과 금액/법적 논거의 모든 변경을 일괄 차단하지 않는 FAQ2도 정확하다. | 필수0; ITA 문구 O02 |
+| 916 | 지배·오염 인식·미고지/미조치·책임회피성 자산 이동을 실제 행위로 설명한다.154(2)는 법인격 남용→회사의 특정 채무 부담→현저한 변제 곤란→중대성과 책임 필요성을 누적한다.246명 부분 파기환송/262명 관련 상고기각을 원청구 전부 기각이나 사건군 전체 종결로 바꾸지 않았다. USTR는 미국 측의 적절한 경우 지원 고려, 대만 핵심 분야, 미국 민간 파트너, 적용법을 현재 문장에 명시한다. 루마니아 투자자의 자동 수혜나 루마니아어 상담을 보장하지 않는다. | 필수0 |
+| 918 | 미완공 주택의 은행 연락 요구와 인도 통지·실제 인도를 구별한다. 개발자 항소/추가청구 불인용과 지연이자 지급 판단 유지, 상소불가가 명시되어 있다.2019 통지/검사/입주 준비/대출 실행/보증서 날짜와2022 판단을 현재 정책과 분리한다. 계약4개월과 현행6개월은 사용허가 취득일부터의 통지 기간이다.14항 매수인 대출/지급 의무,2025 점검과2026 대출정책도 과거 판결 근거로 소급하지 않는다. | 필수0 |
+| 919 | 공무원 면직과 재심사 결정 취소, 한 처분의 두 중대 징계점, 절차·진술 기회·조사 모순, 상소 가능을 보존한다. 복직 완료나 모든 괴롭힘 부정으로 확대하지 않는다. 민간 고용주의22-2는 재발 방지 조치를 할 의무이며 결과 보장 의무가 아니다. 피해근로자 신고로 알게 된 상황, 신고인 의향이 있을 때 고용주가 조율할 수 있음, 실패 시 조사 계속을 구별한다. FAQ2는 보호와 공정한 조사의 병행, FAQ3는 공무원 절차를 민간에 직접 이식할 수 없음을 설명한다. | 필수0 |
+| 920 | 전용 주차구획에서 공용 벽·천장·전기함으로 이어지는 배선이 핵심이다. 계량기에 연결됐다는 사실을 모든 설비의 소유권 판결로 바꾸지 않았다. 법11의 구분소유자 집회 결정과 해당 건물 규약15의 관리위원회 허가 AND 전력회사 안전검사를 구별한다.6(1)(5) 위반과 조정 뒤 불이행을 거친6(3),6(1)(4) 비해당의 판단을 보존한다. 본문은 위원회에 열쇠를 넘길 의향이다. 보조금9/30 기한 경과/예산 소진 시 조기종료 및 별도 설치승인도 정확하다. | 필수0; FAQ O01 |
+| 921 | 243.548 NT$는 청구 금액이며 인용액이 아니다. 잔존 코인과 이미 소진한 유료 포인트의 기능을 구별하고 해당 게임에 한정한다. 소비자 자신의 종료 통지 때문에 모든 운영자 정지 사유를 승인할 필요가 없었다는 범위도 보존한다.18항 미사용 조건이 유료 포인트와 게임 요금 양쪽에 붙고 필요비용 공제/종료일부터30일 OR 쌍방 다른 합의를 유지한다.7일의 시작·서면·무이유·무비용, 기록30일 보관/청구 후7일 제공, 독점적 사업자 기록 조항 금지,2022 개정/2023 시행과2021 판결,2025 최초민원 통계의 순위·감소를 구별했다. | 필수0 |
+
+FAQ17개는 본문과 정본을 각각 대조했다. 법적 조건을 짧은 FAQ에서 삭제해 일반 보장으로 바꾸거나 언어를 국적으로 가정한 부분을 확인하지 않았다. 921의 비교 표1개도 문장검사 제외 영역으로 따로 읽었다. 공식 URL은 편별 합23개/고유22개이며 각 편의 집합이 정본 및 본문·출처 목록과 같다. 조문을 수식의 위치나 길이 점수 때문에 제거하지 않았다.
+
+## 저자 자체교정 10건의 독립 재현
+
+검수자가 별도 `ro-independent-verify.py`로 초기6텍스트→10문자열 치환→현재6파일을 재현하고, 현재파일에서 역순 치환해 초기6 SHA를 모두 복원했다. 저자가 기록한 boolean만 복사하지 않았다. 변경 단계의 실제 state SHA와 old/new/offset은 독립 proof에 저장했다.
+
+| 변경 | 실제 이유와 의미 보존 확인 |
+|---|---|
+| 915 `nici o`→`nicio` | 부정 대명사 표기를 자연스럽게 정리. 중재합의 부재 조건은 불변. |
+| 916 `cauzând asumarea`→`determinând societatea să își asume` | 특정 채무를 부담하는 주체가 회사임을 명시.154 요건의 연결을 강화하며 새 요건을 만들지 않았다. |
+| 918 출처 꼬리 `în cercetarea din26…`→`la26…` | 내부 연구 과정을 독자 문구에서 덜어냄. 검증일과 적용 범위는 그대로다. 측정되는 출처 제목 전 본문 바이트/문단/배열은 같았다. |
+| 919 도입2문장 교정 | 행위2건처럼 읽힐 수 있는 abateri를 penalizări로 명료화. 한 처분의 두 중대 징계점과 면직·재심사 취소를 보존했다. |
+| 919 조율 문장의 `angajatorul` 추가 | 신고인 의향은 조건, 조율할 수 있는 주체는 고용주임을 명시. 조율 실패 후 조사 의무는 남는다. |
+| 920 도입3문장 재구성 | 실제 배선 경로와 공용 부분을 붙여 설명하고 짧은 결과 문장을 배치. 벽·천장·공용 전기함·계량기·사전승인 판단은 보존한다. |
+| 920 규약 문단2문장→1문장 | 기존 설명 바로 앞에 규약15의 전체 AND 조건이 남는다. 중복된15라는 숫자1회는 삭제됐다. 따라서 ‘모든 숫자 출현 순서 불변’이라고 쓰지 않는다. |
+| 920 조정·소송 관계 반복문 삭제 | 바로 앞 문장에 조정 시도와 계속 불이행,6(3) 소송 요건이 있다. 조건의 손실 없이 반복만 줄였다. |
+| 921 청구 금액/기각을 두 문장으로 분리 | 평가액과 판결 결과를 명확히 구별.금액과 기각 결과가 같다. |
+| 921 증거 권고에 관한 중복 부정문 삭제 | 앞 문단이 `poate` 권고와 법정 규칙을 구별하고 있어 새 보편적 환급 요건이 생기지 않는다. |
+
+전체 metadata/FAQ는 초기본과 바이트 동일, 외부 URL 등장 순서도6편 모두 동일하다. 숫자 순서는920의 중복15 한 번 삭제만 예외이고 나머지5편은 같다. 초기230분절→현재228분절 중217개가 순서대로 같고11개가 새 문장이다. 저자의 실제 초기 실패(919 CV.445,920 .433,921 .442), 빈 선택 목록으로 CLI가 없었던 오류, 숫자 보존 assertion으로 쓰기 전에 중단한 오류와 그 후 옛 원고에 재실행된 결과를 모두 보존하고 최종 통과 근거에서 구별했다.
+
+## 실제 검사 연결과 경계
+
+같은 현재 원고와 도구 SHA에 대한 전수 CLI를 반복하지 않았다. 새 variety CLI0회, 새 구조 CLI0회. 저자의 실제 CLI stdout·exit·파일 SHA·도구4SHA를 현재 파일 및 독립 복원과 연결했다. 원고/저자/근거/정본/최근/이미지/도구61개 경로 해시를 직접 확인했다. 최종 구조 자동 오류0개는 해당6현재SHA에 연결되고, REQUIRED32개는 사람이 승인했다는 뜻이 아니라 의미·공개출력 확인을 남긴 항목이다.
+
+| 원고 | 문장 | CV | 짧은 문장 비율 | 비슷한 길이3연속 | 최다 문단 시작 / 연속 같은 시작 | 재사용한 실제 CLI |
+|---|---:|---:|---:|---:|---:|---|
+{metrics_table}
+
+918은 전체 파일 SHA가 초기 측정 SHA와 다르다. 이 예외를 감추지 않았다. 차이는 출처 섹션 안의 검증일 문장이고, 출처 전 실제 측정 본문 바이트·문단·228개 전체 배열 중 해당41개·지표가 동일하여 초기 실제 PASS를 재사용했다. 나머지5편은 현재 원고 SHA에 대한 실제 수정 후 CLI PASS다.
+
+각 실제 배열의 문장들을 합친 표시텍스트가 현재 Markdown 문단의 링크 목적지만 제거한 텍스트와 모두 같은지 독립 비교했다. 현재228문장은 직접 읽었고 숫자/마침표/이메일/법조문 경계에서 새 누락이나 잘못된 분절을 확정하지 않았다. 915의 첫 `44.417.150 NT$.`는 숫자 하나로 시작하는 의도적 표현으로, 숫자 내부 점을 잘못 쪼갠 결과가 아니다. 이번 RO 검수는 ReactMarkdown HTML이나 공개 브라우저를 새로 검사한 것은 아니다.
+
+## 문체 §5와 MONOTONY
+
+1. 실제 해당 언어 `--lang ro`6개 파일별 결과가 FAIL0이며 도구/원고 결합을 확인했다. 길이 단위는 orthographic_words다. 숫자가 의미나 자연스러움 승인을 대신하지 않는다.
+2. 오프닝은915 금액,916 독자의 자료 수령 질문,918 은행 연락/미완공 집,919 취소 결과,920 물리적 배선 경로,921 잔고와 환급 질문으로 구별된다. 최근704의 기간,705의 입학/입국조건,706의 체류사유 종료 질문을 복제한 예고형 도입이 아니다.
+3. 각 편에 실제 짧은 완결문이2개 이상 있다. `Anularea a rămas în vigoare.`, `Cronologia leagă documentele.`, `Protecția poate începe imediat.`는 바로 앞뒤 사실과 관계를 맺는다.154 누적요건처럼 필요한 긴 문장은 보존하며 뒤의 짧은 문장이 관계를 정리한다.
+4. 문단 시작을 세로로 읽었고 최다 반복은1/1/1/1/1/2다. 같은 시작 연속은 모두0이다. 비슷한 길이3연속은0~.147이며 목록처럼 끊어 놓은 유사 문장 행렬을 확인하지 않았다.
+5. 출처를 문장 앞/법조문 주어/사실 근거에 배치한다. 무인용 질문·결과·자료 비교 문단도 존재한다. “주장(조문)→다만”이3문단 연속되는 틀이 없다.
+6. 도구 contrast0은 모든 부정문이 없다는 뜻이 아니다. 재판 결과·과거/현행·미국 정책/개인 승인·계량기/공용부분 권한을 나누는 부정은 실제 오해 위험에 직접 연결된다. 독자가 하지 않은 무관한 주장을 반복 반박하지 않는다.
+7. 실질 결말은915 변경된 청구/권고,916 최초 보고와 자산 이동,918 문서의 실제 요구,919 진술과 증거 선택,920 허가받을 설치안과 비용,921 지급→전환→사용의 금액 경로에 묶인다. 연락 방법과 검증일/일반 적용 고지는 구조적 꼬리 예외로 따로 평가했다. 필요한 고지 반복만으로 반려하지 않았다.
+8. 표준 루마니아어 서술을 유지하고 한국어/일본어 register 규칙을 억지로 적용하지 않는다. 공개 byline·굵은 강조·가공의 변호사1인칭·명령형 체크리스트 제목을 발견하지 않았다. 내부 author는 유지됐다. 실제 그림과 연결된 alt/caption, `Scenă fictivă`를 보존한다.
+9. 10개 실제 교정의 법적 조건·FAQ·출처 보존과 숫자 예외를 위 표대로 확인했다. 문체 점수를 위해 법적 조건을 삭제하거나 표기를 바꾸지 않았다.
+
+MONOTONY: 반려 항목0 — 현재 문장에서 두 가지 이상 §5 위반이나 기계적 반복을 확인하지 못했다. 참고 관찰: 921 `Calculul merită descompus.`는 추상적으로 홀로 끝나지 않고 바로 뒤에서 잔액·공제·계산 근거를 구체화한다. 별도 필수 문체 수정을 만들지 않는다.
+
+## 범위와 한계
+
+이 보고서는 동결6원고의 모델 기반 의미·문체 검수다. 원어민 사람 감수, 법률전문가 개별사안 승인, 전체 판결 새 확보, 공식 출처 재발행일 검증, 실제 공개 화면·모바일·접근성 통과 또는 배포 완료를 주장하지 않는다. 이미지6개는 같은 바이트로 이전 직접 보았던 그림과 현재 alt/caption의 관계를 재사용했고 이번에는 새 이미지 렌더 도구를 실행하지 않았다. 정본이 짧게 요약한 정책에 모든 선택 세부를 일괄 필수 확장하지 않았다.
+
+독립 재현 증거: `checks/ro-independent-proof.json`, SHA `{h(C / 'ro-independent-proof.json')}`. 선택 문자열: `checks/ro-independent-findings.json`, SHA `{h(fout)}`. 최종 manifest는 이 보고서와 원고·근거의 현재 SHA를 고정한다.
+'''
+rout = B / 'reviews/ro-independent.md'
+assert not rout.exists()
+rout.write_text(report)
+extra_sources = [P / 'retained/zh-hant-ev-primary-recovered.md', P / 'recheck/official-04.json']
+artifact_paths = [rout, fout, C / 'ro-independent-proof.json', C / 'ro-independent-verify.py', Path(__file__)]
+final = {'atUTC': datetime.now(timezone.utc).isoformat(), 'decision': 'ACCEPT_WITH_OPTIONAL_CLARIFICATIONS',
+    'mandatory': 0, 'optional': ['O01', 'O02'], 'owner': 'column_live_audit',
+    'files': [{'path': str(p), 'sha256': h(p)} for p in paths.values()],
+    'author': {'path': str(B / 'reviews/ro-author.md'), 'sha256': h(B / 'reviews/ro-author.md')},
+    'authorManifest': {'path': str(C / 'ro-author-manifest.json'), 'sha256': h(C / 'ro-author-manifest.json')},
+    'artifacts': [{'path': str(p), 'sha256': h(p)} for p in artifact_paths],
+    'additionalStoredSourcesReread': [{'path': str(p), 'sha256': h(p)} for p in extra_sources],
+    'verifiedBindings': proof['verifiedBindings'], 'currentSentencesRead': 228, 'FAQRead': 17,
+    'exactEditsReconstructed': 10, 'initial6Reversed': True, 'sameOrderedSentences': 217, 'newSentences': 11,
+    'freshVarietyCLIRuns': 0, 'freshStructureCLIRuns': 0, 'publicRenderingInspected': False,
+    'manuscriptsAuthorROthersSharedChanged': False, 'humanNativeLegalApproval': False}
+for entry in proof['verifiedBindings']:
+    assert h(Path(entry['path'])) == entry['expectedSHA256'], entry['path']
+mout = C / 'ro-independent-final-manifest.json'
+assert not mout.exists()
+mout.write_text(json.dumps(final, ensure_ascii=False, indent=2) + '\n')
+print(json.dumps({'report': {'path': str(rout), 'sha256': h(rout)}, 'manifest': {'path': str(mout), 'sha256': h(mout)},
+                  'mandatory': 0, 'optional': 2, 'filesUnchangedAtEnd': True}, ensure_ascii=False, indent=2))

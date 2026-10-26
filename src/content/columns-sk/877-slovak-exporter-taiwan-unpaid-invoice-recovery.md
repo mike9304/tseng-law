@@ -23,7 +23,7 @@ audience: ["sk"]
 author: "legal-ai-assistant"
 ---
 
-Faktúra za zariadenie, potvrdenie dodania a protokol o uvedení do prevádzky môžu mať rôzne dátumy. Slovenský dodávateľ pri vymáhaní potrebuje zistiť, na ktorý z nich zmluva viaže zaplatenie. Pri technickej dodávke preto k faktúre priložte aj dohodnuté podmienky prevzatia a záznamy o splnených skúškach.
+Keď sa líšia dátumy na faktúre za zariadenie, potvrdení dodania a protokole o uvedení do prevádzky, slovenský dodávateľ potrebuje pri vymáhaní zistiť, na ktorý z nich zmluva viaže zaplatenie. Pri technickej dodávke preto k faktúre priložte aj dohodnuté podmienky prevzatia a záznamy o splnených skúškach.
 
 Kupujúci môže uznávať cenu dodaných dielov, ale spochybňovať dokončenie montáže. Podklady usporiadajte podľa konkrétnych námietok a zmluvných položiek. Celé e-mailové vlákno vrátane nepriaznivých odpovedí ukáže viac než výber správ, v ktorých odberateľ prisľúbil platbu.
 
@@ -45,7 +45,7 @@ Po uplynutí premlčacej lehoty môže dlžník odmietnuť plnenie podľa [člá
 
 ## Platobný rozkaz pri nedokončenej dodávke?
 
-Taiwanský platobný rozkaz, 支付命令, možno žiadať pre určitú peňažnú sumu podľa [článku 508 Civilného sporového poriadku Taiwanu](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508). Veriteľ musí nárok predbežne osvedčiť a opísať aj splnenie svojho vzájomného plnenia, ak sa vyžaduje ([článok 511](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511)). Práve tu pomáha protokol o skúškach či prevzatí.
+Taiwanský platobný rozkaz, 支付命令, možno žiadať pre určitú peňažnú sumu podľa [článku 508 Civilného sporového poriadku Taiwanu](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508), pričom veriteľ musí nárok predbežne osvedčiť a opísať aj splnenie svojho vzájomného plnenia, ak sa vyžaduje ([článok 511](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511)). Práve tu pomáha protokol o skúškach či prevzatí.
 
 Podľa [článku 509](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509) tento postup nie je prípustný, ak navrhovateľ ešte nesplnil svoje vzájomné plnenie alebo sa rozkaz musí doručovať do zahraničia či verejnou vyhláškou. Slovenské sídlo veriteľa samo medzi týmito prekážkami nie je. Potrebné je posúdenie podmienok konania a doručovacej adresy dlžníka.
 

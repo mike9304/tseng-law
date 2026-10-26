@@ -1,0 +1,599 @@
+{
+  "at": "2026-10-26T17:55:57.851082+09:00",
+  "executionEvidence": {
+    "rootReportedExecSession": 17293,
+    "rootReportedExitCode": 0,
+    "receipt": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-run-start.json",
+    "note": "Completion/exit 0 is attributed to root write_stdin, not independently rerun by reviewer. Empty new output is not a claim that log files are empty."
+  },
+  "inputGuard": [
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/EDITORIAL-VOICE.md",
+      "expectedSha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "actualSha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/COLUMN-VOICE-RULE.md",
+      "expectedSha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "actualSha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/SENTENCE-VARIETY-RULE.md",
+      "expectedSha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "actualSha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/LESSONS.md",
+      "expectedSha256": "adcb20ff50cd7cbb682fda48efbb253b1f152857cc4ecd52c0c3658d5fda157b",
+      "actualSha256": "adcb20ff50cd7cbb682fda48efbb253b1f152857cc4ecd52c0c3658d5fda157b"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "expectedSha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "actualSha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "expectedSha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "actualSha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "expectedSha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "actualSha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "expectedSha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "actualSha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "expectedSha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "actualSha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "expectedSha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "actualSha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/recent-pl-941-polish-brand-taiwan-consumer-injury-importer-recall.md",
+      "expectedSha256": "17382511050d47b947e9ff81276b2b5f8cb5999ebe62aa86f679eb0546c580e7",
+      "actualSha256": "17382511050d47b947e9ff81276b2b5f8cb5999ebe62aa86f679eb0546c580e7"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/recent-pl-940-polish-importer-taiwan-invoice-bank-change-payment.md",
+      "expectedSha256": "06813fc5597240ed39d513e1e88df483dec85cd8f277f89d1baaa41003b6f4ca",
+      "actualSha256": "06813fc5597240ed39d513e1e88df483dec85cd8f277f89d1baaa41003b6f4ca"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/recent-pl-706-taiwan-arc-renewal-changes-reentry.md",
+      "expectedSha256": "1e6671e104c15ff573fb69434280258c57583e77d3a30f999da38d63d2e038bc",
+      "actualSha256": "1e6671e104c15ff573fb69434280258c57583e77d3a30f999da38d63d2e038bc"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/TASK.md",
+      "expectedSha256": "8b10926478b443af15cc2176f9d046308e204b7f60daf4ac2bcc8d71539c7e38",
+      "actualSha256": "8b10926478b443af15cc2176f9d046308e204b7f60daf4ac2bcc8d71539c7e38"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/TASK-R2.md",
+      "expectedSha256": "5c8dff3d3bc5e67b2ffd9f0261f4541d0ce6f7be67ce184754296ca435612601",
+      "actualSha256": "5c8dff3d3bc5e67b2ffd9f0261f4541d0ce6f7be67ce184754296ca435612601"
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-pl-cases-20261026/inputs/shared-feedback-r2.json",
+      "expectedSha256": "f764fd99da288c152cf2bc4de6915b73cc78ef5d474f767967e8645661eed398",
+      "actualSha256": "f764fd99da288c152cf2bc4de6915b73cc78ef5d474f767967e8645661eed398"
+    }
+  ],
+  "inputCount": 16,
+  "initialPreservation": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/src/content/columns-pl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "b1a2647e93e5fa55dc3036c781bd6a16fbfbfd28d8ef9fa5babf8fa7adc5f3d0"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/src/content/columns-pl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "4efa898d3eb097497d91354ab6f5e0f2be2c1f537d94145485a60cbd00b59014"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/src/content/columns-pl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "f12c1c38e60d4025937be07cf8e1655246549a2e8444b8e0306552f463090f69"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/src/content/columns-pl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "359b6773f449085ba6264eb0a548df07efdb6ab6c76ee3eb8166a76d31d079f9"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/src/content/columns-pl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "20ba1a7323d4d0da453a5f4084b2c53964a984538e6f46d24c5447d1c85dea64"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/921-taiwan-online-game-coins-refund-judgment.md",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/src/content/columns-pl/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "cf3eb017f24a719b0c7cab4a41633236a62efea1a90bd1befca8820e9cd922aa"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/run-receipt.json",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/kimi-pl/run-receipt.json",
+      "sha256": "8adf7d61a59150f7c1911d962cc944874bc85f21b2210755b471e6bd442eb47e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/input-manifest.json",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/kimi-pl/input-manifest.json",
+      "sha256": "373ec60569cbd7c367519df6c33238f178efe6f9ba7f3ee29bcbdb0263c6f1f6"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/run-start.json",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/kimi-pl/run-start.json",
+      "sha256": "8a61ab294b0ade7510c66a1fb9915733d0979a210612d299031cc0d6e46d6201"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-run-start.json",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/kimi-pl/r2-run-start.json",
+      "sha256": "02412d5161271617d6204b1ae3e0f035d482d05c472ec01b76c1a335a026d7e1"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/revision-r2-inputs.json",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/kimi-pl/revision-r2-inputs.json",
+      "sha256": "7a44e945bead06e9ba232ff23159205284bdb6d816877e16052782af65b1edbe"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output/author-review.md",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/kimi-pl/raw-output/author-review.md",
+      "sha256": "29b3dd47554c933c5cd008a50b6bd47f3258222fec837adcf314f4357f087c40"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-content-audit-kimi-initial.json",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/checks/pl-content-audit-kimi-initial.json",
+      "sha256": "e98024ee30a0c1e04cf64d3f21f005b3e91b0f10e6b3528cd81d5e36ffcec46a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-profile-provenance-correction.json",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/checks/pl-profile-provenance-correction.json",
+      "sha256": "986f6c3cbbd355218d8a9800d81a14e7ffdba774405237b0118692e7010cf871"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-content-audit-initial-corrected-map.json",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/checks/pl-content-audit-initial-corrected-map.json",
+      "sha256": "556c3a0cfb0bd3d77808296dde99f22c708869a06a67b22a28b8eedde2aeb55e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-variety-kimi-initial.json",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/checks/pl-variety-kimi-initial.json",
+      "sha256": "1d2ded782eb80aeb139a6be9a81ce757737ec90e6859f8d3ff5b7e305281ef93"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/pl-audit-provenance-correction.json",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-initial-snapshot/checks/pl-audit-provenance-correction.json",
+      "sha256": "b10cd7228b4db123ab77d62f97847f3bd4e1f758f456e31a23765ffac2259be6"
+    }
+  ],
+  "rawOutput": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791",
+      "bytes": 7754
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "26a51d48c0db0e4e1a4eb7ac421ddc61f3f6ba7108bdf709aafa6c6ecf236da7",
+      "bytes": 8716
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "5a96879936dc4fa4e61226afd0cacd0b089177044945f8cc85cf996bf374c567",
+      "bytes": 8477
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "effc9883d2591a5ecd11ed8764279e7d815575db49bbd9dec0faeb56f81b62e7",
+      "bytes": 8205
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "452cb645981a3c790542f9c219c65eea879bf3d1ba584bd2f22f3edcb1aaf2da",
+      "bytes": 8360
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "bdebbbdd5368437bd80c9630f8b5ca3abd9272dec4c2757e0c3ea739dcd61fae",
+      "bytes": 8980
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/author-review-r2.md",
+      "sha256": "34595b187df996191970fc66424c79063f3e27345a99682a72926d2c7beb4d4f",
+      "bytes": 7247
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/author-review.md",
+      "sha256": "29b3dd47554c933c5cd008a50b6bd47f3258222fec837adcf314f4357f087c40",
+      "bytes": 13112
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/edits-r2.json",
+      "sha256": "f739b9463aeb256846e061dda77ce76c45641d3f89eb6ed31cae7edc5c17ab6c",
+      "bytes": 18212
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/initial-preserved/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "b1a2647e93e5fa55dc3036c781bd6a16fbfbfd28d8ef9fa5babf8fa7adc5f3d0",
+      "bytes": 7691
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/initial-preserved/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "4efa898d3eb097497d91354ab6f5e0f2be2c1f537d94145485a60cbd00b59014",
+      "bytes": 8711
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/initial-preserved/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "f12c1c38e60d4025937be07cf8e1655246549a2e8444b8e0306552f463090f69",
+      "bytes": 8471
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/initial-preserved/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "359b6773f449085ba6264eb0a548df07efdb6ab6c76ee3eb8166a76d31d079f9",
+      "bytes": 8199
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/initial-preserved/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "20ba1a7323d4d0da453a5f4084b2c53964a984538e6f46d24c5447d1c85dea64",
+      "bytes": 8305
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/raw-output-r2/initial-preserved/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "cf3eb017f24a719b0c7cab4a41633236a62efea1a90bd1befca8820e9cd922aa",
+      "bytes": 8904
+    }
+  ],
+  "originalAuthorUnchanged": true,
+  "recordedOperations": 23,
+  "actualReplacements": 31,
+  "files": [
+    {
+      "file": "915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "initialSha256": "b1a2647e93e5fa55dc3036c781bd6a16fbfbfd28d8ef9fa5babf8fa7adc5f3d0",
+      "r2Sha256": "a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791",
+      "edits": [
+        {
+          "file": "915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+          "old_string": "12 lipca 2017 r. Sąd Najwyższy oddalił apelację wykonawcy. Orzeczenie o uchyleniu wyroku pozostało w mocy, a omówienie wyraźnie odnotowuje prawomocne zakończenie sprawy.",
+          "new_string": "Podmiot zamawiający wystąpił o uchylenie wyroku, a 12 lipca 2017 r. Sąd Najwyższy oddalił apelację wykonawcy, więc orzeczenie o uchyleniu pozostało w mocy, co omówienie wyraźnie odnotowuje jako prawomocne zakończenie sprawy.",
+          "reason": "Połączono przynależne fakty procesowe w jedno zdanie przyczynowe i wyraźnie wskazano, że podmiot zamawiający wystąpił o uchylenie, a wykonawca złożył apelację.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            2046
+          ]
+        },
+        {
+          "file": "915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+          "old_string": "[Art. 85-1 ustawy o zamówieniach publicznych](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) pozwala kierować spory o wykonanie umowy do mediacji przed Complaint Review Board for Government Procurement. Podmiot zamawiający nie może odmówić udziału w mediacji wszczętej na wniosek dostawcy.",
+          "new_string": "[Art. 85-1 ustawy o zamówieniach publicznych](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) pozwala kierować spory o wykonanie umowy do mediacji przed Complaint Review Board for Government Procurement, a podmiot zamawiający nie może odmówić udziału w mediacji wszczętej na wniosek dostawcy.",
+          "reason": "Złożono dwie części tej samej reguły ustawowej dla naturalniejszego rytmu bez zmiany zakresu art. 85-1.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            3459
+          ]
+        },
+        {
+          "file": "915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+          "old_string": "W sprawie szpitala nie było również umownego zapisu arbitrażowego. Brak umowy arbitrażowej w rozumieniu [art. 40 ust. 1 pkt 2 ustawy o arbitrażu](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001) stanowił podstawę uchylenia wyroku. Osobny zapis w umowie może jednak niezależnie dostarczyć podstawy arbitrażu; wtedy analiza nie kończy się na art. 85-1.",
+          "new_string": "W sprawie szpitala nie było również umownego zapisu arbitrażowego, a brak umowy arbitrażowej w rozumieniu [art. 40 ust. 1 pkt 2 ustawy o arbitrażu](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001) stanowił podstawę uchylenia wyroku. Osobny zapis w umowie może jednak niezależnie dostarczyć podstawy arbitrażu. Wtedy analiza nie kończy się na art. 85-1.",
+          "reason": "Połączono brak zapisu z jego skutkiem procesowym, a odrębną możliwość umowną i jej konsekwencję rozdzielono na dwa pełne zdania.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            4116
+          ]
+        }
+      ],
+      "exactForward": true,
+      "exactInverse": true,
+      "diff": "--- initial/915-taiwan-public-contract-mediation-arbitration-same-claim.md\n+++ kimi-r2/915-taiwan-public-contract-mediation-arbitration-same-claim.md\n@@ -23,7 +23,7 @@\n \n 44 417 150 NTD — tyle wynosiło przyznane wykonawcy szpitala roszczenie objęte później uchylonym wyrokiem arbitrażowym. Podczas mediacji uzyskano zalecenie dotyczące dodatkowego czasu, lecz arbitraż dotyczył pieniędzy, dla których takiego zalecenia nie wydano. W [oficjalnym omówieniu wyroku 106年度台上字第723號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693) Sąd Najwyższy wskazał tę lukę jako rozstrzygającą.\n \n-12 lipca 2017 r. Sąd Najwyższy oddalił apelację wykonawcy. Orzeczenie o uchyleniu wyroku pozostało w mocy, a omówienie wyraźnie odnotowuje prawomocne zakończenie sprawy. W konkretnym sporze pieniężnym nie istniała ani uzgodniona klauzula arbitrażowa, ani podstawa do uznania zgody na arbitraż za udzieloną na mocy ustawy.\n+Podmiot zamawiający wystąpił o uchylenie wyroku, a 12 lipca 2017 r. Sąd Najwyższy oddalił apelację wykonawcy, więc orzeczenie o uchyleniu pozostało w mocy, co omówienie wyraźnie odnotowuje jako prawomocne zakończenie sprawy. W konkretnym sporze pieniężnym nie istniała ani uzgodniona klauzula arbitrażowa, ani podstawa do uznania zgody na arbitraż za udzieloną na mocy ustawy.\n \n ## Od pieniędzy do czasu i z powrotem do pieniędzy\n \n@@ -40,11 +40,11 @@\n \n ## Ustawowa zgoda na arbitraż ma warunki\n \n-[Art. 85-1 ustawy o zamówieniach publicznych](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) pozwala kierować spory o wykonanie umowy do mediacji przed Complaint Review Board for Government Procurement. Podmiot zamawiający nie może odmówić udziału w mediacji wszczętej na wniosek dostawcy.\n+[Art. 85-1 ustawy o zamówieniach publicznych](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) pozwala kierować spory o wykonanie umowy do mediacji przed Complaint Review Board for Government Procurement, a podmiot zamawiający nie może odmówić udziału w mediacji wszczętej na wniosek dostawcy.\n \n Dla robót budowlanych lub usług technicznych komisja przedstawia zalecenie mediacyjne albo propozycję rozwiązania sporu. Jeżeli mediacja nie powiedzie się z powodu braku zgody podmiotu zamawiającego na takie zalecenie lub propozycję, nie może on odmówić skierowania sprawy do arbitrażu przez dostawcę. Przyczyna niepowodzenia ma zatem znaczenie.\n \n-W sprawie szpitala nie było również umownego zapisu arbitrażowego. Brak umowy arbitrażowej w rozumieniu [art. 40 ust. 1 pkt 2 ustawy o arbitrażu](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001) stanowił podstawę uchylenia wyroku. Osobny zapis w umowie może jednak niezależnie dostarczyć podstawy arbitrażu; wtedy analiza nie kończy się na art. 85-1.\n+W sprawie szpitala nie było również umownego zapisu arbitrażowego, a brak umowy arbitrażowej w rozumieniu [art. 40 ust. 1 pkt 2 ustawy o arbitrażu](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001) stanowił podstawę uchylenia wyroku. Osobny zapis w umowie może jednak niezależnie dostarczyć podstawy arbitrażu. Wtedy analiza nie kończy się na art. 85-1.\n \n Kwalifikacja kontraktu pozostaje odrębnym pytaniem. Obecny art. 85-1 obejmuje roboty budowlane i usługi techniczne, nie każdy zakup sprzętu ani każdą umowę z sektorem publicznym. Nie wolno przenosić szczególnej reguły na inny kontrakt tylko dlatego, że zamawiającym jest podmiot publiczny.\n \n"
+    },
+    {
+      "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "initialSha256": "4efa898d3eb097497d91354ab6f5e0f2be2c1f537d94145485a60cbd00b59014",
+      "r2Sha256": "26a51d48c0db0e4e1a4eb7ac421ddc61f3f6ba7108bdf709aafa6c6ecf236da7",
+      "edits": [
+        {
+          "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "old_string": "Badania środowiskowe przeprowadzone przed przejęciem stały się częścią materiału dowodowego przeciwko spółkom dominującym w tajwańskiej sprawie skazenia fabryki. Sąd Najwyższy powiązał wiedzę o zanieczyszczeniu z kontrolą operacyjną, reakcją na zagrożenie i transferami uszczuplającymi majątek tajwańskiej spółki.",
+          "new_string": "Badania środowiskowe przeprowadzone przed przejęciem stały się częścią materiału dowodowego przeciwko spółkom dominującym w tajwańskiej sprawie skazenia fabryki, w której Sąd Najwyższy powiązał wiedzę o zanieczyszczeniu z kontrolą operacyjną, reakcją na zagrożenie i transferami uszczuplającymi majątek tajwańskiej spółki.",
+          "reason": "Złączono opis roli badań z powiązanym rozumowaniem sądu w jedno zdanie o zmienionej długości.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            2032
+          ]
+        },
+        {
+          "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "old_string": "Według [omówienia Sądu Najwyższego](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) materiał sprawy obejmował badania wykazujące skazenie, wiedzę w grupach kontrolujących, niepoinformowanie pracowników i brak usunięcia problemu. Obejmował również redukcje kapitału oraz przelewy za granicę zmierzające do uchylenia się od zobowiązań.",
+          "new_string": "Według [omówienia Sądu Najwyższego](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) materiał sprawy obejmował badania wykazujące skazenie, wiedzę w grupach kontrolujących, niepoinformowanie pracowników i brak usunięcia problemu, a także redukcje kapitału oraz przelewy za granicę zmierzające do uchylenia się od zobowiązań.",
+          "reason": "Zestawiono elementy tego samego materiału dowodowego w jednym zdaniu, zachowując wiedzę, kontrolę, zaniechania i transfery uchylające się od zobowiązań.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            2876
+          ]
+        },
+        {
+          "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "old_string": "Nierozwiązane pytania powinny pozostać oznaczone jako nierozwiązane; optymistyczna prezentacja końcowa nie usuwa wniosków technicznych ani odpowiedzialności za ich dalsze wyjaśnienie.",
+          "new_string": "Nierozwiązane pytania powinny pozostać oznaczone jako nierozwiązane. Optymistyczna prezentacja końcowa nie usuwa wniosków technicznych ani odpowiedzialności za ich dalsze wyjaśnienie.",
+          "reason": "Wyodrębniono krótkie, samodzielne zdanie o oznaczaniu nierozwiązanych pytań zamiast łączenia dwóch różnych wskazówek średnikiem.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            3831
+          ]
+        },
+        {
+          "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "old_string": "[Art. 154 tajwańskiej ustawy o spółkach](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154) co do zasady ogranicza odpowiedzialność wspólnika do zapłaty za objęte udziały. Ust. 2 przewiduje wyjątek, gdy wspólnik nadużywa osobowości prawnej spółki i powoduje powstanie przez nią konkretnego długu, którego spłata jest oczywiście utrudniona.",
+          "new_string": "[Art. 154 tajwańskiej ustawy o spółkach](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154) co do zasady ogranicza odpowiedzialność wspólnika do zapłaty za objęte udziały, ale ust. 2 przewiduje wyjątek, gdy wspólnik nadużywa osobowości prawnej spółki i powoduje powstanie przez nią konkretnego długu, którego spłata jest oczywiście utrudniona.",
+          "reason": "Połączono zasadę i jej wyjątek w jedno zdanie kontrastowe; trzecie zdanie nadal dodaje łączną przesłankę poważnych okoliczności.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            4893
+          ]
+        },
+        {
+          "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "old_string": "[Lutowy informator USTR z 2026 r.](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje zamiar stron wspierania inwestycji transgranicznych. Wskazuje także potencjalne wsparcie USA dla finansowania prywatnych inwestycji na Tajwanie z udziałem amerykańskich partnerów prywatnych, z zastrzeżeniem właściwych przepisów.",
+          "new_string": "[Lutowy informator USTR z 2026 r.](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje zamiar stron wspierania inwestycji transgranicznych i wskazuje potencjalne wsparcie USA dla finansowania prywatnych inwestycji na Tajwanie z udziałem amerykańskich partnerów prywatnych, z zastrzeżeniem właściwych przepisów.",
+          "reason": "Połączono dwie informacje z tego samego informatora bez zmiany warunkowego charakteru finansowania ani zastrzeżenia prawa.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            6051
+          ]
+        },
+        {
+          "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "old_string": "skazeni",
+          "new_string": "skażeni",
+          "replace_all": true,
+          "reason": "Poprawiono polski zapis diakrytyczny we wszystkich dziewięciu wystąpieniach, w tym w tytule, SEO, streszczeniu, FAQ i treści.",
+          "meaning_preserved": true,
+          "actualOccurrences": 9,
+          "offsetsBefore": [
+            131,
+            173,
+            1028,
+            1142,
+            1421,
+            2176,
+            3016,
+            5440,
+            5853
+          ]
+        }
+      ],
+      "exactForward": true,
+      "exactInverse": true,
+      "diff": "--- initial/916-taiwan-parent-company-pollution-liability-us-investor.md\n+++ kimi-r2/916-taiwan-parent-company-pollution-liability-us-investor.md\n@@ -1,7 +1,7 @@\n ---\n title: \"Skazenie fabryki na Tajwanie: wiedza i kontrola spółek dominujących\"\n-seoTitle: \"Odpowiedzialność spółki dominującej za skazenie na Tajwanie\"\n-summary: \"W sprawie skazenia fabryki sąd powiązał odpowiedzialność spółek dominujących z kontrolą, wiedzą i transferami aktywów. Przy przejęciu znaczenie ma także reakcja grupy na raport środowiskowy.\"\n+seoTitle: \"Odpowiedzialność spółki dominującej za skażenie na Tajwanie\"\n+summary: \"W sprawie skażenia fabryki sąd powiązał odpowiedzialność spółek dominujących z kontrolą, wiedzą i transferami aktywów. Przy przejęciu znaczenie ma także reakcja grupy na raport środowiskowy.\"\n published: \"2026-10-26\"\n lastmod: \"2026-10-26\"\n date_display: \"26 października 2026\"\n@@ -15,25 +15,25 @@\n featured_image_alt: \"Słoik z próbką gleby i notes na składanym stole przed starą fabryką\"\n featured_image_caption: \"Scena fikcyjna\"\n faq:\n-  - q: \"Czy posiadanie tajwańskiej spółki zależnej samo obciąża zagraniczną spółkę dominującą roszczeniami za skazenie?\"\n-    a: \"Sama własność udziałów nie była podstawą omawianego orzeczenia. Sąd wskazał kontrolę, wiedzę o skazeniu, brak działań lub ujawnienia problemu oraz transfery majątku zmierzające do uchylenia się od zobowiązań. Odpowiedzialność wymaga oceny konkretnego zachowania i właściwych przepisów.\"\n-  - q: \"Czy wyrok Sądu Najwyższego z 2018 r. zakończył wszystkie roszczenia w sporze o skazenie fabryki?\"\n+  - q: \"Czy posiadanie tajwańskiej spółki zależnej samo obciąża zagraniczną spółkę dominującą roszczeniami za skażenie?\"\n+    a: \"Sama własność udziałów nie była podstawą omawianego orzeczenia. Sąd wskazał kontrolę, wiedzę o skażeniu, brak działań lub ujawnienia problemu oraz transfery majątku zmierzające do uchylenia się od zobowiązań. Odpowiedzialność wymaga oceny konkretnego zachowania i właściwych przepisów.\"\n+  - q: \"Czy wyrok Sądu Najwyższego z 2018 r. zakończył wszystkie roszczenia w sporze o skażenie fabryki?\"\n     a: \"Nie. Sąd uchylił i przekazał do ponownego rozpoznania części dotyczące 246 powodów, a oddalił apelacje dotyczące 262 powodów. Poszczególne części sprawy zakończyły się odmiennie; orzeczenie nie kończyło całego powiązanego sporu.\"\n   - q: \"Jakie dokumenty zachować po audycie środowiskowym przed przejęciem?\"\n     a: \"Raport, listę jego odbiorców, dalsze pytania, decyzje o narażeniu pracowników i rekultywacji oraz zatwierdzenia i analizę finansową późniejszych transferów aktywów. Pomagają one ocenić wiedzę i zachowanie, lecz samo posiadanie akt nie dowodzi zgodności z prawem.\"\n ---\n \n-Badania środowiskowe przeprowadzone przed przejęciem stały się częścią materiału dowodowego przeciwko spółkom dominującym w tajwańskiej sprawie skazenia fabryki. Sąd Najwyższy powiązał wiedzę o zanieczyszczeniu z kontrolą operacyjną, reakcją na zagrożenie i transferami uszczuplającymi majątek tajwańskiej spółki. [Oficjalne omówienie wyroku 107年度台上字第267號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) pokazuje, dlaczego audyt przed przejęciem nie kończy się na dostarczeniu raportu.\n+Badania środowiskowe przeprowadzone przed przejęciem stały się częścią materiału dowodowego przeciwko spółkom dominującym w tajwańskiej sprawie skażenia fabryki, w której Sąd Najwyższy powiązał wiedzę o zanieczyszczeniu z kontrolą operacyjną, reakcją na zagrożenie i transferami uszczuplającymi majątek tajwańskiej spółki. [Oficjalne omówienie wyroku 107年度台上字第267號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) pokazuje, dlaczego audyt przed przejęciem nie kończy się na dostarczeniu raportu.\n \n Orzeczenie z 16 sierpnia 2018 r. dotyczyło narażenia pracowników producenta elektroniki na substancje chemiczne oraz odpowiedzialności spółek kontrolujących działalność. Sąd nie nałożył odpowiedzialności tylko z powodu posiadania tajwańskiej spółki zależnej przez zagranicznego inwestora.\n \n ## Raport, decyzje operacyjne i ruch aktywów\n \n-Według [omówienia Sądu Najwyższego](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) materiał sprawy obejmował badania wykazujące skazenie, wiedzę w grupach kontrolujących, niepoinformowanie pracowników i brak usunięcia problemu. Obejmował również redukcje kapitału oraz przelewy za granicę zmierzające do uchylenia się od zobowiązań. Sąd zaakceptował rozumowanie pozwalające objąć odpowiednimi roszczeniami spółki kontrolujące mimo odrębnych osobowości prawnych.\n+Według [omówienia Sądu Najwyższego](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) materiał sprawy obejmował badania wykazujące skażenie, wiedzę w grupach kontrolujących, niepoinformowanie pracowników i brak usunięcia problemu, a także redukcje kapitału oraz przelewy za granicę zmierzające do uchylenia się od zobowiązań. Sąd zaakceptował rozumowanie pozwalające objąć odpowiednimi roszczeniami spółki kontrolujące mimo odrębnych osobowości prawnych.\n \n Dla zespołu przejęciowego istotna jest kolejność tych zdarzeń. Lista dystrybucji raportu pomaga ustalić, kto wiedział o problemie. Dokumenty zarządu i instrukcje operacyjne mogą wskazać, kto decydował o reakcji, a późniejsze zatwierdzenia przelewów trzeba czasem odczytać razem z obiema grupami dokumentów.\n \n-Sam raport jest początkiem analizy. Należy ustalić, kto badał narażenie pracowników, jakie dodatkowe prace zlecono i jak ustalenia wpłynęły na decyzje o zasobach spółki operacyjnej. Nierozwiązane pytania powinny pozostać oznaczone jako nierozwiązane; optymistyczna prezentacja końcowa nie usuwa wniosków technicznych ani odpowiedzialności za ich dalsze wyjaśnienie.\n+Sam raport jest początkiem analizy. Należy ustalić, kto badał narażenie pracowników, jakie dodatkowe prace zlecono i jak ustalenia wpłynęły na decyzje o zasobach spółki operacyjnej. Nierozwiązane pytania powinny pozostać oznaczone jako nierozwiązane. Optymistyczna prezentacja końcowa nie usuwa wniosków technicznych ani odpowiedzialności za ich dalsze wyjaśnienie.\n \n ## Jedno orzeczenie, dwa różne wyniki\n \n@@ -43,15 +43,15 @@\n \n ## Ograniczona odpowiedzialność i jej wyjątek\n \n-[Art. 154 tajwańskiej ustawy o spółkach](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154) co do zasady ogranicza odpowiedzialność wspólnika do zapłaty za objęte udziały. Ust. 2 przewiduje wyjątek, gdy wspólnik nadużywa osobowości prawnej spółki i powoduje powstanie przez nią konkretnego długu, którego spłata jest oczywiście utrudniona. Muszą też zaistnieć okoliczności na tyle poważne, że odpowiedzialność wspólnika jest konieczna.\n+[Art. 154 tajwańskiej ustawy o spółkach](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154) co do zasady ogranicza odpowiedzialność wspólnika do zapłaty za objęte udziały, ale ust. 2 przewiduje wyjątek, gdy wspólnik nadużywa osobowości prawnej spółki i powoduje powstanie przez nią konkretnego długu, którego spłata jest oczywiście utrudniona. Muszą też zaistnieć okoliczności na tyle poważne, że odpowiedzialność wspólnika jest konieczna.\n \n-Te przesłanki są łączne. Relacja wspólnikowa, niespłacony dług czy samo stwierdzenie skazenia nie wypełnia całego testu. Obecnego art. 154 nie należy ponadto przedstawiać jako jedynej historycznej podstawy rozstrzygnięcia z 2018 r.; tamta sprawa wymagała oceny zachowania spółek kontrolujących i podstaw wyjścia poza odrębną osobowość prawną.\n+Te przesłanki są łączne. Relacja wspólnikowa, niespłacony dług czy samo stwierdzenie skażenia nie wypełnia całego testu. Obecnego art. 154 nie należy ponadto przedstawiać jako jedynej historycznej podstawy rozstrzygnięcia z 2018 r.; tamta sprawa wymagała oceny zachowania spółek kontrolujących i podstaw wyjścia poza odrębną osobowość prawną.\n \n-Zwykły punkt wyjścia przy wyborze formy obecności opisuje [artykuł o spółce zależnej i oddziale](/pl/columns/taiwan-company-subsidiary-vs-branch). Spór o skazenie dodaje pytanie, na które dokumenty rejestrowe nie odpowiadają: jak grupa wykorzystała kontrolę po uzyskaniu informacji o ryzyku?\n+Zwykły punkt wyjścia przy wyborze formy obecności opisuje [artykuł o spółce zależnej i oddziale](/pl/columns/taiwan-company-subsidiary-vs-branch). Spór o skażenie dodaje pytanie, na które dokumenty rejestrowe nie odpowiadają: jak grupa wykorzystała kontrolę po uzyskaniu informacji o ryzyku?\n \n ## Finansowanie inwestycji nie zastępuje oceny ekspozycji\n \n-[Lutowy informator USTR z 2026 r.](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje zamiar stron wspierania inwestycji transgranicznych. Wskazuje także potencjalne wsparcie USA dla finansowania prywatnych inwestycji na Tajwanie z udziałem amerykańskich partnerów prywatnych, z zastrzeżeniem właściwych przepisów. Jest to warunkowa deklaracja zamiaru, nie automatyczne prawo do finansowania ani potwierdzenie, że cała umowa już obowiązuje.\n+[Lutowy informator USTR z 2026 r.](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje zamiar stron wspierania inwestycji transgranicznych i wskazuje potencjalne wsparcie USA dla finansowania prywatnych inwestycji na Tajwanie z udziałem amerykańskich partnerów prywatnych, z zastrzeżeniem właściwych przepisów. Jest to warunkowa deklaracja zamiaru, nie automatyczne prawo do finansowania ani potwierdzenie, że cała umowa już obowiązuje.\n \n Przed zatwierdzeniem dystrybucji, redukcji kapitału albo transferu przy wyjściu z inwestycji decydenci powinni dysponować oceną stwierdzonej ekspozycji, nierozstrzygniętych roszczeń i zasobów pozostających w tajwańskiej spółce. Osobnej analizy wymaga sama planowana transakcja. Nazwa dokumentu nie przesądza legalności transferu, a nieprzeczytany raport w repozytorium nie stanowi reakcji na jego ustalenia.\n \n"
+    },
+    {
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "initialSha256": "f12c1c38e60d4025937be07cf8e1655246549a2e8444b8e0306552f463090f69",
+      "r2Sha256": "5a96879936dc4fa4e61226afd0cacd0b089177044945f8cc85cf996bf374c567",
+      "edits": [
+        {
+          "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+          "old_string": "Wydział Taichung Tajwańskiego Sądu Wysokiego wydał wyrok 109年度上易字第289號.",
+          "new_string": "oddział Tajwańskiego Sądu Wysokiego w Taichungu wydał wyrok 109年度上易字第289號.",
+          "reason": "Zastąpiono mogący sugerować wydział tematyczny opis geograficznego oddziału Tajwańskiego Sądu Wysokiego.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            2733
+          ]
+        },
+        {
+          "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+          "old_string": "wyrok Wydziału Taichung Tajwańskiego Sądu Wysokiego 109年度上易字第289號",
+          "new_string": "wyrok oddziału Tajwańskiego Sądu Wysokiego w Taichungu 109年度上易字第289號",
+          "reason": "Dostosowano etykietę źródła do tego samego opisu oddziału w poprawnej formie gramatycznej.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            7528
+          ]
+        }
+      ],
+      "exactForward": true,
+      "exactInverse": true,
+      "diff": "--- initial/918-taiwan-presale-mortgage-notice-handover-judgment.md\n+++ kimi-r2/918-taiwan-presale-mortgage-notice-handover-judgment.md\n@@ -25,7 +25,7 @@\n \n Na biurku w nowym domu leżą pismo o kredycie, gładka koperta i dokumenty odbioru; obok stoi jeszcze jeden nieotwarty karton. W tajwańskim sporze żaden z tych elementów nie wystarczył sam do ustalenia dnia wydania. Deweloper wysłał w lutym zawiadomienie o kredycie, gdy lokal nie miał jeszcze wody ani energii, a późniejsza zgoda na wejście w celu remontu i sprzątania również nie zastąpiła wydania. Sprawę opisano w [orzeczeniu zgromadzonym przez Radę Ochrony Konsumentów Yuanu Wykonawczego](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), na stronach drukowanych 173–187.\n \n-9 lutego 2022 r. Wydział Taichung Tajwańskiego Sądu Wysokiego wydał wyrok 109年度上易字第289號. Oddalił jako nieuzasadnione apelację dewelopera i rozszerzone powództwo, utrzymując obowiązek zapłaty odsetek za opóźnienie. Nie było to odrzucenie z przyczyn proceduralnych. Wyrok wskazywał, że dalsza apelacja jest niedopuszczalna.\n+9 lutego 2022 r. oddział Tajwańskiego Sądu Wysokiego w Taichungu wydał wyrok 109年度上易字第289號. Oddalił jako nieuzasadnione apelację dewelopera i rozszerzone powództwo, utrzymując obowiązek zapłaty odsetek za opóźnienie. Nie było to odrzucenie z przyczyn proceduralnych. Wyrok wskazywał, że dalsza apelacja jest niedopuszczalna.\n \n ## Pismo o banku, a stan domu\n \n@@ -59,7 +59,7 @@\n \n ## Źródła urzędowe\n \n-- Rada Ochrony Konsumentów Yuanu Wykonawczego: [zbiór orzeczeń i interpretacji prawa konsumenckiego (22)](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), strony drukowane 173–187, wyrok Wydziału Taichung Tajwańskiego Sądu Wysokiego 109年度上易字第289號.\n+- Rada Ochrony Konsumentów Yuanu Wykonawczego: [zbiór orzeczeń i interpretacji prawa konsumenckiego (22)](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), strony drukowane 173–187, wyrok oddziału Tajwańskiego Sądu Wysokiego w Taichungu 109年度上易字第289號.\n - [Obowiązkowe i zakazane postanowienia wzorcowej umowy sprzedaży lokalu przed budową](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C), punkty 14 i 15.\n - Rada Ochrony Konsumentów Yuanu Wykonawczego: [wyniki kontroli umów przedsprzedażowych z 25 sierpnia 2025 r.](https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11).\n - Bank centralny: [regulacje kredytów hipotecznych](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html), wersja obowiązująca od 18 września 2026 r.\n"
+    },
+    {
+      "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "initialSha256": "359b6773f449085ba6264eb0a548df07efdb6ab6c76ee3eb8166a76d31d079f9",
+      "r2Sha256": "effc9883d2591a5ecd11ed8764279e7d815575db49bbd9dec0faeb56f81b62e7",
+      "edits": [
+        {
+          "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+          "old_string": "dwóch surowych nagan za jedno zdarzenie",
+          "new_string": "dwóch surowych nagan nałożonych jednorazowo",
+          "reason": "Usunięto nieuzasadnione twierdzenie o jednym zdarzeniu leżącym u podstaw kary; zachowano dwie ciężkie nagany nałożone jednorazowo.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            2098
+          ]
+        }
+      ],
+      "exactForward": true,
+      "exactInverse": true,
+      "diff": "--- initial/919-taiwan-workplace-bullying-investigation-hearing-judgment.md\n+++ kimi-r2/919-taiwan-workplace-bullying-investigation-hearing-judgment.md\n@@ -23,7 +23,7 @@\n     a: \"Nie. Sprawa dotyczyła oceny i zwolnienia urzędnika, a prywatny pracodawca stosuje właściwe dla siebie przepisy bezpieczeństwa i higieny pracy, prawo pracy i umowy. Kontrola z góry ustalonego wyniku, pominiętej obrony i sprzeczności dowodów może pomóc ocenić jakość dochodzenia, lecz nie zastępuje właściwych przepisów.\"\n ---\n \n-Zwolnienie kierownika po nałożeniu dwóch surowych nagan za jedno zdarzenie zostało uchylone razem z decyzją po ponownym rozpatrzeniu. Przed obradami ogłoszono przewidywany wynik, zainteresowany nie otrzymał odpowiedniej możliwości przedstawienia stanowiska, a raport z dochodzenia nie zgadzał się z późniejszymi ustaleniami dyscyplinarnymi. Te problemy opisano w [oficjalnym komunikacie Tajpejskiego Wysokiego Sądu Administracyjnego](https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html).\n+Zwolnienie kierownika po nałożeniu dwóch surowych nagan nałożonych jednorazowo zostało uchylone razem z decyzją po ponownym rozpatrzeniu. Przed obradami ogłoszono przewidywany wynik, zainteresowany nie otrzymał odpowiedniej możliwości przedstawienia stanowiska, a raport z dochodzenia nie zgadzał się z późniejszymi ustaleniami dyscyplinarnymi. Te problemy opisano w [oficjalnym komunikacie Tajpejskiego Wysokiego Sądu Administracyjnego](https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html).\n \n Chodzi o wyrok Wydziału Wysokiego Sądownictwa Administracyjnego 114年度訴字第869號 z 3 września 2026 r. w sporze o zwolnienie urzędnika. Komunikat wskazuje, że wyrok można zaskarżyć. Uchylenie decyzji nie przesądza, że żadne z zarzucanych zachowań nie miało miejsca, ani nie dowodzi faktycznego przywrócenia zainteresowanego do pracy.\n \n"
+    },
+    {
+      "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "initialSha256": "20ba1a7323d4d0da453a5f4084b2c53964a984538e6f46d24c5447d1c85dea64",
+      "r2Sha256": "452cb645981a3c790542f9c219c65eea879bf3d1ba584bd2f22f3edcb1aaf2da",
+      "edits": [
+        {
+          "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "old_string": "Mieszkaniec zamontował skrzynkę na ścianie za stanowiskiem, poprowadził instalację pod sufitem i połączył ją ze wspólną rozdzielnią oraz własnym licznikiem. Sąd musiał więc ocenić obszar wykraczający poza linie miejsca na posadzce, jak wynika z [urzędowego tekstu wyroku](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1).",
+          "new_string": "Ponieważ mieszkaniec zamontował skrzynkę na ścianie za stanowiskiem, poprowadził instalację pod sufitem i połączył ją ze wspólną rozdzielnią oraz własnym licznikiem, sąd musiał ocenić obszar wykraczający poza linie miejsca na posadzce, jak wynika z [urzędowego tekstu wyroku](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1).",
+          "reason": "Połączono zakres instalacji z wynikającym z niego przedmiotem oceny sądu w jedno zdanie przyczynowe.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            2188
+          ]
+        },
+        {
+          "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "old_string": "Wydział Kaohsiung Tajwańskiego Sądu Wysokiego w wyroku 111年度上字第132號 z 22 czerwca 2022 r. oddalił apelację mieszkańca i utrzymał obowiązek usunięcia instalacji oraz przywrócenia stanu poprzedniego. Urządzenia znajdowały się we wspólnej ścianie, suficie i rozdzielni, a mieszkaniec nie uzyskał wcześniej wymaganych zgód.",
+          "new_string": "oddział Tajwańskiego Sądu Wysokiego w Kaohsiungu w wyroku 111年度上字第132號 z 22 czerwca 2022 r. oddalił apelację mieszkańca i utrzymał obowiązek usunięcia instalacji oraz przywrócenia stanu poprzedniego, ponieważ urządzenia znajdowały się we wspólnej ścianie, suficie i rozdzielni, a mieszkaniec nie uzyskał wcześniej wymaganych zgód.",
+          "reason": "Zmieniono opis sądu na geograficzny oddział i połączono wynik z jego podstawą faktyczną w jedno zdanie.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            2567
+          ]
+        },
+        {
+          "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "old_string": "oddział Tajwańskiego Sądu Wysokiego w Kaohsiungu w wyroku",
+          "new_string": "Oddział Tajwańskiego Sądu Wysokiego w Kaohsiungu w wyroku",
+          "reason": "Wielka litera na początku akapitu po wcześniejszej zmianie opisu sądu.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            2567
+          ]
+        },
+        {
+          "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "old_string": "Wniosek do zarządu powinien opisywać prace i pozwolić wskazać właściwy punkt regulaminu, organ uprawniony do zgody oraz brakujące załączniki. Jeżeli zebranie już wyraziło zgodę, jej trasa, urządzenia i warunki muszą odpowiadać wersji, którą instalator rzeczywiście zamierza wykonać.",
+          "new_string": "Wniosek do zarządu powinien opisywać prace i pozwolić wskazać właściwy punkt regulaminu, organ uprawniony do zgody oraz brakujące załączniki, a jeżeli zebranie już wyraziło zgodę, jej trasa, urządzenia i warunki muszą odpowiadać wersji, którą instalator rzeczywiście zamierza wykonać.",
+          "reason": "Złożono treść wniosku i warunkową kontrolę istniejącej zgody w jedno zdanie bez zmiany praktycznych zaleceń.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            5809
+          ]
+        },
+        {
+          "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "old_string": "Artykuł opisuje wskazany wyrok Wydziału Kaohsiung bez potwierdzenia dalszego postępowania lub prawomocności.",
+          "new_string": "Artykuł opisuje wskazany wyrok oddziału Tajwańskiego Sądu Wysokiego w Kaohsiungu bez potwierdzenia dalszego postępowania lub prawomocności.",
+          "reason": "Ujednolicono opis sądu w nocie źródłowej bez usuwania nieznanej późniejszej prawomocności.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            6993
+          ]
+        },
+        {
+          "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "old_string": "wyrok cywilny Wydziału Kaohsiung Tajwańskiego Sądu Wysokiego 111年度上字第132號",
+          "new_string": "wyrok cywilny oddziału Tajwańskiego Sądu Wysokiego w Kaohsiungu 111年度上字第132號",
+          "reason": "Poprawiono etykietę źródła i jej odmianę bez przedstawiania opisu jako oficjalnej polskiej nazwy sądu.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            7263
+          ]
+        }
+      ],
+      "exactForward": true,
+      "exactInverse": true,
+      "diff": "--- initial/920-taiwan-apartment-ev-charger-common-area-judgment.md\n+++ kimi-r2/920-taiwan-apartment-ev-charger-common-area-judgment.md\n@@ -23,9 +23,9 @@\n     a: \"Nie. Uprawnienie do dotacji i procedura korzystania z części wspólnych to odrębne kwestie. Wspomniany program Kaohsiungu na 2026 r. obejmował korytka kablowe w obszarach wspólnych, lecz termin zgłoszeń upłynął 30 września. Program nie daje mieszkańcowi samodzielnego prawa do prac w częściach wspólnych.\"\n ---\n \n-Czy ładowarkę na własnym miejscu parkingowym można podłączyć według własnego projektu? Mieszkaniec zamontował skrzynkę na ścianie za stanowiskiem, poprowadził instalację pod sufitem i połączył ją ze wspólną rozdzielnią oraz własnym licznikiem. Sąd musiał więc ocenić obszar wykraczający poza linie miejsca na posadzce, jak wynika z [urzędowego tekstu wyroku](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1).\n+Czy ładowarkę na własnym miejscu parkingowym można podłączyć według własnego projektu? Ponieważ mieszkaniec zamontował skrzynkę na ścianie za stanowiskiem, poprowadził instalację pod sufitem i połączył ją ze wspólną rozdzielnią oraz własnym licznikiem, sąd musiał ocenić obszar wykraczający poza linie miejsca na posadzce, jak wynika z [urzędowego tekstu wyroku](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1).\n \n-Wydział Kaohsiung Tajwańskiego Sądu Wysokiego w wyroku 111年度上字第132號 z 22 czerwca 2022 r. oddalił apelację mieszkańca i utrzymał obowiązek usunięcia instalacji oraz przywrócenia stanu poprzedniego. Urządzenia znajdowały się we wspólnej ścianie, suficie i rozdzielni, a mieszkaniec nie uzyskał wcześniej wymaganych zgód. Późniejszych orzeczeń ani prawomocnego zakończenia sprawy w źródle nie potwierdzono.\n+Oddział Tajwańskiego Sądu Wysokiego w Kaohsiungu w wyroku 111年度上字第132號 z 22 czerwca 2022 r. oddalił apelację mieszkańca i utrzymał obowiązek usunięcia instalacji oraz przywrócenia stanu poprzedniego, ponieważ urządzenia znajdowały się we wspólnej ścianie, suficie i rozdzielni, a mieszkaniec nie uzyskał wcześniej wymaganych zgód. Późniejszych orzeczeń ani prawomocnego zakończenia sprawy w źródle nie potwierdzono.\n \n ## Ściana, sufit i rozdzielnia wchodziły w zakres prac\n \n@@ -45,17 +45,17 @@\n \n Oferta wskazująca jedynie numer miejsca nie pokazuje przedmiotu sporu. Instalator powinien oznaczyć położenie skrzynki, każdą ścianę, filar i sufit z przewodami oraz rozdzielnię przyłączeniową. Ten rysunek trzeba porównać z dokumentami praw, regulaminem i istniejącymi uchwałami.\n \n-Odpowiedź ustna nie precyzuje wystarczająco procedury. Wniosek do zarządu powinien opisywać prace i pozwolić wskazać właściwy punkt regulaminu, organ uprawniony do zgody oraz brakujące załączniki. Jeżeli zebranie już wyraziło zgodę, jej trasa, urządzenia i warunki muszą odpowiadać wersji, którą instalator rzeczywiście zamierza wykonać.\n+Odpowiedź ustna nie precyzuje wystarczająco procedury. Wniosek do zarządu powinien opisywać prace i pozwolić wskazać właściwy punkt regulaminu, organ uprawniony do zgody oraz brakujące załączniki, a jeżeli zebranie już wyraziło zgodę, jej trasa, urządzenia i warunki muszą odpowiadać wersji, którą instalator rzeczywiście zamierza wykonać.\n \n Program dotacyjny ogłoszony przez Kaohsiung w maju 2026 r. obejmował korytka kablowe dla ładowarek EV w częściach wspólnych budynków mieszkalnych. Zgłoszenia przyjmowano do 30 września, więc termin już upłynął. Jak wynika z [komunikatu miasta](https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE), był to program wsparcia publicznego okablowania, nie zgoda na instalację ani zastępstwo procedury wspólnoty.\n \n Przy żądaniu wstrzymania prac lub demontażu można przesłać na [adres kancelarii](mailto:wei@hoveringlaw.com.tw) opis sporu, numery postanowień regulaminu i termin odpowiedzi. Przed podpisaniem umowy instalacyjnej warto ustalić, czy prace mogą ruszyć przed zgodą i kto poniesie koszty przy jej odmowie. Pierwszym dokumentem powinien być zatwierdzony przebieg trasy, a nie rachunek za instalację bez takiej zgody.\n \n-Źródła sprawdzono 25–26 października 2026 r. Artykuł opisuje wskazany wyrok Wydziału Kaohsiung bez potwierdzenia dalszego postępowania lub prawomocności. W innej wspólnocie trzeba osobno ustalić położenie urządzeń, zakres praw i treść regulaminu.\n+Źródła sprawdzono 25–26 października 2026 r. Artykuł opisuje wskazany wyrok oddziału Tajwańskiego Sądu Wysokiego w Kaohsiungu bez potwierdzenia dalszego postępowania lub prawomocności. W innej wspólnocie trzeba osobno ustalić położenie urządzeń, zakres praw i treść regulaminu.\n \n ## Źródła urzędowe\n \n-- Yuan Sądowy: [wyrok cywilny Wydziału Kaohsiung Tajwańskiego Sądu Wysokiego 111年度上字第132號 z 22 czerwca 2022 r.](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1).\n+- Yuan Sądowy: [wyrok cywilny oddziału Tajwańskiego Sądu Wysokiego w Kaohsiungu 111年度上字第132號 z 22 czerwca 2022 r.](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1).\n - [Ustawa o zarządzie budynkami mieszkalnymi, art. 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6).\n - [Ustawa o zarządzie budynkami mieszkalnymi, art. 11](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11).\n - Rząd Miasta Kaohsiung: [dotacja na korytka kablowe EV w częściach wspólnych, 29 maja 2026 r.](https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE); termin zgłoszeń już upłynął.\n"
+    },
+    {
+      "file": "921-taiwan-online-game-coins-refund-judgment.md",
+      "initialSha256": "cf3eb017f24a719b0c7cab4a41633236a62efea1a90bd1befca8820e9cd922aa",
+      "r2Sha256": "bdebbbdd5368437bd80c9630f8b5ca3abd9272dec4c2757e0c3ea739dcd61fae",
+      "edits": [
+        {
+          "file": "921-taiwan-online-game-coins-refund-judgment.md",
+          "old_string": "summary: \"Sąd w Keelungu odmówił żądanego zwrotu 243 548 NTD za monety służące jako żetony do rywalizacji. Obecne przepisy chronią niewykorzystane płatne punkty, dlatego trzeba połączyć wpłaty, wymianę i historię gry.\"",
+          "new_string": "summary: \"Sąd w Keelungu odmówił żądanego zwrotu 243 548 NTD za monety służące jako żetony do rywalizacji. Obecne przepisy obejmują niewykorzystane płatne punkty i niewykorzystane opłaty za grę. Zestawienie wpłat, wymiany i historii gry pomaga ustalić, co pozostało do rozliczenia.\"",
+          "reason": "Dodano niewykorzystane opłaty za grę i przedstawiono porównanie dowodów jako pomoc w ustaleniu salda, nie nowy obowiązek ustawowy.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            150
+          ]
+        },
+        {
+          "file": "921-taiwan-online-game-coins-refund-judgment.md",
+          "old_string": "[Punkt 18 obecnych obowiązkowych postanowień wzorcowej umowy o usługi gier online](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) pozwala konsumentowi wypowiedzieć umowę w każdym czasie przez zawiadomienie przedsiębiorcy. Niewykorzystane płatne punkty albo niewykorzystane opłaty za grę trzeba zwrócić po odliczeniu niezbędnych kosztów w ciągu 30 dni od wypowiedzenia.",
+          "new_string": "[Punkt 18 obecnych obowiązkowych postanowień wzorcowej umowy o usługi gier online](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) pozwala konsumentowi wypowiedzieć umowę w każdym czasie przez zawiadomienie przedsiębiorcy, a niewykorzystane płatne punkty albo niewykorzystane opłaty za grę trzeba zwrócić po odliczeniu niezbędnych kosztów w ciągu 30 dni od wypowiedzenia.",
+          "reason": "Połączono przynależne reguły wypowiedzenia i zwrotu, zachowując obie kategorie niewykorzystanych kwot, koszty i termin.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            4219
+          ]
+        },
+        {
+          "file": "921-taiwan-online-game-coins-refund-judgment.md",
+          "old_string": "Obecny punkt 4 przewiduje odrębnie pisemne odstąpienie od umowy w ciągu siedmiu dni od rozpoczęcia gry oraz zwrot niewykorzystanych płatnych punktów. Po upływie tego okresu nadal istnieje droga wypowiedzenia z punktu 18.",
+          "new_string": "Obecny punkt 4 przewiduje odrębnie pisemne odstąpienie od umowy w ciągu siedmiu dni od rozpoczęcia gry oraz zwrot niewykorzystanych płatnych punktów, ale po upływie tego okresu nadal istnieje droga wypowiedzenia z punktu 18.",
+          "reason": "Zestawiono siedmiodniowe odstąpienie z odrębną możliwością wypowiedzenia w jednym zdaniu kontrastowym.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            5082
+          ]
+        },
+        {
+          "file": "921-taiwan-online-game-coins-refund-judgment.md",
+          "old_string": "Przedsiębiorca musi przechowywać osobistą historię gry co najmniej przez 30 dni i udostępniać ją zgodnie z przepisami. Po otrzymaniu żądania ma siedem dni na jej przekazanie. Dane są więc przechowywane przez ograniczony czas; wczesny wniosek zmniejsza ryzyko pozostania wyłącznie z końcowym zrzutem salda.",
+          "new_string": "Przedsiębiorca musi przechowywać osobistą historię gry co najmniej przez 30 dni i udostępniać ją zgodnie z przepisami, a po otrzymaniu żądania ma siedem dni na jej przekazanie, dlatego przy ograniczonym okresie przechowywania danych wczesny wniosek zmniejsza ryzyko pozostania wyłącznie z końcowym zrzutem salda.",
+          "reason": "Połączono okres przechowywania, termin udostępnienia i praktyczny skutek wczesnego żądania, pozostawiając ograniczenie czasowe po stronie danych.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            5857
+          ]
+        },
+        {
+          "file": "921-taiwan-online-game-coins-refund-judgment.md",
+          "old_string": "Spór o zwrot można najpierw zgłosić przedsiębiorcy, a następnie skorzystać z [rządowego systemu reklamacji konsumenckich](https://appeal.cpc.ey.gov.tw/). Jeżeli problem dotyczy wykładni umowy albo odmowy udostępnienia dowodów, na [adres kancelarii](mailto:wei@hoveringlaw.com.tw) można przesłać opis pozycji i termin odpowiedzi, bez hasła do konta.",
+          "new_string": "Spór o zwrot można najpierw zgłosić przedsiębiorcy, a następnie skorzystać z [rządowego systemu reklamacji konsumenckich](https://appeal.cpc.ey.gov.tw/), a jeżeli problem dotyczy wykładni umowy albo odmowy udostępnienia dowodów, na [adres kancelarii](mailto:wei@hoveringlaw.com.tw) można przesłać opis pozycji i termin odpowiedzi, bez hasła do konta.",
+          "reason": "Połączono kolejność reklamacji i warunkową możliwość kontaktu bez dodawania gwarancji ani usuwania zastrzeżenia o haśle.",
+          "meaning_preserved": true,
+          "actualOccurrences": 1,
+          "offsetsBefore": [
+            7041
+          ]
+        }
+      ],
+      "exactForward": true,
+      "exactInverse": true,
+      "diff": "--- initial/921-taiwan-online-game-coins-refund-judgment.md\n+++ kimi-r2/921-taiwan-online-game-coins-refund-judgment.md\n@@ -1,7 +1,7 @@\n ---\n title: \"Wirtualne monety w grze: dlaczego sąd na Tajwanie odmówił zwrotu 243 548 NTD?\"\n seoTitle: \"Tajwan: monety w grze online a zwrot pieniędzy\"\n-summary: \"Sąd w Keelungu odmówił żądanego zwrotu 243 548 NTD za monety służące jako żetony do rywalizacji. Obecne przepisy chronią niewykorzystane płatne punkty, dlatego trzeba połączyć wpłaty, wymianę i historię gry.\"\n+summary: \"Sąd w Keelungu odmówił żądanego zwrotu 243 548 NTD za monety służące jako żetony do rywalizacji. Obecne przepisy obejmują niewykorzystane płatne punkty i niewykorzystane opłaty za grę. Zestawienie wpłat, wymiany i historii gry pomaga ustalić, co pozostało do rozliczenia.\"\n published: \"2026-10-26\"\n lastmod: \"2026-10-26\"\n date_display: \"26 października 2026\"\n@@ -39,11 +39,11 @@\n \n ## Obecne reguły nadal chronią niewykorzystane punkty\n \n-[Punkt 18 obecnych obowiązkowych postanowień wzorcowej umowy o usługi gier online](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) pozwala konsumentowi wypowiedzieć umowę w każdym czasie przez zawiadomienie przedsiębiorcy. Niewykorzystane płatne punkty albo niewykorzystane opłaty za grę trzeba zwrócić po odliczeniu niezbędnych kosztów w ciągu 30 dni od wypowiedzenia. Strony mogą zamiast tego uzgodnić inny sposób rozliczenia.\n+[Punkt 18 obecnych obowiązkowych postanowień wzorcowej umowy o usługi gier online](https://www.ey.gov.tw/File/C27658C15073FF69?A=C) pozwala konsumentowi wypowiedzieć umowę w każdym czasie przez zawiadomienie przedsiębiorcy, a niewykorzystane płatne punkty albo niewykorzystane opłaty za grę trzeba zwrócić po odliczeniu niezbędnych kosztów w ciągu 30 dni od wypowiedzenia. Strony mogą zamiast tego uzgodnić inny sposób rozliczenia.\n \n „Niezbędne koszty” powinny mieć wykaz. Przy otrzymaniu kalkulacji można zażądać rozdzielenia niewykorzystanego salda, potrąceń i ich podstawy, a następnie porównać wyliczenie z umową. Stały procent ustalony przez przedsiębiorcę nie dowodzi sam zasadności potrącenia.\n \n-Ostatnia zmiana tych reguł weszła w życie 1 stycznia 2023 r., po omawianym wyroku. Sprawę rozstrzygnięto według wcześniejszej umowy i właściwych wtedy przepisów. Obecny punkt 4 przewiduje odrębnie pisemne odstąpienie od umowy w ciągu siedmiu dni od rozpoczęcia gry oraz zwrot niewykorzystanych płatnych punktów. Po upływie tego okresu nadal istnieje droga wypowiedzenia z punktu 18.\n+Ostatnia zmiana tych reguł weszła w życie 1 stycznia 2023 r., po omawianym wyroku. Sprawę rozstrzygnięto według wcześniejszej umowy i właściwych wtedy przepisów. Obecny punkt 4 przewiduje odrębnie pisemne odstąpienie od umowy w ciągu siedmiu dni od rozpoczęcia gry oraz zwrot niewykorzystanych płatnych punktów, ale po upływie tego okresu nadal istnieje droga wypowiedzenia z punktu 18.\n \n ## Saldo na ekranie to tylko ostatni zapis\n \n@@ -55,13 +55,13 @@\n | Wymiana punktów i historia gry | Kiedy nastąpiła wymiana i jak użyto otrzymanych monet? |\n | Wypowiedzenie i kalkulacja zwrotu | Kiedy wypowiedziano umowę, jakie saldo uznano i co potrącono? |\n \n-Przedsiębiorca musi przechowywać osobistą historię gry co najmniej przez 30 dni i udostępniać ją zgodnie z przepisami. Po otrzymaniu żądania ma siedem dni na jej przekazanie. Dane są więc przechowywane przez ograniczony czas; wczesny wniosek zmniejsza ryzyko pozostania wyłącznie z końcowym zrzutem salda.\n+Przedsiębiorca musi przechowywać osobistą historię gry co najmniej przez 30 dni i udostępniać ją zgodnie z przepisami, a po otrzymaniu żądania ma siedem dni na jej przekazanie, dlatego przy ograniczonym okresie przechowywania danych wczesny wniosek zmniejsza ryzyko pozostania wyłącznie z końcowym zrzutem salda.\n \n Obecne reguły zabraniają też postanowienia, że przy sporze jedynym kryterium będą historia gry i dane elektroniczne przechowywane przez przedsiębiorcę. Nie oznacza to, że dane firmy są zawsze nieważne lub bezużyteczne. Ograniczenie dotyczy ich wyłączności jako kontraktowego kryterium, co wynika z [punktu 9 obowiązkowych postanowień i punktu 6 postanowień zakazanych](https://www.ey.gov.tw/File/C27658C15073FF69?A=C).\n \n W statystykach za 2025 r., opublikowanych w maju 2026 r., gry online zajęły drugie miejsce wśród kategorii reklamacji konsumenckich pierwszego etapu. Liczba spraw zmalała rok do roku. Rada Ochrony Konsumentów wezwała jednocześnie przedsiębiorców do właściwego załatwiania blokad kont, zawieszeń i obsługi klienta, jak wskazano w [oficjalnych statystykach i uwagach](https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930).\n \n-Spór o zwrot można najpierw zgłosić przedsiębiorcy, a następnie skorzystać z [rządowego systemu reklamacji konsumenckich](https://appeal.cpc.ey.gov.tw/). Jeżeli problem dotyczy wykładni umowy albo odmowy udostępnienia dowodów, na [adres kancelarii](mailto:wei@hoveringlaw.com.tw) można przesłać opis pozycji i termin odpowiedzi, bez hasła do konta. Kwota roszczenia powinna wynikać z zapisów pokazujących zarówno napływ pieniędzy, jak i sposób ich wykorzystania w grze.\n+Spór o zwrot można najpierw zgłosić przedsiębiorcy, a następnie skorzystać z [rządowego systemu reklamacji konsumenckich](https://appeal.cpc.ey.gov.tw/), a jeżeli problem dotyczy wykładni umowy albo odmowy udostępnienia dowodów, na [adres kancelarii](mailto:wei@hoveringlaw.com.tw) można przesłać opis pozycji i termin odpowiedzi, bez hasła do konta. Kwota roszczenia powinna wynikać z zapisów pokazujących zarówno napływ pieniędzy, jak i sposób ich wykorzystania w grze.\n \n Źródła sprawdzono 25–26 października 2026 r. Opis wyroku opiera się na wybranych częściach orzeczenia zgromadzonego w oficjalnym zbiorze. Funkcję punktów, przedmiotów i podstaw wypowiedzenia w innych grach trzeba oceniać według ich rzeczywistych zasad i umowy.\n \n"
+    }
+  ],
+  "logs": [
+    {
+      "source": "/private/tmp/tseng-kimi-pl-cases-20261026/run-r2.stdout",
+      "copy": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-run-r2.stdout",
+      "bytes": 1413,
+      "sha256": "54be3e3009177ca8037ec0083098de28a9550dc15ae1868880a1d08fb88cd3a7"
+    },
+    {
+      "source": "/private/tmp/tseng-kimi-pl-cases-20261026/run-r2.stderr",
+      "copy": "/Users/son7/tseng-all-language-columns-20261025/batch09/kimi-pl/r2-run-r2.stderr",
+      "bytes": 31370,
+      "sha256": "bfc01f615e0691755d17a1f64def9314d92ee658ce757c54246b74a6fa0dde88"
+    }
+  ],
+  "status": "INTAKE_EXACT_COPY_ONLY; independent semantic/structure/metrics review pending",
+  "noNewExternalRun": true
+}

@@ -1,0 +1,116 @@
+{
+  "atUTC": "2026-10-26T10:04:33.051865+00:00",
+  "status": "Author targeted correction complete; frozen for independent R2 closure",
+  "manuscripts": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dd5ba0865b06900c6cf13dca431a93c0b6a9d86c0e5c8ca6cc136ec7170deaa3",
+      "CLIProof": "sk-variety-final.json (same SHA reused)",
+      "actualExit": 0,
+      "FAIL": 0,
+      "sentences": 38,
+      "cv": 0.469
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "dea3c656ac58e2542b9f8343fbccd95d01f811ff47653a67d9225a0948a79e82",
+      "CLIProof": "sk-variety-final.json (same SHA reused)",
+      "actualExit": 0,
+      "FAIL": 0,
+      "sentences": 45,
+      "cv": 0.475
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "ccf6a8391b9462f571188e5467f530b20e659bae1898cf6f9b6b63a12fb5f14d",
+      "CLIProof": "sk-variety-final.json (same SHA reused)",
+      "actualExit": 0,
+      "FAIL": 0,
+      "sentences": 45,
+      "cv": 0.478
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "7a9bda014da027ab57152f645835f429ce5802446c9badea6231d1beb8bf8569",
+      "CLIProof": "sk-variety-final.json (same SHA reused)",
+      "actualExit": 0,
+      "FAIL": 0,
+      "sentences": 41,
+      "cv": 0.472
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "ecf263bf7b469ba2e3de619460d7e3945a0275dd9dd72d5261298bc58937f576",
+      "CLIProof": "sk-variety-review-r2.json",
+      "actualExit": 0,
+      "FAIL": 0,
+      "sentences": 45,
+      "cv": 0.453
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "1d3574bf42e024b1c9a6c2bd3005d1ed452dbb13fc5015ba0a6e7556f15c1b6a",
+      "CLIProof": "sk-variety-review-r2.json",
+      "actualExit": 0,
+      "FAIL": 0,
+      "sentences": 45,
+      "cv": 0.459
+    }
+  ],
+  "authorR2": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-author-r2.md",
+    "sha256": "1f2e3373c23bd30a32a288e823f00e748112fd37f21b7174eccb03f9b503010a"
+  },
+  "refs": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-author-r2.md",
+      "sha256": "1f2e3373c23bd30a32a288e823f00e748112fd37f21b7174eccb03f9b503010a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-review-r1-edits.json",
+      "sha256": "ab71459b56a8a07f54434073a829b31264d240e1d0cd260b5c015d876d00ef1a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-variety-review-r2.json",
+      "sha256": "b15709593143a3b06cd0c325daa3d641a36d1f89cc78b0ab9ab360a2270aaa98"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-sentences-review-r2.json",
+      "sha256": "70872e11e8df83115cca302e026e8070b679234f4571e5575cc1101c0d8610d0"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-content-audit-review-r2.json",
+      "sha256": "2753f80a91861c5163a9138fa6143b92a60975172f2a4fef5ac886bbbdbc8cdd"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-metadata-review-r2.json",
+      "sha256": "4bbea3405716c10386a5a4a903e30c9ff348214b83d10f30c625c21fbdd665ed"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-review-r2-boundary-delta.json",
+      "sha256": "39d9e25c5d473eac4d9b13b9f6ffb1d658fd0ec9044dff30892e0955bf243484"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-final-manifest.json",
+      "sha256": "fd375bf4ea6fa683f29c4a17f4627a7a2a8ebc2ba8830648326b4a5dd47a10b5"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/sk-independent.md",
+      "sha256": "48cbc86564f575411666d3bda1b03ae45fd8c5c6a4a7a95e4eba52fdd6843025"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/sk-independent-final-manifest.json",
+      "sha256": "9be894d9b93f84bc19ecba087290867bc2beff4161b7386163d230815fcf664a"
+    }
+  ],
+  "protectedOriginalEvidenceUnchanged": true,
+  "exactChanges": 3,
+  "exactReverseToR1": 6,
+  "unchangedOtherFiles": 4,
+  "allCurrentSentencesReadOrExactR1Reuse": 259,
+  "sameToolHashesAsInstalledR1Guard": true,
+  "metadataErrors": 0,
+  "FAQ": 17,
+  "officialURLCountPerFileSum": 23,
+  "noRSharedOtherLocaleOrIndependentReportModification": true
+}

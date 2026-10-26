@@ -1,0 +1,362 @@
+{
+  "at": "2026-10-26T18:25:12.564208+09:00",
+  "id": "920",
+  "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+  "sha256": "dbe66f18a0c146e1f6dbfba0addbf78585cc0c6be8c5d246a5d04bd0cb2bb55e",
+  "command": [
+    "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "--lang",
+    "sl"
+  ],
+  "exit_code": 0,
+  "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/920-taiwan-apartment-ev-charger-common-area-judgment.md [sl] sentences=41 mean=14.3 cv=0.478 short=0.317 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.308 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+  "stderr": "",
+  "metrics": {
+    "lang": "sl",
+    "sentences": 41,
+    "paras": 13,
+    "heads": 3,
+    "list_items": 0,
+    "mean_len": 14.3,
+    "len_cv": 0.478,
+    "short_share": 0.317,
+    "long_share": 0.0,
+    "para_cv": 0.157,
+    "even_run3": 0.0,
+    "top_end": "omarici",
+    "top_end_share": 0.049,
+    "ja_desu": 0,
+    "ja_da": 0,
+    "top_opener": "polnilna",
+    "top_opener_n": 1,
+    "opener_rep": 0.0,
+    "consec_same_start": 0,
+    "cite_para_share": 0.308,
+    "cite_end_share": 0.0,
+    "contrast": 0,
+    "caveat": 0,
+    "questions": 1,
+    "num_per100": 2.56,
+    "hypo_open": false,
+    "q_open": false,
+    "formula_close": false,
+    "first": "Polnilna omarica je bila na steni za parkirnim mestom, napeljava je potekala po stropu, no",
+    "last": "Predpisi in mestna objava so bili preverjeni 26. oktobra 2026; opis sodbe temelji na besedilu, pregledanem 25. oktobra. ",
+    "length_unit": "orthographic_words",
+    "short_threshold": 8,
+    "long_threshold": 32,
+    "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+  },
+  "paragraphs": [
+    {
+      "paragraph": 1,
+      "text": "Polnilna omarica je bila na steni za parkirnim mestom, napeljava je potekala po stropu, nov odklopnik pa je bil v skupni električni omarici. Izvedba je zato segala dlje od površine, ki jo je stanovalec uporabljal za parkiranje. Te lokacije opisuje [objavljena sodba v zadevi 111年度上字第132號](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1).",
+      "sentences": [
+        {
+          "index": 1,
+          "text": "Polnilna omarica je bila na steni za parkirnim mestom, napeljava je potekala po stropu, nov odklopnik pa je bil v skupni električni omarici.",
+          "length": 23
+        },
+        {
+          "index": 2,
+          "text": "Izvedba je zato segala dlje od površine, ki jo je stanovalec uporabljal za parkiranje.",
+          "length": 14
+        },
+        {
+          "index": 3,
+          "text": "Te lokacije opisuje objavljena sodba v zadevi 111年度上字第132號.",
+          "length": 8
+        }
+      ]
+    },
+    {
+      "paragraph": 2,
+      "text": "Višje sodišče Tajvana je v svoji izpostavi v Kaohsiungu 22. junija 2022 zavrnilo stanovalčevo pritožbo. Odstraniti je moral opremo in vzpostaviti prejšnje stanje. Potrebno predhodno soglasje ni bilo pridobljeno, čeprav je bila napeljava povezana z električnim števcem, ki ga je uporabljal stanovalec.",
+      "sentences": [
+        {
+          "index": 4,
+          "text": "Višje sodišče Tajvana je v svoji izpostavi v Kaohsiungu 22. junija 2022 zavrnilo stanovalčevo pritožbo.",
+          "length": 15
+        },
+        {
+          "index": 5,
+          "text": "Odstraniti je moral opremo in vzpostaviti prejšnje stanje.",
+          "length": 8
+        },
+        {
+          "index": 6,
+          "text": "Potrebno predhodno soglasje ni bilo pridobljeno, čeprav je bila napeljava povezana z električnim števcem, ki ga je uporabljal stanovalec.",
+          "length": 19
+        }
+      ]
+    },
+    {
+      "paragraph": 3,
+      "text": "Nesporna dejstva so zajemala polnilno omarico na zadnji steni, napeljavo na stropnih nosilcih ter odklopnik v električni omarici. Lastništvo ali uporaba parkirnega mesta ne opisujeta vseh teh površin. Sodišče je moralo obravnavati tudi skupne dele.",
+      "sentences": [
+        {
+          "index": 7,
+          "text": "Nesporna dejstva so zajemala polnilno omarico na zadnji steni, napeljavo na stropnih nosilcih ter odklopnik v električni omarici.",
+          "length": 18
+        },
+        {
+          "index": 8,
+          "text": "Lastništvo ali uporaba parkirnega mesta ne opisujeta vseh teh površin.",
+          "length": 10
+        },
+        {
+          "index": 9,
+          "text": "Sodišče je moralo obravnavati tudi skupne dele.",
+          "length": 7
+        }
+      ]
+    },
+    {
+      "paragraph": 4,
+      "text": "Pri dovoljenju sta bili pomembni dve ravni. [11. člen tajvanskega zakona o upravljanju večstanovanjskih stavb](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11) za rušitev, večja popravila ali izboljšave skupnih delov in pripadajoče opreme zahteva odločitev zbora etažnih lastnikov. Sodišče je določbo uporabilo za obravnavani poseg. Pravilo 15 te stavbe je za dodajanje napeljave in vodov zahtevalo še dovoljenje upravnega odbora in varnostni pregled elektrodistributerja.",
+      "sentences": [
+        {
+          "index": 10,
+          "text": "Pri dovoljenju sta bili pomembni dve ravni.",
+          "length": 7
+        },
+        {
+          "index": 11,
+          "text": "11. člen tajvanskega zakona o upravljanju večstanovanjskih stavb za rušitev, večja popravila ali izboljšave skupnih delov in pripadajoče opreme zahteva odločitev zbora etažnih lastnikov.",
+          "length": 24
+        },
+        {
+          "index": 12,
+          "text": "Sodišče je določbo uporabilo za obravnavani poseg.",
+          "length": 7
+        },
+        {
+          "index": 13,
+          "text": "Pravilo 15 te stavbe je za dodajanje napeljave in vodov zahtevalo še dovoljenje upravnega odbora in varnostni pregled elektrodistributerja.",
+          "length": 19
+        }
+      ]
+    },
+    {
+      "paragraph": 5,
+      "text": "Oboje je bilo del presoje. Kršitev 11. člena in pravil stavbe je pomenila tudi kršitev obveznosti spoštovanja drugih predpisov ter pravil skupnosti po [5. točki prvega odstavka 6. člena](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6). Ker oprema po formalnem pozivu odbora k uskladitvi še vedno ni bila odstranjena, je odbor lahko zahteval sodno varstvo po tretjem odstavku istega člena.",
+      "sentences": [
+        {
+          "index": 14,
+          "text": "Oboje je bilo del presoje.",
+          "length": 5
+        },
+        {
+          "index": 15,
+          "text": "Kršitev 11. člena in pravil stavbe je pomenila tudi kršitev obveznosti spoštovanja drugih predpisov ter pravil skupnosti po 5. točki prvega odstavka 6. člena.",
+          "length": 24
+        },
+        {
+          "index": 16,
+          "text": "Ker oprema po formalnem pozivu odbora k uskladitvi še vedno ni bila odstranjena, je odbor lahko zahteval sodno varstvo po tretjem odstavku istega člena.",
+          "length": 24
+        }
+      ]
+    },
+    {
+      "paragraph": 6,
+      "text": "Četrta točka prvega odstavka 6. člena ureja napeljavo in potrebno uporabo skupnih delov. Sodišče je ugotovilo, da ta določba za konkretna dejstva ne velja. Peti in šesti del obrazložitve povezujeta položaj opreme s pravili stavbe; iz sodbe zato ne izhaja enak postopek glasovanja za vsako polnilnico v vsaki stavbi.",
+      "sentences": [
+        {
+          "index": 17,
+          "text": "Četrta točka prvega odstavka 6. člena ureja napeljavo in potrebno uporabo skupnih delov.",
+          "length": 13
+        },
+        {
+          "index": 18,
+          "text": "Sodišče je ugotovilo, da ta določba za konkretna dejstva ne velja.",
+          "length": 11
+        },
+        {
+          "index": 19,
+          "text": "Peti in šesti del obrazložitve povezujeta položaj opreme s pravili stavbe; iz sodbe zato ne izhaja enak postopek glasovanja za vsako polnilnico v vsaki stavbi.",
+          "length": 25
+        }
+      ]
+    },
+    {
+      "paragraph": 7,
+      "text": "Stanovalec se je skliceval tudi na dodano stikalo, prenehanje uporabe in zaklepanje ter ponudbo, da odboru izroči ključ. To so bile njegove navedbe. Po presoji sodišča bi odstranitev in vzpostavitev prejšnjega stanja ostali obvezni tudi, če bi vse navedeno držalo.",
+      "sentences": [
+        {
+          "index": 20,
+          "text": "Stanovalec se je skliceval tudi na dodano stikalo, prenehanje uporabe in zaklepanje ter ponudbo, da odboru izroči ključ.",
+          "length": 18
+        },
+        {
+          "index": 21,
+          "text": "To so bile njegove navedbe.",
+          "length": 5
+        },
+        {
+          "index": 22,
+          "text": "Po presoji sodišča bi odstranitev in vzpostavitev prejšnjega stanja ostali obvezni tudi, če bi vse navedeno držalo.",
+          "length": 17
+        }
+      ]
+    },
+    {
+      "paragraph": 8,
+      "text": "Kje natančno bo potekal kabel? Načrt lahko označi polnilno omarico, pot po stenah in stropu ter električno omarico, da je mogoče celotno izvedbo primerjati s pravicami na površinah, pravili stavbe in že izdanimi soglasji. Številka parkirnega mesta ne pokaže celotne trase.",
+      "sentences": [
+        {
+          "index": 23,
+          "text": "Kje natančno bo potekal kabel?",
+          "length": 5
+        },
+        {
+          "index": 24,
+          "text": "Načrt lahko označi polnilno omarico, pot po stenah in stropu ter električno omarico, da je mogoče celotno izvedbo primerjati s pravicami na površinah, pravili stavbe in že izdanimi soglasji.",
+          "length": 29
+        },
+        {
+          "index": 25,
+          "text": "Številka parkirnega mesta ne pokaže celotne trase.",
+          "length": 7
+        }
+      ]
+    },
+    {
+      "paragraph": 9,
+      "text": "Vloga odboru se lahko opre na isti načrt in zahteva pojasnilo, kdo sme odločiti o predlogu ter katera dokumentacija manjka. Če soglasje že obstaja, je koristna primerjava odobrene trase in opreme z različico, ki jo namerava namestiti izvajalec. Ustni odgovor lahko pusti obseg odobritve nejasen.",
+      "sentences": [
+        {
+          "index": 26,
+          "text": "Vloga odboru se lahko opre na isti načrt in zahteva pojasnilo, kdo sme odločiti o predlogu ter katera dokumentacija manjka.",
+          "length": 20
+        },
+        {
+          "index": 27,
+          "text": "Če soglasje že obstaja, je koristna primerjava odobrene trase in opreme z različico, ki jo namerava namestiti izvajalec.",
+          "length": 18
+        },
+        {
+          "index": 28,
+          "text": "Ustni odgovor lahko pusti obseg odobritve nejasen.",
+          "length": 7
+        }
+      ]
+    },
+    {
+      "paragraph": 10,
+      "text": "Tudi pogodba z monterjem lahko začetek del veže na pridobitev potrebnih soglasij in določi, kdo nosi stroške, če je prošnja zavrnjena. Tak dogovor ne nadomesti odločitve pristojnega organa stavbe. Poveže pa tehnični predlog s stroški njegove izvedbe.",
+      "sentences": [
+        {
+          "index": 29,
+          "text": "Tudi pogodba z monterjem lahko začetek del veže na pridobitev potrebnih soglasij in določi, kdo nosi stroške, če je prošnja zavrnjena.",
+          "length": 21
+        },
+        {
+          "index": 30,
+          "text": "Tak dogovor ne nadomesti odločitve pristojnega organa stavbe.",
+          "length": 8
+        },
+        {
+          "index": 31,
+          "text": "Poveže pa tehnični predlog s stroški njegove izvedbe.",
+          "length": 8
+        }
+      ]
+    },
+    {
+      "paragraph": 11,
+      "text": "Kaohsiung je maja 2026 predstavil program pomoči za kabelske police, namenjene polnjenju električnih vozil v skupnih delih večstanovanjskih stavb. [Mestna objava](https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE) je določala rok za prijavo 30. septembra. Ta datum je že mimo. Objava opisuje podporo skupni napeljavi, ne daje pa posameznemu stanovalcu samodejnega dovoljenja za predlagani poseg.",
+      "sentences": [
+        {
+          "index": 32,
+          "text": "Kaohsiung je maja 2026 predstavil program pomoči za kabelske police, namenjene polnjenju električnih vozil v skupnih delih večstanovanjskih stavb.",
+          "length": 19
+        },
+        {
+          "index": 33,
+          "text": "Mestna objava je določala rok za prijavo 30. septembra.",
+          "length": 9
+        },
+        {
+          "index": 34,
+          "text": "Ta datum je že mimo.",
+          "length": 5
+        },
+        {
+          "index": 35,
+          "text": "Objava opisuje podporo skupni napeljavi, ne daje pa posameznemu stanovalcu samodejnega dovoljenja za predlagani poseg.",
+          "length": 15
+        }
+      ]
+    },
+    {
+      "paragraph": 12,
+      "text": "Če prejmete zahtevo za ustavitev ali odstranitev opreme, lahko [pisarni po elektronski pošti](mailto:wei@hoveringlaw.com.tw) pošljete kratek opis, sporno določbo pravil stavbe in rok za odgovor. Za pregled nato pripravite načrt, sklep ali soglasje ter pogodbo z monterjem. Iz teh listin naj bo mogoče razbrati, kje je oprema dovoljena, kdo je to odobril in kdo nosi stroške drugačne izvedbe.",
+      "sentences": [
+        {
+          "index": 36,
+          "text": "Če prejmete zahtevo za ustavitev ali odstranitev opreme, lahko pisarni po elektronski pošti pošljete kratek opis, sporno določbo pravil stavbe in rok za odgovor.",
+          "length": 24
+        },
+        {
+          "index": 37,
+          "text": "Za pregled nato pripravite načrt, sklep ali soglasje ter pogodbo z monterjem.",
+          "length": 12
+        },
+        {
+          "index": 38,
+          "text": "Iz teh listin naj bo mogoče razbrati, kje je oprema dovoljena, kdo je to odobril in kdo nosi stroške drugačne izvedbe.",
+          "length": 21
+        }
+      ]
+    },
+    {
+      "paragraph": 13,
+      "text": "Predpisi in mestna objava so bili preverjeni 26. oktobra 2026; opis sodbe temelji na besedilu, pregledanem 25. oktobra. Poznejša sodna odločitev ali pravnomočnost te zadeve ni potrjena. Dejstva in pravila druge stavbe lahko privedejo do drugačne presoje.",
+      "sentences": [
+        {
+          "index": 39,
+          "text": "Predpisi in mestna objava so bili preverjeni 26. oktobra 2026; opis sodbe temelji na besedilu, pregledanem 25. oktobra.",
+          "length": 18
+        },
+        {
+          "index": 40,
+          "text": "Poznejša sodna odločitev ali pravnomočnost te zadeve ni potrjena.",
+          "length": 9
+        },
+        {
+          "index": 41,
+          "text": "Dejstva in pravila druge stavbe lahko privedejo do drugačne presoje.",
+          "length": 10
+        }
+      ]
+    }
+  ],
+  "headings": [
+    "Parkirno mesto in trasa kabla",
+    "Načrt od polnilnice do električne omarice",
+    "Objavljeni rok za podporo je že potekel"
+  ],
+  "list_items": [],
+  "tools": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/sl.json",
+      "sha256": "f7fdb543f7952d5e891a30fd5d167b3035a3933c982a01f6d70b03c5f554c040"
+    }
+  ]
+}

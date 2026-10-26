@@ -1,0 +1,30 @@
+[
+  {
+    "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "old_string": "9 lutego 2022 r. oddział Tajwańskiego Sądu Wysokiego w Taichungu wydał wyrok 109年度上易字第289號. Oddalił jako nieuzasadnione apelację dewelopera i rozszerzone powództwo, utrzymując obowiązek zapłaty odsetek za opóźnienie.",
+    "new_string": "9 lutego 2022 r. oddział Tajwańskiego Sądu Wysokiego w Taichungu wydał wyrok 109年度上易字第289號, którym oddalił jako nieuzasadnione apelację dewelopera i rozszerzone powództwo, utrzymując obowiązek zapłaty odsetek za opóźnienie.",
+    "reason": "Połączono datę i oznaczenie wyroku z jego rozstrzygnięciem w jedno naturalne zdanie, zachowując oddalenie merytoryczne i odsetki za opóźnienie.",
+    "meaning_preserved": true
+  },
+  {
+    "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "old_string": "Obecny [punkt 15 obowiązkowych postanowień wzorcowej umowy sprzedaży lokalu przed budową](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) nakazuje sprzedawcy zawiadomić nabywcę o wydaniu w ciągu sześciu miesięcy od uzyskania pozwolenia na użytkowanie. Określa także obowiązki dotyczące napraw, rozliczenia płatności i przekazania dokumentów przy wydaniu.",
+    "new_string": "Obecny [punkt 15 obowiązkowych postanowień wzorcowej umowy sprzedaży lokalu przed budową](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C) nakazuje sprzedawcy zawiadomić nabywcę o wydaniu w ciągu sześciu miesięcy od uzyskania pozwolenia na użytkowanie, a także określa obowiązki dotyczące napraw, rozliczenia płatności i przekazania dokumentów przy wydaniu.",
+    "reason": "Usunięto powtarzalny podmiot i połączono dwie funkcje tego samego punktu przepisów bez zmiany terminu ani obowiązków przy wydaniu.",
+    "meaning_preserved": true
+  },
+  {
+    "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "old_string": "Obecny punkt 14 nadal wymaga od nabywcy przedłożenia dokumentów kredytowych, wykonania powiązanych czynności i zapłaty należności przed przeniesieniem własności. Zakwestionowanie zawiadomienia o wydaniu nie usuwa więc automatycznie wymagalnych płatności ani obowiązków dokumentacyjnych.",
+    "new_string": "Choć obecny punkt 14 nadal wymaga od nabywcy przedłożenia dokumentów kredytowych, wykonania powiązanych czynności i zapłaty należności przed przeniesieniem własności, zakwestionowanie zawiadomienia o wydaniu nie usuwa automatycznie wymagalnych płatności ani obowiązków dokumentacyjnych.",
+    "reason": "Połączono trwające obowiązki nabywcy i brak skutku zakwestionowania zawiadomienia w jeden związek warunkowy bez złagodzenia tych obowiązków.",
+    "meaning_preserved": true
+  },
+  {
+    "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "old_string": "[Regulacje banku centralnego dotyczące kredytów hipotecznych](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html) obowiązują w wersji zmienionej od 18 września 2026 r. Ta zmiana nie ma zastosowania wstecz do wykonania umowy w 2019 r.",
+    "new_string": "[Regulacje banku centralnego dotyczące kredytów hipotecznych](https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html) obowiązują w wersji zmienionej od 18 września 2026 r., ale ta zmiana nie ma zastosowania wstecz do wykonania umowy w 2019 r.",
+    "reason": "Zestawiono obecną datę wejścia w życie z brakiem zastosowania wstecz w jednym zdaniu kontrastowym, zachowując obie daty i ograniczenie czasowe.",
+    "meaning_preserved": true
+  }
+]

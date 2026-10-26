@@ -1,0 +1,2125 @@
+diff --git a/docs/audit/all-locales-parity-20261025/tooling/variety/MULTILINGUAL-METHOD.md b/docs/audit/all-locales-parity-20261025/tooling/variety/MULTILINGUAL-METHOD.md
+index 20cc27eb6..ef2a4b3bf 100644
+--- a/docs/audit/all-locales-parity-20261025/tooling/variety/MULTILINGUAL-METHOD.md
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/MULTILINGUAL-METHOD.md
+@@ -582,3 +582,28 @@ Abbreviations are finite, locale-specific lists. New profiles explicitly support
+ - Estonian: [EKI number writing](https://teatmik.eki.ee/teatmik/arvukirjutus/) covers dotted Arabic and normally undotted Roman ordinals and dates. [EKI abbreviation guidance](https://teatmik.eki.ee/teatmik/luhendamine/) notes native abbreviations normally have no final dot; finite dotted variants recognized by the checker are not recommendations to add dots. A genuine sentence-final dot after an undotted abbreviation remains a sentence stop.
+ 
+ The fixtures are AI-written school/library/stationery examples with literal expected arrays fixed before production edits. The Lithuanian reused expectations retain their separate source provenance. No human native reviewer approved these examples. Actual manuscript syntax may reveal new defects; new fixes require neutral evidence and same-input regression, not score fitting.
++
++## SK calendar and sentence-final numbers (2026-10-26 candidate)
++
++The SK profile now recognizes lower-case nominative and genitive forms of all twelve calendar months after dotted days1–31. Its finite ordinary Arabic-ordinal follower list is case sensitive, so an actual sentence ending in a year/cardinal is not joined to a capitalized next sentence merely because that word also occurs in the follower list. The shared Python engine, orthographic-word unit, 8/32 edges, HARD conditions, score, Roman-ordinal/section patterns and other locale profiles are unchanged.
++
++The [institute's PSP text](https://www.juls.savba.sk/ediela/psp2000/psp.pdf), punctuation§2.1, supplies both calendar cases and distinguishes ordinal dots from sentence stops. The [2013 edition page](https://www.juls.savba.sk/psp_2013.html) describes the fourth unchanged edition; the accessible PDF identifies the third edition2000. These references do not validate this heuristic or its editorial thresholds. Capitalized title/name continuations, unspecified month abbreviations, all inflections and ambiguous lower-case sentence starts still need human-context review; the day range does not validate month lengths or leap years.
++
++Neutral literal fixtures were fixed before the profile change. The original tool failed46 of64; the candidate matches64 of64. The tests distinguish normal lists from escaped-number paragraphs using the unchanged Markdown classification and visible-text handling. Run `python3 tests/sk-date-boundaries/run_neutral.py --root . --fixtures tests/sk-date-boundaries/neutral-fixtures.json --report <new-report.json>`. The two historical35/42-profile hash guards now name the exact proposed SK hash while preserving every other hash and score/HARD/dictionary guard; their original failures remain in the task audit. Default unittest discovery includes the two new behavioral methods.
++
++Same-input corpus and author-draft impacts, including newly exposed FAIL results, are separately documented in the candidate audit. A measurement PASS is not native-language, legal or publication approval. This method entry describes a root-review candidate; installation remains the coordinator's decision.
++
++
++## Polish fronted-date ambiguity and optional reviewed maps (2026-10-26 R2)
++
++The rejected R1 heuristic could join a standalone date answer to a following sentence. The R2 detector never makes that merge. For the bounded PL `r.` forms (a day plus a listed genitive month plus a four-digit year; `w` plus a listed locative month/year or year alone; optional `dnia`/`w dniu`; paragraph/sentence start or the listed coordinated-clause starts), capital text after the date causes `MeasurementError` / CLI exit 2 unless an independently reviewed complete map is supplied. Lowercase continuations and ordinary dates after an existing predicate retain the previous behavior. Classification-only NFC does not change source offsets or spelling. This is not a complete Polish parser: `we wrześniu`, arbitrary quoted/fronted phrases, and the pre-existing common NFD abbreviation-boundary limitation are not claimed repaired.
++
++Polish may omit a map. `--sentences MAP.json` explicitly supplies one; a sibling `.sentences.json` or repository `docs/audit/variety-segments/<source SHA>.json` may also provide one. A supplied/discovered invalid map fails instead of being ignored. Other locale map APIs are unchanged; Thai maps remain mandatory and retain existing errors.
++
++A PL map has `locale: "pl"`, exact `source_sha256`, `method` (`independent_review` or `independent_review_with_author_boundary_adjudication`), `unresolved_boundaries: []`, `approval_record: {path, sha256}`, and `paragraphs: [{text, sentences}]`. Paragraph text is the visible body text after the checker's unchanged Markdown preprocessing. The ordered array must contain every measured paragraph, including repetitions. Joining each literal sentence array must preserve that paragraph except normalized whitespace. The full original source bytes, including metadata and Markdown destinations, remain bound by source SHA.
++
++Approval schema 1 has locale `pl`, status `approved`, a named reviewer, a unique entry for the source SHA with the same method/empty unresolved list and canonical `paragraphs_sha256`, and hash-bound evidence. Exactly one evidence role is `independent-review`; the adjudication method additionally requires exactly one `author-adjudication`. These are integrity bindings for an actual review decision, not a substitute for performing the review. Synthetic neutral-test approval is never manuscript approval.
++
++A validated immutable PL map also retains the measured source-text hash and exact normalized paragraph sequence. Metrics reject partial/extra/reordered rows, missing repeated paragraphs, a map reused on changed source text, and an unvalidated plain dictionary. Mapped PL reports `sentence_boundary_method: reviewed_sha_bound_map`; unmapped ordinary PL keeps the original method label. Counts remain orthographic words, thresholds remain 8/32, and score/HARD definitions do not change. A mapped result may still FAIL a style threshold.
++
++The existing Thai contract is parameterized only to add PL: Thai requirement, discovery, validation, evidence bindings, and messages are preserved. The R2 package compares a valid Thai map plus 15 invalid/missing cases against the frozen baseline and records exact message equality. A map does not establish native-language, legal, publication, or rendering approval.
+diff --git a/docs/audit/all-locales-parity-20261025/tooling/variety/profiles/sk.json b/docs/audit/all-locales-parity-20261025/tooling/variety/profiles/sk.json
+index 3cd3fdc2f..0c7a14be0 100644
+--- a/docs/audit/all-locales-parity-20261025/tooling/variety/profiles/sk.json
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/profiles/sk.json
+@@ -45,8 +45,8 @@
+   "context_terminal_abbreviations": {
+     "r": "\\d{4}\\s*$"
+   },
+-  "ordinal_followers": "poschodie|poschodí|kapitola|kapitolu|kapitoly|trieda|triede|ročník|odsek|odseku|článok|bod|januára|februára|marca|apríla|mája|júna|júla|augusta|septembra|októbra|novembra|decembra",
+-  "ordinal_pattern": "(?<!\\w)(?:[IVXLCDM]+\\.(?=\\s+(?:kapitola|kapitolu|kapitoly|zjazd|storočie|storočia)\\b)|\\d+\\.(?=\\s*§))",
++  "ordinal_followers": "(?-i:poschodie|poschodí|kapitola|kapitolu|kapitoly|trieda|triede|ročník|odsek|odseku|článok|bod)",
++  "ordinal_pattern": "(?:(?<!\\w)(?:[IVXLCDM]+\\.(?=\\s+(?:kapitola|kapitolu|kapitoly|zjazd|storočie|storočia)\\b)|\\d+\\.(?=\\s*§)|(?-i:(?:0?[1-9]|[12]\\d|3[01])\\.(?=\\s+(?:január|januára|február|februára|marec|marca|apríl|apríla|máj|mája|jún|júna|júl|júla|august|augusta|september|septembra|október|októbra|november|novembra|december|decembra)\\b))))|(?:(?<![\\w.\\ue000])(?:0?[1-9]|[12][0-9]|3[01])(?:\\.|\\ue000)[^\\S\\r\\n]*(?:0?[1-9]|1[0-2])(?:\\.|\\ue000)[^\\S\\r\\n]*[0-9]{4}(?![\\w\\ue000]))",
+   "additional_closing_quotes": "“",
+   "contrast_patterns": [
+     "(?i:\\bnie\\b[^.!?\\n;;]{0,180}\\b(?:ale|lež)\\b)",
+diff --git a/docs/audit/all-locales-parity-20261025/tooling/variety/profiles/tr.json b/docs/audit/all-locales-parity-20261025/tooling/variety/profiles/tr.json
+index 337b0f313..9c8321c56 100644
+--- a/docs/audit/all-locales-parity-20261025/tooling/variety/profiles/tr.json
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/profiles/tr.json
+@@ -6,7 +6,7 @@
+   "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:(?:resm[iî]\\s+)?kaynaklar(?:\\s+ve\\s+kontrol\\s+tarihi)?)\\s*:?\\s*$)",
+   "abbreviations": ["Dr", "Prof", "Av", "Sn", "No", "md", "m", "f", "bkz", "örn", "vb", "vs", "T.C"],
+   "terminal_abbreviations": ["vb", "vs"],
+-  "ordinal_followers": "madde|fıkra|bent|sayfa|Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık",
++  "ordinal_followers": "(?-i:madde(?:yi|ye|de|den|deki|sindeki|lerdeki|lerindeki|nin|si|sini|sine|sinde|sinden|sinin|ler|leri|lerin|lere|lerde|lerden|lerini|lerine|lerinde|lerinden|lerinin)?|(?:fıkra|sayfa)(?:yı|ya|da|dan|daki|sındaki|lardaki|larındaki|nın|sı|sını|sına|sında|sından|sının|lar|ları|ların|lara|larda|lardan|larını|larına|larında|larından|larının)?|bent(?:te|ten|teki|lerdeki|lerindeki|ler|leri|lerin|lere|lerde|lerden|lerini|lerine|lerinde|lerinden|lerinin)?|bend(?:indeki|i|in|e|ini|ine|inde|inden|inin))|Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık",
+   "contrast_patterns": ["(?i:\\bdeğil\\s*[,;][^.!?\\n]{1,160})", "(?i:\\byerine\\b)", "(?i:\\b\\w+(?:dan|den|tan|ten)\\s+farklı\\b)"],
+   "caveat_pattern": "(?i:^\\s*[“\"(]*(?:ancak|bununla\\s+birlikte|yine\\s+de|buna\\s+rağmen)\\b)",
+   "hypo_pattern": "(?i:^\\s*[“\"(]*(?:varsayalım|diyelim|farz\\s+edelim)\\b|^.{0,140}\\bvarsayalım[.!?]?$)",
+diff --git a/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_batch04.py b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_batch04.py
+index 8b9f33839..73a637280 100644
+--- a/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_batch04.py
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_batch04.py
+@@ -188,7 +188,14 @@ class BatchFourTests(unittest.TestCase):
+         baseline = json.loads((ROOT / 'BASELINE35-INSTALLATION.json').read_text())
+         for row in baseline['production_files']:
+             if row['path'].startswith('profiles/'):
+-                self.assertEqual(hashlib.sha256((ROOT / row['path']).read_bytes()).hexdigest(), row['sha256'])
++                # SK's explicitly frozen date-boundary revision is exercised
++                # by test_sk_date_boundaries; every other profile stays exact.
++                expected = ('2ea68f2ea8e9a6876c35ea895d8469bcf2c9e6091bb9c64f5bf0270c015bd9af'
++                            if row['path'] == 'profiles/sk.json' else row['sha256'])
++                # Reviewed TR inflected-ordinal profile; historic manifests stay intact.
++                if row['path'] == 'profiles/tr.json':
++                    expected = 'ac0f3d212c39e794053ec72fb742c74ebeb29f4111700540746a4feb32797423'
++                self.assertEqual(hashlib.sha256((ROOT / row['path']).read_bytes()).hexdigest(), expected)
+         def contract(path):
+             return [ast.dump(n, include_attributes=False) for n in ast.parse(path.read_text()).body
+                     if (isinstance(n, ast.FunctionDef) and n.name == 'score') or
+diff --git a/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_batch05.py b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_batch05.py
+index 95f56ec7b..1871c2bd1 100644
+--- a/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_batch05.py
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_batch05.py
+@@ -175,7 +175,14 @@ class BatchFiveTests(unittest.TestCase):
+         before = json.loads((ROOT / 'BASELINE42-CANDIDATE.json').read_text())
+         for row in before['production_files']:
+             if row['path'].startswith('profiles/'):
+-                self.assertEqual(hashlib.sha256((ROOT / row['path']).read_bytes()).hexdigest(), row['sha256'])
++                # Keep the historic manifest intact; only the reviewed SK
++                # date patterns have a new exact hash and behavioral fixtures.
++                expected = ('2ea68f2ea8e9a6876c35ea895d8469bcf2c9e6091bb9c64f5bf0270c015bd9af'
++                            if row['path'] == 'profiles/sk.json' else row['sha256'])
++                # Reviewed TR inflected-ordinal profile; historic manifests stay intact.
++                if row['path'] == 'profiles/tr.json':
++                    expected = 'ac0f3d212c39e794053ec72fb742c74ebeb29f4111700540746a4feb32797423'
++                self.assertEqual(hashlib.sha256((ROOT / row['path']).read_bytes()).hexdigest(), expected)
+         def nodes(path, names):
+             return [ast.dump(n, include_attributes=False) for n in ast.parse(path.read_text()).body
+                     if (isinstance(n, ast.FunctionDef) and n.name in names) or
+diff --git a/docs/audit/all-locales-parity-20261025/tooling/variety/variety_expansion.py b/docs/audit/all-locales-parity-20261025/tooling/variety/variety_expansion.py
+index 6c807bfb7..8c2c178b5 100644
+--- a/docs/audit/all-locales-parity-20261025/tooling/variety/variety_expansion.py
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/variety_expansion.py
+@@ -105,6 +105,26 @@ def ending(text, lang, tokens):
+     return text[-2:]
+ 
+ 
++def _polish_fronted_date(prefix, remaining):
++    """Detect a bounded date context; it does not decide its sentence reading.
++
++    A fronted date before capital text can introduce a full sentence or be a
++    standalone answer. The caller must report ambiguity, never infer a merge.
++    NFC is used only for classification, preserving original offsets/text.
++    """
++    if not re.match(r'[^\S\r\n]+[^\W\d_]', remaining):
++        return False
++    space = r'[^\S\r\n]+'
++    genitive = r'stycznia|lutego|marca|kwietnia|maja|czerwca|lipca|sierpnia|września|października|listopada|grudnia'
++    locative = r'styczniu|lutym|marcu|kwietniu|maju|czerwcu|lipcu|sierpniu|wrześniu|październiku|listopadzie|grudniu'
++    day = r'(?:0?[1-9]|[12]\d|3[01])'
++    year = r'\d{4}'
++    day_date = r'(?:(?:dnia|w' + space + r'dniu)' + space + r')?' + day + space + r'(?:' + genitive + r')' + space + year
++    month_or_year = r'w' + space + r'(?:(?:' + locative + r')' + space + r')?' + year
++    start = r'(?:^|[.!?]' + space + r'|[,;]' + space + r'(?:a|ale|natomiast|zaś)' + space + r')'
++    return bool(re.search(start + r'(?:' + day_date + r'|' + month_or_year + r')' + space + r'$', unicodedata.normalize('NFC', prefix), re.I))
++
++
+ def split_sentences(text, lang, data):
+     marker = '\ue000'
+     terminal_marker = '\ue001'
+@@ -185,6 +205,10 @@ def split_sentences(text, lang, data):
+             can_end = key in terminal
+             if key in contextual:
+                 can_end = bool(re.search(contextual[key], protected[:match.start()]))
++            if (lang == 'pl' and key == 'r' and can_end
++                    and remaining[:1].isupper()
++                    and _polish_fronted_date(protected[:match.start()], protected[match.end():])):
++                raise SegmentationError('Polish fronted date before capital text has an ambiguous sentence boundary; a reviewed, source-SHA-bound Polish sentence map is required')
+             follower = data.get('nonterminal_abbreviation_followers', {}).get(key)
+             if follower and re.match(follower, unicodedata.normalize('NFC', remaining)):
+                 can_end = False
+diff --git a/docs/audit/all-locales-parity-20261025/tooling/variety/variety_metrics.py b/docs/audit/all-locales-parity-20261025/tooling/variety/variety_metrics.py
+index e73333663..7306e614b 100644
+--- a/docs/audit/all-locales-parity-20261025/tooling/variety/variety_metrics.py
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/variety_metrics.py
+@@ -127,6 +127,8 @@ def metrics(text, lang, sentence_map=None):
+     language_profile = multilingual.profile(lang) if extended else None
+     fm, t = strip_fm(text)
+     paras, heads, items = body_blocks(t, lang)
++    if lang == 'pl' and sentence_map is not None:
++        multilingual.validate_polish_map(sentence_map, text, paras)
+     if not paras: return None
+     S = [s for p in paras for s in sentences(p, lang, sentence_map)]
+     if extended:
+@@ -200,7 +202,7 @@ def metrics(text, lang, sentence_map=None):
+              first=first[:90], last=last[:120])
+     if extended:
+         m.update(length_unit=language_profile.get('length_unit', 'orthographic_words'), short_threshold=short_th,
+-                 long_threshold=long_th, sentence_boundary_method='reviewed_sha_bound_map' if lang == 'th' else 'unicode_punctuation_with_locale_abbreviations')
++                 long_threshold=long_th, sentence_boundary_method='reviewed_sha_bound_map' if lang == 'th' or (lang == 'pl' and sentence_map is not None) else 'unicode_punctuation_with_locale_abbreviations')
+         if lang == 'vi':
+             m['length_unit'] = 'orthographic_syllabic_units'
+         if lang == 'th':
+@@ -278,7 +280,7 @@ def guess_lang(path):
+     raise multilingual.MeasurementError(f'cannot infer language for {path}; supply --lang')
+ 
+ if __name__ == '__main__':
+-    ap = argparse.ArgumentParser(); ap.add_argument('mode', choices=('check', 'corpus')); ap.add_argument('path', nargs='+'); ap.add_argument('--lang', choices=SUPPORTED); ap.add_argument('--out'); ap.add_argument('--sentences', help='reviewed source-SHA-bound Thai sentence map')
++    ap = argparse.ArgumentParser(); ap.add_argument('mode', choices=('check', 'corpus')); ap.add_argument('path', nargs='+'); ap.add_argument('--lang', choices=SUPPORTED); ap.add_argument('--out'); ap.add_argument('--sentences', help='reviewed source-SHA-bound Thai or Polish sentence map')
+     a = ap.parse_args()
+     if a.mode == 'check':
+         rc = 0
+diff --git a/docs/audit/all-locales-parity-20261025/tooling/variety/variety_multilingual.py b/docs/audit/all-locales-parity-20261025/tooling/variety/variety_multilingual.py
+index 52ed2348c..e617a810f 100644
+--- a/docs/audit/all-locales-parity-20261025/tooling/variety/variety_multilingual.py
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/variety_multilingual.py
+@@ -9,6 +9,8 @@ Missing measurement support is an error, never an editorial PASS.
+ """
+ from functools import lru_cache
+ from pathlib import Path
++from dataclasses import dataclass
++from types import MappingProxyType
+ import hashlib
+ import json
+ import re
+@@ -277,60 +279,100 @@ def _bound_artifact(binding, base, description):
+     return path, payload
+ 
+ 
+-def _validate_sentence_review(record, found, source_hash):
++def _validate_sentence_review(record, found, source_hash, lang='th'):
++    label = 'Thai' if lang == 'th' else 'Polish'
+     method = record.get('method')
+     allowed = {'independent_review', 'independent_review_with_author_boundary_adjudication'}
+     if method not in allowed or record.get('unresolved_boundaries') != []:
+-        raise MeasurementError(f'missing or unresolved Thai sentence review: {found}')
++        raise MeasurementError(f'missing or unresolved {label} sentence review: {found}')
+     approval_path, payload = _bound_artifact(record.get('approval_record'), found.parent,
+-                                             'Thai boundary approval')
++                                             f'{label} boundary approval')
+     try:
+         approval = json.loads(payload)
+     except (ValueError, UnicodeError) as error:
+-        raise MeasurementError(f'invalid Thai boundary approval: {approval_path}') from error
+-    if not isinstance(approval, dict) or approval.get('schema_version') != 1 or approval.get('locale') != 'th' or approval.get('status') != 'approved' or not isinstance(approval.get('reviewer'), str) or not approval['reviewer'].strip():
+-        raise MeasurementError(f'unapproved Thai boundary record: {approval_path}')
++        raise MeasurementError(f'invalid {label} boundary approval: {approval_path}') from error
++    if not isinstance(approval, dict) or approval.get('schema_version') != 1 or approval.get('locale') != lang or approval.get('status') != 'approved' or not isinstance(approval.get('reviewer'), str) or not approval['reviewer'].strip():
++        raise MeasurementError(f'unapproved {label} boundary record: {approval_path}')
+     entries = approval.get('entries')
+     if not isinstance(entries, list) or not all(isinstance(x, dict) for x in entries):
+-        raise MeasurementError(f'invalid Thai approval entries: {approval_path}')
++        raise MeasurementError(f'invalid {label} approval entries: {approval_path}')
+     matches = [x for x in entries if x.get('source_sha256') == source_hash]
+     if len(matches) != 1:
+-        raise MeasurementError(f'Thai source is not uniquely approved: {found}')
++        raise MeasurementError(f'{label} source is not uniquely approved: {found}')
+     entry = matches[0]
+     if entry.get('method') != method or entry.get('unresolved_boundaries') != [] or entry.get('paragraphs_sha256') != paragraphs_sha256(record.get('paragraphs')):
+-        raise MeasurementError(f'Thai sentence map differs from approved boundaries: {found}')
++        raise MeasurementError(f'{label} sentence map differs from approved boundaries: {found}')
+     evidence = approval.get('evidence')
+     if not isinstance(evidence, list) or not all(isinstance(x, dict) for x in evidence):
+-        raise MeasurementError(f'missing Thai review evidence: {approval_path}')
++        raise MeasurementError(f'missing {label} review evidence: {approval_path}')
+     roles = [x.get('role') for x in evidence]
+     if roles.count('independent-review') != 1 or (method.endswith('author_boundary_adjudication') and roles.count('author-adjudication') != 1):
+-        raise MeasurementError(f'incomplete Thai review evidence: {approval_path}')
++        raise MeasurementError(f'incomplete {label} review evidence: {approval_path}')
+     for binding in evidence:
+-        _bound_artifact(binding, approval_path.parent, 'Thai review evidence')
++        _bound_artifact(binding, approval_path.parent, f'{label} review evidence')
++
++
++@dataclass(frozen=True)
++class ReviewedPolishMap:
++    """Validated, immutable boundary data, with complete source/paragraph binding."""
++    text_sha256: str
++    paragraph_sequence: tuple
++    sentences: object
++
++
++def validate_polish_map(mapping, text, paragraphs):
++    if not isinstance(mapping, ReviewedPolishMap):
++        raise MeasurementError('Polish sentence map has not passed source and review validation')
++    if hashlib.sha256(text.encode('utf-8')).hexdigest() != mapping.text_sha256:
++        raise MeasurementError('Polish measurement text differs from reviewed sentence map')
++    data = profile('pl')
++    visible = tuple(normalized(expansion.visible_text(p,
++                    data.get('additional_sentence_terminators', ''),
++                    data.get('unspaced_sentence_terminators', ''))) for p in paragraphs)
++    if visible != mapping.paragraph_sequence:
++        raise MeasurementError('Polish sentence map must cover every visible body paragraph in source order')
++
++
++def _sentence_map_candidates(path, override):
++    if override:
++        return [Path(override)]
++    source = Path(path).resolve()
++    candidates = [source.with_suffix('.sentences.json')]
++    for parent in source.parents:
++        if (parent / '.git').exists():
++            # The source SHA filename is appended by sentence_map, after read.
++            candidates.append(parent / 'docs/audit/variety-segments')
++            break
++    return candidates
+ 
+ 
+ def sentence_map(path, text, lang, override=None):
+-    if lang != 'th':
++    if lang not in ('th', 'pl'):
+         return None
++    label = 'Thai' if lang == 'th' else 'Polish'
++    if lang == 'pl' and not override:
++        candidates = _sentence_map_candidates(path, None)
++        # Avoid adding file-read errors to ordinary PL when no map was offered.
++        # Hash-directory discovery needs source bytes and is handled below.
++        if not candidates[0].is_file() and not any(p.is_dir() for p in candidates[1:]):
++            return None
+     try:
+         raw = Path(path).read_bytes()
+         original = raw.decode('utf-8')
+     except (OSError, UnicodeError) as error:
+-        raise MeasurementError(f'unreadable Thai source: {path}') from error
++        raise MeasurementError(f'unreadable {label} source: {path}') from error
+     if text not in (original, original.replace('\r\n', '\n').replace('\r', '\n')):
+-        raise MeasurementError(f'Thai measurement text differs from source: {path}')
++        raise MeasurementError(f'{label} measurement text differs from source: {path}')
+     source_hash = hashlib.sha256(raw).hexdigest()
+-    if override:
+-        candidates = [Path(override)]
+-    else:
+-        source = Path(path).resolve()
+-        candidates = [source.with_suffix('.sentences.json')]
+-        for parent in source.parents:
+-            if (parent / '.git').exists():
+-                candidates.append(parent / 'docs/audit/variety-segments' / f'{source_hash}.json')
+-                break
++    candidates = _sentence_map_candidates(path, override)
++    if not override and len(candidates) > 1:
++        candidates[1] = candidates[1] / f'{source_hash}.json'
+     found = next((p for p in candidates if p.is_file()), None)
+     if found is None:
++        if lang == 'pl':
++            if override:
++                raise MeasurementError(f'missing Polish sentence map: {override}')
++            return None
+         raise MeasurementError('Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback')
+     try:
+         record = json.loads(found.read_text(encoding='utf-8'))
+@@ -338,9 +380,11 @@ def sentence_map(path, text, lang, override=None):
+         raise MeasurementError(f'invalid sentence map: {found}') from error
+     if not isinstance(record, dict):
+         raise MeasurementError(f'invalid sentence map object: {found}')
++    if lang == 'pl' and record.get('locale') != 'pl':
++        raise MeasurementError(f'invalid Polish sentence map locale: {found}')
+     if record.get('source_sha256') != source_hash:
+-        raise MeasurementError(f'stale Thai sentence map: {found}')
+-    _validate_sentence_review(record, found, source_hash)
++        raise MeasurementError(f'stale {label} sentence map: {found}')
++    _validate_sentence_review(record, found, source_hash, lang)
+     mapping = {}
+     rows = record.get('paragraphs')
+     if not isinstance(rows, list) or not all(isinstance(row, dict) for row in rows):
+@@ -360,6 +404,10 @@ def sentence_map(path, text, lang, override=None):
+         mapping[key] = slices
+     if not mapping:
+         raise MeasurementError(f'empty sentence map: {found}')
++    if lang == 'pl':
++        return ReviewedPolishMap(hashlib.sha256(text.encode('utf-8')).hexdigest(),
++                                 tuple(normalized(row['text']) for row in rows),
++                                 MappingProxyType({key: tuple(value) for key, value in mapping.items()}))
+     return mapping
+ 
+ 
+@@ -369,6 +417,13 @@ def split_sentences(text, lang, mapping=None):
+ Thai prose has no reliable punctuation-only boundary rule. Its complete,
+ independently reviewed sentence map is required instead.
+ """
++    if lang == 'pl' and mapping is not None:
++        if not isinstance(mapping, ReviewedPolishMap):
++            raise MeasurementError('Polish sentence map has not passed source and review validation')
++        key = normalized(text)
++        if key not in mapping.sentences:
++            raise MeasurementError('Polish paragraph missing from reviewed sentence map')
++        return list(mapping.sentences[key])
+     if lang in expansion.LANGUAGES:
+         try:
+             return expansion.split_sentences(text, lang, profile(lang))
+diff --git a/src/content/columns-sk/014-taiwan-mandatory-employment-period.md b/src/content/columns-sk/014-taiwan-mandatory-employment-period.md
+index 915367ecc..304b9a01d 100644
+--- a/src/content/columns-sk/014-taiwan-mandatory-employment-period.md
++++ b/src/content/columns-sk/014-taiwan-mandatory-employment-period.md
+@@ -22,7 +22,7 @@ faq:
+ 
+ ![Snímka vysvetľujúca minimálnu dobu trvania pracovného pomeru v pracovnej zmluve a otázku vrátenia nákladov](../images/014-taiwan-mandatory-employment-period/featured-01.jpg)
+ 
+-Dohoda o minimálnej dobe trvania pracovného pomeru (最低服務年限約定) v pracovnej zmluve (勞動契約) na Taiwane upravuje záväzok pracovníka zotrvať po určitú dobu, otázku, či pri predčasnom odchode vzniká povinnosť vrátiť náklady na školenie, podpisovú prémiu (簽約金) alebo prémiu za zotrvanie (留任獎金), a otázku, či možno osobitne žiadať zmluvnú pokutu (違約金). Samotná skutočnosť, že existuje podpísaný text, však neurčuje platnosť dohody ani sumu na vrátenie. Viac než názov zmluvy treba po krokoch overiť zákonné predpoklady a skutočný priebeh výplat, školenia a skončenia.
++Dohoda o minimálnej dobe trvania pracovného pomeru (最低服務年限約定) v pracovnej zmluve (勞動契約) na Taiwane upravuje záväzok pracovníka zotrvať po určitú dobu, otázku, či pri predčasnom odchode vzniká povinnosť vrátiť náklady na školenie, podpisovú prémiu (簽約金) alebo prémiu za zotrvanie (留任獎金), a otázku, či možno osobitne žiadať zmluvnú pokutu (違約金). Podpísaný text ešte neurčuje platnosť dohody. Rovnako neurčuje sumu na vrátenie. Viac než názov zmluvy treba po krokoch overiť zákonné predpoklady a skutočný priebeh výplat, školenia a skončenia.
+ 
+ Pri preskúmaní je dôležité nezmiešavať nasledujúce štyri otázky.
+ 
+@@ -35,7 +35,7 @@ Aj keď tieto štyri otázky figurujú spoločne v tej istej zmluve, uplatniteľ
+ 
+ ## 1. Kedy nadobúda dohoda o minimálnej dobe trvania pracovného pomeru účinky?
+ 
+-Dohoda nie je automaticky neplatná. Podľa článku 15-1 taiwanského zákona o pracovných normách (勞動基準法) môže splniť zákonné predpoklady, ak zamestnávateľ poskytne špecializované technické školenie (專業技術培訓) a nesie jeho náklady, alebo poskytne primeranú náhradu (合理補償), aby pracovník dodržal minimálnu dobu trvania pracovného pomeru. Nie je nutné splniť oba predpoklady zároveň, avšak aj keď existuje jeden, dohoda nesmie prekročiť primeraný rozsah vo svetle všetkých okolností, ako sú doba a náklady školenia, možnosť nahradiť personál (人力替補可能性) a výška a rozsah náhrady.
++Dohoda nie je automaticky neplatná. Podľa článku 15-1 taiwanského zákona o pracovných normách (勞動基準法) môže splniť zákonné predpoklady, ak zamestnávateľ poskytne špecializované technické školenie (專業技術培訓) a nesie jeho náklady, alebo poskytne primeranú náhradu (合理補償), aby pracovník dodržal minimálnu dobu trvania pracovného pomeru. Oba predpoklady nemusia byť splnené súčasne. Aj pri splnení jedného však dohoda musí zostať primeraná všetkým okolnostiam vrátane doby a nákladov školenia, možnosti nahradiť personál (人力替補可能性) a výšky a rozsahu náhrady.
+ 
+ Článok 15-1 odsek 1 upravuje alternatívne dva zákonné predpoklady. Prvý je, že zamestnávateľ poskytol pracovníkovi špecializované technické školenie a niesol jeho náklady; druhý, že poskytol primeranú náhradu výmenou za dodržanie minimálnej doby trvania pracovného pomeru. Treba overiť nie to, ako sa tento základ v zmluve nazýva, ale aký základ skutočne existuje.
+ 
+@@ -43,7 +43,7 @@ Dohoda nie je automaticky neplatná. Podľa článku 15-1 taiwanského zákona o
+ 
+ Po potvrdení zákonného predpokladu sa podľa odseku 2 osobitne posudzuje, či dohodnutá doba a rozsah zodpovednosti sú primerané. Dohoda, ktorá poruší zákonný predpoklad odseku 1 alebo kritérium primeranosti odseku 2, je podľa odseku 3 neplatná. Táto norma je však kritériom na posúdenie obsahu a skutkových okolností každej dohody, nie normou, ktorá od začiatku vyhlasuje všetky dohody o minimálnej dobe trvania pracovného pomeru za platné alebo neplatné.
+ 
+-Okolnosť, že pracovník zmluvu podpísal, môže byť podkladom, ktorý potvrdzuje existenciu dohody, ale nenahrádza zákonné predpoklady. Naopak, dĺžka dohodnutej doby sama osebe neurčuje výsledok; treba overiť, aká investícia alebo náhrada existovala a prečo bola táto doba stanovená.
++Podpis môže preukazovať, že dohoda existuje. Zákonné predpoklady však nenahrádza. Naopak, dĺžka dohodnutej doby sama osebe neurčuje výsledok; treba overiť, aká investícia alebo náhrada existovala a prečo bola táto doba stanovená.
+ 
+ ## 2. Prvý zákonný predpoklad: špecializované technické školenie a nesenie nákladov
+ 
+@@ -130,7 +130,7 @@ Posúdenie dôvodu skončenia ovplyvňuje priamo i rozsah vrátenia. Ak sa uplat
+ 
+ Dohoda o minimálnej dobe trvania pracovného pomeru nie je inštitútom, ktorý by fyzicky alebo právne bránil odchodu pracovníka. Výpoveď a výpovedná doba (預告期間) sú otázkou, kedy končí pracovný vzťah; platnosť dohody o minimálnej dobe trvania pracovného pomeru a zodpovednosť za vrátenie nákladov sú otázkou, či existuje majetková zodpovednosť odvodená zo skončenia.
+ 
+-Keď pracovník skončí pracovnú zmluvu na neurčitý čas (不定期契約), podľa článku 15 taiwanského zákona o pracovných normách sa primerane uplatní výpovedná doba článku 16 odseku 1. Článok 16 je ustanovenie o skončení zmluvy zamestnávateľom a na odchod pracovníka sa táto výpovedná doba uplatní prostredníctvom článku 15.
++Keď pracovník skončí pracovnú zmluvu na neurčitý čas (不定期契約), podľa článku 15 taiwanského zákona o pracovných normách sa primerane uplatní výpovedná doba článku 16 odseku 1. Článok 16 upravuje skončenie zo strany zamestnávateľa. Na výpoveď pracovníka sa príslušná lehota vzťahuje prostredníctvom článku 15.
+ 
+ Výpovedná doba podľa súvislej doby práce je nasledujúca.
+ 
+diff --git a/src/content/columns-sk/877-slovak-exporter-taiwan-unpaid-invoice-recovery.md b/src/content/columns-sk/877-slovak-exporter-taiwan-unpaid-invoice-recovery.md
+index 939e8e974..4818569f1 100644
+--- a/src/content/columns-sk/877-slovak-exporter-taiwan-unpaid-invoice-recovery.md
++++ b/src/content/columns-sk/877-slovak-exporter-taiwan-unpaid-invoice-recovery.md
+@@ -23,7 +23,7 @@ audience: ["sk"]
+ author: "legal-ai-assistant"
+ ---
+ 
+-Faktúra za zariadenie, potvrdenie dodania a protokol o uvedení do prevádzky môžu mať rôzne dátumy. Slovenský dodávateľ pri vymáhaní potrebuje zistiť, na ktorý z nich zmluva viaže zaplatenie. Pri technickej dodávke preto k faktúre priložte aj dohodnuté podmienky prevzatia a záznamy o splnených skúškach.
++Keď sa líšia dátumy na faktúre za zariadenie, potvrdení dodania a protokole o uvedení do prevádzky, slovenský dodávateľ potrebuje pri vymáhaní zistiť, na ktorý z nich zmluva viaže zaplatenie. Pri technickej dodávke preto k faktúre priložte aj dohodnuté podmienky prevzatia a záznamy o splnených skúškach.
+ 
+ Kupujúci môže uznávať cenu dodaných dielov, ale spochybňovať dokončenie montáže. Podklady usporiadajte podľa konkrétnych námietok a zmluvných položiek. Celé e-mailové vlákno vrátane nepriaznivých odpovedí ukáže viac než výber správ, v ktorých odberateľ prisľúbil platbu.
+ 
+@@ -45,7 +45,7 @@ Po uplynutí premlčacej lehoty môže dlžník odmietnuť plnenie podľa [člá
+ 
+ ## Platobný rozkaz pri nedokončenej dodávke?
+ 
+-Taiwanský platobný rozkaz, 支付命令, možno žiadať pre určitú peňažnú sumu podľa [článku 508 Civilného sporového poriadku Taiwanu](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508). Veriteľ musí nárok predbežne osvedčiť a opísať aj splnenie svojho vzájomného plnenia, ak sa vyžaduje ([článok 511](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511)). Práve tu pomáha protokol o skúškach či prevzatí.
++Taiwanský platobný rozkaz, 支付命令, možno žiadať pre určitú peňažnú sumu podľa [článku 508 Civilného sporového poriadku Taiwanu](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=508), pričom veriteľ musí nárok predbežne osvedčiť a opísať aj splnenie svojho vzájomného plnenia, ak sa vyžaduje ([článok 511](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=511)). Práve tu pomáha protokol o skúškach či prevzatí.
+ 
+ Podľa [článku 509](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0010001&flno=509) tento postup nie je prípustný, ak navrhovateľ ešte nesplnil svoje vzájomné plnenie alebo sa rozkaz musí doručovať do zahraničia či verejnou vyhláškou. Slovenské sídlo veriteľa samo medzi týmito prekážkami nie je. Potrebné je posúdenie podmienok konania a doručovacej adresy dlžníka.
+ 
+diff --git a/src/content/columns-sk/878-slovak-business-taiwan-subsidiary-branch-office.md b/src/content/columns-sk/878-slovak-business-taiwan-subsidiary-branch-office.md
+index 789eceb6f..81848fd21 100644
+--- a/src/content/columns-sk/878-slovak-business-taiwan-subsidiary-branch-office.md
++++ b/src/content/columns-sk/878-slovak-business-taiwan-subsidiary-branch-office.md
+@@ -25,7 +25,7 @@ author: "legal-ai-assistant"
+ 
+ Má pracovník na Taiwane iba dohadovať skúšky zariadenia, alebo aj predávať náhradné diely a fakturovať servis? Slovenská firma potrebuje odpoveď ešte pred výberom formy miestneho zastúpenia. V návrhu prevádzky určte aj firmu, ktorá uzavrie zmluvu so zákazníkom, príjemcu platieb a osobu oprávnenú podpisovať servisné objednávky.
+ 
+-[Invest Taiwan porovnáva](https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01) dcérsku spoločnosť a pobočku, ktoré môžu obchodovať, so zastupiteľskou kanceláriou určenou na právne a kontaktné úkony. Plán miestneho predaja a plateného servisu preto vyžaduje inú úvahu než samotné prepájanie taiwanských zákazníkov so slovenskou centrálou.
++Podľa [Invest Taiwan](https://investtaiwan.nat.gov.tw/showPageengInvestmentStatus01?lang=eng&menuNum=7&search=InvestmentStatus01) môžu dcérska spoločnosť a pobočka obchodovať, kým zastupiteľská kancelária slúži na právne a kontaktné úkony; miestny predaj a platený servis preto treba plánovať odlišne od prepájania taiwanských zákazníkov so slovenskou centrálou.
+ 
+ ## Predaj a zodpovednosť určujú vhodnú formu
+ 
+@@ -35,7 +35,7 @@ Pobočka je súčasťou zahraničnej spoločnosti, ako vyplýva z [článku 3](h
+ 
+ Pred podnikaním vo vlastnom mene na Taiwane musí zahraničná spoločnosť zaregistrovať pobočku podľa [článku 371](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=371). [Článok 372](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=372) vyžaduje vyčlenenie prevádzkových prostriedkov a určenie zodpovedného zástupcu na Taiwane. Pobočka má vlastný registračný postup; pri regulovanej činnosti treba preveriť aj osobitné povolenia podľa [pokynov obchodného registra](https://gcis.nat.gov.tw/mainNew/subclassNAction.do?method=getFile&pk=5).
+ 
+-Dcérska spoločnosť založená na Taiwane je samostatnou právnickou osobou podľa [článku 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=1). Forma 有限公司 môže mať jediného spoločníka ([článok 98](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=98)). [Článok 99](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=99) spravidla obmedzuje zodpovednosť spoločníka výškou jeho vkladu. Výnimka sa týka spoločníka, ktorý zneužitím právnej subjektivity spôsobí spoločnosti konkrétny dlh, s ktorého splatením má spoločnosť zjavné ťažkosti. Spoločník musí tento dlh uhradiť, ak sú zároveň okolnosti závažné a uloženie takej povinnosti nevyhnutné.
++Dcérska spoločnosť založená na Taiwane je samostatnou právnickou osobou podľa [článku 1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=1). Forma 有限公司 môže mať jediného spoločníka ([článok 98](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=98)). [Článok 99](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=99) spravidla obmedzuje zodpovednosť spoločníka výškou jeho vkladu. Výnimka zaväzuje spoločníka uhradiť konkrétny dlh, ktorý spoločnosti spôsobil zneužitím jej právnej subjektivity, ak má spoločnosť so splatením zjavné ťažkosti a zároveň sú okolnosti závažné a uloženie tejto povinnosti nevyhnutné.
+ 
+ Ak má do podniku vstúpiť taiwanský partner, ešte pred podaním žiadostí dohodnite podiely, rozhodovanie a prístup k prevádzkovým údajom. Kto bude schvaľovať zľavu zákazníkovi? Kto dostane mesačný prehľad nákladov? Odpovede patria do konkrétnych dohôd; samotný názov právnej formy ich nevyrieši.
+ 
+diff --git a/src/lib/__tests__/case-translations-20261026.test.ts b/src/lib/__tests__/case-translations-20261026.test.ts
+index 573e1dba1..c7350dadb 100644
+--- a/src/lib/__tests__/case-translations-20261026.test.ts
++++ b/src/lib/__tests__/case-translations-20261026.test.ts
+@@ -6,8 +6,9 @@ import { columnLanguageLinksFromIndex, type PublicLocale8 } from '@/lib/public-g
+ import { buildAbsoluteUrl, getLanguageAlternates } from '@/lib/seo';
+ import { archiveLeadPublicationDate, archiveLeadSlugsFor, expertiseSlugsFor } from './native-locale-columns';
+ 
+-const TRANSLATIONS = ['de', 'it', 'ar', 'pt', 'hi', 'ms', 'ru', 'bg', 'bn', 'ca', 'da', 'el', 'et', 'fa', 'fi', 'hr', 'hu', 'is', 'km', 'lv', 'mn'] as const;
+-const SAME_DAY_ARC_LOCALES: readonly string[] = ['bg', 'bn', 'ca', 'el', 'et', 'fa', 'hr', 'hu', 'is', 'km', 'lv', 'mn'];
++const TRANSLATIONS = ['de', 'it', 'ar', 'pt', 'hi', 'ms', 'ru', 'bg', 'bn', 'ca', 'da', 'el', 'et', 'fa', 'fi', 'hr', 'hu', 'is', 'km', 'lv', 'mn', 'nb', 'ne', 'pl', 'ro', 'sk', 'sl', 'sr'] as const;
++const SAME_DAY_ARC_LOCALES: readonly string[] = ['bg', 'bn', 'ca', 'el', 'et', 'fa', 'hr', 'hu', 'is', 'km', 'lv', 'mn', 'ne', 'sk', 'sl', 'sr'];
++const PRIOR_DAY_ARC_LOCALES: readonly string[] = ['da', 'fi', 'nb', 'pl', 'ro'];
+ const ARC_SLUGS = ['taiwan-arc-first-application', 'taiwan-visa-residence-work-study-family', 'taiwan-arc-renewal-changes-reentry'];
+ // Independently pin the release contract, rather than deriving it from the test registry.
+ const CASES = [
+@@ -30,8 +31,8 @@ describe('reviewed case translations published October26', () => {
+     expect(visible.slice(0, expectedLead.length).map(({ slug }) => slug)).toEqual(expectedLead);
+     expect(archiveLeadSlugsFor(locale).slice(0, expectedLead.length)).toEqual(expectedLead);
+     expect(new Set(archiveLeadSlugsFor(locale)).size).toBe(archiveLeadSlugsFor(locale).length);
+-    if (SAME_DAY_ARC_LOCALES.includes(locale) || locale === 'da' || locale === 'fi') {
+-      const expectedArcDate = locale === 'da' || locale === 'fi' ? '2026-10-25' : '2026-10-26';
++    if (SAME_DAY_ARC_LOCALES.includes(locale) || PRIOR_DAY_ARC_LOCALES.includes(locale)) {
++      const expectedArcDate = PRIOR_DAY_ARC_LOCALES.includes(locale) ? '2026-10-25' : '2026-10-26';
+       for (const slug of ARC_SLUGS) {
+         expect(posts.find(post => post.slug === slug)?.publicationDate).toBe(expectedArcDate);
+         expect(archiveLeadPublicationDate(slug, locale)).toBe(expectedArcDate);
+@@ -46,7 +47,7 @@ describe('reviewed case translations published October26', () => {
+     }
+   });
+ 
+-  it.each(CASES)('$slug retains its original publication date and exactly twenty-two real language versions', (item) => {
++  it.each(CASES)('$slug retains its original publication date and exactly twenty-nine real language versions', (item) => {
+     const original = getAllColumnPosts(item.source).find(({ slug }) => slug === item.slug);
+     expect(original?.publicationDate).toBe('2026-10-25');
+     expect(original?.faq).toHaveLength(item.faqs);
+@@ -56,7 +57,7 @@ describe('reviewed case translations published October26', () => {
+     expect([...cluster].sort()).toEqual(expected);
+     const urls = expected.map((locale) => buildAbsoluteUrl(`/${locale}/columns/${item.slug}`));
+     const alternates = getLanguageAlternates(`/columns/${item.slug}`, cluster, { xDefaultWithinCluster: true });
+-    expect(Object.keys(alternates)).toHaveLength(23);
++    expect(Object.keys(alternates)).toHaveLength(30);
+     expect(Object.entries(alternates).filter(([tag]) => tag !== 'x-default').map(([, url]) => url).sort()).toEqual(urls.sort());
+     expect(urls).toContain(alternates['x-default']);
+     for (const locale of expected as PublicLocale8[]) {
+diff --git a/src/lib/__tests__/column-image-caption-label.test.ts b/src/lib/__tests__/column-image-caption-label.test.ts
+index e81cd463b..0cabcbd56 100644
+--- a/src/lib/__tests__/column-image-caption-label.test.ts
++++ b/src/lib/__tests__/column-image-caption-label.test.ts
+@@ -55,6 +55,17 @@ const LABEL: Record<string, string> = {
+   'my': 'စိတ်ကူးယဉ် မြင်ကွင်း',
+ };
+ 
++// These six reviewed B9 articles use the exact label frozen in their authoring brief.
++// Keep the established label for every other Norwegian article.
++const BATCH09_NB_FILES = new Set([
++  '915-taiwan-public-contract-mediation-arbitration-same-claim.md',
++  '916-taiwan-parent-company-pollution-liability-us-investor.md',
++  '918-taiwan-presale-mortgage-notice-handover-judgment.md',
++  '919-taiwan-workplace-bullying-investigation-hearing-judgment.md',
++  '920-taiwan-apartment-ev-charger-common-area-judgment.md',
++  '921-taiwan-online-game-coins-refund-judgment.md',
++]);
++
+ const root = path.join(process.cwd(), 'src/content');
+ const files = fs.readdirSync(root)
+   .filter((dir) => dir === 'columns' || dir.startsWith('columns-'))
+@@ -67,7 +78,10 @@ describe('column image caption label', () => {
+     for (const { locale, file } of files) {
+       const head = fs.readFileSync(path.join(root, file), 'utf8').split('\n---')[0];
+       const m = head.match(/^featured_image_caption: "(.*)"$/m);
+-      if (m && m[1] !== LABEL[locale]) bad.push(`${file}: ${m[1]}`);
++      const expected = locale === 'nb' && BATCH09_NB_FILES.has(path.basename(file))
++        ? 'Fiktiv scene'
++        : LABEL[locale];
++      if (m && m[1] !== expected) bad.push(`${file}: ${m[1]}`);
+     }
+     expect(bad).toEqual([]);
+   });
+diff --git a/src/lib/__tests__/native-locale-columns.ts b/src/lib/__tests__/native-locale-columns.ts
+index 4cd8e685b..46050a7ec 100644
+--- a/src/lib/__tests__/native-locale-columns.ts
++++ b/src/lib/__tests__/native-locale-columns.ts
+@@ -1286,6 +1286,13 @@ export const CASE_TRANSLATION_COLUMN_FILES_20261026: Partial<Record<string, read
+   km: CASE_TRANSLATION_FILES_20261026,
+   lv: CASE_TRANSLATION_FILES_20261026,
+   mn: CASE_TRANSLATION_FILES_20261026,
++  nb: CASE_TRANSLATION_FILES_20261026,
++  ne: CASE_TRANSLATION_FILES_20261026,
++  pl: CASE_TRANSLATION_FILES_20261026,
++  ro: CASE_TRANSLATION_FILES_20261026,
++  sk: CASE_TRANSLATION_FILES_20261026,
++  sl: CASE_TRANSLATION_FILES_20261026,
++  sr: CASE_TRANSLATION_FILES_20261026,
+ };
+ 
+ // These case locales already have ARC articles with later dates than the original ARC batch.
+@@ -1294,6 +1301,8 @@ const CASE_LOCALE_ARC_PUBLICATION_DATES: Partial<Record<string, string>> = {
+   el: '2026-10-26', et: '2026-10-26', fa: '2026-10-26',
+   fi: '2026-10-25', hr: '2026-10-26', hu: '2026-10-26', is: '2026-10-26',
+   km: '2026-10-26', lv: '2026-10-26', mn: '2026-10-26',
++  nb: '2026-10-25', ne: '2026-10-26', pl: '2026-10-25', ro: '2026-10-25',
++  sk: '2026-10-26', sl: '2026-10-26', sr: '2026-10-26',
+ };
+ 
+ /** Country-specific market expansion, two original articles per selected locale. */
+--- /dev/null
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_sk_date_boundaries.py
+@@ -0,0 +1,30 @@
++"""SK calendar ordinals and true sentence ends, with literal neutral arrays."""
++from pathlib import Path
++import json
++import sys
++import unittest
++
++ROOT = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(ROOT))
++import variety_metrics as vm
++
++CASES = json.loads((ROOT / 'tests/sk-date-boundaries/neutral-fixtures.json').read_text())
++
++
++class SlovakDateBoundaries(unittest.TestCase):
++    def test_dates_and_true_sentence_ends(self):
++        for case in CASES['sentences']:
++            with self.subTest(id=case['id']):
++                self.assertEqual(vm.sentences(case['input'], 'sk'), case['expected'])
++
++    def test_original_markdown_classification_then_visible_boundaries(self):
++        for case in CASES['blocks']:
++            with self.subTest(id=case['id']):
++                paragraphs, _, items = vm.body_blocks(case['input'], 'sk')
++                self.assertEqual(paragraphs, case['expectedParagraphs'])
++                self.assertEqual(items, case['expectedListItems'])
++                self.assertEqual([s for p in paragraphs for s in vm.sentences(p, 'sk')], case['expectedSentences'])
++
++
++if __name__ == '__main__':
++    unittest.main()
+--- /dev/null
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/sk-date-boundaries/neutral-fixtures.json
+@@ -0,0 +1,567 @@
++{
++  "frozenAtUTC": "2026-10-26T09:05:11.907183+00:00",
++  "scope": "AI-written neutral expectations frozen before SK profile modification; no target manuscript score used.",
++  "sentences": [
++    {
++      "id": "nominative-01",
++      "input": "Dátum na lístku je 7. január. Nasleduje ďalší riadok.",
++      "expected": [
++        "Dátum na lístku je 7. január.",
++        "Nasleduje ďalší riadok."
++      ]
++    },
++    {
++      "id": "genitive-year-01",
++      "input": "Písali sme 7. januára 2024. Článok pokračuje ďalšou vetou.",
++      "expected": [
++        "Písali sme 7. januára 2024.",
++        "Článok pokračuje ďalšou vetou."
++      ]
++    },
++    {
++      "id": "nominative-02",
++      "input": "Dátum na lístku je 7. február. Nasleduje ďalší riadok.",
++      "expected": [
++        "Dátum na lístku je 7. február.",
++        "Nasleduje ďalší riadok."
++      ]
++    },
++    {
++      "id": "genitive-year-02",
++      "input": "Písali sme 7. februára 2024. Článok pokračuje ďalšou vetou.",
++      "expected": [
++        "Písali sme 7. februára 2024.",
++        "Článok pokračuje ďalšou vetou."
++      ]
++    },
++    {
++      "id": "nominative-03",
++      "input": "Dátum na lístku je 7. marec. Nasleduje ďalší riadok.",
++      "expected": [
++        "Dátum na lístku je 7. marec.",
++        "Nasleduje ďalší riadok."
++      ]
++    },
++    {
++      "id": "genitive-year-03",
++      "input": "Písali sme 7. marca 2024. Článok pokračuje ďalšou vetou.",
++      "expected": [
++        "Písali sme 7. marca 2024.",
++        "Článok pokračuje ďalšou vetou."
++      ]
++    },
++    {
++      "id": "nominative-04",
++      "input": "Dátum na lístku je 7. apríl. Nasleduje ďalší riadok.",
++      "expected": [
++        "Dátum na lístku je 7. apríl.",
++        "Nasleduje ďalší riadok."
++      ]
++    },
++    {
++      "id": "genitive-year-04",
++      "input": "Písali sme 7. apríla 2024. Článok pokračuje ďalšou vetou.",
++      "expected": [
++        "Písali sme 7. apríla 2024.",
++        "Článok pokračuje ďalšou vetou."
++      ]
++    },
++    {
++      "id": "nominative-05",
++      "input": "Dátum na lístku je 7. máj. Nasleduje ďalší riadok.",
++      "expected": [
++        "Dátum na lístku je 7. máj.",
++        "Nasleduje ďalší riadok."
++      ]
++    },
++    {
++      "id": "genitive-year-05",
++      "input": "Písali sme 7. mája 2024. Článok pokračuje ďalšou vetou.",
++      "expected": [
++        "Písali sme 7. mája 2024.",
++        "Článok pokračuje ďalšou vetou."
++      ]
++    },
++    {
++      "id": "nominative-06",
++      "input": "Dátum na lístku je 7. jún. Nasleduje ďalší riadok.",
++      "expected": [
++        "Dátum na lístku je 7. jún.",
++        "Nasleduje ďalší riadok."
++      ]
++    },
++    {
++      "id": "genitive-year-06",
++      "input": "Písali sme 7. júna 2024. Článok pokračuje ďalšou vetou.",
++      "expected": [
++        "Písali sme 7. júna 2024.",
++        "Článok pokračuje ďalšou vetou."
++      ]
++    },
++    {
++      "id": "nominative-07",
++      "input": "Dátum na lístku je 7. júl. Nasleduje ďalší riadok.",
++      "expected": [
++        "Dátum na lístku je 7. júl.",
++        "Nasleduje ďalší riadok."
++      ]
++    },
++    {
++      "id": "genitive-year-07",
++      "input": "Písali sme 7. júla 2024. Článok pokračuje ďalšou vetou.",
++      "expected": [
++        "Písali sme 7. júla 2024.",
++        "Článok pokračuje ďalšou vetou."
++      ]
++    },
++    {
++      "id": "nominative-08",
++      "input": "Dátum na lístku je 7. august. Nasleduje ďalší riadok.",
++      "expected": [
++        "Dátum na lístku je 7. august.",
++        "Nasleduje ďalší riadok."
++      ]
++    },
++    {
++      "id": "genitive-year-08",
++      "input": "Písali sme 7. augusta 2024. Článok pokračuje ďalšou vetou.",
++      "expected": [
++        "Písali sme 7. augusta 2024.",
++        "Článok pokračuje ďalšou vetou."
++      ]
++    },
++    {
++      "id": "nominative-09",
++      "input": "Dátum na lístku je 7. september. Nasleduje ďalší riadok.",
++      "expected": [
++        "Dátum na lístku je 7. september.",
++        "Nasleduje ďalší riadok."
++      ]
++    },
++    {
++      "id": "genitive-year-09",
++      "input": "Písali sme 7. septembra 2024. Článok pokračuje ďalšou vetou.",
++      "expected": [
++        "Písali sme 7. septembra 2024.",
++        "Článok pokračuje ďalšou vetou."
++      ]
++    },
++    {
++      "id": "nominative-10",
++      "input": "Dátum na lístku je 7. október. Nasleduje ďalší riadok.",
++      "expected": [
++        "Dátum na lístku je 7. október.",
++        "Nasleduje ďalší riadok."
++      ]
++    },
++    {
++      "id": "genitive-year-10",
++      "input": "Písali sme 7. októbra 2024. Článok pokračuje ďalšou vetou.",
++      "expected": [
++        "Písali sme 7. októbra 2024.",
++        "Článok pokračuje ďalšou vetou."
++      ]
++    },
++    {
++      "id": "nominative-11",
++      "input": "Dátum na lístku je 7. november. Nasleduje ďalší riadok.",
++      "expected": [
++        "Dátum na lístku je 7. november.",
++        "Nasleduje ďalší riadok."
++      ]
++    },
++    {
++      "id": "genitive-year-11",
++      "input": "Písali sme 7. novembra 2024. Článok pokračuje ďalšou vetou.",
++      "expected": [
++        "Písali sme 7. novembra 2024.",
++        "Článok pokračuje ďalšou vetou."
++      ]
++    },
++    {
++      "id": "nominative-12",
++      "input": "Dátum na lístku je 7. december. Nasleduje ďalší riadok.",
++      "expected": [
++        "Dátum na lístku je 7. december.",
++        "Nasleduje ďalší riadok."
++      ]
++    },
++    {
++      "id": "genitive-year-12",
++      "input": "Písali sme 7. decembra 2024. Článok pokračuje ďalšou vetou.",
++      "expected": [
++        "Písali sme 7. decembra 2024.",
++        "Článok pokračuje ďalšou vetou."
++      ]
++    },
++    {
++      "id": "year-before-chapter",
++      "input": "Kniha vyšla v roku 2024. Kapitola pokračuje opisom knižnice.",
++      "expected": [
++        "Kniha vyšla v roku 2024.",
++        "Kapitola pokračuje opisom knižnice."
++      ]
++    },
++    {
++      "id": "year-before-paragraph",
++      "input": "Záznam je z roku 2024. Odsek opisuje školu.",
++      "expected": [
++        "Záznam je z roku 2024.",
++        "Odsek opisuje školu."
++      ]
++    },
++    {
++      "id": "count-before-point",
++      "input": "Počet kníh bol 12. Bod je vyznačený na mape.",
++      "expected": [
++        "Počet kníh bol 12.",
++        "Bod je vyznačený na mape."
++      ]
++    },
++    {
++      "id": "number-before-month-subject",
++      "input": "Na lístku je číslo 7. November bol chladný.",
++      "expected": [
++        "Na lístku je číslo 7.",
++        "November bol chladný."
++      ]
++    },
++    {
++      "id": "year-before-allcaps",
++      "input": "Záznam je z roku 2024. ČLÁNOK opisuje školu.",
++      "expected": [
++        "Záznam je z roku 2024.",
++        "ČLÁNOK opisuje školu."
++      ]
++    },
++    {
++      "id": "bare-final-ordinal",
++      "input": "V poradí skončil 7. Potom odišiel.",
++      "expected": [
++        "V poradí skončil 7.",
++        "Potom odišiel."
++      ]
++    },
++    {
++      "id": "normal-floor",
++      "input": "Izba je na 3. poschodí. Dvere sú otvorené.",
++      "expected": [
++        "Izba je na 3. poschodí.",
++        "Dvere sú otvorené."
++      ]
++    },
++    {
++      "id": "normal-chapter",
++      "input": "Čítame 4. kapitolu knihy. Ďalšia je krátka.",
++      "expected": [
++        "Čítame 4. kapitolu knihy.",
++        "Ďalšia je krátka."
++      ]
++    },
++    {
++      "id": "large-ordinal-chapter",
++      "input": "Je to 2024. kapitola rozsiahlej kroniky. Ďalšia je krátka.",
++      "expected": [
++        "Je to 2024. kapitola rozsiahlej kroniky.",
++        "Ďalšia je krátka."
++      ]
++    },
++    {
++      "id": "normal-article",
++      "input": "Čítame 5. článok časopisu. Kópia leží na stole.",
++      "expected": [
++        "Čítame 5. článok časopisu.",
++        "Kópia leží na stole."
++      ]
++    },
++    {
++      "id": "roman-ordinal",
++      "input": "Čítame IV. kapitolu knihy. Potom odložíme zošit.",
++      "expected": [
++        "Čítame IV. kapitolu knihy.",
++        "Potom odložíme zošit."
++      ]
++    },
++    {
++      "id": "roman-final",
++      "input": "Poradie označuje číslo IV. Potom pokračuje zoznam.",
++      "expected": [
++        "Poradie označuje číslo IV.",
++        "Potom pokračuje zoznam."
++      ]
++    },
++    {
++      "id": "section-prefix",
++      "input": "Čítame 7. § predpisu. Potom zatvoríme knihu.",
++      "expected": [
++        "Čítame 7. § predpisu.",
++        "Potom zatvoríme knihu."
++      ]
++    },
++    {
++      "id": "section-cardinal",
++      "input": "Čítame § 7 ods. 2. Článok časopisu leží vedľa.",
++      "expected": [
++        "Čítame § 7 ods. 2.",
++        "Článok časopisu leží vedľa."
++      ]
++    },
++    {
++      "id": "decimal",
++      "input": "Hodnota je 3.5 a cena 12,50 eura. Záznam zostáva tu.",
++      "expected": [
++        "Hodnota je 3.5 a cena 12,50 eura.",
++        "Záznam zostáva tu."
++      ]
++    },
++    {
++      "id": "month-day-end",
++      "input": "Výlet bude 7. november. Kapitola je už dopísaná.",
++      "expected": [
++        "Výlet bude 7. november.",
++        "Kapitola je už dopísaná."
++      ]
++    },
++    {
++      "id": "day-range-start",
++      "input": "Výlet bude 1. január. Zápis zostane tu.",
++      "expected": [
++        "Výlet bude 1. január.",
++        "Zápis zostane tu."
++      ]
++    },
++    {
++      "id": "day-range-end",
++      "input": "Výlet bude 31. december. Zápis zostane tu.",
++      "expected": [
++        "Výlet bude 31. december.",
++        "Zápis zostane tu."
++      ]
++    },
++    {
++      "id": "two-dates",
++      "input": "Čítanie bolo 7. januára a 9. februára 2024. Článok opisuje stretnutie.",
++      "expected": [
++        "Čítanie bolo 7. januára a 9. februára 2024.",
++        "Článok opisuje stretnutie."
++      ]
++    },
++    {
++      "id": "quote-terminal",
++      "input": "Povedala: „Výlet bol 7. októbra 2024.“ Článok opisuje cestu.",
++      "expected": [
++        "Povedala: „Výlet bol 7. októbra 2024.“",
++        "Článok opisuje cestu."
++      ]
++    },
++    {
++      "id": "quote-attribution",
++      "input": "„Výlet bude 7. november,“ povedala učiteľka. Deti otvorili kalendár.",
++      "expected": [
++        "„Výlet bude 7. november,“ povedala učiteľka.",
++        "Deti otvorili kalendár."
++      ]
++    },
++    {
++      "id": "listed-abbreviation",
++      "input": "Ing. J. Kováč číta napr. str. 7 každý deň. Kópia je tu.",
++      "expected": [
++        "Ing. J. Kováč číta napr. str. 7 každý deň.",
++        "Kópia je tu."
++      ]
++    },
++    {
++      "id": "terminal-abbreviation",
++      "input": "V taške sú knihy, zošity atď. Článok leží na stole.",
++      "expected": [
++        "V taške sú knihy, zošity atď.",
++        "Článok leží na stole."
++      ]
++    },
++    {
++      "id": "no-year-date-end",
++      "input": "Výlet bol 7. októbra. Článok opisuje cestu.",
++      "expected": [
++        "Výlet bol 7. októbra.",
++        "Článok opisuje cestu."
++      ]
++    },
++    {
++      "id": "nbsp-date",
++      "input": "Výlet bude 7. november. Článok je krátky.",
++      "expected": [
++        "Výlet bude 7. november.",
++        "Článok je krátky."
++      ]
++    },
++    {
++      "id": "nnbsp-date",
++      "input": "Výlet bude 7. november. Článok je krátky.",
++      "expected": [
++        "Výlet bude 7. november.",
++        "Článok je krátky."
++      ]
++    },
++    {
++      "id": "tab-date",
++      "input": "Výlet bude 7.\tnovember. Článok je krátky.",
++      "expected": [
++        "Výlet bude 7.\tnovember.",
++        "Článok je krátky."
++      ]
++    },
++    {
++      "id": "nfd-calendar-and-subject",
++      "input": "Výlet bude 7. máj. Článok je krátky.",
++      "expected": [
++        "Výlet bude 7. máj.",
++        "Článok je krátky."
++      ]
++    },
++    {
++      "id": "nfd-year-subject",
++      "input": "Výlet bol 7. októbra 2024. Článok je krátky.",
++      "expected": [
++        "Výlet bol 7. októbra 2024.",
++        "Článok je krátky."
++      ]
++    },
++    {
++      "id": "markdown-link",
++      "input": "Výlet bude [7. november](https://example.test/calendar). Článok je krátky.",
++      "expected": [
++        "Výlet bude 7. november.",
++        "Článok je krátky."
++      ]
++    },
++    {
++      "id": "bare-url",
++      "input": "Adresa je https://example.test/a?x=3.5. Článok je krátky.",
++      "expected": [
++        "Adresa je .",
++        "Článok je krátky."
++      ]
++    }
++  ],
++  "blocks": [
++    {
++      "id": "ordered-list",
++      "input": "1. Vezmite knihu.\n2. Otvorte zošit.",
++      "expectedParagraphs": [],
++      "expectedListItems": [
++        "1. Vezmite knihu.",
++        "2. Otvorte zošit."
++      ],
++      "expectedSentences": [],
++      "renderParagraphs": 0,
++      "renderLists": 1
++    },
++    {
++      "id": "calendar-shaped-list",
++      "input": "7. november",
++      "expectedParagraphs": [],
++      "expectedListItems": [
++        "7. november"
++      ],
++      "expectedSentences": [],
++      "renderParagraphs": 0,
++      "renderLists": 1
++    },
++    {
++      "id": "large-list-number",
++      "input": "2024. článok",
++      "expectedParagraphs": [],
++      "expectedListItems": [
++        "2024. článok"
++      ],
++      "expectedSentences": [],
++      "renderParagraphs": 0,
++      "renderLists": 1
++    },
++    {
++      "id": "escaped-day-start",
++      "input": "7\\. november je dátum na lístku. Článok je krátky.",
++      "expectedParagraphs": [
++        "7\\. november je dátum na lístku. Článok je krátky."
++      ],
++      "expectedListItems": [],
++      "expectedSentences": [
++        "7. november je dátum na lístku.",
++        "Článok je krátky."
++      ],
++      "renderParagraphs": 1,
++      "renderLists": 0,
++      "expectedVisibleText": "7. november je dátum na lístku. Článok je krátky."
++    },
++    {
++      "id": "escaped-year-start",
++      "input": "2024\\. Článok pokračuje.",
++      "expectedParagraphs": [
++        "2024\\. Článok pokračuje."
++      ],
++      "expectedListItems": [],
++      "expectedSentences": [
++        "2024.",
++        "Článok pokračuje."
++      ],
++      "renderParagraphs": 1,
++      "renderLists": 0,
++      "expectedVisibleText": "2024. Článok pokračuje."
++    },
++    {
++      "id": "normal-date-prose",
++      "input": "Výlet bude 7. november. Článok je krátky.",
++      "expectedParagraphs": [
++        "Výlet bude 7. november. Článok je krátky."
++      ],
++      "expectedListItems": [],
++      "expectedSentences": [
++        "Výlet bude 7. november.",
++        "Článok je krátky."
++      ],
++      "renderParagraphs": 1,
++      "renderLists": 0,
++      "expectedVisibleText": "Výlet bude 7. november. Článok je krátky."
++    },
++    {
++      "id": "soft-wrap-date",
++      "input": "Výlet bude 7.\nnovember. Článok je krátky.",
++      "expectedParagraphs": [
++        "Výlet bude 7. november. Článok je krátky."
++      ],
++      "expectedListItems": [],
++      "expectedSentences": [
++        "Výlet bude 7. november.",
++        "Článok je krátky."
++      ],
++      "renderParagraphs": 1,
++      "renderLists": 0,
++      "expectedVisibleText": "Výlet bude 7.\nnovember. Článok je krátky."
++    },
++    {
++      "id": "source-heading-tail",
++      "input": "Výlet bude 7. november.\n\n## Oficiálne zdroje\n\nText zo zdroja je z 8. decembra 2024.",
++      "expectedParagraphs": [
++        "Výlet bude 7. november."
++      ],
++      "expectedListItems": [],
++      "expectedSentences": [
++        "Výlet bude 7. november."
++      ]
++    },
++    {
++      "id": "substantive-heading-not-tail",
++      "input": "Výlet bude 7. november.\n\n## Zdroje príjmov\n\nKniha vyšla v roku 2024. Článok je krátky.",
++      "expectedParagraphs": [
++        "Výlet bude 7. november.",
++        "Kniha vyšla v roku 2024. Článok je krátky."
++      ],
++      "expectedListItems": [],
++      "expectedSentences": [
++        "Výlet bude 7. november.",
++        "Kniha vyšla v roku 2024.",
++        "Článok je krátky."
++      ]
++    }
++  ]
++}
+--- /dev/null
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/sk-date-boundaries/run_neutral.py
+@@ -0,0 +1,50 @@
++#!/usr/bin/env python3
++"""Exercise literal neutral boundary contracts against the specified real tool."""
++from pathlib import Path
++import argparse
++import datetime
++import hashlib
++import json
++import re
++import sys
++
++sys.dont_write_bytecode = True
++ap = argparse.ArgumentParser()
++ap.add_argument('--root', required=True)
++ap.add_argument('--fixtures', required=True)
++ap.add_argument('--report', required=True)
++args = ap.parse_args()
++root = Path(args.root).resolve()
++fixture = Path(args.fixtures).resolve()
++sys.path.insert(0, str(root))
++import variety_metrics as vm
++
++cases = json.loads(fixture.read_text())
++rows = []
++for case in cases['sentences']:
++    actual = vm.sentences(case['input'], 'sk')
++    visible = vm.multilingual.expansion.visible_text(case['input'])
++    preserved = re.sub(r'\s+', '', ''.join(actual)) == re.sub(r'\s+', '', visible)
++    rows.append({'id': case['id'], 'kind': 'sentence', 'input': case['input'],
++                 'expected': case['expected'], 'actual': actual,
++                 'units': [vm.slen(t, 'sk') for t in actual],
++                 'visibleTextPreservedExceptWhitespace': preserved,
++                 'passed': actual == case['expected'] and preserved})
++for case in cases['blocks']:
++    paras, heads, items = vm.body_blocks(case['input'], 'sk')
++    actual = [s for p in paras for s in vm.sentences(p, 'sk')]
++    passed = (paras == case['expectedParagraphs'] and items == case['expectedListItems']
++              and actual == case['expectedSentences'])
++    rows.append({'id': case['id'], 'kind': 'block', 'input': case['input'],
++                 'expected': case['expectedSentences'], 'actual': actual,
++                 'paragraphs': paras, 'headings': heads, 'listItems': items, 'passed': passed})
++sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
++result = {'atUTC': datetime.datetime.now(datetime.timezone.utc).isoformat(),
++          'root': str(root), 'fixture': str(fixture), 'fixtureSHA256': sha(fixture),
++          'tools': {n: sha(root/n) for n in ['variety_metrics.py','variety_multilingual.py','variety_expansion.py','profiles/sk.json']},
++          'cases': len(rows), 'passed': sum(r['passed'] for r in rows),
++          'failed': [r['id'] for r in rows if not r['passed']], 'rows': rows}
++with Path(args.report).open('x') as f:
++    f.write(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
++print(json.dumps({k:result[k] for k in ['cases','passed','failed']},ensure_ascii=False))
++sys.exit(0 if all(r['passed'] for r in rows) else 1)
+--- /dev/null
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_pl_reviewed_boundaries.py
+@@ -0,0 +1,252 @@
++"""Real source/approval/evidence files; neutral synthetic approvals only.
++
++The fixture reviewer below is not an approval of any manuscript. Literal
++sentence arrays are fixed independently of the production splitter.
++"""
++from pathlib import Path
++import contextlib
++import copy
++import hashlib
++import io
++import json
++import os
++import subprocess
++import sys
++import tempfile
++import unittest
++
++ROOT = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(ROOT))
++import variety_metrics as vm
++import variety_multilingual as mm
++
++
++FULL = [
++    ['W maju 2023 r. Biblioteka otworzyła nową salę.',
++     'Wrócili czytelnicy.', 'Drzwi są otwarte.'],
++    ['Katalog stoi przy oknie.', 'Anna czyta.',
++     'Każda półka ma czytelne oznaczenie, więc książkę można odnaleźć bez pomocy pracownika.'],
++]
++ANSWER = [
++    ['Kiedy otwarto wystawę?', 'W maju 2023 r.', 'Dziękuję za odpowiedź.'],
++    ['Katalog stoi przy oknie.', 'Anna czyta.', 'Drzwi są otwarte.'],
++]
++
++
++def digest(payload):
++    return hashlib.sha256(payload).hexdigest()
++
++
++def json_bytes(value):
++    return json.dumps(value, ensure_ascii=False, sort_keys=True,
++                      separators=(',', ':')).encode('utf-8')
++
++
++def fixture(folder, sentences=FULL, locale='pl', source_text=None, rows=None):
++    source = folder / ('neutral.' + locale + '.md')
++    text = source_text or '---\ntitle: "Neutral test only"\n---\n\n' + '\n\n'.join(' '.join(s) for s in sentences)
++    source.write_text(text)
++    rows = copy.deepcopy(rows if rows is not None else
++                         [{'text': ' '.join(s), 'sentences': list(s)} for s in sentences])
++    evidence = folder / 'independent-neutral-review.md'
++    evidence.write_text('Synthetic neutral test evidence; not native review or manuscript approval.\n')
++    approval = folder / 'approval.json'
++    approval_data = {
++        'schema_version': 1, 'locale': locale, 'status': 'approved',
++        'reviewer': 'neutral-test-fixture-not-manuscript-approval',
++        'entries': [{'source_sha256': digest(source.read_bytes()),
++                     'method': 'independent_review', 'unresolved_boundaries': [],
++                     'paragraphs_sha256': digest(json_bytes(rows))}],
++        'evidence': [{'role': 'independent-review', 'path': evidence.name,
++                      'sha256': digest(evidence.read_bytes())}],
++    }
++    approval.write_bytes(json_bytes(approval_data))
++    record = {'source_sha256': digest(source.read_bytes()),
++              'method': 'independent_review', 'unresolved_boundaries': [],
++              'approval_record': {'path': approval.name,
++                                  'sha256': digest(approval.read_bytes())},
++              'paragraphs': rows}
++    if locale == 'pl':
++        record['locale'] = 'pl'
++    map_path = source.with_suffix('.sentences.json')
++    map_path.write_bytes(json_bytes(record))
++    return source, text, map_path, record, approval, approval_data, evidence
++
++
++def save_map(path, value):
++    path.write_bytes(json_bytes(value))
++
++
++class PolishReviewedBoundariesTests(unittest.TestCase):
++    def test_unmapped_date_readings_are_errors_not_guessed_merges(self):
++        # Removing the ambiguity error would silently choose a different array.
++        examples = [
++            ' '.join(FULL[0]), ' '.join(ANSWER[0]),
++            'Podaj datę otwarcia wystawy. 6 stycznia 2022 r. Dziękuję za odpowiedź.',
++            'Podaj datę otwarcia wystawy! 6 stycznia 2022 r. Dziękuję za odpowiedź.',
++            'Kiedy otwarto wystawę? W maju 2023 r. Biblioteka udostępniła nową salę.',
++            'Remont zakończono, a 6 stycznia 2022 r. Biblioteka otworzyła salę.',
++            'W paz\u0301dzierniku 2023 r. Biblioteka otworzyła salę.',
++        ]
++        for text in examples:
++            with self.subTest(text=text), self.assertRaises(mm.MeasurementError):
++                vm.sentences(text, 'pl')
++
++    def test_valid_approved_map_preserves_full_sentence_reading_and_method(self):
++        with tempfile.TemporaryDirectory() as tmp:
++            source, text, path, *_ = fixture(Path(tmp))
++            mapping = mm.sentence_map(source, text, 'pl', path)
++            self.assertIsNotNone(mapping)
++            self.assertEqual(vm.sentences(' '.join(FULL[0]), 'pl', mapping), FULL[0])
++            measured = vm.metrics(text, 'pl', mapping)
++            self.assertEqual(measured['sentences'], 6)
++            self.assertEqual(measured['sentence_boundary_method'], 'reviewed_sha_bound_map')
++            self.assertEqual(measured['length_unit'], 'orthographic_words')
++
++    def test_valid_approved_map_preserves_short_answer_reading(self):
++        with tempfile.TemporaryDirectory() as tmp:
++            source, text, path, *_ = fixture(Path(tmp), ANSWER)
++            mapping = mm.sentence_map(source, text, 'pl', path)
++            self.assertIsNotNone(mapping)
++            self.assertEqual(vm.sentences(' '.join(ANSWER[0]), 'pl', mapping), ANSWER[0])
++            self.assertEqual(vm.metrics(text, 'pl', mapping)['sentences'], 6)
++
++    def test_ordinary_unmapped_polish_keeps_real_terminal_and_lowercase(self):
++        for text, expected in [
++            ('Raport wydano w maju 2023 r. Biblioteka kupiła kopię.',
++             ['Raport wydano w maju 2023 r.', 'Biblioteka kupiła kopię.']),
++            ('W maju 2023 r. biblioteka otworzyła salę. Drzwi są otwarte.',
++             ['W maju 2023 r. biblioteka otworzyła salę.', 'Drzwi są otwarte.']),
++            ('Zastosowano art. 2 ust. 1. Wynik zapisano.',
++             ['Zastosowano art. 2 ust. 1.', 'Wynik zapisano.']),
++        ]:
++            self.assertEqual(vm.sentences(text, 'pl'), expected)
++
++    def test_changed_source_sha_rejects_previously_valid_map(self):
++        with tempfile.TemporaryDirectory() as tmp:
++            source, text, path, *_ = fixture(Path(tmp))
++            source.write_text(text.replace('Neutral test only', 'Changed metadata'))
++            with self.assertRaises(mm.MeasurementError):
++                mm.sentence_map(source, source.read_text(), 'pl', path)
++
++    def test_changed_approval_binding_and_review_evidence_are_rejected(self):
++        for changed in ('approval', 'evidence'):
++            with self.subTest(changed=changed), tempfile.TemporaryDirectory() as tmp:
++                source, text, path, record, approval, data, evidence = fixture(Path(tmp))
++                target = approval if changed == 'approval' else evidence
++                target.write_bytes(target.read_bytes() + b' ')
++                with self.assertRaises(mm.MeasurementError):
++                    mm.sentence_map(source, text, 'pl', path)
++
++    def test_boundary_change_with_same_text_requires_new_approval(self):
++        with tempfile.TemporaryDirectory() as tmp:
++            source, text, path, record, *_ = fixture(Path(tmp))
++            record['paragraphs'][0]['sentences'] = [' '.join(FULL[0])]
++            save_map(path, record)
++            with self.assertRaises(mm.MeasurementError):
++                mm.sentence_map(source, text, 'pl', path)
++
++    def test_non_polish_map_or_approval_locale_is_rejected(self):
++        for wrong in ('map', 'approval'):
++            with self.subTest(wrong=wrong), tempfile.TemporaryDirectory() as tmp:
++                source, text, path, record, approval, data, _ = fixture(Path(tmp))
++                if wrong == 'map':
++                    record['locale'] = 'th'
++                else:
++                    data['locale'] = 'th'
++                    approval.write_bytes(json_bytes(data))
++                    record['approval_record']['sha256'] = digest(approval.read_bytes())
++                save_map(path, record)
++                with self.assertRaises(mm.MeasurementError):
++                    mm.sentence_map(source, text, 'pl', path)
++
++    def test_missing_extra_reordered_and_duplicate_paragraph_coverage_fail(self):
++        full_rows = [{'text': ' '.join(s), 'sentences': list(s)} for s in FULL]
++        variants = [full_rows[:1], full_rows + [full_rows[0]], list(reversed(full_rows))]
++        for rows in variants:
++            with self.subTest(rows=rows), tempfile.TemporaryDirectory() as tmp:
++                source, text, path, *_ = fixture(Path(tmp), rows=rows)
++                mapping = mm.sentence_map(source, text, 'pl', path)
++                with self.assertRaises(mm.MeasurementError):
++                    vm.metrics(text, 'pl', mapping)
++        with tempfile.TemporaryDirectory() as tmp:
++            text = '\n\n'.join([' '.join(FULL[0]), ' '.join(FULL[0]), ' '.join(FULL[1])])
++            source, text, path, *_ = fixture(Path(tmp), source_text=text, rows=full_rows)
++            mapping = mm.sentence_map(source, text, 'pl', path)
++            with self.assertRaises(mm.MeasurementError):
++                vm.metrics(text, 'pl', mapping)
++
++    def test_valid_map_handles_markdown_visible_text_and_all_paragraphs(self):
++        with tempfile.TemporaryDirectory() as tmp:
++            raw = '\n\n'.join(' '.join(s) for s in FULL).replace('Biblioteka', '[Biblioteka](https://example.test/catalog)')
++            source, text, path, *_ = fixture(Path(tmp), source_text=raw)
++            mapping = mm.sentence_map(source, text, 'pl', path)
++            self.assertIsNotNone(mapping)
++            self.assertEqual(vm.metrics(text, 'pl', mapping)['sentences'], 6)
++
++    def test_map_reuse_on_changed_text_and_unvalidated_dict_fail(self):
++        with tempfile.TemporaryDirectory() as tmp:
++            source, text, path, *_ = fixture(Path(tmp))
++            mapping = mm.sentence_map(source, text, 'pl', path)
++            with self.assertRaises(mm.MeasurementError):
++                vm.metrics(text.replace('Neutral test only', 'Different source'), 'pl', mapping)
++            unvalidated = {' '.join(s): list(s) for s in FULL}
++            with self.assertRaises(mm.MeasurementError):
++                vm.metrics(text, 'pl', unvalidated)
++
++    def test_missing_explicit_or_invalid_discovered_optional_map_errors(self):
++        with tempfile.TemporaryDirectory() as tmp:
++            source = Path(tmp) / 'neutral.pl.md'
++            source.write_text('Katalog stoi przy oknie. Anna czyta.')
++            self.assertIsNone(mm.sentence_map(source, source.read_text(), 'pl'))
++            with self.assertRaises(mm.MeasurementError):
++                mm.sentence_map(source, source.read_text(), 'pl', Path(tmp) / 'missing.json')
++            source.with_suffix('.sentences.json').write_text('{}')
++            with self.assertRaises(mm.MeasurementError):
++                mm.sentence_map(source, source.read_text(), 'pl')
++
++    def test_unapproved_and_unresolved_records_fail_even_with_matching_hashes(self):
++        for field in ('status', 'method', 'unresolved_boundaries', 'evidence-role'):
++            with self.subTest(field=field), tempfile.TemporaryDirectory() as tmp:
++                source, text, path, record, approval, data, _ = fixture(Path(tmp))
++                if field == 'status': data['status'] = 'draft'
++                elif field == 'method': record['method'] = 'automatic_split'
++                elif field == 'unresolved_boundaries': record[field] = ['date']
++                else: data['evidence'][0]['role'] = 'author-only'
++                approval.write_bytes(json_bytes(data))
++                record['approval_record']['sha256'] = digest(approval.read_bytes())
++                save_map(path, record)
++                with self.assertRaises(mm.MeasurementError):
++                    mm.sentence_map(source, text, 'pl', path)
++
++    def test_thai_required_map_and_existing_review_contract_stay_exact(self):
++        with tempfile.TemporaryDirectory() as tmp:
++            source = Path(tmp) / 'neutral.th.md'
++            source.write_text('เอกสารยังอยู่ที่เดิม')
++            with self.assertRaises(mm.MeasurementError) as error:
++                mm.sentence_map(source, source.read_text(), 'th')
++            self.assertEqual(str(error.exception), 'Thai sentence boundaries require a reviewed, source-SHA-bound sentence map; no punctuation-only fallback')
++            source, text, path, record, *_ = fixture(Path(tmp), [['เอกสารยังอยู่ที่เดิม', 'ผู้ส่งเก็บสำเนาไว้']], 'th')
++            mapping = mm.sentence_map(source, text, 'th', path)
++            self.assertEqual(mm.split_sentences('เอกสารยังอยู่ที่เดิม ผู้ส่งเก็บสำเนาไว้', 'th', mapping), ['เอกสารยังอยู่ที่เดิม', 'ผู้ส่งเก็บสำเนาไว้'])
++            record['unresolved_boundaries'] = ['unresolved']
++            save_map(path, record)
++            with self.assertRaises(mm.MeasurementError) as error:
++                mm.sentence_map(source, text, 'th', path)
++            self.assertEqual(str(error.exception), f'missing or unresolved Thai sentence review: {path}')
++
++    def test_other_locale_map_api_is_not_expanded(self):
++        self.assertIsNone(mm.sentence_map('/not/a/source', 'Texte.', 'fr', '/not/a/map'))
++
++    def test_actual_cli_unmapped_ambiguity_returns_two_without_traceback(self):
++        with tempfile.TemporaryDirectory() as tmp:
++            source = Path(tmp) / 'neutral.pl.md'
++            source.write_text('\n\n'.join(' '.join(s) for s in FULL))
++            run = subprocess.run([sys.executable, str(ROOT / 'variety_metrics.py'), 'check', str(source), '--lang', 'pl'], capture_output=True, text=True, env={**os.environ, 'PYTHONDONTWRITEBYTECODE': '1'})
++            self.assertEqual(run.returncode, 2)
++            self.assertIn('measurement unavailable', run.stdout)
++            self.assertNotIn('Traceback', run.stderr)
++
++
++if __name__ == '__main__':
++    unittest.main()
+--- /dev/null
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_sk_numeric_dates.py
+@@ -0,0 +1,20 @@
++import json
++from pathlib import Path
++import sys
++import unittest
++
++ROOT = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(ROOT))
++import variety_metrics as v
++
++class SlovakNumericDateBoundaries(unittest.TestCase):
++    def test_numeric_dates_and_real_sentence_boundaries(self):
++        fixtures = json.loads((Path(__file__).parent / "sk-numeric-date" / "neutral-fixtures.json").read_text())["fixtures"]
++        for case in fixtures:
++            with self.subTest(case=case["id"]):
++                actual = v.sentences(case["text"], "sk")
++                self.assertEqual(actual, case["expected"])
++                self.assertEqual(" ".join(actual).split(), case["text"].split())
++
++if __name__ == "__main__":
++    unittest.main()
+--- /dev/null
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/sk-numeric-date/neutral-fixtures.json
+@@ -0,0 +1,379 @@
++{
++  "atUTC": "2026-10-26T10:17:29.531684+00:00",
++  "scope": "Neutral hand-derived sentence arrays frozen before candidate implementation; no article score used to choose rule or expectations. Date support is lexical d.m.yyyy with day1-31/month1-12, not calendar validation.",
++  "fixtures": [
++    {
++      "id": "date-plain",
++      "text": "Lehota začala 7. 8. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
++      "expected": [
++        "Lehota začala 7. 8. 2032 a pokračovala ďalej.",
++        "Podanie zostalo úplné."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "date-leading-zero",
++      "text": "Lehota začala 07. 08. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
++      "expected": [
++        "Lehota začala 07. 08. 2032 a pokračovala ďalej.",
++        "Podanie zostalo úplné."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "date-first-range",
++      "text": "Lehota začala 1. 1. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
++      "expected": [
++        "Lehota začala 1. 1. 2032 a pokračovala ďalej.",
++        "Podanie zostalo úplné."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "date-last-range",
++      "text": "Lehota začala 31. 12. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
++      "expected": [
++        "Lehota začala 31. 12. 2032 a pokračovala ďalej.",
++        "Podanie zostalo úplné."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "date-compact",
++      "text": "Lehota začala 7.8.2032 a pokračovala ďalej. Podanie zostalo úplné.",
++      "expected": [
++        "Lehota začala 7.8.2032 a pokračovala ďalej.",
++        "Podanie zostalo úplné."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "date-mixed-a",
++      "text": "Lehota začala 7. 8.2032 a pokračovala ďalej. Podanie zostalo úplné.",
++      "expected": [
++        "Lehota začala 7. 8.2032 a pokračovala ďalej.",
++        "Podanie zostalo úplné."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "date-mixed-b",
++      "text": "Lehota začala 7.8. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
++      "expected": [
++        "Lehota začala 7.8. 2032 a pokračovala ďalej.",
++        "Podanie zostalo úplné."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "date-tab",
++      "text": "Lehota začala 7.\t8.\t2032 a pokračovala ďalej. Podanie zostalo úplné.",
++      "expected": [
++        "Lehota začala 7.\t8.\t2032 a pokračovala ďalej.",
++        "Podanie zostalo úplné."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "date-nbsp",
++      "text": "Lehota začala 7. 8. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
++      "expected": [
++        "Lehota začala 7. 8. 2032 a pokračovala ďalej.",
++        "Podanie zostalo úplné."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "date-nnbsp",
++      "text": "Lehota začala 7. 8. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
++      "expected": [
++        "Lehota začala 7. 8. 2032 a pokračovala ďalej.",
++        "Podanie zostalo úplné."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "date-double-space",
++      "text": "Lehota začala 7.  8.  2032 a pokračovala ďalej. Podanie zostalo úplné.",
++      "expected": [
++        "Lehota začala 7.  8.  2032 a pokračovala ďalej.",
++        "Podanie zostalo úplné."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "date-leading-day-zero",
++      "text": "Lehota začala 07. 8. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
++      "expected": [
++        "Lehota začala 07. 8. 2032 a pokračovala ďalej.",
++        "Podanie zostalo úplné."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "date-leading-month-zero",
++      "text": "Lehota začala 7. 08. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
++      "expected": [
++        "Lehota začala 7. 08. 2032 a pokračovala ďalej.",
++        "Podanie zostalo úplné."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "date-leap-date",
++      "text": "Lehota začala 29. 2. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
++      "expected": [
++        "Lehota začala 29. 2. 2032 a pokračovala ďalej.",
++        "Podanie zostalo úplné."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "end-date",
++      "text": "Termín bol 7. 8. 2032. Článok vysvetľuje postup.",
++      "expected": [
++        "Termín bol 7. 8. 2032.",
++        "Článok vysvetľuje postup."
++      ],
++      "kind": "real-boundary-after-year"
++    },
++    {
++      "id": "end-nbsp",
++      "text": "Termín bol 7. 8. 2032. Článok vysvetľuje postup.",
++      "expected": [
++        "Termín bol 7. 8. 2032.",
++        "Článok vysvetľuje postup."
++      ],
++      "kind": "real-boundary-after-year"
++    },
++    {
++      "id": "end-compact",
++      "text": "Termín bol 7.8.2032. Článok vysvetľuje postup.",
++      "expected": [
++        "Termín bol 7.8.2032.",
++        "Článok vysvetľuje postup."
++      ],
++      "kind": "real-boundary-after-year"
++    },
++    {
++      "id": "quote-date",
++      "text": "Dátum „7. 8. 2032“ zostal nezmenený. Úrad odpovedal.",
++      "expected": [
++        "Dátum „7. 8. 2032“ zostal nezmenený.",
++        "Úrad odpovedal."
++      ],
++      "kind": "numeric-date"
++    },
++    {
++      "id": "true-number-end",
++      "text": "Výsledok bol 7. Kontrola pokračovala.",
++      "expected": [
++        "Výsledok bol 7.",
++        "Kontrola pokračovala."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "true-year-end",
++      "text": "Údaj patrí do roku 2032. Článok pokračuje.",
++      "expected": [
++        "Údaj patrí do roku 2032.",
++        "Článok pokračuje."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "ordinal-following-sentence",
++      "text": "Údaj skončil číslom 7. 8. kapitola zostala otvorená.",
++      "expected": [
++        "Údaj skončil číslom 7.",
++        "8. kapitola zostala otvorená."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "numeric-new-subject",
++      "text": "Cena bola 7. 8 eur zaplatil vopred.",
++      "expected": [
++        "Cena bola 7.",
++        "8 eur zaplatil vopred."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "date-no-year",
++      "text": "Lehota skončila 7. 8. Podanie prišlo neskôr.",
++      "expected": [
++        "Lehota skončila 7.",
++        "8.",
++        "Podanie prišlo neskôr."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "day-zero",
++      "text": "Kód bol 0. 8. 2032 označuje sériu.",
++      "expected": [
++        "Kód bol 0.",
++        "8.",
++        "2032 označuje sériu."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "day-too-large",
++      "text": "Kód bol 32. 8. 2032 označuje sériu.",
++      "expected": [
++        "Kód bol 32.",
++        "8.",
++        "2032 označuje sériu."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "day-substring",
++      "text": "Kód bol 107. 8. 2032 označuje sériu.",
++      "expected": [
++        "Kód bol 107.",
++        "8.",
++        "2032 označuje sériu."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "month-zero",
++      "text": "Kód bol 7. 0. 2032 označuje sériu.",
++      "expected": [
++        "Kód bol 7.",
++        "0.",
++        "2032 označuje sériu."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "month-too-large",
++      "text": "Kód bol 7. 13. 2032 označuje sériu.",
++      "expected": [
++        "Kód bol 7.",
++        "13.",
++        "2032 označuje sériu."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "month-substring",
++      "text": "Kód bol 7. 108. 2032 označuje sériu.",
++      "expected": [
++        "Kód bol 7.",
++        "108.",
++        "2032 označuje sériu."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "short-year",
++      "text": "Kód bol 7. 8. 32 označuje sériu.",
++      "expected": [
++        "Kód bol 7.",
++        "8.",
++        "32 označuje sériu."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "long-year",
++      "text": "Kód bol 7. 8. 20321 označuje sériu.",
++      "expected": [
++        "Kód bol 7.",
++        "8.",
++        "20321 označuje sériu."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "year-word-suffix",
++      "text": "Kód bol 7. 8. 2032x označuje sériu.",
++      "expected": [
++        "Kód bol 7.",
++        "8.",
++        "2032x označuje sériu."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "day-word-prefix",
++      "text": "Kód A7. 8. 2032 označuje sériu.",
++      "expected": [
++        "Kód A7.",
++        "8.",
++        "2032 označuje sériu."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "decimal",
++      "text": "Hodnota je 7.8 a zostáva rovnaká. Kontrola skončila.",
++      "expected": [
++        "Hodnota je 7.8 a zostáva rovnaká.",
++        "Kontrola skončila."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "decimal-end",
++      "text": "Hodnota je 7.8. Kontrola skončila.",
++      "expected": [
++        "Hodnota je 7.8.",
++        "Kontrola skončila."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "decimal-year",
++      "text": "Kód bol 7. 8. 2032.5 a pokračoval.",
++      "expected": [
++        "Kód bol 7.",
++        "8.",
++        "2032.5 a pokračoval."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "newline-date",
++      "text": "Údaj skončil číslom 7.\n8. 2032 označuje sériu.",
++      "expected": [
++        "Údaj skončil číslom 7.",
++        "8.",
++        "2032 označuje sériu."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "month-existing",
++      "text": "Termín bol 7. augusta 2032. Článok pokračuje.",
++      "expected": [
++        "Termín bol 7. augusta 2032.",
++        "Článok pokračuje."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "month-nominative-existing",
++      "text": "Termín bol 7. august. Článok pokračuje.",
++      "expected": [
++        "Termín bol 7. august.",
++        "Článok pokračuje."
++      ],
++      "kind": "counterexample-or-regression"
++    },
++    {
++      "id": "article-existing",
++      "text": "Podľa článku 7 ods. 2 sa konanie skončilo. Úrad odpovedal.",
++      "expected": [
++        "Podľa článku 7 ods. 2 sa konanie skončilo.",
++        "Úrad odpovedal."
++      ],
++      "kind": "counterexample-or-regression"
++    }
++  ]
++}
+--- /dev/null
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/test_tr_ordinal_boundaries.py
+@@ -0,0 +1,24 @@
++"""Literal Turkish inflected ordinal and true-sentence-end contracts."""
++from pathlib import Path
++import json,sys,unittest
++ROOT=Path(__file__).resolve().parents[1]
++sys.path.insert(0,str(ROOT))
++import variety_metrics as v
++import variety_multilingual as m
++FIXTURES=ROOT/'tests/tr-ordinal-boundaries'
++class TurkishOrdinalTests(unittest.TestCase):
++    def check_cases(self,name):
++        for row in json.loads((FIXTURES/name).read_text())['cases']:
++            with self.subTest(id=row['id']):
++                self.assertEqual(v.sentences(row['text'],'tr'),row['expected'])
++                self.assertEqual(m.split_sentences(row['text'],'tr'),row['expected'])
++    def test_inflected_nouns_and_true_sentence_ends(self):
++        self.check_cases('neutral-fixtures.json')
++    def test_locative_relative_forms_and_true_sentence_end(self):
++        self.check_cases('neutral-relative-fixtures.json')
++    def test_paragraph_and_heading_boundaries(self):
++        body='Kitabın 7. sayfasını okuduk. Sonra durduk.\n\n## 4. Madde\n\nListenin 2. bendini okuduk.\n\n## Resmî kaynaklar\n\nBu bölüm istatistik dışında.'
++        paragraphs,_,_=v.body_blocks(body,'tr')
++        self.assertEqual(paragraphs,['Kitabın 7. sayfasını okuduk. Sonra durduk.','Listenin 2. bendini okuduk.'])
++        self.assertEqual([v.sentences(p,'tr') for p in paragraphs],[['Kitabın 7. sayfasını okuduk.','Sonra durduk.'],['Listenin 2. bendini okuduk.']])
++if __name__=='__main__':unittest.main()
+--- /dev/null
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/tr-ordinal-boundaries/neutral-fixtures.json
+@@ -0,0 +1,182 @@
++{
++  "atUTC": "2026-10-26T10:17:06.986664+00:00",
++  "scope": "Literal neutral library/list/classroom examples fixed before any candidate profile edit. Not manuscript facts or scores.",
++  "cases": [
++    {
++      "id": "inflected_page",
++      "text": "Kitabın 7. sayfasını açtık. Ardından not aldık.",
++      "expected": [
++        "Kitabın 7. sayfasını açtık.",
++        "Ardından not aldık."
++      ]
++    },
++    {
++      "id": "inflected_item",
++      "text": "Listenin 4. maddesi silindi. Sonra durduk.",
++      "expected": [
++        "Listenin 4. maddesi silindi.",
++        "Sonra durduk."
++      ]
++    },
++    {
++      "id": "genitive_item",
++      "text": "Listenin 4. maddesinin başlığı değişti. Kalan başlıklar aynıydı.",
++      "expected": [
++        "Listenin 4. maddesinin başlığı değişti.",
++        "Kalan başlıklar aynıydı."
++      ]
++    },
++    {
++      "id": "range_page",
++      "text": "Kitabın 12–14. sayfalarında resimler vardı. Birini seçtik.",
++      "expected": [
++        "Kitabın 12–14. sayfalarında resimler vardı.",
++        "Birini seçtik."
++      ]
++    },
++    {
++      "id": "base_form_positive",
++      "text": "Önce 3. madde okundu. Sonra ara verildi.",
++      "expected": [
++        "Önce 3. madde okundu.",
++        "Sonra ara verildi."
++      ]
++    },
++    {
++      "id": "actual_number_end",
++      "text": "Aldığım puan 7. Sonra başka bir soru geldi.",
++      "expected": [
++        "Aldığım puan 7.",
++        "Sonra başka bir soru geldi."
++      ]
++    },
++    {
++      "id": "separate_bare_noun_sentence",
++      "text": "Aldığım puan 7. Madde listesi masadaydı.",
++      "expected": [
++        "Aldığım puan 7.",
++        "Madde listesi masadaydı."
++      ]
++    },
++    {
++      "id": "decimal_and_sentence",
++      "text": "Ölçülen değer 2.5 oldu. Deney bitti.",
++      "expected": [
++        "Ölçülen değer 2.5 oldu.",
++        "Deney bitti."
++      ]
++    },
++    {
++      "id": "inflected_clause",
++      "text": "Metnin 2. fıkrasına bir başlık ekledik. Ardından okuduk.",
++      "expected": [
++        "Metnin 2. fıkrasına bir başlık ekledik.",
++        "Ardından okuduk."
++      ]
++    },
++    {
++      "id": "inflected_subitem",
++      "text": "Listenin 3. bendinde bir hata vardı. Sonra düzelttik.",
++      "expected": [
++        "Listenin 3. bendinde bir hata vardı.",
++        "Sonra düzelttik."
++      ]
++    },
++    {
++      "id": "plural_possessive_item",
++      "text": "Belgelerin 2. maddelerinde aynı ifade vardı. Sonra karşılaştırdık.",
++      "expected": [
++        "Belgelerin 2. maddelerinde aynı ifade vardı.",
++        "Sonra karşılaştırdık."
++      ]
++    },
++    {
++      "id": "accusative_page",
++      "text": "Kitabın 6. sayfasını inceledik. Ardından kapattık.",
++      "expected": [
++        "Kitabın 6. sayfasını inceledik.",
++        "Ardından kapattık."
++      ]
++    },
++    {
++      "id": "dative_item",
++      "text": "Önce 3. maddeye baktık. Sonra ara verdik.",
++      "expected": [
++        "Önce 3. maddeye baktık.",
++        "Sonra ara verdik."
++      ]
++    },
++    {
++      "id": "ablative_subitem",
++      "text": "Listenin 8. bendinden bir kelime çıkarıldı. Kalan metin korundu.",
++      "expected": [
++        "Listenin 8. bendinden bir kelime çıkarıldı.",
++        "Kalan metin korundu."
++      ]
++    },
++    {
++      "id": "uppercase_inflected_new_sentence",
++      "text": "Son aldığım puan 8. Maddesinin başlığı yoktu.",
++      "expected": [
++        "Son aldığım puan 8.",
++        "Maddesinin başlığı yoktu."
++      ]
++    },
++    {
++      "id": "uppercase_page_new_sentence",
++      "text": "Toplam sayfa sayısı 8. Sayfanın köşesi yırtılmıştı.",
++      "expected": [
++        "Toplam sayfa sayısı 8.",
++        "Sayfanın köşesi yırtılmıştı."
++      ]
++    },
++    {
++      "id": "ordinary_named_date",
++      "text": "Toplantı 7 Mayıs 2028 tarihinde başladı. Sonra not aldık.",
++      "expected": [
++        "Toplantı 7 Mayıs 2028 tarihinde başladı.",
++        "Sonra not aldık."
++      ]
++    },
++    {
++      "id": "numeric_date",
++      "text": "Toplantı 07.05.2028 tarihinde başladı. Sonra not aldık.",
++      "expected": [
++        "Toplantı 07.05.2028 tarihinde başladı.",
++        "Sonra not aldık."
++      ]
++    },
++    {
++      "id": "thousands_and_sentence",
++      "text": "Tutar 2.500 liraydı. Hesabı kapattık.",
++      "expected": [
++        "Tutar 2.500 liraydı.",
++        "Hesabı kapattık."
++      ]
++    },
++    {
++      "id": "abbreviation_and_sentence",
++      "text": "Dr. Deniz metni okudu. Sonra döndü.",
++      "expected": [
++        "Dr. Deniz metni okudu.",
++        "Sonra döndü."
++      ]
++    },
++    {
++      "id": "quoted_inflected_ordinal",
++      "text": "“Kitabın 5. sayfasında bir resim var.” Sonra kitabı kapattı.",
++      "expected": [
++        "“Kitabın 5. sayfasında bir resim var.”",
++        "Sonra kitabı kapattı."
++      ]
++    },
++    {
++      "id": "actual_ordinal_end",
++      "text": "Yarışmadaki sıram 5. Sonra sonuçları okuduk.",
++      "expected": [
++        "Yarışmadaki sıram 5.",
++        "Sonra sonuçları okuduk."
++      ]
++    }
++  ]
++}
+--- /dev/null
++++ b/docs/audit/all-locales-parity-20261025/tooling/variety/tests/tr-ordinal-boundaries/neutral-relative-fixtures.json
+@@ -0,0 +1,53 @@
++{
++  "scope": "Additional literal neutral locative-relative forms frozen after first comparison and before candidate2; not manuscript strings. Original22 fixtures unchanged.",
++  "cases": [
++    {
++      "id": "item_relative",
++      "text": "Kitabın 4. maddesindeki sözcük silindi. Sonra okuduk.",
++      "expected": [
++        "Kitabın 4. maddesindeki sözcük silindi.",
++        "Sonra okuduk."
++      ]
++    },
++    {
++      "id": "clause_relative",
++      "text": "Metnin 2. fıkradaki başlığı eksikti. Ardından başlığı ekledik.",
++      "expected": [
++        "Metnin 2. fıkradaki başlığı eksikti.",
++        "Ardından başlığı ekledik."
++      ]
++    },
++    {
++      "id": "page_relative",
++      "text": "Kitabın 6. sayfasındaki resim yenilendi. Diğerleri korundu.",
++      "expected": [
++        "Kitabın 6. sayfasındaki resim yenilendi.",
++        "Diğerleri korundu."
++      ]
++    },
++    {
++      "id": "subitem_relative",
++      "text": "Listenin 8. bendindeki kelimeyi inceledik. Sonra listeyi kapattık.",
++      "expected": [
++        "Listenin 8. bendindeki kelimeyi inceledik.",
++        "Sonra listeyi kapattık."
++      ]
++    },
++    {
++      "id": "plural_relative",
++      "text": "Belgelerin 2. maddelerindeki tarih aynıydı. Sonra dosyaları kapattık.",
++      "expected": [
++        "Belgelerin 2. maddelerindeki tarih aynıydı.",
++        "Sonra dosyaları kapattık."
++      ]
++    },
++    {
++      "id": "uppercase_relative_end",
++      "text": "Toplam puan 4. Maddedeki başlık değişmedi.",
++      "expected": [
++        "Toplam puan 4.",
++        "Maddedeki başlık değişmedi."
++      ]
++    }
++  ]
++}

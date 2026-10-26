@@ -6,7 +6,7 @@
   "source_heading_pattern": "(?i:^#{1,6}\\s+(?:\\d+[.)]\\s+)?(?:(?:resm[iî]\\s+)?kaynaklar(?:\\s+ve\\s+kontrol\\s+tarihi)?)\\s*:?\\s*$)",
   "abbreviations": ["Dr", "Prof", "Av", "Sn", "No", "md", "m", "f", "bkz", "örn", "vb", "vs", "T.C"],
   "terminal_abbreviations": ["vb", "vs"],
-  "ordinal_followers": "madde|fıkra|bent|sayfa|Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık",
+  "ordinal_followers": "(?-i:madde(?:yi|ye|de|den|deki|sindeki|lerdeki|lerindeki|nin|si|sini|sine|sinde|sinden|sinin|ler|leri|lerin|lere|lerde|lerden|lerini|lerine|lerinde|lerinden|lerinin)?|(?:fıkra|sayfa)(?:yı|ya|da|dan|daki|sındaki|lardaki|larındaki|nın|sı|sını|sına|sında|sından|sının|lar|ları|ların|lara|larda|lardan|larını|larına|larında|larından|larının)?|bent(?:te|ten|teki|lerdeki|lerindeki|ler|leri|lerin|lere|lerde|lerden|lerini|lerine|lerinde|lerinden|lerinin)?|bend(?:indeki|i|in|e|ini|ine|inde|inden|inin))|Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık",
   "contrast_patterns": ["(?i:\\bdeğil\\s*[,;][^.!?\\n]{1,160})", "(?i:\\byerine\\b)", "(?i:\\b\\w+(?:dan|den|tan|ten)\\s+farklı\\b)"],
   "caveat_pattern": "(?i:^\\s*[“\"(]*(?:ancak|bununla\\s+birlikte|yine\\s+de|buna\\s+rağmen)\\b)",
   "hypo_pattern": "(?i:^\\s*[“\"(]*(?:varsayalım|diyelim|farz\\s+edelim)\\b|^.{0,140}\\bvarsayalım[.!?]?$)",

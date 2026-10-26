@@ -1,0 +1,2789 @@
+{
+  "at": "2026-10-26T08:44:10.326995+00:00",
+  "rows": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "ddee0de08627d6fb79dcd96cf594cdd590962268d107c5c173ea8ce682017621",
+      "initial_sha256": "e4651fa794db90c5e12d972714ab718ccce2b872f6bfdf04ef4109baad9fc9dc",
+      "inverse_exact": true,
+      "frontmatter_FAQ_unchanged": true,
+      "URL_sequence_and_numeric_tokens_unchanged": true,
+      "actual_cli_evidence": "sr-variety-revised.json",
+      "observed_batch_exit": 0,
+      "observed_file_status": "OK — no variety limit violated",
+      "metrics": {
+        "lang": "sr",
+        "sentences": 37,
+        "paras": 12,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.6,
+        "len_cv": 0.512,
+        "short_share": 0.216,
+        "long_share": 0.054,
+        "para_cv": 0.27,
+        "even_run3": 0.0,
+        "top_end": "novac",
+        "top_end_share": 0.054,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "da",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.25,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 3.63,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Da li preporuka za dodatno vreme pokriva i zahtev da naručilac plati dodatne troškove?",
+        "last": "Stanje izvora: zvanično sudsko objašnjenje provereno 25. oktobra 2026, a važeći propisi i tržišni izveštaj 26. oktobra. ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_source_sentences": [
+        "Da li preporuka za dodatno vreme pokriva i zahtev da naručilac plati dodatne troškove?",
+        "U sporu oko tajvanskog bolničkog projekta izvođač je dobio preporuku o produženju roka, a zatim u arbitraži tražio novac.",
+        "Prema objašnjenju Vrhovnog suda, za taj konkretan novčani zahtev nedostajao je sporazum o arbitraži, uključujući osnov po kojem bi se saglasnost smatrala datom po zakonu.",
+        "Arbitražom je bilo dosuđeno 44.417.150 novih tajvanskih dolara.",
+        "Odluka je kasnije poništena.",
+        "Vrhovni sud je 12. jula 2017. odbio pravni lek izvođača u predmetu 106年度台上字第723號, pa je poništenje ostalo na snazi.",
+        "Zvanično objašnjenje izričito navodi da je predmet pravnosnažno okončan.",
+        "Izvođač je tokom medijacije menjao ono što traži od naručioca.",
+        "Redosled iz spisa objašnjava zašto potvrda o neuspehu tog postupka nije bila dovoljna.",
+        "Potvrda je beležila neuspeh medijacije.",
+        "Nije nadomestila preporuku o drugom predmetu spora.",
+        "Sud je objasnio da je naručilac morao dobiti priliku da prihvati ili odbije preporuku koja se odnosi upravo na zahtev kasnije iznet pred arbitražu.",
+        "Vrhovni sud je ispravio obrazloženje nižeg suda o merodavnoj verziji zakona, ali je održao odluku o poništenju.",
+        "Član 85-1 tajvanskog Zakona o javnim nabavkama dopušta da se spor o izvršenju ugovora uputi komisiji za razmatranje prigovora u javnim nabavkama radi medijacije.",
+        "Javni naručilac ne može odbiti prijavu dobavljača za medijaciju.",
+        "Za građevinske radove ili tehničke usluge komisija mora dati preporuku ili predlog, a ako medijacija ne uspe zato što se naručilac s tim ne slaže, naručilac ne može odbiti upućivanje spora na arbitražu koje traži dobavljač.",
+        "Za bolnički projekat nije postojao ni poseban ugovoreni osnov za arbitražu o novcu.",
+        "Sud je utvrdio i da nisu ispunjene pretpostavke zakonski zasnovane saglasnosti.",
+        "Odsustvo arbitražnog sporazuma bilo je osnov poništenja iz člana 40 stav 1 tačka 2 Zakona o arbitraži.",
+        "Vrsta nabavke utiče na izbor postupka.",
+        "Sadašnji član 85-1 u navedenom delu obuhvata radove ili tehničke usluge; kupovina opreme i drugi ugovori javnog sektora ne ulaze automatski u taj put.",
+        "Ugovor, međutim, može već sadržati zasebnu arbitražnu klauzulu.",
+        "Američka Uprava za međunarodnu trgovinu, ITA, u izveštaju o tajvanskoj energetici od 30. septembra 2026. opisuje očekivane nabavke za tajvanski elektroenergetski sektor i mrežu krajem 2026. i tokom 2027, uključujući prilike za američke dobavljače.",
+        "Nabavke su planirane.",
+        "Sam izveštaj ne potvrđuje da je određeni tender otvoren, da konkretna firma ispunjava uslove ili da će ugovor pripadati građevinskim radovima ili tehničkim uslugama.",
+        "Ponuđaču je korisno da pri početnom pregledu ugovora poveže vrstu nabavke sa klauzulom o sporovima.",
+        "Kod već započetih radova isti problem postaje vidljiv kada se zahtev za dodatno vreme pretvori u zahtev za troškove kašnjenja.",
+        "Poslovni povod može ostati isti, dok se tražena pravna zaštita promeni.",
+        "Šta je komisija zaista razmatrala?",
+        "Odgovor se traži u prvobitnoj prijavi, njenim izmenama, preporuci ili predlogu, odgovoru naručioca i nacrtu arbitražnog zahteva.",
+        "Promena iznosa ili preciznije pravno obrazloženje sama po sebi ne stvara nužno novi spor.",
+        "Ni isti broj projekta ne dokazuje da je predmet zahteva ostao nepromenjen.",
+        "Ako se ti dokumenti ne poklapaju, pojedinačna pravna procena može razjasniti postoji li poseban arbitražni sporazum ili je potrebna dalja medijacija.",
+        "Preko kontakt stranice na engleskom mogu se navesti kategorija projekta, tražena zaštita i sledeći procesni datum.",
+        "Prijave, njihove izmene i odgovore naručioca treba složiti po redosledu kojim su nastali, tako da se vidi kada je zahtev za vreme ponovo postao zahtev za novac.",
+        "Stanje izvora: zvanično sudsko objašnjenje provereno 25. oktobra 2026, a važeći propisi i tržišni izveštaj 26. oktobra.",
+        "Tekst razmatra jedan put do arbitraže; ne utvrđuje nadležni forum ili rok za podnošenje zahteva u pojedinačnom ugovoru."
+      ],
+      "actual_rendered_sentences": [
+        "Da li preporuka za dodatno vreme pokriva i zahtev da naručilac plati dodatne troškove?",
+        "U sporu oko tajvanskog bolničkog projekta izvođač je dobio preporuku o produženju roka, a zatim u arbitraži tražio novac.",
+        "Prema objašnjenju Vrhovnog suda, za taj konkretan novčani zahtev nedostajao je sporazum o arbitraži, uključujući osnov po kojem bi se saglasnost smatrala datom po zakonu.",
+        "Arbitražom je bilo dosuđeno 44.417.150 novih tajvanskih dolara.",
+        "Odluka je kasnije poništena.",
+        "Vrhovni sud je 12. jula 2017. odbio pravni lek izvođača u predmetu 106年度台上字第723號, pa je poništenje ostalo na snazi.",
+        "Zvanično objašnjenje izričito navodi da je predmet pravnosnažno okončan.",
+        "Izvođač je tokom medijacije menjao ono što traži od naručioca.",
+        "Redosled iz spisa objašnjava zašto potvrda o neuspehu tog postupka nije bila dovoljna.",
+        "Potvrda je beležila neuspeh medijacije.",
+        "Nije nadomestila preporuku o drugom predmetu spora.",
+        "Sud je objasnio da je naručilac morao dobiti priliku da prihvati ili odbije preporuku koja se odnosi upravo na zahtev kasnije iznet pred arbitražu.",
+        "Vrhovni sud je ispravio obrazloženje nižeg suda o merodavnoj verziji zakona, ali je održao odluku o poništenju.",
+        "Član 85-1 tajvanskog Zakona o javnim nabavkama dopušta da se spor o izvršenju ugovora uputi komisiji za razmatranje prigovora u javnim nabavkama radi medijacije.",
+        "Javni naručilac ne može odbiti prijavu dobavljača za medijaciju.",
+        "Za građevinske radove ili tehničke usluge komisija mora dati preporuku ili predlog, a ako medijacija ne uspe zato što se naručilac s tim ne slaže, naručilac ne može odbiti upućivanje spora na arbitražu koje traži dobavljač.",
+        "Za bolnički projekat nije postojao ni poseban ugovoreni osnov za arbitražu o novcu.",
+        "Sud je utvrdio i da nisu ispunjene pretpostavke zakonski zasnovane saglasnosti.",
+        "Odsustvo arbitražnog sporazuma bilo je osnov poništenja iz člana 40 stav 1 tačka 2 Zakona o arbitraži.",
+        "Vrsta nabavke utiče na izbor postupka.",
+        "Sadašnji član 85-1 u navedenom delu obuhvata radove ili tehničke usluge; kupovina opreme i drugi ugovori javnog sektora ne ulaze automatski u taj put.",
+        "Ugovor, međutim, može već sadržati zasebnu arbitražnu klauzulu.",
+        "Američka Uprava za međunarodnu trgovinu, ITA, u izveštaju o tajvanskoj energetici od 30. septembra 2026. opisuje očekivane nabavke za tajvanski elektroenergetski sektor i mrežu krajem 2026. i tokom 2027, uključujući prilike za američke dobavljače.",
+        "Nabavke su planirane.",
+        "Sam izveštaj ne potvrđuje da je određeni tender otvoren, da konkretna firma ispunjava uslove ili da će ugovor pripadati građevinskim radovima ili tehničkim uslugama.",
+        "Ponuđaču je korisno da pri početnom pregledu ugovora poveže vrstu nabavke sa klauzulom o sporovima.",
+        "Kod već započetih radova isti problem postaje vidljiv kada se zahtev za dodatno vreme pretvori u zahtev za troškove kašnjenja.",
+        "Poslovni povod može ostati isti, dok se tražena pravna zaštita promeni.",
+        "Šta je komisija zaista razmatrala?",
+        "Odgovor se traži u prvobitnoj prijavi, njenim izmenama, preporuci ili predlogu, odgovoru naručioca i nacrtu arbitražnog zahteva.",
+        "Promena iznosa ili preciznije pravno obrazloženje sama po sebi ne stvara nužno novi spor.",
+        "Ni isti broj projekta ne dokazuje da je predmet zahteva ostao nepromenjen.",
+        "Ako se ti dokumenti ne poklapaju, pojedinačna pravna procena može razjasniti postoji li poseban arbitražni sporazum ili je potrebna dalja medijacija.",
+        "Preko kontakt stranice na engleskom mogu se navesti kategorija projekta, tražena zaštita i sledeći procesni datum.",
+        "Prijave, njihove izmene i odgovore naručioca treba složiti po redosledu kojim su nastali, tako da se vidi kada je zahtev za vreme ponovo postao zahtev za novac.",
+        "Stanje izvora: zvanično sudsko objašnjenje provereno 25. oktobra 2026, a važeći propisi i tržišni izveštaj 26. oktobra.",
+        "Tekst razmatra jedan put do arbitraže; ne utvrđuje nadležni forum ili rok za podnošenje zahteva u pojedinačnom ugovoru."
+      ],
+      "actual_rendered_paragraphs": [
+        "Da li preporuka za dodatno vreme pokriva i zahtev da naručilac plati dodatne troškove? U sporu oko tajvanskog bolničkog projekta izvođač je dobio preporuku o produženju roka, a zatim u arbitraži tražio novac. Prema objašnjenju Vrhovnog suda, za taj konkretan novčani zahtev nedostajao je sporazum o arbitraži, uključujući osnov po kojem bi se saglasnost smatrala datom po zakonu.",
+        "Arbitražom je bilo dosuđeno 44.417.150 novih tajvanskih dolara. Odluka je kasnije poništena. Vrhovni sud je 12. jula 2017. odbio pravni lek izvođača u predmetu 106年度台上字第723號, pa je poništenje ostalo na snazi. Zvanično objašnjenje izričito navodi da je predmet pravnosnažno okončan.",
+        "Izvođač je tokom medijacije menjao ono što traži od naručioca. Redosled iz spisa objašnjava zašto potvrda o neuspehu tog postupka nije bila dovoljna.",
+        "Potvrda je beležila neuspeh medijacije. Nije nadomestila preporuku o drugom predmetu spora. Sud je objasnio da je naručilac morao dobiti priliku da prihvati ili odbije preporuku koja se odnosi upravo na zahtev kasnije iznet pred arbitražu. Vrhovni sud je ispravio obrazloženje nižeg suda o merodavnoj verziji zakona, ali je održao odluku o poništenju.",
+        "Član 85-1 tajvanskog Zakona o javnim nabavkama dopušta da se spor o izvršenju ugovora uputi komisiji za razmatranje prigovora u javnim nabavkama radi medijacije. Javni naručilac ne može odbiti prijavu dobavljača za medijaciju. Za građevinske radove ili tehničke usluge komisija mora dati preporuku ili predlog, a ako medijacija ne uspe zato što se naručilac s tim ne slaže, naručilac ne može odbiti upućivanje spora na arbitražu koje traži dobavljač.",
+        "Za bolnički projekat nije postojao ni poseban ugovoreni osnov za arbitražu o novcu. Sud je utvrdio i da nisu ispunjene pretpostavke zakonski zasnovane saglasnosti. Odsustvo arbitražnog sporazuma bilo je osnov poništenja iz člana 40 stav 1 tačka 2 Zakona o arbitraži.",
+        "Vrsta nabavke utiče na izbor postupka. Sadašnji član 85-1 u navedenom delu obuhvata radove ili tehničke usluge; kupovina opreme i drugi ugovori javnog sektora ne ulaze automatski u taj put. Ugovor, međutim, može već sadržati zasebnu arbitražnu klauzulu.",
+        "Američka Uprava za međunarodnu trgovinu, ITA, u izveštaju o tajvanskoj energetici od 30. septembra 2026. opisuje očekivane nabavke za tajvanski elektroenergetski sektor i mrežu krajem 2026. i tokom 2027, uključujući prilike za američke dobavljače. Nabavke su planirane. Sam izveštaj ne potvrđuje da je određeni tender otvoren, da konkretna firma ispunjava uslove ili da će ugovor pripadati građevinskim radovima ili tehničkim uslugama.",
+        "Ponuđaču je korisno da pri početnom pregledu ugovora poveže vrstu nabavke sa klauzulom o sporovima. Kod već započetih radova isti problem postaje vidljiv kada se zahtev za dodatno vreme pretvori u zahtev za troškove kašnjenja. Poslovni povod može ostati isti, dok se tražena pravna zaštita promeni.",
+        "Šta je komisija zaista razmatrala? Odgovor se traži u prvobitnoj prijavi, njenim izmenama, preporuci ili predlogu, odgovoru naručioca i nacrtu arbitražnog zahteva. Promena iznosa ili preciznije pravno obrazloženje sama po sebi ne stvara nužno novi spor. Ni isti broj projekta ne dokazuje da je predmet zahteva ostao nepromenjen.",
+        "Ako se ti dokumenti ne poklapaju, pojedinačna pravna procena može razjasniti postoji li poseban arbitražni sporazum ili je potrebna dalja medijacija. Preko kontakt stranice na engleskom mogu se navesti kategorija projekta, tražena zaštita i sledeći procesni datum. Prijave, njihove izmene i odgovore naručioca treba složiti po redosledu kojim su nastali, tako da se vidi kada je zahtev za vreme ponovo postao zahtev za novac.",
+        "Stanje izvora: zvanično sudsko objašnjenje provereno 25. oktobra 2026, a važeći propisi i tržišni izveštaj 26. oktobra. Tekst razmatra jedan put do arbitraže; ne utvrđuje nadležni forum ili rok za podnošenje zahteva u pojedinačnom ugovoru."
+      ],
+      "source_render_arrays_and_lengths_identical": true,
+      "lengths": [
+        14,
+        19,
+        25,
+        8,
+        4,
+        19,
+        9,
+        10,
+        13,
+        5,
+        7,
+        24,
+        17,
+        25,
+        9,
+        36,
+        13,
+        11,
+        17,
+        6,
+        25,
+        8,
+        34,
+        3,
+        24,
+        15,
+        20,
+        11,
+        5,
+        17,
+        14,
+        12,
+        21,
+        16,
+        27,
+        17,
+        18
+      ],
+      "sentence_changes_after_initial": [
+        {
+          "operation": "replace",
+          "old_start": 23,
+          "new_start": 23,
+          "before": [
+            "Američka Uprava za međunarodnu trgovinu, ITA, u izveštaju o tajvanskoj energetici od 30. septembra 2026. opisuje očekivane nabavke električne energije i mrežne opreme na Tajvanu krajem 2026. i tokom 2027, uključujući prilike za američke dobavljače."
+          ],
+          "after": [
+            "Američka Uprava za međunarodnu trgovinu, ITA, u izveštaju o tajvanskoj energetici od 30. septembra 2026. opisuje očekivane nabavke za tajvanski elektroenergetski sektor i mrežu krajem 2026. i tokom 2027, uključujući prilike za američke dobavljače."
+          ]
+        }
+      ],
+      "initial_human_read_count": 37,
+      "current_segment_count": 37,
+      "source_paragraphs": [
+        {
+          "index": 1,
+          "opener": "da",
+          "sentences": [
+            {
+              "text": "Da li preporuka za dodatno vreme pokriva i zahtev da naručilac plati dodatne troškove?",
+              "units": 14
+            },
+            {
+              "text": "U sporu oko tajvanskog bolničkog projekta izvođač je dobio preporuku o produženju roka, a zatim u arbitraži tražio novac.",
+              "units": 19
+            },
+            {
+              "text": "Prema objašnjenju Vrhovnog suda, za taj konkretan novčani zahtev nedostajao je sporazum o arbitraži, uključujući osnov po kojem bi se saglasnost smatrala datom po zakonu.",
+              "units": 25
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "arbitražom",
+          "sentences": [
+            {
+              "text": "Arbitražom je bilo dosuđeno 44.417.150 novih tajvanskih dolara.",
+              "units": 8
+            },
+            {
+              "text": "Odluka je kasnije poništena.",
+              "units": 4
+            },
+            {
+              "text": "Vrhovni sud je 12. jula 2017. odbio pravni lek izvođača u predmetu 106年度台上字第723號, pa je poništenje ostalo na snazi.",
+              "units": 19
+            },
+            {
+              "text": "Zvanično objašnjenje izričito navodi da je predmet pravnosnažno okončan.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "izvođač",
+          "sentences": [
+            {
+              "text": "Izvođač je tokom medijacije menjao ono što traži od naručioca.",
+              "units": 10
+            },
+            {
+              "text": "Redosled iz spisa objašnjava zašto potvrda o neuspehu tog postupka nije bila dovoljna.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "potvrda",
+          "sentences": [
+            {
+              "text": "Potvrda je beležila neuspeh medijacije.",
+              "units": 5
+            },
+            {
+              "text": "Nije nadomestila preporuku o drugom predmetu spora.",
+              "units": 7
+            },
+            {
+              "text": "Sud je objasnio da je naručilac morao dobiti priliku da prihvati ili odbije preporuku koja se odnosi upravo na zahtev kasnije iznet pred arbitražu.",
+              "units": 24
+            },
+            {
+              "text": "Vrhovni sud je ispravio obrazloženje nižeg suda o merodavnoj verziji zakona, ali je održao odluku o poništenju.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "član",
+          "sentences": [
+            {
+              "text": "Član 85-1 tajvanskog Zakona o javnim nabavkama dopušta da se spor o izvršenju ugovora uputi komisiji za razmatranje prigovora u javnim nabavkama radi medijacije.",
+              "units": 25
+            },
+            {
+              "text": "Javni naručilac ne može odbiti prijavu dobavljača za medijaciju.",
+              "units": 9
+            },
+            {
+              "text": "Za građevinske radove ili tehničke usluge komisija mora dati preporuku ili predlog, a ako medijacija ne uspe zato što se naručilac s tim ne slaže, naručilac ne može odbiti upućivanje spora na arbitražu koje traži dobavljač.",
+              "units": 36
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "za",
+          "sentences": [
+            {
+              "text": "Za bolnički projekat nije postojao ni poseban ugovoreni osnov za arbitražu o novcu.",
+              "units": 13
+            },
+            {
+              "text": "Sud je utvrdio i da nisu ispunjene pretpostavke zakonski zasnovane saglasnosti.",
+              "units": 11
+            },
+            {
+              "text": "Odsustvo arbitražnog sporazuma bilo je osnov poništenja iz člana 40 stav 1 tačka 2 Zakona o arbitraži.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "vrsta",
+          "sentences": [
+            {
+              "text": "Vrsta nabavke utiče na izbor postupka.",
+              "units": 6
+            },
+            {
+              "text": "Sadašnji član 85-1 u navedenom delu obuhvata radove ili tehničke usluge; kupovina opreme i drugi ugovori javnog sektora ne ulaze automatski u taj put.",
+              "units": 25
+            },
+            {
+              "text": "Ugovor, međutim, može već sadržati zasebnu arbitražnu klauzulu.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "američka",
+          "sentences": [
+            {
+              "text": "Američka Uprava za međunarodnu trgovinu, ITA, u izveštaju o tajvanskoj energetici od 30. septembra 2026. opisuje očekivane nabavke za tajvanski elektroenergetski sektor i mrežu krajem 2026. i tokom 2027, uključujući prilike za američke dobavljače.",
+              "units": 34
+            },
+            {
+              "text": "Nabavke su planirane.",
+              "units": 3
+            },
+            {
+              "text": "Sam izveštaj ne potvrđuje da je određeni tender otvoren, da konkretna firma ispunjava uslove ili da će ugovor pripadati građevinskim radovima ili tehničkim uslugama.",
+              "units": 24
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "ponuđaču",
+          "sentences": [
+            {
+              "text": "Ponuđaču je korisno da pri početnom pregledu ugovora poveže vrstu nabavke sa klauzulom o sporovima.",
+              "units": 15
+            },
+            {
+              "text": "Kod već započetih radova isti problem postaje vidljiv kada se zahtev za dodatno vreme pretvori u zahtev za troškove kašnjenja.",
+              "units": 20
+            },
+            {
+              "text": "Poslovni povod može ostati isti, dok se tražena pravna zaštita promeni.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "šta",
+          "sentences": [
+            {
+              "text": "Šta je komisija zaista razmatrala?",
+              "units": 5
+            },
+            {
+              "text": "Odgovor se traži u prvobitnoj prijavi, njenim izmenama, preporuci ili predlogu, odgovoru naručioca i nacrtu arbitražnog zahteva.",
+              "units": 17
+            },
+            {
+              "text": "Promena iznosa ili preciznije pravno obrazloženje sama po sebi ne stvara nužno novi spor.",
+              "units": 14
+            },
+            {
+              "text": "Ni isti broj projekta ne dokazuje da je predmet zahteva ostao nepromenjen.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "ako",
+          "sentences": [
+            {
+              "text": "Ako se ti dokumenti ne poklapaju, pojedinačna pravna procena može razjasniti postoji li poseban arbitražni sporazum ili je potrebna dalja medijacija.",
+              "units": 21
+            },
+            {
+              "text": "Preko kontakt stranice na engleskom mogu se navesti kategorija projekta, tražena zaštita i sledeći procesni datum.",
+              "units": 16
+            },
+            {
+              "text": "Prijave, njihove izmene i odgovore naručioca treba složiti po redosledu kojim su nastali, tako da se vidi kada je zahtev za vreme ponovo postao zahtev za novac.",
+              "units": 27
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "stanje",
+          "sentences": [
+            {
+              "text": "Stanje izvora: zvanično sudsko objašnjenje provereno 25. oktobra 2026, a važeći propisi i tržišni izveštaj 26. oktobra.",
+              "units": 17
+            },
+            {
+              "text": "Tekst razmatra jedan put do arbitraže; ne utvrđuje nadležni forum ili rok za podnošenje zahteva u pojedinačnom ugovoru.",
+              "units": 18
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Koji zahtev je komisija razmatrala",
+        "Kada zakon zamenjuje saglasnost naručioca",
+        "Ponuda, kašnjenje i sadržaj budućeg zahteva"
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/915-case-trends-20261025.webp",
+        "sha256": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95",
+        "bytes": 157754,
+        "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+      },
+      "sourceSHA256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "8784312ab5e99542024568fde997318bb6ab6b1bdada863a39c499d505fce6bb",
+      "initial_sha256": "3d2e9b8979e61342cfc57ad585d8abf215f013fffa6fb71ba88f43102d121f19",
+      "inverse_exact": true,
+      "frontmatter_FAQ_unchanged": true,
+      "URL_sequence_and_numeric_tokens_unchanged": true,
+      "actual_cli_evidence": "sr-variety-revised.json",
+      "observed_batch_exit": 0,
+      "observed_file_status": "OK — no variety limit violated",
+      "metrics": {
+        "lang": "sr",
+        "sentences": 38,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 16.5,
+        "len_cv": 0.504,
+        "short_share": 0.158,
+        "long_share": 0.079,
+        "para_cv": 0.176,
+        "even_run3": 0.028,
+        "top_end": "znalo",
+        "top_end_share": 0.026,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "ekološki",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.08,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Ekološki izveštaj pribavljen pre preuzimanja fabrike može kasnije pokazati šta je matično ",
+        "last": "Stanje izvora: sudsko objašnjenje provereno 25. oktobra 2026, a sadašnji propis i investicioni dokument 26. oktobra. Tek",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_source_sentences": [
+        "Ekološki izveštaj pribavljen pre preuzimanja fabrike može kasnije pokazati šta je matično društvo znalo.",
+        "U tajvanskom sporu radnika elektronske fabrike sud je takva saznanja povezao sa kontrolom poslovanja, izostankom odgovarajućeg reagovanja i kasnijim smanjenjem imovine tajvanskog društva.",
+        "Te veze opisuje zvanično objašnjenje Vrhovnog suda za predmet 107年度台上字第267號.",
+        "Odluka je doneta 16. avgusta 2018.",
+        "Predmet se odnosio na izloženost radnika hemikalijama i odgovornost društava koja su upravljala poslovanjem.",
+        "Sama činjenica da je vlasnik iz inostranstva nije bila dovoljan osnov te odgovornosti.",
+        "Prema sudskom objašnjenju, ekološke provere ukazivale su na zagađenje za koje su kontrolna društva znala.",
+        "Razmatrani su njihova kontrola nad poslovanjem, propuštanje da se radnici obaveste i problem otkloni, kao i smanjenja kapitala i prenosi novca u inostranstvo radi izbegavanja obaveza.",
+        "Sud je prihvatio razloge za odgovornost tih društava uprkos odvojenoj pravnoj ličnosti tajvanske kompanije.",
+        "Ko je dobio tehnički izveštaj?",
+        "Spisak primalaca može pokazati put informacije, dok zapisnici i operativni nalozi otkrivaju ko je mogao da reaguje.",
+        "Kada se tome pridruže kasnija odobrenja prenosa sredstava, vidi se veza između poznatog rizika i odluka o novcu.",
+        "Nerešeno pitanje iz izveštaja ostaje važno i posle zaključenja transakcije.",
+        "Naknadna beleška može zabeležiti ko je proverio izloženost zaposlenih, koje mere sanacije su razmatrane i kako su te odluke uticale na raspoloživu imovinu.",
+        "Povoljan sažetak pri zaključenju posla sam ne pokazuje kako je odgovoreno na tehničke nalaze.",
+        "Delove presude u vezi sa 246 tužilaca Vrhovni sud je ukinuo i vratio na ponovno suđenje.",
+        "Pravni lekovi koji su se odnosili na 262 tužioca bili su odbijeni.",
+        "Razlozi za vraćanje uključivali su nedovoljno razjašnjena pitanja štete, dokaza i ovlašćenja za ostvarivanje zahteva; precizna podela nalazi se u zvaničnom prikazu izreke.",
+        "Povezani sporovi time nisu svi završeni.",
+        "Vraćanje na ponovno suđenje nije značilo da svih 246 tužilaca nema osnovan zahtev, a odbijanje pravnog leka nije isto što i odbijanje svakog prvobitnog zahteva preostalih tužilaca.",
+        "Za procenu obaveza pri preuzimanju društva potrebno je utvrditi koji postupak i koji njegov deo još traju.",
+        "Polazno pravilo člana 154 tajvanskog Zakona o privrednim društvima ograničava odgovornost akcionara na uplatu iznosa za njegove akcije.",
+        "Drugi stav predviđa izuzetak kada akcionar zloupotrebom pravne ličnosti dovede do određenog duga društva koji je očigledno teško izmiriti, a okolnosti su toliko ozbiljne da je potrebno da akcionar za taj dug odgovara.",
+        "Uslovi se primenjuju zajedno.",
+        "Sam neplaćeni dug ili nalaz o zagađenju ne ispunjava čitav zakonski test.",
+        "Sadašnji član 154 takođe ne objašnjava samostalno pravni osnov svih ranijih radnji iz ovog spora: sud je ispitivao konkretno ponašanje kontrolnih društava i razloge za probijanje granice odvojene pravne ličnosti.",
+        "Osnovne razlike između organizacionih oblika obrađuje tekst o tajvanskom zavisnom društvu i ogranku.",
+        "U ovom sporu, pored osnivačkih isprava, važni su bili dokazi o tome kako je grupa koristila kontrolu nakon saznanja za opasnost.",
+        "Kancelarija američkog trgovinskog predstavnika, USTR, u informativnom dokumentu iz februara 2026. opisuje nameru SAD i Tajvana da podstiču prekogranična ulaganja, kao i razmatranje podrške finansiranju tajvanskih privatnih ulaganja uz američke privatne partnere i u skladu sa merodavnim pravom.",
+        "Reč je o nameri i mogućoj podršci.",
+        "Dokument ne daje svakom pojedinačnom investitoru pravo na finansiranje.",
+        "Pre odobrenja dividende, smanjenja kapitala ili prenosa sredstava pri izlasku iz ulaganja, donosiocima odluke može pomoći pregled poznate izloženosti, nerešenih zahteva i sredstava koja ostaju tajvanskom društvu.",
+        "Procena mora obuhvatiti stvarno planiranu transakciju.",
+        "Naziv dokumenta i uredno složeni izveštaji sami ne potvrđuju zakonitost prenosa.",
+        "Za pojedinačni upit preko kontakt stranice na engleskom dovoljno je opisati transakciju, tajvansko društvo i planirani datum prenosa ili zaključenja; način dostavljanja tehničkih izveštaja i osetljivih podataka zaposlenih može se posebno dogovoriti.",
+        "Koristan dosije povezuje prvobitni nalaz, odluku donetu povodom njega i kasnije odobrenje raspolaganja imovinom.",
+        "Stanje izvora: sudsko objašnjenje provereno 25. oktobra 2026, a sadašnji propis i investicioni dokument 26. oktobra.",
+        "Tekst obrađuje navedenu odluku, ne sve povezane parnice niti odgovornost konkretnog investitora."
+      ],
+      "actual_rendered_sentences": [
+        "Ekološki izveštaj pribavljen pre preuzimanja fabrike može kasnije pokazati šta je matično društvo znalo.",
+        "U tajvanskom sporu radnika elektronske fabrike sud je takva saznanja povezao sa kontrolom poslovanja, izostankom odgovarajućeg reagovanja i kasnijim smanjenjem imovine tajvanskog društva.",
+        "Te veze opisuje zvanično objašnjenje Vrhovnog suda za predmet 107年度台上字第267號.",
+        "Odluka je doneta 16. avgusta 2018.",
+        "Predmet se odnosio na izloženost radnika hemikalijama i odgovornost društava koja su upravljala poslovanjem.",
+        "Sama činjenica da je vlasnik iz inostranstva nije bila dovoljan osnov te odgovornosti.",
+        "Prema sudskom objašnjenju, ekološke provere ukazivale su na zagađenje za koje su kontrolna društva znala.",
+        "Razmatrani su njihova kontrola nad poslovanjem, propuštanje da se radnici obaveste i problem otkloni, kao i smanjenja kapitala i prenosi novca u inostranstvo radi izbegavanja obaveza.",
+        "Sud je prihvatio razloge za odgovornost tih društava uprkos odvojenoj pravnoj ličnosti tajvanske kompanije.",
+        "Ko je dobio tehnički izveštaj?",
+        "Spisak primalaca može pokazati put informacije, dok zapisnici i operativni nalozi otkrivaju ko je mogao da reaguje.",
+        "Kada se tome pridruže kasnija odobrenja prenosa sredstava, vidi se veza između poznatog rizika i odluka o novcu.",
+        "Nerešeno pitanje iz izveštaja ostaje važno i posle zaključenja transakcije.",
+        "Naknadna beleška može zabeležiti ko je proverio izloženost zaposlenih, koje mere sanacije su razmatrane i kako su te odluke uticale na raspoloživu imovinu.",
+        "Povoljan sažetak pri zaključenju posla sam ne pokazuje kako je odgovoreno na tehničke nalaze.",
+        "Delove presude u vezi sa 246 tužilaca Vrhovni sud je ukinuo i vratio na ponovno suđenje.",
+        "Pravni lekovi koji su se odnosili na 262 tužioca bili su odbijeni.",
+        "Razlozi za vraćanje uključivali su nedovoljno razjašnjena pitanja štete, dokaza i ovlašćenja za ostvarivanje zahteva; precizna podela nalazi se u zvaničnom prikazu izreke.",
+        "Povezani sporovi time nisu svi završeni.",
+        "Vraćanje na ponovno suđenje nije značilo da svih 246 tužilaca nema osnovan zahtev, a odbijanje pravnog leka nije isto što i odbijanje svakog prvobitnog zahteva preostalih tužilaca.",
+        "Za procenu obaveza pri preuzimanju društva potrebno je utvrditi koji postupak i koji njegov deo još traju.",
+        "Polazno pravilo člana 154 tajvanskog Zakona o privrednim društvima ograničava odgovornost akcionara na uplatu iznosa za njegove akcije.",
+        "Drugi stav predviđa izuzetak kada akcionar zloupotrebom pravne ličnosti dovede do određenog duga društva koji je očigledno teško izmiriti, a okolnosti su toliko ozbiljne da je potrebno da akcionar za taj dug odgovara.",
+        "Uslovi se primenjuju zajedno.",
+        "Sam neplaćeni dug ili nalaz o zagađenju ne ispunjava čitav zakonski test.",
+        "Sadašnji član 154 takođe ne objašnjava samostalno pravni osnov svih ranijih radnji iz ovog spora: sud je ispitivao konkretno ponašanje kontrolnih društava i razloge za probijanje granice odvojene pravne ličnosti.",
+        "Osnovne razlike između organizacionih oblika obrađuje tekst o tajvanskom zavisnom društvu i ogranku.",
+        "U ovom sporu, pored osnivačkih isprava, važni su bili dokazi o tome kako je grupa koristila kontrolu nakon saznanja za opasnost.",
+        "Kancelarija američkog trgovinskog predstavnika, USTR, u informativnom dokumentu iz februara 2026. opisuje nameru SAD i Tajvana da podstiču prekogranična ulaganja, kao i razmatranje podrške finansiranju tajvanskih privatnih ulaganja uz američke privatne partnere i u skladu sa merodavnim pravom.",
+        "Reč je o nameri i mogućoj podršci.",
+        "Dokument ne daje svakom pojedinačnom investitoru pravo na finansiranje.",
+        "Pre odobrenja dividende, smanjenja kapitala ili prenosa sredstava pri izlasku iz ulaganja, donosiocima odluke može pomoći pregled poznate izloženosti, nerešenih zahteva i sredstava koja ostaju tajvanskom društvu.",
+        "Procena mora obuhvatiti stvarno planiranu transakciju.",
+        "Naziv dokumenta i uredno složeni izveštaji sami ne potvrđuju zakonitost prenosa.",
+        "Za pojedinačni upit preko kontakt stranice na engleskom dovoljno je opisati transakciju, tajvansko društvo i planirani datum prenosa ili zaključenja; način dostavljanja tehničkih izveštaja i osetljivih podataka zaposlenih može se posebno dogovoriti.",
+        "Koristan dosije povezuje prvobitni nalaz, odluku donetu povodom njega i kasnije odobrenje raspolaganja imovinom.",
+        "Stanje izvora: sudsko objašnjenje provereno 25. oktobra 2026, a sadašnji propis i investicioni dokument 26. oktobra.",
+        "Tekst obrađuje navedenu odluku, ne sve povezane parnice niti odgovornost konkretnog investitora."
+      ],
+      "actual_rendered_paragraphs": [
+        "Ekološki izveštaj pribavljen pre preuzimanja fabrike može kasnije pokazati šta je matično društvo znalo. U tajvanskom sporu radnika elektronske fabrike sud je takva saznanja povezao sa kontrolom poslovanja, izostankom odgovarajućeg reagovanja i kasnijim smanjenjem imovine tajvanskog društva. Te veze opisuje zvanično objašnjenje Vrhovnog suda za predmet 107年度台上字第267號.",
+        "Odluka je doneta 16. avgusta 2018. Predmet se odnosio na izloženost radnika hemikalijama i odgovornost društava koja su upravljala poslovanjem. Sama činjenica da je vlasnik iz inostranstva nije bila dovoljan osnov te odgovornosti.",
+        "Prema sudskom objašnjenju, ekološke provere ukazivale su na zagađenje za koje su kontrolna društva znala. Razmatrani su njihova kontrola nad poslovanjem, propuštanje da se radnici obaveste i problem otkloni, kao i smanjenja kapitala i prenosi novca u inostranstvo radi izbegavanja obaveza. Sud je prihvatio razloge za odgovornost tih društava uprkos odvojenoj pravnoj ličnosti tajvanske kompanije.",
+        "Ko je dobio tehnički izveštaj? Spisak primalaca može pokazati put informacije, dok zapisnici i operativni nalozi otkrivaju ko je mogao da reaguje. Kada se tome pridruže kasnija odobrenja prenosa sredstava, vidi se veza između poznatog rizika i odluka o novcu.",
+        "Nerešeno pitanje iz izveštaja ostaje važno i posle zaključenja transakcije. Naknadna beleška može zabeležiti ko je proverio izloženost zaposlenih, koje mere sanacije su razmatrane i kako su te odluke uticale na raspoloživu imovinu. Povoljan sažetak pri zaključenju posla sam ne pokazuje kako je odgovoreno na tehničke nalaze.",
+        "Delove presude u vezi sa 246 tužilaca Vrhovni sud je ukinuo i vratio na ponovno suđenje. Pravni lekovi koji su se odnosili na 262 tužioca bili su odbijeni. Razlozi za vraćanje uključivali su nedovoljno razjašnjena pitanja štete, dokaza i ovlašćenja za ostvarivanje zahteva; precizna podela nalazi se u zvaničnom prikazu izreke.",
+        "Povezani sporovi time nisu svi završeni. Vraćanje na ponovno suđenje nije značilo da svih 246 tužilaca nema osnovan zahtev, a odbijanje pravnog leka nije isto što i odbijanje svakog prvobitnog zahteva preostalih tužilaca. Za procenu obaveza pri preuzimanju društva potrebno je utvrditi koji postupak i koji njegov deo još traju.",
+        "Polazno pravilo člana 154 tajvanskog Zakona o privrednim društvima ograničava odgovornost akcionara na uplatu iznosa za njegove akcije. Drugi stav predviđa izuzetak kada akcionar zloupotrebom pravne ličnosti dovede do određenog duga društva koji je očigledno teško izmiriti, a okolnosti su toliko ozbiljne da je potrebno da akcionar za taj dug odgovara.",
+        "Uslovi se primenjuju zajedno. Sam neplaćeni dug ili nalaz o zagađenju ne ispunjava čitav zakonski test. Sadašnji član 154 takođe ne objašnjava samostalno pravni osnov svih ranijih radnji iz ovog spora: sud je ispitivao konkretno ponašanje kontrolnih društava i razloge za probijanje granice odvojene pravne ličnosti.",
+        "Osnovne razlike između organizacionih oblika obrađuje tekst o tajvanskom zavisnom društvu i ogranku. U ovom sporu, pored osnivačkih isprava, važni su bili dokazi o tome kako je grupa koristila kontrolu nakon saznanja za opasnost.",
+        "Kancelarija američkog trgovinskog predstavnika, USTR, u informativnom dokumentu iz februara 2026. opisuje nameru SAD i Tajvana da podstiču prekogranična ulaganja, kao i razmatranje podrške finansiranju tajvanskih privatnih ulaganja uz američke privatne partnere i u skladu sa merodavnim pravom. Reč je o nameri i mogućoj podršci. Dokument ne daje svakom pojedinačnom investitoru pravo na finansiranje.",
+        "Pre odobrenja dividende, smanjenja kapitala ili prenosa sredstava pri izlasku iz ulaganja, donosiocima odluke može pomoći pregled poznate izloženosti, nerešenih zahteva i sredstava koja ostaju tajvanskom društvu. Procena mora obuhvatiti stvarno planiranu transakciju. Naziv dokumenta i uredno složeni izveštaji sami ne potvrđuju zakonitost prenosa.",
+        "Za pojedinačni upit preko kontakt stranice na engleskom dovoljno je opisati transakciju, tajvansko društvo i planirani datum prenosa ili zaključenja; način dostavljanja tehničkih izveštaja i osetljivih podataka zaposlenih može se posebno dogovoriti. Koristan dosije povezuje prvobitni nalaz, odluku donetu povodom njega i kasnije odobrenje raspolaganja imovinom.",
+        "Stanje izvora: sudsko objašnjenje provereno 25. oktobra 2026, a sadašnji propis i investicioni dokument 26. oktobra. Tekst obrađuje navedenu odluku, ne sve povezane parnice niti odgovornost konkretnog investitora."
+      ],
+      "source_render_arrays_and_lengths_identical": true,
+      "lengths": [
+        14,
+        23,
+        10,
+        6,
+        14,
+        13,
+        15,
+        26,
+        14,
+        5,
+        17,
+        18,
+        10,
+        23,
+        14,
+        16,
+        12,
+        23,
+        6,
+        27,
+        17,
+        18,
+        33,
+        4,
+        12,
+        30,
+        13,
+        21,
+        38,
+        7,
+        9,
+        27,
+        6,
+        11,
+        32,
+        14,
+        16,
+        12
+      ],
+      "sentence_changes_after_initial": [
+        {
+          "operation": "replace",
+          "old_start": 15,
+          "new_start": 15,
+          "before": [
+            "Povoljan zaključak pregovora ne pokazuje sam po sebi šta je preduzeto povodom nalaza."
+          ],
+          "after": [
+            "Povoljan sažetak pri zaključenju posla sam ne pokazuje kako je odgovoreno na tehničke nalaze."
+          ]
+        }
+      ],
+      "initial_human_read_count": 38,
+      "current_segment_count": 38,
+      "source_paragraphs": [
+        {
+          "index": 1,
+          "opener": "ekološki",
+          "sentences": [
+            {
+              "text": "Ekološki izveštaj pribavljen pre preuzimanja fabrike može kasnije pokazati šta je matično društvo znalo.",
+              "units": 14
+            },
+            {
+              "text": "U tajvanskom sporu radnika elektronske fabrike sud je takva saznanja povezao sa kontrolom poslovanja, izostankom odgovarajućeg reagovanja i kasnijim smanjenjem imovine tajvanskog društva.",
+              "units": 23
+            },
+            {
+              "text": "Te veze opisuje zvanično objašnjenje Vrhovnog suda za predmet 107年度台上字第267號.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "odluka",
+          "sentences": [
+            {
+              "text": "Odluka je doneta 16. avgusta 2018.",
+              "units": 6
+            },
+            {
+              "text": "Predmet se odnosio na izloženost radnika hemikalijama i odgovornost društava koja su upravljala poslovanjem.",
+              "units": 14
+            },
+            {
+              "text": "Sama činjenica da je vlasnik iz inostranstva nije bila dovoljan osnov te odgovornosti.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "prema",
+          "sentences": [
+            {
+              "text": "Prema sudskom objašnjenju, ekološke provere ukazivale su na zagađenje za koje su kontrolna društva znala.",
+              "units": 15
+            },
+            {
+              "text": "Razmatrani su njihova kontrola nad poslovanjem, propuštanje da se radnici obaveste i problem otkloni, kao i smanjenja kapitala i prenosi novca u inostranstvo radi izbegavanja obaveza.",
+              "units": 26
+            },
+            {
+              "text": "Sud je prihvatio razloge za odgovornost tih društava uprkos odvojenoj pravnoj ličnosti tajvanske kompanije.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "ko",
+          "sentences": [
+            {
+              "text": "Ko je dobio tehnički izveštaj?",
+              "units": 5
+            },
+            {
+              "text": "Spisak primalaca može pokazati put informacije, dok zapisnici i operativni nalozi otkrivaju ko je mogao da reaguje.",
+              "units": 17
+            },
+            {
+              "text": "Kada se tome pridruže kasnija odobrenja prenosa sredstava, vidi se veza između poznatog rizika i odluka o novcu.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "nerešeno",
+          "sentences": [
+            {
+              "text": "Nerešeno pitanje iz izveštaja ostaje važno i posle zaključenja transakcije.",
+              "units": 10
+            },
+            {
+              "text": "Naknadna beleška može zabeležiti ko je proverio izloženost zaposlenih, koje mere sanacije su razmatrane i kako su te odluke uticale na raspoloživu imovinu.",
+              "units": 23
+            },
+            {
+              "text": "Povoljan sažetak pri zaključenju posla sam ne pokazuje kako je odgovoreno na tehničke nalaze.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "delove",
+          "sentences": [
+            {
+              "text": "Delove presude u vezi sa 246 tužilaca Vrhovni sud je ukinuo i vratio na ponovno suđenje.",
+              "units": 16
+            },
+            {
+              "text": "Pravni lekovi koji su se odnosili na 262 tužioca bili su odbijeni.",
+              "units": 12
+            },
+            {
+              "text": "Razlozi za vraćanje uključivali su nedovoljno razjašnjena pitanja štete, dokaza i ovlašćenja za ostvarivanje zahteva; precizna podela nalazi se u zvaničnom prikazu izreke.",
+              "units": 23
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "povezani",
+          "sentences": [
+            {
+              "text": "Povezani sporovi time nisu svi završeni.",
+              "units": 6
+            },
+            {
+              "text": "Vraćanje na ponovno suđenje nije značilo da svih 246 tužilaca nema osnovan zahtev, a odbijanje pravnog leka nije isto što i odbijanje svakog prvobitnog zahteva preostalih tužilaca.",
+              "units": 27
+            },
+            {
+              "text": "Za procenu obaveza pri preuzimanju društva potrebno je utvrditi koji postupak i koji njegov deo još traju.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "polazno",
+          "sentences": [
+            {
+              "text": "Polazno pravilo člana 154 tajvanskog Zakona o privrednim društvima ograničava odgovornost akcionara na uplatu iznosa za njegove akcije.",
+              "units": 18
+            },
+            {
+              "text": "Drugi stav predviđa izuzetak kada akcionar zloupotrebom pravne ličnosti dovede do određenog duga društva koji je očigledno teško izmiriti, a okolnosti su toliko ozbiljne da je potrebno da akcionar za taj dug odgovara.",
+              "units": 33
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "uslovi",
+          "sentences": [
+            {
+              "text": "Uslovi se primenjuju zajedno.",
+              "units": 4
+            },
+            {
+              "text": "Sam neplaćeni dug ili nalaz o zagađenju ne ispunjava čitav zakonski test.",
+              "units": 12
+            },
+            {
+              "text": "Sadašnji član 154 takođe ne objašnjava samostalno pravni osnov svih ranijih radnji iz ovog spora: sud je ispitivao konkretno ponašanje kontrolnih društava i razloge za probijanje granice odvojene pravne ličnosti.",
+              "units": 30
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "osnovne",
+          "sentences": [
+            {
+              "text": "Osnovne razlike između organizacionih oblika obrađuje tekst o tajvanskom zavisnom društvu i ogranku.",
+              "units": 13
+            },
+            {
+              "text": "U ovom sporu, pored osnivačkih isprava, važni su bili dokazi o tome kako je grupa koristila kontrolu nakon saznanja za opasnost.",
+              "units": 21
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "kancelarija",
+          "sentences": [
+            {
+              "text": "Kancelarija američkog trgovinskog predstavnika, USTR, u informativnom dokumentu iz februara 2026. opisuje nameru SAD i Tajvana da podstiču prekogranična ulaganja, kao i razmatranje podrške finansiranju tajvanskih privatnih ulaganja uz američke privatne partnere i u skladu sa merodavnim pravom.",
+              "units": 38
+            },
+            {
+              "text": "Reč je o nameri i mogućoj podršci.",
+              "units": 7
+            },
+            {
+              "text": "Dokument ne daje svakom pojedinačnom investitoru pravo na finansiranje.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "pre",
+          "sentences": [
+            {
+              "text": "Pre odobrenja dividende, smanjenja kapitala ili prenosa sredstava pri izlasku iz ulaganja, donosiocima odluke može pomoći pregled poznate izloženosti, nerešenih zahteva i sredstava koja ostaju tajvanskom društvu.",
+              "units": 27
+            },
+            {
+              "text": "Procena mora obuhvatiti stvarno planiranu transakciju.",
+              "units": 6
+            },
+            {
+              "text": "Naziv dokumenta i uredno složeni izveštaji sami ne potvrđuju zakonitost prenosa.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "za",
+          "sentences": [
+            {
+              "text": "Za pojedinačni upit preko kontakt stranice na engleskom dovoljno je opisati transakciju, tajvansko društvo i planirani datum prenosa ili zaključenja; način dostavljanja tehničkih izveštaja i osetljivih podataka zaposlenih može se posebno dogovoriti.",
+              "units": 32
+            },
+            {
+              "text": "Koristan dosije povezuje prvobitni nalaz, odluku donetu povodom njega i kasnije odobrenje raspolaganja imovinom.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "stanje",
+          "sentences": [
+            {
+              "text": "Stanje izvora: sudsko objašnjenje provereno 25. oktobra 2026, a sadašnji propis i investicioni dokument 26. oktobra.",
+              "units": 16
+            },
+            {
+              "text": "Tekst obrađuje navedenu odluku, ne sve povezane parnice niti odgovornost konkretnog investitora.",
+              "units": 12
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Od nalaza o zagađenju do odluka o imovini",
+        "Dva ishoda u istoj odluci",
+        "Granice odvojene pravne ličnosti"
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/916-case-trends-20261025.webp",
+        "sha256": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+        "bytes": 299298,
+        "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+      },
+      "sourceSHA256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "6c7510a2e0bc76125be434f3565c68a9ab2d1b074969de73f367b07a04b43801",
+      "initial_sha256": "d3b998241da193521414a833b3fefe87f31108cc56d46badb64a0df6cfcb8635",
+      "inverse_exact": true,
+      "frontmatter_FAQ_unchanged": true,
+      "URL_sequence_and_numeric_tokens_unchanged": true,
+      "actual_cli_evidence": "sr-variety-revised.json",
+      "observed_batch_exit": 0,
+      "observed_file_status": "OK — no variety limit violated",
+      "metrics": {
+        "lang": "sr",
+        "sentences": 42,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.6,
+        "len_cv": 0.491,
+        "short_share": 0.238,
+        "long_share": 0.024,
+        "para_cv": 0.161,
+        "even_run3": 0.025,
+        "top_end": "dozvole",
+        "top_end_share": 0.071,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "u",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.43,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "U stanu još nije bilo priključene vode i struje kada je kupcu stiglo pismo o stambenom kre",
+        "last": "Stanje izvora: navedeni delovi sudske zbirke, važeće odredbe i zvanična saopštenja provereni su 26. oktobra 2026. Predme",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_source_sentences": [
+        "U stanu još nije bilo priključene vode i struje kada je kupcu stiglo pismo o stambenom kreditu.",
+        "Nekoliko meseci kasnije dobio je pristup radi uređenja i čišćenja, ali sud ni u tome nije video završenu ugovornu predaju.",
+        "Sadržaj pisma i stanje stana razmotreni su u presudi objavljenoj u zbirci tajvanskog organa za zaštitu potrošača, na štampanim stranama 173–187.",
+        "Ogranak Visokog suda Tajvana u Tajčungu je 9. februara 2022. odbio žalbu investitora i njegov naknadno postavljeni tužbeni zahtev u predmetu 109年度上易字第289號.",
+        "Obaveza plaćanja kamate zbog kašnjenja ostala je na snazi.",
+        "Protiv presude nije bila dopuštena dalja žalba.",
+        "Prodavac je 23. februara 2019. tražio da kupac kontaktira banku i izvesti ga o postupku kreditiranja.",
+        "U pismu nije pisalo da je stan osposobljen za korišćenje.",
+        "Priključci su stigli kasnije.",
+        "Pri prvom pregledu u julu postojali su nedostaci, a ugradnja lifta nije bila završena.",
+        "U avgustu je kupac potpisao saglasnost za ulazak radi unutrašnjeg uređenja i čišćenja.",
+        "Sud je tu izjavu čitao zajedno sa stanjem popravki, pa pristup nije izjednačio sa predajom nakon ugovorenog pregleda.",
+        "Novac iz kredita uplaćen je prodavcu 5. novembra.",
+        "Garantni dokument je kao datum predaje beležio 28. novembar.",
+        "Ti događaji imaju različitu dokaznu ulogu.",
+        "Četvrta tačka obrazloženja, na štampanim stranama 182–186, povezuje sadržaj dokumentacije sa stvarnim napretkom radova.",
+        "Datum bankarske uplate sam ne govori da li je stan pregledan i predat.",
+        "Koju obavezu je kupac već izvršio?",
+        "Prodavac je tvrdio da je posle pisma trebalo odmah platiti ceo iznos, ali je sud uporedio uplate sa ugovorenim ratama.",
+        "Kupac je te rate podmirio i pre predaje isplatio cenu u celini.",
+        "Zbog toga nije prihvaćena ni tvrdnja o njegovoj povredi obaveze plaćanja.",
+        "Ugovor u tom sporu zahtevao je obaveštenje o primopredaji u roku od četiri meseca od dobijanja upotrebne dozvole.",
+        "Prema sadašnjoj tački 15 obaveznih ugovornih odredaba za prodaju stanova pre završetka izgradnje, prodavac mora obavestiti kupca o primopredaji u roku od šest meseci od dobijanja te dozvole.",
+        "Ista odredba uređuje popravke, obračun i predaju dokumenata pri primopredaji.",
+        "Rok počinje dobijanjem dozvole.",
+        "Za sopstveni slučaj treba povezati ugovor i tada merodavna pravila sa datumom dozvole, sadržajem obaveštenja i njegovim prijemom.",
+        "Današnjih šest meseci predstavlja rok za obaveštenje; ne menja ugovorna četiri meseca iz ranijeg predmeta.",
+        "Kupac ima i obaveze saradnje.",
+        "Tačka 14 istog dokumenta uređuje kreditne isprave, potrebne postupke i uplate dospele pre upisa prenosa svojine.",
+        "Čak i kada je obaveštenje sporno, dospele obaveze plaćanja i dostavljanja dokumentacije treba razmotriti prema sopstvenom ugovoru.",
+        "Potrošački organ je u rezultatima kontrole ugovora objavljenim 25. avgusta 2025. označio kao nedopuštenu klauzulu koja iz roka za obaveštenje izuzima vreme bankarske potvrde kredita i isplate.",
+        "To je kasnija kontrola ugovornih uslova.",
+        "Ona nije deo obrazloženja presude iz 2022.",
+        "Kod novog kredita relevantna je i izmena propisa tajvanske centralne banke o kreditima obezbeđenim nepokretnostima, koja se primenjuje od 18. septembra 2026.",
+        "Današnji uslovi ne prenose se retroaktivno na raniju transakciju.",
+        "Bankarski plan isplate može se uporediti sa zakazanim pregledom i predajom, uz beleženje svakog događaja zasebno.",
+        "Naslov pisma nije dovoljan dokaz.",
+        "Celokupno pismo i koverta ili elektronski podatak o dostavi, zapisnik pregleda, fotografije popravki, saglasnost za pristup i garantni list mogu zajedno pokazati kada je stan postao upotrebljiv i šta je tada još ostalo nedovršeno.",
+        "Za upit o kamati zbog kašnjenja ili ugovornoj kazni, na adresu kancelarije mogu se poslati kratak opis sporne odredbe, datum obaveštenja i rok za odgovor.",
+        "U pripremljenom dosijeu odvojeno označite poziv banci, poziv na pregled i obaveštenje o predaji, prema sadržaju svakog dokumenta.",
+        "Stanje izvora: navedeni delovi sudske zbirke, važeće odredbe i zvanična saopštenja provereni su 26. oktobra 2026.",
+        "Predmet se odnosio na određen ugovor i dokaze o izvršenju; tekst ne zamenjuje procenu pojedinačne odluke o plaćanju, odbijanju predaje ili zahtevu za naknadu."
+      ],
+      "actual_rendered_sentences": [
+        "U stanu još nije bilo priključene vode i struje kada je kupcu stiglo pismo o stambenom kreditu.",
+        "Nekoliko meseci kasnije dobio je pristup radi uređenja i čišćenja, ali sud ni u tome nije video završenu ugovornu predaju.",
+        "Sadržaj pisma i stanje stana razmotreni su u presudi objavljenoj u zbirci tajvanskog organa za zaštitu potrošača, na štampanim stranama 173–187.",
+        "Ogranak Visokog suda Tajvana u Tajčungu je 9. februara 2022. odbio žalbu investitora i njegov naknadno postavljeni tužbeni zahtev u predmetu 109年度上易字第289號.",
+        "Obaveza plaćanja kamate zbog kašnjenja ostala je na snazi.",
+        "Protiv presude nije bila dopuštena dalja žalba.",
+        "Prodavac je 23. februara 2019. tražio da kupac kontaktira banku i izvesti ga o postupku kreditiranja.",
+        "U pismu nije pisalo da je stan osposobljen za korišćenje.",
+        "Priključci su stigli kasnije.",
+        "Pri prvom pregledu u julu postojali su nedostaci, a ugradnja lifta nije bila završena.",
+        "U avgustu je kupac potpisao saglasnost za ulazak radi unutrašnjeg uređenja i čišćenja.",
+        "Sud je tu izjavu čitao zajedno sa stanjem popravki, pa pristup nije izjednačio sa predajom nakon ugovorenog pregleda.",
+        "Novac iz kredita uplaćen je prodavcu 5. novembra.",
+        "Garantni dokument je kao datum predaje beležio 28. novembar.",
+        "Ti događaji imaju različitu dokaznu ulogu.",
+        "Četvrta tačka obrazloženja, na štampanim stranama 182–186, povezuje sadržaj dokumentacije sa stvarnim napretkom radova.",
+        "Datum bankarske uplate sam ne govori da li je stan pregledan i predat.",
+        "Koju obavezu je kupac već izvršio?",
+        "Prodavac je tvrdio da je posle pisma trebalo odmah platiti ceo iznos, ali je sud uporedio uplate sa ugovorenim ratama.",
+        "Kupac je te rate podmirio i pre predaje isplatio cenu u celini.",
+        "Zbog toga nije prihvaćena ni tvrdnja o njegovoj povredi obaveze plaćanja.",
+        "Ugovor u tom sporu zahtevao je obaveštenje o primopredaji u roku od četiri meseca od dobijanja upotrebne dozvole.",
+        "Prema sadašnjoj tački 15 obaveznih ugovornih odredaba za prodaju stanova pre završetka izgradnje, prodavac mora obavestiti kupca o primopredaji u roku od šest meseci od dobijanja te dozvole.",
+        "Ista odredba uređuje popravke, obračun i predaju dokumenata pri primopredaji.",
+        "Rok počinje dobijanjem dozvole.",
+        "Za sopstveni slučaj treba povezati ugovor i tada merodavna pravila sa datumom dozvole, sadržajem obaveštenja i njegovim prijemom.",
+        "Današnjih šest meseci predstavlja rok za obaveštenje; ne menja ugovorna četiri meseca iz ranijeg predmeta.",
+        "Kupac ima i obaveze saradnje.",
+        "Tačka 14 istog dokumenta uređuje kreditne isprave, potrebne postupke i uplate dospele pre upisa prenosa svojine.",
+        "Čak i kada je obaveštenje sporno, dospele obaveze plaćanja i dostavljanja dokumentacije treba razmotriti prema sopstvenom ugovoru.",
+        "Potrošački organ je u rezultatima kontrole ugovora objavljenim 25. avgusta 2025. označio kao nedopuštenu klauzulu koja iz roka za obaveštenje izuzima vreme bankarske potvrde kredita i isplate.",
+        "To je kasnija kontrola ugovornih uslova.",
+        "Ona nije deo obrazloženja presude iz 2022.",
+        "Kod novog kredita relevantna je i izmena propisa tajvanske centralne banke o kreditima obezbeđenim nepokretnostima, koja se primenjuje od 18. septembra 2026.",
+        "Današnji uslovi ne prenose se retroaktivno na raniju transakciju.",
+        "Bankarski plan isplate može se uporediti sa zakazanim pregledom i predajom, uz beleženje svakog događaja zasebno.",
+        "Naslov pisma nije dovoljan dokaz.",
+        "Celokupno pismo i koverta ili elektronski podatak o dostavi, zapisnik pregleda, fotografije popravki, saglasnost za pristup i garantni list mogu zajedno pokazati kada je stan postao upotrebljiv i šta je tada još ostalo nedovršeno.",
+        "Za upit o kamati zbog kašnjenja ili ugovornoj kazni, na adresu kancelarije mogu se poslati kratak opis sporne odredbe, datum obaveštenja i rok za odgovor.",
+        "U pripremljenom dosijeu odvojeno označite poziv banci, poziv na pregled i obaveštenje o predaji, prema sadržaju svakog dokumenta.",
+        "Stanje izvora: navedeni delovi sudske zbirke, važeće odredbe i zvanična saopštenja provereni su 26. oktobra 2026.",
+        "Predmet se odnosio na određen ugovor i dokaze o izvršenju; tekst ne zamenjuje procenu pojedinačne odluke o plaćanju, odbijanju predaje ili zahtevu za naknadu."
+      ],
+      "actual_rendered_paragraphs": [
+        "U stanu još nije bilo priključene vode i struje kada je kupcu stiglo pismo o stambenom kreditu. Nekoliko meseci kasnije dobio je pristup radi uređenja i čišćenja, ali sud ni u tome nije video završenu ugovornu predaju. Sadržaj pisma i stanje stana razmotreni su u presudi objavljenoj u zbirci tajvanskog organa za zaštitu potrošača, na štampanim stranama 173–187.",
+        "Ogranak Visokog suda Tajvana u Tajčungu je 9. februara 2022. odbio žalbu investitora i njegov naknadno postavljeni tužbeni zahtev u predmetu 109年度上易字第289號. Obaveza plaćanja kamate zbog kašnjenja ostala je na snazi. Protiv presude nije bila dopuštena dalja žalba.",
+        "Prodavac je 23. februara 2019. tražio da kupac kontaktira banku i izvesti ga o postupku kreditiranja. U pismu nije pisalo da je stan osposobljen za korišćenje. Priključci su stigli kasnije. Pri prvom pregledu u julu postojali su nedostaci, a ugradnja lifta nije bila završena.",
+        "U avgustu je kupac potpisao saglasnost za ulazak radi unutrašnjeg uređenja i čišćenja. Sud je tu izjavu čitao zajedno sa stanjem popravki, pa pristup nije izjednačio sa predajom nakon ugovorenog pregleda. Novac iz kredita uplaćen je prodavcu 5. novembra. Garantni dokument je kao datum predaje beležio 28. novembar.",
+        "Ti događaji imaju različitu dokaznu ulogu. Četvrta tačka obrazloženja, na štampanim stranama 182–186, povezuje sadržaj dokumentacije sa stvarnim napretkom radova. Datum bankarske uplate sam ne govori da li je stan pregledan i predat.",
+        "Koju obavezu je kupac već izvršio? Prodavac je tvrdio da je posle pisma trebalo odmah platiti ceo iznos, ali je sud uporedio uplate sa ugovorenim ratama. Kupac je te rate podmirio i pre predaje isplatio cenu u celini. Zbog toga nije prihvaćena ni tvrdnja o njegovoj povredi obaveze plaćanja.",
+        "Ugovor u tom sporu zahtevao je obaveštenje o primopredaji u roku od četiri meseca od dobijanja upotrebne dozvole. Prema sadašnjoj tački 15 obaveznih ugovornih odredaba za prodaju stanova pre završetka izgradnje, prodavac mora obavestiti kupca o primopredaji u roku od šest meseci od dobijanja te dozvole. Ista odredba uređuje popravke, obračun i predaju dokumenata pri primopredaji.",
+        "Rok počinje dobijanjem dozvole. Za sopstveni slučaj treba povezati ugovor i tada merodavna pravila sa datumom dozvole, sadržajem obaveštenja i njegovim prijemom. Današnjih šest meseci predstavlja rok za obaveštenje; ne menja ugovorna četiri meseca iz ranijeg predmeta.",
+        "Kupac ima i obaveze saradnje. Tačka 14 istog dokumenta uređuje kreditne isprave, potrebne postupke i uplate dospele pre upisa prenosa svojine. Čak i kada je obaveštenje sporno, dospele obaveze plaćanja i dostavljanja dokumentacije treba razmotriti prema sopstvenom ugovoru.",
+        "Potrošački organ je u rezultatima kontrole ugovora objavljenim 25. avgusta 2025. označio kao nedopuštenu klauzulu koja iz roka za obaveštenje izuzima vreme bankarske potvrde kredita i isplate. To je kasnija kontrola ugovornih uslova. Ona nije deo obrazloženja presude iz 2022.",
+        "Kod novog kredita relevantna je i izmena propisa tajvanske centralne banke o kreditima obezbeđenim nepokretnostima, koja se primenjuje od 18. septembra 2026. Današnji uslovi ne prenose se retroaktivno na raniju transakciju. Bankarski plan isplate može se uporediti sa zakazanim pregledom i predajom, uz beleženje svakog događaja zasebno.",
+        "Naslov pisma nije dovoljan dokaz. Celokupno pismo i koverta ili elektronski podatak o dostavi, zapisnik pregleda, fotografije popravki, saglasnost za pristup i garantni list mogu zajedno pokazati kada je stan postao upotrebljiv i šta je tada još ostalo nedovršeno.",
+        "Za upit o kamati zbog kašnjenja ili ugovornoj kazni, na adresu kancelarije mogu se poslati kratak opis sporne odredbe, datum obaveštenja i rok za odgovor. U pripremljenom dosijeu odvojeno označite poziv banci, poziv na pregled i obaveštenje o predaji, prema sadržaju svakog dokumenta.",
+        "Stanje izvora: navedeni delovi sudske zbirke, važeće odredbe i zvanična saopštenja provereni su 26. oktobra 2026. Predmet se odnosio na određen ugovor i dokaze o izvršenju; tekst ne zamenjuje procenu pojedinačne odluke o plaćanju, odbijanju predaje ili zahtevu za naknadu."
+      ],
+      "source_render_arrays_and_lengths_identical": true,
+      "lengths": [
+        17,
+        20,
+        22,
+        22,
+        9,
+        7,
+        16,
+        10,
+        4,
+        14,
+        13,
+        18,
+        8,
+        9,
+        6,
+        15,
+        13,
+        6,
+        20,
+        12,
+        11,
+        18,
+        28,
+        10,
+        4,
+        18,
+        15,
+        5,
+        16,
+        17,
+        27,
+        6,
+        7,
+        22,
+        9,
+        16,
+        5,
+        34,
+        25,
+        18,
+        16,
+        24
+      ],
+      "sentence_changes_after_initial": [
+        {
+          "operation": "replace",
+          "old_start": 31,
+          "new_start": 31,
+          "before": [
+            "U rezultatima kontrole ugovora od 25. avgusta 2025., potrošački organ je kao nedopuštenu označio klauzulu koja iz roka za obaveštenje izuzima vreme bankarske potvrde kredita i isplate."
+          ],
+          "after": [
+            "Potrošački organ je u rezultatima kontrole ugovora objavljenim 25. avgusta 2025. označio kao nedopuštenu klauzulu koja iz roka za obaveštenje izuzima vreme bankarske potvrde kredita i isplate."
+          ]
+        }
+      ],
+      "initial_human_read_count": 42,
+      "current_segment_count": 42,
+      "source_paragraphs": [
+        {
+          "index": 1,
+          "opener": "u",
+          "sentences": [
+            {
+              "text": "U stanu još nije bilo priključene vode i struje kada je kupcu stiglo pismo o stambenom kreditu.",
+              "units": 17
+            },
+            {
+              "text": "Nekoliko meseci kasnije dobio je pristup radi uređenja i čišćenja, ali sud ni u tome nije video završenu ugovornu predaju.",
+              "units": 20
+            },
+            {
+              "text": "Sadržaj pisma i stanje stana razmotreni su u presudi objavljenoj u zbirci tajvanskog organa za zaštitu potrošača, na štampanim stranama 173–187.",
+              "units": 22
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "ogranak",
+          "sentences": [
+            {
+              "text": "Ogranak Visokog suda Tajvana u Tajčungu je 9. februara 2022. odbio žalbu investitora i njegov naknadno postavljeni tužbeni zahtev u predmetu 109年度上易字第289號.",
+              "units": 22
+            },
+            {
+              "text": "Obaveza plaćanja kamate zbog kašnjenja ostala je na snazi.",
+              "units": 9
+            },
+            {
+              "text": "Protiv presude nije bila dopuštena dalja žalba.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "prodavac",
+          "sentences": [
+            {
+              "text": "Prodavac je 23. februara 2019. tražio da kupac kontaktira banku i izvesti ga o postupku kreditiranja.",
+              "units": 16
+            },
+            {
+              "text": "U pismu nije pisalo da je stan osposobljen za korišćenje.",
+              "units": 10
+            },
+            {
+              "text": "Priključci su stigli kasnije.",
+              "units": 4
+            },
+            {
+              "text": "Pri prvom pregledu u julu postojali su nedostaci, a ugradnja lifta nije bila završena.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "u",
+          "sentences": [
+            {
+              "text": "U avgustu je kupac potpisao saglasnost za ulazak radi unutrašnjeg uređenja i čišćenja.",
+              "units": 13
+            },
+            {
+              "text": "Sud je tu izjavu čitao zajedno sa stanjem popravki, pa pristup nije izjednačio sa predajom nakon ugovorenog pregleda.",
+              "units": 18
+            },
+            {
+              "text": "Novac iz kredita uplaćen je prodavcu 5. novembra.",
+              "units": 8
+            },
+            {
+              "text": "Garantni dokument je kao datum predaje beležio 28. novembar.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "ti",
+          "sentences": [
+            {
+              "text": "Ti događaji imaju različitu dokaznu ulogu.",
+              "units": 6
+            },
+            {
+              "text": "Četvrta tačka obrazloženja, na štampanim stranama 182–186, povezuje sadržaj dokumentacije sa stvarnim napretkom radova.",
+              "units": 15
+            },
+            {
+              "text": "Datum bankarske uplate sam ne govori da li je stan pregledan i predat.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "koju",
+          "sentences": [
+            {
+              "text": "Koju obavezu je kupac već izvršio?",
+              "units": 6
+            },
+            {
+              "text": "Prodavac je tvrdio da je posle pisma trebalo odmah platiti ceo iznos, ali je sud uporedio uplate sa ugovorenim ratama.",
+              "units": 20
+            },
+            {
+              "text": "Kupac je te rate podmirio i pre predaje isplatio cenu u celini.",
+              "units": 12
+            },
+            {
+              "text": "Zbog toga nije prihvaćena ni tvrdnja o njegovoj povredi obaveze plaćanja.",
+              "units": 11
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "ugovor",
+          "sentences": [
+            {
+              "text": "Ugovor u tom sporu zahtevao je obaveštenje o primopredaji u roku od četiri meseca od dobijanja upotrebne dozvole.",
+              "units": 18
+            },
+            {
+              "text": "Prema sadašnjoj tački 15 obaveznih ugovornih odredaba za prodaju stanova pre završetka izgradnje, prodavac mora obavestiti kupca o primopredaji u roku od šest meseci od dobijanja te dozvole.",
+              "units": 28
+            },
+            {
+              "text": "Ista odredba uređuje popravke, obračun i predaju dokumenata pri primopredaji.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "rok",
+          "sentences": [
+            {
+              "text": "Rok počinje dobijanjem dozvole.",
+              "units": 4
+            },
+            {
+              "text": "Za sopstveni slučaj treba povezati ugovor i tada merodavna pravila sa datumom dozvole, sadržajem obaveštenja i njegovim prijemom.",
+              "units": 18
+            },
+            {
+              "text": "Današnjih šest meseci predstavlja rok za obaveštenje; ne menja ugovorna četiri meseca iz ranijeg predmeta.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "kupac",
+          "sentences": [
+            {
+              "text": "Kupac ima i obaveze saradnje.",
+              "units": 5
+            },
+            {
+              "text": "Tačka 14 istog dokumenta uređuje kreditne isprave, potrebne postupke i uplate dospele pre upisa prenosa svojine.",
+              "units": 16
+            },
+            {
+              "text": "Čak i kada je obaveštenje sporno, dospele obaveze plaćanja i dostavljanja dokumentacije treba razmotriti prema sopstvenom ugovoru.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "potrošački",
+          "sentences": [
+            {
+              "text": "Potrošački organ je u rezultatima kontrole ugovora objavljenim 25. avgusta 2025. označio kao nedopuštenu klauzulu koja iz roka za obaveštenje izuzima vreme bankarske potvrde kredita i isplate.",
+              "units": 27
+            },
+            {
+              "text": "To je kasnija kontrola ugovornih uslova.",
+              "units": 6
+            },
+            {
+              "text": "Ona nije deo obrazloženja presude iz 2022.",
+              "units": 7
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "kod",
+          "sentences": [
+            {
+              "text": "Kod novog kredita relevantna je i izmena propisa tajvanske centralne banke o kreditima obezbeđenim nepokretnostima, koja se primenjuje od 18. septembra 2026.",
+              "units": 22
+            },
+            {
+              "text": "Današnji uslovi ne prenose se retroaktivno na raniju transakciju.",
+              "units": 9
+            },
+            {
+              "text": "Bankarski plan isplate može se uporediti sa zakazanim pregledom i predajom, uz beleženje svakog događaja zasebno.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "naslov",
+          "sentences": [
+            {
+              "text": "Naslov pisma nije dovoljan dokaz.",
+              "units": 5
+            },
+            {
+              "text": "Celokupno pismo i koverta ili elektronski podatak o dostavi, zapisnik pregleda, fotografije popravki, saglasnost za pristup i garantni list mogu zajedno pokazati kada je stan postao upotrebljiv i šta je tada još ostalo nedovršeno.",
+              "units": 34
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "za",
+          "sentences": [
+            {
+              "text": "Za upit o kamati zbog kašnjenja ili ugovornoj kazni, na adresu kancelarije mogu se poslati kratak opis sporne odredbe, datum obaveštenja i rok za odgovor.",
+              "units": 25
+            },
+            {
+              "text": "U pripremljenom dosijeu odvojeno označite poziv banci, poziv na pregled i obaveštenje o predaji, prema sadržaju svakog dokumenta.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "stanje",
+          "sentences": [
+            {
+              "text": "Stanje izvora: navedeni delovi sudske zbirke, važeće odredbe i zvanična saopštenja provereni su 26. oktobra 2026.",
+              "units": 16
+            },
+            {
+              "text": "Predmet se odnosio na određen ugovor i dokaze o izvršenju; tekst ne zamenjuje procenu pojedinačne odluke o plaćanju, odbijanju predaje ili zahtevu za naknadu.",
+              "units": 24
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Šta je pismo saopštavalo o stanu",
+        "Četiri meseca iz ugovora i šest iz današnjih pravila",
+        "Dokumenti za kredit i dokumenti za predaju"
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/918-case-trends-20261025.webp",
+        "sha256": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+        "bytes": 103074,
+        "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+      },
+      "sourceSHA256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "f408862fb5d8c925e4f88400bacc8dfd7d514bec78e17215bc62491983295487",
+      "initial_sha256": "84d879dc2da18d0cb2eaebd1bf59ec4c1f836ea02d85501ba238d0c4b19ac80e",
+      "inverse_exact": true,
+      "frontmatter_FAQ_unchanged": true,
+      "URL_sequence_and_numeric_tokens_unchanged": true,
+      "actual_cli_evidence": "sr-variety-revised.json",
+      "observed_batch_exit": 0,
+      "observed_file_status": "OK — no variety limit violated",
+      "metrics": {
+        "lang": "sr",
+        "sentences": 36,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.5,
+        "len_cv": 0.476,
+        "short_share": 0.222,
+        "long_share": 0.028,
+        "para_cv": 0.191,
+        "even_run3": 0.0,
+        "top_end": "radu",
+        "top_end_share": 0.056,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "sud",
+        "top_opener_n": 2,
+        "opener_rep": 0.077,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 1.97,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Sud je poništio otkaz rukovodiocu u tajvanskoj javnoj službi i odluku kojom je taj otkaz p",
+        "last": "Stanje izvora: sudsko saopštenje provereno 25. oktobra 2026, a važeći propisi 26. oktobra. Kasniji žalbeni ishod nije po",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_source_sentences": [
+        "Sud je poništio otkaz rukovodiocu u tajvanskoj javnoj službi i odluku kojom je taj otkaz potvrđen u upravnom preispitivanju.",
+        "Otkaz je bio izrečen uz istovremeni upis dve teške disciplinske zabeleške.",
+        "Prema objašnjenju Visokog upravnog suda u Tajpeju, problem su bili unapred najavljena sankcija, nedovoljna prilika za izjašnjenje i protivrečnosti u nalazima istrage.",
+        "Presuda 114年度訴字第869號 doneta je 3. septembra 2026. u odeljenju tog suda za upravne sporove višeg stepena.",
+        "Žalba je bila dopuštena.",
+        "Iz poništenja se ne može zaključiti da nije bilo zlostavljanja niti da je rukovodilac zaista vraćen na posao.",
+        "Rukovodilac organa javno je najavio dve teške disciplinske zabeleške pre rasprave nadležne komisije, a zatim je nadređeni organ razmatrao slučaj pre komisije organizacije u kojoj je zaposleni radio.",
+        "Sud je u tom redosledu video narušavanje stvarne uloge komisije.",
+        "Da li je rasprava još mogla promeniti ishod?",
+        "Najava sankcije prethodila joj je.",
+        "Naknadni zapisnik sa sastanka sam po sebi ne pokazuje da su članovi imali stvarnu mogućnost da dokaze ocene drugačije.",
+        "Sud je zasebno ukazao na izostanak urednog poziva da se zaposleni izjasni.",
+        "Postojala je i protivrečnost između nalaza o dokazima zlostavljanja i konačnog predloga mera iz izveštaja, koju je trebalo razjasniti pri odlučivanju o otkazu.",
+        "Odbrana izneta kasnije, u postupku upravnog preispitivanja, u ovom slučaju nije otklonila raniji nedostatak mogućnosti izjašnjenja.",
+        "Ovaj spor vođen je prema pravilima ocenjivanja u javnoj službi, za događaje pre novih pravila o zlostavljanju na radu.",
+        "U privatnom radnom odnosu relevantne su i odredbe o bezbednosti i zdravlju na radu koje se primenjuju od 1. jula 2026.",
+        "Datum primene potvrđuju zakonodavna istorija i saopštenje organa za bezbednost na radu.",
+        "Član 22-2 tajvanskog Zakona o bezbednosti i zdravlju na radu nalaže objektivnu, pravičnu i nepristrasnu istragu ili postupak usaglašavanja; pri istrazi strane moraju dobiti odgovarajuću priliku za izjavu i odbranu, uz poštovanje pravila o izuzeću.",
+        "Javno utvrđivanje odgovornosti pre završetka istrage otežava poštovanje tih pravila.",
+        "Zaštitne mere mogu početi odmah.",
+        "Kada poslodavac primi pritužbu pogođenog radnika, po istom članu mora preduzeti mere za sprečavanje ponavljanja zlostavljanja, pružiti savetovanje, pomoć i zaštitu prema potrebama i sprovesti istragu.",
+        "Ako podnosilac to želi, može se pristupiti usaglašavanju; ako dogovor izostane, istraga mora da se nastavi.",
+        "Brza zaštita i mogućnost odbrane mogu postojati zajedno.",
+        "Procesni problemi iz javnoslužbeničke presude pomažu u njihovom sagledavanju, ali ta presuda ne odlučuje neposredno o valjanosti sankcije u privatnoj kompaniji.",
+        "Izveštaj je lakše proveriti kada povezuje svaku tvrdnju, podatak koji je podupire i izvedeni zaključak.",
+        "Kod protivrečnih iskaza korisno je navesti koji je dokaz prihvaćen i zašto, kao i šta poruke, evidencije prisustva ili zapisnici nisu potvrdili.",
+        "To je način organizovanja spisa zasnovan na problemima koje je sud uočio.",
+        "Predmet izjašnjenja mora biti razumljiv.",
+        "Opšti poziv zaposlenom da opiše svoj stil rukovođenja ne daje isti prostor za odgovor kao obaveštenje koje određuje ponašanje, vreme i okolnosti koje treba razjasniti.",
+        "Istražitelj može uporediti poziv, zapisnik saslušanja i konačan nalaz, bez nepotrebnog javnog otkrivanja ličnih podataka.",
+        "Za pojedinačnu procenu tajvanskog radnog spora, na adresu kancelarije može se poslati kratak opis faze pritužbe, već donete odluke i najbližeg roka.",
+        "Ceo osetljivi dosije nije potreban u prvom obraćanju.",
+        "U samom spisu treba da ostane vidljivo kako su obaveštenje, odgovori učesnika i razlozi prihvatanja dokaza doveli do konačnog zaključka.",
+        "Stanje izvora: sudsko saopštenje provereno 25. oktobra 2026, a važeći propisi 26. oktobra.",
+        "Kasniji žalbeni ishod nije potvrđen.",
+        "Pravni lekovi u javnoj službi i privatnom radnom odnosu utvrđuju se zasebno."
+      ],
+      "actual_rendered_sentences": [
+        "Sud je poništio otkaz rukovodiocu u tajvanskoj javnoj službi i odluku kojom je taj otkaz potvrđen u upravnom preispitivanju.",
+        "Otkaz je bio izrečen uz istovremeni upis dve teške disciplinske zabeleške.",
+        "Prema objašnjenju Visokog upravnog suda u Tajpeju, problem su bili unapred najavljena sankcija, nedovoljna prilika za izjašnjenje i protivrečnosti u nalazima istrage.",
+        "Presuda 114年度訴字第869號 doneta je 3. septembra 2026. u odeljenju tog suda za upravne sporove višeg stepena.",
+        "Žalba je bila dopuštena.",
+        "Iz poništenja se ne može zaključiti da nije bilo zlostavljanja niti da je rukovodilac zaista vraćen na posao.",
+        "Rukovodilac organa javno je najavio dve teške disciplinske zabeleške pre rasprave nadležne komisije, a zatim je nadređeni organ razmatrao slučaj pre komisije organizacije u kojoj je zaposleni radio.",
+        "Sud je u tom redosledu video narušavanje stvarne uloge komisije.",
+        "Da li je rasprava još mogla promeniti ishod?",
+        "Najava sankcije prethodila joj je.",
+        "Naknadni zapisnik sa sastanka sam po sebi ne pokazuje da su članovi imali stvarnu mogućnost da dokaze ocene drugačije.",
+        "Sud je zasebno ukazao na izostanak urednog poziva da se zaposleni izjasni.",
+        "Postojala je i protivrečnost između nalaza o dokazima zlostavljanja i konačnog predloga mera iz izveštaja, koju je trebalo razjasniti pri odlučivanju o otkazu.",
+        "Odbrana izneta kasnije, u postupku upravnog preispitivanja, u ovom slučaju nije otklonila raniji nedostatak mogućnosti izjašnjenja.",
+        "Ovaj spor vođen je prema pravilima ocenjivanja u javnoj službi, za događaje pre novih pravila o zlostavljanju na radu.",
+        "U privatnom radnom odnosu relevantne su i odredbe o bezbednosti i zdravlju na radu koje se primenjuju od 1. jula 2026.",
+        "Datum primene potvrđuju zakonodavna istorija i saopštenje organa za bezbednost na radu.",
+        "Član 22-2 tajvanskog Zakona o bezbednosti i zdravlju na radu nalaže objektivnu, pravičnu i nepristrasnu istragu ili postupak usaglašavanja; pri istrazi strane moraju dobiti odgovarajuću priliku za izjavu i odbranu, uz poštovanje pravila o izuzeću.",
+        "Javno utvrđivanje odgovornosti pre završetka istrage otežava poštovanje tih pravila.",
+        "Zaštitne mere mogu početi odmah.",
+        "Kada poslodavac primi pritužbu pogođenog radnika, po istom članu mora preduzeti mere za sprečavanje ponavljanja zlostavljanja, pružiti savetovanje, pomoć i zaštitu prema potrebama i sprovesti istragu.",
+        "Ako podnosilac to želi, može se pristupiti usaglašavanju; ako dogovor izostane, istraga mora da se nastavi.",
+        "Brza zaštita i mogućnost odbrane mogu postojati zajedno.",
+        "Procesni problemi iz javnoslužbeničke presude pomažu u njihovom sagledavanju, ali ta presuda ne odlučuje neposredno o valjanosti sankcije u privatnoj kompaniji.",
+        "Izveštaj je lakše proveriti kada povezuje svaku tvrdnju, podatak koji je podupire i izvedeni zaključak.",
+        "Kod protivrečnih iskaza korisno je navesti koji je dokaz prihvaćen i zašto, kao i šta poruke, evidencije prisustva ili zapisnici nisu potvrdili.",
+        "To je način organizovanja spisa zasnovan na problemima koje je sud uočio.",
+        "Predmet izjašnjenja mora biti razumljiv.",
+        "Opšti poziv zaposlenom da opiše svoj stil rukovođenja ne daje isti prostor za odgovor kao obaveštenje koje određuje ponašanje, vreme i okolnosti koje treba razjasniti.",
+        "Istražitelj može uporediti poziv, zapisnik saslušanja i konačan nalaz, bez nepotrebnog javnog otkrivanja ličnih podataka.",
+        "Za pojedinačnu procenu tajvanskog radnog spora, na adresu kancelarije može se poslati kratak opis faze pritužbe, već donete odluke i najbližeg roka.",
+        "Ceo osetljivi dosije nije potreban u prvom obraćanju.",
+        "U samom spisu treba da ostane vidljivo kako su obaveštenje, odgovori učesnika i razlozi prihvatanja dokaza doveli do konačnog zaključka.",
+        "Stanje izvora: sudsko saopštenje provereno 25. oktobra 2026, a važeći propisi 26. oktobra.",
+        "Kasniji žalbeni ishod nije potvrđen.",
+        "Pravni lekovi u javnoj službi i privatnom radnom odnosu utvrđuju se zasebno."
+      ],
+      "actual_rendered_paragraphs": [
+        "Sud je poništio otkaz rukovodiocu u tajvanskoj javnoj službi i odluku kojom je taj otkaz potvrđen u upravnom preispitivanju. Otkaz je bio izrečen uz istovremeni upis dve teške disciplinske zabeleške. Prema objašnjenju Visokog upravnog suda u Tajpeju, problem su bili unapred najavljena sankcija, nedovoljna prilika za izjašnjenje i protivrečnosti u nalazima istrage.",
+        "Presuda 114年度訴字第869號 doneta je 3. septembra 2026. u odeljenju tog suda za upravne sporove višeg stepena. Žalba je bila dopuštena. Iz poništenja se ne može zaključiti da nije bilo zlostavljanja niti da je rukovodilac zaista vraćen na posao.",
+        "Rukovodilac organa javno je najavio dve teške disciplinske zabeleške pre rasprave nadležne komisije, a zatim je nadređeni organ razmatrao slučaj pre komisije organizacije u kojoj je zaposleni radio. Sud je u tom redosledu video narušavanje stvarne uloge komisije.",
+        "Da li je rasprava još mogla promeniti ishod? Najava sankcije prethodila joj je. Naknadni zapisnik sa sastanka sam po sebi ne pokazuje da su članovi imali stvarnu mogućnost da dokaze ocene drugačije.",
+        "Sud je zasebno ukazao na izostanak urednog poziva da se zaposleni izjasni. Postojala je i protivrečnost između nalaza o dokazima zlostavljanja i konačnog predloga mera iz izveštaja, koju je trebalo razjasniti pri odlučivanju o otkazu. Odbrana izneta kasnije, u postupku upravnog preispitivanja, u ovom slučaju nije otklonila raniji nedostatak mogućnosti izjašnjenja.",
+        "Ovaj spor vođen je prema pravilima ocenjivanja u javnoj službi, za događaje pre novih pravila o zlostavljanju na radu. U privatnom radnom odnosu relevantne su i odredbe o bezbednosti i zdravlju na radu koje se primenjuju od 1. jula 2026. Datum primene potvrđuju zakonodavna istorija i saopštenje organa za bezbednost na radu.",
+        "Član 22-2 tajvanskog Zakona o bezbednosti i zdravlju na radu nalaže objektivnu, pravičnu i nepristrasnu istragu ili postupak usaglašavanja; pri istrazi strane moraju dobiti odgovarajuću priliku za izjavu i odbranu, uz poštovanje pravila o izuzeću. Javno utvrđivanje odgovornosti pre završetka istrage otežava poštovanje tih pravila.",
+        "Zaštitne mere mogu početi odmah. Kada poslodavac primi pritužbu pogođenog radnika, po istom članu mora preduzeti mere za sprečavanje ponavljanja zlostavljanja, pružiti savetovanje, pomoć i zaštitu prema potrebama i sprovesti istragu. Ako podnosilac to želi, može se pristupiti usaglašavanju; ako dogovor izostane, istraga mora da se nastavi.",
+        "Brza zaštita i mogućnost odbrane mogu postojati zajedno. Procesni problemi iz javnoslužbeničke presude pomažu u njihovom sagledavanju, ali ta presuda ne odlučuje neposredno o valjanosti sankcije u privatnoj kompaniji.",
+        "Izveštaj je lakše proveriti kada povezuje svaku tvrdnju, podatak koji je podupire i izvedeni zaključak. Kod protivrečnih iskaza korisno je navesti koji je dokaz prihvaćen i zašto, kao i šta poruke, evidencije prisustva ili zapisnici nisu potvrdili. To je način organizovanja spisa zasnovan na problemima koje je sud uočio.",
+        "Predmet izjašnjenja mora biti razumljiv. Opšti poziv zaposlenom da opiše svoj stil rukovođenja ne daje isti prostor za odgovor kao obaveštenje koje određuje ponašanje, vreme i okolnosti koje treba razjasniti. Istražitelj može uporediti poziv, zapisnik saslušanja i konačan nalaz, bez nepotrebnog javnog otkrivanja ličnih podataka.",
+        "Za pojedinačnu procenu tajvanskog radnog spora, na adresu kancelarije može se poslati kratak opis faze pritužbe, već donete odluke i najbližeg roka. Ceo osetljivi dosije nije potreban u prvom obraćanju. U samom spisu treba da ostane vidljivo kako su obaveštenje, odgovori učesnika i razlozi prihvatanja dokaza doveli do konačnog zaključka.",
+        "Stanje izvora: sudsko saopštenje provereno 25. oktobra 2026, a važeći propisi 26. oktobra. Kasniji žalbeni ishod nije potvrđen. Pravni lekovi u javnoj službi i privatnom radnom odnosu utvrđuju se zasebno."
+      ],
+      "source_render_arrays_and_lengths_identical": true,
+      "lengths": [
+        19,
+        11,
+        22,
+        16,
+        4,
+        18,
+        28,
+        10,
+        8,
+        5,
+        19,
+        12,
+        23,
+        16,
+        19,
+        21,
+        12,
+        36,
+        10,
+        5,
+        26,
+        16,
+        8,
+        21,
+        15,
+        22,
+        12,
+        5,
+        25,
+        15,
+        22,
+        8,
+        20,
+        13,
+        5,
+        12
+      ],
+      "sentence_changes_after_initial": [
+        {
+          "operation": "replace",
+          "old_start": 6,
+          "new_start": 6,
+          "before": [
+            "Iz poništenja se ne može zaključiti da nije bilo nijednog prijavljenog postupka niti da je rukovodilac zaista vraćen na posao.",
+            "Pre nego što je nadležna komisija razmatrala slučaj, rukovodilac organa javno je najavio dve teške disciplinske zabeleške.",
+            "Zatim je o tome raspravljao nadređeni organ, pa tek onda komisija organizacije u kojoj je zaposleni radio.",
+            "Sud je ocenio da je time narušena uloga komisije da zaista proceni slučaj."
+          ],
+          "after": [
+            "Iz poništenja se ne može zaključiti da nije bilo zlostavljanja niti da je rukovodilac zaista vraćen na posao.",
+            "Rukovodilac organa javno je najavio dve teške disciplinske zabeleške pre rasprave nadležne komisije, a zatim je nadređeni organ razmatrao slučaj pre komisije organizacije u kojoj je zaposleni radio.",
+            "Sud je u tom redosledu video narušavanje stvarne uloge komisije."
+          ]
+        },
+        {
+          "operation": "replace",
+          "old_start": 19,
+          "new_start": 18,
+          "before": [
+            "Član 22-2 tajvanskog Zakona o bezbednosti i zdravlju na radu nalaže objektivnu, pravičnu i nepristrasnu istragu ili postupak usaglašavanja.",
+            "Pri istrazi strane moraju dobiti odgovarajuću priliku za izjavu i odbranu, uz poštovanje pravila o izuzeću.",
+            "Javno utvrđivanje krivice pre završetka tog postupka otežava ispunjenje tih zahteva."
+          ],
+          "after": [
+            "Član 22-2 tajvanskog Zakona o bezbednosti i zdravlju na radu nalaže objektivnu, pravičnu i nepristrasnu istragu ili postupak usaglašavanja; pri istrazi strane moraju dobiti odgovarajuću priliku za izjavu i odbranu, uz poštovanje pravila o izuzeću.",
+            "Javno utvrđivanje odgovornosti pre završetka istrage otežava poštovanje tih pravila."
+          ]
+        }
+      ],
+      "initial_human_read_count": 38,
+      "current_segment_count": 36,
+      "source_paragraphs": [
+        {
+          "index": 1,
+          "opener": "sud",
+          "sentences": [
+            {
+              "text": "Sud je poništio otkaz rukovodiocu u tajvanskoj javnoj službi i odluku kojom je taj otkaz potvrđen u upravnom preispitivanju.",
+              "units": 19
+            },
+            {
+              "text": "Otkaz je bio izrečen uz istovremeni upis dve teške disciplinske zabeleške.",
+              "units": 11
+            },
+            {
+              "text": "Prema objašnjenju Visokog upravnog suda u Tajpeju, problem su bili unapred najavljena sankcija, nedovoljna prilika za izjašnjenje i protivrečnosti u nalazima istrage.",
+              "units": 22
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "presuda",
+          "sentences": [
+            {
+              "text": "Presuda 114年度訴字第869號 doneta je 3. septembra 2026. u odeljenju tog suda za upravne sporove višeg stepena.",
+              "units": 16
+            },
+            {
+              "text": "Žalba je bila dopuštena.",
+              "units": 4
+            },
+            {
+              "text": "Iz poništenja se ne može zaključiti da nije bilo zlostavljanja niti da je rukovodilac zaista vraćen na posao.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "rukovodilac",
+          "sentences": [
+            {
+              "text": "Rukovodilac organa javno je najavio dve teške disciplinske zabeleške pre rasprave nadležne komisije, a zatim je nadređeni organ razmatrao slučaj pre komisije organizacije u kojoj je zaposleni radio.",
+              "units": 28
+            },
+            {
+              "text": "Sud je u tom redosledu video narušavanje stvarne uloge komisije.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "da",
+          "sentences": [
+            {
+              "text": "Da li je rasprava još mogla promeniti ishod?",
+              "units": 8
+            },
+            {
+              "text": "Najava sankcije prethodila joj je.",
+              "units": 5
+            },
+            {
+              "text": "Naknadni zapisnik sa sastanka sam po sebi ne pokazuje da su članovi imali stvarnu mogućnost da dokaze ocene drugačije.",
+              "units": 19
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "sud",
+          "sentences": [
+            {
+              "text": "Sud je zasebno ukazao na izostanak urednog poziva da se zaposleni izjasni.",
+              "units": 12
+            },
+            {
+              "text": "Postojala je i protivrečnost između nalaza o dokazima zlostavljanja i konačnog predloga mera iz izveštaja, koju je trebalo razjasniti pri odlučivanju o otkazu.",
+              "units": 23
+            },
+            {
+              "text": "Odbrana izneta kasnije, u postupku upravnog preispitivanja, u ovom slučaju nije otklonila raniji nedostatak mogućnosti izjašnjenja.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "ovaj",
+          "sentences": [
+            {
+              "text": "Ovaj spor vođen je prema pravilima ocenjivanja u javnoj službi, za događaje pre novih pravila o zlostavljanju na radu.",
+              "units": 19
+            },
+            {
+              "text": "U privatnom radnom odnosu relevantne su i odredbe o bezbednosti i zdravlju na radu koje se primenjuju od 1. jula 2026.",
+              "units": 21
+            },
+            {
+              "text": "Datum primene potvrđuju zakonodavna istorija i saopštenje organa za bezbednost na radu.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "član",
+          "sentences": [
+            {
+              "text": "Član 22-2 tajvanskog Zakona o bezbednosti i zdravlju na radu nalaže objektivnu, pravičnu i nepristrasnu istragu ili postupak usaglašavanja; pri istrazi strane moraju dobiti odgovarajuću priliku za izjavu i odbranu, uz poštovanje pravila o izuzeću.",
+              "units": 36
+            },
+            {
+              "text": "Javno utvrđivanje odgovornosti pre završetka istrage otežava poštovanje tih pravila.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "zaštitne",
+          "sentences": [
+            {
+              "text": "Zaštitne mere mogu početi odmah.",
+              "units": 5
+            },
+            {
+              "text": "Kada poslodavac primi pritužbu pogođenog radnika, po istom članu mora preduzeti mere za sprečavanje ponavljanja zlostavljanja, pružiti savetovanje, pomoć i zaštitu prema potrebama i sprovesti istragu.",
+              "units": 26
+            },
+            {
+              "text": "Ako podnosilac to želi, može se pristupiti usaglašavanju; ako dogovor izostane, istraga mora da se nastavi.",
+              "units": 16
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "brza",
+          "sentences": [
+            {
+              "text": "Brza zaštita i mogućnost odbrane mogu postojati zajedno.",
+              "units": 8
+            },
+            {
+              "text": "Procesni problemi iz javnoslužbeničke presude pomažu u njihovom sagledavanju, ali ta presuda ne odlučuje neposredno o valjanosti sankcije u privatnoj kompaniji.",
+              "units": 21
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "izveštaj",
+          "sentences": [
+            {
+              "text": "Izveštaj je lakše proveriti kada povezuje svaku tvrdnju, podatak koji je podupire i izvedeni zaključak.",
+              "units": 15
+            },
+            {
+              "text": "Kod protivrečnih iskaza korisno je navesti koji je dokaz prihvaćen i zašto, kao i šta poruke, evidencije prisustva ili zapisnici nisu potvrdili.",
+              "units": 22
+            },
+            {
+              "text": "To je način organizovanja spisa zasnovan na problemima koje je sud uočio.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "predmet",
+          "sentences": [
+            {
+              "text": "Predmet izjašnjenja mora biti razumljiv.",
+              "units": 5
+            },
+            {
+              "text": "Opšti poziv zaposlenom da opiše svoj stil rukovođenja ne daje isti prostor za odgovor kao obaveštenje koje određuje ponašanje, vreme i okolnosti koje treba razjasniti.",
+              "units": 25
+            },
+            {
+              "text": "Istražitelj može uporediti poziv, zapisnik saslušanja i konačan nalaz, bez nepotrebnog javnog otkrivanja ličnih podataka.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "za",
+          "sentences": [
+            {
+              "text": "Za pojedinačnu procenu tajvanskog radnog spora, na adresu kancelarije može se poslati kratak opis faze pritužbe, već donete odluke i najbližeg roka.",
+              "units": 22
+            },
+            {
+              "text": "Ceo osetljivi dosije nije potreban u prvom obraćanju.",
+              "units": 8
+            },
+            {
+              "text": "U samom spisu treba da ostane vidljivo kako su obaveštenje, odgovori učesnika i razlozi prihvatanja dokaza doveli do konačnog zaključka.",
+              "units": 20
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "stanje",
+          "sentences": [
+            {
+              "text": "Stanje izvora: sudsko saopštenje provereno 25. oktobra 2026, a važeći propisi 26. oktobra.",
+              "units": 13
+            },
+            {
+              "text": "Kasniji žalbeni ishod nije potvrđen.",
+              "units": 5
+            },
+            {
+              "text": "Pravni lekovi u javnoj službi i privatnom radnom odnosu utvrđuju se zasebno.",
+              "units": 12
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Redosled odlučivanja pokazao je problem",
+        "Privatni poslodavac primenjuje drugi pravni osnov",
+        "Od tvrdnje svedoka do konačnog nalaza"
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/919-case-trends-20261025.webp",
+        "sha256": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+        "bytes": 146756,
+        "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+      },
+      "sourceSHA256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "349fc3fcab177b5c4908c729e1ad84697d1379da74bac79c7d165065e7d7bf8e",
+      "initial_sha256": "1a3d3dafac438e4425233cf27d6fe17cd27adc05182e9572f65dc3492ee7d497",
+      "inverse_exact": true,
+      "frontmatter_FAQ_unchanged": true,
+      "URL_sequence_and_numeric_tokens_unchanged": true,
+      "actual_cli_evidence": "sr-variety-revised.json",
+      "observed_batch_exit": 0,
+      "observed_file_status": "OK — no variety limit violated",
+      "metrics": {
+        "lang": "sr",
+        "sentences": 41,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.0,
+        "len_cv": 0.462,
+        "short_share": 0.244,
+        "long_share": 0.0,
+        "para_cv": 0.182,
+        "even_run3": 0.026,
+        "top_end": "odredbi",
+        "top_end_share": 0.049,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "član",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.286,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.92,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Kablovi su sa zida iza parking mesta išli preko plafona do zajedničkog elektroormara, a za",
+        "last": "Stanje izvora: presuda proverena 25. oktobra 2026, a važeći propisi i gradsko saopštenje 26. oktobra. Kasnije odluke i p",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_source_sentences": [
+        "Kablovi su sa zida iza parking mesta išli preko plafona do zajedničkog elektroormara, a zatim do brojila koje koristi stanar.",
+        "Punjač je tako zahvatio više od prostora označenog linijama na podu.",
+        "Upravo je tu trasu razmatrao sud u predmetu 111年度上字第132號.",
+        "Ogranak Visokog suda Tajvana u Kaosjungu je 22. juna 2022. odbio žalbu stanara.",
+        "Obaveza uklanjanja opreme i vraćanja u prethodno stanje ostala je na snazi.",
+        "Sud je utvrdio da za radove na zajedničkom zidu, plafonu i elektroormaru nije prethodno pribavljena potrebna saglasnost.",
+        "Prema nespornim činjenicama navedenim u presudi, vodovi u zaštitnim cevima bili su postavljeni na plafonske nosače, a u zajedničkom elektroormaru ugrađen je dodatni prekidač.",
+        "Odatle je veza vodila do stanarevog brojila.",
+        "Zid, delovi plafona i elektroormar bili su zajednički.",
+        "Isključivo korišćenje parking mesta zato nije obuhvatalo ceo izvedeni zahvat.",
+        "Za pitanje saglasnosti bilo je potrebno ispitati sve zajedničke delove kroz koje je instalacija prošla, a ne samo mesto na kojem se vozilo parkira.",
+        "Član 11 tajvanskog propisa o upravljanju zgradama u etažnoj svojini vezuje rušenje, velike popravke ili unapređenje zajedničkih delova i povezanih uređaja za odluku skupštine etažnih vlasnika.",
+        "Sud je radove ocenio prema toj odredbi.",
+        "Član 15 pravilnika te zgrade dodatno je zahtevao odobrenje upravnog odbora i bezbednosnu proveru elektrodistributera za nove vodove i cevi.",
+        "Potrebna su bila oba uslova iz pravilnika.",
+        "Presuda je utvrdila i povredu zakonskog zahteva za odlukom skupštine.",
+        "Ti organi i pravni osnovi ne mogu se proizvoljno zameniti jedni drugima.",
+        "Član 6 stav 1 tačka 5 istog propisa nalaže poštovanje drugih propisa i pravilnika zgrade.",
+        "Upravni odbor je pokušao da reši problem pismom čiji je sadržaj mogao biti dokazan, ali oprema nije uklonjena, pa je po stavu 3 mogao da traži odgovarajuću odluku suda.",
+        "Taj sled povezuje utvrđenu povredu, pokušaj dogovora i dalje nepostupanje.",
+        "Tačka 4 prvog stava člana 6 uređuje i određeno postavljanje vodova i korišćenje zajedničkih delova kada je potrebno.",
+        "Sud je u petoj i šestoj tački obrazloženja izričito ocenio da ovaj slučaj ne pripada toj odredbi.",
+        "Bez stvarne trase i pravilnika ne može se iz presude izvesti isti postupak glasanja za svaki punjač u svakoj zgradi.",
+        "Stanar se pozivao i na naknadne mere.",
+        "Tvrdio je da je dodao prekidač, prestao da koristi punjač, zaključao ga i ponudio ključ upravnom odboru.",
+        "Čak i da su te tvrdnje tačne, prema sudu bi obaveza uklanjanja i vraćanja u prethodno stanje ostala, jer mere nisu otklonile povredu pravila za radove na zajedničkim delovima.",
+        "Broj parking mesta ne opisuje celu instalaciju.",
+        "Od izvođača se pre ponude može tražiti crtež sa položajem punjača, zidovima i stubovima koje koristi, plafonskim vodovima i mestom priključenja.",
+        "Poređenje sa svojinskim ispravama, pravilnikom i postojećim odlukama pokazuje kakvo pravo korišćenja postoji na svakom delu trase.",
+        "Ko još treba da odluči o toj trasi?",
+        "Upravnom odboru može se dostaviti konkretan plan i zatražiti da odredi merodavnu odredbu, nadležni organ i dokument koji nedostaje.",
+        "Ako saglasnost već postoji, njeni uslovi, oprema i putanja porede se sa verzijom koju izvođač namerava da izvede.",
+        "Grad Kaosjung je u saopštenju od 29. maja 2026. objavio program koji je obuhvatao i kablovske nosače za punjenje električnih vozila u zajedničkim prostorima zgrada.",
+        "Objavljeni rok za prijavu bio je 30. septembar.",
+        "Rok je prošao.",
+        "Subvencija ne zamenjuje saglasnost konkretne zajednice niti postupak odobravanja radova.",
+        "Ako je primljen zahtev za uklanjanje ili je tumačenje pravilnika sporno, na adresu kancelarije može se poslati opis trase, sporna odredba i rok za odgovor.",
+        "U ugovoru sa izvođačem može se jasno vezati početak radova za potrebnu saglasnost i odrediti ko snosi troškove ako zahtev ne bude prihvaćen.",
+        "Stanje izvora: presuda proverena 25. oktobra 2026, a važeći propisi i gradsko saopštenje 26. oktobra.",
+        "Kasnije odluke i pravnosnažnost nisu potvrđene.",
+        "U drugoj zgradi posebno se proveravaju raspored, prava korišćenja i njen pravilnik."
+      ],
+      "actual_rendered_sentences": [
+        "Kablovi su sa zida iza parking mesta išli preko plafona do zajedničkog elektroormara, a zatim do brojila koje koristi stanar.",
+        "Punjač je tako zahvatio više od prostora označenog linijama na podu.",
+        "Upravo je tu trasu razmatrao sud u predmetu 111年度上字第132號.",
+        "Ogranak Visokog suda Tajvana u Kaosjungu je 22. juna 2022. odbio žalbu stanara.",
+        "Obaveza uklanjanja opreme i vraćanja u prethodno stanje ostala je na snazi.",
+        "Sud je utvrdio da za radove na zajedničkom zidu, plafonu i elektroormaru nije prethodno pribavljena potrebna saglasnost.",
+        "Prema nespornim činjenicama navedenim u presudi, vodovi u zaštitnim cevima bili su postavljeni na plafonske nosače, a u zajedničkom elektroormaru ugrađen je dodatni prekidač.",
+        "Odatle je veza vodila do stanarevog brojila.",
+        "Zid, delovi plafona i elektroormar bili su zajednički.",
+        "Isključivo korišćenje parking mesta zato nije obuhvatalo ceo izvedeni zahvat.",
+        "Za pitanje saglasnosti bilo je potrebno ispitati sve zajedničke delove kroz koje je instalacija prošla, a ne samo mesto na kojem se vozilo parkira.",
+        "Član 11 tajvanskog propisa o upravljanju zgradama u etažnoj svojini vezuje rušenje, velike popravke ili unapređenje zajedničkih delova i povezanih uređaja za odluku skupštine etažnih vlasnika.",
+        "Sud je radove ocenio prema toj odredbi.",
+        "Član 15 pravilnika te zgrade dodatno je zahtevao odobrenje upravnog odbora i bezbednosnu proveru elektrodistributera za nove vodove i cevi.",
+        "Potrebna su bila oba uslova iz pravilnika.",
+        "Presuda je utvrdila i povredu zakonskog zahteva za odlukom skupštine.",
+        "Ti organi i pravni osnovi ne mogu se proizvoljno zameniti jedni drugima.",
+        "Član 6 stav 1 tačka 5 istog propisa nalaže poštovanje drugih propisa i pravilnika zgrade.",
+        "Upravni odbor je pokušao da reši problem pismom čiji je sadržaj mogao biti dokazan, ali oprema nije uklonjena, pa je po stavu 3 mogao da traži odgovarajuću odluku suda.",
+        "Taj sled povezuje utvrđenu povredu, pokušaj dogovora i dalje nepostupanje.",
+        "Tačka 4 prvog stava člana 6 uređuje i određeno postavljanje vodova i korišćenje zajedničkih delova kada je potrebno.",
+        "Sud je u petoj i šestoj tački obrazloženja izričito ocenio da ovaj slučaj ne pripada toj odredbi.",
+        "Bez stvarne trase i pravilnika ne može se iz presude izvesti isti postupak glasanja za svaki punjač u svakoj zgradi.",
+        "Stanar se pozivao i na naknadne mere.",
+        "Tvrdio je da je dodao prekidač, prestao da koristi punjač, zaključao ga i ponudio ključ upravnom odboru.",
+        "Čak i da su te tvrdnje tačne, prema sudu bi obaveza uklanjanja i vraćanja u prethodno stanje ostala, jer mere nisu otklonile povredu pravila za radove na zajedničkim delovima.",
+        "Broj parking mesta ne opisuje celu instalaciju.",
+        "Od izvođača se pre ponude može tražiti crtež sa položajem punjača, zidovima i stubovima koje koristi, plafonskim vodovima i mestom priključenja.",
+        "Poređenje sa svojinskim ispravama, pravilnikom i postojećim odlukama pokazuje kakvo pravo korišćenja postoji na svakom delu trase.",
+        "Ko još treba da odluči o toj trasi?",
+        "Upravnom odboru može se dostaviti konkretan plan i zatražiti da odredi merodavnu odredbu, nadležni organ i dokument koji nedostaje.",
+        "Ako saglasnost već postoji, njeni uslovi, oprema i putanja porede se sa verzijom koju izvođač namerava da izvede.",
+        "Grad Kaosjung je u saopštenju od 29. maja 2026. objavio program koji je obuhvatao i kablovske nosače za punjenje električnih vozila u zajedničkim prostorima zgrada.",
+        "Objavljeni rok za prijavu bio je 30. septembar.",
+        "Rok je prošao.",
+        "Subvencija ne zamenjuje saglasnost konkretne zajednice niti postupak odobravanja radova.",
+        "Ako je primljen zahtev za uklanjanje ili je tumačenje pravilnika sporno, na adresu kancelarije može se poslati opis trase, sporna odredba i rok za odgovor.",
+        "U ugovoru sa izvođačem može se jasno vezati početak radova za potrebnu saglasnost i odrediti ko snosi troškove ako zahtev ne bude prihvaćen.",
+        "Stanje izvora: presuda proverena 25. oktobra 2026, a važeći propisi i gradsko saopštenje 26. oktobra.",
+        "Kasnije odluke i pravnosnažnost nisu potvrđene.",
+        "U drugoj zgradi posebno se proveravaju raspored, prava korišćenja i njen pravilnik."
+      ],
+      "actual_rendered_paragraphs": [
+        "Kablovi su sa zida iza parking mesta išli preko plafona do zajedničkog elektroormara, a zatim do brojila koje koristi stanar. Punjač je tako zahvatio više od prostora označenog linijama na podu. Upravo je tu trasu razmatrao sud u predmetu 111年度上字第132號.",
+        "Ogranak Visokog suda Tajvana u Kaosjungu je 22. juna 2022. odbio žalbu stanara. Obaveza uklanjanja opreme i vraćanja u prethodno stanje ostala je na snazi. Sud je utvrdio da za radove na zajedničkom zidu, plafonu i elektroormaru nije prethodno pribavljena potrebna saglasnost.",
+        "Prema nespornim činjenicama navedenim u presudi, vodovi u zaštitnim cevima bili su postavljeni na plafonske nosače, a u zajedničkom elektroormaru ugrađen je dodatni prekidač. Odatle je veza vodila do stanarevog brojila. Zid, delovi plafona i elektroormar bili su zajednički.",
+        "Isključivo korišćenje parking mesta zato nije obuhvatalo ceo izvedeni zahvat. Za pitanje saglasnosti bilo je potrebno ispitati sve zajedničke delove kroz koje je instalacija prošla, a ne samo mesto na kojem se vozilo parkira.",
+        "Član 11 tajvanskog propisa o upravljanju zgradama u etažnoj svojini vezuje rušenje, velike popravke ili unapređenje zajedničkih delova i povezanih uređaja za odluku skupštine etažnih vlasnika. Sud je radove ocenio prema toj odredbi. Član 15 pravilnika te zgrade dodatno je zahtevao odobrenje upravnog odbora i bezbednosnu proveru elektrodistributera za nove vodove i cevi.",
+        "Potrebna su bila oba uslova iz pravilnika. Presuda je utvrdila i povredu zakonskog zahteva za odlukom skupštine. Ti organi i pravni osnovi ne mogu se proizvoljno zameniti jedni drugima.",
+        "Član 6 stav 1 tačka 5 istog propisa nalaže poštovanje drugih propisa i pravilnika zgrade. Upravni odbor je pokušao da reši problem pismom čiji je sadržaj mogao biti dokazan, ali oprema nije uklonjena, pa je po stavu 3 mogao da traži odgovarajuću odluku suda. Taj sled povezuje utvrđenu povredu, pokušaj dogovora i dalje nepostupanje.",
+        "Tačka 4 prvog stava člana 6 uređuje i određeno postavljanje vodova i korišćenje zajedničkih delova kada je potrebno. Sud je u petoj i šestoj tački obrazloženja izričito ocenio da ovaj slučaj ne pripada toj odredbi. Bez stvarne trase i pravilnika ne može se iz presude izvesti isti postupak glasanja za svaki punjač u svakoj zgradi.",
+        "Stanar se pozivao i na naknadne mere. Tvrdio je da je dodao prekidač, prestao da koristi punjač, zaključao ga i ponudio ključ upravnom odboru. Čak i da su te tvrdnje tačne, prema sudu bi obaveza uklanjanja i vraćanja u prethodno stanje ostala, jer mere nisu otklonile povredu pravila za radove na zajedničkim delovima.",
+        "Broj parking mesta ne opisuje celu instalaciju. Od izvođača se pre ponude može tražiti crtež sa položajem punjača, zidovima i stubovima koje koristi, plafonskim vodovima i mestom priključenja. Poređenje sa svojinskim ispravama, pravilnikom i postojećim odlukama pokazuje kakvo pravo korišćenja postoji na svakom delu trase.",
+        "Ko još treba da odluči o toj trasi? Upravnom odboru može se dostaviti konkretan plan i zatražiti da odredi merodavnu odredbu, nadležni organ i dokument koji nedostaje. Ako saglasnost već postoji, njeni uslovi, oprema i putanja porede se sa verzijom koju izvođač namerava da izvede.",
+        "Grad Kaosjung je u saopštenju od 29. maja 2026. objavio program koji je obuhvatao i kablovske nosače za punjenje električnih vozila u zajedničkim prostorima zgrada. Objavljeni rok za prijavu bio je 30. septembar. Rok je prošao. Subvencija ne zamenjuje saglasnost konkretne zajednice niti postupak odobravanja radova.",
+        "Ako je primljen zahtev za uklanjanje ili je tumačenje pravilnika sporno, na adresu kancelarije može se poslati opis trase, sporna odredba i rok za odgovor. U ugovoru sa izvođačem može se jasno vezati početak radova za potrebnu saglasnost i odrediti ko snosi troškove ako zahtev ne bude prihvaćen.",
+        "Stanje izvora: presuda proverena 25. oktobra 2026, a važeći propisi i gradsko saopštenje 26. oktobra. Kasnije odluke i pravnosnažnost nisu potvrđene. U drugoj zgradi posebno se proveravaju raspored, prava korišćenja i njen pravilnik."
+      ],
+      "source_render_arrays_and_lengths_identical": true,
+      "lengths": [
+        20,
+        11,
+        9,
+        13,
+        12,
+        17,
+        24,
+        7,
+        8,
+        10,
+        24,
+        26,
+        7,
+        20,
+        7,
+        10,
+        12,
+        15,
+        29,
+        10,
+        18,
+        17,
+        20,
+        7,
+        17,
+        29,
+        7,
+        21,
+        17,
+        8,
+        19,
+        18,
+        25,
+        8,
+        3,
+        10,
+        25,
+        23,
+        15,
+        6,
+        12
+      ],
+      "sentence_changes_after_initial": [
+        {
+          "operation": "replace",
+          "old_start": 38,
+          "new_start": 38,
+          "before": [
+            "Ugovor sa izvođačem može unapred urediti početak radova pre saglasnosti i raspodelu troškova ako zahtev za saglasnost ne bude prihvaćen."
+          ],
+          "after": [
+            "U ugovoru sa izvođačem može se jasno vezati početak radova za potrebnu saglasnost i odrediti ko snosi troškove ako zahtev ne bude prihvaćen."
+          ]
+        }
+      ],
+      "initial_human_read_count": 41,
+      "current_segment_count": 41,
+      "source_paragraphs": [
+        {
+          "index": 1,
+          "opener": "kablovi",
+          "sentences": [
+            {
+              "text": "Kablovi su sa zida iza parking mesta išli preko plafona do zajedničkog elektroormara, a zatim do brojila koje koristi stanar.",
+              "units": 20
+            },
+            {
+              "text": "Punjač je tako zahvatio više od prostora označenog linijama na podu.",
+              "units": 11
+            },
+            {
+              "text": "Upravo je tu trasu razmatrao sud u predmetu 111年度上字第132號.",
+              "units": 9
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "ogranak",
+          "sentences": [
+            {
+              "text": "Ogranak Visokog suda Tajvana u Kaosjungu je 22. juna 2022. odbio žalbu stanara.",
+              "units": 13
+            },
+            {
+              "text": "Obaveza uklanjanja opreme i vraćanja u prethodno stanje ostala je na snazi.",
+              "units": 12
+            },
+            {
+              "text": "Sud je utvrdio da za radove na zajedničkom zidu, plafonu i elektroormaru nije prethodno pribavljena potrebna saglasnost.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "prema",
+          "sentences": [
+            {
+              "text": "Prema nespornim činjenicama navedenim u presudi, vodovi u zaštitnim cevima bili su postavljeni na plafonske nosače, a u zajedničkom elektroormaru ugrađen je dodatni prekidač.",
+              "units": 24
+            },
+            {
+              "text": "Odatle je veza vodila do stanarevog brojila.",
+              "units": 7
+            },
+            {
+              "text": "Zid, delovi plafona i elektroormar bili su zajednički.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "isključivo",
+          "sentences": [
+            {
+              "text": "Isključivo korišćenje parking mesta zato nije obuhvatalo ceo izvedeni zahvat.",
+              "units": 10
+            },
+            {
+              "text": "Za pitanje saglasnosti bilo je potrebno ispitati sve zajedničke delove kroz koje je instalacija prošla, a ne samo mesto na kojem se vozilo parkira.",
+              "units": 24
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "član",
+          "sentences": [
+            {
+              "text": "Član 11 tajvanskog propisa o upravljanju zgradama u etažnoj svojini vezuje rušenje, velike popravke ili unapređenje zajedničkih delova i povezanih uređaja za odluku skupštine etažnih vlasnika.",
+              "units": 26
+            },
+            {
+              "text": "Sud je radove ocenio prema toj odredbi.",
+              "units": 7
+            },
+            {
+              "text": "Član 15 pravilnika te zgrade dodatno je zahtevao odobrenje upravnog odbora i bezbednosnu proveru elektrodistributera za nove vodove i cevi.",
+              "units": 20
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "potrebna",
+          "sentences": [
+            {
+              "text": "Potrebna su bila oba uslova iz pravilnika.",
+              "units": 7
+            },
+            {
+              "text": "Presuda je utvrdila i povredu zakonskog zahteva za odlukom skupštine.",
+              "units": 10
+            },
+            {
+              "text": "Ti organi i pravni osnovi ne mogu se proizvoljno zameniti jedni drugima.",
+              "units": 12
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "član",
+          "sentences": [
+            {
+              "text": "Član 6 stav 1 tačka 5 istog propisa nalaže poštovanje drugih propisa i pravilnika zgrade.",
+              "units": 15
+            },
+            {
+              "text": "Upravni odbor je pokušao da reši problem pismom čiji je sadržaj mogao biti dokazan, ali oprema nije uklonjena, pa je po stavu 3 mogao da traži odgovarajuću odluku suda.",
+              "units": 29
+            },
+            {
+              "text": "Taj sled povezuje utvrđenu povredu, pokušaj dogovora i dalje nepostupanje.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "tačka",
+          "sentences": [
+            {
+              "text": "Tačka 4 prvog stava člana 6 uređuje i određeno postavljanje vodova i korišćenje zajedničkih delova kada je potrebno.",
+              "units": 18
+            },
+            {
+              "text": "Sud je u petoj i šestoj tački obrazloženja izričito ocenio da ovaj slučaj ne pripada toj odredbi.",
+              "units": 17
+            },
+            {
+              "text": "Bez stvarne trase i pravilnika ne može se iz presude izvesti isti postupak glasanja za svaki punjač u svakoj zgradi.",
+              "units": 20
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "stanar",
+          "sentences": [
+            {
+              "text": "Stanar se pozivao i na naknadne mere.",
+              "units": 7
+            },
+            {
+              "text": "Tvrdio je da je dodao prekidač, prestao da koristi punjač, zaključao ga i ponudio ključ upravnom odboru.",
+              "units": 17
+            },
+            {
+              "text": "Čak i da su te tvrdnje tačne, prema sudu bi obaveza uklanjanja i vraćanja u prethodno stanje ostala, jer mere nisu otklonile povredu pravila za radove na zajedničkim delovima.",
+              "units": 29
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "broj",
+          "sentences": [
+            {
+              "text": "Broj parking mesta ne opisuje celu instalaciju.",
+              "units": 7
+            },
+            {
+              "text": "Od izvođača se pre ponude može tražiti crtež sa položajem punjača, zidovima i stubovima koje koristi, plafonskim vodovima i mestom priključenja.",
+              "units": 21
+            },
+            {
+              "text": "Poređenje sa svojinskim ispravama, pravilnikom i postojećim odlukama pokazuje kakvo pravo korišćenja postoji na svakom delu trase.",
+              "units": 17
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "ko",
+          "sentences": [
+            {
+              "text": "Ko još treba da odluči o toj trasi?",
+              "units": 8
+            },
+            {
+              "text": "Upravnom odboru može se dostaviti konkretan plan i zatražiti da odredi merodavnu odredbu, nadležni organ i dokument koji nedostaje.",
+              "units": 19
+            },
+            {
+              "text": "Ako saglasnost već postoji, njeni uslovi, oprema i putanja porede se sa verzijom koju izvođač namerava da izvede.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "grad",
+          "sentences": [
+            {
+              "text": "Grad Kaosjung je u saopštenju od 29. maja 2026. objavio program koji je obuhvatao i kablovske nosače za punjenje električnih vozila u zajedničkim prostorima zgrada.",
+              "units": 25
+            },
+            {
+              "text": "Objavljeni rok za prijavu bio je 30. septembar.",
+              "units": 8
+            },
+            {
+              "text": "Rok je prošao.",
+              "units": 3
+            },
+            {
+              "text": "Subvencija ne zamenjuje saglasnost konkretne zajednice niti postupak odobravanja radova.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "ako",
+          "sentences": [
+            {
+              "text": "Ako je primljen zahtev za uklanjanje ili je tumačenje pravilnika sporno, na adresu kancelarije može se poslati opis trase, sporna odredba i rok za odgovor.",
+              "units": 25
+            },
+            {
+              "text": "U ugovoru sa izvođačem može se jasno vezati početak radova za potrebnu saglasnost i odrediti ko snosi troškove ako zahtev ne bude prihvaćen.",
+              "units": 23
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "stanje",
+          "sentences": [
+            {
+              "text": "Stanje izvora: presuda proverena 25. oktobra 2026, a važeći propisi i gradsko saopštenje 26. oktobra.",
+              "units": 15
+            },
+            {
+              "text": "Kasnije odluke i pravnosnažnost nisu potvrđene.",
+              "units": 6
+            },
+            {
+              "text": "U drugoj zgradi posebno se proveravaju raspored, prava korišćenja i njen pravilnik.",
+              "units": 12
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Gde je instalacija prešla granicu parking mesta",
+        "Zakon i pravilnik zgrade zahtevali su saglasnost",
+        "Crtež trase pre ugovaranja radova"
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/920-case-trends-20261025.webp",
+        "sha256": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+        "bytes": 183782,
+        "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+      },
+      "sourceSHA256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "59dc73e80c5fa3dfd7d37bfbda4af66ceba80168ace8c48cbbdcd97d3cb0f8d4",
+      "initial_sha256": "59dc73e80c5fa3dfd7d37bfbda4af66ceba80168ace8c48cbbdcd97d3cb0f8d4",
+      "inverse_exact": true,
+      "frontmatter_FAQ_unchanged": true,
+      "URL_sequence_and_numeric_tokens_unchanged": true,
+      "actual_cli_evidence": "sr-variety-initial.json",
+      "observed_batch_exit": 1,
+      "observed_file_status": "OK — no variety limit violated",
+      "metrics": {
+        "lang": "sr",
+        "sentences": 44,
+        "paras": 15,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.8,
+        "len_cv": 0.506,
+        "short_share": 0.273,
+        "long_share": 0.023,
+        "para_cv": 0.24,
+        "even_run3": 0.024,
+        "top_end": "igrača",
+        "top_end_share": 0.045,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "igrač",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.68,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Igrač je tražio 243.548 novih tajvanskih dolara za zlatnike koji su ostali na njegovom nal",
+        "last": "Stanje izvora: navedeni delovi sudske zbirke, važeći uslovi i zvanična saopštenja provereni su 26. oktobra 2026. Bodovi,",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "actual_source_sentences": [
+        "Igrač je tražio 243.548 novih tajvanskih dolara za zlatnike koji su ostali na njegovom nalogu.",
+        "Zahtev nije usvojen.",
+        "Strane nisu sporile da na nalogu više nema neiskorišćenih bodova kupljenih novcem, iako je ostao saldo zlatnika, prema presudi u zvaničnoj zbirci zaštite potrošača, na štampanim stranama 140–153.",
+        "Okružni sud u Kilungu je 13. septembra 2021. odbio žalbu igrača u predmetu 109年度消簡上字第1號.",
+        "Dalja žalba nije bila dopuštena.",
+        "Odluka se zasnivala na funkciji zlatnika i ugovoru ove igre; ne isključuje sve virtuelne predmete iz potrošačke zaštite.",
+        "Ugovor je dopuštao kupovinu bodova, a zatim njihovu zamenu za usluge ili proizvode u igri.",
+        "Preostali zlatnici služili su kao žetoni u nadmetanju igrača.",
+        "Zbog te funkcije sud ih nije smatrao neiskorišćenim plaćenim bodovima ili naplaćenim naknadama za igru koje je po ugovoru trebalo vratiti.",
+        "Sud je razmatrao i posledicu gotovinske konverzije.",
+        "Kada bi se takvi žetoni iz nadmetanja mogli unovčiti, nastalo bi i pitanje kockanja.",
+        "To obrazloženje vezano je za konkretan način igranja.",
+        "Druga igra zahteva proveru kako su njeni zlatnici stečeni, za šta se menjaju i da li su korišćeni; sam naziv ne daje odgovor.",
+        "Pojedinosti su u osmoj tački obrazloženja, na štampanim stranama 148–152.",
+        "Sud nije morao da prihvati novčani zahtev samo zato što je ugovor prestao.",
+        "U ovom predmetu i igrač je izjavio da želi raskid, pa je sud mogao utvrditi njegov učinak i zatim ispitati preostale zlatnike.",
+        "Time nije potvrđena valjanost svakog ranijeg razloga pružaoca usluge za suspenziju ili raskid.",
+        "Prema tački 18 obaveznih uslova za onlajn igre, potrošač može u bilo kom trenutku obavestiti pružaoca usluge o raskidu ugovora.",
+        "Posle odbitka potrebnih troškova moraju se vratiti neiskorišćeni plaćeni bodovi ili neiskorišćene naknade za igru, u roku od 30 dana od prestanka ugovora, ili se povraćaj rešava na drugi način o kojem su se strane sporazumele.",
+        "Drugo rešenje zahteva saglasnost obe strane.",
+        "Jednostrana odluka pružaoca usluge nije takav dogovor.",
+        "Za proveru obračuna može se tražiti da se odvojeno prikažu neiskorišćeni iznos, potrebni troškovi koji se odbijaju i osnov njihovog izračunavanja.",
+        "Sadašnja verzija tih uslova primenjuje se od 1. januara 2023, posle prikazane presude.",
+        "Raniji predmet ocenjivan je prema tadašnjem ugovoru i merodavnim pravilima.",
+        "Današnja tačka 4 dopušta pisano odustajanje bez obrazloženja i troškova u roku od sedam dana od početka igranja, uz povraćaj neiskorišćenih plaćenih bodova.",
+        "Šta ostaje posle sedmog dana?",
+        "Potrošač i dalje ima mogućnost raskida iz tačke 18.",
+        "Pri tom se utvrđuje šta je ostalo neiskorišćeno i kako se iznos može vratiti.",
+        "Snimak ekrana pokazuje saldo u jednom trenutku.",
+        "Za vezu između uplate, zamene bodova za zlatnike i njihovog korišćenja potrebni su podaci o prethodnim koracima.",
+        "Dokumenti zato imaju različite uloge.",
+        "Tačka 9 istih obaveznih uslova nalaže pružaocu da čuva najmanje 30 dana lične evidencije igranja i da je dostavi u roku od sedam dana od prijema zahteva igrača.",
+        "Trideset dana je minimum.",
+        "Ranije traženje evidencije može smanjiti rizik da za sporni period ostane samo poslednji snimak salda.",
+        "Evidencija pružaoca nije jedini dopušteni dokaz.",
+        "Tačka 6 zabranjenih odredaba u istom dokumentu isključuje ugovaranje da se spor rešava isključivo prema njegovim zapisima o igri i elektronskim podacima.",
+        "Njihova upotreba kao dokaza i dalje je moguća.",
+        "Onlajn igre bile su druge po broju prvih potrošačkih pritužbi u statistici za 2025, uz pad u odnosu na prethodnu godinu.",
+        "U zvaničnom prikazu od 7. maja 2026. pružaoci su pozvani da pažljivije postupaju sa blokadama naloga, suspenzijama i korisničkom podrškom.",
+        "Spor o povraćaju može se prvo izneti pružaocu usluge, a zatim preko državnog portala za potrošačke pritužbe.",
+        "Za pravnu procenu ugovora ili dokaza, na adresu kancelarije može se poslati kratak opis spornog iznosa i roka za odgovor, bez lozinke naloga.",
+        "Traženi iznos lakše je objasniti kada podaci pokazuju kako je novac ušao na nalog, kako je pretvoren i šta je od toga korišćeno.",
+        "Stanje izvora: navedeni delovi sudske zbirke, važeći uslovi i zvanična saopštenja provereni su 26. oktobra 2026.",
+        "Bodovi, predmeti i razlozi prestanka ugovora u drugoj igri procenjuju se prema njenom stvarnom funkcionisanju i ugovoru."
+      ],
+      "actual_rendered_sentences": [
+        "Igrač je tražio 243.548 novih tajvanskih dolara za zlatnike koji su ostali na njegovom nalogu.",
+        "Zahtev nije usvojen.",
+        "Strane nisu sporile da na nalogu više nema neiskorišćenih bodova kupljenih novcem, iako je ostao saldo zlatnika, prema presudi u zvaničnoj zbirci zaštite potrošača, na štampanim stranama 140–153.",
+        "Okružni sud u Kilungu je 13. septembra 2021. odbio žalbu igrača u predmetu 109年度消簡上字第1號.",
+        "Dalja žalba nije bila dopuštena.",
+        "Odluka se zasnivala na funkciji zlatnika i ugovoru ove igre; ne isključuje sve virtuelne predmete iz potrošačke zaštite.",
+        "Ugovor je dopuštao kupovinu bodova, a zatim njihovu zamenu za usluge ili proizvode u igri.",
+        "Preostali zlatnici služili su kao žetoni u nadmetanju igrača.",
+        "Zbog te funkcije sud ih nije smatrao neiskorišćenim plaćenim bodovima ili naplaćenim naknadama za igru koje je po ugovoru trebalo vratiti.",
+        "Sud je razmatrao i posledicu gotovinske konverzije.",
+        "Kada bi se takvi žetoni iz nadmetanja mogli unovčiti, nastalo bi i pitanje kockanja.",
+        "To obrazloženje vezano je za konkretan način igranja.",
+        "Druga igra zahteva proveru kako su njeni zlatnici stečeni, za šta se menjaju i da li su korišćeni; sam naziv ne daje odgovor.",
+        "Pojedinosti su u osmoj tački obrazloženja, na štampanim stranama 148–152.",
+        "Sud nije morao da prihvati novčani zahtev samo zato što je ugovor prestao.",
+        "U ovom predmetu i igrač je izjavio da želi raskid, pa je sud mogao utvrditi njegov učinak i zatim ispitati preostale zlatnike.",
+        "Time nije potvrđena valjanost svakog ranijeg razloga pružaoca usluge za suspenziju ili raskid.",
+        "Prema tački 18 obaveznih uslova za onlajn igre, potrošač može u bilo kom trenutku obavestiti pružaoca usluge o raskidu ugovora.",
+        "Posle odbitka potrebnih troškova moraju se vratiti neiskorišćeni plaćeni bodovi ili neiskorišćene naknade za igru, u roku od 30 dana od prestanka ugovora, ili se povraćaj rešava na drugi način o kojem su se strane sporazumele.",
+        "Drugo rešenje zahteva saglasnost obe strane.",
+        "Jednostrana odluka pružaoca usluge nije takav dogovor.",
+        "Za proveru obračuna može se tražiti da se odvojeno prikažu neiskorišćeni iznos, potrebni troškovi koji se odbijaju i osnov njihovog izračunavanja.",
+        "Sadašnja verzija tih uslova primenjuje se od 1. januara 2023, posle prikazane presude.",
+        "Raniji predmet ocenjivan je prema tadašnjem ugovoru i merodavnim pravilima.",
+        "Današnja tačka 4 dopušta pisano odustajanje bez obrazloženja i troškova u roku od sedam dana od početka igranja, uz povraćaj neiskorišćenih plaćenih bodova.",
+        "Šta ostaje posle sedmog dana?",
+        "Potrošač i dalje ima mogućnost raskida iz tačke 18.",
+        "Pri tom se utvrđuje šta je ostalo neiskorišćeno i kako se iznos može vratiti.",
+        "Snimak ekrana pokazuje saldo u jednom trenutku.",
+        "Za vezu između uplate, zamene bodova za zlatnike i njihovog korišćenja potrebni su podaci o prethodnim koracima.",
+        "Dokumenti zato imaju različite uloge.",
+        "Tačka 9 istih obaveznih uslova nalaže pružaocu da čuva najmanje 30 dana lične evidencije igranja i da je dostavi u roku od sedam dana od prijema zahteva igrača.",
+        "Trideset dana je minimum.",
+        "Ranije traženje evidencije može smanjiti rizik da za sporni period ostane samo poslednji snimak salda.",
+        "Evidencija pružaoca nije jedini dopušteni dokaz.",
+        "Tačka 6 zabranjenih odredaba u istom dokumentu isključuje ugovaranje da se spor rešava isključivo prema njegovim zapisima o igri i elektronskim podacima.",
+        "Njihova upotreba kao dokaza i dalje je moguća.",
+        "Onlajn igre bile su druge po broju prvih potrošačkih pritužbi u statistici za 2025, uz pad u odnosu na prethodnu godinu.",
+        "U zvaničnom prikazu od 7. maja 2026. pružaoci su pozvani da pažljivije postupaju sa blokadama naloga, suspenzijama i korisničkom podrškom.",
+        "Spor o povraćaju može se prvo izneti pružaocu usluge, a zatim preko državnog portala za potrošačke pritužbe.",
+        "Za pravnu procenu ugovora ili dokaza, na adresu kancelarije može se poslati kratak opis spornog iznosa i roka za odgovor, bez lozinke naloga.",
+        "Traženi iznos lakše je objasniti kada podaci pokazuju kako je novac ušao na nalog, kako je pretvoren i šta je od toga korišćeno.",
+        "Stanje izvora: navedeni delovi sudske zbirke, važeći uslovi i zvanična saopštenja provereni su 26. oktobra 2026.",
+        "Bodovi, predmeti i razlozi prestanka ugovora u drugoj igri procenjuju se prema njenom stvarnom funkcionisanju i ugovoru."
+      ],
+      "actual_rendered_paragraphs": [
+        "Igrač je tražio 243.548 novih tajvanskih dolara za zlatnike koji su ostali na njegovom nalogu. Zahtev nije usvojen. Strane nisu sporile da na nalogu više nema neiskorišćenih bodova kupljenih novcem, iako je ostao saldo zlatnika, prema presudi u zvaničnoj zbirci zaštite potrošača, na štampanim stranama 140–153.",
+        "Okružni sud u Kilungu je 13. septembra 2021. odbio žalbu igrača u predmetu 109年度消簡上字第1號. Dalja žalba nije bila dopuštena. Odluka se zasnivala na funkciji zlatnika i ugovoru ove igre; ne isključuje sve virtuelne predmete iz potrošačke zaštite.",
+        "Ugovor je dopuštao kupovinu bodova, a zatim njihovu zamenu za usluge ili proizvode u igri. Preostali zlatnici služili su kao žetoni u nadmetanju igrača. Zbog te funkcije sud ih nije smatrao neiskorišćenim plaćenim bodovima ili naplaćenim naknadama za igru koje je po ugovoru trebalo vratiti.",
+        "Sud je razmatrao i posledicu gotovinske konverzije. Kada bi se takvi žetoni iz nadmetanja mogli unovčiti, nastalo bi i pitanje kockanja. To obrazloženje vezano je za konkretan način igranja. Druga igra zahteva proveru kako su njeni zlatnici stečeni, za šta se menjaju i da li su korišćeni; sam naziv ne daje odgovor.",
+        "Pojedinosti su u osmoj tački obrazloženja, na štampanim stranama 148–152. Sud nije morao da prihvati novčani zahtev samo zato što je ugovor prestao. U ovom predmetu i igrač je izjavio da želi raskid, pa je sud mogao utvrditi njegov učinak i zatim ispitati preostale zlatnike. Time nije potvrđena valjanost svakog ranijeg razloga pružaoca usluge za suspenziju ili raskid.",
+        "Prema tački 18 obaveznih uslova za onlajn igre, potrošač može u bilo kom trenutku obavestiti pružaoca usluge o raskidu ugovora. Posle odbitka potrebnih troškova moraju se vratiti neiskorišćeni plaćeni bodovi ili neiskorišćene naknade za igru, u roku od 30 dana od prestanka ugovora, ili se povraćaj rešava na drugi način o kojem su se strane sporazumele.",
+        "Drugo rešenje zahteva saglasnost obe strane. Jednostrana odluka pružaoca usluge nije takav dogovor. Za proveru obračuna može se tražiti da se odvojeno prikažu neiskorišćeni iznos, potrebni troškovi koji se odbijaju i osnov njihovog izračunavanja.",
+        "Sadašnja verzija tih uslova primenjuje se od 1. januara 2023, posle prikazane presude. Raniji predmet ocenjivan je prema tadašnjem ugovoru i merodavnim pravilima. Današnja tačka 4 dopušta pisano odustajanje bez obrazloženja i troškova u roku od sedam dana od početka igranja, uz povraćaj neiskorišćenih plaćenih bodova.",
+        "Šta ostaje posle sedmog dana? Potrošač i dalje ima mogućnost raskida iz tačke 18. Pri tom se utvrđuje šta je ostalo neiskorišćeno i kako se iznos može vratiti.",
+        "Snimak ekrana pokazuje saldo u jednom trenutku. Za vezu između uplate, zamene bodova za zlatnike i njihovog korišćenja potrebni su podaci o prethodnim koracima. Dokumenti zato imaju različite uloge.",
+        "Tačka 9 istih obaveznih uslova nalaže pružaocu da čuva najmanje 30 dana lične evidencije igranja i da je dostavi u roku od sedam dana od prijema zahteva igrača. Trideset dana je minimum. Ranije traženje evidencije može smanjiti rizik da za sporni period ostane samo poslednji snimak salda.",
+        "Evidencija pružaoca nije jedini dopušteni dokaz. Tačka 6 zabranjenih odredaba u istom dokumentu isključuje ugovaranje da se spor rešava isključivo prema njegovim zapisima o igri i elektronskim podacima. Njihova upotreba kao dokaza i dalje je moguća.",
+        "Onlajn igre bile su druge po broju prvih potrošačkih pritužbi u statistici za 2025, uz pad u odnosu na prethodnu godinu. U zvaničnom prikazu od 7. maja 2026. pružaoci su pozvani da pažljivije postupaju sa blokadama naloga, suspenzijama i korisničkom podrškom.",
+        "Spor o povraćaju može se prvo izneti pružaocu usluge, a zatim preko državnog portala za potrošačke pritužbe. Za pravnu procenu ugovora ili dokaza, na adresu kancelarije može se poslati kratak opis spornog iznosa i roka za odgovor, bez lozinke naloga. Traženi iznos lakše je objasniti kada podaci pokazuju kako je novac ušao na nalog, kako je pretvoren i šta je od toga korišćeno.",
+        "Stanje izvora: navedeni delovi sudske zbirke, važeći uslovi i zvanična saopštenja provereni su 26. oktobra 2026. Bodovi, predmeti i razlozi prestanka ugovora u drugoj igri procenjuju se prema njenom stvarnom funkcionisanju i ugovoru."
+      ],
+      "source_render_arrays_and_lengths_identical": true,
+      "lengths": [
+        15,
+        3,
+        29,
+        14,
+        5,
+        18,
+        15,
+        9,
+        21,
+        7,
+        14,
+        8,
+        23,
+        11,
+        13,
+        22,
+        13,
+        20,
+        36,
+        6,
+        7,
+        21,
+        13,
+        10,
+        23,
+        5,
+        9,
+        14,
+        7,
+        17,
+        5,
+        28,
+        4,
+        15,
+        6,
+        22,
+        8,
+        21,
+        20,
+        17,
+        23,
+        23,
+        16,
+        17
+      ],
+      "sentence_changes_after_initial": [],
+      "initial_human_read_count": 44,
+      "current_segment_count": 44,
+      "source_paragraphs": [
+        {
+          "index": 1,
+          "opener": "igrač",
+          "sentences": [
+            {
+              "text": "Igrač je tražio 243.548 novih tajvanskih dolara za zlatnike koji su ostali na njegovom nalogu.",
+              "units": 15
+            },
+            {
+              "text": "Zahtev nije usvojen.",
+              "units": 3
+            },
+            {
+              "text": "Strane nisu sporile da na nalogu više nema neiskorišćenih bodova kupljenih novcem, iako je ostao saldo zlatnika, prema presudi u zvaničnoj zbirci zaštite potrošača, na štampanim stranama 140–153.",
+              "units": 29
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "opener": "okružni",
+          "sentences": [
+            {
+              "text": "Okružni sud u Kilungu je 13. septembra 2021. odbio žalbu igrača u predmetu 109年度消簡上字第1號.",
+              "units": 14
+            },
+            {
+              "text": "Dalja žalba nije bila dopuštena.",
+              "units": 5
+            },
+            {
+              "text": "Odluka se zasnivala na funkciji zlatnika i ugovoru ove igre; ne isključuje sve virtuelne predmete iz potrošačke zaštite.",
+              "units": 18
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "opener": "ugovor",
+          "sentences": [
+            {
+              "text": "Ugovor je dopuštao kupovinu bodova, a zatim njihovu zamenu za usluge ili proizvode u igri.",
+              "units": 15
+            },
+            {
+              "text": "Preostali zlatnici služili su kao žetoni u nadmetanju igrača.",
+              "units": 9
+            },
+            {
+              "text": "Zbog te funkcije sud ih nije smatrao neiskorišćenim plaćenim bodovima ili naplaćenim naknadama za igru koje je po ugovoru trebalo vratiti.",
+              "units": 21
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "opener": "sud",
+          "sentences": [
+            {
+              "text": "Sud je razmatrao i posledicu gotovinske konverzije.",
+              "units": 7
+            },
+            {
+              "text": "Kada bi se takvi žetoni iz nadmetanja mogli unovčiti, nastalo bi i pitanje kockanja.",
+              "units": 14
+            },
+            {
+              "text": "To obrazloženje vezano je za konkretan način igranja.",
+              "units": 8
+            },
+            {
+              "text": "Druga igra zahteva proveru kako su njeni zlatnici stečeni, za šta se menjaju i da li su korišćeni; sam naziv ne daje odgovor.",
+              "units": 23
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "opener": "pojedinosti",
+          "sentences": [
+            {
+              "text": "Pojedinosti su u osmoj tački obrazloženja, na štampanim stranama 148–152.",
+              "units": 11
+            },
+            {
+              "text": "Sud nije morao da prihvati novčani zahtev samo zato što je ugovor prestao.",
+              "units": 13
+            },
+            {
+              "text": "U ovom predmetu i igrač je izjavio da želi raskid, pa je sud mogao utvrditi njegov učinak i zatim ispitati preostale zlatnike.",
+              "units": 22
+            },
+            {
+              "text": "Time nije potvrđena valjanost svakog ranijeg razloga pružaoca usluge za suspenziju ili raskid.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "opener": "prema",
+          "sentences": [
+            {
+              "text": "Prema tački 18 obaveznih uslova za onlajn igre, potrošač može u bilo kom trenutku obavestiti pružaoca usluge o raskidu ugovora.",
+              "units": 20
+            },
+            {
+              "text": "Posle odbitka potrebnih troškova moraju se vratiti neiskorišćeni plaćeni bodovi ili neiskorišćene naknade za igru, u roku od 30 dana od prestanka ugovora, ili se povraćaj rešava na drugi način o kojem su se strane sporazumele.",
+              "units": 36
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "opener": "drugo",
+          "sentences": [
+            {
+              "text": "Drugo rešenje zahteva saglasnost obe strane.",
+              "units": 6
+            },
+            {
+              "text": "Jednostrana odluka pružaoca usluge nije takav dogovor.",
+              "units": 7
+            },
+            {
+              "text": "Za proveru obračuna može se tražiti da se odvojeno prikažu neiskorišćeni iznos, potrebni troškovi koji se odbijaju i osnov njihovog izračunavanja.",
+              "units": 21
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "opener": "sadašnja",
+          "sentences": [
+            {
+              "text": "Sadašnja verzija tih uslova primenjuje se od 1. januara 2023, posle prikazane presude.",
+              "units": 13
+            },
+            {
+              "text": "Raniji predmet ocenjivan je prema tadašnjem ugovoru i merodavnim pravilima.",
+              "units": 10
+            },
+            {
+              "text": "Današnja tačka 4 dopušta pisano odustajanje bez obrazloženja i troškova u roku od sedam dana od početka igranja, uz povraćaj neiskorišćenih plaćenih bodova.",
+              "units": 23
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "opener": "šta",
+          "sentences": [
+            {
+              "text": "Šta ostaje posle sedmog dana?",
+              "units": 5
+            },
+            {
+              "text": "Potrošač i dalje ima mogućnost raskida iz tačke 18.",
+              "units": 9
+            },
+            {
+              "text": "Pri tom se utvrđuje šta je ostalo neiskorišćeno i kako se iznos može vratiti.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "opener": "snimak",
+          "sentences": [
+            {
+              "text": "Snimak ekrana pokazuje saldo u jednom trenutku.",
+              "units": 7
+            },
+            {
+              "text": "Za vezu između uplate, zamene bodova za zlatnike i njihovog korišćenja potrebni su podaci o prethodnim koracima.",
+              "units": 17
+            },
+            {
+              "text": "Dokumenti zato imaju različite uloge.",
+              "units": 5
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "opener": "tačka",
+          "sentences": [
+            {
+              "text": "Tačka 9 istih obaveznih uslova nalaže pružaocu da čuva najmanje 30 dana lične evidencije igranja i da je dostavi u roku od sedam dana od prijema zahteva igrača.",
+              "units": 28
+            },
+            {
+              "text": "Trideset dana je minimum.",
+              "units": 4
+            },
+            {
+              "text": "Ranije traženje evidencije može smanjiti rizik da za sporni period ostane samo poslednji snimak salda.",
+              "units": 15
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "opener": "evidencija",
+          "sentences": [
+            {
+              "text": "Evidencija pružaoca nije jedini dopušteni dokaz.",
+              "units": 6
+            },
+            {
+              "text": "Tačka 6 zabranjenih odredaba u istom dokumentu isključuje ugovaranje da se spor rešava isključivo prema njegovim zapisima o igri i elektronskim podacima.",
+              "units": 22
+            },
+            {
+              "text": "Njihova upotreba kao dokaza i dalje je moguća.",
+              "units": 8
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "opener": "onlajn",
+          "sentences": [
+            {
+              "text": "Onlajn igre bile su druge po broju prvih potrošačkih pritužbi u statistici za 2025, uz pad u odnosu na prethodnu godinu.",
+              "units": 21
+            },
+            {
+              "text": "U zvaničnom prikazu od 7. maja 2026. pružaoci su pozvani da pažljivije postupaju sa blokadama naloga, suspenzijama i korisničkom podrškom.",
+              "units": 20
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "opener": "spor",
+          "sentences": [
+            {
+              "text": "Spor o povraćaju može se prvo izneti pružaocu usluge, a zatim preko državnog portala za potrošačke pritužbe.",
+              "units": 17
+            },
+            {
+              "text": "Za pravnu procenu ugovora ili dokaza, na adresu kancelarije može se poslati kratak opis spornog iznosa i roka za odgovor, bez lozinke naloga.",
+              "units": 23
+            },
+            {
+              "text": "Traženi iznos lakše je objasniti kada podaci pokazuju kako je novac ušao na nalog, kako je pretvoren i šta je od toga korišćeno.",
+              "units": 23
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "opener": "stanje",
+          "sentences": [
+            {
+              "text": "Stanje izvora: navedeni delovi sudske zbirke, važeći uslovi i zvanična saopštenja provereni su 26. oktobra 2026.",
+              "units": 16
+            },
+            {
+              "text": "Bodovi, predmeti i razlozi prestanka ugovora u drugoj igri procenjuju se prema njenom stvarnom funkcionisanju i ugovoru.",
+              "units": 17
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "Kupljeni bodovi i žetoni za nadmetanje",
+        "Današnji povraćaj zavisi od neiskorišćenog iznosa",
+        "Kako se prati promena stanja naloga"
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/921-case-trends-20261025.webp",
+        "sha256": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933",
+        "bytes": 122822,
+        "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+      },
+      "sourceSHA256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+    }
+  ],
+  "actual_cli_invocations": 2,
+  "actual_cli_file_measurements": 11,
+  "initial_batch_exit": 1,
+  "initial_FAIL_files": [
+    "918",
+    "919"
+  ],
+  "revised_batch_exit": 0,
+  "unchanged_921_basis": "Initial batch exited1 because other files failed; this exact SHA was individually OK. No new per-file exit0 claimed.",
+  "current_total_segments": 238,
+  "initial_total_segments": 240,
+  "current_all_files_FAIL0": true,
+  "structural_errors": 0,
+  "FAQ_total": 17,
+  "same_tool_hashes": {
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+    "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+    "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+    "/Users/son7/tseng-lanes-shared/variety/profiles/sr.json": "b82eac56b6e35c4a08e8029317975be46ee3930f2366633a704dd487a69d0419"
+  },
+  "all_initial_bytes_recoverable": true,
+  "meaning_and_boundary_review": "Initial240 segments read in full; all actual7edit strings and resulting changed segments directly reread. Current238 segments correspond exactly to actual ReactMarkdown paragraph text. Conditions/figures/officialURL/FAQ preserved.",
+  "limits": [
+    "Model author self-review; no native human or legal approval",
+    "Direct full original image viewing reused from continuous B6 work by unchanged byte hashes",
+    "Only parser HTML/prose arrays verified; no full browser/card/JSON-LD/feed/public deployment claim"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "at_utc": "2026-10-26T08:51:39.848847+00:00",
+  "phase": "initial",
+  "locale": "ro",
+  "method": "Actual shared CLI with explicit ro; extracted arrays from unchanged shared functions. Orthographic units, not native readability or legal approval. Metadata/FAQ/tables/headings/source list separately reviewed.",
+  "tool_inputs": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/ro.json",
+      "sha256": "1fe2c5bb725e55a8aa38fcaafc0f52fc43d729c54fa9dfaaab5a6aafddee1474"
+    }
+  ],
+  "rows": []
+}

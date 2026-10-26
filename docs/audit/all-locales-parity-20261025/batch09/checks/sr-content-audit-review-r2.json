@@ -1,0 +1,944 @@
+{
+  "atUTC": "2026-10-26T09:42:17.590Z",
+  "selected": 1,
+  "errors": 0,
+  "semanticStatus": "REVIEW_REQUIRED",
+  "groups": [
+    {
+      "version": 1,
+      "generatedAt": "2026-10-26T09:42:17.590Z",
+      "repoRoot": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+      "selectedFiles": 1,
+      "automatedStatus": "PASS",
+      "semanticStatus": "REVIEW_REQUIRED",
+      "publicationReady": false,
+      "errors": 0,
+      "reviewItems": 6,
+      "policy": {
+        "minBodyLettersAndNumbers": 500,
+        "minUniqueParagraphLettersAndNumbers": 350,
+        "sourceLocale": "en",
+        "publicationDate": "2026-10-26",
+        "legacyPolicy": "Unselected files supply existence/duplicate context only; no content changes or audience changes are made.",
+        "sourceApproval": "The operator must select an accepted source; existence/hash is not evidence of legal approval."
+      },
+      "runtimeContractHashes": {
+        "src/lib/column-audience.ts": "a1cb781f1a787366199995b0312b0fa1556d850e0637eb5ea66cd2174680b760",
+        "src/data/market-column-curation.ts": "c42e22feed6e49e5f4915a48ad18a49d9b874c024824ddf53a74fd5ede8a8b94",
+        "src/lib/column-attribution.ts": "8111ea9feabcdc98f13485014da51d39c9aebd084cbb6a1e52d923624bb6dcc3",
+        "src/lib/columns.ts": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+        "src/lib/column-locales.ts": "26d8fe8de7a9703aa7b0d279f32938e84190d5199ce0c4ddee84e89bb934b535",
+        "src/lib/public-guidance.ts": "c00a193d0dd583145e544a2cc505efad75a4379f5c334a811655a689d6df8d85",
+        "src/lib/column-topics.ts": "3fb8e18ae18777481cb8a07c158ea1b6435cdab98da0ea4701a1b98bf3ba435a",
+        "src/lib/locales.ts": "38304dea2b15fc6d6d05cebafa6cc08fdac18d66da875da7c79b7a117e431c54",
+        "src/lib/public-route-policy.ts": "7a71128c423d76057bd50e791189533ab96789594aef994f4346f4ead2c6607c",
+        "src/app/[locale]/(legacy)/index.tsx": "5e485ee21bac81e7b8dc74778fba24d69e8541492010e791709a82373c3eb2da",
+        "src/app/[locale]/[[...slug]]/page.tsx": "3dab508b2dddb716fa84184335f4f62b3d35164d30abdb3ab30185a3bb6a4f03"
+      },
+      "inventory": {
+        "counts": {
+          "ko": 217,
+          "zh-hant": 296,
+          "en": 218,
+          "ja": 230,
+          "vi": 45,
+          "id": 33,
+          "th": 31,
+          "fil": 31,
+          "ar": 34,
+          "de": 32,
+          "es": 52,
+          "fr": 31,
+          "pt": 34,
+          "zh-hans": 29,
+          "ms": 30,
+          "ru": 30,
+          "tr": 24,
+          "it": 32,
+          "nl": 26,
+          "pl": 26,
+          "hi": 34,
+          "sv": 24,
+          "da": 30,
+          "nb": 24,
+          "fi": 30,
+          "cs": 26,
+          "hu": 30,
+          "ro": 24,
+          "uk": 24,
+          "el": 30,
+          "he": 26,
+          "bn": 30,
+          "ur": 24,
+          "fa": 30,
+          "my": 24,
+          "ta": 24,
+          "ne": 24,
+          "km": 30,
+          "mn": 30,
+          "sk": 24,
+          "bg": 30,
+          "hr": 30,
+          "sr": 30,
+          "sl": 24,
+          "lt": 26,
+          "lv": 30,
+          "et": 30,
+          "ca": 30,
+          "is": 30
+        },
+        "duplicateKeys": []
+      },
+      "files": [
+        {
+          "file": "../../tseng-all-language-columns-20261025/batch09/checks/sr-overlay-content/columns-sr/916-taiwan-parent-company-pollution-liability-us-investor.md",
+          "locale": "sr",
+          "slug": "taiwan-parent-company-pollution-liability-us-investor",
+          "errors": [],
+          "reviews": [
+            {
+              "code": "cross-language-link",
+              "status": "REQUIRED",
+              "message": "Confirm that the label explicitly identifies the source language and that no same-language page is available",
+              "href": "/en/contact",
+              "text": "kontakt stranice na engleskom",
+              "line": 56,
+              "kind": "body"
+            },
+            {
+              "code": "public-output-and-native-prose",
+              "status": "REQUIRED",
+              "message": "Inspect rendered title, summary, FAQ, captions, cards, JSON-LD and feeds for native language and author leakage; compare opening/headings/ending with the previous three same-language articles. Automated token checks cannot prove either.",
+              "targetFields": [
+                {
+                  "key": "title",
+                  "text": "Zagađenje tajvanske fabrike: šta su matična društva znala i preduzela"
+                },
+                {
+                  "key": "seoTitle",
+                  "text": "Odgovornost matičnog društva za zagađenje na Tajvanu"
+                },
+                {
+                  "key": "summary",
+                  "text": "Izveštaji o zagađenju, upravljanje fabrikom i kasniji prenosi imovine zajedno su bili važni u tajvanskom sporu radnika. Vlasnički odnos sam nije objašnjavao odgovornost; značaj su imali saznanje i postupci društava koja su kontrolisala poslovanje."
+                },
+                {
+                  "key": "featured_image_alt",
+                  "text": "Tegla sa uzorkom zemlje i beležnica na sklopivom stolu ispred stare fabrike"
+                },
+                {
+                  "key": "featured_image_caption",
+                  "text": "Izmišljeni prizor"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "Da li vlasništvo nad tajvanskim društvom samo po sebi čini strano matično društvo odgovornim za zagađenje?"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "Ova odluka se nije zasnivala samo na vlasništvu. Zvanično objašnjenje povezuje kontrolu poslovanja, saznanje o zagađenju, izostanak obaveštavanja ili mera i prenose imovine radi izbegavanja odgovornosti. Potrebno je proceniti konkretno postupanje i merodavno pravo."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "Da li je Vrhovni sud 2018. okončao sve povezane sporove za naknadu štete?"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "Nije. Delovi koji se odnose na 246 tužilaca ukinuti su i vraćeni na ponovno suđenje, dok su pravni lekovi u vezi sa 262 tužioca odbijeni. Različiti delovi postupka imali su različit ishod; to ne znači da su svi povezani sporovi završeni."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "Koje dokumente čuvati posle provere ekoloških rizika pri preuzimanju društva?"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "Izveštaje i podatke o njihovim primaocima, naknadna pitanja, odluke o izloženosti radnika hemikalijama i sanaciji, kao i odobrenja kasnijih prenosa imovine i pripadajuće finansijske analize. Oni pomažu da se procene saznanje i postupanje. Samo postojanje arhive ne dokazuje zakonitost."
+                }
+              ]
+            },
+            {
+              "code": "title-summary-faq",
+              "status": "REQUIRED",
+              "message": "Compare legal subject and scope in title, summary and every FAQ; presence/count is not semantic preservation. Check translated category labels and captions too.",
+              "source": {
+                "title": "Taiwan Factory Pollution: What the Parent Companies Knew",
+                "seoTitle": "Taiwan Parent Liability for Pollution",
+                "summary": "A Taiwan pollution judgment linked parent-company liability to control, knowledge and asset transfers. Acquisition diligence needs a record of the response.",
+                "faq": [
+                  {
+                    "q": "Does owning a Taiwan subsidiary make its foreign parent liable for pollution claims?",
+                    "a": "Ownership alone was not the basis of the ruling discussed here. The court's explanation describes control, knowledge of contamination, failure to address or disclose it, and asset movements intended to evade liabilities. Liability requires analysis of the particular conduct and applicable law."
+                  },
+                  {
+                    "q": "Did the 2018 Supreme Court ruling end every claim in the factory-pollution litigation?",
+                    "a": "No. The court vacated and remanded the portions concerning 246 claimants and dismissed the appeals concerning 262. The ruling had different outcomes for different portions of the case; it was not the conclusion of all related litigation."
+                  },
+                  {
+                    "q": "What should an acquisition team retain after an environmental review?",
+                    "a": "Retain the report, its recipients, follow-up questions, decisions on worker exposure and remediation, and the approvals and financial analysis for later asset transfers. These records help assess knowledge and conduct; keeping a file alone does not establish compliance."
+                  }
+                ],
+                "categories": [
+                  "Taiwan Legal Information"
+                ],
+                "featured_image_caption": "Fictional scene"
+              },
+              "target": {
+                "title": "Zagađenje tajvanske fabrike: šta su matična društva znala i preduzela",
+                "seoTitle": "Odgovornost matičnog društva za zagađenje na Tajvanu",
+                "summary": "Izveštaji o zagađenju, upravljanje fabrikom i kasniji prenosi imovine zajedno su bili važni u tajvanskom sporu radnika. Vlasnički odnos sam nije objašnjavao odgovornost; značaj su imali saznanje i postupci društava koja su kontrolisala poslovanje.",
+                "faq": [
+                  {
+                    "q": "Da li vlasništvo nad tajvanskim društvom samo po sebi čini strano matično društvo odgovornim za zagađenje?",
+                    "a": "Ova odluka se nije zasnivala samo na vlasništvu. Zvanično objašnjenje povezuje kontrolu poslovanja, saznanje o zagađenju, izostanak obaveštavanja ili mera i prenose imovine radi izbegavanja odgovornosti. Potrebno je proceniti konkretno postupanje i merodavno pravo."
+                  },
+                  {
+                    "q": "Da li je Vrhovni sud 2018. okončao sve povezane sporove za naknadu štete?",
+                    "a": "Nije. Delovi koji se odnose na 246 tužilaca ukinuti su i vraćeni na ponovno suđenje, dok su pravni lekovi u vezi sa 262 tužioca odbijeni. Različiti delovi postupka imali su različit ishod; to ne znači da su svi povezani sporovi završeni."
+                  },
+                  {
+                    "q": "Koje dokumente čuvati posle provere ekoloških rizika pri preuzimanju društva?",
+                    "a": "Izveštaje i podatke o njihovim primaocima, naknadna pitanja, odluke o izloženosti radnika hemikalijama i sanaciji, kao i odobrenja kasnijih prenosa imovine i pripadajuće finansijske analize. Oni pomažu da se procene saznanje i postupanje. Samo postojanje arhive ne dokazuje zakonitost."
+                  }
+                ],
+                "categories": [
+                  "Pravne informacije o Tajvanu"
+                ],
+                "featured_image_caption": "Izmišljeni prizor"
+              }
+            },
+            {
+              "code": "legal-conditions",
+              "status": "REQUIRED",
+              "message": "Verify every source actor, must/may, AND/OR, exception, eligibility, starting date, period, amount, quotation and factual qualifier against the full target. Passage order/count need not match. No heuristic clears this item.",
+              "sourcePassages": [
+                {
+                  "text": "Environmental investigations before an acquisition became part of the evidence against parent companies in a Taiwan factory-pollution case. The Supreme Court connected knowledge of contamination with operational control, the response to the danger and transfers that depleted the Taiwan company's assets. Its official explanation of judgment 107年度台上字第267號 shows why an acquisition review cannot end when the consultant delivers a report.",
+                  "line": 26,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Issued on August 16, 2018, the decision concerned workers' chemical exposure at an electronics manufacturer and the responsibility of companies controlling that business. It did not impose liability merely because a foreign investor owned a Taiwan subsidiary.",
+                  "line": 28,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "According to the Supreme Court's explanation, the record included environmental surveys identifying contamination, knowledge within the controlling groups, failure to inform workers or remedy the problem, and capital reductions and offshore remittances intended to evade liabilities. The court upheld the reasoning that allowed the relevant claims to reach the controlling companies despite separate corporate identities.",
+                  "line": 32,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "That sequence matters to acquisition counsel. A report's distribution list can identify who knew about the problem. Board papers and operational instructions can show who could decide how to respond. Later remittance approvals may need to be read against both. Treating those records as unrelated workstreams makes the group's own decisions harder to reconstruct.",
+                  "line": 34,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "The report is a starting point. A useful review asks who investigated the exposure concern, what further work was commissioned and how the findings affected decisions about the operating company's resources. It should record unanswered questions as unanswered. An optimistic closing presentation should not erase the underlying technical findings or the people responsible for following them up.",
+                  "line": 36,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "For 246 claimants, the Supreme Court vacated the relevant portions and sent them back for further proceedings. Appeals concerning 262 claimants were dismissed. The remand included shortcomings in the analysis of injury, evidence and authority to pursue claims. Those figures and limits appear in the court's disposition summary.",
+                  "line": 40,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "The split prevents a broad reading of the case. Remand did not decide that all affected people lacked a claim, and the dismissed appeals did not resolve every part of the wider litigation. A transaction team assessing historical exposure needs to identify the particular proceedings and their status before estimating an obligation. A headline about a single court date cannot supply that assessment.",
+                  "line": 42,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Taiwan's Company Act Article 154 generally limits a shareholder's responsibility to payment for its shares. Paragraph 2 provides an exception where a shareholder abuses the company's legal personality, causes it to incur a specific debt that is clearly difficult to repay, and the circumstances are serious enough to make shareholder liability necessary.",
+                  "line": 46,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Each condition matters. A shareholder relationship, an unpaid debt or an environmental finding alone does not state the whole statutory test. Nor should the statute be treated as the sole explanation for the court's treatment of historical conduct in the 2018 case. That decision examined the controlling companies' conduct and the basis for looking beyond separate legal identity.",
+                  "line": 48,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Investors comparing entity structures can find the ordinary starting point in the subsidiary and branch article. The pollution dispute adds a question that incorporation documents cannot answer: how did the group actually use its control when it learned about the risk?",
+                  "line": 50,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "USTR's February 2026 fact sheet describes the two sides' intention to facilitate cross-border investment and possible US support for private investment financing in Taiwan, subject to applicable law.",
+                  "line": 54,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Before approving a distribution, capital reduction or exit transfer, the relevant decision-makers should have an assessment of identified exposure, unresolved claims and the resources that will remain in the Taiwan company. The legal review must address the proposed transaction itself. No document label establishes that a transfer is lawful, and a report sitting unread in a data room does not establish a response to its findings.",
+                  "line": 56,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "For a Taiwan corporate or disputes inquiry, the initial description can identify the transaction, the Taiwan entity and any scheduled transfer or closing date. Technical reports and sensitive worker information can be handled through an agreed delivery process. The immediate records to preserve are the original findings, the decisions they prompted and the approvals for any subsequent movement of assets.",
+                  "line": 58,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Official sources checked October 25, 2026. This article examines one identified 2018 ruling through the Supreme Court's explanation and the current statutory provision; it is not a history of every related case or an assessment of a particular investor's liability.",
+                  "line": 60,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Supreme Court explanation of 107年度台上字第267號, August 16, 2018: environmental knowledge, control, asset movements and the split disposition.",
+                  "line": 64,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Company Act, Article 154: limited shareholder liability and the statutory exception for abuse of corporate personality.",
+                  "line": 65,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "USTR, February 2026 reciprocal-trade fact sheet: stated intentions concerning cross-border investment.",
+                  "line": 66,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Knowledge, control and the movement of assets",
+                  "line": 30,
+                  "kind": "h2"
+                },
+                {
+                  "text": "The ruling had a divided outcome",
+                  "line": 38,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Limited liability and its conditions",
+                  "line": 44,
+                  "kind": "h2"
+                },
+                {
+                  "text": "A current investment plan needs a response record",
+                  "line": 52,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Official sources",
+                  "line": 62,
+                  "kind": "h2"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "Does owning a Taiwan subsidiary make its foreign parent liable for pollution claims?"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "Ownership alone was not the basis of the ruling discussed here. The court's explanation describes control, knowledge of contamination, failure to address or disclose it, and asset movements intended to evade liabilities. Liability requires analysis of the particular conduct and applicable law."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "Did the 2018 Supreme Court ruling end every claim in the factory-pollution litigation?"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "No. The court vacated and remanded the portions concerning 246 claimants and dismissed the appeals concerning 262. The ruling had different outcomes for different portions of the case; it was not the conclusion of all related litigation."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "What should an acquisition team retain after an environmental review?"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "Retain the report, its recipients, follow-up questions, decisions on worker exposure and remediation, and the approvals and financial analysis for later asset transfers. These records help assess knowledge and conduct; keeping a file alone does not establish compliance."
+                }
+              ],
+              "sourceConditionHints": [
+                {
+                  "text": "Environmental investigations before an acquisition became part of the evidence against parent companies in a Taiwan factory-pollution case. The Supreme Court connected knowledge of contamination with operational control, the response to the danger and transfers that depleted the Taiwan company's assets. Its official explanation of judgment 107年度台上字第267號 shows why an acquisition review cannot end when the consultant delivers a report.",
+                  "line": 26,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Issued on August 16, 2018, the decision concerned workers' chemical exposure at an electronics manufacturer and the responsibility of companies controlling that business. It did not impose liability merely because a foreign investor owned a Taiwan subsidiary.",
+                  "line": 28,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "According to the Supreme Court's explanation, the record included environmental surveys identifying contamination, knowledge within the controlling groups, failure to inform workers or remedy the problem, and capital reductions and offshore remittances intended to evade liabilities. The court upheld the reasoning that allowed the relevant claims to reach the controlling companies despite separate corporate identities.",
+                  "line": 32,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "That sequence matters to acquisition counsel. A report's distribution list can identify who knew about the problem. Board papers and operational instructions can show who could decide how to respond. Later remittance approvals may need to be read against both. Treating those records as unrelated workstreams makes the group's own decisions harder to reconstruct.",
+                  "line": 34,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "The report is a starting point. A useful review asks who investigated the exposure concern, what further work was commissioned and how the findings affected decisions about the operating company's resources. It should record unanswered questions as unanswered. An optimistic closing presentation should not erase the underlying technical findings or the people responsible for following them up.",
+                  "line": 36,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "For 246 claimants, the Supreme Court vacated the relevant portions and sent them back for further proceedings. Appeals concerning 262 claimants were dismissed. The remand included shortcomings in the analysis of injury, evidence and authority to pursue claims. Those figures and limits appear in the court's disposition summary.",
+                  "line": 40,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "The split prevents a broad reading of the case. Remand did not decide that all affected people lacked a claim, and the dismissed appeals did not resolve every part of the wider litigation. A transaction team assessing historical exposure needs to identify the particular proceedings and their status before estimating an obligation. A headline about a single court date cannot supply that assessment.",
+                  "line": 42,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Taiwan's Company Act Article 154 generally limits a shareholder's responsibility to payment for its shares. Paragraph 2 provides an exception where a shareholder abuses the company's legal personality, causes it to incur a specific debt that is clearly difficult to repay, and the circumstances are serious enough to make shareholder liability necessary.",
+                  "line": 46,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Each condition matters. A shareholder relationship, an unpaid debt or an environmental finding alone does not state the whole statutory test. Nor should the statute be treated as the sole explanation for the court's treatment of historical conduct in the 2018 case. That decision examined the controlling companies' conduct and the basis for looking beyond separate legal identity.",
+                  "line": 48,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Investors comparing entity structures can find the ordinary starting point in the subsidiary and branch article. The pollution dispute adds a question that incorporation documents cannot answer: how did the group actually use its control when it learned about the risk?",
+                  "line": 50,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "USTR's February 2026 fact sheet describes the two sides' intention to facilitate cross-border investment and possible US support for private investment financing in Taiwan, subject to applicable law.",
+                  "line": 54,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Before approving a distribution, capital reduction or exit transfer, the relevant decision-makers should have an assessment of identified exposure, unresolved claims and the resources that will remain in the Taiwan company. The legal review must address the proposed transaction itself. No document label establishes that a transfer is lawful, and a report sitting unread in a data room does not establish a response to its findings.",
+                  "line": 56,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "For a Taiwan corporate or disputes inquiry, the initial description can identify the transaction, the Taiwan entity and any scheduled transfer or closing date. Technical reports and sensitive worker information can be handled through an agreed delivery process. The immediate records to preserve are the original findings, the decisions they prompted and the approvals for any subsequent movement of assets.",
+                  "line": 58,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Official sources checked October 25, 2026. This article examines one identified 2018 ruling through the Supreme Court's explanation and the current statutory provision; it is not a history of every related case or an assessment of a particular investor's liability.",
+                  "line": 60,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Supreme Court explanation of 107年度台上字第267號, August 16, 2018: environmental knowledge, control, asset movements and the split disposition.",
+                  "line": 64,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Company Act, Article 154: limited shareholder liability and the statutory exception for abuse of corporate personality.",
+                  "line": 65,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Knowledge, control and the movement of assets",
+                  "line": 30,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Limited liability and its conditions",
+                  "line": 44,
+                  "kind": "h2"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "Ownership alone was not the basis of the ruling discussed here. The court's explanation describes control, knowledge of contamination, failure to address or disclose it, and asset movements intended to evade liabilities. Liability requires analysis of the particular conduct and applicable law."
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "No. The court vacated and remanded the portions concerning 246 claimants and dismissed the appeals concerning 262. The ruling had different outcomes for different portions of the case; it was not the conclusion of all related litigation."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "What should an acquisition team retain after an environmental review?"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "Retain the report, its recipients, follow-up questions, decisions on worker exposure and remediation, and the approvals and financial analysis for later asset transfers. These records help assess knowledge and conduct; keeping a file alone does not establish compliance."
+                }
+              ],
+              "targetPassages": [
+                {
+                  "text": "Ekološki izveštaj pribavljen pre preuzimanja fabrike može kasnije pokazati šta je matično društvo znalo. U tajvanskom sporu radnika elektronske fabrike sud je takva saznanja povezao sa kontrolom poslovanja, izostankom odgovarajućeg reagovanja i kasnijim smanjenjem imovine tajvanskog društva. Te veze opisuje zvanično objašnjenje Vrhovnog suda za predmet 107年度台上字第267號.",
+                  "line": 26,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Odluka je doneta 16. avgusta 2018. Predmet se odnosio na izloženost radnika hemikalijama i odgovornost društava koja su upravljala poslovanjem. Sama činjenica da je vlasnik iz inostranstva nije bila dovoljan osnov te odgovornosti.",
+                  "line": 28,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Prema sudskom objašnjenju, ekološke provere ukazivale su na zagađenje za koje su kontrolna društva znala. Razmatrani su njihova kontrola nad poslovanjem, propuštanje da se radnici obaveste i problem otkloni, kao i smanjenja kapitala i prenosi novca u inostranstvo radi izbegavanja obaveza. Sud je prihvatio razloge za odgovornost tih društava uprkos odvojenoj pravnoj ličnosti tajvanske kompanije.",
+                  "line": 32,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Ko je dobio tehnički izveštaj? Spisak primalaca može pokazati put informacije, dok zapisnici i operativni nalozi otkrivaju ko je mogao da reaguje. Kada se tome pridruže kasnija odobrenja prenosa sredstava, vidi se veza između poznatog rizika i odluka o novcu.",
+                  "line": 34,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Nerešeno pitanje iz izveštaja ostaje važno i posle zaključenja transakcije. Naknadna beleška može zabeležiti ko je proverio izloženost zaposlenih, koje mere sanacije su razmatrane i kako su te odluke uticale na raspoloživu imovinu. Povoljan sažetak pri zaključenju posla sam ne pokazuje kako je odgovoreno na tehničke nalaze.",
+                  "line": 36,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Delove presude u vezi sa 246 tužilaca Vrhovni sud je ukinuo i vratio na ponovno suđenje. Pravni lekovi koji su se odnosili na 262 tužioca bili su odbijeni. Razlozi za vraćanje uključivali su nedovoljno razjašnjena pitanja štete, dokaza i ovlašćenja za ostvarivanje zahteva; precizna podela nalazi se u zvaničnom prikazu izreke.",
+                  "line": 40,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Povezani sporovi time nisu svi završeni. Vraćanje na ponovno suđenje nije značilo da svih 246 tužilaca nema osnovan zahtev, a odbijanje pravnog leka nije isto što i odbijanje svakog prvobitnog zahteva preostalih tužilaca. Za procenu obaveza pri preuzimanju društva potrebno je utvrditi koji postupak i koji njegov deo još traju.",
+                  "line": 42,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Polazno pravilo člana 154 tajvanskog Zakona o privrednim društvima ograničava odgovornost akcionara na uplatu iznosa za njegove akcije. Drugi stav predviđa izuzetak kada akcionar zloupotrebom pravne ličnosti dovede do određenog duga društva koji je očigledno teško izmiriti, a okolnosti su toliko ozbiljne da je potrebno da akcionar za taj dug odgovara.",
+                  "line": 46,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Uslovi se primenjuju zajedno. Sam neplaćeni dug ili nalaz o zagađenju ne ispunjava čitav zakonski test. Sadašnji član 154 takođe ne objašnjava samostalno pravni osnov svih ranijih radnji iz ovog spora: sud je ispitivao konkretno ponašanje kontrolnih društava i razloge za probijanje granice odvojene pravne ličnosti.",
+                  "line": 48,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Osnovne razlike između organizacionih oblika obrađuje tekst o tajvanskom zavisnom društvu i ogranku. U ovom sporu, pored osnivačkih isprava, važni su bili dokazi o tome kako je grupa koristila kontrolu nakon saznanja za opasnost.",
+                  "line": 50,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Kancelarija američkog trgovinskog predstavnika, USTR, u informativnom dokumentu iz februara 2026. opisuje nameru SAD i Tajvana da podstiču prekogranična ulaganja, kao i razmatranje američke podrške finansiranju privatnih ulaganja na Tajvanu u saradnji sa američkim privatnim partnerima i u skladu sa merodavnim pravom. Reč je o nameri i mogućoj podršci. Dokument ne daje svakom pojedinačnom investitoru pravo na finansiranje.",
+                  "line": 52,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Pre odobrenja dividende, smanjenja kapitala ili prenosa sredstava pri izlasku iz ulaganja, donosiocima odluke može pomoći pregled poznate izloženosti, nerešenih zahteva i sredstava koja ostaju tajvanskom društvu. Procena mora obuhvatiti stvarno planiranu transakciju. Naziv dokumenta i uredno složeni izveštaji sami ne potvrđuju zakonitost prenosa.",
+                  "line": 54,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Za pojedinačni upit preko kontakt stranice na engleskom dovoljno je opisati transakciju, tajvansko društvo i planirani datum prenosa ili zaključenja; način dostavljanja tehničkih izveštaja i osetljivih podataka zaposlenih može se posebno dogovoriti. Koristan dosije povezuje prvobitni nalaz, odluku donetu povodom njega i kasnije odobrenje raspolaganja imovinom.",
+                  "line": 56,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Stanje izvora: sudsko objašnjenje provereno 25. oktobra 2026, a sadašnji propis i investicioni dokument 26. oktobra. Tekst obrađuje navedenu odluku, ne sve povezane parnice niti odgovornost konkretnog investitora.",
+                  "line": 58,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Vrhovni sud, objašnjenje predmeta 107年度台上字第267號: saznanje o zagađenju, kontrola, prenosi imovine i različiti procesni ishodi.",
+                  "line": 62,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Zakon o privrednim društvima, član 154: ograničenje odgovornosti akcionara i uslovi izuzetka.",
+                  "line": 63,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "USTR, informativni dokument o sporazumu SAD i Tajvana, februar 2026: namera podsticanja ulaganja i uslovna finansijska podrška.",
+                  "line": 64,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Od nalaza o zagađenju do odluka o imovini",
+                  "line": 30,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Dva ishoda u istoj odluci",
+                  "line": 38,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Granice odvojene pravne ličnosti",
+                  "line": 44,
+                  "kind": "h2"
+                },
+                {
+                  "text": "Zvanični izvori",
+                  "line": 60,
+                  "kind": "h2"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "Da li vlasništvo nad tajvanskim društvom samo po sebi čini strano matično društvo odgovornim za zagađenje?"
+                },
+                {
+                  "key": "faq[0].a",
+                  "text": "Ova odluka se nije zasnivala samo na vlasništvu. Zvanično objašnjenje povezuje kontrolu poslovanja, saznanje o zagađenju, izostanak obaveštavanja ili mera i prenose imovine radi izbegavanja odgovornosti. Potrebno je proceniti konkretno postupanje i merodavno pravo."
+                },
+                {
+                  "key": "faq[1].q",
+                  "text": "Da li je Vrhovni sud 2018. okončao sve povezane sporove za naknadu štete?"
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "Nije. Delovi koji se odnose na 246 tužilaca ukinuti su i vraćeni na ponovno suđenje, dok su pravni lekovi u vezi sa 262 tužioca odbijeni. Različiti delovi postupka imali su različit ishod; to ne znači da su svi povezani sporovi završeni."
+                },
+                {
+                  "key": "faq[2].q",
+                  "text": "Koje dokumente čuvati posle provere ekoloških rizika pri preuzimanju društva?"
+                },
+                {
+                  "key": "faq[2].a",
+                  "text": "Izveštaje i podatke o njihovim primaocima, naknadna pitanja, odluke o izloženosti radnika hemikalijama i sanaciji, kao i odobrenja kasnijih prenosa imovine i pripadajuće finansijske analize. Oni pomažu da se procene saznanje i postupanje. Samo postojanje arhive ne dokazuje zakonitost."
+                }
+              ],
+              "sourceMarkdown": "\nEnvironmental investigations before an acquisition became part of the evidence against parent companies in a Taiwan factory-pollution case. The Supreme Court connected knowledge of contamination with operational control, the response to the danger and transfers that depleted the Taiwan company's assets. Its [official explanation of judgment 107年度台上字第267號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) shows why an acquisition review cannot end when the consultant delivers a report.\n\nIssued on August 16, 2018, the decision concerned workers' chemical exposure at an electronics manufacturer and the responsibility of companies controlling that business. It did not impose liability merely because a foreign investor owned a Taiwan subsidiary.\n\n## Knowledge, control and the movement of assets\n\nAccording to the [Supreme Court's explanation](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523), the record included environmental surveys identifying contamination, knowledge within the controlling groups, failure to inform workers or remedy the problem, and capital reductions and offshore remittances intended to evade liabilities. The court upheld the reasoning that allowed the relevant claims to reach the controlling companies despite separate corporate identities.\n\nThat sequence matters to acquisition counsel. A report's distribution list can identify who knew about the problem. Board papers and operational instructions can show who could decide how to respond. Later remittance approvals may need to be read against both. Treating those records as unrelated workstreams makes the group's own decisions harder to reconstruct.\n\nThe report is a starting point. A useful review asks who investigated the exposure concern, what further work was commissioned and how the findings affected decisions about the operating company's resources. It should record unanswered questions as unanswered. An optimistic closing presentation should not erase the underlying technical findings or the people responsible for following them up.\n\n## The ruling had a divided outcome\n\nFor 246 claimants, the Supreme Court vacated the relevant portions and sent them back for further proceedings. Appeals concerning 262 claimants were dismissed. The remand included shortcomings in the analysis of injury, evidence and authority to pursue claims. Those figures and limits appear in the [court's disposition summary](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523).\n\nThe split prevents a broad reading of the case. Remand did not decide that all affected people lacked a claim, and the dismissed appeals did not resolve every part of the wider litigation. A transaction team assessing historical exposure needs to identify the particular proceedings and their status before estimating an obligation. A headline about a single court date cannot supply that assessment.\n\n## Limited liability and its conditions\n\nTaiwan's [Company Act Article 154](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154) generally limits a shareholder's responsibility to payment for its shares. Paragraph 2 provides an exception where a shareholder abuses the company's legal personality, causes it to incur a specific debt that is clearly difficult to repay, and the circumstances are serious enough to make shareholder liability necessary.\n\nEach condition matters. A shareholder relationship, an unpaid debt or an environmental finding alone does not state the whole statutory test. Nor should the statute be treated as the sole explanation for the court's treatment of historical conduct in the 2018 case. That decision examined the controlling companies' conduct and the basis for looking beyond separate legal identity.\n\nInvestors comparing entity structures can find the ordinary starting point in the [subsidiary and branch article](/en/columns/taiwan-company-subsidiary-vs-branch). The pollution dispute adds a question that incorporation documents cannot answer: how did the group actually use its control when it learned about the risk?\n\n## A current investment plan needs a response record\n\n[USTR's February 2026 fact sheet](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) describes the two sides' intention to facilitate cross-border investment and possible US support for private investment financing in Taiwan, subject to applicable law.\n\nBefore approving a distribution, capital reduction or exit transfer, the relevant decision-makers should have an assessment of identified exposure, unresolved claims and the resources that will remain in the Taiwan company. The legal review must address the proposed transaction itself. No document label establishes that a transfer is lawful, and a report sitting unread in a data room does not establish a response to its findings.\n\nFor a [Taiwan corporate or disputes inquiry](/en/contact), the initial description can identify the transaction, the Taiwan entity and any scheduled transfer or closing date. Technical reports and sensitive worker information can be handled through an agreed delivery process. The immediate records to preserve are the original findings, the decisions they prompted and the approvals for any subsequent movement of assets.\n\nOfficial sources checked October 25, 2026. This article examines one identified 2018 ruling through the Supreme Court's explanation and the current statutory provision; it is not a history of every related case or an assessment of a particular investor's liability.\n\n## Official sources\n\n- [Supreme Court explanation of 107年度台上字第267號, August 16, 2018](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523): environmental knowledge, control, asset movements and the split disposition.\n- [Company Act, Article 154](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154): limited shareholder liability and the statutory exception for abuse of corporate personality.\n- [USTR, February 2026 reciprocal-trade fact sheet](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade): stated intentions concerning cross-border investment.\n",
+              "targetMarkdown": "\nEkološki izveštaj pribavljen pre preuzimanja fabrike može kasnije pokazati šta je matično društvo znalo. U tajvanskom sporu radnika elektronske fabrike sud je takva saznanja povezao sa kontrolom poslovanja, izostankom odgovarajućeg reagovanja i kasnijim smanjenjem imovine tajvanskog društva. Te veze opisuje [zvanično objašnjenje Vrhovnog suda za predmet 107年度台上字第267號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523).\n\nOdluka je doneta 16. avgusta 2018. Predmet se odnosio na izloženost radnika hemikalijama i odgovornost društava koja su upravljala poslovanjem. Sama činjenica da je vlasnik iz inostranstva nije bila dovoljan osnov te odgovornosti.\n\n## Od nalaza o zagađenju do odluka o imovini\n\nPrema sudskom objašnjenju, ekološke provere ukazivale su na zagađenje za koje su kontrolna društva znala. Razmatrani su njihova kontrola nad poslovanjem, propuštanje da se radnici obaveste i problem otkloni, kao i smanjenja kapitala i prenosi novca u inostranstvo radi izbegavanja obaveza. Sud je prihvatio razloge za odgovornost tih društava uprkos odvojenoj pravnoj ličnosti tajvanske kompanije.\n\nKo je dobio tehnički izveštaj? Spisak primalaca može pokazati put informacije, dok zapisnici i operativni nalozi otkrivaju ko je mogao da reaguje. Kada se tome pridruže kasnija odobrenja prenosa sredstava, vidi se veza između poznatog rizika i odluka o novcu.\n\nNerešeno pitanje iz izveštaja ostaje važno i posle zaključenja transakcije. Naknadna beleška može zabeležiti ko je proverio izloženost zaposlenih, koje mere sanacije su razmatrane i kako su te odluke uticale na raspoloživu imovinu. Povoljan sažetak pri zaključenju posla sam ne pokazuje kako je odgovoreno na tehničke nalaze.\n\n## Dva ishoda u istoj odluci\n\nDelove presude u vezi sa 246 tužilaca Vrhovni sud je ukinuo i vratio na ponovno suđenje. Pravni lekovi koji su se odnosili na 262 tužioca bili su odbijeni. Razlozi za vraćanje uključivali su nedovoljno razjašnjena pitanja štete, dokaza i ovlašćenja za ostvarivanje zahteva; precizna podela nalazi se u [zvaničnom prikazu izreke](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523).\n\nPovezani sporovi time nisu svi završeni. Vraćanje na ponovno suđenje nije značilo da svih 246 tužilaca nema osnovan zahtev, a odbijanje pravnog leka nije isto što i odbijanje svakog prvobitnog zahteva preostalih tužilaca. Za procenu obaveza pri preuzimanju društva potrebno je utvrditi koji postupak i koji njegov deo još traju.\n\n## Granice odvojene pravne ličnosti\n\nPolazno pravilo [člana 154 tajvanskog Zakona o privrednim društvima](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154) ograničava odgovornost akcionara na uplatu iznosa za njegove akcije. Drugi stav predviđa izuzetak kada akcionar zloupotrebom pravne ličnosti dovede do određenog duga društva koji je očigledno teško izmiriti, a okolnosti su toliko ozbiljne da je potrebno da akcionar za taj dug odgovara.\n\nUslovi se primenjuju zajedno. Sam neplaćeni dug ili nalaz o zagađenju ne ispunjava čitav zakonski test. Sadašnji član 154 takođe ne objašnjava samostalno pravni osnov svih ranijih radnji iz ovog spora: sud je ispitivao konkretno ponašanje kontrolnih društava i razloge za probijanje granice odvojene pravne ličnosti.\n\nOsnovne razlike između organizacionih oblika obrađuje tekst o [tajvanskom zavisnom društvu i ogranku](/sr/columns/taiwan-company-subsidiary-vs-branch). U ovom sporu, pored osnivačkih isprava, važni su bili dokazi o tome kako je grupa koristila kontrolu nakon saznanja za opasnost.\n\nKancelarija američkog trgovinskog predstavnika, USTR, u [informativnom dokumentu iz februara 2026.](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje nameru SAD i Tajvana da podstiču prekogranična ulaganja, kao i razmatranje američke podrške finansiranju privatnih ulaganja na Tajvanu u saradnji sa američkim privatnim partnerima i u skladu sa merodavnim pravom. Reč je o nameri i mogućoj podršci. Dokument ne daje svakom pojedinačnom investitoru pravo na finansiranje.\n\nPre odobrenja dividende, smanjenja kapitala ili prenosa sredstava pri izlasku iz ulaganja, donosiocima odluke može pomoći pregled poznate izloženosti, nerešenih zahteva i sredstava koja ostaju tajvanskom društvu. Procena mora obuhvatiti stvarno planiranu transakciju. Naziv dokumenta i uredno složeni izveštaji sami ne potvrđuju zakonitost prenosa.\n\nZa pojedinačni upit preko [kontakt stranice na engleskom](/en/contact) dovoljno je opisati transakciju, tajvansko društvo i planirani datum prenosa ili zaključenja; način dostavljanja tehničkih izveštaja i osetljivih podataka zaposlenih može se posebno dogovoriti. Koristan dosije povezuje prvobitni nalaz, odluku donetu povodom njega i kasnije odobrenje raspolaganja imovinom.\n\nStanje izvora: sudsko objašnjenje provereno 25. oktobra 2026, a sadašnji propis i investicioni dokument 26. oktobra. Tekst obrađuje navedenu odluku, ne sve povezane parnice niti odgovornost konkretnog investitora.\n\n## Zvanični izvori\n\n- [Vrhovni sud, objašnjenje predmeta 107年度台上字第267號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523): saznanje o zagađenju, kontrola, prenosi imovine i različiti procesni ishodi.\n- [Zakon o privrednim društvima, član 154](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154): ograničenje odgovornosti akcionara i uslovi izuzetka.\n- [USTR, informativni dokument o sporazumu SAD i Tajvana](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade), februar 2026: namera podsticanja ulaganja i uslovna finansijska podrška.\n"
+            },
+            {
+              "code": "numbers-dates-currencies",
+              "status": "REQUIRED",
+              "message": "Raw numeric-token differences require context review; locale separators, spelled-out numerals and era conversions are not automatically equivalent. Matching tokens also do not prove matching conditions. No values are synthesized or zero-filled.",
+              "sourceOnly": [
+                {
+                  "token": "2018",
+                  "count": 3
+                },
+                {
+                  "token": "16",
+                  "count": 1
+                },
+                {
+                  "token": "2",
+                  "count": 1
+                }
+              ],
+              "targetOnly": [
+                {
+                  "token": "246",
+                  "count": 1
+                },
+                {
+                  "token": "154",
+                  "count": 1
+                },
+                {
+                  "token": "26",
+                  "count": 1
+                }
+              ],
+              "sourceEvidence": [
+                {
+                  "key": "faq[1].q",
+                  "text": "Did the 2018 Supreme Court ruling end every claim in the factory-pollution litigation?",
+                  "tokens": [
+                    "2018"
+                  ]
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "No. The court vacated and remanded the portions concerning 246 claimants and dismissed the appeals concerning 262. The ruling had different outcomes for different portions of the case; it was not the conclusion of all related litigation.",
+                  "tokens": [
+                    "246",
+                    "262"
+                  ]
+                },
+                {
+                  "text": "Environmental investigations before an acquisition became part of the evidence against parent companies in a Taiwan factory-pollution case. The Supreme Court connected knowledge of contamination with operational control, the response to the danger and transfers that depleted the Taiwan company's assets. Its official explanation of judgment 107年度台上字第267號 shows why an acquisition review cannot end when the consultant delivers a report.",
+                  "line": 26,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "107",
+                    "267"
+                  ]
+                },
+                {
+                  "text": "Issued on August 16, 2018, the decision concerned workers' chemical exposure at an electronics manufacturer and the responsibility of companies controlling that business. It did not impose liability merely because a foreign investor owned a Taiwan subsidiary.",
+                  "line": 28,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "16",
+                    "2018"
+                  ]
+                },
+                {
+                  "text": "For 246 claimants, the Supreme Court vacated the relevant portions and sent them back for further proceedings. Appeals concerning 262 claimants were dismissed. The remand included shortcomings in the analysis of injury, evidence and authority to pursue claims. Those figures and limits appear in the court's disposition summary.",
+                  "line": 40,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "246",
+                    "262"
+                  ]
+                },
+                {
+                  "text": "Taiwan's Company Act Article 154 generally limits a shareholder's responsibility to payment for its shares. Paragraph 2 provides an exception where a shareholder abuses the company's legal personality, causes it to incur a specific debt that is clearly difficult to repay, and the circumstances are serious enough to make shareholder liability necessary.",
+                  "line": 46,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "154",
+                    "2"
+                  ]
+                },
+                {
+                  "text": "Each condition matters. A shareholder relationship, an unpaid debt or an environmental finding alone does not state the whole statutory test. Nor should the statute be treated as the sole explanation for the court's treatment of historical conduct in the 2018 case. That decision examined the controlling companies' conduct and the basis for looking beyond separate legal identity.",
+                  "line": 48,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2018"
+                  ]
+                },
+                {
+                  "text": "USTR's February 2026 fact sheet describes the two sides' intention to facilitate cross-border investment and possible US support for private investment financing in Taiwan, subject to applicable law.",
+                  "line": 54,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026"
+                  ]
+                },
+                {
+                  "text": "Official sources checked October 25, 2026. This article examines one identified 2018 ruling through the Supreme Court's explanation and the current statutory provision; it is not a history of every related case or an assessment of a particular investor's liability.",
+                  "line": 60,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "25",
+                    "2026",
+                    "2018"
+                  ]
+                },
+                {
+                  "text": "Supreme Court explanation of 107年度台上字第267號, August 16, 2018: environmental knowledge, control, asset movements and the split disposition.",
+                  "line": 64,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "107",
+                    "267",
+                    "16",
+                    "2018"
+                  ]
+                },
+                {
+                  "text": "Company Act, Article 154: limited shareholder liability and the statutory exception for abuse of corporate personality.",
+                  "line": 65,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "154"
+                  ]
+                },
+                {
+                  "text": "USTR, February 2026 reciprocal-trade fact sheet: stated intentions concerning cross-border investment.",
+                  "line": 66,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026"
+                  ]
+                }
+              ],
+              "targetEvidence": [
+                {
+                  "key": "faq[1].q",
+                  "text": "Da li je Vrhovni sud 2018. okončao sve povezane sporove za naknadu štete?",
+                  "tokens": [
+                    "2018"
+                  ]
+                },
+                {
+                  "key": "faq[1].a",
+                  "text": "Nije. Delovi koji se odnose na 246 tužilaca ukinuti su i vraćeni na ponovno suđenje, dok su pravni lekovi u vezi sa 262 tužioca odbijeni. Različiti delovi postupka imali su različit ishod; to ne znači da su svi povezani sporovi završeni.",
+                  "tokens": [
+                    "246",
+                    "262"
+                  ]
+                },
+                {
+                  "text": "Ekološki izveštaj pribavljen pre preuzimanja fabrike može kasnije pokazati šta je matično društvo znalo. U tajvanskom sporu radnika elektronske fabrike sud je takva saznanja povezao sa kontrolom poslovanja, izostankom odgovarajućeg reagovanja i kasnijim smanjenjem imovine tajvanskog društva. Te veze opisuje zvanično objašnjenje Vrhovnog suda za predmet 107年度台上字第267號.",
+                  "line": 26,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "107",
+                    "267"
+                  ]
+                },
+                {
+                  "text": "Odluka je doneta 16. avgusta 2018. Predmet se odnosio na izloženost radnika hemikalijama i odgovornost društava koja su upravljala poslovanjem. Sama činjenica da je vlasnik iz inostranstva nije bila dovoljan osnov te odgovornosti.",
+                  "line": 28,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "16",
+                    "2018"
+                  ]
+                },
+                {
+                  "text": "Delove presude u vezi sa 246 tužilaca Vrhovni sud je ukinuo i vratio na ponovno suđenje. Pravni lekovi koji su se odnosili na 262 tužioca bili su odbijeni. Razlozi za vraćanje uključivali su nedovoljno razjašnjena pitanja štete, dokaza i ovlašćenja za ostvarivanje zahteva; precizna podela nalazi se u zvaničnom prikazu izreke.",
+                  "line": 40,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "246",
+                    "262"
+                  ]
+                },
+                {
+                  "text": "Povezani sporovi time nisu svi završeni. Vraćanje na ponovno suđenje nije značilo da svih 246 tužilaca nema osnovan zahtev, a odbijanje pravnog leka nije isto što i odbijanje svakog prvobitnog zahteva preostalih tužilaca. Za procenu obaveza pri preuzimanju društva potrebno je utvrditi koji postupak i koji njegov deo još traju.",
+                  "line": 42,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "246"
+                  ]
+                },
+                {
+                  "text": "Polazno pravilo člana 154 tajvanskog Zakona o privrednim društvima ograničava odgovornost akcionara na uplatu iznosa za njegove akcije. Drugi stav predviđa izuzetak kada akcionar zloupotrebom pravne ličnosti dovede do određenog duga društva koji je očigledno teško izmiriti, a okolnosti su toliko ozbiljne da je potrebno da akcionar za taj dug odgovara.",
+                  "line": 46,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "154"
+                  ]
+                },
+                {
+                  "text": "Uslovi se primenjuju zajedno. Sam neplaćeni dug ili nalaz o zagađenju ne ispunjava čitav zakonski test. Sadašnji član 154 takođe ne objašnjava samostalno pravni osnov svih ranijih radnji iz ovog spora: sud je ispitivao konkretno ponašanje kontrolnih društava i razloge za probijanje granice odvojene pravne ličnosti.",
+                  "line": 48,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "154"
+                  ]
+                },
+                {
+                  "text": "Kancelarija američkog trgovinskog predstavnika, USTR, u informativnom dokumentu iz februara 2026. opisuje nameru SAD i Tajvana da podstiču prekogranična ulaganja, kao i razmatranje američke podrške finansiranju privatnih ulaganja na Tajvanu u saradnji sa američkim privatnim partnerima i u skladu sa merodavnim pravom. Reč je o nameri i mogućoj podršci. Dokument ne daje svakom pojedinačnom investitoru pravo na finansiranje.",
+                  "line": 52,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026"
+                  ]
+                },
+                {
+                  "text": "Stanje izvora: sudsko objašnjenje provereno 25. oktobra 2026, a sadašnji propis i investicioni dokument 26. oktobra. Tekst obrađuje navedenu odluku, ne sve povezane parnice niti odgovornost konkretnog investitora.",
+                  "line": 58,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "25",
+                    "2026",
+                    "26"
+                  ]
+                },
+                {
+                  "text": "Vrhovni sud, objašnjenje predmeta 107年度台上字第267號: saznanje o zagađenju, kontrola, prenosi imovine i različiti procesni ishodi.",
+                  "line": 62,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "107",
+                    "267"
+                  ]
+                },
+                {
+                  "text": "Zakon o privrednim društvima, član 154: ograničenje odgovornosti akcionara i uslovi izuzetka.",
+                  "line": 63,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "154"
+                  ]
+                },
+                {
+                  "text": "USTR, informativni dokument o sporazumu SAD i Tajvana, februar 2026: namera podsticanja ulaganja i uslovna finansijska podrška.",
+                  "line": 64,
+                  "kind": "paragraph",
+                  "tokens": [
+                    "2026"
+                  ]
+                }
+              ],
+              "editorialMetadata": {
+                "source": {
+                  "published": "2026-10-25",
+                  "lastmod": "2026-10-25",
+                  "date_display": "October 25, 2026",
+                  "read_time": "5 min read"
+                },
+                "target": {
+                  "published": "2026-10-26",
+                  "lastmod": "2026-10-26",
+                  "date_display": "26. oktobra 2026.",
+                  "read_time": "5 min čitanja"
+                }
+              },
+              "spelledOutNumerals": "Not completely parsed in 49 languages. Review the full source/target passages; absence from these arrays is not zero or PASS."
+            },
+            {
+              "code": "nationality-jurisdiction",
+              "status": "REQUIRED",
+              "message": "A language does not establish nationality. Verify Taiwan jurisdiction, immigration status, nationality qualifications and any foreign-law/consular claim throughout the text; the highlighted passages are incomplete hints, not a language classifier.",
+              "sourceHints": [
+                {
+                  "text": "Environmental investigations before an acquisition became part of the evidence against parent companies in a Taiwan factory-pollution case. The Supreme Court connected knowledge of contamination with operational control, the response to the danger and transfers that depleted the Taiwan company's assets. Its official explanation of judgment 107年度台上字第267號 shows why an acquisition review cannot end when the consultant delivers a report.",
+                  "line": 26,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Issued on August 16, 2018, the decision concerned workers' chemical exposure at an electronics manufacturer and the responsibility of companies controlling that business. It did not impose liability merely because a foreign investor owned a Taiwan subsidiary.",
+                  "line": 28,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Taiwan's Company Act Article 154 generally limits a shareholder's responsibility to payment for its shares. Paragraph 2 provides an exception where a shareholder abuses the company's legal personality, causes it to incur a specific debt that is clearly difficult to repay, and the circumstances are serious enough to make shareholder liability necessary.",
+                  "line": 46,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "USTR's February 2026 fact sheet describes the two sides' intention to facilitate cross-border investment and possible US support for private investment financing in Taiwan, subject to applicable law.",
+                  "line": 54,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "Before approving a distribution, capital reduction or exit transfer, the relevant decision-makers should have an assessment of identified exposure, unresolved claims and the resources that will remain in the Taiwan company. The legal review must address the proposed transaction itself. No document label establishes that a transfer is lawful, and a report sitting unread in a data room does not establish a response to its findings.",
+                  "line": 56,
+                  "kind": "paragraph"
+                },
+                {
+                  "text": "For a Taiwan corporate or disputes inquiry, the initial description can identify the transaction, the Taiwan entity and any scheduled transfer or closing date. Technical reports and sensitive worker information can be handled through an agreed delivery process. The immediate records to preserve are the original findings, the decisions they prompted and the approvals for any subsequent movement of assets.",
+                  "line": 58,
+                  "kind": "paragraph"
+                },
+                {
+                  "key": "faq[0].q",
+                  "text": "Does owning a Taiwan subsidiary make its foreign parent liable for pollution claims?"
+                }
+              ],
+              "targetHints": [],
+              "sourceLocale": "en",
+              "targetLocale": "sr"
+            }
+          ],
+          "sha256": "9e9d09b14055817298fb1fe594c968745cd819ecf121d4ae98999a7a9979c3b8",
+          "source": {
+            "file": "../../tseng-all-language-columns-20261025/batch09/checks/sr-frozen-source-aliases/916-taiwan-parent-company-pollution-liability-us-investor.md",
+            "locale": "en",
+            "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+          },
+          "board": {
+            "visible": true,
+            "audience": [
+              "sr"
+            ],
+            "marketBoard": true,
+            "basis": "current repository filterMarketBoardColumns + normalizeColumnAudience"
+          },
+          "bodyMetrics": {
+            "lettersAndNumbers": 4089,
+            "uniqueParagraphLettersAndNumbers": 4089,
+            "paragraphs": 17,
+            "h1": 0
+          },
+          "classification": {
+            "sourceCategory": "legal",
+            "targetCategory": "legal",
+            "topic": "company"
+          },
+          "sourceUrls": {
+            "expected": [
+              "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+              "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+              "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+            ],
+            "actual": [
+              "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+              "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+              "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+            ],
+            "networkChecked": false
+          }
+        }
+      ]
+    }
+  ]
+}

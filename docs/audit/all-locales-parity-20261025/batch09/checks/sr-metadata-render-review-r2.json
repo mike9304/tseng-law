@@ -1,0 +1,108 @@
+{
+  "atUTC": "2026-10-26T09:42:54.159Z",
+  "rows": [
+    {
+      "id": 916,
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sr/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "9e9d09b14055817298fb1fe594c968745cd819ecf121d4ae98999a7a9979c3b8",
+      "bodySHA256": "33c673d1a5915544ceaa7de2dd87df3d45af282bf6d50210df8f8caafd81364d",
+      "metadata": {
+        "title": "Zagađenje tajvanske fabrike: šta su matična društva znala i preduzela",
+        "seoTitle": "Odgovornost matičnog društva za zagađenje na Tajvanu",
+        "summary": "Izveštaji o zagađenju, upravljanje fabrikom i kasniji prenosi imovine zajedno su bili važni u tajvanskom sporu radnika. Vlasnički odnos sam nije objašnjavao odgovornost; značaj su imali saznanje i postupci društava koja su kontrolisala poslovanje.",
+        "published": "2026-10-26",
+        "lastmod": "2026-10-26",
+        "date_display": "26. oktobra 2026.",
+        "read_time": "5 min čitanja",
+        "categories": [
+          "Pravne informacije o Tajvanu"
+        ],
+        "topic": "company",
+        "tags": [
+          "matično društvo",
+          "zagađenje",
+          "pravna ličnost",
+          "prenos imovine",
+          "Tajvan"
+        ],
+        "audience": [
+          "sr"
+        ],
+        "author": "legal-ai-assistant",
+        "featured_image": "/images/columns/916-case-trends-20261025.webp",
+        "featured_image_alt": "Tegla sa uzorkom zemlje i beležnica na sklopivom stolu ispred stare fabrike",
+        "featured_image_caption": "Izmišljeni prizor",
+        "faq": [
+          {
+            "q": "Da li vlasništvo nad tajvanskim društvom samo po sebi čini strano matično društvo odgovornim za zagađenje?",
+            "a": "Ova odluka se nije zasnivala samo na vlasništvu. Zvanično objašnjenje povezuje kontrolu poslovanja, saznanje o zagađenju, izostanak obaveštavanja ili mera i prenose imovine radi izbegavanja odgovornosti. Potrebno je proceniti konkretno postupanje i merodavno pravo."
+          },
+          {
+            "q": "Da li je Vrhovni sud 2018. okončao sve povezane sporove za naknadu štete?",
+            "a": "Nije. Delovi koji se odnose na 246 tužilaca ukinuti su i vraćeni na ponovno suđenje, dok su pravni lekovi u vezi sa 262 tužioca odbijeni. Različiti delovi postupka imali su različit ishod; to ne znači da su svi povezani sporovi završeni."
+          },
+          {
+            "q": "Koje dokumente čuvati posle provere ekoloških rizika pri preuzimanju društva?",
+            "a": "Izveštaje i podatke o njihovim primaocima, naknadna pitanja, odluke o izloženosti radnika hemikalijama i sanaciji, kao i odobrenja kasnijih prenosa imovine i pripadajuće finansijske analize. Oni pomažu da se procene saznanje i postupanje. Samo postojanje arhive ne dokazuje zakonitost."
+          }
+        ]
+      },
+      "checks": {
+        "date": true,
+        "audience": true,
+        "author": true,
+        "topic": true,
+        "FAQ": true,
+        "FAQUnchangedFromInitial": true,
+        "image": true,
+        "caption": true,
+        "noBold": true,
+        "noInternalAuthorInBody": true,
+        "officialSources": true
+      },
+      "sourceFile": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sourceSHA256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "sourceChecks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "inBody": true,
+          "inFooter": true
+        },
+        {
+          "url": "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade",
+          "inBody": true,
+          "inFooter": true
+        }
+      ],
+      "inlineLinks": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "/sr/columns/taiwan-company-subsidiary-vs-branch",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade",
+        "/en/contact"
+      ],
+      "sourceLinks": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "image": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/916-case-trends-20261025.webp",
+        "sha256": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+        "bytes": 299298,
+        "viewBasis": "Same six original images personally viewed during earlier continuous B6 work; no new image generation or claim of an actual incident photo."
+      },
+      "renderedBodyHTML": "<p>Ekološki izveštaj pribavljen pre preuzimanja fabrike može kasnije pokazati šta je matično društvo znalo. U tajvanskom sporu radnika elektronske fabrike sud je takva saznanja povezao sa kontrolom poslovanja, izostankom odgovarajućeg reagovanja i kasnijim smanjenjem imovine tajvanskog društva. Te veze opisuje <a href=\"https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523\">zvanično objašnjenje Vrhovnog suda za predmet 107年度台上字第267號</a>.</p>\n<p>Odluka je doneta 16. avgusta 2018. Predmet se odnosio na izloženost radnika hemikalijama i odgovornost društava koja su upravljala poslovanjem. Sama činjenica da je vlasnik iz inostranstva nije bila dovoljan osnov te odgovornosti.</p>\n<h2>Od nalaza o zagađenju do odluka o imovini</h2>\n<p>Prema sudskom objašnjenju, ekološke provere ukazivale su na zagađenje za koje su kontrolna društva znala. Razmatrani su njihova kontrola nad poslovanjem, propuštanje da se radnici obaveste i problem otkloni, kao i smanjenja kapitala i prenosi novca u inostranstvo radi izbegavanja obaveza. Sud je prihvatio razloge za odgovornost tih društava uprkos odvojenoj pravnoj ličnosti tajvanske kompanije.</p>\n<p>Ko je dobio tehnički izveštaj? Spisak primalaca može pokazati put informacije, dok zapisnici i operativni nalozi otkrivaju ko je mogao da reaguje. Kada se tome pridruže kasnija odobrenja prenosa sredstava, vidi se veza između poznatog rizika i odluka o novcu.</p>\n<p>Nerešeno pitanje iz izveštaja ostaje važno i posle zaključenja transakcije. Naknadna beleška može zabeležiti ko je proverio izloženost zaposlenih, koje mere sanacije su razmatrane i kako su te odluke uticale na raspoloživu imovinu. Povoljan sažetak pri zaključenju posla sam ne pokazuje kako je odgovoreno na tehničke nalaze.</p>\n<h2>Dva ishoda u istoj odluci</h2>\n<p>Delove presude u vezi sa 246 tužilaca Vrhovni sud je ukinuo i vratio na ponovno suđenje. Pravni lekovi koji su se odnosili na 262 tužioca bili su odbijeni. Razlozi za vraćanje uključivali su nedovoljno razjašnjena pitanja štete, dokaza i ovlašćenja za ostvarivanje zahteva; precizna podela nalazi se u <a href=\"https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523\">zvaničnom prikazu izreke</a>.</p>\n<p>Povezani sporovi time nisu svi završeni. Vraćanje na ponovno suđenje nije značilo da svih 246 tužilaca nema osnovan zahtev, a odbijanje pravnog leka nije isto što i odbijanje svakog prvobitnog zahteva preostalih tužilaca. Za procenu obaveza pri preuzimanju društva potrebno je utvrditi koji postupak i koji njegov deo još traju.</p>\n<h2>Granice odvojene pravne ličnosti</h2>\n<p>Polazno pravilo <a href=\"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&amp;flno=154\">člana 154 tajvanskog Zakona o privrednim društvima</a> ograničava odgovornost akcionara na uplatu iznosa za njegove akcije. Drugi stav predviđa izuzetak kada akcionar zloupotrebom pravne ličnosti dovede do određenog duga društva koji je očigledno teško izmiriti, a okolnosti su toliko ozbiljne da je potrebno da akcionar za taj dug odgovara.</p>\n<p>Uslovi se primenjuju zajedno. Sam neplaćeni dug ili nalaz o zagađenju ne ispunjava čitav zakonski test. Sadašnji član 154 takođe ne objašnjava samostalno pravni osnov svih ranijih radnji iz ovog spora: sud je ispitivao konkretno ponašanje kontrolnih društava i razloge za probijanje granice odvojene pravne ličnosti.</p>\n<p>Osnovne razlike između organizacionih oblika obrađuje tekst o <a href=\"/sr/columns/taiwan-company-subsidiary-vs-branch\">tajvanskom zavisnom društvu i ogranku</a>. U ovom sporu, pored osnivačkih isprava, važni su bili dokazi o tome kako je grupa koristila kontrolu nakon saznanja za opasnost.</p>\n<p>Kancelarija američkog trgovinskog predstavnika, USTR, u <a href=\"https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade\">informativnom dokumentu iz februara 2026.</a> opisuje nameru SAD i Tajvana da podstiču prekogranična ulaganja, kao i razmatranje američke podrške finansiranju privatnih ulaganja na Tajvanu u saradnji sa američkim privatnim partnerima i u skladu sa merodavnim pravom. Reč je o nameri i mogućoj podršci. Dokument ne daje svakom pojedinačnom investitoru pravo na finansiranje.</p>\n<p>Pre odobrenja dividende, smanjenja kapitala ili prenosa sredstava pri izlasku iz ulaganja, donosiocima odluke može pomoći pregled poznate izloženosti, nerešenih zahteva i sredstava koja ostaju tajvanskom društvu. Procena mora obuhvatiti stvarno planiranu transakciju. Naziv dokumenta i uredno složeni izveštaji sami ne potvrđuju zakonitost prenosa.</p>\n<p>Za pojedinačni upit preko <a href=\"/en/contact\">kontakt stranice na engleskom</a> dovoljno je opisati transakciju, tajvansko društvo i planirani datum prenosa ili zaključenja; način dostavljanja tehničkih izveštaja i osetljivih podataka zaposlenih može se posebno dogovoriti. Koristan dosije povezuje prvobitni nalaz, odluku donetu povodom njega i kasnije odobrenje raspolaganja imovinom.</p>\n<p>Stanje izvora: sudsko objašnjenje provereno 25. oktobra 2026, a sadašnji propis i investicioni dokument 26. oktobra. Tekst obrađuje navedenu odluku, ne sve povezane parnice niti odgovornost konkretnog investitora.</p>",
+      "orderedListCount": 0,
+      "tableCount": 0
+    }
+  ],
+  "errors": [],
+  "scope": "Actual ReactMarkdown+remarkGfm prose HTML and source metadata only; not browser layout, website cards, JSON-LD, feeds or deployment."
+}

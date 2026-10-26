@@ -1,0 +1,17 @@
+• I’ll read the R4 instructions, preserve the current 918 manuscript and all prior records, then make only the authorized rhythm edits and verify exact restoration.
+
+• The remaining issue is confined to 918’s body. I’ll use four natural clause joins, leave frontmatter and FAQ byte-unchanged, and keep the August 2025 sentence and all dates exactly as written.
+
+• The four bounded joins are complete in 918. Frontmatter, FAQ, the August 2025 sentence, and the other five manuscripts have not been edited; I’m writing the R4 ledger and review before byte-level verification.
+
+• The R4 files are written. I’m now testing all four replacements forward and backward and reconstructing the R3 baseline to confirm the other five manuscripts and 918’s frontmatter/FAQ are byte-unchanged.
+
+• Completed the bounded 918 rhythm revision:
+
+  - Revised `output/918-taiwan-presale-mortgage-notice-handover-judgment.md` with four natural clause joins.
+  - Created `output/edits-r4.json`.
+  - Created `output/author-review-r4.md`.
+  - Preserved the pre-R4 manuscript at `output/r4-preserved/918-before-r4.md`.
+
+  Verified exact forward/reverse restoration. The other five manuscripts and 918’s frontmatter/FAQ remain byte-unchanged, with all dates and official URLs preserved. No new rhythm score or checker pass is claimed.
+

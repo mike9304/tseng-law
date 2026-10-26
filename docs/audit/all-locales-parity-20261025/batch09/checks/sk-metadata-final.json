@@ -1,0 +1,119 @@
+{
+  "atUTC": "2026-10-26T09:28:30.174Z",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dd5ba0865b06900c6cf13dca431a93c0b6a9d86c0e5c8ca6cc136ec7170deaa3",
+      "faq": 2,
+      "officialUrls": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "bodyListCoverage": true,
+      "metadataChanges": [],
+      "faqChanges": [],
+      "officialUrlSequenceUnchanged": true,
+      "errors": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "dea3c656ac58e2542b9f8343fbccd95d01f811ff47653a67d9225a0948a79e82",
+      "faq": 3,
+      "officialUrls": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "bodyListCoverage": true,
+      "metadataChanges": [
+        "title",
+        "faq"
+      ],
+      "faqChanges": [
+        {
+          "index": 2,
+          "changed": true,
+          "before": {
+            "q": "Ukončil rozsudok najvyššieho súdu z roku 2018 všetky nároky z tejto továrne?",
+            "a": "Nie. Časti týkajúce sa 246 uplatňujúcich nárok súd zrušil a vrátil na ďalšie konanie. Opravné prostriedky týkajúce sa 262 osôb zamietol. Tento rozdiel neznamená zánik všetkých ich pôvodných nárokov ani ukončenie každého súvisiaceho konania."
+          },
+          "after": {
+            "q": "Ukončil rozsudok najvyššieho súdu z roku 2018 všetky nároky z tejto továrne?",
+            "a": "Nie. Časti týkajúce sa 246 osôb uplatňujúcich nárok súd zrušil a vrátil na ďalšie konanie. Opravné prostriedky týkajúce sa 262 osôb zamietol. Tento rozdiel neznamená zánik všetkých ich pôvodných nárokov ani ukončenie každého súvisiaceho konania."
+          }
+        }
+      ],
+      "officialUrlSequenceUnchanged": true,
+      "errors": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "ccf6a8391b9462f571188e5467f530b20e659bae1898cf6f9b6b63a12fb5f14d",
+      "faq": 3,
+      "officialUrls": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "bodyListCoverage": true,
+      "metadataChanges": [],
+      "faqChanges": [],
+      "officialUrlSequenceUnchanged": true,
+      "errors": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "7a9bda014da027ab57152f645835f429ce5802446c9badea6231d1beb8bf8569",
+      "faq": 3,
+      "officialUrls": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+      ],
+      "bodyListCoverage": true,
+      "metadataChanges": [],
+      "faqChanges": [],
+      "officialUrlSequenceUnchanged": true,
+      "errors": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "001bd26dd4f6488e6e8a2413f401c1afa458652541b0396fcf248f29910fe3b1",
+      "faq": 3,
+      "officialUrls": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "bodyListCoverage": true,
+      "metadataChanges": [],
+      "faqChanges": [],
+      "officialUrlSequenceUnchanged": true,
+      "errors": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "60cb072f1ef19f7a1391d22cb2973597b602076752b3f5b387fc81e0b98e8d92",
+      "faq": 3,
+      "officialUrls": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "bodyListCoverage": true,
+      "metadataChanges": [],
+      "faqChanges": [],
+      "officialUrlSequenceUnchanged": true,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "faqTotal": 17,
+  "officialUniquePerFileTotal": 23
+}

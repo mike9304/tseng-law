@@ -1,0 +1,72 @@
+{
+  "atUTC": "2026-10-26T09:30:16.800275+00:00",
+  "status": "AUTHOR_R2_FROZEN_INDEPENDENT_TARGETED_RECHECK_PENDING",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "ed9e0d46a6581e2387d037b31683485b86ba8a767d314252766316f45bfa08b3"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "1b28aa3c49098284ab47d281c04c5ec6c9d9669d5195e250e5a01ae5eed19bdf"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "bf3f2c4a6cc6ebc84ccc5f04eed0e2e5e264f81b58209b7d1bd032747cafe1d1"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "c927d6f944e7fa13b5e713d702344e8269936ebe5991a35a9557a42b6d3e1b7e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "2864fb32e5ba9f144bd9f320a6818d67acbdc9554fb15f7d733a7db119533c28"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ne/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "2f3bec0f2a5b60f475428171e4de8a7e2be57c73a93c22614ee760d9d1ac8e66"
+    }
+  ],
+  "evidence": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/ne-author-r2.md",
+      "sha256": "e28be2324fdbb3158bcd390573796728c9fc24755ccade87e465bc33663e56ab"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ne-author-review-r2-edits.json",
+      "sha256": "cdb6898a436e1adf0ef33258fa3c94647f72c43cba44e59a0c10cde27f19d69a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ne-author-review-r2-verification.json",
+      "sha256": "402cdf016ecf35cc2a91abbbebffa5c1a50d5b81ac0441119c69e0b7e741c4e8"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ne-author-review-r2-first-proof-error.json",
+      "sha256": "acb6597c7a561903479db402d3a8d1bfd7e3cddee7c760f5fffed935b0f4673a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ne-variety-author-review-r2.json",
+      "sha256": "335f30292f2cb149d5d6f77e1ec9b5efbb1b15479ce6b479b82b519aefb18e48"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ne-content-audit-author-review-r2.json",
+      "sha256": "6c6dc56dc6916ff9d4639fb3c9b32e606b22f1fe086b329297bac1f734693560"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/ne-independent.md",
+      "sha256": "204a9bd6f8897220379d700528af575ee0249b302c448504232882349f1368c3"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ne-independent-findings.json",
+      "sha256": "2d739cd2ce8c7bba98aa259af5b7d735a4aa561b77990565d4a2bb0a41a0636e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ne-independent-final-manifest.json",
+      "sha256": "926572524ebb2241f5a7048d81b8e2f8a93208ec273bd8412e0df4f744335a13"
+    }
+  ],
+  "actualSharedExit": 0,
+  "structureErrors": 0,
+  "sentenceCount": 235,
+  "faqCount": 17
+}

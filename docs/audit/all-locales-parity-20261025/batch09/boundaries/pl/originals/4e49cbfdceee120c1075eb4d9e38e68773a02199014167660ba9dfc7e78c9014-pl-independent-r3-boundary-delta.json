@@ -1,0 +1,572 @@
+{
+  "atUTC": "2026-10-26T09:50:48.688057+00:00",
+  "scope": "R2 complete 236 segment reading reused for identical ordered segments; all changed R3 paragraphs printed and actually read; two known false r. splits remain in provisional shared output. No final boundary PASS.",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "oldSHA256": "a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791",
+      "sha256": "a11bd9f70669e74cd046d77364a82468f4a191bb6112922f2208c6d5c68b2791",
+      "beforeSegments": 37,
+      "currentProvisionalSegments": 37,
+      "unchangedOrderedSegments": 37,
+      "changes": [],
+      "changedParagraphs": []
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "oldSHA256": "26a51d48c0db0e4e1a4eb7ac421ddc61f3f6ba7108bdf709aafa6c6ecf236da7",
+      "sha256": "67e1a4bd4123dd6de01e1a0e66586cf6d22903063ffb568b999a24301b6c536f",
+      "beforeSegments": 36,
+      "currentProvisionalSegments": 36,
+      "unchangedOrderedSegments": 34,
+      "changes": [
+        {
+          "operation": "replace",
+          "beforeIndices": [
+            12,
+            12
+          ],
+          "afterIndices": [
+            12,
+            12
+          ],
+          "before": [
+            "Nierozwiązane pytania powinny pozostać oznaczone jako nierozwiązane."
+          ],
+          "after": [
+            "W raporcie warto oznaczyć pytania, które nadal wymagają wyjaśnienia."
+          ]
+        },
+        {
+          "operation": "replace",
+          "beforeIndices": [
+            36,
+            36
+          ],
+          "afterIndices": [
+            36,
+            36
+          ],
+          "before": [
+            "Artykuł omawia wskazany wyrok z 2018 r. na podstawie oficjalnego omówienia; nie przedstawia historii każdej powiązanej sprawy ani ocenia odpowiedzialności konkretnego inwestora."
+          ],
+          "after": [
+            "Artykuł omawia wskazany wyrok z 2018 r. na podstawie oficjalnego omówienia; nie przedstawia historii każdej powiązanej sprawy ani nie ocenia odpowiedzialności konkretnego inwestora."
+          ]
+        }
+      ],
+      "changedParagraphs": [
+        {
+          "index": 5,
+          "before": [
+            {
+              "text": "Sam raport jest początkiem analizy.",
+              "units": 5
+            },
+            {
+              "text": "Należy ustalić, kto badał narażenie pracowników, jakie dodatkowe prace zlecono i jak ustalenia wpłynęły na decyzje o zasobach spółki operacyjnej.",
+              "units": 20
+            },
+            {
+              "text": "Nierozwiązane pytania powinny pozostać oznaczone jako nierozwiązane.",
+              "units": 7
+            },
+            {
+              "text": "Optymistyczna prezentacja końcowa nie usuwa wniosków technicznych ani odpowiedzialności za ich dalsze wyjaśnienie.",
+              "units": 13
+            }
+          ],
+          "after": [
+            {
+              "text": "Sam raport jest początkiem analizy.",
+              "units": 5
+            },
+            {
+              "text": "Należy ustalić, kto badał narażenie pracowników, jakie dodatkowe prace zlecono i jak ustalenia wpłynęły na decyzje o zasobach spółki operacyjnej.",
+              "units": 20
+            },
+            {
+              "text": "W raporcie warto oznaczyć pytania, które nadal wymagają wyjaśnienia.",
+              "units": 9
+            },
+            {
+              "text": "Optymistyczna prezentacja końcowa nie usuwa wniosków technicznych ani odpowiedzialności za ich dalsze wyjaśnienie.",
+              "units": 13
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "before": [
+            {
+              "text": "Źródła urzędowe i aktualny przepis sprawdzono 25–26 października 2026 r.",
+              "units": 11
+            },
+            {
+              "text": "Artykuł omawia wskazany wyrok z 2018 r. na podstawie oficjalnego omówienia; nie przedstawia historii każdej powiązanej sprawy ani ocenia odpowiedzialności konkretnego inwestora.",
+              "units": 22
+            }
+          ],
+          "after": [
+            {
+              "text": "Źródła urzędowe i aktualny przepis sprawdzono 25–26 października 2026 r.",
+              "units": 11
+            },
+            {
+              "text": "Artykuł omawia wskazany wyrok z 2018 r. na podstawie oficjalnego omówienia; nie przedstawia historii każdej powiązanej sprawy ani nie ocenia odpowiedzialności konkretnego inwestora.",
+              "units": 23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "oldSHA256": "5a96879936dc4fa4e61226afd0cacd0b089177044945f8cc85cf996bf374c567",
+      "sha256": "8d106bbd5e0328f445cfdcd7cf5255efd498a78422550eb498158381411d32b3",
+      "beforeSegments": 43,
+      "currentProvisionalSegments": 43,
+      "unchangedOrderedSegments": 41,
+      "changes": [
+        {
+          "operation": "replace",
+          "beforeIndices": [
+            1,
+            2
+          ],
+          "afterIndices": [
+            1,
+            2
+          ],
+          "before": [
+            "Na biurku w nowym domu leżą pismo o kredycie, gładka koperta i dokumenty odbioru; obok stoi jeszcze jeden nieotwarty karton.",
+            "W tajwańskim sporze żaden z tych elementów nie wystarczył sam do ustalenia dnia wydania."
+          ],
+          "after": [
+            "Na biurku w nowym domu leżą pismo o kredycie, gładka koperta i dokumenty odbioru; obok stoi jeszcze jeden nieotwarty karton (scena fikcyjna).",
+            "W opisanym poniżej tajwańskim sporze datę wydania ustalano na podstawie treści pism i rzeczywistego stanu lokalu."
+          ]
+        }
+      ],
+      "changedParagraphs": [
+        {
+          "index": 1,
+          "before": [
+            {
+              "text": "Na biurku w nowym domu leżą pismo o kredycie, gładka koperta i dokumenty odbioru; obok stoi jeszcze jeden nieotwarty karton.",
+              "units": 20
+            },
+            {
+              "text": "W tajwańskim sporze żaden z tych elementów nie wystarczył sam do ustalenia dnia wydania.",
+              "units": 14
+            },
+            {
+              "text": "Deweloper wysłał w lutym zawiadomienie o kredycie, gdy lokal nie miał jeszcze wody ani energii, a późniejsza zgoda na wejście w celu remontu i sprzątania również nie zastąpiła wydania.",
+              "units": 29
+            },
+            {
+              "text": "Sprawę opisano w orzeczeniu zgromadzonym przez Radę Ochrony Konsumentów Yuanu Wykonawczego, na stronach drukowanych 173–187.",
+              "units": 16
+            }
+          ],
+          "after": [
+            {
+              "text": "Na biurku w nowym domu leżą pismo o kredycie, gładka koperta i dokumenty odbioru; obok stoi jeszcze jeden nieotwarty karton (scena fikcyjna).",
+              "units": 22
+            },
+            {
+              "text": "W opisanym poniżej tajwańskim sporze datę wydania ustalano na podstawie treści pism i rzeczywistego stanu lokalu.",
+              "units": 16
+            },
+            {
+              "text": "Deweloper wysłał w lutym zawiadomienie o kredycie, gdy lokal nie miał jeszcze wody ani energii, a późniejsza zgoda na wejście w celu remontu i sprzątania również nie zastąpiła wydania.",
+              "units": 29
+            },
+            {
+              "text": "Sprawę opisano w orzeczeniu zgromadzonym przez Radę Ochrony Konsumentów Yuanu Wykonawczego, na stronach drukowanych 173–187.",
+              "units": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "oldSHA256": "effc9883d2591a5ecd11ed8764279e7d815575db49bbd9dec0faeb56f81b62e7",
+      "sha256": "a48b8191ba92a6a386c2108fd12c6966484ef86fd2af8941b40c3ae1a38e9628",
+      "beforeSegments": 41,
+      "currentProvisionalSegments": 41,
+      "unchangedOrderedSegments": 37,
+      "changes": [
+        {
+          "operation": "replace",
+          "beforeIndices": [
+            1,
+            1
+          ],
+          "afterIndices": [
+            1,
+            1
+          ],
+          "before": [
+            "Zwolnienie kierownika po nałożeniu dwóch surowych nagan nałożonych jednorazowo zostało uchylone razem z decyzją po ponownym rozpatrzeniu."
+          ],
+          "after": [
+            "Zwolnienie kierownika po jednorazowym nałożeniu dwóch surowych nagan zostało uchylone razem z decyzją po ponownym rozpatrzeniu."
+          ]
+        },
+        {
+          "operation": "replace",
+          "beforeIndices": [
+            20,
+            20
+          ],
+          "afterIndices": [
+            20,
+            20
+          ],
+          "before": [
+            "Art. 22-2 ustawy o bezpieczeństwie i higienie pracy wymaga obiektywnego, bezstronnego i rzetelnego dochodzenia lub mediacji w sprawie."
+          ],
+          "after": [
+            "Art. 22-2 ustawy o bezpieczeństwie i higienie pracy wymaga, aby dochodzenie oraz ewentualne próby uzgodnienia rozwiązania ze stronami były prowadzone obiektywnie, bezstronnie i rzetelnie."
+          ]
+        },
+        {
+          "operation": "replace",
+          "beforeIndices": [
+            26,
+            27
+          ],
+          "afterIndices": [
+            26,
+            27
+          ],
+          "before": [
+            "Za zgodą lub zgodnie z wolą skarżącego można podjąć mediację w sprawie.",
+            "Jeśli nie przyniesie porozumienia, pracodawca musi kontynuować dochodzenie."
+          ],
+          "after": [
+            "Zgodnie z wolą skarżącego pracodawca może podjąć ze stronami próbę uzgodnienia rozwiązania sprawy.",
+            "Jeśli próba nie przyniesie porozumienia, pracodawca musi kontynuować dochodzenie."
+          ]
+        }
+      ],
+      "changedParagraphs": [
+        {
+          "index": 1,
+          "before": [
+            {
+              "text": "Zwolnienie kierownika po nałożeniu dwóch surowych nagan nałożonych jednorazowo zostało uchylone razem z decyzją po ponownym rozpatrzeniu.",
+              "units": 17
+            },
+            {
+              "text": "Przed obradami ogłoszono przewidywany wynik, zainteresowany nie otrzymał odpowiedniej możliwości przedstawienia stanowiska, a raport z dochodzenia nie zgadzał się z późniejszymi ustaleniami dyscyplinarnymi.",
+              "units": 23
+            },
+            {
+              "text": "Te problemy opisano w oficjalnym komunikacie Tajpejskiego Wysokiego Sądu Administracyjnego.",
+              "units": 10
+            }
+          ],
+          "after": [
+            {
+              "text": "Zwolnienie kierownika po jednorazowym nałożeniu dwóch surowych nagan zostało uchylone razem z decyzją po ponownym rozpatrzeniu.",
+              "units": 16
+            },
+            {
+              "text": "Przed obradami ogłoszono przewidywany wynik, zainteresowany nie otrzymał odpowiedniej możliwości przedstawienia stanowiska, a raport z dochodzenia nie zgadzał się z późniejszymi ustaleniami dyscyplinarnymi.",
+              "units": 23
+            },
+            {
+              "text": "Te problemy opisano w oficjalnym komunikacie Tajpejskiego Wysokiego Sądu Administracyjnego.",
+              "units": 10
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "before": [
+            {
+              "text": "Art. 22-2 ustawy o bezpieczeństwie i higienie pracy wymaga obiektywnego, bezstronnego i rzetelnego dochodzenia lub mediacji w sprawie.",
+              "units": 19
+            },
+            {
+              "text": "Podczas dochodzenia strony muszą otrzymać odpowiednią możliwość przedstawienia stanowiska i obrony, a osoby mające konflikt interesów muszą zostać wyłączone.",
+              "units": 19
+            },
+            {
+              "text": "Publiczne uznawanie winy przed ustaleniem wyniku utrudnia wykonanie tych obowiązków; jest to wniosek dla jakości procedury firmy, nie skutek tego wyroku dla ważności kar w prywatnych przedsiębiorstwach.",
+              "units": 27
+            }
+          ],
+          "after": [
+            {
+              "text": "Art. 22-2 ustawy o bezpieczeństwie i higienie pracy wymaga, aby dochodzenie oraz ewentualne próby uzgodnienia rozwiązania ze stronami były prowadzone obiektywnie, bezstronnie i rzetelnie.",
+              "units": 25
+            },
+            {
+              "text": "Podczas dochodzenia strony muszą otrzymać odpowiednią możliwość przedstawienia stanowiska i obrony, a osoby mające konflikt interesów muszą zostać wyłączone.",
+              "units": 19
+            },
+            {
+              "text": "Publiczne uznawanie winy przed ustaleniem wyniku utrudnia wykonanie tych obowiązków; jest to wniosek dla jakości procedury firmy, nie skutek tego wyroku dla ważności kar w prywatnych przedsiębiorstwach.",
+              "units": 27
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "before": [
+            {
+              "text": "Za zgodą lub zgodnie z wolą skarżącego można podjąć mediację w sprawie.",
+              "units": 12
+            },
+            {
+              "text": "Jeśli nie przyniesie porozumienia, pracodawca musi kontynuować dochodzenie.",
+              "units": 8
+            },
+            {
+              "text": "Natychmiastowa ochrona i wysłuchanie drugiej strony nie są alternatywami.",
+              "units": 9
+            }
+          ],
+          "after": [
+            {
+              "text": "Zgodnie z wolą skarżącego pracodawca może podjąć ze stronami próbę uzgodnienia rozwiązania sprawy.",
+              "units": 13
+            },
+            {
+              "text": "Jeśli próba nie przyniesie porozumienia, pracodawca musi kontynuować dochodzenie.",
+              "units": 9
+            },
+            {
+              "text": "Natychmiastowa ochrona i wysłuchanie drugiej strony nie są alternatywami.",
+              "units": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "oldSHA256": "452cb645981a3c790542f9c219c65eea879bf3d1ba584bd2f22f3edcb1aaf2da",
+      "sha256": "1ae0a5c6dd50d985378f533d266248349d164314bd39cfdf13fefd4b26ef5b30",
+      "beforeSegments": 38,
+      "currentProvisionalSegments": 39,
+      "unchangedOrderedSegments": 35,
+      "changes": [
+        {
+          "operation": "replace",
+          "beforeIndices": [
+            2,
+            2
+          ],
+          "afterIndices": [
+            2,
+            3
+          ],
+          "before": [
+            "Ponieważ mieszkaniec zamontował skrzynkę na ścianie za stanowiskiem, poprowadził instalację pod sufitem i połączył ją ze wspólną rozdzielnią oraz własnym licznikiem, sąd musiał ocenić obszar wykraczający poza linie miejsca na posadzce, jak wynika z urzędowego tekstu wyroku."
+          ],
+          "after": [
+            "Mieszkaniec zamontował skrzynkę na ścianie za stanowiskiem, poprowadził instalację pod sufitem i połączył ją ze wspólną rozdzielnią oraz licznikiem używanym przez mieszkańca, jak wynika z urzędowego tekstu wyroku.",
+            "Spór wykraczał poza samo miejsce parkingowe."
+          ]
+        },
+        {
+          "operation": "replace",
+          "beforeIndices": [
+            14,
+            14
+          ],
+          "afterIndices": [
+            15,
+            15
+          ],
+          "before": [
+            "Naruszenie art. 11 i regulaminu sąd zakwalifikował jako obowiązek przestrzegania innych przepisów lub regulaminu z art. 6 ust. 1 pkt 5."
+          ],
+          "after": [
+            "Naruszenie art. 11 i regulaminu sąd uznał za niewykonanie obowiązku przestrzegania innych przepisów lub regulaminu z art. 6 ust. 1 pkt 5."
+          ]
+        },
+        {
+          "operation": "replace",
+          "beforeIndices": [
+            18,
+            18
+          ],
+          "afterIndices": [
+            19,
+            19
+          ],
+          "before": [
+            "Sąd neutralnie stwierdził, że ta sprawa nie należała do sytuacji objętej tym punktem; nie trzeba przypisywać nikomu dodatkowego stanowiska, którego orzeczenie nie podaje."
+          ],
+          "after": [
+            "Sąd stwierdził, że ta sprawa nie należała do sytuacji objętej tym punktem."
+          ]
+        }
+      ],
+      "changedParagraphs": [
+        {
+          "index": 1,
+          "before": [
+            {
+              "text": "Czy ładowarkę na własnym miejscu parkingowym można podłączyć według własnego projektu?",
+              "units": 11
+            },
+            {
+              "text": "Ponieważ mieszkaniec zamontował skrzynkę na ścianie za stanowiskiem, poprowadził instalację pod sufitem i połączył ją ze wspólną rozdzielnią oraz własnym licznikiem, sąd musiał ocenić obszar wykraczający poza linie miejsca na posadzce, jak wynika z urzędowego tekstu wyroku.",
+              "units": 37
+            }
+          ],
+          "after": [
+            {
+              "text": "Czy ładowarkę na własnym miejscu parkingowym można podłączyć według własnego projektu?",
+              "units": 11
+            },
+            {
+              "text": "Mieszkaniec zamontował skrzynkę na ścianie za stanowiskiem, poprowadził instalację pod sufitem i połączył ją ze wspólną rozdzielnią oraz licznikiem używanym przez mieszkańca, jak wynika z urzędowego tekstu wyroku.",
+              "units": 28
+            },
+            {
+              "text": "Spór wykraczał poza samo miejsce parkingowe.",
+              "units": 6
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "before": [
+            {
+              "text": "Naruszenie art. 11 i regulaminu sąd zakwalifikował jako obowiązek przestrzegania innych przepisów lub regulaminu z art. 6 ust. 1 pkt 5.",
+              "units": 21
+            },
+            {
+              "text": "Zarząd wysłał formalne pismo i podjął koordynację, lecz instalacja pozostała.",
+              "units": 10
+            },
+            {
+              "text": "Trwające niewykonanie obowiązku pozwalało zatem wystąpić do sądu na podstawie ust. 3 tego artykułu.",
+              "units": 14
+            }
+          ],
+          "after": [
+            {
+              "text": "Naruszenie art. 11 i regulaminu sąd uznał za niewykonanie obowiązku przestrzegania innych przepisów lub regulaminu z art. 6 ust. 1 pkt 5.",
+              "units": 22
+            },
+            {
+              "text": "Zarząd wysłał formalne pismo i podjął koordynację, lecz instalacja pozostała.",
+              "units": 10
+            },
+            {
+              "text": "Trwające niewykonanie obowiązku pozwalało zatem wystąpić do sądu na podstawie ust. 3 tego artykułu.",
+              "units": 14
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "before": [
+            {
+              "text": "Art. 6 ust. 1 pkt 4 odnosi się z kolei do instalowania przewodów i koniecznego korzystania z części wspólnych.",
+              "units": 19
+            },
+            {
+              "text": "Sąd neutralnie stwierdził, że ta sprawa nie należała do sytuacji objętej tym punktem; nie trzeba przypisywać nikomu dodatkowego stanowiska, którego orzeczenie nie podaje.",
+              "units": 23
+            },
+            {
+              "text": "Kluczowe motywy znajdują się w punktach 5 i 6 wyroku.",
+              "units": 10
+            },
+            {
+              "text": "Wynik nie uzasadnia stwierdzenia, że każda ładowarka przy miejscu parkingowym podlega identycznej procedurze głosowania.",
+              "units": 14
+            }
+          ],
+          "after": [
+            {
+              "text": "Art. 6 ust. 1 pkt 4 odnosi się z kolei do instalowania przewodów i koniecznego korzystania z części wspólnych.",
+              "units": 19
+            },
+            {
+              "text": "Sąd stwierdził, że ta sprawa nie należała do sytuacji objętej tym punktem.",
+              "units": 12
+            },
+            {
+              "text": "Kluczowe motywy znajdują się w punktach 5 i 6 wyroku.",
+              "units": 10
+            },
+            {
+              "text": "Wynik nie uzasadnia stwierdzenia, że każda ładowarka przy miejscu parkingowym podlega identycznej procedurze głosowania.",
+              "units": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-pl/921-taiwan-online-game-coins-refund-judgment.md",
+      "oldSHA256": "bdebbbdd5368437bd80c9630f8b5ca3abd9272dec4c2757e0c3ea739dcd61fae",
+      "sha256": "c29911404cc6477949d269efbbc26946512b5fd477ded9ed1a4f655145c3551b",
+      "beforeSegments": 41,
+      "currentProvisionalSegments": 43,
+      "unchangedOrderedSegments": 40,
+      "changes": [
+        {
+          "operation": "replace",
+          "beforeIndices": [
+            30,
+            30
+          ],
+          "afterIndices": [
+            30,
+            32
+          ],
+          "before": [
+            "Przedsiębiorca musi przechowywać osobistą historię gry co najmniej przez 30 dni i udostępniać ją zgodnie z przepisami, a po otrzymaniu żądania ma siedem dni na jej przekazanie, dlatego przy ograniczonym okresie przechowywania danych wczesny wniosek zmniejsza ryzyko pozostania wyłącznie z końcowym zrzutem salda."
+          ],
+          "after": [
+            "Przedsiębiorca musi przechowywać osobistą historię gry co najmniej przez 30 dni, a po otrzymaniu żądania udostępnić ją w ciągu siedmiu dni.",
+            "Trzydzieści dni to ustawowe minimum.",
+            "Wczesny wniosek może pomóc uzyskać dane, których końcowy zrzut salda nie pokazuje."
+          ]
+        }
+      ],
+      "changedParagraphs": [
+        {
+          "index": 11,
+          "before": [
+            {
+              "text": "Przedsiębiorca musi przechowywać osobistą historię gry co najmniej przez 30 dni i udostępniać ją zgodnie z przepisami, a po otrzymaniu żądania ma siedem dni na jej przekazanie, dlatego przy ograniczonym okresie przechowywania danych wczesny wniosek zmniejsza ryzyko pozostania wyłącznie z końcowym zrzutem salda.",
+              "units": 43
+            }
+          ],
+          "after": [
+            {
+              "text": "Przedsiębiorca musi przechowywać osobistą historię gry co najmniej przez 30 dni, a po otrzymaniu żądania udostępnić ją w ciągu siedmiu dni.",
+              "units": 21
+            },
+            {
+              "text": "Trzydzieści dni to ustawowe minimum.",
+              "units": 5
+            },
+            {
+              "text": "Wczesny wniosek może pomóc uzyskać dane, których końcowy zrzut salda nie pokazuje.",
+              "units": 12
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "before": 236,
+    "currentProvisional": 239,
+    "unchangedOrdered": 224
+  }
+}

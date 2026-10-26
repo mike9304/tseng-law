@@ -1,0 +1,49 @@
+{
+  "atUTC": "2026-10-26T10:03:19.246611+00:00",
+  "files": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "ecf263bf7b469ba2e3de619460d7e3945a0275dd9dd72d5261298bc58937f576",
+      "priorSentences": 45,
+      "currentSentences": 45,
+      "unchangedOrdered": 44,
+      "changes": [
+        {
+          "op": "replace",
+          "old": [
+            "Prísľub budúceho odpojenia neriešil pôvodný nedostatok súhlasu."
+          ],
+          "new": [
+            "Tvrdené nepoužívanie zariadenia chýbajúci súhlas nenahradilo."
+          ]
+        }
+      ],
+      "changedParagraphsActuallyRead": true
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "1d3574bf42e024b1c9a6c2bd3005d1ed452dbb13fc5015ba0a6e7556f15c1b6a",
+      "priorSentences": 46,
+      "currentSentences": 45,
+      "unchangedOrdered": 44,
+      "changes": [
+        {
+          "op": "replace",
+          "old": [
+            "Dohoda vyžaduje obe strany.",
+            "Samotná jednostranná informácia prevádzkovateľa ju nenahrádza."
+          ],
+          "new": [
+            "Jednostranné oznámenie prevádzkovateľa takú dohodu nenahrádza."
+          ]
+        }
+      ],
+      "changedParagraphsActuallyRead": true
+    }
+  ],
+  "FAQ2Read": true,
+  "unchangedOtherFourSourceSHA": true,
+  "currentSixSentenceCount": 259,
+  "bodyNewSentencesRead": 2,
+  "allOtherBodySentencesReusedFromFullR1Read": 257
+}

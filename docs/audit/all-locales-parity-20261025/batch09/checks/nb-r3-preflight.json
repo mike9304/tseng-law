@@ -1,0 +1,63 @@
+{
+  "atUTC": "2026-10-26T08:34:00.147Z",
+  "errors": [],
+  "files": [
+    {
+      "file": "915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "kimiFile": "taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "oldSHA256": "4e56cf9fae3406026a2d92a9a6580255541324ddfc4697e81dba01b559e8c3be",
+      "newSHA256": "a72f685bc3a416036ac56d38f0c9d4152ab7b9931179056db0307dff7ac6f95c",
+      "metadataChanged": [
+        "summary"
+      ],
+      "FAQ": 2
+    },
+    {
+      "file": "916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "kimiFile": "taiwan-parent-company-pollution-liability-us-investor.md",
+      "oldSHA256": "7924cb9eb1f80d7289ef6d50b9b1b930f5a118586694963d181207465f1e0620",
+      "newSHA256": "c4149a6ea6eeb51e16dc36ca8835def4c673fca03b988d6ba60df82725870fef",
+      "metadataChanged": [
+        "summary",
+        "faq"
+      ],
+      "FAQ": 3
+    },
+    {
+      "file": "918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "kimiFile": "taiwan-presale-mortgage-notice-handover-judgment.md",
+      "oldSHA256": "8ac7ad4fc347c61a6f3704a9fd3219c88b38250bfd07d8eb5b406a3e20c1887f",
+      "newSHA256": "dffad3771742df0e504cf0169df8278a858986f7189a74f7c7ca5f968e6ff4cf",
+      "metadataChanged": [],
+      "FAQ": 3
+    },
+    {
+      "file": "919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "kimiFile": "taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "oldSHA256": "f3fe7f818a8bc84de97cd2fc27250748c72541b3055cfaecb65c3675fd2a0f81",
+      "newSHA256": "e3df80405b1266e4940c047945947fc12a4be5247491eb13b410b52d18d4804b",
+      "metadataChanged": [],
+      "FAQ": 3
+    },
+    {
+      "file": "920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "kimiFile": "taiwan-apartment-ev-charger-common-area-judgment.md",
+      "oldSHA256": "973ba3ba4375b5b789d32f0ffd246e0d15aeb8482d8cf92eb3be3267579806a8",
+      "newSHA256": "9d7d42b506b9f29bd34097c98ea2fca5a8702adf86ed7aa306c2fcdbd2b8da86",
+      "metadataChanged": [],
+      "FAQ": 3
+    },
+    {
+      "file": "921-taiwan-online-game-coins-refund-judgment.md",
+      "kimiFile": "taiwan-online-game-coins-refund-judgment.md",
+      "oldSHA256": "3ad11e81ca25562fed802add762e9e174e7c283563d473fe3167b8fee4851bf5",
+      "newSHA256": "3fae184bc6a474ce05d9f4d6ad0ed39e992a3c1db00091213bff239a1be0c96b",
+      "metadataChanged": [
+        "summary",
+        "faq"
+      ],
+      "FAQ": 3
+    }
+  ],
+  "meaningReview": "pending targeted review; parser only"
+}

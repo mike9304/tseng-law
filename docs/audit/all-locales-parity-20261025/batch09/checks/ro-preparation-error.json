@@ -1,0 +1,7 @@
+{
+  "actualFailure": "First inline preparation wrapper assumed all legacy RO Markdown had published; AttributeError on a missing field.",
+  "exit": 1,
+  "manuscriptsWritten": false,
+  "inputManifestWritten": false,
+  "correction": "Record legacy files with missing published separately; select the explicit published recent704–706 without changing existing content."
+}

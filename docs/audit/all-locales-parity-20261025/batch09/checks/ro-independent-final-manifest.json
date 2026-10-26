@@ -1,0 +1,455 @@
+{
+  "atUTC": "2026-10-26T09:35:06.662894+00:00",
+  "decision": "ACCEPT_WITH_OPTIONAL_CLARIFICATIONS",
+  "mandatory": 0,
+  "optional": [
+    "O01",
+    "O02"
+  ],
+  "owner": "column_live_audit",
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "eb47204940b6bbbf46cafd1304257b96103ee4ae7e0bd52530d961d12ca63abb"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "a155be35ec16384685cba6654957720f4e3f2bff222dda12e3f775c36d3b28b4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "3d20ec40f6fdd4ea65f2ec8e58d18c2a0d1c88ff65f9cbd0b58589da6f94bdcb"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "ac559acc2d867931be628dd9043cf6b26feab5197b16e3f00041d8370fcf2df5"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "40d60abd6b530054c24da0ae3847bf3b77abf966f89ad910bcee6f8a40cd4820"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "bb70cb4089ad9bf470a52da6b41fd7807a2d56c1ec3ffe2ddbed4224f52bcfc9"
+    }
+  ],
+  "author": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/ro-author.md",
+    "sha256": "05cdc0663f02e7d81c707033b62aac5f149f518cc643958085d3f872abfa06b3"
+  },
+  "authorManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-author-manifest.json",
+    "sha256": "86b3bc5d29b0142a79d10e9d0f02c355b923945207cc30b17690d3b0748b09bd"
+  },
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/ro-independent.md",
+      "sha256": "2baee72a8ee0ef3a91c213ccf308dd6207b5efe57b4c7a99b5d81e77c6c68c1f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-independent-findings.json",
+      "sha256": "41e511b70c6ca24fb3e34179c2def2355a0b123c6fa38d3cca15def2981df936"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-independent-proof.json",
+      "sha256": "d4cac172342162f546afc994ac4e59c6a94c74119d443adefd4d29fa75dd0115"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-independent-verify.py",
+      "sha256": "c207d69b371d16435f7a0d6e5ee3fbf75deb906f79a8c92572084974d53def1d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-independent-write-report.py",
+      "sha256": "eef4064aa8616460fa36fcca537d02338a70552241414e8a8d7625644e1ea111"
+    }
+  ],
+  "additionalStoredSourcesReread": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/zh-hant-ev-primary-recovered.md",
+      "sha256": "69e09470e7e81edf23c9708e3b942a01c32dfc2e6128c49b353d180634cebbe2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/recheck/official-04.json",
+      "sha256": "151502199d4109a8aecb1e4a95b755f1e8171b96550e86b1753d9b0cfb7f9d58"
+    }
+  ],
+  "verifiedBindings": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "expectedSHA256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "actualSHA256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/915-case-trends-20261025.webp",
+      "expectedSHA256": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95",
+      "actualSHA256": "ed63c76323588f630b50bf4c500e8f2a92d68bd7e59f154c5919d8d9d3a1cd95",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/916-case-trends-20261025.webp",
+      "expectedSHA256": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+      "actualSHA256": "e2bc07d517d6d0901fa783965e237108311911f623994c557d89f3e2637a548d",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/918-case-trends-20261025.webp",
+      "expectedSHA256": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+      "actualSHA256": "ae43d4905cd3d8be089d5900319d2786ba90989fb2ba79d7fed66822e5a09e5e",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/919-case-trends-20261025.webp",
+      "expectedSHA256": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+      "actualSHA256": "dafdcbe2a94d0521f5db37aabe7d39b3ea77e9b97165208cfed8b24536ff59e7",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/920-case-trends-20261025.webp",
+      "expectedSHA256": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+      "actualSHA256": "3ba4298b4a664bfa93b8429bc3bf11d23863f53adcafc12a1a766fae75374c9c",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/public/images/columns/921-case-trends-20261025.webp",
+      "expectedSHA256": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933",
+      "actualSHA256": "3c02181f6db896c8a318c351ffdd50cdb4b0b336f3387ca63a653c6eaa378933",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "expectedSHA256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "actualSHA256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "expectedSHA256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "actualSHA256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ro/704-taiwan-arc-first-application.md",
+      "expectedSHA256": "15d32900d2bf701fc6b9900d0f8e4cfce447495629d9b658e6d1973a69374b4b",
+      "actualSHA256": "15d32900d2bf701fc6b9900d0f8e4cfce447495629d9b658e6d1973a69374b4b",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ro/705-taiwan-visa-residence-work-study-family.md",
+      "expectedSHA256": "3e999c705f6a2cfca52dc7eea0453b9515e1e1d2bd2ccdb216b76594f2720230",
+      "actualSHA256": "3e999c705f6a2cfca52dc7eea0453b9515e1e1d2bd2ccdb216b76594f2720230",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-ro/706-taiwan-arc-renewal-changes-reentry.md",
+      "expectedSHA256": "1d39394a43fb41b390ff7483caca02d0bcbfa2cb8eb8b8664bb0a5bc04a3d635",
+      "actualSHA256": "1d39394a43fb41b390ff7483caca02d0bcbfa2cb8eb8b8664bb0a5bc04a3d635",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "expectedSHA256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "actualSHA256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "expectedSHA256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "actualSHA256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "expectedSHA256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "actualSHA256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/921-taiwan-online-game-coins-refund-judgment.md",
+      "expectedSHA256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "actualSHA256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/authoring-contract-draft.md",
+      "expectedSHA256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e",
+      "actualSHA256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "expectedSHA256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "actualSHA256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "expectedSHA256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "actualSHA256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "expectedSHA256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "actualSHA256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "expectedSHA256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "actualSHA256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "expectedSHA256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "actualSHA256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "expectedSHA256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "actualSHA256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/six-source-facts.md",
+      "expectedSHA256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a",
+      "actualSHA256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-freeze.json",
+      "expectedSHA256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "actualSHA256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-register.md",
+      "expectedSHA256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d",
+      "actualSHA256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch07/BRIEF.md",
+      "expectedSHA256": "8103ae1441fe0abbdb76362d6086a267014664f31997f5676b37c6962cfcd306",
+      "actualSHA256": "8103ae1441fe0abbdb76362d6086a267014664f31997f5676b37c6962cfcd306",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch08/BRIEF.md",
+      "expectedSHA256": "e7f781375d583d0647ca32bbeafd372f3ce802a2837d17a59b6225409d55dc8c",
+      "actualSHA256": "e7f781375d583d0647ca32bbeafd372f3ce802a2837d17a59b6225409d55dc8c",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/BRIEF.md",
+      "expectedSHA256": "f04f1d70c375c3e65a88e42dcaedbc453fda2c6e74882a7b82fba17d109290f4",
+      "actualSHA256": "f04f1d70c375c3e65a88e42dcaedbc453fda2c6e74882a7b82fba17d109290f4",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-content-audit-r1.json",
+      "expectedSHA256": "f8bc32c255d5e40d3e16511710a289292d967d2310dae659ea7a4e71b36c05bd",
+      "actualSHA256": "f8bc32c255d5e40d3e16511710a289292d967d2310dae659ea7a4e71b36c05bd",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-content-audit.mjs",
+      "expectedSHA256": "4a391a2672b07815951f94414bb347a646226ea83634fb96e89a33f7d4823ada",
+      "actualSHA256": "4a391a2672b07815951f94414bb347a646226ea83634fb96e89a33f7d4823ada",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-final-proof.json",
+      "expectedSHA256": "0cd9be4a2c57fe5fd943292c71f58fd2b7538a93f1995a15d3bf43eca81f55f2",
+      "actualSHA256": "0cd9be4a2c57fe5fd943292c71f58fd2b7538a93f1995a15d3bf43eca81f55f2",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-finalize.py",
+      "expectedSHA256": "b232539630eb685a4009a100a1ffd3a09226dfcdd4277c734ba89dc3d4db59f4",
+      "actualSHA256": "b232539630eb685a4009a100a1ffd3a09226dfcdd4277c734ba89dc3d4db59f4",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-initial-drafts.json",
+      "expectedSHA256": "aac2507e69aefd1394cfe4ca837d9b3332db44fe9a31cafb8ef779b88a37e465",
+      "actualSHA256": "aac2507e69aefd1394cfe4ca837d9b3332db44fe9a31cafb8ef779b88a37e465",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-inputs.json",
+      "expectedSHA256": "e9fe962fd0f7d8fe42653b54e0fdca2303788dfe970abcc494b0d74b563e26e8",
+      "actualSHA256": "e9fe962fd0f7d8fe42653b54e0fdca2303788dfe970abcc494b0d74b563e26e8",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-measure-initial-error.json",
+      "expectedSHA256": "fe1b79020c3bfed86211fb79bfa3ab024758d8f3d6b89fbaa2f5b4cd64e0561d",
+      "actualSHA256": "fe1b79020c3bfed86211fb79bfa3ab024758d8f3d6b89fbaa2f5b4cd64e0561d",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-measure.py",
+      "expectedSHA256": "de706f874ebe88bc44f275b2c7ddd5237c3e44ce3bfa29b338ca9ec9c997fa35",
+      "actualSHA256": "de706f874ebe88bc44f275b2c7ddd5237c3e44ce3bfa29b338ca9ec9c997fa35",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-preparation-error.json",
+      "expectedSHA256": "04bdbba8ce98a20fb4ec33f54db8d7c00df8433c6466af640e1cd158b1e92ac3",
+      "actualSHA256": "04bdbba8ce98a20fb4ec33f54db8d7c00df8433c6466af640e1cd158b1e92ac3",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-prepare.py",
+      "expectedSHA256": "28c40a658d9bba5c8e61d703f545129f3571b5a5a0029b0968ec519d14039670",
+      "actualSHA256": "28c40a658d9bba5c8e61d703f545129f3571b5a5a0029b0968ec519d14039670",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-reading-completion.json",
+      "expectedSHA256": "6f76550579ed71adb9ba41399c991e95b4cb4f27a6cf9e74f6c5db1caa3c4d51",
+      "actualSHA256": "6f76550579ed71adb9ba41399c991e95b4cb4f27a6cf9e74f6c5db1caa3c4d51",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-self-edit-r1.py",
+      "expectedSHA256": "dbd67d54392489cb35e1a67b416c3097c16471be3cf577fa76af97efa9ebe9eb",
+      "actualSHA256": "dbd67d54392489cb35e1a67b416c3097c16471be3cf577fa76af97efa9ebe9eb",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-self-edit-wrapper-error.json",
+      "expectedSHA256": "fda0611281e169e3cf16f2b35760f266ac500ef35fe011a6c143313fbdf431cb",
+      "actualSHA256": "fda0611281e169e3cf16f2b35760f266ac500ef35fe011a6c143313fbdf431cb",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-self-edits-r1.json",
+      "expectedSHA256": "727afab5503177812acc9699cae5be56ae620d9ab6b2dab1bb3cd00ec27304c3",
+      "actualSHA256": "727afab5503177812acc9699cae5be56ae620d9ab6b2dab1bb3cd00ec27304c3",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-edited-r1.json",
+      "expectedSHA256": "7d19b9e45fecb75ae4a18343b4e3400282942f16abc298f911ec3417c1608e78",
+      "actualSHA256": "7d19b9e45fecb75ae4a18343b4e3400282942f16abc298f911ec3417c1608e78",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-first-cli.json",
+      "expectedSHA256": "0cac0ce402a5924837aeb04d72fa20997647af993ef14f8082fbd0430ce64e37",
+      "actualSHA256": "0cac0ce402a5924837aeb04d72fa20997647af993ef14f8082fbd0430ce64e37",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-initial.json",
+      "expectedSHA256": "b817dd54871acd3407c214e8df87be621a7c8b67b126b076f078ada44371f39b",
+      "actualSHA256": "b817dd54871acd3407c214e8df87be621a7c8b67b126b076f078ada44371f39b",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/ro-variety-r1.json",
+      "expectedSHA256": "4b7bec362f812a105da9c1e4113ae1b33c50a877f3dcee07a683c67927adf61d",
+      "actualSHA256": "4b7bec362f812a105da9c1e4113ae1b33c50a877f3dcee07a683c67927adf61d",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/reviews/ro-author.md",
+      "expectedSHA256": "05cdc0663f02e7d81c707033b62aac5f149f518cc643958085d3f872abfa06b3",
+      "actualSHA256": "05cdc0663f02e7d81c707033b62aac5f149f518cc643958085d3f872abfa06b3",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "expectedSHA256": "eb47204940b6bbbf46cafd1304257b96103ee4ae7e0bd52530d961d12ca63abb",
+      "actualSHA256": "eb47204940b6bbbf46cafd1304257b96103ee4ae7e0bd52530d961d12ca63abb",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "expectedSHA256": "a155be35ec16384685cba6654957720f4e3f2bff222dda12e3f775c36d3b28b4",
+      "actualSHA256": "a155be35ec16384685cba6654957720f4e3f2bff222dda12e3f775c36d3b28b4",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "expectedSHA256": "3d20ec40f6fdd4ea65f2ec8e58d18c2a0d1c88ff65f9cbd0b58589da6f94bdcb",
+      "actualSHA256": "3d20ec40f6fdd4ea65f2ec8e58d18c2a0d1c88ff65f9cbd0b58589da6f94bdcb",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "expectedSHA256": "ac559acc2d867931be628dd9043cf6b26feab5197b16e3f00041d8370fcf2df5",
+      "actualSHA256": "ac559acc2d867931be628dd9043cf6b26feab5197b16e3f00041d8370fcf2df5",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "expectedSHA256": "40d60abd6b530054c24da0ae3847bf3b77abf966f89ad910bcee6f8a40cd4820",
+      "actualSHA256": "40d60abd6b530054c24da0ae3847bf3b77abf966f89ad910bcee6f8a40cd4820",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-ro/921-taiwan-online-game-coins-refund-judgment.md",
+      "expectedSHA256": "bb70cb4089ad9bf470a52da6b41fd7807a2d56c1ec3ffe2ddbed4224f52bcfc9",
+      "actualSHA256": "bb70cb4089ad9bf470a52da6b41fd7807a2d56c1ec3ffe2ddbed4224f52bcfc9",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "expectedSHA256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "actualSHA256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "expectedSHA256": "86710ef330b108a916a7bb92a75f1ffa62dea53412e8a75f38472d9fa9b33130",
+      "actualSHA256": "86710ef330b108a916a7bb92a75f1ffa62dea53412e8a75f38472d9fa9b33130",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "expectedSHA256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "actualSHA256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/ro.json",
+      "expectedSHA256": "1fe2c5bb725e55a8aa38fcaafc0f52fc43d729c54fa9dfaaab5a6aafddee1474",
+      "actualSHA256": "1fe2c5bb725e55a8aa38fcaafc0f52fc43d729c54fa9dfaaab5a6aafddee1474",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "expectedSHA256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+      "actualSHA256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "expectedSHA256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+      "actualSHA256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e",
+      "match": true
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "expectedSHA256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+      "actualSHA256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de",
+      "match": true
+    }
+  ],
+  "currentSentencesRead": 228,
+  "FAQRead": 17,
+  "exactEditsReconstructed": 10,
+  "initial6Reversed": true,
+  "sameOrderedSentences": 217,
+  "newSentences": 11,
+  "freshVarietyCLIRuns": 0,
+  "freshStructureCLIRuns": 0,
+  "publicRenderingInspected": false,
+  "manuscriptsAuthorROthersSharedChanged": false,
+  "humanNativeLegalApproval": false
+}

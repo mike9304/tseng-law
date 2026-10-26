@@ -1,0 +1,187 @@
+{
+  "at": "2026-10-26T17:54:24.376680+09:00",
+  "changeCount": 16,
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSha256": "4ce927d964515ae9a1bda9479243f7014d6a0832605589a33e8736ad364305ed",
+      "afterSha256": "dd5ba0865b06900c6cf13dca431a93c0b6a9d86c0e5c8ca6cc136ec7170deaa3",
+      "changes": [
+        {
+          "id": 915,
+          "old": "Ide o dôvod použitý v tomto prípade. Nie je potrebné z neho robiť všeobecné tvrdenie, že každá zmena návrhu ruší možnosť rozhodcovského konania.",
+          "new": "Rozhodujúci bol konkrétny peňažný nárok. Tento rozsudok nevytvára všeobecné pravidlo, podľa ktorého by zmena sumy alebo argumentu vždy bránila rozhodcovskému konaniu.",
+          "reason": "독자를 훈계하는 자기검수 문구를 해당 판결의 좁은 범위로 직접 서술. 짧은 결론 뒤 조건 설명.",
+          "meaningPreservation": "제40조의 부존재 근거와 FAQ의 변경 자체는 일반적 금지가 아니라는 범위 보존.",
+          "startBeforeEdit": 3554
+        },
+        {
+          "id": 915,
+          "old": "[Článok 85-1 zákona o verejnom obstarávaní](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) upravuje mediáciu sporov o plnenie zmluvy pred komisiou pre preskúmanie sťažností vo verejnom obstarávaní.",
+          "new": "Ak sa strany nedohodnú na riešení sporu o plnenie zmluvy, [článok 85-1 zákona o verejnom obstarávaní](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) umožňuje obrátiť sa na komisiu pre preskúmanie sťažností vo verejnom obstarávaní so žiadosťou o mediáciu.",
+          "reason": "일반 제도 설명에 실제 당사자 합의 실패 조건을 연결.",
+          "meaningPreservation": "현행 조문 계약이행분쟁/합의실패/조정 가능, 다음 문장의 공급자 신청시 기관 거절불가 보존. 조정을 유일한 구제수단으로 만들지 않음.",
+          "startBeforeEdit": 3783
+        },
+        {
+          "id": 915,
+          "old": "Pri oneskorenom projekte môže tím považovať žiadosť o viac času a požiadavku na dodatočné náklady za jeden obchodný problém.",
+          "new": "Projektový tím môže pri omeškaní považovať žiadosť o viac času a požiadavku na dodatočné náklady za jeden obchodný problém.",
+          "reason": "Pri로 시작하는 문단 반복을 실제 행위자 중심으로 수정.",
+          "meaningPreservation": "지연의 시간/금액 요구라는 실무 상황 동일.",
+          "startBeforeEdit": 5260
+        }
+      ],
+      "inverseExactInitial": true,
+      "diff": "--- initial/915-taiwan-public-contract-mediation-arbitration-same-claim.md\n+++ self-r1/915-taiwan-public-contract-mediation-arbitration-same-claim.md\n@@ -38,11 +38,11 @@\n \n Potvrdenie o neúspešnej mediácii tento nedostatok neodstránilo. Objednávateľ podľa [vysvetlenia súdu](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693) potreboval príležitosť prijať alebo odmietnuť odporúčanie ku konkrétnemu sporu, ktorý sa potom dostal pred rozhodcov. V danom prípade neexistovala ani zmluvná rozhodcovská dohoda, ani skutkové podmienky zákonom predpokladaného súhlasu.\n \n-Dôvod zrušenia vychádzal z absencie rozhodcovskej dohody podľa [článku 40 ods. 1 bodu 2 zákona o rozhodcovskom konaní](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001). Ide o dôvod použitý v tomto prípade. Nie je potrebné z neho robiť všeobecné tvrdenie, že každá zmena návrhu ruší možnosť rozhodcovského konania.\n+Dôvod zrušenia vychádzal z absencie rozhodcovskej dohody podľa [článku 40 ods. 1 bodu 2 zákona o rozhodcovskom konaní](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001). Rozhodujúci bol konkrétny peňažný nárok. Tento rozsudok nevytvára všeobecné pravidlo, podľa ktorého by zmena sumy alebo argumentu vždy bránila rozhodcovskému konaniu.\n \n ## Zákonná cesta vyžaduje nesúhlas s príslušným odporúčaním\n \n-[Článok 85-1 zákona o verejnom obstarávaní](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) upravuje mediáciu sporov o plnenie zmluvy pred komisiou pre preskúmanie sťažností vo verejnom obstarávaní. Ak mediáciu navrhne dodávateľ, verejný objednávateľ ju nemôže odmietnuť.\n+Ak sa strany nedohodnú na riešení sporu o plnenie zmluvy, [článok 85-1 zákona o verejnom obstarávaní](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057) umožňuje obrátiť sa na komisiu pre preskúmanie sťažností vo verejnom obstarávaní so žiadosťou o mediáciu. Ak mediáciu navrhne dodávateľ, verejný objednávateľ ju nemôže odmietnuť.\n \n Pri stavebných prácach alebo technických službách musí komisia vydať odporúčanie alebo návrh. Ak mediácia zlyhá preto, že s ním objednávateľ nesúhlasí, nesmie odmietnuť postúpenie sporu do rozhodcovského konania na návrh dodávateľa. Podmienky sa viažu na predmetný spor. Nejde o automatický súhlas s rozhodcovským konaním pri každej verejnej zmluve.\n \n@@ -52,7 +52,7 @@\n \n [Správa americkej International Trade Administration z 30. septembra 2026](https://www.trade.gov/market-intelligence/taiwan-energy-industry) opisuje očakávané taiwanské obstarávania v energetike a elektrických sieťach na konci roka 2026 a v roku 2027. Venuje sa príležitostiam amerických dodávateľov. Nepotvrdzuje otvorenie konkrétneho tendra, spôsobilosť jednotlivého uchádzača ani právnu kategóriu budúcej zmluvy.\n \n-Pri oneskorenom projekte môže tím považovať žiadosť o viac času a požiadavku na dodatočné náklady za jeden obchodný problém. Procesné podklady však môžu zachytávať odlišné nároky. Rovnaké číslo projektu túto otázku nevyrieši.\n+Projektový tím môže pri omeškaní považovať žiadosť o viac času a požiadavku na dodatočné náklady za jeden obchodný problém. Procesné podklady však môžu zachytávať odlišné nároky. Rovnaké číslo projektu túto otázku nevyrieši.\n \n Posudzovala komisia peňažný nárok, ktorý sa má teraz predložiť rozhodcom? Pomôže porovnanie pôvodného návrhu, jeho zmien, odporúčania alebo návrhu komisie, odpovede objednávateľa a pripravovaného rozhodcovského návrhu. Také porovnanie je praktickou metódou určenia rozsahu sporu, nie novou zákonnou podmienkou prístupu k mediácii.\n \n"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSha256": "495caf8f6211fbba4879ddb9f77c8978647b54b6c317f1ec0bdf9e58729b8e34",
+      "afterSha256": "557db7e5290391e057982262d0578663bdbde12fdda2fcdd2178219bed5bce02",
+      "changes": [
+        {
+          "id": 916,
+          "old": "246 uplatňujúcich nárok",
+          "new": "246 osôb uplatňujúcich nárok",
+          "reason": "FAQ2의 인원 수 뒤 누락 명사 보완.",
+          "meaningPreservation": "246명 관련 부분의 파기환송이라는 결과 불변.",
+          "startBeforeEdit": 1425
+        },
+        {
+          "id": 916,
+          "old": "Formulácia označuje okruh súvisiacich nárokov, nie výlučne osoby, ktoré opravný prostriedok podali. ",
+          "new": "",
+          "reason": "독자용 글에 섞인 번역 검수 해설 제거.",
+          "meaningPreservation": "바로 앞 문장과 FAQ에서 stále týkajúce sa 262 osôb를 유지해 항소 제기 주체를 262명으로 한정하지 않음.",
+          "startBeforeEdit": 4267
+        },
+        {
+          "id": 916,
+          "old": "Druhý odsek upravuje výnimku: zneužitie právnej subjektivity musí viesť ku konkrétnemu dlhu spoločnosti, ktorý sa zjavne ťažko spláca, a okolnosti musia byť natoľko závažné, že je potrebná zodpovednosť akcionára za jeho splatenie.",
+          "new": "Výnimku upravuje druhý odsek. Zneužitie právnej subjektivity musí viesť ku konkrétnemu dlhu spoločnosti, ktorý je zjavne ťažké splatiť, a okolnosti musia byť natoľko závažné, že je potrebná zodpovednosť akcionára za jeho splatenie.",
+          "reason": "명확한 예외 도입과 누적 요건을 분리하고 수동적인 spláca를 자연스러운 splatiť로 수정.",
+          "meaningPreservation": "남용→특정채무·현저히변제곤란 AND 중대성·필요성 모두 유지.",
+          "startBeforeEdit": 4963
+        }
+      ],
+      "inverseExactInitial": true,
+      "diff": "--- initial/916-taiwan-parent-company-pollution-liability-us-investor.md\n+++ self-r1/916-taiwan-parent-company-pollution-liability-us-investor.md\n@@ -18,7 +18,7 @@\n   - q: \"Zodpovedá zahraničná materská spoločnosť za znečistenie len preto, že vlastní taiwanskú dcérsku spoločnosť?\"\n     a: \"Samotné vlastníctvo nebolo základom opisovaného rozhodnutia. Súd skúmal riadenie podniku, vedomosť o znečistení, neoznámenie alebo neriešenie problému a presuny majetku s cieľom uniknúť zodpovednosti. Rozhodujú konkrétne konanie a použiteľné právne pravidlá.\"\n   - q: \"Ukončil rozsudok najvyššieho súdu z roku 2018 všetky nároky z tejto továrne?\"\n-    a: \"Nie. Časti týkajúce sa 246 uplatňujúcich nárok súd zrušil a vrátil na ďalšie konanie. Opravné prostriedky týkajúce sa 262 osôb zamietol. Tento rozdiel neznamená zánik všetkých ich pôvodných nárokov ani ukončenie každého súvisiaceho konania.\"\n+    a: \"Nie. Časti týkajúce sa 246 osôb uplatňujúcich nárok súd zrušil a vrátil na ďalšie konanie. Opravné prostriedky týkajúce sa 262 osôb zamietol. Tento rozdiel neznamená zánik všetkých ich pôvodných nárokov ani ukončenie každého súvisiaceho konania.\"\n   - q: \"Aké podklady má zmysel uchovať po environmentálnej previerke pri akvizícii?\"\n     a: \"Správu a jej adresátov, doplňujúce otázky, rozhodnutia o expozícii pracovníkov a náprave, ako aj schválenia a finančné posúdenia neskorších presunov majetku. Pomáhajú rekonštruovať vedomosť a konanie. Samotná existencia priečinka nepreukazuje dodržanie povinností.\"\n ---\n@@ -41,13 +41,13 @@\n \n Najvyšší súd zrušil časti rozhodnutia týkajúce sa 246 osôb uplatňujúcich nárok a vrátil ich na ďalšie konanie. Išlo okrem iného o nedostatky pri posúdení ujmy, dôkazov a oprávnenia uplatniť nároky. Vrátenie neznamenalo, že všetky tieto osoby nemali nárok.\n \n-Opravné prostriedky týkajúce sa 262 osôb súd zamietol. Formulácia označuje okruh súvisiacich nárokov, nie výlučne osoby, ktoré opravný prostriedok podali. [Oficiálne zhrnutie](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) rozlišuje oba výsledky; nemožno z neho vyvodiť, že všetky pôvodné nároky 262 osôb boli neúspešné alebo že skončil celý širší spor.\n+Opravné prostriedky týkajúce sa 262 osôb súd zamietol. [Oficiálne zhrnutie](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) rozlišuje oba výsledky; nemožno z neho vyvodiť, že všetky pôvodné nároky 262 osôb boli neúspešné alebo že skončil celý širší spor.\n \n Pri hodnotení starších záväzkov preto nestačí dátum jedného rozsudku. Transakčný tím potrebuje identifikovať konkrétne konania, ich predmet a aktuálny stav. Rozdiel medzi vrátenou časťou a právoplatne vyriešenou otázkou môže ovplyvniť hodnotenie rizika.\n \n ## Súčasný článok 154 má kumulatívne podmienky\n \n-[Taiwanský zákon o spoločnostiach v článku 154](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154) zásadne obmedzuje zodpovednosť akcionára na splatenie akcií. Druhý odsek upravuje výnimku: zneužitie právnej subjektivity musí viesť ku konkrétnemu dlhu spoločnosti, ktorý sa zjavne ťažko spláca, a okolnosti musia byť natoľko závažné, že je potrebná zodpovednosť akcionára za jeho splatenie.\n+[Taiwanský zákon o spoločnostiach v článku 154](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154) zásadne obmedzuje zodpovednosť akcionára na splatenie akcií. Výnimku upravuje druhý odsek. Zneužitie právnej subjektivity musí viesť ku konkrétnemu dlhu spoločnosti, ktorý je zjavne ťažké splatiť, a okolnosti musia byť natoľko závažné, že je potrebná zodpovednosť akcionára za jeho splatenie.\n \n Podmienky sa uplatňujú spoločne. Akcionárske postavenie, neuhradený dlh ani nález znečistenia osamote nenahrádzajú celý zákonný test. Súčasné znenie článku zároveň nemožno vydávať za jediný historický dôvod rozhodnutia z roku 2018, ktoré skúmalo konkrétne správanie ovládajúcich spoločností.\n \n"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSha256": "ddbbc40f36421c9f07b1d3d90c4304f4b59d28156429332980d60857457209d2",
+      "afterSha256": "ddbbc40f36421c9f07b1d3d90c4304f4b59d28156429332980d60857457209d2",
+      "changes": [],
+      "inverseExactInitial": true,
+      "diff": ""
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSha256": "30bb9e640d5ce6586cba4e177185d8adc98f50761470188db6afeb17d6aa0ed5",
+      "afterSha256": "7a9bda014da027ab57152f645835f429ce5802446c9badea6231d1beb8bf8569",
+      "changes": [
+        {
+          "id": 919,
+          "old": "Vedúci nadriadeného orgánu verejne oznámil uloženie dvoch závažných disciplinárnych záznamov ešte pred prerokovaním veci hodnotiacou komisiou. Nadriadený orgán následne rokoval skôr než organizačná zložka, v ktorej zamestnanec pôsobil. Súd skúmal, či za takých okolností zostala komisii reálna možnosť hodnotiť dôkazy a dospieť k vlastnému záveru.",
+          "new": "Vedúci nadriadeného orgánu verejne oznámil uloženie dvoch závažných disciplinárnych záznamov ešte pred prerokovaním veci hodnotiacou komisiou a nadriadený orgán potom rokoval skôr než organizačná zložka, v ktorej zamestnanec pôsobil. Súd skúmal priestor na samostatné rozhodnutie komisie.",
+          "reason": "같은 중간 길이 세 문장 대신 연결된 두 시간순서를 함께 설명하고 심사쟁점을 짧게 명시.",
+          "meaningPreservation": "공개발표→위원회보다 먼저/상급→소속기관보다 먼저, 위원회의 실질적 독립심사라는 두 하자와 쟁점 보존.",
+          "startBeforeEdit": 2790
+        },
+        {
+          "id": 919,
+          "old": "Príslušná komisia zamestnanca riadne nepredvolala, aby sa mohol vyjadriť a obhajovať. V podklade pre postih si zároveň odporovali zistenia o preukázaní šikany a odporúčanie disciplinárneho opatrenia.",
+          "new": "Príslušná komisia zamestnanca riadne nepredvolala, aby sa mohol vyjadriť a obhajovať, a v podklade pre postih si zároveň odporovali zistenia o preukázaní šikany a odporúčanie disciplinárneho opatrenia.",
+          "reason": "짧은 소주제 문장 다음에 두 구체 하자를 한 설명으로 연결.",
+          "meaningPreservation": "출석·진술·변호 기회 미부여와 보고서 모순 모두 보존.",
+          "startBeforeEdit": 3354
+        },
+        {
+          "id": 919,
+          "old": "podľa súdu nevyliečilo chýbajúcu možnosť",
+          "new": "podľa súdu nenapravilo chýbajúcu možnosť",
+          "reason": "절차하자를 질병처럼 표현한 직역 nevyliečilo 수정.",
+          "meaningPreservation": "후속 재심 단계 진술로 원 처분 이전 기회 미부여가 치유되지 않았다는 의미 동일.",
+          "startBeforeEdit": 3670
+        },
+        {
+          "id": 919,
+          "old": "[Článok 22-2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2) vyžaduje objektívne, nestranné a spravodlivé vyšetrovanie aj koordináciu riešenia.",
+          "new": "Vyšetrovanie aj prípadná koordinácia riešenia musia podľa [článku 22-2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2) prebiehať objektívne, nestranne a spravodlivo.",
+          "reason": "의무 대상이 조사와 조율을 무조건 모두 실시하는 것으로 읽힐 여지를 줄임.",
+          "meaningPreservation": "객관·공정·정의의 기준은 양 절차에 적용하되 조율은 prípadná, 뒤 단락에서 신고자 의사에 따른 may/실패시 조사계속 must 보존.",
+          "startBeforeEdit": 4337
+        },
+        {
+          "id": 919,
+          "old": " Povinnosť prijať opatrenia sa nemení na záruku, že sa už nikdy nič nezopakuje.",
+          "new": "",
+          "reason": "본문이 이미 조치 의무라고 정확히 설명한 뒤의 가상 반박 제거.",
+          "meaningPreservation": "must prijať opatrenia를 그대로 유지해 결과보장으로 격상하지 않음; 조사와 필요에 따른 지원·보호 의무도 불변.",
+          "startBeforeEdit": 5005
+        },
+        {
+          "id": 919,
+          "old": "V správe pomáha oddeliť tvrdenie, podporný dôkaz a záver, že sa udalosť preukázala. Ak si rozhovory odporujú, má zmysel vysvetliť, prečo dostal určitý podklad väčšiu váhu. Aj nepriaznivý či chýbajúci dôkaz patrí do tejto úvahy; samotný počet priložených záznamov rozpory nevyrieši.",
+          "new": "Ak si rozhovory odporujú, správa môže pri každom tvrdení spojiť dôkaz so záverom a vysvetliť, prečo dostal určitý podklad väčšiu váhu. Aj nepriaznivý či chýbajúci dôkaz patrí do tejto úvahy. Počet príloh rozpor nevyrieši.",
+          "reason": "13/13/15단어 연속 설명을 증거의 상충 조건과 판단 과정 중심으로 다시 씀.",
+          "meaningPreservation": "실무적 may 조언, 주장·증거·판단의 연결, 반대/누락증거와 분량만으로 모순 해소 불가 보존.",
+          "startBeforeEdit": 5573
+        }
+      ],
+      "inverseExactInitial": true,
+      "diff": "--- initial/919-taiwan-workplace-bullying-investigation-hearing-judgment.md\n+++ self-r1/919-taiwan-workplace-bullying-investigation-hearing-judgment.md\n@@ -29,21 +29,21 @@\n \n ## Poradie krokov obmedzilo priestor na rozhodovanie\n \n-Vedúci nadriadeného orgánu verejne oznámil uloženie dvoch závažných disciplinárnych záznamov ešte pred prerokovaním veci hodnotiacou komisiou. Nadriadený orgán následne rokoval skôr než organizačná zložka, v ktorej zamestnanec pôsobil. Súd skúmal, či za takých okolností zostala komisii reálna možnosť hodnotiť dôkazy a dospieť k vlastnému záveru.\n+Vedúci nadriadeného orgánu verejne oznámil uloženie dvoch závažných disciplinárnych záznamov ešte pred prerokovaním veci hodnotiacou komisiou a nadriadený orgán potom rokoval skôr než organizačná zložka, v ktorej zamestnanec pôsobil. Súd skúmal priestor na samostatné rozhodnutie komisie.\n \n Samotné uskutočnenie zasadnutia preto nestačilo. Zápisnica mohla potvrdiť stretnutie, no procesný problém spočíval v tom, či jeho výsledok vôbec mohol ovplyvniť už oznámený postih. Časová postupnosť bola súčasťou súdnej kontroly.\n \n-Ďalšie chyby sa týkali vypočutia a správy. Príslušná komisia zamestnanca riadne nepredvolala, aby sa mohol vyjadriť a obhajovať. V podklade pre postih si zároveň odporovali zistenia o preukázaní šikany a odporúčanie disciplinárneho opatrenia.\n+Ďalšie chyby sa týkali vypočutia a správy. Príslušná komisia zamestnanca riadne nepredvolala, aby sa mohol vyjadriť a obhajovať, a v podklade pre postih si zároveň odporovali zistenia o preukázaní šikany a odporúčanie disciplinárneho opatrenia.\n \n-[Neskoršie vyjadrenie pri preskúmavaní rozhodnutia](https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html) podľa súdu nevyliečilo chýbajúcu možnosť vyjadriť sa pred pôvodným postihom. Zrušenie sa teda opieralo o postup aj hodnotenie podkladov. Súd tým nevyhlásil všetky tvrdenia o šikane za nepravdivé.\n+[Neskoršie vyjadrenie pri preskúmavaní rozhodnutia](https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html) podľa súdu nenapravilo chýbajúcu možnosť vyjadriť sa pred pôvodným postihom. Zrušenie sa teda opieralo o postup aj hodnotenie podkladov. Súd tým nevyhlásil všetky tvrdenia o šikane za nepravdivé.\n \n ## Súkromné pracovisko má od júla vlastnú úpravu\n \n Prípad sa týkal verejnej služby a udalostí pred novými pravidlami. Pre súkromných zamestnávateľov sú relevantné zmeny taiwanského zákona o bezpečnosti a ochrane zdravia pri práci účinné od 1. júla 2026. Dátum a novú úpravu zachytávajú [história zákona](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001) a [vysvetlenie úradu bezpečnosti práce](https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt).\n \n-[Článok 22-2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2) vyžaduje objektívne, nestranné a spravodlivé vyšetrovanie aj koordináciu riešenia. Počas vyšetrovania majú strany dostať dostatočnú možnosť vyjadriť sa a obhajovať; treba dodržať aj pravidlá vylúčenia pri konflikte záujmov. Vopred verejne vyslovený záver o porušení pravidiel môže splnenie týchto požiadaviek sťažiť.\n+Vyšetrovanie aj prípadná koordinácia riešenia musia podľa [článku 22-2](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2) prebiehať objektívne, nestranne a spravodlivo. Počas vyšetrovania majú strany dostať dostatočnú možnosť vyjadriť sa a obhajovať; treba dodržať aj pravidlá vylúčenia pri konflikte záujmov. Vopred verejne vyslovený záver o porušení pravidiel môže splnenie týchto požiadaviek sťažiť.\n \n-Ochrana nemusí čakať na konečný záver. Ak sa zamestnávateľ o šikane dozvie zo sťažnosti dotknutého pracovníka, musí prijať opatrenia proti jej opakovaniu, poskytnúť poradenstvo, pomoc a ochranu podľa potrieb a okolností a viesť vyšetrovanie. Povinnosť prijať opatrenia sa nemení na záruku, že sa už nikdy nič nezopakuje.\n+Ochrana nemusí čakať na konečný záver. Ak sa zamestnávateľ o šikane dozvie zo sťažnosti dotknutého pracovníka, musí prijať opatrenia proti jej opakovaniu, poskytnúť poradenstvo, pomoc a ochranu podľa potrieb a okolností a viesť vyšetrovanie.\n \n Na želanie sťažovateľa môže zamestnávateľ pristúpiť ku koordinácii riešenia so zúčastnenými stranami. Ak sa dohoda nedosiahne, musí vo vyšetrovaní pokračovať. Dobrovoľná možnosť koordinácie tak neodstraňuje povinnosť zistiť skutkový stav.\n \n@@ -51,7 +51,7 @@\n \n Dostala osoba konkrétnu možnosť odpovedať na vytýkané konanie? Všeobecná výzva opísať štýl vedenia môže poskytnúť iný priestor na obhajobu než oznámenie sporných skutkov, časov a otázok. Pri porovnaní výzvy a záznamu rozhovoru sa dá zistiť, na čo mala osoba skutočne reagovať.\n \n-V správe pomáha oddeliť tvrdenie, podporný dôkaz a záver, že sa udalosť preukázala. Ak si rozhovory odporujú, má zmysel vysvetliť, prečo dostal určitý podklad väčšiu váhu. Aj nepriaznivý či chýbajúci dôkaz patrí do tejto úvahy; samotný počet priložených záznamov rozpory nevyrieši.\n+Ak si rozhovory odporujú, správa môže pri každom tvrdení spojiť dôkaz so záverom a vysvetliť, prečo dostal určitý podklad väčšiu váhu. Aj nepriaznivý či chýbajúci dôkaz patrí do tejto úvahy. Počet príloh rozpor nevyrieši.\n \n Ide o praktický spôsob kontroly dokumentácie, nie o novú zákonom určenú šablónu správy. Rozsudok o štátnom zamestnancovi takisto sám nerozhoduje o platnosti disciplinárneho opatrenia súkromnej firmy. Jej postavenie, rozhodnutie a použiteľné pracovné pravidlá treba posúdiť osobitne.\n \n"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSha256": "fc0e5af503c6a8205a3b9bd62b257dccefd10de1f732fd5c7c04a1186f89089e",
+      "afterSha256": "3670617bbbc732d371d73f15b533f5cc2ad2ce5cc21e056aa87f9248e85bea8d",
+      "changes": [
+        {
+          "id": 920,
+          "old": "Predmetom tohto opisu nie je rozhodnutie o právnom vlastníctve merača. ",
+          "new": "",
+          "reason": "미터의 이용 관계를 이미 정확히 쓴 뒤 붙은 집필 범위 안내 제거.",
+          "meaningPreservation": "meraču používanému obyvateľom를 유지하므로 소유권 판결로 바뀌지 않음.",
+          "startBeforeEdit": 3250
+        },
+        {
+          "id": 920,
+          "old": "Výbor zaslal formálne oznámenie a pokúsil sa vec koordinovať.",
+          "new": "Výbor zaslal formálne oznámenie a pokúsil sa s obyvateľom dosiahnuť dohodu.",
+          "reason": "조율의 직역을 실제 당사자와 시도한 행위로 명료화.",
+          "meaningPreservation": "조율 시도 뒤 계속된 불이행에 대해 법원 구제를 청구할 수 있다는 다음 조건문 보존.",
+          "startBeforeEdit": 4219
+        }
+      ],
+      "inverseExactInitial": true,
+      "diff": "--- initial/920-taiwan-apartment-ev-charger-common-area-judgment.md\n+++ self-r1/920-taiwan-apartment-ev-charger-common-area-judgment.md\n@@ -31,7 +31,7 @@\n \n Medzi nespornými zisteniami bol box za miestom v suteréne, rúry prichytené k závesným prvkom v strope a nový istič v elektrickej skrini. Súd posúdil stenu, strop aj skriňu ako spoločné časti alebo spoločné zariadenia. Tvrdenie, že vedenie zostalo len v priestore osobitného užívania, sa s týmito zisteniami nezhodovalo.\n \n-Pripojenie k meraču používanému konkrétnym obyvateľom nevysvetľuje oprávnenie viesť káble po spoločnej stene. Predmetom tohto opisu nie je rozhodnutie o právnom vlastníctve merača. Pre súd bolo podstatné, do ktorých častí domu montáž zasiahla a aký súhlas vyžadovala.\n+Pripojenie k meraču používanému konkrétnym obyvateľom nevysvetľuje oprávnenie viesť káble po spoločnej stene. Pre súd bolo podstatné, do ktorých častí domu montáž zasiahla a aký súhlas vyžadovala.\n \n ## Zákon a pravidlá domu určovali rozdielne požiadavky\n \n@@ -39,7 +39,7 @@\n \n Ich článok 15 vyžadoval pred doplnením elektrických vedení a potrubí súhlas správneho výboru a bezpečnostnú kontrolu energetickej spoločnosti. Obe požiadavky mali byť splnené. Výbor sa tým nestal univerzálnou náhradou zhromaždenia vlastníkov pri všetkých prácach podľa zákona.\n \n-Porušenie článku 11 a pravidiel domu súd spojil s povinnosťou dodržiavať ostatné predpisy a pravidlá podľa [článku 6 ods. 1 bodu 5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6). Výbor zaslal formálne oznámenie a pokúsil sa vec koordinovať. Keď obyvateľ povinnosť naďalej nesplnil, výbor mohol žiadať súdnu ochranu podľa tretieho odseku toho istého článku.\n+Porušenie článku 11 a pravidiel domu súd spojil s povinnosťou dodržiavať ostatné predpisy a pravidlá podľa [článku 6 ods. 1 bodu 5](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6). Výbor zaslal formálne oznámenie a pokúsil sa s obyvateľom dosiahnuť dohodu. Keď obyvateľ povinnosť naďalej nesplnil, výbor mohol žiadať súdnu ochranu podľa tretieho odseku toho istého článku.\n \n Ustanovenie článku 6 ods. 1 bodu 4 upravuje aj vedenia a nevyhnutné použitie spoločných častí. Súd však túto inštaláciu pod dané ustanovenie nezaradil. [Piaty a šiesty bod odôvodnenia](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1) vychádzajú z konkrétnej trasy a pravidiel domu, nie zo všeobecného tvrdenia, že každá nabíjačka všade potrebuje totožný postup hlasovania.\n \n"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sk/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSha256": "6f389aecfd0759794acadd572668e78ef6c20c42111cd002d589edbbebbb178f",
+      "afterSha256": "3b1966ebdb663611cc327f14e5194109afb5e77ab543078cc582365cfc339775",
+      "changes": [
+        {
+          "id": 921,
+          "old": "Nešlo o vyhlásenie, že už boli spotrebované všetky zostávajúce mince. Rozdiel spočíval v ich povahe. ",
+          "new": "",
+          "reason": "앞의 명확한 기능 설명 뒤 불필요한 가상 반박·추상적 단문 삭제.",
+          "meaningPreservation": "첫 문단/소제목 아래/FAQ가 모두 남은 금화의 칩 기능을 설명, 전량 소진으로 서술하지 않음.",
+          "startBeforeEdit": 3175
+        },
+        {
+          "id": 921,
+          "old": "Bod 4 upravuje odlišnú možnosť: do siedmich dní od začiatku hry možno písomne odstúpiť od zmluvy bez uvedenia dôvodu a bez poplatku a žiadať vrátenie nevyužitých zakúpených bodov.",
+          "new": "Do siedmich dní od začiatku hry možno podľa bodu 4 písomne odstúpiť od zmluvy bez uvedenia dôvodu a bez poplatku a žiadať vrátenie nevyužitých zakúpených bodov.",
+          "reason": "Bod 세 문단 반복을 실제 기산 조건으로 전환.",
+          "meaningPreservation": "제4점 서면/개시7일/무이유·무수수료/미사용구매포인트 반환 모두 보존.",
+          "startBeforeEdit": 4892
+        }
+      ],
+      "inverseExactInitial": true,
+      "diff": "--- initial/921-taiwan-online-game-coins-refund-judgment.md\n+++ self-r1/921-taiwan-online-game-coins-refund-judgment.md\n@@ -31,7 +31,7 @@\n \n Podľa zmluvy si hráč najprv kúpil body a potom ich mohol použiť na herné služby alebo predmety. Zostávajúce mince slúžili pri samotnej hre ako žetóny. Súd ich podľa funkcie a zmluvnej klauzuly nepovažoval za nevyužité zakúpené body ani za herné poplatky prijaté prevádzkovateľom, ktoré by mal vrátiť.\n \n-Nešlo o vyhlásenie, že už boli spotrebované všetky zostávajúce mince. Rozdiel spočíval v ich povahe. Súd takisto spojil možnosť meniť tieto herné žetóny späť na hotovosť s rizikom zavedenia hazardného prvku do danej hry; nešlo o všeobecný zákaz refundácie všetkých virtuálnych hodnôt.\n+Súd takisto spojil možnosť meniť tieto herné žetóny späť na hotovosť s rizikom zavedenia hazardného prvku do danej hry; nešlo o všeobecný zákaz refundácie všetkých virtuálnych hodnôt.\n \n [Ôsma časť odôvodnenia](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), na tlačených stranách 148–152, rozoberá aj ukončenie zmluvy. Hráč sám prejavil vôľu skončiť zmluvný vzťah, takže súd mohol vychádzať z jeho ukončenia a posúdiť predmet požadovanej refundácie. Tým neschválil všetky skoršie dôvody, pre ktoré prevádzkovateľ účet zablokoval alebo zmluvu ukončoval.\n \n@@ -45,7 +45,7 @@\n \n Ako sa vypočíta vracaná suma? Hráč môže požiadať o rozpis nevyužitej hodnoty, odpočítaných nákladov a spôsobu výpočtu a porovnať ho so zmluvou. Pevné percento nastavené v systéme samo nepreukazuje, že každý taký odpočet je odôvodnený.\n \n-Bod 4 upravuje odlišnú možnosť: do siedmich dní od začiatku hry možno písomne odstúpiť od zmluvy bez uvedenia dôvodu a bez poplatku a žiadať vrátenie nevyužitých zakúpených bodov. Začiatkom lehoty je začiatok hry. Uplynutie siedmich dní neodstraňuje samostatnú možnosť oznámiť ukončenie podľa bodu 18 a riešiť zostávajúce nevyužité plnenia.\n+Do siedmich dní od začiatku hry možno podľa bodu 4 písomne odstúpiť od zmluvy bez uvedenia dôvodu a bez poplatku a žiadať vrátenie nevyužitých zakúpených bodov. Začiatkom lehoty je začiatok hry. Uplynutie siedmich dní neodstraňuje samostatnú možnosť oznámiť ukončenie podľa bodu 18 a riešiť zostávajúce nevyužité plnenia.\n \n ## História účtu dopĺňa poslednú snímku obrazovky\n \n"
+    }
+  ]
+}

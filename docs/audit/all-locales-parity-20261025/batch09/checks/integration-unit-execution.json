@@ -1,0 +1,170 @@
+{
+  "startedAt": "2026-10-26T11:33:34.276339+00:00",
+  "cwd": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "command": [
+    "/Users/son7/.nvm/versions/node/v24.14.1/bin/npm",
+    "run",
+    "test:unit",
+    "--",
+    "src/app/[locale]/columns/__tests__/market-boards-20261024.test.tsx",
+    "src/app/__tests__/sitemap-static-lastmod.test.ts",
+    "src/app/__tests__/sitemap.test.ts",
+    "src/components/__tests__/ColumnsGrid-topics.test.tsx",
+    "src/components/__tests__/home-latest-columns.test.tsx",
+    "src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx",
+    "src/lib/__tests__/column-category-parity.test.ts",
+    "src/lib/__tests__/column-image-caption-label.test.ts",
+    "src/lib/__tests__/column-language-links.test.tsx",
+    "src/lib/__tests__/column-no-public-authors.test.tsx",
+    "src/lib/__tests__/column-summary-frontmatter.test.ts",
+    "src/lib/__tests__/column-topics.test.ts",
+    "src/lib/__tests__/columns-en-content.test.ts",
+    "src/lib/__tests__/columns-ja-content.test.ts",
+    "src/lib/__tests__/columns-new-four-locales.test.ts",
+    "src/lib/__tests__/columns-publication-date.test.ts",
+    "src/lib/__tests__/columns-zh-content.test.ts",
+    "src/lib/__tests__/divorce-columns-20260927.test.ts",
+    "src/lib/__tests__/domestic-zh-columns-20261001.test.ts",
+    "src/lib/__tests__/expertise-columns-20260930.test.ts",
+    "src/lib/__tests__/family-columns-20260927.test.ts",
+    "src/lib/__tests__/market-board-columns-20261024.test.ts",
+    "src/lib/__tests__/native-locale-columns-20260929.test.ts",
+    "src/lib/__tests__/no-ai-labels-20261024.test.ts",
+    "src/lib/builder/__tests__/columns-backend.test.ts",
+    "src/lib/builder/__tests__/columns-blob-audience-backfill.test.ts",
+    "src/lib/builder/canvas/__tests__/home-insights-publication-order.test.ts",
+    "src/lib/__tests__/case-translations-20261026.test.ts",
+    "--maxWorkers=1",
+    "--testTimeout=30000"
+  ],
+  "inputs": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/columns/__tests__/market-boards-20261024.test.tsx",
+      "sha256": "b174a2bd9c9e9518bc29ad73f5367ca0b8e3546ed647764d8dbb644763e836cb"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/__tests__/sitemap-static-lastmod.test.ts",
+      "sha256": "4c87963564e5b47d1a4f4e2df0243949db495ba2ca3e08e0d63a784baf54886b"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/__tests__/sitemap.test.ts",
+      "sha256": "6c66f88f06489dae0bcef03fdaa2ad980c284aa981df01c99facb6aa877c835e"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/__tests__/ColumnsGrid-topics.test.tsx",
+      "sha256": "7552acdec30bc95ee16a8943c45aebafafd3e2672fdda61936ddc6aa281ecc71"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/__tests__/home-latest-columns.test.tsx",
+      "sha256": "b38967765266ab7b28fee8964e36390dac76ff34355f3f6291c3e05ce7c53824"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/column-audience-and-ai-author-20260929.test.tsx",
+      "sha256": "e8ebedac4d0ea89de817ec81ebd9559c6c860cfda46179ec4108136b3338ffc1"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/column-category-parity.test.ts",
+      "sha256": "b7b5eca69231c53ffab9b59e38cc31844e3dceb0d09c5c08c21ee23e56b1ef92"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/column-image-caption-label.test.ts",
+      "sha256": "48165cd398acd9bdbbdeea5262d304a334e774a6462e46ef979482d19beb92a5"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/column-language-links.test.tsx",
+      "sha256": "b731027d3d2e55e387e78905dfdace77a146d409aa691f410fa7fff75d635387"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/column-no-public-authors.test.tsx",
+      "sha256": "84675174fd0c01bd4761d1581bb481cddb5590feed629650a0f7ee9f13de6556"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/column-summary-frontmatter.test.ts",
+      "sha256": "162e3198553d1050414baa6c8b766509f82e26240b7e5fd03de313476f90cd01"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/column-topics.test.ts",
+      "sha256": "1f38f7fad08f0d4bbabc4ec3dd9cabf4deca27fe3bbda31660f427227db81ecc"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/columns-en-content.test.ts",
+      "sha256": "0dd61bd8ff3891ba2b9bcb16c1a001d1526dd421e0e4c6c875f69d92effab14b"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/columns-ja-content.test.ts",
+      "sha256": "ace0f4d69c73aed7acdecd067f0dcd1e8c33f9d48b9e72149205ea15885e5f5a"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/columns-new-four-locales.test.ts",
+      "sha256": "779d81d0cf525bec495778209fdbc1855b8a4329357694925dfd3d5fef7137ac"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/columns-publication-date.test.ts",
+      "sha256": "51229258aca99739c2ef05a32365785559ac729a4e48fc19ece1f4fd86d7dd26"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/columns-zh-content.test.ts",
+      "sha256": "5af9c30b446a5cedad9259d42164caebff963e2036831f3cf971cafb3e75a1a0"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/divorce-columns-20260927.test.ts",
+      "sha256": "338b07045bd25c805b3595f331b96f54c11c9f4b2d255863b3bc11c599089764"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/domestic-zh-columns-20261001.test.ts",
+      "sha256": "9b160cf79427ddf4d1d118cae30824d830817f56d92b86bb6508de495ab49d0c"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/expertise-columns-20260930.test.ts",
+      "sha256": "d1a69983c53c40d62c6787d3874f65c32b7dc3497664c7c93a7cd0bfeccbc017"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/family-columns-20260927.test.ts",
+      "sha256": "6884353b9d19dc9d91cf9b8c015b71c5ce05c2aa7ebcbbbeaa3c3613fb9e7d78"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/market-board-columns-20261024.test.ts",
+      "sha256": "267dbae05293f2c802446a689b459ca74b35a542eac5b5e31ef815f24122ed07"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/native-locale-columns-20260929.test.ts",
+      "sha256": "8ebf0cacea282800888d5f990be108e754d0536c73b8e831932e5e2367768f9e"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/no-ai-labels-20261024.test.ts",
+      "sha256": "fe5050404b4fa5e47106ce640b06c5431d75750817c88c797606ba52d9e881a3"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/builder/__tests__/columns-backend.test.ts",
+      "sha256": "a029049e1c9e2173ed4909cbc0047eb68efa008b2f38c4735cb0937b36babcb5"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/builder/__tests__/columns-blob-audience-backfill.test.ts",
+      "sha256": "bebf35f7bd5c5cc9118397ac4117d435a7c182bdff8e077c568562e5c3750954"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/builder/canvas/__tests__/home-insights-publication-order.test.ts",
+      "sha256": "e4f3b8d254da73b35d16e99c3478423530ef2671d5fabfdb1d4eb18abd8cfad1"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/case-translations-20261026.test.ts",
+      "sha256": "bd848cb02c380315b91dadf7f4f8820ef1af2a98effc0ebece653dca832d237c"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/__tests__/native-locale-columns.ts",
+      "sha256": "e84f46bd5635fa599a443d27c696f3686704e1a4e38ca3dd2be26bb8e6e477f2"
+    }
+  ],
+  "endedAt": "2026-10-26T11:36:20.944693+00:00",
+  "elapsedSeconds": 166.658,
+  "exitCode": 1,
+  "stdout": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/integration-unit.stdout",
+    "sha256": "6e56c7d7a2b7b4378320a683ec2ed04aaeac39a5229793ecaed195bacdfdb0ce"
+  },
+  "stderr": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/checks/integration-unit.stderr",
+    "sha256": "ce5785f3292f4a97e74d270be4c02ad1c4c118cbf29cd53d54ed68227ae2bcec"
+  },
+  "inputsUnchanged": true
+}

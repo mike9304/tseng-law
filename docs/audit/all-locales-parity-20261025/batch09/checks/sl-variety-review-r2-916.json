@@ -1,0 +1,385 @@
+{
+  "at": "2026-10-26T18:25:12.500665+09:00",
+  "id": "916",
+  "path": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+  "sha256": "a6589e8395d4f32408c1c194a26f54a9b87f5aaa944db14e6a1f7f1d64858957",
+  "command": [
+    "/Users/son7/.pyenv/versions/3.12.0/bin/python3",
+    "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+    "check",
+    "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "--lang",
+    "sl"
+  ],
+  "exit_code": 0,
+  "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch09/src/content/columns-sl/916-taiwan-parent-company-pollution-liability-us-investor.md [sl] sentences=43 mean=14.6 cv=0.47 short=0.163 run3=0.024 opener_rep=0.0 cite_end=0.0 cite_para=0.067 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+  "stderr": "",
+  "metrics": {
+    "lang": "sl",
+    "sentences": 43,
+    "paras": 15,
+    "heads": 4,
+    "list_items": 0,
+    "mean_len": 14.6,
+    "len_cv": 0.47,
+    "short_share": 0.163,
+    "long_share": 0.023,
+    "para_cv": 0.229,
+    "even_run3": 0.024,
+    "top_end": "tovarni",
+    "top_end_share": 0.047,
+    "ja_desu": 0,
+    "ja_da": 0,
+    "top_opener": "kdo",
+    "top_opener_n": 1,
+    "opener_rep": 0.0,
+    "consec_same_start": 0,
+    "cite_para_share": 0.067,
+    "cite_end_share": 0.0,
+    "contrast": 0,
+    "caveat": 0,
+    "questions": 2,
+    "num_per100": 1.91,
+    "hypo_open": false,
+    "q_open": true,
+    "formula_close": false,
+    "first": "Kdo je lahko ukrepal po ugotovitvah onesnaženja v tovarni?",
+    "last": "Veljavni predpis in uradne naložbene informacije so bili preverjeni 26. oktobra 2026. Opis sodbe temelji na uradnem poja",
+    "length_unit": "orthographic_words",
+    "short_threshold": 8,
+    "long_threshold": 32,
+    "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+  },
+  "paragraphs": [
+    {
+      "paragraph": 1,
+      "text": "Kdo je lahko ukrepal po ugotovitvah onesnaženja v tovarni? Poročilo, naročeno pred prevzemom podjetja, lahko pozneje pokaže, kdo je vedel za nevarnost v tovarni. V [uradnem pojasnilu tajvanskega vrhovnega sodišča o zadevi 107年度台上字第267號](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) so okoljske ugotovitve povezane z dejanskim nadzorom družb in njihovimi poznejšimi odločitvami. Iz tajvanske družbe je bilo preneseno tudi premoženje.",
+      "sentences": [
+        {
+          "index": 1,
+          "text": "Kdo je lahko ukrepal po ugotovitvah onesnaženja v tovarni?",
+          "length": 9
+        },
+        {
+          "index": 2,
+          "text": "Poročilo, naročeno pred prevzemom podjetja, lahko pozneje pokaže, kdo je vedel za nevarnost v tovarni.",
+          "length": 15
+        },
+        {
+          "index": 3,
+          "text": "V uradnem pojasnilu tajvanskega vrhovnega sodišča o zadevi 107年度台上字第267號 so okoljske ugotovitve povezane z dejanskim nadzorom družb in njihovimi poznejšimi odločitvami.",
+          "length": 21
+        },
+        {
+          "index": 4,
+          "text": "Iz tajvanske družbe je bilo preneseno tudi premoženje.",
+          "length": 8
+        }
+      ]
+    },
+    {
+      "paragraph": 2,
+      "text": "Sodba z dne 16. avgusta 2018 je obravnavala izpostavljenost delavcev kemikalijam v tovarni elektronike in odgovornost obvladujočih družb. Podlaga ni bila zgolj tuja udeležba v kapitalu. Sodišče je presojalo, kaj so družbe vedele in kako so uporabile svoj vpliv.",
+      "sentences": [
+        {
+          "index": 5,
+          "text": "Sodba z dne 16. avgusta 2018 je obravnavala izpostavljenost delavcev kemikalijam v tovarni elektronike in odgovornost obvladujočih družb.",
+          "length": 18
+        },
+        {
+          "index": 6,
+          "text": "Podlaga ni bila zgolj tuja udeležba v kapitalu.",
+          "length": 8
+        },
+        {
+          "index": 7,
+          "text": "Sodišče je presojalo, kaj so družbe vedele in kako so uporabile svoj vpliv.",
+          "length": 13
+        }
+      ]
+    },
+    {
+      "paragraph": 3,
+      "text": "Okoljske preiskave pred prevzemi so razkrile onesnaženje, s katerim so bile obvladujoče družbe seznanjene. Delavci niso bili obveščeni. Manjkali so tudi ustrezni sanacijski ukrepi, pri presoji pa so bili pomembni zmanjšanje kapitala in nakazila v tujino, namenjena umiku premoženja pred obveznostmi zaradi onesnaženja.",
+      "sentences": [
+        {
+          "index": 8,
+          "text": "Okoljske preiskave pred prevzemi so razkrile onesnaženje, s katerim so bile obvladujoče družbe seznanjene.",
+          "length": 14
+        },
+        {
+          "index": 9,
+          "text": "Delavci niso bili obveščeni.",
+          "length": 4
+        },
+        {
+          "index": 10,
+          "text": "Manjkali so tudi ustrezni sanacijski ukrepi, pri presoji pa so bili pomembni zmanjšanje kapitala in nakazila v tujino, namenjena umiku premoženja pred obveznostmi zaradi onesnaženja.",
+          "length": 25
+        }
+      ]
+    },
+    {
+      "paragraph": 4,
+      "text": "Sodišče je potrdilo razloge za spregled ločene pravne osebnosti družb v obravnavanem položaju. Lastniška povezava tega ne pojasni v celoti. Dokazi o nadzoru so dobili pomen skupaj z vednostjo, opustitvami in premiki sredstev.",
+      "sentences": [
+        {
+          "index": 11,
+          "text": "Sodišče je potrdilo razloge za spregled ločene pravne osebnosti družb v obravnavanem položaju.",
+          "length": 13
+        },
+        {
+          "index": 12,
+          "text": "Lastniška povezava tega ne pojasni v celoti.",
+          "length": 7
+        },
+        {
+          "index": 13,
+          "text": "Dokazi o nadzoru so dobili pomen skupaj z vednostjo, opustitvami in premiki sredstev.",
+          "length": 13
+        }
+      ]
+    },
+    {
+      "paragraph": 5,
+      "text": "Seznam prejemnikov pokaže, komu je bilo poročilo poslano, zapisniki in navodila pa lahko pojasnijo pristojnost za odziv. Odobritve poznejših prenosov nato povežejo ta odziv z denarjem in premoženjem.",
+      "sentences": [
+        {
+          "index": 14,
+          "text": "Seznam prejemnikov pokaže, komu je bilo poročilo poslano, zapisniki in navodila pa lahko pojasnijo pristojnost za odziv.",
+          "length": 17
+        },
+        {
+          "index": 15,
+          "text": "Odobritve poznejših prenosov nato povežejo ta odziv z denarjem in premoženjem.",
+          "length": 11
+        }
+      ]
+    },
+    {
+      "paragraph": 6,
+      "text": "Pri skrbnem pregledu je mogoče slediti tudi neodgovorjenim vprašanjem: kdo je preverjal tveganja za zaposlene, katere dodatne preiskave so bile naročene in kaj se je zgodilo z njihovimi ugotovitvami. Povzetek za zaključek prevzema naj ne zabriše prvotnih tehničnih ugotovitev. Te je treba brati skupaj z odločitvami, ki so jim sledile.",
+      "sentences": [
+        {
+          "index": 16,
+          "text": "Pri skrbnem pregledu je mogoče slediti tudi neodgovorjenim vprašanjem: kdo je preverjal tveganja za zaposlene, katere dodatne preiskave so bile naročene in kaj se je zgodilo z njihovimi ugotovitvami.",
+          "length": 29
+        },
+        {
+          "index": 17,
+          "text": "Povzetek za zaključek prevzema naj ne zabriše prvotnih tehničnih ugotovitev.",
+          "length": 10
+        },
+        {
+          "index": 18,
+          "text": "Te je treba brati skupaj z odločitvami, ki so jim sledile.",
+          "length": 11
+        }
+      ]
+    },
+    {
+      "paragraph": 7,
+      "text": "Vrhovno sodišče je razveljavilo del odločitve glede 246 oseb in ga vrnilo v ponovno odločanje. Pritožbe glede 262 oseb je zavrnilo. [Pojasnilo izreka](https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523) pri vrnjenih delih med drugim navaja pomanjkljivo presojo škode, dokazov in upravičenja za uveljavljanje zahtevkov.",
+      "sentences": [
+        {
+          "index": 19,
+          "text": "Vrhovno sodišče je razveljavilo del odločitve glede 246 oseb in ga vrnilo v ponovno odločanje.",
+          "length": 15
+        },
+        {
+          "index": 20,
+          "text": "Pritožbe glede 262 oseb je zavrnilo.",
+          "length": 6
+        },
+        {
+          "index": 21,
+          "text": "Pojasnilo izreka pri vrnjenih delih med drugim navaja pomanjkljivo presojo škode, dokazov in upravičenja za uveljavljanje zahtevkov.",
+          "length": 17
+        }
+      ]
+    },
+    {
+      "paragraph": 8,
+      "text": "Vrnitev v ponovno odločanje ni pomenila zavrnitve celotne skupine. Tudi zavrnitev pritožb glede drugih 262 ni pomenila zavrnitve vseh njihovih prvotnih zahtevkov ali konca vseh povezanih zadev. Ocena stare obveznosti zato zahteva identifikacijo konkretnega zahtevka in njegovega procesnega položaja.",
+      "sentences": [
+        {
+          "index": 22,
+          "text": "Vrnitev v ponovno odločanje ni pomenila zavrnitve celotne skupine.",
+          "length": 9
+        },
+        {
+          "index": 23,
+          "text": "Tudi zavrnitev pritožb glede drugih 262 ni pomenila zavrnitve vseh njihovih prvotnih zahtevkov ali konca vseh povezanih zadev.",
+          "length": 18
+        },
+        {
+          "index": 24,
+          "text": "Ocena stare obveznosti zato zahteva identifikacijo konkretnega zahtevka in njegovega procesnega položaja.",
+          "length": 12
+        }
+      ]
+    },
+    {
+      "paragraph": 9,
+      "text": "[154. člen tajvanskega zakona o družbah](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154) praviloma omejuje odgovornost delničarja na vplačilo delnic. Drugi odstavek določa izjemo: če delničar zlorabi samostojno pravno osebnost družbe, zaradi česar nastane določen dolg, ki ga družba očitno težko poravna, in so okoliščine tako resne, da je njegova odgovornost nujna, mora ta dolg poravnati delničar.",
+      "sentences": [
+        {
+          "index": 25,
+          "text": "154. člen tajvanskega zakona o družbah praviloma omejuje odgovornost delničarja na vplačilo delnic.",
+          "length": 13
+        },
+        {
+          "index": 26,
+          "text": "Drugi odstavek določa izjemo: če delničar zlorabi samostojno pravno osebnost družbe, zaradi česar nastane določen dolg, ki ga družba očitno težko poravna, in so okoliščine tako resne, da je njegova odgovornost nujna, mora ta dolg poravnati delničar.",
+          "length": 37
+        }
+      ]
+    },
+    {
+      "paragraph": 10,
+      "text": "Pogoji so kumulativni. Neplačan dolg, delež v družbi ali neugodno poročilo vsak zase ne zajamejo celotne zakonske presoje. Sedanjega besedila tudi ni primerno predstavljati kot edino zgodovinsko podlago sodbe o preteklem ravnanju.",
+      "sentences": [
+        {
+          "index": 27,
+          "text": "Pogoji so kumulativni.",
+          "length": 3
+        },
+        {
+          "index": 28,
+          "text": "Neplačan dolg, delež v družbi ali neugodno poročilo vsak zase ne zajamejo celotne zakonske presoje.",
+          "length": 15
+        },
+        {
+          "index": 29,
+          "text": "Sedanjega besedila tudi ni primerno predstavljati kot edino zgodovinsko podlago sodbe o preteklem ravnanju.",
+          "length": 14
+        }
+      ]
+    },
+    {
+      "paragraph": 11,
+      "text": "Običajno razliko med organizacijskima oblikama pojasnjuje [primerjava hčerinske družbe in podružnice na Tajvanu](/sl/columns/taiwan-company-subsidiary-vs-branch). Okoljska zadeva pa zahteva podatke, ki presegajo ustanovitvene listine: kdo je uporabljal nadzor, ko je nevarnost že poznal?",
+      "sentences": [
+        {
+          "index": 30,
+          "text": "Običajno razliko med organizacijskima oblikama pojasnjuje primerjava hčerinske družbe in podružnice na Tajvanu.",
+          "length": 13
+        },
+        {
+          "index": 31,
+          "text": "Okoljska zadeva pa zahteva podatke, ki presegajo ustanovitvene listine: kdo je uporabljal nadzor, ko je nevarnost že poznal?",
+          "length": 18
+        }
+      ]
+    },
+    {
+      "paragraph": 12,
+      "text": "[Informativni list USTR iz februarja 2026](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) opisuje namere ZDA in Tajvana glede čezmejnih naložb. Ameriška stran je napovedala, da bo, kadar je to primerno, razmislila o podpori financiranju naložb v ključnih sektorjih na Tajvanu v sodelovanju z ameriškimi zasebnimi partnerji in po veljavnih predpisih. Namere niso individualna odobritev financiranja. Objave tudi ni mogoče šteti za dokaz začetka veljavnosti vseh določb sporazuma.",
+      "sentences": [
+        {
+          "index": 32,
+          "text": "Informativni list USTR iz februarja 2026 opisuje namere ZDA in Tajvana glede čezmejnih naložb.",
+          "length": 14
+        },
+        {
+          "index": 33,
+          "text": "Ameriška stran je napovedala, da bo, kadar je to primerno, razmislila o podpori financiranju naložb v ključnih sektorjih na Tajvanu v sodelovanju z ameriškimi zasebnimi partnerji in po veljavnih predpisih.",
+          "length": 30
+        },
+        {
+          "index": 34,
+          "text": "Namere niso individualna odobritev financiranja.",
+          "length": 5
+        },
+        {
+          "index": 35,
+          "text": "Objave tudi ni mogoče šteti za dokaz začetka veljavnosti vseh določb sporazuma.",
+          "length": 12
+        }
+      ]
+    },
+    {
+      "paragraph": 13,
+      "text": "Predlagano dividendo, zmanjšanje kapitala ali prenos denarja iz družbe je mogoče primerjati z znanimi tveganji, nerešenimi zahtevki in premoženjem, ki ostaja na Tajvanu. Sklepi o prenosih lahko pojasnijo njihove zneske in razloge. Ime dokumenta ali shranjeno poročilo samo ne pokaže, ali je bil prenos zakonit.",
+      "sentences": [
+        {
+          "index": 36,
+          "text": "Predlagano dividendo, zmanjšanje kapitala ali prenos denarja iz družbe je mogoče primerjati z znanimi tveganji, nerešenimi zahtevki in premoženjem, ki ostaja na Tajvanu.",
+          "length": 23
+        },
+        {
+          "index": 37,
+          "text": "Sklepi o prenosih lahko pojasnijo njihove zneske in razloge.",
+          "length": 9
+        },
+        {
+          "index": 38,
+          "text": "Ime dokumenta ali shranjeno poročilo samo ne pokaže, ali je bil prenos zakonit.",
+          "length": 13
+        }
+      ]
+    },
+    {
+      "paragraph": 14,
+      "text": "V [vprašanju o tajvanski družbi na kontaktni strani v angleščini](/en/contact) lahko navedete posel, zadevno družbo in predvideni datum plačila ali zaključka. Tehnična poročila ter občutljive podatke o zaposlenih je mogoče predložiti pozneje po dogovoru o varni predaji. Prvotne ugotovitve, odločitve o odzivu in pooblastila za premike premoženja skupaj pokažejo, kaj je sledilo pregledu.",
+      "sentences": [
+        {
+          "index": 39,
+          "text": "V vprašanju o tajvanski družbi na kontaktni strani v angleščini lahko navedete posel, zadevno družbo in predvideni datum plačila ali zaključka.",
+          "length": 21
+        },
+        {
+          "index": 40,
+          "text": "Tehnična poročila ter občutljive podatke o zaposlenih je mogoče predložiti pozneje po dogovoru o varni predaji.",
+          "length": 16
+        },
+        {
+          "index": 41,
+          "text": "Prvotne ugotovitve, odločitve o odzivu in pooblastila za premike premoženja skupaj pokažejo, kaj je sledilo pregledu.",
+          "length": 16
+        }
+      ]
+    },
+    {
+      "paragraph": 15,
+      "text": "Veljavni predpis in uradne naložbene informacije so bili preverjeni 26. oktobra 2026. Opis sodbe temelji na uradnem pojasnilu, pregledanem 25. oktobra; ne povzema vseh povezanih postopkov in ne določa odgovornosti posameznega vlagatelja.",
+      "sentences": [
+        {
+          "index": 42,
+          "text": "Veljavni predpis in uradne naložbene informacije so bili preverjeni 26. oktobra 2026.",
+          "length": 12
+        },
+        {
+          "index": 43,
+          "text": "Opis sodbe temelji na uradnem pojasnilu, pregledanem 25. oktobra; ne povzema vseh povezanih postopkov in ne določa odgovornosti posameznega vlagatelja.",
+          "length": 20
+        }
+      ]
+    }
+  ],
+  "headings": [
+    "Kdo je prejel poročilo in kdo je odločal",
+    "Različna izida za dela glede 246 in 262 oseb",
+    "Kdaj delničar odgovarja za dolg družbe",
+    "Naložbeni načrt in sredstva, ki ostanejo družbi"
+  ],
+  "list_items": [],
+  "tools": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "5abf02f52e35c45f921084106b6acf3c0caf0ca02f09649de1c1eb6977019b3e"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "4af341932757be7a6b83f84a56ea24792f963653c9c3d008aacade2b79a084de"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ea03abaa59249d7d914e1c98a5231a5c1636528dd1ecda326b0d4638edf17975"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/sl.json",
+      "sha256": "f7fdb543f7952d5e891a30fd5d167b3035a3933c982a01f6d70b03c5f554c040"
+    }
+  ]
+}

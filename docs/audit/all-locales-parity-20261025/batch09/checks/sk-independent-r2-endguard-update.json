@@ -1,0 +1,14 @@
+{
+  "atUTC": "2026-10-26T10:08:51.932793+00:00",
+  "initialFinalManifestAttempt": {
+    "exit": 1,
+    "error": "AssertionError: changed /Users/son7/tseng-lanes-shared/LESSONS.md",
+    "manifestWasNotWritten": true
+  },
+  "input": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+  "beforeSHA256": "86710ef330b108a916a7bb92a75f1ffa62dea53412e8a75f38472d9fa9b33130",
+  "currentSHA256": "56120b79d5f6a483f760f2a470dab7753ca7d14d1c727ce8e8bbd721da773f97",
+  "reason": "Automatic LESSONS generation changed from 17:05 to 19:05 during targeted closure",
+  "fullCurrentFileRead": true,
+  "resolution": "Preserve R1 old input evidence; use separately recorded current hash for R2 end guard. No new semantic finding from the current full lessons text; Fable historical reference remains overridden by user."
+}

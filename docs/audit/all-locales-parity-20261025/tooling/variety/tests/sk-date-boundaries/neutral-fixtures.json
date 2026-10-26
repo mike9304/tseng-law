@@ -1,0 +1,567 @@
+{
+  "frozenAtUTC": "2026-10-26T09:05:11.907183+00:00",
+  "scope": "AI-written neutral expectations frozen before SK profile modification; no target manuscript score used.",
+  "sentences": [
+    {
+      "id": "nominative-01",
+      "input": "Dátum na lístku je 7. január. Nasleduje ďalší riadok.",
+      "expected": [
+        "Dátum na lístku je 7. január.",
+        "Nasleduje ďalší riadok."
+      ]
+    },
+    {
+      "id": "genitive-year-01",
+      "input": "Písali sme 7. januára 2024. Článok pokračuje ďalšou vetou.",
+      "expected": [
+        "Písali sme 7. januára 2024.",
+        "Článok pokračuje ďalšou vetou."
+      ]
+    },
+    {
+      "id": "nominative-02",
+      "input": "Dátum na lístku je 7. február. Nasleduje ďalší riadok.",
+      "expected": [
+        "Dátum na lístku je 7. február.",
+        "Nasleduje ďalší riadok."
+      ]
+    },
+    {
+      "id": "genitive-year-02",
+      "input": "Písali sme 7. februára 2024. Článok pokračuje ďalšou vetou.",
+      "expected": [
+        "Písali sme 7. februára 2024.",
+        "Článok pokračuje ďalšou vetou."
+      ]
+    },
+    {
+      "id": "nominative-03",
+      "input": "Dátum na lístku je 7. marec. Nasleduje ďalší riadok.",
+      "expected": [
+        "Dátum na lístku je 7. marec.",
+        "Nasleduje ďalší riadok."
+      ]
+    },
+    {
+      "id": "genitive-year-03",
+      "input": "Písali sme 7. marca 2024. Článok pokračuje ďalšou vetou.",
+      "expected": [
+        "Písali sme 7. marca 2024.",
+        "Článok pokračuje ďalšou vetou."
+      ]
+    },
+    {
+      "id": "nominative-04",
+      "input": "Dátum na lístku je 7. apríl. Nasleduje ďalší riadok.",
+      "expected": [
+        "Dátum na lístku je 7. apríl.",
+        "Nasleduje ďalší riadok."
+      ]
+    },
+    {
+      "id": "genitive-year-04",
+      "input": "Písali sme 7. apríla 2024. Článok pokračuje ďalšou vetou.",
+      "expected": [
+        "Písali sme 7. apríla 2024.",
+        "Článok pokračuje ďalšou vetou."
+      ]
+    },
+    {
+      "id": "nominative-05",
+      "input": "Dátum na lístku je 7. máj. Nasleduje ďalší riadok.",
+      "expected": [
+        "Dátum na lístku je 7. máj.",
+        "Nasleduje ďalší riadok."
+      ]
+    },
+    {
+      "id": "genitive-year-05",
+      "input": "Písali sme 7. mája 2024. Článok pokračuje ďalšou vetou.",
+      "expected": [
+        "Písali sme 7. mája 2024.",
+        "Článok pokračuje ďalšou vetou."
+      ]
+    },
+    {
+      "id": "nominative-06",
+      "input": "Dátum na lístku je 7. jún. Nasleduje ďalší riadok.",
+      "expected": [
+        "Dátum na lístku je 7. jún.",
+        "Nasleduje ďalší riadok."
+      ]
+    },
+    {
+      "id": "genitive-year-06",
+      "input": "Písali sme 7. júna 2024. Článok pokračuje ďalšou vetou.",
+      "expected": [
+        "Písali sme 7. júna 2024.",
+        "Článok pokračuje ďalšou vetou."
+      ]
+    },
+    {
+      "id": "nominative-07",
+      "input": "Dátum na lístku je 7. júl. Nasleduje ďalší riadok.",
+      "expected": [
+        "Dátum na lístku je 7. júl.",
+        "Nasleduje ďalší riadok."
+      ]
+    },
+    {
+      "id": "genitive-year-07",
+      "input": "Písali sme 7. júla 2024. Článok pokračuje ďalšou vetou.",
+      "expected": [
+        "Písali sme 7. júla 2024.",
+        "Článok pokračuje ďalšou vetou."
+      ]
+    },
+    {
+      "id": "nominative-08",
+      "input": "Dátum na lístku je 7. august. Nasleduje ďalší riadok.",
+      "expected": [
+        "Dátum na lístku je 7. august.",
+        "Nasleduje ďalší riadok."
+      ]
+    },
+    {
+      "id": "genitive-year-08",
+      "input": "Písali sme 7. augusta 2024. Článok pokračuje ďalšou vetou.",
+      "expected": [
+        "Písali sme 7. augusta 2024.",
+        "Článok pokračuje ďalšou vetou."
+      ]
+    },
+    {
+      "id": "nominative-09",
+      "input": "Dátum na lístku je 7. september. Nasleduje ďalší riadok.",
+      "expected": [
+        "Dátum na lístku je 7. september.",
+        "Nasleduje ďalší riadok."
+      ]
+    },
+    {
+      "id": "genitive-year-09",
+      "input": "Písali sme 7. septembra 2024. Článok pokračuje ďalšou vetou.",
+      "expected": [
+        "Písali sme 7. septembra 2024.",
+        "Článok pokračuje ďalšou vetou."
+      ]
+    },
+    {
+      "id": "nominative-10",
+      "input": "Dátum na lístku je 7. október. Nasleduje ďalší riadok.",
+      "expected": [
+        "Dátum na lístku je 7. október.",
+        "Nasleduje ďalší riadok."
+      ]
+    },
+    {
+      "id": "genitive-year-10",
+      "input": "Písali sme 7. októbra 2024. Článok pokračuje ďalšou vetou.",
+      "expected": [
+        "Písali sme 7. októbra 2024.",
+        "Článok pokračuje ďalšou vetou."
+      ]
+    },
+    {
+      "id": "nominative-11",
+      "input": "Dátum na lístku je 7. november. Nasleduje ďalší riadok.",
+      "expected": [
+        "Dátum na lístku je 7. november.",
+        "Nasleduje ďalší riadok."
+      ]
+    },
+    {
+      "id": "genitive-year-11",
+      "input": "Písali sme 7. novembra 2024. Článok pokračuje ďalšou vetou.",
+      "expected": [
+        "Písali sme 7. novembra 2024.",
+        "Článok pokračuje ďalšou vetou."
+      ]
+    },
+    {
+      "id": "nominative-12",
+      "input": "Dátum na lístku je 7. december. Nasleduje ďalší riadok.",
+      "expected": [
+        "Dátum na lístku je 7. december.",
+        "Nasleduje ďalší riadok."
+      ]
+    },
+    {
+      "id": "genitive-year-12",
+      "input": "Písali sme 7. decembra 2024. Článok pokračuje ďalšou vetou.",
+      "expected": [
+        "Písali sme 7. decembra 2024.",
+        "Článok pokračuje ďalšou vetou."
+      ]
+    },
+    {
+      "id": "year-before-chapter",
+      "input": "Kniha vyšla v roku 2024. Kapitola pokračuje opisom knižnice.",
+      "expected": [
+        "Kniha vyšla v roku 2024.",
+        "Kapitola pokračuje opisom knižnice."
+      ]
+    },
+    {
+      "id": "year-before-paragraph",
+      "input": "Záznam je z roku 2024. Odsek opisuje školu.",
+      "expected": [
+        "Záznam je z roku 2024.",
+        "Odsek opisuje školu."
+      ]
+    },
+    {
+      "id": "count-before-point",
+      "input": "Počet kníh bol 12. Bod je vyznačený na mape.",
+      "expected": [
+        "Počet kníh bol 12.",
+        "Bod je vyznačený na mape."
+      ]
+    },
+    {
+      "id": "number-before-month-subject",
+      "input": "Na lístku je číslo 7. November bol chladný.",
+      "expected": [
+        "Na lístku je číslo 7.",
+        "November bol chladný."
+      ]
+    },
+    {
+      "id": "year-before-allcaps",
+      "input": "Záznam je z roku 2024. ČLÁNOK opisuje školu.",
+      "expected": [
+        "Záznam je z roku 2024.",
+        "ČLÁNOK opisuje školu."
+      ]
+    },
+    {
+      "id": "bare-final-ordinal",
+      "input": "V poradí skončil 7. Potom odišiel.",
+      "expected": [
+        "V poradí skončil 7.",
+        "Potom odišiel."
+      ]
+    },
+    {
+      "id": "normal-floor",
+      "input": "Izba je na 3. poschodí. Dvere sú otvorené.",
+      "expected": [
+        "Izba je na 3. poschodí.",
+        "Dvere sú otvorené."
+      ]
+    },
+    {
+      "id": "normal-chapter",
+      "input": "Čítame 4. kapitolu knihy. Ďalšia je krátka.",
+      "expected": [
+        "Čítame 4. kapitolu knihy.",
+        "Ďalšia je krátka."
+      ]
+    },
+    {
+      "id": "large-ordinal-chapter",
+      "input": "Je to 2024. kapitola rozsiahlej kroniky. Ďalšia je krátka.",
+      "expected": [
+        "Je to 2024. kapitola rozsiahlej kroniky.",
+        "Ďalšia je krátka."
+      ]
+    },
+    {
+      "id": "normal-article",
+      "input": "Čítame 5. článok časopisu. Kópia leží na stole.",
+      "expected": [
+        "Čítame 5. článok časopisu.",
+        "Kópia leží na stole."
+      ]
+    },
+    {
+      "id": "roman-ordinal",
+      "input": "Čítame IV. kapitolu knihy. Potom odložíme zošit.",
+      "expected": [
+        "Čítame IV. kapitolu knihy.",
+        "Potom odložíme zošit."
+      ]
+    },
+    {
+      "id": "roman-final",
+      "input": "Poradie označuje číslo IV. Potom pokračuje zoznam.",
+      "expected": [
+        "Poradie označuje číslo IV.",
+        "Potom pokračuje zoznam."
+      ]
+    },
+    {
+      "id": "section-prefix",
+      "input": "Čítame 7. § predpisu. Potom zatvoríme knihu.",
+      "expected": [
+        "Čítame 7. § predpisu.",
+        "Potom zatvoríme knihu."
+      ]
+    },
+    {
+      "id": "section-cardinal",
+      "input": "Čítame § 7 ods. 2. Článok časopisu leží vedľa.",
+      "expected": [
+        "Čítame § 7 ods. 2.",
+        "Článok časopisu leží vedľa."
+      ]
+    },
+    {
+      "id": "decimal",
+      "input": "Hodnota je 3.5 a cena 12,50 eura. Záznam zostáva tu.",
+      "expected": [
+        "Hodnota je 3.5 a cena 12,50 eura.",
+        "Záznam zostáva tu."
+      ]
+    },
+    {
+      "id": "month-day-end",
+      "input": "Výlet bude 7. november. Kapitola je už dopísaná.",
+      "expected": [
+        "Výlet bude 7. november.",
+        "Kapitola je už dopísaná."
+      ]
+    },
+    {
+      "id": "day-range-start",
+      "input": "Výlet bude 1. január. Zápis zostane tu.",
+      "expected": [
+        "Výlet bude 1. január.",
+        "Zápis zostane tu."
+      ]
+    },
+    {
+      "id": "day-range-end",
+      "input": "Výlet bude 31. december. Zápis zostane tu.",
+      "expected": [
+        "Výlet bude 31. december.",
+        "Zápis zostane tu."
+      ]
+    },
+    {
+      "id": "two-dates",
+      "input": "Čítanie bolo 7. januára a 9. februára 2024. Článok opisuje stretnutie.",
+      "expected": [
+        "Čítanie bolo 7. januára a 9. februára 2024.",
+        "Článok opisuje stretnutie."
+      ]
+    },
+    {
+      "id": "quote-terminal",
+      "input": "Povedala: „Výlet bol 7. októbra 2024.“ Článok opisuje cestu.",
+      "expected": [
+        "Povedala: „Výlet bol 7. októbra 2024.“",
+        "Článok opisuje cestu."
+      ]
+    },
+    {
+      "id": "quote-attribution",
+      "input": "„Výlet bude 7. november,“ povedala učiteľka. Deti otvorili kalendár.",
+      "expected": [
+        "„Výlet bude 7. november,“ povedala učiteľka.",
+        "Deti otvorili kalendár."
+      ]
+    },
+    {
+      "id": "listed-abbreviation",
+      "input": "Ing. J. Kováč číta napr. str. 7 každý deň. Kópia je tu.",
+      "expected": [
+        "Ing. J. Kováč číta napr. str. 7 každý deň.",
+        "Kópia je tu."
+      ]
+    },
+    {
+      "id": "terminal-abbreviation",
+      "input": "V taške sú knihy, zošity atď. Článok leží na stole.",
+      "expected": [
+        "V taške sú knihy, zošity atď.",
+        "Článok leží na stole."
+      ]
+    },
+    {
+      "id": "no-year-date-end",
+      "input": "Výlet bol 7. októbra. Článok opisuje cestu.",
+      "expected": [
+        "Výlet bol 7. októbra.",
+        "Článok opisuje cestu."
+      ]
+    },
+    {
+      "id": "nbsp-date",
+      "input": "Výlet bude 7. november. Článok je krátky.",
+      "expected": [
+        "Výlet bude 7. november.",
+        "Článok je krátky."
+      ]
+    },
+    {
+      "id": "nnbsp-date",
+      "input": "Výlet bude 7. november. Článok je krátky.",
+      "expected": [
+        "Výlet bude 7. november.",
+        "Článok je krátky."
+      ]
+    },
+    {
+      "id": "tab-date",
+      "input": "Výlet bude 7.\tnovember. Článok je krátky.",
+      "expected": [
+        "Výlet bude 7.\tnovember.",
+        "Článok je krátky."
+      ]
+    },
+    {
+      "id": "nfd-calendar-and-subject",
+      "input": "Výlet bude 7. máj. Článok je krátky.",
+      "expected": [
+        "Výlet bude 7. máj.",
+        "Článok je krátky."
+      ]
+    },
+    {
+      "id": "nfd-year-subject",
+      "input": "Výlet bol 7. októbra 2024. Článok je krátky.",
+      "expected": [
+        "Výlet bol 7. októbra 2024.",
+        "Článok je krátky."
+      ]
+    },
+    {
+      "id": "markdown-link",
+      "input": "Výlet bude [7. november](https://example.test/calendar). Článok je krátky.",
+      "expected": [
+        "Výlet bude 7. november.",
+        "Článok je krátky."
+      ]
+    },
+    {
+      "id": "bare-url",
+      "input": "Adresa je https://example.test/a?x=3.5. Článok je krátky.",
+      "expected": [
+        "Adresa je .",
+        "Článok je krátky."
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "ordered-list",
+      "input": "1. Vezmite knihu.\n2. Otvorte zošit.",
+      "expectedParagraphs": [],
+      "expectedListItems": [
+        "1. Vezmite knihu.",
+        "2. Otvorte zošit."
+      ],
+      "expectedSentences": [],
+      "renderParagraphs": 0,
+      "renderLists": 1
+    },
+    {
+      "id": "calendar-shaped-list",
+      "input": "7. november",
+      "expectedParagraphs": [],
+      "expectedListItems": [
+        "7. november"
+      ],
+      "expectedSentences": [],
+      "renderParagraphs": 0,
+      "renderLists": 1
+    },
+    {
+      "id": "large-list-number",
+      "input": "2024. článok",
+      "expectedParagraphs": [],
+      "expectedListItems": [
+        "2024. článok"
+      ],
+      "expectedSentences": [],
+      "renderParagraphs": 0,
+      "renderLists": 1
+    },
+    {
+      "id": "escaped-day-start",
+      "input": "7\\. november je dátum na lístku. Článok je krátky.",
+      "expectedParagraphs": [
+        "7\\. november je dátum na lístku. Článok je krátky."
+      ],
+      "expectedListItems": [],
+      "expectedSentences": [
+        "7. november je dátum na lístku.",
+        "Článok je krátky."
+      ],
+      "renderParagraphs": 1,
+      "renderLists": 0,
+      "expectedVisibleText": "7. november je dátum na lístku. Článok je krátky."
+    },
+    {
+      "id": "escaped-year-start",
+      "input": "2024\\. Článok pokračuje.",
+      "expectedParagraphs": [
+        "2024\\. Článok pokračuje."
+      ],
+      "expectedListItems": [],
+      "expectedSentences": [
+        "2024.",
+        "Článok pokračuje."
+      ],
+      "renderParagraphs": 1,
+      "renderLists": 0,
+      "expectedVisibleText": "2024. Článok pokračuje."
+    },
+    {
+      "id": "normal-date-prose",
+      "input": "Výlet bude 7. november. Článok je krátky.",
+      "expectedParagraphs": [
+        "Výlet bude 7. november. Článok je krátky."
+      ],
+      "expectedListItems": [],
+      "expectedSentences": [
+        "Výlet bude 7. november.",
+        "Článok je krátky."
+      ],
+      "renderParagraphs": 1,
+      "renderLists": 0,
+      "expectedVisibleText": "Výlet bude 7. november. Článok je krátky."
+    },
+    {
+      "id": "soft-wrap-date",
+      "input": "Výlet bude 7.\nnovember. Článok je krátky.",
+      "expectedParagraphs": [
+        "Výlet bude 7. november. Článok je krátky."
+      ],
+      "expectedListItems": [],
+      "expectedSentences": [
+        "Výlet bude 7. november.",
+        "Článok je krátky."
+      ],
+      "renderParagraphs": 1,
+      "renderLists": 0,
+      "expectedVisibleText": "Výlet bude 7.\nnovember. Článok je krátky."
+    },
+    {
+      "id": "source-heading-tail",
+      "input": "Výlet bude 7. november.\n\n## Oficiálne zdroje\n\nText zo zdroja je z 8. decembra 2024.",
+      "expectedParagraphs": [
+        "Výlet bude 7. november."
+      ],
+      "expectedListItems": [],
+      "expectedSentences": [
+        "Výlet bude 7. november."
+      ]
+    },
+    {
+      "id": "substantive-heading-not-tail",
+      "input": "Výlet bude 7. november.\n\n## Zdroje príjmov\n\nKniha vyšla v roku 2024. Článok je krátky.",
+      "expectedParagraphs": [
+        "Výlet bude 7. november.",
+        "Kniha vyšla v roku 2024. Článok je krátky."
+      ],
+      "expectedListItems": [],
+      "expectedSentences": [
+        "Výlet bude 7. november.",
+        "Kniha vyšla v roku 2024.",
+        "Článok je krátky."
+      ]
+    }
+  ]
+}

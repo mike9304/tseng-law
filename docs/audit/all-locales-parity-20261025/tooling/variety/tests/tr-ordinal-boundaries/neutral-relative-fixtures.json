@@ -1,0 +1,53 @@
+{
+  "scope": "Additional literal neutral locative-relative forms frozen after first comparison and before candidate2; not manuscript strings. Original22 fixtures unchanged.",
+  "cases": [
+    {
+      "id": "item_relative",
+      "text": "Kitabın 4. maddesindeki sözcük silindi. Sonra okuduk.",
+      "expected": [
+        "Kitabın 4. maddesindeki sözcük silindi.",
+        "Sonra okuduk."
+      ]
+    },
+    {
+      "id": "clause_relative",
+      "text": "Metnin 2. fıkradaki başlığı eksikti. Ardından başlığı ekledik.",
+      "expected": [
+        "Metnin 2. fıkradaki başlığı eksikti.",
+        "Ardından başlığı ekledik."
+      ]
+    },
+    {
+      "id": "page_relative",
+      "text": "Kitabın 6. sayfasındaki resim yenilendi. Diğerleri korundu.",
+      "expected": [
+        "Kitabın 6. sayfasındaki resim yenilendi.",
+        "Diğerleri korundu."
+      ]
+    },
+    {
+      "id": "subitem_relative",
+      "text": "Listenin 8. bendindeki kelimeyi inceledik. Sonra listeyi kapattık.",
+      "expected": [
+        "Listenin 8. bendindeki kelimeyi inceledik.",
+        "Sonra listeyi kapattık."
+      ]
+    },
+    {
+      "id": "plural_relative",
+      "text": "Belgelerin 2. maddelerindeki tarih aynıydı. Sonra dosyaları kapattık.",
+      "expected": [
+        "Belgelerin 2. maddelerindeki tarih aynıydı.",
+        "Sonra dosyaları kapattık."
+      ]
+    },
+    {
+      "id": "uppercase_relative_end",
+      "text": "Toplam puan 4. Maddedeki başlık değişmedi.",
+      "expected": [
+        "Toplam puan 4.",
+        "Maddedeki başlık değişmedi."
+      ]
+    }
+  ]
+}

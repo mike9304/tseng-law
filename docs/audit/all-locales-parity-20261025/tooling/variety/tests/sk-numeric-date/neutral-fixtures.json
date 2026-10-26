@@ -1,0 +1,379 @@
+{
+  "atUTC": "2026-10-26T10:17:29.531684+00:00",
+  "scope": "Neutral hand-derived sentence arrays frozen before candidate implementation; no article score used to choose rule or expectations. Date support is lexical d.m.yyyy with day1-31/month1-12, not calendar validation.",
+  "fixtures": [
+    {
+      "id": "date-plain",
+      "text": "Lehota začala 7. 8. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
+      "expected": [
+        "Lehota začala 7. 8. 2032 a pokračovala ďalej.",
+        "Podanie zostalo úplné."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "date-leading-zero",
+      "text": "Lehota začala 07. 08. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
+      "expected": [
+        "Lehota začala 07. 08. 2032 a pokračovala ďalej.",
+        "Podanie zostalo úplné."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "date-first-range",
+      "text": "Lehota začala 1. 1. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
+      "expected": [
+        "Lehota začala 1. 1. 2032 a pokračovala ďalej.",
+        "Podanie zostalo úplné."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "date-last-range",
+      "text": "Lehota začala 31. 12. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
+      "expected": [
+        "Lehota začala 31. 12. 2032 a pokračovala ďalej.",
+        "Podanie zostalo úplné."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "date-compact",
+      "text": "Lehota začala 7.8.2032 a pokračovala ďalej. Podanie zostalo úplné.",
+      "expected": [
+        "Lehota začala 7.8.2032 a pokračovala ďalej.",
+        "Podanie zostalo úplné."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "date-mixed-a",
+      "text": "Lehota začala 7. 8.2032 a pokračovala ďalej. Podanie zostalo úplné.",
+      "expected": [
+        "Lehota začala 7. 8.2032 a pokračovala ďalej.",
+        "Podanie zostalo úplné."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "date-mixed-b",
+      "text": "Lehota začala 7.8. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
+      "expected": [
+        "Lehota začala 7.8. 2032 a pokračovala ďalej.",
+        "Podanie zostalo úplné."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "date-tab",
+      "text": "Lehota začala 7.\t8.\t2032 a pokračovala ďalej. Podanie zostalo úplné.",
+      "expected": [
+        "Lehota začala 7.\t8.\t2032 a pokračovala ďalej.",
+        "Podanie zostalo úplné."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "date-nbsp",
+      "text": "Lehota začala 7. 8. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
+      "expected": [
+        "Lehota začala 7. 8. 2032 a pokračovala ďalej.",
+        "Podanie zostalo úplné."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "date-nnbsp",
+      "text": "Lehota začala 7. 8. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
+      "expected": [
+        "Lehota začala 7. 8. 2032 a pokračovala ďalej.",
+        "Podanie zostalo úplné."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "date-double-space",
+      "text": "Lehota začala 7.  8.  2032 a pokračovala ďalej. Podanie zostalo úplné.",
+      "expected": [
+        "Lehota začala 7.  8.  2032 a pokračovala ďalej.",
+        "Podanie zostalo úplné."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "date-leading-day-zero",
+      "text": "Lehota začala 07. 8. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
+      "expected": [
+        "Lehota začala 07. 8. 2032 a pokračovala ďalej.",
+        "Podanie zostalo úplné."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "date-leading-month-zero",
+      "text": "Lehota začala 7. 08. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
+      "expected": [
+        "Lehota začala 7. 08. 2032 a pokračovala ďalej.",
+        "Podanie zostalo úplné."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "date-leap-date",
+      "text": "Lehota začala 29. 2. 2032 a pokračovala ďalej. Podanie zostalo úplné.",
+      "expected": [
+        "Lehota začala 29. 2. 2032 a pokračovala ďalej.",
+        "Podanie zostalo úplné."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "end-date",
+      "text": "Termín bol 7. 8. 2032. Článok vysvetľuje postup.",
+      "expected": [
+        "Termín bol 7. 8. 2032.",
+        "Článok vysvetľuje postup."
+      ],
+      "kind": "real-boundary-after-year"
+    },
+    {
+      "id": "end-nbsp",
+      "text": "Termín bol 7. 8. 2032. Článok vysvetľuje postup.",
+      "expected": [
+        "Termín bol 7. 8. 2032.",
+        "Článok vysvetľuje postup."
+      ],
+      "kind": "real-boundary-after-year"
+    },
+    {
+      "id": "end-compact",
+      "text": "Termín bol 7.8.2032. Článok vysvetľuje postup.",
+      "expected": [
+        "Termín bol 7.8.2032.",
+        "Článok vysvetľuje postup."
+      ],
+      "kind": "real-boundary-after-year"
+    },
+    {
+      "id": "quote-date",
+      "text": "Dátum „7. 8. 2032“ zostal nezmenený. Úrad odpovedal.",
+      "expected": [
+        "Dátum „7. 8. 2032“ zostal nezmenený.",
+        "Úrad odpovedal."
+      ],
+      "kind": "numeric-date"
+    },
+    {
+      "id": "true-number-end",
+      "text": "Výsledok bol 7. Kontrola pokračovala.",
+      "expected": [
+        "Výsledok bol 7.",
+        "Kontrola pokračovala."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "true-year-end",
+      "text": "Údaj patrí do roku 2032. Článok pokračuje.",
+      "expected": [
+        "Údaj patrí do roku 2032.",
+        "Článok pokračuje."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "ordinal-following-sentence",
+      "text": "Údaj skončil číslom 7. 8. kapitola zostala otvorená.",
+      "expected": [
+        "Údaj skončil číslom 7.",
+        "8. kapitola zostala otvorená."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "numeric-new-subject",
+      "text": "Cena bola 7. 8 eur zaplatil vopred.",
+      "expected": [
+        "Cena bola 7.",
+        "8 eur zaplatil vopred."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "date-no-year",
+      "text": "Lehota skončila 7. 8. Podanie prišlo neskôr.",
+      "expected": [
+        "Lehota skončila 7.",
+        "8.",
+        "Podanie prišlo neskôr."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "day-zero",
+      "text": "Kód bol 0. 8. 2032 označuje sériu.",
+      "expected": [
+        "Kód bol 0.",
+        "8.",
+        "2032 označuje sériu."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "day-too-large",
+      "text": "Kód bol 32. 8. 2032 označuje sériu.",
+      "expected": [
+        "Kód bol 32.",
+        "8.",
+        "2032 označuje sériu."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "day-substring",
+      "text": "Kód bol 107. 8. 2032 označuje sériu.",
+      "expected": [
+        "Kód bol 107.",
+        "8.",
+        "2032 označuje sériu."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "month-zero",
+      "text": "Kód bol 7. 0. 2032 označuje sériu.",
+      "expected": [
+        "Kód bol 7.",
+        "0.",
+        "2032 označuje sériu."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "month-too-large",
+      "text": "Kód bol 7. 13. 2032 označuje sériu.",
+      "expected": [
+        "Kód bol 7.",
+        "13.",
+        "2032 označuje sériu."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "month-substring",
+      "text": "Kód bol 7. 108. 2032 označuje sériu.",
+      "expected": [
+        "Kód bol 7.",
+        "108.",
+        "2032 označuje sériu."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "short-year",
+      "text": "Kód bol 7. 8. 32 označuje sériu.",
+      "expected": [
+        "Kód bol 7.",
+        "8.",
+        "32 označuje sériu."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "long-year",
+      "text": "Kód bol 7. 8. 20321 označuje sériu.",
+      "expected": [
+        "Kód bol 7.",
+        "8.",
+        "20321 označuje sériu."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "year-word-suffix",
+      "text": "Kód bol 7. 8. 2032x označuje sériu.",
+      "expected": [
+        "Kód bol 7.",
+        "8.",
+        "2032x označuje sériu."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "day-word-prefix",
+      "text": "Kód A7. 8. 2032 označuje sériu.",
+      "expected": [
+        "Kód A7.",
+        "8.",
+        "2032 označuje sériu."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "decimal",
+      "text": "Hodnota je 7.8 a zostáva rovnaká. Kontrola skončila.",
+      "expected": [
+        "Hodnota je 7.8 a zostáva rovnaká.",
+        "Kontrola skončila."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "decimal-end",
+      "text": "Hodnota je 7.8. Kontrola skončila.",
+      "expected": [
+        "Hodnota je 7.8.",
+        "Kontrola skončila."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "decimal-year",
+      "text": "Kód bol 7. 8. 2032.5 a pokračoval.",
+      "expected": [
+        "Kód bol 7.",
+        "8.",
+        "2032.5 a pokračoval."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "newline-date",
+      "text": "Údaj skončil číslom 7.\n8. 2032 označuje sériu.",
+      "expected": [
+        "Údaj skončil číslom 7.",
+        "8.",
+        "2032 označuje sériu."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "month-existing",
+      "text": "Termín bol 7. augusta 2032. Článok pokračuje.",
+      "expected": [
+        "Termín bol 7. augusta 2032.",
+        "Článok pokračuje."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "month-nominative-existing",
+      "text": "Termín bol 7. august. Článok pokračuje.",
+      "expected": [
+        "Termín bol 7. august.",
+        "Článok pokračuje."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "article-existing",
+      "text": "Podľa článku 7 ods. 2 sa konanie skončilo. Úrad odpovedal.",
+      "expected": [
+        "Podľa článku 7 ods. 2 sa konanie skončilo.",
+        "Úrad odpovedal."
+      ],
+      "kind": "counterexample-or-regression"
+    }
+  ]
+}

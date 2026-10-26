@@ -1,0 +1,182 @@
+{
+  "atUTC": "2026-10-26T10:17:06.986664+00:00",
+  "scope": "Literal neutral library/list/classroom examples fixed before any candidate profile edit. Not manuscript facts or scores.",
+  "cases": [
+    {
+      "id": "inflected_page",
+      "text": "Kitabın 7. sayfasını açtık. Ardından not aldık.",
+      "expected": [
+        "Kitabın 7. sayfasını açtık.",
+        "Ardından not aldık."
+      ]
+    },
+    {
+      "id": "inflected_item",
+      "text": "Listenin 4. maddesi silindi. Sonra durduk.",
+      "expected": [
+        "Listenin 4. maddesi silindi.",
+        "Sonra durduk."
+      ]
+    },
+    {
+      "id": "genitive_item",
+      "text": "Listenin 4. maddesinin başlığı değişti. Kalan başlıklar aynıydı.",
+      "expected": [
+        "Listenin 4. maddesinin başlığı değişti.",
+        "Kalan başlıklar aynıydı."
+      ]
+    },
+    {
+      "id": "range_page",
+      "text": "Kitabın 12–14. sayfalarında resimler vardı. Birini seçtik.",
+      "expected": [
+        "Kitabın 12–14. sayfalarında resimler vardı.",
+        "Birini seçtik."
+      ]
+    },
+    {
+      "id": "base_form_positive",
+      "text": "Önce 3. madde okundu. Sonra ara verildi.",
+      "expected": [
+        "Önce 3. madde okundu.",
+        "Sonra ara verildi."
+      ]
+    },
+    {
+      "id": "actual_number_end",
+      "text": "Aldığım puan 7. Sonra başka bir soru geldi.",
+      "expected": [
+        "Aldığım puan 7.",
+        "Sonra başka bir soru geldi."
+      ]
+    },
+    {
+      "id": "separate_bare_noun_sentence",
+      "text": "Aldığım puan 7. Madde listesi masadaydı.",
+      "expected": [
+        "Aldığım puan 7.",
+        "Madde listesi masadaydı."
+      ]
+    },
+    {
+      "id": "decimal_and_sentence",
+      "text": "Ölçülen değer 2.5 oldu. Deney bitti.",
+      "expected": [
+        "Ölçülen değer 2.5 oldu.",
+        "Deney bitti."
+      ]
+    },
+    {
+      "id": "inflected_clause",
+      "text": "Metnin 2. fıkrasına bir başlık ekledik. Ardından okuduk.",
+      "expected": [
+        "Metnin 2. fıkrasına bir başlık ekledik.",
+        "Ardından okuduk."
+      ]
+    },
+    {
+      "id": "inflected_subitem",
+      "text": "Listenin 3. bendinde bir hata vardı. Sonra düzelttik.",
+      "expected": [
+        "Listenin 3. bendinde bir hata vardı.",
+        "Sonra düzelttik."
+      ]
+    },
+    {
+      "id": "plural_possessive_item",
+      "text": "Belgelerin 2. maddelerinde aynı ifade vardı. Sonra karşılaştırdık.",
+      "expected": [
+        "Belgelerin 2. maddelerinde aynı ifade vardı.",
+        "Sonra karşılaştırdık."
+      ]
+    },
+    {
+      "id": "accusative_page",
+      "text": "Kitabın 6. sayfasını inceledik. Ardından kapattık.",
+      "expected": [
+        "Kitabın 6. sayfasını inceledik.",
+        "Ardından kapattık."
+      ]
+    },
+    {
+      "id": "dative_item",
+      "text": "Önce 3. maddeye baktık. Sonra ara verdik.",
+      "expected": [
+        "Önce 3. maddeye baktık.",
+        "Sonra ara verdik."
+      ]
+    },
+    {
+      "id": "ablative_subitem",
+      "text": "Listenin 8. bendinden bir kelime çıkarıldı. Kalan metin korundu.",
+      "expected": [
+        "Listenin 8. bendinden bir kelime çıkarıldı.",
+        "Kalan metin korundu."
+      ]
+    },
+    {
+      "id": "uppercase_inflected_new_sentence",
+      "text": "Son aldığım puan 8. Maddesinin başlığı yoktu.",
+      "expected": [
+        "Son aldığım puan 8.",
+        "Maddesinin başlığı yoktu."
+      ]
+    },
+    {
+      "id": "uppercase_page_new_sentence",
+      "text": "Toplam sayfa sayısı 8. Sayfanın köşesi yırtılmıştı.",
+      "expected": [
+        "Toplam sayfa sayısı 8.",
+        "Sayfanın köşesi yırtılmıştı."
+      ]
+    },
+    {
+      "id": "ordinary_named_date",
+      "text": "Toplantı 7 Mayıs 2028 tarihinde başladı. Sonra not aldık.",
+      "expected": [
+        "Toplantı 7 Mayıs 2028 tarihinde başladı.",
+        "Sonra not aldık."
+      ]
+    },
+    {
+      "id": "numeric_date",
+      "text": "Toplantı 07.05.2028 tarihinde başladı. Sonra not aldık.",
+      "expected": [
+        "Toplantı 07.05.2028 tarihinde başladı.",
+        "Sonra not aldık."
+      ]
+    },
+    {
+      "id": "thousands_and_sentence",
+      "text": "Tutar 2.500 liraydı. Hesabı kapattık.",
+      "expected": [
+        "Tutar 2.500 liraydı.",
+        "Hesabı kapattık."
+      ]
+    },
+    {
+      "id": "abbreviation_and_sentence",
+      "text": "Dr. Deniz metni okudu. Sonra döndü.",
+      "expected": [
+        "Dr. Deniz metni okudu.",
+        "Sonra döndü."
+      ]
+    },
+    {
+      "id": "quoted_inflected_ordinal",
+      "text": "“Kitabın 5. sayfasında bir resim var.” Sonra kitabı kapattı.",
+      "expected": [
+        "“Kitabın 5. sayfasında bir resim var.”",
+        "Sonra kitabı kapattı."
+      ]
+    },
+    {
+      "id": "actual_ordinal_end",
+      "text": "Yarışmadaki sıram 5. Sonra sonuçları okuduk.",
+      "expected": [
+        "Yarışmadaki sıram 5.",
+        "Sonra sonuçları okuduk."
+      ]
+    }
+  ]
+}

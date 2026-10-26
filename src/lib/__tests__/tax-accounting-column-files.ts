@@ -5,6 +5,7 @@
  */
 export const TAX_ACCOUNTING_COLUMN_FILES = {
   ko: [
+    '946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md', // ship-20261026-G1
     '662-taiwan-departure-income-tax-agent-article-72.md', // ship-20261023-G4
     '646-taiwan-mixed-technology-contract-source-contribution-evidence.md',
     '645-taiwan-company-missed-cpa-audit-moea-filing-director-fines.md',
@@ -36,6 +37,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
   ] as string[],
   ja: [
+    '946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md', // ship-20261026-G1
     '662-taiwan-departure-income-tax-agent-article-72.md', // ship-20261023-G4
     '646-taiwan-mixed-technology-contract-source-contribution-evidence.md',
     '645-taiwan-company-missed-cpa-audit-moea-filing-director-fines.md',
@@ -67,6 +69,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
   ] as string[],
   en: [
+    '946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md', // ship-20261026-G1
     '662-taiwan-departure-income-tax-agent-article-72.md', // ship-20261023-G4
     '646-taiwan-mixed-technology-contract-source-contribution-evidence.md',
     '645-taiwan-company-missed-cpa-audit-moea-filing-director-fines.md',
@@ -100,6 +103,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '385-taiwan-cfc-rules-vietnamese-subsidiary-incentives.md',
   ] as string[],
   'zh-hant': [
+    '946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md', // ship-20261026-G1
     '662-taiwan-departure-income-tax-agent-article-72.md', // ship-20261023-G4
     '646-taiwan-mixed-technology-contract-source-contribution-evidence.md',
     '645-taiwan-company-missed-cpa-audit-moea-filing-director-fines.md',
@@ -134,6 +138,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
 
 /** Board columns published after 2026-10-06, by file-number prefix; every other board file is 2026-10-06. */
 const LATER_PUBLICATION_DATES: Readonly<Record<string, string>> = {
+  '946': '2026-10-26',
   '662': '2026-10-23',
   '646': '2026-10-22',
   '645': '2026-10-22',

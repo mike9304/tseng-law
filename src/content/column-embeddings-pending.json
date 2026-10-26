@@ -2637,6 +2637,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-online-game-coins-refund-judgment"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-crypto-tax-audit-letter-exchange-location-cost-basis"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-crypto-tax-audit-letter-exchange-location-cost-basis"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-crypto-tax-audit-letter-exchange-location-cost-basis"
     }
   ]
 }

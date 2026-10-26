@@ -1326,6 +1326,21 @@ export const MARKET_EXPANSION_COLUMN_FILES_20261025 = {
   ],
 } as const;
 
+/** Weekday expert columns published 2026-10-26, in source order. */
+export const COUNTRY_COLUMN_FILES_20261026 = {
+  'ko': [
+  ],
+  'zh-hant': [
+  ],
+  'ja': [
+  ],
+  'en': [
+  ],
+  'es': [
+    '946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md', // ship-20261026-G1
+  ],
+} as const;
+
 /** Registered locale-specific batches through 2026-10-26, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
@@ -1355,6 +1370,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((CASE_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...(CASE_TRANSLATION_COLUMN_FILES_20261026[locale] ?? []),
     ...((MARKET_EXPANSION_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((COUNTRY_COLUMN_FILES_20261026 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261014 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261015 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261021 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1385,7 +1401,11 @@ export function expertiseSlugsFor(locale: string): string[] {
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
-  const day20261026 = CASE_TRANSLATION_COLUMN_FILES_20261026[locale] ?? [];
+  const day20261026: readonly string[] = [
+    ...(CASE_TRANSLATION_COLUMN_FILES_20261026[locale] ?? []),
+    ...((COUNTRY_COLUMN_FILES_20261026 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...(taxAccountingFilesPublishedOn('2026-10-26')[locale] ?? []),
+  ];
   const day20261025: readonly string[] = [
     ...((CASE_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((MARKET_EXPANSION_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1472,6 +1492,8 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 /** Locale is explicit because translated cases have a later publication date than their originals. */
 export function archiveLeadPublicationDate(slug: string, locale: string): string {
   if (CASE_TRANSLATION_COLUMN_FILES_20261026[locale]?.map(slugOf).includes(slug)) return '2026-10-26';
+  const day20261026 = [...Object.values(COUNTRY_COLUMN_FILES_20261026), ...Object.values(taxAccountingFilesPublishedOn('2026-10-26')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf);
+  if (day20261026.includes(slug)) return '2026-10-26';
   if (Object.values(CASE_COLUMN_FILES_20261025).flat().map(slugOf).includes(slug)) return '2026-10-25';
   if (Object.values(MARKET_EXPANSION_COLUMN_FILES_20261025).flat().map(slugOf).includes(slug)) return '2026-10-25';
   if (ARC_VISA_FILES_20261024.map(slugOf).includes(slug)) return '2026-10-24';
@@ -1561,6 +1583,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(COUNTRY_COLUMN_FILES_20261024),
     ...Object.values(CASE_COLUMN_FILES_20261025),
     ...Object.values(MARKET_EXPANSION_COLUMN_FILES_20261025),
+    ...Object.values(COUNTRY_COLUMN_FILES_20261026),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261014),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261015),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021),

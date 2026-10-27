@@ -1404,30 +1404,35 @@ export const COUNTRY_COLUMN_FILES_20261027 = {
     '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
     '954-taiwan-overseas-company-data-breach-notice-resident-damages-claim.md', // ship-20261027-G3
     '955-taiwan-mortgage-grace-period-end-debt-negotiation-auction-co-borrower.md', // ship-20261027-G4
+    '956-taiwan-fake-trading-platform-withdrawal-fee-payouts-account-trace.md', // ship-20261027-G5
   ],
   'zh-hant': [
     '952-taiwan-employee-compensation-bonus-rsu-leaving-before-payout.md', // ship-20261027-G1
     '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
     '954-taiwan-overseas-company-data-breach-notice-resident-damages-claim.md', // ship-20261027-G3
     '955-taiwan-mortgage-grace-period-end-debt-negotiation-auction-co-borrower.md', // ship-20261027-G4
+    '956-taiwan-fake-trading-platform-withdrawal-fee-payouts-account-trace.md', // ship-20261027-G5
   ],
   'ja': [
     '952-taiwan-employee-compensation-bonus-rsu-leaving-before-payout.md', // ship-20261027-G1
     '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
     '954-taiwan-overseas-company-data-breach-notice-resident-damages-claim.md', // ship-20261027-G3
     '955-taiwan-mortgage-grace-period-end-debt-negotiation-auction-co-borrower.md', // ship-20261027-G4
+    '956-taiwan-fake-trading-platform-withdrawal-fee-payouts-account-trace.md', // ship-20261027-G5
   ],
   'en': [
     '952-taiwan-employee-compensation-bonus-rsu-leaving-before-payout.md', // ship-20261027-G1
     '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
     '954-taiwan-overseas-company-data-breach-notice-resident-damages-claim.md', // ship-20261027-G3
     '955-taiwan-mortgage-grace-period-end-debt-negotiation-auction-co-borrower.md', // ship-20261027-G4
+    '956-taiwan-fake-trading-platform-withdrawal-fee-payouts-account-trace.md', // ship-20261027-G5
   ],
   'es': [
     '952-taiwan-employee-compensation-bonus-rsu-leaving-before-payout.md', // ship-20261027-G1
     '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
     '954-taiwan-overseas-company-data-breach-notice-resident-damages-claim.md', // ship-20261027-G3
     '955-taiwan-mortgage-grace-period-end-debt-negotiation-auction-co-borrower.md', // ship-20261027-G4
+    '956-taiwan-fake-trading-platform-withdrawal-fee-payouts-account-trace.md', // ship-20261027-G5
   ],
 } as const;
 

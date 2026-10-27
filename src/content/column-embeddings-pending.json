@@ -2721,6 +2721,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-employee-compensation-bonus-rsu-leaving-before-payout"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-foreign-freelancer-contractor-worker-status-work-permit"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-foreign-freelancer-contractor-worker-status-work-permit"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-foreign-freelancer-contractor-worker-status-work-permit"
     }
   ]
 }

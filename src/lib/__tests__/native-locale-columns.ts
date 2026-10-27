@@ -1401,18 +1401,23 @@ export const COUNTRY_COLUMN_FILES_20261026 = {
 export const COUNTRY_COLUMN_FILES_20261027 = {
   'ko': [
     '952-taiwan-employee-compensation-bonus-rsu-leaving-before-payout.md', // ship-20261027-G1
+    '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
   ],
   'zh-hant': [
     '952-taiwan-employee-compensation-bonus-rsu-leaving-before-payout.md', // ship-20261027-G1
+    '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
   ],
   'ja': [
     '952-taiwan-employee-compensation-bonus-rsu-leaving-before-payout.md', // ship-20261027-G1
+    '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
   ],
   'en': [
     '952-taiwan-employee-compensation-bonus-rsu-leaving-before-payout.md', // ship-20261027-G1
+    '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
   ],
   'es': [
     '952-taiwan-employee-compensation-bonus-rsu-leaving-before-payout.md', // ship-20261027-G1
+    '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
   ],
 } as const;
 

@@ -564,3 +564,4 @@
 - 10-27 13:13 KST 대기: 디스크 42Gi(90%). Air 13:06 push 확인(c5f4a34), ref 재정렬(673410d). Studio 새 줄은 grok/opus 대기 기록뿐(내용 확인), Astra 판정 대기.
 - 10-27 13:23 KST 대기: 디스크 41Gi(91%), 12:43 48Gi에서 서서히 감소 중 — 감시. Air 13:16 push 확인(511a747), ref 재정렬(e26ca4f). Studio 새 줄은 grok/opus 대기 기록뿐(내용 확인), Astra 판정 대기.
 - 10-27 13:33 KST 대기: 13:26 Air sync push 줄 없음 — Studio가 5분 주기(13:19·13:24·13:30)로 바뀌어 13:23 재정렬 직후 13:24 커밋에 걸린 얕은 fetch 거부로 보임. 13:32 재정렬(48ef78c), 백그라운드 감시 재개(디스크 39Gi(91%)라 가능). Studio 새 줄은 대기 기록뿐, Astra 판정 대기.
+- 10-27 13:43 KST 대기: 13:41 Air sync는 github.com DNS 실패(일시적), 지금 fetch 정상. Air 13:36 push 확인(60e446b), ref 재정렬(835cc81), 감시 재개. 디스크 38Gi(91%). Studio 새 줄은 grok 대기 기록 1줄, Astra 판정 대기.

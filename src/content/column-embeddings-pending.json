@@ -2769,6 +2769,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-fake-trading-platform-withdrawal-fee-payouts-account-trace"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-china-partner-technology-licensing-trade-secret-permit"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-china-partner-technology-licensing-trade-secret-permit"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-china-partner-technology-licensing-trade-secret-permit"
     }
   ]
 }

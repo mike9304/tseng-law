@@ -650,3 +650,4 @@
 - 10-27 20:36 대기: 20:26 이후 변화는 grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-26 03:47). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. T10 S3는 1fcb120c 소유. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
 - 10-27 20:46 대기: 20:36 이후 변화는 grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-26 03:47). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. T10 S3는 1fcb120c 소유. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
 - 10-27 20:56 대기: 20:46 이후 변화는 grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-26 03:47). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. T10 S3는 1fcb120c 소유. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
+- 10-27 21:06 대기: 20:56 이후 변화는 grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-26 03:47). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. T10 S3는 1fcb120c 소유. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.

@@ -2733,6 +2733,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-foreign-freelancer-contractor-worker-status-work-permit"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-overseas-company-data-breach-notice-resident-damages-claim"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-overseas-company-data-breach-notice-resident-damages-claim"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-overseas-company-data-breach-notice-resident-damages-claim"
     }
   ]
 }

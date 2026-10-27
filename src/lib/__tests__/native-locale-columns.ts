@@ -1402,22 +1402,27 @@ export const COUNTRY_COLUMN_FILES_20261027 = {
   'ko': [
     '952-taiwan-employee-compensation-bonus-rsu-leaving-before-payout.md', // ship-20261027-G1
     '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
+    '954-taiwan-overseas-company-data-breach-notice-resident-damages-claim.md', // ship-20261027-G3
   ],
   'zh-hant': [
     '952-taiwan-employee-compensation-bonus-rsu-leaving-before-payout.md', // ship-20261027-G1
     '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
+    '954-taiwan-overseas-company-data-breach-notice-resident-damages-claim.md', // ship-20261027-G3
   ],
   'ja': [
     '952-taiwan-employee-compensation-bonus-rsu-leaving-before-payout.md', // ship-20261027-G1
     '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
+    '954-taiwan-overseas-company-data-breach-notice-resident-damages-claim.md', // ship-20261027-G3
   ],
   'en': [
     '952-taiwan-employee-compensation-bonus-rsu-leaving-before-payout.md', // ship-20261027-G1
     '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
+    '954-taiwan-overseas-company-data-breach-notice-resident-damages-claim.md', // ship-20261027-G3
   ],
   'es': [
     '952-taiwan-employee-compensation-bonus-rsu-leaving-before-payout.md', // ship-20261027-G1
     '953-taiwan-foreign-freelancer-contractor-worker-status-work-permit.md', // ship-20261027-G2
+    '954-taiwan-overseas-company-data-breach-notice-resident-damages-claim.md', // ship-20261027-G3
   ],
 } as const;
 

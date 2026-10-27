@@ -37,6 +37,7 @@ import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003, COUNTRY_C
   COUNTRY_COLUMN_FILES_20261024,
   CASE_COLUMN_FILES_20261025,
   COUNTRY_COLUMN_FILES_20261026,
+  COUNTRY_COLUMN_FILES_20261027,
   TRAFFIC_SCENE_COLUMN_FILES_20261014,
   TRAFFIC_SCENE_COLUMN_FILES_20261015,
   TRAFFIC_SCENE_COLUMN_FILES_20261021,
@@ -375,6 +376,9 @@ describe('sitemap column lastModified', () => {
           + Object.entries(COUNTRY_COLUMN_FILES_20261026)
             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
             .flatMap(([, files]) => files).length
+          + Object.entries(COUNTRY_COLUMN_FILES_20261027)
+            .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
+            .flatMap(([, files]) => files).length
           + Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261014).flat().length
           + Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261015).flat().length
           + Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021).flat().length
@@ -429,6 +433,9 @@ describe('sitemap column lastModified', () => {
             .flatMap(([, files]) => files).length
           + Object.values(CASE_COLUMN_FILES_20261025).flat().length
           + Object.entries(COUNTRY_COLUMN_FILES_20261026)
+            .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
+            .flatMap(([, files]) => files).length
+          + Object.entries(COUNTRY_COLUMN_FILES_20261027)
             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
             .flatMap(([, files]) => files).length
           + Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261014).flat().length

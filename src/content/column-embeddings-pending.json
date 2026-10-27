@@ -2709,6 +2709,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-construction-subcontractor-fall-principal-contractor-liability"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-employee-compensation-bonus-rsu-leaving-before-payout"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-employee-compensation-bonus-rsu-leaving-before-payout"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-employee-compensation-bonus-rsu-leaving-before-payout"
     }
   ]
 }

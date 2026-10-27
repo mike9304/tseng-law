@@ -2745,6 +2745,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-overseas-company-data-breach-notice-resident-damages-claim"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-mortgage-grace-period-end-debt-negotiation-auction-co-borrower"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-mortgage-grace-period-end-debt-negotiation-auction-co-borrower"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-mortgage-grace-period-end-debt-negotiation-auction-co-borrower"
     }
   ]
 }

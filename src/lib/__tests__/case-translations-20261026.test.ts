@@ -1,4 +1,28 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
+
+const fileCorpus = vi.hoisted(() => new Map<string, import('@/lib/columns').ColumnPost[]>());
+
+// Production parses each locale's markdown once (shouldCacheParsedColumns); tests
+// re-read it on every call. publicColumnSwitcherData reads every locale, and this
+// suite calls it 29 times per case (about 14 s per case in isolation), so parse
+// each locale once here. The corpus does not change during the suite.
+vi.mock('@/lib/columns', async (importOriginal) => {
+  const columns = await importOriginal<typeof import('@/lib/columns')>();
+  return {
+    ...columns,
+    getAllColumnPosts: (...args: Parameters<typeof columns.getAllColumnPosts>) => {
+      if (args.length > 1) return columns.getAllColumnPosts(...args);
+      const locale = args[0] ?? 'ko';
+      let posts = fileCorpus.get(locale);
+      if (!posts) {
+        posts = columns.getAllColumnPosts(locale);
+        fileCorpus.set(locale, posts);
+      }
+      return posts.slice();
+    },
+  };
+});
+
 import { filterMarketBoardColumns } from '@/data/market-column-curation';
 import { columnAlternateLocales, publicColumnSwitcherData } from '@/lib/column-language-links';
 import { getAllColumnPosts } from '@/lib/columns';

@@ -718,3 +718,5 @@
 - 10-28 07:58 대기: 07:48 이후 변화는 grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-26 03:47). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. T10 S3는 1fcb120c 소유. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
 - 10-28 08:08 대기: 07:58 이후 변화는 grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-26 03:47). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. T10 S3는 1fcb120c 소유. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
 - 10-28 08:18 대기: 08:08 이후 변화는 grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-26 03:47). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. T10 S3는 1fcb120c 소유. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
+- 10-28 08:28 대기: 08:18 이후 변화는 grok NOTES 대기 줄·HANDOFF-air 시각뿐(마지막 10-26 03:47). 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. T10 S3는 1fcb120c 소유. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
+- 10-28 08:29 대기: 08:28 이후 변화는 grok NOTES 대기 줄뿐. HANDOFF-studio 마지막 10-24 10:16, HANDOFF-air 마지막 10-26 03:47, STATUS 10-20 21:45 그대로. 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. 최신 브리지 IN-claude-20261026-105903(T10 S3)은 1fcb120c 소유. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.

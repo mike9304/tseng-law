@@ -11,7 +11,7 @@ categories:
 topic: "family"
 featured_image: "../images/ISSUE-20261028-07-taiwan-new-resident-nhi-premium-subsidy/featured-01.webp"
 featured_image_alt: "Ghế trống trong khu vực chờ khám và một tập đựng giấy tờ đóng kín"
-featured_image_caption: "Ảnh minh họa do AI tạo, không chụp người bệnh hoặc cơ sở y tế có thật."
+featured_image_caption: "Ảnh minh họa, không chụp người bệnh hoặc cơ sở y tế có thật."
 social_image: "../images/ISSUE-20261028-07-taiwan-new-resident-nhi-premium-subsidy/featured-01.jpg"
 faq:
   - q: "Có thẻ cư trú là được hỗ trợ phí bảo hiểm y tế không?"
@@ -26,13 +26,13 @@ author: "legal-ai-assistant"
 
 # Hỗ trợ phí bảo hiểm y tế cho người mới định cư chưa có hộ khẩu Đài Loan
 
-Người mới định cư thuộc hộ thu nhập thấp hoặc trung bình thấp đã được công nhận vẫn có thể được hỗ trợ phí bảo hiểm y tế khi chưa đăng ký hộ khẩu tại Đài Loan. Ngày 27/10, [trang tin 好視新聞網 (Newsday)](https://newsday.tw/news/600430) đăng thông báo của quận Bát Đức, Đào Viên, nhắc lại chương trình này. Người nhận hỗ trợ phải đang tham gia bảo hiểm. Hồ sơ phải được chấp thuận.
+Người mới định cư (新住民) thuộc hộ thu nhập thấp hoặc trung bình thấp đã được công nhận vẫn có thể được hỗ trợ phí bảo hiểm y tế khi chưa đăng ký hộ khẩu tại Đài Loan. Ngày 27/10, [trang tin 好視新聞網 (newsday.tw)](https://newsday.tw/news/600430) đăng thông báo của quận Bát Đức, Đào Viên, nhắc lại chương trình này. Người nhận hỗ trợ phải đang tham gia bảo hiểm. Hồ sơ phải được chấp thuận.
 
-Với người Việt sống cùng gia đình tại Đài Loan, đây là khoản hỗ trợ phần phí bảo hiểm tự đóng. Hộ thu nhập thấp được hỗ trợ toàn bộ phần này; hộ trung bình thấp được hỗ trợ một nửa, theo [nguyên tắc thực hiện đính kèm thông báo của quận](https://www.bade.tycg.gov.tw/News_Content.aspx?n=5601&s=1927755). Khoản hỗ trợ không đồng nghĩa mọi chi phí khám chữa bệnh đều được thanh toán.
+Với người Việt sống cùng gia đình tại Đài Loan, đây là khoản hỗ trợ phần phí bảo hiểm tự đóng. Hộ thu nhập thấp được hỗ trợ toàn bộ phần này; hộ trung bình thấp được hỗ trợ một nửa, theo [nguyên tắc thực hiện đính kèm thông báo của quận](https://www.bade.tycg.gov.tw/News_Content.aspx?n=5601&s=1927755). Khoản hỗ trợ không đồng nghĩa với việc mọi chi phí khám chữa bệnh đều được thanh toán.
 
 ## Tham gia bảo hiểm và được hỗ trợ phí
 
-[Điều 9 Luật Bảo hiểm y tế toàn dân](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0060001&flno=9) quy định người có giấy tờ cư trú và thuộc một trong ba trường hợp cũng phải tham gia bảo hiểm: cư trú đủ sáu tháng, làm công cho chủ thuê xác định, hoặc là trẻ sơ sinh sinh tại Đài Loan. Vì vậy, người thuộc nhóm có chủ thuê xác định không phải chờ đủ sáu tháng theo nhóm cư trú thông thường.
+[Điều 9 Luật Bảo hiểm y tế toàn dân](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0060001&flno=9) quy định người có giấy tờ cư trú và thuộc một trong ba trường hợp cũng phải tham gia bảo hiểm: cư trú đủ sáu tháng, là người làm thuê có chủ thuê nhất định, hoặc là trẻ sơ sinh sinh tại Đài Loan. Vì vậy, người làm thuê có chủ thuê nhất định không phải chờ đủ sáu tháng như nhóm chỉ dựa vào thời gian cư trú.
 
 Chương trình hỗ trợ còn xét hoàn cảnh của hộ gia đình. Danh sách hộ thu nhập thấp hoặc trung bình thấp phải được chính quyền thành phố, huyện công nhận; việc gia đình tự nhận thấy thu nhập giảm chưa thay thế được bước xác nhận đó. Người góa chưa tái hôn cũng nằm trong phạm vi chương trình. Trường hợp ly hôn được nêu là người đang một mình nuôi con chưa thành niên tại Đài Loan.
 
@@ -42,7 +42,11 @@ Ai nộp đơn nếu vợ hoặc chồng người Đài Loan đã mất?
 
 Theo mục 4 của nguyên tắc thực hiện, thông thường người phối ngẫu mang quốc tịch Đài Loan đứng tên nộp đơn. Người mới định cư tự nộp trong trường hợp người phối ngẫu đã mất và bản thân chưa tái hôn, hoặc đã ly hôn và một mình nuôi con chưa thành niên tại Đài Loan. Điều kiện hỗ trợ vẫn giữ nguyên.
 
-Hồ sơ gửi đến đơn vị khu vực hoặc văn phòng liên lạc của Cơ quan Bảo hiểm y tế gồm đơn cùng giấy tờ chứng minh liên quan. Tư cách của người nộp đơn và người được hỗ trợ có thể khác nhau. Vì thế, thông tin về quan hệ hôn nhân và giấy tờ cư trú cần khớp với trường hợp xin hỗ trợ thực tế.
+Nguyên tắc còn cho phép người mới định cư tự nộp khi người phối ngẫu mang quốc tịch Đài Loan mất tích. Việc mất tích phải được trình báo cảnh sát, và sau ít nhất sáu tháng vẫn chưa tìm thấy.
+
+Nạn nhân bạo lực gia đình cũng được tự nộp nếu có lệnh bảo vệ hoặc được cơ quan cảnh sát hay cơ quan xã hội can thiệp, đồng thời đang tham gia bảo hiểm y tế toàn dân theo diện độc lập. Hai trường hợp này đều phải thuộc hộ thu nhập thấp hoặc trung bình thấp được công nhận.
+
+Hồ sơ gồm đơn và giấy tờ chứng minh liên quan. Nơi tiếp nhận là tổ nghiệp vụ phân khu (分區業務組) hoặc văn phòng liên lạc của Cơ quan Bảo hiểm y tế trung ương thuộc Bộ Y tế và Phúc lợi (衛生福利部中央健康保險署). Tư cách của người nộp đơn và người được hỗ trợ có thể khác nhau. Vì thế, thông tin về quan hệ hôn nhân và giấy tờ cư trú cần khớp với trường hợp xin hỗ trợ thực tế.
 
 ## Khoản hỗ trợ được xét theo từng năm
 
@@ -52,7 +56,7 @@ Hỗ trợ cũng có điểm dừng. Theo mục 6, khoản này chấm dứt n�
 
 ## Nguồn tham khảo
 
-- [好視新聞網 (Newsday), thông báo ngày 27/10/2026](https://newsday.tw/news/600430).
+- [好視新聞網, thông báo ngày 27/10/2026](https://newsday.tw/news/600430).
 - [Quận Bát Đức, thông báo và bản nguyên tắc thực hiện đính kèm](https://www.bade.tycg.gov.tw/News_Content.aspx?n=5601&s=1927755): đối tượng, mức hỗ trợ, người nộp đơn và điều kiện tiếp tục hưởng.
 - [Luật Bảo hiểm y tế toàn dân, Điều 9](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0060001&flno=9).
 

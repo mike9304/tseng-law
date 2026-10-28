@@ -26,9 +26,9 @@ author: "legal-ai-assistant"
 
 # Taiwan’s product-comparison fine: when a product test misleads buyers
 
-Within one second after wake-up, the seller tested the rival device, according to [Taiwan’s Fair Trade Commission announcement of October 28](https://www.ftc.gov.tw/internet/main/doc/docDetail.aspx?uid=126&docid=18511&mid=126). The comparison involved automotive laser-protection devices and ignored the rival’s documented operating conditions. The commission imposed a NT$100,000 fine over misleading Facebook advertising.
+The seller tested the rival device within one second of its waking up, according to [Taiwan’s Fair Trade Commission announcement of October 28](https://www.ftc.gov.tw/internet/main/doc/docDetail.aspx?uid=126&docid=18511&mid=126). The comparison involved automotive laser-protection devices and ignored the rival’s documented operating conditions. The commission imposed a NT$100,000 fine over misleading Facebook advertising.
 
-According to the FTC, the rival device needed at least five seconds of continuous vibration to enter normal detection mode, but the seller tested within one second after wake-up and drew adverse conclusions about its performance. The advertiser claimed unresolved problems and unavailable online updates, relying on forum comments and shop employees’ experience. Investigators found continuing updates and public notices.
+According to the FTC, the rival device needed at least five seconds of continuous vibration to enter normal detection mode, but the seller drew adverse conclusions from a test that ignored those conditions. The advertiser claimed the rival still had no firmware fix a year after launch and that its manufacturer could not update it online. Those claims relied on forum comments and shop employees’ experience. Investigators found continuing updates and public notices.
 
 For a US equipment supplier or its Taiwan distributor, a comparison video raises two questions: what did the test actually measure, and how broadly does the advertisement describe the result? A recording can preserve the experiment while leaving its limitations unexplained.
 
@@ -36,21 +36,21 @@ For a US equipment supplier or its Taiwan distributor, a comparison video raises
 
 [Fair Trade Act Article 21](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0150002&flno=21) prohibits false or misleading representations about product-related matters capable of affecting trading decisions, whether made in advertisements or through other methods of communicating information to the public. Quality and intended use are expressly listed. The first three paragraphs also apply to services.
 
-Taiwan’s FTC sets out its approach to comparisons in its [comparative-advertising handling principles](https://law.ftc.gov.tw/law/LawContent.aspx?id=GL000217). Points 3 and 4 call for truthful content and fair, objective comparisons on comparable grounds. Point 5 addresses unequal conditions and unverified speculation. It also addresses claims of overall superiority drawn from a limited advantage.
+Taiwan’s FTC sets out its approach to comparisons in its [comparative-advertising handling principles](https://law.ftc.gov.tw/law/LawContent.aspx?id=GL000217). Points 3 and 4 call for truthful content and fair, objective comparisons on comparable grounds. Point 5 addresses unequal conditions and unverified speculation. It also covers claims of overall superiority drawn from a limited advantage.
 
-Naming is not the deciding factor. Point 5 applies whether or not the advertisement identifies the competing business. Substituting an unnamed rival for a logo therefore leaves the testing and accuracy questions in place.
+Naming is not the deciding factor. Point 5 applies whether or not the advertisement identifies the competing business. Blurring the rival’s logo or calling it another brand therefore leaves the testing and accuracy questions in place.
 
 ## What a localized comparison actually promises
 
 A Taiwan campaign may combine a supplier’s overseas test footage with captions written by a local distributor. In that situation, the footage and the Taiwan wording need to be read together. A narrow result about start-up behavior may become a much broader assertion about product reliability once it appears in a translated headline.
 
-The test record explains the claim. Models, settings, software versions and operating instructions, read alongside raw footage and the published wording, allow the team to explain whether both products were operating under comparable conditions. They also show what the advertised conclusion leaves out.
+The test record explains the claim. Models, settings, software versions and operating instructions, read alongside raw footage and the published wording, allow the supplier to explain whether both products were operating under comparable conditions. They also show what the advertised conclusion leaves out.
 
 Product support claims need their own evidence. In the October 28 case, the FTC checked update announcements against the seller’s statements. A test video cannot establish that a manufacturer has never released a firmware fix. The source and date of that separate claim matter.
 
 ## Advertising work can carry its own liability
 
-Article 21 also addresses advertising agencies that know, or should have known, that an advertisement is misleading but still produce or design it. In those circumstances, they are jointly and severally liable with the advertiser for resulting damages. Commissioning someone else to edit the comparison does not resolve what the completed advertisement says.
+Article 21 also addresses advertising agencies that know, or should have known, that an advertisement is misleading but still produce or design it. In those circumstances, they are jointly and severally liable with the advertiser for resulting damages. Commissioning someone else to edit the comparison does not change what the finished advertisement says.
 
 For the team approving a Taiwan launch, the useful final document is the version buyers will actually see, linked to the testing record that supports each claim. If that record establishes only a result under a particular operating condition, the launch wording still has to convey that limit.
 

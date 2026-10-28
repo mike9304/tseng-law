@@ -1449,6 +1449,7 @@ export const COUNTRY_COLUMN_FILES_20261028 = {
     '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
     '961-taiwan-property-damage-crash-move-car-photos-repair-claim.md', // ship-20261028-G4
     '962-taiwan-nominee-company-director-laundering-resignation-registration.md', // ship-20261028-G5
+    '963-taiwan-foreign-manager-overtime-exemption-150000-supervisor-rule.md', // ship-20261028-G6
   ],
   'zh-hant': [
     '958-taiwan-marketplace-seller-when-local-entity-business-tax-registration.md', // ship-20261028-G1
@@ -1456,6 +1457,7 @@ export const COUNTRY_COLUMN_FILES_20261028 = {
     '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
     '961-taiwan-property-damage-crash-move-car-photos-repair-claim.md', // ship-20261028-G4
     '962-taiwan-nominee-company-director-laundering-resignation-registration.md', // ship-20261028-G5
+    '963-taiwan-foreign-manager-overtime-exemption-150000-supervisor-rule.md', // ship-20261028-G6
   ],
   'ja': [
     '958-taiwan-marketplace-seller-when-local-entity-business-tax-registration.md', // ship-20261028-G1
@@ -1463,6 +1465,7 @@ export const COUNTRY_COLUMN_FILES_20261028 = {
     '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
     '961-taiwan-property-damage-crash-move-car-photos-repair-claim.md', // ship-20261028-G4
     '962-taiwan-nominee-company-director-laundering-resignation-registration.md', // ship-20261028-G5
+    '963-taiwan-foreign-manager-overtime-exemption-150000-supervisor-rule.md', // ship-20261028-G6
   ],
   'en': [
     '958-taiwan-marketplace-seller-when-local-entity-business-tax-registration.md', // ship-20261028-G1
@@ -1470,6 +1473,7 @@ export const COUNTRY_COLUMN_FILES_20261028 = {
     '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
     '961-taiwan-property-damage-crash-move-car-photos-repair-claim.md', // ship-20261028-G4
     '962-taiwan-nominee-company-director-laundering-resignation-registration.md', // ship-20261028-G5
+    '963-taiwan-foreign-manager-overtime-exemption-150000-supervisor-rule.md', // ship-20261028-G6
   ],
   'es': [
     '958-taiwan-marketplace-seller-when-local-entity-business-tax-registration.md', // ship-20261028-G1
@@ -1477,6 +1481,7 @@ export const COUNTRY_COLUMN_FILES_20261028 = {
     '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
     '961-taiwan-property-damage-crash-move-car-photos-repair-claim.md', // ship-20261028-G4
     '962-taiwan-nominee-company-director-laundering-resignation-registration.md', // ship-20261028-G5
+    '963-taiwan-foreign-manager-overtime-exemption-150000-supervisor-rule.md', // ship-20261028-G6
   ],
 } as const;
 

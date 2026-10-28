@@ -2841,6 +2841,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-nominee-company-director-laundering-resignation-registration"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-foreign-manager-overtime-exemption-150000-supervisor-rule"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-foreign-manager-overtime-exemption-150000-supervisor-rule"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-foreign-manager-overtime-exemption-150000-supervisor-rule"
     }
   ]
 }

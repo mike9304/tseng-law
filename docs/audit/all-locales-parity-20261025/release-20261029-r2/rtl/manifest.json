@@ -1,0 +1,20 @@
+{
+  "createdAt": "2026-10-28T23:22:09.821323+00:00",
+  "reviewer": "/root/rtl_fix_review",
+  "verdict": "PASS_BOUNDED_CODE_AND_SSR",
+  "blockingFindings": [],
+  "inputHashes": {
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/ColumnContent.tsx": "ee079d37ece2c089f89dddcc342ee5c94ee86e795179faeab2d4e4bddd51c0fb",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/__tests__/column-legal-identifiers-bidi.test.tsx": "e683cba6a1fafcb2ff69e42e90515ebefe8360b4f478d2c7d5f9be8c68367f70",
+    "/Users/son7/tseng-all-language-columns-20261025/release-20261029/build/checks/browser-case-results.json": "8ac95994eba22628c5fed55eed4b54a004780afe844d43e1ccc92126c9f980dd",
+    "/Users/son7/tseng-all-language-columns-20261025/release-20261029/build/checks/rtl-fix/red-he-command.json": "fdc42bc8ba8cd6694db7e159b8dd30909d42171239ffbd25f1d1800b426eb998",
+    "/Users/son7/tseng-all-language-columns-20261025/release-20261029/build/checks/rtl-fix/red-he.log": "d34be1ede9016416776ec425f61a3a9bd17468b422ef145a06892988ea224662",
+    "/Users/son7/tseng-all-language-columns-20261025/release-20261029/build/checks/rtl-fix/green-command.json": "6b050e7a9dca2c36c632ea1225e931f610458ac3dbe83a76827e60e4bf8c21e6",
+    "/Users/son7/tseng-all-language-columns-20261025/release-20261029/build/checks/rtl-fix/green.log": "37fa31a9db01de0aa274bcb9e07f02a9222f1e443130ee09c035235f16a1fa3f"
+  },
+  "reportSHA256": "6ebcbc9cbc5500d7e133f1490de9b254d469870d77cc5e7d52f70d9048e5dfa1",
+  "doesNotClaim": [
+    "fresh R2 browser PASS",
+    "deployment complete"
+  ]
+}

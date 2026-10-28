@@ -1,0 +1,486 @@
+{
+  "startedAtUTC": "2026-10-28T23:16:37.549331+00:00",
+  "headBefore": "25433f39bdb04cb7cae43094b28c92098754da29",
+  "inventoryCommand": [
+    "python3",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/inventory.py",
+    "--repo",
+    "/Users/son7/Projects/tseng-law-all-locales-20261025",
+    "--worktree",
+    "--output",
+    "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/inventory.json"
+  ],
+  "inventoryExitCode": 0,
+  "inventoryStdout": "",
+  "inventoryStderr": "",
+  "inventoryScriptSHA256": "f949f3368ad1b653510a27d453f01a4f97a104dca60bd5be8f90f01549f46680",
+  "loader": {
+    "scriptSource": "\nconst fs=require('fs'),path=require('path'),vm=require('vm'),cp=require('child_process'),crypto=require('crypto');\nconst {createRequire}=require('module');const R=process.cwd(),rr=createRequire(path.join(R,'package.json')),ts=rr('typescript'),matter=rr('gray-matter');\nconst publicCommit='8f7624b56423a1dd27590c25e9ca5623631b9057',currentCommit=cp.execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();\nconst hash=b=>crypto.createHash('sha256').update(b).digest('hex');\nconst git=(a,o={})=>cp.execFileSync('git',a,{maxBuffer:256*1024*1024,...o});\nconst allPublic=git(['ls-tree','-r','--name-only',publicCommit,'src']).toString().trim().split('\\n');const publicSet=new Set(allPublic),snapshot=new Map();\nconst contentPublic=allPublic.filter(p=>/^src\\/content\\/columns[^/]*\\/[^/]+\\.md$/.test(p));\nconst batch=git(['cat-file','--batch'],{input:contentPublic.map(p=>`${publicCommit}:${p}\\n`).join('')});let offset=0;\nfor(const file of contentPublic){const end=batch.indexOf(10,offset),header=batch.subarray(offset,end).toString(),size=Number(header.split(' ')[2]);if(!/^[0-9a-f]+ blob \\d+$/.test(header))throw Error('Bad blob '+file);snapshot.set(file,batch.subarray(end+1,end+1+size));offset=end+size+2;}\nconst readPublic=p=>{if(!snapshot.has(p))snapshot.set(p,git(['show',publicCommit+':'+p]));return snapshot.get(p);};\nfunction loader(mode){\n const modules=new Map(),moduleHashes={};const has=p=>mode==='public'?publicSet.has(p):fs.existsSync(path.join(R,p));const read=p=>mode==='public'?readPublic(p):fs.readFileSync(path.join(R,p));\n const contentRel=p=>{const abs=path.resolve(String(p));const rel=path.relative(R,abs).split(path.sep).join('/');return rel.startsWith('src/content/')?rel:null;};\n const fakeFS=mode==='public'?new Proxy(fs,{get(target,key){\n  if(key==='existsSync')return p=>{const rel=contentRel(p);return rel?publicSet.has(rel)||allPublic.some(x=>x.startsWith(rel+'/')):fs.existsSync(p);};\n  if(key==='readdirSync')return(p,options)=>{const rel=contentRel(p);if(!rel)return fs.readdirSync(p,options);if(options)throw Error('Unexpected public readdir options');return [...new Set(allPublic.filter(x=>x.startsWith(rel+'/')).map(x=>x.slice(rel.length+1).split('/')[0]))];};\n  if(key==='readFileSync')return(p,options)=>{const rel=contentRel(p);if(!rel)return fs.readFileSync(p,options);const b=readPublic(rel);return typeof options==='string'||options?.encoding?b.toString(typeof options==='string'?options:options.encoding):b;};\n  if(typeof key==='string'&&/^(write|append|mkdir|rm|unlink|rename|copy|chmod|chown|truncate)/.test(key))return()=>{throw Error('Read-only loader denies '+key);};\n  return target[key];\n }}):fs;\n function load(file){\n  if(modules.has(file))return modules.get(file).exports;const mod={exports:{}};modules.set(file,mod);\n  const bytes=read(file);moduleHashes[file]=hash(bytes);const code=ts.transpileModule(bytes.toString(),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText;\n  function requireFor(spec){\n   if(spec==='fs'||spec==='node:fs')return fakeFS;\n   if(spec.startsWith('.')||spec.startsWith('@/')){\n    const base=spec.startsWith('@/')?'src/'+spec.slice(2):path.posix.normalize(path.posix.join(path.posix.dirname(file),spec));\n    const found=[base,base+'.ts',base+'.tsx',base+'.js',base+'.json',base+'/index.ts'].find(has);if(!found)throw Error('Missing module '+spec+' from '+file);\n    if(found.endsWith('.json'))return JSON.parse(read(found));return load(found);\n   }\n   return rr(spec);\n  }\n  vm.runInThisContext('(function(require,module,exports,__dirname,__filename){'+code+'\\n})',{filename:mode+':'+file})(requireFor,mod,mod.exports,path.join(R,path.posix.dirname(file)),path.join(R,file));return mod.exports;\n }\n return {load,read,has,moduleHashes};\n}\nconst current=loader('current'),pub=loader('public');const locales=current.load('src/lib/public-guidance.ts').PUBLIC_LOCALES_8;\nconst dirs=current.load('src/lib/column-locales.ts').COLUMN_CONTENT_DIR_BY_LOCALE;\nconst currentColumns=current.load('src/lib/columns.ts'),publicColumns=pub.load('src/lib/columns.ts'),currentSort=current.load('src/lib/column-post.ts'),publicSort=pub.load('src/lib/column-post.ts');\nconst currentBoard=current.load('src/data/market-column-curation.ts'),publicBoard=pub.load('src/data/market-column-curation.ts');\nconst cases=[['915','taiwan-public-contract-mediation-arbitration-same-claim','en','litigation',2],['916','taiwan-parent-company-pollution-liability-us-investor','en','company',3],['918','taiwan-presale-mortgage-notice-handover-judgment','zh-hant','litigation',3],['919','taiwan-workplace-bullying-investigation-hearing-judgment','zh-hant','labor',3],['920','taiwan-apartment-ev-charger-common-area-judgment','zh-hant','litigation',3],['921','taiwan-online-game-coins-refund-judgment','zh-hant','litigation',3]].map(([id,slug,sourceLocale,topic,faq])=>({id:Number(id),slug,sourceLocale,topic,faq,filename:id+'-'+slug+'.md'}));\nconst B10=['cs','my','sv','ta','tr','uk','ur'],B11=['fil','he','id','lt','nl','th','vi'];\nconst matrices=[],recent=[];let currentProfessional=0,publicProfessional=0;\nfor(const locale of locales){\n const posts=currentColumns.getAllColumnPosts(locale),publicPosts=publicColumns.getAllColumnPosts(locale),visible=currentBoard.filterMarketBoardColumns(locale,posts),pubVisible=publicBoard.filterMarketBoardColumns(locale,publicPosts);currentProfessional+=posts.length;publicProfessional+=publicPosts.length;\n const fileNames=fs.readdirSync(path.join(R,dirs[locale])).filter(f=>f.endsWith('.md')).sort((a,b)=>a.localeCompare(b,'en'));\n const filesBySlug=new Map(fileNames.map(f=>[f.replace(/\\.md$/,'').replace(/^\\d{3}-/,''),path.posix.join(dirs[locale],f)]));\n const publicFilesBySlug=new Map(contentPublic.filter(p=>path.posix.dirname(p)===dirs[locale]).map(p=>[path.posix.basename(p).replace(/\\.md$/,'').replace(/^\\d{3}-/,''),p]));\n const rows=cases.map(c=>{\n  const exact=path.posix.join(dirs[locale],c.filename),found=posts.filter(p=>p.slug===c.slug),physical=current.has(exact),sourceFile=filesBySlug.get(c.slug)||null;\n  if(physical!==(found.length===1)||found.length>1||(physical&&sourceFile!==exact))throw Error('File/loader mismatch '+exact);\n  const scheduled=B10.includes(locale)?'B10':B11.includes(locale)?'B11':null;\n  return {id:c.id,slug:c.slug,sourceLocale:c.sourceLocale,expectedPath:exact,physicalFilePresent:physical,loaderMatches:found.length,boardVisible:visible.some(p=>p.slug===c.slug),sha256:physical?hash(current.read(exact)):null,publicGitPresent:pub.has(exact),publicGitSHA256:pub.has(exact)?hash(pub.read(exact)):null,status:physical?'CURRENT':scheduled?'PLANNED_'+scheduled:'REMAINING',scheduledBatch:physical?null:scheduled};\n });\n matrices.push({locale,directory:dirs[locale],professional:posts.length,visible:visible.length,publicProfessional:publicPosts.length,publicVisible:pubVisible.length,cases:rows,remainingIds:rows.filter(r=>r.status==='REMAINING').map(r=>r.id)});\n function selection(mode,ps,map,sortModule){\n  const selectedLoader=ps.slice(0,3);\n  const editorial=[...ps].sort((a,b)=>sortModule.getColumnPublicationDate(b).localeCompare(sortModule.getColumnPublicationDate(a))||path.posix.basename(map.get(b.slug)).localeCompare(path.posix.basename(map.get(a.slug)),'en')).slice(0,3);\n  const descriptor=p=>{const file=map.get(p.slug),raw=mode==='public'?pub.read(file):current.read(file),data=matter(raw.toString()).data;const existsNow=current.has(file);return {path:file,slug:p.slug,publicationDate:sortModule.getColumnPublicationDate(p),published:data.published??null,dateDisplay:data.date_display??null,bytes:raw.length,sha256:hash(raw),currentExists:existsNow,currentSHA256:existsNow?hash(current.read(file)):null,sameAsCurrent:existsNow&&hash(raw)===hash(current.read(file))};};\n  return {loaderFirst3:selectedLoader.map(descriptor),editorialFirst3:editorial.map(descriptor),requiredComparisonUnion:[...new Map([...selectedLoader,...editorial].map(p=>[map.get(p.slug),descriptor(p)])).values()]};\n }\n recent.push({locale,neededForB12:rows.some(r=>r.status==='REMAINING'),public:selection('public',publicPosts,publicFilesBySlug,publicSort),current:selection('current',posts,filesBySlug,currentSort)});\n}\nconst sourcePairs=cases.map(c=>{const p=path.posix.join(dirs[c.sourceLocale],c.filename);return {...c,currentPath:p,currentSHA256:hash(current.read(p)),publicSHA256:hash(pub.read(p)),bytes:current.read(p).length,publicAndCurrentMatch:hash(current.read(p))===hash(pub.read(p))};});\nprocess.stdout.write(JSON.stringify({atUTC:new Date().toISOString(),currentCommit,publicCommit,actualLoaderExecution:true,executionMethod:'Existing TypeScript transpileModule in memory; exact production getAllColumnPosts and filterMarketBoardColumns executed. Public fs read adapter uses immutable Git blobs; no source/cache files written.',moduleHashes:{current:current.moduleHashes,public:pub.moduleHashes},cases,planned:{B10,B11},currentProfessional,publicProfessional,locales:matrices,recent,sourcePairs},null,2));\n",
+    "sourceReceipt": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/inventory-execution.json",
+    "scriptSHA256": "ff4c418058a4d4b1e4bfccc3470f5f9df6e555bba01186994b0a6711de8aa821",
+    "exitCode": 0,
+    "stderr": ""
+  },
+  "finishedAtUTC": "2026-10-28T23:16:43.226567+00:00",
+  "headAfter": "25433f39bdb04cb7cae43094b28c92098754da29",
+  "actualProductionLoaderAll49Match": true,
+  "baselineInventory": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/inventory-caption.json",
+    "sha256": "dfd63d0aa84b3bb08b4bb6dbedd165ba4add54d535ff212df4c1783214f4567b"
+  },
+  "sourceDelta": {
+    "added": [
+      "src/content/columns-fil/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-fil/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-fil/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-fil/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-fil/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-fil/921-taiwan-online-game-coins-refund-judgment.md",
+      "src/content/columns-he/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-he/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-he/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-he/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-he/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-he/921-taiwan-online-game-coins-refund-judgment.md",
+      "src/content/columns-id/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "src/content/columns-id/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "src/content/columns-id/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "src/content/columns-id/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "src/content/columns-id/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "src/content/columns-id/921-taiwan-online-game-coins-refund-judgment.md"
+    ],
+    "removed": [],
+    "changed": [],
+    "matchesExactSelection": true
+  },
+  "localeDelta": [
+    {
+      "locale": "ko",
+      "professionalBefore": 229,
+      "professionalAfter": 229,
+      "visibleBefore": 229,
+      "visibleAfter": 229,
+      "delta": 0
+    },
+    {
+      "locale": "zh-hant",
+      "professionalBefore": 308,
+      "professionalAfter": 308,
+      "visibleBefore": 308,
+      "visibleAfter": 308,
+      "delta": 0
+    },
+    {
+      "locale": "en",
+      "professionalBefore": 230,
+      "professionalAfter": 230,
+      "visibleBefore": 230,
+      "visibleAfter": 230,
+      "delta": 0
+    },
+    {
+      "locale": "ja",
+      "professionalBefore": 242,
+      "professionalAfter": 242,
+      "visibleBefore": 242,
+      "visibleAfter": 242,
+      "delta": 0
+    },
+    {
+      "locale": "vi",
+      "professionalBefore": 45,
+      "professionalAfter": 45,
+      "visibleBefore": 45,
+      "visibleAfter": 45,
+      "delta": 0
+    },
+    {
+      "locale": "id",
+      "professionalBefore": 33,
+      "professionalAfter": 39,
+      "visibleBefore": 23,
+      "visibleAfter": 29,
+      "delta": 6
+    },
+    {
+      "locale": "th",
+      "professionalBefore": 31,
+      "professionalAfter": 31,
+      "visibleBefore": 20,
+      "visibleAfter": 20,
+      "delta": 0
+    },
+    {
+      "locale": "fil",
+      "professionalBefore": 31,
+      "professionalAfter": 37,
+      "visibleBefore": 26,
+      "visibleAfter": 32,
+      "delta": 6
+    },
+    {
+      "locale": "ar",
+      "professionalBefore": 34,
+      "professionalAfter": 34,
+      "visibleBefore": 22,
+      "visibleAfter": 22,
+      "delta": 0
+    },
+    {
+      "locale": "de",
+      "professionalBefore": 32,
+      "professionalAfter": 32,
+      "visibleBefore": 18,
+      "visibleAfter": 18,
+      "delta": 0
+    },
+    {
+      "locale": "es",
+      "professionalBefore": 64,
+      "professionalAfter": 64,
+      "visibleBefore": 59,
+      "visibleAfter": 59,
+      "delta": 0
+    },
+    {
+      "locale": "fr",
+      "professionalBefore": 31,
+      "professionalAfter": 31,
+      "visibleBefore": 23,
+      "visibleAfter": 23,
+      "delta": 0
+    },
+    {
+      "locale": "pt",
+      "professionalBefore": 34,
+      "professionalAfter": 34,
+      "visibleBefore": 23,
+      "visibleAfter": 23,
+      "delta": 0
+    },
+    {
+      "locale": "zh-hans",
+      "professionalBefore": 29,
+      "professionalAfter": 29,
+      "visibleBefore": 24,
+      "visibleAfter": 24,
+      "delta": 0
+    },
+    {
+      "locale": "ms",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "ru",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "tr",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "it",
+      "professionalBefore": 32,
+      "professionalAfter": 32,
+      "visibleBefore": 21,
+      "visibleAfter": 21,
+      "delta": 0
+    },
+    {
+      "locale": "nl",
+      "professionalBefore": 32,
+      "professionalAfter": 32,
+      "visibleBefore": 27,
+      "visibleAfter": 27,
+      "delta": 0
+    },
+    {
+      "locale": "pl",
+      "professionalBefore": 32,
+      "professionalAfter": 32,
+      "visibleBefore": 27,
+      "visibleAfter": 27,
+      "delta": 0
+    },
+    {
+      "locale": "hi",
+      "professionalBefore": 34,
+      "professionalAfter": 34,
+      "visibleBefore": 24,
+      "visibleAfter": 24,
+      "delta": 0
+    },
+    {
+      "locale": "sv",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "da",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "nb",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "fi",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "cs",
+      "professionalBefore": 32,
+      "professionalAfter": 32,
+      "visibleBefore": 27,
+      "visibleAfter": 27,
+      "delta": 0
+    },
+    {
+      "locale": "hu",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "ro",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "uk",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "el",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "he",
+      "professionalBefore": 26,
+      "professionalAfter": 32,
+      "visibleBefore": 21,
+      "visibleAfter": 27,
+      "delta": 6
+    },
+    {
+      "locale": "bn",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "ur",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "fa",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "my",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "ta",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "ne",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "km",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "mn",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "sk",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "bg",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "hr",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "sr",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "sl",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "lt",
+      "professionalBefore": 32,
+      "professionalAfter": 32,
+      "visibleBefore": 27,
+      "visibleAfter": 27,
+      "delta": 0
+    },
+    {
+      "locale": "lv",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "et",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "ca",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    },
+    {
+      "locale": "is",
+      "professionalBefore": 30,
+      "professionalAfter": 30,
+      "visibleBefore": 25,
+      "visibleAfter": 25,
+      "delta": 0
+    }
+  ],
+  "validation": {
+    "valid": true,
+    "parseErrors": [],
+    "duplicateSlugs": [],
+    "emptyBodies": [],
+    "missingTitles": []
+  },
+  "totalsBefore": {
+    "professional": 2433,
+    "issues": 143,
+    "boardVisibleLocal": 2166,
+    "distinctProfessionalSlugs": 686,
+    "coreUnion": 493,
+    "coreCommon": 153,
+    "allLocaleCommon": 21,
+    "countDeficitTo286": 11603,
+    "visibleDeficitTo286": 11870,
+    "other45MissingCoreCommon": 5876
+  },
+  "totals": {
+    "professional": 2451,
+    "issues": 143,
+    "boardVisibleLocal": 2184,
+    "distinctProfessionalSlugs": 686,
+    "coreUnion": 493,
+    "coreCommon": 153,
+    "allLocaleCommon": 21,
+    "countDeficitTo286": 11585,
+    "visibleDeficitTo286": 11852,
+    "other45MissingCoreCommon": 5876
+  },
+  "inventorySHA256": "1baed6e317e63e34150842676be905911991a6b3da4f6f96a8aa02c8ed1f5b03",
+  "loaderSHA256": "0a060aae35f806177f0ea8da4f8fedcf160cd15d7eba715accb5aab0653bd8b1",
+  "selectionSHA256": "37566b87e892c048e2b63bf5856bd7fc0fd13d39beffe811a3c4d5016d6c0452",
+  "allSelectedAndPreexistingSourcesUnchanged": true,
+  "publicDeployment": false
+}

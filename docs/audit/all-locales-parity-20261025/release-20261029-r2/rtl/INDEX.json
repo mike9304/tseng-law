@@ -1,0 +1,22 @@
+[
+  {
+    "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rtl-review/REPORT.md",
+    "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/rtl/REPORT.md",
+    "sha256": "6ebcbc9cbc5500d7e133f1490de9b254d469870d77cc5e7d52f70d9048e5dfa1"
+  },
+  {
+    "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rtl-review/manifest.json",
+    "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/rtl/manifest.json",
+    "sha256": "c57a3e1da4ddf4fbcd0fe808df9cff768f143ca88ec19f74d84a5c57ba2eb268"
+  },
+  {
+    "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/build/checks/rtl-fix/red-he-command.json",
+    "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/rtl/red-he-command.json",
+    "sha256": "fdc42bc8ba8cd6694db7e159b8dd30909d42171239ffbd25f1d1800b426eb998"
+  },
+  {
+    "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/build/checks/rtl-fix/green-command.json",
+    "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/rtl/green-command.json",
+    "sha256": "6b050e7a9dca2c36c632ea1225e931f610458ac3dbe83a76827e60e4bf8c21e6"
+  }
+]

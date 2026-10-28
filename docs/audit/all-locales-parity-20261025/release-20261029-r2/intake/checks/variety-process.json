@@ -1,0 +1,11 @@
+{
+  "startedAtUTC": "2026-10-28T23:16:37.515287+00:00",
+  "finishedAtUTC": "2026-10-28T23:16:40.736471+00:00",
+  "command": [
+    "python3",
+    "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/run-variety.py"
+  ],
+  "actualExitCode": 0,
+  "stdout": "{\"files\": 18, \"failed\": 0, \"toolUnchanged\": true, \"allContentUnchanged\": true, \"sourceCount\": 2598, \"byLocale\": {\"fil\": [{\"id\": \"915\", \"exit\": 0, \"sentences\": 40, \"cv\": 0.469}, {\"id\": \"916\", \"exit\": 0, \"sentences\": 46, \"cv\": 0.458}, {\"id\": \"918\", \"exit\": 0, \"sentences\": 51, \"cv\": 0.479}, {\"id\": \"919\", \"exit\": 0, \"sentences\": 47, \"cv\": 0.451}, {\"id\": \"920\", \"exit\": 0, \"sentences\": 42, \"cv\": 0.503}, {\"id\": \"921\", \"exit\": 0, \"sentences\": 52, \"cv\": 0.466}], \"he\": [{\"id\": \"915\", \"exit\": 0, \"sentences\": 40, \"cv\": 0.462}, {\"id\": \"916\", \"exit\": 0, \"sentences\": 40, \"cv\": 0.488}, {\"id\": \"918\", \"exit\": 0, \"sentences\": 40, \"cv\": 0.466}, {\"id\": \"919\", \"exit\": 0, \"sentences\": 35, \"cv\": 0.48}, {\"id\": \"920\", \"exit\": 0, \"sentences\": 41, \"cv\": 0.502}, {\"id\": \"921\", \"exit\": 0, \"sentences\": 44, \"cv\": 0.54}], \"id\": [{\"id\": \"915\", \"exit\": 0, \"sentences\": 38, \"cv\": 0.471}, {\"id\": \"916\", \"exit\": 0, \"sentences\": 42, \"cv\": 0.463}, {\"id\": \"918\", \"exit\": 0, \"sentences\": 44, \"cv\": 0.464}, {\"id\": \"919\", \"exit\": 0, \"sentences\": 44, \"cv\": 0.493}, {\"id\": \"920\", \"exit\": 0, \"sentences\": 40, \"cv\": 0.457}, {\"id\": \"921\", \"exit\": 0, \"sentences\": 46, \"cv\": 0.524}]}}\n",
+  "stderr": ""
+}

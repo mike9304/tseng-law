@@ -1,0 +1,209 @@
+{
+  "schema": "durable-intake-audit-copy-v1",
+  "createdAtUTC": "2026-10-28T23:21:32.194469+00:00",
+  "status": "EXACT_BYTES_VERIFIED",
+  "sourceBase": "/Users/son7/tseng-all-language-columns-20261025",
+  "destinationRoot": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake",
+  "copiedPayloadFiles": 18,
+  "copiedPayloadBytes": 2143886,
+  "copies": [
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/he-independent-r2-current.md",
+      "originalRelativeToBase": "batch11/reviews/he-independent-r2-current.md",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/reviews/he-independent-r2-current.md",
+      "copyRelativeToIndex": "reviews/he-independent-r2-current.md",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/reviews/he-independent-r2-current.md",
+      "sha256": "fecc887d1f899c62dbf870a74286cf422c766d9ba1e58d231990509786777f7f",
+      "bytes": 12820,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/fil-independent-r3-current.md",
+      "originalRelativeToBase": "batch11/reviews/fil-independent-r3-current.md",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/reviews/fil-independent-r3-current.md",
+      "copyRelativeToIndex": "reviews/fil-independent-r3-current.md",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/reviews/fil-independent-r3-current.md",
+      "sha256": "a976cf4737ea479f3a03693dcc0b5f05b70db870cfa9935a5a32d317016e9986",
+      "bytes": 9356,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/id-independent-r3-current.md",
+      "originalRelativeToBase": "batch11/reviews/id-independent-r3-current.md",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/reviews/id-independent-r3-current.md",
+      "copyRelativeToIndex": "reviews/id-independent-r3-current.md",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/reviews/id-independent-r3-current.md",
+      "sha256": "5f4956ac9843d3d404dcbff2ff5b0fe4feb1af9c68b0f0cb24ce0e0ceed29e34",
+      "bytes": 8896,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/he-current-independent-r2-final-manifest.json",
+      "originalRelativeToBase": "batch11/checks/he-current-independent-r2-final-manifest.json",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/closures/he-current-independent-r2-final-manifest.json",
+      "copyRelativeToIndex": "closures/he-current-independent-r2-final-manifest.json",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/closures/he-current-independent-r2-final-manifest.json",
+      "sha256": "beb5ee520eb0f1457b9c9b4676b8cf1d5a5542542fd19a99715a7240b81b043c",
+      "bytes": 6346,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/fil-current-r3-final-manifest.json",
+      "originalRelativeToBase": "batch11/checks/fil-current-r3-final-manifest.json",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/closures/fil-current-r3-final-manifest.json",
+      "copyRelativeToIndex": "closures/fil-current-r3-final-manifest.json",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/closures/fil-current-r3-final-manifest.json",
+      "sha256": "ef1ca5f02d701e9a6ad4b28795cc591c2fdc0382bbf812f6dfb162923e472046",
+      "bytes": 11055,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/id-current-r3-final-manifest.json",
+      "originalRelativeToBase": "batch11/checks/id-current-r3-final-manifest.json",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/closures/id-current-r3-final-manifest.json",
+      "copyRelativeToIndex": "closures/id-current-r3-final-manifest.json",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/closures/id-current-r3-final-manifest.json",
+      "sha256": "3271064f65a6795cb3869aecf9f550072af521a42f9887299e2ecf5b3b437a84",
+      "bytes": 23926,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/FINAL.json",
+      "originalRelativeToBase": "release-20261029/rebuild-intake/FINAL.json",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/intake-final.json",
+      "copyRelativeToIndex": "checks/intake-final.json",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/intake-final.json",
+      "sha256": "c6172d367f20c0fc504ae1792a8ac8164627d1bc1b851f498ef2cb4f0caa32ca",
+      "bytes": 19531,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/REPORT.md",
+      "originalRelativeToBase": "release-20261029/rebuild-intake/REPORT.md",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/intake-report.md",
+      "copyRelativeToIndex": "checks/intake-report.md",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/intake-report.md",
+      "sha256": "81be8fc692edb2171293a65cf62952b98ad724d2717698972b4985d57007650f",
+      "bytes": 3399,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/variety.json",
+      "originalRelativeToBase": "release-20261029/rebuild-intake/variety.json",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/variety.json",
+      "copyRelativeToIndex": "checks/variety.json",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/variety.json",
+      "sha256": "8222b1242af436c52589f7809025d0ca7557d4d35277934d9a76fc27803363d6",
+      "bytes": 740315,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/structure-final.json",
+      "originalRelativeToBase": "release-20261029/rebuild-intake/structure-final.json",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/structure-final.json",
+      "copyRelativeToIndex": "checks/structure-final.json",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/structure-final.json",
+      "sha256": "6cca928a03c6bc31af9e231dd7428a88ee7332693823c293f06395a918b475f9",
+      "bytes": 1175801,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/inventory-execution.json",
+      "originalRelativeToBase": "release-20261029/rebuild-intake/inventory-execution.json",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/loader-execution-summary.json",
+      "copyRelativeToIndex": "checks/loader-execution-summary.json",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/loader-execution-summary.json",
+      "sha256": "44ed9d74d9d3dfd215b1e7acb8b8f01dca31230d9c29f8b9d0b1f806b30f563c",
+      "bytes": 21554,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/inventory-process.json",
+      "originalRelativeToBase": "release-20261029/rebuild-intake/inventory-process.json",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/loader-process-summary.json",
+      "copyRelativeToIndex": "checks/loader-process-summary.json",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/loader-process-summary.json",
+      "sha256": "6348a54490799d6dc6644d45274bd2609c1913a45a53b770f8d04e5f1ef23eef",
+      "bytes": 1189,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/variety-process.json",
+      "originalRelativeToBase": "release-20261029/rebuild-intake/variety-process.json",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/variety-process.json",
+      "copyRelativeToIndex": "checks/variety-process.json",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/variety-process.json",
+      "sha256": "6881b8395120baa5cd457158b71d22ceb0ed005d0d1c96c978db2494f55333f1",
+      "bytes": 1647,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/structure-process.json",
+      "originalRelativeToBase": "release-20261029/rebuild-intake/structure-process.json",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/structure-process.json",
+      "copyRelativeToIndex": "checks/structure-process.json",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/structure-process.json",
+      "sha256": "ed959c227f3f452fff2f226987f7c42603b431655913eb0e1e45c4de57097051",
+      "bytes": 487,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/link-integrity.json",
+      "originalRelativeToBase": "release-20261029/rebuild-intake/link-integrity.json",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/link-integrity.json",
+      "copyRelativeToIndex": "checks/link-integrity.json",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/link-integrity.json",
+      "sha256": "fe3f587aaef5953332bc58e45c1c77fc09843a51c79fc4b10e62453162ceabbe",
+      "bytes": 102386,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/link-integrity.md",
+      "originalRelativeToBase": "release-20261029/rebuild-intake/link-integrity.md",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/link-integrity.md",
+      "copyRelativeToIndex": "checks/link-integrity.md",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/checks/link-integrity.md",
+      "sha256": "a457d239c2e3594459b1ba9b43175325552791e358a2c3e4594ff27137aa87b6",
+      "bytes": 3081,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch11/kimi-fil/run-r3-process.json",
+      "originalRelativeToBase": "batch11/kimi-fil/run-r3-process.json",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/process/kimi-fil-r3-process.json",
+      "copyRelativeToIndex": "process/kimi-fil-r3-process.json",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/process/kimi-fil-r3-process.json",
+      "sha256": "4a833aee451667a6414399249d31f9ac6e46b1a1722e3cbcd251ef4ff3ce37dc",
+      "bytes": 1049,
+      "boundToAcceptedManifest": true
+    },
+    {
+      "original": "/Users/son7/tseng-all-language-columns-20261025/batch11/kimi-id/run-r3-process.json",
+      "originalRelativeToBase": "batch11/kimi-id/run-r3-process.json",
+      "copy": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/process/kimi-id-r3-process.json",
+      "copyRelativeToIndex": "process/kimi-id-r3-process.json",
+      "copyRelativeToRepo": "docs/audit/all-locales-parity-20261025/release-20261029-r2/intake/process/kimi-id-r3-process.json",
+      "sha256": "c8d43c50541bde7dfcd1562c7ab295a5b92773b3feb8f5a5a243c778725a193f",
+      "bytes": 1048,
+      "boundToAcceptedManifest": true
+    }
+  ],
+  "referencePolicy": {
+    "originalReferencesPreserved": true,
+    "whitespaceAndLineEndingsPreserved": true,
+    "lookup": "Map original absolute paths to copies using copies[].original and copies[].copyRelativeToIndex. Relative copy locations are relative to this INDEX.json directory.",
+    "history": "Original reports and manifests retain their original absolute paths and historical references. This compact snapshot does not vendor every upstream proof, prior review, input corpus, canonical snapshot, or raw runner log. Those referenced originals remain at their recorded paths and hashes. Do not silently reinterpret historical R1/R2 findings as current findings.",
+    "loader": "checks/loader-execution-summary.json is an exact copy of inventory-execution.json, including actual loader exit, source hash, 49 locale deltas, exact source delta and totals. checks/loader-process-summary.json is the exact process receipt. The larger complete loader output is not duplicated.",
+    "fullLoaderOriginal": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/production-loader.json",
+      "sha256": "0a060aae35f806177f0ea8da4f8fedcf160cd15d7eba715accb5aab0653bd8b1",
+      "bytes": 912183
+    }
+  },
+  "scopeNotes": [
+    "HE current independent targeted R2 closure; FIL current independent targeted R3 closure.",
+    "ID required findings closed in returned-file followup; reviewer participated in proposals and root reviewed the complete proposal before Kimi execution. Keep this scope and the three optional items, not a new uninvolved independent review claim.",
+    "Kimi process receipts include process metadata and raw-log sizes/hashes only. Raw stdout/stderr reasoning logs, API credentials, environment files and input secret stores were not copied.",
+    "No manuscript/test/runtime/old-audit edits or commit/push/deploy performed by this copy task."
+  ]
+}

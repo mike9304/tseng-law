@@ -1,0 +1,11 @@
+{
+  "startedAtUTC": "2026-10-28T23:16:37.512712+00:00",
+  "finishedAtUTC": "2026-10-28T23:16:38.494752+00:00",
+  "command": [
+    "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+    "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/run-structure.mjs"
+  ],
+  "actualExitCode": 0,
+  "stdout": "{\n  \"selected\": 18,\n  \"errors\": 0,\n  \"metadataErrors\": 0,\n  \"reviewItems\": 96,\n  \"faqNewTotal\": 51,\n  \"errorRows\": []\n}\n",
+  "stderr": ""
+}

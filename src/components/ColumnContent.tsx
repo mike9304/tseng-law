@@ -72,33 +72,62 @@ function asciiArticleDigits(value: string): string {
   ));
 }
 
-/** Legal IDs keep their group order even inside an RTL sentence. */
-function isolateLinkedArticleNumber(href: string, children: ReactNode): ReactNode {
-  let article: string | undefined;
-  try {
-    const url = new URL(href);
-    if (url.origin !== 'https://law.moj.gov.tw') return children;
-    if (/^\/(?:ENG\/)?LawClass\/LawSingle\.aspx$/.test(url.pathname)) {
-      article = url.searchParams.get('flno') ?? undefined;
-    } else if (/^\/(?:ENG\/)?LawClass\/LawAll\.aspx$/.test(url.pathname)) {
-      // Whole-law links have no flno; only an explicit Persian article label
-      // identifies this as an article number, rather than an ordinary range.
-      const label = getNodeText(children);
-      const match = label.match(/(?:^|[\s،])ماده[\u064b-\u065f]*\s+([0-9٠-٩۰-۹]+(?:-[0-9٠-٩۰-۹]+)+)/u);
-      article = match ? asciiArticleDigits(match[1]) : undefined;
-    }
-  } catch {
-    return children;
-  }
-  if (!article || !/^\d+(?:-\d+)+$/.test(article)) return children;
+/** Links have their own authority check; code and existing isolates are opaque. */
+function isProtectedArticleNode(node: ReactNode): boolean {
+  return isValidElement<{ href?: string; node?: { tagName?: string } }>(node) && (
+    node.type === 'a' || node.type === 'code' || node.type === 'bdi'
+    || node.props.href != null || node.props.node?.tagName === 'a'
+  );
+}
 
+/** Isolate only the labelled ID span, not an equal ordinary range elsewhere. */
+function isolateArticleNumbers(children: ReactNode, linkedArticle?: string): ReactNode {
+  const eligibleText = (node: ReactNode): string => {
+    if (typeof node === 'string' || typeof node === 'number') return String(node);
+    if (Array.isArray(node)) return node.map(eligibleText).join('');
+    if (isProtectedArticleNode(node)) return '\0';
+    if (isValidElement<{ children?: ReactNode }>(node)) return eligibleText(node.props.children);
+    return '';
+  };
+  const text = eligibleText(children);
+  const spans: Array<{ start: number; end: number }> = [];
+  if (linkedArticle) {
+    for (const match of text.matchAll(/[0-9٠-٩۰-۹]+(?:-[0-9٠-٩۰-۹]+)+/gu)) {
+      if (asciiArticleDigits(match[0]) === linkedArticle) {
+        spans.push({ start: match.index, end: match.index + match[0].length });
+      }
+    }
+  } else {
+    // Explicit Persian, Urdu, Arabic and Hebrew article labels only. Hebrew
+    // prefixes cover the actual "in section" / "that in section" references.
+    for (const match of text.matchAll(/(?:^|[^\p{L}\p{M}\p{N}])(?:ماده[\u064b-\u065f]*|دفعہ|المادة|(?:שב|ב)?סעיף)\s+([0-9٠-٩۰-۹]+(?:-[0-9٠-٩۰-۹]+)+)(?![\p{L}\p{M}\p{N}-])/gu)) {
+      const end = match.index + match[0].length;
+      spans.push({ start: end - match[1].length, end });
+    }
+  }
+  if (!spans.length) return children;
+
+  let offset = 0;
   const isolate = (nodes: ReactNode): ReactNode => Children.map(nodes, (node) => {
-    if (typeof node === 'string') {
-      return node.split(/([0-9٠-٩۰-۹]+(?:-[0-9٠-٩۰-۹]+)+)/u).map((part, index) => (
-        asciiArticleDigits(part) === article
-          ? <bdi key={index} dir="ltr">{part}</bdi>
-          : part
-      ));
+    if (typeof node === 'string' || typeof node === 'number') {
+      const value = String(node);
+      const start = offset;
+      offset += value.length;
+      const matches = spans.filter((span) => span.start >= start && span.end <= offset);
+      if (!matches.length) return node;
+      const parts: ReactNode[] = [];
+      let cursor = 0;
+      for (const span of matches) {
+        parts.push(value.slice(cursor, span.start - start));
+        parts.push(<bdi key={span.start} dir="ltr" style={{ whiteSpace: 'nowrap' }}>{value.slice(span.start - start, span.end - start)}</bdi>);
+        cursor = span.end - start;
+      }
+      parts.push(value.slice(cursor));
+      return parts;
+    }
+    if (isProtectedArticleNode(node)) {
+      offset += 1; // Same separator used by eligibleText; matches cannot cross it.
+      return node;
     }
     if (isValidElement<{ children?: ReactNode }>(node) && node.props.children != null) {
       return cloneElement(node, undefined, isolate(node.props.children));
@@ -106,6 +135,26 @@ function isolateLinkedArticleNumber(href: string, children: ReactNode): ReactNod
     return node;
   });
   return isolate(children);
+}
+
+/** Official single-article URLs identify the exact ID independently of language. */
+function isolateLinkedArticleNumber(href: string, children: ReactNode): ReactNode {
+  try {
+    const url = new URL(href);
+    if (url.origin !== 'https://law.moj.gov.tw') return children;
+    if (/^\/(?:ENG\/)?LawClass\/LawSingle\.aspx$/.test(url.pathname)) {
+      const article = url.searchParams.get('flno');
+      return article && /^\d+(?:-\d+)+$/.test(article)
+        ? isolateArticleNumbers(children, article)
+        : children;
+    }
+    if (/^\/(?:ENG\/)?LawClass\/LawAll\.aspx$/.test(url.pathname)) {
+      return isolateArticleNumbers(children);
+    }
+  } catch {
+    // Relative and non-URL links cannot identify an official legal article.
+  }
+  return children;
 }
 
 /**
@@ -242,14 +291,14 @@ export default function ColumnContent({
           // `id` comes from remarkColumnSectionIds (sec-1…n, document order).
           h2: ({ children, id }) => (
             <h2 className="blog-heading" id={id}>
-              {children}
+              {isolateArticleNumbers(children)}
             </h2>
           ),
-          h3: ({ children }) => <h3 className="blog-heading">{children}</h3>,
+          h3: ({ children }) => <h3 className="blog-heading">{isolateArticleNumbers(children)}</h3>,
           p: ({ children }) => {
             // Imported spacer-only paragraphs must not add blank reading lines.
             if (typeof children === 'string' && /^[\s\u200B]*$/.test(children)) return null;
-            return <p className="blog-paragraph">{children}</p>;
+            return <p className="blog-paragraph">{isolateArticleNumbers(children)}</p>;
           },
           table: ({ children }) => {
             const hint = tableScrollHint ?? getColumnTableScrollHint(uiLocale);

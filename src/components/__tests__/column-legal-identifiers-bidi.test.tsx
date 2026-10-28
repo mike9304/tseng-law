@@ -13,20 +13,111 @@ describe('direction of linked legal article identifiers', () => {
   ])('isolates %s without changing the linked text', (label, article, identifier) => {
     const href = `https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=${article}`;
     const html = renderToStaticMarkup(<ColumnContent content={`[${label}](${href})`} />);
-    expect(html).toContain(`<bdi dir="ltr">${identifier}</bdi>`);
+    expect(html).toContain(`<bdi dir="ltr" style="white-space:nowrap">${identifier}</bdi>`);
     expect(html.replace(/<[^>]+>/g, '')).toBe(label);
     expect(html).toContain(`href="${href.replace('&', '&amp;')}"`);
   });
 
   it('keeps formatting around a linked identifier', () => {
     const html = renderToStaticMarkup(<ColumnContent content="[مادهٔ *۸۵-۱*](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=85-1)" />);
-    expect(html).toContain('<em><bdi dir="ltr">۸۵-۱</bdi></em>');
+    expect(html).toContain('<em><bdi dir="ltr" style="white-space:nowrap">۸۵-۱</bdi></em>');
   });
 
   it.each(['مادهٔ ۸۵-۱ قانون تدارکات دولتی', 'قانون تدارکات دولتی، مادهٔ ۸۵-۱'])('recognizes an explicit Persian article in a whole-law link: %s', (label) => {
     const html = renderToStaticMarkup(<ColumnContent content={`[${label}](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057)`} />);
-    expect(html).toContain('<bdi dir="ltr">۸۵-۱</bdi>');
+    expect(html).toContain('<bdi dir="ltr" style="white-space:nowrap">۸۵-۱</bdi>');
     expect(html.replace(/<[^>]+>/g, '')).toBe(label);
+  });
+
+  // Real UR915 whole-law labels need the same isolation as the existing Persian labels.
+  it.each(['سرکاری خریداری کے قانون کی دفعہ 85-1', 'Government Procurement Act، دفعہ 85-1'])('isolates an explicit Urdu article in a whole-law link: %s', (label) => {
+    const href = 'https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057';
+    const html = renderToStaticMarkup(<ColumnContent content={`[${label}](${href})`} />);
+    expect(html).toContain('<bdi dir="ltr" style="white-space:nowrap">85-1</bdi>');
+    expect(html.replace(/<[^>]+>/g, '')).toBe(label);
+    expect(html).toContain(`href="${href}"`);
+  });
+
+  it.each([
+    ['##', 'h2'],
+    ['###', 'h3'],
+  ])('keeps the Urdu article number together in a %s heading', (marker, tag) => {
+    const label = 'موجودہ دفعہ 85-1 میں ادارے کا اختلاف کس بات سے ہو';
+    const html = renderToStaticMarkup(<ColumnContent content={`${marker} ${label}`} />);
+    expect(html).toContain(`<${tag} `);
+    expect(html).toContain('<bdi dir="ltr" style="white-space:nowrap">85-1</bdi>');
+    expect(html.replace(/<[^>]+>/g, '')).toBe(label);
+    if (tag === 'h2') expect(html).toContain('id="sec-1"');
+  });
+
+  it('preserves nested emphasis and section IDs without double-isolating a linked heading', () => {
+    const content = '## [دفعہ *85-1*](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057)';
+    const html = renderToStaticMarkup(<ColumnContent content={content} sectionIdOffset={4} />);
+    expect(html).toContain('id="sec-5"');
+    expect(html).toContain('<em><bdi dir="ltr" style="white-space:nowrap">85-1</bdi></em>');
+    expect(html.match(/<bdi /g)).toHaveLength(1);
+    expect(html.replace(/<[^>]+>/g, '')).toBe('دفعہ 85-1');
+  });
+
+  it.each(['סעיף 85-1 לחוק הרכש הציבורי בטייוואן', 'חוק הרכש הציבורי, סעיף 85-1'])('isolates the actual Hebrew whole-law reference: %s', (label) => {
+    const href = 'https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057';
+    const html = renderToStaticMarkup(<ColumnContent content={`[${label}](${href})`} />);
+    expect(html).toContain('<bdi dir="ltr" style="white-space:nowrap">85-1</bdi>');
+    expect(html.replace(/<[^>]+>/g, '')).toBe(label);
+    expect(html).toContain(`href="${href}"`);
+  });
+
+  it.each([
+    'המסלול המסוים בסעיף 85-1 חל על המחלוקת.',
+    'המחלוקת צריכה להיות בקטגוריה שבסעיף 85-1.',
+    'مادهٔ ۸۵-۱ قانون تدارکات دولتی',
+    'المادة ٨٥-١ من القانون',
+    'دفعہ 85-1 کے تحت',
+  ])('isolates an explicitly labelled plain-text article: %s', (label) => {
+    const html = renderToStaticMarkup(<ColumnContent content={label} />);
+    expect(html).toMatch(/<bdi dir="ltr" style="white-space:nowrap">[0-9٠-٩۰-۹]+-[0-9٠-٩۰-۹]+<\/bdi>/u);
+    expect(html.replace(/<[^>]+>/g, '')).toBe(label);
+  });
+
+  it('isolates only the labelled identifier, preserving an equal ordinary range and inline emphasis', () => {
+    const html = renderToStaticMarkup(<ColumnContent content="סעיף *85-1* חל כאן, טווח 85-1 ימים." />);
+    expect(html).toContain('<em><bdi dir="ltr" style="white-space:nowrap">85-1</bdi></em>');
+    expect(html.match(/<bdi /g)).toHaveLength(1);
+    expect(html).toContain('טווח 85-1 ימים.');
+    expect(html.replace(/<[^>]+>/g, '')).toBe('סעיף 85-1 חל כאן, טווח 85-1 ימים.');
+  });
+
+  it('keeps excluded foreign links and code from shifting later plain article spans', () => {
+    const content = '[סעיף 85-1](https://example.com/) `סעיף 85-1` ואז בסעיף 85-1.';
+    const html = renderToStaticMarkup(<ColumnContent content={content} />);
+    expect(html).toContain('class="link-underline">סעיף 85-1</a>');
+    expect(html).toContain('<code>סעיף 85-1</code>');
+    expect(html).toContain('ואז בסעיף <bdi dir="ltr" style="white-space:nowrap">85-1</bdi>.');
+    expect(html.match(/<bdi /g)).toHaveLength(1);
+  });
+
+  it.each([
+    'טווח 85-1 ימים',
+    'מסעיפים 85-1',
+    'המילהסעיף 85-1',
+    '`دفعہ 85-1`',
+    '```text\nסעיף 85-1\n```',
+    'دفعہ [85-1](https://example.com/)',
+    'دفعہ `85-1`',
+    '[دفعہ 85-1](https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=22-2)',
+  ])('does not reinterpret protected or unrelated inline content: %s', (content) => {
+    const html = renderToStaticMarkup(<ColumnContent content={content} />);
+    expect(html).not.toContain('<bdi');
+  });
+
+  it.each([
+    '## 85-1 دن کا وقفہ',
+    '### دفعہ وار 85-1 دن',
+    '[85-1 دن](https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057)',
+    '[دفعہ 85-1](https://example.com/ENG/LawClass/LawAll.aspx?pcode=A0030057)',
+  ])('leaves an unrelated range or non-official link unchanged: %s', (content) => {
+    const html = renderToStaticMarkup(<ColumnContent content={content} />);
+    expect(html).not.toContain('<bdi');
   });
 
   it.each([

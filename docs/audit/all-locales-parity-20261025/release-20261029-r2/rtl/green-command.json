@@ -1,0 +1,18 @@
+{
+  "phase": "GREEN targeted after bounded explicit article span fix",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "src/components/__tests__/column-legal-identifiers-bidi.test.tsx"
+  ],
+  "startedAt": "2026-10-28T23:19:55.499654+00:00",
+  "inputs": {
+    "src/components/ColumnContent.tsx": "ee079d37ece2c089f89dddcc342ee5c94ee86e795179faeab2d4e4bddd51c0fb",
+    "src/components/__tests__/column-legal-identifiers-bidi.test.tsx": "e683cba6a1fafcb2ff69e42e90515ebefe8360b4f478d2c7d5f9be8c68367f70"
+  },
+  "exitCode": 0,
+  "finishedAt": "2026-10-28T23:19:56.532863+00:00",
+  "logSHA256": "37fa31a9db01de0aa274bcb9e07f02a9222f1e443130ee09c035235f16a1fa3f",
+  "inputsUnchanged": true
+}

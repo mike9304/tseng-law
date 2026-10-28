@@ -1,0 +1,146 @@
+{
+  "atUTC": "2026-10-28T23:10:04.586417+00:00",
+  "status": "CLOSED_CURRENT_SHA_BOUND",
+  "reviewer": "/root/b10_intake",
+  "scope": "HE6 current R2 exact7 changes in5 files plus unchanged918; independent targeted semantic closure on prior full R1 review",
+  "openFindings": {
+    "mandatory": 0,
+    "optional": 0,
+    "style": 0
+  },
+  "files": [
+    {
+      "id": "915",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "13686c0b8d093322fdb54c901113003f4b050d904bc230294e3bef4a0c1587ae",
+      "edits": [
+        "M01",
+        "A01"
+      ],
+      "actualCLI": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/he-author-r2-variety-followup.json",
+        "sha256": "db77a6a485fe17573d8a346049001309e81b387aadaa236ac6557a7def2a5062",
+        "individualExit": 0
+      }
+    },
+    {
+      "id": "916",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "ee8f0e937503cf9479373428714d7253b1da4910e1ecddba0a234c6cea998ab5",
+      "edits": [
+        "S03"
+      ],
+      "actualCLI": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/he-author-r2-variety-initial.json",
+        "sha256": "5fb88b8bf3f84a43835f9e3b91e668a0fdfbe38dbd5081d324ea3e15924d3458",
+        "individualExit": 0
+      }
+    },
+    {
+      "id": "918",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "33a2695bf2074426d050bd3d12d3f00bf469ce8b7d56ce8b47d1b30f84a41a6c",
+      "edits": [],
+      "actualCLI": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/he-variety-self-review.json",
+        "sha256": "71d48c913531ac1bdde919dbd00771fe0fac651c1b725600fa700509855d6fbb",
+        "individualExit": 0
+      }
+    },
+    {
+      "id": "919",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "65b2b5695d768c01cab21c4305e718c8fdbe0e00196ac7a1422bc9dbf5402cd1",
+      "edits": [
+        "S02"
+      ],
+      "actualCLI": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/he-author-r2-variety-initial.json",
+        "sha256": "5fb88b8bf3f84a43835f9e3b91e668a0fdfbe38dbd5081d324ea3e15924d3458",
+        "individualExit": 0
+      }
+    },
+    {
+      "id": "920",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "3ae4321156061392f5ef5a6b246b58e630dc5311500c76ca5c51373b669ec539",
+      "edits": [
+        "M02",
+        "S01"
+      ],
+      "actualCLI": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/he-author-r2-variety-initial.json",
+        "sha256": "5fb88b8bf3f84a43835f9e3b91e668a0fdfbe38dbd5081d324ea3e15924d3458",
+        "individualExit": 0
+      }
+    },
+    {
+      "id": "921",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "91f41497e68765d909d49900d97eff1c717bee49a6bbfd0e60745bab6a977aff",
+      "edits": [
+        "M03"
+      ],
+      "actualCLI": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/he-author-r2-variety-initial.json",
+        "sha256": "5fb88b8bf3f84a43835f9e3b91e668a0fdfbe38dbd5081d324ea3e15924d3458",
+        "individualExit": 0
+      }
+    }
+  ],
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/he-independent-r2-current.md",
+    "sha256": "fecc887d1f899c62dbf870a74286cf422c766d9ba1e58d231990509786777f7f"
+  },
+  "proof": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/he-current-independent-r2-proof.json",
+    "sha256": "41f9f6e9aea458c5d6a6caea117d317e24af634f12b0ce596e30ba0e586ea4c5"
+  },
+  "proofRunner": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/he-current-independent-r2-proof.py",
+    "sha256": "9673670133f263fe278edd00a542d74f2383a16c46f05507b27390b6eb9f3a32"
+  },
+  "sourceObservations": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/he-current-independent-r2-sources.json",
+    "sha256": "3379174145f3ec6b6cd8edc2114985460e67a1a6ee29ef54ff61f34e0f3cd5be"
+  },
+  "authorManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/he-author-r2-final-manifest.json",
+    "sha256": "7da39e88c7e241654b8e4495229132fbd9477851b376db3bc36238cab4e491e2"
+  },
+  "priorIndependentReview": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/he-independent.md",
+    "sha256": "8eec92c662e56af8c49a267c322ec72c1462a8ba274c3047bf66c275b12c36fc"
+  },
+  "root921Adjudication": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/921-scope-adjudication.md",
+    "sha256": "91d42a86a336cb6e0b92b883a64b86254cd793595d81986314d046b38e6c4422"
+  },
+  "allInputGuardsStableAtClosure": true,
+  "guardObservations": 69,
+  "totals": {
+    "FAQ": 17,
+    "oldSegments": 240,
+    "currentSegments": 240,
+    "identicalSegments": 231,
+    "newOrReplacedSegments": 9,
+    "changedParagraphs": 7,
+    "resultingSentencesRead": 19
+  },
+  "dispositions": {
+    "M01": "필수 의미 오류 종결",
+    "M02": "필수 사실 오류 종결",
+    "M03": "선택 정밀화 채택·종결",
+    "S01": "편집 문체 종결",
+    "S02": "편집 문체 종결",
+    "S03": "조건 주체 명료화 종결",
+    "A01": "실제 915 리듬 실패 후속 종결"
+  },
+  "limits": [
+    "AI independent targeted review; no human/native/lawyer approval",
+    "No manuscript/R/shared tool edits, commit, push, deploy",
+    "No fresh whole CLI/structure rerun; current exact SHA actual receipts, tool SHA and fresh metrics/arrays verified",
+    "No browser RTL/FAQ UI/JSON-LD or live-site claim",
+    "M03 optional precision per root adjudication; historical report classification preserved, not a new cross-locale gate"
+  ]
+}

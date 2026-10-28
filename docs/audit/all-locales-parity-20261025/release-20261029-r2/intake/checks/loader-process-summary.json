@@ -1,0 +1,11 @@
+{
+  "startedAtUTC": "2026-10-28T23:16:37.514553+00:00",
+  "finishedAtUTC": "2026-10-28T23:16:43.256468+00:00",
+  "command": [
+    "python3",
+    "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/run-inventory.py"
+  ],
+  "actualExitCode": 0,
+  "stdout": "{\"totals\": {\"professional\": 2451, \"issues\": 143, \"boardVisibleLocal\": 2184, \"distinctProfessionalSlugs\": 686, \"coreUnion\": 493, \"coreCommon\": 153, \"allLocaleCommon\": 21, \"countDeficitTo286\": 11585, \"visibleDeficitTo286\": 11852, \"other45MissingCoreCommon\": 5876}, \"added\": 18, \"removed\": 0, \"changed\": 0, \"49LoaderRowsMatched\": true, \"localeDeltas\": [{\"locale\": \"id\", \"professionalBefore\": 33, \"professionalAfter\": 39, \"visibleBefore\": 23, \"visibleAfter\": 29, \"delta\": 6}, {\"locale\": \"fil\", \"professionalBefore\": 31, \"professionalAfter\": 37, \"visibleBefore\": 26, \"visibleAfter\": 32, \"delta\": 6}, {\"locale\": \"he\", \"professionalBefore\": 26, \"professionalAfter\": 32, \"visibleBefore\": 21, \"visibleAfter\": 27, \"delta\": 6}], \"inventorySHA256\": \"1baed6e317e63e34150842676be905911991a6b3da4f6f96a8aa02c8ed1f5b03\"}\n",
+  "stderr": ""
+}

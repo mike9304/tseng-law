@@ -1,0 +1,244 @@
+{
+  "atUTC": "2026-10-28T23:10:51.403566+00:00",
+  "status": "CLOSED_AT_CURRENT_SHA",
+  "scope": "Independent targeted FIL R3 semantic/editorial review, carried forward exact R2 full review with unchanged-rest proof; not deployment or human/attorney review",
+  "mandatoryFindingsRemaining": [],
+  "closedR2Findings": [
+    "R2-M01",
+    "R2-M02",
+    "R2-M03",
+    "R2-M04",
+    "R2-M05",
+    "R2-M06"
+  ],
+  "optionalPoint4Clarification": "Adopted; supported by same official PDF previously read, not falsely framed as R2 deletion",
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/fil-independent-r3-current.md",
+    "sha256": "a976cf4737ea479f3a03693dcc0b5f05b70db870cfa9935a5a32d317016e9986",
+    "bytes": 9356
+  },
+  "articles": [
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "81aa1d77010534d340d53c26da396d580b0aedd3b7f5f6c1f6aa19408ff756ae",
+      "bytes": 8525,
+      "unchangedFromR2": false,
+      "edits": 2,
+      "sentences": 40,
+      "actualCheckerExit": 0
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "989a52f2425466424fe606feabe9018ac9be07b4d86b2e5a3bac507e0c5c8f57",
+      "bytes": 9355,
+      "unchangedFromR2": true,
+      "edits": 0,
+      "sentences": 46,
+      "actualCheckerExit": 0
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "3c4eea0816ea6c3b1cda1c0ff0d58a5a1cd5d382203b989f99a96409d9fc0e8a",
+      "bytes": 9163,
+      "unchangedFromR2": false,
+      "edits": 1,
+      "sentences": 51,
+      "actualCheckerExit": 0
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b90be403a02cfe7f224166829546a2da9bf5de8976fed0144c328013d974259c",
+      "bytes": 8912,
+      "unchangedFromR2": true,
+      "edits": 0,
+      "sentences": 47,
+      "actualCheckerExit": 0
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "73d56d56342b0c377e8f789ebf9760bdec501835cbb6de568354f10cae655fa4",
+      "bytes": 8572,
+      "unchangedFromR2": false,
+      "edits": 2,
+      "sentences": 42,
+      "actualCheckerExit": 0
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d9a83048e594c305177b613ddbf56fe0b76d4d7f20d1f93bff95fbbd41f6d8bc",
+      "bytes": 9453,
+      "unchangedFromR2": false,
+      "edits": 2,
+      "sentences": 52,
+      "actualCheckerExit": 0
+    }
+  ],
+  "inputBindingsEnd": [
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/EDITORIAL-VOICE.md",
+      "expectedSHA256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "actualSHA256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/COLUMN-VOICE-RULE.md",
+      "expectedSHA256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "actualSHA256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/SENTENCE-VARIETY-RULE.md",
+      "expectedSHA256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "actualSHA256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/LESSONS.md",
+      "expectedSHA256": "adcb20ff50cd7cbb682fda48efbb253b1f152857cc4ecd52c0c3658d5fda157b",
+      "actualSHA256": "adcb20ff50cd7cbb682fda48efbb253b1f152857cc4ecd52c0c3658d5fda157b",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "expectedSHA256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "actualSHA256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "expectedSHA256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "actualSHA256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "expectedSHA256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "actualSHA256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "expectedSHA256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "actualSHA256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "expectedSHA256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "actualSHA256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "expectedSHA256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "actualSHA256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/recent-fil-706-taiwan-arc-renewal-changes-reentry.md",
+      "expectedSHA256": "8efd98ba2187a676ad7965d9b5d9281897522599b54f4795ba29fa621426ffae",
+      "actualSHA256": "8efd98ba2187a676ad7965d9b5d9281897522599b54f4795ba29fa621426ffae",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/recent-fil-705-taiwan-visa-residence-work-study-family.md",
+      "expectedSHA256": "b3d5a3132b260ef14653bab7ea8e40ce303817b76365d22d29c2df62fc93e70e",
+      "actualSHA256": "b3d5a3132b260ef14653bab7ea8e40ce303817b76365d22d29c2df62fc93e70e",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/recent-fil-704-taiwan-arc-first-application.md",
+      "expectedSHA256": "bb7ff2f040c525204e62d406cb52df6d43a6a1f8d61916f4c415b97a42134438",
+      "actualSHA256": "bb7ff2f040c525204e62d406cb52df6d43a6a1f8d61916f4c415b97a42134438",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/TASK.md",
+      "expectedSHA256": "a0e9103057d8b078d7bf6d2e3a2ab054a5fba952b328a091d773d3e237e2a250",
+      "actualSHA256": "a0e9103057d8b078d7bf6d2e3a2ab054a5fba952b328a091d773d3e237e2a250",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/additional-recent-fil-927-filipino-worker-taiwan-loan-promissory-note-court-order.md",
+      "expectedSHA256": "535d60328cbcbf44ff21363a0a47a506858c8d38a4203dc5037bbe82b145d2b9",
+      "actualSHA256": "535d60328cbcbf44ff21363a0a47a506858c8d38a4203dc5037bbe82b145d2b9",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/inputs/additional-recent-fil-926-filipino-worker-taiwan-injury-resignation-settlement.md",
+      "expectedSHA256": "633126ec40c4f821c37e30b2610aeb2598a7c7fcc3617033960719ae2cf1bfc5",
+      "actualSHA256": "633126ec40c4f821c37e30b2610aeb2598a7c7fcc3617033960719ae2cf1bfc5",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/TASK-R2-draft.md",
+      "expectedSHA256": "d4001ec369a950a49c5711a571a5995de89a7902d31a97e8760f546773b16f95",
+      "actualSHA256": "d4001ec369a950a49c5711a571a5995de89a7902d31a97e8760f546773b16f95",
+      "matches": true
+    },
+    {
+      "file": "/private/tmp/tseng-kimi-fil-cases-20261026/TASK-R3-draft.md",
+      "expectedSHA256": "8212a2ef5c31d0b7cf6468aae861c6946c19ac3101fa8a30cced3f0ab3cfc81f",
+      "actualSHA256": "8212a2ef5c31d0b7cf6468aae861c6946c19ac3101fa8a30cced3f0ab3cfc81f",
+      "matches": true
+    }
+  ],
+  "allInputsStable": true,
+  "preservedBindingsCount": 49,
+  "allPreservedUnchanged": true,
+  "orderedEditsExactApprovedParagraphs": 7,
+  "restInvariantByExactReplay": true,
+  "allForwardReverseExact": true,
+  "sentenceUnitsRead": 278,
+  "faqPreservation": {
+    "count": 17,
+    "basis": "R2 full review + R3 exact frontmatter bytes"
+  },
+  "actualSharedCheckerExit": 0,
+  "priorR2ToolHashesEqualCurrent": true,
+  "process": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/kimi-fil/run-r3-process.json",
+    "sha256": "4a833aee451667a6414399249d31f9ac6e46b1a1722e3cbcd251ef4ff3ce37dc",
+    "bytes": 1049
+  },
+  "processActualExitCode": 0,
+  "processFinishedAtUTC": "2026-10-28T23:07:35.508004+00:00",
+  "priorR2ProcessExitCode": null,
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/fil-current-r3-mechanical.json",
+      "sha256": "b250c08479ee47ad9b6850305b0d03eb40b457119866ef06e54fe4f8e4cb7708",
+      "bytes": 176163
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/fil-current-r3-mechanical-end-guard.json",
+      "sha256": "d07b697b2e399128aee0170d52f0074a8b403c3361770f75ceb6d1f05d585ea2",
+      "bytes": 27337
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/ordered-edits-r3.json",
+      "sha256": "7537fdcf902c7823af2653b142b883ec89c8a2da533bc71a85a44185b326516d",
+      "bytes": 8577
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/author-review-r3.md",
+      "sha256": "1d9770662cbf83d96bdbbc72ead409a1820d34743d8eeece6280e4493827603e",
+      "bytes": 7149
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/TASK-R3-draft.md",
+      "sha256": "8212a2ef5c31d0b7cf6468aae861c6946c19ac3101fa8a30cced3f0ab3cfc81f",
+      "bytes": 12473
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/fil-independent-r2-current.md",
+      "sha256": "02b8aa22a400e87ed13c892f10f1310616986574f1043bd74315115eb1a56c78",
+      "bytes": 15634
+    }
+  ],
+  "manuscriptsEditedByReviewer": false,
+  "RChangedByReviewer": false,
+  "B11CurrentCopiedByReviewer": false,
+  "externalAICalledByReviewer": false,
+  "browserOrPublicationVerification": false
+}

@@ -1302,6 +1302,9 @@ export const CASE_TRANSLATION_COLUMN_FILES_20261026: Partial<Record<string, read
   ur: CASE_TRANSLATION_FILES_20261026,
   nl: CASE_TRANSLATION_FILES_20261026,
   lt: CASE_TRANSLATION_FILES_20261026,
+  he: CASE_TRANSLATION_FILES_20261026,
+  fil: CASE_TRANSLATION_FILES_20261026,
+  id: CASE_TRANSLATION_FILES_20261026,
 };
 
 // These case locales already have ARC articles with later dates than the original ARC batch.
@@ -1314,7 +1317,7 @@ const CASE_LOCALE_ARC_PUBLICATION_DATES: Partial<Record<string, string>> = {
   sk: '2026-10-26', sl: '2026-10-26', sr: '2026-10-26',
   cs: '2026-10-25', my: '2026-10-26', sv: '2026-10-25', ta: '2026-10-26',
   tr: '2026-10-25', uk: '2026-10-25', ur: '2026-10-26', nl: '2026-10-25',
-  lt: '2026-10-26',
+  lt: '2026-10-26', he: '2026-10-26', fil: '2026-10-25',
 };
 
 /** Country-specific market expansion, two original articles per selected locale. */

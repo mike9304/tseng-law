@@ -1,0 +1,2499 @@
+{
+  "schema": "new18-link-integrity-v1",
+  "startedAtUTC": "2026-10-28T23:16:45.148Z",
+  "completedAtUTC": "2026-10-28T23:17:22.651531+00:00",
+  "status": "PASS_EXACT_INPUT_LINK_VALIDATION",
+  "scope": "18 HE/FIL/ID manuscripts, 915/916/918/919/920/921; frontmatter caption/FAQ structure plus parsed body/source-footer/FAQ links against six frozen canonical snapshots; ID current input additionally bound to final targeted-review closure",
+  "limits": [
+    "Read-only manuscript audit; only owned JSON/Markdown reports written.",
+    "No network, HTTP reachability, source freshness, legal-semantic audit, publication check or full variety CLI rerun. Existing closures own those review scopes.",
+    "FAQ loss means parsed URL preservation and entry counts; all frozen canonical and target FAQs contain zero URLs. No FAQ semantic equivalence claim.",
+    "ID final manifest added after initial audit with identical six article SHAs; its scope is targeted returned-file review, not a new independent author-uninvolved review. This link audit does not expand that claim."
+  ],
+  "parser": {
+    "grayMatter": "4.0.3",
+    "remarkParse": "R node_modules via createRequire.resolve",
+    "remarkGfm": "R node_modules via createRequire.resolve",
+    "method": "Markdown AST links with reference resolution; URL syntax and raw unparsed URL/link-pattern scan; frontmatter parsed by gray-matter"
+  },
+  "manifests": [
+    {
+      "locale": "he",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/he-current-independent-r2-final-manifest.json",
+      "sha256": "beb5ee520eb0f1457b9c9b4676b8cf1d5a5542542fd19a99715a7240b81b043c",
+      "expectedSha256": "beb5ee520eb0f1457b9c9b4676b8cf1d5a5542542fd19a99715a7240b81b043c",
+      "shaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND"
+    },
+    {
+      "locale": "fil",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/fil-current-r3-final-manifest.json",
+      "sha256": "ef1ca5f02d701e9a6ad4b28795cc591c2fdc0382bbf812f6dfb162923e472046",
+      "expectedSha256": "ef1ca5f02d701e9a6ad4b28795cc591c2fdc0382bbf812f6dfb162923e472046",
+      "shaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND"
+    },
+    {
+      "locale": "id",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/id-current-r3-proof.json",
+      "sha256": "a6e52e0ab139165fd495788dd74a3cb31f4c9df91a0048cb6e21dca5019fa89c",
+      "expectedSha256": "a6e52e0ab139165fd495788dd74a3cb31f4c9df91a0048cb6e21dca5019fa89c",
+      "shaMatches": true,
+      "closureBinding": "SUPERSEDED_BY_SAME_SHA_FINAL_MANIFEST_BINDING",
+      "role": "initial_candidate_proof_retained"
+    },
+    {
+      "locale": "id",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/id-current-r3-final-manifest.json",
+      "sha256": "3271064f65a6795cb3869aecf9f550072af521a42f9887299e2ecf5b3b437a84",
+      "expectedSha256": "3271064f65a6795cb3869aecf9f550072af521a42f9887299e2ecf5b3b437a84",
+      "shaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND_TARGETED_REVIEW_NOT_INDEPENDENT",
+      "requiredMeaningFindingsOpen": 0,
+      "requiredStyleFindingsOpen": 0,
+      "reviewScope": "Targeted returned-file review, R2 baseline plus root-reviewed R3 paragraph proposals; reviewer participated in proposal drafting, not a new independent author-uninvolved review."
+    }
+  ],
+  "canonicalSnapshots": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "bodyOfficialURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "footerOfficialURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "faqCount": 2,
+      "faqURLs": []
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "bodyOfficialURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "footerOfficialURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "faqCount": 3,
+      "faqURLs": []
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "bodyOfficialURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "footerOfficialURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "faqCount": 3,
+      "faqURLs": []
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "bodyOfficialURLs": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+      ],
+      "footerOfficialURLs": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt"
+      ],
+      "faqCount": 3,
+      "faqURLs": []
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "bodyOfficialURLs": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "footerOfficialURLs": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "faqCount": 3,
+      "faqURLs": []
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "bodyOfficialURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "footerOfficialURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "faqCount": 3,
+      "faqURLs": []
+    }
+  ],
+  "routeEvidence": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/[[...slug]]/page.tsx",
+      "sha256": "3dab508b2dddb716fa84184335f4f62b3d35164d30abdb3ab30185a3bb6a4f03"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/(legacy)/index.tsx",
+      "sha256": "5e485ee21bac81e7b8dc74778fba24d69e8541492010e791709a82373c3eb2da"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/columns/[slug]/page.tsx",
+      "sha256": "1ab62d68f2dd9725e0bbb31def3b43ecba95bb20c6bfed05de6643cf7c3ef090"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/columns.ts",
+      "sha256": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5"
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he/004-taiwan-company-subsidiary-vs-branch.md",
+      "sha256": "0e1b98f7255887ac0af71e3ae30bc935e4bb11da326f2657ab3d75a7131a045a"
+    }
+  ],
+  "independentInternalRouteCheck": {
+    "agent": "/root/b10_intake/new18_link_audit/routes",
+    "result": "PASS: 7 internal href occurrences / 2 unique targets; six explicitly English contact fallbacks and one existing same-language Hebrew column; zero FAQ hrefs."
+  },
+  "totals": {
+    "articles": 18,
+    "faq": 51,
+    "exactCaptions": 18,
+    "canonicalOfficialURLChecksPerSection": 69,
+    "internalLinks": 7,
+    "mailtoLinks": 12,
+    "findings": 0
+  },
+  "localeTotals": {
+    "he": {
+      "articles": 6,
+      "faq": 17,
+      "exactCaptions": 6,
+      "bodyOfficialUniqueByArticle": 23,
+      "footerOfficialUniqueByArticle": 23,
+      "internalLinks": 3,
+      "faqLinks": 0,
+      "findings": 0
+    },
+    "fil": {
+      "articles": 6,
+      "faq": 17,
+      "exactCaptions": 6,
+      "bodyOfficialUniqueByArticle": 23,
+      "footerOfficialUniqueByArticle": 23,
+      "internalLinks": 2,
+      "faqLinks": 0,
+      "findings": 0
+    },
+    "id": {
+      "articles": 6,
+      "faq": 17,
+      "exactCaptions": 6,
+      "bodyOfficialUniqueByArticle": 23,
+      "footerOfficialUniqueByArticle": 23,
+      "internalLinks": 2,
+      "faqLinks": 0,
+      "findings": 0
+    }
+  },
+  "allInputsStable": true,
+  "inputGuards": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-freeze.json",
+      "sha256Start": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "sha256End": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256Start": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "sha256End": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256Start": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "sha256End": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256Start": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "sha256End": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256Start": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "sha256End": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256Start": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "sha256End": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256Start": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "sha256End": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/[[...slug]]/page.tsx",
+      "sha256Start": "3dab508b2dddb716fa84184335f4f62b3d35164d30abdb3ab30185a3bb6a4f03",
+      "sha256End": "3dab508b2dddb716fa84184335f4f62b3d35164d30abdb3ab30185a3bb6a4f03",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/(legacy)/index.tsx",
+      "sha256Start": "5e485ee21bac81e7b8dc74778fba24d69e8541492010e791709a82373c3eb2da",
+      "sha256End": "5e485ee21bac81e7b8dc74778fba24d69e8541492010e791709a82373c3eb2da",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/columns/[slug]/page.tsx",
+      "sha256Start": "1ab62d68f2dd9725e0bbb31def3b43ecba95bb20c6bfed05de6643cf7c3ef090",
+      "sha256End": "1ab62d68f2dd9725e0bbb31def3b43ecba95bb20c6bfed05de6643cf7c3ef090",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/columns.ts",
+      "sha256Start": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+      "sha256End": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he/004-taiwan-company-subsidiary-vs-branch.md",
+      "sha256Start": "0e1b98f7255887ac0af71e3ae30bc935e4bb11da326f2657ab3d75a7131a045a",
+      "sha256End": "0e1b98f7255887ac0af71e3ae30bc935e4bb11da326f2657ab3d75a7131a045a",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/he-current-independent-r2-final-manifest.json",
+      "sha256Start": "beb5ee520eb0f1457b9c9b4676b8cf1d5a5542542fd19a99715a7240b81b043c",
+      "sha256End": "beb5ee520eb0f1457b9c9b4676b8cf1d5a5542542fd19a99715a7240b81b043c",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256Start": "13686c0b8d093322fdb54c901113003f4b050d904bc230294e3bef4a0c1587ae",
+      "sha256End": "13686c0b8d093322fdb54c901113003f4b050d904bc230294e3bef4a0c1587ae",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256Start": "ee8f0e937503cf9479373428714d7253b1da4910e1ecddba0a234c6cea998ab5",
+      "sha256End": "ee8f0e937503cf9479373428714d7253b1da4910e1ecddba0a234c6cea998ab5",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256Start": "33a2695bf2074426d050bd3d12d3f00bf469ce8b7d56ce8b47d1b30f84a41a6c",
+      "sha256End": "33a2695bf2074426d050bd3d12d3f00bf469ce8b7d56ce8b47d1b30f84a41a6c",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256Start": "65b2b5695d768c01cab21c4305e718c8fdbe0e00196ac7a1422bc9dbf5402cd1",
+      "sha256End": "65b2b5695d768c01cab21c4305e718c8fdbe0e00196ac7a1422bc9dbf5402cd1",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256Start": "3ae4321156061392f5ef5a6b246b58e630dc5311500c76ca5c51373b669ec539",
+      "sha256End": "3ae4321156061392f5ef5a6b246b58e630dc5311500c76ca5c51373b669ec539",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256Start": "91f41497e68765d909d49900d97eff1c717bee49a6bbfd0e60745bab6a977aff",
+      "sha256End": "91f41497e68765d909d49900d97eff1c717bee49a6bbfd0e60745bab6a977aff",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/fil-current-r3-final-manifest.json",
+      "sha256Start": "ef1ca5f02d701e9a6ad4b28795cc591c2fdc0382bbf812f6dfb162923e472046",
+      "sha256End": "ef1ca5f02d701e9a6ad4b28795cc591c2fdc0382bbf812f6dfb162923e472046",
+      "stable": true
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256Start": "81aa1d77010534d340d53c26da396d580b0aedd3b7f5f6c1f6aa19408ff756ae",
+      "sha256End": "81aa1d77010534d340d53c26da396d580b0aedd3b7f5f6c1f6aa19408ff756ae",
+      "stable": true
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256Start": "989a52f2425466424fe606feabe9018ac9be07b4d86b2e5a3bac507e0c5c8f57",
+      "sha256End": "989a52f2425466424fe606feabe9018ac9be07b4d86b2e5a3bac507e0c5c8f57",
+      "stable": true
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256Start": "3c4eea0816ea6c3b1cda1c0ff0d58a5a1cd5d382203b989f99a96409d9fc0e8a",
+      "sha256End": "3c4eea0816ea6c3b1cda1c0ff0d58a5a1cd5d382203b989f99a96409d9fc0e8a",
+      "stable": true
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256Start": "b90be403a02cfe7f224166829546a2da9bf5de8976fed0144c328013d974259c",
+      "sha256End": "b90be403a02cfe7f224166829546a2da9bf5de8976fed0144c328013d974259c",
+      "stable": true
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256Start": "73d56d56342b0c377e8f789ebf9760bdec501835cbb6de568354f10cae655fa4",
+      "sha256End": "73d56d56342b0c377e8f789ebf9760bdec501835cbb6de568354f10cae655fa4",
+      "stable": true
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256Start": "d9a83048e594c305177b613ddbf56fe0b76d4d7f20d1f93bff95fbbd41f6d8bc",
+      "sha256End": "d9a83048e594c305177b613ddbf56fe0b76d4d7f20d1f93bff95fbbd41f6d8bc",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/id-current-r3-proof.json",
+      "sha256Start": "a6e52e0ab139165fd495788dd74a3cb31f4c9df91a0048cb6e21dca5019fa89c",
+      "sha256End": "a6e52e0ab139165fd495788dd74a3cb31f4c9df91a0048cb6e21dca5019fa89c",
+      "stable": true
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-id-cases-20261026/output/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256Start": "a9b7a3adf3318a545976f83b68bfba8d6833cdb825400a6d7a25f29817478e52",
+      "sha256End": "a9b7a3adf3318a545976f83b68bfba8d6833cdb825400a6d7a25f29817478e52",
+      "stable": true
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-id-cases-20261026/output/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256Start": "ed39d707a02933886e7b4a86431d6d0da2cdb5663093ec6a116449f665515612",
+      "sha256End": "ed39d707a02933886e7b4a86431d6d0da2cdb5663093ec6a116449f665515612",
+      "stable": true
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-id-cases-20261026/output/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256Start": "fced102293a7a5cfd2be0195a41986398a4d7726da408101fca415ecb1448e70",
+      "sha256End": "fced102293a7a5cfd2be0195a41986398a4d7726da408101fca415ecb1448e70",
+      "stable": true
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-id-cases-20261026/output/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256Start": "f697040f2030cc626d3224bd913a095f4683265de90dce9f5b8a0adf016a88aa",
+      "sha256End": "f697040f2030cc626d3224bd913a095f4683265de90dce9f5b8a0adf016a88aa",
+      "stable": true
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-id-cases-20261026/output/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256Start": "16003130aff9de7b15d28937a457644baf976a603c2bf95f707f3ccdc7a093bf",
+      "sha256End": "16003130aff9de7b15d28937a457644baf976a603c2bf95f707f3ccdc7a093bf",
+      "stable": true
+    },
+    {
+      "path": "/private/tmp/tseng-kimi-id-cases-20261026/output/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256Start": "0f0810a705c9fa19062874540ed13a9358bc33bc8d075bf0cc4f89c152fbfe82",
+      "sha256End": "0f0810a705c9fa19062874540ed13a9358bc33bc8d075bf0cc4f89c152fbfe82",
+      "stable": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/id-current-r3-final-manifest.json",
+      "sha256Start": "3271064f65a6795cb3869aecf9f550072af521a42f9887299e2ecf5b3b437a84",
+      "sha256End": "3271064f65a6795cb3869aecf9f550072af521a42f9887299e2ecf5b3b437a84",
+      "stable": true
+    }
+  ],
+  "articles": [
+    {
+      "locale": "he",
+      "id": "915",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "13686c0b8d093322fdb54c901113003f4b050d904bc230294e3bef4a0c1587ae",
+      "manifestExpectedSha256": "13686c0b8d093322fdb54c901113003f4b050d904bc230294e3bef4a0c1587ae",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "caption": {
+        "actual": "סצנה בדיונית",
+        "expected": "סצנה בדיונית",
+        "exact": true
+      },
+      "sourceFooterHeading": "מקורות רשמיים",
+      "bodyLinks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "label": "הודעת בית המשפט העליון בטייוואן",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "label": "ההסבר הרשמי לפסק הדין",
+          "type": "link",
+          "line": 17
+        },
+        {
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "label": "סעיף 85-1 לחוק הרכש הציבורי בטייוואן",
+          "type": "link",
+          "line": 23
+        },
+        {
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "label": "סעיף 40, פסקה ראשונה, פרט 2 לחוק הבוררות",
+          "type": "link",
+          "line": 27
+        },
+        {
+          "url": "https://www.trade.gov/market-intelligence/taiwan-energy-industry",
+          "label": "מינהל הסחר הבינלאומי של ארצות הברית פרסם ב-30 בספטמבר 2026 סקירה של ענף האנרגיה בטייוואן",
+          "type": "link",
+          "line": 37
+        },
+        {
+          "url": "/en/contact",
+          "label": "עמוד יצירת הקשר באנגלית",
+          "type": "link",
+          "line": 39
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "label": "בית המשפט העליון, הודעה על תיק 106年度台上字第723號",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "label": "חוק הרכש הציבורי, סעיף 85-1",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "label": "חוק הבוררות, סעיף 40",
+          "type": "link",
+          "line": 5
+        },
+        {
+          "url": "https://www.trade.gov/market-intelligence/taiwan-energy-industry",
+          "label": "מינהל הסחר הבינלאומי, ענף האנרגיה בטייוואן",
+          "type": "link",
+          "line": 6
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 2,
+        "expectedCount": 2,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [
+        {
+          "url": "/en/contact",
+          "label": "עמוד יצירת הקשר באנגלית",
+          "type": "link",
+          "line": 39,
+          "resolution": {
+            "status": "PASS",
+            "kind": "explicit_English_contact_fallback",
+            "route": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/[[...slug]]/page.tsx",
+            "handler": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/(legacy)/index.tsx"
+          }
+        }
+      ],
+      "mailtoLinks": [],
+      "findings": [],
+      "status": "PASS"
+    },
+    {
+      "locale": "he",
+      "id": "916",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "ee8f0e937503cf9479373428714d7253b1da4910e1ecddba0a234c6cea998ab5",
+      "manifestExpectedSha256": "ee8f0e937503cf9479373428714d7253b1da4910e1ecddba0a234c6cea998ab5",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "caption": {
+        "actual": "סצנה בדיונית",
+        "expected": "סצנה בדיונית",
+        "exact": true
+      },
+      "sourceFooterHeading": "מקורות רשמיים",
+      "bodyLinks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "label": "הודעת בית המשפט העליון בתיק 107年度台上字第267號",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "label": "ההודעה הרשמית",
+          "type": "link",
+          "line": 16
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "label": "סעיף 154 לחוק החברות בטייוואן",
+          "type": "link",
+          "line": 22
+        },
+        {
+          "url": "/he/columns/taiwan-company-subsidiary-vs-branch",
+          "label": "חברת בת לעומת סניף בטייוואן",
+          "type": "link",
+          "line": 26
+        },
+        {
+          "url": "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade",
+          "label": "דף העובדות של נציג הסחר של ארצות הברית מפברואר 2026",
+          "type": "link",
+          "line": 30
+        },
+        {
+          "url": "/en/contact",
+          "label": "עמוד יצירת הקשר באנגלית",
+          "type": "link",
+          "line": 34
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "label": "בית המשפט העליון, הודעה על תיק 107年度台上字第267號",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "label": "חוק החברות, סעיף 154",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade",
+          "label": "נציג הסחר של ארצות הברית, דף העובדות על הסכם הסחר עם טייוואן",
+          "type": "link",
+          "line": 5
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "bodyOfficialUniqueCount": 3,
+      "footerOfficialUniqueCount": 3,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [
+        {
+          "url": "/he/columns/taiwan-company-subsidiary-vs-branch",
+          "label": "חברת בת לעומת סניף בטייוואן",
+          "type": "link",
+          "line": 26,
+          "resolution": {
+            "status": "PASS",
+            "kind": "same_language_existing_column",
+            "source": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-he/004-taiwan-company-subsidiary-vs-branch.md",
+            "route": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/columns/[slug]/page.tsx",
+            "loader": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/lib/columns.ts"
+          }
+        },
+        {
+          "url": "/en/contact",
+          "label": "עמוד יצירת הקשר באנגלית",
+          "type": "link",
+          "line": 34,
+          "resolution": {
+            "status": "PASS",
+            "kind": "explicit_English_contact_fallback",
+            "route": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/[[...slug]]/page.tsx",
+            "handler": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/(legacy)/index.tsx"
+          }
+        }
+      ],
+      "mailtoLinks": [],
+      "findings": [],
+      "status": "PASS"
+    },
+    {
+      "locale": "he",
+      "id": "918",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "33a2695bf2074426d050bd3d12d3f00bf469ce8b7d56ce8b47d1b30f84a41a6c",
+      "manifestExpectedSha256": "33a2695bf2074426d050bd3d12d3f00bf469ce8b7d56ce8b47d1b30f84a41a6c",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "caption": {
+        "actual": "סצנה בדיונית",
+        "expected": "סצנה בדיונית",
+        "exact": true
+      },
+      "sourceFooterHeading": "מקורות רשמיים",
+      "bodyLinks": [
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "קובץ פסקי הדין הרשמי בענייני צרכנות",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "label": "סעיף 15 בתנאים המחייבים הנוכחיים למכירת דירה לפני השלמת הבנייה",
+          "type": "link",
+          "line": 18
+        },
+        {
+          "url": "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "label": "בדיקת חוזים שפורסמה ב-25 באוגוסט 2025",
+          "type": "link",
+          "line": 24
+        },
+        {
+          "url": "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+          "label": "כללי הבנק המרכזי של טייוואן להלוואות המובטחות במקרקעין",
+          "type": "link",
+          "line": 30
+        },
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "דוא״ל למשרד",
+          "type": "link",
+          "line": 32
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "קובץ פסקי דין ופרשנות בדיני צרכנות, כרך 22",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "label": "תנאים מחייבים ואסורים למכירת דירה לפני השלמת הבנייה",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "label": "תוצאות בדיקת חוזים",
+          "type": "link",
+          "line": 5
+        },
+        {
+          "url": "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+          "label": "הבנק המרכזי, כללי הלוואות המובטחות במקרקעין",
+          "type": "link",
+          "line": 6
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [],
+      "mailtoLinks": [
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "דוא״ל למשרד",
+          "type": "link",
+          "line": 32
+        }
+      ],
+      "findings": [],
+      "status": "PASS"
+    },
+    {
+      "locale": "he",
+      "id": "919",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "65b2b5695d768c01cab21c4305e718c8fdbe0e00196ac7a1422bc9dbf5402cd1",
+      "manifestExpectedSha256": "65b2b5695d768c01cab21c4305e718c8fdbe0e00196ac7a1422bc9dbf5402cd1",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "caption": {
+        "actual": "סצנה בדיונית",
+        "expected": "סצנה בדיונית",
+        "exact": true
+      },
+      "sourceFooterHeading": "מקורות רשמיים",
+      "bodyLinks": [
+        {
+          "url": "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "label": "בית המשפט המנהלי הגבוה בטאיפיי",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "label": "היסטוריית החקיקה",
+          "type": "link",
+          "line": 18
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "label": "הודעת מינהל הבטיחות והבריאות בעבודה",
+          "type": "link",
+          "line": 18
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+          "label": "סעיף 22-2 לחוק הבטיחות והבריאות בעבודה בטייוואן",
+          "type": "link",
+          "line": 20
+        },
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "הודעה ראשונית למשרד",
+          "type": "link",
+          "line": 32
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "label": "בית המשפט המנהלי הגבוה בטאיפיי, תיק 114年度訴字第869號",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+          "label": "חוק הבטיחות והבריאות בעבודה, סעיף 22-2",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "label": "היסטוריית החקיקה של החוק",
+          "type": "link",
+          "line": 5
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "label": "הודעת מינהל הבטיחות והבריאות בעבודה",
+          "type": "link",
+          "line": 6
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [],
+      "mailtoLinks": [
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "הודעה ראשונית למשרד",
+          "type": "link",
+          "line": 32
+        }
+      ],
+      "findings": [],
+      "status": "PASS"
+    },
+    {
+      "locale": "he",
+      "id": "920",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "3ae4321156061392f5ef5a6b246b58e630dc5311500c76ca5c51373b669ec539",
+      "manifestExpectedSha256": "3ae4321156061392f5ef5a6b246b58e630dc5311500c76ca5c51373b669ec539",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "caption": {
+        "actual": "סצנה בדיונית",
+        "expected": "סצנה בדיונית",
+        "exact": true
+      },
+      "sourceFooterHeading": "מקורות רשמיים",
+      "bodyLinks": [
+        {
+          "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "label": "תיק 111年度上字第132號",
+          "type": "link",
+          "line": 2
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "label": "סעיף 11 לחוק ניהול הבתים המשותפים בטייוואן",
+          "type": "link",
+          "line": 14
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "label": "סעיף 6, פסקה ראשונה, פרט 5",
+          "type": "link",
+          "line": 18
+        },
+        {
+          "url": "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE",
+          "label": "29 במאי 2026 תוכנית סיוע לתשתיות טעינה",
+          "type": "link",
+          "line": 30
+        },
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "דוא״ל למשרד",
+          "type": "link",
+          "line": 32
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "label": "בית המשפט הגבוה בטייוואן, שלוחת גאושיונג, תיק 111年度上字第132號",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "label": "סעיף 6",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "label": "סעיף 11",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE",
+          "label": "גאושיונג, תוכנית הסיוע למגשי כבלים משותפים לטעינה",
+          "type": "link",
+          "line": 5
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [],
+      "mailtoLinks": [
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "דוא״ל למשרד",
+          "type": "link",
+          "line": 32
+        }
+      ],
+      "findings": [],
+      "status": "PASS"
+    },
+    {
+      "locale": "he",
+      "id": "921",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-he/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "91f41497e68765d909d49900d97eff1c717bee49a6bbfd0e60745bab6a977aff",
+      "manifestExpectedSha256": "91f41497e68765d909d49900d97eff1c717bee49a6bbfd0e60745bab6a977aff",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "caption": {
+        "actual": "סצנה בדיונית",
+        "expected": "סצנה בדיונית",
+        "exact": true
+      },
+      "sourceFooterHeading": "מקורות רשמיים",
+      "bodyLinks": [
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "קובץ פסקי הדין הרשמי בענייני צרכנות",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "label": "סעיף 18 לתנאים המחייבים לחוזי משחק מקוון",
+          "type": "link",
+          "line": 16
+        },
+        {
+          "url": "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "label": "הודעה רשמית מ-7 במאי 2026",
+          "type": "link",
+          "line": 38
+        },
+        {
+          "url": "https://appeal.cpc.ey.gov.tw/",
+          "label": "מערכת תלונות הצרכנים הרשמית",
+          "type": "link",
+          "line": 40
+        },
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "דוא״ל למשרד",
+          "type": "link",
+          "line": 40
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "קובץ פסקי דין ופרשנות בדיני צרכנות, כרך 22",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "label": "התנאים המחייבים והאסורים לחוזי משחק מקוון",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "label": "נתוני תלונות הצרכנים לשנת 2025",
+          "type": "link",
+          "line": 5
+        },
+        {
+          "url": "https://appeal.cpc.ey.gov.tw/",
+          "label": "מערכת תלונות הצרכנים הרשמית",
+          "type": "link",
+          "line": 6
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [],
+      "mailtoLinks": [
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "דוא״ל למשרד",
+          "type": "link",
+          "line": 40
+        }
+      ],
+      "findings": [],
+      "status": "PASS"
+    },
+    {
+      "locale": "fil",
+      "id": "915",
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "81aa1d77010534d340d53c26da396d580b0aedd3b7f5f6c1f6aa19408ff756ae",
+      "manifestExpectedSha256": "81aa1d77010534d340d53c26da396d580b0aedd3b7f5f6c1f6aa19408ff756ae",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "caption": {
+        "actual": "Kathang-isip na eksena",
+        "expected": "Kathang-isip na eksena",
+        "exact": true
+      },
+      "sourceFooterHeading": "Mga opisyal na sanggunian",
+      "bodyLinks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "label": "opisyal na paliwanag sa 106年度台上字第723號",
+          "type": "link",
+          "line": 2
+        },
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "label": "paliwanag ng hukuman",
+          "type": "link",
+          "line": 17
+        },
+        {
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "label": "Artikulo 85-1 ng Government Procurement Act",
+          "type": "link",
+          "line": 23
+        },
+        {
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "label": "Artikulo 40(1)(2) ng Arbitration Act",
+          "type": "link",
+          "line": 27
+        },
+        {
+          "url": "https://www.trade.gov/market-intelligence/taiwan-energy-industry",
+          "label": "ulat ng US International Trade Administration noong 30 Setyembre 2026",
+          "type": "link",
+          "line": 33
+        },
+        {
+          "url": "/en/contact",
+          "label": "English contact page",
+          "type": "link",
+          "line": 43
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "label": "Paliwanag ng Supreme Court sa 106年度台上字第723號, 12 Hulyo 2017",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "label": "Government Procurement Act, Artikulo 85-1",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "label": "Arbitration Act, Artikulo 40(1)(2)",
+          "type": "link",
+          "line": 5
+        },
+        {
+          "url": "https://www.trade.gov/market-intelligence/taiwan-energy-industry",
+          "label": "International Trade Administration, Taiwan Energy Industry, 30 Setyembre 2026",
+          "type": "link",
+          "line": 6
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 2,
+        "expectedCount": 2,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [
+        {
+          "url": "/en/contact",
+          "label": "English contact page",
+          "type": "link",
+          "line": 43,
+          "resolution": {
+            "status": "PASS",
+            "kind": "explicit_English_contact_fallback",
+            "route": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/[[...slug]]/page.tsx",
+            "handler": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/(legacy)/index.tsx"
+          }
+        }
+      ],
+      "mailtoLinks": [],
+      "findings": [],
+      "status": "PASS"
+    },
+    {
+      "locale": "fil",
+      "id": "916",
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "989a52f2425466424fe606feabe9018ac9be07b4d86b2e5a3bac507e0c5c8f57",
+      "manifestExpectedSha256": "989a52f2425466424fe606feabe9018ac9be07b4d86b2e5a3bac507e0c5c8f57",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "caption": {
+        "actual": "Kathang-isip na eksena",
+        "expected": "Kathang-isip na eksena",
+        "exact": true
+      },
+      "sourceFooterHeading": "Mga opisyal na sanggunian",
+      "bodyLinks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "label": "opisyal na paliwanag sa 107年度台上字第267號",
+          "type": "link",
+          "line": 2
+        },
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "label": "paliwanag ng Supreme Court",
+          "type": "link",
+          "line": 8
+        },
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "label": "buod ng disposisyon ng hukuman",
+          "type": "link",
+          "line": 16
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "label": "Artikulo 154 ng Company Act",
+          "type": "link",
+          "line": 24
+        },
+        {
+          "url": "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade",
+          "label": "fact sheet ng USTR noong Pebrero 2026",
+          "type": "link",
+          "line": 32
+        },
+        {
+          "url": "/en/contact",
+          "label": "English contact page",
+          "type": "link",
+          "line": 38
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "label": "Paliwanag ng Supreme Court sa 107年度台上字第267號, 16 Agosto 2018",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "label": "Company Act, Artikulo 154",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade",
+          "label": "USTR, fact sheet sa reciprocal trade, Pebrero 2026",
+          "type": "link",
+          "line": 5
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "bodyOfficialUniqueCount": 3,
+      "footerOfficialUniqueCount": 3,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [
+        {
+          "url": "/en/contact",
+          "label": "English contact page",
+          "type": "link",
+          "line": 38,
+          "resolution": {
+            "status": "PASS",
+            "kind": "explicit_English_contact_fallback",
+            "route": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/[[...slug]]/page.tsx",
+            "handler": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/(legacy)/index.tsx"
+          }
+        }
+      ],
+      "mailtoLinks": [],
+      "findings": [],
+      "status": "PASS"
+    },
+    {
+      "locale": "fil",
+      "id": "918",
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "3c4eea0816ea6c3b1cda1c0ff0d58a5a1cd5d382203b989f99a96409d9fc0e8a",
+      "manifestExpectedSha256": "3c4eea0816ea6c3b1cda1c0ff0d58a5a1cd5d382203b989f99a96409d9fc0e8a",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "caption": {
+        "actual": "Kathang-isip na eksena",
+        "expected": "Kathang-isip na eksena",
+        "exact": true
+      },
+      "sourceFooterHeading": "Mga opisyal na sanggunian",
+      "bodyLinks": [
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "desisyong nakatala sa koleksiyon ng Executive Yuan Consumer Protection Committee",
+          "type": "link",
+          "line": 2
+        },
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "Punto 4 ng desisyon",
+          "type": "link",
+          "line": 14
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "label": "Punto 15 ng mandatory terms para sa presale house sale contract",
+          "type": "link",
+          "line": 22
+        },
+        {
+          "url": "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "label": "opisyal na resulta ng audit",
+          "type": "link",
+          "line": 30
+        },
+        {
+          "url": "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+          "label": "real-estate mortgage loan rules ng Central Bank",
+          "type": "link",
+          "line": 34
+        },
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "mailbox ng firm",
+          "type": "link",
+          "line": 38
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "Consumer Protection Act Judgments and Interpretations Collection (22)",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "label": "Mandatory and prohibited terms para sa presale house sale contract",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "label": "resulta ng presale contract audit",
+          "type": "link",
+          "line": 5
+        },
+        {
+          "url": "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+          "label": "mga panuntunan sa real-estate mortgage loan",
+          "type": "link",
+          "line": 6
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [],
+      "mailtoLinks": [
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "mailbox ng firm",
+          "type": "link",
+          "line": 38
+        }
+      ],
+      "findings": [],
+      "status": "PASS"
+    },
+    {
+      "locale": "fil",
+      "id": "919",
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b90be403a02cfe7f224166829546a2da9bf5de8976fed0144c328013d974259c",
+      "manifestExpectedSha256": "b90be403a02cfe7f224166829546a2da9bf5de8976fed0144c328013d974259c",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "caption": {
+        "actual": "Kathang-isip na eksena",
+        "expected": "Kathang-isip na eksena",
+        "exact": true
+      },
+      "sourceFooterHeading": "Mga opisyal na sanggunian",
+      "bodyLinks": [
+        {
+          "url": "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "label": "opisyal na paliwanag ng Taipei High Administrative Court",
+          "type": "link",
+          "line": 2
+        },
+        {
+          "url": "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "label": "buod ng mga dahilan sa court release",
+          "type": "link",
+          "line": 14
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "label": "history ng batas",
+          "type": "link",
+          "line": 18
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "label": "paliwanag ng Ministry of Labor",
+          "type": "link",
+          "line": 18
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+          "label": "Artikulo 22-2 ng Occupational Safety and Health Act",
+          "type": "link",
+          "line": 20
+        },
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "mailbox ng firm",
+          "type": "link",
+          "line": 36
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "label": "court release sa 114年度訴字第869號 dismissal case",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+          "label": "Occupational Safety and Health Act, Artikulo 22-2",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "label": "History ng pagbabago at pagkakabisa ng Occupational Safety and Health Act",
+          "type": "link",
+          "line": 5
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "label": "bagong workplace bullying prevention regime at mga suportang hakbang",
+          "type": "link",
+          "line": 6
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [],
+      "mailtoLinks": [
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "mailbox ng firm",
+          "type": "link",
+          "line": 36
+        }
+      ],
+      "findings": [],
+      "status": "PASS"
+    },
+    {
+      "locale": "fil",
+      "id": "920",
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "73d56d56342b0c377e8f789ebf9760bdec501835cbb6de568354f10cae655fa4",
+      "manifestExpectedSha256": "73d56d56342b0c377e8f789ebf9760bdec501835cbb6de568354f10cae655fa4",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "caption": {
+        "actual": "Kathang-isip na eksena",
+        "expected": "Kathang-isip na eksena",
+        "exact": true
+      },
+      "sourceFooterHeading": "Mga opisyal na sanggunian",
+      "bodyLinks": [
+        {
+          "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "label": "orihinal na desisyon ng Judicial Yuan",
+          "type": "link",
+          "line": 2
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "label": "Artikulo 11 ng Condominium Administration Act",
+          "type": "link",
+          "line": 12
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "label": "Artikulo 6(1)(5)",
+          "type": "link",
+          "line": 16
+        },
+        {
+          "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "label": "Mga Punto 5 at 6 ng desisyon",
+          "type": "link",
+          "line": 18
+        },
+        {
+          "url": "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE",
+          "label": "anunsyo ng Kaohsiung City Government",
+          "type": "link",
+          "line": 28
+        },
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "mailbox ng firm",
+          "type": "link",
+          "line": 30
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "label": "Taiwan High Court Kaohsiung Branch 111年度上字第132號 civil judgment",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "label": "Condominium Administration Act, Artikulo 6",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "label": "Condominium Administration Act, Artikulo 11",
+          "type": "link",
+          "line": 5
+        },
+        {
+          "url": "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE",
+          "label": "2026 subsidy announcement para sa EV charging cable trays sa public areas ng apartment buildings",
+          "type": "link",
+          "line": 6
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [],
+      "mailtoLinks": [
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "mailbox ng firm",
+          "type": "link",
+          "line": 30
+        }
+      ],
+      "findings": [],
+      "status": "PASS"
+    },
+    {
+      "locale": "fil",
+      "id": "921",
+      "path": "/private/tmp/tseng-kimi-fil-cases-20261026/output/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d9a83048e594c305177b613ddbf56fe0b76d4d7f20d1f93bff95fbbd41f6d8bc",
+      "manifestExpectedSha256": "d9a83048e594c305177b613ddbf56fe0b76d4d7f20d1f93bff95fbbd41f6d8bc",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "caption": {
+        "actual": "Kathang-isip na eksena",
+        "expected": "Kathang-isip na eksena",
+        "exact": true
+      },
+      "sourceFooterHeading": "Mga opisyal na sanggunian",
+      "bodyLinks": [
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "buong desisyong nakatala sa opisyal na koleksiyon",
+          "type": "link",
+          "line": 2
+        },
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "Punto 8 ng desisyon",
+          "type": "link",
+          "line": 14
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "label": "Punto 18 ng kasalukuyang mandatory at prohibited terms para sa online connection game service contract",
+          "type": "link",
+          "line": 20
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "label": "Punto 9 at prohibited Punto 6",
+          "type": "link",
+          "line": 42
+        },
+        {
+          "url": "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "label": "statistics at paalala",
+          "type": "link",
+          "line": 44
+        },
+        {
+          "url": "https://appeal.cpc.ey.gov.tw/",
+          "label": "government consumer complaint system",
+          "type": "link",
+          "line": 46
+        },
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "mailbox ng firm",
+          "type": "link",
+          "line": 46
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "Consumer Protection Act Judgments and Interpretations Collection (22)",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "label": "Mandatory and prohibited terms para sa online connection game service contract",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "label": "2025 national consumer complaint at mediation case statistics",
+          "type": "link",
+          "line": 5
+        },
+        {
+          "url": "https://appeal.cpc.ey.gov.tw/",
+          "label": "online complaint system",
+          "type": "link",
+          "line": 6
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [],
+      "mailtoLinks": [
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "mailbox ng firm",
+          "type": "link",
+          "line": 46
+        }
+      ],
+      "findings": [],
+      "status": "PASS"
+    },
+    {
+      "locale": "id",
+      "id": "915",
+      "path": "/private/tmp/tseng-kimi-id-cases-20261026/output/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "a9b7a3adf3318a545976f83b68bfba8d6833cdb825400a6d7a25f29817478e52",
+      "manifestExpectedSha256": "a9b7a3adf3318a545976f83b68bfba8d6833cdb825400a6d7a25f29817478e52",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND_TARGETED_REVIEW_NOT_INDEPENDENT",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+      },
+      "caption": {
+        "actual": "Adegan fiksi",
+        "expected": "Adegan fiksi",
+        "exact": true
+      },
+      "sourceFooterHeading": "Sumber resmi",
+      "bodyLinks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "label": "Penjelasan resmi Mahkamah Agung mengenai putusan 106年度台上字第723號",
+          "type": "link",
+          "line": 2
+        },
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "label": "penjelasan Mahkamah Agung",
+          "type": "link",
+          "line": 17
+        },
+        {
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "label": "Pasal 85-1 Undang-Undang Pengadaan Pemerintah",
+          "type": "link",
+          "line": 21
+        },
+        {
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "label": "Pasal 40 ayat (1) angka 2 Undang-Undang Arbitrase",
+          "type": "link",
+          "line": 25
+        },
+        {
+          "url": "https://www.trade.gov/market-intelligence/taiwan-energy-industry",
+          "label": "30 September 2026",
+          "type": "link",
+          "line": 31
+        },
+        {
+          "url": "/en/contact",
+          "label": "halaman kontak berbahasa Inggris",
+          "type": "link",
+          "line": 39
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+          "label": "Penjelasan Mahkamah Agung mengenai 106年度台上字第723號, 12 Juli 2017",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+          "label": "Undang-Undang Pengadaan Pemerintah, Pasal 85-1",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+          "label": "Undang-Undang Arbitrase, Pasal 40 ayat (1) angka 2",
+          "type": "link",
+          "line": 5
+        },
+        {
+          "url": "https://www.trade.gov/market-intelligence/taiwan-energy-industry",
+          "label": "International Trade Administration, Taiwan Energy Industry, 30 September 2026",
+          "type": "link",
+          "line": 6
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=274693",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=A0030057",
+        "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=I0020001",
+        "https://www.trade.gov/market-intelligence/taiwan-energy-industry"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 2,
+        "expectedCount": 2,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [
+        {
+          "url": "/en/contact",
+          "label": "halaman kontak berbahasa Inggris",
+          "type": "link",
+          "line": 39,
+          "resolution": {
+            "status": "PASS",
+            "kind": "explicit_English_contact_fallback",
+            "route": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/[[...slug]]/page.tsx",
+            "handler": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/(legacy)/index.tsx"
+          }
+        }
+      ],
+      "mailtoLinks": [],
+      "findings": [],
+      "status": "PASS",
+      "finalClosureManifest": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/id-current-r3-final-manifest.json",
+        "sha256": "3271064f65a6795cb3869aecf9f550072af521a42f9887299e2ecf5b3b437a84"
+      }
+    },
+    {
+      "locale": "id",
+      "id": "916",
+      "path": "/private/tmp/tseng-kimi-id-cases-20261026/output/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "ed39d707a02933886e7b4a86431d6d0da2cdb5663093ec6a116449f665515612",
+      "manifestExpectedSha256": "ed39d707a02933886e7b4a86431d6d0da2cdb5663093ec6a116449f665515612",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND_TARGETED_REVIEW_NOT_INDEPENDENT",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+      },
+      "caption": {
+        "actual": "Adegan fiksi",
+        "expected": "Adegan fiksi",
+        "exact": true
+      },
+      "sourceFooterHeading": "Sumber resmi",
+      "bodyLinks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "label": "Penjelasan resmi putusan 107年度台上字第267號",
+          "type": "link",
+          "line": 2
+        },
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "label": "penjelasan Mahkamah Agung",
+          "type": "link",
+          "line": 8
+        },
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "label": "Ringkasan amar resmi",
+          "type": "link",
+          "line": 16
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "label": "Pasal 154 Undang-Undang Perusahaan Taiwan",
+          "type": "link",
+          "line": 24
+        },
+        {
+          "url": "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade",
+          "label": "Lembar fakta USTR Februari 2026",
+          "type": "link",
+          "line": 36
+        },
+        {
+          "url": "/en/contact",
+          "label": "halaman kontak berbahasa Inggris",
+          "type": "link",
+          "line": 42
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+          "label": "Penjelasan Mahkamah Agung mengenai 107年度台上字第267號, 16 Agustus 2018",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+          "label": "Undang-Undang Perusahaan, Pasal 154",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade",
+          "label": "USTR, lembar fakta perdagangan timbal balik Februari 2026",
+          "type": "link",
+          "line": 5
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://jirs.judicial.gov.tw/GNNWS/NNWSS002.asp?id=359523",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=154",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade"
+      ],
+      "bodyOfficialUniqueCount": 3,
+      "footerOfficialUniqueCount": 3,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [
+        {
+          "url": "/en/contact",
+          "label": "halaman kontak berbahasa Inggris",
+          "type": "link",
+          "line": 42,
+          "resolution": {
+            "status": "PASS",
+            "kind": "explicit_English_contact_fallback",
+            "route": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/[[...slug]]/page.tsx",
+            "handler": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/app/[locale]/(legacy)/index.tsx"
+          }
+        }
+      ],
+      "mailtoLinks": [],
+      "findings": [],
+      "status": "PASS",
+      "finalClosureManifest": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/id-current-r3-final-manifest.json",
+        "sha256": "3271064f65a6795cb3869aecf9f550072af521a42f9887299e2ecf5b3b437a84"
+      }
+    },
+    {
+      "locale": "id",
+      "id": "918",
+      "path": "/private/tmp/tseng-kimi-id-cases-20261026/output/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "fced102293a7a5cfd2be0195a41986398a4d7726da408101fca415ecb1448e70",
+      "manifestExpectedSha256": "fced102293a7a5cfd2be0195a41986398a4d7726da408101fca415ecb1448e70",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND_TARGETED_REVIEW_NOT_INDEPENDENT",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+      },
+      "caption": {
+        "actual": "Adegan fiksi",
+        "expected": "Adegan fiksi",
+        "exact": true
+      },
+      "sourceFooterHeading": "Sumber resmi",
+      "bodyLinks": [
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "putusan dalam kumpulan resmi Badan Perlindungan Konsumen",
+          "type": "link",
+          "line": 2
+        },
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "bagian keempat putusan",
+          "type": "link",
+          "line": 12
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "label": "Butir 15 ketentuan yang wajib dicantumkan dalam kontrak baku jual beli rumah presale",
+          "type": "link",
+          "line": 18
+        },
+        {
+          "url": "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "label": "Hasil audit resmi",
+          "type": "link",
+          "line": 24
+        },
+        {
+          "url": "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+          "label": "Ketentuan Bank Sentral mengenai KPR",
+          "type": "link",
+          "line": 28
+        },
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "alamat email kantor",
+          "type": "link",
+          "line": 32
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "Kumpulan Putusan dan Interpretasi Hukum Perlindungan Konsumen (XXII)",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "label": "Ketentuan yang wajib dan dilarang dalam kontrak baku jual beli rumah presale",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+          "label": "hasil audit kontrak rumah presale",
+          "type": "link",
+          "line": 5
+        },
+        {
+          "url": "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html",
+          "label": "ketentuan KPR",
+          "type": "link",
+          "line": 6
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/40ffbcf6-e255-47b2-a208-767af361bd11",
+        "https://www.cbc.gov.tw/tw/cp-4217-192880-d9bde-1.html"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [],
+      "mailtoLinks": [
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "alamat email kantor",
+          "type": "link",
+          "line": 32
+        }
+      ],
+      "findings": [],
+      "status": "PASS",
+      "finalClosureManifest": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/id-current-r3-final-manifest.json",
+        "sha256": "3271064f65a6795cb3869aecf9f550072af521a42f9887299e2ecf5b3b437a84"
+      }
+    },
+    {
+      "locale": "id",
+      "id": "919",
+      "path": "/private/tmp/tseng-kimi-id-cases-20261026/output/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "f697040f2030cc626d3224bd913a095f4683265de90dce9f5b8a0adf016a88aa",
+      "manifestExpectedSha256": "f697040f2030cc626d3224bd913a095f4683265de90dce9f5b8a0adf016a88aa",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND_TARGETED_REVIEW_NOT_INDEPENDENT",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+      },
+      "caption": {
+        "actual": "Adegan fiksi",
+        "expected": "Adegan fiksi",
+        "exact": true
+      },
+      "sourceFooterHeading": "Sumber resmi",
+      "bodyLinks": [
+        {
+          "url": "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "label": "Penjelasan resmi Pengadilan Administrasi Tinggi Taipei",
+          "type": "link",
+          "line": 2
+        },
+        {
+          "url": "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "label": "ringkasan resmi pengadilan",
+          "type": "link",
+          "line": 14
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "label": "riwayat perubahan hukum",
+          "type": "link",
+          "line": 18
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "label": "penjelasan Kementerian Tenaga Kerja",
+          "type": "link",
+          "line": 18
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+          "label": "Pasal 22-2 Undang-Undang Keselamatan dan Kesehatan Kerja",
+          "type": "link",
+          "line": 20
+        },
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "alamat email kantor",
+          "type": "link",
+          "line": 32
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+          "label": "pengumuman perkara pemberhentian 114年度訴字第869號",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2",
+          "label": "Undang-Undang Keselamatan dan Kesehatan Kerja, Pasal 22-2",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+          "label": "riwayat perubahan serta pemberlakuannya",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+          "label": "sistem baru pencegahan perundungan kerja dan tindakan pendukung",
+          "type": "link",
+          "line": 5
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://www.judicial.gov.tw/tw/cp-1888-1611064-9760a-1.html",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48417/48419/206967/?cprint=pt",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0060001&flno=22-2"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [],
+      "mailtoLinks": [
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "alamat email kantor",
+          "type": "link",
+          "line": 32
+        }
+      ],
+      "findings": [],
+      "status": "PASS",
+      "finalClosureManifest": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/id-current-r3-final-manifest.json",
+        "sha256": "3271064f65a6795cb3869aecf9f550072af521a42f9887299e2ecf5b3b437a84"
+      }
+    },
+    {
+      "locale": "id",
+      "id": "920",
+      "path": "/private/tmp/tseng-kimi-id-cases-20261026/output/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "16003130aff9de7b15d28937a457644baf976a603c2bf95f707f3ccdc7a093bf",
+      "manifestExpectedSha256": "16003130aff9de7b15d28937a457644baf976a603c2bf95f707f3ccdc7a093bf",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND_TARGETED_REVIEW_NOT_INDEPENDENT",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+      },
+      "caption": {
+        "actual": "Adegan fiksi",
+        "expected": "Adegan fiksi",
+        "exact": true
+      },
+      "sourceFooterHeading": "Sumber resmi",
+      "bodyLinks": [
+        {
+          "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "label": "putusan resmi Yuan Yudisial",
+          "type": "link",
+          "line": 2
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "label": "Pasal 11 Undang-Undang Pengelolaan Apartemen",
+          "type": "link",
+          "line": 12
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "label": "Pasal 6 ayat (1) angka 5",
+          "type": "link",
+          "line": 16
+        },
+        {
+          "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "label": "bagian kelima dan keenam putusan",
+          "type": "link",
+          "line": 18
+        },
+        {
+          "url": "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE",
+          "label": "pengumuman Pemerintah Kota Kaohsiung",
+          "type": "link",
+          "line": 28
+        },
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "alamat email kantor",
+          "type": "link",
+          "line": 30
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+          "label": "putusan perdata Pengadilan Tinggi Taiwan Cabang Kaohsiung 111年度上字第132號",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+          "label": "Undang-Undang Pengelolaan Apartemen, Pasal 6",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+          "label": "Undang-Undang Pengelolaan Apartemen, Pasal 11",
+          "type": "link",
+          "line": 5
+        },
+        {
+          "url": "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE",
+          "label": "pengumuman subsidi tray kabel pengisian kendaraan listrik di area publik apartemen 2026",
+          "type": "link",
+          "line": 6
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=11",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6",
+        "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [],
+      "mailtoLinks": [
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "alamat email kantor",
+          "type": "link",
+          "line": 30
+        }
+      ],
+      "findings": [],
+      "status": "PASS",
+      "finalClosureManifest": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/id-current-r3-final-manifest.json",
+        "sha256": "3271064f65a6795cb3869aecf9f550072af521a42f9887299e2ecf5b3b437a84"
+      }
+    },
+    {
+      "locale": "id",
+      "id": "921",
+      "path": "/private/tmp/tseng-kimi-id-cases-20261026/output/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "0f0810a705c9fa19062874540ed13a9358bc33bc8d075bf0cc4f89c152fbfe82",
+      "manifestExpectedSha256": "0f0810a705c9fa19062874540ed13a9358bc33bc8d075bf0cc4f89c152fbfe82",
+      "manifestShaMatches": true,
+      "closureBinding": "FINAL_MANIFEST_BOUND_TARGETED_REVIEW_NOT_INDEPENDENT",
+      "canonical": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+      },
+      "caption": {
+        "actual": "Adegan fiksi",
+        "expected": "Adegan fiksi",
+        "exact": true
+      },
+      "sourceFooterHeading": "Sumber resmi",
+      "bodyLinks": [
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "putusan dalam kumpulan resmi Badan Perlindungan Konsumen",
+          "type": "link",
+          "line": 2
+        },
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "bagian kedelapan putusan",
+          "type": "link",
+          "line": 12
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "label": "Butir 18 ketentuan yang wajib dan dilarang dalam kontrak baku layanan game online",
+          "type": "link",
+          "line": 18
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "label": "butir 9 aturan wajib dan butir 6 aturan larangan",
+          "type": "link",
+          "line": 38
+        },
+        {
+          "url": "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "label": "statistik dan pengingat resmi",
+          "type": "link",
+          "line": 40
+        },
+        {
+          "url": "https://appeal.cpc.ey.gov.tw/",
+          "label": "sistem pengaduan konsumen pemerintah",
+          "type": "link",
+          "line": 42
+        },
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "alamat email kantor",
+          "type": "link",
+          "line": 42
+        }
+      ],
+      "sourceFooterLinks": [
+        {
+          "url": "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+          "label": "Kumpulan Putusan dan Interpretasi Hukum Perlindungan Konsumen (XXII)",
+          "type": "link",
+          "line": 3
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+          "label": "Ketentuan yang wajib dan dilarang dalam kontrak baku layanan game online",
+          "type": "link",
+          "line": 4
+        },
+        {
+          "url": "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+          "label": "statistik pengaduan dan mediasi konsumen nasional 2025",
+          "type": "link",
+          "line": 5
+        },
+        {
+          "url": "https://appeal.cpc.ey.gov.tw/",
+          "label": "sistem pengaduan online",
+          "type": "link",
+          "line": 6
+        }
+      ],
+      "canonicalOfficialURLs": [
+        "https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C",
+        "https://www.ey.gov.tw/File/C27658C15073FF69?A=C",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a3642311-5d66-4135-a8da-69c52279e930",
+        "https://appeal.cpc.ey.gov.tw/"
+      ],
+      "bodyOfficialUniqueCount": 4,
+      "footerOfficialUniqueCount": 4,
+      "allCanonicalOfficialURLsPresentInBody": true,
+      "allCanonicalOfficialURLsPresentInFooter": true,
+      "faq": {
+        "count": 3,
+        "expectedCount": 3,
+        "allNonempty": true,
+        "links": [],
+        "canonicalLinkCount": 0,
+        "linkLoss": []
+      },
+      "internalLinks": [],
+      "mailtoLinks": [
+        {
+          "url": "mailto:wei@hoveringlaw.com.tw",
+          "label": "alamat email kantor",
+          "type": "link",
+          "line": 42
+        }
+      ],
+      "findings": [],
+      "status": "PASS",
+      "finalClosureManifest": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/id-current-r3-final-manifest.json",
+        "sha256": "3271064f65a6795cb3869aecf9f550072af521a42f9887299e2ecf5b3b437a84"
+      }
+    }
+  ],
+  "findings": [],
+  "idFinalManifestBoundAtUTC": "2026-10-28T23:17:22.651531+00:00"
+}

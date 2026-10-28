@@ -1,0 +1,128 @@
+{
+  "atUTC": "2026-10-28T22:54:44.581392+00:00",
+  "status": "PASS_SCOPED_INTEGRATION_CHECKS",
+  "repoHead": "8f7624b56423a1dd27590c25e9ca5623631b9057",
+  "selectionSHA256": "66c3a74dcae4de36475c888178b43b475eddf618c650bfa978722d56ac5d9930",
+  "unitTests": 90,
+  "unitExitCode": 0,
+  "varietyCLIInvocations": 55,
+  "varietyFailedFiles": 0,
+  "structureSelected": 55,
+  "structureErrors": 0,
+  "metadataErrors": 0,
+  "newFAQEntries": 153,
+  "manualReviewItems": 304,
+  "actualProductionLoaderLocales": 49,
+  "totals": {
+    "professional": 2433,
+    "issues": 143,
+    "boardVisibleLocal": 2166,
+    "distinctProfessionalSlugs": 686,
+    "coreUnion": 493,
+    "coreCommon": 153,
+    "allLocaleCommon": 21,
+    "countDeficitTo286": 11603,
+    "visibleDeficitTo286": 11870,
+    "other45MissingCoreCommon": 5876
+  },
+  "exactSourceDelta": {
+    "added": 54,
+    "changed": 1,
+    "removed": 0
+  },
+  "fullContentMarkdownGuard": 2580,
+  "fullContentUnchanged": true,
+  "copiedToolUnchanged": true,
+  "allSelectedCopiesEqual": 60,
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/REPORT.md",
+      "sha256": "60991514f7da5e8243253430a21779ea083f2e9c420b29673635c7953c2ec0ef",
+      "bytes": 2029
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/checker-unit-execution.json",
+      "sha256": "478aeb93e9d19b0f963738aef74afd3729dfc2832e730cae4d5cb0e781087ab6",
+      "bytes": 27545
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/checker-unit.stderr",
+      "sha256": "34607ea9be5d2835995908c50a003a5e0150b72db0aa30d65fe0f85143d1d557",
+      "bytes": 189
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/checker-unit.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/frozen-selection.json",
+      "sha256": "66c3a74dcae4de36475c888178b43b475eddf618c650bfa978722d56ac5d9930",
+      "bytes": 30899
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/inventory-execution.json",
+      "sha256": "29ee2609f4053a684b377b7bcfe040b14b8ede24fb8165b9ce948ad963dbcad4",
+      "bytes": 16015
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/inventory.json",
+      "sha256": "42169bf9c2cc579071152743e0ac7f528bd2c199d344855fe6d646e190cda785",
+      "bytes": 4751371
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/production-loader.json",
+      "sha256": "aa70a137aabfd0d27a99e0fb4a7466e7b8fd35a75da9ae5c251349669fb5e2c7",
+      "bytes": 907026
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/run-inventory.py",
+      "sha256": "9b98ae6fe7abd53dd3dfec4a1a10f32719e113a87607b77484c6db9c7c1b54de",
+      "bytes": 4051
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/run-structure-initial-source-map.mjs",
+      "sha256": "7f6738a9470117a5851f54016de1b4871714081669e4cc104b5bdc1235a42613",
+      "bytes": 4781
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/run-structure.mjs",
+      "sha256": "3b35c6992468ffdc7819026e409ba99a3b0e651354560308eeb0dceb44f17c97",
+      "bytes": 5126
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/run-variety.py",
+      "sha256": "7460f490b58e62a5757c15f4fd877891d0c04da9d167b4410961fcf2b87ce9de",
+      "bytes": 3084
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/structure-final-execution.json",
+      "sha256": "2a68a8b1348c903c91767d16be32a262a02e5baac1514a2be3d03178af86a084",
+      "bytes": 788
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/structure-final.json",
+      "sha256": "77e9d80d2a67cf7bce6e9f471cc8c0c28285efbab0b0e340b2cdda8d2aa2638c",
+      "bytes": 3944962
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/structure-initial-execution.json",
+      "sha256": "fe000def0af067506db5492e15f960edfbd5d9134a134982e620b4255c599099",
+      "bytes": 716
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/structure.json",
+      "sha256": "42366c4d01ff464e696662b9d87c9807004c1562f172643c91057a2e7b84d470",
+      "bytes": 465354
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/variety.json",
+      "sha256": "7a30b08857be05196a2a67cbcd48009ba8a8dd124eb66e62d7e0b0482c537313",
+      "bytes": 1598361
+    }
+  ],
+  "sourceEdited": false,
+  "checkerEdited": false,
+  "publicDeployment": false,
+  "semanticApproval": "Existing separate independent AI review bindings; these execution checks do not imply human or legal approval."
+}

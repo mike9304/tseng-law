@@ -182,6 +182,9 @@ class BatchFiveTests(unittest.TestCase):
                 # Reviewed TR inflected-ordinal profile; historic manifests stay intact.
                 if row['path'] == 'profiles/tr.json':
                     expected = 'ac0f3d212c39e794053ec72fb742c74ebeb29f4111700540746a4feb32797423'
+                # Explicit CS date-boundary revision; behavior is checked by test_cs_date_boundaries.
+                if row['path'] == 'profiles/cs.json':
+                    expected = 'a6718b5fe6af471dfe53bbf4e11087e3ac63dd20d43e44c657691499e8523088'
                 self.assertEqual(hashlib.sha256((ROOT / row['path']).read_bytes()).hexdigest(), expected)
         def nodes(path, names):
             return [ast.dump(n, include_attributes=False) for n in ast.parse(path.read_text()).body

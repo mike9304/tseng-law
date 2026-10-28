@@ -1,0 +1,19 @@
+{
+  "startedAt": "2026-10-28T22:55:14.684926+00:00",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "src/lib/__tests__/column-language-links.test.tsx",
+    "-t",
+    "pages that are not column articles",
+    "--maxWorkers=1"
+  ],
+  "cwd": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "testSHA256": "b731027d3d2e55e387e78905dfdace77a146d409aa691f410fa7fff75d635387",
+  "hypothesis": "Observed failure is5s test budget under two-suite competition; isolate unchanged test at same timeout to distinguish assertion defect from load. No timeout/source/runtime changes.",
+  "exitCode": 0,
+  "finishedAt": "2026-10-28T22:55:20.408902+00:00",
+  "testUnchanged": true,
+  "logSHA256": "15b2f63370cc4713fd1f7d5cd229a3aec871481db2e8f838137b9dc2cb967424"
+}

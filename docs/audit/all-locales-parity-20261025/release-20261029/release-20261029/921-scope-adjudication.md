@@ -1,0 +1,7 @@
+# 921 scope clarification, 2026-10-29
+
+Root reviewed the complete adopted Batch06 authoring contract, its mandatory921 condition table, the exact canonical ZH921 paragraph43 and the current LT921 paragraph44 and FAQ. The contract expressly states that additional details found in the fact sheet need not all be added to an accurate canonical summary. The source paragraph describes seven days from starting the game, written rescission and unused paid points; it does not separately spell out no-reason/no-cost. LT preserves that same summary and separately confines necessary-cost deduction to Point18 termination. It does not charge costs for Point4 rescission or erase the distinction between the two rights.
+
+The absence of an explicit no-reason/no-cost phrase in LT is therefore an optional precision improvement, not a new mandatory defect or ground to revoke its current targeted closure. An earlier HE reviewer classified the same absence as mandatory; that historical report remains unchanged, but its classification is not a new universal requirement. HE's upcoming author revision may adopt the clarification as useful additional precision. Actual weakening of a mandatory refund, mixing the two rights, changing the seven-day start, or deleting existing legal conditions remains mandatory to correct.
+
+This decision follows the existing source contract and the actual text. It does not waive legal accuracy, require more repeated reviews, or claim a human attorney reviewed the columns. LT's frozen SHA and independent closure remain unchanged.

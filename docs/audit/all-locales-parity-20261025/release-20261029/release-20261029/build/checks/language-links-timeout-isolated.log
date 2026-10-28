@@ -1,0 +1,11 @@
+
+ RUN  v3.2.6 /Users/son7/Projects/tseng-law-all-locales-20261025
+
+ ✓ |unit| src/lib/__tests__/column-language-links.test.tsx (47 tests | 46 skipped) 3921ms
+   ✓ pages that are not column articles > keep listing every language  3917ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 46 skipped (47)
+   Start at  07:55:14
+   Duration  5.36s (transform 755ms, setup 24ms, collect 1.17s, tests 3.92s, environment 0ms, prepare 73ms)
+

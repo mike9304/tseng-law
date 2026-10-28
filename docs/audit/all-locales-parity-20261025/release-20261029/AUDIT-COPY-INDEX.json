@@ -1,0 +1,276 @@
+{
+  "atUTC": "2026-10-28T22:53:51.078961+00:00",
+  "scope": "Selected final independent closure and integration evidence only. Large raw historic evidence stays at original hashed local paths. No claim all referenced artifacts were copied.",
+  "files": [
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/root-integration-intent.json",
+      "copiedRelativePath": "batch10/checks/root-integration-intent.json",
+      "sha256": "6545a43b952deb50ddbe6208c02f46cdf0641f222a4a0054a350da45b37fb72a",
+      "bytes": 15006
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/current-intake-integration-list.json",
+      "copiedRelativePath": "batch10/checks/current-intake-integration-list.json",
+      "sha256": "989c40ded40c64e6e5ae1affeb6f78378d8731a9990ff76ab3185ccd7d7107f6",
+      "bytes": 21872
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/current-intake-REPORT.md",
+      "copiedRelativePath": "batch10/checks/current-intake-REPORT.md",
+      "sha256": "4cf250908901e1463f97fae0b1c3fe6bc3207da6ebf21c21b7da5bcd05a385e0",
+      "bytes": 2687
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/cs-706-repair-independent-manifest.json",
+      "copiedRelativePath": "batch10/checks/cs-706-repair-independent-manifest.json",
+      "sha256": "e886bf152bcf7aa8a145dcd35fe6807d6be78ee171b9564b51249e403f6ac17b",
+      "bytes": 1055
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/cs-706-repair-independent.md",
+      "copiedRelativePath": "batch10/reviews/cs-706-repair-independent.md",
+      "sha256": "3af3b8fbc2c0a0bfdd60161bc0d521d005e5db98df1bf8bd58daad8ae750a7d1",
+      "bytes": 1911
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-current-r4-final-manifest.json",
+      "copiedRelativePath": "batch10/checks/sv-current-r4-final-manifest.json",
+      "sha256": "a13fa2ad4c4eeca88a01bf5de10f11baee4daca632218fd9f30bb6248fbf2caa",
+      "bytes": 14903
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/sv-independent-r4-current.md",
+      "copiedRelativePath": "batch10/reviews/sv-independent-r4-current.md",
+      "sha256": "39a0687c319c5923a4fd08fa035d54a8647d99304626999e71e848a6f7986871",
+      "bytes": 9215
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-root-r4-edits.json",
+      "copiedRelativePath": "batch10/checks/sv-root-r4-edits.json",
+      "sha256": "240f5128827be43bc8dff8a8e5af3083d0bd91409f670f6d8ab343842ed42070",
+      "bytes": 3169
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/sv-root-author-r4.md",
+      "copiedRelativePath": "batch10/reviews/sv-root-author-r4.md",
+      "sha256": "973afc7d65e2c4794e995c01db268e76314d4ecf1b6ac11363a88e54279e4f33",
+      "bytes": 2942
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-independent-r2-manifest.json",
+      "copiedRelativePath": "batch11/checks/nl-independent-r2-manifest.json",
+      "sha256": "c54ac79f78c02423c1d06938000258c850a138df15e19143b7504d4e333acf82",
+      "bytes": 3971
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/nl-independent-r2.md",
+      "copiedRelativePath": "batch11/reviews/nl-independent-r2.md",
+      "sha256": "914d3b38856e3c195f9fb8b62297e1f1c3756bb6bdee341ffa8d33b22791724d",
+      "bytes": 11374
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/nl-author-r2.md",
+      "copiedRelativePath": "batch11/reviews/nl-author-r2.md",
+      "sha256": "3cb6cad4f2a95f3fb785302d8ed33fee06c34bdbca9334fc973b1c8cfb778e1a",
+      "bytes": 4362
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-final-manifest-r2.json",
+      "copiedRelativePath": "batch11/checks/nl-final-manifest-r2.json",
+      "sha256": "5fb8219c81f6353b0fdc48e682bc06f8f7582573cead71d05f31590d08746c64",
+      "bytes": 18654
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/lt-current-independent-r2-manifest.json",
+      "copiedRelativePath": "batch11/checks/lt-current-independent-r2-manifest.json",
+      "sha256": "1428c760fd7e71e7f14348c5972598c5c11c40327ce2590443f94dcbc1cb79f4",
+      "bytes": 5839
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/lt-current-independent-r2.md",
+      "copiedRelativePath": "batch11/reviews/lt-current-independent-r2.md",
+      "sha256": "66476a4c4d3d5dde4be841e5f27a1d8a770e06d0f70c2761d05d2623a8959d08",
+      "bytes": 6103
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-final.json",
+      "copiedRelativePath": "release-20261029/integration-final.json",
+      "sha256": "66c3a74dcae4de36475c888178b43b475eddf618c650bfa978722d56ac5d9930",
+      "bytes": 30899
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/921-scope-adjudication.md",
+      "copiedRelativePath": "release-20261029/921-scope-adjudication.md",
+      "sha256": "91d42a86a336cb6e0b92b883a64b86254cd793595d81986314d046b38e6c4422",
+      "bytes": 1557
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/current-inventory.json",
+      "copiedRelativePath": "release-20261029/current-inventory.json",
+      "sha256": "3df05f71b3d7ef0639c6149b0cb1f53fadaba2d126632c21f5c410ed3fab3490",
+      "bytes": 4715220
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/build/checks/test-contract.diff",
+      "copiedRelativePath": "release-20261029/build/checks/test-contract.diff",
+      "sha256": "9eed2c16be49c1fcd9d93c65423dbba03b13edba1e403940f02c8e0071bcd4a8",
+      "bytes": 4368
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/cs-independent-r2-manifest.json",
+      "copiedRelativePath": "batch10/checks/cs-independent-r2-manifest.json",
+      "sha256": "58b39d912d55b20cc4c228f19383ab00e54a899340703fb41d5f0e07136f79ac",
+      "bytes": 3015
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/my-independent-r2-manifest.json",
+      "copiedRelativePath": "batch10/checks/my-independent-r2-manifest.json",
+      "sha256": "bd8fe2671e85cb75d40377377938f41e78a9d229f4281438169d21166d9e7820",
+      "bytes": 24911
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/ta-independent-r2-manifest.json",
+      "copiedRelativePath": "batch10/checks/ta-independent-r2-manifest.json",
+      "sha256": "5113d94d2712b410ea353263e072d19cd46cf029d7bfc4003fc9cae4bb277e5b",
+      "bytes": 10443
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/tr-independent-r2-manifest.json",
+      "copiedRelativePath": "batch10/checks/tr-independent-r2-manifest.json",
+      "sha256": "734390a80ab813857355098f7c49f2d88e88fddf6cfb2f61906312b352ef756c",
+      "bytes": 8684
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/uk-independent-r3-final-manifest.json",
+      "copiedRelativePath": "batch10/checks/uk-independent-r3-final-manifest.json",
+      "sha256": "bb38e50d4a714e01b09850ecd727f8f57d7badd1305a97d547478fcfb47d8f91",
+      "bytes": 16160
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/ur-independent-r2-manifest.json",
+      "copiedRelativePath": "batch10/checks/ur-independent-r2-manifest.json",
+      "sha256": "301e5bee9e09b87ded6c24f6eaeca3360d424e342314131933d8ded121694c2b",
+      "bytes": 3178
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/cs-independent-r2.md",
+      "copiedRelativePath": "batch10/reviews/cs-independent-r2.md",
+      "sha256": "468ce8ae0451fff1bcbe69fd5ce27b3c34308e3fe3e6117606f4b905c06d57c0",
+      "bytes": 2372
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/my-independent-r2.md",
+      "copiedRelativePath": "batch10/reviews/my-independent-r2.md",
+      "sha256": "b20505a81b8d0b18c68c86a82f2606a0de7459b3b3e56cf1efa16d8fe06ec1b7",
+      "bytes": 2532
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/ta-independent-r2.md",
+      "copiedRelativePath": "batch10/reviews/ta-independent-r2.md",
+      "sha256": "0e35a54f5889849602a8881b1b5157093d32da0cdae4f54984676990a0d7a9e5",
+      "bytes": 4979
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/tr-independent-r2.md",
+      "copiedRelativePath": "batch10/reviews/tr-independent-r2.md",
+      "sha256": "24ca1a53bea5601ab87f4976439f1a1201914dbf46e1c75163ba7f5ed472a445",
+      "bytes": 3193
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/uk-independent-r3.md",
+      "copiedRelativePath": "batch10/reviews/uk-independent-r3.md",
+      "sha256": "0e34fc74330ebc7abb5cb328641383941a7cf7210463f37d22865c8ca01c7201",
+      "bytes": 5856
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/ur-independent-r2.md",
+      "copiedRelativePath": "batch10/reviews/ur-independent-r2.md",
+      "sha256": "0d638acc7cd576f91f4791bf48de38ecb2ac6686601695ce792248b99cadd6b1",
+      "bytes": 2844
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/ta-author-r2.md",
+      "copiedRelativePath": "batch10/reviews/ta-author-r2.md",
+      "sha256": "cffe2d09c605cc6e6c2bb62bfca434011375f95108fdb66d72c6845d65890ea0",
+      "bytes": 5150
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/live-batch07/release-check-20261028T224433Z/REPORT.md",
+      "copiedRelativePath": "live-batch07/release-check-20261028T224433Z/REPORT.md",
+      "sha256": "e0a9690a1da070bc42eb6fa0642aaadea4b10cb0f793beb7b289d9d6ad312dc6",
+      "bytes": 1993
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/live-batch07/release-check-20261028T224433Z/report.json",
+      "copiedRelativePath": "live-batch07/release-check-20261028T224433Z/report.json",
+      "sha256": "a00f1e6b74cc0ad96798ccbf51505046902d83a35e517fd2f7a3811f7055a64d",
+      "bytes": 107513
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-release.json",
+      "copiedRelativePath": "release-20261029/integration-release.json",
+      "sha256": "41f227290a57265e5b2ad65fd8fb34bfedff67632e7c5c7489e7ba400ac24e4b",
+      "bytes": 34584
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/caption-normalization.json",
+      "copiedRelativePath": "release-20261029/caption-normalization.json",
+      "sha256": "0de499987c26db7b9a8275923c21693860e3bd9ee185ac1fa1afe135689ebf3b",
+      "bytes": 11266
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/FINAL.json",
+      "copiedRelativePath": "release-20261029/integration-checks/FINAL.json",
+      "sha256": "233691e47fadfefa24bee7a42c2629ea0f25956d1702dcbfe757296ef7698829",
+      "bytes": 5341
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/REPORT.md",
+      "copiedRelativePath": "release-20261029/integration-checks/REPORT.md",
+      "sha256": "60991514f7da5e8243253430a21779ea083f2e9c420b29673635c7953c2ec0ef",
+      "bytes": 2029
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/build/checks/content-unit-command.json",
+      "copiedRelativePath": "release-20261029/build/checks/content-unit-command.json",
+      "sha256": "bbfe823c83b2284e06faac86daa0042aa3e4923709c6944319c0843a2fd25277",
+      "bytes": 11410
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/build/checks/content-unit.log",
+      "copiedRelativePath": "release-20261029/build/checks/content-unit.log",
+      "sha256": "98bdcc6dc0a27267fcdd7ffc7dacb58976ded7a6260ad916fce88970481bae1f",
+      "bytes": 21587
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/build/checks/caption-normalized-unit-command.json",
+      "copiedRelativePath": "release-20261029/build/checks/caption-normalized-unit-command.json",
+      "sha256": "ec3d94a3ea0044589dde6efeec7c802478da374bac1a95fbabdba1ddb8a8da52",
+      "bytes": 4308
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/build/checks/caption-normalized-unit.log",
+      "copiedRelativePath": "release-20261029/build/checks/caption-normalized-unit.log",
+      "sha256": "bca32406782b3d29aff6dd07aa43191aa086d29e2bfbaaecd50959393f30e080",
+      "bytes": 331
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/build/checks/language-links-timeout-isolated.log",
+      "copiedRelativePath": "release-20261029/build/checks/language-links-timeout-isolated.log",
+      "sha256": "15b2f63370cc4713fd1f7d5cd229a3aec871481db2e8f838137b9dc2cb967424",
+      "bytes": 437
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/build/checks/language-links-timeout-isolated-command.json",
+      "copiedRelativePath": "release-20261029/build/checks/language-links-timeout-isolated-command.json",
+      "sha256": "88ca6f32c56f621bd5027a4378c411668733cbcded9b12b9ff3d53cfd87cbac5",
+      "bytes": 788
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/integration-checks/CAPTION-DELTA-CLOSURE.json",
+      "copiedRelativePath": "release-20261029/integration-checks/CAPTION-DELTA-CLOSURE.json",
+      "sha256": "2d56b876abfc5cce408bd5e5d8ac1ddf3fb94b0ee03c2224f12e1085a596e9c8",
+      "bytes": 35817
+    }
+  ]
+}

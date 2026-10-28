@@ -1,0 +1,926 @@
+{
+  "createdAtUTC": "2026-10-26T11:16:10.070108+00:00",
+  "contract": "Literal independent grammatical boundaries fixed before any candidate production edit. Real numeral end before an uppercase month remains a sentence end; lowercase date months are internal. NFC nominative/genitive/dative forms, horizontal spacing, bounded day-range/coordinated days. Existing nondate ordinals and Markdown list separation preserved. No legal manuscripts or observed score used as a fixture.",
+  "sentences": [
+    {
+      "id": "month-01-n",
+      "input": "Datum bylo 7. leden. Kopie zůstala zde.",
+      "expected": [
+        "Datum bylo 7. leden.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "nominative-date"
+    },
+    {
+      "id": "month-01-g",
+      "input": "Kontrola proběhla 7. ledna 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 7. ledna 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "genitive-date"
+    },
+    {
+      "id": "month-01-d",
+      "input": "Stav se zjišťoval k 7. lednu 2032. Kopie zůstala zde.",
+      "expected": [
+        "Stav se zjišťoval k 7. lednu 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "dative-date"
+    },
+    {
+      "id": "terminal-01-n",
+      "input": "Počet byl 7. Leden začal klidně.",
+      "expected": [
+        "Počet byl 7.",
+        "Leden začal klidně."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-01-g",
+      "input": "Počet byl 7. Ledna se změna netýká.",
+      "expected": [
+        "Počet byl 7.",
+        "Ledna se změna netýká."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-01-d",
+      "input": "Počet byl 7. Lednu přisoudili zvláštní význam.",
+      "expected": [
+        "Počet byl 7.",
+        "Lednu přisoudili zvláštní význam."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "month-02-n",
+      "input": "Datum bylo 7. únor. Kopie zůstala zde.",
+      "expected": [
+        "Datum bylo 7. únor.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "nominative-date"
+    },
+    {
+      "id": "month-02-g",
+      "input": "Kontrola proběhla 7. února 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 7. února 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "genitive-date"
+    },
+    {
+      "id": "month-02-d",
+      "input": "Stav se zjišťoval k 7. únoru 2032. Kopie zůstala zde.",
+      "expected": [
+        "Stav se zjišťoval k 7. únoru 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "dative-date"
+    },
+    {
+      "id": "terminal-02-n",
+      "input": "Počet byl 7. Únor začal klidně.",
+      "expected": [
+        "Počet byl 7.",
+        "Únor začal klidně."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-02-g",
+      "input": "Počet byl 7. Února se změna netýká.",
+      "expected": [
+        "Počet byl 7.",
+        "Února se změna netýká."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-02-d",
+      "input": "Počet byl 7. Únoru přisoudili zvláštní význam.",
+      "expected": [
+        "Počet byl 7.",
+        "Únoru přisoudili zvláštní význam."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "month-03-n",
+      "input": "Datum bylo 7. březen. Kopie zůstala zde.",
+      "expected": [
+        "Datum bylo 7. březen.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "nominative-date"
+    },
+    {
+      "id": "month-03-g",
+      "input": "Kontrola proběhla 7. března 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 7. března 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "genitive-date"
+    },
+    {
+      "id": "month-03-d",
+      "input": "Stav se zjišťoval k 7. březnu 2032. Kopie zůstala zde.",
+      "expected": [
+        "Stav se zjišťoval k 7. březnu 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "dative-date"
+    },
+    {
+      "id": "terminal-03-n",
+      "input": "Počet byl 7. Březen začal klidně.",
+      "expected": [
+        "Počet byl 7.",
+        "Březen začal klidně."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-03-g",
+      "input": "Počet byl 7. Března se změna netýká.",
+      "expected": [
+        "Počet byl 7.",
+        "Března se změna netýká."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-03-d",
+      "input": "Počet byl 7. Březnu přisoudili zvláštní význam.",
+      "expected": [
+        "Počet byl 7.",
+        "Březnu přisoudili zvláštní význam."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "month-04-n",
+      "input": "Datum bylo 7. duben. Kopie zůstala zde.",
+      "expected": [
+        "Datum bylo 7. duben.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "nominative-date"
+    },
+    {
+      "id": "month-04-g",
+      "input": "Kontrola proběhla 7. dubna 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 7. dubna 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "genitive-date"
+    },
+    {
+      "id": "month-04-d",
+      "input": "Stav se zjišťoval k 7. dubnu 2032. Kopie zůstala zde.",
+      "expected": [
+        "Stav se zjišťoval k 7. dubnu 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "dative-date"
+    },
+    {
+      "id": "terminal-04-n",
+      "input": "Počet byl 7. Duben začal klidně.",
+      "expected": [
+        "Počet byl 7.",
+        "Duben začal klidně."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-04-g",
+      "input": "Počet byl 7. Dubna se změna netýká.",
+      "expected": [
+        "Počet byl 7.",
+        "Dubna se změna netýká."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-04-d",
+      "input": "Počet byl 7. Dubnu přisoudili zvláštní význam.",
+      "expected": [
+        "Počet byl 7.",
+        "Dubnu přisoudili zvláštní význam."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "month-05-n",
+      "input": "Datum bylo 7. květen. Kopie zůstala zde.",
+      "expected": [
+        "Datum bylo 7. květen.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "nominative-date"
+    },
+    {
+      "id": "month-05-g",
+      "input": "Kontrola proběhla 7. května 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 7. května 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "genitive-date"
+    },
+    {
+      "id": "month-05-d",
+      "input": "Stav se zjišťoval k 7. květnu 2032. Kopie zůstala zde.",
+      "expected": [
+        "Stav se zjišťoval k 7. květnu 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "dative-date"
+    },
+    {
+      "id": "terminal-05-n",
+      "input": "Počet byl 7. Květen začal klidně.",
+      "expected": [
+        "Počet byl 7.",
+        "Květen začal klidně."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-05-g",
+      "input": "Počet byl 7. Května se změna netýká.",
+      "expected": [
+        "Počet byl 7.",
+        "Května se změna netýká."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-05-d",
+      "input": "Počet byl 7. Květnu přisoudili zvláštní význam.",
+      "expected": [
+        "Počet byl 7.",
+        "Květnu přisoudili zvláštní význam."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "month-06-n",
+      "input": "Datum bylo 7. červen. Kopie zůstala zde.",
+      "expected": [
+        "Datum bylo 7. červen.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "nominative-date"
+    },
+    {
+      "id": "month-06-g",
+      "input": "Kontrola proběhla 7. června 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 7. června 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "genitive-date"
+    },
+    {
+      "id": "month-06-d",
+      "input": "Stav se zjišťoval k 7. červnu 2032. Kopie zůstala zde.",
+      "expected": [
+        "Stav se zjišťoval k 7. červnu 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "dative-date"
+    },
+    {
+      "id": "terminal-06-n",
+      "input": "Počet byl 7. Červen začal klidně.",
+      "expected": [
+        "Počet byl 7.",
+        "Červen začal klidně."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-06-g",
+      "input": "Počet byl 7. Června se změna netýká.",
+      "expected": [
+        "Počet byl 7.",
+        "Června se změna netýká."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-06-d",
+      "input": "Počet byl 7. Červnu přisoudili zvláštní význam.",
+      "expected": [
+        "Počet byl 7.",
+        "Červnu přisoudili zvláštní význam."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "month-07-n",
+      "input": "Datum bylo 7. červenec. Kopie zůstala zde.",
+      "expected": [
+        "Datum bylo 7. červenec.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "nominative-date"
+    },
+    {
+      "id": "month-07-g",
+      "input": "Kontrola proběhla 7. července 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 7. července 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "genitive-date"
+    },
+    {
+      "id": "month-07-d",
+      "input": "Stav se zjišťoval k 7. červenci 2032. Kopie zůstala zde.",
+      "expected": [
+        "Stav se zjišťoval k 7. červenci 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "dative-date"
+    },
+    {
+      "id": "terminal-07-n",
+      "input": "Počet byl 7. Červenec začal klidně.",
+      "expected": [
+        "Počet byl 7.",
+        "Červenec začal klidně."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-07-g",
+      "input": "Počet byl 7. Července se změna netýká.",
+      "expected": [
+        "Počet byl 7.",
+        "Července se změna netýká."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-07-d",
+      "input": "Počet byl 7. Červenci přisoudili zvláštní význam.",
+      "expected": [
+        "Počet byl 7.",
+        "Červenci přisoudili zvláštní význam."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "month-08-n",
+      "input": "Datum bylo 7. srpen. Kopie zůstala zde.",
+      "expected": [
+        "Datum bylo 7. srpen.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "nominative-date"
+    },
+    {
+      "id": "month-08-g",
+      "input": "Kontrola proběhla 7. srpna 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 7. srpna 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "genitive-date"
+    },
+    {
+      "id": "month-08-d",
+      "input": "Stav se zjišťoval k 7. srpnu 2032. Kopie zůstala zde.",
+      "expected": [
+        "Stav se zjišťoval k 7. srpnu 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "dative-date"
+    },
+    {
+      "id": "terminal-08-n",
+      "input": "Počet byl 7. Srpen začal klidně.",
+      "expected": [
+        "Počet byl 7.",
+        "Srpen začal klidně."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-08-g",
+      "input": "Počet byl 7. Srpna se změna netýká.",
+      "expected": [
+        "Počet byl 7.",
+        "Srpna se změna netýká."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-08-d",
+      "input": "Počet byl 7. Srpnu přisoudili zvláštní význam.",
+      "expected": [
+        "Počet byl 7.",
+        "Srpnu přisoudili zvláštní význam."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "month-09-n",
+      "input": "Datum bylo 7. září. Kopie zůstala zde.",
+      "expected": [
+        "Datum bylo 7. září.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "nominative-date"
+    },
+    {
+      "id": "month-09-g",
+      "input": "Kontrola proběhla 7. září 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 7. září 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "genitive-date"
+    },
+    {
+      "id": "month-09-d",
+      "input": "Stav se zjišťoval k 7. září 2032. Kopie zůstala zde.",
+      "expected": [
+        "Stav se zjišťoval k 7. září 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "dative-date"
+    },
+    {
+      "id": "terminal-09-n",
+      "input": "Počet byl 7. Září začal klidně.",
+      "expected": [
+        "Počet byl 7.",
+        "Září začal klidně."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-09-g",
+      "input": "Počet byl 7. Září se změna netýká.",
+      "expected": [
+        "Počet byl 7.",
+        "Září se změna netýká."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-09-d",
+      "input": "Počet byl 7. Září přisoudili zvláštní význam.",
+      "expected": [
+        "Počet byl 7.",
+        "Září přisoudili zvláštní význam."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "month-10-n",
+      "input": "Datum bylo 7. říjen. Kopie zůstala zde.",
+      "expected": [
+        "Datum bylo 7. říjen.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "nominative-date"
+    },
+    {
+      "id": "month-10-g",
+      "input": "Kontrola proběhla 7. října 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 7. října 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "genitive-date"
+    },
+    {
+      "id": "month-10-d",
+      "input": "Stav se zjišťoval k 7. říjnu 2032. Kopie zůstala zde.",
+      "expected": [
+        "Stav se zjišťoval k 7. říjnu 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "dative-date"
+    },
+    {
+      "id": "terminal-10-n",
+      "input": "Počet byl 7. Říjen začal klidně.",
+      "expected": [
+        "Počet byl 7.",
+        "Říjen začal klidně."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-10-g",
+      "input": "Počet byl 7. Října se změna netýká.",
+      "expected": [
+        "Počet byl 7.",
+        "Října se změna netýká."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-10-d",
+      "input": "Počet byl 7. Říjnu přisoudili zvláštní význam.",
+      "expected": [
+        "Počet byl 7.",
+        "Říjnu přisoudili zvláštní význam."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "month-11-n",
+      "input": "Datum bylo 7. listopad. Kopie zůstala zde.",
+      "expected": [
+        "Datum bylo 7. listopad.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "nominative-date"
+    },
+    {
+      "id": "month-11-g",
+      "input": "Kontrola proběhla 7. listopadu 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 7. listopadu 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "genitive-date"
+    },
+    {
+      "id": "month-11-d",
+      "input": "Stav se zjišťoval k 7. listopadu 2032. Kopie zůstala zde.",
+      "expected": [
+        "Stav se zjišťoval k 7. listopadu 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "dative-date"
+    },
+    {
+      "id": "terminal-11-n",
+      "input": "Počet byl 7. Listopad začal klidně.",
+      "expected": [
+        "Počet byl 7.",
+        "Listopad začal klidně."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-11-g",
+      "input": "Počet byl 7. Listopadu se změna netýká.",
+      "expected": [
+        "Počet byl 7.",
+        "Listopadu se změna netýká."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-11-d",
+      "input": "Počet byl 7. Listopadu přisoudili zvláštní význam.",
+      "expected": [
+        "Počet byl 7.",
+        "Listopadu přisoudili zvláštní význam."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "month-12-n",
+      "input": "Datum bylo 7. prosinec. Kopie zůstala zde.",
+      "expected": [
+        "Datum bylo 7. prosinec.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "nominative-date"
+    },
+    {
+      "id": "month-12-g",
+      "input": "Kontrola proběhla 7. prosince 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 7. prosince 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "genitive-date"
+    },
+    {
+      "id": "month-12-d",
+      "input": "Stav se zjišťoval k 7. prosinci 2032. Kopie zůstala zde.",
+      "expected": [
+        "Stav se zjišťoval k 7. prosinci 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "dative-date"
+    },
+    {
+      "id": "terminal-12-n",
+      "input": "Počet byl 7. Prosinec začal klidně.",
+      "expected": [
+        "Počet byl 7.",
+        "Prosinec začal klidně."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-12-g",
+      "input": "Počet byl 7. Prosince se změna netýká.",
+      "expected": [
+        "Počet byl 7.",
+        "Prosince se změna netýká."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "terminal-12-d",
+      "input": "Počet byl 7. Prosinci přisoudili zvláštní význam.",
+      "expected": [
+        "Počet byl 7.",
+        "Prosinci přisoudili zvláštní význam."
+      ],
+      "kind": "true-number-end-before-capital-month"
+    },
+    {
+      "id": "range-compact",
+      "input": "Setkání trvalo 6.–7. června 2032. Kopie zůstala zde.",
+      "expected": [
+        "Setkání trvalo 6.–7. června 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "date-space-range-coordination"
+    },
+    {
+      "id": "range-spaces",
+      "input": "Setkání trvalo 6. – 7. června 2032. Kopie zůstala zde.",
+      "expected": [
+        "Setkání trvalo 6. – 7. června 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "date-space-range-coordination"
+    },
+    {
+      "id": "range-dative",
+      "input": "Stav se zjišťoval k 6.–7. říjnu 2032. Kopie zůstala zde.",
+      "expected": [
+        "Stav se zjišťoval k 6.–7. říjnu 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "date-space-range-coordination"
+    },
+    {
+      "id": "range-dative-spaces",
+      "input": "Stav se zjišťoval k 6. – 7. říjnu 2032. Kopie zůstala zde.",
+      "expected": [
+        "Stav se zjišťoval k 6. – 7. říjnu 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "date-space-range-coordination"
+    },
+    {
+      "id": "coordination",
+      "input": "Setkání proběhlo 6. a 7. června 2032. Kopie zůstala zde.",
+      "expected": [
+        "Setkání proběhlo 6. a 7. června 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "date-space-range-coordination"
+    },
+    {
+      "id": "coordination-or",
+      "input": "Setkání proběhne 6. nebo 7. června 2032. Kopie zůstala zde.",
+      "expected": [
+        "Setkání proběhne 6. nebo 7. června 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "date-space-range-coordination"
+    },
+    {
+      "id": "range-nbsp",
+      "input": "Setkání trvalo 6. – 7. června 2032. Kopie zůstala zde.",
+      "expected": [
+        "Setkání trvalo 6. – 7. června 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "date-space-range-coordination"
+    },
+    {
+      "id": "day-nbsp",
+      "input": "Kontrola proběhla 7. října 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 7. října 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "date-space-range-coordination"
+    },
+    {
+      "id": "day-tab",
+      "input": "Kontrola proběhla 7.\tříjna 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 7.\tříjna 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "date-space-range-coordination"
+    },
+    {
+      "id": "day-leading-zero",
+      "input": "Kontrola proběhla 07. října 2032. Kopie zůstala zde.",
+      "expected": [
+        "Kontrola proběhla 07. října 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "date-space-range-coordination"
+    },
+    {
+      "id": "date-final",
+      "input": "Termín skončil 31. prosince 2032. Kopie zůstala zde.",
+      "expected": [
+        "Termín skončil 31. prosince 2032.",
+        "Kopie zůstala zde."
+      ],
+      "kind": "date-space-range-coordination"
+    },
+    {
+      "id": "number-capital-noun",
+      "input": "Součet byl 26. Dokument zůstal zde.",
+      "expected": [
+        "Součet byl 26.",
+        "Dokument zůstal zde."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "number-first-month",
+      "input": "Počet byl 1. Leden začal klidně.",
+      "expected": [
+        "Počet byl 1.",
+        "Leden začal klidně."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "number-outside-day",
+      "input": "Počet byl 32. Říjen začal klidně.",
+      "expected": [
+        "Počet byl 32.",
+        "Říjen začal klidně."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "year-end-month",
+      "input": "Evidence končí rokem 2032. Červenec už není zahrnut.",
+      "expected": [
+        "Evidence končí rokem 2032.",
+        "Červenec už není zahrnut."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "decimal",
+      "input": "Výsledek činil 2.5 bodu. Záznam zůstal zde.",
+      "expected": [
+        "Výsledek činil 2.5 bodu.",
+        "Záznam zůstal zde."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "article-end",
+      "input": "Použil se článek 7. Další pravidlo neplatilo.",
+      "expected": [
+        "Použil se článek 7.",
+        "Další pravidlo neplatilo."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "article-month-end",
+      "input": "Použil se článek 7. Listopadu se netýkal.",
+      "expected": [
+        "Použil se článek 7.",
+        "Listopadu se netýkal."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "ordinal-clause",
+      "input": "Rozhoduje 3. odstavec a 4. kapitola. Druhá věta zůstala.",
+      "expected": [
+        "Rozhoduje 3. odstavec a 4. kapitola.",
+        "Druhá věta zůstala."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "ordinal-floor",
+      "input": "Místnost je ve 3. patře. Výtahem lze dojet nahoru.",
+      "expected": [
+        "Místnost je ve 3. patře.",
+        "Výtahem lze dojet nahoru."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "legal-abbreviations",
+      "input": "Podle čl. 7 odst. 2 je dokument úplný. Výsledek zůstal.",
+      "expected": [
+        "Podle čl. 7 odst. 2 je dokument úplný.",
+        "Výsledek zůstal."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "url",
+      "input": "Více na [této stránce](https://example.com/doc). Záznam existuje.",
+      "expected": [
+        "Více na této stránce.",
+        "Záznam existuje."
+      ],
+      "kind": "markdown-display-label-regression"
+    },
+    {
+      "id": "email",
+      "input": "Kontakt je info@example.com. Odpověď přišla.",
+      "expected": [
+        "Kontakt je info@example.com.",
+        "Odpověď přišla."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "quote-date",
+      "input": "Zapsal: „Dnes je 7. červen.“ Pak odešel.",
+      "expected": [
+        "Zapsal: „Dnes je 7. červen.“",
+        "Pak odešel."
+      ],
+      "kind": "counterexample-or-regression"
+    },
+    {
+      "id": "paragraphs",
+      "input": "Záznam uvádí 7. října 2032.\n\nPočet byl 7. Říjen skončil.",
+      "expected": [
+        "Záznam uvádí 7. října 2032.",
+        "Počet byl 7.",
+        "Říjen skončil."
+      ],
+      "kind": "counterexample-or-regression"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "ordered-list",
+      "input": "1. První položka.\n2. Druhá položka.\n\nKontrola proběhla 7. října 2032. Kopie zůstala zde.",
+      "expectedParagraphs": [
+        "Kontrola proběhla 7. října 2032. Kopie zůstala zde."
+      ],
+      "expectedListItems": [
+        "1. První položka.",
+        "2. Druhá položka."
+      ],
+      "expectedSentences": [
+        "Kontrola proběhla 7. října 2032.",
+        "Kopie zůstala zde."
+      ]
+    },
+    {
+      "id": "date-after-prefix",
+      "input": "Podklady byly ověřeny k 6.–7. říjnu 2032. Kopie zůstala zde.",
+      "expectedParagraphs": [
+        "Podklady byly ověřeny k 6.–7. říjnu 2032. Kopie zůstala zde."
+      ],
+      "expectedListItems": [],
+      "expectedSentences": [
+        "Podklady byly ověřeny k 6.–7. říjnu 2032.",
+        "Kopie zůstala zde."
+      ]
+    },
+    {
+      "id": "range-and-heading",
+      "input": "## Termín\n\nKontrola proběhne 6. a 7. června 2032.\n\nDokument zůstane zde.",
+      "expectedParagraphs": [
+        "Kontrola proběhne 6. a 7. června 2032.",
+        "Dokument zůstane zde."
+      ],
+      "expectedListItems": [],
+      "expectedSentences": [
+        "Kontrola proběhne 6. a 7. června 2032.",
+        "Dokument zůstane zde."
+      ]
+    }
+  ],
+  "limits": [
+    "No new support for entirely numerical dates, instrumental month forms, NFD normalization or lowercased new-sentence starts.",
+    "body_blocks softwrap/line-initial numeral classification is a separate renderer-sensitive limitation, not changed by this profile-only candidate."
+  ]
+}

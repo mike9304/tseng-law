@@ -1,0 +1,205 @@
+
+ RUN  v3.2.6 /Users/son7/Projects/tseng-law-all-locales-20261025
+
+ ✓ |unit| src/lib/__tests__/case-translations-20261026.test.ts (43 tests) 5985ms
+   ✓ reviewed case translations published October26 > 'taiwan-public-contract-mediation-arbi…' retains its original publication date and exactly thirty-eight real language versions  1077ms
+   ✓ reviewed case translations published October26 > 'taiwan-parent-company-pollution-liabi…' retains its original publication date and exactly thirty-eight real language versions  844ms
+   ✓ reviewed case translations published October26 > 'taiwan-presale-mortgage-notice-handov…' retains its original publication date and exactly thirty-eight real language versions  633ms
+   ✓ reviewed case translations published October26 > 'taiwan-workplace-bullying-investigati…' retains its original publication date and exactly thirty-eight real language versions  793ms
+   ✓ reviewed case translations published October26 > 'taiwan-apartment-ev-charger-common-ar…' retains its original publication date and exactly thirty-eight real language versions  743ms
+   ✓ reviewed case translations published October26 > 'taiwan-online-game-coins-refund-judgm…' retains its original publication date and exactly thirty-eight real language versions  767ms
+ ❯ |unit| src/lib/__tests__/column-language-links.test.tsx (47 tests | 1 failed) 35988ms
+   ✓ column 051 (ko, zh-hant and en only) > links the three published versions from every one of them and never ja  2518ms
+   ✓ column 051 (ko, zh-hant and en only) > renders the server HTML of the footer switcher without any ja link  766ms
+   ✓ column 051 (ko, zh-hant and en only) > emits no ja hreflang and keeps x-default inside the cluster  750ms
+   ✓ column 051 (ko, zh-hant and en only) > builds the column page metadata alternates from the same cluster  2809ms
+   ✓ a column published in every language > links every language with that language's own URL  2975ms
+   ✓ every column in every language > covers the whole corpus 0ms
+   ✓ every column in every language > switches only to versions that render, and to every version that does  4043ms
+   ✓ every column in every language > emits hreflang alternates only for versions that render  591ms
+   ✓ every column in every language > sends each language only its own columns with compact translation clusters 4ms
+   ✓ a builder/Blob-only column (no markdown file in any language) > lists only its own language and keeps x-default on it  2731ms
+   ✓ issue-board columns > list only their own language, since each is written for one language  8208ms
+   × pages that are not column articles > keep listing every language 5737ms
+     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+   ✓ client-side navigation > follows the pathname, since the shared layout does not re-render  656ms
+   ✓ client-side navigation > never applies one language's index to another language's article  714ms
+   ✓ client-side navigation > does not read inherited object properties as column slugs  826ms
+   ✓ static snapshot column language data > sends only the current article while preserving its three real language links 1ms
+   ✓ static snapshot column language data > retains all 49 published links from every locale without carrying other article slugs 130ms
+   ✓ static snapshot column language data > omits article mappings on the non-article snapshot /ko and keeps all language choices 1ms
+   ✓ static snapshot column language data > omits article mappings on the non-article snapshot /ko/ and keeps all language choices 1ms
+   ✓ static snapshot column language data > omits article mappings on the non-article snapshot /ko/columns and keeps all language choices 2ms
+   ✓ static snapshot column language data > omits article mappings on the non-article snapshot /ko/columns/ and keeps all language choices 1ms
+   ✓ static snapshot column language data > omits article mappings on the non-article snapshot /ko/columns/issues and keeps all language choices 1ms
+   ✓ static snapshot column language data > omits article mappings on the non-article snapshot /ko/search and keeps all language choices 1ms
+   ✓ static snapshot column language data > omits article mappings on the non-article snapshot /ko/services/civil and keeps all language choices 1ms
+   ✓ static snapshot column language data > keeps unknown, CMS-only, untranslated and issue articles restricted to their current language 2ms
+   ✓ static snapshot column language data > accepts one trailing slash without changing the current article cluster 0ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname undefined 3ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname null 2ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname  2ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname / 1ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname ko/columns/taiwan-company-establishment-basics 1ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname /en/columns/taiwan-company-establishment-basics 1ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname /KO/columns/taiwan-company-establishment-basics 1ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname /ko//columns/taiwan-company-establishment-basics 3ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname /ko/columns/taiwan-company-establishment-basics/extra 2ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname /ko/columns/taiwan-company-establishment-basics?topic=company 4ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname /ko/columns/taiwan-company-establishment-basics#section 2ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname /ko/columns/../taiwan-company-establishment-basics 1ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname /ko/columns/taiwan_company_establishment_basics 6ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname /ko/columns/%74aiwan-company-establishment-basics 1ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname /ko/columns/taiwan%2Fcompany 1ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname /ko/columns/%E0%A4%A 1ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname /ko/columns/taiwan%252Fcompany 1ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname /ko/columns/taiwan\company 2ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname /ko/columns/taiwan
+company 2ms
+   ✓ static snapshot column language data > falls back to the full navigation index for absent or ambiguous pathname https://tseng-law.com/ko/columns/test 1ms
+   ✓ static snapshot column language data > keeps the ordinary SPA index complete when no static snapshot option is supplied 1ms
+ ✓ |unit| src/app/__tests__/sitemap.test.ts (37 tests) 10568ms
+   ✓ sitemap column lastModified > lists an issue board only once the locale has a published piece (fr yes, es not before its first)  333ms
+   ✓ sitemap column lastModified > advertises column 051 only in its three published languages  412ms
+   ✓ sitemap column lastModified > lists every native single-locale column under its own locale only  355ms
+   ✓ sitemap column lastModified > uses each column frontmatter lastmod and preserves distinct dates  405ms
+   ✓ sitemap column lastModified > excludes English-only noindex routes and removes their English hreflang  324ms
+   ✓ sitemap column lastModified > excludes builder-provided reviews pages in every locale and preserves other entries  328ms
+   ✓ sitemap column lastModified > publishes Japanese About exactly once with eight-language core alternates  308ms
+   ✓ sitemap column lastModified > publishes Japanese services exactly once with eight-language core alternates  332ms
+   ✓ sitemap column lastModified > does not invent vi/id/th/fil URLs or hreflang for deep articles or US landings  825ms
+ ✓ |unit| src/lib/__tests__/market-board-columns-20261024.test.ts (177 tests) 2379ms
+ ✓ |unit| src/lib/__tests__/columns-publication-date.test.ts (12 tests) 1464ms
+   ✓ localized column publication ordering > uses the verified publication date in zh-hant  319ms
+   ✓ localized column publication ordering > uses the verified publication date in ja  337ms
+ ✓ |unit| src/lib/__tests__/column-category-parity.test.ts (49 tests) 812ms
+ ✓ |unit| src/lib/__tests__/column-topics.test.ts (8 tests) 580ms
+ ✓ |unit| src/lib/__tests__/column-emphasis.test.ts (3 tests) 628ms
+   ✓ column prose without bold emphasis > keeps every column and issue locale free of prose bold, including metadata  532ms
+ ✓ |unit| src/lib/__tests__/column-summary-frontmatter.test.ts (8 tests) 496ms
+ ❯ |unit| src/lib/__tests__/column-image-caption-label.test.ts (1 test | 1 failed) 197ms
+   × column image caption label > every caption is the locale fictional-scene label 197ms
+     → expected [ …(12) ] to deeply equal []
+ ✓ |unit| src/lib/__tests__/column-seo-title-frontmatter.test.ts (6 tests) 170ms
+ ✓ |unit| src/lib/__tests__/columns-faq.test.ts (8 tests) 10ms
+stderr | src/lib/__tests__/column-no-public-authors.test.tsx > all public columns omit author attribution (2026-10-20) > fr guidance home cards have no attribution
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at img
+    at div
+    at figure
+    at IntlHeroPlate (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/intl-design/IntlHeroPlate.tsx:8:26)
+    at section
+    at GuidanceHero (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:101:25)
+    at div
+    at GuidanceHomeBody (/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/GuidanceHomeBody.tsx:753:3)
+
+ ✓ |unit| src/lib/__tests__/column-no-public-authors.test.tsx (79 tests) 57606ms
+   ✓ all public columns omit author attribution (2026-10-20) > ko original expert column, archive, metadata and content corpus  1475ms
+   ✓ all public columns omit author attribution (2026-10-20) > zh-hant original expert column, archive, metadata and content corpus  957ms
+   ✓ all public columns omit author attribution (2026-10-20) > en original expert column, archive, metadata and content corpus  1286ms
+   ✓ all public columns omit author attribution (2026-10-20) > ja original expert column, archive, metadata and content corpus  963ms
+   ✓ all public columns omit author attribution (2026-10-20) > vi original expert column, archive, metadata and content corpus  990ms
+   ✓ all public columns omit author attribution (2026-10-20) > id original expert column, archive, metadata and content corpus  821ms
+   ✓ all public columns omit author attribution (2026-10-20) > th original expert column, archive, metadata and content corpus  1240ms
+   ✓ all public columns omit author attribution (2026-10-20) > fil original expert column, archive, metadata and content corpus  1116ms
+   ✓ all public columns omit author attribution (2026-10-20) > ar original expert column, archive, metadata and content corpus  1779ms
+   ✓ all public columns omit author attribution (2026-10-20) > de original expert column, archive, metadata and content corpus  1222ms
+   ✓ all public columns omit author attribution (2026-10-20) > es original expert column, archive, metadata and content corpus  1278ms
+   ✓ all public columns omit author attribution (2026-10-20) > fr original expert column, archive, metadata and content corpus  979ms
+   ✓ all public columns omit author attribution (2026-10-20) > pt original expert column, archive, metadata and content corpus  1295ms
+   ✓ all public columns omit author attribution (2026-10-20) > zh-hans original expert column, archive, metadata and content corpus  1291ms
+   ✓ all public columns omit author attribution (2026-10-20) > ms original expert column, archive, metadata and content corpus  1299ms
+   ✓ all public columns omit author attribution (2026-10-20) > ru original expert column, archive, metadata and content corpus  1279ms
+   ✓ all public columns omit author attribution (2026-10-20) > tr original expert column, archive, metadata and content corpus  1255ms
+   ✓ all public columns omit author attribution (2026-10-20) > it original expert column, archive, metadata and content corpus  1122ms
+   ✓ all public columns omit author attribution (2026-10-20) > nl original expert column, archive, metadata and content corpus  1168ms
+   ✓ all public columns omit author attribution (2026-10-20) > pl original expert column, archive, metadata and content corpus  1355ms
+   ✓ all public columns omit author attribution (2026-10-20) > hi original expert column, archive, metadata and content corpus  1436ms
+   ✓ all public columns omit author attribution (2026-10-20) > sv original expert column, archive, metadata and content corpus  1701ms
+   ✓ all public columns omit author attribution (2026-10-20) > da original expert column, archive, metadata and content corpus  1337ms
+   ✓ all public columns omit author attribution (2026-10-20) > nb original expert column, archive, metadata and content corpus  830ms
+   ✓ all public columns omit author attribution (2026-10-20) > fi original expert column, archive, metadata and content corpus  766ms
+   ✓ all public columns omit author attribution (2026-10-20) > cs original expert column, archive, metadata and content corpus  835ms
+   ✓ all public columns omit author attribution (2026-10-20) > hu original expert column, archive, metadata and content corpus  914ms
+   ✓ all public columns omit author attribution (2026-10-20) > ro original expert column, archive, metadata and content corpus  954ms
+   ✓ all public columns omit author attribution (2026-10-20) > uk original expert column, archive, metadata and content corpus  1233ms
+   ✓ all public columns omit author attribution (2026-10-20) > el original expert column, archive, metadata and content corpus  1531ms
+   ✓ all public columns omit author attribution (2026-10-20) > he original expert column, archive, metadata and content corpus  1229ms
+   ✓ all public columns omit author attribution (2026-10-20) > bn original expert column, archive, metadata and content corpus  868ms
+   ✓ all public columns omit author attribution (2026-10-20) > ur original expert column, archive, metadata and content corpus  849ms
+   ✓ all public columns omit author attribution (2026-10-20) > fa original expert column, archive, metadata and content corpus  975ms
+   ✓ all public columns omit author attribution (2026-10-20) > my original expert column, archive, metadata and content corpus  845ms
+   ✓ all public columns omit author attribution (2026-10-20) > ta original expert column, archive, metadata and content corpus  745ms
+   ✓ all public columns omit author attribution (2026-10-20) > ne original expert column, archive, metadata and content corpus  911ms
+   ✓ all public columns omit author attribution (2026-10-20) > km original expert column, archive, metadata and content corpus  853ms
+   ✓ all public columns omit author attribution (2026-10-20) > mn original expert column, archive, metadata and content corpus  849ms
+   ✓ all public columns omit author attribution (2026-10-20) > sk original expert column, archive, metadata and content corpus  739ms
+   ✓ all public columns omit author attribution (2026-10-20) > bg original expert column, archive, metadata and content corpus  1005ms
+   ✓ all public columns omit author attribution (2026-10-20) > hr original expert column, archive, metadata and content corpus  900ms
+   ✓ all public columns omit author attribution (2026-10-20) > sr original expert column, archive, metadata and content corpus  746ms
+   ✓ all public columns omit author attribution (2026-10-20) > sl original expert column, archive, metadata and content corpus  907ms
+   ✓ all public columns omit author attribution (2026-10-20) > lt original expert column, archive, metadata and content corpus  885ms
+   ✓ all public columns omit author attribution (2026-10-20) > lv original expert column, archive, metadata and content corpus  816ms
+   ✓ all public columns omit author attribution (2026-10-20) > et original expert column, archive, metadata and content corpus  1068ms
+   ✓ all public columns omit author attribution (2026-10-20) > ca original expert column, archive, metadata and content corpus  883ms
+   ✓ all public columns omit author attribution (2026-10-20) > is original expert column, archive, metadata and content corpus  807ms
+   ✓ all public columns omit author attribution (2026-10-20) > en issue detail, index and criminal board  331ms
+   ✓ all public columns omit author attribution (2026-10-20) > ko traffic board and traffic article, including original lawyer content  769ms
+   ✓ all public columns omit author attribution (2026-10-20) > zh-hant traffic board and traffic article, including original lawyer content  895ms
+   ✓ all public columns omit author attribution (2026-10-20) > en traffic board and traffic article, including original lawyer content  915ms
+   ✓ all public columns omit author attribution (2026-10-20) > ja traffic board and traffic article, including original lawyer content  791ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit| src/lib/__tests__/column-image-caption-label.test.ts > column image caption label > every caption is the locale fictional-scene label
+AssertionError: expected [ …(12) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "columns-cs/915-taiwan-public-contract-mediation-arbitration-same-claim.md: Fiktivní scéna",
++   "columns-cs/916-taiwan-parent-company-pollution-liability-us-investor.md: Fiktivní scéna",
++   "columns-cs/918-taiwan-presale-mortgage-notice-handover-judgment.md: Fiktivní scéna",
++   "columns-cs/919-taiwan-workplace-bullying-investigation-hearing-judgment.md: Fiktivní scéna",
++   "columns-cs/920-taiwan-apartment-ev-charger-common-area-judgment.md: Fiktivní scéna",
++   "columns-cs/921-taiwan-online-game-coins-refund-judgment.md: Fiktivní scéna",
++   "columns-my/915-taiwan-public-contract-mediation-arbitration-same-claim.md: စိတ်ကူးယဉ်မြင်ကွင်း",
++   "columns-my/916-taiwan-parent-company-pollution-liability-us-investor.md: စိတ်ကူးယဉ်မြင်ကွင်း",
++   "columns-my/918-taiwan-presale-mortgage-notice-handover-judgment.md: စိတ်ကူးယဉ်မြင်ကွင်း",
++   "columns-my/919-taiwan-workplace-bullying-investigation-hearing-judgment.md: စိတ်ကူးယဉ်မြင်ကွင်း",
++   "columns-my/920-taiwan-apartment-ev-charger-common-area-judgment.md: စိတ်ကူးယဉ်မြင်ကွင်း",
++   "columns-my/921-taiwan-online-game-coins-refund-judgment.md: စိတ်ကူးယဉ်မြင်ကွင်း",
++ ]
+
+ ❯ src/lib/__tests__/column-image-caption-label.test.ts:86:17
+     84|       if (m && m[1] !== expected) bad.push(`${file}: ${m[1]}`);
+     85|     }
+     86|     expect(bad).toEqual([]);
+       |                 ^
+     87|   });
+     88| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |unit| src/lib/__tests__/column-language-links.test.tsx > pages that are not column articles > keep listing every language
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ src/lib/__tests__/column-language-links.test.tsx:309:3
+    307| 
+    308| describe('pages that are not column articles', () => {
+    309|   it('keep listing every language', () => {
+       |   ^
+    310|     for (const pathname of ['/ko', '/ko/columns', '/ko/columns/issues'…
+    311|       const locale = pathname.split('/')[1] as PublicLocale8;
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed | 11 passed (13)
+      Tests  2 failed | 476 passed (478)
+   Start at  07:53:18
+   Duration  71.31s (transform 11.20s, setup 107ms, collect 16.34s, tests 116.88s, environment 2ms, prepare 1.31s)
+

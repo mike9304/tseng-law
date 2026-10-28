@@ -1,0 +1,13 @@
+# B10 closed-locale intake — 2026-10-29
+
+The six closed locales CS, MY, TA, TR, UK and UR remain eligible for integration: 36 new manuscripts, one existing CS706 repair and five copied checker files. This is an exact-byte intake finding based on existing independent AI reviews. It is not a new semantic review, a human/legal approval, a release build or confirmation of publication.
+
+The current guarded repository baseline is `8f7624b56423a1dd27590c25e9ca5623631b9057`, the root-authorized fast-forward. The repository was clean before and after this read-only audit. The original e22 baseline receipts are preserved as `current-intake-e22-*`; the original root integration intent is unchanged.
+
+All 67 intake checks passed. All 65 critical manifest/report/proof/current-source references match their recorded hashes. There are 266 reference observations in total, including duplicate and historical references. The sole historical mismatch is the automatically regenerated shared LESSONS file: the MY review retains its original 2026-10-26 SHA, while the current 2026-10-29 07:32 version is `365fddcb25c7a499ebbf0dafacbd0da82486815a74ef7f5844f30ac1bfd0e652`. I read the current file in full and preserved the old review record.
+
+The seven closing reports were read in full. Each records zero mandatory open findings. MY keeps three unadopted optional suggestions; these are not reclassified as mandatory failures. The current source snapshots and closing report/manifests retain their exact bindings. The existing CS706 destination matches the required old SHA. All 36 new destinations remain absent at the refreshed baseline. The five checker copy sources match the reviewed shared installation and their destination preconditions match R. Prior shared checker installation has actual test exit 0; no new test run is claimed here.
+
+`current-intake-integration-list.json` is the executable copy specification: 42 file operations (36 new articles + 1 repaired article + 5 checker files), each with source hash and required destination hash or absence. Revalidate those guards immediately before copying. The list deliberately excludes the six still-open SV articles, B11/B12 work and the separate capacity candidate. Root may append independently closed SV and other exact intakes to a larger release; this report does not approve them.
+
+The next release still needs current copied-checker checks, integration/structure and inventory checks, the existing full build/package/browser release validation, a non-force push through the authorized main-to-MacBookAir-to-Sites route, and actual public verification. No R source, shared tool, commit or deployment was changed by this audit.

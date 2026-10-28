@@ -1,0 +1,452 @@
+{
+  "atUTC": "2026-10-26T12:38:47.563706+00:00",
+  "author": "root",
+  "status": "AUTHOR_R2_FROZEN_INDEPENDENT_CLOSURE_PENDING",
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/nl-author-r2.md",
+    "sha256": "3cb6cad4f2a95f3fb785302d8ed33fee06c34bdbca9334fc973b1c8cfb778e1a"
+  },
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-nl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "73765c4d13843c06ca292f47907038fa45c6aa7125ae89f46d48258afe035a60",
+      "sentences": 48,
+      "sameSentences": 48,
+      "newSentences": 0,
+      "metrics": {
+        "lang": "nl",
+        "sentences": 48,
+        "paras": 16,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 14.3,
+        "len_cv": 0.476,
+        "short_share": 0.208,
+        "long_share": 0.021,
+        "para_cv": 0.139,
+        "even_run3": 0.022,
+        "top_end": "gevraagd",
+        "top_end_share": 0.042,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "ook",
+        "top_opener_n": 2,
+        "opener_rep": 0.125,
+        "consec_same_start": 1,
+        "cite_para_share": 0.125,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 2.62,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "NT$44.417.150 was toegekend in een arbitraal vonnis dat uiteindelijk werd vernietigd.",
+        "last": "Voor een beoordeling kunt u via de Engelstalige contactpagina de wijzigingen van de vordering en de huidige procesfase k",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "exactForwardReverse": true,
+      "actualCLI": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-variety-self-r4.json",
+        "sha256": "bc287dc1475817c5bd73dadcdebb8209d51e93228c629572b811aee3c6c1651c",
+        "aggregateExitCode": 1,
+        "thisFileFAIL": 0
+      },
+      "bodyNumberSequenceUnchanged": true,
+      "allURLSequenceUnchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-nl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "7475d597e8b06dc6ccd2f4d732fb8f8d4dbe0621843cdc030f2c368e6ba105d8",
+      "sentences": 45,
+      "sameSentences": 45,
+      "newSentences": 0,
+      "metrics": {
+        "lang": "nl",
+        "sentences": 45,
+        "paras": 16,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 14.8,
+        "len_cv": 0.482,
+        "short_share": 0.222,
+        "long_share": 0.022,
+        "para_cv": 0.135,
+        "even_run3": 0.023,
+        "top_end": "nodig",
+        "top_end_share": 0.067,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "een",
+        "top_opener_n": 2,
+        "opener_rep": 0.25,
+        "consec_same_start": 0,
+        "cite_para_share": 0.062,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.8,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Wie binnen een concern ontving het milieurapport, en wat gebeurde er daarna?",
+        "last": "Via de Engelstalige contactpagina kunt u voor een beoordeling de concernstructuur en belangrijke data kort omschrijven. ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "exactForwardReverse": true,
+      "actualCLI": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-variety-self-r6.json",
+        "sha256": "b2e76dba05558a273ec2b652b2b1de9589861ca725eeebe3af5295657cd8bef5",
+        "aggregateExitCode": 0,
+        "thisFileFAIL": 0
+      },
+      "bodyNumberSequenceUnchanged": true,
+      "allURLSequenceUnchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-nl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "daafd27d86f8e9f9698d76527bf6297876d675e0e316c1a01c2878a6bc96d0e5",
+      "sentences": 43,
+      "sameSentences": 42,
+      "newSentences": 1,
+      "metrics": {
+        "lang": "nl",
+        "sentences": 43,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 14.7,
+        "len_cv": 0.469,
+        "short_share": 0.186,
+        "long_share": 0.023,
+        "para_cv": 0.222,
+        "even_run3": 0.0,
+        "top_end": "overdracht",
+        "top_end_share": 0.093,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "op",
+        "top_opener_n": 2,
+        "opener_rep": 0.143,
+        "consec_same_start": 2,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.33,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Toen de ontwikkelaar in februari om voortgang bij de hypotheek vroeg, had de woning nog ge",
+        "last": "Bij een verzoek om een boete of vertragingsrente kunt u via de Engelstalige contactpagina de betwiste bepaling en antwoo",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "exactForwardReverse": true,
+      "actualCLI": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-variety-review-r2.json",
+        "sha256": "d757a52f63eaf31a8042c5b7f386865e24856e5c4fae14ca71c6d5500354e80f",
+        "aggregateExitCode": 1,
+        "thisFileFAIL": 0
+      },
+      "bodyNumberSequenceUnchanged": true,
+      "allURLSequenceUnchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-nl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "caafa40bef2f15b7ae5bc4b7037d79faa2566539d5e8001ac793ae484b3efeca",
+      "sentences": 41,
+      "sameSentences": 39,
+      "newSentences": 2,
+      "metrics": {
+        "lang": "nl",
+        "sentences": 41,
+        "paras": 15,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 15.2,
+        "len_cv": 0.479,
+        "short_share": 0.22,
+        "long_share": 0.024,
+        "para_cv": 0.184,
+        "even_run3": 0.051,
+        "top_end": "niet",
+        "top_end_share": 0.049,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "voor",
+        "top_opener_n": 2,
+        "opener_rep": 0.067,
+        "consec_same_start": 1,
+        "cite_para_share": 0.067,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 1.77,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Op 3 september 2026 vernietigde de hogere bestuursrechter in Taipei zowel het oorspronkeli",
+        "last": "Voor advies over bescherming en onderzoeksinrichting kunt u via de Engelstalige contactpagina de huidige fase kort besch",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "exactForwardReverse": true,
+      "actualCLI": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-variety-review-r2.json",
+        "sha256": "d757a52f63eaf31a8042c5b7f386865e24856e5c4fae14ca71c6d5500354e80f",
+        "aggregateExitCode": 1,
+        "thisFileFAIL": 0
+      },
+      "bodyNumberSequenceUnchanged": true,
+      "allURLSequenceUnchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-nl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "ad6d7950727b7f3184b0d45f70bf0f33437481b4ed18afab608fee71dcfd5756",
+      "sentences": 42,
+      "sameSentences": 38,
+      "newSentences": 4,
+      "metrics": {
+        "lang": "nl",
+        "sentences": 42,
+        "paras": 15,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 16,
+        "len_cv": 0.454,
+        "short_share": 0.119,
+        "long_share": 0.024,
+        "para_cv": 0.221,
+        "even_run3": 0.0,
+        "top_end": "toestemming",
+        "top_end_share": 0.048,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "een",
+        "top_opener_n": 2,
+        "opener_rep": 0.267,
+        "consec_same_start": 1,
+        "cite_para_share": 0.333,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.53,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Een kabel loopt van een geparkeerde auto naar de lader bij een kolom; daarboven gaat een l",
+        "last": "Bij een verwijderingsverzoek kunt u via de Engelstalige contactpagina de betwiste reglementsbepaling en antwoordtermijn ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "exactForwardReverse": true,
+      "actualCLI": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-variety-review-r2c.json",
+        "sha256": "60c78fd55474ec0050ce9b5da6bab841c7cb6d2cfbf5bf42b26428ef483aed7f",
+        "aggregateExitCode": 0,
+        "thisFileFAIL": 0
+      },
+      "bodyNumberSequenceUnchanged": true,
+      "allURLSequenceUnchanged": true
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-nl/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "8cb644afa132e442b67a57f2ef8c80a00fd559396519b45f7a824c000a1d4f71",
+      "sentences": 51,
+      "sameSentences": 50,
+      "newSentences": 1,
+      "metrics": {
+        "lang": "nl",
+        "sentences": 51,
+        "paras": 18,
+        "heads": 5,
+        "list_items": 0,
+        "mean_len": 14.7,
+        "len_cv": 0.467,
+        "short_share": 0.176,
+        "long_share": 0.0,
+        "para_cv": 0.204,
+        "even_run3": 0.02,
+        "top_end": "aanbieder",
+        "top_end_share": 0.039,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "een",
+        "top_opener_n": 2,
+        "opener_rep": 0.222,
+        "consec_same_start": 2,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 2.94,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Een zichtbaar saldo na beëindiging van een spelovereenkomst is niet zonder meer een nog te",
+        "last": "Een geschil kan eerst aan de aanbieder en daarna via het officiële consumentenklachtenkanaal worden voorgelegd. Voor een",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      },
+      "exactForwardReverse": true,
+      "actualCLI": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-variety-review-r2.json",
+        "sha256": "d757a52f63eaf31a8042c5b7f386865e24856e5c4fae14ca71c6d5500354e80f",
+        "aggregateExitCode": 1,
+        "thisFileFAIL": 0
+      },
+      "bodyNumberSequenceUnchanged": true,
+      "allURLSequenceUnchanged": true
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-author-r2-proof.json",
+      "sha256": "167ead8e8e64eabdd01ce562e0426406ab780229ae3bc44644f322be6f61966d"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-review-r2-edits.json",
+      "sha256": "e754ee8cc20c61eef45e974e8e8721bf802a130a658002ac15b5ba51c80f9a22"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-review-r2-followup-edits.json",
+      "sha256": "96ca760288fa1c0c7629abdf7a4b90a7886e551d433fc8c2ad08dd3c0da4cbef"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-review-r2-followup2-edits.json",
+      "sha256": "f371c7d2ddcbe26e52aebef51dc830258f0643fd4ba74d13b3da48c32785ac7c"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-independent-r1-manifest.json",
+      "sha256": "ae516b4770781f3ea7db42625491e9f8fcb8feb92bb0c5616b9f1f4397e43931"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-variety-review-r2.json",
+      "sha256": "d757a52f63eaf31a8042c5b7f386865e24856e5c4fae14ca71c6d5500354e80f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-variety-review-r2b.json",
+      "sha256": "a97aff94f28fe197be544a974b6eb38c7f0c4ade6462ef5c4bf4e777a451ae45"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-variety-review-r2c.json",
+      "sha256": "60c78fd55474ec0050ce9b5da6bab841c7cb6d2cfbf5bf42b26428ef483aed7f"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-content-audit-review-r2.json",
+      "sha256": "86daea4f16133c158365db3c3096e8e7a5963766cf6464af9ddb9782a0f54fa2"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-content-audit-review-r2c.json",
+      "sha256": "1cb3427ac172e6d66e19e950983ba958fc398a6bb49b15f49528b21b98659834"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-final-manifest.json",
+      "sha256": "884e1e8fb5c54ff849e0ab0be31ddb8d6664124fe221517eeaad599f02c37761"
+    }
+  ],
+  "inputBindingsHistorical": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "dbc06e56df75f67e92e9fceef19ad1b7c3db4b9ff9396256d3d2d2e043d1966d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/en-916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "167addba353f1b6c7cfa3f530bc6aeb34b3c1871b33043de35203e9920817cb1"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "43949fd463c3c6a7612dd98d6ffb1007925bc5032a0f3967fe181c1e16fdaa4b"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "9696db15f3510d1f1d5b3f0dda3f0471d2e70a25b1bce625ca2fb3a49cceb390"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d7783b6cebeb410766a692fa2eebf3bd3b12bff48bd2615f6468cfd09f8b9484"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3"
+    },
+    {
+      "file": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d"
+    },
+    {
+      "file": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5"
+    },
+    {
+      "file": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "56120b79d5f6a483f760f2a470dab7753ca7d14d1c727ce8e8bbd721da773f97"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/authoring-contract-draft.md",
+      "sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/six-source-facts.md",
+      "sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-register.md",
+      "sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-freeze.json",
+      "sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-nl/704-taiwan-arc-first-application.md",
+      "sha256": "9afd04adb2dd9c2a57e898c991b4642a71a7c83df3cd7016efe7e704c96d1483"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-nl/705-taiwan-visa-residence-work-study-family.md",
+      "sha256": "a38063b5a16d9f5b4d44b0a5c1fffdb8b6b3c1de7ca8ab178966a1213135bae7"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-nl/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "788fcd4f71b5b453c921edb514b48ebe678ca123d9bfac90482b269968b0c37d"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-nl/934-dutch-technicians-taiwan-installation-contract-work-permit.md",
+      "sha256": "8427d908388f0df5adf9b172935dd14447b2afc3179fd3f79db1cf66f2b1c6de"
+    },
+    {
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-nl/935-dutch-machinery-taiwan-retention-title-registration.md",
+      "sha256": "241a1785fea4cfd9b19cd18bff733329caff8dec8721a85ea3d75634ba28cc11"
+    }
+  ],
+  "latestLessons": {
+    "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+    "sha256": "482ae7afd3f0da90cf1379e345f15783ec4442f5406bde09e7e675b6ef2bdab8"
+  },
+  "publicationReady": false
+}

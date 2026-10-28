@@ -1,0 +1,44 @@
+{
+  "atUTC": "2026-10-28T22:46:15.750993+00:00",
+  "author": "root",
+  "source": "/private/tmp/tseng-kimi-sv-cases-20261026/output/916-taiwan-parent-company-pollution-liability-us-investor.md",
+  "beforeSHA256": "f194a33552a946ef2a6fa11e8bd4aca417406a674aa4cd5c3fb0a5c3f0f0a57c",
+  "target": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-root-r4/916-taiwan-parent-company-pollution-liability-us-investor.md",
+  "afterSHA256": "c90f44bfd0e8dd54d316b63f27b4881da8e960e8065098ed836baade17e57b86",
+  "edits": [
+    {
+      "old": "Rapporten är början på arbetet. Granskningen behöver visa vem som undersökte exponeringen, vilka kompletteringar som beställdes och hur resultaten påverkade besluten om rörelsebolagets resurser. Olösta frågor ska redovisas som olösta. En optimistisk avslutande presentation får inte sudda ut de tekniska resultaten eller ansvaret för uppföljningen.",
+      "new": "Olösta frågor ska stå kvar. Rapporten behöver följas av en redovisning av vem som undersökte exponeringen, vilka kompletteringar som beställdes och hur resultaten påverkade besluten om rörelsebolagets resurser, så att en optimistisk slutpresentation inte döljer tekniska fynd eller lämnar uppföljningen utan ansvarig.",
+      "reason": "Replace abstract report-is-start restatement with unresolved issues and the concrete link between report follow-up and documented decisions. Preserve exposure inquiry, additional requests, operating-company resources, technical results and follow-up responsibility."
+    },
+    {
+      "old": "Där nämns också möjligt amerikanskt stöd till finansiering av privata investeringar i Taiwan tillsammans med amerikanska privata partner, med förbehåll för tillämplig lag.",
+      "new": "Enligt faktabladet ska USA, när det är lämpligt och förenligt med tillämplig lag, överväga stöd till finansiering av investeringar i kritiska sektorer i Taiwan i samarbete med privata partner från USA.",
+      "reason": "State the precise USTR23 conditions freshly checked October29: consider, as appropriate, critical sectors in Taiwan, collaboration US private partners, applicable law; no financing entitlement."
+    }
+  ],
+  "otherFiveUnchanged": true,
+  "ruleInputs": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3"
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "365fddcb25c7a499ebbf0dafacbd0da82486815a74ef7f5844f30ac1bfd0e652"
+    }
+  ],
+  "sourceChecks": {
+    "article154": "freshMOJreadsuccess; conditions preserved",
+    "USTR": "freshofficialreadsuccessline23",
+    "court": "freshrequesttimeout; priorverifiedsourceandunchangedcourtparagraphsretained"
+  }
+}

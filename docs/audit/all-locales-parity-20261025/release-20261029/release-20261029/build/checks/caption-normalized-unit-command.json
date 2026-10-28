@@ -1,0 +1,102 @@
+{
+  "startedAt": "2026-10-28T22:56:02.123369+00:00",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "src/lib/__tests__/column-image-caption-label.test.ts"
+  ],
+  "cwd": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+  "scopeSHA256": "c9c3aad19766d42599208f0ab5595ed507fab309fe075d727587b70671232e3c",
+  "changedSources": [
+    {
+      "locale": "cs",
+      "number": 915,
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "path": "src/content/columns-cs/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "4b70f34b0e1a28ccfcf428958152556a703675274eadb1a900abbef4ec0d1223"
+    },
+    {
+      "locale": "cs",
+      "number": 916,
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "path": "src/content/columns-cs/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "f8df1ff59aae04834ec4f575ca0dc576ba6f780e9789527081dbb539f4f63240"
+    },
+    {
+      "locale": "cs",
+      "number": 918,
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "path": "src/content/columns-cs/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "12406380f64a9eb72f18f6a9d2da2324ec10881324e1716d7f9a500d1a7713f6"
+    },
+    {
+      "locale": "cs",
+      "number": 919,
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "path": "src/content/columns-cs/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b429a8a15eec24111b17244c2edd75dc1c26a10e2e8b8879b33b03ee5911a946"
+    },
+    {
+      "locale": "cs",
+      "number": 920,
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "path": "src/content/columns-cs/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "cef61218e5e14d3af0429592682a3babccd79811077644cc3cf126bffe5a5786"
+    },
+    {
+      "locale": "cs",
+      "number": 921,
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "path": "src/content/columns-cs/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "7c87ab43c1add09d734764f9ce3b9c1311ead619d340264f741426f592ae0358"
+    },
+    {
+      "locale": "my",
+      "number": 915,
+      "slug": "taiwan-public-contract-mediation-arbitration-same-claim",
+      "path": "src/content/columns-my/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "6250f693bb4ccce71f8de8264ee089879e277df12d21f7e4288c09b603ec36e6"
+    },
+    {
+      "locale": "my",
+      "number": 916,
+      "slug": "taiwan-parent-company-pollution-liability-us-investor",
+      "path": "src/content/columns-my/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "19c8e3f2ea635c1f066800081b6d2265236a858606522dba0409f899e03fe178"
+    },
+    {
+      "locale": "my",
+      "number": 918,
+      "slug": "taiwan-presale-mortgage-notice-handover-judgment",
+      "path": "src/content/columns-my/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "694243ae834dd84ca275a7907759624cae3b3c4d2e7a28938db3fc7cc07e43f2"
+    },
+    {
+      "locale": "my",
+      "number": 919,
+      "slug": "taiwan-workplace-bullying-investigation-hearing-judgment",
+      "path": "src/content/columns-my/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "aea3e5b24de57f8bd82ae623b7a40f8d400bab33bc12e243a539f0aca4bc6a9e"
+    },
+    {
+      "locale": "my",
+      "number": 920,
+      "slug": "taiwan-apartment-ev-charger-common-area-judgment",
+      "path": "src/content/columns-my/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "e16720b511d5cec97f9fedc4077bb316a63ade975d3aa0f249ef3abe5a88beab"
+    },
+    {
+      "locale": "my",
+      "number": 921,
+      "slug": "taiwan-online-game-coins-refund-judgment",
+      "path": "src/content/columns-my/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "8459fa6b7838d2f5eb615bbf167440f8298a79ced8d656bf0c89e1b3465e0c1f"
+    }
+  ],
+  "normalizationLedgerSHA256": "0de499987c26db7b9a8275923c21693860e3bd9ee185ac1fa1afe135689ebf3b",
+  "exitCode": 0,
+  "finishedAt": "2026-10-28T22:56:03.400400+00:00",
+  "sourcesUnchanged": true,
+  "logSHA256": "bca32406782b3d29aff6dd07aa43191aa086d29e2bfbaaecd50959393f30e080"
+}

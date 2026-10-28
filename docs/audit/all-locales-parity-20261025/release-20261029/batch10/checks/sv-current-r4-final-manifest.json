@@ -1,0 +1,397 @@
+{
+  "atUTC": "2026-10-28T22:52:22.136044+00:00",
+  "reviewer": "/root/release_live",
+  "status": "PASS_CONTENT_READY_FOR_INTAKE",
+  "unresolvedMandatory": 0,
+  "unresolvedOptional": 0,
+  "unresolvedMonotony": 0,
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/sv-independent-r4-current.md",
+    "sha256": "39a0687c319c5923a4fd08fa035d54a8647d99304626999e71e848a6f7986871"
+  },
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-root-r4/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "cac8d5f358ef8c1d60ebbdfdf51ca66d41cd53889cb5e19d5292f0ae8348de2c",
+      "sentences": 40,
+      "actualCLIExit": 0,
+      "metrics": {
+        "lang": "sv",
+        "sentences": 40,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 13.5,
+        "len_cv": 0.475,
+        "short_share": 0.275,
+        "long_share": 0.0,
+        "para_cv": 0.294,
+        "even_run3": 0.0,
+        "top_end": "skiljeförfarande",
+        "top_end_share": 0.075,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "ett",
+        "top_opener_n": 2,
+        "opener_rep": 0.143,
+        "consec_same_start": 0,
+        "cite_para_share": 0.214,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.88,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Skiljedomen om NT$44 417 150 bestod inte.",
+        "last": "Officiella källor och gällande lagtext kontrollerades den 25 oktober 2026. Redogörelsen för målet bygger på högsta domst",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-root-r4/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "c90f44bfd0e8dd54d316b63f27b4881da8e960e8065098ed836baade17e57b86",
+      "sentences": 45,
+      "actualCLIExit": 0,
+      "metrics": {
+        "lang": "sv",
+        "sentences": 45,
+        "paras": 16,
+        "heads": 4,
+        "list_items": 0,
+        "mean_len": 15.2,
+        "len_cv": 0.488,
+        "short_share": 0.2,
+        "long_share": 0.044,
+        "para_cv": 0.226,
+        "even_run3": 0.07,
+        "top_end": "2018",
+        "top_end_share": 0.044,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "miljöundersökningar",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.062,
+        "cite_end_share": 0.0,
+        "contrast": 1,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.9,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Miljöundersökningar inför ett förvärv blev en del av bevisningen mot moderbolag i en taiwa",
+        "last": "Officiella källor kontrollerades den 25 oktober 2026. Artikeln granskar en identifierad dom från 2018 genom högsta domst",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-root-r4/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "669bf7a2eaf14eb4d1a32f0ac7afe4a3bbbcf5ae7292610df874b2dd56034b89",
+      "sentences": 44,
+      "actualCLIExit": 0,
+      "metrics": {
+        "lang": "sv",
+        "sentences": 44,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 13.5,
+        "len_cv": 0.5,
+        "short_share": 0.364,
+        "long_share": 0.0,
+        "para_cv": 0.19,
+        "even_run3": 0.0,
+        "top_end": "överlåtelsen",
+        "top_end_share": 0.068,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "i",
+        "top_opener_n": 2,
+        "opener_rep": 0.214,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.37,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "I februari skickade byggherren ett brev om bostadslånet.",
+        "last": "Underlaget kontrollerades den 25 oktober 2026. Målet avgjordes utifrån ett bestämt avtal och konkreta fullgörelsebevis. ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-root-r4/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "6d8ee6107c056d7575c592655a6d49cb14144d9601cd0af7ef084e9d3fd5ec02",
+      "sentences": 45,
+      "actualCLIExit": 0,
+      "metrics": {
+        "lang": "sv",
+        "sentences": 45,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 13.6,
+        "len_cv": 0.473,
+        "short_share": 0.311,
+        "long_share": 0.0,
+        "para_cv": 0.261,
+        "even_run3": 0.023,
+        "top_end": "2026",
+        "top_end_share": 0.044,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "två",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.154,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.63,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Två allvarliga disciplinära anmärkningar, registrerade vid ett och samma tillfälle, ledde ",
+        "last": "Underlaget kontrollerades den 25 oktober 2026. Målsredogörelsen bygger på domstolens offentliga besked; något senare öve",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-root-r4/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "260359fea59fa0fb98d903c20961a40fa412c26f7314d01b6020db8842d7f957",
+      "sentences": 41,
+      "actualCLIExit": 0,
+      "metrics": {
+        "lang": "sv",
+        "sentences": 41,
+        "paras": 12,
+        "heads": 2,
+        "list_items": 0,
+        "mean_len": 14.3,
+        "len_cv": 0.504,
+        "short_share": 0.22,
+        "long_share": 0.049,
+        "para_cv": 0.166,
+        "even_run3": 0.026,
+        "top_end": "sammanträde",
+        "top_end_share": 0.049,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "de",
+        "top_opener_n": 2,
+        "opener_rep": 0.083,
+        "consec_same_start": 0,
+        "cite_para_share": 0.333,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 3.23,
+        "hypo_open": false,
+        "q_open": true,
+        "formula_close": false,
+        "first": "Kan den som använder en parkeringsplats själv bestämma var laddboxen ska sitta?",
+        "last": "Underlaget kontrollerades den 25 oktober 2026. Artikeln bygger på Kaohsiungdomens avgörande; senare domar eller om domen",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-root-r4/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "b3300383b9befb98a7d806f47ecf69ae8daa90b81d41a83635e33e5eb3ee6f85",
+      "sentences": 48,
+      "actualCLIExit": 0,
+      "metrics": {
+        "lang": "sv",
+        "sentences": 48,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 12.6,
+        "len_cv": 0.465,
+        "short_share": 0.292,
+        "long_share": 0.0,
+        "para_cv": 0.249,
+        "even_run3": 0.022,
+        "top_end": "återbetalning",
+        "top_end_share": 0.083,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "en",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 1,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.95,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "Spelaren krävde NT$243 548.",
+        "last": "Underlaget kontrollerades den 25 oktober 2026. Artikeln beskriver ett bestämt spelåterbetalningsmål. Andra spels poäng, ",
+        "length_unit": "orthographic_words",
+        "short_threshold": 8,
+        "long_threshold": 32,
+        "sentence_boundary_method": "unicode_punctuation_with_locale_abbreviations"
+      }
+    }
+  ],
+  "priorIndependentMeaningClosure": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/sv-independent-r2.md",
+    "sha256": "3a12ddbccc49b8172d5cf544cbeff79e1cdc61f7e8572224a471ea1fea1bcb67",
+    "reusedByExactByteBinding": true
+  },
+  "changesReviewed": {
+    "r3ExactEdits": 2,
+    "rootR4ExactEdits": 2,
+    "forwardReverseArticlesPerRound": 6,
+    "metadataAndFAQUnchanged": true,
+    "numericBodyTokensAndURLSequenceUnchanged": true,
+    "currentSegments": 263,
+    "identicalToR2Segments": 254,
+    "newSegments": 9,
+    "changedArticleSegmentsRead": 86,
+    "changedArticlesFullyRead": [
+      916,
+      920
+    ]
+  },
+  "actualChecks": {
+    "sharedCLIWholeBatchExit": 0,
+    "sharedCLIPassFiles": 6,
+    "firstRenderExit": 1,
+    "firstStructureExit": 1,
+    "firstFailureCause": "Missing R dependencies, not manuscript errors",
+    "rerunRenderExit": 0,
+    "rerunStructureExit": 0,
+    "structureErrors": 0,
+    "structureManualReviewItems": 32,
+    "renderedParagraphsEqualExtractedText": 28
+  },
+  "ruleInputs": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3"
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "365fddcb25c7a499ebbf0dafacbd0da82486815a74ef7f5844f30ac1bfd0e652"
+    }
+  ],
+  "toolInputs": [
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "sha256": "c96c303b9af9be1a8a8965f9a503cf0617a4a36716109af3184cfff8464c81ec"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+      "sha256": "0b4af8c41031e6c33bc2c6518caa8875f1f2b097f44c454161100aee07ab3ab9"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/variety_expansion.py",
+      "sha256": "ae6cca9ef98daed82fd578e6cf0442124ecb6e43215837e1cdb0a89e4198a4e2"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/variety/profiles/sv.json",
+      "sha256": "66703b741178befbfc04395ba29a4dddb42254772700c906d7bd233a1834680e"
+    }
+  ],
+  "endGuard": {
+    "currentCandidateSHARechecked": 6,
+    "priorEvidenceSHARechecked": 17,
+    "rulesRechecked": 4,
+    "toolsRechecked": 4,
+    "allUnchanged": true
+  },
+  "evidence": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-current-r4-proof.json",
+      "sha256": "b93377135af8e2be62ace641c75e92e616e41b2940a60ef06e6cdc86e93b25c4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-current-r4-sources.json",
+      "sha256": "3a56e947bb3c78c59eaea4fde5e7b70f84eafdc402b7d79315cad2cd73038d93"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-current-r4-variety-final.json",
+      "sha256": "543f42bef51c49551c37824189defcc2c4986d7ad6d0f62a0f39569696012dbb"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-current-r4-render-final.json",
+      "sha256": "11704d4d4ed4eea3a3a01e58e8ec67a396bb165fbb09566600f3a986f1cf67b8"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-current-r4-render-proof.json",
+      "sha256": "209cc047b68911f4cd3aef6a1f570eff8550c88026a5bebdb1077c2e4e2d50d1"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-current-r4-content-audit-final.json",
+      "sha256": "df4dfa1680caf8db8efbd4c38de17dee2515d3764b3fbf73a3f6da76ebf903ac"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-current-r4-first-execution.json",
+      "sha256": "3200f359d2eff68c62cfd17be089a5c24d9da3c947337bc0cb22ae3c57ca2813"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-current-r4-measure.py",
+      "sha256": "a26d78621f8b55f0f4c8d3efdff5c2ee514ffe61200185e4fb7f0587531bd9fd"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-current-r4-render.mjs",
+      "sha256": "5d406631bdc779cfa745dfb46762f6c63458a2b0238c5a15d78f464faae9e943"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-current-r4-content.mjs",
+      "sha256": "68855ac8c1da677ade4c81b5c1f1489746057f68933e9f51d7f39ab8cf7ded31"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-root-r4-edits.json",
+      "sha256": "240f5128827be43bc8dff8a8e5af3083d0bd91409f670f6d8ab343842ed42070"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/sv-independent-r2-final-manifest.json",
+      "sha256": "4efab64d3010071f6a6eba581b2411f9e8db0b623684fc2e35d1e11669a6075c"
+    }
+  ],
+  "limitations": [
+    "Model independent review only; not human native-speaker or lawyer approval.",
+    "Exact R2 same-byte meaning/FAQ/recent-article review reused; not claimed as wholly repeated by this reviewer.",
+    "Full release build, cards, feeds, JSON-LD, browser layout and public delivery still required.",
+    "This reviewer made no manuscript/repository/shared-tool edits or external Kimi calls."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "atUTC": "2026-10-26T12:25:40.030689+00:00",
+  "status": "INDEPENDENT_AI_REVIEW_CLOSED",
+  "mandatoryOpen": 0,
+  "adoptedOptionalOpen": 0,
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/cs-706-repair-independent.md",
+    "sha256": "3af3b8fbc2c0a0bfdd60161bc0d521d005e5db98df1bf8bd58daad8ae750a7d1"
+  },
+  "proof": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/cs-706-repair-independent-proof.json",
+    "sha256": "c95b8e6939298c5428b39a5c867ee27d341652b9f60997335d06aeabb0fa408e"
+  },
+  "files": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/repairs/columns-cs/706-taiwan-arc-renewal-changes-reentry.md",
+      "sha256": "52b81278a4ca64bea08352a87e2cf2479d790e94c2e58c15361dfa5e3782175a"
+    }
+  ],
+  "authorManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/cs-repair-706-final-manifest.json",
+    "sha256": "398ecd59f0b65a10460854b8eef5fdac1a4bb86f20def3d57c6945b19a976f18"
+  },
+  "published": false
+}

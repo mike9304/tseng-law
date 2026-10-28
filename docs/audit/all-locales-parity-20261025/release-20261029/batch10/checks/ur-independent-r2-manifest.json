@@ -1,0 +1,71 @@
+{
+  "atUTC": "2026-10-26T11:29:51.076178+00:00",
+  "status": "TARGETED_R2_CLOSED",
+  "mandatoryRemaining": 0,
+  "optionalRemaining": 0,
+  "closed": [
+    "M01",
+    "O01"
+  ],
+  "report": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/ur-independent-r2.md",
+    "sha256": "0d638acc7cd576f91f4791bf48de38ecb2ac6686601695ce792248b99cadd6b1"
+  },
+  "artifacts": [
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/ur-independent-r2.md",
+      "sha256": "0d638acc7cd576f91f4791bf48de38ecb2ac6686601695ce792248b99cadd6b1"
+    },
+    {
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/ur-independent-r2-verification.json",
+      "sha256": "9b1f0eb5cd246ca4daf73085b24752cb3d88b5bd119ed14fb9c00105ff7cdbdd"
+    }
+  ],
+  "currentManuscripts": [
+    {
+      "id": "915",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-ur/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "824f2dd4403b1619295dc8bf68315273007b2db7a3cd22d8ba0bc8aac9944a22"
+    },
+    {
+      "id": "916",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-ur/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "2c3628798bb860239f0314949194d5510194229b8862ebc9e1581ea72e942cf6"
+    },
+    {
+      "id": "918",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-ur/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "b9b0b439dffac3a438ca215cc42cbf416c68b495714e68491c6b7d7276e7ea84"
+    },
+    {
+      "id": "919",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-ur/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "e59f3e441f9b959025f03f74ce56292d58ac474b3245c1b9419cf691c328b270"
+    },
+    {
+      "id": "920",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-ur/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "a984349d7a8f36f3a3b96679a965a1a54b61933c2c65de7343859dc87e296c2f"
+    },
+    {
+      "id": "921",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-ur/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "3ab713aa7f54dcb6bf56243bc7a6409705d091c53eee17b2db1971dfd127409f"
+    }
+  ],
+  "authorR2Manifest": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/ur-final-manifest-r2.json",
+    "sha256": "fefe685a9c422ddd807f969158fed408dae0ae5524647ab84cf158f8618b61bc"
+  },
+  "authorR2Report": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/reviews/ur-author-r2.md",
+    "sha256": "e6466cfa62faa42662de0e1c53bdd9587a0894cec0c284f8f2a22a9f1ae7632e"
+  },
+  "independentR1Manifest": {
+    "file": "/Users/son7/tseng-all-language-columns-20261025/batch10/checks/ur-independent-final-manifest.json",
+    "sha256": "8c80df4260dc8cff6373b40124730ecab662292c9318567e72ded0209d24f1cc"
+  },
+  "guardCount": 92,
+  "freshWholeCLI": false,
+  "nativeOrLawyerApproval": false
+}

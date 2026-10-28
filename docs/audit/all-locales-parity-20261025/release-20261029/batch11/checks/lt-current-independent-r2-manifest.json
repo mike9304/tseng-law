@@ -1,0 +1,118 @@
+{
+  "atUTC": "2026-10-28T22:46:42.172762+00:00",
+  "decision": "LT_R2_TARGETED_CLOSED_NL_CURRENT_BINDINGS_VALID",
+  "mandatoryRemaining": 0,
+  "optionalRemaining": 0,
+  "integrationCandidates": 12,
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/lt-current-independent-r2.md",
+    "sha256": "66476a4c4d3d5dde4be841e5f27a1d8a770e06d0f70c2761d05d2623a8959d08"
+  },
+  "proof": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/lt-current-independent-r2-proof.json",
+    "sha256": "9efebf4f6360a8a9a3775ae07b97fb5072bd38f328e003c9eaf9bd844aad87d5"
+  },
+  "LT": {
+    "priorIndependent": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/lt-independent.md",
+      "sha256": "7260d2d17133cf6389ce1f8efa495ecaa7c18aa9ad4d009bd052ce6e1e081729"
+    },
+    "authorManifest": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/lt-author-r2-final-manifest.json",
+      "sha256": "f11e3ee7835ddbfb7590ed54d566a7f396bf472783fd663bc07f47daa8df9691"
+    },
+    "closed": [
+      "O01",
+      "O02",
+      "O03"
+    ],
+    "files": [
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-lt/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "5456a9ef48d13d1fa207d4db700249eae62d6416ae2f20dd4eba12e36457e32e"
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-lt/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "95dda5271752dd47d0c6b63d01af3ec571b45b9c0a9fcd1e083e0805f6a69f97"
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-lt/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "4eac7c38199df851d8862158c8ae3ebec4afffa39b896631d89010c92892e3f0"
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-lt/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "ba19f6ef66db8f11ff5f68449cad602e5cfa0b76ba396ff262e1cd7ccab8b465"
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-lt/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "1746048ba4e88795453047728ce790f8c32eaa810710485dd12ac9b4844b5a24"
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-lt/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "7a0d5e59e8a9cc62b8f4a1292ba197ecfa465418c271415a327c32dd9a9bd071"
+      }
+    ]
+  },
+  "NL": {
+    "decision": "TARGETED_R2_CLOSED",
+    "report": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/nl-independent-r2.md",
+      "sha256": "914d3b38856e3c195f9fb8b62297e1f1c3756bb6bdee341ffa8d33b22791724d"
+    },
+    "manifest": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/nl-independent-r2-manifest.json",
+      "sha256": "c54ac79f78c02423c1d06938000258c850a138df15e19143b7504d4e333acf82"
+    },
+    "files": [
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-nl/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "73765c4d13843c06ca292f47907038fa45c6aa7125ae89f46d48258afe035a60"
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-nl/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "7475d597e8b06dc6ccd2f4d732fb8f8d4dbe0621843cdc030f2c368e6ba105d8"
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-nl/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "daafd27d86f8e9f9698d76527bf6297876d675e0e316c1a01c2878a6bc96d0e5"
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-nl/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "caafa40bef2f15b7ae5bc4b7037d79faa2566539d5e8001ac793ae484b3efeca"
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-nl/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "ad6d7950727b7f3184b0d45f70bf0f33437481b4ed18afab608fee71dcfd5756"
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-nl/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "8cb644afa132e442b67a57f2ef8c80a00fd559396519b45f7a824c000a1d4f71"
+      }
+    ]
+  },
+  "rulesRead": [
+    {
+      "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+      "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3"
+    },
+    {
+      "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+      "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+      "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5"
+    },
+    {
+      "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+      "sha256": "365fddcb25c7a499ebbf0dafacbd0da82486815a74ef7f5844f30ac1bfd0e652"
+    }
+  ],
+  "endBindingsUnchanged": 70,
+  "limits": [
+    "Targeted LT three-edit review, reusing unchanged R1 review; NL binding audit only.",
+    "No manuscript, repository or shared-tool edits.",
+    "No new whole CLI; exact current actual CLI records and fresh extraction compared.",
+    "No native-human or attorney approval claim; no build or publication completion claim."
+  ]
+}

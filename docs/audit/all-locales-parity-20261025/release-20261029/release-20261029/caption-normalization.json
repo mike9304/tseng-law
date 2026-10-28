@@ -1,0 +1,140 @@
+{
+  "atUTC": "2026-10-28T22:55:40.648842+00:00",
+  "reason": "Normalize fictional-scene caption to existing locale-wide repository label after actual unit failure. Czech synonyms retain fictional status; Burmese only adds existing standard word separator. No test allowed-label exception added.",
+  "rows": [
+    {
+      "locale": "cs",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-cs/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSource": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-cs/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSHA256": "ad550c7c94f4e183523cdf40560ffbd85e8fd589ca64229f0c87f86c4ab1695f",
+      "afterSource": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/caption-normalized/columns-cs/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "afterSHA256": "4b70f34b0e1a28ccfcf428958152556a703675274eadb1a900abbef4ec0d1223",
+      "old": "featured_image_caption: \"Fiktivní scéna\"",
+      "new": "featured_image_caption: \"Smyšlená scéna\"",
+      "bodyUnchanged": true
+    },
+    {
+      "locale": "cs",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-cs/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSource": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-cs/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSHA256": "f6900ff6587ccf64d0a800640cf91a038a915ec70dea9a8d5e15b1403970feb4",
+      "afterSource": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/caption-normalized/columns-cs/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "afterSHA256": "f8df1ff59aae04834ec4f575ca0dc576ba6f780e9789527081dbb539f4f63240",
+      "old": "featured_image_caption: \"Fiktivní scéna\"",
+      "new": "featured_image_caption: \"Smyšlená scéna\"",
+      "bodyUnchanged": true
+    },
+    {
+      "locale": "cs",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-cs/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSource": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-cs/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSHA256": "66e437e5e4cde824cb3cf4913bc4db31d75b105f1048514ff76f671ae8c67d99",
+      "afterSource": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/caption-normalized/columns-cs/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "afterSHA256": "12406380f64a9eb72f18f6a9d2da2324ec10881324e1716d7f9a500d1a7713f6",
+      "old": "featured_image_caption: \"Fiktivní scéna\"",
+      "new": "featured_image_caption: \"Smyšlená scéna\"",
+      "bodyUnchanged": true
+    },
+    {
+      "locale": "cs",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-cs/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSource": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-cs/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "559267a3d7ccf246386093c13b360d1757204532bef30e7d398fabbf1a2a2279",
+      "afterSource": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/caption-normalized/columns-cs/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "afterSHA256": "b429a8a15eec24111b17244c2edd75dc1c26a10e2e8b8879b33b03ee5911a946",
+      "old": "featured_image_caption: \"Fiktivní scéna\"",
+      "new": "featured_image_caption: \"Smyšlená scéna\"",
+      "bodyUnchanged": true
+    },
+    {
+      "locale": "cs",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-cs/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSource": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-cs/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "03a91bb4f0182602eadb352a2e515f54a1b5baee2bec2269f17c523137493922",
+      "afterSource": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/caption-normalized/columns-cs/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "afterSHA256": "cef61218e5e14d3af0429592682a3babccd79811077644cc3cf126bffe5a5786",
+      "old": "featured_image_caption: \"Fiktivní scéna\"",
+      "new": "featured_image_caption: \"Smyšlená scéna\"",
+      "bodyUnchanged": true
+    },
+    {
+      "locale": "cs",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-cs/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSource": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-cs/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "7d3fffdd0029765fd362e1952548542463225cd705427fe2ee6a6348776c8061",
+      "afterSource": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/caption-normalized/columns-cs/921-taiwan-online-game-coins-refund-judgment.md",
+      "afterSHA256": "7c87ab43c1add09d734764f9ce3b9c1311ead619d340264f741426f592ae0358",
+      "old": "featured_image_caption: \"Fiktivní scéna\"",
+      "new": "featured_image_caption: \"Smyšlená scéna\"",
+      "bodyUnchanged": true
+    },
+    {
+      "locale": "my",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSource": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-my/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "beforeSHA256": "7e1e866e8c1673f97e69eb11d40fb898bc20ebb4c2d9c3edae753cc729a4d6cc",
+      "afterSource": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/caption-normalized/columns-my/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "afterSHA256": "6250f693bb4ccce71f8de8264ee089879e277df12d21f7e4288c09b603ec36e6",
+      "old": "featured_image_caption: \"စိတ်ကူးယဉ်မြင်ကွင်း\"",
+      "new": "featured_image_caption: \"စိတ်ကူးယဉ် မြင်ကွင်း\"",
+      "bodyUnchanged": true
+    },
+    {
+      "locale": "my",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSource": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-my/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "beforeSHA256": "131ccdfed1fecbb204bc1876845a52609f33296600582bdc5da93a059ca46575",
+      "afterSource": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/caption-normalized/columns-my/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "afterSHA256": "19c8e3f2ea635c1f066800081b6d2265236a858606522dba0409f899e03fe178",
+      "old": "featured_image_caption: \"စိတ်ကူးယဉ်မြင်ကွင်း\"",
+      "new": "featured_image_caption: \"စိတ်ကူးယဉ် မြင်ကွင်း\"",
+      "bodyUnchanged": true
+    },
+    {
+      "locale": "my",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSource": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-my/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSHA256": "be100ddecb72dd35257fd24e7e577bde6120ecdfd7f45b752dbf41ccd6b52b5c",
+      "afterSource": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/caption-normalized/columns-my/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "afterSHA256": "694243ae834dd84ca275a7907759624cae3b3c4d2e7a28938db3fc7cc07e43f2",
+      "old": "featured_image_caption: \"စိတ်ကူးယဉ်မြင်ကွင်း\"",
+      "new": "featured_image_caption: \"စိတ်ကူးယဉ် မြင်ကွင်း\"",
+      "bodyUnchanged": true
+    },
+    {
+      "locale": "my",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSource": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-my/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "b40e32596a565b0beba7cb3b5eba535b61ab7d865fed9e286173aa34a6832aaf",
+      "afterSource": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/caption-normalized/columns-my/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "afterSHA256": "aea3e5b24de57f8bd82ae623b7a40f8d400bab33bc12e243a539f0aca4bc6a9e",
+      "old": "featured_image_caption: \"စိတ်ကူးယဉ်မြင်ကွင်း\"",
+      "new": "featured_image_caption: \"စိတ်ကူးယဉ် မြင်ကွင်း\"",
+      "bodyUnchanged": true
+    },
+    {
+      "locale": "my",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSource": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-my/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "037cfc8f664ecb1f37e98869117597ccd224df3fe5fe0d13000f8562d0a1b3fe",
+      "afterSource": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/caption-normalized/columns-my/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "afterSHA256": "e16720b511d5cec97f9fedc4077bb316a63ade975d3aa0f249ef3abe5a88beab",
+      "old": "featured_image_caption: \"စိတ်ကူးယဉ်မြင်ကွင်း\"",
+      "new": "featured_image_caption: \"စိတ်ကူးယဉ် မြင်ကွင်း\"",
+      "bodyUnchanged": true
+    },
+    {
+      "locale": "my",
+      "file": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-my/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSource": "/Users/son7/tseng-all-language-columns-20261025/batch10/src/content/columns-my/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "9ff3d6d5b9582a10b889590b0c69a8b4d18b961bcca1245aa1f5f6a33025cd42",
+      "afterSource": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/caption-normalized/columns-my/921-taiwan-online-game-coins-refund-judgment.md",
+      "afterSHA256": "8459fa6b7838d2f5eb615bbf167440f8298a79ced8d656bf0c89e1b3465e0c1f",
+      "old": "featured_image_caption: \"စိတ်ကူးယဉ်မြင်ကွင်း\"",
+      "new": "featured_image_caption: \"စိတ်ကူးယဉ် မြင်ကွင်း\"",
+      "bodyUnchanged": true
+    }
+  ],
+  "bodyAndOtherFrontmatterUnchanged": true,
+  "previousReviews": "Exact originals remain in Base; current12 differ in this one declared metadata line only. No renewed legal review or variety execution claimed."
+}

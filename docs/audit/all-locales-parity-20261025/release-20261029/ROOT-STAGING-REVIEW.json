@@ -1,0 +1,14 @@
+{
+  "atUTC": "2026-10-28T22:58:00.255145+00:00",
+  "fullStagedWhitespaceExit": 2,
+  "fullStagedWhitespaceOutput": "docs/audit/all-locales-parity-20261025/release-20261029/batch10/reviews/my-independent-r2.md:19: new blank line at EOF.\ndocs/audit/all-locales-parity-20261025/release-20261029/release-20261029/build/checks/caption-normalized-unit.log:10: new blank line at EOF.\ndocs/audit/all-locales-parity-20261025/release-20261029/release-20261029/build/checks/content-unit.log:191: trailing whitespace.\n+    307| \ndocs/audit/all-locales-parity-20261025/release-20261029/release-20261029/build/checks/content-unit.log:205: new blank line at EOF.\ndocs/audit/all-locales-parity-20261025/release-20261029/release-20261029/build/checks/language-links-timeout-isolated.log:11: new blank line at EOF.\ndocs/audit/all-locales-parity-20261025/release-20261029/release-20261029/build/checks/test-contract.diff:4: trailing whitespace.\n+ \ndocs/audit/all-locales-parity-20261025/release-20261029/release-20261029/build/checks/test-contract.diff:15: trailing whitespace.\n+ \ndocs/audit/all-locales-parity-20261025/release-20261029/release-20261029/build/checks/test-contract.diff:28: trailing whitespace.\n+ \ndocs/audit/all-locales-parity-20261025/release-20261029/release-20261029/build/checks/test-contract.diff:59: trailing whitespace.\n+ \ndocs/audit/all-locales-parity-20261025/release-20261029/release-20261029/build/checks/test-contract.diff:69: trailing whitespace.\n+ \n",
+  "scopeExcludingExactFrozenRawAuditFilesExit": 0,
+  "excludedExactFrozenAuditFiles": [
+    "docs/audit/all-locales-parity-20261025/release-20261029/batch10/reviews/my-independent-r2.md",
+    "docs/audit/all-locales-parity-20261025/release-20261029/release-20261029/build/checks/caption-normalized-unit.log",
+    "docs/audit/all-locales-parity-20261025/release-20261029/release-20261029/build/checks/content-unit.log",
+    "docs/audit/all-locales-parity-20261025/release-20261029/release-20261029/build/checks/language-links-timeout-isolated.log",
+    "docs/audit/all-locales-parity-20261025/release-20261029/release-20261029/build/checks/test-contract.diff"
+  ],
+  "reason": "Preserve byte-identical reviewer report, raw test logs and diff evidence including trailing whitespace/blankEOF; all content, checker, test and other audit files pass whitespace check. No evidence normalized to hide original output."
+}

@@ -2829,6 +2829,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-property-damage-crash-move-car-photos-repair-claim"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-nominee-company-director-laundering-resignation-registration"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-nominee-company-director-laundering-resignation-registration"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-nominee-company-director-laundering-resignation-registration"
     }
   ]
 }

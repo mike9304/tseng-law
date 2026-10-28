@@ -113,6 +113,15 @@ const CRIMINAL_COLUMN_SLUGS_20261027 = {
   vi: [],
 } as const;
 
+/** Weekday expert column 962 (2026-10-28), published in ko/zh-hant/ja/en/es; es has no criminal board. */
+const CRIMINAL_COLUMN_SLUGS_20261028 = {
+  ko: ['taiwan-nominee-company-director-laundering-resignation-registration'],
+  en: ['taiwan-nominee-company-director-laundering-resignation-registration'],
+  ja: ['taiwan-nominee-company-director-laundering-resignation-registration'],
+  'zh-hant': ['taiwan-nominee-company-director-laundering-resignation-registration'],
+  vi: [],
+} as const;
+
 export function expectedCriminalBoardSlugs(locale: keyof typeof CRIMINAL_COLUMN_FILES_20261008): string[] {
   return [
     ...ORIGINAL_CRIMINAL_SLUGS,
@@ -120,6 +129,7 @@ export function expectedCriminalBoardSlugs(locale: keyof typeof CRIMINAL_COLUMN_
     ...CRIMINAL_COLUMN_SLUGS_20261022[locale],
     ...CRIMINAL_COLUMN_SLUGS_20261026[locale],
     ...CRIMINAL_COLUMN_SLUGS_20261027[locale],
+    ...CRIMINAL_COLUMN_SLUGS_20261028[locale],
     ...CRIMINAL_COLUMN_FILES_20261008[locale].map((file: string) => file.replace(/^\d{3}-/, '').replace(/\.md$/, '')),
     ...RECLASSIFIED_CRIMINAL_COLUMN_FILES_20261008[locale].map((file: string) => file.replace(/^\d{3}-/, '').replace(/\.md$/, '')),
   ].sort();

@@ -1,5 +1,7 @@
 # ISSUE-20261029 editorial and integration record
 
+KO01 status update: the round-1 repair record at the end supersedes the original KO01 hash and review status below. Earlier batch PASS statements describe the initial handoff, before the supplied Claude Code FAIL review.
+
 Date: 2026-10-29, Asia/Seoul. Worktree: `/Users/son7/tseng-air-1011/issues`, branch `air/issues-20261029`; starting HEAD and existing origin/main reference `8f7624b56423a1dd27590c25e9ca5623631b9057`. Initial tree clean, no interrupted date-specific drafts. Scope: eight new issue manuscripts, their sixteen media renditions, one new batch test and this audit. No canonical-checkout edit, staging, commit, push or deployment.
 
 This records AI authoring and independent AI editorial review. It does not certify human native-speaker review, attorney approval, the separate Claude Code shipping review, browser QA or public publication. Full source and review records are retained outside the repository at `/Users/son7/tseng-air-1011/lanes/issues/20261029/` as requested.
@@ -98,3 +100,33 @@ Both final nonauthor AI reviews are PASS at the eight manuscript hashes above; a
 - `final-en-vi.md`: SHA-256 `fb7c06d4978da68a9b08ea6f1c06d2b898d0e04cb502afa8c6b0463dc5b4b9ba`.
 
 Final package check: exactly26newqueuedfiles, zero existing tracked-file changes, empty index and unchanged HEAD. This audit and the external verification artifact describe local preparation only.
+
+## KO01 Claude review repair, round 1 — 2026-10-29
+
+Applied both MINOR findings and both NIT suggestions from the supplied FAIL review. This repair authored only the KO01 manuscript and this audit; the assigned WebP/JPEG and batch test are unchanged. No rebuttal was needed. No staging, commit, push or deployment was performed by this repair. Concurrent JA03/JA04 lane changes were observed and left untouched; the earlier batch's empty-index statement does not describe this concurrent repair session.
+
+| Finding | Original | Repaired wording and reason | Preserved meaning |
+| --- | --- | --- | --- |
+| MINOR 1 | `졸음이나 시야 흐림이 있는 상태에서 직접 운전하는 대신 대중교통이나 택시를 이용하는 방안도 제시합니다.` | `복약 중 외출해야 하면 자신의 상태를 살펴 필요할 때 대중교통이나 택시를 이용하거나 가족·지인의 도움을 받으라고도 권합니다.` Matches the CIB notice's condition and transport alternatives without attributing the CNA blurred-vision wording to police. | This remains attributed safety guidance, not an additional element of the offence or a safe waiting-time rule. |
+| MINOR 2 | `어느 요건을 충족했는지 결론낼 수는 없습니다.` | `어느 요건을 충족했는지 결론을 내릴 수는 없습니다.` Correct Korean spacing and construction. | Medicine use alone still does not determine which statutory route is met. |
+| NIT 3 | Summary: `대만 식약서가` | `대만 식품약물관리서(식약서)가` supplies the agency name on standalone cards. | The same agency, report date and warning remain. |
+| NIT 4 | `당시 주행 모습과 검사 결과도 함께 남습니다.` | `당시 주행 모습과 검사 결과도 기록으로 남아 함께 판단됩니다.` Clarifies the records' role within the existing conditional sentence about disputed driving ability. | Prescription, actual drug effects, observations and test results remain relevant; no automatic outcome is promised. |
+
+Sources personally reopened on October 29:
+
+- [CNA original, October 28 at 13:53, updated 14:18](https://www.cna.com.tw/news/ahel/202610280141.aspx): the agency identity, nine categories and possible drowsiness/reaction delay were confirmed. Blurred vision occurs in this report. The web extractor failed; an ordinary TLS `curl` fetch with a browser user-agent succeeded and the article body/date metadata were read.
+- [CIB notice, July 1, updated July 2](https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=78626c24-4727-47fe-81bc-655a482820f6): condition assessment, public transport/taxi/family or friends, medicine warnings, medical/pharmacist consultation, observed driving and walking/balance/urine checks confirmed. The notice does not supply the disputed blurred-vision condition or a common waiting time.
+- [MOJ Criminal Code Article 185-3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=185-3) and [history](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=C0000001): paragraph 1 items 3 and 4, up to three years' imprisonment and an optional combined fine of up to NT$300,000 match. The displayed history identifies the December 27, 2023 amendment of this article; later listed amendments concern other articles. No pending version is displayed for Article 185-3. The database's displayed consolidation cutoff is October 16, 2026; this is the verification limit.
+
+Opening and variety self-check: the first two paragraphs retain the dated news trigger, the Taiwan-driving context for Korean prescription users, the prescription-immunity question and the composition/effect distinction. Compared the actual openings, headings and endings of the three KO comparators listed above: tax percentage, broadcast licensing and courier recruitment. KO01 keeps its medicine/impairment structure and concrete evidence ending. It contains two reader questions and at least two very short sentences, varied paragraph starts, no repeated citation/caveat pattern, no contrast template, no promotional ending, no invented first-person experience and no bold/public byline. The required 합니다 register remains; the automated register-concentration warning was manually checked rather than changing legal meaning to diversify endings.
+
+Verification of the repaired manuscript:
+
+- SHA-256: `0f274e1b080205e56158b3fd607f7550608937ef2df57d66c9f15734dda9af48`. Narrative: 1,079 characters, retaining spaces and paragraph breaks, excluding metadata, headings, sources and caption. All six URL occurrences and numeric tokens match the initial manuscript; statutory and FAQ wording is unchanged.
+- `variety_metrics.py check <KO01 manuscript> --lang ko`: exit 0, zero FAIL; 25 sentences, CV 0.486, short-sentence share 0.16, two questions. One WARN: 92% `니다.` endings, accepted after the manual register check above.
+- Existing Vitest suites `issue-board-20261029.test.ts` and `no-ai-labels-20261024.test.ts`: 21/21 PASS at 08:46:30 KST. Ran the installed Vitest API with configuration-file loading and cache disabled, the repository alias/setup and two thread workers; no test or application code was changed.
+- Both images decode as 1536×1024 RGB; the JPEG was visually checked against the alt text. Unchanged SHA-256: WebP `aeaef9ee91ba925d1f095425c6c43f2009c59729b968138a70197f0c0dfc01d8`; JPEG `3b70a64e6e8386e381de99d1b2ba85d96c4f79cb1e378c34ec5599cc1897696a`. The batch test retains SHA-256 `9b5470b212db4bf7c42f70426dbfeaca8c26d555af6110b95e4f83ce98ad0bd1`.
+- Independent nonauthor Korean AI reviewer `ko01_repair_check`: PASS at the repaired SHA-256 above, with no residual MAJOR/MINOR. The reviewer personally reopened CNA, CIB, MOJ Article 185-3 and its history, checked all four changes and legal preservation, and compared the three recent KO openings/headings/endings. The reviewer wrote no files. This is a bounded editorial recheck, not human, attorney or Claude Code approval.
+- Scoped `git diff --check` passed. Final scope/hash readback found only the KO01 manuscript and this audit modified and unstaged, with media/test hashes unchanged. HEAD advanced from `b59b7cbfa5e84807e1262f5c3515215f1edf5ffb` to `2e64dd664171ff910b5d129f6732a02a5f4b4548` during concurrent JA repair work; this run issued no Git mutation.
+
+The previous independent reviews refer to the old KO01 hash. This local repair and its automated checks do not themselves constitute a new Claude Code PASS, browser QA, build or publication result.

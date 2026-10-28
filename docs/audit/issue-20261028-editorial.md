@@ -2,6 +2,8 @@
 
 Date: 2026-10-28, Asia/Seoul. Scope: eight original news-led Taiwan-law articles for Korean, Japanese, English and Vietnamese readers. This is an internal drafting/verification record, not a byline, human-language certification, attorney review or publication approval. The operator's separate Claude Code shipping review remains required.
 
+The batch-wide measurements below describe the original draft handoff. The ko-01 round 1 repair record at the end supersedes those measurements and review hashes for ko-01 only.
+
 ## Opening paragraphs and comparison
 
 The actual first two paragraphs, headings and endings were read by each author and an independent language reviewer. Comparators below are from the current local checkout. Live publication order was not independently observed.
@@ -68,7 +70,7 @@ Vietnamese comparisons:
 
 All eight manuscripts were checked using `python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check <file> --lang <locale>` on the final content. All returned zero FAIL. CV values, in ID order, were 0.466, 0.470, 0.454, 0.483, 0.454, 0.470, 0.510 and 0.478. Every article has at least two substantive short sentences. Korean/Japanese register-frequency WARNs were reviewed manually; the required formal registers remain consistent. Japanese questions ending in `でしょうか。` are present despite the tool's question-mark count of zero.
 
-Paragraph starts, source-placement rhythm and endings were read manually. No three successive claim/citation/caveat paragraphs, repetitive contrast formula, bold, imperative checklist, internal writing note, public author attribution or invented review credential remains. Relevant numbers, actors, AND/OR conditions, deadlines, exceptions and source URLs were rechecked after repairs. Internal `author: legal-ai-assistant` is preserved. Generated-media notices are separate from authorship.
+Paragraph starts, source-placement rhythm and endings were read manually. No three successive claim/citation/caveat paragraphs, repetitive contrast formula, bold, imperative checklist, internal writing note, public author attribution or invented review credential remains. Relevant numbers, actors, AND/OR conditions, deadlines, exceptions and source URLs were rechecked after repairs. Internal `author: legal-ai-assistant` is preserved. Correction after round 1 review: the original assumption that separate generated-media notices could retain public AI labels was incorrect under `no-ai-labels-20261024.test.ts`. The ko-01 repair below removes those labels while preserving the fictional-scene disclosure; other pieces require their own bounded repairs.
 
 Korean bodies contain 962 and 957 visible characters including collapsed spaces; English bodies contain 561 and 538 words. Japanese bodies contain 1,245 and 1,088 non-space characters; Vietnamese bodies contain 575 and 573 whitespace units, without claiming equivalence to English semantic words. Counts exclude frontmatter, headings, source lists, captions and check-date tails.
 
@@ -79,3 +81,43 @@ The requested three Vitest files were rerun on the final replacement batch at 11
 The final content hashes and independent locale/final decisions are recorded in the external lane's `work/review-*.md`, `work/final-*.md` and `work/handoff-check.json`. Authors and reviewers are separate AI agents; an author self-check is not counted as an independent review. The lane's `SOURCES.md` links each verified report, statute and relevant primary document. No judgment is relied on. Source-access and database-cutoff limits are recorded in `NOTES.md`.
 
 No production build, browser/mobile interaction QA, live public-order check, commit, push, deployment or public readback is claimed. This audit does not replace the operator's Claude Code review and shipping procedure.
+
+## ko-01 round 1 repair — 2026-10-28
+
+Scope: the assigned ko-01 manuscript and image pair, `src/lib/__tests__/issue-board-20261028.test.ts`, and this audit. Only the manuscript, test and audit were edited. The initial worktree was clean at `86801f91609c746a1d12d966e710da6fb4c8f4e3`. No finding required a rebuttal.
+
+| Finding | Original issue | Repair and meaning preserved |
+|---|---|---|
+| 1, MINOR | Caption and body notice said `대표 이미지는 AI로 만든…`. | Both now say `설명을 위해 만든 가상의 카페 장면입니다. 실제 중계 장소를 촬영한 사진이 아닙니다.` The fictional-scene and non-documentary limits remain; internal authorship metadata is unchanged. |
+| 2, MINOR | Exact locale arrays and fixed counts required all eight drafts to ship together. | Followed the October 22 test's `ALLOWED_NUMBERS` / `toContain` pattern. Each present file must have an allocated number; duplicate checks remain per locale and across present files. No fixed batch size remains. Future shipping renumbering still requires an explicit allocation update. |
+| 3, MINOR | `상영 허가`, `허가 범위`, `동의나 허가` suggested administrative permission. | Replaced every copyright-permission use of `허가` with `허락`, including title, H1, summary, FAQ 1, contract paragraph and check-date tail. The rights holder, contractual scope and presumption against unclear grants remain. |
+| 4, MINOR | `손님들과 함께 보는 행사의 이용 허가가 문제로 남습니다` attached permission to the event. | Adopted the proposed screening-specific sentence: `대만에서 카페를 운영하는 한국인이 손님들과 함께 보는 자리를 마련하려면, 그 상영에 권리자의 허락이 필요한지부터 문제가 됩니다.` Reader, setting and qualified legal question remain. |
+| 5, MINOR | `권리자에게 문의한 내용` treated the inquiry itself as permission evidence. | Adopted the reviewer's sentence identifying the rights holder's reply as the material for assessing this MMA screening's permission scope. Access method, venue, audience and charging conditions remain; an inquiry alone is not described as authorization. |
+| 6, NIT | First body mention used only `지식재산국`. | Expanded once to `대만 경제부 지식재산국(智慧財產局, TIPO)`; later references remain short. |
+| 7, NIT | `영사막` was stiff Korean for this setting. | Used `스크린` in the body and image alt; image subject unchanged. |
+| 8, NIT | `이미 공개된 저작물` was imprecise for `已公開發表`. | Used `이미 공표된 저작물` in the Article 55 paragraph and FAQ 2; all three cumulative conditions remain. |
+
+Source verification was repeated personally on October 28:
+
+- [TVBS 4041885](https://news.tvbs.com.tw/entertainment/jk-pop/4041885): published October 27 at 12:14, updated at 12:29; identifies TVBS 42 and CATCHPLAY TV, November 14–15, and the Melon Music Awards. It contains no café-screening permission terms.
+- Current MOJ [Article 3](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=3), [Article 25](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=25), [Article 37](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=37), [Article 55](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0070017&flno=55) and [history](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=J0070017) support the definitions, exclusive screening right, agreed licence scope and cumulative event exception. The displayed pending-commencement notice concerns other provisions, not these four. MOJ displays a consolidation cutoff of October 16, 2026.
+- TIPO [letter 1140225b, February 25, 2025](https://www.tipo.gov.tw/tw/copyright/692-17339.html) supports the qualified public-screening analysis and statutory exceptions. [Letter 980119, January 19, 2009](https://www.tipo.gov.tw/tw/copyright/692-13126.html) distinguishes simple TV reception without retransmission. The [agency homepage](https://www.tipo.gov.tw/) confirms its Ministry of Economic Affairs identity.
+
+The first two paragraphs were reread sentence by sentence. Removing the first sentence loses the announcement date, source, ceremony and distribution plan; removing the next loses the Korean café operator's screening question. The second paragraph adds event dates, the subscription question and the absence of venue terms. Actual openings, headings and endings of local Korean columns 957, 956 and 955, all dated October 27 and listed above, were compared again. Their quoted-draft, hypothetical-remittance and numerical-liability openings are distinct from this news opening. Public posting order was not verified.
+
+Manual section 5: three short sentences remain: `대상은 이미 공표된 저작물입니다.`, `입장료만 없으면 충분할까요?`, and `일반 TV 수신은 구분됩니다.` There are two body questions, varied paragraph starts, a citation-free second paragraph, no stacked claim/citation/caveat paragraphs, no contrast formula, no bold or imperative checklist, and consistent 합니다체. The final substantive paragraph ends with the rights holder's reply for this screening. All fourteen source-link occurrences (seven distinct URLs), dates, article numbers, exceptions and fictional-image limits were preserved. The visible body is 1,002 characters with collapsed spaces, excluding headings, references, check-date tail and caption.
+
+Validation on the repaired manuscript:
+
+- `python3 /Users/son7/tseng-lanes-shared/variety/variety_metrics.py check src/content/issues/ko/ISSUE-20261028-01-taiwan-mma-stream-cafe-screening-license.md --lang ko`: zero FAIL; 21 sentences, CV 0.484, short sentences 14.3%, two questions. The 90% `니다.` WARN was manually checked against the required formal register.
+- `node_modules/.bin/vitest run src/lib/__tests__/issue-board-20261028.test.ts src/lib/__tests__/no-ai-labels-20261024.test.ts --no-cache --configLoader runner` at 11:39 KST: October 28 suite 17/17 PASS. The global AI-label suite had 2/4 PASS and two failures caused only by existing out-of-scope ko-02, en-05, en-06, vi-07 and vi-08 labels. ko-01 appeared in none of its hits. Both actual AI-label content-test callbacks also passed when run in memory against ko-01 alone, while the original caption failed the caption callback. This is not a clean full-suite result.
+- Executed the actual old and repaired batch-ID test callbacks in memory: empty batch, ko-01 alone and a partial ko/ja batch now pass; the full batch still passes; duplicate, unallocated, wrong-locale, unallocated-locale and malformed IDs still fail. All nine scenarios matched expectations. No repository files were hidden or moved to simulate shipping; this does not claim an actual main merge.
+- Scoped ESLint passed. The existing JPEG was visually inspected; both media files decoded as RGB 1536×1024 and retained their original hashes.
+
+Version: manuscript SHA-256 `f6c4cf16bb3c8da2670fb7936199e696a2e8106ef80b6118d7b5073ea1ca9867`; WebP `48df9a7f381b989cb26832761fd847795b97b50425360c214da0d86bd8cbceed`; JPEG `901918426be7f4fa4a6380a386b2b031571064feeb3fd7204f4fe1292c85495f`.
+
+Independent Korean reviewer `ko01_locale_recheck`, who neither authored nor edited this piece, returned PASS for that exact manuscript hash after reopening the sources, inspecting both images, comparing the three local articles and rerunning the variety check. This is an AI editorial review, not a claim of human or attorney review. No commit, push, browser QA or publication was performed by this repair task.
+
+Concurrent work: another lane committed ja-03 as `be5f514e` during this repair; ja-04 and ko-02 changes also appeared in the shared worktree. Those changes were preserved and are not part of ko-01's authored diff. The initial clean-HEAD record above is a starting snapshot, not a claim that shared HEAD stayed fixed.
+
+Independent final reviewer `ko01_final_recheck`, separate from the author, repairer and Korean reviewer, returned PASS for manuscript `f6c4cf16bb3c8da2670fb7936199e696a2e8106ef80b6118d7b5073ea1ca9867`, test `03ac8e765e5029361649e773eaeb8a32fa36e17127b5010ea5dfec4fe1eaef81`, and audit `cdc3bb9d3c962a9343b9bbffdb73cc5bfd0c9ef38eb2ca040f2be2d96930caa5` before this decision was appended. The reviewer independently reopened the cited sources/history, viewed both images and reran the variety check. One inaccurate short-sentence example in this audit was corrected and rechecked; the manuscript needed no further repair. No unresolved material finding remains in the assigned scope. The global-suite and publication limits above remain.

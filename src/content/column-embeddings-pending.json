@@ -2793,6 +2793,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-marketplace-seller-when-local-entity-business-tax-registration"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-spouse-life-insurance-insured-written-consent-beneficiary-revocation"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-spouse-life-insurance-insured-written-consent-beneficiary-revocation"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-spouse-life-insurance-insured-written-consent-beneficiary-revocation"
     }
   ]
 }

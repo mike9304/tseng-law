@@ -10,8 +10,8 @@ categories:
   - "Taiwan Legal Information"
 topic: "company"
 featured_image: "../images/ISSUE-20261028-06-taiwan-drone-cooperation-foreign-operator-flight-permission/featured-01.webp"
-featured_image_alt: "An unbranded civilian quadcopter and controller resting on a table beside a grassy field."
-featured_image_caption: "AI-generated illustration of a fictional drone demonstration setup; it does not depict the forum or an approved flight site."
+featured_image_alt: "An unbranded civilian quadcopter and controller on a folding table in a grassy field, with hills behind."
+featured_image_caption: "Fictional drone demonstration scene for illustration; it does not depict the forum or an approved flight site."
 social_image: "../images/ISSUE-20261028-06-taiwan-drone-cooperation-foreign-operator-flight-permission/featured-01.jpg"
 faq:
   - q: "Did the October 27 forum establish reciprocal drone flight approval?"
@@ -19,14 +19,14 @@ faq:
   - q: "How long can Taiwan’s recognition of foreign drone credentials last?"
     a: "Regulations of Drone Article 38 sets a maximum of six months from issuance for recognition of the foreign registration, inspection and operator documents covered by that route. Recognition is not a general exemption from flight-area or operating restrictions."
   - q: "Can an overseas company use the same organizational permit procedure as a Taiwan company?"
-    a: "Article 38 says Chapter 5, Section 2 does not apply to foreign government agencies, schools or legal persons conducting drone flights in the Taipei Flight Information Region. An overseas company therefore cannot assume that procedure is available in its own name. The actual operator, aircraft and flight plan require separate examination."
+    a: "Article 38 says Chapter 5, Section 2 does not apply to foreign government agencies, schools or legal persons conducting drone flights in the Taipei Flight Information Region. An overseas company therefore cannot use that procedure in its own name. The actual operator, aircraft and flight plan require separate examination."
 audience: ["en"]
 author: "legal-ai-assistant"
 ---
 
 # Taiwan drone cooperation talks and the permissions for a foreign-led demo
 
-Can a visiting supplier fly a customer demonstration using its overseas drone credentials? [CNA’s October 27 report](https://focustaiwan.tw/politics/202610270009) on a Taipei technology forum makes that a practical question for firms exploring Europe–Taiwan cooperation. One speaker proposed a certified supplier list and reciprocal testing and evaluation protocols. Those were proposals, not an announced flight-approval scheme.
+Can a visiting supplier fly a customer demonstration using its overseas drone credentials? [CNA’s October 27 report](https://focustaiwan.tw/politics/202610270009) covered the Trusted Technology Forum for Democracies in Taipei, co-organized by Taiwan’s Ministry of Foreign Affairs and the Formosa Club. John Hemmings of the Henry Jackson Society proposed a certified supplier list and a drone supply-chain office to draft reciprocal testing and evaluation protocols. Those were proposals, not an announced flight-approval scheme.
 
 For an overseas team planning a civil drone demonstration in Taiwan, the aircraft’s documents, the pilot’s qualifications and the proposed operation raise different legal questions. A supplier’s invitation to an industry event answers none of them by itself.
 
@@ -40,7 +40,7 @@ The provision also allows foreign nationals with permission to stay or reside fo
 
 ## Location and flight behavior remain regulated
 
-Recognition does not open every field or industrial site. Under [Article 99-13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0090001&flno=99-13), drone flights are prohibited in prohibited or restricted airspace and within designated distances of airports or airfields, subject to the article’s approval provisions. Outside those areas, local governments announce areas, times and other management conditions for drone activity no higher than 400 feet above the surface.
+Recognition does not open every field or industrial site. Under [Article 99-13](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0090001&flno=99-13), drone flights are barred in prohibited areas and restricted areas and within designated distances of airports or airfields, subject to the article’s approval provisions. Outside those areas, local governments announce areas, times and other management conditions for drone activity no higher than 400 feet above the surface.
 
 Ordinary operating restrictions appear in [Article 99-14](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0090001&flno=99-14). They include a 400-foot height limit above land or water, a ban on flights between sunset and sunrise, and a ban on flying over crowds or outdoor assemblies. Visual-line-of-sight requirements also apply. These are examples, not the full set of restrictions.
 
@@ -48,13 +48,13 @@ An indoor sales presentation and a planned outdoor flight therefore call for dif
 
 ## The overseas company and its Taiwan partner
 
-Article 99-14 permits qualifying government agencies, schools and legal persons to seek approval to depart from specified operating limits, followed by permission for the approved activity. But a foreign company cannot simply assume it can use the corresponding organizational procedure.
+Article 99-14 permits qualifying government agencies, schools and legal persons to seek approval to depart from specified operating limits, followed by permission for the approved activity. But a foreign company cannot use the corresponding organizational procedure in its own name.
 
 [Article 38](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0090083&flno=38) expressly says that Chapter 5, Section 2 does not apply to foreign government agencies, schools or legal persons conducting drone flights in the Taipei Flight Information Region. That section sets out flight-permit procedures for those categories of organizations. The operator’s legal identity matters.
 
 A proposed demonstration involving a Taiwan partner consequently needs more detail than the partner’s name on an invitation. Who will operate the equipment, which aircraft and pilot the documents cover, and whether the intended flight fits the applicable permissions are questions tied to the actual plan. The forum’s proposed supplier and testing arrangements may support future business relationships; the demonstration date still depends on the permissions for that flight.
 
-AI-generated illustration of a fictional drone demonstration setup; it does not depict the forum or an approved flight site.
+Fictional drone demonstration scene for illustration; it does not depict the forum or an approved flight site.
 
 ## Sources
 

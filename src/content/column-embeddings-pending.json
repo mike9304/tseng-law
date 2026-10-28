@@ -2781,6 +2781,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-china-partner-technology-licensing-trade-secret-permit"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-marketplace-seller-when-local-entity-business-tax-registration"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-marketplace-seller-when-local-entity-business-tax-registration"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-marketplace-seller-when-local-entity-business-tax-registration"
     }
   ]
 }

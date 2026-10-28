@@ -11,11 +11,11 @@ categories:
 topic: "labor"
 featured_image: "../images/ISSUE-20261028-08-taiwan-construction-safety-card-training-start-date/featured-01.webp"
 featured_image_alt: "Mũ bảo hộ, găng tay và điện thoại tắt màn hình đặt trên bàn"
-featured_image_caption: "Ảnh minh họa do AI tạo, không chụp một công trường hay buổi huấn luyện thực tế."
+featured_image_caption: "Ảnh minh họa, không chụp một công trường hay buổi huấn luyện thực tế."
 social_image: "../images/ISSUE-20261028-08-taiwan-construction-safety-card-training-start-date/featured-01.jpg"
 faq:
   - q: "Quy định mới về huấn luyện trước khi vào công trường có hiệu lực từ 22/10/2026 không?"
-    a: "Điều 11-2 của Tiêu chuẩn về thiết bị an toàn, vệ sinh trong xây dựng có hiệu lực từ 1/7/2027. Văn bản có hiệu lực ngày 22/10/2026 là hướng dẫn tổ chức huấn luyện, quản lý và kiểm tra chất lượng khóa học. Nghĩa vụ huấn luyện đang áp dụng không bị đình lại."
+    a: "Điều 11-2 của Tiêu chuẩn về thiết bị an toàn, vệ sinh trong xây dựng có hiệu lực từ 1/7/2027. Văn bản có hiệu lực ngày 22/10/2026 là hướng dẫn tổ chức huấn luyện, quản lý và kiểm tra chất lượng khóa học. Nghĩa vụ huấn luyện đang áp dụng vẫn tiếp tục có hiệu lực."
   - q: "Người đã có thẻ an toàn Đài Loan có phải học lại vì đổi quy định không?"
     a: "Không phải học lại chỉ vì đợt thay đổi này. Theo mục 19 của hướng dẫn mới, người đã hoàn thành khóa học và được cấp thẻ theo hướng dẫn cũ được coi là đã hoàn thành khóa tương ứng. Những khóa bồi dưỡng trong thời gian làm việc vẫn theo quy định áp dụng cho công việc của họ."
   - q: "Thẻ mới là thẻ nhựa hay thẻ trên điện thoại?"
@@ -26,17 +26,17 @@ author: "legal-ai-assistant"
 
 # Thẻ an toàn điện tử cho công trường Đài Loan và mốc 1/7/2027
 
-Ngày 1/7/2027 là mốc áp dụng Điều 11-2 về huấn luyện an toàn trước khi vào công trường xây dựng tại Đài Loan. [CNA ngày 22/10/2026](https://www.cna.com.tw/news/ahel/202610220267.aspx) đưa tin cơ quan quản lý đã đổi cách tổ chức khóa học và quản lý thẻ an toàn.
+Ngày 1/7/2027 là mốc áp dụng Điều 11-2 của Tiêu chuẩn về thiết bị an toàn, vệ sinh trong xây dựng, quy định về huấn luyện an toàn trước khi vào công trường tại Đài Loan. [CNA ngày 22/10/2026](https://www.cna.com.tw/news/ahel/202610220267.aspx) đưa tin cơ quan quản lý đã đổi cách tổ chức khóa học và quản lý thẻ an toàn.
 
-Người lao động Việt Nam đã có thẻ phải học lại ngay sao? [Thông báo của Cơ quan An toàn và Vệ sinh lao động Đài Loan](https://www.osha.gov.tw/48110/48417/48419/213772/post) nói người đã có thẻ được công nhận đã hoàn thành huấn luyện, không phải học lại chỉ vì thay đổi lần này.
+Người lao động Việt Nam đã có thẻ phải học lại ngay sao? [Thông báo của Cơ quan An toàn và Vệ sinh lao động thuộc Bộ Lao động Đài Loan](https://www.osha.gov.tw/48110/48417/48419/213772/post) cho biết người đã có thẻ được công nhận đã hoàn thành huấn luyện, không phải học lại chỉ vì thay đổi lần này.
 
 ## Khóa học sáu giờ và thẻ điện tử
 
 [Hướng dẫn thực hiện huấn luyện an toàn xây dựng](https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg032196/ch08/type2/gov82/num32/Eg.htm) có hiệu lực từ ngày ban hành, 22/10/2026. Mục 12 chia khóa học thành ba giờ kiến thức an toàn, vệ sinh chung và ba giờ kiến thức an toàn xây dựng. Nội dung bao gồm nhận diện nguy cơ, ứng phó sự cố và các tình huống tai nạn lao động.
 
-Học xong vẫn phải qua bài kiểm tra. Mục 13 quy định chỉ người hoàn thành khóa học và đạt kiểm tra mới được đơn vị đào tạo cấp chứng nhận qua nền tảng quản lý. Thẻ được cấp dưới dạng điện tử. Theo thông báo của cơ quan quản lý, thẻ vật lý không được cấp thêm; công trường có thể tra cứu dữ liệu hoặc quét mã QR người lao động xuất trình trên điện thoại.
+Học xong vẫn phải qua bài kiểm tra. Mục 13 quy định chỉ người hoàn thành khóa học và đạt kiểm tra mới được đơn vị đào tạo cấp chứng nhận qua nền tảng quản lý. Thẻ được cấp dưới dạng điện tử. Theo thông báo của cơ quan quản lý, thẻ vật lý không được cấp thêm; công trường có thể tra cứu dữ liệu hoặc quét mã QR mà người lao động xuất trình trên điện thoại.
 
-Mục 17 yêu cầu ghi đúng danh tính người được cấp trên chứng nhận. Chỉ người đó được sử dụng. Không được làm giả, sửa đổi, mạo danh, mượn thẻ hoặc cho người khác dùng. Việc công trường đọc được mã trên điện thoại không thay thế điều kiện người cầm thẻ đã thực sự tham gia khóa học.
+Mục 17 yêu cầu ghi đúng danh tính người được cấp trên chứng nhận. Chỉ người đó được sử dụng. Không được làm giả, sửa đổi, mạo danh, mượn thẻ hoặc cho người khác dùng. Việc công trường đọc được mã trên điện thoại không thay cho việc người cầm thẻ đã thực sự tham gia khóa học.
 
 ## Nghĩa vụ của chủ thuê có ngày áp dụng riêng
 

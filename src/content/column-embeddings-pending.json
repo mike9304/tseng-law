@@ -2817,6 +2817,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-futures-securities-broker-system-error-order-loss-claim"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-property-damage-crash-move-car-photos-repair-claim"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-property-damage-crash-move-car-photos-repair-claim"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-property-damage-crash-move-car-photos-repair-claim"
     }
   ]
 }

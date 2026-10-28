@@ -1447,26 +1447,31 @@ export const COUNTRY_COLUMN_FILES_20261028 = {
     '958-taiwan-marketplace-seller-when-local-entity-business-tax-registration.md', // ship-20261028-G1
     '959-taiwan-spouse-life-insurance-insured-written-consent-beneficiary-revocation.md', // ship-20261028-G2
     '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
+    '961-taiwan-property-damage-crash-move-car-photos-repair-claim.md', // ship-20261028-G4
   ],
   'zh-hant': [
     '958-taiwan-marketplace-seller-when-local-entity-business-tax-registration.md', // ship-20261028-G1
     '959-taiwan-spouse-life-insurance-insured-written-consent-beneficiary-revocation.md', // ship-20261028-G2
     '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
+    '961-taiwan-property-damage-crash-move-car-photos-repair-claim.md', // ship-20261028-G4
   ],
   'ja': [
     '958-taiwan-marketplace-seller-when-local-entity-business-tax-registration.md', // ship-20261028-G1
     '959-taiwan-spouse-life-insurance-insured-written-consent-beneficiary-revocation.md', // ship-20261028-G2
     '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
+    '961-taiwan-property-damage-crash-move-car-photos-repair-claim.md', // ship-20261028-G4
   ],
   'en': [
     '958-taiwan-marketplace-seller-when-local-entity-business-tax-registration.md', // ship-20261028-G1
     '959-taiwan-spouse-life-insurance-insured-written-consent-beneficiary-revocation.md', // ship-20261028-G2
     '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
+    '961-taiwan-property-damage-crash-move-car-photos-repair-claim.md', // ship-20261028-G4
   ],
   'es': [
     '958-taiwan-marketplace-seller-when-local-entity-business-tax-registration.md', // ship-20261028-G1
     '959-taiwan-spouse-life-insurance-insured-written-consent-beneficiary-revocation.md', // ship-20261028-G2
     '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
+    '961-taiwan-property-damage-crash-move-car-photos-repair-claim.md', // ship-20261028-G4
   ],
 } as const;
 

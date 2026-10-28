@@ -2805,6 +2805,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-spouse-life-insurance-insured-written-consent-beneficiary-revocation"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-futures-securities-broker-system-error-order-loss-claim"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-futures-securities-broker-system-error-order-loss-claim"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-futures-securities-broker-system-error-order-loss-claim"
     }
   ]
 }

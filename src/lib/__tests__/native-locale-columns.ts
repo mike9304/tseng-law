@@ -1446,22 +1446,27 @@ export const COUNTRY_COLUMN_FILES_20261028 = {
   'ko': [
     '958-taiwan-marketplace-seller-when-local-entity-business-tax-registration.md', // ship-20261028-G1
     '959-taiwan-spouse-life-insurance-insured-written-consent-beneficiary-revocation.md', // ship-20261028-G2
+    '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
   ],
   'zh-hant': [
     '958-taiwan-marketplace-seller-when-local-entity-business-tax-registration.md', // ship-20261028-G1
     '959-taiwan-spouse-life-insurance-insured-written-consent-beneficiary-revocation.md', // ship-20261028-G2
+    '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
   ],
   'ja': [
     '958-taiwan-marketplace-seller-when-local-entity-business-tax-registration.md', // ship-20261028-G1
     '959-taiwan-spouse-life-insurance-insured-written-consent-beneficiary-revocation.md', // ship-20261028-G2
+    '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
   ],
   'en': [
     '958-taiwan-marketplace-seller-when-local-entity-business-tax-registration.md', // ship-20261028-G1
     '959-taiwan-spouse-life-insurance-insured-written-consent-beneficiary-revocation.md', // ship-20261028-G2
+    '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
   ],
   'es': [
     '958-taiwan-marketplace-seller-when-local-entity-business-tax-registration.md', // ship-20261028-G1
     '959-taiwan-spouse-life-insurance-insured-written-consent-beneficiary-revocation.md', // ship-20261028-G2
+    '960-taiwan-futures-securities-broker-system-error-order-loss-claim.md', // ship-20261028-G3
   ],
 } as const;
 

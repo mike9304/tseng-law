@@ -1,0 +1,113 @@
+{
+  "atUTC": "2026-10-29T00:46:34.358697+00:00",
+  "reviewer": "/root/b12_es_author",
+  "status": "PASS",
+  "mandatoryRemaining": 0,
+  "newOptionalSuggestions": 0,
+  "scope": "Narrow independent semantic review and byte verification of EN918–921 seoTitle+summary, eight fields. Prior full-review optional suggestions remain unchanged.",
+  "rows": [
+    {
+      "id": 918,
+      "source": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "c8f25c18281cd41a11825f6272c53cffb37db0094641c307751dac146d2f5686"
+      },
+      "destination": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "c8f25c18281cd41a11825f6272c53cffb37db0094641c307751dac146d2f5686"
+      },
+      "bodySHA256": "38172b42dcf0f73f2d92a9dcddf97f050b1f98bba4fa8b4e9d0ed623dbfaf2f1",
+      "FAQ": 3,
+      "actualCLICurrentSHAExitCode": 0,
+      "seoTitleWithSuffixCharacters": 59,
+      "summaryCharacters": 156
+    },
+    {
+      "id": 919,
+      "source": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "aa8d6d97f375da967d5dbe4683d508c8bf4de13d572957abc68e1c5b3e1bccb6"
+      },
+      "destination": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "aa8d6d97f375da967d5dbe4683d508c8bf4de13d572957abc68e1c5b3e1bccb6"
+      },
+      "bodySHA256": "83565391344fcc99c88457b2ba510c7c6745f806477d1919fc440b3e887136fb",
+      "FAQ": 3,
+      "actualCLICurrentSHAExitCode": 0,
+      "seoTitleWithSuffixCharacters": 56,
+      "summaryCharacters": 154
+    },
+    {
+      "id": 920,
+      "source": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "e4a6f40dc3623ad4d24ada3f2536347f85ab17c4e393334324e217dc1526366a"
+      },
+      "destination": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "sha256": "e4a6f40dc3623ad4d24ada3f2536347f85ab17c4e393334324e217dc1526366a"
+      },
+      "bodySHA256": "5f278718d26550d577643161e3a6275d2282cbbc14eb495d3d28354a4e8679d2",
+      "FAQ": 3,
+      "actualCLICurrentSHAExitCode": 0,
+      "seoTitleWithSuffixCharacters": 59,
+      "summaryCharacters": 153
+    },
+    {
+      "id": 921,
+      "source": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "b886fb4c396e5ca0a19b5b49b3542be22fa84d507f5c870b4f577f2faf83ca0e"
+      },
+      "destination": {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "b886fb4c396e5ca0a19b5b49b3542be22fa84d507f5c870b4f577f2faf83ca0e"
+      },
+      "bodySHA256": "488228356d0e19df7952b47d3106f9fe7ff97c561e849a10b53da7de8975b181",
+      "FAQ": 3,
+      "actualCLICurrentSHAExitCode": 0,
+      "seoTitleWithSuffixCharacters": 57,
+      "summaryCharacters": 151
+    }
+  ],
+  "exactEdits": 8,
+  "reverseBytesExactAll": true,
+  "sourceEqualsRAll": true,
+  "H1FAQBodyDatesImagesURLUnchanged": true,
+  "FAQTotal": 12,
+  "authorManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/author-manifest.json",
+    "sha256": "be70060ddb2b2a95a1743bce1f215d3fb8c72623f88cd3ad22e5cbcde3e575f5"
+  },
+  "priorHandoff": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-handoff.json",
+    "sha256": "98b0a8d677649eb448cd806cc58f5880736049b84c857806a4c2338a024ec013"
+  },
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/independent-review.md",
+    "sha256": "3128905151cd69c64e47109e279416e63c57506ad03426e7691f59aa4e02b826"
+  },
+  "evidence": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/independent-evidence.json",
+    "sha256": "5db9e7c1e10326171c6a1a18cc99aef583e17d9080be771655bd184801283f4c"
+  },
+  "auditScript": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/independent-audit.py",
+    "sha256": "ecba42f0f21e55755fc9dd230923a5e38e2926bda64c714445e56efee77f76c7"
+  },
+  "initialFailure": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/independent-initial-failure.json",
+    "sha256": "5ad498c80f8f88307c4e3097b802648ee3b7573a344adc14aa3fee20dd464c99"
+  },
+  "initialAuditScript": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/independent-audit-initial.py.txt",
+    "sha256": "3ecaf2424ca7dc987a2a4498287b89c5c945946000868cceb68cf5fdb69b4b6c"
+  },
+  "auditExitCode": 0,
+  "actualCLIEvidenceReused": true,
+  "newCLIWebBuild": false,
+  "sourceRSharedEdited": false,
+  "nativeOrLawyerReview": false,
+  "publicationApproval": false
+}

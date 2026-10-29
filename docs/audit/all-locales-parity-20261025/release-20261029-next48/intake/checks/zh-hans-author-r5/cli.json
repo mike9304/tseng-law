@@ -1,0 +1,92 @@
+[
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "sha256": "c1f5845795eae385bafde2cd4565cabb0750f7067120675249f7fddfe62e89b0",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "--lang",
+      "zh-hans"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/915-taiwan-public-contract-mediation-arbitration-same-claim.md [zh-hans] sentences=38 mean=32.9 cv=0.45 short=0.132 run3=0.139 opener_rep=0.0 cite_end=0.0 cite_para=0.143 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "sha256": "8dd386fb68e80f30a9df923849a6d6ba1c333640d9fd678216903a45c4736fd3",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "--lang",
+      "zh-hans"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/916-taiwan-parent-company-pollution-liability-us-investor.md [zh-hans] sentences=39 mean=34.8 cv=0.458 short=0.103 run3=0.027 opener_rep=0.0 cite_end=0.0 cite_para=0.143 contrast=1 caveat=0 q=3\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "sha256": "d09d75d49fee92ecc15c157d1204022c93d5a287a3a72ff73a82d71f341d8e41",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "--lang",
+      "zh-hans"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/918-taiwan-presale-mortgage-notice-handover-judgment.md [zh-hans] sentences=33 mean=36.3 cv=0.526 short=0.152 run3=0.097 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "sha256": "ce1aebe8058549a06557361c2fdc38b3c967dd0d46eee15584a30e5079bad72f",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "--lang",
+      "zh-hans"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [zh-hans] sentences=37 mean=32.9 cv=0.484 short=0.108 run3=0.029 opener_rep=0.0 cite_end=0.0 cite_para=0.154 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "sha256": "c4b1a9f69501616a7165ce7979db0890f1e42797df4265f01c693f24209819ad",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "--lang",
+      "zh-hans"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/920-taiwan-apartment-ev-charger-common-area-judgment.md [zh-hans] sentences=36 mean=34.2 cv=0.471 short=0.111 run3=0.059 opener_rep=0.0 cite_end=0.0 cite_para=0.308 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+    "stderr": ""
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/921-taiwan-online-game-coins-refund-judgment.md",
+    "sha256": "98cd7fb7fd6fb3ac324ed5a298e5df65c4997eab8a8d2628b1757cecc7a6964e",
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/921-taiwan-online-game-coins-refund-judgment.md",
+      "--lang",
+      "zh-hans"
+    ],
+    "exit": 0,
+    "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/921-taiwan-online-game-coins-refund-judgment.md [zh-hans] sentences=45 mean=31.2 cv=0.46 short=0.178 run3=0.0 opener_rep=0.067 cite_end=0.0 cite_para=0.0 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "stderr": ""
+  }
+]

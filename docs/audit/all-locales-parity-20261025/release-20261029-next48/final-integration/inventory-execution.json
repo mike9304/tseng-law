@@ -1,0 +1,409 @@
+{
+  "startedAtUTC": "2026-10-29T00:47:30.357824+00:00",
+  "headBefore": "f294a05f2c7003260016fa852dfa16063a1ccfcc",
+  "selection": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/intake/scope48-r2-manifest.json",
+    "sha256": "8104a27996ad916a0db84dbcbd41c8b87cb3c1976dcd6c73bf44a9f62ec6fcee"
+  },
+  "baseline": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029/rebuild-intake/inventory.json",
+    "sha256": "1baed6e317e63e34150842676be905911991a6b3da4f6f96a8aa02c8ed1f5b03"
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/audit/all-locales-parity-20261025/inventory.py",
+        "--repo",
+        "/Users/son7/Projects/tseng-law-all-locales-20261025",
+        "--worktree",
+        "--output",
+        "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks-r2/inventory.json"
+      ],
+      "exitCode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "node",
+        "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks-r2/production-loader.cjs"
+      ],
+      "exitCode": 0,
+      "stderr": "",
+      "stdout": "Saved to /Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks-r2/production-loader.json"
+    }
+  ],
+  "finishedAtUTC": "2026-10-29T00:47:34.971521+00:00",
+  "status": "PASS",
+  "added": [
+    "src/content/columns-en/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md",
+    "src/content/columns-es/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns-es/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns-es/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns-es/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "src/content/columns-es/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns-es/921-taiwan-online-game-coins-refund-judgment.md",
+    "src/content/columns-fr/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns-fr/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns-fr/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns-fr/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "src/content/columns-fr/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns-fr/921-taiwan-online-game-coins-refund-judgment.md",
+    "src/content/columns-ja/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns-ja/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns-ja/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns-ja/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "src/content/columns-ja/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns-ja/921-taiwan-online-game-coins-refund-judgment.md",
+    "src/content/columns-th/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns-th/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns-th/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns-th/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "src/content/columns-th/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns-th/921-taiwan-online-game-coins-refund-judgment.md",
+    "src/content/columns-vi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns-vi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns-vi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns-vi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "src/content/columns-vi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns-vi/921-taiwan-online-game-coins-refund-judgment.md",
+    "src/content/columns-zh-hans/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns-zh-hans/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns-zh-hans/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns-zh-hans/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "src/content/columns-zh-hans/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns-zh-hans/921-taiwan-online-game-coins-refund-judgment.md",
+    "src/content/columns-zh/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns-zh/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+    "src/content/columns/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "src/content/columns/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "src/content/columns/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "src/content/columns/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "src/content/columns/921-taiwan-online-game-coins-refund-judgment.md"
+  ],
+  "removed": [],
+  "changedExisting": [],
+  "actualProductionLoaderExecuted": true,
+  "publicBaselineCommit": "f294a05f2c7003260016fa852dfa16063a1ccfcc",
+  "all49LocaleCountsMatch": true,
+  "realCaseVersionsPerSlug": 49,
+  "originalsUnchanged": true,
+  "totals": {
+    "professional": 2499,
+    "issues": 143,
+    "boardVisibleLocal": 2232,
+    "distinctProfessionalSlugs": 686,
+    "coreUnion": 493,
+    "coreCommon": 159,
+    "allLocaleCommon": 27,
+    "countDeficitTo286": 11539,
+    "visibleDeficitTo286": 11806,
+    "other45MissingCoreCommon": 5876
+  },
+  "localeCounts": [
+    {
+      "locale": "ko",
+      "professional": 235,
+      "boardVisible": 235,
+      "added": 6
+    },
+    {
+      "locale": "zh-hant",
+      "professional": 310,
+      "boardVisible": 310,
+      "added": 2
+    },
+    {
+      "locale": "en",
+      "professional": 234,
+      "boardVisible": 234,
+      "added": 4
+    },
+    {
+      "locale": "ja",
+      "professional": 248,
+      "boardVisible": 248,
+      "added": 6
+    },
+    {
+      "locale": "vi",
+      "professional": 51,
+      "boardVisible": 51,
+      "added": 6
+    },
+    {
+      "locale": "id",
+      "professional": 39,
+      "boardVisible": 29,
+      "added": 0
+    },
+    {
+      "locale": "th",
+      "professional": 37,
+      "boardVisible": 26,
+      "added": 6
+    },
+    {
+      "locale": "fil",
+      "professional": 37,
+      "boardVisible": 32,
+      "added": 0
+    },
+    {
+      "locale": "ar",
+      "professional": 34,
+      "boardVisible": 22,
+      "added": 0
+    },
+    {
+      "locale": "de",
+      "professional": 32,
+      "boardVisible": 18,
+      "added": 0
+    },
+    {
+      "locale": "es",
+      "professional": 70,
+      "boardVisible": 65,
+      "added": 6
+    },
+    {
+      "locale": "fr",
+      "professional": 37,
+      "boardVisible": 29,
+      "added": 6
+    },
+    {
+      "locale": "pt",
+      "professional": 34,
+      "boardVisible": 23,
+      "added": 0
+    },
+    {
+      "locale": "zh-hans",
+      "professional": 35,
+      "boardVisible": 30,
+      "added": 6
+    },
+    {
+      "locale": "ms",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "ru",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "tr",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "it",
+      "professional": 32,
+      "boardVisible": 21,
+      "added": 0
+    },
+    {
+      "locale": "nl",
+      "professional": 32,
+      "boardVisible": 27,
+      "added": 0
+    },
+    {
+      "locale": "pl",
+      "professional": 32,
+      "boardVisible": 27,
+      "added": 0
+    },
+    {
+      "locale": "hi",
+      "professional": 34,
+      "boardVisible": 24,
+      "added": 0
+    },
+    {
+      "locale": "sv",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "da",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "nb",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "fi",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "cs",
+      "professional": 32,
+      "boardVisible": 27,
+      "added": 0
+    },
+    {
+      "locale": "hu",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "ro",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "uk",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "el",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "he",
+      "professional": 32,
+      "boardVisible": 27,
+      "added": 0
+    },
+    {
+      "locale": "bn",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "ur",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "fa",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "my",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "ta",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "ne",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "km",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "mn",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "sk",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "bg",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "hr",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "sr",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "sl",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "lt",
+      "professional": 32,
+      "boardVisible": 27,
+      "added": 0
+    },
+    {
+      "locale": "lv",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "et",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "ca",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    },
+    {
+      "locale": "is",
+      "professional": 30,
+      "boardVisible": 25,
+      "added": 0
+    }
+  ],
+  "inventorySHA256": "b6994e678c88d8611d5739586496b443040d3210da74862f357b0067f67dd64f",
+  "loaderSHA256": "8bc0db6fe26a237b4909dbd9d5067341cfa96ec36cb62f6b66e168431a5d15ca",
+  "loaderScriptSHA256": "8af7c0bab5b20f5cb90d296d26cbc5f29f9ba402a4aabb820787f7c4c52c3c23",
+  "inventoryScriptSHA256": "f949f3368ad1b653510a27d453f01a4f97a104dca60bd5be8f90f01549f46680",
+  "publicDeployment": false
+}

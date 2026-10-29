@@ -1,0 +1,33 @@
+--- before/918-taiwan-presale-mortgage-notice-handover-judgment.md
++++ after/918-taiwan-presale-mortgage-notice-handover-judgment.md
+@@ -55,7 +55,7 @@
+ 
+ ## Sources et portée
+ 
+-Sources vérifiées le 25 octobre 2026. L’arrêt repose sur un contrat et des preuves d’exécution déterminés ; il ne décide pas, pour une autre vente, du droit de suspendre un paiement, de refuser une livraison ou de réclamer un dommage.
++Sources vérifiées le 25 octobre 2026. L’arrêt repose sur un contrat et des preuves d’exécution déterminés ; il ne décide pas, pour une autre vente, du droit de suspendre un paiement, de refuser une livraison ou de demander réparation d’un dommage.
+ 
+ - [Service de protection des consommateurs : recueil de décisions et interprétations, volume 22](https://cpc.ey.gov.tw/File/343C8EEBB5F122CF/6abbfdf1-cf31-4198-9eec-7421dab07bb8?A=C), pages imprimées 173 à 187, décision 109年度上易字第289號.
+ - [Clauses obligatoires et interdites des contrats types de vente sur plan](https://www.ey.gov.tw/File/17FD66C7511F7121?A=C), points 14 et 15.
+--- before/919-taiwan-workplace-bullying-investigation-hearing-judgment.md
++++ after/919-taiwan-workplace-bullying-investigation-hearing-judgment.md
+@@ -18,7 +18,7 @@
+   - q: "L’annulation de la révocation signifie-t-elle que le harcèlement n’a pas existé ?"
+     a: "Non. La cour a relevé des problèmes de délibération, de possibilité de présenter des observations et d’établissement des faits, puis annulé la décision initiale et celle de réexamen administratif. Ce résultat ne constate pas l’inexistence de tous les comportements reprochés. Le communiqué précise qu’un recours reste possible."
+   - q: "L’entreprise doit-elle attendre la fin de l’enquête pour protéger le salarié ?"
+-    a: "La loi sur la sécurité et la santé au travail impose des mesures adaptées à la manière dont l’employeur apprend les faits. Lorsqu’il reçoit la plainte du salarié concerné, il doit empêcher la répétition du harcèlement, proposer les conseils, l’assistance et la protection nécessaires selon les besoins et les circonstances, et enquêter. Protection et enquête équitable peuvent avancer ensemble."
++    a: "La loi sur la sécurité et la santé au travail impose des mesures adaptées à la manière dont l’employeur apprend les faits. Lorsqu’il reçoit la plainte du salarié concerné, il doit prendre des mesures visant à éviter la répétition du harcèlement, fournir les conseils ou l’assistance et les mesures de protection nécessaires selon les besoins du plaignant et les circonstances, et mener l’enquête. Protection et enquête équitable peuvent avancer ensemble."
+   - q: "Les ressources humaines peuvent-elles reprendre directement la procédure de ce jugement ?"
+     a: "L’affaire concernait l’évaluation et la révocation d’un fonctionnaire. Une entreprise privée doit déterminer les règles de sécurité au travail, de droit du travail et du contrat qui lui sont applicables. Les motifs sur une conclusion prédéterminée, l’absence de réponse utile et les contradictions du dossier peuvent éclairer la qualité de l’enquête, sans remplacer cette analyse."
+ ---
+--- before/920-taiwan-apartment-ev-charger-common-area-judgment.md
++++ after/920-taiwan-apartment-ev-charger-common-area-judgment.md
+@@ -51,7 +51,7 @@
+ 
+ Kaohsiung a annoncé en mai 2026 un programme incluant les chemins de câbles destinés à la recharge des véhicules électriques dans les espaces communs des immeubles. L’[avis municipal du 29 mai](https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=3C51D0007BD33CFE) fixait la fin des demandes au 30 septembre, avec une clôture anticipée possible en cas d’épuisement du budget. Cette échéance annoncée était déjà passée lors de la vérification des sources.
+ 
+-Cette aide visait les infrastructures communes. Il ne constituait ni une aide générale à tout achat de borne ni une autorisation de travaux accordée individuellement à chaque résident. L’éligibilité à une subvention et les accords pour utiliser les parties communes doivent donc être traités séparément.
++Cette aide visait les infrastructures communes. Elle ne constituait ni une aide générale à tout achat de borne ni une autorisation de travaux accordée individuellement à chaque résident. L’éligibilité à une subvention et les accords pour utiliser les parties communes doivent donc être traités séparément.
+ 
+ En cas de demande d’arrêt des travaux ou de démontage, un résumé adressé à [wei@hoveringlaw.com.tw](mailto:wei@hoveringlaw.com.tw) peut identifier le tracé contesté, les clauses du règlement et la date de réponse attendue. Dans le contrat d’installation, les parties peuvent aussi préciser si les travaux attendent l’accord requis et qui supportera les frais si cet accord n’est pas obtenu.
+ 

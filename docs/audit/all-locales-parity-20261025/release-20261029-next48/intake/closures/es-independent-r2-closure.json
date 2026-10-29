@@ -1,0 +1,287 @@
+{
+  "atUTC": "2026-10-29T00:16:16.795459+00:00",
+  "reviewer": "/root/release_build_prepare",
+  "verdict": "PASS_NARROW_CLOSURE",
+  "pendingIssue": "ES920 common-part antecedent ambiguity",
+  "mandatoryRemainingInReviewedCorrection": 0,
+  "newOptionalFindings": 0,
+  "priorOptionalSuggestionsRetainedUnapplied": [
+    {
+      "id": "O-01",
+      "severity": "O",
+      "article": 916,
+      "location": "body, line 42",
+      "quote": "La devolución no negó todas las reclamaciones de las personas afectadas.",
+      "reason": "직전 문단이 환송을 설명해 의미는 통하지만 devolución만으로는 환송인지 금전 반환인지 즉시 구별되지 않는다.",
+      "suggestion": "La decisión de devolver el asunto para un nuevo examen no negó todas las reclamaciones de las personas afectadas.",
+      "meaningPreserved": "246명 부분 환송과 청구 전부 부정이 아님을 보존. 262명 상고기각 설명은 그대로 둔다. 문맥으로 이미 해소되어 필수 수정이 아니다."
+    },
+    {
+      "id": "O-02",
+      "severity": "O",
+      "article": 920,
+      "location": "FAQ 2 question and first answer sentence, lines 19–20",
+      "quote": "¿Desconectar y cerrar el cargador evita tener que retirarlo? / lo había cerrado",
+      "reason": "열쇠 인도 문구와 본문의 cerrado con llave가 잠금 의미를 보존한다. FAQ만 읽을 때도 잠금이라는 사실을 즉시 알 수 있도록 단어를 통일할 수 있다.",
+      "suggestion": "¿Dejar de usar el cargador y cerrarlo con llave evita tener que retirarlo? / lo había cerrado con llave",
+      "meaningPreserved": "사용 중단·잠금은 주민의 주장이라는 점, aun siendo cierto 조건, 철거가 모든 사건에 자동 적용되지 않는다는 한계 유지."
+    },
+    {
+      "id": "O-03",
+      "severity": "O",
+      "article": 921,
+      "location": "FAQ 2 and body point 18 paragraph, lines 20 and 39",
+      "quote": "los puntos comprados de pago que no se hayan utilizado / los puntos comprados de pago no utilizados",
+      "reason": "comprados와 de pago가 겹쳐 다소 번역투로 들린다. 유료 구매 및 미사용이라는 법적 한정 자체는 정확하다.",
+      "suggestion": "los puntos adquiridos mediante pago que no se hayan utilizado / los puntos adquiridos mediante pago y no utilizados",
+      "meaningPreserved": "유료 구매와 미사용 두 요건을 유지. 뒤의 o los importes de juego no utilizados, 필요비용, 종료 후 30일, 쌍방 합의 대체방법은 모두 그대로 둔다."
+    }
+  ],
+  "scope": "One sentence in ES920 only; reuses the completed ES r1 whole-six review. Independent semantic judgment and exact-byte checks; no new CLI execution, web request, full-six review, build, manuscript edit, R edit, or deployment.",
+  "current": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-es/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "sha256": "d6a190905068c5889ceb9d0022b7f380ab0c4deac91c7311bc7a0a8b7e8b649e",
+    "bytes": 8739
+  },
+  "before": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-author-r2-before-920.md",
+    "sha256": "d9bb6af386a6552bed5f37e7b45f7a0425920ef2fa2d3fd1aee17185d2b32545",
+    "bytes": 8693
+  },
+  "authorReport": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/reviews/es-author-r2.md",
+    "sha256": "df85c7da3f2ed72d678986e0d93c5be119e648380ffc02c815261d1bd45cbfdb",
+    "bytes": 2239
+  },
+  "authorManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-author-r2-manifest.json",
+    "sha256": "6a637c5e69766475907361e7df347895b3bc37629d424253c4626b5971bfe139",
+    "bytes": 3323
+  },
+  "authorDiff": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-author-r2-exact.diff",
+    "sha256": "e678f55a03c72564432144e296c5a7d2bfe88664c25355cc1d3771c668d3193a",
+    "bytes": 1763
+  },
+  "canonical": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/canonical-snapshots/zh-920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "sha256": "59fb9c0ff8d1c5760300cd7e525ef3fd2c8c1bbd4327c589786ba9e4bca2f582",
+    "bytes": 6768
+  },
+  "retainedOfficialSource": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/zh-hant-ev-primary-recovered.md",
+    "sha256": "69e09470e7e81edf23c9708e3b942a01c32dfc2e6128c49b353d180634cebbe2",
+    "bytes": 7579
+  },
+  "retainedOfficialLine": "L43",
+  "sourceScope": "Previously retained official judgment excerpt, not a new retrieval, complete fresh judgment, or finality check.",
+  "singleReplacement": {
+    "old": "El tribunal consideró comunes esas partes e instalaciones.",
+    "new": "El tribunal consideró comunes la pared, el techo y el cuadro eléctrico utilizados para la instalación.",
+    "forwardExactBytes": true,
+    "reverseExactBytes": true,
+    "hunkCount": 1,
+    "changedSourceLine": 31
+  },
+  "surroundingParagraphRead": "Entre los hechos no discutidos figuraban la caja de carga detrás de la plaza, los conductos sujetos a elementos colgantes del techo y un interruptor automático añadido al cuadro eléctrico, conectado al contador propio. El tribunal consideró comunes la pared, el techo y el cuadro eléctrico utilizados para la instalación. La descripción del residente como una ampliación de conductos en una zona de uso exclusivo no coincidía con el alcance de las obras que el tribunal tuvo por acreditado.",
+  "meaningDecision": {
+    "problem": "The previous phrase esas partes e instalaciones could attach to the immediately preceding contador propio, implying that the meter was also adjudged common.",
+    "correction": "The sentence now explicitly names only the wall, ceiling, and electrical cabinet used for the installation.",
+    "sourceSupport": "Retained L43 expressly separates common wall/ceiling and common electrical cabinet, while separately mentioning the appellant meter.",
+    "meaningPreserved": true,
+    "noMeterOwnershipHoldingInferred": true,
+    "legalAndBylawConditionsUnaffected": true,
+    "conditionalResidentAssertionsUnaffected": true
+  },
+  "preservation": {
+    "frontmatterExactBytes": true,
+    "titleSummaryAndImageMetadataUnchanged": true,
+    "faqExactText": true,
+    "faqCount": 3,
+    "sixArticleFAQTotalCarriedForward": 17,
+    "numberSequenceUnchanged": true,
+    "numericTokenCount": 105,
+    "URLSequenceUnchanged": true,
+    "URLCount": 9,
+    "otherFiveCurrentSHAUnchanged": [
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-es/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "sha256": "b5541c10e9436f80250d564c6785f18bdc5665257fa6fc1fb970f4c48a37fc63",
+        "bytes": 8291
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-es/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "sha256": "02a197c3f66f338291ba97332378fa148a6bf9ee00b3fc39f36ffbe8a8db9d36",
+        "bytes": 9167
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-es/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "sha256": "a97fe9083f96ba90fd554da37214872ebb7c813c8c7302cfab5099f04ce59734",
+        "bytes": 8684
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-es/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "sha256": "1f7e11d7e89cd055792e71cecf9ecc865fca7fda68819659bb9fbe74296d1dbe",
+        "bytes": 8685
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-es/921-taiwan-online-game-coins-refund-judgment.md",
+        "sha256": "fab578d76c0b2a30bd87d623ff0c6ea7efdefe78a2d9aada7204e44f3f0d3416",
+        "bytes": 9025
+      }
+    ],
+    "priorR1ArtifactsUnchanged": [
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/reviews/es-independent-r1.md",
+        "sha256": "039f177a94c635985e18a809334b08958a94936e173d6412a80a54cdb1969e64",
+        "bytes": 14963
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-cli-r1.json",
+        "sha256": "9f898ad92439cc569bc3da6ed4ade7fb27e0c2e4c928aa589ff5916bd3c9b88c",
+        "bytes": 69398
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-inputs.json",
+        "sha256": "c54d63528b4456eb8677343f8dc1043f96e45af944c6f086d9b8db04b638f214",
+        "bytes": 14488
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-official-recheck.json",
+        "sha256": "272e59a34841e616a8ad1658dec60032286711c803ccedd86d520e725cf38400",
+        "bytes": 13937
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-r1.json",
+        "sha256": "7f7dbebcf5742ec26af1f2b52c538b6aa43167ab49e417c18340568e25a7d1a1",
+        "bytes": 24715
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-run.py",
+        "sha256": "b2d34cd96988a280ac304478b5e64ed82edbb4c2210f6a19e33e345ff4e4c520",
+        "bytes": 6902
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-structure-r1.json",
+        "sha256": "4f949dc310f7a75d2e388c37967d898c6f96455c134db35bb6d1c289f29d5b4e",
+        "bytes": 28260
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-structure-r2.json",
+        "sha256": "7fa072c7539333cb0b60c388b5ff2c3242513c5146dc489b5eeda8344cb2ef4d",
+        "bytes": 28753
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-structure-r2.py",
+        "sha256": "080210ac4afb6b814537066a698395d618e90c0c3e0dfcdc911736350588b08c",
+        "bytes": 1690
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-write-review.py",
+        "sha256": "3f17f670fc8de9c1bb89b08c71d03b8cfc8dbdb869ebd95339c2043372ef4532",
+        "bytes": 19565
+      }
+    ],
+    "priorR1Handoff": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-handoff.json",
+      "sha256": "724c056878fe7abff53364dc77f76a0c12491fa4838e992ea2e2ad943dd9acec",
+      "bytes": 3034
+    },
+    "rulesFactsContractBindingsUnchanged": [
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/BRIEF.md",
+        "sha256": "14abe245096c2c5deda02b80020a6495fb2800a467313d499f0f5cccb2953ae6",
+        "bytes": 14713
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/authoring-contract-draft.md",
+        "sha256": "b0c6b86677719c8966bcf85af979574fca7c97f6a778d80627eaabc74c246c4e",
+        "bytes": 12103
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/six-source-facts.md",
+        "sha256": "7f1d32e0aa17706c006f0b4fca8a88653dc7cad4637b1369e00ab6607884462a",
+        "bytes": 27065
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-register.md",
+        "sha256": "4d3de5ee5b5af0d2724c705886a6b6cb0ea65e32b096a1665381c389ac95f09d",
+        "bytes": 13984
+      },
+      {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/source-freeze.json",
+        "sha256": "e21b247b6897c580b464611cbfae4acd52728c71c65ccd055dd68c563dbf9127",
+        "bytes": 9211
+      },
+      {
+        "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/docs/columns/EDITORIAL-VOICE.md",
+        "sha256": "8b4e39550d9f9ff32b861270bad83a51a69fd71893046a54e7ffdaced9727ea3",
+        "bytes": 14050
+      },
+      {
+        "path": "/Users/son7/tseng-col-0930-work/COLUMN-VOICE-RULE.md",
+        "sha256": "8d2eb1f73aeb0967350b8be90aafccfc678224f31cbbf930407462fce65b291d",
+        "bytes": 1705
+      },
+      {
+        "path": "/Users/son7/tseng-lanes-shared/SENTENCE-VARIETY-RULE.md",
+        "sha256": "befec7538792d2a98f8c596911667005e2a4000efc078b01db9793c88366edd5",
+        "bytes": 16440
+      },
+      {
+        "path": "/Users/son7/tseng-lanes-shared/LESSONS.md",
+        "sha256": "365fddcb25c7a499ebbf0dafacbd0da82486815a74ef7f5844f30ac1bfd0e652",
+        "bytes": 16321
+      }
+    ],
+    "sharedToolBindingsUnchanged": [
+      {
+        "path": "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "sha256": "c96c303b9af9be1a8a8965f9a503cf0617a4a36716109af3184cfff8464c81ec",
+        "bytes": 22042
+      },
+      {
+        "path": "/Users/son7/tseng-lanes-shared/variety/variety_multilingual.py",
+        "sha256": "0b4af8c41031e6c33bc2c6518caa8875f1f2b097f44c454161100aee07ab3ab9",
+        "bytes": 26851
+      },
+      {
+        "path": "/Users/son7/tseng-lanes-shared/variety/profiles/es.json",
+        "sha256": "ec0f98d3eb775400c4078914ad97f301c20157f6c9517ab57351abd038e6335a",
+        "bytes": 3427
+      }
+    ]
+  },
+  "retainedActualCLI": {
+    "source": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-author-r2-manifest.json",
+      "sha256": "6a637c5e69766475907361e7df347895b3bc37629d424253c4626b5971bfe139",
+      "bytes": 3323
+    },
+    "executionOwner": "ES author r2",
+    "executedAgainByThisReviewer": false,
+    "currentSHAValidatedAgainstReceipt": true,
+    "command": [
+      "python3",
+      "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+      "check",
+      "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-es/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "--lang",
+      "es"
+    ],
+    "exitCode": 0,
+    "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-es/920-taiwan-apartment-ev-charger-common-area-judgment.md [es] sentences=38 mean=21.2 cv=0.46 short=0.105 run3=0.0 opener_rep=0.083 cite_end=0.0 cite_para=0.333 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+    "stderr": "",
+    "FAIL": 0,
+    "WARN": 0
+  },
+  "section5AndMONOTONY": {
+    "changedSentence": "El tribunal consideró comunes la pared, el techo y el cuadro eléctrico utilizados para la instalación.",
+    "sentenceBoundary": "One grammatical sentence replaced by one grammatical sentence, ending at instalación.; no date, decimal, abbreviation, fake fragment, or list splitting introduced. Retained actual CLI has 38 sentences before/after.",
+    "section5": "Prior full §5 review retained. Explicit noun coordination is semantically required by L43. Opening, subheadings, ending, and all surrounding paragraph structures are byte-identical except this one sentence. The change introduces no repeated generic opening/closing, sermon, or empty emphasis.",
+    "MONOTONY": "No new mandatory monotony finding within this narrow change. Existing r1 optional suggestions remain unapplied.",
+    "currentMetrics": "Retained actual author CLI: sentences 38, CV 0.460, short share 0.105, run3 0.0, opener repetition 0.083; exit 0 / FAIL 0 / WARN 0. No new independent CLI run claimed."
+  },
+  "history": "Original r1 verdict and 920 SHA remain immutable historical records. This closure supersedes only the current 920 byte binding and resolves the subsequent antecedent issue. The old auxiliary contact-helper failure remains preserved, and is not relabeled as a first-run success.",
+  "nextScope": "Root may close the one pending ES920 correction for the next-batch intake at this exact SHA. This does not claim new integration, production deployment, native-human review, or attorney approval."
+}

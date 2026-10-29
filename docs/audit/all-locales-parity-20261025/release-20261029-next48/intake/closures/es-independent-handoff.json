@@ -1,0 +1,76 @@
+{
+  "atUTC": "2026-10-28T23:58:11.617980+00:00",
+  "verdict": "PASS_WITH_OPTIONAL_SUGGESTIONS",
+  "mandatory": 0,
+  "optional": 3,
+  "faq": 17,
+  "sharedCLIExits": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "firstAuxiliaryRunnerExit": 1,
+  "firstAuxiliaryIssue": "Relative /en/contact was incorrectly checked as absolute; preserved r1 false result. No source issue.",
+  "correctedAuxiliaryRunnerExit": 0,
+  "officialFreshResponses": 15,
+  "officialFailedRequests": 0,
+  "allInputsAndDraftHashesStillMatch": true,
+  "RStatusPorcelain": "",
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/reviews/es-independent-r1.md",
+      "sha256": "039f177a94c635985e18a809334b08958a94936e173d6412a80a54cdb1969e64",
+      "bytes": 14963
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-cli-r1.json",
+      "sha256": "9f898ad92439cc569bc3da6ed4ade7fb27e0c2e4c928aa589ff5916bd3c9b88c",
+      "bytes": 69398
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-inputs.json",
+      "sha256": "c54d63528b4456eb8677343f8dc1043f96e45af944c6f086d9b8db04b638f214",
+      "bytes": 14488
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-official-recheck.json",
+      "sha256": "272e59a34841e616a8ad1658dec60032286711c803ccedd86d520e725cf38400",
+      "bytes": 13937
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-r1.json",
+      "sha256": "7f7dbebcf5742ec26af1f2b52c538b6aa43167ab49e417c18340568e25a7d1a1",
+      "bytes": 24715
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-run.py",
+      "sha256": "b2d34cd96988a280ac304478b5e64ed82edbb4c2210f6a19e33e345ff4e4c520",
+      "bytes": 6902
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-structure-r1.json",
+      "sha256": "4f949dc310f7a75d2e388c37967d898c6f96455c134db35bb6d1c289f29d5b4e",
+      "bytes": 28260
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-structure-r2.json",
+      "sha256": "7fa072c7539333cb0b60c388b5ff2c3242513c5146dc489b5eeda8344cb2ef4d",
+      "bytes": 28753
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-structure-r2.py",
+      "sha256": "080210ac4afb6b814537066a698395d618e90c0c3e0dfcdc911736350588b08c",
+      "bytes": 1690
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-write-review.py",
+      "sha256": "3f17f670fc8de9c1bb89b08c71d03b8cfc8dbdb869ebd95339c2043372ef4532",
+      "bytes": 19565
+    }
+  ],
+  "noDraftsOrRModifiedByReviewer": true,
+  "nextScope": "Root may accept exact reviewed SHA. Optional edits require SHA rebinding and changed-article checks. ES6 is outside current 72-column release."
+}

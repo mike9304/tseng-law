@@ -1,0 +1,137 @@
+{
+  "atUTC": "2026-10-29T00:48:32.424023+00:00",
+  "tests": [
+    {
+      "label": "Initial13suites481PASS9FAIL",
+      "upstream": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/content-tests-command.json",
+      "sha256": "d7e61a5fe20bed04ad545c959d10ee87817a16ca4721b7839f4aa143aef66860",
+      "receipt": {
+        "startedAtUTC": "2026-10-29T00:38:39.019374+00:00",
+        "command": [
+          "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+          "node_modules/vitest/vitest.mjs",
+          "run",
+          "src/lib/__tests__/case-translations-20261026.test.ts",
+          "src/lib/__tests__/column-language-links.test.tsx",
+          "src/lib/__tests__/columns-publication-date.test.ts",
+          "src/lib/__tests__/columns-faq.test.ts",
+          "src/lib/__tests__/column-category-parity.test.ts",
+          "src/lib/__tests__/column-image-caption-label.test.ts",
+          "src/lib/__tests__/column-no-public-authors.test.tsx",
+          "src/lib/__tests__/column-emphasis.test.ts",
+          "src/lib/__tests__/column-seo-title-frontmatter.test.ts",
+          "src/lib/__tests__/column-summary-frontmatter.test.ts",
+          "src/lib/__tests__/column-topics.test.ts",
+          "src/lib/__tests__/market-board-columns-20261024.test.ts",
+          "src/app/__tests__/sitemap.test.ts"
+        ],
+        "cwd": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+        "headBefore": "f294a05f2c7003260016fa852dfa16063a1ccfcc",
+        "scopeSHA256": "9251722b09e86e0c7339a937f2d7fc25a883769ca50effa4de15d10952712c78",
+        "exitCode": 1,
+        "scope": "13 content, SEO, date, real49-version links and sitemap suites for new48; not full-repository tests",
+        "finishedAtUTC": "2026-10-29T00:39:44.586145+00:00",
+        "logSHA256": "d790d981d0e36aa785ae58259b729c9ce6c83b65704a5c5eacb17f262462b59a",
+        "inputsUnchanged": true,
+        "contentPathsUnchanged": true,
+        "scopeUnchanged": true,
+        "headUnchanged": true
+      }
+    },
+    {
+      "label": "CorrectedENMetadata14PASS",
+      "upstream": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/unit-command.json",
+      "sha256": "58dea899c2843eb01841a17e63268415f39e1ffc2e0cd34507c0557de9846f47",
+      "receipt": {
+        "startedAtUTC": "2026-10-29T00:44:19.810902+00:00",
+        "command": [
+          "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+          "node_modules/vitest/vitest.mjs",
+          "run",
+          "src/lib/__tests__/column-seo-title-frontmatter.test.ts",
+          "src/lib/__tests__/column-summary-frontmatter.test.ts"
+        ],
+        "cwd": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+        "exitCode": 0,
+        "finishedAtUTC": "2026-10-29T00:44:27.962546+00:00",
+        "inputsUnchanged": true,
+        "logSHA256": "99eb470e3f06344211eeb81e7fdee95207666fd0b0042375b1e63addfe1013d4"
+      }
+    },
+    {
+      "label": "CorrectedDatesCounts98PASS",
+      "upstream": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/test-contract-repair/run-command.json",
+      "sha256": "df5d407af007d600cea74175937387b7cb5f7bbd9a1dd686c1d49c7c27c8b099",
+      "receipt": {
+        "startedAtUTC": "2026-10-29T00:44:45.442196+00:00",
+        "command": [
+          "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+          "node_modules/vitest/vitest.mjs",
+          "run",
+          "src/lib/__tests__/columns-publication-date.test.ts",
+          "src/lib/__tests__/column-category-parity.test.ts",
+          "src/app/__tests__/sitemap.test.ts"
+        ],
+        "cwd": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+        "envOverrides": {
+          "GIT_OPTIONAL_LOCKS": "0"
+        },
+        "scope": "Only the 3 owned suites; no timeout or assertion reduction. Original 13-suite failure evidence preserved.",
+        "inputsSHA256": {
+          "src/lib/__tests__/columns-publication-date.test.ts": "3cd689466e97938299d589e34b3a81d5c050cc1dc75db430ea18078b0e19c8b9",
+          "src/lib/__tests__/column-category-parity.test.ts": "3cc9838ba9a3fecaba12aaf27f888580e55b1f34ee1b4df814e52c48fcf25ddd",
+          "src/app/__tests__/sitemap.test.ts": "ab65b30bf19ac3a8ddcbf45beedbbb662441a194acc838ebe72533e8aace6409",
+          "src/lib/__tests__/native-locale-columns.ts": "74f2760c8c30a8fd9436ebcec3c33db7b676be75f3c6310095a58700ab2fd196",
+          "src/lib/__tests__/case-translations-20261026.test.ts": "43f6a60eeec4a0f8ddadb1c299faa936e19701df3ce0ac0be38f267a98b38900",
+          "src/lib/columns.ts": "3ba567a0a9aaecd6070247bfc193980f1aef2b752a6fbcdca767afd48fe8b2f5",
+          "src/app/sitemap.ts": "d810e1753ff08ee79b09942a35b6121586074a5d92a40bd1207b0c9b87f6e939",
+          "package-lock.json": "c695c97423db150426faea4b4fac7e940a8ec35cc9ada52f79ff91d0c507efdf"
+        },
+        "corpusBeforeCount": 2499,
+        "corpusBeforeSHA256": "6ea17e34a3fba0ca12bce8889103f4f0812a9f5c62e50f7707234e14514a522f",
+        "pid": 37011,
+        "finishedAtUTC": "2026-10-29T00:44:55.614891+00:00",
+        "elapsedSeconds": 10.171,
+        "exitCode": 0,
+        "logSHA256": "c586f3aa6d467ab328132df1cc996849f910524a2074e10bfe14d4fd742047d7",
+        "inputsUnchanged": true,
+        "corpusAfterCount": 2499,
+        "corpusAfterSHA256": "6ea17e34a3fba0ca12bce8889103f4f0812a9f5c62e50f7707234e14514a522f",
+        "corpusChangedPaths": []
+      }
+    },
+    {
+      "label": "ChangedThreeTestsESLintPASS",
+      "upstream": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/test-contract-repair/eslint-command.json",
+      "sha256": "43e02f89b15b802eb2be4d2353e6b99350b997d65728241b7f1964d948a63de1",
+      "receipt": {
+        "startedAtUTC": "2026-10-29T00:45:07.069730+00:00",
+        "command": [
+          "/Users/son7/.nvm/versions/node/v24.14.1/bin/node",
+          "node_modules/eslint/bin/eslint.js",
+          "--max-warnings=0",
+          "src/lib/__tests__/columns-publication-date.test.ts",
+          "src/lib/__tests__/column-category-parity.test.ts",
+          "src/app/__tests__/sitemap.test.ts"
+        ],
+        "cwd": "/Users/son7/Projects/tseng-law-all-locales-20261025",
+        "finishedAtUTC": "2026-10-29T00:45:08.923748+00:00",
+        "exitCode": 0,
+        "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "inputsUnchanged": true
+      }
+    }
+  ],
+  "rootTwoTestESLint": {
+    "command": "Node24 ESLint case-translations-20261026.test.ts native-locale-columns.ts --max-warnings=0",
+    "exitCode": 0,
+    "processSessionId": 7430
+  },
+  "firstFailureLog": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/content-tests.log",
+    "sha256": "d790d981d0e36aa785ae58259b729c9ce6c83b65704a5c5eacb17f262462b59a"
+  },
+  "remainingFailedAssertions": 0,
+  "newProductionRuntimeChanges": 0,
+  "nextStep": "Clean commit and full static/package/browser validation before push"
+}

@@ -1,0 +1,55 @@
+{
+  "copies": [
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/intake/scope48-r2-manifest.json",
+      "copy": "docs/audit/all-locales-parity-20261025/release-20261029-next48/final-integration/scope48-r2-manifest.json",
+      "sha256": "8104a27996ad916a0db84dbcbd41c8b87cb3c1976dcd6c73bf44a9f62ec6fcee"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/author-manifest.json",
+      "copy": "docs/audit/all-locales-parity-20261025/release-20261029-next48/final-integration/en-metadata-author.json",
+      "sha256": "be70060ddb2b2a95a1743bce1f215d3fb8c72623f88cd3ad22e5cbcde3e575f5"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/independent-review.md",
+      "copy": "docs/audit/all-locales-parity-20261025/release-20261029-next48/final-integration/en-metadata-independent-review.md",
+      "sha256": "3128905151cd69c64e47109e279416e63c57506ad03426e7691f59aa4e02b826"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/independent-manifest.json",
+      "copy": "docs/audit/all-locales-parity-20261025/release-20261029-next48/final-integration/en-metadata-independent-manifest.json",
+      "sha256": "cf3bf95cda45f3ad0ff9cfb7f9fdadaef8bde404c518a5b4a7a02eb44fb4590c"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/independent-evidence.json",
+      "copy": "docs/audit/all-locales-parity-20261025/release-20261029-next48/final-integration/en-metadata-independent-evidence.json",
+      "sha256": "5db9e7c1e10326171c6a1a18cc99aef583e17d9080be771655bd184801283f4c"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/test-contract-repair/REPORT.md",
+      "copy": "docs/audit/all-locales-parity-20261025/release-20261029-next48/final-integration/test-contract-repair.md",
+      "sha256": "ff5f85c5119f294e8a307b1616de2cde13e9466c6a7a3162dea571b0025709da"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/test-contract-repair/closure.json",
+      "copy": "docs/audit/all-locales-parity-20261025/release-20261029-next48/final-integration/test-contract-closure.json",
+      "sha256": "0073851307777079ccb2145d787ffd63f2918a95702fa52faa43e3c5f4e01386"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/test-contract-repair/test-contract.patch",
+      "copy": "docs/audit/all-locales-parity-20261025/release-20261029-next48/final-integration/test-contract.patch",
+      "sha256": "40e594f44904f47e77b8b429b967c19be5f5dfd8f031a091a089ec8ae68071cc"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/root-en-zh-reading.json",
+      "copy": "docs/audit/all-locales-parity-20261025/release-20261029-next48/final-integration/root-en-zh-reading.json",
+      "sha256": "af0b782e1d93e02a37f072aeea07578f425ca02c93a344a183a613edb8741907"
+    },
+    {
+      "source": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks-r2/inventory-execution.json",
+      "copy": "docs/audit/all-locales-parity-20261025/release-20261029-next48/final-integration/inventory-execution.json",
+      "sha256": "0df1765e59c15a5ddca1d77d3da9412e7e5eecbd878ed34ee71cee97cebe9d43"
+    }
+  ],
+  "description": "Current final metadata binding supersedes only four EN rows of the preserved initial48 intake. All original intake evidence remains historical and intact."
+}

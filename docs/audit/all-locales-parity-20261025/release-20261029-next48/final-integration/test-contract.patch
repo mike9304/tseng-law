@@ -1,0 +1,94 @@
+diff --git a/src/app/__tests__/sitemap.test.ts b/src/app/__tests__/sitemap.test.ts
+index 9b4a953c5..d54e0612b 100644
+--- a/src/app/__tests__/sitemap.test.ts
++++ b/src/app/__tests__/sitemap.test.ts
+@@ -36,6 +36,7 @@ import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003, COUNTRY_C
+   ARC_VISA_COLUMN_FILES_20261024,
+   COUNTRY_COLUMN_FILES_20261024,
+   CASE_COLUMN_FILES_20261025,
++  CASE_TRANSLATION_COLUMN_FILES_20261026,
+   COUNTRY_COLUMN_FILES_20261026,
+   COUNTRY_COLUMN_FILES_20261027,
+   COUNTRY_COLUMN_FILES_20261028,
+@@ -323,6 +324,7 @@ describe('sitemap column lastModified', () => {
+       // 2026-10-01 zh-hant-only domestic columns 060-062 add 3 URLs (zh-hant 3).
+       // 2026-10-02 expertise columns 063-069 add 23 URLs (ko 7, en 7, zh-hant 7, ja 2).
+       // The 2026-10-02–24 audience/traffic batches add one URL per core-locale file; VI is counted above.
++      // Case translations add 18 core URLs (ko 6, ja 6, en 4, zh-hant 2); guidance translations are counted from disk.
+       // Criminal board adds 5 language URLs.
+       // Tax & accounting board (4 core-language URLs) + its column files, one URL per locale file.
+       beforeFiltering:
+@@ -374,6 +376,9 @@ describe('sitemap column lastModified', () => {
+             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
+             .flatMap(([, files]) => files).length
+           + Object.values(CASE_COLUMN_FILES_20261025).flat().length
++          + Object.entries(CASE_TRANSLATION_COLUMN_FILES_20261026)
++            .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
++            .flatMap(([, files]) => files ?? []).length
+           + Object.entries(COUNTRY_COLUMN_FILES_20261026)
+             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
+             .flatMap(([, files]) => files).length
+@@ -436,6 +441,9 @@ describe('sitemap column lastModified', () => {
+             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
+             .flatMap(([, files]) => files).length
+           + Object.values(CASE_COLUMN_FILES_20261025).flat().length
++          + Object.entries(CASE_TRANSLATION_COLUMN_FILES_20261026)
++            .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
++            .flatMap(([, files]) => files ?? []).length
+           + Object.entries(COUNTRY_COLUMN_FILES_20261026)
+             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
+             .flatMap(([, files]) => files).length
+diff --git a/src/lib/__tests__/column-category-parity.test.ts b/src/lib/__tests__/column-category-parity.test.ts
+index e99703d84..ce7a41571 100644
+--- a/src/lib/__tests__/column-category-parity.test.ts
++++ b/src/lib/__tests__/column-category-parity.test.ts
+@@ -33,10 +33,11 @@ describe('column category parity with English', () => {
+     // Prior 40 + seven 2026-10-02 (063–069) + traffic 051 + road-rage 099, 109, 122, 188, 191, 194, 201, 204 + inheritance 230 + inheritance 231 + inheritance 232 + inheritance 233 + inheritance 234 + inheritance 249 + expert 250 + expert 251 + expert 252 + expert 253 + expert 254 + expert 255 + expert 256 + expert 257 + expert 258 + expert 259 + expert 260 + divorce money claims 275 + expert 518 + expert 519 + expert 520 + expert 521 + expert 522 + expert 523 + expert 524 + expert 540 + civil 542 + criminal 543 + expert 603 + expert 604 + expert 605 + expert 606 + expert 607 + expert 608 + expert 609 + expert 610 + traffic 611 + expert 629 + expert 630 + expert 631 + expert 632 + expert 633 + expert 634 + expert 635 + expert 636 + expert 637 + expert 638 + expert 639 + expert 640 + traffic 641 + expert 642 + expert 643 + expert 644 + expert 647 + expert 648 + expert 649 + expert 650 + expert 651 + expert 652 + expert 659 + expert 660 + expert 661 + expert 663 + expert 664 + expert 947 + expert 948 + expert 949 + expert 950 + expert 951 + expert 952 + expert 953 + expert 954 + expert 955 + expert 956 + expert 957 + expert 958 + expert 959 + expert 960 + expert 961 + expert 962 + expert 963.
+     // Four criminal-procedure columns share the English/Korean/Vietnamese cluster.
+     // ARC/visa 704–706 add three shared legal-information articles on 2026-10-24.
+-    expect(english.size).toBe(143);
++    // Cases 915, 916, 918–921 now have all four core-language versions; all six parse as legal.
++    expect(english.size).toBe(149);
+     const counts = { formation: 0, legal: 0, case: 0 };
+     for (const category of english.values()) counts[category] += 1;
+-    expect(counts).toEqual({ formation: 9, legal: 133, case: 1 });
++    expect(counts).toEqual({ formation: 9, legal: 139, case: 1 });
+   });
+ 
+   it.each(Object.keys(NATIVE_LOCALE_COLUMN_FILES) as (keyof typeof NATIVE_LOCALE_COLUMN_FILES)[])(
+diff --git a/src/lib/__tests__/columns-publication-date.test.ts b/src/lib/__tests__/columns-publication-date.test.ts
+index 4b5e928c6..81d7d2513 100644
+--- a/src/lib/__tests__/columns-publication-date.test.ts
++++ b/src/lib/__tests__/columns-publication-date.test.ts
+@@ -5,6 +5,7 @@ import matter from 'gray-matter';
+ import { describe, expect, it } from 'vitest';
+ import { getAllColumnPosts, sortColumnPostsNewestFirst, type ColumnPost } from '@/lib/columns';
+ import {
++  CASE_TRANSLATION_COLUMN_FILES_20261026,
+   NATIVE_LOCALE_COLUMN_FILES,
+   archiveLeadPublicationDate,
+   archiveLeadSlugsFor,
+@@ -743,7 +744,12 @@ const REDATED_20260928: Record<string, readonly string[]> = {
+   ja: ['019', '020'],
+ };
+ 
+-function verifiedPublicationDate(locale: string, prefix: string): string {
++function verifiedPublicationDate(locale: string, fileOrPrefix: string): string {
++  // Only the registered translations move to October 26; their original EN/ZH files keep October 25.
++  if (CASE_TRANSLATION_COLUMN_FILES_20261026[locale]?.includes(fileOrPrefix)) {
++    return '2026-10-26';
++  }
++  const prefix = fileOrPrefix.slice(0, 3);
+   if (Object.values(CRIMINAL_COLUMN_FILES_20261008).flat().some((file) => file.startsWith(`${prefix}-`))) {
+     return '2026-10-08';
+   }
+@@ -875,8 +881,7 @@ describe('localized column publication ordering', () => {
+       const expertiseCount = expertiseSlugsFor(locale).length; // 041–048 subset + 050 traffic
+       expect(files).toHaveLength(31 + nativeCount + expertiseCount);
+       for (const file of files) {
+-        const prefix = file.slice(0, 3);
+-        const verifiedDate = verifiedPublicationDate(locale, prefix);
++        const verifiedDate = verifiedPublicationDate(locale, file);
+         const { data } = matter(fs.readFileSync(path.join(contentDir, file), 'utf8'));
+ 
+         expect(data.date_display, file).toBe(expectedDisplay(locale, verifiedDate));

@@ -1,0 +1,47 @@
+{
+  "atUTC": "2026-10-29T00:09:17.868922+00:00",
+  "baseline": "ko-root-mechanical-r4/draft-byte-snapshots",
+  "author": "root",
+  "edits": [
+    {
+      "id": 915,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "old": "title: \"공기 연장을 조정한 뒤 공사대금을 중재에 청구했다면\"",
+      "new": "title: \"공기 연장을 조정한 뒤 금전 보상을 중재에 청구했다면\"",
+      "reason": "정본monetary compensation을공사대금원금으로좁게읽을가능성제거.",
+      "beforeSHA256": "4f6b864fc81c99118e9745fff4fda53e5493c88283194ddca338afd58585d5e4",
+      "afterSHA256": "a20d203aebed0ed16b5841a5664b11137ae535838a7f39ef0dfeb73d303eea31"
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "old": "보고서 다음은 후속 확인입니다.",
+      "new": "후속 확인이 남습니다.",
+      "reason": "직전보고서수신/송금승인기록뒤후속확인단계를간결하게연결.",
+      "beforeSHA256": "657df870c6f5c864c9adc1bf58cc10387a409c477e9bb13e1c0c78d0e85b327b",
+      "afterSHA256": "543cb8bf4db4466f5d9724710dafba0f3d684b1904530133f44e22dd5ac57d05"
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "old": "답을 얻지 못한 항목도 남습니다.",
+      "new": "미답변도 기록에 남깁니다.",
+      "reason": "독립선택제안에따라미답변의보존행위명시;실무제안맥락유지.",
+      "beforeSHA256": "543cb8bf4db4466f5d9724710dafba0f3d684b1904530133f44e22dd5ac57d05",
+      "afterSHA256": "9fd83e8be14853c57548e36ac3564bee6fcaa240793e1afc28ccc87013192a10"
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/921-taiwan-online-game-coins-refund-judgment.md",
+      "old": "현행 [온라인게임 서비스 표준계약 필수기재·기재금지사항 제18항](https://www.ey.gov.tw/File/C27658C15073FF69?A=C)은 소비자가 언제든 사업자에게 통지해 계약을 해지하도록 정합니다.",
+      "new": "현행 [온라인게임 서비스 표준계약 필수기재·기재금지사항 제18항](https://www.ey.gov.tw/File/C27658C15073FF69?A=C)은 소비자가 언제든 사업자에게 통지해 계약을 해지할 수 있도록 정합니다.",
+      "reason": "독립선택제안:소비자해지가의무가아닌권한임을명시;FAQ이미권한형이라본문맥락전체로정확히치환.",
+      "beforeSHA256": "0bccb349583196ec370182d6325def2795c4c4cdbdd0472f7d6193ebc1962303",
+      "afterSHA256": "b4021c53bd4c657b0598faf6f17840c693e33db497764782b9edcb000a8e7e48"
+    }
+  ],
+  "initialScriptExit": 1,
+  "initialScriptFailure": "921 reverse uniqueness guard matched the same new permission phrase already present in FAQ; 915/916 had been applied; 921 remained unchanged. Recovered by binding full body sentence and verifying each current file equals exact baseline or exact expected result.",
+  "reasonForFollowup": "Actual CLI passed; independent body-only916CV0.446 plus optional clarity and title precision concern.",
+  "forwardAndReverseChecked": true
+}

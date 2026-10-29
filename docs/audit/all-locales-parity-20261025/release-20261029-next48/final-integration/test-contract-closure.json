@@ -1,0 +1,50 @@
+{
+  "completedAtUTC": "2026-10-29T00:46:10.715829+00:00",
+  "status": "PASS_BOUNDED",
+  "originalFullRun": {
+    "tests": 490,
+    "passed": 481,
+    "failed": 9,
+    "exitCode": 1
+  },
+  "assignedOriginalFailures": 6,
+  "rerun": {
+    "suites": 3,
+    "tests": 98,
+    "passed": 98,
+    "failed": 0,
+    "exitCode": 0
+  },
+  "eslintExitCode": 0,
+  "scopedDiffCheckExitCode": 0,
+  "files": {
+    "src/lib/__tests__/columns-publication-date.test.ts": {
+      "beforeSHA256": "173afbf8c452b2f6e037519a4068e566380b90bba2b0a3fa760d3c9e18b89bca",
+      "afterSHA256": "3cd689466e97938299d589e34b3a81d5c050cc1dc75db430ea18078b0e19c8b9"
+    },
+    "src/lib/__tests__/column-category-parity.test.ts": {
+      "beforeSHA256": "f4ae0b6428796cf8a1ac79e3ef3fe42d3eaef440f77a2ea88d682c6a38c3db16",
+      "afterSHA256": "3cc9838ba9a3fecaba12aaf27f888580e55b1f34ee1b4df814e52c48fcf25ddd"
+    },
+    "src/app/__tests__/sitemap.test.ts": {
+      "beforeSHA256": "cceae565f586c7b701d7bbdfc75d77b24c32e784b2cf8ed233d37df343e9d9c6",
+      "afterSHA256": "ab65b30bf19ac3a8ddcbf45beedbbb662441a194acc838ebe72533e8aace6409"
+    }
+  },
+  "evidenceSHA256": {
+    "REPORT.md": "ff5f85c5119f294e8a307b1616de2cde13e9466c6a7a3162dea571b0025709da",
+    "before-and-contract.json": "55cd84b5f27783aa59d745790c56547749b8bf4d4fc18ce17dd4935d32852500",
+    "diff-check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eslint-command.json": "43e02f89b15b802eb2be4d2353e6b99350b997d65728241b7f1964d948a63de1",
+    "eslint.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "run-command.json": "df5d407af007d600cea74175937387b7cb5f7bbd9a1dd686c1d49c7c27c8b099",
+    "sitemap-investigation.json": "33ee739cbdc3e2f18e580a4b7bf9303ffb9d1a4a0fee0062a8e0c3b95a42f5de",
+    "sitemap-investigation.md": "79d5146ff760b2a5adf0d0c20583727c5d09d3bde0d18cbf1bd9f5ae79d352d7",
+    "test-contract.patch": "40e594f44904f47e77b8b429b967c19be5f5dfd8f031a091a089ec8ae68071cc",
+    "tests.log": "c586f3aa6d467ab328132df1cc996849f910524a2074e10bfe14d4fd742047d7"
+  },
+  "sharedFilesEdited": false,
+  "sourceFilesEdited": false,
+  "runtimeFilesEdited": false,
+  "timeoutChanged": false
+}

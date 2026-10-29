@@ -1,0 +1,82 @@
+{
+  "atUTC": "2026-10-28T23:27:52.558747+00:00",
+  "status": "EDITORIAL_CLOSED_NEXT_BATCH_ONLY",
+  "reviewer": "/root",
+  "scope": "Full current920/921 plus unchanged-four prior full independent review; targeted correction closure",
+  "newFullRead": [
+    920,
+    921
+  ],
+  "priorUnchangedReview": [
+    915,
+    916,
+    918,
+    919
+  ],
+  "mandatoryRemaining": 0,
+  "optionalUnadopted": 2,
+  "manuscripts": [
+    {
+      "id": 915,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-vi/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "337e6fc8076e4dab22736696e6098268b673b5dae3bca735a95e2aff35d2cd21",
+      "beforeSHA256": "337e6fc8076e4dab22736696e6098268b673b5dae3bca735a95e2aff35d2cd21",
+      "changed": false
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-vi/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "18be959442c20b248ca3936a586d5fd0997e9bf8c269e8230e89bc24ac2a7639",
+      "beforeSHA256": "18be959442c20b248ca3936a586d5fd0997e9bf8c269e8230e89bc24ac2a7639",
+      "changed": false
+    },
+    {
+      "id": 918,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-vi/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "46c9e175671597bd1ee6627c7368ab9fc6a5dc45b5dc5804e2b919adf3174df9",
+      "beforeSHA256": "46c9e175671597bd1ee6627c7368ab9fc6a5dc45b5dc5804e2b919adf3174df9",
+      "changed": false
+    },
+    {
+      "id": 919,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-vi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "4b5a8e725145be3dddcf2382ab5a1dc8b616a4e0cbd9222df6af3ceec51f3a33",
+      "beforeSHA256": "4b5a8e725145be3dddcf2382ab5a1dc8b616a4e0cbd9222df6af3ceec51f3a33",
+      "changed": false
+    },
+    {
+      "id": 920,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-vi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "03b1711af67e46c143acb33931e519628af66e1c9fa227cbf85e7454e46ac27d",
+      "beforeSHA256": "60f7cb693ea1014283157a13a08954a2ce32ccd947174588624fdb148755c661",
+      "changed": true
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-vi/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "b15f72b116be28b165d7922ddc5bb3ea0682b122c889bd1ba50482391e8b93e5",
+      "beforeSHA256": "7c66399307d44586285b4835fbd9ecb1b9286dd770ce894d36a67805d60c81c8",
+      "changed": true
+    }
+  ],
+  "authorManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/vi-author-r2-final-manifest.json",
+    "sha256": "44b545fc44828135ee26d46322991038bcac88f5ca2c34f4e3079d704a56f3d2"
+  },
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/reviews/vi-root-r2-closure.md",
+    "sha256": "19654982e28349e7b6554ffa7c397c08fbeef1b0962fcc11962fa3c08a7f4732"
+  },
+  "exactForwardReverseVerified": true,
+  "actualCLISixExit": 0,
+  "sourceEditsByRoot": 0,
+  "outsideFrozen72": true,
+  "runtimeBuildPublicVerified": false,
+  "humanNativeLawyerApproval": false,
+  "newOfficialFetches": {
+    "MOJ6": "success",
+    "MOJ11": "success",
+    "EYGameTerms": "success",
+    "judgment": "timeout, retained actual response used"
+  }
+}

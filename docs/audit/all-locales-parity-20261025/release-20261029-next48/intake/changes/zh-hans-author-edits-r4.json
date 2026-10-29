@@ -1,0 +1,57 @@
+[
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/916-taiwan-parent-company-pollution-liability-us-investor.md",
+    "before_sha256": "3cd68b0ae442e08982d216ffc564868efe51f0671cea27f3267cfe68643efc08",
+    "after_sha256": "8dd386fb68e80f30a9df923849a6d6ba1c333640d9fd678216903a45c4736fd3",
+    "edits": [
+      {
+        "old": "法院审查的是控制公司知道什么，以及知道后如何行使控制权。",
+        "new": "",
+        "offset_before": 1195,
+        "reason": "第一段已写知悉污染与控制经营；删除后不损失事实，保留仅持股不足的边界。",
+        "meaning_preserved": true
+      }
+    ],
+    "exact_reverse_bytes": true,
+    "before_snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r3/916-taiwan-parent-company-pollution-liability-us-investor.md"
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+    "before_sha256": "16468f428398b330fc68ec8964aab7ea1a6b2736519c32337c8876bfba5d4a6b",
+    "after_sha256": "d09d75d49fee92ecc15c157d1204022c93d5a287a3a72ff73a82d71f341d8e41",
+    "edits": [
+      {
+        "old": "开发商先前寄出的信，未能证明已经按合同通知交房。",
+        "new": "",
+        "offset_before": 1179,
+        "reason": "前段已说明通知和进场手续不足以证明约定交付，后文具体解释信函；删除重复概括，不减裁判结论。",
+        "meaning_preserved": true
+      }
+    ],
+    "exact_reverse_bytes": true,
+    "before_snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r3/918-taiwan-presale-mortgage-notice-handover-judgment.md"
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/921-taiwan-online-game-coins-refund-judgment.md",
+    "before_sha256": "c338e401cf44920eda20a53f42e02f905fc6ee92c7e5b4fdf22eb9181ae68d3f",
+    "after_sha256": "1591b9e5bc81fecd3734cdccf7b3920ca1e996d9e9792761b076649e89ab3d64",
+    "edits": [
+      {
+        "old": "243,548元是请求金额。",
+        "new": "",
+        "offset_before": 1175,
+        "reason": "第一段明确同一数额为玩家请求，summary也保留；删除重复数字不是删除原始数额。",
+        "meaning_preserved": true
+      },
+      {
+        "old": "审查对象限于这款游戏。",
+        "new": "",
+        "offset_before": 1175,
+        "reason": "接下句已说按该金币功能和约定判断，并明确其他虚拟道具另行分析；合并范围提示。",
+        "meaning_preserved": true
+      }
+    ],
+    "exact_reverse_bytes": true,
+    "before_snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r3/921-taiwan-online-game-coins-refund-judgment.md"
+  }
+]

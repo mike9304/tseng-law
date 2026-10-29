@@ -1,0 +1,15 @@
+{
+  "createdAt": "2026-10-28T23:34:01.250222+00:00",
+  "id": "916",
+  "old": "จึงไม่ได้ยืนยันสิทธิได้รับเงินทุนของนักลงทุนรายใด",
+  "new": "จึงยืนยันสิทธิรับทุนไม่ได้",
+  "reason": "R2 v1 actual CLI left CV0.443. The investment paragraph conclusion repeats the long nominal phrase entitlement to receive investment financing of any investor; rewrite as a direct complete conclusion that entitlement to financing cannot be confirmed. This is a meaningful prose edit, not a boundary change.",
+  "meaning_preservation": "Preceding USTR sentences retain Taiwan critical-sector private investment, US private partners, conditional possibility and applicable law unchanged. New sentence does not promise future funding or assert the investor can never have a right. No numeric/source/FAQ change.",
+  "old_source_sha256": "41ce68891784335ba0972f61c99fdd667c8583c71bc4700864cf7c1e5b4a89b9",
+  "new_source_sha256": "2ba6a22462cb407c21dd4bce0714ceb5d61e5ddd83215888f7d64a2f0bb49ab1",
+  "preserved_old_source": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/history-v1/916-taiwan-parent-company-pollution-liability-us-investor.md",
+  "old_proposal": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/history-v1/916-proposal.json",
+  "new_proposal": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/proposals/916.json",
+  "boundary_change": "none proposed; full new source requires independent review/rebinding",
+  "diff": "--- /Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/history-v1/916-taiwan-parent-company-pollution-liability-us-investor.md\n+++ /Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/manuscripts/916-taiwan-parent-company-pollution-liability-us-investor.md\n@@ -73,7 +73,7 @@\n \n [เอกสารข้อเท็จจริงของ USTR เดือนกุมภาพันธ์ 2026](https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/february/fact-sheet-us-taiwan-agreement-reciprocal-trade) กล่าวถึงเจตนาของทั้งสองฝ่ายที่จะส่งเสริมการลงทุนข้ามพรมแดน\n เอกสารยังกล่าวถึงความเป็นไปได้ที่สหรัฐฯ จะสนับสนุนเงินทุนสำหรับการลงทุนภาคเอกชนในอุตสาหกรรมสำคัญของไต้หวันร่วมกับพันธมิตรเอกชนสหรัฐฯ ภายใต้กฎหมายที่ใช้บังคับ\n-จึงไม่ได้ยืนยันสิทธิได้รับเงินทุนของนักลงทุนรายใด\n+จึงยืนยันสิทธิรับทุนไม่ได้\n \n ก่อนอนุมัติการจ่ายเงิน ลดทุน หรือโอนทรัพย์สินออกเมื่อถอนการลงทุน ผู้ตัดสินใจควรมีข้อมูลการสัมผัสสาร ข้อเรียกร้องที่ยังค้าง และทรัพยากรที่จะเหลือในบริษัทไต้หวัน\n การตรวจทางกฎหมายควรลงถึงธุรกรรมที่กำลังเสนอ\n"
+}

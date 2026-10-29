@@ -1,0 +1,552 @@
+{
+  "atUTC": "2026-10-29T00:34:41.910699+00:00",
+  "verdict": "PASS_WITH_OPTIONAL_SUGGESTIONS",
+  "reviewer": "/root/release_build_prepare",
+  "mandatoryCount": 0,
+  "optionalCount": 3,
+  "scope": "Independent AI meaning/natural-language/FAQ/source and sentence-boundary review of these six exact B12 drafts only; no native-human/attorney/publication/deployment approval.",
+  "inputManifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-inputs.json",
+    "sha256": "e4fb0bb6eb884bdf7492b90aac2cb107beef3a91336a641d90457b008627fc8f",
+    "bytes": 6323
+  },
+  "preparation": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-input-preparation.json",
+    "sha256": "0d0c8dd2a86d03d9a4920925f58f7a507f326306c6e6ca51b3a77bfaba16723d",
+    "bytes": 14867
+  },
+  "cliReceipt": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-cli-r1.json",
+    "sha256": "0b5446ede85aaa7a4ceb41b01bcc90fe81539f2d8b6193a1d1381b6f260ad552",
+    "bytes": 64849
+  },
+  "structureInitial": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-structure-r1.json",
+    "sha256": "00e702dd8be84ea49e28c313fddecbfcc8bf5b94b1fb59d39a3e0e4e4dde726d",
+    "bytes": 31562
+  },
+  "structureCorrected": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-structure-r2.json",
+    "sha256": "b8f21999738ec3685e628192fdf136f8c4327d343ee2bf012e8da37038f9dbc5",
+    "bytes": 34091
+  },
+  "replay": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-replay.json",
+    "sha256": "d516dd8452eee94cf838c5e221c9d54f5207a48cfe452d2cc0b1c9a50060bd68",
+    "bytes": 54392
+  },
+  "sourceInputReview": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-source.json",
+    "sha256": "47406bf399975dd52e0d8ea028cdb42b6e72a406e6759306f65ddaddf58e01ed",
+    "bytes": 36418
+  },
+  "freshIndependentCLIExecutions": 6,
+  "freshCLIExitCodes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "FAIL": 0,
+  "WARN": 0,
+  "initialAuxiliaryOverallExit": 1,
+  "initialAuxiliaryError": "Helper wrongly assumed dedicated contact/page.tsx; actual catch-all dispatch verified. Source links valid.",
+  "correctedNarrowAuxiliaryExit": 0,
+  "CLIRerunAfterAuxiliaryCorrection": false,
+  "FAQTotal": 17,
+  "articles": [
+    {
+      "scope": "en:918",
+      "titleSummary": "Mortgage Letter Before the Water Was Connected 및 summary는 서신/주택상태/출입/인도 구별과 6개월 허가 수령 기산을 정확히 요약한다.",
+      "body": [
+        "26–36행: 2019-02-23 은행 연락·진행 서신, 미연결 수도·전기, 7월 하자·미완성 엘리베이터, 8월 출입 동의의 목적을 보존한다. 11월5일 대출금 지급과 11월28일 보증서의 인도일을 별도로 남긴다.",
+        "28행: 2022-02-09 타이중분원109上易289, 건설사의 상소·추가 청구 기각, 지연이자 지급 판단 유지 및 상소불가를 보존한다. 새 금액·집행완료를 추가하지 않는다.",
+        "36–44행: 약정 회차별 지급과 인도 전 완납 사실, 매수자의 대출·이전 서류/절차 및 지급 의무를 보존한다. 계약4개월/현재15점6개월과 사용허가 수령 기산을 이어 설명하며, 6개월을 무조건 실제 인도 완료기한으로 바꾸지 않는다.",
+        "46–50행: 2025 계약 점검과 2026-09-18 중앙은행 규정을 과거 사건과 구분. 임의LTV·국적별 대출권·소급효과가 없다."
+      ],
+      "FAQ": [
+        "서신 내용+주택상태에 따른 통지 판단",
+        "계약4/현재6개월·허가 수령 및 계약시 적용법",
+        "대출 미완료만으로 통지 무시/지급 중지 불가"
+      ],
+      "firstTwoParagraphDeletion": "첫 문단의 서신·수도전기·목적 제한 출입은 서로 다른 사실을 준다. 둘째 문단을 지우면 법원·날짜·추가청구 기각·지연이자·상소불가가 빠진다. 범용 예고 문장이 없다.",
+      "shortExamples": [
+        "The utilities came later.",
+        "Payment was examined separately.",
+        "Receipt of the permit starts the clock."
+      ],
+      "closing": "The disagreement can then be traced to a particular obligation and date.",
+      "boundary": "날짜 February 9, 2022 및 판결번호109年度上易字第289號가 한 문장 안에 남고, 11월5일/28일은 실제 별개 문장이다. 원문 납입·통지·인도 개념을 도구 경계 때문에 합치거나 나누지 않았다.",
+      "id": 918,
+      "locale": "en",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "e8e259a6bd3560241bf47eac4b73c9ab954e51b8d511ab3209855a8219df9e3f",
+      "metrics": {
+        "lang": "en",
+        "sentences": 42,
+        "paras": 13,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.9,
+        "len_cv": 0.52,
+        "short_share": 0.19,
+        "long_share": 0.071,
+        "para_cv": 0.204,
+        "even_run3": 0.025,
+        "top_end": "contract",
+        "top_end_share": 0.048,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "The",
+        "top_opener_n": 2,
+        "opener_rep": 0.077,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 3.17,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "The developer's February letter asked the buyer to arrange a mortgage.",
+        "last": "Sources checked October 25, 2026. This judgment turned on a particular contract and performance records; decisions about"
+      },
+      "actualCLIExit": 0,
+      "mandatoryCount": 0,
+      "FAQCount": 3,
+      "longAdjacentPairs": []
+    },
+    {
+      "scope": "en:919",
+      "titleSummary": "Deliberation으로 고친 제목은 사전 처분발표→실질심의 결함을 지칭한다. summary는 공무원 원처분과 복심결정 취소 및 민간법의 구별을 유지한다.",
+      "body": [
+        "26–36행: 사전 발표, 상급기관 선행 회의, 소속기관의 실질 평가 기능, 적법한 통지·진술 기회 결여, 조사보고서/권고 충돌을 각각 보존한다. 사후 복심 답변이 원래의 하자를 치유했다고 하지 않는다.",
+        "28행의 appealable과58행의 후속상소 미확인은 모두 유지된다. 모든 괴롭힘 부존재·실제 복직·판결 확정을 주장하지 않는다.",
+        "40–48행: 과거 공무원 평가·면직과2026-07-01 시행 민간 사용자 제도를 구분한다. 22-2 객관/공정/공평, 충분한 진술·답변·이해충돌 회피를 유지한다.",
+        "44행 must는 재발방지·필요에 따른 상담/지원/보호·조사에 적용된다. 46행 신고인 의사에 따른 coordination 가능과 불성립 시 조사 속행 must를 구분한다. 보호가 최종 판단까지 미뤄지거나 선택적 배려로 약화되지 않는다.",
+        "52–56행은 문서정리 실무 방향을 명시하며 법정양식/개인정보 전체공개 의무를 만들지 않는다."
+      ],
+      "FAQ": [
+        "취소≠괴롭힘 전부 부존재, 상소가능",
+        "보호·조사 병행 의무와 인지경로",
+        "공무원 절차를 민간에 직접 복사하지 않음"
+      ],
+      "firstTwoParagraphDeletion": "첫 문단은 사전발표와2대과 면직·두 처분 취소·추가 하자의 지도다. 둘째 문단은 정확 사건·날짜·상소가능과 해석 한계를 더한다. 동일한 예고를 두 번 하지 않는다.",
+      "shortExamples": [
+        "It was appealable.",
+        "Protection starts before a final report.",
+        "If coordination fails, the investigation must continue."
+      ],
+      "closing": "those records show whether different accounts were actually heard.",
+      "boundary": "Article22-2,114年度訴字第869號와 시행일이 문장 내부에 남는다. Who said what?는 실제 짧은 질문이고 잘못 잘린 조문/날짜가 아니다.",
+      "id": 919,
+      "locale": "en",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "d6f76c64d1621cab93c520a6c90b5ef54bf9223f4118f710f2adefa7c07c105e",
+      "metrics": {
+        "lang": "en",
+        "sentences": 44,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 15.6,
+        "len_cv": 0.476,
+        "short_share": 0.159,
+        "long_share": 0.023,
+        "para_cv": 0.263,
+        "even_run3": 0.048,
+        "top_end": "deliberated",
+        "top_end_share": 0.045,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "The",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.46,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "The intended punishment had been announced before the committee deliberated.",
+        "last": "Sources checked October 25, 2026. The case description follows the court's public explanation and does not confirm a lat"
+      },
+      "actualCLIExit": 0,
+      "mandatoryCount": 0,
+      "FAQCount": 3,
+      "longAdjacentPairs": []
+    },
+    {
+      "scope": "en:920",
+      "titleSummary": "제목·summary가 주차칸 밖 실제 공사경로와 공용 벽/천장/전기함을 쟁점으로 한정한다.",
+      "body": [
+        "26–32행: 충전함·천장吊桿에 부착한 관로·차단기·공용전기함을 명시한다. 계량기는 resident가 사용하는 것으로 별도 표시하며, 공용대상의 닫힌 목록은 벽·천장·전기함이다. meter ownership을 새로 인정하지 않는다.",
+        "28행: 2022-06-22 고등법원가오슝분원111上132의 상소기각·철거/복구 유지.58행 후속확정 미확인 유지.",
+        "36–40행: 법11조는 구분소유자회의 결의, 사건 규약15조는 관리위원회 허가 AND 전력회사 안전검사다. 법6(1)(5) 의무 위반 및 서신협의 후 미이행→6(3) 청구가 연결된다.6(1)(4) 미채택은 이 공사범위에 한정된다.",
+        "44행 resident said / willingness 및 Even if true로 주장과 가정판단을 구분한다. 열쇠 실제 인계·전원 차단 확정사실로 만들지 않는다.",
+        "54행 가오슝2026 보조는 공공부분 충전용 선로트레이이며 개별 사법적 동의가 아니다. 기한 경과 표현의 선택 정밀화만 O-02로 남긴다."
+      ],
+      "FAQ": [
+        "단독사용주차권/공사경로·다른건물별평가",
+        "잠금·사용중지·인계의사 주장과 설령사실이어도",
+        "보조금≠개별공사동의, 공고기한경과"
+      ],
+      "firstTwoParagraphDeletion": "첫 문장은 주차칸 밖 공사범위를 짧게 특정하고 뒤 문장이 판결의 실물 경로로 이를 뒷받침한다. 둘째 문단은 날짜·재판·결과·사전동의 결여를 추가한다. 모든 충전기 일반화나 정보없는 글 예고가 없다.",
+      "shortExamples": [
+        "Two sources governed consent.",
+        "The court applied it to this installation.",
+        "Approval needs a defined proposal."
+      ],
+      "closing": "An unresolved route need not become a second dispute over the installation bill.",
+      "boundary": "Article6(1)(5)/6(3)/6(1)(4),111年度上字第132號와 날짜가 조각나지 않는다. 실제문장 Even if true는 가정절로 보존된다.",
+      "id": 920,
+      "locale": "en",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "905ce7e41526f1ad820e9c59e18e5c374e5e000f2f7809d30c30f6af5a339b65",
+      "metrics": {
+        "lang": "en",
+        "sentences": 38,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 17.6,
+        "len_cv": 0.462,
+        "short_share": 0.184,
+        "long_share": 0.053,
+        "para_cv": 0.306,
+        "even_run3": 0.0,
+        "top_end": "areas",
+        "top_end_share": 0.079,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "The",
+        "top_opener_n": 2,
+        "opener_rep": 0.071,
+        "consec_same_start": 0,
+        "cite_para_share": 0.286,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 3.02,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "The installation extended beyond the parking bay.",
+        "last": "Sources checked October 25, 2026. This account concerns the identified Kaohsiung judgment; later proceedings and finalit"
+      },
+      "actualCLIExit": 0,
+      "mandatoryCount": 0,
+      "FAQCount": 3,
+      "longAdjacentPairs": []
+    },
+    {
+      "scope": "en:921",
+      "titleSummary": "잔여금화와 미사용유료점수 차이,243548청구액, 구체게임한정 및 현재환급권을 함께 보존한다.",
+      "body": [
+        "26–36행: NT$243548은 청구액이며 지급액이 아니다. 미사용유료점수 부존재는 불쟁사실이고 잔여금화는 해당게임 대결용칩이다. gamefees와도 구별한다. 플레이어가 사업자로부터 현금을 받는 조건부 환전방향을 정확히 유지한다.",
+        "플레이어의 종료의사로 계약종료를 인정한 것이 사업자의 모든 선행 제재를 승인한 것은 아니다. 2021-09-13 지룽109消簡上1 상소기각/상소불가를 구체사건에 한정한다.",
+        "40행: 언제든 종료 may, 사업자의 미사용유료점수 OR 미사용게임비용 반환 must, 필요비용공제, 종료 후30일 반환 OR 쌍방합의방식을 모두 유지한다.",
+        "44–46행: 2023-01-01 시행본을2021사건에 소급하지 않는다. 시작 후7일 서면해제·이유/비용불요·미사용구입점수반환은 별도4점 권리다. 원문보다 명시한 이유/비용은 보존공식조문이 뒷받침하나 다른번역의 필수추가조건으로 만들지 않는다.",
+        "58행: 최소30일 보존과 요청접수후7일 제공; 사업자기록만을 유일기준으로 제한금지≠사업자증거전체무효.60행 통계분모는2025최초신고유형2위·전년감소이며2026발표일과구분한다."
+      ],
+      "FAQ": [
+        "코인이라는 이름만으로 환급배제 불가",
+        "7일해제/언제든종료와 두환급대상·30일OR합의",
+        "사업자기록만 독점기준 금지, 기록가치전부배제아님"
+      ],
+      "firstTwoParagraphDeletion": "첫 문단은 화면에 남은 금화·구체청구액·불쟁사실을 연결하고, 둘째는 판결일/사건/상소불가와 일반화 한계를 준다. 짧은 첫 문장은 법적 환급대상과 구별할 화면 잔액에 초점을 둔다.",
+      "shortExamples": [
+        "The coins were still there.",
+        "Termination did occur.",
+        "What was deducted?"
+      ],
+      "closing": "A supported refund figure follows the money into the account, through conversion and into actual play.",
+      "boundary": "NT$243548,판결번호와날짜·30days/7days의기산이 정상문장에남는다. 표는문장통계와구별되며 숫자만가짜단문으로분리하지 않는다.",
+      "id": 921,
+      "locale": "en",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "a7fd315a8d983372ee8b96ff0769443f52d3881eba4acd84aba56e8de2f62fba",
+      "metrics": {
+        "lang": "en",
+        "sentences": 38,
+        "paras": 14,
+        "heads": 3,
+        "list_items": 0,
+        "mean_len": 18.1,
+        "len_cv": 0.472,
+        "short_share": 0.105,
+        "long_share": 0.053,
+        "para_cv": 0.256,
+        "even_run3": 0.0,
+        "top_end": "refund",
+        "top_end_share": 0.053,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "The",
+        "top_opener_n": 2,
+        "opener_rep": 0.214,
+        "consec_same_start": 0,
+        "cite_para_share": 0.0,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 1,
+        "num_per100": 3.8,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "The coins were still there.",
+        "last": "Sources checked October 25, 2026. This account uses one identified game-refund judgment to examine contracts and records"
+      },
+      "actualCLIExit": 0,
+      "mandatoryCount": 0,
+      "FAQCount": 3,
+      "longAdjacentPairs": []
+    },
+    {
+      "scope": "zh-hant:915",
+      "titleSummary": "調解談展延工期，仲裁卻請求金錢은 절차적대상차이를보여준다.取得仲裁判斷은판정취득이며26행실제지급미확인이명시된다.",
+      "body": [
+        "24–39행:新臺幣4,441萬7,150元은 정확히 NT$44,417,150으로 대응한다. 금전→공기연장→연장권고/기관부동의→금전회귀/권고안부재를 표와본문에서 보존한다. 실제지급/미지급은 어느쪽도 단정하지 않는다.",
+        "2017-07-12 최고법원106台上723 상소기각·취소확정은해당사건범위다. 하급심적용법이유정정과결론유지를구별한다.",
+        "45–51행:履約爭議협의불성립→조정가능, 공급자신청기관거절불가. 工程 OR 技術服務, 建議 OR 方案, 기관부동의때문에불성립→중재거절불가의 조건을연결한다. 별도중재합의가능성과일반장비/모든공공계약으로확대금지를유지한다.",
+        "40(1)(2)는이사건합의부재로좁게서술해미완성된일반사유열거를만들지않는다. 금액/논거변경이항상새분쟁이아님도유지한다.",
+        "55행ITA2026-09-30자료는미국공급자의예상조달기회이며입찰개시/자격/계약분류의확정이아니다.英語聯絡頁面은허용된실제영어페이지표시다."
+      ],
+      "FAQ": [
+        "불성립만으로자동중재X, 해당절차조건및별도합의",
+        "모든청구변경이중재차단X, 구체범위대조"
+      ],
+      "firstTwoParagraphDeletion": "첫문단의판정액/취소와권고대상불일치는핵심사실이다. 둘째문단은판결일·확정·실제지급미확인·법적합의공백을추가하므로버릴범용서문이없다.",
+      "shortExamples": [
+        "證明書卻補不上這段差距。",
+        "不成立的原因也有要求。",
+        "這些仍是計畫。"
+      ],
+      "closing": "要交給律師看的，是最初申請、歷次變更與機關回覆所形成的完整順序。",
+      "boundary": "4,441萬7,150元을하나의금액으로유지하며제85條之1/第40條第1項第2款을완전한한문장안에둔다. 문장부호/공백조작없음.",
+      "id": 915,
+      "locale": "zh-hant",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "857136fa9d201fec1625c75d3df4ae95715f3aa6a4ff517109176875be55b37d",
+      "metrics": {
+        "lang": "zh-hant",
+        "sentences": 37,
+        "paras": 14,
+        "heads": 4,
+        "list_items": 4,
+        "mean_len": 34.7,
+        "len_cv": 0.521,
+        "short_share": 0.108,
+        "long_share": 0.135,
+        "para_cv": 0.306,
+        "even_run3": 0.0,
+        "top_end": "議。",
+        "top_end_share": 0.081,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "仲裁",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 1,
+        "cite_para_share": 0.143,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 0,
+        "num_per100": 1.99,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "仲裁判斷准許承包商取得新臺幣4,441萬7,150元，到了法院卻被撤銷。",
+        "last": "資料及現行條文確認日：2026年10月25日。案件依最高法院官方說明整理；本文處理一種仲裁途徑，未據此判定個別契約的管轄機關或聲請期限。"
+      },
+      "actualCLIExit": 0,
+      "mandatoryCount": 0,
+      "FAQCount": 2,
+      "longAdjacentPairs": []
+    },
+    {
+      "scope": "zh-hant:916",
+      "titleSummary": "收購前已知污染과행동/증거를제목·요약에서연결하고246/262결과를정확히구분한다.",
+      "body": [
+        "26–36행:통제·오염인지·미고지/미개선·책임회피의감자/국외송금이라는법원의구체행동근거를보존한다.단순외국주주소유만으로책임을만들지않는다.32행수식어자연스러움은O-01이다.",
+        "40–42행:246명관련부분파기환송,262명관련상소기각; 각원청구전체기각·관련소송전체종결과구별한다. 서로다른환송문제를246명전원에동일하게부과하지않는다.",
+        "46–48행:154기본책임한도와법인격남용→특정채무→명백한청산곤란 AND 중대성/필요성의누적요건을유지한다.현행조문만으로역사적행위를소급설명하지않는다.",
+        "54행USTR2026년2월의향·적용법조건·적절한경우미국민간파트너와협력은개별승인/협정발효를의미하지않는다.",
+        "56–58행보고서·수신자·결정·자산이전기록은실무제안이며법정기록작성의무/자동준법보장아님. E15의기존문장전치는거래평가→결정자자료검토→문서라벨한계로연결돼의미/리듬모두허용된다."
+      ],
+      "FAQ": [
+        "소유만의책임X;구체행위/법률",
+        "246/262와전체소송/원청구구별",
+        "실사이후자료·민감정보경계·보관만으로준법X"
+      ],
+      "firstTwoParagraphDeletion": "첫문단은실사자료가책임증거가된연결을준다. 둘째문단은2018-08-16화학물질노출사건과단순소유불충분의범위를추가한다.",
+      "shortExamples": [
+        "股東身分本身不夠。",
+        "報告交給了誰？",
+        "條件要累積判斷。"
+      ],
+      "closing": "優先保全的文件，是原始調查發現、因此作成的決定，以及後續資產移動的核准紀錄。",
+      "boundary": "246/262,第154條및日期가정상문장에남는다. 3개진짜단문은법적범위/증거주체/누적조건을설명하며가짜조각이아니다.",
+      "id": 916,
+      "locale": "zh-hant",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "fb39cf124c5fdc3027a6068e9fef7c9e394de8c7da83e88a9ac97e20e17ae6c6",
+      "metrics": {
+        "lang": "zh-hant",
+        "sentences": 37,
+        "paras": 14,
+        "heads": 5,
+        "list_items": 3,
+        "mean_len": 38.7,
+        "len_cv": 0.453,
+        "short_share": 0.081,
+        "long_share": 0.162,
+        "para_cv": 0.16,
+        "even_run3": 0.057,
+        "top_end": "任。",
+        "top_end_share": 0.081,
+        "ja_desu": 0,
+        "ja_da": 0,
+        "top_opener": "收購",
+        "top_opener_n": 1,
+        "opener_rep": 0.0,
+        "consec_same_start": 0,
+        "cite_para_share": 0.071,
+        "cite_end_share": 0.0,
+        "contrast": 0,
+        "caveat": 0,
+        "questions": 2,
+        "num_per100": 1.19,
+        "hypo_open": false,
+        "q_open": false,
+        "formula_close": false,
+        "first": "收購前的環境調查報告，後來成了追究母公司責任的證據。",
+        "last": "官方資料確認日：2026年10月25日。本文依最高法院說明及現行條文討論特定2018年判決，未整理全部相關訴訟歷程，也未據此認定特定投資人的責任。"
+      },
+      "actualCLIExit": 0,
+      "mandatoryCount": 0,
+      "FAQCount": 3,
+      "longAdjacentPairs": []
+    }
+  ],
+  "findings": [
+    {
+      "id": "O-01",
+      "severity": "O",
+      "article": "zh-hant:916",
+      "line": 32,
+      "quote": "控制企業集團內部的知情",
+      "reason": "控制가 企業集團을 수식하는지, 기업집단의 통제와 내부 인지를 나열하는지 잠시 다시 읽게 된다. 앞뒤 문단은 지배회사의 오염 인지를 정확하게 설명하므로 의미 오류로 판정하지 않는다.",
+      "suggestion": "控制公司對污染的知情",
+      "meaningPreserved": "지배회사가 오염을 알았다는 사실만 명확히 한다. 통제·미고지/미개선·책임회피 목적의 감자 및 송금이라는 나머지 근거는 그대로 둔다.",
+      "applied": false
+    },
+    {
+      "id": "O-02",
+      "severity": "O",
+      "article": "en:920",
+      "line": 54,
+      "quote": "Applications closed on September 30.",
+      "reason": "보존 근거는 공고된 접수기한과 그 경과를 확인했다. 현재 문맥에서는 마감 경과의 자연스러운 요약이지만, 실제 접수 운영기록까지 확인했다는 인상을 더 줄일 수 있다. FAQ는 이미 application deadline had passed로 한정한다.",
+      "suggestion": "The announced application deadline was September 30 and had passed.",
+      "meaningPreserved": "공고 접수기한 경과와 케이블 트레이 사업 범위를 보존한다. 실제 연장·접수 집행 확인을 새로 주장하지 않는다.",
+      "applied": false
+    },
+    {
+      "id": "O-03",
+      "severity": "O",
+      "article": "batch opening pattern",
+      "line": null,
+      "quote": "The developer’s February letter… / The intended punishment… / The installation extended… / The coins were still there. / 仲裁判斷准許… / 收購前的環境調查報告…",
+      "reason": "구체적 사안은 다르지만 모두 §2-4의 사실·결과 진술 유형에 가깝다. 작성자 보고서의 주제별 차이를 곧바로 오프닝 유형별 다양성으로 인증하지 않는다. 첫 문장들이 각 사건의 사실을 전달하고 전체 소제목·마무리 틀이 복제되지는 않는다. §5의 2–7 중 독립적으로 확인된 미충족은 이 한 항목이므로 §6의 두 항목 기준을 충족하는 필수 반려로 확대하지 않는다.",
+      "suggestion": "선택적으로 일부 도입을 쟁점 질문형으로 재구성한다. 예: EN920 “Does exclusive use of a parking bay settle who may install wiring through shared areas?” 뒤에 현재의 판결에 근거한 설치 경로 설명을 잇는다. ZH915에서는 “調解談的是工期，後來的金錢請求能直接交付仲裁嗎？” 뒤에 현재 금액·취소 결과를 보존한다. 한 예시 적용만으로 배치 유형비율이 해결됐다고 주장하지 않는다.",
+      "meaningPreserved": "새 장면·대사·법적 결론 없이 기존 쟁점을 질문으로 바꾸는 선택안이다. 적용한다면 해당 파일의 새 SHA와 실제 검사만 다시 연결해야 하며 현재 승인 바이트에는 적용하지 않았다.",
+      "MONOTONY": "MONOTONY: §5-2 오프닝 유형 집중 — 위 여섯 실제 도입 — 법적 내용은 유지하면서 일부 시작 방식을 바꿀 수 있음. 선택 제안; 현재 자동 반려 아님.",
+      "applied": false
+    }
+  ],
+  "section5": [
+    {
+      "item": 1,
+      "result": "PASS",
+      "evidence": "독립 actual6 CLI exit0,FAIL0,WARN0; CV.453–.521,short.081–.190,run3≤.057. 작성자초기실패이력과분리."
+    },
+    {
+      "item": 2,
+      "result": "ONE_MANUAL_ITEM_NOT_MET; OPTIONAL O-03",
+      "evidence": "여섯실제도입은모두구체사실/결과유형에가깝다. 주제차이만으로유형다양성이라고인증하지않는다. 가상공식없고구조전체복제없음. §6의두수동미충족기준은충족하지않는다."
+    },
+    {
+      "item": 3,
+      "result": "PASS",
+      "evidence": "실제단문수EN9188/9197/9207/9214,ZH9154/9163. EN은확인일문장도측정에포함되므로그것을제외해도각각7/6/6/3개. 각글실제본문에도2개이상. E15전치후긴문장연속없음."
+    },
+    {
+      "item": 4,
+      "result": "PASS",
+      "evidence": "실제paragraph배열직접읽음. ENThe문단시작각2,ZHtopopener각1,같은시작연속≤1. 전체6첫단어유사성은O-03과별도."
+    },
+    {
+      "item": 5,
+      "result": "PASS",
+      "evidence": "세문단연속주장→조문→예외틀없음. EN918payment기록,EN919회의실질성,EN920설치도,EN921증거계산,ZH915procedurefile,ZH916실사followup문단은인용 없는 구체설명. URL삭제나출처약화로만든공백이아님."
+    },
+    {
+      "item": 6,
+      "result": "PASS",
+      "evidence": "CLIcontrast0은모든의미상부정을없다고하는말이아니다. notice/delivery,공무원/민간,coin/points,공용부분/사용권,지급/판정,원청구/상소의대비는실제쟁점으로필요하다. 지어낸독자주장반박없음."
+    },
+    {
+      "item": 7,
+      "result": "PASS",
+      "evidence": "각practicalclosing은같은날짜의무,들은진술,설치비용,충전/사용기록,조정신청변경,실사결정기록으로돌아간다. sourcecheck단락은각사건범위·확정상태를한정하는구조적꼬리로구별. 판촉/보장복제없음."
+    },
+    {
+      "item": 8,
+      "result": "PASS",
+      "evidence": "자연스러운EN과대만번체. O-01한수식어선택. 굵은강조/가공1인칭/공개변호사·원어민승인표기없음. 내부author유지;공개UI출력은이번검수범위아님."
+    },
+    {
+      "item": 9,
+      "result": "PASS",
+      "evidence": "법조항/기간/기산/돈/ANDOR/mustmay/상소범위와FAQ17을직접대조. 각기사공식URLset23개합계본문/출처보존. 실제그림픽셀은작성자직접관찰기록을재사용;이검수자는새이미지열람을주장하지않음."
+    }
+  ],
+  "recentComparison": {
+    "source": {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-input-preparation.json",
+      "sha256": "0d0c8dd2a86d03d9a4920925f58f7a507f326306c6e6ca51b3a77bfaba16723d",
+      "bytes": 14867
+    },
+    "all12ReadFull": true,
+    "en": "958 penalty/fact;959 amount;960 quotedrecordrule;961quotedroadadvice;962statutorythreesituations;963offerletterquestion. New6 use shortcasefacts and three/fourissueheadings; the older articles much longer and legal-framework-heavy.",
+    "zh": "958consumerquestion;959signaturequestion;960reportedduplicatefillfact;961quotedconcern/question;962newsinvestigation;963quotedmisconception. NewZH915/916 are factled and caseprocedural/exposure narratives, without reproducing the recent endings.",
+    "importedRecentLawAssertions": false
+  },
+  "officialEvidence": "Same continuous-session official15 responses from ES independent source verifier reused with exact compact receipt and source limitations. No new web request. Past court timeouts remain failures, and Oct25 retained explanations / Oct26 selected government PDF lines are not relabeled as current full judgments or appellate history.",
+  "officialReceipt": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-official-recheck.json",
+    "sha256": "272e59a34841e616a8ad1658dec60032286711c803ccedd86d520e725cf38400",
+    "bytes": 13937
+  },
+  "sourceChecksDatePreserved": true,
+  "RHEADAtClosure": "f294a05f2c7003260016fa852dfa16063a1ccfcc",
+  "RStatusPorcelainAtClosure": " M src/lib/__tests__/case-translations-20261026.test.ts\n M src/lib/__tests__/native-locale-columns.ts\n?? docs/audit/all-locales-parity-20261025/release-20261029-next48/\n?? src/content/columns-es/915-taiwan-public-contract-mediation-arbitration-same-claim.md\n?? src/content/columns-es/916-taiwan-parent-company-pollution-liability-us-investor.md\n?? src/content/columns-es/918-taiwan-presale-mortgage-notice-handover-judgment.md\n?? src/content/columns-es/919-taiwan-workplace-bullying-investigation-hearing-judgment.md\n?? src/content/columns-es/920-taiwan-apartment-ev-charger-common-area-judgment.md\n?? src/content/columns-es/921-taiwan-online-game-coins-refund-judgment.md\n?? src/content/columns-fr/915-taiwan-public-contract-mediation-arbitration-same-claim.md\n?? src/content/columns-fr/916-taiwan-parent-company-pollution-liability-us-investor.md\n?? src/content/columns-fr/918-taiwan-presale-mortgage-notice-handover-judgment.md\n?? src/content/columns-fr/919-taiwan-workplace-bullying-investigation-hearing-judgment.md\n?? src/content/columns-fr/920-taiwan-apartment-ev-charger-common-area-judgment.md\n?? src/content/columns-fr/921-taiwan-online-game-coins-refund-judgment.md\n?? src/content/columns-ja/915-taiwan-public-contract-mediation-arbitration-same-claim.md\n?? src/content/columns-ja/916-taiwan-parent-company-pollution-liability-us-investor.md\n?? src/content/columns-ja/918-taiwan-presale-mortgage-notice-handover-judgment.md\n?? src/content/columns-ja/919-taiwan-workplace-bullying-investigation-hearing-judgment.md\n?? src/content/columns-ja/920-taiwan-apartment-ev-charger-common-area-judgment.md\n?? src/content/columns-ja/921-taiwan-online-game-coins-refund-judgment.md\n?? src/content/columns-th/915-taiwan-public-contract-mediation-arbitration-same-claim.md\n?? src/content/columns-th/916-taiwan-parent-company-pollution-liability-us-investor.md\n?? src/content/columns-th/918-taiwan-presale-mortgage-notice-handover-judgment.md\n?? src/content/columns-th/919-taiwan-workplace-bullying-investigation-hearing-judgment.md\n?? src/content/columns-th/920-taiwan-apartment-ev-charger-common-area-judgment.md\n?? src/content/columns-th/921-taiwan-online-game-coins-refund-judgment.md\n?? src/content/columns-vi/915-taiwan-public-contract-mediation-arbitration-same-claim.md\n?? src/content/columns-vi/916-taiwan-parent-company-pollution-liability-us-investor.md\n?? src/content/columns-vi/918-taiwan-presale-mortgage-notice-handover-judgment.md\n?? src/content/columns-vi/919-taiwan-workplace-bullying-investigation-hearing-judgment.md\n?? src/content/columns-vi/920-taiwan-apartment-ev-charger-common-area-judgment.md\n?? src/content/columns-vi/921-taiwan-online-game-coins-refund-judgment.md\n?? src/content/columns/915-taiwan-public-contract-mediation-arbitration-same-claim.md\n?? src/content/columns/916-taiwan-parent-company-pollution-liability-us-investor.md\n?? src/content/columns/918-taiwan-presale-mortgage-notice-handover-judgment.md\n?? src/content/columns/919-taiwan-workplace-bullying-investigation-hearing-judgment.md\n?? src/content/columns/920-taiwan-apartment-ev-charger-common-area-judgment.md\n?? src/content/columns/921-taiwan-online-game-coins-refund-judgment.md\n",
+  "RStatusExplanation": "Root/other assigned integrators are adding the already closed next-batch sources and registry tests in parallel. R is not claimed clean. This reviewer made no R/source/shared edits; reviewed EN/ZH candidate hashes and all preparation bindings remain unchanged.",
+  "noReviewerManuscriptRSharedMutations": true,
+  "allBoundInputsAndDraftsStillMatch": true,
+  "firstReadCaveat": "Home editorial path absent, repository canonical used. ZH canonical918/919 approved bodies were read then current metadata read and exact current-body equality proven.",
+  "imageScope": "Existing image paths/caption/alt semantic correspondence checked and author six-pixel-view evidence reused; no new pixel-image inspection by this reviewer.",
+  "releaseScope": "No build, browser, rendered public author/metadata/feed QA, commit or deployment done in this review. Root owns next intake/release."
+}

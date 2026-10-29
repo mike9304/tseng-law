@@ -1,0 +1,101 @@
+{
+  "atUTC": "2026-10-29T00:11:29.749313+00:00",
+  "verdict": "PASS_WITH_OPTIONAL_SUGGESTIONS",
+  "mandatory": 0,
+  "optional": 2,
+  "actualCLIExits": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "warnings": 6,
+  "faqTotal": 17,
+  "forwardReplay": 17,
+  "reverseReplay": 17,
+  "replayMismatches": 0,
+  "allSubstantiveInputAndDraftSHAsStable": true,
+  "administrativeUpdates": [
+    {
+      "before": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/OWNERSHIP.md",
+        "sha256": "da6406554ae3d427530b16e7e67873a04d04b13ed817171f38abaab2aaa6a27f",
+        "bytes": 1690
+      },
+      "after": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/OWNERSHIP.md",
+        "sha256": "f248559dd73af669385cc31fd083feec72b2a59ff92234d88ac198308a4150d7",
+        "bytes": 2961
+      },
+      "appendOnlyVerified": true,
+      "newFullTextRead": true,
+      "reason": "Root appended 09:05 KST ownership of next tasks and explicit JA independent review assignment. Existing instructions unchanged; manuscripts, canonical sources, rules, tools and loader inputs unchanged."
+    }
+  ],
+  "RStatusPorcelain": "",
+  "currentReleaseTouched": false,
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/reviews/ja-independent-r2.md",
+      "sha256": "7e9756abb0e109a57fcc01b88d06852cc3de037b970fa00b4ddeb47d556de829",
+      "bytes": 19987
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-independent-r2-administrative-update.json",
+      "sha256": "11921c30e7b8ed69bc80c2e5b5c9a7107e102f5cfaa600e5e86769f5a8a07ee8",
+      "bytes": 716
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-independent-r2-cli.json",
+      "sha256": "521a413e37716ca44c596140687c37a6392ae490d69a52e78f70728a6fec0775",
+      "bytes": 69149
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-independent-r2-close-first-attempt.json",
+      "sha256": "40a4aea920b13422fd003c349011f877bc8f776e75d12e94c74f7b92f3f0cbe6",
+      "bytes": 301
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-independent-r2-close.py",
+      "sha256": "89c1229d8663f8104309817c02eee77218ddf7e40b84e1c20248cfc57cafbbf6",
+      "bytes": 26200
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-independent-r2-inputs.json",
+      "sha256": "9db3c8ff67d3a206eaacabcbab0d88e9c9b80dd476c5f95d7ea82d5cb6523648",
+      "bytes": 20305
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-independent-r2-replay.json",
+      "sha256": "d1935ca07533ba9b3e8f0196f1177c93b2aef63d08d162b73a7879967e8bb52a",
+      "bytes": 54646
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-independent-r2-replay.md",
+      "sha256": "421dad1cf62fd3e88c4a675bbe3d8131b65305c8560901a84414bed8eadb06a8",
+      "bytes": 1665
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-independent-r2-replay.py",
+      "sha256": "8f36f3378e8311953dae5729334a3627c5c638e19a4a51eb4b1caacc609f6e61",
+      "bytes": 15442
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-independent-r2-run.py",
+      "sha256": "e894aeed18408101c3f3bfa6508f99a89d77f32a791951db6d77ab0613af068f",
+      "bytes": 7123
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-independent-r2-structure.json",
+      "sha256": "b6fea9d1fc0894885377a4a12de62f806f329c6fe90e7a59da9ee25b165bb78a",
+      "bytes": 25506
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-independent-r2-verdict.json",
+      "sha256": "5e54520459de960730572f5c7e746a50646cf384190621a115c2ffe7028c1c3d",
+      "bytes": 27808
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "atUTC": "2026-10-28T23:55:27.126660+00:00",
+  "author": "root personal prose edits",
+  "baseline": "ko-root-mechanical-r2/draft-byte-snapshots",
+  "edits": [
+    {
+      "id": 915,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "old": "업체가 요구한 내용은 조정 도중 바뀌었습니다. 절차별로 나누면 차이가 드러납니다.",
+      "new": "조정 중 청구가 바뀌었습니다. 다음은 그 순서입니다.",
+      "reason": "표의 기능을 직접 소개하고 중간 길이의 추상 설명을 줄임; 조정 중 변경 사실과 단계표 유지.",
+      "meaningPreserved": true,
+      "beforeSHA256": "5c6449fef976d92b7adf0833afddcc8987c512b6bb3d54ea733ce3239c0b9691",
+      "afterSHA256": "b968d09410ba7ef5ced084117438ec6abaf6455aeb014005070cdb9f6ed06925"
+    },
+    {
+      "id": 915,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "old": "예정된 기회라는 점에 유의할 필요가 있습니다.",
+      "new": "아직은 계획입니다.",
+      "reason": "보고서의 예정성만 직접 설명하며 훈계형 메타 문구 제거; 뒤의 입찰·자격·분류 제한 유지.",
+      "meaningPreserved": true,
+      "beforeSHA256": "b968d09410ba7ef5ced084117438ec6abaf6455aeb014005070cdb9f6ed06925",
+      "afterSHA256": "4f6b864fc81c99118e9745fff4fda53e5493c88283194ddca338afd58585d5e4"
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "old": "근로자에게 위험을 알리거나 문제를 해결하지 않은 사정도 검토됐습니다. 여기에 책임을 피하려는 감자와 해외 송금이 더해지면서, 별도 법인이라는 외형을 넘어 지배기업의 책임을 인정한 판단이 유지됐습니다.",
+      "new": "근로자에게 위험을 알리거나 문제를 해결하지 않은 사정과 책임을 피하려는 감자·해외 송금이 함께 검토돼, 별도 법인이라는 외형을 넘어 지배기업의 책임을 인정한 판단이 유지됐습니다.",
+      "reason": "동일한 책임판단의 행위 근거를 한 문장으로 연결; 미고지·미해결·책임회피 목적·감자·해외송금 모두 유지.",
+      "meaningPreserved": true,
+      "beforeSHA256": "a474cf42f313365880581104a6bc0b32544cb2d3700c0d054a2aa6ea2abb2486",
+      "afterSHA256": "b1896604356a4952210cb10cc546eccbac6e85708b5436f19f029ccaf53067bd"
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "old": "실사 담당자가 보고서를 전달하면 후속 확인이 시작됩니다.",
+      "new": "보고서 다음은 후속 확인입니다.",
+      "reason": "직전 문단의 보고서 수신 사실을 반복하지 않고 검토 단계로 전환; 이후 구체적인 질문과 미답변 보존.",
+      "meaningPreserved": true,
+      "beforeSHA256": "b1896604356a4952210cb10cc546eccbac6e85708b5436f19f029ccaf53067bd",
+      "afterSHA256": "657df870c6f5c864c9adc1bf58cc10387a409c477e9bb13e1c0c78d0e85b327b"
+    },
+    {
+      "id": 919,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "old": "공무원에게 두 차례의 중징계에 해당하는 대과(大過)를 기록하고 면직한 처분이 법원에서 취소됐습니다.",
+      "new": "공무원에게 대과(大過) 2회를 기록해 면직한 처분이 법원에서 취소됐습니다.",
+      "reason": "대만 징계 항목의 2회 기록을 정확히 표현; 별개의 두 징계 절차였다고 읽힐 여지 제거.",
+      "meaningPreserved": true,
+      "beforeSHA256": "1624aa55281e70512a46d38ddfc0d2c1b0dceeea6d47a3ef7ef25a0eb371441e",
+      "afterSHA256": "d380e11820ffe57c48634742881aa2281922ccfe371d718e5d2d97c492134654"
+    },
+    {
+      "id": 919,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "old": "조사의 내용에도 문제가 있었습니다.",
+      "new": "조사 내용에도 흠이 있었습니다.",
+      "reason": "아래의 통지·보고서 문제를 바로 소개; 법적 판단과 근거 변경 없음.",
+      "meaningPreserved": true,
+      "beforeSHA256": "d380e11820ffe57c48634742881aa2281922ccfe371d718e5d2d97c492134654",
+      "afterSHA256": "e78504a4e35e636df38438ed3f26b9dd366c15ae797f5d83d307d594af9ef317"
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/921-taiwan-online-game-coins-refund-judgment.md",
+      "old": "더 이상 상소할 수 없다고 명시한 이 판결은 해당 게임 금화의 기능과 환불 조항을 살폈으며, 모든 가상 아이템을 소비자보호 대상에서 제외한 판단은 아닙니다.",
+      "new": "추가 상소는 허용되지 않습니다. 판단의 대상은 해당 게임 금화의 기능과 환불 조항이었으며, 모든 가상 아이템을 소비자보호 대상에서 제외한 판결로 읽을 수는 없습니다.",
+      "reason": "절차의 확정 범위와 판결의 대상 설명을 나눔; 상소불가와 일반화 금지 유지.",
+      "meaningPreserved": true,
+      "beforeSHA256": "2c84981c3820f1fede4fa37a1272448deb5590a16033608eab5549da6e24cd46",
+      "afterSHA256": "678a79dcf7a8ba87a9fe825a906e6ea9236f93fc9f3b7255191de4cbf37c357a"
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/921-taiwan-online-game-coins-refund-judgment.md",
+      "old": "계정에 남은 금화는 이용자 간 대결에 사용하는 칩의 기능을 했습니다.",
+      "new": "남은 금화는 이용자 간 대결용 칩이었습니다.",
+      "reason": "실제 기능을 직접 서술; 이용자 간 대결이라는 범위 보존.",
+      "meaningPreserved": true,
+      "beforeSHA256": "678a79dcf7a8ba87a9fe825a906e6ea9236f93fc9f3b7255191de4cbf37c357a",
+      "afterSHA256": "77fa9c42f7998b3ee26131bca7b161c209f93dd16ff7f1fa77b90d432461f344"
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/921-taiwan-online-game-coins-refund-judgment.md",
+      "old": "다른 게임의 환불을 검토할 때는 금화를 얻는 방법, 교환할 수 있는 대상과 실제 사용 여부를 다시 확인할 필요가 있습니다.",
+      "new": "다른 게임에서는 금화의 취득 방법과 교환 대상, 사용 여부부터 확인합니다.",
+      "reason": "불필요한 검토 예고를 줄임; 취득·교환·사용의 세 기준 보존.",
+      "meaningPreserved": true,
+      "beforeSHA256": "77fa9c42f7998b3ee26131bca7b161c209f93dd16ff7f1fa77b90d432461f344",
+      "afterSHA256": "323019ed69f3b7f1e71703f6bba7ec64d27a5b724389e2d86ed067884cf294f8"
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/921-taiwan-online-game-coins-refund-judgment.md",
+      "old": "돈이 들어온 뒤 어떻게 사용됐는지를 다음 자료로 대조할 수 있습니다.",
+      "new": "다음 자료로 자금 흐름을 대조합니다.",
+      "reason": "바로 뒤 표의 역할을 간결하게 설명; 결제·변환·사용·해지 표 내용 그대로.",
+      "meaningPreserved": true,
+      "beforeSHA256": "323019ed69f3b7f1e71703f6bba7ec64d27a5b724389e2d86ed067884cf294f8",
+      "afterSHA256": "efebdc0641e5726a9dc11f60ad28dc82057a21583219154b58e3e96b81a68d37"
+    }
+  ],
+  "forwardAndReverseChecked": true
+}

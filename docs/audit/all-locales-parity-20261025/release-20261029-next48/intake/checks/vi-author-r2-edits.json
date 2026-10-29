@@ -1,0 +1,40 @@
+{
+  "atUTC": "2026-10-28T23:22:09.145832+00:00",
+  "edits": [
+    {
+      "order": 1,
+      "finding": "M01",
+      "article": 920,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-vi/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "old": "Tuy nhiên, tòa nêu rõ vụ này không thuộc trường hợp mà người cư trú viện dẫn theo điểm đó.",
+      "new": "Tuy nhiên, tòa nêu rõ việc lắp đặt trong vụ này không thuộc trường hợp quy định tại điểm đó.",
+      "beforeSHA256": "60f7cb693ea1014283157a13a08954a2ce32ccd947174588624fdb148755c661",
+      "sha256": "03b1711af67e46c143acb33931e519628af66e1c9fa227cbf85e7454e46ac27d",
+      "reason": "제6조 제1항 제4호를 원용한 당사자를 주민으로 특정했다. 정본은 當事人으로 중립이고, 보존 공식 판결 L44에서는 被上訴人인 관리위원회가 해당 호를 원용했다. 주민의 전용부분 주장(L43)과 관리위원회의 법률 원용(L44)을 섞었다.",
+      "meaningPreserved": "해당 설치가 제4호의 경우가 아니라는 판단을 보존하고 당사자 오인을 없앤다. 제11조·제6조 제1항 제5호·제3항·규약에 따른 철거 결론과 사실·주장 구분은 유지한다.",
+      "beforeParagraph": "Điểm 4 khoản 1 Điều 6 cũng nói đến lắp đường ống, dây và sử dụng phần chung khi cần thiết. Tuy nhiên, tòa nêu rõ vụ này không thuộc trường hợp mà người cư trú viện dẫn theo điểm đó. Lý do dựa trên vị trí thi công cụ thể và nội quy, không xác lập một thủ tục biểu quyết giống nhau cho mọi bộ sạc trong mọi tòa nhà ([mục 5 và 6 của bản án](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1)).",
+      "afterParagraph": "Điểm 4 khoản 1 Điều 6 cũng nói đến lắp đường ống, dây và sử dụng phần chung khi cần thiết. Tuy nhiên, tòa nêu rõ việc lắp đặt trong vụ này không thuộc trường hợp quy định tại điểm đó. Lý do dựa trên vị trí thi công cụ thể và nội quy, không xác lập một thủ tục biểu quyết giống nhau cho mọi bộ sạc trong mọi tòa nhà ([mục 5 và 6 của bản án](https://judgment.judicial.gov.tw/FJUD/printData.aspx?id=KSHV%2C111%2C%E4%B8%8A%2C132%2C20220622%2C1)).",
+      "forwardExact": true,
+      "reverseExact": true
+    },
+    {
+      "order": 2,
+      "finding": "M02",
+      "article": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-vi/921-taiwan-online-game-coins-refund-judgment.md",
+      "old": "hoặc việc từ chối cung cấp chứng cứ",
+      "new": "hoặc việc chứng cứ không được chấp nhận",
+      "beforeSHA256": "7c66399307d44586285b4835fbd9ecb1b9286dd770ce894d36a67805d60c81c8",
+      "sha256": "b15f72b116be28b165d7922ddc5bb3ea0682b122c889bd1ba50482391e8b93e5",
+      "reason": "정본의 證據遭拒는 증거가 거절되거나 받아들여지지 않은 상황이다. cung cấp(제공)를 추가해 증거를 제공하지 않는 행위로 바꿨으므로 상담 안내의 분쟁 유형이 달라졌다.",
+      "meaningPreserved": "계약 해석 또는 증거 불채택이라는 원래 안내 범위를 보존한다. 새 증거제공 의무·승소 보장·베트남어 상담 보장을 만들지 않는다.",
+      "beforeParagraph": "Có thể gửi yêu cầu hoàn tiền cho nhà cung cấp trước, rồi dùng [hệ thống khiếu nại tiêu dùng của chính quyền](https://appeal.cpc.ey.gov.tw/). Nếu tranh chấp liên quan đến cách hiểu hợp đồng hoặc việc từ chối cung cấp chứng cứ, có thể gửi [email văn phòng](mailto:wei@hoveringlaw.com.tw) nêu khoản đang yêu cầu và thời hạn phản hồi, không cần gửi mật khẩu tài khoản. Căn cứ cho con số hoàn tiền nằm trong hồ sơ cho thấy tiền đã vào tài khoản và được sử dụng qua từng bước như thế nào.",
+      "afterParagraph": "Có thể gửi yêu cầu hoàn tiền cho nhà cung cấp trước, rồi dùng [hệ thống khiếu nại tiêu dùng của chính quyền](https://appeal.cpc.ey.gov.tw/). Nếu tranh chấp liên quan đến cách hiểu hợp đồng hoặc việc chứng cứ không được chấp nhận, có thể gửi [email văn phòng](mailto:wei@hoveringlaw.com.tw) nêu khoản đang yêu cầu và thời hạn phản hồi, không cần gửi mật khẩu tài khoản. Căn cứ cho con số hoàn tiền nằm trong hồ sơ cho thấy tiền đã vào tài khoản và được sử dụng qua từng bước như thế nào.",
+      "forwardExact": true,
+      "reverseExact": true
+    }
+  ],
+  "count": 2,
+  "optionalAdopted": 0,
+  "executionNote": "A temporary stray V prefix introduced while applying the 921 patch was removed immediately before any checks. Final difference from the preserved baseline is exactly the two specified replacements."
+}

@@ -1,0 +1,166 @@
+{
+  "atUTC": "2026-10-29T00:43:22.189577+00:00",
+  "scope": "Root authored eight EN metadata fields to satisfy established English SEO contract; no body/FAQ/date/image/H1 changes",
+  "rootAuthored": true,
+  "rows": [
+    {
+      "locale": "en",
+      "id": 918,
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "beforeSHA256": "e8e259a6bd3560241bf47eac4b73c9ab954e51b8d511ab3209855a8219df9e3f",
+      "afterSHA256": "c8f25c18281cd41a11825f6272c53cffb37db0094641c307751dac146d2f5686",
+      "bodySHA256": "38172b42dcf0f73f2d92a9dcddf97f050b1f98bba4fa8b4e9d0ed623dbfaf2f1",
+      "exactTwoFieldEdits": [
+        {
+          "field": "seoTitle",
+          "before": "seoTitle: \"Taiwan Presale Homes: Mortgage Letters and Handover\"",
+          "after": "seoTitle: \"Taiwan Presale Handover and Mortgage Notices\""
+        },
+        {
+          "field": "summary",
+          "before": "summary: \"A developer's mortgage letter did not establish a valid handover notice, and later access for interior work did not prove delivery. The Taichung court compared the notices, utilities, inspections and warranty. Its four-month period came from the contract; the current standard terms require notice within six months after receipt of the occupancy permit.\"",
+          "after": "summary: \"Taiwan's current presale rules require handover notice within six months of occupancy permit receipt. This case used a four-month contractual notice period.\""
+        }
+      ],
+      "bodyUnchanged": true,
+      "reverseBytesExact": true,
+      "seoTitleWithSuffixCharacters": 59,
+      "summaryCharacters": 156,
+      "actualCLI": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+          "--lang",
+          "en"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/918-taiwan-presale-mortgage-notice-handover-judgment.md [en] sentences=42 mean=15.9 cv=0.52 short=0.19 run3=0.025 opener_rep=0.077 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    },
+    {
+      "locale": "en",
+      "id": 919,
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "beforeSHA256": "d6f76c64d1621cab93c520a6c90b5ef54bf9223f4118f710f2adefa7c07c105e",
+      "afterSHA256": "aa8d6d97f375da967d5dbe4683d508c8bf4de13d572957abc68e1c5b3e1bccb6",
+      "bodySHA256": "83565391344fcc99c88457b2ba510c7c6745f806477d1919fc440b3e887136fb",
+      "exactTwoFieldEdits": [
+        {
+          "field": "seoTitle",
+          "before": "seoTitle: \"Taiwan Workplace Bullying: A Dismissal Set Aside\"",
+          "after": "seoTitle: \"Taiwan Bullying Case: Dismissal Set Aside\""
+        },
+        {
+          "field": "summary",
+          "before": "summary: \"The Taipei High Administrative Court set aside a civil servant's dismissal and the review decision after examining a predetermined outcome, missing opportunities to respond and conflicting findings. Private employers operate under a different legal framework, which requires protective measures alongside a fair investigation.\"",
+          "after": "summary: \"A Taiwan court set aside a civil servant's dismissal over procedural defects. Private employers must protect complainants and conduct fair investigations.\""
+        }
+      ],
+      "bodyUnchanged": true,
+      "reverseBytesExact": true,
+      "seoTitleWithSuffixCharacters": 56,
+      "summaryCharacters": 154,
+      "actualCLI": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+          "--lang",
+          "en"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [en] sentences=44 mean=15.6 cv=0.476 short=0.159 run3=0.048 opener_rep=0.071 cite_end=0.0 cite_para=0.143 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    },
+    {
+      "locale": "en",
+      "id": 920,
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "beforeSHA256": "905ce7e41526f1ad820e9c59e18e5c374e5e000f2f7809d30c30f6af5a339b65",
+      "afterSHA256": "e4a6f40dc3623ad4d24ada3f2536347f85ab17c4e393334324e217dc1526366a",
+      "bodySHA256": "5f278718d26550d577643161e3a6275d2282cbbc14eb495d3d28354a4e8679d2",
+      "exactTwoFieldEdits": [
+        {
+          "field": "seoTitle",
+          "before": "seoTitle: \"Taiwan Apartment EV Chargers: Wiring and Consent\"",
+          "after": "seoTitle: \"Taiwan EV Chargers: Shared Areas and Consent\""
+        },
+        {
+          "field": "summary",
+          "before": "summary: \"A resident's charger used a shared wall, ceiling and electrical panel. The Kaohsiung court upheld removal and restoration under the common-area rules and the building's bylaws. The installation route, the rights over each part and the required consent all mattered beyond the parking space itself.\"",
+          "after": "summary: \"A Taiwan court ordered an EV charger removed from common areas. The wiring route, owners' resolution and building bylaws determined the consent required.\""
+        }
+      ],
+      "bodyUnchanged": true,
+      "reverseBytesExact": true,
+      "seoTitleWithSuffixCharacters": 59,
+      "summaryCharacters": 153,
+      "actualCLI": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+          "--lang",
+          "en"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md [en] sentences=38 mean=17.6 cv=0.462 short=0.184 run3=0.0 opener_rep=0.071 cite_end=0.0 cite_para=0.286 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    },
+    {
+      "locale": "en",
+      "id": 921,
+      "source": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md",
+      "snapshot": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/en-metadata-r2/921-taiwan-online-game-coins-refund-judgment.md",
+      "beforeSHA256": "a7fd315a8d983372ee8b96ff0769443f52d3881eba4acd84aba56e8de2f62fba",
+      "afterSHA256": "b886fb4c396e5ca0a19b5b49b3542be22fa84d507f5c870b4f577f2faf83ca0e",
+      "bodySHA256": "488228356d0e19df7952b47d3106f9fe7ff97c561e849a10b53da7de8975b181",
+      "exactTwoFieldEdits": [
+        {
+          "field": "seoTitle",
+          "before": "seoTitle: \"Taiwan Game Refunds: Coins and Unused Paid Points\"",
+          "after": "seoTitle: \"Taiwan Game Refunds: Coins and Paid Points\""
+        },
+        {
+          "field": "summary",
+          "before": "summary: \"A player sought NT$243,548 for coins left in a game account. The Keelung court treated them as chips used in play, rather than unused paid points or refundable game fees. Current standard terms still protect refunds of unused paid points or game fees after termination, subject to their conditions.\"",
+          "after": "summary: \"A Taiwan court refused a refund for game coins used as chips. Current terms protect unused paid points or game fees under termination and refund rules.\""
+        }
+      ],
+      "bodyUnchanged": true,
+      "reverseBytesExact": true,
+      "seoTitleWithSuffixCharacters": 57,
+      "summaryCharacters": 151,
+      "actualCLI": {
+        "command": [
+          "python3",
+          "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+          "check",
+          "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md",
+          "--lang",
+          "en"
+        ],
+        "exitCode": 0,
+        "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md [en] sentences=38 mean=18.1 cv=0.472 short=0.105 run3=0.0 opener_rep=0.214 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "requiredIndependentReview": true,
+  "priorUnitFailureLog": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/integration-checks/content-tests.log",
+  "priorScopePreserved": true
+}

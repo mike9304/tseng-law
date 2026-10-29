@@ -1,0 +1,44 @@
+{
+  "at": "2026-10-29T00:30:06.931933+00:00",
+  "stage": "ROOT_SUPPLEMENTAL_READING_NOT_FINAL_APPROVAL",
+  "files": [
+    {
+      "locale": "en",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "e8e259a6bd3560241bf47eac4b73c9ab954e51b8d511ab3209855a8219df9e3f",
+      "rootReadFullText": true
+    },
+    {
+      "locale": "en",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "d6f76c64d1621cab93c520a6c90b5ef54bf9223f4118f710f2adefa7c07c105e",
+      "rootReadFullText": true
+    },
+    {
+      "locale": "en",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "905ce7e41526f1ad820e9c59e18e5c374e5e000f2f7809d30c30f6af5a339b65",
+      "rootReadFullText": true
+    },
+    {
+      "locale": "en",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "a7fd315a8d983372ee8b96ff0769443f52d3881eba4acd84aba56e8de2f62fba",
+      "rootReadFullText": true
+    },
+    {
+      "locale": "zh-hant",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "857136fa9d201fec1625c75d3df4ae95715f3aa6a4ff517109176875be55b37d",
+      "rootReadFullText": true
+    },
+    {
+      "locale": "zh-hant",
+      "file": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "fb39cf124c5fdc3027a6068e9fef7c9e394de8c7da83e88a9ac97e20e17ae6c6",
+      "rootReadFullText": true
+    }
+  ],
+  "review": "Read full title/summary/frontmatter/FAQ/body/sources of EN4 + ZH-HANT2. No additional mandatory issue identified. Independent review still pending. Checked claim scope, court outcomes, Article22-2 protective/investigation duties, Article6 neutral attribution, own-meter ownership exclusion, Article18 may/must and 30-day trigger, CompanyAct154 cumulative conditions, original source-check dates and source-language contacts against the existing canonical facts read earlier. No source edit.",
+  "limits": "Not a new official-source fetch or native-human/lawyer approval; no publication or browser claim."
+}

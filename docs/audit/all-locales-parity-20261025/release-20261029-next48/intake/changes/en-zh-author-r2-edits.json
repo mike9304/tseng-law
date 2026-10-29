@@ -1,0 +1,162 @@
+{
+  "atUTC": "2026-10-29T00:14:18.004571+00:00",
+  "originalSnapshotSHA256": "95c5fd725f02675ee13f3f38b62048545e89acf30da8272129505eb85eb608b4",
+  "edits": [
+    {
+      "id": "E01",
+      "articleID": 918,
+      "locale": "en",
+      "offset": 3170,
+      "offsetUnit": "Unicode code points in immediately preceding full text",
+      "old": "The letter was dated February 23, 2019. It mainly asked the buyer to contact the lending bank and report progress; it did not say the property had reached a usable condition.",
+      "new": "Dated February 23, 2019, the letter mainly asked the buyer to contact the lending bank and report progress. It did not say the property had reached a usable condition.",
+      "reason": "MONOTONY: repeatedTheparagraphstart — date and purpose now formone factualsentence, followedbyseparatereadinessfinding; samefacts.",
+      "beforeSHA256": "9cdc03af6a373f7899b923a21b3e6bd0752aca2907c509e93a758db069110606",
+      "afterSHA256": "90bcbc3f1500499c21ff7d8dc094a792174b9457918f293aa7013ae555f0fd5a"
+    },
+    {
+      "id": "E02",
+      "articleID": 918,
+      "locale": "en",
+      "offset": 4388,
+      "offsetUnit": "Unicode code points in immediately preceding full text",
+      "old": "The contract in the case allowed four months for the handover notice.",
+      "new": "Four months was the notice period agreed in this contract.",
+      "reason": "MONOTONY: repeatedTheparagraphstart — frontload the actualcontractualperiod to connectheadingtolegalcomparison.",
+      "beforeSHA256": "90bcbc3f1500499c21ff7d8dc094a792174b9457918f293aa7013ae555f0fd5a",
+      "afterSHA256": "50e42d355bf9f6498f7a4b0964271576fe792f1d032488f2cf3b9cc4a3926846"
+    },
+    {
+      "id": "E03",
+      "articleID": 918,
+      "locale": "en",
+      "offset": 4780,
+      "offsetUnit": "Unicode code points in immediately preceding full text",
+      "old": "The permit starts the clock.",
+      "new": "Receipt of the permit starts the clock.",
+      "reason": "MONOTONY: repeatedTheparagraphstart — explicitlyname the precise legaltrigger,notpermitexistence.",
+      "beforeSHA256": "50e42d355bf9f6498f7a4b0964271576fe792f1d032488f2cf3b9cc4a3926846",
+      "afterSHA256": "e8e259a6bd3560241bf47eac4b73c9ab954e51b8d511ab3209855a8219df9e3f"
+    },
+    {
+      "id": "E04",
+      "articleID": 919,
+      "locale": "en",
+      "offset": 12,
+      "offsetUnit": "Unicode code points in immediately preceding full text",
+      "old": "The Dismissal Was Announced Before the Hearing: A Taiwan Workplace-Bullying Case",
+      "new": "Punishment Announced Before Deliberation: A Taiwan Workplace-Bullying Case",
+      "reason": "Precision: committee deliberation is distinct from the denied opportunitytoappear;title no longer implies a later hearingactuallyoccurred.",
+      "beforeSHA256": "eb1ce8ba3f52e3d3fa60bfd4141839867a3a57a96a012aebe4c9bc374c72754a",
+      "afterSHA256": "7a076dc557ff64303e549c1938db67c2715f8675c5556734b5617912b5258263"
+    },
+    {
+      "id": "E05",
+      "articleID": 919,
+      "locale": "en",
+      "offset": 3515,
+      "offsetUnit": "Unicode code points in immediately preceding full text",
+      "old": "The conclusion was already public. Meeting minutes could show that a meeting happened, but they could not by themselves show that evidence was still capable of changing the result.",
+      "new": "Once the conclusion was public, meeting minutes could show that a meeting happened without establishing that evidence was still capable of changing the result.",
+      "reason": "MONOTONY: repeatedTheparagraphstart — connect priorpublicationtotheactual limitationofmeetingminutes; no newfinding.",
+      "beforeSHA256": "7a076dc557ff64303e549c1938db67c2715f8675c5556734b5617912b5258263",
+      "afterSHA256": "2c7fec02ce69c4c9e38f58198716e901b8005dbf134d6b3e2de8feb78c84661c"
+    },
+    {
+      "id": "E06",
+      "articleID": 919,
+      "locale": "en",
+      "offset": 3676,
+      "offsetUnit": "Unicode code points in immediately preceding full text",
+      "old": "The relevant committees had also failed to give proper notice for the person to attend and present a response.",
+      "new": "Proper notice was missing too: the relevant committees had not lawfully notified the person to attend and respond.",
+      "reason": "MONOTONY: repeatedTheparagraphstart — beginwiththeseparateproceduraldefect,retaincommittees/notice/presentation.",
+      "beforeSHA256": "2c7fec02ce69c4c9e38f58198716e901b8005dbf134d6b3e2de8feb78c84661c",
+      "afterSHA256": "3ca7d757ddd315fb356e6c2ac22be6f840f4c0abe1fead29851f9557ff6edd00"
+    },
+    {
+      "id": "E07",
+      "articleID": 919,
+      "locale": "en",
+      "offset": 5813,
+      "offsetUnit": "Unicode code points in immediately preceding full text",
+      "old": "The administrative judgment offers a way to inspect the quality of that process.",
+      "new": "A private employer can use this judgment to inspect the quality of its process.",
+      "reason": "MONOTONY: repeatedTheparagraphstart — make the intended reader and limitedpracticalapplication explicit; followingno-direct-validitylimitation retained.",
+      "beforeSHA256": "3ca7d757ddd315fb356e6c2ac22be6f840f4c0abe1fead29851f9557ff6edd00",
+      "afterSHA256": "d6f76c64d1621cab93c520a6c90b5ef54bf9223f4118f710f2adefa7c07c105e"
+    },
+    {
+      "id": "E08",
+      "articleID": 920,
+      "locale": "en",
+      "offset": 3121,
+      "offsetUnit": "Unicode code points in immediately preceding full text",
+      "old": "The undisputed work recorded in the judgment included installing the charging box, mounting conduit using ceiling suspension rods, and adding a circuit breaker inside the electrical panel.",
+      "new": "According to the judgment's undisputed facts, the resident installed a charging box, mounted conduit using ceiling suspension rods, and added a circuit breaker inside the electrical panel.",
+      "reason": "MONOTONY: repeatedTheparagraphstart — retain attribution and allthreeactualinstallations,including suspensionrods notcabletrays.",
+      "beforeSHA256": "bec679310602c58e5b64979c194b288b76a4a40060472af57d8082189086a140",
+      "afterSHA256": "0dde63896fd30b30c48e5342bd64d90a8d2125a650729a64e4b2d578e0754e66"
+    },
+    {
+      "id": "E09",
+      "articleID": 920,
+      "locale": "en",
+      "offset": 3471,
+      "offsetUnit": "Unicode code points in immediately preceding full text",
+      "old": "The route was decisive. Calling the work additional wiring in an area for exclusive use did not match the places it actually occupied.",
+      "new": "Calling the work additional wiring in an area for exclusive use did not match the places it actually occupied.",
+      "reason": "MONOTONY: repeatedTheparagraphstart — removegenericrepeatedconclusion; theactualscope mismatch carries thepoint.",
+      "beforeSHA256": "0dde63896fd30b30c48e5342bd64d90a8d2125a650729a64e4b2d578e0754e66",
+      "afterSHA256": "c4f1db18c473757b10191dc5acc4736deb9e612b00a9430c91b5649f302cd66c"
+    },
+    {
+      "id": "E10",
+      "articleID": 920,
+      "locale": "en",
+      "offset": 4076,
+      "offsetUnit": "Unicode code points in immediately preceding full text",
+      "old": "The bylaws had legal significance in the dispute. The court treated the breaches as a failure to comply with other laws or the bylaws under [Article 6(1)(5)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6).",
+      "new": "Under [Article 6(1)(5)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0070118&flno=6), residents must comply with other laws or the bylaws; the court held that this installation breached those obligations.",
+      "reason": "MONOTONY: repeatedTheparagraphstart — state governingobligationandapplicationtogether; followingcoordination/continuednoncompliance/6(3) unchanged.",
+      "beforeSHA256": "c4f1db18c473757b10191dc5acc4736deb9e612b00a9430c91b5649f302cd66c",
+      "afterSHA256": "764d978b51fa9b0aa8bf321ccbbece14897b70143f77cf980c3b440ef63a4b4e"
+    },
+    {
+      "id": "E11",
+      "articleID": 921,
+      "locale": "en",
+      "offset": 2755,
+      "offsetUnit": "Unicode code points in immediately preceding full text",
+      "old": "The Keelung District Court dismissed the player's appeal on September 13, 2021, in case 109年度消簡上字第1號, with no further appeal available.",
+      "new": "On September 13, 2021, the Keelung District Court dismissed the player's appeal in case 109年度消簡上字第1號, with no further appeal available.",
+      "reason": "MONOTONY: repeatedTheparagraphstart — use eventdate tointroducetheproceduralresult; actor/disposition/finalityunchanged.",
+      "beforeSHA256": "2b812b40d2ce5d4de3267cc88fca461d669a74b764726bdbc3c1df6ff1abec12",
+      "afterSHA256": "8d92d4173d639fd9bffb91e471cd398c37b19c956a6e5314fd7e0c34a5a56a26"
+    },
+    {
+      "id": "E12",
+      "articleID": 921,
+      "locale": "en",
+      "offset": 3463,
+      "offsetUnit": "Unicode code points in immediately preceding full text",
+      "old": "The court also reasoned that allowing players to redeem these chips for cash from the operator would involve gambling.",
+      "new": "Allowing players to redeem these chips for cash from the operator would involve gambling, the court also reasoned.",
+      "reason": "MONOTONY: repeatedTheparagraphstart — foregroundtheconditionalconduct,retaincourt attribution/player→operatorcashredemption;nextsentencecasescopeunchanged.",
+      "beforeSHA256": "8d92d4173d639fd9bffb91e471cd398c37b19c956a6e5314fd7e0c34a5a56a26",
+      "afterSHA256": "26463e8c8c4d7a219a7ac55175b9906958ec5b05201c11c946165e5cbb5f99ed"
+    },
+    {
+      "id": "E13",
+      "articleID": 921,
+      "locale": "en",
+      "offset": 6138,
+      "offsetUnit": "Unicode code points in immediately preceding full text",
+      "old": "The operator must retain at least 30 days of personal game history and provide it within seven days after receiving a request.",
+      "new": "Under point 9, the operator must retain at least 30 days of personal game history and provide it within seven days after receiving a request.",
+      "reason": "MONOTONY: repeatedTheparagraphstart — identifytheexistingcitedlegalbasis,retainminimumretention/requesttriggerandmust.",
+      "beforeSHA256": "26463e8c8c4d7a219a7ac55175b9906958ec5b05201c11c946165e5cbb5f99ed",
+      "afterSHA256": "a7fd315a8d983372ee8b96ff0769443f52d3881eba4acd84aba56e8de2f62fba"
+    }
+  ]
+}

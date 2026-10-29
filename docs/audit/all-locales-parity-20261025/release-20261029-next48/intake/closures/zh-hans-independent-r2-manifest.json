@@ -1,0 +1,99 @@
+{
+  "atUTC": "2026-10-29T00:33:17.638001+00:00",
+  "reviewer": "/root/b12_es_author",
+  "status": "PASS",
+  "scope": "M01 narrow closure; unchanged five files retain independent r1 PASS. No new six-file full review, manuscript edits, build or publication.",
+  "required_remaining": 0,
+  "optional_remaining": 0,
+  "closed_findings": [
+    "M01"
+  ],
+  "current_files": [
+    {
+      "id": "915",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "c1f5845795eae385bafde2cd4565cabb0750f7067120675249f7fddfe62e89b0",
+      "matches_author_current": true,
+      "unchanged_from_r1": true,
+      "faq_count": 2
+    },
+    {
+      "id": "916",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "8dd386fb68e80f30a9df923849a6d6ba1c333640d9fd678216903a45c4736fd3",
+      "matches_author_current": true,
+      "unchanged_from_r1": true,
+      "faq_count": 3
+    },
+    {
+      "id": "918",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "d09d75d49fee92ecc15c157d1204022c93d5a287a3a72ff73a82d71f341d8e41",
+      "matches_author_current": true,
+      "unchanged_from_r1": true,
+      "faq_count": 3
+    },
+    {
+      "id": "919",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "ce1aebe8058549a06557361c2fdc38b3c967dd0d46eee15584a30e5079bad72f",
+      "matches_author_current": true,
+      "unchanged_from_r1": true,
+      "faq_count": 3
+    },
+    {
+      "id": "920",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "591afd7469257350955038604e33b622c6d5c9347d6e4b020d18c7b2b128f2c4",
+      "matches_author_current": true,
+      "unchanged_from_r1": false,
+      "faq_count": 3
+    },
+    {
+      "id": "921",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "98cd7fb7fd6fb3ac324ed5a298e5df65c4997eab8a8d2628b1757cecc7a6964e",
+      "matches_author_current": true,
+      "unchanged_from_r1": true,
+      "faq_count": 3
+    }
+  ],
+  "faq_total": 17,
+  "current_920_sha256": "591afd7469257350955038604e33b622c6d5c9347d6e4b020d18c7b2b128f2c4",
+  "r1_preserved": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-independent-manifest-r1.json",
+    "sha256": "469e22a952741087c8f84ecf4fbf17973da794221df877a9524d0393618cb3ff"
+  },
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/reviews/zh-hans-independent-r2.md",
+    "sha256": "6a14dd2d230c3da129edfdf3629ad6915e635aa644c6f65b4081caf9fdb99348"
+  },
+  "evidence": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-independent-r2-evidence.json",
+    "sha256": "0f02b382e3d91dec2d32d21eb8e4806dc93eb997b7abd705b7e35cbc7f279968"
+  },
+  "audit_script": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-independent-r2-audit.py",
+    "sha256": "1ce8b177f05b14fa551d7eb7e6ed0269f00277cbe0108edbbb8ab01087adc20b"
+  },
+  "exact_diff": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-independent-r2-exact.diff",
+    "sha256": "bc2bc5cb46be0ec008f098e7021394fdc8271586f6319065ac034dfb163f10db"
+  },
+  "writer_manifest": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r6/manifest.json",
+    "sha256": "51c1839f4c8280c0a674299c5cc9f80b72fba492873fb078394e858848df6c78"
+  },
+  "writer_report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/reviews/zh-hans-author-r6-review.md",
+    "sha256": "2c9cf5cf368a2e7ff64ae623045509ba62a14860d9a68f64081bd1786bdfe41c"
+  },
+  "actual_cli_current_920_exit": 0,
+  "actual_cli_reused_same_sha": true,
+  "other_five_cli_and_semantics_reused_from_r1": true,
+  "independent_review": true,
+  "human_native_or_lawyer_review": false,
+  "publication_approval": false,
+  "build": false,
+  "published": false
+}

@@ -36,6 +36,7 @@ import { COUNTRY_COLUMN_FILES_20261002, COUNTRY_COLUMN_FILES_20261003, COUNTRY_C
   ARC_VISA_COLUMN_FILES_20261024,
   COUNTRY_COLUMN_FILES_20261024,
   CASE_COLUMN_FILES_20261025,
+  CASE_TRANSLATION_COLUMN_FILES_20261026,
   COUNTRY_COLUMN_FILES_20261026,
   COUNTRY_COLUMN_FILES_20261027,
   COUNTRY_COLUMN_FILES_20261028,
@@ -330,6 +331,7 @@ describe('sitemap column lastModified', () => {
       // 2026-10-01 zh-hant-only domestic columns 060-062 add 3 URLs (zh-hant 3).
       // 2026-10-02 expertise columns 063-069 add 23 URLs (ko 7, en 7, zh-hant 7, ja 2).
       // The 2026-10-02–24 audience/traffic batches add one URL per core-locale file; VI is counted above.
+      // Case translations add 18 core URLs (ko 6, ja 6, en 4, zh-hant 2); guidance translations are counted from disk.
       // Criminal board adds 5 language URLs.
       // Tax & accounting board (4 core-language URLs) + its column files, one URL per locale file.
       beforeFiltering:
@@ -381,6 +383,9 @@ describe('sitemap column lastModified', () => {
             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
             .flatMap(([, files]) => files).length
           + Object.values(CASE_COLUMN_FILES_20261025).flat().length
+          + Object.entries(CASE_TRANSLATION_COLUMN_FILES_20261026)
+            .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
+            .flatMap(([, files]) => files ?? []).length
           + Object.entries(COUNTRY_COLUMN_FILES_20261026)
             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
             .flatMap(([, files]) => files).length
@@ -456,6 +461,9 @@ describe('sitemap column lastModified', () => {
             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
             .flatMap(([, files]) => files).length
           + Object.values(CASE_COLUMN_FILES_20261025).flat().length
+          + Object.entries(CASE_TRANSLATION_COLUMN_FILES_20261026)
+            .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
+            .flatMap(([, files]) => files ?? []).length
           + Object.entries(COUNTRY_COLUMN_FILES_20261026)
             .filter(([locale]) => !GUIDANCE_LOCALES_4.includes(locale as typeof GUIDANCE_LOCALES_4[number]))
             .flatMap(([, files]) => files).length

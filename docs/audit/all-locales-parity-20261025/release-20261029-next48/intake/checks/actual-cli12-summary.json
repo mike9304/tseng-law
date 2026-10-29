@@ -1,0 +1,336 @@
+{
+  "createdAtUTC": "2026-10-29T00:40:55.896817+00:00",
+  "status": "DERIVED_EXISTING_ACTUAL_CURRENT12_CLI_SUMMARY",
+  "scope": "ZH-HANS current920 r6 and other5 r5; EN4/ZH-HANT2 fresh independent r1 receipt. No old920 row reused.",
+  "inputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/intake/zh-hans-validation.json",
+      "sha256": "b167acf7c350e2dc73caf0ce07e9043ba6ae837e307362f90baec5cc1ee47ca9",
+      "bytes": 39043
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/intake/en-zh-validation.json",
+      "sha256": "5b52860b35a18f204fe68eefab9cd8e2f56cb615432b4504bf092929cddc957e",
+      "bytes": 41126
+    }
+  ],
+  "rows": [
+    {
+      "locale": "zh-hans",
+      "number": 915,
+      "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sourceSHA256": "c1f5845795eae385bafde2cd4565cabb0750f7067120675249f7fddfe62e89b0",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh-hans/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "destinationSHA256": "c1f5845795eae385bafde2cd4565cabb0750f7067120675249f7fddfe62e89b0",
+      "receipt": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r5/cli.json",
+        "sha256": "1126d42057907f539e5a9622e95dd27aa82eb9875c462ddd95cae8041ace649e",
+        "bytes": 5493
+      },
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "--lang",
+        "zh-hans"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/915-taiwan-public-contract-mediation-arbitration-same-claim.md [zh-hans] sentences=38 mean=32.9 cv=0.45 short=0.132 run3=0.139 opener_rep=0.0 cite_end=0.0 cite_para=0.143 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stdoutUTF8SHA256": "b7ffc1af3ba44c3d447432bee438b9220f607b57ee30409cddf5a5061c63ec8a",
+      "stdoutScope": "Exact existing current-file actual CLI stdout; not a new execution.",
+      "newExecution": false
+    },
+    {
+      "locale": "zh-hans",
+      "number": 916,
+      "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sourceSHA256": "8dd386fb68e80f30a9df923849a6d6ba1c333640d9fd678216903a45c4736fd3",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh-hans/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "destinationSHA256": "8dd386fb68e80f30a9df923849a6d6ba1c333640d9fd678216903a45c4736fd3",
+      "receipt": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r5/cli.json",
+        "sha256": "1126d42057907f539e5a9622e95dd27aa82eb9875c462ddd95cae8041ace649e",
+        "bytes": 5493
+      },
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "--lang",
+        "zh-hans"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/916-taiwan-parent-company-pollution-liability-us-investor.md [zh-hans] sentences=39 mean=34.8 cv=0.458 short=0.103 run3=0.027 opener_rep=0.0 cite_end=0.0 cite_para=0.143 contrast=1 caveat=0 q=3\n  OK — no variety limit violated\n",
+      "stdoutUTF8SHA256": "23fa4ec28ee85a83bc3f7735f9e6095dd3ba52fdedb13998414332fa00c3fbe6",
+      "stdoutScope": "Exact existing current-file actual CLI stdout; not a new execution.",
+      "newExecution": false
+    },
+    {
+      "locale": "zh-hans",
+      "number": 918,
+      "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sourceSHA256": "d09d75d49fee92ecc15c157d1204022c93d5a287a3a72ff73a82d71f341d8e41",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh-hans/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "destinationSHA256": "d09d75d49fee92ecc15c157d1204022c93d5a287a3a72ff73a82d71f341d8e41",
+      "receipt": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r5/cli.json",
+        "sha256": "1126d42057907f539e5a9622e95dd27aa82eb9875c462ddd95cae8041ace649e",
+        "bytes": 5493
+      },
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "--lang",
+        "zh-hans"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/918-taiwan-presale-mortgage-notice-handover-judgment.md [zh-hans] sentences=33 mean=36.3 cv=0.526 short=0.152 run3=0.097 opener_rep=0.0 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stdoutUTF8SHA256": "e2a47abbbd6a84cdc08c98303a784eaf2b8b786d1dd3897269cbcb10853d0e31",
+      "stdoutScope": "Exact existing current-file actual CLI stdout; not a new execution.",
+      "newExecution": false
+    },
+    {
+      "locale": "zh-hans",
+      "number": 919,
+      "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sourceSHA256": "ce1aebe8058549a06557361c2fdc38b3c967dd0d46eee15584a30e5079bad72f",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh-hans/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "destinationSHA256": "ce1aebe8058549a06557361c2fdc38b3c967dd0d46eee15584a30e5079bad72f",
+      "receipt": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r5/cli.json",
+        "sha256": "1126d42057907f539e5a9622e95dd27aa82eb9875c462ddd95cae8041ace649e",
+        "bytes": 5493
+      },
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "--lang",
+        "zh-hans"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [zh-hans] sentences=37 mean=32.9 cv=0.484 short=0.108 run3=0.029 opener_rep=0.0 cite_end=0.0 cite_para=0.154 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stdoutUTF8SHA256": "39f5e88c5602756db8189ab4fe943053ec9d8b5e05c27b7af3946d76539aecd8",
+      "stdoutScope": "Exact existing current-file actual CLI stdout; not a new execution.",
+      "newExecution": false
+    },
+    {
+      "locale": "zh-hans",
+      "number": 920,
+      "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sourceSHA256": "591afd7469257350955038604e33b622c6d5c9347d6e4b020d18c7b2b128f2c4",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh-hans/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "destinationSHA256": "591afd7469257350955038604e33b622c6d5c9347d6e4b020d18c7b2b128f2c4",
+      "receipt": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r6/manifest.json",
+        "sha256": "51c1839f4c8280c0a674299c5cc9f80b72fba492873fb078394e858848df6c78",
+        "bytes": 10146
+      },
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "--lang",
+        "zh-hans"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/920-taiwan-apartment-ev-charger-common-area-judgment.md [zh-hans] sentences=36 mean=34.2 cv=0.471 short=0.111 run3=0.059 opener_rep=0.0 cite_end=0.0 cite_para=0.308 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stdoutUTF8SHA256": "7327d2f10abe3520915fa55061ef594cafe4754e436425627e69451fcfdcdaf0",
+      "stdoutScope": "Exact existing current-file actual CLI stdout; not a new execution.",
+      "newExecution": false
+    },
+    {
+      "locale": "zh-hans",
+      "number": 921,
+      "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/921-taiwan-online-game-coins-refund-judgment.md",
+      "sourceSHA256": "98cd7fb7fd6fb3ac324ed5a298e5df65c4997eab8a8d2628b1757cecc7a6964e",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh-hans/921-taiwan-online-game-coins-refund-judgment.md",
+      "destinationSHA256": "98cd7fb7fd6fb3ac324ed5a298e5df65c4997eab8a8d2628b1757cecc7a6964e",
+      "receipt": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r5/cli.json",
+        "sha256": "1126d42057907f539e5a9622e95dd27aa82eb9875c462ddd95cae8041ace649e",
+        "bytes": 5493
+      },
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/921-taiwan-online-game-coins-refund-judgment.md",
+        "--lang",
+        "zh-hans"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/921-taiwan-online-game-coins-refund-judgment.md [zh-hans] sentences=45 mean=31.2 cv=0.46 short=0.178 run3=0.0 opener_rep=0.067 cite_end=0.0 cite_para=0.0 contrast=1 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stdoutUTF8SHA256": "0cebb72cc0540ccd3283a1cc1acb05e434a661597b7017e4c16af11b1346aeaa",
+      "stdoutScope": "Exact existing current-file actual CLI stdout; not a new execution.",
+      "newExecution": false
+    },
+    {
+      "locale": "en",
+      "number": 918,
+      "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sourceSHA256": "e8e259a6bd3560241bf47eac4b73c9ab954e51b8d511ab3209855a8219df9e3f",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "destinationSHA256": "e8e259a6bd3560241bf47eac4b73c9ab954e51b8d511ab3209855a8219df9e3f",
+      "receipt": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-cli-r1.json",
+        "sha256": "0b5446ede85aaa7a4ceb41b01bcc90fe81539f2d8b6193a1d1381b6f260ad552",
+        "bytes": 64849
+      },
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+        "--lang",
+        "en"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/918-taiwan-presale-mortgage-notice-handover-judgment.md [en] sentences=42 mean=15.9 cv=0.52 short=0.19 run3=0.025 opener_rep=0.077 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+      "stdoutUTF8SHA256": "a4eacc4af535e2d28ee1c01ad84cd5fd6fe4091b677392eee917f046c314a3a0",
+      "stdoutScope": "Exact existing current-file actual CLI stdout; not a new execution.",
+      "newExecution": false
+    },
+    {
+      "locale": "en",
+      "number": 919,
+      "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sourceSHA256": "d6f76c64d1621cab93c520a6c90b5ef54bf9223f4118f710f2adefa7c07c105e",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "destinationSHA256": "d6f76c64d1621cab93c520a6c90b5ef54bf9223f4118f710f2adefa7c07c105e",
+      "receipt": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-cli-r1.json",
+        "sha256": "0b5446ede85aaa7a4ceb41b01bcc90fe81539f2d8b6193a1d1381b6f260ad552",
+        "bytes": 64849
+      },
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+        "--lang",
+        "en"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/919-taiwan-workplace-bullying-investigation-hearing-judgment.md [en] sentences=44 mean=15.6 cv=0.476 short=0.159 run3=0.048 opener_rep=0.071 cite_end=0.0 cite_para=0.143 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stdoutUTF8SHA256": "1709a3bb33bd4b5b52ddd92db8a6133721428a4e4b42c5d2485916a80027b68d",
+      "stdoutScope": "Exact existing current-file actual CLI stdout; not a new execution.",
+      "newExecution": false
+    },
+    {
+      "locale": "en",
+      "number": 920,
+      "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sourceSHA256": "905ce7e41526f1ad820e9c59e18e5c374e5e000f2f7809d30c30f6af5a339b65",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "destinationSHA256": "905ce7e41526f1ad820e9c59e18e5c374e5e000f2f7809d30c30f6af5a339b65",
+      "receipt": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-cli-r1.json",
+        "sha256": "0b5446ede85aaa7a4ceb41b01bcc90fe81539f2d8b6193a1d1381b6f260ad552",
+        "bytes": 64849
+      },
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+        "--lang",
+        "en"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/920-taiwan-apartment-ev-charger-common-area-judgment.md [en] sentences=38 mean=17.6 cv=0.462 short=0.184 run3=0.0 opener_rep=0.071 cite_end=0.0 cite_para=0.286 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+      "stdoutUTF8SHA256": "5a19ba9168c5cce33ae7d5cf21a8805dcd35f89650f3b7a9f45914209922ea3e",
+      "stdoutScope": "Exact existing current-file actual CLI stdout; not a new execution.",
+      "newExecution": false
+    },
+    {
+      "locale": "en",
+      "number": 921,
+      "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md",
+      "sourceSHA256": "a7fd315a8d983372ee8b96ff0769443f52d3881eba4acd84aba56e8de2f62fba",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md",
+      "destinationSHA256": "a7fd315a8d983372ee8b96ff0769443f52d3881eba4acd84aba56e8de2f62fba",
+      "receipt": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-cli-r1.json",
+        "sha256": "0b5446ede85aaa7a4ceb41b01bcc90fe81539f2d8b6193a1d1381b6f260ad552",
+        "bytes": 64849
+      },
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md",
+        "--lang",
+        "en"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-en/921-taiwan-online-game-coins-refund-judgment.md [en] sentences=38 mean=18.1 cv=0.472 short=0.105 run3=0.0 opener_rep=0.214 cite_end=0.0 cite_para=0.0 contrast=0 caveat=0 q=1\n  OK — no variety limit violated\n",
+      "stdoutUTF8SHA256": "45b2fe4c6f9ff92bf8f7e3c2e14fdbec06c157a7d66020dd23bb27dff93c83a0",
+      "stdoutScope": "Exact existing current-file actual CLI stdout; not a new execution.",
+      "newExecution": false
+    },
+    {
+      "locale": "zh-hant",
+      "number": 915,
+      "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sourceSHA256": "857136fa9d201fec1625c75d3df4ae95715f3aa6a4ff517109176875be55b37d",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "destinationSHA256": "857136fa9d201fec1625c75d3df4ae95715f3aa6a4ff517109176875be55b37d",
+      "receipt": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-cli-r1.json",
+        "sha256": "0b5446ede85aaa7a4ceb41b01bcc90fe81539f2d8b6193a1d1381b6f260ad552",
+        "bytes": 64849
+      },
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+        "--lang",
+        "zh-hant"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh/915-taiwan-public-contract-mediation-arbitration-same-claim.md [zh-hant] sentences=37 mean=34.7 cv=0.521 short=0.108 run3=0.0 opener_rep=0.0 cite_end=0.0 cite_para=0.143 contrast=0 caveat=0 q=0\n  OK — no variety limit violated\n",
+      "stdoutUTF8SHA256": "fe9ca831cf1a5955c92d0103154479438a5e2fa1dd2a07f6151778a8c430c869",
+      "stdoutScope": "Exact existing current-file actual CLI stdout; not a new execution.",
+      "newExecution": false
+    },
+    {
+      "locale": "zh-hant",
+      "number": 916,
+      "sourcePath": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sourceSHA256": "fb39cf124c5fdc3027a6068e9fef7c9e394de8c7da83e88a9ac97e20e17ae6c6",
+      "destination": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/content/columns-zh/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "destinationSHA256": "fb39cf124c5fdc3027a6068e9fef7c9e394de8c7da83e88a9ac97e20e17ae6c6",
+      "receipt": {
+        "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/en-zh-independent-cli-r1.json",
+        "sha256": "0b5446ede85aaa7a4ceb41b01bcc90fe81539f2d8b6193a1d1381b6f260ad552",
+        "bytes": 64849
+      },
+      "command": [
+        "python3",
+        "/Users/son7/tseng-lanes-shared/variety/variety_metrics.py",
+        "check",
+        "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh/916-taiwan-parent-company-pollution-liability-us-investor.md",
+        "--lang",
+        "zh-hant"
+      ],
+      "exit": 0,
+      "stdout": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh/916-taiwan-parent-company-pollution-liability-us-investor.md [zh-hant] sentences=37 mean=38.7 cv=0.453 short=0.081 run3=0.057 opener_rep=0.0 cite_end=0.0 cite_para=0.071 contrast=0 caveat=0 q=2\n  OK — no variety limit violated\n",
+      "stdoutUTF8SHA256": "d426f634495562e4a1abab04913400b66a9542895c7076d4ac01aefd5aa7faec",
+      "stdoutScope": "Exact existing current-file actual CLI stdout; not a new execution.",
+      "newExecution": false
+    }
+  ],
+  "actualExitsZero": 12,
+  "FAIL": 0,
+  "newCLIExecutions": 0,
+  "newProductionLoaderExecutions": 0,
+  "limits": "CLI and mechanical evidence are not content, native-human, attorney or publication approval."
+}

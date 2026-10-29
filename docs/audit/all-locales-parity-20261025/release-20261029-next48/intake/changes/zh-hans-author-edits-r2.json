@@ -1,0 +1,78 @@
+[
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+    "before_sha256": "937e8f414fe3a6feab4e24d1ad3943da1ec5e40afb7af8bb48a0d692ec06e89a",
+    "after_sha256": "ce1aebe8058549a06557361c2fdc38b3c967dd0d46eee15584a30e5079bad72f",
+    "edits": [
+      {
+        "old": "这里要求采取措施，并非承诺一定不会再发生事件。",
+        "new": "",
+        "reason": "重复解释且引入读者未提出的保证问题；前句已准确保留必须采取预防措施的义务。",
+        "meaning_preserved": true,
+        "offset_before": 2079
+      }
+    ],
+    "exact_reverse_bytes": true,
+    "before_snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r1/919-taiwan-workplace-bullying-investigation-hearing-judgment.md"
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "before_sha256": "63ffc5b19c9d58496976bd614096e81babdf45e8d99a3149f3d29c459d148841",
+    "after_sha256": "94ff5c884adf93487d641b280bc265d0e6de5c71ecbcc62110ecc755ba10df63",
+    "edits": [
+      {
+        "old": "判决记载的施工包括后方墙面上的充电箱、天花板上的管路和电箱内新增的断路器，最后才接往住户电表。",
+        "new": "",
+        "reason": "重复开头已交代的完整施工路线；保留开头的墙面、吊杆、断路器及自用电表事实。",
+        "meaning_preserved": true,
+        "offset_before": 1266
+      },
+      {
+        "old": "停用设备没有补足施工同意。",
+        "new": "停用未补足施工同意。",
+        "reason": "删去可由前文直接辨明的设备一词，保留事后停用不补足同意的本案结论。",
+        "meaning_preserved": true,
+        "offset_before": 2049
+      },
+      {
+        "old": "安装合同则可写明取得同意前的开工安排，以及申请未获同意时费用如何处理，让尚未确定的施工权限与已经支付的款项有明确衔接。",
+        "new": "申请未获同意，费用怎么办？安装合同可约定取得同意前的开工安排，以及申请失败时款项如何处理。施工权限尚未确定，付款条件仍需写清。",
+        "reason": "把费用问题和两项合同安排分开说明；没有新增法定要求或丢失开工与费用条件。",
+        "meaning_preserved": true,
+        "offset_before": 2572
+      }
+    ],
+    "exact_reverse_bytes": true,
+    "before_snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r1/920-taiwan-apartment-ev-charger-common-area-judgment.md"
+  },
+  {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/921-taiwan-online-game-coins-refund-judgment.md",
+    "before_sha256": "d57ae958cb121bdcc95ee73a968ee14f48c535e2f04b042b3e9a505931911e60",
+    "after_sha256": "c338e401cf44920eda20a53f42e02f905fc6ee92c7e5b4fdf22eb9181ae68d3f",
+    "edits": [
+      {
+        "old": "法院并未判令支付该款，而是按这款游戏的金币功能及退款约定判断，不能将结论扩展到所有虚拟道具。",
+        "new": "审查对象限于这款游戏。法院按金币功能和退款约定判断，未准许这项请求；其他虚拟道具的退款资格，仍须另行分析。",
+        "reason": "分开审查范围和裁判理由；保留请求未获准、金币功能和合同判断及不能一概扩展。",
+        "meaning_preserved": true,
+        "offset_before": 1189
+      },
+      {
+        "old": "付款凭证可对应最初买了什么；兑换记录和游戏历程可说明点数何时转换、之后如何使用；终止通知与退款明细则连接终止时间及扣款依据。",
+        "new": "付款凭证说明买了什么。兑换记录和游戏历程可说明点数何时转换、之后如何使用。终止通知与退款明细则连接终止时间及扣款依据。",
+        "reason": "原句并列三个证据用途，分句后各自清楚；记录对象和证明用途均保留。",
+        "meaning_preserved": true,
+        "offset_before": 2199
+      },
+      {
+        "old": "官方也提醒经营者妥善处理封锁账号、停权及客服问题，不能把整体申诉趋势直接当成游戏纠纷的增长率。",
+        "new": "官方也提醒经营者妥善处理封锁账号、停权及客服问题。",
+        "reason": "删除未由读者提出的统计误用反驳；前句仍完整保留2025年、第一次申诉第二位及较前一年减少。",
+        "meaning_preserved": true,
+        "offset_before": 2621
+      }
+    ],
+    "exact_reverse_bytes": true,
+    "before_snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r1/921-taiwan-online-game-coins-refund-judgment.md"
+  }
+]

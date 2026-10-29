@@ -1,0 +1,197 @@
+{
+  "createdAt": "2026-10-28T23:26:02.026037+00:00",
+  "role": "author_revision_not_independent_content_approval",
+  "source_scope": "Copies inside owned th-author-r2 only; existing source originals untouched",
+  "changes": [
+    {
+      "id": "915",
+      "edit": 1,
+      "old": "ยอดตามคำชี้ขาดไม่ได้ยืนยันว่ามีการรับเงินจริง",
+      "new": "คำชี้ขาดไม่ยืนยันการรับเงิน",
+      "reason_and_meaning_preservation": "판정과 실제 수령의 구별을 짧은 완결 진술로 표현. 실제 미지급이라는 새 사실을 만들지 않음."
+    },
+    {
+      "id": "915",
+      "edit": 2,
+      "old": "หน่วยงานผู้ว่าจ้างเป็นฝ่ายฟ้องขอเพิกถอนคำชี้ขาด",
+      "new": "หน่วยงานผู้ว่าจ้างฟ้องเพิกถอนคำชี้ขาด",
+      "reason_and_meaning_preservation": "행위 주체와 목적을 그대로 두고 เป็นฝ่าย/ขอ 우회 표현을 줄임. 기관의 취소소송 주체 보존."
+    },
+    {
+      "id": "915",
+      "edit": 3,
+      "old": "คำขอระหว่างไกล่เกลี่ยไม่ได้คงเดิมตลอดกระบวนการ\nลำดับที่ศาลพิจารณาแสดงความต่างระหว่างเงินชดเชยกับเวลาที่เพิ่มให้ก่อสร้าง",
+      "new": "คำขอเปลี่ยนระหว่างไกล่เกลี่ย\nศาลเทียบคำขอเงินชดเชยกับคำขอขยายเวลา",
+      "reason_and_meaning_preservation": "변하지 않았다는 부정식 장문 대신 변경 사실과 비교대상을 직접 서술. 다음 표의 요청 순서와 금전/연장 구분 보존."
+    },
+    {
+      "id": "915",
+      "edit": 4,
+      "old": "หน่วยงานไม่อาจปฏิเสธคำขอไกล่เกลี่ยของผู้จัดหา\nสำหรับงานก่อสร้างหรือบริการทางเทคนิค",
+      "new": "หน่วยงานไม่อาจปฏิเสธคำขอไกล่เกลี่ยของผู้จัดหา\n\nสำหรับงานก่อสร้างหรือบริการทางเทคนิค",
+      "reason_and_meaning_preservation": "일반 조정 경로와 공사/기술서비스 특칙을 의미별 문단으로 구분. 특칙 조건문 전체는 쪼개거나 줄이지 않음."
+    },
+    {
+      "id": "916",
+      "edit": 1,
+      "old": "รายงานพบการปนเปื้อนถูกส่งให้ใครบ้าง?",
+      "new": "รายงานมลพิษถึงใครบ้าง?",
+      "reason_and_meaning_preservation": "같은 보고서 수신자 질문을 간결하게 표현. 인지의 증거를 묻는 기능 보존."
+    },
+    {
+      "id": "916",
+      "edit": 2,
+      "old": "คำพิพากษาวันที่ 16 สิงหาคม 2018 เกี่ยวข้องกับการสัมผัสสารเคมีของคนงานและความรับผิดของกลุ่มบริษัทที่ควบคุมกิจการ",
+      "new": "วันที่ 16 สิงหาคม 2018 ศาลมีคำพิพากษาเกี่ยวกับการสัมผัสสารเคมีของคนงานและความรับผิดของกลุ่มบริษัทที่ควบคุมกิจการ",
+      "reason_and_meaning_preservation": "판결 날짜를 앞세워 사건 시점을 분명히 하고 직전 คำ 시작 반복을 줄임. 날짜·법원·노동자 노출·지배회사 책임 범위 보존."
+    },
+    {
+      "id": "916",
+      "edit": 3,
+      "old": "หนังสือจดทะเบียนอย่างเดียวไม่แสดงคำตอบนี้",
+      "new": "ทะเบียนบริษัทไม่ตอบเรื่องนี้",
+      "reason_and_meaning_preservation": "등기자료만으로 실제 통제 사용의 답을 알 수 없다는 한계를 짧게 표현. 앞 문장의 실제 의사결정 질문을 받음."
+    },
+    {
+      "id": "916",
+      "edit": 4,
+      "old": "การตรวจทางกฎหมายควรลงถึงธุรกรรมที่กำลังเสนอ\nชื่อเอกสารไม่ได้รับรอง",
+      "new": "การตรวจทางกฎหมายควรลงถึงธุรกรรมที่กำลังเสนอ\n\nชื่อเอกสารไม่ได้รับรอง",
+      "reason_and_meaning_preservation": "이전 승인 전 자료와 형식적 문서의 한계를 의미별 문단으로 구분. 모든 문구·조건은 그대로 보존."
+    },
+    {
+      "id": "916",
+      "edit": 5,
+      "old": "การ[สอบถามกฎหมายบริษัทหรือข้อพิพาทไต้หวันผ่านหน้าอังกฤษ](/en/contact) เริ่มได้ด้วยคำอธิบายธุรกรรม",
+      "new": "เมื่อ[สอบถามกฎหมายบริษัทหรือข้อพิพาทไต้หวันผ่านหน้าอังกฤษ](/en/contact) สามารถเริ่มด้วยคำอธิบายธุรกรรม",
+      "reason_and_meaning_preservation": "문의라는 추상명사 대신 문의 상황으로 시작. 영어 경로·초기요약 선택·민감자료 후속방법 보존."
+    },
+    {
+      "id": "918",
+      "edit": 1,
+      "old": "ผู้ซื้อเซ็นหนังสือยินยอมในเดือนสิงหาคมเพื่อเข้าไปตกแต่งและทำความสะอาด",
+      "new": "ในเดือนสิงหาคม ผู้ซื้อเซ็นหนังสือยินยอมเพื่อเข้าไปตกแต่งและทำความสะอาด",
+      "reason_and_meaning_preservation": "7월 검사 다음 8월 서명이라는 시간 흐름을 앞세움. 서명 주체·동의서·출입목적 보존."
+    },
+    {
+      "id": "918",
+      "edit": 2,
+      "old": "เริ่มนับจากวันที่ได้รับใบอนุญาตใช้อาคาร",
+      "new": "นับจากวันรับใบอนุญาตใช้อาคาร",
+      "reason_and_meaning_preservation": "사용허가 수령 기산을 짧은 완결 진술로 표현. 기산 사건 변경 없음."
+    },
+    {
+      "id": "918",
+      "edit": 3,
+      "old": "หากได้รับข้อเรียกร้องค่าปรับหรือดอกเบี้ย สามารถส่งสรุปข้อสัญญาที่โต้แย้ง วันแจ้ง และกำหนดตอบไปยัง[อีเมลสำนักงาน](mailto:wei@hoveringlaw.com.tw) เพื่อประเมินเป็นรายกรณี",
+      "new": "หากถูกเรียกค่าปรับหรือดอกเบี้ย ส่งสรุปข้อสัญญาที่โต้แย้ง วันแจ้ง และกำหนดตอบไปยัง[อีเมลสำนักงาน](mailto:wei@hoveringlaw.com.tw) เพื่อประเมินรายกรณีได้",
+      "reason_and_meaning_preservation": "장문의 문의 안내를 직접적인 가능 표현으로 줄임. 벌금/이자 요구·쟁점조항·통지일·응답기한·개별평가 모두 보존."
+    },
+    {
+      "id": "918",
+      "edit": 4,
+      "old": "จัดหนังสือให้ทำสินเชื่อ หนังสือให้ตรวจบ้าน และหนังสือแจ้งส่งมอบตามเนื้อหาของแต่ละใบ จะช่วยให้ข้อพิพาทยังตรวจสอบได้แม้คู่กรณีเรียกวันส่งมอบไม่ตรงกัน",
+      "new": "การแยกหนังสือเรื่องสินเชื่อ ตรวจบ้าน และแจ้งส่งมอบตามเนื้อหา ช่วยให้ตรวจข้อพิพาทได้แม้คู่กรณีระบุวันส่งมอบต่างกัน",
+      "reason_and_meaning_preservation": "세 종류 통지 내용을 분류하는 마지막 행동을 간결하게 연결. 서로 다른 인도일 주장에도 자료를 검토한다는 실무 의미 보존."
+    },
+    {
+      "id": "919",
+      "edit": 1,
+      "old": "ประกาศลงโทษก่อนสอบข้อเท็จจริง: เหตุที่ศาลไต้หวันเพิกถอนคำสั่งให้ออกจากราชการ",
+      "new": "ประกาศลงโทษก่อนประชุมพิจารณา: เหตุที่ศาลไต้หวันเพิกถอนคำสั่งให้ออกจากราชการ",
+      "reason_and_meaning_preservation": "필수 의미 교정: 공식 설명은 사실조사 전이 아니라 심의회 전 공표. retained L220 조사·보고서 선행과 L225 발표/회의 순서에 맞춤."
+    },
+    {
+      "id": "919",
+      "edit": 2,
+      "old": "ถูกศาลเพิกถอนพร้อมผลพิจารณาทบทวน\nปัญหารวมถึงการประกาศผลลงโทษ",
+      "new": "ถูกศาลเพิกถอนพร้อมผลพิจารณาทบทวน\n\nปัญหารวมถึงการประกาศผลลงโทษ",
+      "reason_and_meaning_preservation": "처분취소 결과와 결함 설명을 분리해 긴 문장이 한 문단에 겹치지 않게 함. 일회2대과·두처분 취소·근거 문구 보존."
+    },
+    {
+      "id": "919",
+      "edit": 3,
+      "old": "โดยยังไม่ส่งแฟ้มอ่อนไหวทั้งชุดในการติดต่อครั้งแรก\nก่อนเผยแพร่ผล",
+      "new": "โดยยังไม่ส่งแฟ้มอ่อนไหวทั้งชุดในการติดต่อครั้งแรก\n\nก่อนเผยแพร่ผล",
+      "reason_and_meaning_preservation": "문의 안내와 조사자료를 남기는 실질 결말의 목적을 구분. 민감자료 비전송·진술 및 채택이유 보존."
+    },
+    {
+      "id": "920",
+      "edit": 1,
+      "old": "ใบเสนอราคาที่มีแค่เลขช่องจอดไม่แสดงเส้นทางงาน",
+      "new": "เลขช่องจอดไม่แสดงแนวสาย",
+      "reason_and_meaning_preservation": "번호와 배선경로의 차이를 짧은 실무 진술로 표현. 다음 문장의 도면 위치·권리·규약 대조가 그대로 구체성을 제공."
+    },
+    {
+      "id": "920",
+      "edit": 2,
+      "old": "เพื่อประเมินข้อพิพาทแพ่งไต้หวัน\nก่อนลงนามติดตั้ง",
+      "new": "เพื่อประเมินข้อพิพาทแพ่งไต้หวัน\n\nก่อนลงนามติดตั้ง",
+      "reason_and_meaning_preservation": "이미 생긴 분쟁 문의와 설치계약 전 비용 합의를 서로 다른 문단으로 배치. 모든 법률·실무 내용과 링크 보존."
+    },
+    {
+      "id": "921",
+      "edit": 1,
+      "old": "การขอข้อมูลตั้งแต่เริ่มมีข้อพิพาทช่วยลดปัญหาที่เหลือเพียงภาพยอดสุดท้าย\nข้อ 6 ของข้อกำหนดที่ห้ามมี",
+      "new": "การขอข้อมูลตั้งแต่เริ่มมีข้อพิพาทช่วยลดปัญหาที่เหลือเพียงภาพยอดสุดท้าย\n\nข้อ 6 ของข้อกำหนดที่ห้ามมี",
+      "reason_and_meaning_preservation": "이력 보존·제공기간 설명과 사업자 자료만 증거로 삼는 약정 금지를 별도 문단으로 구분.30/7과 금지6의 각 조건 문장은 그대로."
+    },
+    {
+      "id": "921",
+      "edit": 2,
+      "old": "ผู้เล่นเริ่มแจ้งข้อพิพาทคืนเงินกับผู้ให้บริการ แล้วใช้[ระบบร้องเรียนผู้บริโภคของรัฐ](https://appeal.cpc.ey.gov.tw/) ได้",
+      "new": "เมื่อมีข้อพิพาทคืนเงิน ผู้เล่นสามารถแจ้งผู้ให้บริการ แล้วใช้[ระบบร้องเรียนผู้บริโภคของรัฐ](https://appeal.cpc.ey.gov.tw/) ได้",
+      "reason_and_meaning_preservation": "이미 세 번 등장한 ผู้ 문단 시작 대신 분쟁 상황으로 시작. 사업자와 정부 창구 이용 가능성을 보존하고 필수 전치절차로 강화하지 않음."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "915",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/manuscripts/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "375766353c722ce738f6ceb8eb0773409a4c506ae4d04465f07b6333eced0530",
+      "original_path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-th/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "original_sha256": "964c3d47021e6864a195964454741c202624a90114f8468e5fbeede97c668614",
+      "proposal": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/proposals/915.json"
+    },
+    {
+      "id": "916",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/manuscripts/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "41ce68891784335ba0972f61c99fdd667c8583c71bc4700864cf7c1e5b4a89b9",
+      "original_path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-th/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "original_sha256": "87c132833055a35f3cb443d4bfcccc19c3ed2199cde00f420bbbc232f7d3569a",
+      "proposal": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/proposals/916.json"
+    },
+    {
+      "id": "918",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/manuscripts/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "9ce226b0edb9f1b8538e1ca068480ddc63b0b6e7c672b875be13286a88a27589",
+      "original_path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-th/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "original_sha256": "ae662f5409608139f505d74cc8e4140a0721ad3ff2874c43f41217a934b40145",
+      "proposal": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/proposals/918.json"
+    },
+    {
+      "id": "919",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/manuscripts/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "2881b7c1a768b877f40e4f253157338a0b8f7cc809d70708a3c10ab1ff0e2dc3",
+      "original_path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-th/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "original_sha256": "90076c36bc2cb2459e53d6b7c1843ce5c66334f16f55d4835c94717f7a05293d",
+      "proposal": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/proposals/919.json"
+    },
+    {
+      "id": "920",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/manuscripts/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "e9a57329dc27262ad2588f6774bd6542df06d4b5d54521afd256ef14bdc2702e",
+      "original_path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-th/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "original_sha256": "daad2583e76967ef4df34fe3b72a67e55d2b1072e5b734e9d367f87d43dded9b",
+      "proposal": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/proposals/920.json"
+    },
+    {
+      "id": "921",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/manuscripts/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "d08a3ed535dc5d9f82c6b91c47d2da6e3166c33293aad75dbfad6cacd67af4e1",
+      "original_path": "/Users/son7/tseng-all-language-columns-20261025/batch11/src/content/columns-th/921-taiwan-online-game-coins-refund-judgment.md",
+      "original_sha256": "fa882e16655d547ab780df7728068343078bbde8624d366b9e945df10972948e",
+      "proposal": "/Users/son7/tseng-all-language-columns-20261025/batch11/checks/th-author-r2/proposals/921.json"
+    }
+  ]
+}

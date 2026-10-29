@@ -1,0 +1,292 @@
+{
+  "atUTC": "2026-10-28T23:59:52.132757+00:00",
+  "status": "AUTHOR_COMPLETE_AWAITING_SEPARATE_INDEPENDENT_REVIEW",
+  "locale": "ja",
+  "ids": [
+    "915",
+    "916",
+    "918",
+    "919",
+    "920",
+    "921"
+  ],
+  "author": "/root/b10_intake",
+  "authorReadyForIndependentReview": true,
+  "independentApproved": false,
+  "publicationReady": false,
+  "nativeHumanOrLawyerApproval": false,
+  "files": [
+    {
+      "id": "915",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-ja/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "13efd9ab6446b6d2e2db121d8299bc18897a384e2d07f94aec13a3544c44c1a2",
+      "bytes": 8767,
+      "beforeSHA256": "99b693ba95cc3f92afe28bd97ecc0262c93d681f30f79433d99ef91f6f9ab980",
+      "changed": true,
+      "editIDs": [
+        "M01",
+        "C01",
+        "C02",
+        "C03",
+        "S01",
+        "R02"
+      ],
+      "frontmatterChangedKeys": [
+        "faq",
+        "summary"
+      ],
+      "bodyUnchanged": false,
+      "faqUnchanged": false,
+      "faqCount": 2,
+      "initialActualCLIExit": 0,
+      "initialCV": 0.456,
+      "finalActualCLIExit": 0,
+      "finalCV": 0.473,
+      "finalSentences": 42,
+      "runtimeTargetAbsent": true
+    },
+    {
+      "id": "916",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-ja/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "c077912948b6592b44500addbf7fcd38f0ae34d44ad2863060dd68b859b45600",
+      "bytes": 8906,
+      "beforeSHA256": "dc6b6373883287a2d4c81b7a66da1171706cda797acf8d2d5bf0853e67380afe",
+      "changed": true,
+      "editIDs": [
+        "S02",
+        "R01",
+        "R03",
+        "R05",
+        "R06"
+      ],
+      "frontmatterChangedKeys": [
+        "summary"
+      ],
+      "bodyUnchanged": false,
+      "faqUnchanged": true,
+      "faqCount": 3,
+      "initialActualCLIExit": 1,
+      "initialCV": 0.415,
+      "finalActualCLIExit": 0,
+      "finalCV": 0.47,
+      "finalSentences": 38,
+      "runtimeTargetAbsent": true
+    },
+    {
+      "id": "918",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-ja/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "9f2f0978ab07ce60f142b5c63975e912e00d6b0dfed011d37f8780a473f1720c",
+      "bytes": 9000,
+      "beforeSHA256": "b96d6a1164d4ceeac0f93a75bc0026757e6f6d5405a978916d24db33dd219262",
+      "changed": true,
+      "editIDs": [
+        "S03"
+      ],
+      "frontmatterChangedKeys": [
+        "summary"
+      ],
+      "bodyUnchanged": true,
+      "faqUnchanged": true,
+      "faqCount": 3,
+      "initialActualCLIExit": 0,
+      "initialCV": 0.455,
+      "finalActualCLIExit": 0,
+      "finalCV": 0.455,
+      "finalSentences": 39,
+      "runtimeTargetAbsent": true
+    },
+    {
+      "id": "919",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-ja/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "b147871da802c73016c8d3755cea847e3a6bf8025112095a478ee31fbe707dc5",
+      "bytes": 8397,
+      "beforeSHA256": "39b99b021c9c7d18a18d8372da91862eb0104059c8e7c1abac4c76bb2267c159",
+      "changed": true,
+      "editIDs": [
+        "S04"
+      ],
+      "frontmatterChangedKeys": [],
+      "bodyUnchanged": false,
+      "faqUnchanged": true,
+      "faqCount": 3,
+      "initialActualCLIExit": 0,
+      "initialCV": 0.484,
+      "finalActualCLIExit": 0,
+      "finalCV": 0.491,
+      "finalSentences": 34,
+      "runtimeTargetAbsent": true
+    },
+    {
+      "id": "920",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-ja/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "1fd560d78ea86dfe8e8b3d6df81244b26b6c268b957e81f31ac1022c52e2e973",
+      "bytes": 8721,
+      "beforeSHA256": "1fd560d78ea86dfe8e8b3d6df81244b26b6c268b957e81f31ac1022c52e2e973",
+      "changed": false,
+      "editIDs": [],
+      "frontmatterChangedKeys": [],
+      "bodyUnchanged": true,
+      "faqUnchanged": true,
+      "faqCount": 3,
+      "initialActualCLIExit": 0,
+      "initialCV": 0.541,
+      "finalActualCLIExit": 0,
+      "finalCV": 0.541,
+      "finalSentences": 36,
+      "runtimeTargetAbsent": true
+    },
+    {
+      "id": "921",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-ja/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "636a66ce80dbf91c30551622bf2d3ceba3855b5a4a78177cf45534f36979e898",
+      "bytes": 9430,
+      "beforeSHA256": "008c435769019ea78b60df303b40f255b96c722d486077179b11b98ded19ff9e",
+      "changed": true,
+      "editIDs": [
+        "S05",
+        "S06",
+        "M02",
+        "R04"
+      ],
+      "frontmatterChangedKeys": [
+        "summary"
+      ],
+      "bodyUnchanged": false,
+      "faqUnchanged": true,
+      "faqCount": 3,
+      "initialActualCLIExit": 0,
+      "initialCV": 0.459,
+      "finalActualCLIExit": 0,
+      "finalCV": 0.537,
+      "finalSentences": 38,
+      "runtimeTargetAbsent": true
+    }
+  ],
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/reviews/ja-author-r2-current.md",
+    "sha256": "a82df74aeed793c6ede006947e3fede0f7ea8eef8ace573cc14f5ffd363c4e6e",
+    "bytes": 28915
+  },
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-before.json",
+      "sha256": "64bfd34932606445ff75330d1af023005ae0168cf6040eadbaf246eadc8f541f",
+      "bytes": 57004
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-proposals.json",
+      "sha256": "241bfc013056a0e6e792cefca9c777f2265adbb4f93b7084b12b8bf8feea0201",
+      "bytes": 19103
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-proposals-final.json",
+      "sha256": "dca8d7a5a684132f73f089b9808b37fcd25335ba3f5fc4b186d19ad5c653928d",
+      "bytes": 24395
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-proposals-final-v2.json",
+      "sha256": "ba5639229f355527d7140d7d2db435d1a829fa2a77699424001fc29953637a9b",
+      "bytes": 26066
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-edits.json",
+      "sha256": "bf64f1baa0f0e80a2c7b985f0d48ba13955bcdfb04284a760ed9718c7d7cb955",
+      "bytes": 27806
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-variety.json",
+      "sha256": "a089466e5e3914c399a02b66e0be75573b1710897810a7142ac1a08e38049c9d",
+      "bytes": 113994
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-structure.mjs",
+      "sha256": "3ca81f3e3788c15fb53ebcb2790e90c1191f5e1af70cc0fa1148c97d0d41f019",
+      "bytes": 8375
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-structure.json",
+      "sha256": "bdd37e4cf6c3222e30729134b3dc0034dfb11b3a87de1fd378389590f9f621a7",
+      "bytes": 500652
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-structure-process.json",
+      "sha256": "d7e3b1cb68f502441ab0c0699e5c69586f6254d2abb846eae1bd7d47aa0dbe26",
+      "bytes": 602
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-replay.json",
+      "sha256": "6c77c52b4187ae475f679b77c0e8bdceb47a19661a4b0e0acb40e76fb252e74d",
+      "bytes": 11070
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-diff.patch",
+      "sha256": "911716fa5b45ca7b796d728cf9dd1faf0e549abdf9745b913a0fcfa111194867",
+      "bytes": 20813
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-inputs-current.json",
+      "sha256": "e039a90d187397762badc8daa8333544cc70993ee71cb3d28ca9ebf8d04b28e9",
+      "bytes": 11616
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-self-review.json",
+      "sha256": "9eab061c93003daef58f92f3c378bf52d0639df94f35fbca4a33939ea69cb0f2",
+      "bytes": 17927
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-close.py",
+      "sha256": "4a4ebd1faecc14faf104d99a77c9c7b4d4271053c9cbf9b226bad670aa2df2d5",
+      "bytes": 26520
+    }
+  ],
+  "initialActualCLI": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-intake-status-20261029.json",
+    "sha256": "d8f222502008abb2b648da29a18ce4aaaf8e99f170367e6cd9bd42a371cb54ff",
+    "passed": 5,
+    "failed": 1,
+    "failedID": "916",
+    "failure": "len_cv0.415<0.45; original raw process exit/stdout/stderr/arrays preserved"
+  },
+  "finalActualCLI": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-variety.json",
+    "sha256": "a089466e5e3914c399a02b66e0be75573b1710897810a7142ac1a08e38049c9d",
+    "passed": 6,
+    "failed": 0,
+    "warnings": 6
+  },
+  "structure": {
+    "selected": 6,
+    "metadataErrors": 0,
+    "structureErrors": 0,
+    "reviewItems": 32,
+    "faqTotal": 17,
+    "semanticStatus": "AUTHOR_SELF_REVIEW_ONLY; SEPARATE_INDEPENDENT_REVIEW_REQUIRED"
+  },
+  "exactEdits": 17,
+  "changedFiles": 5,
+  "FAQTotal": 17,
+  "sourceAndImageBindings": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-inputs-current.json",
+    "sha256": "e039a90d187397762badc8daa8333544cc70993ee71cb3d28ca9ebf8d04b28e9",
+    "bytes": 11616
+  },
+  "selfReview": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/ja-author-r2-self-review.json",
+    "sha256": "9eab061c93003daef58f92f3c378bf52d0639df94f35fbca4a33939ea69cb0f2",
+    "bytes": 17927
+  },
+  "scope": {
+    "RSharedOtherWrites": false,
+    "current72ReleaseTouched": false,
+    "commitPushDeploy": false,
+    "newJAWebCalls": 0,
+    "directImageViewThisPass": false
+  },
+  "limitations": [
+    "Separate independent review still required.",
+    "No browser visual/cards/FAQUI/JSON-LD/feeds/deployment verification.",
+    "Six image bytes verified against prior visual evidence; no new directimageview.",
+    "Sourcecheckdate2026-10-25 retained; no new fulljudgment/fullPDF/web audit.",
+    "English contact link explicitly labelled and allowedbyBRIEF; currentJAcontact exists."
+  ]
+}

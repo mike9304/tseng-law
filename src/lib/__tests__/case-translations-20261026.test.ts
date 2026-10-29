@@ -4,7 +4,7 @@ const fileCorpus = vi.hoisted(() => new Map<string, import('@/lib/columns').Colu
 
 // Production parses each locale's markdown once (shouldCacheParsedColumns); tests
 // re-read it on every call. publicColumnSwitcherData reads every locale, and this
-// suite calls it 41 times per case (about 14 s per case in isolation), so parse
+// suite calls it 49 times per case, so parse
 // each locale once here. The corpus does not change during the suite.
 vi.mock('@/lib/columns', async (importOriginal) => {
   const columns = await importOriginal<typeof import('@/lib/columns')>();
@@ -30,10 +30,12 @@ import { columnLanguageLinksFromIndex, type PublicLocale8 } from '@/lib/public-g
 import { buildAbsoluteUrl, getLanguageAlternates } from '@/lib/seo';
 import { archiveLeadPublicationDate, archiveLeadSlugsFor, expertiseSlugsFor } from './native-locale-columns';
 
-const TRANSLATIONS = ['de', 'it', 'ar', 'pt', 'hi', 'ms', 'ru', 'bg', 'bn', 'ca', 'da', 'el', 'et', 'fa', 'fi', 'hr', 'hu', 'is', 'km', 'lv', 'mn', 'nb', 'ne', 'pl', 'ro', 'sk', 'sl', 'sr', 'cs', 'my', 'sv', 'ta', 'tr', 'uk', 'ur', 'nl', 'lt', 'he', 'fil', 'id'] as const;
+const NEWEST_CASE_LOCALES = ['de', 'it', 'ar', 'pt', 'hi', 'ms', 'ru', 'bg', 'bn', 'ca', 'da', 'el', 'et', 'fa', 'fi', 'hr', 'hu', 'is', 'km', 'lv', 'mn', 'nb', 'ne', 'pl', 'ro', 'sk', 'sl', 'sr', 'cs', 'my', 'sv', 'ta', 'tr', 'uk', 'ur', 'nl', 'lt', 'he', 'fil', 'id', 'vi', 'th', 'fr', 'zh-hans'] as const;
+const LOCALES_WITH_NEWER_COLUMNS = ['ko', 'ja', 'es', 'en', 'zh-hant'] as const;
+const ALL_CASE_LOCALES = [...NEWEST_CASE_LOCALES, ...LOCALES_WITH_NEWER_COLUMNS];
 const SAME_DAY_ARC_LOCALES: readonly string[] = ['bg', 'bn', 'ca', 'el', 'et', 'fa', 'hr', 'hu', 'is', 'km', 'lv', 'mn', 'ne', 'sk', 'sl', 'sr', 'my', 'ta', 'ur', 'lt', 'he'];
-const PRIOR_DAY_ARC_LOCALES: readonly string[] = ['da', 'fi', 'nb', 'pl', 'ro', 'cs', 'sv', 'tr', 'uk', 'nl', 'fil'];
-const ORIGINAL_DAY_ARC_LOCALES: readonly string[] = ['id'];
+const PRIOR_DAY_ARC_LOCALES: readonly string[] = ['da', 'fi', 'nb', 'pl', 'ro', 'cs', 'sv', 'tr', 'uk', 'nl', 'fil', 'zh-hans'];
+const ORIGINAL_DAY_ARC_LOCALES: readonly string[] = ['id', 'vi', 'th', 'fr'];
 const ARC_SLUGS = ['taiwan-arc-first-application', 'taiwan-visa-residence-work-study-family', 'taiwan-arc-renewal-changes-reentry'];
 // Independently pin the release contract, rather than deriving it from the test registry.
 const CASES = [
@@ -46,7 +48,7 @@ const CASES = [
 ] as const;
 
 describe('reviewed case translations published October26', () => {
-  it.each(TRANSLATIONS)('%s has all six complete, own-audience cases in its newest publication batch', (locale) => {
+  it.each(NEWEST_CASE_LOCALES)('%s has all six complete, own-audience cases in its newest publication batch', (locale) => {
     const posts = getAllColumnPosts(locale);
     const visible = filterMarketBoardColumns(locale, posts);
     const slugs = CASES.map(({ slug }) => slug);
@@ -73,19 +75,45 @@ describe('reviewed case translations published October26', () => {
     }
   });
 
-  it.each(CASES)('$slug retains its original publication date and exactly forty-one real language versions', (item) => {
+  it.each(LOCALES_WITH_NEWER_COLUMNS)('%s keeps its newer columns ahead of the completed case translations', (locale) => {
+    const posts = getAllColumnPosts(locale);
+    const visible = filterMarketBoardColumns(locale, posts);
+    const slugs = CASES.map(({ slug }) => slug);
+    const translated = CASES.filter(item => item.source !== locale);
+    const originals = CASES.filter(item => item.source === locale);
+    const expectedCases = [...translated, ...originals].map(({ slug }) => slug);
+    expect(posts.slice(0, 6).map(post => post.publicationDate)).toEqual(Array(6).fill('2026-10-28'));
+    expect(visible.slice(0, 6).map(({ slug }) => slug)).toEqual(posts.slice(0, 6).map(({ slug }) => slug));
+    expect(archiveLeadSlugsFor(locale).slice(0, 6)).toEqual(posts.slice(0, 6).map(({ slug }) => slug));
+    for (const ordered of [posts.map(({ slug }) => slug), visible.map(({ slug }) => slug), archiveLeadSlugsFor(locale)]) {
+      expect(ordered.filter(slug => slugs.includes(slug as typeof slugs[number]))).toEqual(expectedCases);
+    }
+    expect(new Set(archiveLeadSlugsFor(locale)).size).toBe(archiveLeadSlugsFor(locale).length);
+    expect(expertiseSlugsFor(locale)).toEqual(expect.arrayContaining(slugs));
+    for (const item of translated) {
+      const post = posts.find(({ slug }) => slug === item.slug);
+      expect(post, item.slug).toMatchObject({ audience: [locale], publicationDate: '2026-10-26', topic: item.topic });
+      expect(post?.faq, item.slug).toHaveLength(item.faqs);
+      expect(archiveLeadPublicationDate(item.slug, locale)).toBe('2026-10-26');
+    }
+  });
+
+  it.each(CASES)('$slug retains its original publication date and exactly forty-nine real language versions', (item) => {
     const original = getAllColumnPosts(item.source).find(({ slug }) => slug === item.slug);
     expect(original?.publicationDate).toBe('2026-10-25');
     expect(original?.faq).toHaveLength(item.faqs);
     expect(archiveLeadPublicationDate(item.slug, item.source)).toBe('2026-10-25');
-    const expected = [item.source, ...TRANSLATIONS].sort();
+    const expected = [...ALL_CASE_LOCALES].sort();
+    expect(expected).toHaveLength(49);
+    expect(new Set(expected).size).toBe(49);
     const cluster = columnAlternateLocales(item.slug, item.source);
     expect([...cluster].sort()).toEqual(expected);
     const urls = expected.map((locale) => buildAbsoluteUrl(`/${locale}/columns/${item.slug}`));
     const alternates = getLanguageAlternates(`/columns/${item.slug}`, cluster, { xDefaultWithinCluster: true });
-    expect(Object.keys(alternates)).toHaveLength(42);
+    expect(Object.keys(alternates)).toHaveLength(50);
     expect(Object.entries(alternates).filter(([tag]) => tag !== 'x-default').map(([, url]) => url).sort()).toEqual(urls.sort());
     expect(urls).toContain(alternates['x-default']);
+    expect(alternates['x-default']).toBe(buildAbsoluteUrl(`/en/columns/${item.slug}`));
     for (const locale of expected as PublicLocale8[]) {
       const pathname = `/${locale}/columns/${item.slug}`;
       const { index } = publicColumnSwitcherData(locale, { staticPathname: pathname });

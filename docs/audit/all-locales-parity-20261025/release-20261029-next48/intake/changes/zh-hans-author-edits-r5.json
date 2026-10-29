@@ -1,0 +1,21 @@
+{
+  "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/921-taiwan-online-game-coins-refund-judgment.md",
+  "before_sha256": "1591b9e5bc81fecd3734cdccf7b3920ca1e996d9e9792761b076649e89ab3d64",
+  "after_sha256": "98cd7fb7fd6fb3ac324ed5a298e5df65c4997eab8a8d2628b1757cecc7a6964e",
+  "edits": [
+    {
+      "old": "按照该案合同，玩家先购买点数，再用它们取得游戏服务或商品；剩余金币供玩家在对局中使用。",
+      "new": "按该案合同，玩家先买点数，再兑换游戏服务或商品。金币用于对局。",
+      "reason": "分开点数购买兑换和金币用途两个事实；两项资产的功能区别完整保留。",
+      "meaning_preserved": true
+    },
+    {
+      "old": "网络游戏位居第一次消费申诉类型的第二位，但该类案件数较前一年减少。",
+      "new": "网络游戏位居第一次消费申诉类型的第二位。该类案件数较前一年减少。",
+      "reason": "将排名与同比变化分别表达，保留第一次申诉分母、年度、排名及下降方向。",
+      "meaning_preserved": true
+    }
+  ],
+  "exact_reverse_bytes": true,
+  "before_snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r4/921-taiwan-online-game-coins-refund-judgment.md"
+}

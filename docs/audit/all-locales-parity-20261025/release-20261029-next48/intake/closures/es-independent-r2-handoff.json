@@ -1,0 +1,33 @@
+{
+  "atUTC": "2026-10-29T00:16:16.795459+00:00",
+  "verdict": "PASS_NARROW_CLOSURE",
+  "mandatoryRemaining": 0,
+  "current920": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-es/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+    "sha256": "d6a190905068c5889ceb9d0022b7f380ab0c4deac91c7311bc7a0a8b7e8b649e",
+    "bytes": 8739
+  },
+  "otherFiveSHAUnchanged": true,
+  "metadataFAQNumbersURLsUnchanged": true,
+  "singleForwardReverseReplacement": true,
+  "priorR1ArtifactsUnchanged": true,
+  "retainedAuthorCLIExit": 0,
+  "retainedAuthorCLIFAIL": 0,
+  "retainedAuthorCLIWARN": 0,
+  "newCLIExecutions": 0,
+  "newWebRequests": 0,
+  "sourceOrRMutations": 0,
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/reviews/es-independent-r2.md",
+      "sha256": "f84c0a775d0108ae412092be73b53b54106677a071dcf3e7d38bd7f7b2158e81",
+      "bytes": 5950
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/es-independent-r2-closure.json",
+      "sha256": "92271dd0e0b62a5b73b03d510e6736a65074875785e2198f5eafff1d95962066",
+      "bytes": 15919
+    }
+  ],
+  "intakeDecision": "Close ES920 one-sentence pending issue at exact current SHA; retain r1 history and 3 optional suggestions."
+}

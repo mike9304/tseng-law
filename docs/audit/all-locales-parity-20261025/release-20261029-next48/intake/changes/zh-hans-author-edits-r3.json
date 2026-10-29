@@ -1,0 +1,11 @@
+{
+  "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+  "before_sha256": "94ff5c884adf93487d641b280bc265d0e6de5c71ecbcc62110ecc755ba10df63",
+  "after_sha256": "c4b1a9f69501616a7165ce7979db0890f1e42797df4265f01c693f24209819ad",
+  "old": "两个要求不能互换。法律规定的区分所有权人会议，与该小区规约规定的管理委员会，各有相应的决定事项。安全检查也不能代替许可，管理委员会更不当然可以替代法律要求的所有权人会议。",
+  "new": "决定主体各不相同。《条例》要求的区分所有权人会议决议，不能只用管委会许可替代；规约所列的电力公司安全检查也仍须办理。安全检查不能代替施工许可。",
+  "reason": "将抽象的各有相应决定事项改为三项具体关系：所有权人会议决议、管委会许可、电力公司安全检查。减少同意主体的反复铺陈。",
+  "meaning_preserved": true,
+  "exact_reverse_bytes": true,
+  "before_snapshot": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-author-r2/920-taiwan-apartment-ev-charger-common-area-judgment.md"
+}

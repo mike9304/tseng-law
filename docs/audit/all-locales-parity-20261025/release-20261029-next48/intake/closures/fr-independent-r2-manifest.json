@@ -1,0 +1,145 @@
+{
+  "at_utc": "2026-10-29T00:04:55.153463+00:00",
+  "verdict": "PASS",
+  "scope": "Independent r1 findings M01 M02 O01 closure only; r1 findings and evidence retained",
+  "required_remaining": 0,
+  "resolved": [
+    {
+      "id": "M01",
+      "article": 919,
+      "previous_severity": "mandatory",
+      "status": "RESOLVED",
+      "old": "Lorsqu’il reçoit la plainte du salarié concerné, il doit empêcher la répétition du harcèlement, proposer les conseils, l’assistance et la protection nécessaires selon les besoins et les circonstances, et enquêter.",
+      "new": "Lorsqu’il reçoit la plainte du salarié concerné, il doit prendre des mesures visant à éviter la répétition du harcèlement, fournir les conseils ou l’assistance et les mesures de protection nécessaires selon les besoins du plaignant et les circonstances, et mener l’enquête.",
+      "meaning_preserved": "Complaint trigger; preventive-measures must; needs/circumstances condition; consultation OR assistance-and-protection; investigation must; parallel protection and fair inquiry."
+    },
+    {
+      "id": "M02",
+      "article": 920,
+      "previous_severity": "mandatory",
+      "status": "RESOLVED",
+      "old": "Cette aide visait les infrastructures communes. Il ne constituait ni une aide générale à tout achat de borne ni une autorisation de travaux accordée individuellement à chaque résident.",
+      "new": "Cette aide visait les infrastructures communes. Elle ne constituait ni une aide générale à tout achat de borne ni une autorisation de travaux accordée individuellement à chaque résident.",
+      "meaning_preserved": "Common-infrastructure subsidy scope; neither general charger purchase aid nor individual works permission."
+    },
+    {
+      "id": "O01",
+      "article": 918,
+      "previous_severity": "optional",
+      "status": "RESOLVED",
+      "old": "de suspendre un paiement, de refuser une livraison ou de réclamer un dommage.",
+      "new": "de suspendre un paiement, de refuser une livraison ou de demander réparation d’un dommage.",
+      "meaning_preserved": "Individual assessment before withholding payment, refusing handover or claiming damages."
+    }
+  ],
+  "articles": [
+    {
+      "id": 915,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-fr/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "r1_sha256": "0fff59d9dd6730c186d00581f6ffa2c6cc3d3b24c2730f57ccbf97ec5c069a0d",
+      "current_sha256": "0fff59d9dd6730c186d00581f6ffa2c6cc3d3b24c2730f57ccbf97ec5c069a0d",
+      "faq_count": 2,
+      "fresh_cli": false,
+      "cli_exit_code": 0,
+      "exact_reverse_to_r1": null,
+      "unchanged_from_r1": true
+    },
+    {
+      "id": 916,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-fr/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "r1_sha256": "d73e0eda5a166c923c262e24135a44087009327260fd1e2c1cec07672bd8bf86",
+      "current_sha256": "d73e0eda5a166c923c262e24135a44087009327260fd1e2c1cec07672bd8bf86",
+      "faq_count": 3,
+      "fresh_cli": false,
+      "cli_exit_code": 0,
+      "exact_reverse_to_r1": null,
+      "unchanged_from_r1": true
+    },
+    {
+      "id": 918,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-fr/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "r1_sha256": "7140732403fa2b42e508a85a39d334e758547b24dbd7c6a27a6efe47c119ceb7",
+      "current_sha256": "e79c6ed57707b91b4d447c1968ef9f27ccbcfad8f56d9e5f20d59b2a7c6c26e4",
+      "faq_count": 3,
+      "fresh_cli": true,
+      "cli_exit_code": 0,
+      "exact_reverse_to_r1": true,
+      "unchanged_from_r1": false
+    },
+    {
+      "id": 919,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-fr/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "r1_sha256": "b01e101b016b1669dc93a74f08b263cf7ca092798d68eeb2fdcf421d6eaacc48",
+      "current_sha256": "ac918524db87f8cd5f1ce8928d7f53547cd8e5fe70dc904175cdb21180a74c15",
+      "faq_count": 3,
+      "fresh_cli": true,
+      "cli_exit_code": 0,
+      "exact_reverse_to_r1": true,
+      "unchanged_from_r1": false
+    },
+    {
+      "id": 920,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-fr/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "r1_sha256": "2ebbc196e784ae7cf301acb4177f03813214876aeadefd96d15ce24c09809837",
+      "current_sha256": "603b00348f4af44ea55160a62bd13db442d9bc4d2bbed53de08d5ec7e11362cc",
+      "faq_count": 3,
+      "fresh_cli": true,
+      "cli_exit_code": 0,
+      "exact_reverse_to_r1": true,
+      "unchanged_from_r1": false
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-fr/921-taiwan-online-game-coins-refund-judgment.md",
+      "r1_sha256": "5cad35537d1cb1f4f384d1067726bf9f2512d731738391f73aec7315732ea506",
+      "current_sha256": "5cad35537d1cb1f4f384d1067726bf9f2512d731738391f73aec7315732ea506",
+      "faq_count": 3,
+      "fresh_cli": false,
+      "cli_exit_code": 0,
+      "exact_reverse_to_r1": null,
+      "unchanged_from_r1": true
+    }
+  ],
+  "faq_total": 17,
+  "fresh_cli_count": 3,
+  "new_full_six_file_review": false,
+  "prior_review_artifacts_unchanged": true,
+  "source_files_changed_by_reviewer": false,
+  "shared_tools_changed": false,
+  "build_or_deploy": false,
+  "publication_approval": false,
+  "human_native_or_lawyer_review_claimed": false,
+  "R_HEAD": "f294a05f2c7003260016fa852dfa16063a1ccfcc",
+  "artifacts": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/reviews/fr-independent-r2.md",
+      "sha256": "9d47d80d6c09c62453b821e4b6ed8fb341eaaffdd8f336a639c022e3b9818080"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/fr-independent-r2-audit.py",
+      "sha256": "98d21a8b28dfeb49ca593298bea160161a0831c1b0b0e683ac76c898b0b0cdda"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/fr-independent-r2-evidence.json",
+      "sha256": "0647e0d54ae5a764fd314c31ad153532f632a335d62fc66c9ebc290bce00bbe4"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/fr-independent-r2-exact.diff",
+      "sha256": "bbed8721dec2cd3560d8eacd9257414405756590062b24b841eae4b418be334a"
+    }
+  ],
+  "author_inputs": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/reviews/fr-author-r2-review.md",
+      "sha256": "8b44de7c55a69572c6bdbc6b7b9f2d078cb1c2deeaa5153692146cf12dc2c64a"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/fr-author-r2-manifest.json",
+      "sha256": "274671910fafdcf918c55cc75d113e965ea64ca7b44497c28a72168b15888aee"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/fr-author-r2-exact.diff",
+      "sha256": "bbed8721dec2cd3560d8eacd9257414405756590062b24b841eae4b418be334a"
+    }
+  ]
+}

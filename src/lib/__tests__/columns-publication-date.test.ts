@@ -6,6 +6,7 @@ import { describe, expect, it } from 'vitest';
 import { getAllColumnPosts, sortColumnPostsNewestFirst, type ColumnPost } from '@/lib/columns';
 import {
   BACKLOG_COLUMN_FILES_20261105,
+  CASE_TRANSLATION_COLUMN_FILES_20261026,
   NATIVE_LOCALE_COLUMN_FILES,
   archiveLeadPublicationDate,
   archiveLeadSlugsFor,
@@ -833,8 +834,13 @@ const REDATED_20260928: Record<string, readonly string[]> = {
   ja: ['019', '020'],
 };
 
-function verifiedPublicationDate(locale: string, prefix: string): string {
+function verifiedPublicationDate(locale: string, fileOrPrefix: string): string {
+  const prefix = fileOrPrefix.match(/^\d{3,4}/)?.[0] ?? fileOrPrefix.slice(0, 3);
   if (BACKLOG_COLUMN_FILES_20261105[locale]?.some((file) => file.startsWith(`${prefix}-`))) return '2026-11-05';
+  // Only registered translations use October 26; original EN/ZH files keep October 25.
+  if (CASE_TRANSLATION_COLUMN_FILES_20261026[locale]?.includes(fileOrPrefix)) {
+    return '2026-10-26';
+  }
   if (Object.values(CRIMINAL_COLUMN_FILES_20261008).flat().some((file) => file.startsWith(`${prefix}-`))) {
     return '2026-10-08';
   }
@@ -966,8 +972,7 @@ describe('localized column publication ordering', () => {
       const expertiseCount = expertiseSlugsFor(locale).length; // 041–048 subset + 050 traffic
       expect(files).toHaveLength(31 + nativeCount + expertiseCount);
       for (const file of files) {
-        const prefix = file.match(/^\d{3,4}/)?.[0] ?? file.slice(0, 3);
-        const verifiedDate = verifiedPublicationDate(locale, prefix);
+        const verifiedDate = verifiedPublicationDate(locale, file);
         const { data } = matter(fs.readFileSync(path.join(contentDir, file), 'utf8'));
 
         expect(data.date_display, file).toBe(expectedDisplay(locale, verifiedDate));

@@ -1,0 +1,44 @@
+{
+  "atUTC": "2026-10-28T23:57:05.660401+00:00",
+  "author": "root",
+  "baseline": "ko-root-mechanical-r3/draft-byte-snapshots",
+  "edits": [
+    {
+      "id": 919,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "old": "피해 근로자의 신고를 접수한 사용자는 괴롭힘의 재발을 막고, 신고인의 필요와 사건 사정에 맞는 상담·지원·보호조치를 제공하며 조사를 진행해야 합니다.",
+      "new": "피해 근로자의 신고를 접수한 사용자는 괴롭힘 재발을 막는 조치를 취하고, 신고인의 필요와 사건 사정에 맞는 상담·지원·보호조치를 제공하며 조사를 진행해야 합니다.",
+      "reason": "현행22-2의 재발방지 조치를 취할 의무를 명시해 결과 보장으로 읽힐 여지 제거; FAQ의 정확한 조치 표현과 통일.",
+      "beforeSHA256": "e78504a4e35e636df38438ed3f26b9dd366c15ae797f5d83d307d594af9ef317",
+      "afterSHA256": "a84d532fdd6b1ca9053ddf27d6998b541b1531d5e2561752ff7b37f9d6c5eb68"
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/921-taiwan-online-game-coins-refund-judgment.md",
+      "old": "현행 제4항은 게임 시작 후 7일 안에 서면으로 계약을 해제하고 미사용 유료 포인트 반환을 요구하는 절차도 두고 있습니다.",
+      "new": "현행 제4항에 따르면 소비자는 게임을 시작한 뒤 7일 안에 이유를 설명하거나 비용을 부담하지 않고 서면으로 계약을 해제해 미사용 유료 포인트의 반환을 요구할 수 있습니다.",
+      "reason": "오늘 실제 재열람한 공식 PDF37–41행에 따라 무이유·무비용 조건을 추가 설명; 7일 기산·서면·미사용대상과 이후18항해지 유지. 다른 언어에 새필수게이트를 만드는 수정은 아님.",
+      "beforeSHA256": "efebdc0641e5726a9dc11f60ad28dc82057a21583219154b58e3e96b81a68d37",
+      "afterSHA256": "d76b6ba48d4691f42311f521eeea3807e2001260cbbf3bba8a36166e93c431ce"
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/921-taiwan-online-game-coins-refund-judgment.md",
+      "old": "과거 사건은 당시 계약과 적용 규범에 따라 판단됐다는 시점의 구분이 필요합니다.",
+      "new": "과거 사건은 당시의 계약과 규범으로 판단됐습니다.",
+      "reason": "시점 구분을 해야 한다는 메타 설명을 실제 판단 기준으로 간결히 바꿈; 2021판결/2023현행구분 유지.",
+      "beforeSHA256": "d76b6ba48d4691f42311f521eeea3807e2001260cbbf3bba8a36166e93c431ce",
+      "afterSHA256": "f5e36a5562e104734d61612b2e1cd5060b0c6e93a2495f18e1e18622b57fbc38"
+    },
+    {
+      "id": 921,
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns/921-taiwan-online-game-coins-refund-judgment.md",
+      "old": "계정 비밀번호는 필요하지 않습니다.",
+      "new": "비밀번호는 필요 없습니다.",
+      "reason": "문의에 불필요한 정보를 짧게 알림; 대상은 직전의 게임계정 문의 그대로.",
+      "beforeSHA256": "f5e36a5562e104734d61612b2e1cd5060b0c6e93a2495f18e1e18622b57fbc38",
+      "afterSHA256": "0bccb349583196ec370182d6325def2795c4c4cdbdd0472f7d6193ebc1962303"
+    }
+  ],
+  "forwardAndReverseChecked": true
+}

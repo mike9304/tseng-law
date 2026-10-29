@@ -1550,6 +1550,15 @@ const CASE_TRANSLATION_FILES_20261026 = [
 
 /** Reviewed translations published October26; their EN/ZH originals keep October25. */
 export const CASE_TRANSLATION_COLUMN_FILES_20261026: Partial<Record<string, readonly string[]>> = {
+  ko: CASE_TRANSLATION_FILES_20261026,
+  ja: CASE_TRANSLATION_FILES_20261026,
+  en: CASE_TRANSLATION_FILES_20261026.slice(2),
+  'zh-hant': CASE_TRANSLATION_FILES_20261026.slice(0, 2),
+  'zh-hans': CASE_TRANSLATION_FILES_20261026,
+  vi: CASE_TRANSLATION_FILES_20261026,
+  th: CASE_TRANSLATION_FILES_20261026,
+  es: CASE_TRANSLATION_FILES_20261026,
+  fr: CASE_TRANSLATION_FILES_20261026,
   de: CASE_TRANSLATION_FILES_20261026,
   it: CASE_TRANSLATION_FILES_20261026,
   ar: CASE_TRANSLATION_FILES_20261026,
@@ -1594,6 +1603,7 @@ export const CASE_TRANSLATION_COLUMN_FILES_20261026: Partial<Record<string, read
 
 // These case locales already have ARC articles with later dates than the original ARC batch.
 const CASE_LOCALE_ARC_PUBLICATION_DATES: Partial<Record<string, string>> = {
+  'zh-hans': '2026-10-25',
   bg: '2026-10-26', bn: '2026-10-26', ca: '2026-10-26', da: '2026-10-25',
   el: '2026-10-26', et: '2026-10-26', fa: '2026-10-26',
   fi: '2026-10-25', hr: '2026-10-26', hu: '2026-10-26', is: '2026-10-26',

@@ -1,0 +1,107 @@
+{
+  "atUTC": "2026-10-29T00:28:28.076207+00:00",
+  "reviewer": "/root/b12_es_author",
+  "author": "/root/b12_fr_author",
+  "status": "REQUEST_CHANGES",
+  "required_remaining": 1,
+  "optional_count": 0,
+  "scope": "Independent AI semantic and style review, not human native/lawyer review or publication approval. Frozen r5 remains preserved; pending single-sentence M01 correction.",
+  "files": [
+    {
+      "id": "915",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/915-taiwan-public-contract-mediation-arbitration-same-claim.md",
+      "sha256": "c1f5845795eae385bafde2cd4565cabb0750f7067120675249f7fddfe62e89b0",
+      "faq_count": 2,
+      "semantic_status": "PASS",
+      "actual_cli_exit": 0,
+      "cli_reused_same_sha": true
+    },
+    {
+      "id": "916",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/916-taiwan-parent-company-pollution-liability-us-investor.md",
+      "sha256": "8dd386fb68e80f30a9df923849a6d6ba1c333640d9fd678216903a45c4736fd3",
+      "faq_count": 3,
+      "semantic_status": "PASS",
+      "actual_cli_exit": 0,
+      "cli_reused_same_sha": true
+    },
+    {
+      "id": "918",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/918-taiwan-presale-mortgage-notice-handover-judgment.md",
+      "sha256": "d09d75d49fee92ecc15c157d1204022c93d5a287a3a72ff73a82d71f341d8e41",
+      "faq_count": 3,
+      "semantic_status": "PASS",
+      "actual_cli_exit": 0,
+      "cli_reused_same_sha": true
+    },
+    {
+      "id": "919",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/919-taiwan-workplace-bullying-investigation-hearing-judgment.md",
+      "sha256": "ce1aebe8058549a06557361c2fdc38b3c967dd0d46eee15584a30e5079bad72f",
+      "faq_count": 3,
+      "semantic_status": "PASS",
+      "actual_cli_exit": 0,
+      "cli_reused_same_sha": true
+    },
+    {
+      "id": "920",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/920-taiwan-apartment-ev-charger-common-area-judgment.md",
+      "sha256": "c4b1a9f69501616a7165ce7979db0890f1e42797df4265f01c693f24209819ad",
+      "faq_count": 3,
+      "semantic_status": "REQUEST_CHANGES",
+      "actual_cli_exit": 0,
+      "cli_reused_same_sha": true
+    },
+    {
+      "id": "921",
+      "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/src/content/columns-zh-hans/921-taiwan-online-game-coins-refund-judgment.md",
+      "sha256": "98cd7fb7fd6fb3ac324ed5a298e5df65c4997eab8a8d2628b1757cecc7a6964e",
+      "faq_count": 3,
+      "semantic_status": "PASS",
+      "actual_cli_exit": 0,
+      "cli_reused_same_sha": true
+    }
+  ],
+  "faq_total": 17,
+  "findings": [
+    {
+      "id": "M01",
+      "severity": "M",
+      "column": "920",
+      "sha256": "c4b1a9f69501616a7165ce7979db0890f1e42797df4265f01c693f24209819ad",
+      "line": 39,
+      "actual_boundary": "P7 S1",
+      "old": "同条第1项第4款虽规定设置管线而须使用共用部分的情形，法院并未接受住户以此解释本案施工的主张。",
+      "proposed": "同条第1项第4款虽规定设置管线而须使用共用部分的情形，法院明确指出，本案施工不属于该款所说的情形。",
+      "reason": "The retained primary judgment L44 attributes the Article 6(1)(4) legal classification to appellee management committee, not appellant resident. Neutral court classification preserves scope.",
+      "status": "OPEN; authorized writer correction handed off"
+    }
+  ],
+  "report": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/reviews/zh-hans-independent-r1.md",
+    "sha256": "9f94f2fb5c44de38519a3393a7af4f29aedd6dd369a23189b2cf1b266704ed97"
+  },
+  "evidence": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-independent-evidence-r1.json",
+    "sha256": "795398ee75ac3ae16b2d1faa3f1d46e906c2d54d447cef056b067cb1429d2365"
+  },
+  "audit_script": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-independent-audit.py",
+    "sha256": "4a1c7ec1eba0d244e4f73490e32a7cfa2a5079ddc8733c20e1c5febbda24e71b"
+  },
+  "official_recheck": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch12/checks/zh-hans-independent-official-recheck.json",
+    "sha256": "590ac81f7a7845dd5c248a86a029fa14949ffd6d14c04916449010b987fbd996"
+  },
+  "retained_primary": {
+    "path": "/Users/son7/tseng-all-language-columns-20261025/batch06/research/retained/zh-hant-ev-primary-recovered.md",
+    "sha256": "69e09470e7e81edf23c9708e3b942a01c32dfc2e6128c49b353d180634cebbe2"
+  },
+  "manuscript_mutation_by_reviewer": false,
+  "shared_tool_mutation": false,
+  "build": false,
+  "publish": false,
+  "independent_review": true,
+  "human_native_or_lawyer_review": false,
+  "publication_approval": false
+}

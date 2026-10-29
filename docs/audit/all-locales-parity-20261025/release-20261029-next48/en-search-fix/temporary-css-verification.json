@@ -1,0 +1,412 @@
+{
+  "atUTC": "2026-10-29T01:11:17.292Z",
+  "mode": "TEMPORARY_RUNTIME_CSS_DIAGNOSTIC_ONLY_NOT_PUBLISHABLE",
+  "artifactCommit": "a0e4a60f5ccb7f9a1a6bcf7432827cc3d95090a0",
+  "currentCSS": {
+    "path": "/Users/son7/Projects/tseng-law-all-locales-20261025/src/components/en-design/EnColumns.module.css",
+    "sha256": "39127e943fc8765d7c57b0d6fe8a1b3ef07381cba4a4d15371455a2ebff5bc02"
+  },
+  "noSourceOrArtifactEdits": true,
+  "noForceClicks": true,
+  "rows": [
+    {
+      "width": 320,
+      "board": "columns",
+      "pathname": "/en/columns",
+      "failures": [],
+      "blocked": [],
+      "pageErrors": [],
+      "status": 200,
+      "query": "Told your Taiwan job is ending? What foreign professionals should check in the first week",
+      "before": {
+        "width": 320,
+        "scrollWidth": 305,
+        "clear": {
+          "x": 160.15625,
+          "y": 843.71875,
+          "width": 127.234375,
+          "height": 56
+        },
+        "submit": {
+          "x": 187.046875,
+          "y": 849.71875,
+          "width": 94.34375,
+          "height": 44
+        },
+        "overlapWidth": 94.34375,
+        "overlapHeight": 44,
+        "centerHitClear": false,
+        "hit": {
+          "class": "columns-search-submit",
+          "text": "Search"
+        },
+        "color": "rgb(245, 245, 247)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "gridRow": "auto"
+      },
+      "injectedSHA256": "7cdd0ce58b64c5a2fb27026f2a557fcfbf76ca027769bf8836ce74a9833247f6",
+      "after": {
+        "width": 320,
+        "scrollWidth": 305,
+        "clear": {
+          "x": 147.5,
+          "y": 457.71875,
+          "width": 139.890625,
+          "height": 44
+        },
+        "submit": {
+          "x": 187.046875,
+          "y": 395.71875,
+          "width": 94.34375,
+          "height": 44
+        },
+        "overlapWidth": 94.34375,
+        "overlapHeight": 0,
+        "centerHitClear": true,
+        "hit": {
+          "class": "columns-search-clear",
+          "text": "Clear search"
+        },
+        "color": "rgb(245, 245, 247)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "gridRow": "2"
+      },
+      "screenshot": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/diagnostics/en-clear/runtime-fix/columns-320-form.png",
+      "cleared": true,
+      "passed": true
+    },
+    {
+      "width": 320,
+      "board": "issues",
+      "pathname": "/en/columns/issues",
+      "failures": [],
+      "blocked": [],
+      "pageErrors": [],
+      "status": 200,
+      "query": "Taiwan drone cooperation talks and the permissions for a foreign-led demo",
+      "before": {
+        "width": 320,
+        "scrollWidth": 305,
+        "clear": {
+          "x": 160.15625,
+          "y": 710.71875,
+          "width": 127.234375,
+          "height": 56
+        },
+        "submit": {
+          "x": 187.046875,
+          "y": 716.71875,
+          "width": 94.34375,
+          "height": 44
+        },
+        "overlapWidth": 94.34375,
+        "overlapHeight": 44,
+        "centerHitClear": false,
+        "hit": {
+          "class": "columns-search-submit",
+          "text": "Search"
+        },
+        "color": "rgb(29, 29, 31)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "gridRow": "auto"
+      },
+      "injectedSHA256": "3232e44273c235a0dda53d4762faa945c0005f0314654dfb07d33037b50740bb",
+      "after": {
+        "width": 320,
+        "scrollWidth": 305,
+        "clear": {
+          "x": 147.5,
+          "y": 778.71875,
+          "width": 139.890625,
+          "height": 44
+        },
+        "submit": {
+          "x": 187.046875,
+          "y": 716.71875,
+          "width": 94.34375,
+          "height": 44
+        },
+        "overlapWidth": 94.34375,
+        "overlapHeight": 0,
+        "centerHitClear": true,
+        "hit": {
+          "class": "columns-search-clear",
+          "text": "Clear search"
+        },
+        "color": "rgb(29, 29, 31)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "gridRow": "2"
+      },
+      "screenshot": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/diagnostics/en-clear/runtime-fix/issues-320-form.png",
+      "cleared": true,
+      "passed": true
+    },
+    {
+      "width": 375,
+      "board": "columns",
+      "pathname": "/en/columns",
+      "failures": [],
+      "blocked": [],
+      "pageErrors": [],
+      "status": 200,
+      "query": "Told your Taiwan job is ending? What foreign professionals should check in the first week",
+      "before": {
+        "width": 375,
+        "scrollWidth": 360,
+        "clear": {
+          "x": 215.15625,
+          "y": 843.96875,
+          "width": 127.234375,
+          "height": 56
+        },
+        "submit": {
+          "x": 242.046875,
+          "y": 849.96875,
+          "width": 94.34375,
+          "height": 44
+        },
+        "overlapWidth": 94.34375,
+        "overlapHeight": 44,
+        "centerHitClear": false,
+        "hit": {
+          "class": "columns-search-submit",
+          "text": "Search"
+        },
+        "color": "rgb(245, 245, 247)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "gridRow": "auto"
+      },
+      "injectedSHA256": "7cdd0ce58b64c5a2fb27026f2a557fcfbf76ca027769bf8836ce74a9833247f6",
+      "after": {
+        "width": 375,
+        "scrollWidth": 360,
+        "clear": {
+          "x": 202.5,
+          "y": 459.96875,
+          "width": 139.890625,
+          "height": 44
+        },
+        "submit": {
+          "x": 242.046875,
+          "y": 397.96875,
+          "width": 94.34375,
+          "height": 44
+        },
+        "overlapWidth": 94.34375,
+        "overlapHeight": 0,
+        "centerHitClear": true,
+        "hit": {
+          "class": "columns-search-clear",
+          "text": "Clear search"
+        },
+        "color": "rgb(245, 245, 247)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "gridRow": "2"
+      },
+      "screenshot": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/diagnostics/en-clear/runtime-fix/columns-375-form.png",
+      "cleared": true,
+      "passed": true
+    },
+    {
+      "width": 375,
+      "board": "issues",
+      "pathname": "/en/columns/issues",
+      "failures": [],
+      "blocked": [],
+      "pageErrors": [],
+      "status": 200,
+      "query": "Taiwan drone cooperation talks and the permissions for a foreign-led demo",
+      "before": {
+        "width": 375,
+        "scrollWidth": 360,
+        "clear": {
+          "x": 215.15625,
+          "y": 644.890625,
+          "width": 127.234375,
+          "height": 56
+        },
+        "submit": {
+          "x": 242.046875,
+          "y": 650.890625,
+          "width": 94.34375,
+          "height": 44
+        },
+        "overlapWidth": 94.34375,
+        "overlapHeight": 44,
+        "centerHitClear": false,
+        "hit": {
+          "class": "columns-search-submit",
+          "text": "Search"
+        },
+        "color": "rgb(29, 29, 31)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "gridRow": "auto"
+      },
+      "injectedSHA256": "3232e44273c235a0dda53d4762faa945c0005f0314654dfb07d33037b50740bb",
+      "after": {
+        "width": 375,
+        "scrollWidth": 360,
+        "clear": {
+          "x": 202.5,
+          "y": 712.890625,
+          "width": 139.890625,
+          "height": 44
+        },
+        "submit": {
+          "x": 242.046875,
+          "y": 650.890625,
+          "width": 94.34375,
+          "height": 44
+        },
+        "overlapWidth": 94.34375,
+        "overlapHeight": 0,
+        "centerHitClear": true,
+        "hit": {
+          "class": "columns-search-clear",
+          "text": "Clear search"
+        },
+        "color": "rgb(29, 29, 31)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "gridRow": "2"
+      },
+      "screenshot": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/diagnostics/en-clear/runtime-fix/issues-375-form.png",
+      "cleared": true,
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "board": "columns",
+      "pathname": "/en/columns",
+      "failures": [],
+      "blocked": [],
+      "pageErrors": [],
+      "status": 200,
+      "query": "Told your Taiwan job is ending? What foreign professionals should check in the first week",
+      "before": {
+        "width": 1280,
+        "scrollWidth": 1265,
+        "clear": {
+          "x": 683.96875,
+          "y": 835.890625,
+          "width": 127.234375,
+          "height": 64
+        },
+        "submit": {
+          "x": 706.859375,
+          "y": 845.890625,
+          "width": 94.34375,
+          "height": 44
+        },
+        "overlapWidth": 94.34375,
+        "overlapHeight": 44,
+        "centerHitClear": false,
+        "hit": {
+          "class": "columns-search-submit",
+          "text": "Search"
+        },
+        "color": "rgb(245, 245, 247)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "gridRow": "auto"
+      },
+      "injectedSHA256": "7cdd0ce58b64c5a2fb27026f2a557fcfbf76ca027769bf8836ce74a9833247f6",
+      "after": {
+        "width": 1280,
+        "scrollWidth": 1265,
+        "clear": {
+          "x": 671.3125,
+          "y": 481.890625,
+          "width": 139.890625,
+          "height": 44
+        },
+        "submit": {
+          "x": 706.859375,
+          "y": 415.890625,
+          "width": 94.34375,
+          "height": 44
+        },
+        "overlapWidth": 94.34375,
+        "overlapHeight": 0,
+        "centerHitClear": true,
+        "hit": {
+          "class": "columns-search-clear",
+          "text": "Clear search"
+        },
+        "color": "rgb(245, 245, 247)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "gridRow": "2"
+      },
+      "screenshot": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/diagnostics/en-clear/runtime-fix/columns-1280-form.png",
+      "cleared": true,
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "board": "issues",
+      "pathname": "/en/columns/issues",
+      "failures": [],
+      "blocked": [],
+      "pageErrors": [],
+      "status": 200,
+      "query": "Taiwan drone cooperation talks and the permissions for a foreign-led demo",
+      "before": {
+        "width": 1280,
+        "scrollWidth": 1265,
+        "clear": {
+          "x": 683.96875,
+          "y": 711.3125,
+          "width": 127.234375,
+          "height": 64
+        },
+        "submit": {
+          "x": 706.859375,
+          "y": 721.3125,
+          "width": 94.34375,
+          "height": 44
+        },
+        "overlapWidth": 94.34375,
+        "overlapHeight": 44,
+        "centerHitClear": false,
+        "hit": {
+          "class": "columns-search-submit",
+          "text": "Search"
+        },
+        "color": "rgb(29, 29, 31)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "gridRow": "auto"
+      },
+      "injectedSHA256": "3232e44273c235a0dda53d4762faa945c0005f0314654dfb07d33037b50740bb",
+      "after": {
+        "width": 1280,
+        "scrollWidth": 1265,
+        "clear": {
+          "x": 671.3125,
+          "y": 787.3125,
+          "width": 139.890625,
+          "height": 44
+        },
+        "submit": {
+          "x": 706.859375,
+          "y": 721.3125,
+          "width": 94.34375,
+          "height": 44
+        },
+        "overlapWidth": 94.34375,
+        "overlapHeight": 0,
+        "centerHitClear": true,
+        "hit": {
+          "class": "columns-search-clear",
+          "text": "Clear search"
+        },
+        "color": "rgb(29, 29, 31)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "gridRow": "2"
+      },
+      "screenshot": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/diagnostics/en-clear/runtime-fix/issues-1280-form.png",
+      "cleared": true,
+      "passed": true
+    }
+  ],
+  "cssSourceUnchanged": true,
+  "completedAtUTC": "2026-10-29T01:11:54.522Z",
+  "passed": true
+}

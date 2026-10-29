@@ -70,9 +70,12 @@
 .columns.columns :global(section.section:not(.page-header)) { padding: 96px 0 160px; background: var(--en-night); border: 0; color: var(--en-white); }
 .columns.columns :global(.columns-search) { max-width: 760px; margin: 0 0 32px; }
 .columns.columns :global(.columns-search-label) { display: block; margin: 0 0 10px; font-family: var(--en-text); font-size: 17px; font-weight: 600; color: var(--en-grey); }
-.columns.columns :global(.columns-search-row) { position: relative; display: flex; gap: 0; }
+.columns.columns :global(.columns-search-row) { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
 .columns.columns :global(.columns-search-input) {
-  flex: 1;
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  min-width: 0;
   min-height: 64px;
   padding: 0 112px 0 28px;
   border: 1px solid rgb(255 255 255 / 24%);
@@ -99,8 +102,26 @@
   font-weight: 600;
 }
 .columns.columns :global(.columns-search-submit:hover) { background: rgb(255 255 255 / 18%); }
+/* Keep the optional clear action below the full-width field and its inset submit button. */
+.columns.columns :global(.columns-search-clear) {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: end;
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1px solid rgb(255 255 255 / 24%);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--en-white);
+  font-family: var(--en-text);
+  font-size: 16px;
+  font-weight: 600;
+}
+.columns.columns :global(.columns-search-clear:hover) { background: rgb(255 255 255 / 12%); }
+.columns.columns :global(.columns-search-clear:active) { background: rgb(255 255 255 / 18%); border-color: var(--en-grey); color: var(--en-white); }
 .columns.columns :global(.columns-search-input:focus-visible),
-.columns.columns :global(.columns-search-submit:focus-visible) { outline: 3px solid var(--en-focus); outline-offset: 2px; }
+.columns.columns :global(.columns-search-submit:focus-visible),
+.columns.columns :global(.columns-search-clear:focus-visible) { outline: 3px solid var(--en-focus); outline-offset: 2px; }
 .columns.columns :global(.columns-filter-summary) { font-family: var(--en-text); font-size: 14px; color: var(--en-grey-2); }
 /* Topic filters: text tabs, not chips. */
 .columns.columns :global(.columns-topic-nav) { display: flex; flex-wrap: wrap; gap: 0 28px; margin: 24px 0 96px; padding: 0; border: 0; }
@@ -239,6 +260,10 @@
 .issues.issues :global(.columns-search-input::placeholder) { color: var(--en-ink-3); }
 .issues.issues :global(.columns-search-submit) { background: #e8e8ed; color: var(--en-ink); }
 .issues.issues :global(.columns-search-submit:hover) { background: #dedee3; }
+.issues.issues :global(.columns-search-clear) { border-color: var(--en-field); color: var(--en-ink); }
+.issues.issues :global(.columns-search-clear:hover) { background: #e8e8ed; }
+.issues.issues :global(.columns-search-clear:active) { background: #dedee3; border-color: var(--en-field); color: var(--en-ink); }
+.issues.issues :global(.columns-search-clear:focus-visible) { outline-color: var(--en-focus-paper); }
 .issues.issues :global(.columns-topic-nav .columns-filter-btn) { color: var(--en-ink-3); }
 .issues.issues :global(.columns-topic-nav .columns-filter-btn:hover),
 .issues.issues :global(.columns-topic-nav .columns-filter-btn.active) { color: var(--en-ink); }

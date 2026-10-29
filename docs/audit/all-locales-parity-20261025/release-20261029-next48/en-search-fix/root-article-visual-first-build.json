@@ -1,0 +1,80 @@
+{
+  "atUTC": "2026-10-29T01:08:43.920492+00:00",
+  "commit": "a0e4a60f5ccb7f9a1a6bcf7432827cc3d95090a0",
+  "status": "LOCAL_ARTICLE_VISUAL_PASS_ARCHIVE_FIX_PENDING",
+  "screenshots": [
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/checks/browser-screenshots/mobile-vi-915-body.png",
+      "sha256": "1904fc096d6c61834c3f99c2df8c221cc39d8fc9d022142583283f2e6f4a10f8",
+      "rootActuallyViewed": true,
+      "result": "PASS: readable native body, source links and wrapping; no clipped article text in captured region"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/checks/browser-screenshots/mobile-th-915-body.png",
+      "sha256": "2fa63c6293fb3f3eef98e73858bf3412e38a51a8df9b021d55286facab38109d",
+      "rootActuallyViewed": true,
+      "result": "PASS: readable native body, source links and wrapping; no clipped article text in captured region"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/checks/browser-screenshots/desktop-en-918-body.png",
+      "sha256": "6fcb1f148fbbbfc9d95035859110af685e1be1eb7b1d91adb405a76ff31000b0",
+      "rootActuallyViewed": true,
+      "result": "PASS: readable native body, source links and wrapping; no clipped article text in captured region"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/checks/browser-screenshots/desktop-ja-915-body.png",
+      "sha256": "c4f12c972d5b4588d760206f3fcf6f20bf461298b6f34ad6c5cb4d0d0df7b494",
+      "rootActuallyViewed": true,
+      "result": "PASS: readable native body, source links and wrapping; no clipped article text in captured region"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/checks/browser-screenshots/desktop-zh-hant-915-body.png",
+      "sha256": "1c157e8f124b9ec2d77ff9283dfb08239be37475d9db1b75461551c75992a27a",
+      "rootActuallyViewed": true,
+      "result": "PASS: readable native body, source links and wrapping; no clipped article text in captured region"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/checks/browser-screenshots/mobile-ko-915-body.png",
+      "sha256": "ce8c8a8152b07738eeadc964f9bbf4813f32c6a2f001e9ffde04f2dd5bb7b402",
+      "rootActuallyViewed": true,
+      "result": "PASS: readable native body, source links and wrapping; no clipped article text in captured region"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/checks/browser-screenshots/mobile-ja-915-body.png",
+      "sha256": "b726a1f26e2f268f559debfe80f2e9cb956827799b97776e4b03d9809b40ef68",
+      "rootActuallyViewed": true,
+      "result": "PASS: readable native body, source links and wrapping; no clipped article text in captured region"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/checks/browser-screenshots/mobile-es-915-body.png",
+      "sha256": "dd090cff79d4a698bed412c9706573d81ec1691312433a458f9cfcba2ba5677c",
+      "rootActuallyViewed": true,
+      "result": "PASS: readable native body, source links and wrapping; no clipped article text in captured region"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/checks/browser-screenshots/mobile-fr-915-body.png",
+      "sha256": "1e42de1c48d5e44b2bc67bddbe87cef5c3c9059e87a7d2ef576f319142d643b7",
+      "rootActuallyViewed": true,
+      "result": "PASS: readable native body, source links and wrapping; no clipped article text in captured region"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/checks/browser-screenshots/mobile-zh-hans-915-body.png",
+      "sha256": "0d039c49d8783d6a32386d79c91829547aff585997831ea8b8fd0ee02b9e10bb",
+      "rootActuallyViewed": true,
+      "result": "PASS: readable native body, source links and wrapping; no clipped article text in captured region"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/checks/browser-screenshots/mobile-en-918-body.png",
+      "sha256": "a0bd828b6f6a9b07c7a5cc020688be68b7963a0ab146856ee6f8afe1208d7046",
+      "rootActuallyViewed": true,
+      "result": "PASS: readable native body, source links and wrapping; no clipped article text in captured region"
+    },
+    {
+      "path": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/checks/browser-screenshots/mobile-zh-hant-915-body.png",
+      "sha256": "7535437a866ab9b4c41b6bda6d080c481b6c0082df8049a527e85306cb19e493",
+      "rootActuallyViewed": true,
+      "result": "PASS: readable native body, source links and wrapping; no clipped article text in captured region"
+    }
+  ],
+  "limitations": "12 sampled local screenshots; not full article proof, native human review, public deployment or all-site UI localization. EN archive actual clear-button overlap is separately a blocking failure pending CSS repair and revalidation. Seven screenshots from a previously truncated view output were individually re-opened and actually inspected before this record."
+}

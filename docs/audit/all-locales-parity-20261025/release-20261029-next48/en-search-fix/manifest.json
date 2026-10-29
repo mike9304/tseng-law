@@ -1,0 +1,16 @@
+{
+  "atUTC": "2026-10-29T01:12:37.318660+00:00",
+  "cssSHA256": "39127e943fc8765d7c57b0d6fe8a1b3ef07381cba4a4d15371455a2ebff5bc02",
+  "rootViewedDiagnosticScreenshots": [
+    "columns-320-form.png",
+    "issues-375-form.png"
+  ],
+  "files": {
+    "REVIEW.md": "14023e7d5f1cbb2624edaf6d39320ce27a35b020ffe813efd6ccf58fcc375196",
+    "baseline.json": "53b9f0a64960e252cf495660ed81addf82927ea68c494c99d7eb37977b087ab7",
+    "root-article-visual-first-build.json": "b1e8192b684a09c798ab9dc7fcfc2cbb049cc794751e3bb453533b9d78694c9a",
+    "temporary-css-verification.json": "e779fd486eb7ff61d26b1f5f2f1a1834e3f749280ebdaf0d3dcc489330d562f1"
+  },
+  "status": "FIX_DIAGNOSED_AND_RUNTIME_CHECKED_FRESH_BUILD_REQUIRED",
+  "published": false
+}

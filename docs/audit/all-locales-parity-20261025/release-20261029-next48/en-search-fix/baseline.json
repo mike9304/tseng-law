@@ -1,0 +1,465 @@
+{
+  "atUTC": "2026-10-29T01:07:05.466Z",
+  "artifactCommit": "a0e4a60f5ccb7f9a1a6bcf7432827cc3d95090a0",
+  "archiveSHA256": "1e9740b81de20d65424b3b4fa7707d895b65f96f6e8f5881ea6a559fbd2c762e",
+  "sourceSHA256": "c8f25c18281cd41a11825f6272c53cffb37db0094641c307751dac146d2f5686",
+  "initialBrowserReportSHA256": "b88b307a652937715386fcf3ac08b7a3f15c7b4d23ee4868c129a8c5fbd6d1b2",
+  "scope": "Read-only actual click/hit-test on frozen artifact. No DOM/CSS/force-click injection. Diagnostic shorter click timeout does not replace original30s failure.",
+  "rows": [
+    {
+      "width": 390,
+      "events": [],
+      "pageErrors": [],
+      "blocked": [],
+      "geometry": {
+        "scrollY": 535,
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "clear": {
+          "selector": "[data-columns-search-clear]",
+          "text": "Clear search",
+          "rect": {
+            "left": 230.15625,
+            "right": 357.390625,
+            "top": 454,
+            "bottom": 510,
+            "width": 127.234375,
+            "height": 56
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "display": "block",
+            "color": "rgb(245, 245, 247)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "flex": "0 1 auto",
+            "right": "auto",
+            "top": "auto"
+          },
+          "center": {
+            "x": 293.7734375,
+            "y": 482
+          },
+          "hitStack": [
+            {
+              "tag": "BUTTON",
+              "class": "columns-search-submit",
+              "text": "Search"
+            },
+            {
+              "tag": "BUTTON",
+              "class": "columns-search-clear",
+              "text": "Clear search"
+            },
+            {
+              "tag": "DIV",
+              "class": "columns-search-row",
+              "text": "SearchClear search"
+            },
+            {
+              "tag": "FORM",
+              "class": "columns-search",
+              "text": "Search columnsSearchClear search"
+            },
+            {
+              "tag": "DIV",
+              "class": "container",
+              "text": "Taiwan Criminal Litigation ColumnsSearch columnsSearchClear search1 resultBrowse by topic: Litigatio"
+            },
+            {
+              "tag": "SECTION",
+              "class": "section section--light ColumnsGrid_root__NaR_A",
+              "text": "Taiwan Criminal Litigation ColumnsSearch columnsSearchClear search1 resultBrowse by topic: Litigatio"
+            },
+            {
+              "tag": "DIV",
+              "class": "EnColumns_columns__s166g",
+              "text": "EmploymentInternational marriage & divorceCriminal litigationLitigation & disputesVisas & residenceI"
+            },
+            {
+              "tag": "DIV",
+              "class": "EnPage_root__pNuVu EnPagesV2_v2__Mntxj",
+              "text": "EmploymentInternational marriage & divorceCriminal litigationLitigation & disputesVisas & residenceI"
+            }
+          ]
+        },
+        "submit": {
+          "selector": "[data-columns-search] button[type=\"submit\"]",
+          "text": "Search",
+          "rect": {
+            "left": 257.046875,
+            "right": 351.390625,
+            "top": 460,
+            "bottom": 504,
+            "width": 94.34375,
+            "height": 44
+          },
+          "style": {
+            "position": "absolute",
+            "zIndex": "auto",
+            "display": "block",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgba(255, 255, 255, 0.12)",
+            "flex": "0 1 auto",
+            "right": "6px",
+            "top": "6px"
+          },
+          "center": {
+            "x": 304.21875,
+            "y": 482
+          },
+          "hitStack": [
+            {
+              "tag": "BUTTON",
+              "class": "columns-search-submit",
+              "text": "Search"
+            },
+            {
+              "tag": "BUTTON",
+              "class": "columns-search-clear",
+              "text": "Clear search"
+            },
+            {
+              "tag": "DIV",
+              "class": "columns-search-row",
+              "text": "SearchClear search"
+            },
+            {
+              "tag": "FORM",
+              "class": "columns-search",
+              "text": "Search columnsSearchClear search"
+            },
+            {
+              "tag": "DIV",
+              "class": "container",
+              "text": "Taiwan Criminal Litigation ColumnsSearch columnsSearchClear search1 resultBrowse by topic: Litigatio"
+            },
+            {
+              "tag": "SECTION",
+              "class": "section section--light ColumnsGrid_root__NaR_A",
+              "text": "Taiwan Criminal Litigation ColumnsSearch columnsSearchClear search1 resultBrowse by topic: Litigatio"
+            },
+            {
+              "tag": "DIV",
+              "class": "EnColumns_columns__s166g",
+              "text": "EmploymentInternational marriage & divorceCriminal litigationLitigation & disputesVisas & residenceI"
+            },
+            {
+              "tag": "DIV",
+              "class": "EnPage_root__pNuVu EnPagesV2_v2__Mntxj",
+              "text": "EmploymentInternational marriage & divorceCriminal litigationLitigation & disputesVisas & residenceI"
+            }
+          ]
+        },
+        "row": {
+          "selector": ".columns-search-row",
+          "text": "SearchClear search",
+          "rect": {
+            "left": 17.59375,
+            "right": 357.390625,
+            "top": 454,
+            "bottom": 510,
+            "width": 339.796875,
+            "height": 56
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "display": "flex",
+            "color": "rgb(245, 245, 247)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "flex": "0 1 auto",
+            "right": "0px",
+            "top": "0px"
+          },
+          "center": {
+            "x": 187.4921875,
+            "y": 482
+          },
+          "hitStack": [
+            {
+              "tag": "INPUT",
+              "class": "columns-search-input",
+              "text": ""
+            },
+            {
+              "tag": "DIV",
+              "class": "columns-search-row",
+              "text": "SearchClear search"
+            },
+            {
+              "tag": "FORM",
+              "class": "columns-search",
+              "text": "Search columnsSearchClear search"
+            },
+            {
+              "tag": "DIV",
+              "class": "container",
+              "text": "Taiwan Criminal Litigation ColumnsSearch columnsSearchClear search1 resultBrowse by topic: Litigatio"
+            },
+            {
+              "tag": "SECTION",
+              "class": "section section--light ColumnsGrid_root__NaR_A",
+              "text": "Taiwan Criminal Litigation ColumnsSearch columnsSearchClear search1 resultBrowse by topic: Litigatio"
+            },
+            {
+              "tag": "DIV",
+              "class": "EnColumns_columns__s166g",
+              "text": "EmploymentInternational marriage & divorceCriminal litigationLitigation & disputesVisas & residenceI"
+            },
+            {
+              "tag": "DIV",
+              "class": "EnPage_root__pNuVu EnPagesV2_v2__Mntxj",
+              "text": "EmploymentInternational marriage & divorceCriminal litigationLitigation & disputesVisas & residenceI"
+            },
+            {
+              "tag": "MAIN",
+              "class": "",
+              "text": "EmploymentInternational marriage & divorceCriminal litigationLitigation & disputesVisas & residenceI"
+            }
+          ]
+        }
+      },
+      "intersection": {
+        "width": 94.34375,
+        "height": 44
+      },
+      "screenshot": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/diagnostics/en-clear/en-clear-390-viewport.png",
+      "formScreenshot": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/diagnostics/en-clear/en-clear-390-form.png",
+      "clearClick": "failed",
+      "clickError": "locator.click: Timeout 2500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-columns-search-clear]')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"columns-search-clear\" data-columns-search-clear=\"true\">Clear search</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"submit\" class=\"columns-search-submit\">Search</button> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <button type=\"submit\" class=\"columns-search-submit\">Search</button> intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a href=\"#columns-topic-family\" class=\"EnPagesV2_localNavLink__euN_n\">International marriage & divorce</a> from <div class=\"EnColumns_navSlot___vpRt\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"submit\" class=\"columns-search-submit\">Search</button> intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a href=\"#columns-topic-family\" class=\"EnPagesV2_localNavLink__euN_n\">International marriage & divorce</a> from <div class=\"EnColumns_navSlot___vpRt\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+      "queryAfterClick": "A Mortgage Letter Before the Water Was Connected: Taiwan's Presale Handover Dispute",
+      "inputAfterClick": "A Mortgage Letter Before the Water Was Connected: Taiwan's Presale Handover Dispute"
+    },
+    {
+      "width": 1440,
+      "events": [],
+      "pageErrors": [],
+      "blocked": [],
+      "geometry": {
+        "scrollY": 1311,
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "clear": {
+          "selector": "[data-columns-search-clear]",
+          "text": "Clear search",
+          "rect": {
+            "left": 745.265625,
+            "right": 872.5,
+            "top": 471.28125,
+            "bottom": 535.28125,
+            "width": 127.234375,
+            "height": 64
+          },
+          "style": {
+            "position": "static",
+            "zIndex": "auto",
+            "display": "block",
+            "color": "rgb(245, 245, 247)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "flex": "0 1 auto",
+            "right": "auto",
+            "top": "auto"
+          },
+          "center": {
+            "x": 808.8828125,
+            "y": 503.28125
+          },
+          "hitStack": [
+            {
+              "tag": "BUTTON",
+              "class": "columns-search-submit",
+              "text": "Search"
+            },
+            {
+              "tag": "BUTTON",
+              "class": "columns-search-clear",
+              "text": "Clear search"
+            },
+            {
+              "tag": "DIV",
+              "class": "columns-search-row",
+              "text": "SearchClear search"
+            },
+            {
+              "tag": "FORM",
+              "class": "columns-search",
+              "text": "Search columnsSearchClear search"
+            },
+            {
+              "tag": "DIV",
+              "class": "container",
+              "text": "Taiwan Criminal Litigation ColumnsSearch columnsSearchClear search1 resultBrowse by topic: Litigatio"
+            },
+            {
+              "tag": "SECTION",
+              "class": "section section--light ColumnsGrid_root__NaR_A",
+              "text": "Taiwan Criminal Litigation ColumnsSearch columnsSearchClear search1 resultBrowse by topic: Litigatio"
+            },
+            {
+              "tag": "DIV",
+              "class": "EnColumns_columns__s166g",
+              "text": "EmploymentInternational marriage & divorceCriminal litigationLitigation & disputesVisas & residenceI"
+            },
+            {
+              "tag": "DIV",
+              "class": "EnPage_root__pNuVu EnPagesV2_v2__Mntxj",
+              "text": "EmploymentInternational marriage & divorceCriminal litigationLitigation & disputesVisas & residenceI"
+            }
+          ]
+        },
+        "submit": {
+          "selector": "[data-columns-search] button[type=\"submit\"]",
+          "text": "Search",
+          "rect": {
+            "left": 768.15625,
+            "right": 862.5,
+            "top": 481.28125,
+            "bottom": 525.28125,
+            "width": 94.34375,
+            "height": 44
+          },
+          "style": {
+            "position": "absolute",
+            "zIndex": "auto",
+            "display": "block",
+            "color": "rgb(255, 255, 255)",
+            "backgroundColor": "rgba(255, 255, 255, 0.12)",
+            "flex": "0 1 auto",
+            "right": "10px",
+            "top": "10px"
+          },
+          "center": {
+            "x": 815.328125,
+            "y": 503.28125
+          },
+          "hitStack": [
+            {
+              "tag": "BUTTON",
+              "class": "columns-search-submit",
+              "text": "Search"
+            },
+            {
+              "tag": "BUTTON",
+              "class": "columns-search-clear",
+              "text": "Clear search"
+            },
+            {
+              "tag": "DIV",
+              "class": "columns-search-row",
+              "text": "SearchClear search"
+            },
+            {
+              "tag": "FORM",
+              "class": "columns-search",
+              "text": "Search columnsSearchClear search"
+            },
+            {
+              "tag": "DIV",
+              "class": "container",
+              "text": "Taiwan Criminal Litigation ColumnsSearch columnsSearchClear search1 resultBrowse by topic: Litigatio"
+            },
+            {
+              "tag": "SECTION",
+              "class": "section section--light ColumnsGrid_root__NaR_A",
+              "text": "Taiwan Criminal Litigation ColumnsSearch columnsSearchClear search1 resultBrowse by topic: Litigatio"
+            },
+            {
+              "tag": "DIV",
+              "class": "EnColumns_columns__s166g",
+              "text": "EmploymentInternational marriage & divorceCriminal litigationLitigation & disputesVisas & residenceI"
+            },
+            {
+              "tag": "DIV",
+              "class": "EnPage_root__pNuVu EnPagesV2_v2__Mntxj",
+              "text": "EmploymentInternational marriage & divorceCriminal litigationLitigation & disputesVisas & residenceI"
+            }
+          ]
+        },
+        "row": {
+          "selector": ".columns-search-row",
+          "text": "SearchClear search",
+          "rect": {
+            "left": 112.5,
+            "right": 872.5,
+            "top": 471.28125,
+            "bottom": 535.28125,
+            "width": 760,
+            "height": 64
+          },
+          "style": {
+            "position": "relative",
+            "zIndex": "auto",
+            "display": "flex",
+            "color": "rgb(245, 245, 247)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "flex": "0 1 auto",
+            "right": "0px",
+            "top": "0px"
+          },
+          "center": {
+            "x": 492.5,
+            "y": 503.28125
+          },
+          "hitStack": [
+            {
+              "tag": "INPUT",
+              "class": "columns-search-input",
+              "text": ""
+            },
+            {
+              "tag": "DIV",
+              "class": "columns-search-row",
+              "text": "SearchClear search"
+            },
+            {
+              "tag": "FORM",
+              "class": "columns-search",
+              "text": "Search columnsSearchClear search"
+            },
+            {
+              "tag": "DIV",
+              "class": "container",
+              "text": "Taiwan Criminal Litigation ColumnsSearch columnsSearchClear search1 resultBrowse by topic: Litigatio"
+            },
+            {
+              "tag": "SECTION",
+              "class": "section section--light ColumnsGrid_root__NaR_A",
+              "text": "Taiwan Criminal Litigation ColumnsSearch columnsSearchClear search1 resultBrowse by topic: Litigatio"
+            },
+            {
+              "tag": "DIV",
+              "class": "EnColumns_columns__s166g",
+              "text": "EmploymentInternational marriage & divorceCriminal litigationLitigation & disputesVisas & residenceI"
+            },
+            {
+              "tag": "DIV",
+              "class": "EnPage_root__pNuVu EnPagesV2_v2__Mntxj",
+              "text": "EmploymentInternational marriage & divorceCriminal litigationLitigation & disputesVisas & residenceI"
+            },
+            {
+              "tag": "MAIN",
+              "class": "",
+              "text": "EmploymentInternational marriage & divorceCriminal litigationLitigation & disputesVisas & residenceI"
+            }
+          ]
+        }
+      },
+      "intersection": {
+        "width": 94.34375,
+        "height": 44
+      },
+      "screenshot": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/diagnostics/en-clear/en-clear-1440-viewport.png",
+      "formScreenshot": "/Users/son7/tseng-all-language-columns-20261025/release-20261029-next48/qa-prep/diagnostics/en-clear/en-clear-1440-form.png",
+      "clearClick": "failed",
+      "clickError": "locator.click: Timeout 2500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-columns-search-clear]')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"columns-search-clear\" data-columns-search-clear=\"true\">Clear search</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"submit\" class=\"columns-search-submit\">Search</button> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <button type=\"submit\" class=\"columns-search-submit\">Search</button> intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a href=\"#columns-topic-visa\" class=\"EnPagesV2_localNavLink__euN_n\">Visas & residence</a> from <div class=\"EnColumns_navSlot___vpRt\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"submit\" class=\"columns-search-submit\">Search</button> intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a href=\"#columns-topic-visa\" class=\"EnPagesV2_localNavLink__euN_n\">Visas & residence</a> from <div class=\"EnColumns_navSlot___vpRt\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+      "queryAfterClick": "A Mortgage Letter Before the Water Was Connected: Taiwan's Presale Handover Dispute",
+      "inputAfterClick": "A Mortgage Letter Before the Water Was Connected: Taiwan's Presale Handover Dispute"
+    }
+  ],
+  "completedAtUTC": "2026-10-29T01:07:45.278Z"
+}

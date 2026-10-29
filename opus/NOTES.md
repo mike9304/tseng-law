@@ -933,3 +933,4 @@
 - 10-29 19:56 대기: 19:46 이후 변화는 HANDOFF-air 시각뿐(마지막 줄 10-26 03:47). HANDOFF-studio 10-24 10:16, STATUS 10-20 21:45 그대로, 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. 최신 브리지 T12 S3는 fa7d3407 소유. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
 - 10-29 20:06 대기: 19:56 이후 변화는 HANDOFF-air 시각뿐(마지막 줄 10-26 03:47). HANDOFF-studio 10-24 10:16, STATUS 10-20 21:45 그대로, 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. 최신 브리지 T12 S3는 fa7d3407 소유. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
 - 10-29 20:16 대기: 20:06 이후 변화는 HANDOFF-air 시각뿐(마지막 줄 10-26 03:47). HANDOFF-studio 10-24 10:16, STATUS 10-20 21:45 그대로, 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. 최신 브리지 T12 S3는 fa7d3407 소유. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.
+- 10-29 20:26 대기: 20:16 이후 변화는 HANDOFF-air 시각뿐(마지막 줄 10-26 03:47). HANDOFF-studio 10-24 10:16, STATUS 10-20 21:45 그대로, 새 FACTS·Astra 채점·이 레인 Bot 검수 없음. 최신 브리지 T12 S3는 fa7d3407 소유. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기.

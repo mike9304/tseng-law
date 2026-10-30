@@ -1543,18 +1543,23 @@ export const COUNTRY_COLUMN_FILES_20261029 = {
 export const COUNTRY_COLUMN_FILES_20261030 = {
   'ko': [
     '969-taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency.md', // ship-20261030-G1
+    '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
   ],
   'zh-hant': [
     '969-taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency.md', // ship-20261030-G1
+    '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
   ],
   'ja': [
     '969-taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency.md', // ship-20261030-G1
+    '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
   ],
   'en': [
     '969-taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency.md', // ship-20261030-G1
+    '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
   ],
   'es': [
     '969-taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency.md', // ship-20261030-G1
+    '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
   ],
 } as const;
 

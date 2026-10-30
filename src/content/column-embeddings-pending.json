@@ -2925,6 +2925,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims"
     }
   ]
 }

@@ -41,6 +41,8 @@ describe('home columns lead with the latest publication batch', () => {
         expect(imageAlts.every((alt) => alt.trim().length > 0)).toBe(true);
       }
     },
+    // Renders the full locale corpus; zh-hant exceeds the 5 s default under machine load (4.2 s idle).
+    30_000,
   );
 
   it('Japanese gallery uses publication dates, deduplicates pins and keeps the remaining curated picks', () => {

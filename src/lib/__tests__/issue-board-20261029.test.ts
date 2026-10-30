@@ -17,10 +17,10 @@ import { COLUMN_TOPICS } from '@/lib/column-topics';
 
 /** Expected market allocation. The lane ships reviewed pieces one at a time. */
 const EXPECTED: Partial<Record<IssueBoardLocale, number[]>> = {
-  ko: [1, 2],
-  ja: [3, 4],
-  en: [5, 6],
-  vi: [7, 8],
+  ko: [1, 2, 9],
+  ja: [3, 4, 10],
+  en: [5, 6, 11, 12],
+  vi: [7, 8, 13, 14],
 };
 
 function issueFiles(locale: IssueBoardLocale): string[] {

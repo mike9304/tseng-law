@@ -2949,6 +2949,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-subsidiary-capital-increase-remittance-differs-approved-amount"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-subsidiary-capital-increase-remittance-differs-approved-amount"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-subsidiary-capital-increase-remittance-differs-approved-amount"
     }
   ]
 }

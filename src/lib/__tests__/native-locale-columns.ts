@@ -1545,26 +1545,31 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
     '969-taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency.md', // ship-20261030-G1
     '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
     '971-taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid.md', // ship-20261030-G3
+    '972-taiwan-subsidiary-capital-increase-remittance-differs-approved-amount.md', // ship-20261030-G4
   ],
   'zh-hant': [
     '969-taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency.md', // ship-20261030-G1
     '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
     '971-taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid.md', // ship-20261030-G3
+    '972-taiwan-subsidiary-capital-increase-remittance-differs-approved-amount.md', // ship-20261030-G4
   ],
   'ja': [
     '969-taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency.md', // ship-20261030-G1
     '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
     '971-taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid.md', // ship-20261030-G3
+    '972-taiwan-subsidiary-capital-increase-remittance-differs-approved-amount.md', // ship-20261030-G4
   ],
   'en': [
     '969-taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency.md', // ship-20261030-G1
     '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
     '971-taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid.md', // ship-20261030-G3
+    '972-taiwan-subsidiary-capital-increase-remittance-differs-approved-amount.md', // ship-20261030-G4
   ],
   'es': [
     '969-taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency.md', // ship-20261030-G1
     '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
     '971-taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid.md', // ship-20261030-G3
+    '972-taiwan-subsidiary-capital-increase-remittance-differs-approved-amount.md', // ship-20261030-G4
   ],
 } as const;
 

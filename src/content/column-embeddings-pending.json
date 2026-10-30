@@ -2865,6 +2865,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-union-agreement-collective-contract-individual-employment-effect"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-union-agreement-collective-contract-individual-employment-effect"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-union-agreement-collective-contract-individual-employment-effect"
     }
   ]
 }

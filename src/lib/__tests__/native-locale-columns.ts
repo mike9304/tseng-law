@@ -1504,18 +1504,23 @@ export const COUNTRY_COLUMN_FILES_20261028 = {
 export const COUNTRY_COLUMN_FILES_20261029 = {
   'ko': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
+    '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
   ],
   'zh-hant': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
+    '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
   ],
   'ja': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
+    '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
   ],
   'en': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
+    '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
   ],
   'es': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
+    '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
   ],
 } as const;
 

@@ -708,6 +708,12 @@ export const TRAFFIC_SCENE_COLUMN_FILES_20261021 = {
   en: ['641-taiwan-right-turn-crosswalk-pedestrian-dashcam.md'],
 } as const;
 
+export const TRAFFIC_SCENE_COLUMN_FILES_20261031 = {
+  ko: ['975-taiwan-stop-line-reversing-scooter-dashcam.md'],
+  'zh-hant': ['975-taiwan-stop-line-reversing-scooter-dashcam.md'],
+  en: ['975-taiwan-stop-line-reversing-scooter-dashcam.md'],
+} as const;
+
 /** Native audience columns published 2026-10-15. */
 export const COUNTRY_COLUMN_FILES_20261015 = {
   ko: [
@@ -1616,6 +1622,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261014 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261015 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261021 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((TRAFFIC_SCENE_COLUMN_FILES_20261031 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((NEXT_TOPIC_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((AIR_COLUMN_FILES_20261011 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((GAP_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1638,7 +1645,7 @@ export function expertiseSlugsFor(locale: string): string[] {
 }
 
 /**
- * Archive lead of `locale`, newest first by date through 2026-10-30, with same-day
+ * Archive lead of `locale`, newest first by date through 2026-10-31, with same-day
  * files in source order. Use this for newest-first ordering assertions;
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
@@ -1664,6 +1671,8 @@ export function archiveLeadSlugsFor(locale: string): string[] {
     ...((CASE_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((MARKET_EXPANSION_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ];
+  const day20261031: readonly string[] =
+    (TRAFFIC_SCENE_COLUMN_FILES_20261031 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261024: readonly string[] = [
     ...(CASE_LOCALE_ARC_PUBLICATION_DATES[locale] ? [] : ARC_VISA_COLUMN_FILES_20261024[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261024 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1739,7 +1748,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
   const newestSlugs = [...newest].sort().map(slugOf);
   const newerSlugs = [...newer].sort().map(slugOf);
   const head = [...day20261023].sort().map(slugOf).concat([...day20261022].sort().map(slugOf), [...day20261021].sort().map(slugOf), [...day20261020].sort().map(slugOf), [...day20261018].sort().map(slugOf), [...day20261016].sort().map(slugOf), [...day20261015].sort().map(slugOf), [...day20261014].sort().map(slugOf), [...day20261013].sort().map(slugOf), [...day20261011].sort().map(slugOf), [...day20261010].sort().map(slugOf), [...day20261009].sort().map(slugOf), [...day20261008].sort().map(slugOf), day20261007Slugs, day20261006Slugs, day20261005Slugs, currentSlugs, latestSlugs, newestSlugs, newerSlugs);
-  const latestHead = [...day20261030].sort().map(slugOf).concat([...day20261029].sort().map(slugOf), [...day20261028].sort().map(slugOf), [...day20261027].sort().map(slugOf), [...day20261026].sort().map(slugOf), [...day20261025].sort().map(slugOf), [...day20261024].sort().map(slugOf), head);
+  const latestHead = [...day20261031].sort().map(slugOf).concat([...day20261030].sort().map(slugOf), [...day20261029].sort().map(slugOf), [...day20261028].sort().map(slugOf), [...day20261027].sort().map(slugOf), [...day20261026].sort().map(slugOf), [...day20261025].sort().map(slugOf), [...day20261024].sort().map(slugOf), head);
   return [...latestHead, ...expertiseSlugsFor(locale).filter((slug) => !latestHead.includes(slug))];
 }
 
@@ -1759,6 +1768,7 @@ export function archiveLeadPublicationDate(slug: string, locale: string): string
   if (Object.values(COUNTRY_COLUMN_FILES_20261023).flat().map(slugOf).includes(slug)) return '2026-10-23';
   const day20261022 = [...Object.values(COUNTRY_COLUMN_FILES_20261022), ...Object.values(taxAccountingFilesPublishedOn('2026-10-22')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf);
   if (day20261022.includes(slug)) return '2026-10-22';
+  if (Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261031).flat().map(slugOf).includes(slug)) return '2026-10-31';
   if (Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021).flat().map(slugOf).includes(slug)) return '2026-10-21';
   if (Object.values(COUNTRY_COLUMN_FILES_20261020).flat().map(slugOf).includes(slug)) return '2026-10-20';
   if (Object.values(COUNTRY_COLUMN_FILES_20261018).flat().map(slugOf).includes(slug)) return '2026-10-18';
@@ -1849,6 +1859,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261014),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261015),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021),
+    ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261031),
     ...Object.values(NEXT_TOPIC_COLUMN_FILES_20261010),
     ...Object.values(AIR_COLUMN_FILES_20261011),
     ...Object.values(GAP_COLUMN_FILES_20261010),

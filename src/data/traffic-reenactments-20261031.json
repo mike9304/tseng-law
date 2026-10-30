@@ -1,0 +1,41 @@
+{
+  "column/ko/taiwan-stop-line-reversing-scooter-dashcam": {
+    "id": "reverse-stopline-dashcam-reenactment-20261031-v1-ko",
+    "src": "/videos/columns/reverse-stopline-dashcam-reenactment-20261031-v1-ko.mp4",
+    "poster": "/images/column-videos/reverse-stopline-dashcam-reenactment-20261031-v1-ko.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "정지선 앞 후진차와 오토바이의 접촉",
+    "description": "별도로 생성한 네 장면이 정차, 후진등, 후퇴와 사고 직후의 차량 위치를 설명합니다. 장면 간 거리와 시간은 연속된 실측값이 아니며 실제 사고의 과실이나 속도를 보여 주지 않습니다.",
+    "disclosure": "AI로 제작한 가상 재연",
+    "loop": false,
+    "durationSeconds": 50,
+    "sceneCount": 4
+  },
+  "column/zh-hant/taiwan-stop-line-reversing-scooter-dashcam": {
+    "id": "reverse-stopline-dashcam-reenactment-20261031-v1-zh-hant",
+    "src": "/videos/columns/reverse-stopline-dashcam-reenactment-20261031-v1-zh-hant.mp4",
+    "poster": "/images/column-videos/reverse-stopline-dashcam-reenactment-20261031-v1-zh-hant.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "停止線前倒車與機車碰觸的虛構再現",
+    "description": "四段分別生成的畫面說明停車、倒車燈、後退與碰觸後的位置。各段的距離和時間並非連續實測值，不能據以判斷真實事故的肇責或車速。",
+    "disclosure": "AI製作的虛構再現",
+    "loop": false,
+    "durationSeconds": 50,
+    "sceneCount": 4
+  },
+  "column/en/taiwan-stop-line-reversing-scooter-dashcam": {
+    "id": "reverse-stopline-dashcam-reenactment-20261031-v1-en",
+    "src": "/videos/columns/reverse-stopline-dashcam-reenactment-20261031-v1-en.mp4",
+    "poster": "/images/column-videos/reverse-stopline-dashcam-reenactment-20261031-v1-en.jpg",
+    "width": 1280,
+    "height": 720,
+    "title": "Fictional car reversing toward a waiting scooter",
+    "description": "Four separately generated shots illustrate the stop, reverse lamps, backward movement and vehicle positions afterward. Distances and times across shots are not continuous measurements and cannot establish speed or fault in a real collision.",
+    "disclosure": "AI-generated fictional reenactment",
+    "loop": false,
+    "durationSeconds": 50,
+    "sceneCount": 4
+  }
+}

@@ -2985,6 +2985,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-resale-home-loan-shortfall-cash-difference-rescission"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-stop-line-reversing-scooter-dashcam"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-stop-line-reversing-scooter-dashcam"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-stop-line-reversing-scooter-dashcam"
     }
   ]
 }

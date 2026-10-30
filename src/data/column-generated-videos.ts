@@ -3,6 +3,7 @@ import trafficActionReenactments20261015 from './traffic-action-reenactments-202
 import trafficReenactments20261014 from './traffic-reenactments-20261014.json';
 import trafficReenactments20261015 from './traffic-reenactments-20261015.json';
 import trafficReenactments20261021 from './traffic-reenactments-20261021.json';
+import trafficReenactments20261031 from './traffic-reenactments-20261031.json';
 import massageShoulderReleaseCaptions from './massage-shoulder-release-video-captions.json';
 import inheritanceRecordEnvelopeCaptions from './inheritance-record-envelope-video-captions.json';
 import familyDocumentSortingCaptions from './family-document-sorting-video-captions.json';
@@ -100,6 +101,7 @@ const REVIEWED_COLUMN_VIDEOS: Readonly<Record<string, ColumnGeneratedVideoAsset>
   ...trafficReenactments20261014,
   ...trafficReenactments20261015,
   ...trafficReenactments20261021,
+  ...trafficReenactments20261031,
   ...trafficActionReenactments20261015,
   ...trafficActionNextReenactments20261015,
   "column/zh-hant/taiwan-manufacturing-ai-data-trade-secrets": {

@@ -1,0 +1,82 @@
+{
+  "runFolder": "/Users/son7/tseng-traffic-lane/runs/20261031-0447",
+  "model": "grok-4.7",
+  "tool": "reference_to_video",
+  "status": "generated-and-visually-reviewed",
+  "acceptedScenes": [
+    {
+      "stem": "reverse-01-approach",
+      "durationSeconds": 10,
+      "sourceSha256": "063663896be0c60d2df8a75fbed739ba4d92791e54908c39215f48cc585a60f3",
+      "receipt": "/Users/son7/tseng-traffic-lane/runs/20261031-0447/qa/reverse-01-approach-generation.json",
+      "normalizedSha256": "b87a7901aed3daabc97b5376f94c98f28fd36718e8c9c3f9c4154e10f2f0223f"
+    },
+    {
+      "stem": "reverse-04-aftermath",
+      "durationSeconds": 15,
+      "sourceSha256": "0375433c24017c2ee7a255a49940f137e3f2259613eb742a65473c973041be18",
+      "receipt": "/Users/son7/tseng-traffic-lane/runs/20261031-0447/qa/reverse-04-aftermath-generation.json",
+      "normalizedSha256": "e83b7d4aba0ba74f8e14d4714655d13454c89f911f50422916dba858b9ddf45f"
+    },
+    {
+      "stem": "reverse-02-contact-v2",
+      "durationSeconds": 10,
+      "sourceSha256": "3ae9dd4b09e9c7aca004e837aab056ecf871b37e8f01e17101ed5e717089a447",
+      "receipt": "/Users/son7/tseng-traffic-lane/runs/20261031-0447/qa/reverse-02-contact-v2-generation.json",
+      "normalizedSha256": "38916a47aa42a2656a5c78417300a97d334465a159d2112eb0c4dc9f44810764"
+    },
+    {
+      "stem": "reverse-03-after-contact-v3",
+      "durationSeconds": 15,
+      "sourceSha256": "5c126cd1fd726c984408fb32f64c1365e08eafe6fa1a19dbcaefca303b9d8e25",
+      "receipt": "/Users/son7/tseng-traffic-lane/runs/20261031-0447/qa/reverse-03-after-contact-v3-generation.json",
+      "normalizedSha256": "38ac33fe1b417e654e5eae7fdf4747f360a27f9a03a146f39a0c8237cae01252"
+    }
+  ],
+  "rejectedJobs": [
+    "reverse-02-reversing",
+    "reverse-03-contact-replay",
+    "reverse-03-replay-v2"
+  ],
+  "films": [
+    {
+      "locale": "ko",
+      "repoPath": "public/videos/columns/reverse-stopline-dashcam-reenactment-20261031-v1-ko.mp4",
+      "sha256": "e028a36db261fd67c5d3336a7fb7cadeac5e2a732d8314f0a1674d11ff32a678",
+      "posterRepoPath": "public/images/column-videos/reverse-stopline-dashcam-reenactment-20261031-v1-ko.jpg",
+      "posterSha256": "f8cbf762e17746e5c0de75df699f87d2ee62f754cf676dfa9fd7f0c5a2e72d76",
+      "durationSeconds": 50.0,
+      "bytes": 11683562,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 1200
+    },
+    {
+      "locale": "zh-hant",
+      "repoPath": "public/videos/columns/reverse-stopline-dashcam-reenactment-20261031-v1-zh-hant.mp4",
+      "sha256": "0a60024223c9454d6fe05c4fdaca90aa631929b11ebc11812ef077995c7180d1",
+      "posterRepoPath": "public/images/column-videos/reverse-stopline-dashcam-reenactment-20261031-v1-zh-hant.jpg",
+      "posterSha256": "f0e961c5e40a7e27095970975ef7a59986afe956d0aecc0c60a1aad19dc3efb1",
+      "durationSeconds": 50.0,
+      "bytes": 11685472,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 1200
+    },
+    {
+      "locale": "en",
+      "repoPath": "public/videos/columns/reverse-stopline-dashcam-reenactment-20261031-v1-en.mp4",
+      "sha256": "64a1141a2db43c629e7c0fce2e1c7f183c6f1db3fe768a203a65706901b4ff96",
+      "posterRepoPath": "public/images/column-videos/reverse-stopline-dashcam-reenactment-20261031-v1-en.jpg",
+      "posterSha256": "e9708efda66d1f9fa58fa7aab198e424297177038ceb5ac30a38a2b775d8176a",
+      "durationSeconds": 50.0,
+      "bytes": 11691475,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 1200
+    }
+  ]
+}

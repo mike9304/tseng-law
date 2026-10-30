@@ -1506,26 +1506,31 @@ export const COUNTRY_COLUMN_FILES_20261029 = {
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
     '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
+    '967-taiwan-pedestrian-public-facility-injury-state-compensation-abroad.md', // ship-20261029-G5
   ],
   'zh-hant': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
     '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
+    '967-taiwan-pedestrian-public-facility-injury-state-compensation-abroad.md', // ship-20261029-G5
   ],
   'ja': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
     '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
+    '967-taiwan-pedestrian-public-facility-injury-state-compensation-abroad.md', // ship-20261029-G5
   ],
   'en': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
     '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
+    '967-taiwan-pedestrian-public-facility-injury-state-compensation-abroad.md', // ship-20261029-G5
   ],
   'es': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
     '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
+    '967-taiwan-pedestrian-public-facility-injury-state-compensation-abroad.md', // ship-20261029-G5
   ],
 } as const;
 

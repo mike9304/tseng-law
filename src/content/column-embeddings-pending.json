@@ -2889,6 +2889,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-phone-number-identity-theft-aiding-fraud-suspect"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-pedestrian-public-facility-injury-state-compensation-abroad"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-pedestrian-public-facility-injury-state-compensation-abroad"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-pedestrian-public-facility-injury-state-compensation-abroad"
     }
   ]
 }

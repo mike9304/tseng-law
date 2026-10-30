@@ -2961,6 +2961,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-subsidiary-capital-increase-remittance-differs-approved-amount"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-resident-tax-overseas-parents-children-dependent-exemption-documents"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-resident-tax-overseas-parents-children-dependent-exemption-documents"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-resident-tax-overseas-parents-children-dependent-exemption-documents"
     }
   ]
 }

@@ -5,6 +5,7 @@
  */
 export const TAX_ACCOUNTING_COLUMN_FILES = {
   ko: [
+    '973-taiwan-resident-tax-overseas-parents-children-dependent-exemption-documents.md', // ship-20261030-G5
     '946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md', // ship-20261026-G1
     '662-taiwan-departure-income-tax-agent-article-72.md', // ship-20261023-G4
     '646-taiwan-mixed-technology-contract-source-contribution-evidence.md',
@@ -37,6 +38,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
   ] as string[],
   ja: [
+    '973-taiwan-resident-tax-overseas-parents-children-dependent-exemption-documents.md', // ship-20261030-G5
     '946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md', // ship-20261026-G1
     '662-taiwan-departure-income-tax-agent-article-72.md', // ship-20261023-G4
     '646-taiwan-mixed-technology-contract-source-contribution-evidence.md',
@@ -69,6 +71,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '384-taiwan-cross-border-e-services-income-tax-foreign-platforms.md',
   ] as string[],
   en: [
+    '973-taiwan-resident-tax-overseas-parents-children-dependent-exemption-documents.md', // ship-20261030-G5
     '946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md', // ship-20261026-G1
     '662-taiwan-departure-income-tax-agent-article-72.md', // ship-20261023-G4
     '646-taiwan-mixed-technology-contract-source-contribution-evidence.md',
@@ -103,6 +106,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
     '385-taiwan-cfc-rules-vietnamese-subsidiary-incentives.md',
   ] as string[],
   'zh-hant': [
+    '973-taiwan-resident-tax-overseas-parents-children-dependent-exemption-documents.md', // ship-20261030-G5
     '946-taiwan-crypto-tax-audit-letter-exchange-location-cost-basis.md', // ship-20261026-G1
     '662-taiwan-departure-income-tax-agent-article-72.md', // ship-20261023-G4
     '646-taiwan-mixed-technology-contract-source-contribution-evidence.md',
@@ -138,6 +142,7 @@ export const TAX_ACCOUNTING_COLUMN_FILES = {
 
 /** Board columns published after 2026-10-06, by file-number prefix; every other board file is 2026-10-06. */
 const LATER_PUBLICATION_DATES: Readonly<Record<string, string>> = {
+  '973': '2026-10-30',
   '946': '2026-10-26',
   '662': '2026-10-23',
   '646': '2026-10-22',

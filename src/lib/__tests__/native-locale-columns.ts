@@ -1570,6 +1570,7 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
     '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
     '971-taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid.md', // ship-20261030-G3
     '972-taiwan-subsidiary-capital-increase-remittance-differs-approved-amount.md', // ship-20261030-G4
+    '973-taiwan-resident-tax-overseas-parents-children-dependent-exemption-documents.md', // ship-20261030-G5
   ],
 } as const;
 
@@ -1637,8 +1638,10 @@ export function expertiseSlugsFor(locale: string): string[] {
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
-  const day20261030: readonly string[] =
-    (COUNTRY_COLUMN_FILES_20261030 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
+  const day20261030: readonly string[] = [
+    ...((COUNTRY_COLUMN_FILES_20261030 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...(taxAccountingFilesPublishedOn('2026-10-30')[locale] ?? []),
+  ];
   const day20261029: readonly string[] =
     (COUNTRY_COLUMN_FILES_20261029 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261028: readonly string[] =
@@ -1737,7 +1740,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
 
 /** Locale is explicit because translated cases have a later publication date than their originals. */
 export function archiveLeadPublicationDate(slug: string, locale: string): string {
-  if (Object.values(COUNTRY_COLUMN_FILES_20261030).flat().map(slugOf).includes(slug)) return '2026-10-30';
+  if ([...Object.values(COUNTRY_COLUMN_FILES_20261030), ...Object.values(taxAccountingFilesPublishedOn('2026-10-30')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf).includes(slug)) return '2026-10-30';
   if (Object.values(COUNTRY_COLUMN_FILES_20261029).flat().map(slugOf).includes(slug)) return '2026-10-29';
   if (Object.values(COUNTRY_COLUMN_FILES_20261028).flat().map(slugOf).includes(slug)) return '2026-10-28';
   if (Object.values(COUNTRY_COLUMN_FILES_20261027).flat().map(slugOf).includes(slug)) return '2026-10-27';

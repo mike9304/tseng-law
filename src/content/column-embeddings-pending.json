@@ -2937,6 +2937,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid"
     }
   ]
 }

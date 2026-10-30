@@ -242,7 +242,7 @@ describe('loadTrafficCollection (published files)', () => {
     }
     expect((await loadTrafficCollection('ja', fileSources)).map((item) => item.slug)).not.toContain('taiwan-left-turn-vs-straight-motorcycle');
     expect((await loadTrafficCollection('ko', fileSources)).map((item) => item.slug)).not.toContain('taiwan-car-door-opening-motorcycle-liability');
-  });
+  }, 30_000); // loads every locale's traffic collection and posts: ~4.5 s alone (same on origin/main), past the 5 s default under full-suite parallel load
 
   it('carries subject, date, read time, AI label and true video flags without article bodies', async () => {
     const items = await loadTrafficCollection('zh-hant', fileSources);

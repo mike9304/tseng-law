@@ -479,7 +479,7 @@ describe('column 007 public reference synchronization', () => {
         );
       }
     }
-  });
+  }, 30_000); // generateMetadata over every locale's corpus: ~4.3 s alone (same on origin/main), past the 5 s default under full-suite parallel load
 
   it('builds article and FAQ JSON-LD from the four posts with exact headline, page, language, and per-locale FAQ entities (ko and en four, zh-hant and ja three)', () => {
     for (const locale of siteLocales) {

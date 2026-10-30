@@ -31,7 +31,7 @@ describe('semiconductor drafts stay off public surfaces', () => {
       expect(blog.some((post) => post.slug === slug)).toBe(false);
       expect(merged.some((post) => post.slug === slug)).toBe(false);
     }
-  }, 15000);
+  }, 60_000); // whole multilingual sitemap: ~10–11 s alone (same on origin/main), past 15 s under full-suite parallel load
 
   it.each([...siteLocales])('keeps the lawyer-reviewed column and no unpublished draft on the %s board', (locale) => {
     const posts = listPublicSemiconductorColumns(locale);

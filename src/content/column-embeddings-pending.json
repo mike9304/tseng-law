@@ -2853,6 +2853,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-foreign-manager-overtime-exemption-150000-supervisor-rule"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law"
     }
   ]
 }

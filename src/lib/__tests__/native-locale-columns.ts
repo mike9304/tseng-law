@@ -1500,7 +1500,26 @@ export const COUNTRY_COLUMN_FILES_20261028 = {
   ],
 } as const;
 
-/** Registered locale-specific batches through 2026-10-28, in filename order. */
+/** Weekday expert columns published 2026-10-29, in source order. */
+export const COUNTRY_COLUMN_FILES_20261029 = {
+  'ko': [
+    '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
+  ],
+  'zh-hant': [
+    '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
+  ],
+  'ja': [
+    '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
+  ],
+  'en': [
+    '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
+  ],
+  'es': [
+    '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
+  ],
+} as const;
+
+/** Registered locale-specific batches through 2026-10-29, in filename order. */
 function sameDayFilesOf(locale: string): readonly string[] {
   return [
     ...(EXPERTISE_COLUMN_FILES_20260930[locale as ExpertiseColumnLocale] ?? []),
@@ -1532,6 +1551,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((COUNTRY_COLUMN_FILES_20261026 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261027 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((COUNTRY_COLUMN_FILES_20261028 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((COUNTRY_COLUMN_FILES_20261029 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261014 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261015 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261021 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1557,11 +1577,13 @@ export function expertiseSlugsFor(locale: string): string[] {
 }
 
 /**
- * Archive lead of `locale`, newest first by date through 2026-10-28, with same-day
+ * Archive lead of `locale`, newest first by date through 2026-10-29, with same-day
  * files in source order. Use this for newest-first ordering assertions;
  * `expertiseSlugsFor` stays in filename order for counts and column-number tie-breaks.
  */
 export function archiveLeadSlugsFor(locale: string): string[] {
+  const day20261029: readonly string[] =
+    (COUNTRY_COLUMN_FILES_20261029 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261028: readonly string[] =
     (COUNTRY_COLUMN_FILES_20261028 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261027: readonly string[] =
@@ -1652,12 +1674,13 @@ export function archiveLeadSlugsFor(locale: string): string[] {
   const newestSlugs = [...newest].sort().map(slugOf);
   const newerSlugs = [...newer].sort().map(slugOf);
   const head = [...day20261023].sort().map(slugOf).concat([...day20261022].sort().map(slugOf), [...day20261021].sort().map(slugOf), [...day20261020].sort().map(slugOf), [...day20261018].sort().map(slugOf), [...day20261016].sort().map(slugOf), [...day20261015].sort().map(slugOf), [...day20261014].sort().map(slugOf), [...day20261013].sort().map(slugOf), [...day20261011].sort().map(slugOf), [...day20261010].sort().map(slugOf), [...day20261009].sort().map(slugOf), [...day20261008].sort().map(slugOf), day20261007Slugs, day20261006Slugs, day20261005Slugs, currentSlugs, latestSlugs, newestSlugs, newerSlugs);
-  const latestHead = [...day20261028].sort().map(slugOf).concat([...day20261027].sort().map(slugOf), [...day20261026].sort().map(slugOf), [...day20261025].sort().map(slugOf), [...day20261024].sort().map(slugOf), head);
+  const latestHead = [...day20261029].sort().map(slugOf).concat([...day20261028].sort().map(slugOf), [...day20261027].sort().map(slugOf), [...day20261026].sort().map(slugOf), [...day20261025].sort().map(slugOf), [...day20261024].sort().map(slugOf), head);
   return [...latestHead, ...expertiseSlugsFor(locale).filter((slug) => !latestHead.includes(slug))];
 }
 
 /** Locale is explicit because translated cases have a later publication date than their originals. */
 export function archiveLeadPublicationDate(slug: string, locale: string): string {
+  if (Object.values(COUNTRY_COLUMN_FILES_20261029).flat().map(slugOf).includes(slug)) return '2026-10-29';
   if (Object.values(COUNTRY_COLUMN_FILES_20261028).flat().map(slugOf).includes(slug)) return '2026-10-28';
   if (Object.values(COUNTRY_COLUMN_FILES_20261027).flat().map(slugOf).includes(slug)) return '2026-10-27';
   if (CASE_TRANSLATION_COLUMN_FILES_20261026[locale]?.map(slugOf).includes(slug)) return '2026-10-26';
@@ -1755,6 +1778,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(COUNTRY_COLUMN_FILES_20261026),
     ...Object.values(COUNTRY_COLUMN_FILES_20261027),
     ...Object.values(COUNTRY_COLUMN_FILES_20261028),
+    ...Object.values(COUNTRY_COLUMN_FILES_20261029),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261014),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261015),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021),

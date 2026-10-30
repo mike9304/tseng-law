@@ -2973,6 +2973,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-resident-tax-overseas-parents-children-dependent-exemption-documents"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-resale-home-loan-shortfall-cash-difference-rescission"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-resale-home-loan-shortfall-cash-difference-rescission"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-resale-home-loan-shortfall-cash-difference-rescission"
     }
   ]
 }

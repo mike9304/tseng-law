@@ -1546,24 +1546,28 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
     '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
     '971-taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid.md', // ship-20261030-G3
     '972-taiwan-subsidiary-capital-increase-remittance-differs-approved-amount.md', // ship-20261030-G4
+    '974-taiwan-resale-home-loan-shortfall-cash-difference-rescission.md', // ship-20261030-G6
   ],
   'zh-hant': [
     '969-taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency.md', // ship-20261030-G1
     '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
     '971-taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid.md', // ship-20261030-G3
     '972-taiwan-subsidiary-capital-increase-remittance-differs-approved-amount.md', // ship-20261030-G4
+    '974-taiwan-resale-home-loan-shortfall-cash-difference-rescission.md', // ship-20261030-G6
   ],
   'ja': [
     '969-taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency.md', // ship-20261030-G1
     '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
     '971-taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid.md', // ship-20261030-G3
     '972-taiwan-subsidiary-capital-increase-remittance-differs-approved-amount.md', // ship-20261030-G4
+    '974-taiwan-resale-home-loan-shortfall-cash-difference-rescission.md', // ship-20261030-G6
   ],
   'en': [
     '969-taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency.md', // ship-20261030-G1
     '970-taiwan-insurance-beneficiary-suspected-in-insured-death-family-claims.md', // ship-20261030-G2
     '971-taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid.md', // ship-20261030-G3
     '972-taiwan-subsidiary-capital-increase-remittance-differs-approved-amount.md', // ship-20261030-G4
+    '974-taiwan-resale-home-loan-shortfall-cash-difference-rescission.md', // ship-20261030-G6
   ],
   'es': [
     '969-taiwan-offshore-crypto-exchange-withdrawal-suspension-arbitration-insolvency.md', // ship-20261030-G1
@@ -1571,6 +1575,7 @@ export const COUNTRY_COLUMN_FILES_20261030 = {
     '971-taiwan-labor-lawsuit-court-lawyer-interpreter-costs-legal-aid.md', // ship-20261030-G3
     '972-taiwan-subsidiary-capital-increase-remittance-differs-approved-amount.md', // ship-20261030-G4
     '973-taiwan-resident-tax-overseas-parents-children-dependent-exemption-documents.md', // ship-20261030-G5
+    '974-taiwan-resale-home-loan-shortfall-cash-difference-rescission.md', // ship-20261030-G6
   ],
 } as const;
 

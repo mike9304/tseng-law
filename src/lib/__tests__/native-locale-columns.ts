@@ -1507,30 +1507,35 @@ export const COUNTRY_COLUMN_FILES_20261029 = {
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
     '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
     '967-taiwan-pedestrian-public-facility-injury-state-compensation-abroad.md', // ship-20261029-G5
+    '968-taiwan-foreign-spouse-residence-expired-in-prison-release-detention-reapply.md', // ship-20261029-G6
   ],
   'zh-hant': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
     '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
     '967-taiwan-pedestrian-public-facility-injury-state-compensation-abroad.md', // ship-20261029-G5
+    '968-taiwan-foreign-spouse-residence-expired-in-prison-release-detention-reapply.md', // ship-20261029-G6
   ],
   'ja': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
     '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
     '967-taiwan-pedestrian-public-facility-injury-state-compensation-abroad.md', // ship-20261029-G5
+    '968-taiwan-foreign-spouse-residence-expired-in-prison-release-detention-reapply.md', // ship-20261029-G6
   ],
   'en': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
     '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
     '967-taiwan-pedestrian-public-facility-injury-state-compensation-abroad.md', // ship-20261029-G5
+    '968-taiwan-foreign-spouse-residence-expired-in-prison-release-detention-reapply.md', // ship-20261029-G6
   ],
   'es': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
     '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
     '967-taiwan-pedestrian-public-facility-injury-state-compensation-abroad.md', // ship-20261029-G5
+    '968-taiwan-foreign-spouse-residence-expired-in-prison-release-detention-reapply.md', // ship-20261029-G6
   ],
 } as const;
 

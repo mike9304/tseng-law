@@ -2901,6 +2901,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-pedestrian-public-facility-injury-state-compensation-abroad"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-foreign-spouse-residence-expired-in-prison-release-detention-reapply"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-foreign-spouse-residence-expired-in-prison-release-detention-reapply"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-foreign-spouse-residence-expired-in-prison-release-detention-reapply"
     }
   ]
 }

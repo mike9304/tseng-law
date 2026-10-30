@@ -1505,22 +1505,27 @@ export const COUNTRY_COLUMN_FILES_20261029 = {
   'ko': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
+    '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
   ],
   'zh-hant': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
+    '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
   ],
   'ja': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
+    '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
   ],
   'en': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
+    '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
   ],
   'es': [
     '964-taiwan-foreign-debt-lawsuit-without-foreign-judgment-governing-law.md', // ship-20261029-G2
     '965-taiwan-union-agreement-collective-contract-individual-employment-effect.md', // ship-20261029-G3
+    '966-taiwan-phone-number-identity-theft-aiding-fraud-suspect.md', // ship-20261029-G4
   ],
 } as const;
 

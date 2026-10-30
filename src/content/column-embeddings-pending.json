@@ -2877,6 +2877,18 @@
     {
       "locale": "zh-hant",
       "slug": "taiwan-union-agreement-collective-contract-individual-employment-effect"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-phone-number-identity-theft-aiding-fraud-suspect"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-phone-number-identity-theft-aiding-fraud-suspect"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-phone-number-identity-theft-aiding-fraud-suspect"
     }
   ]
 }

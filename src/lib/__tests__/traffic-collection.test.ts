@@ -219,7 +219,11 @@ describe('reviewed column videos in the traffic board', () => {
   });
   it('registers the 975 stop-line reversing film only for its three authored locales', () => {
     const slug = 'taiwan-stop-line-reversing-scooter-dashcam';
-    for (const locale of ['ko', 'zh-hant', 'en']) {
+    const cover = `/images/columns/975-${slug}/featured-01.webp`;
+    for (const locale of ['ko', 'zh-hant', 'en'] as const) {
+      const article = getColumnPost(slug, locale);
+      expect(article?.featuredImage).toBe(cover);
+      expect(fs.existsSync(path.join(process.cwd(), 'public', cover.slice(1)))).toBe(true);
       const film = getColumnGeneratedVideo(locale, slug);
       expect(film?.src).toBe(`/videos/columns/reverse-stopline-dashcam-reenactment-20261031-v1-${locale}.mp4`);
       expect(film?.poster).toBe(`/images/column-videos/reverse-stopline-dashcam-reenactment-20261031-v1-${locale}.jpg`);

@@ -8,7 +8,7 @@ read_time: "約4分鐘"
 categories: ["台灣法律資訊"]
 topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
-featured_image: "../images/975-taiwan-stop-line-reversing-scooter-dashcam/featured-01.webp"
+featured_image: "/images/columns/975-taiwan-stop-line-reversing-scooter-dashcam/featured-01.webp"
 featured_image_alt: "從機車視角看號誌路口一輛銀色轎車車尾的虛構再現畫面"
 featured_image_caption: "虛構情境"
 audience: ["zh-hant"]
@@ -30,7 +30,7 @@ faq:
 
 ## 越線之後，倒車規則仍要逐項看
 
-駕駛想退回停止線後方，是倒車的原因，無法代替車後確認。[第110條第1款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=110)列舉彎道、狹路、圓環、鐵路平交道、快車道等危險地帶的倒車限制，也保留因讓車、停車或起駛而有倒車必要的例外。條文沒有把一切交岔路口一概列為禁倒車地點。本篇影像不足以判定虛構路口是否屬於其中某一種受限地點。
+駕駛想退回停止線後方，是倒車的原因，無法代替車後確認。[第110條第1款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=110)列舉設有彎道、狹路、圓環等標誌的路段，以及鐵路平交道、快車道等危險地帶的倒車限制，也保留因讓車、停車或起駛而有倒車必要的例外。條文沒有把一切交岔路口一概列為禁倒車地點。本篇影像不足以判定虛構路口是否屬於其中某一種受限地點。
 
 倒車燈亮了。它提示動向，卻不能證明後方已清空。機車何時停下？後照鏡和後擋風玻璃能否看見它？如果有盲區，駕駛如何查明車後狀況？這些問題要放在車輛實際移動前後的時序裡處理，不能只看碰觸後兩車停在哪裡。
 
@@ -40,7 +40,7 @@ faq:
 
 [道路交通管理處罰條例第50條第2款](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040012&flno=50)對倒車前未顯示燈光，或倒車時未注意其他車輛、行人的情形設有罰鍰。燈亮了，仍可能有未注意後車的問題；反過來說，也不能由碰撞結果臆測燈號當時一定沒有亮。
 
-## 修復支出與肇責不是同一張照片
+## 這次碰觸造成了哪些修復費用
 
 機車前方受損後，照片可顯示碰觸位置，估價單則列出擬修項目。這些項目是否由本次接觸造成、修復是否必要，仍須與原始影像及車況對照。[民法第184條第1項](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184)所涉的侵權請求，要查明故意或過失、不法侵害他人權利與損害的關聯。交通罰鍰不會直接算出民事修車費。
 

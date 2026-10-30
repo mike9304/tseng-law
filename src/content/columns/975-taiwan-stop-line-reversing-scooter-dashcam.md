@@ -8,7 +8,7 @@ read_time: "4분 분량"
 categories: ["대만 법률정보"]
 topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
-featured_image: "../images/975-taiwan-stop-line-reversing-scooter-dashcam/featured-01.webp"
+featured_image: "/images/columns/975-taiwan-stop-line-reversing-scooter-dashcam/featured-01.webp"
 featured_image_alt: "신호 교차로에서 정차한 은색 차의 뒤쪽을 오토바이 시점에서 본 가상 재연 화면"
 featured_image_caption: "가상의 장면"
 audience: ["ko"]
@@ -30,7 +30,7 @@ faq:
 
 ## 정지선을 지났다는 이유와 후진할 수 있는지는 별개
 
-운전자가 선을 지나쳤다는 사정은 뒤로 가려는 이유를 설명할 뿐, 후진의 안전을 보장하지 않습니다. [제110조 제1호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=110)는 곡선·좁은 길·원형교차로·철도건널목·빠른 차로 등 열거된 위험 장소의 후진을 제한하고, 양보·주차·출발을 위해 후진이 필요한 경우의 예외도 둡니다. 모든 교차로에서 후진을 일률적으로 금지한 조문은 아닙니다. 이 장면의 도로가 그 열거 장소에 해당하는지 영상만으로 단정하지 않습니다.
+운전자가 선을 지나쳤다는 사정은 뒤로 가려는 이유를 설명할 뿐, 후진의 안전을 보장하지 않습니다. [제110조 제1호](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=110)는 곡선·좁은 길·원형교차로 등의 표지가 설치된 구간과 철도건널목·빠른 차로 등 열거된 위험 장소의 후진을 제한하고, 양보·주차·출발을 위해 후진이 필요한 경우의 예외도 둡니다. 모든 교차로에서 후진을 일률적으로 금지한 조문은 아닙니다. 이 장면의 도로가 그 열거 장소에 해당하는지 영상만으로 단정하지 않습니다.
 
 후진등을 켰다면 뒤쪽 확인도 끝난 걸까요? 후진등은 뒤차에 움직임을 알리는 신호이지, 뒤차가 반드시 길을 비웠다는 확인은 아닙니다. 차 뒤에 오토바이가 이미 멈춰 있는지, 후방창이나 거울에서 보였는지, 가려진 부분이 있었다면 운전자가 어떻게 확인했는지가 문제입니다. 차가 잠시 정지한 때와 실제로 뒤로 움직이기 시작한 때도 구분해야 합니다. 순서가 관건입니다.
 

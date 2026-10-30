@@ -1,7 +1,7 @@
 ---
 title: "A car backs toward a scooter after crossing a Taiwan stop line"
 seoTitle: "Taiwan Stop-Line Reversing Scooter Collision"
-summary: "A car stops beyond a Taiwan stop line, then backs into a waiting scooter. The film explains the reversing signal, the driver’s lookout, and repair costs."
+summary: "A car crosses the stop line, then backs into a scooter. The article explains reversing duties, evidence and repair claims; the film is a fictional illustration."
 published: "2026-10-31"
 lastmod: "2026-10-31"
 date_display: "October 31, 2026"
@@ -9,7 +9,7 @@ read_time: "4 min read"
 categories: ["Taiwan Legal Insights"]
 topic: "litigation"
 tags: ["traffic-accidents", "traffic-liability", "traffic-evidence"]
-featured_image: "../images/975-taiwan-stop-line-reversing-scooter-dashcam/featured-01.webp"
+featured_image: "/images/columns/975-taiwan-stop-line-reversing-scooter-dashcam/featured-01.webp"
 featured_image_alt: "Fictional scooter camera view of the rear of a silver car stopped at a signalized intersection"
 featured_image_caption: "Fictional scene"
 audience: ["en"]
@@ -31,7 +31,7 @@ In this invented scene, a foreign resident is on the stationary scooter. The car
 
 ## Crossing the line does not settle the reversing question
 
-Overshooting explains why a driver might want to move back; it does not establish that the way behind is clear. [Article 110(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=110) restricts reversing in listed dangerous places, including bends, narrow roads, roundabouts, railway crossings and fast lanes. It also states an exception when reversing is necessary to yield, park or start moving. The provision does not declare every intersection a no-reversing area. This illustration cannot establish whether its generic road meets one of the listed descriptions.
+Overshooting explains why a driver might want to move back; it does not establish that the way behind is clear. [Article 110(1)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=K0040013&flno=110) restricts reversing in listed dangerous places, including road sections bearing bend, narrow-road or roundabout signs, as well as railway crossings and fast lanes. It also states an exception when reversing is necessary to yield, park or start moving. The provision does not declare every intersection a no-reversing area. This illustration cannot establish whether its generic road meets one of the listed descriptions.
 
 A lit reverse lamp warns of an intended movement. It does not prove the scooter has moved away. Was the scooter already stationary? Could the driver see it through the rear window or mirrors, and what remained in a blind area? Those questions belong to the moments before the car moves. A photograph taken after contact cannot answer them alone.
 

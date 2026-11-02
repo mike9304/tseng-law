@@ -10,7 +10,7 @@ categories: ["Taiwan Legal Insights"]
 topic: "litigation"
 tags: ["traffic-accidents", "traffic-compensation"]
 featured_image: "/images/columns/980-taiwan-delayed-dementia-diagnosis-causation-helmet/featured-01.webp"
-featured_image_alt: "A motorcycle helmet and a neat stack of medical papers on a windowsill shelf, with no text visible"
+featured_image_alt: "A motorcycle helmet and blank file folders on a windowsill shelf, with no text visible"
 featured_image_caption: "Fictional scene"
 audience: ["en"]
 author: "legal-ai-assistant"
@@ -25,7 +25,7 @@ faq:
 
 # Dementia diagnosed months after a Taiwan crash: how hospital records proved the link
 
-Seven months after the crash came the dementia diagnosis. The defendant pointed to its date and argued the rider had developed dementia only half a year after leaving hospital. On April 23, 2025, the Tainan District Court rejected the argument and ordered the defendant to pay the Special Compensation Fund NT$1,748,230 plus interest ([Tainan District Court civil judgment 113 Su No. 1090](https://www.mvacf.org.tw/ckfinder/connector?command=Proxy&type=Attach&currentFolder=/tblResearches/&fileName=%E8%87%BA%E7%81%A3%E8%87%BA%E5%8D%97%E5%9C%B0%E6%96%B9%E6%B3%95%E9%99%A2113%E5%B9%B4%E8%A8%B4%E5%AD%97%E7%AC%AC1090%E8%99%9F%E6%B0%91%E4%BA%8B%E5%88%A4%E6%B1%BA.pdf&c=7&p=d91cda6999e0453ab5dc91f259d3b356&l=3)). It is a first-instance judgment, open to appeal within 20 days of service.
+Seven months after the crash came the dementia diagnosis. The defendant argued that the rider was diagnosed with dementia only half a year after leaving hospital. On April 23, 2025, the Tainan District Court rejected the argument and ordered the defendant to pay the Special Compensation Fund NT$1,748,230 plus interest ([Tainan District Court civil judgment 113 Su No. 1090](https://www.mvacf.org.tw/ckfinder/connector?command=Proxy&type=Attach&currentFolder=/tblResearches/&fileName=%E8%87%BA%E7%81%A3%E8%87%BA%E5%8D%97%E5%9C%B0%E6%96%B9%E6%B3%95%E9%99%A2113%E5%B9%B4%E8%A8%B4%E5%AD%97%E7%AC%AC1090%E8%99%9F%E6%B0%91%E4%BA%8B%E5%88%A4%E6%B1%BA.pdf&c=7&p=d91cda6999e0453ab5dc91f259d3b356&l=3)). It is a first-instance judgment, open to appeal within 20 days of service.
 
 ## A harvester pulls out of a field
 
@@ -35,7 +35,7 @@ Fault lay partly with the rider too, the court found: not watching the road ahea
 
 ## The date on the certificate, and when symptoms began
 
-So when did the symptoms start? The court looked past the single certificate to the whole course of treatment. The rider was admitted through the emergency room on the day of the crash and stayed until April 15, with a loss of consciousness of unclear length on admission and a need for help with daily life on discharge. During a second admission elsewhere, until May 5, cognitive deficits and memory decline were already recorded, and the attending doctor attributed them to the brain injury. On May 10, a psychiatric hospital assessed that the rider's cognitive function could have been impaired by the brain injury to the degree of dementia. Chi Mei Hospital diagnosed dementia on October 13.
+So when did the symptoms start? The court looked past the single certificate to the whole course of treatment. The rider was admitted through the emergency room on the day of the crash and stayed until April 15, with a loss of consciousness of unclear length on admission and a need for help with daily life on discharge. During a second admission elsewhere, until May 5, cognitive deficits and memory decline were already recorded, and the attending doctor attributed them to the brain injury. On May 10, a psychiatric hospital assessed that the rider's cognitive function could have been impaired by the brain injury to the degree of dementia. The dementia diagnosis came on October 13.
 
 In hospital, the symptoms were already there. The court held that the dementia had not begun half a year after the crash, and found a sufficient causal link between the defendant's negligent driving and the rider's dementia and disability.
 
@@ -53,7 +53,7 @@ Item by item, the court allowed NT$40,110 for medical costs, NT$12,175 for trave
 
 By law, the Fund steps into the victim's claim up to what it paid ([Compulsory Automobile Liability Insurance Act, Article 42(2)](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390060&flno=42)). Those damages were higher than the Fund's payment. Its NT$1,748,230 claim therefore stood untouched.
 
-Separately, the defendant argued that a court mediation with the rider's side in November 2023 had been settled and paid. The court pointed to the mediation record, which stated that the payment did not include compulsory automobile liability insurance benefits, and held that the mediation did not block the Fund's claim.
+A court mediation with the rider's side had been concluded in November 2023, and the agreed sums paid. Separately, the defendant argued that this meant nothing more was owed. The court pointed to the mediation record, which stated that the payment did not include compulsory automobile liability insurance benefits, and held that the mediation did not block the Fund's claim.
 
 Interest runs from July 5, 2024, the day after the complaint was served.
 

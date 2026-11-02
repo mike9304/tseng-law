@@ -3213,30 +3213,6 @@
     {
       "locale": "en",
       "slug": "taiwan-real-estate-agent-deposit-offer-commission-cap-liability"
-    },
-    {
-      "locale": "ko",
-      "slug": "taiwan-used-car-purchase-accident-flood-mileage-defect"
-    },
-    {
-      "locale": "zh-hant",
-      "slug": "taiwan-used-car-purchase-accident-flood-mileage-defect"
-    },
-    {
-      "locale": "en",
-      "slug": "taiwan-used-car-purchase-accident-flood-mileage-defect"
-    },
-    {
-      "locale": "ko",
-      "slug": "taiwan-wedding-photo-banquet-contract-cancellation-deposit"
-    },
-    {
-      "locale": "zh-hant",
-      "slug": "taiwan-wedding-photo-banquet-contract-cancellation-deposit"
-    },
-    {
-      "locale": "en",
-      "slug": "taiwan-wedding-photo-banquet-contract-cancellation-deposit"
     }
   ]
 }

@@ -737,8 +737,6 @@ export const EXPERT_COLUMN_FILES_20261103 = {
     '991-taiwan-nhi-dependents-foreign-employee-family-six-months.md',
     '992-taiwan-shop-lease-end-restoration-improvement-costs-transfer.md',
     '993-taiwan-real-estate-agent-deposit-offer-commission-cap-liability.md',
-    '994-taiwan-used-car-purchase-accident-flood-mileage-defect.md',
-    '995-taiwan-wedding-photo-banquet-contract-cancellation-deposit.md',
   ],
   'zh-hant': [
     '981-taiwan-same-sex-marriage-foreign-partner-registration.md',
@@ -754,8 +752,6 @@ export const EXPERT_COLUMN_FILES_20261103 = {
     '991-taiwan-nhi-dependents-foreign-employee-family-six-months.md',
     '992-taiwan-shop-lease-end-restoration-improvement-costs-transfer.md',
     '993-taiwan-real-estate-agent-deposit-offer-commission-cap-liability.md',
-    '994-taiwan-used-car-purchase-accident-flood-mileage-defect.md',
-    '995-taiwan-wedding-photo-banquet-contract-cancellation-deposit.md',
   ],
   ja: [
     '981-taiwan-same-sex-marriage-foreign-partner-registration.md',
@@ -771,8 +767,6 @@ export const EXPERT_COLUMN_FILES_20261103 = {
     '991-taiwan-nhi-dependents-foreign-employee-family-six-months.md',
     '992-taiwan-shop-lease-end-restoration-improvement-costs-transfer.md',
     '993-taiwan-real-estate-agent-deposit-offer-commission-cap-liability.md',
-    '994-taiwan-used-car-purchase-accident-flood-mileage-defect.md',
-    '995-taiwan-wedding-photo-banquet-contract-cancellation-deposit.md',
   ],
   en: [
     '981-taiwan-same-sex-marriage-foreign-partner-registration.md',
@@ -788,8 +782,6 @@ export const EXPERT_COLUMN_FILES_20261103 = {
     '991-taiwan-nhi-dependents-foreign-employee-family-six-months.md',
     '992-taiwan-shop-lease-end-restoration-improvement-costs-transfer.md',
     '993-taiwan-real-estate-agent-deposit-offer-commission-cap-liability.md',
-    '994-taiwan-used-car-purchase-accident-flood-mileage-defect.md',
-    '995-taiwan-wedding-photo-banquet-contract-cancellation-deposit.md',
   ],
 } as const;
 

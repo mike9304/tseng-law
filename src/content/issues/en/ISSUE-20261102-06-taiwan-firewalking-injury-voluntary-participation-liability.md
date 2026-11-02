@@ -32,17 +32,17 @@ For an overseas visitor joining an unfamiliar activity in Taiwan, choosing to pa
 
 ## The injury and the organizer's conduct
 
-[Civil Code Article 184](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184) imposes liability on a person who intentionally or negligently infringes another person's rights unlawfully. For an event-related negligence claim, the conduct attributed to the proposed defendant must be considered alongside the way the activity was organized and the link between that conduct and the injury. This news report does not establish those elements.
+[Civil Code Article 184](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184) imposes liability on a person who intentionally or negligently infringes another person's rights unlawfully. For an event-related negligence claim, the conduct attributed to the proposed defendant must be considered alongside the way the activity was organized and the link between that conduct and the injury.
 
 Responsibility needs a factual basis. The person who arranged the activity, the person who managed access to it and the owner of the premises may have different roles. Identifying those roles avoids treating everyone associated with the venue as responsible for the same conduct.
 
-Relevant questions include how the activity was prepared, what warnings or instructions were given, and whether participants followed the route or procedure presented to them. These are questions for evidence, not findings about the November 1 ceremony. They are absent from this report.
+Relevant questions include how the activity was prepared, what warnings or instructions were given, and whether participants followed the route or procedure presented to them. These are questions for evidence, not findings about the November 1 ceremony.
 
 ## The participant's own fault can affect compensation
 
 Under [Article 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217), a court may reduce damages or eliminate them if the injured person's negligence contributed to the occurrence or worsening of the harm. The provision sets no fixed percentage. A finding of contributory negligence and its consequences depend on the circumstances.
 
-Participation establishes willingness to take part. Whether the participant was also careless, and whether that carelessness contributed to the burn, need evidence about the person's actions and the conditions at the time. An invitation does not prove the organizer's negligence either. Both sides' conduct is relevant.
+Joining the walk shows a choice to take part, nothing more. Carelessness needs evidence. So does its contribution to the burn. Both turn on the person's actions and the surrounding conditions. Nor does holding the ceremony, by itself, prove negligence on the organizer's side. Both sides' conduct is relevant.
 
 For a visitor who did not understand an announcement, the language used, any written explanation and what was actually communicated may help reconstruct what happened. That does not establish an automatic right to compensation whenever an instruction was in another language. It identifies a factual gap that a brief news report cannot fill.
 
@@ -58,7 +58,7 @@ Fictional temple courtyard for illustration; this image does not depict the repo
 
 ## Sources
 
-- [Focus Taiwan, November 1, 2026: burns following a firewalking ceremony in Linkou](https://focustaiwan.tw/society/202611010011)
+- [Focus Taiwan, November 1, 2026: 20 treated for burns after firewalking ceremony at Linkou temple](https://focustaiwan.tw/society/202611010011)
 - Taiwan Civil Code: [Article 184](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=184), [Article 193](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=193), [Article 195](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=195), [Article 217](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=217) and [legislative history](https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001)
 
 General information on Taiwan civil injury claims, checked November 2, 2026.

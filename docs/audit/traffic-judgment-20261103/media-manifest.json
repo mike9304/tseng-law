@@ -21,5 +21,13 @@
       "c977a: rear license plates partly visible"
     ],
     "sha256": "578837cee738e5b63ae0d657f28ed7a008894fc1db4517a9fe296849bf85e143"
+  },
+  {
+    "asset": "public/images/columns/978-taiwan-unlicensed-victim-no-contributory-negligence/featured-01.webp",
+    "provider": "Grok Imagine via grok CLI, model grok-4.7, image_gen tool only",
+    "generated": "2026-11-03 on MacBook Air",
+    "converted": "PIL WebP q82, 1280x720",
+    "checked": "no people, no license plates, no readable text; distant night intersection with light trails; not a reconstruction",
+    "sha256": "103106d219c02d4c43844ca6b3b0f2df58e04b318b4d6c6852b07a0f236d604d"
   }
 ]

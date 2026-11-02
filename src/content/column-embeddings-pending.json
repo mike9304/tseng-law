@@ -3021,6 +3021,18 @@
     {
       "locale": "en",
       "slug": "taiwan-rental-car-uninsured-driver-fund-recourse"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-unlicensed-victim-no-contributory-negligence"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-unlicensed-victim-no-contributory-negligence"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-unlicensed-victim-no-contributory-negligence"
     }
   ]
 }

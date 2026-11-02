@@ -716,9 +716,9 @@ export const TRAFFIC_SCENE_COLUMN_FILES_20261031 = {
 
 /** Traffic judgment column published 2026-11-03 (cols-c). */
 export const TRAFFIC_JUDGMENT_COLUMN_FILES_20261103 = {
-  ko: ['976-taiwan-uninsured-scooter-fund-recourse-after-leaving.md', '977-taiwan-rental-car-uninsured-driver-fund-recourse.md', '978-taiwan-unlicensed-victim-no-contributory-negligence.md'],
-  'zh-hant': ['976-taiwan-uninsured-scooter-fund-recourse-after-leaving.md', '977-taiwan-rental-car-uninsured-driver-fund-recourse.md', '978-taiwan-unlicensed-victim-no-contributory-negligence.md'],
-  en: ['976-taiwan-uninsured-scooter-fund-recourse-after-leaving.md', '977-taiwan-rental-car-uninsured-driver-fund-recourse.md', '978-taiwan-unlicensed-victim-no-contributory-negligence.md'],
+  ko: ['976-taiwan-uninsured-scooter-fund-recourse-after-leaving.md', '977-taiwan-rental-car-uninsured-driver-fund-recourse.md', '978-taiwan-unlicensed-victim-no-contributory-negligence.md', '979-taiwan-forklift-road-death-employer-settlement-fund.md'],
+  'zh-hant': ['976-taiwan-uninsured-scooter-fund-recourse-after-leaving.md', '977-taiwan-rental-car-uninsured-driver-fund-recourse.md', '978-taiwan-unlicensed-victim-no-contributory-negligence.md', '979-taiwan-forklift-road-death-employer-settlement-fund.md'],
+  en: ['976-taiwan-uninsured-scooter-fund-recourse-after-leaving.md', '977-taiwan-rental-car-uninsured-driver-fund-recourse.md', '978-taiwan-unlicensed-victim-no-contributory-negligence.md', '979-taiwan-forklift-road-death-employer-settlement-fund.md'],
 } as const;
 
 /** Native audience columns published 2026-10-15. */

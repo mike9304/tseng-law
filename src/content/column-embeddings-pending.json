@@ -3033,6 +3033,18 @@
     {
       "locale": "en",
       "slug": "taiwan-unlicensed-victim-no-contributory-negligence"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-forklift-road-death-employer-settlement-fund"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-forklift-road-death-employer-settlement-fund"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-forklift-road-death-employer-settlement-fund"
     }
   ]
 }

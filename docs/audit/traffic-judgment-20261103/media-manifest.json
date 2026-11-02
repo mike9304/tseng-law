@@ -29,5 +29,13 @@
     "converted": "PIL WebP q82, 1280x720",
     "checked": "no people, no license plates, no readable text; distant night intersection with light trails; not a reconstruction",
     "sha256": "103106d219c02d4c43844ca6b3b0f2df58e04b318b4d6c6852b07a0f236d604d"
+  },
+  {
+    "asset": "public/images/columns/979-taiwan-forklift-road-death-employer-settlement-fund/featured-01.webp",
+    "provider": "Grok Imagine via grok CLI, model grok-4.7, image_gen tool only",
+    "generated": "2026-11-03 on MacBook Air",
+    "converted": "PIL WebP q82, 1280x720",
+    "checked": "no people, no license plates, no readable text/logos; parked forklift and empty road; not a reconstruction",
+    "sha256": "7d09d470c5330c9e694b995fba553087b181d7a80e024895a3c679befa42d568"
   }
 ]

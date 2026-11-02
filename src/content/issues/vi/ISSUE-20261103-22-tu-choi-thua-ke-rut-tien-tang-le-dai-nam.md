@@ -24,7 +24,9 @@ audience: ["vi"]
 author: "legal-ai-assistant"
 ---
 
-331.500 Đài tệ. Đó là số tiền một người con ở Đài Nam rút từ tài khoản của mẹ vào đầu tháng 4/2023, vài ngày sau khi bà mất, để lo tang lễ. Gần hai tháng sau, ngày 31/5/2023, anh nộp đơn xin từ chối thừa kế lên Tòa án địa phương Đài Nam và được tòa cho ghi nhận.
+# Rút tiền của người đã mất để lo tang lễ, rồi xin từ chối thừa kế: một bản án sơ thẩm ở Đài Nam
+
+331.500 Đài tệ. Đó là số tiền một người con ở Đài Nam rút từ tài khoản của mẹ vào đầu tháng 4/2023, ngay sau khi bà mất vào cuối tháng 3, để lo tang lễ. Gần hai tháng sau, ngày 31/5/2023, anh nộp đơn xin từ chối thừa kế lên Tòa án địa phương Đài Nam và được tòa cho ghi nhận.
 
 Ngân hàng là chủ nợ của người mẹ không dừng lại ở đó. Theo [bài báo của China Times ngày 01/11/2026](https://www.chinatimes.com/realtimenews/20261101001850-260402), ngân hàng đề nghị tòa chỉ định người quản lý di sản, và người này (một luật sư) kiện người con, yêu cầu xác nhận anh vẫn có quyền thừa kế. Tòa sơ thẩm chấp nhận. Lý do được bài báo tóm tắt: người thừa kế đã chủ động lấy tài sản của di sản thì không thể quay lại từ chối thừa kế. Bản án còn có thể kháng cáo.
 

@@ -3057,6 +3057,186 @@
     {
       "locale": "en",
       "slug": "taiwan-delayed-dementia-diagnosis-causation-helmet"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-same-sex-marriage-foreign-partner-registration"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-same-sex-marriage-foreign-partner-registration"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-same-sex-marriage-foreign-partner-registration"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-dog-bite-owner-liability-civil-code-190"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-dog-bite-owner-liability-civil-code-190"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-dog-bite-owner-liability-civil-code-190"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-home-renovation-contract-delay-defects-extra-cost"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-home-renovation-contract-delay-defects-extra-cost"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-home-renovation-contract-delay-defects-extra-cost"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-probation-period-dismissal-notice-severance"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-probation-period-dismissal-notice-severance"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-probation-period-dismissal-notice-severance"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-neighbor-noise-apartment-police-civil-claim"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-neighbor-noise-apartment-police-civil-claim"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-neighbor-noise-apartment-police-civil-claim"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-commuting-accident-occupational-injury-insurance"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-commuting-accident-occupational-injury-insurance"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-commuting-accident-occupational-injury-insurance"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-photo-posted-without-consent-portrait-right-privacy"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-photo-posted-without-consent-portrait-right-privacy"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-photo-posted-without-consent-portrait-right-privacy"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-business-partnership-contract-profit-exit-joint-liability"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-business-partnership-contract-profit-exit-joint-liability"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-business-partnership-contract-profit-exit-joint-liability"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-bringing-dog-cat-import-quarantine-rabies"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-bringing-dog-cat-import-quarantine-rabies"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-bringing-dog-cat-import-quarantine-rabies"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-landlord-enters-rental-changes-lock-tenant-rights"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-landlord-enters-rental-changes-lock-tenant-rights"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-landlord-enters-rental-changes-lock-tenant-rights"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-nhi-dependents-foreign-employee-family-six-months"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-nhi-dependents-foreign-employee-family-six-months"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-nhi-dependents-foreign-employee-family-six-months"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-shop-lease-end-restoration-improvement-costs-transfer"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-shop-lease-end-restoration-improvement-costs-transfer"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-shop-lease-end-restoration-improvement-costs-transfer"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-real-estate-agent-deposit-offer-commission-cap-liability"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-real-estate-agent-deposit-offer-commission-cap-liability"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-real-estate-agent-deposit-offer-commission-cap-liability"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-used-car-purchase-accident-flood-mileage-defect"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-used-car-purchase-accident-flood-mileage-defect"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-used-car-purchase-accident-flood-mileage-defect"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-wedding-photo-banquet-contract-cancellation-deposit"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-wedding-photo-banquet-contract-cancellation-deposit"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-wedding-photo-banquet-contract-cancellation-deposit"
     }
   ]
 }

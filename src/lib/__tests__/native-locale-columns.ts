@@ -721,6 +721,78 @@ export const TRAFFIC_JUDGMENT_COLUMN_FILES_20261103 = {
   en: ['976-taiwan-uninsured-scooter-fund-recourse-after-leaving.md', '977-taiwan-rental-car-uninsured-driver-fund-recourse.md', '978-taiwan-unlicensed-victim-no-contributory-negligence.md', '979-taiwan-forklift-road-death-employer-settlement-fund.md', '980-taiwan-delayed-dementia-diagnosis-causation-helmet.md'],
 } as const;
 
+/** Expert columns (ko/zh-hant/ja/en) published 2026-11-03 (cols-a). */
+export const EXPERT_COLUMN_FILES_20261103 = {
+  ko: [
+    '981-taiwan-same-sex-marriage-foreign-partner-registration.md',
+    '982-taiwan-dog-bite-owner-liability-civil-code-190.md',
+    '983-taiwan-home-renovation-contract-delay-defects-extra-cost.md',
+    '984-taiwan-probation-period-dismissal-notice-severance.md',
+    '985-taiwan-neighbor-noise-apartment-police-civil-claim.md',
+    '986-taiwan-commuting-accident-occupational-injury-insurance.md',
+    '987-taiwan-photo-posted-without-consent-portrait-right-privacy.md',
+    '988-taiwan-business-partnership-contract-profit-exit-joint-liability.md',
+    '989-taiwan-bringing-dog-cat-import-quarantine-rabies.md',
+    '990-taiwan-landlord-enters-rental-changes-lock-tenant-rights.md',
+    '991-taiwan-nhi-dependents-foreign-employee-family-six-months.md',
+    '992-taiwan-shop-lease-end-restoration-improvement-costs-transfer.md',
+    '993-taiwan-real-estate-agent-deposit-offer-commission-cap-liability.md',
+    '994-taiwan-used-car-purchase-accident-flood-mileage-defect.md',
+    '995-taiwan-wedding-photo-banquet-contract-cancellation-deposit.md',
+  ],
+  'zh-hant': [
+    '981-taiwan-same-sex-marriage-foreign-partner-registration.md',
+    '982-taiwan-dog-bite-owner-liability-civil-code-190.md',
+    '983-taiwan-home-renovation-contract-delay-defects-extra-cost.md',
+    '984-taiwan-probation-period-dismissal-notice-severance.md',
+    '985-taiwan-neighbor-noise-apartment-police-civil-claim.md',
+    '986-taiwan-commuting-accident-occupational-injury-insurance.md',
+    '987-taiwan-photo-posted-without-consent-portrait-right-privacy.md',
+    '988-taiwan-business-partnership-contract-profit-exit-joint-liability.md',
+    '989-taiwan-bringing-dog-cat-import-quarantine-rabies.md',
+    '990-taiwan-landlord-enters-rental-changes-lock-tenant-rights.md',
+    '991-taiwan-nhi-dependents-foreign-employee-family-six-months.md',
+    '992-taiwan-shop-lease-end-restoration-improvement-costs-transfer.md',
+    '993-taiwan-real-estate-agent-deposit-offer-commission-cap-liability.md',
+    '994-taiwan-used-car-purchase-accident-flood-mileage-defect.md',
+    '995-taiwan-wedding-photo-banquet-contract-cancellation-deposit.md',
+  ],
+  ja: [
+    '981-taiwan-same-sex-marriage-foreign-partner-registration.md',
+    '982-taiwan-dog-bite-owner-liability-civil-code-190.md',
+    '983-taiwan-home-renovation-contract-delay-defects-extra-cost.md',
+    '984-taiwan-probation-period-dismissal-notice-severance.md',
+    '985-taiwan-neighbor-noise-apartment-police-civil-claim.md',
+    '986-taiwan-commuting-accident-occupational-injury-insurance.md',
+    '987-taiwan-photo-posted-without-consent-portrait-right-privacy.md',
+    '988-taiwan-business-partnership-contract-profit-exit-joint-liability.md',
+    '989-taiwan-bringing-dog-cat-import-quarantine-rabies.md',
+    '990-taiwan-landlord-enters-rental-changes-lock-tenant-rights.md',
+    '991-taiwan-nhi-dependents-foreign-employee-family-six-months.md',
+    '992-taiwan-shop-lease-end-restoration-improvement-costs-transfer.md',
+    '993-taiwan-real-estate-agent-deposit-offer-commission-cap-liability.md',
+    '994-taiwan-used-car-purchase-accident-flood-mileage-defect.md',
+    '995-taiwan-wedding-photo-banquet-contract-cancellation-deposit.md',
+  ],
+  en: [
+    '981-taiwan-same-sex-marriage-foreign-partner-registration.md',
+    '982-taiwan-dog-bite-owner-liability-civil-code-190.md',
+    '983-taiwan-home-renovation-contract-delay-defects-extra-cost.md',
+    '984-taiwan-probation-period-dismissal-notice-severance.md',
+    '985-taiwan-neighbor-noise-apartment-police-civil-claim.md',
+    '986-taiwan-commuting-accident-occupational-injury-insurance.md',
+    '987-taiwan-photo-posted-without-consent-portrait-right-privacy.md',
+    '988-taiwan-business-partnership-contract-profit-exit-joint-liability.md',
+    '989-taiwan-bringing-dog-cat-import-quarantine-rabies.md',
+    '990-taiwan-landlord-enters-rental-changes-lock-tenant-rights.md',
+    '991-taiwan-nhi-dependents-foreign-employee-family-six-months.md',
+    '992-taiwan-shop-lease-end-restoration-improvement-costs-transfer.md',
+    '993-taiwan-real-estate-agent-deposit-offer-commission-cap-liability.md',
+    '994-taiwan-used-car-purchase-accident-flood-mileage-defect.md',
+    '995-taiwan-wedding-photo-banquet-contract-cancellation-deposit.md',
+  ],
+} as const;
+
 /** Native audience columns published 2026-10-15. */
 export const COUNTRY_COLUMN_FILES_20261015 = {
   ko: [
@@ -1631,6 +1703,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261021 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261031 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_JUDGMENT_COLUMN_FILES_20261103 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((EXPERT_COLUMN_FILES_20261103 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((NEXT_TOPIC_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((AIR_COLUMN_FILES_20261011 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((GAP_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1679,8 +1752,10 @@ export function archiveLeadSlugsFor(locale: string): string[] {
     ...((CASE_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((MARKET_EXPANSION_COLUMN_FILES_20261025 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ];
-  const day20261103: readonly string[] =
-    (TRAFFIC_JUDGMENT_COLUMN_FILES_20261103 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
+  const day20261103: readonly string[] = [
+    ...((TRAFFIC_JUDGMENT_COLUMN_FILES_20261103 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((EXPERT_COLUMN_FILES_20261103 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+  ];
   const day20261031: readonly string[] =
     (TRAFFIC_SCENE_COLUMN_FILES_20261031 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
   const day20261024: readonly string[] = [
@@ -1779,6 +1854,7 @@ export function archiveLeadPublicationDate(slug: string, locale: string): string
   const day20261022 = [...Object.values(COUNTRY_COLUMN_FILES_20261022), ...Object.values(taxAccountingFilesPublishedOn('2026-10-22')).filter((files): files is readonly string[] => files !== undefined)].flat().map(slugOf);
   if (day20261022.includes(slug)) return '2026-10-22';
   if (Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261103).flat().map(slugOf).includes(slug)) return '2026-11-03';
+  if (Object.values(EXPERT_COLUMN_FILES_20261103).flat().map(slugOf).includes(slug)) return '2026-11-03';
   if (Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261031).flat().map(slugOf).includes(slug)) return '2026-10-31';
   if (Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021).flat().map(slugOf).includes(slug)) return '2026-10-21';
   if (Object.values(COUNTRY_COLUMN_FILES_20261020).flat().map(slugOf).includes(slug)) return '2026-10-20';
@@ -1872,6 +1948,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021),
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261031),
     ...Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261103),
+    ...Object.values(EXPERT_COLUMN_FILES_20261103),
     ...Object.values(NEXT_TOPIC_COLUMN_FILES_20261010),
     ...Object.values(AIR_COLUMN_FILES_20261011),
     ...Object.values(GAP_COLUMN_FILES_20261010),

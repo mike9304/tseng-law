@@ -3045,6 +3045,18 @@
     {
       "locale": "en",
       "slug": "taiwan-forklift-road-death-employer-settlement-fund"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-delayed-dementia-diagnosis-causation-helmet"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-delayed-dementia-diagnosis-causation-helmet"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-delayed-dementia-diagnosis-causation-helmet"
     }
   ]
 }

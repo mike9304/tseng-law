@@ -37,5 +37,13 @@
     "converted": "PIL WebP q82, 1280x720",
     "checked": "no people, no license plates, no readable text/logos; parked forklift and empty road; not a reconstruction",
     "sha256": "7d09d470c5330c9e694b995fba553087b181d7a80e024895a3c679befa42d568"
+  },
+  {
+    "asset": "public/images/columns/980-taiwan-delayed-dementia-diagnosis-causation-helmet/featured-01.webp",
+    "provider": "Grok Imagine via grok CLI, model grok-4.7, image_gen tool only",
+    "generated": "2026-11-03 on MacBook Air",
+    "converted": "PIL WebP q82, 1280x720",
+    "checked": "no people, no plates, no readable text/logos; helmet and blank folders; not a reconstruction",
+    "sha256": "c17f1b0e793f2c99717c14922d2115743744870576b3561c9c4e4b57d55b0f98"
   }
 ]

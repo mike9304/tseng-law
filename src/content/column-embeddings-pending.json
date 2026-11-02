@@ -2997,6 +2997,18 @@
     {
       "locale": "en",
       "slug": "taiwan-stop-line-reversing-scooter-dashcam"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-uninsured-scooter-fund-recourse-after-leaving"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-uninsured-scooter-fund-recourse-after-leaving"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-uninsured-scooter-fund-recourse-after-leaving"
     }
   ]
 }

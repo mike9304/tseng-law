@@ -19,7 +19,7 @@ import { COLUMN_TOPICS } from '@/lib/column-topics';
 /** cols-c trend pieces use batch IDs 21-29; other sessions' IDs are validated by their own tests. */
 const ALLOWED_NUMBERS: Partial<Record<IssueBoardLocale, number[]>> = {
   en: [21, 23],
-  vi: [22],
+  vi: [22, 24],
 };
 
 function batchNumber(file: string): number {

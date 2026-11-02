@@ -3009,6 +3009,18 @@
     {
       "locale": "en",
       "slug": "taiwan-uninsured-scooter-fund-recourse-after-leaving"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-rental-car-uninsured-driver-fund-recourse"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-rental-car-uninsured-driver-fund-recourse"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-rental-car-uninsured-driver-fund-recourse"
     }
   ]
 }

@@ -10,5 +10,16 @@
       "c976b: blank panel on left"
     ],
     "sha256": "30053445038ea6325267bfd06390ca26c8c9c93a5dd9871ebd4d8ef25ec07e66"
+  },
+  {
+    "asset": "public/images/columns/977-taiwan-rental-car-uninsured-driver-fund-recourse/featured-01.webp",
+    "provider": "Grok Imagine via grok CLI, model grok-4.7, image_gen tool only",
+    "generated": "2026-11-03 on MacBook Air",
+    "converted": "PIL WebP q82, 1280x720",
+    "checked": "no people, no license plates, no readable text/logos; not a reconstruction of the judgment's accident",
+    "rejected": [
+      "c977a: rear license plates partly visible"
+    ],
+    "sha256": "578837cee738e5b63ae0d657f28ed7a008894fc1db4517a9fe296849bf85e143"
   }
 ]

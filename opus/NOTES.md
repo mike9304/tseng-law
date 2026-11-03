@@ -1087,3 +1087,4 @@
 - 11-03 18:50 대기: Threads 변화는 grok NOTES 대기 줄·HANDOFF-air 시각뿐, STATUS 10-20 21:45 그대로, 새 FACTS·Astra 채점·Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기. T16 변경 없음, FJUD 재수신 대기 중. 새 브리지 없음.
 - 11-03 19:00 대기: Threads 변화는 grok NOTES 대기 줄·HANDOFF-air 시각뿐, STATUS 10-20 21:45 그대로, 새 FACTS·Astra 채점·Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기. T16 변경 없음, FJUD 재수신 대기 중. 새 브리지 없음.
 - 11-03 19:12 대기: 19:00 이후 변화는 HANDOFF-air 시각(내용은 10-26 03:47 그대로)과 grok NOTES 대기 줄뿐이다. STATUS는 10-20 21:45 그대로이고 새 FACTS·Astra 채점·Bot 검수는 없다. R8B-AIR-MINORS-1508은 Astra 채택 대기, r8b는 Bot·사용자 최종 확인 대기. T16은 변경 없이 FJUD 재수신을 기다린다(watch.log는 12:30 시작 줄만 있음). 새 브리지 없음(최신 IN-claude-20261102-190124).
+- 11-03 19:21 대기: 19:12 이후 변화는 HANDOFF-air 시각뿐이다(내용은 10-26 03:47 그대로). STATUS·FACTS·Astra·Bot 모두 새 항목 없음. R8B-AIR-MINORS-1508은 Astra 채택 대기, r8b는 Bot·사용자 최종 확인 대기. T16 FJUD 감시 프로세스(pid 74912)는 살아 있고 재수신 파일은 아직 없다. 새 브리지 없음.

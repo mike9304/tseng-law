@@ -38,7 +38,7 @@ Gia đình đủ điều kiện sử dụng phải tự trả toàn bộ chi ph�
 
 Theo trang giới thiệu chương trình, tiền lương và thời gian nghỉ của nhân viên tuân theo Luật Tiêu chuẩn lao động; quy định này không đồng nghĩa mọi người chăm sóc do gia đình thuê trực tiếp đều thuộc cùng chế độ.
 
-## Lương được tính từ quan hệ lao động
+## Căn cứ xác định tiền lương
 
 [Điều 2 Luật Tiêu chuẩn lao động](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=2) định nghĩa lương là thù lao người lao động nhận do làm việc, bao gồm những khoản trả thường xuyên dưới các tên gọi khác nhau. Tên gọi chưa đủ. Việc xác định khoản nào là lương còn phải dựa vào bản chất của khoản trả cho công việc.
 
@@ -46,7 +46,7 @@ Theo [Điều 21](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&
 
 Vậy nếu lương nhận được không khớp với lời hứa tuyển dụng thì sao? [Điều 23](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=23) yêu cầu người sử dụng lao động cung cấp chi tiết cách tính từng khoản lương. Nghĩa vụ này áp dụng cả khi trả theo sản phẩm. Sổ lương do bên sử dụng lao động lập phải ghi các khoản chi trả, cách tính và tổng lương. Thời hạn lưu là năm năm.
 
-Một bản ghi lịch làm, thỏa thuận mức lương và bảng tính đã nhận giúp xác định khoản nào đang thiếu hoặc cách tính nào chưa rõ. Bảng giá khách hàng có thể giải thích dịch vụ đã bán, nhưng tranh chấp tiền công của nhân viên cần được đối chiếu với chính các bản ghi về lương và công việc ấy.
+Một bản ghi lịch làm, thỏa thuận mức lương và bảng tính đã nhận giúp xác định khoản nào đang thiếu hoặc cách tính nào chưa rõ. Bảng giá dành cho khách hàng cho biết mức thu phí dịch vụ; còn tranh chấp tiền công của nhân viên cần được xem xét dựa trên hồ sơ về lương và công việc thực tế.
 
 ## Nguồn tham khảo
 

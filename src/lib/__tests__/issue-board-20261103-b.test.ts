@@ -18,10 +18,10 @@ import { COLUMN_TOPICS } from '@/lib/column-topics';
 /** Pieces may land separately after review; validate every batch file present. */
 /** cols-b investment pieces use batch IDs 41-59 and 80-99; other sessions' IDs are validated by their own tests. */
 const ALLOWED_NUMBERS: Partial<Record<IssueBoardLocale, number[]>> = {
-  ko: [41, 50, 55, 82, 86],
+  ko: [41, 50, 55, 82, 84, 86],
   ja: [42, 47, 54, 58, 87],
   'zh-hant': [43, 49, 52, 57, 80, 83, 89],
-  en: [44, 48, 53, 56, 59],
+  en: [44, 48, 53, 56, 59, 88],
   vi: [45, 46, 51, 81, 85],
 };
 

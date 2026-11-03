@@ -3273,6 +3273,186 @@
     {
       "locale": "en",
       "slug": "taiwan-insurance-renewal-notice-backdating-denied"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-used-car-purchase-accident-flood-mileage-defect"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-used-car-purchase-accident-flood-mileage-defect"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-used-car-purchase-accident-flood-mileage-defect"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-wedding-photo-banquet-contract-cancellation-deposit"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-wedding-photo-banquet-contract-cancellation-deposit"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-wedding-photo-banquet-contract-cancellation-deposit"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-stigmatized-property-death-in-house-disclosure-rescission"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-stigmatized-property-death-in-house-disclosure-rescission"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-stigmatized-property-death-in-house-disclosure-rescission"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-neighbor-construction-damage-cracks-assessment-compensation"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-neighbor-construction-damage-cracks-assessment-compensation"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-neighbor-construction-damage-cracks-assessment-compensation"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-moving-company-damaged-belongings-extra-charges-contract"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-moving-company-damaged-belongings-extra-charges-contract"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-moving-company-damaged-belongings-extra-charges-contract"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-gift-voucher-store-closure-performance-guarantee-refund"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-gift-voucher-store-closure-performance-guarantee-refund"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-gift-voucher-store-closure-performance-guarantee-refund"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-dry-cleaner-damaged-lost-clothing-compensation"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-dry-cleaner-damaged-lost-clothing-compensation"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-dry-cleaner-damaged-lost-clothing-compensation"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-cram-school-language-course-withdrawal-refund"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-cram-school-language-course-withdrawal-refund"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-cram-school-language-course-withdrawal-refund"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-preschool-daycare-child-injury-liability-records"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-preschool-daycare-child-injury-liability-records"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-preschool-daycare-child-injury-liability-records"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-pet-shop-puppy-kitten-sick-after-purchase-refund"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-pet-shop-puppy-kitten-sick-after-purchase-refund"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-pet-shop-puppy-kitten-sick-after-purchase-refund"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-neighbor-tree-branches-drainage-boundary-wall-civil-code"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-neighbor-tree-branches-drainage-boundary-wall-civil-code"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-neighbor-tree-branches-drainage-boundary-wall-civil-code"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-cosmetic-clinic-procedure-side-effects-prepaid-package-refund"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-cosmetic-clinic-procedure-side-effects-prepaid-package-refund"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-cosmetic-clinic-procedure-side-effects-prepaid-package-refund"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-postpartum-care-center-cancellation-refund-infection"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-postpartum-care-center-cancellation-refund-infection"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-postpartum-care-center-cancellation-refund-infection"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-restaurant-food-poisoning-compensation-health-bureau-report"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-restaurant-food-poisoning-compensation-health-bureau-report"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-restaurant-food-poisoning-compensation-health-bureau-report"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-apartment-parking-space-common-area-exclusive-use-dispute"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-apartment-parking-space-common-area-exclusive-use-dispute"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-apartment-parking-space-common-area-exclusive-use-dispute"
     }
   ]
 }

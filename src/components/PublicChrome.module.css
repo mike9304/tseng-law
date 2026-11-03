@@ -352,6 +352,12 @@
     grid-template-columns: minmax(12rem, auto) minmax(0, 1fr) auto;
     flex-wrap: nowrap;
     min-height: 4.5rem;
+    /* The header row (logo + 9 nav items + search + CTA) needs ~1230px (ko) to ~1470px (en) once
+       the vw-scaled nav-link padding maxes out, which the shared 1200px
+       --max-width container cannot hold: the nav wrapped at ~1920px and the
+       content-fit probe switched the header to compact (nav hidden) on
+       wider screens. Give the header row its own wider cap. */
+    width: min(var(--header-max-width, 1520px), calc(100% - (var(--page-gutter) * 2)));
   }
 
   .header :global(.main-nav) {

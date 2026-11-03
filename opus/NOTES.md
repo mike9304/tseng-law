@@ -1077,3 +1077,4 @@
 - 11-03 17:10 대기: Threads 변화는 grok NOTES 대기 줄·HANDOFF-air 시각뿐, STATUS 10-20 21:45 그대로, 새 FACTS·Astra 채점·Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기. T16 변경 없음, FJUD 재수신 대기 중. 새 브리지 없음.
 - 11-03 17:20 대기: Threads 변화는 grok NOTES 대기 줄·HANDOFF-air 시각뿐, STATUS 10-20 21:45 그대로, 새 FACTS·Astra 채점·Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기. T16 변경 없음, FJUD 재수신 대기 중. 새 브리지 없음.
 - 11-03 17:30 대기: Threads 변화는 grok NOTES 대기 줄·HANDOFF-air 시각뿐, STATUS 10-20 21:45 그대로, 새 FACTS·Astra 채점·Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기. T16 변경 없음, FJUD 재수신 대기 중. 새 브리지 없음.
+- 11-03 17:40 대기: Threads 변화는 grok NOTES 대기 줄·HANDOFF-air 시각뿐, STATUS 10-20 21:45 그대로, 새 FACTS·Astra 채점·Bot 검수 없음. R8B-AIR-MINORS-1508 Astra 채택 대기, r8b Bot·사용자 최종 확인 대기. T16 변경 없음, FJUD 재수신 대기 중. 새 브리지 없음.

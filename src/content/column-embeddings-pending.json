@@ -3213,6 +3213,66 @@
     {
       "locale": "en",
       "slug": "taiwan-real-estate-agent-deposit-offer-commission-cap-liability"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-minor-rider-parents-liability-insurance-lapse"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-minor-rider-parents-liability-insurance-lapse"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-minor-rider-parents-liability-insurance-lapse"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-drunk-rider-death-fund-refund"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-drunk-rider-death-fund-refund"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-drunk-rider-death-fund-refund"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-settlement-undisclosed-fund-refund"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-settlement-undisclosed-fund-refund"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-settlement-undisclosed-fund-refund"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-private-settlement-claim-fund-limitation"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-private-settlement-claim-fund-limitation"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-private-settlement-claim-fund-limitation"
+    },
+    {
+      "locale": "ko",
+      "slug": "taiwan-insurance-renewal-notice-backdating-denied"
+    },
+    {
+      "locale": "zh-hant",
+      "slug": "taiwan-insurance-renewal-notice-backdating-denied"
+    },
+    {
+      "locale": "en",
+      "slug": "taiwan-insurance-renewal-notice-backdating-denied"
     }
   ]
 }

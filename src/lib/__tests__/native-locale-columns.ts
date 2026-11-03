@@ -36,6 +36,14 @@ function slugOf(file: string): string {
   return file.replace(/\.md$/, '').replace(/^\d{3,4}-/, '');
 }
 
+/** Filename order by column number, so 4-digit numbers (1000+) sort after 3-digit ones. */
+function byFileNumber(a: string, b: string): number {
+  const na = Number(a.match(/^\d+/)?.[0] ?? Number.NaN);
+  const nb = Number(b.match(/^\d+/)?.[0] ?? Number.NaN);
+  if (Number.isFinite(na) && Number.isFinite(nb) && na !== nb) return na - nb;
+  return a < b ? -1 : a > b ? 1 : 0;
+}
+
 export const NATIVE_LOCALE_COLUMN_SLUGS: ReadonlySet<string> = new Set(
   Object.values(NATIVE_LOCALE_COLUMN_FILES).flat().map(slugOf),
 );
@@ -783,6 +791,13 @@ export const EXPERT_COLUMN_FILES_20261103 = {
     '992-taiwan-shop-lease-end-restoration-improvement-costs-transfer.md',
     '993-taiwan-real-estate-agent-deposit-offer-commission-cap-liability.md',
   ],
+} as const;
+
+/** Traffic judgment columns 1011–1015 published 2026-11-03 (cols-c, 4-digit numbers). */
+export const TRAFFIC_JUDGMENT_COLUMN_FILES_20261103_B = {
+  ko: ['1011-taiwan-minor-rider-parents-liability-insurance-lapse.md', '1012-taiwan-drunk-rider-death-fund-refund.md', '1013-taiwan-settlement-undisclosed-fund-refund.md', '1014-taiwan-private-settlement-claim-fund-limitation.md', '1015-taiwan-insurance-renewal-notice-backdating-denied.md'],
+  'zh-hant': ['1011-taiwan-minor-rider-parents-liability-insurance-lapse.md', '1012-taiwan-drunk-rider-death-fund-refund.md', '1013-taiwan-settlement-undisclosed-fund-refund.md', '1014-taiwan-private-settlement-claim-fund-limitation.md', '1015-taiwan-insurance-renewal-notice-backdating-denied.md'],
+  en: ['1011-taiwan-minor-rider-parents-liability-insurance-lapse.md', '1012-taiwan-drunk-rider-death-fund-refund.md', '1013-taiwan-settlement-undisclosed-fund-refund.md', '1014-taiwan-private-settlement-claim-fund-limitation.md', '1015-taiwan-insurance-renewal-notice-backdating-denied.md'],
 } as const;
 
 /** Native audience columns published 2026-10-15. */
@@ -1696,6 +1711,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((TRAFFIC_SCENE_COLUMN_FILES_20261031 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TRAFFIC_JUDGMENT_COLUMN_FILES_20261103 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((EXPERT_COLUMN_FILES_20261103 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((TRAFFIC_JUDGMENT_COLUMN_FILES_20261103_B as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((NEXT_TOPIC_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((AIR_COLUMN_FILES_20261011 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((GAP_COLUMN_FILES_20261010 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
@@ -1703,7 +1719,7 @@ function sameDayFilesOf(locale: string): readonly string[] {
     ...((AI_SEMICONDUCTOR_COLUMN_FILES_20261009 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((CRIMINAL_COLUMN_FILES_20261008 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((TAX_ACCOUNTING_COLUMN_FILES as Partial<Record<string, readonly string[]>>)[locale] ?? []),
-  ].sort();
+  ].sort(byFileNumber);
 }
 
 const EXPERTISE_KO_FILES: readonly string[] = sameDayFilesOf('ko');
@@ -1747,6 +1763,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
   const day20261103: readonly string[] = [
     ...((TRAFFIC_JUDGMENT_COLUMN_FILES_20261103 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
     ...((EXPERT_COLUMN_FILES_20261103 as Partial<Record<string, readonly string[]>>)[locale] ?? []),
+    ...((TRAFFIC_JUDGMENT_COLUMN_FILES_20261103_B as Partial<Record<string, readonly string[]>>)[locale] ?? []),
   ];
   const day20261031: readonly string[] =
     (TRAFFIC_SCENE_COLUMN_FILES_20261031 as Partial<Record<string, readonly string[]>>)[locale] ?? [];
@@ -1825,7 +1842,7 @@ export function archiveLeadSlugsFor(locale: string): string[] {
   const newestSlugs = [...newest].sort().map(slugOf);
   const newerSlugs = [...newer].sort().map(slugOf);
   const head = [...day20261023].sort().map(slugOf).concat([...day20261022].sort().map(slugOf), [...day20261021].sort().map(slugOf), [...day20261020].sort().map(slugOf), [...day20261018].sort().map(slugOf), [...day20261016].sort().map(slugOf), [...day20261015].sort().map(slugOf), [...day20261014].sort().map(slugOf), [...day20261013].sort().map(slugOf), [...day20261011].sort().map(slugOf), [...day20261010].sort().map(slugOf), [...day20261009].sort().map(slugOf), [...day20261008].sort().map(slugOf), day20261007Slugs, day20261006Slugs, day20261005Slugs, currentSlugs, latestSlugs, newestSlugs, newerSlugs);
-  const latestHead = [...day20261103].sort().map(slugOf).concat([...day20261031].sort().map(slugOf), [...day20261030].sort().map(slugOf), [...day20261029].sort().map(slugOf), [...day20261028].sort().map(slugOf), [...day20261027].sort().map(slugOf), [...day20261026].sort().map(slugOf), [...day20261025].sort().map(slugOf), [...day20261024].sort().map(slugOf), head);
+  const latestHead = [...day20261103].sort(byFileNumber).map(slugOf).concat([...day20261031].sort().map(slugOf), [...day20261030].sort().map(slugOf), [...day20261029].sort().map(slugOf), [...day20261028].sort().map(slugOf), [...day20261027].sort().map(slugOf), [...day20261026].sort().map(slugOf), [...day20261025].sort().map(slugOf), [...day20261024].sort().map(slugOf), head);
   return [...latestHead, ...expertiseSlugsFor(locale).filter((slug) => !latestHead.includes(slug))];
 }
 
@@ -1847,6 +1864,7 @@ export function archiveLeadPublicationDate(slug: string, locale: string): string
   if (day20261022.includes(slug)) return '2026-10-22';
   if (Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261103).flat().map(slugOf).includes(slug)) return '2026-11-03';
   if (Object.values(EXPERT_COLUMN_FILES_20261103).flat().map(slugOf).includes(slug)) return '2026-11-03';
+  if (Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261103_B).flat().map(slugOf).includes(slug)) return '2026-11-03';
   if (Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261031).flat().map(slugOf).includes(slug)) return '2026-10-31';
   if (Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261021).flat().map(slugOf).includes(slug)) return '2026-10-21';
   if (Object.values(COUNTRY_COLUMN_FILES_20261020).flat().map(slugOf).includes(slug)) return '2026-10-20';
@@ -1941,6 +1959,7 @@ const EXPERTISE_SLUGS_20260930: ReadonlySet<string> = new Set(
     ...Object.values(TRAFFIC_SCENE_COLUMN_FILES_20261031),
     ...Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261103),
     ...Object.values(EXPERT_COLUMN_FILES_20261103),
+    ...Object.values(TRAFFIC_JUDGMENT_COLUMN_FILES_20261103_B),
     ...Object.values(NEXT_TOPIC_COLUMN_FILES_20261010),
     ...Object.values(AIR_COLUMN_FILES_20261011),
     ...Object.values(GAP_COLUMN_FILES_20261010),

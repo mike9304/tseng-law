@@ -45,5 +45,45 @@
     "converted": "PIL WebP q82, 1280x720",
     "checked": "no people, no plates, no readable text/logos; helmet and blank folders; not a reconstruction",
     "sha256": "c17f1b0e793f2c99717c14922d2115743744870576b3561c9c4e4b57d55b0f98"
+  },
+  {
+    "asset": "public/images/columns/1011-taiwan-minor-rider-parents-liability-insurance-lapse/featured-01.webp",
+    "provider": "Grok Imagine via grok CLI, model grok-4.7, image_gen tool only",
+    "generated": "2026-11-03 on MacBook Air",
+    "converted": "PIL WebP q82, 1280x720",
+    "checked": "no people, no license plates, no readable text; not a reconstruction",
+    "sha256": "a9decc88bcfa7cf081f17803afd9a401514e90e3b867de2c0ddbdd9b14683cb4"
+  },
+  {
+    "asset": "public/images/columns/1012-taiwan-drunk-rider-death-fund-refund/featured-01.webp",
+    "provider": "Grok Imagine via grok CLI, model grok-4.7, image_gen tool only",
+    "generated": "2026-11-03 on MacBook Air",
+    "converted": "PIL WebP q82, 1280x720",
+    "checked": "no people, no license plates, no readable text; not a reconstruction",
+    "sha256": "35316bc3936163f41f637574ca198a7e76cb990e3845b7f17baa85dda8cdaa9b"
+  },
+  {
+    "asset": "public/images/columns/1013-taiwan-settlement-undisclosed-fund-refund/featured-01.webp",
+    "provider": "Grok Imagine via grok CLI, model grok-4.7, image_gen tool only",
+    "generated": "2026-11-03 on MacBook Air",
+    "converted": "PIL WebP q82, 1280x720",
+    "checked": "no people, no license plates, no readable text; not a reconstruction",
+    "sha256": "bc1b8d4a512bb4bacdd7c50d2fa9aa52297657e21c8c3c2c0b70eb7e86897f26"
+  },
+  {
+    "asset": "public/images/columns/1014-taiwan-private-settlement-claim-fund-limitation/featured-01.webp",
+    "provider": "Grok Imagine via grok CLI, model grok-4.7, image_gen tool only",
+    "generated": "2026-11-03 on MacBook Air",
+    "converted": "PIL WebP q82, 1280x720",
+    "checked": "no people, no license plates, no readable text; not a reconstruction",
+    "sha256": "823543a5dce824c0731596500a475d305a245967668da917aaadeaebbca881a2"
+  },
+  {
+    "asset": "public/images/columns/1015-taiwan-insurance-renewal-notice-backdating-denied/featured-01.webp",
+    "provider": "Grok Imagine via grok CLI, model grok-4.7, image_gen tool only",
+    "generated": "2026-11-03 on MacBook Air",
+    "converted": "PIL WebP q82, 1280x720",
+    "checked": "no people, no license plates, no readable text; not a reconstruction",
+    "sha256": "60e4dfff414efedb0c769b1198ae975ed60049403df5f46bfd62bd38a55a066e"
   }
 ]

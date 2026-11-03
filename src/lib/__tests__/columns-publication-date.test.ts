@@ -773,6 +773,11 @@ const VERIFIED_PUBLICATION_DATES: Record<string, string> = {
   '978': '2026-11-03',
   '979': '2026-11-03',
   '980': '2026-11-03',
+  '1011': '2026-11-03',
+  '1012': '2026-11-03',
+  '1013': '2026-11-03',
+  '1014': '2026-11-03',
+  '1015': '2026-11-03',
 };
 
 // Columns revised after the 2026-09-28 Fable review were re-dated to that day (user
@@ -917,7 +922,7 @@ describe('localized column publication ordering', () => {
       const expertiseCount = expertiseSlugsFor(locale).length; // 041–048 subset + 050 traffic
       expect(files).toHaveLength(31 + nativeCount + expertiseCount);
       for (const file of files) {
-        const prefix = file.slice(0, 3);
+        const prefix = file.match(/^\d{3,4}/)?.[0] ?? file.slice(0, 3);
         const verifiedDate = verifiedPublicationDate(locale, prefix);
         const { data } = matter(fs.readFileSync(path.join(contentDir, file), 'utf8'));
 

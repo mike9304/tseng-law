@@ -44,7 +44,7 @@ A business conversation can contain personal data. [Personal Data Protection Act
 
 Where the Act applies, [Article 19](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&flno=19) requires a specific collection purpose and a listed legal basis for ordinary personal data. Consent is one basis. A contractual or similar relationship is another, but that basis also requires appropriate security measures. The specially protected data identified in [Article 6](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&flno=6) is outside this ordinary-data route.
 
-Direct collection generally also brings the notice requirements in [Article 8](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&flno=8), unless an exception applies. Those requirements cover who is collecting, why, the data categories, how and where the data will be used, for how long and by whom, and the person's rights. Where provision is optional, the consequences of withholding the data are part of the notice. A brief app alert addresses only part of that information.
+Direct collection generally also brings the notice requirements in [Article 8](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&flno=8), unless an exception applies. Those requirements cover who is collecting, why, the data categories, how and where the data will be used, for how long and by whom, and the person's rights and how to exercise them. Where provision is optional, the consequences of withholding the data are part of the notice. A brief app alert addresses only part of that information.
 
 ## What happens after the call
 

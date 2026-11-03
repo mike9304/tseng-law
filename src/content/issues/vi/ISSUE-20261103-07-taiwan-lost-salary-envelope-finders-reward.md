@@ -30,11 +30,11 @@ Phong bì tiền lương rơi khỏi túi một hành khách khi đi thang cuố
 
 Người nhặt được phong bì là nhân viên vệ sinh tại ga. Bản tin không nói có yêu cầu trả thưởng. Với người Việt làm việc tại Đài Loan, câu hỏi khi nhận lại tiền có thể là: người nhặt được quyền yêu cầu bao nhiêu, và ai thuộc diện không được đòi?
 
-## Tiền nhặt được phải được thông báo hoặc giao nộp
+## Nghĩa vụ khi nhặt được tiền
 
 [Điều 803 Bộ luật Dân sự Đài Loan](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=803) yêu cầu người nhặt nhanh chóng thông báo cho người mất, chủ sở hữu, người khác có quyền nhận hoặc trình báo cảnh sát, cơ quan tự quản địa phương. Khi trình báo, tài sản phải được giao nộp cùng lúc.
 
-Nếu nhặt ở cơ quan, trường học hay nơi công cộng, người nhặt cũng được báo và giao tài sản cho đơn vị quản lý, người phụ trách hoặc người quản lý nơi đó. Bên nhận báo có trách nhiệm nhanh chóng tìm người đến nhận bằng thông báo, phát thanh hoặc cách phù hợp khác. Vì vậy, giao phong bì cho bộ phận quản lý ga là một hướng được điều luật dự liệu.
+Nếu nhặt ở cơ quan, trường học hay nơi công cộng, người nhặt cũng được báo và giao tài sản cho đơn vị quản lý, người phụ trách hoặc người quản lý nơi đó. Cơ quan, đơn vị hoặc người tiếp nhận trình báo có trách nhiệm nhanh chóng tìm người đến nhận bằng thông báo, phát thanh hoặc cách phù hợp khác. Vì vậy, có thể giao phong bì cho bộ phận quản lý ga.
 
 ## Một phần mười là mức trần
 

@@ -167,7 +167,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
       },
       {
         id: 'son-jungmin',
-        name: '孫貞旻',
+        name: '孫廷旻',
         role: '韓國事務長',
         email: 'son-7@tseng-law.com',
         photo: '/images/team/son-jungmin.jpg',
@@ -253,7 +253,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
       },
       {
         id: 'son-jungmin',
-        name: 'Jungmin Son',
+        name: 'Jeongmin Son',
         role: 'Operations Manager, Korea Office',
         email: 'son-7@tseng-law.com',
         photo: '/images/team/son-jungmin.jpg',
@@ -339,7 +339,7 @@ export const teamContent: Record<SiteLocale, TeamContent> = {
       },
       {
         id: 'son-jungmin',
-        name: '孫貞旻',
+        name: '孫廷旻',
         role: '事務長（韓国事務所）',
         email: 'son-7@tseng-law.com',
         photo: '/images/team/son-jungmin.jpg',

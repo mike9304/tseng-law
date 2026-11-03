@@ -133,8 +133,8 @@ describe('WO-1 trust, localization, and performance content contracts', () => {
     expect(consultation?.answer).not.toContain('Sending relevant documents in advance');
   });
 
-  // 1-4 hid the duplicated wei@ address until Jungmin Son's real address was confirmed; the address was supplied on 2026-10-08.
-  it('1-4 shows Jungmin Son\'s own address in every locale while preserving the managing attorney email', () => {
+  // 1-4 hid the duplicated wei@ address until Jeongmin Son's real address was confirmed; the address was supplied on 2026-10-08.
+  it('1-4 shows Jeongmin Son\'s own address in every locale while preserving the managing attorney email', () => {
     for (const locale of ['ko', 'zh-hant', 'en', 'ja'] as const) {
       expect(teamContent[locale].members.find((member) => member.id === 'son-jungmin')?.email).toBe('son-7@tseng-law.com');
       expect(teamContent[locale].members.find((member) => member.id === 'tseng-junwei')?.email).toBe('wei@hoveringlaw.com.tw');

@@ -15,7 +15,7 @@ const expectedJapaneseIdentity = {
   'chang-rongxuan': ['張容瑄', '台湾弁護士'],
   'chang-fangyu': ['張芳瑀', 'パラリーガル'],
   // WO-X1 (J04): role stays factual, worded as the Korea office post.
-  'son-jungmin': ['孫貞旻', '事務長（韓国事務所）'],
+  'son-jungmin': ['孫廷旻', '事務長（韓国事務所）'],
   'huang-shengping': ['黃勝平', '提携会計士'],
 } as const;
 
